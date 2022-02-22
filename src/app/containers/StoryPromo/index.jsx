@@ -30,13 +30,13 @@ import {
 import loggerNode from '#lib/logger.node';
 import { MEDIA_MISSING } from '#lib/logger.const';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import PromoTimestamp from '#components/Promo/timestamp';
 import LinkContents from './LinkContents';
 import MediaIndicatorContainer from './MediaIndicator';
 import IndexAlsosContainer from './IndexAlsos';
 import { getHeadingTagOverride, buildUniquePromoId } from './utilities';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
 import useCombinedClickTrackerHandler from './useCombinedClickTrackerHandler';
-import PromoTimestamp from './Timestamp';
 
 const logger = loggerNode(__filename);
 
@@ -132,12 +132,18 @@ const StoryPromoContainer = ({
   eventTrackingData,
   labelId,
   imageComponent,
+  sectionType,
 }) => {
   const { script, service, translations } = useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
-  const linkId = buildUniquePromoId(labelId, item, index);
+  const linkId = buildUniquePromoId({
+    sectionType,
+    promoGroupId: labelId,
+    promoItem: item,
+    promoIndex: index,
+  });
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
 
@@ -252,10 +258,9 @@ const StoryPromoContainer = ({
         </Summary>
       )}
       {displayTimestamp && (
-        <PromoTimestamp
-          timestamp={timestamp}
-          serviceDatetimeLocale={serviceDatetimeLocale}
-        />
+        <PromoTimestamp serviceDatetimeLocale={serviceDatetimeLocale}>
+          {timestamp}
+        </PromoTimestamp>
       )}
       {promoType === 'top' && relatedItems && (
         <IndexAlsosContainer
@@ -327,6 +332,7 @@ StoryPromoContainer.propTypes = {
   labelId: string,
   index: number,
   imageComponent: elementType,
+  sectionType: string,
 };
 
 StoryPromoContainer.defaultProps = {
@@ -341,6 +347,7 @@ StoryPromoContainer.defaultProps = {
   labelId: '',
   index: 0,
   imageComponent: undefined,
+  sectionType: '',
 };
 
 export default StoryPromoContainer;

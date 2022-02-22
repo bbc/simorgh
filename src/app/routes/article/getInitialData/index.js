@@ -1,7 +1,5 @@
 import pipe from 'ramda/src/pipe';
 import isEmpty from 'ramda/src/isEmpty';
-import identity from 'ramda/src/identity';
-import isLive from '#lib/utilities/isLive';
 import { SECONDARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
 import getSecondaryColumnUrl from '#lib/utilities/getUrlHelpers/getSecondaryColumnUrl';
 import { DATA_FETCH_ERROR_SECONDARY_COLUMN } from '#lib/logger.const';
@@ -16,6 +14,8 @@ import {
   applyBlockPositioning,
   addIndexesToEmbeds,
 } from '../../utils/sharedDataTransformers';
+import isListWithLink from '../../utils/isListWithLink';
+import addIndexToBlockGroups from '../../utils/sharedDataTransformers/addIndexToBlockGroups';
 
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
@@ -24,11 +24,14 @@ const logger = nodeLogger(__filename);
 const transformJson = pipe(
   handleGroupBlocks,
   handleEmptyParagraphBlocks,
-  isLive() ? identity : handlePromoData,
+  handlePromoData,
   augmentWithTimestamp,
   addIdsToBlocks,
   applyBlockPositioning,
   addIndexesToEmbeds,
+  addIndexToBlockGroups(isListWithLink, {
+    blockGroupType: 'edOjLinks',
+  }),
 );
 
 const validateResponse = ({ status, json }) => {

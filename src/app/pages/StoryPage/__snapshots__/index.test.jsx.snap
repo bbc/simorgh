@@ -2498,10 +2498,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-31 emotion-32"
                             >
                               <source
+                                sizes="(min-width: 1008px) 645px, 100vw"
                                 srcset="https://ichef.test.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 480w, https://ichef.test.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 624w, https://ichef.test.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 800w"
                                 type="image/webp"
                               />
                               <source
+                                sizes="(min-width: 1008px) 645px, 100vw"
                                 srcset="https://ichef.test.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 320w, https://ichef.test.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 480w, https://ichef.test.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 624w, https://ichef.test.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 800w"
                                 type="image/jpeg"
                               />
@@ -2509,7 +2511,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 alt="Some people at the NTA awards"
                                 class="emotion-33 emotion-34 emotion-35"
                                 height="549"
-                                sizes="(min-width: 1008px) 645px, 100vw"
                                 src="https://ichef.test.bbci.co.uk/news/640/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg"
                                 width="976"
                               />
@@ -3030,12 +3031,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-213 emotion-214"
                             >
                               <a
-                                aria-labelledby="promo-igbo23182501-1"
+                                aria-labelledby="top-stories-promo-igbo23182501-1"
                                 class="emotion-215 emotion-216"
                                 href="/igbo/23182501"
                               >
                                 <span
-                                  id="promo-igbo23182501-1"
+                                  id="top-stories-promo-igbo23182501-1"
                                 >
                                   DSS: Wepụ aka enwe n'ofe na Benue
                                 </span>
@@ -3065,12 +3066,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-213 emotion-214"
                             >
                               <a
-                                aria-labelledby="promo-igboliveinstitutional23162153-1"
+                                aria-labelledby="top-stories-promo-igboliveinstitutional23162153-1"
                                 class="emotion-215 emotion-216"
                                 href="/igbo/live/institutional-23162153"
                               >
                                 <span
-                                  id="promo-igboliveinstitutional23162153-1"
+                                  id="top-stories-promo-igboliveinstitutional23162153-1"
                                   role="text"
                                 >
                                   <span
@@ -3129,12 +3130,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-213 emotion-214"
                             >
                               <a
-                                aria-labelledby="promo-igbo23183171-1"
+                                aria-labelledby="top-stories-promo-igbo23183171-1"
                                 class="emotion-215 emotion-216"
                                 href="/igbo/23183171"
                               >
                                 <span
-                                  id="promo-igbo23183171-1"
+                                  id="top-stories-promo-igbo23183171-1"
                                   role="text"
                                 >
                                   <span
@@ -3242,12 +3243,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-286 emotion-214"
                             >
                               <a
-                                aria-labelledby="promo-igbo23182930-1"
+                                aria-labelledby="features-and-analysis-promo-igbo23182930-1"
                                 class="emotion-215 emotion-216"
                                 href="/igbo/23182930"
                               >
                                 <span
-                                  id="promo-igbo23182930-1"
+                                  id="features-and-analysis-promo-igbo23182930-1"
                                 >
                                   Lee ihe Barcelona mere Real Betis
                                 </span>
@@ -3302,12 +3303,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-286 emotion-214"
                             >
                               <a
-                                aria-labelledby="promo-igbo23182890-2"
+                                aria-labelledby="features-and-analysis-promo-igbo23182890-2"
                                 class="emotion-215 emotion-216"
                                 href="/igbo/23182890"
                               >
                                 <span
-                                  id="promo-igbo23182890-2"
+                                  id="features-and-analysis-promo-igbo23182890-2"
                                 >
                                   Aubameyang nwere ike ifu ndị Arsenal ọnụ ego karịrị nderi pounds iri ise
                                 </span>
@@ -3362,12 +3363,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-286 emotion-214"
                             >
                               <a
-                                aria-labelledby="promo-igbo23182810-3"
+                                aria-labelledby="features-and-analysis-promo-igbo23182810-3"
                                 class="emotion-215 emotion-216"
                                 href="/igbo/23182810"
                               >
                                 <span
-                                  id="promo-igbo23182810-3"
+                                  id="features-and-analysis-promo-igbo23182810-3"
                                 >
                                   "Alexis Sanchez ga-abanye Manchester united ma ọ buru na....." Wenger
                                 </span>
@@ -3422,12 +3423,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-286 emotion-214"
                             >
                               <a
-                                aria-labelledby="promo-igbo23182766-4"
+                                aria-labelledby="features-and-analysis-promo-igbo23182766-4"
                                 class="emotion-215 emotion-216"
                                 href="/igbo/23182766"
                               >
                                 <span
-                                  id="promo-igbo23182766-4"
+                                  id="features-and-analysis-promo-igbo23182766-4"
                                 >
                                   Dịka osi ga n'ime asọmpi Premier League
                                 </span>
@@ -3482,12 +3483,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-286 emotion-214"
                             >
                               <a
-                                aria-labelledby="promo-igbo23182760-5"
+                                aria-labelledby="features-and-analysis-promo-igbo23182760-5"
                                 class="emotion-215 emotion-216"
                                 href="/igbo/23182760"
                               >
                                 <span
-                                  id="promo-igbo23182760-5"
+                                  id="features-and-analysis-promo-igbo23182760-5"
                                 >
                                   Djokovic enwela mmeri Agbanyeghị ihe mmerụ ahụ
                                 </span>
@@ -3542,12 +3543,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-286 emotion-214"
                             >
                               <a
-                                aria-labelledby="promo-igbo23182710-6"
+                                aria-labelledby="features-and-analysis-promo-igbo23182710-6"
                                 class="emotion-215 emotion-216"
                                 href="/igbo/23182710"
                               >
                                 <span
-                                  id="promo-igbo23182710-6"
+                                  id="features-and-analysis-promo-igbo23182710-6"
                                 >
                                   CHAN: Naịjirịa na Guinea nọ na ịrụ Group C
                                 </span>
@@ -3635,12 +3636,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-286 emotion-214"
                             >
                               <a
-                                aria-labelledby="promo-igbo23177465-7"
+                                aria-labelledby="features-and-analysis-promo-igbo23177465-7"
                                 class="emotion-215 emotion-216"
                                 href="/igbo/23177465"
                               >
                                 <span
-                                  id="promo-igbo23177465-7"
+                                  id="features-and-analysis-promo-igbo23177465-7"
                                   role="text"
                                 >
                                   <span
@@ -3708,12 +3709,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-286 emotion-214"
                             >
                               <a
-                                aria-labelledby="promo-igbo23173771-8"
+                                aria-labelledby="features-and-analysis-promo-igbo23173771-8"
                                 class="emotion-215 emotion-216"
                                 href="/igbo/23173771"
                               >
                                 <span
-                                  id="promo-igbo23173771-8"
+                                  id="features-and-analysis-promo-igbo23173771-8"
                                 >
                                   O nwere ihe o mere ma Dino Melaye nọrọ n'egwu m?
                                 </span>
@@ -3768,12 +3769,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-286 emotion-214"
                             >
                               <a
-                                aria-labelledby="promo-igbo23174391-9"
+                                aria-labelledby="features-and-analysis-promo-igbo23174391-9"
                                 class="emotion-215 emotion-216"
                                 href="/igbo/23174391"
                               >
                                 <span
-                                  id="promo-igbo23174391-9"
+                                  id="features-and-analysis-promo-igbo23174391-9"
                                 >
                                   Ọkụ Festac: Ajọ ọnwụnwa nke keresimesi
                                 </span>
@@ -6488,10 +6489,12 @@ exports[`Story Page should render correctly when the secondary column data is no
                               class="emotion-36 emotion-37"
                             >
                               <source
+                                sizes="(min-width: 1008px) 645px, 100vw"
                                 srcset="https://ichef.test.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 480w, https://ichef.test.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 624w, https://ichef.test.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 800w"
                                 type="image/webp"
                               />
                               <source
+                                sizes="(min-width: 1008px) 645px, 100vw"
                                 srcset="https://ichef.test.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 320w, https://ichef.test.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 480w, https://ichef.test.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 624w, https://ichef.test.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 800w"
                                 type="image/jpeg"
                               />
@@ -6499,7 +6502,6 @@ exports[`Story Page should render correctly when the secondary column data is no
                                 alt="Some people at the NTA awards"
                                 class="emotion-38 emotion-39 emotion-40"
                                 height="549"
-                                sizes="(min-width: 1008px) 645px, 100vw"
                                 src="https://ichef.test.bbci.co.uk/news/640/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg"
                                 width="976"
                               />
@@ -10048,10 +10050,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-36 emotion-37"
                             >
                               <source
+                                sizes="(min-width: 1008px) 645px, 100vw"
                                 srcset="https://ichef.test.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 480w, https://ichef.test.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 624w, https://ichef.test.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 800w"
                                 type="image/webp"
                               />
                               <source
+                                sizes="(min-width: 1008px) 645px, 100vw"
                                 srcset="https://ichef.test.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 320w, https://ichef.test.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 480w, https://ichef.test.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 624w, https://ichef.test.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 800w"
                                 type="image/jpeg"
                               />
@@ -10059,7 +10063,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 alt="Some people at the NTA awards"
                                 class="emotion-38 emotion-39 emotion-40"
                                 height="549"
-                                sizes="(min-width: 1008px) 645px, 100vw"
                                 src="https://ichef.test.bbci.co.uk/news/640/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg"
                                 width="976"
                               />
@@ -10568,12 +10571,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-214 emotion-215"
                             >
                               <a
-                                aria-labelledby="promo-pidgin23248287-1"
+                                aria-labelledby="top-stories-promo-pidgin23248287-1"
                                 class="emotion-216 emotion-217"
                                 href="/pidgin/23248287"
                               >
                                 <span
-                                  id="promo-pidgin23248287-1"
+                                  id="top-stories-promo-pidgin23248287-1"
                                 >
                                   ATMs across the country
                                 </span>
@@ -10603,12 +10606,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-214 emotion-215"
                             >
                               <a
-                                aria-labelledby="promo-pidgintori23146434-1"
+                                aria-labelledby="top-stories-promo-pidgintori23146434-1"
                                 class="emotion-216 emotion-217"
                                 href="/pidgin/tori-23146434"
                               >
                                 <span
-                                  id="promo-pidgintori23146434-1"
+                                  id="top-stories-promo-pidgintori23146434-1"
                                 >
                                   Jacob Zuma: Staying!!!
                                 </span>
@@ -10638,12 +10641,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-214 emotion-215"
                             >
                               <a
-                                aria-labelledby="promo-news-feature-1"
+                                aria-labelledby="top-stories-promo-news-feature-1"
                                 class="emotion-216 emotion-217"
                                 href="https://www.bbc.co.uk/news"
                               >
                                 <span
-                                  id="promo-news-feature-1"
+                                  id="top-stories-promo-news-feature-1"
                                 >
                                   Feature promo
                                 </span>
@@ -10743,12 +10746,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-279 emotion-215"
                             >
                               <a
-                                aria-labelledby="promo-pidgintori23146625-1"
+                                aria-labelledby="features-and-analysis-promo-pidgintori23146625-1"
                                 class="emotion-216 emotion-217"
                                 href="/pidgin/tori-23146625"
                               >
                                 <span
-                                  id="promo-pidgintori23146625-1"
+                                  id="features-and-analysis-promo-pidgintori23146625-1"
                                 >
                                   How Lagos Dey Fight Lassa Fever
                                 </span>
@@ -10833,12 +10836,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-279 emotion-215"
                             >
                               <a
-                                aria-labelledby="promo-pidginmedia23267821-2"
+                                aria-labelledby="features-and-analysis-promo-pidginmedia23267821-2"
                                 class="emotion-216 emotion-217"
                                 href="/pidgin/media-23267821"
                               >
                                 <span
-                                  id="promo-pidginmedia23267821-2"
+                                  id="features-and-analysis-promo-pidginmedia23267821-2"
                                   role="text"
                                 >
                                   <span
@@ -10933,12 +10936,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-279 emotion-215"
                             >
                               <a
-                                aria-labelledby="promo-pidgin23267823-3"
+                                aria-labelledby="features-and-analysis-promo-pidgin23267823-3"
                                 class="emotion-216 emotion-217"
                                 href="/pidgin/23267823"
                               >
                                 <span
-                                  id="promo-pidgin23267823-3"
+                                  id="features-and-analysis-promo-pidgin23267823-3"
                                   role="text"
                                 >
                                   <span
@@ -11001,12 +11004,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-279 emotion-215"
                             >
                               <a
-                                aria-labelledby="promo-pidgintori23169387-4"
+                                aria-labelledby="features-and-analysis-promo-pidgintori23169387-4"
                                 class="emotion-216 emotion-217"
                                 href="/pidgin/tori-23169387"
                               >
                                 <span
-                                  id="promo-pidgintori23169387-4"
+                                  id="features-and-analysis-promo-pidgintori23169387-4"
                                 >
                                   Libya: omo ile Ghana márùndínláàdóje pada sile
                                 </span>
@@ -11061,12 +11064,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-279 emotion-215"
                             >
                               <a
-                                aria-labelledby="promo-newsworldafrica23143884-5"
+                                aria-labelledby="features-and-analysis-promo-newsworldafrica23143884-5"
                                 class="emotion-216 emotion-217"
                                 href="/news/world-africa-23143884"
                               >
                                 <span
-                                  id="promo-newsworldafrica23143884-5"
+                                  id="features-and-analysis-promo-newsworldafrica23143884-5"
                                 >
                                   Like Scaramucci, Like Others
                                 </span>
@@ -11121,12 +11124,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-279 emotion-215"
                             >
                               <a
-                                aria-labelledby="promo-pidgintori23146975-6"
+                                aria-labelledby="features-and-analysis-promo-pidgintori23146975-6"
                                 class="emotion-216 emotion-217"
                                 href="/pidgin/tori-23146975"
                               >
                                 <span
-                                  id="promo-pidgintori23146975-6"
+                                  id="features-and-analysis-promo-pidgintori23146975-6"
                                 >
                                   Anambra Attack: 'My Friend Uchenna na Nice Girl'- Gabros
                                 </span>
@@ -11181,12 +11184,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-279 emotion-215"
                             >
                               <a
-                                aria-labelledby="promo-pidginsport51434980-radiobulletin-7"
+                                aria-labelledby="features-and-analysis-promo-pidginsport51434980-radiobulletin-7"
                                 class="emotion-216 emotion-217"
                                 href="https://www.bbc.com/pidgin/sport-51434980"
                               >
                                 <span
-                                  id="promo-pidginsport51434980-radiobulletin-7"
+                                  id="features-and-analysis-promo-pidginsport51434980-radiobulletin-7"
                                 >
                                   Man City vs West Ham: Bad weather force Premier League to cancel Sunday match
                                 </span>
@@ -11241,12 +11244,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-279 emotion-215"
                             >
                               <a
-                                aria-labelledby="promo-pidgintori23145776-8"
+                                aria-labelledby="features-and-analysis-promo-pidgintori23145776-8"
                                 class="emotion-216 emotion-217"
                                 href="/pidgin/tori-23145776"
                               >
                                 <span
-                                  id="promo-pidgintori23145776-8"
+                                  id="features-and-analysis-promo-pidgintori23145776-8"
                                 >
                                   Anambra Church: Police Arrest 3
                                 </span>
@@ -11330,12 +11333,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-279 emotion-215"
                             >
                               <a
-                                aria-labelledby="promo-pidgin23146654-9"
+                                aria-labelledby="features-and-analysis-promo-pidgin23146654-9"
                                 class="emotion-216 emotion-217"
                                 href="/pidgin/23146654"
                               >
                                 <span
-                                  id="promo-pidgin23146654-9"
+                                  id="features-and-analysis-promo-pidgin23146654-9"
                                   role="text"
                                 >
                                   <span

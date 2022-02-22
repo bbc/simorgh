@@ -6,6 +6,8 @@ import {
 } from '@optimizely/react-sdk';
 import { ServiceContext } from '#contexts/ServiceContext';
 import isLive from '#lib/utilities/isLive';
+import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/dist/breakpoints';
+import onClient from '#lib/utilities/onClient';
 import getOptimizelyUserId from './getOptimizelyUserId';
 
 if (isLive()) {
@@ -22,7 +24,8 @@ const withOptimizelyProvider = Component => {
   return props => {
     const { service } = useContext(ServiceContext);
     const isStoryBook = process.env.STORYBOOK;
-    const disableOptimizely = isStoryBook || isLive();
+    const disableOptimizely = isStoryBook;
+    let mobile;
 
     const getUserId = () => {
       if (disableOptimizely) {
@@ -31,15 +34,27 @@ const withOptimizelyProvider = Component => {
       return getOptimizelyUserId();
     };
 
+    if (onClient()) {
+      const matchMedia = window.matchMedia(
+        `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
+      );
+      if (matchMedia.matches) {
+        mobile = true;
+      } else {
+        mobile = false;
+      }
+    }
+
     return (
       <OptimizelyProvider
         optimizely={optimizely}
         isServerSide
-        timeout={500}
+        timeout={1000}
         user={{
           id: getUserId(),
           attributes: {
             service,
+            mobile,
           },
         }}
       >
