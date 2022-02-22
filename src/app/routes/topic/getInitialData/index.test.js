@@ -1,15 +1,21 @@
 import getInitialData from '.';
-import getAgent from '../../../../server/utilities/getAgent';
+
+const topicJSON = {
+  data: {
+    title: 'Donald Trump',
+  },
+};
 
 describe('get initial data for topic', () => {
   it('should return our topic title', async () => {
+    fetch.mockResponse(JSON.stringify(topicJSON));
+    const getAgent = jest.fn();
     const { pageData } = await getInitialData({
+      path: 'mock-topic-path',
       getAgent,
       service: 'pidgin',
     });
-    expect(pageData.title)
-      .toEqual('Donald Trump')
-      .catch(e => expect(e).toMatch('error'));
+    expect(pageData.title).toEqual('Donald Trump');
   });
 
   it.skip('should return title, type, firstPublished, link, imageUrl and id from a summary', () => {});
