@@ -32,6 +32,7 @@ import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import MostReadContainer from '#containers/MostRead';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
+import OptimizelyPageViewTracking from '#containers/OptimizelyPageViewTracking';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import CpsTable from '#containers/CpsTable';
@@ -315,6 +316,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
       <NielsenAnalytics />
+      <OptimizelyPageViewTracking />
       {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
       {isAdsEnabled && !isAmp && (
         <CanonicalAdBootstrapJs adcampaign={adcampaign} />

@@ -427,6 +427,63 @@
             "type": "link"
           },
           {
+            "headlines": {
+              "headline": "“If di spoon attract me, most times na to carry am enta studio” – Collins"
+            },
+            "locators": {
+              "assetUri": "/pidgin/tori-48591363",
+              "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48591363"
+            },
+            "summary": "Dis artist no dey take eye see spoon, as no be to chop food be di only tin him dey use am do.",
+            "timestamp": 1560233405000,
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07csxg6",
+              "subType": "clip",
+              "format": "video",
+              "title": "“If di spoon attract me, most times na to carry am enta studio” – Collins",
+              "synopses": {
+                "short": "“If di spoon attract me, most times na to carry am enta studio” – Collins",
+                "long": "Almost every wia pesin turn you go see art of different kinds but dis one get as e be, unto say na spoon dis pesin take dey do im own work.\n\nAbiniro Collins na Artist for Lagos, south west Nigeria, wey no dey use eye see spoon.\n\nCollins tok say na wen im dey school di idea come, as im bin dey find sometin wey pipo neva too use do art work \n\nCollins say im dream na to create place wey young artists for Nigeria go fit go to get mentor for dia work.\n\nProducers: Usifo Omozokpea & Sarah Tiamiyu",
+                "medium": "Dis artist no dey take eye see spoon, as no be to chop food be di only tin him dey use am do."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07csxwm.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "“If di spoon attract me, most times na to carry am enta studio” – Collins",
+              "versions": [
+                {
+                  "versionId": "p07csxg8",
+                  "types": ["Original"],
+                  "duration": 111,
+                  "durationISO8601": "PT1M51S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1560232614
+                }
+              ]
+            },
+            "indexImage": {
+              "id": "107329096",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/10DE4/production/_107329096_p07csxwm.jpg",
+              "path": "/cpsprodpb/10DE4/production/_107329096_p07csxwm.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Abiniro Collins na spoon artist",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:pidgin/tori-48591363",
+            "type": "cps"
+          },
+          {
             "name": "World Cup 2018: Di top stars wey no dey go World Cup",
             "indexImage": {
               "id": "101890910",

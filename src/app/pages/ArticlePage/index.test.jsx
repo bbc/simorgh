@@ -29,6 +29,11 @@ jest.mock('#containers/ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
+jest.mock('#containers/OptimizelyPageViewTracking', () => {
+  const OptimizelyPageViewTracking = () => null;
+  return OptimizelyPageViewTracking;
+});
+
 // eslint-disable-next-line react/prop-types
 const Context = ({ service, children }) => (
   <ToggleContextProvider>
