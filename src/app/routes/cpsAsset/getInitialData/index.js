@@ -47,7 +47,8 @@ const formatPageData = pipe(
   only([STORY_PAGE], insertPodcastPromo),
 );
 
-const processOptimoBlocks = toggles => () =>
+// eslint-disable-next-line no-unused-vars
+const processOptimoBlocks = toggles => service =>
   pipe(
     only([MEDIA_ASSET_PAGE], processUnavailableMedia),
     addHeadlineBlock,
