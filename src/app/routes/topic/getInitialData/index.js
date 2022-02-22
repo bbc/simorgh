@@ -15,7 +15,7 @@ export default async ({ getAgent, service, path: pathname }) => {
       status,
       pageData: {
         ...json.data,
-        promos: fixturePromos(),
+        promos: json.data.summaries,
       },
     };
   } catch (error) {
