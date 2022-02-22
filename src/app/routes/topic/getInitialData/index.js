@@ -6,10 +6,10 @@ import fetchPageData from '../../utils/fetchPageData';
 
 const logger = nodeLogger(__filename);
 
-export default async ({ getAgent, service, path: pathname }) => {
+export default async ({ getAgent, service }) => {
   const agent = await getAgent();
   try {
-    const path = pathname || process.env.BFF_PATH;
+    const path = process.env.BFF_PATH;
     const { status, json } = await fetchPageData({ path, agent });
     return {
       status,
