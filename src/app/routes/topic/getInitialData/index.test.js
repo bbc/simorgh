@@ -1,3 +1,4 @@
+import * as fetchPageData from '#app/routes/utils/fetchPageData';
 import getInitialData from '.';
 
 const topicJSON = {
@@ -7,6 +8,9 @@ const topicJSON = {
 };
 
 describe('get initial data for topic', () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
   it('should return our topic title', async () => {
     fetch.mockResponse(JSON.stringify(topicJSON));
     const getAgent = jest.fn();
@@ -20,23 +24,38 @@ describe('get initial data for topic', () => {
 
   it.skip('should return title, type, firstPublished, link, imageUrl and id from a summary', () => {});
 
-  it.skip('should append the service and id to the BFF_PATH as a query string and return the topic - using a topic without a variant', () => {});
-
-  it.skip('should append the service, id and optional service variant to the BFF_PATH as a query string and return the topic - using a topic with a service variant', () => {});
-});
-
-describe('get error codes for initial data request responses ', () => {
-  it.skip('should throw an error and status code - code 500', () => {});
-
-  it.skip('should throw an error and status code - code 404', () => {});
-
-  it.skip('should throw an error and status code - code 400', () => {});
-
-  it.skip('should throw an error when the page data is undefined', async () => {
+  it('should call fetchPageData with the correct request URL', async () => {
+    fetch.mockResponse(JSON.stringify(topicJSON));
+    const agent = { ca: 'ca', key: 'key' };
+    const getAgent = jest.fn(() => agent);
+    const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
     const { pageData } = await getInitialData({
+      path: 'pidgin/topics/54321',
       getAgent,
-      service: 'pigeon',
+      service: 'pidgin',
     });
-    expect(pageData).toEqual(undefined);
+
+    expect(fetchDataSpy).toHaveBeenCalledWith({
+      path: 'mock-bff-path?id=54321&service=pidgin',
+      agent,
+    });
+  });
+
+  it('should call fetchPageData with the correct request URL - with variant', async () => {
+    fetch.mockResponse(JSON.stringify(topicJSON));
+    const agent = { ca: 'ca', key: 'key' };
+    const getAgent = jest.fn(() => agent);
+    const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
+    const { pageData } = await getInitialData({
+      path: 'serbian/cyr/topics/54321',
+      getAgent,
+      service: 'serbian',
+      variant: 'sr-cyrl',
+    });
+
+    expect(fetchDataSpy).toHaveBeenCalledWith({
+      path: 'mock-bff-path?id=54321&service=serbian&variant=sr-cyrl',
+      agent,
+    });
   });
 });
