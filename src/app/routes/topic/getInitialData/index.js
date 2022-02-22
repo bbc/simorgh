@@ -8,7 +8,7 @@ const logger = nodeLogger(__filename);
 export default async ({ getAgent, service, path: pathname, variant }) => {
   const agent = await getAgent();
   try {
-    const path = process.env.BFF_PATH || pathname;
+    const path = process.env.BFF_PATH;
     const { status, json } = await fetchPageData({ path, agent });
     return {
       status,
