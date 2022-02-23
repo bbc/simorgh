@@ -5,7 +5,7 @@ import Promo, { MEDIA_TYPES } from '#components/Promo';
 
 const TopicPromo = ({
   title,
-  timestamp,
+  firstPublished,
   imageUrl,
   imageAlt,
   link,
@@ -14,7 +14,7 @@ const TopicPromo = ({
 }) => {
   return (
     <Promo>
-      <Promo.Image src={imageSrc} alt={imageAlt}>
+      <Promo.Image src={imageUrl} alt={imageAlt}>
         <Promo.MediaIcon type={mediaType}>{mediaDuration}</Promo.MediaIcon>
       </Promo.Image>
       <Promo.A href={link}>
