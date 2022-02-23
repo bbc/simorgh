@@ -50,7 +50,7 @@ describe('get initial data for topic', () => {
   it('should call fetchPageData with the correct request URL', async () => {
     fetch.mockResponse(JSON.stringify(topicJSON));
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
-    const { pageData } = await getInitialData({
+    await getInitialData({
       path: 'pidgin/topics/54321',
       getAgent,
       service: 'pidgin',
@@ -65,7 +65,7 @@ describe('get initial data for topic', () => {
   it('should call fetchPageData with the correct request URL - with variant', async () => {
     fetch.mockResponse(JSON.stringify(topicJSON));
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
-    const { pageData } = await getInitialData({
+    await getInitialData({
       path: 'serbian/cyr/topics/54321',
       getAgent,
       service: 'serbian',
