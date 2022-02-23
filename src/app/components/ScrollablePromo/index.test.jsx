@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
@@ -5,6 +6,7 @@ import * as viewTracking from '#hooks/useViewTracker';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
+import mundoRecommendationsData from '#pages/StoryPage/fixtureData/recommendations.ltr.json';
 import {
   threeLinks,
   oneLinkOnly,
@@ -13,11 +15,18 @@ import {
 import ScrollablePromo from '.';
 import { edOjA, edOjB } from './fixtures';
 
-// eslint-disable-next-line react/prop-types
-const ScrollablePromoWithContext = ({ blocks, blockGroupIndex }) => (
+const ScrollablePromoWithContext = ({
+  blocks,
+  blockGroupIndex,
+  recommendations,
+}) => (
   <ToggleContextProvider>
     <ServiceContext.Provider value={{ service: 'news' }}>
-      <ScrollablePromo blocks={blocks} blockGroupIndex={blockGroupIndex} />
+      <ScrollablePromo
+        blocks={blocks}
+        blockGroupIndex={blockGroupIndex}
+        recommendations={recommendations}
+      />
     </ServiceContext.Provider>
   </ToggleContextProvider>
 );
@@ -157,4 +166,16 @@ describe('ScrollablePromo', () => {
     'it should match a11y snapshot for list',
     <ScrollablePromoWithContext blocks={threeLinks} />,
   );
+
+  it('should render recommendation variation when recommendation && recommendation data are passed', () => {
+    const { getAllByRole, queryByRole, queryByText } = render(
+      <ScrollablePromoWithContext
+        blocks={mundoRecommendationsData}
+        recommendations
+      />,
+    );
+    expect(getAllByRole('listitem').length).toEqual(3);
+    expect(queryByRole('region')).toBeInTheDocument();
+    expect(queryByText('You may also be interested in')).toBeInTheDocument();
+  });
 });
