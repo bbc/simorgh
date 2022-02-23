@@ -54,6 +54,8 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
+import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
+import OPTIMIZELY_EXPERIMENT_IDS from '#lib/config/optimizely/experimentIds';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 
@@ -71,6 +73,11 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     lang,
     showRelatedTopics,
   } = useContext(ServiceContext);
+
+  const experimentVariation = useOptimizelyVariation(
+    OPTIMIZELY_EXPERIMENT_IDS.hindiRecommendations,
+  );
+
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
@@ -204,6 +211,43 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
     podcastPromo: podcastPromoEnabled && InlinePodcastPromo,
+    experimentBlock: props => {
+      const { showForVariation, part } = props;
+      // Return 'control' variation if 'control' is returned from Optimizely or experiment is not enabled
+      if (
+        showForVariation === 'control' &&
+        (experimentVariation === 'control' || !experimentVariation)
+      ) {
+        return (
+          <CpsRecommendations
+            {...props}
+            parentColumns={gridColsMain}
+            items={recommendationsInitialData}
+          />
+        );
+      }
+
+      if (
+        showForVariation === 'variation_1' &&
+        experimentVariation === 'variation_1'
+      ) {
+        if (part === 1) {
+          return <div>Recs with 2 items, first 2 recs</div>;
+        }
+        if (part === 2) {
+          return <div>Recs with 2 items, last 2 recs</div>;
+        }
+      }
+
+      if (
+        showForVariation === 'variation_3' &&
+        experimentVariation === 'variation_3'
+      ) {
+        return <div>scrolling recs</div>;
+      }
+
+      return null;
+    },
   };
 
   const StyledTimestamp = styled(Timestamp)`
