@@ -46,7 +46,7 @@ const Image = props => {
             />
           )}
           <source srcSet={createSrcSet(src)} type="image/jpeg" sizes={sizes} />
-          <Img {...rest} src={src.replace('{width}', 300)} />
+          <Img {...rest} src={src.replace('{width}', 240)} />
         </picture>
       </ImagePlaceholder>
       {children && <ChildWrapper>{children}</ChildWrapper>}
