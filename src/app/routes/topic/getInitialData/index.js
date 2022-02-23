@@ -1,28 +1,32 @@
 import { BFF_FETCH_ERROR } from '#lib/logger.const';
-import { INTERNAL_SERVER_ERROR } from '#lib/statusCodes.const';
 import nodeLogger from '#lib/logger.node';
-import { fixturePromos } from '#pages/TopicPage/fixtures';
 import fetchPageData from '../../utils/fetchPageData';
+import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
 const logger = nodeLogger(__filename);
 
-export default async ({ getAgent, service }) => {
+export default async ({ getAgent, service, path: pathname, variant }) => {
   const agent = await getAgent();
   try {
-    const path = process.env.BFF_PATH;
+    const id = pathname.split('/').pop();
+    const path = `${process.env.BFF_PATH}?id=${id}&service=${service}${
+      variant ? `&variant=${variant}` : ``
+    }`;
     const { status, json } = await fetchPageData({ path, agent });
+    const { data } = json;
     return {
       status,
       pageData: {
-        ...json,
-        promos: fixturePromos(),
+        title: data.title,
+        promos: data.summaries,
       },
     };
-  } catch (error) {
+  } catch ({ message, status = getErrorStatusCode() }) {
     logger.error(BFF_FETCH_ERROR, {
       service,
-      error,
+      status,
+      pathname,
     });
-    return { error, status: INTERNAL_SERVER_ERROR };
+    return { error: message, status };
   }
 };
