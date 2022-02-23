@@ -1,5 +1,13 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, string, oneOfType, object, func } from 'prop-types';
+import {
+  arrayOf,
+  shape,
+  string,
+  oneOfType,
+  object,
+  func,
+  bool,
+} from 'prop-types';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import { getPica } from '@bbc/gel-foundations/typography';
@@ -70,22 +78,26 @@ const OperaPromoBox = styled.div`
   }
 `;
 
-const Promo = ({ block, onClick }) => {
+const Promo = ({ block, onClick, recommendations }) => {
   const { script, service } = useContext(ServiceContext);
-  const textBlock = filterForBlockType(
-    pathOr({}, ['model', 'blocks'], block),
-    'text',
-  );
-  const href = pathOr(
-    '',
-    ['model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'locator'],
-    textBlock,
-  );
-  const title = pathOr(
-    '',
-    ['model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'text'],
-    textBlock,
-  );
+
+  const textBlock = recommendations
+    ? block
+    : filterForBlockType(pathOr({}, ['model', 'blocks'], block), 'text');
+  const href = recommendations
+    ? pathOr('', ['locators', 'assetUri'], textBlock)
+    : pathOr(
+        '',
+        ['model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'locator'],
+        textBlock,
+      );
+  const title = recommendations
+    ? pathOr('', ['headlines', 'headline'], textBlock)
+    : pathOr(
+        '',
+        ['model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'text'],
+        textBlock,
+      );
 
   const isOperaMini = useOperaMiniDetection();
 
@@ -107,6 +119,7 @@ Promo.propTypes = {
     }).isRequired,
   }).isRequired,
   onClick: func.isRequired,
+  recommendations: bool.isRequired,
 };
 
 export default Promo;
