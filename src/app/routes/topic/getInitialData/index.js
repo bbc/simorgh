@@ -6,8 +6,8 @@ import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCo
 const logger = nodeLogger(__filename);
 
 export default async ({ getAgent, service, path: pathname, variant }) => {
-  const agent = await getAgent();
   try {
+    const agent = await getAgent();
     const id = pathname.split('/').pop();
     const path = `${process.env.BFF_PATH}?id=${id}&service=${service}${
       variant ? `&variant=${variant}` : ``
@@ -26,6 +26,7 @@ export default async ({ getAgent, service, path: pathname, variant }) => {
       service,
       status,
       pathname,
+      message,
     });
     return { error: message, status };
   }
