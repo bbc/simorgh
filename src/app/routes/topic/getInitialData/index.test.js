@@ -34,17 +34,17 @@ describe('get initial data for topic', () => {
       service: 'pidgin',
     });
     expect(pageData.title).toEqual('Donald Trump');
-    expect(pageData.summaries[0].title).toEqual(
+    expect(pageData.promos[0].title).toEqual(
       'Wetin happun for January 6 one year ago?',
     );
-    expect(pageData.summaries[0].type).toEqual('article');
-    expect(pageData.summaries[0].firstPublished).toEqual(
+    expect(pageData.promos[0].type).toEqual('article');
+    expect(pageData.promos[0].firstPublished).toEqual(
       '2022-01-06T19:00:29.000Z',
     );
-    expect(pageData.summaries[0].imageUrl).toEqual('mock-image-url');
-    expect(pageData.summaries[0].link).toEqual('mock-link');
-    expect(pageData.summaries[0].imageAlt).toEqual('mock-image-alt');
-    expect(pageData.summaries[0].id).toEqual('54321');
+    expect(pageData.promos[0].imageUrl).toEqual('mock-image-url');
+    expect(pageData.promos[0].link).toEqual('mock-link');
+    expect(pageData.promos[0].imageAlt).toEqual('mock-image-alt');
+    expect(pageData.promos[0].id).toEqual('54321');
   });
 
   it('should call fetchPageData with the correct request URL', async () => {

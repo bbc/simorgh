@@ -8,9 +8,10 @@ const logger = nodeLogger(__filename);
 export default async ({ getAgent, service, path: pathname, variant }) => {
   const agent = await getAgent();
   try {
-    // append ID, service, and variant (if exists)
-    // to bff_path and pass to fetchPageData
-    const path = process.env.BFF_PATH;
+    const id = pathname.split('/').pop();
+    const path = `${process.env.BFF_PATH}?id=${id}&service=${service}${
+      variant ? `&variant=${variant}` : ``
+    }`;
     const { status, json } = await fetchPageData({ path, agent });
     const { data } = json;
     return {
