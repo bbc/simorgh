@@ -1,7 +1,7 @@
 import { BFF_FETCH_ERROR } from '#lib/logger.const';
-import { INTERNAL_SERVER_ERROR } from '#lib/statusCodes.const';
 import nodeLogger from '#lib/logger.node';
 import fetchPageData from '../../utils/fetchPageData';
+import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
 const logger = nodeLogger(__filename);
 
@@ -21,11 +21,12 @@ export default async ({ getAgent, service, path: pathname, variant }) => {
         promos: data.summaries,
       },
     };
-  } catch (error) {
+  } catch ({ message, status = getErrorStatusCode() }) {
     logger.error(BFF_FETCH_ERROR, {
       service,
-      error,
+      status,
+      pathname,
     });
-    return { error, status: INTERNAL_SERVER_ERROR };
+    return { error: message, status };
   }
 };
