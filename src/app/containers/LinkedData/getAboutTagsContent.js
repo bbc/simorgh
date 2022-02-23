@@ -1,10 +1,5 @@
 const checkType = types => {
-  const acceptableTypes = [
-    'core:Person',
-    'core:Event',
-    'core:Organization',
-    'core:Place',
-  ];
+  const acceptableTypes = ['core:Person', 'core:Organization', 'core:Place'];
 
   if (types.length === 0) {
     return 'Thing';
