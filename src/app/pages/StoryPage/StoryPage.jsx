@@ -54,8 +54,6 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
-import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
-import OPTIMIZELY_EXPERIMENT_IDS from '#lib/config/optimizely/experimentIds';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 
