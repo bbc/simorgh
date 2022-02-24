@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { node } from 'prop-types';
 import styled from '@emotion/styled';
 import {
@@ -104,7 +104,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
   const recommendationsInitialData = path(['recommendations'], pageData);
   const topics = path(['metadata', 'topics'], pageData);
-  const [viewEventSent, setViewEventSent] = useState(false);
 
   const gridColumns = {
     group0: 8,
@@ -194,13 +193,13 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     table: props => <CpsTable {...props} />,
     mpu: props =>
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
-    // wsoj: props => (
-    //   <CpsRecommendations
-    //     {...props}
-    //     parentColumns={gridColsMain}
-    //     items={recommendationsInitialData}
-    //   />
-    // ),
+    wsoj: props => (
+      <CpsRecommendations
+        {...props}
+        parentColumns={gridColsMain}
+        items={recommendationsInitialData}
+      />
+    ),
     disclaimer: props => (
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
