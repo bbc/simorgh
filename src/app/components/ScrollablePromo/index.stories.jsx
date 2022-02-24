@@ -27,7 +27,7 @@ const ScrollablePromoComponent = ({
   script,
   dir,
   translations,
-  recommendations,
+  isRecommendationType,
 }) => (
   <ToggleContextProvider>
     <BackGround>
@@ -37,7 +37,10 @@ const ScrollablePromoComponent = ({
         dir={dir}
         translations={translations}
       >
-        <ScrollablePromo blocks={data} recommendations={recommendations} />
+        <ScrollablePromo
+          blocks={data}
+          isRecommendationType={isRecommendationType}
+        />
       </ServiceContextProvider>
     </BackGround>
   </ToggleContextProvider>
@@ -76,7 +79,7 @@ export const ArabicText = props => (
 export const Recommendations = props => (
   <ScrollablePromoComponent
     data={mundoRecommendationsData}
-    recommendations
+    isRecommendationType
     {...props}
   />
 );

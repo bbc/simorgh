@@ -18,7 +18,7 @@ import { edOjA, edOjB } from './fixtures';
 const ScrollablePromoWithContext = ({
   blocks,
   blockGroupIndex,
-  recommendations,
+  isRecommendationType,
   translations,
   service,
 }) => (
@@ -32,7 +32,7 @@ const ScrollablePromoWithContext = ({
       <ScrollablePromo
         blocks={blocks}
         blockGroupIndex={blockGroupIndex}
-        recommendations={recommendations}
+        isRecommendationType={isRecommendationType}
       />
     </ServiceContext.Provider>
   </ToggleContextProvider>
@@ -188,7 +188,7 @@ describe('recommendationEOJ', () => {
     const { getAllByRole, queryByRole, queryByText } = render(
       <ScrollablePromoWithContext
         blocks={mundoRecommendationsData}
-        recommendations
+        isRecommendationType
         service="news"
       />,
     );
@@ -201,7 +201,7 @@ describe('recommendationEOJ', () => {
     const { queryByText } = render(
       <ScrollablePromoWithContext
         blocks={mundoRecommendationsData}
-        recommendations
+        isRecommendationType
         service="mundo"
         translations={{ relatedContent: 'contenido relacionado' }}
       />,
@@ -213,7 +213,7 @@ describe('recommendationEOJ', () => {
     'it should match a11y snapshot for recommendationEOJ',
     <ScrollablePromoWithContext
       blocks={mundoRecommendationsData}
-      recommendations
+      isRecommendationType
       service="news"
     />,
   );

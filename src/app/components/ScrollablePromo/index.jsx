@@ -45,7 +45,7 @@ const LabelComponent = styled.strong`
   margin-bottom: ${GEL_SPACING_DBL};
 `;
 
-const ScrollablePromo = ({ blocks, blockGroupIndex, recommendations }) => {
+const ScrollablePromo = ({ blocks, blockGroupIndex, isRecommendationType }) => {
   const { script, service, dir, translations } = useContext(ServiceContext);
 
   const eventTrackingData = {
@@ -76,9 +76,12 @@ const ScrollablePromo = ({ blocks, blockGroupIndex, recommendations }) => {
 
   return (
     <GridItemMediumNoMargin
-      {...(recommendations && { 'data-e2e': { labelId }, ...a11yAttributes })}
+      {...(isRecommendationType && {
+        'data-e2e': { labelId },
+        ...a11yAttributes,
+      })}
     >
-      {recommendations && (
+      {isRecommendationType && (
         <LabelComponent
           id={labelId}
           script={script}
@@ -94,7 +97,7 @@ const ScrollablePromo = ({ blocks, blockGroupIndex, recommendations }) => {
           <Promo
             block={blocksWithoutTitle[0]}
             onClick={handleClickTracking}
-            recommendations={recommendations}
+            isRecommendationType={isRecommendationType}
           />
         </PromoWrapper>
       ) : (
@@ -102,7 +105,7 @@ const ScrollablePromo = ({ blocks, blockGroupIndex, recommendations }) => {
           blocks={blocksWithoutTitle}
           viewTracker={viewRef}
           onClick={handleClickTracking}
-          recommendations={recommendations}
+          isRecommendationType={isRecommendationType}
         />
       )}
     </GridItemMediumNoMargin>
@@ -119,12 +122,12 @@ ScrollablePromo.propTypes = {
     }),
   ).isRequired,
   blockGroupIndex: number,
-  recommendations: bool,
+  isRecommendationType: bool,
 };
 
 ScrollablePromo.defaultProps = {
   blockGroupIndex: null,
-  recommendations: false,
+  isRecommendationType: false,
 };
 
 export default ScrollablePromo;

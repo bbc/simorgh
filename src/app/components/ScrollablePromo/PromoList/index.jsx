@@ -47,13 +47,13 @@ const StyledList = styled.li`
   display: flex;
   flex-shrink: 0;
 
-  ${({ dir, recommendations }) =>
+  ${({ dir, isRecommendationType }) =>
     `
       @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}){
         margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
         &:first-child {
           margin-${dir === 'ltr' ? 'left' : 'right'}: ${
-      recommendations ? 0 : GEL_SPACING
+      isRecommendationType ? 0 : GEL_SPACING
     };
         }
         &:last-child {
@@ -65,7 +65,7 @@ const StyledList = styled.li`
 
         &:first-child {
           margin-${dir === 'ltr' ? 'left' : 'right'}: ${
-      recommendations ? 0 : GEL_SPACING_DBL
+      isRecommendationType ? 0 : GEL_SPACING_DBL
     };
         }
       }
@@ -89,7 +89,7 @@ const OperaStyledList = styled.li`
       margin-${dir === 'ltr' ? `left` : `right`}: 0;}`}
 `;
 
-const PromoList = ({ blocks, viewTracker, onClick, recommendations }) => {
+const PromoList = ({ blocks, viewTracker, onClick, isRecommendationType }) => {
   const { dir } = useContext(ServiceContext);
   const isOperaMini = useOperaMiniDetection();
   const listBlocks = blocks.slice(0, 3);
@@ -106,12 +106,16 @@ const PromoList = ({ blocks, viewTracker, onClick, recommendations }) => {
     >
       {listBlocks.map((block, index) => {
         return (
-          // eslint-disable-next-line react/no-array-index-key
-          <List key={index} dir={dir} recommendations={recommendations}>
+          <List
+            // eslint-disable-next-line react/no-array-index-key
+            key={index}
+            dir={dir}
+            isRecommendationType={isRecommendationType}
+          >
             <Promo
               block={block}
               onClick={onClick}
-              recommendations={recommendations}
+              isRecommendationType={isRecommendationType}
             />
           </List>
         );
@@ -131,7 +135,7 @@ PromoList.propTypes = {
   ).isRequired,
   viewTracker: func.isRequired,
   onClick: func.isRequired,
-  recommendations: bool.isRequired,
+  isRecommendationType: bool.isRequired,
 };
 
 export default PromoList;

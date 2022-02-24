@@ -78,20 +78,20 @@ const OperaPromoBox = styled.div`
   }
 `;
 
-const Promo = ({ block, onClick, recommendations }) => {
+const Promo = ({ block, onClick, isRecommendationType }) => {
   const { script, service } = useContext(ServiceContext);
 
-  const textBlock = recommendations
+  const textBlock = isRecommendationType
     ? block
     : filterForBlockType(pathOr({}, ['model', 'blocks'], block), 'text');
-  const href = recommendations
+  const href = isRecommendationType
     ? pathOr('', ['locators', 'assetUri'], textBlock)
     : pathOr(
         '',
         ['model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'locator'],
         textBlock,
       );
-  const title = recommendations
+  const title = isRecommendationType
     ? pathOr('', ['headlines', 'headline'], textBlock)
     : pathOr(
         '',
@@ -119,7 +119,7 @@ Promo.propTypes = {
     }).isRequired,
   }).isRequired,
   onClick: func.isRequired,
-  recommendations: bool.isRequired,
+  isRecommendationType: bool.isRequired,
 };
 
 export default Promo;
