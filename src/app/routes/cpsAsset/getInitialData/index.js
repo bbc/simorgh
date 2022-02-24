@@ -59,7 +59,6 @@ const processOptimoBlocks = toggles =>
     addBylineBlock,
     addRecommendationsBlock,
     addMpuBlock,
-    addIdsToBlocks,
     applyBlockPositioning,
     cpsOnlyOnwardJourneys,
     addIndexToBlockGroups(isListWithLink, {
