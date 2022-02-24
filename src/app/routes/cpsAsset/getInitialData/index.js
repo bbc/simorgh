@@ -29,7 +29,6 @@ import getAdditionalPageData from '../utils/getAdditionalPageData';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 import isListWithLink from '../../utils/isListWithLink';
 import addIndexToBlockGroups from '../../utils/sharedDataTransformers/addIndexToBlockGroups';
-// import addExperimentPlaceholderBlocks from './addExperimentPlaceholderBlocks';
 
 export const only =
   (pageTypes, transformer) =>
@@ -47,8 +46,7 @@ const formatPageData = pipe(
   only([STORY_PAGE], insertPodcastPromo),
 );
 
-// eslint-disable-next-line no-unused-vars
-const processOptimoBlocks = toggles => service =>
+const processOptimoBlocks = toggles =>
   pipe(
     only([MEDIA_ASSET_PAGE], processUnavailableMedia),
     addHeadlineBlock,
@@ -63,7 +61,6 @@ const processOptimoBlocks = toggles => service =>
     addMpuBlock,
     addIdsToBlocks,
     applyBlockPositioning,
-    // addExperimentPlaceholderBlocks(service),
     cpsOnlyOnwardJourneys,
     addIndexToBlockGroups(isListWithLink, {
       blockGroupType: 'listWithLink',
@@ -73,14 +70,14 @@ const processOptimoBlocks = toggles => service =>
 
 // Here pathname is passed as a prop specifically for CPS includes
 // This will most likely change in issue #6784 so it is temporary for now
-const transformJson = async (json, pathname, toggles, service) => {
+const transformJson = async (json, pathname, toggles) => {
   try {
     const formattedPageData = formatPageData(json);
     const optimoBlocks = await convertToOptimoBlocks(
       formattedPageData,
       pathname,
     );
-    return processOptimoBlocks(toggles)(service)(optimoBlocks);
+    return processOptimoBlocks(toggles)(optimoBlocks);
   } catch (e) {
     // We can arrive here if the CPS asset is a FIX page
     // TODO: consider checking if FIX then don't transform JSON
@@ -123,7 +120,7 @@ export default async ({
     return {
       status,
       pageData: {
-        ...(await transformJson(json, pathname, toggles, service)),
+        ...(await transformJson(json, pathname, toggles)),
         ...processedAdditionalData,
       },
     };
