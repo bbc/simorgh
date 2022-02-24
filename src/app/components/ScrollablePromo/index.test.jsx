@@ -19,9 +19,16 @@ const ScrollablePromoWithContext = ({
   blocks,
   blockGroupIndex,
   recommendations,
+  translations,
+  service,
 }) => (
   <ToggleContextProvider>
-    <ServiceContext.Provider value={{ service: 'news' }}>
+    <ServiceContext.Provider
+      value={{
+        service,
+        translations,
+      }}
+    >
       <ScrollablePromo
         blocks={blocks}
         blockGroupIndex={blockGroupIndex}
@@ -33,27 +40,29 @@ const ScrollablePromoWithContext = ({
 
 describe('ScrollablePromo', () => {
   it('should return null if no data is passed', () => {
-    const { container } = render(<ScrollablePromoWithContext blocks={{}} />);
+    const { container } = render(
+      <ScrollablePromoWithContext blocks={{}} service="news" />,
+    );
     expect(container).toBeEmptyDOMElement();
   });
 
   it('should render max 3 promo items', () => {
     const { getAllByRole } = render(
-      <ScrollablePromoWithContext blocks={moreThanThreeLinks} />,
+      <ScrollablePromoWithContext blocks={moreThanThreeLinks} service="news" />,
     );
     expect(getAllByRole('listitem').length).toEqual(3);
   });
 
   it('should render single promo item', () => {
     const { container } = render(
-      <ScrollablePromoWithContext blocks={oneLinkOnly} />,
+      <ScrollablePromoWithContext blocks={oneLinkOnly} service="news" />,
     );
     expect(container.childElementCount).toEqual(1);
   });
 
   it('should not render a list when there is only one promo', () => {
     const { queryByRole } = render(
-      <ScrollablePromoWithContext blocks={oneLinkOnly} />,
+      <ScrollablePromoWithContext blocks={oneLinkOnly} service="news" />,
     );
 
     expect(queryByRole('list')).not.toBeInTheDocument();
@@ -62,7 +71,7 @@ describe('ScrollablePromo', () => {
 
   it('should render unordered list if more than 1 item', () => {
     const { queryByRole, getAllByRole } = render(
-      <ScrollablePromoWithContext blocks={threeLinks} />,
+      <ScrollablePromoWithContext blocks={threeLinks} service="news" />,
     );
     expect(queryByRole('list')).toBeInTheDocument();
     expect(getAllByRole('listitem').length).toEqual(3);
@@ -80,6 +89,7 @@ describe('ScrollablePromo', () => {
         <ScrollablePromoWithContext
           blocks={edOjA.model.blocks}
           blockGroupIndex={1}
+          service="news"
         />,
       );
 
@@ -95,12 +105,14 @@ describe('ScrollablePromo', () => {
         <ScrollablePromoWithContext
           blocks={edOjA.model.blocks}
           blockGroupIndex={1}
+          service="news"
         />,
       );
       render(
         <ScrollablePromoWithContext
           blocks={edOjB.model.blocks}
           blockGroupIndex={2}
+          service="news"
         />,
       );
 
@@ -121,6 +133,7 @@ describe('ScrollablePromo', () => {
         <ScrollablePromoWithContext
           blocks={edOjA.model.blocks}
           blockGroupIndex={1}
+          service="news"
         />,
       );
 
@@ -136,12 +149,14 @@ describe('ScrollablePromo', () => {
         <ScrollablePromoWithContext
           blocks={edOjA.model.blocks}
           blockGroupIndex={1}
+          service="news"
         />,
       );
       render(
         <ScrollablePromoWithContext
           blocks={edOjB.model.blocks}
           blockGroupIndex={2}
+          service="news"
         />,
       );
 
@@ -159,23 +174,47 @@ describe('ScrollablePromo', () => {
 
   shouldMatchSnapshot(
     'it should match a11y snapshot for single card',
-    <ScrollablePromoWithContext blocks={oneLinkOnly} />,
+    <ScrollablePromoWithContext blocks={oneLinkOnly} service="news" />,
   );
 
   shouldMatchSnapshot(
     'it should match a11y snapshot for list',
-    <ScrollablePromoWithContext blocks={threeLinks} />,
+    <ScrollablePromoWithContext blocks={threeLinks} service="news" />,
   );
+});
 
+describe('recommendationEOJ', () => {
   it('should render recommendation variation when recommendation && recommendation data are passed', () => {
     const { getAllByRole, queryByRole, queryByText } = render(
       <ScrollablePromoWithContext
         blocks={mundoRecommendationsData}
         recommendations
+        service="news"
       />,
     );
     expect(getAllByRole('listitem').length).toEqual(3);
     expect(queryByRole('region')).toBeInTheDocument();
-    expect(queryByText('You may also be interested in')).toBeInTheDocument();
+    expect(queryByText('Related stories')).toBeInTheDocument();
   });
+
+  it('should render translated title', () => {
+    const { queryByText } = render(
+      <ScrollablePromoWithContext
+        blocks={mundoRecommendationsData}
+        recommendations
+        service="mundo"
+        translations={{ relatedContent: 'contenido relacionado' }}
+      />,
+    );
+    expect(queryByText('contenido relacionado')).toBeInTheDocument();
+  });
+
+  shouldMatchSnapshot(
+    'it should match a11y snapshot for recommendationEOJ',
+    <ScrollablePromoWithContext
+      blocks={mundoRecommendationsData}
+      recommendations
+      service="news"
+    />,
+  );
 });

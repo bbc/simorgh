@@ -65,11 +65,7 @@ const ScrollablePromo = ({ blocks, blockGroupIndex, recommendations }) => {
 
   const isSingleItem = blocksWithoutTitle.length === 1;
 
-  const title = pathOr(
-    'You may also be interested in',
-    ['recommendationTitle'],
-    translations,
-  );
+  const title = pathOr('Related stories', ['relatedContent'], translations);
 
   const labelId = 'recommendations-heading';
   const a11yAttributes = {
