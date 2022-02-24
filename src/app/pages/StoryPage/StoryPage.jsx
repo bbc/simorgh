@@ -74,9 +74,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     showRelatedTopics,
   } = useContext(ServiceContext);
 
-  const experimentVariation = useOptimizelyVariation(
-    OPTIMIZELY_EXPERIMENT_IDS.hindiRecommendations,
-  );
+  const experimentVariation = '';
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const title = path(['promo', 'headlines', 'headline'], pageData);
