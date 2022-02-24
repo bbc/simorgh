@@ -15,15 +15,14 @@ import isEmpty from 'ramda/src/isEmpty';
 import tail from 'ramda/src/tail';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
+import { getBodyCopy } from '@bbc/gel-foundations/typography';
+import { getSerifBold } from '@bbc/psammead-styles/font-styles';
 import { GridItemMediumNoMargin } from '#app/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
-import SectionLabel from '@bbc/psammead-section-label';
-import { C_GHOST } from '@bbc/psammead-styles/colours';
 import Promo from './Promo';
 import PromoList from './PromoList';
 
@@ -38,12 +37,12 @@ const PromoWrapper = styled.div`
   }
 `;
 
-const LabelComponent = styled(SectionLabel)`
-  margin: 0;
-  padding: 0;
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin: 0 0 ${GEL_SPACING};
-  }
+const LabelComponent = styled.strong`
+  display: block;
+  ${({ script }) => script && getBodyCopy(script)}
+  ${({ service }) => service && getSerifBold(service)}
+  font-size: 20px;
+  margin-bottom: ${GEL_SPACING_DBL};
 `;
 
 const ScrollablePromo = ({ blocks, blockGroupIndex, recommendations }) => {
@@ -85,14 +84,10 @@ const ScrollablePromo = ({ blocks, blockGroupIndex, recommendations }) => {
     >
       {recommendations && (
         <LabelComponent
+          id={labelId}
           script={script}
           service={service}
           dir={dir}
-          labelId={labelId}
-          columnType="main"
-          overrideHeadingAs="strong"
-          bar={false}
-          backgroundColor={C_GHOST}
         >
           {title}
         </LabelComponent>
