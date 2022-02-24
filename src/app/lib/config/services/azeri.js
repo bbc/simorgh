@@ -237,7 +237,7 @@ export const service = {
           'Sorry, we can’t display this part of the story on this lightweight mobile page.',
         linkText: 'View the full version of the page to see all the content.',
       },
-      topStoriesTitle: 'Bu günün xəbərləri',
+      topStoriesTitle: 'Digər xəbərlər',
       featuresAnalysisTitle: 'Bunları da oxuyun',
     },
     brandSVG,
