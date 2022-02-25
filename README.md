@@ -234,7 +234,7 @@ Topic pages use internal BBC APIs that are not publicly accessible. This can cau
 envConfig/secret.env: No such file or directory
 You will not have access to topics
 
-Internal developers who need to access topic pages should contact the team for access.
+Internal developers who need to work on topic pages locally should contact the team for access.
 
 ### Other page types
 
