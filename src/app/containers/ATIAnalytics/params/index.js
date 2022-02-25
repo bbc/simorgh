@@ -73,8 +73,7 @@ const pageTypeParamBuilders = {
   mostWatched: buildMostWatchedATIParams,
   IDX: buildIndexPageATIParams,
   FIX: buildIndexPageATIParams,
-  TOPIC: (data, requestContext, serviceContext) =>
-    buildTopicPageATIParams(data, requestContext, serviceContext),
+  TOPIC: buildTopicPageATIParams,
   MAP: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIParams(
       data,
