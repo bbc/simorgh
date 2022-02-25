@@ -1,5 +1,3 @@
-import path from 'ramda/src/path';
-
 import { buildATIPageTrackPath } from '../../atiUrl';
 
 export const buildTopicPageATIParams = (
@@ -10,13 +8,10 @@ export const buildTopicPageATIParams = (
   const { platform, statsDestination } = requestContext;
   const { atiAnalyticsAppName, service } = serviceContext;
 
-  const { metadata } = pageData;
-
   return {
     appName: atiAnalyticsAppName,
     contentType: 'index-category',
-    pageIdentifier: path(['analyticsLabels', 'pageIdentifier'], metadata),
-    pageTitle: path(['analyticsLabels', 'pageTitle'], metadata),
+    pageTitle: pageData.title,
     statsDestination,
     platform,
     service,
