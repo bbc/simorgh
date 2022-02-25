@@ -25,7 +25,7 @@ const ATIAnalytics = ({ data }) => {
     mostWatched: buildMostWatchedATIUrl,
     IDX: buildIndexPageATIUrl,
     FIX: buildIndexPageATIUrl,
-    TOPIC: () => buildTopicPageATIUrl(data, requestContext, serviceContext),
+    TOPIC: buildTopicPageATIUrl,
     MAP: () =>
       buildCpsAssetPageATIUrl(
         data,
