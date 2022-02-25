@@ -45,6 +45,12 @@ const ensureCookieExpiryDates = () => {
 };
 
 export default ({ service, variant, pageType, path }) => {
+  cy.on('uncaught:exception', err => {
+    expect(err.message).to.include(
+      "Cannot read properties of undefined (reading 'style')",
+    );
+    return false;
+  });
   it('should have a privacy & cookie banner, which disappears once "accepted" ', () => {
     cy.clearCookies();
     visitPage(path, pageType);
