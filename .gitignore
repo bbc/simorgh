@@ -16,6 +16,7 @@ simorgh.report.json
 cypress/integration/123PlaygroundForTests/*
 src/app/lib/config/services/*.test.js
 .env
+envConfig/secrets.js
 yarn-error.log
 .yarn/*
 !.yarn/cache
