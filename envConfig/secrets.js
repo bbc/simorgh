@@ -2,7 +2,7 @@
 // DO NOT PUSH THIS FILE
 //
 
-const BFF_PATH = '';
+const BFF_PATH = 's';
 
 export default {
   BFF_PATH: () => {
@@ -14,3 +14,5 @@ export default {
     return BFF_PATH;
   },
 };
+
+// Testing hook

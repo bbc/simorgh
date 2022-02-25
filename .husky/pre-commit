@@ -1,0 +1,1 @@
+git reset HEAD -- envConfig/secrets.js
