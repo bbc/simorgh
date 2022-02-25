@@ -1,4 +1,4 @@
-// render whatever data we get from getinitialdata i.e hello world
+import ATIAnalytics from '#containers/ATIAnalytics';
 
 import React from 'react';
 import { shape, arrayOf, string } from 'prop-types';
@@ -9,6 +9,7 @@ const TopicPage = ({ pageData }) => {
     <>
       <div>{pageData.title}</div>
       <TopicGrid promos={pageData.promos} />
+      <ATIAnalytics data={pageData} />;
     </>
   );
 };
