@@ -227,6 +227,15 @@ Services with variants can't be accessed using the format above, instead the var
 - [http://localhost:7080/zhongwen/simp](http://localhost:7080/zhongwen/simp)
 - [http://localhost:7080/zhongwen/simp.amp](http://localhost:7080/zhongwen/simp.amp).
 
+### Topic Pages
+
+Topic pages use internal BBC APIs that are not publicly accessible. This can cause the following warnings to appear when developing locally:
+
+envConfig/secret.env: No such file or directory
+You will not have access to topics
+
+Internal developers who need to access topic pages should contact the team for access.
+
 ### Other page types
 
 You can find other pages types by looking through our routes and their associates regexes, but we suggest you start with the above then have a look at the core of the application to understand and find the other routes.
