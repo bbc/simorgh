@@ -41,8 +41,7 @@ const pageTypeUrlBuilders = {
   mostWatched: buildMostWatchedATIUrl,
   IDX: buildIndexPageATIUrl,
   FIX: buildIndexPageATIUrl,
-  TOPIC: (data, requestContext, serviceContext) =>
-    buildTopicPageATIUrl(data, requestContext, serviceContext),
+  TOPIC: buildTopicPageATIUrl,
   MAP: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIUrl(
       data,
