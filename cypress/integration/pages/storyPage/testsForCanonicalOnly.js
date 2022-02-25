@@ -12,6 +12,13 @@ export const testsThatAlwaysRunForCanonicalOnly = () => {
     // our story pages should not do this. The test checks the core content has been removed
     // following progressive enhancement by the include's inline scripts.
     // This test specifically is targeted at this test asset: '/mundo/23263889'
+
+    cy.on('uncaught:exception', err => {
+      expect(err.message).to.include(
+        "Cannot read properties of undefined (reading 'style')",
+      );
+      return false;
+    });
     it('should load the eclipse VJ include successfully', () => {
       cy.window().then(win => {
         if (win.location.pathname.includes('/mundo/23263889')) {
