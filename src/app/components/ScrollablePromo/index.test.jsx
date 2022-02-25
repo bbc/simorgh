@@ -172,15 +172,12 @@ describe('ScrollablePromo', () => {
     });
   });
 
-  shouldMatchSnapshot(
-    'it should match a11y snapshot for single card',
-    <ScrollablePromoWithContext blocks={oneLinkOnly} service="news" />,
-  );
-
-  shouldMatchSnapshot(
-    'it should match a11y snapshot for list',
-    <ScrollablePromoWithContext blocks={threeLinks} service="news" />,
-  );
+  it('it should not be a list if a single card is displayed (a11y)', () => {
+    const { queryByRole } = render(
+      <ScrollablePromoWithContext blocks={oneLinkOnly} service="news" />,
+    );
+    expect(queryByRole('list')).toBeNull();
+  });
 });
 
 describe('recommendationEOJ', () => {
@@ -209,12 +206,28 @@ describe('recommendationEOJ', () => {
     expect(queryByText('contenido relacionado')).toBeInTheDocument();
   });
 
-  shouldMatchSnapshot(
-    'it should match a11y snapshot for recommendationEOJ',
-    <ScrollablePromoWithContext
-      blocks={mundoRecommendationsData}
-      isRecommendationType
-      service="news"
-    />,
-  );
+  it('should have a section with a "region" role (a11y)', () => {
+    const { getByRole } = render(
+      <ScrollablePromoWithContext
+        blocks={mundoRecommendationsData}
+        isRecommendationType
+        service="news"
+      />,
+    );
+    expect(getByRole('region', { elementType: 'section' })).toBeInTheDocument();
+  });
+
+  it('the section with role region should be correctly labelledBy the strong element (a11y)', () => {
+    const { getByRole } = render(
+      <ScrollablePromoWithContext
+        blocks={mundoRecommendationsData}
+        isRecommendationType
+        service="news"
+      />,
+    );
+    const region = getByRole('region');
+    expect(region.getAttribute('aria-labelledBy')).toEqual(
+      'recommendations-heading',
+    );
+  });
 });
