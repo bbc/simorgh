@@ -23,7 +23,7 @@
     "node-forge": "1.2.1",
     "nth-check": "2.0.1",
     "postcss": "8.4.6",
-    "prismjs": "1.26.0",
+    "prismjs": "1.27.0",
     "react-is": "17.0.2",
     "simple-get": "4.0.1",
     "trim": "1.0.1"
