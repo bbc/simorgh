@@ -21,8 +21,10 @@ import { getBodyCopy } from '@bbc/gel-foundations/typography';
 import { getSerifBold } from '@bbc/psammead-styles/font-styles';
 import { GridItemMediumNoMargin } from '#app/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { OptimizelyContext } from '@optimizely/react-sdk';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
+import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import Promo from './Promo';
 import PromoList from './PromoList';
 
@@ -45,13 +47,24 @@ const LabelComponent = styled.strong`
   margin-bottom: ${GEL_SPACING_DBL};
 `;
 
+const getEventTrackingData = (optimizely, blockGroupIndex) => ({
+  componentName: `edoj${blockGroupIndex}`,
+  format: 'CHD=edoj',
+  ...(optimizely && { optimizely }),
+});
+
+const HINDI_EXPERIMENT_ID = '003_hindi_experiment_feature';
+
 const ScrollablePromo = ({ blocks, blockGroupIndex, isRecommendationType }) => {
   const { script, service, dir, translations } = useContext(ServiceContext);
+  const { optimizely } = useContext(OptimizelyContext);
 
-  const eventTrackingData = {
-    componentName: `edoj${blockGroupIndex}`,
-    format: 'CHD=edoj',
-  };
+  const promoVariation = useOptimizelyVariation(HINDI_EXPERIMENT_ID);
+  const hasVariationKey = promoVariation !== null;
+  const eventTrackingData = getEventTrackingData(
+    hasVariationKey && optimizely,
+    blockGroupIndex,
+  );
 
   const viewRef = useViewTracker(eventTrackingData);
   const handleClickTracking = useClickTrackerHandler(eventTrackingData);

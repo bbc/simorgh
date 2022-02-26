@@ -1,12 +1,16 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { render } from '@testing-library/react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { render, waitFor } from '@testing-library/react';
 import * as viewTracking from '#hooks/useViewTracker';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import mundoRecommendationsData from '#pages/StoryPage/fixtureData/recommendations.ltr.json';
+import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
+import { RequestContextProvider } from '#app/contexts/RequestContext';
+import { OptimizelyProvider } from '@optimizely/react-sdk';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import {
   threeLinks,
   oneLinkOnly,
@@ -15,6 +19,34 @@ import {
 import ScrollablePromo from '.';
 import { edOjA, edOjB } from './fixtures';
 
+jest.mock('#hooks/useOptimizelyVariation', () => jest.fn(() => null));
+
+const optimizely = {
+  onReady: jest.fn(() => Promise.resolve()),
+  track: jest.fn(),
+  user: {
+    attributes: {},
+  },
+};
+
+const pageData = {
+  metadata: {
+    analyticsLabels: {
+      counterName: 'mundo.media.media_asset.52123665.page',
+    },
+    atiAnalytics: {
+      producerName: 'MUNDO',
+      producerId: '62',
+    },
+    locators: {
+      assetUri: '/mundo/noticias-internacional-60519322',
+      cpsUrn: 'urn:bbc:content:assetUri:mundo/noticias-internacional-60519322',
+      curie: 'http://www.bbc.co.uk/asset/5409e20a-bc37-4ee0-9ac0-610cc38671d5',
+      assetId: '60519322',
+    },
+  },
+};
+
 const ScrollablePromoWithContext = ({
   blocks,
   blockGroupIndex,
@@ -22,18 +54,36 @@ const ScrollablePromoWithContext = ({
   translations,
   service,
 }) => (
-  <ToggleContextProvider>
+  <ToggleContextProvider
+    toggles={{
+      eventTracking: { enabled: true },
+    }}
+  >
     <ServiceContext.Provider
       value={{
         service,
         translations,
+        atiAnalyticsProducerId: 62,
       }}
     >
-      <ScrollablePromo
-        blocks={blocks}
-        blockGroupIndex={blockGroupIndex}
-        isRecommendationType={isRecommendationType}
-      />
+      <RequestContextProvider
+        isAmp={false}
+        pageType={STORY_PAGE}
+        service="hindi"
+        pathname="/pathname"
+        platform="canonical"
+        statsDestination="WS_NEWS_LANGUAGES_TEST"
+      >
+        <EventTrackingContextProvider pageData={pageData}>
+          <OptimizelyProvider optimizely={optimizely} isServerSide>
+            <ScrollablePromo
+              blocks={blocks}
+              blockGroupIndex={blockGroupIndex}
+              isRecommendationType={isRecommendationType}
+            />
+          </OptimizelyProvider>
+        </EventTrackingContextProvider>
+      </RequestContextProvider>
     </ServiceContext.Provider>
   </ToggleContextProvider>
 );
@@ -181,6 +231,9 @@ describe('ScrollablePromo', () => {
 });
 
 describe('recommendationEOJ', () => {
+  beforeEach(() => {
+    useOptimizelyVariation.mockReturnValue('variation eoj');
+  });
   it('should render recommendation variation when recommendation && recommendation data are passed', () => {
     const { getAllByRole, queryByRole, queryByText } = render(
       <ScrollablePromoWithContext
@@ -229,5 +282,27 @@ describe('recommendationEOJ', () => {
     expect(region.getAttribute('aria-labelledBy')).toEqual(
       'recommendations-heading',
     );
+  });
+
+  it.only('should call the view tracking hook with the correct params with multiple editorial onward journeys', async () => {
+    const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+
+    render(
+      <ScrollablePromoWithContext
+        blocks={mundoRecommendationsData}
+        blockGroupIndex={1}
+        isRecommendationType
+        service="news"
+      />,
+    );
+
+    await waitFor(() => {
+      expect(optimizely.track).toHaveBeenCalledTimes(1);
+      expect(viewTrackerSpy).toHaveBeenCalledWith({
+        componentName: 'edoj1',
+        format: 'CHD=edoj',
+        optimizely: expect.anything(),
+      });
+    });
   });
 });

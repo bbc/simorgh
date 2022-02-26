@@ -45,7 +45,7 @@ export const buildCpsAssetPageATIParams = (
   const ldpThingLabels = getThingAttributes('thingEnglishLabel', pageData);
   const isLegacyAsset = url => url.split('/').length > 7;
 
-  return {
+  const assign = {
     appName: atiAnalyticsAppName,
     contentId: getContentId(
       isLegacyAsset(requestContext.canonicalLink) ? 'topcat' : 'cps',
@@ -68,6 +68,9 @@ export const buildCpsAssetPageATIParams = (
     platform,
     service,
   };
+
+  console.log('assign', assign);
+  return assign;
 };
 
 export const buildCpsAssetPageATIUrl = (
