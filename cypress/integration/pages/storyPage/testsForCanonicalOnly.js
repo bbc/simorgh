@@ -14,9 +14,7 @@ export const testsThatAlwaysRunForCanonicalOnly = () => {
     // This test specifically is targeted at this test asset: '/mundo/23263889'
 
     cy.on('uncaught:exception', err => {
-      expect(err.message).to.include(
-        "Cannot read properties of undefined (reading 'style')",
-      );
+      expect(err.message).to.include('Cannot read properties of undefined');
       return false;
     });
     it('should load the eclipse VJ include successfully', () => {
