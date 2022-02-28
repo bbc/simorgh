@@ -29,12 +29,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               done();
               return false;
             });
-            cy.on('uncaught:exception', err => {
-              expect(err.message).to.include(
-                'Cannot read properties of undefined',
-              );
-              return false;
-            });
+
             let currentURL = null;
             cy.get('h3')
               .eq(3)

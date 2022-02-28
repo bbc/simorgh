@@ -6,10 +6,7 @@ export default ({ service }) => {
   describe(`Canonical Ads`, () => {
     it('should be displayed based on whether ads toggle is enabled/disabled', () => {
       const serviceName = config[service].name;
-      cy.on('uncaught:exception', err => {
-        expect(err.message).to.include('Cannot read properties of undefined');
-        return false;
-      });
+
       cy.getToggles(serviceName).then(() => {
         cy.fixture(`toggles/${serviceName}.json`).then(toggles => {
           const adsEnabled = path(['ads', 'enabled'], toggles);

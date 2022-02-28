@@ -2,10 +2,6 @@ import runAMPAdsTests from '../../../support/helpers/adsTests/testsForAMPOnly';
 
 export const testsThatAlwaysRunForAMPOnly = ({ service, pageType }) => {
   describe(`No testsToAlwaysRunForAMPOnly to run for ${service} ${pageType}`, () => {
-    cy.on('uncaught:exception', err => {
-      expect(err.message).to.include('Cannot read properties of undefined');
-      return false;
-    });
     it('If there is a table in the json, display it on the page', () => {
       if (service === 'sport') {
         cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
