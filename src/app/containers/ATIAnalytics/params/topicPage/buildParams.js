@@ -22,8 +22,7 @@ export const buildTopicPageATIUrl = (
   topicPageData,
   requestContext,
   serviceContext,
-) => buildATIPageTrackPath(
-  buildTopicPageATIParams(topicPageData, requestContext, serviceContext),
-);
-
-export default buildTopicPageATIParams;
+) =>
+  buildATIPageTrackPath(
+    buildTopicPageATIParams(topicPageData, requestContext, serviceContext),
+  );
