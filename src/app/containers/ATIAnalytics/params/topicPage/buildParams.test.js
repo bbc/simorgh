@@ -14,6 +14,7 @@ const requestContext = {
 
 const serviceContext = {
   atiAnalyticsAppName: 'atiAnalyticsAppName',
+  atiAnalyticsProducerId: 'atiAnalyticsProducerId',
   service: 'service',
 };
 
@@ -29,6 +30,8 @@ const validTopicPageURLParams = {
   platform: requestContext.platform,
   statsDestination: requestContext.statsDestination,
   service: serviceContext.service,
+  libraryVersion: 'simorgh',
+  producerId: serviceContext.atiAnalyticsProducerId,
 };
 
 describe('buildTopicPageATIParams', () => {
@@ -50,7 +53,7 @@ describe('buildTopicPageATIUrl', () => {
       serviceContext,
     );
     expect(result).toMatchInlineSnapshot(
-      `"s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x2=[responsive]&x3=[atiAnalyticsAppName]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[index-category]&x9=[pageTitle]"`,
+      `"s=598285&s2=atiAnalyticsProducerId&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x2=[responsive]&x3=[atiAnalyticsAppName]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[index-category]&x8=[simorgh]&x9=[pageTitle]"`,
     );
   });
 });

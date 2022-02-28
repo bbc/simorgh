@@ -1,3 +1,4 @@
+import { LIBRARY_VERSION } from '#lib/analyticsUtils';
 import { buildATIPageTrackPath } from '../../atiUrl';
 
 export const buildTopicPageATIParams = (
@@ -6,15 +7,18 @@ export const buildTopicPageATIParams = (
   serviceContext,
 ) => {
   const { platform, statsDestination } = requestContext;
-  const { atiAnalyticsAppName, service } = serviceContext;
+  const { atiAnalyticsAppName, atiAnalyticsProducerId, service } =
+    serviceContext;
 
   return {
     appName: atiAnalyticsAppName,
+    producerId: atiAnalyticsProducerId,
     contentType: 'index-category',
     pageTitle: pageData.title,
     statsDestination,
     platform,
     service,
+    libraryVersion: LIBRARY_VERSION,
   };
 };
 
