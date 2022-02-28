@@ -28,4 +28,9 @@ export default (path, pageType) => {
   cy.visit(path, {
     failOnStatusCode,
   });
+
+  cy.on('uncaught:exception', err => {
+    expect(err.message).to.include('Cannot read properties of undefined');
+    return false;
+  });
 };
