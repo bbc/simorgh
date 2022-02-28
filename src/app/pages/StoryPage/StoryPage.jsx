@@ -40,6 +40,7 @@ import Byline from '#containers/Byline';
 import CpsSocialEmbedContainer from '#containers/SocialEmbed/Cps';
 import CpsRecommendations from '#containers/CpsRecommendations';
 import { InlinePodcastPromo } from '#containers/PodcastPromo';
+import { OptimizelyExperiment } from '@optimizely/react-sdk';
 
 import {
   getFirstPublished,
@@ -54,6 +55,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
+import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 
@@ -71,8 +73,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     lang,
     showRelatedTopics,
   } = useContext(ServiceContext);
-
-  const experimentVariation = '';
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -209,40 +209,46 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     podcastPromo: podcastPromoEnabled && InlinePodcastPromo,
     experimentBlock: props => {
       const { showForVariation, part } = props;
-      // Return 'control' variation if 'control' is returned from Optimizely or experiment is not enabled
-      if (
-        showForVariation === 'control' &&
-        (experimentVariation === 'control' || !experimentVariation)
-      ) {
-        return (
-          <CpsRecommendations
-            {...props}
-            parentColumns={gridColsMain}
-            items={recommendationsInitialData}
-          />
-        );
-      }
 
-      if (
-        showForVariation === 'variation_1' &&
-        experimentVariation === 'variation_1'
-      ) {
-        if (part === 1) {
-          return <div>Recs with 2 items, first 2 recs</div>;
-        }
-        if (part === 2) {
-          return <div>Recs with 2 items, last 2 recs</div>;
-        }
-      }
+      return (
+        <OptimizelyExperiment experiment={OPTIMIZELY_CONFIG.experimentId}>
+          {variation => {
+            if (
+              showForVariation === 'control' &&
+              (variation === 'control' || !variation)
+            ) {
+              return (
+                <CpsRecommendations
+                  {...props}
+                  parentColumns={gridColsMain}
+                  items={recommendationsInitialData}
+                />
+              );
+            }
 
-      if (
-        showForVariation === 'variation_3' &&
-        experimentVariation === 'variation_3'
-      ) {
-        return <div>scrolling recs</div>;
-      }
+            if (
+              showForVariation === 'variation_1' &&
+              variation === 'variation_1'
+            ) {
+              if (part === 1) {
+                return <div>Recs with 2 items, first 2 recs</div>;
+              }
+              if (part === 2) {
+                return <div>Recs with 2 items, last 2 recs</div>;
+              }
+            }
 
-      return null;
+            if (
+              showForVariation === 'variation_3' &&
+              variation === 'variation_3'
+            ) {
+              return <div>scrolling recs</div>;
+            }
+
+            return null;
+          }}
+        </OptimizelyExperiment>
+      );
     },
   };
 
