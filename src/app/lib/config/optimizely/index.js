@@ -1,4 +1,4 @@
 export default {
-  experimentId: '003_hindi_recommedations_experiment',
+  experimentId: '003_hindi_recommendations_experiment',
   featureId: '003_hindi_experiment',
 };
