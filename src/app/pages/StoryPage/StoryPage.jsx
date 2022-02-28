@@ -14,6 +14,8 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
+import { OptimizelyExperiment } from '@optimizely/react-sdk';
+
 import Grid, { GelPageGrid, GridItemLarge } from '#app/components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
@@ -40,7 +42,6 @@ import Byline from '#containers/Byline';
 import CpsSocialEmbedContainer from '#containers/SocialEmbed/Cps';
 import CpsRecommendations from '#containers/CpsRecommendations';
 import { InlinePodcastPromo } from '#containers/PodcastPromo';
-import { OptimizelyExperiment } from '@optimizely/react-sdk';
 
 import {
   getFirstPublished,
