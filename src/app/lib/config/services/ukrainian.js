@@ -328,8 +328,8 @@ const baseServiceConfig = {
       url: '/ukrainian',
     },
     {
-      title: 'Коронавірус',
-      url: '/ukrainian/topics/c87z2kmre5nt',
+      title: 'Війна з Росією',
+      url: '/ukrainian/topics/czp6w66edqpt',
     },
     {
       title: 'Історії',
