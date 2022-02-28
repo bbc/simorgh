@@ -4,7 +4,7 @@ import { StaticRouter } from 'react-router-dom';
 import deepClone from 'ramda/src/clone';
 
 // test helpers
-import { render } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import assocPath from 'ramda/src/assocPath';
 import fetchMock from 'fetch-mock';
 
@@ -32,8 +32,12 @@ import ukrainianMostReadData from '#data/ukrainian/mostRead/index.json';
 import hindiPageData from '#data/hindi/cpsAssets/international-60490858.json';
 import hindiRecommendationsData from '#data/hindi/recommendations/index.json';
 import hindiMostRead from '#data/hindi/mostRead/index.json';
+import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
+import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
+import { OptimizelyProvider } from '@optimizely/react-sdk';
 import russianPageDataWithoutInlinePromo from './fixtureData/russianPageDataWithoutPromo';
-import StoryPage from '.';
+import StoryPageIndex from '.';
+import StoryPage from './StoryPage';
 
 fetchMock.config.overwriteRoutes = false; // http://www.wheresrhys.co.uk/fetch-mock/#usageconfiguration allows us to mock the same endpoint multiple times
 
@@ -71,6 +75,22 @@ jest.mock('#hooks/useOptimizelyVariation', () => {
   return useOptimizelyVariation;
 });
 
+jest.mock('#containers/ATIAnalytics/beacon', () => {
+  return {
+    __esModule: true,
+    default: jest.fn(),
+    sendEventBeacon: jest.fn(),
+  };
+});
+
+const optimizely = {
+  onReady: jest.fn(() => Promise.resolve()),
+  track: jest.fn(),
+  user: {
+    attributes: {},
+  },
+};
+
 const defaultToggleState = {
   ads: {
     enabled: true,
@@ -107,7 +127,42 @@ const Page = ({
           statusCode={200}
           showAdsBasedOnLocation={showAdsBasedOnLocation}
         >
-          <StoryPage service={service} pageData={pageData} />
+          <StoryPageIndex service={service} pageData={pageData} />
+        </RequestContextProvider>
+      </ServiceContextProvider>
+    </ToggleContext.Provider>
+  </StaticRouter>
+);
+
+const PageWithContext = ({
+  pageData,
+  service,
+  showAdsBasedOnLocation = false,
+  isAmp = false,
+  toggles = defaultToggleState,
+}) => (
+  <StaticRouter>
+    <ToggleContext.Provider
+      value={{ toggleState: toggles, toggleDispatch: jest.fn() }}
+    >
+      <ServiceContextProvider
+        pageLang={pageData.metadata.language}
+        service={service}
+      >
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.co.uk"
+          isAmp={isAmp}
+          pageType={pageData.metadata.type}
+          pathname={pageData.metadata.locators.assetUri}
+          service={service}
+          statusCode={200}
+          showAdsBasedOnLocation={showAdsBasedOnLocation}
+        >
+          <EventTrackingContextProvider pageData={pageData}>
+            <OptimizelyProvider optimizely={optimizely}>
+              <StoryPage service={service} pageData={pageData} />
+            </OptimizelyProvider>
+          </EventTrackingContextProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContext.Provider>
@@ -728,7 +783,7 @@ describe('Story Page', () => {
     expect(RecommendationsRegions).toHaveLength(0);
   });
 
-  //Need to mock the key when an implmentation is decided, tests will fail until it is mocked.
+  // Need to mock the optimizely key when an implmentation is decided, tests will fail until it is mocked.
   describe('optimizelyExperiment', () => {
     describe('003_hindi_experiment_feature', () => {
       describe.skip('variation_1', () => {
@@ -1077,6 +1132,164 @@ describe('Story Page', () => {
           );
 
           expect(RecommendationsRegions).toHaveLength(0);
+        });
+
+        describe('Event Tracking', () => {
+          beforeEach(() => {
+            jest.useFakeTimers();
+            jest.resetModules();
+          });
+
+          afterEach(() => {
+            jest.useRealTimers();
+            jest.clearAllMocks();
+          });
+
+          it('should send one view event to ATI and Optimizely when either block is viewed', async () => {
+            const toggles = {
+              cpsRecommendations: {
+                enabled: true,
+              },
+              eventTracking: {
+                enabled: true,
+              },
+            };
+
+            fetchMock.mock(
+              'http://localhost/some-cps-sty-path.json',
+              hindiPageData,
+            );
+            fetchMock.mock(
+              'http://localhost/hindi/mostread.json',
+              hindiMostRead,
+            );
+            fetchMock.mock(
+              'http://localhost/hindi/international-60490858/recommendations.json',
+              hindiRecommendationsData,
+            );
+
+            const { pageData } = await getInitialData({
+              path: '/some-cps-sty-path',
+              service: 'hindi',
+              pageType,
+            });
+
+            render(
+              <PageWithContext
+                pageData={pageData}
+                service="hindi"
+                toggles={toggles}
+              />,
+            );
+
+            jest.runOnlyPendingTimers();
+            await waitFor(
+              () => {
+                const wsojCalls = sendEventBeacon.mock.calls.filter(
+                  ([{ componentName }]) => componentName === 'wsoj',
+                );
+                expect(wsojCalls.length).toBe(1);
+                expect(optimizely.track).toHaveBeenCalledTimes(1);
+              },
+              { timeout: 2000 },
+            );
+          });
+
+          it('should send one view event to ATI and Optimizely when there is only one block on the page and it is viewed', async () => {
+            const toggles = {
+              cpsRecommendations: {
+                enabled: true,
+              },
+              eventTracking: {
+                enabled: true,
+              },
+            };
+
+            fetchMock.mock(
+              'http://localhost/some-cps-sty-path.json',
+              hindiPageData,
+            );
+            fetchMock.mock(
+              'http://localhost/hindi/mostread.json',
+              hindiMostRead,
+            );
+            fetchMock.mock(
+              'http://localhost/hindi/international-60490858/recommendations.json',
+              hindiRecommendationsData.slice(0, 2),
+            );
+
+            const { pageData } = await getInitialData({
+              path: '/some-cps-sty-path',
+              service: 'hindi',
+              pageType,
+            });
+
+            render(
+              <PageWithContext
+                pageData={pageData}
+                service="hindi"
+                toggles={toggles}
+              />,
+            );
+
+            jest.runOnlyPendingTimers();
+            await waitFor(
+              () => {
+                const wsojCalls = sendEventBeacon.mock.calls.filter(
+                  ([{ componentName }]) => componentName === 'wsoj',
+                );
+                expect(wsojCalls.length).toBe(1);
+                expect(optimizely.track).toHaveBeenCalledTimes(1);
+              },
+              { timeout: 2000 },
+            );
+          });
+
+          it('should not send view events to ATI and Optimizely when there are no recommendations on the page', async () => {
+            const toggles = {
+              cpsRecommendations: {
+                enabled: true,
+              },
+              eventTracking: {
+                enabled: true,
+              },
+            };
+
+            fetchMock.mock(
+              'http://localhost/some-cps-sty-path.json',
+              hindiPageData,
+            );
+            fetchMock.mock(
+              'http://localhost/hindi/mostread.json',
+              hindiMostRead,
+            );
+
+            const { pageData } = await getInitialData({
+              path: '/some-cps-sty-path',
+              service: 'hindi',
+              pageType,
+            });
+
+            render(
+              <PageWithContext
+                pageData={pageData}
+                service="hindi"
+                toggles={toggles}
+              />,
+            );
+
+            jest.runOnlyPendingTimers();
+            await waitFor(
+              () => {
+                const wsojCalls = sendEventBeacon.mock.calls.filter(
+                  ([{ componentName }]) => componentName === 'wsoj',
+                );
+                expect(wsojCalls.length).toBe(0);
+                expect(optimizely.track).toHaveBeenCalledTimes(0);
+              },
+              { timeout: 2000 },
+            );
+          });
         });
       });
     });
