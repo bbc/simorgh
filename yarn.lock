@@ -19082,7 +19082,7 @@ __metadata:
     supertest: 6.2.2
     terser-webpack-plugin: 5.3.1
     timemachine: 0.3.2
-    url-parse: 1.5.6
+    url-parse: 1.5.8
     uuid: 8.3.2
     wait-on: 6.0.1
     webpack: 5.68.0
@@ -20965,13 +20965,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"url-parse@npm:1.5.6":
-  version: 1.5.6
-  resolution: "url-parse@npm:1.5.6"
+"url-parse@npm:1.5.8":
+  version: 1.5.8
+  resolution: "url-parse@npm:1.5.8"
   dependencies:
     querystringify: ^2.1.1
     requires-port: ^1.0.0
-  checksum: f2176a2035b5f14ba3ebeb94b6f7e112d1f1e60ce95dd23214ac3b5b293899f7cbc8d1a43df4e3c9755bc07151e974b745898353549277da4b854a308d19e143
+  checksum: 6f9e85280934153739aae644c88cc92e2ce6bf69c3ecc74288bfea14eedbcbe47ceb774ca5555fdd3f7195dc77c93eaddceb7e66d654c7b9267f1f2bab761ea3
   languageName: node
   linkType: hard
 
