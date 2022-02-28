@@ -10,7 +10,7 @@
     "type": "STY",
     "createdBy": "mundo-v6",
     "language": "es",
-    "lastUpdated": 1645718575564,
+    "lastUpdated": 1645807123034,
     "firstPublished": 1580745507000,
     "lastPublished": 1588762927000,
     "timestamp": 1588762927000,
@@ -548,7 +548,7 @@
         "type": "paragraph"
       },
       {
-        "text": "Flourish",
+        "text": "Flourish 9",
         "markupType": "plain_text",
         "type": "paragraph"
       },
@@ -572,31 +572,7 @@
         "type": "include"
       },
       {
-        "text": "Riddle 2",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "required": false,
-        "title": "Riddle Include",
-        "href": "/include/vjafwest/723-what-are-the-new-rules-for-summer-yoruba/english/app",
-        "platform": "highweb",
-        "type": "include"
-      },
-      {
-        "text": "Riddle 3",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "required": false,
-        "title": "Riddle Include 2",
-        "href": "/include/vjafwest/722-what-are-the-new-rules-for-summer-pidgin/english/app",
-        "platform": "highweb",
-        "type": "include"
-      },
-      {
-        "text": "Riddle 4",
+        "text": "Riddle",
         "markupType": "plain_text",
         "type": "paragraph"
       },
