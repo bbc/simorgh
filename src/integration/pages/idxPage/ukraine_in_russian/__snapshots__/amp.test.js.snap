@@ -211,8 +211,8 @@ Object {
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 2`] = `
 Object {
-  "text": "Коронавірус",
-  "url": "/ukrainian/topics/c87z2kmre5nt",
+  "text": "Війна з Росією",
+  "url": "/ukrainian/topics/czp6w66edqpt",
 }
 `;
 
