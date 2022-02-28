@@ -9,6 +9,10 @@ export const testsThatAlwaysRunForCanonicalOnly = ({ service, pageType }) => {
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({ service }) => {
   if (Cypress.env('APP_ENV') === 'local') {
+    cy.on('uncaught:exception', err => {
+      expect(err.message).to.include('Cannot read properties of undefined');
+      return false;
+    });
     runCanonicalAdsTests({ service });
   }
 };
