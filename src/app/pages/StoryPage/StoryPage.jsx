@@ -214,6 +214,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       return (
         <OptimizelyExperiment experiment={OPTIMIZELY_CONFIG.experimentId}>
           {variation => {
+            // Return 'control' variation if 'control' is returned from Optimizely or experiment is not enabled
             if (
               showForVariation === 'control' &&
               (variation === 'control' || !variation)
