@@ -102,7 +102,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     pageData,
   );
   const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
-  const recommendationsInitialData = path(['recommendations'], pageData);
+  const recommendationsData = path(['recommendations'], pageData);
   const topics = path(['metadata', 'topics'], pageData);
 
   const gridColumns = {
@@ -197,7 +197,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <CpsRecommendations
         {...props}
         parentColumns={gridColsMain}
-        items={recommendationsInitialData}
+        items={recommendationsData}
       />
     ),
     disclaimer: props => (
@@ -345,6 +345,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
 
           <CpsRelatedContent
             content={relatedContent}
+            recommendations={recommendationsData}
             parentColumns={gridColsMain}
           />
         </GridPrimaryColumn>
