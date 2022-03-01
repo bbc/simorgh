@@ -1,19 +1,27 @@
 import React, { useContext } from 'react';
 import { arrayOf, shape, number, bool, string, elementType } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
+import omit from 'ramda/src/omit';
 import styled from '@emotion/styled';
 import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import { storyItem } from '#models/propTypes/storyItem';
+import { OptimizelyContext } from '@optimizely/react-sdk';
 import { ServiceContext } from '#contexts/ServiceContext';
+import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
+
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import RelatedContentPromo from './RelatedContentPromo';
 import RelatedContentPromoList from './RelatedContentPromoList';
 
-const eventTrackingData = {
+const getEventTrackingData = optimizely => ({
   block: {
     componentName: 'related-content',
+    ...(optimizely && { optimizely }),
   },
-};
+});
+
+const removeTimestampFromRecommendations = recommendations =>
+  recommendations.map(recommendation => omit(['timestamp'], recommendation));
 
 const StyledCpsOnwardJourney = styled(CpsOnwardJourney)`
   margin-bottom: ${GEL_SPACING_DBL};
@@ -21,6 +29,7 @@ const StyledCpsOnwardJourney = styled(CpsOnwardJourney)`
 
 const CpsRelatedContent = ({
   content,
+  recommendations,
   parentColumns,
   isMediaContent,
   title: _title,
@@ -28,6 +37,12 @@ const CpsRelatedContent = ({
   imageComponent,
 }) => {
   const { translations } = useContext(ServiceContext);
+  const { optimizely } = useContext(OptimizelyContext);
+
+  const promoVariation = useOptimizelyVariation('003_hindi_experiment');
+  const isInVariation =
+    promoVariation !== null && promoVariation === 'variation_2';
+  const eventTrackingData = getEventTrackingData(isInVariation && optimizely);
 
   const title =
     _title || pathOr('Related Content', ['relatedContent'], translations);
@@ -36,7 +51,11 @@ const CpsRelatedContent = ({
     <StyledCpsOnwardJourney
       labelId="related-content-heading"
       title={title}
-      content={content}
+      content={
+        isInVariation
+          ? removeTimestampFromRecommendations(recommendations)
+          : content
+      }
       isMediaContent={isMediaContent}
       parentColumns={parentColumns}
       promoComponent={RelatedContentPromo}
@@ -54,6 +73,7 @@ CpsRelatedContent.propTypes = {
   // Both pages use CPS, so the data schema is the same
   // This can be found under CPS ARES payloads: relatedContent.groups[0].promos
   content: arrayOf(shape(storyItem)),
+  recommendations: arrayOf(shape(storyItem)),
   parentColumns: shape({
     group0: number,
     group1: number,
@@ -70,6 +90,7 @@ CpsRelatedContent.propTypes = {
 
 CpsRelatedContent.defaultProps = {
   content: [],
+  recommendations: [],
   parentColumns: null,
   isMediaContent: false,
   title: null,
