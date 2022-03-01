@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import * as React from 'react';
 import { StaticRouter } from 'react-router-dom';
 import deepClone from 'ramda/src/clone';
 
@@ -34,7 +34,7 @@ import hindiRecommendationsData from '#data/hindi/recommendations/index.json';
 import hindiMostRead from '#data/hindi/mostRead/index.json';
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
-import { OptimizelyProvider } from '@optimizely/react-sdk';
+import * as optimizelySDK from '@optimizely/react-sdk';
 import russianPageDataWithoutInlinePromo from './fixtureData/russianPageDataWithoutPromo';
 import StoryPageIndex from '.';
 import StoryPage from './StoryPage';
@@ -83,12 +83,21 @@ jest.mock('#containers/ATIAnalytics/beacon', () => {
   };
 });
 
+const optimizelyExperimentSpy = jest.spyOn(
+  optimizelySDK,
+  'OptimizelyExperiment',
+);
+
 const optimizely = {
   onReady: jest.fn(() => Promise.resolve()),
   track: jest.fn(),
   user: {
     attributes: {},
   },
+  activate: jest.fn(),
+  getIsReadyPromiseFulfilled: jest.fn(),
+  getIsUsingSdkKey: jest.fn(),
+  onForcedVariationsUpdate: jest.fn(),
 };
 
 const defaultToggleState = {
@@ -159,9 +168,12 @@ const PageWithContext = ({
           showAdsBasedOnLocation={showAdsBasedOnLocation}
         >
           <EventTrackingContextProvider pageData={pageData}>
-            <OptimizelyProvider optimizely={optimizely}>
+            <optimizelySDK.OptimizelyProvider
+              optimizely={optimizely}
+              isServerSide
+            >
               <StoryPage service={service} pageData={pageData} />
-            </OptimizelyProvider>
+            </optimizelySDK.OptimizelyProvider>
           </EventTrackingContextProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
@@ -787,7 +799,41 @@ describe('Story Page', () => {
   describe('optimizelyExperiment', () => {
     describe('003_hindi_experiment_feature', () => {
       describe.skip('variation_1', () => {
-        it('should have two parts with two recommendations each when 4 recommendations in the data', async () => {
+        beforeEach(() => {
+          // Mocked the implmentation of OptimizelyExperiment as we need to set the variation.
+          optimizelyExperimentSpy.mockImplementation(props => {
+            const { children } = props;
+
+            const variation = 'variation_1';
+
+            if (children != null && typeof children === 'function') {
+              return <>{children(variation, true, false)}</>;
+            }
+
+            let match = null;
+
+            React.Children.forEach(children, child => {
+              if (match || !React.isValidElement(child)) {
+                return;
+              }
+
+              if (child.props.variation) {
+                if (variation === child.props.variation) {
+                  match = child;
+                }
+              } else if (child.props.default) {
+                match = child;
+              }
+            });
+            return React.cloneElement(match, { variation: 'testingCode' });
+          });
+        });
+
+        afterAll(() => {
+          jest.restoreAllMocks();
+        });
+
+        it('should have two parts with two recommendations each when four recommendations are in the data', async () => {
           const toggles = {
             cpsRecommendations: {
               enabled: true,
@@ -840,7 +886,7 @@ describe('Story Page', () => {
           expect(secondPartRecommendations).toHaveLength(2);
         });
 
-        it('should have two parts with two recommendations each when more than 4 recommendations in the data', async () => {
+        it('should have two parts with two recommendations each when more than four recommendations in the data', async () => {
           const toggles = {
             cpsRecommendations: {
               enabled: true,
@@ -953,7 +999,7 @@ describe('Story Page', () => {
           expect(secondPartRecommendations).toHaveLength(2);
         });
 
-        it('should have two parts, first part with 2 recommendations and second part with 1 recommendation when 3 recommendations are in data', async () => {
+        it('should have two parts, firstPart with two recommendations and secondPart with one recommendation when there are three recommendations in the data', async () => {
           const toggles = {
             cpsRecommendations: {
               enabled: true,
@@ -1006,7 +1052,7 @@ describe('Story Page', () => {
           expect(secondPartRecommendations).toHaveLength(1);
         });
 
-        it('should have one part with 2 recommendations when only 2 recommendations are in data', async () => {
+        it('should have one part with two recommendations when only two recommendations are in the data', async () => {
           const toggles = {
             cpsRecommendations: {
               enabled: true,
@@ -1051,7 +1097,7 @@ describe('Story Page', () => {
           expect(firstPartRecommendations).toHaveLength(2);
         });
 
-        it('should have one part with 1 recommendation when only a single recommendation is in data', async () => {
+        it('should have one part with one recommendation when only a single recommendation in the data', async () => {
           const toggles = {
             cpsRecommendations: {
               enabled: true,
@@ -1098,7 +1144,7 @@ describe('Story Page', () => {
           expect(firstPartRecommendations).toHaveLength(1);
         });
 
-        it('should have no recommendations-heading when no recommendations are in data', async () => {
+        it('should have no recommendations-heading when no recommendations are in the data', async () => {
           const toggles = {
             cpsRecommendations: {
               enabled: true,
@@ -1113,6 +1159,42 @@ describe('Story Page', () => {
           fetchMock.mock(
             'http://localhost/hindi/international-60490858/recommendations.json',
             [],
+          );
+
+          const { pageData } = await getInitialData({
+            path: '/some-cps-sty-path',
+            service: 'hindi',
+            pageType,
+          });
+
+          const { getAllByRole } = render(
+            <Page pageData={pageData} service="hindi" toggles={toggles} />,
+          );
+
+          const RecommendationsRegions = getAllByRole('region').filter(
+            item =>
+              item.getAttribute('aria-labelledby') ===
+              'recommendations-heading',
+          );
+
+          expect(RecommendationsRegions).toHaveLength(0);
+        });
+
+        it('should have no recommendations-heading when recommendations are invalid data in the data', async () => {
+          const toggles = {
+            cpsRecommendations: {
+              enabled: true,
+            },
+          };
+
+          fetchMock.mock(
+            'http://localhost/some-cps-sty-path.json',
+            hindiPageData,
+          );
+          fetchMock.mock('http://localhost/hindi/mostread.json', hindiMostRead);
+          fetchMock.mock(
+            'http://localhost/hindi/international-60490858/recommendations.json',
+            {},
           );
 
           const { pageData } = await getInitialData({
