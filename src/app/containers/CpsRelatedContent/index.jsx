@@ -40,9 +40,11 @@ const CpsRelatedContent = ({
   const { optimizely } = useContext(OptimizelyContext);
 
   const promoVariation = useOptimizelyVariation('003_hindi_experiment');
-  const isInVariation =
+  const isInExperimentVariation =
     promoVariation !== null && promoVariation === 'variation_2';
-  const eventTrackingData = getEventTrackingData(isInVariation && optimizely);
+  const eventTrackingData = getEventTrackingData(
+    isInExperimentVariation && optimizely,
+  );
 
   const title =
     _title || pathOr('Related Content', ['relatedContent'], translations);
@@ -52,7 +54,7 @@ const CpsRelatedContent = ({
       labelId="related-content-heading"
       title={title}
       content={
-        isInVariation
+        isInExperimentVariation
           ? removeTimestampFromRecommendations(recommendations)
           : content
       }
