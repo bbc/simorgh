@@ -1,3 +1,4 @@
+import pathOr from 'ramda/src/pathOr';
 import { LIBRARY_VERSION } from '#lib/analyticsUtils';
 import { buildATIPageTrackPath } from '../../atiUrl';
 
@@ -6,8 +7,8 @@ export const buildTopicPageATIParams = (
   requestContext,
   serviceContext,
 ) => {
-  const { platform, statsDestination } = requestContext;
-  const { atiAnalyticsAppName, atiAnalyticsProducerId, service } =
+  const { platform, statsDestination, id } = requestContext;
+  const { atiAnalyticsAppName, atiAnalyticsProducerId, service, lang } =
     serviceContext;
 
   return {
@@ -19,6 +20,9 @@ export const buildTopicPageATIParams = (
     platform,
     service,
     libraryVersion: LIBRARY_VERSION,
+    language: lang,
+    pageIdentifier: `${service}.topics.${id}.page`,
+    contentId: `urn:bbc:tipo:topic:${id}`,
   };
 };
 
