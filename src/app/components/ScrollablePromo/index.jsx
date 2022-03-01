@@ -17,8 +17,9 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
-import { getBodyCopy } from '@bbc/gel-foundations/typography';
-import { getSerifBold } from '@bbc/psammead-styles/font-styles';
+import { getDoublePica } from '@bbc/gel-foundations/typography';
+import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+import { C_SHADOW } from '@bbc/psammead-styles/colours';
 import { GridItemMediumNoMargin } from '#app/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { OptimizelyContext } from '@optimizely/react-sdk';
@@ -41,10 +42,10 @@ const PromoWrapper = styled.div`
 
 const LabelComponent = styled.strong`
   display: block;
-  ${({ script }) => script && getBodyCopy(script)}
-  ${({ service }) => service && getSerifBold(service)}
-  font-size: 20px;
+  ${({ script }) => script && getDoublePica(script)};
+  ${({ service }) => getSansRegular(service)}
   margin-bottom: ${GEL_SPACING_DBL};
+  color: ${C_SHADOW};
 `;
 
 const getEventTrackingData = (optimizely, blockGroupIndex) => ({
