@@ -5,6 +5,7 @@ import deepClone from 'ramda/src/clone';
 
 // test helpers
 import { render, waitFor } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import assocPath from 'ramda/src/assocPath';
 import fetchMock from 'fetch-mock';
 
@@ -98,6 +99,7 @@ const optimizely = {
   getIsReadyPromiseFulfilled: jest.fn(),
   getIsUsingSdkKey: jest.fn(),
   onForcedVariationsUpdate: jest.fn(),
+  close: jest.fn(),
 };
 
 const defaultToggleState = {
@@ -722,85 +724,12 @@ describe('Story Page', () => {
     );
   });
 
-  it('should have four recommendations each when recommendations are in the data', async () => {
-    const toggles = {
-      cpsRecommendations: {
-        enabled: true,
-      },
-    };
-
-    fetchMock.mock('http://localhost/some-cps-sty-path.json', hindiPageData);
-    fetchMock.mock('http://localhost/hindi/mostread.json', hindiMostRead);
-    fetchMock.mock(
-      'http://localhost/hindi/international-60490858/recommendations.json',
-      hindiRecommendationsData,
-    );
-
-    const { pageData } = await getInitialData({
-      path: '/some-cps-sty-path',
-      service: 'hindi',
-      pageType,
-    });
-
-    const { getAllByRole } = render(
-      <Page pageData={pageData} service="hindi" toggles={toggles} />,
-    );
-
-    const RecommendationsRegions = getAllByRole('region').filter(
-      item =>
-        item.getAttribute('aria-labelledby') === 'recommendations-heading',
-    );
-    expect(RecommendationsRegions).toHaveLength(1);
-
-    const firstPart = RecommendationsRegions[0];
-
-    expect(firstPart.getAttribute('aria-labelledby')).toEqual(
-      'recommendations-heading',
-    );
-
-    const firstPartRecommendations =
-      firstPart.firstChild.childNodes[2].children;
-
-    expect(firstPartRecommendations).toHaveLength(4);
-  });
-
-  it('should not show recommendations each when no recommendations are in the data', async () => {
-    const toggles = {
-      cpsRecommendations: {
-        enabled: true,
-      },
-    };
-
-    fetchMock.mock('http://localhost/some-cps-sty-path.json', hindiPageData);
-    fetchMock.mock('http://localhost/hindi/mostread.json', hindiMostRead);
-    fetchMock.mock(
-      'http://localhost/hindi/international-60490858/recommendations.json',
-      [],
-    );
-
-    const { pageData } = await getInitialData({
-      path: '/some-cps-sty-path',
-      service: 'hindi',
-      pageType,
-    });
-
-    const { getAllByRole } = render(
-      <Page pageData={pageData} service="hindi" toggles={toggles} />,
-    );
-
-    const RecommendationsRegions = getAllByRole('region').filter(
-      item =>
-        item.getAttribute('aria-labelledby') === 'recommendations-heading',
-    );
-    expect(RecommendationsRegions).toHaveLength(0);
-  });
-
   // Need to mock the optimizely key when an implmentation is decided, tests will fail until it is mocked.
   describe('optimizelyExperiment', () => {
     describe('003_hindi_experiment_feature', () => {
       describe.skip('variation_1', () => {
         beforeEach(() => {
-          // Mocked the implmentation of OptimizelyExperiment as we need to set the variation.
+          // Mocked the implementation of OptimizelyExperiment to get the variation.
           optimizelyExperimentSpy.mockImplementation(props => {
             const { children } = props;
 
@@ -810,22 +739,7 @@ describe('Story Page', () => {
               return <>{children(variation, true, false)}</>;
             }
 
-            let match = null;
-
-            React.Children.forEach(children, child => {
-              if (match || !React.isValidElement(child)) {
-                return;
-              }
-
-              if (child.props.variation) {
-                if (variation === child.props.variation) {
-                  match = child;
-                }
-              } else if (child.props.default) {
-                match = child;
-              }
-            });
-            return React.cloneElement(match, { variation: 'testingCode' });
+            return null;
           });
         });
 
@@ -1103,7 +1017,6 @@ describe('Story Page', () => {
               enabled: true,
             },
           };
-
           fetchMock.mock(
             'http://localhost/some-cps-sty-path.json',
             hindiPageData,
@@ -1113,7 +1026,6 @@ describe('Story Page', () => {
             'http://localhost/hindi/international-60490858/recommendations.json',
             hindiRecommendationsData.slice(0, 1),
           );
-
           const { pageData } = await getInitialData({
             path: '/some-cps-sty-path',
             service: 'hindi',
@@ -1131,16 +1043,13 @@ describe('Story Page', () => {
           );
 
           const firstPart = RecommendationsRegions[0];
-
           expect(RecommendationsRegions).toHaveLength(1);
-
           expect(firstPart.getAttribute('aria-labelledby')).toEqual(
             'recommendations-heading',
           );
 
           const firstPartRecommendations =
             firstPart.firstChild.childNodes[2].children;
-
           expect(firstPartRecommendations).toHaveLength(1);
         });
 
@@ -1150,7 +1059,6 @@ describe('Story Page', () => {
               enabled: true,
             },
           };
-
           fetchMock.mock(
             'http://localhost/some-cps-sty-path.json',
             hindiPageData,
@@ -1160,7 +1068,6 @@ describe('Story Page', () => {
             'http://localhost/hindi/international-60490858/recommendations.json',
             [],
           );
-
           const { pageData } = await getInitialData({
             path: '/some-cps-sty-path',
             service: 'hindi',
@@ -1176,7 +1083,6 @@ describe('Story Page', () => {
               item.getAttribute('aria-labelledby') ===
               'recommendations-heading',
           );
-
           expect(RecommendationsRegions).toHaveLength(0);
         });
 
@@ -1186,7 +1092,6 @@ describe('Story Page', () => {
               enabled: true,
             },
           };
-
           fetchMock.mock(
             'http://localhost/some-cps-sty-path.json',
             hindiPageData,
@@ -1196,7 +1101,6 @@ describe('Story Page', () => {
             'http://localhost/hindi/international-60490858/recommendations.json',
             {},
           );
-
           const { pageData } = await getInitialData({
             path: '/some-cps-sty-path',
             service: 'hindi',
@@ -1212,7 +1116,6 @@ describe('Story Page', () => {
               item.getAttribute('aria-labelledby') ===
               'recommendations-heading',
           );
-
           expect(RecommendationsRegions).toHaveLength(0);
         });
 
@@ -1227,150 +1130,482 @@ describe('Story Page', () => {
             jest.clearAllMocks();
           });
 
-          it('should send one view event to ATI and Optimizely when either block is viewed', async () => {
-            const toggles = {
-              cpsRecommendations: {
-                enabled: true,
-              },
-              eventTracking: {
-                enabled: true,
-              },
-            };
+          // These tests override the default timeout as they fail sometimes when timeout is on default (5000)
+          describe('View Tracking', () => {
+            it('should send one view event to ATI and Optimizely when either block is viewed', async () => {
+              const expectedViewEvent = [
+                [
+                  {
+                    advertiserID: undefined,
+                    campaignID: 'article-sty',
+                    componentName: 'wsoj',
+                    format: undefined,
+                    pageIdentifier:
+                      'international::hindi.international.story.60490858.page',
+                    platform: 'canonical',
+                    producerId: '52',
+                    service: 'hindi',
+                    statsDestination: 'WS_NEWS_LANGUAGES_TEST',
+                    type: 'view',
+                    url: undefined,
+                  },
+                ],
+              ];
+              const toggles = {
+                cpsRecommendations: {
+                  enabled: true,
+                },
+                eventTracking: {
+                  enabled: true,
+                },
+              };
+              fetchMock.mock(
+                'http://localhost/some-cps-sty-path.json',
+                hindiPageData,
+              );
+              fetchMock.mock(
+                'http://localhost/hindi/mostread.json',
+                hindiMostRead,
+              );
+              fetchMock.mock(
+                'http://localhost/hindi/international-60490858/recommendations.json',
+                hindiRecommendationsData,
+              );
+              const { pageData } = await getInitialData({
+                path: '/some-cps-sty-path',
+                service: 'hindi',
+                pageType,
+              });
 
-            fetchMock.mock(
-              'http://localhost/some-cps-sty-path.json',
-              hindiPageData,
-            );
-            fetchMock.mock(
-              'http://localhost/hindi/mostread.json',
-              hindiMostRead,
-            );
-            fetchMock.mock(
-              'http://localhost/hindi/international-60490858/recommendations.json',
-              hindiRecommendationsData,
-            );
+              render(
+                <PageWithContext
+                  pageData={pageData}
+                  service="hindi"
+                  toggles={toggles}
+                />,
+              );
 
-            const { pageData } = await getInitialData({
-              path: '/some-cps-sty-path',
-              service: 'hindi',
-              pageType,
-            });
+              await waitFor(
+                () => {
+                  const wsojViewCalls = sendEventBeacon.mock.calls.filter(
+                    ([{ componentName }]) => componentName === 'wsoj',
+                  );
+                  expect(wsojViewCalls.length).toBe(1);
+                  expect(wsojViewCalls).toEqual(expectedViewEvent);
+                  expect(optimizely.track).toHaveBeenCalledTimes(1);
+                  expect(optimizely.track).toBeCalledWith(
+                    'component_views',
+                    undefined,
+                    { viewed_wsoj: true },
+                  );
+                },
+                { timeout: 2000 },
+              );
+            }, 10000);
 
-            render(
-              <PageWithContext
-                pageData={pageData}
-                service="hindi"
-                toggles={toggles}
-              />,
-            );
+            it('should send one view event to ATI and Optimizely when there is only one block on the page and it is viewed', async () => {
+              const expectedViewEvent = [
+                [
+                  {
+                    advertiserID: undefined,
+                    campaignID: 'article-sty',
+                    componentName: 'wsoj',
+                    format: undefined,
+                    pageIdentifier:
+                      'international::hindi.international.story.60490858.page',
+                    platform: 'canonical',
+                    producerId: '52',
+                    service: 'hindi',
+                    statsDestination: 'WS_NEWS_LANGUAGES_TEST',
+                    type: 'view',
+                    url: undefined,
+                  },
+                ],
+              ];
+              const toggles = {
+                cpsRecommendations: {
+                  enabled: true,
+                },
+                eventTracking: {
+                  enabled: true,
+                },
+              };
+              fetchMock.mock(
+                'http://localhost/some-cps-sty-path.json',
+                hindiPageData,
+              );
+              fetchMock.mock(
+                'http://localhost/hindi/mostread.json',
+                hindiMostRead,
+              );
+              fetchMock.mock(
+                'http://localhost/hindi/international-60490858/recommendations.json',
+                hindiRecommendationsData.slice(0, 2),
+              );
+              const { pageData } = await getInitialData({
+                path: '/some-cps-sty-path',
+                service: 'hindi',
+                pageType,
+              });
 
-            jest.runOnlyPendingTimers();
-            await waitFor(
-              () => {
-                const wsojCalls = sendEventBeacon.mock.calls.filter(
-                  ([{ componentName }]) => componentName === 'wsoj',
-                );
-                expect(wsojCalls.length).toBe(1);
-                expect(optimizely.track).toHaveBeenCalledTimes(1);
-              },
-              { timeout: 2000 },
-            );
+              render(
+                <PageWithContext
+                  pageData={pageData}
+                  service="hindi"
+                  toggles={toggles}
+                />,
+              );
+
+              await waitFor(
+                () => {
+                  const wsojViewCalls = sendEventBeacon.mock.calls.filter(
+                    ([{ componentName }]) => componentName === 'wsoj',
+                  );
+                  expect(wsojViewCalls.length).toBe(1);
+                  expect(wsojViewCalls).toEqual(expectedViewEvent);
+                  expect(optimizely.track).toHaveBeenCalledTimes(1);
+                  expect(optimizely.track).toBeCalledWith(
+                    'component_views',
+                    undefined,
+                    { viewed_wsoj: true },
+                  );
+                },
+                { timeout: 2000 },
+              );
+            }, 10000);
+
+            it('should not send view events to ATI and Optimizely when there are no recommendations on the page', async () => {
+              const toggles = {
+                cpsRecommendations: {
+                  enabled: true,
+                },
+                eventTracking: {
+                  enabled: true,
+                },
+              };
+              fetchMock.mock(
+                'http://localhost/some-cps-sty-path.json',
+                hindiPageData,
+              );
+              fetchMock.mock(
+                'http://localhost/hindi/mostread.json',
+                hindiMostRead,
+              );
+              const { pageData } = await getInitialData({
+                path: '/some-cps-sty-path',
+                service: 'hindi',
+                pageType,
+              });
+
+              render(
+                <PageWithContext
+                  pageData={pageData}
+                  service="hindi"
+                  toggles={toggles}
+                />,
+              );
+
+              await waitFor(
+                () => {
+                  const wsojViewCalls = sendEventBeacon.mock.calls.filter(
+                    ([{ componentName }]) => componentName === 'wsoj',
+                  );
+                  expect(wsojViewCalls.length).toBe(0);
+                  expect(optimizely.track).toHaveBeenCalledTimes(0);
+                },
+                { timeout: 2000 },
+              );
+            }, 10000);
           });
 
-          it('should send one view event to ATI and Optimizely when there is only one block on the page and it is viewed', async () => {
-            const toggles = {
-              cpsRecommendations: {
-                enabled: true,
-              },
-              eventTracking: {
-                enabled: true,
-              },
-            };
+          describe('Click Tracking', () => {
+            it('should send a click event to ATI and Optimizely when page has two blocks and a link in the first block is clicked', async () => {
+              const expectedATIClickEvents = [
+                [
+                  {
+                    advertiserID: undefined,
+                    campaignID: 'article-sty',
+                    componentName: 'wsoj',
+                    format: undefined,
+                    pageIdentifier:
+                      'international::hindi.international.story.60490858.page',
+                    platform: 'canonical',
+                    producerId: '52',
+                    service: 'hindi',
+                    statsDestination: 'WS_NEWS_LANGUAGES_TEST',
+                    type: 'click',
+                    url: undefined,
+                  },
+                ],
+                [
+                  {
+                    advertiserID: 'hindi',
+                    campaignID: 'cps_wsoj',
+                    componentName:
+                      '%E0%A4%95%E0%A5%8B%E0%A4%B5%E0%A4%BF%E0%A4%A1-19%20%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%80%E0%A4%83%20%E0%A4%A4%E0%A5%8B%20%E0%A4%B8%E0%A4%AC%E0%A4%B8%E0%A5%87%20%E0%A4%9C%E0%A4%BC%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%A6%E0%A4%BE%20%E0%A4%AE%E0%A5%8C%E0%A4%A4%E0%A5%8B%E0%A4%82%20%E0%A4%95%E0%A5%80%20%E0%A4%B5%E0%A4%9C%E0%A4%B9%20%E0%A4%B5%E0%A4%BE%E0%A4%AF%E0%A4%B0%E0%A4%B8%20%E0%A4%A8%E0%A4%B9%E0%A5%80%E0%A4%82%20%E0%A4%B9%E0%A5%8B%E0%A4%97%E0%A4%BE',
+                    format: 'CHD=promo::1',
+                    pageIdentifier:
+                      'international::hindi.international.story.60490858.page',
+                    platform: 'canonical',
+                    producerId: '52',
+                    service: 'hindi',
+                    statsDestination: 'WS_NEWS_LANGUAGES_TEST',
+                    type: 'click',
+                    url: 'undefined/hindi/vert-fut-53035307',
+                  },
+                ],
+              ];
+              const toggles = {
+                cpsRecommendations: {
+                  enabled: true,
+                },
+                eventTracking: {
+                  enabled: true,
+                },
+              };
+              fetchMock.mock(
+                'http://localhost/some-cps-sty-path.json',
+                hindiPageData,
+              );
+              fetchMock.mock(
+                'http://localhost/hindi/mostread.json',
+                hindiMostRead,
+              );
+              fetchMock.mock(
+                'http://localhost/hindi/international-60490858/recommendations.json',
+                hindiRecommendationsData,
+              );
+              const { pageData } = await getInitialData({
+                path: '/some-cps-sty-path',
+                service: 'hindi',
+                pageType,
+              });
 
-            fetchMock.mock(
-              'http://localhost/some-cps-sty-path.json',
-              hindiPageData,
-            );
-            fetchMock.mock(
-              'http://localhost/hindi/mostread.json',
-              hindiMostRead,
-            );
-            fetchMock.mock(
-              'http://localhost/hindi/international-60490858/recommendations.json',
-              hindiRecommendationsData.slice(0, 2),
-            );
+              const { getByText } = render(
+                <PageWithContext
+                  pageData={pageData}
+                  service="hindi"
+                  toggles={toggles}
+                />,
+              );
 
-            const { pageData } = await getInitialData({
-              path: '/some-cps-sty-path',
-              service: 'hindi',
-              pageType,
-            });
+              const firstBlockRecommendationLink = getByText(
+                'कोविड-19 महामारीः तो सबसे ज़्यादा मौतों की वजह वायरस नहीं होगा',
+              );
+              userEvent.click(firstBlockRecommendationLink);
+              await waitFor(
+                () => {
+                  const wsojClickCalls = sendEventBeacon.mock.calls.filter(
+                    ([{ type }]) => type === 'click',
+                  );
+                  expect(wsojClickCalls.length).toBe(2);
+                  expect(wsojClickCalls).toEqual(expectedATIClickEvents);
+                  const optimizelyClickCalls =
+                    optimizely.track.mock.calls.filter(
+                      ([eventName]) => eventName === 'component_clicks',
+                    );
+                  expect(optimizelyClickCalls.length).toBe(1);
+                  expect(optimizelyClickCalls[0]).toEqual([
+                    'component_clicks',
+                    undefined,
+                    { clicked_wsoj: true },
+                  ]);
+                },
+                { timeout: 2000 },
+              );
+            }, 10000);
 
-            render(
-              <PageWithContext
-                pageData={pageData}
-                service="hindi"
-                toggles={toggles}
-              />,
-            );
+            it('should send a click event to ATI and Optimizely when a link is clicked in the second block is clicked', async () => {
+              const expectedATIClickEvents = [
+                [
+                  {
+                    advertiserID: undefined,
+                    campaignID: 'article-sty',
+                    componentName: 'wsoj',
+                    format: undefined,
+                    pageIdentifier:
+                      'international::hindi.international.story.60490858.page',
+                    platform: 'canonical',
+                    producerId: '52',
+                    service: 'hindi',
+                    statsDestination: 'WS_NEWS_LANGUAGES_TEST',
+                    type: 'click',
+                    url: undefined,
+                  },
+                ],
+                [
+                  {
+                    advertiserID: 'hindi',
+                    campaignID: 'cps_wsoj',
+                    componentName:
+                      '%E0%A4%95%E0%A5%8B%E0%A4%B5%E0%A4%BF%E0%A4%A1-19%20%E0%A4%95%E0%A5%87%20%E0%A4%AC%E0%A4%BE%E0%A4%A6%20%E0%A4%B9%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%80%20%E0%A4%AF%E0%A4%BE%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%8F%E0%A4%82%20%E0%A4%95%E0%A5%88%E0%A4%B8%E0%A5%80%20%E0%A4%B9%E0%A5%8B%E0%A4%82%E0%A4%97%E0%A5%80%3F',
+                    format: 'CHD=promo::1',
+                    pageIdentifier:
+                      'international::hindi.international.story.60490858.page',
+                    platform: 'canonical',
+                    producerId: '52',
+                    service: 'hindi',
+                    statsDestination: 'WS_NEWS_LANGUAGES_TEST',
+                    type: 'click',
+                    url: 'undefined/hindi/vert-tra-52355324',
+                  },
+                ],
+              ];
+              const toggles = {
+                cpsRecommendations: {
+                  enabled: true,
+                },
+                eventTracking: {
+                  enabled: true,
+                },
+              };
+              fetchMock.mock(
+                'http://localhost/some-cps-sty-path.json',
+                hindiPageData,
+              );
+              fetchMock.mock(
+                'http://localhost/hindi/mostread.json',
+                hindiMostRead,
+              );
+              fetchMock.mock(
+                'http://localhost/hindi/international-60490858/recommendations.json',
+                hindiRecommendationsData,
+              );
+              const { pageData } = await getInitialData({
+                path: '/some-cps-sty-path',
+                service: 'hindi',
+                pageType,
+              });
 
-            jest.runOnlyPendingTimers();
-            await waitFor(
-              () => {
-                const wsojCalls = sendEventBeacon.mock.calls.filter(
-                  ([{ componentName }]) => componentName === 'wsoj',
-                );
-                expect(wsojCalls.length).toBe(1);
-                expect(optimizely.track).toHaveBeenCalledTimes(1);
-              },
-              { timeout: 2000 },
-            );
-          });
+              const { getByText } = render(
+                <PageWithContext
+                  pageData={pageData}
+                  service="hindi"
+                  toggles={toggles}
+                />,
+              );
 
-          it('should not send view events to ATI and Optimizely when there are no recommendations on the page', async () => {
-            const toggles = {
-              cpsRecommendations: {
-                enabled: true,
-              },
-              eventTracking: {
-                enabled: true,
-              },
-            };
+              const secondBlockRecommendationLink = getByText(
+                'कोविड-19 के बाद हमारी यात्राएं कैसी होंगी?',
+              );
+              userEvent.click(secondBlockRecommendationLink);
+              await waitFor(
+                () => {
+                  const wsojClickCalls = sendEventBeacon.mock.calls.filter(
+                    ([{ type }]) => type === 'click',
+                  );
+                  expect(wsojClickCalls.length).toBe(2);
+                  expect(wsojClickCalls).toEqual(expectedATIClickEvents);
+                  const optimizelyClickCalls =
+                    optimizely.track.mock.calls.filter(
+                      ([eventName]) => eventName === 'component_clicks',
+                    );
+                  expect(optimizelyClickCalls.length).toBe(1);
+                  expect(optimizelyClickCalls[0]).toEqual([
+                    'component_clicks',
+                    undefined,
+                    { clicked_wsoj: true },
+                  ]);
+                },
+                { timeout: 2000 },
+              );
+            }, 10000);
 
-            fetchMock.mock(
-              'http://localhost/some-cps-sty-path.json',
-              hindiPageData,
-            );
-            fetchMock.mock(
-              'http://localhost/hindi/mostread.json',
-              hindiMostRead,
-            );
+            it('should send a click event to ATI and Optimizely when page has one block and a link in the block is clicked', async () => {
+              const expectedATIClickEvents = [
+                [
+                  {
+                    advertiserID: undefined,
+                    campaignID: 'article-sty',
+                    componentName: 'wsoj',
+                    format: undefined,
+                    pageIdentifier:
+                      'international::hindi.international.story.60490858.page',
+                    platform: 'canonical',
+                    producerId: '52',
+                    service: 'hindi',
+                    statsDestination: 'WS_NEWS_LANGUAGES_TEST',
+                    type: 'click',
+                    url: undefined,
+                  },
+                ],
+                [
+                  {
+                    advertiserID: 'hindi',
+                    campaignID: 'cps_wsoj',
+                    componentName:
+                      '%E0%A4%95%E0%A5%8B%E0%A4%B5%E0%A4%BF%E0%A4%A1-19%20%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%80%E0%A4%83%20%E0%A4%A4%E0%A5%8B%20%E0%A4%B8%E0%A4%AC%E0%A4%B8%E0%A5%87%20%E0%A4%9C%E0%A4%BC%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%A6%E0%A4%BE%20%E0%A4%AE%E0%A5%8C%E0%A4%A4%E0%A5%8B%E0%A4%82%20%E0%A4%95%E0%A5%80%20%E0%A4%B5%E0%A4%9C%E0%A4%B9%20%E0%A4%B5%E0%A4%BE%E0%A4%AF%E0%A4%B0%E0%A4%B8%20%E0%A4%A8%E0%A4%B9%E0%A5%80%E0%A4%82%20%E0%A4%B9%E0%A5%8B%E0%A4%97%E0%A4%BE',
+                    format: 'CHD=promo::1',
+                    pageIdentifier:
+                      'international::hindi.international.story.60490858.page',
+                    platform: 'canonical',
+                    producerId: '52',
+                    service: 'hindi',
+                    statsDestination: 'WS_NEWS_LANGUAGES_TEST',
+                    type: 'click',
+                    url: 'undefined/hindi/vert-fut-53035307',
+                  },
+                ],
+              ];
+              const toggles = {
+                cpsRecommendations: {
+                  enabled: true,
+                },
+                eventTracking: {
+                  enabled: true,
+                },
+              };
+              fetchMock.mock(
+                'http://localhost/some-cps-sty-path.json',
+                hindiPageData,
+              );
+              fetchMock.mock(
+                'http://localhost/hindi/mostread.json',
+                hindiMostRead,
+              );
+              fetchMock.mock(
+                'http://localhost/hindi/international-60490858/recommendations.json',
+                hindiRecommendationsData.slice(0, 2),
+              );
+              const { pageData } = await getInitialData({
+                path: '/some-cps-sty-path',
+                service: 'hindi',
+                pageType,
+              });
 
-            const { pageData } = await getInitialData({
-              path: '/some-cps-sty-path',
-              service: 'hindi',
-              pageType,
-            });
+              const { getByText } = render(
+                <PageWithContext
+                  pageData={pageData}
+                  service="hindi"
+                  toggles={toggles}
+                />,
+              );
 
-            render(
-              <PageWithContext
-                pageData={pageData}
-                service="hindi"
-                toggles={toggles}
-              />,
-            );
-
-            jest.runOnlyPendingTimers();
-            await waitFor(
-              () => {
-                const wsojCalls = sendEventBeacon.mock.calls.filter(
-                  ([{ componentName }]) => componentName === 'wsoj',
-                );
-                expect(wsojCalls.length).toBe(0);
-                expect(optimizely.track).toHaveBeenCalledTimes(0);
-              },
-              { timeout: 2000 },
-            );
+              const firstBlockRecommendationLink = getByText(
+                'कोविड-19 महामारीः तो सबसे ज़्यादा मौतों की वजह वायरस नहीं होगा',
+              );
+              userEvent.click(firstBlockRecommendationLink);
+              await waitFor(
+                () => {
+                  const wsojClickCalls = sendEventBeacon.mock.calls.filter(
+                    ([{ type }]) => type === 'click',
+                  );
+                  expect(wsojClickCalls.length).toBe(2);
+                  expect(wsojClickCalls).toEqual(expectedATIClickEvents);
+                  const optimizelyClickCalls =
+                    optimizely.track.mock.calls.filter(
+                      ([eventName]) => eventName === 'component_clicks',
+                    );
+                  expect(optimizelyClickCalls.length).toBe(1);
+                  expect(optimizelyClickCalls[0]).toEqual([
+                    'component_clicks',
+                    undefined,
+                    { clicked_wsoj: true },
+                  ]);
+                },
+                { timeout: 2000 },
+              );
+            }, 10000);
           });
         });
       });
