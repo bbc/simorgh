@@ -28,18 +28,12 @@ export default (path, pageType) => {
   cy.visit(path, {
     failOnStatusCode,
   });
-  // TEMPORARILY catch ads errors. Please remove when they have been fixed
-  // cy.on('uncaught:exception', err => {
-  //   expect(err.message).to.include('Cannot read properties of undefined');
-  //   return false;
-  // });
-  // cy.on('uncaught:exception', err => {
-  //   expect(err.message).to.include('getSizes');
-  //   return false;
-  // });
+  // TEMPORARILY catch ads errors. Please remove when they have been fixed because this will hide any application errors
 
-  cy.on('uncaught:exception', err => {
-    expect(err.message).to.include('application');
-    return false;
-  });
+  if (pageType !== 'errorPage404') {
+    cy.on('uncaught:exception', err => {
+      expect(err.message).to.include('application');
+      return false;
+    });
+  }
 };
