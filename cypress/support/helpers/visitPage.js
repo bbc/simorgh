@@ -10,12 +10,12 @@ export default (path, pageType) => {
     type: expectedContentType,
   });
 
-  cy.intercept('https://gn-flagpoles.api.bbci.co.uk/ngas', {
-    fixture: 'flagpoles/ngas.json',
-  });
-  cy.intercept('https://gn-flagpoles.test.api.bbci.co.uk/ngas', {
-    fixture: 'flagpoles/ngas.json',
-  });
+  // cy.intercept('https://gn-flagpoles.api.bbci.co.uk/ngas', {
+  //   fixture: 'flagpoles/ngas.json',
+  // });
+  // cy.intercept('https://gn-flagpoles.test.api.bbci.co.uk/ngas', {
+  //   fixture: 'flagpoles/ngas.json',
+  // });
 
   // This sets a cookie to stop the CMP consent pop up from appearing when the tests
   // are run in Europe - causing test failures due to the overlay blocking elements
