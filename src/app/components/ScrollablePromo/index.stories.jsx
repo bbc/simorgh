@@ -6,6 +6,7 @@ import styled from '@emotion/styled';
 import mundoRecommendationsData from '#pages/StoryPage/fixtureData/recommendations.ltr.json';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import ScrollablePromo from '.';
 import {
   threeLinks,
@@ -20,6 +21,8 @@ const BackGround = styled.div`
   background-color: #f6f6f6;
   padding: 2rem;
 `;
+
+const ScrollablePromoWithOptimizely = withOptimizelyProvider(ScrollablePromo);
 
 const ScrollablePromoComponent = ({
   data,
@@ -37,7 +40,7 @@ const ScrollablePromoComponent = ({
         dir={dir}
         translations={translations}
       >
-        <ScrollablePromo
+        <ScrollablePromoWithOptimizely
           blocks={data}
           isRecommendationType={isRecommendationType}
         />
