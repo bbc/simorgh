@@ -10,6 +10,7 @@ import { buildCpsAssetPageATIUrl } from './params/cpsAssetPage/buildParams';
 import { buildMostReadATIUrl } from './params/mostReadPage/buildParams';
 import { buildMostWatchedATIUrl } from './params/mostWatchedPage/buildParams';
 import { buildIndexPageATIUrl } from './params/indexPage/buildParams';
+import { buildTopicPageATIUrl } from './params/topicPage/buildParams';
 
 const ATIAnalytics = ({ data }) => {
   const requestContext = useContext(RequestContext);
@@ -24,6 +25,7 @@ const ATIAnalytics = ({ data }) => {
     mostWatched: buildMostWatchedATIUrl,
     IDX: buildIndexPageATIUrl,
     FIX: buildIndexPageATIUrl,
+    TOPIC: buildTopicPageATIUrl,
     MAP: () =>
       buildCpsAssetPageATIUrl(
         data,
