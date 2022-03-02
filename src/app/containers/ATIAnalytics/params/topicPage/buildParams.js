@@ -1,4 +1,3 @@
-import pathOr from 'ramda/src/pathOr';
 import { LIBRARY_VERSION } from '#lib/analyticsUtils';
 import { buildATIPageTrackPath } from '../../atiUrl';
 
