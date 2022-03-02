@@ -1,7 +1,7 @@
 {
   "video": false,
   "chromeWebSecurity": false,
-  "blacklistHosts": "gn-web-assets.api.bbc.com",
+  "blockHosts": "gn-web-assets.api.bbc.com",
   "env": {
     "APP_ENV": "local",
     "SMOKE": true,
