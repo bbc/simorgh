@@ -1,4 +1,5 @@
 import React from 'react';
+import ATIAnalytics from '#containers/ATIAnalytics';
 import { shape, arrayOf, string } from 'prop-types';
 import styled from '@emotion/styled';
 import TopicTitle from './TopicTitle';
@@ -14,6 +15,7 @@ const TopicPage = ({ pageData }) => {
     <Wrapper>
       <TopicTitle>{pageData.title}</TopicTitle>
       <TopicGrid promos={pageData.promos} />
+      <ATIAnalytics data={pageData} />;
     </Wrapper>
   );
 };
