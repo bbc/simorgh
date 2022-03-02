@@ -29,12 +29,17 @@ export default (path, pageType) => {
     failOnStatusCode,
   });
   // TEMPORARILY catch ads errors. Please remove when they have been fixed
+  // cy.on('uncaught:exception', err => {
+  //   expect(err.message).to.include('Cannot read properties of undefined');
+  //   return false;
+  // });
+  // cy.on('uncaught:exception', err => {
+  //   expect(err.message).to.include('getSizes');
+  //   return false;
+  // });
+
   cy.on('uncaught:exception', err => {
-    expect(err.message).to.include('Cannot read properties of undefined');
-    return false;
-  });
-  cy.on('uncaught:exception', err => {
-    expect(err.message).to.include('getSizes');
+    expect(err.message).to.include('application');
     return false;
   });
 };
