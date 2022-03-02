@@ -46,7 +46,7 @@ const runTestsForPage = ({
 
       paths.forEach(currentPath => {
         describe(`${pageType} - ${currentPath} - Canonical`, () => {
-          before(() => {
+          beforeEach(() => {
             Cypress.env('currentPath', currentPath);
             visitPage(currentPath, pageType);
           });
@@ -87,7 +87,7 @@ const runTestsForPage = ({
 
         // Switch to AMP page URL (NB all our pages have AMP variants)
         describe(`${pageType} - ${currentPath} - AMP`, () => {
-          before(() => {
+          beforeEach(() => {
             Cypress.env('currentPath', currentPath);
 
             visitPage(getAmpUrl(currentPath), pageType);
