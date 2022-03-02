@@ -19,6 +19,9 @@ export default async ({ getAgent, service, path: pathname, variant }) => {
       pageData: {
         title: data.title,
         promos: data.summaries,
+        metadata: {
+          type: 'Topic',
+        },
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {

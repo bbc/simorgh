@@ -23,7 +23,7 @@
     "node-forge": "1.2.1",
     "nth-check": "2.0.1",
     "postcss": "8.4.6",
-    "prismjs": "1.26.0",
+    "prismjs": "1.27.0",
     "react-is": "17.0.2",
     "simple-get": "4.0.1",
     "trim": "1.0.1"
@@ -42,7 +42,8 @@
     "cypress:interactive": "cypress open",
     "cypress:3rdParty": "yarn cypress -- --project ./3rdPartyCypress/.",
     "cypress:adhoc": "yarn cypress:interactive -- --project ./AdHocCypress/.",
-    "dev": "rm -rf build && cp envConfig/local.env .env && run-p webpack:dev:client webpack:dev:server",
+    "setupDevEnv": "cp envConfig/local.env .env && cat envConfig/secret.env >> .env || echo 'You will not have access to topics'",
+    "dev": "yarn setupDevEnv && rm -rf build && run-p webpack:dev:client webpack:dev:server",
     "lighthouse": "./scripts/lighthouseRun.sh",
     "postshrinkwrap": "test -z $CI && ./scripts/packagelockHttps.sh; git update-index --assume-unchanged .env",
     "prepare": "husky install",
@@ -156,7 +157,7 @@
     "react-router": "5.2.1",
     "react-router-config": "5.1.1",
     "react-router-dom": "5.3.0",
-    "url-parse": "1.5.6",
+    "url-parse": "1.5.10",
     "uuid": "8.3.2",
     "winston": "3.6.0"
   },
