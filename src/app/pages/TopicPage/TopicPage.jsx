@@ -1,15 +1,20 @@
-// render whatever data we get from getinitialdata i.e hello world
-
 import React from 'react';
 import { shape, arrayOf, string } from 'prop-types';
+import styled from '@emotion/styled';
+import TopicTitle from './TopicTitle';
 import TopicGrid from './TopicGrid';
+
+const Wrapper = styled.div`
+  margin: 0 auto;
+  max-width: 61rem;
+`;
 
 const TopicPage = ({ pageData }) => {
   return (
-    <>
-      <div>{pageData.title}</div>
+    <Wrapper>
+      <TopicTitle>{pageData.title}</TopicTitle>
       <TopicGrid promos={pageData.promos} />
-    </>
+    </Wrapper>
   );
 };
 
