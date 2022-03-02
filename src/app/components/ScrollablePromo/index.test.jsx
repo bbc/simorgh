@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import * as viewTracking from '#hooks/useViewTracker';
+import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
-import * as clickTracking from '#hooks/useClickTrackerHandler';
 import mundoRecommendationsData from '#pages/StoryPage/fixtureData/recommendations.ltr.json';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
@@ -27,6 +28,7 @@ const optimizely = {
   user: {
     attributes: {},
   },
+  close: jest.fn(),
 };
 
 const pageData = {
@@ -54,11 +56,7 @@ const ScrollablePromoWithContext = ({
   translations,
   service,
 }) => (
-  <ToggleContextProvider
-    toggles={{
-      eventTracking: { enabled: true },
-    }}
-  >
+  <ToggleContextProvider>
     <ServiceContext.Provider
       value={{
         service,
@@ -67,12 +65,14 @@ const ScrollablePromoWithContext = ({
       }}
     >
       <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.co.uk"
         isAmp={false}
         pageType={STORY_PAGE}
         service="hindi"
         pathname="/pathname"
         platform="canonical"
         statsDestination="WS_NEWS_LANGUAGES_TEST"
+        statusCode={200}
       >
         <EventTrackingContextProvider pageData={pageData}>
           <OptimizelyProvider optimizely={optimizely} isServerSide>
@@ -234,6 +234,10 @@ describe('recommendationEOJ', () => {
   beforeEach(() => {
     useOptimizelyVariation.mockReturnValue('variation eoj');
   });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
   it('should render recommendation variation when recommendation && recommendation data are passed', () => {
     const { getAllByRole, queryByRole, queryByText } = render(
       <ScrollablePromoWithContext
@@ -284,7 +288,7 @@ describe('recommendationEOJ', () => {
     );
   });
 
-  it.only('should call the view tracking hook with the correct params with multiple editorial onward journeys', async () => {
+  it('should call the view tracking hook with the correct params (including optimizely)', async () => {
     const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
 
     render(
@@ -295,14 +299,96 @@ describe('recommendationEOJ', () => {
         service="news"
       />,
     );
+    await waitFor(
+      () => {
+        expect(optimizely.track).toHaveBeenCalledTimes(1);
+        expect(viewTrackerSpy).toHaveBeenCalledWith({
+          componentName: 'edoj1',
+          format: 'CHD=edoj',
+          optimizely: expect.anything(),
+        });
+        expect(optimizely.track).toBeCalledWith('component_views', undefined, {
+          viewed_edoj1: true,
+        });
+      },
+      { timeout: 2000 },
+    );
+  }, 10000);
 
-    await waitFor(() => {
-      expect(optimizely.track).toHaveBeenCalledTimes(1);
-      expect(viewTrackerSpy).toHaveBeenCalledWith({
-        componentName: 'edoj1',
-        format: 'CHD=edoj',
-        optimizely: expect.anything(),
-      });
-    });
+  it('should send optimizely click event when link is clicked', async () => {
+    const { getByText } = render(
+      <ScrollablePromoWithContext
+        blocks={mundoRecommendationsData}
+        blockGroupIndex={1}
+        isRecommendationType
+        service="news"
+      />,
+    );
+
+    const link = getByText(
+      'La conmovedora historia de cómo una madre y el hombre preso por la muerte de su hija se unieron para atrapar al verdadero asesino',
+    );
+
+    userEvent.click(link);
+
+    await waitFor(
+      () => {
+        expect(optimizely.track).toHaveBeenCalledTimes(1);
+        expect(optimizely.track).toBeCalledWith('component_clicks', undefined, {
+          clicked_edoj1: true,
+        });
+      },
+      { timeout: 2000 },
+    );
+  });
+
+  it('should not send optimizely click event when link is not clicked', async () => {
+    render(
+      <ScrollablePromoWithContext
+        blocks={mundoRecommendationsData}
+        blockGroupIndex={1}
+        isRecommendationType
+        service="news"
+      />,
+    );
+
+    await waitFor(
+      () => {
+        const optimizelyClickCalls = optimizely.track.mock.calls.filter(
+          ([eventName]) => eventName === 'component_clicks',
+        );
+
+        expect(optimizelyClickCalls.length).toBe(0);
+      },
+      { timeout: 2000 },
+    );
+  });
+
+  it('should send only one optimizely click event if the link is clicked more than once', async () => {
+    const { getByText } = render(
+      <ScrollablePromoWithContext
+        blocks={mundoRecommendationsData}
+        blockGroupIndex={1}
+        isRecommendationType
+        service="news"
+      />,
+    );
+
+    const link = getByText(
+      'La conmovedora historia de cómo una madre y el hombre preso por la muerte de su hija se unieron para atrapar al verdadero asesino',
+    );
+
+    userEvent.click(link);
+    userEvent.click(link);
+
+    await waitFor(
+      () => {
+        expect(optimizely.track).toHaveBeenCalledTimes(1);
+        expect(optimizely.track).toBeCalledWith('component_clicks', undefined, {
+          clicked_edoj1: true,
+        });
+      },
+      { timeout: 2000 },
+    );
   });
 });

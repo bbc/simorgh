@@ -125,14 +125,22 @@ const PromoList = ({ blocks, viewTracker, onClick, isRecommendationType }) => {
 };
 
 PromoList.propTypes = {
-  blocks: arrayOf(
-    shape({
-      type: string.isRequired,
-      model: shape({
-        blocks: arrayOf(oneOfType([string, object])),
-      }).isRequired,
-    }),
-  ).isRequired,
+  blocks: oneOfType([
+    arrayOf(
+      shape({
+        type: string.isRequired,
+        model: shape({
+          blocks: arrayOf(oneOfType([string, object])),
+        }).isRequired,
+      }),
+    ),
+    arrayOf(
+      shape({
+        headlines: shape({ headline: string.isRequired }),
+        locators: shape({ assetUri: string.isRequired }),
+      }),
+    ),
+  ]).isRequired,
   viewTracker: func.isRequired,
   onClick: func.isRequired,
   isRecommendationType: bool.isRequired,

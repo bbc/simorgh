@@ -80,7 +80,6 @@ const OperaPromoBox = styled.div`
 
 const Promo = ({ block, onClick, isRecommendationType }) => {
   const { script, service } = useContext(ServiceContext);
-
   const textBlock = isRecommendationType
     ? block
     : filterForBlockType(pathOr({}, ['model', 'blocks'], block), 'text');
@@ -113,11 +112,17 @@ const Promo = ({ block, onClick, isRecommendationType }) => {
 };
 
 Promo.propTypes = {
-  block: shape({
-    model: shape({
-      blocks: arrayOf(oneOfType([string, object])),
-    }).isRequired,
-  }).isRequired,
+  block: oneOfType([
+    shape({
+      model: shape({
+        blocks: arrayOf(oneOfType([string, object])),
+      }).isRequired,
+    }),
+    shape({
+      headlines: shape({ headline: string.isRequired }),
+      locators: shape({ assetUri: string.isRequired }),
+    }),
+  ]).isRequired,
   onClick: func.isRequired,
   isRecommendationType: bool.isRequired,
 };

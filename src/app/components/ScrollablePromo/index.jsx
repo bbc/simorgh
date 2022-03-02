@@ -127,14 +127,22 @@ const ScrollablePromo = ({ blocks, blockGroupIndex, isRecommendationType }) => {
 };
 
 ScrollablePromo.propTypes = {
-  blocks: arrayOf(
-    shape({
-      type: string.isRequired,
-      model: shape({
-        blocks: arrayOf(oneOfType([string, object])),
-      }).isRequired,
-    }),
-  ).isRequired,
+  blocks: oneOfType([
+    arrayOf(
+      shape({
+        type: string.isRequired,
+        model: shape({
+          blocks: arrayOf(oneOfType([string, object])),
+        }).isRequired,
+      }),
+    ),
+    arrayOf(
+      shape({
+        headlines: shape({ headline: string.isRequired }),
+        locators: shape({ assetUri: string.isRequired }),
+      }),
+    ),
+  ]).isRequired,
   blockGroupIndex: number,
   isRecommendationType: bool,
 };

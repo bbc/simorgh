@@ -68,8 +68,6 @@ export const buildCpsAssetPageATIParams = (
     platform,
     service,
   };
-
-  console.log('assign', assign);
   return assign;
 };
 
