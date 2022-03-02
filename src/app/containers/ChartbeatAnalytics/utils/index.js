@@ -16,6 +16,7 @@ import {
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
   STORY_PAGE,
+  TOPIC_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 const ID_COOKIE = 'ckns_sylphid';
@@ -58,6 +59,8 @@ export const getType = (pageType, shorthand = false) => {
       return PHOTO_GALLERY_PAGE;
     case FEATURE_INDEX_PAGE:
       return FEATURE_INDEX_PAGE;
+    case TOPIC_PAGE:
+      return 'Topics';
     default:
       return null;
   }
@@ -142,6 +145,8 @@ export const getTitle = ({ pageType, pageData, brandName, title }) => {
       return path(['promo', 'headlines', 'headline'], pageData);
     case FEATURE_INDEX_PAGE:
       return getPageTitle(pageData, brandName);
+    case TOPIC_PAGE:
+      return `${pageData?.title} - ${brandName}`;
     default:
       return null;
   }
