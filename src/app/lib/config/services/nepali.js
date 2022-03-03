@@ -217,7 +217,7 @@ export const service = {
         watch: 'हेर्नुहोस्',
         listenLive: 'प्रत्यक्ष सुन्नुहोस्',
         listenNext: 'अर्को सुन्नुहोस्',
-        liveLabel: 'प्रत्यक्ष प्रसारण',
+        liveLabel: 'प्रत्यक्ष रिपोर्टिङ',
         nextLabel: 'अर्को',
         previousRadioShow: 'पछिल्लो रेडिओ कार्यक्रम',
         nextRadioShow: 'अघिल्लो रेडिओ कार्यक्रम',
