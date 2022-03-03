@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { number, string } from 'prop-types';
+import { oneOfType, number, string } from 'prop-types';
 import Timestamp from '@bbc/psammead-timestamp-container';
 import { ServiceContext } from '#contexts/ServiceContext';
 import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
@@ -29,7 +29,8 @@ const PromoTimestamp = ({ children, serviceDatetimeLocale, className }) => {
 };
 
 PromoTimestamp.propTypes = {
-  children: number.isRequired,
+  // epoch time or ISO8601 timestamp
+  children: oneOfType([number, string]).isRequired,
   serviceDatetimeLocale: string,
   className: string,
 };
