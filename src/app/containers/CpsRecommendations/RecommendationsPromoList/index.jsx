@@ -1,15 +1,32 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useContext } from 'react';
 import { StoryPromoLiBase, StoryPromoUl } from '@bbc/psammead-story-promo-list';
-import { arrayOf, shape, number } from 'prop-types';
+import { arrayOf, shape, number, string, func } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
 import useViewTracker from '#hooks/useViewTracker';
+import { OptimizelyContext } from '@optimizely/react-sdk';
 import Grid from '../../../components/Grid';
 import RecommendationsPromo from '../RecommendationsPromo';
 import getEventTrackingData from './getEventTrackingData';
 
+const getEventTrackingDataWithOptimizely = ({ item, index, optimizely }) => {
+  const eventTrackingData = getEventTrackingData({ item, index });
+  return {
+    ...eventTrackingData,
+    block: {
+      ...eventTrackingData.block,
+      ...(optimizely && { optimizely }),
+    },
+  };
+};
+
 const RecommendationsPromoListItem = forwardRef(
-  ({ item, index }, forwardedRef) => {
-    const eventTrackingData = getEventTrackingData({ item, index });
+  ({ item, index, showForVariation }, forwardedRef) => {
+    const { optimizely } = useContext(OptimizelyContext);
+
+    const eventTrackingData =
+      showForVariation === 'variation_1'
+        ? getEventTrackingDataWithOptimizely({ item, index, optimizely })
+        : getEventTrackingData({ item, index });
     const linkViewEventTracker = useViewTracker(eventTrackingData.link);
     const elementRefCallback = element => {
       linkViewEventTracker(element);
@@ -41,7 +58,11 @@ const RecommendationsPromoListItem = forwardRef(
   },
 );
 
-const RecommendationsPromoList = ({ promoItems }) => {
+const RecommendationsPromoList = ({
+  promoItems,
+  showForVariation,
+  splitRecsViewEventTracker,
+}) => {
   const eventTrackingData = getEventTrackingData();
   const blockViewEventTracker = useViewTracker(eventTrackingData.block);
 
@@ -61,9 +82,14 @@ const RecommendationsPromoList = ({ promoItems }) => {
       {promoItems.map((item, index) => (
         <RecommendationsPromoListItem
           key={item.id}
-          ref={blockViewEventTracker}
+          ref={
+            showForVariation === 'variation_1'
+              ? splitRecsViewEventTracker
+              : blockViewEventTracker
+          }
           index={index}
           item={item}
+          showForVariation={showForVariation}
         />
       ))}
     </Grid>
@@ -73,10 +99,22 @@ const RecommendationsPromoList = ({ promoItems }) => {
 RecommendationsPromoListItem.propTypes = {
   item: shape(storyItem).isRequired,
   index: number.isRequired,
+  showForVariation: string.optional,
+};
+
+RecommendationsPromoListItem.defaultProps = {
+  showForVariation: '',
 };
 
 RecommendationsPromoList.propTypes = {
   promoItems: arrayOf(shape(storyItem)).isRequired,
+  splitRecsViewEventTracker: func.optional,
+  showForVariation: string.optional,
+};
+
+RecommendationsPromoList.defaultProps = {
+  splitRecsViewEventTracker: () => {},
+  showForVariation: '',
 };
 
 export default RecommendationsPromoList;

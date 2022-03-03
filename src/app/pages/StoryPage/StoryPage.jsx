@@ -14,6 +14,8 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
+import { OptimizelyExperiment, OptimizelyContext } from '@optimizely/react-sdk';
+
 import Grid, { GelPageGrid, GridItemLarge } from '#app/components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
@@ -54,8 +56,12 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
+import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
+import useViewTracker from '#hooks/useViewTracker';
+import SplitRecommendations from '#containers/CpsRecommendations/SplitRecommendations';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
+import getEventTrackingData from '../../containers/CpsRecommendations/RecommendationsPromoList/getEventTrackingData';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -104,6 +110,14 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
   const recommendationsInitialData = path(['recommendations'], pageData);
   const topics = path(['metadata', 'topics'], pageData);
+
+  // Used for experiment 003_hindi_experiment_feature. Should be removed after.
+  const { optimizely } = useContext(OptimizelyContext);
+  const eventTrackingData = getEventTrackingData();
+  const splitRecsViewEventTracker = useViewTracker({
+    ...eventTrackingData.block,
+    ...(optimizely && { optimizely }),
+  });
 
   const gridColumns = {
     group0: 8,
@@ -193,13 +207,14 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     table: props => <CpsTable {...props} />,
     mpu: props =>
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
-    wsoj: props => (
-      <CpsRecommendations
-        {...props}
-        parentColumns={gridColsMain}
-        items={recommendationsInitialData}
-      />
-    ),
+    wsoj: props =>
+      service !== 'hindi' ? (
+        <CpsRecommendations
+          {...props}
+          parentColumns={gridColsMain}
+          items={recommendationsInitialData}
+        />
+      ) : null,
     disclaimer: props => (
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
