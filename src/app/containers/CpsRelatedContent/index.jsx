@@ -46,8 +46,11 @@ const CpsRelatedContent = ({
     isInExperimentVariation && optimizely,
   );
 
-  const title =
-    _title || pathOr('Related Content', ['relatedContent'], translations);
+  const translationPath = isInExperimentVariation
+    ? ['You may also be interested in', ['recommendationTitle']]
+    : ['Related Content', ['relatedContent']];
+
+  const title = _title || pathOr(...translationPath, translations);
 
   return (
     <StyledCpsOnwardJourney
