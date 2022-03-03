@@ -41,6 +41,7 @@ import CpsTable from '#containers/CpsTable';
 import Byline from '#containers/Byline';
 import CpsSocialEmbedContainer from '#containers/SocialEmbed/Cps';
 import CpsRecommendations from '#containers/CpsRecommendations';
+import ScrollablePromo from '#app/components/ScrollablePromo';
 import { InlinePodcastPromo } from '#containers/PodcastPromo';
 
 import {
@@ -244,7 +245,13 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
               showForVariation === 'variation_3' &&
               variation === 'variation_3'
             ) {
-              return <div>scrolling recs</div>;
+              return (
+                <ScrollablePromo
+                  {...props}
+                  blocks={recommendationsInitialData}
+                  isRecommendationType
+                />
+              );
             }
 
             return null;
