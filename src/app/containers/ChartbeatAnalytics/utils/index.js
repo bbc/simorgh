@@ -60,7 +60,7 @@ export const getType = (pageType, shorthand = false) => {
     case FEATURE_INDEX_PAGE:
       return FEATURE_INDEX_PAGE;
     case TOPIC_PAGE:
-      return 'Topics';
+      return TOPIC_PAGE;
     default:
       return null;
   }

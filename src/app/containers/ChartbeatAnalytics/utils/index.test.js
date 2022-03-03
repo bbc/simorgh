@@ -106,8 +106,8 @@ describe('Chartbeat utilities', () => {
       },
       {
         pageType: TOPIC_PAGE,
-        expectedDefaultType: 'Topics',
-        expectedShortType: 'Topics',
+        expectedDefaultType: TOPIC_PAGE,
+        expectedShortType: TOPIC_PAGE,
       },
       {
         pageType: null,
@@ -232,7 +232,7 @@ describe('Chartbeat utilities', () => {
         service: 'mundo',
         pageType: TOPIC_PAGE,
         description: 'should return expected section for topic page',
-        expected: 'Mundo, Mundo - Topics',
+        expected: 'Mundo, Mundo - TOPIC',
       },
     ];
 
