@@ -28,12 +28,4 @@ export default (path, pageType) => {
   cy.visit(path, {
     failOnStatusCode,
   });
-  // TEMPORARILY catch ads errors. Please remove when they have been fixed because this will hide any application errors
-
-  // if (pageType !== 'errorPage404') {
-  //   cy.on('uncaught:exception', err => {
-  //     expect(err.message).to.include('application');
-  //     return false;
-  //   });
-  // }
 };
