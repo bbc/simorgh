@@ -305,7 +305,7 @@ exports[`Canonical Front Page Sections should match headline text 7`] = `"2018 W
 
 exports[`Canonical Front Page Sections should match headline text 8`] = `"Podcast"`;
 
-exports[`Story Promo Headline should match text 1`] = `"AS E DE HAPPEN Senators don begin vote for Senate President"`;
+exports[`Story Promo Headline should match text 1`] = `"As E Dey Happen Senators don begin vote for Senate President"`;
 
 exports[`Story Promo Image should match image 1`] = `
 <img
