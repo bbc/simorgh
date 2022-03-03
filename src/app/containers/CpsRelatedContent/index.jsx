@@ -40,8 +40,10 @@ const CpsRelatedContent = ({
   const { optimizely } = useContext(OptimizelyContext);
 
   const promoVariation = useOptimizelyVariation('003_hindi_experiment');
+
   const isInExperimentVariation =
     promoVariation !== null && promoVariation === 'variation_2';
+
   const eventTrackingData = getEventTrackingData(
     isInExperimentVariation && optimizely,
   );
