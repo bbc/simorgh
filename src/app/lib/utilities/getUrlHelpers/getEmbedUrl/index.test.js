@@ -1,4 +1,4 @@
-import getEmbedUrl from '.';
+import getEmbedUrl, { makeAbsolute } from '.';
 
 const mediaId = 'foo/bar';
 const legacyId = 'russian/multimedia/2016/05/160505_v_diving_record/123/ru';
@@ -262,6 +262,23 @@ describe('Media Player: Embed URL', () => {
       });
     },
   );
+  afterAll(() => {
+    delete process.env.SIMORGH_APP_ENV;
+  });
+});
+
+describe('makeAbsolute', () => {
+  it('Makes a relative URL absolute based on the SIMORGH_BASE_URL environment variable', () => {
+    process.env.SIMORGH_BASE_URL = 'http://some-base-url.com';
+    expect(makeAbsolute('/ws/av-embeds/some-video')).toBe(
+      'http://some-base-url.com/ws/av-embeds/some-video',
+    );
+  });
+  it('does not modify absolute urls', () => {
+    expect(
+      makeAbsolute('http://some-base-url.com/ws/av-embeds/some-video'),
+    ).toBe('http://some-base-url.com/ws/av-embeds/some-video');
+  });
   afterAll(() => {
     delete process.env.SIMORGH_APP_ENV;
   });

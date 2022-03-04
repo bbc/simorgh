@@ -53,3 +53,6 @@ export default ({ type, mediaId, isAmp = false, queryString }) => {
 
   return `${url}${ampSection}${morphEnvOverride}`;
 };
+
+export const makeAbsolute = url =>
+  url.replace(/^\//, `${process.env.SIMORGH_BASE_URL}/`);
