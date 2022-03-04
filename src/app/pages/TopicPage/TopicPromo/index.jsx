@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, number, oneOf } from 'prop-types';
+import { string, number, oneOf, oneOfType } from 'prop-types';
 
 import Promo, { MEDIA_TYPES } from '#components/Promo';
 
@@ -27,7 +27,8 @@ const TopicPromo = ({
 
 TopicPromo.propTypes = {
   title: string.isRequired,
-  firstPublished: number.isRequired,
+  // epoch time or ISO8601 timestamp
+  firstPublished: oneOfType([number, string]).isRequired,
   imageUrl: string.isRequired,
   imageAlt: string.isRequired,
   link: string.isRequired,
