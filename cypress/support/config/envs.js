@@ -32,7 +32,7 @@ const config = {
     assetOrigin: 'http://localhost:7080',
     atiUrl: 'https://logws1363.ati-host.net?',
     chartbeatEnabled: true,
-    avEmbedBaseUrlCanonical: 'https://www.test.bbc.com',
+    avEmbedBaseUrlCanonical: '/',
     avEmbedBaseUrlAmp: 'https://polling.test.bbc.co.uk',
     standaloneErrorPages: true,
     alwaysCheckForFallback: false,
