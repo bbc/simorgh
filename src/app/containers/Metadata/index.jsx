@@ -163,10 +163,12 @@ const MetadataContainer = ({
       <meta name="twitter:image:src" content={metaImage} />
       <meta name="twitter:site" content={twitterSite} />
       <meta name="twitter:title" content={socialTitle} />
-      <meta
-        httpEquiv="onion-location"
-        content={`https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${pathname}`}
-      />
+      {!isAmp && (
+        <meta
+          httpEquiv="onion-location"
+          content={`https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${pathname}`}
+        />
+      )}
       {Boolean(aboutTags && aboutTags.length) && renderTags(aboutTags)}
       {Boolean(mentionsTags && mentionsTags.length) && renderTags(mentionsTags)}
       <link rel="apple-touch-icon" href={appleTouchIcon} />
