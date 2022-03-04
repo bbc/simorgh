@@ -16,6 +16,8 @@ const LIVE_AMP_URL = 'https://polling.bbc.co.uk';
 const TEST_AMP_URL = 'https://polling.test.bbc.co.uk';
 const DEV_AMP_URL = TEST_AMP_URL;
 
+const isDev = process.env.SIMORGH_APP_ENV === 'development';
+
 const shouldOverrideMorphEnv = (queryString, type) => {
   if (isLive()) return false;
 
@@ -32,7 +34,6 @@ const shouldOverrideMorphEnv = (queryString, type) => {
 };
 
 const getBaseUrl = isAmp => {
-  const isDev = process.env.SIMORGH_APP_ENV === 'development';
   switch (true) {
     case isLive():
       return isAmp ? LIVE_AMP_URL : LIVE_CANONICAL_URL;
@@ -55,4 +56,7 @@ export default ({ type, mediaId, isAmp = false, queryString }) => {
 };
 
 export const makeAbsolute = url =>
-  url.replace(/^\//, `${process.env.SIMORGH_BASE_URL}/`);
+  url.replace(
+    /^\//,
+    isDev ? `${DEV_CANONICAL_URL}/` : `${process.env.SIMORGH_BASE_URL}/`,
+  );
