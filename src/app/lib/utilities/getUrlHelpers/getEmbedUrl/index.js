@@ -16,7 +16,9 @@ const LIVE_AMP_URL = 'https://polling.bbc.co.uk';
 const TEST_AMP_URL = 'https://polling.test.bbc.co.uk';
 const DEV_AMP_URL = TEST_AMP_URL;
 
-const isDev = process.env.SIMORGH_APP_ENV === 'development';
+const isDev =
+  process.env.SIMORGH_APP_ENV === 'development' ||
+  process.env.NODE_ENV === 'development';
 
 const shouldOverrideMorphEnv = (queryString, type) => {
   if (isLive()) return false;
