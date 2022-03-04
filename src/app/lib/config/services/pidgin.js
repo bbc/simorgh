@@ -216,7 +216,7 @@ export const service = {
         },
         listen: 'Make you listen',
         watch: 'Look',
-        liveLabel: 'AS E DE HAPPEN',
+        liveLabel: 'As E Dey Happen',
         nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',

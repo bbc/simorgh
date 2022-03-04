@@ -32,6 +32,7 @@ const Item = styled.div`
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     margin-${direction}: ${GEL_SPACING_DBL};
+    margin-bottom: ${GEL_SPACING_TRPL};
     width: calc(50% - ${GEL_SPACING});
     &:nth-of-type(2n) {
       margin-${direction}: 0;
@@ -39,7 +40,7 @@ const Item = styled.div`
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     margin-${direction}: ${GEL_SPACING_DBL};
-    margin-bottom: ${GEL_SPACING_TRPL};
+    margin-bottom: 2.125rem;
     width: calc(25% - ${GEL_SPACING_HLF_TRPL});
     &:nth-of-type(4n) {
       margin-${direction}: 0;
@@ -47,10 +48,7 @@ const Item = styled.div`
   }
 `;
 
-const Wrapper = styled.div`
-  margin: 0 auto;
-  max-width: 82rem;
-`;
+const Wrapper = styled.div``;
 
 const TopicGrid = ({ promos }) => {
   const { dir } = useContext(ServiceContext);
