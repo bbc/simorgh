@@ -47,7 +47,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
         }
       });
     });
-    it('FOR /news/uk-60508671.amp ONLY - should render topic tags if they are in the json, and they should navigate to correct topic page', () => {
+    it.skip('FOR /news/uk-60508671.amp ONLY - should render topic tags if they are in the json, and they should navigate to correct topic page', () => {
       if (service === 'news' && Cypress.env('APP_ENV') !== 'local') {
         const url = '/news/uk-60508671.amp?renderer_env=live';
         cy.visit(`${envConfig.baseUrl}${url}`);
