@@ -1,16 +1,16 @@
 import { BFF_FETCH_ERROR } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
 import pipe from 'ramda/src/pipe';
+import { getUrlPath } from '#lib/utilities/urlParser';
 import fetchPageData from '../../utils/fetchPageData';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
 const logger = nodeLogger(__filename);
 
-const removeQueryParams = path => path.split('?')[0];
 const removeAmp = path => path.split('.')[0];
 const popId = path => path.split('/').pop();
 
-const getId = pipe(removeQueryParams, removeAmp, popId);
+const getId = pipe(getUrlPath, removeAmp, popId);
 
 export default async ({ getAgent, service, path: pathname, variant }) => {
   try {
