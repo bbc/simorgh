@@ -218,11 +218,11 @@ const testCases = [
       queryString: '',
     },
   },
-  // Development environment
+  // Local environment
   {
     description: `should output test urls for canonical`,
     expected: `https://www.test.bbc.com/ws/av-embeds/articles/${mediaId}`,
-    environment: 'development',
+    environment: 'local',
     before: setEnvironment,
     embedObject: {
       mediaId,
@@ -232,7 +232,7 @@ const testCases = [
   {
     description: `should output test polling urls for amp`,
     expected: `https://polling.test.bbc.co.uk/ws/av-embeds/media/${mediaId}/amp${embedUrlLiveOverride}`,
-    environment: 'development',
+    environment: 'local',
     before: setEnvironment,
     embedObject: {
       isAmp: true,
@@ -243,7 +243,7 @@ const testCases = [
   {
     description: `should respect overrides`,
     expected: `https://www.test.bbc.com/ws/av-embeds/media/${mediaId}${embedUrlLiveOverride}`,
-    environment: 'development',
+    environment: 'local',
     before: setEnvironment,
     embedObject: {
       mediaId,
@@ -280,8 +280,8 @@ describe('makeAbsolute makes a relative URL absolute', () => {
       'https://www.test.bbc.com/ws/av-embeds/some-video',
     );
   });
-  it('uses the test URL when on dev environments', () => {
-    setEnvironment('development');
+  it('uses the test URL when on local environments', () => {
+    setEnvironment('local');
     expect(makeAbsolute('/ws/av-embeds/some-video')).toBe(
       'https://www.test.bbc.com/ws/av-embeds/some-video',
     );

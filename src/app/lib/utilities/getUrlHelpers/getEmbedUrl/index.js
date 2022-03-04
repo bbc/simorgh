@@ -25,7 +25,7 @@ const shouldOverrideMorphEnv = (queryString, type) => {
   return isMediaType;
 };
 
-const isDev = () => process.env.SIMORGH_APP_ENV === 'development';
+const isDev = () => process.env.SIMORGH_APP_ENV === 'local';
 
 const getBaseUrl = isAmp => {
   // In some scenarios, we use the same base URL as the parent
