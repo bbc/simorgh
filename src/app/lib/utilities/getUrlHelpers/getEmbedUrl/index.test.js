@@ -13,7 +13,7 @@ const setEnvironment = environment => {
 const testCases = [
   {
     description: `should build a CANONICAL url for articles in test environment`,
-    expected: `https://www.test.bbc.com/ws/av-embeds/articles/${mediaId}`,
+    expected: `/ws/av-embeds/articles/${mediaId}`,
     environment: 'test',
     before: setEnvironment,
     embedObject: {
@@ -36,7 +36,7 @@ const testCases = [
   },
   {
     description: `should build a CANONICAL url for articles in test environment with test override`,
-    expected: `https://www.test.bbc.com/ws/av-embeds/articles/${mediaId}`,
+    expected: `/ws/av-embeds/articles/${mediaId}`,
     environment: 'test',
     before: setEnvironment,
     embedObject: {
@@ -59,7 +59,7 @@ const testCases = [
   },
   {
     description: `should build a CANONICAL url for articles in test environment with live override`,
-    expected: `https://www.test.bbc.com/ws/av-embeds/articles/${mediaId}${embedUrlLiveOverride}`,
+    expected: `/ws/av-embeds/articles/${mediaId}${embedUrlLiveOverride}`,
     environment: 'test',
     before: setEnvironment,
     embedObject: {
@@ -82,7 +82,7 @@ const testCases = [
   },
   {
     description: `should build a CANONICAL url for on-demand/live radio in test environment with live override`,
-    expected: `https://www.test.bbc.com/ws/av-embeds/media/${mediaId}${embedUrlLiveOverride}`,
+    expected: `/ws/av-embeds/media/${mediaId}${embedUrlLiveOverride}`,
     environment: 'test',
     before: setEnvironment,
     embedObject: {
@@ -105,7 +105,7 @@ const testCases = [
   },
   {
     description: `should build a CANONICAL url for articles in live environment`,
-    expected: `https://www.bbc.com/ws/av-embeds/articles/${mediaId}`,
+    expected: `/ws/av-embeds/articles/${mediaId}`,
     environment: 'live',
     before: setEnvironment,
     embedObject: {
@@ -128,7 +128,7 @@ const testCases = [
   },
   {
     description: `should build a CANONICAL url for articles in live environment with test override`,
-    expected: `https://www.bbc.com/ws/av-embeds/articles/${mediaId}`,
+    expected: `/ws/av-embeds/articles/${mediaId}`,
     environment: 'live',
     before: setEnvironment,
     embedObject: {
@@ -151,7 +151,7 @@ const testCases = [
   },
   {
     description: `should build a CANONICAL url for articles in live environment with live override`,
-    expected: `https://www.bbc.com/ws/av-embeds/articles/${mediaId}`,
+    expected: `/ws/av-embeds/articles/${mediaId}`,
     environment: 'live',
     before: setEnvironment,
     embedObject: {
@@ -174,7 +174,7 @@ const testCases = [
   },
   {
     description: `should build a CANONICAL url for legacy media in live environment with live override`,
-    expected: `https://www.bbc.com/ws/av-embeds/legacy/${legacyId}`,
+    expected: `/ws/av-embeds/legacy/${legacyId}`,
     environment: 'live',
     before: setEnvironment,
     embedObject: {
@@ -197,7 +197,7 @@ const testCases = [
   },
   {
     description: `should build a CANONICAL url for legacy media in test environment with no override`,
-    expected: `https://www.test.bbc.com/ws/av-embeds/legacy/${legacyId}`,
+    expected: `/ws/av-embeds/legacy/${legacyId}`,
     environment: 'test',
     before: setEnvironment,
     embedObject: {
@@ -216,6 +216,39 @@ const testCases = [
       mediaId: legacyId,
       type: 'legacy',
       queryString: '',
+    },
+  },
+  // Development environment
+  {
+    description: `should output test urls for canonical`,
+    expected: `https://www.test.bbc.com/ws/av-embeds/articles/${mediaId}`,
+    environment: 'development',
+    before: setEnvironment,
+    embedObject: {
+      mediaId,
+      type: 'articles',
+    },
+  },
+  {
+    description: `should output test polling urls for amp`,
+    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/media/${mediaId}/amp${embedUrlLiveOverride}`,
+    environment: 'development',
+    before: setEnvironment,
+    embedObject: {
+      isAmp: true,
+      mediaId,
+      type: 'media',
+    },
+  },
+  {
+    description: `should respect overrides`,
+    expected: `https://www.test.bbc.com/ws/av-embeds/media/${mediaId}${embedUrlLiveOverride}`,
+    environment: 'development',
+    before: setEnvironment,
+    embedObject: {
+      mediaId,
+      type: 'media',
+      queryString: liveOverrideParam,
     },
   },
 ];
