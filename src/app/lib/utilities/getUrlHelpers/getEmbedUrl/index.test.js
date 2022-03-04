@@ -267,11 +267,23 @@ describe('Media Player: Embed URL', () => {
   });
 });
 
-describe('makeAbsolute', () => {
-  it('Makes a relative URL absolute based on the SIMORGH_BASE_URL environment variable', () => {
-    process.env.SIMORGH_BASE_URL = 'http://some-base-url.com';
+describe('makeAbsolute makes a relative URL absolute', () => {
+  it('uses the live URL when on live environments', () => {
+    setEnvironment('live');
     expect(makeAbsolute('/ws/av-embeds/some-video')).toBe(
-      'http://some-base-url.com/ws/av-embeds/some-video',
+      'https://www.bbc.com/ws/av-embeds/some-video',
+    );
+  });
+  it('uses the test URL when on test environments', () => {
+    setEnvironment('test');
+    expect(makeAbsolute('/ws/av-embeds/some-video')).toBe(
+      'https://www.test.bbc.com/ws/av-embeds/some-video',
+    );
+  });
+  it('uses the test URL when on dev environments', () => {
+    setEnvironment('development');
+    expect(makeAbsolute('/ws/av-embeds/some-video')).toBe(
+      'https://www.test.bbc.com/ws/av-embeds/some-video',
     );
   });
   it('does not modify absolute urls', () => {

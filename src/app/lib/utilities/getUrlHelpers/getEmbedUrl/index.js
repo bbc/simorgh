@@ -2,16 +2,10 @@ import isLive from '../../isLive';
 
 const AV_ROUTE = 'ws/av-embeds';
 
-// On test and live canonical, we use the same base url as the parent page
-const LIVE_CANONICAL_URL = '';
-const TEST_CANONICAL_URL = '';
+const LIVE_BASE_URL = 'https://www.bbc.com';
+const TEST_BASE_URL = 'https://www.test.bbc.com';
+const DEV_BASE_URL = TEST_BASE_URL;
 
-// On dev canonical, we load media from the test environment
-// This means developers do not need to have the media player infrastructure running
-const DEV_CANONICAL_URL = 'https://www.test.bbc.com';
-
-// Amp does not allow iframes to be loaded from the same domain as the parent
-// Therefore, we make our media players available on a different domain to bypass this
 const LIVE_AMP_URL = 'https://polling.bbc.co.uk';
 const TEST_AMP_URL = 'https://polling.test.bbc.co.uk';
 const DEV_AMP_URL = TEST_AMP_URL;
@@ -34,13 +28,16 @@ const shouldOverrideMorphEnv = (queryString, type) => {
 const isDev = () => process.env.SIMORGH_APP_ENV === 'development';
 
 const getBaseUrl = isAmp => {
+  // In some scenarios, we use the same base URL as the parent
+  const relativeBaseUrl = '';
+
   switch (true) {
     case isLive():
-      return isAmp ? LIVE_AMP_URL : LIVE_CANONICAL_URL;
+      return isAmp ? LIVE_AMP_URL : relativeBaseUrl;
     case isDev():
-      return isAmp ? DEV_AMP_URL : DEV_CANONICAL_URL;
+      return isAmp ? DEV_AMP_URL : DEV_BASE_URL;
     default:
-      return isAmp ? TEST_AMP_URL : TEST_CANONICAL_URL;
+      return isAmp ? TEST_AMP_URL : relativeBaseUrl;
   }
 };
 
@@ -56,8 +53,7 @@ export default ({ type, mediaId, isAmp = false, queryString }) => {
 };
 
 export const makeAbsolute = url => {
-  return url.replace(
-    /^\//,
-    isDev() ? `${DEV_CANONICAL_URL}/` : `${process.env.SIMORGH_BASE_URL}/`,
-  );
+  const replacementString = isLive() ? LIVE_BASE_URL : TEST_BASE_URL;
+
+  return url.replace(/^\//, `${replacementString}/`);
 };
