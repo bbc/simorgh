@@ -16,10 +16,6 @@ const LIVE_AMP_URL = 'https://polling.bbc.co.uk';
 const TEST_AMP_URL = 'https://polling.test.bbc.co.uk';
 const DEV_AMP_URL = TEST_AMP_URL;
 
-const isDev =
-  process.env.SIMORGH_APP_ENV === 'development' ||
-  process.env.NODE_ENV === 'development';
-
 const shouldOverrideMorphEnv = (queryString, type) => {
   if (isLive()) return false;
 
@@ -35,11 +31,13 @@ const shouldOverrideMorphEnv = (queryString, type) => {
   return isMediaType;
 };
 
+const isDev = () => process.env.SIMORGH_APP_ENV === 'development';
+
 const getBaseUrl = isAmp => {
   switch (true) {
     case isLive():
       return isAmp ? LIVE_AMP_URL : LIVE_CANONICAL_URL;
-    case isDev:
+    case isDev():
       return isAmp ? DEV_AMP_URL : DEV_CANONICAL_URL;
     default:
       return isAmp ? TEST_AMP_URL : TEST_CANONICAL_URL;
@@ -57,8 +55,9 @@ export default ({ type, mediaId, isAmp = false, queryString }) => {
   return `${url}${ampSection}${morphEnvOverride}`;
 };
 
-export const makeAbsolute = url =>
-  url.replace(
+export const makeAbsolute = url => {
+  return url.replace(
     /^\//,
-    isDev ? `${DEV_CANONICAL_URL}/` : `${process.env.SIMORGH_BASE_URL}/`,
+    isDev() ? `${DEV_CANONICAL_URL}/` : `${process.env.SIMORGH_BASE_URL}/`,
   );
+};
