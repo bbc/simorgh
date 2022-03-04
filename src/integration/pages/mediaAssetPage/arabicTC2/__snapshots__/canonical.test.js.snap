@@ -154,7 +154,7 @@ exports[`Canonical Media Asset Page Main heading should match text 1`] = `"شر�
 
 exports[`Canonical Media Asset Page Media Player a11y assistive technology can read the media player title 1`] = `"مشغل وسائط"`;
 
-exports[`Canonical Media Asset Page Media Player iframe with valid URL should be rendered 1`] = `"/ws/av-embeds/legacy/arabic/worldnews/2015/11/151120_t_arabic_av/17694217/ar"`;
+exports[`Canonical Media Asset Page Media Player iframe with valid URL should be rendered 1`] = `"https://www.test.bbc.com/ws/av-embeds/legacy/arabic/worldnews/2015/11/151120_t_arabic_av/17694217/ar"`;
 
 exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 1`] = `
 Object {
