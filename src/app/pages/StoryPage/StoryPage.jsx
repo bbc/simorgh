@@ -219,6 +219,52 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
     podcastPromo: podcastPromoEnabled && InlinePodcastPromo,
+    experimentBlock: props => {
+      const { showForVariation } = props;
+
+      return (
+        <OptimizelyExperiment experiment={OPTIMIZELY_CONFIG.experimentId}>
+          {variation => {
+            // Return 'control' variation if 'control' is returned from Optimizely or experiment is not enabled
+            if (
+              showForVariation === 'control' &&
+              (variation === 'control' || !variation)
+            ) {
+              return (
+                <CpsRecommendations
+                  {...props}
+                  parentColumns={gridColsMain}
+                  items={recommendationsInitialData}
+                />
+              );
+            }
+
+            if (
+              showForVariation === 'variation_1' &&
+              variation === 'variation_1'
+            ) {
+              return (
+                <SplitRecommendations
+                  {...props}
+                  parentColumns={gridColsMain}
+                  items={recommendationsInitialData}
+                  splitRecsViewEventTracker={splitRecsViewEventTracker}
+                />
+              );
+            }
+
+            if (
+              showForVariation === 'variation_3' &&
+              variation === 'variation_3'
+            ) {
+              return <div>scrolling recs</div>;
+            }
+
+            return null;
+          }}
+        </OptimizelyExperiment>
+      );
+    },
   };
 
   const StyledTimestamp = styled(Timestamp)`
