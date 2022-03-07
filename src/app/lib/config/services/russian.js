@@ -303,7 +303,25 @@ export const service = {
       },
     },
     disclaimer: {
-      text: `Приложение Русской службы BBC News доступно для [link] и [link]. Грузите его на ваш девайс и продолжайте получать новости от Би-би-си.`,
+      block: [
+        { text: 'Приложение Русской службы BBC News доступно для ' },
+        {
+          link: {
+            text: 'IOS ',
+            href: 'https://apps.apple.com/us/app/%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8-%D0%B1%D0%B8-%D0%B1%D0%B8-%D1%81%D0%B8/id504278066',
+          },
+        },
+        { text: 'и ' },
+        {
+          link: {
+            text: 'Android ',
+            href: 'https://play.google.com/store/apps/details?id=uk.co.bbc.russian',
+          },
+        },
+        {
+          text: '. Грузите его на ваш девайс и продолжайте получать новости от Би-би-си.',
+        },
+      ],
     },
     radioSchedule: {
       hasRadioSchedule: false,

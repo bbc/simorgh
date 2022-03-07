@@ -38,13 +38,11 @@ const DisclaimerComponent = ({ increasePaddingOnDesktop }) => {
   const { service, script, disclaimer } = useContext(ServiceContext);
   const { enabled } = useToggle('disclaimer');
 
-  const disclaimerText = path(['text'], disclaimer);
+  const disclaimerBlock = path(['block'], disclaimer);
 
-  const shouldShow = enabled && disclaimerText;
+  const shouldShow = enabled && disclaimerBlock;
 
   if (!shouldShow) return null;
-
-  const [first, second, third] = disclaimerText.split('[link]');
 
   return (
     <GridItemLarge data-testid="disclaimer">
@@ -53,11 +51,15 @@ const DisclaimerComponent = ({ increasePaddingOnDesktop }) => {
         script={script}
         increasePaddingOnDesktop={increasePaddingOnDesktop}
       >
-        {first}
-        <InlineLink href="google.com">IOS</InlineLink>
-        {second}
-        <InlineLink href="google.com">Android</InlineLink>
-        {third}
+        {disclaimerBlock.map(element => {
+          return element?.link ? (
+            <InlineLink href={element.link.href} key={element.link.text}>
+              {element?.link?.text}
+            </InlineLink>
+          ) : (
+            element?.text
+          );
+        })}
       </Inner>
     </GridItemLarge>
   );
