@@ -303,7 +303,7 @@ export const service = {
       },
     },
     disclaimer: {
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim mattis enim, porta viverra nulla bibendum nec. In hac habitasse platea dictumst. Fusce dui urna, iaculis vel odio sed, faucibus ultricies turpis. Ut sit amet odio eu lectus rhoncus blandit. Donec porta dignissim fringilla. Integer vel erat tellus. Aenean nec dui sapien.',
+      text: `Приложение Русской службы BBC News доступно для [link] и [link]. Грузите его на ваш девайс и продолжайте получать новости от Би-би-си.`,
     },
     radioSchedule: {
       hasRadioSchedule: false,

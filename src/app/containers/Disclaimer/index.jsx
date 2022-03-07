@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
 import { bool } from 'prop-types';
 import path from 'ramda/src/path';
-import hasPath from 'ramda/src/hasPath';
 import styled from '@emotion/styled';
-
+import InlineLink from '@bbc/psammead-inline-link';
 import { getSansLight } from '@bbc/psammead-styles/font-styles';
 import { getLongPrimer } from '@bbc/gel-foundations/typography';
 import {
@@ -13,7 +12,6 @@ import {
 } from '@bbc/gel-foundations/spacings';
 import { C_GREY_6 } from '@bbc/psammead-styles/colours';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-
 import { GridItemLarge } from '#app/components/Grid';
 
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -40,9 +38,13 @@ const DisclaimerComponent = ({ increasePaddingOnDesktop }) => {
   const { service, script, disclaimer } = useContext(ServiceContext);
   const { enabled } = useToggle('disclaimer');
 
-  const shouldShow = hasPath(['text'], disclaimer) && enabled;
+  const disclaimerText = path(['text'], disclaimer);
+
+  const shouldShow = enabled && disclaimerText;
 
   if (!shouldShow) return null;
+
+  const [first, second, third] = disclaimerText.split('[link]');
 
   return (
     <GridItemLarge data-testid="disclaimer">
@@ -51,7 +53,11 @@ const DisclaimerComponent = ({ increasePaddingOnDesktop }) => {
         script={script}
         increasePaddingOnDesktop={increasePaddingOnDesktop}
       >
-        {path(['text'], disclaimer)}
+        {first}
+        <InlineLink href="google.com">IOS</InlineLink>
+        {second}
+        <InlineLink href="google.com">Android</InlineLink>
+        {third}
       </Inner>
     </GridItemLarge>
   );
