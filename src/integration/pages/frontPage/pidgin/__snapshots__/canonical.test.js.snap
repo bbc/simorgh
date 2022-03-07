@@ -303,8 +303,6 @@ exports[`Canonical Front Page Sections should match headline text 6`] = `"Specia
 
 exports[`Canonical Front Page Sections should match headline text 7`] = `"2018 World Cup"`;
 
-exports[`Canonical Front Page Sections should match headline text 8`] = `"Podcast"`;
-
 exports[`Story Promo Headline should match text 1`] = `"As E Dey Happen Senators don begin vote for Senate President"`;
 
 exports[`Story Promo Image should match image 1`] = `
