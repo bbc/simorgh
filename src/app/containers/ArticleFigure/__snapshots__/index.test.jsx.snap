@@ -1664,7 +1664,7 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
             This is a caption 
             <a
               class="emotion-14 emotion-15"
-              href="https://www.bbc.com"
+              href=""
             >
               containing an inline link
             </a>
@@ -3901,7 +3901,7 @@ exports[`ArticleFigure should render an image with caption text with inline link
             This is a caption 
             <a
               class="emotion-19 emotion-20"
-              href="https://www.bbc.com"
+              href=""
             >
               containing an inline link
             </a>
