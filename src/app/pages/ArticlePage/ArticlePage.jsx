@@ -5,6 +5,7 @@ import propEq from 'ramda/src/propEq';
 import last from 'ramda/src/last';
 import styled from '@emotion/styled';
 import { string, node } from 'prop-types';
+import useToggle from '#hooks/useToggle';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -67,20 +68,6 @@ import SecondaryColumn from './SecondaryColumn';
 
 import ArticlePageGrid, { Primary } from './ArticlePageGrid';
 
-const componentsToRender = {
-  visuallyHiddenHeadline,
-  headline: headings,
-  subheadline: headings,
-  audio: articleMediaPlayer,
-  video: articleMediaPlayer,
-  text,
-  image: props => <Image {...props} sizes="(min-width: 1008px) 760px, 100vw" />,
-  timestamp: props => <Timestamp {...props} popOut={false} />,
-  social: SocialEmbedContainer,
-  group: gist,
-  links: props => <ScrollablePromo {...props} />,
-};
-
 const Wrapper = styled.div`
   background-color: ${C_GREY_2};
 `;
@@ -121,6 +108,28 @@ const StyledRelatedTopics = styled(RelatedTopics)`
 
 const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const { articleAuthor, showRelatedTopics } = useContext(ServiceContext);
+  const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
+
+  const componentsToRender = {
+    visuallyHiddenHeadline,
+    headline: headings,
+    subheadline: headings,
+    audio: articleMediaPlayer,
+    video: articleMediaPlayer,
+    text,
+    image: props => (
+      <Image
+        {...props}
+        sizes="(min-width: 1008px) 760px, 100vw"
+        shouldPreload={preloadLeadImageToggle}
+      />
+    ),
+    timestamp: props => <Timestamp {...props} popOut={false} />,
+    social: SocialEmbedContainer,
+    group: gist,
+    links: props => <ScrollablePromo {...props} />,
+  };
+
   const headline = getHeadline(pageData);
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
