@@ -82,7 +82,7 @@ export const service = {
         advertisementLabel: 'विज्ञापन',
       },
       recommendationTitle: 'ये भी पढ़ें',
-      moreRecommendationTitle: 'कुछ और जानिए',
+      splitRecommendationTitle: 'कुछ और जानिए',
       seeAll: 'सब देखें',
       home: 'होम पेज',
       currentPage: 'मौजूदा पन्ना',
