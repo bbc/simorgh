@@ -6,7 +6,8 @@ const makeRelativeUrlPath = urlPath => {
   }
   const isBBCDomain = allowList.some(domain => urlPath.includes(domain));
   if (isBBCDomain) {
-    return urlPath.replace(/^.*\/\/[^/]+/, '');
+    const relativeUrl = urlPath.replace(/^.*\/\/[^/]+/, '');
+    return relativeUrl.length === 0 ? '/' : relativeUrl;
   }
   return urlPath;
 };

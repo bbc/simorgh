@@ -7,6 +7,12 @@ describe('makeRelativeUrlPath', () => {
     expect(relativeUrl).toBe('/russian/a-test-12345');
   });
 
+  it('should return "/" if just a valid BBC domain is given', () => {
+    const url = 'https://www.bbc.com/';
+    const relativeUrl = makeRelativeUrlPath(url);
+    expect(relativeUrl).toBe('/');
+  });
+
   it('should not strip the domain if it is an external link', () => {
     const url = 'https://www.facebook.com/not-the-bbc';
     const relativeUrl = makeRelativeUrlPath(url);
