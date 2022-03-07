@@ -2862,7 +2862,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           allowfullscreen=""
                           class="emotion-147 emotion-148"
                           scrolling="no"
-                          src="https://www.test.bbc.com/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/pcm"
+                          src="/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/pcm"
                           title="Media player"
                         />
                         <noscript />
@@ -3078,7 +3078,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                     class="emotion-229 emotion-230"
                                     dir="ltr"
                                   >
-                                    AS E DE HAPPEN 
+                                    As E Dey Happen 
                                   </span>
                                   <span>
                                     Test m̀ịṅị̀ịọ́ụ̄ please ignore
@@ -6853,7 +6853,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                           allowfullscreen=""
                           class="emotion-152 emotion-153"
                           scrolling="no"
-                          src="https://www.test.bbc.com/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
+                          src="/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
                           title="Media player"
                         />
                         <noscript />
@@ -10414,7 +10414,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           allowfullscreen=""
                           class="emotion-152 emotion-153"
                           scrolling="no"
-                          src="https://www.test.bbc.com/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
+                          src="/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
                           title="Media player"
                         />
                         <noscript />
