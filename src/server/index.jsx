@@ -190,6 +190,10 @@ server.get(
       if (result.redirectUrl) {
         res.redirect(301, result.redirectUrl);
       } else if (result.html) {
+        res.set(
+          'onion-location',
+          `https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${urlPath}`,
+        );
         res.status(status).send(result.html);
       } else {
         throw new Error('unknown result');

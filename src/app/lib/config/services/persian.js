@@ -353,6 +353,10 @@ export const service = {
         url: '/persian',
       },
       {
+        title: 'اوکراین',
+        url: '/persian/topics/cw9q48x6558t',
+      },
+      {
         title: 'کرونا',
         url: '/persian/science-52004647',
       },
