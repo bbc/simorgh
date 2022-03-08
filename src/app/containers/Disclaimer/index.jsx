@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { bool } from 'prop-types';
 import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import InlineLink from '@bbc/psammead-inline-link';
 import { getSansLight } from '@bbc/psammead-styles/font-styles';
@@ -40,9 +39,7 @@ const DisclaimerComponent = ({ increasePaddingOnDesktop }) => {
     useContext(ServiceContext);
   const { enabled } = useToggle('disclaimer');
 
-  const disclaimerBlock = path(['block'], disclaimer);
-
-  const shouldShow = enabled && disclaimerBlock;
+  const shouldShow = enabled && disclaimer;
 
   if (!shouldShow) return null;
 
