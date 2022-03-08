@@ -71,11 +71,6 @@ jest.mock('#containers/Ad/Canonical/CanonicalAdBootstrapJs', () => {
   return CanonicalAdBootstrapJs;
 });
 
-jest.mock('#hooks/useOptimizelyVariation', () => {
-  const useOptimizelyVariation = () => 'control';
-  return useOptimizelyVariation;
-});
-
 jest.mock('#containers/ATIAnalytics/beacon', () => {
   return {
     __esModule: true,
@@ -95,10 +90,6 @@ const optimizely = {
   user: {
     attributes: {},
   },
-  activate: jest.fn(),
-  getIsReadyPromiseFulfilled: jest.fn(),
-  getIsUsingSdkKey: jest.fn(),
-  onForcedVariationsUpdate: jest.fn(),
   close: jest.fn(),
 };
 
@@ -724,7 +715,6 @@ describe('Story Page', () => {
     );
   });
 
-  // Need to mock the optimizely key when an implmentation is decided, tests will fail until it is mocked.
   describe('optimizelyExperiment', () => {
     describe('003_hindi_experiment_feature', () => {
       describe('variation_1', () => {
