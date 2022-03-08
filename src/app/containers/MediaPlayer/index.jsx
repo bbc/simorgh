@@ -17,7 +17,9 @@ import {
   AmpMediaPlayer,
   MediaMessage,
 } from '#components/MediaPlayer';
-import getEmbedUrl from '#lib/utilities/getUrlHelpers/getEmbedUrl';
+import getEmbedUrl, {
+  makeAbsolute,
+} from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import { getPlaceholderSrcSet } from '#lib/utilities/srcSet';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import formatDuration from '#lib/utilities/formatDuration';
@@ -204,7 +206,10 @@ const MediaPlayerContainer = ({
 
   return (
     <>
-      <Metadata aresMediaBlock={aresMediaBlock} embedSource={embedSource} />
+      <Metadata
+        aresMediaBlock={aresMediaBlock}
+        embedSource={makeAbsolute(embedSource)}
+      />
       {showCaption && caption ? (
         <Figure>
           {mediaPlayer}
