@@ -7,7 +7,7 @@ const makeRelativeUrlPath = urlPath => {
 
   if (isBBCDomain) {
     const url = new URL(urlPath);
-    return url.pathname;
+    return `${url.pathname}${url.search}${url.hash}`;
   }
 
   return urlPath;
