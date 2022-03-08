@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { bool } from 'prop-types';
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import InlineLink from '@bbc/psammead-inline-link';
 import { getSansLight } from '@bbc/psammead-styles/font-styles';
@@ -16,6 +17,7 @@ import { GridItemLarge } from '#app/components/Grid';
 
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
+import isEmpty from 'ramda/src/isEmpty';
 
 const Inner = styled.section`
   ${({ script }) => script && getLongPrimer(script)}
@@ -39,7 +41,7 @@ const DisclaimerComponent = ({ increasePaddingOnDesktop }) => {
     useContext(ServiceContext);
   const { enabled } = useToggle('disclaimer');
 
-  const shouldShow = enabled && disclaimer;
+  const shouldShow = enabled && disclaimer && !isEmpty(disclaimer);
 
   if (!shouldShow) return null;
 
