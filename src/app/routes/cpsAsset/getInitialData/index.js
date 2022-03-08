@@ -47,7 +47,8 @@ const formatPageData = pipe(
   only([STORY_PAGE], insertPodcastPromo),
 );
 
-const processOptimoBlocks = toggles =>
+// eslint-disable-next-line no-unused-vars
+const processOptimoBlocks = toggles => service =>
   pipe(
     only([MEDIA_ASSET_PAGE], processUnavailableMedia),
     addHeadlineBlock,
@@ -72,14 +73,14 @@ const processOptimoBlocks = toggles =>
 
 // Here pathname is passed as a prop specifically for CPS includes
 // This will most likely change in issue #6784 so it is temporary for now
-const transformJson = async (json, pathname, toggles) => {
+const transformJson = async (json, pathname, toggles, service) => {
   try {
     const formattedPageData = formatPageData(json);
     const optimoBlocks = await convertToOptimoBlocks(
       formattedPageData,
       pathname,
     );
-    return processOptimoBlocks(toggles)(optimoBlocks);
+    return processOptimoBlocks(toggles)(service)(optimoBlocks);
   } catch (e) {
     // We can arrive here if the CPS asset is a FIX page
     // TODO: consider checking if FIX then don't transform JSON
@@ -122,7 +123,7 @@ export default async ({
     return {
       status,
       pageData: {
-        ...(await transformJson(json, pathname, toggles)),
+        ...(await transformJson(json, pathname, toggles, service)),
         ...processedAdditionalData,
       },
     };

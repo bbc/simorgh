@@ -1,0 +1,1211 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:hindi/international-60490858",
+    "locators": {
+      "assetUri": "/hindi/international-60490858",
+      "cpsUrn": "urn:bbc:content:assetUri:hindi/international-60490858",
+      "curie": "http://www.bbc.co.uk/asset/07e891e4-f026-420a-9ac8-fa5420fdcac5",
+      "assetId": "60490858"
+    },
+    "type": "STY",
+    "createdBy": "hindi-v6",
+    "language": "hi",
+    "lastUpdated": 1645614310314,
+    "firstPublished": 1645614285000,
+    "lastPublished": 1645614285000,
+    "timestamp": 1645614285000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "ldp_tags": "Russia~Vladimir+Putin~Ukraine",
+      "cps_asset_id": "60490858",
+      "ldp_ids": "39267b85-1784-4f4b-80ed-f8cb4a35f337~7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+      "contentId": "urn:bbc:cps:curie:asset:07e891e4-f026-420a-9ac8-fa5420fdcac5",
+      "counterName": "hindi.international.story.60490858.page",
+      "cps_asset_type": "sty"
+    },
+    "passport": {
+      "campaigns": [
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ],
+      "language": "hi",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Hindi",
+      "locator": "urn:bbc:cps:curie:asset:07e891e4-f026-420a-9ac8-fa5420fdcac5",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/e91b614e-d7c9-419e-9525-58038966d285#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+          "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+          "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion": "1.4.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+            "thingLabel": "रूस",
+            "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+            "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+            "thingType": [
+              "core:Place",
+              "tagging:TagConcept",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://sws.geonames.org/2017370/"
+            ],
+            "thingEnglishLabel": "Russia",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f#id",
+            "thingLabel": "व्लादिमीर पुतिन",
+            "thingUri": "http://www.bbc.co.uk/things/7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f#id",
+            "thingId": "7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f",
+            "thingType": [
+              "core:Thing",
+              "tagging:Agent",
+              "tagging:TagConcept",
+              "core:Person",
+              "tagging:AmbiguousTerm"
+            ],
+            "thingSameAs": [
+              "http://www.imdb.com/name/nm1269884/",
+              "http://dbpedia.org/resource/Vladimir_Putin",
+              "http://musicbrainz.org/artist/833f5372-a2a5-4932-8a5c-399184f29541#_",
+              "http://www.wikidata.org/entity/Q7747"
+            ],
+            "thingEnglishLabel": "Vladimir Putin",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+            "thingLabel": "यूक्रेन",
+            "thingUri": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+            "thingId": "ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Thing",
+              "core:Place"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Ukraine",
+              "http://www.wikidata.org/entity/Q212",
+              "http://sws.geonames.org/690791/"
+            ],
+            "thingEnglishLabel": "Ukraine",
+            "type": "about"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingLabel": "News report",
+            "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+            "thingType": [
+              "tagging:TagConcept",
+              "tagging:Format"
+            ],
+            "thingSameAs": [
+              
+            ],
+            "thingEnglishLabel": "Report",
+            "thingPreferredLabel": "Report",
+            "thingLabelLanguage": "hi",
+            "type": "formats"
+          }
+        ]
+      }
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "रूस",
+          "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+          "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+          "thingType": [
+            "core:Place",
+            "tagging:TagConcept",
+            "core:Thing"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/2017370/"
+          ],
+          "topicName": "रूस",
+          "topicId": "c06gq37ky2wt",
+          "curationList": [
+            {
+              "curationId": "daadef01-0114-4f05-ac29-86f2360d2703",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Russia",
+          "thingLabelLanguage": "hi",
+          "thingPreferredLabel": "Russia"
+        },
+        {
+          "thingLabel": "व्लादिमीर पुतिन",
+          "thingUri": "http://www.bbc.co.uk/things/7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f#id",
+          "thingId": "7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f",
+          "thingType": [
+            "core:Thing",
+            "tagging:Agent",
+            "tagging:TagConcept",
+            "core:Person",
+            "tagging:AmbiguousTerm"
+          ],
+          "thingSameAs": [
+            "http://www.imdb.com/name/nm1269884/",
+            "http://dbpedia.org/resource/Vladimir_Putin",
+            "http://musicbrainz.org/artist/833f5372-a2a5-4932-8a5c-399184f29541#_",
+            "http://www.wikidata.org/entity/Q7747"
+          ],
+          "topicName": "व्लादिमीर पुतिन",
+          "topicId": "cpzd4kgpkx7t",
+          "curationList": [
+            {
+              "curationId": "5cb2d2bb-0011-4991-9019-c451032046cc",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Vladimir Putin",
+          "thingLabelLanguage": "hi",
+          "thingPreferredLabel": "Vladimir Putin"
+        },
+        {
+          "thingLabel": "यूक्रेन",
+          "thingUri": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+          "thingId": "ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+          "thingType": [
+            "tagging:TagConcept",
+            "core:Thing",
+            "core:Place"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Ukraine",
+            "http://www.wikidata.org/entity/Q212",
+            "http://sws.geonames.org/690791/"
+          ],
+          "topicName": "यूक्रेन",
+          "topicId": "c404vnp0052t",
+          "curationList": [
+            {
+              "curationId": "831c8c98-35d7-4e4b-8db8-468e1f80703a",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Ukraine",
+          "thingLabelLanguage": "hi",
+          "thingPreferredLabel": "Ukraine"
+        }
+      ]
+    },
+    "version": "v1.3.17",
+    "blockTypes": [
+      "image",
+      "include",
+      "paragraph",
+      "list",
+      "heading",
+      "social_embed"
+    ],
+    "includeComments": false,
+    "atiAnalytics": {
+      "producerName": "HINDI",
+      "producerId": "52"
+    },
+    "readTime": 5,
+    "siteUri": "/hindi",
+    "topics": [
+      {
+        "topicName": "रूस",
+        "topicId": "c06gq37ky2wt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "daadef01-0114-4f05-ac29-86f2360d2703",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "core:Place",
+          "tagging:TagConcept",
+          "core:Thing"
+        ],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Hindi"
+      },
+      {
+        "topicName": "यूक्रेन",
+        "topicId": "c404vnp0052t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "831c8c98-35d7-4e4b-8db8-468e1f80703a",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "tagging:TagConcept",
+          "core:Thing",
+          "core:Place"
+        ],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Hindi"
+      },
+      {
+        "topicName": "व्लादिमीर पुतिन",
+        "topicId": "cpzd4kgpkx7t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "5cb2d2bb-0011-4991-9019-c451032046cc",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "core:Thing",
+          "tagging:Agent",
+          "tagging:TagConcept",
+          "core:Person",
+          "tagging:AmbiguousTerm"
+        ],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Hindi"
+      }
+    ]
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "123002618",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/13ED4/production/_123002618_nato.jpg",
+        "path": "/cpsprodpb/13ED4/production/_123002618_nato.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "नेटो सैनिक",
+        "caption": "नेटो सैनिक",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "required": false,
+        "title": "ISWOTY",
+        "href": "/include/vjsthasia/1240-iswoty-2021-banner/hindi/vote?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png&app-image-alt-text=Click%20or%20tap%20here%20to%20see%20interactive%20content",
+        "platform": "highweb",
+        "type": "include"
+      },
+      {
+        "text": "रूसी राष्ट्रपति व्लादिमीर पुतिन ने पूर्वी यूक्रेन में सेना भेजने के आदेश दे दिए हैं. उन्होंने यूक्रेन में विद्रोहियों के नियंत्रण वाले दो इलाक़ों को स्वतंत्र राज्य के तौर पर मान्यता देने के बाद ये क़दम उठाया है.",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "रूसी राष्ट्रपति का कहना है कि उनकी सेना वहाँ &quot;शांति बनाए रखने के लिए&quot; जा रही है. अमेरिका ने इसे बकवास बताया है. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "इसके बाद अब तस्वीरें आ रही हैं कि रूसी सेना यूक्रेन के इन दो इलाक़ों की ओर बढ़ रही है. रूस ने पिछले कई महीनों से यूक्रेन की सीमा पर लगभग दो लाख ( 190,000) सैन्यकर्मियों को तैनात कर रखा था. इन्हीं में से सैन्य टुकड़ियाँ अब यूक्रेन की सीमा पार कर दाख़िल होंगी.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>hindi/international-60489386</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "यूक्रेन संकट: अमेरिका को छोड़ रूस के साथ क्यों खड़े हैं ये देश",
+                  "headline": "यूक्रेन संकट: अमेरिका को छोड़ रूस के साथ क्यों खड़े हैं ये देश",
+                  "overtyped": "यूक्रेन संकट: अमेरिका को छोड़ रूस के साथ क्यों खड़े हैं ये देश"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/hindi/international-60489386"
+                },
+                "summary": "अमेरिका के साथ नेटो में शामिल सभी 30 देश तो हैं और एशिया की अहम शक्ति जापान के अलावा ऑस्ट्रेलिया भी है. लेकिन रूस के साथ कौन-कौन से देश हैं?",
+                "timestamp": 1645604872000,
+                "language": "hi",
+                "passport": {
+                  "category": {
+                    "categoryId": "",
+                    "categoryName": ""
+                  },
+                  "taggings": [
+                    
+                  ]
+                },
+                "id": "urn:bbc:ares::asset:hindi/international-60489386",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>hindi/international-60214233</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "रूस के लिए इतना अहम क्यों है यूक्रेन- जानिए इसके तीन बड़े कारण",
+                  "headline": "रूस के लिए इतना अहम क्यों है यूक्रेन- जानिए इसके तीन बड़े कारण",
+                  "overtyped": "रूस के लिए इतना अहम क्यों है यूक्रेन- जानिए इसके तीन बड़े कारण"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/hindi/international-60214233"
+                },
+                "summary": "कई हफ़्तों से जारी यूक्रेन संकट पर रूस के राष्ट्रपति व्लादिमीर पुतिन ने कहा है कि अमेरिका उसे युद्ध में खींचना चाह रहा है. रूस यूक्रेन पर पीछे हटने के लिए क़तई तैयार नहीं. लेकिन इसकी मूल वजह क्या है.",
+                "timestamp": 1643858351000,
+                "language": "hi",
+                "passport": {
+                  "category": {
+                    "categoryId": "",
+                    "categoryName": ""
+                  },
+                  "taggings": [
+                    
+                  ]
+                },
+                "id": "urn:bbc:ares::asset:hindi/international-60214233",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "रूसी सेना के इस जमावड़े में टैंक और गोला-बारुद तो है ही, उन्हें वायुसेना और नौसेना का भी सहयोग मिल रहा है.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "वहीं यूक्रेन के राष्ट्रपति ने कहा है कि उनके देश को &quot;ना तो किसी बात का और ना किसी व्यक्ति का&quot; डर है.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "123104247",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/12200/production/_123104247_tank.jpg",
+        "path": "/cpsprodpb/12200/production/_123104247_tank.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "रूसी टीवी पर यूक्रेन सीमा के पास तैनात टैंक की तस्वीर (14 जनवरी 2022)",
+        "caption": "रूसी टीवी पर यूक्रेन सीमा के पास तैनात टैंक की तस्वीर (14 जनवरी 2022)",
+        "copyrightHolder": "Russian defence ministry",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "रूसी सैनिकों की संख्या कितनी है?",
+        "markupType": "plain_text",
+        "type": "heading"
+      },
+      {
+        "text": "ऐसा अनुमान है कि यूक्रेन और उसके आस-पास रूसी सैनिकों की संख्या हाल के सप्ताह में एक लाख से एक लाख 90 हज़ार के बीच हो सकती है.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "पिछले शुक्रवार को अमेरिका ने कहा था कि यूक्रेन और उसके आस-पास रूस ने 169,000 से 190,000 के बीच सैनिक तैनात कर रखे हैं.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "यूरोपीय सुरक्षा और सहयोग संगठन ओएससीई में अमेरिकी राजदूत माइकल कारपेंटर ने कहा था- &quot;इस संख्या में यूक्रेन की सीमा के आसपास, और बेलारूस में तथा कब्ज़ा किए हुए क्षेत्र क्राइमिया में तैनात सैनिक शामिल हैं. इनके अलावा इस संख्या में इन इलाक़ों में रूसी सुरक्षा गार्ड और अन्य घरेलू सुरक्षाकर्मी भी शामिल हैं. साथ ही पूर्वी यूक्रेन में रूस की अगुआई वाली सेनाएँ भी इस संख्या में शामिल हैं.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "वहीं इससे पहले ब्रिटेन के रक्षा मंत्री बेन वॉलेस ने कहा था कि रूसी थल सेना के 60% सैनिक रूस और बेलारूस की सीमा के पास जुटे हुए हैं.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "123324816",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/F192/production/_123324816_mediaitem123324813.jpg",
+        "path": "/cpsprodpb/F192/production/_123324816_mediaitem123324813.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "रूस और बेलारूस के सैनिकों ने हाल ही में सैन्य अभ्यास किय था",
+        "caption": "रूस और बेलारूस के सैनिकों ने हाल ही में सैन्य अभ्यास किय था",
+        "copyrightHolder": "EPA",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "उधर यूक्रेन के रक्षा मंत्री ने ये संख्या  149,000 बताई थी.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "इस सबके बारे में रूस ने कुछ स्पष्ट नहीं कहा है. संयुक्त राष्ट्र में रूस के उप-राजदूत दमित्री पोलांस्की ने कहा - &quot;ये सब हमारे पश्चिम के साथियों के दिमाग़ की उपज है.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "पिछले सप्ताह रूस के रक्षा मंत्रालय ने कहा था कि उनके दक्षिण और पश्चिम के ज़िलों की कुछ सैन्य टुकड़ियों ने अपना अभ्यास ख़त्म कर लिया है और वो अपने स्थायी ठिकानों पर लौट रहे हैं.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "122934410",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/05A3/production/_122934410_ukraine_russia_military_inf640-2x-.png",
+        "path": "/cpsprodpb/05A3/production/_122934410_ukraine_russia_military_inf640-2x-.png",
+        "height": 1053,
+        "width": 976,
+        "altText": "रूस और यूक्रेन की सेनाएं",
+        "caption": "रूस की तुलना में कहां खड़ी है यूक्रेन की सेना",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "मगर सैन्य संगठन नेटो का कहना था कि उसे ज़मीन पर इसका कोई सबूत नहीं दिखा है.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "नेटो महासचिव जेन्स स्टोल्टनबर्ग ने तब कहा था, &quot;इसके उलट, ऐसा लगता है रूस सैन्य बंदोबस्त बढ़ाता जा रहा है.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "पश्चिम के अधिकारियों ने नाम ना बताने की शर्त पर बताया है कि अभी जो ख़ुफ़िया जानकारी मिल रही है उससे ऐसा लगता है रूसी सैनिक उस रेंज में पहुँच चुके हैं जहाँ से यूक्रेन पर हमला बोला जा सकता है.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "उनका कहना है कि उनकी दो-तिहाई सेना सीमा से 50 किलोमीटर से भीतर के दायरे में हैं.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "href": "https://www.youtube.com/watch?v=AY6k4GYp48Y",
+        "source": "youtube",
+        "embed": {
+          "oembed": {
+            "version": "1.0",
+            "title": "Russia Ukraine War : यूक्रेन पर संभावित हमले में इन तीन रास्तों को अपना सकता है रूस (BBC Hindi)",
+            "author_name": "BBC News Hindi",
+            "author_url": "https://www.youtube.com/c/BBCHindi",
+            "provider_name": "YouTube",
+            "provider_url": "https://www.youtube.com/",
+            "thumbnail_url": "https://i.ytimg.com/vi/AY6k4GYp48Y/hqdefault.jpg",
+            "thumbnail_width": 480,
+            "thumbnail_height": 360,
+            "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/AY6k4GYp48Y?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+            "width": 200,
+            "height": 113
+          },
+          "fallback_image": {
+            "fallback_image_width": 500,
+            "fallback_image_height": 269,
+            "alt_text": "YouTube post by BBC News Hindi: Russia Ukraine War : यूक्रेन पर संभावित हमले में इन तीन रास्तों को अपना सकता है रूस (BBC Hindi)"
+          }
+        },
+        "id": "AY6k4GYp48Y",
+        "type": "social_embed"
+      },
+      {
+        "text": "सैटेलाइट से मिली तस्वीरों से भी संकेत मिलता है कि कुछ रूसी सैन्य टुकड़ियाँ यूक्रेन की सीमा के पास छोटे समूहों में बँट गई हैं.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "हालाँकि, कई जानकारों का मानना है कि यूक्रेन पर पूरी तरह धावा बोल देने, फिर उसके अधिकतर या सारे हिस्से पर कब्ज़ा करने के लिए रूस को अभी जितने सैनिक तैनात हैं, उससे बहुत ज़्यादा सैनिकों को जुटाना होगा.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>यूक्रेन की सैन्य क्षमता</bold><bold> और नेटो का साथ</bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "रूस की तुलना में यूक्रेन की सेना बहुत छोटी है मगर उसे उत्तर अटलांटिक सैन्य संगठन नेटो की मदद मिल रही है.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "अमेरिका ने यूक्रेन के भीतर तो कोई सेना नहीं भेजी है मगर उसके पास पोलैंड और रोमानिया में नेटो की सेना का हाथ मज़बूत करने के लिए 3,000 अतिरिक्त सैनिक भेजे हैं, और 8,500 अन्य सैनकों को अलर्ट पर रखा है.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "118009866",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/1054A/production/_118009866_mediaitem118009862.jpg",
+        "path": "/cpsprodpb/1054A/production/_118009866_mediaitem118009862.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "यूक्रेनी सैनिकों के साथ राष्ट्रपति ज़ेलेंस्की ( 9 अप्रैल 2021 की तस्वीर)",
+        "caption": "यूक्रेनी सैनिकों के साथ राष्ट्रपति ज़ेलेंस्की ( 9 अप्रैल 2021 की तस्वीर)",
+        "copyrightHolder": "EPA",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "अमेरिका ने साथ ही 20 करोड़ डॉलर के हथियार भेजे हैं जिनमें जेवलिन टैंक-रोधी मिसाइल और स्टिंगर लड़ाकू विमान-रोधी मिसाइल शामिल हैं. उसने साथ ही नेटो के सदस्य देशों को अमेरिका में बने हथियार यूक्रेन को देने की भी अनुमति दे दी है.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "वहीं ब्रिटेन ने यूक्रेन को 2,000 कम-दूरी के टैंक-रोधी मिसाइल दिए हैं, 350 और सैनिकों को पोलैंड को भेजा है, और एस्टोनिया में 900 अतिरिक्त सैनिकों को भेजकर अपनी सैन्य क्षमता दोगुना कर दी है.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ब्रिटेन ने अपने और लड़ाकू विमानों को दक्षिणी यूरोप भेजा है और एक नौसैनिक जहाज़ को भी नेटो के अन्य लड़ाकू जहाज़ों के साथ भूमध्यसागर की निगरानी के लिए भेज दिया है.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "उसने साथ ही अपने 1,000 सैनिकों को अलर्ट कर दिया है ताकि हमला होने की सूरत में वो यूक्रेन में किसी मानवीय संकट के समय मदद कर सकें.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "डेनमार्क, स्पेन, फ़्रांस और नीदरलैंड्स ने भी अपने लड़ाकू विमानों और जहाज़ों को पूर्वी यूरोप और पूर्वी भूमध्यसागर में रवाना कर दिया है.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "और उधर फ्रांस की भी योजना है कि वो रोमानिया में नेटो की सेना की अगुआई करे और अपने सैनिक वहाँ भेजे, मगर नेटो का कहना है कि इसकी पूरी योजना को अंतिम रूप देने में कई सप्ताह लग जाएँगे.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "नेटो ने पिछली बार यूक्रेन के लिए क्या किया था?",
+        "markupType": "plain_text",
+        "type": "heading"
+      },
+      {
+        "text": "2014 में यूक्रेन के लोगों ने वहाँ रूस-समर्थक राष्ट्रपति को हटा दिया जिसके बाद रूस ने यूक्रेन के दक्षिणी प्रांत काइमिया पर क़ब्ज़ा कर लिया था. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "उसने साथ ही पूर्वी यूरोप के बड़े हिस्से पर कब्ज़ा करने वाले रूस-समर्थक अलगाववादियों को भी मदद दी थी.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "123002053",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/88CC/production/_123002053_natotroops.png",
+        "path": "/cpsprodpb/88CC/production/_123002053_natotroops.png",
+        "height": 549,
+        "width": 976,
+        "altText": "नेटो सैनिक",
+        "caption": "नेटो सैनिक",
+        "copyrightHolder": "AFP via Getty",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "उस वक़्त नेटो ने हस्तक्षेप नहीं किया था, मगर उसने तब पहली बार इसके जवाब में पूर्वी यूरोप के कई देशों में अपनी सेना तैनात कर दी थी.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>hindi/international-60121587</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "पुतिन ने क्राइमिया को रूस में कैसे मिलाया था? जानिए पूरी कहानी",
+                  "headline": "यूक्रेन संकट: पुतिन ने क्राइमिया को रूस में कैसे मिलाया था? जानिए पूरी कहानी",
+                  "overtyped": "पुतिन ने क्राइमिया को रूस में कैसे मिलाया था? जानिए पूरी कहानी "
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/hindi/international-60121587"
+                },
+                "summary": "रूस के राष्ट्रपति व्लादिमीर पुतिन ने यूक्रेन के दो पृथकतावादी क्षेत्रों को मान्यता दे दी है. इनका नियंत्रण रूस समर्थित अलगाववादी करते हैं. पुतिन ने 2014 में यूक्रेन से लेकर क्राइमिया को रूस में मिला दिया था. आठ साल बाद फिर से यूक्रेन पर रूसी हमले का ख़तरा मंडरा रहा है. जानिए क्या है इस पूरे विवाद का इतिहास.",
+                "timestamp": 1645511375000,
+                "language": "hi",
+                "passport": {
+                  "category": {
+                    "categoryId": "",
+                    "categoryName": ""
+                  },
+                  "taggings": [
+                    
+                  ]
+                },
+                "id": "urn:bbc:ares::asset:hindi/international-60121587",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "नेटो ने एस्टोनिया, लातविया, लिथुआनिया और पोलैंड में बटालियन स्तर की चार बहुराष्ट्रीय टुकड़ियाँ और रोमानिया में एक बहुराष्ट्रीय ब्रिगेड तैनात की हुई है.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "उसने साथ ही बाल्टिक देशों और पूर्वी यूरोप में वायु क्षेत्र की निगरानी भी बढ़ा दी है ताकि किसी रूसी विमान के नेटो सदस्य देशों की वायु सीमा का उल्लंघन करने पर उसे पकड़ सके.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "रूस इस बात से नाराज़ रहता है और चाहता है कि ये सेनाएँ बाहर निकल जाएँ.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "123173033",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/810D/production/_123173033_iswoty_branding_footer_cps-002.png",
+        "path": "/cpsprodpb/810D/production/_123173033_iswoty_branding_footer_cps-002.png",
+        "height": 281,
+        "width": 976,
+        "altText": "ISOWTY",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "<bold>(</bold><bold>बीबीसी हिन्दी के एंड्रॉएड ऐप के लिए आप </bold><link><caption>यहां क्लिक</caption><altText>यहां क्लिक</altText><url href=\"https://play.google.com/store/apps/details?id=uk.co.bbc.hindi\" platform=\"highweb\"/><url href=\"https://play.google.com/store/apps/details?id=uk.co.bbc.hindi\" platform=\"enhancedmobile\"/></link><bold> कर सकते हैं. आप हमें </bold><link><caption>फ़ेसबुक</caption><altText>फ़ेसबुक</altText><url href=\"https://www.facebook.com/bbchindi\" platform=\"highweb\"/><url href=\"https://www.facebook.com/bbchindi\" platform=\"enhancedmobile\"/></link><bold>, </bold><link><caption>ट्विटर</caption><altText>ट्विटर</altText><url href=\"https://twitter.com/BBCHindi\" platform=\"highweb\"/><url href=\"https://twitter.com/BBCHindi\" platform=\"enhancedmobile\"/></link><bold>, </bold><link><caption>इंस्टाग्राम</caption><url href=\"https://www.instagram.com/bbchindi/\" platform=\"highweb\"/><url href=\"https://www.instagram.com/bbchindi/\" platform=\"enhancedmobile\"/></link><bold> और </bold><link><caption>यूट्यूब</caption><url href=\"https://www.youtube.com/bbchindi/\" platform=\"highweb\"/><url href=\"https://www.youtube.com/bbchindi/\" platform=\"enhancedmobile\"/></link><bold> पर फ़ॉलो भी कर सकते हैं.)</bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "रूस और यूक्रेनः किसकी सेना कितनी मज़बूत?",
+      "headline": "रूस और यूक्रेनः किसकी सेना कितनी मज़बूत?"
+    },
+    "locators": {
+      "assetUri": "/hindi/international-60490858",
+      "cpsUrn": "urn:bbc:content:assetUri:hindi/international-60490858",
+      "curie": "http://www.bbc.co.uk/asset/07e891e4-f026-420a-9ac8-fa5420fdcac5",
+      "assetId": "60490858"
+    },
+    "summary": "रूसी राष्ट्रपति व्लादिमीर पुतिन ने पूर्वी यूक्रेन में सेना भेजने के आदेश दे दिए हैं. उधर यूक्रेन के राष्ट्रपति कह रहे हैं उनके देश को किसी का डर नहीं है. कितनी दमदार है दोनों की सेना?",
+    "timestamp": 1645614285000,
+    "language": "hi",
+    "passport": {
+      "campaigns": [
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ],
+      "language": "hi",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Hindi",
+      "locator": "urn:bbc:cps:curie:asset:07e891e4-f026-420a-9ac8-fa5420fdcac5",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/e91b614e-d7c9-419e-9525-58038966d285#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+          "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+          "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion": "1.4.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+            "thingLabel": "रूस",
+            "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+            "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+            "thingType": [
+              "core:Place",
+              "tagging:TagConcept",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://sws.geonames.org/2017370/"
+            ],
+            "thingEnglishLabel": "Russia",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f#id",
+            "thingLabel": "व्लादिमीर पुतिन",
+            "thingUri": "http://www.bbc.co.uk/things/7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f#id",
+            "thingId": "7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f",
+            "thingType": [
+              "core:Thing",
+              "tagging:Agent",
+              "tagging:TagConcept",
+              "core:Person",
+              "tagging:AmbiguousTerm"
+            ],
+            "thingSameAs": [
+              "http://www.imdb.com/name/nm1269884/",
+              "http://dbpedia.org/resource/Vladimir_Putin",
+              "http://musicbrainz.org/artist/833f5372-a2a5-4932-8a5c-399184f29541#_",
+              "http://www.wikidata.org/entity/Q7747"
+            ],
+            "thingEnglishLabel": "Vladimir Putin",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+            "thingLabel": "यूक्रेन",
+            "thingUri": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+            "thingId": "ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Thing",
+              "core:Place"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Ukraine",
+              "http://www.wikidata.org/entity/Q212",
+              "http://sws.geonames.org/690791/"
+            ],
+            "thingEnglishLabel": "Ukraine",
+            "type": "about"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingLabel": "News report",
+            "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+            "thingType": [
+              "tagging:TagConcept",
+              "tagging:Format"
+            ],
+            "thingSameAs": [
+              
+            ],
+            "thingEnglishLabel": "Report",
+            "thingPreferredLabel": "Report",
+            "thingLabelLanguage": "hi",
+            "type": "formats"
+          }
+        ]
+      }
+    },
+    "indexImage": {
+      "id": "123324816",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/F192/production/_123324816_mediaitem123324813.jpg",
+      "path": "/cpsprodpb/F192/production/_123324816_mediaitem123324813.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "रूस और बेलारूस के सैनिकों ने हाल ही में सैन्य अभ्यास किय था",
+      "caption": "रूस और बेलारूस के सैनिकों ने हाल ही में सैन्य अभ्यास किय था",
+      "copyrightHolder": "EPA",
+      "originCode": "cpsprodpb",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:hindi/international-60490858",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "अंतरराष्ट्रीय",
+      "uri": "/hindi/international",
+      "urlIdentifier": "/hindi/international",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Hindi",
+      "uri": "/hindi",
+      "urlIdentifier": "/hindi",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "पुतिन ने क्राइमिया को रूस में कैसे मिलाया था? जानिए पूरी कहानी",
+              "headline": "यूक्रेन संकट: पुतिन ने क्राइमिया को रूस में कैसे मिलाया था? जानिए पूरी कहानी"
+            },
+            "locators": {
+              "assetUri": "/hindi/international-60121587",
+              "cpsUrn": "urn:bbc:content:assetUri:/hindi/international-60121587"
+            },
+            "summary": "रूस के राष्ट्रपति व्लादिमीर पुतिन ने यूक्रेन के दो पृथकतावादी क्षेत्रों को मान्यता दे दी है. इनका नियंत्रण रूस समर्थित अलगाववादी करते हैं. पुतिन ने 2014 में यूक्रेन से लेकर क्राइमिया को रूस में मिला दिया था. आठ साल बाद फिर से यूक्रेन पर रूसी हमले का ख़तरा मंडरा रहा है. जानिए क्या है इस पूरे विवाद का इतिहास.",
+            "timestamp": 1645511375000,
+            "language": "hi",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "123342832",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/5D10/production/_123342832_gettyimages-1235533305.jpg",
+              "path": "/cpsprodpb/5D10/production/_123342832_gettyimages-1235533305.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "क्राइमिया",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:hindi/international-60121587",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "रूस और अमेरिका 'घर में घुसने पर क्या करेंगे' वाली टिप्पणी पर भिड़े",
+              "headline": "रूस और अमेरिका 'घर में घुसने पर क्या करेंगे' वाली टिप्पणी पर भिड़े"
+            },
+            "locators": {
+              "assetUri": "/hindi/international-59947672",
+              "cpsUrn": "urn:bbc:content:assetUri:/hindi/international-59947672"
+            },
+            "summary": "रूस और अमेरिका के विदेश मंत्रालयों में तीखी बयानबाज़ी हो रही है. अमेरिकी विदेश मंत्री एंटनी ब्लिंकन ने पहले कहा कि 'रूसी आपके घर में आ गए तो निकालना मुश्किल होगा'. अब रूस ने इसका जवाब दिया है.",
+            "timestamp": 1641958164000,
+            "language": "hi",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "122653560",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1987/production/_122653560_blinken_russia.jpg",
+              "path": "/cpsprodpb/1987/production/_122653560_blinken_russia.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ब्लिंकन और सर्गेई लावरोव",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:hindi/international-59947672",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "रूस और यूक्रेन के बीच युद्ध की आशंका क्यों?",
+              "headline": "रूस और यूक्रेन के बीच युद्ध की आशंका क्यों?"
+            },
+            "locators": {
+              "assetUri": "/hindi/media-59648737",
+              "cpsUrn": "urn:bbc:content:assetUri:/hindi/media-59648737"
+            },
+            "summary": "रूस और यूक्रेन में युद्ध की आशंका के कारण को समझिए.",
+            "timestamp": 1639475491000,
+            "language": "hi",
+            "cpsType": "MAP",
+            "media": {
+              "id": "59648741",
+              "subType": "primary",
+              "format": "video",
+              "externalId": "p0b9wcxh",
+              "entityType": "Clip",
+              "caption": "रूस और यूक्रेन के बीच युद्ध की आशंका क्यों?",
+              "type": "external_vpid"
+            },
+            "indexImage": {
+              "id": "122088090",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/2380/production/_122088090_p0b9wffv.jpg",
+              "path": "/cpsprodpb/2380/production/_122088090_p0b9wffv.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "रूस की सेना",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "mediaType": "Video",
+            "id": "urn:bbc:ares::asset:hindi/media-59648737",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "रूस ने पश्चिमी देशों पर लगाया धमकाने का आरोप",
+              "headline": "रूस ने पश्चिमी देशों पर लगाया धमकाने का आरोप"
+            },
+            "locators": {
+              "assetUri": "/hindi/media-59748732",
+              "cpsUrn": "urn:bbc:content:assetUri:/hindi/media-59748732"
+            },
+            "summary": "रूस ने इस बात से इंकार किया है कि वो आक्रमण की तैयारी कर रहा है और पश्चिमी देशों पर नेटो के विस्तार के ज़रिए रूस को धमकाने का आरोप लगाया है.",
+            "timestamp": 1640148219000,
+            "language": "hi",
+            "cpsType": "MAP",
+            "media": {
+              "id": "59748733",
+              "subType": "primary",
+              "format": "video",
+              "externalId": "p0bcf048",
+              "entityType": "Clip",
+              "caption": "रूस ने इस बात से इंकार किया है कि वो आक्रमण की तैयारी कर रहा है",
+              "type": "external_vpid"
+            },
+            "indexImage": {
+              "id": "122355973",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/9443/production/_122355973_p0bcf0f1.jpg",
+              "path": "/cpsprodpb/9443/production/_122355973_p0bcf0f1.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "रूसी राष्ट्रपति पुतिन",
+              "copyrightHolder": "AFP",
+              "type": "image"
+            },
+            "mediaType": "Video",
+            "id": "urn:bbc:ares::asset:hindi/media-59748732",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "क्या अमेरिका की ये 'सिल्वर फ़ॉक्स' पुतिन को चकमा दे पाएगी?",
+              "headline": "क्या अमेरिका की ये 'सिल्वर फ़ॉक्स' पुतिन को चकमा दे पाएगी?"
+            },
+            "locators": {
+              "assetUri": "/hindi/international-59974738",
+              "cpsUrn": "urn:bbc:content:assetUri:/hindi/international-59974738"
+            },
+            "summary": "यूक्रेन के हालात को लेकर अमेरिका रूस के बीच गंभीर वार्ता चल रही है, सबकी निगाहें इस महिला राजनयिक पर हैं.",
+            "timestamp": 1642142889000,
+            "language": "hi",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "122710537",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/11F1D/production/_122710537_073062733-1.jpg",
+              "path": "/cpsprodpb/11F1D/production/_122710537_073062733-1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "वेंडी शरमन",
+              "copyrightHolder": "Reuters",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:hindi/international-59974738",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "रूस-यूक्रेन संकट पर मोदी सरकार के रुख़ की इतनी चर्चा क्यों?",
+              "headline": "रूस-यूक्रेन संकट पर नरेंद्र मोदी सरकार के रुख़ की इतनी चर्चा क्यों?"
+            },
+            "locators": {
+              "assetUri": "/hindi/india-60488702",
+              "cpsUrn": "urn:bbc:content:assetUri:/hindi/india-60488702"
+            },
+            "summary": "तीन फ़रवरी को यूक्रेन के विदेश मंत्री दिमित्रो कुलेबा ने भारत से एक खुली अपील की थी. इस अपील के पीछे की वजहें साफ़ हैं कि भारत विश्व मंच पर एक अहम देश है और उसका पक्ष मायने रखता है.",
+            "timestamp": 1645600430000,
+            "language": "hi",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "123359075",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/DF07/production/_123359075_gettyimages-1149677443.jpg",
+              "path": "/cpsprodpb/DF07/production/_123359075_gettyimages-1149677443.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "मोदी",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:hindi/india-60488702",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "यूक्रेन संकट: अमेरिका को छोड़ रूस के साथ क्यों खड़े हैं ये देश",
+              "headline": "यूक्रेन संकट: अमेरिका को छोड़ रूस के साथ क्यों खड़े हैं ये देश"
+            },
+            "locators": {
+              "assetUri": "/hindi/international-60489386",
+              "cpsUrn": "urn:bbc:content:assetUri:/hindi/international-60489386"
+            },
+            "summary": "अमेरिका के साथ नेटो में शामिल सभी 30 देश तो हैं और एशिया की अहम शक्ति जापान के अलावा ऑस्ट्रेलिया भी है. लेकिन रूस के साथ कौन-कौन से देश हैं?",
+            "timestamp": 1645604872000,
+            "language": "hi",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "123358994",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/C341/production/_123358994_gettyimages-1238176368.jpg",
+              "path": "/cpsprodpb/C341/production/_123358994_gettyimages-1238176368.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "रूस",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:hindi/international-60489386",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "रूस के लिए इतना अहम क्यों है यूक्रेन- जानिए इसके तीन बड़े कारण",
+              "headline": "रूस के लिए इतना अहम क्यों है यूक्रेन- जानिए इसके तीन बड़े कारण"
+            },
+            "locators": {
+              "assetUri": "/hindi/international-60214233",
+              "cpsUrn": "urn:bbc:content:assetUri:/hindi/international-60214233"
+            },
+            "summary": "कई हफ़्तों से जारी यूक्रेन संकट पर रूस के राष्ट्रपति व्लादिमीर पुतिन ने कहा है कि अमेरिका उसे युद्ध में खींचना चाह रहा है. रूस यूक्रेन पर पीछे हटने के लिए क़तई तैयार नहीं. लेकिन इसकी मूल वजह क्या है.",
+            "timestamp": 1643858351000,
+            "language": "hi",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "123089780",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/225E/production/_123089780_gettyimages-1227585143.jpg",
+              "path": "/cpsprodpb/225E/production/_123089780_gettyimages-1227585143.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "रूसी नाविक",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:hindi/international-60214233",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "यूक्रेन पर रूस के हमले की आशंका: यूरोप और युद्ध के बीच कितना फ़ासला है?",
+              "headline": "यूक्रेन पर रूस के हमले की आशंका: यूरोप और युद्ध के बीच कितना फ़ासला है?"
+            },
+            "locators": {
+              "assetUri": "/hindi/international-60070472",
+              "cpsUrn": "urn:bbc:content:assetUri:/hindi/international-60070472"
+            },
+            "summary": "पश्चिमी देशों की प्रमुख चिंता यूक्रेन में किसी पारंपरिक युद्ध की संभावना की नहीं है. उन्हें फ़िक्र है कि रूस यूरोप को अस्थिर कर, सत्ता का संतुलन अपने पक्ष में करना चाह रहा है.",
+            "timestamp": 1642741982000,
+            "language": "hi",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "122925503",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/7758/production/_122925503_96909994-0f5f-4bb3-9121-c6d0659787a3.jpg",
+              "path": "/cpsprodpb/7758/production/_122925503_96909994-0f5f-4bb3-9121-c6d0659787a3.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "यूक्रेन का सैनिक",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:hindi/international-60070472",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}
