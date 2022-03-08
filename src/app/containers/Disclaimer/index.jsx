@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { bool } from 'prop-types';
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import InlineLink from '@bbc/psammead-inline-link';
 import { getSansLight } from '@bbc/psammead-styles/font-styles';
@@ -52,9 +53,12 @@ const DisclaimerComponent = ({ increasePaddingOnDesktop }) => {
         increasePaddingOnDesktop={increasePaddingOnDesktop}
       >
         {disclaimerBlock.map(element => {
-          return element?.link ? (
-            <InlineLink href={element.link.href} key={element.link.text}>
-              {element?.link?.text}
+          const isLink = pathOr(false, ['link'], element);
+          const linkText = pathOr('', ['link', 'text'], element);
+          const linkHref = pathOr('', ['link', 'href'], element);
+          return isLink ? (
+            <InlineLink href={linkHref} key={linkText}>
+              {linkText}
             </InlineLink>
           ) : (
             element?.text
