@@ -63,14 +63,17 @@ const DisclaimerComponent = ({ increasePaddingOnDesktop }) => {
       >
         <strong>
           {disclaimerBlock.map(element => {
-            return element?.link ? (
-              <InlineLink href={element.link.href} key={element.link.text}>
-                {element?.link?.text}
-              </InlineLink>
-            ) : (
-              element?.text
-            );
-          })}
+          const isLink = pathOr(false, ['link'], element);
+          const linkText = pathOr('', ['link', 'text'], element);
+          const linkHref = pathOr('', ['link', 'href'], element);
+          return isLink ? (
+            <InlineLink href={linkHref} key={linkText}>
+              {linkText}
+            </InlineLink>
+          ) : (
+            element?.text
+          );
+        })}
         </strong>
       </Inner>
     </GridItemLarge>
