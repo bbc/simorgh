@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { bool } from 'prop-types';
 import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import InlineLink from '@bbc/psammead-inline-link';
 import { getSansLight } from '@bbc/psammead-styles/font-styles';
@@ -39,9 +38,7 @@ const DisclaimerComponent = ({ increasePaddingOnDesktop }) => {
   const { service, script, disclaimer } = useContext(ServiceContext);
   const { enabled } = useToggle('disclaimer');
 
-  const disclaimerBlock = path(['block'], disclaimer);
-
-  const shouldShow = enabled && disclaimerBlock;
+  const shouldShow = enabled && disclaimer;
 
   if (!shouldShow) return null;
 
@@ -52,16 +49,15 @@ const DisclaimerComponent = ({ increasePaddingOnDesktop }) => {
         script={script}
         increasePaddingOnDesktop={increasePaddingOnDesktop}
       >
-        {disclaimerBlock.map(element => {
-          const isLink = pathOr(false, ['link'], element);
-          const linkText = pathOr('', ['link', 'text'], element);
-          const linkHref = pathOr('', ['link', 'href'], element);
-          return isLink ? (
-            <InlineLink href={linkHref} key={linkText}>
+        {Object.values(disclaimer).map(para => {
+          const linkText = path(['text'], para);
+          const linkUrl = path(['url'], para);
+          return linkUrl ? (
+            <InlineLink href={linkUrl} key={linkText}>
               {linkText}
             </InlineLink>
           ) : (
-            element?.text
+            para
           );
         })}
       </Inner>
