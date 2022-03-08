@@ -1,6 +1,13 @@
 import Url from 'url-parse';
 
-const allowList = ['www.bbc.com', 'www.bbc.co.uk', 'www.bbcrussian.com'];
+const allowList = [
+  'www.bbc.com',
+  'bbc.com',
+  'www.bbc.co.uk',
+  'bbc.co.uk',
+  'www.bbcrussian.com',
+  'bbcrussian.com',
+];
 
 const makeRelativeUrlPath = urlPath => {
   if (!urlPath) return null;
