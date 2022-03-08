@@ -1,12 +1,12 @@
-const allowList = ['bbc.com', 'bbc.co.uk', 'bbcrussian.com'];
+const allowList = ['www.bbc.com', 'www.bbc.co.uk', 'www.bbcrussian.com'];
 
 const makeRelativeUrlPath = urlPath => {
   if (!urlPath) return null;
 
-  const isBBCDomain = allowList.some(domain => urlPath.includes(domain));
+  const url = new URL(urlPath);
+  const isBBCDomain = allowList.some(domain => url.hostname === domain);
 
   if (isBBCDomain) {
-    const url = new URL(urlPath);
     return `${url.pathname}${url.search}${url.hash}`;
   }
 
