@@ -315,7 +315,7 @@ export const service = {
         { text: 'и ' },
         {
           link: {
-            text: 'Android ',
+            text: 'Android',
             href: 'https://play.google.com/store/apps/details?id=uk.co.bbc.russian',
           },
         },
