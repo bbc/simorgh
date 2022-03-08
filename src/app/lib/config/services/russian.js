@@ -220,6 +220,7 @@ export const mainTranslations = {
   },
   topStoriesTitle: 'Главное',
   featuresAnalysisTitle: 'Не пропустите',
+  disclaimerLabel: 'Уведомление',
 };
 
 export const service = {

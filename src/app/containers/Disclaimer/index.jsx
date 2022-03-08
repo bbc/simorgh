@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { bool } from 'prop-types';
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import InlineLink from '@bbc/psammead-inline-link';
 import { getSansLight } from '@bbc/psammead-styles/font-styles';
@@ -17,7 +18,7 @@ import { GridItemLarge } from '#app/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 
-const Inner = styled.div`
+const Inner = styled.section`
   ${({ script }) => script && getLongPrimer(script)}
   ${({ service }) => service && getSansLight(service)}
   background: #f6f6f6;
@@ -35,7 +36,8 @@ const Inner = styled.div`
 `;
 
 const DisclaimerComponent = ({ increasePaddingOnDesktop }) => {
-  const { service, script, disclaimer } = useContext(ServiceContext);
+  const { service, script, disclaimer, translations } =
+    useContext(ServiceContext);
   const { enabled } = useToggle('disclaimer');
 
   const disclaimerBlock = path(['block'], disclaimer);
@@ -44,22 +46,32 @@ const DisclaimerComponent = ({ increasePaddingOnDesktop }) => {
 
   if (!shouldShow) return null;
 
+  const disclaimerLabelTranslation = pathOr(
+    'Disclaimer',
+    ['disclaimerLabel'],
+    translations,
+  );
+
   return (
-    <GridItemLarge data-testid="disclaimer">
+    <GridItemLarge>
       <Inner
         service={service}
         script={script}
         increasePaddingOnDesktop={increasePaddingOnDesktop}
+        role="region"
+        aria-label={disclaimerLabelTranslation}
       >
-        {disclaimerBlock.map(element => {
-          return element?.link ? (
-            <InlineLink href={element.link.href} key={element.link.text}>
-              {element?.link?.text}
-            </InlineLink>
-          ) : (
-            element?.text
-          );
-        })}
+        <strong>
+          {disclaimerBlock.map(element => {
+            return element?.link ? (
+              <InlineLink href={element.link.href} key={element.link.text}>
+                {element?.link?.text}
+              </InlineLink>
+            ) : (
+              element?.text
+            );
+          })}
+        </strong>
       </Inner>
     </GridItemLarge>
   );
