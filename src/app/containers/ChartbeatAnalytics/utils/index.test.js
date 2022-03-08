@@ -106,8 +106,8 @@ describe('Chartbeat utilities', () => {
       },
       {
         pageType: TOPIC_PAGE,
-        expectedDefaultType: 'Topic',
-        expectedShortType: 'Topic',
+        expectedDefaultType: 'Topics',
+        expectedShortType: 'Topics',
       },
       {
         pageType: null,
@@ -232,7 +232,7 @@ describe('Chartbeat utilities', () => {
         service: 'mundo',
         pageType: TOPIC_PAGE,
         description: 'should return expected section for topic page',
-        expected: 'Mundo, Mundo - Topic',
+        expected: 'Mundo, Mundo - Topics',
       },
     ];
 
@@ -743,6 +743,73 @@ describe('Chartbeat utilities', () => {
       sections: 'Arabic, Arabic - Podcasts',
       title: 'Podcast Page Title',
       type: 'player-episode',
+      uid: 50924,
+      virtualReferrer: 'bbc.com/previous-path',
+      useCanonical: true,
+      path: '/',
+    };
+
+    expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+  });
+
+  it('should return correct canonical config for Topic pages on test', () => {
+    const fixtureData = {
+      isAmp: false,
+      platform: 'canonical',
+      pageType: TOPIC_PAGE,
+      data: {
+        title: 'Topic Page Title',
+        metadata: { type: 'Topic' },
+      },
+      brandName: 'BBC News Pidgin',
+      env: 'test',
+      service: 'pidgin',
+      origin: 'test.bbc.com',
+      previousPath: '/previous-path',
+    };
+
+    const expectedConfig = {
+      domain: 'test.bbc.co.uk',
+      idSync: {
+        bbc_hid: 'foobar',
+      },
+      path: '/',
+      sections: 'Pidgin, Pidgin - Topics',
+      type: 'Topics',
+      title: 'Topic Page Title - BBC News Pidgin',
+      uid: 50924,
+      useCanonical: true,
+      virtualReferrer: 'test.bbc.com/previous-path',
+    };
+
+    expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+  });
+
+  it('should return correct canonical config for Topic pages on live', () => {
+    const fixtureData = {
+      isAmp: false,
+      platform: 'canonical',
+      pageType: TOPIC_PAGE,
+      data: {
+        title: 'Topics Page Title',
+        metadata: { type: 'Topic' },
+      },
+      brandName: 'BBC News Pidgin',
+      chartbeatDomain: 'pidgin.bbc.co.uk',
+      env: 'live',
+      service: 'pidgin',
+      origin: 'bbc.com',
+      previousPath: '/previous-path',
+    };
+
+    const expectedConfig = {
+      domain: 'pidgin.bbc.co.uk',
+      idSync: {
+        bbc_hid: 'foobar',
+      },
+      sections: 'Pidgin, Pidgin - Topics',
+      title: 'Topics Page Title - BBC News Pidgin',
+      type: 'Topics',
       uid: 50924,
       virtualReferrer: 'bbc.com/previous-path',
       useCanonical: true,
