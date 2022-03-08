@@ -49,7 +49,7 @@ const CpsRelatedContent = ({
   );
 
   const translationPath = isInExperimentVariation
-    ? ['You may also be interested in', ['recommendationTitle']]
+    ? ['Recommended stories', ['recommendationTitle']]
     : ['Related Content', ['relatedContent']];
 
   const title = _title || pathOr(...translationPath, translations);
