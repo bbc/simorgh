@@ -77,4 +77,49 @@ describe('get initial data for topic', () => {
       agent,
     });
   });
+
+  it('should remove .amp from ID', async () => {
+    fetch.mockResponse(JSON.stringify(topicJSON));
+    const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
+    await getInitialData({
+      path: 'pidgin/topics/54321.amp',
+      getAgent,
+      service: 'pidgin',
+    });
+
+    expect(fetchDataSpy).toHaveBeenCalledWith({
+      path: 'https://mock-bff-path?id=54321&service=pidgin',
+      agent,
+    });
+  });
+
+  it('should remove query string from ID', async () => {
+    fetch.mockResponse(JSON.stringify(topicJSON));
+    const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
+    await getInitialData({
+      path: 'pidgin/topics/54321?foo=bar',
+      getAgent,
+      service: 'pidgin',
+    });
+
+    expect(fetchDataSpy).toHaveBeenCalledWith({
+      path: 'https://mock-bff-path?id=54321&service=pidgin',
+      agent,
+    });
+  });
+
+  it('should remove .amp and query string from ID', async () => {
+    fetch.mockResponse(JSON.stringify(topicJSON));
+    const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
+    await getInitialData({
+      path: 'pidgin/topics/54321.amp?foo=bar',
+      getAgent,
+      service: 'pidgin',
+    });
+
+    expect(fetchDataSpy).toHaveBeenCalledWith({
+      path: 'https://mock-bff-path?id=54321&service=pidgin',
+      agent,
+    });
+  });
 });
