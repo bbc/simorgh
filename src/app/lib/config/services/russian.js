@@ -316,7 +316,7 @@ export const service = {
       },
       para5: '. Вы можете также подписаться на наш канал в ',
       para6: {
-        text: ' Telegram',
+        text: 'Telegram',
         url: 'https://t.me/bbcrussian',
       },
       para7: '.',
