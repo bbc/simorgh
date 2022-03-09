@@ -61,9 +61,9 @@ const processOptimoBlocks = toggles => service =>
     addBylineBlock,
     addRecommendationsBlock,
     addMpuBlock,
+    applyBlockPositioning,
     // addExperimentPlaceholderBlocks(service),
     addIdsToBlocks,
-    applyBlockPositioning,
     cpsOnlyOnwardJourneys,
     addIndexToBlockGroups(isListWithLink, {
       blockGroupType: 'listWithLink',
