@@ -253,6 +253,7 @@ exports[`Media Player: Canonical Entry renders a landscape container with a plac
   width: 5rem;
   position: absolute;
   bottom: 0;
+  left: 0;
 }
 
 .emotion-9:hover,
@@ -460,6 +461,7 @@ exports[`Media Player: Canonical Entry renders a placeholder image with guidance
   width: 5rem;
   position: absolute;
   bottom: 0;
+  left: 0;
 }
 
 .emotion-11:hover,
@@ -647,6 +649,7 @@ exports[`Media Player: Canonical Entry renders a portrait container with a place
   width: 5rem;
   position: absolute;
   bottom: 0;
+  left: 0;
 }
 
 .emotion-9:hover,
@@ -943,6 +946,7 @@ exports[`Media Player: Canonical Entry renders with no-js styles when noJsClassN
   width: 5rem;
   position: absolute;
   bottom: 0;
+  left: 0;
 }
 
 .emotion-11:hover,
