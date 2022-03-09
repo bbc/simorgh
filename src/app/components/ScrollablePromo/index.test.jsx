@@ -248,19 +248,19 @@ describe('recommendationEOJ', () => {
     );
     expect(getAllByRole('listitem').length).toEqual(3);
     expect(queryByRole('region')).toBeInTheDocument();
-    expect(queryByText('Related stories')).toBeInTheDocument();
+    expect(queryByText('Recommended stories')).toBeInTheDocument();
   });
 
   it('should render translated title', () => {
-    const { queryByText } = render(
+    const { getByText } = render(
       <ScrollablePromoWithContext
         blocks={mundoRecommendationsData}
         isRecommendationType
         service="mundo"
-        translations={{ relatedContent: 'contenido relacionado' }}
+        translations={{ recommendationTitle: 'Quizás también te interese' }}
       />,
     );
-    expect(queryByText('contenido relacionado')).toBeInTheDocument();
+    expect(getByText('Quizás también te interese')).toBeInTheDocument();
   });
 
   it('should have a section with a "region" role (a11y)', () => {
