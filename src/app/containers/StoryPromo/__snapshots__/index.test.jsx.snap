@@ -3759,7 +3759,7 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
         <a
           aria-labelledby="promo-azeri-feature-1"
           class="emotion-14 emotion-15"
-          href="http://www.bbc.com/azeri"
+          href="/azeri"
         >
           <span
             id="promo-azeri-feature-1"
@@ -4076,7 +4076,7 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
         <a
           aria-labelledby="promo-azeri-feature-1"
           class="emotion-14 emotion-15"
-          href="http://www.bbc.com/azeri"
+          href="/azeri"
         >
           <span
             id="promo-azeri-feature-1"
@@ -4390,7 +4390,7 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
         <a
           aria-labelledby="promo-azeri-feature-1"
           class="emotion-6 emotion-7"
-          href="http://www.bbc.com/azeri"
+          href="/azeri"
         >
           <span
             id="promo-azeri-feature-1"
@@ -4758,7 +4758,7 @@ exports[`StoryPromo Container should render featureLink promoType top on amp 1`]
         <a
           aria-labelledby="promo-azeri-feature-1"
           class="emotion-14 emotion-15"
-          href="http://www.bbc.com/azeri"
+          href="/azeri"
         >
           <span
             id="promo-azeri-feature-1"
@@ -8761,7 +8761,7 @@ exports[`StoryPromo Container should render podcastLink correctly for amp 1`] = 
         <a
           aria-labelledby="promo-indonesiamedia45640737-podcast-1"
           class="emotion-14 emotion-15"
-          href="https://www.bbc.com/indonesia/media-45640737"
+          href="/indonesia/media-45640737"
         >
           <span
             id="promo-indonesiamedia45640737-podcast-1"
@@ -9040,7 +9040,7 @@ exports[`StoryPromo Container should render podcastLink correctly for canonical 
         <a
           aria-labelledby="promo-indonesiamedia45640737-podcast-1"
           class="emotion-14 emotion-15"
-          href="https://www.bbc.com/indonesia/media-45640737"
+          href="/indonesia/media-45640737"
         >
           <span
             id="promo-indonesiamedia45640737-podcast-1"
@@ -9324,7 +9324,7 @@ exports[`StoryPromo Container should render podcastLink promoType leading on amp
         <a
           aria-labelledby="promo-indonesiamedia45640737-podcast-1"
           class="emotion-6 emotion-7"
-          href="https://www.bbc.com/indonesia/media-45640737"
+          href="/indonesia/media-45640737"
         >
           <span
             id="promo-indonesiamedia45640737-podcast-1"
@@ -9620,7 +9620,7 @@ exports[`StoryPromo Container should render podcastLink promoType top on amp 1`]
         <a
           aria-labelledby="promo-indonesiamedia45640737-podcast-1"
           class="emotion-14 emotion-15"
-          href="https://www.bbc.com/indonesia/media-45640737"
+          href="/indonesia/media-45640737"
         >
           <span
             id="promo-indonesiamedia45640737-podcast-1"
@@ -11273,7 +11273,7 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
         <a
           aria-labelledby="promo-azeri-text-1"
           class="emotion-14 emotion-15"
-          href="http://www.bbc.com/azeri"
+          href="/azeri"
         >
           <span
             id="promo-azeri-text-1"
@@ -11590,7 +11590,7 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
         <a
           aria-labelledby="promo-azeri-text-1"
           class="emotion-14 emotion-15"
-          href="http://www.bbc.com/azeri"
+          href="/azeri"
         >
           <span
             id="promo-azeri-text-1"
@@ -11904,7 +11904,7 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
         <a
           aria-labelledby="promo-azeri-text-1"
           class="emotion-6 emotion-7"
-          href="http://www.bbc.com/azeri"
+          href="/azeri"
         >
           <span
             id="promo-azeri-text-1"
@@ -12272,7 +12272,7 @@ exports[`StoryPromo Container should render standardLink promoType top on amp 1`
         <a
           aria-labelledby="promo-azeri-text-1"
           class="emotion-14 emotion-15"
-          href="http://www.bbc.com/azeri"
+          href="/azeri"
         >
           <span
             id="promo-azeri-text-1"

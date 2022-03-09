@@ -82,7 +82,7 @@ exports[`InlineLinkContainer internal link not matching SPA route should render 
 <div>
   <a
     class="emotion-0 emotion-1"
-    href="https://www.bbc.com/news"
+    href="/news"
   >
     <b>
       This is bold text for a link
