@@ -9,6 +9,7 @@ import Guidance from '../Guidance';
 const StyledPlayButton = styled(PlayButton)`
   position: absolute;
   bottom: 0;
+  left: 0;
   ${({ noJsClassName }) =>
     noJsClassName &&
     `.${noJsClassName} & {
