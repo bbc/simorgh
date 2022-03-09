@@ -1,0 +1,1004 @@
+{
+    "metadata": {
+      "id": "urn:bbc:ares::asset:russian/news-60643006",
+      "locators": {
+        "assetUri": "/russian/news-60643006",
+        "cpsUrn": "urn:bbc:content:assetUri:russian/news-60643006",
+        "curie": "http://www.bbc.co.uk/asset/a49114f3-3b03-43df-b00f-d23c03c9e20f",
+        "assetId": "60643006"
+      },
+      "type": "STY",
+      "createdBy": "russian-v6",
+      "language": "ru",
+      "lastUpdated": 1646629981855,
+      "firstPublished": 1646629934000,
+      "lastPublished": 1646629934000,
+      "timestamp": 1646629934000,
+      "options": {
+        "isIgorSeoTagsEnabled": false,
+        "includeComments": false,
+        "allowRightHandSide": true,
+        "isFactCheck": false,
+        "allowDateStamp": true,
+        "suitableForSyndication": true,
+        "hasNewsTracker": false,
+        "allowRelatedStoriesBox": true,
+        "isKeyContent": false,
+        "allowHeadline": true,
+        "allowAdvertising": true,
+        "hasContentWarning": false,
+        "isBreakingNews": false,
+        "allowPrintingSharingLinks": true
+      },
+      "analyticsLabels": {
+        "ldp_tags": "Russia-Ukraine+war~Russia~International+Criminal+Court~Ukraine",
+        "cps_asset_id": "60643006",
+        "ldp_ids": "23d96e97-b777-413a-a8c5-85a2eda98613~39267b85-1784-4f4b-80ed-f8cb4a35f337~42a30948-3985-4ec1-acea-76334a53b054~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+        "contentId": "urn:bbc:cps:curie:asset:a49114f3-3b03-43df-b00f-d23c03c9e20f",
+        "counterName": "russian.news.story.60643006.page",
+        "cps_asset_type": "sty"
+      },
+      "passport": {
+        "category": {
+          "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+          "categoryName": "News"
+        },
+        "campaigns": [
+          {
+            "campaignId": "5a988e4739461b000e9dabfc",
+            "campaignName": "WS - Update me"
+          }
+        ],
+        "language": "ru",
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
+        "locator": "urn:bbc:cps:curie:asset:a49114f3-3b03-43df-b00f-d23c03c9e20f",
+        "availability": "AVAILABLE",
+        "taggings": [
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+            "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+            "value": "http://www.bbc.co.uk/things/0143a201-5690-4cb1-95a8-03ab60e66bfd#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+            "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+            "value": "http://www.bbc.co.uk/things/42a30948-3985-4ec1-acea-76334a53b054#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+            "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+            "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+            "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+            "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+          }
+        ],
+        "schemaVersion": "1.4.0",
+        "publishedState": "PUBLISHED",
+        "predicates": {
+          "about": [
+            {
+              "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+              "thingLabel": "Война России с Украиной",
+              "thingUri": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+              "thingId": "23d96e97-b777-413a-a8c5-85a2eda98613",
+              "thingType": [
+                "tagging:TagConcept",
+                "core:Event",
+                "core:Thing"
+              ],
+              "thingSameAs": [
+                "http://www.wikidata.org/entity/Q110254389"
+              ],
+              "thingEnglishLabel": "Russia-Ukraine war",
+              "type": "about"
+            },
+            {
+              "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+              "thingLabel": "Россия",
+              "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+              "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+              "thingType": [
+                "core:Place",
+                "tagging:TagConcept",
+                "core:Thing"
+              ],
+              "thingSameAs": [
+                "http://sws.geonames.org/2017370/"
+              ],
+              "thingEnglishLabel": "Russia",
+              "type": "about"
+            },
+            {
+              "value": "http://www.bbc.co.uk/things/42a30948-3985-4ec1-acea-76334a53b054#id",
+              "thingLabel": "Международный уголовный суд",
+              "thingUri": "http://www.bbc.co.uk/things/42a30948-3985-4ec1-acea-76334a53b054#id",
+              "thingId": "42a30948-3985-4ec1-acea-76334a53b054",
+              "thingType": [
+                "tagging:Agent",
+                "core:Thing",
+                "tagging:TagConcept",
+                "core:Organisation",
+                "tagging:AmbiguousTerm"
+              ],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/International_Criminal_Court"
+              ],
+              "thingEnglishLabel": "International Criminal Court",
+              "type": "about"
+            },
+            {
+              "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+              "thingLabel": "Украина",
+              "thingUri": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+              "thingId": "ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+              "thingType": [
+                "tagging:TagConcept",
+                "core:Thing",
+                "core:Place"
+              ],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Ukraine",
+                "http://www.wikidata.org/entity/Q212",
+                "http://sws.geonames.org/690791/"
+              ],
+              "thingEnglishLabel": "Ukraine",
+              "type": "about"
+            }
+          ],
+          "formats": [
+            {
+              "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+              "thingLabel": "News report",
+              "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+              "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+              "thingType": [
+                "tagging:TagConcept",
+                "tagging:Format"
+              ],
+              "thingSameAs": [],
+              "thingEnglishLabel": "Report",
+              "thingPreferredLabel": "Report",
+              "thingLabelLanguage": "ru",
+              "type": "formats"
+            }
+          ]
+        }
+      },
+      "tags": {
+        "about": [
+          {
+            "thingLabel": "Война России с Украиной",
+            "thingUri": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+            "thingId": "23d96e97-b777-413a-a8c5-85a2eda98613",
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Event",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q110254389"
+            ],
+            "topicName": "Война России с Украиной",
+            "topicId": "cez0n29ggrdt",
+            "curationList": [
+              {
+                "curationId": "d7407b1e-9bca-4aad-ba81-bc80d391c171",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingEnglishLabel": "Russia-Ukraine war",
+            "thingLabelLanguage": "ru",
+            "thingPreferredLabel": "Russia-Ukraine war"
+          },
+          {
+            "thingLabel": "Россия",
+            "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+            "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+            "thingType": [
+              "core:Place",
+              "tagging:TagConcept",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://sws.geonames.org/2017370/"
+            ],
+            "topicName": "Россия",
+            "topicId": "c50nzm2dllnt",
+            "curationList": [
+              {
+                "curationId": "39f531ff-d856-42c5-9e6f-1eb72b6fe649",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingEnglishLabel": "Russia",
+            "thingLabelLanguage": "ru",
+            "thingPreferredLabel": "Russia"
+          },
+          {
+            "thingLabel": "Международный уголовный суд",
+            "thingUri": "http://www.bbc.co.uk/things/42a30948-3985-4ec1-acea-76334a53b054#id",
+            "thingId": "42a30948-3985-4ec1-acea-76334a53b054",
+            "thingType": [
+              "tagging:Agent",
+              "core:Thing",
+              "tagging:TagConcept",
+              "core:Organisation",
+              "tagging:AmbiguousTerm"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/International_Criminal_Court"
+            ],
+            "topicName": "Международный уголовный суд",
+            "topicId": "cezyej518xrt",
+            "curationList": [
+              {
+                "curationId": "7d458007-4761-4f43-a6c0-9a713a3282ef",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingEnglishLabel": "International Criminal Court",
+            "thingLabelLanguage": "ru",
+            "thingPreferredLabel": "International Criminal Court"
+          },
+          {
+            "thingLabel": "Украина",
+            "thingUri": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+            "thingId": "ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Thing",
+              "core:Place"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Ukraine",
+              "http://www.wikidata.org/entity/Q212",
+              "http://sws.geonames.org/690791/"
+            ],
+            "topicName": "Украина",
+            "topicId": "ckedrpnjpqdt",
+            "curationList": [
+              {
+                "curationId": "e82770a5-8bba-4e65-95e9-8fb4ecea99a3",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingEnglishLabel": "Ukraine",
+            "thingLabelLanguage": "ru",
+            "thingPreferredLabel": "Ukraine"
+          }
+        ]
+      },
+      "version": "v1.3.17",
+      "blockTypes": [
+        "image",
+        "paragraph",
+        "crosshead",
+        "list"
+      ],
+      "includeComments": false,
+      "atiAnalytics": {
+        "producerName": "RUSSIAN",
+        "producerId": "75"
+      },
+      "readTime": 5,
+      "siteUri": "/russian",
+      "topics": [
+        {
+          "topicName": "Россия",
+          "topicId": "c50nzm2dllnt",
+          "subjectList": [
+            {
+              "subjectId": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+              "subjectType": "tag"
+            }
+          ],
+          "curationList": [
+            {
+              "curationId": "39f531ff-d856-42c5-9e6f-1eb72b6fe649",
+              "curationType": "vivo-stream",
+              "position": 0,
+              "visualProminence": "NORMAL"
+            }
+          ],
+          "types": [
+            "core:Place",
+            "tagging:TagConcept",
+            "core:Thing"
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian"
+        },
+        {
+          "topicName": "Война России с Украиной",
+          "topicId": "cez0n29ggrdt",
+          "subjectList": [
+            {
+              "subjectId": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+              "subjectType": "tag"
+            }
+          ],
+          "curationList": [
+            {
+              "curationId": "d7407b1e-9bca-4aad-ba81-bc80d391c171",
+              "curationType": "vivo-stream",
+              "position": 0,
+              "visualProminence": "NORMAL"
+            }
+          ],
+          "types": [
+            "tagging:TagConcept",
+            "core:Event",
+            "core:Thing"
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian"
+        },
+        {
+          "topicName": "Международный уголовный суд",
+          "topicId": "cezyej518xrt",
+          "subjectList": [
+            {
+              "subjectId": "http://www.bbc.co.uk/things/42a30948-3985-4ec1-acea-76334a53b054#id",
+              "subjectType": "tag"
+            }
+          ],
+          "curationList": [
+            {
+              "curationId": "7d458007-4761-4f43-a6c0-9a713a3282ef",
+              "curationType": "vivo-stream",
+              "position": 0,
+              "visualProminence": "NORMAL"
+            }
+          ],
+          "types": [
+            "tagging:Agent",
+            "core:Thing",
+            "tagging:TagConcept",
+            "core:Organisation",
+            "tagging:AmbiguousTerm"
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian"
+        },
+        {
+          "topicName": "Украина",
+          "topicId": "ckedrpnjpqdt",
+          "subjectList": [
+            {
+              "subjectId": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+              "subjectType": "tag"
+            }
+          ],
+          "curationList": [
+            {
+              "curationId": "e82770a5-8bba-4e65-95e9-8fb4ecea99a3",
+              "curationType": "vivo-stream",
+              "position": 0,
+              "visualProminence": "NORMAL"
+            }
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian"
+        }
+      ]
+    },
+    "content": {
+      "blocks": [
+        {
+          "id": "123574755",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/D9C3/production/_123574755_hi074385948.jpg",
+          "path": "/cpsprodpb/D9C3/production/_123574755_hi074385948.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Митинг в поддержку Украины в Вашингтоне",
+          "copyrightHolder": "EPA",
+          "positionHint": "full-width",
+          "originCode": "cpsprodpb",
+          "type": "image"
+        },
+        {
+          "text": " 7 и 8 марта Международный суд ООН в Гааге проведет слушания по иску Украины в отношении России. Украинские власти обратились в суд 27 февраля, через три дня после вторжения России. Киев считает, что Россия искажает понятие &quot;геноцид&quot; для оправдания агрессии, и настаивает на принятии обеспечительных мер в отношении России. ",
+          "role": "introduction",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Что это означает? Би-би-си поговорила с экспертом по международному праву, который попросил об анонимности. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Что это за спор",
+          "markupType": "plain_text",
+          "type": "crosshead"
+        },
+        {
+          "text": "Международный суд в Гааге рассматривает либо любой спор между теми государствами, которые признают его юрисдикцию суда по любым спорам, либо споры по конкретному договору, участниками которого являются спорящие стороны.  Россия признает только споры по конкретным договорам. В соответствии с конвенцией о предупреждении преступления геноцида и наказании за него, Россия признает юрисдикцию международного суда в Гааге по спорам о применении и толковании этой конвенции. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "В данном деле Украина жалуется на толкование Россией конвенции о геноциде - в качестве основания для ее действий на Украине. Одна из особенностей этой конвенции - очень узкое и строгое определение геноцида, говорит эксперт. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Вопрос, по его словам, поставлен о том, насколько толкование, которое использует Россия, соответствует целям конвенции. Жалобу Украины он называет необычной, новаторской и креативной. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Украина жалуется на то, что Россия использует очевидно неверное толкование конвенции, и фактически злоупотребляет конвенцией о геноциде в качестве предлога для проведения военной операции. Тем самым подрывая задачу конвенции. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Россия считает, что цель Украины - уничтожение русскоязычного населения, что ничем не подтверждается.  Безусловно, все стороны конфликта совершали там преступления, это не вызывает сомнений, продолжает эксперт. Судебных дел в Украине по этому поводу немного, но, например, в Австрии недавно был осужден за убийство гражданского лица украинец, который был в добровольческом батальоне в период активных боевых действий. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Но это все военные преступления, а не геноцид, убежден эксперт по международному праву. Геноцид юридически - действия с умыслом уничтожения или условий, рассчитанных на уничтожение (причинение вреда здоровью, передача детей из одной группы в другую) четко определенной конвенцией группы. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "В Донбассе нет никакой национальной, религиозной, расовой или этнической группы - &quot;народа Донбасса&quot; не существует. Не было и указанных в конвенции действий со стороны Украины. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Какие временные меры могут быть приняты ",
+          "markupType": "plain_text",
+          "type": "crosshead"
+        },
+        {
+          "text": "Вместе с основным заявлением, рассмотрение которого еще не началось, Украина попросила принять временные ограничительные меры. Как и 39-е правило регламента ЕСПЧ, они должны обеспечить рассмотрение спора по существу.  ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Украина просит суд направить России приказ о следующих мерах: ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "numbered": false,
+          "items": [
+            {
+              "text": "Немедленно прекратить военную операцию, которая, по утверждению России, ведется с целью &quot;предупреждения и наказания предполагаемого геноцида в Луганской и Донецкой областях Украины&quot;. ",
+              "markupType": "plain_text",
+              "type": "listItem"
+            },
+            {
+              "text": "Обеспечить прекращение направленных на проведение такой операции действий всех воинских формирований, которые она направляет или поддерживает, а также всех организаций и лиц, которые находятся под ее контролем, действуют по ее указанию или под ее влиянием.",
+              "markupType": "plain_text",
+              "type": "listItem"
+            },
+            {
+              "text": "Воздержаться от любых действий и гарантировать, что она не будет предпринимать никакие действия, которые могут осложнять или предупреждать разрешение спора по предмету основного заявления. ",
+              "markupType": "plain_text",
+              "type": "listItem"
+            },
+            {
+              "text": "Предоставить отчет в суд об исполнении тех мер, которые укажет суд, через неделю после их принятия. ",
+              "markupType": "plain_text",
+              "type": "listItem"
+            }
+          ],
+          "type": "list"
+        },
+        {
+          "text": "Какими могут быть последствия решения суда ",
+          "markupType": "plain_text",
+          "type": "crosshead"
+        },
+        {
+          "text": "Безусловно, это очень важный правовой вопрос. Такая манипуляция геноцидом оскорбительна для настоящих жертв геноцида, говорит эксперт. Она подрывает задачи конвенции о геноциде, принятой в 1948 году в ходе Нюрнбергского трибунала. Решение суда о временных мерах станет авторитетной юридической дискредитацией всех аргументов России. Смысл будет заключаться в судебной фиксации определенной ситуации и фактов для привлечения государства к международной ответственности. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Международная правовая ответственность может быть политической (принесение извинений, восстановление ситуации до той, какой она была) и материальной - сейчас, например, Уганда должна заплатить Конго <link><caption>деньги по решению суда</caption><url href=\"https://www.icj-cij.org/public/files/case-related/116/116-20220209-SUM-01-00-EN.pdf\" platform=\"highweb\"/></link>, и, скорее всего, заплатит, объясняет эксперт. Санкции - это тоже форма международной ответственности. ",
+          "markupType": "candy_xml",
+          "type": "paragraph"
+        },
+        {
+          "text": "Каковы шансы на исполнение Россией решения суда",
+          "markupType": "plain_text",
+          "type": "crosshead"
+        },
+        {
+          "text": "В Международном суде уже давно тянется другой спор Украины с Россией - <link><caption>он находится на стадии рассмотрения по существу</caption><url href=\"https://www.bbc.com/russian/news-39645293\" platform=\"highweb\"/></link>.  Там тоже были приняты временные ограничительные меры, но Россия их сейчас нарушила.  ",
+          "markupType": "candy_xml",
+          "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/russian/front_page-39645293",
+          "type": "paragraph"
+        },
+        {
+          "id": "123574478",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/15597/production/_123574478_hi074244191.jpg",
+          "path": "/cpsprodpb/15597/production/_123574478_hi074244191.jpg",
+          "height": 1333,
+          "width": 2000,
+          "altText": "Митинг в поддержку Украины в Вашингтоне",
+          "caption": "Митинг в поддержку Украины в Вашингтоне",
+          "copyrightHolder": "Reuters",
+          "positionHint": "full-width",
+          "originCode": "cpsprodpb",
+          "type": "image"
+        },
+        {
+          "text": "Украина жалуется на нарушение Россией конвенции о ликвидации всех форм расовой дискриминации на территории Крыма и нарушение конвенции против финансирования терроризма на территории Донбасса. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Но эти конвенции не являются центральными в противостоянии России и Украины, отмечает эксперт. А спор об аннексии Крыма международный суд в Гааге рассмотреть не может, для этого требуется согласие обеих сторон. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Кто представляет стороны в международном суде ООН",
+          "markupType": "plain_text",
+          "type": "crosshead"
+        },
+        {
+          "text": "В составе международного суда в Гааге есть российский судья - Кирилл Геворгян (муж актрисы Марины Нееловой), он до 2024 года занимает пост вице-председателя суда. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Постоянного члена суда от Украины в действующем составе судей нет, в таких случаях государство-участника представляет судья ad hoc (судья в конкретном деле). В споре с Россией о конвенции о геноциде украинским судьей <link><caption>избран</caption><url href=\"https://www.icj-cij.org/en/current-judges-ad-hoc\" platform=\"highweb\"/></link> президент Гаагской академии международного права, почетный профессор Сорбонны Ив Доде. ",
+          "markupType": "candy_xml",
+          "type": "paragraph"
+        },
+        {
+          "text": "Представляют Россию в этом суде не генпрокуратура как в ЕСПЧ, а МИД. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Как прогнозирует эксперт по международному праву, попросивший об анонимности, российская делегация или не явится на заседание и трансляция будет демонстрировать пустую скамью, либо представитель России будет выступать с пропагандистскими заявлениями.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Российскую делегацию в Международном суде, по сведениям источника Би-би-си, уже покидают зарубежные и российские советники. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Несколько дней назад делегацию покинул, <link><caption>написав открытое письмо</caption><url href=\"https://www.ejiltalk.org/open-letter-to-my-russian-friends-ukraine-is-not-crimea/\" platform=\"highweb\"/></link>, и французский адвокат Ален Пелле, который до 23 февраля занимал пост представителя России в Международном суде и других международных трибуналах ООН. Он, в частности, представлял Россию в деле об обвинениях Грузии в нарушении Россией международной Конвенции о ликвидации всех форм расовой дискриминации. (Международный суд дело рассматривать не стал). ",
+          "markupType": "candy_xml",
+          "type": "paragraph"
+        },
+        {
+          "text": "&quot;Адвокаты могут защищать более или менее сомнительные дела. Но представлять на форумах, посвященных применению закона, страну, которая так цинично его презирает, стало невозможно&quot;, - написал Пелле в открытом письме. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "id": "123574480",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/20FF/production/_123574480_hi021346831.jpg",
+          "path": "/cpsprodpb/20FF/production/_123574480_hi021346831.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Протестующие в марте 2014 года в Киеве",
+          "caption": "Протестующие в марте 2014 года в Киеве",
+          "copyrightHolder": "Reuters",
+          "positionHint": "full-width",
+          "originCode": "cpsprodpb",
+          "type": "image"
+        },
+        {
+          "text": "Адвокат объясняет, что согласился представлять Россию в предыдущих спорах по жалобам Украины, поскольку был убежден, что подавляющее большинство населения Крыма выступает за воссоединение с Россией, и не верил утверждениям Украины о расовой дискриминации в Крыму. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Теперь же Пелле &quot;не видит оправдания использованию войны для навязывания смены политического режима в Киеве или территориального расчленения Украины - возможно, и того, и другого&quot;. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Международное право признает законность применения вооруженной силы только в целях самообороны или на основании резолюции Совета Безопасности ООН, напомнил он. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Кроме того, юрист считает, что даже если Украина нарушила &quot;Минские соглашения&quot;, то и &quot;Россия едва ли выполнила свои обязательства&quot;. В любом случае контрмеры в отношении таких нарушений не могут противоречить обязательствам, вытекающим из тех же правил, считает адвокат. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Россия, по словам адвоката, попирает те принципы международного права, в создании которых сама сыграла важную роль в ХХ столетии. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Представлять Украину в Международном суде будет юрист-международник Антон Кореневич, представитель президента Владимира Зеленского в Крыму в изгнании. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Еще один суд и еще одно расследование",
+          "markupType": "plain_text",
+          "type": "crosshead"
+        },
+        {
+          "id": "123574482",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/6F1F/production/_123574482_hi074382510.jpg",
+          "path": "/cpsprodpb/6F1F/production/_123574482_hi074382510.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "В Международном уголовном суде (также находящемся в Гааге) на рассмотрении еще один иск против России",
+          "caption": "В Международном уголовном суде (также находящемся в Гааге) на рассмотрении еще один иск против России",
+          "copyrightHolder": "Reuters",
+          "positionHint": "full-width",
+          "originCode": "cpsprodpb",
+          "type": "image"
+        },
+        {
+          "text": "Международный военный суд (МУС), который также находится в Гааге, но не является структурой ООН, <link><caption>уже начал расследование возможных военных преступлений</caption><url href=\"https://www.bbc.com/russian/news-60598274\" platform=\"highweb\"/></link>, совершенных Россией на Украине за последние годы.",
+          "markupType": "candy_xml",
+          "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/russian/front_page-60598274",
+          "type": "paragraph"
+        },
+        {
+          "text": "Суд в Гааге рассмотрит нынешние и прошлые обвинения в военных преступлениях, преступлениях против человечности и в геноциде. Будут рассмотрены действия с 2013 года, до российской аннексии Крыма. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Россия подписала Женевскую конвенцию, в которой, согласно международному праву, дано определение военным преступлениям. Однако в 2016 году страна вышла из состава Международного уголовного суда - после того, как аннексия Крыма была признана оккупацией.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "id": "123520395",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/E7A6/production/_123520395_russian_invasion_down-2x-nc.png",
+          "path": "/cpsprodpb/E7A6/production/_123520395_russian_invasion_down-2x-nc.png",
+          "height": 4,
+          "width": 1280,
+          "altText": "линейка",
+          "copyrightHolder": "BBC",
+          "positionHint": "full-width",
+          "originCode": "cpsprodpb",
+          "type": "image"
+        },
+        {
+          "text": "Чтобы вы могли продолжать получать новости Би-би-си - подпишитесь на наши каналы:",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "numbered": false,
+          "items": [
+            {
+              "text": "<link><caption>Telegram </caption><url href=\"https://t.me/bbcrussian\" platform=\"highweb\"/></link>",
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<link><caption>Instagram</caption><url href=\"https://www.instagram.com/bbcrussian/\" platform=\"highweb\"/></link>",
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<link><caption>Facebook</caption><url href=\"https://www.facebook.com/bbcnewsrussian\" platform=\"highweb\"/></link>",
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<link><caption>Twitter</caption><url href=\"https://twitter.com/bbcrussian\" platform=\"highweb\"/></link>",
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<link><caption>VK</caption><url href=\"https://vk.com/bbc\" platform=\"highweb\"/></link>",
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<link><caption>OK</caption><url href=\"https://ok.ru/bbcrussian\" platform=\"highweb\"/></link>",
+              "markupType": "candy_xml",
+              "type": "listItem"
+            }
+          ],
+          "type": "list"
+        },
+        {
+          "text": "Загрузите наше приложение:",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "numbered": false,
+          "items": [
+            {
+              "text": "<link><caption>iOS</caption><url href=\"https://apps.apple.com/us/app/%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8-%D0%B1%D0%B8-%D0%B1%D0%B8-%D1%81%D0%B8/id504278066\" platform=\"highweb\"/></link>",
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<link><caption>Android</caption><url href=\"https://play.google.com/store/apps/details?id=uk.co.bbc.russian\" platform=\"highweb\"/></link>",
+              "markupType": "candy_xml",
+              "type": "listItem"
+            }
+          ],
+          "type": "list"
+        }
+      ]
+    },
+    "promo": {
+      "headlines": {
+        "shortHeadline": "Киев считает, что Россия искажает понятие \"геноцид\". В Гааге заслушают аргументы сторон",
+        "headline": "Киев считает, что Россия искажает понятие \"геноцид\". В Гааге заслушают аргументы сторон"
+      },
+      "locators": {
+        "assetUri": "/russian/news-60643006",
+        "cpsUrn": "urn:bbc:content:assetUri:russian/news-60643006",
+        "curie": "http://www.bbc.co.uk/asset/a49114f3-3b03-43df-b00f-d23c03c9e20f",
+        "assetId": "60643006"
+      },
+      "summary": "Международный суд ООН в Гааге 7 и 8 марта проведет слушания по иску Украины против России. Иск был подан украинской стороной 27 февраля. В нем Киев просит привлечь Россию к ответственности, в частности, за искажение понятия \"геноцид\" для оправдания агрессии против Украины.",
+      "timestamp": 1646629934000,
+      "language": "ru",
+      "passport": {
+        "category": {
+          "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+          "categoryName": "News"
+        },
+        "campaigns": [
+          {
+            "campaignId": "5a988e4739461b000e9dabfc",
+            "campaignName": "WS - Update me"
+          }
+        ],
+        "language": "ru",
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
+        "locator": "urn:bbc:cps:curie:asset:a49114f3-3b03-43df-b00f-d23c03c9e20f",
+        "availability": "AVAILABLE",
+        "taggings": [
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+            "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+            "value": "http://www.bbc.co.uk/things/0143a201-5690-4cb1-95a8-03ab60e66bfd#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+            "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+            "value": "http://www.bbc.co.uk/things/42a30948-3985-4ec1-acea-76334a53b054#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+            "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+            "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+            "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+            "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+          }
+        ],
+        "schemaVersion": "1.4.0",
+        "publishedState": "PUBLISHED",
+        "predicates": {
+          "about": [
+            {
+              "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+              "thingLabel": "Война России с Украиной",
+              "thingUri": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+              "thingId": "23d96e97-b777-413a-a8c5-85a2eda98613",
+              "thingType": [
+                "tagging:TagConcept",
+                "core:Event",
+                "core:Thing"
+              ],
+              "thingSameAs": [
+                "http://www.wikidata.org/entity/Q110254389"
+              ],
+              "thingEnglishLabel": "Russia-Ukraine war",
+              "type": "about"
+            },
+            {
+              "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+              "thingLabel": "Россия",
+              "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+              "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+              "thingType": [
+                "core:Place",
+                "tagging:TagConcept",
+                "core:Thing"
+              ],
+              "thingSameAs": [
+                "http://sws.geonames.org/2017370/"
+              ],
+              "thingEnglishLabel": "Russia",
+              "type": "about"
+            },
+            {
+              "value": "http://www.bbc.co.uk/things/42a30948-3985-4ec1-acea-76334a53b054#id",
+              "thingLabel": "Международный уголовный суд",
+              "thingUri": "http://www.bbc.co.uk/things/42a30948-3985-4ec1-acea-76334a53b054#id",
+              "thingId": "42a30948-3985-4ec1-acea-76334a53b054",
+              "thingType": [
+                "tagging:Agent",
+                "core:Thing",
+                "tagging:TagConcept",
+                "core:Organisation",
+                "tagging:AmbiguousTerm"
+              ],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/International_Criminal_Court"
+              ],
+              "thingEnglishLabel": "International Criminal Court",
+              "type": "about"
+            },
+            {
+              "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+              "thingLabel": "Украина",
+              "thingUri": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+              "thingId": "ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+              "thingType": [
+                "tagging:TagConcept",
+                "core:Thing",
+                "core:Place"
+              ],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Ukraine",
+                "http://www.wikidata.org/entity/Q212",
+                "http://sws.geonames.org/690791/"
+              ],
+              "thingEnglishLabel": "Ukraine",
+              "type": "about"
+            }
+          ],
+          "formats": [
+            {
+              "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+              "thingLabel": "News report",
+              "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+              "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+              "thingType": [
+                "tagging:TagConcept",
+                "tagging:Format"
+              ],
+              "thingSameAs": [],
+              "thingEnglishLabel": "Report",
+              "thingPreferredLabel": "Report",
+              "thingLabelLanguage": "ru",
+              "type": "formats"
+            }
+          ]
+        }
+      },
+      "indexImage": {
+        "id": "123574755",
+        "subType": "index",
+        "href": "http://c.files.bbci.co.uk/D9C3/production/_123574755_hi074385948.jpg",
+        "path": "/cpsprodpb/D9C3/production/_123574755_hi074385948.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Митинг в поддержку Украины в Вашингтоне",
+        "copyrightHolder": "EPA",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      "id": "urn:bbc:ares::asset:russian/news-60643006",
+      "type": "cps"
+    },
+    "relatedContent": {
+      "section": {
+        "subType": "index",
+        "name": "Новости",
+        "uri": "/russian/news",
+        "urlIdentifier": "/russian/news",
+        "type": "simple"
+      },
+      "site": {
+        "subType": "site",
+        "name": "Новости на русском языке",
+        "uri": "/russian",
+        "urlIdentifier": "/russian",
+        "type": "simple"
+      },
+      "groups": [
+        {
+          "type": "see-alsos",
+          "promos": [
+            {
+              "headlines": {
+                "shortHeadline": "Российские войска вошли в Херсон, в Мариуполе тяжелое положение",
+                "headline": "Российские войска вошли в Херсон, в Мариуполе тяжелое положение"
+              },
+              "locators": {
+                "assetUri": "/russian/news-60597507",
+                "cpsUrn": "urn:bbc:content:assetUri:/russian/news-60597507"
+              },
+              "summary": "Черноморский портовый город Херсон - первый крупный город, взятый под свой контроль российскими войсками с начала вторжения на Украину. Мариуполь \"близок к гуманитарной катастрофе\", заявил Би-би-си заместитель мэра города Сергей Орлов.",
+              "timestamp": 1646270625000,
+              "language": "ru",
+              "cpsType": "STY",
+              "indexImage": {
+                "id": "123489817",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/118DA/production/_123489817_074288190.jpg",
+                "path": "/cpsprodpb/118DA/production/_123489817_074288190.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Российские танки и военные",
+                "copyrightHolder": "Reuters",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:russian/news-60597507",
+              "type": "cps"
+            },
+            {
+              "headlines": {
+                "shortHeadline": "Российское вторжение в Украину: ООН сообщает о 1,5 млн беженцев, Зеленский призывает россиян не молчать",
+                "headline": "Российское вторжение в Украину: ООН сообщает о 1,5 млн беженцев, Зеленский призывает россиян не молчать"
+              },
+              "locators": {
+                "assetUri": "/russian/live/news-60570934",
+                "cpsUrn": "urn:bbc:content:assetUri:/russian/live/news-60570934"
+              },
+              "summary": "На территории Украины продолжаются боевые действия между российской армией и украинскими войсками. Мы ведем онлайн-трансляцию.",
+              "timestamp": 1646135745000,
+              "language": "ru",
+              "cpsType": "LIV",
+              "indexImage": {
+                "id": "123574475",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/E067/production/_123574475_hi074355649.jpg",
+                "path": "/cpsprodpb/E067/production/_123574475_hi074355649.jpg",
+                "height": 1152,
+                "width": 2048,
+                "altText": "граница украины и словакии",
+                "copyrightHolder": "Reuters",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:russian/live/news-60570934",
+              "type": "cps"
+            }
+          ]
+        }
+      ]
+    }
+  }
