@@ -715,7 +715,8 @@ describe('Story Page', () => {
     );
   });
 
-  describe('optimizelyExperiment', () => {
+  // Need to enable when experiment blocks has been added.
+  describe.skip('optimizelyExperiment', () => {
     describe('003_hindi_experiment_feature', () => {
       describe('variation_1', () => {
         beforeEach(() => {
