@@ -143,7 +143,7 @@ describe('CpsRelatedContent', () => {
     expect(queryByText('ये भी पढ़ें')).toBeInTheDocument();
   });
 
-  it('should render a timestamp for normal  Content', async () => {
+  it('should render a timestamp for Related Content', async () => {
     useOptimizelyVariation.mockReturnValue(null);
     const { container } = renderRelatedContent({
       pageType: STORY_PAGE,
