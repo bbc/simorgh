@@ -1,3 +1,4 @@
+import assocPath from 'ramda/src/assocPath';
 import * as fetchPageData from '#app/routes/utils/fetchPageData';
 import getInitialData from '.';
 
@@ -6,6 +7,7 @@ process.env.BFF_PATH = 'https://mock-bff-path';
 const topicJSON = {
   data: {
     title: 'Donald Trump',
+    description: 'Donald Trump articles',
     summaries: [
       {
         title: 'Wetin happun for January 6 one year ago?',
@@ -34,6 +36,7 @@ describe('get initial data for topic', () => {
       service: 'pidgin',
     });
     expect(pageData.title).toEqual('Donald Trump');
+    expect(pageData.description).toEqual('Donald Trump articles');
     expect(pageData.promos[0].title).toEqual(
       'Wetin happun for January 6 one year ago?',
     );
@@ -45,6 +48,22 @@ describe('get initial data for topic', () => {
     expect(pageData.promos[0].link).toEqual('mock-link');
     expect(pageData.promos[0].imageAlt).toEqual('mock-image-alt');
     expect(pageData.promos[0].id).toEqual('54321');
+  });
+
+  it('should use the title as description if description is empty', async () => {
+    const topicJSONWithoutDescription = assocPath(
+      ['data', 'description'],
+      '',
+      topicJSON,
+    );
+    fetch.mockResponse(JSON.stringify(topicJSONWithoutDescription));
+    const { pageData } = await getInitialData({
+      path: 'mock-topic-path',
+      getAgent,
+      service: 'pidgin',
+    });
+    expect(pageData.title).toEqual('Donald Trump');
+    expect(pageData.description).toEqual('Donald Trump');
   });
 
   it('should call fetchPageData with the correct request URL', async () => {

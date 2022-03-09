@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import { shape, arrayOf, string } from 'prop-types';
 import styled from '@emotion/styled';
+import MetadataContainer from '#app/containers/Metadata';
+import LinkedData from '#app/containers/LinkedData';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import TopicTitle from './TopicTitle';
 import TopicGrid from './TopicGrid';
 
@@ -11,10 +14,19 @@ const Wrapper = styled.div`
 `;
 
 const TopicPage = ({ pageData }) => {
+  const { lang } = useContext(ServiceContext);
+  const { title, description, promos } = pageData;
   return (
     <Wrapper>
-      <TopicTitle>{pageData.title}</TopicTitle>
-      <TopicGrid promos={pageData.promos} />
+      <MetadataContainer
+        title={title}
+        lang={lang}
+        description={description}
+        openGraphType="website"
+      />
+      <LinkedData type="CollectionPage" seoTitle={title} headline={title} />
+      <TopicTitle>{title}</TopicTitle>
+      <TopicGrid promos={promos} />
       <ATIAnalytics data={pageData} />;
     </Wrapper>
   );
