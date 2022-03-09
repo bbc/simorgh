@@ -122,7 +122,9 @@ const MetadataContainer = ({
         content="width=device-width, initial-scale=1, minimum-scale=1"
       />
       <title>{pageTitle}</title>
-      <link rel="canonical" href={canonicalNonUkLink} />
+      {service !== 'russian' && (
+        <link rel="canonical" href={canonicalNonUkLink} />
+      )}
       {isEnglishService && alternateLinksEnglishSites.map(renderAlternateLinks)}
       {isoLang &&
         !isEnglishService &&
