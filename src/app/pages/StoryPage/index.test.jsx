@@ -30,7 +30,7 @@ import russianSecondaryColumnData from '#data/russian/secondaryColumn/index.json
 import ukrainianInRussianPageData from '#data/ukrainian/cpsAssets/news-russian-23333960.json';
 import ukrainianSecondaryColumnData from '#data/ukrainian/secondaryColumn/index.json';
 import ukrainianMostReadData from '#data/ukrainian/mostRead/index.json';
-import hindiPageData from '#data/hindi/cpsAssets/international-60490858.json';
+import hindiPageData from '#data/hindi/cpsAssets/india-60426858.json';
 import hindiRecommendationsData from '#data/hindi/recommendations/index.json';
 import hindiMostRead from '#data/hindi/mostRead/index.json';
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
@@ -720,7 +720,6 @@ describe('Story Page', () => {
     describe('003_hindi_experiment_feature', () => {
       describe('variation_1', () => {
         beforeEach(() => {
-          // Mocked the implementation of OptimizelyExperiment to get the variation.
           optimizelyExperimentSpy.mockImplementation(props => {
             const { children } = props;
 
@@ -759,8 +758,7 @@ describe('Story Page', () => {
                     campaignID: 'article-sty',
                     componentName: 'wsoj',
                     format: undefined,
-                    pageIdentifier:
-                      'international::hindi.international.story.60490858.page',
+                    pageIdentifier: 'india::hindi.india.story.60426858.page',
                     platform: 'canonical',
                     producerId: '52',
                     service: 'hindi',
@@ -787,7 +785,7 @@ describe('Story Page', () => {
                 hindiMostRead,
               );
               fetchMock.mock(
-                'http://localhost/hindi/international-60490858/recommendations.json',
+                'http://localhost/hindi/india-60426858/recommendations.json',
                 hindiRecommendationsData,
               );
               const { pageData } = await getInitialData({
@@ -830,8 +828,7 @@ describe('Story Page', () => {
                     campaignID: 'article-sty',
                     componentName: 'wsoj',
                     format: undefined,
-                    pageIdentifier:
-                      'international::hindi.international.story.60490858.page',
+                    pageIdentifier: 'india::hindi.india.story.60426858.page',
                     platform: 'canonical',
                     producerId: '52',
                     service: 'hindi',
@@ -858,7 +855,7 @@ describe('Story Page', () => {
                 hindiMostRead,
               );
               fetchMock.mock(
-                'http://localhost/hindi/international-60490858/recommendations.json',
+                'http://localhost/hindi/india-60426858/recommendations.json',
                 hindiRecommendationsData.slice(0, 2),
               );
               const { pageData } = await getInitialData({
@@ -880,6 +877,7 @@ describe('Story Page', () => {
                   const wsojViewCalls = sendEventBeacon.mock.calls.filter(
                     ([{ componentName }]) => componentName === 'wsoj',
                   );
+
                   expect(wsojViewCalls.length).toBe(1);
                   expect(wsojViewCalls).toEqual(expectedViewEvent);
                   expect(optimizely.track).toHaveBeenCalledTimes(1);
@@ -946,8 +944,7 @@ describe('Story Page', () => {
                     campaignID: 'article-sty',
                     componentName: 'wsoj',
                     format: undefined,
-                    pageIdentifier:
-                      'international::hindi.international.story.60490858.page',
+                    pageIdentifier: 'india::hindi.india.story.60426858.page',
                     platform: 'canonical',
                     producerId: '52',
                     service: 'hindi',
@@ -963,8 +960,7 @@ describe('Story Page', () => {
                     componentName:
                       '%E0%A4%95%E0%A5%8B%E0%A4%B5%E0%A4%BF%E0%A4%A1-19%20%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%80%E0%A4%83%20%E0%A4%A4%E0%A5%8B%20%E0%A4%B8%E0%A4%AC%E0%A4%B8%E0%A5%87%20%E0%A4%9C%E0%A4%BC%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%A6%E0%A4%BE%20%E0%A4%AE%E0%A5%8C%E0%A4%A4%E0%A5%8B%E0%A4%82%20%E0%A4%95%E0%A5%80%20%E0%A4%B5%E0%A4%9C%E0%A4%B9%20%E0%A4%B5%E0%A4%BE%E0%A4%AF%E0%A4%B0%E0%A4%B8%20%E0%A4%A8%E0%A4%B9%E0%A5%80%E0%A4%82%20%E0%A4%B9%E0%A5%8B%E0%A4%97%E0%A4%BE',
                     format: 'CHD=promo::1',
-                    pageIdentifier:
-                      'international::hindi.international.story.60490858.page',
+                    pageIdentifier: 'india::hindi.india.story.60426858.page',
                     platform: 'canonical',
                     producerId: '52',
                     service: 'hindi',
@@ -991,7 +987,7 @@ describe('Story Page', () => {
                 hindiMostRead,
               );
               fetchMock.mock(
-                'http://localhost/hindi/international-60490858/recommendations.json',
+                'http://localhost/hindi/india-60426858/recommendations.json',
                 hindiRecommendationsData,
               );
               const { pageData } = await getInitialData({
@@ -1042,8 +1038,7 @@ describe('Story Page', () => {
                     campaignID: 'article-sty',
                     componentName: 'wsoj',
                     format: undefined,
-                    pageIdentifier:
-                      'international::hindi.international.story.60490858.page',
+                    pageIdentifier: 'india::hindi.india.story.60426858.page',
                     platform: 'canonical',
                     producerId: '52',
                     service: 'hindi',
@@ -1059,8 +1054,7 @@ describe('Story Page', () => {
                     componentName:
                       '%E0%A4%95%E0%A5%8B%E0%A4%B5%E0%A4%BF%E0%A4%A1-19%20%E0%A4%95%E0%A5%87%20%E0%A4%AC%E0%A4%BE%E0%A4%A6%20%E0%A4%B9%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%80%20%E0%A4%AF%E0%A4%BE%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%8F%E0%A4%82%20%E0%A4%95%E0%A5%88%E0%A4%B8%E0%A5%80%20%E0%A4%B9%E0%A5%8B%E0%A4%82%E0%A4%97%E0%A5%80%3F',
                     format: 'CHD=promo::1',
-                    pageIdentifier:
-                      'international::hindi.international.story.60490858.page',
+                    pageIdentifier: 'india::hindi.india.story.60426858.page',
                     platform: 'canonical',
                     producerId: '52',
                     service: 'hindi',
@@ -1087,7 +1081,7 @@ describe('Story Page', () => {
                 hindiMostRead,
               );
               fetchMock.mock(
-                'http://localhost/hindi/international-60490858/recommendations.json',
+                'http://localhost/hindi/india-60426858/recommendations.json',
                 hindiRecommendationsData,
               );
               const { pageData } = await getInitialData({
@@ -1138,8 +1132,7 @@ describe('Story Page', () => {
                     campaignID: 'article-sty',
                     componentName: 'wsoj',
                     format: undefined,
-                    pageIdentifier:
-                      'international::hindi.international.story.60490858.page',
+                    pageIdentifier: 'india::hindi.india.story.60426858.page',
                     platform: 'canonical',
                     producerId: '52',
                     service: 'hindi',
@@ -1155,8 +1148,7 @@ describe('Story Page', () => {
                     componentName:
                       '%E0%A4%95%E0%A5%8B%E0%A4%B5%E0%A4%BF%E0%A4%A1-19%20%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%80%E0%A4%83%20%E0%A4%A4%E0%A5%8B%20%E0%A4%B8%E0%A4%AC%E0%A4%B8%E0%A5%87%20%E0%A4%9C%E0%A4%BC%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%A6%E0%A4%BE%20%E0%A4%AE%E0%A5%8C%E0%A4%A4%E0%A5%8B%E0%A4%82%20%E0%A4%95%E0%A5%80%20%E0%A4%B5%E0%A4%9C%E0%A4%B9%20%E0%A4%B5%E0%A4%BE%E0%A4%AF%E0%A4%B0%E0%A4%B8%20%E0%A4%A8%E0%A4%B9%E0%A5%80%E0%A4%82%20%E0%A4%B9%E0%A5%8B%E0%A4%97%E0%A4%BE',
                     format: 'CHD=promo::1',
-                    pageIdentifier:
-                      'international::hindi.international.story.60490858.page',
+                    pageIdentifier: 'india::hindi.india.story.60426858.page',
                     platform: 'canonical',
                     producerId: '52',
                     service: 'hindi',
@@ -1183,7 +1175,7 @@ describe('Story Page', () => {
                 hindiMostRead,
               );
               fetchMock.mock(
-                'http://localhost/hindi/international-60490858/recommendations.json',
+                'http://localhost/hindi/india-60426858/recommendations.json',
                 hindiRecommendationsData.slice(0, 2),
               );
               const { pageData } = await getInitialData({
@@ -1225,6 +1217,57 @@ describe('Story Page', () => {
                 { timeout: 2000 },
               );
             }, 10000);
+
+            it('should not send a click event to ATI or Optimizely when no link has been clicked', async () => {
+              const toggles = {
+                cpsRecommendations: {
+                  enabled: true,
+                },
+                eventTracking: {
+                  enabled: true,
+                },
+              };
+              fetchMock.mock(
+                'http://localhost/some-cps-sty-path.json',
+                hindiPageData,
+              );
+              fetchMock.mock(
+                'http://localhost/hindi/mostread.json',
+                hindiMostRead,
+              );
+              fetchMock.mock(
+                'http://localhost/hindi/india-60426858/recommendations.json',
+                hindiRecommendationsData.slice(0, 2),
+              );
+              const { pageData } = await getInitialData({
+                path: '/some-cps-sty-path',
+                service: 'hindi',
+                pageType,
+              });
+
+              render(
+                <PageWithContext
+                  pageData={pageData}
+                  service="hindi"
+                  toggles={toggles}
+                />,
+              );
+
+              await waitFor(
+                () => {
+                  const wsojClickCalls = sendEventBeacon.mock.calls.filter(
+                    ([{ type }]) => type === 'click',
+                  );
+                  expect(wsojClickCalls.length).toBe(0);
+                  const optimizelyClickCalls =
+                    optimizely.track.mock.calls.filter(
+                      ([eventName]) => eventName === 'component_clicks',
+                    );
+                  expect(optimizelyClickCalls.length).toBe(0);
+                },
+                { timeout: 2000 },
+              );
+            });
           });
         });
       });
