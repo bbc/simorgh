@@ -14,8 +14,6 @@ import pglAboutData from '#data/afaanoromoo/cpsAssets/oduu-41217768';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 import PhotoGalleryPage from '.';
 
-jest.mock('#hooks/useOptimizelyVariation', () => jest.fn(() => null));
-
 jest.mock('#containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
