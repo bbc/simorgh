@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, func, string } from 'prop-types';
+import { arrayOf, shape, func, string, number } from 'prop-types';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -49,6 +49,7 @@ const LabelComponent = styled(SectionLabel)`
 const CpsRecommendations = ({
   items,
   showForVariation,
+  part,
   splitRecsViewEventTracker,
 }) => {
   const { recommendations, translations, script, service, dir } =
@@ -65,11 +66,20 @@ const CpsRecommendations = ({
 
   if (!hasStoryRecommendations || !enabled || !items.length) return null;
 
-  const title = pathOr(
-    'You may also be interested in',
-    ['recommendationTitle'],
-    translations,
-  );
+  // const title = getTitle(showForVariation, part)(translations);
+
+  const title =
+    showForVariation === 'variation_1' && part === 2
+      ? pathOr(
+          'You may also be interested in',
+          ['splitRecommendationTitle'],
+          translations,
+        )
+      : pathOr(
+          'You may also be interested in',
+          ['recommendationTitle'],
+          translations,
+        );
 
   const { text, endTextVisuallyHidden } = path(['skipLink'], recommendations);
 
@@ -126,11 +136,13 @@ export default CpsRecommendations;
 CpsRecommendations.propTypes = {
   items: arrayOf(shape(storyItem)),
   showForVariation: string.optional,
+  part: number.optional,
   splitRecsViewEventTracker: func.optional,
 };
 
 CpsRecommendations.defaultProps = {
   items: [],
   showForVariation: '',
+  part: null,
   splitRecsViewEventTracker: () => {},
 };

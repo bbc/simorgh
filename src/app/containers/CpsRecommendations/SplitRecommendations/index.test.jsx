@@ -109,8 +109,17 @@ describe('optimizelyExperiment', () => {
       it('should have the skip link on both blocks of the recommendations', () => {
         const { container } = render(
           <>
-            <PageWithContext items={hindiRecommendationsData} part={1} />)
-            <PageWithContext items={hindiRecommendationsData} part={2} />
+            <PageWithContext
+              items={hindiRecommendationsData}
+              showForVariation="variation_1"
+              part={1}
+            />
+            )
+            <PageWithContext
+              items={hindiRecommendationsData}
+              showForVariation="variation_1"
+              part={2}
+            />
           </>,
         );
 
@@ -123,15 +132,52 @@ describe('optimizelyExperiment', () => {
           '#end-of-recommendations',
         );
         expect(firstRecommendationBlockSkipLink.textContent).toEqual(
-          'छोड़कर और ये भी पढ़ें आगे बढ़ें',
+          'छोड़कर ये भी पढ़ें आगे बढ़ें',
         );
 
         expect(secondRecommendationBlockSkipLink.getAttribute('href')).toEqual(
           '#end-of-recommendations',
         );
         expect(secondRecommendationBlockSkipLink.textContent).toEqual(
-          'छोड़कर और ये भी पढ़ें आगे बढ़ें',
+          'छोड़कर कुछ और जानिए आगे बढ़ें',
         );
+      });
+
+      it('should have ये भी पढ़ें as title in the first block', () => {
+        const { container } = render(
+          <>
+            <PageWithContext items={hindiRecommendationsData} part={1} />
+          </>,
+        );
+
+        const [firstBlockHeading] = container.querySelectorAll(
+          '#recommendations-heading',
+        );
+
+        expect(firstBlockHeading.textContent).toEqual('ये भी पढ़ें');
+      });
+
+      it('should have कुछ और जानिए as title in the second block', () => {
+        const { container } = render(
+          <>
+            <PageWithContext
+              items={hindiRecommendationsData}
+              showForVariation="variation_1"
+              part={1}
+            />
+            <PageWithContext
+              items={hindiRecommendationsData}
+              showForVariation="variation_1"
+              part={2}
+            />
+          </>,
+        );
+
+        const [, secondBlockHeading] = container.querySelectorAll(
+          '#recommendations-heading',
+        );
+
+        expect(secondBlockHeading.textContent).toEqual('कुछ और जानिए');
       });
 
       it('should have two parts with two recommendations each when more than four recommendations in the data', async () => {
@@ -297,8 +343,11 @@ describe('optimizelyExperiment', () => {
       it('should have the skip link on one block when only one block is shown', () => {
         const { container } = render(
           <>
-            <PageWithContext items={hindiRecommendationsData} part={1} />)
-            <PageWithContext items={hindiRecommendationsData} part={2} />
+            <PageWithContext
+              items={hindiRecommendationsData}
+              showForVariation="variation_1"
+              part={1}
+            />
           </>,
         );
 
@@ -310,7 +359,7 @@ describe('optimizelyExperiment', () => {
           '#end-of-recommendations',
         );
         expect(firstRecommendationBlockSkipLink.textContent).toEqual(
-          'छोड़कर और ये भी पढ़ें आगे बढ़ें',
+          'छोड़कर ये भी पढ़ें आगे बढ़ें',
         );
       });
 
