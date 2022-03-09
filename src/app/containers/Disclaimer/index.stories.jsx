@@ -33,7 +33,12 @@ const DISCLAIMER_FIXTURE = {
       text: 'Android',
       url: 'https://play.google.com/store/apps/details?id=uk.co.bbc.russian',
     },
-    para5: '. Вы можете также подписаться на наш канал в Telegram.',
+    para5: '. Вы можете также подписаться на наш канал в ',
+    para6: {
+      text: ' Telegram',
+      url: 'https://t.me/bbcrussian',
+    },
+    para7: '.',
   },
 };
 
