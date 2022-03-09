@@ -48,8 +48,8 @@ const RelatedTopics = ({
 
   const getTopicPageUrl = id => {
     return variant
-      ? `${process?.env?.SIMORGH_BASE_URL}/${service}/${variant}/${topicsPath}/${id}`
-      : `${process?.env?.SIMORGH_BASE_URL}/${service}/${topicsPath}/${id}`;
+      ? `/${service}/${variant}/${topicsPath}/${id}`
+      : `/${service}/${topicsPath}/${id}`;
   };
 
   return (

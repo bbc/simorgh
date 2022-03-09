@@ -33,7 +33,6 @@ import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import gist from '#containers/Gist';
 import text from '#containers/Text';
 import Image from '#containers/Image';
-import Disclaimer from '#containers/Disclaimer';
 import Blocks from '#containers/Blocks';
 import Timestamp from '#containers/ArticleTimestamp';
 import ATIAnalytics from '#containers/ATIAnalytics';
@@ -210,7 +209,6 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       <ArticlePageGrid>
         <Primary>
           <Main role="main">
-            <Disclaimer />
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
