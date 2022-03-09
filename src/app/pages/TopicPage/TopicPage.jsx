@@ -16,6 +16,15 @@ const Wrapper = styled.div`
 const TopicPage = ({ pageData }) => {
   const { lang } = useContext(ServiceContext);
   const { title, description, promos } = pageData;
+
+  const promoEntities = promos.map(promo => ({
+    '@type': 'Article',
+    name: promo.title,
+    headline: promo.title,
+    url: promo.link,
+    dateCreated: promo.firstPublished,
+  }));
+
   return (
     <Wrapper>
       <MetadataContainer
@@ -24,7 +33,12 @@ const TopicPage = ({ pageData }) => {
         description={description}
         openGraphType="website"
       />
-      <LinkedData type="CollectionPage" seoTitle={title} headline={title} />
+      <LinkedData
+        type="CollectionPage"
+        seoTitle={title}
+        headline={title}
+        entities={promoEntities}
+      />
       <TopicTitle>{title}</TopicTitle>
       <TopicGrid promos={promos} />
       <ATIAnalytics data={pageData} />;
