@@ -13,6 +13,8 @@ import {
   relatedContentBlockWithTitle,
 } from './fixtures';
 
+jest.mock('#hooks/useOptimizelyVariation', () => jest.fn(() => null));
+
 const renderComponent = ({
   content = relatedContentBlock,
   service = 'afrique',

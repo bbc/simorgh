@@ -8,6 +8,7 @@ import { storyItem } from '#models/propTypes/storyItem';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
+import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import RelatedContentPromo from './RelatedContentPromo';
@@ -40,7 +41,7 @@ const CpsRelatedContent = ({
   const { translations } = useContext(ServiceContext);
   const { optimizely } = useContext(OptimizelyContext);
 
-  const promoVariation = useOptimizelyVariation('003_hindi_experiment');
+  const promoVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.featureId);
 
   const isInExperimentVariation =
     promoVariation !== null && promoVariation === 'variation_2' && isStoryPage;

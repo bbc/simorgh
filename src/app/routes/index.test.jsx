@@ -31,6 +31,8 @@ import storyPageRecommendationsData from '#data/mundo/recommendations/index.json
 import { FRONT_PAGE, ERROR_PAGE } from '#app/routes/utils/pageTypes';
 import routes from './index';
 
+jest.mock('#hooks/useOptimizelyVariation', () => jest.fn(() => null));
+
 fetchMock.config.fallbackToNetwork = true; // ensures non mocked requests fallback to an actual network request
 
 global.performance.getEntriesByName = jest.fn(() => []);

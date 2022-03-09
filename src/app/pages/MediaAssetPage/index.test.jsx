@@ -16,6 +16,8 @@ import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 import MediaAssetPage from '.';
 
+jest.mock('#hooks/useOptimizelyVariation', () => jest.fn(() => null));
+
 jest.mock('#containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
