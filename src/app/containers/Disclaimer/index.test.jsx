@@ -54,13 +54,15 @@ describe('Disclaimer Component', () => {
     const { getByText } = renderComponent();
     expect(
       getByText(
-        'Приложение Русской службы BBC News доступно для IOS и Android. Вы можете также подписаться на наш канал в Telegram.',
+        'Приложение Русской службы BBC News доступно для и . Вы можете также подписаться на наш канал в .',
       ),
     ).toBeInTheDocument();
 
     expect(getByText('IOS')).toBeInTheDocument();
 
     expect(getByText('Android')).toBeInTheDocument();
+
+    expect(getByText('Telegram')).toBeInTheDocument();
   });
 
   it('should render links correctly', () => {
