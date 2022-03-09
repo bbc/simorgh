@@ -8,7 +8,11 @@ import {
   number,
   bool,
 } from 'prop-types';
-import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+} from '@bbc/gel-foundations/spacings';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import isEmpty from 'ramda/src/isEmpty';
@@ -44,7 +48,7 @@ const LabelComponent = styled.strong`
   display: block;
   ${({ script }) => script && getDoublePica(script)};
   ${({ service }) => getSansRegular(service)}
-  margin-bottom: ${GEL_SPACING_DBL};
+  margin-bottom: ${GEL_SPACING_TRPL};
   color: ${C_SHADOW};
 `;
 
