@@ -25,7 +25,7 @@ export const testsThatAlwaysRunForCanonicalOnly = () => {
         }
       });
     });
-    it('Hearken include is on the page', () => {
+    it('Hearken include is visible on the page - only /mundo/23263889', () => {
       cy.window().then(win => {
         if (win.location.pathname.includes('/mundo/23263889')) {
           cy.get(`div[id="hearken-curiosity-14838"] > div`).within(() => {
@@ -38,7 +38,7 @@ export const testsThatAlwaysRunForCanonicalOnly = () => {
         }
       });
     });
-    it('Riddle include is on the page', () => {
+    it('Riddle include is visible on the page - only /mundo/23263889', () => {
       cy.window().then(win => {
         if (win.location.pathname.includes('/mundo/23263889')) {
           cy.get(`div[class="riddle-target-initialised"] > iframe`)
