@@ -112,7 +112,7 @@ const someOtherPromo = { contentType: 'SomeOtherPromo' };
 const normalItem = {
   assetTypeCode: 'Something',
   name: 'A headline',
-  uri: 'www.bbc.co.uk',
+  uri: 'http://www.bbc.co.uk',
 };
 
 const noUrlItem = { ...normalItem, uri: undefined };
@@ -121,7 +121,7 @@ const noHeadlineItem = { ...normalItem, name: undefined };
 
 const normalNoAssetTypeItem = {
   headlines: { headline: 'A headline' },
-  locators: { assetUri: 'www.bbc.co.uk' },
+  locators: { assetUri: 'http://www.bbc.co.uk' },
 };
 
 const noUrlNoAssetTypeItem = { ...normalNoAssetTypeItem, locators: undefined };
