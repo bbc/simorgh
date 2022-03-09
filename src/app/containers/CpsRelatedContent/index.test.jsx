@@ -14,6 +14,8 @@ import * as clickTracking from '#hooks/useClickTrackerHandler';
 import * as viewTracking from '#hooks/useViewTracker';
 import CpsRelatedContent from '.';
 
+jest.mock('#hooks/useOptimizelyVariation', () => jest.fn(() => null));
+
 const promos = path(['relatedContent', 'groups', 0, 'promos'], pidginPageData);
 
 // eslint-disable-next-line react/prop-types

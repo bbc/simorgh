@@ -395,6 +395,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
             content={relatedContent}
             recommendations={recommendationsData}
             parentColumns={gridColsMain}
+            isStoryPage
           />
         </GridPrimaryColumn>
         <GridSecondaryColumn

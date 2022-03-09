@@ -32,6 +32,7 @@ const CpsRelatedContent = ({
   recommendations,
   parentColumns,
   isMediaContent,
+  isStoryPage,
   title: _title,
   sectionLabelBackground,
   imageComponent,
@@ -42,7 +43,7 @@ const CpsRelatedContent = ({
   const promoVariation = useOptimizelyVariation('003_hindi_experiment');
 
   const isInExperimentVariation =
-    promoVariation !== null && promoVariation === 'variation_2';
+    promoVariation !== null && promoVariation === 'variation_2' && isStoryPage;
 
   const eventTrackingData = getEventTrackingData(
     isInExperimentVariation && optimizely,
@@ -89,6 +90,7 @@ CpsRelatedContent.propTypes = {
     group4: number,
     group5: number,
   }),
+  isStoryPage: bool,
   isMediaContent: bool,
   title: string,
   sectionLabelBackground: string,
@@ -99,6 +101,7 @@ CpsRelatedContent.defaultProps = {
   content: [],
   recommendations: [],
   parentColumns: null,
+  isStoryPage: false,
   isMediaContent: false,
   title: null,
   sectionLabelBackground: undefined,
