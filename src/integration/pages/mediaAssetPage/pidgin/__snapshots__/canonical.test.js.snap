@@ -131,7 +131,7 @@ Object {
 
 exports[`Canonical Media Asset Page I can see a bulleted list item 1`] = `"<Media Asset Page>"`;
 
-exports[`Canonical Media Asset Page I can see a bulleted list item with link: <Media Asset Page> 1`] = `"http://www.bbc.com/afrique/23248423"`;
+exports[`Canonical Media Asset Page I can see a bulleted list item with link: <Media Asset Page> 1`] = `"/afrique/23248423"`;
 
 exports[`Canonical Media Asset Page Main heading should match text 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & < >"`;
 

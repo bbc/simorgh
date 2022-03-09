@@ -1,4 +1,5 @@
 import path from 'ramda/src/path';
+import makeRelativeUrlPath from '#lib/utilities/makeRelativeUrlPath';
 import { getMimeType } from '#lib/utilities/srcSet';
 
 const getSrcFromSize = (url, size) => {
@@ -19,7 +20,7 @@ const getPromo = podcastPromo => {
   const description = path(['brandDescription'], podcastPromo);
   const img = path(['image', 'src'], podcastPromo);
   const alt = path(['image', 'alt'], podcastPromo);
-  const url = path(['linkLabel', 'href'], podcastPromo);
+  const url = makeRelativeUrlPath(path(['linkLabel', 'href'], podcastPromo));
   const label = path(['linkLabel', 'text'], podcastPromo);
 
   const showPromo = [

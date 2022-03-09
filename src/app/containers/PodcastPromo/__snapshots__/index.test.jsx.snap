@@ -541,7 +541,7 @@ exports[`Inline Should render correctly 1`] = `
           >
             <a
               class="emotion-23 emotion-24"
-              href="https://www.bbc.com/russian/media-47937790"
+              href="/russian/media-47937790"
             >
               <span
                 class="podcast-promo--hover podcast-promo--focus podcast-promo--visited"
@@ -951,7 +951,7 @@ exports[`SecondaryColumn Should render correctly 1`] = `
           >
             <a
               class="emotion-20 emotion-21"
-              href="https://www.bbc.com/russian/media-47937790"
+              href="/russian/media-47937790"
             >
               <span
                 class="podcast-promo--hover podcast-promo--focus podcast-promo--visited"
