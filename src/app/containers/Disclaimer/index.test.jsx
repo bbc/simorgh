@@ -67,7 +67,7 @@ describe('Disclaimer Component', () => {
 
   it('should render links correctly', () => {
     const { getAllByRole } = renderComponent();
-    expect(getAllByRole('link').length).toBe(2);
+    expect(getAllByRole('link').length).toBe(3);
   });
 
   it('should not render the disclaimer when the disclaimer toggle is not enabled', () => {
