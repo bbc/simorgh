@@ -41,7 +41,7 @@ const CpsRelatedContent = ({
   const { translations } = useContext(ServiceContext);
   const { optimizely } = useContext(OptimizelyContext);
 
-  const promoVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.featureId);
+  const promoVariation = false;
 
   const isInExperimentVariation =
     promoVariation !== null && promoVariation === 'variation_2' && isStoryPage;
@@ -91,8 +91,8 @@ CpsRelatedContent.propTypes = {
     group4: number,
     group5: number,
   }),
-  isStoryPage: bool,
   isMediaContent: bool,
+  isStoryPage: bool,
   title: string,
   sectionLabelBackground: string,
   imageComponent: elementType,
@@ -102,8 +102,8 @@ CpsRelatedContent.defaultProps = {
   content: [],
   recommendations: [],
   parentColumns: null,
-  isStoryPage: false,
   isMediaContent: false,
+  isStoryPage: false,
   title: null,
   sectionLabelBackground: undefined,
   imageComponent: undefined,
