@@ -50,7 +50,7 @@ describe('Disclaimer Component', () => {
     const { getByText } = renderComponent();
     expect(
       getByText(
-        'Приложение Русской службы BBC News доступно для и . Грузите его на ваш девайс и продолжайте получать новости от Би-би-си.',
+        'Приложение Русской службы BBC News доступно для IOS и Android. Вы можете также подписаться на наш канал в Telegram.',
       ),
     ).toBeInTheDocument();
 
