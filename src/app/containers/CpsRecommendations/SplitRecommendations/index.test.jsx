@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-// test helpers
 import React from 'react';
 import { render } from '@testing-library/react';
 
@@ -8,40 +7,15 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 
-import * as optimizelySDK from '@optimizely/react-sdk';
 import hindiRecommendationsData from '#data/hindi/recommendations/index.json';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 import SplitRecommendations from '.';
 
-jest.mock('#containers/ATIAnalytics/beacon', () => {
-  return {
-    __esModule: true,
-    default: jest.fn(),
-    sendEventBeacon: jest.fn(),
-  };
-});
-
 const defaultToggleState = {
   cpsRecommendations: {
     enabled: true,
   },
-  eventTracking: {
-    enabled: true,
-  },
-};
-
-const optimizely = {
-  onReady: jest.fn(() => Promise.resolve()),
-  track: jest.fn(),
-  user: {
-    attributes: {},
-  },
-  activate: jest.fn(),
-  getIsReadyPromiseFulfilled: jest.fn(),
-  getIsUsingSdkKey: jest.fn(),
-  onForcedVariationsUpdate: jest.fn(),
-  close: jest.fn(),
 };
 
 const PageWithContext = ({ items, toggles = defaultToggleState, ...props }) => {
@@ -58,12 +32,7 @@ const PageWithContext = ({ items, toggles = defaultToggleState, ...props }) => {
         <ToggleContext.Provider
           value={{ toggleState: toggles, toggleDispatch: jest.fn() }}
         >
-          <optimizelySDK.OptimizelyProvider
-            optimizely={optimizely}
-            isServerSide
-          >
-            <SplitRecommendations items={items} {...props} />
-          </optimizelySDK.OptimizelyProvider>
+          <SplitRecommendations items={items} {...props} />
         </ToggleContext.Provider>
       </RequestContextProvider>
     </ServiceContextProvider>
@@ -390,32 +359,7 @@ describe('optimizelyExperiment', () => {
       });
 
       it('should have no list and listitem when no recommendations are in the data', async () => {
-        const { queryByRole } = render(
-          <ToggleContext.Provider
-            value={{
-              toggleState: defaultToggleState,
-              toggleDispatch: jest.fn(),
-            }}
-          >
-            <ServiceContextProvider service="hindi">
-              <RequestContextProvider
-                bbcOrigin="https://www.test.bbc.co.uk"
-                isAmp={false}
-                pageType={STORY_PAGE}
-                pathname="/service/085965"
-                service="hindi"
-                statusCode={200}
-              >
-                <optimizelySDK.OptimizelyProvider
-                  optimizely={optimizely}
-                  isServerSide
-                >
-                  <SplitRecommendations items={[]} part={1} />
-                </optimizelySDK.OptimizelyProvider>
-              </RequestContextProvider>
-            </ServiceContextProvider>
-          </ToggleContext.Provider>,
-        );
+        const { queryByRole } = render(<PageWithContext items={[]} part={1} />);
 
         expect(queryByRole('list')).not.toBeInTheDocument();
         expect(queryByRole('listitem')).not.toBeInTheDocument();
@@ -423,30 +367,7 @@ describe('optimizelyExperiment', () => {
 
       it('should have no recommendations-heading when recommendations are invalid data in the data', async () => {
         const { queryByRole } = render(
-          <ToggleContext.Provider
-            value={{
-              toggleState: defaultToggleState,
-              toggleDispatch: jest.fn(),
-            }}
-          >
-            <ServiceContextProvider service="hindi">
-              <RequestContextProvider
-                bbcOrigin="https://www.test.bbc.co.uk"
-                isAmp={false}
-                pageType={STORY_PAGE}
-                pathname="/service/085965"
-                service="hindi"
-                statusCode={200}
-              >
-                <optimizelySDK.OptimizelyProvider
-                  optimizely={optimizely}
-                  isServerSide
-                >
-                  <SplitRecommendations items="invalid data" part={1} />
-                </optimizelySDK.OptimizelyProvider>
-              </RequestContextProvider>
-            </ServiceContextProvider>
-          </ToggleContext.Provider>,
+          <PageWithContext items="invalid data" part={1} />,
         );
 
         expect(queryByRole('list')).not.toBeInTheDocument();
