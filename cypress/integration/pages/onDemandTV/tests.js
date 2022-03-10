@@ -30,8 +30,8 @@ export default ({ service, pageType, variant, isAmp }) => {
           cy.get('iframe').then(iframe => {
             // If a brand, get the src of the iframe, otherwise, use the embed URL from the data
             const iframeURL = isBrandPage ? iframe.prop('src') : embedUrl;
-
-            cy.get(`iframe[src*="${iframeURL}"]`).should('be.visible');
+            cy.log(`iframeURL ${iframeURL}`);
+            cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
             cy.testResponseCodeAndTypeRetry({
               path: embedUrl,
               responseCode: 200,

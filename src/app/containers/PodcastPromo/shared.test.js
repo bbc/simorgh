@@ -26,7 +26,7 @@ describe('getPromo', () => {
       description: 'Мы быстро, просто и понятно объясняем',
       imgSrc: 'https://ichef.bbci.co.uk/images/ic/512x512/p0776f5z.jpg',
       alt: 'Что это было?',
-      url: 'https://www.bbc.com/russian/media-47937790',
+      url: '/russian/media-47937790',
       label: 'эпизоды',
       showPromo: true,
       srcset:
