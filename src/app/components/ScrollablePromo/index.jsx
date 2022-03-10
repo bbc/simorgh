@@ -15,6 +15,7 @@ import {
 } from '@bbc/gel-foundations/spacings';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
 import isEmpty from 'ramda/src/isEmpty';
 import tail from 'ramda/src/tail';
 import {
@@ -30,6 +31,7 @@ import { OptimizelyContext } from '@optimizely/react-sdk';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
+import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import Promo from './Promo';
 import PromoList from './PromoList';
 
@@ -58,16 +60,16 @@ const getEventTrackingData = (optimizely, blockGroupIndex) => ({
   ...(optimizely && { optimizely }),
 });
 
-const HINDI_EXPERIMENT_ID = '003_hindi_experiment_feature';
+const HINDI_EXPERIMENT_FEATURE_ID = path(['featureId'], OPTIMIZELY_CONFIG);
 
 const ScrollablePromo = ({ blocks, blockGroupIndex, isRecommendationType }) => {
   const { script, service, dir, translations } = useContext(ServiceContext);
   const { optimizely } = useContext(OptimizelyContext);
 
-  const promoVariation = useOptimizelyVariation(HINDI_EXPERIMENT_ID);
+  const promoVariation = useOptimizelyVariation(HINDI_EXPERIMENT_FEATURE_ID);
   const hasVariationKey = promoVariation !== null;
   const eventTrackingData = getEventTrackingData(
-    hasVariationKey && optimizely,
+    isRecommendationType && hasVariationKey && optimizely,
     blockGroupIndex,
   );
 
