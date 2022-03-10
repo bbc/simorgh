@@ -269,7 +269,7 @@ exports[`Expected use should render correctly with a single tag 1`] = `
         class="emotion-19 emotion-20"
       >
         <a
-          href="https://bbc.com/mundo/topics/123"
+          href="/mundo/topics/123"
         >
           topic
         </a>
@@ -550,7 +550,7 @@ exports[`Expected use should render correctly with multiple tags 1`] = `
         class="emotion-19 emotion-20"
       >
         <a
-          href="https://bbc.com/mundo/topics/1"
+          href="/mundo/topics/1"
         >
           topic1
         </a>
@@ -559,7 +559,7 @@ exports[`Expected use should render correctly with multiple tags 1`] = `
         class="emotion-19 emotion-20"
       >
         <a
-          href="https://bbc.com/mundo/topics/2"
+          href="/mundo/topics/2"
         >
           topic2
         </a>
@@ -568,7 +568,7 @@ exports[`Expected use should render correctly with multiple tags 1`] = `
         class="emotion-19 emotion-20"
       >
         <a
-          href="https://bbc.com/mundo/topics/3"
+          href="/mundo/topics/3"
         >
           topic3
         </a>

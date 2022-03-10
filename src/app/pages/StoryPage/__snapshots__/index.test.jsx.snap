@@ -2566,7 +2566,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       </b>
                       <a
                         class="emotion-50 emotion-51"
-                        href="https://bbc.com/pidgin/23248703"
+                        href="/pidgin/23248703"
                       >
                         inline links
                       </a>
@@ -2592,7 +2592,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       </i>
                       <a
                         class="emotion-50 emotion-51"
-                        href="https://bbc.com/pidgin/23248703"
+                        href="/pidgin/23248703"
                       >
                         a link
                       </a>
@@ -2629,7 +2629,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       >
                         <a
                           class="emotion-50 emotion-51"
-                          href="https://bbc.com/pidgin/23248703"
+                          href="/pidgin/23248703"
                         >
                           It can also have links
                         </a>
@@ -2657,7 +2657,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       Feta the big cheese macaroni cheese. 
                       <a
                         class="emotion-50 emotion-51"
-                        href="https://bbc.com/pidgin/23248703"
+                        href="/pidgin/23248703"
                       >
                         Caerphilly danish fontina
                       </a>
@@ -2801,7 +2801,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       >
                         <a
                           class="emotion-50 emotion-51"
-                          href="https://bbc.com/pidgin/23248703"
+                          href="/pidgin/23248703"
                         >
                           It can also have links
                         </a>
@@ -2862,7 +2862,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           allowfullscreen=""
                           class="emotion-147 emotion-148"
                           scrolling="no"
-                          src="https://www.test.bbc.com/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/pcm"
+                          src="/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/pcm"
                           title="Media player"
                         />
                         <noscript />
@@ -3078,7 +3078,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                     class="emotion-229 emotion-230"
                                     dir="ltr"
                                   >
-                                    AS E DE HAPPEN 
+                                    As E Dey Happen 
                                   </span>
                                   <span>
                                     Test m̀ịṅị̀ịọ́ụ̄ please ignore
@@ -6557,7 +6557,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </b>
                       <a
                         class="emotion-55 emotion-56"
-                        href="https://bbc.com/pidgin/23248703"
+                        href="/pidgin/23248703"
                       >
                         inline links
                       </a>
@@ -6583,7 +6583,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </i>
                       <a
                         class="emotion-55 emotion-56"
-                        href="https://bbc.com/pidgin/23248703"
+                        href="/pidgin/23248703"
                       >
                         a link
                       </a>
@@ -6620,7 +6620,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       >
                         <a
                           class="emotion-55 emotion-56"
-                          href="https://bbc.com/pidgin/23248703"
+                          href="/pidgin/23248703"
                         >
                           It can also have links
                         </a>
@@ -6648,7 +6648,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       Feta the big cheese macaroni cheese. 
                       <a
                         class="emotion-55 emotion-56"
-                        href="https://bbc.com/pidgin/23248703"
+                        href="/pidgin/23248703"
                       >
                         Caerphilly danish fontina
                       </a>
@@ -6792,7 +6792,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       >
                         <a
                           class="emotion-55 emotion-56"
-                          href="https://bbc.com/pidgin/23248703"
+                          href="/pidgin/23248703"
                         >
                           It can also have links
                         </a>
@@ -6853,7 +6853,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                           allowfullscreen=""
                           class="emotion-152 emotion-153"
                           scrolling="no"
-                          src="https://www.test.bbc.com/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
+                          src="/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
                           title="Media player"
                         />
                         <noscript />
@@ -10118,7 +10118,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </b>
                       <a
                         class="emotion-55 emotion-56"
-                        href="https://bbc.com/pidgin/23248703"
+                        href="/pidgin/23248703"
                       >
                         inline links
                       </a>
@@ -10144,7 +10144,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </i>
                       <a
                         class="emotion-55 emotion-56"
-                        href="https://bbc.com/pidgin/23248703"
+                        href="/pidgin/23248703"
                       >
                         a link
                       </a>
@@ -10181,7 +10181,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       >
                         <a
                           class="emotion-55 emotion-56"
-                          href="https://bbc.com/pidgin/23248703"
+                          href="/pidgin/23248703"
                         >
                           It can also have links
                         </a>
@@ -10209,7 +10209,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       Feta the big cheese macaroni cheese. 
                       <a
                         class="emotion-55 emotion-56"
-                        href="https://bbc.com/pidgin/23248703"
+                        href="/pidgin/23248703"
                       >
                         Caerphilly danish fontina
                       </a>
@@ -10353,7 +10353,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       >
                         <a
                           class="emotion-55 emotion-56"
-                          href="https://bbc.com/pidgin/23248703"
+                          href="/pidgin/23248703"
                         >
                           It can also have links
                         </a>
@@ -10414,7 +10414,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           allowfullscreen=""
                           class="emotion-152 emotion-153"
                           scrolling="no"
-                          src="https://www.test.bbc.com/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
+                          src="/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
                           title="Media player"
                         />
                         <noscript />
@@ -10643,7 +10643,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               <a
                                 aria-labelledby="top-stories-promo-news-feature-1"
                                 class="emotion-216 emotion-217"
-                                href="https://www.bbc.co.uk/news"
+                                href="/news"
                               >
                                 <span
                                   id="top-stories-promo-news-feature-1"
@@ -11186,7 +11186,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               <a
                                 aria-labelledby="features-and-analysis-promo-pidginsport51434980-radiobulletin-7"
                                 class="emotion-216 emotion-217"
-                                href="https://www.bbc.com/pidgin/sport-51434980"
+                                href="/pidgin/sport-51434980"
                               >
                                 <span
                                   id="features-and-analysis-promo-pidginsport51434980-radiobulletin-7"
