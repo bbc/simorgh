@@ -109,6 +109,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   width: 5rem;
   position: absolute;
   bottom: 0;
+  left: 0;
 }
 
 .emotion-13:hover,
@@ -280,7 +281,7 @@ exports[`MediaPlayer Does not Call the canonical placeholder when platform is ca
         allowfullscreen=""
         class="emotion-4 emotion-5"
         scrolling="no"
-        src="https://www.test.bbc.com/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB"
+        src="/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB"
         title="Media player"
       />
       <noscript />

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { bool, shape, number } from 'prop-types';
 import styled from '@emotion/styled';
+import makeRelativeUrlPath from '#lib/utilities/makeRelativeUrlPath';
 import pathOr from 'ramda/src/pathOr';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -235,7 +236,7 @@ const IndexPageSection = ({ bar, group, sectionNumber, showAllPromos }) => {
         service={service}
         dir={dir}
         linkText={isLink ? seeAll : null}
-        href={href}
+        href={makeRelativeUrlPath(href)}
       >
         {strapline}
       </SectionLabel>
