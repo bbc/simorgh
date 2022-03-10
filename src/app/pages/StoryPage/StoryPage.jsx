@@ -198,13 +198,13 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     table: props => <CpsTable {...props} />,
     mpu: props =>
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
-    wsoj: props => (
-      <CpsRecommendations
-        {...props}
-        parentColumns={gridColsMain}
-        items={recommendationsInitialData}
-      />
-    ),
+    // wsoj: props => (
+    //   <CpsRecommendations
+    //     {...props}
+    //     parentColumns={gridColsMain}
+    //     items={recommendationsInitialData}
+    //   />
+    // ),
     disclaimer: props => (
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
@@ -245,6 +245,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
               showForVariation === 'variation_3' &&
               variation === 'variation_3'
             ) {
+              console.log('inside variation_3');
               return (
                 <ScrollablePromo
                   {...props}

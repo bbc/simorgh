@@ -29,7 +29,7 @@ import getAdditionalPageData from '../utils/getAdditionalPageData';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 import isListWithLink from '../../utils/isListWithLink';
 import addIndexToBlockGroups from '../../utils/sharedDataTransformers/addIndexToBlockGroups';
-// import addExperimentPlaceholderBlocks from './addExperimentPlaceholderBlocks';
+import addExperimentPlaceholderBlocks from './addExperimentPlaceholderBlocks';
 
 export const only =
   (pageTypes, transformer) =>
@@ -62,7 +62,7 @@ const processOptimoBlocks = toggles => service =>
     addRecommendationsBlock,
     addMpuBlock,
     applyBlockPositioning,
-    // addExperimentPlaceholderBlocks(service),
+    addExperimentPlaceholderBlocks(service),
     addIdsToBlocks,
     cpsOnlyOnwardJourneys,
     addIndexToBlockGroups(isListWithLink, {

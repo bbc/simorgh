@@ -35,6 +35,7 @@ import hindiRecommendationsData from '#data/hindi/recommendations/index.json';
 import hindiMostRead from '#data/hindi/mostRead/index.json';
 import russianPageDataWithoutInlinePromo from './fixtureData/russianPageDataWithoutPromo';
 import StoryPage from '.';
+import { crossOriginResourcePolicy } from 'helmet';
 
 fetchMock.config.overwriteRoutes = false; // http://www.wheresrhys.co.uk/fetch-mock/#usageconfiguration allows us to mock the same endpoint multiple times
 
@@ -702,7 +703,7 @@ describe('Story Page', () => {
   });
 });
 
-describe.skip('optimizelyExperiment', () => {
+describe('optimizelyExperiment', () => {
   describe('003_hindi_experiment_feature', () => {
     describe('variation_3', () => {
       beforeEach(() => {
@@ -723,7 +724,7 @@ describe.skip('optimizelyExperiment', () => {
         jest.restoreAllMocks();
       });
 
-      it('should render EOJ variation when showForVariation has variation_3 value ', async () => {
+      it.only('should render EOJ variation when showForVariation has variation_3 value ', async () => {
         fetchMock.mock(
           'http://localhost/some-cps-sty-path.json',
           hindiPageData,
@@ -745,27 +746,36 @@ describe.skip('optimizelyExperiment', () => {
           },
         };
 
-        const { getByLabelText, getByText } = render(
+        const { getByRole, getByText } = render(
           <PageWithContext
             pageData={pageData}
             service="hindi"
             toggles={toggles}
           />,
         );
-        expect(
-          getByLabelText('eoj-recommendations-heading'),
-        ).toBeInTheDocument();
-        expect(
-          getByText(
-            'कोविड-19 महामारीः तो सबसे ज़्यादा मौतों की वजह वायरस नहीं होगा',
-          ),
-        ).toBeInTheDocument();
-        expect(
-          getByText('कोरोना से मिले कौन से सबक़ हम याद रखेंगे?'),
-        ).toBeInTheDocument();
-        expect(
-          getByText('कोविड-19 के बाद हमारी यात्राएं कैसी होंगी?'),
-        ).toBeInTheDocument();
+
+        // const eojRecommendation = getAllByRole('region').filter(
+        //   ({ className }) => {
+        //     console.log({ className });
+        //     // return ariaLabelled === 'eoj-recommendations-heading';
+        //   },
+        // );
+        console.log(
+          getByRole('region', { name: 'eoj-recommendations-heading' }),
+        );
+        //console.log({ eojRecommendation });
+        // expect(getAllByRole('eoj-recommendations-heading')).toBeInTheDocument();
+        // expect(
+        //   getByText(
+        //     'कोविड-19 महामारीः तो सबसे ज़्यादा मौतों की वजह वायरस नहीं होगा',
+        //   ),
+        // ).toBeInTheDocument();
+        // expect(
+        //   getByText('कोरोना से मिले कौन से सबक़ हम याद रखेंगे?'),
+        // ).toBeInTheDocument();
+        // expect(
+        //   getByText('कोविड-19 के बाद हमारी यात्राएं कैसी होंगी?'),
+        // ).toBeInTheDocument();
       });
     });
   });
