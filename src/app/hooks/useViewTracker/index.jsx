@@ -9,7 +9,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import useTrackingToggle from '#hooks/useTrackingToggle';
 
 const EVENT_TYPE = 'view';
-const VIEWED_DURATION_MS = 1000;
+const VIEWED_DURATION_MS = 0;
 const MIN_VIEWED_PERCENT = 0.5;
 
 const useViewTracker = (props = {}) => {
@@ -33,6 +33,7 @@ const useViewTracker = (props = {}) => {
     props,
   );
   const { service } = useContext(ServiceContext);
+  console.log(`check`)
 
   const initObserver = async () => {
     if (typeof window.IntersectionObserver === 'undefined') {
@@ -52,7 +53,9 @@ const useViewTracker = (props = {}) => {
   };
 
   useEffect(() => {
+    console.log(`check useeffect`)
     if (isInView && !timer.current) {
+      console.log(`check useeffect if`)
       timer.current = setTimeout(() => {
         const hasRequiredProps = [
           campaignID,
@@ -70,6 +73,13 @@ const useViewTracker = (props = {}) => {
           !eventSent,
         ].every(Boolean);
 
+        console.log(campaignID,
+        componentName,
+        pageIdentifier,
+        platform,
+        producerId,
+        service,
+        statsDestination,)
         if (shouldSendEvent) {
           if (optimizely) {
             const overrideAttributes = {

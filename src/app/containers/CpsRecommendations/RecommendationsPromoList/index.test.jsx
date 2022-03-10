@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import path from 'ramda/src/path';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
@@ -7,7 +7,18 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import * as viewTracking from '#hooks/useViewTracker';
+import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
+import { OptimizelyProvider } from '@optimizely/react-sdk';
+import { RequestContextProvider } from '#app/contexts/RequestContext';
 import RecommendationsPromoList from './index';
+
+jest.mock(`#containers/ATIAnalytics/beacon`, () => {
+  return {
+    __esModule: true,
+    default: jest.fn(),
+    sendEventBeacon: jest.fn(),
+  };
+});
 
 process.env.SIMORGH_BASE_URL = 'http://bbc.com';
 
@@ -16,15 +27,37 @@ const promoItems = path(
   pidginPageData,
 );
 
-const Fixture = () => (
-  <ServiceContextProvider service="pidgin">
+const optimizely = {
+  onReady: jest.fn(() => Promise.resolve()),
+  track: jest.fn(),
+};
+
+const Fixture = props => (
+  <ServiceContextProvider service="hindi">
+     <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.co.uk"
+        isAmp={false}
+        pageType="STY"
+        service="hindi"
+        pathname="/pathname"
+        platform="canonical"
+        statsDestination="WS_NEWS_LANGUAGES_TEST"
+        statusCode={200}
+      >
     <ToggleContextProvider
       toggles={{
         eventTracking: { enabled: true },
       }}
     >
-      <RecommendationsPromoList promoItems={promoItems} dir="ltr" />,
+      <OptimizelyProvider optimizely={optimizely} isServerSide>
+        <RecommendationsPromoList
+          promoItems={promoItems}
+          dir="ltr"
+          {...props}
+        />
+      </OptimizelyProvider>
     </ToggleContextProvider>
+    </RequestContextProvider>
   </ServiceContextProvider>
 );
 
@@ -141,6 +174,25 @@ describe('RecommendationsPromoList', () => {
         format: 'CHD=promo::3',
         advertiserID: 'pidgin',
         url: 'http://bbc.com/pidgin/tori-42494678',
+      });
+    });
+  });
+
+  describe('Optimizely Experiment', () => {
+    describe('003_hindi_experiment_feature', () => {
+      describe('Control', () => {
+        describe('ViewTracking', () => {
+          it.only('should send the ATI and Optimizely view events', async () => {
+            const { container, getByRole } = render(
+              <Fixture showForVariation="control" />,
+            );
+            await waitFor(() => {
+              expect(getByRole('list')).toBeInTheDocument();
+              expect(container.querySelectorAll('li').length).toEqual(3);
+              console.log(sendEventBeacon.mock.calls);
+            })
+          });
+        });
       });
     });
   });
