@@ -4,6 +4,7 @@ import { shape, arrayOf, string } from 'prop-types';
 import styled from '@emotion/styled';
 import TopicTitle from './TopicTitle';
 import TopicGrid from './TopicGrid';
+import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 
 const Wrapper = styled.div`
   margin: 0 auto;
@@ -15,7 +16,8 @@ const TopicPage = ({ pageData }) => {
     <Wrapper>
       <TopicTitle>{pageData.title}</TopicTitle>
       <TopicGrid promos={pageData.promos} />
-      <ATIAnalytics data={pageData} />;
+      <ATIAnalytics data={pageData} />
+      <ChartbeatAnalytics data={pageData} />
     </Wrapper>
   );
 };
