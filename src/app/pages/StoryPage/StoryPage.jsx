@@ -59,9 +59,9 @@ import NielsenAnalytics from '#containers/NielsenAnalytics';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import useViewTracker from '#hooks/useViewTracker';
 import SplitRecommendations from '#containers/CpsRecommendations/SplitRecommendations';
+import getEventTrackingData from '#containers/CpsRecommendations/RecommendationsPromoList/getEventTrackingData';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
-import getEventTrackingData from '../../containers/CpsRecommendations/RecommendationsPromoList/getEventTrackingData';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
