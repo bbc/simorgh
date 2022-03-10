@@ -67,12 +67,17 @@ const setRequiredVisibility = () => {
 const setDynamicVisibility = () => {
   const iterations = [
     [VISIBILITY.ALL, state.activePageOnEdge ? 1 : 0],
-    [VISIBILITY.TABLET_UP, state.activePageOnEdge ? 2 : 2],
+    [VISIBILITY.TABLET_UP, state.activePageOnEdge ? 1 : 2],
     [VISIBILITY.DESKTOP_ONLY, 4],
   ];
 
   iterations.forEach(([deviceSize, additionalPagesToShow]) =>
     findNClosestIndices(additionalPagesToShow).forEach(index => {
+      if (index < state.activePageIndex) {
+        state.highestVisibilityOnLeft = deviceSize;
+      } else {
+        state.highestVisibilityOnRight = deviceSize;
+      }
       state.result[index].visibility = deviceSize;
     }),
   );
@@ -97,18 +102,21 @@ const getEllipsisVisibility = side => {
     side === 'left' ? state.pagesTruncatedOnLeft : state.pagesTruncatedOnRight;
   if (wasTruncated) return VISIBILITY.ALL;
 
-  const leftDistance = state.activePage - 1;
-  const rightDistance = state.pageCount - state.activePage;
-  const distance = side === 'left' ? leftDistance : rightDistance;
+  const highestVisibility =
+    side === 'left'
+      ? state.highestVisibilityOnLeft
+      : state.highestVisibilityOnRight;
 
-  if (distance <= 1) return null;
-  if (distance <= 2) return VISIBILITY.MOBILE_ONLY;
-  if (distance <= 9) return VISIBILITY.TABLET_DOWN;
-  return VISIBILITY.ALL;
+  if (!highestVisibility || highestVisibility === VISIBILITY.ALL) return null;
+  if (highestVisibility === VISIBILITY.TABLET_UP) return VISIBILITY.MOBILE_ONLY;
+  if (highestVisibility === VISIBILITY.DESKTOP_ONLY)
+    return VISIBILITY.TABLET_DOWN;
+  return null;
 };
 
 const insertEllipsis = () => {
   const leftEllipsisVisibility = getEllipsisVisibility('left');
+  const rightEllipsisVisibility = getEllipsisVisibility('right');
   if (leftEllipsisVisibility) {
     state.result.splice(1, 0, {
       type: TYPE.ELLIPSIS,
@@ -117,7 +125,6 @@ const insertEllipsis = () => {
     });
   }
 
-  const rightEllipsisVisibility = getEllipsisVisibility('right');
   if (rightEllipsisVisibility) {
     state.result.splice(state.result.length - 1, 0, {
       type: TYPE.ELLIPSIS,
@@ -130,6 +137,7 @@ const insertEllipsis = () => {
 const insertArrows = () => {
   state.result.unshift({
     type: TYPE.LEFT_ARROW,
+    visibility: VISIBILITY.ALL,
     availability:
       state.activePage === 1
         ? AVAILABILITY.UNAVAILABLE
@@ -137,6 +145,7 @@ const insertArrows = () => {
   });
   state.result.push({
     type: TYPE.RIGHT_ARROW,
+    visibility: VISIBILITY.ALL,
     availability:
       state.activePage === state.pageCount
         ? AVAILABILITY.UNAVAILABLE
