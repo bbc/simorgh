@@ -20,6 +20,8 @@ const topicJSON = {
   },
 };
 
+const optHeaders = { 'ctx-service-env': 'live' };
+
 describe('get initial data for topic', () => {
   const agent = { ca: 'ca', key: 'key' };
   const getAgent = jest.fn(() => agent);
@@ -59,6 +61,7 @@ describe('get initial data for topic', () => {
     expect(fetchDataSpy).toHaveBeenCalledWith({
       path: 'https://mock-bff-path?id=54321&service=pidgin',
       agent,
+      optHeaders,
     });
   });
 
@@ -75,6 +78,7 @@ describe('get initial data for topic', () => {
     expect(fetchDataSpy).toHaveBeenCalledWith({
       path: 'https://mock-bff-path?id=54321&service=serbian&variant=sr-cyrl',
       agent,
+      optHeaders,
     });
   });
 
@@ -90,6 +94,7 @@ describe('get initial data for topic', () => {
     expect(fetchDataSpy).toHaveBeenCalledWith({
       path: 'https://mock-bff-path?id=54321&service=pidgin',
       agent,
+      optHeaders,
     });
   });
 
@@ -105,6 +110,7 @@ describe('get initial data for topic', () => {
     expect(fetchDataSpy).toHaveBeenCalledWith({
       path: 'https://mock-bff-path?id=54321&service=pidgin',
       agent,
+      optHeaders,
     });
   });
 
@@ -120,6 +126,25 @@ describe('get initial data for topic', () => {
     expect(fetchDataSpy).toHaveBeenCalledWith({
       path: 'https://mock-bff-path?id=54321&service=pidgin',
       agent,
+      optHeaders,
+    });
+  });
+
+  it('should request test data when renderer_env is set to test', async () => {
+    fetch.mockResponse(JSON.stringify(topicJSON));
+    const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
+    await getInitialData({
+      path: 'pidgin/topics/54321.?renderer_env=test',
+      getAgent,
+      service: 'pidgin',
+    });
+
+    const testHeader = { 'ctx-service-env': 'test' };
+
+    expect(fetchDataSpy).toHaveBeenCalledWith({
+      path: 'https://mock-bff-path?id=54321&service=pidgin',
+      agent,
+      optHeaders: testHeader,
     });
   });
 });
