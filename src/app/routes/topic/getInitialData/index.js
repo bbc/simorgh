@@ -32,6 +32,7 @@ export default async ({ getAgent, service, path: pathname, variant }) => {
       status,
       pageData: {
         title: data.title,
+        description: data.description || data.title,
         promos: data.summaries,
         metadata: {
           type: 'Topic',
