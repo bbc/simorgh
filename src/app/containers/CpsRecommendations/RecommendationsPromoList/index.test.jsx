@@ -3,6 +3,7 @@ import { render, waitFor } from '@testing-library/react';
 import path from 'ramda/src/path';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
+import hindiRecommendations from '#data/hindi/recommendations/index.json';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
@@ -32,38 +33,21 @@ const optimizely = {
   track: jest.fn(),
 };
 
-const Fixture = props => (
-  <ServiceContextProvider service="hindi">
-     <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.co.uk"
-        isAmp={false}
-        pageType="STY"
-        service="hindi"
-        pathname="/pathname"
-        platform="canonical"
-        statsDestination="WS_NEWS_LANGUAGES_TEST"
-        statusCode={200}
-      >
+const Fixture = () => (
+  <ServiceContextProvider service="pidgin">
     <ToggleContextProvider
       toggles={{
         eventTracking: { enabled: true },
       }}
     >
-      <OptimizelyProvider optimizely={optimizely} isServerSide>
-        <RecommendationsPromoList
-          promoItems={promoItems}
-          dir="ltr"
-          {...props}
-        />
-      </OptimizelyProvider>
+      <RecommendationsPromoList promoItems={promoItems} dir="ltr" />,
     </ToggleContextProvider>
-    </RequestContextProvider>
   </ServiceContextProvider>
 );
 
 beforeEach(jest.clearAllMocks);
 
-describe('RecommendationsPromoList', () => {
+describe.only('RecommendationsPromoList', () => {
   shouldMatchSnapshot(
     'it renders a list of Story Promos wrapped in Grid components',
     <Fixture />,
@@ -182,15 +166,18 @@ describe('RecommendationsPromoList', () => {
     describe('003_hindi_experiment_feature', () => {
       describe('Control', () => {
         describe('ViewTracking', () => {
-          it.only('should send the ATI and Optimizely view events', async () => {
+          it('should send the ATI and Optimizely view events', async () => {
             const { container, getByRole } = render(
-              <Fixture showForVariation="control" />,
+              <Fixture
+                items={hindiRecommendations}
+                showForVariation="control"
+              />,
             );
             await waitFor(() => {
               expect(getByRole('list')).toBeInTheDocument();
               expect(container.querySelectorAll('li').length).toEqual(3);
               console.log(sendEventBeacon.mock.calls);
-            })
+            });
           });
         });
       });
