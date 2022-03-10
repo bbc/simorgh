@@ -6,8 +6,8 @@ import Pager from '.';
 const Component = () => {
   return (
     <Pager
-      activePage={number('Active Page', 5)}
-      pageCount={number('PageCount', 10)}
+      activePage={number('Active Page', 5, { min: 1, max: 100 })}
+      pageCount={number('PageCount', 10, { min: 2, max: 100 })}
       deviceSize={select(
         'Device Size',
         {
