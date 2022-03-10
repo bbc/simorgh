@@ -67,9 +67,9 @@ const ScrollablePromo = ({ blocks, blockGroupIndex, isRecommendationType }) => {
   const { optimizely } = useContext(OptimizelyContext);
 
   const promoVariation = useOptimizelyVariation(HINDI_EXPERIMENT_FEATURE_ID);
-  const hasVariationKey = promoVariation !== null;
+  const hasVariationKey = promoVariation === 'variation_3';
   const eventTrackingData = getEventTrackingData(
-    isRecommendationType && hasVariationKey && optimizely,
+    hasVariationKey && optimizely,
     blockGroupIndex,
   );
 

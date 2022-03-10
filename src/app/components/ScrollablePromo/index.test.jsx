@@ -232,7 +232,7 @@ describe('ScrollablePromo', () => {
 
 describe('recommendationEOJ', () => {
   beforeEach(() => {
-    useOptimizelyVariation.mockReturnValue('variation eoj');
+    useOptimizelyVariation.mockReturnValue('variation_3');
   });
 
   afterEach(() => {
