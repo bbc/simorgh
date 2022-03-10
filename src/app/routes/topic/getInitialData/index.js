@@ -14,12 +14,19 @@ const getId = pipe(getUrlPath, removeAmp, popId);
 
 export default async ({ getAgent, service, path: pathname, variant }) => {
   try {
+    const env = pathname.includes('renderer_env=test') ? 'test' : 'live';
     const agent = await getAgent();
     const id = getId(pathname);
     const path = `${process.env.BFF_PATH}?id=${id}&service=${service}${
       variant ? `&variant=${variant}` : ``
     }`;
-    const { status, json } = await fetchPageData({ path, agent });
+
+    const optHeaders = { 'ctx-service-env': env };
+    const { status, json } = await fetchPageData({
+      path,
+      agent,
+      optHeaders,
+    });
     const { data } = json;
     return {
       status,
