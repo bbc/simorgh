@@ -112,7 +112,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const recommendationsInitialData = path(['recommendations'], pageData);
   const topics = path(['metadata', 'topics'], pageData);
 
-  // Used for experiment 003_hindi_experiment_feature. Should be removed after.
+  // OPTIMIZELY: 003_hindi_experiment_feature.
   const { optimizely } = useContext(OptimizelyContext);
   const eventTrackingData = getEventTrackingData();
   const splitRecsViewEventTracker = useViewTracker({
@@ -219,6 +219,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
     podcastPromo: podcastPromoEnabled && InlinePodcastPromo,
+    // OPTIMIZELY: 003_hindi_experiment_feature.
     experimentBlock: props => {
       const { showForVariation } = props;
 

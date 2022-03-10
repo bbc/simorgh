@@ -3,6 +3,10 @@ import { arrayOf, shape, number, string, func } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
 import CpsRecommendations from '..';
 
+/*
+ * OPTIMIZELY: 003_hindi_experiment_feature.
+ * This component should be removed after the experiment.
+ */
 const SplitRecommendations = ({ items, ...props }) => {
   const { parentColumns, part, splitRecsViewEventTracker } = props;
 
