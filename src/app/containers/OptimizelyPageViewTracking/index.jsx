@@ -3,15 +3,14 @@ import { OptimizelyContext } from '@optimizely/react-sdk';
 import { RequestContext } from '#contexts/RequestContext';
 import useOptimizelyScrollDepth from '#hooks/useOptimizelyScrollDepth';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
-
-const IMPROVED_PROMO_EXPERIMENT_ID = 'improved_promos';
+import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 
 const OptimizelyPageViewTracking = () => {
   const { isAmp } = useContext(RequestContext);
   const { optimizely } = useContext(OptimizelyContext);
   const [pageViewSent, setPageViewSent] = useState(false);
 
-  const promoVariation = useOptimizelyVariation(IMPROVED_PROMO_EXPERIMENT_ID);
+  const promoVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.featureId);
   const hasVariationKey = promoVariation !== null;
 
   const sendPageViewEvent = hasVariationKey && !isAmp && !pageViewSent;
