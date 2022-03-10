@@ -1448,7 +1448,8 @@ describe('Story Page', () => {
               item.getAttribute('aria-labelledby') ===
               'recommendations-heading',
           );
-          expect(RecommendationsRegions).toHaveLength(1 );
+
+          expect(RecommendationsRegions).toHaveLength(1);
         });
       });
     });
