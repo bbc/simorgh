@@ -10,6 +10,7 @@ import {
 } from 'prop-types';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
 import { getPica } from '@bbc/gel-foundations/typography';
 import { getSerifBold } from '@bbc/psammead-styles/font-styles';
 import { C_GREY_6, C_GREY_8, C_WHITE } from '@bbc/psammead-styles/colours';
@@ -84,16 +85,14 @@ const Promo = ({ block, onClick, isRecommendationType }) => {
     ? block
     : filterForBlockType(pathOr({}, ['model', 'blocks'], block), 'text');
   const href = isRecommendationType
-    ? pathOr('', ['locators', 'assetUri'], textBlock)
-    : pathOr(
-        '',
+    ? path(['locators', 'assetUri'], textBlock)
+    : path(
         ['model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'locator'],
         textBlock,
       );
   const title = isRecommendationType
-    ? pathOr('', ['headlines', 'headline'], textBlock)
-    : pathOr(
-        '',
+    ? path(['headlines', 'headline'], textBlock)
+    : path(
         ['model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'text'],
         textBlock,
       );
