@@ -7,6 +7,7 @@ import LinkedData from '#app/containers/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import TopicTitle from './TopicTitle';
 import TopicGrid from './TopicGrid';
+import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 
 const Wrapper = styled.div`
   margin: 0 auto;
@@ -27,6 +28,8 @@ const TopicPage = ({ pageData }) => {
 
   return (
     <Wrapper>
+      <ATIAnalytics data={pageData} />
+      <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
         title={title}
         lang={lang}
@@ -41,7 +44,6 @@ const TopicPage = ({ pageData }) => {
       />
       <TopicTitle>{title}</TopicTitle>
       <TopicGrid promos={promos} />
-      <ATIAnalytics data={pageData} />;
     </Wrapper>
   );
 };
