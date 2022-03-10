@@ -12,10 +12,12 @@ export const buildCpsAssetPageATIParams = (
   requestContext,
   serviceContext,
   contentType,
+  location,
 ) => {
   const { platform, statsDestination } = requestContext;
   const { atiAnalyticsAppName, atiAnalyticsProducerId, service, brandName } =
     serviceContext;
+  const { hostname } = location;
 
   const { metadata, promo } = pageData;
 
@@ -67,6 +69,7 @@ export const buildCpsAssetPageATIParams = (
     statsDestination,
     platform,
     service,
+    hostname,
   };
 };
 
@@ -75,6 +78,7 @@ export const buildCpsAssetPageATIUrl = (
   requestContext,
   serviceContext,
   contentType,
+  location,
 ) => {
   return buildATIPageTrackPath(
     buildCpsAssetPageATIParams(
@@ -82,6 +86,7 @@ export const buildCpsAssetPageATIUrl = (
       requestContext,
       serviceContext,
       contentType,
+      location,
     ),
   );
 };

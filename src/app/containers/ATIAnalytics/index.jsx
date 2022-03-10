@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { useLocation } from 'react-router-dom';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { pageDataPropType } from '#models/propTypes/data';
@@ -16,6 +17,7 @@ const ATIAnalytics = ({ data }) => {
   const requestContext = useContext(RequestContext);
   const serviceContext = useContext(ServiceContext);
   const { pageType, isAmp } = requestContext;
+  const location = useLocation();
 
   const pageTypeHandlers = {
     article: buildArticleATIUrl,
@@ -60,6 +62,7 @@ const ATIAnalytics = ({ data }) => {
     data,
     requestContext,
     serviceContext,
+    location,
   );
 
   return isAmp ? (

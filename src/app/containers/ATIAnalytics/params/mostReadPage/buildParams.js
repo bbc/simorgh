@@ -5,6 +5,7 @@ export const buildMostReadATIParams = (
   pageData,
   requestContext,
   serviceContext,
+  location,
 ) => {
   const { platform, statsDestination } = requestContext;
   const {
@@ -15,6 +16,7 @@ export const buildMostReadATIParams = (
     service,
     mostRead: { header },
   } = serviceContext;
+  const { hostname } = location;
 
   return {
     appName: atiAnalyticsAppName,
@@ -29,6 +31,7 @@ export const buildMostReadATIParams = (
     service,
     timePublished: pageData.firstRecordTimeStamp,
     timeUpdated: pageData.lastRecordTimeStamp,
+    hostname,
   };
 };
 
@@ -36,9 +39,10 @@ export const buildMostReadATIUrl = (
   pageData,
   requestContext,
   serviceContext,
+  location,
 ) => {
   return buildATIPageTrackPath(
-    buildMostReadATIParams(pageData, requestContext, serviceContext),
+    buildMostReadATIParams(pageData, requestContext, serviceContext, location),
   );
 };
 

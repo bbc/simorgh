@@ -5,6 +5,7 @@ export const buildMostWatchedATIParams = (
   pageData,
   requestContext,
   serviceContext,
+  location,
 ) => {
   const { platform, statsDestination } = requestContext;
   const {
@@ -15,6 +16,7 @@ export const buildMostWatchedATIParams = (
     service,
     mostWatched: { header },
   } = serviceContext;
+  const { hostname } = location;
 
   return {
     appName: atiAnalyticsAppName,
@@ -29,6 +31,7 @@ export const buildMostWatchedATIParams = (
     service,
     timePublished: pageData.firstRecordTimeStamp,
     timeUpdated: pageData.lastRecordTimeStamp,
+    hostname,
   };
 };
 
@@ -36,9 +39,15 @@ export const buildMostWatchedATIUrl = (
   pageData,
   requestContext,
   serviceContext,
+  location,
 ) => {
   return buildATIPageTrackPath(
-    buildMostWatchedATIParams(pageData, requestContext, serviceContext),
+    buildMostWatchedATIParams(
+      pageData,
+      requestContext,
+      serviceContext,
+      location,
+    ),
   );
 };
 

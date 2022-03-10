@@ -5,10 +5,12 @@ export const buildTvRadioATIParams = (
   pageData,
   requestContext,
   serviceContext,
+  location,
 ) => {
   const { platform, statsDestination } = requestContext;
   const { atiAnalyticsAppName, atiAnalyticsProducerId, service } =
     serviceContext;
+  const { hostname } = location;
 
   const { id, language, pageTitle, pageIdentifier, contentType } = pageData;
 
@@ -32,6 +34,7 @@ export const buildTvRadioATIParams = (
     statsDestination,
     platform,
     service,
+    hostname,
   };
 };
 
@@ -39,8 +42,9 @@ export const buildTvRadioATIUrl = (
   pageData,
   requestContext,
   serviceContext,
+  location,
 ) => {
   return buildATIPageTrackPath(
-    buildTvRadioATIParams(pageData, requestContext, serviceContext),
+    buildTvRadioATIParams(pageData, requestContext, serviceContext, location),
   );
 };

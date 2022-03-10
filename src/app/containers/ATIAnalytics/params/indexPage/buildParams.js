@@ -12,10 +12,12 @@ export const buildIndexPageATIParams = (
   indexPageData,
   requestContext,
   serviceContext,
+  location,
 ) => {
   const { platform, statsDestination, pageType } = requestContext;
   const { atiAnalyticsAppName, atiAnalyticsProducerId, brandName, service } =
     serviceContext;
+  const { hostname } = location;
 
   return {
     appName: atiAnalyticsAppName,
@@ -31,6 +33,7 @@ export const buildIndexPageATIParams = (
     platform,
     service,
     statsDestination,
+    hostname,
   };
 };
 
@@ -38,9 +41,15 @@ export const buildIndexPageATIUrl = (
   indexPageData,
   requestContext,
   serviceContext,
+  location,
 ) => {
   return buildATIPageTrackPath(
-    buildIndexPageATIParams(indexPageData, requestContext, serviceContext),
+    buildIndexPageATIParams(
+      indexPageData,
+      requestContext,
+      serviceContext,
+      location,
+    ),
   );
 };
 
