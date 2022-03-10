@@ -91,7 +91,7 @@ const ScrollablePromo = ({ blocks, blockGroupIndex, isRecommendationType }) => {
     translations,
   );
 
-  const labelId = 'recommendations-heading';
+  const labelId = 'eoj-recommendations-heading';
   const a11yAttributes = {
     as: 'section',
     role: 'region',

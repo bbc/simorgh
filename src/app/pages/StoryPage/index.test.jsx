@@ -29,6 +29,10 @@ import russianSecondaryColumnData from '#data/russian/secondaryColumn/index.json
 import ukrainianInRussianPageData from '#data/ukrainian/cpsAssets/news-russian-23333960.json';
 import ukrainianSecondaryColumnData from '#data/ukrainian/secondaryColumn/index.json';
 import ukrainianMostReadData from '#data/ukrainian/mostRead/index.json';
+import * as optimizelySDK from '@optimizely/react-sdk';
+import hindiPageData from '#data/hindi/cpsAssets/india-60426858.json';
+import hindiRecommendationsData from '#data/hindi/recommendations/index.json';
+import hindiMostRead from '#data/hindi/mostRead/index.json';
 import russianPageDataWithoutInlinePromo from './fixtureData/russianPageDataWithoutPromo';
 import StoryPage from '.';
 
@@ -62,6 +66,20 @@ jest.mock('#containers/Ad/Canonical/CanonicalAdBootstrapJs', () => {
   );
   return CanonicalAdBootstrapJs;
 });
+
+const optimizelyExperimentSpy = jest.spyOn(
+  optimizelySDK,
+  'OptimizelyExperiment',
+);
+
+const optimizely = {
+  onReady: jest.fn(() => Promise.resolve()),
+  track: jest.fn(),
+  user: {
+    attributes: {},
+  },
+  close: jest.fn(),
+};
 
 const defaultToggleState = {
   ads: {
@@ -100,6 +118,42 @@ const Page = ({
           showAdsBasedOnLocation={showAdsBasedOnLocation}
         >
           <StoryPage service={service} pageData={pageData} />
+        </RequestContextProvider>
+      </ServiceContextProvider>
+    </ToggleContext.Provider>
+  </StaticRouter>
+);
+
+const PageWithContext = ({
+  pageData,
+  service,
+  showAdsBasedOnLocation = false,
+  isAmp = false,
+  toggles = defaultToggleState,
+}) => (
+  <StaticRouter>
+    <ToggleContext.Provider
+      value={{ toggleState: toggles, toggleDispatch: jest.fn() }}
+    >
+      <ServiceContextProvider
+        pageLang={pageData.metadata.language}
+        service={service}
+      >
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.co.uk"
+          isAmp={isAmp}
+          pageType={pageData.metadata.type}
+          pathname={pageData.metadata.locators.assetUri}
+          service={service}
+          statusCode={200}
+          showAdsBasedOnLocation={showAdsBasedOnLocation}
+        >
+          <optimizelySDK.OptimizelyProvider
+            optimizely={optimizely}
+            isServerSide
+          >
+            <StoryPage service={service} pageData={pageData} />
+          </optimizelySDK.OptimizelyProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContext.Provider>
@@ -645,5 +699,74 @@ describe('Story Page', () => {
         'podcast-promo',
       ),
     );
+  });
+});
+
+describe.skip('optimizelyExperiment', () => {
+  describe('003_hindi_experiment_feature', () => {
+    describe('variation_3', () => {
+      beforeEach(() => {
+        optimizelyExperimentSpy.mockImplementation(props => {
+          const { children } = props;
+
+          const variation = 'variation_3';
+
+          if (children != null && typeof children === 'function') {
+            return <>{children(variation, true, false)}</>;
+          }
+
+          return null;
+        });
+      });
+
+      afterAll(() => {
+        jest.restoreAllMocks();
+      });
+
+      it('should render EOJ variation when showForVariation has variation_3 value ', async () => {
+        fetchMock.mock(
+          'http://localhost/some-cps-sty-path.json',
+          hindiPageData,
+        );
+        fetchMock.mock('http://localhost/hindi/mostread.json', hindiMostRead);
+        fetchMock.mock(
+          'http://localhost/hindi/india-60426858/recommendations.json',
+          hindiRecommendationsData,
+        );
+        const { pageData } = await getInitialData({
+          path: '/some-cps-sty-path',
+          service: 'hindi',
+          pageType,
+        });
+
+        const toggles = {
+          cpsRecommendations: {
+            enabled: true,
+          },
+        };
+
+        const { getByLabelText, getByText } = render(
+          <PageWithContext
+            pageData={pageData}
+            service="hindi"
+            toggles={toggles}
+          />,
+        );
+        expect(
+          getByLabelText('eoj-recommendations-heading'),
+        ).toBeInTheDocument();
+        expect(
+          getByText(
+            'कोविड-19 महामारीः तो सबसे ज़्यादा मौतों की वजह वायरस नहीं होगा',
+          ),
+        ).toBeInTheDocument();
+        expect(
+          getByText('कोरोना से मिले कौन से सबक़ हम याद रखेंगे?'),
+        ).toBeInTheDocument();
+        expect(
+          getByText('कोविड-19 के बाद हमारी यात्राएं कैसी होंगी?'),
+        ).toBeInTheDocument();
+      });
+    });
   });
 });
