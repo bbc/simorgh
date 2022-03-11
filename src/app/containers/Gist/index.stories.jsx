@@ -1,19 +1,25 @@
 import React from 'react';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import { withKnobs } from '@storybook/addon-knobs';
-import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import Gist from '.';
 import blocks from './fixtures';
 
 // eslint-disable-next-line react/prop-types
-const Component = ({ service, variant }) => {
+const Component = ({ service, script, dir }) => {
   return (
-    <ServiceContextProvider service={service} variant={variant}>
-      <RequestContextProvider isAmp={false} service={service}>
-        <Gist blocks={blocks} />
-      </RequestContextProvider>
-    </ServiceContextProvider>
+    <ToggleContextProvider
+      toggles={{
+        gist: {
+          enabled: true,
+        },
+      }}
+    >
+      <ServiceContextProvider service={service} script={script} dir={dir}>
+        <Gist blocks={blocks} />;
+      </ServiceContextProvider>
+    </ToggleContextProvider>
   );
 };
 
