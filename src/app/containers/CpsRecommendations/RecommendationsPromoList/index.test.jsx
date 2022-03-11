@@ -28,11 +28,6 @@ const promoItems = path(
   pidginPageData,
 );
 
-const optimizely = {
-  onReady: jest.fn(() => Promise.resolve()),
-  track: jest.fn(),
-};
-
 const Fixture = () => (
   <ServiceContextProvider service="pidgin">
     <ToggleContextProvider

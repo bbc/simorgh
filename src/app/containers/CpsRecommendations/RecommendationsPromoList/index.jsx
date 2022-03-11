@@ -21,12 +21,14 @@ const getEventTrackingDataWithOptimizely = ({ item, index, optimizely }) => {
 
 const RecommendationsPromoListItem = forwardRef(
   ({ item, index, optimizely, showForVariation }, forwardedRef) => {
-    const eventTrackingData = getEventTrackingDataWithOptimizely({
-      item,
-      index,
-      optimizely,
-      showForVariation,
-    });
+    const eventTrackingData = showForVariation
+      ? getEventTrackingDataWithOptimizely({
+          item,
+          index,
+          optimizely,
+          showForVariation,
+        })
+      : getEventTrackingData({ item, index });
     const linkViewEventTracker = useViewTracker(eventTrackingData.link);
     const elementRefCallback = element => {
       linkViewEventTracker(element);
