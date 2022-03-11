@@ -17,13 +17,11 @@ export const buildArticleATIParams = (
   articleData,
   requestContext,
   serviceContext,
-  location,
 ) => {
   const { platform, isUK, statsDestination, previousPath, origin } =
     requestContext || {};
   const { atiAnalyticsAppName, atiAnalyticsProducerId, service } =
     serviceContext || {};
-  const { hostname } = location;
 
   return {
     appName: atiAnalyticsAppName,
@@ -45,7 +43,6 @@ export const buildArticleATIParams = (
     previousPath,
     origin,
     nationsProducer: getNationsProducer(articleData),
-    hostname,
   };
 };
 
@@ -53,15 +50,9 @@ export const buildArticleATIUrl = (
   articleData,
   requestContext,
   serviceContext,
-  location,
 ) => {
   return buildATIPageTrackPath(
-    buildArticleATIParams(
-      articleData,
-      requestContext,
-      serviceContext,
-      location,
-    ),
+    buildArticleATIParams(articleData, requestContext, serviceContext),
   );
 };
 

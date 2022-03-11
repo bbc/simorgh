@@ -9,6 +9,7 @@ import {
   getReferrer,
   getAtUserId,
   isLocServeCookieSet,
+  onOnionTld,
   sanitise,
   getAtiUrl,
   getEventInfo,
@@ -42,12 +43,10 @@ export const buildATIPageTrackPath = ({
   categoryName,
   campaigns,
   nationsProducer,
-  hostname,
 }) => {
   const href = getHref(platform);
   const referrer = getReferrer(platform, origin, previousPath);
   const campaignType = getCampaignType();
-  const isOnionPage = hostname.split('.')[0] === 'onion';
 
   // on AMP, variable substitutions are used in the value and they cannot be
   // encoded: https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md
@@ -223,11 +222,15 @@ export const buildATIPageTrackPath = ({
       disableEncoding: true,
     },
     ...getRSSMarketingString(href, campaignType),
-    ...(isOnionPage && {
-      key: 'product_platform',
-      description: 'onion page',
-      value: 'tor',
-    }),
+    ...(onOnionTld()
+      ? [
+          {
+            key: 'product_platform',
+            description: 'onion url',
+            value: 'tor',
+          },
+        ]
+      : []),
   ];
 
   return getAtiUrl(pageViewBeaconValues);

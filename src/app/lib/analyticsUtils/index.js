@@ -620,3 +620,6 @@ export const getATIMarketingString = (href, campaignType) => {
 };
 
 export const LIBRARY_VERSION = 'simorgh';
+
+export const onOnionTld = () =>
+  onClient() ? window.location.host.endsWith('.onion') : false;

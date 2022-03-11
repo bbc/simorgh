@@ -5,12 +5,10 @@ export const buildTopicPageATIParams = (
   pageData,
   requestContext,
   serviceContext,
-  location,
 ) => {
   const { platform, statsDestination, id } = requestContext;
   const { atiAnalyticsAppName, atiAnalyticsProducerId, service, lang } =
     serviceContext;
-  const { hostname } = location;
 
   return {
     appName: atiAnalyticsAppName,
@@ -24,7 +22,6 @@ export const buildTopicPageATIParams = (
     language: lang,
     pageIdentifier: `${service}.topics.${id}.page`,
     contentId: `urn:bbc:tipo:topic:${id}`,
-    hostname,
   };
 };
 
@@ -32,13 +29,7 @@ export const buildTopicPageATIUrl = (
   topicPageData,
   requestContext,
   serviceContext,
-  location,
 ) =>
   buildATIPageTrackPath(
-    buildTopicPageATIParams(
-      topicPageData,
-      requestContext,
-      serviceContext,
-      location,
-    ),
+    buildTopicPageATIParams(topicPageData, requestContext, serviceContext),
   );
