@@ -1,25 +1,13 @@
 import React from 'react';
-import { render, waitFor } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import path from 'ramda/src/path';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
-import hindiRecommendations from '#data/hindi/recommendations/index.json';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import * as viewTracking from '#hooks/useViewTracker';
-import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
-import { OptimizelyProvider } from '@optimizely/react-sdk';
-import { RequestContextProvider } from '#app/contexts/RequestContext';
 import RecommendationsPromoList from './index';
-
-jest.mock(`#containers/ATIAnalytics/beacon`, () => {
-  return {
-    __esModule: true,
-    default: jest.fn(),
-    sendEventBeacon: jest.fn(),
-  };
-});
 
 process.env.SIMORGH_BASE_URL = 'http://bbc.com';
 
@@ -42,7 +30,7 @@ const Fixture = () => (
 
 beforeEach(jest.clearAllMocks);
 
-describe.only('RecommendationsPromoList', () => {
+describe('RecommendationsPromoList', () => {
   shouldMatchSnapshot(
     'it renders a list of Story Promos wrapped in Grid components',
     <Fixture />,
@@ -153,28 +141,6 @@ describe.only('RecommendationsPromoList', () => {
         format: 'CHD=promo::3',
         advertiserID: 'pidgin',
         url: 'http://bbc.com/pidgin/tori-42494678',
-      });
-    });
-  });
-
-  describe('Optimizely Experiment', () => {
-    describe('003_hindi_experiment_feature', () => {
-      describe('Control', () => {
-        describe('ViewTracking', () => {
-          it('should send the ATI and Optimizely view events', async () => {
-            const { container, getByRole } = render(
-              <Fixture
-                items={hindiRecommendations}
-                showForVariation="control"
-              />,
-            );
-            await waitFor(() => {
-              expect(getByRole('list')).toBeInTheDocument();
-              expect(container.querySelectorAll('li').length).toEqual(3);
-              console.log(sendEventBeacon.mock.calls);
-            });
-          });
-        });
       });
     });
   });
