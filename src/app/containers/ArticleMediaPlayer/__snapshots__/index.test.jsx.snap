@@ -369,6 +369,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   width: 5rem;
   position: absolute;
   bottom: 0;
+  left: 0;
 }
 
 .emotion-15:hover,
