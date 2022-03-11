@@ -44,8 +44,7 @@ const StyledList = styled.li`
       @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}){
         margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
         &:first-child {
-          margin-${dir === 'ltr' ? 'left' : 'right'}: 0;
-    
+          margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
         }
         &:last-child {
           margin-${dir === 'ltr' ? 'right' : 'left'}: ${GEL_SPACING};
@@ -55,8 +54,7 @@ const StyledList = styled.li`
         margin-${dir === 'ltr' ? `left` : `right`}: ${GEL_SPACING_DBL};  
 
         &:first-child {
-          margin-${dir === 'ltr' ? 'left' : 'right'}: 0;
-    };
+          margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING_DBL};
         }
       }
       @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}){

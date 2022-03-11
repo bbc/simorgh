@@ -59,7 +59,7 @@ const processOptimoBlocks = toggles => service =>
       augmentWithDisclaimer(toggles),
     ),
     addBylineBlock,
-    addRecommendationsBlock,
+    // addRecommendationsBlock,
     addMpuBlock,
     applyBlockPositioning,
     addExperimentPlaceholderBlocks(service),

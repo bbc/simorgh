@@ -46,15 +46,11 @@ const LabelComponent = styled.strong`
   color: ${C_SHADOW};
 `;
 
-const getEventTrackingData = (optimizely, blockGroupIndex) => {
-  const trackingData = {
-    componentName: `edoj${blockGroupIndex}`,
-    format: 'CHD=edoj',
-    ...(optimizely && { optimizely }),
-  };
-  // console.log(trackingData);
-  return trackingData;
-};
+const getEventTrackingData = (optimizely, blockGroupIndex) => ({
+  componentName: `edoj${blockGroupIndex}`,
+  format: 'CHD=edoj',
+  ...(optimizely && { optimizely }),
+});
 
 const HINDI_EXPERIMENT_FEATURE_ID = path(['featureId'], OPTIMIZELY_CONFIG);
 

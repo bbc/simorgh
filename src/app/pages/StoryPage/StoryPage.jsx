@@ -245,7 +245,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
               showForVariation === 'variation_3' &&
               variation === 'variation_3'
             ) {
-              console.log('inside variation_3');
               return (
                 <ExperimentalEOJ
                   {...props}
