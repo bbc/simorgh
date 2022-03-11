@@ -702,7 +702,7 @@ describe('Story Page', () => {
   });
 });
 
-describe('optimizelyExperiment', () => {
+describe.skip('Optimizely Experiments', () => {
   describe('003_hindi_experiment_feature', () => {
     describe('variation_3', () => {
       const forceMockVariation = variation =>
