@@ -49,13 +49,13 @@ const PromoBox = styled.div`
   padding: ${GEL_SPACING_DBL};
   margin-bottom: ${GEL_SPACING_TRPL};
   @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}) {
-    width: 14.8125rem;
+    width: 14.8rem;
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    width: 11.125rem;
+    width: 11.1rem;
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    width: 12.6875rem;
+    width: 12.6rem;
   }
 `;
 

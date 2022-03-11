@@ -1,4 +1,4 @@
-const recommendationOne = {
+export const recommendationOne = {
   headlines: {
     shortHeadline:
       'La conmovedora historia de cómo una madre y el hombre preso por la muerte de su hija se unieron para atrapar al verdadero asesino',

@@ -11,6 +11,7 @@ import path from 'ramda/src/path';
 import isEmpty from 'ramda/src/isEmpty';
 import tail from 'ramda/src/tail';
 import {
+  GEL_GROUP_0_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
@@ -44,6 +45,19 @@ const LabelComponent = styled.strong`
   ${({ service }) => getSansRegular(service)}
   margin-bottom: ${GEL_SPACING_TRPL};
   color: ${C_SHADOW};
+
+  ${({ dir }) =>
+    `
+    @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}){
+      margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
+    }
+    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}){
+      margin-${dir === 'ltr' ? `left` : `right`}: ${GEL_SPACING_DBL};  
+    }
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}){
+        margin-${dir === 'ltr' ? `left` : `right`}: 0;
+    }
+`}
 `;
 
 const getEventTrackingData = (optimizely, blockGroupIndex) => ({
