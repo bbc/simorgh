@@ -39,7 +39,7 @@ const PageWithContext = ({ items, toggles = defaultToggleState, ...props }) => {
   );
 };
 
-describe('optimizelyExperiment', () => {
+describe('Optimizely Experiments', () => {
   describe('003_hindi_experiment_feature', () => {
     describe('variation_1', () => {
       it('should have two parts with two recommendations each when four recommendations are in the data', async () => {

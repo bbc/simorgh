@@ -716,7 +716,7 @@ describe('Story Page', () => {
   });
 
   // Need to enable when experiment blocks has been added.
-  describe.skip('optimizelyExperiment', () => {
+  describe.skip('Optimizely Experiments', () => {
     describe('003_hindi_experiment_feature', () => {
       describe('variation_1', () => {
         beforeEach(() => {
@@ -735,6 +735,136 @@ describe('Story Page', () => {
 
         afterAll(() => {
           jest.restoreAllMocks();
+        });
+
+        it('should render split recommendations when variation is variation_1', async () => {
+          const toggles = {
+            cpsRecommendations: {
+              enabled: true,
+            },
+            eventTracking: {
+              enabled: true,
+            },
+          };
+          fetchMock.mock(
+            'http://localhost/some-cps-sty-path.json',
+            hindiPageData,
+          );
+          fetchMock.mock('http://localhost/hindi/mostread.json', hindiMostRead);
+          fetchMock.mock(
+            'http://localhost/hindi/india-60426858/recommendations.json',
+            hindiRecommendationsData,
+          );
+          const { pageData } = await getInitialData({
+            path: '/some-cps-sty-path',
+            service: 'hindi',
+            pageType,
+          });
+
+          const { getAllByRole } = render(
+            <PageWithContext
+              pageData={pageData}
+              service="hindi"
+              toggles={toggles}
+            />,
+          );
+
+          const RecommendationsRegions = getAllByRole('region').filter(
+            item =>
+              item.getAttribute('aria-labelledby') ===
+              'recommendations-heading',
+          );
+          expect(RecommendationsRegions).toHaveLength(2);
+        });
+
+        it('should not render split recommendations when recommendations are not enabled', async () => {
+          const toggles = {
+            eventTracking: {
+              enabled: true,
+            },
+          };
+          fetchMock.mock(
+            'http://localhost/some-cps-sty-path.json',
+            hindiPageData,
+          );
+          fetchMock.mock('http://localhost/hindi/mostread.json', hindiMostRead);
+          fetchMock.mock(
+            'http://localhost/hindi/india-60426858/recommendations.json',
+            hindiRecommendationsData,
+          );
+          const { pageData } = await getInitialData({
+            path: '/some-cps-sty-path',
+            service: 'hindi',
+            pageType,
+          });
+
+          const { getAllByRole } = render(
+            <PageWithContext
+              pageData={pageData}
+              service="hindi"
+              toggles={toggles}
+            />,
+          );
+
+          const RecommendationsRegions = getAllByRole('region').filter(
+            item =>
+              item.getAttribute('aria-labelledby') ===
+              'recommendations-heading',
+          );
+
+          expect(RecommendationsRegions).toHaveLength(0);
+        });
+
+        it('should not render split recommendations when variation is not variation_1', async () => {
+          optimizelyExperimentSpy.mockImplementation(props => {
+            const { children } = props;
+
+            const variation = 'control';
+
+            if (children != null && typeof children === 'function') {
+              return <>{children(variation, true, false)}</>;
+            }
+
+            return null;
+          });
+          const toggles = {
+            cpsRecommendations: {
+              enabled: true,
+            },
+            eventTracking: {
+              enabled: true,
+            },
+          };
+          fetchMock.mock(
+            'http://localhost/some-cps-sty-path.json',
+            hindiPageData,
+          );
+          fetchMock.mock('http://localhost/hindi/mostread.json', hindiMostRead);
+          fetchMock.mock(
+            'http://localhost/hindi/india-60426858/recommendations.json',
+            hindiRecommendationsData,
+          );
+          const { pageData } = await getInitialData({
+            path: '/some-cps-sty-path',
+            service: 'hindi',
+            pageType,
+          });
+
+          const { getAllByRole } = render(
+            <PageWithContext
+              pageData={pageData}
+              service="hindi"
+              toggles={toggles}
+            />,
+          );
+
+          const RecommendationsRegions = getAllByRole('region').filter(
+            item =>
+              item.getAttribute('aria-labelledby') ===
+              'recommendations-heading',
+          );
+
+          expect(RecommendationsRegions).toHaveLength(1);
         });
 
         describe('Event Tracking', () => {
@@ -1358,98 +1488,6 @@ describe('Story Page', () => {
               );
             });
           });
-        });
-
-        it('should render split recommendations when variation is variation_1', async () => {
-          const toggles = {
-            cpsRecommendations: {
-              enabled: true,
-            },
-            eventTracking: {
-              enabled: true,
-            },
-          };
-          fetchMock.mock(
-            'http://localhost/some-cps-sty-path.json',
-            hindiPageData,
-          );
-          fetchMock.mock('http://localhost/hindi/mostread.json', hindiMostRead);
-          fetchMock.mock(
-            'http://localhost/hindi/india-60426858/recommendations.json',
-            hindiRecommendationsData,
-          );
-          const { pageData } = await getInitialData({
-            path: '/some-cps-sty-path',
-            service: 'hindi',
-            pageType,
-          });
-
-          const { getAllByRole } = render(
-            <PageWithContext
-              pageData={pageData}
-              service="hindi"
-              toggles={toggles}
-            />,
-          );
-
-          const RecommendationsRegions = getAllByRole('region').filter(
-            item =>
-              item.getAttribute('aria-labelledby') ===
-              'recommendations-heading',
-          );
-          expect(RecommendationsRegions).toHaveLength(2);
-        });
-
-        it('should not render split recommendations when variation is not variation_1', async () => {
-          optimizelyExperimentSpy.mockImplementation(props => {
-            const { children } = props;
-
-            const variation = 'control';
-
-            if (children != null && typeof children === 'function') {
-              return <>{children(variation, true, false)}</>;
-            }
-
-            return null;
-          });
-          const toggles = {
-            cpsRecommendations: {
-              enabled: true,
-            },
-            eventTracking: {
-              enabled: true,
-            },
-          };
-          fetchMock.mock(
-            'http://localhost/some-cps-sty-path.json',
-            hindiPageData,
-          );
-          fetchMock.mock('http://localhost/hindi/mostread.json', hindiMostRead);
-          fetchMock.mock(
-            'http://localhost/hindi/india-60426858/recommendations.json',
-            hindiRecommendationsData,
-          );
-          const { pageData } = await getInitialData({
-            path: '/some-cps-sty-path',
-            service: 'hindi',
-            pageType,
-          });
-
-          const { getAllByRole } = render(
-            <PageWithContext
-              pageData={pageData}
-              service="hindi"
-              toggles={toggles}
-            />,
-          );
-
-          const RecommendationsRegions = getAllByRole('region').filter(
-            item =>
-              item.getAttribute('aria-labelledby') ===
-              'recommendations-heading',
-          );
-
-          expect(RecommendationsRegions).toHaveLength(1);
         });
       });
     });

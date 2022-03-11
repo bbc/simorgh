@@ -66,20 +66,12 @@ const CpsRecommendations = ({
 
   if (!hasStoryRecommendations || !enabled || !items.length) return null;
 
-  // const title = getTitle(showForVariation, part)(translations);
-
-  const title =
+  const titlePath =
     showForVariation === 'variation_1' && part === 2
-      ? pathOr(
-          'You may also be interested in',
-          ['splitRecommendationTitle'],
-          translations,
-        )
-      : pathOr(
-          'You may also be interested in',
-          ['recommendationTitle'],
-          translations,
-        );
+      ? ['You may also be interested in', ['splitRecommendationTitle']]
+      : ['You may also be interested in', ['recommendationTitle']];
+
+  const title = pathOr(...titlePath, translations);
 
   const { text, endTextVisuallyHidden } = path(['skipLink'], recommendations);
 
@@ -142,7 +134,7 @@ CpsRecommendations.propTypes = {
 
 CpsRecommendations.defaultProps = {
   items: [],
-  showForVariation: '',
+  showForVariation: null,
   part: null,
   splitRecsViewEventTracker: () => {},
 };

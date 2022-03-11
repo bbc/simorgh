@@ -23,10 +23,9 @@ const RecommendationsPromoListItem = forwardRef(
   ({ item, index, showForVariation }, forwardedRef) => {
     const { optimizely } = useContext(OptimizelyContext);
 
-    const eventTrackingData =
-      showForVariation === 'variation_1'
-        ? getEventTrackingDataWithOptimizely({ item, index, optimizely })
-        : getEventTrackingData({ item, index });
+    const eventTrackingData = showForVariation
+      ? getEventTrackingDataWithOptimizely({ item, index, optimizely })
+      : getEventTrackingData({ item, index });
     const linkViewEventTracker = useViewTracker(eventTrackingData.link);
     const elementRefCallback = element => {
       linkViewEventTracker(element);
@@ -103,7 +102,7 @@ RecommendationsPromoListItem.propTypes = {
 };
 
 RecommendationsPromoListItem.defaultProps = {
-  showForVariation: '',
+  showForVariation: null,
 };
 
 RecommendationsPromoList.propTypes = {
@@ -114,7 +113,7 @@ RecommendationsPromoList.propTypes = {
 
 RecommendationsPromoList.defaultProps = {
   splitRecsViewEventTracker: () => {},
-  showForVariation: '',
+  showForVariation: null,
 };
 
 export default RecommendationsPromoList;
