@@ -133,7 +133,7 @@ describe('CpsRelatedContent', () => {
   });
 
   describe('003_hindi_experiment_feature', () => {
-    it('should render a normal Related Content and title for "control" variation', async () => {
+    it('should render a normal title and Related Content for "control" variation', async () => {
       useOptimizelyVariation.mockReturnValue('control');
       const { container, queryByText } = renderRelatedContent({
         pageType: STORY_PAGE,
