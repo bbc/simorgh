@@ -101,6 +101,21 @@ describe('fetchPageData', () => {
       expect(fetch).toHaveBeenCalledWith(expectedUrl, fetchOptions);
     });
 
+    it('should call fetch with the correct headers when passed additional headers', async () => {
+      const optHeaders = { 'ctx-service-env': 'live' };
+
+      const expectedFetchOptions = {
+        headers: {
+          'User-Agent': 'Simorgh/ws-web-rendering',
+          'ctx-service-env': 'live',
+        },
+        timeout: 4000,
+      };
+      await fetchPageData({ path: requestedPathname, pageType, optHeaders });
+
+      expect(fetch).toHaveBeenCalledWith(expectedUrl, expectedFetchOptions);
+    });
+
     it('should return expected response', async () => {
       const response = await fetchPageData({
         path: requestedPathname,
