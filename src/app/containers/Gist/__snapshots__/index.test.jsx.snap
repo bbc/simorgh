@@ -102,7 +102,7 @@ exports[`Gist should render the gist with multiple list items 1`] = `
 }
 
 .emotion-2 {
-  color: #6E6E73;
+  color: #545658;
   border-top: 0.25rem solid #B80000;
   background-color: #FFFFFF;
   padding: 1.5rem 1.5rem 0 1rem;
@@ -320,8 +320,8 @@ exports[`Gist should render the gist with multiple list items 1`] = `
   content: ' ';
   position: absolute;
   border-width: 1rem;
-  border: 0.1875rem solid #6E6E73;
-  background-color: #6E6E73;
+  border: 0.1875rem solid #545658;
+  background-color: #545658;
   border-radius: 0;
   left: -1rem;
 }
@@ -559,7 +559,7 @@ exports[`Gist should render the gist with one list item 1`] = `
 }
 
 .emotion-2 {
-  color: #6E6E73;
+  color: #545658;
   border-top: 0.25rem solid #B80000;
   background-color: #FFFFFF;
   padding: 1.5rem 1.5rem 0 1rem;
@@ -777,8 +777,8 @@ exports[`Gist should render the gist with one list item 1`] = `
   content: ' ';
   position: absolute;
   border-width: 1rem;
-  border: 0.1875rem solid #6E6E73;
-  background-color: #6E6E73;
+  border: 0.1875rem solid #545658;
+  background-color: #545658;
   border-radius: 0;
   left: -1rem;
 }
