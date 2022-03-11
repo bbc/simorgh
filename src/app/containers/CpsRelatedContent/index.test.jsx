@@ -132,37 +132,51 @@ describe('CpsRelatedContent', () => {
     expect(screen.getByText(`Related content`)).toBeTruthy();
   });
 
-  it('should render a translated title for Hindi Recommendations Related Content', async () => {
-    useOptimizelyVariation.mockReturnValue('variation_2');
-    const { queryByText } = renderRelatedContent({
-      pageType: STORY_PAGE,
-      isStoryPage: true,
-      service: 'hindi',
+  describe('003_hindi_experiment_feature', () => {
+    it('should render a normal Related Content and title for "control" variation', async () => {
+      useOptimizelyVariation.mockReturnValue('control');
+      const { container, queryByText } = renderRelatedContent({
+        pageType: STORY_PAGE,
+        isStoryPage: true,
+        service: 'hindi',
+      });
+
+      expect(queryByText('संबंधित समाचार')).toBeInTheDocument();
+      expect(container.querySelectorAll('time').length).toBe(3);
     });
 
-    expect(queryByText('ये भी पढ़ें')).toBeInTheDocument();
-  });
+    it('should render a translated title for Hindi Recommendations Related Content', async () => {
+      useOptimizelyVariation.mockReturnValue('variation_2');
+      const { queryByText } = renderRelatedContent({
+        pageType: STORY_PAGE,
+        isStoryPage: true,
+        service: 'hindi',
+      });
 
-  it('should render a timestamp for Related Content', async () => {
-    useOptimizelyVariation.mockReturnValue(null);
-    const { container } = renderRelatedContent({
-      pageType: STORY_PAGE,
-      isStoryPage: true,
-      service: 'pidgin',
+      expect(queryByText('ये भी पढ़ें')).toBeInTheDocument();
     });
 
-    expect(container.querySelectorAll('time').length).toBe(3);
-  });
+    it('should render a timestamp for Related Content', async () => {
+      useOptimizelyVariation.mockReturnValue(null);
+      const { container } = renderRelatedContent({
+        pageType: STORY_PAGE,
+        isStoryPage: true,
+        service: 'pidgin',
+      });
 
-  it('should not render a timestamp for Hindi Recommendations Related Content', async () => {
-    useOptimizelyVariation.mockReturnValue('variation_2');
-    const { container } = renderRelatedContent({
-      pageType: STORY_PAGE,
-      isStoryPage: true,
-      service: 'hindi',
+      expect(container.querySelectorAll('time').length).toBe(3);
     });
 
-    expect(container.querySelectorAll('time').length).toBe(0);
+    it('should not render a timestamp for Hindi Recommendations Related Content', async () => {
+      useOptimizelyVariation.mockReturnValue('variation_2');
+      const { container } = renderRelatedContent({
+        pageType: STORY_PAGE,
+        isStoryPage: true,
+        service: 'hindi',
+      });
+
+      expect(container.querySelectorAll('time').length).toBe(0);
+    });
   });
 });
 
