@@ -41,7 +41,7 @@ import CpsTable from '#containers/CpsTable';
 import Byline from '#containers/Byline';
 import CpsSocialEmbedContainer from '#containers/SocialEmbed/Cps';
 import CpsRecommendations from '#containers/CpsRecommendations';
-import ScrollablePromo from '#app/components/ScrollablePromo';
+import ExperimentalEOJ from '#app/components/ExperimentalEOJ';
 import { InlinePodcastPromo } from '#containers/PodcastPromo';
 
 import {
@@ -247,10 +247,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
             ) {
               console.log('inside variation_3');
               return (
-                <ScrollablePromo
+                <ExperimentalEOJ
                   {...props}
                   blocks={recommendationsInitialData}
-                  isRecommendationType
                 />
               );
             }

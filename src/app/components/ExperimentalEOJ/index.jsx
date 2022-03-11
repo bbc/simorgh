@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, string, number, bool } from 'prop-types';
+import { arrayOf, shape, string, number } from 'prop-types';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -46,15 +46,19 @@ const LabelComponent = styled.strong`
   color: ${C_SHADOW};
 `;
 
-const getEventTrackingData = (optimizely, blockGroupIndex) => ({
-  componentName: `edoj${blockGroupIndex}`,
-  format: 'CHD=edoj',
-  ...(optimizely && { optimizely }),
-});
+const getEventTrackingData = (optimizely, blockGroupIndex) => {
+  const trackingData = {
+    componentName: `edoj${blockGroupIndex}`,
+    format: 'CHD=edoj',
+    ...(optimizely && { optimizely }),
+  };
+  // console.log(trackingData);
+  return trackingData;
+};
 
 const HINDI_EXPERIMENT_FEATURE_ID = path(['featureId'], OPTIMIZELY_CONFIG);
 
-const ScrollablePromo = ({ blocks, blockGroupIndex }) => {
+const ExperimentalEOJ = ({ blocks, blockGroupIndex }) => {
   const { script, service, dir, translations } = useContext(ServiceContext);
   const { optimizely } = useContext(OptimizelyContext);
 
@@ -111,7 +115,7 @@ const ScrollablePromo = ({ blocks, blockGroupIndex }) => {
   );
 };
 
-ScrollablePromo.propTypes = {
+ExperimentalEOJ.propTypes = {
   blocks: arrayOf(
     shape({
       headlines: shape({ headline: string.isRequired }),
@@ -119,12 +123,10 @@ ScrollablePromo.propTypes = {
     }),
   ).isRequired,
   blockGroupIndex: number,
-  isRecommendationType: bool,
 };
 
-ScrollablePromo.defaultProps = {
+ExperimentalEOJ.defaultProps = {
   blockGroupIndex: null,
-  isRecommendationType: false,
 };
 
-export default ScrollablePromo;
+export default ExperimentalEOJ;

@@ -7,18 +7,17 @@ import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
-import mundoRecommendationsData from '#pages/StoryPage/fixtureData/recommendations.ltr.json';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
 import { OptimizelyProvider } from '@optimizely/react-sdk';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import {
-  threeLinks,
-  oneLinkOnly,
-  moreThanThreeLinks,
+  oneRecommendation,
+  twoRecommendations,
+  threeRecommendations,
+  fourRecommendations,
 } from './helpers/fixtureData';
-import ScrollablePromo from '.';
-import { edOjA, edOjB } from './fixtures';
+import ExperimentalEOJ from '.';
 
 jest.mock('#hooks/useOptimizelyVariation', () => jest.fn(() => null));
 
@@ -49,14 +48,20 @@ const pageData = {
   },
 };
 
-const ScrollablePromoWithContext = ({
+const ExperimentalEOJWithContext = ({
   blocks,
   blockGroupIndex,
-  isRecommendationType,
   translations,
   service,
+  eventTracking = true,
 }) => (
-  <ToggleContextProvider>
+  <ToggleContextProvider
+    toggles={{
+      eventTracking: {
+        enabled: eventTracking,
+      },
+    }}
+  >
     <ServiceContext.Provider
       value={{
         service,
@@ -76,10 +81,9 @@ const ScrollablePromoWithContext = ({
       >
         <EventTrackingContextProvider pageData={pageData}>
           <OptimizelyProvider optimizely={optimizely} isServerSide>
-            <ScrollablePromo
+            <ExperimentalEOJ
               blocks={blocks}
               blockGroupIndex={blockGroupIndex}
-              isRecommendationType={isRecommendationType}
             />
           </OptimizelyProvider>
         </EventTrackingContextProvider>
@@ -88,149 +92,155 @@ const ScrollablePromoWithContext = ({
   </ToggleContextProvider>
 );
 
-describe('ScrollablePromo', () => {
-  it('should return null if no data is passed', () => {
+describe('ExperimentalEOJ', () => {
+  it('should return null if no data is provided', () => {
     const { container } = render(
-      <ScrollablePromoWithContext blocks={{}} service="news" />,
+      <ExperimentalEOJWithContext blocks={[]} service="news" />,
     );
     expect(container).toBeEmptyDOMElement();
   });
 
-  it('should render max 3 promo items', () => {
+  it('should render max 3 recommendations when more than 3 recommendations are provided', () => {
     const { getAllByRole } = render(
-      <ScrollablePromoWithContext blocks={moreThanThreeLinks} service="news" />,
+      <ExperimentalEOJWithContext
+        blocks={fourRecommendations}
+        service="news"
+      />,
     );
     expect(getAllByRole('listitem').length).toEqual(3);
   });
 
-  it('should render single promo item', () => {
+  it('should correctly render single recommendation', () => {
     const { container } = render(
-      <ScrollablePromoWithContext blocks={oneLinkOnly} service="news" />,
+      <ExperimentalEOJWithContext blocks={oneRecommendation} service="news" />,
     );
     expect(container.childElementCount).toEqual(1);
   });
 
-  it('should not render a list when there is only one promo', () => {
+  it('should not render a list when only one recommendation is provided', () => {
     const { queryByRole } = render(
-      <ScrollablePromoWithContext blocks={oneLinkOnly} service="news" />,
+      <ExperimentalEOJWithContext blocks={oneRecommendation} service="news" />,
     );
 
     expect(queryByRole('list')).not.toBeInTheDocument();
     expect(queryByRole('listitem')).not.toBeInTheDocument();
   });
 
-  it('should render unordered list if more than 1 item', () => {
+  it('should render an unordered list when more than 1 recommendation is provided', () => {
     const { queryByRole, getAllByRole } = render(
-      <ScrollablePromoWithContext blocks={threeLinks} service="news" />,
+      <ExperimentalEOJWithContext
+        blocks={threeRecommendations}
+        service="news"
+      />,
     );
     expect(queryByRole('list')).toBeInTheDocument();
     expect(getAllByRole('listitem').length).toEqual(3);
   });
+});
 
-  describe('event tracking in editorial onward journeys', () => {
-    afterEach(() => {
-      jest.clearAllMocks();
-    });
+describe('ExperimentalEOJ event tracking', () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
 
-    it('should call the view tracking hook with the correct params with one editorial onward journey', () => {
-      const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+  it('should call the view tracking hook with the correct params with one editorial onward journey', () => {
+    const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
 
-      render(
-        <ScrollablePromoWithContext
-          blocks={edOjA.model.blocks}
-          blockGroupIndex={1}
-          service="news"
-        />,
-      );
+    render(
+      <ExperimentalEOJWithContext
+        blocks={oneRecommendation}
+        blockGroupIndex={1}
+        service="news"
+      />,
+    );
 
-      expect(viewTrackerSpy).toHaveBeenCalledWith({
-        componentName: 'edoj1',
-        format: 'CHD=edoj',
-      });
-    });
-
-    it('should call the view tracking hook with the correct params with multiple editorial onward journeys', () => {
-      const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
-      render(
-        <ScrollablePromoWithContext
-          blocks={edOjA.model.blocks}
-          blockGroupIndex={1}
-          service="news"
-        />,
-      );
-      render(
-        <ScrollablePromoWithContext
-          blocks={edOjB.model.blocks}
-          blockGroupIndex={2}
-          service="news"
-        />,
-      );
-
-      expect(viewTrackerSpy).toHaveBeenCalledTimes(2);
-      expect(viewTrackerSpy).toHaveBeenCalledWith({
-        componentName: 'edoj1',
-        format: 'CHD=edoj',
-      });
-      expect(viewTrackerSpy).toHaveBeenCalledWith({
-        componentName: 'edoj2',
-        format: 'CHD=edoj',
-      });
-    });
-
-    it('should call the click tracking hook with one editorial onward journey', () => {
-      const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
-      render(
-        <ScrollablePromoWithContext
-          blocks={edOjA.model.blocks}
-          blockGroupIndex={1}
-          service="news"
-        />,
-      );
-
-      expect(clickTrackerSpy).toHaveBeenCalledWith({
-        componentName: 'edoj1',
-        format: 'CHD=edoj',
-      });
-    });
-
-    it('should call the click tracking hook with multiple editorial onward journeys', () => {
-      const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
-      render(
-        <ScrollablePromoWithContext
-          blocks={edOjA.model.blocks}
-          blockGroupIndex={1}
-          service="news"
-        />,
-      );
-      render(
-        <ScrollablePromoWithContext
-          blocks={edOjB.model.blocks}
-          blockGroupIndex={2}
-          service="news"
-        />,
-      );
-
-      expect(clickTrackerSpy).toHaveBeenCalledTimes(2);
-      expect(clickTrackerSpy).toHaveBeenCalledWith({
-        componentName: 'edoj1',
-        format: 'CHD=edoj',
-      });
-      expect(clickTrackerSpy).toHaveBeenCalledWith({
-        componentName: 'edoj2',
-        format: 'CHD=edoj',
-      });
+    expect(viewTrackerSpy).toHaveBeenCalledWith({
+      componentName: 'edoj1',
+      format: 'CHD=edoj',
     });
   });
 
-  it('it should not be a list if a single card is displayed (a11y)', () => {
-    const { queryByRole } = render(
-      <ScrollablePromoWithContext blocks={oneLinkOnly} service="news" />,
+  it('should call the view tracking hook with the correct params with multiple editorial onward journeys', () => {
+    const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+    render(
+      <ExperimentalEOJWithContext
+        blocks={oneRecommendation}
+        blockGroupIndex={1}
+        service="news"
+      />,
     );
-    expect(queryByRole('list')).toBeNull();
+    render(
+      <ExperimentalEOJWithContext
+        blocks={twoRecommendations}
+        blockGroupIndex={2}
+        service="news"
+      />,
+    );
+
+    expect(viewTrackerSpy).toHaveBeenCalledTimes(2);
+    expect(viewTrackerSpy).toHaveBeenCalledWith({
+      componentName: 'edoj1',
+      format: 'CHD=edoj',
+    });
+    expect(viewTrackerSpy).toHaveBeenCalledWith({
+      componentName: 'edoj2',
+      format: 'CHD=edoj',
+    });
+  });
+
+  it('should call the click tracking hook with one editorial onward journey', () => {
+    const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+    render(
+      <ExperimentalEOJWithContext
+        blocks={oneRecommendation}
+        blockGroupIndex={1}
+        service="news"
+      />,
+    );
+
+    expect(clickTrackerSpy).toHaveBeenCalledWith({
+      componentName: 'edoj1',
+      format: 'CHD=edoj',
+    });
+  });
+
+  it('should call the click tracking hook with multiple editorial onward journeys', () => {
+    const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+    render(
+      <ExperimentalEOJWithContext
+        blocks={oneRecommendation}
+        blockGroupIndex={1}
+        service="news"
+      />,
+    );
+    render(
+      <ExperimentalEOJWithContext
+        blocks={twoRecommendations}
+        blockGroupIndex={2}
+        service="news"
+      />,
+    );
+
+    expect(clickTrackerSpy).toHaveBeenCalledTimes(2);
+    expect(clickTrackerSpy).toHaveBeenCalledWith({
+      componentName: 'edoj1',
+      format: 'CHD=edoj',
+    });
+    expect(clickTrackerSpy).toHaveBeenCalledWith({
+      componentName: 'edoj2',
+      format: 'CHD=edoj',
+    });
   });
 });
 
-describe('recommendationEOJ', () => {
+it('it should not be a list if a single card is displayed (a11y)', () => {
+  const { queryByRole } = render(
+    <ExperimentalEOJWithContext blocks={oneRecommendation} service="news" />,
+  );
+  expect(queryByRole('list')).toBeNull();
+});
+
+describe('ExperimentalEOJ optimizely tracking', () => {
   beforeEach(() => {
     useOptimizelyVariation.mockReturnValue('variation_3');
   });
@@ -240,8 +250,8 @@ describe('recommendationEOJ', () => {
   });
   it('should render recommendation variation when recommendation && recommendation data are passed', () => {
     const { getAllByRole, queryByRole, queryByText } = render(
-      <ScrollablePromoWithContext
-        blocks={mundoRecommendationsData}
+      <ExperimentalEOJWithContext
+        blocks={fourRecommendations}
         isRecommendationType
         service="news"
       />,
@@ -253,8 +263,8 @@ describe('recommendationEOJ', () => {
 
   it('should render translated title', () => {
     const { getByText } = render(
-      <ScrollablePromoWithContext
-        blocks={mundoRecommendationsData}
+      <ExperimentalEOJWithContext
+        blocks={fourRecommendations}
         isRecommendationType
         service="mundo"
         translations={{ recommendationTitle: 'Quizás también te interese' }}
@@ -265,8 +275,8 @@ describe('recommendationEOJ', () => {
 
   it('should have a section with a "region" role (a11y)', () => {
     const { getByRole } = render(
-      <ScrollablePromoWithContext
-        blocks={mundoRecommendationsData}
+      <ExperimentalEOJWithContext
+        blocks={fourRecommendations}
         isRecommendationType
         service="news"
       />,
@@ -276,15 +286,15 @@ describe('recommendationEOJ', () => {
 
   it('the section with role region should be correctly labelledBy the strong element (a11y)', () => {
     const { getByRole } = render(
-      <ScrollablePromoWithContext
-        blocks={mundoRecommendationsData}
+      <ExperimentalEOJWithContext
+        blocks={fourRecommendations}
         isRecommendationType
         service="news"
       />,
     );
     const region = getByRole('region');
     expect(region.getAttribute('aria-labelledBy')).toEqual(
-      'recommendations-heading',
+      'eoj-recommendations-heading',
     );
   });
 
@@ -292,8 +302,8 @@ describe('recommendationEOJ', () => {
     const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
 
     render(
-      <ScrollablePromoWithContext
-        blocks={mundoRecommendationsData}
+      <ExperimentalEOJWithContext
+        blocks={fourRecommendations}
         blockGroupIndex={1}
         isRecommendationType
         service="news"
@@ -317,8 +327,8 @@ describe('recommendationEOJ', () => {
 
   it('should send optimizely click event when link is clicked', async () => {
     const { getByText } = render(
-      <ScrollablePromoWithContext
-        blocks={mundoRecommendationsData}
+      <ExperimentalEOJWithContext
+        blocks={fourRecommendations}
         blockGroupIndex={1}
         isRecommendationType
         service="news"
@@ -342,23 +352,26 @@ describe('recommendationEOJ', () => {
     );
   });
 
-  it('should not send optimizely click event when link is not clicked', async () => {
-    render(
-      <ScrollablePromoWithContext
-        blocks={mundoRecommendationsData}
+  it('should not send optimizely click event when tracking is not enabled', async () => {
+    const { getByText } = render(
+      <ExperimentalEOJWithContext
+        blocks={fourRecommendations}
         blockGroupIndex={1}
         isRecommendationType
         service="news"
+        eventTracking={false}
       />,
     );
 
+    const link = getByText(
+      'La conmovedora historia de cómo una madre y el hombre preso por la muerte de su hija se unieron para atrapar al verdadero asesino',
+    );
+
+    userEvent.click(link);
+
     await waitFor(
       () => {
-        const optimizelyClickCalls = optimizely.track.mock.calls.filter(
-          ([eventName]) => eventName === 'component_clicks',
-        );
-
-        expect(optimizelyClickCalls.length).toBe(0);
+        expect(optimizely.track).toHaveBeenCalledTimes(0);
       },
       { timeout: 2000 },
     );
@@ -366,8 +379,8 @@ describe('recommendationEOJ', () => {
 
   it('should send only one optimizely click event if the link is clicked more than once', async () => {
     const { getByText } = render(
-      <ScrollablePromoWithContext
-        blocks={mundoRecommendationsData}
+      <ExperimentalEOJWithContext
+        blocks={fourRecommendations}
         blockGroupIndex={1}
         isRecommendationType
         service="news"
