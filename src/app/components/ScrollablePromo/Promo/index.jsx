@@ -1,16 +1,7 @@
 import React, { useContext } from 'react';
-import {
-  arrayOf,
-  shape,
-  string,
-  oneOfType,
-  object,
-  func,
-  bool,
-} from 'prop-types';
+import { arrayOf, shape, string, oneOfType, object, func } from 'prop-types';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
-import path from 'ramda/src/path';
 import { getPica } from '@bbc/gel-foundations/typography';
 import { getSerifBold } from '@bbc/psammead-styles/font-styles';
 import { C_GREY_6, C_GREY_8, C_WHITE } from '@bbc/psammead-styles/colours';
@@ -79,23 +70,22 @@ const OperaPromoBox = styled.div`
   }
 `;
 
-const Promo = ({ block, onClick, isRecommendationType }) => {
+const Promo = ({ block, onClick }) => {
   const { script, service } = useContext(ServiceContext);
-  const textBlock = isRecommendationType
-    ? block
-    : filterForBlockType(pathOr({}, ['model', 'blocks'], block), 'text');
-  const href = isRecommendationType
-    ? path(['locators', 'assetUri'], textBlock)
-    : path(
-        ['model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'locator'],
-        textBlock,
-      );
-  const title = isRecommendationType
-    ? path(['headlines', 'headline'], textBlock)
-    : path(
-        ['model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'text'],
-        textBlock,
-      );
+  const textBlock = filterForBlockType(
+    pathOr({}, ['model', 'blocks'], block),
+    'text',
+  );
+  const href = pathOr(
+    '',
+    ['model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'locator'],
+    textBlock,
+  );
+  const title = pathOr(
+    '',
+    ['model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'text'],
+    textBlock,
+  );
 
   const isOperaMini = useOperaMiniDetection();
 
@@ -111,19 +101,12 @@ const Promo = ({ block, onClick, isRecommendationType }) => {
 };
 
 Promo.propTypes = {
-  block: oneOfType([
-    shape({
-      model: shape({
-        blocks: arrayOf(oneOfType([string, object])),
-      }).isRequired,
-    }),
-    shape({
-      headlines: shape({ headline: string.isRequired }),
-      locators: shape({ assetUri: string.isRequired }),
-    }),
-  ]).isRequired,
+  block: shape({
+    model: shape({
+      blocks: arrayOf(oneOfType([string, object])),
+    }).isRequired,
+  }).isRequired,
   onClick: func.isRequired,
-  isRecommendationType: bool.isRequired,
 };
 
 export default Promo;
