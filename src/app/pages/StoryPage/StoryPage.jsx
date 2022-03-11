@@ -198,13 +198,13 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     table: props => <CpsTable {...props} />,
     mpu: props =>
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
-    // wsoj: props => (
-    //   <CpsRecommendations
-    //     {...props}
-    //     parentColumns={gridColsMain}
-    //     items={recommendationsInitialData}
-    //   />
-    // ),
+    wsoj: props => (
+      <CpsRecommendations
+        {...props}
+        parentColumns={gridColsMain}
+        items={recommendationsInitialData}
+      />
+    ),
     disclaimer: props => (
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
