@@ -35,7 +35,6 @@ import hindiRecommendationsData from '#data/hindi/recommendations/index.json';
 import hindiMostRead from '#data/hindi/mostRead/index.json';
 import russianPageDataWithoutInlinePromo from './fixtureData/russianPageDataWithoutPromo';
 import StoryPage from '.';
-import { crossOriginResourcePolicy } from 'helmet';
 
 fetchMock.config.overwriteRoutes = false; // http://www.wheresrhys.co.uk/fetch-mock/#usageconfiguration allows us to mock the same endpoint multiple times
 
@@ -706,11 +705,9 @@ describe('Story Page', () => {
 describe('optimizelyExperiment', () => {
   describe('003_hindi_experiment_feature', () => {
     describe('variation_3', () => {
-      beforeEach(() => {
+      const forceMockVariation = variation =>
         optimizelyExperimentSpy.mockImplementation(props => {
           const { children } = props;
-
-          const variation = 'variation_3';
 
           if (children != null && typeof children === 'function') {
             return <>{children(variation, true, false)}</>;
@@ -718,13 +715,13 @@ describe('optimizelyExperiment', () => {
 
           return null;
         });
-      });
 
       afterAll(() => {
         jest.restoreAllMocks();
       });
 
-      it.only('should render EOJ variation when showForVariation has variation_3 value ', async () => {
+      it('should render EOJ variation when showForVariation has variation_3 value ', async () => {
+        forceMockVariation('variation_3');
         fetchMock.mock(
           'http://localhost/some-cps-sty-path.json',
           hindiPageData,
@@ -740,42 +737,59 @@ describe('optimizelyExperiment', () => {
           pageType,
         });
 
-        const toggles = {
-          cpsRecommendations: {
-            enabled: true,
-          },
-        };
-
-        const { getByRole, getByText } = render(
-          <PageWithContext
-            pageData={pageData}
-            service="hindi"
-            toggles={toggles}
-          />,
+        const { getAllByRole, getByText } = render(
+          <PageWithContext pageData={pageData} service="hindi" />,
         );
 
-        // const eojRecommendation = getAllByRole('region').filter(
-        //   ({ className }) => {
-        //     console.log({ className });
-        //     // return ariaLabelled === 'eoj-recommendations-heading';
-        //   },
-        // );
-        console.log(
-          getByRole('region', { name: 'eoj-recommendations-heading' }),
+        const [eojRecommendations] = getAllByRole('region').filter(
+          item =>
+            item.getAttribute('aria-labelledby') ===
+            'eoj-recommendations-heading',
         );
-        //console.log({ eojRecommendation });
-        // expect(getAllByRole('eoj-recommendations-heading')).toBeInTheDocument();
-        // expect(
-        //   getByText(
-        //     'कोविड-19 महामारीः तो सबसे ज़्यादा मौतों की वजह वायरस नहीं होगा',
-        //   ),
-        // ).toBeInTheDocument();
-        // expect(
-        //   getByText('कोरोना से मिले कौन से सबक़ हम याद रखेंगे?'),
-        // ).toBeInTheDocument();
-        // expect(
-        //   getByText('कोविड-19 के बाद हमारी यात्राएं कैसी होंगी?'),
-        // ).toBeInTheDocument();
+
+        expect(eojRecommendations).toBeInTheDocument();
+
+        expect(
+          getByText(
+            'कोविड-19 महामारीः तो सबसे ज़्यादा मौतों की वजह वायरस नहीं होगा',
+          ),
+        ).toBeInTheDocument();
+        expect(
+          getByText('कोरोना से मिले कौन से सबक़ हम याद रखेंगे?'),
+        ).toBeInTheDocument();
+        expect(
+          getByText('कोविड-19 के बाद हमारी यात्राएं कैसी होंगी?'),
+        ).toBeInTheDocument();
+      });
+
+      it('should not render EOJ variation when showForVariation is not variation_3 ', async () => {
+        forceMockVariation('control');
+        fetchMock.mock(
+          'http://localhost/some-cps-sty-path.json',
+          hindiPageData,
+        );
+        fetchMock.mock('http://localhost/hindi/mostread.json', hindiMostRead);
+        fetchMock.mock(
+          'http://localhost/hindi/india-60426858/recommendations.json',
+          hindiRecommendationsData,
+        );
+        const { pageData } = await getInitialData({
+          path: '/some-cps-sty-path',
+          service: 'hindi',
+          pageType,
+        });
+
+        const { getAllByRole } = render(
+          <PageWithContext pageData={pageData} service="hindi" />,
+        );
+
+        const [eojRecommendations] = getAllByRole('region').filter(
+          item =>
+            item.getAttribute('aria-labelledby') ===
+            'eoj-recommendations-heading',
+        );
+
+        expect(eojRecommendations).toBe(undefined);
       });
     });
   });
