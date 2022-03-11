@@ -32,7 +32,16 @@ const {
   getCustomMarketingString,
   getDisplayMarketingString,
   getATIMarketingString,
+  getContentId,
 } = require('./index');
+
+const FIXTURE_PAGEDATA = {
+  metadata: {
+    analyticsLabels: {
+      contentId: 'urn:bbc:cps:curie:asset:29375628-9511-42e6-be88-ebaa1158f597',
+    },
+  },
+};
 
 const SRC_RSS_FIXTURE = {
   key: 'src_medium',
@@ -278,6 +287,25 @@ describe('isLocServeCookieSet', () => {
     const locServeCookie = isLocServeCookieSet();
 
     expect(locServeCookie).toEqual(false);
+  });
+});
+
+describe('getContentId', () => {
+  it('should return content id when its present in the data', () => {
+    const expectedResult =
+      'urn:bbc:cps:curie:asset:29375628-9511-42e6-be88-ebaa1158f597';
+    const result = getContentId(FIXTURE_PAGEDATA);
+    expect(result).toEqual(expectedResult);
+  });
+
+  it('should return null when no data is present', () => {
+    const result = getContentId({});
+    expect(result).toEqual(null);
+  });
+
+  it('should return null when data is invalid', () => {
+    const result = getContentId('hello world');
+    expect(result).toEqual(null);
   });
 });
 
