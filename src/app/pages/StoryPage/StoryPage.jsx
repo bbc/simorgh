@@ -247,10 +247,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
               variation === 'variation_3'
             ) {
               return (
-                <ExperimentalEOJ
-                  {...props}
-                  blocks={recommendationsInitialData}
-                />
+                <ExperimentalEOJ {...props} blocks={recommendationsData} />
               );
             }
 
