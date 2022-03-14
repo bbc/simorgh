@@ -57,9 +57,10 @@ const cpsPromoFormatter = props => ({
   children: path(['item', 'headlines', 'headline'], props),
   footer: (
     <TimestampFooter
-      timestamp={path(['item', 'timestamp'], props)}
       serviceDatetimeLocale={path(['item', 'serviceDatetimeLocale'], props)}
-    />
+    >
+      {path(['item', 'timestamp'], props)}
+    </TimestampFooter>
   ),
   url: path(['item', 'locators', 'assetUri'], props),
   image: buildImageProperties(path(['item', 'indexImage'], props)),
@@ -70,9 +71,10 @@ const linkPromoFormatter = props => ({
   children: path(['item', 'name'], props),
   footer: (
     <TimestampFooter
-      timestamp={path(['item', 'timestamp'], props)}
       serviceDatetimeLocale={path(['item', 'serviceDatetimeLocale'], props)}
-    />
+    >
+      {path(['item', 'timestamp'], props)}
+    </TimestampFooter>
   ),
   url: path(['item', 'uri'], props),
   image: buildImageProperties(path(['item', 'indexImage'], props)),

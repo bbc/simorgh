@@ -69,7 +69,7 @@ export const service = {
       brandTitle: 'رادیو فارسی بی‌بی‌سی',
       brandDescription: 'پادکست چشم‌انداز بامدادی رادیو بی‌بی‌سی',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p02h1lnx.jpg',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0bq9rkk.jpg',
         alt: 'رادیو فارسی بی‌بی‌سی',
       },
       linkLabel: {
@@ -351,6 +351,10 @@ export const service = {
       {
         title: 'صفحه اول',
         url: '/persian',
+      },
+      {
+        title: 'اوکراین',
+        url: '/persian/topics/cw9q48x6558t',
       },
       {
         title: 'کرونا',

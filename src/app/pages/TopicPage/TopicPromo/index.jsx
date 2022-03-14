@@ -1,28 +1,44 @@
 import React from 'react';
-import { string } from 'prop-types';
+import { string, number, oneOf, oneOfType } from 'prop-types';
 
-import Promo from '#components/Promo';
+import Promo, { MEDIA_TYPES } from '#components/Promo';
 
-const TopicPromo = ({ heading, footer, imageSrc, imageAlt, href }) => {
+const TopicPromo = ({
+  title,
+  firstPublished,
+  imageUrl,
+  imageAlt,
+  link,
+  mediaType,
+  mediaDuration,
+}) => {
   return (
     <Promo>
-      <Promo.Image src={imageSrc} alt={imageAlt} />
-      <Promo.A href={href}>
-        <Promo.Heading>{heading}</Promo.Heading>
+      <Promo.Image src={imageUrl} alt={imageAlt}>
+        <Promo.MediaIcon type={mediaType}>{mediaDuration}</Promo.MediaIcon>
+      </Promo.Image>
+      <Promo.A href={link}>
+        <Promo.Heading>{title}</Promo.Heading>
       </Promo.A>
-      <Promo.Footer>{footer}</Promo.Footer>
+      <Promo.Timestamp>{firstPublished}</Promo.Timestamp>
     </Promo>
   );
 };
 
 TopicPromo.propTypes = {
-  heading: string.isRequired,
-  footer: string.isRequired,
-  imageSrc: string.isRequired,
+  title: string.isRequired,
+  // epoch time or ISO8601 timestamp
+  firstPublished: oneOfType([number, string]).isRequired,
+  imageUrl: string.isRequired,
   imageAlt: string.isRequired,
-  href: string.isRequired,
+  link: string.isRequired,
+  mediaType: oneOf(Object.keys(MEDIA_TYPES)),
+  mediaDuration: number,
 };
 
-TopicPromo.defaultProps = {};
+TopicPromo.defaultProps = {
+  mediaType: null,
+  mediaDuration: null,
+};
 
 export default TopicPromo;

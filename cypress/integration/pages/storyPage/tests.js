@@ -3,6 +3,9 @@ import path from 'ramda/src/path';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import getServiceWithVariantName from '../../../support/helpers/getServiceWithVariantName';
+import topicTagsTest from '../../../support/helpers/topicTagsTest';
+import envConfig from '../../../support/config/envs';
+
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRun = ({ service, pageType }) => {
@@ -52,6 +55,7 @@ export const testsThatFollowSmokeTestConfig = ({
         });
       });
     });
+
     describe(`STY Secondary Column`, () => {
       it('should have at least one story promo in Features', () => {
         cy.log(service);
@@ -73,6 +77,17 @@ export const testsThatFollowSmokeTestConfig = ({
           cy.log('No features section on newsround or news');
         }
       });
+
+      it('FOR /news/technology-60561162.amp ONLY - should render topic tags if they are in the json, and they should navigate to correct topic page', () => {
+        if (service === 'news' && Cypress.env('APP_ENV') !== 'local') {
+          const url = '/news/technology-60561162.amp?renderer_env=live';
+          cy.visit(`${envConfig.baseUrl}${url}`);
+          topicTagsTest();
+        } else {
+          cy.log('Test is only for /news/technology-60561162.amp');
+        }
+      });
+
       it.skip('should render podcast promo if in json and should navigate to correct podcast page', () => {
         cy.log(service);
         if (Cypress.env('APP_ENV') !== 'local') {

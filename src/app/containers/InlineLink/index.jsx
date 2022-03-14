@@ -5,6 +5,7 @@ import InlineLink from '@bbc/psammead-inline-link';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { inlineLinkModelPropTypes } from '#models/propTypes/inlineLink';
+import makeRelativeUrlPath from '#lib/utilities/makeRelativeUrlPath';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
 import { articlePath } from '../../routes/utils/regex';
@@ -36,7 +37,7 @@ const InlineLinkContainer = ({ locator, isExternal, blocks, onClick }) => {
   const linkText = pathOr(null, [0, 'model', 'text'], blocks);
   return (
     <InlineLink
-      href={locator}
+      href={makeRelativeUrlPath(locator)}
       aria-label={isExternal ? `${linkText}${externalLinkText}` : null}
       onClick={event => {
         if (onClick) {

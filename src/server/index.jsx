@@ -29,6 +29,7 @@ import {
 import sendCustomMetric from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
 import local from './local';
+import getAgent from './utilities/getAgent';
 
 const morgan = require('morgan');
 
@@ -148,6 +149,7 @@ server.get(
         variant,
         pageType,
         toggles,
+        getAgent,
       });
 
       data.toggles = toggles;
@@ -188,6 +190,10 @@ server.get(
       if (result.redirectUrl) {
         res.redirect(301, result.redirectUrl);
       } else if (result.html) {
+        res.set(
+          'onion-location',
+          `https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${urlPath}`,
+        );
         res.status(status).send(result.html);
       } else {
         throw new Error('unknown result');
