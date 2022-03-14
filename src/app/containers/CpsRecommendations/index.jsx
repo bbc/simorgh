@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape } from 'prop-types';
+import { arrayOf, shape, string } from 'prop-types';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -46,7 +46,7 @@ const LabelComponent = styled(SectionLabel)`
   }
 `;
 
-const CpsRecommendations = ({ items }) => {
+const CpsRecommendations = ({ items, showForVariation }) => {
   const { recommendations, translations, script, service, dir } =
     useContext(ServiceContext);
   const { enabled } = useToggle('cpsRecommendations');
@@ -105,7 +105,10 @@ const CpsRecommendations = ({ items }) => {
           {isSinglePromo ? (
             <RecommendationsPromo promo={items[0]} />
           ) : (
-            <RecommendationsPromoList promoItems={items} />
+            <RecommendationsPromoList
+              promoItems={items}
+              showForVariation={showForVariation}
+            />
           )}
         </SkipLinkWrapper>
       </RecommendationsWrapper>
@@ -117,8 +120,10 @@ export default CpsRecommendations;
 
 CpsRecommendations.propTypes = {
   items: arrayOf(shape(storyItem)),
+  showForVariation: string.optional,
 };
 
 CpsRecommendations.defaultProps = {
   items: [],
+  showForVariation: null,
 };
