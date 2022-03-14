@@ -2,8 +2,7 @@ import { useEffect, useState, useContext } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import { RequestContext } from '#contexts/RequestContext';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
-
-const IMPROVED_PROMO_EXPERIMENT_ID = 'improved_promos';
+import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 
 const getScrollDepth = () =>
   Math.floor(
@@ -22,7 +21,7 @@ const useOptimizelyScrollDepth = () => {
   const [scrollSeventyFive, setScrollSeventyFive] = useState(false);
   const [scrollHundred, setScrollHundred] = useState(false);
 
-  const promoVariation = useOptimizelyVariation(IMPROVED_PROMO_EXPERIMENT_ID);
+  const promoVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.featureId);
   const hasVariationKey = promoVariation !== null;
 
   const sendScrollEvents = hasVariationKey && !isAmp;
