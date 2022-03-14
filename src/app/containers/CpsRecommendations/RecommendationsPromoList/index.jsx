@@ -20,9 +20,7 @@ const getEventTrackingDataWithOptimizely = ({ item, index, optimizely }) => {
 };
 
 const RecommendationsPromoListItem = forwardRef(
-  ({ item, index, showForVariation }, forwardedRef) => {
-    const { optimizely } = useContext(OptimizelyContext);
-
+  ({ item, index, optimizely, showForVariation }, forwardedRef) => {
     const eventTrackingData = showForVariation
       ? getEventTrackingDataWithOptimizely({ item, index, optimizely })
       : getEventTrackingData({ item, index });
@@ -62,7 +60,10 @@ const RecommendationsPromoList = ({
   showForVariation,
   splitRecsViewEventTracker,
 }) => {
-  const eventTrackingData = getEventTrackingData();
+  const { optimizely } = useContext(OptimizelyContext);
+  const eventTrackingData = showForVariation
+    ? getEventTrackingDataWithOptimizely({ optimizely })
+    : getEventTrackingData();
   const blockViewEventTracker = useViewTracker(eventTrackingData.block);
 
   return (
@@ -88,6 +89,7 @@ const RecommendationsPromoList = ({
           }
           index={index}
           item={item}
+          optimizely={optimizely}
           showForVariation={showForVariation}
         />
       ))}
@@ -98,6 +100,7 @@ const RecommendationsPromoList = ({
 RecommendationsPromoListItem.propTypes = {
   item: shape(storyItem).isRequired,
   index: number.isRequired,
+  optimizely: shape({}).isRequired,
   showForVariation: string.optional,
 };
 
