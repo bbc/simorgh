@@ -68,8 +68,8 @@ const CpsRecommendations = ({
 
   const titlePath =
     showForVariation === 'variation_1' && part === 2
-      ? ['You may also be interested in', ['splitRecommendationTitle']]
-      : ['You may also be interested in', ['recommendationTitle']];
+      ? ['More recommended stories', ['splitRecommendationTitle']]
+      : ['Recommended stories', ['recommendationTitle']];
 
   const title = pathOr(...titlePath, translations);
 
