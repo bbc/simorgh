@@ -224,6 +224,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
                   {...props}
                   parentColumns={gridColsMain}
                   items={recommendationsData}
+                  showForVariation={showForVariation}
                 />
               );
             }
