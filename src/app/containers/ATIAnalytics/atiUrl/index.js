@@ -227,7 +227,7 @@ export const buildATIPageTrackPath = ({
           {
             key: 'product_platform',
             description: 'onion url',
-            value: 'tor',
+            value: 'tor-bbc',
           },
         ]
       : []),
