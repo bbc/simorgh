@@ -155,7 +155,7 @@ describe('getThingAttributes', () => {
       ]
     `);
   });
-  it('should add ref param to url as the very last param because ATI will interpret it as part of the referrer URL', () => {
+  it('if ref param is provided, it should be the very last param so that ATI can interpret it correctly as part of the referrer URL', () => {
     analyticsUtilFunctions.forEach(func => {
       mockAndSet(func, func.name);
     });
