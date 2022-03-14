@@ -160,21 +160,22 @@ describe('getThingAttributes', () => {
       mockAndSet(func, func.name);
     });
 
-    const queryParams = buildATIPageTrackPath({
-      appName: 'appName',
-      contentId: 'contentId',
-      contentType: 'contentType',
-      language: 'language',
-      ldpThingIds: 'ldpThingIds',
-      ldpThingLabels: 'ldpThingLabels',
-      pageIdentifier: 'pageIdentifier',
-      pageTitle: 'pageTitle',
-      platform: 'platform',
-      producerId: 'producerId',
-      timePublished: 'timePublished',
-      timeUpdated: 'timeUpdated',
-    });
-    const lastParam = splitUrl(queryParams).pop();
+    const lastParam = splitUrl(
+      buildATIPageTrackPath({
+        appName: 'appName',
+        contentId: 'contentId',
+        contentType: 'contentType',
+        language: 'language',
+        ldpThingIds: 'ldpThingIds',
+        ldpThingLabels: 'ldpThingLabels',
+        pageIdentifier: 'pageIdentifier',
+        pageTitle: 'pageTitle',
+        platform: 'platform',
+        producerId: 'producerId',
+        timePublished: 'timePublished',
+        timeUpdated: 'timeUpdated',
+      }),
+    ).pop();
 
     expect(lastParam).toEqual('ref=getReferrer');
   });
