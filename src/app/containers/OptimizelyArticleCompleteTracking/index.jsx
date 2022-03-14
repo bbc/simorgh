@@ -14,7 +14,7 @@ const OptimizelyArticleCompleteTracking = () => {
   const variation = useOptimizelyVariation(OPTIMIZELY_CONFIG.featureId);
   const hasVariationKey = variation !== null;
 
-  const sendCompleteEvent =
+  const sendPageCompleteEvent =
     hasVariationKey && !isAmp && !pageCompleteSent && isVisible;
 
   useEffect(() => {
@@ -29,13 +29,13 @@ const OptimizelyArticleCompleteTracking = () => {
   }, []);
 
   useEffect(() => {
-    if (sendCompleteEvent) {
+    if (sendPageCompleteEvent) {
       optimizely.onReady().then(() => {
         optimizely.track('article_completes');
         setPageCompleteSent(true);
       });
     }
-  }, [sendCompleteEvent, optimizely]);
+  }, [sendPageCompleteEvent, optimizely]);
 
   return <div ref={ref} aria-hidden="true" />;
 };
