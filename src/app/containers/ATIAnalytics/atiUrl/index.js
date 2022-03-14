@@ -9,6 +9,7 @@ import {
   getReferrer,
   getAtUserId,
   isLocServeCookieSet,
+  onOnionTld,
   sanitise,
   getAtiUrl,
   getEventInfo,
@@ -221,6 +222,15 @@ export const buildATIPageTrackPath = ({
       disableEncoding: true,
     },
     ...getRSSMarketingString(href, campaignType),
+    ...(onOnionTld()
+      ? [
+          {
+            key: 'product_platform',
+            description: 'onion url',
+            value: 'tor-bbc',
+          },
+        ]
+      : []),
   ];
 
   return getAtiUrl(pageViewBeaconValues);
