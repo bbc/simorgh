@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import { recommendationOne } from '../helpers/fixtureData';
 import Promo from '.';
 
-describe('ScrollablePromo', () => {
+describe('ExperimentalEOJPromo', () => {
   it('should render a link', () => {
     const { queryByRole } = render(<Promo block={recommendationOne} />);
     expect(queryByRole('link')).toBeInTheDocument();
