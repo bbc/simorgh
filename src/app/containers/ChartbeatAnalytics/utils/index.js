@@ -16,6 +16,7 @@ import {
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
   STORY_PAGE,
+  TOPIC_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 const ID_COOKIE = 'ckns_sylphid';
@@ -58,6 +59,8 @@ export const getType = (pageType, shorthand = false) => {
       return PHOTO_GALLERY_PAGE;
     case FEATURE_INDEX_PAGE:
       return FEATURE_INDEX_PAGE;
+    case TOPIC_PAGE:
+      return 'Topics';
     default:
       return null;
   }
@@ -85,6 +88,7 @@ export const buildSections = ({
   };
 
   switch (pageType) {
+    case STORY_PAGE:
     case MEDIA_ASSET_PAGE:
       return [
         serviceCap,
@@ -96,19 +100,9 @@ export const buildSections = ({
     case MEDIA_PAGE:
       return [
         serviceCap,
-        ...(pageType
-          ? buildSectionItem(serviceCap, mediaSectionLabel[mediaPageType])
-          : []),
+        buildSectionItem(serviceCap, mediaSectionLabel[mediaPageType]),
         ...(addProducer ? buildSectionArr(serviceCap, producer, type) : []),
         ...(chapter ? buildSectionArr(serviceCap, chapter, type) : []),
-      ].join(', ');
-    case STORY_PAGE:
-      return [
-        serviceCap,
-        buildSectionItem(serviceCap, sectionName),
-        buildSectionItem(serviceCap, pageType),
-        buildSectionItem(buildSectionItem(serviceCap, sectionName), pageType),
-        buildSectionItem(serviceCap, appendCategory(categoryName)),
       ].join(', ');
     default:
       return [
@@ -120,28 +114,28 @@ export const buildSections = ({
   }
 };
 
+const getHeadline = path(['promo', 'headlines', 'headline']);
+
 export const getTitle = ({ pageType, pageData, brandName, title }) => {
   switch (pageType) {
     case FRONT_PAGE:
     case INDEX_PAGE:
+    case FEATURE_INDEX_PAGE:
     case 'index':
       return getPageTitle(pageData, brandName);
     case ARTICLE_PAGE:
       return getPromoHeadline(pageData);
     case MEDIA_ASSET_PAGE:
-      return path(['promo', 'headlines', 'headline'], pageData);
+    case STORY_PAGE:
+    case PHOTO_GALLERY_PAGE:
+      return getHeadline(pageData);
     case MEDIA_PAGE:
       return path(['pageTitle'], pageData);
     case MOST_READ_PAGE:
-      return `${title} - ${brandName}`;
     case MOST_WATCHED_PAGE:
       return `${title} - ${brandName}`;
-    case STORY_PAGE:
-      return path(['promo', 'headlines', 'headline'], pageData);
-    case PHOTO_GALLERY_PAGE:
-      return path(['promo', 'headlines', 'headline'], pageData);
-    case FEATURE_INDEX_PAGE:
-      return getPageTitle(pageData, brandName);
+    case TOPIC_PAGE:
+      return `${pageData?.title} - ${brandName}`;
     default:
       return null;
   }
