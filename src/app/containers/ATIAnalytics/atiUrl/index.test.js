@@ -155,6 +155,29 @@ describe('getThingAttributes', () => {
       ]
     `);
   });
+  it('should add ref param to url as the very last param because ATI will interpret it as part of the referrer URL', () => {
+    analyticsUtilFunctions.forEach(func => {
+      mockAndSet(func, func.name);
+    });
+
+    const queryParams = buildATIPageTrackPath({
+      appName: 'appName',
+      contentId: 'contentId',
+      contentType: 'contentType',
+      language: 'language',
+      ldpThingIds: 'ldpThingIds',
+      ldpThingLabels: 'ldpThingLabels',
+      pageIdentifier: 'pageIdentifier',
+      pageTitle: 'pageTitle',
+      platform: 'platform',
+      producerId: 'producerId',
+      timePublished: 'timePublished',
+      timeUpdated: 'timeUpdated',
+    });
+    const lastParam = splitUrl(queryParams).pop();
+
+    expect(lastParam).toEqual('ref=getReferrer');
+  });
 });
 
 describe('buildATIEventTrackUrl', () => {
