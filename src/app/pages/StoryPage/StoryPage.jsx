@@ -248,7 +248,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
               return (
                 <SplitRecommendations
                   {...props}
-                  parentColumns={gridColsMain}
                   items={recommendationsData}
                   splitRecsViewEventTracker={splitRecsViewEventTracker}
                 />

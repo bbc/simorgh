@@ -8,7 +8,7 @@ import CpsRecommendations from '..';
  * This component should be removed after the experiment.
  */
 const SplitRecommendations = ({ items, ...props }) => {
-  const { parentColumns, part, splitRecsViewEventTracker } = props;
+  const { part, splitRecsViewEventTracker } = props;
 
   if (!Array.isArray(items)) {
     return null;
@@ -19,7 +19,6 @@ const SplitRecommendations = ({ items, ...props }) => {
     return (
       <CpsRecommendations
         {...props}
-        parentColumns={parentColumns}
         items={firstPart}
         splitRecsViewEventTracker={splitRecsViewEventTracker}
       />
@@ -31,7 +30,6 @@ const SplitRecommendations = ({ items, ...props }) => {
     return (
       <CpsRecommendations
         {...props}
-        parentColumns={parentColumns}
         items={secondPart}
         splitRecsViewEventTracker={splitRecsViewEventTracker}
       />
@@ -45,14 +43,6 @@ SplitRecommendations.propTypes = {
   items: arrayOf(shape(storyItem)),
   showVariation: string.isRequired,
   part: number.isRequired,
-  parentColumns: shape({
-    group0: number.isRequired,
-    group1: number.isRequired,
-    group2: number.isRequired,
-    group3: number.isRequired,
-    group4: number.isRequired,
-    group5: number.isRequired,
-  }).isRequired,
   splitRecsViewEventTracker: func.isRequired,
 };
 
