@@ -6,6 +6,7 @@ import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 
 const OptimizelyArticleCompleteTracking = () => {
   const ref = useRef();
+  const observer = useRef();
   const { isAmp } = useContext(RequestContext);
   const { optimizely } = useContext(OptimizelyContext);
   const [pageCompleteSent, setPageCompleteSent] = useState(false);
@@ -17,13 +18,13 @@ const OptimizelyArticleCompleteTracking = () => {
     variation && !isAmp && !pageCompleteSent && isVisible;
 
   useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) =>
+    observer.current = new IntersectionObserver(([entry]) =>
       setIsVisible(entry.isIntersecting),
     );
 
-    observer.observe(ref.current);
+    observer.current.observe(ref.current);
     return () => {
-      observer.disconnect();
+      observer.current.disconnect();
     };
   }, []);
 
