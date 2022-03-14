@@ -12,10 +12,9 @@ const OptimizelyArticleCompleteTracking = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const variation = useOptimizelyVariation(OPTIMIZELY_CONFIG.featureId);
-  const hasVariationKey = variation !== null;
 
   const sendPageCompleteEvent =
-    hasVariationKey && !isAmp && !pageCompleteSent && isVisible;
+    variation && !isAmp && !pageCompleteSent && isVisible;
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) =>
