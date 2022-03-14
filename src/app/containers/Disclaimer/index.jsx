@@ -11,8 +11,11 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
-import { C_GREY_6 } from '@bbc/psammead-styles/colours';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import { C_GREY_6, C_GREY_2 } from '@bbc/psammead-styles/colours';
+import {
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_B_MIN_WIDTH,
+} from '@bbc/gel-foundations/breakpoints';
 import { GridItemLarge } from '#app/components/Grid';
 
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -22,11 +25,14 @@ import isEmpty from 'ramda/src/isEmpty';
 const Inner = styled.section`
   ${({ script }) => script && getLongPrimer(script)}
   ${({ service }) => service && getSansLight(service)}
-  background: #f6f6f6;
+  background: ${C_GREY_2};
   color: ${C_GREY_6};
   text-transform: uppercase;
   margin-bottom: ${GEL_SPACING_TRPL};
   padding: ${GEL_SPACING_DBL};
+  @media (max-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
+    line-height: 1.4;
+  }
   ${({ increasePaddingOnDesktop }) =>
     increasePaddingOnDesktop &&
     `
