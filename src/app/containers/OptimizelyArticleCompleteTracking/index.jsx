@@ -17,12 +17,20 @@ const OptimizelyArticleCompleteTracking = () => {
   const sendPageCompleteEvent =
     variation && !isAmp && !pageCompleteSent && isVisible;
 
-  useEffect(() => {
+  const initObserver = async () => {
+    if (typeof window.IntersectionObserver === 'undefined') {
+      // Polyfill IntersectionObserver, e.g. for IE11
+      await import('intersection-observer');
+    }
     observer.current = new IntersectionObserver(([entry]) =>
       setIsVisible(entry.isIntersecting),
     );
 
     observer.current.observe(ref.current);
+  };
+
+  useEffect(() => {
+    initObserver();
     return () => {
       observer.current.disconnect();
     };
