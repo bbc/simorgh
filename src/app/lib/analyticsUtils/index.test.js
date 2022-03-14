@@ -32,6 +32,7 @@ const {
   getCustomMarketingString,
   getDisplayMarketingString,
   getATIMarketingString,
+  onOnionTld,
   getContentId,
 } = require('./index');
 
@@ -825,5 +826,30 @@ describe('getATIMarketingString', () => {
         );
       },
     );
+  });
+
+  describe('onOnionTld', () => {
+    const { location } = window;
+
+    beforeEach(() => {
+      delete window.location;
+    });
+    afterEach(() => {
+      window.location = location;
+    });
+
+    it.each`
+      expectation               | currentUrl                                                                                            | expectedValue
+      ${'true for onion TLD'}   | ${'https://www.bbcnewsd73hkzno2ini43t4gblxvycyac5aw4gnv7t2rccijh7745uqd.onion/news'}                  | ${true}
+      ${'true for onion TLD'}   | ${'https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/russian'}               | ${true}
+      ${'true for onion TLD'}   | ${'https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/russian/news-60699063'} | ${true}
+      ${'false for .co.uk TLD'} | ${'https://www.bbc.co.uk/news'}                                                                       | ${false}
+      ${'false for .com TLD'}   | ${'https://www.bbc.com/news'}                                                                         | ${false}
+      ${'false for .com TLD'}   | ${'https://www.bbcrussian.com/russian/live/news-60661774'}                                            | ${false}
+    `('should return $expectation', ({ currentUrl, expectedValue }) => {
+      window.location = new URL(currentUrl);
+
+      expect(onOnionTld()).toEqual(expectedValue);
+    });
   });
 });
