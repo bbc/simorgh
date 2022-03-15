@@ -383,7 +383,7 @@ export const service = {
         url: '/russian',
       },
       {
-        title: 'Украина',
+        title: 'Война в Украине',
         url: '/russian/topics/cez0n29ggrdt',
       },
       {
