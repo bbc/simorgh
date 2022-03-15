@@ -130,8 +130,12 @@ describe('Optimizely Page Complete tracking', () => {
       });
     });
 
+    act(() => {
+      jest.advanceTimersByTime(1100);
+    });
+
     await waitFor(() => {
-      expect(optimizely.track).toHaveBeenCalledTimes(0);
+      expect(global.fetch).not.toHaveBeenCalled();
     });
   });
 
@@ -154,12 +158,16 @@ describe('Optimizely Page Complete tracking', () => {
       });
     });
 
+    act(() => {
+      jest.advanceTimersByTime(1100);
+    });
+
     await waitFor(() => {
-      expect(optimizely.track).toHaveBeenCalledTimes(0);
+      expect(global.fetch).not.toHaveBeenCalled();
     });
   });
 
-  it('should not send tracking event when element is in view, but is on AMP', async () => {
+  it('should not return intersecting element when on AMP', async () => {
     useOptimizelyVariation.mockReturnValue('variation_1');
 
     const { container } = render(
@@ -168,19 +176,10 @@ describe('Optimizely Page Complete tracking', () => {
       </ContextWrap>,
     );
 
-    const element = container.getElementsByTagName('div')[0];
-    const observerInstance = getObserverInstance(element);
-
-    act(() => {
-      triggerIntersection({
-        changes: [{ isIntersecting: true }],
-        observer: observerInstance,
-      });
-    });
+    const elements = container.getElementsByTagName('div');
 
     await waitFor(() => {
-      expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
-      expect(optimizely.track).toHaveBeenCalledTimes(0);
+      expect(elements.length).toBe(0);
     });
   });
 

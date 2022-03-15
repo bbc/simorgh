@@ -45,6 +45,8 @@ const OptimizelyArticleCompleteTracking = () => {
     }
   }, [sendPageCompleteEvent, optimizely]);
 
+  if (isAmp) return null;
+
   return <div ref={ref} aria-hidden="true" />;
 };
 
