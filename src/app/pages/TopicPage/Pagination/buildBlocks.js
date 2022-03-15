@@ -1,3 +1,5 @@
+import findNClosestIndices from '#lib/utilities/findNClosestIndicies';
+
 export const AVAILABILITY = {
   AVAILABLE: 'AVAILABLE',
   UNAVAILABLE: 'UNAVAILABLE',
@@ -21,30 +23,7 @@ export const VISIBILITY = {
 
 let state;
 
-// this can be generalised and moved out of here
-const findNClosestIndices = n => {
-  const results = [];
-  let leftPointer = state.activePageIndex - 1;
-  let rightPointer = state.activePageIndex + 1;
-
-  while (leftPointer > 0 || rightPointer < state.result.length) {
-    const searchLeft = leftPointer > 0;
-    if (searchLeft > 0 && !state.result[leftPointer].visibility) {
-      results.push(leftPointer);
-    }
-
-    const searchRight = rightPointer < state.result.length;
-    if (searchRight && !state.result[rightPointer].visibility) {
-      results.push(rightPointer);
-    }
-
-    if (results.length >= n) break;
-    leftPointer -= 1;
-    rightPointer += 1;
-  }
-  return results.slice(0, n).filter(Boolean);
-};
-
+// we're returning an array of page elements to be consumed by the renderer
 const createPage = index => {
   const isActivePage = index + 1 === state.activePage;
   if (isActivePage) {
@@ -57,6 +36,7 @@ const createPage = index => {
   };
 };
 
+// The first page, last page, and active page should always be visible
 const setRequiredVisibility = () => {
   state.result[0].visibility = VISIBILITY.ALL;
   state.result[state.activePageIndex].visibility = VISIBILITY.ALL;
@@ -64,6 +44,8 @@ const setRequiredVisibility = () => {
   state.result[state.result.length - 1].visibility = VISIBILITY.ALL;
 };
 
+// Iteratively radiate out from the active page, setting the visibility of pages
+// Pages closer to the active page are visible on more devices
 const setDynamicVisibility = () => {
   const iterations = [
     [VISIBILITY.ALL, state.activePageOnEdge ? 1 : 0],
@@ -72,7 +54,14 @@ const setDynamicVisibility = () => {
   ];
 
   iterations.forEach(([deviceSize, additionalPagesToShow]) =>
-    findNClosestIndices(additionalPagesToShow).forEach(index => {
+    findNClosestIndices({
+      n: additionalPagesToShow,
+      startingIndex: state.activePageIndex,
+      predicate: e => !e.visibility,
+      array: state.result,
+    }).forEach(index => {
+      // keeping track of the visibility level we are setting
+      // this will help us determine on which devices we need to display an ellipsis
       if (index < state.activePageIndex) {
         state.highestVisibilityOnLeft = deviceSize;
       } else {
@@ -81,11 +70,18 @@ const setDynamicVisibility = () => {
       state.result[index].visibility = deviceSize;
     }),
   );
+
+  // TODO - if there is just a single number missing at a boundary, fill it in?
+  // eg if we have 1, 2, 3, 5 - should we just add the 4?
+  // Otherwise, we'll have an ellipsis being used to fill in a gap of only one number
 };
 
+// After setting the visibility of all the pages we want to show, we can remove the others
 const pruneInvisible = () => {
   state.result = state.result.filter((page, index) => {
     if (!page.visibility) {
+      // if an element is being filtered out, we need to remember we did this
+      // this is so we can display an ellipsis in this position
       if (index < state.activePageIndex) {
         state.pagesTruncatedOnLeft = true;
       } else {
@@ -97,11 +93,16 @@ const pruneInvisible = () => {
   });
 };
 
+// Determine the devices that an ellipsis is displayed on
 const getEllipsisVisibility = side => {
+  // If we pruned some pages on this side, we display an ellipsis on all devices
   const wasTruncated =
     side === 'left' ? state.pagesTruncatedOnLeft : state.pagesTruncatedOnRight;
   if (wasTruncated) return VISIBILITY.ALL;
 
+  // Otherwise, the ellipsis visibility is based on the visibility of the page on that edge
+  // eg, if page 2 is visible on all devices, there will never be an ellipsis on the left
+  // if it is only visible on tablets and up, there will be an ellipsis on mobile
   const highestVisibility =
     side === 'left'
       ? state.highestVisibilityOnLeft
@@ -114,6 +115,7 @@ const getEllipsisVisibility = side => {
   return null;
 };
 
+// Conditionally adding the ellipsis blocks to our return value
 const insertEllipsis = () => {
   const leftEllipsisVisibility = getEllipsisVisibility('left');
   const rightEllipsisVisibility = getEllipsisVisibility('right');
@@ -121,7 +123,6 @@ const insertEllipsis = () => {
     state.result.splice(1, 0, {
       type: TYPE.ELLIPSIS,
       visibility: leftEllipsisVisibility,
-      side: 'left',
     });
   }
 
@@ -129,15 +130,16 @@ const insertEllipsis = () => {
     state.result.splice(state.result.length - 1, 0, {
       type: TYPE.ELLIPSIS,
       visibility: rightEllipsisVisibility,
-      side: 'right',
     });
   }
 };
 
+// We display left and right arrows on all devices
 const insertArrows = () => {
   state.result.unshift({
     type: TYPE.LEFT_ARROW,
     visibility: VISIBILITY.ALL,
+    // The left arrow is disabled if the user is already on the first page
     availability:
       state.activePage === 1
         ? AVAILABILITY.UNAVAILABLE
@@ -146,6 +148,7 @@ const insertArrows = () => {
   state.result.push({
     type: TYPE.RIGHT_ARROW,
     visibility: VISIBILITY.ALL,
+    // The right arrow is disabled if the user is already on the last page
     availability:
       state.activePage === state.pageCount
         ? AVAILABILITY.UNAVAILABLE
@@ -153,13 +156,14 @@ const insertArrows = () => {
   });
 };
 
-const addKeys = () =>
+const addKeys = () => {
   state.result.forEach((result, i) => {
     // eslint-disable-next-line no-param-reassign
     result.key = i;
   });
+};
 
-const buildBlocks = (activePage, pageCount) => {
+export default (activePage, pageCount) => {
   if (pageCount <= 1) return null;
   state = {
     activePage,
@@ -179,5 +183,3 @@ const buildBlocks = (activePage, pageCount) => {
 
   return state.result;
 };
-
-export default buildBlocks;

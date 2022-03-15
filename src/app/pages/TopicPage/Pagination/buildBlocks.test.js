@@ -1,4 +1,4 @@
-import buildBlocks, { STATE, TYPE, VISIBILITY } from './buildBlocks';
+import buildBlocks, { TYPE, VISIBILITY } from './buildBlocks';
 
 const DEVICE = {
   MOBILE: 'MOBILE',
@@ -47,12 +47,12 @@ const validate = ({
     if (expected === '.' && actual[i].type === TYPE.ELLIPSIS) {
       return true;
     }
-    if (expected === actual[i].number) {
+    if (expected === actual[i].pageNumber) {
       return true;
     }
     throw new Error(
       `On ${device}, given currentPage ${currentPage} and pageCount ${pageCount}, expected block ${i} to be ${expected} but got ${JSON.stringify(
-        actual,
+        actual[i],
       )}`,
     );
   };
@@ -62,107 +62,76 @@ const validate = ({
   );
 };
 
-const bigPageCounts = [
-  {
-    currentPage: 1,
-    pageCount: 100,
-    expectedOutputMobile: null,
-    expectedOutputTablet: null,
-    expectedOutputDesktop: null,
-  },
-  {
-    currentPage: 2,
-    pageCount: 100,
-    expectedOutputMobile: null,
-    expectedOutputTablet: null,
-    expectedOutputDesktop: null,
-  },
-  {
-    currentPage: 50,
-    pageCount: 100,
-    expectedOutputMobile: null,
-    expectedOutputTablet: null,
-    expectedOutputDesktop: null,
-  },
-  {
-    currentPage: 99,
-    pageCount: 100,
-    expectedOutputMobile: null,
-    expectedOutputTablet: null,
-    expectedOutputDesktop: null,
-  },
-  {
-    currentPage: 100,
-    pageCount: 100,
-    expectedOutputMobile: null,
-    expectedOutputTablet: null,
-    expectedOutputDesktop: null,
-  },
-];
-
 const smallPageCounts = [
   {
     currentPage: 1,
     pageCount: 1,
-    expectedOutputMobile: null,
-    expectedOutputTablet: null,
-    expectedOutputDesktop: null,
+    mobileOutput: null,
+    tabletOutput: null,
+    desktopOutput: null,
   },
   {
     currentPage: 1,
     pageCount: 2,
-    expectedOutputMobile: ['<', 1, 2, '>'],
-    expectedOutputTablet: ['<', 1, 2, '>'],
-    expectedOutputDesktop: ['<', 1, 2, '>'],
+    mobileOutput: ['<', 1, 2, '>'],
+    tabletOutput: ['<', 1, 2, '>'],
+    desktopOutput: ['<', 1, 2, '>'],
   },
   {
     currentPage: 1,
     pageCount: 4,
-    expectedOutputMobile: ['<', 1, 2, 3, 4, '>'],
-    expectedOutputTablet: ['<', 1, 2, 3, 4, '>'],
-    expectedOutputDesktop: ['<', 1, 2, 3, 4, '>'],
+    mobileOutput: ['<', 1, 2, '.', 4, '>'],
+    tabletOutput: ['<', 1, 2, 3, 4, '>'],
+    desktopOutput: ['<', 1, 2, 3, 4, '>'],
   },
   {
     currentPage: 3,
     pageCount: 4,
-    expectedOutputMobile: ['<', 1, 2, 3, 4, '>'],
-    expectedOutputTablet: ['<', 1, 2, 3, 4, '>'],
-    expectedOutputDesktop: ['<', 1, 2, 3, 4, '>'],
+    mobileOutput: ['<', 1, '.', 3, 4, '>'],
+    tabletOutput: ['<', 1, 2, 3, 4, '>'],
+    desktopOutput: ['<', 1, 2, 3, 4, '>'],
   },
 ];
 
-const mobileCollapsing = [
+const bigPageCounts = [
   {
     currentPage: 1,
-    pageCount: 5,
-    expectedOutputMobile: ['<', 1, 2, '.', 5, '>'],
-    expectedOutputTablet: ['<', 1, 2, 3, 4, 5, '>'],
-    expectedOutputDesktop: ['<', 1, 2, 3, 4, 5, '>'],
+    pageCount: 100,
+    mobileOutput: ['<', 1, 2, '.', 100, '>'],
+    tabletOutput: ['<', 1, 2, 3, '.', 100, '>'],
+    desktopOutput: ['<', 1, 2, 3, 4, 5, 6, 7, '.', 100, '>'],
   },
   {
-    currentPage: 4,
-    pageCount: 5,
-    expectedOutputMobile: ['<', 1, '.', 4, 5, '>'],
-    expectedOutputTablet: ['<', 1, 2, 3, 4, 5, '>'],
-    expectedOutputDesktop: ['<', 1, 2, 3, 4, 5, '>'],
+    currentPage: 2,
+    pageCount: 100,
+    mobileOutput: ['<', 1, 2, '.', 100, '>'],
+    tabletOutput: ['<', 1, 2, 3, 4, '.', 100, '>'],
+    desktopOutput: ['<', 1, 2, 3, 4, 5, 6, 7, 8, '.', 100, '>'],
   },
   {
-    currentPage: 3,
-    pageCount: 5,
-    expectedOutputMobile: ['<', 1, '.', 3, '.', 5, '>'],
-    expectedOutputTablet: ['<', 1, 2, 3, 4, 5, '>'],
-    expectedOutputDesktop: ['<', 1, 2, 3, 4, 5, '>'],
+    currentPage: 50,
+    pageCount: 100,
+    mobileOutput: ['<', 1, '.', 50, '.', 100, '>'],
+    tabletOutput: ['<', 1, '.', 49, 50, 51, '.', 100, '>'],
+    desktopOutput: ['<', 1, '.', 47, 48, 49, 50, 51, 52, 53, '.', 100, '>'],
   },
   {
-    currentPage: 3,
-    pageCount: 6,
-    expectedOutputMobile: ['<', 1, '.', 3, '.', 6, '>'],
-    expectedOutputTablet: ['<', 1, 2, 3, 4, 5, 6, '>'],
-    expectedOutputDesktop: ['<', 1, 2, 3, 4, 5, 6, '>'],
+    currentPage: 99,
+    pageCount: 100,
+    mobileOutput: ['<', 1, '.', 99, 100, '>'],
+    tabletOutput: ['<', 1, '.', 97, 98, 99, 100, '>'],
+    desktopOutput: ['<', 1, '.', 93, 94, 95, 96, 97, 98, 99, 100, '>'],
+  },
+  {
+    currentPage: 100,
+    pageCount: 100,
+    mobileOutput: ['<', 1, '.', 99, 100, '>'],
+    tabletOutput: ['<', 1, '.', 98, 99, 100, '>'],
+    desktopOutput: ['<', 1, '.', 94, 95, 96, 97, 98, 99, 100, '>'],
   },
 ];
 
-const tests = bigPageCounts;
+const tests = [...smallPageCounts, ...bigPageCounts];
 
 describe('Topic Pagination', () => {
   it('outputs correct blocks', () => {
@@ -170,24 +139,19 @@ describe('Topic Pagination', () => {
       ({
         currentPage,
         pageCount,
-        expectedOutputMobile,
-        expectedOutputTablet,
-        expectedOutputDesktop,
-        debug,
+        mobileOutput,
+        tabletOutput,
+        desktopOutput,
       }) => {
         const output = buildBlocks(currentPage, pageCount);
-        if (debug) {
-          console.log('Expectation', expectedOutputMobile);
-          console.log('Actual', output);
-        }
-        return true;
+
         expect(
           validate({
             currentPage,
             pageCount,
             device: DEVICE.MOBILE,
             output,
-            expectedOutput: expectedOutputMobile,
+            expectedOutput: mobileOutput,
           }),
         ).toBe(true);
         expect(
@@ -196,7 +160,7 @@ describe('Topic Pagination', () => {
             pageCount,
             device: DEVICE.TABLET,
             output,
-            expectedOutput: expectedOutputTablet,
+            expectedOutput: tabletOutput,
           }),
         ).toBe(true);
         expect(
@@ -205,7 +169,7 @@ describe('Topic Pagination', () => {
             pageCount,
             device: DEVICE.DESKTOP,
             output,
-            expectedOutput: expectedOutputDesktop,
+            expectedOutput: desktopOutput,
           }),
         ).toBe(true);
       },
