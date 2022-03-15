@@ -130,13 +130,9 @@ describe('Optimizely Page Complete tracking', () => {
       });
     });
 
-    act(() => {
-      jest.advanceTimersByTime(1100);
-    });
+    await Promise.resolve();
 
-    await waitFor(() => {
-      expect(global.fetch).not.toHaveBeenCalled();
-    });
+    expect(optimizely.track).not.toHaveBeenCalled();
   });
 
   it('should not send tracking event when element is in view, but not in experiment variation', async () => {
@@ -158,13 +154,9 @@ describe('Optimizely Page Complete tracking', () => {
       });
     });
 
-    act(() => {
-      jest.advanceTimersByTime(1100);
-    });
+    await Promise.resolve();
 
-    await waitFor(() => {
-      expect(global.fetch).not.toHaveBeenCalled();
-    });
+    expect(optimizely.track).not.toHaveBeenCalled();
   });
 
   it('should not return intersecting element when on AMP', async () => {
@@ -202,9 +194,9 @@ describe('Optimizely Page Complete tracking', () => {
       });
     });
 
-    await waitFor(() => {
-      expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
-      expect(optimizely.track).toHaveBeenCalledTimes(1);
-    });
+    await Promise.resolve();
+
+    expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
+    expect(optimizely.track).toHaveBeenCalledTimes(1);
   });
 });
