@@ -86,7 +86,6 @@ const tests = [
 describe('findNClosestIndicies', () => {
   it('returns correct results', () => {
     tests.forEach(({ expectedResult, name, ...args }) => {
-      console.log('name', name);
       expect(findNClosestIndices(args)).toEqual(expectedResult);
     });
   });
