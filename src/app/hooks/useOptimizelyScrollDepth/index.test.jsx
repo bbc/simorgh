@@ -52,22 +52,6 @@ describe('useOptimizelyScrollDepth', () => {
     jest.resetAllMocks();
   });
 
-  describe('improved_promos experiment', () => {
-    it('should put use in experiment and scroll track events get sent', async () => {
-      useOptimizelyVariation.mockReturnValue('improved_promos');
-
-      const { result } = renderHook(() => useOptimizelyScrollDepth(), {
-        wrapper,
-      });
-
-      act(() => {
-        result.current.setScrollDepth(25);
-      });
-
-      expect(optimizelyMock.track).toHaveBeenCalledTimes(1);
-    });
-  });
-
   it('should call add event listener with scroll', () => {
     renderHook(() => useOptimizelyScrollDepth());
 

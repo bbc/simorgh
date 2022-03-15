@@ -17,8 +17,12 @@ const DISCLAIMER_FIXTURE = {
     text: 'Android',
     url: 'https://play.google.com/store/apps/details?id=uk.co.bbc.russian',
   },
-  para5:
-    '. Грузите его на ваш девайс и продолжайте получать новости от Би-би-си.',
+  para5: '. Вы можете также подписаться на наш канал в ',
+  para6: {
+    text: 'Telegram',
+    url: 'https://t.me/bbcrussian',
+  },
+  para7: '.',
 };
 
 // eslint-disable-next-line react/prop-types
@@ -50,18 +54,20 @@ describe('Disclaimer Component', () => {
     const { getByText } = renderComponent();
     expect(
       getByText(
-        'Приложение Русской службы BBC News доступно для и . Грузите его на ваш девайс и продолжайте получать новости от Би-би-си.',
+        'Приложение Русской службы BBC News доступно для и . Вы можете также подписаться на наш канал в .',
       ),
     ).toBeInTheDocument();
 
     expect(getByText('IOS')).toBeInTheDocument();
 
     expect(getByText('Android')).toBeInTheDocument();
+
+    expect(getByText('Telegram')).toBeInTheDocument();
   });
 
   it('should render links correctly', () => {
     const { getAllByRole } = renderComponent();
-    expect(getAllByRole('link').length).toBe(2);
+    expect(getAllByRole('link').length).toBe(3);
   });
 
   it('should not render the disclaimer when the disclaimer toggle is not enabled', () => {

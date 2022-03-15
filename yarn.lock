@@ -1776,15 +1776,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/psammead-caption@npm:4.1.24":
-  version: 4.1.24
-  resolution: "@bbc/psammead-caption@npm:4.1.24"
+"@bbc/psammead-caption@npm:4.1.25":
+  version: 4.1.25
+  resolution: "@bbc/psammead-caption@npm:4.1.25"
   dependencies:
     "@bbc/gel-foundations": 7.0.0
     "@bbc/psammead-styles": 8.0.2
   peerDependencies:
     "@emotion/styled": ^11.0.0
-  checksum: aa5f0c61b6724e624c48f2130ad785e0baee6c6bc837043ee39466c35ae28e7ee6c8fe1841252f81d66de61f03a194ece715dc9cfc739384b27e4edf4ee74441
+  checksum: 038e2bf0d6f5b558b91d80ac228ab953ff318621989d1487cd622bc656547c2cf975e7527da8251e947ee1f51777efb84b2363a3d16cc25ee3865d0615dd741a
   languageName: node
   linkType: hard
 
@@ -2112,9 +2112,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/psammead-timestamp-container@npm:5.0.40":
-  version: 5.0.40
-  resolution: "@bbc/psammead-timestamp-container@npm:5.0.40"
+"@bbc/psammead-timestamp-container@npm:5.1.0":
+  version: 5.1.0
+  resolution: "@bbc/psammead-timestamp-container@npm:5.1.0"
   dependencies:
     "@bbc/gel-foundations": 7.0.0
     "@bbc/psammead-timestamp": 4.0.29
@@ -2122,7 +2122,7 @@ __metadata:
   peerDependencies:
     moment: 2.24.0
     react: ">=16.9.0"
-  checksum: dbc69f3baf821506133dfa426318d9c3ab86c5eb7c8e82829d810311f085d86238e9804660a28b20320cdae53479acc1a7b690347d715c5318e20133836a747c
+  checksum: 0e6fee80243e83ce612fc73f61317367a278b1df7e944ea462e301aff81f509a400b4541bbe12f822404f93324919c6102dd1bf87ee72c840f4722ebfca621c2
   languageName: node
   linkType: hard
 
@@ -2412,15 +2412,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/react@npm:11.8.1":
-  version: 11.8.1
-  resolution: "@emotion/react@npm:11.8.1"
+"@emotion/react@npm:11.8.2":
+  version: 11.8.2
+  resolution: "@emotion/react@npm:11.8.2"
   dependencies:
     "@babel/runtime": ^7.13.10
     "@emotion/babel-plugin": ^11.7.1
     "@emotion/cache": ^11.7.1
     "@emotion/serialize": ^1.0.2
-    "@emotion/sheet": ^1.1.0
     "@emotion/utils": ^1.1.0
     "@emotion/weak-memoize": ^0.2.5
     hoist-non-react-statics: ^3.3.1
@@ -2432,7 +2431,7 @@ __metadata:
       optional: true
     "@types/react":
       optional: true
-  checksum: a767c6d7ca9e45dc3c1e873cfa51952db24e0d279944403ceb06be82d15859354e128becf6f7d0f8ff2b5f3460e3c165cd2b16ab1a2446e8e15e134a69e6ea3a
+  checksum: a8733f8375f9798953019872137326f39e5171b3286535fe34a695d63067a2c0f0f154beb6d117361206ef04a584fa4adef0ecc450654b6af4695b1d893d2496
   languageName: node
   linkType: hard
 
@@ -3079,9 +3078,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@optimizely/react-sdk@npm:2.8.0":
-  version: 2.8.0
-  resolution: "@optimizely/react-sdk@npm:2.8.0"
+"@optimizely/react-sdk@npm:2.8.1":
+  version: 2.8.1
+  resolution: "@optimizely/react-sdk@npm:2.8.1"
   dependencies:
     "@optimizely/js-sdk-logging": ^0.3.1
     "@optimizely/optimizely-sdk": ^4.9.1
@@ -3090,7 +3089,7 @@ __metadata:
     utility-types: ^2.1.0 || ^3.0.0
   peerDependencies:
     react: ">=16.8.0"
-  checksum: 936ddb1bdb191b956ccebd1ad15a03336fb276cf3cffc262888f04957a89508520559498a91227f5296fc464bd018cfff9a6765761628824bef3c19facfc4644
+  checksum: 973e8eac612766c9414b433c876b24674805456a9dfd4cb10e390849273e88e062a175d0e600dd49b7d4f63116d6e582df2280684aa73ed1c4eb141bbddbdf25
   languageName: node
   linkType: hard
 
@@ -4800,9 +4799,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:12.1.3":
-  version: 12.1.3
-  resolution: "@testing-library/react@npm:12.1.3"
+"@testing-library/react@npm:12.1.4":
+  version: 12.1.4
+  resolution: "@testing-library/react@npm:12.1.4"
   dependencies:
     "@babel/runtime": ^7.12.5
     "@testing-library/dom": ^8.0.0
@@ -4810,7 +4809,7 @@ __metadata:
   peerDependencies:
     react: "*"
     react-dom: "*"
-  checksum: 2f059e93dc3f161c4d15910d1fa80cd4f5cfb6eff8a733939a72ac720c2499b74761e8980c02983a6e49153b776e82bd770a1c3e66e05c4429db0e01612f7d0a
+  checksum: 944c5f8d4abb22c0650c25c7ae499651828c37c0e741ff67a4635d4cd99b307d486dabec05b372aba638bd359d29cd2af97393b5055ea294a201d80b4bc384b8
   languageName: node
   linkType: hard
 
@@ -7296,18 +7295,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"browserslist@npm:4.19.3":
-  version: 4.19.3
-  resolution: "browserslist@npm:4.19.3"
+"browserslist@npm:4.20.0":
+  version: 4.20.0
+  resolution: "browserslist@npm:4.20.0"
   dependencies:
-    caniuse-lite: ^1.0.30001312
-    electron-to-chromium: ^1.4.71
+    caniuse-lite: ^1.0.30001313
+    electron-to-chromium: ^1.4.76
     escalade: ^3.1.1
     node-releases: ^2.0.2
     picocolors: ^1.0.0
   bin:
     browserslist: cli.js
-  checksum: c28958313dd17f345dd6e26379cc863126cd7d855588e57a1ed9e552a1135d64f05ec57063b48fff0d94a9b785bd248e9472c2d63ce8460ca56fc2444f5a1e66
+  checksum: 6d77f54bd43e7e1b86c3f10a3aa84b6c198f2ecc8b345ebd42cb9feb1c143554ad62a0eaf1365f28d14589a4d1fb12b367ade3798fa493dab5cff4ca525384aa
   languageName: node
   linkType: hard
 
@@ -7565,10 +7564,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30001109, caniuse-lite@npm:^1.0.30001312":
+"caniuse-lite@npm:^1.0.30001109":
   version: 1.0.30001312
   resolution: "caniuse-lite@npm:1.0.30001312"
   checksum: 753fb9ea1e02e999430b323a71b5acab5120f3b5fc0161b01669f54a3ef5c5296240b6ae9b79b12a3742e3aed216aa9ee3d5398a23c16d08625ccd376b79545d
+  languageName: node
+  linkType: hard
+
+"caniuse-lite@npm:^1.0.30001313":
+  version: 1.0.30001316
+  resolution: "caniuse-lite@npm:1.0.30001316"
+  checksum: 8a96ee89f5e64f42f684475905c73c67f995abd6d9b111ab8a9d2e0a5d3b871f1a600ff42e4ffe7f7f3498d0243beeafc11cf7b4dbe3e022a2e5cdf639564152
   languageName: node
   linkType: hard
 
@@ -7751,14 +7757,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:6.5.1":
-  version: 6.5.1
-  resolution: "chromatic@npm:6.5.1"
+"chromatic@npm:6.5.2":
+  version: 6.5.2
+  resolution: "chromatic@npm:6.5.2"
   bin:
     chroma: bin/main.cjs
     chromatic: bin/main.cjs
     chromatic-cli: bin/main.cjs
-  checksum: 7396331bdd4e80d7073aebdaaccacc77db5301320f4b731fe5a91d105fca0e88f5509c71b7e59bbc1372030579d3123ab670d000310af852f47818be89dbbfcc
+  checksum: d89fc4ca69488dbd2ec708da790868818187be8f2d1194bb2b98de91c93956decefed5df474f1609becb8b6ba7d9d023f39816793f1397ecc29af22c3b7e360a
   languageName: node
   linkType: hard
 
@@ -9558,10 +9564,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron-to-chromium@npm:^1.4.71":
-  version: 1.4.75
-  resolution: "electron-to-chromium@npm:1.4.75"
-  checksum: 38ae5e197a100b9f9931a6112b0791659f736ad88ab3cd5534ed07dcc6001964a99de6757cbb708007bc59b0cd1b7cc36aeb5ea2efbfff6bd36ab53e49decb69
+"electron-to-chromium@npm:^1.4.76":
+  version: 1.4.82
+  resolution: "electron-to-chromium@npm:1.4.82"
+  checksum: b53c77bdd7208d4651a0f55dd000088c790fd8818dbcd3f30e4d2594a1cbb986d37502f0d8dd166f9bc1dbf6cbb6627ccdb5cc09b1334e591936b11036664d0d
   languageName: node
   linkType: hard
 
@@ -9938,14 +9944,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:8.4.0":
-  version: 8.4.0
-  resolution: "eslint-config-prettier@npm:8.4.0"
+"eslint-config-prettier@npm:8.5.0":
+  version: 8.5.0
+  resolution: "eslint-config-prettier@npm:8.5.0"
   peerDependencies:
     eslint: ">=7.0.0"
   bin:
     eslint-config-prettier: bin/cli.js
-  checksum: ee8dc343f1fed15dc0658e190a966cc23644477f2331a7f56ae2bb79dd74892e3cde8ea5c142e7a3329a8291a1de041e13ca96e54d0c85ff4a2aba13390c5f10
+  checksum: 0d0f5c32e7a0ad91249467ce71ca92394ccd343178277d318baf32063b79ea90216f4c81d1065d60f96366fdc60f151d4d68ae7811a58bd37228b84c2083f893
   languageName: node
   linkType: hard
 
@@ -10068,9 +10074,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react@npm:7.29.2":
-  version: 7.29.2
-  resolution: "eslint-plugin-react@npm:7.29.2"
+"eslint-plugin-react@npm:7.29.4":
+  version: 7.29.4
+  resolution: "eslint-plugin-react@npm:7.29.4"
   dependencies:
     array-includes: ^3.1.4
     array.prototype.flatmap: ^1.2.5
@@ -10088,7 +10094,7 @@ __metadata:
     string.prototype.matchall: ^4.0.6
   peerDependencies:
     eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
-  checksum: fcd793c0fd8e4570dcf8f70dd4afae9882303f4a4b650e09dac2f85fdc0b28747cb97b79832f4b8f4eabdbfb9edf69dc0ff04e8b7f33e0bb8e3f024185f4b037
+  checksum: bb7d3715ccd7f3e0d7bfaa2125b26d96865695bcfea4a3d510a5763342a74ab5b99a88e13aad9245f9461ad87e4bce69c33fc946888115d576233f9b6e69700d
   languageName: node
   linkType: hard
 
@@ -15103,6 +15109,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"minimatch@npm:4.2.1":
+  version: 4.2.1
+  resolution: "minimatch@npm:4.2.1"
+  dependencies:
+    brace-expansion: ^1.1.7
+  checksum: 2b1514e3d0f29a549912f0db7ae7b82c5cab4a8f2dd0369f1c6451a325b3f12b2cf473c95873b6157bb8df183d6cf6db82ff03614b6adaaf1d7e055beccdfd01
+  languageName: node
+  linkType: hard
+
 "minimatch@npm:^3.0.2, minimatch@npm:^3.0.4, minimatch@npm:^3.1.2":
   version: 3.1.2
   resolution: "minimatch@npm:3.1.2"
@@ -15277,9 +15292,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mocha@npm:9.2.1":
-  version: 9.2.1
-  resolution: "mocha@npm:9.2.1"
+"mocha@npm:9.2.2":
+  version: 9.2.2
+  resolution: "mocha@npm:9.2.2"
   dependencies:
     "@ungap/promise-all-settled": 1.1.2
     ansi-colors: 4.1.1
@@ -15294,9 +15309,9 @@ __metadata:
     he: 1.2.0
     js-yaml: 4.1.0
     log-symbols: 4.1.0
-    minimatch: 3.0.4
+    minimatch: 4.2.1
     ms: 2.1.3
-    nanoid: 3.2.0
+    nanoid: 3.3.1
     serialize-javascript: 6.0.0
     strip-json-comments: 3.1.1
     supports-color: 8.1.1
@@ -15308,7 +15323,7 @@ __metadata:
   bin:
     _mocha: bin/_mocha
     mocha: bin/mocha
-  checksum: 10debdf2ee2232368852d80d8a7650a2c10d2bf5f47022c4d8111323b7fcd3115b2153f760b841d39207347a4d2df602fe96013f855587d80ff23332261b260e
+  checksum: 4d5ca4ce33fc66627e63acdf09a634e2358c9a00f61de7788b1091b6aad430da04f97f9ecb82d56dc034b623cb833b65576136fd010d77679c03fcea5bc1e12d
   languageName: node
   linkType: hard
 
@@ -16903,14 +16918,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.4.7":
-  version: 8.4.7
-  resolution: "postcss@npm:8.4.7"
+"postcss@npm:8.4.8":
+  version: 8.4.8
+  resolution: "postcss@npm:8.4.8"
   dependencies:
     nanoid: ^3.3.1
     picocolors: ^1.0.0
     source-map-js: ^1.0.2
-  checksum: a515ed36622edbee1d3ba153298d3b62ae9826dfa6de19204c2a6f975c8d3ad36808423b5119a9d82b78efd486de3ce35a1faf882a36ac8aa09492be4fbb7fe1
+  checksum: 8e42def1ea98a4ac800d2b8937b19c83c6722da6c39ded72b1877eb743922f51b6e93be3667284b685ac18e8b583f21d97f24e0a73161c70fe8dc6901e614b87
   languageName: node
   linkType: hard
 
@@ -19023,7 +19038,7 @@ __metadata:
     "@bbc/psammead-bulletin": 5.0.56
     "@bbc/psammead-byline": 3.0.30
     "@bbc/psammead-calendars": 2.0.27
-    "@bbc/psammead-caption": 4.1.24
+    "@bbc/psammead-caption": 4.1.25
     "@bbc/psammead-consent-banner": 5.5.13
     "@bbc/psammead-copyright": 3.0.29
     "@bbc/psammead-detokeniser": 1.0.7
@@ -19051,7 +19066,7 @@ __metadata:
     "@bbc/psammead-styles": 8.0.2
     "@bbc/psammead-test-helpers": 6.0.5
     "@bbc/psammead-timestamp": 4.0.29
-    "@bbc/psammead-timestamp-container": 5.0.40
+    "@bbc/psammead-timestamp-container": 5.1.0
     "@bbc/psammead-topic-tags": 1.1.1
     "@bbc/psammead-useful-links": 3.0.30
     "@bbc/psammead-visually-hidden-text": 2.0.7
@@ -19059,14 +19074,14 @@ __metadata:
     "@emotion/babel-plugin": 11.7.2
     "@emotion/cache": 11.7.1
     "@emotion/jest": 11.8.0
-    "@emotion/react": 11.8.1
+    "@emotion/react": 11.8.2
     "@emotion/server": 11.4.0
     "@emotion/styled": 11.8.1
     "@loadable/babel-plugin": 5.13.2
     "@loadable/component": 5.15.2
     "@loadable/server": 5.15.2
     "@loadable/webpack-plugin": 5.15.2
-    "@optimizely/react-sdk": 2.8.0
+    "@optimizely/react-sdk": 2.8.1
     "@storybook/addon-a11y": 6.4.19
     "@storybook/addon-controls": 6.4.19
     "@storybook/addon-docs": 6.4.19
@@ -19078,7 +19093,7 @@ __metadata:
     "@storybook/theming": 6.4.19
     "@testing-library/dom": 8.11.3
     "@testing-library/jest-dom": 5.16.2
-    "@testing-library/react": 12.1.3
+    "@testing-library/react": 12.1.4
     "@testing-library/react-hooks": 7.0.2
     "@testing-library/user-event": 13.5.0
     amphtml-validator: 1.0.35
@@ -19090,7 +19105,7 @@ __metadata:
     babel-plugin-transform-react-remove-prop-types: 0.4.24
     brotli-webpack-plugin: 1.1.0
     chalk: 4.1.2
-    chromatic: 6.5.1
+    chromatic: 6.5.2
     chrome-launcher: 0.15.0
     cli-table: 0.3.11
     compression: 1.7.4
@@ -19106,14 +19121,14 @@ __metadata:
     dotenv: 10.0.0
     eslint: 7.32.0
     eslint-config-airbnb: 18.2.1
-    eslint-config-prettier: 8.4.0
+    eslint-config-prettier: 8.5.0
     eslint-import-resolver-alias: 1.1.2
     eslint-plugin-cypress: 2.12.1
     eslint-plugin-import: 2.25.4
     eslint-plugin-json: 3.1.0
     eslint-plugin-jsx-a11y: 6.5.1
     eslint-plugin-prettier: 4.0.0
-    eslint-plugin-react: 7.29.2
+    eslint-plugin-react: 7.29.4
     eslint-plugin-react-hooks: 4.3.0
     express: 4.17.3
     express-static-gzip: 2.1.5
@@ -19137,7 +19152,7 @@ __metadata:
     jsdom: 18.1.1
     lru-cache: 6.0.0
     minimist: 1.2.5
-    mocha: 9.2.1
+    mocha: 9.2.2
     mocha-junit-reporter: 2.0.2
     moment: 2.29.1
     moment-timezone: 0.5.34

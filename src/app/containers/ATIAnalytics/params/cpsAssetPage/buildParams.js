@@ -43,14 +43,10 @@ export const buildCpsAssetPageATIParams = (
   const producerId = getProducer(atiAnalyticsProducerId);
   const ldpThingIds = getThingAttributes('thingId', pageData);
   const ldpThingLabels = getThingAttributes('thingEnglishLabel', pageData);
-  const isLegacyAsset = url => url.split('/').length > 7;
 
   return {
     appName: atiAnalyticsAppName,
-    contentId: getContentId(
-      isLegacyAsset(requestContext.canonicalLink) ? 'topcat' : 'cps',
-      pageData,
-    ),
+    contentId: getContentId(pageData),
     contentType,
     language: path(['language'], metadata),
     // Example page identifier: embedded_media::pidgin.embedded_media.media_asset.49529724.page

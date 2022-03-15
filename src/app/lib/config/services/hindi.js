@@ -81,7 +81,8 @@ export const service = {
       ads: {
         advertisementLabel: 'विज्ञापन',
       },
-      recommendationTitle: 'और ये भी पढ़ें',
+      recommendationTitle: 'ये भी पढ़ें',
+      splitRecommendationTitle: 'कुछ और जानिए',
       seeAll: 'सब देखें',
       home: 'होम पेज',
       currentPage: 'मौजूदा पन्ना',
