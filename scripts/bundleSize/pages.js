@@ -11,4 +11,5 @@ exports.pages = [
   'OnDemandTvPage',
   'PhotoGalleryPage',
   'StoryPage',
+  'TopicPage',
 ];

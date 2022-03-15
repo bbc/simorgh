@@ -1,30 +1,25 @@
 import React from 'react';
-import { withKnobs, select, number } from '@storybook/addon-knobs';
+import { withKnobs, number } from '@storybook/addon-knobs';
+import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import Pager from '.';
 
 // eslint-disable-next-line react/prop-types
-const Component = () => {
+const Component = ({ service, variant }) => {
   return (
-    <Pager
-      activePage={number('Active Page', 5, { min: 1, max: 100 })}
-      pageCount={number('PageCount', 10, { min: 2, max: 100 })}
-      deviceSize={select(
-        'Device Size',
-        {
-          mobile: 'mobile',
-          tablet: 'tablet',
-          desktop: 'desktop',
-        },
-        'desktop',
-      )}
-    />
+    <ServiceContextProvider service={service} variant={variant}>
+      <Pager
+        activePage={number('Active Page', 5, { min: 1, max: 100 })}
+        pageCount={number('PageCount', 10, { min: 2, max: 100 })}
+      />
+    </ServiceContextProvider>
   );
 };
 
 export default {
   title: 'Topic/Pager',
   Component,
-  decorators: [withKnobs],
+  decorators: [withKnobs, withServicesKnob()],
   parameters: { chromatic: { disable: true } },
 };
 
