@@ -1,6 +1,6 @@
 import React, { forwardRef, useContext } from 'react';
 import { StoryPromoLiBase, StoryPromoUl } from '@bbc/psammead-story-promo-list';
-import { arrayOf, shape, number, string } from 'prop-types';
+import { arrayOf, shape, number, string, func } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
 import useViewTracker from '#hooks/useViewTracker';
 import { OptimizelyContext } from '@optimizely/react-sdk';
@@ -55,7 +55,11 @@ const RecommendationsPromoListItem = forwardRef(
   },
 );
 
-const RecommendationsPromoList = ({ promoItems, showForVariation }) => {
+const RecommendationsPromoList = ({
+  promoItems,
+  showForVariation,
+  splitRecsViewEventTracker,
+}) => {
   const { optimizely } = useContext(OptimizelyContext);
   const eventTrackingData = showForVariation
     ? getEventTrackingDataWithOptimizely({ optimizely })
@@ -78,7 +82,11 @@ const RecommendationsPromoList = ({ promoItems, showForVariation }) => {
       {promoItems.map((item, index) => (
         <RecommendationsPromoListItem
           key={item.id}
-          ref={blockViewEventTracker}
+          ref={
+            showForVariation === 'variation_1'
+              ? splitRecsViewEventTracker
+              : blockViewEventTracker
+          }
           index={index}
           item={item}
           optimizely={optimizely}
@@ -102,10 +110,12 @@ RecommendationsPromoListItem.defaultProps = {
 
 RecommendationsPromoList.propTypes = {
   promoItems: arrayOf(shape(storyItem)).isRequired,
+  splitRecsViewEventTracker: func.optional,
   showForVariation: string.optional,
 };
 
 RecommendationsPromoList.defaultProps = {
+  splitRecsViewEventTracker: () => {},
   showForVariation: null,
 };
 
