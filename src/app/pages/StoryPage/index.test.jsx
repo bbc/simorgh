@@ -1189,7 +1189,7 @@ describe('Story Page', () => {
     });
   });
 
-  // Need to enable when experiment blocks has been added.
+  // OPTIMIZELY: 003_hindi_experiment_feature: Need to enable when experiment blocks has been added.
   describe.skip('Optimizely Experiments', () => {
     describe('003_hindi_experiment_feature', () => {
       describe('variation_1', () => {

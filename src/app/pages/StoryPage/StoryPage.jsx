@@ -14,7 +14,7 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import { OptimizelyExperiment, OptimizelyContext } from '@optimizely/react-sdk';
+import { OptimizelyExperiment } from '@optimizely/react-sdk';
 
 import Grid, { GelPageGrid, GridItemLarge } from '#app/components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
@@ -57,9 +57,7 @@ import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
-import useViewTracker from '#hooks/useViewTracker';
 import SplitRecommendations from '#containers/CpsRecommendations/SplitRecommendations';
-import getEventTrackingData from '#containers/CpsRecommendations/RecommendationsPromoList/getEventTrackingData';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 
@@ -111,14 +109,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
   const recommendationsData = path(['recommendations'], pageData);
   const topics = path(['metadata', 'topics'], pageData);
-
-  // OPTIMIZELY: 003_hindi_experiment_feature.
-  const { optimizely } = useContext(OptimizelyContext);
-  const eventTrackingData = getEventTrackingData();
-  const splitRecsViewEventTracker = useViewTracker({
-    ...eventTrackingData.block,
-    ...(optimizely && { optimizely }),
-  });
 
   const gridColumns = {
     group0: 8,
@@ -246,11 +236,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
               variation === 'variation_1'
             ) {
               return (
-                <SplitRecommendations
-                  {...props}
-                  items={recommendationsData}
-                  splitRecsViewEventTracker={splitRecsViewEventTracker}
-                />
+                <SplitRecommendations {...props} items={recommendationsData} />
               );
             }
 
