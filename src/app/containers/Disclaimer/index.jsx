@@ -27,7 +27,7 @@ const Inner = styled.section`
   text-transform: uppercase;
   margin-bottom: ${GEL_SPACING_TRPL};
   padding: ${GEL_SPACING_DBL};
-  @media (max-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
+  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}rem) {
     line-height: 1.4;
   }
   ${({ increasePaddingOnDesktop }) =>
