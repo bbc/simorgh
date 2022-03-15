@@ -14,7 +14,7 @@ import {
 import { C_GREY_6, C_GREY_2 } from '@bbc/psammead-styles/colours';
 import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-  GEL_GROUP_B_MIN_WIDTH,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import { GridItemLarge } from '#app/components/Grid';
 
@@ -30,7 +30,7 @@ const Inner = styled.section`
   text-transform: uppercase;
   margin-bottom: ${GEL_SPACING_TRPL};
   padding: ${GEL_SPACING_DBL};
-  @media (max-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
+  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     line-height: 1.4;
   }
   ${({ increasePaddingOnDesktop }) =>
