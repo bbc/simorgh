@@ -12,7 +12,10 @@ import {
   GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
 import { C_GREY_6, C_GREY_2 } from '@bbc/psammead-styles/colours';
-import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MAX,
+} from '@bbc/gel-foundations/breakpoints';
 import { GridItemLarge } from '#app/components/Grid';
 
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -33,7 +36,7 @@ const Inner = styled.section`
   ${({ increasePaddingOnDesktop }) =>
     increasePaddingOnDesktop &&
     `
-      @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+      @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
         padding: ${GEL_SPACING_DBL} ${GEL_SPACING_QUIN};
       }
     `}
