@@ -13,6 +13,7 @@ import {
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
   STORY_PAGE,
+  TOPIC_PAGE,
 } from '#app/routes/utils/pageTypes';
 import {
   chartbeatUID,
@@ -102,6 +103,11 @@ describe('Chartbeat utilities', () => {
         pageType: PHOTO_GALLERY_PAGE,
         expectedDefaultType: PHOTO_GALLERY_PAGE,
         expectedShortType: PHOTO_GALLERY_PAGE,
+      },
+      {
+        pageType: TOPIC_PAGE,
+        expectedDefaultType: 'Topics',
+        expectedShortType: 'Topics',
       },
       {
         pageType: null,
@@ -222,6 +228,12 @@ describe('Chartbeat utilities', () => {
         expected:
           'Mundo, Mundo - STY, Mundo - STY, Mundo - STY - STY, Mundo - mundo-category',
       },
+      {
+        service: 'mundo',
+        pageType: TOPIC_PAGE,
+        description: 'should return expected section for topic page',
+        expected: 'Mundo, Mundo - Topics',
+      },
     ];
 
     sectionFixtures.forEach(
@@ -338,6 +350,17 @@ describe('Chartbeat utilities', () => {
         expect(getTitle({ pageType, pageData })).toBe(pageTitle);
       },
     );
+
+    it('should return correct title when pageType is TOPIC_PAGE', () => {
+      const pageData = {
+        title: 'Topic Page Title',
+      };
+      const pageType = TOPIC_PAGE;
+      const brandName = 'BBC Brand Name';
+      expect(getTitle({ pageType, pageData, brandName })).toBe(
+        'Topic Page Title - BBC Brand Name',
+      );
+    });
   });
 
   describe('Chartbeat Config', () => {
@@ -720,6 +743,73 @@ describe('Chartbeat utilities', () => {
       sections: 'Arabic, Arabic - Podcasts',
       title: 'Podcast Page Title',
       type: 'player-episode',
+      uid: 50924,
+      virtualReferrer: 'bbc.com/previous-path',
+      useCanonical: true,
+      path: '/',
+    };
+
+    expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+  });
+
+  it('should return correct canonical config for Topic pages on test', () => {
+    const fixtureData = {
+      isAmp: false,
+      platform: 'canonical',
+      pageType: TOPIC_PAGE,
+      data: {
+        title: 'Topic Page Title',
+        metadata: { type: 'Topic' },
+      },
+      brandName: 'BBC News Pidgin',
+      env: 'test',
+      service: 'pidgin',
+      origin: 'test.bbc.com',
+      previousPath: '/previous-path',
+    };
+
+    const expectedConfig = {
+      domain: 'test.bbc.co.uk',
+      idSync: {
+        bbc_hid: 'foobar',
+      },
+      path: '/',
+      sections: 'Pidgin, Pidgin - Topics',
+      type: 'Topics',
+      title: 'Topic Page Title - BBC News Pidgin',
+      uid: 50924,
+      useCanonical: true,
+      virtualReferrer: 'test.bbc.com/previous-path',
+    };
+
+    expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+  });
+
+  it('should return correct canonical config for Topic pages on live', () => {
+    const fixtureData = {
+      isAmp: false,
+      platform: 'canonical',
+      pageType: TOPIC_PAGE,
+      data: {
+        title: 'Topics Page Title',
+        metadata: { type: 'Topic' },
+      },
+      brandName: 'BBC News Pidgin',
+      chartbeatDomain: 'pidgin.bbc.co.uk',
+      env: 'live',
+      service: 'pidgin',
+      origin: 'bbc.com',
+      previousPath: '/previous-path',
+    };
+
+    const expectedConfig = {
+      domain: 'pidgin.bbc.co.uk',
+      idSync: {
+        bbc_hid: 'foobar',
+      },
+      sections: 'Pidgin, Pidgin - Topics',
+      title: 'Topics Page Title - BBC News Pidgin',
+      type: 'Topics',
       uid: 50924,
       virtualReferrer: 'bbc.com/previous-path',
       useCanonical: true,

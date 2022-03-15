@@ -57,6 +57,7 @@ import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
+import SplitRecommendations from '#containers/CpsRecommendations/SplitRecommendations';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 
@@ -106,7 +107,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     pageData,
   );
   const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
-  const recommendationsInitialData = path(['recommendations'], pageData);
+  const recommendationsData = path(['recommendations'], pageData);
   const topics = path(['metadata', 'topics'], pageData);
 
   const gridColumns = {
@@ -201,15 +202,16 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <CpsRecommendations
         {...props}
         parentColumns={gridColsMain}
-        items={recommendationsInitialData}
+        items={recommendationsData}
       />
     ),
     disclaimer: props => (
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
     podcastPromo: podcastPromoEnabled && InlinePodcastPromo,
+    // OPTIMIZELY: 003_hindi_experiment_feature.
     experimentBlock: props => {
-      const { showForVariation, part } = props;
+      const { showForVariation } = props;
 
       return (
         <OptimizelyExperiment experiment={OPTIMIZELY_CONFIG.experimentId}>
@@ -223,7 +225,8 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
                 <CpsRecommendations
                   {...props}
                   parentColumns={gridColsMain}
-                  items={recommendationsInitialData}
+                  items={recommendationsData}
+                  showForVariation={showForVariation}
                 />
               );
             }
@@ -232,12 +235,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
               showForVariation === 'variation_1' &&
               variation === 'variation_1'
             ) {
-              if (part === 1) {
-                return <div>Recs with 2 items, first 2 recs</div>;
-              }
-              if (part === 2) {
-                return <div>Recs with 2 items, last 2 recs</div>;
-              }
+              return (
+                <SplitRecommendations {...props} items={recommendationsData} />
+              );
             }
 
             if (
@@ -393,7 +393,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
 
           <CpsRelatedContent
             content={relatedContent}
+            recommendations={recommendationsData}
             parentColumns={gridColsMain}
+            isStoryPage
           />
         </GridPrimaryColumn>
         <GridSecondaryColumn

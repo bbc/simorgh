@@ -12,21 +12,27 @@ import getInitialData from '#app/routes/cpsAsset/getInitialData';
 import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import * as viewTracking from '#hooks/useViewTracker';
+import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import CpsRelatedContent from '.';
+
+jest.mock('#hooks/useOptimizelyVariation', () => jest.fn(() => null));
 
 const promos = path(['relatedContent', 'groups', 0, 'promos'], pidginPageData);
 
 // eslint-disable-next-line react/prop-types
 const renderRelatedContent = ({
   content = promos,
+  isStoryPage = false,
   bbcOrigin = 'https://www.test.bbc.co.uk',
+  service = 'pidgin',
+  pageType = MEDIA_ASSET_PAGE,
 } = {}) => {
   return render(
-    <ServiceContextProvider service="pidgin">
+    <ServiceContextProvider service={service}>
       <RequestContextProvider
         bbcOrigin={bbcOrigin}
         isAmp={false}
-        pageType={MEDIA_ASSET_PAGE}
+        pageType={pageType}
         pathname="/pidgin/tori-49450859"
         service="pidgin"
         statusCode={200}
@@ -36,33 +42,12 @@ const renderRelatedContent = ({
             eventTracking: { enabled: true },
           }}
         >
-          <CpsRelatedContent content={content} enableGridWrapper />
-        </ToggleContextProvider>
-      </RequestContextProvider>
-    </ServiceContextProvider>,
-  );
-};
-
-const renderRelatedContentNoTitle = ({
-  content = promos,
-  bbcOrigin = 'https://www.test.bbc.co.uk',
-} = {}) => {
-  return render(
-    <ServiceContextProvider service="news">
-      <RequestContextProvider
-        bbcOrigin={bbcOrigin}
-        isAmp={false}
-        pageType={STORY_PAGE}
-        pathname="/pidgin/tori-49450859"
-        service="pidgin"
-        statusCode={200}
-      >
-        <ToggleContextProvider
-          toggles={{
-            eventTracking: { enabled: true },
-          }}
-        >
-          <CpsRelatedContent content={content} enableGridWrapper />
+          <CpsRelatedContent
+            content={content}
+            recommendations={content}
+            enableGridWrapper
+            isStoryPage={isStoryPage}
+          />
         </ToggleContextProvider>
       </RequestContextProvider>
     </ServiceContextProvider>,
@@ -143,8 +128,55 @@ describe('CpsRelatedContent', () => {
     expect(getByText('February 2009', { exact: false })).not.toBeNull();
   });
   it('should render a default title if translations are not available', () => {
-    renderRelatedContentNoTitle();
+    renderRelatedContent({ pageType: STORY_PAGE, service: 'news' });
     expect(screen.getByText(`Related content`)).toBeTruthy();
+  });
+
+  describe('003_hindi_experiment_feature', () => {
+    it('should render a normal title and Related Content for "control" variation', async () => {
+      useOptimizelyVariation.mockReturnValue('control');
+      const { container, queryByText } = renderRelatedContent({
+        pageType: STORY_PAGE,
+        isStoryPage: true,
+        service: 'hindi',
+      });
+
+      expect(queryByText('संबंधित समाचार')).toBeInTheDocument();
+      expect(container.querySelectorAll('time').length).toBe(3);
+    });
+
+    it('should render a translated title for Hindi Recommendations Related Content', async () => {
+      useOptimizelyVariation.mockReturnValue('variation_2');
+      const { queryByText } = renderRelatedContent({
+        pageType: STORY_PAGE,
+        isStoryPage: true,
+        service: 'hindi',
+      });
+
+      expect(queryByText('ये भी पढ़ें')).toBeInTheDocument();
+    });
+
+    it('should render a timestamp for Related Content', async () => {
+      useOptimizelyVariation.mockReturnValue(null);
+      const { container } = renderRelatedContent({
+        pageType: STORY_PAGE,
+        isStoryPage: true,
+        service: 'pidgin',
+      });
+
+      expect(container.querySelectorAll('time').length).toBe(3);
+    });
+
+    it('should not render a timestamp for Hindi Recommendations Related Content', async () => {
+      useOptimizelyVariation.mockReturnValue('variation_2');
+      const { container } = renderRelatedContent({
+        pageType: STORY_PAGE,
+        isStoryPage: true,
+        service: 'hindi',
+      });
+
+      expect(container.querySelectorAll('time').length).toBe(0);
+    });
   });
 });
 
