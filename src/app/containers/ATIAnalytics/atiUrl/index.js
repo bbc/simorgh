@@ -212,6 +212,15 @@ export const buildATIPageTrackPath = ({
       value: getATIMarketingString(href, campaignType),
       wrap: false,
     },
+    {
+      key: 'ref',
+      description: 'referrer url',
+      value: getReferrer(platform, origin, previousPath),
+      wrap: false,
+      // disable encoding for this parameter as ati does not appear to support
+      // decoding of the ref parameter
+      disableEncoding: true,
+    },
     ...getRSSMarketingString(href, campaignType),
     ...(onOnionTld()
       ? [
@@ -224,18 +233,7 @@ export const buildATIPageTrackPath = ({
       : []),
   ];
 
-  return getAtiUrl(
-    pageViewBeaconValues.concat({
-      // the ref param should always be the last param because ATI will interpret it as part of the referrer URL
-      key: 'ref',
-      description: 'referrer url',
-      value: getReferrer(platform, origin, previousPath),
-      wrap: false,
-      // disable encoding for this parameter as ati does not appear to support
-      // decoding of the ref parameter
-      disableEncoding: true,
-    }),
-  );
+  return getAtiUrl(pageViewBeaconValues);
 };
 
 export const buildATIEventTrackUrl = ({
