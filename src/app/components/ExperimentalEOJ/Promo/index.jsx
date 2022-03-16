@@ -19,6 +19,8 @@ import {
 import { ServiceContext } from '#contexts/ServiceContext';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 
+const CARDS_COLOR = C_GREY_2;
+
 const Link = styled.a`
   ${({ script }) => script && getPica(script)}
   ${({ service }) => service && getSerifBold(service)}
@@ -45,7 +47,7 @@ const Link = styled.a`
 `;
 
 const PromoBox = styled.div`
-  background-color: ${C_GREY_2};
+  background-color: ${CARDS_COLOR};
   padding: ${GEL_SPACING_DBL};
   margin-bottom: ${GEL_SPACING_TRPL};
   @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}) {
@@ -60,7 +62,7 @@ const PromoBox = styled.div`
 `;
 
 const OperaPromoBox = styled.div`
-  background-color: ${C_GREY_2};
+  background-color: ${CARDS_COLOR};
   padding: ${GEL_SPACING_DBL};
   margin-bottom: ${GEL_SPACING_DBL};
   width: calc(100% - ${GEL_SPACING});
