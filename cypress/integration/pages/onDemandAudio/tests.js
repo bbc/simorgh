@@ -37,7 +37,7 @@ export default ({ service, pageType, variant, isAmp }) => {
             cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
             cy.testResponseCodeAndTypeRetry({
               // embedUrl may be relative - making it absolute to test the response
-              path: embedUrl.replace(/^\//, envConfig.baseUrl),
+              path: embedUrl.replace(/^\//, `${envConfig.baseUrl}/`),
               responseCode: 200,
               type: 'text/html',
               allowFallback: true,
