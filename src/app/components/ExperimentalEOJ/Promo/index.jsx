@@ -4,12 +4,7 @@ import styled from '@emotion/styled';
 import path from 'ramda/src/path';
 import { getPica } from '@bbc/gel-foundations/typography';
 import { getSerifBold } from '@bbc/psammead-styles/font-styles';
-import {
-  C_GREY_2,
-  C_GREY_6,
-  C_GREY_8,
-  C_WHITE,
-} from '@bbc/psammead-styles/colours';
+import { C_GREY_2, C_GREY_6, C_GREY_8 } from '@bbc/psammead-styles/colours';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -65,7 +60,7 @@ const PromoBox = styled.div`
 `;
 
 const OperaPromoBox = styled.div`
-  background-color: ${C_WHITE};
+  background-color: ${C_GREY_2};
   padding: ${GEL_SPACING_DBL};
   margin-bottom: ${GEL_SPACING_DBL};
   width: calc(100% - ${GEL_SPACING});
