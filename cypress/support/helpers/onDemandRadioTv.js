@@ -19,14 +19,13 @@ export const getEmbedUrl = ({ body, language, isAmp }) => {
   const brandId = getBrandId(externalId);
   const producerName = body.metadata.analyticsLabels.producer;
   const serviceName = getServiceName(producerName);
-  const { pid } = body.metadata.locators;
 
   const embedUrl = [
     isAmp ? envConfig.avEmbedBaseUrlAmp : envConfig.avEmbedBaseUrlCanonical,
     'ws/av-embeds/media',
     serviceName,
     brandId,
-    pid,
+    path(['content', 'blocks', 0, 'id'], body),
     language,
   ].join('/');
 

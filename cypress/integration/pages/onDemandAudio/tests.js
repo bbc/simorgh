@@ -7,6 +7,7 @@ import {
   getEmbedUrl,
   isBrand,
 } from '../../../support/helpers/onDemandRadioTv';
+import envConfig from '../../../support/config/envs';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 import processRecentEpisodes from '../../../../src/app/routes/utils/processRecentEpisodes';
@@ -32,9 +33,11 @@ export default ({ service, pageType, variant, isAmp }) => {
             // Because of now using a relative URL in the iframe I now use embedUrl, but I want to print the iframe.prop for seeing what this is for now
             const iframeURL = isBrandPage ? iframe.prop('src') : embedUrl;
             cy.log(`iframeURL ${iframeURL}`);
+
             cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
             cy.testResponseCodeAndTypeRetry({
-              path: embedUrl,
+              // embedUrl may be relative - making it absolute to test the response
+              path: embedUrl.replace(/^\//, envConfig.baseUrl),
               responseCode: 200,
               type: 'text/html',
               allowFallback: true,
