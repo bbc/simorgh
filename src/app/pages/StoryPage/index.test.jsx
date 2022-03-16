@@ -1967,3 +1967,96 @@ describe('Story Page', () => {
     });
   });
 });
+
+describe.skip('Optimizely Experiments', () => {
+  describe('003_hindi_experiment_feature', () => {
+    describe('variation_3', () => {
+      const forceMockVariation = variation =>
+        optimizelyExperimentSpy.mockImplementation(props => {
+          const { children } = props;
+
+          if (children != null && typeof children === 'function') {
+            return <>{children(variation, true, false)}</>;
+          }
+
+          return null;
+        });
+
+      afterAll(() => {
+        jest.restoreAllMocks();
+      });
+
+      it('should render EOJ variation when showForVariation has variation_3 value ', async () => {
+        forceMockVariation('variation_3');
+        fetchMock.mock(
+          'http://localhost/some-cps-sty-path.json',
+          hindiPageData,
+        );
+        fetchMock.mock('http://localhost/hindi/mostread.json', hindiMostRead);
+        fetchMock.mock(
+          'http://localhost/hindi/india-60426858/recommendations.json',
+          hindiRecommendationsData,
+        );
+        const { pageData } = await getInitialData({
+          path: '/some-cps-sty-path',
+          service: 'hindi',
+          pageType,
+        });
+
+        const { getAllByRole, getByText } = render(
+          <PageWithContext pageData={pageData} service="hindi" />,
+        );
+
+        const [eojRecommendations] = getAllByRole('region').filter(
+          item =>
+            item.getAttribute('aria-labelledby') ===
+            'eoj-recommendations-heading',
+        );
+
+        expect(eojRecommendations).toBeInTheDocument();
+
+        expect(
+          getByText(
+            'कोविड-19 महामारीः तो सबसे ज़्यादा मौतों की वजह वायरस नहीं होगा',
+          ),
+        ).toBeInTheDocument();
+        expect(
+          getByText('कोरोना से मिले कौन से सबक़ हम याद रखेंगे?'),
+        ).toBeInTheDocument();
+        expect(
+          getByText('कोविड-19 के बाद हमारी यात्राएं कैसी होंगी?'),
+        ).toBeInTheDocument();
+      });
+
+      it('should not render EOJ variation when showForVariation is not variation_3 ', async () => {
+        forceMockVariation('control');
+        fetchMock.mock(
+          'http://localhost/some-cps-sty-path.json',
+          hindiPageData,
+        );
+        fetchMock.mock('http://localhost/hindi/mostread.json', hindiMostRead);
+        fetchMock.mock(
+          'http://localhost/hindi/india-60426858/recommendations.json',
+          hindiRecommendationsData,
+        );
+        const { pageData } = await getInitialData({
+          path: '/some-cps-sty-path',
+          service: 'hindi',
+          pageType,
+        });
+
+        const { getAllByRole } = render(
+          <PageWithContext pageData={pageData} service="hindi" />,
+        );
+
+        const [eojRecommendations] = getAllByRole('region').filter(
+          item =>
+            item.getAttribute('aria-labelledby') ===
+            'eoj-recommendations-heading',
+        );
+
+        expect(eojRecommendations).toBe(undefined);
+      });
+    });
+  });
+});

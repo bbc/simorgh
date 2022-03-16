@@ -35,12 +35,14 @@ import MostReadContainer from '#containers/MostRead';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import OptimizelyPageViewTracking from '#containers/OptimizelyPageViewTracking';
+import OptimizelyArticleCompleteTracking from '#containers/OptimizelyArticleCompleteTracking';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import CpsTable from '#containers/CpsTable';
 import Byline from '#containers/Byline';
 import CpsSocialEmbedContainer from '#containers/SocialEmbed/Cps';
 import CpsRecommendations from '#containers/CpsRecommendations';
+import ExperimentalEOJ from '#app/components/ExperimentalEOJ';
 import { InlinePodcastPromo } from '#containers/PodcastPromo';
 
 import {
@@ -244,7 +246,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
               showForVariation === 'variation_3' &&
               variation === 'variation_3'
             ) {
-              return <div>scrolling recs</div>;
+              return (
+                <ExperimentalEOJ {...props} blocks={recommendationsData} />
+              );
             }
 
             return null;
@@ -383,6 +387,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         >
           <main role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+            <OptimizelyArticleCompleteTracking />
           </main>
 
           {showRelatedTopics && topics && (
