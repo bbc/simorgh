@@ -8,7 +8,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import OPTIMIZE_CONFIG from '#lib/config/optimizely';
+import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import useViewTracker from '.';
 
 import fixtureData from './fixtureData.json';
@@ -537,7 +537,7 @@ describe('Expected use', () => {
     const mockAttributes = { foo: 'bar' };
     const mockOverrideAttributes = {
       ...mockAttributes,
-      [`viewed_${OPTIMIZE_CONFIG.viewClickAttributeId}`]: true,
+      [`viewed_${OPTIMIZELY_CONFIG.viewClickAttributeId}`]: true,
     };
     const mockOptimizely = {
       optimizely: {
