@@ -11,6 +11,7 @@ import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
 import { OptimizelyProvider } from '@optimizely/react-sdk';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import {
   oneRecommendation,
   twoRecommendations,
@@ -318,7 +319,7 @@ describe('ExperimentalEOJ optimizely tracking', () => {
           optimizely: expect.anything(),
         });
         expect(optimizely.track).toBeCalledWith('component_views', undefined, {
-          viewed_edoj1: true,
+          [`viewed_${OPTIMIZELY_CONFIG.viewClickAttributeId}`]: true,
         });
       },
       { timeout: 2000 },
@@ -345,7 +346,7 @@ describe('ExperimentalEOJ optimizely tracking', () => {
       () => {
         expect(optimizely.track).toHaveBeenCalledTimes(1);
         expect(optimizely.track).toBeCalledWith('component_clicks', undefined, {
-          clicked_edoj1: true,
+          [`clicked_${OPTIMIZELY_CONFIG.viewClickAttributeId}`]: true,
         });
       },
       { timeout: 2000 },
@@ -398,7 +399,7 @@ describe('ExperimentalEOJ optimizely tracking', () => {
       () => {
         expect(optimizely.track).toHaveBeenCalledTimes(1);
         expect(optimizely.track).toBeCalledWith('component_clicks', undefined, {
-          clicked_edoj1: true,
+          [`clicked_${OPTIMIZELY_CONFIG.viewClickAttributeId}`]: true,
         });
       },
       { timeout: 2000 },
