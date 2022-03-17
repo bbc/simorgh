@@ -1,0 +1,7 @@
+{
+  "name": "@bbc/gel-foundations/spacings",
+  "private": true,
+  "main": "../dist/spacings",
+  "module": "../esm/spacings",
+  "sideEffects": false
+}

@@ -1,0 +1,32 @@
+{
+  "name": "@bbc/psammead-test-helpers",
+  "version": "6.0.5",
+  "main": "dist/index.js",
+  "module": "esm/index.js",
+  "sideEffects": false,
+  "description": "A collection of helper methods for implementing Jest snapshot tests for emotion, required by many Psammead components.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bbc/psammead/tree/latest/packages/utilities/psammead-test-helpers"
+  },
+  "author": {
+    "name": "Psammead Maintainers",
+    "email": "PsammeadMaintainers@bbc.co.uk"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bbc/psammead/issues"
+  },
+  "homepage": "https://github.com/bbc/psammead/blob/latest/packages/utilities/psammead-test-helpers/README.md",
+  "keywords": [
+    "bbc",
+    "utilities",
+    "test",
+    "helpers",
+    "jest",
+    "snapshot"
+  ],
+  "devDependencies": {
+    "react-helmet": "^6.1.0"
+  }
+}

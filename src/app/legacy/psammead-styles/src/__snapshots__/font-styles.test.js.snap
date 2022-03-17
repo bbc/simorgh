@@ -1,0 +1,4081 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render SansBold correctly for afaanoromoo 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for afrique 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for amharic 1`] = `
+"
+    font-family: \\"Noto Sans Ethiopic\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for arabic 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for archive 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for azeri 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for bengali 1`] = `
+"
+    font-family: \\"Noto Serif Bengali\\", Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for burmese 1`] = `
+"
+    font-family: Padauk, Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for cymrufyw 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for gahuza 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for gujarati 1`] = `
+"
+    font-family: \\"Mukta Vaani\\", Rasa, \\"Noto Sans Gujarati\\", \\"Hind vadodara\\", Shruti, Gautami, \\"Gujarati Sangam MN\\", \\"Gujarati MT\\", sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for hausa 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for hindi 1`] = `
+"
+    font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for igbo 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for indonesia 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for japanese 1`] = `
+"
+    font-family: \\"Hiragino Kaku Gothic Pro\\", \\"ﾋﾗギﾉ角ゴPro W3\\", \\"MS PGothic\\", \\"MS UI Gothic\\", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for korean 1`] = `
+"
+    font-family: \\"Apple SD Gothic Neo\\", AppleGothic, \\"Malgun Gothic\\", Dotum, \\"Noto Sans CJK KR\\", sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for kyrgyz 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for learningenglish 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for marathi 1`] = `
+"
+    font-family: \\"Noto Sans Devanagari\\", Hind, \\"Mukta Vaani\\", Gautami, \\"Kohinoor Devanagari\\", sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for mundo 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for naidheachdan 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for nepali 1`] = `
+"
+    font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for news 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for newsround 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for optimobase 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for pashto 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for persian 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for pidgin 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for portuguese 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for punjabi 1`] = `
+"
+    font-family: \\"Noto Sans Gurmukhi\\", Gautami, \\"Kohinoor Gurmukhi\\", sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for russian 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for scotland 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for serbian 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for sinhala 1`] = `
+"
+    font-family: \\"Noto Serif Sinhala\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for somali 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for sport 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for swahili 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for tamil 1`] = `
+"
+    font-family: \\"Noto Sans Tamil\\", Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for telugu 1`] = `
+"
+    font-family: Mallanna, \\"Noto Sans Telugu\\", \\"Hind Guntur\\", Gautami, \\"Kohinoor Telugu\\", sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for thai 1`] = `
+"
+    font-family: Tahoma, Helmet, freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for tigrinya 1`] = `
+"
+    font-family: \\"Noto Sans Ethiopic\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for turkce 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for ukchina 1`] = `
+"
+    font-family: Helvetica, Arial, STHeiti, 华文黑体, \\"Microsoft YaHei\\", 微软雅黑, SimSun, 宋体;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for ukrainian 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for urdu 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for uzbek 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for vietnamese 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for weather 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for yoruba 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBold correctly for zhongwen 1`] = `
+"
+    font-family: Helvetica, Arial, STHeiti, 华文黑体, \\"Microsoft YaHei\\", 微软雅黑, SimSun, 宋体;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for afaanoromoo 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for afrique 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for amharic 1`] = `
+"
+    font-family: \\"Noto Sans Ethiopic\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for arabic 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for archive 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for azeri 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for bengali 1`] = `
+"
+    font-family: \\"Noto Serif Bengali\\", Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for burmese 1`] = `
+"
+    font-family: Padauk, Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for cymrufyw 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for gahuza 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for gujarati 1`] = `
+"
+    font-family: \\"Mukta Vaani\\", Rasa, \\"Noto Sans Gujarati\\", \\"Hind vadodara\\", Shruti, Gautami, \\"Gujarati Sangam MN\\", \\"Gujarati MT\\", sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for hausa 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for hindi 1`] = `
+"
+    font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for igbo 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for indonesia 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for japanese 1`] = `
+"
+    font-family: \\"Hiragino Kaku Gothic Pro\\", \\"ﾋﾗギﾉ角ゴPro W3\\", \\"MS PGothic\\", \\"MS UI Gothic\\", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for korean 1`] = `
+"
+    font-family: \\"Apple SD Gothic Neo\\", AppleGothic, \\"Malgun Gothic\\", Dotum, \\"Noto Sans CJK KR\\", sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for kyrgyz 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for learningenglish 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for marathi 1`] = `
+"
+    font-family: \\"Noto Sans Devanagari\\", Hind, \\"Mukta Vaani\\", Gautami, \\"Kohinoor Devanagari\\", sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for mundo 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for naidheachdan 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for nepali 1`] = `
+"
+    font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for news 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for newsround 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for optimobase 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for pashto 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for persian 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for pidgin 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for portuguese 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for punjabi 1`] = `
+"
+    font-family: \\"Noto Sans Gurmukhi\\", Gautami, \\"Kohinoor Gurmukhi\\", sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for russian 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for scotland 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for serbian 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for sinhala 1`] = `
+"
+    font-family: \\"Noto Serif Sinhala\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for somali 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for sport 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for swahili 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for tamil 1`] = `
+"
+    font-family: \\"Noto Sans Tamil\\", Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for telugu 1`] = `
+"
+    font-family: Mallanna, \\"Noto Sans Telugu\\", \\"Hind Guntur\\", Gautami, \\"Kohinoor Telugu\\", sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for thai 1`] = `
+"
+    font-family: Tahoma, Helmet, freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for tigrinya 1`] = `
+"
+    font-family: \\"Noto Sans Ethiopic\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for turkce 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for ukchina 1`] = `
+"
+    font-family: Helvetica, Arial, STHeiti, 华文黑体, \\"Microsoft YaHei\\", 微软雅黑, SimSun, 宋体;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for ukrainian 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for urdu 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for uzbek 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for vietnamese 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for weather 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for yoruba 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for zhongwen 1`] = `
+"
+    font-family: Helvetica, Arial, STHeiti, 华文黑体, \\"Microsoft YaHei\\", 微软雅黑, SimSun, 宋体;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for afaanoromoo 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for afrique 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for amharic 1`] = `
+"
+    font-family: \\"Noto Sans Ethiopic\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for arabic 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for archive 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for azeri 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for bengali 1`] = `
+"
+    font-family: \\"Noto Serif Bengali\\", Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for burmese 1`] = `
+"
+    font-family: Padauk, Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for cymrufyw 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for gahuza 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for gujarati 1`] = `
+"
+    font-family: \\"Mukta Vaani\\", Rasa, \\"Noto Sans Gujarati\\", \\"Hind vadodara\\", Shruti, Gautami, \\"Gujarati Sangam MN\\", \\"Gujarati MT\\", sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for hausa 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for hindi 1`] = `
+"
+    font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for igbo 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for indonesia 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for japanese 1`] = `
+"
+    font-family: \\"Hiragino Kaku Gothic Pro\\", \\"ﾋﾗギﾉ角ゴPro W3\\", \\"MS PGothic\\", \\"MS UI Gothic\\", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for korean 1`] = `
+"
+    font-family: \\"Apple SD Gothic Neo\\", AppleGothic, \\"Malgun Gothic\\", Dotum, \\"Noto Sans CJK KR\\", sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for kyrgyz 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for learningenglish 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for marathi 1`] = `
+"
+    font-family: \\"Noto Sans Devanagari\\", Hind, \\"Mukta Vaani\\", Gautami, \\"Kohinoor Devanagari\\", sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for mundo 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for naidheachdan 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for nepali 1`] = `
+"
+    font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for news 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for newsround 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for optimobase 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for pashto 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for persian 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for pidgin 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for portuguese 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for punjabi 1`] = `
+"
+    font-family: \\"Noto Sans Gurmukhi\\", Gautami, \\"Kohinoor Gurmukhi\\", sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for russian 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for scotland 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for serbian 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for sinhala 1`] = `
+"
+    font-family: \\"Noto Serif Sinhala\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for somali 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for sport 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for swahili 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for tamil 1`] = `
+"
+    font-family: \\"Noto Sans Tamil\\", Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for telugu 1`] = `
+"
+    font-family: Mallanna, \\"Noto Sans Telugu\\", \\"Hind Guntur\\", Gautami, \\"Kohinoor Telugu\\", sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for thai 1`] = `
+"
+    font-family: Tahoma, Helmet, freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for tigrinya 1`] = `
+"
+    font-family: \\"Noto Sans Ethiopic\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for turkce 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for ukchina 1`] = `
+"
+    font-family: Helvetica, Arial, STHeiti, 华文黑体, \\"Microsoft YaHei\\", 微软雅黑, SimSun, 宋体;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for ukrainian 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for urdu 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for uzbek 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for vietnamese 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for weather 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for yoruba 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansLight correctly for zhongwen 1`] = `
+"
+    font-family: Helvetica, Arial, STHeiti, 华文黑体, \\"Microsoft YaHei\\", 微软雅黑, SimSun, 宋体;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for afaanoromoo 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for afrique 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for amharic 1`] = `
+"
+    font-family: \\"Noto Sans Ethiopic\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for arabic 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for archive 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for azeri 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for bengali 1`] = `
+"
+    font-family: \\"Noto Serif Bengali\\", Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for burmese 1`] = `
+"
+    font-family: Padauk, Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for cymrufyw 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for gahuza 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for gujarati 1`] = `
+"
+    font-family: \\"Mukta Vaani\\", Rasa, \\"Noto Sans Gujarati\\", \\"Hind vadodara\\", Shruti, Gautami, \\"Gujarati Sangam MN\\", \\"Gujarati MT\\", sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for hausa 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for hindi 1`] = `
+"
+    font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for igbo 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for indonesia 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for japanese 1`] = `
+"
+    font-family: \\"Hiragino Kaku Gothic Pro\\", \\"ﾋﾗギﾉ角ゴPro W3\\", \\"MS PGothic\\", \\"MS UI Gothic\\", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for korean 1`] = `
+"
+    font-family: \\"Apple SD Gothic Neo\\", AppleGothic, \\"Malgun Gothic\\", Dotum, \\"Noto Sans CJK KR\\", sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for kyrgyz 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for learningenglish 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for marathi 1`] = `
+"
+    font-family: \\"Noto Sans Devanagari\\", Hind, \\"Mukta Vaani\\", Gautami, \\"Kohinoor Devanagari\\", sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for mundo 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for naidheachdan 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for nepali 1`] = `
+"
+    font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for news 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for newsround 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for optimobase 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for pashto 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for persian 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for pidgin 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for portuguese 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for punjabi 1`] = `
+"
+    font-family: \\"Noto Sans Gurmukhi\\", Gautami, \\"Kohinoor Gurmukhi\\", sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for russian 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for scotland 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for serbian 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for sinhala 1`] = `
+"
+    font-family: \\"Noto Serif Sinhala\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for somali 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for sport 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for swahili 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for tamil 1`] = `
+"
+    font-family: \\"Noto Sans Tamil\\", Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for telugu 1`] = `
+"
+    font-family: Mallanna, \\"Noto Sans Telugu\\", \\"Hind Guntur\\", Gautami, \\"Kohinoor Telugu\\", sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for thai 1`] = `
+"
+    font-family: Tahoma, Helmet, freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for tigrinya 1`] = `
+"
+    font-family: \\"Noto Sans Ethiopic\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for turkce 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for ukchina 1`] = `
+"
+    font-family: Helvetica, Arial, STHeiti, 华文黑体, \\"Microsoft YaHei\\", 微软雅黑, SimSun, 宋体;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for ukrainian 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for urdu 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for uzbek 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for vietnamese 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for weather 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for yoruba 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegular correctly for zhongwen 1`] = `
+"
+    font-family: Helvetica, Arial, STHeiti, 华文黑体, \\"Microsoft YaHei\\", 微软雅黑, SimSun, 宋体;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for afaanoromoo 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for afrique 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for amharic 1`] = `
+"
+    font-family: \\"Noto Sans Ethiopic\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for arabic 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for archive 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for azeri 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for bengali 1`] = `
+"
+    font-family: \\"Noto Serif Bengali\\", Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for burmese 1`] = `
+"
+    font-family: Padauk, Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for cymrufyw 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for gahuza 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for gujarati 1`] = `
+"
+    font-family: \\"Mukta Vaani\\", Rasa, \\"Noto Sans Gujarati\\", \\"Hind vadodara\\", Shruti, Gautami, \\"Gujarati Sangam MN\\", \\"Gujarati MT\\", sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for hausa 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for hindi 1`] = `
+"
+    font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for igbo 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for indonesia 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for japanese 1`] = `
+"
+    font-family: \\"Hiragino Kaku Gothic Pro\\", \\"ﾋﾗギﾉ角ゴPro W3\\", \\"MS PGothic\\", \\"MS UI Gothic\\", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for korean 1`] = `
+"
+    font-family: \\"Apple SD Gothic Neo\\", AppleGothic, \\"Malgun Gothic\\", Dotum, \\"Noto Sans CJK KR\\", sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for kyrgyz 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for learningenglish 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for marathi 1`] = `
+"
+    font-family: \\"Noto Sans Devanagari\\", Hind, \\"Mukta Vaani\\", Gautami, \\"Kohinoor Devanagari\\", sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for mundo 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for naidheachdan 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for nepali 1`] = `
+"
+    font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for news 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for newsround 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for optimobase 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for pashto 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for persian 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for pidgin 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for portuguese 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for punjabi 1`] = `
+"
+    font-family: \\"Noto Sans Gurmukhi\\", Gautami, \\"Kohinoor Gurmukhi\\", sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for russian 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for scotland 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for serbian 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for sinhala 1`] = `
+"
+    font-family: \\"Noto Serif Sinhala\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for somali 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for sport 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for swahili 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for tamil 1`] = `
+"
+    font-family: \\"Noto Sans Tamil\\", Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for telugu 1`] = `
+"
+    font-family: Mallanna, \\"Noto Sans Telugu\\", \\"Hind Guntur\\", Gautami, \\"Kohinoor Telugu\\", sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for thai 1`] = `
+"
+    font-family: Tahoma, Helmet, freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for tigrinya 1`] = `
+"
+    font-family: \\"Noto Sans Ethiopic\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for turkce 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for ukchina 1`] = `
+"
+    font-family: Helvetica, Arial, STHeiti, 华文黑体, \\"Microsoft YaHei\\", 微软雅黑, SimSun, 宋体;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for ukrainian 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for urdu 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for uzbek 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for vietnamese 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for weather 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for yoruba 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for zhongwen 1`] = `
+"
+    font-family: Helvetica, Arial, STHeiti, 华文黑体, \\"Microsoft YaHei\\", 微软雅黑, SimSun, 宋体;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for afaanoromoo 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for afrique 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for amharic 1`] = `
+"
+    font-family: \\"Noto Sans Ethiopic\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for arabic 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for archive 1`] = `
+"
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for azeri 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for bengali 1`] = `
+"
+    font-family: \\"Noto Serif Bengali\\", Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for burmese 1`] = `
+"
+    font-family: Padauk, Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for cymrufyw 1`] = `
+"
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for gahuza 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for gujarati 1`] = `
+"
+    font-family: \\"Mukta Vaani\\", Rasa, \\"Noto Sans Gujarati\\", \\"Hind vadodara\\", Shruti, Gautami, \\"Gujarati Sangam MN\\", \\"Gujarati MT\\", sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for hausa 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for hindi 1`] = `
+"
+    font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for igbo 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for indonesia 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for japanese 1`] = `
+"
+    font-family: \\"Hiragino Kaku Gothic Pro\\", \\"ﾋﾗギﾉ角ゴPro W3\\", \\"MS PGothic\\", \\"MS UI Gothic\\", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for korean 1`] = `
+"
+    font-family: \\"Apple SD Gothic Neo\\", AppleGothic, \\"Malgun Gothic\\", Dotum, \\"Noto Sans CJK KR\\", sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for kyrgyz 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for learningenglish 1`] = `
+"
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for marathi 1`] = `
+"
+    font-family: \\"Noto Sans Devanagari\\", Hind, \\"Mukta Vaani\\", Gautami, \\"Kohinoor Devanagari\\", sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for mundo 1`] = `
+"
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for naidheachdan 1`] = `
+"
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for nepali 1`] = `
+"
+    font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for news 1`] = `
+"
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for newsround 1`] = `
+"
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for optimobase 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for pashto 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for persian 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for pidgin 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for portuguese 1`] = `
+"
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for punjabi 1`] = `
+"
+    font-family: \\"Noto Sans Gurmukhi\\", Gautami, \\"Kohinoor Gurmukhi\\", sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for russian 1`] = `
+"
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for scotland 1`] = `
+"
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for serbian 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for sinhala 1`] = `
+"
+    font-family: \\"Noto Serif Sinhala\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for somali 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for sport 1`] = `
+"
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for swahili 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for tamil 1`] = `
+"
+    font-family: \\"Noto Sans Tamil\\", Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for telugu 1`] = `
+"
+    font-family: Mallanna, \\"Noto Sans Telugu\\", \\"Hind Guntur\\", Gautami, \\"Kohinoor Telugu\\", sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for thai 1`] = `
+"
+    font-family: Tahoma, Helmet, freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for tigrinya 1`] = `
+"
+    font-family: \\"Noto Sans Ethiopic\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for turkce 1`] = `
+"
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for ukchina 1`] = `
+"
+    font-family: Helvetica, Arial, STHeiti, 华文黑体, \\"Microsoft YaHei\\", 微软雅黑, SimSun, 宋体;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for ukrainian 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for urdu 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for uzbek 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for vietnamese 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for weather 1`] = `
+"
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for yoruba 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifBold correctly for zhongwen 1`] = `
+"
+    font-family: Helvetica, Arial, STHeiti, 华文黑体, \\"Microsoft YaHei\\", 微软雅黑, SimSun, 宋体;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for afaanoromoo 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for afrique 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for amharic 1`] = `
+"
+    font-family: \\"Noto Sans Ethiopic\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for arabic 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for archive 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for azeri 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for bengali 1`] = `
+"
+    font-family: \\"Noto Serif Bengali\\", Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for burmese 1`] = `
+"
+    font-family: Padauk, Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for cymrufyw 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for gahuza 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for gujarati 1`] = `
+"
+    font-family: \\"Mukta Vaani\\", Rasa, \\"Noto Sans Gujarati\\", \\"Hind vadodara\\", Shruti, Gautami, \\"Gujarati Sangam MN\\", \\"Gujarati MT\\", sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for hausa 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for hindi 1`] = `
+"
+    font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for igbo 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for indonesia 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for japanese 1`] = `
+"
+    font-family: \\"Hiragino Kaku Gothic Pro\\", \\"ﾋﾗギﾉ角ゴPro W3\\", \\"MS PGothic\\", \\"MS UI Gothic\\", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for korean 1`] = `
+"
+    font-family: \\"Apple SD Gothic Neo\\", AppleGothic, \\"Malgun Gothic\\", Dotum, \\"Noto Sans CJK KR\\", sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for kyrgyz 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for learningenglish 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for marathi 1`] = `
+"
+    font-family: \\"Noto Sans Devanagari\\", Hind, \\"Mukta Vaani\\", Gautami, \\"Kohinoor Devanagari\\", sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for mundo 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for naidheachdan 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for nepali 1`] = `
+"
+    font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for news 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for newsround 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for optimobase 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for pashto 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for persian 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for pidgin 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for portuguese 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for punjabi 1`] = `
+"
+    font-family: \\"Noto Sans Gurmukhi\\", Gautami, \\"Kohinoor Gurmukhi\\", sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for russian 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for scotland 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for serbian 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for sinhala 1`] = `
+"
+    font-family: \\"Noto Serif Sinhala\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for somali 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for sport 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for swahili 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for tamil 1`] = `
+"
+    font-family: \\"Noto Sans Tamil\\", Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for telugu 1`] = `
+"
+    font-family: Mallanna, \\"Noto Sans Telugu\\", \\"Hind Guntur\\", Gautami, \\"Kohinoor Telugu\\", sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for thai 1`] = `
+"
+    font-family: Tahoma, Helmet, freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for tigrinya 1`] = `
+"
+    font-family: \\"Noto Sans Ethiopic\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for turkce 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for ukchina 1`] = `
+"
+    font-family: Helvetica, Arial, STHeiti, 华文黑体, \\"Microsoft YaHei\\", 微软雅黑, SimSun, 宋体;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for ukrainian 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for urdu 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for uzbek 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for vietnamese 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for weather 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for yoruba 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifLight correctly for zhongwen 1`] = `
+"
+    font-family: Helvetica, Arial, STHeiti, 华文黑体, \\"Microsoft YaHei\\", 微软雅黑, SimSun, 宋体;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for afaanoromoo 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for afrique 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for amharic 1`] = `
+"
+    font-family: \\"Noto Sans Ethiopic\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for arabic 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for archive 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for azeri 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for bengali 1`] = `
+"
+    font-family: \\"Noto Serif Bengali\\", Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for burmese 1`] = `
+"
+    font-family: Padauk, Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for cymrufyw 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for gahuza 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for gujarati 1`] = `
+"
+    font-family: \\"Mukta Vaani\\", Rasa, \\"Noto Sans Gujarati\\", \\"Hind vadodara\\", Shruti, Gautami, \\"Gujarati Sangam MN\\", \\"Gujarati MT\\", sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for hausa 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for hindi 1`] = `
+"
+    font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for igbo 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for indonesia 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for japanese 1`] = `
+"
+    font-family: \\"Hiragino Kaku Gothic Pro\\", \\"ﾋﾗギﾉ角ゴPro W3\\", \\"MS PGothic\\", \\"MS UI Gothic\\", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for korean 1`] = `
+"
+    font-family: \\"Apple SD Gothic Neo\\", AppleGothic, \\"Malgun Gothic\\", Dotum, \\"Noto Sans CJK KR\\", sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for kyrgyz 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for learningenglish 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for marathi 1`] = `
+"
+    font-family: \\"Noto Sans Devanagari\\", Hind, \\"Mukta Vaani\\", Gautami, \\"Kohinoor Devanagari\\", sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for mundo 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for naidheachdan 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for nepali 1`] = `
+"
+    font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for news 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for newsround 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for optimobase 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for pashto 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for persian 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for pidgin 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for portuguese 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for punjabi 1`] = `
+"
+    font-family: \\"Noto Sans Gurmukhi\\", Gautami, \\"Kohinoor Gurmukhi\\", sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for russian 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for scotland 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for serbian 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for sinhala 1`] = `
+"
+    font-family: \\"Noto Serif Sinhala\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for somali 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for sport 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for swahili 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for tamil 1`] = `
+"
+    font-family: \\"Noto Sans Tamil\\", Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for telugu 1`] = `
+"
+    font-family: Mallanna, \\"Noto Sans Telugu\\", \\"Hind Guntur\\", Gautami, \\"Kohinoor Telugu\\", sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for thai 1`] = `
+"
+    font-family: Tahoma, Helmet, freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for tigrinya 1`] = `
+"
+    font-family: \\"Noto Sans Ethiopic\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for turkce 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for ukchina 1`] = `
+"
+    font-family: Helvetica, Arial, STHeiti, 华文黑体, \\"Microsoft YaHei\\", 微软雅黑, SimSun, 宋体;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for ukrainian 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for urdu 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for uzbek 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for vietnamese 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for weather 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for yoruba 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMedium correctly for zhongwen 1`] = `
+"
+    font-family: Helvetica, Arial, STHeiti, 华文黑体, \\"Microsoft YaHei\\", 微软雅黑, SimSun, 宋体;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for afaanoromoo 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for afrique 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for amharic 1`] = `
+"
+    font-family: \\"Noto Sans Ethiopic\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for arabic 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for archive 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for azeri 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for bengali 1`] = `
+"
+    font-family: \\"Noto Serif Bengali\\", Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for burmese 1`] = `
+"
+    font-family: Padauk, Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for cymrufyw 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for gahuza 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for gujarati 1`] = `
+"
+    font-family: \\"Mukta Vaani\\", Rasa, \\"Noto Sans Gujarati\\", \\"Hind vadodara\\", Shruti, Gautami, \\"Gujarati Sangam MN\\", \\"Gujarati MT\\", sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for hausa 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for hindi 1`] = `
+"
+    font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for igbo 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for indonesia 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for japanese 1`] = `
+"
+    font-family: \\"Hiragino Kaku Gothic Pro\\", \\"ﾋﾗギﾉ角ゴPro W3\\", \\"MS PGothic\\", \\"MS UI Gothic\\", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for korean 1`] = `
+"
+    font-family: \\"Apple SD Gothic Neo\\", AppleGothic, \\"Malgun Gothic\\", Dotum, \\"Noto Sans CJK KR\\", sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for kyrgyz 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for learningenglish 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for marathi 1`] = `
+"
+    font-family: \\"Noto Sans Devanagari\\", Hind, \\"Mukta Vaani\\", Gautami, \\"Kohinoor Devanagari\\", sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for mundo 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for naidheachdan 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for nepali 1`] = `
+"
+    font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for news 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for newsround 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for optimobase 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for pashto 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for persian 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for pidgin 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for portuguese 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for punjabi 1`] = `
+"
+    font-family: \\"Noto Sans Gurmukhi\\", Gautami, \\"Kohinoor Gurmukhi\\", sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for russian 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for scotland 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for serbian 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for sinhala 1`] = `
+"
+    font-family: \\"Noto Serif Sinhala\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for somali 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for sport 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for swahili 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for tamil 1`] = `
+"
+    font-family: \\"Noto Sans Tamil\\", Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for telugu 1`] = `
+"
+    font-family: Mallanna, \\"Noto Sans Telugu\\", \\"Hind Guntur\\", Gautami, \\"Kohinoor Telugu\\", sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for thai 1`] = `
+"
+    font-family: Tahoma, Helmet, freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for tigrinya 1`] = `
+"
+    font-family: \\"Noto Sans Ethiopic\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for turkce 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for ukchina 1`] = `
+"
+    font-family: Helvetica, Arial, STHeiti, 华文黑体, \\"Microsoft YaHei\\", 微软雅黑, SimSun, 宋体;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for ukrainian 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for urdu 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for uzbek 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for vietnamese 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for weather 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 500;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for yoruba 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+   font-style: italic;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for zhongwen 1`] = `
+"
+    font-family: Helvetica, Arial, STHeiti, 华文黑体, \\"Microsoft YaHei\\", 微软雅黑, SimSun, 宋体;
+    font-weight: 700;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for afaanoromoo 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for afrique 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for amharic 1`] = `
+"
+    font-family: \\"Noto Sans Ethiopic\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for arabic 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for archive 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for azeri 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for bengali 1`] = `
+"
+    font-family: \\"Noto Serif Bengali\\", Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for burmese 1`] = `
+"
+    font-family: Padauk, Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for cymrufyw 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for gahuza 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for gujarati 1`] = `
+"
+    font-family: \\"Mukta Vaani\\", Rasa, \\"Noto Sans Gujarati\\", \\"Hind vadodara\\", Shruti, Gautami, \\"Gujarati Sangam MN\\", \\"Gujarati MT\\", sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for hausa 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for hindi 1`] = `
+"
+    font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for igbo 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for indonesia 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for japanese 1`] = `
+"
+    font-family: \\"Hiragino Kaku Gothic Pro\\", \\"ﾋﾗギﾉ角ゴPro W3\\", \\"MS PGothic\\", \\"MS UI Gothic\\", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for korean 1`] = `
+"
+    font-family: \\"Apple SD Gothic Neo\\", AppleGothic, \\"Malgun Gothic\\", Dotum, \\"Noto Sans CJK KR\\", sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for kyrgyz 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for learningenglish 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for marathi 1`] = `
+"
+    font-family: \\"Noto Sans Devanagari\\", Hind, \\"Mukta Vaani\\", Gautami, \\"Kohinoor Devanagari\\", sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for mundo 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for naidheachdan 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for nepali 1`] = `
+"
+    font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for news 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for newsround 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for optimobase 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for pashto 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for persian 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for pidgin 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for portuguese 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for punjabi 1`] = `
+"
+    font-family: \\"Noto Sans Gurmukhi\\", Gautami, \\"Kohinoor Gurmukhi\\", sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for russian 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for scotland 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for serbian 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for sinhala 1`] = `
+"
+    font-family: \\"Noto Serif Sinhala\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for somali 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for sport 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for swahili 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for tamil 1`] = `
+"
+    font-family: \\"Noto Sans Tamil\\", Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for telugu 1`] = `
+"
+    font-family: Mallanna, \\"Noto Sans Telugu\\", \\"Hind Guntur\\", Gautami, \\"Kohinoor Telugu\\", sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for thai 1`] = `
+"
+    font-family: Tahoma, Helmet, freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for tigrinya 1`] = `
+"
+    font-family: \\"Noto Sans Ethiopic\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for turkce 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for ukchina 1`] = `
+"
+    font-family: Helvetica, Arial, STHeiti, 华文黑体, \\"Microsoft YaHei\\", 微软雅黑, SimSun, 宋体;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for ukrainian 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for urdu 1`] = `
+"
+    font-family: \\"BBC Reith Qalam\\", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for uzbek 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for vietnamese 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for weather 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for yoruba 1`] = `
+"
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;
+
+exports[`should render SerifRegular correctly for zhongwen 1`] = `
+"
+    font-family: Helvetica, Arial, STHeiti, 华文黑体, \\"Microsoft YaHei\\", 微软雅黑, SimSun, 宋体;
+    font-weight: 400;
+   font-style: normal;
+  "
+`;

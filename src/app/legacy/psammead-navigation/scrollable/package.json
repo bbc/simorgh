@@ -1,0 +1,7 @@
+{
+  "name": "@bbc/psammead-navigation/scrollable",
+  "private": true,
+  "main": "../dist/ScrollableNavigation",
+  "module": "../esm/ScrollableNavigation",
+  "sideEffects": false
+}
