@@ -3,12 +3,12 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
+} from '#legacy/psammead-styles/colours';
 import {
   latinDiacritics,
   cyrillicAndLatin,
-} from '@bbc/gel-foundations/scripts';
-import { serbian as brandSVG } from '@bbc/psammead-assets/svgs';
+} from '#legacy/gel-foundations/scripts';
+import { serbian as brandSVG } from '#legacy/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
 import '@bbc/psammead-locales/moment/sr-cyrl';
 import '@bbc/psammead-locales/moment/sr';

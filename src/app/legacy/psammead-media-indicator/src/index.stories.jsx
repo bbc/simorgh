@@ -2,10 +2,10 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import styled from '@emotion/styled';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
-import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
-import { C_CLOUD_LIGHT } from '@bbc/psammead-styles/colours';
-import { GEL_SPACING_HLF } from '@bbc/gel-foundations/spacings';
-import { Headline, Link } from '@bbc/psammead-story-promo';
+import { withServicesKnob } from '#legacy/psammead-storybook-helpers';
+import { C_CLOUD_LIGHT } from '#legacy/psammead-styles/colours';
+import { GEL_SPACING_HLF } from '#legacy/gel-foundations/spacings';
+import { Headline, Link } from '#legacy/psammead-story-promo';
 import notes from '../README.md';
 import MediaIndicator from './index';
 

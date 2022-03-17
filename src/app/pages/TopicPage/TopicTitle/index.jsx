@@ -2,18 +2,18 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { string } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { getSansBold } from '@bbc/psammead-styles/font-styles';
+import { getSansBold } from '#legacy/psammead-styles/font-styles';
 import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
   GEL_SPACING_SEXT,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/spacings';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/breakpoints';
 
 const H1 = styled.h1`
   ${({ service }) => getSansBold(service)}

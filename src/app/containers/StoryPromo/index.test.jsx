@@ -4,7 +4,7 @@ import deepClone from 'ramda/src/clone';
 import {
   shouldMatchSnapshot,
   suppressPropWarnings,
-} from '@bbc/psammead-test-helpers';
+} from '#legacy/psammead-test-helpers';
 import loggerMock from '#testHelpers/loggerMock';
 import { MEDIA_MISSING } from '#lib/logger.const';
 import { RequestContextProvider } from '#contexts/RequestContext';

@@ -24,7 +24,7 @@ npm install react react-dom @bbc/psammead-test-helpers --save-dev
 ## Usage
 
 ```jsx
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers';
 
 shouldMatchSnapshot('should render correctly', <h1>Hello World</h1>);
 ```

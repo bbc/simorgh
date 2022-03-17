@@ -25,7 +25,7 @@ npm install @bbc/psammead-bulleted-list --save
 Use `BulletedList` in place of a `ul` element with required props and a `BulletedListItem` in place of an `li`.
 
 ```jsx
-import BulletedList, { BulletedListItem } from '@bbc/psammead-bulleted-list';
+import BulletedList, { BulletedListItem } from '#legacy/psammead-bulleted-list';
 
 const props = {
   dir: 'ltr',
@@ -37,7 +37,7 @@ const props = {
 <BulletedList {...props}>
   <BulletedListItem>A list item</BulletedListItem>
   <BulletedListItem>Another item</BulletedListItem>
-</BulletedList>
+</BulletedList>;
 ```
 
 ### When to use this component

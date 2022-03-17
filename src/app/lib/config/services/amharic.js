@@ -3,13 +3,13 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { noAscendersOrDescenders } from '@bbc/gel-foundations/scripts';
-import { amharic as brandSVG } from '@bbc/psammead-assets/svgs';
+} from '#legacy/psammead-styles/colours';
+import { noAscendersOrDescenders } from '#legacy/gel-foundations/scripts';
+import { amharic as brandSVG } from '#legacy/psammead-assets/svgs';
 import {
   F_NOTO_SANS_ETHIOPIC_BOLD,
   F_NOTO_SANS_ETHIOPIC_REGULAR,
-} from '@bbc/psammead-styles/fonts';
+} from '#legacy/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
 import '@bbc/psammead-locales/moment/am';
 import withContext from '../../../contexts/utils/withContext';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { v4 as uuid } from 'uuid';
-import { latin } from '@bbc/gel-foundations/scripts';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { latin } from '#legacy/gel-foundations/scripts';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers';
 import { ServiceContext } from '#contexts/ServiceContext';
 import ParagraphContainer from '.';
 

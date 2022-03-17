@@ -62,10 +62,11 @@ The `mediaInfo` prop is required, and has the following properties.
 | `guidanceMessage` | string | No       | -         | `'May contain strong language,sexual or violent content that may offend'` |
 
 #### Events
-The canonical media player accepts callback functions which it will invoke in response to events that are posted from the iframe.  The following events are currently supported:
+
+The canonical media player accepts callback functions which it will invoke in response to events that are posted from the iframe. The following events are currently supported:
 
 | Event                  | Description                                                                      |
-| -----------------------| ---------------------------------------------------------------------------------|
+| ---------------------- | -------------------------------------------------------------------------------- |
 | `onMediaInitialised`   | Called when the media player has loaded and is ready to begin playback           |
 | `onMediaPlaying`       | Called when the media player has started playing                                 |
 | `onMediaPause`         | Called when the user has paused playback                                         |
@@ -73,7 +74,7 @@ The canonical media player accepts callback functions which it will invoke in re
 | `onMediaPlaylistEnded` | Called when an entire playlist has completed playback                            |
 | `onMediaError`         | Called when the media player has encountered an error                            |
 
-When using the BBC's iFrame, these callbacks are invoked with a lot of additional information on the nature of the event.  Internal users should refer to the SMP documentation for more details
+When using the BBC's iFrame, these callbacks are invoked with a lot of additional information on the nature of the event. Internal users should refer to the SMP documentation for more details
 
 ### AmpMediaPlayer
 
@@ -92,7 +93,7 @@ The `placeholderSrc` prop is required for AMP, as in order to have the component
 ### CanonicalMediaPlayer
 
 ```js
-import { CanonicalMediaPlayer } from '@bbc/psammead-media-player';
+import { CanonicalMediaPlayer } from '#legacy/psammead-media-player';
 
 const Container = ({
   src,
@@ -126,7 +127,7 @@ const Container = ({
 ### AmpMediaPlayer
 
 ```js
-import { AmpMediaPlayer } from '@bbc/psammead-media-player';
+import { AmpMediaPlayer } from '#legacy/psammead-media-player';
 
 const Container = ({
   src,

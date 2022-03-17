@@ -6,10 +6,13 @@ import {
   C_METAL,
   C_EBON,
   C_SHADOW,
-} from '@bbc/psammead-styles/colours';
-import { getSansRegular, getSansBold } from '@bbc/psammead-styles/font-styles';
-import { GEL_SPACING_DBL, GEL_SPACING } from '@bbc/gel-foundations/spacings';
-import { GEL_BODY_COPY, GEL_MINION } from '@bbc/gel-foundations/typography';
+} from '#legacy/psammead-styles/colours';
+import {
+  getSansRegular,
+  getSansBold,
+} from '#legacy/psammead-styles/font-styles';
+import { GEL_SPACING_DBL, GEL_SPACING } from '#legacy/gel-foundations/spacings';
+import { GEL_BODY_COPY, GEL_MINION } from '#legacy/gel-foundations/typography';
 
 import { detokenise, dictionaryFactory } from '../utilities';
 

@@ -1,10 +1,10 @@
 # ⛔️ This is an alpha component ⛔️
 
 This component is currently tagged as alpha and is not suitable for production use.
+
 # exposure-scanning - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Futilities%2Fexposure-scanning%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Futilities%2Fexposure-scanning%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/utilities/exposure-scanning)](https://david-dm.org/bbc/psammead?path=packages/utilities/exposure-scanning) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/utilities/exposure-scanning)](https://david-dm.org/bbc/psammead?path=packages/utilities/exposure-scanning&type=peer) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/exposure-scanning.svg)](https://www.npmjs.com/package/@bbc/exposure-scanning) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
 
 This package provides a utility to scan and patch issues and pull requests for content that matches a given regular expression.
-
 
 ## Installation
 
@@ -18,7 +18,7 @@ The script can be imported and executed like so:
 
 ```jsx
 // /scripts/scan-exposures/index.jsx
-import scanExposures from '@bbc/exposure-scanning';
+import scanExposures from '#legacy/exposure-scanning';
 
 (async () => {
   await scanExposures();
@@ -32,10 +32,11 @@ Then, this can be executed in the command line:
 ```
 
 The command line arguments are as follows:
- - repository (psammead in the example)
- - content type (-pr or -issue)
- - id (of the issue or pull request)
- - regex ("foo|bar" in the example)
+
+- repository (psammead in the example)
+- content type (-pr or -issue)
+- id (of the issue or pull request)
+- regex ("foo|bar" in the example)
 
 ## Contributing
 

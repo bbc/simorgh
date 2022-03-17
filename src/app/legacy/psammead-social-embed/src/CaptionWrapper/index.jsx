@@ -1,10 +1,10 @@
 import React from 'react';
 import { node, string } from 'prop-types';
 import styled from '@emotion/styled';
-import { C_WHITE } from '@bbc/psammead-styles/colours';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
-import { GEL_BREVIER } from '@bbc/gel-foundations/typography';
-import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
+import { C_WHITE } from '#legacy/psammead-styles/colours';
+import { getSansRegular } from '#legacy/psammead-styles/font-styles';
+import { GEL_BREVIER } from '#legacy/gel-foundations/typography';
+import { GEL_SPACING } from '#legacy/gel-foundations/spacings';
 import { visuallyHiddenStyle } from '../utilities';
 
 const C_BLACK = '#000000';

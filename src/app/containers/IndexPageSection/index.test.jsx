@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import * as SectionLabel from '@bbc/psammead-section-label';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import * as SectionLabel from '#legacy/psammead-section-label';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import IndexPageSection from '.';

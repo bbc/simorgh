@@ -121,11 +121,11 @@ import StoryPromo, {
   IndexAlso,
   IndexAlsosUl,
   IndexAlsosLi,
-} from '@bbc/psammead-story-promo';
-import MediaIndicator from '@bbc/psammead-media-indicator';
-import { latin } from '@bbc/gel-foundations/scripts';
-import LiveLabel from '@bbc/psammead-live-label';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+} from '#legacy/psammead-story-promo';
+import MediaIndicator from '#legacy/psammead-media-indicator';
+import { latin } from '#legacy/gel-foundations/scripts';
+import LiveLabel from '#legacy/psammead-live-label';
+import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text';
 
 const Image = <img src="https://foobar.com/image.jpg" />;
 

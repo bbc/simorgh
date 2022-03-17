@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
-import { grid } from '@bbc/psammead-styles/detection';
-import Grid from '@bbc/psammead-grid';
+import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/breakpoints';
+import { GEL_SPACING, GEL_SPACING_DBL } from '#legacy/gel-foundations/spacings';
+import { grid } from '#legacy/psammead-styles/detection';
+import Grid from '#legacy/psammead-grid';
 import { arrayOf, number, shape, string } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import ProgramCard from './ProgramCard';

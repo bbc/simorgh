@@ -24,8 +24,8 @@ npm install @bbc/psammead-topic-tags --save
 <!-- Description of the component usage -->
 
 ```jsx
-import { TopicTags, TopicTag } from '@bbc/psammead-topic-tags';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { TopicTags, TopicTag } from '#legacy/psammead-topic-tags';
+import { latin } from '#legacy/gel-foundations/scripts';
 
 const Wrapper = () => (
   <TopicTags script={latin} service="news" dir="ltr">

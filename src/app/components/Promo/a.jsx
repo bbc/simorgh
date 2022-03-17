@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { C_EBON } from '@bbc/psammead-styles/colours';
+import { C_EBON } from '#legacy/psammead-styles/colours';
 
 const A = styled.a`
   color: ${C_EBON};

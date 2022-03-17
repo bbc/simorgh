@@ -3,13 +3,13 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { arabic } from '@bbc/gel-foundations/scripts';
-import { urdu as brandSVG } from '@bbc/psammead-assets/svgs';
+} from '#legacy/psammead-styles/colours';
+import { arabic } from '#legacy/gel-foundations/scripts';
+import { urdu as brandSVG } from '#legacy/psammead-assets/svgs';
 import {
   F_REITH_QALAM_REGULAR,
   F_REITH_QALAM_BOLD,
-} from '@bbc/psammead-styles/fonts';
+} from '#legacy/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Asia/Karachi';
 import '@bbc/psammead-locales/moment/ur';
 import withContext from '../../../contexts/utils/withContext';

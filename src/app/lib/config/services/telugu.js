@@ -3,10 +3,10 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { devanagariAndGurmukhi } from '@bbc/gel-foundations/scripts';
-import { telugu as brandSVG } from '@bbc/psammead-assets/svgs';
-import { F_MALLANNA_REGULAR } from '@bbc/psammead-styles/fonts';
+} from '#legacy/psammead-styles/colours';
+import { devanagariAndGurmukhi } from '#legacy/gel-foundations/scripts';
+import { telugu as brandSVG } from '#legacy/psammead-assets/svgs';
+import { F_MALLANNA_REGULAR } from '#legacy/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/te';

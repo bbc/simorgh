@@ -1,12 +1,15 @@
 import React from 'react';
 import { string, oneOf, func } from 'prop-types';
 import styled from '@emotion/styled';
-import { C_EBON, C_WHITE, C_POSTBOX } from '@bbc/psammead-styles/colours';
-import { GEL_SPACING, GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
-import { GEL_MINION } from '@bbc/gel-foundations/typography';
-import { getSansBold } from '@bbc/psammead-styles/font-styles';
-import { mediaIcons } from '@bbc/psammead-assets/svgs';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import { C_EBON, C_WHITE, C_POSTBOX } from '#legacy/psammead-styles/colours';
+import {
+  GEL_SPACING,
+  GEL_SPACING_TRPL,
+} from '#legacy/gel-foundations/spacings';
+import { GEL_MINION } from '#legacy/gel-foundations/typography';
+import { getSansBold } from '#legacy/psammead-styles/font-styles';
+import { mediaIcons } from '#legacy/psammead-assets/svgs';
+import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text';
 
 const GEL_SPACING_DEC = '5rem';
 const BGC_TRANSITION_DURATION = '300ms';

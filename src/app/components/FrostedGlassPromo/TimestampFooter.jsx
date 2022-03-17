@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
-import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import { getSansRegular } from '#legacy/psammead-styles/font-styles';
+import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/breakpoints';
+import { GEL_SPACING, GEL_SPACING_DBL } from '#legacy/gel-foundations/spacings';
 
 import PromoTimestamp from '#components/Promo/timestamp';
 

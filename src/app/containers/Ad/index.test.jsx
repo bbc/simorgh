@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render } from '@testing-library/react';
-import { latinDiacritics } from '@bbc/gel-foundations/scripts';
+import { latinDiacritics } from '#legacy/gel-foundations/scripts';
 import {
   shouldMatchSnapshot,
   suppressPropWarnings,
-} from '@bbc/psammead-test-helpers';
+} from '#legacy/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import {
   ServiceContext,

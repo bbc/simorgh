@@ -1,15 +1,15 @@
 import React, { forwardRef } from 'react';
 import { string, shape, node, func } from 'prop-types';
 import styled from '@emotion/styled';
-import { C_LUNAR, C_EBON, C_METAL } from '@bbc/psammead-styles/colours';
+import { C_LUNAR, C_EBON, C_METAL } from '#legacy/psammead-styles/colours';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
   GEL_SPACING_DBL,
-} from '@bbc/gel-foundations/spacings';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
-import { getBrevier } from '@bbc/gel-foundations/typography';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+} from '#legacy/gel-foundations/spacings';
+import { getSansRegular } from '#legacy/psammead-styles/font-styles';
+import { getBrevier } from '#legacy/gel-foundations/typography';
+import { scriptPropType } from '#legacy/gel-foundations/prop-types';
 
 const MIN_TAG_HEIGHT = '2.75rem'; // 44px
 

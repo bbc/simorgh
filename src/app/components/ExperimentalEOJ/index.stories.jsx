@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
+import { withServicesKnob } from '#legacy/psammead-storybook-helpers';
 import { withKnobs } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import mundoRecommendationsData from '#pages/StoryPage/fixtureData/recommendations.ltr.json';

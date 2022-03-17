@@ -3,15 +3,21 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { oneOf, shape, string } from 'prop-types';
 
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+import { scriptPropType } from '#legacy/gel-foundations/prop-types';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   MEDIA_QUERY_TYPOGRAPHY,
-} from '@bbc/gel-foundations/breakpoints';
-import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
-import { getLongPrimer, getDoublePica } from '@bbc/gel-foundations/typography';
-import { C_EBON, C_GHOST } from '@bbc/psammead-styles/colours';
-import { getSansBold, getSansRegular } from '@bbc/psammead-styles/font-styles';
+} from '#legacy/gel-foundations/breakpoints';
+import { GEL_SPACING, GEL_SPACING_DBL } from '#legacy/gel-foundations/spacings';
+import {
+  getLongPrimer,
+  getDoublePica,
+} from '#legacy/gel-foundations/typography';
+import { C_EBON, C_GHOST } from '#legacy/psammead-styles/colours';
+import {
+  getSansBold,
+  getSansRegular,
+} from '#legacy/psammead-styles/font-styles';
 
 const minClickableHeightPx = 44;
 const minClickableHeightRem = minClickableHeightPx / 16;

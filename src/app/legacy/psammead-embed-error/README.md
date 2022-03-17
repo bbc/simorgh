@@ -17,7 +17,7 @@ npm install @bbc/psammead-embed-error --save
 | `service`      | String  | No       | `news`  | `arabic`                                |
 | `fillViewport` | Boolean | No       | `false` | `true`                                  |
 | `message`      | String  | Yes      | -       | `Sorry, we can't display this content.` |
-| `link`         | Object  | No       | `null`       | See: [link](#link).                     |
+| `link`         | Object  | No       | `null`  | See: [link](#link).                     |
 
 ### `link`
 
@@ -37,11 +37,11 @@ This component is particularly useful if you serve content in an iframe and want
 
 ```js
 // iframe content.
-import EmbedError from '@bbc/psammead-embed-error';
+import EmbedError from '#legacy/psammead-embed-error';
 
 const Page = () => {
   if (error) {
-    return
+    return;
     <EmbedError
       message="Sorry, we can't display this content."
       link={{

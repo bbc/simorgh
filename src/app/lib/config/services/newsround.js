@@ -2,9 +2,9 @@ import {
   C_NEWSROUND_PURPLE,
   C_WHITE,
   C_NEWSROUND_PURPLE_30,
-} from '@bbc/psammead-styles/colours';
-import { newsround as brandSVG } from '@bbc/psammead-assets/svgs';
-import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
+} from '#legacy/psammead-styles/colours';
+import { newsround as brandSVG } from '#legacy/psammead-assets/svgs';
+import { cyrillicAndLatin } from '#legacy/gel-foundations/scripts';
 import {
   F_REITH_SANS_BOLD,
   F_REITH_SANS_BOLD_ITALIC,
@@ -13,7 +13,7 @@ import {
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_MEDIUM_ITALIC,
   F_REITH_SERIF_LIGHT,
-} from '@bbc/psammead-styles/fonts';
+} from '#legacy/psammead-styles/fonts';
 import '@bbc/psammead-locales/moment/en-gb';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';

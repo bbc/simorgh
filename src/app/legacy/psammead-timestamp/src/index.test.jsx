@@ -1,7 +1,7 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { latin } from '@bbc/gel-foundations/scripts';
-import { getPica } from '@bbc/gel-foundations/typography';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers';
+import { latin } from '#legacy/gel-foundations/scripts';
+import { getPica } from '#legacy/gel-foundations/typography';
 import Timestamp from '.';
 
 describe('Timestamp', () => {

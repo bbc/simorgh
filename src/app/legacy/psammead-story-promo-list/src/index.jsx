@@ -1,16 +1,16 @@
 import styled from '@emotion/styled';
 import { node, bool } from 'prop-types';
-import { C_LUNAR } from '@bbc/psammead-styles/colours';
+import { C_LUNAR } from '#legacy/psammead-styles/colours';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/spacings';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/breakpoints';
 
 const promoListPropTypes = {
   children: node.isRequired,

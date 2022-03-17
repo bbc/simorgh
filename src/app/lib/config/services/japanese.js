@@ -3,9 +3,9 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { noAscendersOrDescenders } from '@bbc/gel-foundations/scripts';
-import { japanese as brandSVG } from '@bbc/psammead-assets/svgs';
+} from '#legacy/psammead-styles/colours';
+import { noAscendersOrDescenders } from '#legacy/gel-foundations/scripts';
+import { japanese as brandSVG } from '#legacy/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Tokyo';
 import 'moment/locale/ja';
 import withContext from '../../../contexts/utils/withContext';

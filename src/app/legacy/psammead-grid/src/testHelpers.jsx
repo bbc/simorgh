@@ -1,11 +1,11 @@
 import React from 'react';
 import { string } from 'prop-types';
 import styled from '@emotion/styled';
-import Paragraph from '@bbc/psammead-paragraph';
-import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
-import Image from '@bbc/psammead-image';
-import { GEL_SPACING_HLF, GEL_SPACING } from '@bbc/gel-foundations/spacings';
-import MediaIndicator from '@bbc/psammead-media-indicator';
+import Paragraph from '#legacy/psammead-paragraph';
+import { cyrillicAndLatin } from '#legacy/gel-foundations/scripts';
+import Image from '#legacy/psammead-image';
+import { GEL_SPACING_HLF, GEL_SPACING } from '#legacy/gel-foundations/spacings';
+import MediaIndicator from '#legacy/psammead-media-indicator';
 
 export const ExampleParagraph = ({ identifier }) => (
   <Paragraph script={cyrillicAndLatin} service="news">

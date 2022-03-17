@@ -4,7 +4,7 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/spacings';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
@@ -14,10 +14,10 @@ import {
   GEL_GROUP_0_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
-import { getDoublePica } from '@bbc/gel-foundations/typography';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
-import { C_SHADOW } from '@bbc/psammead-styles/colours';
+} from '#legacy/gel-foundations/breakpoints';
+import { getDoublePica } from '#legacy/gel-foundations/typography';
+import { getSansRegular } from '#legacy/psammead-styles/font-styles';
+import { C_SHADOW } from '#legacy/psammead-styles/colours';
 import { GridItemMediumNoMargin } from '#app/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { OptimizelyContext } from '@optimizely/react-sdk';

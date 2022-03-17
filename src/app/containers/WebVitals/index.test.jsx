@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { render } from '@testing-library/react';
-import useWebVitals from '@bbc/web-vitals';
+import useWebVitals from '#legacy/web-vitals';
 
 // Container to test
 

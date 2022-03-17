@@ -23,7 +23,7 @@ Psammead Image Placeholder is designed to appear as a temporary stand-in to be r
 The ImagePlaceholder component is expected to contain an image as a child element.
 
 ```jsx
-import ImagePlaceholder from '@bbc/psammead-image-placeholder';
+import ImagePlaceholder from '#legacy/psammead-image-placeholder';
 
 const WrapperComponent = ({
   ratio,
@@ -39,14 +39,10 @@ const WrapperComponent = ({
 The ImagePlaceholderAmp component is expected to be used as a child element of an `amp-img` component. Information about `amp-img` can be found on the [AMP documentation website](https://amp.dev/documentation/components/amp-img/)
 
 ```jsx
-import ImagePlaceholderAmp from '@bbc/psammead-image-placeholder';
+import ImagePlaceholderAmp from '#legacy/psammead-image-placeholder';
 
 const WrapperComponent = () => (
-  <amp-img
-    src="http://some-image.url"
-    width="645px"
-    height="128px"
-  >
+  <amp-img src="http://some-image.url" width="645px" height="128px">
     <ImagePlaceholderAmp />
   </amp-img>
 );
@@ -56,17 +52,17 @@ const WrapperComponent = () => (
 
 ### ImagePlaceholder
 
-| Argument | Type                                   | Required | Default | Example |
-| -------- | -------------------------------------- | -------- | ------- | ------- |
-| Ratio    | Number, ratio between height and width | Yes      | N/A     | 65.625  |
-| darkMode | Bool, true (dark) or false (normal)    | No       | false   | false   |
-| forwardStyle | Styling object that applies additional styling    | No       | null   | { background: 'none' }   |
+| Argument     | Type                                           | Required | Default | Example                |
+| ------------ | ---------------------------------------------- | -------- | ------- | ---------------------- |
+| Ratio        | Number, ratio between height and width         | Yes      | N/A     | 65.625                 |
+| darkMode     | Bool, true (dark) or false (normal)            | No       | false   | false                  |
+| forwardStyle | Styling object that applies additional styling | No       | null    | { background: 'none' } |
 
 ### ImagePlaceholderAmp
 
-| Argument | Type                                   | Required | Default | Example |
-| -------- | -------------------------------------- | -------- | ------- | ------- |
-| darkMode | Bool, true (dark) or false (normal)    | No       | false   | false   |
+| Argument | Type                                | Required | Default | Example |
+| -------- | ----------------------------------- | -------- | ------- | ------- |
+| darkMode | Bool, true (dark) or false (normal) | No       | false   | false   |
 
 ### Accessibility notes
 

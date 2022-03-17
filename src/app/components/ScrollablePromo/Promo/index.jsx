@@ -2,20 +2,20 @@ import React, { useContext } from 'react';
 import { arrayOf, shape, string, oneOfType, object, func } from 'prop-types';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
-import { getPica } from '@bbc/gel-foundations/typography';
-import { getSerifBold } from '@bbc/psammead-styles/font-styles';
-import { C_GREY_6, C_GREY_8, C_WHITE } from '@bbc/psammead-styles/colours';
+import { getPica } from '#legacy/gel-foundations/typography';
+import { getSerifBold } from '#legacy/psammead-styles/font-styles';
+import { C_GREY_6, C_GREY_8, C_WHITE } from '#legacy/psammead-styles/colours';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/spacings';
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/breakpoints';
 import { ServiceContext } from '#contexts/ServiceContext';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';

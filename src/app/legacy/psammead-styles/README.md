@@ -22,9 +22,9 @@ npm install @bbc/psammead-styles --save
 
 <!-- prettier-ignore -->
 ```jsx
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+import { C_POSTBOX } from '#legacy/psammead-styles/colours';
 
-import { F_REITH_SANS_REGULAR, F_REITH_SANS_ITALIC } from '@bbc/psammead-styles/fonts';
+import { F_REITH_SANS_REGULAR, F_REITH_SANS_ITALIC } from '#legacy/psammead-styles/fonts';
 ```
 
 By importing a subset of the font-face definitions defined in this package, you can prioritise only the most commonly needed fonts for your project, with browser styling stepping in for less common scenarios. For example, in these examples, which import custom fonts for only Reith Sans Regular and Italic, any bold styling would be "faked" by the browser.
@@ -32,7 +32,7 @@ By importing a subset of the font-face definitions defined in this package, you 
 You will likely want to use these font-face definitions in tandem with the GEL-defined font stack definitions, which are available in [`@bbc/gel-foundations`](https://www.npmjs.com/package/@bbc/gel-foundations):
 
 ```jsx
-import { GEL_FF_REITH_SANS } from '@bbc/gel-foundations/typography';
+import { GEL_FF_REITH_SANS } from '#legacy/gel-foundations/typography';
 ```
 
 These values can then be used directly within CSS declarations in code. Note that font-faces should only be declared once on a page:
@@ -57,7 +57,7 @@ const SomeStyledComponent = css`
 In case you are using embedded fonts, you need to make sure you have loaded your fonts first before using the functions. If the embedded font is not loaded, the fallback font will be applied
 
 ```js
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+import { getSansRegular } from '#legacy/psammead-styles/font-styles';
 
 const fontStyle = getSansRegular('news');
 
@@ -74,7 +74,7 @@ We have defined custom feature detection statements (using CSS `@supports` synta
 - grid: We experienced issues using `@supports (display:grid)` from browsers with buggy CSS Grid implementations, and found that detecting on `@supports (grid-template-columns: fit-content(200px))` gave more consistent detection.
 
 ```js
-import { grid } from '@bbc/psammead-styles/detection';
+import { grid } from '#legacy/psammead-styles/detection';
 
 const someGridUsingComponent = css`
   @supports (${grid}) {
@@ -92,17 +92,13 @@ We export a global styles component which uses `styled-normalize` and defines cs
 This component accepts an optional `fonts` prop which is an array of font styles to be applied in the global styles.
 
 ```js
-import GlobalStyles from '@bbc/psammead-styles/global-styles';
+import GlobalStyles from '#legacy/psammead-styles/global-styles';
 import {
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
-} from '@bbc/psammead-styles/fonts';
+} from '#legacy/psammead-styles/fonts';
 
-<GlobalStyles fonts={[
-      F_REITH_SANS_REGULAR,
-      F_REITH_SERIF_MEDIUM,
-    ]}
-/>
+<GlobalStyles fonts={[F_REITH_SANS_REGULAR, F_REITH_SERIF_MEDIUM]} />;
 ```
 
 ## Contributing

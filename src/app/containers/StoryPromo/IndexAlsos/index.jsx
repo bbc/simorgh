@@ -1,14 +1,14 @@
 import React, { useContext, Fragment } from 'react';
 import { arrayOf, shape, oneOf, number, string, oneOfType } from 'prop-types';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+import { scriptPropType } from '#legacy/gel-foundations/prop-types';
 import pathOr from 'ramda/src/pathOr';
-import MediaIndicator from '@bbc/psammead-media-indicator';
+import MediaIndicator from '#legacy/psammead-media-indicator';
 import {
   IndexAlsos,
   IndexAlso,
   IndexAlsosUl,
   IndexAlsosLi,
-} from '@bbc/psammead-story-promo/index-alsos';
+} from '#legacy/psammead-story-promo/index-alsos';
 import { ServiceContext } from '#contexts/ServiceContext';
 import {
   MEDIA_ASSET_PAGE,

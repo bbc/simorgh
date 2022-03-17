@@ -4,9 +4,9 @@ import {
   C_WHITE,
   C_POSTBOX_30,
   C_GHOST,
-} from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+} from '#legacy/psammead-styles/colours';
+import { latin } from '#legacy/gel-foundations/scripts';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers';
 import { render, fireEvent } from '@testing-library/react';
 import CanonicalNavigation from './index.canonical';
 import {

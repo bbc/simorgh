@@ -2,15 +2,15 @@ import React from 'react';
 import { select } from '@storybook/addon-knobs';
 import { Helmet } from 'react-helmet';
 import { arrayOf, shape, string, element } from 'prop-types';
-import * as scripts from '@bbc/gel-foundations/scripts';
+import * as scripts from '#legacy/gel-foundations/scripts';
 import LANGUAGE_VARIANTS from './text-variants';
 
 var inputProvider = function inputProvider(_ref) {
   var slots = _ref.slots,
-      componentFunction = _ref.componentFunction,
-      services = _ref.services,
-      _ref$options = _ref.options,
-      options = _ref$options === void 0 ? {} : _ref$options;
+    componentFunction = _ref.componentFunction,
+    services = _ref.services,
+    _ref$options = _ref.options,
+    options = _ref$options === void 0 ? {} : _ref$options;
   return function () {
     var serviceNames = Object.keys(LANGUAGE_VARIANTS);
 
@@ -20,7 +20,11 @@ var inputProvider = function inputProvider(_ref) {
       });
     }
 
-    var serviceName = select('Select a service', serviceNames, options.defaultService || 'news');
+    var serviceName = select(
+      'Select a service',
+      serviceNames,
+      options.defaultService || 'news',
+    );
     var service = LANGUAGE_VARIANTS[serviceName];
     var isNews = serviceName === 'news';
     var slotTexts = (slots || []).map(function (_ref2) {
@@ -36,29 +40,36 @@ var inputProvider = function inputProvider(_ref) {
     var script = scripts[service.script];
     var dir = service.dir || 'ltr';
     var locale = service.locale;
-    return React.createElement(React.Fragment, null, React.createElement(Helmet, {
-      htmlAttributes: {
-        dir: dir
-      }
-    }), componentFunction({
-      slotTexts: slotTexts,
-      script: script,
-      dir: dir,
-      locale: locale,
-      service: serviceName
-    }));
+    return React.createElement(
+      React.Fragment,
+      null,
+      React.createElement(Helmet, {
+        htmlAttributes: {
+          dir: dir,
+        },
+      }),
+      componentFunction({
+        slotTexts: slotTexts,
+        script: script,
+        dir: dir,
+        locale: locale,
+        service: serviceName,
+      }),
+    );
   };
 };
 
 inputProvider.propTypes = {
-  slots: arrayOf(shape({
-    name: string,
-    defaultText: string
-  })),
+  slots: arrayOf(
+    shape({
+      name: string,
+      defaultText: string,
+    }),
+  ),
   componentFunction: element,
   services: arrayOf(string),
   options: shape({
-    defaultService: string
-  })
+    defaultService: string,
+  }),
 };
 export default inputProvider;

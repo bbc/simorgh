@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { node, bool, string, oneOf, shape } from 'prop-types';
-import { C_WHITE, C_EBON } from '@bbc/psammead-styles/colours';
-import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
-import { getMinion } from '@bbc/gel-foundations/typography';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
-import { mediaIcons } from '@bbc/psammead-assets/svgs';
+import { C_WHITE, C_EBON } from '#legacy/psammead-styles/colours';
+import { GEL_SPACING } from '#legacy/gel-foundations/spacings';
+import { getMinion } from '#legacy/gel-foundations/typography';
+import { getSansRegular } from '#legacy/psammead-styles/font-styles';
+import { scriptPropType } from '#legacy/gel-foundations/prop-types';
+import { mediaIcons } from '#legacy/psammead-assets/svgs';
 
 const StyledMediaIndicator = styled.div`
   color: ${C_EBON};

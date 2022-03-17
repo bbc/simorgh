@@ -21,10 +21,10 @@ The `psammead-caption` component is a styled `figcaption` element.
 `psammead-caption` can be used together with the [`psammead-figure`](https://github.com/bbc/psammead/tree/latest/packages/components/psammead-figure) and [`psammead-visually-hidden-text`](https://github.com/bbc/psammead/tree/latest/packages/components/psammead-visually-hidden-text) components in this way. This visually hidden text is to give context to users of Assistive Technology.
 
 ```jsx
-import Caption from '@bbc/psammead-caption';
-import Figure from '@bbc/psammead-figure';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import { arabic } from '@bbc/gel-foundations/scripts';
+import Caption from '#legacy/psammead-caption';
+import Figure from '#legacy/psammead-figure';
+import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text';
+import { arabic } from '#legacy/gel-foundations/scripts';
 
 const Wrapper = captionText => (
   <Figure>

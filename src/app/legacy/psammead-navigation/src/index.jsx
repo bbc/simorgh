@@ -1,21 +1,21 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { shape, string, node, bool, oneOf } from 'prop-types';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import { C_WHITE, C_EBON } from '@bbc/psammead-styles/colours';
+import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text';
+import { C_WHITE, C_EBON } from '#legacy/psammead-styles/colours';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
   GEL_SPACING_SEXT,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/spacings';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
-import { getPica } from '@bbc/gel-foundations/typography';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+} from '#legacy/gel-foundations/breakpoints';
+import { getPica } from '#legacy/gel-foundations/typography';
+import { scriptPropType } from '#legacy/gel-foundations/prop-types';
+import { getSansRegular } from '#legacy/psammead-styles/font-styles';
 import { NAV_BAR_TOP_BOTTOM_SPACING } from './DropdownNavigation';
 
 const SPACING_AROUND_NAV_ITEMS = `${NAV_BAR_TOP_BOTTOM_SPACING}rem`; // 12px

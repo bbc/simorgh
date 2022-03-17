@@ -3,8 +3,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import InlineLink from '@bbc/psammead-inline-link';
-import { withServicesKnob, themes } from '@bbc/psammead-storybook-helpers';
+import InlineLink from '#legacy/psammead-inline-link';
+import { withServicesKnob, themes } from '#legacy/psammead-storybook-helpers';
 import notes from '../README.md';
 import Paragraph from './index';
 

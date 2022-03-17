@@ -9,14 +9,14 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
-import { C_PEBBLE } from '@bbc/psammead-styles/colours';
+} from '#legacy/gel-foundations/breakpoints';
+import { C_PEBBLE } from '#legacy/psammead-styles/colours';
 import {
   GEL_SPACING,
   GEL_SPACING_HLF_TRPL,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/spacings';
 
 import TopicPromo from '../TopicPromo';
 

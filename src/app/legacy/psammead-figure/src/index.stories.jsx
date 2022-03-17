@@ -1,13 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
-import Caption from '@bbc/psammead-caption';
-import Copyright from '@bbc/psammead-copyright';
-import Image from '@bbc/psammead-image';
-import ImagePlaceholder from '@bbc/psammead-image-placeholder';
-import Paragraph from '@bbc/psammead-paragraph';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
+import Caption from '#legacy/psammead-caption';
+import Copyright from '#legacy/psammead-copyright';
+import Image from '#legacy/psammead-image';
+import ImagePlaceholder from '#legacy/psammead-image-placeholder';
+import Paragraph from '#legacy/psammead-paragraph';
+import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text';
+import { withServicesKnob } from '#legacy/psammead-storybook-helpers';
 import notes from '../README.md';
 import Figure from '.';
 

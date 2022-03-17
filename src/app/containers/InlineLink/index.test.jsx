@@ -1,6 +1,6 @@
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers';
 import { render, fireEvent } from '@testing-library/react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import InlineLinkContainer from './index';

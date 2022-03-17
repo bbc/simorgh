@@ -5,16 +5,16 @@ import {
   GEL_SPACING_TRPL,
   GEL_MARGIN_ABOVE_400PX,
   GEL_MARGIN_BELOW_400PX,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/spacings';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
-import { getLongPrimer } from '@bbc/gel-foundations/typography';
-import { C_METAL } from '@bbc/psammead-styles/colours';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+} from '#legacy/gel-foundations/breakpoints';
+import { getLongPrimer } from '#legacy/gel-foundations/typography';
+import { C_METAL } from '#legacy/psammead-styles/colours';
+import { scriptPropType } from '#legacy/gel-foundations/prop-types';
+import { getSansRegular } from '#legacy/psammead-styles/font-styles';
 
 const rtlStyles = `
   margin-right: ${GEL_MARGIN_BELOW_400PX};

@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { node, bool, string, oneOf } from 'prop-types';
-import { getSansBold } from '@bbc/psammead-styles/font-styles';
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
-import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import { getSansBold } from '#legacy/psammead-styles/font-styles';
+import { C_POSTBOX } from '#legacy/psammead-styles/colours';
+import { GEL_SPACING } from '#legacy/gel-foundations/spacings';
+import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text';
 
 const StyledSpan = styled.span`
   ${({ service }) => getSansBold(service)}

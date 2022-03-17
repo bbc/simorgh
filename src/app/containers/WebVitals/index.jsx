@@ -1,6 +1,6 @@
 // Hooks
 import { useContext } from 'react';
-import useWebVitals from '@bbc/web-vitals';
+import useWebVitals from '#legacy/web-vitals';
 import useToggle from '#hooks/useToggle';
 
 // Contexts

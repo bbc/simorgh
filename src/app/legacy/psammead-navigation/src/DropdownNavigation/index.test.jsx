@@ -1,7 +1,7 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers';
 import { render, fireEvent, getByRole } from '@testing-library/react';
-import { latin, arabic } from '@bbc/gel-foundations/scripts';
+import { latin, arabic } from '#legacy/gel-foundations/scripts';
 import {
   CanonicalDropdown,
   DropdownUl,

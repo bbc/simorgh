@@ -4,8 +4,8 @@ import { render } from '@testing-library/react';
 import {
   shouldMatchSnapshot,
   suppressPropWarnings,
-} from '@bbc/psammead-test-helpers';
-import { latin } from '@bbc/gel-foundations/scripts';
+} from '#legacy/psammead-test-helpers';
+import { latin } from '#legacy/gel-foundations/scripts';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import relatedItems from './relatedItems';
 import IndexAlsosContainer from '.';

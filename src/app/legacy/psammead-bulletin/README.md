@@ -34,9 +34,9 @@ npm install @bbc/psammead-bulletin --save
 ## Usage
 
 ```jsx
-import Bulletin from '@bbc/psammead-bulletin';
-import { Image } from '@bbc/psammead-image';
-import { latin } from '@bbc/gel-foundations/scripts';
+import Bulletin from '#legacy/psammead-bulletin';
+import { Image } from '#legacy/psammead-image';
+import { latin } from '#legacy/gel-foundations/scripts';
 
 const WrappingComponent = () => {
   const image = <Image src="/image.png" altText="alt text" />;

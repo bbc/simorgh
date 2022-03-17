@@ -22,8 +22,8 @@ It uses `@bbc/psammead-styles` for colours and font family and `@bbc/gel-foundat
 ## Usage
 
 ```jsx
-import Paragraph from '@bbc/psammead-paragraph';
-import { latin } from '@bbc/gel-foundations/scripts';
+import Paragraph from '#legacy/psammead-paragraph';
+import { latin } from '#legacy/gel-foundations/scripts';
 
 const WrappingComponent = () => (
   <Paragraph script={latin} service="news">

@@ -114,22 +114,22 @@ The `@bbc/psammead-navigation` package is a set of two components, `NavigationUl
 
 ```jsx
 import React from 'react';
-import { ScrollableNavigation } from '@bbc/psammead-navigation/scrollable';
+import { ScrollableNavigation } from '#legacy/psammead-navigation/scrollable';
 import Navigation, {
   NavigationUl,
   NavigationLi,
-} from '@bbc/psammead-navigation';
-import { latin } from '@bbc/gel-foundations/scripts';
+} from '#legacy/psammead-navigation';
+import { latin } from '#legacy/gel-foundations/scripts';
 
 <Navigation
-  brandBackgroundColour='#B80000'
-  brandForegroundColour='#FDFDFD'
-  brandBorderColour='#EAB3B3'
-  brandHighlightColour='#FFFFFF'
+  brandBackgroundColour="#B80000"
+  brandForegroundColour="#FDFDFD"
+  brandBorderColour="#EAB3B3"
+  brandHighlightColour="#FFFFFF"
 >
   <ScrollableNavigation
-    brandBackgroundColour='#B80000'
-    brandHighlightColour='#FFFFFF'
+    brandBackgroundColour="#B80000"
+    brandHighlightColour="#FFFFFF"
   >
     <NavigationUl>
       <NavigationLi
@@ -138,9 +138,9 @@ import { latin } from '@bbc/gel-foundations/scripts';
         active
         currentPageText="Current Page"
         service="news"
-        brandForegroundColour='#FDFDFD'
-        brandBorderColour='#EAB3B3'
-        brandHighlightColour='#FFFFFF'
+        brandForegroundColour="#FDFDFD"
+        brandBorderColour="#EAB3B3"
+        brandHighlightColour="#FFFFFF"
       >
         Home
       </NavigationLi>
@@ -148,9 +148,9 @@ import { latin } from '@bbc/gel-foundations/scripts';
         url="/sport"
         script={latin}
         service="news"
-        brandForegroundColour='#FDFDFD'
-        brandBorderColour='#EAB3B3'
-        brandHighlightColour='#FFFFFF'
+        brandForegroundColour="#FDFDFD"
+        brandBorderColour="#EAB3B3"
+        brandHighlightColour="#FFFFFF"
       >
         {Sport}
       </NavigationLi>
@@ -158,9 +158,9 @@ import { latin } from '@bbc/gel-foundations/scripts';
         url="/weather"
         script={latin}
         service="news"
-        brandForegroundColour='#FDFDFD'
-        brandBorderColour='#EAB3B3'
-        brandHighlightColour='#FFFFFF'
+        brandForegroundColour="#FDFDFD"
+        brandBorderColour="#EAB3B3"
+        brandHighlightColour="#FFFFFF"
       >
         {Weather}
       </NavigationLi>
@@ -177,8 +177,8 @@ import {
   Dropdown,
   DropdownUl,
   DropdownLi,
-} from '@bbc/psammead-navigation/dropdown';
-import { latin } from '@bbc/gel-foundations/scripts';
+} from '#legacy/psammead-navigation/dropdown';
+import { latin } from '#legacy/gel-foundations/scripts';
 
 <CanonicalDropdown isOpen={isOpen}>
   <DropdownUl>
@@ -196,15 +196,15 @@ import { latin } from '@bbc/gel-foundations/scripts';
       Sport
     </DropdownLi>
   </DropdownUl>
-</CanonicalDropdown>
+</CanonicalDropdown>;
 ```
 
 ## Canonical Menu Button Usage
 
 ```jsx
 import React from 'react';
-import { CanonicalMenuButton } from '@bbc/psammead-navigation/dropdown';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { CanonicalMenuButton } from '#legacy/psammead-navigation/dropdown';
+import { latin } from '#legacy/gel-foundations/scripts';
 
 <CanonicalMenuButton
   announcedText="Menu"
@@ -214,22 +214,22 @@ import { latin } from '@bbc/gel-foundations/scripts';
     console.log('Handle onClick action');
   }}
   script={latin}
-/>
+/>;
 ```
 
 ## Amp Menu Button Usage
 
 ```jsx
 import React from 'react';
-import { AmpMenuButton } from '@bbc/psammead-navigation/dropdown';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { AmpMenuButton } from '#legacy/psammead-navigation/dropdown';
+import { latin } from '#legacy/gel-foundations/scripts';
 
 <AmpMenuButton
   announcedText="Menu"
   onToggle="menu.toggleVisibility"
   script={latin}
   dir={dir}
-/>
+/>;
 ```
 
 Note that in order for the `AmpMenuButton` toggling to work correctly, an `id` should be added to the `Navigation` component. This `id` can be passed in as a prop to the component. Similarly, `ScrollableNavigation` also requires an `id` to be added to it.

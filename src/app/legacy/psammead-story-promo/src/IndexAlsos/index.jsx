@@ -2,12 +2,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { node, string, shape } from 'prop-types';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
-import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
-import { C_EBON, C_METAL, C_LUNAR } from '@bbc/psammead-styles/colours';
-import { getBrevier } from '@bbc/gel-foundations/typography';
-import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import { scriptPropType } from '#legacy/gel-foundations/prop-types';
+import { GEL_SPACING, GEL_SPACING_DBL } from '#legacy/gel-foundations/spacings';
+import { C_EBON, C_METAL, C_LUNAR } from '#legacy/psammead-styles/colours';
+import { getBrevier } from '#legacy/gel-foundations/typography';
+import { getSerifMedium } from '#legacy/psammead-styles/font-styles';
+import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text';
 
 const StyledIndexAlsos = styled.div`
   position: relative;

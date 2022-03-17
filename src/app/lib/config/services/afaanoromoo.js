@@ -3,9 +3,9 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
-import { afaanoromoo as brandSVG } from '@bbc/psammead-assets/svgs';
+} from '#legacy/psammead-styles/colours';
+import { cyrillicAndLatin } from '#legacy/gel-foundations/scripts';
+import { afaanoromoo as brandSVG } from '#legacy/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
 import '@bbc/psammead-locales/moment/om';
 import withContext from '../../../contexts/utils/withContext';

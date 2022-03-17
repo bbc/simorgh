@@ -3,13 +3,13 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { bengali } from '@bbc/gel-foundations/scripts';
-import { bengali as brandSVG } from '@bbc/psammead-assets/svgs';
+} from '#legacy/psammead-styles/colours';
+import { bengali } from '#legacy/gel-foundations/scripts';
+import { bengali as brandSVG } from '#legacy/psammead-assets/svgs';
 import {
   F_NOTO_SERIF_BENGALI_BOLD,
   F_NOTO_SERIF_BENGALI_REGULAR,
-} from '@bbc/psammead-styles/fonts';
+} from '#legacy/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Asia/Dhaka';
 import '@bbc/psammead-locales/moment/bn';
 import withContext from '../../../contexts/utils/withContext';

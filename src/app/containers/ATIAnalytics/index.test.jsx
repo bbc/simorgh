@@ -6,7 +6,7 @@ import {
   suppressPropWarnings,
   setWindowValue,
   resetWindowValue,
-} from '@bbc/psammead-test-helpers';
+} from '#legacy/psammead-test-helpers';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 import mapAssetData from '#pages/MediaAssetPage/fixtureData.json';
 import pglAssetData from '#pages/PhotoGalleryPage/fixtureData.json';

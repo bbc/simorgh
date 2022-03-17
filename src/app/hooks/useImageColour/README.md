@@ -70,7 +70,7 @@ Will be null if no error has occurred, or an error string if something has gone 
 
 ```javascript
 import styled from '@emotion/styled';
-import { C_GHOST, C_EBON } from '@bbc/psammead';
+import { C_GHOST, C_EBON } from '#legacy/psammead';
 import useImageAnalyser from './';
 
 const MyElement = styled.div`

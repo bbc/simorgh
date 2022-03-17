@@ -3,9 +3,9 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { thai } from '@bbc/gel-foundations/scripts';
-import { thai as brandSVG } from '@bbc/psammead-assets/svgs';
+} from '#legacy/psammead-styles/colours';
+import { thai } from '#legacy/gel-foundations/scripts';
+import { thai as brandSVG } from '#legacy/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Bangkok';
 import '@bbc/psammead-locales/moment/th';
 import withContext from '../../../contexts/utils/withContext';

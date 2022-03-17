@@ -1,22 +1,22 @@
 import React, { cloneElement, useRef } from 'react';
 import styled from '@emotion/styled';
 import { shape, string, bool, func, oneOf, node } from 'prop-types';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import { navigationIcons } from '@bbc/psammead-assets/svgs';
-import { C_WHITE, C_EBON, C_SHADOW } from '@bbc/psammead-styles/colours';
+import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text';
+import { navigationIcons } from '#legacy/psammead-assets/svgs';
+import { C_WHITE, C_EBON, C_SHADOW } from '#legacy/psammead-styles/colours';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
   GEL_SPACING_DBL,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/spacings';
 import { Helmet } from 'react-helmet';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_B_MIN_WIDTH,
-} from '@bbc/gel-foundations/breakpoints';
-import { getPica } from '@bbc/gel-foundations/typography';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+} from '#legacy/gel-foundations/breakpoints';
+import { getPica } from '#legacy/gel-foundations/typography';
+import { scriptPropType } from '#legacy/gel-foundations/prop-types';
+import { getSansRegular } from '#legacy/psammead-styles/font-styles';
 
 export const NAV_BAR_TOP_BOTTOM_SPACING = 0.75; // 12px
 

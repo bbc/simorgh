@@ -1,21 +1,21 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { storiesOf } from '@storybook/react';
-import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import { GEL_SPACING, GEL_SPACING_DBL } from '#legacy/gel-foundations/spacings';
 import {
   GEL_FF_REITH_SANS,
   getBodyCopy,
-} from '@bbc/gel-foundations/typography';
-import { latin } from '@bbc/gel-foundations/scripts';
+} from '#legacy/gel-foundations/typography';
+import { latin } from '#legacy/gel-foundations/scripts';
 import { select, withKnobs } from '@storybook/addon-knobs';
-import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
+import { withServicesKnob } from '#legacy/psammead-storybook-helpers';
 import json5 from 'json5';
 import {
   getSansRegular,
   getSansBold,
   getSansRegularItalic,
   getSansBoldItalic,
-} from '@bbc/psammead-styles/font-styles';
+} from '#legacy/psammead-styles/font-styles';
 import notes from '../README.md';
 import * as colours from './colours';
 import { grid } from './detection';

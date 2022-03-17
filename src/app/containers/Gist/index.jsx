@@ -7,11 +7,17 @@ import {
   GEL_SPACING_QUAD,
   GEL_SPACING_TRPL,
   GEL_SPACING_HLF_TRPL,
-} from '@bbc/gel-foundations/spacings';
-import { C_POSTBOX, C_WHITE, C_GREY_6 } from '@bbc/psammead-styles/colours';
-import { getSansRegular, getSansBold } from '@bbc/psammead-styles/font-styles';
-import { getDoublePica, getGreatPrimer } from '@bbc/gel-foundations/typography';
-import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/spacings';
+import { C_POSTBOX, C_WHITE, C_GREY_6 } from '#legacy/psammead-styles/colours';
+import {
+  getSansRegular,
+  getSansBold,
+} from '#legacy/psammead-styles/font-styles';
+import {
+  getDoublePica,
+  getGreatPrimer,
+} from '#legacy/gel-foundations/typography';
+import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/breakpoints';
 import { string, arrayOf, shape } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Blocks from '#containers/Blocks';

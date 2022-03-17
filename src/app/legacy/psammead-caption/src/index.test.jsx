@@ -1,7 +1,7 @@
 import React from 'react';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { latin, arabic } from '@bbc/gel-foundations/scripts';
+import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers';
+import { latin, arabic } from '#legacy/gel-foundations/scripts';
 import Caption from '.';
 
 describe('Caption', () => {

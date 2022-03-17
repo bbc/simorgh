@@ -1,6 +1,6 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { latin } from '@bbc/gel-foundations/dist/scripts';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers';
+import { latin } from '#legacy/gel-foundations/dist/scripts';
 import Byline from './index';
 
 describe('Byline', () => {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { v4 as uuid } from 'uuid';
 import { render } from '@testing-library/react';
-import { latin, arabic } from '@bbc/gel-foundations/scripts';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { latin, arabic } from '#legacy/gel-foundations/scripts';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { blockContainingText } from '#models/blocks';
 import CaptionContainer from '.';

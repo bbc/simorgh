@@ -17,7 +17,7 @@ Adds non-visible text to the page, to be utilised by screen-readers and other as
 ## Usage
 
 ```jsx
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text';
 
 const WrappingComponent = () => (
   <VisuallyHiddenText>Some offscreen text</VisuallyHiddenText>

@@ -2,15 +2,15 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
-import { getBodyCopy, getLongPrimer } from '@bbc/gel-foundations/typography';
+import { withServicesKnob } from '#legacy/psammead-storybook-helpers';
+import { getBodyCopy, getLongPrimer } from '#legacy/gel-foundations/typography';
 import {
   getSansRegular,
   getSansBold,
   getSansRegularItalic,
   getSansBoldItalic,
-} from '@bbc/psammead-styles/font-styles';
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+} from '#legacy/psammead-styles/font-styles';
+import { C_POSTBOX } from '#legacy/psammead-styles/colours';
 import notes from '../README.md';
 import InlineLink from './index';
 

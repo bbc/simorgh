@@ -33,8 +33,11 @@ The typical use-case of this component is on top of the webpage of all page type
 The `headingRef` prop is used so that the title of the consent banner can be programmatically focussed for accessibility reasons. This ref will be assigned to an HTML heading element which can be focussed using the DOM APIs: `headingRef.current.focus()`.
 
 ```jsx
-import { ConsentBanner, ConsentBannerText } from '@bbc/psammead-consent-banner';
-import { latin } from '@bbc/gel-foundations/scripts';
+import {
+  ConsentBanner,
+  ConsentBannerText,
+} from '#legacy/psammead-consent-banner';
+import { latin } from '#legacy/gel-foundations/scripts';
 
 const Accept = (
   <button onClick={() => {}} type="button">

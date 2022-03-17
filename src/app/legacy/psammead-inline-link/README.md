@@ -17,7 +17,7 @@ The `@bbc/psammead-inline-link` package exports a single Inline Link component. 
 ## Usage
 
 ```jsx
-import InlineLink from '@bbc/psammead-inline-link';
+import InlineLink from '#legacy/psammead-inline-link';
 
 const WrappingComponent = () => (
   <InlineLink href="https://www.bbc.com/news">Text here</InlineLink>
@@ -29,8 +29,8 @@ We have not included any typography styles inside this component. This is so it 
 Example inline link in a paragraph:
 
 ```jsx
-import InlineLink from '@bbc/psammead-inline-link';
-import Paragraph from '@bbc/psammead-paragraph';
+import InlineLink from '#legacy/psammead-inline-link';
+import Paragraph from '#legacy/psammead-paragraph';
 
 const WrapperComponent = () => (
   <Paragraph>I am a paragraph that has a link to <InlineLink href="https://www.bbc.com/news">the BBC News front page</InlineLink>.<Paragraph>
@@ -40,8 +40,8 @@ const WrapperComponent = () => (
 Example inline link in a Headline or SubHeading:
 
 ```jsx
-import InlineLink from '@bbc/psammead-inline-link';
-import { Headline, SubHeading } from '@bbc/psammead-headings';
+import InlineLink from '#legacy/psammead-inline-link';
+import { Headline, SubHeading } from '#legacy/psammead-headings';
 
 const HeadlineWithALink = () => (
   <InlineLink href="https://www.bbc.com/news"><Headline>Headline</Headline></InlineLink>
@@ -55,8 +55,8 @@ const HeadlineWithALink = () => (
 Alternatively, if you want to just extend existing styles with other GEL Typography groups, you can do the following:
 
 ```jsx
-import InlineLink from '@bbc/psammead-inline-link';
-import { GEL_PARAGON } from '@bbc/gel-foundations';
+import InlineLink from '#legacy/psammead-inline-link';
+import { GEL_PARAGON } from '#legacy/gel-foundations';
 
 const GelParagonLink = styled(InlineLink)`
   ${GEL_PARAGON};

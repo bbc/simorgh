@@ -9,10 +9,10 @@ import {
   withKnobs,
   boolean,
 } from '@storybook/addon-knobs';
-import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
-import * as svgs from '@bbc/psammead-assets/svgs';
-import { C_WHITE } from '@bbc/psammead-styles/colours';
-import Brand from '@bbc/psammead-brand';
+import { withServicesKnob } from '#legacy/psammead-storybook-helpers';
+import * as svgs from '#legacy/psammead-assets/svgs';
+import { C_WHITE } from '#legacy/psammead-styles/colours';
+import Brand from '#legacy/psammead-brand';
 import { ampDecorator } from '../../../../.storybook/preview';
 import Navigation, { NavigationUl, NavigationLi } from './index';
 import {

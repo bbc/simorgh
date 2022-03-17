@@ -1,13 +1,13 @@
 import styled from '@emotion/styled';
 import { oneOf } from 'prop-types';
-import { C_WHITE } from '@bbc/psammead-styles/colours';
+import { C_WHITE } from '#legacy/psammead-styles/colours';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
-} from '@bbc/gel-foundations/breakpoints';
-import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
-import { getPica } from '@bbc/gel-foundations/typography';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+} from '#legacy/gel-foundations/breakpoints';
+import { GEL_SPACING } from '#legacy/gel-foundations/spacings';
+import { getPica } from '#legacy/gel-foundations/typography';
+import { getSansRegular } from '#legacy/psammead-styles/font-styles';
 
 const SKIP_LINK_COLOR = '#333';
 const SKIP_LINK_BORDER = '0.1875rem'; // 3px

@@ -1,4 +1,4 @@
-import { testUtilityPackages } from '@bbc/psammead-test-helpers';
+import { testUtilityPackages } from '#legacy/psammead-test-helpers';
 
 const fontsExpectedExports = {
   F_REITH_SERIF_REGULAR: 'function',

@@ -2,8 +2,8 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
-import { Headline, Link } from '@bbc/psammead-story-promo';
+import { withServicesKnob } from '#legacy/psammead-storybook-helpers';
+import { Headline, Link } from '#legacy/psammead-story-promo';
 import LiveLabel from './index';
 import notes from '../README.md';
 

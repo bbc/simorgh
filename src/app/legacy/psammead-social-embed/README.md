@@ -22,15 +22,16 @@ npm install @bbc/psammead-social-embed --save
 
 ### Canonical
 
-| Argument   | Type   | Required | Default | Example                                                                                                             |
-| ---------- | ------ | -------- | ------- | ------------------------------------------------------------------------------------------------------------------- |
-| `provider` | String | Yes      | n/a     | See [supported providers](#supported-providers).                                                                    |
-| `service`  | String | Yes      | n/a     | `'news'`                                                                                                            |
-| `oEmbed`   | Object | Yes      | n/a     | See [@bbc/psammead-oembed](https://github.com/bbc/psammead/tree/latest/packages/components/psammead-oembed#oembed). |
-| `fallback` | Object | Yes      | n/a     | See [fallback](#fallback).                                                                                          |
-| `skipLink` | Object | Yes      | n/a     | See [skipLink](#skipLink).                                                                                          |
-| `caption`  | Object | No       | `null`  | See [caption](#caption).                                                                                            |
-| `onRender` | Function | No      | `null`     | `() => console.log('rendered')` |
+| Argument   | Type     | Required | Default | Example                                                                                                             |
+| ---------- | -------- | -------- | ------- | ------------------------------------------------------------------------------------------------------------------- |
+| `provider` | String   | Yes      | n/a     | See [supported providers](#supported-providers).                                                                    |
+| `service`  | String   | Yes      | n/a     | `'news'`                                                                                                            |
+| `oEmbed`   | Object   | Yes      | n/a     | See [@bbc/psammead-oembed](https://github.com/bbc/psammead/tree/latest/packages/components/psammead-oembed#oembed). |
+| `fallback` | Object   | Yes      | n/a     | See [fallback](#fallback).                                                                                          |
+| `skipLink` | Object   | Yes      | n/a     | See [skipLink](#skipLink).                                                                                          |
+| `caption`  | Object   | No       | `null`  | See [caption](#caption).                                                                                            |
+| `onRender` | Function | No       | `null`  | `() => console.log('rendered')`                                                                                     |
+
 ### AMP
 
 | Argument   | Type   | Required | Default | Example                                          |
@@ -80,7 +81,7 @@ Pass a [supported provider](#supported-providers) and valid oEmbed response. If 
 #### Example
 
 ```jsx
-import { CanonicalSocialEmbed } from '@bbc/psammead-social-embed';
+import { CanonicalSocialEmbed } from '#legacy/psammead-social-embed';
 
 <CanonicalSocialEmbed
   provider="instagram"
@@ -112,9 +113,11 @@ The component supports integration with the [react-lazyload](https://www.npmjs.c
 ```
 
 ### onRender
+
 This component takes an `onRender` prop which is invoked when the embed is fully rendered (currently only for twitter embeds), this can be used to change styling on render to help reduce layout shift.
 
 #### Example
+
 ```jsx
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
@@ -131,8 +134,7 @@ const SocialEmbedWithWrapper = ({
   skipLink,
   fallback,
   service,
-  }) => {
-
+}) => {
   const [wrapperMinHeight, setWrapperMinHeight] = useState(DEFAULT_MIN_HEIGHT);
 
   return (
@@ -161,7 +163,7 @@ Pass a [supported provider](#supported-providers). If this case cannot be met, a
 Pass a valid `id`. This refers to the unique segment of the URL, which identifies the source content. E.G. `1237210910835392512` in `https://twitter.com/MileyCyrus/status/1237210910835392512`.
 
 ```jsx
-import { AmpSocialEmbed } from '@bbc/psammead-social-embed';
+import { AmpSocialEmbed } from '#legacy/psammead-social-embed';
 
 <AmpSocialEmbed
   provider="instagram"

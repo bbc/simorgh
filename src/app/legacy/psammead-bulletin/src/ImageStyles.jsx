@@ -2,9 +2,9 @@ import styled from '@emotion/styled';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
-} from '@bbc/gel-foundations/breakpoints';
-import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
-import { grid } from '@bbc/psammead-styles/detection';
+} from '#legacy/gel-foundations/breakpoints';
+import { GEL_SPACING } from '#legacy/gel-foundations/spacings';
+import { grid } from '#legacy/psammead-styles/detection';
 
 const twoOfSixColumnsMaxWidthScaleable = `33.33%`;
 // (2 / 6) * 100 = 0.3333333333 = 33.33%

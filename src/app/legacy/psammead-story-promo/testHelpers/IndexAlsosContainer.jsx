@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { oneOfType, oneOf, arrayOf, shape, number, string } from 'prop-types';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
-import MediaIndicator from '@bbc/psammead-media-indicator';
+import { scriptPropType } from '#legacy/gel-foundations/prop-types';
+import MediaIndicator from '#legacy/psammead-media-indicator';
 import {
   IndexAlsos,
   IndexAlso,

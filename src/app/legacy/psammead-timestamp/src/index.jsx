@@ -4,11 +4,11 @@ import { node, string, func, shape, bool } from 'prop-types';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING_DBL,
-} from '@bbc/gel-foundations/spacings';
-import { getBrevier } from '@bbc/gel-foundations/typography';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
-import { C_LUNAR, C_METAL } from '@bbc/psammead-styles/colours';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+} from '#legacy/gel-foundations/spacings';
+import { getBrevier } from '#legacy/gel-foundations/typography';
+import { scriptPropType } from '#legacy/gel-foundations/prop-types';
+import { C_LUNAR, C_METAL } from '#legacy/psammead-styles/colours';
+import { getSansRegular } from '#legacy/psammead-styles/font-styles';
 
 const PADDING = `
   padding-bottom: ${GEL_SPACING_HLF};

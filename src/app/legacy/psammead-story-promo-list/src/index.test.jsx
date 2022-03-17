@@ -1,7 +1,7 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { latin } from '@bbc/gel-foundations/scripts';
-import StoryPromo, { Headline, Summary } from '@bbc/psammead-story-promo';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers';
+import { latin } from '#legacy/gel-foundations/scripts';
+import StoryPromo, { Headline, Summary } from '#legacy/psammead-story-promo';
 import { StoryPromoLi, StoryPromoLiBase, StoryPromoUl } from './index';
 
 const Image = <img src="https://foobar.com/image.png" alt="Alt text" />;

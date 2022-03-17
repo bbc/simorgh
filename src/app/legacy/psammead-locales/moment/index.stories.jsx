@@ -2,13 +2,13 @@ import React from 'react';
 import styled from '@emotion/styled';
 import moment from 'moment';
 import { storiesOf } from '@storybook/react';
-import { C_PEBBLE } from '@bbc/psammead-styles/colours';
+import { C_PEBBLE } from '#legacy/psammead-styles/colours';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
   GEL_SPACING_DBL,
-} from '@bbc/gel-foundations/spacings';
-import { GEL_FF_REITH_SANS } from '@bbc/gel-foundations/typography';
+} from '#legacy/gel-foundations/spacings';
+import { GEL_FF_REITH_SANS } from '#legacy/gel-foundations/typography';
 import notes from '../README.md';
 import './am';
 import './ar';

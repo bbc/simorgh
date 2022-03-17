@@ -1,6 +1,6 @@
 import React from 'react';
-import { latin } from '@bbc/gel-foundations/scripts';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { latin } from '#legacy/gel-foundations/scripts';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers';
 import LastUpdated from './LastUpdated';
 
 describe('MostReadCanonical - LastUpdated', () => {

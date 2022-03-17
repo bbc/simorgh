@@ -4,7 +4,7 @@ import {
   shouldMatchSnapshot,
   isNull,
   suppressPropWarnings,
-} from '@bbc/psammead-test-helpers';
+} from '#legacy/psammead-test-helpers';
 import { textBlock } from '#models/blocks';
 import VisuallyHiddenHeadlineContainer from '.';
 import blocksSingleFragment from '../Headings/testHelpers';

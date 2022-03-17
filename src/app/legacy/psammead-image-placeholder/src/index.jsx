@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { number, bool, objectOf, string } from 'prop-types';
-import { C_LUNAR, C_SHADOW } from '@bbc/psammead-styles/colours';
-import { BBC_BLOCKS, BBC_BLOCKS_DARK_MODE } from '@bbc/psammead-assets/svgs';
+import { C_LUNAR, C_SHADOW } from '#legacy/psammead-styles/colours';
+import { BBC_BLOCKS, BBC_BLOCKS_DARK_MODE } from '#legacy/psammead-assets/svgs';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/breakpoints';
 
 export { default as ImagePlaceholderAmp } from './index.amp';
 

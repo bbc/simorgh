@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from 'react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers';
 import { render } from '@testing-library/react';
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
-import ScriptLink from '@bbc/psammead-script-link';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { C_POSTBOX, C_WHITE } from '#legacy/psammead-styles/colours';
+import ScriptLink from '#legacy/psammead-script-link';
+import { latin } from '#legacy/gel-foundations/scripts';
 import Brand from '.';
 import SkipLink from './SkipLink';
 

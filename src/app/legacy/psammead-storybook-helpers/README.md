@@ -49,7 +49,7 @@ npm install @bbc/psammead-storybook-helpers --save-dev
 <!-- prettier-ignore -->
 ```jsx
 import { select } from '@storybook/addon-knobs';
-import { TEXT_VARIANTS } from '@bbc/psammead-storybook-helpers';
+import { TEXT_VARIANTS } from '#legacy/psammead-storybook-helpers';
 
 const label = 'Languages';
 const defaultValue = 'This is a caption';
@@ -143,14 +143,14 @@ The above example dismisses the use of the `addDecorator` method and decorates t
 ### buildRTLSubstories
 
 ```jsx
-import { buildRTLSubstories } from '@bbc/psammead-storybook-helpers';
+import { buildRTLSubstories } from '#legacy/psammead-storybook-helpers';
 
 // create RTL variants of all stories of a kind
 buildRTLSubstories('Components/Paragraph');
 ```
 
 ```jsx
-import { buildRTLSubstories } from '@bbc/psammead-storybook-helpers';
+import { buildRTLSubstories } from '#legacy/psammead-storybook-helpers';
 
 // create RTL variants of specific stories of a kind
 buildRTLSubstories('Components/Paragraph', {

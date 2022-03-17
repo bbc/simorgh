@@ -3,9 +3,9 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { igbo as brandSVG } from '@bbc/psammead-assets/svgs';
-import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
+} from '#legacy/psammead-styles/colours';
+import { igbo as brandSVG } from '#legacy/psammead-assets/svgs';
+import { cyrillicAndLatin } from '#legacy/gel-foundations/scripts';
 import '@bbc/psammead-locales/moment/ig';
 import '@bbc/moment-timezone-include/tz/Africa/Lagos';
 import withContext from '../../../contexts/utils/withContext';

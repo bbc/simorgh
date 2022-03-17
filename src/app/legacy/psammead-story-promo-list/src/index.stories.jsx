@@ -1,11 +1,15 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { boolean, withKnobs } from '@storybook/addon-knobs';
-import Timestamp from '@bbc/psammead-timestamp';
-import Image from '@bbc/psammead-image';
-import { latin } from '@bbc/gel-foundations/scripts';
-import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
-import Grid from '@bbc/psammead-grid';
+import Timestamp from '#legacy/psammead-timestamp';
+import Image from '#legacy/psammead-image';
+import { latin } from '#legacy/gel-foundations/scripts';
+import StoryPromo, {
+  Headline,
+  Summary,
+  Link,
+} from '#legacy/psammead-story-promo';
+import Grid from '#legacy/psammead-grid';
 import { StoryPromoLi, StoryPromoLiBase, StoryPromoUl } from './index';
 import storyPromoData from '../testHelpers/fixtureData';
 import notes from '../README.md';

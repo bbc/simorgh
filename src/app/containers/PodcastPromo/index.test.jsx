@@ -2,7 +2,7 @@ import React from 'react';
 import dissocPath from 'ramda/src/dissocPath';
 import identity from 'ramda/src/identity';
 import { render } from '@testing-library/react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers';
 
 import { ServiceContext } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';

@@ -1,28 +1,40 @@
-import { GEL_SPACING_DBL, GEL_SPACING_TRPL, GEL_SPACING_QUAD, GEL_SPACING_QUIN, GEL_SPACING_SEXT } from '@bbc/gel-foundations/spacings'; // Services with fonts that have glyphs thinner than the majority of other fonts.
+import {
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+  GEL_SPACING_QUAD,
+  GEL_SPACING_QUIN,
+  GEL_SPACING_SEXT,
+} from '#legacy/gel-foundations/spacings'; // Services with fonts that have glyphs thinner than the majority of other fonts.
 // This was mainly based on the old overrides (ie. Any group0 value < 2rem).
 
-export var mediumFontServices = ['arabic', 'bengali', 'tamil', 'telegu', 'urdu'];
+export var mediumFontServices = [
+  'arabic',
+  'bengali',
+  'tamil',
+  'telegu',
+  'urdu',
+];
 export var smallFontServices = ['persian', 'pashto']; // If numberOfItems < 10, no extra spacing needs to be accounted for.
 
 export var singleDigitDefault = function singleDigitDefault(size) {
   return {
     group0: {
       default: GEL_SPACING_TRPL,
-      small: GEL_SPACING_DBL
+      small: GEL_SPACING_DBL,
     }[size],
     group1: {
       default: GEL_SPACING_TRPL,
-      small: GEL_SPACING_DBL
+      small: GEL_SPACING_DBL,
     }[size],
     group2: {
       default: GEL_SPACING_TRPL,
-      small: GEL_SPACING_DBL
+      small: GEL_SPACING_DBL,
     }[size],
     group3: {
       default: GEL_SPACING_QUAD,
-      small: GEL_SPACING_DBL
+      small: GEL_SPACING_DBL,
     }[size],
-    group5: GEL_SPACING_QUAD
+    group5: GEL_SPACING_QUAD,
   };
 }; // If numberOfItems >= 10, extra spacing needs to be accounted for.
 
@@ -33,22 +45,22 @@ export var doubleDigitDefault = function doubleDigitDefault(size) {
     // These values are used to align the rank when a double digit exists in the column
     group0WithOneColumn: {
       default: GEL_SPACING_QUIN,
-      small: '1.75rem'
+      small: '1.75rem',
     }[size],
     group1WithOneColumn: {
       default: GEL_SPACING_QUIN,
-      small: '1.75rem'
+      small: '1.75rem',
     }[size],
     group2WithOneColumn: {
       default: GEL_SPACING_SEXT,
-      small: GEL_SPACING_QUAD
+      small: GEL_SPACING_QUAD,
     }[size],
     group3WithOneColumn: {
       default: '4rem',
-      small: GEL_SPACING_QUIN
+      small: GEL_SPACING_QUIN,
     }[size],
     group3WithTwoColumns: '4rem',
-    group5WithFiveColumns: '4rem'
+    group5WithFiveColumns: '4rem',
   };
 };
 export var singleDigitMedium = {
@@ -56,7 +68,7 @@ export var singleDigitMedium = {
   group1: GEL_SPACING_DBL,
   group2: GEL_SPACING_DBL,
   group3: GEL_SPACING_TRPL,
-  group5: GEL_SPACING_TRPL
+  group5: GEL_SPACING_TRPL,
 };
 export var doubleDigitMedium = function doubleDigitMedium(size) {
   return {
@@ -65,22 +77,22 @@ export var doubleDigitMedium = function doubleDigitMedium(size) {
     // These values are used to align the rank when a double digit exists in the column
     group0WithOneColumn: {
       default: GEL_SPACING_QUAD,
-      small: GEL_SPACING_TRPL
+      small: GEL_SPACING_TRPL,
     }[size],
     group1WithOneColumn: {
       default: GEL_SPACING_QUAD,
-      small: GEL_SPACING_TRPL
+      small: GEL_SPACING_TRPL,
     }[size],
     group2WithOneColumn: {
       default: GEL_SPACING_QUAD,
-      small: GEL_SPACING_TRPL
+      small: GEL_SPACING_TRPL,
     }[size],
     group3WithOneColumn: {
       default: GEL_SPACING_SEXT,
-      small: GEL_SPACING_TRPL
+      small: GEL_SPACING_TRPL,
     }[size],
     group3WithTwoColumns: GEL_SPACING_SEXT,
-    group5WithFiveColumns: GEL_SPACING_SEXT
+    group5WithFiveColumns: GEL_SPACING_SEXT,
   };
 };
 export var singleDigitSmall = {
@@ -88,7 +100,7 @@ export var singleDigitSmall = {
   group1: GEL_SPACING_DBL,
   group2: GEL_SPACING_DBL,
   group3: GEL_SPACING_TRPL,
-  group5: GEL_SPACING_TRPL
+  group5: GEL_SPACING_TRPL,
 };
 export var doubleDigitSmall = {
   group3: GEL_SPACING_TRPL,
@@ -99,5 +111,5 @@ export var doubleDigitSmall = {
   group2WithOneColumn: GEL_SPACING_TRPL,
   group3WithOneColumn: GEL_SPACING_QUAD,
   group3WithTwoColumns: GEL_SPACING_QUAD,
-  group5WithFiveColumns: GEL_SPACING_QUAD
+  group5WithFiveColumns: GEL_SPACING_QUAD,
 };

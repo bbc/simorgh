@@ -3,7 +3,7 @@ import {
   shouldMatchSnapshot,
   isNull,
   suppressPropWarnings,
-} from '@bbc/psammead-test-helpers';
+} from '#legacy/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import Paragraph from '.';
 

@@ -2,7 +2,7 @@ import React from 'react';
 import {
   shouldMatchSnapshot,
   suppressPropWarnings,
-} from '@bbc/psammead-test-helpers';
+} from '#legacy/psammead-test-helpers';
 import {
   articleDataNews,
   articleDataPersian,

@@ -59,12 +59,12 @@ When using `Brand` in the header, you should ensure that `borderBottom` prop is 
 `ScriptLink` component should be passed to `scriptLink` only when linking to a service variant.
 
 ```jsx
-import Brand from '@bbc/psammead-brand';
-import SkipLink from '@bbc/psammead-brand/skip-link';
-import { igbo } from '@bbc/psammead-assets/svgs';
-import ScriptLink from '@bbc/psammead-script-link';
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import Brand from '#legacy/psammead-brand';
+import SkipLink from '#legacy/psammead-brand/skip-link';
+import { igbo } from '#legacy/psammead-assets/svgs';
+import ScriptLink from '#legacy/psammead-script-link';
+import { C_POSTBOX, C_WHITE } from '#legacy/psammead-styles/colours';
+import { latin } from '#legacy/gel-foundations/scripts';
 
 const scriptLink = (
   <ScriptLink

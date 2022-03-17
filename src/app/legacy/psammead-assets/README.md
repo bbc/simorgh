@@ -12,12 +12,13 @@ This package provides a collection of common assets that are likely to be requir
 ```jsx
 npm install @bbc/psammead-assets --save
 ```
+
 ## Usage
 
 ```jsx
-import { BBC_BLOCKS, news } from '@bbc/psammead-assets/svgs';
+import { BBC_BLOCKS, news } from '#legacy/psammead-assets/svgs';
 
-import { AMP_SCRIPT } from '@bbc/psammead-assets/amp-boilerplate';
+import { AMP_SCRIPT } from '#legacy/psammead-assets/amp-boilerplate';
 ```
 
 ## Service SVGs
@@ -39,7 +40,9 @@ The width of your SVG can be calculated using your desired height multiplied by 
 
 ```jsx
 const WrappingContainer = () => (
-  <svg viewBox={`0 0 ${news.viewbox.width} ${news.viewbox.height}`}>{news.group}</svg>
+  <svg viewBox={`0 0 ${news.viewbox.width} ${news.viewbox.height}`}>
+    {news.group}
+  </svg>
 );
 ```
 
@@ -48,10 +51,14 @@ const WrappingContainer = () => (
 Core icons is an object containing styled SVG icons from GEL Iconography Core. By default Core icons are sized to work well alongside text from the `GEL BodyCopy` typography group.
 
 ### Usage
-```jsx
-import { coreIcons } from '@bbc/psammead-assets/svgs';
 
-<p>{coreIcons.info} Did you know, in Switzerland it's illegal to own just one guinea pig?</p>
+```jsx
+import { coreIcons } from '#legacy/psammead-assets/svgs';
+
+<p>
+  {coreIcons.info} Did you know, in Switzerland it's illegal to own just one
+  guinea pig?
+</p>;
 ```
 
 ## Media Icons SVGs
@@ -61,12 +68,12 @@ Media icons is an object containing styled SVG icons for video, audio, photogall
 ### Usage
 
 ```jsx
-import { mediaIcons } from '@bbc/psammead-assets/svgs';
+import { mediaIcons } from '#legacy/psammead-assets/svgs';
 
 <span>
   {mediaIcons.audio}
-  {duration && datetime && (<time dateTime={datetime}>{duration}</time>)}
-</span>
+  {duration && datetime && <time dateTime={datetime}>{duration}</time>}
+</span>;
 ```
 
 ## Navigation Icons SVGs
@@ -76,11 +83,9 @@ Navigation icons is an object containing styled SVG icons for hamburger and cros
 ### Usage
 
 ```jsx
-import { navigationIcons } from '@bbc/psammead-assets/svgs';
+import { navigationIcons } from '#legacy/psammead-assets/svgs';
 
-<span>
-  {navigationIcons.cross}
-</span>
+<span>{navigationIcons.cross}</span>;
 ```
 
 ## Contributing

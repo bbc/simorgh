@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import Navigation from '@bbc/psammead-navigation';
+import Navigation from '#legacy/psammead-navigation';
 import { node, string, shape } from 'prop-types';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
-import { ScrollableNavigation } from '@bbc/psammead-navigation/scrollable';
+import { scriptPropType } from '#legacy/gel-foundations/prop-types';
+import { ScrollableNavigation } from '#legacy/psammead-navigation/scrollable';
 import {
   CanonicalDropdown,
   CanonicalMenuButton,
-} from '@bbc/psammead-navigation/dropdown';
-import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/dist/breakpoints';
+} from '#legacy/psammead-navigation/dropdown';
+import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '#legacy/gel-foundations/dist/breakpoints';
 import useMediaQuery from '#hooks/useMediaQuery';
 
 const ScrollableWrapper = styled.div`

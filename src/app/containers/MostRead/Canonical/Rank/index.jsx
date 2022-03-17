@@ -1,15 +1,15 @@
 import React from 'react';
 import { shape, string, oneOf, number } from 'prop-types';
 import styled from '@emotion/styled';
-import { getFoolscap, getTrafalgar } from '@bbc/gel-foundations/typography';
+import { getFoolscap, getTrafalgar } from '#legacy/gel-foundations/typography';
 import {
   Burmese,
   Bengali,
   EasternArabic,
   Nepali,
   WesternArabic,
-} from '@bbc/psammead-locales/numerals';
-import { GEL_SPACING_HLF } from '@bbc/gel-foundations/spacings';
+} from '#legacy/psammead-locales/numerals';
+import { GEL_SPACING_HLF } from '#legacy/gel-foundations/spacings';
 import {
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -18,11 +18,11 @@ import {
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
-} from '@bbc/gel-foundations/breakpoints';
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
-import { grid } from '@bbc/psammead-styles/detection';
-import { getSerifLight } from '@bbc/psammead-styles/font-styles';
+} from '#legacy/gel-foundations/breakpoints';
+import { C_POSTBOX } from '#legacy/psammead-styles/colours';
+import { scriptPropType } from '#legacy/gel-foundations/prop-types';
+import { grid } from '#legacy/psammead-styles/detection';
+import { getSerifLight } from '#legacy/psammead-styles/font-styles';
 import {
   doubleDigitDefault,
   doubleDigitMedium,

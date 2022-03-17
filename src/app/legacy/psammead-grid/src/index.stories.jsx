@@ -4,8 +4,12 @@ import { withKnobs } from '@storybook/addon-knobs';
 import {
   withServicesKnob,
   buildRTLSubstories,
-} from '@bbc/psammead-storybook-helpers';
-import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
+} from '#legacy/psammead-storybook-helpers';
+import StoryPromo, {
+  Headline,
+  Summary,
+  Link,
+} from '#legacy/psammead-story-promo';
 import Grid from '.';
 import {
   ExampleImage,

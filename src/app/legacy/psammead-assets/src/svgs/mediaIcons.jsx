@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { C_EBON } from '@bbc/psammead-styles/colours';
+import { C_EBON } from '#legacy/psammead-styles/colours';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING_DBL,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/spacings';
 
 const defaultAttrs = {
   focusable: 'false',

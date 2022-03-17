@@ -79,7 +79,10 @@ moment.locale('ig');
 ### Numerals
 
 ```jsx
-import { Bengali, makeNumeralTranslator } from '@bbc/psammead-locales/numerals';
+import {
+  Bengali,
+  makeNumeralTranslator,
+} from '#legacy/psammead-locales/numerals';
 
 const translateNumerals = makeNumeralTranslator(Bengali);
 const result = translateNumerals(someInput); // returns someInput with numbers translated to Bengali

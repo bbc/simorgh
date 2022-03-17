@@ -4,10 +4,10 @@ import { shape, string, node } from 'prop-types';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
-} from '@bbc/gel-foundations/dist/spacings';
-import { C_EBON } from '@bbc/psammead-styles/colours';
-import { getSansBold } from '@bbc/psammead-styles/font-styles';
-import { GEL_PICA } from '@bbc/gel-foundations/typography';
+} from '#legacy/gel-foundations/dist/spacings';
+import { C_EBON } from '#legacy/psammead-styles/colours';
+import { getSansBold } from '#legacy/psammead-styles/font-styles';
+import { GEL_PICA } from '#legacy/gel-foundations/typography';
 import { Helmet } from 'react-helmet';
 import { GridItemMedium } from '#app/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
