@@ -4,6 +4,7 @@ The `useClickTracker` hook handles:
 
 - Tracking when an element has been clicked
 - Sending the event to ATI
+- Sending the event to Optimizely (If applicable)
 
 `useClickTracker` must be used in combination with [`useViewTracker`](https://github.com/bbc/simorgh/blob/latest/src/app/hooks/useViewTracker/index.jsx) so ATI can calculate the view/click ratio of an element.
 

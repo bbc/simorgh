@@ -2,13 +2,14 @@
 
 The `useViewTracker` hook handles:
 
-- tracking when an element is in view
-- sending the event to ATI
+- Tracking when an element is in view
+- Sending the event to ATI
+- Sending the event to Optimizely (If applicable)
 
 A view event is triggered when:
 
 - 50% of the element is in the viewport for more than 1 second
-- only once per element per page view
+- Only once per element per page view
 
 `useViewTracker` returns a ref that can be assigned to the DOM element you want to monitor for a view event. When a view event is triggered then the hook will send the event data to ATI.
 
