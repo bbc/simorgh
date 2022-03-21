@@ -287,9 +287,11 @@ export const testsThatFollowSmokeTestConfig = ({
                 blackout: ['[data-e2e="media-player"]'],
               });
             } else {
-              cy.log('Snapshot skipped in headed mode');
+              cy.matchImageSnapshot();
             }
           });
+        } else {
+          cy.log('Snapshot skipped in headed mode');
         }
       });
     });

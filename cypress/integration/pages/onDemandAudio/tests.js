@@ -48,6 +48,7 @@ export default ({ service, pageType, variant, isAmp }) => {
         if (Cypress.env('APP_ENV') === 'local' && Cypress.browser.isHeadless) {
           cy.document().its('fonts.status').should('equal', 'loaded');
           // eslint-disable-next-line cypress/no-unnecessary-waiting
+          // The wait is for the player to load and fade in
           cy.wait(4000);
           cy.matchImageSnapshot({ capture: 'fullPage' });
         } else {

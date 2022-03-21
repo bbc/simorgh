@@ -38,6 +38,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
         if (Cypress.env('APP_ENV') === 'local' && Cypress.browser.isHeadless) {
           cy.document().its('fonts.status').should('equal', 'loaded');
 
+          // The wait is for the player to load and fade in
           // eslint-disable-next-line cypress/no-unnecessary-waiting
           cy.wait(4000);
           cy.matchImageSnapshot();

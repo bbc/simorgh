@@ -10,15 +10,21 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
     describe(`Visual comparison tests for ${service} ${pageType}`, () => {
       it('Media Asset Page', () => {
         if (Cypress.env('APP_ENV') === 'local' && Cypress.browser.isHeadless) {
-          cy.setCookie('ckns_privacy', 'july2019');
-          cy.setCookie('ckns_policy', '111');
-          cy.setCookie('ckns_explicit', '1');
-          cy.reload();
-          cy.scrollTo('bottom', { duration: 8000 });
+          cy.url().then(url => {
+            if (!url.includes('.amp')) {
+              cy.setCookie('ckns_privacy', 'july2019');
+              cy.setCookie('ckns_policy', '111');
+              cy.setCookie('ckns_explicit', '1');
+              cy.reload();
+              cy.scrollTo('bottom', { duration: 8000 });
 
-          cy.document().its('fonts.status').should('equal', 'loaded');
+              cy.document().its('fonts.status').should('equal', 'loaded');
 
-          cy.matchImageSnapshot({ capture: 'fullPage' });
+              cy.matchImageSnapshot({ capture: 'fullPage' });
+            } else {
+              cy.matchImageSnapshot();
+            }
+          });
         } else {
           cy.log('Snapshot skipped in headed mode');
         }
