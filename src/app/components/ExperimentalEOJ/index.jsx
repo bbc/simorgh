@@ -61,7 +61,7 @@ const LabelComponent = styled.strong`
 `;
 
 const getEventTrackingData = (optimizely, blockGroupIndex) => ({
-  componentName: `edoj${blockGroupIndex}`,
+  componentName: `edoj${blockGroupIndex || ''}`,
   format: 'CHD=edoj',
   ...(optimizely && { optimizely }),
 });

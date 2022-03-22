@@ -98,14 +98,14 @@ describe('Optimizely Experiments', () => {
         const secondRecommendationBlockSkipLink = links[3];
 
         expect(firstRecommendationBlockSkipLink.getAttribute('href')).toEqual(
-          '#end-of-recommendations',
+          '#end-of-recommendations-1',
         );
         expect(firstRecommendationBlockSkipLink.textContent).toEqual(
           'छोड़कर ये भी पढ़ें आगे बढ़ें',
         );
 
         expect(secondRecommendationBlockSkipLink.getAttribute('href')).toEqual(
-          '#end-of-recommendations',
+          '#end-of-recommendations-2',
         );
         expect(secondRecommendationBlockSkipLink.textContent).toEqual(
           'छोड़कर कुछ और जानिए आगे बढ़ें',
@@ -325,7 +325,7 @@ describe('Optimizely Experiments', () => {
         const firstRecommendationBlockSkipLink = links[0];
 
         expect(firstRecommendationBlockSkipLink.getAttribute('href')).toEqual(
-          '#end-of-recommendations',
+          '#end-of-recommendations-1',
         );
         expect(firstRecommendationBlockSkipLink.textContent).toEqual(
           'छोड़कर ये भी पढ़ें आगे बढ़ें',

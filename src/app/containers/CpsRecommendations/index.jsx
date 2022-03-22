@@ -81,7 +81,7 @@ const CpsRecommendations = ({
 
   const isSinglePromo = items.length === 1;
 
-  const endTextId = 'end-of-recommendations';
+  const endTextId = `end-of-recommendations${part ? `-${part}` : ''}`;
 
   const skipLink = {
     endTextId,
