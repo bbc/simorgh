@@ -184,6 +184,7 @@ exports[`ScrollablePromo it should match a11y snapshot for list 1`] = `
 }
 
 .emotion-8 {
+  position: relative;
   background-color: #FFFFFF;
   padding: 1rem;
   margin-bottom: 1.5rem;
@@ -208,6 +209,11 @@ exports[`ScrollablePromo it should match a11y snapshot for list 1`] = `
 }
 
 .emotion-10 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -222,6 +228,28 @@ exports[`ScrollablePromo it should match a11y snapshot for list 1`] = `
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   color: #202224;
+}
+
+.emotion-10:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.emotion-10:hover,
+.emotion-10:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-10:visited {
+  color: #6E6E73;
 }
 
 .emotion-10:hover,
@@ -434,6 +462,7 @@ exports[`ScrollablePromo it should match a11y snapshot for single card 1`] = `
 }
 
 .emotion-6 {
+  position: relative;
   background-color: #FFFFFF;
   padding: 1rem;
   margin-bottom: 1.5rem;
@@ -458,6 +487,11 @@ exports[`ScrollablePromo it should match a11y snapshot for single card 1`] = `
 }
 
 .emotion-8 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -472,6 +506,28 @@ exports[`ScrollablePromo it should match a11y snapshot for single card 1`] = `
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   color: #202224;
+}
+
+.emotion-8:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.emotion-8:hover,
+.emotion-8:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-8:visited {
+  color: #6E6E73;
 }
 
 .emotion-8:hover,

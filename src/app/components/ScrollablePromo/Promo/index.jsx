@@ -6,6 +6,7 @@ import pathOr from 'ramda/src/pathOr';
 import { getPica } from '@bbc/gel-foundations/typography';
 import { getSerifBold } from '@bbc/psammead-styles/font-styles';
 import { C_GREY_6, C_GREY_8, C_WHITE } from '@bbc/psammead-styles/colours';
+import { Link } from '@bbc/psammead-story-promo';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -22,7 +23,7 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import PromoTimestamp from '#components/Promo/timestamp';
 
-const Link = styled.a`
+const StyledLink = styled(Link)`
   ${({ script }) => script && getPica(script)}
   ${({ service }) => service && getSerifBold(service)}
   width: 100%;
@@ -48,6 +49,7 @@ const Link = styled.a`
 `;
 
 const PromoBox = styled.div`
+  position: relative;
   background-color: ${C_WHITE};
   padding: ${GEL_SPACING_DBL};
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -63,6 +65,7 @@ const PromoBox = styled.div`
 `;
 
 const OperaPromoBox = styled.div`
+  position: relative;
   background-color: ${C_WHITE};
   padding: ${GEL_SPACING_DBL};
   margin-bottom: ${GEL_SPACING_DBL};
@@ -107,9 +110,14 @@ const Promo = ({ block, onClick }) => {
 
   return (
     <WrapperPromoBox>
-      <Link href={href} service={service} script={script} onClick={onClick}>
+      <StyledLink
+        href={href}
+        service={service}
+        script={script}
+        onClick={onClick}
+      >
         {title}
-      </Link>
+      </StyledLink>
       {timestamp && (
         <TimeStamp serviceDatetimeLocale={serviceDatetimeLocale}>
           {timestamp}
