@@ -12,6 +12,7 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import * as trackingToggle from '#hooks/useTrackingToggle';
+import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import pidginData from './fixtureData/tori-51745682.json';
 import useClickTrackerHandler from '.';
 
@@ -318,7 +319,7 @@ describe('Click tracking', () => {
     const mockAttributes = { foo: 'bar' };
     const mockOverrideAttributes = {
       ...mockAttributes,
-      [`clicked_${defaultProps.componentName}`]: true,
+      [`clicked_${OPTIMIZELY_CONFIG.viewClickAttributeId}`]: true,
     };
     const mockOptimizely = {
       optimizely: {
