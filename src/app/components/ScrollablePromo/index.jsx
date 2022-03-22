@@ -37,7 +37,7 @@ const ScrollablePromo = ({ blocks, blockGroupIndex }) => {
   const viewRef = useViewTracker(eventTrackingData);
   const handleClickTracking = useClickTrackerHandler(eventTrackingData);
 
-  if (isEmpty(blocks)) {
+  if (!blocks || isEmpty(blocks)) {
     return null;
   }
 
