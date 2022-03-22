@@ -72,8 +72,7 @@ const externalLinks = {
       },
       {
         linkText: 'Apple',
-        linkUrl:
-          'https://podcasts.apple.com/us/podcast/بین-سطور/id1615070108',
+        linkUrl: 'https://podcasts.apple.com/us/podcast/بین-سطور/id1615070108',
       },
       {
         linkText: 'Castbox',
