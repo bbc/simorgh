@@ -29,7 +29,6 @@ const TopicPage = ({ pageData }) => {
 
   return (
     <Wrapper>
-      <TopicGrid promos={pageData.promos} />
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
