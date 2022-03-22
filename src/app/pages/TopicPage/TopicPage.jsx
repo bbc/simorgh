@@ -27,24 +27,26 @@ const TopicPage = ({ pageData }) => {
   }));
 
   return (
-    <Wrapper>
-      <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics data={pageData} />
-      <MetadataContainer
-        title={title}
-        lang={lang}
-        description={description}
-        openGraphType="website"
-      />
-      <LinkedData
-        type="CollectionPage"
-        seoTitle={title}
-        headline={title}
-        entities={promoEntities}
-      />
-      <TopicTitle>{title}</TopicTitle>
-      <TopicGrid promos={promos} />
-    </Wrapper>
+    <main role="main">
+      <Wrapper>
+        <ATIAnalytics data={pageData} />
+        <ChartbeatAnalytics data={pageData} />
+        <MetadataContainer
+          title={title}
+          lang={lang}
+          description={description}
+          openGraphType="website"
+        />
+        <LinkedData
+          type="CollectionPage"
+          seoTitle={title}
+          headline={title}
+          entities={promoEntities}
+        />
+        <TopicTitle>{title}</TopicTitle>
+        <TopicGrid promos={promos} />
+      </Wrapper>
+    </main>
   );
 };
 
