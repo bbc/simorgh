@@ -28,11 +28,6 @@ const TopicList = styled.ul`
   margin: 0;
 `;
 
-const ListItem = styled.li`
-  vertical-align: top;
-  display: inline-block;
-`;
-
 const Item = styled.div`
   vertical-align: top;
   display: inline-block;
@@ -71,11 +66,9 @@ const TopicGrid = ({ promos }) => {
       {hasMultiplePromos ? (
         <TopicList role="list">
           {promos.map(promo => (
-            <ListItem key={promo.id} dir={dir}>
-              <Item key={promo.id} dir={dir}>
-                <TopicPromo {...promo} />
-              </Item>
-            </ListItem>
+            <Item key={promo.id} dir={dir} as="li">
+              <TopicPromo {...promo} />
+            </Item>
           ))}
         </TopicList>
       ) : (
