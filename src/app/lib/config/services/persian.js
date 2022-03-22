@@ -66,15 +66,15 @@ export const service = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'پادکست',
-      brandTitle: 'رادیو فارسی بی‌بی‌سی',
-      brandDescription: 'پادکست چشم‌انداز بامدادی رادیو بی‌بی‌سی',
+      brandTitle: 'شیرازه',
+      brandDescription: '«شیرازه» پادکستی درباره کتاب‌ها است که سام فرزانه تهیه می‌کند',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0bq9rkk.jpg',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0bw81l8.jpg',
         alt: 'رادیو فارسی بی‌بی‌سی',
       },
       linkLabel: {
-        text: 'برنامه ها',
-        href: 'https://www.bbc.com/persian/podcasts/p02pc9mc',
+        text: 'پادکست',
+        href: 'https://www.bbc.com/persian/podcasts/p0bw80rj',
       },
       skipLink: {
         text: 'از %title% رد شوید و به خواندن ادامه دهید',
