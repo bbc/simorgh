@@ -52,4 +52,28 @@ describe('ArticleRelatedContent', () => {
   it('should convert optimo related content blocks to the story promo schema', () => {
     expect(buildStoryPromos(optimoRelatedContent)).toEqual(storyPromoContent);
   });
+
+  it('should add timestamp and update headingTag in the story promo schema', () => {
+    const optimoData = optimoRelatedContent;
+    const timestamp = 1622753625680;
+
+    optimoData[0].model.blocks.push({
+      type: 'aresLink',
+      model: {
+        blocks: [
+          {
+            type: 'optimoLinkMetadata',
+            model: {
+              timestamp,
+            },
+          },
+        ],
+      },
+    });
+
+    const result = buildStoryPromos(optimoData);
+
+    expect(result[0].headingTag).toEqual('h3');
+    expect(result[0].timestamp).toEqual(timestamp);
+  });
 });

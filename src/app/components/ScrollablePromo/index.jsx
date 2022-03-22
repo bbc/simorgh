@@ -1,10 +1,16 @@
 import React, { useContext } from 'react';
 import { arrayOf, shape, string, oneOfType, object, number } from 'prop-types';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+
+import { getDoublePica } from '@bbc/gel-foundations/typography';
+import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+import { C_SHADOW } from '@bbc/psammead-styles/colours';
 import styled from '@emotion/styled';
+import path from 'ramda/src/path';
 import isEmpty from 'ramda/src/isEmpty';
 import tail from 'ramda/src/tail';
 import {
+  GEL_GROUP_0_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
@@ -26,8 +32,29 @@ const PromoWrapper = styled.div`
   }
 `;
 
+const LabelComponent = styled.strong`
+  display: block;
+  ${({ script }) => script && getDoublePica(script)};
+  ${({ service }) => getSansRegular(service)}
+  margin-bottom: ${GEL_SPACING_DBL};
+  color: ${C_SHADOW};
+
+  ${({ dir }) =>
+    `
+    @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}){
+      margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
+    }
+    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}){
+      margin-${dir === 'ltr' ? `left` : `right`}: ${GEL_SPACING_DBL};  
+    }
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}){
+        margin-${dir === 'ltr' ? `left` : `right`}: 0;
+    }
+`}
+`;
+
 const ScrollablePromo = ({ blocks, blockGroupIndex }) => {
-  const { dir } = useContext(ServiceContext);
+  const { script, service, dir } = useContext(ServiceContext);
 
   const eventTrackingData = {
     componentName: `edoj${blockGroupIndex}`,
@@ -41,12 +68,33 @@ const ScrollablePromo = ({ blocks, blockGroupIndex }) => {
     return null;
   }
 
+  const titleBlock =
+    blocks[0].type === 'title' &&
+    path(
+      ['0', 'model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'text'],
+      blocks,
+    );
+
   const blocksWithoutTitle = blocks[0].type === 'title' ? tail(blocks) : blocks;
 
   const isSingleItem = blocksWithoutTitle.length === 1;
 
+  const titleId = 'eoj-recommendations-heading';
+
   return (
     <GridItemMediumNoMargin>
+      {titleBlock && (
+        <LabelComponent
+          id={titleId}
+          data-testid={titleId}
+          script={script}
+          service={service}
+          dir={dir}
+        >
+          {titleBlock}
+        </LabelComponent>
+      )}
+
       {isSingleItem ? (
         <PromoWrapper dir={dir} ref={viewRef}>
           <Promo block={blocksWithoutTitle[0]} onClick={handleClickTracking} />
