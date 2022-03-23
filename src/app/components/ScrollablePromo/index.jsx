@@ -69,7 +69,7 @@ const ScrollablePromo = ({ blocks, blockGroupIndex }) => {
     return null;
   }
 
-  const titleBlock =
+  const title =
     blocks[0].type === 'title' &&
     path(
       ['0', 'model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'text'],
@@ -83,8 +83,8 @@ const ScrollablePromo = ({ blocks, blockGroupIndex }) => {
   const a11yAttributes = {
     as: 'section',
     role: 'region',
-    ...(titleBlock
-      ? { 'aria-labelledby': titleBlock }
+    ...(title
+      ? { 'aria-labelledby': title }
       : {
           'aria-label': pathOr(
             'Related Content',
@@ -96,15 +96,15 @@ const ScrollablePromo = ({ blocks, blockGroupIndex }) => {
 
   return (
     <GridItemMediumNoMargin {...a11yAttributes}>
-      {titleBlock && (
+      {title && (
         <LabelComponent
-          id={titleBlock}
+          id={title}
           data-testid="eoj-recommendations-heading"
           script={script}
           service={service}
           dir={dir}
         >
-          {titleBlock}
+          {title}
         </LabelComponent>
       )}
 
