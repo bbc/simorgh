@@ -53,6 +53,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
           cy.get('[data-e2e=story-promo]').first().should('be.visible');
         });
       });
+      // will unskip this at some point.
       it.skip('should render podcast promo if in json and should navigate to correct podcast page', () => {
         cy.log(service);
         if (Cypress.env('APP_ENV') !== 'local') {
