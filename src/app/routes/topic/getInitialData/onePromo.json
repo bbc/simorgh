@@ -1,0 +1,19 @@
+{
+   "data":{
+      "title":"Donald Trump",
+      "description":"",
+      "summaries":[
+         {
+            "title":"See fotos of wen Pro-Trump protesters burst enta US Capitol Hill building",
+            "type":"article",
+            "firstPublished":"2021-01-07T08:12:14.000Z",
+            "link":"https://www.bbc.com/pidgin/tori-55570969",
+            "imageUrl":"https://ichef.bbci.co.uk/news/{width}/cpsprodpb/0B15/production/_116373820_gettyimages-1294927821.jpg",
+            "imageAlt":"One protester carry flag wey dem write \"Trump is my president\"",
+            "id":"0fbe688b-e1b9-440a-9752-2a6edb2b2f0a"
+         }
+      ],
+      "activePage":2,
+      "pageCount":6
+   }
+}
