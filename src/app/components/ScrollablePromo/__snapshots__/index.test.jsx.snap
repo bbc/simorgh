@@ -263,9 +263,11 @@ exports[`ScrollablePromo it should match a11y snapshot for list 1`] = `
 }
 
 <div>
-  <div
+  <section
+    aria-label="Show all links (no images)"
     class="emotion-0 emotion-1"
     dir="ltr"
+    role="region"
   >
     <strong
       class="emotion-2 emotion-3"
@@ -321,7 +323,7 @@ exports[`ScrollablePromo it should match a11y snapshot for list 1`] = `
         </div>
       </li>
     </ul>
-  </div>
+  </section>
 </div>
 `;
 
@@ -541,9 +543,11 @@ exports[`ScrollablePromo it should match a11y snapshot for single card 1`] = `
 }
 
 <div>
-  <div
+  <section
+    aria-label="Single link"
     class="emotion-0 emotion-1"
     dir="ltr"
+    role="region"
   >
     <strong
       class="emotion-2 emotion-3"
@@ -566,6 +570,6 @@ exports[`ScrollablePromo it should match a11y snapshot for single card 1`] = `
         </a>
       </div>
     </div>
-  </div>
+  </section>
 </div>
 `;

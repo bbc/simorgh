@@ -7,6 +7,7 @@ import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { C_SHADOW } from '@bbc/psammead-styles/colours';
 import styled from '@emotion/styled';
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import isEmpty from 'ramda/src/isEmpty';
 import tail from 'ramda/src/tail';
 import {
@@ -54,7 +55,7 @@ const LabelComponent = styled.strong`
 `;
 
 const ScrollablePromo = ({ blocks, blockGroupIndex }) => {
-  const { script, service, dir } = useContext(ServiceContext);
+  const { script, service, dir, translations } = useContext(ServiceContext);
 
   const eventTrackingData = {
     componentName: `edoj${blockGroupIndex}`,
@@ -81,8 +82,17 @@ const ScrollablePromo = ({ blocks, blockGroupIndex }) => {
 
   const titleId = 'eoj-recommendations-heading';
 
+  const ariaLabel =
+    titleBlock || pathOr('Related Content', ['relatedContent'], translations);
+
+  const a11yAttributes = {
+    as: 'section',
+    role: 'region',
+    'aria-label': ariaLabel,
+  };
+
   return (
-    <GridItemMediumNoMargin>
+    <GridItemMediumNoMargin {...a11yAttributes}>
       {titleBlock && (
         <LabelComponent
           id={titleId}
