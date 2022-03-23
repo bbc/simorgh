@@ -29,19 +29,18 @@ export default ({ service, pageType, variant, isAmp }) => {
             const embedUrl = getEmbedUrl({ body: jsonData, language, isAmp });
             const isBrandPage = isBrand(jsonData);
 
-            cy.get('iframe').then(iframe => {
-              // This variable is unused, but printing it out to help with debugging
-              const iframeURL = isBrandPage ? iframe.prop('src') : embedUrl;
-              cy.log(`iframeURL ${iframeURL}`);
+          cy.get('iframe').then(iframe => {
+            // This variable is unused, but printing it out to help with debugging
+            const iframeURL = isBrandPage ? iframe.prop('src') : embedUrl;
+            cy.log(`iframeURL ${iframeURL}`);
 
-              cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
-              cy.testResponseCodeAndTypeRetry({
-                // embedUrl may be relative - making it absolute to test the response
-                path: embedUrl.replace(/^\//, `${envConfig.baseUrl}/`),
-                responseCode: 200,
-                type: 'text/html',
-                allowFallback: true,
-              });
+            cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
+            cy.testResponseCodeAndTypeRetry({
+              // embedUrl may be relative - making it absolute to test the response
+              path: embedUrl.replace(/^\//, `${envConfig.baseUrl}/`),
+              responseCode: 200,
+              type: 'text/html',
+              allowFallback: true,
             });
           });
         } else {

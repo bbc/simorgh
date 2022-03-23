@@ -35,12 +35,14 @@ import MostReadContainer from '#containers/MostRead';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import OptimizelyPageViewTracking from '#containers/OptimizelyPageViewTracking';
+import OptimizelyArticleCompleteTracking from '#containers/OptimizelyArticleCompleteTracking';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import CpsTable from '#containers/CpsTable';
 import Byline from '#containers/Byline';
 import CpsSocialEmbedContainer from '#containers/SocialEmbed/Cps';
 import CpsRecommendations from '#containers/CpsRecommendations';
+import ExperimentalEOJ from '#app/components/ExperimentalEOJ';
 import { InlinePodcastPromo } from '#containers/PodcastPromo';
 
 import {
@@ -57,6 +59,7 @@ import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
+import SplitRecommendations from '#containers/CpsRecommendations/SplitRecommendations';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 
@@ -208,8 +211,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
     podcastPromo: podcastPromoEnabled && InlinePodcastPromo,
+    // OPTIMIZELY: 003_hindi_experiment_feature.
     experimentBlock: props => {
-      const { showForVariation, part } = props;
+      const { showForVariation } = props;
 
       return (
         <OptimizelyExperiment experiment={OPTIMIZELY_CONFIG.experimentId}>
@@ -233,19 +237,18 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
               showForVariation === 'variation_1' &&
               variation === 'variation_1'
             ) {
-              if (part === 1) {
-                return <div>Recs with 2 items, first 2 recs</div>;
-              }
-              if (part === 2) {
-                return <div>Recs with 2 items, last 2 recs</div>;
-              }
+              return (
+                <SplitRecommendations {...props} items={recommendationsData} />
+              );
             }
 
             if (
               showForVariation === 'variation_3' &&
               variation === 'variation_3'
             ) {
-              return <div>scrolling recs</div>;
+              return (
+                <ExperimentalEOJ {...props} blocks={recommendationsData} />
+              );
             }
 
             return null;
@@ -384,6 +387,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         >
           <main role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+            <OptimizelyArticleCompleteTracking />
           </main>
 
           {showRelatedTopics && topics && (
