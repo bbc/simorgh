@@ -176,4 +176,8 @@ describe('ScrollablePromo', () => {
     'it should match a11y snapshot for list',
     <ScrollablePromoWithContext blocks={threeLinks} />,
   );
+  shouldMatchSnapshot(
+    'it should match a11y snapshot for list with no title',
+    <ScrollablePromoWithContext blocks={oneLinkWithNoTitle} />,
+  );
 });

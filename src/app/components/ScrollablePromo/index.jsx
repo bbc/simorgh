@@ -80,23 +80,26 @@ const ScrollablePromo = ({ blocks, blockGroupIndex }) => {
 
   const isSingleItem = blocksWithoutTitle.length === 1;
 
-  const titleId = 'eoj-recommendations-heading';
-
-  const ariaLabel =
-    titleBlock || pathOr('Related Content', ['relatedContent'], translations);
-
   const a11yAttributes = {
     as: 'section',
     role: 'region',
-    'aria-label': ariaLabel,
+    ...(titleBlock
+      ? { 'aria-labelledby': titleBlock }
+      : {
+          'aria-label': pathOr(
+            'Related Content',
+            ['relatedContent'],
+            translations,
+          ),
+        }),
   };
 
   return (
     <GridItemMediumNoMargin {...a11yAttributes}>
       {titleBlock && (
         <LabelComponent
-          id={titleId}
-          data-testid={titleId}
+          id={titleBlock}
+          data-testid="eoj-recommendations-heading"
           script={script}
           service={service}
           dir={dir}
