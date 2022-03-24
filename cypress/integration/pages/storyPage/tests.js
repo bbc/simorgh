@@ -66,10 +66,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
           cy.log('Test is only for /news/technology-60561162.amp');
         }
       });
-<<<<<<< HEAD
-=======
 
->>>>>>> 55110bb0c3fbdd2da6ace38fabe411f4e002b3fd
       it.skip('should render podcast promo if in json and should navigate to correct podcast page', () => {
         cy.log(service);
         if (Cypress.env('APP_ENV') !== 'local') {
@@ -77,10 +74,6 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
           cy.url().then(url => {
             const urlForData = url.replace('.amp', '');
             const firstVisitedPage = url;
-<<<<<<< HEAD
-=======
-
->>>>>>> 55110bb0c3fbdd2da6ace38fabe411f4e002b3fd
             cy.request(getDataUrl(urlForData)).then(() => {
               cy.fixture(`toggles/${service}.json`).then(toggles => {
                 const podcastPromoIsEnabled = path(
