@@ -1057,20 +1057,20 @@ export const truncatedTextInSingleLink = [
                 id: '4ef372bc',
                 type: 'paragraph',
                 model: {
-                  text: 'This is a long headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ',
+                  text: 'This is a long headline that should be truncated to 4 lines only in the promo. I could go on and on and on and on and on. ',
                   blocks: [
                     {
                       id: 'eb171843',
                       type: 'urlLink',
                       model: {
-                        text: 'This is a long headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ',
+                        text: 'This is a long headline that should be truncated to 4 lines only in the promo. I could go on and on and on and on and on. ',
                         locator: 'https://www.bbc.co.uk/yoruba',
                         blocks: [
                           {
                             id: '45829882',
                             type: 'fragment',
                             model: {
-                              text: 'This is a long headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ',
+                              text: 'This is a long headline that should be truncated to 4 lines only in the promo. I could go on and on and on and on and on. ',
                               attributes: [],
                             },
                             position: [8, 2, 1, 1, 1, 1],
