@@ -10,6 +10,7 @@ jest.mock('../../containers/ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
+/* eslint-disable react/prop-types */
 const TopicPageWithContext = ({ pageData, lang, service }) => (
   <ToggleContextProvider>
     <ServiceContextProvider service={service} lang={lang}>
