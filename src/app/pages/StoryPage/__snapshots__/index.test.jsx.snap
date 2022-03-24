@@ -930,7 +930,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #6E6E73;
+  color: #545658;
   margin-top: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -2498,10 +2498,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-31 emotion-32"
                             >
                               <source
+                                sizes="(min-width: 1008px) 645px, 100vw"
                                 srcset="https://ichef.test.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 480w, https://ichef.test.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 624w, https://ichef.test.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 800w"
                                 type="image/webp"
                               />
                               <source
+                                sizes="(min-width: 1008px) 645px, 100vw"
                                 srcset="https://ichef.test.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 320w, https://ichef.test.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 480w, https://ichef.test.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 624w, https://ichef.test.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 800w"
                                 type="image/jpeg"
                               />
@@ -2509,7 +2511,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 alt="Some people at the NTA awards"
                                 class="emotion-33 emotion-34 emotion-35"
                                 height="549"
-                                sizes="(min-width: 1008px) 645px, 100vw"
                                 src="https://ichef.test.bbci.co.uk/news/640/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg"
                                 width="976"
                               />
@@ -2565,7 +2566,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       </b>
                       <a
                         class="emotion-50 emotion-51"
-                        href="https://bbc.com/pidgin/23248703"
+                        href="/pidgin/23248703"
                       >
                         inline links
                       </a>
@@ -2591,7 +2592,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       </i>
                       <a
                         class="emotion-50 emotion-51"
-                        href="https://bbc.com/pidgin/23248703"
+                        href="/pidgin/23248703"
                       >
                         a link
                       </a>
@@ -2628,7 +2629,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       >
                         <a
                           class="emotion-50 emotion-51"
-                          href="https://bbc.com/pidgin/23248703"
+                          href="/pidgin/23248703"
                         >
                           It can also have links
                         </a>
@@ -2656,7 +2657,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       Feta the big cheese macaroni cheese. 
                       <a
                         class="emotion-50 emotion-51"
-                        href="https://bbc.com/pidgin/23248703"
+                        href="/pidgin/23248703"
                       >
                         Caerphilly danish fontina
                       </a>
@@ -2800,7 +2801,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       >
                         <a
                           class="emotion-50 emotion-51"
-                          href="https://bbc.com/pidgin/23248703"
+                          href="/pidgin/23248703"
                         >
                           It can also have links
                         </a>
@@ -2861,7 +2862,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           allowfullscreen=""
                           class="emotion-147 emotion-148"
                           scrolling="no"
-                          src="https://www.test.bbc.com/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/pcm"
+                          src="/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/pcm"
                           title="Media player"
                         />
                         <noscript />
@@ -2967,6 +2968,9 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
                     </p>
                   </div>
+                  <div
+                    aria-hidden="true"
+                  />
                 </main>
               </div>
               <div
@@ -3077,7 +3081,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                     class="emotion-229 emotion-230"
                                     dir="ltr"
                                   >
-                                    AS E DE HAPPEN 
+                                    As E Dey Happen 
                                   </span>
                                   <span>
                                     Test m̀ịṅị̀ịọ́ụ̄ please ignore
@@ -5326,7 +5330,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #6E6E73;
+  color: #545658;
   margin-top: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -6488,10 +6492,12 @@ exports[`Story Page should render correctly when the secondary column data is no
                               class="emotion-36 emotion-37"
                             >
                               <source
+                                sizes="(min-width: 1008px) 645px, 100vw"
                                 srcset="https://ichef.test.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 480w, https://ichef.test.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 624w, https://ichef.test.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 800w"
                                 type="image/webp"
                               />
                               <source
+                                sizes="(min-width: 1008px) 645px, 100vw"
                                 srcset="https://ichef.test.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 320w, https://ichef.test.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 480w, https://ichef.test.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 624w, https://ichef.test.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 800w"
                                 type="image/jpeg"
                               />
@@ -6499,7 +6505,6 @@ exports[`Story Page should render correctly when the secondary column data is no
                                 alt="Some people at the NTA awards"
                                 class="emotion-38 emotion-39 emotion-40"
                                 height="549"
-                                sizes="(min-width: 1008px) 645px, 100vw"
                                 src="https://ichef.test.bbci.co.uk/news/640/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg"
                                 width="976"
                               />
@@ -6555,7 +6560,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </b>
                       <a
                         class="emotion-55 emotion-56"
-                        href="https://bbc.com/pidgin/23248703"
+                        href="/pidgin/23248703"
                       >
                         inline links
                       </a>
@@ -6581,7 +6586,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </i>
                       <a
                         class="emotion-55 emotion-56"
-                        href="https://bbc.com/pidgin/23248703"
+                        href="/pidgin/23248703"
                       >
                         a link
                       </a>
@@ -6618,7 +6623,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       >
                         <a
                           class="emotion-55 emotion-56"
-                          href="https://bbc.com/pidgin/23248703"
+                          href="/pidgin/23248703"
                         >
                           It can also have links
                         </a>
@@ -6646,7 +6651,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       Feta the big cheese macaroni cheese. 
                       <a
                         class="emotion-55 emotion-56"
-                        href="https://bbc.com/pidgin/23248703"
+                        href="/pidgin/23248703"
                       >
                         Caerphilly danish fontina
                       </a>
@@ -6790,7 +6795,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       >
                         <a
                           class="emotion-55 emotion-56"
-                          href="https://bbc.com/pidgin/23248703"
+                          href="/pidgin/23248703"
                         >
                           It can also have links
                         </a>
@@ -6851,7 +6856,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                           allowfullscreen=""
                           class="emotion-152 emotion-153"
                           scrolling="no"
-                          src="https://www.test.bbc.com/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
+                          src="/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
                           title="Media player"
                         />
                         <noscript />
@@ -6945,6 +6950,9 @@ exports[`Story Page should render correctly when the secondary column data is no
                       Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
                     </p>
                   </div>
+                  <div
+                    aria-hidden="true"
+                  />
                 </main>
               </div>
               <div
@@ -8486,7 +8494,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #6E6E73;
+  color: #545658;
   margin-top: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -10048,10 +10056,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-36 emotion-37"
                             >
                               <source
+                                sizes="(min-width: 1008px) 645px, 100vw"
                                 srcset="https://ichef.test.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 480w, https://ichef.test.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 624w, https://ichef.test.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 800w"
                                 type="image/webp"
                               />
                               <source
+                                sizes="(min-width: 1008px) 645px, 100vw"
                                 srcset="https://ichef.test.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 320w, https://ichef.test.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 480w, https://ichef.test.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 624w, https://ichef.test.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 800w"
                                 type="image/jpeg"
                               />
@@ -10059,7 +10069,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 alt="Some people at the NTA awards"
                                 class="emotion-38 emotion-39 emotion-40"
                                 height="549"
-                                sizes="(min-width: 1008px) 645px, 100vw"
                                 src="https://ichef.test.bbci.co.uk/news/640/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg"
                                 width="976"
                               />
@@ -10115,7 +10124,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </b>
                       <a
                         class="emotion-55 emotion-56"
-                        href="https://bbc.com/pidgin/23248703"
+                        href="/pidgin/23248703"
                       >
                         inline links
                       </a>
@@ -10141,7 +10150,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </i>
                       <a
                         class="emotion-55 emotion-56"
-                        href="https://bbc.com/pidgin/23248703"
+                        href="/pidgin/23248703"
                       >
                         a link
                       </a>
@@ -10178,7 +10187,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       >
                         <a
                           class="emotion-55 emotion-56"
-                          href="https://bbc.com/pidgin/23248703"
+                          href="/pidgin/23248703"
                         >
                           It can also have links
                         </a>
@@ -10206,7 +10215,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       Feta the big cheese macaroni cheese. 
                       <a
                         class="emotion-55 emotion-56"
-                        href="https://bbc.com/pidgin/23248703"
+                        href="/pidgin/23248703"
                       >
                         Caerphilly danish fontina
                       </a>
@@ -10350,7 +10359,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       >
                         <a
                           class="emotion-55 emotion-56"
-                          href="https://bbc.com/pidgin/23248703"
+                          href="/pidgin/23248703"
                         >
                           It can also have links
                         </a>
@@ -10411,7 +10420,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           allowfullscreen=""
                           class="emotion-152 emotion-153"
                           scrolling="no"
-                          src="https://www.test.bbc.com/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
+                          src="/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
                           title="Media player"
                         />
                         <noscript />
@@ -10505,6 +10514,9 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
                     </p>
                   </div>
+                  <div
+                    aria-hidden="true"
+                  />
                 </main>
               </div>
               <div
@@ -10640,7 +10652,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               <a
                                 aria-labelledby="top-stories-promo-news-feature-1"
                                 class="emotion-216 emotion-217"
-                                href="https://www.bbc.co.uk/news"
+                                href="/news"
                               >
                                 <span
                                   id="top-stories-promo-news-feature-1"
@@ -11183,7 +11195,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               <a
                                 aria-labelledby="features-and-analysis-promo-pidginsport51434980-radiobulletin-7"
                                 class="emotion-216 emotion-217"
-                                href="https://www.bbc.com/pidgin/sport-51434980"
+                                href="/pidgin/sport-51434980"
                               >
                                 <span
                                   id="features-and-analysis-promo-pidginsport51434980-radiobulletin-7"

@@ -35,6 +35,8 @@ const rssMarketingStringFunc = {
 };
 
 describe('getThingAttributes', () => {
+  const { location } = window;
+
   beforeEach(() => {
     analyticsUtilFunctions.push(marketingCampaignFunc);
     analyticsUtilFunctions.push(rssMarketingStringFunc);
@@ -46,48 +48,59 @@ describe('getThingAttributes', () => {
 
   afterEach(() => {
     jest.resetAllMocks();
+    window.location = location;
   });
 
   it('should not add empty or null values', () => {
     expect(buildATIPageTrackPath({})).toEqual('');
   });
 
-  it('should take in optional props and add them as correct query params', () => {
-    mockAndSet(marketingCampaignFunc, 'sl');
+  it.each`
+    props | currentUrl | expectedValues
+    ${{
+  appName: 'appName',
+  contentId: 'contentId',
+  contentType: 'contentType',
+  language: 'language',
+  ldpThingIds: 'ldpThingIds',
+  ldpThingLabels: 'ldpThingLabels',
+  pageIdentifier: 'pageIdentifier',
+  pageTitle: 'pageTitle',
+  platform: 'platform',
+  producerId: 'producerId',
+  timePublished: 'timePublished',
+  timeUpdated: 'timeUpdated',
+}} | ${'https://www.bbc.com/mundo'} | ${['s2=producerId', 'p=pageIdentifier', 'x1=[contentId]', 'x3=[appName]', 'x4=[language]', 'x7=[contentType]', 'x11=[timePublished]', 'x12=[timeUpdated]', 'x13=[ldpThingLabels]', 'x14=[ldpThingIds]', 'xto=SEC------']}
+    ${{
+  appName: 'appName',
+  contentId: 'contentId',
+  contentType: 'contentType',
+  language: 'language',
+  ldpThingIds: 'ldpThingIds',
+  ldpThingLabels: 'ldpThingLabels',
+  pageIdentifier: 'pageIdentifier',
+  pageTitle: 'pageTitle',
+  platform: 'platform',
+  producerId: 'producerId',
+  timePublished: 'timePublished',
+  timeUpdated: 'timeUpdated',
+}} | ${'https://www.bbcnewsd73hkzno2ini43t4gblxvycyac5aw4gnv7t2rccijh7745uqd.onion/news'} | ${['s2=producerId', 'p=pageIdentifier', 'x1=[contentId]', 'x3=[appName]', 'x4=[language]', 'x7=[contentType]', 'x11=[timePublished]', 'x12=[timeUpdated]', 'x13=[ldpThingLabels]', 'x14=[ldpThingIds]', 'xto=SEC------', 'product_platform=tor-bbc']}
+  `(
+    'should take in optional props and add them as correct query params',
+    ({ props, currentUrl, expectedValues }) => {
+      mockAndSet(marketingCampaignFunc, 'sl');
+      delete window.location;
 
-    const queryParams = buildATIPageTrackPath({
-      appName: 'appName',
-      contentId: 'contentId',
-      contentType: 'contentType',
-      language: 'language',
-      ldpThingIds: 'ldpThingIds',
-      ldpThingLabels: 'ldpThingLabels',
-      pageIdentifier: 'pageIdentifier',
-      pageTitle: 'pageTitle',
-      platform: 'platform',
-      producerId: 'producerId',
-      timePublished: 'timePublished',
-      timeUpdated: 'timeUpdated',
-    });
+      window.location = new URL(currentUrl);
 
-    const queryParamsArray = splitUrl(queryParams);
-    const expectedValues = [
-      's2=producerId',
-      'p=pageIdentifier',
-      'x1=[contentId]',
-      'x3=[appName]',
-      'x4=[language]',
-      'x7=[contentType]',
-      'x11=[timePublished]',
-      'x12=[timeUpdated]',
-      'x13=[ldpThingLabels]',
-      'x14=[ldpThingIds]',
-      'xto=SEC------',
-    ];
-
-    expect(queryParamsArray).toHaveLength(expectedValues.length);
-    expectedValues.forEach(value => expect(queryParamsArray).toContain(value));
-  });
+      const queryParams = buildATIPageTrackPath(props);
+      const queryParamsArray = splitUrl(queryParams);
+      expect(queryParamsArray).toHaveLength(expectedValues.length);
+      expectedValues.forEach(value =>
+        expect(queryParamsArray).toContain(value),
+      );
+    },
+  );
 
   it('should call RSS marketing string function', () => {
     mockAndSet(marketingCampaignFunc, 'RSS');
@@ -141,6 +154,30 @@ describe('getThingAttributes', () => {
         "ref=getReferrer",
       ]
     `);
+  });
+  it('if ref param is provided, it should be the very last param so that ATI can interpret it correctly as part of the referrer URL', () => {
+    analyticsUtilFunctions.forEach(func => {
+      mockAndSet(func, func.name);
+    });
+
+    const lastParam = splitUrl(
+      buildATIPageTrackPath({
+        appName: 'appName',
+        contentId: 'contentId',
+        contentType: 'contentType',
+        language: 'language',
+        ldpThingIds: 'ldpThingIds',
+        ldpThingLabels: 'ldpThingLabels',
+        pageIdentifier: 'pageIdentifier',
+        pageTitle: 'pageTitle',
+        platform: 'platform',
+        producerId: 'producerId',
+        timePublished: 'timePublished',
+        timeUpdated: 'timeUpdated',
+      }),
+    ).pop();
+
+    expect(lastParam).toEqual('ref=getReferrer');
   });
 });
 

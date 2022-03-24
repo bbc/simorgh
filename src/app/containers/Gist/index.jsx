@@ -8,7 +8,7 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_HLF_TRPL,
 } from '@bbc/gel-foundations/spacings';
-import { C_METAL, C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import { C_POSTBOX, C_WHITE, C_GREY_6 } from '@bbc/psammead-styles/colours';
 import { getSansRegular, getSansBold } from '@bbc/psammead-styles/font-styles';
 import { getDoublePica, getGreatPrimer } from '@bbc/gel-foundations/typography';
 import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
@@ -20,7 +20,7 @@ import { GridItemLarge } from '#app/components/Grid';
 import UnorderedList from '../BulletedList';
 
 const GistWrapper = styled.div`
-  color: ${C_METAL};
+  color: ${C_GREY_6};
   border-top: ${GEL_SPACING_HLF} solid ${C_POSTBOX};
   background-color: ${C_WHITE};
   ${({ dir }) =>
@@ -78,7 +78,7 @@ const componentsToRender = (service, script, dir) => ({
             script={script}
             direction={dir === 'rtl' ? 'right' : 'left'}
             bulletPointShape="square"
-            bulletPointColour={C_METAL}
+            bulletPointColour={C_GREY_6}
           />
         ),
       }}

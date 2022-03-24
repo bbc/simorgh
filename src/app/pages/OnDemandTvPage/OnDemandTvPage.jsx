@@ -23,7 +23,9 @@ import LinkedData from '#containers/LinkedData';
 import { RequestContext } from '#contexts/RequestContext';
 import StyledTvHeadingContainer from '#containers/OnDemandHeading/StyledTvHeadingContainer';
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
-import getEmbedUrl from '#lib/utilities/getUrlHelpers/getEmbedUrl';
+import getEmbedUrl, {
+  makeAbsolute,
+} from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import AVPlayer from '#containers/AVPlayer';
 import RecentVideoEpisodes from '#containers/EpisodeList/RecentVideoEpisodes';
 import FooterTimestamp from '#app/containers/OnDemandFooterTimestamp';
@@ -139,7 +141,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
                   thumbnailUrl: thumbnailImageUrl,
                   duration: durationISO8601,
                   uploadDate: new Date(releaseDateTimeStamp).toISOString(),
-                  embedURL: embedUrl,
+                  embedURL: makeAbsolute(embedUrl),
                 },
               ]
             : []

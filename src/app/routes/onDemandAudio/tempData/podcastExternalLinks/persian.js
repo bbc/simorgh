@@ -65,6 +65,21 @@ const externalLinks = {
           'https://podcasts.apple.com/gb/podcast/%D8%A8%DB%8C%D9%86-%D8%B3%D8%B7%D9%88%D8%B1/id1584665242',
       },
     ],
+    p0bw80rj: [
+      {
+        linkText: 'Spotify',
+        linkUrl: 'https://open.spotify.com/show/4kInUtgdsMnUxlA7sBKxLL',
+      },
+      {
+        linkText: 'Apple',
+        linkUrl: 'https://podcasts.apple.com/us/podcast/بین-سطور/id1615070108',
+      },
+      {
+        linkText: 'Castbox',
+        linkUrl:
+          'https://castbox.fm/channel/%D8%B4%DB%8C%D8%B1%D8%A7%D8%B2%D9%87-id4841117?country=us',
+      },
+    ],
   },
 };
 

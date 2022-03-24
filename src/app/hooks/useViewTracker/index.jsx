@@ -7,6 +7,7 @@ import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useTrackingToggle from '#hooks/useTrackingToggle';
+import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 
 const EVENT_TYPE = 'view';
 const VIEWED_DURATION_MS = 1000;
@@ -72,7 +73,16 @@ const useViewTracker = (props = {}) => {
 
         if (shouldSendEvent) {
           if (optimizely) {
-            optimizely.track('component_views');
+            const overrideAttributes = {
+              ...optimizely.user.attributes,
+              [`viewed_${OPTIMIZELY_CONFIG.viewClickAttributeId}`]: true,
+            };
+
+            optimizely.track(
+              'component_views',
+              optimizely.user.id,
+              overrideAttributes,
+            );
           }
 
           sendEventBeacon({

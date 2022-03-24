@@ -1791,6 +1791,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
                 class="emotion-29 emotion-30"
               >
                 <source
+                  sizes="(min-width: 1008px) 228px, 30vw"
                   srcset="https://ichef.bbci.co.uk/images/ic/128x128/p08b23c8.png 128w,https://ichef.bbci.co.uk/images/ic/240x240/p08b23c8.png 240w,https://ichef.bbci.co.uk/images/ic/480x480/p08b23c8.png 480w"
                   type="image/png"
                 />
@@ -1798,7 +1799,6 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
                   alt="BBC News پښتو"
                   class="emotion-31 emotion-32 emotion-33"
                   height="240"
-                  sizes="(min-width: 1008px) 228px, 30vw"
                   src="https://ichef.bbci.co.uk/images/ic/128x128/p08b23c8.png"
                   width="240"
                 />
@@ -1853,7 +1853,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
               allowfullscreen=""
               class="emotion-45 emotion-46"
               scrolling="no"
-              src="https://www.test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps?morph_env=live"
+              src="/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps?morph_env=live"
               title="اډیو پلیئر"
             />
             <noscript />
@@ -2695,6 +2695,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
                 class="emotion-29 emotion-30"
               >
                 <source
+                  sizes="(min-width: 1008px) 228px, 30vw"
                   srcset="https://ichef.bbci.co.uk/images/ic/128x128/p08b8lzc.png 128w,https://ichef.bbci.co.uk/images/ic/240x240/p08b8lzc.png 240w,https://ichef.bbci.co.uk/images/ic/480x480/p08b8lzc.png 480w"
                   type="image/png"
                 />
@@ -2702,7 +2703,6 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
                   alt="BBC News 코리아"
                   class="emotion-31 emotion-32 emotion-33"
                   height="240"
-                  sizes="(min-width: 1008px) 228px, 30vw"
                   src="https://ichef.bbci.co.uk/images/ic/128x128/p08b8lzc.png"
                   width="240"
                 />
@@ -3563,6 +3563,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
                 class="emotion-29 emotion-30"
               >
                 <source
+                  sizes="(min-width: 1008px) 228px, 30vw"
                   srcset="https://ichef.bbci.co.uk/images/ic/128x128/p08b8lzc.png 128w,https://ichef.bbci.co.uk/images/ic/240x240/p08b8lzc.png 240w,https://ichef.bbci.co.uk/images/ic/480x480/p08b8lzc.png 480w"
                   type="image/png"
                 />
@@ -3570,7 +3571,6 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
                   alt="BBC News 코리아"
                   class="emotion-31 emotion-32 emotion-33"
                   height="240"
-                  sizes="(min-width: 1008px) 228px, 30vw"
                   src="https://ichef.bbci.co.uk/images/ic/128x128/p08b8lzc.png"
                   width="240"
                 />

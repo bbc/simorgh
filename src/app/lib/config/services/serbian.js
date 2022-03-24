@@ -133,6 +133,10 @@ export const service = {
         url: '/serbian/lat',
       },
       {
+        title: 'Ukrajina',
+        url: '/serbian/lat/topics/c5wzvzzz5vrt',
+      },
+      {
         title: 'Korona virus',
         url: '/serbian/lat/srbija-52197807',
       },
@@ -425,6 +429,10 @@ export const service = {
       {
         title: 'Почетна страна',
         url: '/serbian/cyr',
+      },
+      {
+        title: 'Украјина',
+        url: '/serbian/cyr/topics/cqwvxvvw9qrt',
       },
       {
         title: 'Корона вирус',

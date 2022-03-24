@@ -22,6 +22,10 @@ import {
   buildIndexPageATIParams,
   buildIndexPageATIUrl,
 } from './indexPage/buildParams';
+import {
+  buildTopicPageATIUrl,
+  buildTopicPageATIParams,
+} from './topicPage/buildParams';
 
 const ARTICLE_MEDIA_ASSET = 'article-media-asset';
 const ARTICLE_PHOTO_GALLERY = 'article-photo-gallery';
@@ -37,6 +41,7 @@ const pageTypeUrlBuilders = {
   mostWatched: buildMostWatchedATIUrl,
   IDX: buildIndexPageATIUrl,
   FIX: buildIndexPageATIUrl,
+  TOPIC: buildTopicPageATIUrl,
   MAP: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIUrl(
       data,
@@ -68,6 +73,7 @@ const pageTypeParamBuilders = {
   mostWatched: buildMostWatchedATIParams,
   IDX: buildIndexPageATIParams,
   FIX: buildIndexPageATIParams,
+  TOPIC: buildTopicPageATIParams,
   MAP: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIParams(
       data,

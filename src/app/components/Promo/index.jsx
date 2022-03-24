@@ -8,10 +8,12 @@ import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 import Image from './image';
+import MediaIcon, { TYPES } from './media-icon';
 import Heading from './heading';
 import Body from './body';
 import Footer from './footer';
 import A from './a';
+import Timestamp from './timestamp';
 
 const PromoContext = React.createContext({});
 const withPromoContext = Component => props =>
@@ -60,13 +62,16 @@ const Promo = ({ children }) => {
 };
 
 Promo.Image = withPromoContext(Image);
+Promo.MediaIcon = withPromoContext(MediaIcon);
 Promo.Heading = withPromoContext(Heading);
 Promo.Body = withPromoContext(Body);
 Promo.Footer = withPromoContext(Footer);
 Promo.A = withPromoContext(A);
+Promo.Timestamp = withPromoContext(Timestamp);
 
 Promo.propTypes = {
   children: arrayOf(element).isRequired,
 };
 
+export const MEDIA_TYPES = TYPES;
 export default Promo;

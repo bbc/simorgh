@@ -1188,7 +1188,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                       allowfullscreen=""
                       class="emotion-13 emotion-14"
                       scrolling="no"
-                      src="https://www.test.bbc.com/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/uz-Cyrl"
+                      src="/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/uz-Cyrl"
                       title="Медиа плейер"
                     />
                     <div
@@ -1305,7 +1305,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                   Шу йил апрел ойида Ўзбекистон Президенти Ислом 
                   <a
                     class="emotion-53 emotion-54"
-                    href="https://bbc.com/uzbek"
+                    href="/uzbek"
                   >
                     Каримов ўзининг
                   </a>
@@ -1423,7 +1423,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                   >
                     <a
                       class="emotion-53 emotion-54"
-                      href="https://bbc.com/uzbek"
+                      href="/uzbek"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
                     </a>
@@ -1434,7 +1434,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                   >
                     <a
                       class="emotion-53 emotion-54"
-                      href="https://bbc.com/uzbek"
+                      href="/uzbek"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
                     </a>
@@ -1445,7 +1445,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                   >
                     <a
                       class="emotion-53 emotion-54"
-                      href="https://bbc.com/uzbek"
+                      href="/uzbek"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
                     </a>
@@ -1456,7 +1456,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                   >
                     <a
                       class="emotion-53 emotion-54"
-                      href="https://bbc.com/uzbek"
+                      href="/uzbek"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
                     </a>
@@ -2808,7 +2808,7 @@ exports[`Media Asset Page should render component 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #6E6E73;
+  color: #545658;
   margin-top: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -3679,7 +3679,7 @@ exports[`Media Asset Page should render component 1`] = `
                       allowfullscreen=""
                       class="emotion-13 emotion-14"
                       scrolling="no"
-                      src="https://www.test.bbc.com/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
+                      src="/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
                       title="Media player"
                     />
                     <div
@@ -3810,7 +3810,7 @@ exports[`Media Asset Page should render component 1`] = `
                   >
                     <a
                       class="emotion-62 emotion-63"
-                      href="http://www.bbc.com/afrique/23248423"
+                      href="/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
                     </a>
@@ -3821,7 +3821,7 @@ exports[`Media Asset Page should render component 1`] = `
                   >
                     <a
                       class="emotion-62 emotion-63"
-                      href="http://www.bbc.com/afrique/23248423"
+                      href="/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
                     </a>
@@ -3832,7 +3832,7 @@ exports[`Media Asset Page should render component 1`] = `
                   >
                     <a
                       class="emotion-62 emotion-63"
-                      href="http://www.bbc.com/afrique/23248423"
+                      href="/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
                     </a>
@@ -3843,7 +3843,7 @@ exports[`Media Asset Page should render component 1`] = `
                   >
                     <a
                       class="emotion-62 emotion-63"
-                      href="https://bbc.com/pidgin"
+                      href="/pidgin"
                     >
                       this is the link text
                     </a>
@@ -3854,7 +3854,7 @@ exports[`Media Asset Page should render component 1`] = `
                   >
                     <a
                       class="emotion-62 emotion-63"
-                      href="https://bbc.com/pidgin"
+                      href="/pidgin"
                     >
                       this is the link text
                     </a>
@@ -3865,7 +3865,7 @@ exports[`Media Asset Page should render component 1`] = `
                   >
                     <a
                       class="emotion-62 emotion-63"
-                      href="https://bbc.com/pidgin"
+                      href="/pidgin"
                     >
                       this is the link text
                     </a>
@@ -3898,7 +3898,7 @@ exports[`Media Asset Page should render component 1`] = `
                   >
                     <a
                       class="emotion-62 emotion-63"
-                      href="http://www.bbc.com/afrique/23248423"
+                      href="/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
                     </a>
@@ -3909,7 +3909,7 @@ exports[`Media Asset Page should render component 1`] = `
                   >
                     <a
                       class="emotion-62 emotion-63"
-                      href="http://www.bbc.com/afrique/23248423"
+                      href="/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
                     </a>
@@ -3920,7 +3920,7 @@ exports[`Media Asset Page should render component 1`] = `
                   >
                     <a
                       class="emotion-62 emotion-63"
-                      href="http://www.bbc.com/afrique/23248423"
+                      href="/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
                     </a>
@@ -3931,7 +3931,7 @@ exports[`Media Asset Page should render component 1`] = `
                   >
                     <a
                       class="emotion-62 emotion-63"
-                      href="https://bbc.com/pidgin"
+                      href="/pidgin"
                     >
                       this is the link text
                     </a>
@@ -3942,7 +3942,7 @@ exports[`Media Asset Page should render component 1`] = `
                   >
                     <a
                       class="emotion-62 emotion-63"
-                      href="https://bbc.com/pidgin"
+                      href="/pidgin"
                     >
                       this is the link text
                     </a>
@@ -3953,7 +3953,7 @@ exports[`Media Asset Page should render component 1`] = `
                   >
                     <a
                       class="emotion-62 emotion-63"
-                      href="https://bbc.com/pidgin"
+                      href="/pidgin"
                     >
                       this is the link text
                     </a>
@@ -3985,7 +3985,7 @@ exports[`Media Asset Page should render component 1`] = `
                   dolore "eu fugiat nulla" pariatur. 
                   <a
                     class="emotion-62 emotion-63"
-                    href="https://bbc.com/pidgin"
+                    href="/pidgin"
                   >
                     Excepteur
                   </a>
@@ -4091,7 +4091,7 @@ exports[`Media Asset Page should render component 1`] = `
                   Lorem ipsum
                   <a
                     class="emotion-62 emotion-63"
-                    href="https://bbc.com/pidgin"
+                    href="/pidgin"
                   >
                      dolor sit amet
                   </a>

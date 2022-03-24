@@ -699,7 +699,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #6E6E73;
+  color: #545658;
   margin-top: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -791,10 +791,12 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
               class="emotion-10 emotion-11"
             >
               <source
+                sizes="100vw"
                 srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png.webp 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png.webp 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png.webp 624w, https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png.webp 640w"
                 type="image/webp"
               />
               <source
+                sizes="100vw"
                 srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w"
                 type="image/png"
               />
@@ -802,7 +804,6 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
                 alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
                 class="emotion-12 emotion-13 emotion-14"
                 height="420"
-                sizes="100vw"
                 src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
                 width="640"
               />
@@ -1171,10 +1172,12 @@ exports[`Image with data should render an image with alt text and offscreen copy
               class="emotion-10 emotion-11"
             >
               <source
+                sizes="100vw"
                 srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png.webp 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png.webp 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png.webp 624w, https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png.webp 640w"
                 type="image/webp"
               />
               <source
+                sizes="100vw"
                 srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w"
                 type="image/png"
               />
@@ -1182,7 +1185,6 @@ exports[`Image with data should render an image with alt text and offscreen copy
                 alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
                 class="emotion-12 emotion-13 emotion-14"
                 height="420"
-                sizes="100vw"
                 src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
                 width="640"
               />
@@ -1544,10 +1546,12 @@ exports[`Image with data should render an image with other originCode - this wou
               class="emotion-10 emotion-11"
             >
               <source
+                sizes="100vw"
                 srcset="https://ichef.bbci.co.uk/news/240/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w"
                 type="image/png"
               />
               <source
+                sizes="100vw"
                 srcset="https://ichef.bbci.co.uk/news/240/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w"
                 type="image/png"
               />
@@ -1555,7 +1559,6 @@ exports[`Image with data should render an image with other originCode - this wou
                 alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
                 class="emotion-12 emotion-13 emotion-14"
                 height="420"
-                sizes="100vw"
                 src="https://ichef.bbci.co.uk/news/640/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
                 width="640"
               />

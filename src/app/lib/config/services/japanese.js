@@ -302,6 +302,10 @@ export const service = {
         url: '/japanese',
       },
       {
+        title: 'ウクライナ侵攻',
+        url: '/japanese/60631515',
+      },
+      {
         title: 'コロナウイルス',
         url: '/japanese/52137815',
       },

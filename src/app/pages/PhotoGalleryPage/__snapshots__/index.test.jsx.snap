@@ -737,7 +737,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #6E6E73;
+  color: #545658;
   margin-top: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1161,10 +1161,12 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                           class="emotion-22 emotion-23"
                         >
                           <source
+                            sizes="(min-width: 1008px) 760px, 100vw"
                             srcset="https://ichef.test.bbci.co.uk/news/240/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/480/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 480w, https://ichef.test.bbci.co.uk/news/624/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 624w, https://ichef.test.bbci.co.uk/news/800/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 800w"
                             type="image/webp"
                           />
                           <source
+                            sizes="(min-width: 1008px) 760px, 100vw"
                             srcset="https://ichef.test.bbci.co.uk/news/240/cpsprodpb/CB33/production/_97491025_img_1060.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/CB33/production/_97491025_img_1060.jpg 320w, https://ichef.test.bbci.co.uk/news/480/cpsprodpb/CB33/production/_97491025_img_1060.jpg 480w, https://ichef.test.bbci.co.uk/news/624/cpsprodpb/CB33/production/_97491025_img_1060.jpg 624w, https://ichef.test.bbci.co.uk/news/800/cpsprodpb/CB33/production/_97491025_img_1060.jpg 800w"
                             type="image/jpeg"
                           />
@@ -1172,7 +1174,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                             alt="Masaraa Aaxee Minilik"
                             class="emotion-24 emotion-25 emotion-26"
                             height="549"
-                            sizes="(min-width: 1008px) 760px, 100vw"
                             src="https://ichef.test.bbci.co.uk/news/640/cpsprodpb/CB33/production/_97491025_img_1060.jpg"
                             width="976"
                           />
@@ -2800,7 +2801,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #6E6E73;
+  color: #545658;
   margin-top: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -3236,10 +3237,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                           class="emotion-27 emotion-28"
                         >
                           <source
+                            sizes="(min-width: 1008px) 760px, 100vw"
                             srcset="https://ichef.test.bbci.co.uk/news/240/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/480/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 480w, https://ichef.test.bbci.co.uk/news/624/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 624w, https://ichef.test.bbci.co.uk/news/800/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 800w"
                             type="image/webp"
                           />
                           <source
+                            sizes="(min-width: 1008px) 760px, 100vw"
                             srcset="https://ichef.test.bbci.co.uk/news/240/cpsprodpb/CB33/production/_97491025_img_1060.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/CB33/production/_97491025_img_1060.jpg 320w, https://ichef.test.bbci.co.uk/news/480/cpsprodpb/CB33/production/_97491025_img_1060.jpg 480w, https://ichef.test.bbci.co.uk/news/624/cpsprodpb/CB33/production/_97491025_img_1060.jpg 624w, https://ichef.test.bbci.co.uk/news/800/cpsprodpb/CB33/production/_97491025_img_1060.jpg 800w"
                             type="image/jpeg"
                           />
@@ -3247,7 +3250,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                             alt="Masaraa Aaxee Minilik"
                             class="emotion-29 emotion-30 emotion-31"
                             height="549"
-                            sizes="(min-width: 1008px) 760px, 100vw"
                             src="https://ichef.test.bbci.co.uk/news/640/cpsprodpb/CB33/production/_97491025_img_1060.jpg"
                             width="976"
                           />
@@ -4875,7 +4877,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #6E6E73;
+  color: #545658;
   margin-top: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -5763,10 +5765,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           class="emotion-27 emotion-28"
                         >
                           <source
+                            sizes="(min-width: 1008px) 760px, 100vw"
                             srcset="https://ichef.test.bbci.co.uk/news/240/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/480/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg.webp 480w, https://ichef.test.bbci.co.uk/news/624/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg.webp 624w, https://ichef.test.bbci.co.uk/news/800/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg.webp 800w"
                             type="image/webp"
                           />
                           <source
+                            sizes="(min-width: 1008px) 760px, 100vw"
                             srcset="https://ichef.test.bbci.co.uk/news/240/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg 320w, https://ichef.test.bbci.co.uk/news/480/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg 480w, https://ichef.test.bbci.co.uk/news/624/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg 624w, https://ichef.test.bbci.co.uk/news/800/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg 800w"
                             type="image/jpeg"
                           />
@@ -5774,7 +5778,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                             alt="Bole festival for Pitakwa"
                             class="emotion-29 emotion-30 emotion-31"
                             height="549"
-                            sizes="(min-width: 1008px) 760px, 100vw"
                             src="https://ichef.test.bbci.co.uk/news/640/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg"
                             width="976"
                           />
@@ -7425,7 +7428,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #6E6E73;
+  color: #545658;
   margin-top: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -7567,10 +7570,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                           class="emotion-27 emotion-28"
                         >
                           <source
+                            sizes="(min-width: 1008px) 760px, 100vw"
                             srcset="https://ichef.test.bbci.co.uk/news/240/cpsdevpb/1840E/test/_63724399_clinton.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsdevpb/1840E/test/_63724399_clinton.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/480/cpsdevpb/1840E/test/_63724399_clinton.jpg.webp 480w, https://ichef.test.bbci.co.uk/news/624/cpsdevpb/1840E/test/_63724399_clinton.jpg.webp 624w, https://ichef.test.bbci.co.uk/news/800/cpsdevpb/1840E/test/_63724399_clinton.jpg.webp 800w"
                             type="image/webp"
                           />
                           <source
+                            sizes="(min-width: 1008px) 760px, 100vw"
                             srcset="https://ichef.test.bbci.co.uk/news/240/cpsdevpb/1840E/test/_63724399_clinton.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsdevpb/1840E/test/_63724399_clinton.jpg 320w, https://ichef.test.bbci.co.uk/news/480/cpsdevpb/1840E/test/_63724399_clinton.jpg 480w, https://ichef.test.bbci.co.uk/news/624/cpsdevpb/1840E/test/_63724399_clinton.jpg 624w, https://ichef.test.bbci.co.uk/news/800/cpsdevpb/1840E/test/_63724399_clinton.jpg 800w"
                             type="image/jpeg"
                           />
@@ -7578,7 +7583,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                             alt="Bill Clinton"
                             class="emotion-29 emotion-30 emotion-31"
                             height="549"
-                            sizes="(min-width: 1008px) 760px, 100vw"
                             src="https://ichef.test.bbci.co.uk/news/640/cpsdevpb/1840E/test/_63724399_clinton.jpg"
                             width="976"
                           />
@@ -8928,7 +8932,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #6E6E73;
+  color: #545658;
   margin-top: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -10042,10 +10046,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-27 emotion-28"
                         >
                           <source
+                            sizes="(min-width: 1008px) 760px, 100vw"
                             srcset="https://ichef.test.bbci.co.uk/news/240/cpsprodpb/1DBC/production/_101621670_0-158827.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/1DBC/production/_101621670_0-158827.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/480/cpsprodpb/1DBC/production/_101621670_0-158827.jpg.webp 480w, https://ichef.test.bbci.co.uk/news/624/cpsprodpb/1DBC/production/_101621670_0-158827.jpg.webp 624w, https://ichef.test.bbci.co.uk/news/800/cpsprodpb/1DBC/production/_101621670_0-158827.jpg.webp 800w"
                             type="image/webp"
                           />
                           <source
+                            sizes="(min-width: 1008px) 760px, 100vw"
                             srcset="https://ichef.test.bbci.co.uk/news/240/cpsprodpb/1DBC/production/_101621670_0-158827.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/1DBC/production/_101621670_0-158827.jpg 320w, https://ichef.test.bbci.co.uk/news/480/cpsprodpb/1DBC/production/_101621670_0-158827.jpg 480w, https://ichef.test.bbci.co.uk/news/624/cpsprodpb/1DBC/production/_101621670_0-158827.jpg 624w, https://ichef.test.bbci.co.uk/news/800/cpsprodpb/1DBC/production/_101621670_0-158827.jpg 800w"
                             type="image/jpeg"
                           />
@@ -10053,7 +10059,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             alt="AXC parlamentinin birinci iclasının açılışı"
                             class="emotion-29 emotion-30 emotion-31"
                             height="650"
-                            sizes="(min-width: 1008px) 760px, 100vw"
                             src="https://ichef.test.bbci.co.uk/news/640/cpsprodpb/1DBC/production/_101621670_0-158827.jpg"
                             width="976"
                           />

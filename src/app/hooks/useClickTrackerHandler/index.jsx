@@ -7,6 +7,7 @@ import { sendEventBeacon } from '#containers/ATIAnalytics/beacon/index';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useTrackingToggle from '#hooks/useTrackingToggle';
+import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import { isValidClick } from './clickTypes';
 
 const EVENT_TYPE = 'click';
@@ -59,7 +60,16 @@ const useClickTrackerHandler = (props = {}) => {
           event.preventDefault();
 
           if (optimizely) {
-            optimizely.track('component_clicks');
+            const overrideAttributes = {
+              ...optimizely.user.attributes,
+              [`clicked_${OPTIMIZELY_CONFIG.viewClickAttributeId}`]: true,
+            };
+
+            optimizely.track(
+              'component_clicks',
+              optimizely.user.id,
+              overrideAttributes,
+            );
           }
 
           try {

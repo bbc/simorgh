@@ -14,6 +14,8 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
+import { OptimizelyExperiment } from '@optimizely/react-sdk';
+
 import Grid, { GelPageGrid, GridItemLarge } from '#app/components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
@@ -33,12 +35,14 @@ import MostReadContainer from '#containers/MostRead';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import OptimizelyPageViewTracking from '#containers/OptimizelyPageViewTracking';
+import OptimizelyArticleCompleteTracking from '#containers/OptimizelyArticleCompleteTracking';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import CpsTable from '#containers/CpsTable';
 import Byline from '#containers/Byline';
 import CpsSocialEmbedContainer from '#containers/SocialEmbed/Cps';
 import CpsRecommendations from '#containers/CpsRecommendations';
+import ExperimentalEOJ from '#app/components/ExperimentalEOJ';
 import { InlinePodcastPromo } from '#containers/PodcastPromo';
 
 import {
@@ -54,6 +58,8 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
+import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
+import SplitRecommendations from '#containers/CpsRecommendations/SplitRecommendations';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 
@@ -71,6 +77,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     lang,
     showRelatedTopics,
   } = useContext(ServiceContext);
+
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
@@ -102,7 +109,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     pageData,
   );
   const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
-  const recommendationsInitialData = path(['recommendations'], pageData);
+  const recommendationsData = path(['recommendations'], pageData);
   const topics = path(['metadata', 'topics'], pageData);
 
   const gridColumns = {
@@ -197,13 +204,58 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <CpsRecommendations
         {...props}
         parentColumns={gridColsMain}
-        items={recommendationsInitialData}
+        items={recommendationsData}
       />
     ),
     disclaimer: props => (
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
     podcastPromo: podcastPromoEnabled && InlinePodcastPromo,
+    // OPTIMIZELY: 003_hindi_experiment_feature.
+    experimentBlock: props => {
+      const { showForVariation } = props;
+
+      return (
+        <OptimizelyExperiment experiment={OPTIMIZELY_CONFIG.experimentId}>
+          {variation => {
+            // Return 'control' variation if 'control' is returned from Optimizely or experiment is not enabled
+            if (
+              showForVariation === 'control' &&
+              (variation === 'control' || !variation)
+            ) {
+              return (
+                <CpsRecommendations
+                  {...props}
+                  parentColumns={gridColsMain}
+                  items={recommendationsData}
+                  showForVariation={showForVariation}
+                />
+              );
+            }
+
+            if (
+              showForVariation === 'variation_1' &&
+              variation === 'variation_1'
+            ) {
+              return (
+                <SplitRecommendations {...props} items={recommendationsData} />
+              );
+            }
+
+            if (
+              showForVariation === 'variation_3' &&
+              variation === 'variation_3'
+            ) {
+              return (
+                <ExperimentalEOJ {...props} blocks={recommendationsData} />
+              );
+            }
+
+            return null;
+          }}
+        </OptimizelyExperiment>
+      );
+    },
   };
 
   const StyledTimestamp = styled(Timestamp)`
@@ -335,6 +387,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         >
           <main role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+            <OptimizelyArticleCompleteTracking />
           </main>
 
           {showRelatedTopics && topics && (
@@ -345,7 +398,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
 
           <CpsRelatedContent
             content={relatedContent}
+            recommendations={recommendationsData}
             parentColumns={gridColsMain}
+            isStoryPage
           />
         </GridPrimaryColumn>
         <GridSecondaryColumn
