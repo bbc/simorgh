@@ -337,6 +337,125 @@ export const oneLinkOnly = [
   },
 ];
 
+export const oneLinkWithNoTitle = [
+  {
+    id: 'c8c7230b',
+    type: 'link',
+    model: {
+      locator: 'urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fpidgin',
+      blocks: [
+        {
+          id: '380f85cc',
+          type: 'text',
+          model: {
+            blocks: [
+              {
+                id: '4e012660',
+                type: 'paragraph',
+                model: {
+                  text: 'Single link',
+                  blocks: [
+                    {
+                      id: '1073b03b',
+                      type: 'urlLink',
+                      model: {
+                        text: 'Single link',
+                        locator: 'https://www.bbc.com/pidgin',
+                        blocks: [
+                          {
+                            id: 'f60e5db4',
+                            type: 'fragment',
+                            model: {
+                              text: 'Single link',
+                              attributes: [],
+                            },
+                            position: [6, 2, 1, 1, 1, 1],
+                          },
+                        ],
+                        isExternal: false,
+                      },
+                      position: [6, 2, 1, 1, 1],
+                    },
+                  ],
+                },
+                position: [6, 2, 1, 1],
+              },
+            ],
+          },
+          position: [6, 2, 1],
+        },
+      ],
+    },
+    position: [6, 2],
+  },
+];
+
+export const oneLinkWithTimestamp = [
+  {
+    id: 'c8c7230b',
+    type: 'link',
+    model: {
+      locator: 'urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fpidgin',
+      blocks: [
+        {
+          id: '380f85cc',
+          type: 'text',
+          model: {
+            blocks: [
+              {
+                id: '4e012660',
+                type: 'paragraph',
+                model: {
+                  text: 'Single link',
+                  blocks: [
+                    {
+                      id: '1073b03b',
+                      type: 'urlLink',
+                      model: {
+                        text: 'Single link',
+                        locator: 'https://www.bbc.com/pidgin',
+                        blocks: [
+                          {
+                            id: 'f60e5db4',
+                            type: 'fragment',
+                            model: {
+                              text: 'Single link',
+                              attributes: [],
+                            },
+                            position: [6, 2, 1, 1, 1, 1],
+                          },
+                        ],
+                        isExternal: false,
+                      },
+                      position: [6, 2, 1, 1, 1],
+                    },
+                  ],
+                },
+                position: [6, 2, 1, 1],
+              },
+            ],
+          },
+          position: [6, 2, 1],
+        },
+        {
+          type: 'aresLink',
+          model: {
+            blocks: [
+              {
+                type: 'optimoLinkMetadata',
+                model: {
+                  timestamp: 1646912992130,
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+    position: [6, 2],
+  },
+];
+
 export const moreThanThreeLinks = [
   {
     id: '14353f48',
@@ -938,20 +1057,20 @@ export const truncatedTextInSingleLink = [
                 id: '4ef372bc',
                 type: 'paragraph',
                 model: {
-                  text: 'This is a long headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ',
+                  text: 'This is a long headline that should be truncated to 4 lines only in the promo. I could go on and on and on and on and on. ',
                   blocks: [
                     {
                       id: 'eb171843',
                       type: 'urlLink',
                       model: {
-                        text: 'This is a long headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ',
+                        text: 'This is a long headline that should be truncated to 4 lines only in the promo. I could go on and on and on and on and on. ',
                         locator: 'https://www.bbc.co.uk/yoruba',
                         blocks: [
                           {
                             id: '45829882',
                             type: 'fragment',
                             model: {
-                              text: 'This is a long headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ',
+                              text: 'This is a long headline that should be truncated to 4 lines only in the promo. I could go on and on and on and on and on. ',
                               attributes: [],
                             },
                             position: [8, 2, 1, 1, 1, 1],
