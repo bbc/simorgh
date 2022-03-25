@@ -12,6 +12,9 @@ import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 const Wrapper = styled.main`
   margin: 0 auto;
   max-width: 61rem;
+  h1 {
+    color: #141414;
+  }
 `;
 
 const TopicPage = ({ pageData }) => {
