@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
 import { arrayOf, shape, string, oneOfType, object, func } from 'prop-types';
 import styled from '@emotion/styled';
+import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { getPica } from '@bbc/gel-foundations/typography';
 import { getSerifBold } from '@bbc/psammead-styles/font-styles';
 import { C_GREY_6, C_GREY_8, C_WHITE } from '@bbc/psammead-styles/colours';
+import { Link } from '@bbc/psammead-story-promo';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -19,8 +21,9 @@ import {
 import { ServiceContext } from '#contexts/ServiceContext';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
+import PromoTimestamp from '#components/Promo/timestamp';
 
-const Link = styled.a`
+const StyledLink = styled(Link)`
   ${({ script }) => script && getPica(script)}
   ${({ service }) => service && getSerifBold(service)}
   width: 100%;
@@ -31,7 +34,7 @@ const Link = styled.a`
   overflow-x: hidden;
   overflow-y: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 
   &:hover,
@@ -46,6 +49,7 @@ const Link = styled.a`
 `;
 
 const PromoBox = styled.div`
+  position: relative;
   background-color: ${C_WHITE};
   padding: ${GEL_SPACING_DBL};
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -61,6 +65,7 @@ const PromoBox = styled.div`
 `;
 
 const OperaPromoBox = styled.div`
+  position: relative;
   background-color: ${C_WHITE};
   padding: ${GEL_SPACING_DBL};
   margin-bottom: ${GEL_SPACING_DBL};
@@ -70,11 +75,19 @@ const OperaPromoBox = styled.div`
   }
 `;
 
+const TimeStamp = styled(PromoTimestamp)`
+  margin-top: ${GEL_SPACING};
+`;
+
 const Promo = ({ block, onClick }) => {
-  const { script, service } = useContext(ServiceContext);
+  const { script, service, serviceDatetimeLocale } = useContext(ServiceContext);
   const textBlock = filterForBlockType(
     pathOr({}, ['model', 'blocks'], block),
     'text',
+  );
+  const aresLinkBlock = filterForBlockType(
+    pathOr({}, ['model', 'blocks'], block),
+    'aresLink',
   );
   const href = pathOr(
     '',
@@ -86,6 +99,10 @@ const Promo = ({ block, onClick }) => {
     ['model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'text'],
     textBlock,
   );
+  const timestamp = path(
+    ['model', 'blocks', '0', 'model', 'timestamp'],
+    aresLinkBlock,
+  );
 
   const isOperaMini = useOperaMiniDetection();
 
@@ -93,9 +110,19 @@ const Promo = ({ block, onClick }) => {
 
   return (
     <WrapperPromoBox>
-      <Link href={href} service={service} script={script} onClick={onClick}>
+      <StyledLink
+        href={href}
+        service={service}
+        script={script}
+        onClick={onClick}
+      >
         {title}
-      </Link>
+      </StyledLink>
+      {timestamp && (
+        <TimeStamp serviceDatetimeLocale={serviceDatetimeLocale}>
+          {timestamp}
+        </TimeStamp>
+      )}
     </WrapperPromoBox>
   );
 };
