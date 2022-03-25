@@ -17,9 +17,9 @@ const TopicPromo = ({
       <Promo.Image src={imageUrl} alt={imageAlt}>
         <Promo.MediaIcon type={mediaType}>{mediaDuration}</Promo.MediaIcon>
       </Promo.Image>
-      <Promo.A href={link}>
-        <Promo.Heading>{title}</Promo.Heading>
-      </Promo.A>
+      <Promo.Heading>
+        <Promo.A href={link}>{title}</Promo.A>
+      </Promo.Heading>
       <Promo.Timestamp>{firstPublished}</Promo.Timestamp>
     </Promo>
   );

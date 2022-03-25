@@ -18,7 +18,7 @@ import timestampToMilliseconds from './timestampToMilliseconds';
 import addSummaryBlock from './addSummaryBlock';
 import cpsOnlyOnwardJourneys from './cpsOnlyOnwardJourneys';
 import insertPodcastPromo from './insertPodcastPromo';
-import addRecommendationsBlock from './addRecommendationsBlock';
+// import addRecommendationsBlock from './addRecommendationsBlock'; // OPTIMIZELY: 003_hindi_experiment_feature
 import addBylineBlock from './addBylineBlock';
 import addMpuBlock from './addMpuBlock';
 import addAnalyticsCounterName from './addAnalyticsCounterName';
@@ -29,7 +29,7 @@ import getAdditionalPageData from '../utils/getAdditionalPageData';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 import isListWithLink from '../../utils/isListWithLink';
 import addIndexToBlockGroups from '../../utils/sharedDataTransformers/addIndexToBlockGroups';
-// import addExperimentPlaceholderBlocks from './addExperimentPlaceholderBlocks';
+import addExperimentPlaceholderBlocks from './addExperimentPlaceholderBlocks'; // OPTIMIZELY: 003_hindi_experiment_feature
 
 export const only =
   (pageTypes, transformer) =>
@@ -59,10 +59,10 @@ const processOptimoBlocks = toggles => service =>
       augmentWithDisclaimer(toggles),
     ),
     addBylineBlock,
-    addRecommendationsBlock,
+    // addRecommendationsBlock, // OPTIMIZELY: 003_hindi_experiment_feature
     addMpuBlock,
     applyBlockPositioning,
-    // addExperimentPlaceholderBlocks(service),
+    addExperimentPlaceholderBlocks(service), // OPTIMIZELY: 003_hindi_experiment_feature
     addIdsToBlocks,
     cpsOnlyOnwardJourneys,
     addIndexToBlockGroups(isListWithLink, {

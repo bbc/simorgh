@@ -9,6 +9,7 @@ import {
   getReferrer,
   getAtUserId,
   isLocServeCookieSet,
+  onOnionTld,
   sanitise,
   getAtiUrl,
   getEventInfo,
@@ -211,7 +212,21 @@ export const buildATIPageTrackPath = ({
       value: getATIMarketingString(href, campaignType),
       wrap: false,
     },
-    {
+    ...getRSSMarketingString(href, campaignType),
+    ...(onOnionTld()
+      ? [
+          {
+            key: 'product_platform',
+            description: 'onion url',
+            value: 'tor-bbc',
+          },
+        ]
+      : []),
+  ];
+
+  return getAtiUrl(
+    pageViewBeaconValues.concat({
+      // the ref param should always be the last param because ATI will interpret it as part of the referrer URL
       key: 'ref',
       description: 'referrer url',
       value: getReferrer(platform, origin, previousPath),
@@ -219,11 +234,8 @@ export const buildATIPageTrackPath = ({
       // disable encoding for this parameter as ati does not appear to support
       // decoding of the ref parameter
       disableEncoding: true,
-    },
-    ...getRSSMarketingString(href, campaignType),
-  ];
-
-  return getAtiUrl(pageViewBeaconValues);
+    }),
+  );
 };
 
 export const buildATIEventTrackUrl = ({
