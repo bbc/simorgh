@@ -9,7 +9,7 @@ import TopicTitle from './TopicTitle';
 import TopicGrid from './TopicGrid';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 
-const Wrapper = styled.div`
+const Wrapper = styled.main`
   margin: 0 auto;
   max-width: 61rem;
 `;
@@ -27,26 +27,24 @@ const TopicPage = ({ pageData }) => {
   }));
 
   return (
-    <main role="main">
-      <Wrapper>
-        <ATIAnalytics data={pageData} />
-        <ChartbeatAnalytics data={pageData} />
-        <MetadataContainer
-          title={title}
-          lang={lang}
-          description={description}
-          openGraphType="website"
-        />
-        <LinkedData
-          type="CollectionPage"
-          seoTitle={title}
-          headline={title}
-          entities={promoEntities}
-        />
-        <TopicTitle>{title}</TopicTitle>
-        <TopicGrid promos={promos} />
-      </Wrapper>
-    </main>
+    <Wrapper role="main">
+      <ATIAnalytics data={pageData} />
+      <ChartbeatAnalytics data={pageData} />
+      <MetadataContainer
+        title={title}
+        lang={lang}
+        description={description}
+        openGraphType="website"
+      />
+      <LinkedData
+        type="CollectionPage"
+        seoTitle={title}
+        headline={title}
+        entities={promoEntities}
+      />
+      <TopicTitle>{title}</TopicTitle>
+      <TopicGrid promos={promos} />
+    </Wrapper>
   );
 };
 
