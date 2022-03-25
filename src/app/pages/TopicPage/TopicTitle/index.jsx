@@ -14,7 +14,7 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
-
+// color: #3f3f42
 const H1 = styled.h1`
   ${({ service }) => getSansBold(service)}
   margin: ${GEL_SPACING_TRPL}rem 0 ${GEL_SPACING_TRPL}rem 0;
