@@ -9,7 +9,7 @@ import TopicTitle from './TopicTitle';
 import TopicGrid from './TopicGrid';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 
-const Wrapper = styled.div`
+const Wrapper = styled.main`
   margin: 0 auto;
   max-width: 61rem;
 `;
@@ -27,7 +27,7 @@ const TopicPage = ({ pageData }) => {
   }));
 
   return (
-    <Wrapper>
+    <Wrapper role="main">
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <MetadataContainer

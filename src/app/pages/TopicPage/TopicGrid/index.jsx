@@ -21,6 +21,13 @@ import {
 import TopicPromo from '../TopicPromo';
 
 const direction = ({ dir }) => (dir === 'ltr' ? 'right' : 'left');
+
+const TopicList = styled.ul`
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+`;
+
 const Item = styled.div`
   vertical-align: top;
   display: inline-block;
@@ -52,13 +59,23 @@ const Wrapper = styled.div``;
 
 const TopicGrid = ({ promos }) => {
   const { dir } = useContext(ServiceContext);
+  const hasMultiplePromos = promos.length > 1;
+  const firstPromo = promos[0];
   return (
     <Wrapper>
-      {promos.map(promo => (
-        <Item key={promo.id} dir={dir}>
-          <TopicPromo {...promo} />
+      {hasMultiplePromos ? (
+        <TopicList role="list">
+          {promos.map(promo => (
+            <Item key={promo.id} dir={dir} as="li">
+              <TopicPromo {...promo} />
+            </Item>
+          ))}
+        </TopicList>
+      ) : (
+        <Item key={firstPromo.id} dir={dir}>
+          <TopicPromo {...firstPromo} />
         </Item>
-      ))}
+      )}
     </Wrapper>
   );
 };
