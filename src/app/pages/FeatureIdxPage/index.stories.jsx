@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
-import afriqueData from '#data/afrique/cpsAssets/48465371';
+import afriqueData from '#data/afrique/cpsAssets/reduced-48465371';
 import { FEATURE_INDEX_PAGE } from '#app/routes/utils/pageTypes';
 import FeatureIdxPage from '.';
 
