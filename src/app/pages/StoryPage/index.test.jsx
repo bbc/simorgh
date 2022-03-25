@@ -598,7 +598,7 @@ describe('Story Page', () => {
     expect(adBootstrap).not.toHaveAttribute('data-adcampaign');
   });
 
-  it.skip('should not render canonical ad bootstrap on amp', async () => {
+  it('should not render canonical ad bootstrap on amp', async () => {
     process.env.SIMORGH_APP_ENV = 'test';
     const toggles = {
       ads: {
