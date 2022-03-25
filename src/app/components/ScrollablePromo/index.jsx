@@ -107,7 +107,6 @@ const ScrollablePromo = ({ blocks, blockGroupIndex }) => {
           {title}
         </LabelComponent>
       )}
-
       {isSingleItem ? (
         <PromoWrapper dir={dir} ref={viewRef}>
           <Promo block={blocksWithoutTitle[0]} onClick={handleClickTracking} />
