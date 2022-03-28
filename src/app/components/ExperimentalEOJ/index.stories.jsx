@@ -2,19 +2,40 @@
 import React from 'react';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import { withKnobs } from '@storybook/addon-knobs';
-import styled from '@emotion/styled';
-import mundoRecommendationsData from '#pages/StoryPage/fixtureData/recommendations.ltr.json';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import ScrollablePromo from '.';
 
-const BackGround = styled.div`
-  background-color: #f6f6f6;
-  padding: 2rem;
-`;
-
 const ScrollablePromoWithOptimizely = withOptimizelyProvider(ScrollablePromo);
+
+const NEWS_FIXTURE = [
+  {
+    headlines: {
+      headline:
+        'Ashleigh Barty: World number one makes shock call to quit tennis',
+    },
+    locators: {
+      assetUri: 'news/world-australia-60843870',
+    },
+  },
+  {
+    headlines: {
+      headline: "Florida governor rejects transgender swimmer's win",
+    },
+    locators: {
+      assetUri: '/mundo/noticias-america-latina-52884902',
+    },
+  },
+  {
+    headlines: {
+      headline: 'Why are prices rising so quickly?',
+    },
+    locators: {
+      assetUri: '/mundo/noticias-internacional-53113381',
+    },
+  },
+];
 
 const ScrollablePromoComponent = ({
   data,
@@ -24,16 +45,14 @@ const ScrollablePromoComponent = ({
   translations,
 }) => (
   <ToggleContextProvider>
-    <BackGround>
-      <ServiceContextProvider
-        service={service}
-        script={script}
-        dir={dir}
-        translations={translations}
-      >
-        <ScrollablePromoWithOptimizely blocks={data} />
-      </ServiceContextProvider>
-    </BackGround>
+    <ServiceContextProvider
+      service={service}
+      script={script}
+      dir={dir}
+      translations={translations}
+    >
+      <ScrollablePromoWithOptimizely blocks={data} />
+    </ServiceContextProvider>
   </ToggleContextProvider>
 );
 
@@ -44,5 +63,5 @@ export default {
 };
 
 export const Recommendations = props => (
-  <ScrollablePromoComponent data={mundoRecommendationsData} {...props} />
+  <ScrollablePromoComponent data={NEWS_FIXTURE} {...props} />
 );
