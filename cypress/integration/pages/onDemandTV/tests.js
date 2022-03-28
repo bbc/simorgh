@@ -39,7 +39,7 @@ export default ({ service, pageType, variant, isAmp }) => {
             cy.log(`selector for iframe = iframe[src*="${iframeURL}"]`);
             const pathTested = embedUrl.replace(/^\//, `${envConfig.baseUrl}/`);
             cy.log(`path that will have response tested is ${pathTested}`);
-            iframeURL = iframeURL.split('.com').pop();
+
             cy.get(`iframe[src*="${iframeURL}"]`).should('be.visible');
             cy.testResponseCodeAndTypeRetry({
               // embedUrl may be relative - making it absolute to test the response
