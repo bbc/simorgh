@@ -19,6 +19,7 @@ import { GridItemMediumNoMargin } from '#app/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
+import idSanitiser from '#lib/utilities/idSanitiser';
 import Promo from './Promo';
 import PromoList from './PromoList';
 
@@ -80,11 +81,13 @@ const ScrollablePromo = ({ blocks, blockGroupIndex }) => {
 
   const isSingleItem = blocksWithoutTitle.length === 1;
 
+  const ariaLabel = title && idSanitiser(title);
+
   const a11yAttributes = {
     as: 'section',
     role: 'region',
-    ...(title
-      ? { 'aria-labelledby': title }
+    ...(ariaLabel
+      ? { 'aria-labelledby': ariaLabel }
       : {
           'aria-label': pathOr(
             'Related Content',
@@ -98,7 +101,7 @@ const ScrollablePromo = ({ blocks, blockGroupIndex }) => {
     <GridItemMediumNoMargin {...a11yAttributes}>
       {title && (
         <LabelComponent
-          id={title}
+          id={ariaLabel}
           data-testid="eoj-recommendations-heading"
           script={script}
           service={service}
