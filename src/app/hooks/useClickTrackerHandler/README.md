@@ -167,7 +167,8 @@ const Promo = () => {
   )
 };
 
-const Article = () => {
+const ArticlePage = () => {
 	const OptimizelyPromo = withOptimizelyProvider(Promo);
+	return OptimizelyPromo;
 };
 ```
