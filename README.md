@@ -77,7 +77,7 @@ Each render is passed through a set of HOC's (Higher Order Components) to enhanc
 - withData
 - withHashChangeHandler
 
-With a selection of page types passed through through withOptimizelyProvider, currently Article and Story pages
+With a selection of page types passed through withOptimizelyProvider, currently [Article](https://github.com/bbc/simorgh/blob/latest/src/app/pages/ArticlePage/index.jsx) and [Story](https://github.com/bbc/simorgh/blob/latest/src/app/pages/StoryPage/index.jsx) pages.
 
 #### withVariant
 
@@ -117,7 +117,7 @@ The withHashChangeHandler HOC is a wrapper applied to all pages that checks for 
 
 #### withOptimizelyProvider
 
-The withOptimizelyProvider HOC returns components that have been enhanced with access to an Optimizely client, that is used to run our A/B testing. This is done to limit bundle sizes, as we seperate some of our bundles into seperate page types, that means if we're only running A/B testing on certain page types, we can prevent poluting page type bundles with the weight of the SDK library we use for Optimizely.
+The withOptimizelyProvider HOC returns components that have been enhanced with access to an Optimizely client, that is used to run our A/B testing. This is done to limit bundle sizes, as we seperate some of our bundles into by page types, that means if we're only running A/B testing on certain page types, we can prevent poluting page type bundles with the weight of the SDK library we use for Optimizely.
 
 ### Adding a new Page type
 
