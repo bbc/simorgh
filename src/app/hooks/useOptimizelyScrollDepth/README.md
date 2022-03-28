@@ -12,7 +12,7 @@ This hook is currently only being used in conjunction with `OptimizelyPageViewTr
 ## Optimizely event
 To send an event, the event will need to be setup on Optimizely before it can be called. Each event name must be unique and the event corresponding to the event name can be called using the `optimizely.track` function.
 
-The following event names for the scroll depth thresholds are:
+The optimizely event names for the thresholds are:
 
 | Threshold | Event name |
 |:---------:|:----------:|
