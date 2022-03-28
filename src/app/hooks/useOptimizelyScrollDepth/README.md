@@ -1,18 +1,16 @@
 # useOptimizelyScrollDepth
 
-This hook is used to track scroll depth of a page and send an event to optimizely when the page view has reached a threshold. The current thresholds are set to 25%, 50%, 75% and 100% of the page. An event is only sent once for each threshold.
+This hook is used to track scroll depth of a page and send an event to Optimizely when the page view has reached a threshold. The current thresholds are set to 25%, 50%, 75% and 100% of the page. An event is only sent once for each threshold.
 
 The `useOptimizelyScrollDepth` tracker handles:
 
 - Tracking vertical scroll depth when scroll is activated.
-- Sends an event to optimizely when scroll reaches threshold.
+- Sends an event to Optimizely when scroll reaches threshold.
 
 This hook is currently only being used in conjunction with `OptimizelyPageViewTracking`.
 
-## Optimizely event
-To send an event, the event will need to be setup on Optimizely before it can be called. Each event name must be unique and the event corresponding to the event name can be called using the `optimizely.track` function.
-
-The optimizely event names for the thresholds are:
+## Optimizely Event
+The following table shows the thresholds with the corresponding event name (set up in Optimizely). When sending an events to Optimizely, we need to send the event name in order for Optimizely to process the event received.
 
 | Threshold | Event name |
 |:---------:|:----------:|
@@ -20,7 +18,6 @@ The optimizely event names for the thresholds are:
 | 50%       | scroll50   |
 | 75%       | scroll75   |
 | 100%      | scroll100  |
-
 
 ## Usage
 
