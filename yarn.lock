@@ -70,7 +70,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:7.17.8":
+"@babel/core@npm:7.17.8, @babel/core@npm:>=7.9.0":
   version: 7.17.8
   resolution: "@babel/core@npm:7.17.8"
   dependencies:
@@ -4363,6 +4363,18 @@ __metadata:
     react: ^16.8.0 || ^17.0.0
     react-dom: ^16.8.0 || ^17.0.0
   checksum: bc3f19cc7b485e758c287d8e8f56f2fc96799975dce231cfa4f0d83421fb16a5632314d0ac0b6a7258201fb12878661befaf53fabb32ddcb6a4dfc91180ec3ab
+  languageName: node
+  linkType: hard
+
+"@stylelint/postcss-css-in-js@npm:^0.37.2":
+  version: 0.37.2
+  resolution: "@stylelint/postcss-css-in-js@npm:0.37.2"
+  dependencies:
+    "@babel/core": ">=7.9.0"
+  peerDependencies:
+    postcss: ">=7.0.0"
+    postcss-syntax: ">=0.36.2"
+  checksum: cc9b5d1bd93b85c5e32754bf28b99031c783bd87a178542e42f84e627f00907c556d3c7839766fe47bb5a8eaa87eae89287e6cc939b9b91e1ab3e7c44acc3014
   languageName: node
   linkType: hard
 
@@ -16420,6 +16432,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"postcss-syntax@npm:^0.36.2":
+  version: 0.36.2
+  resolution: "postcss-syntax@npm:0.36.2"
+  peerDependencies:
+    postcss: ">=5.0.0"
+  checksum: 812baee602910903b8b77391583721613951d87dbc8baff140879069ff98423392675c4ddfdf073418f4a699ee5d4dd020914bad07504c62f9f333211bf979b8
+  languageName: node
+  linkType: hard
+
 "postcss-value-parser@npm:^4.1.0, postcss-value-parser@npm:^4.2.0":
   version: 4.2.0
   resolution: "postcss-value-parser@npm:4.2.0"
@@ -18499,6 +18520,7 @@ __metadata:
     "@storybook/manager-webpack5": 6.4.19
     "@storybook/react": 6.4.19
     "@storybook/theming": 6.4.19
+    "@stylelint/postcss-css-in-js": ^0.37.2
     "@testing-library/dom": 8.11.4
     "@testing-library/jest-dom": 5.16.3
     "@testing-library/react": 12.1.4
@@ -18570,6 +18592,7 @@ __metadata:
     ora: 5.4.1
     path-to-regexp: 6.2.0
     polyfill-crypto.getrandomvalues: 1.0.0
+    postcss-syntax: ^0.36.2
     prettier: 2.6.1
     prop-types: 15.8.1
     ramda: 0.28.0
