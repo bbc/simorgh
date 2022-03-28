@@ -1412,10 +1412,6 @@ describe('Story Page', () => {
 
               await waitFor(
                 () => {
-                  // console.log(
-                  //   'sendEventBeacon.mock.calls',
-                  //   sendEventBeacon.mock.calls,
-                  // );
                   const wsojViewCalls = sendEventBeacon.mock.calls.filter(
                     ([{ componentName, pageIdentifier }]) =>
                       componentName === 'wsoj' &&
