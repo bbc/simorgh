@@ -600,6 +600,28 @@ describe('Story Page', () => {
 
   it('should not render canonical ad bootstrap on amp', async () => {
     process.env.SIMORGH_APP_ENV = 'test';
+    const observers = new Map();
+    const observerSpy = jest
+      .spyOn(global, 'IntersectionObserver')
+      .mockImplementationOnce(cb => {
+        const item = {
+          callback: cb,
+          elements: new Set(),
+        };
+
+        const instance = {
+          observe: jest.fn(element => {
+            item.elements.add(element);
+          }),
+          disconnect: jest.fn(() => {
+            item.elements.clear();
+          }),
+        };
+
+        observers.set(instance, item);
+
+        return instance;
+      });
     const toggles = {
       ads: {
         enabled: true,
@@ -630,7 +652,12 @@ describe('Story Page', () => {
     );
 
     const adBootstrap = queryByTestId('adBootstrap');
-    expect(adBootstrap).not.toBeInTheDocument();
+
+    await waitFor(() => {
+      expect(adBootstrap).not.toBeInTheDocument();
+      observers.clear();
+      observerSpy.mockRestore();
+    });
   });
 
   it('should render the inline podcast promo component on russian pages with a paragraph of 940 characters and after 8th paragraph', async () => {
