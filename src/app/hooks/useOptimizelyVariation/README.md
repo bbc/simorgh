@@ -12,7 +12,7 @@ The `useOptimizelyVariation` hook handles:
 
 ### Usage
 
-Here's an example of it's usage:
+Here's an example of its usage:
 
 ```jsx
 import withOptimizelyProvider from '#app/containers/PageHandlers/withOptimizelyProvider';

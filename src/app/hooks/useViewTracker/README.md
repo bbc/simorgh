@@ -15,7 +15,7 @@ A view event is triggered when:
 
 `useViewTracker` will only send 1 view event per hook initialisation. In other words, when visiting a page containing a component that is tracking views and a view event is logged, then it is only logged once (per page visit) no matter how many times the user scrolls the component in and out of view.
 
-A view event is also fired to Optimizely using the same mechanism, but only if the underlying props contain an optimizely object. This method was chosen due to the fact that we don't currently use Optimizely in all of our page types, and the usage of this hook is are on page types which don't have Optimizely, so if we imported the optimizely object directly in this hook, we would pollute those page type bundles with the 100KB+ of the Optimizely SDK library.
+A view event is also fired to Optimizely using the same mechanism, but only if the underlying props contain an optimizely object. This method was chosen due to the fact that we don't currently use Optimizely in all of our page types, and the usage of this hook can be found on some page types which don't have Optimizely, so if we imported the optimizely object directly in this hook, we would pollute those page type bundles with the 100KB+ of the Optimizely SDK library.
 
 ### Props
 

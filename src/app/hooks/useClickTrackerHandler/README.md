@@ -29,7 +29,7 @@ A click event is sent to ATI when a user performs a valid click (as per [clickTy
 
 The hook returns an event handler promise which can be given to a component's `onClick` property to track clicks on that element and any of its children. After the element has been clicked once, it will no longer send ATI requests on click.
 
-A click event is also fired to Optimizely using the same mechanism, but only if the underlying props contain an optimizely object. This method was chosen due to the fact that we don't currently use Optimizely in all of our page types, and the usage of this hook is are on page types which don't have Optimizely, so if we imported the optimizely object directly in this hook, we would pollute those page type bundles with the 100KB+ of the Optimizely SDK library.
+A click event is also fired to Optimizely using the same mechanism, but only if the underlying props contain an optimizely object. This method was chosen due to the fact that we don't currently use Optimizely in all of our page types, and the usage of this hook are on page types which don't have Optimizely, so if we imported the optimizely object directly in this hook, we would pollute those page type bundles with the 100KB+ of the Optimizely SDK library.
 
 ### Props
 
