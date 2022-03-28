@@ -117,7 +117,7 @@ The withHashChangeHandler HOC is a wrapper applied to all pages that checks for 
 
 #### withOptimizelyProvider
 
-The withOptimizelyProvider HOC returns components that have been enhanced with access to an Optimizely client, that is used to run our A/B testing. This is done to limit bundle sizes, as we seperate some of our bundles into by page types, that means if we're only running A/B testing on certain page types, we can prevent poluting page type bundles with the weight of the SDK library we use for Optimizely.
+The withOptimizelyProvider HOC returns components that have been enhanced with access to an Optimizely client, that is used to run our A/B testing. This is done to limit bundle sizes, as we seperate some of our bundles by page type, that means if we're only running A/B testing on certain page types, we can prevent polluting page type bundles with the weight of the SDK library we use for Optimizely.
 
 ### Adding a new Page type
 
