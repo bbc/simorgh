@@ -10,6 +10,7 @@ import styled from '@emotion/styled';
 import Image from '@bbc/psammead-image';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
+import filterForBlockType from '#lib/utilities/blockHandlers';
 import { gridColumnsPrimary } from '../../pages/ArticlePage/ArticlePageGrid';
 
 export const getCustomTitle = path([
@@ -55,12 +56,21 @@ export const buildStoryPromos = optimoRelatedContent => {
       );
       if (!(imageBlock && contentBlock && imageDataBlock)) return null;
 
+      const aresLinkBlock = filterForBlockType(
+        pathOr({}, ['model', 'blocks'], item),
+        'aresLink',
+      );
+      const timestamp = path(
+        ['model', 'blocks', '0', 'model', 'timestamp'],
+        aresLinkBlock,
+      );
+
+      const headingTag = timestamp ? 'h3' : 'div';
+
       return {
-        // By default, the heading will be an h3 within the story promo component
-        // Because optimo promos will have no content below the heading, it should be a div instead
-        // TODO: when ARES add support for timestamps and summaries, this will need to be dynamically
-        // set to an h3 if the item has any content below the heading (eg, either a timestamp or a summary)
-        headingTag: 'div',
+        // The 'headingTag' is set to an h3 if the item has any content below the heading (eg, either a timestamp or a summary)
+        // or to a div if no content is below the heading
+        headingTag,
         id: item.id,
         headlines: {
           headline: contentBlock.text,
@@ -89,6 +99,7 @@ export const buildStoryPromos = optimoRelatedContent => {
             imageBlock,
           ),
         },
+        timestamp,
       };
     })
     .filter(Boolean);

@@ -8,6 +8,7 @@ import * as clickTracking from '#hooks/useClickTrackerHandler';
 import {
   threeLinks,
   oneLinkOnly,
+  oneLinkWithNoTitle,
   moreThanThreeLinks,
 } from './helpers/fixtureData';
 import ScrollablePromo from '.';
@@ -40,6 +41,24 @@ describe('ScrollablePromo', () => {
       <ScrollablePromoWithContext blocks={oneLinkOnly} />,
     );
     expect(container.childElementCount).toEqual(1);
+  });
+
+  it('should render single promo item with a title', () => {
+    const { container, getByTestId } = render(
+      <ScrollablePromoWithContext blocks={oneLinkOnly} />,
+    );
+    expect(container.childElementCount).toEqual(1);
+    expect(getByTestId('eoj-recommendations-heading')).toBeInTheDocument();
+  });
+
+  it('should render single promo item without a title', () => {
+    const { container, queryByTestId } = render(
+      <ScrollablePromoWithContext blocks={oneLinkWithNoTitle} />,
+    );
+    expect(container.childElementCount).toEqual(1);
+    expect(
+      queryByTestId('eoj-recommendations-heading'),
+    ).not.toBeInTheDocument();
   });
 
   it('should not render a list when there is only one promo', () => {
@@ -156,5 +175,9 @@ describe('ScrollablePromo', () => {
   shouldMatchSnapshot(
     'it should match a11y snapshot for list',
     <ScrollablePromoWithContext blocks={threeLinks} />,
+  );
+  shouldMatchSnapshot(
+    'it should match a11y snapshot for list with no title',
+    <ScrollablePromoWithContext blocks={oneLinkWithNoTitle} />,
   );
 });

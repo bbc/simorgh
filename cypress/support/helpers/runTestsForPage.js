@@ -51,7 +51,9 @@ const runTestsForPage = ({
           before(() => {
             Cypress.env('currentPath', currentPath);
 
-            const sdkKeyOptimizely =
+
+            const optimizelyKey =
+
               Cypress.env('APP_ENV') === 'live'
                 ? '4Rje1JY7YY1FhaiHJ88Zi'
                 : 'LptPKDnHyAFu9V12s5xCz';
@@ -60,7 +62,9 @@ const runTestsForPage = ({
               cy.intercept(
                 {
                   method: 'GET',
-                  pathname: `/datafiles/${sdkKeyOptimizely}.json`,
+
+                  pathname: `/datafiles/${optimizelyKey}.json`,
+
                 },
                 { statusCode: 404 },
               );
@@ -69,7 +73,9 @@ const runTestsForPage = ({
               cy.intercept(
                 {
                   method: 'GET',
-                  pathname: `/datafiles/${sdkKeyOptimizely}.json`,
+
+                  pathname: `/datafiles/${optimizelyKey}.json`,
+
                 },
                 { foo: '123' },
               );
