@@ -51,9 +51,7 @@ const runTestsForPage = ({
           before(() => {
             Cypress.env('currentPath', currentPath);
 
-
             const optimizelyKey =
-
               Cypress.env('APP_ENV') === 'live'
                 ? '4Rje1JY7YY1FhaiHJ88Zi'
                 : 'LptPKDnHyAFu9V12s5xCz';
@@ -64,7 +62,6 @@ const runTestsForPage = ({
                   method: 'GET',
 
                   pathname: `/datafiles/${optimizelyKey}.json`,
-
                 },
                 { statusCode: 404 },
               );
@@ -75,7 +72,6 @@ const runTestsForPage = ({
                   method: 'GET',
 
                   pathname: `/datafiles/${optimizelyKey}.json`,
-
                 },
                 { foo: '123' },
               );
