@@ -5,7 +5,6 @@ import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 // import { OptimizelyContext } from '@optimizely/react-sdk';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { RequestContext } from '#contexts/RequestContext';
 import useViewTracker from '#hooks/useViewTracker';
 // import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import isLive from '#lib/utilities/isLive';
@@ -18,8 +17,6 @@ const eventTrackingData = {
     componentName: 'features',
   },
 };
-
-const promoVariation = isLive() ? 'control' : 'variation_2';
 
 // const IMPROVED_PROMO_EXPERIMENT_ID = 'improved_promos';
 const IMPROVED_PROMO_VARIATIONS = {
@@ -40,8 +37,8 @@ const IMPROVED_PROMO_VARIATIONS = {
 
 const PromoListComponent = ({ promoItems, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
-  const { isAmp } = useContext(RequestContext);
   // const { optimizely } = useContext(OptimizelyContext);
+  const promoVariation = isLive() ? 'Control' : 'variation_2';
 
   // const promoVariation = useOptimizelyVariation(IMPROVED_PROMO_EXPERIMENT_ID);
   // const hasVariationKey = promoVariation !== null;
@@ -51,8 +48,6 @@ const PromoListComponent = ({ promoItems, dir }) => {
 
   const selectComponent = index => {
     switch (true) {
-      case isAmp:
-        return IMPROVED_PROMO_VARIATIONS.Control;
       case promoVariation === 'variation_1' && index === 0:
         return IMPROVED_PROMO_VARIATIONS.variation_1;
       case promoVariation === 'variation_2':
@@ -105,7 +100,7 @@ PromoListComponent.defaultProps = {
 const PromoComponent = ({ promo, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
   // const { optimizely } = useContext(OptimizelyContext);
-  const { isAmp } = useContext(RequestContext);
+  const promoVariation = isLive() ? 'Control' : 'variation_2';
 
   // const promoVariation = useOptimizelyVariation(IMPROVED_PROMO_EXPERIMENT_ID);
   // const hasVariationKey = promoVariation !== null;
@@ -115,8 +110,6 @@ const PromoComponent = ({ promo, dir }) => {
 
   const selectComponent = () => {
     switch (true) {
-      case isAmp:
-        return IMPROVED_PROMO_VARIATIONS.Control;
       case [
         'variation_1',
         'variation_2',
