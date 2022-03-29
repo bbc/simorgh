@@ -43,6 +43,10 @@ const Inner = styled.section`
     `}
 `;
 
+const DisclaimerP = styled(Paragraph)`
+  padding: 0;
+`;
+
 const DisclaimerComponent = ({ increasePaddingOnDesktop }) => {
   const { service, script, disclaimer, translations } =
     useContext(ServiceContext);
@@ -67,7 +71,7 @@ const DisclaimerComponent = ({ increasePaddingOnDesktop }) => {
         role="region"
         aria-label={disclaimerLabelTranslation}
       >
-        <Paragraph>
+        <DisclaimerP>
           {disclaimer &&
             Object.values(disclaimer).map((para, index) => {
               const linkText = path(['text'], para);
@@ -90,7 +94,7 @@ const DisclaimerComponent = ({ increasePaddingOnDesktop }) => {
                 para
               );
             })}
-        </Paragraph>
+        </DisclaimerP>
       </Inner>
     </GridItemLarge>
   );
