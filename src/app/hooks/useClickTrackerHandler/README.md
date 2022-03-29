@@ -55,7 +55,7 @@ Here are some examples of how you could setup click tracking for a component.
 ```jsx
 /*
  * Example 1 - Log 1 click event when a component is clicked.
- * In this example, one click event is triggered when the a tag is is clicked within the component and it will bring the user to the linked page.
+ * In this example, one click event is triggered when the anchor tag is clicked within the component and it will bring the user to the linked page.
  */
 
 const Promo = () => {
