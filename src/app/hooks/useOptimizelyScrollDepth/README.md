@@ -5,7 +5,7 @@ This hook is used to track scroll depth of a page and send an event to Optimizel
 The `useOptimizelyScrollDepth` tracker handles:
 
 - Tracking vertical scroll depth when scroll is activated.
-- Sends an event to Optimizely when scroll reaches threshold.
+- Sending an event to Optimizely when scroll reaches threshold.
 
 This hook is currently only being used in conjunction with `OptimizelyPageViewTracking`.
 
