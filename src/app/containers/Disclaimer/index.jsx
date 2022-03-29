@@ -3,7 +3,7 @@ import { bool } from 'prop-types';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
-import InlineLink from '@bbc/psammead-inline-link';
+import Paragraph from '@bbc/psammead-paragraph';
 import { getSansLight } from '@bbc/psammead-styles/font-styles';
 import { getLongPrimer } from '@bbc/gel-foundations/typography';
 import {
@@ -21,6 +21,7 @@ import { GridItemLarge } from '#app/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import isEmpty from 'ramda/src/isEmpty';
+import InlineLink from '../InlineLink';
 
 const Inner = styled.section`
   ${({ script }) => script && getLongPrimer(script)}
@@ -66,19 +67,30 @@ const DisclaimerComponent = ({ increasePaddingOnDesktop }) => {
         role="region"
         aria-label={disclaimerLabelTranslation}
       >
-        <strong>
-          {Object.values(disclaimer).map(para => {
-            const linkText = path(['text'], para);
-            const linkUrl = path(['url'], para);
-            return linkUrl ? (
-              <InlineLink href={linkUrl} key={linkText}>
-                {linkText}
-              </InlineLink>
-            ) : (
-              para
-            );
-          })}
-        </strong>
+        <Paragraph>
+          {disclaimer &&
+            Object.values(disclaimer).map((para, index) => {
+              const linkText = path(['text'], para);
+              const linkUrl = path(['url'], para);
+              const isExternalLink = path(['isExternal'], para);
+              return linkUrl ? (
+                <InlineLink
+                  key={linkText}
+                  locator={linkUrl}
+                  blocks={[
+                    {
+                      id: `disclaimerLink-${index}`,
+                      type: 'fragment',
+                      model: { text: linkText, attributes: [] },
+                    },
+                  ]}
+                  isExternal={isExternalLink}
+                />
+              ) : (
+                para
+              );
+            })}
+        </Paragraph>
       </Inner>
     </GridItemLarge>
   );
