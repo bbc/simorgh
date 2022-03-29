@@ -73,7 +73,7 @@ const Promo = () => {
 
 /*
  * Example 2 - Log 1 click event when any of the buttons are clicked
- * In this example, if any of the buttons are clicked a click event will
+ * In this example, if any of the buttons are clicked, a click event will
  * be logged because the handler is given to the onClick property of the parent
  * element.
  * Note: If 'Button 1' is clicked and then 'Button 2' is clicked afterwards, only
