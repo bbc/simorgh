@@ -149,7 +149,7 @@ const TopStories = () => {
  */
 
 import { useContext } from 'react';
-import  withOptimizelyProvider from '#app/containers/PageHandlers/withOptimizelyProvider';
+import withOptimizelyProvider from '#app/containers/PageHandlers/withOptimizelyProvider';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 
 const Promo = () => {
