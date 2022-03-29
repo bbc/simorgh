@@ -12,6 +12,8 @@ const OptimizelyArticleCompleteTracking = () => {
   const [pageCompleteSent, setPageCompleteSent] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
+  if (isAmp) return null;
+
   const variation = useOptimizelyVariation(OPTIMIZELY_CONFIG.featureId);
 
   const sendPageCompleteEvent =
@@ -44,8 +46,6 @@ const OptimizelyArticleCompleteTracking = () => {
       });
     }
   }, [sendPageCompleteEvent, optimizely]);
-
-  if (isAmp) return null;
 
   return <div ref={ref} aria-hidden="true" />;
 };
