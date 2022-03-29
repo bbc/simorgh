@@ -145,7 +145,7 @@ const TopStories = () => {
 
 /*
  * Example 4 - Log 1 click event for both ATI and Optimizely when a component is clicked.
- * In this example, one click event is triggered when the a tag is is clicked within the component and it will bring the user to the linked page.
+ * In this example, one click event is triggered when the anchor tag is clicked within the component and it will redirect the user to the url.
  */
 
 import { useContext } from 'react';
