@@ -1,11 +1,17 @@
 import styled from '@emotion/styled';
-import { C_EBON } from '@bbc/psammead-styles/colours';
+import { C_EBON, C_METAL } from '@bbc/psammead-styles/colours';
 
 const A = styled.a`
   color: ${C_EBON};
   text-decoration: none;
   &:hover {
     text-decoration: underline;
+  }
+  &:focus {
+    text-decoration: underline;
+  }
+  &:visited {
+    color: ${C_METAL};
   }
   &:before {
     position: absolute;
