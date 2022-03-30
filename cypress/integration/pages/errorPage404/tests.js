@@ -117,8 +117,10 @@ export const testsThatFollowSmokeTestConfig = ({
             Cypress.browser.isHeadless &&
             snapshotConfig(service)
           ) {
+            cy.setCookie('ckns_privacy', 'july2019');
+            cy.setCookie('ckns_policy', '111');
+            cy.setCookie('ckns_explicit', '1');
             cy.document().its('fonts.status').should('equal', 'loaded');
-
             cy.matchImageSnapshot();
           } else {
             cy.log('Snapshot skipped in headed mode');
