@@ -46,11 +46,12 @@ const MostReadWrapper = ({ children }) => (
   </FrontPageMostReadSection>
 );
 
-const renderMostRead = mostReadEndpointOverride => (
+const renderMostRead = (mostReadEndpointOverride, isAmp, mostReadData) => (
   <MostReadContainer
     mostReadEndpointOverride={mostReadEndpointOverride}
     columnLayout="twoColumn"
     wrapper={MostReadWrapper}
+    initialData={isAmp ? mostReadData : null}
   />
 );
 
@@ -120,7 +121,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
               {group.type === 'top-stories' && <MPUContainer />}
             </Fragment>
           ))}
-          {!hasUsefulLinks && renderMostRead(mostReadEndpointOverride)}
+          {!hasUsefulLinks && renderMostRead(mostReadEndpointOverride, isAmp)}
         </IndexPageContainer>
       </main>
     </>

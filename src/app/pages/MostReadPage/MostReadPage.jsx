@@ -90,6 +90,8 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
     children: node.isRequired,
   };
 
+  console.log(pageData);
+
   return (
     <>
       <ATIAnalytics data={pageData} />
@@ -103,6 +105,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
       />
       <LinkedData type="WebPage" seoTitle={header} />
       <main role="main" data-e2e="most-read">
+        <p>hello {mostReadEndpointOverride ? 'true' : 'false'}</p>
         <IndexPageContainer>
           <MostReadContainer
             mostReadEndpointOverride={mostReadEndpointOverride}

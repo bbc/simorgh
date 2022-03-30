@@ -18,7 +18,7 @@ const MostReadContainer = ({
   columnLayout,
   size,
   wrapper,
-  serverRenderOnAmp,
+  // serverRenderOnAmp,
 }) => {
   const { variant, isAmp } = useContext(RequestContext);
   const {
@@ -34,30 +34,32 @@ const MostReadContainer = ({
   if (!mostReadToggleEnabled) {
     return null;
   }
+
   // Do not render on AMP when it is not the most read page
   // We only want to render most read on AMP for the "/popular/read" pages
-  if (isAmp && !serverRenderOnAmp) {
-    console.log('wrongAmp');
-    return null;
-  }
+  // if (isAmp && !serverRenderOnAmp) {
+  //   return null;
+  // }
 
-  if (isAmp && serverRenderOnAmp) {
-    console.log('working');
-    return <MostReadAmp />;
-  }
+  // if (isAmp) {
+  //   return <MostReadAmp />;
+  // }
 
   const endpoint =
     mostReadEndpointOverride || getMostReadEndpoint({ service, variant });
 
   return (
-    <Canonical
-      initialData={initialData}
-      endpoint={endpoint}
-      wrapper={wrapper}
-      columnLayout={columnLayout}
-      size={size}
-      eventTrackingData={blockLevelEventTrackingData}
-    />
+    <>
+      <p>This is printing {initialData ? 'true' : 'false'}</p>
+      <Canonical
+        initialData={initialData}
+        endpoint={endpoint}
+        wrapper={wrapper}
+        columnLayout={columnLayout}
+        size={size}
+        eventTrackingData={blockLevelEventTrackingData}
+      />
+    </>
   );
 };
 
