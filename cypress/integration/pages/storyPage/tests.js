@@ -2,8 +2,6 @@ import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import snapshotConfig from '../../../support/helpers/snapshotConfig';
 import getDataUrl from '../../../support/helpers/getDataUrl';
-import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import getServiceWithVariantName from '../../../support/helpers/getServiceWithVariantName';
 import topicTagsTest from '../../../support/helpers/topicTagsTest';
 import envConfig from '../../../support/config/envs';
 
@@ -14,11 +12,7 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
 };
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
-export const testsThatFollowSmokeTestConfig = ({
-  service,
-  pageType,
-  variant,
-}) => {
+export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
   describe(`testsThatFollowSmokeTestConfig to run for ${service} ${pageType}`, () => {
     describe(`STY Body`, () => {
       it('should render a description for the page', () => {
@@ -55,30 +49,6 @@ export const testsThatFollowSmokeTestConfig = ({
           }
         });
       });
-    });
-
-    describe(`STY Secondary Column`, () => {
-      it('should have at least one story promo in Features', () => {
-        cy.log(service);
-        if (service !== 'newsround' && service !== 'news') {
-          const secondaryColumnUrl =
-            variant === 'default'
-              ? `/${appConfig[service].default.service}/sty-secondary-column.json`
-              : `/${getServiceWithVariantName(
-                  service,
-                )}/sty-secondary-column/${variant}.json`;
-          cy.request(secondaryColumnUrl).then(({ body }) => {
-            if (body.features) {
-              cy.get('[data-e2e=features-analysis-heading]').within(() => {
-                cy.get('[data-e2e=story-promo]').first().should('be.visible');
-              });
-            }
-          });
-        } else {
-          cy.log('No features section on newsround or news');
-        }
-      });
-
       it('FOR /news/technology-60561162.amp ONLY - should render topic tags if they are in the json, and they should navigate to correct topic page', () => {
         if (service === 'news' && Cypress.env('APP_ENV') !== 'local') {
           const url = '/news/technology-60561162.amp?renderer_env=live';
@@ -88,7 +58,9 @@ export const testsThatFollowSmokeTestConfig = ({
           cy.log('Test is only for /news/technology-60561162.amp');
         }
       });
+    });
 
+    describe(`STY Secondary Column`, () => {
       it.skip('should render podcast promo if in json and should navigate to correct podcast page', () => {
         cy.log(service);
         if (Cypress.env('APP_ENV') !== 'local') {

@@ -4,7 +4,6 @@ import getDataUrl from '../../../support/helpers/getDataUrl';
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import { getBlockByType, getBlockData } from './helpers';
-import getServiceWithVariantName from '../../../support/helpers/getServiceWithVariantName';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasFigure = service =>
@@ -216,25 +215,6 @@ export const testsThatFollowSmokeTestConfig = ({
       });
     });
     describe(`Articles Secondary Column`, () => {
-      it('should have at least one story promo in Features', () => {
-        if (service !== 'scotland') {
-          const secondaryColumnUrl =
-            variant === 'default'
-              ? `/${appConfig[service].default.service}/sty-secondary-column.json`
-              : `/${getServiceWithVariantName(
-                  service,
-                )}/sty-secondary-column/${variant}.json`;
-          cy.request(secondaryColumnUrl).then(({ body }) => {
-            if (body.features) {
-              cy.get('[data-e2e=features-analysis-heading]').within(() => {
-                cy.get('[data-e2e=story-promo]').first().should('be.visible');
-              });
-            }
-          });
-        } else {
-          cy.log('No secondary column on scotland service');
-        }
-      });
       it.skip('should render podcast promo if in json and should navigate to correct podcast page', () => {
         cy.log(service);
         if (Cypress.env('APP_ENV') !== 'local') {
