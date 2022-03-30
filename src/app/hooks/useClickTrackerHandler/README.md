@@ -4,6 +4,7 @@ The `useClickTracker` hook handles:
 
 - Tracking when an element has been clicked
 - Sending the event to ATI
+- Sending the event to Optimizely (If applicable)
 
 `useClickTracker` must be used in combination with [`useViewTracker`](https://github.com/bbc/simorgh/blob/latest/src/app/hooks/useViewTracker/index.jsx) so ATI can calculate the view/click ratio of an element.
 
@@ -28,6 +29,19 @@ A click event is sent to ATI when a user performs a valid click (as per [clickTy
 
 The hook returns an event handler promise which can be given to a component's `onClick` property to track clicks on that element and any of its children. After the element has been clicked once, it will no longer send ATI requests on click.
 
+A click event is also fired to Optimizely using the same mechanism, but only if the underlying props contain an optimizely object. This method was chosen due to the fact that we don't currently use Optimizely in all of our page types, and the usage of this hook are on page types which don't have Optimizely, so if we imported the optimizely object directly in this hook, we would pollute those page type bundles with the 100KB+ of the Optimizely SDK library.
+
+### Props
+
+| Argument          | Type    | Required | Example                                                                                                                                                                                                              |
+| ----------------- | ------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| campaignID        | string  | no       | Provide this to override the `campaignID` provided by the `EventTrackingContext` component. This is useful for specific campaigns where you want to use a custom campaign ID                                         |
+| componentName     | string  | yes      | The name of the component or an url encoded title of a promo e.g. `most_read` or `This%20is%20a%20promo%20title`.                                                                                                    |
+| format            | string  | no       | Can be used to track things like the position of a promo e.g. `[CHD=promo::2]`                                                                                                                                       |
+| url               | string  | no       | If the component being tracked changes the location of the user upon click then it's necessary to include the URL through this prop.                                                                                 |
+| preventNavigation | boolean | no       | Use this if you need to perform any additional tasks after sending the click event by setting to `true` and awaiting the event handler callback. Ensure you redirect the user to their destination when you are done |
+| optimizely | object | no       | Need to provide this prop if event tracking is needed for Optimizely, the standard method is to consume the Optimizely context via React's `useContext` and imported from the Optimizely SDK `import { OptimizelyContext } from '@optimizely/react-sdk';`, the HOC `withOptimizelyProvider` needs to be located higher up in the component tree as well for this to work. |
+
 ### Usage
 
 Here are some examples of how you could setup click tracking for a component.
@@ -39,11 +53,12 @@ Here are some examples of how you could setup click tracking for a component.
 3. Log separate click events for each of a number of elements on click.
 
 ```jsx
+/*
+ * Example 1 - Log 1 click event when a component is clicked.
+ * In this example, one click event is triggered when the anchor tag is clicked within the component and it will bring the user to the linked page.
+ */
+
 const Promo = () => {
-  /*
-   * Example 1 - Log 1 click event when a component is clicked.
-   * In this example, one click event is triggered when the a tag is is clicked within the component and it will bring the user to the linked page.
-   */
   const clickTrackerHandler = useClickTrackerHandler({
     componentName: 'promo',
     url: 'promo-link',
@@ -56,15 +71,16 @@ const Promo = () => {
   )
 };
 
+/*
+ * Example 2 - Log 1 click event when any of the buttons are clicked
+ * In this example, if any of the buttons are clicked, a click event will
+ * be logged because the handler is given to the onClick property of the parent
+ * element.
+ * Note: If 'Button 1' is clicked and then 'Button 2' is clicked afterwards, only
+ * one click event will be logged.
+ */
+
 const Promo = () => {
-  /*
-   * Example 2 - Log 1 click event when any of the buttons are clicked
-   * In this example, if any of the buttons are clicked a click event will
-   * be logged because the handler is given to the onClick property of the parent
-   * element.
-   * Note: If 'Button 1' is clicked and then 'Button 2' is clicked afterwards, only
-   * one click event will be logged.
-   */
   const clickTrackerHandler = useClickTrackerHandler({
     componentName: 'promo',
   });
@@ -78,13 +94,14 @@ const Promo = () => {
   )
 };
 
+/*
+ * Example 3 - Log separate click events per component item clicked.
+ * By initialising the hook INSIDE of the `topStories` map
+ * callback function and assigning each handler to each DOM element's onClick
+ * property, a click event is logged for each top story item clicked
+ */
+
 const TopStories = () => {
-  /*
-   * Example 3 - Log separate click events per component item clicked.
-   * By initialising the hook INSIDE of the `topStories` map
-   * callback function and assigning each handler to each DOM element's onClick
-   * property, a click event is logged for each top story item clicked
-   */
   const eventTrackingData = {
     componentName: 'top-stories',
   };
@@ -125,14 +142,33 @@ const TopStories = () => {
     </ol>
   );
 };
+
+/*
+ * Example 4 - Log 1 click event for both ATI and Optimizely when a component is clicked.
+ * In this example, one click event is triggered when the anchor tag is clicked within the component and it will redirect the user to the url.
+ */
+
+import { useContext } from 'react';
+import withOptimizelyProvider from '#app/containers/PageHandlers/withOptimizelyProvider';
+import { OptimizelyContext } from '@optimizely/react-sdk';
+
+const Promo = () => {
+  const { optimizely } = useContext(OptimizelyContext);
+  const clickTrackerHandler = useClickTrackerHandler({
+    componentName: 'promo',
+    url: 'promo-link',
+    optimizely,
+  });
+
+  return (
+    <div>
+      <a href="promo-link" onClick={clickTrackerHandler}>Promoted content</a>
+    </div>
+  )
+};
+
+const ArticlePage = () => {
+	const OptimizelyPromo = withOptimizelyProvider(Promo);
+	return OptimizelyPromo;
+};
 ```
-
-### Props
-
-| Argument          | Type    | Required | Example                                                                                                                                                                                                              |
-| ----------------- | ------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| campaignID        | string  | no       | Provide this to override the `campaignID` provided by the `EventTrackingContext` component. This is useful for specific campaigns where you want to use a custom campaign ID                                         |
-| componentName     | string  | yes      | The name of the component or an url encoded title of a promo e.g. `most_read` or `This%20is%20a%20promo%20title`.                                                                                                    |
-| format            | string  | no       | Can be used to track things like the position of a promo e.g. `[CHD=promo::2]`                                                                                                                                       |
-| url               | string  | no       | If the component being tracked changes the location of the user upon click then it's necessary to include the URL through this prop.                                                                                 |
-| preventNavigation | boolean | no       | Use this if you need to perform any additional tasks after sending the click event by setting to `true` and awaiting the event handler callback. Ensure you redirect the user to their destination when you are done |
