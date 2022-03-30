@@ -277,9 +277,8 @@ export const testsThatFollowSmokeTestConfig = ({
       it('Articles', () => {
         if (Cypress.env('APP_ENV') === 'local' && Cypress.browser.isHeadless) {
           cy.url().then(url => {
+            cy.document().its('fonts.status').should('equal', 'loaded');
             if (!url.includes('.amp')) {
-              cy.document().its('fonts.status').should('equal', 'loaded');
-
               cy.scrollTo('bottom', { duration: 6000 });
               cy.scrollTo('top', { duration: 4000 });
               cy.matchImageSnapshot({
