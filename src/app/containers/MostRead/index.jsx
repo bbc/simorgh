@@ -5,6 +5,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import Canonical from './Canonical';
+import MostReadAmp from './Amp/index.amp';
 import mostReadShape from './utilities/mostReadShape';
 
 const blockLevelEventTrackingData = {
@@ -36,7 +37,13 @@ const MostReadContainer = ({
   // Do not render on AMP when it is not the most read page
   // We only want to render most read on AMP for the "/popular/read" pages
   if (isAmp && !serverRenderOnAmp) {
+    console.log('wrongAmp');
     return null;
+  }
+
+  if (isAmp && serverRenderOnAmp) {
+    console.log('working');
+    return <MostReadAmp />;
   }
 
   const endpoint =

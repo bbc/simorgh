@@ -13,12 +13,12 @@ const staticMostReadURL = (service, variant) =>
     : `./data/${service}/mostRead/index.json`;
 
 // eslint-disable-next-line react/prop-types
-const Component = ({ service, variant, columnLayout }) => (
+const Component = ({ service, variant, columnLayout, isAmp = false }) => (
   <ToggleContextProvider>
     <RequestContextProvider
       bbcOrigin={`http://localhost/${service}/articles/c0000000000o`}
       id="c0000000000o"
-      isAmp={false}
+      isAmp={isAmp}
       pageType={ARTICLE_PAGE}
       service={service}
       statusCode={200}
@@ -29,6 +29,7 @@ const Component = ({ service, variant, columnLayout }) => (
         <MostReadContainer
           mostReadEndpointOverride={staticMostReadURL(service, variant)}
           columnLayout={columnLayout}
+          serverRenderOnAmp
         />
       </ServiceContextProvider>
     </RequestContextProvider>
@@ -53,3 +54,5 @@ export const ArticlePage5Columns = props => (
 export const StoryPage1Column = props => (
   <Component {...props} columnLayout="oneColumn" />
 );
+
+export const MostReadAmp = props => <Component {...props} isAmp />;
