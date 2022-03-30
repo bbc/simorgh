@@ -65,11 +65,15 @@ const TopicGrid = ({ promos }) => {
     <Wrapper>
       {hasMultiplePromos ? (
         <TopicList role="list">
-          {promos.map(promo => (
-            <Item key={promo.id} dir={dir} as="li">
-              <TopicPromo {...promo} />
-            </Item>
-          ))}
+          {promos.map((promo, index) => {
+            const isFirstPromo = index === 0;
+
+            return (
+              <Item key={promo.id} dir={dir} as="li">
+                <TopicPromo {...promo} lazy={!isFirstPromo} />
+              </Item>
+            );
+          })}
         </TopicList>
       ) : (
         <Item key={firstPromo.id} dir={dir}>
