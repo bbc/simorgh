@@ -191,21 +191,33 @@ const countFrostedPromos = container =>
   container.querySelectorAll('[data-testid^=frosted-promo]').length;
 
 describe('CpsFeaturesAnalysis - Frosted Promos', () => {
-  it('should render without the top high impact promo', () => {
+  it('should render without all high impact promos on live', () => {
+    isLive.mockImplementationOnce(() => true);
     const { container } = renderFeaturesAnalysis();
 
     expect(countFrostedPromos(container)).toBe(0);
   });
 
-  it('should not render the top high impact promo, when on amp', () => {
-    useOptimizelyVariation.mockReturnValue('variation_1');
-
+  it('should render without all high impact promos, when on amp and live', () => {
+    isLive.mockImplementationOnce(() => true);
     const { container } = renderFeaturesAnalysis({ isAmp: true });
 
     expect(countFrostedPromos(container)).toBe(0);
   });
 
-  it('should render with the top high impact promo', () => {
+  it('should render with all high impact promos', () => {
+    const { container } = renderFeaturesAnalysis();
+
+    expect(countFrostedPromos(container)).toBe(2);
+  });
+
+  it('should render without all high impact promos, when on amp', () => {
+    const { container } = renderFeaturesAnalysis({ isAmp: true });
+
+    expect(countFrostedPromos(container)).toBe(0);
+  });
+
+  it.skip('should render with the top high impact promo', () => {
     useOptimizelyVariation.mockReturnValue('variation_1');
 
     const { container } = renderFeaturesAnalysis();
@@ -213,15 +225,7 @@ describe('CpsFeaturesAnalysis - Frosted Promos', () => {
     expect(countFrostedPromos(container)).toBe(1);
   });
 
-  it('should render with all high impact promos', () => {
-    useOptimizelyVariation.mockReturnValue('variation_2');
-
-    const { container } = renderFeaturesAnalysis();
-
-    expect(countFrostedPromos(container)).toBe(2);
-  });
-
-  it('should not render the high impact promos, when no variation is specified', () => {
+  it.skip('should not render the high impact promos, when no variation is specified', () => {
     useOptimizelyVariation.mockReturnValue(null);
 
     const { container } = renderFeaturesAnalysis();
