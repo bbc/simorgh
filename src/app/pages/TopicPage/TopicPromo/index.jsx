@@ -15,7 +15,11 @@ const TopicPromo = ({
 }) => {
   return (
     <Promo>
-      <Promo.Image src={imageUrl} alt={imageAlt} loading={lazy ? 'lazy' : null}>
+      <Promo.Image
+        src={imageUrl}
+        alt={imageAlt}
+        loading={lazy ? 'lazy' : 'eager'}
+      >
         <Promo.MediaIcon type={mediaType}>{mediaDuration}</Promo.MediaIcon>
       </Promo.Image>
       <Promo.Heading>
