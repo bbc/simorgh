@@ -1,5 +1,6 @@
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
+import snapshotConfig from '../../../support/helpers/snapshotConfig';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import getServiceWithVariantName from '../../../support/helpers/getServiceWithVariantName';
@@ -155,12 +156,16 @@ export const testsThatFollowSmokeTestConfig = ({
     });
     describe(`Visual comparison tests for ${service} ${pageType}`, () => {
       it('Story Page', () => {
-        if (Cypress.env('APP_ENV') === 'local' && Cypress.browser.isHeadless) {
+        if (
+          Cypress.env('APP_ENV') === 'local' &&
+          Cypress.browser.isHeadless &&
+          snapshotConfig(service)
+        ) {
           cy.url().then(url => {
+            cy.document().its('fonts.status').should('equal', 'loaded');
             if (!url.includes('.amp')) {
               cy.scrollTo('bottom', { duration: 6000 });
               cy.scrollTo('top', { duration: 6000 });
-              cy.document().its('fonts.status').should('equal', 'loaded');
 
               cy.matchImageSnapshot({ capture: 'fullPage' });
             } else {

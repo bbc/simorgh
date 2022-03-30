@@ -8,6 +8,7 @@ import {
   isBrand,
 } from '../../../support/helpers/onDemandRadioTv';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
+import snapshotConfig from '../../../support/helpers/snapshotConfig';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 import processRecentEpisodes from '../../../../src/app/routes/utils/processRecentEpisodes';
 
@@ -137,7 +138,11 @@ export default ({ service, pageType, variant, isAmp }) => {
     });
     describe(`Visual comparison tests for ${service} ${pageType}`, () => {
       it('On Demand TV', () => {
-        if (Cypress.env('APP_ENV') === 'local' && Cypress.browser.isHeadless) {
+        if (
+          Cypress.env('APP_ENV') === 'local' &&
+          Cypress.browser.isHeadless &&
+          snapshotConfig(service)
+        ) {
           cy.document().its('fonts.status').should('equal', 'loaded');
 
           cy.matchImageSnapshot({ capture: 'fullPage' });

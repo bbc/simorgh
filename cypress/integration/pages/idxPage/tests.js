@@ -1,3 +1,5 @@
+import snapshotConfig from '../../../support/helpers/snapshotConfig';
+
 export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
 };
@@ -7,7 +9,11 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
   describe(`Running tests for ${service} ${pageType}`, () => {
     describe(`Visual comparison tests for ${service} ${pageType}`, () => {
       it('Index Page', () => {
-        if (Cypress.env('APP_ENV') === 'local' && Cypress.browser.isHeadless) {
+        if (
+          Cypress.env('APP_ENV') === 'local' &&
+          Cypress.browser.isHeadless &&
+          snapshotConfig(service)
+        ) {
           cy.url().then(url => {
             if (!url.includes('.amp')) {
               cy.setCookie('ckns_privacy', 'july2019');
@@ -23,6 +29,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
             }
           });
         } else {
+          cy.document().its('fonts.status').should('equal', 'loaded');
           cy.log('Snapshot skipped in headed mode');
         }
       });

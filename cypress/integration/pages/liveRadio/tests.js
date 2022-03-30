@@ -1,3 +1,4 @@
+import snapshotConfig from '../../../support/helpers/snapshotConfig';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 
 // For testing important features that differ between services, e.g. Timestamps.
@@ -35,7 +36,11 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
     });
     describe(`Visual comparison tests for ${service} ${pageType}`, () => {
       it('Live Radio', () => {
-        if (Cypress.env('APP_ENV') === 'local' && Cypress.browser.isHeadless) {
+        if (
+          Cypress.env('APP_ENV') === 'local' &&
+          Cypress.browser.isHeadless &&
+          snapshotConfig(service)
+        ) {
           cy.document().its('fonts.status').should('equal', 'loaded');
 
           // The wait is for the player to load and fade in

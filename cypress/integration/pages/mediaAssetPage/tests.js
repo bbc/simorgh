@@ -1,3 +1,5 @@
+import snapshotConfig from '../../../support/helpers/snapshotConfig';
+
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRun = ({ service, pageType }) => {
@@ -9,7 +11,11 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
   describe(`Running tests for ${service} ${pageType}`, () => {
     describe(`Visual comparison tests for ${service} ${pageType}`, () => {
       it('Media Asset Page', () => {
-        if (Cypress.env('APP_ENV') === 'local' && Cypress.browser.isHeadless) {
+        if (
+          Cypress.env('APP_ENV') === 'local' &&
+          Cypress.browser.isHeadless &&
+          snapshotConfig(service)
+        ) {
           cy.url().then(url => {
             if (!url.includes('.amp')) {
               cy.setCookie('ckns_privacy', 'july2019');
@@ -22,6 +28,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
 
               cy.matchImageSnapshot({ capture: 'fullPage' });
             } else {
+              cy.document().its('fonts.status').should('equal', 'loaded');
               cy.matchImageSnapshot();
             }
           });

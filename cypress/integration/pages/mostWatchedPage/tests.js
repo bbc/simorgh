@@ -1,5 +1,6 @@
 import path from 'ramda/src/path';
 import config from '../../../support/config/services';
+import snapshotConfig from '../../../support/helpers/snapshotConfig';
 
 export default ({ service, pageType, variant }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
@@ -87,7 +88,8 @@ export default ({ service, pageType, variant }) => {
         it('Articles', () => {
           if (
             Cypress.env('APP_ENV') === 'local' &&
-            Cypress.browser.isHeadless
+            Cypress.browser.isHeadless &&
+            snapshotConfig(service)
           ) {
             cy.document().its('fonts.status').should('equal', 'loaded');
 

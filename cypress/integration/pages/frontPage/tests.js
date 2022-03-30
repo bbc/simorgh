@@ -1,3 +1,5 @@
+import snapshotConfig from '../../../support/helpers/snapshotConfig';
+
 // Limiting to one service for now
 const serviceHasPublishedPromo = service => service === 'arabic';
 
@@ -60,7 +62,11 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
     });
     describe(`Visual comparison tests for ${service} ${pageType}`, () => {
       it('Front page', () => {
-        if (Cypress.env('APP_ENV') === 'local' && Cypress.browser.isHeadless) {
+        if (
+          Cypress.env('APP_ENV') === 'local' &&
+          Cypress.browser.isHeadless &&
+          snapshotConfig(service)
+        ) {
           // arabic and persian front pages, and amp pages, are very deep and are having problems with lazy loading
           cy.url().then(url => {
             if (
@@ -78,6 +84,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
 
               cy.matchImageSnapshot({ capture: 'fullPage' });
             } else {
+              cy.document().its('fonts.status').should('equal', 'loaded');
               cy.matchImageSnapshot();
             }
           });

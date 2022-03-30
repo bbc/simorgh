@@ -1,4 +1,5 @@
 import path from 'ramda/src/path';
+import snapshotConfig from '../../../support/helpers/snapshotConfig';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
@@ -159,6 +160,32 @@ export const testsThatFollowSmokeTestConfig = ({
             .should('not.be.empty');
         });
       }
+      describe(`Visual comparison tests for ${service} ${pageType}`, () => {
+        it('Articles', () => {
+          if (
+            Cypress.env('APP_ENV') === 'local' &&
+            Cypress.browser.isHeadless &&
+            snapshotConfig(service)
+          ) {
+            cy.url().then(url => {
+              cy.document().its('fonts.status').should('equal', 'loaded');
+              if (!url.includes('.amp')) {
+                cy.scrollTo('bottom', { duration: 6000 });
+                cy.scrollTo('top', { duration: 4000 });
+                // cy.matchImageSnapshot({
+                //   capture: 'fullPage',
+                //   blackout: ['[data-e2e="media-player"]'],
+                // });
+                cy.matchImageSnapshot({ capture: 'fullPage' });
+              } else {
+                cy.matchImageSnapshot();
+              }
+            });
+          } else {
+            cy.log('Snapshot skipped in headed mode');
+          }
+        });
+      });
 
       describe('Media Player', () => {
         it('should have a visible caption beneath a mediaplayer', () => {
@@ -270,27 +297,6 @@ export const testsThatFollowSmokeTestConfig = ({
           });
         } else {
           cy.log('Service is run in local.');
-        }
-      });
-    });
-    describe(`Visual comparison tests for ${service} ${pageType}`, () => {
-      it('Articles', () => {
-        if (Cypress.env('APP_ENV') === 'local' && Cypress.browser.isHeadless) {
-          cy.url().then(url => {
-            cy.document().its('fonts.status').should('equal', 'loaded');
-            if (!url.includes('.amp')) {
-              cy.scrollTo('bottom', { duration: 6000 });
-              cy.scrollTo('top', { duration: 4000 });
-              cy.matchImageSnapshot({
-                capture: 'fullPage',
-                blackout: ['[data-e2e="media-player"]'],
-              });
-            } else {
-              cy.matchImageSnapshot();
-            }
-          });
-        } else {
-          cy.log('Snapshot skipped in headed mode');
         }
       });
     });
