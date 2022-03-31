@@ -42,7 +42,7 @@ const H1 = styled.h1`
 const TopicTitle = ({ children }) => {
   const { script, service } = useContext(ServiceContext);
   return (
-    <H1 service={service} script={script} id="content" tabindex="-1">
+    <H1 service={service} script={script} id="content" tabIndex="-1">
       {children}
     </H1>
   );
