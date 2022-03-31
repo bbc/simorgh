@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
-import { C_EBON, C_METAL } from '@bbc/psammead-styles/colours';
+import { C_GREY_6, C_GREY_10 } from '@bbc/psammead-styles/colours';
 
 const A = styled.a`
-  color: ${C_EBON};
+  color: ${C_GREY_10};
   text-decoration: none;
   &:hover {
     text-decoration: underline;
@@ -11,7 +11,7 @@ const A = styled.a`
     text-decoration: underline;
   }
   &:visited {
-    color: ${C_METAL};
+    color: ${C_GREY_6};
   }
   &:before {
     position: absolute;

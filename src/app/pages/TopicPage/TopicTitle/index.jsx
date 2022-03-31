@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { string } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { getSansBold } from '@bbc/psammead-styles/font-styles';
+import { C_GREY_10 } from '@bbc/psammead-styles/colours';
 import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
@@ -17,7 +18,7 @@ import {
 
 const H1 = styled.h1`
   ${({ service }) => getSansBold(service)}
-  color: #141414;
+  color: ${C_GREY_10};
   margin: ${GEL_SPACING_TRPL} 0 ${GEL_SPACING_TRPL} 0;
   font-size: 1.75rem;
   line-height: 2rem;
