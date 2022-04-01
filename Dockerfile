@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY package.json .
 
-# We should not Cashe the lock file, but yarn install fails if I don't?
+# We should not Cache the lock file, but yarn install fails if I don't?
 # COPY yarn.lock ./
 
 RUN yarn install
