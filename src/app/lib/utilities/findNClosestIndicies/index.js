@@ -8,7 +8,7 @@ export default ({ array, startingIndex, n, predicate }) => {
 
   while (leftPointer >= 0 || rightPointer < array.length) {
     const searchLeft = leftPointer >= 0;
-    if (searchLeft > 0 && predicate(array[leftPointer])) {
+    if (searchLeft && predicate(array[leftPointer])) {
       results.push(leftPointer);
     }
 
