@@ -6,7 +6,6 @@ exports.pages = [
   'MostReadPage',
   'LiveRadioPage',
   'MediaAssetPage',
-  'MostReadPage',
   'MostWatchedPage',
   'OnDemandAudioPage',
   'OnDemandTvPage',

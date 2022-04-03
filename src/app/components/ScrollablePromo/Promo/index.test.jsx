@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { PromoSingleBlock } from '../helpers/fixtureData';
+import { PromoSingleBlock, oneLinkWithTimestamp } from '../helpers/fixtureData';
 import Promo from '.';
 
 describe('ScrollablePromo', () => {
@@ -21,5 +21,10 @@ describe('ScrollablePromo', () => {
   it('should extract and render the correct href', () => {
     const { queryByRole } = render(<Promo block={PromoSingleBlock} />);
     expect(queryByRole('link').href).toEqual('https://www.bbc.com/mundo');
+  });
+
+  it('should render timestamp if timestamp is available', () => {
+    const { container } = render(<Promo block={oneLinkWithTimestamp[0]} />);
+    expect(container.getElementsByTagName('time')[0]).toBeInTheDocument();
   });
 });

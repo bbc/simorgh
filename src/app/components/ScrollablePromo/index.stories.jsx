@@ -8,6 +8,8 @@ import ScrollablePromo from '.';
 import {
   threeLinks,
   oneLinkOnly,
+  oneLinkWithNoTitle,
+  oneLinkWithTimestamp,
   moreThanThreeLinks,
   twoLinksWithNoImages,
   truncatedTextInSingleLink,
@@ -43,6 +45,10 @@ export const OnlyOneLink = props => (
   <ScrollablePromoComponent data={oneLinkOnly} {...props} />
 );
 
+export const OneLinkWithNoTitle = props => (
+  <ScrollablePromoComponent data={oneLinkWithNoTitle} {...props} />
+);
+
 export const MoreThanThreeLinks = props => (
   <ScrollablePromoComponent data={moreThanThreeLinks} {...props} />
 );
@@ -57,4 +63,8 @@ export const TruncatedTextInSingleLink = props => (
 
 export const ArabicText = props => (
   <ScrollablePromoComponent data={arabicText} {...props} />
+);
+
+export const WithTimestamp = props => (
+  <ScrollablePromoComponent data={oneLinkWithTimestamp} {...props} />
 );
