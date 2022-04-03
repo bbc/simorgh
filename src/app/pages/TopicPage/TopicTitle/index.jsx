@@ -17,7 +17,7 @@ import {
 
 const H1 = styled.h1`
   ${({ service }) => getSansBold(service)}
-  margin: ${GEL_SPACING_TRPL}rem 0 ${GEL_SPACING_TRPL}rem 0;
+  margin: ${GEL_SPACING_TRPL} 0 ${GEL_SPACING_TRPL} 0;
   font-size: 1.75rem;
   line-height: 2rem;
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
