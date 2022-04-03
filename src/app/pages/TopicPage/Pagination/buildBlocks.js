@@ -1,3 +1,5 @@
+/* eslint-disable no-param-reassign */
+import pipe from 'ramda/src/pipe';
 import findNClosestIndices from '#lib/utilities/findNClosestIndicies';
 
 export const AVAILABILITY = {
@@ -21,10 +23,8 @@ export const VISIBILITY = {
   DESKTOP_ONLY: 'DESKTOP_ONLY',
 };
 
-let state;
-
 // we're returning an array of page elements to be consumed by the renderer
-const createPage = index => {
+const createPage = (index, state) => {
   const isActivePage = index + 1 === state.activePage;
   if (isActivePage) {
     state.activePageIndex = index;
@@ -37,16 +37,18 @@ const createPage = index => {
 };
 
 // The first page, last page, and active page should always be visible
-const setRequiredVisibility = () => {
+const setRequiredVisibility = state => {
   state.result[0].visibility = VISIBILITY.ALL;
   state.result[state.activePageIndex].visibility = VISIBILITY.ALL;
   state.result[state.activePageIndex].availability = AVAILABILITY.ACTIVE;
   state.result[state.result.length - 1].visibility = VISIBILITY.ALL;
+
+  return state;
 };
 
 // Iteratively radiate out from the active page, setting the visibility of pages
 // Pages closer to the active page are visible on more devices
-const setDynamicVisibility = () => {
+const setDynamicVisibility = state => {
   const iterations = [
     [VISIBILITY.ALL, state.activePageOnEdge ? 1 : 0],
     [VISIBILITY.TABLET_UP, state.activePageOnEdge ? 1 : 2],
@@ -71,13 +73,15 @@ const setDynamicVisibility = () => {
     }),
   );
 
+  return state;
+
   // TODO - if there is just a single number missing at a boundary, fill it in?
   // eg if we have 1, 2, 3, 5 - should we just add the 4?
   // Otherwise, we'll have an ellipsis being used to fill in a gap of only one number
 };
 
 // After setting the visibility of all the pages we want to show, we can remove the others
-const pruneInvisible = () => {
+const pruneInvisible = state => {
   state.result = state.result.filter((page, index) => {
     if (!page.visibility) {
       // if an element is being filtered out, we need to remember we did this
@@ -91,10 +95,12 @@ const pruneInvisible = () => {
     }
     return true;
   });
+
+  return state;
 };
 
 // Determine the devices that an ellipsis is displayed on
-const getEllipsisVisibility = side => {
+const getEllipsisVisibility = (side, state) => {
   // If we pruned some pages on this side, we display an ellipsis on all devices
   const wasTruncated =
     side === 'left' ? state.pagesTruncatedOnLeft : state.pagesTruncatedOnRight;
@@ -116,9 +122,9 @@ const getEllipsisVisibility = side => {
 };
 
 // Conditionally adding the ellipsis blocks to our return value
-const insertEllipsis = () => {
-  const leftEllipsisVisibility = getEllipsisVisibility('left');
-  const rightEllipsisVisibility = getEllipsisVisibility('right');
+const insertEllipsis = state => {
+  const leftEllipsisVisibility = getEllipsisVisibility('left', state);
+  const rightEllipsisVisibility = getEllipsisVisibility('right', state);
   if (leftEllipsisVisibility) {
     state.result.splice(1, 0, {
       type: TYPE.ELLIPSIS,
@@ -132,10 +138,12 @@ const insertEllipsis = () => {
       visibility: rightEllipsisVisibility,
     });
   }
+
+  return state;
 };
 
 // We display left and right arrows on all devices
-const insertArrows = () => {
+const insertArrows = state => {
   state.result.unshift({
     type: TYPE.LEFT_ARROW,
     visibility: VISIBILITY.ALL,
@@ -154,32 +162,33 @@ const insertArrows = () => {
         ? AVAILABILITY.UNAVAILABLE
         : AVAILABILITY.AVAILABLE,
   });
+
+  return state;
 };
 
-const addKeys = () => {
-  state.result.forEach((result, i) => {
-    // eslint-disable-next-line no-param-reassign
-    result.key = i;
-  });
-};
+const addKeys = state => ({
+  ...state,
+  result: state.result.map((page, i) => ({ ...page, key: i })),
+});
 
 export default (activePage, pageCount) => {
   if (pageCount <= 1) return null;
-  state = {
+  const initialState = {
     activePage,
     pageCount,
     activePageOnEdge: activePage === 1 || activePage === pageCount,
   };
-  state.result = Array(pageCount)
+
+  initialState.result = Array(pageCount)
     .fill()
-    .map((_, i) => createPage(i));
+    .map((_, i) => createPage(i, initialState));
 
-  setRequiredVisibility();
-  setDynamicVisibility();
-  pruneInvisible();
-  insertEllipsis();
-  insertArrows();
-  addKeys();
-
-  return state.result;
+  return pipe(
+    setRequiredVisibility,
+    setDynamicVisibility,
+    pruneInvisible,
+    insertEllipsis,
+    insertArrows,
+    addKeys,
+  )(initialState).result;
 };
