@@ -29,15 +29,21 @@ export default ({ service, pageType, variant, isAmp }) => {
           const isBrandPage = isBrand(jsonData);
 
           cy.get('iframe').then(iframe => {
-            // If a brand, get the src of the iframe, otherwise, use the embed URL from the data
-            // Because of now using a relative URL in the iframe I now use embedUrl, but I want to print the iframe.prop for seeing what this is for now
-            const iframeURL = isBrandPage ? iframe.prop('src') : embedUrl;
-            cy.log(`iframeURL ${iframeURL}`);
+            let iframeURL = isBrandPage ? iframe.prop('src') : embedUrl;
+            iframeURL = iframeURL.split('.com').pop();
+            cy.log(`cy.get('iframe') assertion has already happened`);
+            cy.log(
+              `used for Brand - iframe.prop('src') = ${iframe.prop('src')}`,
+            );
+            cy.log(`used for Episode - embedURL = ${embedUrl}`);
+            cy.log(`selector for iframe = iframe[src*="${iframeURL}"]`);
+            const pathTested = embedUrl.replace(/^\//, `${envConfig.baseUrl}/`);
+            cy.log(`path that will have response tested is ${pathTested}`);
 
-            cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
+            cy.get(`iframe[src*="${iframeURL}"]`).should('be.visible');
             cy.testResponseCodeAndTypeRetry({
               // embedUrl may be relative - making it absolute to test the response
-              path: embedUrl.replace(/^\//, envConfig.baseUrl),
+              path: embedUrl.replace(/^\//, `${envConfig.baseUrl}/`),
               responseCode: 200,
               type: 'text/html',
               allowFallback: true,

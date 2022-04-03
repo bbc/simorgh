@@ -356,23 +356,23 @@ export const service = {
       },
       {
         title: 'Economía',
-        url: '/mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342',
+        url: '/mundo/topics/c06gq9v4xp3t',
       },
       {
         title: 'Ciencia',
-        url: '/mundo/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53',
+        url: '/mundo/topics/ckdxnw959n7t',
       },
       {
         title: 'Salud',
-        url: '/mundo/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2',
+        url: '/mundo/topics/cpzd498zkxgt',
       },
       {
         title: 'Cultura',
-        url: '/mundo/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864',
+        url: '/mundo/topics/c2dwq9zyv4yt',
       },
       {
         title: 'Tecnología',
-        url: '/mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a',
+        url: '/mundo/topics/cyx5krnw38vt',
       },
       {
         title: 'Video',

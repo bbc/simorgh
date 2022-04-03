@@ -61,7 +61,7 @@ const LabelComponent = styled.strong`
 `;
 
 const getEventTrackingData = (optimizely, blockGroupIndex) => ({
-  componentName: `edoj${blockGroupIndex}`,
+  componentName: `edoj${blockGroupIndex || ''}`,
   format: 'CHD=edoj',
   ...(optimizely && { optimizely }),
 });
@@ -82,7 +82,7 @@ const ExperimentalEOJ = ({ blocks, blockGroupIndex }) => {
   const viewRef = useViewTracker(eventTrackingData);
   const handleClickTracking = useClickTrackerHandler(eventTrackingData);
 
-  if (isEmpty(blocks)) {
+  if (!blocks || isEmpty(blocks)) {
     return null;
   }
 

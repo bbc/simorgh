@@ -14,7 +14,7 @@ import TopicTitle from './TopicTitle';
 import TopicGrid from './TopicGrid';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 
-const Wrapper = styled.div`
+const Wrapper = styled.main`
   max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
   margin: 0 auto;
   padding: 0 ${GEL_SPACING};
@@ -36,7 +36,7 @@ const TopicPage = ({ pageData }) => {
   }));
 
   return (
-    <Wrapper>
+    <Wrapper role="main">
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <MetadataContainer

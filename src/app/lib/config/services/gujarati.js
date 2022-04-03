@@ -320,7 +320,7 @@ export const service = {
       },
       {
         title: 'ભારત',
-        url: '/gujarati/topics/5a08f030-710f-4168-acee-67294a90fc75',
+        url: '/gujarati/topics/c06gq3993v3t',
       },
       {
         title: 'આંતરરાષ્ટ્રીય',
