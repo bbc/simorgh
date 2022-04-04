@@ -7,6 +7,7 @@ import filterEmptyGroupItems from '#app/routes/utils/sharedDataTransformers/filt
 import squashTopStories from '#app/routes/utils/sharedDataTransformers/squashTopStories';
 import addIdsToGroups from '#app/routes/utils/sharedDataTransformers/addIdsToGroups';
 import filterGroupsWithoutStraplines from '#app/routes/utils/sharedDataTransformers/filterGroupsWithoutStraplines';
+import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
 const transformJson = pipe(
@@ -20,11 +21,28 @@ const transformJson = pipe(
 const getRadioScheduleToggle = path(['frontPageRadioSchedule', 'enabled']);
 const getRadioSchedulePosition = path(['frontPageRadioSchedule', 'value']);
 
-export default async ({ path: pathname, service, pageType, toggles }) => {
+export default async ({
+  path: pathname,
+  service,
+  pageType,
+  toggles,
+  variant,
+}) => {
   try {
     const pageDataPromise = fetchPageData({ path: pathname, pageType });
     const radioScheduleIsEnabled = getRadioScheduleToggle(toggles);
     const radioSchedulePosition = getRadioSchedulePosition(toggles);
+
+    const mostReadUrl = getMostReadEndpoint({ service, variant }).split('.')[0];
+
+    console.log('mostReadUrl', mostReadUrl);
+
+    const { json: mostReadData } = await fetchPageData({
+      path: mostReadUrl,
+      pageType,
+    });
+
+    console.log('mostReadData', mostReadData);
 
     const { json, status } = radioScheduleIsEnabled
       ? await withRadioSchedule({
@@ -40,6 +58,7 @@ export default async ({ path: pathname, service, pageType, toggles }) => {
       pageData: {
         ...transformJson(json),
         radioSchedulePosition,
+        mostReadData,
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {

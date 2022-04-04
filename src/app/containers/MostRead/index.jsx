@@ -41,16 +41,24 @@ const MostReadContainer = ({
   //   return null;
   // }
 
-  // if (isAmp) {
-  //   return <MostReadAmp />;
-  // }
-
   const endpoint =
     mostReadEndpointOverride || getMostReadEndpoint({ service, variant });
 
+  // if (isAmp) {
+  //   console.log('isAMP');
+  //   return (
+  //     <MostReadAmp
+  //       initialData={initialData}
+  //       endpoint={endpoint}
+  //       wrapper={wrapper}
+  //       columnLayout={columnLayout}
+  //       eventTrackingData={blockLevelEventTrackingData}
+  //     />
+  //   );
+  // }
+
   return (
     <>
-      <p>This is printing {initialData ? 'true' : 'false'}</p>
       <Canonical
         initialData={initialData}
         endpoint={endpoint}

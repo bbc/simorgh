@@ -71,6 +71,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const seoTitle = path(['promo', 'name'], pageData);
   const radioScheduleData = path(['radioScheduleData'], pageData);
   const radioSchedulePosition = path(['radioSchedulePosition'], pageData);
+  const mostReadData = path(['mostReadData'], pageData);
 
   const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
 
@@ -121,7 +122,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
               {group.type === 'top-stories' && <MPUContainer />}
             </Fragment>
           ))}
-          {!hasUsefulLinks && renderMostRead(mostReadEndpointOverride, isAmp)}
+          {!hasUsefulLinks && renderMostRead(mostReadEndpointOverride, isAmp, mostReadData)}
         </IndexPageContainer>
       </main>
     </>
