@@ -16,8 +16,10 @@ import {
 } from '../../utils/sharedDataTransformers';
 import isListWithLink from '../../utils/isListWithLink';
 import addIndexToBlockGroups from '../../utils/sharedDataTransformers/addIndexToBlockGroups';
+// import getMostRead from '../../mostRead/getInitialData';
 
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
+import mostRead from '#app/routes/mostRead';
 
 const logger = nodeLogger(__filename);
 
@@ -42,6 +44,18 @@ const validateResponse = ({ status, json }) => {
   return null;
 };
 
+const fetchMostRead = async ({ service, variant, pageType }) => {
+  try {
+    const mostReadUrl = getMostReadEndpoint({ service, variant }).split('.')[0];
+    console.log('fetchingMostRead', mostReadUrl);
+    const response = await fetchPageData({
+      path: mostReadUrl,
+      pageType,
+    });
+    return response;
+  } catch (error) {}
+};
+
 const fetchSecondaryColumn = async ({ service, variant }) => {
   const path = getSecondaryColumnUrl({ service, variant });
 
@@ -64,16 +78,21 @@ const fetcher = ({ path, pageType, service, variant }) =>
   Promise.all([
     fetchPageData({ path, pageType }),
     fetchSecondaryColumn({ service, variant }),
+    fetchMostRead({ service, varaint, pageType }),
   ]);
 
 export default async ({ path, pageType, service, variant }) => {
   try {
+    console.log({ path });
     const [{ json, status }, secondaryColumn] = await fetcher({
       path,
       pageType,
       service,
       variant,
     });
+    // const bob = fetchMostRead({ service, varaint, pageType });
+    // console.log(bob);
+    // console.log({ path });
 
     return {
       status,

@@ -109,6 +109,8 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const { articleAuthor, showRelatedTopics } = useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
+  console.log('Optimopage', JSON.stringify(pageData));
+
   const componentsToRender = {
     visuallyHiddenHeadline,
     headline: headings,

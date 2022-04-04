@@ -4,6 +4,7 @@ import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCo
 
 export default async ({ service, variant, pageType }) => {
   try {
+    console.log('hellohere');
     const mostReadUrl = getMostReadEndpoint({ service, variant }).split('.')[0];
     const { json, status } = await fetchPageData({
       path: mostReadUrl,

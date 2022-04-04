@@ -434,6 +434,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
               size="small"
               wrapper={MostReadWrapper}
               initialData={mostReadInitialData}
+              serverRenderOnAmp={isAmp}
             />
           </ComponentWrapper>
         </GridSecondaryColumn>
