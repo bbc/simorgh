@@ -4,6 +4,7 @@ import { SECONDARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
 import getSecondaryColumnUrl from '#lib/utilities/getUrlHelpers/getSecondaryColumnUrl';
 import { DATA_FETCH_ERROR_SECONDARY_COLUMN } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
+import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import fetchPageData from '../../utils/fetchPageData';
 import handleGroupBlocks from '../handleGroupBlocks';
 import handleEmptyParagraphBlocks from '../handleEmptyParagraphBlocks';
@@ -53,7 +54,9 @@ const fetchMostRead = async ({ service, variant, pageType }) => {
       pageType,
     });
     return response;
-  } catch (error) {}
+  } catch (error) {
+    return null;
+  }
 };
 
 const fetchSecondaryColumn = async ({ service, variant }) => {
@@ -78,7 +81,7 @@ const fetcher = ({ path, pageType, service, variant }) =>
   Promise.all([
     fetchPageData({ path, pageType }),
     fetchSecondaryColumn({ service, variant }),
-    fetchMostRead({ service, varaint, pageType }),
+    fetchMostRead({ service, variant, pageType }),
   ]);
 
 export default async ({ path, pageType, service, variant }) => {
