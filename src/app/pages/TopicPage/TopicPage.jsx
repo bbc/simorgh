@@ -12,6 +12,7 @@ import LinkedData from '#app/containers/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import TopicTitle from './TopicTitle';
 import TopicGrid from './TopicGrid';
+import Pagination from './Pagination';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 
 const Wrapper = styled.main`
@@ -53,6 +54,10 @@ const TopicPage = ({ pageData }) => {
       />
       <TopicTitle>{title}</TopicTitle>
       <TopicGrid promos={promos} />
+      <Pagination
+        activePage={pageData.activePage}
+        pageCount={pageData.pageCount}
+      />
     </Wrapper>
   );
 };

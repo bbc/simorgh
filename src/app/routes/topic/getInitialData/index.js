@@ -34,6 +34,13 @@ export default async ({ getAgent, service, path: pathname, variant }) => {
         title: data.title,
         description: data.description || data.title,
         promos: data.summaries,
+
+        // TODO - update me when the BFF is returning this data
+        activePage: data.activePage || 1,
+
+        // TODO - update me when the BFF is returning this data
+        pageCount: data.pageCount || 99,
+
         metadata: {
           type: 'Topic',
         },
