@@ -6,6 +6,7 @@ import useToggle from '#hooks/useToggle';
 import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import Canonical from './Canonical';
 import mostReadShape from './utilities/mostReadShape';
+import AmpMostRead from './Amp';
 
 const blockLevelEventTrackingData = {
   componentName: 'most-read',
@@ -33,14 +34,15 @@ const MostReadContainer = ({
   if (!mostReadToggleEnabled) {
     return null;
   }
-  // Do not render on AMP when it is not the most read page
-  // We only want to render most read on AMP for the "/popular/read" pages
-  if (isAmp && !serverRenderOnAmp) {
-    return null;
-  }
 
   const endpoint =
     mostReadEndpointOverride || getMostReadEndpoint({ service, variant });
+
+  // Do not render on AMP when it is not the most read page
+  // We only want to render most read on AMP for the "/popular/read" pages
+  if (isAmp && !serverRenderOnAmp) {
+    return <AmpMostRead endpoint={endpoint} wrapper={wrapper} />;
+  }
 
   return (
     <Canonical

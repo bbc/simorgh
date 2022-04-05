@@ -179,9 +179,11 @@ const MostReadRank = ({
   columnLayout,
   size,
 }) => {
+  console.log('listIndexBefore', listIndex);
   const numerals = serviceNumerals(service);
   const rank = numerals[listIndex];
   const RankWrapper = getColumnWrapper(columnLayout);
+  console.log('RankAfter', rank);
 
   return (
     <RankWrapper
