@@ -97,7 +97,7 @@ export const MostReadLink = ({
   eventTrackingData,
 }) => {
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
-
+  console.log('Thistitle', title);
   return (
     <StyledItem dir={dir} size={size}>
       <StyledLink

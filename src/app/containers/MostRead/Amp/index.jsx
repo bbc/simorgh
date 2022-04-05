@@ -52,6 +52,7 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
                 listIndex={'{{ rank }}'}
                 columnLayout="oneColumn"
                 size={size}
+                isAmp
               />
               <MostReadLink
                 dir={dir}

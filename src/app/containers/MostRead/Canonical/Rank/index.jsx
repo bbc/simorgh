@@ -1,5 +1,5 @@
 import React from 'react';
-import { shape, string, oneOf, number } from 'prop-types';
+import { shape, string, oneOf, number, bool } from 'prop-types';
 import styled from '@emotion/styled';
 import { getFoolscap, getTrafalgar } from '@bbc/gel-foundations/typography';
 import {
@@ -178,10 +178,11 @@ const MostReadRank = ({
   dir,
   columnLayout,
   size,
+  isAmp,
 }) => {
   console.log('listIndexBefore', listIndex);
   const numerals = serviceNumerals(service);
-  const rank = numerals[listIndex];
+  const rank = isAmp ? listIndex : numerals[listIndex];
   const RankWrapper = getColumnWrapper(columnLayout);
   console.log('RankAfter', rank);
 
@@ -208,12 +209,14 @@ MostReadRank.propTypes = {
   dir: oneOf(['rtl', 'ltr']),
   columnLayout: oneOf(['oneColumn', 'twoColumn', 'multiColumn']),
   size: oneOf(['default', 'small']),
+  isAmp: bool.isRequired,
 };
 
 MostReadRank.defaultProps = {
   dir: 'ltr',
   columnLayout: 'multiColumn',
   size: 'default',
+  isAmp: false,
 };
 
 export default MostReadRank;
