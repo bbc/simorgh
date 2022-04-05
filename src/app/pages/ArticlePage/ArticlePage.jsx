@@ -106,7 +106,8 @@ const StyledRelatedTopics = styled(RelatedTopics)`
 `;
 
 const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
-  const { articleAuthor, showRelatedTopics } = useContext(ServiceContext);
+  const { articleAuthor, showRelatedTopics, isAmp } =
+    useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
   console.log('Optimopage', JSON.stringify(pageData));
@@ -139,6 +140,8 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const topics = path(['metadata', 'topics'], pageData);
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
   const startsWithHeading = propEq('type', 'headline')(blocks[0] || {});
+  console.log(pageData);
+  const mostReadInitialData = path(['mostRead'], pageData);
 
   const visuallyHiddenBlock = {
     id: null,
@@ -230,7 +233,9 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       </ArticlePageGrid>
       <MostReadContainer
         mostReadEndpointOverride={mostReadEndpointOverride}
+        initialData={mostReadInitialData}
         wrapper={MostReadWrapper}
+        serverRenderOnAmp={isAmp}
       />
     </Wrapper>
   );

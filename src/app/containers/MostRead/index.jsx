@@ -18,7 +18,7 @@ const MostReadContainer = ({
   columnLayout,
   size,
   wrapper,
-  // serverRenderOnAmp,
+  serverRenderOnAmp,
 }) => {
   const { variant, isAmp } = useContext(RequestContext);
   const {
@@ -31,9 +31,9 @@ const MostReadContainer = ({
   const mostReadToggleEnabled = enabled && hasMostRead;
 
   // Do not render most read when a toggle is disabled
-  if (!mostReadToggleEnabled) {
-    return null;
-  }
+  // if (!mostReadToggleEnabled) {
+  //   return null;
+  // }
 
   // Do not render on AMP when it is not the most read page
   // We only want to render most read on AMP for the "/popular/read" pages

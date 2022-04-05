@@ -49,11 +49,12 @@ const fetchMostRead = async ({ service, variant, pageType }) => {
   try {
     const mostReadUrl = getMostReadEndpoint({ service, variant }).split('.')[0];
     console.log('fetchingMostRead', mostReadUrl);
-    const response = await fetchPageData({
+    const { json } = await fetchPageData({
       path: mostReadUrl,
       pageType,
     });
-    return response;
+    console.log({ json });
+    return json;
   } catch (error) {
     return null;
   }
@@ -86,14 +87,13 @@ const fetcher = ({ path, pageType, service, variant }) =>
 
 export default async ({ path, pageType, service, variant }) => {
   try {
-    console.log({ path });
     const [{ json, status }, secondaryColumn] = await fetcher({
       path,
       pageType,
       service,
       variant,
     });
-    // const bob = fetchMostRead({ service, varaint, pageType });
+    // const { json: hello } = fetchMostRead({ service, varaint, pageType });
     // console.log(bob);
     // console.log({ path });
 
