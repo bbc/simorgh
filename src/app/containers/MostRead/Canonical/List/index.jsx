@@ -13,8 +13,6 @@ const AmpOneColumn = styled.div`
   margin: 0;
   padding: 0;
   grid-auto-flow: column;
-  grid-template-column: repeat(1, auto);
-  background-color: red;
 `;
 
 const OneColumnGrid = styled(Grid)`

@@ -18,7 +18,16 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
     mostRead: { numberOfItems },
   } = useContext(ServiceContext);
 
-  console.log({ endpoint });
+  const innerHTML = `
+    "cupcakes": {
+      "imageUrl": "https://amp.dev/static/samples/img/image2.jpg",
+      "text": "test has worked",
+      "style": "greenBorder"
+    },
+    "sushi": {
+      "imageUrl": "https://amp.dev/static/samples/img/image3.jpg",
+      "style": "redBorder"
+    }`;
 
   return (
     <Wrapper>
@@ -27,6 +36,18 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
       <Helmet>
         {AMP_LIST_JS}
         {AMP_MUSTACHE_JS}
+      </Helmet>
+
+      <Helmet>
+        <amp-state id="numerals">
+          script=
+          {[
+            {
+              type: 'text/javascript',
+              innerHTML,
+            },
+          ]}
+        </amp-state>
       </Helmet>
 
       <MostReadList
@@ -43,6 +64,28 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
           max-items={numberOfItems}
         >
           <template type="amp-mustache">
+            {/* <amp-state id="numerals">
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: `
+      <script type="application/json">
+              "cupcakes": {
+                "imageUrl": "https://amp.dev/static/samples/img/image2.jpg",
+                "style": "greenBorder"
+              },
+              "sushi": {
+                "imageUrl": "https://amp.dev/static/samples/img/image3.jpg",
+                "style": "redBorder"
+              }
+      </script>
+      `,
+                }}
+              />
+            </amp-state> */}
+            <p data-amp-bind-text="'this is a ' + currentMeal">
+              test
+            </p>
+            <button on="tap:AMP.setState({currentMeal: 'cupcakes'})">Set to sushi</button>
             <MostReadItemWrapper dir={dir} columnLayout="ampOneColumn">
               <MostReadRank
                 service={service}
