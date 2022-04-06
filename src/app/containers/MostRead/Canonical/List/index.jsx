@@ -8,6 +8,15 @@ import {
 import Grid from '@bbc/psammead-grid';
 import { mostReadListGridProps } from '../../utilities/gridProps';
 
+const AmpOneColumn = styled.div`
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  grid-auto-flow: column;
+  grid-template-column: repeat(1, auto);
+  background-color: red;
+`;
+
 const OneColumnGrid = styled(Grid)`
   list-style-type: none;
   margin: 0;
@@ -40,6 +49,7 @@ const getColumnLayout = columnLayout =>
     oneColumn: OneColumnGrid,
     twoColumn: TwoColumnGrid,
     multiColumn: MultiColumnGrid,
+    ampOneColumn: AmpOneColumn,
   }[columnLayout]);
 
 const MostReadList = ({ numberOfItems, dir, columnLayout, children }) => {
@@ -60,7 +70,12 @@ const MostReadList = ({ numberOfItems, dir, columnLayout, children }) => {
 MostReadList.propTypes = {
   children: node.isRequired,
   dir: oneOf(['rtl', 'ltr']),
-  columnLayout: oneOf(['oneColumn', 'twoColumn', 'multiColumn']),
+  columnLayout: oneOf([
+    'oneColumn',
+    'twoColumn',
+    'multiColumn',
+    'ampOneColumn',
+  ]),
   numberOfItems: number.isRequired,
 };
 

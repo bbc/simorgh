@@ -167,7 +167,12 @@ export const MostReadItemWrapper = React.forwardRef(
 MostReadItemWrapper.propTypes = {
   children: node.isRequired,
   dir: oneOf(['rtl', 'ltr']),
-  columnLayout: oneOf(['oneColumn', 'twoColumn', 'multiColumn']),
+  columnLayout: oneOf([
+    'oneColumn',
+    'twoColumn',
+    'multiColumn',
+    'ampOneColumn',
+  ]),
 };
 
 MostReadItemWrapper.defaultProps = {

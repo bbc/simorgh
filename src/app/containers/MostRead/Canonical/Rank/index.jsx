@@ -94,6 +94,7 @@ const OneColumnWrapper = styled.div`
         : getRankMinWidth(props).group1};
   }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    background-color: green;
     min-width: ${props =>
       listHasDoubleDigits(props.numberOfItems)
         ? getRankMinWidth(props).group2WithOneColumn
@@ -180,11 +181,9 @@ const MostReadRank = ({
   size,
   isAmp,
 }) => {
-  console.log('listIndexBefore', listIndex);
   const numerals = serviceNumerals(service);
   const rank = isAmp ? listIndex : numerals[listIndex];
   const RankWrapper = getColumnWrapper(columnLayout);
-  console.log('RankAfter', rank);
 
   return (
     <RankWrapper
@@ -207,9 +206,14 @@ MostReadRank.propTypes = {
   listIndex: number.isRequired,
   numberOfItems: number.isRequired,
   dir: oneOf(['rtl', 'ltr']),
-  columnLayout: oneOf(['oneColumn', 'twoColumn', 'multiColumn']),
+  columnLayout: oneOf([
+    'oneColumn',
+    'twoColumn',
+    'multiColumn',
+    'ampOneColumn',
+  ]),
   size: oneOf(['default', 'small']),
-  isAmp: bool.isRequired,
+  isAmp: bool,
 };
 
 MostReadRank.defaultProps = {

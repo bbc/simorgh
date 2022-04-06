@@ -5,10 +5,10 @@ import {
   AMP_LIST_JS,
   AMP_MUSTACHE_JS,
 } from '@bbc/psammead-assets/amp-boilerplate';
+import { ServiceContext } from '#contexts/ServiceContext';
 import MostReadList from '../Canonical/List';
 import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
 import MostReadRank from '../Canonical/Rank';
-import { ServiceContext } from '#contexts/ServiceContext';
 
 const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
   const {
@@ -32,7 +32,7 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
       <MostReadList
         numberOfItems={numberOfItems}
         dir={dir}
-        columnLayout="oneColumn"
+        columnLayout="ampOneColumn"
       >
         <amp-list
           width="300"
@@ -43,7 +43,7 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
           max-items={numberOfItems}
         >
           <template type="amp-mustache">
-            <MostReadItemWrapper dir={dir} columnLayout="oneColumn">
+            <MostReadItemWrapper dir={dir} columnLayout="ampOneColumn">
               <MostReadRank
                 service={service}
                 script={script}
