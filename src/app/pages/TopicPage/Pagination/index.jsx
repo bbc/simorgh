@@ -6,6 +6,7 @@ import { getSansRegular, getSansBold } from '@bbc/psammead-styles/font-styles';
 import {
   C_PHILIPPINE_GREY,
   C_GREY_10,
+  C_GREY_6,
   C_POSTBOX,
 } from '@bbc/psammead-styles/colours';
 
@@ -42,7 +43,7 @@ const Nav = styled.nav`
   margin: 0 auto 2.5rem auto;
   text-align: center;
 `;
-const StyledOrderedList = styled.ol`
+const StyledUnorderedList = styled.ul`
   display: inline-block;
   list-style: none;
   padding: 0;
@@ -57,7 +58,7 @@ const StyledOrderedList = styled.ol`
 
 const TextSummary = styled.span`
   ${({ service }) => getSansRegular(service)};
-  color: #545658;
+  color: ${C_GREY_6};
   display: inline-block;
   margin: 0 1.375rem;
   strong {
@@ -95,17 +96,26 @@ const A = styled.a`
   text-decoration: none;
   height: 100%;
   width: 100%;
-  border: 0.0625rem transparent solid;
+
   ${({ isActive }) =>
-    isActive &&
-    `
-    border-bottom-color: ${C_POSTBOX};
-    border-bottom-width: 0.25rem;
-  `}
-  &:hover,
-  &:focus {
-    border-color: ${C_POSTBOX};
-  }
+    isActive
+      ? `
+        padding: 0.0625rem 0.625rem 0 0.625rem;
+        border-bottom: 0.25rem ${C_POSTBOX} solid;
+        &:hover,
+        &:focus {
+         padding: 0;
+         border: 0.0625rem ${C_POSTBOX} solid;
+         border-bottom-width: 0.25rem;
+       }
+      `
+      : `
+       padding: 0.0625rem;
+       &:hover,
+       &:focus {
+         padding: 0;
+         border: 0.0625rem ${C_POSTBOX} solid;
+       }`}
 `;
 
 /* eslint-disable react/prop-types */
@@ -195,9 +205,9 @@ const Pagination = ({ activePage, pageCount }) => {
       <TextSummary service={service} data-testid="topic-pagination-summary">
         Page <strong>{activePage}</strong> of <strong>{pageCount}</strong>
       </TextSummary>
-      <StyledOrderedList role="list">
+      <StyledUnorderedList role="list">
         {blocks.map(block => renderBlock({ ...block, activePage, service }))}
-      </StyledOrderedList>
+      </StyledUnorderedList>
       {showRightArrow && <RightArrow activePage={activePage} />}
     </Nav>
   );
