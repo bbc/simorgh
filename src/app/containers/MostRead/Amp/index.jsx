@@ -18,12 +18,9 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
     mostRead: { numberOfItems },
   } = useContext(ServiceContext);
 
-  console.log({ endpoint });
-
   return (
     <Wrapper>
       {/* Import required amp scripts for most read */}
-      <p>This is an amp Most Read</p>
       <Helmet>
         {AMP_LIST_JS}
         {AMP_MUSTACHE_JS}

@@ -94,7 +94,6 @@ const OneColumnWrapper = styled.div`
         : getRankMinWidth(props).group1};
   }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    background-color: green;
     min-width: ${props =>
       listHasDoubleDigits(props.numberOfItems)
         ? getRankMinWidth(props).group2WithOneColumn
