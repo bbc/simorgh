@@ -56,7 +56,7 @@ const StyledUnorderedList = styled.ul`
   }
 `;
 
-const TextSummary = styled.span`
+const TextSummary = styled.div`
   ${({ service }) => getSansRegular(service)};
   color: ${C_GREY_6};
   display: inline-block;
@@ -136,8 +136,8 @@ const LeftArrow = ({ activePage }) => (
       aria-labelledby="pagination-previous-page"
     >
       <span id="pagination-previous-page">
-        <VisuallyHiddenText>Previous page</VisuallyHiddenText>
         <LeftChevron />
+        <VisuallyHiddenText>Previous page</VisuallyHiddenText>
       </span>
     </LinkComponent>
   </Block>
