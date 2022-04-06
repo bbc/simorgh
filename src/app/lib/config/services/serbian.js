@@ -104,7 +104,7 @@ export const service = {
           text: 'Kolačići',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853665',
+          href: 'https://www.bbc.co.uk/serbian/send/u50853665',
           text: 'Kontaktirajte BBC',
         },
         {
@@ -402,7 +402,7 @@ export const service = {
           text: 'Колачићи',
         },
         {
-          href: 'https://www.bbc.com/serbian/cyr/institutional-43543431',
+          href: 'https://www.bbc.co.uk/serbian/send/u50853665',
           text: 'Контактирајте ББЦ',
         },
         {

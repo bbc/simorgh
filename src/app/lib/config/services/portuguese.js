@@ -327,8 +327,8 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853599',
-          text: 'Fale com a BBC',
+          href: 'https://www.bbc.co.uk/portuguese/send/u50853599',
+          text: 'Contate a BBC',
         },
         {
           id: 'COOKIE_SETTINGS',

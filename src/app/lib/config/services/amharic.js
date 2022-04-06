@@ -285,7 +285,7 @@ export const service = {
           text: 'ኩኪዎች',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853181',
+          href: 'https://www.bbc.co.uk/amharic/send/u50853181',
           text: 'ቢቢሲን ያግኙ',
         },
         {
