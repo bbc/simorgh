@@ -101,51 +101,52 @@ const CanonicalMostRead = ({
   const locale = serviceDatetimeLocale || datetimeLocale;
 
   return (
-    <>
-      {/* Import required amp scripts for most read */}
-      <Helmet>
-        {AMP_LIST_JS}
-        {AMP_MUSTACHE_JS}
-      </Helmet>
-      <Wrapper>
-        <amp-list
-          width="300"
-          height="100"
-          layout="responsive"
-          src={endpoint}
-          items="records"
-          max-items={numberOfItems}
-        >
-          <MostReadList
-            numberOfItems={numberOfItems}
+    <Wrapper>
+      <MostReadList
+        numberOfItems={items.length}
+        dir={dir}
+        columnLayout={columnLayout}
+      >
+        {items.map((item, i) => (
+          <MostReadItemWrapper
             dir={dir}
-            columnLayout="oneColumn"
+            key={item.id}
+            columnLayout={columnLayout}
+            ref={viewRef}
           >
-            <template type="amp-mustache">
-              <MostReadItemWrapper dir={dir} columnLayout="oneColumn">
-                <MostReadRank
-                  service={service}
+            <MostReadRank
+              service={service}
+              script={script}
+              listIndex={i + 1}
+              numberOfItems={items.length}
+              dir={dir}
+              columnLayout={columnLayout}
+              size={size}
+            />
+            <MostReadLink
+              dir={dir}
+              service={service}
+              script={script}
+              title={item.title}
+              href={item.href}
+              size={size}
+              eventTrackingData={eventTrackingData}
+            >
+              {shouldRenderLastUpdated(item.timestamp) && (
+                <LastUpdated
+                  prefix={lastUpdated}
                   script={script}
-                  numberOfItems={numberOfItems}
-                  dir={dir}
-                  listIndex={'{{ rank }}'}
-                  columnLayout="oneColumn"
-                  size={size}
-                />
-                <MostReadLink
-                  dir={dir}
                   service={service}
-                  script={script}
-                  title={'{{promo.headlines.shortHeadline}}'}
-                  href={'{{promo.locators.assetUri}}'}
-                  size={size}
+                  timestamp={item.timestamp}
+                  locale={locale}
+                  timezone={timezone}
                 />
-              </MostReadItemWrapper>
-            </template>
-          </MostReadList>
-        </amp-list>
-      </Wrapper>
-    </>
+              )}
+            </MostReadLink>
+          </MostReadItemWrapper>
+        ))}
+      </MostReadList>
+    </Wrapper>
   );
 };
 
@@ -164,7 +165,7 @@ CanonicalMostRead.defaultProps = {
   columnLayout: 'multiColumn',
   size: 'default',
   initialData: null,
-  wrapper: null,
+  wrapper: React.Fragment,
   eventTrackingData: null,
 };
 
