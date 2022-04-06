@@ -3,6 +3,7 @@ const ampRegex = '.amp';
 const assetUriRegex = '[a-z0-9-_]{0,}[0-9]{8,}';
 const legacyAssetUriRegex = '[a-z0-9-_]{1,}/[a-z0-9-_/]{1,}';
 const variantRegex = '/simp|/trad|/cyr|/lat';
+// TODO: Remove 'new_articles' once testing of routing Article pages through Belfrage is complete
 const articleLocalRegex = 'articles|new_articles|erthyglau|sgeulachdan';
 const mediaIdRegex = '[a-z0-9]+';
 const topicIdRegex = '[a-z0-9]+';
