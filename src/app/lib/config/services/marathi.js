@@ -303,7 +303,7 @@ export const service = {
           text: 'कुकीज',
         },
         {
-          href: '	https://www.bbc.co.uk/marathi/send/u50853467',
+          href: 'https://www.bbc.co.uk/marathi/send/u50853467',
           text: 'बीबीसीशी संपर्क साधाा',
         },
         {
