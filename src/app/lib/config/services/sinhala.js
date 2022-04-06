@@ -292,8 +292,8 @@ export const service = {
           text: 'කුකීස්',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853687',
-          text: 'බීබීසී අමතන්න',
+          href: 'https://www.bbc.co.uk/sinhala/send/u50853687',
+          text: 'බීබීසී ය අමතන්න',
         },
         {
           id: 'COOKIE_SETTINGS',

@@ -303,7 +303,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853709',
+          href: 'https://www.bbc.co.uk/somali/send/u50853709',
           text: 'La xiriir BBC',
         },
         {

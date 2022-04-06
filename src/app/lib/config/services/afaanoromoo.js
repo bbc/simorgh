@@ -294,7 +294,7 @@ export const service = {
           text: 'Kuus-yaadannoo',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50777768',
+          href: 'https://www.bbc.co.uk/afaanoromoo/send/u50777768',
           text: 'BBC qunnami',
         },
         {
