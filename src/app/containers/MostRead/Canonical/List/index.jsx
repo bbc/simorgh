@@ -13,7 +13,10 @@ const AmpOneColumn = styled.div`
   margin: 0;
   padding: 0;
   grid-auto-flow: column;
+<<<<<<< HEAD
   grid-template-column: repeat(1, auto);
+=======
+>>>>>>> 999c637296169aa5c243b3bdeb1bf8b52a4c3c92
 `;
 
 const OneColumnGrid = styled(Grid)`
