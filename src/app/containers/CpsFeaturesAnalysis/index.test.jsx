@@ -211,10 +211,10 @@ describe('CpsFeaturesAnalysis - Frosted Promos', () => {
     expect(countFrostedPromos(container)).toBe(2);
   });
 
-  it('should render without all high impact promos, when on amp', () => {
+  it('should render with all high impact promos, when on amp', () => {
     const { container } = renderFeaturesAnalysis({ isAmp: true });
 
-    expect(countFrostedPromos(container)).toBe(0);
+    expect(countFrostedPromos(container)).toBe(2);
   });
 
   it.skip('should render with the top high impact promo', () => {
