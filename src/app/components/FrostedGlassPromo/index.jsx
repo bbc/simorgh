@@ -98,7 +98,6 @@ const FrostedGlassPromo = ({
         tabIndex="-1"
       ></ClickableArea>
       <ImageWithPlaceholder
-        darkMode
         {...pick(
           [
             'src',
