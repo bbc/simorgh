@@ -50,8 +50,8 @@ const PromoListComponent = ({ promoItems, dir }) => {
 
   const selectComponent = index => {
     switch (true) {
-      case isAmp:
-        return IMPROVED_PROMO_VARIATIONS.Control;
+      // case isAmp:
+      //   return IMPROVED_PROMO_VARIATIONS.Control;
       case promoVariation === 'variation_1' && index === 0:
         return IMPROVED_PROMO_VARIATIONS.variation_1;
       case promoVariation === 'variation_2':
@@ -115,8 +115,8 @@ const PromoComponent = ({ promo, dir }) => {
 
   const selectComponent = () => {
     switch (true) {
-      case isAmp:
-        return IMPROVED_PROMO_VARIATIONS.Control;
+      // case isAmp:
+      //   return IMPROVED_PROMO_VARIATIONS.Control;
       case [
         'variation_1',
         'variation_2',
