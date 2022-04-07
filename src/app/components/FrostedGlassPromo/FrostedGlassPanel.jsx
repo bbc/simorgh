@@ -69,7 +69,7 @@ const FrostedGlassPanel = ({
   const isCanonical = !isAmp;
 
   const backgroundImageStyle = {
-    backgroundImage: `url('${image}');`,
+    backgroundImage: `url('${image}')`,
   };
 
   return (
