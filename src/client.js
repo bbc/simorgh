@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-filename-extension  */
 import React from 'react';
 import createCache from '@emotion/cache';
+import { prefixer } from 'stylis';
 import { CacheProvider } from '@emotion/react';
 import { loadableReady } from '@loadable/component';
 import { hydrate } from 'react-dom';
@@ -22,7 +23,15 @@ const bundleToExecute = isModernBrowser ? 'modern' : 'legacy';
 if (window.SIMORGH_DATA.path === window.location.pathname) {
   loadableReady(
     () => {
-      const cache = createCache({ key: 'bbc' });
+      const cache = createCache({
+        key: 'bbc',
+        stylisPlugins: [
+          element => {
+            element.value = element.value.replaceAll('0.', '.');
+          },
+          prefixer,
+        ],
+      });
 
       hydrate(
         <CacheProvider value={cache}>
