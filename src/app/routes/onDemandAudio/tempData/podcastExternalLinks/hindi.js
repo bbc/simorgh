@@ -107,7 +107,18 @@ const externalLinks = {
         linkUrl: 'https://gaana.com/podcast/-season-1-2021-4',
       },
     ],
-  },
+    p09ds7zx: [
+            {
+        linkText: 'Jio Saavn',
+        linkUrl:
+          'https://www.jiosaavn.com/shows/%E0%A4%A6%E0%A4%BF%E0%A4%A8-%E0%A4%AD%E0%A4%B0/1/ZBludb0NoRM_',
+      },
+      {
+        linkText: 'Gaana',
+        linkUrl: 'https://gaana.com/podcast/-season-1-2019',
+      },
+    ]
+    },
 };
 
 export default externalLinks;
