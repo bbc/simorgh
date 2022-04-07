@@ -3,6 +3,7 @@ import React from 'react';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { ChunkExtractor, ChunkExtractorManager } from '@loadable/server';
 import { CacheProvider } from '@emotion/react';
+import { prefixer } from 'stylis';
 import createEmotionServer from '@emotion/server/create-instance';
 import createCache from '@emotion/cache';
 import { Helmet } from 'react-helmet';
@@ -23,7 +24,15 @@ const renderDocument = async ({
   url,
 }) => {
   const isDev = process.env.NODE_ENV === 'development';
-  const cache = createCache({ key: 'bbc' });
+  const cache = createCache({
+    key: 'bbc',
+    stylisPlugins: [
+      element => {
+        element.value = element.value.replaceAll('0.', '.');
+      },
+      prefixer,
+    ],
+  });
   const { extractCritical } = createEmotionServer(cache);
   const modernStatsFile = path.resolve(
     `${__dirname}/public/modern-loadable-stats-${process.env.SIMORGH_APP_ENV}.json`,
