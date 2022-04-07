@@ -27,7 +27,6 @@ const Inner = styled.section`
   ${({ service }) => service && getSansLight(service)}
   background: ${C_GREY_2};
   color: ${C_GREY_6};
-  text-transform: uppercase;
   margin-bottom: ${GEL_SPACING_TRPL};
   padding: ${GEL_SPACING_DBL};
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
@@ -52,7 +51,7 @@ const DisclaimerComponent = ({ increasePaddingOnDesktop }) => {
   if (!shouldShow) return null;
 
   const disclaimerLabelTranslation = pathOr(
-    'Disclaimer',
+    'Information',
     ['disclaimerLabel'],
     translations,
   );
