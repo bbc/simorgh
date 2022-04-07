@@ -329,6 +329,10 @@ export const service = {
         url: '/turkce/topics/ckdxn2xk95gt',
       },
       {
+        title: 'Rusya-Ukrayna Savaşı',
+        url: '/turkce/topics/cy0ryl4pvx6t',
+      },
+      {
         title: 'Ekonomi',
         url: '/turkce/topics/cg726y2k82dt',
       },
