@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { RequestContext } from '#contexts/RequestContext';
 import styled from '@emotion/styled';
 import { node, number, string } from 'prop-types';
 
@@ -27,7 +28,7 @@ const Background = styled.div`
     top: -${BLUR_RADIUS}px;
     left: 0;
     right: 0;
-    background: ${FALLBACK_COLOUR} url('${({ image }) => image}');
+    background-color: ${FALLBACK_COLOUR};
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -64,12 +65,19 @@ const FrostedGlassPanel = ({
     paletteSize,
   });
 
+  const { isAmp } = useContext(RequestContext);
+  const isCanonical = !isAmp;
+
+  const backgroundImageStyle = {
+    backgroundImage: `url('${image}')`,
+  };
+
   return (
     <Wrapper>
       <Children colour={colour.rgb} isLoading={isLoading}>
         {children}
       </Children>
-      <Background image={image} />
+      {isCanonical && <Background style={backgroundImageStyle} image={image} />}
     </Wrapper>
   );
 };
