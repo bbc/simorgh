@@ -49,7 +49,7 @@ Object {
 exports[`Canonical Most Read Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "Liên hệ BBC",
-  "url": "https://www.bbc.co.uk/send/u50853951",
+  "url": "https://www.bbc.co.uk/vietnamese/send/u50853951",
 }
 `;
 
