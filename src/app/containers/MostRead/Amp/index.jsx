@@ -54,10 +54,10 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
           }
           const WesternArabic = ['0','1','2','3','4','5','6','7','8','9','10'];
           function getRemoteData() {
-            return fetch("http://localhost:7080/mundo/mostread.json")
+            return fetch("${endpoint}")
               .then(resp => resp.json())
               .then(resp => {const respSlice = resp.records.slice(0,${size}); resp.records=respSlice; return resp;})
-              .then(resp => {resp.records.forEach(item => item.rankTranslation = translations["${service}"]? translations["${service}"][[item.rank]]: WesternArabic[item.rank]); return resp;})
+              .then(resp => {resp.records.forEach((item, index) => item.rankTranslation = translations["${service}"]? translations["${service}"][[index+1]]: WesternArabic[index+1]); return resp;})
           }
           exportFunction('getRemoteData', getRemoteData);
           `,

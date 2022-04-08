@@ -34,14 +34,16 @@ const MostReadContainer = ({
   if (!mostReadToggleEnabled) {
     return null;
   }
-
+  const environment = process.env.SIMORGH_BASE_URL;
   const endpoint =
     mostReadEndpointOverride || getMostReadEndpoint({ service, variant });
+
+  const mostReadUrl = `${environment}${endpoint}`;
 
   // Do not render on AMP when it is not the most read page
   // We only want to render most read on AMP for the "/popular/read" pages
   if (isAmp && !serverRenderOnAmp) {
-    return <AmpMostRead endpoint={endpoint} wrapper={wrapper} />;
+    return <AmpMostRead endpoint={mostReadUrl} wrapper={wrapper} />;
   }
 
   return (
