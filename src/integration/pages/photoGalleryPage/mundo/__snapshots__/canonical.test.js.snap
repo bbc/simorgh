@@ -48,8 +48,8 @@ Object {
 
 exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 7`] = `
 Object {
-  "text": "Contacta a la BBC",
-  "url": "https://www.bbc.co.uk/send/u50853489",
+  "text": "Escribe a BBC Mundo",
+  "url": "https://www.bbc.co.uk/mundo/send/u50853489",
 }
 `;
 

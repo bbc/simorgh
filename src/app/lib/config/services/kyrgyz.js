@@ -299,7 +299,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853445',
+          href: 'https://www.bbc.co.uk/kyrgyz/send/u50853445',
           text: 'Би-Би-Си менен байланышыңыз',
         },
         {

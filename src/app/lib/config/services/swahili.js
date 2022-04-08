@@ -297,7 +297,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853731',
+          href: 'https://www.bbc.co.uk/swahili/send/u50853731',
           text: 'Wasiliana na BBC',
         },
         {

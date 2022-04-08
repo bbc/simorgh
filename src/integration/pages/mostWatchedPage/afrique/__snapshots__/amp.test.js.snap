@@ -172,7 +172,7 @@ Object {
 exports[`AMP Most Watched Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "Contactez la BBC",
-  "url": "https://www.bbc.co.uk/send/u50853159",
+  "url": "https://www.bbc.co.uk/afrique/send/u50853159",
 }
 `;
 

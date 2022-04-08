@@ -306,8 +306,8 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853489',
-          text: 'Contacta a la BBC',
+          href: 'https://www.bbc.co.uk/mundo/send/u50853489',
+          text: 'Escribe a BBC Mundo',
         },
         {
           id: 'COOKIE_SETTINGS',
