@@ -35,7 +35,7 @@ const smallestPagePlusServiceBundleSize =
 const removeBundleTypePrefix = name => name.replace(`${bundleType}.`, '');
 
 const serviceBundlesTable = new Table({
-  head: ['Service name', 'bundles', 'Total size (kB)'],
+  head: ['Service name', 'bundles', 'Total size (Bytes)', 'Total size (kB)'],
 });
 
 const pageBundlesTable = new Table({
@@ -47,12 +47,23 @@ const pageBundlesTable = new Table({
     'shared',
     'commons',
     'page',
+    'Total size (Bytes)',
     'Total size (kB)',
   ],
 });
 
 pageBundleData.forEach(
-  ({ pageName, main, framework, lib, shared, commons, page, totalSize }) => {
+  ({
+    pageName,
+    main,
+    framework,
+    lib,
+    shared,
+    commons,
+    page,
+    totalSizeInBytes,
+    totalSize,
+  }) => {
     const getFileInfo = ({ name, size }) =>
       `${removeBundleTypePrefix(name).slice(0, 10)}…${name.slice(
         -6,
@@ -66,21 +77,25 @@ pageBundleData.forEach(
       shared.map(getFileInfo).join('\n'),
       commons.map(getFileInfo).join('\n'),
       page.map(getFileInfo).join('\n'),
+      totalSizeInBytes,
       totalSize,
     ]);
   },
 );
 
-serviceBundleData.forEach(({ serviceName, bundles, totalSize }) => {
-  const getFileInfo = ({ name, size }) =>
-    `${removeBundleTypePrefix(name)} (${size}kB)`;
+serviceBundleData.forEach(
+  ({ serviceName, bundles, totalSizeInBytes, totalSize }) => {
+    const getFileInfo = ({ name, size }) =>
+      `${removeBundleTypePrefix(name)} (${size}kB)`;
 
-  serviceBundlesTable.push([
-    serviceName,
-    bundles.map(getFileInfo).join('\n'),
-    totalSize,
-  ]);
-});
+    serviceBundlesTable.push([
+      serviceName,
+      bundles.map(getFileInfo).join('\n'),
+      totalSizeInBytes,
+      totalSize,
+    ]);
+  },
+);
 
 const pageSummaryTable = new Table();
 pageSummaryTable.push(

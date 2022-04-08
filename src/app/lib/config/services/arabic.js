@@ -378,6 +378,10 @@ export const service = {
         url: '/arabic/tv-and-radio-42414864',
       },
       {
+        title: 'بودكاست',
+        url: '/arabic/tv-and-radio-52067221',
+      },
+      {
         title: 'برامجنا',
         url: '/arabic/tv-and-radio-37728883',
       },
