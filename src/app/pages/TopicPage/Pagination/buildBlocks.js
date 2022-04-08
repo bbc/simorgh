@@ -2,12 +2,6 @@
 import pipe from 'ramda/src/pipe';
 import findNClosestIndices from '#lib/utilities/findNClosestIndicies';
 
-export const AVAILABILITY = {
-  AVAILABLE: 'AVAILABLE',
-  UNAVAILABLE: 'UNAVAILABLE',
-  ACTIVE: 'ACTIVE',
-};
-
 export const TYPE = {
   ELLIPSIS: 'ELLIPSIS',
   LEFT_ARROW: 'LEFT_ARROW',
@@ -32,7 +26,6 @@ const createPage = (index, state) => {
   return {
     type: TYPE.NUMBER,
     pageNumber: index + 1,
-    availability: isActivePage ? AVAILABILITY.ACTIVE : AVAILABILITY.AVAILABLE,
   };
 };
 
@@ -40,7 +33,6 @@ const createPage = (index, state) => {
 const setRequiredVisibility = state => {
   state.result[0].visibility = VISIBILITY.ALL;
   state.result[state.activePageIndex].visibility = VISIBILITY.ALL;
-  state.result[state.activePageIndex].availability = AVAILABILITY.ACTIVE;
   state.result[state.result.length - 1].visibility = VISIBILITY.ALL;
 
   return state;
@@ -142,30 +134,6 @@ const insertEllipsis = state => {
   return state;
 };
 
-// We display left and right arrows on all devices
-const insertArrows = state => {
-  state.result.unshift({
-    type: TYPE.LEFT_ARROW,
-    visibility: VISIBILITY.ALL,
-    // The left arrow is disabled if the user is already on the first page
-    availability:
-      state.activePage === 1
-        ? AVAILABILITY.UNAVAILABLE
-        : AVAILABILITY.AVAILABLE,
-  });
-  state.result.push({
-    type: TYPE.RIGHT_ARROW,
-    visibility: VISIBILITY.ALL,
-    // The right arrow is disabled if the user is already on the last page
-    availability:
-      state.activePage === state.pageCount
-        ? AVAILABILITY.UNAVAILABLE
-        : AVAILABILITY.AVAILABLE,
-  });
-
-  return state;
-};
-
 const addKeys = state => ({
   ...state,
   result: state.result.map((page, i) => ({ ...page, key: i })),
@@ -188,7 +156,6 @@ export default (activePage, pageCount) => {
     setDynamicVisibility,
     pruneInvisible,
     insertEllipsis,
-    insertArrows,
     addKeys,
   )(initialState).result;
 };

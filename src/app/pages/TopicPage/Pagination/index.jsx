@@ -1,64 +1,82 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { number } from 'prop-types';
-import { getSansBold } from '@bbc/psammead-styles/font-styles';
+import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import { getSansRegular, getSansBold } from '@bbc/psammead-styles/font-styles';
 import {
-  C_DIM_GREY,
-  C_EBON,
-  C_GREY_11,
   C_PHILIPPINE_GREY,
-  C_WHITE,
+  C_GREY_10,
+  C_GREY_6,
+  C_POSTBOX,
 } from '@bbc/psammead-styles/colours';
 
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_1_SCREEN_WIDTH_MAX,
 } from '@bbc/gel-foundations/breakpoints';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-import buildBlocks, { TYPE, VISIBILITY, AVAILABILITY } from './buildBlocks';
+import buildBlocks, { TYPE, VISIBILITY } from './buildBlocks';
 import { Ellipsis, LeftChevron, RightChevron } from './icons';
 
 const visibilityToMediaQuery = visibility =>
   ({
-    // TODO: minimum width being specified here as a future PR is implementing a totally different design for group 1
-    [VISIBILITY.MOBILE_ONLY]: `@media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    [VISIBILITY.MOBILE_ONLY]: `display: none; @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
       display: inline-block;
     }`,
-    // TODO: minimum width being specified here as a future PR is implementing a totally different design for group 1
-    [VISIBILITY.TABLET_DOWN]: `@media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    [VISIBILITY.TABLET_DOWN]: `display: none; @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
       display: inline-block;
     }`,
-    [VISIBILITY.TABLET_UP]: `@media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    [VISIBILITY.TABLET_UP]: `display: none; @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
       display: inline-block;
     }`,
-    [VISIBILITY.DESKTOP_ONLY]: `@media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    [VISIBILITY.DESKTOP_ONLY]: `display: none; @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
       display: inline-block;
     }`,
-  }[visibility] || '');
+    [VISIBILITY.ALL]: `display: inline-block;`,
+  }[visibility] || 'display: none;');
 
-const StyledOrderedList = styled.ol`
+const Nav = styled.nav`
+  display: block;
+  margin: 0 auto 2.5rem auto;
+  text-align: center;
+`;
+const StyledUnorderedList = styled.ul`
+  display: inline-block;
   list-style: none;
   padding: 0;
+  margin: 0;
+  position: relative;
+  top: 0.1rem;
   text-align: center;
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
+    display: none;
+  }
+`;
+
+const TextSummary = styled.div`
+  ${({ service }) => getSansRegular(service)};
+  color: ${C_GREY_6};
+  display: inline-block;
+  margin: 0 1.375rem;
+  b {
+    ${({ service }) => getSansBold(service)};
+  }
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    display: none;
+  }
 `;
 
 const Block = styled.li`
   ${({ service }) => getSansBold(service)};
   ${({ visibility }) => visibilityToMediaQuery(visibility)}
-  display: inline-block;
-  background: #eee;
   width: 2.5rem;
   height: 2.5rem;
   line-height: 2.5rem;
   text-align: center;
-  margin-right: 0.25rem;
-  &:last-of-type {
-    margin-right: 0;
-  }
+  margin: 0 0.125rem;
   svg {
     fill: currentColor;
     width: 1rem;
@@ -68,82 +86,108 @@ const Block = styled.li`
   }
 `;
 
-const ActiveBlock = styled(Block)`
-  color: ${C_WHITE};
-  background: ${C_DIM_GREY};
-`;
-const UnavailableBlock = styled(Block)`
-  color: ${C_GREY_11};
-`;
 const EllipsisBlock = styled(Block)`
   color: ${C_PHILIPPINE_GREY};
-  background: unset;
 `;
-
-const selectWrapper = availability =>
-  ({
-    [AVAILABILITY.ACTIVE]: ActiveBlock,
-    [AVAILABILITY.UNAVAILABLE]: UnavailableBlock,
-    [AVAILABILITY.AVAILABLE]: Block,
-  }[availability]);
 
 const A = styled.a`
   display: block;
-  color: ${C_EBON};
+  color: ${C_GREY_10};
   text-decoration: none;
   height: 100%;
   width: 100%;
-  &:hover,
-  &:focus {
-    color: ${C_WHITE};
-    background: #5a5a5a;
-  }
+
+  ${({ isActive }) =>
+    isActive
+      ? `
+        padding: 0.0625rem 0.625rem 0 0.625rem;
+        border-bottom: 0.25rem ${C_POSTBOX} solid;
+        &:hover,
+        &:focus {
+         padding: 0;
+         border: 0.0625rem ${C_POSTBOX} solid;
+         border-bottom-width: 0.25rem;
+       }
+      `
+      : `
+       padding: 0.0625rem;
+       &:hover,
+       &:focus {
+         padding: 0;
+         border: 0.0625rem ${C_POSTBOX} solid;
+       }`}
 `;
 
 /* eslint-disable react/prop-types */
-const LinkComponent = ({ children, availability, pageNumber }) => {
-  if (availability === AVAILABILITY.AVAILABLE) {
-    return <A href={`?page=${pageNumber}`}>{children}</A>;
-  }
-  return children;
-};
+const LinkComponent = ({ children, pageNumber, isActive, ...rest }) => (
+  <A
+    href={`?page=${pageNumber}`}
+    {...(isActive && { isActive: true, 'aria-current': 'page' })}
+    {...rest}
+  >
+    {children}
+  </A>
+);
 
-const blockComponents = {
-  [TYPE.NUMBER]: ({ availability, pageNumber, service }) => {
-    const BlockComponent = selectWrapper(availability);
+const LeftArrow = ({ activePage }) => (
+  <Block as="span" visibility={VISIBILITY.ALL}>
+    <LinkComponent
+      pageNumber={activePage - 1}
+      aria-labelledby="pagination-previous-page"
+    >
+      <span id="pagination-previous-page">
+        <LeftChevron />
+        <VisuallyHiddenText>Previous page</VisuallyHiddenText>
+      </span>
+    </LinkComponent>
+  </Block>
+);
+
+const RightArrow = ({ activePage }) => (
+  <Block as="span" visibility={VISIBILITY.ALL}>
+    <LinkComponent
+      pageNumber={activePage + 1}
+      aria-labelledby="pagination-next-page"
+    >
+      <span id="pagination-next-page">
+        <VisuallyHiddenText>Next page</VisuallyHiddenText>
+        <RightChevron />
+      </span>
+    </LinkComponent>
+  </Block>
+);
+
+const renderBlock = ({
+  service,
+  activePage,
+  type,
+  pageNumber,
+  key,
+  visibility,
+}) => {
+  if (type === TYPE.NUMBER) {
     return (
-      <BlockComponent service={service}>
-        <LinkComponent availability={availability} pageNumber={pageNumber}>
+      <Block service={service} key={key} visibility={visibility}>
+        <LinkComponent
+          isActive={pageNumber === activePage}
+          pageNumber={pageNumber}
+        >
           {pageNumber}
         </LinkComponent>
-      </BlockComponent>
+      </Block>
     );
-  },
-  [TYPE.LEFT_ARROW]: ({ availability, activePage }) => {
-    const BlockComponent = selectWrapper(availability);
-    return (
-      <BlockComponent>
-        <LinkComponent availability={availability} pageNumber={activePage - 1}>
-          <LeftChevron />
-        </LinkComponent>
-      </BlockComponent>
-    );
-  },
-  [TYPE.RIGHT_ARROW]: ({ availability, activePage }) => {
-    const BlockComponent = selectWrapper(availability);
-    return (
-      <BlockComponent>
-        <LinkComponent availability={availability} pageNumber={activePage + 1}>
-          <RightChevron />
-        </LinkComponent>
-      </BlockComponent>
-    );
-  },
-  [TYPE.ELLIPSIS]: () => (
-    <EllipsisBlock data-testid="topic-pagination-ellipsis">
+  }
+
+  return (
+    <EllipsisBlock
+      role="separator"
+      data-testid="topic-pagination-ellipsis"
+      key={key}
+      visibility={visibility}
+    >
       <Ellipsis />
     </EllipsisBlock>
-  ),
+  );
 };
 /* eslint-enable react/prop-types */
 
@@ -152,15 +196,25 @@ const Pagination = ({ activePage, pageCount }) => {
   const blocks = buildBlocks(activePage, pageCount);
   if (!blocks) return null;
 
+  const showLeftArrow = activePage > 1;
+  const showRightArrow = activePage < pageCount;
+
   return (
-    <StyledOrderedList role="list" data-testid="topic-pagination">
-      {blocks.map(block => {
-        const Component = blockComponents[block.type];
-        return (
-          <Component {...block} activePage={activePage} service={service} />
-        );
-      })}
-    </StyledOrderedList>
+    <Nav role="navigation" aria-label="Page" data-testid="topic-pagination">
+      {showLeftArrow && <LeftArrow activePage={activePage} />}
+      <TextSummary
+        service={service}
+        data-testid="topic-pagination-summary"
+        // eslint-disable-next-line jsx-a11y/aria-role
+        role="text"
+      >
+        Page <b>{activePage}</b> of <b>{pageCount}</b>
+      </TextSummary>
+      <StyledUnorderedList role="list">
+        {blocks.map(block => renderBlock({ ...block, activePage, service }))}
+      </StyledUnorderedList>
+      {showRightArrow && <RightArrow activePage={activePage} />}
+    </Nav>
   );
 };
 
