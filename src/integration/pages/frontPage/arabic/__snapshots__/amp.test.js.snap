@@ -272,6 +272,13 @@ Object {
 
 exports[`AMP Front Page Header Navigation link should match text and url 10`] = `
 Object {
+  "text": "بودكاست",
+  "url": "/arabic/tv-and-radio-52067221",
+}
+`;
+
+exports[`AMP Front Page Header Navigation link should match text and url 11`] = `
+Object {
   "text": "برامجنا",
   "url": "/arabic/tv-and-radio-37728883",
 }

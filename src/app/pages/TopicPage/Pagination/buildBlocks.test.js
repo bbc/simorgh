@@ -38,12 +38,6 @@ const validate = ({
   if (!output && !expectedOutput) return true;
   const filteredBlocks = output.filter(block => isVisible(block, device));
   const compareBlock = (i, expected, actual) => {
-    if (expected === '<' && actual[i].type === TYPE.LEFT_ARROW) {
-      return true;
-    }
-    if (expected === '>' && actual[i].type === TYPE.RIGHT_ARROW) {
-      return true;
-    }
     if (expected === '.' && actual[i].type === TYPE.ELLIPSIS) {
       return true;
     }
@@ -73,23 +67,23 @@ const smallPageCounts = [
   {
     currentPage: 1,
     pageCount: 2,
-    mobileOutput: ['<', 1, 2, '>'],
-    tabletOutput: ['<', 1, 2, '>'],
-    desktopOutput: ['<', 1, 2, '>'],
+    mobileOutput: [1, 2],
+    tabletOutput: [1, 2],
+    desktopOutput: [1, 2],
   },
   {
     currentPage: 1,
     pageCount: 4,
-    mobileOutput: ['<', 1, 2, '.', 4, '>'],
-    tabletOutput: ['<', 1, 2, 3, 4, '>'],
-    desktopOutput: ['<', 1, 2, 3, 4, '>'],
+    mobileOutput: [1, 2, '.', 4],
+    tabletOutput: [1, 2, 3, 4],
+    desktopOutput: [1, 2, 3, 4],
   },
   {
     currentPage: 3,
     pageCount: 4,
-    mobileOutput: ['<', 1, '.', 3, 4, '>'],
-    tabletOutput: ['<', 1, 2, 3, 4, '>'],
-    desktopOutput: ['<', 1, 2, 3, 4, '>'],
+    mobileOutput: [1, '.', 3, 4],
+    tabletOutput: [1, 2, 3, 4],
+    desktopOutput: [1, 2, 3, 4],
   },
 ];
 
@@ -97,37 +91,37 @@ const bigPageCounts = [
   {
     currentPage: 1,
     pageCount: 100,
-    mobileOutput: ['<', 1, 2, '.', 100, '>'],
-    tabletOutput: ['<', 1, 2, 3, '.', 100, '>'],
-    desktopOutput: ['<', 1, 2, 3, 4, 5, 6, 7, '.', 100, '>'],
+    mobileOutput: [1, 2, '.', 100],
+    tabletOutput: [1, 2, 3, '.', 100],
+    desktopOutput: [1, 2, 3, 4, 5, 6, 7, '.', 100],
   },
   {
     currentPage: 2,
     pageCount: 100,
-    mobileOutput: ['<', 1, 2, '.', 100, '>'],
-    tabletOutput: ['<', 1, 2, 3, 4, '.', 100, '>'],
-    desktopOutput: ['<', 1, 2, 3, 4, 5, 6, 7, 8, '.', 100, '>'],
+    mobileOutput: [1, 2, '.', 100],
+    tabletOutput: [1, 2, 3, 4, '.', 100],
+    desktopOutput: [1, 2, 3, 4, 5, 6, 7, 8, '.', 100],
   },
   {
     currentPage: 50,
     pageCount: 100,
-    mobileOutput: ['<', 1, '.', 50, '.', 100, '>'],
-    tabletOutput: ['<', 1, '.', 49, 50, 51, '.', 100, '>'],
-    desktopOutput: ['<', 1, '.', 47, 48, 49, 50, 51, 52, 53, '.', 100, '>'],
+    mobileOutput: [1, '.', 50, '.', 100],
+    tabletOutput: [1, '.', 49, 50, 51, '.', 100],
+    desktopOutput: [1, '.', 47, 48, 49, 50, 51, 52, 53, '.', 100],
   },
   {
     currentPage: 99,
     pageCount: 100,
-    mobileOutput: ['<', 1, '.', 99, 100, '>'],
-    tabletOutput: ['<', 1, '.', 97, 98, 99, 100, '>'],
-    desktopOutput: ['<', 1, '.', 93, 94, 95, 96, 97, 98, 99, 100, '>'],
+    mobileOutput: [1, '.', 99, 100],
+    tabletOutput: [1, '.', 97, 98, 99, 100],
+    desktopOutput: [1, '.', 93, 94, 95, 96, 97, 98, 99, 100],
   },
   {
     currentPage: 100,
     pageCount: 100,
-    mobileOutput: ['<', 1, '.', 99, 100, '>'],
-    tabletOutput: ['<', 1, '.', 98, 99, 100, '>'],
-    desktopOutput: ['<', 1, '.', 94, 95, 96, 97, 98, 99, 100, '>'],
+    mobileOutput: [1, '.', 99, 100],
+    tabletOutput: [1, '.', 98, 99, 100],
+    desktopOutput: [1, '.', 94, 95, 96, 97, 98, 99, 100],
   },
 ];
 
