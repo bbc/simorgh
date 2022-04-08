@@ -1,5 +1,6 @@
 import path from 'ramda/src/path';
 import config from '../../../support/config/services';
+import snapshotConfig from '../../../support/helpers/snapshotConfig';
 
 export default ({ service, pageType, variant }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
@@ -81,6 +82,21 @@ export default ({ service, pageType, variant }) => {
               }
             }
           });
+        });
+      });
+      describe(`Visual comparison tests for ${service} ${pageType}`, () => {
+        it('Articles', () => {
+          if (
+            Cypress.env('APP_ENV') === 'local' &&
+            Cypress.browser.isHeadless &&
+            snapshotConfig(service)
+          ) {
+            cy.document().its('fonts.status').should('equal', 'loaded');
+
+            cy.matchImageSnapshot({ capture: 'fullPage' });
+          } else {
+            cy.log('Snapshot skipped in headed mode');
+          }
         });
       });
     });

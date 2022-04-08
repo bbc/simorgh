@@ -2,6 +2,7 @@ import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import getErrorPath from './getErrorPath';
+import snapshotConfig from '../../../support/helpers/snapshotConfig';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -109,6 +110,21 @@ export const testsThatFollowSmokeTestConfig = ({
             'lang',
             appConfig[config[service].name][variant].lang,
           );
+        });
+        it('Error Page 404 snapshot test', () => {
+          if (
+            Cypress.env('APP_ENV') === 'local' &&
+            Cypress.browser.isHeadless &&
+            snapshotConfig(service)
+          ) {
+            cy.setCookie('ckns_privacy', 'july2019');
+            cy.setCookie('ckns_policy', '111');
+            cy.setCookie('ckns_explicit', '1');
+            cy.document().its('fonts.status').should('equal', 'loaded');
+            cy.matchImageSnapshot();
+          } else {
+            cy.log('Snapshot skipped in headed mode');
+          }
         });
       });
       if (envConfig.standaloneErrorPages) {

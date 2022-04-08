@@ -348,7 +348,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
@@ -461,7 +461,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
     },
     specialFeatures: {
@@ -4798,7 +4798,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       onDemandAudio: {
         environments: {
@@ -5195,7 +5195,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       mostWatchedPage: {
         environments: {
@@ -7240,7 +7240,7 @@ module.exports = () => ({
             paths: [
               '/swahili/bbc_swahili_tv/tv/w172xcqnsxfj1bk', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
@@ -8807,7 +8807,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       mostReadPage: {
         environments: {

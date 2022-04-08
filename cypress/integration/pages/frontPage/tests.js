@@ -1,3 +1,5 @@
+import snapshotConfig from '../../../support/helpers/snapshotConfig';
+
 // Limiting to one service for now
 const serviceHasPublishedPromo = service => service === 'arabic';
 
@@ -55,6 +57,39 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               done();
             });
           });
+        }
+      });
+    });
+    describe(`Visual comparison tests for ${service} ${pageType}`, () => {
+      it('Front page', () => {
+        if (
+          Cypress.env('APP_ENV') === 'local' &&
+          Cypress.browser.isHeadless &&
+          snapshotConfig(service)
+        ) {
+          // arabic and persian front pages, and amp pages, are very deep and are having problems with lazy loading
+          cy.url().then(url => {
+            if (
+              service !== 'arabic' &&
+              service !== 'persian' &&
+              !url.includes('.amp')
+            ) {
+              cy.setCookie('ckns_privacy', 'july2019');
+              cy.setCookie('ckns_policy', '111');
+              cy.setCookie('ckns_explicit', '1');
+              cy.reload();
+              cy.scrollTo('bottom', { duration: 6000 });
+              cy.scrollTo('top', { duration: 6000 });
+              cy.document().its('fonts.status').should('equal', 'loaded');
+
+              cy.matchImageSnapshot({ capture: 'fullPage' });
+            } else {
+              cy.document().its('fonts.status').should('equal', 'loaded');
+              cy.matchImageSnapshot();
+            }
+          });
+        } else {
+          cy.log('Snapshot skipped in headed mode');
         }
       });
     });

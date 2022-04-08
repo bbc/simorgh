@@ -22,6 +22,8 @@ import ampOnlyServices from './ampOnlyServices';
 import visitPage from './visitPage';
 import getAmpUrl from './getAmpUrl';
 
+require('dotenv').config();
+
 // This function takes all types of tests we have and runs in this series of steps with the fewest possible page visits
 
 // Pass arguments in from each page's index.js file
@@ -58,6 +60,7 @@ const runTestsForPage = ({
               cy.intercept(
                 {
                   method: 'GET',
+
                   pathname: `/datafiles/${optimizelyKey}.json`,
                 },
                 { statusCode: 404 },
@@ -67,6 +70,7 @@ const runTestsForPage = ({
               cy.intercept(
                 {
                   method: 'GET',
+
                   pathname: `/datafiles/${optimizelyKey}.json`,
                 },
                 { foo: '123' },
