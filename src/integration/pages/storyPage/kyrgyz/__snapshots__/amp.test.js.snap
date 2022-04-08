@@ -183,7 +183,7 @@ Object {
 exports[`AMP Story Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "Би-Би-Си менен байланышыңыз",
-  "url": "https://www.bbc.co.uk/send/u50853445",
+  "url": "https://www.bbc.co.uk/kyrgyz/send/u50853445",
 }
 `;
 

@@ -183,7 +183,7 @@ Object {
 exports[`AMP Feature Index page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "بی بی سی سے رابطہ کریں",
-  "url": "https://www.bbc.co.uk/send/u50853907",
+  "url": "https://www.bbc.co.uk/urdu/send/u50853907",
 }
 `;
 

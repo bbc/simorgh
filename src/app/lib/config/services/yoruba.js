@@ -289,7 +289,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853973',
+          href: 'https://www.bbc.co.uk/yoruba/send/u50853973',
           text: 'Kàn sí BBC',
         },
         {

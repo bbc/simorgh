@@ -293,7 +293,7 @@ export const service = {
           text: 'کوکیز',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853907',
+          href: 'https://www.bbc.co.uk/urdu/send/u50853907',
           text: 'بی بی سی سے رابطہ کریں',
         },
         {

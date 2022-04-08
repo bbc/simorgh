@@ -49,7 +49,7 @@ Object {
 exports[`Canonical persian/afghanistan IDX page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "تماس با بی بی سی",
-  "url": "https://www.bbc.co.uk/send/u50853555",
+  "url": "https://www.bbc.co.uk/persian/send/u50853555",
 }
 `;
 

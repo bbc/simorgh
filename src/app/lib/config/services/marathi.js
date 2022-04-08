@@ -303,8 +303,8 @@ export const service = {
           text: 'कुकीज',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853467',
-          text: 'बीबीसीशी संपर्क साधा',
+          href: 'https://www.bbc.co.uk/marathi/send/u50853467',
+          text: 'बीबीसीशी संपर्क साधाा',
         },
         {
           id: 'COOKIE_SETTINGS',
