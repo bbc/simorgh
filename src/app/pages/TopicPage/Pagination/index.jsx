@@ -61,7 +61,7 @@ const TextSummary = styled.div`
   color: ${C_GREY_6};
   display: inline-block;
   margin: 0 1.375rem;
-  strong {
+  b {
     ${({ service }) => getSansBold(service)};
   }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
@@ -202,8 +202,13 @@ const Pagination = ({ activePage, pageCount }) => {
   return (
     <Nav role="navigation" aria-label="Page" data-testid="topic-pagination">
       {showLeftArrow && <LeftArrow activePage={activePage} />}
-      <TextSummary service={service} data-testid="topic-pagination-summary">
-        Page <strong>{activePage}</strong> of <strong>{pageCount}</strong>
+      <TextSummary
+        service={service}
+        data-testid="topic-pagination-summary"
+        // eslint-disable-next-line jsx-a11y/aria-role
+        role="text"
+      >
+        Page <b>{activePage}</b> of <b>{pageCount}</b>
       </TextSummary>
       <StyledUnorderedList role="list">
         {blocks.map(block => renderBlock({ ...block, activePage, service }))}
