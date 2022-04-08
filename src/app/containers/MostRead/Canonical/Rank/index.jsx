@@ -202,7 +202,7 @@ const MostReadRank = ({
 MostReadRank.propTypes = {
   service: string.isRequired,
   script: shape(scriptPropType).isRequired,
-  listIndex: number.isRequired,
+  listIndex: oneOf(number, string).isRequired,
   numberOfItems: number.isRequired,
   dir: oneOf(['rtl', 'ltr']),
   columnLayout: oneOf([

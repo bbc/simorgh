@@ -18,36 +18,51 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
     mostRead: { numberOfItems },
   } = useContext(ServiceContext);
 
-  const innerHTML = `
-    "cupcakes": {
-      "imageUrl": "https://amp.dev/static/samples/img/image2.jpg",
-      "text": "test has worked",
-      "style": "greenBorder"
-    },
-    "sushi": {
-      "imageUrl": "https://amp.dev/static/samples/img/image3.jpg",
-      "style": "redBorder"
-    }`;
-
   return (
     <Wrapper>
       {/* Import required amp scripts for most read */}
       <Helmet>
         {AMP_LIST_JS}
         {AMP_MUSTACHE_JS}
+        <script
+          async
+          custom-element="amp-script"
+          src="https://cdn.ampproject.org/v0/amp-script-0.1.js"
+        />
       </Helmet>
 
-      {/* <Helmet>
-        <amp-state id="numerals">
-          script=
-          {[
-            {
-              type: 'text/javascript',
-              innerHTML,
-            },
-          ]}
-        </amp-state>
-      </Helmet> */}
+      <amp-script
+        id="dataFunctions"
+        script="local-script"
+        width="1"
+        height="1"
+        data-ampdevmode
+      />
+
+      <script
+        id="local-script"
+        type="text/plain"
+        target="amp-script"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{
+          __html: `
+          const translations = {
+            bengali: ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯', '১০'],
+            burmese: ['၀', '၁', '၂', '၃', '၄', '၅', '၆', '၇', '၈', '၉', '၁၀'],
+            nepali: ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९', '१०'],
+            EasternArabic: ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹','۱۰'],
+          }
+          const WesternArabic = ['0','1','2','3','4','5','6','7','8','9','10'];
+          function getRemoteData() {
+            return fetch("http://localhost:7080/mundo/mostread.json")
+              .then(resp => resp.json())
+              .then(resp => {const respSlice = resp.records.slice(0,${size}); resp.records=respSlice; return resp;})
+              .then(resp => {resp.records.forEach(item => item.rankTranslation = translations["${service}"]? translations["${service}"][[item.rank]]: WesternArabic[item.rank]); return resp;})
+          }
+          exportFunction('getRemoteData', getRemoteData);
+          `,
+        }}
+      />
 
       <MostReadList
         numberOfItems={numberOfItems}
@@ -58,45 +73,18 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
           width="300"
           height="100"
           layout="responsive"
-          src={endpoint}
+          src="amp-script:dataFunctions.getRemoteData"
           items="records"
           max-items={numberOfItems}
         >
           <template type="amp-mustache">
-            <amp-state id="theFood">
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: `<script type="application/json">
-                      {
-                        "cupcakes": {
-                          "imageUrl": "https://amp.dev/static/samples/img/image2.jpg",
-                          "style": "greenBorder"
-                        },
-                        "sushi": {
-                          "imageUrl": "https://amp.dev/static/samples/img/image3.jpg",
-                          "style": "redBorder"
-                        }
-                      }
-                    </script>`,
-                }}
-              />
-            </amp-state>
-            <p data-amp-bind-text="'I want to eat ' + currentMeal + '.'">
-              this is a cupcake
-            </p>
-            <button on="tap:AMP.setState({currentMeal: 'sushi'})">
-              Set to sushi
-            </button>
-            <button on="tap:AMP.setState({currentMeal: 'cupcakes'})">
-              Set to Cupcake
-            </button>
             <MostReadItemWrapper dir={dir} columnLayout="ampOneColumn">
               <MostReadRank
                 service={service}
                 script={script}
                 numberOfItems={numberOfItems}
+                listIndex={'{{rankTranslation}}'}
                 dir={dir}
-                listIndex={'{{ rank }}'}
                 columnLayout="oneColumn"
                 size={size}
                 isAmp
