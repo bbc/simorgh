@@ -23,9 +23,7 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
 
   return (
     <Wrapper>
-      {/* Import required amp scripts for most read */}
-
-      {/* <Helmet
+      <Helmet
         script={[
           {
             id: 'local-script',
@@ -34,9 +32,10 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
             innerHTML: onlyinnerscript,
           },
         ]}
-      /> */}
+      />
 
       <Helmet>
+        {/* Import required amp scripts for most read */}
         {AMP_LIST_JS}
         {AMP_MUSTACHE_JS}
         <script
