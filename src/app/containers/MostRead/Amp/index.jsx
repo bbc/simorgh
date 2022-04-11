@@ -24,6 +24,18 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
   return (
     <Wrapper>
       {/* Import required amp scripts for most read */}
+
+      {/* <Helmet
+        script={[
+          {
+            id: 'local-script',
+            type: 'text/plain',
+            target: 'amp-script',
+            innerHTML: onlyinnerscript,
+          },
+        ]}
+      /> */}
+
       <Helmet>
         {AMP_LIST_JS}
         {AMP_MUSTACHE_JS}
@@ -43,14 +55,6 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
         script="local-script"
         width="1"
         height="1"
-      />
-      <script
-        id="local-script"
-        type="text/plain"
-        target="amp-script"
-        dangerouslySetInnerHTML={{
-          __html: onlyinnerscript,
-        }}
       />
 
       <MostReadList
