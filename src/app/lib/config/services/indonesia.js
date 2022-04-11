@@ -311,7 +311,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853401',
+          href: 'https://www.bbc.co.uk/indonesia/send/u50853401',
           text: 'Hubungi BBC',
         },
         {

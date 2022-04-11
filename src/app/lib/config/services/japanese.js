@@ -283,7 +283,7 @@ export const service = {
         },
         {
           href: 'https://www.bbc.co.uk/contact',
-          text: 'BBCに連絡する',
+          text: 'BBC に連絡する',
         },
         {
           id: 'COOKIE_SETTINGS',

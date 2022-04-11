@@ -49,7 +49,7 @@ Object {
 exports[`Canonical Korean Live Radio Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "고객센터",
-  "url": "https://www.bbc.co.uk/send/u50853423",
+  "url": "https://www.bbc.co.uk/korean/send/u50853423",
 }
 `;
 

@@ -3,6 +3,10 @@ import styled from '@emotion/styled';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import { string, node } from 'prop-types';
 import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
+import {
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
 
 const Img = styled.img`
   width: 100%;
@@ -22,15 +26,28 @@ const ChildWrapper = styled.div`
 const WEBP_ORIGIN_CODES = ['cpsdevpb', 'cpsprodpb'];
 
 const createSrcSet = (imageUrl, suffix = '') => {
-  const imageResolutions = [70, 95, 144, 183, 240, 320];
+  const imageResolutions = [85, 120, 170, 232, 325, 450];
+
   return imageResolutions
     .map(res => `${imageUrl.replace(`{width}`, res)}${suffix} ${res}w`)
     .join(', ');
 };
 
+const createSizes = () => {
+  // 4 columns of fixed width
+  const DESKTOP_SIZE = `(min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) 232px`;
+
+  // 2 columns of 50% screen width - images are 100% of the column
+  const TABLET_SIZE = `(min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) 50vw`;
+
+  // 1 column of 100% screen width - images are 33% of the column
+  const MOBILE_SIZE = `33vw`;
+  return [DESKTOP_SIZE, TABLET_SIZE, MOBILE_SIZE].join(', ');
+};
+
 const Image = props => {
   const { children, src, ...rest } = props;
-  const sizes = '(max-width: 1008px) 33vw, 321px';
+
   const isWebPSupported = WEBP_ORIGIN_CODES.some(originCode =>
     src.includes(originCode),
   );
@@ -42,10 +59,14 @@ const Image = props => {
             <source
               srcSet={createSrcSet(src, '.webp')}
               type="image/webp"
-              sizes={sizes}
+              sizes={createSizes()}
             />
           )}
-          <source srcSet={createSrcSet(src)} type="image/jpeg" sizes={sizes} />
+          <source
+            srcSet={createSrcSet(src)}
+            type="image/jpeg"
+            sizes={createSizes()}
+          />
           <Img {...rest} src={src.replace('{width}', 240)} />
         </picture>
       </ImagePlaceholder>

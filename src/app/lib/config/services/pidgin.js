@@ -324,7 +324,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853577',
+          href: 'https://www.bbc.co.uk/pidgin/send/u50853577',
           text: 'Call BBC',
         },
         {
