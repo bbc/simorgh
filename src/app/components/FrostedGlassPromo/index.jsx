@@ -9,6 +9,7 @@ import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import FrostedGlassPanel from './FrostedGlassPanel';
 
 import ImageWithPlaceholder from '../../containers/ImageWithPlaceholder';
@@ -49,7 +50,7 @@ const A = styled.a`
   display: inline-block;
   ${({ service }) => service && getSerifRegular(service)}
   text-decoration: none;
-  color: white;
+  color: ${({ isAmp }) => (isAmp ? 'black' : 'white')};
   font-size: 0.9375rem;
   line-height: 1.33;
   margin: 0.875rem ${GEL_SPACING} 0 ${GEL_SPACING};
@@ -74,6 +75,7 @@ const FrostedGlassPromo = ({
   paletteSize,
 }) => {
   const { script, service } = useContext(ServiceContext);
+  const { isAmp } = useContext(RequestContext);
 
   const clickTracker = useClickTrackerHandler({
     ...(eventTrackingData || {}),
@@ -116,7 +118,13 @@ const FrostedGlassPromo = ({
         paletteSize={paletteSize}
       >
         <H3>
-          <A script={script} service={service} href={url} onClick={onClick}>
+          <A
+            script={script}
+            service={service}
+            href={url}
+            onClick={onClick}
+            isAmp={isAmp}
+          >
             {children}
           </A>
         </H3>
@@ -130,7 +138,7 @@ const FrostedGlassPromo = ({
 // It uses a withData HoC to convert the prop to a standardised schema
 // This array is the list of props that should just be passed straight through
 // to the component, without requiring any preprocessing
-const propsToPassThrough = ['minimumContrast', 'paletteSize'];
+const propsToPassThrough = ['minimumContrast', 'paletteSize', 'isAmp'];
 
 FrostedGlassPromo.propTypes = {
   children: node.isRequired,

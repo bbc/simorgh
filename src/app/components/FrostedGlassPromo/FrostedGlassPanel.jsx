@@ -4,10 +4,12 @@ import styled from '@emotion/styled';
 import { node, number, string } from 'prop-types';
 
 import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import { C_GHOST } from '@bbc/psammead-styles/colours';
 import useImageColour from '../../hooks/useImageColour';
 
 const BLUR_RADIUS = 15;
 const FALLBACK_COLOUR = '#202224';
+const FALLBACK_COLOUR_AMP = C_GHOST;
 
 const Wrapper = styled.div`
   position: relative;
@@ -58,14 +60,15 @@ const FrostedGlassPanel = ({
   minimumContrast,
   paletteSize,
 }) => {
+  const { isAmp } = useContext(RequestContext);
+
   const { isLoading, colour } = useImageColour(image, {
-    fallbackColour: FALLBACK_COLOUR,
+    fallbackColour: isAmp ? FALLBACK_COLOUR_AMP : FALLBACK_COLOUR,
     minimumContrast,
     contrastColour: '#ffffff',
     paletteSize,
   });
 
-  const { isAmp } = useContext(RequestContext);
   const isCanonical = !isAmp;
 
   const backgroundImageStyle = {
