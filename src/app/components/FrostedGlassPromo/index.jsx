@@ -5,11 +5,7 @@ import pick from 'ramda/src/pick';
 
 import { getSerifRegular } from '@bbc/psammead-styles/font-styles';
 import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-import {
-  GEL_SPACING,
-  GEL_SPACING_HLF_TRPL,
-  GEL_SPACING_DBL,
-} from '@bbc/gel-foundations/spacings';
+import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -56,11 +52,11 @@ const A = styled.a`
   color: white;
   font-size: 0.9375rem;
   line-height: 1.33;
-  margin: 0.625rem ${GEL_SPACING} 0 ${GEL_SPACING};
+  margin: 0.875rem ${GEL_SPACING} 0 ${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     font-size: 1rem;
     line-height: 1.25;
-    margin: ${GEL_SPACING_HLF_TRPL} ${GEL_SPACING_DBL} 0 ${GEL_SPACING_DBL};
+    margin: 0.875rem ${GEL_SPACING_DBL} 0 ${GEL_SPACING_DBL};
   }
   &:focus {
     text-decoration: underline;
