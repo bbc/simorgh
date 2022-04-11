@@ -19,37 +19,7 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
     mostRead: { numberOfItems },
   } = useContext(ServiceContext);
 
-  const test = `<script id="local-script" type="text/plain" target="amp-script">
-  const translations = {
-    bengali: ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯', '১০'],
-    burmese: ['၀', '၁', '၂', '၃', '၄', '၅', '၆', '၇', '၈', '၉', '၁၀'],
-    nepali: ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९', '१०'],
-    EasternArabic: ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹','۱۰'],
-  }
-  const WesternArabic = ['0','1','2','3','4','5','6','7','8','9','10'];
-  function getRemoteData() {
-    return fetch("${endpoint}")
-      .then(resp => resp.json())
-      .then(resp => {const respSlice = resp.records.slice(0,${size}); resp.records=respSlice; return resp;})
-      .then(resp => {resp.records.forEach((item, index) => item.rankTranslation = translations["${service}"]? translations["${service}"][[index+1]]: WesternArabic[index+1]); return resp;})
-  }
-  exportFunction('getRemoteData', getRemoteData);
-  </script>`;
-
-  const testtwo = `const translations = {
-    bengali: ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯', '১০'],
-    burmese: ['၀', '၁', '၂', '၃', '၄', '၅', '၆', '၇', '၈', '၉', '၁၀'],
-    nepali: ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९', '१०'],
-    EasternArabic: ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹','۱۰'],
-  }
-  const WesternArabic = ['0','1','2','3','4','5','6','7','8','9','10'];
-  function getRemoteData() {
-    return fetch("${endpoint}")
-      .then(resp => resp.json())
-      .then(resp => {const respSlice = resp.records.slice(0,${size}); resp.records=respSlice; return resp;})
-      .then(resp => {resp.records.forEach((item, index) => item.rankTranslation = translations["${service}"]? translations["${service}"][[index+1]]: WesternArabic[index+1]); return resp;})
-  }
-  exportFunction('getRemoteData', getRemoteData);`;
+  const onlyinnerscript = `const translations = { bengali: ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯', '১০'], burmese: ['၀', '၁', '၂', '၃', '၄', '၅', '၆', '၇', '၈', '၉', '၁၀'], nepali: ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९', '१०'], EasternArabic: ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹','۱۰'], }; const WesternArabic = ['0','1','2','3','4','5','6','7','8','9','10']; function getRemoteData() { return fetch("${endpoint}") .then(resp => resp.json()) .then(resp => {resp.records.forEach((item, index) => item.rankTranslation = translations["${service}"]? translations["${service}"][[index+1]]: WesternArabic[index+1]); return resp;})} exportFunction('getRemoteData', getRemoteData);`;
 
   return (
     <Wrapper>
@@ -62,7 +32,10 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
           custom-element="amp-script"
           src="https://cdn.ampproject.org/v0/amp-script-0.1.js"
         />
-        <meta name="amp-script-src" content={generateCSPHash(test)} />
+        <meta
+          name="amp-script-src"
+          content={generateCSPHash(onlyinnerscript)}
+        />
       </Helmet>
 
       <amp-script
@@ -71,9 +44,12 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
         width="1"
         height="1"
       />
-      <div
+      <script
+        id="local-script"
+        type="text/plain"
+        target="amp-script"
         dangerouslySetInnerHTML={{
-          __html: test,
+          __html: onlyinnerscript,
         }}
       />
 

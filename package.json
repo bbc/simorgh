@@ -259,6 +259,9 @@
     "webpack-node-externals": "3.0.0",
     "yaml-js": "0.3.1"
   },
+  "browser": {
+    "crypto": false
+  },
   "spec": {
     "executable": [
       "./bake-scripts/*"
