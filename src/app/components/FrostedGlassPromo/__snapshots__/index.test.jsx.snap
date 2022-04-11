@@ -92,14 +92,14 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
   color: white;
   font-size: 0.9375rem;
   line-height: 1.33;
-  margin: 0.625rem 0.5rem 0 0.5rem;
+  margin: 0.875rem 0.5rem 0 0.5rem;
 }
 
 @media (min-width: 25rem) {
   .emotion-17 {
     font-size: 1rem;
     line-height: 1.25;
-    margin: 0.75rem 1rem 0 1rem;
+    margin: 0.875rem 1rem 0 1rem;
   }
 }
 
@@ -282,14 +282,14 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
   color: white;
   font-size: 0.9375rem;
   line-height: 1.33;
-  margin: 0.625rem 0.5rem 0 0.5rem;
+  margin: 0.875rem 0.5rem 0 0.5rem;
 }
 
 @media (min-width: 25rem) {
   .emotion-17 {
     font-size: 1rem;
     line-height: 1.25;
-    margin: 0.75rem 1rem 0 1rem;
+    margin: 0.875rem 1rem 0 1rem;
   }
 }
 
@@ -308,7 +308,7 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
   font-style: normal;
   color: white;
   font-size: 0.8125rem;
-  padding: 0.625rem 0.5rem 0 0.5rem;
+  padding: 0.75rem 0.5rem 0 0.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -328,7 +328,7 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
 @media (min-width: 25rem) {
   .emotion-20 {
     font-size: 0.875rem;
-    padding: 0.625rem 1rem 0 1rem;
+    padding: 0.75rem 1rem 0 1rem;
   }
 }
 
@@ -522,14 +522,14 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
   color: white;
   font-size: 0.9375rem;
   line-height: 1.33;
-  margin: 0.625rem 0.5rem 0 0.5rem;
+  margin: 0.875rem 0.5rem 0 0.5rem;
 }
 
 @media (min-width: 25rem) {
   .emotion-17 {
     font-size: 1rem;
     line-height: 1.25;
-    margin: 0.75rem 1rem 0 1rem;
+    margin: 0.875rem 1rem 0 1rem;
   }
 }
 
@@ -548,7 +548,7 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
   font-style: normal;
   color: white;
   font-size: 0.8125rem;
-  padding: 0.625rem 0.5rem 0 0.5rem;
+  padding: 0.75rem 0.5rem 0 0.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -568,7 +568,7 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
 @media (min-width: 25rem) {
   .emotion-20 {
     font-size: 0.875rem;
-    padding: 0.625rem 1rem 0 1rem;
+    padding: 0.75rem 1rem 0 1rem;
   }
 }
 
