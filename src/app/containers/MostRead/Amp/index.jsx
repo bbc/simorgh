@@ -19,7 +19,7 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
     mostRead: { numberOfItems },
   } = useContext(ServiceContext);
 
-  const test = `<script id="local-script" type="text/plain" target="amp-script">
+  const test = `
   const translations = {
     bengali: ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯', '১০'],
     burmese: ['၀', '၁', '၂', '၃', '၄', '၅', '၆', '၇', '၈', '၉', '၁၀'],
@@ -34,7 +34,7 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
       .then(resp => {resp.records.forEach((item, index) => item.rankTranslation = translations["${service}"]? translations["${service}"][[index+1]]: WesternArabic[index+1]); return resp;})
   }
   exportFunction('getRemoteData', getRemoteData);
-  </script>`;
+`;
 
   const testtwo = `const translations = {
     bengali: ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯', '১০'],
@@ -71,7 +71,10 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
         width="1"
         height="1"
       />
-      <div
+      <script
+        id="local-script"
+        type="text/plain"
+        target="amp-script"
         dangerouslySetInnerHTML={{
           __html: test,
         }}
