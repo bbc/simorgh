@@ -109,7 +109,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50778626',
+          href: 'https://www.bbc.co.uk/zhongwen/send/u50778626',
           text: '联络BBC',
         },
         {

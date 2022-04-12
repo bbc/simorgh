@@ -299,8 +299,8 @@ export const service = {
           text: 'কুকিজ',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853247',
-          text: 'বিবিসির সঙ্গে যোগাযোগ করুন',
+          href: 'https://www.bbc.co.uk/bengali/send/u50853247',
+          text: 'বিবিসির সাথে যোগাযোগ করুন',
         },
         {
           id: 'COOKIE_SETTINGS',

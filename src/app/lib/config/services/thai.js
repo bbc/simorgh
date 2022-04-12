@@ -320,7 +320,7 @@ export const service = {
           text: 'คุกกีส์',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853797',
+          href: 'https://www.bbc.co.uk/thai/send/u50853797',
           text: 'ติดต่อบีบีซี',
         },
         {

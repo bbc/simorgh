@@ -292,8 +292,8 @@ export const service = {
           text: 'Куки(Cookies)',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853929',
-          text: 'Би-би-си билан боғланиш',
+          href: 'https://www.bbc.co.uk/uzbek/send/u50853929',
+          text: "'Bi-bi-si bilan bog’laning'",
         },
         {
           id: 'COOKIE_SETTINGS',
