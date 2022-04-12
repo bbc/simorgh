@@ -11,19 +11,24 @@ const DISCLAIMER_FIXTURE = {
   para2: {
     text: 'IOS',
     url: 'https://apps.apple.com/us/app/%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8-%D0%B1%D0%B8-%D0%B1%D0%B8-%D1%81%D0%B8/id504278066',
+    isExternal: true,
   },
   para3: ' и ',
   para4: {
     text: 'Android',
     url: 'https://play.google.com/store/apps/details?id=uk.co.bbc.russian',
+    isExternal: false,
   },
   para5: '. Вы можете также подписаться на наш канал в ',
   para6: {
     text: 'Telegram',
     url: 'https://t.me/bbcrussian',
+    isExternal: true,
   },
   para7: '.',
 };
+
+const externalLinkText = ', внешняя';
 
 // eslint-disable-next-line react/prop-types
 const renderComponent = (
@@ -38,7 +43,7 @@ const renderComponent = (
         },
       }}
     >
-      <ServiceContext.Provider value={{ disclaimer }}>
+      <ServiceContext.Provider value={{ disclaimer, externalLinkText }}>
         <DisclaimerComponent />
       </ServiceContext.Provider>
     </ToggleContextProvider>,
@@ -83,5 +88,15 @@ describe('Disclaimer Component', () => {
   it('should not render when disclaimer is empty object', () => {
     const { container } = renderComponent({ enabled: true }, {});
     expect(container).toBeEmptyDOMElement();
+  });
+
+  it('should render links with external label if links are external', () => {
+    const { getByLabelText } = renderComponent();
+    expect(getByLabelText('IOS, внешняя')).toBeInTheDocument();
+  });
+
+  it('should not render links with external label if isExternal is false', () => {
+    const { queryByLabelText } = renderComponent();
+    expect(queryByLabelText('Android, внешняя')).toBeNull();
   });
 });

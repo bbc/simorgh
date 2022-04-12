@@ -3,7 +3,6 @@ import { bool } from 'prop-types';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
-import InlineLink from '@bbc/psammead-inline-link';
 import { getSansLight } from '@bbc/psammead-styles/font-styles';
 import { getLongPrimer } from '@bbc/gel-foundations/typography';
 import {
@@ -21,6 +20,11 @@ import { GridItemLarge } from '#app/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import isEmpty from 'ramda/src/isEmpty';
+import InlineLink from '../InlineLink';
+
+const InfoBanner = styled.p`
+  padding: 0;
+`;
 
 const Inner = styled.section`
   ${({ script }) => script && getLongPrimer(script)}
@@ -50,9 +54,9 @@ const DisclaimerComponent = ({ increasePaddingOnDesktop }) => {
 
   if (!shouldShow) return null;
 
-  const disclaimerLabelTranslation = pathOr(
+  const infoBannerLabelTranslation = pathOr(
     'Information',
-    ['disclaimerLabel'],
+    ['infoBannerLabel'],
     translations,
   );
 
@@ -63,21 +67,32 @@ const DisclaimerComponent = ({ increasePaddingOnDesktop }) => {
         script={script}
         increasePaddingOnDesktop={increasePaddingOnDesktop}
         role="region"
-        aria-label={disclaimerLabelTranslation}
+        aria-label={infoBannerLabelTranslation}
       >
-        <strong>
-          {Object.values(disclaimer).map(para => {
-            const linkText = path(['text'], para);
-            const linkUrl = path(['url'], para);
-            return linkUrl ? (
-              <InlineLink href={linkUrl} key={linkText}>
-                {linkText}
-              </InlineLink>
-            ) : (
-              para
-            );
-          })}
-        </strong>
+        <InfoBanner>
+          {disclaimer &&
+            Object.values(disclaimer).map((para, index) => {
+              const linkText = path(['text'], para);
+              const linkUrl = path(['url'], para);
+              const isExternalLink = path(['isExternal'], para);
+              return linkUrl ? (
+                <InlineLink
+                  key={linkText}
+                  locator={linkUrl}
+                  blocks={[
+                    {
+                      id: `infoBannerLink-${index}`,
+                      type: 'fragment',
+                      model: { text: linkText, attributes: [] },
+                    },
+                  ]}
+                  isExternal={isExternalLink}
+                />
+              ) : (
+                para
+              );
+            })}
+        </InfoBanner>
       </Inner>
     </GridItemLarge>
   );
