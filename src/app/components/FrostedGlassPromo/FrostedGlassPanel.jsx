@@ -4,12 +4,12 @@ import styled from '@emotion/styled';
 import { node, number, string } from 'prop-types';
 
 import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
-import { C_GHOST } from '@bbc/psammead-styles/colours';
+import { C_WHITE, C_GREY_8 } from '@bbc/psammead-styles/colours';
 import useImageColour from '../../hooks/useImageColour';
 
 const BLUR_RADIUS = 15;
-const FALLBACK_COLOUR = '#202224';
-const FALLBACK_COLOUR_AMP = C_GHOST;
+const FALLBACK_COLOUR = C_GREY_8;
+const FALLBACK_COLOUR_AMP = C_WHITE;
 
 const Wrapper = styled.div`
   position: relative;
