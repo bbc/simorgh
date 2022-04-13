@@ -20,7 +20,7 @@ const Wrapper = styled.div`
   display: inline-block;
   position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 35.438rem;
   text-decoration: none;
   &:hover {
     a {
@@ -76,6 +76,7 @@ const FrostedGlassPromo = ({
 }) => {
   const { script, service } = useContext(ServiceContext);
   const { isAmp } = useContext(RequestContext);
+  const isCanonical = !isAmp;
 
   const clickTracker = useClickTrackerHandler({
     ...(eventTrackingData || {}),
@@ -96,6 +97,7 @@ const FrostedGlassPromo = ({
         tabIndex="-1"
       ></ClickableArea>
       <ImageWithPlaceholder
+        darkMode={isCanonical}
         {...pick(
           [
             'src',
