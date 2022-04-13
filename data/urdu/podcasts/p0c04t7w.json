@@ -1,0 +1,122 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:brand:bbc_urdu_radio/p0c04t7w",
+    "locators": { "pid": "p0c051g3", "brandPid": "p0c04t7w" },
+    "type": "WSRADIO",
+    "createdBy": "bbc_urdu_radio",
+    "language": "ur",
+    "lastUpdated": 1649855073712,
+    "firstPublished": 1649410729000,
+    "lastPublished": 1649410729000,
+    "timestamp": 1649410729000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "ڈرامہ کوئین (Drama Queen) - BBC News اردو",
+      "pageIdentifier": "urdu.bbc_urdu_radio.podcasts.programmes.p0c04t7w.page",
+      "producerId": "95",
+      "contentType": "player-episode",
+      "producer": "URDU"
+    },
+    "tags": {},
+    "version": "v1.4.2",
+    "blockTypes": ["media"],
+    "title": "ڈرامہ کوئین (Drama Queen)",
+    "releaseDateTimeStamp": 1649376000000
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p0c051g3",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "",
+        "synopses": {
+          "short": "’ڈرامہ کوئین‘ پوڈکاسٹ میں سنیے وہ باتیں جنہیں کسی کے ساتھ بانٹنے نہیں دیا جاتا",
+          "medium": "وہ شکایات جو ہم سننا نہیں چاہتے اکثر ہمیں ’ڈرامہ‘ لگتی ہیں اور شکایت کرنے والا ’ڈرامہ کوئین‘۔ اس پوڈکاسٹ میں باتیں ان مشکلات کی جنہیں کسی کے ساتھ بانٹنے نہیں دیا جاتا",
+          "long": "وہ شکایات جو ہم سننا نہیں چاہتے اکثر ہمیں ’ڈرامہ‘ لگتی ہیں اور شکایت کرنے والا ’ڈرامہ کوئین‘۔ اس پوڈکاسٹ میں باتیں ان مشکلات کی جنہیں کسی کے ساتھ بانٹنے نہیں دیا جاتا"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0c0507h.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "p0c04z52",
+            "types": ["Podcast"],
+            "duration": 187,
+            "durationISO8601": "PT3M7S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1649410620000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "’کبھی کسی کو معلوم نہیں ہوگا کہ میں خوش نہیں ہوں‘",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": { "headline": "ڈرامہ کوئین (Drama Queen)" },
+    "locators": { "pid": "p0c051g3", "brandPid": "p0c04t7w" },
+    "media": {
+      "id": "p0c051g3",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "",
+      "synopses": {
+        "short": "’ڈرامہ کوئین‘ پوڈکاسٹ میں سنیے وہ باتیں جنہیں کسی کے ساتھ بانٹنے نہیں دیا جاتا",
+        "medium": "وہ شکایات جو ہم سننا نہیں چاہتے اکثر ہمیں ’ڈرامہ‘ لگتی ہیں اور شکایت کرنے والا ’ڈرامہ کوئین‘۔ اس پوڈکاسٹ میں باتیں ان مشکلات کی جنہیں کسی کے ساتھ بانٹنے نہیں دیا جاتا",
+        "long": "وہ شکایات جو ہم سننا نہیں چاہتے اکثر ہمیں ’ڈرامہ‘ لگتی ہیں اور شکایت کرنے والا ’ڈرامہ کوئین‘۔ اس پوڈکاسٹ میں باتیں ان مشکلات کی جنہیں کسی کے ساتھ بانٹنے نہیں دیا جاتا"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0c0507h.jpg",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "p0c04z52",
+          "types": ["Podcast"],
+          "duration": 187,
+          "durationISO8601": "PT3M7S",
+          "warnings": {},
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1649410620000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "radioProgramme",
+      "episodeTitle": "’کبھی کسی کو معلوم نہیں ہوگا کہ میں خوش نہیں ہوں‘",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p0c0507h.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p0c0507h.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1649376000000,
+    "brand": { "pid": "p0c04t7w", "title": "ڈرامہ کوئین (Drama Queen)" },
+    "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/p0c051g3",
+    "type": "ws_radio"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Urdu",
+      "uri": "/urdu",
+      "type": "simple"
+    },
+    "groups": [{ "type": "other-episode", "promos": [] }]
+  }
+}
