@@ -36,13 +36,6 @@ export const getIconLinks = (service, iconSizes) => {
   });
 };
 
-export const renderAmpHtml = (ampLink, isAmp) => {
-  if (isAmp) {
-    return null;
-  }
-  return <link rel="amphtml" href={ampLink} />;
-};
-
 export const getAppleTouchUrl = service => {
   return [
     process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
