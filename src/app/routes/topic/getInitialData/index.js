@@ -43,7 +43,7 @@ export default async ({ getAgent, service, path: pathname, variant, page }) => {
         description: data.description || data.title,
         promos: data.summaries,
         activePage: data.activePage || 1,
-        pageCount: data.pageCount || 99,
+        pageCount: data.pageCount,
         metadata: {
           type: 'Topic',
         },
