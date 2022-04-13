@@ -45,6 +45,7 @@ const TopicPage = ({ pageData }) => {
         lang={lang}
         description={description}
         openGraphType="website"
+        hasAmpPage={false}
       />
       <LinkedData
         type="CollectionPage"
