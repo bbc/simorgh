@@ -50,7 +50,7 @@ const MetadataContainer = ({
   imageHeight,
   children,
   hasAppleItunesAppBanner,
-  renderAmpHtml,
+  hasAmpPage,
 }) => {
   const {
     isAmp,
@@ -110,6 +110,7 @@ const MetadataContainer = ({
 
   const metaImage = image || defaultImage;
   const metaImageAltText = imageAltText || defaultImageAltText;
+  const linkToAmpPage = hasAmpPage && !isAmp;
 
   return (
     <Helmet htmlAttributes={htmlAttributes}>
@@ -127,7 +128,7 @@ const MetadataContainer = ({
       {isoLang &&
         !isEnglishService &&
         alternateLinksWsSites.map(renderAlternateLinks)}
-      {!isAmp || !renderAmpHtml ? <link rel="amphtml" href={ampLink} /> : null}
+      {linkToAmpPage && <link rel="amphtml" href={ampLink} />}
       {renderAppleItunesApp({
         iTunesAppId,
         canonicalLink,
@@ -208,7 +209,7 @@ MetadataContainer.propTypes = {
   imageHeight: number,
   children: node,
   hasAppleItunesAppBanner: bool,
-  renderAmpHtml: bool,
+  hasAmpPage: bool,
 };
 
 MetadataContainer.defaultProps = {
@@ -221,7 +222,7 @@ MetadataContainer.defaultProps = {
   imageHeight: null,
   children: null,
   hasAppleItunesAppBanner: false,
-  renderAmpHtml: true,
+  hasAmpPage: true,
 };
 
 export default MetadataContainer;
