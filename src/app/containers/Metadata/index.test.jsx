@@ -560,7 +560,7 @@ it('should render the amp page link tag by default', async () => {
   });
 });
 
-it('should not render the amp page link tag is ', async () => {
+it('should not render the amp page link tag if hasAmpPage is false', async () => {
   render(<CanonicalNewsInternationalOrigin hasAmpPage={false} />);
 
   await waitFor(() => {
