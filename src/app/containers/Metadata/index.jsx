@@ -6,7 +6,6 @@ import { RequestContext } from '#contexts/RequestContext';
 import {
   getIconAssetUrl,
   getIconLinks,
-  renderAmpHtml,
   getAppleTouchUrl,
   renderAlternateLinks,
   renderAppleItunesApp,
@@ -51,6 +50,7 @@ const MetadataContainer = ({
   imageHeight,
   children,
   hasAppleItunesAppBanner,
+  renderAmpHtml,
 }) => {
   const {
     isAmp,
@@ -127,7 +127,7 @@ const MetadataContainer = ({
       {isoLang &&
         !isEnglishService &&
         alternateLinksWsSites.map(renderAlternateLinks)}
-      {renderAmpHtml(ampLink, isAmp)}
+      {!isAmp || !renderAmpHtml ? <link rel="amphtml" href={ampLink} /> : null}
       {renderAppleItunesApp({
         iTunesAppId,
         canonicalLink,
@@ -208,6 +208,7 @@ MetadataContainer.propTypes = {
   imageHeight: number,
   children: node,
   hasAppleItunesAppBanner: bool,
+  renderAmpHtml: bool,
 };
 
 MetadataContainer.defaultProps = {
@@ -220,6 +221,7 @@ MetadataContainer.defaultProps = {
   imageHeight: null,
   children: null,
   hasAppleItunesAppBanner: false,
+  renderAmpHtml: true,
 };
 
 export default MetadataContainer;
