@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import styled from '@emotion/styled';
 import { arrayOf, shape, number, oneOf, oneOfType, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
@@ -14,6 +15,22 @@ const eventTrackingData = {
   },
 };
 
+const StoryPromoLiFeatures = styled(StoryPromoLi)`
+  line-height: 0;
+
+  &:first-child {
+    padding: 0 0 0.5rem 0;
+  }
+
+  &:not(:first-child):not(:last-child) {
+    padding: 0.5rem 0 0.5rem 0;
+  }
+
+  &:last-child {
+    padding: 0.5rem 0 0 0;
+  }
+`;
+
 const PromoListComponent = ({ promoItems, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
 
@@ -23,7 +40,11 @@ const PromoListComponent = ({ promoItems, dir }) => {
     <StoryPromoUl>
       {promoItems.map((item, promoIndex) => {
         return (
-          <StoryPromoLi key={item.id || item.uri} ref={viewRef}>
+          <StoryPromoLiFeatures
+            key={item.id || item.uri}
+            ref={viewRef}
+            border={false}
+          >
             <FrostedGlassPromo
               item={item}
               index={promoIndex}
@@ -34,7 +55,7 @@ const PromoListComponent = ({ promoItems, dir }) => {
               eventTrackingData={eventTrackingData}
               sectionType="features-and-analysis"
             />
-          </StoryPromoLi>
+          </StoryPromoLiFeatures>
         );
       })}
     </StoryPromoUl>
