@@ -6,6 +6,7 @@ import useToggle from '#hooks/useToggle';
 import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import Canonical from './Canonical';
 import mostReadShape from './utilities/mostReadShape';
+import AmpMostRead from './Amp';
 
 const blockLevelEventTrackingData = {
   componentName: 'most-read',
@@ -27,7 +28,11 @@ const MostReadContainer = ({
 
   const { enabled } = useToggle('mostRead');
 
+  const environment = process.env.SIMORGH_BASE_URL;
   const mostReadToggleEnabled = enabled && hasMostRead;
+  const endpoint =
+    mostReadEndpointOverride || getMostReadEndpoint({ service, variant });
+  const mostReadUrl = `${environment}${endpoint}`;
 
   // Do not render most read when a toggle is disabled
   if (!mostReadToggleEnabled) {
@@ -36,11 +41,8 @@ const MostReadContainer = ({
   // Do not render on AMP when it is not the most read page
   // We only want to render most read on AMP for the "/popular/read" pages
   if (isAmp && !serverRenderOnAmp) {
-    return null;
+    return <AmpMostRead endpoint={mostReadUrl} size={size} wrapper={wrapper} />;
   }
-
-  const endpoint =
-    mostReadEndpointOverride || getMostReadEndpoint({ service, variant });
 
   return (
     <Canonical
