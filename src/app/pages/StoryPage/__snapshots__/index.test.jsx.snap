@@ -2002,6 +2002,53 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   height: 0.75rem;
 }
 
+.emotion-272 {
+  padding: 0.5rem 0 1rem;
+  line-height: 0;
+}
+
+.emotion-272:last-child {
+  border: none;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-272 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-272 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+.emotion-272:first-child {
+  padding-top: 0;
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-272:first-child {
+    padding-top: 1rem;
+  }
+}
+
+.emotion-272:last-child {
+  padding-bottom: 0;
+}
+
+.emotion-272:first-child {
+  padding: 0 0 0.5rem 0;
+}
+
+.emotion-272:not(:first-child):not(:last-child) {
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+.emotion-272:last-child {
+  padding: 0.5rem 0 0 0;
+}
+
 .emotion-290 {
   margin-bottom: 1.5rem;
   padding: 1rem;
@@ -3073,63 +3120,63 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       role="list"
                     >
                       <li
-                        class="emotion-207 emotion-208"
+                        class="emotion-272 emotion-273"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-207 emotion-208"
+                        class="emotion-272 emotion-273"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-207 emotion-208"
+                        class="emotion-272 emotion-273"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-207 emotion-208"
+                        class="emotion-272 emotion-273"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-207 emotion-208"
+                        class="emotion-272 emotion-273"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-207 emotion-208"
+                        class="emotion-272 emotion-273"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-207 emotion-208"
+                        class="emotion-272 emotion-273"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-207 emotion-208"
+                        class="emotion-272 emotion-273"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-207 emotion-208"
+                        class="emotion-272 emotion-273"
                       >
                         <span
                           data-testid="frosted-promo-loader"
@@ -8852,6 +8899,53 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
+.emotion-265 {
+  padding: 0.5rem 0 1rem;
+  line-height: 0;
+}
+
+.emotion-265:last-child {
+  border: none;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-265 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-265 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+.emotion-265:first-child {
+  padding-top: 0;
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-265:first-child {
+    padding-top: 1rem;
+  }
+}
+
+.emotion-265:last-child {
+  padding-bottom: 0;
+}
+
+.emotion-265:first-child {
+  padding: 0 0 0.5rem 0;
+}
+
+.emotion-265:not(:first-child):not(:last-child) {
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+.emotion-265:last-child {
+  padding: 0.5rem 0 0 0;
+}
+
 .emotion-283 {
   margin-bottom: 1.5rem;
   padding: 1rem;
@@ -9886,63 +9980,63 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       role="list"
                     >
                       <li
-                        class="emotion-208 emotion-209"
+                        class="emotion-265 emotion-266"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-208 emotion-209"
+                        class="emotion-265 emotion-266"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-208 emotion-209"
+                        class="emotion-265 emotion-266"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-208 emotion-209"
+                        class="emotion-265 emotion-266"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-208 emotion-209"
+                        class="emotion-265 emotion-266"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-208 emotion-209"
+                        class="emotion-265 emotion-266"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-208 emotion-209"
+                        class="emotion-265 emotion-266"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-208 emotion-209"
+                        class="emotion-265 emotion-266"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-208 emotion-209"
+                        class="emotion-265 emotion-266"
                       >
                         <span
                           data-testid="frosted-promo-loader"
