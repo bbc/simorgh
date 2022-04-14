@@ -15,6 +15,8 @@ import TopicGrid from './TopicGrid';
 import Pagination from './Pagination';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 
+const MAX_PAGE_COUNT = 40;
+
 const Wrapper = styled.main`
   max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
   margin: 0 auto;
@@ -26,7 +28,7 @@ const Wrapper = styled.main`
 
 const TopicPage = ({ pageData }) => {
   const { lang } = useContext(ServiceContext);
-  const { title, description, promos } = pageData;
+  const { title, description, promos, pageCount, activePage } = pageData;
 
   const promoEntities = promos.map(promo => ({
     '@type': 'Article',
@@ -56,8 +58,8 @@ const TopicPage = ({ pageData }) => {
       <TopicTitle>{title}</TopicTitle>
       <TopicGrid promos={promos} />
       <Pagination
-        activePage={pageData.activePage}
-        pageCount={pageData.pageCount}
+        activePage={activePage}
+        pageCount={pageCount < MAX_PAGE_COUNT ? pageCount : MAX_PAGE_COUNT}
       />
     </Wrapper>
   );

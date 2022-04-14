@@ -13,6 +13,25 @@ export const amharicSingleItem = {
     },
   ],
   metadata: { type: 'Topic' },
+  pageCount: 1,
+};
+
+export const amharicMultipleItems = {
+  title: 'ዶናልድ ትራምፕ',
+  description: 'ዶናልድ ትራምፕ',
+  promos: Array(50)
+    .fill({
+      title: 'በጥቅም ላይ የዋሉ የጥንታዊ ግብፅ የህክምና ጥበባት',
+      type: 'article',
+      firstPublished: '2017-08-22T08:41:04.000Z',
+      link: 'https://www.bbc.com/amharic/news-23143874',
+      imageUrl: '',
+      imageAlt: '',
+      id: 'c31dd8c5-2e55-9143-8ed2-5f9c15d6c91c',
+    })
+    .map((promo, index) => ({ ...promo, id: index })),
+  metadata: { type: 'Topic' },
+  pageCount: 50,
 };
 
 export const pidginMultipleItems = {
@@ -62,4 +81,5 @@ export const pidginMultipleItems = {
     },
   ],
   metadata: { type: 'Topic' },
+  pageCount: 4,
 };
