@@ -50,20 +50,6 @@ describe('A11y', () => {
     expect(promoEls.getElementsByTagName('li').length).toEqual(4);
   });
 
-  it('should render the correct page information for screen readers', () => {
-    const { getByTestId } = render(
-      <TopicPageWithContext
-        pageData={pidginMultipleItems}
-        lang="pcm"
-        service="pidgin"
-      />,
-    );
-
-    expect(getByTestId('topic-pagination-summary').textContent).toEqual(
-      'Page 1 of 4',
-    );
-  });
-
   it('should render a max page of 40', () => {
     const { getAllByRole } = render(
       <TopicPageWithContext
