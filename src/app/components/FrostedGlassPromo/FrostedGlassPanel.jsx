@@ -14,6 +14,9 @@ const FALLBACK_COLOUR_AMP = C_WHITE;
 const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 `;
 
 const scaleAmount = 1 + BLUR_RADIUS / 100;
@@ -45,6 +48,8 @@ const Children = styled.div`
   padding-bottom: ${GEL_SPACING_DBL};
   transition: background 0.5s ease-in-out;
   background: rgb(${({ colour }) => `${colour.join(',')}`});
+  height: 100%;
+
   ${({ isLoading, colour }) =>
     !isLoading &&
     `

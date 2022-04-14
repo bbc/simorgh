@@ -9,6 +9,14 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import useViewTracker from '#hooks/useViewTracker';
 // import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import isLive from '#lib/utilities/isLive';
+import {
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
+} from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+} from '@bbc/gel-foundations/spacings';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import StoryPromo from '../StoryPromo';
 import FrostedGlassPromo from '../../components/FrostedGlassPromo/lazy';
@@ -35,6 +43,44 @@ const IMPROVED_PROMO_VARIATIONS = {
   ),
   Control: StoryPromo,
 };
+
+const StyledPromoUl = styled(StoryPromoUl)`
+  // Apply 2 column grid layout on tablet widths
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: ${GEL_SPACING_DBL};
+    row-gap: ${GEL_SPACING_TRPL};
+  }
+`;
+
+const StoryPromoLiFeatures = styled(StoryPromoLi)`
+  line-height: 0;
+  height: 100%;
+
+  &:first-child {
+    padding: 0 0 0.5rem 0;
+  }
+
+  &:not(:first-child):not(:last-child) {
+    padding: 0.5rem 0 0.5rem 0;
+  }
+
+  &:last-child {
+    padding: 0.5rem 0 0 0;
+  }
+
+  // Remove padding overrides on tablet widths
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    padding: 0;
+
+    &:first-child,
+    &:not(:first-child):not(:last-child),
+    &:last-child {
+      padding: 0;
+    }
+  }
+`;
 
 const PromoListComponent = ({ promoItems, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
@@ -64,24 +110,8 @@ const PromoListComponent = ({ promoItems, dir }) => {
     }
   };
 
-  const StoryPromoLiFeatures = styled(StoryPromoLi)`
-    line-height: 0;
-
-    &:first-child {
-      padding: 0 0 0.5rem 0;
-    }
-
-    &:not(:first-child):not(:last-child) {
-      padding: 0.5rem 0 0.5rem 0;
-    }
-
-    &:last-child {
-      padding: 0.5rem 0 0 0;
-    }
-  `;
-
   return (
-    <StoryPromoUl>
+    <StyledPromoUl>
       {promoItems.map((item, promoIndex) => {
         const StoryPromoComponent = selectComponent(promoIndex);
 
@@ -104,7 +134,7 @@ const PromoListComponent = ({ promoItems, dir }) => {
           </StoryPromoLiFeatures>
         );
       })}
-    </StoryPromoUl>
+    </StyledPromoUl>
   );
 };
 
