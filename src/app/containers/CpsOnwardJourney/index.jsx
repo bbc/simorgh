@@ -176,7 +176,7 @@ const CpsOnwardJourney = ({
   eventTrackingData,
 }) => {
   const { script, service, dir } = useContext(ServiceContext);
-  const { pageType } = useContext(RequestContext);
+  const { isLow, pageType } = useContext(RequestContext);
 
   const isMostWatched = pageType === MOST_WATCHED_PAGE;
   const a11yAttributes = isMostWatched
@@ -203,6 +203,8 @@ const CpsOnwardJourney = ({
   if (!content.length) return null;
   const hasSingleContent = content.length === 1;
   const [singleContent] = content;
+
+  if (isLow) return '';
 
   return (
     <CpsOnwardJourneyWrapper>

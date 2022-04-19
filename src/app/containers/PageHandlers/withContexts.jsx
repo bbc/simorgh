@@ -20,6 +20,8 @@ const WithContexts = Component => {
       id,
       service,
       isAmp,
+      isLow,
+      isLite,
       pageType,
       pathname,
       previousPath,
@@ -40,6 +42,8 @@ const WithContexts = Component => {
             bbcOrigin={bbcOrigin}
             id={id}
             isAmp={isAmp}
+            isLow={isLow}
+            isLite={isLite}
             pageType={pageType}
             service={service}
             statusCode={status}

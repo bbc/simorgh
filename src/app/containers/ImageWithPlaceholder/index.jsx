@@ -46,7 +46,7 @@ const ImageWithPlaceholder = ({
   darkMode,
   imageComponent: ImageComponent,
 }) => {
-  const { isAmp } = useContext(RequestContext);
+  const { isLow, isAmp } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
   const imageProps = {
     alt,
@@ -67,6 +67,8 @@ const ImageWithPlaceholder = ({
   const shouldPreload = !isAmp && preload;
   const isAmpHeroImage = isAmp && preload;
   const isImgJpg = imgType === 'jpg' || imgType === 'jpeg';
+
+  if (isLow) return '';
 
   return (
     <>

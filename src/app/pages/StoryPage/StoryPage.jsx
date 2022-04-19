@@ -160,7 +160,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   // ads
   const { enabled: adsEnabled } = useToggle('ads');
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
-  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
+  const { isLow, isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
 
   /**
@@ -370,7 +370,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <NielsenAnalytics />
       <OptimizelyPageViewTracking />
       {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
-      {isAdsEnabled && !isAmp && (
+      {isAdsEnabled && !isAmp && !isLow && (
         <CanonicalAdBootstrapJs adcampaign={adcampaign} />
       )}
       {isAdsEnabled && <AdContainer slotType="leaderboard" />}
@@ -390,53 +390,59 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
             <OptimizelyArticleCompleteTracking />
           </main>
 
-          {showRelatedTopics && topics && (
+          {!isLow && showRelatedTopics && topics && (
             <GridItemLarge>
               <RelatedTopics topics={topics} />
             </GridItemLarge>
           )}
 
-          <CpsRelatedContent
-            content={relatedContent}
-            recommendations={recommendationsData}
-            parentColumns={gridColsMain}
-            isStoryPage
-          />
+          {isLow ? '' : (
+              <CpsRelatedContent
+                content={relatedContent}
+                recommendations={recommendationsData}
+                parentColumns={gridColsMain}
+                isStoryPage
+              />
+          )}
         </GridPrimaryColumn>
-        <GridSecondaryColumn
-          item
-          columns={gridColsSecondary}
-          parentColumns={gridColumns}
-          // `serviceLang` is defined when the language the page is written in is different to the
-          // language of the service. `serviceLang` is used to override the page language.
-          lang={serviceLang}
-        >
-          {topStoriesInitialData && (
-            <ResponsiveComponentWrapper>
-              <TopStories
-                content={topStoriesInitialData}
-                parentColumns={gridColsSecondary}
-              />
-            </ResponsiveComponentWrapper>
-          )}
-          {featuresInitialData && (
-            <ResponsiveComponentWrapper>
-              <FeaturesAnalysis
-                content={featuresInitialData}
-                parentColumns={gridColsSecondary}
-              />
-            </ResponsiveComponentWrapper>
-          )}
-          <ComponentWrapper>
-            <MostReadContainer
-              mostReadEndpointOverride={mostReadEndpointOverride}
-              columnLayout="oneColumn"
-              size="small"
-              wrapper={MostReadWrapper}
-              initialData={mostReadInitialData}
-            />
-          </ComponentWrapper>
-        </GridSecondaryColumn>
+
+        {isLow ? '' : (
+            <GridSecondaryColumn
+              item
+              columns={gridColsSecondary}
+              parentColumns={gridColumns}
+              // `serviceLang` is defined when the language the page is written in is different to the
+              // language of the service. `serviceLang` is used to override the page language.
+              lang={serviceLang}
+            >
+
+              {topStoriesInitialData && (
+                <ResponsiveComponentWrapper>
+                  <TopStories
+                    content={topStoriesInitialData}
+                    parentColumns={gridColsSecondary}
+                  />
+                </ResponsiveComponentWrapper>
+              )}
+              {featuresInitialData && (
+                <ResponsiveComponentWrapper>
+                  <FeaturesAnalysis
+                    content={featuresInitialData}
+                    parentColumns={gridColsSecondary}
+                  />
+                </ResponsiveComponentWrapper>
+              )}
+              <ComponentWrapper>
+                <MostReadContainer
+                  mostReadEndpointOverride={mostReadEndpointOverride}
+                  columnLayout="oneColumn"
+                  size="small"
+                  wrapper={MostReadWrapper}
+                  initialData={mostReadInitialData}
+                />
+              </ComponentWrapper>
+            </GridSecondaryColumn>
+        )}
       </StoryPageGrid>
     </>
   );

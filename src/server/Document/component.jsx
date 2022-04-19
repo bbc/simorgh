@@ -18,6 +18,7 @@ const Document = ({
   data,
   helmet,
   isAmp,
+  isLow,
   modernScripts,
   legacyScripts,
   links,
@@ -28,12 +29,12 @@ const Document = ({
   const helmetLinkTags = helmet.link.toComponent();
   const headScript = helmet.script.toComponent();
   const serialisedData = serialiseForScript(data);
-  const scriptsAllowed = !isAmp;
+  const scriptsAllowed = !isAmp && !isLow;
 
   const { html, css, ids } = app;
 
   // The JS to remove the no-js class will not run on AMP, therefore only add it to canonical
-  const noJsHtmlAttrs = !isAmp && { className: 'no-js' };
+  const noJsHtmlAttrs = !(isAmp || isLow) && { className: 'no-js' };
 
   // In order to block relevant components rendering until we have AMP GeoIP information, we need to add
   // this class to the body of the document: https://amp.dev/documentation/components/amp-geo/#render-blocking
@@ -49,7 +50,7 @@ const Document = ({
     <html lang="en-GB" {...noJsHtmlAttrs} {...htmlAttrs}>
       <head>
         {meta}
-        {!isAmp && links}
+        {!(isAmp || isLow) && links}
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <ResourceHints assetOrigins={assetOrigins} />
         {title}

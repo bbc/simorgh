@@ -5,10 +5,11 @@ import {
   MediaAssetPage,
   PhotoGalleryPage,
   StoryPage,
+  StoryPageLite,
   FeatureIdxPage,
 } from '#pages';
 import getInitialData from './getInitialData';
-import { cpsAssetPagePath, legacyAssetPagePath } from '../utils/regex';
+import { cpsAssetPageLitePath, cpsAssetPagePath, legacyAssetPagePath } from '../utils/regex';
 import {
   FEATURE_INDEX_PAGE,
   MEDIA_ASSET_PAGE,
@@ -23,12 +24,13 @@ const CpsAsset = props => {
   const type = path(['pageData', 'metadata', 'type'], props);
 
   const PageType = {
-    [STORY_PAGE]: StoryPage,
+    [STORY_PAGE]: StoryPageLite,
     [CORRESPONDENT_STORY_PAGE]: StoryPage,
     [PHOTO_GALLERY_PAGE]: PhotoGalleryPage,
     [MEDIA_ASSET_PAGE]: MediaAssetPage,
     [FEATURE_INDEX_PAGE]: FeatureIdxPage,
   }[type];
+  console.log('PageType', PageType, 'type', type, 'cpsAssetPageLitePath', cpsAssetPageLitePath);
 
   return PageType ? (
     <PageType {...props} pageType={type} />
@@ -38,7 +40,7 @@ const CpsAsset = props => {
 };
 
 export default {
-  path: [cpsAssetPagePath, legacyAssetPagePath],
+  path: [cpsAssetPageLitePath, cpsAssetPagePath, legacyAssetPagePath],
   exact: true,
   component: CpsAsset,
   getInitialData,

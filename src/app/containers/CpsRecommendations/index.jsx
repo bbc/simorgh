@@ -23,6 +23,7 @@ import useToggle from '#hooks/useToggle';
 import { GridItemMediumNoMargin } from '#app/components/Grid';
 import RecommendationsPromoList from './RecommendationsPromoList';
 import RecommendationsPromo from './RecommendationsPromo';
+import { RequestContext } from '#contexts/RequestContext';
 
 const RecommendationsWrapper = styled.div`
   background-color: ${C_GHOST};
@@ -89,6 +90,9 @@ const CpsRecommendations = ({
     text,
     endTextVisuallyHidden,
   };
+
+  const { isLow } = useContext(RequestContext);
+  if (isLow) return '';
 
   return (
     <GridItemMediumNoMargin>

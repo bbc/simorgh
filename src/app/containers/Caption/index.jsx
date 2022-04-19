@@ -8,6 +8,7 @@ import Blocks from '../Blocks';
 import Fragment from '../Fragment';
 import InlineLink from '../InlineLink';
 import Inline from '../InlineContainer';
+import { RequestContext } from '#contexts/RequestContext';
 
 const componentsToRender = {
   fragment: Fragment,
@@ -77,6 +78,8 @@ const CaptionContainer = ({ block, type }) => {
     ['model', 'blocks', 0, 'model', 'blocks'],
     block,
   );
+  const { isLow } = useContext(RequestContext);
+  if (isLow) return '';
 
   return renderCaption(paragraphBlocks, offscreenText, script, service, dir);
 };

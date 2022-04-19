@@ -1,5 +1,7 @@
 const idRegex = 'c[a-zA-Z0-9]{10}o';
 const ampRegex = '.amp';
+const lowRegex = '.low';
+const liteRegex = '.lite';
 const assetUriRegex = '[a-z0-9-_]{0,}[0-9]{8,}';
 const legacyAssetUriRegex = '[a-z0-9-_]{1,}/[a-z0-9-_/]{1,}';
 const variantRegex = '/simp|/trad|/cyr|/lat';
@@ -16,7 +18,7 @@ const getServiceRegex = services => services.join('|');
 
 export const getArticleRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/:local(${articleLocalRegex})/:id(${idRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
+  return `/:service(${serviceRegex})/:local(${articleLocalRegex})/:id(${idRegex}):variant(${variantRegex})?:amp(${ampRegex})?:low(${lowRegex})?`;
 };
 
 export const getArticleSwRegex = services => {
@@ -31,7 +33,7 @@ export const getArticleManifestRegex = services => {
 
 export const getFrontPageRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
+  return `/:service(${serviceRegex}):variant(${variantRegex})?:amp(${ampRegex})?:low(${lowRegex})?`;
 };
 
 export const getSwRegex = services => {
@@ -46,7 +48,12 @@ export const getManifestRegex = services => {
 
 export const getCpsAssetRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex}):variant(${variantRegex})?/:assetUri(${assetUriRegex}):amp(${ampRegex})?`;
+  return `/:service(${serviceRegex}):variant(${variantRegex})?/:assetUri(${assetUriRegex}):amp(${ampRegex})?:low(${lowRegex})?`;
+};
+
+export const getCpsAssetLiteRegex = services => {
+  const serviceRegex = getServiceRegex(services);
+  return `/:service(${serviceRegex}):variant(${variantRegex})?/:assetUri(${assetUriRegex}):lite(${liteRegex})`;
 };
 
 export const getLegacyAssetRegex = services => {

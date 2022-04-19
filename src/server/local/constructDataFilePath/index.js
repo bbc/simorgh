@@ -21,7 +21,7 @@ export default ({
       break;
     case 'cpsAssets':
     case 'legacyAssets':
-      dataPath = `${variant}/${assetUri}.json`;
+      dataPath = `${variant}/${assetUri.split('.')[0]}.json`;
       break;
     case 'africa_eye':
       return path.join(

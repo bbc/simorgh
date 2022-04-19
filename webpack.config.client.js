@@ -39,6 +39,7 @@ module.exports = ({
   } = process.env;
   const APP_ENV = SIMORGH_APP_ENV || 'live';
   const IS_LEGACY_WEB = BUNDLE_TYPE === 'legacy';
+  const IS_LOW_WEB = BUNDLE_TYPE === 'low';
   const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (7080)
   const prodPublicPath =
     SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN + SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
@@ -50,7 +51,7 @@ module.exports = ({
       ? ['webpack/hot/only-dev-server', './src/client']
       : [
           IS_LEGACY_WEB ? './src/poly/legacy.js' : './src/poly/modern.js',
-          './src/client',
+          IS_LOW_WEB ? './src/client-low' : './src/client',
         ],
     devServer: {
       host: 'localhost',

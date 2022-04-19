@@ -69,6 +69,7 @@ const SitewideLinks = ({
   copyrightText,
   externalLink,
   isAmp,
+  isLow,
   script,
   service,
 }) => {
@@ -82,6 +83,8 @@ const SitewideLinks = ({
     }
     return <Link service={service} text={text} href={href} lang={lang} />;
   });
+
+  if (isLow) return '';
 
   return (
     <SitewideLinksWrapper script={script} service={service}>
@@ -116,6 +119,7 @@ SitewideLinks.propTypes = {
   trustProjectLink: linkPropTypes,
   externalLink: linkPropTypes.isRequired,
   isAmp: bool,
+  isLow: bool,
   script: shape({}),
   service: string,
 };
@@ -124,6 +128,8 @@ SitewideLinks.defaultProps = {
   script: null,
   service: null,
   isAmp: false,
+  isLow: false,
+  isLite: true,
   trustProjectLink: null,
 };
 

@@ -121,6 +121,7 @@ module.exports = (shell = {}) => {
   const CONFIG_FILE = shell.config;
   const CLIENT_LEGACY = ['client', 'legacy'];
   const CLIENT_MODERN = ['client', 'modern'];
+  const CLIENT_LOW = ['client', 'low'];
   const SERVER = ['server'];
 
   const mergeIntoBaseConfig = ([app, BUNDLE_TYPE]) => {
@@ -137,12 +138,12 @@ module.exports = (shell = {}) => {
 
   // if we've passed env.config, just compile that one file
   if (CONFIG_FILE === 'client') {
-    return [CLIENT_LEGACY, CLIENT_MODERN].map(mergeIntoBaseConfig);
+    return [CLIENT_LEGACY, CLIENT_MODERN, CLIENT_LOW].map(mergeIntoBaseConfig);
   }
   if (CONFIG_FILE === 'server') {
     return mergeIntoBaseConfig(SERVER);
   }
 
   // else compile both (we've run `webpack` on its own)
-  return [CLIENT_LEGACY, CLIENT_MODERN, SERVER].map(mergeIntoBaseConfig);
+  return [CLIENT_LEGACY, CLIENT_MODERN, CLIENT_LOW, SERVER].map(mergeIntoBaseConfig);
 };
