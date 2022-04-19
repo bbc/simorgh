@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, waitFor, act } from '@testing-library/react';
 import fetchMock from 'fetch-mock';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import mundoMostReadData from '#data/mundo/mostRead';
 import nepaliMostReadData from '#data/nepali/mostRead';
+import bengaliMostRead from '#data/bengali/mostRead';
 
 import AmpMostRead from '.';
 
@@ -55,17 +56,19 @@ describe('AmpMostRead', () => {
     },
   ].forEach(
     ({ description, service, numberOfItems, endpoint, mostReadData }) => {
-      it(description, async () => {
+      it(description, () => {
         fetchMock.mock(endpoint, mostReadData);
-        const { container } = render(
-          <MostReadAmpWithContext service={service} endpoint={endpoint} />,
-        );
 
-        expect(container.querySelectorAll('li a').length).toEqual(
-          numberOfItems,
-        );
+        waitFor(() => {
+          const { container } = render(
+            <MostReadAmpWithContext service={service} endpoint={endpoint} />,
+          );
+          expect(container.querySelectorAll('li a').length).toEqual(
+            numberOfItems,
+          );
 
-        expect(fetchMock.calls(endpoint).length).toBeTruthy();
+          expect(fetchMock.calls(endpoint).length).toBeTruthy();
+        });
       });
     },
   );

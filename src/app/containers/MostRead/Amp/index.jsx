@@ -23,9 +23,9 @@ function generateCSPHash(script) {
 }
 
 const rankTranslationScript = (endpoint, service) => {
-  const translations = serviceNumerals(service);
+  const translation = serviceNumerals(service);
   return `
-  const translations = ${JSON.stringify(translations)}
+  const translations = ${JSON.stringify(translation)}
   const getRemoteData = async () => {
     const response = await fetch("${endpoint}");
     const data = await response.json();
@@ -49,7 +49,7 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
   const onlyinnerscript = rankTranslationScript(endpoint, service);
 
   return (
-    <Wrapper style={{ visibility: 'hidden' }}>
+    <Wrapper>
       <Helmet
         script={[
           {
