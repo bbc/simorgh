@@ -1,0 +1,234 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:brand:bbc_hindi_radio/p0c0530h",
+    "locators": { "pid": "p0c1hp73", "brandPid": "p0c0530h" },
+    "type": "WSRADIO",
+    "createdBy": "bbc_hindi_radio",
+    "language": "hi",
+    "lastUpdated": 1650384289998,
+    "firstPublished": 1650035762000,
+    "lastPublished": 1650035762000,
+    "timestamp": 1650035762000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "ड्रामा क्वीन (Drama Queen) - BBC News हिंदी",
+      "pageIdentifier": "hindi.bbc_hindi_radio.podcasts.programmes.p0c0530h.page",
+      "producerId": "52",
+      "contentType": "player-episode",
+      "producer": "HINDI"
+    },
+    "tags": {},
+    "version": "v1.4.2",
+    "blockTypes": ["media"],
+    "title": "ड्रामा क्वीन (Drama Queen)",
+    "releaseDateTimeStamp": 1650067200000
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p0c1hp73",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "",
+        "synopses": {
+          "short": "कभी सोचा है कि माएं छोटी-छोटी बातों पर रो क्यों पड़ती हैं?"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0c04wk3.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "p0c1hnqh",
+            "types": ["Podcast"],
+            "duration": 1667,
+            "durationISO8601": "PT27M47S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1650072600000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "एपिसोड 1: 'अपने बच्चों से प्यार है, लेकिन मां होने से नफ़रत'",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": { "headline": "ड्रामा क्वीन (Drama Queen)" },
+    "locators": { "pid": "p0c1hp73", "brandPid": "p0c0530h" },
+    "media": {
+      "id": "p0c1hp73",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "",
+      "synopses": {
+        "short": "कभी सोचा है कि माएं छोटी-छोटी बातों पर रो क्यों पड़ती हैं?"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0c04wk3.jpg",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "p0c1hnqh",
+          "types": ["Podcast"],
+          "duration": 1667,
+          "durationISO8601": "PT27M47S",
+          "warnings": {},
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1650072600000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "radioProgramme",
+      "episodeTitle": "एपिसोड 1: 'अपने बच्चों से प्यार है, लेकिन मां होने से नफ़रत'",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p0c04wk3.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p0c04wk3.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1650067200000,
+    "brand": { "pid": "p0c0530h", "title": "ड्रामा क्वीन (Drama Queen)" },
+    "id": "urn:bbc:ares:ws_media:page:bbc_hindi_radio/p0c1hp73",
+    "type": "ws_radio"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Hindi",
+      "uri": "/hindi",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": { "headline": "ड्रामा क्वीन (Drama Queen)" },
+            "locators": { "pid": "p0c13fdd", "brandPid": "p0c0530h" },
+            "media": {
+              "id": "p0c13fdd",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "हम ऐसी बातें कहने और सुनने जा रहे हैं जो अक्सर दिलों में ही दबी रह जाती हैं"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0c04wk3.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0c1glq4",
+                  "types": ["Podcast"],
+                  "duration": 212,
+                  "durationISO8601": "PT3M32S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1650017100000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "ओरिजनल म्यूज़िक (OST) : नज़रें मिला के देखें",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0c04wk3.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0c04wk3.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1649808000000,
+            "brand": {
+              "pid": "p0c0530h",
+              "title": "ड्रामा क्वीन (Drama Queen)"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_radio/p0c13fdd",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "ड्रामा क्वीन (Drama Queen)" },
+            "locators": { "pid": "p0c055l7", "brandPid": "p0c0530h" },
+            "media": {
+              "id": "p0c055l7",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "बातें उन मुश्किलों की जो हमें किसी के साथ बांटने नहीं दी जातीं...",
+                "medium": "वो शिकायतें जो हम सुनना नहीं चाहते हमें ‘ड्रामा’ लगती हैं, और शिकायत करने वाला ‘ड्रामा क्वीन’. बीबीसी पॉडकास्ट में बातें उन मुश्किलों की जो हमें किसी के साथ बांटने नहीं दी जातीं.",
+                "long": "वो शिकायतें जो हम सुनना नहीं चाहते हमें ‘ड्रामा’ लगती हैं, और शिकायत करने वाला ‘ड्रामा क्वीन’. बीबीसी पॉडकास्ट में बातें उन मुश्किलों की जो हमें किसी के साथ बांटने नहीं दी जातीं."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0c04wk3.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0c04vp8",
+                  "types": ["Podcast"],
+                  "duration": 187,
+                  "durationISO8601": "PT3M7S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1649412120000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "‘कभी किसी को पता नहीं चलेगा कि मैं ख़ुश नहीं हूं’",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0c04wk3.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0c04wk3.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1649376000000,
+            "brand": {
+              "pid": "p0c0530h",
+              "title": "ड्रामा क्वीन (Drama Queen)"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_radio/p0c055l7",
+            "type": "ws_radio"
+          }
+        ]
+      }
+    ]
+  }
+}
