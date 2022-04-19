@@ -1,10 +1,10 @@
 import React from 'react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import features from '#pages/StoryPage/newsFeaturesAnalysis.json';
-import featuresRtl from '#pages/StoryPage/featuresAnalysisRtl.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import featuresRtl from './fixturesRtl.json';
+import features from './fixtures.json';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import FeaturesAnalysis from '.';
 
