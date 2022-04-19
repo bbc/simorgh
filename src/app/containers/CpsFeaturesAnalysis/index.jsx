@@ -28,13 +28,12 @@ const StoryPromoUlFeatures = styled(StoryPromoUl)`
   ${() =>
     !isLive() &&
     `
-    // Apply 2 column grid layout on tablet widths
-        @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          column-gap: ${GEL_SPACING_DBL};
-          row-gap: ${GEL_SPACING_TRPL};
-        }
+      @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: ${GEL_SPACING_DBL};
+        row-gap: ${GEL_SPACING_TRPL};
+      }
     `}
 `;
 
@@ -57,7 +56,6 @@ const StoryPromoLiFeatures = styled(StoryPromoLi)`
   ${() =>
     !isLive() &&
     `
-    // Remove padding overrides on tablet widths
       @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
         padding: 0;
 
