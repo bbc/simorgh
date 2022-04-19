@@ -5,11 +5,8 @@ import featuresRtl from '#pages/StoryPage/featuresAnalysisRtl.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import FeaturesAnalysis from '.';
-
-const FeaturesAnalysisWithOptimizely = withOptimizelyProvider(FeaturesAnalysis);
 
 /* eslint-disable react/prop-types */
 const Component = ({
@@ -34,7 +31,7 @@ const Component = ({
             frostedPromo: { enabled: true, value: 1 },
           }}
         >
-          <FeaturesAnalysisWithOptimizely content={data} />
+          <FeaturesAnalysis content={data} />
         </ToggleContextProvider>
       </RequestContextProvider>
     </ServiceContextProvider>
