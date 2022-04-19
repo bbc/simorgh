@@ -133,6 +133,15 @@ const externalLinks = {
         linkText: 'अपने दिल की बात हमसे शेयर करें',
         linkUrl: 'https://www.bbc.com/hindi/send/u107107375',
       },
+      {
+        linkText: 'Gaana',
+        linkUrl: 'https://gaana.com/season/drama-queen-season-1-2022',
+      },
+      {
+        linkText: 'Jio Saavn',
+        linkUrl:
+          'https://www.saavn.com/s/show/ड्रामा-क्वीन-drama-queen/1/dZOptt08D4A_',
+      },
     ],
   },
 };
