@@ -23,7 +23,7 @@ const eventTrackingData = {
   },
 };
 
-const StyledPromoUl = styled(StoryPromoUl)`
+const StoryPromoUlFeatures = styled(StoryPromoUl)`
   // Apply 2 column grid layout on tablet widths
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     display: grid;
@@ -67,7 +67,7 @@ const PromoListComponent = ({ promoItems, dir }) => {
   const viewRef = useViewTracker(eventTrackingData.block);
 
   return (
-    <StyledPromoUl>
+    <StoryPromoUlFeatures>
       {promoItems.map((item, promoIndex) => {
         return (
           <StoryPromoLiFeatures
@@ -88,7 +88,7 @@ const PromoListComponent = ({ promoItems, dir }) => {
           </StoryPromoLiFeatures>
         );
       })}
-    </StyledPromoUl>
+    </StoryPromoUlFeatures>
   );
 };
 
