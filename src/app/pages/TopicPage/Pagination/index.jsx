@@ -129,7 +129,7 @@ const LinkComponent = ({ children, pageNumber, isActive, ...rest }) => (
   </A>
 );
 
-const LeftArrow = ({ activePage }) => (
+const LeftArrow = ({ activePage, children }) => (
   <Block as="span" visibility={VISIBILITY.ALL}>
     <LinkComponent
       pageNumber={activePage - 1}
@@ -137,20 +137,20 @@ const LeftArrow = ({ activePage }) => (
     >
       <span id="pagination-previous-page">
         <LeftChevron />
-        <VisuallyHiddenText>Previous page</VisuallyHiddenText>
+        <VisuallyHiddenText>{children}</VisuallyHiddenText>
       </span>
     </LinkComponent>
   </Block>
 );
 
-const RightArrow = ({ activePage }) => (
+const RightArrow = ({ activePage, children }) => (
   <Block as="span" visibility={VISIBILITY.ALL}>
     <LinkComponent
       pageNumber={activePage + 1}
       aria-labelledby="pagination-next-page"
     >
       <span id="pagination-next-page">
-        <VisuallyHiddenText>Next page</VisuallyHiddenText>
+        <VisuallyHiddenText>{children}</VisuallyHiddenText>
         <RightChevron />
       </span>
     </LinkComponent>
@@ -191,29 +191,44 @@ const renderBlock = ({
 };
 /* eslint-enable react/prop-types */
 
+const getTranslations = translations => ({
+  pageXOfY: 'Page {x} of {y}',
+  previousPage: 'Previous Page',
+  nextPage: 'Next Page',
+  ...translations.pagination,
+});
+
 const Pagination = ({ activePage, pageCount }) => {
-  const { service } = useContext(ServiceContext);
+  const { service, translations } = useContext(ServiceContext);
   const blocks = buildBlocks(activePage, pageCount);
   if (!blocks) return null;
+
+  const { pageXOfY, previousPage, nextPage } = getTranslations(translations);
+  const summaryText = pageXOfY
+    .replace('{x}', `<b>${activePage}</b>`)
+    .replace('{y}', `<b>${pageCount}</b>`);
 
   const showLeftArrow = activePage > 1;
   const showRightArrow = activePage < pageCount;
 
   return (
     <Nav role="navigation" aria-label="Page" data-testid="topic-pagination">
-      {showLeftArrow && <LeftArrow activePage={activePage} />}
+      {showLeftArrow && (
+        <LeftArrow activePage={activePage}>{previousPage}</LeftArrow>
+      )}
       <TextSummary
         service={service}
         data-testid="topic-pagination-summary"
         // eslint-disable-next-line jsx-a11y/aria-role
         role="text"
-      >
-        Page <b>{activePage}</b> of <b>{pageCount}</b>
-      </TextSummary>
+        dangerouslySetInnerHTML={{ __html: summaryText }}
+      />
       <StyledUnorderedList role="list">
         {blocks.map(block => renderBlock({ ...block, activePage, service }))}
       </StyledUnorderedList>
-      {showRightArrow && <RightArrow activePage={activePage} />}
+      {showRightArrow && (
+        <RightArrow activePage={activePage}>{nextPage}</RightArrow>
+      )}
     </Nav>
   );
 };
