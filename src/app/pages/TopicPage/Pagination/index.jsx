@@ -204,9 +204,13 @@ const Pagination = ({ activePage, pageCount }) => {
   if (!blocks) return null;
 
   const { pageXOfY, previousPage, nextPage } = getTranslations(translations);
-  const summaryText = pageXOfY
-    .replace('{x}', `<b>${activePage}</b>`)
-    .replace('{y}', `<b>${pageCount}</b>`);
+
+  const tokenMapper = (token, key) =>
+    ({
+      '{x}': <b key={key}>{activePage}</b>,
+      '{y}': <b key={key}>{pageCount}</b>,
+    }[token] || <span key={key}>{token}</span>);
+  const tokens = pageXOfY.split(/(\{.\})/).map(tokenMapper);
 
   const showLeftArrow = activePage > 1;
   const showRightArrow = activePage < pageCount;
@@ -221,8 +225,9 @@ const Pagination = ({ activePage, pageCount }) => {
         data-testid="topic-pagination-summary"
         // eslint-disable-next-line jsx-a11y/aria-role
         role="text"
-        dangerouslySetInnerHTML={{ __html: summaryText }}
-      />
+      >
+        {tokens}
+      </TextSummary>
       <StyledUnorderedList role="list">
         {blocks.map(block => renderBlock({ ...block, activePage, service }))}
       </StyledUnorderedList>
