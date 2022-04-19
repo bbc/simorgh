@@ -27,12 +27,20 @@ const rankTranslationScript = (endpoint, service) => {
   return `
   const translations = ${JSON.stringify(translation)}
   const getRemoteData = async () => {
-    const response = await fetch("${endpoint}");
+    try{
+    const response = await fetch("");
     const data = await response.json();
     data.records.forEach((item, index) => {
       return item.rankTranslation = translations[index+1]
     });
     return data;
+  } catch(error){
+    // const h2 = document.getElementById('Most-Read');
+    // const h2Parent= h2.parentNode;
+    // h2Parent.removeChild(h2);
+    document.body.removeChild(document.body.firstElementChild)
+    return {};
+  }
   }
     exportFunction('getRemoteData', getRemoteData);`;
 };
@@ -49,73 +57,74 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
   const onlyinnerscript = rankTranslationScript(endpoint, service);
 
   return (
-    <Wrapper>
-      <Helmet
-        script={[
-          {
-            id: 'local-script',
-            type: 'text/plain',
-            target: 'amp-script',
-            innerHTML: onlyinnerscript,
-          },
-        ]}
-      />
-      <Helmet>
-        {/* Import required amp scripts for most read */}
-        {AMP_LIST_JS}
-        {AMP_MUSTACHE_JS}
-        {AMP_SCRIPT_JS}
-        <meta
-          name="amp-script-src"
-          content={generateCSPHash(onlyinnerscript)}
+    <amp-script
+      id="dataFunctions"
+      script="local-script"
+      width="200"
+      height="10000"
+      layout="responsive"
+    >
+      <Wrapper id="thisIsUnique">
+        <Helmet
+          script={[
+            {
+              id: 'local-script',
+              type: 'text/plain',
+              target: 'amp-script',
+              innerHTML: onlyinnerscript,
+            },
+          ]}
         />
-      </Helmet>
+        <Helmet>
+          {/* Import required amp scripts for most read */}
+          {AMP_LIST_JS}
+          {AMP_MUSTACHE_JS}
+          {AMP_SCRIPT_JS}
+          <meta
+            name="amp-script-src"
+            content={generateCSPHash(onlyinnerscript)}
+          />
+        </Helmet>
 
-      <amp-script
-        id="dataFunctions"
-        script="local-script"
-        width="1"
-        height="1"
-      />
-
-      <MostReadList
-        numberOfItems={numberOfItems}
-        dir={dir}
-        columnLayout="oneColumn"
-      >
-        <amp-list
-          width="300"
-          height="1000"
-          layout="responsive"
-          src="amp-script:dataFunctions.getRemoteData"
-          items="records"
-          max-items={numberOfItems}
+        <MostReadList
+          numberOfItems={numberOfItems}
+          dir={dir}
+          columnLayout="oneColumn"
         >
-          <template type="amp-mustache">
-            <MostReadItemWrapper dir={dir} columnLayout="oneColumn">
-              <MostReadRank
-                service={service}
-                script={script}
-                numberOfItems={numberOfItems}
-                listIndex={'{{rankTranslation}}'}
-                dir={dir}
-                columnLayout="oneColumn"
-                size={size}
-                isAmp
-              />
-              <MostReadLink
-                dir={dir}
-                service={service}
-                script={script}
-                title={'{{promo.headlines.shortHeadline}}'}
-                href={'{{promo.locators.assetUri}}'}
-                size={size}
-              />
-            </MostReadItemWrapper>
-          </template>
-        </amp-list>
-      </MostReadList>
-    </Wrapper>
+          <amp-list
+            width="300"
+            height="1000"
+            layout="responsive"
+            src="amp-script:dataFunctions.getRemoteData"
+            items="records"
+            max-items={numberOfItems}
+          >
+            <template type="amp-mustache">
+              <MostReadItemWrapper dir={dir} columnLayout="oneColumn">
+                <MostReadRank
+                  service={service}
+                  script={script}
+                  numberOfItems={numberOfItems}
+                  listIndex={'{{rankTranslation}}'}
+                  dir={dir}
+                  columnLayout="oneColumn"
+                  size={size}
+                  isAmp
+                />
+                <MostReadLink
+                  dir={dir}
+                  service={service}
+                  script={script}
+                  title={'{{promo.headlines.shortHeadline}}'}
+                  href={'{{promo.locators.assetUri}}'}
+                  size={size}
+                />
+              </MostReadItemWrapper>
+            </template>
+          </amp-list>
+        </MostReadList>
+      </Wrapper>
+    </amp-script>
   );
 };
 

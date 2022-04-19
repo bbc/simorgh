@@ -72,4 +72,18 @@ describe('AmpMostRead', () => {
       });
     },
   );
+  it('renders Bengali numerals when service is Bengali', () => {
+    const endpoint = 'https://test.bbc.com/bengali/mostread.json';
+    fetchMock.mock(endpoint, bengaliMostRead);
+
+    waitFor(() => {
+      const { container } = render(
+        <MostReadAmpWithContext service="bengali" endpoint={endpoint} />,
+      );
+      const liSpan = container.querySelector('li span');
+      console.log(liSpan);
+
+      expect(fetchMock.calls(endpoint).length).toBeTruthy();
+    });
+  });
 });
