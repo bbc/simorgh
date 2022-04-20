@@ -63,6 +63,11 @@ export const service = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: 'ናይ ሕሉፍ',
+        nextPage: 'ዝቕጽል',
+        pageXOfY: 'Page {x} of {y}',
+      },
       ads: {
         advertisementLabel: 'መላለዪ',
       },

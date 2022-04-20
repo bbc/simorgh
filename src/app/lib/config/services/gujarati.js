@@ -59,6 +59,11 @@ export const service = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: 'આ પહેલાં',
+        nextPage: 'આ પછી',
+        pageXOfY: 'Page {x} નું {y}',
+      },
       ads: {
         advertisementLabel: 'જાહેરાત',
       },

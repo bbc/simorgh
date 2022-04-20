@@ -59,6 +59,11 @@ export const service = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: '이전',
+        nextPage: '다음',
+        pageXOfY: 'Page {x} / {y}',
+      },
       ads: {
         advertisementLabel: '광고',
       },

@@ -60,6 +60,11 @@ export const service = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: 'మునుపటి',
+        nextPage: 'తదుపరి',
+        pageXOfY: 'Page {x} లో {y}',
+      },
       ads: {
         advertisementLabel: 'వ్యాపార ప్రకటన',
       },

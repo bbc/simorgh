@@ -74,6 +74,11 @@ const baseServiceConfig = {
     },
   },
   translations: {
+    pagination: {
+      previousPage: 'Повернутися',
+      nextPage: 'Наступна',
+      pageXOfY: 'Page {x} із {y}',
+    },
     ads: {
       advertisementLabel: 'Реклама',
     },
