@@ -72,6 +72,11 @@ export const service = {
       },
     },
     translations: {
+      pagination: {
+        previousPage: 'Subira inyuma',
+        nextPage: 'Ibikurikira',
+        pageXOfY: 'Page {x} ya {y}',
+      },
       ads: {
         advertisementLabel: 'Kwamamaza',
       },

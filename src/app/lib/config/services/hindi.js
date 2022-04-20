@@ -78,6 +78,11 @@ export const service = {
       },
     },
     translations: {
+      pagination: {
+        previousPage: 'पिछला',
+        nextPage: 'अगला',
+        pageXOfY: 'Page {x} र {y}',
+      },
       ads: {
         advertisementLabel: 'विज्ञापन',
       },

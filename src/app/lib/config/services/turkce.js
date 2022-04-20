@@ -68,6 +68,11 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: 'Önceki',
+        nextPage: 'Sonraki',
+        pageXOfY: 'Page {x} / {y}',
+      },
       ads: {
         advertisementLabel: 'Reklam',
       },
