@@ -893,7 +893,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               dir="rtl"
               id="Radio-Schedule"
             >
-              أحدث نشرة أخبار
+              البث الإذاعي
             </span>
           </span>
         </span>
@@ -2334,7 +2334,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
               dir="rtl"
               id="Radio-Schedule"
             >
-              أحدث نشرة أخبار
+              البث الإذاعي
             </span>
           </span>
         </span>
