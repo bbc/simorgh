@@ -166,6 +166,11 @@ export const service = {
       variant: 'cyr',
     },
     translations: {
+      pagination: {
+        previousPage: 'Prethodno',
+        nextPage: 'Sledeće',
+        pageXOfY: 'Stranica {x} od {y}',
+      },
       ads: {
         advertisementLabel: 'Advertisement',
       },
@@ -464,6 +469,11 @@ export const service = {
       variant: 'lat',
     },
     translations: {
+      pagination: {
+        previousPage: 'Претходно',
+        nextPage: 'Следеће',
+        pageXOfY: 'Страница {x} од {y}',
+      },
       ads: {
         advertisementLabel: 'Advertisement',
       },

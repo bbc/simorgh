@@ -61,6 +61,11 @@ export const service = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: 'Ikpeazụ',
+        nextPage: 'Osote',
+        pageXOfY: 'Page {x} nke {y}',
+      },
       ads: {
         advertisementLabel: 'Mgbasa ozi',
       },

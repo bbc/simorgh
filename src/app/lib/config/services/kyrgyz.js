@@ -59,6 +59,11 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: 'Артка',
+        nextPage: 'Эмики барак',
+        pageXOfY: 'бет {x} of {y}',
+      },
       ads: {
         advertisementLabel: 'Жарнама',
       },

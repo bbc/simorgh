@@ -61,6 +61,11 @@ export const service = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: 'Kan duraa',
+        nextPage: 'Itti aanee',
+        pageXOfY: 'Page {x} Keessaa {y}',
+      },
       ads: {
         advertisementLabel: 'Beeksiisa',
       },
