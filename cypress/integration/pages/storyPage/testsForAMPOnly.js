@@ -69,11 +69,24 @@ export const testsThatAlwaysRunForAMPOnly = ({
      */
     it.only(`should show the correct number of items for ${service}\`s ${pageType}`, () => {
       if (Cypress.env('APP_ENV') !== 'live') {
-        const expectedMostReadItems = appConfig[config[service].name][variant];
-        cy.get('[data-e2e="most-read"]').should(
-          'have.length',
-          expectedMostReadItems,
-        );
+        const expectedMostReadItems =
+          appConfig[config[service].name][variant].mostRead.numberOfItems;
+        cy.get('[data-e2e="most-read"]')
+          .find('ol')
+          .find('amp-list')
+          .find('div')
+          .scrollIntoView()
+          .children('li')
+          .should('have.length', expectedMostReadItems);
+
+        // cy.get('[data-e2e="most-read"] > ol amp-list div li').should(
+        //   'have.length',
+        //   expectedMostReadItems,
+        // );
+        // cy.get('[data-e2e="most-read"] > ol amp-list div li').should(
+        //   'have.length',
+        //   expectedMostReadItems,
+        // );
       }
     });
 
