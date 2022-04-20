@@ -53,14 +53,8 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
   const onlyinnerscript = rankTranslationScript(endpoint, service);
 
   return (
-    <amp-script
-      id="dataFunctions"
-      script="local-script"
-      width="1"
-      height="1"
-      layout="responsive"
-    >
-      <Wrapper id="thisIsUnique">
+    <amp-script id="dataFunctions" script="local-script">
+      <Wrapper>
         <Helmet
           script={[
             {
@@ -88,12 +82,12 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
           columnLayout="oneColumn"
         >
           <amp-list
-            width="300"
-            height="100"
-            layout="responsive"
             src="amp-script:dataFunctions.getRemoteData"
             items="records"
             max-items={numberOfItems}
+            layout="responsive"
+            width="300"
+            height="100"
           >
             <template type="amp-mustache">
               <MostReadItemWrapper dir={dir} columnLayout="oneColumn">
