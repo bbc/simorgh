@@ -83,6 +83,11 @@ export const service = {
       },
     },
     translations: {
+      pagination: {
+        previousPage: 'قبلی',
+        nextPage: 'بعدی',
+        pageXOfY: 'صفحه {x} از {y}',
+      },
       ads: {
         advertisementLabel: 'آگهی',
       },

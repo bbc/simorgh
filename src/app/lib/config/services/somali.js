@@ -59,6 +59,11 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: 'Biggii Hore',
+        nextPage: 'Bogga Xiga',
+        pageXOfY: 'Bog {x} of {y}',
+      },
       ads: {
         advertisementLabel: 'Xayeysiin',
       },

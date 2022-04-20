@@ -78,6 +78,11 @@ export const service = {
       },
     },
     translations: {
+      pagination: {
+        previousPage: 'Sebelum',
+        nextPage: 'Berikut',
+        pageXOfY: 'Page {x} dari {y}',
+      },
       ads: {
         advertisementLabel: 'Iklan',
       },
