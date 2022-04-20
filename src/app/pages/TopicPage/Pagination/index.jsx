@@ -80,6 +80,7 @@ const Block = styled.li`
   text-align: center;
   margin: 0 0.125rem;
   svg {
+    color: currentColor;
     fill: currentColor;
     width: 1rem;
     height: 1rem;
