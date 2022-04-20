@@ -56,11 +56,11 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
     <amp-script
       id="dataFunctions"
       script="local-script"
-      width="1"
-      height="1"
+      width="200"
+      height="10000"
       layout="responsive"
     >
-      <Wrapper id="thisIsUnique">
+      <Wrapper>
         <Helmet
           script={[
             {
