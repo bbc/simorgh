@@ -82,6 +82,11 @@ export const service = {
       },
     },
     translations: {
+      pagination: {
+        previousPage: 'پچھلا صفحہ',
+        nextPage: 'اگلا صفحہ',
+        pageXOfY: 'صفحہ {x} سے {y}',
+      },
       ads: {
         advertisementLabel: 'اشتہار',
       },

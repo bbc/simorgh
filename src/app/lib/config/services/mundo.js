@@ -69,6 +69,11 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: 'Anterior',
+        nextPage: 'Siguiente',
+        pageXOfY: 'Página {x} de {y}',
+      },
       ads: {
         advertisementLabel: 'Publicidad',
       },
