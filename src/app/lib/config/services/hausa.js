@@ -73,6 +73,11 @@ export const service = {
       },
     },
     translations: {
+      pagination: {
+        previousPage: 'Koma baya',
+        nextPage: 'Na gaba',
+        pageXOfY: 'Page {x} of {y}',
+      },
       ads: {
         advertisementLabel: 'Talla',
       },

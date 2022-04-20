@@ -63,6 +63,11 @@ export const service = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: 'ከዚህ በፊት ያለ',
+        nextPage: 'ቀጣይ',
+        pageXOfY: 'ገፁ {x} የ {y}',
+      },
       ads: {
         advertisementLabel: 'ማስታወቂያ',
       },

@@ -59,6 +59,11 @@ export const service = {
     swPath: '/sw.js',
     frontPageTitle: 'Àbáwọlé',
     translations: {
+      pagination: {
+        previousPage: 'Ìṣájú',
+        nextPage: 'Tókàn',
+        pageXOfY: 'Page {x} nínú {y}',
+      },
       ads: {
         advertisementLabel: 'Advertisement',
       },

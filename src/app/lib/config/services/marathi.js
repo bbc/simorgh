@@ -72,6 +72,11 @@ export const service = {
       },
     },
     translations: {
+      pagination: {
+        previousPage: 'मागील',
+        nextPage: 'पुढील',
+        pageXOfY: 'पान {x} पैकी {y}',
+      },
       ads: {
         advertisementLabel: 'जाहिरात',
       },

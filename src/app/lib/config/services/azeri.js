@@ -59,6 +59,11 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: 'Geriyə',
+        nextPage: 'Növbəti',
+        pageXOfY: 'səhifə {x} haqqında {y}',
+      },
       ads: {
         advertisementLabel: 'Reklam',
       },
