@@ -4,8 +4,6 @@ import findNClosestIndices from '#lib/utilities/findNClosestIndicies';
 
 export const TYPE = {
   ELLIPSIS: 'ELLIPSIS',
-  LEFT_ARROW: 'LEFT_ARROW',
-  RIGHT_ARROW: 'RIGHT_ARROW',
   NUMBER: 'NUMBER',
 };
 
@@ -54,22 +52,33 @@ const setDynamicVisibility = state => {
       predicate: e => !e.visibility,
       array: state.result,
     }).forEach(index => {
-      // keeping track of the visibility level we are setting
-      // this will help us determine on which devices we need to display an ellipsis
-      if (index < state.activePageIndex) {
-        state.highestVisibilityOnLeft = deviceSize;
-      } else {
-        state.highestVisibilityOnRight = deviceSize;
-      }
       state.result[index].visibility = deviceSize;
     }),
   );
 
   return state;
+};
 
-  // TODO - if there is just a single number missing at a boundary, fill it in?
-  // eg if we have 1, 2, 3, 5 - should we just add the 4?
-  // Otherwise, we'll have an ellipsis being used to fill in a gap of only one number
+// Ensure we do not have an ellipsis replacing a single number
+const fillEdges = state => {
+  // If page 2 is going to be rendered, it should have the same visibility as page 3
+  const secondElement = state.result[1];
+  const thirdElement = state.result[2];
+  const activePageIsOnRight = state.activePage > 2;
+  if (activePageIsOnRight && secondElement.pageNumber === 2) {
+    secondElement.visibility = thirdElement.visibility;
+  }
+
+  // If page (pagecount - 1) is going to be rendered
+  // it should have the same visibility as page (pagecount - 2)
+  const secondLastElement = state.result[state.result.length - 2];
+  const thirdLastElement = state.result[state.result.length - 3];
+  const secondLastPage = state.pageCount - 1;
+  const activePageIsOnLeft = state.activePage < secondLastPage;
+  if (activePageIsOnLeft && secondLastElement.pageNumber === secondLastPage) {
+    secondLastElement.visibility = thirdLastElement.visibility;
+  }
+  return state;
 };
 
 // After setting the visibility of all the pages we want to show, we can remove the others
@@ -101,15 +110,14 @@ const getEllipsisVisibility = (side, state) => {
   // Otherwise, the ellipsis visibility is based on the visibility of the page on that edge
   // eg, if page 2 is visible on all devices, there will never be an ellipsis on the left
   // if it is only visible on tablets and up, there will be an ellipsis on mobile
-  const highestVisibility =
+  const edgeVisibility =
     side === 'left'
-      ? state.highestVisibilityOnLeft
-      : state.highestVisibilityOnRight;
+      ? state.result[1].visibility
+      : state.result[state.result.length - 2].visibility;
 
-  if (!highestVisibility || highestVisibility === VISIBILITY.ALL) return null;
-  if (highestVisibility === VISIBILITY.TABLET_UP) return VISIBILITY.MOBILE_ONLY;
-  if (highestVisibility === VISIBILITY.DESKTOP_ONLY)
-    return VISIBILITY.TABLET_DOWN;
+  if (!edgeVisibility || edgeVisibility === VISIBILITY.ALL) return null;
+  if (edgeVisibility === VISIBILITY.TABLET_UP) return VISIBILITY.MOBILE_ONLY;
+  if (edgeVisibility === VISIBILITY.DESKTOP_ONLY) return VISIBILITY.TABLET_DOWN;
   return null;
 };
 
@@ -154,6 +162,7 @@ export default (activePage, pageCount) => {
   return pipe(
     setRequiredVisibility,
     setDynamicVisibility,
+    fillEdges,
     pruneInvisible,
     insertEllipsis,
     addKeys,
