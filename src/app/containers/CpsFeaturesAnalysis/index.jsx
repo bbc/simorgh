@@ -25,16 +25,15 @@ const eventTrackingData = {
 };
 
 const StoryPromoUlFeatures = styled(StoryPromoUl)`
-  ${() =>
-    !isLive() &&
-    `
-      @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: ${GEL_SPACING_DBL};
-        row-gap: ${GEL_SPACING_TRPL};
-      }
-    `}
+  ${!isLive() &&
+  `
+    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: ${GEL_SPACING_DBL};
+      row-gap: ${GEL_SPACING_TRPL};
+    }
+  `}
 `;
 
 const StoryPromoLiFeatures = styled(StoryPromoLi)`
@@ -53,19 +52,18 @@ const StoryPromoLiFeatures = styled(StoryPromoLi)`
     padding: 0.5rem 0 0 0;
   }
 
-  ${() =>
-    !isLive() &&
-    `
-      @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-        padding: 0;
+  ${!isLive() &&
+  `
+    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+      padding: 0;
 
-        &:first-child,
-        &:not(:first-child):not(:last-child),
-        &:last-child {
-          padding: 0;
-        }
+      &:first-child,
+      &:not(:first-child):not(:last-child),
+      &:last-child {
+        padding: 0;
       }
-    `}
+    }
+  `}
 `;
 
 const PromoListComponent = ({ promoItems, dir }) => {
