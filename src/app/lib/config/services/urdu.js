@@ -63,6 +63,24 @@ export const service = {
     },
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'پوڈکاسٹ',
+      brandTitle: 'ڈرامہ کوئین',
+      brandDescription:
+        '’ڈرامہ کوئین‘ پوڈکاسٹ میں سنیے وہ باتیں جنہیں کسی کے ساتھ بانٹنے نہیں دیا جاتا',
+      image: {
+        src: 'http://ichef.bbci.co.uk/images/ic/448xn/p0c04zy8.jpg',
+        alt: 'ڈرامہ کوئین',
+      },
+      linkLabel: {
+        text: 'قسطیں',
+        href: 'https://www.bbc.com/urdu/podcasts/p0c04t7w',
+      },
+      skipLink: {
+        text: 'مواد پر جائیں',
+        endTextVisuallyHidden: 'مواد پر جائیں',
+      },
+    },
     translations: {
       pagination: {
         previousPage: 'پچھلا صفحہ',
@@ -225,6 +243,7 @@ export const service = {
         nextRadioShow: 'اگلا ریڈیو پروگرام',
         duration: 'دورانیہ',
         recentEpisodes: 'سابق پروگرام',
+        podcastExternalLinks: 'یہ پوڈکاسٹ ان پلیٹفارمز پر بھی دستیاب ہے',
       },
       socialEmbed: {
         caption: {
