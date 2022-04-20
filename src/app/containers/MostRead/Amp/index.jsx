@@ -53,7 +53,17 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
   const onlyinnerscript = rankTranslationScript(endpoint, service);
 
   return (
+<<<<<<< HEAD
     <amp-script id="dataFunctions" script="local-script">
+=======
+    <amp-script
+      id="dataFunctions"
+      script="local-script"
+      width="200"
+      height="10000"
+      layout="responsive"
+    >
+>>>>>>> 9a1b12e800325174aacb5ef64fa5e68aff3cadb4
       <Wrapper>
         <Helmet
           script={[
