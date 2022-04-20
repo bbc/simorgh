@@ -1,6 +1,7 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import config from '../../../support/config/services';
 import runAMPAdsTests from '../../../support/helpers/adsTests/testsForAMPOnly';
+import { serviceNumerals } from '../../../../src/app/containers/MostRead/Canonical/Rank';
 
 export const testsThatAlwaysRunForAMPOnly = ({
   service,
@@ -64,35 +65,34 @@ export const testsThatAlwaysRunForAMPOnly = ({
       }
     });
 
-    /* These cypress tests are needed as unit tests cannot be run on the jsdom.
-     * web workers (which run on amp pages) do not run on the virtual dom.
-     */
-    it.only(`should show the correct number of items for ${service}\`s ${pageType}`, () => {
-      if (Cypress.env('APP_ENV') !== 'live') {
-        const expectedMostReadItems =
-          appConfig[config[service].name][variant].mostRead.numberOfItems;
-        cy.get('[data-e2e="most-read"]')
-          .find('ol')
-          .find('amp-list')
-          .find('div')
-          .scrollIntoView()
-          .children('li')
-          .should('have.length', expectedMostReadItems);
+    describe('Most Read Container', () => {
+      /* These cypress tests are needed as unit tests cannot be run on the jsdom.
+       * web workers (which run on amp pages) do not run on the virtual dom.
+       */
+      it(`should show the correct number of items for ${service}\`s ${pageType}`, () => {
+        if (Cypress.env('APP_ENV') !== 'live') {
+          const expectedMostReadItems =
+            appConfig[config[service].name][variant].mostRead.numberOfItems;
+          cy.get('[data-e2e="most-read"] > ol amp-list div')
+            .scrollIntoView()
+            .children('li')
+            .should('have.length', expectedMostReadItems);
+        }
+      });
 
-        // cy.get('[data-e2e="most-read"] > ol amp-list div li').should(
-        //   'have.length',
-        //   expectedMostReadItems,
-        // );
-        // cy.get('[data-e2e="most-read"] > ol amp-list div li').should(
-        //   'have.length',
-        //   expectedMostReadItems,
-        // );
-      }
+      it(`should show numerals used for the corresponding ${service} service`, () => {
+        if (Cypress.env('APP_ENV') !== 'live') {
+          const expectedMostReadRank = serviceNumerals(service);
+          cy.get('[data-e2e="most-read"] > ol amp-list div')
+            .scrollIntoView()
+            .find('li span')
+            .each(($el, index) => {
+              // cy.should('have.text', expectedMostReadRank[index + 1]);
+              expect($el.text()).equal(expectedMostReadRank[index + 1]);
+            });
+        }
+      });
     });
-
-    // it(`should show numerals used for the corresponding ${service} service`, () => {
-
-    // });
   });
 };
 

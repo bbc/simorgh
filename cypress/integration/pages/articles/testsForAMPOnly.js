@@ -1,5 +1,7 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import { getBlockData, getVideoEmbedUrl } from './helpers';
+import config from '../../../support/config/services';
+import { serviceNumerals } from '../../../../src/app/containers/MostRead/Canonical/Rank';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasFigure = service =>
@@ -58,6 +60,35 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
             });
           }
         });
+      });
+    });
+
+    describe('Most Read Container', () => {
+      /* These cypress tests are needed as unit tests cannot be run on the jsdom.
+       * web workers (which run on amp pages) do not run on the virtual dom.
+       */
+      it.only(`should show the correct number of items for ${service}\`s ${pageType}`, () => {
+        if (Cypress.env('APP_ENV') !== 'live' && service !== 'scotland') {
+          const expectedMostReadItems =
+            appConfig[config[service].name][variant].mostRead.numberOfItems;
+          cy.get('[data-e2e="most-read"] > ol amp-list div')
+            .scrollIntoView()
+            .children('li')
+            .should('have.length', expectedMostReadItems);
+        }
+      });
+
+      it(`should show numerals used for the corresponding ${service} service`, () => {
+        if (Cypress.env('APP_ENV') !== 'live' && service !== 'scotland') {
+          const expectedMostReadRank = serviceNumerals(service);
+          cy.get('[data-e2e="most-read"] > ol amp-list div')
+            .scrollIntoView()
+            .find('li span')
+            .each(($el, index) => {
+              // cy.should('have.text', expectedMostReadRank[index + 1]);
+              expect($el.text()).equal(expectedMostReadRank[index + 1]);
+            });
+        }
       });
     });
   });

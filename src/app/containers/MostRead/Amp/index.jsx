@@ -36,7 +36,7 @@ const rankTranslationScript = (endpoint, service) => {
       return data;
     } catch(error){
       document.body.removeChild(document.body.firstElementChild)
-      return [];
+      return {};
     }
   }
     exportFunction('getRemoteData', getRemoteData);`;
@@ -50,7 +50,6 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
     mostRead: { numberOfItems },
   } = useContext(ServiceContext);
 
-  // eslint-disable-next-line prettier/prettier
   const onlyinnerscript = rankTranslationScript(endpoint, service);
 
   return (

@@ -4,6 +4,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
+import isLive from '#app/lib/utilities/isLive';
 import Canonical from './Canonical';
 import mostReadShape from './utilities/mostReadShape';
 import AmpMostRead from './Amp';
@@ -40,8 +41,12 @@ const MostReadContainer = ({
   }
   // Do not render on AMP when it is not the most read page
   // We only want to render most read on AMP for the "/popular/read" pages
-  if (isAmp && !serverRenderOnAmp) {
+  if (isAmp && !serverRenderOnAmp && !isLive()) {
     return <AmpMostRead endpoint={mostReadUrl} size={size} wrapper={wrapper} />;
+  }
+
+  if (isAmp && !serverRenderOnAmp) {
+    return null;
   }
 
   return (
