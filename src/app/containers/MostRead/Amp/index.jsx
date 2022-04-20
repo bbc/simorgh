@@ -28,19 +28,16 @@ const rankTranslationScript = (endpoint, service) => {
   const translations = ${JSON.stringify(translation)}
   const getRemoteData = async () => {
     try{
-    const response = await fetch("");
-    const data = await response.json();
-    data.records.forEach((item, index) => {
-      return item.rankTranslation = translations[index+1]
-    });
-    return data;
-  } catch(error){
-    // const h2 = document.getElementById('Most-Read');
-    // const h2Parent= h2.parentNode;
-    // h2Parent.removeChild(h2);
-    document.body.removeChild(document.body.firstElementChild)
-    return {};
-  }
+      const response = await fetch("${endpoint}");
+      const data = await response.json();
+      data.records.forEach((item, index) => {
+        return item.rankTranslation = translations[index+1]
+      });
+      return data;
+    } catch(error){
+      document.body.removeChild(document.body.firstElementChild)
+      return [];
+    }
   }
     exportFunction('getRemoteData', getRemoteData);`;
 };
@@ -60,8 +57,8 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
     <amp-script
       id="dataFunctions"
       script="local-script"
-      width="200"
-      height="10000"
+      width="1"
+      height="1"
       layout="responsive"
     >
       <Wrapper id="thisIsUnique">
@@ -93,7 +90,7 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
         >
           <amp-list
             width="300"
-            height="1000"
+            height="100"
             layout="responsive"
             src="amp-script:dataFunctions.getRemoteData"
             items="records"

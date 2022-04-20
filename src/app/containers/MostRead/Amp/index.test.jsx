@@ -56,10 +56,10 @@ describe('AmpMostRead', () => {
     },
   ].forEach(
     ({ description, service, numberOfItems, endpoint, mostReadData }) => {
-      it(description, () => {
+      it(description, async () => {
         fetchMock.mock(endpoint, mostReadData);
 
-        waitFor(() => {
+        await waitFor(() => {
           const { container } = render(
             <MostReadAmpWithContext service={service} endpoint={endpoint} />,
           );
@@ -72,18 +72,36 @@ describe('AmpMostRead', () => {
       });
     },
   );
-  it('renders Bengali numerals when service is Bengali', () => {
-    const endpoint = 'https://test.bbc.com/bengali/mostread.json';
-    fetchMock.mock(endpoint, bengaliMostRead);
 
-    waitFor(() => {
+  it.only('', async () => {
+    const endpoint = 'https://www.test.bbc.com/mundo/mostread.json';
+    fetchMock.mock(endpoint, mundoMostReadData);
+
+    await waitFor(() => {
       const { container } = render(
-        <MostReadAmpWithContext service="bengali" endpoint={endpoint} />,
+        <MostReadAmpWithContext service="mundo" endpoint={endpoint} />,
       );
-      const liSpan = container.querySelector('li span');
-      console.log(liSpan);
+      expect(container.querySelectorAll('li a').length).toEqual(10);
 
       expect(fetchMock.calls(endpoint).length).toBeTruthy();
     });
+  });
+
+  it.skip('renders Bengali numerals when service is Bengali', async () => {
+    const endpoint = 'https://test.bbc.com/mundo/mostread.json';
+    fetchMock.mock(endpoint, mundoMostReadData);
+
+    await waitFor(
+      async () => {
+        const { container } = render(
+          <MostReadAmpWithContext service="mundo" endpoint={endpoint} />,
+        );
+        const x = container.querySelector('span');
+        console.log('rank', x.textContent);
+
+        expect(fetchMock.calls(endpoint).length).toBeTruthy();
+      },
+      { timeout: 10000 },
+    );
   });
 });

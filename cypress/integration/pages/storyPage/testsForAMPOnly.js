@@ -1,6 +1,12 @@
+import appConfig from '../../../../src/server/utilities/serviceConfigs';
+import config from '../../../support/config/services';
 import runAMPAdsTests from '../../../support/helpers/adsTests/testsForAMPOnly';
 
-export const testsThatAlwaysRunForAMPOnly = ({ service, pageType }) => {
+export const testsThatAlwaysRunForAMPOnly = ({
+  service,
+  pageType,
+  variant,
+}) => {
   describe(`No testsToAlwaysRunForAMPOnly to run for ${service} ${pageType}`, () => {
     it('If there is a table in the json, display it on the page', () => {
       if (service === 'sport') {
@@ -57,6 +63,23 @@ export const testsThatAlwaysRunForAMPOnly = ({ service, pageType }) => {
         });
       }
     });
+
+    /* These cypress tests are needed as unit tests cannot be run on the jsdom.
+     * web workers (which run on amp pages) do not run on the virtual dom.
+     */
+    it.only(`should show the correct number of items for ${service}\`s ${pageType}`, () => {
+      if (Cypress.env('APP_ENV') !== 'live') {
+        const expectedMostReadItems = appConfig[config[service].name][variant];
+        cy.get('[data-e2e="most-read"]').should(
+          'have.length',
+          expectedMostReadItems,
+        );
+      }
+    });
+
+    // it(`should show numerals used for the corresponding ${service} service`, () => {
+
+    // });
   });
 };
 
