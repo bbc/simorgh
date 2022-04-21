@@ -2002,9 +2002,26 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   height: 0.75rem;
 }
 
+.emotion-270 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-270 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -webkit-column-gap: 1rem;
+    column-gap: 1rem;
+    row-gap: 1.5rem;
+  }
+}
+
 .emotion-272 {
   padding: 0.5rem 0 1rem;
   line-height: 0;
+  height: 100%;
 }
 
 .emotion-272:last-child {
@@ -2047,6 +2064,18 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 .emotion-272:last-child {
   padding: 0.5rem 0 0 0;
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-272 {
+    padding: 0;
+  }
+
+  .emotion-272:first-child,
+  .emotion-272:not(:first-child):not(:last-child),
+  .emotion-272:last-child {
+    padding: 0;
+  }
 }
 
 .emotion-290 {
@@ -3116,7 +3145,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       </h2>
                     </div>
                     <ul
-                      class="emotion-205 emotion-206"
+                      class="emotion-270 emotion-271"
                       role="list"
                     >
                       <li
@@ -8899,9 +8928,26 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
+.emotion-263 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-263 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -webkit-column-gap: 1rem;
+    column-gap: 1rem;
+    row-gap: 1.5rem;
+  }
+}
+
 .emotion-265 {
   padding: 0.5rem 0 1rem;
   line-height: 0;
+  height: 100%;
 }
 
 .emotion-265:last-child {
@@ -8944,6 +8990,18 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 .emotion-265:last-child {
   padding: 0.5rem 0 0 0;
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-265 {
+    padding: 0;
+  }
+
+  .emotion-265:first-child,
+  .emotion-265:not(:first-child):not(:last-child),
+  .emotion-265:last-child {
+    padding: 0;
+  }
 }
 
 .emotion-283 {
@@ -9976,7 +10034,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </h2>
                     </div>
                     <ul
-                      class="emotion-206 emotion-207"
+                      class="emotion-263 emotion-264"
                       role="list"
                     >
                       <li

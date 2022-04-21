@@ -6,6 +6,14 @@ import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useViewTracker from '#hooks/useViewTracker';
+import {
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
+} from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+} from '@bbc/gel-foundations/spacings';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import FrostedGlassPromo from '../../components/FrostedGlassPromo/lazy';
 
@@ -15,8 +23,18 @@ const eventTrackingData = {
   },
 };
 
+const StoryPromoUlFeatures = styled(StoryPromoUl)`
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: ${GEL_SPACING_DBL};
+    row-gap: ${GEL_SPACING_TRPL};
+  }
+`;
+
 const StoryPromoLiFeatures = styled(StoryPromoLi)`
   line-height: 0;
+  height: 100%;
 
   &:first-child {
     padding: 0 0 0.5rem 0;
@@ -29,6 +47,16 @@ const StoryPromoLiFeatures = styled(StoryPromoLi)`
   &:last-child {
     padding: 0.5rem 0 0 0;
   }
+
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    padding: 0;
+
+    &:first-child,
+    &:not(:first-child):not(:last-child),
+    &:last-child {
+      padding: 0;
+    }
+  }
 `;
 
 const PromoListComponent = ({ promoItems, dir }) => {
@@ -37,7 +65,7 @@ const PromoListComponent = ({ promoItems, dir }) => {
   const viewRef = useViewTracker(eventTrackingData.block);
 
   return (
-    <StoryPromoUl>
+    <StoryPromoUlFeatures>
       {promoItems.map((item, promoIndex) => {
         return (
           <StoryPromoLiFeatures
@@ -58,7 +86,7 @@ const PromoListComponent = ({ promoItems, dir }) => {
           </StoryPromoLiFeatures>
         );
       })}
-    </StoryPromoUl>
+    </StoryPromoUlFeatures>
   );
 };
 
