@@ -196,6 +196,10 @@ server.get(
           'onion-location',
           `https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${urlPath}`,
         );
+        res.set(
+          'cache-control',
+          `public, stale-if-error=90, stale-while-revalidate=30, max-age=30`,
+        );
         res.status(status).send(result.html);
       } else {
         throw new Error('unknown result');
