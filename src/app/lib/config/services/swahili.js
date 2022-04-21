@@ -59,6 +59,12 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        page: 'Ukurasa',
+        previousPage: 'Rejea',
+        nextPage: 'Mbele',
+        pageXOfY: 'Ukurasa {x} wa {y}',
+      },
       ads: {
         advertisementLabel: 'Matangazo',
       },

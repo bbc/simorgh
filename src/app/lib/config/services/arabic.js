@@ -82,6 +82,12 @@ export const service = {
       },
     },
     translations: {
+      pagination: {
+        page: 'صفحة',
+        previousPage: 'السابق',
+        nextPage: 'التالي',
+        pageXOfY: 'صفحة {x} من {y}',
+      },
       ads: {
         advertisementLabel: 'إعلان',
       },

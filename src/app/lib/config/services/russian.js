@@ -122,6 +122,11 @@ const headerFooterTranslations = {
 
 // Translations used in the main element of the page
 export const mainTranslations = {
+  pagination: {
+    previousPage: 'НАЗАД',
+    nextPage: 'ВПЕРЕД',
+    pageXOfY: 'Page {x} из {y}',
+  },
   ads: {
     advertisementLabel: 'Реклама',
   },

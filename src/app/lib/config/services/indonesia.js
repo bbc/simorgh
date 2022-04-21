@@ -61,16 +61,16 @@ export const service = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'Podcast',
-      brandTitle: 'Dunia Pagi Ini BBC Indonesia',
+      brandTitle: 'Investigasi: Skandal Adopsi',
       brandDescription:
-        'BBC Indonesia mengudara pada Pukul 05.00 dan 06.00 WIB, Senin sampai Jumat',
+        'Investigasi untuk menyibak tabir adopsi ilegal dari Indonesia ke Belanda di masa lalu',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p02h1lr8.jpg',
-        alt: 'Dunia Pagi Ini BBC Indonesia',
+        src: 'https://ichef.bbci.co.uk/images/ic/448xn/p0btnm4z.jpg',
+        alt: 'Investigasi: Skandal Adopsi',
       },
       linkLabel: {
         text: 'Episode',
-        href: 'https://www.bbc.com/indonesia/podcasts/p02pc9v6',
+        href: 'https://www.bbc.com/indonesia/podcasts/p0btnmzx',
       },
       skipLink: {
         text: 'Lewati %title% dan lanjutkan membaca',
@@ -78,6 +78,11 @@ export const service = {
       },
     },
     translations: {
+      pagination: {
+        previousPage: 'Sebelum',
+        nextPage: 'Berikut',
+        pageXOfY: 'Page {x} dari {y}',
+      },
       ads: {
         advertisementLabel: 'Iklan',
       },
