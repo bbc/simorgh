@@ -84,6 +84,7 @@ export const service = {
     },
     translations: {
       pagination: {
+        page: 'صفحه',
         previousPage: 'قبلی',
         nextPage: 'بعدی',
         pageXOfY: 'صفحه {x} از {y}',

@@ -74,9 +74,9 @@ const TextSummary = styled.div`
 const Block = styled.li`
   ${({ service }) => getSansBold(service)};
   ${({ visibility }) => visibilityToMediaQuery(visibility)}
-  width: 2.5rem;
-  height: 2.5rem;
-  line-height: 2.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  line-height: 2.75rem;
   text-align: center;
   margin: 0 0.125rem;
   svg {
@@ -197,6 +197,7 @@ const getTranslations = translations => ({
   pageXOfY: 'Page {x} of {y}',
   previousPage: 'Previous Page',
   nextPage: 'Next Page',
+  page: 'Page',
   ...translations.pagination,
 });
 
@@ -205,7 +206,8 @@ const Pagination = ({ activePage, pageCount }) => {
   const blocks = buildBlocks(activePage, pageCount);
   if (!blocks) return null;
 
-  const { pageXOfY, previousPage, nextPage } = getTranslations(translations);
+  const { pageXOfY, previousPage, nextPage, page } =
+    getTranslations(translations);
 
   const tokenMapper = (token, key) =>
     ({
@@ -218,7 +220,7 @@ const Pagination = ({ activePage, pageCount }) => {
   const showRightArrow = activePage < pageCount;
 
   return (
-    <Nav role="navigation" aria-label="Page" data-testid="topic-pagination">
+    <Nav role="navigation" aria-label={page} data-testid="topic-pagination">
       {showLeftArrow && (
         <LeftArrow activePage={activePage}>{previousPage}</LeftArrow>
       )}
