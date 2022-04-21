@@ -118,6 +118,31 @@ const externalLinks = {
         linkUrl: 'https://gaana.com/podcast/-season-1-2019',
       },
     ],
+
+    p0c0530h: [
+      {
+        linkText: 'Spotify',
+        linkUrl: 'https://open.spotify.com/show/02iGEmdv3do4InPguSE1cs',
+      },
+      {
+        linkText: 'Apple Podcasts',
+        linkUrl:
+          'https://podcasts.apple.com/gb/podcast/%E0%A4%A1-%E0%A4%B0-%E0%A4%AE-%E0%A4%95-%E0%A4%B5-%E0%A4%A8-drama-queen/id1618467926',
+      },
+      {
+        linkText: 'अपने दिल की बात हमसे शेयर करें',
+        linkUrl: 'https://www.bbc.com/hindi/send/u107107375',
+      },
+      {
+        linkText: 'Gaana',
+        linkUrl: 'https://gaana.com/season/drama-queen-season-1-2022',
+      },
+      {
+        linkText: 'Jio Saavn',
+        linkUrl:
+          'https://www.saavn.com/s/show/ड्रामा-क्वीन-drama-queen/1/dZOptt08D4A_',
+      },
+    ],
   },
 };
 
