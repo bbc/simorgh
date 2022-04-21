@@ -7,20 +7,9 @@ import {
   AMP_SCRIPT_JS,
 } from '@bbc/psammead-assets/amp-boilerplate';
 import { ServiceContext } from '#contexts/ServiceContext';
-import crypto from 'crypto';
-import MostReadList from '../Canonical/List';
 import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
 import MostReadRank, { serviceNumerals } from '../Canonical/Rank';
-
-function generateCSPHash(script) {
-  const hash = crypto.createHash('sha384');
-  const data = hash.update(script, 'utf8');
-  return `sha384-${data
-    .digest('base64')
-    .replace(/=/g, '')
-    .replace(/\+/g, '-')
-    .replace(/\//g, '_')}`;
-}
+import generateCSPHash from '../utilities/generateCPSHash';
 
 const rankTranslationScript = (endpoint, service) => {
   const translation = serviceNumerals(service);
@@ -36,7 +25,7 @@ const rankTranslationScript = (endpoint, service) => {
       return data;
     } catch(error){
       document.body.removeChild(document.body.firstElementChild)
-      return {};
+      return [];
     }
   }
     exportFunction('getRemoteData', getRemoteData);`;
@@ -53,7 +42,13 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
   const onlyinnerscript = rankTranslationScript(endpoint, service);
 
   return (
-    <amp-script id="dataFunctions" script="local-script">
+    <amp-script
+      id="dataFunctions"
+      width="300"
+      height="10000"
+      layout="responsive"
+      script="local-script"
+    >
       <Wrapper>
         <Helmet
           script={[
@@ -72,47 +67,46 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
           {AMP_SCRIPT_JS}
           <meta
             name="amp-script-src"
-            content={generateCSPHash(onlyinnerscript)}
+            content={generateCSPHash(
+              onlyinnerscript,
+              'sha384',
+              'utf8',
+              'base64',
+            )}
           />
         </Helmet>
 
-        <MostReadList
-          numberOfItems={numberOfItems}
-          dir={dir}
-          columnLayout="oneColumn"
+        <amp-list
+          src="amp-script:dataFunctions.getRemoteData"
+          items="records"
+          max-items={numberOfItems}
+          layout="responsive"
+          width="300"
+          height="100"
         >
-          <amp-list
-            src="amp-script:dataFunctions.getRemoteData"
-            items="records"
-            max-items={numberOfItems}
-            layout="responsive"
-            width="300"
-            height="100"
-          >
-            <template type="amp-mustache">
-              <MostReadItemWrapper dir={dir} columnLayout="oneColumn">
-                <MostReadRank
-                  service={service}
-                  script={script}
-                  numberOfItems={numberOfItems}
-                  listIndex={'{{rankTranslation}}'}
-                  dir={dir}
-                  columnLayout="oneColumn"
-                  size={size}
-                  isAmp
-                />
-                <MostReadLink
-                  dir={dir}
-                  service={service}
-                  script={script}
-                  title={'{{promo.headlines.shortHeadline}}'}
-                  href={'{{promo.locators.assetUri}}'}
-                  size={size}
-                />
-              </MostReadItemWrapper>
-            </template>
-          </amp-list>
-        </MostReadList>
+          <template type="amp-mustache">
+            <MostReadItemWrapper dir={dir} columnLayout="oneColumn">
+              <MostReadRank
+                service={service}
+                script={script}
+                numberOfItems={numberOfItems}
+                listIndex={'{{rankTranslation}}'}
+                dir={dir}
+                columnLayout="oneColumn"
+                size={size}
+                isAmp
+              />
+              <MostReadLink
+                dir={dir}
+                service={service}
+                script={script}
+                title={'{{promo.headlines.shortHeadline}}'}
+                href={'{{promo.locators.assetUri}}'}
+                size={size}
+              />
+            </MostReadItemWrapper>
+          </template>
+        </amp-list>
       </Wrapper>
     </amp-script>
   );
