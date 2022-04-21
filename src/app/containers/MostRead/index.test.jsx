@@ -96,17 +96,6 @@ describe('MostReadContainerCanonical Assertion', () => {
     },
     {
       description:
-        'should not render most read on amp pages when there is no initialData',
-      service: 'pidgin',
-      mostReadToggle: true,
-      isAmp: true,
-      variant: null,
-      renderExpectation: shouldNotRenderMostRead,
-      dataResponse: setFreshPromoTimestamp(pidginMostReadData),
-      serverRenderOnAmp: false,
-    },
-    {
-      description:
         'should render most read on amp pages when initialData is passed and serverRenderOnAmp is true',
       service: 'pidgin',
       mostReadToggle: true,
