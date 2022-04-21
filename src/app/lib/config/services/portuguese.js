@@ -90,6 +90,7 @@ export const service = {
     },
     translations: {
       pagination: {
+        page: 'Página',
         previousPage: 'Anterior',
         nextPage: 'Próxima',
         pageXOfY: 'Página {x} de {y}',

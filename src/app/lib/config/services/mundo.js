@@ -70,6 +70,7 @@ export const service = {
     showRelatedTopics: true,
     translations: {
       pagination: {
+        page: 'Página',
         previousPage: 'Anterior',
         nextPage: 'Siguiente',
         pageXOfY: 'Página {x} de {y}',
