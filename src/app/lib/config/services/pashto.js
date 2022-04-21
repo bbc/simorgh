@@ -65,6 +65,12 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        page: 'پاڼه',
+        previousPage: 'مخکينۍ پاڼه',
+        nextPage: 'بله پاڼه',
+        pageXOfY: 'پاڼه {x} د {y}',
+      },
       ads: {
         advertisementLabel: 'اعلان',
       },

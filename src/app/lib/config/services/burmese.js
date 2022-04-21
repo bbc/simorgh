@@ -74,6 +74,12 @@ export const service = {
       },
     },
     translations: {
+      pagination: {
+        page: 'စာမျက်နှာ',
+        previousPage: 'နောက်သို့ပြန်သွားရန်',
+        nextPage: 'ရှေ့သို့သွားရန်',
+        pageXOfY: 'စာမျက်နှာ {x} ရဲ့ {y}',
+      },
       ads: {
         advertisementLabel: 'ကြော်ငြာ',
       },
