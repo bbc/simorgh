@@ -97,7 +97,6 @@ const EllipsisBlock = styled(Block)`
     @media screen and (forced-colors: active) {
       fill: canvasText;
     }
-    fill: currentColor;
   }
 `;
 
