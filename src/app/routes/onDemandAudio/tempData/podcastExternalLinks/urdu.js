@@ -12,8 +12,7 @@ const externalLinks = {
       },
       {
         linkText: 'Patari',
-        linkUrl:
-          'https://patari.pk/home/song/625a05eb4950df5b58b97a4a',
+        linkUrl: 'https://patari.pk/home/song/625a05eb4950df5b58b97a4a',
       },
       {
         linkText: 'اپنے دل کی بات ہمارے ساتھ شیئر کیجیے',
