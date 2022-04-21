@@ -35,7 +35,10 @@ import hindiRecommendationsData from '#data/hindi/recommendations/index.json';
 import hindiMostRead from '#data/hindi/mostRead/index.json';
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
-import * as optimizelySDK from '@optimizely/react-sdk';
+import {
+  OptimizelyExperiment,
+  OptimizelyProvider,
+} from '@optimizely/react-sdk';
 import mundoPageData from '#data/mundo/cpsAssets/noticias-56669604.json';
 import mundoMostRead from '#data/mundo/mostRead/index.json';
 import mundoRecommendationsData from '#data/mundo/recommendations/index.json';
@@ -82,10 +85,14 @@ jest.mock('#containers/ATIAnalytics/beacon', () => {
   };
 });
 
-const optimizelyExperimentSpy = jest.spyOn(
-  optimizelySDK,
-  'OptimizelyExperiment',
-);
+jest.mock('@optimizely/react-sdk', () => {
+  const actualModules = jest.requireActual('@optimizely/react-sdk');
+  return {
+    __esModule: true,
+    ...actualModules,
+    OptimizelyExperiment: jest.fn(),
+  };
+});
 
 const optimizely = {
   onReady: jest.fn(() => Promise.resolve()),
@@ -164,12 +171,9 @@ const PageWithContext = ({
           showAdsBasedOnLocation={showAdsBasedOnLocation}
         >
           <EventTrackingContextProvider pageData={pageData}>
-            <optimizelySDK.OptimizelyProvider
-              optimizely={optimizely}
-              isServerSide
-            >
+            <OptimizelyProvider optimizely={optimizely} isServerSide>
               <StoryPage service={service} pageData={pageData} />
-            </optimizelySDK.OptimizelyProvider>
+            </OptimizelyProvider>
           </EventTrackingContextProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
@@ -226,6 +230,8 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
 
   return ContextsContainer;
 });
+
+jest.mock('#hooks/useOptimizelyVariation', () => jest.fn(() => null));
 
 const pageType = 'cpsAsset';
 
@@ -594,6 +600,28 @@ describe('Story Page', () => {
 
   it('should not render canonical ad bootstrap on amp', async () => {
     process.env.SIMORGH_APP_ENV = 'test';
+    const observers = new Map();
+    const observerSpy = jest
+      .spyOn(global, 'IntersectionObserver')
+      .mockImplementationOnce(cb => {
+        const item = {
+          callback: cb,
+          elements: new Set(),
+        };
+
+        const instance = {
+          observe: jest.fn(element => {
+            item.elements.add(element);
+          }),
+          disconnect: jest.fn(() => {
+            item.elements.clear();
+          }),
+        };
+
+        observers.set(instance, item);
+
+        return instance;
+      });
     const toggles = {
       ads: {
         enabled: true,
@@ -624,7 +652,12 @@ describe('Story Page', () => {
     );
 
     const adBootstrap = queryByTestId('adBootstrap');
-    expect(adBootstrap).not.toBeInTheDocument();
+
+    await waitFor(() => {
+      expect(adBootstrap).not.toBeInTheDocument();
+      observers.clear();
+      observerSpy.mockRestore();
+    });
   });
 
   it('should render the inline podcast promo component on russian pages with a paragraph of 940 characters and after 8th paragraph', async () => {
@@ -718,11 +751,11 @@ describe('Story Page', () => {
     );
   });
 
-  describe.skip('Optimizely Experiments', () => {
+  describe('Optimizely Experiments', () => {
     describe('003_hindi_experiment_feature', () => {
       describe('control', () => {
         beforeEach(() => {
-          optimizelyExperimentSpy.mockImplementation(props => {
+          OptimizelyExperiment.mockImplementation(props => {
             const { children } = props;
 
             const variation = 'control';
@@ -733,6 +766,9 @@ describe('Story Page', () => {
 
             return null;
           });
+        });
+
+        afterEach(() => {
           jest.clearAllMocks();
         });
 
@@ -781,7 +817,7 @@ describe('Story Page', () => {
         });
 
         it('should render recommendations when variation is null or undefined', async () => {
-          optimizelyExperimentSpy.mockImplementation(props => {
+          OptimizelyExperiment.mockImplementation(props => {
             const { children } = props;
 
             if (children != null && typeof children === 'function') {
@@ -1186,15 +1222,10 @@ describe('Story Page', () => {
           });
         });
       });
-    });
-  });
 
-  // OPTIMIZELY: 003_hindi_experiment_feature: Need to enable when experiment blocks has been added.
-  describe.skip('Optimizely Experiments', () => {
-    describe('003_hindi_experiment_feature', () => {
       describe('variation_1', () => {
         beforeEach(() => {
-          optimizelyExperimentSpy.mockImplementation(props => {
+          OptimizelyExperiment.mockImplementation(props => {
             const { children } = props;
 
             const variation = 'variation_1';
@@ -1290,7 +1321,7 @@ describe('Story Page', () => {
         });
 
         it('should not render split recommendations when variation is not variation_1', async () => {
-          optimizelyExperimentSpy.mockImplementation(props => {
+          OptimizelyExperiment.mockImplementation(props => {
             const { children } = props;
 
             const variation = 'control';
@@ -1409,7 +1440,10 @@ describe('Story Page', () => {
               await waitFor(
                 () => {
                   const wsojViewCalls = sendEventBeacon.mock.calls.filter(
-                    ([{ componentName }]) => componentName === 'wsoj',
+                    ([{ componentName, pageIdentifier }]) =>
+                      componentName === 'wsoj' &&
+                      pageIdentifier ===
+                        'india::hindi.india.story.60426858.page',
                   );
                   expect(wsojViewCalls.length).toBe(1);
                   expect(wsojViewCalls).toEqual(expectedViewEvent);
@@ -1964,98 +1998,94 @@ describe('Story Page', () => {
           });
         });
       });
-    });
-  });
-});
 
-describe.skip('Optimizely Experiments', () => {
-  describe('003_hindi_experiment_feature', () => {
-    describe('variation_3', () => {
-      const forceMockVariation = variation =>
-        optimizelyExperimentSpy.mockImplementation(props => {
-          const { children } = props;
+      describe('variation_3', () => {
+        const forceMockVariation = variation =>
+          OptimizelyExperiment.mockImplementation(props => {
+            const { children } = props;
 
-          if (children != null && typeof children === 'function') {
-            return <>{children(variation, true, false)}</>;
-          }
+            if (children != null && typeof children === 'function') {
+              return <>{children(variation, true, false)}</>;
+            }
 
-          return null;
+            return null;
+          });
+
+        afterAll(() => {
+          jest.restoreAllMocks();
         });
 
-      afterAll(() => {
-        jest.restoreAllMocks();
-      });
+        it('should render EOJ variation when showForVariation has variation_3 value ', async () => {
+          forceMockVariation('variation_3');
+          fetchMock.mock(
+            'http://localhost/some-cps-sty-path.json',
+            hindiPageData,
+          );
+          fetchMock.mock('http://localhost/hindi/mostread.json', hindiMostRead);
+          fetchMock.mock(
+            'http://localhost/hindi/india-60426858/recommendations.json',
+            hindiRecommendationsData,
+          );
+          const { pageData } = await getInitialData({
+            path: '/some-cps-sty-path',
+            service: 'hindi',
+            pageType,
+          });
 
-      it('should render EOJ variation when showForVariation has variation_3 value ', async () => {
-        forceMockVariation('variation_3');
-        fetchMock.mock(
-          'http://localhost/some-cps-sty-path.json',
-          hindiPageData,
-        );
-        fetchMock.mock('http://localhost/hindi/mostread.json', hindiMostRead);
-        fetchMock.mock(
-          'http://localhost/hindi/india-60426858/recommendations.json',
-          hindiRecommendationsData,
-        );
-        const { pageData } = await getInitialData({
-          path: '/some-cps-sty-path',
-          service: 'hindi',
-          pageType,
+          const { getAllByRole, getByText } = render(
+            <PageWithContext pageData={pageData} service="hindi" />,
+          );
+
+          const [eojRecommendations] = getAllByRole('region').filter(
+            item =>
+              item.getAttribute('aria-labelledby') ===
+              'eoj-recommendations-heading',
+          );
+
+          expect(eojRecommendations).toBeInTheDocument();
+
+          expect(
+            getByText(
+              'कोविड-19 महामारीः तो सबसे ज़्यादा मौतों की वजह वायरस नहीं होगा',
+            ),
+          ).toBeInTheDocument();
+          expect(
+            getByText('कोरोना से मिले कौन से सबक़ हम याद रखेंगे?'),
+          ).toBeInTheDocument();
+          expect(
+            getByText('कोविड-19 के बाद हमारी यात्राएं कैसी होंगी?'),
+          ).toBeInTheDocument();
         });
 
-        const { getAllByRole, getByText } = render(
-          <PageWithContext pageData={pageData} service="hindi" />,
-        );
+        it('should not render EOJ variation when showForVariation is not variation_3 ', async () => {
+          forceMockVariation('control');
+          fetchMock.mock(
+            'http://localhost/some-cps-sty-path.json',
+            hindiPageData,
+          );
+          fetchMock.mock('http://localhost/hindi/mostread.json', hindiMostRead);
+          fetchMock.mock(
+            'http://localhost/hindi/india-60426858/recommendations.json',
+            hindiRecommendationsData,
+          );
+          const { pageData } = await getInitialData({
+            path: '/some-cps-sty-path',
+            service: 'hindi',
+            pageType,
+          });
 
-        const [eojRecommendations] = getAllByRole('region').filter(
-          item =>
-            item.getAttribute('aria-labelledby') ===
-            'eoj-recommendations-heading',
-        );
+          const { getAllByRole } = render(
+            <PageWithContext pageData={pageData} service="hindi" />,
+          );
 
-        expect(eojRecommendations).toBeInTheDocument();
+          const [eojRecommendations] = getAllByRole('region').filter(
+            item =>
+              item.getAttribute('aria-labelledby') ===
+              'eoj-recommendations-heading',
+          );
 
-        expect(
-          getByText(
-            'कोविड-19 महामारीः तो सबसे ज़्यादा मौतों की वजह वायरस नहीं होगा',
-          ),
-        ).toBeInTheDocument();
-        expect(
-          getByText('कोरोना से मिले कौन से सबक़ हम याद रखेंगे?'),
-        ).toBeInTheDocument();
-        expect(
-          getByText('कोविड-19 के बाद हमारी यात्राएं कैसी होंगी?'),
-        ).toBeInTheDocument();
-      });
-
-      it('should not render EOJ variation when showForVariation is not variation_3 ', async () => {
-        forceMockVariation('control');
-        fetchMock.mock(
-          'http://localhost/some-cps-sty-path.json',
-          hindiPageData,
-        );
-        fetchMock.mock('http://localhost/hindi/mostread.json', hindiMostRead);
-        fetchMock.mock(
-          'http://localhost/hindi/india-60426858/recommendations.json',
-          hindiRecommendationsData,
-        );
-        const { pageData } = await getInitialData({
-          path: '/some-cps-sty-path',
-          service: 'hindi',
-          pageType,
+          expect(eojRecommendations).toBe(undefined);
         });
-
-        const { getAllByRole } = render(
-          <PageWithContext pageData={pageData} service="hindi" />,
-        );
-
-        const [eojRecommendations] = getAllByRole('region').filter(
-          item =>
-            item.getAttribute('aria-labelledby') ===
-            'eoj-recommendations-heading',
-        );
-
-        expect(eojRecommendations).toBe(undefined);
       });
     });
   });

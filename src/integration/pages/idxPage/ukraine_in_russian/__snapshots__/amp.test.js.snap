@@ -175,8 +175,8 @@ Object {
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Anchors should match text and url 6`] = `
 Object {
-  "text": "Зв'язатися з BBC",
-  "url": "https://www.bbc.co.uk/send/u50853885",
+  "text": "Напишіть на ВВС",
+  "url": "https://www.bbc.co.uk/ukrainian/send/u50853885",
 }
 `;
 

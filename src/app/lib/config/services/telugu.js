@@ -60,6 +60,11 @@ export const service = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: 'మునుపటి',
+        nextPage: 'తదుపరి',
+        pageXOfY: 'Page {x} లో {y}',
+      },
       ads: {
         advertisementLabel: 'వ్యాపార ప్రకటన',
       },
@@ -294,8 +299,8 @@ export const service = {
           text: 'కుకీలు',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853775',
-          text: 'బీబీసీని సంప్రదించండి',
+          href: 'https://www.bbc.co.uk/telugu/send/u50853775',
+          text: 'BBCని సంప్రదించండి',
         },
         {
           id: 'COOKIE_SETTINGS',

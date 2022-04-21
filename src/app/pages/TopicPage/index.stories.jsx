@@ -37,6 +37,8 @@ const Component = ({ service, variant }) => {
                 pageData={{
                   title: fixture.data.title,
                   promos: fixture.data.summaries,
+                  activePage: 1,
+                  pageCount: 99,
                 }}
               />
             </MemoryRouter>

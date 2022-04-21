@@ -83,6 +83,12 @@ export const service = {
       },
     },
     translations: {
+      pagination: {
+        page: 'صفحه',
+        previousPage: 'قبلی',
+        nextPage: 'بعدی',
+        pageXOfY: 'صفحه {x} از {y}',
+      },
       ads: {
         advertisementLabel: 'آگهی',
       },
@@ -334,7 +340,7 @@ export const service = {
           text: 'کوکی ها',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853555',
+          href: 'https://www.bbc.co.uk/persian/send/u50853555',
           text: 'تماس با بی بی سی',
         },
         {

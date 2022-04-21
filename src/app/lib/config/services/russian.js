@@ -122,6 +122,11 @@ const headerFooterTranslations = {
 
 // Translations used in the main element of the page
 export const mainTranslations = {
+  pagination: {
+    previousPage: 'НАЗАД',
+    nextPage: 'ВПЕРЕД',
+    pageXOfY: 'Page {x} из {y}',
+  },
   ads: {
     advertisementLabel: 'Реклама',
   },
@@ -220,7 +225,7 @@ export const mainTranslations = {
   },
   topStoriesTitle: 'Главное',
   featuresAnalysisTitle: 'Не пропустите',
-  disclaimerLabel: 'Уведомление',
+  infoBannerLabel: 'Информация',
 };
 
 export const service = {
@@ -308,16 +313,19 @@ export const service = {
       para2: {
         text: 'IOS',
         url: 'https://apps.apple.com/us/app/%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8-%D0%B1%D0%B8-%D0%B1%D0%B8-%D1%81%D0%B8/id504278066',
+        isExternal: true,
       },
       para3: ' и ',
       para4: {
         text: 'Android',
         url: 'https://play.google.com/store/apps/details?id=uk.co.bbc.russian',
+        isExternal: true,
       },
       para5: '. Вы можете также подписаться на наш канал в ',
       para6: {
         text: 'Telegram',
         url: 'https://t.me/bbcrussian',
+        isExternal: true,
       },
       para7: '.',
     },
@@ -354,7 +362,7 @@ export const service = {
           text: 'Куки',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853643',
+          href: 'https://www.bbc.co.uk/russian/send/u50853643',
           text: 'Связаться с Би-би-си',
         },
         {

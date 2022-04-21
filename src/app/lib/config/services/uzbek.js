@@ -59,6 +59,12 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: 'Олдингиси',
+        nextPage: 'Кейингиси',
+        pageXOfY: 'саҳифа {x} ...нинг {y}',
+        page: 'саҳифа',
+      },
       ads: {
         advertisementLabel: 'Реклама',
       },
@@ -292,8 +298,8 @@ export const service = {
           text: 'Куки(Cookies)',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853929',
-          text: 'Би-би-си билан боғланиш',
+          href: 'https://www.bbc.co.uk/uzbek/send/u50853929',
+          text: "'Bi-bi-si bilan bog’laning'",
         },
         {
           id: 'COOKIE_SETTINGS',

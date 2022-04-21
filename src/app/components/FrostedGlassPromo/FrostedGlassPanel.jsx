@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { RequestContext } from '#contexts/RequestContext';
 import styled from '@emotion/styled';
 import { node, number, string } from 'prop-types';
 
 import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import { C_WHITE, C_GREY_8 } from '@bbc/psammead-styles/colours';
 import useImageColour from '../../hooks/useImageColour';
 
 const BLUR_RADIUS = 15;
-const FALLBACK_COLOUR = '#202224';
+const FALLBACK_COLOUR = C_GREY_8;
+const FALLBACK_COLOUR_AMP = C_WHITE;
 
 const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 `;
 
 const scaleAmount = 1 + BLUR_RADIUS / 100;
@@ -27,7 +33,7 @@ const Background = styled.div`
     top: -${BLUR_RADIUS}px;
     left: 0;
     right: 0;
-    background: ${FALLBACK_COLOUR} url('${({ image }) => image}');
+    background-color: ${FALLBACK_COLOUR};
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -42,6 +48,8 @@ const Children = styled.div`
   padding-bottom: ${GEL_SPACING_DBL};
   transition: background 0.5s ease-in-out;
   background: rgb(${({ colour }) => `${colour.join(',')}`});
+  height: 100%;
+
   ${({ isLoading, colour }) =>
     !isLoading &&
     `
@@ -57,19 +65,27 @@ const FrostedGlassPanel = ({
   minimumContrast,
   paletteSize,
 }) => {
+  const { isAmp } = useContext(RequestContext);
+
   const { isLoading, colour } = useImageColour(image, {
-    fallbackColour: FALLBACK_COLOUR,
+    fallbackColour: isAmp ? FALLBACK_COLOUR_AMP : FALLBACK_COLOUR,
     minimumContrast,
     contrastColour: '#ffffff',
     paletteSize,
   });
+
+  const isCanonical = !isAmp;
+
+  const backgroundImageStyle = {
+    backgroundImage: `url('${image}')`,
+  };
 
   return (
     <Wrapper>
       <Children colour={colour.rgb} isLoading={isLoading}>
         {children}
       </Children>
-      <Background image={image} />
+      {isCanonical && <Background style={backgroundImageStyle} image={image} />}
     </Wrapper>
   );
 };

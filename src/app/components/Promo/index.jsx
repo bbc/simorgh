@@ -29,7 +29,7 @@ const Wrapper = styled.div`
 
 const Left = styled.div`
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    width: 25%;
+    width: 33%;
     display: inline-block;
     vertical-align: top;
   }
@@ -37,7 +37,7 @@ const Left = styled.div`
 const Right = styled.div`
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     padding-left: 0.5rem;
-    width: 75%;
+    width: 67%;
     display: inline-block;
     vertical-align: top;
   }

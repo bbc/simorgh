@@ -64,6 +64,12 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        page: 'পৃষ্ঠা',
+        previousPage: 'ফিরে যাব',
+        nextPage: 'পরবর্তী',
+        pageXOfY: 'পৃষ্ঠা {x} এর মধ্যে {y}',
+      },
       ads: {
         advertisementLabel: 'বিজ্ঞাপন',
       },
@@ -299,8 +305,8 @@ export const service = {
           text: 'কুকিজ',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853247',
-          text: 'বিবিসির সঙ্গে যোগাযোগ করুন',
+          href: 'https://www.bbc.co.uk/bengali/send/u50853247',
+          text: 'বিবিসির সাথে যোগাযোগ করুন',
         },
         {
           id: 'COOKIE_SETTINGS',

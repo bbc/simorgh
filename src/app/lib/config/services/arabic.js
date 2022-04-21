@@ -82,6 +82,12 @@ export const service = {
       },
     },
     translations: {
+      pagination: {
+        page: 'صفحة',
+        previousPage: 'السابق',
+        nextPage: 'التالي',
+        pageXOfY: 'صفحة {x} من {y}',
+      },
       ads: {
         advertisementLabel: 'إعلان',
       },
@@ -325,7 +331,7 @@ export const service = {
           text: 'ملفات الارتباط Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853203',
+          href: 'https://www.bbc.co.uk/arabic/send/u50853203',
           text: 'اتصل بـ بي بي سي',
         },
         {
@@ -376,6 +382,10 @@ export const service = {
       {
         title: 'تحقيقات',
         url: '/arabic/tv-and-radio-42414864',
+      },
+      {
+        title: 'بودكاست',
+        url: '/arabic/tv-and-radio-52067221',
       },
       {
         title: 'برامجنا',

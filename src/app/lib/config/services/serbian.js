@@ -104,7 +104,7 @@ export const service = {
           text: 'Kolačići',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853665',
+          href: 'https://www.bbc.co.uk/serbian/send/u50853665',
           text: 'Kontaktirajte BBC',
         },
         {
@@ -166,6 +166,12 @@ export const service = {
       variant: 'cyr',
     },
     translations: {
+      pagination: {
+        page: 'Stranica',
+        previousPage: 'Prethodno',
+        nextPage: 'Sledeće',
+        pageXOfY: 'Stranica {x} od {y}',
+      },
       ads: {
         advertisementLabel: 'Advertisement',
       },
@@ -402,7 +408,7 @@ export const service = {
           text: 'Колачићи',
         },
         {
-          href: 'https://www.bbc.com/serbian/cyr/institutional-43543431',
+          href: 'https://www.bbc.co.uk/serbian/send/u50853665',
           text: 'Контактирајте ББЦ',
         },
         {
@@ -464,6 +470,12 @@ export const service = {
       variant: 'lat',
     },
     translations: {
+      pagination: {
+        page: 'Страница',
+        previousPage: 'Претходно',
+        nextPage: 'Следеће',
+        pageXOfY: 'Страница {x} од {y}',
+      },
       ads: {
         advertisementLabel: 'Advertisement',
       },

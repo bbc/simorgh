@@ -6,5 +6,5 @@ module.exports = {
   // need for frequent changes as bundle sizes fluctuate.
 
   MIN_SIZE: 620,
-  MAX_SIZE: 1049,
+  MAX_SIZE: 1047,
 };

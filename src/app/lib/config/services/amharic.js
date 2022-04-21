@@ -63,6 +63,12 @@ export const service = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        page: 'ገፁ',
+        previousPage: 'ከዚህ በፊት ያለ',
+        nextPage: 'ቀጣይ',
+        pageXOfY: 'ገፁ {x} የ {y}',
+      },
       ads: {
         advertisementLabel: 'ማስታወቂያ',
       },
@@ -285,7 +291,7 @@ export const service = {
           text: 'ኩኪዎች',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853181',
+          href: 'https://www.bbc.co.uk/amharic/send/u50853181',
           text: 'ቢቢሲን ያግኙ',
         },
         {

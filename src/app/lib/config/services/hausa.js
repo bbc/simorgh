@@ -73,6 +73,11 @@ export const service = {
       },
     },
     translations: {
+      pagination: {
+        previousPage: 'Koma baya',
+        nextPage: 'Na gaba',
+        pageXOfY: 'Page {x} of {y}',
+      },
       ads: {
         advertisementLabel: 'Talla',
       },
@@ -315,7 +320,7 @@ export const service = {
           text: "Ka'idoji",
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853335',
+          href: 'https://www.bbc.co.uk/hausa/send/u50853335',
           text: 'Tuntubi BBC',
         },
         {

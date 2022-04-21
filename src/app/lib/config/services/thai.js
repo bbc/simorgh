@@ -59,6 +59,11 @@ export const service = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: 'ก่อนหน้านี้',
+        nextPage: 'ถัดไป',
+        pageXOfY: 'Page {x} ของ {y}',
+      },
       ads: {
         advertisementLabel: 'โฆษณา',
       },
@@ -320,7 +325,7 @@ export const service = {
           text: 'คุกกีส์',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853797',
+          href: 'https://www.bbc.co.uk/thai/send/u50853797',
           text: 'ติดต่อบีบีซี',
         },
         {

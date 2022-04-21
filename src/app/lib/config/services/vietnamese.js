@@ -61,6 +61,11 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: 'Quay Lại',
+        nextPage: 'Xem Tiếp',
+        pageXOfY: 'Page {x} của {y}',
+      },
       ads: {
         advertisementLabel: 'Quảng cáo',
       },
@@ -284,7 +289,7 @@ export const service = {
           text: 'Cookie',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853951',
+          href: 'https://www.bbc.co.uk/vietnamese/send/u50853951',
           text: 'Liên hệ BBC',
         },
         {

@@ -118,11 +118,19 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
   local(server);
 }
 
+const injectDefaultCacheHeader = (req, res, next) => {
+  res.set(
+    'cache-control',
+    `public, stale-if-error=90, stale-while-revalidate=30, max-age=30`,
+  );
+  next();
+};
+
 // Catch all for all routes
 server.get(
   '/*',
-  injectCspHeaderProdBuild,
-  async ({ url, headers, path: urlPath }, res) => {
+  [injectCspHeaderProdBuild, injectDefaultCacheHeader],
+  async ({ url, query, headers, path: urlPath }, res) => {
     logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
       url,
       headers,
@@ -137,6 +145,7 @@ server.get(
         route: { getInitialData, pageType },
         variant,
       } = getRouteProps(urlPath);
+      const { page } = query;
 
       // Set derivedPageType based on matched route
       derivedPageType = pageType || derivedPageType;
@@ -147,6 +156,7 @@ server.get(
         path: url,
         service,
         variant,
+        page,
         pageType,
         toggles,
         getAgent,

@@ -68,6 +68,11 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: 'Önceki',
+        nextPage: 'Sonraki',
+        pageXOfY: 'Page {x} / {y}',
+      },
       ads: {
         advertisementLabel: 'Reklam',
       },
@@ -296,8 +301,8 @@ export const service = {
           text: 'Çerezler',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853841',
-          text: "BBC'yle temas kurun",
+          href: 'https://www.bbc.co.uk/turkce/send/u50853841',
+          text: "BBC'ye ulaş",
         },
         {
           id: 'COOKIE_SETTINGS',
@@ -327,6 +332,10 @@ export const service = {
       {
         title: 'Türkiye',
         url: '/turkce/topics/ckdxn2xk95gt',
+      },
+      {
+        title: 'Rusya-Ukrayna Savaşı',
+        url: '/turkce/topics/cy0ryl4pvx6t',
       },
       {
         title: 'Ekonomi',
