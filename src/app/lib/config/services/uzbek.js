@@ -63,6 +63,7 @@ export const service = {
         previousPage: 'Олдингиси',
         nextPage: 'Кейингиси',
         pageXOfY: 'саҳифа {x} ...нинг {y}',
+        page: 'саҳифа',
       },
       ads: {
         advertisementLabel: 'Реклама',

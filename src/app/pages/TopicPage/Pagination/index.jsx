@@ -12,7 +12,9 @@ import {
 
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
 } from '@bbc/gel-foundations/breakpoints';
@@ -23,10 +25,10 @@ import { Ellipsis, LeftChevron, RightChevron } from './icons';
 
 const visibilityToMediaQuery = visibility =>
   ({
-    [VISIBILITY.MOBILE_ONLY]: `display: none; @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    [VISIBILITY.MOBILE_ONLY]: `display: none; @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
       display: inline-block;
     }`,
-    [VISIBILITY.TABLET_DOWN]: `display: none; @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    [VISIBILITY.TABLET_DOWN]: `display: none; @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
       display: inline-block;
     }`,
     [VISIBILITY.TABLET_UP]: `display: none; @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
@@ -72,9 +74,9 @@ const TextSummary = styled.div`
 const Block = styled.li`
   ${({ service }) => getSansBold(service)};
   ${({ visibility }) => visibilityToMediaQuery(visibility)}
-  width: 2.5rem;
-  height: 2.5rem;
-  line-height: 2.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  line-height: 2.75rem;
   text-align: center;
   margin: 0 0.125rem;
   svg {
@@ -195,6 +197,7 @@ const getTranslations = translations => ({
   pageXOfY: 'Page {x} of {y}',
   previousPage: 'Previous Page',
   nextPage: 'Next Page',
+  page: 'Page',
   ...translations.pagination,
 });
 
@@ -203,7 +206,8 @@ const Pagination = ({ activePage, pageCount }) => {
   const blocks = buildBlocks(activePage, pageCount);
   if (!blocks) return null;
 
-  const { pageXOfY, previousPage, nextPage } = getTranslations(translations);
+  const { pageXOfY, previousPage, nextPage, page } =
+    getTranslations(translations);
 
   const tokenMapper = (token, key) =>
     ({
@@ -216,7 +220,7 @@ const Pagination = ({ activePage, pageCount }) => {
   const showRightArrow = activePage < pageCount;
 
   return (
-    <Nav role="navigation" aria-label="Page" data-testid="topic-pagination">
+    <Nav role="navigation" aria-label={page} data-testid="topic-pagination">
       {showLeftArrow && (
         <LeftArrow activePage={activePage}>{previousPage}</LeftArrow>
       )}

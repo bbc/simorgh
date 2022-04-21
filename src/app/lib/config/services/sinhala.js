@@ -64,6 +64,7 @@ export const service = {
     showRelatedTopics: true,
     translations: {
       pagination: {
+        page: 'පිටුව',
         previousPage: 'ආපසු',
         nextPage: 'ඊළඟ',
         pageXOfY: 'පිටුව {x} අතරින් {y}',
