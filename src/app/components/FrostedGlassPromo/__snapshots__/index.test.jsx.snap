@@ -2,10 +2,16 @@
 
 exports[`Frosted Glass Promo when given props directly 1`] = `
 .emotion-0 {
-  display: inline-block;
   position: relative;
   width: 100%;
-  max-width: 35.438rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -67,6 +73,14 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
 .emotion-11 {
   position: relative;
   overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
 }
 
 .emotion-13 {
@@ -76,6 +90,7 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
   -webkit-transition: background 0.5s ease-in-out;
   transition: background 0.5s ease-in-out;
   background: rgb(32,34,36);
+  height: 100%;
 }
 
 .emotion-15 {
@@ -192,10 +207,16 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
 
 exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
 .emotion-0 {
-  display: inline-block;
   position: relative;
   width: 100%;
-  max-width: 35.438rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -257,6 +278,14 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
 .emotion-11 {
   position: relative;
   overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
 }
 
 .emotion-13 {
@@ -266,6 +295,7 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
   -webkit-transition: background 0.5s ease-in-out;
   transition: background 0.5s ease-in-out;
   background: rgb(32,34,36);
+  height: 100%;
 }
 
 .emotion-15 {
@@ -432,10 +462,16 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
 
 exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
 .emotion-0 {
-  display: inline-block;
   position: relative;
   width: 100%;
-  max-width: 35.438rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -497,6 +533,14 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
 .emotion-11 {
   position: relative;
   overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
 }
 
 .emotion-13 {
@@ -506,6 +550,7 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
   -webkit-transition: background 0.5s ease-in-out;
   transition: background 0.5s ease-in-out;
   background: rgb(32,34,36);
+  height: 100%;
 }
 
 .emotion-15 {
