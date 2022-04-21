@@ -68,6 +68,7 @@ export const service = {
         previousPage: 'پچھلا صفحہ',
         nextPage: 'اگلا صفحہ',
         pageXOfY: 'صفحہ {x} سے {y}',
+        page: 'صفحہ',
       },
       ads: {
         advertisementLabel: 'اشتہار',
