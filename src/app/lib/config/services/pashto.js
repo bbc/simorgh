@@ -66,6 +66,7 @@ export const service = {
     showRelatedTopics: true,
     translations: {
       pagination: {
+        page: 'پاڼه',
         previousPage: 'مخکينۍ پاڼه',
         nextPage: 'بله پاڼه',
         pageXOfY: 'پاڼه {x} د {y}',

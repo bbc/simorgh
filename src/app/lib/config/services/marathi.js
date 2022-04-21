@@ -73,6 +73,7 @@ export const service = {
     },
     translations: {
       pagination: {
+        page: 'पान',
         previousPage: 'मागील',
         nextPage: 'पुढील',
         pageXOfY: 'पान {x} पैकी {y}',

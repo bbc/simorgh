@@ -167,6 +167,7 @@ export const service = {
     },
     translations: {
       pagination: {
+        page: 'Stranica',
         previousPage: 'Prethodno',
         nextPage: 'Sledeće',
         pageXOfY: 'Stranica {x} od {y}',
@@ -470,6 +471,7 @@ export const service = {
     },
     translations: {
       pagination: {
+        page: 'Страница',
         previousPage: 'Претходно',
         nextPage: 'Следеће',
         pageXOfY: 'Страница {x} од {y}',

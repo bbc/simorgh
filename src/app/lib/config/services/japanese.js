@@ -61,6 +61,7 @@ export const service = {
     showRelatedTopics: true,
     translations: {
       pagination: {
+        page: 'ページ',
         previousPage: '前に戻る',
         nextPage: '次へ',
         pageXOfY: 'ページ {x} ／ {y}',
