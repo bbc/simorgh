@@ -60,6 +60,7 @@ export const service = {
     showRelatedTopics: true,
     translations: {
       pagination: {
+        page: 'səhifə',
         previousPage: 'Geriyə',
         nextPage: 'Növbəti',
         pageXOfY: 'səhifə {x} haqqında {y}',
