@@ -17,10 +17,12 @@ import ImageWithPlaceholder from '../../containers/ImageWithPlaceholder';
 import withData from './withData';
 
 const Wrapper = styled.div`
-  display: inline-block;
   position: relative;
   width: 100%;
-  max-width: 35.438rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
   text-decoration: none;
   &:hover {
     a {

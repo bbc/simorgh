@@ -61,6 +61,11 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: 'Quay Lại',
+        nextPage: 'Xem Tiếp',
+        pageXOfY: 'Page {x} của {y}',
+      },
       ads: {
         advertisementLabel: 'Quảng cáo',
       },

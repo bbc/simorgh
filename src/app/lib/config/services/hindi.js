@@ -61,16 +61,16 @@ export const service = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'पॉडकास्ट',
-      brandTitle: 'विवेचना',
+      brandTitle: 'ड्रामा क्वीन',
       brandDescription:
-        'नई रिलीज़ हुई फ़िल्मों की समीक्षा करता साप्ताहिक कार्यक्रम',
+        'बातें उन मुश्किलों की जो हमें किसी के साथ बांटने नहीं दी जातीं...',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09kn96g.jpg',
-        alt: 'बीबीसी 70 एमएम',
+        src: 'https://ichef.bbci.co.uk/images/ic/448xn/p0c04wcm.jpg',
+        alt: 'पॉडकास्ट',
       },
       linkLabel: {
-        text: 'एपिसोड्स',
-        href: 'https://www.bbc.com/hindi/podcasts/p05523zq',
+        text: 'ड्रामा क्वीन',
+        href: 'https://www.bbc.com/hindi/podcasts/p0c0530h',
       },
       skipLink: {
         text: 'छोड़कर %title% आगे बढ़ें',
@@ -78,6 +78,11 @@ export const service = {
       },
     },
     translations: {
+      pagination: {
+        previousPage: 'पिछला',
+        nextPage: 'अगला',
+        pageXOfY: 'Page {x} र {y}',
+      },
       ads: {
         advertisementLabel: 'विज्ञापन',
       },

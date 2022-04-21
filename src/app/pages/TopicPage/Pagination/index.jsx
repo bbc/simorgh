@@ -12,7 +12,9 @@ import {
 
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
 } from '@bbc/gel-foundations/breakpoints';
@@ -23,10 +25,10 @@ import { Ellipsis, LeftChevron, RightChevron } from './icons';
 
 const visibilityToMediaQuery = visibility =>
   ({
-    [VISIBILITY.MOBILE_ONLY]: `display: none; @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    [VISIBILITY.MOBILE_ONLY]: `display: none; @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
       display: inline-block;
     }`,
-    [VISIBILITY.TABLET_DOWN]: `display: none; @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    [VISIBILITY.TABLET_DOWN]: `display: none; @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
       display: inline-block;
     }`,
     [VISIBILITY.TABLET_UP]: `display: none; @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
@@ -72,9 +74,9 @@ const TextSummary = styled.div`
 const Block = styled.li`
   ${({ service }) => getSansBold(service)};
   ${({ visibility }) => visibilityToMediaQuery(visibility)}
-  width: 2.5rem;
-  height: 2.5rem;
-  line-height: 2.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  line-height: 2.75rem;
   text-align: center;
   margin: 0 0.125rem;
   svg {
@@ -130,7 +132,7 @@ const LinkComponent = ({ children, pageNumber, isActive, ...rest }) => (
   </A>
 );
 
-const LeftArrow = ({ activePage }) => (
+const LeftArrow = ({ activePage, children }) => (
   <Block as="span" visibility={VISIBILITY.ALL}>
     <LinkComponent
       pageNumber={activePage - 1}
@@ -138,20 +140,20 @@ const LeftArrow = ({ activePage }) => (
     >
       <span id="pagination-previous-page">
         <LeftChevron />
-        <VisuallyHiddenText>Previous page</VisuallyHiddenText>
+        <VisuallyHiddenText>{children}</VisuallyHiddenText>
       </span>
     </LinkComponent>
   </Block>
 );
 
-const RightArrow = ({ activePage }) => (
+const RightArrow = ({ activePage, children }) => (
   <Block as="span" visibility={VISIBILITY.ALL}>
     <LinkComponent
       pageNumber={activePage + 1}
       aria-labelledby="pagination-next-page"
     >
       <span id="pagination-next-page">
-        <VisuallyHiddenText>Next page</VisuallyHiddenText>
+        <VisuallyHiddenText>{children}</VisuallyHiddenText>
         <RightChevron />
       </span>
     </LinkComponent>
@@ -192,29 +194,51 @@ const renderBlock = ({
 };
 /* eslint-enable react/prop-types */
 
+const getTranslations = translations => ({
+  pageXOfY: 'Page {x} of {y}',
+  previousPage: 'Previous Page',
+  nextPage: 'Next Page',
+  page: 'Page',
+  ...translations.pagination,
+});
+
 const Pagination = ({ activePage, pageCount }) => {
-  const { service } = useContext(ServiceContext);
+  const { service, translations } = useContext(ServiceContext);
   const blocks = buildBlocks(activePage, pageCount);
   if (!blocks) return null;
+
+  const { pageXOfY, previousPage, nextPage, page } =
+    getTranslations(translations);
+
+  const tokenMapper = (token, key) =>
+    ({
+      '{x}': <b key={key}>{activePage}</b>,
+      '{y}': <b key={key}>{pageCount}</b>,
+    }[token] || <span key={key}>{token}</span>);
+  const tokens = pageXOfY.split(/(\{.\})/).map(tokenMapper);
 
   const showLeftArrow = activePage > 1;
   const showRightArrow = activePage < pageCount;
 
   return (
-    <Nav role="navigation" aria-label="Page" data-testid="topic-pagination">
-      {showLeftArrow && <LeftArrow activePage={activePage} />}
+    <Nav role="navigation" aria-label={page} data-testid="topic-pagination">
+      {showLeftArrow && (
+        <LeftArrow activePage={activePage}>{previousPage}</LeftArrow>
+      )}
       <TextSummary
         service={service}
         data-testid="topic-pagination-summary"
         // eslint-disable-next-line jsx-a11y/aria-role
         role="text"
       >
-        Page <b>{activePage}</b> of <b>{pageCount}</b>
+        {tokens}
       </TextSummary>
       <StyledUnorderedList role="list">
         {blocks.map(block => renderBlock({ ...block, activePage, service }))}
       </StyledUnorderedList>
-      {showRightArrow && <RightArrow activePage={activePage} />}
+      {showRightArrow && (
+        <RightArrow activePage={activePage}>{nextPage}</RightArrow>
+      )}
     </Nav>
   );
 };

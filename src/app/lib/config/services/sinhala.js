@@ -63,6 +63,12 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        page: 'පිටුව',
+        previousPage: 'ආපසු',
+        nextPage: 'ඊළඟ',
+        pageXOfY: 'පිටුව {x} අතරින් {y}',
+      },
       ads: {
         advertisementLabel: 'වෙළෙඳ දැන්වීමක් ',
       },

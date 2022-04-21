@@ -64,6 +64,12 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        page: 'পৃষ্ঠা',
+        previousPage: 'ফিরে যাব',
+        nextPage: 'পরবর্তী',
+        pageXOfY: 'পৃষ্ঠা {x} এর মধ্যে {y}',
+      },
       ads: {
         advertisementLabel: 'বিজ্ঞাপন',
       },

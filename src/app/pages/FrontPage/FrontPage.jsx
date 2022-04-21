@@ -99,6 +99,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
         lang={lang}
         description={description}
         openGraphType="website"
+        hasAmpPage={false}
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
       <AdContainer slotType="leaderboard" />
