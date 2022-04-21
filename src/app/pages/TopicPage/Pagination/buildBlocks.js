@@ -1,5 +1,5 @@
-/* eslint-disable no-param-reassign */
 import pipe from 'ramda/src/pipe';
+import clone from 'ramda/src/clone';
 import findNClosestIndices from '#lib/utilities/findNClosestIndicies';
 
 export const TYPE = {
@@ -15,20 +15,9 @@ export const VISIBILITY = {
   DESKTOP_ONLY: 'DESKTOP_ONLY',
 };
 
-// we're returning an array of page elements to be consumed by the renderer
-const createPage = (index, state) => {
-  const isActivePage = index + 1 === state.activePage;
-  if (isActivePage) {
-    state.activePageIndex = index;
-  }
-  return {
-    type: TYPE.NUMBER,
-    pageNumber: index + 1,
-  };
-};
-
 // The first page, last page, and active page should always be visible
-const setRequiredVisibility = state => {
+const setRequiredVisibility = _state => {
+  const state = clone(_state);
   state.result[0].visibility = VISIBILITY.ALL;
   state.result[state.activePageIndex].visibility = VISIBILITY.ALL;
   state.result[state.result.length - 1].visibility = VISIBILITY.ALL;
@@ -38,7 +27,8 @@ const setRequiredVisibility = state => {
 
 // Iteratively radiate out from the active page, setting the visibility of pages
 // Pages closer to the active page are visible on more devices
-const setDynamicVisibility = state => {
+const setDynamicVisibility = _state => {
+  const state = clone(_state);
   const iterations = [
     [VISIBILITY.ALL, state.activePageOnEdge ? 1 : 0],
     [VISIBILITY.TABLET_UP, state.activePageOnEdge ? 1 : 2],
@@ -60,7 +50,8 @@ const setDynamicVisibility = state => {
 };
 
 // Ensure we do not have an ellipsis replacing a single number
-const fillEdges = state => {
+const fillEdges = _state => {
+  const state = clone(_state);
   // If page 2 is going to be rendered, it should have the same visibility as page 3
   const secondElement = state.result[1];
   const thirdElement = state.result[2];
@@ -82,7 +73,8 @@ const fillEdges = state => {
 };
 
 // After setting the visibility of all the pages we want to show, we can remove the others
-const pruneInvisible = state => {
+const pruneInvisible = _state => {
+  const state = clone(_state);
   state.result = state.result.filter((page, index) => {
     if (!page.visibility) {
       // if an element is being filtered out, we need to remember we did this
@@ -150,14 +142,17 @@ const addKeys = state => ({
 export default (activePage, pageCount) => {
   if (pageCount <= 1) return null;
   const initialState = {
+    result: Array(pageCount)
+      .fill()
+      .map((_, i) => ({
+        type: TYPE.NUMBER,
+        pageNumber: i + 1,
+      })),
     activePage,
+    activePageIndex: activePage - 1,
     pageCount,
     activePageOnEdge: activePage === 1 || activePage === pageCount,
   };
-
-  initialState.result = Array(pageCount)
-    .fill()
-    .map((_, i) => createPage(i, initialState));
 
   return pipe(
     setRequiredVisibility,
