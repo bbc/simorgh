@@ -12,17 +12,13 @@ import getInitialData from '#app/routes/cpsAsset/getInitialData';
 import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import * as viewTracking from '#hooks/useViewTracker';
-import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import CpsRelatedContent from '.';
-
-jest.mock('#hooks/useOptimizelyVariation', () => jest.fn(() => null));
 
 const promos = path(['relatedContent', 'groups', 0, 'promos'], pidginPageData);
 
 // eslint-disable-next-line react/prop-types
 const renderRelatedContent = ({
   content = promos,
-  isStoryPage = false,
   bbcOrigin = 'https://www.test.bbc.co.uk',
   service = 'pidgin',
   pageType = MEDIA_ASSET_PAGE,
@@ -42,12 +38,7 @@ const renderRelatedContent = ({
             eventTracking: { enabled: true },
           }}
         >
-          <CpsRelatedContent
-            content={content}
-            recommendations={content}
-            enableGridWrapper
-            isStoryPage={isStoryPage}
-          />
+          <CpsRelatedContent content={content} enableGridWrapper />
         </ToggleContextProvider>
       </RequestContextProvider>
     </ServiceContextProvider>,
@@ -130,53 +121,6 @@ describe('CpsRelatedContent', () => {
   it('should render a default title if translations are not available', () => {
     renderRelatedContent({ pageType: STORY_PAGE, service: 'news' });
     expect(screen.getByText(`Related content`)).toBeTruthy();
-  });
-
-  describe('003_hindi_experiment_feature', () => {
-    it('should render a normal title and Related Content for "control" variation', async () => {
-      useOptimizelyVariation.mockReturnValue('control');
-      const { container, queryByText } = renderRelatedContent({
-        pageType: STORY_PAGE,
-        isStoryPage: true,
-        service: 'hindi',
-      });
-
-      expect(queryByText('संबंधित समाचार')).toBeInTheDocument();
-      expect(container.querySelectorAll('time').length).toBe(3);
-    });
-
-    it('should render a translated title for Hindi Recommendations Related Content', async () => {
-      useOptimizelyVariation.mockReturnValue('variation_2');
-      const { queryByText } = renderRelatedContent({
-        pageType: STORY_PAGE,
-        isStoryPage: true,
-        service: 'hindi',
-      });
-
-      expect(queryByText('ये भी पढ़ें')).toBeInTheDocument();
-    });
-
-    it('should render a timestamp for Related Content', async () => {
-      useOptimizelyVariation.mockReturnValue(null);
-      const { container } = renderRelatedContent({
-        pageType: STORY_PAGE,
-        isStoryPage: true,
-        service: 'pidgin',
-      });
-
-      expect(container.querySelectorAll('time').length).toBe(3);
-    });
-
-    it('should not render a timestamp for Hindi Recommendations Related Content', async () => {
-      useOptimizelyVariation.mockReturnValue('variation_2');
-      const { container } = renderRelatedContent({
-        pageType: STORY_PAGE,
-        isStoryPage: true,
-        service: 'hindi',
-      });
-
-      expect(container.querySelectorAll('time').length).toBe(0);
-    });
   });
 });
 
