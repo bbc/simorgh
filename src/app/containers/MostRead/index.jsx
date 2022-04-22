@@ -13,6 +13,8 @@ const blockLevelEventTrackingData = {
   componentName: 'most-read',
 };
 
+const showMostReadPageTypes = ['STY', 'article'];
+
 const MostReadContainer = ({
   mostReadEndpointOverride,
   initialData,
@@ -21,7 +23,7 @@ const MostReadContainer = ({
   wrapper,
   serverRenderOnAmp,
 }) => {
-  const { variant, isAmp } = useContext(RequestContext);
+  const { variant, isAmp, pageType } = useContext(RequestContext);
   const {
     service,
     mostRead: { hasMostRead },
@@ -39,9 +41,15 @@ const MostReadContainer = ({
   if (!mostReadToggleEnabled) {
     return null;
   }
-  // Do not render on AMP when it is not the most read page
+  // Do not render on AMP when it is on the frontPage
+  // We render amp on STY and ART using amp-script
   // We only want to render most read on AMP for the "/popular/read" pages
-  if (isAmp && !serverRenderOnAmp && !isLive()) {
+  if (
+    isAmp &&
+    !serverRenderOnAmp &&
+    showMostReadPageTypes.includes(pageType) &&
+    !isLive()
+  ) {
     return <AmpMostRead endpoint={mostReadUrl} size={size} wrapper={wrapper} />;
   }
 
