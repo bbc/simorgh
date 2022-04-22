@@ -41,6 +41,7 @@ const MostReadContainer = ({
   if (!mostReadToggleEnabled) {
     return null;
   }
+
   // Do not render on AMP when it is on the frontPage
   // We render amp on STY and ART using amp-script
   // We only want to render most read on AMP for the "/popular/read" pages

@@ -7,7 +7,11 @@ import { ToggleContext } from '#contexts/ToggleContext';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import serbianLatMostReadData from '#data/serbian/mostRead/lat';
 import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
-import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  FRONT_PAGE,
+  STORY_PAGE,
+  ARTICLE_PAGE,
+} from '#app/routes/utils/pageTypes';
 import MostReadContainer from '.';
 import { setFreshPromoTimestamp } from './utilities/testHelpers';
 
@@ -18,6 +22,7 @@ const MostReadWithContext = ({
   variant = null,
   mostReadToggle,
   serverRenderOnAmp,
+  pageType = FRONT_PAGE,
 }) => (
   <ToggleContext.Provider
     value={{
@@ -29,7 +34,7 @@ const MostReadWithContext = ({
     <RequestContextProvider
       bbcOrigin={`http://localhost:7080/${service}`}
       isAmp={isAmp}
-      pageType={FRONT_PAGE}
+      pageType={pageType}
       service={service}
       statusCode={200}
       pathname={`/${service}`}
@@ -47,6 +52,11 @@ const shouldRenderMostRead = container =>
 
 const shouldNotRenderMostRead = container =>
   expect(container.querySelector('ol')).not.toBeInTheDocument();
+
+const shouldRenderMostReadAmp = container =>
+  expect(container.querySelector('amp-script')).toBeInTheDocument();
+const shouldNotRenderMostReadAmp = container =>
+  expect(container.querySelector('amp-script')).not.toBeInTheDocument();
 
 describe('MostReadContainerCanonical Assertion', () => {
   beforeEach(() => {
@@ -156,4 +166,103 @@ describe('MostReadContainerCanonical Assertion', () => {
       });
     },
   );
+
+  describe('AMP Only', () => {
+    [
+      {
+        description: 'should render most read amp on STY page',
+        service: 'mundo',
+        mostReadToggle: true,
+        isAmp: true,
+        variant: null,
+        renderExpectation: shouldRenderMostReadAmp,
+        pageType: STORY_PAGE,
+      },
+      {
+        description: 'should render most read amp on article page',
+        service: 'mundo',
+        mostReadToggle: true,
+        isAmp: true,
+        variant: null,
+        renderExpectation: shouldRenderMostReadAmp,
+        pageType: ARTICLE_PAGE,
+      },
+      {
+        description: 'should render most read amp on STY page for PS news',
+        service: 'news',
+        mostReadToggle: true,
+        isAmp: true,
+        variant: null,
+        renderExpectation: shouldRenderMostReadAmp,
+        pageType: STORY_PAGE,
+      },
+      {
+        description: 'should render most read amp on article page for PS news',
+        service: 'news',
+        mostReadToggle: true,
+        isAmp: true,
+        variant: null,
+        renderExpectation: shouldRenderMostReadAmp,
+        pageType: ARTICLE_PAGE,
+      },
+      {
+        description: 'should not render most read amp on front page',
+        service: 'mundo',
+        mostReadToggle: true,
+        isAmp: true,
+        variant: null,
+        renderExpectation: shouldNotRenderMostReadAmp,
+        pageType: FRONT_PAGE,
+      },
+    ].forEach(
+      ({
+        description,
+        service,
+        mostReadToggle,
+        isAmp,
+        variant,
+        renderExpectation,
+        serverRenderOnAmp,
+        pageType,
+      }) => {
+        it(description, async () => {
+          let container;
+          await act(async () => {
+            container = await render(
+              <MostReadWithContext
+                service={service}
+                mostReadToggle={mostReadToggle}
+                isAmp={isAmp}
+                variant={variant}
+                serverRenderOnAmp={serverRenderOnAmp}
+                pageType={pageType}
+              />,
+            ).container;
+          });
+
+          renderExpectation(container);
+        });
+      },
+    );
+
+    // Test can be removed when code is pushed live.
+    it('should not render most read amp on live environment', async () => {
+      process.env.SIMORGH_APP_ENV = 'live';
+      let container;
+      await act(async () => {
+        container = await render(
+          <MostReadWithContext
+            service="mundo"
+            mostReadToggle
+            isAmp
+            variant={null}
+            pageType={STORY_PAGE}
+          />,
+        ).container;
+      });
+
+      expect(container.querySelector('amp-script')).not.toBeInTheDocument();
+      delete process.env.SIMORGH_APP_ENV;
+    });
+  });
 });
