@@ -93,7 +93,7 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
                 service={service}
                 script={script}
                 numberOfItems={numberOfItems}
-                listIndex={'{{rankTranslation}}'}
+                listIndex="{{rankTranslation}}"
                 dir={dir}
                 columnLayout="oneColumn"
                 size={size}
@@ -103,8 +103,8 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
                 dir={dir}
                 service={service}
                 script={script}
-                title={'{{promo.headlines.shortHeadline}}'}
-                href={'{{promo.locators.assetUri}}'}
+                title="{{promo.headlines.shortHeadline}}"
+                href="{{promo.locators.assetUri}}"
                 size={size}
               />
             </MostReadItemWrapper>
