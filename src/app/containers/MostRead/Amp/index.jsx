@@ -8,6 +8,8 @@ import {
   AMP_SCRIPT_JS,
 } from '@bbc/psammead-assets/amp-boilerplate';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+import pathOr from 'ramda/src/pathOr';
 import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
 import MostReadRank, { serviceNumerals } from '../Canonical/Rank';
 import generateCSPHash from '../utilities/generateCPSHash';
@@ -38,13 +40,21 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
     script,
     dir,
     mostRead: { numberOfItems },
+    translations,
   } = useContext(ServiceContext);
 
   const onlyinnerscript = rankTranslationScript(endpoint, service);
 
-  const FallbackText = styled.p``;
+  const FallbackText = styled.p`
+    ${() => getSansRegular(service)}
+    margin: 0;
+  `;
 
-  const fallbackText = 'Content is not available';
+  const fallbackText = pathOr(
+    'Content is not available',
+    ['socialEmbed', 'fallback', 'text'],
+    translations,
+  );
 
   return (
     <amp-script id="dataFunctions" script="local-script">
@@ -81,7 +91,7 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
           max-items={numberOfItems}
           layout="responsive"
           width="300"
-          height="100"
+          height="50"
         >
           <FallbackText fallback="" service={service} script={script}>
             {fallbackText}
