@@ -76,8 +76,6 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
 
       const mostReadPath = `/${config[service].name}/mostread${serviceVariant}.json`;
 
-      console.log('mostReadPath', mostReadPath);
-
       if (service !== 'scotland') {
         it(`should show the correct number of items for ${service}\`s ${pageType}`, () => {
           cy.request(mostReadPath).then(({ body: mostReadJson }) => {
@@ -150,7 +148,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
                 mostReadIsEnabled &&
                 mostReadRecords > 5
               ) {
-                cy.get('amp-script > div').should('not.exist');
+                cy.get('amp-script > div amp-list').should('not.exist');
               }
             });
           });
