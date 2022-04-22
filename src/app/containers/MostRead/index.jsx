@@ -31,26 +31,24 @@ const MostReadContainer = ({
 
   const { enabled } = useToggle('mostRead');
 
-  const environment = process.env.SIMORGH_BASE_URL;
   const mostReadToggleEnabled = enabled && hasMostRead;
   const endpoint =
     mostReadEndpointOverride || getMostReadEndpoint({ service, variant });
-  const mostReadUrl = `${environment}${endpoint}`;
 
   // Do not render most read when a toggle is disabled
   if (!mostReadToggleEnabled) {
     return null;
   }
 
-  // Do not render on AMP when it is on the frontPage
-  // We render amp on STY and ART using amp-script
-  // We only want to render most read on AMP for the "/popular/read" pages
+  // We render amp on ONLY STY and ART pages using amp-list.
+  // We also want to render most read on AMP for the "/popular/read" pages
   if (
     isAmp &&
     !serverRenderOnAmp &&
     showMostReadPageTypes.includes(pageType) &&
     !isLive()
   ) {
+    const mostReadUrl = `${process.env.SIMORGH_BASE_URL}${endpoint}`;
     return <AmpMostRead endpoint={mostReadUrl} size={size} wrapper={wrapper} />;
   }
 
