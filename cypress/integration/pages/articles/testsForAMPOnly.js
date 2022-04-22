@@ -64,7 +64,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
       });
     });
 
-    describe.only('Most Read Container', () => {
+    describe('Most Read Container', () => {
       /* These cypress tests are needed as unit tests cannot be run on the jsdom.
        * web workers (which run on amp pages) do not run on the virtual dom.
        */
