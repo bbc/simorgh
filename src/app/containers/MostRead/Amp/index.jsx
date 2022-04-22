@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet';
 import { string, oneOf, elementType } from 'prop-types';
+import styled from '@emotion/styled';
 import {
   AMP_LIST_JS,
   AMP_MUSTACHE_JS,
@@ -41,14 +42,12 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
 
   const onlyinnerscript = rankTranslationScript(endpoint, service);
 
+  const FallbackText = styled.p``;
+
+  const fallbackText = 'Content is not available';
+
   return (
-    <amp-script
-      id="dataFunctions"
-      width="300"
-      height="10000"
-      layout="responsive"
-      script="local-script"
-    >
+    <amp-script id="dataFunctions" script="local-script">
       <Wrapper>
         <Helmet
           script={[
@@ -84,6 +83,10 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
           width="300"
           height="100"
         >
+          <FallbackText fallback="" service={service} script={script}>
+            {fallbackText}
+          </FallbackText>
+
           <template type="amp-mustache">
             <MostReadItemWrapper dir={dir} columnLayout="oneColumn">
               <MostReadRank
