@@ -71,7 +71,7 @@ export const testsThatAlwaysRunForAMPOnly = ({
        * web workers (which run on amp pages) do not run on the virtual dom.
        */
 
-      const serviceVariant = variant === 'default' ? '' : variant;
+      const serviceVariant = variant === 'default' ? '' : `/${variant}`;
 
       const mostReadPath = `/${config[service].name}/mostread${serviceVariant}.json`;
 
