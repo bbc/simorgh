@@ -80,6 +80,9 @@ const Block = styled.li`
   text-align: center;
   margin: 0 0.125rem;
   svg {
+    @media screen and (forced-colors: active) {
+      fill: linkText;
+    }
     fill: currentColor;
     width: 1rem;
     height: 1rem;
@@ -90,6 +93,11 @@ const Block = styled.li`
 
 const EllipsisBlock = styled(Block)`
   color: ${C_PHILIPPINE_GREY};
+  svg {
+    @media screen and (forced-colors: active) {
+      fill: canvasText;
+    }
+  }
 `;
 
 const A = styled.a`

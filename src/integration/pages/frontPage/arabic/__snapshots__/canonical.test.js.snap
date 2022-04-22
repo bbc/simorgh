@@ -342,7 +342,7 @@ exports[`Canonical Front Page Sections should match headline text 15`] = `"با�
 
 exports[`Canonical Front Page Sections should match headline text 16`] = `"مباشر"`;
 
-exports[`Canonical Front Page Sections should match headline text 17`] = `"أحدث نشرة أخبار"`;
+exports[`Canonical Front Page Sections should match headline text 17`] = `"البث الإذاعي"`;
 
 exports[`Canonical Front Page Sections should match headline text 18`] = `"اخترنا لكم"`;
 
