@@ -14958,10 +14958,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"moment@npm:2.29.1":
-  version: 2.29.1
-  resolution: "moment@npm:2.29.1"
-  checksum: 1e14d5f422a2687996be11dd2d50c8de3bd577c4a4ca79ba5d02c397242a933e5b941655de6c8cb90ac18f01cc4127e55b4a12ae3c527a6c0a274e455979345e
+"moment@npm:2.29.2":
+  version: 2.29.2
+  resolution: "moment@npm:2.29.2"
+  checksum: ee850b5776485e2af0775ceb3cfebaa7d7638f0a750fe0678fcae24c310749f96c1938808384bd422a55e5703834a71fcb09c8a1d36d9cf847f6ed0205d7a3e5
   languageName: node
   linkType: hard
 
@@ -18695,7 +18695,7 @@ __metadata:
     minimist: 1.2.6
     mocha: 9.2.2
     mocha-junit-reporter: 2.0.2
-    moment: 2.29.1
+    moment: 2.29.2
     moment-timezone: 0.5.34
     morgan: 1.10.0
     node-fetch: 2.6.7
