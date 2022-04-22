@@ -70,6 +70,9 @@ export const testsThatAlwaysRunForAMPOnly = ({
       /* These cypress tests are needed as unit tests cannot be run on the jsdom.
        * web workers (which run on amp pages) do not run on the virtual dom.
        */
+      before(() => {
+        cy.getToggles(config[service].name);
+      });
 
       const serviceVariant = variant === 'default' ? '' : `/${variant}`;
 
