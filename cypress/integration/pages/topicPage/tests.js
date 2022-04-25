@@ -1,8 +1,7 @@
-// import getInitialData from '../../../../src/app/routes/topic/getInitialData';
-
 export default ({ service, pageType, variant, isAmp }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
     let topicId;
+    let firstItemHeadline;
     beforeEach(() => {
       const currentpath = Cypress.env('currentPath');
       cy.log(currentpath);
@@ -77,7 +76,7 @@ export default ({ service, pageType, variant, isAmp }) => {
         `https://web-cdn.api.bbci.co.uk/fd/simorgh-bff?id=${topicId}&service=${service}`,
       ).then(({ body }) => {
         // Gets the headline from 'title' of first item
-        const firstItemHeadline = body.data.summaries[0].title;
+        firstItemHeadline = body.data.summaries[0].title;
         cy.log(firstItemHeadline);
         // Goes down into the first item's h2 text and compares to title
         cy.get('main > div > ul')
@@ -94,6 +93,7 @@ export default ({ service, pageType, variant, isAmp }) => {
     });
     it('Clicking the first item should navigate to the correct page (goes to live article)', () => {
       let href;
+
       // Goes down into the first item's href
       cy.get('main > div > ul')
         .children()
@@ -109,7 +109,15 @@ export default ({ service, pageType, variant, isAmp }) => {
                   cy.log(href);
                   // Clicks the first item, then checks the page navigates to has the expected url
                   cy.get('a').click();
-                  cy.url().should('eq', href);
+                  cy.url()
+                    .should('eq', href)
+                    .then(url => {
+                      // Check the page navigated to has the short headline that was on the topic item
+                      cy.request(`${url}.json`).then(({ body }) => {
+                        const { shortHeadline } = body.promo.headlines;
+                        expect(shortHeadline).to.equal(firstItemHeadline);
+                      });
+                    });
                 });
             });
         });
