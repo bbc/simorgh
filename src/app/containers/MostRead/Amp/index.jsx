@@ -10,6 +10,8 @@ import {
 import { ServiceContext } from '#contexts/ServiceContext';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import pathOr from 'ramda/src/pathOr';
+import { C_SHADOW } from '@bbc/psammead-styles/colours';
+import { getBodyCopy } from '@bbc/gel-foundations/dist/typography';
 import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
 import MostReadRank, { serviceNumerals } from '../Canonical/Rank';
 import generateCSPHash from '../utilities/generateCPSHash';
@@ -47,6 +49,8 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
 
   const FallbackText = styled.p`
     ${() => getSansRegular(service)}
+    ${() => getBodyCopy(script)}
+    color: ${C_SHADOW};
     margin: 0;
   `;
 
