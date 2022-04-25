@@ -1,4 +1,4 @@
-export default ({ service, pageType, variant, isAmp }) => {
+export default ({ service, pageType }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
     let topicId;
     let firstItemHeadline;
