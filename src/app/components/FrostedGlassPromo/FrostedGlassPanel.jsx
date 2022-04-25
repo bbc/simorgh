@@ -85,7 +85,7 @@ const FrostedGlassPanel = ({
       <Children colour={colour.rgb} isLoading={isLoading}>
         {children}
       </Children>
-      {isCanonical && <Background style={backgroundImageStyle} image={image} />}
+      {isCanonical && <Background style={backgroundImageStyle} />}
     </Wrapper>
   );
 };
