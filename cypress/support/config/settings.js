@@ -5443,7 +5443,7 @@ module.exports = () => ({
             enabled: true,
           },
           local: {
-            paths: [''],
+            paths: ['/pidgin/topics/cnq68qvkjp1t'], // do not enable, needs to be added to fixture data maybe
             enabled: false,
           },
         },
