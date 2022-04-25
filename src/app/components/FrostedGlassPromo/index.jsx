@@ -99,6 +99,7 @@ const FrostedGlassPromo = ({
         tabIndex="-1"
       ></ClickableArea>
       <ImageWithPlaceholder
+        lazyLoad
         darkMode={isCanonical}
         {...pick(
           [
@@ -117,7 +118,7 @@ const FrostedGlassPromo = ({
         )}
       />
       <FrostedGlassPanel
-        image={image.smallSrc || image.src}
+        image={image.src}
         minimumContrast={minimumContrast}
         paletteSize={paletteSize}
       >
