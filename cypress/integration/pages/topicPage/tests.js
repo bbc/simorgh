@@ -32,8 +32,77 @@ export default ({ service, pageType, variant, isAmp }) => {
         cy.log(body);
         const numberOfItems = body.data.summaries.length;
         cy.log(numberOfItems);
-        // cy.get('ul').eq(1).its('length').should('eq', numberOfItems);
+        cy.get('main > div > ul')
+          .children()
+          .its('length')
+          .should('eq', numberOfItems);
       });
+    });
+    it('should show pagination if there is more than one page', () => {
+      cy.request(
+        `https://web-cdn.api.bbci.co.uk/fd/simorgh-bff?id=${topicId}&service=${service}`,
+      ).then(({ body }) => {
+        const { pageCount } = body.data;
+        cy.log(`pagecount is ${pageCount}`);
+        if (pageCount > 1) {
+          cy.get('[data-testid="topic-pagination"]').should('exist');
+        } else {
+          cy.get('[data-testid="topic-pagination"]').should('not.exist');
+        }
+      });
+    });
+    it('should have the correct max pagination number', () => {
+      cy.request(
+        `https://web-cdn.api.bbci.co.uk/fd/simorgh-bff?id=${topicId}&service=${service}`,
+      ).then(({ body }) => {
+        const { pageCount } = body.data;
+        if (pageCount > 1) {
+          cy.log(`pagecount is ${pageCount}`);
+          cy.get('[data-testid="topic-pagination"] > ul > li')
+            .last()
+            .should('have.text', pageCount);
+        } else {
+          cy.log('No pagination - only 1 page of items');
+        }
+      });
+    });
+    it('First item has correct headline', () => {
+      cy.request(
+        `https://web-cdn.api.bbci.co.uk/fd/simorgh-bff?id=${topicId}&service=${service}`,
+      ).then(({ body }) => {
+        const firstItemHeadline = body.data.summaries[0].title;
+        cy.log(firstItemHeadline);
+        cy.get('main > div > ul')
+          .children()
+          .first()
+          .within(() => {
+            cy.get('div > div')
+              .next()
+              .within(() => {
+                cy.get('h2').should('have.text', firstItemHeadline);
+              });
+          });
+      });
+    });
+    it('Clicking the first item should navigate to the correct page (goes to live article)', () => {
+      let href;
+      cy.get('main > div > ul')
+        .children()
+        .first()
+        .within(() => {
+          cy.get('div > div')
+            .next()
+            .within(() => {
+              cy.get('h2 > a')
+                .should('have.attr', 'href')
+                .then($href => {
+                  href = $href;
+                  cy.log(href);
+                  cy.get('a').click();
+                  cy.url().should('eq', href);
+                });
+            });
+        });
     });
   });
 };

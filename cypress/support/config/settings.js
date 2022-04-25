@@ -5426,7 +5426,29 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: [
+              '/pidgin/topics/c95y35941vrt',
+              '/pidgin/topics/cnq68qvkjp1t', // One page only
+            ],
+            enabled: true,
+          },
+          test: {
+            paths: [
+              '/pidgin/topics/cqywjyzk2vyt',
+              '/pidgin/topics/cnq68qvkjp1t', // One page only
+            ],
+            enabled: true,
+          },
+          local: {
+            paths: [''],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
