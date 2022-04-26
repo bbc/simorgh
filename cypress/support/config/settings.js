@@ -1690,6 +1690,7 @@ module.exports = () => ({
       mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
+      topicPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
