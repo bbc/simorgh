@@ -22,19 +22,13 @@ const buildImageProperties = image => {
       originCode,
       locator,
       originalImageWidth: width,
-      imageResolutions: [280, 400],
+      imageResolutions: [400],
     });
 
   const src = buildIChefURL({
     originCode,
     locator,
     resolution: 400,
-  });
-
-  const smallSrc = buildIChefURL({
-    originCode,
-    locator,
-    resolution: 240,
     isWebP: true,
   });
 
@@ -42,9 +36,8 @@ const buildImageProperties = image => {
     ratio: 52,
     srcset: primarySrcset,
     fallbackSrcset,
-    sizes: '(max-width: 300px) 280px, (min-width: 1008px) 280px, 400px',
+    sizes: '(min-width: 1008px) 400px',
     src,
-    smallSrc,
     primaryMimeType,
     fallbackMimeType,
     alt: altText,

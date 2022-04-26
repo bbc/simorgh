@@ -53,13 +53,11 @@ describe('Frosted Glass Promo', () => {
 
   it('should render the appropriate elements - CPS Promo', () => {
     const { container, getByText } = render(<Component {...cpsPromoFixture} />);
+
     expect(getByText('5 mayo 2016'));
     expect(getByText(cpsPromoFixture.item.headlines.headline));
-    expect(
-      container.querySelector(
-        `img[alt="${cpsPromoFixture.item.indexImage.altText}"]`,
-      ),
-    ).toBeInTheDocument();
+    // Main image is lazy-loaded
+    expect(container.querySelector('noscript')).toBeInTheDocument();
     expect(
       container.querySelector(
         `a[href="${cpsPromoFixture.item.locators.assetUri}"]`,
@@ -73,11 +71,8 @@ describe('Frosted Glass Promo', () => {
     );
     expect(getByText('17th February 2020'));
     expect(getByText(linkPromoFixture.item.summary));
-    expect(
-      container.querySelector(
-        `img[alt="${linkPromoFixture.item.indexImage.altText}"]`,
-      ),
-    ).toBeInTheDocument();
+    // Main image is lazy-loaded
+    expect(container.querySelector('noscript')).toBeInTheDocument();
     expect(
       container.querySelector(`a[href="${linkPromoFixture.item.uri}"]`),
     ).toBeInTheDocument();
