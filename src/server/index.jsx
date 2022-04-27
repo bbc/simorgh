@@ -135,7 +135,6 @@ server.get(
         service,
         isAmp,
         isLow,
-        isLite,
         route: { getInitialData, pageType },
         variant,
       } = getRouteProps(urlPath);
@@ -178,7 +177,6 @@ server.get(
         data,
         isAmp,
         isLow,
-        isLite,
         routes,
         service,
         url,

@@ -129,7 +129,6 @@ SitewideLinks.defaultProps = {
   service: null,
   isAmp: false,
   isLow: false,
-  isLite: true,
   trustProjectLink: null,
 };
 

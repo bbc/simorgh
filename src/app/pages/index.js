@@ -12,6 +12,5 @@ export const OnDemandAudioPage = loadable(() => import('./OnDemandAudioPage'));
 export const OnDemandTvPage = loadable(() => import('./OnDemandTvPage'));
 export const TopicPage = loadable(() => import('./TopicPage'));
 export const StoryPage = loadable(() => import('./StoryPage'));
-export const StoryPageLite = loadable(() => import('./StoryPageLite'));
 export const IdxPage = loadable(() => import('./IdxPage'));
 export const FeatureIdxPage = loadable(() => import('./FeatureIdxPage'));

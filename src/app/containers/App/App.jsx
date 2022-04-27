@@ -14,7 +14,7 @@ const mapToState = ({ pathname, initialData, routeProps, toggles }) => {
 
   return mergeAll([
     pick(
-      ['service', 'isAmp', 'isLow', 'isLite', 'variant', 'id', 'assetUri', 'errorCode'],
+      ['service', 'isAmp', 'isLow', 'variant', 'id', 'assetUri', 'errorCode'],
       routeProps,
     ),
     pick(

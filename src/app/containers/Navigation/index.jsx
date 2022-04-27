@@ -42,7 +42,7 @@ const renderListItems = (
   });
 
 const NavigationContainer = () => {
-  const { isLow, isLite, isAmp } = useContext(RequestContext);
+  const { isLow, isAmp } = useContext(RequestContext);
 
   const { script, translations, navigation, service, dir, theming } =
     useContext(ServiceContext);
@@ -96,7 +96,7 @@ const NavigationContainer = () => {
     </DropdownUl>
   );
 
-  const Navigation = isAmp ? Amp : ((isLow || isLite) ? Low : Canonical);
+  const Navigation = isAmp ? Amp : ((isLow) ? Low : Canonical);
 
   return (
     <Navigation

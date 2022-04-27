@@ -28,8 +28,8 @@ const Content = styled.div`
 
 const PageWrapper = ({ children, pageData, status }) => {
   const { fonts: fontFunctions } = useContext(ServiceContext);
-  const { isLow, isLite } = useContext(RequestContext);
-  const fonts = (isLow || isLite) ? [] : fontFunctions.map(getFonts => getFonts());
+  const { isLow } = useContext(RequestContext);
+  const fonts = isLow ? [] : fontFunctions.map(getFonts => getFonts());
 
   const isDarkMode = pathOr(false, ['darkMode'], pageData);
   const isErrorPage = [404, 500].includes(status);

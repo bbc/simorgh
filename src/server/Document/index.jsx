@@ -19,7 +19,6 @@ const renderDocument = async ({
   data,
   isAmp,
   isLow,
-  isLite,
   routes,
   service,
   url,
@@ -71,7 +70,6 @@ const renderDocument = async ({
             service={service}
             isAmp={isAmp}
             isLow={isLow}
-            isLite={isLite}
           />
         </CacheProvider>
       </ChunkExtractorManager>,
@@ -108,7 +106,6 @@ const renderDocument = async ({
       service={service}
       isAmp={isAmp}
       isLow={isLow}
-      isLite={isLite}
     />,
   );
 

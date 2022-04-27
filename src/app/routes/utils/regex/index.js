@@ -7,7 +7,6 @@ import {
   getSwRegex,
   getManifestRegex,
   getCpsAssetRegex,
-  getCpsAssetLiteRegex,
   getLiveRadioRegex,
   getPodcastEpisodeRegex,
   getPodcastBrandRegex,
@@ -40,7 +39,6 @@ export const frontPageDataPath = `${frontPagePath}.json`;
 export const frontPageSwPath = getSwRegex(allServices);
 export const frontPageManifestPath = getManifestRegex(allServices);
 
-export const cpsAssetPageLitePath = getCpsAssetLiteRegex(allServices);
 export const cpsAssetPagePath = getCpsAssetRegex(allServices);
 export const cpsAssetPageDataPath = `${cpsAssetPagePath}.json`;
 

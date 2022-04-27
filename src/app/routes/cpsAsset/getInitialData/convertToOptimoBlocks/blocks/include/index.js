@@ -3,7 +3,6 @@ import { INCLUDE_MISSING_URL, INCLUDE_UNSUPPORTED } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
 import isAmpPath from '#app/routes/utils/isAmpPath';
 import isLowPath from '#app/routes/utils/isLowPath';
-import isLitePath from '#app/routes/utils/isLitePath';
 import ampMetadataExtractor from './ampMetadataExtractor';
 import includeClassifier from './includeClassifier';
 import getImageBlock from './getImageBlock';
@@ -31,7 +30,6 @@ const convertInclude = async (includeBlock, pageData, ...restParams) => {
 
   const isAmp = isAmpPath(pathname);
   const isLow = isLowPath(pathname);
-  const isLite = isLitePath(pathname);
 
   const { includeType, classification } = includeClassifier({
     href,
