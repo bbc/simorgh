@@ -52,6 +52,7 @@ const MostReadContainer = ({
     return <AmpMostRead endpoint={mostReadUrl} size={size} wrapper={wrapper} />;
   }
 
+  // can  be removed once most read amp goes live
   if (isAmp && !serverRenderOnAmp) {
     return null;
   }
