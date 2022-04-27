@@ -63,7 +63,7 @@ const TopicGrid = ({ promos }) => {
   return (
     <Wrapper>
       {hasMultiplePromos ? (
-        <TopicList role="list">
+        <TopicList role="list" data-testid="topic-promos">
           {promos.map((promo, index) => {
             const isFirstPromo = index === 0;
 

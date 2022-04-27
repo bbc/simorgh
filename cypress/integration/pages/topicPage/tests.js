@@ -33,7 +33,7 @@ export default ({ service, pageType }) => {
         const numberOfItems = body.data.summaries.length;
         cy.log(numberOfItems);
         // Checks number of items on page
-        cy.get('main > div > ul')
+        cy.get('[data-testid="topic-promos"]')
           .children()
           .its('length')
           .should('eq', numberOfItems);
@@ -63,7 +63,7 @@ export default ({ service, pageType }) => {
         // Gets last pagination element and checks the number is the length of pageCount
         if (pageCount > 1) {
           cy.log(`pagecount is ${pageCount}`);
-          cy.get('[data-testid="topic-pagination"] > ul > li')
+          cy.get('[data-testid="topic-pagination"] li')
             .last()
             .should('have.text', pageCount);
         } else {
@@ -79,42 +79,34 @@ export default ({ service, pageType }) => {
         firstItemHeadline = body.data.summaries[0].title;
         cy.log(firstItemHeadline);
         // Goes down into the first item's h2 text and compares to title
-        cy.get('main > div > ul')
+        cy.get('[data-testid="topic-promos"]')
           .children()
           .first()
           .within(() => {
-            cy.get('div > div')
-              .next()
-              .within(() => {
-                cy.get('h2').should('have.text', firstItemHeadline);
-              });
+            cy.get('h2').should('have.text', firstItemHeadline);
           });
       });
     });
     it('Clicking the first item should navigate to the correct page (goes to live article)', () => {
       // Goes down into the first item's href
-      cy.get('main > div > ul')
+      cy.get('[data-testid="topic-promos"]')
         .children()
         .first()
         .within(() => {
-          cy.get('div > div')
-            .next()
-            .within(() => {
-              cy.get('h2 > a')
-                .should('have.attr', 'href')
-                .then($href => {
-                  cy.log($href);
-                  // Clicks the first item, then checks the page navigates to has the expected url
-                  cy.get('a').click();
-                  cy.url()
-                    .should('eq', $href)
-                    .then(url => {
-                      // Check the page navigated to has the short headline that was on the topic item
-                      cy.request(`${url}.json`).then(({ body }) => {
-                        const { shortHeadline } = body.promo.headlines;
-                        expect(shortHeadline).to.equal(firstItemHeadline);
-                      });
-                    });
+          cy.get('a')
+            .should('have.attr', 'href')
+            .then($href => {
+              cy.log($href);
+              // Clicks the first item, then checks the page navigates to has the expected url
+              cy.get('a').click();
+              cy.url()
+                .should('eq', $href)
+                .then(url => {
+                  // Check the page navigated to has the short headline that was on the topic item
+                  cy.request(`${url}.json`).then(({ body }) => {
+                    const { shortHeadline } = body.promo.headlines;
+                    expect(shortHeadline).to.equal(firstItemHeadline);
+                  });
                 });
             });
         });
