@@ -88,6 +88,12 @@ const Document = ({
             {AMP_ANALYTICS_JS}
           </>
         )}
+        {isLow && (
+          <>
+            {AMP_JS}
+            {AMP_ANALYTICS_JS}
+          </>
+        )}
       </head>
       <body {...ampGeoPendingAttrs}>
         <div id="root" dangerouslySetInnerHTML={{ __html: html }} />

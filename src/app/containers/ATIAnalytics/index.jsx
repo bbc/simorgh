@@ -15,7 +15,7 @@ import { buildTopicPageATIUrl } from './params/topicPage/buildParams';
 const ATIAnalytics = ({ data }) => {
   const requestContext = useContext(RequestContext);
   const serviceContext = useContext(ServiceContext);
-  const { pageType, isAmp } = requestContext;
+  const { pageType, isAmp, isLite, isLow } = requestContext;
 
   const pageTypeHandlers = {
     article: buildArticleATIUrl,
@@ -62,7 +62,7 @@ const ATIAnalytics = ({ data }) => {
     serviceContext,
   );
 
-  return isAmp ? (
+  return (isAmp || isLite || isLow) ? (
     <AmpATIAnalytics pageviewParams={pageviewParams} />
   ) : (
     <CanonicalATIAnalytics pageviewParams={pageviewParams} />
