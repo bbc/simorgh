@@ -88,7 +88,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
               if (
                 Cypress.env('APP_ENV') !== 'live' &&
                 mostReadIsEnabled &&
-                mostReadRecords > 5
+                mostReadRecords >= 5
               ) {
                 const expectedMostReadItems =
                   appConfig[config[service].name][variant].mostRead
@@ -113,7 +113,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
               if (
                 Cypress.env('APP_ENV') !== 'live' &&
                 mostReadIsEnabled &&
-                mostReadRecords > 5
+                mostReadRecords >= 5
               ) {
                 const expectedMostReadRank = serviceNumerals(service);
                 cy.get('[data-e2e="most-read"]').scrollIntoView();
@@ -146,7 +146,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
               if (
                 Cypress.env('APP_ENV') !== 'live' &&
                 mostReadIsEnabled &&
-                mostReadRecords > 5
+                mostReadRecords >= 5
               ) {
                 cy.get('amp-script > div amp-list').should('not.exist');
               }
