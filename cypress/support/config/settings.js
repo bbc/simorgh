@@ -5445,10 +5445,10 @@ module.exports = () => ({
           },
           local: {
             paths: ['/pidgin/topics/cnq68qvkjp1t'], // do not enable, needs to be added to fixture data maybe
-            enabled: false,
+            enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       mediaAssetPage: {
         environments: {
