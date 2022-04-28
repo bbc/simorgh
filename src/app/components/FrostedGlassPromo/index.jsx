@@ -72,7 +72,7 @@ const A = styled.a`
 
 const LazyloadPlaceholder = styled.div`
   background-color: ${({ isAmp }) => (isAmp ? C_WHITE : C_GREY_8)};
-  height: 100px;
+  min-height: 100px;
 `;
 
 const FrostedGlassPromo = ({
@@ -147,6 +147,7 @@ const FrostedGlassPromo = ({
         offset={PANEL_OFFSET}
         once
         placeholder={
+          // Placeholder always gets rendered on AMP
           <LazyloadPlaceholder
             data-testid="frosted-glass-lazyload-placeholder"
             isAmp={isAmp}
