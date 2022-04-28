@@ -8,8 +8,7 @@ export default ({ service, pageType }) => {
       const currentpath = Cypress.env('currentPath');
       cy.log(currentpath);
 
-      // eslint-disable-next-line prefer-destructuring
-      topicId = currentpath.split('topics/').pop().split('?')[0];
+      [topicId] = currentpath.split('topics/').pop().split('?');
 
       cy.log(`topic id${topicId}`);
     });
