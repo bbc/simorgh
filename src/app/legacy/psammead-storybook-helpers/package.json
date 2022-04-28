@@ -1,0 +1,32 @@
+{
+  "name": "@bbc/psammead-storybook-helpers",
+  "version": "9.0.17",
+  "main": "dist/index.js",
+  "module": "esm/index.js",
+  "sideEffects": false,
+  "description": "A collection of common values that are used in storybook by the Psammead components.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bbc/psammead/tree/latest/packages/utilities/psammead-storybook-helpers"
+  },
+  "author": {
+    "name": "BBC Psammead Maintainers",
+    "email": "PsammeadMaintainers@bbc.co.uk"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bbc/psammead/issues"
+  },
+  "homepage": "https://github.com/bbc/psammead/blob/latest/packages/utilities/psammead-storybook-helpers/README.md",
+  "keywords": [
+    "bbc",
+    "utilities",
+    "storybook",
+    "language",
+    "knobs"
+  ],
+  "dependencies": {
+    "@bbc/gel-foundations": "7.0.0",
+    "react-helmet": "^6.1.0"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "@bbc/psammead-rich-text-transforms",
+  "version": "2.0.7",
+  "description": "A utility library to transform to structured rich text.",
+  "main": "dist/index.js",
+  "module": "esm/index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bbc/psammead/tree/latest/packages/utilities/psammead-rich-text-transforms"
+  },
+  "author": {
+    "name": "BBC Psammead Maintainers",
+    "email": "PsammeadMaintainers@bbc.co.uk"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bbc/psammead/issues"
+  },
+  "homepage": "https://github.com/bbc/psammead/blob/latest/packages/utilities/psammead-rich-text-transforms/README.md",
+  "keywords": [
+    "bbc",
+    "utilities"
+  ],
+  "dependencies": {
+    "ramda": "^0.28.0",
+    "xmldoc": "^1.1.2"
+  },
+  "devDependencies": {
+    "jest": "^26.5.0"
+  }
+}

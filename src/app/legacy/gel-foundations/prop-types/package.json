@@ -1,0 +1,7 @@
+{
+  "name": "@bbc/gel-foundations/prop-types",
+  "private": true,
+  "main": "../dist/prop-types",
+  "module": "../esm/prop-types",
+  "sideEffects": false
+}

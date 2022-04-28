@@ -1,0 +1,7 @@
+{
+  "name": "@bbc/psammead-styles/global-styles",
+  "private": true,
+  "main": "../dist/global-styles",
+  "module": "../esm/global-styles",
+  "sideEffects": false
+}

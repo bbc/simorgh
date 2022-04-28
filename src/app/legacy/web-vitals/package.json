@@ -1,0 +1,32 @@
+{
+  "name": "@bbc/web-vitals",
+  "version": "1.1.1",
+  "main": "dist/index.js",
+  "module": "esm/index.js",
+  "sideEffects": false,
+  "description": "Generic hook for reporting web vitals metrics to an endpoint",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bbc/psammead/tree/latest/packages/utilities/web-vitals"
+  },
+  "author": {
+    "name": "Psammead Maintainers",
+    "email": "PsammeadMaintainers@bbc.co.uk"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bbc/psammead/issues"
+  },
+  "homepage": "https://github.com/bbc/psammead/blob/latest/packages/utilities/web-vitals/README.md",
+  "dependencies": {
+    "cross-fetch": "^3.1.5",
+    "react-adaptive-hooks": "0.0.8",
+    "web-vitals": "^2.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.9.0"
+  },
+  "devDependencies": {
+    "react": "^17.0.2"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "@bbc/gel-foundations/breakpoints",
+  "private": true,
+  "main": "../dist/breakpoints",
+  "module": "../esm/breakpoints",
+  "sideEffects": false
+}

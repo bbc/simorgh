@@ -1,0 +1,7 @@
+{
+  "name": "@bbc/psammead-styles/colours",
+  "private": true,
+  "main": "../dist/colours",
+  "module": "../esm/colours",
+  "sideEffects": false
+}
