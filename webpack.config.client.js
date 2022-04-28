@@ -66,6 +66,7 @@ module.exports = ({
       fallback: {
         // Override webpacks default handling for these as they arnt availible on the client.
         fs: false,
+        crypto: false,
         stream: require.resolve('stream-browserify'),
       },
     },
