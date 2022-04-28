@@ -1,0 +1,7 @@
+{
+    "name": "@bbc/psammead-timestamp-container/utilities",
+    "private": true,
+    "main": "../dist/utilities",
+    "module": "../esm/utilities",
+    "sideEffects": false
+  }
