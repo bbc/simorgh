@@ -15479,7 +15479,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"moment-timezone@npm:0.5.34, moment-timezone@npm:^0.5.26":
+"moment-timezone@npm:0.5.26":
+  version: 0.5.26
+  resolution: "moment-timezone@npm:0.5.26"
+  dependencies:
+    moment: ">= 2.9.0"
+  checksum: c0dc1d5463e70e1d1bab92e92b0cfec8e65984622b2fd2e5f7a37f41450c894fd8d88519936988967c78a8aa1f13e688298c0c84cb897db75685dd3f8ba32f02
+  languageName: node
+  linkType: hard
+
+"moment-timezone@npm:^0.5.26":
   version: 0.5.34
   resolution: "moment-timezone@npm:0.5.34"
   dependencies:
@@ -19261,7 +19270,7 @@ __metadata:
     mocha: 9.2.2
     mocha-junit-reporter: 2.0.2
     moment: 2.29.3
-    moment-timezone: 0.5.34
+    moment-timezone: 0.5.26
     morgan: 1.10.0
     node-fetch: 2.6.7
     npm-run-all: 4.1.5
