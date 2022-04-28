@@ -64,13 +64,12 @@ const ImageWithPlaceholder = ({
   const imageToRender = (
     <ImageComponent onLoad={() => setIsLoaded(true)} {...imageProps} />
   );
-  const shouldPreload = !isAmp && preload;
-  const isAmpHeroImage = isAmp && preload;
+
   const isImgJpg = imgType === 'jpg' || imgType === 'jpeg';
 
   return (
     <>
-      {shouldPreload && (
+      {preload && (
         <Helmet>
           <link
             rel="preload"
@@ -97,7 +96,7 @@ const ImageWithPlaceholder = ({
             height={height}
             width={width}
             style={!isImgJpg ? { backgroundColor: C_GHOST } : null}
-            {...(isAmpHeroImage && { 'data-hero': true })}
+            {...(preload && { 'data-hero': true })}
           />
         ) : (
           renderImage(imageToRender, lazyLoad, fallback)
