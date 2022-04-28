@@ -615,6 +615,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/plugin-proposal-export-default-from@npm:7.14.5":
+  version: 7.14.5
+  resolution: "@babel/plugin-proposal-export-default-from@npm:7.14.5"
+  dependencies:
+    "@babel/helper-plugin-utils": ^7.14.5
+    "@babel/plugin-syntax-export-default-from": ^7.14.5
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: 706f22a67bb45f3c7d998b5c0dba4c7263dec747427c2a086460475c10c45b61204c9252ff4ca1300be076d1fafca593d6ee53744f478d2f67447133abd8b92f
+  languageName: node
+  linkType: hard
+
 "@babel/plugin-proposal-export-default-from@npm:^7.12.1":
   version: 7.16.7
   resolution: "@babel/plugin-proposal-export-default-from@npm:7.16.7"
@@ -856,7 +868,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-syntax-export-default-from@npm:^7.16.7":
+"@babel/plugin-syntax-export-default-from@npm:^7.14.5, @babel/plugin-syntax-export-default-from@npm:^7.16.7":
   version: 7.16.7
   resolution: "@babel/plugin-syntax-export-default-from@npm:7.16.7"
   dependencies:
@@ -19536,6 +19548,7 @@ __metadata:
   resolution: "simorgh@workspace:."
   dependencies:
     "@babel/core": 7.17.9
+    "@babel/plugin-proposal-export-default-from": 7.14.5
     "@babel/plugin-proposal-object-rest-spread": 7.17.3
     "@babel/plugin-proposal-throw-expressions": 7.16.7
     "@babel/plugin-syntax-dynamic-import": 7.8.3

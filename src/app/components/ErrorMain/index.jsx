@@ -5,7 +5,6 @@ import InlineLink from '@bbc/psammead-inline-link';
 import Paragraph from '@bbc/psammead-paragraph';
 import { C_POSTBOX, C_SHADOW } from '@bbc/psammead-styles/colours';
 import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import {
   getCanon,
   getParagon,
@@ -13,6 +12,7 @@ import {
 } from '@bbc/gel-foundations/typography';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import Grid, { GelPageGrid } from '#app/components/Grid';
+import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
 
 const StatusCode = styled.span`
   ${props => (props.script ? getParagon(props.script) : '')}
