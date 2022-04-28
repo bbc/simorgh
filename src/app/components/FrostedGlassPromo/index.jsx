@@ -2,10 +2,12 @@ import React, { useContext } from 'react';
 import { shape, node, string, number } from 'prop-types';
 import styled from '@emotion/styled';
 import pick from 'ramda/src/pick';
+import Lazyload from 'react-lazyload';
 
 import { getSerifRegular } from '@bbc/psammead-styles/font-styles';
 import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import { C_WHITE, C_GREY_8 } from '@bbc/psammead-styles/colours';
 
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -15,6 +17,8 @@ import FrostedGlassPanel from './FrostedGlassPanel';
 import ImageWithPlaceholder from '../../containers/ImageWithPlaceholder';
 
 import withData from './withData';
+
+const PANEL_OFFSET = 250;
 
 const Wrapper = styled.div`
   position: relative;
@@ -66,6 +70,11 @@ const A = styled.a`
   }
 `;
 
+const LazyloadPlaceholder = styled.div`
+  background-color: ${({ isAmp }) => (isAmp ? C_WHITE : C_GREY_8)};
+  min-height: 100px;
+`;
+
 const FrostedGlassPromo = ({
   image,
   children,
@@ -86,6 +95,23 @@ const FrostedGlassPromo = ({
   });
 
   const onClick = eventTrackingData ? clickTracker : () => {};
+
+  const promoText = (
+    <>
+      <H3>
+        <A
+          script={script}
+          service={service}
+          href={url}
+          onClick={onClick}
+          isAmp={isAmp}
+        >
+          {children}
+        </A>
+      </H3>
+      {footer}
+    </>
+  );
 
   // The ClickableArea component is an anchor ("a") element
   // Anchors cannot be self-closing under the HTML spec
@@ -117,24 +143,27 @@ const FrostedGlassPromo = ({
           image,
         )}
       />
-      <FrostedGlassPanel
-        image={image.src}
-        minimumContrast={minimumContrast}
-        paletteSize={paletteSize}
-      >
-        <H3>
-          <A
-            script={script}
-            service={service}
-            href={url}
-            onClick={onClick}
+      <Lazyload
+        offset={PANEL_OFFSET}
+        once
+        placeholder={
+          // Placeholder always gets rendered on AMP
+          <LazyloadPlaceholder
+            data-testid="frosted-glass-lazyload-placeholder"
             isAmp={isAmp}
           >
-            {children}
-          </A>
-        </H3>
-        {footer}
-      </FrostedGlassPanel>
+            {promoText}
+          </LazyloadPlaceholder>
+        }
+      >
+        <FrostedGlassPanel
+          image={image.src}
+          minimumContrast={minimumContrast}
+          paletteSize={paletteSize}
+        >
+          {promoText}
+        </FrostedGlassPanel>
+      </Lazyload>
     </Wrapper>
   );
 };

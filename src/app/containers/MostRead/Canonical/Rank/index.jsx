@@ -1,5 +1,5 @@
 import React from 'react';
-import { shape, string, oneOf, number } from 'prop-types';
+import { shape, string, oneOf, number, bool } from 'prop-types';
 import styled from '@emotion/styled';
 import { getFoolscap, getTrafalgar } from '@bbc/gel-foundations/typography';
 import {
@@ -150,7 +150,7 @@ const StyledSpan = styled.span`
     service === 'japanese' && `letter-spacing: -${GEL_SPACING_HLF}`}
 `;
 
-const serviceNumerals = service => {
+export const serviceNumerals = service => {
   const servicesNonWesternNumerals = {
     bengali: Bengali,
     burmese: Burmese,
@@ -178,9 +178,10 @@ const MostReadRank = ({
   dir,
   columnLayout,
   size,
+  isAmp,
 }) => {
   const numerals = serviceNumerals(service);
-  const rank = numerals[listIndex];
+  const rank = isAmp ? listIndex : numerals[listIndex];
   const RankWrapper = getColumnWrapper(columnLayout);
 
   return (
@@ -206,12 +207,14 @@ MostReadRank.propTypes = {
   dir: oneOf(['rtl', 'ltr']),
   columnLayout: oneOf(['oneColumn', 'twoColumn', 'multiColumn']),
   size: oneOf(['default', 'small']),
+  isAmp: bool,
 };
 
 MostReadRank.defaultProps = {
   dir: 'ltr',
   columnLayout: 'multiColumn',
   size: 'default',
+  isAmp: false,
 };
 
 export default MostReadRank;

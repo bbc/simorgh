@@ -89,4 +89,14 @@ describe('Frosted Glass Promo', () => {
       url: cpsPromoFixture.item.locators.assetUri,
     });
   });
+
+  it('should render lazyload component for frosted glass section', () => {
+    const { container, getByTestId } = render(
+      <Component {...linkPromoFixture} service="pidgin" />,
+    );
+    expect(container.querySelector('noscript')).toBeInTheDocument();
+    expect(
+      getByTestId('frosted-glass-lazyload-placeholder'),
+    ).toBeInTheDocument();
+  });
 });
