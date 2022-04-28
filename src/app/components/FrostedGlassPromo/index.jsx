@@ -147,6 +147,7 @@ const FrostedGlassPromo = ({
         offset={PANEL_OFFSET}
         once
         placeholder={
+          // Placeholder always gets rendered on AMP
           <LazyloadPlaceholder
             data-testid="frosted-glass-lazyload-placeholder"
             isAmp={isAmp}
