@@ -1,7 +1,0 @@
-{
-  "name": "@bbc/gel-foundations/typography",
-  "private": true,
-  "main": "../dist/typography",
-  "module": "../esm/typography",
-  "sideEffects": false
-}

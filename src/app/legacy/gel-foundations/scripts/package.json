@@ -1,7 +1,0 @@
-{
-  "name": "@bbc/gel-foundations/scripts",
-  "private": true,
-  "main": "../dist/scripts",
-  "module": "../esm/scripts",
-  "sideEffects": false
-}

@@ -1,7 +1,0 @@
-{
-  "name": "@bbc/psammead-story-promo/index-alsos",
-  "private": true,
-  "main": "../dist/IndexAlsos",
-  "module": "../esm/IndexAlsos",
-  "sideEffects": false
-}

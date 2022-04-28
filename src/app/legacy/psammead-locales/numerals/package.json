@@ -1,7 +1,0 @@
-{
-  "name": "@bbc/psammead-locales/numerals",
-  "private": true,
-  "main": "../dist/numerals",
-  "module": "../esm/numerals",
-  "sideEffects": false
-}

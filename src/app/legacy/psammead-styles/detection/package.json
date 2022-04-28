@@ -1,7 +1,0 @@
-{
-  "name": "@bbc/psammead-styles/detection",
-  "private": true,
-  "main": "../dist/detection",
-  "module": "../esm/detection",
-  "sideEffects": false
-}

@@ -1,7 +1,0 @@
-{
-    "name": "@bbc/psammead-navigation/dropdown",
-    "private": true,
-    "main": "../dist/DropdownNavigation",
-    "module": "../esm/DropdownNavigation",
-    "sideEffects": false
-  }
