@@ -147,7 +147,12 @@ const FrostedGlassPromo = ({
         offset={PANEL_OFFSET}
         once
         placeholder={
-          <LazyloadPlaceholder isAmp={isAmp}>{promoText}</LazyloadPlaceholder>
+          <LazyloadPlaceholder
+            data-testid="frosted-glass-lazyload-placeholder"
+            isAmp={isAmp}
+          >
+            {promoText}
+          </LazyloadPlaceholder>
         }
       >
         <FrostedGlassPanel

@@ -123,6 +123,7 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
     >
       <div
         class="emotion-6 emotion-7"
+        data-testid="frosted-glass-lazyload-placeholder"
       >
         <h3
           class="emotion-8 emotion-9"
@@ -298,6 +299,7 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
     >
       <div
         class="emotion-6 emotion-7"
+        data-testid="frosted-glass-lazyload-placeholder"
       >
         <h3
           class="emotion-8 emotion-9"
@@ -478,6 +480,7 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
     >
       <div
         class="emotion-6 emotion-7"
+        data-testid="frosted-glass-lazyload-placeholder"
       >
         <h3
           class="emotion-8 emotion-9"
