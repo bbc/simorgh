@@ -1,3 +1,5 @@
+import envConfig from '../../../support/config/envs';
+
 export default ({ service, pageType }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
     let topicId;
@@ -16,13 +18,13 @@ export default ({ service, pageType }) => {
       const currentpath = Cypress.env('currentPath');
       cy.log(currentpath);
 
-      cy.request(
-        `https://web-cdn.api.bbci.co.uk/fd/simorgh-bff?id=${topicId}&service=${service}`,
-      ).then(({ body }) => {
-        cy.log(body);
+      cy.request(`${envConfig.bffUrl}?id=${topicId}&service=${service}`).then(
+        ({ body }) => {
+          cy.log(body);
 
-        cy.get('h1').should('contain', body.data.title);
-      });
+          cy.get('h1').should('contain', body.data.title);
+        },
+      );
     });
     it('should render the correct number of items', () => {
       cy.request(
