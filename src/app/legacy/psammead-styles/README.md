@@ -6,7 +6,7 @@ This package provides a collection of string constants for use in CSS, containin
 
 `/colours` - Project-defined colours that will be required by multiple Psammead components or themes. These colours are not defined by GEL.
 `/detection` - Project-defined CSS feature detection statements.
-`/fonts` - Project-defined browser behaviours for the Reith font. The primary reason these are not considered GEL-defined (and not part of [`@bbc/gel-foundations`](https://www.npmjs.com/package/@bbc/gel-foundations)) is due to the custom weighting and loading definitions. [More details on the font-faces defined in this package are available here.](./font-faces.md). Also includes declarations for all World Service fonts.
+`/fonts` - Project-defined browser behaviours for the Reith font. The primary reason these are not considered GEL-defined (and not part of [`#legacy/gel-foundations/src`](https://www.npmjs.com/package/#legacy/gel-foundations/src)) is due to the custom weighting and loading definitions. [More details on the font-faces defined in this package are available here.](./font-faces.md). Also includes declarations for all World Service fonts.
 
 `/font-styles` provides functions that can be used to get font-styles for different services. If a font-style is not available all the functions will fallback to regular sans font-style of the service.
 
@@ -29,10 +29,10 @@ import { F_REITH_SANS_REGULAR, F_REITH_SANS_ITALIC } from '@bbc/psammead-styles/
 
 By importing a subset of the font-face definitions defined in this package, you can prioritise only the most commonly needed fonts for your project, with browser styling stepping in for less common scenarios. For example, in these examples, which import custom fonts for only Reith Sans Regular and Italic, any bold styling would be "faked" by the browser.
 
-You will likely want to use these font-face definitions in tandem with the GEL-defined font stack definitions, which are available in [`@bbc/gel-foundations`](https://www.npmjs.com/package/@bbc/gel-foundations):
+You will likely want to use these font-face definitions in tandem with the GEL-defined font stack definitions, which are available in [`#legacy/gel-foundations/src`](https://www.npmjs.com/package/#legacy/gel-foundations/src):
 
 ```jsx
-import { GEL_FF_REITH_SANS } from '@bbc/gel-foundations/typography';
+import { GEL_FF_REITH_SANS } from '#legacy/gel-foundations/src/typography';
 ```
 
 These values can then be used directly within CSS declarations in code. Note that font-faces should only be declared once on a page:
@@ -98,11 +98,7 @@ import {
   F_REITH_SERIF_MEDIUM,
 } from '@bbc/psammead-styles/fonts';
 
-<GlobalStyles fonts={[
-      F_REITH_SANS_REGULAR,
-      F_REITH_SERIF_MEDIUM,
-    ]}
-/>
+<GlobalStyles fonts={[F_REITH_SANS_REGULAR, F_REITH_SERIF_MEDIUM]} />;
 ```
 
 ## Contributing

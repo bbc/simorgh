@@ -3,14 +3,17 @@ import styled from '@emotion/styled';
 import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
 import { C_EBON, C_METAL } from '@bbc/psammead-styles/colours';
 import { grid } from '@bbc/psammead-styles/detection';
-import { getPica } from '@bbc/gel-foundations/typography';
-import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import { getPica } from '#legacy/gel-foundations/src/typography';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+} from '#legacy/gel-foundations/src/spacings';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 import { node, string, shape } from 'prop-types';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
 
 const getRowCount = (children, columns) =>
   Math.ceil(React.Children.count(children) / columns);

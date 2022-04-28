@@ -9,7 +9,7 @@ import {
   getCanon,
   getParagon,
   GEL_FF_REITH_SANS,
-} from '@bbc/gel-foundations/typography';
+} from '#legacy/gel-foundations/src/typography';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';

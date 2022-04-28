@@ -1,6 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { latin } from '#legacy/gel-foundations/src/scripts';
 import StoryPromo, { Headline, Summary } from '@bbc/psammead-story-promo';
 import { StoryPromoLi, StoryPromoLiBase, StoryPromoUl } from './index';
 

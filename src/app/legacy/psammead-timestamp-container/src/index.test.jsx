@@ -1,7 +1,7 @@
 import React from 'react';
 import { isNull, shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { render } from '@testing-library/react';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { latin } from '#legacy/gel-foundations/src/scripts';
 import moment from 'moment';
 import '@bbc/psammead-locales/moment/ha';
 import Timestamp from '.';

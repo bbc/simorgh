@@ -1,7 +1,10 @@
 import React from 'react';
 import { shape, string, oneOf, number, bool } from 'prop-types';
 import styled from '@emotion/styled';
-import { getFoolscap, getTrafalgar } from '@bbc/gel-foundations/typography';
+import {
+  getFoolscap,
+  getTrafalgar,
+} from '#legacy/gel-foundations/src/typography';
 import {
   Burmese,
   Bengali,
@@ -9,7 +12,7 @@ import {
   Nepali,
   WesternArabic,
 } from '@bbc/psammead-locales/numerals';
-import { GEL_SPACING_HLF } from '@bbc/gel-foundations/spacings';
+import { GEL_SPACING_HLF } from '#legacy/gel-foundations/src/spacings';
 import {
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -18,9 +21,9 @@ import {
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
 import { grid } from '@bbc/psammead-styles/detection';
 import { getSerifLight } from '@bbc/psammead-styles/font-styles';
 import {

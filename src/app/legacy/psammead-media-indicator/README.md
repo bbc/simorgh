@@ -35,7 +35,7 @@ Top story promos can also have related stories links called `Index Alsos`. When 
 
 ```jsx
 import MediaIndicator from '@bbc/psammead-media-indicator';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { latin } from '#legacy/gel-foundations/src/scripts';
 
 <MediaIndicator type="audio" script={latin} service="news" />;
 ```
@@ -47,7 +47,7 @@ E.g.
 ```jsx
 import styled from '@emotion/styled';
 import MediaIndicator from '@bbc/psammead-media-indicator';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { latin } from '#legacy/gel-foundations/src/scripts';
 
 const TimeDuration = styled.time`
   margin: 0 ${GEL_SPACING_HLF};

@@ -11,7 +11,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import pathOr from 'ramda/src/pathOr';
 import { C_SHADOW } from '@bbc/psammead-styles/colours';
-import { getBodyCopy } from '@bbc/gel-foundations/dist/typography';
+import { getBodyCopy } from '#legacy/gel-foundations/src/typography';
 import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
 import MostReadRank, { serviceNumerals } from '../Canonical/Rank';
 import generateCSPHash from '../utilities/generateCPSHash';

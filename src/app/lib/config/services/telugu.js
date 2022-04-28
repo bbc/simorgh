@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '@bbc/psammead-styles/colours';
-import { devanagariAndGurmukhi } from '@bbc/gel-foundations/scripts';
+import { devanagariAndGurmukhi } from '#legacy/gel-foundations/src/scripts';
 import { telugu as brandSVG } from '@bbc/psammead-assets/svgs';
 import { F_MALLANNA_REGULAR } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Asia/Kolkata';

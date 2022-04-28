@@ -2,7 +2,7 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { render } from '@testing-library/react';
-import { latin, arabic } from '@bbc/gel-foundations/scripts';
+import { latin, arabic } from '#legacy/gel-foundations/src/scripts';
 import SectionLabel from './index';
 
 describe('SectionLabel', () => {

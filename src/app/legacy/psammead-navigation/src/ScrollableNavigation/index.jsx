@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { node, oneOf, string } from 'prop-types';
-import { GEL_SPACING_SEXT } from '@bbc/gel-foundations/spacings';
+import { GEL_SPACING_SEXT } from '#legacy/gel-foundations/src/spacings';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 
 // Because IE11 can't handle 8-digit hex, need to convert to rgba
 const hexToRGB = (hex, alpha = 1) => {

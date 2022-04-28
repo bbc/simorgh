@@ -7,14 +7,14 @@ import {
   GEL_SPACING_HLF,
   GEL_SPACING,
   GEL_SPACING_SEXT,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/src/spacings';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
-import { getPica } from '@bbc/gel-foundations/typography';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+} from '#legacy/gel-foundations/src/breakpoints';
+import { getPica } from '#legacy/gel-foundations/src/typography';
+import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { NAV_BAR_TOP_BOTTOM_SPACING } from './DropdownNavigation';
 

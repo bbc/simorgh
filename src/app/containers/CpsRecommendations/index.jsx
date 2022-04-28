@@ -5,7 +5,7 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import { C_GHOST } from '@bbc/psammead-styles/colours';
@@ -13,7 +13,7 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/src/spacings';
 import SectionLabel from '@bbc/psammead-section-label';
 import SkipLinkWrapper from '#components/SkipLinkWrapper';
 

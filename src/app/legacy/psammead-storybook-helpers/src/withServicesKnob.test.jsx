@@ -1,6 +1,6 @@
 import { render, waitFor } from '@testing-library/react';
 import * as knobs from '@storybook/addon-knobs';
-import { latin, arabic, chinese } from '@bbc/gel-foundations/scripts';
+import { latin, arabic, chinese } from '#legacy/gel-foundations/src/scripts';
 import withServicesKnob from './withServicesKnob';
 import TEXT_VARIANTS from './text-variants';
 

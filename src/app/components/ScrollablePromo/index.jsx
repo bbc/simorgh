@@ -1,8 +1,11 @@
 import React, { useContext } from 'react';
 import { arrayOf, shape, string, oneOfType, object, number } from 'prop-types';
-import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+} from '#legacy/gel-foundations/src/spacings';
 
-import { getDoublePica } from '@bbc/gel-foundations/typography';
+import { getDoublePica } from '#legacy/gel-foundations/src/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { C_SHADOW } from '@bbc/psammead-styles/colours';
 import styled from '@emotion/styled';
@@ -14,7 +17,7 @@ import {
   GEL_GROUP_0_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 import { GridItemMediumNoMargin } from '#app/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useViewTracker from '#hooks/useViewTracker';

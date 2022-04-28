@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '@bbc/psammead-styles/colours';
 import { igbo as brandSVG } from '@bbc/psammead-assets/svgs';
-import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
+import { cyrillicAndLatin } from '#legacy/gel-foundations/src/scripts';
 import '@bbc/psammead-locales/moment/ig';
 import '@bbc/moment-timezone-include/tz/Africa/Lagos';
 import withContext from '../../../contexts/utils/withContext';

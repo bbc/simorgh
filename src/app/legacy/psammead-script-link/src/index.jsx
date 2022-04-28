@@ -1,15 +1,18 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { GEL_SPACING, GEL_SPACING_QUIN } from '@bbc/gel-foundations/spacings';
+import {
+  GEL_SPACING,
+  GEL_SPACING_QUIN,
+} from '#legacy/gel-foundations/src/spacings';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 import { C_WHITE } from '@bbc/psammead-styles/colours';
-import { getPica } from '@bbc/gel-foundations/typography';
+import { getPica } from '#legacy/gel-foundations/src/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { string, shape, node, func } from 'prop-types';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
 
 const StyledLink = styled.a`
   ${({ script }) => script && getPica(script)}

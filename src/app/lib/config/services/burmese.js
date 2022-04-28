@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '@bbc/psammead-styles/colours';
-import { burmese } from '@bbc/gel-foundations/scripts';
+import { burmese } from '#legacy/gel-foundations/src/scripts';
 import { burmese as brandSVG } from '@bbc/psammead-assets/svgs';
 import { F_PADAUK_BOLD, F_PADAUK_REGULAR } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/GMT';

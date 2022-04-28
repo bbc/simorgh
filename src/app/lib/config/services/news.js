@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '@bbc/psammead-styles/colours';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
-import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
+import { cyrillicAndLatin } from '#legacy/gel-foundations/src/scripts';
 import {
   F_REITH_SANS_BOLD,
   F_REITH_SANS_BOLD_ITALIC,

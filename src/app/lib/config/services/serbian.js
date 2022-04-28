@@ -7,7 +7,7 @@ import {
 import {
   latinDiacritics,
   cyrillicAndLatin,
-} from '@bbc/gel-foundations/scripts';
+} from '#legacy/gel-foundations/src/scripts';
 import { serbian as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
 import '@bbc/psammead-locales/moment/sr-cyrl';

@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
 import { text, select, boolean, withKnobs } from '@storybook/addon-knobs';
-import * as typography from '@bbc/gel-foundations/typography';
+import * as typography from '#legacy/gel-foundations/src/typography';
 import { withServicesKnob, themes } from '@bbc/psammead-storybook-helpers';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { latin } from '#legacy/gel-foundations/src/scripts';
 import notes from '../README.md';
 import Timestamp from '.';
 

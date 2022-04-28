@@ -4,17 +4,17 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { getSansLight } from '@bbc/psammead-styles/font-styles';
-import { getLongPrimer } from '@bbc/gel-foundations/typography';
+import { getLongPrimer } from '#legacy/gel-foundations/src/typography';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUIN,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/src/spacings';
 import { C_GREY_6, C_GREY_2 } from '@bbc/psammead-styles/colours';
 import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 import { GridItemLarge } from '#app/components/Grid';
 
 import { ServiceContext } from '#contexts/ServiceContext';

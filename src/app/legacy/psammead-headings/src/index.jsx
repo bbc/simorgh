@@ -5,10 +5,10 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
-} from '@bbc/gel-foundations/spacings';
-import { getCanon, getTrafalgar } from '@bbc/gel-foundations/typography';
-import { MEDIA_QUERY_TYPOGRAPHY } from '@bbc/gel-foundations/breakpoints';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+} from '#legacy/gel-foundations/src/spacings';
+import { getCanon, getTrafalgar } from '#legacy/gel-foundations/src/typography';
+import { MEDIA_QUERY_TYPOGRAPHY } from '#legacy/gel-foundations/src/breakpoints';
+import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
 import { getSansBold, getSerifMedium } from '@bbc/psammead-styles/font-styles';
 
 export const Headline = styled.h1`

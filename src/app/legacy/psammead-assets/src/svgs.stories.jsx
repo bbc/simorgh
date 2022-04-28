@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { node, number, shape } from 'prop-types';
 import { storiesOf } from '@storybook/react';
 import { number as numberKnob, withKnobs } from '@storybook/addon-knobs';
-import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import { GEL_SPACING_DBL } from '#legacy/gel-foundations/src/spacings';
 import notes from '../README.md';
 import * as allSvgs from './svgs';
 

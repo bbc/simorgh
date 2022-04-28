@@ -1,6 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { arabic } from '@bbc/gel-foundations/scripts';
+import { arabic } from '#legacy/gel-foundations/src/scripts';
 import LiveLabel from './index';
 
 describe('LiveLabel', () => {

@@ -6,10 +6,10 @@ import {
   GEL_SPACING_HLF,
   GEL_SPACING,
   GEL_SPACING_DBL,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/src/spacings';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
-import { getBrevier } from '@bbc/gel-foundations/typography';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+import { getBrevier } from '#legacy/gel-foundations/src/typography';
+import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
 
 const MIN_TAG_HEIGHT = '2.75rem'; // 44px
 

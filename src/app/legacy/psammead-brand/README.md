@@ -64,7 +64,7 @@ import SkipLink from '@bbc/psammead-brand/skip-link';
 import { igbo } from '@bbc/psammead-assets/svgs';
 import ScriptLink from '@bbc/psammead-script-link';
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { latin } from '#legacy/gel-foundations/src/scripts';
 
 const scriptLink = (
   <ScriptLink

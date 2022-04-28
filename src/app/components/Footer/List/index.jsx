@@ -2,7 +2,10 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { string, arrayOf, shape, element } from 'prop-types';
 import { C_SHADOW } from '@bbc/psammead-styles/colours';
-import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+} from '#legacy/gel-foundations/src/spacings';
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
@@ -12,7 +15,7 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MAX,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 import { grid } from '@bbc/psammead-styles/detection';
 
 import Link from '../Link';

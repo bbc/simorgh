@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '@bbc/psammead-styles/colours';
-import { bengali } from '@bbc/gel-foundations/scripts';
+import { bengali } from '#legacy/gel-foundations/src/scripts';
 import { bengali as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
   F_NOTO_SERIF_BENGALI_BOLD,

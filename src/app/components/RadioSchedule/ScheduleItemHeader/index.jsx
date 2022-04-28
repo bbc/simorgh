@@ -8,9 +8,9 @@ import detokenise from '@bbc/psammead-detokeniser';
 import LiveLabel from '@bbc/psammead-live-label';
 import { Link } from '@bbc/psammead-story-promo';
 import { getSansBold, getSansRegular } from '@bbc/psammead-styles/font-styles';
-import { getPica } from '@bbc/gel-foundations/typography';
+import { getPica } from '#legacy/gel-foundations/src/typography';
 import { C_KINGFISHER } from '@bbc/psammead-styles/colours';
-import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
+import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
 import { ServiceContext } from '#contexts/ServiceContext';
 import durationDictionary, { programStateConfig } from '../utilities';
 

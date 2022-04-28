@@ -6,12 +6,12 @@ import {
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
   GEL_SPACING_DBL,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/src/spacings';
 
 const SVG_TOP_OFFSET_BELOW_400PX = '0.625rem'; // 10px
 const SVG_BOTTOM_OFFSET_BELOW_400PX = '0.375rem'; // 6px

@@ -5,7 +5,7 @@ import detokenise from '@bbc/psammead-detokeniser';
 import { visuallyHiddenTextStyle } from '@bbc/psammead-visually-hidden-text';
 import { C_EBON, C_WHITE } from '@bbc/psammead-styles/colours';
 import { getSansBold } from '@bbc/psammead-styles/font-styles';
-import { GEL_BREVIER } from '@bbc/gel-foundations/typography';
+import { GEL_BREVIER } from '#legacy/gel-foundations/src/typography';
 
 const BORDER_WIDTH = '0.125rem';
 const GEL_SPACING_PLUS_HALF = `0.75rem`;

@@ -12,50 +12,50 @@ npm install @bbc/psammead-useful-links
 
 ## UsefulLink Props
 
-| Argument  | Type | Required | Default | Example |
-| --------- | ---- | -------- | ------- | ------- |
-| service | string | yes | N/A | `'news'` |
-| script | object | yes | N/A | { canon: { groupA: { fontSize: '28', lineHeight: '32',}, groupB: { fontSize: '32', lineHeight: '36', }, groupD: { fontSize: '44', lineHeight: '48', }, }, trafalgar: { groupA: { fontSize: '20', lineHeight: '24', }, groupB: { fontSize: '24', lineHeight: '28', }, groupD: { fontSize: '32', lineHeight: '36', }, }, } |
-| href | string | yes | N/A | `'https://www.bbc.com/igbo/afirika-49883577'` |
+| Argument | Type   | Required | Default | Example                                                                                                                                                                                                                                                                                                                  |
+| -------- | ------ | -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| service  | string | yes      | N/A     | `'news'`                                                                                                                                                                                                                                                                                                                 |
+| script   | object | yes      | N/A     | { canon: { groupA: { fontSize: '28', lineHeight: '32',}, groupB: { fontSize: '32', lineHeight: '36', }, groupD: { fontSize: '44', lineHeight: '48', }, }, trafalgar: { groupA: { fontSize: '20', lineHeight: '24', }, groupB: { fontSize: '24', lineHeight: '28', }, groupD: { fontSize: '32', lineHeight: '36', }, }, } |
+| href     | string | yes      | N/A     | `'https://www.bbc.com/igbo/afirika-49883577'`                                                                                                                                                                                                                                                                            |
 
 ## UsefulLinksUl Props
 
-| Argument  | Type | Required | Default | Example |
-| --------- | ---- | -------- | ------- | ------- |
-| children | node | yes | N/A | `<UsefulLinksLi><UsefulLink service='news' script={latin} href='https://www.bbc.com/igbo/afirika-49883577'> Mitocinmu da sauko da sautin labarai </UsefulLink></UsefulLinksLi>` |
+| Argument | Type | Required | Default | Example                                                                                                                                                                         |
+| -------- | ---- | -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| children | node | yes      | N/A     | `<UsefulLinksLi><UsefulLink service='news' script={latin} href='https://www.bbc.com/igbo/afirika-49883577'> Mitocinmu da sauko da sautin labarai </UsefulLink></UsefulLinksLi>` |
 
 ## UsefulLinksLi Props
 
-| Argument  | Type | Required | Default | Example |
-| --------- | ---- | -------- | ------- | ------- |
-| children | node | yes | N/A | `<UsefulLink service='news' script={latin} href='https://www.bbc.com/igbo/afirika-49883577'> Mitocinmu da sauko da sautin labarai </UsefulLink>` |
+| Argument | Type | Required | Default | Example                                                                                                                                          |
+| -------- | ---- | -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| children | node | yes      | N/A     | `<UsefulLink service='news' script={latin} href='https://www.bbc.com/igbo/afirika-49883577'> Mitocinmu da sauko da sautin labarai </UsefulLink>` |
 
 ## Usage
 
 <!-- Description of the component usage -->
 
 ```jsx
-import { latin } from '@bbc/gel-foundations/scripts';
+import { latin } from '#legacy/gel-foundations/src/scripts';
 import { UsefulLink, UsefulLinksLi, UsefulLinksUl } from './index';
 
 const SingleUsefulItem = () => (
-    <UsefulLink script={latin} service="news" href={url}>
-        {usefulItems[0]}
-    </UsefulLink>
+  <UsefulLink script={latin} service="news" href={url}>
+    {usefulItems[0]}
+  </UsefulLink>
 );
 
 const MultipleUsefulItems = () => (
-    <UsefulLinksUl>
-        {usefulItems.map(item => {
-            return (
-                <UsefulLinksLi key={item.id}>
-                    <UsefulLink script={latin} service="news" href={item.url}>
-                      {item.name}
-                    </UsefulLink>
-                </UsefulLinksLi>
-            );
-        })}
-    </UsefulLinksUl>
+  <UsefulLinksUl>
+    {usefulItems.map(item => {
+      return (
+        <UsefulLinksLi key={item.id}>
+          <UsefulLink script={latin} service="news" href={item.url}>
+            {item.name}
+          </UsefulLink>
+        </UsefulLinksLi>
+      );
+    })}
+  </UsefulLinksUl>
 );
 ```
 

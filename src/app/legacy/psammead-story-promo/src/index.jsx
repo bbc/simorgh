@@ -6,7 +6,7 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_QUAD,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/src/spacings';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -15,19 +15,19 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 import {
   getParagon,
   getLongPrimer,
   getPica,
   getDoublePica,
-} from '@bbc/gel-foundations/typography';
+} from '#legacy/gel-foundations/src/typography';
 import { C_EBON, C_METAL, C_SHADOW } from '@bbc/psammead-styles/colours';
 import {
   getSansRegular,
   getSerifMedium,
 } from '@bbc/psammead-styles/font-styles';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
 import { grid } from '@bbc/psammead-styles/detection';
 import ImageGridItem from './ImageStyles';
 import TextGridItem from './TextStyles';

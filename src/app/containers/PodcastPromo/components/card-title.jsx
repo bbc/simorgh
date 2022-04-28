@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
-import { getPica } from '@bbc/gel-foundations/typography';
+import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
+import { getPica } from '#legacy/gel-foundations/src/typography';
 import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
 import { C_EBON } from '@bbc/psammead-styles/colours';
 

@@ -2,10 +2,10 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { bool, number } from 'prop-types';
 import { C_PEBBLE, C_METAL } from '@bbc/psammead-styles/colours';
-import { getLongPrimer } from '@bbc/gel-foundations/typography';
+import { getLongPrimer } from '#legacy/gel-foundations/src/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
-import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
+import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#legacy/gel-foundations/src/breakpoints';
 
 import { ServiceContext } from '#contexts/ServiceContext';
 

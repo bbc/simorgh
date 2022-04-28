@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '@bbc/psammead-styles/colours';
-import { devanagariAndGurmukhi } from '@bbc/gel-foundations/scripts';
+import { devanagariAndGurmukhi } from '#legacy/gel-foundations/src/scripts';
 import { nepali as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Kathmandu';
 import '@bbc/psammead-locales/moment/ne';

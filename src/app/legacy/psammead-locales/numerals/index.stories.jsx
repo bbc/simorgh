@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import styled from '@emotion/styled';
-import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
+import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
 import * as numerals from '../src/numerals';
 
 const numeralSystems = Object.keys(numerals).filter(key =>

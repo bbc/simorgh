@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '@bbc/psammead-styles/colours';
-import { arabic } from '@bbc/gel-foundations/scripts';
+import { arabic } from '#legacy/gel-foundations/src/scripts';
 import { arabic as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
   F_REITH_QALAM_REGULAR,

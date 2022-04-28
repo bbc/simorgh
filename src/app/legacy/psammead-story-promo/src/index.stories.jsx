@@ -8,7 +8,7 @@ import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import Grid from '@bbc/psammead-grid';
 import styled from '@emotion/styled';
-import { GEL_SPACING_HLF } from '@bbc/gel-foundations/spacings';
+import { GEL_SPACING_HLF } from '#legacy/gel-foundations/src/spacings';
 import StoryPromo, { Headline, Summary, Link } from './index';
 import relatedItems from '../testHelpers/relatedItems';
 import IndexAlsosContainer from '../testHelpers/IndexAlsosContainer';
@@ -130,85 +130,58 @@ const InfoComponent = ({
   </>
 );
 
-const generateStory = ({
-  promoType,
-  alsoItems = null,
-  displayImage = true,
-}) => ({ longText: textSnippet, script, service, dir }) => {
-  const mediaType = select(
-    'Media Type',
-    ['No media', 'video', 'audio', 'photogallery'],
-    'No media',
-  );
+const generateStory =
+  ({ promoType, alsoItems = null, displayImage = true }) =>
+  ({ longText: textSnippet, script, service, dir }) => {
+    const mediaType = select(
+      'Media Type',
+      ['No media', 'video', 'audio', 'photogallery'],
+      'No media',
+    );
 
-  const Info = (
-    <InfoComponent
-      headlineText={textSnippet}
-      summaryText={textSnippet}
-      script={script}
-      promoType={promoType}
-      service={service}
-      isLive={boolean('isLive', false)}
-      dir={dir}
-      type={mediaType}
-      alsoItems={alsoItems}
-      promoHasImage={displayImage}
-      mediaIndicatorIsInline={mediaType && !displayImage}
-    />
-  );
+    const Info = (
+      <InfoComponent
+        headlineText={textSnippet}
+        summaryText={textSnippet}
+        script={script}
+        promoType={promoType}
+        service={service}
+        isLive={boolean('isLive', false)}
+        dir={dir}
+        type={mediaType}
+        alsoItems={alsoItems}
+        promoHasImage={displayImage}
+        mediaIndicatorIsInline={mediaType && !displayImage}
+      />
+    );
 
-  const Img = buildImg();
+    const Img = buildImg();
 
-  return (
-    <StoryPromo
-      dir={dir}
-      image={Img}
-      info={Info}
-      promoType={promoType}
-      displayImage={displayImage}
-      mediaIndicator={
-        mediaType !== 'No media' &&
-        MediaIndicatorComponent({
-          type: mediaType,
-          script,
-          service,
-          dir,
-          mediaIndicatorIsInline: mediaType && !displayImage,
-        })
-      }
-      mediaIndicatorIsInline={!displayImage}
-    />
-  );
-};
+    return (
+      <StoryPromo
+        dir={dir}
+        image={Img}
+        info={Info}
+        promoType={promoType}
+        displayImage={displayImage}
+        mediaIndicator={
+          mediaType !== 'No media' &&
+          MediaIndicatorComponent({
+            type: mediaType,
+            script,
+            service,
+            dir,
+            mediaIndicatorIsInline: mediaType && !displayImage,
+          })
+        }
+        mediaIndicatorIsInline={!displayImage}
+      />
+    );
+  };
 
 /* eslint-disable-next-line no-shadow */
-const generate2FeatureStory = () => args => (
-  <Grid
-    dir={args.dir}
-    columns={{
-      group0: 8,
-      group1: 8,
-      group2: 8,
-      group3: 8,
-      group4: 8,
-      group5: 8,
-    }}
-    enableGelGutters
-  >
-    <Grid
-      dir={args.dir}
-      item
-      columns={{
-        group0: 8,
-        group1: 8,
-        group2: 8,
-        group3: 8,
-        group4: 6,
-        group5: 6,
-      }}
-    >
-      {generateStory({ promoType: 'leading' })(args)}
-    </Grid>
+const generate2FeatureStory = () => args =>
+  (
     <Grid
       dir={args.dir}
       columns={{
@@ -216,8 +189,8 @@ const generate2FeatureStory = () => args => (
         group1: 8,
         group2: 8,
         group3: 8,
-        group4: 2,
-        group5: 2,
+        group4: 8,
+        group5: 8,
       }}
       enableGelGutters
     >
@@ -229,15 +202,41 @@ const generate2FeatureStory = () => args => (
           group1: 8,
           group2: 8,
           group3: 8,
+          group4: 6,
+          group5: 6,
+        }}
+      >
+        {generateStory({ promoType: 'leading' })(args)}
+      </Grid>
+      <Grid
+        dir={args.dir}
+        columns={{
+          group0: 8,
+          group1: 8,
+          group2: 8,
+          group3: 8,
           group4: 2,
           group5: 2,
         }}
+        enableGelGutters
       >
-        {generateStory({ promoType: 'regular' })(args)}
+        <Grid
+          dir={args.dir}
+          item
+          columns={{
+            group0: 8,
+            group1: 8,
+            group2: 8,
+            group3: 8,
+            group4: 2,
+            group5: 2,
+          }}
+        >
+          {generateStory({ promoType: 'regular' })(args)}
+        </Grid>
       </Grid>
     </Grid>
-  </Grid>
-);
+  );
 
 storiesOf('Components/StoryPromo/StoryPromo', module)
   .addDecorator(withKnobs)

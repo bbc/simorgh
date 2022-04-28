@@ -1,6 +1,6 @@
 import { C_ARCHIVE_BLUE, C_WHITE } from '@bbc/psammead-styles/colours';
 import { archive as brandSVG } from '@bbc/psammead-assets/svgs';
-import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
+import { cyrillicAndLatin } from '#legacy/gel-foundations/src/scripts';
 import {
   F_REITH_SANS_BOLD,
   F_REITH_SANS_BOLD_ITALIC,

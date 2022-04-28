@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '@bbc/psammead-styles/colours';
-import { tamil } from '@bbc/gel-foundations/scripts';
+import { tamil } from '#legacy/gel-foundations/src/scripts';
 import { tamil as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
   F_NOTO_SANS_TAMIL_BOLD,

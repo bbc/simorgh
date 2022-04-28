@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { bool, oneOf, shape, string } from 'prop-types';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/src/spacings';
 import { C_PEBBLE, C_GHOST, C_SHADOW } from '@bbc/psammead-styles/colours';
 import { PlainTitle, LinkTitle } from './titles';
 

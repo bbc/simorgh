@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { node, bool, string, oneOf } from 'prop-types';
 import { getSansBold } from '@bbc/psammead-styles/font-styles';
 import { C_POSTBOX } from '@bbc/psammead-styles/colours';
-import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
+import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 
 const StyledSpan = styled.span`

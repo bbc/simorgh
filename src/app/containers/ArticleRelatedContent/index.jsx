@@ -8,7 +8,7 @@ import pathEq from 'ramda/src/pathEq';
 import { C_GREY_2 } from '@bbc/psammead-styles/colours';
 import styled from '@emotion/styled';
 import Image from '@bbc/psammead-image';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { gridColumnsPrimary } from '../../pages/ArticlePage/ArticlePageGrid';

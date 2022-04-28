@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
 import { string, oneOf, shape } from 'prop-types';
-import { getBodyCopy } from '@bbc/gel-foundations/typography';
+import { getBodyCopy } from '#legacy/gel-foundations/src/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { C_SHADOW } from '@bbc/psammead-styles/colours';
-import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+import { GEL_SPACING_DBL } from '#legacy/gel-foundations/src/spacings';
+import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
 
 const BulletedList = styled.ul`
   ${({ script }) => script && getBodyCopy(script)};

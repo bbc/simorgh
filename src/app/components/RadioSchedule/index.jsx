@@ -1,7 +1,10 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+} from '#legacy/gel-foundations/src/spacings';
 import { grid } from '@bbc/psammead-styles/detection';
 import Grid from '@bbc/psammead-grid';
 import { arrayOf, number, shape, string } from 'prop-types';

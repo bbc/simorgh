@@ -1,4 +1,4 @@
-# gel-foundations - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Futilities%2Fgel-foundations%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Futilities%2Fgel-foundations%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/utilities/gel-foundations)](https://david-dm.org/bbc/psammead?path=packages/utilities/gel-foundations) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/utilities/gel-foundations)](https://david-dm.org/bbc/psammead?path=packages/utilities/gel-foundations&type=peer) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/gel-foundations.svg)](https://www.npmjs.com/package/@bbc/gel-foundations) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
+# gel-foundations - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Futilities%2Fgel-foundations%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Futilities%2Fgel-foundations%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/utilities/gel-foundations)](https://david-dm.org/bbc/psammead?path=packages/utilities/gel-foundations) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/utilities/gel-foundations)](https://david-dm.org/bbc/psammead?path=packages/utilities/gel-foundations&type=peer) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/#legacy/gel-foundations/src.svg)](https://www.npmjs.com/package/#legacy/gel-foundations/src) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
 
 This package provides a range of string constants for use in CSS, intended to help implement [BBC GEL-compliant](https://www.bbc.co.uk/gel/articles/what-is-gel) webpages and components.
 
@@ -11,17 +11,17 @@ This package provides a range of string constants for use in CSS, intended to he
 ## Installation
 
 ```jsx
-npm install @bbc/gel-foundations --save
+npm install #legacy/gel-foundations/src --save
 ```
 
 ## Usage
 
 ```jsx
-import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
 
-import { GEL_GUTTER_ABOVE_600PX } from '@bbc/gel-foundations/spacings';
+import { GEL_GUTTER_ABOVE_600PX } from '#legacy/gel-foundations/src/spacings';
 
-import { getLongPrimer } from '@bbc/gel-foundations/typography';
+import { getLongPrimer } from '#legacy/gel-foundations/src/typography';
 ```
 
 These values can then be used directly within CSS declarations in code:
@@ -47,7 +47,7 @@ Our typography uses `rem` for font-size and line-height. The `rem` unit represen
 
 The utility typography function (e.g. `getLongPrimer('arabic')`) receives a script argument which is an object with the different script GEL Types Sizes and returns the `font-sizes` and `line-heights` for the specific GEL Type (e.g. `Long Premier`).
 
-You can import the script doing `import { arabic } from '@bbc/gel-foundations/scripts`. By default you should import the `latin` script as found on the [GEL typography guidelines](https://www.bbc.co.uk/gel/guidelines/typography#type-sizes).
+You can import the script doing `import { arabic } from '#legacy/gel-foundations/src/scripts`. By default you should import the `latin` script as found on the [GEL typography guidelines](https://www.bbc.co.uk/gel/guidelines/typography#type-sizes).
 
 In addition to Latin script defaults, Psammead supports typography for a number of other scripts. We have grouped the scripts that share similiar features as follows:
 

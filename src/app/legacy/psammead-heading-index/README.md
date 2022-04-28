@@ -21,7 +21,7 @@ The `HeadingIndex` uses a `h1` HTML element and is used on index pages, such as 
 
 ```jsx
 import HeadingIndex from '@bbc/psammead-heading-index';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { latin } from '#legacy/gel-foundations/src/scripts';
 
 const Wrapper = () => (
   <Fragment>

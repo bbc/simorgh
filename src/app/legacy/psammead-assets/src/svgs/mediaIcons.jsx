@@ -4,7 +4,7 @@ import { C_EBON } from '@bbc/psammead-styles/colours';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING_DBL,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/src/spacings';
 
 const defaultAttrs = {
   focusable: 'false',

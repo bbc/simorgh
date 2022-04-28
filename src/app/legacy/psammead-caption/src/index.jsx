@@ -5,15 +5,15 @@ import {
   GEL_SPACING_TRPL,
   GEL_MARGIN_ABOVE_400PX,
   GEL_MARGIN_BELOW_400PX,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/src/spacings';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
-import { getLongPrimer } from '@bbc/gel-foundations/typography';
+} from '#legacy/gel-foundations/src/breakpoints';
+import { getLongPrimer } from '#legacy/gel-foundations/src/typography';
 import { C_METAL, C_GREY_6 } from '@bbc/psammead-styles/colours';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 
 const rtlStyles = `

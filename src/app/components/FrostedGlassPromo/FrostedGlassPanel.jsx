@@ -3,7 +3,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import styled from '@emotion/styled';
 import { node, number, string } from 'prop-types';
 
-import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import { GEL_SPACING_DBL } from '#legacy/gel-foundations/src/spacings';
 import { C_WHITE, C_GREY_8 } from '@bbc/psammead-styles/colours';
 import useImageColour from '../../hooks/useImageColour';
 

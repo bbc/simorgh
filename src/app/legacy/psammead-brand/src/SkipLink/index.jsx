@@ -4,9 +4,9 @@ import { C_WHITE } from '@bbc/psammead-styles/colours';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
-} from '@bbc/gel-foundations/breakpoints';
-import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
-import { getPica } from '@bbc/gel-foundations/typography';
+} from '#legacy/gel-foundations/src/breakpoints';
+import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
+import { getPica } from '#legacy/gel-foundations/src/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 
 const SKIP_LINK_COLOR = '#333';

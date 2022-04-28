@@ -2,12 +2,12 @@ import React from 'react';
 import path from 'ramda/src/path';
 import styled from '@emotion/styled';
 
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/src/spacings';
 
 import { C_GREY_2 } from '@bbc/psammead-styles/colours';
 

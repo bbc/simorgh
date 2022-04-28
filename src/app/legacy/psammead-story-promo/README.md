@@ -123,7 +123,7 @@ import StoryPromo, {
   IndexAlsosLi,
 } from '@bbc/psammead-story-promo';
 import MediaIndicator from '@bbc/psammead-media-indicator';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { latin } from '#legacy/gel-foundations/src/scripts';
 import LiveLabel from '@bbc/psammead-live-label';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 

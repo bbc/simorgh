@@ -19558,7 +19558,6 @@ __metadata:
     "@babel/preset-react": 7.16.7
     "@babel/runtime": 7.17.9
     "@bbc/apache2-license-checker": 1.1.4
-    "@bbc/gel-foundations": 7.0.0
     "@bbc/moment-timezone-include": 1.1.8
     "@bbc/psammead-assets": 3.3.0
     "@bbc/psammead-brand": 7.3.18

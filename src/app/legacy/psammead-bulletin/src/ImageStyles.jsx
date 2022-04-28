@@ -2,8 +2,8 @@ import styled from '@emotion/styled';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
-} from '@bbc/gel-foundations/breakpoints';
-import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/src/breakpoints';
+import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
 import { grid } from '@bbc/psammead-styles/detection';
 
 const twoOfSixColumnsMaxWidthScaleable = `33.33%`;

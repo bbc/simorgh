@@ -2,11 +2,11 @@ import React from 'react';
 import styled from '@emotion/styled';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import { string, node } from 'prop-types';
-import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
+import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 
 const Img = styled.img`
   width: 100%;

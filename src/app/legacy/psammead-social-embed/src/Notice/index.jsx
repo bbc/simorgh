@@ -8,8 +8,14 @@ import {
   C_SHADOW,
 } from '@bbc/psammead-styles/colours';
 import { getSansRegular, getSansBold } from '@bbc/psammead-styles/font-styles';
-import { GEL_SPACING_DBL, GEL_SPACING } from '@bbc/gel-foundations/spacings';
-import { GEL_BODY_COPY, GEL_MINION } from '@bbc/gel-foundations/typography';
+import {
+  GEL_SPACING_DBL,
+  GEL_SPACING,
+} from '#legacy/gel-foundations/src/spacings';
+import {
+  GEL_BODY_COPY,
+  GEL_MINION,
+} from '#legacy/gel-foundations/src/typography';
 
 import { detokenise, dictionaryFactory } from '../utilities';
 

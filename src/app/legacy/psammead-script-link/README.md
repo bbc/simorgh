@@ -26,7 +26,7 @@ npm install @bbc/psammead-script-link --save
 
 ```jsx
 import ScriptLink from '@bbc/psammead-script-link';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { latin } from '#legacy/gel-foundations/src/scripts';
 
 const WrappingComponent = () => (
   <div>

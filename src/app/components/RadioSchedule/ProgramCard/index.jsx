@@ -1,7 +1,10 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { mediaIcons } from '@bbc/psammead-assets/svgs';
-import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+} from '#legacy/gel-foundations/src/spacings';
 import { C_METAL, C_WHITE } from '@bbc/psammead-styles/colours';
 import {
   getSansRegular,
@@ -11,7 +14,7 @@ import {
   getBrevier,
   getMinion,
   getPica,
-} from '@bbc/gel-foundations/typography';
+} from '#legacy/gel-foundations/src/typography';
 import { shape, string, number } from 'prop-types';
 import { formatDuration } from '@bbc/psammead-timestamp-container/utilities';
 import { ServiceContext } from '#contexts/ServiceContext';

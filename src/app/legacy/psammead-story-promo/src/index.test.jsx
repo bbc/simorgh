@@ -1,12 +1,12 @@
 import React from 'react';
 import { arrayOf, bool, shape, string, oneOf } from 'prop-types';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { latin } from '#legacy/gel-foundations/src/scripts';
 import MediaIndicator from '@bbc/psammead-media-indicator';
 import { render } from '@testing-library/react';
 import LiveLabel from '@bbc/psammead-live-label';
 import styled from '@emotion/styled';
-import { GEL_SPACING_HLF } from '@bbc/gel-foundations/spacings';
+import { GEL_SPACING_HLF } from '#legacy/gel-foundations/src/spacings';
 import StoryPromo, { Headline, Summary, Link } from './index';
 import relatedItems from '../testHelpers/relatedItems';
 import IndexAlsosContainer from '../testHelpers/IndexAlsosContainer';

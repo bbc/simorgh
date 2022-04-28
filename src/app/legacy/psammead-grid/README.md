@@ -80,7 +80,7 @@ Psammead Grid is a component that you can use to set out column-based layouts us
 
 We use the GEL Grid for our breakpoints, as well as for our standard gutters and margins. [The values are defined here in the GEL Grid documentation](https://www.bbc.co.uk/gel/guidelines/grid#grid-sizes).
 
-When we refer to `group3` in this component, we're referring to the breakpoint with a minimum width `GEL_GROUP_3_SCREEN_WIDTH_MIN` & a maximum width `GEL_GROUP_3_SCREEN_WIDTH_MAX`. These values are defined within [`@bbc/gel-foundations/breakpoints`](https://github.com/bbc/psammead/blob/latest/packages/utilities/gel-foundations/src/breakpoints.js).
+When we refer to `group3` in this component, we're referring to the breakpoint with a minimum width `GEL_GROUP_3_SCREEN_WIDTH_MIN` & a maximum width `GEL_GROUP_3_SCREEN_WIDTH_MAX`. These values are defined within [`#legacy/gel-foundations/src/breakpoints`](https://github.com/bbc/psammead/blob/latest/packages/utilities/gel-foundations/src/breakpoints.js).
 
 When using one of the extended Grid components, if you wish to extend it using the `as` prop, you'll need to use `forwardedAs`. This prop enables you to pass down the element down further than one level.
 
@@ -356,11 +356,7 @@ const renderChildGrid = () => (
   </Grid>
 );
 
-const MyComponent = () => (
-  <Grid {...parentProps}>
-    {renderChildGrid()}
-  </Grid>
-);
+const MyComponent = () => <Grid {...parentProps}>{renderChildGrid()}</Grid>;
 ```
 
 ### When to use this component

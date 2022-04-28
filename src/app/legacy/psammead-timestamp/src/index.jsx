@@ -4,9 +4,9 @@ import { node, string, func, shape, bool } from 'prop-types';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING_DBL,
-} from '@bbc/gel-foundations/spacings';
-import { getBrevier } from '@bbc/gel-foundations/typography';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+} from '#legacy/gel-foundations/src/spacings';
+import { getBrevier } from '#legacy/gel-foundations/src/typography';
+import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
 import { C_LUNAR, C_METAL } from '@bbc/psammead-styles/colours';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 

@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '@bbc/psammead-styles/colours';
 import { persian as brandSVG } from '@bbc/psammead-assets/svgs';
-import { arabic } from '@bbc/gel-foundations/scripts';
+import { arabic } from '#legacy/gel-foundations/src/scripts';
 import {
   F_REITH_QALAM_REGULAR,
   F_REITH_QALAM_BOLD,

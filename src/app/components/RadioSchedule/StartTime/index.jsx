@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { number, string, shape, oneOf } from 'prop-types';
-import { GEL_SPACING_HLF } from '@bbc/gel-foundations/spacings';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+import { GEL_SPACING_HLF } from '#legacy/gel-foundations/src/spacings';
+import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
 import { C_RHINO, C_PEBBLE } from '@bbc/psammead-styles/colours';
-import { getMinion } from '@bbc/gel-foundations/typography';
+import { getMinion } from '#legacy/gel-foundations/src/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { coreIcons } from '@bbc/psammead-assets/svgs';
 import TimestampContainer from '@bbc/psammead-timestamp-container';

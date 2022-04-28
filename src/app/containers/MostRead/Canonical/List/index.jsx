@@ -4,7 +4,7 @@ import { oneOf, number, node } from 'prop-types';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 import Grid from '@bbc/psammead-grid';
 import { mostReadListGridProps } from '../../utilities/gridProps';
 

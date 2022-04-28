@@ -2,10 +2,10 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { node, bool, string, oneOf, shape } from 'prop-types';
 import { C_WHITE, C_EBON } from '@bbc/psammead-styles/colours';
-import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
-import { getMinion } from '@bbc/gel-foundations/typography';
+import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
+import { getMinion } from '#legacy/gel-foundations/src/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
 import { mediaIcons } from '@bbc/psammead-assets/svgs';
 
 const StyledMediaIndicator = styled.div`

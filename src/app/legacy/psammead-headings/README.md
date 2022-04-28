@@ -22,7 +22,7 @@ The Headings are a set of two components, `Headline` and `SubHeading`. They use 
 
 ```jsx
 import { Headline, SubHeading } from '@bbc/psammead-headings';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { latin } from '#legacy/gel-foundations/src/scripts';
 
 const Wrapper = () => (
   <Fragment>

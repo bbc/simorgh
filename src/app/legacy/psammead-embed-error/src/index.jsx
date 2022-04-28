@@ -7,9 +7,12 @@ import {
   C_EBON,
   C_METAL,
 } from '@bbc/psammead-styles/colours';
-import { GEL_SPACING_TRPL, GEL_SPACING } from '@bbc/gel-foundations/spacings';
+import {
+  GEL_SPACING_TRPL,
+  GEL_SPACING,
+} from '#legacy/gel-foundations/src/spacings';
 import { getSansRegular, getSansBold } from '@bbc/psammead-styles/font-styles';
-import { GEL_BODY_COPY } from '@bbc/gel-foundations/typography';
+import { GEL_BODY_COPY } from '#legacy/gel-foundations/src/typography';
 import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
 
 const GOLDEN_RATIO_PERCENT = '38.2%';

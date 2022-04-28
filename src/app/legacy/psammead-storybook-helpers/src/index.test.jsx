@@ -3,7 +3,7 @@ import * as underTest from '.';
 
 jest.mock('@storybook/addon-knobs');
 
-jest.mock('@bbc/gel-foundations/scripts', () => ({
+jest.mock('#legacy/gel-foundations/src/scripts', () => ({
   latin: 'LATIN SCRIPT OBJECT',
   arabic: 'ARABIC SCRIPT OBJECT',
   cyrillic: 'CYRILLIC SCRIPT OBJECT',

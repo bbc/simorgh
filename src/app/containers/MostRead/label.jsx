@@ -5,8 +5,8 @@ import SectionLabel from '@bbc/psammead-section-label';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
-} from '@bbc/gel-foundations/breakpoints';
-import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/src/breakpoints';
+import { GEL_SPACING_DBL } from '#legacy/gel-foundations/src/spacings';
 import { C_GREY_2 } from '@bbc/psammead-styles/colours';
 import { ServiceContext } from '#contexts/ServiceContext';
 

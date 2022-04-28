@@ -9,12 +9,12 @@ import {
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
   GEL_SPACING_SEXT,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/src/spacings';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 
 const H1 = styled.h1`
   ${({ service }) => getSansBold(service)}

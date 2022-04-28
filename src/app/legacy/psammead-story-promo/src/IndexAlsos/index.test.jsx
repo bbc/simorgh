@@ -1,6 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { latin } from '#legacy/gel-foundations/src/scripts';
 import relatedItems from '../../testHelpers/relatedItems';
 import IndexAlsosContainer from '../../testHelpers/IndexAlsosContainer';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-import { GEL_SPACING_QUAD } from '@bbc/gel-foundations/spacings';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
+import { GEL_SPACING_QUAD } from '#legacy/gel-foundations/src/spacings';
 
 import Grid, { GelPageGrid } from '#components/Grid';
 

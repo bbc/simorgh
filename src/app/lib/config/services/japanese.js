@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '@bbc/psammead-styles/colours';
-import { noAscendersOrDescenders } from '@bbc/gel-foundations/scripts';
+import { noAscendersOrDescenders } from '#legacy/gel-foundations/src/scripts';
 import { japanese as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Tokyo';
 import 'moment/locale/ja';

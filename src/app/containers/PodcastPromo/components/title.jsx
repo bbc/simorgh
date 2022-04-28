@@ -2,8 +2,8 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { node } from 'prop-types';
 import { mediaIcons } from '@bbc/psammead-assets/svgs';
-import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
-import { getGreatPrimer } from '@bbc/gel-foundations/typography';
+import { GEL_SPACING_DBL } from '#legacy/gel-foundations/src/spacings';
+import { getGreatPrimer } from '#legacy/gel-foundations/src/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { C_EBON } from '@bbc/psammead-styles/colours';
 

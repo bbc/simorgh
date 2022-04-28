@@ -8,14 +8,14 @@ import {
   GEL_SPACING_HLF,
   GEL_SPACING,
   GEL_SPACING_DBL,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/src/spacings';
 import { Helmet } from 'react-helmet';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_B_MIN_WIDTH,
-} from '@bbc/gel-foundations/breakpoints';
-import { getPica } from '@bbc/gel-foundations/typography';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+} from '#legacy/gel-foundations/src/breakpoints';
+import { getPica } from '#legacy/gel-foundations/src/typography';
+import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 
 export const NAV_BAR_TOP_BOTTOM_SPACING = 0.75; // 12px

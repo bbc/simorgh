@@ -39,7 +39,7 @@
 ## Usage
 
 ```jsx
-import { latin } from '@bbc/gel-foundations/scripts';
+import { latin } from '#legacy/gel-foundations/src/scripts';
 
 const WrappingContainer = () => (
   <Timestamp

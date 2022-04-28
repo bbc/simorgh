@@ -3,7 +3,10 @@ import styled from '@emotion/styled';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
-import { getBodyCopy, getLongPrimer } from '@bbc/gel-foundations/typography';
+import {
+  getBodyCopy,
+  getLongPrimer,
+} from '#legacy/gel-foundations/src/typography';
 import {
   getSansRegular,
   getSansBold,

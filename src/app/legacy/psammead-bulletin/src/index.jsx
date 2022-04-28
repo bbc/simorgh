@@ -3,8 +3,11 @@ import styled from '@emotion/styled';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
-} from '@bbc/gel-foundations/breakpoints';
-import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/src/breakpoints';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+} from '#legacy/gel-foundations/src/spacings';
 import {
   C_WHITE,
   C_POSTBOX,
@@ -17,12 +20,12 @@ import {
   getSansRegular,
   getSerifMedium,
 } from '@bbc/psammead-styles/font-styles';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
 import {
   getPica,
   getGreatPrimer,
   getLongPrimer,
-} from '@bbc/gel-foundations/typography';
+} from '#legacy/gel-foundations/src/typography';
 import { mediaIcons } from '@bbc/psammead-assets/svgs';
 import LiveLabel from '@bbc/psammead-live-label';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';

@@ -9,11 +9,11 @@ import useViewTracker from '#hooks/useViewTracker';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/src/spacings';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import FrostedGlassPromo from '../../components/FrostedGlassPromo/lazy';
 

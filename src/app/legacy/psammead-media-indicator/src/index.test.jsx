@@ -1,6 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { latin, arabic } from '@bbc/gel-foundations/scripts';
+import { latin, arabic } from '#legacy/gel-foundations/src/scripts';
 import MediaIndicator from './index';
 
 describe('MediaIndicator', () => {

@@ -2,10 +2,13 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { node, string, shape } from 'prop-types';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
-import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+} from '#legacy/gel-foundations/src/spacings';
 import { C_EBON, C_METAL, C_LUNAR } from '@bbc/psammead-styles/colours';
-import { getBrevier } from '@bbc/gel-foundations/typography';
+import { getBrevier } from '#legacy/gel-foundations/src/typography';
 import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 
