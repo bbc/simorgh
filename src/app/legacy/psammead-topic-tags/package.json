@@ -1,0 +1,35 @@
+{
+  "name": "@bbc/psammead-topic-tags",
+  "version": "1.1.3",
+  "main": "dist/index.js",
+  "module": "esm/index.js",
+  "sideEffects": false,
+  "description": "React styled components for displaying a collection of links as topic tags",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BBC-News/psammead/tree/latest/packages/components/psammead-topic-tags"
+  },
+  "author": {
+    "name": "Psammead Maintainers",
+    "email": "PsammeadMaintainers@bbc.co.uk"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bbc/psammead/issues"
+  },
+  "homepage": "https://github.com/BBC-News/psammead/blob/latest/packages/components/psammead-topic-tags/README.md",
+  "dependencies": {
+    "@bbc/gel-foundations": "7.0.0",
+    "@bbc/psammead-styles": "8.1.1"
+  },
+  "peerDependencies": {
+    "@emotion/styled": "^11.1.5",
+    "prop-types": "^15.6.2",
+    "react": ">=16.9.0"
+  },
+  "devDependencies": {
+    "@emotion/styled": "^11.3.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2"
+  }
+}

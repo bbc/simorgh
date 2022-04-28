@@ -1,0 +1,40 @@
+{
+  "name": "@bbc/psammead-image",
+  "version": "3.1.3",
+  "main": "dist/index.js",
+  "module": "esm/index.js",
+  "sideEffects": false,
+  "description": "React styled components for an Image",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bbc/psammead/tree/latest/packages/components/psammead-image"
+  },
+  "author": {
+    "name": "Psammead Maintainers",
+    "email": "PsammeadMaintainers@bbc.co.uk"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bbc/psammead/issues"
+  },
+  "homepage": "https://github.com/bbc/psammead/blob/latest/packages/components/psammead-image/README.md",
+  "peerDependencies": {
+    "@emotion/react": "^11.1.4",
+    "@emotion/styled": "^11.0.0",
+    "prop-types": "^15.6.2",
+    "react": ">=16.9.0"
+  },
+  "keywords": [
+    "bbc",
+    "image"
+  ],
+  "dependencies": {
+    "ramda": "^0.28.0"
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2"
+  }
+}

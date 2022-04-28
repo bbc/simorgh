@@ -1,0 +1,33 @@
+{
+  "name": "@bbc/psammead-bulleted-list",
+  "version": "3.1.12",
+  "main": "dist/index.js",
+  "module": "esm/index.js",
+  "sideEffects": false,
+  "description": "React styled component for ordered and unordered lists",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BBC-News/psammead/tree/latest/packages/components/psammead-bulleted-list"
+  },
+  "author": {
+    "name": "Psammead Maintainers",
+    "email": "PsammeadMaintainers@bbc.co.uk"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bbc/psammead/issues"
+  },
+  "homepage": "https://github.com/BBC-News/psammead/blob/latest/packages/components/psammead-bulleted-list/README.md",
+  "dependencies": {
+    "@bbc/gel-foundations": "7.0.0",
+    "@bbc/psammead-styles": "8.1.1"
+  },
+  "peerDependencies": {
+    "@emotion/styled": "^11.0.0",
+    "react-dom": ">=16.9.0"
+  },
+  "devDependencies": {
+    "@emotion/styled": "^11.3.0",
+    "react-dom": "^17.0.2"
+  }
+}

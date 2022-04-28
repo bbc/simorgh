@@ -1,0 +1,39 @@
+{
+  "name": "@bbc/psammead-bulletin",
+  "version": "5.0.60",
+  "main": "dist/index.js",
+  "module": "esm/index.js",
+  "sideEffects": false,
+  "description": "A bulletin component for live and non-live radio and tv.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BBC-News/psammead/tree/latest/packages/components/psammead-bulletin"
+  },
+  "author": {
+    "name": "Psammead Maintainers",
+    "email": "PsammeadMaintainers@bbc.co.uk"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bbc/psammead/issues"
+  },
+  "homepage": "https://github.com/BBC-News/psammead/blob/latest/packages/components/psammead-bulletin/README.md",
+  "dependencies": {
+    "@bbc/gel-foundations": "7.0.0",
+    "@bbc/psammead-assets": "3.3.0",
+    "@bbc/psammead-live-label": "2.0.35",
+    "@bbc/psammead-story-promo": "8.0.38",
+    "@bbc/psammead-styles": "8.1.1",
+    "@bbc/psammead-visually-hidden-text": "2.0.7"
+  },
+  "peerDependencies": {
+    "@emotion/styled": "^11.0.0",
+    "prop-types": "^15.7.2",
+    "react": ">=16.9.0"
+  },
+  "devDependencies": {
+    "@emotion/styled": "^11.3.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2"
+  }
+}

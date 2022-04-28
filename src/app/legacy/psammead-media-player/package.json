@@ -1,0 +1,41 @@
+{
+  "name": "@bbc/psammead-media-player",
+  "version": "6.0.10",
+  "description": "Provides a media player with optional placeholder",
+  "main": "dist/index.js",
+  "module": "esm/index.js",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bbc/psammead/tree/latest/packages/components/psammead-media-player"
+  },
+  "author": {
+    "name": "Psammead Maintainers",
+    "email": "PsammeadMaintainers@bbc.co.uk"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bbc/psammead/issues"
+  },
+  "homepage": "https://github.com/bbc/psammead/blob/latest/packages/components/psammead-media-player/README.md",
+  "keywords": [
+    "bbc",
+    "media",
+    "player",
+    "embed"
+  ],
+  "peerDependencies": {
+    "@emotion/styled": "^11.0.0",
+    "react": ">=16.9.0"
+  },
+  "dependencies": {
+    "@bbc/psammead-assets": "3.3.0",
+    "@bbc/psammead-image": "3.1.3",
+    "@bbc/psammead-image-placeholder": "3.4.15",
+    "@bbc/psammead-play-button": "3.0.37"
+  },
+  "devDependencies": {
+    "@emotion/styled": "^11.3.0",
+    "react": "^17.0.2"
+  }
+}

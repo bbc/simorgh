@@ -1,0 +1,40 @@
+{
+  "name": "@bbc/psammead-script-link",
+  "version": "3.0.32",
+  "main": "dist/index.js",
+  "module": "esm/index.js",
+  "sideEffects": false,
+  "description": "React component for a script switch",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BBC-News/psammead/tree/latest/packages/components/psammead-script-link"
+  },
+  "author": {
+    "name": "Psammead Maintainers",
+    "email": "PsammeadMaintainers@bbc.co.uk"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "bbc",
+    "script-link",
+    "brand"
+  ],
+  "bugs": {
+    "url": "https://github.com/bbc/psammead/issues"
+  },
+  "homepage": "https://github.com/BBC-News/psammead/blob/latest/packages/components/psammead-script-link/README.md",
+  "dependencies": {
+    "@bbc/gel-foundations": "7.0.0",
+    "@bbc/psammead-styles": "8.1.1"
+  },
+  "peerDependencies": {
+    "@emotion/styled": "^11.0.0",
+    "prop-types": "^15.7.2",
+    "react": ">=16.9.0"
+  },
+  "devDependencies": {
+    "@emotion/styled": "^11.3.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2"
+  }
+}

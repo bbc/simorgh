@@ -1,0 +1,35 @@
+{
+  "name": "@bbc/psammead-grid",
+  "version": "3.1.16",
+  "description": "Grid component",
+  "main": "dist/index.js",
+  "module": "esm/index.js",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bbc/psammead/tree/latest/packages/components/psammead-grid"
+  },
+  "author": {
+    "name": "Psammead Maintainers",
+    "email": "PsammeadMaintainers@bbc.co.uk"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bbc/psammead/issues"
+  },
+  "keywords": [
+    "bbc",
+    "grid",
+    "cssgrid"
+  ],
+  "dependencies": {
+    "@bbc/gel-foundations": "7.0.0",
+    "@bbc/psammead-styles": "8.1.1"
+  },
+  "peerDependencies": {
+    "@emotion/styled": "^11.0.0"
+  },
+  "devDependencies": {
+    "@emotion/styled": "^11.3.0"
+  }
+}
