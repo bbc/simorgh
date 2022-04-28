@@ -12,6 +12,7 @@ module.exports = {
     '#containers': resolvePath('src/app/containers'),
     '#data': resolvePath('data/'),
     '#hooks': resolvePath('src/app/hooks'),
+    '#legacy': resolvePath('src/app/legacy'),
     '#lib': resolvePath('src/app/lib/'),
     '#models': resolvePath('src/app/models/'),
     '#pages': resolvePath('src/app/pages/'),
