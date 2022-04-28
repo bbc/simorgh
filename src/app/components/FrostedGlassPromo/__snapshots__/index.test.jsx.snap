@@ -59,33 +59,15 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
 }
 
 .emotion-6 {
-  position: relative;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 100%;
+  background-color: #202224;
+  height: 100px;
 }
 
 .emotion-8 {
-  position: relative;
-  z-index: 3;
-  padding-bottom: 1rem;
-  -webkit-transition: background 0.5s ease-in-out;
-  transition: background 0.5s ease-in-out;
-  background: rgb(32,34,36);
-  height: 100%;
-}
-
-.emotion-10 {
   margin: 0;
 }
 
-.emotion-12 {
+.emotion-10 {
   display: inline-block;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -99,44 +81,16 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-12 {
+  .emotion-10 {
     font-size: 1rem;
     line-height: 1.25;
     margin: 0.875rem 1rem 0 1rem;
   }
 }
 
-.emotion-12:focus {
+.emotion-10:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
-}
-
-.emotion-14 {
-  display: none;
-}
-
-@supports (filter: blur(15px)) {
-  .emotion-14 {
-    display: block;
-    z-index: 1;
-    position: absolute;
-    bottom: 0;
-    top: -15px;
-    left: 0;
-    right: 0;
-    background-color: #202224;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-    -webkit-background-position: bottom;
-    background-position: bottom;
-    -webkit-transform: scaleX(1.15) scaleY(-1.15);
-    -moz-transform: scaleX(1.15) scaleY(-1.15);
-    -ms-transform: scaleX(1.15) scaleY(-1.15);
-    transform: scaleX(1.15) scaleY(-1.15);
-    -webkit-filter: blur(15px);
-    filter: blur(15px);
-  }
 }
 
 <div>
@@ -165,16 +119,17 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
       <noscript />
     </div>
     <div
-      class="emotion-6 emotion-7"
+      class="lazyload-wrapper "
     >
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-6 emotion-7"
+        data-testid="frosted-glass-lazyload-placeholder"
       >
         <h3
-          class="emotion-10 emotion-11"
+          class="emotion-8 emotion-9"
         >
           <a
-            class="emotion-12 emotion-13"
+            class="emotion-10 emotion-11"
             href="/mundo/internacional-23038380"
           >
             Además de sus decenas de museos tradicionales, Ciudad de México es una galería al aire libre de arte callejero, en la que exponen artistas nacionales y extranjeros. Lo invitamos a un recorrido.
@@ -182,10 +137,6 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
         </h3>
         4 mayo 2021
       </div>
-      <div
-        class="emotion-14 emotion-15"
-        style="background-image: url(https://ichef.bbci.co.uk/news/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg);"
-      />
     </div>
   </div>
 </div>
@@ -250,33 +201,15 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
 }
 
 .emotion-6 {
-  position: relative;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 100%;
+  background-color: #202224;
+  height: 100px;
 }
 
 .emotion-8 {
-  position: relative;
-  z-index: 3;
-  padding-bottom: 1rem;
-  -webkit-transition: background 0.5s ease-in-out;
-  transition: background 0.5s ease-in-out;
-  background: rgb(32,34,36);
-  height: 100%;
-}
-
-.emotion-10 {
   margin: 0;
 }
 
-.emotion-12 {
+.emotion-10 {
   display: inline-block;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -290,19 +223,19 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-12 {
+  .emotion-10 {
     font-size: 1rem;
     line-height: 1.25;
     margin: 0.875rem 1rem 0 1rem;
   }
 }
 
-.emotion-12:focus {
+.emotion-10:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-15 {
+.emotion-13 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -316,51 +249,23 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-15 {
+  .emotion-13 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-13 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-15 {
+  .emotion-13 {
     font-size: 0.875rem;
     padding: 0.75rem 1rem 0 1rem;
-  }
-}
-
-.emotion-17 {
-  display: none;
-}
-
-@supports (filter: blur(15px)) {
-  .emotion-17 {
-    display: block;
-    z-index: 1;
-    position: absolute;
-    bottom: 0;
-    top: -15px;
-    left: 0;
-    right: 0;
-    background-color: #202224;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-    -webkit-background-position: bottom;
-    background-position: bottom;
-    -webkit-transform: scaleX(1.15) scaleY(-1.15);
-    -moz-transform: scaleX(1.15) scaleY(-1.15);
-    -ms-transform: scaleX(1.15) scaleY(-1.15);
-    transform: scaleX(1.15) scaleY(-1.15);
-    -webkit-filter: blur(15px);
-    filter: blur(15px);
   }
 }
 
@@ -390,32 +295,29 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
       <noscript />
     </div>
     <div
-      class="emotion-6 emotion-7"
+      class="lazyload-wrapper "
     >
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-6 emotion-7"
+        data-testid="frosted-glass-lazyload-placeholder"
       >
         <h3
-          class="emotion-10 emotion-11"
+          class="emotion-8 emotion-9"
         >
           <a
-            class="emotion-12 emotion-13"
+            class="emotion-10 emotion-11"
             href="/mundo/internacional-23038380"
           >
             El colorido encanto del arte callejero chilango 17
           </a>
         </h3>
         <time
-          class="emotion-14 emotion-15 emotion-16"
+          class="emotion-12 emotion-13 emotion-14"
           datetime="2016-05-05"
         >
           5 mayo 2016
         </time>
       </div>
-      <div
-        class="emotion-17 emotion-18"
-        style="background-image: url(https://ichef.bbci.co.uk/news/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg.webp);"
-      />
     </div>
   </div>
 </div>
@@ -480,33 +382,15 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
 }
 
 .emotion-6 {
-  position: relative;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 100%;
+  background-color: #202224;
+  height: 100px;
 }
 
 .emotion-8 {
-  position: relative;
-  z-index: 3;
-  padding-bottom: 1rem;
-  -webkit-transition: background 0.5s ease-in-out;
-  transition: background 0.5s ease-in-out;
-  background: rgb(32,34,36);
-  height: 100%;
-}
-
-.emotion-10 {
   margin: 0;
 }
 
-.emotion-12 {
+.emotion-10 {
   display: inline-block;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -520,19 +404,19 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-12 {
+  .emotion-10 {
     font-size: 1rem;
     line-height: 1.25;
     margin: 0.875rem 1rem 0 1rem;
   }
 }
 
-.emotion-12:focus {
+.emotion-10:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-15 {
+.emotion-13 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -546,51 +430,23 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-15 {
+  .emotion-13 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-13 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-15 {
+  .emotion-13 {
     font-size: 0.875rem;
     padding: 0.75rem 1rem 0 1rem;
-  }
-}
-
-.emotion-17 {
-  display: none;
-}
-
-@supports (filter: blur(15px)) {
-  .emotion-17 {
-    display: block;
-    z-index: 1;
-    position: absolute;
-    bottom: 0;
-    top: -15px;
-    left: 0;
-    right: 0;
-    background-color: #202224;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-    -webkit-background-position: bottom;
-    background-position: bottom;
-    -webkit-transform: scaleX(1.15) scaleY(-1.15);
-    -moz-transform: scaleX(1.15) scaleY(-1.15);
-    -ms-transform: scaleX(1.15) scaleY(-1.15);
-    transform: scaleX(1.15) scaleY(-1.15);
-    -webkit-filter: blur(15px);
-    filter: blur(15px);
   }
 }
 
@@ -620,32 +476,29 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
       <noscript />
     </div>
     <div
-      class="emotion-6 emotion-7"
+      class="lazyload-wrapper "
     >
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-6 emotion-7"
+        data-testid="frosted-glass-lazyload-placeholder"
       >
         <h3
-          class="emotion-10 emotion-11"
+          class="emotion-8 emotion-9"
         >
           <a
-            class="emotion-12 emotion-13"
+            class="emotion-10 emotion-11"
             href="https://www.bbc.com/pidgin/sport-51434980"
           >
             Man City vs West Ham: Bad weather force Premier League to cancel Sunday match
           </a>
         </h3>
         <time
-          class="emotion-14 emotion-15 emotion-16"
+          class="emotion-12 emotion-13 emotion-14"
           datetime="2020-02-17"
         >
           17 febrero 2020
         </time>
       </div>
-      <div
-        class="emotion-17 emotion-18"
-        style="background-image: url(https://ichef.bbci.co.uk/news/400/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg.webp);"
-      />
     </div>
   </div>
 </div>
