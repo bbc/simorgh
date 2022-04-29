@@ -72,11 +72,13 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
         cy.getToggles(config[service].name);
       });
 
+      const skipServices = ['scotland', 'sport', 'newsround'];
+
       const serviceVariant = variant === 'default' ? '' : `/${variant}`;
 
       const mostReadPath = `/${config[service].name}/mostread${serviceVariant}.json`;
 
-      if (service !== 'scotland') {
+      if (!skipServices.includes(service)) {
         it(`should show the correct number of items for ${service}\`s ${pageType}`, () => {
           cy.request(mostReadPath).then(({ body: mostReadJson }) => {
             const mostReadRecords = mostReadJson.totalRecords;
