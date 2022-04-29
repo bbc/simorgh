@@ -1,17 +1,14 @@
 FROM node:12.18.4
 
-WORKDIR /app
+RUN mkdir /workspace
 
-COPY package.json .
+WORKDIR /workspace
 
-# We should not Cache the lock file, but yarn install fails if I don't?
-# COPY yarn.lock ./
+RUN git clone https://github.com/bbc/simorgh.git
+
+WORKDIR /workspace/simorgh
 
 RUN yarn install
-
-COPY . .
-
-ENV PORT=7080
 
 EXPOSE 7080
 
