@@ -1,4 +1,4 @@
-# psammead-figure - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-figure%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-figure%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-figure)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-figure) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-figure)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-figure&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/figure--containing-image) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/psammead-figure.svg)](https://www.npmjs.com/package/@bbc/psammead-figure) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
+# psammead-figure - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-figure%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-figure%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-figure)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-figure) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-figure)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-figure&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/figure--containing-image) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/#legacy/psammead-figure/src.svg)](https://www.npmjs.com/package/#legacy/psammead-figure/src) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
 
 ## Description
 
@@ -6,7 +6,7 @@ The `psammead-figure` component is a styled `<figure>` element. It has the same 
 
 ## Installation
 
-`npm install @bbc/psammead-figure`
+`npm install #legacy/psammead-figure/src`
 
 ## Props
 
@@ -27,7 +27,7 @@ The following example shows `psammead-figure` wrapping an
 ```jsx
 import Caption from '@bbc/psammead-caption';
 import Copyright from '#legacy/psammead-copyright/src';
-import Figure from '@bbc/psammead-figure';
+import Figure from '#legacy/psammead-figure/src';
 import Image from '#legacy/psammead-image/src';
 import ImagePlaceholder from '#legacy/psammead-image-placeholder/src';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
