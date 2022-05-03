@@ -5,7 +5,7 @@ import Timestamp from '@bbc/psammead-timestamp';
 import Image from '#legacy/psammead-image/src';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
-import Grid from '@bbc/psammead-grid';
+import Grid from '#legacy/psammead-grid/src';
 import { StoryPromoLi, StoryPromoLiBase, StoryPromoUl } from './index';
 import storyPromoData from '../testHelpers/fixtureData';
 import notes from '../README.md';

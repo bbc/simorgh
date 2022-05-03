@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { string, node, number } from 'prop-types';
-import GRID from '@bbc/psammead-grid';
+import GRID from '#legacy/psammead-grid/src';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,

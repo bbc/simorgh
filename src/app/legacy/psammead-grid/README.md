@@ -1,5 +1,5 @@
 <!-- prettier-ignore -->
-# psammead-grid - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-grid%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-grid%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-grid)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-grid) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-grid)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-grid&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/grid--default) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/psammead-grid.svg)](https://www.npmjs.com/package/@bbc/psammead-grid) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
+# psammead-grid - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-grid%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-grid%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-grid)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-grid) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-grid)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-grid&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/grid--default) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/#legacy/psammead-grid/src.svg)](https://www.npmjs.com/package/#legacy/psammead-grid/src) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
 
 ## Description
 
@@ -7,7 +7,7 @@ Psammead Grid is a component that you can use to set out column-based layouts us
 
 ## Installation
 
-`npm install @bbc/psammead-grid`
+`npm install #legacy/psammead-grid/src`
 
 ## Props
 
@@ -89,7 +89,7 @@ When using one of the extended Grid components, if you wish to extend it using t
 Here is an example of a `<Grid>` that has 8 columns for `group4` (from 1008px to 1279px). It has four child `<Grid item>` elements, one which spans 6/8 columns and three others which spans 2/8 columns within this breakpoint.
 
 ```jsx
-import Grid from '@bbc/psammead-grid';
+import Grid from '#legacy/psammead-grid/src';
 
 const MyComponent = () => (
   <Grid
@@ -167,7 +167,7 @@ Using `enableGelGutters` on the `Grid` element. Note: this should _not_ be added
 Usage of `margins` can be on either `<Grid>` or `<Grid item>`.
 
 ```jsx
-import Grid from '@bbc/psammead-grid';
+import Grid from '#legacy/psammead-grid/src';
 
 const MyComponent = () => (
   <Grid
@@ -236,7 +236,7 @@ Note that here, any time you use `<Grid>` that generates a new grid. The total n
 Here we have no margins on the Grid item around the Image, but there is on the Paragraph items.
 
 ```jsx
-import Grid from '@bbc/psammead-grid';
+import Grid from '#legacy/psammead-grid/src';
 
 const MyComponent = () => (
   <Grid
@@ -321,7 +321,7 @@ const MyComponent = () => (
 Note that, any time you render a child `<Grid>` outside of the parent grid, the parent's columns and gutters configuration is not automagically passed to the child. This causes the layout to break in browsers that do not support css grid. To ensure the configuration is passed correctly, you need to explicitly pass in these props.
 
 ```jsx
-import Grid from '@bbc/psammead-grid';
+import Grid from '#legacy/psammead-grid/src';
 
 const parentProps = {
   enableGelGutters: true,

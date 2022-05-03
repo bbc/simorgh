@@ -15,7 +15,7 @@ import {
   GEL_SPACING_TRPL,
 } from '#legacy/gel-foundations/src/spacings';
 import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
-import Grid from '@bbc/psammead-grid';
+import Grid from '#legacy/psammead-grid/src';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import {
   mostReadListGridProps,

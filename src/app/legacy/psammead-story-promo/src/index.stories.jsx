@@ -6,7 +6,7 @@ import MediaIndicator from '#legacy/psammead-media-indicator/src';
 import LiveLabel from '#legacy/psammead-live-label/src';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
-import Grid from '@bbc/psammead-grid';
+import Grid from '#legacy/psammead-grid/src';
 import styled from '@emotion/styled';
 import { GEL_SPACING_HLF } from '#legacy/gel-foundations/src/spacings';
 import StoryPromo, { Headline, Summary, Link } from './index';
