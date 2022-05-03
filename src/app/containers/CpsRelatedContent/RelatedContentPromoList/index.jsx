@@ -2,7 +2,10 @@ import React from 'react';
 import path from 'ramda/src/path';
 import { arrayOf, bool, elementType, shape, string } from 'prop-types';
 import styled from '@emotion/styled';
-import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
+import {
+  StoryPromoLi,
+  StoryPromoUl,
+} from '#legacy/psammead-story-promo-list/src';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
 import { GEL_SPACING_DBL } from '#legacy/gel-foundations/src/spacings';
 import { C_LUNAR } from '#legacy/psammead-styles/src/colours';

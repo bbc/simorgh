@@ -15,7 +15,7 @@ import {
   GEL_SPACING_QUAD,
 } from '#legacy/gel-foundations/src/spacings';
 import SectionLabel from '#legacy/psammead-section-label/src';
-import { StoryPromoUl } from '@bbc/psammead-story-promo-list';
+import { StoryPromoUl } from '#legacy/psammead-story-promo-list/src';
 import Grid from '#app/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
 import groupShape from '#models/propTypes/frontPageGroup';

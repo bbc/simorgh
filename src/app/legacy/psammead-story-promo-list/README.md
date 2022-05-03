@@ -1,12 +1,12 @@
-# psammead-story-promo-list - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-story-promo-list%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-story-promo-list%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-story-promo)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-story-promo) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-story-promo)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-story-promo&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/story-promo-list/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/story-promo-list--default) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/psammead-story-promo-list.svg)](https://www.npmjs.com/package/@bbc/psammead-story-promo-list) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
+# psammead-story-promo-list - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-story-promo-list%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-story-promo-list%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-story-promo)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-story-promo) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-story-promo)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-story-promo&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/story-promo-list/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/story-promo-list--default) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/#legacy/psammead-story-promo-list/src.svg)](https://www.npmjs.com/package/#legacy/psammead-story-promo-list/src) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
 
 ## Description
 
-The `@bbc/psammead-story-promo-list` package is a set of three components, `StoryPromoUl`, `StoryPromoLi` and `StoryPromoLiBase`. They use `ul` and `li` HTML elements respectively. The `StoryPromoLi` and `StoryPromoLiBase` components are both `li` elements and can be used interchangeably as they have similar props the only difference is that the `StoryPromoLiBase` ships with no padding presets thereby making it much more configurable to any set of padding/margin rules set on child elements.
+The `#legacy/psammead-story-promo-list/src` package is a set of three components, `StoryPromoUl`, `StoryPromoLi` and `StoryPromoLiBase`. They use `ul` and `li` HTML elements respectively. The `StoryPromoLi` and `StoryPromoLiBase` components are both `li` elements and can be used interchangeably as they have similar props the only difference is that the `StoryPromoLiBase` ships with no padding presets thereby making it much more configurable to any set of padding/margin rules set on child elements.
 
 ## Installation
 
-`npm install @bbc/psammead-story-promo-list`
+`npm install #legacy/psammead-story-promo-list/src`
 
 ## Props
 
@@ -23,7 +23,7 @@ Commonly used alongside [`psammead-story-promo`](https://github.com/BBC-News/psa
 ```jsx
 import React, { Fragment } from 'react';
 import StoryPromo, { Headline, Summary } from '@bbc/psammead-story-promo';
-import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
+import { StoryPromoLi, StoryPromoUl } from '#legacy/psammead-story-promo-list/src';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 
 const Image = (
