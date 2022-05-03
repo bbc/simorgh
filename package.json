@@ -94,7 +94,6 @@
     "@bbc/psammead-calendars": "2.0.27",
     "@bbc/psammead-caption": "4.1.27",
     "@bbc/psammead-consent-banner": "5.5.15",
-    "@bbc/psammead-copyright": "3.0.31",
     "@bbc/psammead-detokeniser": "1.0.7",
     "@bbc/psammead-embed-error": "3.0.37",
     "@bbc/psammead-figure": "2.0.13",

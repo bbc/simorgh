@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import Caption from '@bbc/psammead-caption';
-import Copyright from '@bbc/psammead-copyright';
+import Copyright from '#legacy/psammead-copyright/src';
 import Image from '@bbc/psammead-image';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import Paragraph from '@bbc/psammead-paragraph';

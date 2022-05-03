@@ -26,7 +26,7 @@ The following example shows `psammead-figure` wrapping an
 
 ```jsx
 import Caption from '@bbc/psammead-caption';
-import Copyright from '@bbc/psammead-copyright';
+import Copyright from '#legacy/psammead-copyright/src';
 import Figure from '@bbc/psammead-figure';
 import Image from '@bbc/psammead-image';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
