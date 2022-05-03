@@ -89,7 +89,6 @@
     "@bbc/psammead-assets": "3.3.0",
     "@bbc/psammead-locales": "5.0.7",
     "@bbc/psammead-navigation": "9.2.22",
-    "@bbc/psammead-social-embed": "3.3.13",
     "@bbc/web-vitals": "1.1.1",
     "@emotion/cache": "11.7.1",
     "@emotion/react": "11.9.0",

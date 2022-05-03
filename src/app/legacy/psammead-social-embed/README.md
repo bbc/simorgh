@@ -1,4 +1,4 @@
-# psammead-social-embed - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-social-embed%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-social-embed%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-social-embed)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-social-embed) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-social-embed)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-social-embed&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/social-embed--containing-image) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/psammead-social-embed.svg)](https://www.npmjs.com/package/@bbc/psammead-social-embed) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
+# psammead-social-embed - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-social-embed%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-social-embed%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-social-embed)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-social-embed) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-social-embed)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-social-embed&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/social-embed--containing-image) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/#legacy/psammead-social-embed/src.svg)](https://www.npmjs.com/package/#legacy/psammead-social-embed/src) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
 
 ## Description
 
@@ -15,22 +15,23 @@ The `SocialEmbed` component renders a rich social media embed for a number of su
 ## Installation
 
 ```
-npm install @bbc/psammead-social-embed --save
+npm install #legacy/psammead-social-embed/src --save
 ```
 
 ## Props
 
 ### Canonical
 
-| Argument   | Type   | Required | Default | Example                                                                                                             |
-| ---------- | ------ | -------- | ------- | ------------------------------------------------------------------------------------------------------------------- |
-| `provider` | String | Yes      | n/a     | See [supported providers](#supported-providers).                                                                    |
-| `service`  | String | Yes      | n/a     | `'news'`                                                                                                            |
-| `oEmbed`   | Object | Yes      | n/a     | See [@bbc/psammead-oembed](https://github.com/bbc/psammead/tree/latest/packages/components/psammead-oembed#oembed). |
-| `fallback` | Object | Yes      | n/a     | See [fallback](#fallback).                                                                                          |
-| `skipLink` | Object | Yes      | n/a     | See [skipLink](#skipLink).                                                                                          |
-| `caption`  | Object | No       | `null`  | See [caption](#caption).                                                                                            |
-| `onRender` | Function | No      | `null`     | `() => console.log('rendered')` |
+| Argument   | Type     | Required | Default | Example                                                                                                             |
+| ---------- | -------- | -------- | ------- | ------------------------------------------------------------------------------------------------------------------- |
+| `provider` | String   | Yes      | n/a     | See [supported providers](#supported-providers).                                                                    |
+| `service`  | String   | Yes      | n/a     | `'news'`                                                                                                            |
+| `oEmbed`   | Object   | Yes      | n/a     | See [@bbc/psammead-oembed](https://github.com/bbc/psammead/tree/latest/packages/components/psammead-oembed#oembed). |
+| `fallback` | Object   | Yes      | n/a     | See [fallback](#fallback).                                                                                          |
+| `skipLink` | Object   | Yes      | n/a     | See [skipLink](#skipLink).                                                                                          |
+| `caption`  | Object   | No       | `null`  | See [caption](#caption).                                                                                            |
+| `onRender` | Function | No       | `null`  | `() => console.log('rendered')`                                                                                     |
+
 ### AMP
 
 | Argument   | Type   | Required | Default | Example                                          |
@@ -80,7 +81,7 @@ Pass a [supported provider](#supported-providers) and valid oEmbed response. If 
 #### Example
 
 ```jsx
-import { CanonicalSocialEmbed } from '@bbc/psammead-social-embed';
+import { CanonicalSocialEmbed } from '#legacy/psammead-social-embed/src';
 
 <CanonicalSocialEmbed
   provider="instagram"
@@ -112,9 +113,11 @@ The component supports integration with the [react-lazyload](https://www.npmjs.c
 ```
 
 ### onRender
+
 This component takes an `onRender` prop which is invoked when the embed is fully rendered (currently only for twitter embeds), this can be used to change styling on render to help reduce layout shift.
 
 #### Example
+
 ```jsx
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
@@ -131,8 +134,7 @@ const SocialEmbedWithWrapper = ({
   skipLink,
   fallback,
   service,
-  }) => {
-
+}) => {
   const [wrapperMinHeight, setWrapperMinHeight] = useState(DEFAULT_MIN_HEIGHT);
 
   return (
@@ -161,7 +163,7 @@ Pass a [supported provider](#supported-providers). If this case cannot be met, a
 Pass a valid `id`. This refers to the unique segment of the URL, which identifies the source content. E.G. `1237210910835392512` in `https://twitter.com/MileyCyrus/status/1237210910835392512`.
 
 ```jsx
-import { AmpSocialEmbed } from '@bbc/psammead-social-embed';
+import { AmpSocialEmbed } from '#legacy/psammead-social-embed/src';
 
 <AmpSocialEmbed
   provider="instagram"
