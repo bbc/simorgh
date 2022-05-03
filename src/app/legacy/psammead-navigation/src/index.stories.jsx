@@ -12,7 +12,7 @@ import {
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import * as svgs from '@bbc/psammead-assets/svgs';
 import { C_WHITE } from '#legacy/psammead-styles/src/colours';
-import Brand from '@bbc/psammead-brand';
+import Brand from '#legacy/psammead-brand/src';
 import { ampDecorator } from '../../../../.storybook/preview';
 import Navigation, { NavigationUl, NavigationLi } from './index';
 import {
