@@ -27,10 +27,15 @@ const rankTranslationScript = (endpoint, service) => {
       data.records.forEach((item, index) => {
         return item.rankTranslation = translations[index+1]
       });
+
+      if(data.records.length === 0){
+        throw new Error("MostRead data records in mostread.json endpoint is empty");
+      }
+
       return data;
     } catch(error){
-      document.body.removeChild(document.body.firstElementChild)
-      return [];
+      console.error(error)
+      return []
     }
   }
     exportFunction('getRemoteData', getRemoteData);`;
