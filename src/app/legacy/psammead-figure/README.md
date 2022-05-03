@@ -25,7 +25,7 @@ The following example shows `psammead-figure` wrapping an
 - [psammead-visually-hidden-text](https://github.com/bbc/psammead/tree/latest/packages/components/psammead-visually-hidden-text), a hidden `<span>` available only to assistive technology
 
 ```jsx
-import Caption from '@bbc/psammead-caption';
+import Caption from '#legacy/psammead-caption/src';
 import Copyright from '#legacy/psammead-copyright/src';
 import Figure from '#legacy/psammead-figure/src';
 import Image from '#legacy/psammead-image/src';

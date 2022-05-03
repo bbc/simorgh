@@ -1,4 +1,4 @@
-# psammead-caption - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-caption%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-caption%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-caption)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-caption) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-caption)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-caption&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/caption--default) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/BBC/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/psammead-caption.svg)](https://www.npmjs.com/package/@bbc/psammead-caption) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/BBC/psammead/blob/latest/CONTRIBUTING.md)
+# psammead-caption - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-caption%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-caption%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-caption)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-caption) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-caption)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-caption&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/caption--default) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/BBC/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/#legacy/psammead-caption/src.svg)](https://www.npmjs.com/package/#legacy/psammead-caption/src) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/BBC/psammead/blob/latest/CONTRIBUTING.md)
 
 ## Description
 
@@ -6,7 +6,7 @@ The `psammead-caption` component is a styled `figcaption` element.
 
 ## Installation
 
-`npm install @bbc/psammead-caption`
+`npm install #legacy/psammead-caption/src`
 
 ## Props
 
@@ -21,7 +21,7 @@ The `psammead-caption` component is a styled `figcaption` element.
 `psammead-caption` can be used together with the [`psammead-figure`](https://github.com/bbc/psammead/tree/latest/packages/components/psammead-figure) and [`psammead-visually-hidden-text`](https://github.com/bbc/psammead/tree/latest/packages/components/psammead-visually-hidden-text) components in this way. This visually hidden text is to give context to users of Assistive Technology.
 
 ```jsx
-import Caption from '@bbc/psammead-caption';
+import Caption from '#legacy/psammead-caption/src';
 import Figure from '#legacy/psammead-figure/src';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { arabic } from '#legacy/gel-foundations/src/scripts';
