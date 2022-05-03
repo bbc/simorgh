@@ -73,6 +73,7 @@ const A = styled.a`
 const LazyloadPlaceholder = styled.div`
   background-color: ${({ isAmp }) => (isAmp ? C_WHITE : C_GREY_8)};
   min-height: 100px;
+  padding-bottom: ${GEL_SPACING_DBL};
 `;
 
 const FrostedGlassPromo = ({
