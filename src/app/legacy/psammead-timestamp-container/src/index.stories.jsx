@@ -9,7 +9,7 @@ import {
   withKnobs,
 } from '@storybook/addon-knobs';
 import moment from 'moment';
-import { jalaali } from '@bbc/psammead-calendars';
+import { jalaali } from '#legacy/psammead-calendars/src';
 import notes from '../README.md';
 import TimestampContainer from '.';
 

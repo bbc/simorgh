@@ -12,7 +12,7 @@ import {
 } from '#legacy/psammead-styles/src/fonts';
 import 'moment/locale/fa';
 import '@bbc/moment-timezone-include/tz/GMT';
-import { jalaali } from '@bbc/psammead-calendars';
+import { jalaali } from '#legacy/psammead-calendars/src';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

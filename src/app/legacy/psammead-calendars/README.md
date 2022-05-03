@@ -1,11 +1,11 @@
-# psammead-calendars - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-calendars%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-calendars%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-calendars)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-calendars) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-calendars)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-calendars&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/moment-calendars--containing-image) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/psammead-calendars.svg)](https://www.npmjs.com/package/@bbc/psammead-calendars) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
+# psammead-calendars - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-calendars%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-calendars%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-calendars)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-calendars) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-calendars)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-calendars&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/moment-calendars--containing-image) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/#legacy/psammead-calendars/src.svg)](https://www.npmjs.com/package/#legacy/psammead-calendars/src) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
 
 This package provides a utility to format calendar dates provided in a `Moment` object to other non-gregorian calendars. For now Jalaali is the only calendar which is being converted, more may be added in the future.
 
 ## Installation
 
 ```jsx
-npm install @bbc/psammead-calendars --save
+npm install #legacy/psammead-calendars/src --save
 ```
 
 ## Calendars
@@ -19,17 +19,22 @@ This helper currently only supports Pashto and Persian/Farsi Jalaali calendar mo
 ## Usage
 
 <!-- Description of the component usage -->
+
 ### Follow this template and replace CALENDAR_NAME:
+
 ```
-import { CALENDAR_NAME } from "@bbc/psammead-calendars"
+import { CALENDAR_NAME } from "#legacy/psammead-calendars/src"
 ```
+
 ### Jalaali Usage
+
 ```
-import { jalaali } from "@bbc/psammead-calendars"
+import { jalaali } from "#legacy/psammead-calendars/src"
 
 const nowMoment = moment().locale('fa');
 const formattedDate = jalaali.formatDate(nowMoment);
 ```
+
 The Jalaali formatter contains a function called `formatDate()`. This function takes a `moment` object as its argument, which needs to have `ps` or `fa` set as its locale. The function then uses the `moment` with its logic to return a string in a day, year, month format using Eastern Arabic numerals e.g. `۱۱ دی ۱۳۹۷`.
 
 If an unsupported `moment` or locale set on the `moment` is passed in, then the output will `return null`.
