@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import Navigation from '@bbc/psammead-navigation';
+import Navigation from '#legacy/psammead-navigation/src';
 import { node, string, shape } from 'prop-types';
 import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
-import { ScrollableNavigation } from '@bbc/psammead-navigation/scrollable';
+import { ScrollableNavigation } from '#legacy/psammead-navigation/src/ScrollableNavigation';
 import {
   CanonicalDropdown,
   CanonicalMenuButton,
-} from '@bbc/psammead-navigation/dropdown';
+} from '#legacy/psammead-navigation/src/DropdownNavigation';
 import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '#legacy/gel-foundations/src/breakpoints';
 import useMediaQuery from '#hooks/useMediaQuery';
 

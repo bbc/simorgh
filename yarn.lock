@@ -1844,44 +1844,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/psammead-rich-text-transforms@npm:2.0.7":
-  version: 2.0.7
-  resolution: "@bbc/psammead-rich-text-transforms@npm:2.0.7"
-  dependencies:
-    ramda: ^0.28.0
-    xmldoc: ^1.1.2
-  checksum: a40809a0bd0e0a284e1ee39ee7c8193f87e28209768782c2dc3ff6059acff7a12616537c2286f757f0460025b131ce73a8b336bf1bb5f701c7d19ceda56b1122
-  languageName: node
-  linkType: hard
-
-"@bbc/psammead-social-embed@npm:3.3.13":
-  version: 3.3.13
-  resolution: "@bbc/psammead-social-embed@npm:3.3.13"
-  dependencies:
-    "@bbc/gel-foundations": 7.0.0
-    "@bbc/psammead-styles": 8.1.1
-  peerDependencies:
-    "@emotion/styled": ^11.0.0
-    react: ">=16.9.0"
-  checksum: d27e883e6e5ccdadabb67bb1f8b741d20e6d6cf926f1cf5b5f36af519ec8fd4cdb67e6394d2e91df1cd8c0311ae63a62f7819362009ca515a7337d447d235903
-  languageName: node
-  linkType: hard
-
-"@bbc/psammead-story-promo@npm:8.0.38":
-  version: 8.0.38
-  resolution: "@bbc/psammead-story-promo@npm:8.0.38"
-  dependencies:
-    "@bbc/gel-foundations": 7.0.0
-    "@bbc/psammead-styles": 8.1.0
-  peerDependencies:
-    "@emotion/react": ^11.1.4
-    "@emotion/styled": ^11.0.0
-    prop-types: ^15.7.2
-    react: ">=16.9.0"
-  checksum: 08f92da6c4f58a7167ab4bc4d64a61cbacb3a99cfcb7a1790b71d54d0f5235609bd00afb758d245085564867d79203809cca78f0b3adb1d4d5dec2d8c4e2da33
-  languageName: node
-  linkType: hard
-
 "@bbc/psammead-storybook-helpers@npm:9.0.17":
   version: 9.0.17
   resolution: "@bbc/psammead-storybook-helpers@npm:9.0.17"
@@ -1889,16 +1851,6 @@ __metadata:
     "@bbc/gel-foundations": 7.0.0
     react-helmet: ^6.1.0
   checksum: 8db16501344182548e79b70761289c4319ca23e64da5ee7b86b8475b186989a5db51d0ca4579993ad32322bf41dd31b05d53dc5d8944e07301778a90541bd137
-  languageName: node
-  linkType: hard
-
-"@bbc/psammead-styles@npm:8.1.0":
-  version: 8.1.0
-  resolution: "@bbc/psammead-styles@npm:8.1.0"
-  peerDependencies:
-    "@emotion/react": ^11.1.4
-    react: ">=16.9.0"
-  checksum: 1e2b2769c80c2dd198ef96430379f89ce6f6bd0fda2e3c85b4c423ebd31226225c83dcfb6ef19142cc365a425e88a52bfc10cce81e9841ebd52da3b3927c788d
   languageName: node
   linkType: hard
 
@@ -1916,18 +1868,6 @@ __metadata:
   version: 6.0.5
   resolution: "@bbc/psammead-test-helpers@npm:6.0.5"
   checksum: 24927b6b7bf36bbfe908af4f3b4e343796ad9e4d3f9933d052df8d73e33cebf7fba28a8dab8413adbd65f4684511aab48f7d9925faf23a70937dd86bce9d9faf
-  languageName: node
-  linkType: hard
-
-"@bbc/psammead-timestamp@npm:4.0.31":
-  version: 4.0.31
-  resolution: "@bbc/psammead-timestamp@npm:4.0.31"
-  dependencies:
-    "@bbc/gel-foundations": 7.0.0
-    "@bbc/psammead-styles": 8.1.1
-  peerDependencies:
-    "@emotion/styled": ^11.0.0
-  checksum: 2f40b4e6eb8b4519b16118d661196af04f7c5139f2d03946fdcd587bae0b5f8e2718bd4c4330da3eb5150cfb6342a6bbf9c5f39dec573bdc8bff8a4e40e367f4
   languageName: node
   linkType: hard
 
@@ -17554,7 +17494,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ramda@npm:0.28.0, ramda@npm:^0.28.0":
+"ramda@npm:0.28.0":
   version: 0.28.0
   resolution: "ramda@npm:0.28.0"
   checksum: 44ea6e5010bba70151b6a92d8114a91915e8b5a16105cce65fae58c9d7386b812c429645e35f21141d7087568550ce383bc10ee1a65cdec951f4b69ea457e6a4
@@ -19209,12 +19149,8 @@ __metadata:
     "@bbc/psammead-assets": 3.3.0
     "@bbc/psammead-locales": 5.0.7
     "@bbc/psammead-navigation": 9.2.22
-    "@bbc/psammead-rich-text-transforms": 2.0.7
-    "@bbc/psammead-social-embed": 3.3.13
-    "@bbc/psammead-story-promo": 8.0.38
     "@bbc/psammead-storybook-helpers": 9.0.17
     "@bbc/psammead-test-helpers": 6.0.5
-    "@bbc/psammead-timestamp": 4.0.31
     "@bbc/web-vitals": 1.1.1
     "@emotion/babel-plugin": 11.9.2
     "@emotion/cache": 11.7.1
@@ -22370,7 +22306,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"xmldoc@npm:1.1.2, xmldoc@npm:^1.1.2":
+"xmldoc@npm:1.1.2":
   version: 1.1.2
   resolution: "xmldoc@npm:1.1.2"
   dependencies:

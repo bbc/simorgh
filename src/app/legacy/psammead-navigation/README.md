@@ -1,8 +1,8 @@
-# psammead-navigation - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-navigation%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-navigation%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-navigation)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-navigation) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-navigation)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-navigation&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/section-label--default) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/psammead-navigation.svg)](https://www.npmjs.com/package/@bbc/psammead-navigation) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
+# psammead-navigation - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-navigation%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-navigation%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-navigation)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-navigation) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-navigation)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-navigation&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/section-label--default) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/#legacy/psammead-navigation/src.svg)](https://www.npmjs.com/package/#legacy/psammead-navigation/src) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
 
 ## Description
 
-The `@bbc/psammead-navigation` package is a set of two components, `NavigationUl` and `NavigationLi`. They use `ul` and `li` HTML elements respectively. The package also includes a Hamburger Menu and a Dropdown Navigation which are visible for breakpoints under 600px.
+The `#legacy/psammead-navigation/src` package is a set of two components, `NavigationUl` and `NavigationLi`. They use `ul` and `li` HTML elements respectively. The package also includes a Hamburger Menu and a Dropdown Navigation which are visible for breakpoints under 600px.
 
 ## Exports
 
@@ -11,7 +11,7 @@ The `@bbc/psammead-navigation` package is a set of two components, `NavigationUl
 
 ## Installation
 
-`npm install @bbc/psammead-navigation`
+`npm install #legacy/psammead-navigation/src`
 
 ## Props
 
@@ -114,11 +114,11 @@ The `@bbc/psammead-navigation` package is a set of two components, `NavigationUl
 
 ```jsx
 import React from 'react';
-import { ScrollableNavigation } from '@bbc/psammead-navigation/scrollable';
+import { ScrollableNavigation } from '#legacy/psammead-navigation/src/scrollable';
 import Navigation, {
   NavigationUl,
   NavigationLi,
-} from '@bbc/psammead-navigation';
+} from '#legacy/psammead-navigation/src';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 
 <Navigation
@@ -177,7 +177,7 @@ import {
   Dropdown,
   DropdownUl,
   DropdownLi,
-} from '@bbc/psammead-navigation/dropdown';
+} from '#legacy/psammead-navigation/src/dropdown';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 
 <CanonicalDropdown isOpen={isOpen}>
@@ -203,7 +203,7 @@ import { latin } from '#legacy/gel-foundations/src/scripts';
 
 ```jsx
 import React from 'react';
-import { CanonicalMenuButton } from '@bbc/psammead-navigation/dropdown';
+import { CanonicalMenuButton } from '#legacy/psammead-navigation/src/dropdown';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 
 <CanonicalMenuButton
@@ -221,7 +221,7 @@ import { latin } from '#legacy/gel-foundations/src/scripts';
 
 ```jsx
 import React from 'react';
-import { AmpMenuButton } from '@bbc/psammead-navigation/dropdown';
+import { AmpMenuButton } from '#legacy/psammead-navigation/src/dropdown';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 
 <AmpMenuButton
