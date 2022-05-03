@@ -21,6 +21,10 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
   text-decoration: underline;
 }
 
+.emotion-0:visited a {
+  color: #e6e8ea;
+}
+
 .emotion-2 {
   position: absolute;
   top: 0;
@@ -61,6 +65,7 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
 .emotion-6 {
   background-color: #202224;
   min-height: 100px;
+  padding-bottom: 1rem;
 }
 
 .emotion-8 {
@@ -86,6 +91,10 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
     line-height: 1.25;
     margin: 0.875rem 1rem 0 1rem;
   }
+}
+
+.emotion-10:visited {
+  color: #e6e8ea;
 }
 
 .emotion-10:focus {
@@ -163,6 +172,10 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
   text-decoration: underline;
 }
 
+.emotion-0:visited a {
+  color: #e6e8ea;
+}
+
 .emotion-2 {
   position: absolute;
   top: 0;
@@ -203,6 +216,7 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
 .emotion-6 {
   background-color: #202224;
   min-height: 100px;
+  padding-bottom: 1rem;
 }
 
 .emotion-8 {
@@ -230,6 +244,10 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
   }
 }
 
+.emotion-10:visited {
+  color: #e6e8ea;
+}
+
 .emotion-10:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -243,7 +261,7 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: white;
+  color: #e6e8ea;
   font-size: 0.8125rem;
   padding: 0.75rem 0.5rem 0 0.5rem;
 }
@@ -344,6 +362,10 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
   text-decoration: underline;
 }
 
+.emotion-0:visited a {
+  color: #e6e8ea;
+}
+
 .emotion-2 {
   position: absolute;
   top: 0;
@@ -384,6 +406,7 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
 .emotion-6 {
   background-color: #202224;
   min-height: 100px;
+  padding-bottom: 1rem;
 }
 
 .emotion-8 {
@@ -411,6 +434,10 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
   }
 }
 
+.emotion-10:visited {
+  color: #e6e8ea;
+}
+
 .emotion-10:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -424,7 +451,7 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: white;
+  color: #e6e8ea;
   font-size: 0.8125rem;
   padding: 0.75rem 0.5rem 0 0.5rem;
 }
