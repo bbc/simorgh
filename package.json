@@ -116,7 +116,6 @@
     "@bbc/psammead-timestamp": "4.0.31",
     "@bbc/psammead-timestamp-container": "5.1.2",
     "@bbc/psammead-topic-tags": "1.1.3",
-    "@bbc/psammead-visually-hidden-text": "2.0.7",
     "@bbc/web-vitals": "1.1.1",
     "@emotion/cache": "11.7.1",
     "@emotion/react": "11.9.0",
