@@ -1,4 +1,4 @@
-# psammead-bulleted-list - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-bulleted-list%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-bulleted-list%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-bulleted-list)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-bulleted-list) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-bulleted-list)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-bulleted-list&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/psammead-bulleted-list--containing-image) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/psammead-bulleted-list.svg)](https://www.npmjs.com/package/@bbc/psammead-bulleted-list) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
+# psammead-bulleted-list - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-bulleted-list%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-bulleted-list%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-bulleted-list)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-bulleted-list) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-bulleted-list)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-bulleted-list&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/psammead-bulleted-list--containing-image) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/#legacy/psammead-bulleted-list/src.svg)](https://www.npmjs.com/package/#legacy/psammead-bulleted-list/src) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
 
 ## Description
 
@@ -7,7 +7,7 @@ The `BulletedList` component is a styled bulleted (unordered) list that works fo
 ## Installation
 
 ```jsx
-npm install @bbc/psammead-bulleted-list --save
+npm install #legacy/psammead-bulleted-list/src --save
 ```
 
 ## Props
@@ -25,7 +25,9 @@ npm install @bbc/psammead-bulleted-list --save
 Use `BulletedList` in place of a `ul` element with required props and a `BulletedListItem` in place of an `li`.
 
 ```jsx
-import BulletedList, { BulletedListItem } from '@bbc/psammead-bulleted-list';
+import BulletedList, {
+  BulletedListItem,
+} from '#legacy/psammead-bulleted-list/src';
 
 const props = {
   dir: 'ltr',
@@ -37,7 +39,7 @@ const props = {
 <BulletedList {...props}>
   <BulletedListItem>A list item</BulletedListItem>
   <BulletedListItem>Another item</BulletedListItem>
-</BulletedList>
+</BulletedList>;
 ```
 
 ### When to use this component

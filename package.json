@@ -88,8 +88,6 @@
     "@bbc/moment-timezone-include": "1.1.8",
     "@bbc/psammead-assets": "3.3.0",
     "@bbc/psammead-brand": "7.3.18",
-    "@bbc/psammead-bulleted-list": "3.1.12",
-    "@bbc/psammead-calendars": "2.0.27",
     "@bbc/psammead-locales": "5.0.7",
     "@bbc/psammead-navigation": "9.2.22",
     "@bbc/psammead-rich-text-transforms": "2.0.7",
