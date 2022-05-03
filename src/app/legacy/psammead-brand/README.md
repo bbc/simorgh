@@ -62,7 +62,7 @@ When using `Brand` in the header, you should ensure that `borderBottom` prop is 
 import Brand from '@bbc/psammead-brand';
 import SkipLink from '@bbc/psammead-brand/skip-link';
 import { igbo } from '@bbc/psammead-assets/svgs';
-import ScriptLink from '@bbc/psammead-script-link';
+import ScriptLink from '#legacy/psammead-script-link/src';
 import { C_POSTBOX, C_WHITE } from '#legacy/psammead-styles/src/colours';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 

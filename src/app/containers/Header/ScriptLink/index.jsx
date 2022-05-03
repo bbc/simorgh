@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { compile } from 'path-to-regexp';
 import { useRouteMatch } from 'react-router-dom';
-import ScriptLink from '@bbc/psammead-script-link';
+import ScriptLink from '#legacy/psammead-script-link/src';
 import { UserContext } from '#contexts/UserContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';

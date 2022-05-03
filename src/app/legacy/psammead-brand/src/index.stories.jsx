@@ -14,7 +14,7 @@ import {
   withServicesKnob,
   buildRTLSubstories,
 } from '@bbc/psammead-storybook-helpers';
-import ScriptLink from '@bbc/psammead-script-link';
+import ScriptLink from '#legacy/psammead-script-link/src';
 import Brand from './index';
 import SkipLink from './SkipLink';
 import notes from '../README.md';

@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { render } from '@testing-library/react';
 import { C_POSTBOX, C_WHITE } from '#legacy/psammead-styles/src/colours';
-import ScriptLink from '@bbc/psammead-script-link';
+import ScriptLink from '#legacy/psammead-script-link/src';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 import Brand from '.';
 import SkipLink from './SkipLink';
