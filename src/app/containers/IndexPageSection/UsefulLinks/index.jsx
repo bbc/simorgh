@@ -16,7 +16,7 @@ import {
   UsefulLink,
   UsefulLinksLi,
   UsefulLinksUl,
-} from '@bbc/psammead-useful-links';
+} from '#legacy/psammead-useful-links/src';
 import { storyItem } from '#models/propTypes/storyItem';
 
 // Apply the right margin-top between the section label and multiple useful items
