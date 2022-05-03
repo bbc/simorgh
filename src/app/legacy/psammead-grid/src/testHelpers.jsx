@@ -8,7 +8,7 @@ import {
   GEL_SPACING_HLF,
   GEL_SPACING,
 } from '#legacy/gel-foundations/src/spacings';
-import MediaIndicator from '@bbc/psammead-media-indicator';
+import MediaIndicator from '#legacy/psammead-media-indicator/src';
 
 export const ExampleParagraph = ({ identifier }) => (
   <Paragraph script={cyrillicAndLatin} service="news">

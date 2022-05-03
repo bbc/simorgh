@@ -3,7 +3,7 @@ import moment from 'moment-timezone';
 import styled from '@emotion/styled';
 import { shape, string, oneOf, oneOfType, bool } from 'prop-types';
 import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
-import MediaIndicator from '@bbc/psammead-media-indicator';
+import MediaIndicator from '#legacy/psammead-media-indicator/src';
 import { GEL_SPACING_HLF } from '#legacy/gel-foundations/src/spacings';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';

@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
 import Image from '#legacy/psammead-image/src';
-import MediaIndicator from '@bbc/psammead-media-indicator';
+import MediaIndicator from '#legacy/psammead-media-indicator/src';
 import LiveLabel from '#legacy/psammead-live-label/src';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';

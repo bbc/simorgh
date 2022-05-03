@@ -2,7 +2,7 @@ import React from 'react';
 import { arrayOf, bool, shape, string, oneOf } from 'prop-types';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { latin } from '#legacy/gel-foundations/src/scripts';
-import MediaIndicator from '@bbc/psammead-media-indicator';
+import MediaIndicator from '#legacy/psammead-media-indicator/src';
 import { render } from '@testing-library/react';
 import LiveLabel from '#legacy/psammead-live-label/src';
 import styled from '@emotion/styled';
