@@ -1,4 +1,4 @@
-# psammead-play-button - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-play-button%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-play-button%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-play-button)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-play-button) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-play-button)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-play-button&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/play-button/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/play-button--default) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/psammead-play-button.svg)](https://www.npmjs.com/package/@bbc/psammead-play-button) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
+# psammead-play-button - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-play-button%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-play-button%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-play-button)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-play-button) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-play-button)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-play-button&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/play-button/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/play-button--default) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/#legacy/psammead-play-button/src.svg)](https://www.npmjs.com/package/#legacy/psammead-play-button/src) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
 
 ## Description
 
@@ -6,7 +6,7 @@ The `PlayButton` component renders a button with a 'video' or 'audio' icon and o
 
 ## Installation
 
-`npm install @bbc/psammead-play-button`
+`npm install #legacy/psammead-play-button/src`
 
 ## Props
 
@@ -34,7 +34,7 @@ The `PlayButton` component renders a button with a 'video' or 'audio' icon and o
 A typical use case for this component would be to indicate to a user that a media asset placeholder contains playable media, which is either 'video' or 'audio' and, if applicable, its duration. A function triggering playback would be passed to the button's `onClick` prop.
 
 ```jsx
-import PlayButton from '@bbc/psammead-play-button';
+import PlayButton from '#legacy/psammead-play-button/src';
 
 <PlayButton
   service="news"
