@@ -1,8 +1,8 @@
-# psammead-section-label - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-section-label%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-section-label%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-section-label)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-section-label) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-section-label)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-section-label&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/section-label--default) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/psammead-section-label.svg)](https://www.npmjs.com/package/@bbc/psammead-section-label) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
+# psammead-section-label - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-section-label%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-section-label%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-section-label)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-section-label) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-section-label)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-section-label&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/section-label--default) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/#legacy/psammead-section-label/src.svg)](https://www.npmjs.com/package/#legacy/psammead-section-label/src) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
 
 ## Description
 
-The `@bbc/psammead-section-label` package exports one component - a Section Label.
+The `#legacy/psammead-section-label/src` package exports one component - a Section Label.
 
 For colours and font family it uses `#legacy/psammead-styles/src` and `#legacy/gel-foundations/src` for spacing and GEL Typography implemented in Styled Components.
 
@@ -10,7 +10,7 @@ The only provided child should be the title for the section, provided as a _stri
 
 ## Installation
 
-`npm install @bbc/psammead-section-label`
+`npm install #legacy/psammead-section-label/src`
 
 ## Props
 
@@ -34,7 +34,7 @@ The only provided child should be the title for the section, provided as a _stri
 ## Usage
 
 ```jsx
-import SectionLabel from '@bbc/psammead-section-label';
+import SectionLabel from '#legacy/psammead-section-label/src';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 
 const WrappingComponent = () => (
@@ -54,7 +54,7 @@ const WrappingComponent = () => (
 Or, without a horizontal bar:
 
 ```jsx
-import SectionLabel from '@bbc/psammead-section-label';
+import SectionLabel from '#legacy/psammead-section-label/src';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 
 const WrappingComponent = () => (
@@ -75,7 +75,7 @@ const WrappingComponent = () => (
 On mobile, this component places a dividing line above the title. This can be disabled by setting the `mobileDivider` prop to `false`:
 
 ```jsx
-import SectionLabel from '@bbc/psammead-section-label';
+import SectionLabel from '#legacy/psammead-section-label/src';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 
 const WrappingComponent = () => (
@@ -96,7 +96,7 @@ const WrappingComponent = () => (
 You can also visually hide the SectionLabel for all breakpoints by adding the `visuallyHidden` prop:
 
 ```jsx
-import SectionLabel from '@bbc/psammead-section-label';
+import SectionLabel from '#legacy/psammead-section-label/src';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 
 const WrappingComponent = () => (
@@ -118,7 +118,7 @@ You can even use this component as a link (typically to an index of content rela
 NB. when doing this **both** the `href` **and** the `linkText` must be supplied. If either is missing, the link will not be rendered.
 
 ```jsx
-import SectionLabel from '@bbc/psammead-section-label';
+import SectionLabel from '#legacy/psammead-section-label/src';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 
 const WrappingComponent = () => (
@@ -140,7 +140,7 @@ const WrappingComponent = () => (
 You can override the header(`h2`) to any custom HTML element that fits your accesibility requirement depending on what use case or semantic meaning you want to portray in your pages with the `overrideHeadingAs` prop.
 
 ```jsx
-import SectionLabel from '@bbc/psammead-section-label';
+import SectionLabel from '#legacy/psammead-section-label/src';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 
 const WrappingComponent = () => (

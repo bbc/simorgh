@@ -7,7 +7,7 @@ import {
   GEL_SPACING_QUAD,
   GEL_SPACING,
 } from '#legacy/gel-foundations/src/spacings';
-import SectionLabel from '@bbc/psammead-section-label';
+import SectionLabel from '#legacy/psammead-section-label/src';
 import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,

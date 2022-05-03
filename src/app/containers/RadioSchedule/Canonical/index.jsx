@@ -18,7 +18,7 @@ import {
 } from '#legacy/gel-foundations/src/spacings';
 import { getLongPrimer } from '#legacy/gel-foundations/src/typography';
 import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
-import SectionLabel from '@bbc/psammead-section-label';
+import SectionLabel from '#legacy/psammead-section-label/src';
 import { C_LUNAR, C_EBON, C_METAL } from '#legacy/psammead-styles/src/colours';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';

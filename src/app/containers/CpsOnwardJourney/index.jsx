@@ -10,7 +10,7 @@ import {
   oneOf,
   elementType,
 } from 'prop-types';
-import SectionLabel from '@bbc/psammead-section-label';
+import SectionLabel from '#legacy/psammead-section-label/src';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,

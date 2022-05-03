@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { TopicTag, TopicTags } from '@bbc/psammead-topic-tags';
 import pathOr from 'ramda/src/pathOr';
-import SectionLabel from '@bbc/psammead-section-label';
+import SectionLabel from '#legacy/psammead-section-label/src';
 import styled from '@emotion/styled';
 import { arrayOf, bool, shape, string } from 'prop-types';
 import { GEL_SPACING_QUIN } from '#legacy/gel-foundations/src/spacings';

@@ -14,7 +14,7 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '#legacy/gel-foundations/src/spacings';
-import SectionLabel from '@bbc/psammead-section-label';
+import SectionLabel from '#legacy/psammead-section-label/src';
 import { StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import Grid from '#app/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';

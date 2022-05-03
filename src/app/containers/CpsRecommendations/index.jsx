@@ -14,7 +14,7 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '#legacy/gel-foundations/src/spacings';
-import SectionLabel from '@bbc/psammead-section-label';
+import SectionLabel from '#legacy/psammead-section-label/src';
 import SkipLinkWrapper from '#components/SkipLinkWrapper';
 
 import { storyItem } from '#models/propTypes/storyItem';

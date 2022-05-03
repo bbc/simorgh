@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { bool, string } from 'prop-types';
 import styled from '@emotion/styled';
-import SectionLabel from '@bbc/psammead-section-label';
+import SectionLabel from '#legacy/psammead-section-label/src';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,

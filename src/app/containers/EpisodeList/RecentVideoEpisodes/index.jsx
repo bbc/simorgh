@@ -9,7 +9,7 @@ import {
   formatDuration,
   formatUnixTimestamp,
 } from '@bbc/psammead-timestamp-container/utilities';
-import SectionLabel from '@bbc/psammead-section-label';
+import SectionLabel from '#legacy/psammead-section-label/src';
 import { C_WHITE, C_MIDNIGHT_BLACK } from '#legacy/psammead-styles/src/colours';
 import {
   GEL_SPACING_DBL,

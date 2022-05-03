@@ -9,7 +9,7 @@ import {
   formatUnixTimestamp,
 } from '@bbc/psammead-timestamp-container/utilities';
 import Timestamp from '@bbc/psammead-timestamp-container';
-import SectionLabel from '@bbc/psammead-section-label';
+import SectionLabel from '#legacy/psammead-section-label/src';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
