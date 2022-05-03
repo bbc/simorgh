@@ -4,7 +4,7 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 import MediaIndicator from '@bbc/psammead-media-indicator';
 import { render } from '@testing-library/react';
-import LiveLabel from '@bbc/psammead-live-label';
+import LiveLabel from '#legacy/psammead-live-label/src';
 import styled from '@emotion/styled';
 import { GEL_SPACING_HLF } from '#legacy/gel-foundations/src/spacings';
 import StoryPromo, { Headline, Summary, Link } from './index';

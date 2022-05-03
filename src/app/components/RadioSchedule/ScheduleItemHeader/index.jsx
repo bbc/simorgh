@@ -5,7 +5,7 @@ import { oneOfType, elementType, string, number } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
 import detokenise from '@bbc/psammead-detokeniser';
-import LiveLabel from '@bbc/psammead-live-label';
+import LiveLabel from '#legacy/psammead-live-label/src';
 import { Link } from '@bbc/psammead-story-promo';
 import {
   getSansBold,

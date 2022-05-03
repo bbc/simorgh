@@ -27,7 +27,7 @@ import {
   getLongPrimer,
 } from '#legacy/gel-foundations/src/typography';
 import { mediaIcons } from '@bbc/psammead-assets/svgs';
-import LiveLabel from '@bbc/psammead-live-label';
+import LiveLabel from '#legacy/psammead-live-label/src';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { Link } from '@bbc/psammead-story-promo';
 import ImageGridItem from './ImageStyles';
