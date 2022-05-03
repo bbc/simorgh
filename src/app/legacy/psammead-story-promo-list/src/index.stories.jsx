@@ -4,7 +4,11 @@ import { boolean, withKnobs } from '@storybook/addon-knobs';
 import Timestamp from '#legacy/psammead-timestamp/src';
 import Image from '#legacy/psammead-image/src';
 import { latin } from '#legacy/gel-foundations/src/scripts';
-import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
+import StoryPromo, {
+  Headline,
+  Summary,
+  Link,
+} from '#legacy/psammead-story-promo/src';
 import Grid from '#legacy/psammead-grid/src';
 import { StoryPromoLi, StoryPromoLiBase, StoryPromoUl } from './index';
 import storyPromoData from '../testHelpers/fixtureData';

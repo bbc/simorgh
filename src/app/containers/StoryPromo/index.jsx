@@ -9,7 +9,11 @@ import {
   elementType,
 } from 'prop-types';
 import styled from '@emotion/styled';
-import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
+import StoryPromo, {
+  Headline,
+  Summary,
+  Link,
+} from '#legacy/psammead-story-promo/src';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import LiveLabel from '#legacy/psammead-live-label/src';

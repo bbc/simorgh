@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
-import { Headline, Link } from '@bbc/psammead-story-promo';
+import { Headline, Link } from '#legacy/psammead-story-promo/src';
 import LiveLabel from './index';
 import notes from '../README.md';
 

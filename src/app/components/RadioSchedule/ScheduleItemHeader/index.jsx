@@ -6,7 +6,7 @@ import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { formatUnixTimestamp } from '#legacy/psammead-timestamp-container/src/utilities';
 import detokenise from '#legacy/psammead-detokeniser/src';
 import LiveLabel from '#legacy/psammead-live-label/src';
-import { Link } from '@bbc/psammead-story-promo';
+import { Link } from '#legacy/psammead-story-promo/src';
 import {
   getSansBold,
   getSansRegular,

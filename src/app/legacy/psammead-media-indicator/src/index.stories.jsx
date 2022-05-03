@@ -5,7 +5,7 @@ import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import { C_CLOUD_LIGHT } from '#legacy/psammead-styles/src/colours';
 import { GEL_SPACING_HLF } from '#legacy/gel-foundations/src/spacings';
-import { Headline, Link } from '@bbc/psammead-story-promo';
+import { Headline, Link } from '#legacy/psammead-story-promo/src';
 import notes from '../README.md';
 import MediaIndicator from './index';
 

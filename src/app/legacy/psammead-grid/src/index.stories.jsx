@@ -5,7 +5,11 @@ import {
   withServicesKnob,
   buildRTLSubstories,
 } from '@bbc/psammead-storybook-helpers';
-import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
+import StoryPromo, {
+  Headline,
+  Summary,
+  Link,
+} from '#legacy/psammead-story-promo/src';
 import Grid from '.';
 import {
   ExampleImage,

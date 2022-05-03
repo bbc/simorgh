@@ -8,7 +8,7 @@ import {
   IndexAlso,
   IndexAlsosUl,
   IndexAlsosLi,
-} from '@bbc/psammead-story-promo/index-alsos';
+} from '#legacy/psammead-story-promo/src/IndexAlsos';
 import { ServiceContext } from '#contexts/ServiceContext';
 import {
   MEDIA_ASSET_PAGE,

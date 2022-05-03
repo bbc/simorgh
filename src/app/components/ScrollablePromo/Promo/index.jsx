@@ -10,7 +10,7 @@ import {
   C_GREY_8,
   C_WHITE,
 } from '#legacy/psammead-styles/src/colours';
-import { Link } from '@bbc/psammead-story-promo';
+import { Link } from '#legacy/psammead-story-promo/src';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,

@@ -29,7 +29,7 @@ import {
 import { mediaIcons } from '@bbc/psammead-assets/svgs';
 import LiveLabel from '#legacy/psammead-live-label/src';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import { Link } from '@bbc/psammead-story-promo';
+import { Link } from '#legacy/psammead-story-promo/src';
 import ImageGridItem from './ImageStyles';
 import TextGridItem from './TextStyles';
 
