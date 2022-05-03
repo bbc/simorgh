@@ -47,6 +47,9 @@ const PlayWrapper = withEpisodeContext(styled.div`
     height: 0.6rem;
     width: 0.7rem;
     color: ${C_WHITE};
+    @media screen and (forced-colors: active) {
+      fill: linkText;
+    }
   }
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {

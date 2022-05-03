@@ -47,6 +47,16 @@ exports[`FooterContainer should render correctly 1`] = `
   }
 }
 
+.emotion-3 svg {
+  fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-3 svg {
+    fill: linkText;
+  }
+}
+
 .emotion-5 {
   position: relative;
   display: -webkit-box;

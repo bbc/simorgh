@@ -99,6 +99,12 @@ exports[`Podcast Promo Card Episodes Text should match snapshot 1`] = `
   right: 0.1875rem;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-0>svg {
+    fill: canvasText;
+  }
+}
+
 .emotion-2 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -330,6 +336,12 @@ exports[`Podcast Promo Title should match snapshot 1`] = `
   position: relative;
   bottom: 0.3125rem;
   right: 0.1875rem;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-2>svg {
+    fill: canvasText;
+  }
 }
 
 .emotion-4 {

@@ -263,6 +263,16 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   }
 }
 
+.emotion-19 svg {
+  fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-19 svg {
+    fill: linkText;
+  }
+}
+
 .emotion-21 {
   position: relative;
   display: -webkit-box;
@@ -751,6 +761,16 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   .emotion-144 {
     min-height: 3.25rem;
     padding: 0 1rem;
+  }
+}
+
+.emotion-144 svg {
+  fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-144 svg {
+    fill: linkText;
   }
 }
 
