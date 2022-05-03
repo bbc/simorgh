@@ -1,4 +1,4 @@
-# psammead-consent-banner - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-consent-banner%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-consent-banner%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-consent-banner)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-consent-banner) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-consent-banner)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-consent-banner&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/consent-banner--default) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/psammead-consent-banner.svg)](https://www.npmjs.com/package/@bbc/psammead-consent-banner) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
+# psammead-consent-banner - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-consent-banner%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-consent-banner%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-consent-banner)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-consent-banner) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-consent-banner)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-consent-banner&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/consent-banner--default) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/#legacy/psammead-consent-banner/src.svg)](https://www.npmjs.com/package/#legacy/psammead-consent-banner/src) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
 
 ## Description
 
@@ -8,7 +8,7 @@ The `psammead-consent-banner` component is a styled `div` that encapsulates info
 
 ## Installation
 
-`npm install @bbc/psammead-consent-banner`
+`npm install #legacy/psammead-consent-banner/src`
 
 ## Props
 
@@ -33,7 +33,10 @@ The typical use-case of this component is on top of the webpage of all page type
 The `headingRef` prop is used so that the title of the consent banner can be programmatically focussed for accessibility reasons. This ref will be assigned to an HTML heading element which can be focussed using the DOM APIs: `headingRef.current.focus()`.
 
 ```jsx
-import { ConsentBanner, ConsentBannerText } from '@bbc/psammead-consent-banner';
+import {
+  ConsentBanner,
+  ConsentBannerText,
+} from '#legacy/psammead-consent-banner/src';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 
 const Accept = (

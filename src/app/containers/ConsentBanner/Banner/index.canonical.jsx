@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef } from 'react';
 import styled from '@emotion/styled';
 import { func, string, shape } from 'prop-types';
-import { ConsentBanner } from '@bbc/psammead-consent-banner';
+import { ConsentBanner } from '#legacy/psammead-consent-banner/src';
 import { ServiceContext } from '#contexts/ServiceContext';
 import BannerText from './Text';
 import getDataAttribute from './getDataAttribute';
