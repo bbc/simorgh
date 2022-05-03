@@ -1,4 +1,4 @@
-# psammead-embed-error - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-embed-error%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-embed-error%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-embed-error)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-embed-error) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-embed-error)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-embed-error&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/embed-error--containing-image) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/psammead-embed-error.svg)](https://www.npmjs.com/package/@bbc/psammead-embed-error) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
+# psammead-embed-error - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-embed-error%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-embed-error%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-embed-error)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-embed-error) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-embed-error)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-embed-error&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/embed-error--containing-image) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/#legacy/psammead-embed-error/src.svg)](https://www.npmjs.com/package/#legacy/psammead-embed-error/src) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
 
 ## Description
 
@@ -7,7 +7,7 @@
 ## Installation
 
 ```jsx
-npm install @bbc/psammead-embed-error --save
+npm install #legacy/psammead-embed-error/src --save
 ```
 
 ## Props
@@ -17,7 +17,7 @@ npm install @bbc/psammead-embed-error --save
 | `service`      | String  | No       | `news`  | `arabic`                                |
 | `fillViewport` | Boolean | No       | `false` | `true`                                  |
 | `message`      | String  | Yes      | -       | `Sorry, we can't display this content.` |
-| `link`         | Object  | No       | `null`       | See: [link](#link).                     |
+| `link`         | Object  | No       | `null`  | See: [link](#link).                     |
 
 ### `link`
 
@@ -37,11 +37,11 @@ This component is particularly useful if you serve content in an iframe and want
 
 ```js
 // iframe content.
-import EmbedError from '@bbc/psammead-embed-error';
+import EmbedError from '#legacy/psammead-embed-error/src';
 
 const Page = () => {
   if (error) {
-    return
+    return;
     <EmbedError
       message="Sorry, we can't display this content."
       link={{
