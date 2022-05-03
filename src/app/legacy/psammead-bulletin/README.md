@@ -35,7 +35,7 @@ npm install @bbc/psammead-bulletin --save
 
 ```jsx
 import Bulletin from '@bbc/psammead-bulletin';
-import { Image } from '@bbc/psammead-image';
+import { Image } from '#legacy/psammead-image/src';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 
 const WrappingComponent = () => {

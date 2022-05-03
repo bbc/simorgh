@@ -1,7 +1,7 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { latin, arabic } from '#legacy/gel-foundations/src/scripts';
-import Image from '@bbc/psammead-image';
+import Image from '#legacy/psammead-image/src';
 import Bulletin from '.';
 
 /* eslint-disable react/prop-types */

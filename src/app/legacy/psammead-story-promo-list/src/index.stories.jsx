@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { boolean, withKnobs } from '@storybook/addon-knobs';
 import Timestamp from '@bbc/psammead-timestamp';
-import Image from '@bbc/psammead-image';
+import Image from '#legacy/psammead-image/src';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
 import Grid from '@bbc/psammead-grid';

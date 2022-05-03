@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
-import Image from '@bbc/psammead-image';
+import Image from '#legacy/psammead-image/src';
 import MediaIndicator from '@bbc/psammead-media-indicator';
 import LiveLabel from '#legacy/psammead-live-label/src';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';

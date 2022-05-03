@@ -3,7 +3,7 @@ import { string } from 'prop-types';
 import styled from '@emotion/styled';
 import Paragraph from '@bbc/psammead-paragraph';
 import { cyrillicAndLatin } from '#legacy/gel-foundations/src/scripts';
-import Image from '@bbc/psammead-image';
+import Image from '#legacy/psammead-image/src';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,

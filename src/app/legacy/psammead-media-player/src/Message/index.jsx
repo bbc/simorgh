@@ -9,7 +9,7 @@ import {
 import { GEL_LONG_PRIMER } from '#legacy/gel-foundations/src/typography';
 import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
 import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
-import Image from '@bbc/psammead-image';
+import Image from '#legacy/psammead-image/src';
 
 const NOJS_BACKGROUND_COLOUR = 'rgba(34, 34, 34, 0.75)';
 

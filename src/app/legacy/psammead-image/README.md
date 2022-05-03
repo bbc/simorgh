@@ -1,4 +1,4 @@
-# psammead-image - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-image%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-image%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-image)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-image) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-image)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-image&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/image-img--landscape-image) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/psammead-image.svg)](https://www.npmjs.com/package/@bbc/psammead-image) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
+# psammead-image - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-image%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-image%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-image)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-image) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-image)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-image&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/image-img--landscape-image) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/#legacy/psammead-image/src.svg)](https://www.npmjs.com/package/#legacy/psammead-image/src) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
 
 ## Description
 
@@ -14,7 +14,7 @@ This component can be used at any point on a page.
 
 ## Installation
 
-`npm install @bbc/psammead-image`
+`npm install #legacy/psammead-image/src`
 
 ## Usage
 
@@ -23,7 +23,7 @@ This component can be used at any point on a page.
 Importing the standard Image component renders an `<img />` tag.
 
 ```jsx
-import Image from '@bbc/psammead-image';
+import Image from '#legacy/psammead-image/src';
 
 const WrappingContainer = ({ alt, src, height, width, sizes }) => (
   <Img alt={alt} src={src} height={height} width={width} sizes={sizes} fade />
@@ -39,7 +39,7 @@ The Amp Image component renders an `<amp-img>` tag.
 Example:
 
 ```jsx
-import { AmpImg } from '@bbc/psammead-image';
+import { AmpImg } from '#legacy/psammead-image/src';
 
 const WrappingContainer = ({ alt, src, height, width, sizes }) => (
   <AmpImg

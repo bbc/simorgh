@@ -28,7 +28,7 @@ The following example shows `psammead-figure` wrapping an
 import Caption from '@bbc/psammead-caption';
 import Copyright from '#legacy/psammead-copyright/src';
 import Figure from '@bbc/psammead-figure';
-import Image from '@bbc/psammead-image';
+import Image from '#legacy/psammead-image/src';
 import ImagePlaceholder from '#legacy/psammead-image-placeholder/src';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 

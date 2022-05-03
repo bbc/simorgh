@@ -3,7 +3,7 @@ import { string, number, bool, node, elementType } from 'prop-types';
 import styled from '@emotion/styled';
 import LazyLoad from 'react-lazyload';
 import ImagePlaceholder from '#legacy/psammead-image-placeholder/src';
-import Image, { AmpImg } from '@bbc/psammead-image';
+import Image, { AmpImg } from '#legacy/psammead-image/src';
 import { Helmet } from 'react-helmet';
 import { C_GHOST } from '#legacy/psammead-styles/src/colours';
 import { RequestContext } from '#contexts/RequestContext';

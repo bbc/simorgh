@@ -3,7 +3,7 @@ import React from 'react';
 import { string, shape, number } from 'prop-types';
 import styled from '@emotion/styled';
 
-import { Img } from '@bbc/psammead-image';
+import { Img } from '#legacy/psammead-image/src';
 import { GEL_SPACING_QUIN } from '#legacy/gel-foundations/src/spacings';
 import { GridItemMedium } from '#app/components/Grid';
 

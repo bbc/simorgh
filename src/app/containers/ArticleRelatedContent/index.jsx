@@ -7,7 +7,7 @@ import pathOr from 'ramda/src/pathOr';
 import pathEq from 'ramda/src/pathEq';
 import { C_GREY_2 } from '#legacy/psammead-styles/src/colours';
 import styled from '@emotion/styled';
-import Image from '@bbc/psammead-image';
+import Image from '#legacy/psammead-image/src';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
 import filterForBlockType from '#lib/utilities/blockHandlers';
