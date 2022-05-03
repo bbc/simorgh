@@ -61,6 +61,7 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
 .emotion-6 {
   background-color: #202224;
   min-height: 100px;
+  padding-bottom: 1rem;
 }
 
 .emotion-8 {
@@ -203,6 +204,7 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
 .emotion-6 {
   background-color: #202224;
   min-height: 100px;
+  padding-bottom: 1rem;
 }
 
 .emotion-8 {
@@ -384,6 +386,7 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
 .emotion-6 {
   background-color: #202224;
   min-height: 100px;
+  padding-bottom: 1rem;
 }
 
 .emotion-8 {
