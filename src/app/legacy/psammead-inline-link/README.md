@@ -1,12 +1,12 @@
-# psammead-inline-link - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-inline-link%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-inline-link%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-inline-link)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-inline-link) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-inline-link)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-inline-link&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/inlinelink--default) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/psammead-inline-link.svg)](https://www.npmjs.com/package/@bbc/psammead-inline-link) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://reactjs.org/docs/how-to-contribute.html#your-first-pull-request)
+# psammead-inline-link - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-inline-link%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-inline-link%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-inline-link)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-inline-link) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-inline-link)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-inline-link&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/inlinelink--default) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/#legacy/psammead-inline-link/src.svg)](https://www.npmjs.com/package/#legacy/psammead-inline-link/src) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://reactjs.org/docs/how-to-contribute.html#your-first-pull-request)
 
 ## Description
 
-The `@bbc/psammead-inline-link` package exports a single Inline Link component. It uses an `a` HTML element and colours from `#legacy/psammead-styles/src`.
+The `#legacy/psammead-inline-link/src` package exports a single Inline Link component. It uses an `a` HTML element and colours from `#legacy/psammead-styles/src`.
 
 ## Installation
 
-`npm install @bbc/psammead-inline-link`
+`npm install #legacy/psammead-inline-link/src`
 
 ## Props
 
@@ -17,7 +17,7 @@ The `@bbc/psammead-inline-link` package exports a single Inline Link component. 
 ## Usage
 
 ```jsx
-import InlineLink from '@bbc/psammead-inline-link';
+import InlineLink from '#legacy/psammead-inline-link/src';
 
 const WrappingComponent = () => (
   <InlineLink href="https://www.bbc.com/news">Text here</InlineLink>
@@ -29,7 +29,7 @@ We have not included any typography styles inside this component. This is so it 
 Example inline link in a paragraph:
 
 ```jsx
-import InlineLink from '@bbc/psammead-inline-link';
+import InlineLink from '#legacy/psammead-inline-link/src';
 import Paragraph from '@bbc/psammead-paragraph';
 
 const WrapperComponent = () => (
@@ -40,7 +40,7 @@ const WrapperComponent = () => (
 Example inline link in a Headline or SubHeading:
 
 ```jsx
-import InlineLink from '@bbc/psammead-inline-link';
+import InlineLink from '#legacy/psammead-inline-link/src';
 import { Headline, SubHeading } from '@bbc/psammead-headings';
 
 const HeadlineWithALink = () => (
@@ -55,7 +55,7 @@ const HeadlineWithALink = () => (
 Alternatively, if you want to just extend existing styles with other GEL Typography groups, you can do the following:
 
 ```jsx
-import InlineLink from '@bbc/psammead-inline-link';
+import InlineLink from '#legacy/psammead-inline-link/src';
 import { GEL_PARAGON } from '#legacy/gel-foundations/src';
 
 const GelParagonLink = styled(InlineLink)`

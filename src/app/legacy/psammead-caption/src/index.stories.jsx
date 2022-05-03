@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import InlineLink from '@bbc/psammead-inline-link';
+import InlineLink from '#legacy/psammead-inline-link/src';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import {
   withServicesKnob,

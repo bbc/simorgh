@@ -1,7 +1,7 @@
 import React from 'react';
 import { string, arrayOf, shape } from 'prop-types';
 import styled from '@emotion/styled';
-import InlineLink from '@bbc/psammead-inline-link';
+import InlineLink from '#legacy/psammead-inline-link/src';
 import Paragraph from '@bbc/psammead-paragraph';
 import { C_POSTBOX, C_SHADOW } from '#legacy/psammead-styles/src/colours';
 import { getSerifMedium } from '#legacy/psammead-styles/src/font-styles';
