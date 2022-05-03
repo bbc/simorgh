@@ -24,18 +24,18 @@ const rankTranslationScript = (endpoint, service) => {
     try{
       const response = await fetch("${endpoint}");
       const data = await response.json();
-      data.records.forEach((item, index) => {
-        return item.rankTranslation = translations[index+1]
-      });
 
       if(data.records.length === 0){
-        throw new Error("MostRead data records in mostread.json endpoint is empty");
+        throw new Error("Empty records from mostread endpoint");
       }
+
+      data.records.forEach((item, index) => 
+        item.rankTranslation = translations[index+1]);    
 
       return data;
     } catch(error){
-      console.error(error)
-      return []
+      console.warn(error);
+      return [];
     }
   }
     exportFunction('getRemoteData', getRemoteData);`;
