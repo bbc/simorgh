@@ -1,4 +1,4 @@
-# psammead-byline - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-byline%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-byline%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-byline)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-byline) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-byline)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-byline&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/byline--containing-image) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/psammead-byline.svg)](https://www.npmjs.com/package/@bbc/psammead-byline) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
+# psammead-byline - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-byline%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-byline%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-byline)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-byline) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-byline)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-byline&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/byline--containing-image) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/#legacy/psammead-byline/src.svg)](https://www.npmjs.com/package/#legacy/psammead-byline/src) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
 
 ## Description
 
@@ -7,38 +7,38 @@ The `Byline` component is designed to display an author's full name, title, and 
 ## Installation
 
 ```
-npm install @bbc/psammead-byline --save
+npm install #legacy/psammead-byline/src --save
 ```
 
 ## Props
 
-| Argument          | Type      | Required | Default   | Example                        |
-| ----------------- | --------- | -------- | --------- | ------------------------------ |
-| service           | string    | Yes      | N/A       | `'news'`                       |
-| [avatar](#Avatar) | object    | No       | `null`    |  _See below._                  |
-| name              | string    | Yes      | N/A       | `'John Smith'`                 |
-| title             | string    | Yes      | N/A       | `'Art editor'`                 |
+| Argument          | Type   | Required | Default | Example        |
+| ----------------- | ------ | -------- | ------- | -------------- |
+| service           | string | Yes      | N/A     | `'news'`       |
+| [avatar](#Avatar) | object | No       | `null`  | _See below._   |
+| name              | string | Yes      | N/A     | `'John Smith'` |
+| title             | string | Yes      | N/A     | `'Art editor'` |
 
 ### Avatar
 
-| Argument          | Type      | Required | Default   | Example                          |
-| ----------------- | --------- | -------- | --------- | -------------------------------- |
-| src               | string    | Yes      | N/A       | `'http://www.bbc.co.uk/img.jpg'` |
-| alt               | string    | No       | `null`    | `'A person wearing glasses.'`    |
+| Argument | Type   | Required | Default | Example                          |
+| -------- | ------ | -------- | ------- | -------------------------------- |
+| src      | string | Yes      | N/A     | `'http://www.bbc.co.uk/img.jpg'` |
+| alt      | string | No       | `null`  | `'A person wearing glasses.'`    |
 
 ## Usage
 
 <!-- Description of the component usage -->
 
 ```jsx
-import Byline from "@bbc/psammead-byline"
+import Byline from '#legacy/psammead-byline/src';
 
 <Byline
-  service='news'
+  service="news"
   avatar={{ src: 'http://www.bbc.co.uk/john-smith.jpg' }}
   name="John Smith"
   title="Art editor"
-/>
+/>;
 ```
 
 ### When to use this component
