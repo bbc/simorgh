@@ -99,19 +99,31 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/afaanoromoo/topics/c7zp5z9n3x5t'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/afaanoromoo/topics/c7zp5z9n3x5t'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
-            paths: [
-              '/afaanoromoo/oduu-51248626', // CPS MAP with video clip
-            ],
+            paths: ['/afaanoromoo/oduu-51248626'],
             enabled: false,
           },
           test: {
-            paths: [
-              '/afaanoromoo/23149891', // CPS MAP with video clip
-            ],
+            paths: ['/afaanoromoo/23149891'],
             enabled: false,
           },
           local: {
@@ -350,7 +362,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/afrique/topics/c9ny75kpxlkt'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/afrique/topics/c9ny75kpxlkt'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -582,7 +610,23 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/amharic/topics/c06gq8wdrjyt'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/amharic/topics/c06gq8wdrjyt'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -1012,7 +1056,23 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/azeri/topics/c1gdq32g3ddt'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/azeri/topics/c1gdq32g3ddt'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -1244,7 +1304,23 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/bengali/topics/c2dwq2nd40xt'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/bengali/topics/c2dwq2nd40xt'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -1508,7 +1584,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/burmese/topics/c404v08p1wxt'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/burmese/topics/c404v08p1wxt'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -1690,7 +1782,23 @@ module.exports = () => ({
       mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/gahuza/topics/c7zp5z0yd0xt'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/gahuza/topics/c7zp5z0yd0xt'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
@@ -2045,7 +2153,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/gujarati/topics/c2dwqj95d30t'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/gujarati/topics/c2dwqj95d30t'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -2304,7 +2428,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/hausa/topics/c5qvpxkx1j7t'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/hausa/topics/c5qvpxkx1j7t'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -2565,7 +2705,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/hindi/topics/c6vzy709wvxt'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/hindi/topics/c6vzy709wvxt'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -2759,7 +2915,23 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/igbo/topics/c340qr24xggt'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/igbo/topics/c340qr24xggt'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -2996,7 +3168,23 @@ module.exports = () => ({
         smoke: true,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/indonesia/topics/c340qrk1znxt'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/indonesia/topics/c340qrk1znxt'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -3190,7 +3378,23 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/japanese/topics/c340qrn7pp0t'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/japanese/topics/c340qrn7pp0t'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -3417,7 +3621,23 @@ module.exports = () => ({
         smoke: true,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/korean/topics/c17q6yp3jx4t'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/korean/topics/c17q6yp3jx4t'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -3672,7 +3892,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/kyrgyz/topics/c0109l9xrpnt'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/kyrgyz/topics/c0109l9xrpnt'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -3910,7 +4146,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/marathi/topics/c2dwqjwqqqjt'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/marathi/topics/c2dwqjwqqqjt'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -4099,7 +4351,23 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/mundo/topics/cdr5613yzwqt'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/mundo/topics/cdr5613yzwqt'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -4298,7 +4566,23 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/mundo/topics/cdr5613yzwqt'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/mundo/topics/cdr5613yzwqt'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: { environments: undefined, smoke: false },
       mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
@@ -4436,7 +4720,23 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/nepali/topics/c340q4p5136t'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/nepali/topics/c340q4p5136t'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -5852,7 +6152,23 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/punjabi/topics/c0w258dd62mt'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/punjabi/topics/c0w258dd62mt'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -6066,7 +6382,23 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/russian/topics/c50nzm54vzmt'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/russian/topics/c50nzm54vzmt'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -6691,7 +7023,23 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/sinhala/topics/c2dwqd311xyt'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/sinhala/topics/c2dwqd311xyt'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -6920,7 +7268,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/somali/topics/cz74k7jd8n8t'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/somali/topics/cz74k7jd8n8t'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       onDemandTV: {
         environments: {
           live: {
@@ -7268,7 +7632,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/swahili/topics/c06gq663n6jt'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/swahili/topics/c06gq663n6jt'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -7524,7 +7904,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/tamil/topics/c06gq6gnzdgt'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/tamil/topics/c06gq6gnzdgt'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -7742,7 +8138,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/telugu/topics/c5qvp16w7dnt'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/telugu/topics/c5qvp16w7dnt'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -7931,7 +8343,23 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/thai/topics/c340qx429k7t'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/thai/topics/c340qx429k7t'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -8177,7 +8605,23 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/tigrinya/topics/c1gdqrg28zxt'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/tigrinya/topics/c1gdqrg28zxt'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -8366,7 +8810,23 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/turkce/topics/c2dwqnwkvnqt'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/turkce/topics/c2dwqnwkvnqt'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -9029,7 +9489,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/ukrainian/topics/c340qxwr67yt'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/ukrainian/topics/c340qxwr67yt'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -9547,7 +10023,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/uzbek/topics/c340q0q55jvt'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/uzbek/topics/c340q0q55jvt'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -9745,7 +10237,23 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/vietnamese/topics/c340q0gkg4kt'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/vietnamese/topics/c340q0gkg4kt'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -9939,7 +10447,23 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/yoruba/topics/c12jqpnxn44t'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/yoruba/topics/c12jqpnxn44t'],
+            enabled: true,
+          },
+          local: {
+            paths: [''], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
