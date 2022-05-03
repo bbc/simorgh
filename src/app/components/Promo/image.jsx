@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import ImagePlaceholder from '@bbc/psammead-image-placeholder';
+import ImagePlaceholder from '#legacy/psammead-image-placeholder/src';
 import { string, node } from 'prop-types';
 import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
 import {

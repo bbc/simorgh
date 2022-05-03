@@ -16,7 +16,7 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '#legacy/gel-foundations/src/breakpoints';
 
-import ImagePlaceholder from '@bbc/psammead-image-placeholder';
+import ImagePlaceholder from '#legacy/psammead-image-placeholder/src';
 
 import { withEpisodeContext } from './helpers';
 

@@ -4,7 +4,7 @@ import { withKnobs, text } from '@storybook/addon-knobs';
 import Caption from '@bbc/psammead-caption';
 import Copyright from '#legacy/psammead-copyright/src';
 import Image from '@bbc/psammead-image';
-import ImagePlaceholder from '@bbc/psammead-image-placeholder';
+import ImagePlaceholder from '#legacy/psammead-image-placeholder/src';
 import Paragraph from '@bbc/psammead-paragraph';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';

@@ -1,4 +1,4 @@
-# psammead-image-placeholder - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-image-placeholder%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-image-placeholder%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-image-placeholder)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-image-placeholder) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-image-placeholder)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-image-placeholder&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/imageplaceholder--16x9-image-placeholder) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/psammead-image-placeholder.svg)](https://www.npmjs.com/package/@bbc/psammead-image-placeholder) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
+# psammead-image-placeholder - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-image-placeholder%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-image-placeholder%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-image-placeholder)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-image-placeholder) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-image-placeholder)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-image-placeholder&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/imageplaceholder--16x9-image-placeholder) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/#legacy/psammead-image-placeholder/src.svg)](https://www.npmjs.com/package/#legacy/psammead-image-placeholder/src) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
 
 ## Description
 
@@ -14,7 +14,7 @@ Psammead Image Placeholder is designed to appear as a temporary stand-in to be r
 
 ## Installation
 
-`npm install @bbc/psammead-image-placeholder`
+`npm install #legacy/psammead-image-placeholder/src`
 
 ## Usage
 
@@ -23,7 +23,7 @@ Psammead Image Placeholder is designed to appear as a temporary stand-in to be r
 The ImagePlaceholder component is expected to contain an image as a child element.
 
 ```jsx
-import ImagePlaceholder from '@bbc/psammead-image-placeholder';
+import ImagePlaceholder from '#legacy/psammead-image-placeholder/src';
 
 const WrapperComponent = ({
   ratio,
@@ -39,14 +39,10 @@ const WrapperComponent = ({
 The ImagePlaceholderAmp component is expected to be used as a child element of an `amp-img` component. Information about `amp-img` can be found on the [AMP documentation website](https://amp.dev/documentation/components/amp-img/)
 
 ```jsx
-import ImagePlaceholderAmp from '@bbc/psammead-image-placeholder';
+import ImagePlaceholderAmp from '#legacy/psammead-image-placeholder/src';
 
 const WrapperComponent = () => (
-  <amp-img
-    src="http://some-image.url"
-    width="645px"
-    height="128px"
-  >
+  <amp-img src="http://some-image.url" width="645px" height="128px">
     <ImagePlaceholderAmp />
   </amp-img>
 );
@@ -56,17 +52,17 @@ const WrapperComponent = () => (
 
 ### ImagePlaceholder
 
-| Argument | Type                                   | Required | Default | Example |
-| -------- | -------------------------------------- | -------- | ------- | ------- |
-| Ratio    | Number, ratio between height and width | Yes      | N/A     | 65.625  |
-| darkMode | Bool, true (dark) or false (normal)    | No       | false   | false   |
-| forwardStyle | Styling object that applies additional styling    | No       | null   | { background: 'none' }   |
+| Argument     | Type                                           | Required | Default | Example                |
+| ------------ | ---------------------------------------------- | -------- | ------- | ---------------------- |
+| Ratio        | Number, ratio between height and width         | Yes      | N/A     | 65.625                 |
+| darkMode     | Bool, true (dark) or false (normal)            | No       | false   | false                  |
+| forwardStyle | Styling object that applies additional styling | No       | null    | { background: 'none' } |
 
 ### ImagePlaceholderAmp
 
-| Argument | Type                                   | Required | Default | Example |
-| -------- | -------------------------------------- | -------- | ------- | ------- |
-| darkMode | Bool, true (dark) or false (normal)    | No       | false   | false   |
+| Argument | Type                                | Required | Default | Example |
+| -------- | ----------------------------------- | -------- | ------- | ------- |
+| darkMode | Bool, true (dark) or false (normal) | No       | false   | false   |
 
 ### Accessibility notes
 
