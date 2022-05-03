@@ -6,7 +6,7 @@ Adds non-visible text to the page, to be utilised by screen-readers and other as
 
 ## Installation
 
-`npm install @bbc/psammead-visually-hidden-text`
+`npm install#legacy/psammead-visually-hidden-text/src`
 
 ## Props
 
