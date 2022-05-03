@@ -1,14 +1,14 @@
-# psammead-paragraph - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-paragraph%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-paragraph%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-paragraph)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-paragraph) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-paragraph)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-paragraph&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/paragraph--default) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/psammead-paragraph.svg)](https://www.npmjs.com/package/@bbc/psammead-paragraph) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
+# psammead-paragraph - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-paragraph%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-paragraph%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-paragraph)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-paragraph) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-paragraph)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-paragraph&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/paragraph--default) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/#legacy/psammead-paragraph/src.svg)](https://www.npmjs.com/package/#legacy/psammead-paragraph/src) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
 
 ## Description
 
-The `@bbc/psammead-paragraph` package exports a single Paragraph component. It uses a `p` HTML element.
+The `#legacy/psammead-paragraph/src` package exports a single Paragraph component. It uses a `p` HTML element.
 
 It uses `#legacy/psammead-styles/src` for colours and font family and `#legacy/gel-foundations/src` for spacing and for GEL Typography implemented in Styled Components.
 
 ## Installation
 
-`npm install @bbc/psammead-paragraph`
+`npm install #legacy/psammead-paragraph/src`
 
 ## Props
 
@@ -22,7 +22,7 @@ It uses `#legacy/psammead-styles/src` for colours and font family and `#legacy/g
 ## Usage
 
 ```jsx
-import Paragraph from '@bbc/psammead-paragraph';
+import Paragraph from '#legacy/psammead-paragraph/src';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 
 const WrappingComponent = () => (

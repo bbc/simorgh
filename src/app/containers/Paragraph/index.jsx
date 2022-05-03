@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import Paragraph from '@bbc/psammead-paragraph';
+import Paragraph from '#legacy/psammead-paragraph/src';
 import styled from '@emotion/styled';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
 import { GEL_SPACING_QUIN } from '#legacy/gel-foundations/src/spacings';

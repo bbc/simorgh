@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { string, bool } from 'prop-types';
 import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
 import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#legacy/gel-foundations/src/breakpoints';
-import ParagraphComponent from '@bbc/psammead-paragraph';
+import ParagraphComponent from '#legacy/psammead-paragraph/src';
 import { C_METAL } from '#legacy/psammead-styles/src/colours';
 import { ServiceContext } from '#contexts/ServiceContext';
 

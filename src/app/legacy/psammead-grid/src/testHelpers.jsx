@@ -1,7 +1,7 @@
 import React from 'react';
 import { string } from 'prop-types';
 import styled from '@emotion/styled';
-import Paragraph from '@bbc/psammead-paragraph';
+import Paragraph from '#legacy/psammead-paragraph/src';
 import { cyrillicAndLatin } from '#legacy/gel-foundations/src/scripts';
 import Image from '#legacy/psammead-image/src';
 import {

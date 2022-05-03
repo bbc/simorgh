@@ -5,7 +5,7 @@ import Caption from '@bbc/psammead-caption';
 import Copyright from '#legacy/psammead-copyright/src';
 import Image from '#legacy/psammead-image/src';
 import ImagePlaceholder from '#legacy/psammead-image-placeholder/src';
-import Paragraph from '@bbc/psammead-paragraph';
+import Paragraph from '#legacy/psammead-paragraph/src';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import notes from '../README.md';
