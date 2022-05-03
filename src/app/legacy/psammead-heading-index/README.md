@@ -1,5 +1,5 @@
 <!-- prettier-ignore -->
-# psammead-heading-index - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-heading-index%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-heading-index%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-heading-index)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-heading-index) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-heading-index)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-heading-index&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/headline--default) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/psammead-heading-index.svg)](https://www.npmjs.com/package/@bbc/psammead-heading-index) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
+# psammead-heading-index - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-heading-index%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-heading-index%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-heading-index)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-heading-index) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-heading-index)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-heading-index&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/headline--default) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/psammead-heading-index/src.svg)](https://www.npmjs.com/package/@bbc/psammead-heading-index/src) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
 
 ## Description
 
@@ -7,7 +7,7 @@ The `HeadingIndex` uses a `h1` HTML element and is used on index pages, such as 
 
 ## Installation
 
-`npm install @bbc/psammead-heading-index`
+`npm install @bbc/psammead-heading-index/src`
 
 ## Props
 
@@ -20,7 +20,7 @@ The `HeadingIndex` uses a `h1` HTML element and is used on index pages, such as 
 ## Usage
 
 ```jsx
-import HeadingIndex from '@bbc/psammead-heading-index';
+import HeadingIndex from '@bbc/psammead-heading-index/src';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 
 const Wrapper = () => (
