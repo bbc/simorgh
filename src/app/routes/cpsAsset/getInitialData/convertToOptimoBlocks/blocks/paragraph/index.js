@@ -3,7 +3,7 @@ import { processBlock } from './helpers';
 
 const richTextTransforms = loadable(() =>
   import(
-    /* webpackChunkName: 'rich-text-transforms' */ '@bbc/psammead-rich-text-transforms'
+    /* webpackChunkName: 'rich-text-transforms' */ '#legacy/psammead-rich-text-transforms/src'
   ),
 );
 

@@ -14,6 +14,7 @@ array of child blocks.
 There are many types of block available.
 
 Currently, this library only supports the following block types:
+
 - paragraph
 - text
 - urlLink
@@ -28,8 +29,9 @@ npm install @bbc/psammead-locales --save
 ## Usage
 
 ### `candyXmlToRichText`
+
 ```
-const { candyXmlToRichText } = require("@bbc/psammead-rich-text-transforms")
+const { candyXmlToRichText } = require("#legacy/psammead-rich-text-transforms/src")
 
 const xml = `
 <body>
@@ -103,8 +105,9 @@ candyXmlToRichText(xml)
 ```
 
 ### `stringToRichText`
+
 ```
-const stringToRichText = require("@bbc/psammead-rich-text-transforms")
+const stringToRichText = require("#legacy/psammead-rich-text-transforms/src")
 
 const string = "Hello world"
 
