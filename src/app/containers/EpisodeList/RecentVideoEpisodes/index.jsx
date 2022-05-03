@@ -4,11 +4,11 @@ import { arrayOf, shape, string, number } from 'prop-types';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import Timestamp from '@bbc/psammead-timestamp-container';
+import Timestamp from '#legacy/psammead-timestamp-container/src';
 import {
   formatDuration,
   formatUnixTimestamp,
-} from '@bbc/psammead-timestamp-container/utilities';
+} from '#legacy/psammead-timestamp-container/src/utilities';
 import SectionLabel from '#legacy/psammead-section-label/src';
 import { C_WHITE, C_MIDNIGHT_BLACK } from '#legacy/psammead-styles/src/colours';
 import {

@@ -13,7 +13,7 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
 } from '#legacy/gel-foundations/src/breakpoints';
-import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
+import { formatUnixTimestamp } from '#legacy/psammead-timestamp-container/src/utilities';
 import {
   getDoublePica,
   getParagon,

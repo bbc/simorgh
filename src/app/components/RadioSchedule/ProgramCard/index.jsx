@@ -16,7 +16,7 @@ import {
   getPica,
 } from '#legacy/gel-foundations/src/typography';
 import { shape, string, number } from 'prop-types';
-import { formatDuration } from '@bbc/psammead-timestamp-container/utilities';
+import { formatDuration } from '#legacy/psammead-timestamp-container/src/utilities';
 import { ServiceContext } from '#contexts/ServiceContext';
 import ScheduleItemHeader from '../ScheduleItemHeader';
 import { programStateConfig } from '../utilities';

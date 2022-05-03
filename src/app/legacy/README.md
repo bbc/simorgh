@@ -104,7 +104,7 @@ Or if you're using [styled-components](https://styled-components.com), you can u
 <!-- prettier-ignore -->
 | Package | Version | Dependencies | Peer Dependencies
 |--------|--------|------------|------------|
-| [`@bbc/psammead-timestamp-container`](./containers/psammead-timestamp-container) |[![npm version](https://img.shields.io/npm/v/@bbc/psammead-timestamp-container.svg)](https://www.npmjs.com/package/@bbc/psammead-timestamp-container) |[![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/containers/psammead-timestamp-container)](https://david-dm.org/bbc/psammead?path=packages/containers/psammead-timestamp-container) | [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/containers/psammead-timestamp-container)](https://david-dm.org/bbc/psammead?path=packages/containers/psammead-timestamp-container&type=peer) |
+| [`#legacy/psammead-timestamp-container/src`](./containers/psammead-timestamp-container) |[![npm version](https://img.shields.io/npm/v/#legacy/psammead-timestamp-container/src.svg)](https://www.npmjs.com/package/#legacy/psammead-timestamp-container/src) |[![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/containers/psammead-timestamp-container)](https://david-dm.org/bbc/psammead?path=packages/containers/psammead-timestamp-container) | [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/containers/psammead-timestamp-container)](https://david-dm.org/bbc/psammead?path=packages/containers/psammead-timestamp-container&type=peer) |
 
 ### [Utilities](./utilities)
 

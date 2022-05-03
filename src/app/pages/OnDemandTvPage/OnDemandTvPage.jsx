@@ -16,7 +16,7 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#legacy/gel-foundations/src/breakpoints';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
+import { formatUnixTimestamp } from '#legacy/psammead-timestamp-container/src/utilities';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import LinkedData from '#containers/LinkedData';

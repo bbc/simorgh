@@ -4,7 +4,7 @@ import { bool, number } from 'prop-types';
 import { C_PEBBLE, C_METAL } from '#legacy/psammead-styles/src/colours';
 import { getLongPrimer } from '#legacy/gel-foundations/src/typography';
 import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
-import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
+import { formatUnixTimestamp } from '#legacy/psammead-timestamp-container/src/utilities';
 import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#legacy/gel-foundations/src/breakpoints';
 
 import { ServiceContext } from '#contexts/ServiceContext';

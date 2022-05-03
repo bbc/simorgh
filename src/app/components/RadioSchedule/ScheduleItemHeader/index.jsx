@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import { oneOfType, elementType, string, number } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
+import { formatUnixTimestamp } from '#legacy/psammead-timestamp-container/src/utilities';
 import detokenise from '#legacy/psammead-detokeniser/src';
 import LiveLabel from '#legacy/psammead-live-label/src';
 import { Link } from '@bbc/psammead-story-promo';

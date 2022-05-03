@@ -1,4 +1,4 @@
-# psammead-timestamp-container - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcontainers%2Fpsammead-timestamp-container%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcontainers%2Fpsammead-timestamp-container%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/containers/psammead-timestamp-container)](https://david-dm.org/bbc/psammead?path=packages/containers/psammead-timestamp-container) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/containers/psammead-timestamp-container)](https://david-dm.org/bbc/psammead?path=packages/containers/psammead-timestamp-container&type=peer) [![npm version](https://img.shields.io/npm/v/@bbc/psammead-timestamp-container.svg)](https://www.npmjs.com/package/@bbc/psammead-timestamp-container) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/timestampcontainer--default) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
+# psammead-timestamp-container - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcontainers%2Fpsammead-timestamp-container%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcontainers%2Fpsammead-timestamp-container%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/containers/psammead-timestamp-container)](https://david-dm.org/bbc/psammead?path=packages/containers/psammead-timestamp-container) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/containers/psammead-timestamp-container)](https://david-dm.org/bbc/psammead?path=packages/containers/psammead-timestamp-container&type=peer) [![npm version](https://img.shields.io/npm/v/#legacy/psammead-timestamp-container/src.svg)](https://www.npmjs.com/package/#legacy/psammead-timestamp-container/src) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/timestampcontainer--default) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
 
 ## Description
 
@@ -14,7 +14,7 @@
 
 ## Installation
 
-`npm install @bbc/psammead-timestamp-container`
+`npm install #legacy/psammead-timestamp-container/src`
 
 ## Props
 
@@ -61,7 +61,7 @@ const WrappingContainer = () => (
 **formatDuration**
 
 ```jsx
-import { formatDuration } from '@bbc/psammead-timestamp-container/utilities';
+import { formatDuration } from '#legacy/psammead-timestamp-container/src/utilities';
 
 const localisedDuration = formatDuration({ duration: 'PTM30', locale: 'my' });
 const customFormatDuration = formatDuration({
@@ -80,7 +80,7 @@ const customFormatDuration = formatDuration({
 **localisedMoment**
 
 ```jsx
-import { localisedMoment } from '@bbc/psammead-timestamp-container/utilities';
+import { localisedMoment } from '#legacy/psammead-timestamp-container/src/utilities';
 
 const localisedMoment = localisedMoment({ locale, timestamp });
 ```
@@ -94,7 +94,7 @@ const localisedMoment = localisedMoment({ locale, timestamp });
 **formatUnixTimestamp**
 
 ```jsx
-import { localiseTimestamp } from '@bbc/psammead-timestamp-container/utilities';
+import { localiseTimestamp } from '#legacy/psammead-timestamp-container/src/utilities';
 
 const formattedTime = formatUnixTimestamp({
   format,

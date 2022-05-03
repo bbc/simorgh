@@ -1919,20 +1919,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/psammead-timestamp-container@npm:5.1.2":
-  version: 5.1.2
-  resolution: "@bbc/psammead-timestamp-container@npm:5.1.2"
-  dependencies:
-    "@bbc/gel-foundations": 7.0.0
-    "@bbc/psammead-timestamp": 4.0.31
-    moment-timezone: ^0.5.26
-  peerDependencies:
-    moment: 2.24.0
-    react: ">=16.9.0"
-  checksum: 3b15e79cadb7c3231fa77b9b75644cffc2d36d99a3062e211ebfbd29f4877867e11be3c14235195d343f50c85b4567b8d97a9e9bf725d29917ad93177fe9ed7c
-  languageName: node
-  linkType: hard
-
 "@bbc/psammead-timestamp@npm:4.0.31":
   version: 4.0.31
   resolution: "@bbc/psammead-timestamp@npm:4.0.31"
@@ -19229,7 +19215,6 @@ __metadata:
     "@bbc/psammead-storybook-helpers": 9.0.17
     "@bbc/psammead-test-helpers": 6.0.5
     "@bbc/psammead-timestamp": 4.0.31
-    "@bbc/psammead-timestamp-container": 5.1.2
     "@bbc/web-vitals": 1.1.1
     "@emotion/babel-plugin": 11.9.2
     "@emotion/cache": 11.7.1

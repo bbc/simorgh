@@ -1,4 +1,4 @@
-import { formatDuration } from '@bbc/psammead-timestamp-container/utilities';
+import { formatDuration } from '#legacy/psammead-timestamp-container/src/utilities';
 import {
   C_KINGFISHER,
   C_POSTBOX,

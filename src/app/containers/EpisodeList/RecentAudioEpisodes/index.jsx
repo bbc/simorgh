@@ -7,8 +7,8 @@ import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import {
   formatDuration,
   formatUnixTimestamp,
-} from '@bbc/psammead-timestamp-container/utilities';
-import Timestamp from '@bbc/psammead-timestamp-container';
+} from '#legacy/psammead-timestamp-container/src/utilities';
+import Timestamp from '#legacy/psammead-timestamp-container/src';
 import SectionLabel from '#legacy/psammead-section-label/src';
 import {
   GEL_SPACING_DBL,
