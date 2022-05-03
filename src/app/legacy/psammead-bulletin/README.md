@@ -1,4 +1,4 @@
-# psammead-bulletin - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-bulletin%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-bulletin%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-bulletin)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-bulletin) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-bulletin)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-bulletin&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/bulletin--containing-image) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/psammead-bulletin.svg)](https://www.npmjs.com/package/@bbc/psammead-bulletin) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
+# psammead-bulletin - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-bulletin%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-bulletin%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-bulletin)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-bulletin) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-bulletin)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-bulletin&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/bulletin--containing-image) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/#legacy/psammead-bulletin/src.svg)](https://www.npmjs.com/package/#legacy/psammead-bulletin/src) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
 
 ## Description
 
@@ -7,7 +7,7 @@ The `Bulletin` component can be used to render `Radio` or `TVBulletin` by passin
 ## Installation
 
 ```jsx
-npm install @bbc/psammead-bulletin --save
+npm install #legacy/psammead-bulletin/src --save
 ```
 
 ## Props
@@ -34,7 +34,7 @@ npm install @bbc/psammead-bulletin --save
 ## Usage
 
 ```jsx
-import Bulletin from '@bbc/psammead-bulletin';
+import Bulletin from '#legacy/psammead-bulletin/src';
 import { Image } from '#legacy/psammead-image/src';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 
