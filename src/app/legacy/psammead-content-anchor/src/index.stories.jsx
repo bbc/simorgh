@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import Paragraph from '#legacy/psammead-paragraph/src';
-import { Headline } from '@bbc/psammead-headings';
+import { Headline } from '#legacy/psammead-headings/src';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import notes from '../README.md';
 import ContentAnchor from './index';

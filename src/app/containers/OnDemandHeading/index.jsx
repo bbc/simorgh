@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { string, number, bool } from 'prop-types';
 import styled from '@emotion/styled';
-import { Headline } from '@bbc/psammead-headings';
+import { Headline } from '#legacy/psammead-headings/src';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import {
   GEL_SPACING,

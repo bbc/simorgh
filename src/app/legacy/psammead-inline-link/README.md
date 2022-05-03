@@ -41,7 +41,7 @@ Example inline link in a Headline or SubHeading:
 
 ```jsx
 import InlineLink from '#legacy/psammead-inline-link/src';
-import { Headline, SubHeading } from '@bbc/psammead-headings';
+import { Headline, SubHeading } from '#legacy/psammead-headings/src';
 
 const HeadlineWithALink = () => (
   <InlineLink href="https://www.bbc.com/news"><Headline>Headline</Headline></InlineLink>

@@ -4,7 +4,7 @@ import pathOr from 'ramda/src/pathOr';
 import { oneOfType, elementType, string, number } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
-import detokenise from '@bbc/psammead-detokeniser';
+import detokenise from '#legacy/psammead-detokeniser/src';
 import LiveLabel from '#legacy/psammead-live-label/src';
 import { Link } from '@bbc/psammead-story-promo';
 import {

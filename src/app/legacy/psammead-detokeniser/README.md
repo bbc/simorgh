@@ -1,4 +1,4 @@
-# psammead-detokeniser - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-detokeniser%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-detokeniser%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-detokeniser)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-detokeniser) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-detokeniser)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-detokeniser&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/detokeniser--containing-image) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/psammead-detokeniser.svg)](https://www.npmjs.com/package/@bbc/psammead-detokeniser) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
+# psammead-detokeniser - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-detokeniser%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-detokeniser%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-detokeniser)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-detokeniser) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-detokeniser)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-detokeniser&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/detokeniser--containing-image) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/#legacy/psammead-detokeniser/src.svg)](https://www.npmjs.com/package/#legacy/psammead-detokeniser/src) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
 
 ## Description
 
@@ -7,23 +7,23 @@ The `detokeniser` utility operates on strings and replaces % delimited tokens wi
 ## Installation
 
 ```jsx
-npm install @bbc/psammead-detokeniser --save
+npm install #legacy/psammead-detokeniser/src --save
 ```
 
 ## Props
 
-| Argument  | Type | Required | Default | Example |
-| --------- | ---- | -------- | ------- | ------- |
-| text | string | yes | N/A | `'Foo %token%'` |
-| dictionary | object | yes | N/A | { `'%token%': 'Bar'` } |
+| Argument   | Type   | Required | Default | Example                |
+| ---------- | ------ | -------- | ------- | ---------------------- |
+| text       | string | yes      | N/A     | `'Foo %token%'`        |
+| dictionary | object | yes      | N/A     | { `'%token%': 'Bar'` } |
 
-`dictionary` is an object which maps keys as tokens to values. For example, in `psammead-social-embeds`, all social media providers in the data are in lowercase which corresponds as the token to be interpolated into the full name. 
+`dictionary` is an object which maps keys as tokens to values. For example, in `psammead-social-embeds`, all social media providers in the data are in lowercase which corresponds as the token to be interpolated into the full name.
 E.g. `'%youtube%' -> 'YouTube'`
 
 ## Usage
 
 ```
-import detokenise from "@bbc/psammead-detokeniser"
+import detokenise from "#legacy/psammead-detokeniser/src"
 
 // This will return 'Duration: 20 minutes'
 detokenise('Duration: %token%', { '%token%': '20 minutes' });

@@ -1,7 +1,7 @@
 import React from 'react';
 import { node, string, shape } from 'prop-types';
 import styled from '@emotion/styled';
-import detokenise from '@bbc/psammead-detokeniser';
+import detokenise from '#legacy/psammead-detokeniser/src';
 import { visuallyHiddenTextStyle } from '@bbc/psammead-visually-hidden-text';
 import { C_EBON, C_WHITE } from '#legacy/psammead-styles/src/colours';
 import { getSansBold } from '#legacy/psammead-styles/src/font-styles';
