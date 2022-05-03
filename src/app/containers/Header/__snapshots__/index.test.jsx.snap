@@ -248,6 +248,16 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   }
 }
 
+.emotion-17 svg {
+  fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-17 svg {
+    fill: linkText;
+  }
+}
+
 .emotion-19 {
   position: relative;
   display: -webkit-box;
@@ -1348,6 +1358,16 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   }
 }
 
+.emotion-17 svg {
+  fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-17 svg {
+    fill: linkText;
+  }
+}
+
 .emotion-19 {
   position: relative;
   display: -webkit-box;
@@ -2445,6 +2465,16 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   .emotion-17 {
     min-height: 3.25rem;
     padding: 0 1rem;
+  }
+}
+
+.emotion-17 svg {
+  fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-17 svg {
+    fill: linkText;
   }
 }
 

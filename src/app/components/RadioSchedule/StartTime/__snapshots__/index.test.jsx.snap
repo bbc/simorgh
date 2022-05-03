@@ -30,6 +30,13 @@ exports[`StartTime should render LTR correctly 1`] = `
   overflow: visible;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-2>svg {
+    padding-right: 0.25rem;
+    fill: canvasText;
+  }
+}
+
 .emotion-4 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -177,6 +184,13 @@ exports[`StartTime should render RTL correctly 1`] = `
   color: #5A5A5A;
   margin: 0;
   overflow: visible;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-2>svg {
+    padding-left: 0.25rem;
+    fill: canvasText;
+  }
 }
 
 .emotion-4 {

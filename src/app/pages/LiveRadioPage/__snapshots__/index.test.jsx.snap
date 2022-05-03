@@ -1211,6 +1211,13 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   overflow: visible;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-49>svg {
+    padding-right: 0.25rem;
+    fill: canvasText;
+  }
+}
+
 .emotion-51 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -1479,6 +1486,12 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   margin: 0;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-77>svg {
+    fill: canvasText;
+  }
+}
+
 .emotion-79 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -1606,6 +1619,12 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   width: 1.0625rem;
   height: 0.75rem;
   margin: 0;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-200>svg {
+    fill: canvasText;
+  }
 }
 
 <div>

@@ -1509,6 +1509,13 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   overflow: visible;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-269>svg {
+    padding-left: 0.25rem;
+    fill: canvasText;
+  }
+}
+
 .emotion-271 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -1727,6 +1734,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   margin: 0;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-297>svg {
+    fill: canvasText;
+  }
+}
+
 .emotion-299 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -1869,6 +1882,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   width: 1.0625rem;
   height: 0.75rem;
   margin: 0;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-338>svg {
+    fill: canvasText;
+  }
 }
 
 .emotion-560 {

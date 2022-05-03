@@ -20,6 +20,9 @@ const EpisodesText = styled.p`
     position: relative;
     bottom: 0.125rem;
     ${({ dir }) => (dir === 'ltr' ? `right: 0.1875rem;` : `left: 0.1875rem;`)}
+    @media screen and (forced-colors: active) {
+      fill: canvasText;
+    }
   }
 `;
 
