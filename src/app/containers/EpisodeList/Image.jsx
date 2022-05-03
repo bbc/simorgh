@@ -48,7 +48,7 @@ const PlayWrapper = withEpisodeContext(styled.div`
     width: 0.7rem;
     color: ${C_WHITE};
     @media screen and (forced-colors: active) {
-      fill: canvasText;
+      fill: linkText;
     }
   }
 
