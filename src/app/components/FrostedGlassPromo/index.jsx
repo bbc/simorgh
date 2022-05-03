@@ -26,11 +26,15 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-
   text-decoration: none;
   &:hover {
     a {
       text-decoration: underline;
+    }
+  }
+  &:visited {
+    a {
+      color: #e6e8ea;
     }
   }
 `;
@@ -64,6 +68,9 @@ const A = styled.a`
     font-size: 1rem;
     line-height: 1.25;
     margin: 0.875rem ${GEL_SPACING_DBL} 0 ${GEL_SPACING_DBL};
+  }
+  &:visited {
+    color: #e6e8ea;
   }
   &:focus {
     text-decoration: underline;
