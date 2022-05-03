@@ -8,7 +8,7 @@ import {
 } from '#legacy/gel-foundations/src/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
-import { C_GHOST } from '@bbc/psammead-styles/colours';
+import { C_GHOST } from '#legacy/psammead-styles/src/colours';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,

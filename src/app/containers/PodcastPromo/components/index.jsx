@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { string, shape, arrayOf, element } from 'prop-types';
 import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
-import { C_LUNAR } from '@bbc/psammead-styles/colours';
+import { C_LUNAR } from '#legacy/psammead-styles/src/colours';
 import { GEL_SPACING_DBL } from '#legacy/gel-foundations/src/spacings';
 
 import Title from './title';

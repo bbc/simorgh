@@ -1,8 +1,8 @@
 import React from 'react';
 import { node, string } from 'prop-types';
 import styled from '@emotion/styled';
-import { C_EBON, C_WHITE } from '@bbc/psammead-styles/colours';
-import { getSansBold } from '@bbc/psammead-styles/font-styles';
+import { C_EBON, C_WHITE } from '#legacy/psammead-styles/src/colours';
+import { getSansBold } from '#legacy/psammead-styles/src/font-styles';
 import { GEL_BREVIER } from '#legacy/gel-foundations/src/typography';
 
 import {

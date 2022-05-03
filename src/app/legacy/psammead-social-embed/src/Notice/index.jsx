@@ -6,8 +6,11 @@ import {
   C_METAL,
   C_EBON,
   C_SHADOW,
-} from '@bbc/psammead-styles/colours';
-import { getSansRegular, getSansBold } from '@bbc/psammead-styles/font-styles';
+} from '#legacy/psammead-styles/src/colours';
+import {
+  getSansRegular,
+  getSansBold,
+} from '#legacy/psammead-styles/src/font-styles';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING,

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { getLongPrimer } from '#legacy/gel-foundations/src/typography';
-import { C_WHITE, C_EBON } from '@bbc/psammead-styles/colours';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+import { C_WHITE, C_EBON } from '#legacy/psammead-styles/src/colours';
+import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
 import { GEL_SPACING_HLF } from '#legacy/gel-foundations/src/spacings';
 
 import { withEpisodeContext } from './helpers';

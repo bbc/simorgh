@@ -4,7 +4,7 @@
 
 The `@bbc/psammead-section-label` package exports one component - a Section Label.
 
-For colours and font family it uses `@bbc/psammead-styles` and `#legacy/gel-foundations/src` for spacing and GEL Typography implemented in Styled Components.
+For colours and font family it uses `#legacy/psammead-styles/src` and `#legacy/gel-foundations/src` for spacing and GEL Typography implemented in Styled Components.
 
 The only provided child should be the title for the section, provided as a _string_, which will be wrapped in an `<h2>` element by the component – (see [the Accessibility notes](#accessibility-notes)).
 

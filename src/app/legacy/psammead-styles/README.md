@@ -1,4 +1,4 @@
-# psammead-styles - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Futilities%2Fpsammead-styles%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Futilities%2Fpsammead-styles%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/utilities/psammead-styles)](https://david-dm.org/bbc/psammead?path=packages/utilities/psammead-styles) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/utilities/psammead-styles)](https://david-dm.org/bbc/psammead?path=packages/utilities/psammead-styles&type=peer) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/psammead-styles.svg)](https://www.npmjs.com/package/@bbc/psammead-styles) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
+# psammead-styles - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Futilities%2Fpsammead-styles%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Futilities%2Fpsammead-styles%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/utilities/psammead-styles)](https://david-dm.org/bbc/psammead?path=packages/utilities/psammead-styles) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/utilities/psammead-styles)](https://david-dm.org/bbc/psammead?path=packages/utilities/psammead-styles&type=peer) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/#legacy/psammead-styles/src.svg)](https://www.npmjs.com/package/#legacy/psammead-styles/src) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
 
 This package provides a collection of string constants for use in CSS, containing non-GEL styling details that are bespoke to specific BBC services and products
 
@@ -15,16 +15,16 @@ This package provides a collection of string constants for use in CSS, containin
 ## Installation
 
 ```jsx
-npm install @bbc/psammead-styles --save
+npm install #legacy/psammead-styles/src --save
 ```
 
 ## Usage
 
 <!-- prettier-ignore -->
 ```jsx
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+import { C_POSTBOX } from '#legacy/psammead-styles/src/colours';
 
-import { F_REITH_SANS_REGULAR, F_REITH_SANS_ITALIC } from '@bbc/psammead-styles/fonts';
+import { F_REITH_SANS_REGULAR, F_REITH_SANS_ITALIC } from '#legacy/psammead-styles/src/fonts';
 ```
 
 By importing a subset of the font-face definitions defined in this package, you can prioritise only the most commonly needed fonts for your project, with browser styling stepping in for less common scenarios. For example, in these examples, which import custom fonts for only Reith Sans Regular and Italic, any bold styling would be "faked" by the browser.
@@ -57,7 +57,7 @@ const SomeStyledComponent = css`
 In case you are using embedded fonts, you need to make sure you have loaded your fonts first before using the functions. If the embedded font is not loaded, the fallback font will be applied
 
 ```js
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
 
 const fontStyle = getSansRegular('news');
 
@@ -74,7 +74,7 @@ We have defined custom feature detection statements (using CSS `@supports` synta
 - grid: We experienced issues using `@supports (display:grid)` from browsers with buggy CSS Grid implementations, and found that detecting on `@supports (grid-template-columns: fit-content(200px))` gave more consistent detection.
 
 ```js
-import { grid } from '@bbc/psammead-styles/detection';
+import { grid } from '#legacy/psammead-styles/src/detection';
 
 const someGridUsingComponent = css`
   @supports (${grid}) {
@@ -92,11 +92,11 @@ We export a global styles component which uses `styled-normalize` and defines cs
 This component accepts an optional `fonts` prop which is an array of font styles to be applied in the global styles.
 
 ```js
-import GlobalStyles from '@bbc/psammead-styles/global-styles';
+import GlobalStyles from '#legacy/psammead-styles/src/global-styles';
 import {
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
-} from '@bbc/psammead-styles/fonts';
+} from '#legacy/psammead-styles/src/fonts';
 
 <GlobalStyles fonts={[F_REITH_SANS_REGULAR, F_REITH_SERIF_MEDIUM]} />;
 ```

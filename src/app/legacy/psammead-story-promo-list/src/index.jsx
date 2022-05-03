@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { node, bool } from 'prop-types';
-import { C_LUNAR } from '@bbc/psammead-styles/colours';
+import { C_LUNAR } from '#legacy/psammead-styles/src/colours';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,

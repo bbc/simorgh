@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { shape, string, bool, func, oneOf, node } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { navigationIcons } from '@bbc/psammead-assets/svgs';
-import { C_WHITE, C_EBON, C_SHADOW } from '@bbc/psammead-styles/colours';
+import { C_WHITE, C_EBON, C_SHADOW } from '#legacy/psammead-styles/src/colours';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
@@ -16,7 +16,7 @@ import {
 } from '#legacy/gel-foundations/src/breakpoints';
 import { getPica } from '#legacy/gel-foundations/src/typography';
 import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
 
 export const NAV_BAR_TOP_BOTTOM_SPACING = 0.75; // 12px
 

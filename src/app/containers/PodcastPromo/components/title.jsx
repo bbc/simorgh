@@ -4,8 +4,8 @@ import { node } from 'prop-types';
 import { mediaIcons } from '@bbc/psammead-assets/svgs';
 import { GEL_SPACING_DBL } from '#legacy/gel-foundations/src/spacings';
 import { getGreatPrimer } from '#legacy/gel-foundations/src/typography';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
-import { C_EBON } from '@bbc/psammead-styles/colours';
+import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
+import { C_EBON } from '#legacy/psammead-styles/src/colours';
 
 const Heading = styled.h2`
   ${({ script }) => getGreatPrimer(script)}

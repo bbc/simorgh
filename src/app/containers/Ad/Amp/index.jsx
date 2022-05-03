@@ -7,10 +7,10 @@ import {
   AMP_ADS_JS,
 } from '@bbc/psammead-assets/amp-boilerplate';
 import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
-import { C_LUNAR_LIGHT, C_RHINO } from '@bbc/psammead-styles/colours';
+import { C_LUNAR_LIGHT, C_RHINO } from '#legacy/psammead-styles/src/colours';
 import pathOr from 'ramda/src/pathOr';
 import { getMinion } from '#legacy/gel-foundations/src/typography';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';

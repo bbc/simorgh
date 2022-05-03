@@ -3,7 +3,7 @@ import { shape, node, string, number } from 'prop-types';
 import styled from '@emotion/styled';
 import pick from 'ramda/src/pick';
 
-import { getSerifRegular } from '@bbc/psammead-styles/font-styles';
+import { getSerifRegular } from '#legacy/psammead-styles/src/font-styles';
 import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING,

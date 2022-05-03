@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { string, arrayOf, shape, element } from 'prop-types';
-import { C_SHADOW } from '@bbc/psammead-styles/colours';
+import { C_SHADOW } from '#legacy/psammead-styles/src/colours';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -16,7 +16,7 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MAX,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '#legacy/gel-foundations/src/breakpoints';
-import { grid } from '@bbc/psammead-styles/detection';
+import { grid } from '#legacy/psammead-styles/src/detection';
 
 import Link from '../Link';
 

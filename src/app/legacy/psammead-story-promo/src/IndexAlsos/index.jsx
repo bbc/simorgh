@@ -7,9 +7,9 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#legacy/gel-foundations/src/spacings';
-import { C_EBON, C_METAL, C_LUNAR } from '@bbc/psammead-styles/colours';
+import { C_EBON, C_METAL, C_LUNAR } from '#legacy/psammead-styles/src/colours';
 import { getBrevier } from '#legacy/gel-foundations/src/typography';
-import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
+import { getSerifMedium } from '#legacy/psammead-styles/src/font-styles';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 
 const StyledIndexAlsos = styled.div`

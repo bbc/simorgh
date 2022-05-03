@@ -5,7 +5,7 @@ import identity from 'ramda/src/identity';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import pathEq from 'ramda/src/pathEq';
-import { C_GREY_2 } from '@bbc/psammead-styles/colours';
+import { C_GREY_2 } from '#legacy/psammead-styles/src/colours';
 import styled from '@emotion/styled';
 import Image from '@bbc/psammead-image';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';

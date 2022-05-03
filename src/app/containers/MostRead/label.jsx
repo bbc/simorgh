@@ -7,7 +7,7 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
 } from '#legacy/gel-foundations/src/breakpoints';
 import { GEL_SPACING_DBL } from '#legacy/gel-foundations/src/spacings';
-import { C_GREY_2 } from '@bbc/psammead-styles/colours';
+import { C_GREY_2 } from '#legacy/psammead-styles/src/colours';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const SectionLabelWithMargin = styled(SectionLabel)`

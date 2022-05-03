@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { node, bool, string, oneOf, shape } from 'prop-types';
-import { C_WHITE, C_EBON } from '@bbc/psammead-styles/colours';
+import { C_WHITE, C_EBON } from '#legacy/psammead-styles/src/colours';
 import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
 import { getMinion } from '#legacy/gel-foundations/src/typography';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
 import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
 import { mediaIcons } from '@bbc/psammead-assets/svgs';
 

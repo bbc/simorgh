@@ -12,8 +12,8 @@ import {
   getSansBold,
   getSansRegularItalic,
   getSansBoldItalic,
-} from '@bbc/psammead-styles/font-styles';
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+} from '#legacy/psammead-styles/src/font-styles';
+import { C_POSTBOX } from '#legacy/psammead-styles/src/colours';
 import notes from '../README.md';
 import InlineLink from './index';
 

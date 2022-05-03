@@ -10,7 +10,7 @@ import {
   formatUnixTimestamp,
 } from '@bbc/psammead-timestamp-container/utilities';
 import SectionLabel from '@bbc/psammead-section-label';
-import { C_WHITE, C_MIDNIGHT_BLACK } from '@bbc/psammead-styles/colours';
+import { C_WHITE, C_MIDNIGHT_BLACK } from '#legacy/psammead-styles/src/colours';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,

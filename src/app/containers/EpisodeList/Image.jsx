@@ -4,8 +4,8 @@ import omit from 'ramda/src/omit';
 import styled from '@emotion/styled';
 import { mediaIcons } from '@bbc/psammead-assets/svgs';
 import { getMinion } from '#legacy/gel-foundations/src/typography';
-import { C_EBON, C_WHITE } from '@bbc/psammead-styles/colours';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+import { C_EBON, C_WHITE } from '#legacy/psammead-styles/src/colours';
+import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,

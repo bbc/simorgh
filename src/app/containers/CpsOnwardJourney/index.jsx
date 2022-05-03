@@ -24,7 +24,7 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '#legacy/gel-foundations/src/spacings';
-import { C_GHOST } from '@bbc/psammead-styles/colours';
+import { C_GHOST } from '#legacy/psammead-styles/src/colours';
 
 import { storyItem } from '#models/propTypes/storyItem';
 import { RequestContext } from '#contexts/RequestContext';

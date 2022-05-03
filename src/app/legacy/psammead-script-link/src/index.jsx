@@ -8,9 +8,9 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
 } from '#legacy/gel-foundations/src/breakpoints';
-import { C_WHITE } from '@bbc/psammead-styles/colours';
+import { C_WHITE } from '#legacy/psammead-styles/src/colours';
 import { getPica } from '#legacy/gel-foundations/src/typography';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
 import { string, shape, node, func } from 'prop-types';
 import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
 

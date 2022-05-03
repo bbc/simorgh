@@ -3,8 +3,8 @@ import { node, string, shape } from 'prop-types';
 import styled from '@emotion/styled';
 import detokenise from '@bbc/psammead-detokeniser';
 import { visuallyHiddenTextStyle } from '@bbc/psammead-visually-hidden-text';
-import { C_EBON, C_WHITE } from '@bbc/psammead-styles/colours';
-import { getSansBold } from '@bbc/psammead-styles/font-styles';
+import { C_EBON, C_WHITE } from '#legacy/psammead-styles/src/colours';
+import { getSansBold } from '#legacy/psammead-styles/src/font-styles';
 import { GEL_BREVIER } from '#legacy/gel-foundations/src/typography';
 
 const BORDER_WIDTH = '0.125rem';

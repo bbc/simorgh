@@ -18,7 +18,7 @@ import {
   getDoublePica,
   getParagon,
 } from '#legacy/gel-foundations/src/typography';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const BrandTitle = styled.span`

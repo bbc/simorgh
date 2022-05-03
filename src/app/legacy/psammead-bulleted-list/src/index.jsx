@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 import { string, oneOf, shape } from 'prop-types';
 import { getBodyCopy } from '#legacy/gel-foundations/src/typography';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
-import { C_SHADOW } from '@bbc/psammead-styles/colours';
+import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
+import { C_SHADOW } from '#legacy/psammead-styles/src/colours';
 import { GEL_SPACING_DBL } from '#legacy/gel-foundations/src/spacings';
 import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
 

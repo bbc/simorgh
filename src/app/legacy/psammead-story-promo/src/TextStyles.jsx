@@ -9,7 +9,7 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '#legacy/gel-foundations/src/breakpoints';
-import { grid } from '@bbc/psammead-styles/detection';
+import { grid } from '#legacy/psammead-styles/src/detection';
 
 const twoOfSixColumnsMaxWidthScaleable = `33.33%`;
 // (2 / 6) * 100 = 0.3333333333 = 33.33%

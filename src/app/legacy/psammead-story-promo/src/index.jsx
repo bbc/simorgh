@@ -22,13 +22,13 @@ import {
   getPica,
   getDoublePica,
 } from '#legacy/gel-foundations/src/typography';
-import { C_EBON, C_METAL, C_SHADOW } from '@bbc/psammead-styles/colours';
+import { C_EBON, C_METAL, C_SHADOW } from '#legacy/psammead-styles/src/colours';
 import {
   getSansRegular,
   getSerifMedium,
-} from '@bbc/psammead-styles/font-styles';
+} from '#legacy/psammead-styles/src/font-styles';
 import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
-import { grid } from '@bbc/psammead-styles/detection';
+import { grid } from '#legacy/psammead-styles/src/detection';
 import ImageGridItem from './ImageStyles';
 import TextGridItem from './TextStyles';
 

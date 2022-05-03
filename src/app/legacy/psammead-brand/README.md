@@ -63,7 +63,7 @@ import Brand from '@bbc/psammead-brand';
 import SkipLink from '@bbc/psammead-brand/skip-link';
 import { igbo } from '@bbc/psammead-assets/svgs';
 import ScriptLink from '@bbc/psammead-script-link';
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import { C_POSTBOX, C_WHITE } from '#legacy/psammead-styles/src/colours';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 
 const scriptLink = (

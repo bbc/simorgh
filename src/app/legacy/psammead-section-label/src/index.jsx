@@ -10,7 +10,11 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '#legacy/gel-foundations/src/spacings';
-import { C_PEBBLE, C_GHOST, C_SHADOW } from '@bbc/psammead-styles/colours';
+import {
+  C_PEBBLE,
+  C_GHOST,
+  C_SHADOW,
+} from '#legacy/psammead-styles/src/colours';
 import { PlainTitle, LinkTitle } from './titles';
 
 const Bar = styled.div`

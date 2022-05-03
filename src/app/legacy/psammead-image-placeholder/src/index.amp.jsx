@@ -1,7 +1,7 @@
 /* eslint react/prop-types: 0 */
 import React from 'react';
 import { bool } from 'prop-types';
-import { C_LUNAR, C_SHADOW } from '@bbc/psammead-styles/colours';
+import { C_LUNAR, C_SHADOW } from '#legacy/psammead-styles/src/colours';
 import { BBC_BLOCKS, BBC_BLOCKS_DARK_MODE } from '@bbc/psammead-assets/svgs';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,

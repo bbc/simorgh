@@ -2,7 +2,7 @@ import {
   C_NEWSROUND_PURPLE,
   C_WHITE,
   C_NEWSROUND_PURPLE_30,
-} from '@bbc/psammead-styles/colours';
+} from '#legacy/psammead-styles/src/colours';
 import { newsround as brandSVG } from '@bbc/psammead-assets/svgs';
 import { cyrillicAndLatin } from '#legacy/gel-foundations/src/scripts';
 import {
@@ -13,7 +13,7 @@ import {
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_MEDIUM_ITALIC,
   F_REITH_SERIF_LIGHT,
-} from '@bbc/psammead-styles/fonts';
+} from '#legacy/psammead-styles/src/fonts';
 import '@bbc/psammead-locales/moment/en-gb';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';

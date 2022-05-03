@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { C_EBON } from '@bbc/psammead-styles/colours';
+import { C_EBON } from '#legacy/psammead-styles/src/colours';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING_DBL,

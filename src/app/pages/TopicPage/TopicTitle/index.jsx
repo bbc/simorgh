@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { string } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { getSansBold } from '@bbc/psammead-styles/font-styles';
-import { C_GREY_10 } from '@bbc/psammead-styles/colours';
+import { getSansBold } from '#legacy/psammead-styles/src/font-styles';
+import { C_GREY_10 } from '#legacy/psammead-styles/src/colours';
 import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,

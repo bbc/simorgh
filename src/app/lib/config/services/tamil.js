@@ -3,13 +3,13 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
+} from '#legacy/psammead-styles/src/colours';
 import { tamil } from '#legacy/gel-foundations/src/scripts';
 import { tamil as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
   F_NOTO_SANS_TAMIL_BOLD,
   F_NOTO_SANS_TAMIL_REGULAR,
-} from '@bbc/psammead-styles/fonts';
+} from '#legacy/psammead-styles/src/fonts';
 import '@bbc/moment-timezone-include/tz/GMT';
 import '@bbc/psammead-locales/moment/ta';
 import withContext from '../../../contexts/utils/withContext';

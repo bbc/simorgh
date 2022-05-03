@@ -5,8 +5,8 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#legacy/gel-foundations/src/spacings';
-import { C_EBON } from '@bbc/psammead-styles/colours';
-import { getSansBold } from '@bbc/psammead-styles/font-styles';
+import { C_EBON } from '#legacy/psammead-styles/src/colours';
+import { getSansBold } from '#legacy/psammead-styles/src/font-styles';
 import { GEL_PICA } from '#legacy/gel-foundations/src/typography';
 import { Helmet } from 'react-helmet';
 import { GridItemMedium } from '#app/components/Grid';

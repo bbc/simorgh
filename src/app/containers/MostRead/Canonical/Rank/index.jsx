@@ -22,10 +22,10 @@ import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
 } from '#legacy/gel-foundations/src/breakpoints';
-import { C_POSTBOX } from '@bbc/psammead-styles/colours';
+import { C_POSTBOX } from '#legacy/psammead-styles/src/colours';
 import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
-import { grid } from '@bbc/psammead-styles/detection';
-import { getSerifLight } from '@bbc/psammead-styles/font-styles';
+import { grid } from '#legacy/psammead-styles/src/detection';
+import { getSerifLight } from '#legacy/psammead-styles/src/font-styles';
 import {
   doubleDigitDefault,
   doubleDigitMedium,

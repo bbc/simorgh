@@ -10,9 +10,9 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '#legacy/gel-foundations/src/breakpoints';
-import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
+import { getSerifMedium } from '#legacy/psammead-styles/src/font-styles';
 import { getPica } from '#legacy/gel-foundations/src/typography';
-import { C_EBON, C_METAL, C_GREY_2 } from '@bbc/psammead-styles/colours';
+import { C_EBON, C_METAL, C_GREY_2 } from '#legacy/psammead-styles/src/colours';
 import { shape, string, oneOfType } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { storyItem } from '#models/propTypes/storyItem';

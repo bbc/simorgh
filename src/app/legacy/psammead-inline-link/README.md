@@ -2,7 +2,7 @@
 
 ## Description
 
-The `@bbc/psammead-inline-link` package exports a single Inline Link component. It uses an `a` HTML element and colours from `@bbc/psammead-styles`.
+The `@bbc/psammead-inline-link` package exports a single Inline Link component. It uses an `a` HTML element and colours from `#legacy/psammead-styles/src`.
 
 ## Installation
 

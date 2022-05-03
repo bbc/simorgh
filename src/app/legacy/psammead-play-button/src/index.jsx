@@ -1,13 +1,17 @@
 import React from 'react';
 import { string, oneOf, func } from 'prop-types';
 import styled from '@emotion/styled';
-import { C_EBON, C_WHITE, C_POSTBOX } from '@bbc/psammead-styles/colours';
+import {
+  C_EBON,
+  C_WHITE,
+  C_POSTBOX,
+} from '#legacy/psammead-styles/src/colours';
 import {
   GEL_SPACING,
   GEL_SPACING_TRPL,
 } from '#legacy/gel-foundations/src/spacings';
 import { GEL_MINION } from '#legacy/gel-foundations/src/typography';
-import { getSansBold } from '@bbc/psammead-styles/font-styles';
+import { getSansBold } from '#legacy/psammead-styles/src/font-styles';
 import { mediaIcons } from '@bbc/psammead-assets/svgs';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 

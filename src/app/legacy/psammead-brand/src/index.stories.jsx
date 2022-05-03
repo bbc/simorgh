@@ -9,7 +9,7 @@ import {
 } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import * as svgs from '@bbc/psammead-assets/svgs';
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import { C_POSTBOX, C_WHITE } from '#legacy/psammead-styles/src/colours';
 import {
   withServicesKnob,
   buildRTLSubstories,

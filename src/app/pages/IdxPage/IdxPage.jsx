@@ -14,7 +14,7 @@ import {
   GEL_MARGIN_BELOW_400PX,
   GEL_MARGIN_ABOVE_400PX,
 } from '#legacy/gel-foundations/src/spacings';
-import { C_GHOST } from '@bbc/psammead-styles/colours';
+import { C_GHOST } from '#legacy/psammead-styles/src/colours';
 import { ServiceContext } from '#contexts/ServiceContext';
 import MetadataContainer from '#containers/Metadata';
 import LinkedData from '#containers/LinkedData';

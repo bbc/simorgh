@@ -6,7 +6,7 @@ import {
   C_SHADOW,
   C_WHITE,
   C_METAL,
-} from '@bbc/psammead-styles/colours';
+} from '#legacy/psammead-styles/src/colours';
 
 export const programStateConfig = {
   live: {

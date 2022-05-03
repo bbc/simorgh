@@ -5,7 +5,7 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#legacy/gel-foundations/src/spacings';
-import { grid } from '@bbc/psammead-styles/detection';
+import { grid } from '#legacy/psammead-styles/src/detection';
 import Grid from '@bbc/psammead-grid';
 import { arrayOf, number, shape, string } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';

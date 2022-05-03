@@ -19,7 +19,7 @@ import {
   C_PEBBLE,
   C_EBON,
   C_GHOST,
-} from '@bbc/psammead-styles/colours';
+} from '#legacy/psammead-styles/src/colours';
 import {
   getDoublePica,
   getLongPrimer,
@@ -37,7 +37,7 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '#legacy/gel-foundations/src/spacings';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
 
 // Transparent border is to show the top of the wrapper and button border in high-contrast mode
 const transparentBorderHeight = '0.0625rem';

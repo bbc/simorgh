@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 
-import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
+import { getSerifMedium } from '#legacy/psammead-styles/src/font-styles';
 import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
 import { getBodyCopy } from '#legacy/gel-foundations/src/typography';
-import { C_EBON } from '@bbc/psammead-styles/colours';
+import { C_EBON } from '#legacy/psammead-styles/src/colours';
 
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,

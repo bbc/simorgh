@@ -11,13 +11,16 @@ import {
   C_WHITE,
   C_EBON,
   C_GHOST,
-} from '@bbc/psammead-styles/colours';
+} from '#legacy/psammead-styles/src/colours';
 import {
   getDoublePica,
   getLongPrimer,
   getBodyCopy,
 } from '#legacy/gel-foundations/src/typography';
-import { getSansBold, getSansRegular } from '@bbc/psammead-styles/font-styles';
+import {
+  getSansBold,
+  getSansRegular,
+} from '#legacy/psammead-styles/src/font-styles';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,

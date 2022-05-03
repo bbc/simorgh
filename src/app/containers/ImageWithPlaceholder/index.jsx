@@ -5,7 +5,7 @@ import LazyLoad from 'react-lazyload';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import Image, { AmpImg } from '@bbc/psammead-image';
 import { Helmet } from 'react-helmet';
-import { C_GHOST } from '@bbc/psammead-styles/colours';
+import { C_GHOST } from '#legacy/psammead-styles/src/colours';
 import { RequestContext } from '#contexts/RequestContext';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image

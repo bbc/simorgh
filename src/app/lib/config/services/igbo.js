@@ -3,7 +3,7 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
+} from '#legacy/psammead-styles/src/colours';
 import { igbo as brandSVG } from '@bbc/psammead-assets/svgs';
 import { cyrillicAndLatin } from '#legacy/gel-foundations/src/scripts';
 import '@bbc/psammead-locales/moment/ig';

@@ -14,12 +14,12 @@ import {
   C_SHADOW,
   C_EBON,
   C_LUNAR,
-} from '@bbc/psammead-styles/colours';
+} from '#legacy/psammead-styles/src/colours';
 import { string, oneOf, node, bool, shape } from 'prop-types';
 import {
   getSansRegular,
   getSerifMedium,
-} from '@bbc/psammead-styles/font-styles';
+} from '#legacy/psammead-styles/src/font-styles';
 import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
 import {
   getPica,

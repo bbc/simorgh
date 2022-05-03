@@ -1,13 +1,13 @@
 import React, { forwardRef } from 'react';
 import { string, shape, node, func } from 'prop-types';
 import styled from '@emotion/styled';
-import { C_LUNAR, C_EBON, C_METAL } from '@bbc/psammead-styles/colours';
+import { C_LUNAR, C_EBON, C_METAL } from '#legacy/psammead-styles/src/colours';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#legacy/gel-foundations/src/spacings';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
 import { getBrevier } from '#legacy/gel-foundations/src/typography';
 import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
 

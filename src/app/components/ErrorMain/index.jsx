@@ -3,8 +3,8 @@ import { string, arrayOf, shape } from 'prop-types';
 import styled from '@emotion/styled';
 import InlineLink from '@bbc/psammead-inline-link';
 import Paragraph from '@bbc/psammead-paragraph';
-import { C_POSTBOX, C_SHADOW } from '@bbc/psammead-styles/colours';
-import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
+import { C_POSTBOX, C_SHADOW } from '#legacy/psammead-styles/src/colours';
+import { getSerifMedium } from '#legacy/psammead-styles/src/font-styles';
 import {
   getCanon,
   getParagon,

@@ -3,7 +3,7 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
+} from '#legacy/psammead-styles/src/colours';
 import { latinDiacritics } from '#legacy/gel-foundations/src/scripts';
 import {
   F_REITH_SANS_BOLD,
@@ -12,7 +12,7 @@ import {
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_MEDIUM_ITALIC,
-} from '@bbc/psammead-styles/fonts';
+} from '#legacy/psammead-styles/src/fonts';
 import { cymrufyw as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';

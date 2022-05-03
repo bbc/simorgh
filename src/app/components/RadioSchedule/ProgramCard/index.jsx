@@ -5,11 +5,11 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#legacy/gel-foundations/src/spacings';
-import { C_METAL, C_WHITE } from '@bbc/psammead-styles/colours';
+import { C_METAL, C_WHITE } from '#legacy/psammead-styles/src/colours';
 import {
   getSansRegular,
   getSerifMedium,
-} from '@bbc/psammead-styles/font-styles';
+} from '#legacy/psammead-styles/src/font-styles';
 import {
   getBrevier,
   getMinion,

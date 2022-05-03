@@ -9,7 +9,7 @@ import {
   GEL_SPACING_TRPL,
 } from '#legacy/gel-foundations/src/spacings';
 
-import { C_GREY_2 } from '@bbc/psammead-styles/colours';
+import { C_GREY_2 } from '#legacy/psammead-styles/src/colours';
 
 import { articleDataPropTypes } from '#models/propTypes/article';
 

@@ -3,13 +3,13 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
+} from '#legacy/psammead-styles/src/colours';
 import { persian as brandSVG } from '@bbc/psammead-assets/svgs';
 import { arabic } from '#legacy/gel-foundations/src/scripts';
 import {
   F_REITH_QALAM_REGULAR,
   F_REITH_QALAM_BOLD,
-} from '@bbc/psammead-styles/fonts';
+} from '#legacy/psammead-styles/src/fonts';
 import 'moment/locale/fa';
 import '@bbc/moment-timezone-include/tz/GMT';
 import { jalaali } from '@bbc/psammead-calendars';

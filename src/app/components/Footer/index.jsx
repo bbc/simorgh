@@ -1,8 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { arrayOf, shape, string, node, bool } from 'prop-types';
-import { C_EBON, C_WHITE } from '@bbc/psammead-styles/colours';
-import { getSansBold, getSansRegular } from '@bbc/psammead-styles/font-styles';
+import { C_EBON, C_WHITE } from '#legacy/psammead-styles/src/colours';
+import {
+  getSansBold,
+  getSansRegular,
+} from '#legacy/psammead-styles/src/font-styles';
 import { getBrevier } from '#legacy/gel-foundations/src/typography';
 import {
   GEL_SPACING,

@@ -1,4 +1,4 @@
-import { C_ARCHIVE_BLUE, C_WHITE } from '@bbc/psammead-styles/colours';
+import { C_ARCHIVE_BLUE, C_WHITE } from '#legacy/psammead-styles/src/colours';
 import { archive as brandSVG } from '@bbc/psammead-assets/svgs';
 import { cyrillicAndLatin } from '#legacy/gel-foundations/src/scripts';
 import {
@@ -8,7 +8,7 @@ import {
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_MEDIUM_ITALIC,
-} from '@bbc/psammead-styles/fonts';
+} from '#legacy/psammead-styles/src/fonts';
 import '@bbc/psammead-locales/moment/en-gb';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';

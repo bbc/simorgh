@@ -4,8 +4,12 @@ import styled from '@emotion/styled';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { getPica } from '#legacy/gel-foundations/src/typography';
-import { getSerifBold } from '@bbc/psammead-styles/font-styles';
-import { C_GREY_6, C_GREY_8, C_WHITE } from '@bbc/psammead-styles/colours';
+import { getSerifBold } from '#legacy/psammead-styles/src/font-styles';
+import {
+  C_GREY_6,
+  C_GREY_8,
+  C_WHITE,
+} from '#legacy/psammead-styles/src/colours';
 import { Link } from '@bbc/psammead-story-promo';
 import {
   GEL_SPACING,

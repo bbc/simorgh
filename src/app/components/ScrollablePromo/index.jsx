@@ -6,8 +6,8 @@ import {
 } from '#legacy/gel-foundations/src/spacings';
 
 import { getDoublePica } from '#legacy/gel-foundations/src/typography';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
-import { C_SHADOW } from '@bbc/psammead-styles/colours';
+import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
+import { C_SHADOW } from '#legacy/psammead-styles/src/colours';
 import styled from '@emotion/styled';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';

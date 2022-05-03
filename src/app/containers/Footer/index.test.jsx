@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import { C_POSTBOX, C_WHITE } from '#legacy/psammead-styles/src/colours';
 import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FooterContainer from '.';

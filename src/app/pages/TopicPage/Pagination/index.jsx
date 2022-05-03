@@ -2,13 +2,16 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { number } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import { getSansRegular, getSansBold } from '@bbc/psammead-styles/font-styles';
+import {
+  getSansRegular,
+  getSansBold,
+} from '#legacy/psammead-styles/src/font-styles';
 import {
   C_PHILIPPINE_GREY,
   C_GREY_10,
   C_GREY_6,
   C_POSTBOX,
-} from '@bbc/psammead-styles/colours';
+} from '#legacy/psammead-styles/src/colours';
 
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,

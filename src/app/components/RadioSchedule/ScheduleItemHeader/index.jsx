@@ -7,9 +7,12 @@ import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities
 import detokenise from '@bbc/psammead-detokeniser';
 import LiveLabel from '@bbc/psammead-live-label';
 import { Link } from '@bbc/psammead-story-promo';
-import { getSansBold, getSansRegular } from '@bbc/psammead-styles/font-styles';
+import {
+  getSansBold,
+  getSansRegular,
+} from '#legacy/psammead-styles/src/font-styles';
 import { getPica } from '#legacy/gel-foundations/src/typography';
-import { C_KINGFISHER } from '@bbc/psammead-styles/colours';
+import { C_KINGFISHER } from '#legacy/psammead-styles/src/colours';
 import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
 import { ServiceContext } from '#contexts/ServiceContext';
 import durationDictionary, { programStateConfig } from '../utilities';

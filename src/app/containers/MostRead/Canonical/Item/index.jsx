@@ -5,10 +5,10 @@ import {
   getPica,
   getGreatPrimer,
 } from '#legacy/gel-foundations/src/typography';
-import { C_EBON } from '@bbc/psammead-styles/colours';
+import { C_EBON } from '#legacy/psammead-styles/src/colours';
 import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
-import { grid } from '@bbc/psammead-styles/detection';
-import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
+import { grid } from '#legacy/psammead-styles/src/detection';
+import { getSerifMedium } from '#legacy/psammead-styles/src/font-styles';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,

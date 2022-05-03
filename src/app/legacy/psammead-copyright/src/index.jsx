@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { oneOf } from 'prop-types';
-import { C_WHITE } from '@bbc/psammead-styles/colours';
+import { C_WHITE } from '#legacy/psammead-styles/src/colours';
 import {
   GEL_SPACING,
   GEL_SPACING_HLF,

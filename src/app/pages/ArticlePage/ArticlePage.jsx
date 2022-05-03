@@ -23,7 +23,7 @@ import {
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
 } from '#legacy/gel-foundations/src/spacings';
-import { C_GREY_2, C_WHITE } from '@bbc/psammead-styles/colours';
+import { C_GREY_2, C_WHITE } from '#legacy/psammead-styles/src/colours';
 import { singleTextBlock } from '#app/models/blocks';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '#containers/ArticleMetadata';

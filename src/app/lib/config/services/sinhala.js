@@ -3,13 +3,13 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
+} from '#legacy/psammead-styles/src/colours';
 import { sinhalese } from '#legacy/gel-foundations/src/scripts';
 import { sinhala as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
   F_NOTO_SERIF_SINHALA_BOLD,
   F_NOTO_SERIF_SINHALA_REGULAR,
-} from '@bbc/psammead-styles/fonts';
+} from '#legacy/psammead-styles/src/fonts';
 import '@bbc/moment-timezone-include/tz/GMT';
 import '@bbc/psammead-locales/moment/si';
 import withContext from '../../../contexts/utils/withContext';

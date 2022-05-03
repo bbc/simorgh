@@ -4,7 +4,7 @@ import {
   C_WHITE,
   C_POSTBOX_30,
   C_GHOST,
-} from '@bbc/psammead-styles/colours';
+} from '#legacy/psammead-styles/src/colours';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { render, fireEvent } from '@testing-library/react';

@@ -17,9 +17,9 @@ import {
   GEL_MARGIN_ABOVE_400PX,
 } from '#legacy/gel-foundations/src/spacings';
 import { getLongPrimer } from '#legacy/gel-foundations/src/typography';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
 import SectionLabel from '@bbc/psammead-section-label';
-import { C_LUNAR, C_EBON, C_METAL } from '@bbc/psammead-styles/colours';
+import { C_LUNAR, C_EBON, C_METAL } from '#legacy/psammead-styles/src/colours';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import RadioSchedule from '#components/RadioSchedule';

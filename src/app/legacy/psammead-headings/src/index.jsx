@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { shape, string, bool } from 'prop-types';
-import { C_SHADOW, C_LUNAR } from '@bbc/psammead-styles/colours';
+import { C_SHADOW, C_LUNAR } from '#legacy/psammead-styles/src/colours';
 import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
@@ -9,7 +9,10 @@ import {
 import { getCanon, getTrafalgar } from '#legacy/gel-foundations/src/typography';
 import { MEDIA_QUERY_TYPOGRAPHY } from '#legacy/gel-foundations/src/breakpoints';
 import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
-import { getSansBold, getSerifMedium } from '@bbc/psammead-styles/font-styles';
+import {
+  getSansBold,
+  getSerifMedium,
+} from '#legacy/psammead-styles/src/font-styles';
 
 export const Headline = styled.h1`
   ${({ script }) => script && getCanon(script)};

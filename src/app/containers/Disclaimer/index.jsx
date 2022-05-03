@@ -3,14 +3,14 @@ import { bool } from 'prop-types';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
-import { getSansLight } from '@bbc/psammead-styles/font-styles';
+import { getSansLight } from '#legacy/psammead-styles/src/font-styles';
 import { getLongPrimer } from '#legacy/gel-foundations/src/typography';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUIN,
 } from '#legacy/gel-foundations/src/spacings';
-import { C_GREY_6, C_GREY_2 } from '@bbc/psammead-styles/colours';
+import { C_GREY_6, C_GREY_2 } from '#legacy/psammead-styles/src/colours';
 import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,

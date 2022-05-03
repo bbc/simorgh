@@ -17,8 +17,8 @@ import {
   getBrevier,
   getLongPrimer,
 } from '#legacy/gel-foundations/src/typography';
-import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
-import { C_LUNAR } from '@bbc/psammead-styles/colours';
+import { getSerifMedium } from '#legacy/psammead-styles/src/font-styles';
+import { C_LUNAR } from '#legacy/psammead-styles/src/colours';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 

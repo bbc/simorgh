@@ -8,8 +8,15 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_HLF_TRPL,
 } from '#legacy/gel-foundations/src/spacings';
-import { C_POSTBOX, C_WHITE, C_GREY_6 } from '@bbc/psammead-styles/colours';
-import { getSansRegular, getSansBold } from '@bbc/psammead-styles/font-styles';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GREY_6,
+} from '#legacy/psammead-styles/src/colours';
+import {
+  getSansRegular,
+  getSansBold,
+} from '#legacy/psammead-styles/src/font-styles';
 import {
   getDoublePica,
   getGreatPrimer,

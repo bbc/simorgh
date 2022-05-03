@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
-import { C_EBON, C_METAL } from '@bbc/psammead-styles/colours';
-import { grid } from '@bbc/psammead-styles/detection';
+import { getSerifMedium } from '#legacy/psammead-styles/src/font-styles';
+import { C_EBON, C_METAL } from '#legacy/psammead-styles/src/colours';
+import { grid } from '#legacy/psammead-styles/src/detection';
 import { getPica } from '#legacy/gel-foundations/src/typography';
 import {
   GEL_SPACING,
