@@ -95,7 +95,6 @@
     "@bbc/psammead-caption": "4.1.27",
     "@bbc/psammead-consent-banner": "5.5.15",
     "@bbc/psammead-detokeniser": "1.0.7",
-    "@bbc/psammead-figure": "2.0.13",
     "@bbc/psammead-grid": "3.1.16",
     "@bbc/psammead-heading-index": "3.0.30",
     "@bbc/psammead-headings": "5.0.30",
