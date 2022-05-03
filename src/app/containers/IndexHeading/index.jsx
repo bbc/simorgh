@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { node } from 'prop-types';
-import IndexHeading from '@bbc/psammead-heading-index/src';
+import IndexHeading from '#legacy/psammead-heading-index/src';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
