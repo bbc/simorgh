@@ -92,7 +92,6 @@
     "@bbc/psammead-rich-text-transforms": "2.0.7",
     "@bbc/psammead-social-embed": "3.3.13",
     "@bbc/psammead-story-promo": "8.0.38",
-    "@bbc/psammead-timestamp": "4.0.31",
     "@bbc/web-vitals": "1.1.1",
     "@emotion/cache": "11.7.1",
     "@emotion/react": "11.9.0",

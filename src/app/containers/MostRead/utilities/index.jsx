@@ -2,7 +2,7 @@
 import React from 'react';
 import { TEXT_VARIANTS } from '@bbc/psammead-storybook-helpers';
 import { latin } from '#legacy/gel-foundations/src/scripts';
-import Timestamp from '@bbc/psammead-timestamp';
+import Timestamp from '#legacy/psammead-timestamp/src';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
