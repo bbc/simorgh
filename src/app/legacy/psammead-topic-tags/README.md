@@ -1,4 +1,4 @@
-# psammead-topic-tags - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-topic-tags%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-topic-tags%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-topic-tags)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-topic-tags) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-topic-tags)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-topic-tags&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/topic-tags--containing-image) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/psammead-topic-tags.svg)](https://www.npmjs.com/package/@bbc/psammead-topic-tags) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
+# psammead-topic-tags - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Fcomponents%2Fpsammead-topic-tags%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Fcomponents%2Fpsammead-topic-tags%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/components/psammead-topic-tags)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-topic-tags) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/components/psammead-topic-tags)](https://david-dm.org/bbc/psammead?path=packages/components/psammead-topic-tags&type=peer) [![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg?sanitize=true)](https://bbc.github.io/psammead/?path=/story/topic-tags--containing-image) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/#legacy/psammead-topic-tags/src.svg)](https://www.npmjs.com/package/#legacy/psammead-topic-tags/src) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
 
 ## Description
 
@@ -7,7 +7,7 @@ The `TopicTags` component is a styled `<ul>` or `<div>`, depending on the number
 ## Installation
 
 ```jsx
-npm install @bbc/psammead-topic-tags --save
+npm install #legacy/psammead-topic-tags/src --save
 ```
 
 ## Props
@@ -24,7 +24,7 @@ npm install @bbc/psammead-topic-tags --save
 <!-- Description of the component usage -->
 
 ```jsx
-import { TopicTags, TopicTag } from '@bbc/psammead-topic-tags';
+import { TopicTags, TopicTag } from '#legacy/psammead-topic-tags/src';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 
 const Wrapper = () => (

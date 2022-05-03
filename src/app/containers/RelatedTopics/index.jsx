@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { TopicTag, TopicTags } from '@bbc/psammead-topic-tags';
+import { TopicTag, TopicTags } from '#legacy/psammead-topic-tags/src';
 import pathOr from 'ramda/src/pathOr';
 import SectionLabel from '#legacy/psammead-section-label/src';
 import styled from '@emotion/styled';
