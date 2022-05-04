@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 import {
   AMP_ACCESS_JS,
   AMP_ADS_JS,
-} from '@bbc/psammead-assets/amp-boilerplate';
+} from '#legacy/psammead-assets/src/amp-boilerplate';
 import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
 import { C_LUNAR_LIGHT, C_RHINO } from '#legacy/psammead-styles/src/colours';
 import pathOr from 'ramda/src/pathOr';

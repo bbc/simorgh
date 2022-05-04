@@ -12,8 +12,8 @@ import {
 } from '#legacy/gel-foundations/src/spacings';
 import { GEL_MINION } from '#legacy/gel-foundations/src/typography';
 import { getSansBold } from '#legacy/psammead-styles/src/font-styles';
-import { mediaIcons } from '@bbc/psammead-assets/svgs';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import { mediaIcons } from '#legacy/psammead-assets/src/svgs';
+import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
 
 const GEL_SPACING_DEC = '5rem';
 const BGC_TRANSITION_DURATION = '300ms';

@@ -1,5 +1,5 @@
 import { C_DARK_SALTIRE, C_WHITE } from '#legacy/psammead-styles/src/colours';
-import { scotland as brandSVG } from '@bbc/psammead-assets/svgs';
+import { scotland as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import { cyrillicAndLatin } from '#legacy/gel-foundations/src/scripts';
 import {
   F_REITH_SANS_BOLD,

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { shape, string, node, bool, oneOf } from 'prop-types';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
 import { C_WHITE, C_EBON } from '#legacy/psammead-styles/src/colours';
 import {
   GEL_SPACING_HLF,

@@ -6,7 +6,7 @@ import {
   AMP_LIST_JS,
   AMP_MUSTACHE_JS,
   AMP_SCRIPT_JS,
-} from '@bbc/psammead-assets/amp-boilerplate';
+} from '#legacy/psammead-assets/src/amp-boilerplate';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
 import pathOr from 'ramda/src/pathOr';

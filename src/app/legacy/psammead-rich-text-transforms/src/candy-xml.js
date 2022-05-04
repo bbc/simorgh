@@ -1,9 +1,10 @@
 /* eslint-disable no-use-before-define */
-const xmldoc = require('xmldoc');
-const path = require('ramda/src/path');
-const pathOr = require('ramda/src/pathOr');
-const is = require('ramda/src/is');
-const { fragment, urlLink } = require('./models');
+import xmldoc from 'xmldoc';
+import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
+import is from 'ramda/src/is';
+import fragment from './models/fragment';
+import urlLink from './models/url-link';
 
 const attributeTags = ['bold', 'italic', 'span'];
 const supportedXmlNodeNames = ['paragraph', 'link', 'url', ...attributeTags];
@@ -110,4 +111,4 @@ const candyXmlToRichText = xml => {
   }
 };
 
-module.exports = candyXmlToRichText;
+export default candyXmlToRichText;

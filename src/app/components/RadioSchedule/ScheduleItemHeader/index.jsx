@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import { oneOfType, elementType, string, number } from 'prop-types';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
 import { formatUnixTimestamp } from '#legacy/psammead-timestamp-container/src/utilities';
 import detokenise from '#legacy/psammead-detokeniser/src';
 import LiveLabel from '#legacy/psammead-live-label/src';

@@ -1,4 +1,4 @@
-const fragment = require('./models/fragment');
+import fragment from './models/fragment';
 
 const stringToRichText = string => ({
   type: 'text',
@@ -15,4 +15,4 @@ const stringToRichText = string => ({
   },
 });
 
-module.exports = stringToRichText;
+export default stringToRichText;

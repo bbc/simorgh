@@ -6,7 +6,7 @@ import {
   AMP_JS,
   AMP_CONSENT_JS,
   AMP_ANALYTICS_JS,
-} from '@bbc/psammead-assets/amp-boilerplate';
+} from '#legacy/psammead-assets/src/amp-boilerplate';
 import { AMP_GEO_SCRIPT } from '#components/AmpGeo';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
 import ResourceHints from '#app/components/ResourceHints';

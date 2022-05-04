@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
 import { arabic } from '#legacy/gel-foundations/src/scripts';
-import { pashto as brandSVG } from '@bbc/psammead-assets/svgs';
+import { pashto as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import {
   F_REITH_QALAM_REGULAR,
   F_REITH_QALAM_BOLD,

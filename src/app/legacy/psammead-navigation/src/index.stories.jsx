@@ -10,7 +10,7 @@ import {
   boolean,
 } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
-import * as svgs from '@bbc/psammead-assets/svgs';
+import * as svgs from '#legacy/psammead-assets/src/svgs';
 import { C_WHITE } from '#legacy/psammead-styles/src/colours';
 import Brand from '#legacy/psammead-brand/src';
 import { ampDecorator } from '../../../../.storybook/preview';

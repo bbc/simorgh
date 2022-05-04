@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { news as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import { cyrillicAndLatin } from '#legacy/gel-foundations/src/scripts';
 import {
   F_REITH_SANS_BOLD,

@@ -7,4 +7,4 @@ const urlLink = (text, locator, blocks, isExternal) => {
   };
 };
 
-module.exports = urlLink;
+export default urlLink;

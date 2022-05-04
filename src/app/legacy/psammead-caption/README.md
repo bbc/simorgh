@@ -23,7 +23,7 @@ The `psammead-caption` component is a styled `figcaption` element.
 ```jsx
 import Caption from '#legacy/psammead-caption/src';
 import Figure from '#legacy/psammead-figure/src';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
 import { arabic } from '#legacy/gel-foundations/src/scripts';
 
 const Wrapper = captionText => (

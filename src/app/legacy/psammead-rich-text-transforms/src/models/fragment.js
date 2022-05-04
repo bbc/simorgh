@@ -8,4 +8,4 @@ const fragment = (text, attributes = []) => ({
   },
 });
 
-module.exports = fragment;
+export default fragment;

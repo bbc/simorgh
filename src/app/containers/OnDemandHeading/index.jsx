@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { string, number, bool } from 'prop-types';
 import styled from '@emotion/styled';
 import { Headline } from '#legacy/psammead-headings/src';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,

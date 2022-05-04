@@ -6,7 +6,7 @@ import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
 import { C_RHINO, C_PEBBLE } from '#legacy/psammead-styles/src/colours';
 import { getMinion } from '#legacy/gel-foundations/src/typography';
 import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
-import { coreIcons } from '@bbc/psammead-assets/svgs';
+import { coreIcons } from '#legacy/psammead-assets/src/svgs';
 import TimestampContainer from '#legacy/psammead-timestamp-container/src';
 import { ServiceContext } from '#contexts/ServiceContext';
 

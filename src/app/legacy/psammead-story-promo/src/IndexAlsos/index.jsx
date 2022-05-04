@@ -10,7 +10,7 @@ import {
 import { C_EBON, C_METAL, C_LUNAR } from '#legacy/psammead-styles/src/colours';
 import { getBrevier } from '#legacy/gel-foundations/src/typography';
 import { getSerifMedium } from '#legacy/psammead-styles/src/font-styles';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
 
 const StyledIndexAlsos = styled.div`
   position: relative;

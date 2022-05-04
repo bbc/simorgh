@@ -13,7 +13,7 @@ import {
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_MEDIUM_ITALIC,
 } from '#legacy/psammead-styles/src/fonts';
-import { cymrufyw as brandSVG } from '@bbc/psammead-assets/svgs';
+import { cymrufyw as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/cy';

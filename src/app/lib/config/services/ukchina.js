@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
 import { noAscendersOrDescenders } from '#legacy/gel-foundations/src/scripts';
-import { ukchina as brandSVG } from '@bbc/psammead-assets/svgs';
+import { ukchina as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
 import 'moment/locale/zh-cn';
 import withContext from '../../../contexts/utils/withContext';

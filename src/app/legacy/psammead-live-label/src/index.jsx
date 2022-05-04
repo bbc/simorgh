@@ -4,7 +4,7 @@ import { node, bool, string, oneOf } from 'prop-types';
 import { getSansBold } from '#legacy/psammead-styles/src/font-styles';
 import { C_POSTBOX } from '#legacy/psammead-styles/src/colours';
 import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
 
 const StyledSpan = styled.span`
   ${({ service }) => getSansBold(service)}

@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
 import { cyrillicAndLatin } from '#legacy/gel-foundations/src/scripts';
-import { swahili as brandSVG } from '@bbc/psammead-assets/svgs';
+import { swahili as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import '@bbc/moment-timezone-include/tz/Africa/Nairobi';
 import '@bbc/psammead-locales/moment/sw';
 import withContext from '../../../contexts/utils/withContext';

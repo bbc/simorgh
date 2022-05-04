@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
 import { thai } from '#legacy/gel-foundations/src/scripts';
-import { thai as brandSVG } from '@bbc/psammead-assets/svgs';
+import { thai as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Bangkok';
 import '@bbc/psammead-locales/moment/th';
 import withContext from '../../../contexts/utils/withContext';

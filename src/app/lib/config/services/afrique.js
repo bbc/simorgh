@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
 import { latinDiacritics } from '#legacy/gel-foundations/src/scripts';
-import { afrique as brandSVG } from '@bbc/psammead-assets/svgs';
+import { afrique as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/fr';

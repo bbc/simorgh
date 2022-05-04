@@ -14,7 +14,7 @@ import {
   F_REITH_SERIF_MEDIUM_ITALIC,
   F_REITH_SERIF_LIGHT,
 } from '#legacy/psammead-styles/src/fonts';
-import { russian as brandSVG } from '@bbc/psammead-assets/svgs';
+import { russian as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
 import '@bbc/psammead-locales/moment/ru';
 import withContext from '../../../contexts/utils/withContext';

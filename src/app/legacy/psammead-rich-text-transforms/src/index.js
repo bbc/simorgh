@@ -1,7 +1,7 @@
-const candyXmlToRichText = require('./candy-xml');
-const stringToRichText = require('./string');
+import candyXmlToRichText from './candy-xml';
+import stringToRichText from './string';
 
-module.exports = {
+export default {
   candyXmlToRichText,
   stringToRichText,
 };

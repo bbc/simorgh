@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
 import { cyrillicAndLatin } from '#legacy/gel-foundations/src/scripts';
-import { somali as brandSVG } from '@bbc/psammead-assets/svgs';
+import { somali as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import '@bbc/moment-timezone-include/tz/Africa/Mogadishu';
 import '@bbc/psammead-locales/moment/so';
 import withContext from '../../../contexts/utils/withContext';

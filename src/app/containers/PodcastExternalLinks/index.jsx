@@ -5,7 +5,7 @@ import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { C_CLOUD_LIGHT, C_SHADOW } from '#legacy/psammead-styles/src/colours';
 import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,

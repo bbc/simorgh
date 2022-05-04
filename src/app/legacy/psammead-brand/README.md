@@ -10,7 +10,7 @@ The `product` is passed to a [VisuallyHiddenText](https://github.com/bbc/psammea
 
 The `serviceLocalisedName` is an optional prop referring to the local name of a service eg `Yoruba`. It is also passed to [VisuallyHiddenText](https://github.com/bbc/psammead/tree/latest/packages/components/psammead-visually-hidden-text) inside the Brand component.
 
-The `svg` prop must contain a `group`, `viewbox` values and a `ratio`, which is used within an `svg` element. Examples of the `svg` object can be found in [@bbc/psammead-assets](https://github.com/bbc/psammead/blob/latest/packages/utilities/psammead-assets/README.md#service-svgs).
+The `svg` prop must contain a `group`, `viewbox` values and a `ratio`, which is used within an `svg` element. Examples of the `svg` object can be found in [#legacy/psammead-assets/src](https://github.com/bbc/psammead/blob/latest/packages/utilities/psammead-assets/README.md#service-svgs).
 
 The `minWidth` and `maxWidth` values are required to allow the ability for the `svg` element to dynamically scale as the viewport becomes a very small size EG: feature phones.
 
@@ -61,7 +61,7 @@ When using `Brand` in the header, you should ensure that `borderBottom` prop is 
 ```jsx
 import Brand from '#legacy/psammead-brand/src';
 import SkipLink from '#legacy/psammead-brand/src/skip-link';
-import { igbo } from '@bbc/psammead-assets/svgs';
+import { igbo } from '#legacy/psammead-assets/src/svgs';
 import ScriptLink from '#legacy/psammead-script-link/src';
 import { C_POSTBOX, C_WHITE } from '#legacy/psammead-styles/src/colours';
 import { latin } from '#legacy/gel-foundations/src/scripts';

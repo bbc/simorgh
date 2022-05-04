@@ -16,7 +16,7 @@ import {
   getSansBold,
 } from '#legacy/psammead-styles/src/font-styles';
 import { GEL_BODY_COPY } from '#legacy/gel-foundations/src/typography';
-import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
+import { BBC_BLOCKS } from '#legacy/psammead-assets/src/svgs';
 
 const GOLDEN_RATIO_PERCENT = '38.2%';
 const BBC_BLOCKS_WIDTH = '10rem';

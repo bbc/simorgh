@@ -1,4 +1,4 @@
-# psammead-assets - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Futilities%2Fpsammead-assets%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Futilities%2Fpsammead-assets%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/utilities/psammead-assets)](https://david-dm.org/bbc/psammead?path=packages/utilities/psammead-assets) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/utilities/psammead-assets)](https://david-dm.org/bbc/psammead?path=packages/utilities/psammead-assets&type=peer) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/psammead-assets.svg)](https://www.npmjs.com/package/@bbc/psammead-assets) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
+# psammead-assets - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Futilities%2Fpsammead-assets%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Futilities%2Fpsammead-assets%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/utilities/psammead-assets)](https://david-dm.org/bbc/psammead?path=packages/utilities/psammead-assets) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/utilities/psammead-assets)](https://david-dm.org/bbc/psammead?path=packages/utilities/psammead-assets&type=peer) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/#legacy/psammead-assets/src.svg)](https://www.npmjs.com/package/#legacy/psammead-assets/src) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
 
 This package provides a collection of common assets that are likely to be required by many Psammead components or users, such as SVGs or small scripts.
 
@@ -10,14 +10,15 @@ This package provides a collection of common assets that are likely to be requir
 ## Installation
 
 ```jsx
-npm install @bbc/psammead-assets --save
+npm install #legacy/psammead-assets/src --save
 ```
+
 ## Usage
 
 ```jsx
-import { BBC_BLOCKS, news } from '@bbc/psammead-assets/svgs';
+import { BBC_BLOCKS, news } from '#legacy/psammead-assets/src/svgs';
 
-import { AMP_SCRIPT } from '@bbc/psammead-assets/amp-boilerplate';
+import { AMP_SCRIPT } from '#legacy/psammead-assets/src/amp-boilerplate';
 ```
 
 ## Service SVGs
@@ -39,7 +40,9 @@ The width of your SVG can be calculated using your desired height multiplied by 
 
 ```jsx
 const WrappingContainer = () => (
-  <svg viewBox={`0 0 ${news.viewbox.width} ${news.viewbox.height}`}>{news.group}</svg>
+  <svg viewBox={`0 0 ${news.viewbox.width} ${news.viewbox.height}`}>
+    {news.group}
+  </svg>
 );
 ```
 
@@ -48,10 +51,14 @@ const WrappingContainer = () => (
 Core icons is an object containing styled SVG icons from GEL Iconography Core. By default Core icons are sized to work well alongside text from the `GEL BodyCopy` typography group.
 
 ### Usage
-```jsx
-import { coreIcons } from '@bbc/psammead-assets/svgs';
 
-<p>{coreIcons.info} Did you know, in Switzerland it's illegal to own just one guinea pig?</p>
+```jsx
+import { coreIcons } from '#legacy/psammead-assets/src/svgs';
+
+<p>
+  {coreIcons.info} Did you know, in Switzerland it's illegal to own just one
+  guinea pig?
+</p>;
 ```
 
 ## Media Icons SVGs
@@ -61,12 +68,12 @@ Media icons is an object containing styled SVG icons for video, audio, photogall
 ### Usage
 
 ```jsx
-import { mediaIcons } from '@bbc/psammead-assets/svgs';
+import { mediaIcons } from '#legacy/psammead-assets/src/svgs';
 
 <span>
   {mediaIcons.audio}
-  {duration && datetime && (<time dateTime={datetime}>{duration}</time>)}
-</span>
+  {duration && datetime && <time dateTime={datetime}>{duration}</time>}
+</span>;
 ```
 
 ## Navigation Icons SVGs
@@ -76,11 +83,9 @@ Navigation icons is an object containing styled SVG icons for hamburger and cros
 ### Usage
 
 ```jsx
-import { navigationIcons } from '@bbc/psammead-assets/svgs';
+import { navigationIcons } from '#legacy/psammead-assets/src/svgs';
 
-<span>
-  {navigationIcons.cross}
-</span>
+<span>{navigationIcons.cross}</span>;
 ```
 
 ## Contributing

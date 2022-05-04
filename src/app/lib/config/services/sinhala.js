@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
 import { sinhalese } from '#legacy/gel-foundations/src/scripts';
-import { sinhala as brandSVG } from '@bbc/psammead-assets/svgs';
+import { sinhala as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import {
   F_NOTO_SERIF_SINHALA_BOLD,
   F_NOTO_SERIF_SINHALA_REGULAR,

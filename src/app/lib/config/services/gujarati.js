@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
 import { devanagariAndGurmukhi } from '#legacy/gel-foundations/src/scripts';
-import { gujarati as brandSVG } from '@bbc/psammead-assets/svgs';
+import { gujarati as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
 import '@bbc/psammead-locales/moment/gu';
 import withContext from '../../../contexts/utils/withContext';

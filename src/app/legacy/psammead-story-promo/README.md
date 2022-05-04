@@ -125,7 +125,7 @@ import StoryPromo, {
 import MediaIndicator from '#legacy/psammead-media-indicator/src';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 import LiveLabel from '#legacy/psammead-live-label/src';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
 
 const Image = <img src="https://foobar.com/image.jpg" />;
 

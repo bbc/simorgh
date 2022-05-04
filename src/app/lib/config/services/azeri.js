@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
 import { latinDiacritics } from '#legacy/gel-foundations/src/scripts';
-import { azeri as brandSVG } from '@bbc/psammead-assets/svgs';
+import { azeri as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Baku';
 import '@bbc/psammead-locales/moment/az';
 import withContext from '../../../contexts/utils/withContext';

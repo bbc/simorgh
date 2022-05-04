@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { mediaIcons } from '@bbc/psammead-assets/svgs';
+import { mediaIcons } from '#legacy/psammead-assets/src/svgs';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
