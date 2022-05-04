@@ -1,4 +1,4 @@
-const { candyXmlToRichText } = require('../src/index');
+import { candyXmlToRichText } from '../src/index';
 
 const createBody = inner =>
   `<body xmlns="http://www.bbc.co.uk/asset" xml:space="preserve" xml:base="http://www.bbc.co.uk/article/abc123">${inner}</body>`;
@@ -557,8 +557,7 @@ test('can handle chaos', () => {
         {
           type: 'paragraph',
           model: {
-            text:
-              'Bold text in unsupported nodes followed by normal text then some carnage.',
+            text: 'Bold text in unsupported nodes followed by normal text then some carnage.',
             blocks: [
               {
                 type: 'fragment',

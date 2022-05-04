@@ -1,10 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import {
-  latin,
-  burmese,
-  arabic,
-} from '#legacy/gel-foundations/src/dist/scripts';
+import { latin, burmese, arabic } from '#legacy/gel-foundations/src/scripts';
 import { render } from '@testing-library/react';
 import { TopicTags, TopicTag } from './index';
 

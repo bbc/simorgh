@@ -1,4 +1,4 @@
-const urlLink = require('../../src/models/url-link');
+import urlLink from '../../src/models/url-link';
 
 test('returns a block from a link XML node', () => {
   const text = 'foo text';

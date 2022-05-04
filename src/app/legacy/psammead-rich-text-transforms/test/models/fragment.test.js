@@ -1,4 +1,4 @@
-const fragment = require('../../src/models/fragment');
+import fragment from '../../src/models/fragment';
 
 test('returns a block from a text XML node', () => {
   const mockFragment = fragment('One two three four!');
