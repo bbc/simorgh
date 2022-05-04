@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import ATIAnalytics from '#containers/ATIAnalytics';
-import { Helmet } from 'react-helmet';
 import { shape, arrayOf, string } from 'prop-types';
 import styled from '@emotion/styled';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
@@ -26,7 +25,7 @@ const Wrapper = styled.main`
 `;
 
 const TopicPage = ({ pageData }) => {
-  const { lang, brandName, translations } = useContext(ServiceContext);
+  const { lang, translations } = useContext(ServiceContext);
   const { title, description, promos, pageCount, activePage } = pageData;
 
   const promoEntities = promos.map(promo => ({
@@ -52,20 +51,16 @@ const TopicPage = ({ pageData }) => {
     .replace('{x}', activePage)
     .replace('{y}', pageCount);
 
-  const pageTitle =
-    pageCount > 1
-      ? `${title}, ${translatedPage} - ${brandName}`
-      : `${title} - ${brandName}`;
+  const pageTitle = pageCount > 1 ? `${title}, ${translatedPage}` : `${title}`;
 
   return (
     <Wrapper role="main">
-      <Helmet>
-        <title>{pageTitle}</title>
-      </Helmet>
+      {console.log(pageData)}
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
-        title={title}
+        title={activePage >= 2 ? pageTitle : title}
+        socialHeadline={title}
         lang={lang}
         description={description}
         openGraphType="website"

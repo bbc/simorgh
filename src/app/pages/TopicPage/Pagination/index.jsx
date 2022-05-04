@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { number } from 'prop-types';
+import { number, string } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { getSansRegular, getSansBold } from '@bbc/psammead-styles/font-styles';
 import {
@@ -218,6 +218,7 @@ const Pagination = ({
       '{x}': <b key={key}>{activePage}</b>,
       '{y}': <b key={key}>{pageCount}</b>,
     }[token] || <span key={key}>{token}</span>);
+
   const tokens = pageXOfY.split(/(\{.\})/).map(tokenMapper);
 
   const showLeftArrow = activePage > 1;
@@ -249,11 +250,19 @@ const Pagination = ({
 Pagination.propTypes = {
   activePage: number,
   pageCount: number,
+  pageXOfY: string,
+  previousPage: string,
+  nextPage: string,
+  page: string,
 };
 
 Pagination.defaultProps = {
   activePage: 1,
   pageCount: 1,
+  pageXOfY: 'Page {x} of {y}',
+  previousPage: 'Previous Page',
+  nextPage: 'Next Page',
+  page: 'Page',
 };
 
 export default Pagination;
