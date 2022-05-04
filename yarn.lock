@@ -9956,15 +9956,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-es5@npm:latest":
-  version: 1.5.0
-  resolution: "eslint-plugin-es5@npm:1.5.0"
-  peerDependencies:
-    eslint: ">= 3.0.0"
-  checksum: b723f07b917df4f94e50f564a8a4df8f7cee4418acd32d4f8e7549a91cf9d2e0f5b4b2be29fe616ff0872ec505a666b37e83df1efebcaeaebb8418450405cb87
-  languageName: node
-  linkType: hard
-
 "eslint-plugin-import@npm:2.26.0":
   version: 2.26.0
   resolution: "eslint-plugin-import@npm:2.26.0"
@@ -19171,7 +19162,6 @@ __metadata:
     eslint-config-prettier: 8.5.0
     eslint-import-resolver-alias: 1.1.2
     eslint-plugin-cypress: 2.12.1
-    eslint-plugin-es5: latest
     eslint-plugin-import: 2.26.0
     eslint-plugin-json: 3.1.0
     eslint-plugin-jsx-a11y: 6.5.1
