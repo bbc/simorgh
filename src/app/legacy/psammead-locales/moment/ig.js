@@ -1,10 +1,11 @@
-var moment = require('moment');
+const moment = require('moment');
 
 moment.defineLocale('ig', {
   // eslint-disable-next-line prettier/prettier
-  months: 'Jenụwarị_Febụwarị_Maachị_Eprel_Mee_Juun_Julaị_Ọgọọst_Septemba_Ọktọba_Nọvemba_Disemba'.split(
-    '_'
-  ),
+  months:
+    'Jenụwarị_Febụwarị_Maachị_Eprel_Mee_Juun_Julaị_Ọgọọst_Septemba_Ọktọba_Nọvemba_Disemba'.split(
+      '_'
+    ),
   monthsShort: 'Jen_Feb_Maa_Epr_Mee_Juu_Jul_Ọgọ_Sep_Ọkt_Nov_Dis'.split('_'),
   weekdays: 'Sọnde_Mọnde_Tuzde_Wenesde_Tọsde_Fraịde_Satọde'.split('_'),
   weekdaysShort: 'Sọn_Mọn_Tuz_We_Tọs_Frai_Sat'.split('_'),

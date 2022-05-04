@@ -9,18 +9,19 @@ moment.locale('si');
 const assert = { equal: (val1, val2) => expect(val1).toEqual(val2) };
 
 test('parse', function () {
-  var tests = 'ජනවාරි ජන_පෙබරවාරි පෙබ_මාර්තු මාර්_අප්‍රේල් අප්_මැයි මැයි_ජූනි ජූනි_ජූලි ජූලි_අගෝස්තු අගෝ_සැප්තැම්බර් සැප්_ඔක්තෝබර් ඔක්_නොවැම්බර් නොවැ_දෙසැම්බර් දෙසැ'.split(
+  const tests =
+    'ජනවාරි ජන_පෙබරවාරි පෙබ_මාර්තු මාර්_අප්‍රේල් අප්_මැයි මැයි_ජූනි ජූනි_ජූලි ජූලි_අගෝස්තු අගෝ_සැප්තැම්බර් සැප්_ඔක්තෝබර් ඔක්_නොවැම්බර් නොවැ_දෙසැම්බර් දෙසැ'.split(
       '_'
-    ),
-    i;
+    );
+  let i;
   function equalTest(input, mmm, i) {
     assert.equal(
       moment(input, mmm).month(),
       i,
-      input + ' should be month ' + (i + 1)
+      `${input} should be month ${i + 1}`
     );
   }
-  for (i = 0; i < 12; i++) {
+  for (i = 0; i < 12; i += 1) {
     tests[i] = tests[i].split(' ');
     equalTest(tests[i][0], 'MMM', i);
     equalTest(tests[i][1], 'MMM', i);
@@ -34,42 +35,42 @@ test('parse', function () {
 });
 
 test('format', function () {
-  var a = [
-      [
-        'YYYY MMMM Do dddd, a h:mm:ss',
-        '2010 පෙබරවාරි 14 වැනි ඉරිදා, ප.ව. 3:25:50',
-      ],
-      [
-        'YYYY MMMM Do dddd, a h:mm:ss',
-        '2010 පෙබරවාරි 14 වැනි ඉරිදා, ප.ව. 3:25:50',
-      ],
-      ['ddd, A h', 'ඉරි, පස් වරු 3'],
-      ['M Mo MM MMMM MMM', '2 2 වැනි 02 පෙබරවාරි පෙබ'],
-      ['YYYY YY', '2010 10'],
-      ['D Do DD', '14 14 වැනි 14'],
-      ['d do dddd ddd dd', '0 0 වැනි ඉරිදා ඉරි ඉ'],
-      ['DDD DDDo DDDD', '45 45 වැනි 045'],
-      ['h hh', '3 03'],
-      ['H HH', '15 15'],
-      ['m mm', '25 25'],
-      ['s ss', '50 50'],
-      ['a A', 'ප.ව. පස් වරු'],
-      ['[වසරේ] DDDo [දිනය]', 'වසරේ 45 වැනි දිනය'],
-      ['LTS', 'ප.ව. 3:25:50'],
-      ['LT', 'ප.ව. 3:25'],
-      ['L', '2010/02/14'],
-      ['LL', '2010 පෙබරවාරි 14'],
-      ['LLL', '2010 පෙබරවාරි 14, ප.ව. 3:25'],
-      ['LLLL', '2010 පෙබරවාරි 14 වැනි ඉරිදා, ප.ව. 3:25:50'],
-      ['l', '2010/2/14'],
-      ['ll', '2010 පෙබ 14'],
-      ['lll', '2010 පෙබ 14, ප.ව. 3:25'],
-      ['llll', '2010 පෙබ 14 වැනි ඉරි, ප.ව. 3:25:50'],
+  const a = [
+    [
+      'YYYY MMMM Do dddd, a h:mm:ss',
+      '2010 පෙබරවාරි 14 වැනි ඉරිදා, ප.ව. 3:25:50',
     ],
-    b = moment(new Date(2010, 1, 14, 15, 25, 50, 125)),
-    i;
-  for (i = 0; i < a.length; i++) {
-    assert.equal(b.format(a[i][0]), a[i][1], a[i][0] + ' ---> ' + a[i][1]);
+    [
+      'YYYY MMMM Do dddd, a h:mm:ss',
+      '2010 පෙබරවාරි 14 වැනි ඉරිදා, ප.ව. 3:25:50',
+    ],
+    ['ddd, A h', 'ඉරි, පස් වරු 3'],
+    ['M Mo MM MMMM MMM', '2 2 වැනි 02 පෙබරවාරි පෙබ'],
+    ['YYYY YY', '2010 10'],
+    ['D Do DD', '14 14 වැනි 14'],
+    ['d do dddd ddd dd', '0 0 වැනි ඉරිදා ඉරි ඉ'],
+    ['DDD DDDo DDDD', '45 45 වැනි 045'],
+    ['h hh', '3 03'],
+    ['H HH', '15 15'],
+    ['m mm', '25 25'],
+    ['s ss', '50 50'],
+    ['a A', 'ප.ව. පස් වරු'],
+    ['[වසරේ] DDDo [දිනය]', 'වසරේ 45 වැනි දිනය'],
+    ['LTS', 'ප.ව. 3:25:50'],
+    ['LT', 'ප.ව. 3:25'],
+    ['L', '2010/02/14'],
+    ['LL', '2010 පෙබරවාරි 14'],
+    ['LLL', '2010 පෙබරවාරි 14, ප.ව. 3:25'],
+    ['LLLL', '2010 පෙබරවාරි 14 වැනි ඉරිදා, ප.ව. 3:25:50'],
+    ['l', '2010/2/14'],
+    ['ll', '2010 පෙබ 14'],
+    ['lll', '2010 පෙබ 14, ප.ව. 3:25'],
+    ['llll', '2010 පෙබ 14 වැනි ඉරි, ප.ව. 3:25:50'],
+  ];
+  const b = moment(new Date(2010, 1, 14, 15, 25, 50, 125));
+  let i;
+  for (i = 0; i < a.length; i += 1) {
+    assert.equal(b.format(a[i][0]), a[i][1], `${a[i][0]} ---> ${a[i][1]}`);
   }
 });
 
@@ -111,11 +112,12 @@ test('format ordinal', function () {
 });
 
 test('format month', function () {
-  var expected = 'ජනවාරි ජන_පෙබරවාරි පෙබ_මාර්තු මාර්_අප්‍රේල් අප්_මැයි මැයි_ජූනි ජූනි_ජූලි ජූලි_අගෝස්තු අගෝ_සැප්තැම්බර් සැප්_ඔක්තෝබර් ඔක්_නොවැම්බර් නොවැ_දෙසැම්බර් දෙසැ'.split(
+  const expected =
+    'ජනවාරි ජන_පෙබරවාරි පෙබ_මාර්තු මාර්_අප්‍රේල් අප්_මැයි මැයි_ජූනි ජූනි_ජූලි ජූලි_අගෝස්තු අගෝ_සැප්තැම්බර් සැප්_ඔක්තෝබර් ඔක්_නොවැම්බර් නොවැ_දෙසැම්බර් දෙසැ'.split(
       '_'
-    ),
-    i;
-  for (i = 0; i < expected.length; i++) {
+    );
+  let i;
+  for (i = 0; i < expected.length; i += 1) {
     assert.equal(
       moment([2011, i, 1]).format('MMMM MMM'),
       expected[i],
@@ -125,11 +127,12 @@ test('format month', function () {
 });
 
 test('format week', function () {
-  var expected = 'ඉරිදා ඉරි ඉ_සඳුදා සඳු ස_අඟහරුවාදා අඟ අ_බදාදා බදා බ_බ්‍රහස්පතින්දා බ්‍රහ බ්‍ර_සිකුරාදා සිකු සි_සෙනසුරාදා සෙන සෙ'.split(
+  const expected =
+    'ඉරිදා ඉරි ඉ_සඳුදා සඳු ස_අඟහරුවාදා අඟ අ_බදාදා බදා බ_බ්‍රහස්පතින්දා බ්‍රහ බ්‍ර_සිකුරාදා සිකු සි_සෙනසුරාදා සෙන සෙ'.split(
       '_'
-    ),
-    i;
-  for (i = 0; i < expected.length; i++) {
+    );
+  let i;
+  for (i = 0; i < expected.length; i += 1) {
     assert.equal(
       moment([2011, 0, 2 + i]).format('dddd ddd dd'),
       expected[i],
@@ -139,7 +142,7 @@ test('format week', function () {
 });
 
 test('from', function () {
-  var start = moment([2007, 1, 28]);
+  const start = moment([2007, 1, 28]);
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 44 }), true),
     'තත්පර කිහිපය',
@@ -305,7 +308,7 @@ test('fromNow', function () {
 });
 
 test('calendar day', function () {
-  var a = moment().hours(12).minutes(0).seconds(0);
+  const a = moment().hours(12).minutes(0).seconds(0);
 
   assert.equal(
     moment(a).calendar(),
@@ -340,57 +343,59 @@ test('calendar day', function () {
 });
 
 test('calendar next week', function () {
-  var i, m;
-  for (i = 2; i < 7; i++) {
+  let i;
+  let m;
+  for (i = 2; i < 7; i += 1) {
     m = moment().add({ d: i });
     assert.equal(
       m.calendar(),
       m.format('dddd LT[ට]'),
-      'Today + ' + i + ' days current time'
+      `Today + ${i} days current time`
     );
     m.hours(0).minutes(0).seconds(0).milliseconds(0);
     assert.equal(
       m.calendar(),
       m.format('dddd LT[ට]'),
-      'Today + ' + i + ' days beginning of day'
+      `Today + ${i} days beginning of day`
     );
     m.hours(23).minutes(59).seconds(59).milliseconds(999);
     assert.equal(
       m.calendar(),
       m.format('dddd LT[ට]'),
-      'Today + ' + i + ' days end of day'
+      `Today + ${i} days end of day`
     );
   }
 });
 
 test('calendar last week', function () {
-  var i, m;
+  let i;
+  let m;
 
-  for (i = 2; i < 7; i++) {
+  for (i = 2; i < 7; i += 1) {
     m = moment().subtract({ d: i });
     assert.equal(
       m.calendar(),
       m.format('[පසුගිය] dddd LT[ට]'),
-      'Today - ' + i + ' days current time'
+      `Today - ${i} days current time`
     );
     m.hours(0).minutes(0).seconds(0).milliseconds(0);
     assert.equal(
       m.calendar(),
       m.format('[පසුගිය] dddd LT[ට]'),
-      'Today - ' + i + ' days beginning of day'
+      `Today - ${i} days beginning of day`
     );
     m.hours(23).minutes(59).seconds(59).milliseconds(999);
     assert.equal(
       m.calendar(),
       m.format('[පසුගිය] dddd LT[ට]'),
-      'Today - ' + i + ' days end of day'
+      `Today - ${i} days end of day`
     );
   }
 });
 
 test('calendar all else', function () {
-  var weeksAgo = moment().subtract({ w: 1 }),
-    weeksFromNow = moment().add({ w: 1 });
+  let weeksAgo = moment().subtract({ w: 1 });
+  let weeksFromNow = moment().add({ w: 1 });
 
   assert.equal(weeksAgo.calendar(), weeksAgo.format('L'), '1 week ago');
   assert.equal(weeksFromNow.calendar(), weeksFromNow.format('L'), 'in 1 week');

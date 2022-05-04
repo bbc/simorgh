@@ -1,4 +1,4 @@
-var moment = require('moment');
+const moment = require('moment');
 require('moment/locale/sr-cyrl');
 
 moment.updateLocale('sr-cyrl', {
@@ -12,8 +12,8 @@ moment.updateLocale('sr-cyrl', {
     m: '1 минута',
     mm: '%d минута',
     h: '1 сата',
-    hh: function (number) {
-      return number < 5 ? number + ' сата' : number + ' сати';
+    hh(number) {
+      return number < 5 ? `${number} сата` : `${number} сати`;
     },
   },
 });

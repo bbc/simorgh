@@ -28,20 +28,19 @@ const dualMonthNames = [
 ];
 
 test('parse', function () {
-  var tests = dualMonthNames,
-    i;
+  const tests = dualMonthNames;
+  let i;
   function equalTest(input, mmm, i) {
     assert.equal(
       moment(input, mmm).month(),
       i,
-      input +
-        ' should be month ' +
-        (i + 1) +
-        ' instead is month ' +
-        moment(input, mmm).month()
+      `${input} should be month ${i + 1} instead is month ${moment(
+        input,
+        mmm
+      ).month()}`
     );
   }
-  for (i = 0; i < 12; i++) {
+  for (i = 0; i < 12; i += 1) {
     equalTest(tests[i], 'MMM', i);
     equalTest(tests[i], 'MMM', i);
     equalTest(tests[i], 'MMMM', i);
@@ -54,39 +53,36 @@ test('parse', function () {
 });
 
 test('format', function () {
-  var a = [
-      [
-        'dddd, MMMM Do YYYY, h:mm:ss a',
-        'الأحد، فبراير/ شباط 14 2010، 3:25:50 م',
-      ],
-      ['ddd, hA', 'أحد، 3م'],
-      ['M Mo MM MMMM MMM', '2 2 02 فبراير/ شباط فبراير/ شباط'],
-      ['YYYY YY', '2010 10'],
-      ['D Do DD', '14 14 14'],
-      ['d do dddd ddd dd', '0 0 الأحد أحد ح'],
-      ['DDD DDDo DDDD', '45 45 045'],
-      ['w wo ww', '8 8 08'],
-      ['h hh', '3 03'],
-      ['H HH', '15 15'],
-      ['m mm', '25 25'],
-      ['s ss', '50 50'],
-      ['a A', 'م م'],
-      ['[the] DDDo [day of the year]', 'the 45 day of the year'],
-      ['LT', '15:25'],
-      ['LTS', '15:25:50'],
-      ['L', '14/\u200f2/\u200f2010'],
-      ['LL', '14 فبراير/ شباط 2010'],
-      ['LLL', '14 فبراير/ شباط 2010 15:25'],
-      ['LLLL', 'الأحد 14 فبراير/ شباط 2010 15:25'],
-      ['l', '14/\u200f2/\u200f2010'],
-      ['ll', '14 فبراير/ شباط 2010'],
-      ['lll', '14 فبراير/ شباط 2010 15:25'],
-      ['llll', 'أحد 14 فبراير/ شباط 2010 15:25'],
-    ],
-    b = moment(new Date(2010, 1, 14, 15, 25, 50, 125)),
-    i;
-  for (i = 0; i < a.length; i++) {
-    assert.equal(b.format(a[i][0]), a[i][1], a[i][0] + ' ---> ' + a[i][1]);
+  const a = [
+    ['dddd, MMMM Do YYYY, h:mm:ss a', 'الأحد، فبراير/ شباط 14 2010، 3:25:50 م'],
+    ['ddd, hA', 'أحد، 3م'],
+    ['M Mo MM MMMM MMM', '2 2 02 فبراير/ شباط فبراير/ شباط'],
+    ['YYYY YY', '2010 10'],
+    ['D Do DD', '14 14 14'],
+    ['d do dddd ddd dd', '0 0 الأحد أحد ح'],
+    ['DDD DDDo DDDD', '45 45 045'],
+    ['w wo ww', '8 8 08'],
+    ['h hh', '3 03'],
+    ['H HH', '15 15'],
+    ['m mm', '25 25'],
+    ['s ss', '50 50'],
+    ['a A', 'م م'],
+    ['[the] DDDo [day of the year]', 'the 45 day of the year'],
+    ['LT', '15:25'],
+    ['LTS', '15:25:50'],
+    ['L', '14/\u200f2/\u200f2010'],
+    ['LL', '14 فبراير/ شباط 2010'],
+    ['LLL', '14 فبراير/ شباط 2010 15:25'],
+    ['LLLL', 'الأحد 14 فبراير/ شباط 2010 15:25'],
+    ['l', '14/\u200f2/\u200f2010'],
+    ['ll', '14 فبراير/ شباط 2010'],
+    ['lll', '14 فبراير/ شباط 2010 15:25'],
+    ['llll', 'أحد 14 فبراير/ شباط 2010 15:25'],
+  ];
+  const b = moment(new Date(2010, 1, 14, 15, 25, 50, 125));
+  let i;
+  for (i = 0; i < a.length; i += 1) {
+    assert.equal(b.format(a[i][0]), a[i][1], `${a[i][0]} ---> ${a[i][1]}`);
   }
 });
 
@@ -128,20 +124,21 @@ test('format ordinal', function () {
 });
 
 test('format month', function () {
-  var expected = dualMonthNames,
-    i;
-  for (i = 0; i < expected.length; i++) {
+  const expected = dualMonthNames;
+  let i;
+  for (i = 0; i < expected.length; i += 1) {
     assert.equal(moment([2011, i, 1]).format('MMMM'), expected[i], expected[i]);
     assert.equal(moment([2011, i, 1]).format('MMM'), expected[i], expected[i]);
   }
 });
 
 test('format week', function () {
-  var expected = 'الأحد أحد ح_الإثنين إثنين ن_الثلاثاء ثلاثاء ث_الأربعاء أربعاء ر_الخميس خميس خ_الجمعة جمعة ج_السبت سبت س'.split(
+  const expected =
+    'الأحد أحد ح_الإثنين إثنين ن_الثلاثاء ثلاثاء ث_الأربعاء أربعاء ر_الخميس خميس خ_الجمعة جمعة ج_السبت سبت س'.split(
       '_'
-    ),
-    i;
-  for (i = 0; i < expected.length; i++) {
+    );
+  let i;
+  for (i = 0; i < expected.length; i += 1) {
     assert.equal(
       moment([2011, 0, 2 + i]).format('dddd ddd dd'),
       expected[i],
@@ -151,7 +148,7 @@ test('format week', function () {
 });
 
 test('from', function () {
-  var start = moment([2007, 1, 28]);
+  const start = moment([2007, 1, 28]);
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 44 }), true),
     '44 ثانية',
@@ -317,7 +314,7 @@ test('fromNow', function () {
 });
 
 test('calendar day', function () {
-  var a = moment().hours(12).minutes(0).seconds(0);
+  const a = moment().hours(12).minutes(0).seconds(0);
 
   assert.equal(
     moment(a).calendar(),
@@ -352,56 +349,58 @@ test('calendar day', function () {
 });
 
 test('calendar next week', function () {
-  var i, m;
-  for (i = 2; i < 7; i++) {
+  let i;
+  let m;
+  for (i = 2; i < 7; i += 1) {
     m = moment().add({ d: i });
     assert.equal(
       m.calendar(),
       m.format('dddd [عند الساعة] LT'),
-      'Today + ' + i + ' days current time'
+      `Today + ${i} days current time`
     );
     m.hours(0).minutes(0).seconds(0).milliseconds(0);
     assert.equal(
       m.calendar(),
       m.format('dddd [عند الساعة] LT'),
-      'Today + ' + i + ' days beginning of day'
+      `Today + ${i} days beginning of day`
     );
     m.hours(23).minutes(59).seconds(59).milliseconds(999);
     assert.equal(
       m.calendar(),
       m.format('dddd [عند الساعة] LT'),
-      'Today + ' + i + ' days end of day'
+      `Today + ${i} days end of day`
     );
   }
 });
 
 test('calendar last week', function () {
-  var i, m;
-  for (i = 2; i < 7; i++) {
+  let i;
+  let m;
+  for (i = 2; i < 7; i += 1) {
     m = moment().subtract({ d: i });
     assert.equal(
       m.calendar(),
       m.format('dddd [عند الساعة] LT'),
-      'Today - ' + i + ' days current time'
+      `Today - ${i} days current time`
     );
     m.hours(0).minutes(0).seconds(0).milliseconds(0);
     assert.equal(
       m.calendar(),
       m.format('dddd [عند الساعة] LT'),
-      'Today - ' + i + ' days beginning of day'
+      `Today - ${i} days beginning of day`
     );
     m.hours(23).minutes(59).seconds(59).milliseconds(999);
     assert.equal(
       m.calendar(),
       m.format('dddd [عند الساعة] LT'),
-      'Today - ' + i + ' days end of day'
+      `Today - ${i} days end of day`
     );
   }
 });
 
 test('calendar all else', function () {
-  var weeksAgo = moment().subtract({ w: 1 }),
-    weeksFromNow = moment().add({ w: 1 });
+  let weeksAgo = moment().subtract({ w: 1 });
+  let weeksFromNow = moment().add({ w: 1 });
 
   assert.equal(weeksAgo.calendar(), weeksAgo.format('L'), '1 week ago');
   assert.equal(weeksFromNow.calendar(), weeksFromNow.format('L'), 'in 1 week');
@@ -465,7 +464,10 @@ test('weeks year starting sunday formatted', function () {
 });
 
 test('no leading zeros in long date formats', function () {
-  var i, j, longDateStr, shortDateStr;
+  let i;
+  let j;
+  let longDateStr;
+  let shortDateStr;
   for (i = 1; i <= 9; ++i) {
     for (j = 1; j <= 9; ++j) {
       longDateStr = moment([2014, i, j]).format('L');
@@ -481,7 +483,8 @@ test('no leading zeros in long date formats', function () {
 
 // locale-specific
 test('ar strict mode parsing works', function () {
-  var m, formattedDate;
+  let m;
+  let formattedDate;
   m = moment().locale('ar');
   formattedDate = m.format('l');
   assert.equal(

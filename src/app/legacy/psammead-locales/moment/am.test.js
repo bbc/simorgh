@@ -9,19 +9,19 @@ moment.locale('am');
 const assert = { equal: (val1, val2) => expect(val1).toEqual(val2) };
 
 test('format', function () {
-  var a = [
-      ['LL', '14 የካቲት 2010'],
-      ['D MMMM YYYY', '14 የካቲት 2010'],
-    ],
-    b = moment(new Date(2010, 1, 14, 15, 25, 50, 125)),
-    i;
-  for (i = 0; i < a.length; i++) {
-    assert.equal(b.format(a[i][0]), a[i][1], a[i][0] + ' ---> ' + a[i][1]);
+  const a = [
+    ['LL', '14 የካቲት 2010'],
+    ['D MMMM YYYY', '14 የካቲት 2010'],
+  ];
+  const b = moment(new Date(2010, 1, 14, 15, 25, 50, 125));
+  let i;
+  for (i = 0; i < a.length; i += 1) {
+    assert.equal(b.format(a[i][0]), a[i][1], `${a[i][0]} ---> ${a[i][1]}`);
   }
 });
 
 test('from', function () {
-  var start = moment([2007, 1, 28]);
+  const start = moment([2007, 1, 28]);
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 45 }), true),
     'ከ 1 ደቂቃ',

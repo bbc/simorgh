@@ -9,20 +9,21 @@ moment.locale('pt-br');
 const assert = { equal: (val1, val2) => expect(val1).toEqual(val2) };
 
 test('parse', function () {
-  var tests = 'Janeiro Jan_Fevereiro Fev_Março Mar_Abril Abr_Maio Mai_Junho Jun_Julho Jul_Agosto Ago_Setembro Set_Outubro Out_Novembro Nov_Dezembro Dez'.split(
+  const tests =
+    'Janeiro Jan_Fevereiro Fev_Março Mar_Abril Abr_Maio Mai_Junho Jun_Julho Jul_Agosto Ago_Setembro Set_Outubro Out_Novembro Nov_Dezembro Dez'.split(
       '_'
-    ),
-    i;
+    );
+  let i;
 
   function equalTest(input, mmm, i) {
     assert.equal(
       moment(input, mmm).month(),
       i,
-      input + ' should be month ' + (i + 1)
+      `${input} should be month ${i + 1}`
     );
   }
 
-  for (i = 0; i < 12; i++) {
+  for (i = 0; i < 12; i += 1) {
     tests[i] = tests[i].split(' ');
     equalTest(tests[i][0], 'MMM', i);
     equalTest(tests[i][1], 'MMM', i);
@@ -36,38 +37,38 @@ test('parse', function () {
 });
 
 test('format', function () {
-  var a = [
-      [
-        'dddd, MMMM Do YYYY, h:mm:ss a',
-        'Domingo, fevereiro 14º 2010, 3:25:50 pm',
-      ],
-      ['ddd, hA', 'Dom, 3PM'],
-      ['M Mo MM MMMM MMM', '2 2º 02 fevereiro Fev'],
-      ['YYYY YY', '2010 10'],
-      ['D Do DD', '14 14º 14'],
-      ['d do dddd ddd', '0 0º Domingo Dom'],
-      ['DDD DDDo DDDD', '45 45º 045'],
-      ['w wo ww', '8 8º 08'],
-      ['h hh', '3 03'],
-      ['H HH', '15 15'],
-      ['m mm', '25 25'],
-      ['s ss', '50 50'],
-      ['a A', 'pm PM'],
-      ['[the] DDDo [day of the year]', 'the 45º day of the year'],
-      ['LTS', '15:25:50'],
-      ['L', '14/02/2010'],
-      ['LL', '14 fevereiro 2010'],
-      ['LLL', '14 fevereiro 2010 às 15:25'],
-      ['LLLL', 'Domingo, 14 fevereiro 2010 às 15:25'],
-      ['l', '14/2/2010'],
-      ['ll', '14 Fev 2010'],
-      ['lll', '14 Fev 2010 às 15:25'],
-      ['llll', 'Dom, 14 Fev 2010 às 15:25'],
+  const a = [
+    [
+      'dddd, MMMM Do YYYY, h:mm:ss a',
+      'Domingo, fevereiro 14º 2010, 3:25:50 pm',
     ],
-    b = moment(new Date(2010, 1, 14, 15, 25, 50, 125)),
-    i;
-  for (i = 0; i < a.length; i++) {
-    assert.equal(b.format(a[i][0]), a[i][1], a[i][0] + ' ---> ' + a[i][1]);
+    ['ddd, hA', 'Dom, 3PM'],
+    ['M Mo MM MMMM MMM', '2 2º 02 fevereiro Fev'],
+    ['YYYY YY', '2010 10'],
+    ['D Do DD', '14 14º 14'],
+    ['d do dddd ddd', '0 0º Domingo Dom'],
+    ['DDD DDDo DDDD', '45 45º 045'],
+    ['w wo ww', '8 8º 08'],
+    ['h hh', '3 03'],
+    ['H HH', '15 15'],
+    ['m mm', '25 25'],
+    ['s ss', '50 50'],
+    ['a A', 'pm PM'],
+    ['[the] DDDo [day of the year]', 'the 45º day of the year'],
+    ['LTS', '15:25:50'],
+    ['L', '14/02/2010'],
+    ['LL', '14 fevereiro 2010'],
+    ['LLL', '14 fevereiro 2010 às 15:25'],
+    ['LLLL', 'Domingo, 14 fevereiro 2010 às 15:25'],
+    ['l', '14/2/2010'],
+    ['ll', '14 Fev 2010'],
+    ['lll', '14 Fev 2010 às 15:25'],
+    ['llll', 'Dom, 14 Fev 2010 às 15:25'],
+  ];
+  const b = moment(new Date(2010, 1, 14, 15, 25, 50, 125));
+  let i;
+  for (i = 0; i < a.length; i += 1) {
+    assert.equal(b.format(a[i][0]), a[i][1], `${a[i][0]} ---> ${a[i][1]}`);
   }
 });
 
@@ -109,11 +110,12 @@ test('format ordinal', function () {
 });
 
 test('format month', function () {
-  var expected = 'janeiro Jan_fevereiro Fev_março Mar_abril Abr_maio Mai_junho Jun_julho Jul_agosto Ago_setembro Set_outubro Out_novembro Nov_dezembro Dez'.split(
+  const expected =
+    'janeiro Jan_fevereiro Fev_março Mar_abril Abr_maio Mai_junho Jun_julho Jul_agosto Ago_setembro Set_outubro Out_novembro Nov_dezembro Dez'.split(
       '_'
-    ),
-    i;
-  for (i = 0; i < expected.length; i++) {
+    );
+  let i;
+  for (i = 0; i < expected.length; i += 1) {
     assert.equal(
       moment([2011, i, 1]).format('MMMM MMM'),
       expected[i],
@@ -123,11 +125,12 @@ test('format month', function () {
 });
 
 test('format week', function () {
-  var expected = 'Domingo Dom Do_Segunda-feira Seg 2ª_Terça-feira Ter 3ª_Quarta-feira Qua 4ª_Quinta-feira Qui 5ª_Sexta-feira Sex 6ª_Sábado Sáb Sá'.split(
+  const expected =
+    'Domingo Dom Do_Segunda-feira Seg 2ª_Terça-feira Ter 3ª_Quarta-feira Qua 4ª_Quinta-feira Qui 5ª_Sexta-feira Sex 6ª_Sábado Sáb Sá'.split(
       '_'
-    ),
-    i;
-  for (i = 0; i < expected.length; i++) {
+    );
+  let i;
+  for (i = 0; i < expected.length; i += 1) {
     assert.equal(
       moment([2011, 0, 2 + i]).format('dddd ddd dd'),
       expected[i],
@@ -137,7 +140,7 @@ test('format week', function () {
 });
 
 test('from', function () {
-  var start = moment([2007, 1, 28]);
+  const start = moment([2007, 1, 28]);
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 44 }), true),
     'poucos segundos',
@@ -295,7 +298,7 @@ test('fromNow', function () {
 });
 
 test('calendar day', function () {
-  var a = moment().hours(12).minutes(0).seconds(0);
+  const a = moment().hours(12).minutes(0).seconds(0);
 
   assert.equal(moment(a).calendar(), 'Hoje às 12:00', 'today at the same time');
   assert.equal(
@@ -326,32 +329,34 @@ test('calendar day', function () {
 });
 
 test('calendar next week', function () {
-  var i, m;
-  for (i = 2; i < 7; i++) {
+  let i;
+  let m;
+  for (i = 2; i < 7; i += 1) {
     m = moment().add({ d: i });
     assert.equal(
       m.calendar(),
       m.format('dddd [às] LT'),
-      'Today + ' + i + ' days current time'
+      `Today + ${i} days current time`
     );
     m.hours(0).minutes(0).seconds(0).milliseconds(0);
     assert.equal(
       m.calendar(),
       m.format('dddd [às] LT'),
-      'Today + ' + i + ' days beginning of day'
+      `Today + ${i} days beginning of day`
     );
     m.hours(23).minutes(59).seconds(59).milliseconds(999);
     assert.equal(
       m.calendar(),
       m.format('dddd [às] LT'),
-      'Today + ' + i + ' days end of day'
+      `Today + ${i} days end of day`
     );
   }
 });
 
 test('calendar last week', function () {
-  var i, m;
-  for (i = 2; i < 7; i++) {
+  let i;
+  let m;
+  for (i = 2; i < 7; i += 1) {
     m = moment().subtract({ d: i });
     assert.equal(
       m.calendar(),
@@ -360,7 +365,7 @@ test('calendar last week', function () {
           ? '[Último] dddd [às] LT'
           : '[Última] dddd [às] LT'
       ),
-      'Today - ' + i + ' days current time'
+      `Today - ${i} days current time`
     );
     m.hours(0).minutes(0).seconds(0).milliseconds(0);
     assert.equal(
@@ -370,7 +375,7 @@ test('calendar last week', function () {
           ? '[Último] dddd [às] LT'
           : '[Última] dddd [às] LT'
       ),
-      'Today - ' + i + ' days beginning of day'
+      `Today - ${i} days beginning of day`
     );
     m.hours(23).minutes(59).seconds(59).milliseconds(999);
     assert.equal(
@@ -380,14 +385,14 @@ test('calendar last week', function () {
           ? '[Último] dddd [às] LT'
           : '[Última] dddd [às] LT'
       ),
-      'Today - ' + i + ' days end of day'
+      `Today - ${i} days end of day`
     );
   }
 });
 
 test('calendar all else', function () {
-  var weeksAgo = moment().subtract({ w: 1 }),
-    weeksFromNow = moment().add({ w: 1 });
+  let weeksAgo = moment().subtract({ w: 1 });
+  let weeksFromNow = moment().add({ w: 1 });
 
   assert.equal(weeksAgo.calendar(), weeksAgo.format('L'), '1 week ago');
   assert.equal(weeksFromNow.calendar(), weeksFromNow.format('L'), 'in 1 week');
@@ -428,8 +433,8 @@ test('weeks year starting sunday format', function () {
 });
 
 test('relative time threshold', function () {
-  var rts = moment(),
-    rtsDefault = moment.relativeTimeThreshold('ss');
+  const rts = moment();
+  const rtsDefault = moment.relativeTimeThreshold('ss');
 
   moment.relativeTimeThreshold('ss', 3);
 

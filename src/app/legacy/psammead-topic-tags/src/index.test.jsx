@@ -2,12 +2,15 @@ import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { latin, burmese, arabic } from '#legacy/gel-foundations/src/scripts';
 import { render } from '@testing-library/react';
+import latinAndCyrillicTypography from '#legacy/gel-foundations/src/scripts/latin-and-cyrillic';
+import burmeseTypography from '#legacy/gel-foundations/src/scripts/burmese';
+import arabicTypography from '#legacy/gel-foundations/src/scripts/arabic';
 import { TopicTags, TopicTag } from './index';
 
 describe('TopicTags', () => {
   const newsProps = {
     service: 'news',
-    script: latin,
+    script: latinAndCyrillicTypography,
   };
 
   shouldMatchSnapshot(
@@ -29,21 +32,21 @@ describe('TopicTags', () => {
 
   shouldMatchSnapshot(
     'should correctly render a single topic tag for burmese',
-    <TopicTags service="burmese" script={burmese}>
+    <TopicTags service="burmese" script={burmeseTypography}>
       <TopicTag name="test1" link="#" />
     </TopicTags>,
   );
 
   shouldMatchSnapshot(
     'should correctly render a single topic tag for persian',
-    <TopicTags service="persian" script={arabic}>
+    <TopicTags service="persian" script={arabicTypography}>
       <TopicTag name="test1" link="#" />
     </TopicTags>,
   );
 
   shouldMatchSnapshot(
     'should correctly render multiple topic tags for arabic',
-    <TopicTags service="arabic" script={arabic}>
+    <TopicTags service="arabic" script={arabicTypography}>
       <TopicTag name="test1" link="#" />
       <TopicTag name="test2" link="#" />
       <TopicTag name="test3" link="#" />

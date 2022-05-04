@@ -183,7 +183,6 @@ const generateStory =
 const generate2FeatureStory = () => args =>
   (
     <Grid
-      dir={args.dir}
       columns={{
         group0: 8,
         group1: 8,
@@ -193,9 +192,9 @@ const generate2FeatureStory = () => args =>
         group5: 8,
       }}
       enableGelGutters
+      {...args}
     >
       <Grid
-        dir={args.dir}
         item
         columns={{
           group0: 8,
@@ -205,11 +204,11 @@ const generate2FeatureStory = () => args =>
           group4: 6,
           group5: 6,
         }}
+        {...args}
       >
         {generateStory({ promoType: 'leading' })(args)}
       </Grid>
       <Grid
-        dir={args.dir}
         columns={{
           group0: 8,
           group1: 8,
@@ -219,9 +218,9 @@ const generate2FeatureStory = () => args =>
           group5: 2,
         }}
         enableGelGutters
+        {...args}
       >
         <Grid
-          dir={args.dir}
           item
           columns={{
             group0: 8,
@@ -231,6 +230,7 @@ const generate2FeatureStory = () => args =>
             group4: 2,
             group5: 2,
           }}
+          {...args}
         >
           {generateStory({ promoType: 'regular' })(args)}
         </Grid>

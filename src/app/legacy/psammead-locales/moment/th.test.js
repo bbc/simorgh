@@ -9,18 +9,19 @@ moment.locale('th');
 const assert = { equal: (val1, val2) => expect(val1).toEqual(val2) };
 
 test('parse', function () {
-  var tests = 'มกราคม ม.ค._กุมภาพันธ์ ก.พ._มีนาคม มี.ค._เมษายน เม.ย._พฤษภาคม พ.ค._มิถุนายน มิ.ย._กรกฎาคม ก.ค._สิงหาคม ส.ค._กันยายน ก.ย._ตุลาคม ต.ค._พฤศจิกายน พ.ย._ธันวาคม ธ.ค.'.split(
+  const tests =
+    'มกราคม ม.ค._กุมภาพันธ์ ก.พ._มีนาคม มี.ค._เมษายน เม.ย._พฤษภาคม พ.ค._มิถุนายน มิ.ย._กรกฎาคม ก.ค._สิงหาคม ส.ค._กันยายน ก.ย._ตุลาคม ต.ค._พฤศจิกายน พ.ย._ธันวาคม ธ.ค.'.split(
       '_'
-    ),
-    i;
+    );
+  let i;
   function equalTest(input, mmm, i) {
     assert.equal(
       moment(input, mmm).month(),
       i,
-      input + ' should be month ' + (i + 1)
+      `${input} should be month ${i + 1}`
     );
   }
-  for (i = 0; i < 12; i++) {
+  for (i = 0; i < 12; i += 1) {
     tests[i] = tests[i].split(' ');
     equalTest(tests[i][0], 'MMM', i);
     equalTest(tests[i][1], 'MMM', i);
@@ -34,47 +35,48 @@ test('parse', function () {
 });
 
 test('format', function () {
-  var a = [
-      [
-        'dddd, Do MMMM YYYY, h:mm:ss a',
-        'อาทิตย์, 14 กุมภาพันธ์ 2010, 3:25:50 หลังเที่ยง',
-      ],
-      ['ddd, h A', 'อาทิตย์, 3 หลังเที่ยง'],
-      ['M Mo MM MMMM MMM', '2 2 02 กุมภาพันธ์ ก.พ.'],
-      ['YYYY YY', '2010 10'],
-      ['D Do DD', '14 14 14'],
-      ['d do dddd ddd dd', '0 0 อาทิตย์ อาทิตย์ อา.'],
-      ['DDD DDDo DDDD', '45 45 045'],
-      ['w wo ww', '8 8 08'],
-      ['h hh', '3 03'],
-      ['H HH', '15 15'],
-      ['m mm', '25 25'],
-      ['s ss', '50 50'],
-      ['a A', 'หลังเที่ยง หลังเที่ยง'],
-      ['[the] DDDo [day of the year]', 'the 45 day of the year'],
-      ['LTS', '15:25:50'],
-      ['L', '14/02/2010'],
-      ['LL', '14 กุมภาพันธ์ 2010'],
-      ['LLL', '14 กุมภาพันธ์ 2010 เวลา 15:25'],
-      ['LLLL', 'วันอาทิตย์ที่ 14 กุมภาพันธ์ 2010 เวลา 15:25'],
-      ['l', '14/2/2010'],
-      ['ll', '14 ก.พ. 2010'],
-      ['lll', '14 ก.พ. 2010 เวลา 15:25'],
-      ['llll', 'วันอาทิตย์ที่ 14 ก.พ. 2010 เวลา 15:25'],
+  const a = [
+    [
+      'dddd, Do MMMM YYYY, h:mm:ss a',
+      'อาทิตย์, 14 กุมภาพันธ์ 2010, 3:25:50 หลังเที่ยง',
     ],
-    b = moment(new Date(2010, 1, 14, 15, 25, 50, 125)),
-    i;
-  for (i = 0; i < a.length; i++) {
-    assert.equal(b.format(a[i][0]), a[i][1], a[i][0] + ' ---> ' + a[i][1]);
+    ['ddd, h A', 'อาทิตย์, 3 หลังเที่ยง'],
+    ['M Mo MM MMMM MMM', '2 2 02 กุมภาพันธ์ ก.พ.'],
+    ['YYYY YY', '2010 10'],
+    ['D Do DD', '14 14 14'],
+    ['d do dddd ddd dd', '0 0 อาทิตย์ อาทิตย์ อา.'],
+    ['DDD DDDo DDDD', '45 45 045'],
+    ['w wo ww', '8 8 08'],
+    ['h hh', '3 03'],
+    ['H HH', '15 15'],
+    ['m mm', '25 25'],
+    ['s ss', '50 50'],
+    ['a A', 'หลังเที่ยง หลังเที่ยง'],
+    ['[the] DDDo [day of the year]', 'the 45 day of the year'],
+    ['LTS', '15:25:50'],
+    ['L', '14/02/2010'],
+    ['LL', '14 กุมภาพันธ์ 2010'],
+    ['LLL', '14 กุมภาพันธ์ 2010 เวลา 15:25'],
+    ['LLLL', 'วันอาทิตย์ที่ 14 กุมภาพันธ์ 2010 เวลา 15:25'],
+    ['l', '14/2/2010'],
+    ['ll', '14 ก.พ. 2010'],
+    ['lll', '14 ก.พ. 2010 เวลา 15:25'],
+    ['llll', 'วันอาทิตย์ที่ 14 ก.พ. 2010 เวลา 15:25'],
+  ];
+  const b = moment(new Date(2010, 1, 14, 15, 25, 50, 125));
+  let i;
+  for (i = 0; i < a.length; i += 1) {
+    assert.equal(b.format(a[i][0]), a[i][1], `${a[i][0]} ---> ${a[i][1]}`);
   }
 });
 
 test('format month', function () {
-  var expected = 'มกราคม ม.ค._กุมภาพันธ์ ก.พ._มีนาคม มี.ค._เมษายน เม.ย._พฤษภาคม พ.ค._มิถุนายน มิ.ย._กรกฎาคม ก.ค._สิงหาคม ส.ค._กันยายน ก.ย._ตุลาคม ต.ค._พฤศจิกายน พ.ย._ธันวาคม ธ.ค.'.split(
+  const expected =
+    'มกราคม ม.ค._กุมภาพันธ์ ก.พ._มีนาคม มี.ค._เมษายน เม.ย._พฤษภาคม พ.ค._มิถุนายน มิ.ย._กรกฎาคม ก.ค._สิงหาคม ส.ค._กันยายน ก.ย._ตุลาคม ต.ค._พฤศจิกายน พ.ย._ธันวาคม ธ.ค.'.split(
       '_'
-    ),
-    i;
-  for (i = 0; i < expected.length; i++) {
+    );
+  let i;
+  for (i = 0; i < expected.length; i += 1) {
     assert.equal(
       moment([2011, i, 1]).format('MMMM MMM'),
       expected[i],
@@ -84,11 +86,12 @@ test('format month', function () {
 });
 
 test('format week', function () {
-  var expected = 'อาทิตย์ อาทิตย์ อา._จันทร์ จันทร์ จ._อังคาร อังคาร อ._พุธ พุธ พ._พฤหัสบดี พฤหัส พฤ._ศุกร์ ศุกร์ ศ._เสาร์ เสาร์ ส.'.split(
+  const expected =
+    'อาทิตย์ อาทิตย์ อา._จันทร์ จันทร์ จ._อังคาร อังคาร อ._พุธ พุธ พ._พฤหัสบดี พฤหัส พฤ._ศุกร์ ศุกร์ ศ._เสาร์ เสาร์ ส.'.split(
       '_'
-    ),
-    i;
-  for (i = 0; i < expected.length; i++) {
+    );
+  let i;
+  for (i = 0; i < expected.length; i += 1) {
     assert.equal(
       moment([2011, 0, 2 + i]).format('dddd ddd dd'),
       expected[i],
@@ -98,7 +101,7 @@ test('format week', function () {
 });
 
 test('from', function () {
-  var start = moment([2007, 1, 28]);
+  const start = moment([2007, 1, 28]);
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 44 }), true),
     'ไม่กี่วินาที',
@@ -264,7 +267,7 @@ test('fromNow', function () {
 });
 
 test('calendar day', function () {
-  var a = moment().hours(12).minutes(0).seconds(0);
+  const a = moment().hours(12).minutes(0).seconds(0);
 
   assert.equal(
     moment(a).calendar(),
@@ -299,56 +302,58 @@ test('calendar day', function () {
 });
 
 test('calendar next week', function () {
-  var i, m;
-  for (i = 2; i < 7; i++) {
+  let i;
+  let m;
+  for (i = 2; i < 7; i += 1) {
     m = moment().add({ d: i });
     assert.equal(
       m.calendar(),
       m.format('dddd[หน้า เวลา] LT'),
-      'Today + ' + i + ' days current time'
+      `Today + ${i} days current time`
     );
     m.hours(0).minutes(0).seconds(0).milliseconds(0);
     assert.equal(
       m.calendar(),
       m.format('dddd[หน้า เวลา] LT'),
-      'Today + ' + i + ' days beginning of day'
+      `Today + ${i} days beginning of day`
     );
     m.hours(23).minutes(59).seconds(59).milliseconds(999);
     assert.equal(
       m.calendar(),
       m.format('dddd[หน้า เวลา] LT'),
-      'Today + ' + i + ' days end of day'
+      `Today + ${i} days end of day`
     );
   }
 });
 
 test('calendar last week', function () {
-  var i, m;
-  for (i = 2; i < 7; i++) {
+  let i;
+  let m;
+  for (i = 2; i < 7; i += 1) {
     m = moment().subtract({ d: i });
     assert.equal(
       m.calendar(),
       m.format('[วัน]dddd[ที่แล้ว เวลา] LT'),
-      'Today - ' + i + ' days current time'
+      `Today - ${i} days current time`
     );
     m.hours(0).minutes(0).seconds(0).milliseconds(0);
     assert.equal(
       m.calendar(),
       m.format('[วัน]dddd[ที่แล้ว เวลา] LT'),
-      'Today - ' + i + ' days beginning of day'
+      `Today - ${i} days beginning of day`
     );
     m.hours(23).minutes(59).seconds(59).milliseconds(999);
     assert.equal(
       m.calendar(),
       m.format('[วัน]dddd[ที่แล้ว เวลา] LT'),
-      'Today - ' + i + ' days end of day'
+      `Today - ${i} days end of day`
     );
   }
 });
 
 test('calendar all else', function () {
-  var weeksAgo = moment().subtract({ w: 1 }),
-    weeksFromNow = moment().add({ w: 1 });
+  let weeksAgo = moment().subtract({ w: 1 });
+  let weeksFromNow = moment().add({ w: 1 });
 
   assert.equal(weeksAgo.calendar(), weeksAgo.format('L'), '1 week ago');
   assert.equal(weeksFromNow.calendar(), weeksFromNow.format('L'), 'in 1 week');
