@@ -201,21 +201,17 @@ const renderBlock = ({
 };
 /* eslint-enable react/prop-types */
 
-const getTranslations = translations => ({
-  pageXOfY: 'Page {x} of {y}',
-  previousPage: 'Previous Page',
-  nextPage: 'Next Page',
-  page: 'Page',
-  ...translations.pagination,
-});
-
-const Pagination = ({ activePage, pageCount }) => {
-  const { service, translations } = useContext(ServiceContext);
+const Pagination = ({
+  activePage,
+  pageCount,
+  pageXOfY,
+  previousPage,
+  nextPage,
+  page,
+}) => {
+  const { service } = useContext(ServiceContext);
   const blocks = buildBlocks(activePage, pageCount);
   if (!blocks) return null;
-
-  const { pageXOfY, previousPage, nextPage, page } =
-    getTranslations(translations);
 
   const tokenMapper = (token, key) =>
     ({

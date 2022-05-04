@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import ATIAnalytics from '#containers/ATIAnalytics';
+import { Helmet } from 'react-helmet';
 import { shape, arrayOf, string } from 'prop-types';
 import styled from '@emotion/styled';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
@@ -25,8 +26,8 @@ const Wrapper = styled.main`
 `;
 
 const TopicPage = ({ pageData }) => {
-  const { lang } = useContext(ServiceContext);
-  const { title, description, promos } = pageData;
+  const { lang, brandName, translations } = useContext(ServiceContext);
+  const { title, description, promos, pageCount, activePage } = pageData;
 
   const promoEntities = promos.map(promo => ({
     '@type': 'Article',
@@ -36,8 +37,31 @@ const TopicPage = ({ pageData }) => {
     dateCreated: promo.firstPublished,
   }));
 
+  const getTranslations = () => ({
+    pageXOfY: 'Page {x} of {y}',
+    previousPage: 'Previous Page',
+    nextPage: 'Next Page',
+    page: 'Page',
+    ...translations.pagination,
+  });
+
+  const { pageXOfY, previousPage, nextPage, page } =
+    getTranslations(translations);
+
+  const translatedPage = pageXOfY
+    .replace('{x}', activePage)
+    .replace('{y}', pageCount);
+
+  const pageTitle =
+    pageCount > 1
+      ? `${title}, ${translatedPage} - ${brandName}`
+      : `${title} - ${brandName}`;
+
   return (
     <Wrapper role="main">
+      <Helmet>
+        <title>{pageTitle}</title>
+      </Helmet>
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
@@ -56,8 +80,12 @@ const TopicPage = ({ pageData }) => {
       <TopicTitle>{title}</TopicTitle>
       <TopicGrid promos={promos} />
       <Pagination
-        activePage={pageData.activePage}
-        pageCount={pageData.pageCount}
+        activePage={activePage}
+        pageCount={pageCount}
+        pageXOfY={pageXOfY}
+        previousPage={previousPage}
+        nextPage={nextPage}
+        page={page}
       />
     </Wrapper>
   );
