@@ -53,7 +53,11 @@ const TopicPage = ({ pageData }) => {
         headline={title}
         entities={promoEntities}
       />
-      <TopicTitle>{title}</TopicTitle>
+      <TopicTitle
+        title={title}
+        activePage={pageData.activePage}
+        pageCount={pageData.pageCount}
+      />
       <TopicGrid promos={promos} />
       <Pagination
         activePage={pageData.activePage}
