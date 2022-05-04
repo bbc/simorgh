@@ -25,6 +25,11 @@ describe('Topic Header', () => {
 
     expect(queryByRole('heading').textContent).toContain('Page 1 of 3');
   });
+  it('should change active page in header when on another page', () => {
+    const { queryByRole } = renderComponent({ activePage: 2, pageCount: 3 });
+
+    expect(queryByRole('heading').textContent).toContain('Page 2 of 3');
+  });
   it('should not include page number if only one page exists', () => {
     const { queryByRole } = renderComponent({ activePage: 1, pageCount: 1 });
 
