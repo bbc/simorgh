@@ -10,10 +10,10 @@ const buildRTLSubstory = (kind, name, storyFn) => {
     defaultService: 'arabic',
     services: ['arabic', 'persian', 'urdu', 'pashto'],
   });
-  storiesOf(
-    `${kind}/Right to left layouts`,
-    module,
-  ).add(`Right to left - ${name}`, () => rtlServiceDecorator(storyFn));
+  storiesOf(`${kind}/Right to left layouts`, module).add(
+    `Right to left - ${name}`,
+    () => rtlServiceDecorator(storyFn),
+  );
 };
 
 // eslint-disable-next-line import/prefer-default-export

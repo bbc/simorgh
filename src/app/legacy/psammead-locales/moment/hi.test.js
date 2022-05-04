@@ -10,9 +10,10 @@ moment.locale('hi');
 const assert = { equal: (val1, val2) => expect(val1).toEqual(val2) };
 
 test('parse', function () {
-  var tests = 'जनवरी जन._फ़रवरी फ़र._मार्च मार्च_अप्रैल अप्रै._मई मई_जून जून_जुलाई जुल._अगस्त अग._सितंबर सित._अक्टूबर अक्टू._नवंबर नव._दिसंबर दिस.'.split(
-      '_'
-    ),
+  var tests =
+      'जनवरी जन._फ़रवरी फ़र._मार्च मार्च_अप्रैल अप्रै._मई मई_जून जून_जुलाई जुल._अगस्त अग._सितंबर सित._अक्टूबर अक्टू._नवंबर नव._दिसंबर दिस.'.split(
+        '_'
+      ),
     i;
   function equalTest(input, mmm, i) {
     assert.equal(
@@ -21,7 +22,7 @@ test('parse', function () {
       input + ' should be month ' + (i + 1)
     );
   }
-  for (i = 0; i < 12; i++) {
+  for (i = 0; i < 12; i += 1) {
     tests[i] = tests[i].split(' ');
     equalTest(tests[i][0], 'MMM', i);
     equalTest(tests[i][1], 'MMM', i);
@@ -64,7 +65,7 @@ test('format', function () {
     ],
     b = moment(new Date(2010, 1, 14, 15, 25, 50, 125)),
     i;
-  for (i = 0; i < a.length; i++) {
+  for (i = 0; i < a.length; i += 1) {
     assert.equal(b.format(a[i][0]), a[i][1], a[i][0] + ' ---> ' + a[i][1]);
   }
 });
@@ -107,11 +108,12 @@ test('format ordinal', function () {
 });
 
 test('format month', function () {
-  var expected = 'जनवरी जन._फ़रवरी फ़र._मार्च मार्च_अप्रैल अप्रै._मई मई_जून जून_जुलाई जुल._अगस्त अग._सितंबर सित._अक्टूबर अक्टू._नवंबर नव._दिसंबर दिस.'.split(
-      '_'
-    ),
+  var expected =
+      'जनवरी जन._फ़रवरी फ़र._मार्च मार्च_अप्रैल अप्रै._मई मई_जून जून_जुलाई जुल._अगस्त अग._सितंबर सित._अक्टूबर अक्टू._नवंबर नव._दिसंबर दिस.'.split(
+        '_'
+      ),
     i;
-  for (i = 0; i < expected.length; i++) {
+  for (i = 0; i < expected.length; i += 1) {
     assert.equal(
       moment([2011, i, 1]).format('MMMM MMM'),
       expected[i],
@@ -121,11 +123,12 @@ test('format month', function () {
 });
 
 test('format week', function () {
-  var expected = 'रविवार रवि र_सोमवार सोम सो_मंगलवार मंगल मं_बुधवार बुध बु_गुरूवार गुरू गु_शुक्रवार शुक्र शु_शनिवार शनि श'.split(
-      '_'
-    ),
+  var expected =
+      'रविवार रवि र_सोमवार सोम सो_मंगलवार मंगल मं_बुधवार बुध बु_गुरूवार गुरू गु_शुक्रवार शुक्र शु_शनिवार शनि श'.split(
+        '_'
+      ),
     i;
-  for (i = 0; i < expected.length; i++) {
+  for (i = 0; i < expected.length; i += 1) {
     assert.equal(
       moment([2011, 0, 2 + i]).format('dddd ddd dd'),
       expected[i],
@@ -337,7 +340,7 @@ test('calendar day', function () {
 
 test('calendar next week', function () {
   var i, m;
-  for (i = 2; i < 7; i++) {
+  for (i = 2; i < 7; i += 1) {
     m = moment().add({ d: i });
     assert.equal(
       m.calendar(),
@@ -362,7 +365,7 @@ test('calendar next week', function () {
 test('calendar last week', function () {
   var i, m;
 
-  for (i = 2; i < 7; i++) {
+  for (i = 2; i < 7; i += 1) {
     m = moment().subtract({ d: i });
     assert.equal(
       m.calendar(),

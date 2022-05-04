@@ -10,9 +10,10 @@ moment.locale('ta');
 const assert = { equal: (val1, val2) => expect(val1).toEqual(val2) };
 
 test('parse', function () {
-  var tests = 'ஜனவரி ஜனவரி_பிப்ரவரி பிப்ரவரி_மார்ச் மார்ச்_ஏப்ரல் ஏப்ரல்_மே மே_ஜூன் ஜூன்_ஜூலை ஜூலை_ஆகஸ்ட் ஆகஸ்ட்_செப்டெம்பர் செப்டெம்பர்_அக்டோபர் அக்டோபர்_நவம்பர் நவம்பர்_டிசம்பர் டிசம்பர்'.split(
-      '_'
-    ),
+  var tests =
+      'ஜனவரி ஜனவரி_பிப்ரவரி பிப்ரவரி_மார்ச் மார்ச்_ஏப்ரல் ஏப்ரல்_மே மே_ஜூன் ஜூன்_ஜூலை ஜூலை_ஆகஸ்ட் ஆகஸ்ட்_செப்டெம்பர் செப்டெம்பர்_அக்டோபர் அக்டோபர்_நவம்பர் நவம்பர்_டிசம்பர் டிசம்பர்'.split(
+        '_'
+      ),
     i;
   function equalTest(input, mmm, i) {
     assert.equal(
@@ -21,7 +22,7 @@ test('parse', function () {
       input + ' should be month ' + (i + 1)
     );
   }
-  for (i = 0; i < 12; i++) {
+  for (i = 0; i < 12; i += 1) {
     tests[i] = tests[i].split(' ');
     equalTest(tests[i][0], 'MMM', i);
     equalTest(tests[i][1], 'MMM', i);
@@ -64,7 +65,7 @@ test('format', function () {
     ],
     b = moment(new Date(2010, 1, 14, 15, 25, 50, 125)),
     i;
-  for (i = 0; i < a.length; i++) {
+  for (i = 0; i < a.length; i += 1) {
     assert.equal(b.format(a[i][0]), a[i][1], a[i][0] + ' ---> ' + a[i][1]);
   }
 });
@@ -163,11 +164,12 @@ test('meridiem invariant', function () {
 });
 
 test('format month', function () {
-  var expected = 'ஜனவரி ஜனவரி_பிப்ரவரி பிப்ரவரி_மார்ச் மார்ச்_ஏப்ரல் ஏப்ரல்_மே மே_ஜூன் ஜூன்_ஜூலை ஜூலை_ஆகஸ்ட் ஆகஸ்ட்_செப்டெம்பர் செப்டெம்பர்_அக்டோபர் அக்டோபர்_நவம்பர் நவம்பர்_டிசம்பர் டிசம்பர்'.split(
-      '_'
-    ),
+  var expected =
+      'ஜனவரி ஜனவரி_பிப்ரவரி பிப்ரவரி_மார்ச் மார்ச்_ஏப்ரல் ஏப்ரல்_மே மே_ஜூன் ஜூன்_ஜூலை ஜூலை_ஆகஸ்ட் ஆகஸ்ட்_செப்டெம்பர் செப்டெம்பர்_அக்டோபர் அக்டோபர்_நவம்பர் நவம்பர்_டிசம்பர் டிசம்பர்'.split(
+        '_'
+      ),
     i;
-  for (i = 0; i < expected.length; i++) {
+  for (i = 0; i < expected.length; i += 1) {
     assert.equal(
       moment([2011, i, 1]).format('MMMM MMM'),
       expected[i],
@@ -177,11 +179,12 @@ test('format month', function () {
 });
 
 test('format week', function () {
-  var expected = 'ஞாயிற்றுக்கிழமை ஞாயிறு ஞா_திங்கட்கிழமை திங்கள் தி_செவ்வாய்கிழமை செவ்வாய் செ_புதன்கிழமை புதன் பு_வியாழக்கிழமை வியாழன் வி_வெள்ளிக்கிழமை வெள்ளி வெ_சனிக்கிழமை சனி ச'.split(
-      '_'
-    ),
+  var expected =
+      'ஞாயிற்றுக்கிழமை ஞாயிறு ஞா_திங்கட்கிழமை திங்கள் தி_செவ்வாய்கிழமை செவ்வாய் செ_புதன்கிழமை புதன் பு_வியாழக்கிழமை வியாழன் வி_வெள்ளிக்கிழமை வெள்ளி வெ_சனிக்கிழமை சனி ச'.split(
+        '_'
+      ),
     i;
-  for (i = 0; i < expected.length; i++) {
+  for (i = 0; i < expected.length; i += 1) {
     assert.equal(
       moment([2011, 0, 2 + i]).format('dddd ddd dd'),
       expected[i],
@@ -389,7 +392,7 @@ test('calendar day', function () {
 
 test('calendar next week', function () {
   var i, m;
-  for (i = 2; i < 7; i++) {
+  for (i = 2; i < 7; i += 1) {
     m = moment().add({ d: i });
     assert.equal(
       m.calendar(),
@@ -414,7 +417,7 @@ test('calendar next week', function () {
 test('calendar last week', function () {
   var i, m;
 
-  for (i = 2; i < 7; i++) {
+  for (i = 2; i < 7; i += 1) {
     m = moment().subtract({ d: i });
     assert.equal(
       m.calendar(),

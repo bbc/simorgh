@@ -1,4 +1,4 @@
-var moment = require('moment');
+const moment = require('moment');
 
 moment.defineLocale('pcm', {
   // eslint-disable-next-line prettier/prettier

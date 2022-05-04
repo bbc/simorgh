@@ -1,4 +1,4 @@
-var moment = require('moment');
+const moment = require('moment');
 require('moment/locale/sw');
 
 moment.updateLocale('sw', {
@@ -8,35 +8,35 @@ moment.updateLocale('sw', {
     ),
   relativeTime: {
     past: '%s',
-    s: function (number, withoutSuffix, key, isFuture) {
+    s(number, withoutSuffix, key, isFuture) {
       return withoutSuffix === false && isFuture === false
         ? 'sekunde chache zilizopita'
         : 'hivi punde';
     },
-    ss: function (number, withoutSuffix, key, isFuture) {
+    ss(number, withoutSuffix, key, isFuture) {
       return withoutSuffix === false && isFuture === false
         ? 'sekunde chache zilizopita'
         : 'hivi punde';
     },
-    m: function (number, withoutSuffix, key, isFuture) {
+    m(number, withoutSuffix, key, isFuture) {
       return withoutSuffix === false && isFuture === false
         ? 'Dakika 1 iliyopita'
         : 'Dakika 1';
     },
-    mm: function (number, withoutSuffix, key, isFuture) {
+    mm(number, withoutSuffix, key, isFuture) {
       return withoutSuffix === false && isFuture === false
-        ? 'Dakika ' + number + ' zilizopita'
-        : 'Dakika ' + number;
+        ? `Dakika ${number} zilizopita`
+        : `Dakika ${number}`;
     },
-    h: function (number, withoutSuffix, key, isFuture) {
+    h(number, withoutSuffix, key, isFuture) {
       return withoutSuffix === false && isFuture === false
         ? 'Saa 1 iliyopita'
         : 'Saa 1';
     },
-    hh: function (number, withoutSuffix, key, isFuture) {
+    hh(number, withoutSuffix, key, isFuture) {
       return withoutSuffix === false && isFuture === false
-        ? 'Saa ' + number + ' zilizopita'
-        : 'Saa ' + number;
+        ? `Saa ${number} zilizopita`
+        : `Saa ${number}`;
     },
   },
 });

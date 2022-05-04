@@ -35,7 +35,7 @@ const jalaaliMonths = {
   ],
 };
 
-const useEasternNumerals = makeNumeralTranslator(EasternArabic);
+const translateEasternNumerals = makeNumeralTranslator(EasternArabic);
 
 // Helper function to check if argument passed through is a supported moment
 const isSupportedMoment = moment => {
@@ -60,9 +60,9 @@ const jalaali = {
       );
       const localeJalaaliMonths = jalaaliMonths[gregorianMoment.locale()];
 
-      const jalaaliDay = useEasternNumerals(jalaaliDate.jd.toString());
+      const jalaaliDay = translateEasternNumerals(jalaaliDate.jd.toString());
       const jalaaliMonth = localeJalaaliMonths[jalaaliDate.jm - 1];
-      const jalaaliYear = useEasternNumerals(jalaaliDate.jy.toString());
+      const jalaaliYear = translateEasternNumerals(jalaaliDate.jy.toString());
 
       return `${jalaaliDay} ${jalaaliMonth} ${jalaaliYear}`;
     }

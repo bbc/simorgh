@@ -9,19 +9,19 @@ moment.locale('uk');
 const assert = { equal: (val1, val2) => expect(val1).toEqual(val2) };
 
 test('parse', function () {
-  var tests =
-      'січень січ_лютий лют_березень бер_квітень квіт_травень трав_червень черв_липень лип_серпень серп_вересень вер_жовтень жовт_листопад лист_грудень груд'.split(
-        '_'
-      ),
-    i;
+  const tests =
+    'січень січ_лютий лют_березень бер_квітень квіт_травень трав_червень черв_липень лип_серпень серп_вересень вер_жовтень жовт_листопад лист_грудень груд'.split(
+      '_'
+    );
+  let i;
   function equalTest(input, mmm, i) {
     assert.equal(
       moment(input, mmm).month(),
       i,
-      input + ' should be month ' + (i + 1)
+      `${input} should be month ${i + 1}`
     );
   }
-  for (i = 0; i < 12; i++) {
+  for (i = 0; i < 12; i += 1) {
     tests[i] = tests[i].split(' ');
     equalTest(tests[i][0], 'MMM', i);
     equalTest(tests[i][1], 'MMM', i);
@@ -35,31 +35,31 @@ test('parse', function () {
 });
 
 test('format', function () {
-  var a = [
-      ['dddd, Do MMMM YYYY, HH:mm:ss', 'неділя, 14-го лютого 2010, 15:25:50'],
-      ['ddd, h A', 'нд, 3 дня'],
-      ['M Mo MM MMMM MMM', '2 2-й 02 лютий лют'],
-      ['YYYY YY', '2010 10'],
-      ['D Do DD', '14 14-го 14'],
-      ['d do dddd ddd dd', '0 0-й неділя нд нд'],
-      ['DDD DDDo DDDD', '45 45-й 045'],
-      ['w wo ww', '7 7-й 07'],
-      ['h hh', '3 03'],
-      ['H HH', '15 15'],
-      ['m mm', '25 25'],
-      ['s ss', '50 50'],
-      ['a A', 'дня дня'],
-      ['DDDo [день року]', '45-й день року'],
-      ['LTS', '15:25:50'],
-      ['L', '14.02.2010'],
-      ['LL', '14 лютого 2010'],
-      ['LLL', '14 лютого 2010, 15:25'],
-      ['LLLL', 'неділя, 14 лютого 2010, 15:25'],
-    ],
-    b = moment(new Date(2010, 1, 14, 15, 25, 50, 125)),
-    i;
-  for (i = 0; i < a.length; i++) {
-    assert.equal(b.format(a[i][0]), a[i][1], a[i][0] + ' ---> ' + a[i][1]);
+  const a = [
+    ['dddd, Do MMMM YYYY, HH:mm:ss', 'неділя, 14-го лютого 2010, 15:25:50'],
+    ['ddd, h A', 'нд, 3 дня'],
+    ['M Mo MM MMMM MMM', '2 2-й 02 лютий лют'],
+    ['YYYY YY', '2010 10'],
+    ['D Do DD', '14 14-го 14'],
+    ['d do dddd ddd dd', '0 0-й неділя нд нд'],
+    ['DDD DDDo DDDD', '45 45-й 045'],
+    ['w wo ww', '7 7-й 07'],
+    ['h hh', '3 03'],
+    ['H HH', '15 15'],
+    ['m mm', '25 25'],
+    ['s ss', '50 50'],
+    ['a A', 'дня дня'],
+    ['DDDo [день року]', '45-й день року'],
+    ['LTS', '15:25:50'],
+    ['L', '14.02.2010'],
+    ['LL', '14 лютого 2010'],
+    ['LLL', '14 лютого 2010, 15:25'],
+    ['LLLL', 'неділя, 14 лютого 2010, 15:25'],
+  ];
+  const b = moment(new Date(2010, 1, 14, 15, 25, 50, 125));
+  let i;
+  for (i = 0; i < a.length; i += 1) {
+    assert.equal(b.format(a[i][0]), a[i][1], `${a[i][0]} ---> ${a[i][1]}`);
   }
 });
 
@@ -112,12 +112,12 @@ test('format ordinal', function () {
 });
 
 test('format month', function () {
-  var expected =
-      'січень січ_лютий лют_березень бер_квітень квіт_травень трав_червень черв_липень лип_серпень серп_вересень вер_жовтень жовт_листопад лист_грудень груд'.split(
-        '_'
-      ),
-    i;
-  for (i = 0; i < expected.length; i++) {
+  const expected =
+    'січень січ_лютий лют_березень бер_квітень квіт_травень трав_червень черв_липень лип_серпень серп_вересень вер_жовтень жовт_листопад лист_грудень груд'.split(
+      '_'
+    );
+  let i;
+  for (i = 0; i < expected.length; i += 1) {
     assert.equal(
       moment([2011, i, 1]).format('MMMM MMM'),
       expected[i],
@@ -127,38 +127,38 @@ test('format month', function () {
 });
 
 test('format month case', function () {
-  var months = {
-      nominative:
-        'січень_лютий_березень_квітень_травень_червень_липень_серпень_вересень_жовтень_листопад_грудень'.split(
-          '_'
-        ),
-      accusative:
-        'січня_лютого_березня_квітня_травня_червня_липня_серпня_вересня_жовтня_листопада_грудня'.split(
-          '_'
-        ),
-    },
-    i;
-  for (i = 0; i < 12; i++) {
+  const months = {
+    nominative:
+      'січень_лютий_березень_квітень_травень_червень_липень_серпень_вересень_жовтень_листопад_грудень'.split(
+        '_'
+      ),
+    accusative:
+      'січня_лютого_березня_квітня_травня_червня_липня_серпня_вересня_жовтня_листопада_грудня'.split(
+        '_'
+      ),
+  };
+  let i;
+  for (i = 0; i < 12; i += 1) {
     assert.equal(
       moment([2011, i, 1]).format('D MMMM'),
-      '1 ' + months.accusative[i],
-      '1 ' + months.accusative[i]
+      `1 ${months.accusative[i]}`,
+      `1 ${months.accusative[i]}`
     );
     assert.equal(
       moment([2011, i, 1]).format('MMMM'),
       months.nominative[i],
-      '1 ' + months.nominative[i]
+      `1 ${months.nominative[i]}`
     );
   }
 });
 
 test('format week', function () {
-  var expected =
-      'неділя нд нд_понеділок пн пн_вівторок вт вт_середа ср ср_четвер чт чт_п’ятниця пт пт_субота сб сб'.split(
-        '_'
-      ),
-    i;
-  for (i = 0; i < expected.length; i++) {
+  const expected =
+    'неділя нд нд_понеділок пн пн_вівторок вт вт_середа ср ср_четвер чт чт_п’ятниця пт пт_субота сб сб'.split(
+      '_'
+    );
+  let i;
+  for (i = 0; i < expected.length; i += 1) {
     assert.equal(
       moment([2011, 0, 2 + i]).format('dddd ddd dd'),
       expected[i],
@@ -168,7 +168,7 @@ test('format week', function () {
 });
 
 test('from', function () {
-  var start = moment([2007, 1, 28]);
+  const start = moment([2007, 1, 28]);
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 44 }), true),
     'декілька секунд',
@@ -336,7 +336,7 @@ test('fromNow', function () {
 });
 
 test('calendar day', function () {
-  var a = moment().hours(12).minutes(0).seconds(0);
+  const a = moment().hours(12).minutes(0).seconds(0);
 
   assert.equal(
     moment(a).calendar(),
@@ -377,31 +377,33 @@ test('calendar day', function () {
 });
 
 test('calendar next week', function () {
-  var i, m;
-  for (i = 2; i < 7; i++) {
+  let i;
+  let m;
+  for (i = 2; i < 7; i += 1) {
     m = moment().add({ d: i });
     assert.equal(
       m.calendar(),
-      m.format('[У] dddd [о' + (m.hours() === 11 ? 'б' : '') + '] LT'),
-      'Today + ' + i + ' days current time'
+      m.format(`[У] dddd [о${m.hours() === 11 ? 'б' : ''}] LT`),
+      `Today + ${i} days current time`
     );
     m.hours(0).minutes(0).seconds(0).milliseconds(0);
     assert.equal(
       m.calendar(),
       m.format('[У] dddd [о] LT'),
-      'Today + ' + i + ' days beginning of day'
+      `Today + ${i} days beginning of day`
     );
     m.hours(23).minutes(59).seconds(59).milliseconds(999);
     assert.equal(
       m.calendar(),
       m.format('[У] dddd [о] LT'),
-      'Today + ' + i + ' days end of day'
+      `Today + ${i} days end of day`
     );
   }
 });
 
 test('calendar last week', function () {
-  var i, m;
+  let i;
+  let m;
 
   function makeFormat(d) {
     switch (d.day()) {
@@ -409,39 +411,39 @@ test('calendar last week', function () {
       case 3:
       case 5:
       case 6:
-        return '[Минулої] dddd [о' + (d.hours() === 11 ? 'б' : '') + '] LT';
+        return `[Минулої] dddd [о${d.hours() === 11 ? 'б' : ''}] LT`;
       case 1:
       case 2:
       case 4:
-        return '[Минулого] dddd [о' + (d.hours() === 11 ? 'б' : '') + '] LT';
+        return `[Минулого] dddd [о${d.hours() === 11 ? 'б' : ''}] LT`;
     }
   }
 
-  for (i = 2; i < 7; i++) {
+  for (i = 2; i < 7; i += 1) {
     m = moment().subtract({ d: i });
     assert.equal(
       m.calendar(),
       m.format(makeFormat(m)),
-      'Today - ' + i + ' days current time'
+      `Today - ${i} days current time`
     );
     m.hours(0).minutes(0).seconds(0).milliseconds(0);
     assert.equal(
       m.calendar(),
       m.format(makeFormat(m)),
-      'Today - ' + i + ' days beginning of day'
+      `Today - ${i} days beginning of day`
     );
     m.hours(23).minutes(59).seconds(59).milliseconds(999);
     assert.equal(
       m.calendar(),
       m.format(makeFormat(m)),
-      'Today - ' + i + ' days end of day'
+      `Today - ${i} days end of day`
     );
   }
 });
 
 test('calendar all else', function () {
-  var weeksAgo = moment().subtract({ w: 1 }),
-    weeksFromNow = moment().add({ w: 1 });
+  let weeksAgo = moment().subtract({ w: 1 });
+  let weeksFromNow = moment().add({ w: 1 });
 
   assert.equal(weeksAgo.calendar(), weeksAgo.format('L'), '1 week ago');
   assert.equal(weeksFromNow.calendar(), weeksFromNow.format('L'), 'in 1 week');

@@ -9,23 +9,23 @@ moment.locale('ps');
 const assert = { equal: (val1, val2) => expect(val1).toEqual(val2) };
 
 test('format', function () {
-  var a = [
-      ['MMMM Do YYYY, h:mm:ss', 'فبروري ۱۴ ۲۰۱۰، ۳:۲۵:۵۰'],
-      ['M Mo MM MMMM MMM', '۲ ۲ ۰۲ فبروري فبروري'],
-      ['L', '۰۲/۱۴/۲۰۱۰'],
-      ['LL', '۱۴ فبروري ۲۰۱۰'],
-      ['LLL', '۱۴ فبروري ۲۰۱۰ ۱۵:۲۵'],
-      ['D MMMM YYYY', '۱۴ فبروري ۲۰۱۰'],
-    ],
-    b = moment(new Date(2010, 1, 14, 15, 25, 50, 125)),
-    i;
-  for (i = 0; i < a.length; i++) {
-    assert.equal(b.format(a[i][0]), a[i][1], a[i][0] + ' ---> ' + a[i][1]);
+  const a = [
+    ['MMMM Do YYYY, h:mm:ss', 'فبروري ۱۴ ۲۰۱۰، ۳:۲۵:۵۰'],
+    ['M Mo MM MMMM MMM', '۲ ۲ ۰۲ فبروري فبروري'],
+    ['L', '۰۲/۱۴/۲۰۱۰'],
+    ['LL', '۱۴ فبروري ۲۰۱۰'],
+    ['LLL', '۱۴ فبروري ۲۰۱۰ ۱۵:۲۵'],
+    ['D MMMM YYYY', '۱۴ فبروري ۲۰۱۰'],
+  ];
+  const b = moment(new Date(2010, 1, 14, 15, 25, 50, 125));
+  let i;
+  for (i = 0; i < a.length; i += 1) {
+    assert.equal(b.format(a[i][0]), a[i][1], `${a[i][0]} ---> ${a[i][1]}`);
   }
 });
 
 test('from', function () {
-  var start = moment([2007, 1, 28]);
+  const start = moment([2007, 1, 28]);
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 45 }), true),
     '۱ دقیقه',

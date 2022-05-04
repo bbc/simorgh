@@ -7,9 +7,10 @@ moment.locale('en-gb');
 const assert = { equal: (val1, val2) => expect(val1).toEqual(val2) };
 
 test('parse', function () {
-  var tests = 'January Jan_February Feb_March Mar_April Apr_May May_June Jun_July Jul_August Aug_September Sep_October Oct_November Nov_December Dec'.split(
-      '_'
-    ),
+  var tests =
+      'January Jan_February Feb_March Mar_April Apr_May May_June Jun_July Jul_August Aug_September Sep_October Oct_November Nov_December Dec'.split(
+        '_'
+      ),
     i;
   function equalTest(input, mmm, i) {
     assert.equal(
@@ -18,7 +19,7 @@ test('parse', function () {
       input + ' should be month ' + (i + 1)
     );
   }
-  for (i = 0; i < 12; i++) {
+  for (i = 0; i < 12; i += 1) {
     tests[i] = tests[i].split(' ');
     equalTest(tests[i][0], 'MMM', i);
     equalTest(tests[i][1], 'MMM', i);
@@ -62,7 +63,7 @@ test('format', function () {
     ],
     b = moment(new Date(2010, 1, 14, 15, 25, 50, 125)),
     i;
-  for (i = 0; i < a.length; i++) {
+  for (i = 0; i < a.length; i += 1) {
     assert.equal(b.format(a[i][0]), a[i][1], a[i][0] + ' ---> ' + a[i][1]);
   }
 });
@@ -105,11 +106,12 @@ test('format ordinal', function () {
 });
 
 test('format month', function () {
-  var expected = 'January Jan_February Feb_March Mar_April Apr_May May_June Jun_July Jul_August Aug_September Sep_October Oct_November Nov_December Dec'.split(
-      '_'
-    ),
+  var expected =
+      'January Jan_February Feb_March Mar_April Apr_May May_June Jun_July Jul_August Aug_September Sep_October Oct_November Nov_December Dec'.split(
+        '_'
+      ),
     i;
-  for (i = 0; i < expected.length; i++) {
+  for (i = 0; i < expected.length; i += 1) {
     assert.equal(
       moment([2011, i, 1]).format('MMMM MMM'),
       expected[i],
@@ -119,11 +121,12 @@ test('format month', function () {
 });
 
 test('format week', function () {
-  var expected = 'Sunday Sun Su_Monday Mon Mo_Tuesday Tue Tu_Wednesday Wed We_Thursday Thu Th_Friday Fri Fr_Saturday Sat Sa'.split(
-      '_'
-    ),
+  var expected =
+      'Sunday Sun Su_Monday Mon Mo_Tuesday Tue Tu_Wednesday Wed We_Thursday Thu Th_Friday Fri Fr_Saturday Sat Sa'.split(
+        '_'
+      ),
     i;
-  for (i = 0; i < expected.length; i++) {
+  for (i = 0; i < expected.length; i += 1) {
     assert.equal(
       moment([2011, 0, 2 + i]).format('dddd ddd dd'),
       expected[i],
@@ -345,7 +348,7 @@ test('calendar day', function () {
 
 test('calendar next week', function () {
   var i, m;
-  for (i = 2; i < 7; i++) {
+  for (i = 2; i < 7; i += 1) {
     m = moment().add({ d: i });
     assert.equal(
       m.calendar(),
@@ -370,7 +373,7 @@ test('calendar next week', function () {
 test('calendar last week', function () {
   var i, m;
 
-  for (i = 2; i < 7; i++) {
+  for (i = 2; i < 7; i += 1) {
     m = moment().subtract({ d: i });
     assert.equal(
       m.calendar(),

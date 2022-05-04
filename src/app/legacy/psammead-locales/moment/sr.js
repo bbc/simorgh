@@ -1,4 +1,4 @@
-var moment = require('moment');
+const moment = require('moment');
 require('moment/locale/sr');
 
 moment.updateLocale('sr', {
@@ -12,8 +12,8 @@ moment.updateLocale('sr', {
     m: '1 minuta',
     mm: '%d minuta',
     h: '1 sata',
-    hh: function (number) {
-      return number < 5 ? number + ' sata' : number + ' sati';
+    hh(number) {
+      return number < 5 ? `${number} sata` : `${number} sati`;
     },
   },
 });
