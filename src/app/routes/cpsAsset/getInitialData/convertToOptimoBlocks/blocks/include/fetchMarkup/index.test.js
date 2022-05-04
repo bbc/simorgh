@@ -28,6 +28,9 @@ describe('fetchMarkup', () => {
       'https://foobar.com/includes/indepthtoolkit/quizzes/123-456',
       {
         timeout: 2000,
+        headers: {
+          'User-Agent': 'Simorgh/ws-web-rendering',
+        },
       },
     );
     expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_REQUEST_RECEIVED, {
@@ -48,6 +51,9 @@ describe('fetchMarkup', () => {
       'https://foobar.com/includes/indepthtoolkit/quizzes/123-456',
       {
         timeout: 2000,
+        headers: {
+          'User-Agent': 'Simorgh/ws-web-rendering',
+        },
       },
     );
     expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_REQUEST_RECEIVED, {
@@ -74,6 +80,9 @@ describe('fetchMarkup', () => {
       'https://foobar.com/includes/indepthtoolkit/quizzes/123-456',
       {
         timeout: 2000,
+        headers: {
+          'User-Agent': 'Simorgh/ws-web-rendering',
+        },
       },
     );
     expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_REQUEST_RECEIVED, {
