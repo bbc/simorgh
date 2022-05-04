@@ -9,9 +9,10 @@ moment.locale('pt-br');
 const assert = { equal: (val1, val2) => expect(val1).toEqual(val2) };
 
 test('parse', function () {
-  var tests = 'Janeiro Jan_Fevereiro Fev_Março Mar_Abril Abr_Maio Mai_Junho Jun_Julho Jul_Agosto Ago_Setembro Set_Outubro Out_Novembro Nov_Dezembro Dez'.split(
-      '_'
-    ),
+  var tests =
+      'Janeiro Jan_Fevereiro Fev_Março Mar_Abril Abr_Maio Mai_Junho Jun_Julho Jul_Agosto Ago_Setembro Set_Outubro Out_Novembro Nov_Dezembro Dez'.split(
+        '_'
+      ),
     i;
 
   function equalTest(input, mmm, i) {
@@ -109,9 +110,10 @@ test('format ordinal', function () {
 });
 
 test('format month', function () {
-  var expected = 'janeiro Jan_fevereiro Fev_março Mar_abril Abr_maio Mai_junho Jun_julho Jul_agosto Ago_setembro Set_outubro Out_novembro Nov_dezembro Dez'.split(
-      '_'
-    ),
+  var expected =
+      'janeiro Jan_fevereiro Fev_março Mar_abril Abr_maio Mai_junho Jun_julho Jul_agosto Ago_setembro Set_outubro Out_novembro Nov_dezembro Dez'.split(
+        '_'
+      ),
     i;
   for (i = 0; i < expected.length; i++) {
     assert.equal(
@@ -123,9 +125,10 @@ test('format month', function () {
 });
 
 test('format week', function () {
-  var expected = 'Domingo Dom Do_Segunda-feira Seg 2ª_Terça-feira Ter 3ª_Quarta-feira Qua 4ª_Quinta-feira Qui 5ª_Sexta-feira Sex 6ª_Sábado Sáb Sá'.split(
-      '_'
-    ),
+  var expected =
+      'Domingo Dom Do_Segunda-feira Seg 2ª_Terça-feira Ter 3ª_Quarta-feira Qua 4ª_Quinta-feira Qui 5ª_Sexta-feira Sex 6ª_Sábado Sáb Sá'.split(
+        '_'
+      ),
     i;
   for (i = 0; i < expected.length; i++) {
     assert.equal(

@@ -9,9 +9,10 @@ moment.locale('sr');
 const assert = { equal: (val1, val2) => expect(val1).toEqual(val2) };
 
 test('parse', function () {
-  var tests = 'januar jan._februar feb._mart mar._april apr._maj maj_jun jun_jul jul_avgust avg._septembar sep._oktobar okt._novembar nov._decembar dec.'.split(
-      '_'
-    ),
+  var tests =
+      'januar jan._februar feb._mart mar._april apr._maj maj_jun jun_jul jul_avgust avg._septembar sep._oktobar okt._novembar nov._decembar dec.'.split(
+        '_'
+      ),
     i;
   function equalTest(input, mmm, i) {
     assert.equal(
@@ -107,9 +108,10 @@ test('format ordinal', function () {
 });
 
 test('format month', function () {
-  var expected = 'januar jan._februar feb._mart mar._april apr._maj maj_jun jun_jul jul_avgust avg._septembar sep._oktobar okt._novembar nov._decembar dec.'.split(
-      '_'
-    ),
+  var expected =
+      'januar jan._februar feb._mart mar._april apr._maj maj_jun jun_jul jul_avgust avg._septembar sep._oktobar okt._novembar nov._decembar dec.'.split(
+        '_'
+      ),
     i;
   for (i = 0; i < expected.length; i++) {
     assert.equal(
@@ -121,9 +123,10 @@ test('format month', function () {
 });
 
 test('format week', function () {
-  var expected = 'nedelja ned. ne_ponedeljak pon. po_utorak uto. ut_sreda sre. sr_četvrtak čet. če_petak pet. pe_subota sub. su'.split(
-      '_'
-    ),
+  var expected =
+      'nedelja ned. ne_ponedeljak pon. po_utorak uto. ut_sreda sre. sr_četvrtak čet. če_petak pet. pe_subota sub. su'.split(
+        '_'
+      ),
     i;
   for (i = 0; i < expected.length; i++) {
     assert.equal(

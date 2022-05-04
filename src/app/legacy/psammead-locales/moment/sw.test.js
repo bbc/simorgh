@@ -6,9 +6,10 @@ moment.locale('sw');
 const assert = { equal: (val1, val2) => expect(val1).toEqual(val2) };
 
 test('parse', function () {
-  var tests = 'Januari Jan_Februari Feb_Machi Mac_Aprili Apr_Mei Mei_Juni Jun_Julai Jul_Agosti Ago_Septemba Sep_Oktoba Okt_Novemba Nov_Disemba Des'.split(
-      '_'
-    ),
+  var tests =
+      'Januari Jan_Februari Feb_Machi Mac_Aprili Apr_Mei Mei_Juni Jun_Julai Jul_Agosti Ago_Septemba Sep_Oktoba Okt_Novemba Nov_Disemba Des'.split(
+        '_'
+      ),
     i;
   function equalTest(input, mmm, i) {
     assert.equal(
@@ -104,9 +105,10 @@ test('format ordinal', function () {
 });
 
 test('format month', function () {
-  var expected = 'Januari Jan_Februari Feb_Machi Mac_Aprili Apr_Mei Mei_Juni Jun_Julai Jul_Agosti Ago_Septemba Sep_Oktoba Okt_Novemba Nov_Disemba Des'.split(
-      '_'
-    ),
+  var expected =
+      'Januari Jan_Februari Feb_Machi Mac_Aprili Apr_Mei Mei_Juni Jun_Julai Jul_Agosti Ago_Septemba Sep_Oktoba Okt_Novemba Nov_Disemba Des'.split(
+        '_'
+      ),
     i;
   for (i = 0; i < expected.length; i++) {
     assert.equal(
@@ -118,9 +120,10 @@ test('format month', function () {
 });
 
 test('format week', function () {
-  var expected = 'Jumapili Jpl J2_Jumatatu Jtat J3_Jumanne Jnne J4_Jumatano Jtan J5_Alhamisi Alh Al_Ijumaa Ijm Ij_Jumamosi Jmos J1'.split(
-      '_'
-    ),
+  var expected =
+      'Jumapili Jpl J2_Jumatatu Jtat J3_Jumanne Jnne J4_Jumatano Jtan J5_Alhamisi Alh Al_Ijumaa Ijm Ij_Jumamosi Jmos J1'.split(
+        '_'
+      ),
     i;
   for (i = 0; i < expected.length; i++) {
     assert.equal(

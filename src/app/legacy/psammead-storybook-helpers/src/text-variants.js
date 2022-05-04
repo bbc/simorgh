@@ -175,8 +175,7 @@ const TEXT_VARIANTS = {
     brandHighlightColour: DEFAULT_BRAND_HIGHLIGHT_COLOUR,
   },
   indonesia: {
-    text:
-      'Ratu kripto: Bagaimana Ruja Ignatova menipu dunia kemudian menghilang',
+    text: 'Ratu kripto: Bagaimana Ruja Ignatova menipu dunia kemudian menghilang',
     longText:
       'Seorang perempuan yang menyebut dirinya ratu kripto dan meraup US$4 miliar atau Rp56 triliun dengan menjual mata uang digital palsu dan kemudian menghilang.',
     script: 'latin',
@@ -319,8 +318,7 @@ const TEXT_VARIANTS = {
     brandHighlightColour: DEFAULT_BRAND_HIGHLIGHT_COLOUR,
   },
   pashto: {
-    text:
-      'د ملګرو ملتونو د ماشومانو ادارې یونیسف افغان کرېکټ لوبغاړی راشد خانه.',
+    text: 'د ملګرو ملتونو د ماشومانو ادارې یونیسف افغان کرېکټ لوبغاړی راشد خانه.',
     longText:
       'د کندهار سیمه ییز پولیس خبر ورکوي هغه ملا امام یې نیولی، چي پر یوه ۸ کلن ماشوم یې جنسي تېري کړی او بیا یې په وهلو وژلی دی. دغه پېښه تېره ورځ د کندهار د اتمي حوزې اړوند د غازی بابا غونډۍ نومې سیمه کي یوه جومات کې شوې ده.',
     script: 'arabic',
@@ -334,8 +332,7 @@ const TEXT_VARIANTS = {
     brandHighlightColour: DEFAULT_BRAND_HIGHLIGHT_COLOUR,
   },
   persian: {
-    text:
-      'در این جشنواره برای نخستین بار از کارگران افغانستان در شهر تهران تقدیر شد',
+    text: 'در این جشنواره برای نخستین بار از کارگران افغانستان در شهر تهران تقدیر شد',
     longText:
       'دولت ترکیه تمدید اقامت موقت توریستی برای اتباع بعضی از کشورهای خارجی از جمله ایران را به یک سال محدود کرده است. با مصوبه جدید، متقاضیان تمدید اقامت موقت توریستی تنها می توانند حداقل پس از گذشت یک سال از پایان مهلت اقامت یک ساله توریستی خود دوباره برای دریافت این اقامت اقدام کنند.',
     script: 'arabic',
@@ -444,8 +441,7 @@ const TEXT_VARIANTS = {
     brandHighlightColour: DEFAULT_BRAND_HIGHLIGHT_COLOUR,
   },
   somali: {
-    text:
-      'Haweeney balaayiin doolar ka dhacday dunida oo dhan, oo mar qura la waayay',
+    text: 'Haweeney balaayiin doolar ka dhacday dunida oo dhan, oo mar qura la waayay',
     longText:
       '"Sidey ugu suurtagashay Ruja Ignatova inay sameyso lacag dhan $4bilyan oo doolar iyadoo caalamka oo dhan ka iibineysa barnaamij been abuur ah oo ay ku sheegeysay in lacagta ay ku labajibbaareyso - xaggeyse aadday?"',
     script: 'latin',
@@ -484,8 +480,7 @@ const TEXT_VARIANTS = {
     brandHighlightColour: DEFAULT_BRAND_HIGHLIGHT_COLOUR,
   },
   tamil: {
-    text:
-      'மகாராஷ்டிராவில் தேசியவாத காங்கிரசுக்கு துணை முதல்வர் பதவி: காங்கிரசுக்கு சபாநாயகர்',
+    text: 'மகாராஷ்டிராவில் தேசியவாத காங்கிரசுக்கு துணை முதல்வர் பதவி: காங்கிரசுக்கு சபாநாயகர்',
     longText:
       'மகாராஷ்டிராவில் சிவசேனை கட்சித் தலைமையில் அமையவுள்ள புதிய மாநில அரசாங்கத்தில் தேசியவாத காங்கிரஸ் கட்சிக்கு ஒரு துணை முதல்வர் பதவி வழங்கப்படும்; காங்கிரஸை சேர்ந்தவர் சபாநாயகராக தேர்வு செய்யப்படுவார்.',
     script: 'tamil',
@@ -498,8 +493,7 @@ const TEXT_VARIANTS = {
     brandHighlightColour: DEFAULT_BRAND_HIGHLIGHT_COLOUR,
   },
   telugu: {
-    text:
-      'నల్లగొండ ఫ్లోరైడ్ సమస్య గురించి నాటి ప్రధాని అటల్ బిహారీ వాజపేయికి దుశ్చర్ల సత్యనారాయణ వివరించారు',
+    text: 'నల్లగొండ ఫ్లోరైడ్ సమస్య గురించి నాటి ప్రధాని అటల్ బిహారీ వాజపేయికి దుశ్చర్ల సత్యనారాయణ వివరించారు',
     longText:
       'చైనా ప్రభుత్వం ఈ కాన్సంట్రేషన్ క్యాంపులను విద్య, శిక్షణ కేంద్రాలుగా చెబుతోంది. చైనా ప్రభుత్వం వీగర్ ముస్లింల విషయంలో వ్యవహరిస్తున్న తీరుపై ఫిరోజా ఆది, సోమవారాల్లో మూడు వీడియోలు పోస్ట్ చేశారు.',
     script: 'hindi',
@@ -581,8 +575,7 @@ const TEXT_VARIANTS = {
     brandHighlightColour: DEFAULT_BRAND_HIGHLIGHT_COLOUR,
   },
   ukrainian: {
-    text:
-      'Троє американців помилково відсиділи 36 років. Тепер їх визнали невинними',
+    text: 'Троє американців помилково відсиділи 36 років. Тепер їх визнали невинними',
     longText:
       "Альфред Честнат, Ендр Стюарт і Ренсом Воткінс потрапили за ґрати ще у 1984 році. З'ясувалося, вони ні в чому не винні, ні в чому не винні",
     script: 'cyrillic',
@@ -609,8 +602,7 @@ const TEXT_VARIANTS = {
     brandHighlightColour: DEFAULT_BRAND_HIGHLIGHT_COLOUR,
   },
   uzbek: {
-    text:
-      'Дариға Назарбоева Қозоғистон президентининг Британияга охирги сафарида отасига ҳамроҳлик',
+    text: 'Дариға Назарбоева Қозоғистон президентининг Британияга охирги сафарида отасига ҳамроҳлик',
     longText:
       'Ўзбекистон: 12 йиллик муҳожиратдан кейин Ватанга қайтган фаол вафот этди - Толиб Ёқубов мустақил Ўзбекистондаги илк ва энг таниқли инсон ҳуқуқлари ҳимоячиларидан бири эди. У Каримов даврида Ўзбекистонни тарк этишга мажбур бўлган, муҳожиратда экан, фуқароликдан маҳрум этилганди.',
     script: 'cyrillic',

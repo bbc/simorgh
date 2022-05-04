@@ -9,9 +9,10 @@ moment.locale('ig');
 const assert = { equal: (val1, val2) => expect(val1).toEqual(val2) };
 
 test('parse', function () {
-  var tests = 'Jenụwarị Jen_Febụwarị Feb_Maachị Maa_Eprel Epr_Mee Mee_Juun Juu_Julaị Jul_Ọgọọst Ọgọ_Septemba Sep_Ọktọba Ọkt_Nọvemba Nov_Disemba Dis'.split(
-      '_'
-    ),
+  var tests =
+      'Jenụwarị Jen_Febụwarị Feb_Maachị Maa_Eprel Epr_Mee Mee_Juun Juu_Julaị Jul_Ọgọọst Ọgọ_Septemba Sep_Ọktọba Ọkt_Nọvemba Nov_Disemba Dis'.split(
+        '_'
+      ),
     i;
   function equalTest(input, mmm, i) {
     assert.equal(
@@ -107,9 +108,10 @@ test('format ordinal', function () {
 });
 
 test('format month', function () {
-  var expected = 'Jenụwarị Jen_Febụwarị Feb_Maachị Maa_Eprel Epr_Mee Mee_Juun Juu_Julaị Jul_Ọgọọst Ọgọ_Septemba Sep_Ọktọba Ọkt_Nọvemba Nov_Disemba Dis'.split(
-      '_'
-    ),
+  var expected =
+      'Jenụwarị Jen_Febụwarị Feb_Maachị Maa_Eprel Epr_Mee Mee_Juun Juu_Julaị Jul_Ọgọọst Ọgọ_Septemba Sep_Ọktọba Ọkt_Nọvemba Nov_Disemba Dis'.split(
+        '_'
+      ),
     i;
   for (i = 0; i < expected.length; i++) {
     assert.equal(
@@ -121,9 +123,10 @@ test('format month', function () {
 });
 
 test('format week', function () {
-  var expected = 'Sọnde Sọn Su_Mọnde Mọn Mọ_Tuzde Tuz Tu_Wenesde We We_Tọsde Tọs Tọ_Fraịde Frai Fr_Satọde Sat Sa'.split(
-      '_'
-    ),
+  var expected =
+      'Sọnde Sọn Su_Mọnde Mọn Mọ_Tuzde Tuz Tu_Wenesde We We_Tọsde Tọs Tọ_Fraịde Frai Fr_Satọde Sat Sa'.split(
+        '_'
+      ),
     i;
   for (i = 0; i < expected.length; i++) {
     assert.equal(

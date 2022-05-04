@@ -127,10 +127,8 @@ const ContentAnchor = ({ children, initialHeight, initialWidth }) => {
     if (wrapperIsOutOfView) {
       // wrapper will resize
       const wrapperIsAboveViewport = wrapperIO.boundingClientRect.top < 0;
-      const {
-        width: nextWrapperWidth,
-        height: nextWrapperHeight,
-      } = contentElRect;
+      const { width: nextWrapperWidth, height: nextWrapperHeight } =
+        contentElRect;
 
       if (!scrollAnchoringIsSupported.current && wrapperIsAboveViewport) {
         scrollHeight.current = document.body.scrollHeight;

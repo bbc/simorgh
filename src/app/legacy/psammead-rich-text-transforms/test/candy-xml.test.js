@@ -557,8 +557,7 @@ test('can handle chaos', () => {
         {
           type: 'paragraph',
           model: {
-            text:
-              'Bold text in unsupported nodes followed by normal text then some carnage.',
+            text: 'Bold text in unsupported nodes followed by normal text then some carnage.',
             blocks: [
               {
                 type: 'fragment',
