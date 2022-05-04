@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { string, number } from 'prop-types';
+import { string } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { getSansBold } from '@bbc/psammead-styles/font-styles';
 import { C_GREY_10 } from '@bbc/psammead-styles/colours';
@@ -39,37 +39,17 @@ const H1 = styled.h1`
   }
 `;
 
-const getTranslation = translations => ({
-  pageXOfY: 'Page {x} of {y}',
-  ...translations.pagination,
-});
-
-const TopicTitle = ({ title, activePage, pageCount }) => {
-  const { script, service, translations, brandName } =
-    useContext(ServiceContext);
-  const { pageXOfY } = getTranslation(translations);
-  const translatedPage = pageXOfY
-    .replace('{x}', activePage)
-    .replace('{y}', pageCount);
-
+const TopicTitle = ({ children }) => {
+  const { script, service } = useContext(ServiceContext);
   return (
     <H1 service={service} script={script} id="content" tabIndex="-1">
-      {pageCount > 1
-        ? `${title}, ${translatedPage} - ${brandName}`
-        : `${title} - ${brandName}`}
+      {children}
     </H1>
   );
 };
 
 TopicTitle.propTypes = {
-  title: string.isRequired,
-  activePage: number,
-  pageCount: number,
-};
-
-TopicTitle.defaultProps = {
-  activePage: '1',
-  pageCount: '1',
+  children: string.isRequired,
 };
 
 export default TopicTitle;
