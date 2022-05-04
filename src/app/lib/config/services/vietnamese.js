@@ -252,7 +252,7 @@ export const service = {
       hasMostRead: true,
     },
     mostWatched: {
-      header: 'Nghe nhiều nhất',
+      header: 'Nghe/Xem nhiều nhất',
       numberOfItems: 10,
       hasMostWatched: true,
     },

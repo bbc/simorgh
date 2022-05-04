@@ -60,10 +60,14 @@ const TopicGrid = ({ promos }) => {
   const { dir } = useContext(ServiceContext);
   const hasMultiplePromos = promos.length > 1;
   const firstPromo = promos[0];
+
+  if (promos.length === 0) {
+    return null;
+  }
   return (
     <Wrapper>
       {hasMultiplePromos ? (
-        <TopicList role="list">
+        <TopicList role="list" data-testid="topic-promos">
           {promos.map((promo, index) => {
             const isFirstPromo = index === 0;
 

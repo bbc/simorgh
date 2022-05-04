@@ -199,6 +199,12 @@ exports[`ProgramCard should render correctly for live 1`] = `
   margin: 0;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-22>svg {
+    fill: canvasText;
+  }
+}
+
 .emotion-24 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -483,6 +489,12 @@ exports[`ProgramCard should render correctly for next 1`] = `
   width: 1.0625rem;
   height: 0.75rem;
   margin: 0;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-20>svg {
+    fill: canvasText;
+  }
 }
 
 .emotion-22 {
@@ -776,6 +788,12 @@ exports[`ProgramCard should render correctly for onDemand 1`] = `
   margin: 0;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-20>svg {
+    fill: canvasText;
+  }
+}
+
 .emotion-22 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -1066,6 +1084,12 @@ exports[`ProgramCard should render correctly in RTL 1`] = `
   margin: 0;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-20>svg {
+    fill: canvasText;
+  }
+}
+
 .emotion-22 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -1338,6 +1362,12 @@ exports[`ProgramCard should render correctly without summary 1`] = `
   width: 1.0625rem;
   height: 0.75rem;
   margin: 0;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-20>svg {
+    fill: canvasText;
+  }
 }
 
 .emotion-22 {

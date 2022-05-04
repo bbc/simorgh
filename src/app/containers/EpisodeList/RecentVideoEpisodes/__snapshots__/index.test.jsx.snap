@@ -258,6 +258,12 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
   color: #FFFFFF;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-27 svg {
+    fill: linkText;
+  }
+}
+
 @media (min-width: 25rem) {
   .emotion-27 {
     position: absolute;
