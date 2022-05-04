@@ -18,7 +18,12 @@ const fetchMarkup = async (url, assetId) => {
     /* The timeout value here is arbitrary and subject to change. It's purpose is to ensure that pending promises do not delay page rendering on the server.
       Using isomorphic-fetch means we use window.fetch, which does not have a timeout option, on the client and node-fetch, which does, on the server.
     */
-    const res = await fetch(url, { timeout: SECONDARY_DATA_TIMEOUT });
+    const res = await fetch(url, {
+      headers: {
+        'User-Agent': 'Simorgh/ws-web-rendering',
+      },
+      timeout: SECONDARY_DATA_TIMEOUT,
+    });
     if (res.status !== 200) {
       logger.error(INCLUDE_FETCH_ERROR, {
         status: res.status,
