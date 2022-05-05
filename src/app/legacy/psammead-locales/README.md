@@ -1,4 +1,4 @@
-# psammead-locales - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Futilities%2Fpsammead-locales%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Futilities%2Fpsammead-locales%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/utilities/psammead-locales)](https://david-dm.org/bbc/psammead?path=packages/utilities/psammead-locales) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/utilities/psammead-locales)](https://david-dm.org/bbc/psammead?path=packages/utilities/psammead-locales&type=peer) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/@bbc/psammead-locales.svg)](https://www.npmjs.com/package/@bbc/psammead-locales) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
+# psammead-locales - [![Known Vulnerabilities](https://snyk.io/test/github/bbc/psammead/badge.svg?targetFile=packages%2Futilities%2Fpsammead-locales%2Fpackage.json)](https://snyk.io/test/github/bbc/psammead?targetFile=packages%2Futilities%2Fpsammead-locales%2Fpackage.json) [![Dependency Status](https://david-dm.org/bbc/psammead.svg?path=packages/utilities/psammead-locales)](https://david-dm.org/bbc/psammead?path=packages/utilities/psammead-locales) [![peerDependencies Status](https://david-dm.org/bbc/psammead/peer-status.svg?path=packages/utilities/psammead-locales)](https://david-dm.org/bbc/psammead?path=packages/utilities/psammead-locales&type=peer) [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/bbc/psammead/blob/latest/LICENSE) [![npm version](https://img.shields.io/npm/v/#legacy/psammead-locales.svg)](https://www.npmjs.com/package/#legacy/psammead-locales) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bbc/psammead/blob/latest/CONTRIBUTING.md)
 
 This package provides a collection of locale configs, used in BBC World Service sites.
 
@@ -62,7 +62,7 @@ For an example see Usage, below.
 ## Installation
 
 ```jsx
-npm install @bbc/psammead-locales --save
+npm install #legacy/psammead-locales --save
 ```
 
 ## Usage
@@ -71,7 +71,7 @@ npm install @bbc/psammead-locales --save
 
 ```jsx
 import moment from 'moment';
-import '@bbc/psammead-locales/moment/ig';
+import '#legacy/psammead-locales/moment/ig';
 
 moment.locale('ig');
 ```
@@ -79,7 +79,10 @@ moment.locale('ig');
 ### Numerals
 
 ```jsx
-import { Bengali, makeNumeralTranslator } from '@bbc/psammead-locales/numerals';
+import {
+  Bengali,
+  makeNumeralTranslator,
+} from '#legacy/psammead-locales/numerals';
 
 const translateNumerals = makeNumeralTranslator(Bengali);
 const result = translateNumerals(someInput); // returns someInput with numbers translated to Bengali

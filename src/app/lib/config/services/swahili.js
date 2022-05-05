@@ -7,7 +7,7 @@ import {
 import { cyrillicAndLatin } from '#legacy/gel-foundations/src/scripts';
 import { swahili as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import '@bbc/moment-timezone-include/tz/Africa/Nairobi';
-import '@bbc/psammead-locales/moment/sw';
+import '#legacy/psammead-locales/moment/sw';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

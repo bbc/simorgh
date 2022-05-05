@@ -7,7 +7,7 @@ import {
 import { latinDiacritics } from '#legacy/gel-foundations/src/scripts';
 import { azeri as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Baku';
-import '@bbc/psammead-locales/moment/az';
+import '#legacy/psammead-locales/moment/az';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

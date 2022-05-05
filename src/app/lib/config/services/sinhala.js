@@ -11,7 +11,7 @@ import {
   F_NOTO_SERIF_SINHALA_REGULAR,
 } from '#legacy/psammead-styles/src/fonts';
 import '@bbc/moment-timezone-include/tz/GMT';
-import '@bbc/psammead-locales/moment/si';
+import '#legacy/psammead-locales/moment/si';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

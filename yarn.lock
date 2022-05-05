@@ -1805,19 +1805,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/psammead-locales@npm:5.0.7":
-  version: 5.0.7
-  resolution: "@bbc/psammead-locales@npm:5.0.7"
-  dependencies:
-    jalaali-js: 1.1.5
-    moment: 2.24.0
-  peerDependencies:
-    "@emotion/styled": ^11.0.0
-    react: ">=16.9.0"
-  checksum: 9a5195023a3b43269c1d689d7ebd1c91b23ddffa4f85a8948f420aaead5425ae4c85feba348278d6277f38cb9680d0f1acb3127179e8da34225919727f189fe8
-  languageName: node
-  linkType: hard
-
 "@bbc/psammead-storybook-helpers@npm:9.0.17":
   version: 9.0.17
   resolution: "@bbc/psammead-storybook-helpers@npm:9.0.17"
@@ -19101,7 +19088,6 @@ __metadata:
     "@babel/runtime": 7.17.9
     "@bbc/apache2-license-checker": 1.1.4
     "@bbc/moment-timezone-include": 1.1.8
-    "@bbc/psammead-locales": 5.0.7
     "@bbc/psammead-storybook-helpers": 9.0.17
     "@bbc/psammead-test-helpers": 6.0.5
     "@bbc/web-vitals": 1.1.1

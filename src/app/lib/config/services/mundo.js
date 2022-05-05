@@ -16,7 +16,7 @@ import {
 } from '#legacy/psammead-styles/src/fonts';
 import { mundo as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
-import '@bbc/psammead-locales/moment/es';
+import '#legacy/psammead-locales/moment/es';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

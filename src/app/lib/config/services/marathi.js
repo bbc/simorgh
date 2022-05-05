@@ -7,7 +7,7 @@ import {
 import { devanagariAndGurmukhi } from '#legacy/gel-foundations/src/scripts';
 import { marathi as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
-import '@bbc/psammead-locales/moment/mr';
+import '#legacy/psammead-locales/moment/mr';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

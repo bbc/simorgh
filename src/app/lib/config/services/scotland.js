@@ -9,7 +9,7 @@ import {
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_MEDIUM_ITALIC,
 } from '#legacy/psammead-styles/src/fonts';
-import '@bbc/psammead-locales/moment/en-gb';
+import '#legacy/psammead-locales/moment/en-gb';
 import '@bbc/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
 

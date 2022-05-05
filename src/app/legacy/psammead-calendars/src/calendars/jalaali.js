@@ -2,7 +2,7 @@ import jalaaliJs from 'jalaali-js';
 import {
   EasternArabic,
   makeNumeralTranslator,
-} from '@bbc/psammead-locales/numerals';
+} from '#legacy/psammead-locales/src/numerals';
 
 const jalaaliMonths = {
   fa: [

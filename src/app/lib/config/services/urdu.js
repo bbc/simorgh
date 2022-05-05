@@ -11,7 +11,7 @@ import {
   F_REITH_QALAM_BOLD,
 } from '#legacy/psammead-styles/src/fonts';
 import '@bbc/moment-timezone-include/tz/Asia/Karachi';
-import '@bbc/psammead-locales/moment/ur';
+import '#legacy/psammead-locales/moment/ur';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

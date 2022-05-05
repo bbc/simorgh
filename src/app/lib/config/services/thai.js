@@ -7,7 +7,7 @@ import {
 import { thai } from '#legacy/gel-foundations/src/scripts';
 import { thai as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Bangkok';
-import '@bbc/psammead-locales/moment/th';
+import '#legacy/psammead-locales/moment/th';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

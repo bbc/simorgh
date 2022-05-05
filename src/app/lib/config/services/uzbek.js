@@ -7,7 +7,7 @@ import {
 import { cyrillicAndLatin } from '#legacy/gel-foundations/src/scripts';
 import { uzbek as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
-import '@bbc/psammead-locales/moment/uz';
+import '#legacy/psammead-locales/moment/uz';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

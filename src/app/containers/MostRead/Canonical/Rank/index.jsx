@@ -11,7 +11,7 @@ import {
   EasternArabic,
   Nepali,
   WesternArabic,
-} from '@bbc/psammead-locales/numerals';
+} from '#legacy/psammead-locales/src/numerals';
 import { GEL_SPACING_HLF } from '#legacy/gel-foundations/src/spacings';
 import {
   GEL_GROUP_5_SCREEN_WIDTH_MIN,

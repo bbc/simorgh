@@ -11,7 +11,7 @@ import {
   F_NOTO_SANS_ETHIOPIC_REGULAR,
 } from '#legacy/psammead-styles/src/fonts';
 import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
-import '@bbc/psammead-locales/moment/ti';
+import '#legacy/psammead-locales/moment/ti';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

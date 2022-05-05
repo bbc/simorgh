@@ -3,7 +3,7 @@ import { isNull, shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { render } from '@testing-library/react';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 import moment from 'moment';
-import '@bbc/psammead-locales/moment/ha';
+import '#legacy/psammead-locales/moment/ha';
 import Timestamp from '.';
 
 const defaultTimestamp = 1539969006000; // 19 October 2018

@@ -10,7 +10,7 @@ import {
   F_REITH_QALAM_REGULAR,
   F_REITH_QALAM_BOLD,
 } from '#legacy/psammead-styles/src/fonts';
-import '@bbc/psammead-locales/moment/ps';
+import '#legacy/psammead-locales/moment/ps';
 import '@bbc/moment-timezone-include/tz/GMT';
 import { jalaali } from '#legacy/psammead-calendars/src';
 import withContext from '../../../contexts/utils/withContext';

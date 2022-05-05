@@ -7,7 +7,7 @@ import {
 import { cyrillicAndLatin } from '#legacy/gel-foundations/src/scripts';
 import { ukrainian as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
-import '@bbc/psammead-locales/moment/uk';
+import '#legacy/psammead-locales/moment/uk';
 import withContext from '../../../contexts/utils/withContext';
 import { mainTranslations as russianMainTranslations } from './russian';
 

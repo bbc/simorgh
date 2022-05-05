@@ -11,7 +11,7 @@ import {
   F_NOTO_SERIF_BENGALI_REGULAR,
 } from '#legacy/psammead-styles/src/fonts';
 import '@bbc/moment-timezone-include/tz/Asia/Dhaka';
-import '@bbc/psammead-locales/moment/bn';
+import '#legacy/psammead-locales/moment/bn';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

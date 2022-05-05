@@ -23,7 +23,7 @@ Currently, this library only supports the following block types:
 ## Installation
 
 ```jsx
-npm install @bbc/psammead-locales --save
+npm install #legacy/psammead-locales --save
 ```
 
 ## Usage

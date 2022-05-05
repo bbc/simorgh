@@ -11,7 +11,7 @@ import {
   F_NOTO_SANS_TAMIL_REGULAR,
 } from '#legacy/psammead-styles/src/fonts';
 import '@bbc/moment-timezone-include/tz/GMT';
-import '@bbc/psammead-locales/moment/ta';
+import '#legacy/psammead-locales/moment/ta';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

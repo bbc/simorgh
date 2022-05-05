@@ -7,7 +7,7 @@ import {
 import { cyrillicAndLatin } from '#legacy/gel-foundations/src/scripts';
 import { gahuza as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
-import '@bbc/psammead-locales/moment/rw';
+import '#legacy/psammead-locales/moment/rw';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

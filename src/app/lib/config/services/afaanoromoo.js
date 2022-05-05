@@ -7,7 +7,7 @@ import {
 import { cyrillicAndLatin } from '#legacy/gel-foundations/src/scripts';
 import { afaanoromoo as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
-import '@bbc/psammead-locales/moment/om';
+import '#legacy/psammead-locales/moment/om';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
