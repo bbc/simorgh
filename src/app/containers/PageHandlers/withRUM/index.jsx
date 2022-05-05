@@ -33,7 +33,7 @@ const buildScript = ({
 
 const RUMLoader = Component => {
   const withRum = props => {
-    if (isLive()) return <Component {...props} />;
+    if (isLive() || props.isAmp) return <Component {...props} />;
 
     const testConfig = {
       applicationId: '0007b574-fe46-4f8d-94d3-fe1c1a375af6',
