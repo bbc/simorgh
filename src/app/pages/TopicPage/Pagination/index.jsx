@@ -139,21 +139,21 @@ const LinkComponent = ({ children, pageNumber, isActive, ...rest }) => (
   </A>
 );
 
-const LeftArrow = ({ activePage, children }) => (
+const PreviousArrow = ({ activePage, children, dir }) => (
   <Block as="span" visibility={VISIBILITY.ALL}>
     <LinkComponent
       pageNumber={activePage - 1}
       aria-labelledby="pagination-previous-page"
     >
       <span id="pagination-previous-page">
-        <LeftChevron />
+        {dir === 'ltr' ? <LeftChevron /> : <RightChevron />}
         <VisuallyHiddenText>{children}</VisuallyHiddenText>
       </span>
     </LinkComponent>
   </Block>
 );
 
-const RightArrow = ({ activePage, children }) => (
+const NextArrow = ({ activePage, children, dir }) => (
   <Block as="span" visibility={VISIBILITY.ALL}>
     <LinkComponent
       pageNumber={activePage + 1}
@@ -161,7 +161,7 @@ const RightArrow = ({ activePage, children }) => (
     >
       <span id="pagination-next-page">
         <VisuallyHiddenText>{children}</VisuallyHiddenText>
-        <RightChevron />
+        {dir === 'ltr' ? <RightChevron /> : <LeftChevron />}
       </span>
     </LinkComponent>
   </Block>
@@ -209,7 +209,7 @@ const Pagination = ({
   nextPage,
   page,
 }) => {
-  const { service } = useContext(ServiceContext);
+  const { service, dir } = useContext(ServiceContext);
   const blocks = buildBlocks(activePage, pageCount);
   if (!blocks) return null;
 
@@ -221,13 +221,15 @@ const Pagination = ({
 
   const tokens = pageXOfY.split(/(\{.\})/).map(tokenMapper);
 
-  const showLeftArrow = activePage > 1;
-  const showRightArrow = activePage < pageCount;
+  const showPreviousArrow = activePage > 1;
+  const showNextArrow = activePage < pageCount;
 
   return (
     <Nav role="navigation" aria-label={page} data-testid="topic-pagination">
-      {showLeftArrow && (
-        <LeftArrow activePage={activePage}>{previousPage}</LeftArrow>
+      {showPreviousArrow && (
+        <PreviousArrow activePage={activePage} dir={dir}>
+          {previousPage}
+        </PreviousArrow>
       )}
       <TextSummary
         service={service}
@@ -240,8 +242,10 @@ const Pagination = ({
       <StyledUnorderedList role="list">
         {blocks.map(block => renderBlock({ ...block, activePage, service }))}
       </StyledUnorderedList>
-      {showRightArrow && (
-        <RightArrow activePage={activePage}>{nextPage}</RightArrow>
+      {showNextArrow && (
+        <NextArrow activePage={activePage} dir={dir}>
+          {nextPage}
+        </NextArrow>
       )}
     </Nav>
   );
