@@ -250,7 +250,7 @@ const Pagination = ({ activePage, pageCount }) => {
   ) : (
     <Nav role="navigation" aria-label={page} data-testid="topic-pagination">
       {showRightArrow && (
-        <RightArrow activePage={activePage}>{nextPage}</RightArrow>
+        <RightArrow activePage={activePage}>{previousPage}</RightArrow>
       )}
       <TextSummary
         service={service}
@@ -264,7 +264,7 @@ const Pagination = ({ activePage, pageCount }) => {
         {blocks.map(block => renderBlock({ ...block, activePage, service }))}
       </StyledUnorderedList>
       {showLeftArrow && (
-        <LeftArrow activePage={activePage}>{previousPage}</LeftArrow>
+        <LeftArrow activePage={activePage}>{nextPage}</LeftArrow>
       )}
     </Nav>
   );
