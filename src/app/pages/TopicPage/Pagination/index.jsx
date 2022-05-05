@@ -139,7 +139,7 @@ const LinkComponent = ({ children, pageNumber, isActive, ...rest }) => (
   </A>
 );
 
-const LeftArrow = ({ activePage, children }) => (
+const LeftArrowLTR = ({ activePage, children }) => (
   <Block as="span" visibility={VISIBILITY.ALL}>
     <LinkComponent
       pageNumber={activePage - 1}
@@ -153,13 +153,41 @@ const LeftArrow = ({ activePage, children }) => (
   </Block>
 );
 
-const RightArrow = ({ activePage, children }) => (
+const LeftArrowRTL = ({ activePage, children }) => (
   <Block as="span" visibility={VISIBILITY.ALL}>
     <LinkComponent
       pageNumber={activePage + 1}
       aria-labelledby="pagination-next-page"
     >
       <span id="pagination-next-page">
+        <LeftChevron />
+        <VisuallyHiddenText>{children}</VisuallyHiddenText>
+      </span>
+    </LinkComponent>
+  </Block>
+);
+
+const RightArrowLTR = ({ activePage, children }) => (
+  <Block as="span" visibility={VISIBILITY.ALL}>
+    <LinkComponent
+      pageNumber={activePage + 1}
+      aria-labelledby="pagination-next-page"
+    >
+      <span id="pagination-next-page">
+        <VisuallyHiddenText>{children}</VisuallyHiddenText>
+        <RightChevron />
+      </span>
+    </LinkComponent>
+  </Block>
+);
+
+const RightArrowRTL = ({ activePage, children }) => (
+  <Block as="span" visibility={VISIBILITY.ALL}>
+    <LinkComponent
+      pageNumber={activePage - 1}
+      aria-labelledby="pagination-previous-page"
+    >
+      <span id="pagination-previous-page">
         <VisuallyHiddenText>{children}</VisuallyHiddenText>
         <RightChevron />
       </span>
@@ -230,7 +258,7 @@ const Pagination = ({ activePage, pageCount }) => {
   return dir === 'ltr' ? (
     <Nav role="navigation" aria-label={page} data-testid="topic-pagination">
       {showLeftArrow && (
-        <LeftArrow activePage={activePage}>{previousPage}</LeftArrow>
+        <LeftArrowLTR activePage={activePage}>{previousPage}</LeftArrowLTR>
       )}
       <TextSummary
         service={service}
@@ -244,13 +272,13 @@ const Pagination = ({ activePage, pageCount }) => {
         {blocks.map(block => renderBlock({ ...block, activePage, service }))}
       </StyledUnorderedList>
       {showRightArrow && (
-        <RightArrow activePage={activePage}>{nextPage}</RightArrow>
+        <RightArrowLTR activePage={activePage}>{nextPage}</RightArrowLTR>
       )}
     </Nav>
   ) : (
     <Nav role="navigation" aria-label={page} data-testid="topic-pagination">
-      {showRightArrow && (
-        <RightArrow activePage={activePage}>{previousPage}</RightArrow>
+      {showLeftArrow && (
+        <RightArrowRTL activePage={activePage}>{previousPage}</RightArrowRTL>
       )}
       <TextSummary
         service={service}
@@ -263,8 +291,8 @@ const Pagination = ({ activePage, pageCount }) => {
       <StyledUnorderedList role="list">
         {blocks.map(block => renderBlock({ ...block, activePage, service }))}
       </StyledUnorderedList>
-      {showLeftArrow && (
-        <LeftArrow activePage={activePage}>{nextPage}</LeftArrow>
+      {showRightArrow && (
+        <LeftArrowRTL activePage={activePage}>{nextPage}</LeftArrowRTL>
       )}
     </Nav>
   );
