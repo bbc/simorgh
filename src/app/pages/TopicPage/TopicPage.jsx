@@ -51,14 +51,15 @@ const TopicPage = ({ pageData }) => {
     .replace('{x}', activePage)
     .replace('{y}', pageCount);
 
-  const pageTitle = pageCount > 1 ? `${title}, ${translatedPage}` : `${title}`;
+  // const pageTitle = pageCount > 1 ? `${title}, ${translatedPage}` : `${title}`;
+  const pageTitle = `${title}, ${translatedPage}`;
 
   return (
     <Wrapper role="main">
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
-        title={activePage >= 2 ? pageTitle : title}
+        title={activePage >= 2 && pageCount > 1 ? pageTitle : title}
         socialHeadline={title}
         lang={lang}
         description={description}
