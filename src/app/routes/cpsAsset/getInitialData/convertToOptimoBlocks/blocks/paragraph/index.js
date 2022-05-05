@@ -1,9 +1,9 @@
-import richTextTransforms from '#legacy/psammead-rich-text-transforms/src';
+import candyXmlToRichText from '#legacy/psammead-rich-text-transforms/src/candy-xml';
+import stringToRichText from '#legacy/psammead-rich-text-transforms/src/string';
+
 import { processBlock } from './helpers';
 
 const convertParagraph = async block => {
-  const { candyXmlToRichText, stringToRichText } = richTextTransforms;
-
   const xmlWrapper = innerXML =>
     `<body><paragraph>${innerXML}</paragraph></body>`;
 

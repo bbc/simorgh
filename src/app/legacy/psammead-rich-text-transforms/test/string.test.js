@@ -1,4 +1,4 @@
-import { stringToRichText } from '../src/index';
+import stringToRichText from '#legacy/psammead-rich-text-transforms/src/string';
 
 test('returns a paragraph block when given a string', () => {
   const mockString = 'Hello world';
