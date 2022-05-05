@@ -8,10 +8,15 @@ const renderComponent = ({
   service = 'news',
   activePage = 1,
   pageCount = 2,
+  pageXOfY = 'Page {x} of {y}',
 } = {}) =>
   render(
     <ServiceContextProvider service={service}>
-      <PaginationComponent activePage={activePage} pageCount={pageCount} />
+      <PaginationComponent
+        activePage={activePage}
+        pageCount={pageCount}
+        pageXOfY={pageXOfY}
+      />
     </ServiceContextProvider>,
   );
 
