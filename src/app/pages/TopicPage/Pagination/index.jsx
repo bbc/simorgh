@@ -210,7 +210,7 @@ const getTranslations = translations => ({
 });
 
 const Pagination = ({ activePage, pageCount }) => {
-  const { service, translations } = useContext(ServiceContext);
+  const { service, translations, dir } = useContext(ServiceContext);
   const blocks = buildBlocks(activePage, pageCount);
   if (!blocks) return null;
 
@@ -226,8 +226,8 @@ const Pagination = ({ activePage, pageCount }) => {
 
   const showLeftArrow = activePage > 1;
   const showRightArrow = activePage < pageCount;
-
-  return (
+  console.log("DIRECTION= "+ dir);
+  return dir === 'ltr' ? (
     <Nav role="navigation" aria-label={page} data-testid="topic-pagination">
       {showLeftArrow && (
         <LeftArrow activePage={activePage}>{previousPage}</LeftArrow>
@@ -245,6 +245,26 @@ const Pagination = ({ activePage, pageCount }) => {
       </StyledUnorderedList>
       {showRightArrow && (
         <RightArrow activePage={activePage}>{nextPage}</RightArrow>
+      )}
+    </Nav>
+  ) : (
+    <Nav role="navigation" aria-label={page} data-testid="topic-pagination">
+      {showRightArrow && (
+        <RightArrow activePage={activePage}>{nextPage}</RightArrow>
+      )}
+      <TextSummary
+        service={service}
+        data-testid="topic-pagination-summary"
+        // eslint-disable-next-line jsx-a11y/aria-role
+        role="text"
+      >
+        {tokens}
+      </TextSummary>
+      <StyledUnorderedList role="list">
+        {blocks.map(block => renderBlock({ ...block, activePage, service }))}
+      </StyledUnorderedList>
+      {showLeftArrow && (
+        <LeftArrow activePage={activePage}>{previousPage}</LeftArrow>
       )}
     </Nav>
   );
