@@ -139,35 +139,21 @@ const LinkComponent = ({ children, pageNumber, isActive, ...rest }) => (
   </A>
 );
 
-const LeftArrowLTR = ({ activePage, children }) => (
+const PreviousArrow = ({ activePage, children, dir }) => (
   <Block as="span" visibility={VISIBILITY.ALL}>
     <LinkComponent
       pageNumber={activePage - 1}
       aria-labelledby="pagination-previous-page"
     >
       <span id="pagination-previous-page">
-        <LeftChevron />
+        {dir === 'ltr' ? <LeftChevron /> : <RightChevron />}
         <VisuallyHiddenText>{children}</VisuallyHiddenText>
       </span>
     </LinkComponent>
   </Block>
 );
 
-const LeftArrowRTL = ({ activePage, children }) => (
-  <Block as="span" visibility={VISIBILITY.ALL}>
-    <LinkComponent
-      pageNumber={activePage + 1}
-      aria-labelledby="pagination-next-page"
-    >
-      <span id="pagination-next-page">
-        <LeftChevron />
-        <VisuallyHiddenText>{children}</VisuallyHiddenText>
-      </span>
-    </LinkComponent>
-  </Block>
-);
-
-const RightArrowLTR = ({ activePage, children }) => (
+const NextArrow = ({ activePage, children, dir }) => (
   <Block as="span" visibility={VISIBILITY.ALL}>
     <LinkComponent
       pageNumber={activePage + 1}
@@ -175,21 +161,7 @@ const RightArrowLTR = ({ activePage, children }) => (
     >
       <span id="pagination-next-page">
         <VisuallyHiddenText>{children}</VisuallyHiddenText>
-        <RightChevron />
-      </span>
-    </LinkComponent>
-  </Block>
-);
-
-const RightArrowRTL = ({ activePage, children }) => (
-  <Block as="span" visibility={VISIBILITY.ALL}>
-    <LinkComponent
-      pageNumber={activePage - 1}
-      aria-labelledby="pagination-previous-page"
-    >
-      <span id="pagination-previous-page">
-        <VisuallyHiddenText>{children}</VisuallyHiddenText>
-        <RightChevron />
+        {dir === 'ltr' ? <RightChevron /> : <LeftChevron />}
       </span>
     </LinkComponent>
   </Block>
@@ -252,13 +224,15 @@ const Pagination = ({ activePage, pageCount }) => {
     }[token] || <span key={key}>{token}</span>);
   const tokens = pageXOfY.split(/(\{.\})/).map(tokenMapper);
 
-  const showLeftArrow = activePage > 1;
-  const showRightArrow = activePage < pageCount;
+  const showPreviousArrow = activePage > 1;
+  const showNextArrow = activePage < pageCount;
 
-  return dir === 'ltr' ? (
+  return (
     <Nav role="navigation" aria-label={page} data-testid="topic-pagination">
-      {showLeftArrow && (
-        <LeftArrowLTR activePage={activePage}>{previousPage}</LeftArrowLTR>
+      {showPreviousArrow && (
+        <PreviousArrow activePage={activePage} dir={dir}>
+          {previousPage}
+        </PreviousArrow>
       )}
       <TextSummary
         service={service}
@@ -271,28 +245,8 @@ const Pagination = ({ activePage, pageCount }) => {
       <StyledUnorderedList role="list">
         {blocks.map(block => renderBlock({ ...block, activePage, service }))}
       </StyledUnorderedList>
-      {showRightArrow && (
-        <RightArrowLTR activePage={activePage}>{nextPage}</RightArrowLTR>
-      )}
-    </Nav>
-  ) : (
-    <Nav role="navigation" aria-label={page} data-testid="topic-pagination">
-      {showLeftArrow && (
-        <RightArrowRTL activePage={activePage}>{previousPage}</RightArrowRTL>
-      )}
-      <TextSummary
-        service={service}
-        data-testid="topic-pagination-summary"
-        // eslint-disable-next-line jsx-a11y/aria-role
-        role="text"
-      >
-        {tokens}
-      </TextSummary>
-      <StyledUnorderedList role="list">
-        {blocks.map(block => renderBlock({ ...block, activePage, service }))}
-      </StyledUnorderedList>
-      {showRightArrow && (
-        <LeftArrowRTL activePage={activePage}>{nextPage}</LeftArrowRTL>
+      {showNextArrow && (
+        <NextArrow activePage={activePage}>{nextPage}</NextArrow>
       )}
     </Nav>
   );
