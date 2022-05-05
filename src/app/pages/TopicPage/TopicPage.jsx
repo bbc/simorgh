@@ -51,7 +51,6 @@ const TopicPage = ({ pageData }) => {
     .replace('{x}', activePage)
     .replace('{y}', pageCount);
 
-  // const pageTitle = pageCount > 1 ? `${title}, ${translatedPage}` : `${title}`;
   const pageTitle = `${title}, ${translatedPage}`;
 
   return (
