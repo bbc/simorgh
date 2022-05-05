@@ -10,7 +10,7 @@ import {
   F_PADAUK_BOLD,
   F_PADAUK_REGULAR,
 } from '#legacy/psammead-styles/src/fonts';
-import '@bbc/moment-timezone-include/tz/GMT';
+import '#legacy/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/my';
 

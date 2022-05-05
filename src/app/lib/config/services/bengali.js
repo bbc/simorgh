@@ -10,7 +10,7 @@ import {
   F_NOTO_SERIF_BENGALI_BOLD,
   F_NOTO_SERIF_BENGALI_REGULAR,
 } from '#legacy/psammead-styles/src/fonts';
-import '@bbc/moment-timezone-include/tz/Asia/Dhaka';
+import '#legacy/moment-timezone-include/tz/Asia/Dhaka';
 import '#legacy/psammead-locales/moment/bn';
 import withContext from '../../../contexts/utils/withContext';
 

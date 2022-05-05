@@ -10,7 +10,7 @@ import {
   F_NOTO_SANS_ETHIOPIC_BOLD,
   F_NOTO_SANS_ETHIOPIC_REGULAR,
 } from '#legacy/psammead-styles/src/fonts';
-import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
+import '#legacy/moment-timezone-include/tz/Africa/Addis_Ababa';
 import '#legacy/psammead-locales/moment/am';
 import withContext from '../../../contexts/utils/withContext';
 

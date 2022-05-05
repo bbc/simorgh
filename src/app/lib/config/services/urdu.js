@@ -10,7 +10,7 @@ import {
   F_REITH_QALAM_REGULAR,
   F_REITH_QALAM_BOLD,
 } from '#legacy/psammead-styles/src/fonts';
-import '@bbc/moment-timezone-include/tz/Asia/Karachi';
+import '#legacy/moment-timezone-include/tz/Asia/Karachi';
 import '#legacy/psammead-locales/moment/ur';
 import withContext from '../../../contexts/utils/withContext';
 

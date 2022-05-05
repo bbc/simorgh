@@ -6,7 +6,7 @@ import {
 } from '#legacy/psammead-styles/src/colours';
 import { noAscendersOrDescenders } from '#legacy/gel-foundations/src/scripts';
 import { korean as brandSVG } from '#legacy/psammead-assets/src/svgs';
-import '@bbc/moment-timezone-include/tz/Asia/Seoul';
+import '#legacy/moment-timezone-include/tz/Asia/Seoul';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/ko';
 

@@ -10,7 +10,7 @@ import {
   F_NOTO_SANS_TAMIL_BOLD,
   F_NOTO_SANS_TAMIL_REGULAR,
 } from '#legacy/psammead-styles/src/fonts';
-import '@bbc/moment-timezone-include/tz/GMT';
+import '#legacy/moment-timezone-include/tz/GMT';
 import '#legacy/psammead-locales/moment/ta';
 import withContext from '../../../contexts/utils/withContext';
 

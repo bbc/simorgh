@@ -7,7 +7,7 @@ import {
 import { devanagariAndGurmukhi } from '#legacy/gel-foundations/src/scripts';
 import { punjabi as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import '#legacy/psammead-locales/moment/pa-in';
-import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
+import '#legacy/moment-timezone-include/tz/Asia/Kolkata';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

@@ -7,7 +7,7 @@ import {
 import { pidgin as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import { cyrillicAndLatin } from '#legacy/gel-foundations/src/scripts';
 import '#legacy/psammead-locales/moment/pcm';
-import '@bbc/moment-timezone-include/tz/Africa/Lagos';
+import '#legacy/moment-timezone-include/tz/Africa/Lagos';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

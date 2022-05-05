@@ -9,7 +9,7 @@ import {
   cyrillicAndLatin,
 } from '#legacy/gel-foundations/src/scripts';
 import { serbian as brandSVG } from '#legacy/psammead-assets/src/svgs';
-import '@bbc/moment-timezone-include/tz/GMT';
+import '#legacy/moment-timezone-include/tz/GMT';
 import '#legacy/psammead-locales/moment/sr-cyrl';
 import '#legacy/psammead-locales/moment/sr';
 import withContext from '../../../contexts/utils/withContext';

@@ -6,7 +6,7 @@ import {
 } from '#legacy/psammead-styles/src/colours';
 import { devanagariAndGurmukhi } from '#legacy/gel-foundations/src/scripts';
 import { nepali as brandSVG } from '#legacy/psammead-assets/src/svgs';
-import '@bbc/moment-timezone-include/tz/Asia/Kathmandu';
+import '#legacy/moment-timezone-include/tz/Asia/Kathmandu';
 import '#legacy/psammead-locales/moment/ne';
 import withContext from '../../../contexts/utils/withContext';
 

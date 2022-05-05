@@ -6,7 +6,7 @@ import {
 } from '#legacy/psammead-styles/src/colours';
 import { cyrillicAndLatin } from '#legacy/gel-foundations/src/scripts';
 import { indonesia as brandSVG } from '#legacy/psammead-assets/src/svgs';
-import '@bbc/moment-timezone-include/tz/Asia/Jakarta';
+import '#legacy/moment-timezone-include/tz/Asia/Jakarta';
 import 'moment/locale/id';
 import withContext from '../../../contexts/utils/withContext';
 

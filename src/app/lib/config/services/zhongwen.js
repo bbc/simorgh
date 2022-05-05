@@ -6,7 +6,7 @@ import {
 } from '#legacy/psammead-styles/src/colours';
 import { noAscendersOrDescenders } from '#legacy/gel-foundations/src/scripts';
 import { zhongwen as brandSVG } from '#legacy/psammead-assets/src/svgs';
-import '@bbc/moment-timezone-include/tz/GMT';
+import '#legacy/moment-timezone-include/tz/GMT';
 import 'moment/locale/zh-cn';
 import withContext from '../../../contexts/utils/withContext';
 
