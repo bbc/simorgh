@@ -246,7 +246,9 @@ const Pagination = ({ activePage, pageCount }) => {
         {blocks.map(block => renderBlock({ ...block, activePage, service }))}
       </StyledUnorderedList>
       {showNextArrow && (
-        <NextArrow activePage={activePage}>{nextPage}</NextArrow>
+        <NextArrow activePage={activePage} dir={dir}>
+          {nextPage}
+        </NextArrow>
       )}
     </Nav>
   );
