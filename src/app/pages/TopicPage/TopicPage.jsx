@@ -55,7 +55,6 @@ const TopicPage = ({ pageData }) => {
 
   return (
     <Wrapper role="main">
-      {console.log(pageData)}
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
