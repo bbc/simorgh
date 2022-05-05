@@ -58,7 +58,7 @@ const TopicPage = ({ pageData }) => {
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
-        title={activePage >= 2 && pageCount > 1 ? pageTitle : title}
+        title={activePage >= 2 ? pageTitle : title}
         socialHeadline={title}
         lang={lang}
         description={description}
