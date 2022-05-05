@@ -60,4 +60,59 @@ describe('AmpMostRead', () => {
       expect(fallback).not.toBeNull();
     });
   });
+
+  it('should render fallback when fetch records are empty', async () => {
+    fetchMock.mock('localhost:7080/mundo/mostread.json', {
+      generated: '2022-05-03T14:44:35.496Z',
+      lastRecordTimeStamp: '2022-05-03T14:42:00Z',
+      firstRecordTimeStamp: '2022-05-03T14:27:00Z',
+      totalRecords: 20,
+      records: [],
+    });
+    await act(async () => {
+      const { container, getByText } = await render(
+        <MostReadAmpWithContext
+          service="mundo"
+          mostReadToggle
+          isAmp
+          variant={null}
+          pageType={STORY_PAGE}
+        />,
+      );
+      expect(
+        container.querySelector('amp-script amp-list li'),
+      ).toBeInTheDocument();
+
+      const fallback = getByText('Contenido no disponible');
+
+      expect(fallback).not.toBeNull();
+    });
+  });
+
+  it('should render fallback when fetch records is undefined', async () => {
+    fetchMock.mock('localhost:7080/mundo/mostread.json', {
+      generated: '2022-05-03T14:44:35.496Z',
+      lastRecordTimeStamp: '2022-05-03T14:42:00Z',
+      firstRecordTimeStamp: '2022-05-03T14:27:00Z',
+      totalRecords: 20,
+    });
+    await act(async () => {
+      const { container, getByText } = await render(
+        <MostReadAmpWithContext
+          service="mundo"
+          mostReadToggle
+          isAmp
+          variant={null}
+          pageType={STORY_PAGE}
+        />,
+      );
+      expect(
+        container.querySelector('amp-script amp-list li'),
+      ).toBeInTheDocument();
+
+      const fallback = getByText('Contenido no disponible');
+
+      expect(fallback).not.toBeNull();
+    });
+  });
 });
