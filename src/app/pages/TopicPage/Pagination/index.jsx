@@ -226,7 +226,7 @@ const Pagination = ({ activePage, pageCount }) => {
 
   const showLeftArrow = activePage > 1;
   const showRightArrow = activePage < pageCount;
-  console.log("DIRECTION= "+ dir);
+
   return dir === 'ltr' ? (
     <Nav role="navigation" aria-label={page} data-testid="topic-pagination">
       {showLeftArrow && (
