@@ -22,6 +22,7 @@ module.exports = {
     },
   },
   plugins: ['prettier', 'json', 'jsx-a11y', 'react-hooks', 'cypress'],
+  ignorePatterns: ['/src/app/legacy'],
   rules: {
     'react/forbid-foreign-prop-types': 'error',
     'react/jsx-one-expression-per-line': 'off',
