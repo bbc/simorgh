@@ -17,6 +17,16 @@ exports[`BrandContainer should render correctly 1`] = `
   }
 }
 
+.emotion-1 svg {
+  fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-1 svg {
+    fill: linkText;
+  }
+}
+
 .emotion-3 {
   position: relative;
   display: -webkit-box;

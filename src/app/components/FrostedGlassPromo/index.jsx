@@ -26,11 +26,15 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-
   text-decoration: none;
   &:hover {
     a {
       text-decoration: underline;
+    }
+  }
+  &:visited {
+    a {
+      color: #e6e8ea;
     }
   }
 `;
@@ -65,6 +69,9 @@ const A = styled.a`
     line-height: 1.25;
     margin: 0.875rem ${GEL_SPACING_DBL} 0 ${GEL_SPACING_DBL};
   }
+  &:visited {
+    color: #e6e8ea;
+  }
   &:focus {
     text-decoration: underline;
   }
@@ -73,6 +80,7 @@ const A = styled.a`
 const LazyloadPlaceholder = styled.div`
   background-color: ${({ isAmp }) => (isAmp ? C_WHITE : C_GREY_8)};
   min-height: 100px;
+  padding-bottom: ${GEL_SPACING_DBL};
 `;
 
 const FrostedGlassPromo = ({
