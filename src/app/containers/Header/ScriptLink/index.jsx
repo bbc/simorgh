@@ -1,12 +1,19 @@
 import React, { useContext } from 'react';
 import { compile } from 'path-to-regexp';
+import clone from 'ramda/src/clone';
 import { useRouteMatch } from 'react-router-dom';
 import ScriptLink from '@bbc/psammead-script-link';
 import { UserContext } from '#contexts/UserContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 
-export const getVariantHref = ({ path, params, service, variant }) => {
+export const getVariantHref = ({
+  path,
+  params,
+  service,
+  variant,
+  scriptSwitchId,
+}) => {
   const fallback = `/${service}/${variant}`;
 
   // On error pages, we may not be on a path defined in router config.
@@ -15,10 +22,15 @@ export const getVariantHref = ({ path, params, service, variant }) => {
     return fallback;
   }
 
+  const queryParams = clone(params);
+  if (scriptSwitchId) {
+    queryParams.id = scriptSwitchId;
+  }
+
   try {
     return compile(path)(
       {
-        ...params,
+        ...queryParams,
         variant: `/${variant}`,
         amp: undefined, // we don't want to link to AMP pages directly
       },
@@ -31,7 +43,7 @@ export const getVariantHref = ({ path, params, service, variant }) => {
   }
 };
 
-const ScriptLinkContainer = () => {
+const ScriptLinkContainer = ({ scriptSwitchId }) => {
   const { setPreferredVariantCookie } = useContext(UserContext);
   const { service, script, scriptLink } = useContext(ServiceContext);
   const { enabled: scriptLinkEnabled } = useToggle('scriptLink');
@@ -53,6 +65,7 @@ const ScriptLinkContainer = () => {
         params,
         service,
         variant,
+        scriptSwitchId,
       })}
       variant={variant}
       onClick={() => {
