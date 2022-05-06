@@ -1,6 +1,5 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { latin, burmese, arabic } from '#legacy/gel-foundations/src/scripts';
 import { render } from '@testing-library/react';
 import latinAndCyrillicTypography from '#legacy/gel-foundations/src/scripts/latin-and-cyrillic';
 import burmeseTypography from '#legacy/gel-foundations/src/scripts/burmese';
