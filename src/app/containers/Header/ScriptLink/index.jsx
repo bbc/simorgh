@@ -22,15 +22,15 @@ export const getVariantHref = ({
     return fallback;
   }
 
-  const queryParams = clone(params);
+  const pathParams = clone(params);
   if (scriptSwitchId) {
-    queryParams.id = scriptSwitchId;
+    pathParams.id = scriptSwitchId;
   }
 
   try {
     return compile(path)(
       {
-        ...queryParams,
+        ...pathParams,
         variant: `/${variant}`,
         amp: undefined, // we don't want to link to AMP pages directly
       },
