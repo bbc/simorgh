@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { compile } from 'path-to-regexp';
 import clone from 'ramda/src/clone';
+import { string } from 'prop-types';
 import { useRouteMatch } from 'react-router-dom';
 import ScriptLink from '@bbc/psammead-script-link';
 import { UserContext } from '#contexts/UserContext';
@@ -77,6 +78,14 @@ const ScriptLinkContainer = ({ scriptSwitchId }) => {
       {text}
     </ScriptLink>
   );
+};
+
+ScriptLinkContainer.propTypes = {
+  scriptSwitchId: string,
+};
+
+ScriptLinkContainer.defaultProps = {
+  scriptSwitchId: '',
 };
 
 export default ScriptLinkContainer;
