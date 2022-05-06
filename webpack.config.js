@@ -2,7 +2,7 @@
 const { merge } = require('webpack-merge');
 const fs = require('fs');
 const path = require('path');
-const MomentTimezoneInclude = require('@bbc/moment-timezone-include');
+const MomentTimezoneInclude = require('./src/app/legacy/moment-timezone-include/src');
 const { webpackDirAlias } = require('./dirAlias');
 
 const appDirectory = fs.realpathSync(process.cwd());
@@ -47,6 +47,14 @@ const getBaseConfig = BUNDLE_TYPE => ({
       'safe-buffer': path.resolve(__dirname, 'node_modules/safe-buffer'),
     },
   },
+  watchOptions: {
+    ignored: [
+      path.resolve(
+        __dirname,
+        './src/app/legacy/moment-timezone-include/src/tz',
+      ),
+    ],
+  },
   devServer: {
     devMiddleware: {
       stats,
@@ -60,7 +68,7 @@ const getBaseConfig = BUNDLE_TYPE => ({
   },
   /**
    * Remove all default timezone data and allow importing it via import
-   * '@bbc/moment-timezone-include/tz/Europe/London'. Restrict data
+   * '#legacy/moment-timezone-include/tz/Europe/London'. Restrict data
    * between 2010 (earliest articles using ATI, so likely earliest timestamps
    * we will find via most read) and 2025 which is soon enough to save space,
    * but long enough that we dont need to worry about forgetting it.

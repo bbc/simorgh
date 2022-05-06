@@ -85,7 +85,6 @@
   },
   "homepage": "https://github.com/bbc/simorgh#readme",
   "dependencies": {
-    "@bbc/moment-timezone-include": "1.1.8",
     "@bbc/web-vitals": "1.1.1",
     "@emotion/cache": "11.7.1",
     "@emotion/react": "11.9.0",

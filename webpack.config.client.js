@@ -5,6 +5,7 @@
  */
 
 const fs = require('fs');
+const path = require('path');
 const crypto = require('crypto');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
