@@ -445,6 +445,7 @@ describe('cspHeader', () => {
         'https://www.instagram.com',
         'https://cdn.syndication.twimg.com',
         'https://public.flourish.studio',
+        'https://client.rum.us-east-1.amazonaws.com',
         'https://adservice.google.co.uk',
         'https://adservice.google.com',
         'https://cdn.ampproject.org',
