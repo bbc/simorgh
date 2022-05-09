@@ -4,16 +4,17 @@ import styled from '@emotion/styled';
 import pick from 'ramda/src/pick';
 import Lazyload from 'react-lazyload';
 
+import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
+import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import { getSerifRegular } from '#legacy/psammead-styles/src/font-styles';
 import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#legacy/gel-foundations/src/spacings';
+import { C_WHITE, C_GREY_8 } from '#legacy/psammead-styles/src/colours';
 
-import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
-import { ServiceContext } from '#contexts/ServiceContext';
-import { RequestContext } from '#contexts/RequestContext';
 import FrostedGlassPanel from './FrostedGlassPanel';
 
 import ImageWithPlaceholder from '../../containers/ImageWithPlaceholder';
