@@ -12,7 +12,7 @@ import PromoTimestamp from '#components/Promo/timestamp';
 
 const StyledTimestamp = styled(PromoTimestamp)`
   ${({ service }) => service && getSansRegular(service)}
-  color: ${({ isAmp }) => (isAmp ? 'black' : 'white')};
+  color: ${({ isAmp }) => (isAmp ? 'black' : '#e6e8ea')};
 
   font-size: 0.8125rem;
   padding: ${GEL_SPACING_HLF_TRPL} ${GEL_SPACING} 0 ${GEL_SPACING};

@@ -7,6 +7,11 @@ import { ServiceContext } from '#contexts/ServiceContext';
 const StyledBrand = styled(Brand)`
   position: relative;
   z-index: 1;
+  svg {
+    fill: currentColor;
+    @media screen and (forced-colors: active) {
+      fill: linkText;
+    }
 `;
 
 const BrandContainer = ({ skipLink, scriptLink, brandRef, ...props }) => {

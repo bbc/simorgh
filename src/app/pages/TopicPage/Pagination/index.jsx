@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { number } from 'prop-types';
+import { number, string } from 'prop-types';
 import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
 import {
   getSansRegular,
   getSansBold,
 } from '#legacy/psammead-styles/src/font-styles';
+
 import {
   C_PHILIPPINE_GREY,
   C_GREY_10,
@@ -142,21 +143,21 @@ const LinkComponent = ({ children, pageNumber, isActive, ...rest }) => (
   </A>
 );
 
-const LeftArrow = ({ activePage, children }) => (
+const PreviousArrow = ({ activePage, children, dir }) => (
   <Block as="span" visibility={VISIBILITY.ALL}>
     <LinkComponent
       pageNumber={activePage - 1}
       aria-labelledby="pagination-previous-page"
     >
       <span id="pagination-previous-page">
-        <LeftChevron />
+        {dir === 'ltr' ? <LeftChevron /> : <RightChevron />}
         <VisuallyHiddenText>{children}</VisuallyHiddenText>
       </span>
     </LinkComponent>
   </Block>
 );
 
-const RightArrow = ({ activePage, children }) => (
+const NextArrow = ({ activePage, children, dir }) => (
   <Block as="span" visibility={VISIBILITY.ALL}>
     <LinkComponent
       pageNumber={activePage + 1}
@@ -164,7 +165,7 @@ const RightArrow = ({ activePage, children }) => (
     >
       <span id="pagination-next-page">
         <VisuallyHiddenText>{children}</VisuallyHiddenText>
-        <RightChevron />
+        {dir === 'ltr' ? <RightChevron /> : <LeftChevron />}
       </span>
     </LinkComponent>
   </Block>
@@ -204,36 +205,35 @@ const renderBlock = ({
 };
 /* eslint-enable react/prop-types */
 
-const getTranslations = translations => ({
-  pageXOfY: 'Page {x} of {y}',
-  previousPage: 'Previous Page',
-  nextPage: 'Next Page',
-  page: 'Page',
-  ...translations.pagination,
-});
-
-const Pagination = ({ activePage, pageCount }) => {
-  const { service, translations } = useContext(ServiceContext);
+const Pagination = ({
+  activePage,
+  pageCount,
+  pageXOfY,
+  previousPage,
+  nextPage,
+  page,
+}) => {
+  const { service, dir } = useContext(ServiceContext);
   const blocks = buildBlocks(activePage, pageCount);
   if (!blocks) return null;
-
-  const { pageXOfY, previousPage, nextPage, page } =
-    getTranslations(translations);
 
   const tokenMapper = (token, key) =>
     ({
       '{x}': <b key={key}>{activePage}</b>,
       '{y}': <b key={key}>{pageCount}</b>,
     }[token] || <span key={key}>{token}</span>);
+
   const tokens = pageXOfY.split(/(\{.\})/).map(tokenMapper);
 
-  const showLeftArrow = activePage > 1;
-  const showRightArrow = activePage < pageCount;
+  const showPreviousArrow = activePage > 1;
+  const showNextArrow = activePage < pageCount;
 
   return (
     <Nav role="navigation" aria-label={page} data-testid="topic-pagination">
-      {showLeftArrow && (
-        <LeftArrow activePage={activePage}>{previousPage}</LeftArrow>
+      {showPreviousArrow && (
+        <PreviousArrow activePage={activePage} dir={dir}>
+          {previousPage}
+        </PreviousArrow>
       )}
       <TextSummary
         service={service}
@@ -246,8 +246,10 @@ const Pagination = ({ activePage, pageCount }) => {
       <StyledUnorderedList role="list">
         {blocks.map(block => renderBlock({ ...block, activePage, service }))}
       </StyledUnorderedList>
-      {showRightArrow && (
-        <RightArrow activePage={activePage}>{nextPage}</RightArrow>
+      {showNextArrow && (
+        <NextArrow activePage={activePage} dir={dir}>
+          {nextPage}
+        </NextArrow>
       )}
     </Nav>
   );
@@ -256,11 +258,19 @@ const Pagination = ({ activePage, pageCount }) => {
 Pagination.propTypes = {
   activePage: number,
   pageCount: number,
+  pageXOfY: string,
+  previousPage: string,
+  nextPage: string,
+  page: string,
 };
 
 Pagination.defaultProps = {
   activePage: 1,
   pageCount: 1,
+  pageXOfY: 'Page {x} of {y}',
+  previousPage: 'Previous Page',
+  nextPage: 'Next Page',
+  page: 'Page',
 };
 
 export default Pagination;

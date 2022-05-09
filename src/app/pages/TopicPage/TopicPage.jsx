@@ -28,8 +28,8 @@ const Wrapper = styled.main`
 `;
 
 const TopicPage = ({ pageData }) => {
-  const { lang } = useContext(ServiceContext);
-  const { title, description, promos } = pageData;
+  const { lang, translations } = useContext(ServiceContext);
+  const { title, description, promos, pageCount, activePage } = pageData;
 
   const promoEntities = promos.map(promo => ({
     '@type': 'Article',
@@ -39,12 +39,30 @@ const TopicPage = ({ pageData }) => {
     dateCreated: promo.firstPublished,
   }));
 
+  const getTranslations = () => ({
+    pageXOfY: 'Page {x} of {y}',
+    previousPage: 'Previous Page',
+    nextPage: 'Next Page',
+    page: 'Page',
+    ...translations.pagination,
+  });
+
+  const { pageXOfY, previousPage, nextPage, page } =
+    getTranslations(translations);
+
+  const translatedPage = pageXOfY
+    .replace('{x}', activePage)
+    .replace('{y}', pageCount);
+
+  const pageTitle = `${title}, ${translatedPage}`;
+
   return (
     <Wrapper role="main">
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
-        title={title}
+        title={activePage >= 2 ? pageTitle : title}
+        socialHeadline={title}
         lang={lang}
         description={description}
         openGraphType="website"
@@ -59,8 +77,12 @@ const TopicPage = ({ pageData }) => {
       <TopicTitle>{title}</TopicTitle>
       <TopicGrid promos={promos} />
       <Pagination
-        activePage={pageData.activePage}
-        pageCount={pageData.pageCount}
+        activePage={activePage}
+        pageCount={pageCount}
+        pageXOfY={pageXOfY}
+        previousPage={previousPage}
+        nextPage={nextPage}
+        page={page}
       />
     </Wrapper>
   );

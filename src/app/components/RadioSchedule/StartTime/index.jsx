@@ -26,6 +26,9 @@ const StyledClock = styled.span`
     color: ${C_RHINO};
     margin: 0;
     overflow: visible;
+    @media screen and (forced-colors: active) {
+      fill: canvasText;
+    }
   }
 `;
 
