@@ -9,8 +9,14 @@ on:
   push:
     branches:
       - latest
+permissions:
+  contents: read
+
 jobs:
   cleanup-runs:
+    permissions:
+      actions: write  # for rokroskar/workflow-run-cleanup-action to obtain workflow name & cancel it
+      contents: read  # for rokroskar/workflow-run-cleanup-action to obtain branch
     runs-on: ubuntu-latest
     steps:
       - uses: rokroskar/workflow-run-cleanup-action@master
