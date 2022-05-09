@@ -5,6 +5,7 @@ const depcheck = require('depcheck');
 const options = {
   specials: ['bin', 'eslint', 'jest', 'babel', 'webpack'],
   ignoreDirs: ['build'],
+  ignorePatterns: ['index.stories.jsx'],
   ignoreMatches: [
     'puppeteer',
     'isarray',

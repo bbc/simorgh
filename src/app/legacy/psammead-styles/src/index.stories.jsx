@@ -11,7 +11,7 @@ import {
 } from '#legacy/gel-foundations/src/typography';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 import { select, withKnobs } from '@storybook/addon-knobs';
-import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
+import { withServicesKnob } from '#legacy/psammead-storybook-helpers/src/withServicesKnob';
 import json5 from 'json5';
 import {
   getSansRegular,
