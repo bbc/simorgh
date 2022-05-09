@@ -267,6 +267,7 @@ const directives = {
       'https://www.instagram.com', // Social Embeds
       'https://cdn.syndication.twimg.com', // Social Embeds
       'https://public.flourish.studio', // STY includes
+      'https://client.rum.us-east-1.amazonaws.com', // CloudWatch RUM
       ...advertisingDirectives.scriptSrc,
       "'self'",
       "'unsafe-inline'",
