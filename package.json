@@ -85,7 +85,6 @@
   },
   "homepage": "https://github.com/bbc/simorgh#readme",
   "dependencies": {
-    "@bbc/moment-timezone-include": "1.1.8",
     "@bbc/web-vitals": "1.1.1",
     "@emotion/cache": "11.7.1",
     "@emotion/react": "11.9.0",
@@ -105,7 +104,6 @@
     "dotenv": "10.0.0",
     "express": "4.18.0",
     "express-static-gzip": "2.1.5",
-    "find-cache-dir": "3.0.0",
     "gnu-terry-pratchett": "0.0.2",
     "helmet": "4.6.0",
     "helmet-csp": "3.4.0",
@@ -119,7 +117,6 @@
     "moment": "2.24.0",
     "moment-timezone": "0.5.26",
     "morgan": "1.10.0",
-    "object-hash": "2.0.0",
     "path-to-regexp": "6.2.0",
     "polyfill-crypto.getrandomvalues": "1.0.0",
     "ramda": "0.28.0",

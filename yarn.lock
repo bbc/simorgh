@@ -1791,20 +1791,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/moment-timezone-include@npm:1.1.8":
-  version: 1.1.8
-  resolution: "@bbc/moment-timezone-include@npm:1.1.8"
-  dependencies:
-    find-cache-dir: ^3.0.0
-    mkdirp: ^1.0.0
-    moment-timezone: ^0.5.26
-    object-hash: ^2.0.0
-  peerDependencies:
-    webpack: ^4.38.0
-  checksum: 3425ffe4d56380816e4170b3b3266e24f3a39e11e285f9b4950fe69ff68e3ad225ca686814c5302be0ee9327abeffd288fbff4ec006531b6dc9225423e889c7f
-  languageName: node
-  linkType: hard
-
 "@bbc/psammead-storybook-helpers@npm:9.0.17":
   version: 9.0.17
   resolution: "@bbc/psammead-storybook-helpers@npm:9.0.17"
@@ -10796,17 +10782,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"find-cache-dir@npm:3.0.0":
-  version: 3.0.0
-  resolution: "find-cache-dir@npm:3.0.0"
-  dependencies:
-    commondir: ^1.0.1
-    make-dir: ^3.0.0
-    pkg-dir: ^4.1.0
-  checksum: 4239402fb55ffc27677b40a2ff3dd123c39ea133f589dc2c054ca34a7dfbc9bd9502cf1faa94595a3d2b2e011d579f5220cc57c82a85e220423feccda45d8636
-  languageName: node
-  linkType: hard
-
 "find-cache-dir@npm:^2.0.0, find-cache-dir@npm:^2.1.0":
   version: 2.1.0
   resolution: "find-cache-dir@npm:2.1.0"
@@ -10818,7 +10793,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"find-cache-dir@npm:^3.0.0, find-cache-dir@npm:^3.3.1":
+"find-cache-dir@npm:^3.3.1":
   version: 3.3.2
   resolution: "find-cache-dir@npm:3.3.2"
   dependencies:
@@ -15284,7 +15259,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mkdirp@npm:^1.0.0, mkdirp@npm:^1.0.3, mkdirp@npm:^1.0.4":
+"mkdirp@npm:^1.0.3, mkdirp@npm:^1.0.4":
   version: 1.0.4
   resolution: "mkdirp@npm:1.0.4"
   bin:
@@ -15349,15 +15324,6 @@ __metadata:
   dependencies:
     moment: ">= 2.9.0"
   checksum: c0dc1d5463e70e1d1bab92e92b0cfec8e65984622b2fd2e5f7a37f41450c894fd8d88519936988967c78a8aa1f13e688298c0c84cb897db75685dd3f8ba32f02
-  languageName: node
-  linkType: hard
-
-"moment-timezone@npm:^0.5.26":
-  version: 0.5.34
-  resolution: "moment-timezone@npm:0.5.34"
-  dependencies:
-    moment: ">= 2.9.0"
-  checksum: 12a1d3d52e4ba509cf1fa36bbda59d898a08fa80ab35f6c358747e93aec1f07e617cec647eaf2e8acf5f9132e581d4704d34a9edffa9a80c5cd04bf23b277595
   languageName: node
   linkType: hard
 
@@ -15903,20 +15869,6 @@ __metadata:
     define-property: ^0.2.5
     kind-of: ^3.0.3
   checksum: a9e35f07e3a2c882a7e979090360d1a20ab51d1fa19dfdac3aa8873b328a7c4c7683946ee97c824ae40079d848d6740a3788fa14f2185155dab7ed970a72c783
-  languageName: node
-  linkType: hard
-
-"object-hash@npm:2.0.0":
-  version: 2.0.0
-  resolution: "object-hash@npm:2.0.0"
-  checksum: 7a9c8117240e0cbd4748a06d8c5f80cd0d38af878c399f5b7bb4a6d0492d7f25b40db476b36d18b8ce99f2ee8823e8c536ca2a4deccb9509e1c552bcd03301a9
-  languageName: node
-  linkType: hard
-
-"object-hash@npm:^2.0.0":
-  version: 2.2.0
-  resolution: "object-hash@npm:2.2.0"
-  checksum: 55ba841e3adce9c4f1b9b46b41983eda40f854e0d01af2802d3ae18a7085a17168d6b81731d43fdf1d6bcbb3c9f9c56d22c8fea992203ad90a38d7d919bc28f1
   languageName: node
   linkType: hard
 
@@ -19087,7 +19039,6 @@ __metadata:
     "@babel/preset-react": 7.16.7
     "@babel/runtime": 7.17.9
     "@bbc/apache2-license-checker": 1.1.4
-    "@bbc/moment-timezone-include": 1.1.8
     "@bbc/psammead-storybook-helpers": 9.0.17
     "@bbc/psammead-test-helpers": 6.0.5
     "@bbc/web-vitals": 1.1.1
@@ -19157,7 +19108,6 @@ __metadata:
     express: 4.18.0
     express-static-gzip: 2.1.5
     fetch-mock: 9.11.0
-    find-cache-dir: 3.0.0
     glob: 7.2.0
     gnu-terry-pratchett: 0.0.2
     helmet: 4.6.0
@@ -19186,7 +19136,6 @@ __metadata:
     morgan: 1.10.0
     node-fetch: 2.6.7
     npm-run-all: 4.1.5
-    object-hash: 2.0.0
     ora: 5.4.1
     path-to-regexp: 6.2.0
     polyfill-crypto.getrandomvalues: 1.0.0
