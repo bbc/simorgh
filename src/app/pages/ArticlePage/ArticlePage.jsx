@@ -6,6 +6,8 @@ import last from 'ramda/src/last';
 import styled from '@emotion/styled';
 import { string, node } from 'prop-types';
 import useToggle from '#hooks/useToggle';
+import isLive from '#lib/utilities/isLive';
+
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -119,11 +121,9 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const { enabled: adsEnabled } = useToggle('ads');
 
-  const isAdsEnabled = [
-    // path(['metadata', 'options', 'allowAdvertising'], pageData),
-    adsEnabled,
-    showAdsBasedOnLocation,
-  ].every(Boolean);
+  const isAdsEnabled = [!isLive(), adsEnabled, showAdsBasedOnLocation].every(
+    Boolean,
+  );
 
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
 
