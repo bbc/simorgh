@@ -350,6 +350,8 @@ test('calendar next week', () => {
       case 4:
       case 5:
         return '[u] dddd [u] LT';
+      default:
+        return null;
     }
   }
 

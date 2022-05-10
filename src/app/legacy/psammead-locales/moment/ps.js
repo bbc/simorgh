@@ -22,9 +22,9 @@ moment.defineLocale('ps', {
     LLL: 'D MMMM YYYY HH:mm',
   },
   postformat(string) {
-    const useEasternNumerals = numerals.makeNumeralTranslator(
+    const EasternNumerals = numerals.makeNumeralTranslator(
       numerals.EasternArabic
     );
-    return useEasternNumerals(string).replace(/,/g, '،');
+    return EasternNumerals(string).replace(/,/g, '،');
   },
 });

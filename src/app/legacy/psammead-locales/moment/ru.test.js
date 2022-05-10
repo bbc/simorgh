@@ -536,6 +536,8 @@ test('calendar next week', () => {
       case 5:
       case 6:
         return '[В следующую] dddd, [в] LT';
+      default:
+        return null;
     }
   }
 
@@ -608,6 +610,8 @@ test('calendar last week', () => {
       case 5:
       case 6:
         return '[В прошлую] dddd, [в] LT';
+      default:
+        return null;
     }
   }
 

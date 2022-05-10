@@ -418,6 +418,8 @@ test('calendar last week', () => {
       case 2:
       case 4:
         return `[Минулого] dddd [о${d.hours() === 11 ? 'б' : ''}] LT`;
+      default:
+        return null;
     }
   }
 
