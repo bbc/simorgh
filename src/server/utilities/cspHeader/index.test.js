@@ -371,6 +371,7 @@ describe('cspHeader', () => {
         'https://fundingchoicesmessages.google.com',
         'https://secure-dcr-cert.imrworldwide.com',
         'https://*.safeframe.googlesyndication.com',
+        'https://cognito-identity.eu-west-1.amazonaws.com/',
         "'self'",
       ],
       defaultSrcExpectation: [

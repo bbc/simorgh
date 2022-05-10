@@ -120,6 +120,7 @@ const directives = {
       'https://cdn.optimizely.com/',
       'https://logx.optimizely.com/',
       'https://europe-west1-bbc-otg-traf-mgr-bq-dev-4105.cloudfunctions.net', // Web-Vitals monitoring
+      'https://cognito-identity.eu-west-1.amazonaws.com/',
       ...advertisingDirectives.connectSrc,
       "'self'",
     ],
