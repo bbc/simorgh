@@ -13,7 +13,7 @@ test('parse', function () {
     'январь янв._февраль февр._март март_апрель апр._май май_июнь июнь_июль июль_август авг._сентябрь сент._октябрь окт._ноябрь нояб._декабрь дек.'.split(
       '_'
     );
-  let i;
+
   function equalTest(input, mmm, i) {
     assert.equal(
       moment(input, mmm).month(),
@@ -28,6 +28,8 @@ test('parse', function () {
       `${input} ${mmm} should be strict month ${monthIndex + 1}`
     );
   }
+
+  let i;
   for (i = 0; i < 12; i += 1) {
     tests[i] = tests[i].split(' ');
     equalTest(tests[i][0], 'MMM', i);

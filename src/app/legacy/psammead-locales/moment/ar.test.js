@@ -29,7 +29,7 @@ const dualMonthNames = [
 
 test('parse', function () {
   const tests = dualMonthNames;
-  let i;
+
   function equalTest(input, mmm, i) {
     assert.equal(
       moment(input, mmm).month(),
@@ -40,6 +40,8 @@ test('parse', function () {
       ).month()}`
     );
   }
+
+  let i;
   for (i = 0; i < 12; i += 1) {
     equalTest(tests[i], 'MMM', i);
     equalTest(tests[i], 'MMM', i);
@@ -468,8 +470,8 @@ test('no leading zeros in long date formats', function () {
   let j;
   let longDateStr;
   let shortDateStr;
-  for (i = 1; i <= 9; ++i) {
-    for (j = 1; j <= 9; ++j) {
+  for (i = 1; i <= 9; i += 1) {
+    for (j = 1; j <= 9; j += 1) {
       longDateStr = moment([2014, i, j]).format('L');
       shortDateStr = moment([2014, i, j]).format('l');
       assert.equal(
@@ -483,10 +485,8 @@ test('no leading zeros in long date formats', function () {
 
 // locale-specific
 test('ar strict mode parsing works', function () {
-  let m;
-  let formattedDate;
-  m = moment().locale('ar');
-  formattedDate = m.format('l');
+  const m = moment().locale('ar');
+  const formattedDate = m.format('l');
   assert.equal(
     moment.utc(formattedDate, 'l', 'ar', false).isValid(),
     true,

@@ -14,6 +14,7 @@ test('format', function () {
     ['D MMMM YYYY', '14 ለካቲት 2010'],
   ];
   const b = moment(new Date(2010, 1, 14, 15, 25, 50, 125));
+
   let i;
   for (i = 0; i < a.length; i += 1) {
     assert.equal(b.format(a[i][0]), a[i][1], `${a[i][0]} ---> ${a[i][1]}`);

@@ -13,7 +13,6 @@ test('parse', function () {
     'Janeiro Jan_Fevereiro Fev_Março Mar_Abril Abr_Maio Mai_Junho Jun_Julho Jul_Agosto Ago_Setembro Set_Outubro Out_Novembro Nov_Dezembro Dez'.split(
       '_'
     );
-  let i;
 
   function equalTest(input, mmm, i) {
     assert.equal(
@@ -22,6 +21,8 @@ test('parse', function () {
       `${input} should be month ${i + 1}`
     );
   }
+
+  let i;
 
   for (i = 0; i < 12; i += 1) {
     tests[i] = tests[i].split(' ');

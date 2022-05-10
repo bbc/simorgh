@@ -13,7 +13,7 @@ test('parse', function () {
     'januar jan._februar feb._mart mar._april apr._maj maj_jun jun_jul jul_avgust avg._septembar sep._oktobar okt._novembar nov._decembar dec.'.split(
       '_'
     );
-  let i;
+
   function equalTest(input, mmm, i) {
     assert.equal(
       moment(input, mmm).month(),
@@ -21,6 +21,8 @@ test('parse', function () {
       `${input} should be month ${i + 1}`
     );
   }
+
+  let i;
   for (i = 0; i < 12; i += 1) {
     tests[i] = tests[i].split(' ');
     equalTest(tests[i][0], 'MMM', i);
