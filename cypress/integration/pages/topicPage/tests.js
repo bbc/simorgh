@@ -6,7 +6,7 @@ export default ({ service, pageType }) => {
     let firstItemHeadline;
     let pageCount;
 
-    const ltrServices = ['persian', 'pashto', 'arabic', 'urdu'];
+    const rtlServices = ['persian', 'pashto', 'arabic', 'urdu'];
     beforeEach(() => {
       const currentpath = Cypress.env('currentPath');
       cy.log(currentpath);
@@ -20,7 +20,7 @@ export default ({ service, pageType }) => {
       ).then(({ body }) => {
         pageCount = body.data.pageCount;
       });
-      cy.log(`topic id${topicId}`);
+      cy.log(`topic id ${topicId}`);
     });
 
     describe(`Pagination`, () => {
@@ -36,10 +36,16 @@ export default ({ service, pageType }) => {
       it('should have the correct max pagination number', () => {
         // Gets last pagination element and checks the number is the length of pageCount
         if (pageCount > 1) {
-          cy.log(`pagecount is ${pageCount}`);
-          cy.get('[data-testid="topic-pagination"] li')
-            .last()
-            .should('have.text', pageCount);
+          if (!rtlServices.includes(service)) {
+            cy.log(`pagecount is ${pageCount}`);
+            cy.get('[data-testid="topic-pagination"] li')
+              .last()
+              .should('have.text', pageCount);
+          } else {
+            cy.get('[data-testid="topic-pagination"] li')
+              .first()
+              .should('have.text', pageCount);
+          }
         } else {
           cy.log('No pagination - only 1 page of items');
         }
@@ -47,7 +53,7 @@ export default ({ service, pageType }) => {
 
       it('Page 2 button navigates to 2nd page', () => {
         if (pageCount > 1) {
-          if (!ltrServices.includes(service)) {
+          if (!rtlServices.includes(service)) {
             cy.get('[data-testid="topic-pagination"] > ul > li')
               .first()
               .next()
@@ -61,7 +67,7 @@ export default ({ service, pageType }) => {
       });
       it('Next button navigates to next page (3)', () => {
         if (pageCount > 2) {
-          if (!ltrServices.includes(service)) {
+          if (!rtlServices.includes(service)) {
             cy.get('[id="pagination-next-page"]').click();
             cy.url().should('include', `?page=3`);
           }
@@ -71,7 +77,7 @@ export default ({ service, pageType }) => {
       });
       it('Last page number button navigates to last page', () => {
         if (pageCount > 1) {
-          if (!ltrServices.includes(service)) {
+          if (!rtlServices.includes(service)) {
             cy.get('[data-testid="topic-pagination"] > ul > li').last().click();
             cy.url().should('include', `?page=${pageCount}`);
           }
@@ -81,7 +87,7 @@ export default ({ service, pageType }) => {
       });
       it('Previous page button navigates to previous page (second to last)', () => {
         if (pageCount > 1) {
-          if (!ltrServices.includes(service)) {
+          if (!rtlServices.includes(service)) {
             cy.get('[data-testid="topic-pagination"] > span > a').click();
             cy.url().should('include', `?page=${pageCount - 1}`);
             cy.get('[data-testid="topic-pagination"] > ul > li')
@@ -95,7 +101,7 @@ export default ({ service, pageType }) => {
       });
       it('Page 1 button navigates to page 1', () => {
         if (pageCount > 1) {
-          if (!ltrServices.includes(service)) {
+          if (!rtlServices.includes(service)) {
             cy.get('[data-testid="topic-pagination"] > ul > li')
               .first()
               .click();
@@ -107,7 +113,7 @@ export default ({ service, pageType }) => {
       });
       it('Above 400px does not show Page x of y', () => {
         if (pageCount > 1) {
-          if (!ltrServices.includes(service)) {
+          if (!rtlServices.includes(service)) {
             cy.get('[data-testid="topic-pagination-summary"]').should(
               'not.be.visible',
             );
@@ -118,7 +124,7 @@ export default ({ service, pageType }) => {
       });
       it('Below 400px shows Page x of y', () => {
         if (pageCount > 1) {
-          if (!ltrServices.includes(service)) {
+          if (!rtlServices.includes(service)) {
             cy.viewport(320, 480);
             cy.get('[data-testid="topic-pagination-summary"]').should(
               'be.visible',
