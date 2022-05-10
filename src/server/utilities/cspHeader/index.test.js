@@ -359,6 +359,7 @@ describe('cspHeader', () => {
         'https://cdn.optimizely.com/',
         'https://logx.optimizely.com/',
         'https://europe-west1-bbc-otg-traf-mgr-bq-dev-4105.cloudfunctions.net',
+        'https://cognito-identity.eu-west-1.amazonaws.com/',
         'https://csi.gstatic.com',
         'https://pagead2.googlesyndication.com',
         'https://*.g.doubleclick.net',
@@ -371,7 +372,6 @@ describe('cspHeader', () => {
         'https://fundingchoicesmessages.google.com',
         'https://secure-dcr-cert.imrworldwide.com',
         'https://*.safeframe.googlesyndication.com',
-        'https://cognito-identity.eu-west-1.amazonaws.com/',
         "'self'",
       ],
       defaultSrcExpectation: [
