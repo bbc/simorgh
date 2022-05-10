@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
 import * as brandSVG from '#legacy/psammead-assets/src/svgs/persian';
-import { arabic } from '#legacy/gel-foundations/src/scripts';
+import arabic from '#legacy/gel-foundations/src/scripts/arabic';
 import {
   F_REITH_QALAM_REGULAR,
   F_REITH_QALAM_BOLD,

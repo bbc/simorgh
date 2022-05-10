@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
-import { burmese } from '#legacy/gel-foundations/src/scripts';
+import burmese from '#legacy/gel-foundations/src/scripts/burmese';
 import * as brandSVG from '#legacy/psammead-assets/src/svgs/burmese';
 import {
   F_PADAUK_BOLD,

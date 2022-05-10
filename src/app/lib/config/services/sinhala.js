@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
-import { sinhalese } from '#legacy/gel-foundations/src/scripts';
+import sinhalese from '#legacy/gel-foundations/src/scripts/sinhalese';
 import * as brandSVG from '#legacy/psammead-assets/src/svgs/sinhala';
 import {
   F_NOTO_SERIF_SINHALA_BOLD,

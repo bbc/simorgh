@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
-import { latinDiacritics } from '#legacy/gel-foundations/src/scripts';
+import latinDiacritics from '#legacy/gel-foundations/src/scripts/latin-with-diacritics';
 import * as brandSVG from '#legacy/psammead-assets/src/svgs/vietnamese';
 import '#legacy/moment-timezone-include/tz/Asia/Ho_Chi_Minh';
 import 'moment/locale/vi';

@@ -4,8 +4,8 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
-import { latinDiacritics } from '#legacy/gel-foundations/src/scripts';
 import * as brandSVG from '#legacy/psammead-assets/src/svgs/azeri';
+import latinDiacritics from '#legacy/gel-foundations/src/scripts/latin-with-diacritics';
 import '#legacy/moment-timezone-include/tz/Asia/Baku';
 import '#legacy/psammead-locales/moment/az';
 import withContext from '../../../contexts/utils/withContext';

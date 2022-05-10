@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
-import { latinDiacritics } from '#legacy/gel-foundations/src/scripts';
+import latinDiacritics from '#legacy/gel-foundations/src/scripts/latin-with-diacritics';
 import {
   F_REITH_SANS_BOLD,
   F_REITH_SANS_BOLD_ITALIC,

@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
-import { devanagariAndGurmukhi } from '#legacy/gel-foundations/src/scripts';
+import devanagariAndGurmukhi from '#legacy/gel-foundations/src/scripts/devanagari-and-gurmukhi';
 import * as brandSVG from '#legacy/psammead-assets/src/svgs/nepali';
 import '#legacy/moment-timezone-include/tz/Asia/Kathmandu';
 import '#legacy/psammead-locales/moment/ne';

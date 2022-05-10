@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
-import { tamil } from '#legacy/gel-foundations/src/scripts';
+import tamil from '#legacy/gel-foundations/src/scripts/tamil';
 import * as brandSVG from '#legacy/psammead-assets/src/svgs/tamil';
 import {
   F_NOTO_SANS_TAMIL_BOLD,
