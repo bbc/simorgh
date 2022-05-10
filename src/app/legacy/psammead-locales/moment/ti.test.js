@@ -8,7 +8,7 @@ moment.locale('ti');
 // An example of these tests can be seen at https://github.com/moment/moment/blob/develop/src/test/locale/en-gb.js
 const assert = { equal: (val1, val2) => expect(val1).toEqual(val2) };
 
-test('format', function () {
+test('format', () => {
   const a = [
     ['LL', '14 ለካቲት 2010'],
     ['D MMMM YYYY', '14 ለካቲት 2010'],
@@ -21,7 +21,7 @@ test('format', function () {
   }
 });
 
-test('from', function () {
+test('from', () => {
   const start = moment([2007, 1, 28]);
 
   assert.equal(
@@ -71,6 +71,6 @@ test('from', function () {
   );
 });
 
-test('suffix', function () {
+test('suffix', () => {
   assert.equal(moment(0).from(50000), 'ቅድሚ ደቒቕ', 'suffix');
 });

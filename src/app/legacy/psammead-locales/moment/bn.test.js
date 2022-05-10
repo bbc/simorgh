@@ -5,7 +5,7 @@ moment.locale('bn');
 
 const assert = { equal: (val1, val2) => expect(val1).toEqual(val2) };
 
-test('parse', function () {
+test('parse', () => {
   const tests =
     'জানুয়ারি জানু_ফেব্রুয়ারি ফেব_মার্চ মার্চ_এপ্রিল এপ্র_মে মে_জুন জুন_জুলাই জুল_অগাস্ট আগ_সেপ্টেম্বর সেপ্ট_অক্টোবর অক্টো_নভেম্বর নভে_ডিসেম্বর ডিসে'.split(
       '_'
@@ -33,7 +33,7 @@ test('parse', function () {
   }
 });
 
-test('format', function () {
+test('format', () => {
   const a = [
     [
       'dddd, Do MMMM YYYY, a h:mm:ss সময়',
@@ -69,7 +69,7 @@ test('format', function () {
   }
 });
 
-test('format ordinal', function () {
+test('format ordinal', () => {
   assert.equal(moment([2011, 0, 1]).format('DDDo'), '১', '১');
   assert.equal(moment([2011, 0, 2]).format('DDDo'), '২', '২');
   assert.equal(moment([2011, 0, 3]).format('DDDo'), '৩', '৩');
@@ -106,7 +106,7 @@ test('format ordinal', function () {
   assert.equal(moment([2011, 0, 31]).format('DDDo'), '৩১', '৩১');
 });
 
-test('format month', function () {
+test('format month', () => {
   const expected =
     'জানুয়ারি জানু_ফেব্রুয়ারি ফেব_মার্চ মার্চ_এপ্রিল এপ্র_মে মে_জুন জুন_জুলাই জুল_অগাস্ট আগ_সেপ্টেম্বর সেপ্ট_অক্টোবর অক্টো_নভেম্বর নভে_ডিসেম্বর ডিসে'.split(
       '_'
@@ -121,7 +121,7 @@ test('format month', function () {
   }
 });
 
-test('format week', function () {
+test('format week', () => {
   const expected =
     'রবিবার রবি রবি_সোমবার সোম সোম_মঙ্গলবার মঙ্গল মঙ্গ_বুধবার বুধ বুধ_বৃহস্পতিবার বৃহস্পতি বৃহঃ_শুক্রবার শুক্র শুক্র_শনিবার শনি শনি'.split(
       '_'
@@ -136,7 +136,7 @@ test('format week', function () {
   }
 });
 
-test('from', function () {
+test('from', () => {
   const start = moment([2007, 1, 28]);
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 44 }), true),
@@ -275,12 +275,12 @@ test('from', function () {
   );
 });
 
-test('suffix', function () {
+test('suffix', () => {
   assert.equal(moment(30000).from(0), 'কয়েক সেকেন্ড পরে', 'prefix');
   assert.equal(moment(0).from(30000), 'কয়েক সেকেন্ড আগে', 'suffix');
 });
 
-test('now from now', function () {
+test('now from now', () => {
   assert.equal(
     moment().fromNow(),
     'কয়েক সেকেন্ড আগে',
@@ -288,7 +288,7 @@ test('now from now', function () {
   );
 });
 
-test('fromNow', function () {
+test('fromNow', () => {
   assert.equal(
     moment().add({ s: 30 }).fromNow(),
     'কয়েক সেকেন্ড পরে',
@@ -297,7 +297,7 @@ test('fromNow', function () {
   assert.equal(moment().add({ d: 5 }).fromNow(), '৫ দিন পরে', '৫ দিন পরে');
 });
 
-test('calendar day', function () {
+test('calendar day', () => {
   const a = moment().hours(12).minutes(0).seconds(0);
 
   assert.equal(
@@ -332,7 +332,7 @@ test('calendar day', function () {
   );
 });
 
-test('calendar next week', function () {
+test('calendar next week', () => {
   let i;
   let m;
   for (i = 2; i < 7; i += 1) {
@@ -357,7 +357,7 @@ test('calendar next week', function () {
   }
 });
 
-test('calendar last week', function () {
+test('calendar last week', () => {
   let i;
   let m;
 
@@ -383,7 +383,7 @@ test('calendar last week', function () {
   }
 });
 
-test('calendar all else', function () {
+test('calendar all else', () => {
   let weeksAgo = moment().subtract({ w: 1 });
   let weeksFromNow = moment().add({ w: 1 });
 
@@ -397,7 +397,7 @@ test('calendar all else', function () {
   assert.equal(weeksFromNow.calendar(), weeksFromNow.format('L'), 'in 2 weeks');
 });
 
-test('meridiem', function () {
+test('meridiem', () => {
   assert.equal(moment([2011, 2, 23, 2, 30]).format('a'), 'রাত', 'before dawn');
   assert.equal(moment([2011, 2, 23, 9, 30]).format('a'), 'সকাল', 'morning');
   assert.equal(
@@ -429,7 +429,7 @@ test('meridiem', function () {
   assert.equal(moment([2011, 2, 23, 21, 20]).format('A'), 'রাত', 'night');
 });
 
-test('weeks year starting sunday formatted', function () {
+test('weeks year starting sunday formatted', () => {
   assert.equal(
     moment([2012, 0, 1]).format('w ww wo'),
     '১ ০১ ১',

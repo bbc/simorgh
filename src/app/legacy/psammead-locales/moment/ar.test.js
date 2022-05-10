@@ -27,7 +27,7 @@ const dualMonthNames = [
   'ديسمبر/ كانون الأول',
 ];
 
-test('parse', function () {
+test('parse', () => {
   const tests = dualMonthNames;
 
   function equalTest(input, mmm, i) {
@@ -54,7 +54,7 @@ test('parse', function () {
   }
 });
 
-test('format', function () {
+test('format', () => {
   const a = [
     ['dddd, MMMM Do YYYY, h:mm:ss a', 'الأحد، فبراير/ شباط 14 2010، 3:25:50 م'],
     ['ddd, hA', 'أحد، 3م'],
@@ -88,7 +88,7 @@ test('format', function () {
   }
 });
 
-test('format ordinal', function () {
+test('format ordinal', () => {
   assert.equal(moment([2011, 0, 1]).format('DDDo'), '1', '1');
   assert.equal(moment([2011, 0, 2]).format('DDDo'), '2', '2');
   assert.equal(moment([2011, 0, 3]).format('DDDo'), '3', '3');
@@ -125,7 +125,7 @@ test('format ordinal', function () {
   assert.equal(moment([2011, 0, 31]).format('DDDo'), '31', '31');
 });
 
-test('format month', function () {
+test('format month', () => {
   const expected = dualMonthNames;
   let i;
   for (i = 0; i < expected.length; i += 1) {
@@ -134,7 +134,7 @@ test('format month', function () {
   }
 });
 
-test('format week', function () {
+test('format week', () => {
   const expected =
     'الأحد أحد ح_الإثنين إثنين ن_الثلاثاء ثلاثاء ث_الأربعاء أربعاء ر_الخميس خميس خ_الجمعة جمعة ج_السبت سبت س'.split(
       '_'
@@ -149,7 +149,7 @@ test('format week', function () {
   }
 });
 
-test('from', function () {
+test('from', () => {
   const start = moment([2007, 1, 28]);
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 44 }), true),
@@ -293,12 +293,12 @@ test('from', function () {
   );
 });
 
-test('suffix', function () {
+test('suffix', () => {
   assert.equal(moment(30000).from(0), 'بعد 30 ثانية', 'prefix');
   assert.equal(moment(0).from(30000), '30 ثانية', 'suffix');
 });
 
-test('now from now', function () {
+test('now from now', () => {
   assert.equal(
     moment().fromNow(),
     'ثانية واحدة',
@@ -306,7 +306,7 @@ test('now from now', function () {
   );
 });
 
-test('fromNow', function () {
+test('fromNow', () => {
   assert.equal(
     moment().add({ s: 30 }).fromNow(),
     'بعد 30 ثانية',
@@ -315,7 +315,7 @@ test('fromNow', function () {
   assert.equal(moment().add({ d: 5 }).fromNow(), 'بعد 5 أيام', 'in 5 days');
 });
 
-test('calendar day', function () {
+test('calendar day', () => {
   const a = moment().hours(12).minutes(0).seconds(0);
 
   assert.equal(
@@ -350,7 +350,7 @@ test('calendar day', function () {
   );
 });
 
-test('calendar next week', function () {
+test('calendar next week', () => {
   let i;
   let m;
   for (i = 2; i < 7; i += 1) {
@@ -375,7 +375,7 @@ test('calendar next week', function () {
   }
 });
 
-test('calendar last week', function () {
+test('calendar last week', () => {
   let i;
   let m;
   for (i = 2; i < 7; i += 1) {
@@ -400,7 +400,7 @@ test('calendar last week', function () {
   }
 });
 
-test('calendar all else', function () {
+test('calendar all else', () => {
   let weeksAgo = moment().subtract({ w: 1 });
   let weeksFromNow = moment().add({ w: 1 });
 
@@ -414,7 +414,7 @@ test('calendar all else', function () {
   assert.equal(weeksFromNow.calendar(), weeksFromNow.format('L'), 'in 2 weeks');
 });
 
-test('weeks year starting wednesday custom', function () {
+test('weeks year starting wednesday custom', () => {
   assert.equal(
     moment('2003 1 6', 'gggg w d').format('YYYY-MM-DD'),
     '2002-12-28',
@@ -437,7 +437,7 @@ test('weeks year starting wednesday custom', function () {
   );
 });
 
-test('weeks year starting sunday formatted', function () {
+test('weeks year starting sunday formatted', () => {
   assert.equal(
     moment([2011, 11, 31]).format('w ww wo'),
     '1 01 1',
@@ -465,7 +465,7 @@ test('weeks year starting sunday formatted', function () {
   );
 });
 
-test('no leading zeros in long date formats', function () {
+test('no leading zeros in long date formats', () => {
   let i;
   let j;
   let longDateStr;
@@ -484,7 +484,7 @@ test('no leading zeros in long date formats', function () {
 });
 
 // locale-specific
-test('ar strict mode parsing works', function () {
+test('ar strict mode parsing works', () => {
   const m = moment().locale('ar');
   const formattedDate = m.format('l');
   assert.equal(

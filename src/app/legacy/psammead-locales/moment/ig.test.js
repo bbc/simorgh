@@ -8,7 +8,7 @@ moment.locale('ig');
 // An example of these tests can be seen at https://github.com/moment/moment/blob/develop/src/test/locale/en-gb.js
 const assert = { equal: (val1, val2) => expect(val1).toEqual(val2) };
 
-test('parse', function () {
+test('parse', () => {
   const tests =
     'Jenụwarị Jen_Febụwarị Feb_Maachị Maa_Eprel Epr_Mee Mee_Juun Juu_Julaị Jul_Ọgọọst Ọgọ_Septemba Sep_Ọktọba Ọkt_Nọvemba Nov_Disemba Dis'.split(
       '_'
@@ -36,7 +36,7 @@ test('parse', function () {
   }
 });
 
-test('format', function () {
+test('format', () => {
   const a = [
     [
       'dddd, MMMM Do YYYY, h:mm:ss a',
@@ -72,7 +72,7 @@ test('format', function () {
   }
 });
 
-test('format ordinal', function () {
+test('format ordinal', () => {
   assert.equal(moment([2011, 0, 1]).format('DDDo'), 'Nke 1', '1st');
   assert.equal(moment([2011, 0, 2]).format('DDDo'), 'Nke 2', '2nd');
   assert.equal(moment([2011, 0, 3]).format('DDDo'), 'Nke 3', '3rd');
@@ -109,7 +109,7 @@ test('format ordinal', function () {
   assert.equal(moment([2011, 0, 31]).format('DDDo'), 'Nke 31', '31st');
 });
 
-test('format month', function () {
+test('format month', () => {
   const expected =
     'Jenụwarị Jen_Febụwarị Feb_Maachị Maa_Eprel Epr_Mee Mee_Juun Juu_Julaị Jul_Ọgọọst Ọgọ_Septemba Sep_Ọktọba Ọkt_Nọvemba Nov_Disemba Dis'.split(
       '_'
@@ -124,7 +124,7 @@ test('format month', function () {
   }
 });
 
-test('format week', function () {
+test('format week', () => {
   const expected =
     'Sọnde Sọn Su_Mọnde Mọn Mọ_Tuzde Tuz Tu_Wenesde We We_Tọsde Tọs Tọ_Fraịde Frai Fr_Satọde Sat Sa'.split(
       '_'
@@ -139,7 +139,7 @@ test('format week', function () {
   }
 });
 
-test('from', function () {
+test('from', () => {
   const start = moment([2007, 1, 28]);
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 44 }), true),
@@ -283,7 +283,7 @@ test('from', function () {
   );
 });
 
-test('suffix', function () {
+test('suffix', () => {
   assert.equal(moment(30000).from(0), 'na ntabịanya ole na ole', 'prefix');
   assert.equal(
     moment(0).from(30000),
@@ -292,7 +292,7 @@ test('suffix', function () {
   );
 });
 
-test('now from now', function () {
+test('now from now', () => {
   assert.equal(
     moment().fromNow(),
     'ntabịanya ole na ole gara aga',
@@ -300,7 +300,7 @@ test('now from now', function () {
   );
 });
 
-test('fromNow', function () {
+test('fromNow', () => {
   assert.equal(
     moment().add({ s: 30 }).fromNow(),
     'na ntabịanya ole na ole',
@@ -309,7 +309,7 @@ test('fromNow', function () {
   assert.equal(moment().add({ d: 5 }).fromNow(), 'na Ụbọchị 5', 'in 5 days');
 });
 
-test('calendar day', function () {
+test('calendar day', () => {
   const a = moment().hours(12).minutes(0).seconds(0);
 
   assert.equal(moment(a).calendar(), 'Taa na 12:00', 'today at the same time');
@@ -340,7 +340,7 @@ test('calendar day', function () {
   );
 });
 
-test('calendar next week', function () {
+test('calendar next week', () => {
   let i;
   let m;
   for (i = 2; i < 7; i += 1) {
@@ -365,7 +365,7 @@ test('calendar next week', function () {
   }
 });
 
-test('calendar last week', function () {
+test('calendar last week', () => {
   let i;
   let m;
 
@@ -391,7 +391,7 @@ test('calendar last week', function () {
   }
 });
 
-test('calendar all else', function () {
+test('calendar all else', () => {
   let weeksAgo = moment().subtract({ w: 1 });
   let weeksFromNow = moment().add({ w: 1 });
 
@@ -405,7 +405,7 @@ test('calendar all else', function () {
   assert.equal(weeksFromNow.calendar(), weeksFromNow.format('L'), 'in 2 weeks');
 });
 
-test('weeks year starting sunday formatted', function () {
+test('weeks year starting sunday formatted', () => {
   assert.equal(
     moment([2012, 0, 1]).format('w ww wo'),
     '52 52 Nke 52',

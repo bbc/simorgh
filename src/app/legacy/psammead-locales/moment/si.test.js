@@ -8,7 +8,7 @@ moment.locale('si');
 // An example of these tests can be seen at https://github.com/moment/moment/blob/develop/src/test/locale/en-gb.js
 const assert = { equal: (val1, val2) => expect(val1).toEqual(val2) };
 
-test('parse', function () {
+test('parse', () => {
   const tests =
     'ජනවාරි ජන_පෙබරවාරි පෙබ_මාර්තු මාර්_අප්‍රේල් අප්_මැයි මැයි_ජූනි ජූනි_ජූලි ජූලි_අගෝස්තු අගෝ_සැප්තැම්බර් සැප්_ඔක්තෝබර් ඔක්_නොවැම්බර් නොවැ_දෙසැම්බර් දෙසැ'.split(
       '_'
@@ -36,7 +36,7 @@ test('parse', function () {
   }
 });
 
-test('format', function () {
+test('format', () => {
   const a = [
     [
       'YYYY MMMM Do dddd, a h:mm:ss',
@@ -76,7 +76,7 @@ test('format', function () {
   }
 });
 
-test('format ordinal', function () {
+test('format ordinal', () => {
   assert.equal(moment([2011, 0, 1]).format('DDDo'), '1 වැනි', '1 වැනි');
   assert.equal(moment([2011, 0, 2]).format('DDDo'), '2 වැනි', '2 වැනි');
   assert.equal(moment([2011, 0, 3]).format('DDDo'), '3 වැනි', '3 වැනි');
@@ -113,7 +113,7 @@ test('format ordinal', function () {
   assert.equal(moment([2011, 0, 31]).format('DDDo'), '31 වැනි', '31 වැනි');
 });
 
-test('format month', function () {
+test('format month', () => {
   const expected =
     'ජනවාරි ජන_පෙබරවාරි පෙබ_මාර්තු මාර්_අප්‍රේල් අප්_මැයි මැයි_ජූනි ජූනි_ජූලි ජූලි_අගෝස්තු අගෝ_සැප්තැම්බර් සැප්_ඔක්තෝබර් ඔක්_නොවැම්බර් නොවැ_දෙසැම්බර් දෙසැ'.split(
       '_'
@@ -128,7 +128,7 @@ test('format month', function () {
   }
 });
 
-test('format week', function () {
+test('format week', () => {
   const expected =
     'ඉරිදා ඉරි ඉ_සඳුදා සඳු ස_අඟහරුවාදා අඟ අ_බදාදා බදා බ_බ්‍රහස්පතින්දා බ්‍රහ බ්‍ර_සිකුරාදා සිකු සි_සෙනසුරාදා සෙන සෙ'.split(
       '_'
@@ -143,7 +143,7 @@ test('format week', function () {
   }
 });
 
-test('from', function () {
+test('from', () => {
   const start = moment([2007, 1, 28]);
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 44 }), true),
@@ -287,12 +287,12 @@ test('from', function () {
   );
 });
 
-test('suffix', function () {
+test('suffix', () => {
   assert.equal(moment(30000).from(0), 'තත්පර කිහිපයකින්', 'prefix');
   assert.equal(moment(0).from(30000), 'තත්පර කිහිපය පෙර', 'suffix');
 });
 
-test('now from now', function () {
+test('now from now', () => {
   assert.equal(
     moment().fromNow(),
     'තත්පර කිහිපය පෙර',
@@ -300,7 +300,7 @@ test('now from now', function () {
   );
 });
 
-test('fromNow', function () {
+test('fromNow', () => {
   assert.equal(
     moment().add({ s: 30 }).fromNow(),
     'තත්පර කිහිපයකින්',
@@ -309,7 +309,7 @@ test('fromNow', function () {
   assert.equal(moment().add({ d: 5 }).fromNow(), 'දින 5කින්', 'in 5 days');
 });
 
-test('calendar day', function () {
+test('calendar day', () => {
   const a = moment().hours(12).minutes(0).seconds(0);
 
   assert.equal(
@@ -344,7 +344,7 @@ test('calendar day', function () {
   );
 });
 
-test('calendar next week', function () {
+test('calendar next week', () => {
   let i;
   let m;
   for (i = 2; i < 7; i += 1) {
@@ -369,7 +369,7 @@ test('calendar next week', function () {
   }
 });
 
-test('calendar last week', function () {
+test('calendar last week', () => {
   let i;
   let m;
 
@@ -395,7 +395,7 @@ test('calendar last week', function () {
   }
 });
 
-test('calendar all else', function () {
+test('calendar all else', () => {
   let weeksAgo = moment().subtract({ w: 1 });
   let weeksFromNow = moment().add({ w: 1 });
 

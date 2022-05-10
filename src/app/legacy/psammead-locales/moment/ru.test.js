@@ -8,7 +8,7 @@ moment.locale('ru');
 // An example of these tests can be seen at https://github.com/moment/moment/blob/develop/src/test/locale/en-gb.js
 const assert = { equal: (val1, val2) => expect(val1).toEqual(val2) };
 
-test('parse', function () {
+test('parse', () => {
   const tests =
     'январь янв._февраль февр._март март_апрель апр._май май_июнь июнь_июль июль_август авг._сентябрь сент._октябрь окт._ноябрь нояб._декабрь дек.'.split(
       '_'
@@ -50,14 +50,14 @@ test('parse', function () {
   }
 });
 
-test('parse exceptional case', function () {
+test('parse exceptional case', () => {
   assert.equal(
     moment('11 Мая 1989', ['DD MMMM YYYY']).format('DD-MM-YYYY'),
     '11-05-1989'
   );
 });
 
-test('format', function () {
+test('format', () => {
   const a = [
     [
       'dddd, Do MMMM YYYY, HH:mm:ss',
@@ -94,7 +94,7 @@ test('format', function () {
   }
 });
 
-test('format meridiem', function () {
+test('format meridiem', () => {
   assert.equal(moment([2012, 11, 28, 0, 0]).format('A'), 'ночи', 'night');
   assert.equal(moment([2012, 11, 28, 3, 59]).format('A'), 'ночи', 'night');
   assert.equal(moment([2012, 11, 28, 4, 0]).format('A'), 'утра', 'morning');
@@ -105,7 +105,7 @@ test('format meridiem', function () {
   assert.equal(moment([2012, 11, 28, 23, 59]).format('A'), 'вечера', 'evening');
 });
 
-test('format ordinal', function () {
+test('format ordinal', () => {
   assert.equal(moment([2011, 0, 1]).format('DDDo'), '1-й', '1-й');
   assert.equal(moment([2011, 0, 2]).format('DDDo'), '2-й', '2-й');
   assert.equal(moment([2011, 0, 3]).format('DDDo'), '3-й', '3-й');
@@ -142,7 +142,7 @@ test('format ordinal', function () {
   assert.equal(moment([2011, 0, 31]).format('DDDo'), '31-й', '31-й');
 });
 
-test('format month', function () {
+test('format month', () => {
   const expected =
     'января янв._февраля февр._марта март_апреля апр._мая май_июня июнь_июля июль_августа авг._сентября сент._октября окт._ноября нояб._декабря дек.'.split(
       '_'
@@ -157,7 +157,7 @@ test('format month', function () {
   }
 });
 
-test('format month case', function () {
+test('format month case', () => {
   const months = {
     nominative:
       'января_февраля_марта_апреля_мая_июня_июля_августа_сентября_октября_ноября_декабря'.split(
@@ -183,7 +183,7 @@ test('format month case', function () {
   }
 });
 
-test('format month short case', function () {
+test('format month short case', () => {
   const monthsShort = {
     nominative:
       'янв._февр._март_апр._май_июнь_июль_авг._сент._окт._нояб._дек.'.split(
@@ -209,7 +209,7 @@ test('format month short case', function () {
   }
 });
 
-test('format month case with escaped symbols', function () {
+test('format month case with escaped symbols', () => {
   const months = {
     nominative:
       'января_февраля_марта_апреля_мая_июня_июля_августа_сентября_октября_ноября_декабря'.split(
@@ -245,7 +245,7 @@ test('format month case with escaped symbols', function () {
   }
 });
 
-test('format month short case with escaped symbols', function () {
+test('format month short case with escaped symbols', () => {
   const monthsShort = {
     nominative:
       'янв._февр._март_апр._май_июнь_июль_авг._сент._окт._нояб._дек.'.split(
@@ -281,7 +281,7 @@ test('format month short case with escaped symbols', function () {
   }
 });
 
-test('format week', function () {
+test('format week', () => {
   const expected =
     'воскресенье вс вс_понедельник пн пн_вторник вт вт_среда ср ср_четверг чт чт_пятница пт пт_суббота сб сб'.split(
       '_'
@@ -296,7 +296,7 @@ test('format week', function () {
   }
 });
 
-test('from', function () {
+test('from', () => {
   const start = moment([2007, 1, 28]);
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 44 }), true),
@@ -455,12 +455,12 @@ test('from', function () {
   );
 });
 
-test('suffix', function () {
+test('suffix', () => {
   assert.equal(moment(30000).from(0), 'через несколько секунд', 'prefix');
   assert.equal(moment(0).from(30000), 'несколько секунд назад', 'suffix');
 });
 
-test('fromNow', function () {
+test('fromNow', () => {
   assert.equal(
     moment().add({ s: 30 }).fromNow(),
     'через несколько секунд',
@@ -479,7 +479,7 @@ test('fromNow', function () {
   );
 });
 
-test('calendar day', function () {
+test('calendar day', () => {
   const a = moment().hours(12).minutes(0).seconds(0);
 
   assert.equal(
@@ -519,7 +519,7 @@ test('calendar day', function () {
   );
 });
 
-test('calendar next week', function () {
+test('calendar next week', () => {
   let i;
   let m;
   let now;
@@ -591,7 +591,7 @@ test('calendar next week', function () {
   }
 });
 
-test('calendar last week', function () {
+test('calendar last week', () => {
   let i;
   let m;
   let now;
@@ -663,7 +663,7 @@ test('calendar last week', function () {
   }
 });
 
-test('calendar all else', function () {
+test('calendar all else', () => {
   let weeksAgo = moment().subtract({ w: 1 });
   let weeksFromNow = moment().add({ w: 1 });
 
@@ -677,7 +677,7 @@ test('calendar all else', function () {
   assert.equal(weeksFromNow.calendar(), weeksFromNow.format('L'), 'in 2 weeks');
 });
 
-test('weeks year starting monday formatted', function () {
+test('weeks year starting monday formatted', () => {
   assert.equal(
     moment([2011, 11, 26]).format('w ww wo'),
     '52 52 52-я',

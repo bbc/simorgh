@@ -8,7 +8,7 @@ moment.locale('th');
 // An example of these tests can be seen at https://github.com/moment/moment/blob/develop/src/test/locale/en-gb.js
 const assert = { equal: (val1, val2) => expect(val1).toEqual(val2) };
 
-test('parse', function () {
+test('parse', () => {
   const tests =
     'มกราคม ม.ค._กุมภาพันธ์ ก.พ._มีนาคม มี.ค._เมษายน เม.ย._พฤษภาคม พ.ค._มิถุนายน มิ.ย._กรกฎาคม ก.ค._สิงหาคม ส.ค._กันยายน ก.ย._ตุลาคม ต.ค._พฤศจิกายน พ.ย._ธันวาคม ธ.ค.'.split(
       '_'
@@ -36,7 +36,7 @@ test('parse', function () {
   }
 });
 
-test('format', function () {
+test('format', () => {
   const a = [
     [
       'dddd, Do MMMM YYYY, h:mm:ss a',
@@ -72,7 +72,7 @@ test('format', function () {
   }
 });
 
-test('format month', function () {
+test('format month', () => {
   const expected =
     'มกราคม ม.ค._กุมภาพันธ์ ก.พ._มีนาคม มี.ค._เมษายน เม.ย._พฤษภาคม พ.ค._มิถุนายน มิ.ย._กรกฎาคม ก.ค._สิงหาคม ส.ค._กันยายน ก.ย._ตุลาคม ต.ค._พฤศจิกายน พ.ย._ธันวาคม ธ.ค.'.split(
       '_'
@@ -87,7 +87,7 @@ test('format month', function () {
   }
 });
 
-test('format week', function () {
+test('format week', () => {
   const expected =
     'อาทิตย์ อาทิตย์ อา._จันทร์ จันทร์ จ._อังคาร อังคาร อ._พุธ พุธ พ._พฤหัสบดี พฤหัส พฤ._ศุกร์ ศุกร์ ศ._เสาร์ เสาร์ ส.'.split(
       '_'
@@ -102,7 +102,7 @@ test('format week', function () {
   }
 });
 
-test('from', function () {
+test('from', () => {
   const start = moment([2007, 1, 28]);
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 44 }), true),
@@ -246,12 +246,12 @@ test('from', function () {
   );
 });
 
-test('suffix', function () {
+test('suffix', () => {
   assert.equal(moment(30000).from(0), 'อีก ไม่กี่วินาที', 'prefix');
   assert.equal(moment(0).from(30000), 'เมื่อ ไม่กี่วินาที', 'suffix');
 });
 
-test('now from now', function () {
+test('now from now', () => {
   assert.equal(
     moment().fromNow(),
     'เมื่อ ไม่กี่วินาที',
@@ -259,7 +259,7 @@ test('now from now', function () {
   );
 });
 
-test('fromNow', function () {
+test('fromNow', () => {
   assert.equal(
     moment().add({ s: 30 }).fromNow(),
     'อีก ไม่กี่วินาที',
@@ -268,7 +268,7 @@ test('fromNow', function () {
   assert.equal(moment().add({ d: 5 }).fromNow(), 'อีก 5 วัน', 'in 5 days');
 });
 
-test('calendar day', function () {
+test('calendar day', () => {
   const a = moment().hours(12).minutes(0).seconds(0);
 
   assert.equal(
@@ -303,7 +303,7 @@ test('calendar day', function () {
   );
 });
 
-test('calendar next week', function () {
+test('calendar next week', () => {
   let i;
   let m;
   for (i = 2; i < 7; i += 1) {
@@ -328,7 +328,7 @@ test('calendar next week', function () {
   }
 });
 
-test('calendar last week', function () {
+test('calendar last week', () => {
   let i;
   let m;
   for (i = 2; i < 7; i += 1) {
@@ -353,7 +353,7 @@ test('calendar last week', function () {
   }
 });
 
-test('calendar all else', function () {
+test('calendar all else', () => {
   let weeksAgo = moment().subtract({ w: 1 });
   let weeksFromNow = moment().add({ w: 1 });
 
@@ -367,7 +367,7 @@ test('calendar all else', function () {
   assert.equal(weeksFromNow.calendar(), weeksFromNow.format('L'), 'in 2 weeks');
 });
 
-test('weeks year starting sunday format', function () {
+test('weeks year starting sunday format', () => {
   assert.equal(
     moment([2012, 0, 1]).format('w ww wo'),
     '1 01 1',
