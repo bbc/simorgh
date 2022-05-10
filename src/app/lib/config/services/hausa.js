@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
 import { cyrillicAndLatin } from '#legacy/gel-foundations/src/scripts';
-import { hausa as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import * as brandSVG from '#legacy/psammead-assets/src/svgs/hausa';
 import '#legacy/moment-timezone-include/tz/GMT';
 import '#legacy/psammead-locales/moment/ha';
 import withContext from '../../../contexts/utils/withContext';

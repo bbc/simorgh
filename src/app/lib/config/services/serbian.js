@@ -8,7 +8,7 @@ import {
   latinDiacritics,
   cyrillicAndLatin,
 } from '#legacy/gel-foundations/src/scripts';
-import { serbian as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import * as brandSVG from '#legacy/psammead-assets/src/svgs/serbian';
 import '#legacy/moment-timezone-include/tz/GMT';
 import '#legacy/psammead-locales/moment/sr-cyrl';
 import '#legacy/psammead-locales/moment/sr';

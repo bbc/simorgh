@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
 import { devanagariAndGurmukhi } from '#legacy/gel-foundations/src/scripts';
-import { hindi as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import * as brandSVG from '#legacy/psammead-assets/src/svgs/hindi';
 import '#legacy/moment-timezone-include/tz/Asia/Kolkata';
 import '#legacy/psammead-locales/moment/hi';
 import withContext from '../../../contexts/utils/withContext';

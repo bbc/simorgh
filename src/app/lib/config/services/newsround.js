@@ -3,7 +3,7 @@ import {
   C_WHITE,
   C_NEWSROUND_PURPLE_30,
 } from '#legacy/psammead-styles/src/colours';
-import { newsround as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import * as brandSVG from '#legacy/psammead-assets/src/svgs/newsround';
 import { cyrillicAndLatin } from '#legacy/gel-foundations/src/scripts';
 import {
   F_REITH_SANS_BOLD,

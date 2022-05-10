@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
-import { pidgin as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import * as brandSVG from '#legacy/psammead-assets/src/svgs/pidgin';
 import { cyrillicAndLatin } from '#legacy/gel-foundations/src/scripts';
 import '#legacy/psammead-locales/moment/pcm';
 import '#legacy/moment-timezone-include/tz/Africa/Lagos';

@@ -14,7 +14,7 @@ import {
   F_REITH_SERIF_MEDIUM_ITALIC,
   F_REITH_SERIF_LIGHT,
 } from '#legacy/psammead-styles/src/fonts';
-import { turkce as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import * as brandSVG from '#legacy/psammead-assets/src/svgs/turkce';
 import '#legacy/moment-timezone-include/tz/Asia/Istanbul';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/tr';
