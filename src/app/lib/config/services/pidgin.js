@@ -38,7 +38,7 @@ export const service = {
     audioCaptionOffscreenText: 'Wetin we call dis Audio, ',
     defaultCaptionOffscreenText: 'Wetin we call am, ',
     imageCopyrightOffscreenText: 'Wia dis foto come from, ',
-    brandSVG,
+    brandSVG: brandSVG.default,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',

@@ -38,7 +38,7 @@ export const service = {
     audioCaptionOffscreenText: 'Aha nkeananụānụ, ',
     defaultCaptionOffscreenText: 'Ihe a na-akpọ ya, ',
     imageCopyrightOffscreenText: 'Ebe foto si, ',
-    brandSVG,
+    brandSVG: brandSVG.default,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',

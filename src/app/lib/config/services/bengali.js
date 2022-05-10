@@ -258,7 +258,7 @@ export const service = {
       topStoriesTitle: 'প্রধান খবর',
       featuresAnalysisTitle: 'চিঠিপত্র ও মতামত',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'সর্বাধিক পঠিত',
       lastUpdated: 'সর্বশেষ আপডেট হয়েছে:',

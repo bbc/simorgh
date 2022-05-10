@@ -245,7 +245,7 @@ export const service = {
       topStoriesTitle: 'ਤਾਜ਼ਾ ਘਟਨਾਕ੍ਰਮ',
       featuresAnalysisTitle: 'ਦ੍ਰਿਸ਼ਟੀਕੋਣ',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'ਸਭ ਤੋਂ ਵੱਧ ਪੜ੍ਹਿਆ ਗਿਆ',
       lastUpdated: 'ਆਖ਼ਰੀ ਅਪਡੇਟ:',

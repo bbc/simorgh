@@ -272,7 +272,7 @@ export const service = {
       topStoriesTitle: 'Babban Labari',
       featuresAnalysisTitle: 'Minti Daya Da BBC',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'Wanda aka fi karantawa',
       lastUpdated: 'Na baya-bayan nan:',

@@ -284,7 +284,7 @@ export const service = {
       topStoriesTitle: 'Principais notícias',
       featuresAnalysisTitle: 'Leia mais',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'Mais lidas',
       lastUpdated: 'Última atualização:',

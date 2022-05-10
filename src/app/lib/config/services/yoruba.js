@@ -249,7 +249,7 @@ export const service = {
       topStoriesTitle: 'Ìròyìn tó ṣe kókó',
       featuresAnalysisTitle: 'Ìwádìí kíkún lóríi kókó ìròyìn ',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'Èyítí A Ń Kà Jùlọ',
       lastUpdated: 'Tí a mú dójú ìwọ̀n gbẹ̀yìn ní:',

@@ -278,7 +278,7 @@ export const service = {
       topStoriesTitle: 'الأخبار الرئيسية',
       featuresAnalysisTitle: 'اخترنا لكم',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'الأكثر قراءة',
       lastUpdated: 'آخر تحديث',

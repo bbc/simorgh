@@ -278,7 +278,7 @@ export const service = {
     },
     showAdPlaceholder: true,
     showRelatedTopics: true,
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'Самое популярное',
       lastUpdated: 'Последнее обновление:',

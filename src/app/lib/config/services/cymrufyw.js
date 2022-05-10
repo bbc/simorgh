@@ -221,7 +221,7 @@ export const service = {
         duration: 'Duration',
       },
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'Mwyaf poblogaidd',
       lastUpdated: 'Diweddariad diwethaf:',

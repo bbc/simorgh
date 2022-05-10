@@ -290,7 +290,7 @@ export const service = {
       topStoriesTitle: 'مهمترین خبرها',
       featuresAnalysisTitle: 'گزارش و تحلیل',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'پربیننده‌ترین‌ها',
       lastUpdated: 'به روز شده در',

@@ -246,7 +246,7 @@ export const service = {
       topStoriesTitle: '주요뉴스',
       featuresAnalysisTitle: '이 시간 이슈',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'TOP 뉴스',
       lastUpdated: '마지막 업데이트일',

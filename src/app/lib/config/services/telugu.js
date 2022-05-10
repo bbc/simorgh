@@ -254,7 +254,7 @@ export const service = {
       topStoriesTitle: 'ముఖ్యమైన కథనాలు',
       featuresAnalysisTitle: 'ఫీచర్లు',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'ఎక్కువమంది చదివినవి',
       lastUpdated: 'చివరిగా అప్‌డేట్ అయిన తేదీ:',

@@ -256,7 +256,7 @@ export const service = {
       topStoriesTitle: 'Habari kuu',
       featuresAnalysisTitle: 'Gumzo mitandaoni',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'Iliyosomwa zaidi',
       lastUpdated: 'Imeboreshwa mwisho:',

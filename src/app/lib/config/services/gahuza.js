@@ -265,7 +265,7 @@ export const service = {
       topStoriesTitle: "Inkuru iri kw'isonga",
       featuresAnalysisTitle: 'Ivyo BBC Gahuza ibahitiramwo',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'Ibisomwa cane',
       lastUpdated: 'Ibiheruka kuvugururwa:',

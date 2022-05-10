@@ -269,7 +269,7 @@ export const service = {
       topStoriesTitle: 'Berita Utama',
       featuresAnalysisTitle: 'Majalah',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'Paling banyak dibaca',
       lastUpdated: 'Terakhir diperbarui:',

@@ -244,7 +244,7 @@ export const service = {
       topStoriesTitle: 'Tin chính',
       featuresAnalysisTitle: 'Góc nhìn và chuyên mục',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'Đọc nhiều nhất',
       lastUpdated: 'Cập nhật gần nhất:',

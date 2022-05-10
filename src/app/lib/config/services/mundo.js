@@ -263,7 +263,7 @@ export const service = {
       topStoriesTitle: 'Principales noticias',
       featuresAnalysisTitle: 'No te lo pierdas',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'Más leídas',
       lastUpdated: 'Última actualización:',

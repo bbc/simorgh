@@ -40,7 +40,7 @@ const baseServiceConfig = {
   recommendations: {
     hasStoryRecommendations: false,
   },
-  brandSVG,
+  brandSVG: brandSVG.default,
   podcastPromo: {
     title: 'Podcast',
     brandTitle: 'BBC 時事一周 Newsweek (Cantonese)',

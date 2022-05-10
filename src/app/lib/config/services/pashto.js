@@ -265,7 +265,7 @@ export const service = {
       topStoriesTitle: 'مهم خبرونه',
       featuresAnalysisTitle: 'ځانګړي مطالب',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'ډېر لوستل شوي',
       lastUpdated: 'د خپرېدو نیټه',

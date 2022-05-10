@@ -266,7 +266,7 @@ export const service = {
       topStoriesTitle: 'முக்கிய செய்திகள்',
       featuresAnalysisTitle: 'சிறப்புச் செய்திகள்',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'அதிகம் படிக்கப்பட்டது',
       lastUpdated: 'கடைசியாக புதுப்பிக்கப்பட்டது:',

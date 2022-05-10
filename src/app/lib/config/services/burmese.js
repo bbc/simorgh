@@ -280,7 +280,7 @@ export const service = {
       topStoriesTitle: 'ထိပ်တန်း သတင်းများ',
       featuresAnalysisTitle: 'ဆောင်းပါး',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'အဖတ်အများဆုံး',
       lastUpdated: 'နောက်ဆုံးအသစ်တင်ချိန်:',

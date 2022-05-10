@@ -246,7 +246,7 @@ export const service = {
       topStoriesTitle: 'ข่าวเด่น',
       featuresAnalysisTitle: 'เรื่องน่าสนใจ',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'ได้รับความนิยมสูงสุด',
       lastUpdated: 'อัพเดทล่าสุดเมื่อเวลา',

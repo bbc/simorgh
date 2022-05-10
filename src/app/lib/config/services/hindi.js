@@ -282,7 +282,7 @@ export const service = {
       topStoriesTitle: 'टॉप स्टोरी',
       featuresAnalysisTitle: 'ज़रूर पढ़ें',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'सबसे अधिक पढ़ी गईं',
       lastUpdated: 'अंतिम अपडेट:',

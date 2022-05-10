@@ -271,7 +271,7 @@ export const service = {
       topStoriesTitle: 'اہم خبریں',
       featuresAnalysisTitle: 'فیچر اور تجزیے',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'سب سے زیادہ پڑھی جانے والی',
       lastUpdated: 'آخری اپ ڈیٹ',

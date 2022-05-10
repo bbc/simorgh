@@ -243,7 +243,7 @@ export const service = {
       topStoriesTitle: 'トップ記事',
       featuresAnalysisTitle: '読み物・解説',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: '読まれた記事ランキング',
       lastUpdated: '最終更新:',

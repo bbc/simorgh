@@ -257,7 +257,7 @@ export const service = {
       topStoriesTitle: 'ප්‍රධාන පුවත',
       featuresAnalysisTitle: 'දැක්ම',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'වැඩිපුරම කියැවූ',
       lastUpdated: 'අවසන් යාවත්කාලීනවීම:',

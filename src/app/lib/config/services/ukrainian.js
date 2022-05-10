@@ -270,7 +270,7 @@ const baseServiceConfig = {
     relatedTopics: 'Також на цю тему',
     ...secondaryColumnTranslations,
   },
-  brandSVG,
+  brandSVG: brandSVG.default,
   mostRead: {
     header: 'Найпопулярніше',
     lastUpdated: 'Останнє оновлення:',

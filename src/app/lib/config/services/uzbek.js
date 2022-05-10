@@ -257,7 +257,7 @@ export const service = {
       topStoriesTitle: 'Бош мақола',
       featuresAnalysisTitle: 'Муҳаррир танлови',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'Энг кўп ўқилган',
       lastUpdated: 'Сўнгги янгиланиш:',

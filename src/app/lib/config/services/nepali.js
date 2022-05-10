@@ -254,7 +254,7 @@ export const service = {
       topStoriesTitle: 'मुख्य समाचार',
       featuresAnalysisTitle: 'अन‌ि यो पनि',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'धेरै पढिएको',
       lastUpdated: 'मा अन्तिम चोटि अद्यावधिक',

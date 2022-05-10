@@ -262,7 +262,7 @@ export const service = {
       topStoriesTitle: 'Wararka ugu waaweyn',
       featuresAnalysisTitle: 'Xul',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'Ugu akhris badan',
       lastUpdated: 'Markii ugu dambeysay ee la cusbooneysiiyay:',

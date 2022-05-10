@@ -225,7 +225,7 @@ export const service = {
       topStoriesTitle: 'Prìomh Sgeulachdan',
       featuresAnalysisTitle: 'Sgeulachdan Aithriseach',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'As motha leughte',
       lastUpdated: 'Air ùrachadh mu dheireadh:',

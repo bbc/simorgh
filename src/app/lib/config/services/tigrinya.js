@@ -241,7 +241,7 @@ export const service = {
       topStoriesTitle: 'ዜናታት',
       featuresAnalysisTitle: 'ኣዘራረብቲ ዛዕባታት',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'ብብዝሒ ዝተነበ',
       lastUpdated: 'ንመወዳእታ እዋን ዝተመሓየሸሉ:',

@@ -246,7 +246,7 @@ export const service = {
       topStoriesTitle: 'Digər xəbərlər',
       featuresAnalysisTitle: 'Bunları da oxuyun',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'Ən çox oxunan',
       lastUpdated: 'Ən son yeniləmə:',

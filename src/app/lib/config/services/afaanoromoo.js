@@ -252,7 +252,7 @@ export const service = {
       topStoriesTitle: 'Isin hin darbiin',
       featuresAnalysisTitle: `Maaltu haasa'ama?`,
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: "Baay'ee kan dubbifame",
       lastUpdated: 'Yeroo dhuma kan haaromfame:',

@@ -251,7 +251,7 @@ export const service = {
       topStoriesTitle: 'નવાજૂની',
       featuresAnalysisTitle: 'બીબીસી વિશેષ',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'સૌથી વધારે વંચાયેલા સમાચાર',
       lastUpdated: 'લાસ્ટ અપડેટ:',

@@ -244,7 +244,7 @@ export const service = {
       topStoriesTitle: 'እንዳያመልጥዎ',
       featuresAnalysisTitle: 'ከየፈርጁ',
     },
-    brandSVG,
+    brandSVG: brandSVG.default,
     mostRead: {
       header: 'ብዙ የተነበቡ',
       lastUpdated: 'በመጨረሻ ማሻሻያ የተደረገበት',

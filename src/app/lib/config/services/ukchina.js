@@ -34,7 +34,7 @@ const baseServiceConfig = {
   script: noAscendersOrDescenders,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
-  brandSVG,
+  brandSVG: brandSVG.default,
   theming: {
     brandBackgroundColour: `${C_POSTBOX}`,
     brandLogoColour: `${C_WHITE}`,
