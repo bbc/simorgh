@@ -129,6 +129,7 @@ const directives = {
     ampLive: [
       ...bbcDomains,
       'https://www.youtube.com', // Social Embeds, <amp-youtube />
+      'https://www.youtube-nocookie.com', // Social Embeds, youtube no-cookie
       'https://www.instagram.com', // Social Embeds, <amp-instagram />
       'https://*.ampproject.net', // Social Embeds
       'https://www.riddle.com', // STY Includes
@@ -140,6 +141,7 @@ const directives = {
       'https://chartbeat.com',
       'https://*.chartbeat.com',
       'https://www.youtube.com', // Social Embeds
+      'https://www.youtube-nocookie.com', // Social Embeds, youtube no-cookie
       'https://platform.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
       'https://syndication.twitter.com', // Social Embeds
@@ -153,6 +155,7 @@ const directives = {
     ampNonLive: [
       ...bbcDomains,
       'https://www.youtube.com', // Social Embeds, <amp-youtube />
+      'https://www.youtube-nocookie.com', // Social Embeds, youtube no-cookie
       'https://www.instagram.com', // Social Embeds, <amp-instagram />
       'https://*.ampproject.net', // Social Embeds
       'https://www.riddle.com', // STY Includes
@@ -164,6 +167,7 @@ const directives = {
       'https://chartbeat.com',
       'https://*.chartbeat.com',
       'https://www.youtube.com', // Social Embeds
+      'https://www.youtube-nocookie.com', // Social Embeds, youtube no-cookie
       'https://platform.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
       'https://syndication.twitter.com', // Social Embeds

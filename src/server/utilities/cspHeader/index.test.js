@@ -81,6 +81,7 @@ describe('cspHeader', () => {
       frameSrcExpectation: [
         ...bbcDomains,
         'https://www.youtube.com',
+        'https://www.youtube-nocookie.com',
         'https://www.instagram.com',
         'https://*.ampproject.net',
         'https://www.riddle.com',
@@ -173,6 +174,7 @@ describe('cspHeader', () => {
         'https://chartbeat.com',
         'https://*.chartbeat.com',
         'https://www.youtube.com',
+        'https://www.youtube-nocookie.com',
         'https://platform.twitter.com',
         'https://www.instagram.com',
         'https://syndication.twitter.com',
@@ -294,6 +296,7 @@ describe('cspHeader', () => {
       frameSrcExpectation: [
         ...bbcDomains,
         'https://www.youtube.com',
+        'https://www.youtube-nocookie.com',
         'https://www.instagram.com',
         'https://*.ampproject.net',
         'https://www.riddle.com',
@@ -390,6 +393,7 @@ describe('cspHeader', () => {
         'https://chartbeat.com',
         'https://*.chartbeat.com',
         'https://www.youtube.com',
+        'https://www.youtube-nocookie.com',
         'https://platform.twitter.com',
         'https://www.instagram.com',
         'https://syndication.twitter.com',
