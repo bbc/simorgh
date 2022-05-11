@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import cyrillicAndLatin from '#legacy/gel-foundations/src/scripts/latin-and-cyrillic';
-import * as brandSVG from '#legacy/psammead-assets/src/svgs/uzbek';
-import '#legacy/moment-timezone-include/tz/GMT';
-import '#legacy/psammead-locales/moment/uz';
+} from '../../../legacy/psammead-styles/src/colours';
+import cyrillicAndLatin from '../../../legacy/gel-foundations/src/scripts/latin-and-cyrillic';
+import * as brandSVG from '../../../legacy/psammead-assets/src/svgs/uzbek';
+import '../../../legacy/moment-timezone-include/tz/GMT';
+import '../../../legacy/psammead-locales/moment/uz';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

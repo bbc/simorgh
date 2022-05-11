@@ -3,15 +3,15 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import arabic from '#legacy/gel-foundations/src/scripts/arabic';
-import * as brandSVG from '#legacy/psammead-assets/src/svgs/arabic';
+} from '../../../legacy/psammead-styles/src/colours';
+import arabic from '../../../legacy/gel-foundations/src/scripts/arabic';
+import * as brandSVG from '../../../legacy/psammead-assets/src/svgs/arabic';
 import {
   F_REITH_QALAM_REGULAR,
   F_REITH_QALAM_BOLD,
-} from '#legacy/psammead-styles/src/fonts';
-import '#legacy/psammead-locales/moment/ar';
-import '#legacy/moment-timezone-include/tz/GMT';
+} from '../../../legacy/psammead-styles/src/fonts';
+import '../../../legacy/psammead-locales/moment/ar';
+import '../../../legacy/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

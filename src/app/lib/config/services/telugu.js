@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import devanagariAndGurmukhi from '#legacy/gel-foundations/src/scripts/devanagari-and-gurmukhi';
-import * as brandSVG from '#legacy/psammead-assets/src/svgs/telugu';
-import { F_MALLANNA_REGULAR } from '#legacy/psammead-styles/src/fonts';
-import '#legacy/moment-timezone-include/tz/Asia/Kolkata';
+} from '../../../legacy/psammead-styles/src/colours';
+import devanagariAndGurmukhi from '../../../legacy/gel-foundations/src/scripts/devanagari-and-gurmukhi';
+import * as brandSVG from '../../../legacy/psammead-assets/src/svgs/telugu';
+import { F_MALLANNA_REGULAR } from '../../../legacy/psammead-styles/src/fonts';
+import '../../../legacy/moment-timezone-include/tz/Asia/Kolkata';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/te';
 

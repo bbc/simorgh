@@ -3,8 +3,8 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import latinDiacritics from '#legacy/gel-foundations/src/scripts/latin-with-diacritics';
+} from '../../../legacy/psammead-styles/src/colours';
+import latinDiacritics from '../../../legacy/gel-foundations/src/scripts/latin-with-diacritics';
 import {
   F_REITH_SANS_BOLD,
   F_REITH_SANS_BOLD_ITALIC,
@@ -13,10 +13,10 @@ import {
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_MEDIUM_ITALIC,
   F_REITH_SERIF_LIGHT,
-} from '#legacy/psammead-styles/src/fonts';
-import * as brandSVG from '#legacy/psammead-assets/src/svgs/mundo';
-import '#legacy/moment-timezone-include/tz/GMT';
-import '#legacy/psammead-locales/moment/es';
+} from '../../../legacy/psammead-styles/src/fonts';
+import * as brandSVG from '../../../legacy/psammead-assets/src/svgs/mundo';
+import '../../../legacy/moment-timezone-include/tz/GMT';
+import '../../../legacy/psammead-locales/moment/es';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

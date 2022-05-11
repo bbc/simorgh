@@ -3,15 +3,15 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import noAscendersOrDescenders from '#legacy/gel-foundations/src/scripts/no-ascenders-or-descenders';
-import * as brandSVG from '#legacy/psammead-assets/src/svgs/tigrinya';
+} from '../../../legacy/psammead-styles/src/colours';
+import noAscendersOrDescenders from '../../../legacy/gel-foundations/src/scripts/no-ascenders-or-descenders';
+import * as brandSVG from '../../../legacy/psammead-assets/src/svgs/tigrinya';
 import {
   F_NOTO_SANS_ETHIOPIC_BOLD,
   F_NOTO_SANS_ETHIOPIC_REGULAR,
-} from '#legacy/psammead-styles/src/fonts';
-import '#legacy/moment-timezone-include/tz/Africa/Addis_Ababa';
-import '#legacy/psammead-locales/moment/ti';
+} from '../../../legacy/psammead-styles/src/fonts';
+import '../../../legacy/moment-timezone-include/tz/Africa/Addis_Ababa';
+import '../../../legacy/psammead-locales/moment/ti';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
