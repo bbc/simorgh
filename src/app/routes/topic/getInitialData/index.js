@@ -44,6 +44,7 @@ export default async ({ getAgent, service, path: pathname, variant, page }) => {
         promos: data.summaries,
         activePage: data.activePage || 1,
         pageCount: data.pageCount,
+        scriptSwitchId: data.variantTopicId,
         metadata: {
           type: 'Topic',
         },

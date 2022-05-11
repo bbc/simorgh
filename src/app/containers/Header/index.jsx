@@ -3,6 +3,7 @@ import SkipLink from '@bbc/psammead-brand/skip-link';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
+import { string } from 'prop-types';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import ScriptLink from './ScriptLink';
@@ -27,7 +28,7 @@ const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
   );
 };
 
-const HeaderContainer = () => {
+const HeaderContainer = ({ scriptSwitchId }) => {
   const { pageType, isAmp } = useContext(RequestContext);
   const { service, script, translations, dir, scriptLink, lang, serviceLang } =
     useContext(ServiceContext);
@@ -64,18 +65,30 @@ const HeaderContainer = () => {
         <Header
           linkId="brandLink"
           skipLink={skipLink}
-          scriptLink={scriptLink && <ScriptLink />}
+          scriptLink={
+            scriptLink && <ScriptLink scriptSwitchId={scriptSwitchId} />
+          }
         />
       ) : (
         <Header
           brandRef={brandRef}
           skipLink={skipLink}
-          scriptLink={scriptLink && <ScriptLink />}
+          scriptLink={
+            scriptLink && <ScriptLink scriptSwitchId={scriptSwitchId} />
+          }
         />
       )}
       {showNav && <NavigationContainer />}
     </header>
   );
+};
+
+HeaderContainer.propTypes = {
+  scriptSwitchId: string,
+};
+
+HeaderContainer.defaultProps = {
+  scriptSwitchId: '',
 };
 
 export default HeaderContainer;
