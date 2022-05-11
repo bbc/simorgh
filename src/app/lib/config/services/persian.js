@@ -12,7 +12,7 @@ import {
 } from '../../../legacy/psammead-styles/src/fonts';
 import 'moment/locale/fa';
 import '../../../legacy/moment-timezone-include/tz/GMT';
-import jalaali from '../../../legacy/psammead-calendars/src/calendars/jalaali';
+import { jalaali } from '../../../legacy/psammead-calendars/src';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
