@@ -856,7 +856,7 @@
             "thumbnail_url": "https://i.ytimg.com/vi/S5Lkm_l-47M/hqdefault.jpg",
             "thumbnail_width": 480,
             "thumbnail_height": 360,
-            "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/S5Lkm_l-47M?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+            "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube-nocookie.com/embed/S5Lkm_l-47M?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
             "width": 200,
             "height": 113
           },
