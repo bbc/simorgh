@@ -272,16 +272,20 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     }
   `;
 
+  const StyledSectionLabel = styled(SectionLabel)`
+    margin-top: 0;
+  `;
+
   const MostReadWrapper = ({ children }) => (
     <section role="region" aria-labelledby="Most-Read" data-e2e="most-read">
-      <SectionLabel
+      <StyledSectionLabel
         script={script}
         labelId="Most-Read"
         service={service}
         dir={dir}
       >
         {header}
-      </SectionLabel>
+      </StyledSectionLabel>
       {children}
     </section>
   );
