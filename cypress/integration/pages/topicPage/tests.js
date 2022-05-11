@@ -6,7 +6,6 @@ export default ({ service, pageType }) => {
     let firstItemHeadline;
     let pageCount;
 
-    const rtlServices = ['persian', 'pashto', 'arabic', 'urdu'];
     beforeEach(() => {
       const currentpath = Cypress.env('currentPath');
       cy.log(currentpath);
@@ -36,16 +35,10 @@ export default ({ service, pageType }) => {
       it('should have the correct max pagination number', () => {
         // Gets last pagination element and checks the number is the length of pageCount
         if (pageCount > 1) {
-          if (!rtlServices.includes(service)) {
-            cy.log(`pagecount is ${pageCount}`);
-            cy.get('[data-testid="topic-pagination"] li')
-              .last()
-              .should('have.text', pageCount);
-          } else {
-            cy.get('[data-testid="topic-pagination"] li')
-              .first()
-              .should('have.text', pageCount);
-          }
+          cy.log(`pagecount is ${pageCount}`);
+          cy.get('[data-testid="topic-pagination"] li')
+            .last()
+            .should('have.text', pageCount);
         } else {
           cy.log('No pagination - only 1 page of items');
         }
@@ -53,83 +46,65 @@ export default ({ service, pageType }) => {
 
       it('Page 2 button navigates to 2nd page', () => {
         if (pageCount > 1) {
-          if (!rtlServices.includes(service)) {
-            cy.get('[data-testid="topic-pagination"] > ul > li')
-              .first()
-              .next()
-              .click();
+          cy.get('[data-testid="topic-pagination"] > ul > li')
+            .first()
+            .next()
+            .click();
 
-            cy.url().should('include', '?page=2');
-          }
+          cy.url().should('include', '?page=2');
         } else {
           cy.log('No pagination as there is only one page');
         }
       });
       it('Next button navigates to next page (3)', () => {
         if (pageCount > 2) {
-          if (!rtlServices.includes(service)) {
-            cy.get('[id="pagination-next-page"]').click();
-            cy.url().should('include', `?page=3`);
-          }
+          cy.get('[id="pagination-next-page"]').click();
+          cy.url().should('include', `?page=3`);
         } else {
           cy.log('No next button when on page 2 of 2');
         }
       });
       it('Last page number button navigates to last page', () => {
         if (pageCount > 1) {
-          if (!rtlServices.includes(service)) {
-            cy.get('[data-testid="topic-pagination"] > ul > li').last().click();
-            cy.url().should('include', `?page=${pageCount}`);
-          }
+          cy.get('[data-testid="topic-pagination"] > ul > li').last().click();
+          cy.url().should('include', `?page=${pageCount}`);
         } else {
           cy.log('No pagination as there is only one page');
         }
       });
       it('Previous page button navigates to previous page (second to last)', () => {
         if (pageCount > 1) {
-          if (!rtlServices.includes(service)) {
-            cy.get('[data-testid="topic-pagination"] > span > a').click();
-            cy.url().should('include', `?page=${pageCount - 1}`);
-            cy.get('[data-testid="topic-pagination"] > ul > li')
-              .first()
-              .click();
-            cy.url().should('include', `?page=1`);
-          }
+          cy.get('[data-testid="topic-pagination"] > span > a').click();
+          cy.url().should('include', `?page=${pageCount - 1}`);
+          cy.get('[data-testid="topic-pagination"] > ul > li').first().click();
+          cy.url().should('include', `?page=1`);
         } else {
           cy.log('No pagination as there is only one page');
         }
       });
       it('Page 1 button navigates to page 1', () => {
         if (pageCount > 1) {
-          if (!rtlServices.includes(service)) {
-            cy.get('[data-testid="topic-pagination"] > ul > li')
-              .first()
-              .click();
-            cy.url().should('include', `?page=1`);
-          }
+          cy.get('[data-testid="topic-pagination"] > ul > li').first().click();
+          cy.url().should('include', `?page=1`);
         } else {
           cy.log('No pagination as there is only one page');
         }
       });
       it('Above 400px does not show Page x of y', () => {
         if (pageCount > 1) {
-          if (!rtlServices.includes(service)) {
-            cy.get('[data-testid="topic-pagination-summary"]').should(
-              'not.be.visible',
-            );
-          }
+          cy.get('[data-testid="topic-pagination-summary"]').should(
+            'not.be.visible',
+          );
         } else {
           cy.log('No pagination as there is only one page');
         }
       });
       it('Below 400px shows Page x of y', () => {
         if (pageCount > 1) {
-          if (!rtlServices.includes(service)) {
-            cy.viewport(320, 480);
-            cy.get('[data-testid="topic-pagination-summary"]').should(
-              'be.visible',
-            );
-          }
+          cy.viewport(320, 480);
+          cy.get('[data-testid="topic-pagination-summary"]').should(
+            'be.visible',
+          );
         } else {
           cy.log('No pagination as there is only one page');
         }
