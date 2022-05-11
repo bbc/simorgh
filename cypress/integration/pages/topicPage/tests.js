@@ -52,6 +52,7 @@ export default ({ service, pageType }) => {
             .click();
 
           cy.url().should('include', '?page=2');
+          cy.get('[data-testid="topic-promos"] li');
         } else {
           cy.log('No pagination as there is only one page');
         }
@@ -60,6 +61,7 @@ export default ({ service, pageType }) => {
         if (pageCount > 2) {
           cy.get('[id="pagination-next-page"]').click();
           cy.url().should('include', `?page=3`);
+          cy.get('[data-testid="topic-promos"] li');
         } else {
           cy.log('No next button when on page 2 of 2');
         }
@@ -68,6 +70,7 @@ export default ({ service, pageType }) => {
         if (pageCount > 1) {
           cy.get('[data-testid="topic-pagination"] > ul > li').last().click();
           cy.url().should('include', `?page=${pageCount}`);
+          cy.get('[data-testid="topic-promos"] li');
         } else {
           cy.log('No pagination as there is only one page');
         }
@@ -78,6 +81,7 @@ export default ({ service, pageType }) => {
           cy.url().should('include', `?page=${pageCount - 1}`);
           cy.get('[data-testid="topic-pagination"] > ul > li').first().click();
           cy.url().should('include', `?page=1`);
+          cy.get('[data-testid="topic-promos"] li');
         } else {
           cy.log('No pagination as there is only one page');
         }
@@ -86,6 +90,7 @@ export default ({ service, pageType }) => {
         if (pageCount > 1) {
           cy.get('[data-testid="topic-pagination"] > ul > li').first().click();
           cy.url().should('include', `?page=1`);
+          cy.get('[data-testid="topic-promos"] li');
         } else {
           cy.log('No pagination as there is only one page');
         }
