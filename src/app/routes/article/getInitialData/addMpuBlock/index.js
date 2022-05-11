@@ -41,7 +41,7 @@ const insertMpuBlock = (blocks, insertIndex) => {
 
   // Add the MPU block after the very last block if there are not enough paragraphs
   if (totalParagraphs < insertIndex) {
-    newBlocks.push({ ...mpuBlock });
+    newBlocks.push(mpuBlock);
     return newBlocks;
   }
 
@@ -76,7 +76,7 @@ const insertMpuBlock = (blocks, insertIndex) => {
       type: 'text',
       model: { blocks: splitParagraphBlocks[0] },
     },
-    { ...mpuBlock },
+    mpuBlock,
     splitParagraphBlocks[1].length && {
       type: 'text',
       model: { blocks: splitParagraphBlocks[1] },
