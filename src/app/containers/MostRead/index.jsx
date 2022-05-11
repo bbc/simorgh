@@ -48,7 +48,7 @@ const MostReadContainer = ({
     showMostReadPageTypes.includes(pageType) &&
     !isLive()
   ) {
-    const mostReadUrl = `${process.env.SIMORGH_BASE_URL}${endpoint}`;
+    const mostReadUrl = `${process.env.SIMORGH_MOST_READ_CDN_URL}${endpoint}`;
     return <AmpMostRead endpoint={mostReadUrl} size={size} wrapper={wrapper} />;
   }
 
