@@ -1,9 +1,9 @@
-import deepClone from 'ramda/src/clone';
+import clone from 'ramda/src/clone';
 import addMpuBlock from '.';
 
 const styInput = {
   metadata: {
-    type: 'STY',
+    type: 'article',
     options: {
       allowAdvertising: true,
     },
@@ -131,10 +131,10 @@ const styInput = {
 
 describe('addMpuBlock', () => {
   it('should add a block of type mpu after the first 4 paragraph blocks', async () => {
-    const input = deepClone(styInput);
+    const input = clone(styInput);
     const expected = {
       metadata: {
-        type: 'STY',
+        type: 'article',
         options: {
           allowAdvertising: true,
         },
@@ -214,8 +214,8 @@ describe('addMpuBlock', () => {
               },
             },
             {
-              model: {},
               type: 'mpu',
+              model: {},
             },
             {
               type: 'subheadline',
@@ -263,24 +263,26 @@ describe('addMpuBlock', () => {
         },
       },
     };
-
     expect(addMpuBlock(input)).toEqual(expected);
   });
-  it('should return input if allowAdvertising is false', async () => {
-    const input = deepClone(styInput);
-    input.metadata.options.allowAdvertising = false;
 
-    expect(addMpuBlock(input)).toEqual(input);
-  });
-  it('should return input if page type is not STY', async () => {
-    const input = deepClone(styInput);
-    input.metadata.type = 'PGL';
+  /* TODO: Re-enable this test once Optimo articles return allowAdvertising metadata */
+  // it('should return input if allowAdvertising is false', async () => {
+  //   const input = clone(styInput);
+  //   input.metadata.options.allowAdvertising = false;
+
+  //   expect(addMpuBlock(input)).toEqual(input);
+  // });
+
+  it('should return input if page type is not Article', async () => {
+    const input = clone(styInput);
+    input.metadata.type = 'STY';
 
     expect(addMpuBlock(input)).toEqual(input);
   });
 
   it('should add the mpu block as the last block if there are not up to 4 paragraph blocks', async () => {
-    const input = deepClone(styInput);
+    const input = clone(styInput);
     const blocks = [
       {
         type: 'headline',
@@ -318,6 +320,117 @@ describe('addMpuBlock', () => {
       {
         type: 'mpu',
         model: {},
+      },
+    ]);
+  });
+
+  it('should split a text block and add the mpu block if the text block contains multiple paragraph blocks', async () => {
+    const input = clone(styInput);
+    const blocks = [
+      {
+        type: 'headline',
+      },
+      {
+        type: 'timestamp',
+      },
+      {
+        type: 'text',
+        model: {
+          blocks: [
+            {
+              type: 'paragraph',
+            },
+          ],
+        },
+      },
+      {
+        type: 'text',
+        model: {
+          blocks: [
+            {
+              type: 'paragraph',
+            },
+            {
+              type: 'paragraph',
+            },
+            {
+              type: 'paragraph',
+            },
+            {
+              type: 'paragraph',
+            },
+          ],
+        },
+      },
+      {
+        type: 'image',
+      },
+      {
+        type: 'audio',
+      },
+      {
+        type: 'video',
+      },
+    ];
+    input.content.model.blocks = blocks;
+
+    const expectation = addMpuBlock(input);
+
+    expect(expectation.content.model.blocks).toEqual([
+      {
+        type: 'headline',
+      },
+      {
+        type: 'timestamp',
+      },
+      {
+        type: 'text',
+        model: {
+          blocks: [
+            {
+              type: 'paragraph',
+            },
+          ],
+        },
+      },
+      {
+        type: 'text',
+        model: {
+          blocks: [
+            {
+              type: 'paragraph',
+            },
+            {
+              type: 'paragraph',
+            },
+            {
+              type: 'paragraph',
+            },
+          ],
+        },
+      },
+      {
+        type: 'mpu',
+        model: {},
+      },
+      {
+        type: 'text',
+        model: {
+          blocks: [
+            {
+              type: 'paragraph',
+            },
+          ],
+        },
+      },
+      {
+        type: 'image',
+      },
+      {
+        type: 'audio',
+      },
+      {
+        type: 'video',
       },
     ]);
   });
