@@ -30,6 +30,7 @@ const PageWrapper = ({ children, pageData, status }) => {
   const fonts = fontFunctions.map(getFonts => getFonts());
 
   const isDarkMode = pathOr(false, ['darkMode'], pageData);
+  const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
   const isErrorPage = [404, 500].includes(status);
   const pageType = isErrorPage
     ? 'WS-ERROR-PAGE'
@@ -42,7 +43,7 @@ const PageWrapper = ({ children, pageData, status }) => {
       <ManifestContainer />
       <WebVitals pageType={pageType} />
       <Wrapper id="main-wrapper" darkMode={isDarkMode}>
-        <HeaderContainer />
+        <HeaderContainer scriptSwitchId={scriptSwitchId} />
         <Content>{children}</Content>
         <FooterContainer />
       </Wrapper>

@@ -19,6 +19,9 @@ const topicJSON = {
         id: '54321',
       },
     ],
+    activePage: 1,
+    pageCount: 14,
+    variantTopicId: null,
   },
 };
 
@@ -50,6 +53,9 @@ describe('get initial data for topic', () => {
     expect(pageData.promos[0].link).toEqual('mock-link');
     expect(pageData.promos[0].imageAlt).toEqual('mock-image-alt');
     expect(pageData.promos[0].id).toEqual('54321');
+    expect(pageData.scriptSwitchId).toBeNull();
+    expect(pageData.activePage).toEqual(1);
+    expect(pageData.pageCount).toEqual(14);
   });
 
   it('should use the title as description if description is empty', async () => {
@@ -91,11 +97,11 @@ describe('get initial data for topic', () => {
       path: 'serbian/cyr/topics/54321',
       getAgent,
       service: 'serbian',
-      variant: 'sr-cyrl',
+      variant: 'cyr',
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=54321&service=serbian&variant=sr-cyrl',
+      path: 'https://mock-bff-path/?id=54321&service=serbian&variant=cyr',
       agent,
       optHeaders,
     });
