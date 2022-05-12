@@ -244,25 +244,5 @@ describe('MostReadContainerCanonical Assertion', () => {
         });
       },
     );
-
-    // Test can be removed when code is pushed live.
-    it('should not render most read amp on live environment', async () => {
-      process.env.SIMORGH_APP_ENV = 'live';
-      let container;
-      await act(async () => {
-        container = await render(
-          <MostReadWithContext
-            service="mundo"
-            mostReadToggle
-            isAmp
-            variant={null}
-            pageType={STORY_PAGE}
-          />,
-        ).container;
-      });
-
-      expect(container.querySelector('amp-script')).not.toBeInTheDocument();
-      delete process.env.SIMORGH_APP_ENV;
-    });
   });
 });
