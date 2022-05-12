@@ -1873,6 +1873,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@cypress/webpack-preprocessor@npm:^5.11.1":
+  version: 5.11.1
+  resolution: "@cypress/webpack-preprocessor@npm:5.11.1"
+  dependencies:
+    bluebird: 3.7.1
+    debug: ^4.3.2
+    lodash: ^4.17.20
+  peerDependencies:
+    "@babel/core": ^7.0.1
+    "@babel/preset-env": ^7.0.0
+    babel-loader: ^8.0.2
+    webpack: ^4 || ^5
+  checksum: 48f0c083b491db88920f3bb05089d2de5f079f3eb33b579d77ce60a804ae9e02eb9170d677f4632eabb1abb48dad50978ca918ea537d68b27733d96b9765b9a6
+  languageName: node
+  linkType: hard
+
 "@cypress/xvfb@npm:^1.2.4":
   version: 1.2.4
   resolution: "@cypress/xvfb@npm:1.2.4"
@@ -6917,6 +6933,13 @@ __metadata:
   version: 2.0.2
   resolution: "blob-util@npm:2.0.2"
   checksum: d543e6b92e4ca715ca33c78e89a07a2290d43e5b2bc897d7ec588c5c7bbf59df93e45225ac0c9258aa6ce4320358990f99c9288f1c48280f8ec5d7a2e088d19b
+  languageName: node
+  linkType: hard
+
+"bluebird@npm:3.7.1":
+  version: 3.7.1
+  resolution: "bluebird@npm:3.7.1"
+  checksum: 58c295399e109925149977ebcb40e42fd109d3e458899e71441bc7e5e0867bbd796fdd20278b425fa29f13377fe335fbfc2a6e68e5ca1da03b1c3afdc439d097
   languageName: node
   linkType: hard
 
@@ -19042,6 +19065,7 @@ __metadata:
     "@bbc/psammead-storybook-helpers": 9.0.17
     "@bbc/psammead-test-helpers": 6.0.5
     "@bbc/web-vitals": 1.1.1
+    "@cypress/webpack-preprocessor": ^5.11.1
     "@emotion/babel-plugin": 11.9.2
     "@emotion/cache": 11.7.1
     "@emotion/jest": 11.9.1

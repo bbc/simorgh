@@ -1,1 +1,3 @@
-export jalaali from './calendars/jalaali';
+import jalaali from './calendars/jalaali';
+
+export default jalaali;
