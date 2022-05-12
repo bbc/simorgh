@@ -9373,13 +9373,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dompurify@npm:2.0.8":
-  version: 2.0.8
-  resolution: "dompurify@npm:2.0.8"
-  checksum: b46166fe58ff3672d636f550e7acff0c5c436785139156e08be1ce307ad7813cf01e916ba69617bda6bc38ed2475291eedb0f3b813245af242593a4dc64c4575
-  languageName: node
-  linkType: hard
-
 "domutils@npm:^1.5.1":
   version: 1.7.0
   resolution: "domutils@npm:1.7.0"
@@ -19116,7 +19109,6 @@ __metadata:
     cypress-multi-reporters: 1.6.0
     cypress-terminal-report: 3.5.2
     depcheck: 1.4.3
-    dompurify: 2.0.8
     dotenv: 10.0.0
     eslint: 7.32.0
     eslint-config-airbnb: 18.2.1
