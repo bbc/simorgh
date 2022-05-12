@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import moment from 'moment';
-import { jalaali } from './index';
+import jalaali from './index';
 
 const stories = storiesOf('Utilities/Psammead Moment Calendars', module);
 
