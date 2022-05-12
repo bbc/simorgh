@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-unresolved
 const webpackPreprocessor = require('@cypress/webpack-preprocessor');
 const fs = require('fs');
 const path = require('path');
