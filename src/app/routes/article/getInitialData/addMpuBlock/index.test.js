@@ -130,6 +130,10 @@ const styInput = {
 };
 
 describe('addMpuBlock', () => {
+  afterEach(() => {
+    delete process.env.SIMORGH_APP_ENV;
+  });
+
   it('should add a block of type mpu after the first 4 paragraph blocks', async () => {
     const input = clone(styInput);
     const expected = {
@@ -266,13 +270,12 @@ describe('addMpuBlock', () => {
     expect(addMpuBlock(input)).toEqual(expected);
   });
 
-  /* TODO: Re-enable this test once Optimo articles return allowAdvertising metadata */
-  // it('should return input if allowAdvertising is false', async () => {
-  //   const input = clone(styInput);
-  //   input.metadata.options.allowAdvertising = false;
+  it('should return input if `isLive` is true', async () => {
+    const input = clone(styInput);
+    process.env.SIMORGH_APP_ENV = 'live';
 
-  //   expect(addMpuBlock(input)).toEqual(input);
-  // });
+    expect(addMpuBlock(input)).toEqual(input);
+  });
 
   it('should return input if page type is not Article', async () => {
     const input = clone(styInput);
@@ -431,6 +434,35 @@ describe('addMpuBlock', () => {
       },
       {
         type: 'video',
+      },
+    ]);
+  });
+
+  it('should add the mpu block as the last block if there are no text/paragraph blocks', async () => {
+    const input = clone(styInput);
+    const blocks = [
+      {
+        type: 'headline',
+      },
+      {
+        type: 'timestamp',
+      },
+      {
+        type: 'image',
+      },
+      {
+        type: 'audio',
+      },
+    ];
+    input.content.model.blocks = blocks;
+
+    const expectation = addMpuBlock(input);
+
+    expect(expectation.content.model.blocks).toEqual([
+      ...blocks,
+      {
+        type: 'mpu',
+        model: {},
       },
     ]);
   });
