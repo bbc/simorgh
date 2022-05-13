@@ -6,9 +6,12 @@ import Message from '../Message';
 
 // XSS protection to ensure we only react to events sent from recognised origins
 const isValidEvent = ({ origin }, acceptableEventOrigins) =>
-  RegExp(`^https?://(${acceptableEventOrigins.join('|')})(:|/|$)`, 'i').test(
-    origin,
-  );
+  RegExp(
+    `^https?://(${acceptableEventOrigins
+      .replace('.', '\\.')
+      .join('|')})(:|/|$)`,
+    'i',
+  ).test(origin);
 
 const Canonical = ({
   src,
