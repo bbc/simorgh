@@ -2,11 +2,11 @@
 
 exports[`regex utils snapshots should create expected regex from getAfricaEyeTVPageRegex 1`] = `"/worldservice/tv/africa_eye/:episodeId([a-z0-9]+)?"`;
 
-exports[`regex utils snapshots should create expected regex from getArticleManifestRegex 1`] = `"/:service(news|persian|igbo)/:local(articles|new_articles|erthyglau|sgeulachdan)/manifest.json"`;
+exports[`regex utils snapshots should create expected regex from getArticleManifestRegex 1`] = `"/:service(news|persian|igbo)/:local(articles|erthyglau|sgeulachdan)/manifest.json"`;
 
-exports[`regex utils snapshots should create expected regex from getArticleRegex 1`] = `"/:service(news|persian|igbo)/:local(articles|new_articles|erthyglau|sgeulachdan)/:id(c[a-zA-Z0-9]{10}o):variant(/simp|/trad|/cyr|/lat)?:amp(.amp)?"`;
+exports[`regex utils snapshots should create expected regex from getArticleRegex 1`] = `"/:service(news|persian|igbo)/:local(articles|erthyglau|sgeulachdan)/:id(c[a-zA-Z0-9]{10}o):variant(/simp|/trad|/cyr|/lat)?:amp(.amp)?"`;
 
-exports[`regex utils snapshots should create expected regex from getArticleSwRegex 1`] = `"/:service(news|persian|igbo)/:local(articles|new_articles|erthyglau|sgeulachdan)/sw.js"`;
+exports[`regex utils snapshots should create expected regex from getArticleSwRegex 1`] = `"/:service(news|persian|igbo)/:local(articles|erthyglau|sgeulachdan)/sw.js"`;
 
 exports[`regex utils snapshots should create expected regex from getCpsAssetRegex 1`] = `"/:service(news|persian|igbo):variant(/simp|/trad|/cyr|/lat)?/:assetUri([a-z0-9-_]{0,}[0-9]{8,}):amp(.amp)?"`;
 
