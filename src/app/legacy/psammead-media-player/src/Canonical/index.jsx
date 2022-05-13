@@ -9,7 +9,7 @@ const isValidEvent = ({ origin }, acceptableEventOrigins) =>
   RegExp(
     `^https?://(${acceptableEventOrigins
       .join('|')
-      .replace('.', '\\.')})(:|/|$)`,
+      .replaceAll('.', '\\.')})(:|/|$)`,
     'i',
   ).test(origin);
 
