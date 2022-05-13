@@ -8,8 +8,8 @@ import Message from '../Message';
 const isValidEvent = ({ origin }, acceptableEventOrigins) =>
   RegExp(
     `^https?://(${acceptableEventOrigins
-      .replace('.', '\\.')
-      .join('|')})(:|/|$)`,
+      .join('|')
+      .replace('.', '\\.')})(:|/|$)`,
     'i',
   ).test(origin);
 
