@@ -72,6 +72,7 @@ const Canonical = ({
         mediaError: onMediaError,
       }[e.data.event];
 
+      // lgtm[js/unvalidated-dynamic-method-call]
       if (callback) callback(e);
     };
 
