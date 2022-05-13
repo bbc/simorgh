@@ -1,5 +1,5 @@
 import clone from 'ramda/src/clone';
-import addMpuBlock from '.';
+import addMpuBlock, { insertMpuBlock } from '.';
 
 const styInput = {
   metadata: {
@@ -465,5 +465,50 @@ describe('addMpuBlock', () => {
         model: {},
       },
     ]);
+  });
+
+  it('should return the input if the `insertIndex` is not specified', async () => {
+    const input = clone(styInput);
+
+    expect(insertMpuBlock(input.content.model.blocks)).toEqual(
+      input.content.model.blocks,
+    );
+  });
+
+  it('should return the pageData if there are no blocks ', async () => {
+    const pageData = {
+      metadata: {
+        type: 'article',
+        options: {
+          allowAdvertising: true,
+        },
+        locators: {
+          assetUri: '/news/media-333256',
+        },
+      },
+      content: {
+        model: {
+          blocks: [],
+        },
+      },
+    };
+
+    expect(addMpuBlock(pageData)).toEqual(pageData);
+  });
+
+  it('should return the pageData if content object does not exist', async () => {
+    const pageData = {
+      metadata: {
+        type: 'article',
+        options: {
+          allowAdvertising: true,
+        },
+        locators: {
+          assetUri: '/news/media-333256',
+        },
+      },
+    };
+
+    expect(addMpuBlock(pageData)).toEqual(pageData);
   });
 });

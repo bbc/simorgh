@@ -10,7 +10,7 @@ const mpuBlock = {
   model: {},
 };
 
-const insertMpuBlock = (blocks, insertIndex) => {
+export const insertMpuBlock = (blocks, insertIndex) => {
   if (!insertIndex) {
     return blocks;
   }
@@ -98,7 +98,7 @@ const addMpuBlock = json => {
   const pageData = clone(json);
 
   const blocks = path(['content', 'model', 'blocks'], pageData);
-  if (!blocks) return pageData;
+  if (!blocks || blocks.length === 0) return pageData;
 
   pageData.content.model.blocks = insertMpuBlock(blocks, 4);
 
