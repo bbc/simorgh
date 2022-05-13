@@ -67,7 +67,8 @@ export const service = {
     podcastPromo: {
       title: 'پادکست',
       brandTitle: 'رادیو فارسی بی‌بی‌سی',
-      brandDescription: 'پادکست چشم‌انداز بامدادی رادیو بی‌بی‌سی – دوشنبه ۱۹ اردیبهشت ۱۴۰۱',
+      brandDescription:
+        'پادکست چشم‌انداز بامدادی رادیو بی‌بی‌سی – دوشنبه ۱۹ اردیبهشت ۱۴۰۱',
       image: {
         src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0bq9rkk.jpg',
         alt: 'پادکست چشم‌انداز بامدادی رادیو بی‌بی‌سی',
