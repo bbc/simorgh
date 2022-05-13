@@ -5,14 +5,14 @@ import ImagePlaceholder from '#legacy/psammead-image-placeholder/src';
 import Message from '../Message';
 
 // XSS protection to ensure we only react to events sent from recognised origins
+const escapeRegex = token => token.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+// XSS protection to ensure we only react to events sent from recognised origins
 const isValidEvent = ({ origin }, acceptableEventOrigins) => {
-  const escapedAcceptableEventOrigins = acceptableEventOrigins.map(domain =>
-    domain.replaceAll('.', '\\.'),
+  const escapedOrigins = acceptableEventOrigins.map(escapeRegex);
+  return RegExp(`^https?://(${escapedOrigins.join('|')})(:|/|$)`, 'i').test(
+    origin,
   );
-  return RegExp(
-    `^https?://(${escapedAcceptableEventOrigins.join('|')})(:|/|$)`,
-    'i',
-  ).test(origin);
 };
 
 const Canonical = ({
