@@ -134,7 +134,9 @@ module.exports = ({
             test(module) {
               return (
                 module.size() > 160000 &&
-                /node_modules[/\\]/.test(module.identifier())
+                /node_modules[/\\]|[\\/]src[\\/]app[\\/]legacy[\\/]/.test(
+                  module.identifier(),
+                )
               );
             },
             name(module) {
@@ -175,6 +177,7 @@ module.exports = ({
             minChunks: 2,
             reuseExistingChunk: true,
           },
+          psammead: {},
         },
         // Keep maximum initial requests to 25
         maxInitialRequests: 25,
