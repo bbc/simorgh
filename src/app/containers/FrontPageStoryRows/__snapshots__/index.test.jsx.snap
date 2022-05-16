@@ -762,12 +762,12 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
           dir="rtl"
         >
           <a
-            aria-labelledby="bulletin-1fb346cca5cd45c9bde0a7d27ba6a8cc"
+            aria-labelledby="bulletin-404de5b06a33489da8d096ffe1c02c2c"
             class="emotion-13 emotion-14"
             href="http://www.bbc.com/urdu/indepth/rio_olympics_2016_urdu"
           >
             <span
-              id="bulletin-1fb346cca5cd45c9bde0a7d27ba6a8cc"
+              id="bulletin-404de5b06a33489da8d096ffe1c02c2c"
               role="text"
             >
               <span
@@ -2365,12 +2365,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
           dir="rtl"
         >
           <a
-            aria-labelledby="bulletin-7b4f784781df467b941d97c799264737"
+            aria-labelledby="bulletin-3e1f51e8efee448ba48f60c7525cdfd7"
             class="emotion-13 emotion-14"
             href="http://www.bbc.com/urdu/indepth/rio_olympics_2016_urdu"
           >
             <span
-              id="bulletin-7b4f784781df467b941d97c799264737"
+              id="bulletin-3e1f51e8efee448ba48f60c7525cdfd7"
               role="text"
             >
               <span
@@ -4004,12 +4004,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
           dir="rtl"
         >
           <a
-            aria-labelledby="bulletin-90fc602b30ae413da0e6e388c38192aa"
+            aria-labelledby="bulletin-92dfbb3c945c461993ea353f79a37e4f"
             class="emotion-13 emotion-14"
             href="http://www.bbc.com/urdu/indepth/rio_olympics_2016_urdu"
           >
             <span
-              id="bulletin-90fc602b30ae413da0e6e388c38192aa"
+              id="bulletin-92dfbb3c945c461993ea353f79a37e4f"
               role="text"
             >
               <span
@@ -5149,12 +5149,12 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
           dir="rtl"
         >
           <a
-            aria-labelledby="bulletin-ce021c9c4ac3488797baf7b5a89a7352"
+            aria-labelledby="bulletin-156c19a9896d4307bf639947153ddcf1"
             class="emotion-13 emotion-14"
             href="http://www.bbc.com/urdu/indepth/rio_olympics_2016_urdu"
           >
             <span
-              id="bulletin-ce021c9c4ac3488797baf7b5a89a7352"
+              id="bulletin-156c19a9896d4307bf639947153ddcf1"
               role="text"
             >
               <span
