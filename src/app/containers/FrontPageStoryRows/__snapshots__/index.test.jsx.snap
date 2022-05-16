@@ -762,12 +762,12 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
           dir="rtl"
         >
           <a
-            aria-labelledby="bulletin-radio2016"
+            aria-labelledby="bulletin-1fb346cca5cd45c9bde0a7d27ba6a8cc"
             class="emotion-13 emotion-14"
             href="http://www.bbc.com/urdu/indepth/rio_olympics_2016_urdu"
           >
             <span
-              id="bulletin-radio2016"
+              id="bulletin-1fb346cca5cd45c9bde0a7d27ba6a8cc"
               role="text"
             >
               <span
@@ -2365,12 +2365,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
           dir="rtl"
         >
           <a
-            aria-labelledby="bulletin-radio2016"
+            aria-labelledby="bulletin-7b4f784781df467b941d97c799264737"
             class="emotion-13 emotion-14"
             href="http://www.bbc.com/urdu/indepth/rio_olympics_2016_urdu"
           >
             <span
-              id="bulletin-radio2016"
+              id="bulletin-7b4f784781df467b941d97c799264737"
               role="text"
             >
               <span
@@ -4004,12 +4004,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
           dir="rtl"
         >
           <a
-            aria-labelledby="bulletin-radio2016"
+            aria-labelledby="bulletin-90fc602b30ae413da0e6e388c38192aa"
             class="emotion-13 emotion-14"
             href="http://www.bbc.com/urdu/indepth/rio_olympics_2016_urdu"
           >
             <span
-              id="bulletin-radio2016"
+              id="bulletin-90fc602b30ae413da0e6e388c38192aa"
               role="text"
             >
               <span
@@ -5149,12 +5149,12 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
           dir="rtl"
         >
           <a
-            aria-labelledby="bulletin-radio2016"
+            aria-labelledby="bulletin-ce021c9c4ac3488797baf7b5a89a7352"
             class="emotion-13 emotion-14"
             href="http://www.bbc.com/urdu/indepth/rio_olympics_2016_urdu"
           >
             <span
-              id="bulletin-radio2016"
+              id="bulletin-ce021c9c4ac3488797baf7b5a89a7352"
               role="text"
             >
               <span
