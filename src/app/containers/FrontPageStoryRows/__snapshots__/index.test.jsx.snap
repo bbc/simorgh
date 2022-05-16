@@ -762,12 +762,12 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
           dir="rtl"
         >
           <a
-            aria-labelledby="bulletin-rio_olympics_2016_urdu"
+            aria-labelledby="bulletin-radio2016rio_olympics_2016_urdu"
             class="emotion-13 emotion-14"
             href="http://www.bbc.com/urdu/indepth/rio_olympics_2016_urdu"
           >
             <span
-              id="bulletin-rio_olympics_2016_urdu"
+              id="bulletin-radio2016rio_olympics_2016_urdu"
               role="text"
             >
               <span
@@ -2365,12 +2365,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
           dir="rtl"
         >
           <a
-            aria-labelledby="bulletin-rio_olympics_2016_urdu"
+            aria-labelledby="bulletin-radio2016rio_olympics_2016_urdu"
             class="emotion-13 emotion-14"
             href="http://www.bbc.com/urdu/indepth/rio_olympics_2016_urdu"
           >
             <span
-              id="bulletin-rio_olympics_2016_urdu"
+              id="bulletin-radio2016rio_olympics_2016_urdu"
               role="text"
             >
               <span
@@ -4004,12 +4004,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
           dir="rtl"
         >
           <a
-            aria-labelledby="bulletin-rio_olympics_2016_urdu"
+            aria-labelledby="bulletin-radio2016rio_olympics_2016_urdu"
             class="emotion-13 emotion-14"
             href="http://www.bbc.com/urdu/indepth/rio_olympics_2016_urdu"
           >
             <span
-              id="bulletin-rio_olympics_2016_urdu"
+              id="bulletin-radio2016rio_olympics_2016_urdu"
               role="text"
             >
               <span
@@ -5149,12 +5149,12 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
           dir="rtl"
         >
           <a
-            aria-labelledby="bulletin-rio_olympics_2016_urdu"
+            aria-labelledby="bulletin-radio2016rio_olympics_2016_urdu"
             class="emotion-13 emotion-14"
             href="http://www.bbc.com/urdu/indepth/rio_olympics_2016_urdu"
           >
             <span
-              id="bulletin-rio_olympics_2016_urdu"
+              id="bulletin-radio2016rio_olympics_2016_urdu"
               role="text"
             >
               <span
