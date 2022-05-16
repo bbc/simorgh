@@ -74,7 +74,7 @@ const BulletinContainer = ({ item, lazyLoadImage }) => {
 
   const headline = pathOr(null, ['name'], item);
   const ctaLink = pathOr(null, ['uri'], item);
-  const itemId = pathOr(null, ['id'], item);
+  const allyLink = ctaLink.split('/').pop();
 
   if (!headline || !ctaLink) {
     return null;
@@ -116,7 +116,7 @@ const BulletinContainer = ({ item, lazyLoadImage }) => {
       liveText={liveText}
       offScreenText={offScreenText}
       lang={ctaTextIsEnglish ? 'en-GB' : null}
-      ariaId={(headline, itemId)}
+      ariaId={(headline, allyLink)}
     />
   );
 };
