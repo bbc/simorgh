@@ -91,7 +91,8 @@ export const service = {
       ads: {
         advertisementLabel: 'إعلان',
       },
-      recommendationTitle: 'مواضيع قد تهمك',
+      recommendationTitle: 'قصص مقترحة',
+      splitRecommendationTitle: 'مزيد من القصص المقترحة',
       seeAll: 'المزيد',
       home: 'الرئيسية',
       currentPage: 'الصفحة الحالية',
