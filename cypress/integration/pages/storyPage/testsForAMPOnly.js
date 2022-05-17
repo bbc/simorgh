@@ -89,11 +89,7 @@ export const testsThatAlwaysRunForAMPOnly = ({
               cy.log(
                 `Most read container toggle enabled? ${mostReadIsEnabled}`,
               );
-              if (
-                Cypress.env('APP_ENV') !== 'live' &&
-                mostReadIsEnabled &&
-                mostReadRecords >= 5
-              ) {
+              if (mostReadIsEnabled && mostReadRecords >= 5) {
                 const expectedMostReadItems =
                   appConfig[config[service].name][variant].mostRead
                     .numberOfItems;
@@ -114,11 +110,7 @@ export const testsThatAlwaysRunForAMPOnly = ({
               cy.log(
                 `Most read container toggle enabled? ${mostReadIsEnabled}`,
               );
-              if (
-                Cypress.env('APP_ENV') !== 'live' &&
-                mostReadIsEnabled &&
-                mostReadRecords >= 5
-              ) {
+              if (mostReadIsEnabled && mostReadRecords >= 5) {
                 const expectedMostReadRank = serviceNumerals(service);
                 cy.get('[data-e2e="most-read"]').scrollIntoView();
                 cy.get('[data-e2e="most-read"] > amp-list div')
@@ -147,11 +139,7 @@ export const testsThatAlwaysRunForAMPOnly = ({
               cy.log(
                 `Most read container toggle enabled? ${mostReadIsEnabled}`,
               );
-              if (
-                Cypress.env('APP_ENV') !== 'live' &&
-                mostReadIsEnabled &&
-                mostReadRecords >= 5
-              ) {
+              if (mostReadIsEnabled && mostReadRecords >= 5) {
                 cy.get('amp-script > div').should('not.exist');
               }
             });
