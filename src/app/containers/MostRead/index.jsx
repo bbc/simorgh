@@ -4,7 +4,6 @@ import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
-import isLive from '#app/lib/utilities/isLive';
 import Canonical from './Canonical';
 import mostReadShape from './utilities/mostReadShape';
 import AmpMostRead from './Amp';
@@ -42,19 +41,9 @@ const MostReadContainer = ({
 
   // We render amp on ONLY STY and ART pages using amp-list.
   // We also want to render most read on AMP for the "/popular/read" pages
-  if (
-    isAmp &&
-    !serverRenderOnAmp &&
-    showMostReadPageTypes.includes(pageType) &&
-    !isLive()
-  ) {
+  if (isAmp && !serverRenderOnAmp && showMostReadPageTypes.includes(pageType)) {
     const mostReadUrl = `${process.env.SIMORGH_MOST_READ_CDN_URL}${endpoint}`;
     return <AmpMostRead endpoint={mostReadUrl} size={size} wrapper={wrapper} />;
-  }
-
-  // can  be removed once most read amp goes live
-  if (isAmp && !serverRenderOnAmp) {
-    return null;
   }
 
   return (
