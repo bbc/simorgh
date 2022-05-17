@@ -3,10 +3,10 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '../../../legacy/psammead-styles/src/colours';
-import latinDiacritics from '../../../legacy/gel-foundations/src/scripts/latin-with-diacritics';
-import * as brandSVG from '../../../legacy/psammead-assets/src/svgs/afrique';
-import '../../../legacy/moment-timezone-include/tz/GMT';
+} from '#legacy/psammead-styles/src/colours';
+import latinDiacritics from '#legacy/gel-foundations/src/scripts/latin-with-diacritics';
+import { afrique as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import '#legacy/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/fr';
 
@@ -262,7 +262,7 @@ export const service = {
       topStoriesTitle: 'À la une',
       featuresAnalysisTitle: 'Le choix de la rédaction',
     },
-    brandSVG: brandSVG.default,
+    brandSVG,
     mostRead: {
       header: 'Les plus lus',
       lastUpdated: 'Dernière mise à jour:',

@@ -3,14 +3,14 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '../../../legacy/psammead-styles/src/colours';
-import burmese from '../../../legacy/gel-foundations/src/scripts/burmese';
-import * as brandSVG from '../../../legacy/psammead-assets/src/svgs/burmese';
+} from '#legacy/psammead-styles/src/colours';
+import burmese from '#legacy/gel-foundations/src/scripts/burmese';
+import { burmese as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import {
   F_PADAUK_BOLD,
   F_PADAUK_REGULAR,
-} from '../../../legacy/psammead-styles/src/fonts';
-import '../../../legacy/moment-timezone-include/tz/GMT';
+} from '#legacy/psammead-styles/src/fonts';
+import '#legacy/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/my';
 
@@ -280,7 +280,7 @@ export const service = {
       topStoriesTitle: 'ထိပ်တန်း သတင်းများ',
       featuresAnalysisTitle: 'ဆောင်းပါး',
     },
-    brandSVG: brandSVG.default,
+    brandSVG,
     mostRead: {
       header: 'အဖတ်အများဆုံး',
       lastUpdated: 'နောက်ဆုံးအသစ်တင်ချိန်:',

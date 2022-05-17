@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '../../../legacy/psammead-styles/src/colours';
-import * as brandSVG from '../../../legacy/psammead-assets/src/svgs/yoruba';
-import cyrillicAndLatin from '../../../legacy/gel-foundations/src/scripts/latin-and-cyrillic';
-import '../../../legacy/psammead-locales/moment/yo';
-import '../../../legacy/moment-timezone-include/tz/Africa/Lagos';
+} from '#legacy/psammead-styles/src/colours';
+import { yoruba as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import cyrillicAndLatin from '#legacy/gel-foundations/src/scripts/latin-and-cyrillic';
+import '#legacy/psammead-locales/moment/yo';
+import '#legacy/moment-timezone-include/tz/Africa/Lagos';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -249,7 +249,7 @@ export const service = {
       topStoriesTitle: 'Ìròyìn tó ṣe kókó',
       featuresAnalysisTitle: 'Ìwádìí kíkún lóríi kókó ìròyìn ',
     },
-    brandSVG: brandSVG.default,
+    brandSVG,
     mostRead: {
       header: 'Èyítí A Ń Kà Jùlọ',
       lastUpdated: 'Tí a mú dójú ìwọ̀n gbẹ̀yìn ní:',

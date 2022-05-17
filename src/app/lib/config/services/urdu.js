@@ -3,15 +3,15 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '../../../legacy/psammead-styles/src/colours';
-import arabic from '../../../legacy/gel-foundations/src/scripts/arabic';
-import * as brandSVG from '../../../legacy/psammead-assets/src/svgs/urdu';
+} from '#legacy/psammead-styles/src/colours';
+import arabic from '#legacy/gel-foundations/src/scripts/arabic';
+import { urdu as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import {
   F_REITH_QALAM_REGULAR,
   F_REITH_QALAM_BOLD,
-} from '../../../legacy/psammead-styles/src/fonts';
-import '../../../legacy/moment-timezone-include/tz/Asia/Karachi';
-import '../../../legacy/psammead-locales/moment/ur';
+} from '#legacy/psammead-styles/src/fonts';
+import '#legacy/moment-timezone-include/tz/Asia/Karachi';
+import '#legacy/psammead-locales/moment/ur';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -271,7 +271,7 @@ export const service = {
       topStoriesTitle: 'اہم خبریں',
       featuresAnalysisTitle: 'فیچر اور تجزیے',
     },
-    brandSVG: brandSVG.default,
+    brandSVG,
     mostRead: {
       header: 'سب سے زیادہ پڑھی جانے والی',
       lastUpdated: 'آخری اپ ڈیٹ',

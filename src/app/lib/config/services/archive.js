@@ -1,9 +1,6 @@
-import {
-  C_ARCHIVE_BLUE,
-  C_WHITE,
-} from '../../../legacy/psammead-styles/src/colours';
-import * as brandSVG from '../../../legacy/psammead-assets/src/svgs/archive';
-import cyrillicAndLatin from '../../../legacy/gel-foundations/src/scripts/latin-and-cyrillic';
+import { C_ARCHIVE_BLUE, C_WHITE } from '#legacy/psammead-styles/src/colours';
+import { archive as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import cyrillicAndLatin from '#legacy/gel-foundations/src/scripts/latin-and-cyrillic';
 import {
   F_REITH_SANS_BOLD,
   F_REITH_SANS_BOLD_ITALIC,
@@ -11,9 +8,9 @@ import {
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_MEDIUM_ITALIC,
-} from '../../../legacy/psammead-styles/src/fonts';
-import '../../../legacy/psammead-locales/moment/en-gb';
-import '../../../legacy/moment-timezone-include/tz/Europe/London';
+} from '#legacy/psammead-styles/src/fonts';
+import '#legacy/psammead-locales/moment/en-gb';
+import '#legacy/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -212,7 +209,7 @@ export const service = {
         duration: 'Duration',
       },
     },
-    brandSVG: brandSVG.default,
+    brandSVG,
     mostRead: {
       header: 'Most read',
       lastUpdated: 'Last updated:',
