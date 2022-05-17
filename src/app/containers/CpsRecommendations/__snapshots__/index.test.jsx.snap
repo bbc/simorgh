@@ -521,7 +521,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
           class="emotion-6 emotion-7"
           href="#end-of-recommendations"
         >
-          Saltar Quizás también te interese y continuar leyendo
+          Saltar Recomendamos y continuar leyendo
         </a>
         <div
           class="emotion-8 emotion-9 emotion-10"
@@ -543,7 +543,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                   dir="ltr"
                   id="recommendations-heading"
                 >
-                  Quizás también te interese
+                  Recomendamos
                 </span>
               </span>
             </span>
@@ -595,7 +595,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
           id="end-of-recommendations"
           tabindex="-1"
         >
-          Final de Quizás también te interese
+          Final de Recomendamos
         </p>
       </div>
     </section>
@@ -1235,7 +1235,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
           class="emotion-6 emotion-7"
           href="#end-of-recommendations"
         >
-          Saltar Quizás también te interese y continuar leyendo
+          Saltar Recomendamos y continuar leyendo
         </a>
         <div
           class="emotion-8 emotion-9 emotion-10"
@@ -1257,7 +1257,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                   dir="ltr"
                   id="recommendations-heading"
                 >
-                  Quizás también te interese
+                  Recomendamos
                 </span>
               </span>
             </span>
@@ -1462,7 +1462,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
           id="end-of-recommendations"
           tabindex="-1"
         >
-          Final de Quizás también te interese
+          Final de Recomendamos
         </p>
       </div>
     </section>
@@ -2102,7 +2102,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
           class="emotion-6 emotion-7"
           href="#end-of-recommendations"
         >
-          تخطى مواضيع قد تهمك وواصل القراءة
+          تخطى قصص مقترحة وواصل القراءة
         </a>
         <div
           class="emotion-8 emotion-9 emotion-10"
@@ -2124,7 +2124,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                   dir="rtl"
                   id="recommendations-heading"
                 >
-                  مواضيع قد تهمك
+                  قصص مقترحة
                 </span>
               </span>
             </span>
@@ -2329,7 +2329,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
           id="end-of-recommendations"
           tabindex="-1"
         >
-          مواضيع قد تهمك نهاية
+          قصص مقترحة نهاية
         </p>
       </div>
     </section>
