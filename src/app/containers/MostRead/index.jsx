@@ -12,7 +12,7 @@ const blockLevelEventTrackingData = {
   componentName: 'most-read',
 };
 
-const showMostReadPageTypes = ['STY', 'article'];
+const mostReadAmpPageTypes = ['STY', 'CSP', 'article'];
 
 const MostReadContainer = ({
   mostReadEndpointOverride,
@@ -39,9 +39,9 @@ const MostReadContainer = ({
     return null;
   }
 
-  // We render amp on ONLY STY and ART pages using amp-list.
+  // We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.
   // We also want to render most read on AMP for the "/popular/read" pages
-  if (isAmp && !serverRenderOnAmp && showMostReadPageTypes.includes(pageType)) {
+  if (isAmp && !serverRenderOnAmp && mostReadAmpPageTypes.includes(pageType)) {
     const mostReadUrl = `${process.env.SIMORGH_MOST_READ_CDN_URL}${endpoint}`;
     return <AmpMostRead endpoint={mostReadUrl} size={size} wrapper={wrapper} />;
   }
