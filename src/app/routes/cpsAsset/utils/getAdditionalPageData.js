@@ -1,5 +1,9 @@
 import isEmpty from 'ramda/src/isEmpty';
-import { STORY_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  STORY_PAGE,
+  CORRESPONDENT_STORY_PAGE,
+  MEDIA_ASSET_PAGE,
+} from '#app/routes/utils/pageTypes';
 import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import getMostWatchedEndpoint from '#lib/utilities/getUrlHelpers/getMostWatchedUrl';
 import getSecondaryColumnUrl from '#lib/utilities/getUrlHelpers/getSecondaryColumnUrl';
@@ -23,6 +27,7 @@ const pageTypeUrls = async (
 ) => {
   switch (assetType) {
     case STORY_PAGE:
+    case CORRESPONDENT_STORY_PAGE:
       return [
         (await hasMostRead(service, variant))
           ? {

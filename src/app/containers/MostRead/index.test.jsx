@@ -11,6 +11,7 @@ import {
   FRONT_PAGE,
   STORY_PAGE,
   ARTICLE_PAGE,
+  CORRESPONDENT_STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
 import MostReadContainer from '.';
 import { setFreshPromoTimestamp } from './utilities/testHelpers';
@@ -193,6 +194,15 @@ describe('MostReadContainerCanonical Assertion', () => {
         variant: null,
         renderExpectation: shouldRenderMostReadAmp,
         pageType: ARTICLE_PAGE,
+      },
+      {
+        description: 'should render most read amp on CSP page for PS news',
+        service: 'news',
+        mostReadToggle: true,
+        isAmp: true,
+        variant: null,
+        renderExpectation: shouldRenderMostReadAmp,
+        pageType: CORRESPONDENT_STORY_PAGE,
       },
       {
         description: 'should not render most read amp on front page',
