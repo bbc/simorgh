@@ -86,6 +86,8 @@ export const service = {
       ads: {
         advertisementLabel: 'Iklan',
       },
+      recommendationTitle: 'Artikel-artikel yang direkomendasikan',
+      splitRecommendationTitle: 'Artikel-artikel lainnya yang direkomendasikan',
       seeAll: 'Lihat semua',
       home: 'Berita',
       currentPage: 'Halaman saat ini',
