@@ -101,6 +101,7 @@ const CpsRecommendations = ({
               dir={dir}
               labelId={labelId}
               columnType="main"
+              mobileDivider={false}
               overrideHeadingAs="strong"
               bar={false}
               backgroundColor={C_GHOST}
