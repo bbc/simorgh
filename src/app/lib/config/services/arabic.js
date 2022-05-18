@@ -18,7 +18,7 @@ export const service = {
   default: {
     lang: 'ar',
     articleAuthor: 'https://www.facebook.com/bbcnews',
-    articleTimestampPrefix: 'جدّد في',
+    articleTimestampPrefix: 'آخر تحديث',
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-arabic',
     atiAnalyticsProducerId: '5',
