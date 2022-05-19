@@ -96,7 +96,7 @@ describe('CpsRecommendations', () => {
 
     expect(skipLink.getAttribute('href')).toEqual('#end-of-recommendations');
     expect(skipLink.textContent).toEqual(
-      'Saltar Quizás también te interese y continuar leyendo',
+      'Saltar Recomendamos y continuar leyendo',
     );
   });
 
