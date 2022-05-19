@@ -127,6 +127,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
         lang={language}
         description={shortSynopsis}
         openGraphType="website"
+        hasAmpPage={false}
       />
       <LinkedData
         type="WebPage"
