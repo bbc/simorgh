@@ -8,10 +8,15 @@ const ServiceWorkerContainer = () => {
 
   useEffect(() => {
     const shouldInstallServiceWorker =
-      envIsProduction && swPath && onClient() && 'serviceWorker' in navigator;
+      swPath && onClient() && 'serviceWorker' in navigator;
 
     if (shouldInstallServiceWorker) {
-      navigator.serviceWorker.register(`/${service}${swPath}`);
+      navigator.serviceWorker.register(`/${service}${swPath}`).then((registration) => {
+            console.log('Service worker registration succeeded:', registration);
+          }, (error) => {
+            console.log('Service worker registration failed:', error);
+          }
+      );
     }
   }, [envIsProduction, swPath, service]);
 

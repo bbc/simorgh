@@ -45,7 +45,7 @@
     "cypress:3rdParty": "yarn cypress -- --project ./3rdPartyCypress/.",
     "cypress:adhoc": "yarn cypress:interactive -- --project ./AdHocCypress/.",
     "setupDevEnv": "cp envConfig/local.env .env && cat envConfig/secret.env >> .env || echo 'You will not have access to topics'",
-    "dev": "yarn setupDevEnv && rm -rf build && run-p webpack:dev:client webpack:dev:server",
+    "dev": "yarn setupDevEnv && run-p webpack:dev:client webpack:dev:server",
     "lighthouse": "./scripts/lighthouseRun.sh",
     "postshrinkwrap": "test -z $CI && ./scripts/packagelockHttps.sh; git update-index --assume-unchanged .env",
     "prepare": "husky install",

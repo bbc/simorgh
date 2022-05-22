@@ -55,7 +55,7 @@ const Image = props => {
     <Wrapper>
       <ImagePlaceholder ratio={56.25}>
         <picture>
-          {isWebPSupported && (
+          {isWebPSupported && false && (
             <source
               srcSet={createSrcSet(src, '.webp')}
               type="image/webp"
