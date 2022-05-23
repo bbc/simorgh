@@ -29,8 +29,13 @@ const rankTranslationScript = (endpoint, service) => {
         throw new Error("Empty records from mostread endpoint");
       }
 
-      data.records.forEach((item, index) => 
-        item.rankTranslation = translations[index+1]);    
+      data.records.forEach((item, index) => {
+        item.rankTranslation = translations[index+1];
+
+        if (!item.promo.headlines.shortHeadline) {
+          item.promo.headlines.shortHeadline = item.promo.headlines.seoHeadline;
+        }
+      });
 
       return data;
     } catch(error){
