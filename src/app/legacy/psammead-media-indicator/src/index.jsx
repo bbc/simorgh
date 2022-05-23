@@ -6,7 +6,7 @@ import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
 import { getMinion } from '#legacy/gel-foundations/src/typography';
 import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
 import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
-import { mediaIcons } from '#legacy/psammead-assets/src/svgs';
+import mediaIcons from '#legacy/psammead-assets/src/svgs/mediaIcons';
 
 const StyledMediaIndicator = styled.div`
   color: ${C_EBON};

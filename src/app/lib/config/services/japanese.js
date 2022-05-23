@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
 import noAscendersOrDescenders from '#legacy/gel-foundations/src/scripts/no-ascenders-or-descenders';
-import { japanese as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import brandSVG from '#legacy/psammead-assets/src/svgs/japanese';
 import '#legacy/moment-timezone-include/tz/Asia/Tokyo';
 import 'moment/locale/ja';
 import withContext from '../../../contexts/utils/withContext';

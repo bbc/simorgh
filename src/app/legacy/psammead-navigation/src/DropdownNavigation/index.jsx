@@ -2,7 +2,7 @@ import React, { cloneElement, useRef } from 'react';
 import styled from '@emotion/styled';
 import { shape, string, bool, func, oneOf, node } from 'prop-types';
 import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
-import { navigationIcons } from '#legacy/psammead-assets/src/svgs';
+import navigationIcons from '#legacy/psammead-assets/src/svgs/navigationIcons';
 import { C_WHITE, C_EBON, C_SHADOW } from '#legacy/psammead-styles/src/colours';
 import {
   GEL_SPACING_HLF,

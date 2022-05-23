@@ -2,7 +2,7 @@ import React from 'react';
 import { string } from 'prop-types';
 import omit from 'ramda/src/omit';
 import styled from '@emotion/styled';
-import { mediaIcons } from '#legacy/psammead-assets/src/svgs';
+import mediaIcons from '#legacy/psammead-assets/src/svgs/mediaIcons';
 import { getMinion } from '#legacy/gel-foundations/src/typography';
 import { C_EBON, C_WHITE } from '#legacy/psammead-styles/src/colours';
 import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
