@@ -6504,7 +6504,23 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/serbian/lat/new_topics/c06g871g3knt'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/serbian/lat/new_topics/c06g871g3knt'],
+            enabled: false,
+          },
+          local: {
+            paths: [''],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
