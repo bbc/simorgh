@@ -1,23 +1,40 @@
-import envConfig from '../../../support/config/envs';
-
-export default ({ service, pageType }) => {
+export default ({ service, pageType, variant }) => {
+  let topicId;
+  let variantTopicId;
+  let topicTitle;
+  let firstItemHeadline;
+  let pageCount;
+  let numberOfItems;
+  let appendVariant = '';
+  const scriptSwitchServices = ['serbian', 'ukchina', 'zhongwen'];
+  let otherVariant;
   describe(`Tests for ${service} ${pageType}`, () => {
-    let topicId;
-    let firstItemHeadline;
-    let pageCount;
-
     beforeEach(() => {
-      const currentpath = Cypress.env('currentPath');
-      cy.log(currentpath);
+      cy.log(Cypress.env('currentPath'));
+      cy.log(service);
 
       // eslint-disable-next-line prefer-destructuring
-      topicId = currentpath.split('topics/').pop().split('?')[0];
+      topicId = Cypress.env('currentPath').split('topics/').pop().split('?')[0];
+
+      if (scriptSwitchServices.includes(service)) {
+        appendVariant = `&variant=${variant}`;
+        if (service === 'serbian') {
+          otherVariant = variant === 'lat' ? 'cyr' : 'lat';
+        }
+        if (service === 'ukchina' || service === 'zhongwen') {
+          otherVariant = variant === 'simp' ? 'trad' : 'simp';
+        }
+      }
 
       // Gets the topic page data for all the tests
       cy.request(
-        `https://web-cdn.api.bbci.co.uk/fd/simorgh-bff?id=${topicId}&service=${service}`,
+        `https://web-cdn.api.bbci.co.uk/fd/simorgh-bff?id=${topicId}&service=${service}${appendVariant}`,
       ).then(({ body }) => {
+        topicTitle = body.data.title;
+        variantTopicId = body.data.variantTopicId;
         pageCount = body.data.pageCount;
+        numberOfItems = body.data.summaries.length;
+        firstItemHeadline = body.data.summaries[0].title;
       });
       cy.log(`topic id ${topicId}`);
     });
@@ -115,49 +132,58 @@ export default ({ service, pageType }) => {
         }
       });
     });
+    describe(`Script switch`, () => {
+      it('Pages with 2 scripts should have a script switch button with correct other variant', () => {
+        if (scriptSwitchServices.includes(service)) {
+          cy.get(`[data-variant="${otherVariant}"]`).should('be.visible');
+        } else {
+          cy.log('Not a script switch service');
+        }
+        cy.log(Cypress.env('currentPath'));
+      });
+      it('Script switch button switches the script', () => {
+        if (scriptSwitchServices.includes(service)) {
+          // clicks script switch
+          cy.get(`[data-variant="${otherVariant}"]`).click();
+          // URL contains correct variant after click
+          cy.url().should('contain', otherVariant);
+          // URL contains the correct topic ID
+          cy.url().should('contain', variantTopicId);
+
+          // clicks script switch
+          cy.get(`[data-variant="${variant}"]`).click();
+          // URL contains correct variant after click
+          cy.url().should('contain', variant);
+          // URL contains the correct topic ID
+          cy.url().should('contain', topicId);
+        } else {
+          cy.log('Not a script switch service');
+        }
+      });
+    });
     describe(`Page content`, () => {
       it('should render a H1, which contains/displays topic title', () => {
-        const currentpath = Cypress.env('currentPath');
-        cy.log(currentpath);
+        cy.log(Cypress.env('currentPath'));
 
-        cy.request(`${envConfig.bffUrl}?id=${topicId}&service=${service}`).then(
-          ({ body }) => {
-            cy.log(body);
-
-            cy.get('h1').should('contain', body.data.title);
-          },
-        );
+        cy.get('h1').should('contain', topicTitle);
       });
       it('should render the correct number of items', () => {
-        cy.request(
-          `https://web-cdn.api.bbci.co.uk/fd/simorgh-bff?id=${topicId}&service=${service}`,
-        ).then(({ body }) => {
-          cy.log(body);
-          // Gets expected number of articles in the topic on this page
-          const numberOfItems = body.data.summaries.length;
-          cy.log(numberOfItems);
-          // Checks number of items on page
-          cy.get('[data-testid="topic-promos"]')
-            .children()
-            .its('length')
-            .should('eq', numberOfItems);
-        });
+        cy.log(numberOfItems);
+        // Checks number of items on page
+        cy.get('[data-testid="topic-promos"]')
+          .children()
+          .its('length')
+          .should('eq', numberOfItems);
       });
       it('First item has correct headline', () => {
-        cy.request(
-          `https://web-cdn.api.bbci.co.uk/fd/simorgh-bff?id=${topicId}&service=${service}`,
-        ).then(({ body }) => {
-          // Gets the headline from 'title' of first item
-          firstItemHeadline = body.data.summaries[0].title;
-          cy.log(firstItemHeadline);
-          // Goes down into the first item's h2 text and compares to title
-          cy.get('[data-testid="topic-promos"]')
-            .children()
-            .first()
-            .within(() => {
-              cy.get('h2').should('have.text', firstItemHeadline);
-            });
-        });
+        cy.log(firstItemHeadline);
+        // Goes down into the first item's h2 text and compares to title
+        cy.get('[data-testid="topic-promos"]')
+          .children()
+          .first()
+          .within(() => {
+            cy.get('h2').should('have.text', firstItemHeadline);
+          });
       });
       it('Clicking the first item should navigate to the correct page (goes to live article)', () => {
         // Goes down into the first item's href

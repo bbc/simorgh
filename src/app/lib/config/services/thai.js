@@ -67,6 +67,8 @@ export const service = {
       ads: {
         advertisementLabel: 'โฆษณา',
       },
+      recommendationTitle: 'เรื่องแนะนำ',
+      splitRecommendationTitle: 'เรื่่องแนะนำอื่น ๆ',
       seeAll: 'ดูทั้งหมด',
       home: 'หน้าแรก',
       currentPage: 'หน้าปัจจุบัน',

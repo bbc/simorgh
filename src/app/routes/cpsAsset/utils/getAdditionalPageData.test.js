@@ -6,10 +6,13 @@ import fetchMock from 'fetch-mock';
 // mock data
 import mapJson from '#data/pidgin/cpsAssets/media-23256549.json';
 import styJson from '#data/mundo/cpsAssets/23263889.json';
+import cspJson from '#data/news/cpsAssets/business-55345826.json';
 import noRecommendationsStyJson from '#data/pidgin/cpsAssets/world-23252817.json';
 import mostReadJson from '#data/mundo/mostRead/index.json';
+import cspMostReadJson from '#data/news/mostRead/index.json';
 import mostWatchedJson from '#data/pidgin/mostWatched/index.json';
 import secondaryColumnJson from '#data/mundo/secondaryColumn/index.json';
+import cspSecondaryColumnJson from '#data/news/secondaryColumn/index.json';
 import recommendationsJson from '#data/mundo/recommendations/index.json';
 import hasRecommendations from './hasRecommendations';
 import getAdditionalPageData from './getAdditionalPageData';
@@ -91,5 +94,24 @@ describe('getAdditionalPageData', () => {
     });
 
     expect(additionalPageData).toEqual({});
+  });
+
+  it('should return additional data for a CSP asset', async () => {
+    fetchMock.mock('http://localhost/news/mostread.json', cspMostReadJson);
+    fetchMock.mock(
+      'http://localhost/news/sty-secondary-column.json',
+      cspSecondaryColumnJson,
+    );
+    const additionalPageData = await getAdditionalPageData({
+      pageData: cspJson,
+      service: 'news',
+      env: 'local',
+    });
+
+    const expectedOutput = {
+      mostRead: cspMostReadJson,
+      secondaryColumn: cspSecondaryColumnJson,
+    };
+    expect(additionalPageData).toEqual(expectedOutput);
   });
 });
