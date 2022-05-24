@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Simorgh",
   "main": "./src/client.js",
+  "sideEffects": [
+    "./src/app/legacy"
+  ],
   "resolutions": {
     "@babel/runtime": "7.17.9",
     "@emotion/serialize": "1.0.3",
