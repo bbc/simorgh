@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
 import devanagariAndGurmukhi from '#legacy/gel-foundations/src/scripts/devanagari-and-gurmukhi';
-import brandSVG from '#legacy/psammead-assets/src/svgs/punjabi';
+import { punjabi as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import '#legacy/psammead-locales/moment/pa-in';
 import '#legacy/moment-timezone-include/tz/Asia/Kolkata';
 import withContext from '../../../contexts/utils/withContext';

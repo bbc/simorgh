@@ -1,7 +1,7 @@
 import React from 'react';
 import { node } from 'prop-types';
 import styled from '@emotion/styled';
-import mediaIcons from '#legacy/psammead-assets/src/svgs/mediaIcons';
+import { mediaIcons } from '#legacy/psammead-assets/src/svgs';
 import { getPica } from '#legacy/gel-foundations/src/typography';
 import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
 import { GEL_SPACING_DBL } from '#legacy/gel-foundations/src/spacings';

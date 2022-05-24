@@ -1,5 +1,5 @@
 import { C_ARCHIVE_BLUE, C_WHITE } from '#legacy/psammead-styles/src/colours';
-import brandSVG from '#legacy/psammead-assets/src/svgs/archive';
+import { archive as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import cyrillicAndLatin from '#legacy/gel-foundations/src/scripts/latin-and-cyrillic';
 import {
   F_REITH_SANS_BOLD,

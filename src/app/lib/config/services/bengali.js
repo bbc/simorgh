@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
 import bengali from '#legacy/gel-foundations/src/scripts/bengali';
-import brandSVG from '#legacy/psammead-assets/src/svgs/bengali';
+import { bengali as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import {
   F_NOTO_SERIF_BENGALI_BOLD,
   F_NOTO_SERIF_BENGALI_REGULAR,

@@ -14,7 +14,7 @@ import {
   F_REITH_SERIF_MEDIUM_ITALIC,
   F_REITH_SERIF_LIGHT,
 } from '#legacy/psammead-styles/src/fonts';
-import brandSVG from '#legacy/psammead-assets/src/svgs/russian';
+import { russian as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import '#legacy/moment-timezone-include/tz/GMT';
 import '#legacy/psammead-locales/moment/ru';
 import withContext from '../../../contexts/utils/withContext';

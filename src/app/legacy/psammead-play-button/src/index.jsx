@@ -12,7 +12,7 @@ import {
 } from '#legacy/gel-foundations/src/spacings';
 import { GEL_MINION } from '#legacy/gel-foundations/src/typography';
 import { getSansBold } from '#legacy/psammead-styles/src/font-styles';
-import mediaIcons from '#legacy/psammead-assets/src/svgs/mediaIcons';
+import { mediaIcons } from '#legacy/psammead-assets/src/svgs';
 import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
 
 const GEL_SPACING_DEC = '5rem';

@@ -2,8 +2,10 @@
 import React from 'react';
 import { bool } from 'prop-types';
 import { C_LUNAR, C_SHADOW } from '#legacy/psammead-styles/src/colours';
-import BBC_BLOCKS from '#legacy/psammead-assets/src/svgs/bbcBlocks';
-import BBC_BLOCKS_DARK_MODE from '#legacy/psammead-assets/src/svgs/bbcBlocksDarkMode';
+import {
+  BBC_BLOCKS,
+  BBC_BLOCKS_DARK_MODE,
+} from '#legacy/psammead-assets/src/svgs';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,

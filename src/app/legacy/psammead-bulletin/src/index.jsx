@@ -26,7 +26,7 @@ import {
   getGreatPrimer,
   getLongPrimer,
 } from '#legacy/gel-foundations/src/typography';
-import mediaIcons from '#legacy/psammead-assets/src/svgs/mediaIcons';
+import { mediaIcons } from '#legacy/psammead-assets/src/svgs';
 import LiveLabel from '#legacy/psammead-live-label/src';
 import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
 import { Link } from '#legacy/psammead-story-promo/src';

@@ -4,7 +4,7 @@ import {
   C_SPORT_YELLOW_30,
   C_BLACK,
 } from '#legacy/psammead-styles/src/colours';
-import brandSVG from '#legacy/psammead-assets/src/svgs/sport';
+import { sport as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import cyrillicAndLatin from '#legacy/gel-foundations/src/scripts/latin-and-cyrillic';
 import {
   F_REITH_SANS_BOLD,

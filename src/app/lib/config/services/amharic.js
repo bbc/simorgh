@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
 import noAscendersOrDescenders from '#legacy/gel-foundations/src/scripts/no-ascenders-or-descenders';
-import brandSVG from '#legacy/psammead-assets/src/svgs/amharic';
+import { amharic as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import {
   F_NOTO_SANS_ETHIOPIC_BOLD,
   F_NOTO_SANS_ETHIOPIC_REGULAR,

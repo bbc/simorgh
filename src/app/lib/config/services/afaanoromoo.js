@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
 import cyrillicAndLatin from '#legacy/gel-foundations/src/scripts/latin-and-cyrillic';
-import brandSVG from '#legacy/psammead-assets/src/svgs/afaanoromoo';
+import { afaanoromoo as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import '#legacy/moment-timezone-include/tz/Africa/Addis_Ababa';
 import '#legacy/psammead-locales/moment/om';
 import withContext from '../../../contexts/utils/withContext';

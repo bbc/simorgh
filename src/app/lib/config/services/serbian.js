@@ -6,7 +6,7 @@ import {
 } from '#legacy/psammead-styles/src/colours';
 import latinDiacritics from '#legacy/gel-foundations/src/scripts/latin-with-diacritics';
 import cyrillicAndLatin from '#legacy/gel-foundations/src/scripts/latin-and-cyrillic';
-import brandSVG from '#legacy/psammead-assets/src/svgs/serbian';
+import { serbian as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import '#legacy/moment-timezone-include/tz/GMT';
 import '#legacy/psammead-locales/moment/sr-cyrl';
 import '#legacy/psammead-locales/moment/sr';
