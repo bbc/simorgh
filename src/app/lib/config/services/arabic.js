@@ -18,7 +18,7 @@ export const service = {
   default: {
     lang: 'ar',
     articleAuthor: 'https://www.facebook.com/bbcnews',
-    articleTimestampPrefix: 'جدّد في',
+    articleTimestampPrefix: 'آخر تحديث',
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-arabic',
     atiAnalyticsProducerId: '5',
@@ -91,7 +91,8 @@ export const service = {
       ads: {
         advertisementLabel: 'إعلان',
       },
-      recommendationTitle: 'مواضيع قد تهمك',
+      recommendationTitle: 'قصص مقترحة',
+      splitRecommendationTitle: 'مزيد من القصص المقترحة',
       seeAll: 'المزيد',
       home: 'الرئيسية',
       currentPage: 'الصفحة الحالية',

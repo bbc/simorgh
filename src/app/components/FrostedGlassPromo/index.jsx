@@ -86,6 +86,10 @@ const LazyloadPlaceholder = styled.div`
   padding-bottom: ${GEL_SPACING_DBL};
 `;
 
+const LazyloadWrapper = styled(Lazyload)`
+  height: 100%;
+`;
+
 const FrostedGlassPromo = ({
   image,
   children,
@@ -154,7 +158,7 @@ const FrostedGlassPromo = ({
           image,
         )}
       />
-      <Lazyload
+      <LazyloadWrapper
         offset={PANEL_OFFSET}
         once
         placeholder={
@@ -174,7 +178,7 @@ const FrostedGlassPromo = ({
         >
           {promoText}
         </FrostedGlassPanel>
-      </Lazyload>
+      </LazyloadWrapper>
     </Wrapper>
   );
 };

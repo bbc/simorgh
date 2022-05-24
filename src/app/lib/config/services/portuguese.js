@@ -98,7 +98,8 @@ export const service = {
       ads: {
         advertisementLabel: 'Publicidade',
       },
-      recommendationTitle: 'Talvez também te interesse',
+      recommendationTitle: 'Matérias recomendadas',
+      splitRecommendationTitle: 'Mais matérias recomendadas',
       seeAll: 'Ver todos',
       home: 'Início',
       currentPage: 'Página atual',

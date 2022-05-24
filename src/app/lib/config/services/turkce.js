@@ -76,7 +76,8 @@ export const service = {
       ads: {
         advertisementLabel: 'Reklam',
       },
-      recommendationTitle: 'Bunlar da ilginizi çekebilir',
+      recommendationTitle: 'Önerilen hikayeler',
+      splitRecommendationTitle: 'Daha fazla önerilen hikaye',
       seeAll: 'Hepsini görüntüle',
       home: 'Ana sayfa',
       currentPage: 'Bulunduğunuz sayfa',

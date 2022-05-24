@@ -318,12 +318,12 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
         dir="ltr"
       >
         <a
-          aria-labelledby="bulletin-TestRadioBulletinpromo"
+          aria-labelledby="bulletin-TestRadioBulletinpromonews"
           class="emotion-10 emotion-11"
           href="https://www.bbc.co.uk/news"
         >
           <span
-            id="bulletin-TestRadioBulletinpromo"
+            id="bulletin-TestRadioBulletinpromonews"
             role="text"
           >
             <span
@@ -702,12 +702,12 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
         dir="ltr"
       >
         <a
-          aria-labelledby="bulletin-TestTVBulletinpromo"
+          aria-labelledby="bulletin-TestTVBulletinpromonews"
           class="emotion-10 emotion-11"
           href="https://www.bbc.co.uk/news"
         >
           <span
-            id="bulletin-TestTVBulletinpromo"
+            id="bulletin-TestTVBulletinpromonews"
             role="text"
           >
             <span
@@ -1071,12 +1071,12 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
         dir="ltr"
       >
         <a
-          aria-labelledby="bulletin-TestRadioBulletinpromo"
+          aria-labelledby="bulletin-TestRadioBulletinpromonews"
           class="emotion-10 emotion-11"
           href="https://www.bbc.co.uk/news"
         >
           <span
-            id="bulletin-TestRadioBulletinpromo"
+            id="bulletin-TestRadioBulletinpromonews"
             role="text"
           >
             <span
@@ -1440,12 +1440,12 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
         dir="ltr"
       >
         <a
-          aria-labelledby="bulletin-TestTVBulletinpromo"
+          aria-labelledby="bulletin-TestTVBulletinpromonews"
           class="emotion-10 emotion-11"
           href="https://www.bbc.co.uk/news"
         >
           <span
-            id="bulletin-TestTVBulletinpromo"
+            id="bulletin-TestTVBulletinpromonews"
             role="text"
           >
             <span
@@ -1806,12 +1806,12 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
         dir="ltr"
       >
         <a
-          aria-labelledby="bulletin-TestTVBulletinpromo"
+          aria-labelledby="bulletin-TestTVBulletinpromonews"
           class="emotion-10 emotion-11"
           href="https://www.bbc.co.uk/news"
         >
           <span
-            id="bulletin-TestTVBulletinpromo"
+            id="bulletin-TestTVBulletinpromonews"
             role="text"
           >
             <span
