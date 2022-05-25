@@ -6,6 +6,7 @@ import fetchMock from 'fetch-mock';
 // mock data
 import mapJson from '#data/pidgin/cpsAssets/media-23256549.json';
 import styJson from '#data/mundo/cpsAssets/23263889.json';
+import portugueseSty from '#data/portuguese/cpsAssets/brasil-59057279';
 import cspJson from '#data/news/cpsAssets/business-55345826.json';
 import noRecommendationsStyJson from '#data/pidgin/cpsAssets/world-23252817.json';
 import mostReadJson from '#data/mundo/mostRead/index.json';
@@ -113,5 +114,72 @@ describe('getAdditionalPageData', () => {
       secondaryColumn: cspSecondaryColumnJson,
     };
     expect(additionalPageData).toEqual(expectedOutput);
+  });
+
+  describe('Optimizely Experiments', () => {
+    describe('004_brasil_recommendations_experiment', () => {
+      beforeEach(() => {
+        process.env.RECOMMENDATIONS_ENDPOINT =
+          'https://onward-journeys.test.api.bbci.co.uk/api';
+      });
+
+      afterEach(() => {
+        delete process.env.RECOMMENDATIONS_ENDPOINT;
+      });
+
+      it('should recommendations data from camino, unirecs content and unirecs hybrid engine', async () => {
+        const expectedOutput = {
+          recommendations: recommendationsJson,
+          experimentRecommendations: {
+            unirecs_datalab_content: recommendationsJson,
+            unirecs_datalab_hybrid: recommendationsJson,
+          },
+        };
+
+        hasRecommendations.mockImplementationOnce(() => true);
+
+        fetchMock.mock(
+          'http://localhost/portuguese/brasil-59057279/recommendations.json',
+          recommendationsJson,
+        );
+        fetchMock.mock(
+          'https://onward-journeys.test.api.bbci.co.uk/api/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=content',
+          recommendationsJson,
+        );
+        fetchMock.mock(
+          'https://onward-journeys.test.api.bbci.co.uk/api/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=hybrid',
+          recommendationsJson,
+        );
+
+        const additionalPageData = await getAdditionalPageData({
+          pageData: portugueseSty,
+          service: 'portuguese',
+        });
+
+        expect(additionalPageData).toEqual(expectedOutput);
+      });
+
+      it('should not get recommendations data when hasRecommendations is false', async () => {
+        fetchMock.mock(
+          'http://localhost/portuguese/brasil-59057279/recommendations.json',
+          recommendationsJson,
+        );
+        fetchMock.mock(
+          'https://onward-journeys.test.api.bbci.co.uk/api/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=content',
+          recommendationsJson,
+        );
+        fetchMock.mock(
+          'https://onward-journeys.test.api.bbci.co.uk/api/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=hybrid',
+          recommendationsJson,
+        );
+
+        const additionalPageData = await getAdditionalPageData({
+          pageData: portugueseSty,
+          service: 'portuguese',
+        });
+
+        expect(additionalPageData).toEqual({});
+      });
+    });
   });
 });

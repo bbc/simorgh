@@ -4,7 +4,7 @@ import { StaticRouter } from 'react-router-dom';
 import deepClone from 'ramda/src/clone';
 
 // test helpers
-import { render, waitFor } from '@testing-library/react';
+import { render, waitFor, within } from '@testing-library/react';
 import assocPath from 'ramda/src/assocPath';
 import fetchMock from 'fetch-mock';
 
@@ -29,6 +29,11 @@ import russianSecondaryColumnData from '#data/russian/secondaryColumn/index.json
 import ukrainianInRussianPageData from '#data/ukrainian/cpsAssets/news-russian-23333960.json';
 import ukrainianSecondaryColumnData from '#data/ukrainian/secondaryColumn/index.json';
 import ukrainianMostReadData from '#data/ukrainian/mostRead/index.json';
+import portuguesePageData from '#data/portuguese/cpsAssets/brasil-54196636';
+import portugueseRecommendationData from '#data/portuguese/recommendations/index';
+import { OptimizelyExperiment } from '@optimizely/react-sdk';
+import mundoPageData from '#data/mundo/cpsAssets/noticias-56669604';
+import mundoRecommendationsData from '#data/mundo/recommendations/index';
 import russianPageDataWithoutInlinePromo from './fixtureData/russianPageDataWithoutPromo';
 import StoryPageIndex from '.';
 
@@ -68,6 +73,15 @@ jest.mock('#containers/ATIAnalytics/beacon', () => {
     __esModule: true,
     default: jest.fn(),
     sendEventBeacon: jest.fn(),
+  };
+});
+
+jest.mock('@optimizely/react-sdk', () => {
+  const actualModules = jest.requireActual('@optimizely/react-sdk');
+  return {
+    __esModule: true,
+    ...actualModules,
+    OptimizelyExperiment: jest.fn(),
   };
 });
 
@@ -172,6 +186,18 @@ describe('Story Page', () => {
   const appEnv = process.env.SIMORGH_APP_ENV;
   beforeEach(() => {
     process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
+    // 004_brasil_recommendations_experiment
+    OptimizelyExperiment.mockImplementation(props => {
+      const { children } = props;
+
+      const variation = null;
+
+      if (children != null && typeof children === 'function') {
+        return <>{children(variation, true, false)}</>;
+      }
+
+      return null;
+    });
   });
 
   afterEach(() => {
@@ -682,5 +708,317 @@ describe('Story Page', () => {
         'podcast-promo',
       ),
     );
+  });
+
+  describe('Optimizely Experiments', () => {
+    describe('004_brasil_recommendations_experiment', () => {
+      afterEach(() => {
+        delete process.env.RECOMMENDATIONS_ENDPOINT;
+        jest.clearAllMocks();
+      });
+
+      afterAll(() => {
+        jest.restoreAllMocks();
+      });
+
+      describe('control', () => {
+        beforeEach(() => {
+          process.env.RECOMMENDATIONS_ENDPOINT =
+            'https://onward-journeys.test.api.bbci.co.uk/api';
+          OptimizelyExperiment.mockImplementation(props => {
+            const { children } = props;
+
+            const variation = 'control';
+
+            if (children != null && typeof children === 'function') {
+              return <>{children(variation, true, false)}</>;
+            }
+
+            return null;
+          });
+        });
+
+        it('should fetch and render recommendations from current endpoint when variation is control and service is portuguese', async () => {
+          const toggles = {
+            cpsRecommendations: {
+              enabled: true,
+            },
+            eventTracking: {
+              enabled: true,
+            },
+          };
+
+          const recommendationsEndpoint =
+            'http://localhost/portuguese/brasil-54196636/recommendations.json';
+
+          fetchMock.mock(
+            'http://localhost/some-cps-sty-path.json',
+            portuguesePageData,
+          );
+          fetchMock.mock(recommendationsEndpoint, portugueseRecommendationData);
+
+          const { pageData } = await getInitialData({
+            path: '/some-cps-sty-path',
+            service: 'portuguese',
+            pageType,
+          });
+
+          const { getAllByRole } = render(
+            <Page pageData={pageData} service="portuguese" toggles={toggles} />,
+          );
+
+          const [recommendationsRegions] = getAllByRole('region').filter(
+            item =>
+              item.getAttribute('aria-labelledby') ===
+              'recommendations-heading',
+          );
+
+          const recommendationsItems = within(
+            recommendationsRegions,
+          ).getAllByRole('listitem');
+
+          expect(fetchMock.calls()[1][0]).toBe(recommendationsEndpoint);
+          expect(recommendationsRegions).not.toBeNull();
+          expect(recommendationsItems).toHaveLength(4);
+        });
+      });
+
+      describe('variation_1', () => {
+        beforeEach(() => {
+          process.env.RECOMMENDATIONS_ENDPOINT =
+            'https://onward-journeys.test.api.bbci.co.uk/api';
+          OptimizelyExperiment.mockImplementation(props => {
+            const { children } = props;
+
+            const variation = 'variation_1';
+
+            if (children != null && typeof children === 'function') {
+              return <>{children(variation, true, false)}</>;
+            }
+
+            return null;
+          });
+        });
+
+        it('should fetch and render recommendations from datalab content variant endpoint when variation is variation_1 and service is portuguese', async () => {
+          const toggles = {
+            cpsRecommendations: {
+              enabled: true,
+            },
+            eventTracking: {
+              enabled: true,
+            },
+          };
+
+          const recommendationsEndpoint =
+            'https://onward-journeys.test.api.bbci.co.uk/api/recommendations/portuguese/brasil-54196636?Engine=unirecs_datalab&EngineVariant=content';
+
+          fetchMock.mock(
+            'http://localhost/some-cps-sty-path.json',
+            portuguesePageData,
+          );
+
+          fetchMock.mock(recommendationsEndpoint, portugueseRecommendationData);
+
+          const { pageData } = await getInitialData({
+            path: '/some-cps-sty-path',
+            service: 'portuguese',
+            pageType,
+          });
+
+          const { getAllByRole } = render(
+            <Page pageData={pageData} service="portuguese" toggles={toggles} />,
+          );
+
+          const [recommendationsRegions] = getAllByRole('region').filter(
+            item =>
+              item.getAttribute('aria-labelledby') ===
+              'recommendations-heading',
+          );
+
+          const recommendationsItems = within(
+            recommendationsRegions,
+          ).getAllByRole('listitem');
+
+          expect(fetchMock.calls()[1][0]).toBe(recommendationsEndpoint);
+          expect(recommendationsRegions).not.toBeNull();
+          expect(recommendationsItems).toHaveLength(4);
+        });
+      });
+
+      describe('variation_3', () => {
+        beforeEach(() => {
+          process.env.RECOMMENDATIONS_ENDPOINT =
+            'https://onward-journeys.test.api.bbci.co.uk/api';
+          OptimizelyExperiment.mockImplementation(props => {
+            const { children } = props;
+
+            const variation = 'variation_3';
+
+            if (children != null && typeof children === 'function') {
+              return <>{children(variation, true, false)}</>;
+            }
+
+            return null;
+          });
+        });
+
+        it('should fetch and render recommendations from datalab hybrid variant endpoint when variation is variation_3 and service is portuguese', async () => {
+          const toggles = {
+            cpsRecommendations: {
+              enabled: true,
+            },
+            eventTracking: {
+              enabled: true,
+            },
+          };
+
+          const recommendationsEndpoint =
+            'https://onward-journeys.test.api.bbci.co.uk/api/recommendations/portuguese/brasil-54196636?Engine=unirecs_datalab&EngineVariant=hybrid';
+
+          fetchMock.mock(
+            'http://localhost/some-cps-sty-path.json',
+            portuguesePageData,
+          );
+
+          fetchMock.mock(recommendationsEndpoint, portugueseRecommendationData);
+
+          const { pageData } = await getInitialData({
+            path: '/some-cps-sty-path',
+            service: 'portuguese',
+            pageType,
+          });
+
+          const { getAllByRole } = render(
+            <Page pageData={pageData} service="portuguese" toggles={toggles} />,
+          );
+
+          const [recommendationsRegions] = getAllByRole('region').filter(
+            item =>
+              item.getAttribute('aria-labelledby') ===
+              'recommendations-heading',
+          );
+
+          const recommendationsItems = within(
+            recommendationsRegions,
+          ).getAllByRole('listitem');
+
+          expect(fetchMock.calls()[1][0]).toBe(recommendationsEndpoint);
+          expect(recommendationsRegions).not.toBeNull();
+          expect(recommendationsItems).toHaveLength(4);
+        });
+      });
+
+      it('should fetch and render recommendations from current endpoint when variation is null and service is not portuguese', async () => {
+        OptimizelyExperiment.mockImplementation(props => {
+          const { children } = props;
+
+          const variation = null;
+
+          if (children != null && typeof children === 'function') {
+            return <>{children(variation, true, false)}</>;
+          }
+
+          return null;
+        });
+
+        const toggles = {
+          cpsRecommendations: {
+            enabled: true,
+          },
+          eventTracking: {
+            enabled: true,
+          },
+        };
+
+        const recommendationsEndpoint =
+          'http://localhost/mundo/noticias-56669604/recommendations.json';
+
+        fetchMock.mock(
+          'http://localhost/some-cps-sty-path.json',
+          mundoPageData,
+        );
+
+        fetchMock.mock(recommendationsEndpoint, mundoRecommendationsData);
+
+        const { pageData } = await getInitialData({
+          path: '/some-cps-sty-path',
+          service: 'mundo',
+          pageType,
+        });
+
+        const { getAllByRole } = render(
+          <Page pageData={pageData} service="mundo" toggles={toggles} />,
+        );
+
+        const [recommendationsRegions] = getAllByRole('region').filter(
+          item =>
+            item.getAttribute('aria-labelledby') === 'recommendations-heading',
+        );
+
+        const recommendationsItems = within(
+          recommendationsRegions,
+        ).getAllByRole('listitem');
+
+        expect(fetchMock.calls()[1][0]).toBe(recommendationsEndpoint);
+        expect(recommendationsRegions).not.toBeNull();
+        expect(recommendationsItems).toHaveLength(4);
+      });
+
+      it('should fetch and render recommendations from current endpoint when variation is null and service is portuguese', async () => {
+        OptimizelyExperiment.mockImplementation(props => {
+          const { children } = props;
+
+          const variation = null;
+
+          if (children != null && typeof children === 'function') {
+            return <>{children(variation, true, false)}</>;
+          }
+
+          return null;
+        });
+
+        const toggles = {
+          cpsRecommendations: {
+            enabled: true,
+          },
+          eventTracking: {
+            enabled: true,
+          },
+        };
+
+        const recommendationsEndpoint =
+          'http://localhost/portuguese/brasil-54196636/recommendations.json';
+
+        fetchMock.mock(
+          'http://localhost/some-cps-sty-path.json',
+          portuguesePageData,
+        );
+        fetchMock.mock(recommendationsEndpoint, portugueseRecommendationData);
+
+        const { pageData } = await getInitialData({
+          path: '/some-cps-sty-path',
+          service: 'portuguese',
+          pageType,
+        });
+
+        const { getAllByRole } = render(
+          <Page pageData={pageData} service="portuguese" toggles={toggles} />,
+        );
+
+        const [recommendationsRegions] = getAllByRole('region').filter(
+          item =>
+            item.getAttribute('aria-labelledby') === 'recommendations-heading',
+        );
+
+        const recommendationsItems = within(
+          recommendationsRegions,
+        ).getAllByRole('listitem');
+
+        expect(fetchMock.calls()[1][0]).toBe(recommendationsEndpoint);
+        expect(recommendationsRegions).not.toBeNull();
+        expect(recommendationsItems).toHaveLength(4);
+      });
+    });
   });
 });

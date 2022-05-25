@@ -56,6 +56,8 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
+import { OptimizelyExperiment } from '@optimizely/react-sdk';
+import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 
@@ -197,11 +199,48 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     mpu: props =>
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
     wsoj: props => (
-      <CpsRecommendations
-        {...props}
-        parentColumns={gridColsMain}
-        items={recommendationsData}
-      />
+      <OptimizelyExperiment experiment={OPTIMIZELY_CONFIG.experimentId}>
+        {variation => {
+          if (variation === 'control' || !variation) {
+            return (
+              <CpsRecommendations
+                {...props}
+                parentColumns={gridColsMain}
+                items={recommendationsData}
+              />
+            );
+          }
+          if (variation === 'variation_1') {
+            const unirecsContentRecommendationData = path(
+              ['experimentRecommendations', 'unirecs_datalab_content'],
+              pageData,
+            );
+
+            return (
+              <CpsRecommendations
+                {...props}
+                parentColumns={gridColsMain}
+                items={unirecsContentRecommendationData}
+              />
+            );
+          }
+          if (variation === 'variation_3') {
+            const unirecsHybridRecommendationData = path(
+              ['experimentRecommendations', 'unirecs_datalab_hybrid'],
+              pageData,
+            );
+            return (
+              <CpsRecommendations
+                {...props}
+                parentColumns={gridColsMain}
+                items={unirecsHybridRecommendationData}
+              />
+            );
+          }
+
+          return null;
+        }}
+      </OptimizelyExperiment>
     ),
     disclaimer: props => (
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
