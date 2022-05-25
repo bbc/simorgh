@@ -120,7 +120,25 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
             });
           });
         });
-
+        it(`Most read list should contain hrefs`, () => {
+          cy.request(mostReadPath).then(({ body: mostReadJson }) => {
+            const mostReadRecords = mostReadJson.totalRecords;
+            cy.fixture(`toggles/${config[service].name}.json`).then(toggles => {
+              const mostReadIsEnabled = path(['mostRead', 'enabled'], toggles);
+              cy.log(
+                `Most read container toggle enabled? ${mostReadIsEnabled}`,
+              );
+              if (mostReadIsEnabled && mostReadRecords >= 5) {
+                cy.get('[data-e2e="most-read"]').scrollIntoView();
+                cy.get('[data-e2e="most-read"] > amp-list div')
+                  .next()
+                  .within(() => {
+                    cy.get('a').should('have.attr', 'href');
+                  });
+              }
+            });
+          });
+        });
         it('should not show most read list when data fetch fails', () => {
           cy.intercept(
             {
