@@ -4,7 +4,8 @@
   "description": "Simorgh",
   "main": "./src/client.js",
   "sideEffects": [
-    "./src/app/legacy"
+    "./src/app/legacy/moment-timezone-include/**/*.*",
+    "./src/app/legacy/psammead-locales/**/*.*"
   ],
   "resolutions": {
     "@babel/runtime": "7.17.9",
