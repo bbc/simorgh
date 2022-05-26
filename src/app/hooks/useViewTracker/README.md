@@ -2,17 +2,20 @@
 
 The `useViewTracker` hook handles:
 
-- tracking when an element is in view
-- sending the event to ATI
+- Tracking when an element is in view
+- Sending the event to ATI
+- Sending the event to Optimizely (If applicable)
 
 A view event is triggered when:
 
 - 50% of the element is in the viewport for more than 1 second
-- only once per element per page view
+- Only once per element per page view
 
 `useViewTracker` returns a ref that can be assigned to the DOM element you want to monitor for a view event. When a view event is triggered then the hook will send the event data to ATI.
 
 `useViewTracker` will only send 1 view event per hook initialisation. In other words, when visiting a page containing a component that is tracking views and a view event is logged, then it is only logged once (per page visit) no matter how many times the user scrolls the component in and out of view.
+
+A view event is also fired to Optimizely using the same mechanism, but only if the underlying props contain an optimizely object. This method was chosen due to the fact that we don't currently use Optimizely in all of our page types, and the usage of this hook can be found on some page types which don't have Optimizely, so if we imported the optimizely object directly in this hook, we would pollute those page type bundles with the 100KB+ of the Optimizely SDK library.
 
 ### Props
 
@@ -23,6 +26,7 @@ A view event is triggered when:
 | format            | string  | no       | Can be used to track things like the position of a promo e.g. `[CHD=promo::2]`                                                                                                                                       |
 | url               | string  | no       | The url of the page e.g. `https://www.bbc.com/mundo/noticias-america-latina-56989232`                                                                                                                                |
 | preventNavigation | boolean | no       | Use this if you need to perform any additional tasks after sending the click event by setting to `true` and awaiting the event handler callback. Ensure you redirect the user to their destination when you are done |
+| optimizely | object | no       | Need to provide this prop if event tracking is needed for Optimizely, the standard method is to consume the Optimizely context via React's `useContext` and imported from the Optimizely SDK `import { OptimizelyContext } from '@optimizely/react-sdk';`, the HOC `withOptimizelyProvider` needs to be located higher up in the component tree as well for this to work. |
 
 ### Usage
 
@@ -35,15 +39,12 @@ With this in mind, here are some examples of how you could setup view tracking f
 3. Log separate view events per component item viewed. Refer to the `Recommendations` component in the example below.
 
 ```jsx
-import React, { forwardRef } from 'react';
-import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
-import useViewTracker from '#hooks/useViewTracker';
+/*
+ * Example 1 - Log 1 view event when a component is viewed.
+ * In this example, one view event is triggered when the component is viewed.
+ */
 
 const Promo = () => {
-  /*
-   * Example 1 - Log 1 view event when a component is viewed.
-   * In this example, one view event is triggered when the component is viewed.
-   */
   const ref = useViewTracker({
     componentName: 'promo',
   });
@@ -55,13 +56,16 @@ const Promo = () => {
   );
 };
 
+/*
+ * Example 2 - Log 1 view event when any of the the component's containing items are viewed.
+ * In this example, by initialising the hook OUTSIDE of the `topStories` map
+ * callback function and assigning the single `ref` to multiple DOM elements, only
+ * one view event is logged even if all 3 story items are viewed.
+ */
+
+import { forwardRef } from 'react';
+
 const TopStories = () => {
-  /*
-   * Example 2 - Log 1 view event when any of the the component's containing items are viewed.
-   * In this example, by initialising the hook OUTSIDE of the `topStories` map
-   * callback function and assigning the single `ref` to multiple DOM elements, only
-   * one view event is logged even if all 3 story items are viewed.
-   */
   const ref = useViewTracker({
     componentName: 'top-stories',
   });
@@ -95,14 +99,17 @@ const TopStories = () => {
   );
 };
 
+/*
+ * Example 3 - Log separate view events per component item viewed.
+ * By initialising the hook INSIDE of the `recommendations` map
+ * callback function and assigning each ref to each DOM element,
+ * a view event is logged for each recommendation item viewed,
+ * which totals 3 view events in this example.
+ */
+
+import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
+
 const Recommendations = () => {
-  /*
-   * Example 3 - Log separate view events per component item viewed.
-   * By initialising the hook INSIDE of the `recommendations` map
-   * callback function and assigning each ref to each DOM element,
-   * a view event is logged for each recommendation item viewed,
-   * which totals 3 view events in this example.
-   */
   const recommendations = [
     {
       title: 'Recommendation 1',
@@ -140,7 +147,7 @@ const Recommendations = () => {
 
 const ArticlePage = ({ pageData }) => {
   /*
-   * EventTrackingContextProvider must wrapper all instances of useViewTracker
+   * EventTrackingContextProvider must wrap all instances of useViewTracker
    */
   return (
     <EventTrackingContextProvider pageData={pageData}>
@@ -152,5 +159,33 @@ const ArticlePage = ({ pageData }) => {
       <Recommendations />
     </EventTrackingContextProvider>
   );
+};
+
+/*
+ * Example 4 - Log 1 view event when a component is viewed for both ATI and Optimizely.
+ * In this example, one view event is triggered when the component is viewed.
+ */
+
+import { useContext } from 'react';
+import withOptimizelyProvider from '#app/containers/PageHandlers/withOptimizelyProvider';
+import { OptimizelyContext } from '@optimizely/react-sdk';
+
+const Promo = () => {
+  const { optimizely } = useContext(OptimizelyContext);
+  const ref = useViewTracker({
+    componentName: 'promo',
+    optimizely,
+  });
+
+  return (
+    <div ref={ref}>
+      <a href="promo-link">Promoted content</a>
+    </div>
+  );
+};
+
+const ArticlePage = () => {
+	const OptimizelyPromo = withOptimizelyProvider(Promo);
+	return OptimizelyPromo;
 };
 ```

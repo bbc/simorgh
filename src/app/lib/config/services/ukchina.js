@@ -89,7 +89,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853863',
+          href: 'https://www.bbc.co.uk/ukchina/send/u50853863',
           text: '联络BBC',
         },
         {
@@ -133,6 +133,11 @@ export const service = {
       variant: 'trad',
     },
     translations: {
+      pagination: {
+        previousPage: '前页',
+        nextPage: '后页',
+        pageXOfY: 'Page {x} 的 {y}',
+      },
       ads: {
         advertisementLabel: '广告',
       },
@@ -389,6 +394,11 @@ export const service = {
       variant: 'simp',
     },
     translations: {
+      pagination: {
+        previousPage: '前页',
+        nextPage: '后页',
+        pageXOfY: 'Page {x} 的 {y}',
+      },
       ads: {
         advertisementLabel: '廣告',
       },

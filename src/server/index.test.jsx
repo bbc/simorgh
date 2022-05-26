@@ -1334,7 +1334,7 @@ describe('Server', () => {
   });
 });
 
-describe('Server HTTP Headers', () => {
+describe('Server HTTP Headers - Status Endpoint', () => {
   let statusRequest;
 
   beforeAll(async () => {
@@ -1396,6 +1396,16 @@ describe('Server HTTP Headers', () => {
         'GNU Terry Pratchett',
       );
     });
+  });
+});
+
+describe('Server HTTP Headers - Page Endpoints', () => {
+  it(`should set a cache-control header`, async () => {
+    const { header } = await makeRequest('/mundo');
+
+    expect(header['cache-control']).toBe(
+      'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
+    );
   });
 });
 

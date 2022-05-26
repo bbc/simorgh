@@ -1690,6 +1690,7 @@ module.exports = () => ({
       mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
+      topicPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
@@ -5426,7 +5427,29 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: [
+              '/pidgin/topics/c95y35941vrt',
+              '/pidgin/topics/cnq68qvkjp1t', // One page only
+            ],
+            enabled: true,
+          },
+          test: {
+            paths: [
+              '/pidgin/topics/cqywjyzk2vyt',
+              '/pidgin/topics/cnq68qvkjp1t', // One page only
+            ],
+            enabled: true,
+          },
+          local: {
+            paths: ['/pidgin/topics/cnq68qvkjp1t'], // DO NOT ENABLE
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -6481,7 +6504,23 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/serbian/lat/new_topics/c06g871g3knt'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/serbian/lat/new_topics/c06g871g3knt'],
+            enabled: false,
+          },
+          local: {
+            paths: [''],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {

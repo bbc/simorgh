@@ -49,7 +49,7 @@ Object {
 exports[`Canonical On Demand T V Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "La xiriir BBC",
-  "url": "https://www.bbc.co.uk/send/u50853709",
+  "url": "https://www.bbc.co.uk/somali/send/u50853709",
 }
 `;
 

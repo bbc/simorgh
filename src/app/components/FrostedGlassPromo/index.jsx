@@ -2,32 +2,39 @@ import React, { useContext } from 'react';
 import { shape, node, string, number } from 'prop-types';
 import styled from '@emotion/styled';
 import pick from 'ramda/src/pick';
+import Lazyload from 'react-lazyload';
 
 import { getSerifRegular } from '@bbc/psammead-styles/font-styles';
 import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-import {
-  GEL_SPACING,
-  GEL_SPACING_HLF_TRPL,
-  GEL_SPACING_DBL,
-} from '@bbc/gel-foundations/spacings';
+import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import { C_WHITE, C_GREY_8 } from '@bbc/psammead-styles/colours';
 
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import FrostedGlassPanel from './FrostedGlassPanel';
 
 import ImageWithPlaceholder from '../../containers/ImageWithPlaceholder';
 
 import withData from './withData';
 
+const PANEL_OFFSET = 250;
+
 const Wrapper = styled.div`
-  display: inline-block;
   position: relative;
   width: 100%;
-  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   text-decoration: none;
   &:hover {
     a {
       text-decoration: underline;
+    }
+  }
+  &:visited {
+    a {
+      color: #e6e8ea;
     }
   }
 `;
@@ -53,18 +60,31 @@ const A = styled.a`
   display: inline-block;
   ${({ service }) => service && getSerifRegular(service)}
   text-decoration: none;
-  color: white;
+  color: ${({ isAmp }) => (isAmp ? 'black' : 'white')};
   font-size: 0.9375rem;
   line-height: 1.33;
-  margin: 0.625rem ${GEL_SPACING} 0 ${GEL_SPACING};
+  margin: 0.875rem ${GEL_SPACING} 0 ${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     font-size: 1rem;
     line-height: 1.25;
-    margin: ${GEL_SPACING_HLF_TRPL} ${GEL_SPACING_DBL} 0 ${GEL_SPACING_DBL};
+    margin: 0.875rem ${GEL_SPACING_DBL} 0 ${GEL_SPACING_DBL};
+  }
+  &:visited {
+    color: #e6e8ea;
   }
   &:focus {
     text-decoration: underline;
   }
+`;
+
+const LazyloadPlaceholder = styled.div`
+  background-color: ${({ isAmp }) => (isAmp ? C_WHITE : C_GREY_8)};
+  min-height: 100px;
+  padding-bottom: ${GEL_SPACING_DBL};
+`;
+
+const LazyloadWrapper = styled(Lazyload)`
+  height: 100%;
 `;
 
 const FrostedGlassPromo = ({
@@ -78,6 +98,8 @@ const FrostedGlassPromo = ({
   paletteSize,
 }) => {
   const { script, service } = useContext(ServiceContext);
+  const { isAmp } = useContext(RequestContext);
+  const isCanonical = !isAmp;
 
   const clickTracker = useClickTrackerHandler({
     ...(eventTrackingData || {}),
@@ -85,6 +107,23 @@ const FrostedGlassPromo = ({
   });
 
   const onClick = eventTrackingData ? clickTracker : () => {};
+
+  const promoText = (
+    <>
+      <H3>
+        <A
+          script={script}
+          service={service}
+          href={url}
+          onClick={onClick}
+          isAmp={isAmp}
+        >
+          {children}
+        </A>
+      </H3>
+      {footer}
+    </>
+  );
 
   // The ClickableArea component is an anchor ("a") element
   // Anchors cannot be self-closing under the HTML spec
@@ -98,7 +137,8 @@ const FrostedGlassPromo = ({
         tabIndex="-1"
       ></ClickableArea>
       <ImageWithPlaceholder
-        darkMode
+        lazyLoad
+        darkMode={isCanonical}
         {...pick(
           [
             'src',
@@ -115,18 +155,27 @@ const FrostedGlassPromo = ({
           image,
         )}
       />
-      <FrostedGlassPanel
-        image={image.smallSrc || image.src}
-        minimumContrast={minimumContrast}
-        paletteSize={paletteSize}
+      <LazyloadWrapper
+        offset={PANEL_OFFSET}
+        once
+        placeholder={
+          // Placeholder always gets rendered on AMP
+          <LazyloadPlaceholder
+            data-testid="frosted-glass-lazyload-placeholder"
+            isAmp={isAmp}
+          >
+            {promoText}
+          </LazyloadPlaceholder>
+        }
       >
-        <H3>
-          <A script={script} service={service} href={url} onClick={onClick}>
-            {children}
-          </A>
-        </H3>
-        {footer}
-      </FrostedGlassPanel>
+        <FrostedGlassPanel
+          image={image.src}
+          minimumContrast={minimumContrast}
+          paletteSize={paletteSize}
+        >
+          {promoText}
+        </FrostedGlassPanel>
+      </LazyloadWrapper>
     </Wrapper>
   );
 };
@@ -135,7 +184,7 @@ const FrostedGlassPromo = ({
 // It uses a withData HoC to convert the prop to a standardised schema
 // This array is the list of props that should just be passed straight through
 // to the component, without requiring any preprocessing
-const propsToPassThrough = ['minimumContrast', 'paletteSize'];
+const propsToPassThrough = ['minimumContrast', 'paletteSize', 'isAmp'];
 
 FrostedGlassPromo.propTypes = {
   children: node.isRequired,

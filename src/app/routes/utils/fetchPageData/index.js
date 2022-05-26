@@ -37,6 +37,7 @@ const fetchPageData = async ({
   ...loggerArgs
 }) => {
   const url = path.startsWith('http') ? path : getUrl(path);
+
   const effectiveTimeout = timeout || PRIMARY_DATA_TIMEOUT;
   const fetchOptions = {
     headers: {

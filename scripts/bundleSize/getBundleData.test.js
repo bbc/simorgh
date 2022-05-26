@@ -98,38 +98,45 @@ describe('getPageBundleData', () => {
             Object {
               "name": "modern.commons-1111.js",
               "size": 10,
+              "sizeInBytes": 10000,
             },
             Object {
               "name": "modern.commons-2222.js",
               "size": 10,
+              "sizeInBytes": 10000,
             },
           ],
           "framework": Array [
             Object {
               "name": "modern.framework-1111.js",
               "size": 10,
+              "sizeInBytes": 10000,
             },
           ],
           "lib": Array [
             Object {
               "name": "modern.1111-lib-1111.js",
               "size": 10,
+              "sizeInBytes": 10000,
             },
           ],
           "main": Array [
             Object {
               "name": "modern.main-d0ae3f07.8d44cc89.js",
               "size": 10,
+              "sizeInBytes": 10000,
             },
             Object {
               "name": "modern.main-f71cff67.a1021a9a.js",
               "size": 10,
+              "sizeInBytes": 10000,
             },
           ],
           "page": Array [
             Object {
               "name": "modern.PhotoGalleryPage-e94df663.a733283a.js",
               "size": 10,
+              "sizeInBytes": 10000,
             },
           ],
           "pageName": "PhotoGalleryPage",
@@ -137,13 +144,16 @@ describe('getPageBundleData', () => {
             Object {
               "name": "modern.shared-1111.js",
               "size": 10,
+              "sizeInBytes": 10000,
             },
             Object {
               "name": "modern.shared-3333.js",
               "size": 10,
+              "sizeInBytes": 10000,
             },
           ],
           "totalSize": 90,
+          "totalSizeInBytes": 90000,
         },
       ]
     `);
@@ -161,38 +171,45 @@ describe('getPageBundleData', () => {
             Object {
               "name": "modern.commons-1111.js",
               "size": 10,
+              "sizeInBytes": 10000,
             },
           ],
           "framework": Array [
             Object {
               "name": "modern.framework-1111.js",
               "size": 10,
+              "sizeInBytes": 10000,
             },
           ],
           "lib": Array [
             Object {
               "name": "modern.1111-lib-1111.js",
               "size": 10,
+              "sizeInBytes": 10000,
             },
             Object {
               "name": "modern.3333-lib-2222.js",
               "size": 10,
+              "sizeInBytes": 10000,
             },
           ],
           "main": Array [
             Object {
               "name": "modern.main-d0ae3f07.8d44cc89.js",
               "size": 10,
+              "sizeInBytes": 10000,
             },
             Object {
               "name": "modern.main-f71cff67.a1021a9a.js",
               "size": 10,
+              "sizeInBytes": 10000,
             },
           ],
           "page": Array [
             Object {
               "name": "modern.OnDemandTvPage-31ecd969.de41ab7f.js",
               "size": 10,
+              "sizeInBytes": 10000,
             },
           ],
           "pageName": "OnDemandTvPage",
@@ -200,9 +217,11 @@ describe('getPageBundleData', () => {
             Object {
               "name": "modern.shared-1111.js",
               "size": 10,
+              "sizeInBytes": 10000,
             },
           ],
           "totalSize": 80,
+          "totalSizeInBytes": 80000,
         },
       ]
     `);

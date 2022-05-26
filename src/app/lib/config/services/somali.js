@@ -59,6 +59,12 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        page: 'Bog',
+        previousPage: 'Biggii Hore',
+        nextPage: 'Bogga Xiga',
+        pageXOfY: 'Bog {x} of {y}',
+      },
       ads: {
         advertisementLabel: 'Xayeysiin',
       },
@@ -303,7 +309,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853709',
+          href: 'https://www.bbc.co.uk/somali/send/u50853709',
           text: 'La xiriir BBC',
         },
         {

@@ -72,6 +72,11 @@ export const service = {
       },
     },
     translations: {
+      pagination: {
+        previousPage: 'Subira inyuma',
+        nextPage: 'Ibikurikira',
+        pageXOfY: 'Page {x} ya {y}',
+      },
       ads: {
         advertisementLabel: 'Kwamamaza',
       },
@@ -307,7 +312,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853291',
+          href: 'https://www.bbc.co.uk/gahuza/send/u50853291',
           text: 'Vugana na BBC',
         },
         {

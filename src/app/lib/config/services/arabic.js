@@ -18,7 +18,7 @@ export const service = {
   default: {
     lang: 'ar',
     articleAuthor: 'https://www.facebook.com/bbcnews',
-    articleTimestampPrefix: 'جدّد في',
+    articleTimestampPrefix: 'آخر تحديث',
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-arabic',
     atiAnalyticsProducerId: '5',
@@ -82,10 +82,17 @@ export const service = {
       },
     },
     translations: {
+      pagination: {
+        page: 'صفحة',
+        previousPage: 'السابق',
+        nextPage: 'التالي',
+        pageXOfY: 'صفحة {x} من {y}',
+      },
       ads: {
         advertisementLabel: 'إعلان',
       },
-      recommendationTitle: 'مواضيع قد تهمك',
+      recommendationTitle: 'قصص مقترحة',
+      splitRecommendationTitle: 'مزيد من القصص المقترحة',
       seeAll: 'المزيد',
       home: 'الرئيسية',
       currentPage: 'الصفحة الحالية',
@@ -288,7 +295,7 @@ export const service = {
       hasRadioSchedule: true,
       frequenciesPageUrl: '/arabic/tv-and-radio-57895092',
       frequenciesPageLabel: 'استقبال البث',
-      header: 'أحدث نشرة أخبار',
+      header: 'البث الإذاعي',
       durationLabel: 'المدة %duration%',
     },
     recommendations: {
@@ -325,7 +332,7 @@ export const service = {
           text: 'ملفات الارتباط Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853203',
+          href: 'https://www.bbc.co.uk/arabic/send/u50853203',
           text: 'اتصل بـ بي بي سي',
         },
         {
@@ -376,6 +383,10 @@ export const service = {
       {
         title: 'تحقيقات',
         url: '/arabic/tv-and-radio-42414864',
+      },
+      {
+        title: 'بودكاست',
+        url: '/arabic/tv-and-radio-52067221',
       },
       {
         title: 'برامجنا',

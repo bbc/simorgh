@@ -169,6 +169,7 @@ exports[`AMP Articles Image should match snapshot 1`] = `
 <amp-img
   alt="Map of France showing Paris and Cognac"
   attribution=""
+  data-hero="true"
   height="351"
   layout="responsive"
   src="https://ichef.bbci.co.uk/news/640/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg"
@@ -178,6 +179,7 @@ exports[`AMP Articles Image should match snapshot 1`] = `
   <amp-img
     alt="Map of France showing Paris and Cognac"
     attribution=""
+    data-hero="true"
     fallback=""
     height="351"
     layout="responsive"

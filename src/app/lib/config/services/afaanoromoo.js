@@ -61,6 +61,11 @@ export const service = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: 'Kan duraa',
+        nextPage: 'Itti aanee',
+        pageXOfY: 'Page {x} Keessaa {y}',
+      },
       ads: {
         advertisementLabel: 'Beeksiisa',
       },
@@ -294,7 +299,7 @@ export const service = {
           text: 'Kuus-yaadannoo',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50777768',
+          href: 'https://www.bbc.co.uk/afaanoromoo/send/u50777768',
           text: 'BBC qunnami',
         },
         {

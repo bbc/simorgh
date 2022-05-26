@@ -72,6 +72,12 @@ export const service = {
       },
     },
     translations: {
+      pagination: {
+        page: 'पान',
+        previousPage: 'मागील',
+        nextPage: 'पुढील',
+        pageXOfY: 'पान {x} पैकी {y}',
+      },
       ads: {
         advertisementLabel: 'जाहिरात',
       },
@@ -303,8 +309,8 @@ export const service = {
           text: 'कुकीज',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853467',
-          text: 'बीबीसीशी संपर्क साधा',
+          href: 'https://www.bbc.co.uk/marathi/send/u50853467',
+          text: 'बीबीसीशी संपर्क साधाा',
         },
         {
           id: 'COOKIE_SETTINGS',

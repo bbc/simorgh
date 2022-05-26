@@ -59,6 +59,11 @@ export const service = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: 'આ પહેલાં',
+        nextPage: 'આ પછી',
+        pageXOfY: 'Page {x} નું {y}',
+      },
       ads: {
         advertisementLabel: 'જાહેરાત',
       },
@@ -291,8 +296,8 @@ export const service = {
           text: 'કુકીઝ',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853313',
-          text: 'બીબીસીનો સંપર્ક કરો',
+          href: 'https://www.bbc.co.uk/gujarati/send/u50853313',
+          text: 'BBC નો સંપર્ક કરો',
         },
         {
           id: 'COOKIE_SETTINGS',

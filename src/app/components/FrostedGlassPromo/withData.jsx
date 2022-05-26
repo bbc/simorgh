@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { RequestContext } from '#contexts/RequestContext';
 import path from 'ramda/src/path';
 import hasPath from 'ramda/src/hasPath';
 import pick from 'ramda/src/pick';
@@ -21,19 +22,13 @@ const buildImageProperties = image => {
       originCode,
       locator,
       originalImageWidth: width,
-      imageResolutions: [280, 400],
+      imageResolutions: [400],
     });
 
   const src = buildIChefURL({
     originCode,
     locator,
     resolution: 400,
-  });
-
-  const smallSrc = buildIChefURL({
-    originCode,
-    locator,
-    resolution: 240,
     isWebP: true,
   });
 
@@ -41,9 +36,8 @@ const buildImageProperties = image => {
     ratio: 52,
     srcset: primarySrcset,
     fallbackSrcset,
-    sizes: '(max-width: 300px) 280px, (min-width: 1008px) 280px, 400px',
+    sizes: '(min-width: 1008px) 400px',
     src,
-    smallSrc,
     primaryMimeType,
     fallbackMimeType,
     alt: altText,
@@ -53,15 +47,21 @@ const buildImageProperties = image => {
   };
 };
 
-const cpsPromoFormatter = props => ({
-  children: path(['item', 'headlines', 'headline'], props),
-  footer: (
+const TimestampFooterWithAmp = props => {
+  const { isAmp } = useContext(RequestContext);
+  return (
     <TimestampFooter
       serviceDatetimeLocale={path(['item', 'serviceDatetimeLocale'], props)}
+      isAmp={isAmp}
     >
       {path(['item', 'timestamp'], props)}
     </TimestampFooter>
-  ),
+  );
+};
+
+const cpsPromoFormatter = props => ({
+  children: path(['item', 'headlines', 'headline'], props),
+  footer: <TimestampFooterWithAmp {...props} />,
   url: path(['item', 'locators', 'assetUri'], props),
   image: buildImageProperties(path(['item', 'indexImage'], props)),
   eventTrackingData: path(['eventTrackingData', 'block'], props),
@@ -69,13 +69,7 @@ const cpsPromoFormatter = props => ({
 
 const linkPromoFormatter = props => ({
   children: path(['item', 'name'], props),
-  footer: (
-    <TimestampFooter
-      serviceDatetimeLocale={path(['item', 'serviceDatetimeLocale'], props)}
-    >
-      {path(['item', 'timestamp'], props)}
-    </TimestampFooter>
-  ),
+  footer: <TimestampFooterWithAmp {...props} />,
   url: path(['item', 'uri'], props),
   image: buildImageProperties(path(['item', 'indexImage'], props)),
   eventTrackingData: path(['eventTrackingData', 'block'], props),

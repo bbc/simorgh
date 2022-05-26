@@ -59,6 +59,12 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        page: 'Ukurasa',
+        previousPage: 'Rejea',
+        nextPage: 'Mbele',
+        pageXOfY: 'Ukurasa {x} wa {y}',
+      },
       ads: {
         advertisementLabel: 'Matangazo',
       },
@@ -297,7 +303,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853731',
+          href: 'https://www.bbc.co.uk/swahili/send/u50853731',
           text: 'Wasiliana na BBC',
         },
         {

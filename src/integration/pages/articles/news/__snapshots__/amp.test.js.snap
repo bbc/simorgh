@@ -253,6 +253,7 @@ exports[`AMP Articles Image should match snapshot 1`] = `
 <amp-img
   alt="group of residents"
   attribution="@twitterhandle"
+  data-hero="true"
   height="549"
   layout="responsive"
   src="https://ichef.bbci.co.uk/news/640/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg"
@@ -262,6 +263,7 @@ exports[`AMP Articles Image should match snapshot 1`] = `
   <amp-img
     alt="group of residents"
     attribution="@twitterhandle"
+    data-hero="true"
     fallback=""
     height="549"
     layout="responsive"

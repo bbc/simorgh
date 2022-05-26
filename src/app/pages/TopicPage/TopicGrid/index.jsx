@@ -10,7 +10,6 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
-import { C_PEBBLE } from '@bbc/psammead-styles/colours';
 import {
   GEL_SPACING,
   GEL_SPACING_HLF_TRPL,
@@ -34,7 +33,7 @@ const Item = styled.div`
   margin-bottom: ${GEL_SPACING_DBL};
   width: 100%;
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    border-top: 1px ${C_PEBBLE} solid;
+    border-top: 1px #e6e8ea solid;
     padding-top: ${GEL_SPACING};
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
@@ -61,15 +60,23 @@ const TopicGrid = ({ promos }) => {
   const { dir } = useContext(ServiceContext);
   const hasMultiplePromos = promos.length > 1;
   const firstPromo = promos[0];
+
+  if (promos.length === 0) {
+    return null;
+  }
   return (
     <Wrapper>
       {hasMultiplePromos ? (
-        <TopicList role="list">
-          {promos.map(promo => (
-            <Item key={promo.id} dir={dir} as="li">
-              <TopicPromo {...promo} />
-            </Item>
-          ))}
+        <TopicList role="list" data-testid="topic-promos">
+          {promos.map((promo, index) => {
+            const isFirstPromo = index === 0;
+
+            return (
+              <Item key={promo.id} dir={dir} as="li">
+                <TopicPromo {...promo} lazy={!isFirstPromo} />
+              </Item>
+            );
+          })}
         </TopicList>
       ) : (
         <Item key={firstPromo.id} dir={dir}>

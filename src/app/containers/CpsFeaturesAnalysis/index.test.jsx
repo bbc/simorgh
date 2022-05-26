@@ -1,19 +1,15 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 
-import features from '#pages/StoryPage/featuresAnalysis.json';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
-import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
-import isLive from '#lib/utilities/isLive';
+import features from './fixtures.json';
 import FeaturesAnalysis from '.';
-
-jest.mock('#hooks/useOptimizelyVariation', () => jest.fn(() => null));
 
 // eslint-disable-next-line react/prop-types
 const renderFeaturesAnalysis = ({
@@ -146,31 +142,30 @@ describe('CpsFeaturesAnalysis', () => {
 });
 
 describe('CpsFeaturesAnalysis - Event Tracking', () => {
-  it('should implement 2 BLOCK level click trackers(1 for each promo item) and 0 link level click trackers', () => {
-    isLive.mockImplementationOnce(() => true);
-    useOptimizelyVariation.mockReturnValue(null);
-
+  it('should implement 2 BLOCK level click trackers(1 for each promo item) and 2 link level click trackers', async () => {
     const expected = {
       componentName: 'features',
-      preventNavigation: true,
+      url: expect.any(String),
     };
     const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
 
     renderFeaturesAnalysis();
 
-    const [
-      [blockLevelTrackingItem1],
-      [linkLevelTrackingItem1],
+    await waitFor(() => {
+      const [
+        [blockLevelTrackingItem1],
+        [linkLevelTrackingItem1],
 
-      [blockLevelTrackingItem2],
-      [linkLevelTrackingItem2],
-    ] = clickTrackerSpy.mock.calls;
+        [blockLevelTrackingItem2],
+        [linkLevelTrackingItem2],
+      ] = clickTrackerSpy.mock.calls;
 
-    expect(blockLevelTrackingItem1).toEqual(expected);
-    expect(linkLevelTrackingItem1).toEqual({});
+      expect(blockLevelTrackingItem1).toEqual(expected);
+      expect(linkLevelTrackingItem1).toEqual(expected);
 
-    expect(blockLevelTrackingItem2).toEqual(expected);
-    expect(linkLevelTrackingItem2).toEqual({});
+      expect(blockLevelTrackingItem2).toEqual(expected);
+      expect(linkLevelTrackingItem2).toEqual(expected);
+    });
   });
 
   it('should implement 1 BLOCK level view tracker', () => {
@@ -191,41 +186,15 @@ const countFrostedPromos = container =>
   container.querySelectorAll('[data-testid^=frosted-promo]').length;
 
 describe('CpsFeaturesAnalysis - Frosted Promos', () => {
-  it('should render without the top high impact promo', () => {
+  it('should render with all high impact promos', () => {
     const { container } = renderFeaturesAnalysis();
 
-    expect(countFrostedPromos(container)).toBe(0);
+    expect(countFrostedPromos(container)).toBe(4);
   });
 
-  it('should not render the top high impact promo, when on amp', () => {
-    useOptimizelyVariation.mockReturnValue('variation_1');
-
+  it('should render with all high impact promos, when on amp', () => {
     const { container } = renderFeaturesAnalysis({ isAmp: true });
 
-    expect(countFrostedPromos(container)).toBe(0);
-  });
-
-  it('should render with the top high impact promo', () => {
-    useOptimizelyVariation.mockReturnValue('variation_1');
-
-    const { container } = renderFeaturesAnalysis();
-
-    expect(countFrostedPromos(container)).toBe(1);
-  });
-
-  it('should render with all high impact promos', () => {
-    useOptimizelyVariation.mockReturnValue('variation_2');
-
-    const { container } = renderFeaturesAnalysis();
-
-    expect(countFrostedPromos(container)).toBe(2);
-  });
-
-  it('should not render the high impact promos, when no variation is specified', () => {
-    useOptimizelyVariation.mockReturnValue(null);
-
-    const { container } = renderFeaturesAnalysis();
-
-    expect(countFrostedPromos(container)).toBe(0);
+    expect(countFrostedPromos(container)).toBe(4);
   });
 });

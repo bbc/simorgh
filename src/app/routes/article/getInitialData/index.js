@@ -8,6 +8,8 @@ import fetchPageData from '../../utils/fetchPageData';
 import handleGroupBlocks from '../handleGroupBlocks';
 import handleEmptyParagraphBlocks from '../handleEmptyParagraphBlocks';
 import handlePromoData from '../handlePromoData';
+import addMpuBlock from './addMpuBlock';
+
 import {
   augmentWithTimestamp,
   addIdsToBlocks,
@@ -26,6 +28,7 @@ const transformJson = pipe(
   handleEmptyParagraphBlocks,
   handlePromoData,
   augmentWithTimestamp,
+  addMpuBlock,
   addIdsToBlocks,
   applyBlockPositioning,
   addIndexesToEmbeds,

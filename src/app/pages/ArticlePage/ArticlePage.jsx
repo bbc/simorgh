@@ -5,6 +5,9 @@ import propEq from 'ramda/src/propEq';
 import last from 'ramda/src/last';
 import styled from '@emotion/styled';
 import { string, node } from 'prop-types';
+import useToggle from '#hooks/useToggle';
+import isLive from '#lib/utilities/isLive';
+
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -26,6 +29,7 @@ import { C_GREY_2, C_WHITE } from '@bbc/psammead-styles/colours';
 import { singleTextBlock } from '#app/models/blocks';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '#containers/ArticleMetadata';
+import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import headings from '#containers/Headings';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
@@ -44,6 +48,9 @@ import MostReadContainer from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
 import SocialEmbedContainer from '#containers/SocialEmbed';
+
+import AdContainer from '#containers/Ad';
+import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 
 import {
   getArticleId,
@@ -65,20 +72,6 @@ import ArticleRelatedContent from '#containers/ArticleRelatedContent';
 import SecondaryColumn from './SecondaryColumn';
 
 import ArticlePageGrid, { Primary } from './ArticlePageGrid';
-
-const componentsToRender = {
-  visuallyHiddenHeadline,
-  headline: headings,
-  subheadline: headings,
-  audio: articleMediaPlayer,
-  video: articleMediaPlayer,
-  text,
-  image: props => <Image {...props} sizes="(min-width: 1008px) 760px, 100vw" />,
-  timestamp: props => <Timestamp {...props} popOut={false} />,
-  social: SocialEmbedContainer,
-  group: gist,
-  links: props => <ScrollablePromo {...props} />,
-};
 
 const Wrapper = styled.div`
   background-color: ${C_GREY_2};
@@ -118,8 +111,45 @@ const StyledRelatedTopics = styled(RelatedTopics)`
   }
 `;
 
+const MpuContainer = styled(AdContainer)`
+  margin-bottom: ${GEL_SPACING_TRPL};
+`;
+
 const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
+  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
   const { articleAuthor, showRelatedTopics } = useContext(ServiceContext);
+  const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
+  const { enabled: adsEnabled } = useToggle('ads');
+
+  /* TODO: Remove `isLive` and replace with `allowAdvertisng` or similar when available in Ares */
+  const isAdsEnabled = [!isLive(), adsEnabled, showAdsBasedOnLocation].every(
+    Boolean,
+  );
+
+  const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
+
+  const componentsToRender = {
+    visuallyHiddenHeadline,
+    headline: headings,
+    subheadline: headings,
+    audio: articleMediaPlayer,
+    video: articleMediaPlayer,
+    text,
+    image: props => (
+      <Image
+        {...props}
+        sizes="(min-width: 1008px) 760px, 100vw"
+        shouldPreload={preloadLeadImageToggle}
+      />
+    ),
+    timestamp: props => <Timestamp {...props} popOut={false} />,
+    social: SocialEmbedContainer,
+    group: gist,
+    links: props => <ScrollablePromo {...props} />,
+    mpu: props =>
+      isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
+  };
+
   const headline = getHeadline(pageData);
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
@@ -197,6 +227,10 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         aboutTags={aboutTags}
         imageLocator={promoImage}
       />
+      {isAdsEnabled && !isAmp && (
+        <CanonicalAdBootstrapJs adcampaign={adcampaign} />
+      )}
+      {isAdsEnabled && <AdContainer slotType="leaderboard" />}
       <ArticlePageGrid>
         <Primary>
           <Main role="main">
