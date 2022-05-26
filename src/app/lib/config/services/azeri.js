@@ -59,6 +59,12 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        page: 'səhifə',
+        previousPage: 'Geriyə',
+        nextPage: 'Növbəti',
+        pageXOfY: 'səhifə {x} haqqında {y}',
+      },
       ads: {
         advertisementLabel: 'Reklam',
       },
@@ -285,7 +291,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853225',
+          href: 'https://www.bbc.co.uk/azeri/send/u50853225',
           text: 'BBC ilə Əlaqə',
         },
         {

@@ -59,6 +59,12 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        page: 'бет',
+        previousPage: 'Артка',
+        nextPage: 'Эмики барак',
+        pageXOfY: 'бет {x} of {y}',
+      },
       ads: {
         advertisementLabel: 'Жарнама',
       },
@@ -299,7 +305,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853445',
+          href: 'https://www.bbc.co.uk/kyrgyz/send/u50853445',
           text: 'Би-Би-Си менен байланышыңыз',
         },
         {

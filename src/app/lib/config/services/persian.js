@@ -66,16 +66,16 @@ export const service = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'پادکست',
-      brandTitle: 'شیرازه',
+      brandTitle: 'رادیو فارسی بی‌بی‌سی',
       brandDescription:
-        '«شیرازه» پادکستی درباره کتاب‌ها است که سام فرزانه تهیه می‌کند',
+        'پادکست چشم‌انداز بامدادی رادیو بی‌بی‌سی – دوشنبه ۱۹ اردیبهشت ۱۴۰۱',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0bw81l8.jpg',
-        alt: 'رادیو فارسی بی‌بی‌سی',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0bq9rkk.jpg',
+        alt: 'پادکست چشم‌انداز بامدادی رادیو بی‌بی‌سی',
       },
       linkLabel: {
         text: 'پادکست',
-        href: 'https://www.bbc.com/persian/podcasts/p0bw80rj',
+        href: 'https://www.bbc.com/persian/podcasts/p02pc9mc',
       },
       skipLink: {
         text: 'از %title% رد شوید و به خواندن ادامه دهید',
@@ -83,9 +83,17 @@ export const service = {
       },
     },
     translations: {
+      pagination: {
+        page: 'صفحه',
+        previousPage: 'قبلی',
+        nextPage: 'بعدی',
+        pageXOfY: 'صفحه {x} از {y}',
+      },
       ads: {
         advertisementLabel: 'آگهی',
       },
+      recommendationTitle: 'مطالب پیشنهادی',
+      splitRecommendationTitle: 'مطالب پیشنهادی دیگر',
       seeAll: 'بیشتر',
       home: 'صفحه اول',
       currentPage: 'صفحه فعلی',
@@ -334,7 +342,7 @@ export const service = {
           text: 'کوکی ها',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853555',
+          href: 'https://www.bbc.co.uk/persian/send/u50853555',
           text: 'تماس با بی بی سی',
         },
         {

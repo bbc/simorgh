@@ -60,6 +60,12 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        page: 'ページ',
+        previousPage: '前に戻る',
+        nextPage: '次へ',
+        pageXOfY: 'ページ {x} ／ {y}',
+      },
       ads: {
         advertisementLabel: '広告',
       },
@@ -283,7 +289,7 @@ export const service = {
         },
         {
           href: 'https://www.bbc.co.uk/contact',
-          text: 'BBCに連絡する',
+          text: 'BBC に連絡する',
         },
         {
           id: 'COOKIE_SETTINGS',
@@ -335,7 +341,7 @@ export const service = {
       },
       {
         title: 'ビデオ',
-        url: '/japanese/video-55128146',
+        url: '/japanese/topics/c132079wln0t',
       },
       {
         title: 'ワールドニュースTV',

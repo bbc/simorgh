@@ -63,6 +63,11 @@ export const service = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: 'ናይ ሕሉፍ',
+        nextPage: 'ዝቕጽል',
+        pageXOfY: 'Page {x} of {y}',
+      },
       ads: {
         advertisementLabel: 'መላለዪ',
       },
@@ -283,8 +288,8 @@ export const service = {
           text: 'ኩኪስ',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853819',
-          text: 'ንቢቢሲ ንምርካብ',
+          href: 'https://www.bbc.co.uk/tigrinya/send/u50853819',
+          text: 'ንቢቢሲ የዛርቡ',
         },
         {
           id: 'COOKIE_SETTINGS',

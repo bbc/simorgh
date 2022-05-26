@@ -59,6 +59,12 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        page: 'पेज',
+        previousPage: 'पछाडि',
+        nextPage: 'अर्को',
+        pageXOfY: 'पेज {x} को {y}',
+      },
       ads: {
         advertisementLabel: 'विज्ञापन',
       },
@@ -295,7 +301,7 @@ export const service = {
           text: 'कुकीज',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853511',
+          href: 'https://www.bbc.co.uk/nepali/send/u50853511',
           text: 'बीबीसीलाई सम्पर्क गर्नुहोस्',
         },
         {
@@ -325,7 +331,7 @@ export const service = {
       },
       {
         title: 'भिडियो',
-        url: '/nepali/media/video',
+        url: '/nepali/topics/cw9kv027nwnt',
       },
     ],
   },

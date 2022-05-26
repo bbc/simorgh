@@ -59,6 +59,11 @@ export const service = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: 'ਪਿੱਛੇ',
+        nextPage: 'ਅੱਗੇ',
+        pageXOfY: 'Page {x} ਦਾ {y}',
+      },
       ads: {
         advertisementLabel: 'ਇਸ਼ਤਿਹਾਰ',
       },
@@ -311,7 +316,7 @@ export const service = {
           text: 'ਕੁਕੀਜ਼',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853621',
+          href: 'https://www.bbc.co.uk/punjabi/send/u50853621',
           text: 'ਬੀਬੀਸੀ ਨਾਲ ਸੰਪਰਕ ਕਰੋ',
         },
         {

@@ -67,6 +67,9 @@ const IconWrapper = styled.span`
     width: 1.0625rem;
     height: 0.75rem;
     margin: 0;
+    @media screen and (forced-colors: active) {
+      fill: canvasText;
+    }
   }
 `;
 

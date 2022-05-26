@@ -74,6 +74,12 @@ export const service = {
       },
     },
     translations: {
+      pagination: {
+        page: 'စာမျက်နှာ',
+        previousPage: 'နောက်သို့ပြန်သွားရန်',
+        nextPage: 'ရှေ့သို့သွားရန်',
+        pageXOfY: 'စာမျက်နှာ {x} ရဲ့ {y}',
+      },
       ads: {
         advertisementLabel: 'ကြော်ငြာ',
       },
@@ -314,7 +320,7 @@ export const service = {
           text: 'ကွတ်ကီး',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853269',
+          href: 'https://www.bbc.co.uk/burmese/send/u50853269',
           text: 'ဘီဘီစီကို ဆက်သွယ်ရန်',
         },
         {

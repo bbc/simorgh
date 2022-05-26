@@ -89,10 +89,17 @@ export const service = {
       },
     },
     translations: {
+      pagination: {
+        page: 'Página',
+        previousPage: 'Anterior',
+        nextPage: 'Próxima',
+        pageXOfY: 'Página {x} de {y}',
+      },
       ads: {
         advertisementLabel: 'Publicidade',
       },
-      recommendationTitle: 'Talvez também te interesse',
+      recommendationTitle: 'Matérias recomendadas',
+      splitRecommendationTitle: 'Mais matérias recomendadas',
       seeAll: 'Ver todos',
       home: 'Início',
       currentPage: 'Página atual',
@@ -327,8 +334,8 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853599',
-          text: 'Fale com a BBC',
+          href: 'https://www.bbc.co.uk/portuguese/send/u50853599',
+          text: 'Contate a BBC',
         },
         {
           id: 'COOKIE_SETTINGS',

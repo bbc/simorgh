@@ -74,6 +74,11 @@ const baseServiceConfig = {
     },
   },
   translations: {
+    pagination: {
+      previousPage: 'Повернутися',
+      nextPage: 'Наступна',
+      pageXOfY: 'Page {x} із {y}',
+    },
     ads: {
       advertisementLabel: 'Реклама',
     },
@@ -308,8 +313,8 @@ const baseServiceConfig = {
         text: 'Cookies',
       },
       {
-        href: 'https://www.bbc.co.uk/send/u50853885',
-        text: "Зв'язатися з BBC",
+        href: 'https://www.bbc.co.uk/ukrainian/send/u50853885',
+        text: 'Напишіть на ВВС',
       },
       {
         id: 'COOKIE_SETTINGS',

@@ -49,7 +49,7 @@ Object {
 exports[`Canonical Front Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "اتصل بـ بي بي سي",
-  "url": "https://www.bbc.co.uk/send/u50853203",
+  "url": "https://www.bbc.co.uk/arabic/send/u50853203",
 }
 `;
 
@@ -137,6 +137,13 @@ Object {
 `;
 
 exports[`Canonical Front Page Header Navigation link should match text and url 10`] = `
+Object {
+  "text": "بودكاست",
+  "url": "/arabic/tv-and-radio-52067221",
+}
+`;
+
+exports[`Canonical Front Page Header Navigation link should match text and url 11`] = `
 Object {
   "text": "برامجنا",
   "url": "/arabic/tv-and-radio-37728883",
@@ -335,7 +342,7 @@ exports[`Canonical Front Page Sections should match headline text 15`] = `"با�
 
 exports[`Canonical Front Page Sections should match headline text 16`] = `"مباشر"`;
 
-exports[`Canonical Front Page Sections should match headline text 17`] = `"أحدث نشرة أخبار"`;
+exports[`Canonical Front Page Sections should match headline text 17`] = `"البث الإذاعي"`;
 
 exports[`Canonical Front Page Sections should match headline text 18`] = `"اخترنا لكم"`;
 

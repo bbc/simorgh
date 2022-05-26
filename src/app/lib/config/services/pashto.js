@@ -65,6 +65,12 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        page: 'پاڼه',
+        previousPage: 'مخکينۍ پاڼه',
+        nextPage: 'بله پاڼه',
+        pageXOfY: 'پاڼه {x} د {y}',
+      },
       ads: {
         advertisementLabel: 'اعلان',
       },
@@ -308,7 +314,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853533',
+          href: 'https://www.bbc.co.uk/pashto/send/u50853533',
           text: 'زموږ سره اړیکي',
         },
         {

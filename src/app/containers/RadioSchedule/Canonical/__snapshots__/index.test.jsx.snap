@@ -435,6 +435,13 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   overflow: visible;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-27>svg {
+    padding-left: 0.25rem;
+    fill: canvasText;
+  }
+}
+
 .emotion-29 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -688,6 +695,12 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   margin: 0;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-55>svg {
+    fill: canvasText;
+  }
+}
+
 .emotion-57 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -832,6 +845,12 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   margin: 0;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-96>svg {
+    fill: canvasText;
+  }
+}
+
 .emotion-184 {
   font-size: 0.9375rem;
   line-height: 1.375rem;
@@ -893,7 +912,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               dir="rtl"
               id="Radio-Schedule"
             >
-              أحدث نشرة أخبار
+              البث الإذاعي
             </span>
           </span>
         </span>
@@ -1876,6 +1895,13 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   overflow: visible;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-27>svg {
+    padding-left: 0.25rem;
+    fill: canvasText;
+  }
+}
+
 .emotion-29 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -2129,6 +2155,12 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   margin: 0;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-55>svg {
+    fill: canvasText;
+  }
+}
+
 .emotion-57 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -2273,6 +2305,12 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   margin: 0;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-96>svg {
+    fill: canvasText;
+  }
+}
+
 .emotion-184 {
   font-size: 0.9375rem;
   line-height: 1.375rem;
@@ -2334,7 +2372,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
               dir="rtl"
               id="Radio-Schedule"
             >
-              أحدث نشرة أخبار
+              البث الإذاعي
             </span>
           </span>
         </span>

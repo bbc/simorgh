@@ -118,6 +118,12 @@ exports[`Inline Should render correctly 1`] = `
   right: 0.1875rem;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-11>svg {
+    fill: canvasText;
+  }
+}
+
 .emotion-13 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -387,6 +393,12 @@ exports[`Inline Should render correctly 1`] = `
   right: 0.1875rem;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-29>svg {
+    fill: canvasText;
+  }
+}
+
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-29 {
     font-size: 0.875rem;
@@ -650,6 +662,12 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   right: 0.1875rem;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-6>svg {
+    fill: canvasText;
+  }
+}
+
 .emotion-8 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -879,6 +897,12 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   position: relative;
   bottom: 0.125rem;
   right: 0.1875rem;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-24>svg {
+    fill: canvasText;
+  }
 }
 
 .emotion-26 {

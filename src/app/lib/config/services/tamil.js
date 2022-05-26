@@ -63,6 +63,12 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        page: 'பக்கம்',
+        previousPage: 'முந்தையது',
+        nextPage: 'அடுத்தது',
+        pageXOfY: 'பக்கம் {x} இல் {y}',
+      },
       ads: {
         advertisementLabel: 'விளம்பரம்',
       },
@@ -264,7 +270,7 @@ export const service = {
     mostRead: {
       header: 'அதிகம் படிக்கப்பட்டது',
       lastUpdated: 'கடைசியாக புதுப்பிக்கப்பட்டது:',
-      numberOfItems: 5,
+      numberOfItems: 10,
       hasMostRead: true,
     },
     mostWatched: {
@@ -305,8 +311,8 @@ export const service = {
           text: 'குக்கிகள்',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853753',
-          text: 'பிபிசி-யை தொடர்பு கொள்க',
+          href: 'https://www.bbc.co.uk/tamil/send/u50853753',
+          text: 'பிபிசியுடன் தொடர்பு கொள்ள',
         },
         {
           id: 'COOKIE_SETTINGS',

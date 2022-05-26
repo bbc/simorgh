@@ -59,6 +59,11 @@ export const service = {
     swPath: '/sw.js',
     frontPageTitle: 'Àbáwọlé',
     translations: {
+      pagination: {
+        previousPage: 'Ìṣájú',
+        nextPage: 'Tókàn',
+        pageXOfY: 'Page {x} nínú {y}',
+      },
       ads: {
         advertisementLabel: 'Advertisement',
       },
@@ -289,7 +294,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853973',
+          href: 'https://www.bbc.co.uk/yoruba/send/u50853973',
           text: 'Kàn sí BBC',
         },
         {

@@ -60,6 +60,12 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        page: 'Page',
+        previousPage: 'Page précédente',
+        nextPage: 'Page suivante',
+        pageXOfY: 'Page {x} de {y}',
+      },
       ads: {
         advertisementLabel: 'Publicités',
       },
@@ -303,7 +309,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853159',
+          href: 'https://www.bbc.co.uk/afrique/send/u50853159',
           text: 'Contactez la BBC',
         },
         {

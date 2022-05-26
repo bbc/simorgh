@@ -23,6 +23,7 @@ const getBundlesData = bundles =>
     return {
       name,
       size,
+      sizeInBytes,
     };
   });
 
@@ -36,13 +37,25 @@ const getPageBundleData = () => {
   const mainTotalSize = main.reduce((acc, { size }) => acc + size, 0);
   const frameworkTotalSize = framework.reduce((acc, { size }) => acc + size, 0);
 
+  const mainTotalSizeInBytes = main.reduce(
+    (acc, { sizeInBytes }) => acc + sizeInBytes,
+    0,
+  );
+  const frameworkTotalSizeInBytes = framework.reduce(
+    (acc, { sizeInBytes }) => acc + sizeInBytes,
+    0,
+  );
+
   return pages.map(pageName => {
     const bundles = extractBundlesForPageType(pageName);
     const bundlesData = getBundlesData(bundles);
 
     return bundlesData.reduce(
-      ({ lib, shared, page, commons, totalSize, ...rest }, { name, size }) => {
-        const bundleData = { name, size };
+      (
+        { lib, shared, page, commons, totalSize, totalSizeInBytes, ...rest },
+        { name, size, sizeInBytes },
+      ) => {
+        const bundleData = { name, size, sizeInBytes };
         const isShared = new RegExp(`^${bundleType}\\.shared-`).test(name);
         const isLib = new RegExp(`^${bundleType}\\..+?-lib`).test(name);
         const isCommons = new RegExp(`^${bundleType}\\.commons-`).test(name);
@@ -62,6 +75,7 @@ const getPageBundleData = () => {
           shared,
           commons,
           page,
+          totalSizeInBytes: totalSizeInBytes + sizeInBytes,
           totalSize: totalSize + size,
         };
       },
@@ -73,6 +87,7 @@ const getPageBundleData = () => {
         shared: [],
         commons: [],
         page: [],
+        totalSizeInBytes: mainTotalSizeInBytes + frameworkTotalSizeInBytes,
         totalSize: mainTotalSize + frameworkTotalSize,
       },
     );
@@ -93,6 +108,10 @@ const getServiceBundleData = () =>
       serviceName,
       bundles,
       totalSize: bundles.reduce((acc, { size }) => acc + size, 0),
+      totalSizeInBytes: bundles.reduce(
+        (acc, { sizeInBytes }) => acc + sizeInBytes,
+        0,
+      ),
     }));
 
 exports.getPageBundleData = getPageBundleData;

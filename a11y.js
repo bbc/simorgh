@@ -87,6 +87,7 @@ const pageTypes = {
   onDemandTV: ['/iframe'],
   mediaAssetPage: [...mediaEmbedErrorsToSuppress, '/iframe'],
   featureIndexPage: [],
+  topicPage: [],
 };
 
 // eslint-disable-next-line array-callback-return

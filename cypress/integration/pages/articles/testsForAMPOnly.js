@@ -1,5 +1,8 @@
+import path from 'ramda/src/path';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import { getBlockData, getVideoEmbedUrl } from './helpers';
+import config from '../../../support/config/services';
+import { serviceNumerals } from '../../../../src/app/containers/MostRead/Canonical/Rank';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasFigure = service =>
@@ -59,6 +62,106 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
           }
         });
       });
+    });
+
+    describe('Most Read Container', () => {
+      /* These cypress tests are needed as unit tests cannot be run on the jsdom.
+       * web workers (which run on amp pages) do not run on the virtual dom.
+       */
+      before(() => {
+        cy.getToggles(config[service].name);
+      });
+
+      const skipServices = ['scotland', 'sport', 'newsround'];
+
+      const serviceVariant = variant === 'default' ? '' : `/${variant}`;
+
+      const mostReadPath = `/${config[service].name}/mostread${serviceVariant}.json`;
+
+      if (!skipServices.includes(service)) {
+        it(`should show the correct number of items for ${service}\`s ${pageType}`, () => {
+          cy.request(mostReadPath).then(({ body: mostReadJson }) => {
+            const mostReadRecords = mostReadJson.totalRecords;
+            cy.fixture(`toggles/${config[service].name}.json`).then(toggles => {
+              const mostReadIsEnabled = path(['mostRead', 'enabled'], toggles);
+              cy.log(
+                `Most read container toggle enabled? ${mostReadIsEnabled}`,
+              );
+              if (mostReadIsEnabled && mostReadRecords >= 5) {
+                const expectedMostReadItems =
+                  appConfig[config[service].name][variant].mostRead
+                    .numberOfItems;
+                cy.get('[data-e2e="most-read"]').scrollIntoView();
+                cy.get('[data-e2e="most-read"] > amp-list div')
+                  .children('li')
+                  .should('have.length', expectedMostReadItems);
+              }
+            });
+          });
+        });
+
+        it(`should show numerals used for the corresponding ${service} service`, () => {
+          cy.request(mostReadPath).then(({ body: mostReadJson }) => {
+            const mostReadRecords = mostReadJson.totalRecords;
+            cy.fixture(`toggles/${config[service].name}.json`).then(toggles => {
+              const mostReadIsEnabled = path(['mostRead', 'enabled'], toggles);
+              cy.log(
+                `Most read container toggle enabled? ${mostReadIsEnabled}`,
+              );
+              if (mostReadIsEnabled && mostReadRecords >= 5) {
+                const expectedMostReadRank = serviceNumerals(service);
+                cy.get('[data-e2e="most-read"]').scrollIntoView();
+                cy.get('[data-e2e="most-read"] > amp-list div')
+                  .find('li span')
+                  .each(($el, index) => {
+                    expect($el.text()).equal(expectedMostReadRank[index + 1]);
+                  });
+              }
+            });
+          });
+        });
+        it(`Most read list should contain hrefs`, () => {
+          cy.request(mostReadPath).then(({ body: mostReadJson }) => {
+            const mostReadRecords = mostReadJson.totalRecords;
+            cy.fixture(`toggles/${config[service].name}.json`).then(toggles => {
+              const mostReadIsEnabled = path(['mostRead', 'enabled'], toggles);
+              cy.log(
+                `Most read container toggle enabled? ${mostReadIsEnabled}`,
+              );
+              if (mostReadIsEnabled && mostReadRecords >= 5) {
+                cy.get('[data-e2e="most-read"]').scrollIntoView();
+                cy.get('[data-e2e="most-read"] > amp-list div')
+                  .next()
+                  .within(() => {
+                    cy.get('a').should('have.attr', 'href');
+                  });
+              }
+            });
+          });
+        });
+        it('should not show most read list when data fetch fails', () => {
+          cy.intercept(
+            {
+              method: 'GET',
+              pathname: mostReadPath,
+            },
+            { status: '404' },
+          );
+          cy.reload();
+          cy.request(mostReadPath).then(({ body: mostReadJson }) => {
+            const mostReadRecords = mostReadJson.totalRecords;
+            cy.fixture(`toggles/${config[service].name}.json`).then(toggles => {
+              const mostReadIsEnabled = path(['mostRead', 'enabled'], toggles);
+              cy.log(
+                `Most read container toggle enabled? ${mostReadIsEnabled}`,
+              );
+              if (mostReadIsEnabled && mostReadRecords >= 5) {
+                cy.get('amp-script > div amp-list').should('not.exist');
+              }
+            });
+          });
+        });
+      }
     });
   });
 
