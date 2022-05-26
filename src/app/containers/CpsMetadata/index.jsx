@@ -70,7 +70,7 @@ CpsMetadata.defaultProps = {
   imageAltText: null,
   aboutTags: [],
   hasAppleItunesAppBanner: false,
-  hasAmpPage: false,
+  hasAmpPage: true,
 };
 
 export default CpsMetadata;
