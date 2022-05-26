@@ -7,7 +7,7 @@ import Lazyload from 'react-lazyload';
 import { getSerifRegular } from '@bbc/psammead-styles/font-styles';
 import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
-import { C_WHITE, C_GREY_8 } from '@bbc/psammead-styles/colours';
+import { C_WHITE, C_GREY_8, C_METAL } from '@bbc/psammead-styles/colours';
 
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -70,7 +70,7 @@ const A = styled.a`
     margin: 0.875rem ${GEL_SPACING_DBL} 0 ${GEL_SPACING_DBL};
   }
   &:visited {
-    color: #e6e8ea;
+    color: ${({ isAmp }) => (isAmp ? C_METAL : '#e6e8ea')};
   }
   &:focus {
     text-decoration: underline;
