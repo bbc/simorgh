@@ -160,6 +160,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
         title={metadataTitle}
         description={shortSynopsis}
         {...metadataImageProps}
+        hasAmpPage={false}
       />
 
       <GelPageGrid
