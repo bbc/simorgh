@@ -37,6 +37,7 @@ const getRecommendations = (service, variant, assetUri) => {
   return [
     {
       name: 'recommendations',
+      attachAgent: true,
       path: portugueseRecommendationsExperimentEndpoint({
         assetUri,
         engine: 'unirecs_camino',
@@ -47,6 +48,7 @@ const getRecommendations = (service, variant, assetUri) => {
     },
     {
       name: 'experimentRecommendations',
+      attachAgent: true,
       engine: 'unirecs_datalab_content',
       path: portugueseRecommendationsExperimentEndpoint({
         assetUri,
@@ -59,6 +61,7 @@ const getRecommendations = (service, variant, assetUri) => {
     },
     {
       name: 'experimentRecommendations',
+      attachAgent: true,
       engine: 'unirecs_datalab_hybrid',
       path: portugueseRecommendationsExperimentEndpoint({
         assetUri,
@@ -152,9 +155,9 @@ const sortAdditionalPageData = results => {
   }, {});
 };
 
-const fetchUrl = async ({ name, path, engine, ...loggerArgs }) => {
+const fetchUrl = async ({ name, path, engine, attachAgent, ...loggerArgs }) => {
   // 004_brasil_recommendations_experiment
-  const agent = engine ? await getAgent() : null;
+  const agent = attachAgent ? await getAgent() : null;
 
   return fetchPageData({
     path,
@@ -162,7 +165,7 @@ const fetchUrl = async ({ name, path, engine, ...loggerArgs }) => {
     agent,
     ...loggerArgs,
   })
-    .then(response => validateResponse(response, name, engine, path))
+    .then(response => validateResponse(response, name, engine))
     .catch(noop);
 };
 
