@@ -139,7 +139,7 @@ describe('getAdditionalPageData', () => {
         hasRecommendations.mockImplementationOnce(() => true);
 
         fetchMock.mock(
-          'http://localhost/portuguese/brasil-59057279/recommendations.json',
+          'https://onward-journeys.test.api.bbci.co.uk/api/recommendations/portuguese/brasil-59057279?Engine=unirecs_camino',
           recommendationsJson,
         );
         fetchMock.mock(

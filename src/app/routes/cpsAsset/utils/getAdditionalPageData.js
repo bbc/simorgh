@@ -37,7 +37,10 @@ const getRecommendations = (service, variant, assetUri) => {
   return [
     {
       name: 'recommendations',
-      path: getRecommendationsUrl({ assetUri, variant }),
+      path: portugueseRecommendationsExperimentEndpoint({
+        assetUri,
+        engine: 'unirecs_camino',
+      }),
       assetUri,
       api: 'recommendations',
       apiContext: 'secondary_data',
@@ -177,6 +180,7 @@ const getAdditionalPageData = async ({ pageData, service, variant, env }) => {
   );
 
   if (urlsToFetch) {
+    // 004_brasil_recommendations_experiment
     return Promise.all(urlsToFetch.map(fetchUrl)).then(sortAdditionalPageData);
   }
 

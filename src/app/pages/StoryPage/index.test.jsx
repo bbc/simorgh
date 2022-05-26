@@ -712,6 +712,10 @@ describe('Story Page', () => {
 
   describe('Optimizely Experiments', () => {
     describe('004_brasil_recommendations_experiment', () => {
+      beforeEach(() => {
+        process.env.RECOMMENDATIONS_ENDPOINT =
+          'https://onward-journeys.test.api.bbci.co.uk/api';
+      });
       afterEach(() => {
         delete process.env.RECOMMENDATIONS_ENDPOINT;
         jest.clearAllMocks();
@@ -749,7 +753,7 @@ describe('Story Page', () => {
           };
 
           const recommendationsEndpoint =
-            'http://localhost/portuguese/brasil-54196636/recommendations.json';
+            'https://onward-journeys.test.api.bbci.co.uk/api/recommendations/portuguese/brasil-54196636?Engine=unirecs_camino';
 
           fetchMock.mock(
             'http://localhost/some-cps-sty-path.json',
@@ -988,7 +992,7 @@ describe('Story Page', () => {
         };
 
         const recommendationsEndpoint =
-          'http://localhost/portuguese/brasil-54196636/recommendations.json';
+          'https://onward-journeys.test.api.bbci.co.uk/api/recommendations/portuguese/brasil-54196636?Engine=unirecs_camino';
 
         fetchMock.mock(
           'http://localhost/some-cps-sty-path.json',
