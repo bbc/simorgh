@@ -341,7 +341,7 @@ export const service = {
       },
       {
         title: 'ビデオ',
-        url: 'japanese/topics/c132079wln0t',
+        url: '/japanese/topics/c132079wln0t',
       },
       {
         title: 'ワールドニュースTV',
