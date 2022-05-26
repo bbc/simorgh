@@ -191,6 +191,7 @@ const MediaAssetPage = ({ pageData }) => {
         imageAltText={indexImageAltText}
         aboutTags={aboutTags}
         hasAppleItunesAppBanner
+        hasAmpPage={false}
       />
       <LinkedData
         type="Article"
