@@ -742,7 +742,7 @@ describe('Story Page', () => {
           });
         });
 
-        it.only('should fetch and render recommendations from current endpoint when variation is control and service is portuguese', async () => {
+        it('should fetch and render recommendations from current endpoint when variation is control and service is portuguese', async () => {
           const toggles = {
             cpsRecommendations: {
               enabled: true,
@@ -759,7 +759,6 @@ describe('Story Page', () => {
             'http://localhost/some-cps-sty-path.json',
             portuguesePageData,
           );
-
           fetchMock.mock(recommendationsEndpoint, portugueseRecommendationData);
 
           const { pageData } = await getInitialData({
@@ -767,8 +766,6 @@ describe('Story Page', () => {
             service: 'portuguese',
             pageType,
           });
-
-          console.log("pageData >>>", JSON.stringify(pageData));
 
           const { getAllByRole } = render(
             <Page pageData={pageData} service="portuguese" toggles={toggles} />,
@@ -895,7 +892,6 @@ describe('Story Page', () => {
             service: 'portuguese',
             pageType,
           });
-
 
           const { getAllByRole } = render(
             <Page pageData={pageData} service="portuguese" toggles={toggles} />,
