@@ -14,7 +14,6 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import omit from 'ramda/src/omit';
 
 import Grid, { GelPageGrid, GridItemLarge } from '#app/components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
@@ -63,15 +62,6 @@ import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
 `;
-
-const LOW_OMITTED_COMPONENTS = [
-  'image',
-  'include',
-  'video',
-  'social_embed',
-  'podcastPromo',
-  'wsoj',
-];
 
 const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
@@ -166,7 +156,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   // ads
   const { enabled: adsEnabled } = useToggle('ads');
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
-  const { isLow, isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
+  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
 
   /**
@@ -335,7 +325,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <NielsenAnalytics />
       <OptimizelyPageViewTracking />
       {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
-      {isAdsEnabled && !isAmp && !isLow && (
+      {isAdsEnabled && !isAmp && (
         <CanonicalAdBootstrapJs adcampaign={adcampaign} />
       )}
       {isAdsEnabled && <AdContainer slotType="leaderboard" />}
@@ -351,66 +341,56 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           parentColumns={gridColumns}
         >
           <main role="main">
-            <Blocks
-              blocks={blocks}
-              componentsToRender={omit(
-                !isLow ? [] : LOW_OMITTED_COMPONENTS,
-                componentsToRender,
-              )}
-            />
+            <Blocks blocks={blocks} componentsToRender={componentsToRender} />
             <OptimizelyArticleCompleteTracking />
           </main>
 
-          {!isLow && showRelatedTopics && topics && (
+          {showRelatedTopics && topics && (
             <GridItemLarge>
               <RelatedTopics topics={topics} />
             </GridItemLarge>
           )}
 
-          {!isLow && (
-            <CpsRelatedContent
-              content={relatedContent}
-              parentColumns={gridColsMain}
-            />
-          )}
+          <CpsRelatedContent
+            content={relatedContent}
+            parentColumns={gridColsMain}
+          />
         </GridPrimaryColumn>
 
-        {!isLow && (
-          <GridSecondaryColumn
-            item
-            columns={gridColsSecondary}
-            parentColumns={gridColumns}
-            // `serviceLang` is defined when the language the page is written in is different to the
-            // language of the service. `serviceLang` is used to override the page language.
-            lang={serviceLang}
-          >
-            {topStoriesInitialData && (
-              <ResponsiveComponentWrapper>
-                <TopStories
-                  content={topStoriesInitialData}
-                  parentColumns={gridColsSecondary}
-                />
-              </ResponsiveComponentWrapper>
-            )}
-            {featuresInitialData && (
-              <ResponsiveComponentWrapper>
-                <FeaturesAnalysis
-                  content={featuresInitialData}
-                  parentColumns={gridColsSecondary}
-                />
-              </ResponsiveComponentWrapper>
-            )}
-            <ComponentWrapper>
-              <MostReadContainer
-                mostReadEndpointOverride={mostReadEndpointOverride}
-                columnLayout="oneColumn"
-                size="small"
-                wrapper={MostReadWrapper}
-                initialData={mostReadInitialData}
+        <GridSecondaryColumn
+          item
+          columns={gridColsSecondary}
+          parentColumns={gridColumns}
+          // `serviceLang` is defined when the language the page is written in is different to the
+          // language of the service. `serviceLang` is used to override the page language.
+          lang={serviceLang}
+        >
+          {topStoriesInitialData && (
+            <ResponsiveComponentWrapper>
+              <TopStories
+                content={topStoriesInitialData}
+                parentColumns={gridColsSecondary}
               />
-            </ComponentWrapper>
-          </GridSecondaryColumn>
-        )}
+            </ResponsiveComponentWrapper>
+          )}
+          {featuresInitialData && (
+            <ResponsiveComponentWrapper>
+              <FeaturesAnalysis
+                content={featuresInitialData}
+                parentColumns={gridColsSecondary}
+              />
+            </ResponsiveComponentWrapper>
+          )}
+          <ComponentWrapper>
+            <MostReadContainer
+              mostReadEndpointOverride={mostReadEndpointOverride}
+              columnLayout="oneColumn"
+              size="small"
+              wrapper={MostReadWrapper}
+              initialData={mostReadInitialData}
+            />
+          </ComponentWrapper>
+        </GridSecondaryColumn>
       </StoryPageGrid>
     </>
   );

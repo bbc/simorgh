@@ -11,7 +11,11 @@ const ComscoreAnalytics = () => {
     return null;
   }
 
-  return (isAmp || isLow) ? <AmpComscoreAnalytics /> : <CanonicalComscoreAnalytics />;
+  return isAmp || isLow ? (
+    <AmpComscoreAnalytics />
+  ) : (
+    <CanonicalComscoreAnalytics />
+  );
 };
 
 export default ComscoreAnalytics;

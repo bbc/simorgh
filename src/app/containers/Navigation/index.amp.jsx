@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from '@bbc/psammead-navigation';
-import { node, string, shape } from 'prop-types';
+import { node, string, shape, bool } from 'prop-types';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import { ScrollableNavigation } from '@bbc/psammead-navigation/scrollable';
 import { AmpDropdown, AmpMenuButton } from '@bbc/psammead-navigation/dropdown';
@@ -12,6 +12,16 @@ const NAVIGATION_ID = 'si-nav';
 const SCROLLABLE_ID = 'si-nav-scrollable';
 const HIDDEN_CLASS_NAME = 'si-nav-scrollable-hidden';
 const OPEN_CLASS_NAME = 'si-nav-open';
+
+const StyledNavigation = styled(Navigation)`
+  ${({ isLow }) =>
+    isLow &&
+    `
+      > div:first-of-type {
+        margin: unset;
+      }
+    `}
+`;
 
 const StyledAmpScrollableNavigation = styled(ScrollableNavigation)`
   &.${HIDDEN_CLASS_NAME} {
@@ -25,6 +35,7 @@ const StyledAmpScrollableNavigation = styled(ScrollableNavigation)`
 const AmpNavigationContainer = ({
   script,
   service,
+  isLow,
   dir,
   menuAnnouncedText,
   scrollableListItems,
@@ -34,10 +45,11 @@ const AmpNavigationContainer = ({
   brandHighlightColour,
   brandBorderColour,
 }) => (
-  <Navigation
+  <StyledNavigation
     script={script}
     service={service}
     dir={dir}
+    isLow={isLow}
     id={NAVIGATION_ID}
     ampOpenClass={OPEN_CLASS_NAME}
     brandBackgroundColour={brandBackgroundColour}
@@ -70,11 +82,12 @@ const AmpNavigationContainer = ({
     >
       {scrollableListItems}
     </StyledAmpScrollableNavigation>
-  </Navigation>
+  </StyledNavigation>
 );
 
 AmpNavigationContainer.propTypes = {
   service: string.isRequired,
+  isLow: bool.isRequired,
   dir: string.isRequired,
   script: shape(scriptPropType).isRequired,
   scrollableListItems: node.isRequired,

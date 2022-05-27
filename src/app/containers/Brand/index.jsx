@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import Brand from '@bbc/psammead-brand';
 import { bool, node, oneOfType, func, shape, any } from 'prop-types';
+import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const StyledBrand = styled(Brand)`
@@ -12,9 +13,19 @@ const StyledBrand = styled(Brand)`
     @media screen and (forced-colors: active) {
       fill: linkText;
     }
+  }
+
+  ${({ isLow }) =>
+    isLow &&
+    `
+      > div:first-of-type {
+        margin: unset;
+      }
+    `}
 `;
 
 const BrandContainer = ({ skipLink, scriptLink, brandRef, ...props }) => {
+  const { isLow } = useContext(RequestContext);
   const { product, serviceLocalizedName, brandSVG, service, theming } =
     useContext(ServiceContext);
 
@@ -39,6 +50,7 @@ const BrandContainer = ({ skipLink, scriptLink, brandRef, ...props }) => {
       skipLink={skipLink}
       scriptLink={scriptLink}
       ref={brandRef}
+      isLow={isLow}
       {...props}
     />
   );

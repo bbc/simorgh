@@ -67,6 +67,7 @@ const WithContexts = Component => {
     status: number,
     id: string,
     isAmp: bool.isRequired,
+    isLow: bool.isRequired,
     pageData: pageDataPropType,
     pageType: string.isRequired,
     pathname: string.isRequired,

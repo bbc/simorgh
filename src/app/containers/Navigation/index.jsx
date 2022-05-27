@@ -41,7 +41,7 @@ const renderListItems = (
   });
 
 const NavigationContainer = () => {
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp, isLow } = useContext(RequestContext);
 
   const { script, translations, navigation, service, dir, theming } =
     useContext(ServiceContext);
@@ -95,7 +95,7 @@ const NavigationContainer = () => {
     </DropdownUl>
   );
 
-  const Navigation = isAmp ? Amp : Canonical;
+  const Navigation = isAmp || isLow ? Amp : Canonical;
 
   return (
     <Navigation
@@ -105,6 +105,7 @@ const NavigationContainer = () => {
       dir={dir}
       script={script}
       service={service}
+      isLow={isLow}
       brandBackgroundColour={brandBackgroundColour}
       brandForegroundColour={brandForegroundColour}
       brandHighlightColour={brandHighlightColour}

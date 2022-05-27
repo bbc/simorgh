@@ -62,7 +62,7 @@ const ATIAnalytics = ({ data }) => {
     serviceContext,
   );
 
-  return (isAmp || isLow) ? (
+  return isAmp || isLow ? (
     <AmpATIAnalytics pageviewParams={pageviewParams} />
   ) : (
     <CanonicalATIAnalytics pageviewParams={pageviewParams} />

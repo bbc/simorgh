@@ -1,9 +1,8 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import { arrayOf, shape, string, node, bool } from 'prop-types';
 import { C_EBON, C_WHITE } from '@bbc/psammead-styles/colours';
 import { getSansBold, getSansRegular } from '@bbc/psammead-styles/font-styles';
-import { RequestContext } from '#contexts/RequestContext';
 
 import { getBrevier } from '@bbc/gel-foundations/typography';
 import {
@@ -74,7 +73,6 @@ const SitewideLinks = ({
   script,
   service,
 }) => {
-  const { isLow } = useContext(RequestContext);
   const elements = links.map(({ id, text, href, lang }) => {
     if (isAmp && id === 'COOKIE_SETTINGS') {
       return (
@@ -85,8 +83,6 @@ const SitewideLinks = ({
     }
     return <Link service={service} text={text} href={href} lang={lang} />;
   });
-
-  if (isLow) return '';
 
   return (
     <SitewideLinksWrapper script={script} service={service}>
