@@ -29,7 +29,6 @@ const CpsAsset = props => {
     [MEDIA_ASSET_PAGE]: MediaAssetPage,
     [FEATURE_INDEX_PAGE]: FeatureIdxPage,
   }[type];
-  console.log('PageType', PageType, 'type', type, 'cpsAssetPagePath', cpsAssetPagePath);
 
   return PageType ? (
     <PageType {...props} pageType={type} />

@@ -5,7 +5,6 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
-import Low from './index.low';
 
 const renderListItems = (
   Li,
@@ -42,7 +41,7 @@ const renderListItems = (
   });
 
 const NavigationContainer = () => {
-  const { isLow, isAmp } = useContext(RequestContext);
+  const { isAmp } = useContext(RequestContext);
 
   const { script, translations, navigation, service, dir, theming } =
     useContext(ServiceContext);
@@ -96,7 +95,7 @@ const NavigationContainer = () => {
     </DropdownUl>
   );
 
-  const Navigation = isAmp ? Amp : ((isLow) ? Low : Canonical);
+  const Navigation = isAmp ? Amp : Canonical;
 
   return (
     <Navigation

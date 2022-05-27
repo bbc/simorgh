@@ -14,6 +14,7 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
+import omit from 'ramda/src/omit';
 
 import Grid, { GelPageGrid, GridItemLarge } from '#app/components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
@@ -62,6 +63,15 @@ import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
 `;
+
+const LOW_OMITTED_COMPONENTS = [
+  'image',
+  'include',
+  'video',
+  'social_embed',
+  'podcastPromo',
+  'wsoj',
+];
 
 const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
@@ -341,7 +351,13 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           parentColumns={gridColumns}
         >
           <main role="main">
-            <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+            <Blocks
+              blocks={blocks}
+              componentsToRender={omit(
+                !isLow ? [] : LOW_OMITTED_COMPONENTS,
+                componentsToRender,
+              )}
+            />
             <OptimizelyArticleCompleteTracking />
           </main>
 
@@ -351,9 +367,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
             </GridItemLarge>
           )}
 
-          {isLow ? (
-            ''
-          ) : (
+          {!isLow && (
             <CpsRelatedContent
               content={relatedContent}
               parentColumns={gridColsMain}
@@ -361,9 +375,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           )}
         </GridPrimaryColumn>
 
-        {isLow ? (
-          ''
-        ) : (
+        {!isLow && (
           <GridSecondaryColumn
             item
             columns={gridColsSecondary}

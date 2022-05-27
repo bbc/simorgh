@@ -70,6 +70,7 @@ RequestContextProvider.propTypes = {
   children: node.isRequired,
   id: string,
   isAmp: bool.isRequired,
+  isLow: bool.isRequired,
   pageType: oneOf(Object.values(pageTypes)).isRequired,
   service: string.isRequired,
   statusCode: number,

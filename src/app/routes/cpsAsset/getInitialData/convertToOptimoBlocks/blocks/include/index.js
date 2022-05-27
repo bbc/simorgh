@@ -2,7 +2,6 @@ import path from 'ramda/src/path';
 import { INCLUDE_MISSING_URL, INCLUDE_UNSUPPORTED } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
 import isAmpPath from '#app/routes/utils/isAmpPath';
-import isLowPath from '#app/routes/utils/isLowPath';
 import ampMetadataExtractor from './ampMetadataExtractor';
 import includeClassifier from './includeClassifier';
 import getImageBlock from './getImageBlock';
@@ -29,7 +28,6 @@ const convertInclude = async (includeBlock, pageData, ...restParams) => {
   const assetId = path(['metadata', 'id'], pageData);
 
   const isAmp = isAmpPath(pathname);
-  const isLow = isLowPath(pathname);
 
   const { includeType, classification } = includeClassifier({
     href,
