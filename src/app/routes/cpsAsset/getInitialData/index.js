@@ -103,6 +103,8 @@ export default async ({
       apiContext: 'primary_data',
     });
 
+    console.log("JSON WAS ", json);
+
     const additionalPageData = await getAdditionalPageData({
       pageData: json,
       service,
