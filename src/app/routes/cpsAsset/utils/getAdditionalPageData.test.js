@@ -21,6 +21,7 @@ import getAdditionalPageData from './getAdditionalPageData';
 fetchMock.config.overwriteRoutes = false; // http://www.wheresrhys.co.uk/fetch-mock/#usageconfiguration allows us to mock the same endpoint multiple times
 
 jest.mock('./hasRecommendations', () => jest.fn());
+jest.mock('#server/utilities/getAgent/index');
 
 describe('getAdditionalPageData', () => {
   afterEach(() => {
