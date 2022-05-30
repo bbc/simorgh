@@ -16,7 +16,6 @@ import {
   SERVER_STATUS_ENDPOINT_ERROR,
 } from '#lib/logger.const';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
-import isLive from '#lib/utilities/isLive';
 import { OK } from '#lib/statusCodes.const';
 import injectCspHeader from './utilities/cspHeader';
 import logResponseTime from './utilities/logResponseTime';
@@ -166,11 +165,7 @@ server.get(
       data.toggles = toggles;
       data.path = urlPath;
       data.timeOnServer = Date.now();
-
-      // TODO: Remove isLive and article page check after testing Ads on Article pages
-      data.showAdsBasedOnLocation =
-        (!isLive() && derivedPageType === 'article') ||
-        headers['bbc-adverts'] === 'true';
+      data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true';
 
       const { status } = data;
       // Set derivedPageType based on returned page data
