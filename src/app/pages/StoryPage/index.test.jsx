@@ -85,6 +85,8 @@ jest.mock('@optimizely/react-sdk', () => {
   };
 });
 
+jest.mock('#server/utilities/getAgent/index');
+
 const defaultToggleState = {
   ads: {
     enabled: true,
