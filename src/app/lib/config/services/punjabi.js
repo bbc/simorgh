@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '../../../legacy/psammead-styles/src/colours';
-import devanagariAndGurmukhi from '../../../legacy/gel-foundations/src/scripts/devanagari-and-gurmukhi';
-import * as brandSVG from '../../../legacy/psammead-assets/src/svgs/punjabi';
-import '../../../legacy/psammead-locales/moment/pa-in';
-import '../../../legacy/moment-timezone-include/tz/Asia/Kolkata';
+} from '#legacy/psammead-styles/src/colours';
+import devanagariAndGurmukhi from '#legacy/gel-foundations/src/scripts/devanagari-and-gurmukhi';
+import { punjabi as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import '#legacy/psammead-locales/moment/pa-in';
+import '#legacy/moment-timezone-include/tz/Asia/Kolkata';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -245,7 +245,7 @@ export const service = {
       topStoriesTitle: 'ਤਾਜ਼ਾ ਘਟਨਾਕ੍ਰਮ',
       featuresAnalysisTitle: 'ਦ੍ਰਿਸ਼ਟੀਕੋਣ',
     },
-    brandSVG: brandSVG.default,
+    brandSVG,
     mostRead: {
       header: 'ਸਭ ਤੋਂ ਵੱਧ ਪੜ੍ਹਿਆ ਗਿਆ',
       lastUpdated: 'ਆਖ਼ਰੀ ਅਪਡੇਟ:',

@@ -3,10 +3,10 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '../../../legacy/psammead-styles/src/colours';
-import noAscendersOrDescenders from '../../../legacy/gel-foundations/src/scripts/no-ascenders-or-descenders';
-import * as brandSVG from '../../../legacy/psammead-assets/src/svgs/japanese';
-import '../../../legacy/moment-timezone-include/tz/Asia/Tokyo';
+} from '#legacy/psammead-styles/src/colours';
+import noAscendersOrDescenders from '#legacy/gel-foundations/src/scripts/no-ascenders-or-descenders';
+import { japanese as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import '#legacy/moment-timezone-include/tz/Asia/Tokyo';
 import 'moment/locale/ja';
 import withContext from '../../../contexts/utils/withContext';
 
@@ -243,7 +243,7 @@ export const service = {
       topStoriesTitle: 'トップ記事',
       featuresAnalysisTitle: '読み物・解説',
     },
-    brandSVG: brandSVG.default,
+    brandSVG,
     mostRead: {
       header: '読まれた記事ランキング',
       lastUpdated: '最終更新:',

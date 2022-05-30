@@ -3,16 +3,16 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '../../../legacy/psammead-styles/src/colours';
-import * as brandSVG from '../../../legacy/psammead-assets/src/svgs/persian';
-import arabic from '../../../legacy/gel-foundations/src/scripts/arabic';
+} from '#legacy/psammead-styles/src/colours';
+import { persian as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import arabic from '#legacy/gel-foundations/src/scripts/arabic';
 import {
   F_REITH_QALAM_REGULAR,
   F_REITH_QALAM_BOLD,
-} from '../../../legacy/psammead-styles/src/fonts';
+} from '#legacy/psammead-styles/src/fonts';
 import 'moment/locale/fa';
-import '../../../legacy/moment-timezone-include/tz/GMT';
-import jalaali from '../../../legacy/psammead-calendars/src';
+import '#legacy/moment-timezone-include/tz/GMT';
+import jalaali from '#legacy/psammead-calendars/src';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -292,7 +292,7 @@ export const service = {
       topStoriesTitle: 'مهمترین خبرها',
       featuresAnalysisTitle: 'گزارش و تحلیل',
     },
-    brandSVG: brandSVG.default,
+    brandSVG,
     mostRead: {
       header: 'پربیننده‌ترین‌ها',
       lastUpdated: 'به روز شده در',

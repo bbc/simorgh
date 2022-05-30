@@ -3,10 +3,10 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '../../../legacy/psammead-styles/src/colours';
-import noAscendersOrDescenders from '../../../legacy/gel-foundations/src/scripts/no-ascenders-or-descenders';
-import * as brandSVG from '../../../legacy/psammead-assets/src/svgs/korean';
-import '../../../legacy/moment-timezone-include/tz/Asia/Seoul';
+} from '#legacy/psammead-styles/src/colours';
+import noAscendersOrDescenders from '#legacy/gel-foundations/src/scripts/no-ascenders-or-descenders';
+import { korean as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import '#legacy/moment-timezone-include/tz/Asia/Seoul';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/ko';
 
@@ -246,7 +246,7 @@ export const service = {
       topStoriesTitle: '주요뉴스',
       featuresAnalysisTitle: '이 시간 이슈',
     },
-    brandSVG: brandSVG.default,
+    brandSVG,
     mostRead: {
       header: 'TOP 뉴스',
       lastUpdated: '마지막 업데이트일',

@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '../../../legacy/psammead-styles/src/colours';
-import devanagariAndGurmukhi from '../../../legacy/gel-foundations/src/scripts/devanagari-and-gurmukhi';
-import * as brandSVG from '../../../legacy/psammead-assets/src/svgs/gujarati';
-import '../../../legacy/moment-timezone-include/tz/Asia/Kolkata';
-import '../../../legacy/psammead-locales/moment/gu';
+} from '#legacy/psammead-styles/src/colours';
+import devanagariAndGurmukhi from '#legacy/gel-foundations/src/scripts/devanagari-and-gurmukhi';
+import { gujarati as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import '#legacy/moment-timezone-include/tz/Asia/Kolkata';
+import '#legacy/psammead-locales/moment/gu';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -251,7 +251,7 @@ export const service = {
       topStoriesTitle: 'નવાજૂની',
       featuresAnalysisTitle: 'બીબીસી વિશેષ',
     },
-    brandSVG: brandSVG.default,
+    brandSVG,
     mostRead: {
       header: 'સૌથી વધારે વંચાયેલા સમાચાર',
       lastUpdated: 'લાસ્ટ અપડેટ:',

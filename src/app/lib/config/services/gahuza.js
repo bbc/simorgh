@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '../../../legacy/psammead-styles/src/colours';
-import cyrillicAndLatin from '../../../legacy/gel-foundations/src/scripts/latin-and-cyrillic';
-import * as brandSVG from '../../../legacy/psammead-assets/src/svgs/gahuza';
-import '../../../legacy/moment-timezone-include/tz/GMT';
-import '../../../legacy/psammead-locales/moment/rw';
+} from '#legacy/psammead-styles/src/colours';
+import cyrillicAndLatin from '#legacy/gel-foundations/src/scripts/latin-and-cyrillic';
+import { gahuza as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import '#legacy/moment-timezone-include/tz/GMT';
+import '#legacy/psammead-locales/moment/rw';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -265,7 +265,7 @@ export const service = {
       topStoriesTitle: "Inkuru iri kw'isonga",
       featuresAnalysisTitle: 'Ivyo BBC Gahuza ibahitiramwo',
     },
-    brandSVG: brandSVG.default,
+    brandSVG,
     mostRead: {
       header: 'Ibisomwa cane',
       lastUpdated: 'Ibiheruka kuvugururwa:',

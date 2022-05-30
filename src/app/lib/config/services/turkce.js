@@ -3,8 +3,8 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '../../../legacy/psammead-styles/src/colours';
-import latinDiacritics from '../../../legacy/gel-foundations/src/scripts/latin-with-diacritics';
+} from '#legacy/psammead-styles/src/colours';
+import latinDiacritics from '#legacy/gel-foundations/src/scripts/latin-with-diacritics';
 import {
   F_REITH_SANS_BOLD,
   F_REITH_SANS_BOLD_ITALIC,
@@ -13,9 +13,9 @@ import {
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_MEDIUM_ITALIC,
   F_REITH_SERIF_LIGHT,
-} from '../../../legacy/psammead-styles/src/fonts';
-import * as brandSVG from '../../../legacy/psammead-assets/src/svgs/turkce';
-import '../../../legacy/moment-timezone-include/tz/Asia/Istanbul';
+} from '#legacy/psammead-styles/src/fonts';
+import { turkce as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import '#legacy/moment-timezone-include/tz/Asia/Istanbul';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/tr';
 
@@ -257,7 +257,7 @@ export const service = {
       topStoriesTitle: 'Manşet haber',
       featuresAnalysisTitle: 'Seçtiklerimiz',
     },
-    brandSVG: brandSVG.default,
+    brandSVG,
     mostRead: {
       header: 'En çok okunanlar',
       lastUpdated: 'Son güncelleme:',
