@@ -13,7 +13,11 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#legacy/gel-foundations/src/spacings';
-import { C_WHITE, C_GREY_8, C_METAL  } from '#legacy/psammead-styles/src/colours';
+import {
+  C_WHITE,
+  C_GREY_8,
+  C_METAL,
+} from '#legacy/psammead-styles/src/colours';
 
 import FrostedGlassPanel from './FrostedGlassPanel';
 
