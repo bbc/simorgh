@@ -15343,10 +15343,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"moment@npm:2.24.0":
-  version: 2.24.0
-  resolution: "moment@npm:2.24.0"
-  checksum: 9cd93a251a2b33cb1b532eade0e496a2a7547faa6cfe37a283ee7bf69e202cd7c8ab0673d66883b5b29aed051353176dc0e6684f04073a75b0a155c500be1580
+"moment@npm:2.29.3, moment@npm:>= 2.9.0":
+  version: 2.29.3
+  resolution: "moment@npm:2.29.3"
+  checksum: 2e780e36d9a1823c08a1b6313cbb08bd01ecbb2a9062095820a34f42c878991ccba53abaa6abb103fd5c01e763724f295162a8c50b7e95b4f1c992ef0772d3f0
   languageName: node
   linkType: hard
 
@@ -19148,7 +19148,7 @@ __metadata:
     mkdirp: 1.0.0
     mocha: 9.2.2
     mocha-junit-reporter: 2.0.2
-    moment: 2.24.0
+    moment: 2.29.3
     moment-timezone: 0.5.26
     morgan: 1.10.0
     node-fetch: 2.6.7
