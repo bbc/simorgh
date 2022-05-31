@@ -87,6 +87,17 @@ const externalLinks = {
           'https://podcasts.apple.com/us/podcast/%D9%85%D8%B1%D8%A7%D9%87%D9%82%D8%AA%D9%8A/id1595160361',
       },
     ],
+    p0c9wp0l: [
+      {
+        linkText: 'Spotify',
+        linkUrl: 'https://open.spotify.com/show/3SPVfsKTZ1V6DPvIrvVyAb',
+      },
+      {
+        linkText: 'Apple',
+        linkUrl:
+          'https://podcasts.apple.com/us/podcast/تغيير-بسيط-a-simple-change/id1626812363',
+      },
+    ],
   },
 };
 
