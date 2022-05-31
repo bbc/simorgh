@@ -38,7 +38,6 @@ export const getBootstrapSrc = (queryString, useLegacy = false) => {
 
 const CanonicalAd = ({ slotType, className }) => {
   const { showAdsBasedOnLocation, pageType } = useContext(RequestContext);
-  console.log(pageType);
   const location = useLocation();
   const queryString = location.search;
   const { translations, dir } = useContext(ServiceContext);
