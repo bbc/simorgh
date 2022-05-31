@@ -13,7 +13,8 @@ import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import { leaderboardStyles, mpuStyles } from '../utilities/adSlotStyles';
 
 const AdContainer = styled.section`
-  background-color: ${C_LUNAR_LIGHT};
+  background-color: ${({ pageType }) =>
+    pageType === 'article' ? '#E6E8EA' : C_LUNAR_LIGHT};
   ${({ slotType }) => (slotType === 'mpu' ? mpuStyles : leaderboardStyles)}
 `;
 
@@ -36,7 +37,8 @@ export const getBootstrapSrc = (queryString, useLegacy = false) => {
 };
 
 const CanonicalAd = ({ slotType, className }) => {
-  const { showAdsBasedOnLocation } = useContext(RequestContext);
+  const { showAdsBasedOnLocation, pageType } = useContext(RequestContext);
+  console.log(pageType);
   const location = useLocation();
   const queryString = location.search;
   const { translations, dir } = useContext(ServiceContext);
@@ -88,6 +90,7 @@ const CanonicalAd = ({ slotType, className }) => {
         role="region"
         data-e2e="advertisement"
         className={className}
+        pageType={pageType}
       >
         <div id={`dotcom-${slotType}`} className="dotcom-ad" />
       </AdContainer>

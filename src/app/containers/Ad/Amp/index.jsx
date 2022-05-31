@@ -23,7 +23,8 @@ import { ampLeaderboardStyles, ampMpuStyles } from '../utilities/adSlotStyles';
 const AccessDiv = props => <div {...props} />;
 
 const AdSection = styled.section`
-  background-color: ${C_LUNAR_LIGHT};
+  background-color: ${({ pageType }) =>
+    pageType === 'article' ? '#E6E8EA' : C_LUNAR_LIGHT};
   margin-top: ${GEL_SPACING};
 `;
 
@@ -106,7 +107,7 @@ const AdContent = props => {
 
 const AdWithoutPlaceholder = props => {
   // eslint-disable-next-line react/prop-types
-  const { ariaLabel, slotType } = props;
+  const { ariaLabel, slotType, pageType } = props;
   return (
     <DisplayWrapper amp-access="toggles.ads.enabled" amp-access-hide="true">
       <AdSection
@@ -114,6 +115,7 @@ const AdWithoutPlaceholder = props => {
         role="region"
         data-e2e="advertisement"
         aria-hidden="true"
+        pageType={pageType}
       >
         <AdContainer slotType={slotType}>
           <StyledWrapper>
@@ -127,13 +129,14 @@ const AdWithoutPlaceholder = props => {
 
 const AdWithPlaceholder = props => {
   // eslint-disable-next-line react/prop-types
-  const { ariaLabel, slotType } = props;
+  const { ariaLabel, slotType, pageType } = props;
   return (
     <AdSection
       aria-label={ariaLabel}
       role="region"
       data-e2e="advertisement"
       aria-hidden="true"
+      pageType={pageType}
     >
       <AdContainer slotType={slotType}>
         <StyledWrapper>
