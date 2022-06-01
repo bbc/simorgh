@@ -22,10 +22,12 @@ import { ampLeaderboardStyles, ampMpuStyles } from '../utilities/adSlotStyles';
 // to the element.
 const AccessDiv = props => <div {...props} />;
 
+// move colour #E6E8EA in the legacy folder as C_GREY_3 once psammead migration is completed
+const C_GREY_3 = '#E6E8EA';
+
 const AdSection = styled.section`
   background-color: ${({ pageType }) =>
-    pageType === 'article' ? '#E6E8EA' : C_LUNAR_LIGHT};
-  margin-top: ${GEL_SPACING};
+    pageType === 'article' ? C_GREY_3 : C_LUNAR_LIGHT};
 `;
 
 const AdContainer = styled.div`

@@ -12,9 +12,12 @@ import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import { leaderboardStyles, mpuStyles } from '../utilities/adSlotStyles';
 
+// move colour #E6E8EA in the legacy folder as C_GREY_3 once psammead migration is completed
+const C_GREY_3 = '#E6E8EA';
+
 const AdContainer = styled.section`
   background-color: ${({ pageType }) =>
-    pageType === 'article' ? '#E6E8EA' : C_LUNAR_LIGHT};
+    pageType === 'article' ? C_GREY_3 : C_LUNAR_LIGHT};
   ${({ slotType }) => (slotType === 'mpu' ? mpuStyles : leaderboardStyles)}
 `;
 

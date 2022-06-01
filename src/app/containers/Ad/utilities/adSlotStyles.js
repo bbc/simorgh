@@ -62,7 +62,6 @@ export const leaderboardStyles = `
   display: none;
   visibility: hidden;
   @media (min-width: ${LEADERBOARD_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING};
     min-height: ${LEADERBOARD_HEIGHTS.GROUP_1};
     display: flex;
     flex-direction: column;
@@ -80,7 +79,7 @@ export const leaderboardStyles = `
   }
   @media (min-width: ${LARGE_LEADERBOARD_WIDTH_MIN}) {
     min-height: ${LEADERBOARD_HEIGHTS.LARGE};
-    padding: ${GEL_SPACING} ${GEL_SPACING_DBL};
+    padding: 0 ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING_DBL};
   }
 `;
 
