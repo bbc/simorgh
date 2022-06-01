@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, func, string, number } from 'prop-types';
+import { arrayOf, shape } from 'prop-types';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -46,12 +46,7 @@ const LabelComponent = styled(SectionLabel)`
   }
 `;
 
-const CpsRecommendations = ({
-  items,
-  showForVariation,
-  part,
-  splitRecsViewEventTracker,
-}) => {
+const CpsRecommendations = ({ items }) => {
   const { recommendations, translations, script, service, dir } =
     useContext(ServiceContext);
   const { enabled } = useToggle('cpsRecommendations');
@@ -66,10 +61,7 @@ const CpsRecommendations = ({
 
   if (!hasStoryRecommendations || !enabled || !items.length) return null;
 
-  const titlePath =
-    showForVariation === 'variation_1' && part === 2
-      ? ['More recommended stories', ['splitRecommendationTitle']]
-      : ['Recommended stories', ['recommendationTitle']];
+  const titlePath = ['Recommended stories', ['recommendationTitle']];
 
   const title = pathOr(...titlePath, translations);
 
@@ -81,7 +73,7 @@ const CpsRecommendations = ({
 
   const isSinglePromo = items.length === 1;
 
-  const endTextId = `end-of-recommendations${part ? `-${part}` : ''}`;
+  const endTextId = `end-of-recommendations`;
 
   const skipLink = {
     endTextId,
@@ -112,11 +104,7 @@ const CpsRecommendations = ({
           {isSinglePromo ? (
             <RecommendationsPromo promo={items[0]} />
           ) : (
-            <RecommendationsPromoList
-              promoItems={items}
-              showForVariation={showForVariation}
-              splitRecsViewEventTracker={splitRecsViewEventTracker}
-            />
+            <RecommendationsPromoList promoItems={items} />
           )}
         </SkipLinkWrapper>
       </RecommendationsWrapper>
@@ -128,14 +116,8 @@ export default CpsRecommendations;
 
 CpsRecommendations.propTypes = {
   items: arrayOf(shape(storyItem)),
-  showForVariation: string.optional,
-  part: number.optional,
-  splitRecsViewEventTracker: func.optional,
 };
 
 CpsRecommendations.defaultProps = {
   items: [],
-  showForVariation: null,
-  part: null,
-  splitRecsViewEventTracker: () => {},
 };
