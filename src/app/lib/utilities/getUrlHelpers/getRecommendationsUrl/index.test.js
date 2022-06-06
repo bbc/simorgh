@@ -21,7 +21,7 @@ describe('getRecommendationsUrl', () => {
     describe.only('004_brasil_recommendations_experiment', () => {
       beforeEach(() => {
         process.env.RECOMMENDATIONS_ENDPOINT =
-          'https://onward-journeys.test.api.bbci.co.uk/api';
+          'http://mock-recommendations-path';
       });
 
       afterEach(() => {
@@ -35,7 +35,7 @@ describe('getRecommendationsUrl', () => {
             engine: 'unirecs_datalab',
           }),
         ).toBe(
-          'https://onward-journeys.test.api.bbci.co.uk/api/recommendations/portuguese/brasil-59876053?Engine=unirecs_datalab',
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-59876053?Engine=unirecs_datalab',
         );
       });
 
@@ -48,7 +48,7 @@ describe('getRecommendationsUrl', () => {
             engineVariant: 'hybrid',
           }),
         ).toBe(
-          'https://onward-journeys.test.api.bbci.co.uk/api/recommendations/portuguese/brasil-59876053?Engine=unirecs_datalab&EngineVariant=hybrid',
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-59876053?Engine=unirecs_datalab&EngineVariant=hybrid',
         );
       });
     });

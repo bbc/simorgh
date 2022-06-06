@@ -121,7 +121,7 @@ describe('getAdditionalPageData', () => {
     describe('004_brasil_recommendations_experiment', () => {
       beforeEach(() => {
         process.env.RECOMMENDATIONS_ENDPOINT =
-          'https://onward-journeys.test.api.bbci.co.uk/api';
+          'http://mock-recommendations-path';
       });
 
       afterEach(() => {
@@ -140,15 +140,15 @@ describe('getAdditionalPageData', () => {
         hasRecommendations.mockImplementationOnce(() => true);
 
         fetchMock.mock(
-          'https://onward-journeys.test.api.bbci.co.uk/api/recommendations/portuguese/brasil-59057279?Engine=unirecs_camino',
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279?Engine=unirecs_camino',
           recommendationsJson,
         );
         fetchMock.mock(
-          'https://onward-journeys.test.api.bbci.co.uk/api/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=content',
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=content',
           recommendationsJson,
         );
         fetchMock.mock(
-          'https://onward-journeys.test.api.bbci.co.uk/api/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=hybrid',
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=hybrid',
           recommendationsJson,
         );
 
@@ -166,11 +166,11 @@ describe('getAdditionalPageData', () => {
           recommendationsJson,
         );
         fetchMock.mock(
-          'https://onward-journeys.test.api.bbci.co.uk/api/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=content',
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=content',
           recommendationsJson,
         );
         fetchMock.mock(
-          'https://onward-journeys.test.api.bbci.co.uk/api/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=hybrid',
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=hybrid',
           recommendationsJson,
         );
 

@@ -199,6 +199,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     mpu: props =>
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
     wsoj: props => (
+      // 004_brasil_recommendations_experiment
       <OptimizelyExperiment experiment={OPTIMIZELY_CONFIG.experimentId}>
         {variation => {
           if (variation === 'control' || !variation) {
