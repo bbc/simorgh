@@ -1,5 +1,5 @@
 import React from 'react';
-import { isNull, shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { isNull, shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
 import { render } from '@testing-library/react';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 import moment from 'moment';

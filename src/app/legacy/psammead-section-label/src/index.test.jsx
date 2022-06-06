@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import React from 'react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
 import { render } from '@testing-library/react';
 import { latin, arabic } from '#legacy/gel-foundations/src/scripts';
 import SectionLabel from './index';

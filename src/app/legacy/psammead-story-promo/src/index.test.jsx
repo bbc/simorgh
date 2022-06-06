@@ -1,6 +1,6 @@
 import React from 'react';
 import { arrayOf, bool, shape, string, oneOf } from 'prop-types';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 import MediaIndicator from '#legacy/psammead-media-indicator/src';
 import { render } from '@testing-library/react';

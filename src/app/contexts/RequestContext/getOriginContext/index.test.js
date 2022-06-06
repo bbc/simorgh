@@ -1,4 +1,7 @@
-import { setWindowValue, resetWindowValue } from '@bbc/psammead-test-helpers';
+import {
+  setWindowValue,
+  resetWindowValue,
+} from '#legacy/psammead-test-helpers/src';
 
 const windowLocation = window.location;
 

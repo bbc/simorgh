@@ -1,6 +1,6 @@
 import React from 'react';
 import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
 import { latin, arabic } from '#legacy/gel-foundations/src/scripts';
 import Caption from '.';
 

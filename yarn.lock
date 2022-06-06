@@ -1801,13 +1801,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/psammead-test-helpers@npm:6.0.5":
-  version: 6.0.5
-  resolution: "@bbc/psammead-test-helpers@npm:6.0.5"
-  checksum: 24927b6b7bf36bbfe908af4f3b4e343796ad9e4d3f9933d052df8d73e33cebf7fba28a8dab8413adbd65f4684511aab48f7d9925faf23a70937dd86bce9d9faf
-  languageName: node
-  linkType: hard
-
 "@bbc/web-vitals@npm:1.1.1":
   version: 1.1.1
   resolution: "@bbc/web-vitals@npm:1.1.1"
@@ -19000,7 +18993,6 @@ __metadata:
     "@babel/runtime": 7.17.9
     "@bbc/apache2-license-checker": 1.1.4
     "@bbc/psammead-storybook-helpers": 9.0.17
-    "@bbc/psammead-test-helpers": 6.0.5
     "@bbc/web-vitals": 1.1.1
     "@cypress/webpack-preprocessor": ^5.11.1
     "@emotion/babel-plugin": 11.9.2

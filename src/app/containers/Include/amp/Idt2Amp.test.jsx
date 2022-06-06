@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { suppressPropWarnings } from '@bbc/psammead-test-helpers';
+import { suppressPropWarnings } from '#legacy/psammead-test-helpers/src';
 import Idt2Amp from './Idt2Amp';
 
 const validIdt2Props = {

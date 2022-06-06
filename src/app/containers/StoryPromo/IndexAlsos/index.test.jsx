@@ -1,12 +1,12 @@
 import React from 'react';
 import compose from 'ramda/src/compose';
 import { render } from '@testing-library/react';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import {
   shouldMatchSnapshot,
   suppressPropWarnings,
-} from '@bbc/psammead-test-helpers';
+} from '#legacy/psammead-test-helpers/src';
 import { latin } from '#legacy/gel-foundations/src/scripts';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import relatedItems from './relatedItems';
 import IndexAlsosContainer from '.';
 
