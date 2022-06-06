@@ -1,7 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { text, withKnobs } from '@storybook/addon-knobs';
-import { withServicesKnob, themes } from '@bbc/psammead-storybook-helpers';
+import {
+  withServicesKnob,
+  themes,
+} from '#legacy/psammead-storybook-helpers/src';
 import notes from '../README.md';
 import { Headline, SubHeading } from './index';
 

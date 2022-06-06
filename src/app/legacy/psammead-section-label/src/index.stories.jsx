@@ -4,7 +4,7 @@ import { boolean, withKnobs } from '@storybook/addon-knobs';
 import {
   withServicesKnob,
   buildRTLSubstories,
-} from '@bbc/psammead-storybook-helpers';
+} from '#legacy/psammead-storybook-helpers/src';
 import notes from '../README.md';
 import SectionLabel from './index';
 

@@ -6,7 +6,7 @@ import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
 import {
   withServicesKnob,
   buildRTLSubstories,
-} from '@bbc/psammead-storybook-helpers';
+} from '#legacy/psammead-storybook-helpers/src';
 import notes from '../README.md';
 import Caption from '.';
 

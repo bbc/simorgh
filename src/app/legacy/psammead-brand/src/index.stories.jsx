@@ -13,7 +13,7 @@ import { C_POSTBOX, C_WHITE } from '#legacy/psammead-styles/src/colours';
 import {
   withServicesKnob,
   buildRTLSubstories,
-} from '@bbc/psammead-storybook-helpers';
+} from '#legacy/psammead-storybook-helpers/src';
 import ScriptLink from '#legacy/psammead-script-link/src';
 import Brand from './index';
 import SkipLink from './SkipLink';
