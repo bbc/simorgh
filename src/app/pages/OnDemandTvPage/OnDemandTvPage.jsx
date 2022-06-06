@@ -7,16 +7,16 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
-} from '#legacy/gel-foundations/src/spacings';
+} from '@bbc/gel-foundations/spacings';
 import pathOr from 'ramda/src/pathOr';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
-import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
-import { formatUnixTimestamp } from '#legacy/psammead-timestamp-container/src/utilities';
+} from '@bbc/gel-foundations/breakpoints';
+import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import LinkedData from '#containers/LinkedData';

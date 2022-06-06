@@ -1,24 +1,21 @@
 import React, { useContext } from 'react';
 import { string, number, bool } from 'prop-types';
 import styled from '@emotion/styled';
-import { Headline } from '#legacy/psammead-headings/src';
-import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
+import { Headline } from '@bbc/psammead-headings';
+import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-} from '#legacy/gel-foundations/src/spacings';
+} from '@bbc/gel-foundations/spacings';
 import {
   MEDIA_QUERY_TYPOGRAPHY,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
-import { formatUnixTimestamp } from '#legacy/psammead-timestamp-container/src/utilities';
-import {
-  getDoublePica,
-  getParagon,
-} from '#legacy/gel-foundations/src/typography';
-import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
+} from '@bbc/gel-foundations/breakpoints';
+import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
+import { getDoublePica, getParagon } from '@bbc/gel-foundations/typography';
+import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const BrandTitle = styled.span`

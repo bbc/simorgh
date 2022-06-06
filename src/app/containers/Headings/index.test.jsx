@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+import { latin } from '@bbc/gel-foundations/scripts';
 import {
   shouldMatchSnapshot,
   isNull,

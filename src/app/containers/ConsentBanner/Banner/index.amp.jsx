@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { bool, string } from 'prop-types';
-import { ConsentBanner } from '#legacy/psammead-consent-banner/src';
+import { ConsentBanner } from '@bbc/psammead-consent-banner';
 import { ServiceContext } from '#contexts/ServiceContext';
 import AmpCookieBanner from './cookie.amp';
 import BannerText from './Text';

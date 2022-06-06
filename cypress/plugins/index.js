@@ -1,12 +1,4 @@
-// eslint-disable-next-line import/no-unresolved
-const webpackPreprocessor = require('@cypress/webpack-preprocessor');
-const fs = require('fs');
-const path = require('path');
 const envConfig = require('../support/config/envs');
-const { webpackDirAlias } = require('../../dirAlias');
-
-const appDirectory = fs.realpathSync(process.cwd());
-const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 
 /* eslint-disable no-param-reassign */
 module.exports = (on, config) => {
@@ -21,36 +13,6 @@ module.exports = (on, config) => {
   console.log('UK:', config.env.UK);
   console.log('\n\n\n\n\n');
   /* eslint-enable no-console */
-
-  const options = {
-    // send in the options from your webpack.config.js, so it works the same
-    // as your app's code
-    webpackOptions: {
-      resolve: {
-        extensions: ['.js', '.jsx'],
-        alias: {
-          ...webpackDirAlias,
-        },
-      },
-
-      module: {
-        rules: [
-          // tell Webpack to use the .babelrc to know how to transform JS/JSX to ES2015 JS
-          {
-            test: /\.(js|jsx|mjs)$/,
-            include: [resolvePath('src')],
-            use: [
-              {
-                loader: 'babel-loader',
-              },
-            ],
-          },
-        ],
-      },
-    },
-  };
-
-  on('file:preprocessor', webpackPreprocessor(options));
 
   // eslint-disable-next-line global-require
   require('cypress-terminal-report/src/installLogsPrinter')(on);

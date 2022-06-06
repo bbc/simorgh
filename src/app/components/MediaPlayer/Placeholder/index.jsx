@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { string, func, shape, oneOf } from 'prop-types';
-import Image from '#legacy/psammead-image/src';
-import PlayButton from '#legacy/psammead-play-button/src';
-import { C_POSTBOX } from '#legacy/psammead-styles/src/colours';
+import Image from '@bbc/psammead-image';
+import PlayButton from '@bbc/psammead-play-button';
+import { C_POSTBOX } from '@bbc/psammead-styles/colours';
 import Guidance from '../Guidance';
 
 const StyledPlayButton = styled(PlayButton)`

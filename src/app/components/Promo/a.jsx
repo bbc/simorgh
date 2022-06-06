@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { C_GREY_6, C_GREY_10 } from '#legacy/psammead-styles/src/colours';
+import { C_GREY_6, C_GREY_10 } from '@bbc/psammead-styles/colours';
 
 const A = styled.a`
   color: ${C_GREY_10};

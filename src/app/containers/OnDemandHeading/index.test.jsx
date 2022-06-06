@@ -1,7 +1,7 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { render, getByText, getByRole } from '@testing-library/react';
-import { formatUnixTimestamp } from '#legacy/psammead-timestamp-container/src/utilities';
+import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import OnDemandHeadingContainer from '.';
 

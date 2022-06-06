@@ -3,7 +3,7 @@ import { compile } from 'path-to-regexp';
 import clone from 'ramda/src/clone';
 import { string } from 'prop-types';
 import { useRouteMatch } from 'react-router-dom';
-import ScriptLink from '#legacy/psammead-script-link/src';
+import ScriptLink from '@bbc/psammead-script-link';
 import { UserContext } from '#contexts/UserContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';

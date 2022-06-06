@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import cyrillicAndLatin from '#legacy/gel-foundations/src/scripts/latin-and-cyrillic';
-import { swahili as brandSVG } from '#legacy/psammead-assets/src/svgs';
-import '#legacy/moment-timezone-include/tz/Africa/Nairobi';
-import '#legacy/psammead-locales/moment/sw';
+} from '@bbc/psammead-styles/colours';
+import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
+import { swahili as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Africa/Nairobi';
+import '@bbc/psammead-locales/moment/sw';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

@@ -1,11 +1,11 @@
 import React from 'react';
 import { node } from 'prop-types';
 import styled from '@emotion/styled';
-import { mediaIcons } from '#legacy/psammead-assets/src/svgs';
-import { getPica } from '#legacy/gel-foundations/src/typography';
-import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
-import { GEL_SPACING_DBL } from '#legacy/gel-foundations/src/spacings';
-import { C_METAL } from '#legacy/psammead-styles/src/colours';
+import { mediaIcons } from '@bbc/psammead-assets/svgs';
+import { getPica } from '@bbc/gel-foundations/typography';
+import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import { C_METAL } from '@bbc/psammead-styles/colours';
 
 const EpisodesText = styled.p`
   display: inline;
