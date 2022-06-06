@@ -1,6 +1,6 @@
 import React from 'react';
 import { shape, bool } from 'prop-types';
-import ImagePlaceholder from '@bbc/psammead-image-placeholder';
+import ImagePlaceholder from '#legacy/psammead-image-placeholder/src';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#lib/utilities/ichefURL';
 import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';

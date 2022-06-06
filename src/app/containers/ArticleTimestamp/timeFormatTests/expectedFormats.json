@@ -101,10 +101,10 @@
   },
   "gujarati": {
     "default": {
-      "one minute ago": "એક મિનિટ પહેલા",
-      "five minutes ago": "5 મિનિટ પહેલા",
-      "one hour ago": "એક કલાક પહેલા",
-      "five hours ago": "5 કલાક પહેલા",
+      "one minute ago": "એક મિનિટ પેહલા",
+      "five minutes ago": "5 મિનિટ પેહલા",
+      "one hour ago": "એક કલાક પેહલા",
+      "five hours ago": "5 કલાક પેહલા",
       "exact date": "10 ઑક્ટોબર 2018",
       "exact date and time with timezone": "12 જુલાઈ 2019, 18:25 IST"
     }

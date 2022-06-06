@@ -2,11 +2,14 @@ import React, { useContext } from 'react';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import { shape, arrayOf, string } from 'prop-types';
 import styled from '@emotion/styled';
-import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+} from '#legacy/gel-foundations/src/spacings';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 import MetadataContainer from '#app/containers/Metadata';
 import LinkedData from '#app/containers/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';

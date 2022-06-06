@@ -1,7 +1,7 @@
 import React from 'react';
 import { number, string, shape } from 'prop-types';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
-import Timestamp from '@bbc/psammead-timestamp-container';
+import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
+import Timestamp from '#legacy/psammead-timestamp-container/src';
 
 const LastUpdated = ({
   locale,

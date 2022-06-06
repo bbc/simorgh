@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
-import { TopicTag, TopicTags } from '@bbc/psammead-topic-tags';
+import { TopicTag, TopicTags } from '#legacy/psammead-topic-tags/src';
 import pathOr from 'ramda/src/pathOr';
-import SectionLabel from '@bbc/psammead-section-label';
+import SectionLabel from '#legacy/psammead-section-label/src';
 import styled from '@emotion/styled';
 import { arrayOf, bool, shape, string } from 'prop-types';
-import { GEL_SPACING_QUIN } from '@bbc/gel-foundations/spacings';
+import { GEL_SPACING_QUIN } from '#legacy/gel-foundations/src/spacings';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';

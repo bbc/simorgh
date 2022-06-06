@@ -7,14 +7,14 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
   GEL_MARGIN_BELOW_400PX,
   GEL_MARGIN_ABOVE_400PX,
-} from '@bbc/gel-foundations/spacings';
-import { C_GHOST } from '@bbc/psammead-styles/colours';
+} from '#legacy/gel-foundations/src/spacings';
+import { C_GHOST } from '#legacy/psammead-styles/src/colours';
 import { ServiceContext } from '#contexts/ServiceContext';
 import MetadataContainer from '#containers/Metadata';
 import LinkedData from '#containers/LinkedData';

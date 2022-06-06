@@ -8,18 +8,18 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
   GEL_MARGIN_ABOVE_400PX,
-} from '@bbc/gel-foundations/spacings';
-import { getLongPrimer } from '@bbc/gel-foundations/typography';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
-import SectionLabel from '@bbc/psammead-section-label';
-import { C_LUNAR, C_EBON, C_METAL } from '@bbc/psammead-styles/colours';
+} from '#legacy/gel-foundations/src/spacings';
+import { getLongPrimer } from '#legacy/gel-foundations/src/typography';
+import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
+import SectionLabel from '#legacy/psammead-section-label/src';
+import { C_LUNAR, C_EBON, C_METAL } from '#legacy/psammead-styles/src/colours';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import RadioSchedule from '#components/RadioSchedule';

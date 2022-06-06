@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
-import { latin, arabic } from '@bbc/gel-foundations/scripts';
+import { latin, arabic } from '#legacy/gel-foundations/src/scripts';
 import {
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
