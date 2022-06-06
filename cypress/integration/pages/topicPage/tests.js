@@ -202,25 +202,8 @@ export default ({ service, pageType, variant }) => {
                   .then(url => {
                     // Check the page navigated to has the short headline that was on the topic item
                     cy.request(`${url}.json`).then(({ body }) => {
-                      if (body.metadata.locators.cpsUrn) {
-                        cy.log('cps article');
-                        const { shortHeadline } = body.promo.headlines;
-                        expect(shortHeadline).to.equal(firstItemHeadline);
-                      }
-                      if (body.promo.locators.optimoUrn) {
-                        cy.log('optimo article');
-                        cy.window().then(win => {
-                          const jsonData = win.SIMORGH_DATA.pageData;
-                          const headline =
-                            jsonData.promo.headlines.promoHeadline.blocks[0]
-                              .model.blocks[0].model.text;
-                          cy.log(
-                            jsonData.promo.headlines.promoHeadline.blocks[0]
-                              .model.blocks[0].model.text,
-                          );
-                          expect(headline).to.equal(firstItemHeadline);
-                        });
-                      }
+                      const { shortHeadline } = body.promo.headlines;
+                      expect(shortHeadline).to.equal(firstItemHeadline);
                     });
                   });
               });
