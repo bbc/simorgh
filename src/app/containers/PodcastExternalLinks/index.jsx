@@ -3,16 +3,19 @@ import React, { useContext } from 'react';
 import { arrayOf, shape, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
-import { C_CLOUD_LIGHT, C_SHADOW } from '@bbc/psammead-styles/colours';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import { C_CLOUD_LIGHT, C_SHADOW } from '#legacy/psammead-styles/src/colours';
+import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
+import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
-import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
-import { getGreatPrimer } from '@bbc/gel-foundations/typography';
+} from '#legacy/gel-foundations/src/breakpoints';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+} from '#legacy/gel-foundations/src/spacings';
+import { getGreatPrimer } from '#legacy/gel-foundations/src/typography';
 
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';

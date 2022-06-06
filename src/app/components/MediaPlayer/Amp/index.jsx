@@ -1,7 +1,7 @@
 import React from 'react';
 import { string } from 'prop-types';
 import { Helmet } from 'react-helmet';
-import ImagePlaceholder from '@bbc/psammead-image-placeholder';
+import ImagePlaceholder from '#legacy/psammead-image-placeholder/src';
 import Message from '../Message';
 
 const AmpHead = () => (

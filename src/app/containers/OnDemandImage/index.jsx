@@ -6,7 +6,7 @@ import {
   GEL_SPACING_QUAD,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/src/spacings';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { getMimeType } from '#lib/utilities/srcSet';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';

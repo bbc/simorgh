@@ -5,7 +5,7 @@ import { ServiceContextProvider } from '../contexts/ServiceContext';
 import { ToggleContext } from '../contexts/ToggleContext';
 import { RequestContext } from '../contexts/RequestContext';
 
-jest.mock('@bbc/psammead-styles/global-styles', () => () => (
+jest.mock('#legacy/psammead-styles/src/global-styles', () => () => (
   <p>I am the GlobalStyles component</p>
 ));
 

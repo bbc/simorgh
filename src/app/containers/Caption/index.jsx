@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { oneOfType, object, arrayOf, shape, string } from 'prop-types';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import Caption from '@bbc/psammead-caption';
+import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
+import Caption from '#legacy/psammead-caption/src';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Blocks from '../Blocks';

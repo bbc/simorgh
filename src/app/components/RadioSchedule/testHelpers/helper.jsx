@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { TEXT_VARIANTS } from '@bbc/psammead-storybook-helpers';
-import { arabic, latin } from '@bbc/gel-foundations/scripts';
+import { arabic, latin } from '#legacy/gel-foundations/src/scripts';
 import { boolean } from '@storybook/addon-knobs';
 import React from 'react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';

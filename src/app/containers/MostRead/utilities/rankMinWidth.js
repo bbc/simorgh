@@ -4,7 +4,7 @@ import {
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
   GEL_SPACING_SEXT,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/src/spacings';
 
 // Services with fonts that have glyphs thinner than the majority of other fonts.
 // This was mainly based on the old overrides (ie. Any group0 value < 2rem).
