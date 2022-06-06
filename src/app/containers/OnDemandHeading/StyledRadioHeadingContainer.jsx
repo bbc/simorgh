@@ -3,11 +3,11 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_QUAD,
-} from '#legacy/gel-foundations/src/spacings';
+} from '@bbc/gel-foundations/spacings';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '@bbc/gel-foundations/breakpoints';
 import OnDemandHeading from '.';
 
 const StyledRadioHeadingContainer = styled(OnDemandHeading)`

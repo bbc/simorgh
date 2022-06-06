@@ -1,13 +1,10 @@
 import React from 'react';
-import Navigation from '#legacy/psammead-navigation/src';
+import Navigation from '@bbc/psammead-navigation';
 import { node, string, shape } from 'prop-types';
-import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
-import { ScrollableNavigation } from '#legacy/psammead-navigation/src/ScrollableNavigation';
-import {
-  AmpDropdown,
-  AmpMenuButton,
-} from '#legacy/psammead-navigation/src/DropdownNavigation';
-import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '#legacy/gel-foundations/src/breakpoints';
+import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+import { ScrollableNavigation } from '@bbc/psammead-navigation/scrollable';
+import { AmpDropdown, AmpMenuButton } from '@bbc/psammead-navigation/dropdown';
+import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
 import styled from '@emotion/styled';
 
 const DROPDOWN_ID = 'si-nav-dropdown-menu';

@@ -4,8 +4,8 @@ import { oneOf, number, node } from 'prop-types';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
-import Grid from '#legacy/psammead-grid/src';
+} from '@bbc/gel-foundations/breakpoints';
+import Grid from '@bbc/psammead-grid';
 import { mostReadListGridProps } from '../../utilities/gridProps';
 
 const OneColumnGrid = styled(Grid)`

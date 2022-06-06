@@ -4,7 +4,7 @@ import {
   isNull,
   suppressPropWarnings,
 } from '@bbc/psammead-test-helpers';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+import { latin } from '@bbc/gel-foundations/scripts';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { textBlock } from '#models/blocks';
 import FauxHeadlineContainer from '.';

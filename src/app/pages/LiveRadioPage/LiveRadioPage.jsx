@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { string, shape } from 'prop-types';
-import { Headline } from '#legacy/psammead-headings/src';
+import { Headline } from '@bbc/psammead-headings';
 import pathOr from 'ramda/src/pathOr';
-import Paragraph from '#legacy/psammead-paragraph/src';
+import Paragraph from '@bbc/psammead-paragraph';
 import { useLocation } from 'react-router-dom';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';

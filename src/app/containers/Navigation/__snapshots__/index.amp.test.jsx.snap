@@ -22,7 +22,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   border-bottom: 0.0625rem solid transparent;
 }
 
-.emotion-0 .e1ibkbh72::after {
+.emotion-0 .e1lim4kn2::after {
   left: 0;
 }
 

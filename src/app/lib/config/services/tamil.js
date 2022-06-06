@@ -3,15 +3,15 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import tamil from '#legacy/gel-foundations/src/scripts/tamil';
-import { tamil as brandSVG } from '#legacy/psammead-assets/src/svgs';
+} from '@bbc/psammead-styles/colours';
+import { tamil } from '@bbc/gel-foundations/scripts';
+import { tamil as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
   F_NOTO_SANS_TAMIL_BOLD,
   F_NOTO_SANS_TAMIL_REGULAR,
-} from '#legacy/psammead-styles/src/fonts';
-import '#legacy/moment-timezone-include/tz/GMT';
-import '#legacy/psammead-locales/moment/ta';
+} from '@bbc/psammead-styles/fonts';
+import '@bbc/moment-timezone-include/tz/GMT';
+import '@bbc/psammead-locales/moment/ta';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

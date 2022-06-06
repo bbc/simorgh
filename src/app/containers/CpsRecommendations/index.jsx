@@ -5,16 +5,16 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '@bbc/gel-foundations/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
-import { C_GHOST } from '#legacy/psammead-styles/src/colours';
+import { C_GHOST } from '@bbc/psammead-styles/colours';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-} from '#legacy/gel-foundations/src/spacings';
-import SectionLabel from '#legacy/psammead-section-label/src';
+} from '@bbc/gel-foundations/spacings';
+import SectionLabel from '@bbc/psammead-section-label';
 import SkipLinkWrapper from '#components/SkipLinkWrapper';
 
 import { storyItem } from '#models/propTypes/storyItem';

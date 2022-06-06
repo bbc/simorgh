@@ -1,6 +1,6 @@
 import React from 'react';
 import path from 'ramda/src/path';
-import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
+import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { textDefaultPropTypes } from '#models/propTypes';
 import { headlineModelPropTypes } from '#models/propTypes/headline';
 
