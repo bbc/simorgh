@@ -3,10 +3,10 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import noAscendersOrDescenders from '#legacy/gel-foundations/src/scripts/no-ascenders-or-descenders';
-import { korean as brandSVG } from '#legacy/psammead-assets/src/svgs';
-import '#legacy/moment-timezone-include/tz/Asia/Seoul';
+} from '@bbc/psammead-styles/colours';
+import { noAscendersOrDescenders } from '@bbc/gel-foundations/scripts';
+import { korean as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/Asia/Seoul';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/ko';
 

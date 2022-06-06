@@ -3,8 +3,8 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import latinDiacritics from '#legacy/gel-foundations/src/scripts/latin-with-diacritics';
+} from '@bbc/psammead-styles/colours';
+import { latinDiacritics } from '@bbc/gel-foundations/scripts';
 import {
   F_REITH_SANS_BOLD,
   F_REITH_SANS_BOLD_ITALIC,
@@ -13,10 +13,10 @@ import {
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_MEDIUM_ITALIC,
   F_REITH_SERIF_LIGHT,
-} from '#legacy/psammead-styles/src/fonts';
-import { portuguese as brandSVG } from '#legacy/psammead-assets/src/svgs';
-import '#legacy/moment-timezone-include/tz/America/Sao_Paulo';
-import '#legacy/psammead-locales/moment/pt-br';
+} from '@bbc/psammead-styles/fonts';
+import { portuguese as brandSVG } from '@bbc/psammead-assets/svgs';
+import '@bbc/moment-timezone-include/tz/America/Sao_Paulo';
+import '@bbc/psammead-locales/moment/pt-br';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

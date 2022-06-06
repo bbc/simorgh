@@ -8,12 +8,12 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
-} from '#legacy/gel-foundations/src/spacings';
+} from '@bbc/gel-foundations/spacings';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '@bbc/gel-foundations/breakpoints';
 
 import { MediaMessage } from '#components/MediaPlayer';
 import { EPISODE_STATUS } from '..';

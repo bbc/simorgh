@@ -7,11 +7,11 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MAX,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '@bbc/gel-foundations/breakpoints';
 import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
-} from '#legacy/gel-foundations/src/spacings';
+} from '@bbc/gel-foundations/spacings';
 import { ServiceContext } from '#contexts/ServiceContext';
 import MostReadContainer from '#containers/MostRead';
 import mostReadShape from '#containers/MostRead/utilities/mostReadShape';

@@ -2,12 +2,9 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { arrayOf, string } from 'prop-types';
 
-import {
-  C_SPORT_SILVER,
-  C_SPORT_MIST,
-} from '#legacy/psammead-styles/src/colours';
+import { C_SPORT_SILVER, C_SPORT_MIST } from '@bbc/psammead-styles/colours';
 
-import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
+import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
 import { textBlockPropTypes } from '#models/propTypes/text';
 
 import Blocks from '../../Blocks';

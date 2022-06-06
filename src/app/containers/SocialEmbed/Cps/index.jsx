@@ -4,7 +4,7 @@ import Lazyload from 'react-lazyload';
 import {
   AmpSocialEmbed,
   CanonicalSocialEmbed,
-} from '#legacy/psammead-social-embed/src';
+} from '@bbc/psammead-social-embed';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import nodeLogger from '#lib/logger.node';

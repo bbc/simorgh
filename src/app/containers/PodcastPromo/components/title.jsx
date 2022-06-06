@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { node } from 'prop-types';
-import { mediaIcons } from '#legacy/psammead-assets/src/svgs';
-import { GEL_SPACING_DBL } from '#legacy/gel-foundations/src/spacings';
-import { getGreatPrimer } from '#legacy/gel-foundations/src/typography';
-import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
-import { C_EBON } from '#legacy/psammead-styles/src/colours';
+import { mediaIcons } from '@bbc/psammead-assets/svgs';
+import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import { getGreatPrimer } from '@bbc/gel-foundations/typography';
+import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+import { C_EBON } from '@bbc/psammead-styles/colours';
 
 const Heading = styled.h2`
   ${({ script }) => getGreatPrimer(script)}

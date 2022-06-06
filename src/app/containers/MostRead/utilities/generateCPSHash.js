@@ -10,8 +10,7 @@ const generateCSPHash = (script, sha, encoding, base) => {
       .replace(/\+/g, '-')
       .replace(/\//g, '_')}`;
   } catch (err) {
-    // eslint-disable-next-line no-console
-    console.warn(
+    console.log(
       `Failed to create hash with params ${(script, sha, encoding, base)}`,
     );
     return null;

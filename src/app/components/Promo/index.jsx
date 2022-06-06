@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { arrayOf, element } from 'prop-types';
 import partition from 'ramda/src/partition';
 
-import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '#legacy/gel-foundations/src/breakpoints';
+import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
 
 import { ServiceContext } from '#contexts/ServiceContext';
 

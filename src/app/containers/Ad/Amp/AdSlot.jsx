@@ -3,7 +3,7 @@ import { oneOf, string } from 'prop-types';
 import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '@bbc/gel-foundations/breakpoints';
 import isLive from '#lib/utilities/isLive';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 

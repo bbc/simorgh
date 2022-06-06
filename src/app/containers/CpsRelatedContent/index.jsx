@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { arrayOf, shape, number, bool, string, elementType } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
-import { GEL_SPACING_DBL } from '#legacy/gel-foundations/src/spacings';
+import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 

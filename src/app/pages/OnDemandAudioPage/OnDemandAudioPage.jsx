@@ -3,11 +3,11 @@ import path from 'ramda/src/path';
 import is from 'ramda/src/is';
 import styled from '@emotion/styled';
 import { shape, string, number, bool, func, node } from 'prop-types';
-import { GEL_SPACING_TRPL } from '#legacy/gel-foundations/src/spacings';
+import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '@bbc/gel-foundations/breakpoints';
 import { useLocation } from 'react-router-dom';
 import pathOr from 'ramda/src/pathOr';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';

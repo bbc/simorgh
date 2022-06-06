@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { news as brandSVG } from '#legacy/psammead-assets/src/svgs';
-import { C_POSTBOX, C_WHITE } from '#legacy/psammead-styles/src/colours';
+import { news as brandSVG } from '@bbc/psammead-assets/svgs';
+import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { ServiceContext } from '#contexts/ServiceContext';
 import BrandContainer from '.';
 

@@ -6,19 +6,19 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-} from '#legacy/gel-foundations/src/spacings';
+} from '@bbc/gel-foundations/spacings';
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '@bbc/gel-foundations/breakpoints';
 import {
   getPica,
   getBrevier,
   getLongPrimer,
-} from '#legacy/gel-foundations/src/typography';
-import { getSerifMedium } from '#legacy/psammead-styles/src/font-styles';
-import { C_LUNAR } from '#legacy/psammead-styles/src/colours';
+} from '@bbc/gel-foundations/typography';
+import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
+import { C_LUNAR } from '@bbc/psammead-styles/colours';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 

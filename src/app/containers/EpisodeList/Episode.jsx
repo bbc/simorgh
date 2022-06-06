@@ -1,12 +1,12 @@
 import React, { Children, cloneElement, forwardRef } from 'react';
 import styled from '@emotion/styled';
 import { node, string } from 'prop-types';
-import { GEL_SPACING_DBL } from '#legacy/gel-foundations/src/spacings';
+import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import tail from 'ramda/src/tail';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '@bbc/gel-foundations/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import Image from './Image';
 import { withEpisodeContext } from './helpers';

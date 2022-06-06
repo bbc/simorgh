@@ -3,16 +3,16 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import { persian as brandSVG } from '#legacy/psammead-assets/src/svgs';
-import arabic from '#legacy/gel-foundations/src/scripts/arabic';
+} from '@bbc/psammead-styles/colours';
+import { persian as brandSVG } from '@bbc/psammead-assets/svgs';
+import { arabic } from '@bbc/gel-foundations/scripts';
 import {
   F_REITH_QALAM_REGULAR,
   F_REITH_QALAM_BOLD,
-} from '#legacy/psammead-styles/src/fonts';
+} from '@bbc/psammead-styles/fonts';
 import 'moment/locale/fa';
-import '#legacy/moment-timezone-include/tz/GMT';
-import jalaali from '#legacy/psammead-calendars/src';
+import '@bbc/moment-timezone-include/tz/GMT';
+import { jalaali } from '@bbc/psammead-calendars';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

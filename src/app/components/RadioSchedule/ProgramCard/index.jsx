@@ -1,22 +1,19 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { mediaIcons } from '#legacy/psammead-assets/src/svgs';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-} from '#legacy/gel-foundations/src/spacings';
-import { C_METAL, C_WHITE } from '#legacy/psammead-styles/src/colours';
+import { mediaIcons } from '@bbc/psammead-assets/svgs';
+import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import { C_METAL, C_WHITE } from '@bbc/psammead-styles/colours';
 import {
   getSansRegular,
   getSerifMedium,
-} from '#legacy/psammead-styles/src/font-styles';
+} from '@bbc/psammead-styles/font-styles';
 import {
   getBrevier,
   getMinion,
   getPica,
-} from '#legacy/gel-foundations/src/typography';
+} from '@bbc/gel-foundations/typography';
 import { shape, string, number } from 'prop-types';
-import { formatDuration } from '#legacy/psammead-timestamp-container/src/utilities';
+import { formatDuration } from '@bbc/psammead-timestamp-container/utilities';
 import { ServiceContext } from '#contexts/ServiceContext';
 import ScheduleItemHeader from '../ScheduleItemHeader';
 import { programStateConfig } from '../utilities';

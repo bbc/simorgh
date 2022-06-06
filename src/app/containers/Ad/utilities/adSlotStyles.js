@@ -2,11 +2,8 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-} from '#legacy/gel-foundations/src/spacings';
+} from '@bbc/gel-foundations/breakpoints';
+import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 
 // Ad Slot Widths (for custom breakpoints)
 /*
