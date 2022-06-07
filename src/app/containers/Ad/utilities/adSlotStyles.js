@@ -35,18 +35,20 @@ const LARGE_LEADERBOARD_WIDTH_MIN = '58.75rem'; // 940px
 const AD_UNIT_MARGIN = 2.0625; // 33px
 
 const MPU_HEIGHTS = {
-  GROUP_1: `${19.9375 + AD_UNIT_MARGIN}rem`,
+  GROUP_1: `${3.125 + AD_UNIT_MARGIN}rem`,
   // 50px + AD_UNIT_MARGIN = 75px
-  GROUP_3: `${38.5625 + AD_UNIT_MARGIN}rem`,
+  GROUP_3: `${15.625 + AD_UNIT_MARGIN}rem`,
   // 250px + AD_UNIT_MARGIN = 275px
 };
 
 const LEADERBOARD_HEIGHTS = {
-  GROUP_2: `${3.875 + AD_UNIT_MARGIN}rem`,
+  GROUP_1: `${3.125 + AD_UNIT_MARGIN}rem`,
+  // 50px + AD_UNIT_MARGIN = 75px
+  GROUP_2: `${3.75 + AD_UNIT_MARGIN}rem`,
   // 60px + AD_UNIT_MARGIN = 85px
-  GROUP_3: `${6.6875 + AD_UNIT_MARGIN}rem`,
+  GROUP_3: `${5.625 + AD_UNIT_MARGIN}rem`,
   // 90px + AD_UNIT_MARGIN = 115px
-  GROUP_4: `${17.6875 + AD_UNIT_MARGIN}rem`,
+  LARGE: `${16.625 + AD_UNIT_MARGIN}rem`,
   // 266px + AD_UNIT_MARGIN = 291px
 };
 
@@ -60,17 +62,24 @@ export const leaderboardStyles = `
   display: none;
   visibility: hidden;
   @media (min-width: ${LEADERBOARD_WIDTH_MIN}) {
-    min-height: ${LEADERBOARD_HEIGHTS.GROUP_2};
+    min-height: ${LEADERBOARD_HEIGHTS.GROUP_1};
     display: flex;
     flex-direction: column;
     justify-content: center;
     visibility: visible;
   }
+  @media (min-width: ${LEADERBOARD_WIDTH_MIN_PADDING}) {
+    padding: 0 ${GEL_SPACING};
+  }
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    min-height: ${LEADERBOARD_HEIGHTS.GROUP_2};
+  }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     min-height: ${LEADERBOARD_HEIGHTS.GROUP_3};
   }
   @media (min-width: ${LARGE_LEADERBOARD_WIDTH_MIN}) {
-    min-height: ${LEADERBOARD_HEIGHTS.GROUP_4};
+    min-height: ${LEADERBOARD_HEIGHTS.LARGE};
+    padding: 0 ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING_DBL};
   }
 `;
 
