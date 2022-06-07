@@ -2,7 +2,10 @@ import React, { useContext } from 'react';
 import { arrayOf, shape, number, oneOf, oneOfType, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 
-import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
+import {
+  StoryPromoLi,
+  StoryPromoUl,
+} from '#legacy/psammead-story-promo-list/src';
 
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';

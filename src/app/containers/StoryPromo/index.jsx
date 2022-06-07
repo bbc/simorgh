@@ -9,11 +9,15 @@ import {
   elementType,
 } from 'prop-types';
 import styled from '@emotion/styled';
-import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import StoryPromo, {
+  Headline,
+  Summary,
+  Link,
+} from '#legacy/psammead-story-promo/src';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
 import pathOr from 'ramda/src/pathOr';
-import LiveLabel from '@bbc/psammead-live-label';
-import ImagePlaceholder from '@bbc/psammead-image-placeholder';
+import LiveLabel from '#legacy/psammead-live-label/src';
+import ImagePlaceholder from '#legacy/psammead-image-placeholder/src';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';

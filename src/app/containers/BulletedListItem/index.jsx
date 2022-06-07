@@ -1,5 +1,5 @@
 import React from 'react';
-import { BulletedListItem } from '@bbc/psammead-bulleted-list';
+import { BulletedListItem } from '#legacy/psammead-bulleted-list/src';
 import { arrayOf, shape, string, oneOfType, bool, oneOf } from 'prop-types';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';

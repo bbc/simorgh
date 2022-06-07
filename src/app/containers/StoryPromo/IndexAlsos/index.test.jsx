@@ -5,7 +5,7 @@ import {
   shouldMatchSnapshot,
   suppressPropWarnings,
 } from '@bbc/psammead-test-helpers';
-import { latin } from '@bbc/gel-foundations/scripts';
+import { latin } from '#legacy/gel-foundations/src/scripts';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import relatedItems from './relatedItems';
 import IndexAlsosContainer from '.';

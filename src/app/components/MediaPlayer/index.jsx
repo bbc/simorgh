@@ -5,8 +5,8 @@ import equals from 'ramda/src/equals';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_QUAD,
-} from '@bbc/gel-foundations/spacings';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/spacings';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
 import Placeholder from './Placeholder';
 import Amp from './Amp';
 import Canonical from './Canonical';
