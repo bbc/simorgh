@@ -1,18 +1,18 @@
 import React from 'react';
 import { string, arrayOf, shape } from 'prop-types';
 import styled from '@emotion/styled';
-import InlineLink from '@bbc/psammead-inline-link';
-import Paragraph from '@bbc/psammead-paragraph';
-import { C_POSTBOX, C_SHADOW } from '@bbc/psammead-styles/colours';
-import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+import InlineLink from '#legacy/psammead-inline-link/src';
+import Paragraph from '#legacy/psammead-paragraph/src';
+import { C_POSTBOX, C_SHADOW } from '#legacy/psammead-styles/src/colours';
+import { getSerifMedium } from '#legacy/psammead-styles/src/font-styles';
 import {
   getCanon,
   getParagon,
   GEL_FF_REITH_SANS,
-} from '@bbc/gel-foundations/typography';
+} from '#legacy/gel-foundations/src/typography';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import Grid, { GelPageGrid } from '#app/components/Grid';
+import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
 
 const StatusCode = styled.span`
   ${props => (props.script ? getParagon(props.script) : '')}

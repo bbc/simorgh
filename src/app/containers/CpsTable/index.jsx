@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { arrayOf, shape, string, oneOf } from 'prop-types';
 
-import { GEL_BODY_COPY } from '@bbc/gel-foundations/typography';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+import { GEL_BODY_COPY } from '#legacy/gel-foundations/src/typography';
+import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
 import { textBlockPropTypes } from '#models/propTypes/text';
 
 import { ServiceContext } from '#contexts/ServiceContext';

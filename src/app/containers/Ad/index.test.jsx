@@ -1,11 +1,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render } from '@testing-library/react';
-import { latinDiacritics } from '@bbc/gel-foundations/scripts';
-import {
-  shouldMatchSnapshot,
-  suppressPropWarnings,
-} from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import {
   ServiceContext,
@@ -13,6 +8,11 @@ import {
 } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  shouldMatchSnapshot,
+  suppressPropWarnings,
+} from '#legacy/psammead-test-helpers/src';
+import { latinDiacritics } from '#legacy/gel-foundations/src/scripts';
 
 import AdContainer from './index';
 

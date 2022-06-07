@@ -1,5 +1,5 @@
 import React from 'react';
-import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
+import { withServicesKnob } from '#legacy/psammead-storybook-helpers/src';
 import { withKnobs } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import BrandContainer from '.';

@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
-import { ukrainian as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/GMT';
-import '@bbc/psammead-locales/moment/uk';
+} from '#legacy/psammead-styles/src/colours';
+import cyrillicAndLatin from '#legacy/gel-foundations/src/scripts/latin-and-cyrillic';
+import { ukrainian as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import '#legacy/moment-timezone-include/tz/GMT';
+import '#legacy/psammead-locales/moment/uk';
 import withContext from '../../../contexts/utils/withContext';
 import { mainTranslations as russianMainTranslations } from './russian';
 

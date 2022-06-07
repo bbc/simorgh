@@ -2,15 +2,18 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import { oneOfType, elementType, string, number } from 'prop-types';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
-import detokenise from '@bbc/psammead-detokeniser';
-import LiveLabel from '@bbc/psammead-live-label';
-import { Link } from '@bbc/psammead-story-promo';
-import { getSansBold, getSansRegular } from '@bbc/psammead-styles/font-styles';
-import { getPica } from '@bbc/gel-foundations/typography';
-import { C_KINGFISHER } from '@bbc/psammead-styles/colours';
-import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
+import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
+import { formatUnixTimestamp } from '#legacy/psammead-timestamp-container/src/utilities';
+import detokenise from '#legacy/psammead-detokeniser/src';
+import LiveLabel from '#legacy/psammead-live-label/src';
+import { Link } from '#legacy/psammead-story-promo/src';
+import {
+  getSansBold,
+  getSansRegular,
+} from '#legacy/psammead-styles/src/font-styles';
+import { getPica } from '#legacy/gel-foundations/src/typography';
+import { C_KINGFISHER } from '#legacy/psammead-styles/src/colours';
+import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
 import { ServiceContext } from '#contexts/ServiceContext';
 import durationDictionary, { programStateConfig } from '../utilities';
 

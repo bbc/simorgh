@@ -1,18 +1,21 @@
 import React from 'react';
 import { shape, string, oneOf, node } from 'prop-types';
 import styled from '@emotion/styled';
-import { getPica, getGreatPrimer } from '@bbc/gel-foundations/typography';
-import { C_EBON } from '@bbc/psammead-styles/colours';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
-import { grid } from '@bbc/psammead-styles/detection';
-import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
+import {
+  getPica,
+  getGreatPrimer,
+} from '#legacy/gel-foundations/src/typography';
+import { C_EBON } from '#legacy/psammead-styles/src/colours';
+import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
+import { grid } from '#legacy/psammead-styles/src/detection';
+import { getSerifMedium } from '#legacy/psammead-styles/src/font-styles';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-} from '@bbc/gel-foundations/spacings';
-import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-import Grid from '@bbc/psammead-grid';
+} from '#legacy/gel-foundations/src/spacings';
+import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
+import Grid from '#legacy/psammead-grid/src';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import {
   mostReadListGridProps,

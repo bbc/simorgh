@@ -6,12 +6,12 @@ import {
   AMP_LIST_JS,
   AMP_MUSTACHE_JS,
   AMP_SCRIPT_JS,
-} from '@bbc/psammead-assets/amp-boilerplate';
+} from '#legacy/psammead-assets/src/amp-boilerplate';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
 import pathOr from 'ramda/src/pathOr';
-import { C_SHADOW } from '@bbc/psammead-styles/colours';
-import { getBodyCopy } from '@bbc/gel-foundations/dist/typography';
+import { C_SHADOW } from '#legacy/psammead-styles/src/colours';
+import { getBodyCopy } from '#legacy/gel-foundations/src/typography';
 import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
 import MostReadRank, { serviceNumerals } from '../Canonical/Rank';
 import generateCSPHash from '../utilities/generateCPSHash';

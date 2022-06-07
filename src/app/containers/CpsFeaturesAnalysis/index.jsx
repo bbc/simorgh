@@ -2,18 +2,21 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { arrayOf, shape, number, oneOf, oneOfType, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
-import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
+import {
+  StoryPromoLi,
+  StoryPromoUl,
+} from '#legacy/psammead-story-promo-list/src';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useViewTracker from '#hooks/useViewTracker';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/src/spacings';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import FrostedGlassPromo from '../../components/FrostedGlassPromo/lazy';
 

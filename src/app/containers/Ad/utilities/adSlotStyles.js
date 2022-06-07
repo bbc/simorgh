@@ -1,15 +1,15 @@
+import isLive from '#lib/utilities/isLive';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
-import isLive from '#lib/utilities/isLive';
+} from '#legacy/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_QUAD,
   GEL_SPACING_TRPL,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/src/spacings';
 
 // Ad Slot Widths (for custom breakpoints)
 /*

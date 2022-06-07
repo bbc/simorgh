@@ -1,6 +1,6 @@
 import React from 'react';
 import { string, shape, number } from 'prop-types';
-import { AmpImg } from '@bbc/psammead-image';
+import { AmpImg } from '#legacy/psammead-image/src';
 import { GridItemMedium } from '#app/components/Grid';
 
 const Idt2Amp = ({ imageBlock }) =>

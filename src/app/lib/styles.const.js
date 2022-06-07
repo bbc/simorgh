@@ -2,13 +2,13 @@ import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
   GEL_MARGIN_BELOW_400PX,
   GEL_MARGIN_ABOVE_400PX,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/src/spacings';
 
 // eslint-disable-next-line import/prefer-default-export
 export const NEGATIVE_MARGIN = `@media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {

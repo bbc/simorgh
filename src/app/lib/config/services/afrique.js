@@ -3,10 +3,10 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { latinDiacritics } from '@bbc/gel-foundations/scripts';
-import { afrique as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/GMT';
+} from '#legacy/psammead-styles/src/colours';
+import latinDiacritics from '#legacy/gel-foundations/src/scripts/latin-with-diacritics';
+import { afrique as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import '#legacy/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/fr';
 

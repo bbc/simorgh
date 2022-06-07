@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
 import BulletinContainer from '.';
 
 const tvBulletinItem = {

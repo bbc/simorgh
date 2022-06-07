@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import { bool, string } from 'prop-types';
 import styled from '@emotion/styled';
-import SectionLabel from '@bbc/psammead-section-label';
+import SectionLabel from '#legacy/psammead-section-label/src';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
-} from '@bbc/gel-foundations/breakpoints';
-import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
-import { C_GREY_2 } from '@bbc/psammead-styles/colours';
+} from '#legacy/gel-foundations/src/breakpoints';
+import { GEL_SPACING_DBL } from '#legacy/gel-foundations/src/spacings';
+import { C_GREY_2 } from '#legacy/psammead-styles/src/colours';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const SectionLabelWithMargin = styled(SectionLabel)`

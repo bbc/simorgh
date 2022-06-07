@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
+import { GEL_SPACING_TRPL } from '#legacy/gel-foundations/src/spacings';
 
 /**
  * MAX_WIDTH        Ensures all embeds assume the same width. (Tweets max-out

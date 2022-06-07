@@ -5,7 +5,7 @@ import {
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import Footer from '#components/Footer';

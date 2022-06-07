@@ -1,16 +1,16 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import deepClone from 'ramda/src/clone';
-import {
-  shouldMatchSnapshot,
-  suppressPropWarnings,
-} from '@bbc/psammead-test-helpers';
 import loggerMock from '#testHelpers/loggerMock';
 import { MEDIA_MISSING } from '#lib/logger.const';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  shouldMatchSnapshot,
+  suppressPropWarnings,
+} from '#legacy/psammead-test-helpers/src';
 import {
   completeItem,
   itemWithOvertypedSummary,
