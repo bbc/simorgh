@@ -23,9 +23,11 @@ Given you are using Chrome browser.
 
    e.g. ![image](https://user-images.githubusercontent.com/30599794/90151074-40bd7f80-dd7e-11ea-985d-902ed04641ac.png)
 
-3. Run local environment: `yarn dev`. If you would like to run with Simorgh's CSP Headers, run the following command: `yarn build && yarn start`
+3. Download the [CORS Unblock Chrome extension](https://chrome.google.com/webstore/detail/cors-unblock/lfhmikememgdcahcdlaciloancbhjino?hl=en) to prevent any CORS errors related to https://www.test.bbc.com/userinfo which would prevent the ads to display correctly.
 
-4. Visit the home page of one of the services with Ads enabled and append this query string to the url: `?site=test&ads-debug=true`
+4. Run local environment: `yarn dev`. If you would like to run with Simorgh's CSP Headers, run the following command: `yarn build && yarn start`
+
+5. Visit the home page of one of the services with Ads enabled and append this query string to the url: `?site=test&ads-debug=true`
 
    e.g. http://localhost:7080/mundo?site=test&ads-debug=true
 
@@ -64,3 +66,9 @@ If you are unable to set a proxy on one of the Windows a11y laptops, you won't b
 You can append this query string `?ads-js-env=live` to your URL to load the LIVE `dotcom-bootstrap` for canonical pages only.
 
 e.g. https://www.test.bbc.com/mundo?ads-js-env=live
+
+## Known Issues
+
+We know the existence of a minor intermittent issue in the local environment which prevents the correct rendering of the leaderboard ad. Reloading the page a couple of times with cache disabled, should allow you to see the leaderboard ad.
+
+Another minor intermittent issue in the local environment occurs when trying to render ads at different breakpoints. In this case, reloading the page might not be enough, and you should try rendering the ad using another page data.
