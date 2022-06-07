@@ -1,6 +1,6 @@
 import React from 'react';
 import { arrayOf, shape, bool, oneOf } from 'prop-types';
-import { StoryPromoLi } from '@bbc/psammead-story-promo-list';
+import { StoryPromoLi } from '#legacy/psammead-story-promo-list/src';
 import Grid from '#app/components/Grid';
 import { storyItem } from '#models/propTypes/storyItem';
 import {

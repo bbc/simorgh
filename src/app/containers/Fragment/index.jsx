@@ -1,5 +1,5 @@
 import React from 'react';
-import { getSansRegularItalic } from '@bbc/psammead-styles/font-styles';
+import { getSansRegularItalic } from '#legacy/psammead-styles/src/font-styles';
 import styled from '@emotion/styled';
 import { string, node, arrayOf } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';

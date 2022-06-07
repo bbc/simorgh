@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { devanagariAndGurmukhi } from '@bbc/gel-foundations/scripts';
-import { hindi as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
-import '@bbc/psammead-locales/moment/hi';
+} from '#legacy/psammead-styles/src/colours';
+import devanagariAndGurmukhi from '#legacy/gel-foundations/src/scripts/devanagari-and-gurmukhi';
+import { hindi as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import '#legacy/moment-timezone-include/tz/Asia/Kolkata';
+import '#legacy/psammead-locales/moment/hi';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

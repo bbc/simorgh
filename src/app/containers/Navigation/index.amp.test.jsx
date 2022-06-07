@@ -1,13 +1,13 @@
 import React from 'react';
+import { render } from '@testing-library/react';
 import {
   C_POSTBOX,
   C_WHITE,
   C_POSTBOX_30,
   C_GHOST,
-} from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { render } from '@testing-library/react';
+} from '#legacy/psammead-styles/src/colours';
+import { latin } from '#legacy/gel-foundations/src/scripts';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
 import AmpNavigation from './index.amp';
 import {
   dropdownTestId,

@@ -10,7 +10,7 @@ import {
   oneOf,
   elementType,
 } from 'prop-types';
-import SectionLabel from '@bbc/psammead-section-label';
+import SectionLabel from '#legacy/psammead-section-label/src';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
@@ -18,13 +18,13 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-} from '@bbc/gel-foundations/spacings';
-import { C_GHOST } from '@bbc/psammead-styles/colours';
+} from '#legacy/gel-foundations/src/spacings';
+import { C_GHOST } from '#legacy/psammead-styles/src/colours';
 
 import { storyItem } from '#models/propTypes/storyItem';
 import { RequestContext } from '#contexts/RequestContext';

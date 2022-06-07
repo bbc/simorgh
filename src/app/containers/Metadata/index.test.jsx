@@ -1,6 +1,5 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import {
   ARTICLE_PAGE,
   FRONT_PAGE,
@@ -17,6 +16,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import frontPageData from '#data/igbo/frontpage/index.json';
 import liveRadioPageData from '#data/korean/bbc_korean_radio/liveradio.json';
 import { getSummary } from '#lib/utilities/parseAssetData/index';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
 import MetadataContainer from './index';
 
 const dotComOrigin = 'https://www.bbc.com';

@@ -2,8 +2,8 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { node, number, string } from 'prop-types';
 
-import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
-import { C_GREY_8 } from '@bbc/psammead-styles/colours';
+import { GEL_SPACING_DBL } from '#legacy/gel-foundations/src/spacings';
+import { C_GREY_8 } from '#legacy/psammead-styles/src/colours';
 import useImageColour from '../../hooks/useImageColour';
 
 const BLUR_RADIUS = 15;

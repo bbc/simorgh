@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import * as scripts from '@bbc/gel-foundations/scripts';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
+import * as scripts from '#legacy/gel-foundations/src/scripts';
 
 import PodcastPromo from '.';
 

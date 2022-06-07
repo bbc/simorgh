@@ -2,12 +2,12 @@ import React from 'react';
 import moment from 'moment-timezone';
 import styled from '@emotion/styled';
 import { shape, string, number, oneOf } from 'prop-types';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
-import { GEL_SPACING_HLF } from '@bbc/gel-foundations/spacings';
-import { C_WHITE, C_EBON } from '@bbc/psammead-styles/colours';
-import { getMinion } from '@bbc/gel-foundations/typography';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
-import { mediaIcons } from '@bbc/psammead-assets/svgs';
+import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
+import { GEL_SPACING_HLF } from '#legacy/gel-foundations/src/spacings';
+import { C_WHITE, C_EBON } from '#legacy/psammead-styles/src/colours';
+import { getMinion } from '#legacy/gel-foundations/src/typography';
+import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
+import { mediaIcons } from '#legacy/psammead-assets/src/svgs';
 import formatDuration from '#lib/utilities/formatDuration';
 
 export const TYPES = {

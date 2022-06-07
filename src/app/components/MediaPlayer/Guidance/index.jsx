@@ -1,11 +1,14 @@
 import React from 'react';
 import { string } from 'prop-types';
 import styled from '@emotion/styled';
-import { C_WHITE } from '@bbc/psammead-styles/colours';
-import { GEL_SPACING_DBL, GEL_SPACING } from '@bbc/gel-foundations/spacings';
-import { GEL_LONG_PRIMER } from '@bbc/gel-foundations/typography';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
-import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import { C_WHITE } from '#legacy/psammead-styles/src/colours';
+import {
+  GEL_SPACING_DBL,
+  GEL_SPACING,
+} from '#legacy/gel-foundations/src/spacings';
+import { GEL_LONG_PRIMER } from '#legacy/gel-foundations/src/typography';
+import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
+import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
 
 const GUIDANCE_BACKGROUND = 'rgba(34, 34, 34, 0.75)';
 
