@@ -66,6 +66,7 @@ const LiveRadioPage = ({ pageData }) => {
         lang={language}
         description={summary}
         openGraphType="website"
+        hasAmpPage={false}
       />
       <LinkedData type="RadioChannel" seoTitle={name} />
 

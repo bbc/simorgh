@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '../../../legacy/psammead-styles/src/colours';
-import devanagariAndGurmukhi from '../../../legacy/gel-foundations/src/scripts/devanagari-and-gurmukhi';
-import * as brandSVG from '../../../legacy/psammead-assets/src/svgs/marathi';
-import '../../../legacy/moment-timezone-include/tz/Asia/Kolkata';
-import '../../../legacy/psammead-locales/moment/mr';
+} from '#legacy/psammead-styles/src/colours';
+import devanagariAndGurmukhi from '#legacy/gel-foundations/src/scripts/devanagari-and-gurmukhi';
+import { marathi as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import '#legacy/moment-timezone-include/tz/Asia/Kolkata';
+import '#legacy/psammead-locales/moment/mr';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -268,7 +268,7 @@ export const service = {
       topStoriesTitle: 'मोठ्या बातम्या',
       featuresAnalysisTitle: 'Features',
     },
-    brandSVG: brandSVG.default,
+    brandSVG,
     mostRead: {
       header: 'सर्वाधिक वाचलेले',
       lastUpdated: 'शेवटचा अपडेट:',

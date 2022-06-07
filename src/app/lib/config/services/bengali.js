@@ -3,15 +3,15 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '../../../legacy/psammead-styles/src/colours';
-import bengali from '../../../legacy/gel-foundations/src/scripts/bengali';
-import * as brandSVG from '../../../legacy/psammead-assets/src/svgs/bengali';
+} from '#legacy/psammead-styles/src/colours';
+import bengali from '#legacy/gel-foundations/src/scripts/bengali';
+import { bengali as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import {
   F_NOTO_SERIF_BENGALI_BOLD,
   F_NOTO_SERIF_BENGALI_REGULAR,
-} from '../../../legacy/psammead-styles/src/fonts';
-import '../../../legacy/moment-timezone-include/tz/Asia/Dhaka';
-import '../../../legacy/psammead-locales/moment/bn';
+} from '#legacy/psammead-styles/src/fonts';
+import '#legacy/moment-timezone-include/tz/Asia/Dhaka';
+import '#legacy/psammead-locales/moment/bn';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -258,7 +258,7 @@ export const service = {
       topStoriesTitle: 'প্রধান খবর',
       featuresAnalysisTitle: 'চিঠিপত্র ও মতামত',
     },
-    brandSVG: brandSVG.default,
+    brandSVG,
     mostRead: {
       header: 'সর্বাধিক পঠিত',
       lastUpdated: 'সর্বশেষ আপডেট হয়েছে:',
@@ -331,7 +331,7 @@ export const service = {
       },
       {
         title: 'ভিডিও',
-        url: '/bengali/media/video',
+        url: '/bengali/topics/cxy7jg418e7t',
       },
     ],
   },

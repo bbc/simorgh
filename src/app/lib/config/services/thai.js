@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '../../../legacy/psammead-styles/src/colours';
-import thai from '../../../legacy/gel-foundations/src/scripts/thai';
-import * as brandSVG from '../../../legacy/psammead-assets/src/svgs/thai';
-import '../../../legacy/moment-timezone-include/tz/Asia/Bangkok';
-import '../../../legacy/psammead-locales/moment/th';
+} from '#legacy/psammead-styles/src/colours';
+import thai from '#legacy/gel-foundations/src/scripts/thai';
+import { thai as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import '#legacy/moment-timezone-include/tz/Asia/Bangkok';
+import '#legacy/psammead-locales/moment/th';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -248,7 +248,7 @@ export const service = {
       topStoriesTitle: 'ข่าวเด่น',
       featuresAnalysisTitle: 'เรื่องน่าสนใจ',
     },
-    brandSVG: brandSVG.default,
+    brandSVG,
     mostRead: {
       header: 'ได้รับความนิยมสูงสุด',
       lastUpdated: 'อัพเดทล่าสุดเมื่อเวลา',
@@ -293,7 +293,7 @@ export const service = {
       },
       {
         title: 'วิดีโอ',
-        url: '/thai/media/video',
+        url: '/thai/topics/c5ljd3jng4nt',
       },
       {
         title: 'ยอดนิยม',

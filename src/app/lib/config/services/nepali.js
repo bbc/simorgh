@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '../../../legacy/psammead-styles/src/colours';
-import devanagariAndGurmukhi from '../../../legacy/gel-foundations/src/scripts/devanagari-and-gurmukhi';
-import * as brandSVG from '../../../legacy/psammead-assets/src/svgs/nepali';
-import '../../../legacy/moment-timezone-include/tz/Asia/Kathmandu';
-import '../../../legacy/psammead-locales/moment/ne';
+} from '#legacy/psammead-styles/src/colours';
+import devanagariAndGurmukhi from '#legacy/gel-foundations/src/scripts/devanagari-and-gurmukhi';
+import { nepali as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import '#legacy/moment-timezone-include/tz/Asia/Kathmandu';
+import '#legacy/psammead-locales/moment/ne';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -254,7 +254,7 @@ export const service = {
       topStoriesTitle: 'मुख्य समाचार',
       featuresAnalysisTitle: 'अन‌ि यो पनि',
     },
-    brandSVG: brandSVG.default,
+    brandSVG,
     mostRead: {
       header: 'धेरै पढिएको',
       lastUpdated: 'मा अन्तिम चोटि अद्यावधिक',
@@ -331,7 +331,7 @@ export const service = {
       },
       {
         title: 'भिडियो',
-        url: '/nepali/media/video',
+        url: '/nepali/topics/cw9kv027nwnt',
       },
     ],
   },

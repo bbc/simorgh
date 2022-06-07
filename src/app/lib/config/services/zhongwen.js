@@ -3,10 +3,10 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '../../../legacy/psammead-styles/src/colours';
-import noAscendersOrDescenders from '../../../legacy/gel-foundations/src/scripts/no-ascenders-or-descenders';
-import * as brandSVG from '../../../legacy/psammead-assets/src/svgs/zhongwen';
-import '../../../legacy/moment-timezone-include/tz/GMT';
+} from '#legacy/psammead-styles/src/colours';
+import noAscendersOrDescenders from '#legacy/gel-foundations/src/scripts/no-ascenders-or-descenders';
+import { zhongwen as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import '#legacy/moment-timezone-include/tz/GMT';
 import 'moment/locale/zh-cn';
 import withContext from '../../../contexts/utils/withContext';
 
@@ -40,7 +40,7 @@ const baseServiceConfig = {
   recommendations: {
     hasStoryRecommendations: false,
   },
-  brandSVG: brandSVG.default,
+  brandSVG,
   podcastPromo: {
     title: 'Podcast',
     brandTitle: 'BBC 時事一周 Newsweek (Cantonese)',

@@ -13,7 +13,11 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#legacy/gel-foundations/src/spacings';
-import { C_WHITE, C_GREY_8 } from '#legacy/psammead-styles/src/colours';
+import {
+  C_WHITE,
+  C_GREY_8,
+  C_METAL,
+} from '#legacy/psammead-styles/src/colours';
 
 import FrostedGlassPanel from './FrostedGlassPanel';
 
@@ -73,7 +77,7 @@ const A = styled.a`
     margin: 0.875rem ${GEL_SPACING_DBL} 0 ${GEL_SPACING_DBL};
   }
   &:visited {
-    color: #e6e8ea;
+    color: ${({ isAmp }) => (isAmp ? C_METAL : '#e6e8ea')};
   }
   &:focus {
     text-decoration: underline;
