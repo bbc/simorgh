@@ -42,4 +42,18 @@ describe('makeRelativeUrlPath', () => {
     const relativeUrl = makeRelativeUrlPath(url);
     expect(relativeUrl).toBe(url);
   });
+
+  it('should add .low extension to URL if isLow is true', () => {
+    const url = 'https://www.bbc.com/russian/a-test-12345';
+    const isLow = true;
+    const relativeUrl = makeRelativeUrlPath(url, isLow);
+    expect(relativeUrl).toBe('/russian/a-test-12345.low');
+  });
+
+  it('should now add .low extension to URL if isLow is false', () => {
+    const url = 'https://www.bbc.com/russian/a-test-12345';
+    const isLow = false;
+    const relativeUrl = makeRelativeUrlPath(url, isLow);
+    expect(relativeUrl).toBe('/russian/a-test-12345');
+  });
 });

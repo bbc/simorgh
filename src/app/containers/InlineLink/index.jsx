@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { pathToRegexp } from 'path-to-regexp';
 import InlineLink from '@bbc/psammead-inline-link';
 import pathOr from 'ramda/src/pathOr';
+import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { inlineLinkModelPropTypes } from '#models/propTypes/inlineLink';
 import makeRelativeUrlPath from '#lib/utilities/makeRelativeUrlPath';
@@ -15,6 +16,7 @@ const InternalInlineLink = InlineLink.withComponent(Link);
 const componentsToRender = { fragment };
 
 const InlineLinkContainer = ({ locator, isExternal, blocks, onClick }) => {
+  const { isLow } = useContext(RequestContext);
   const { externalLinkText } = useContext(ServiceContext);
   const regexp = pathToRegexp(articlePath, [], {
     start: false,
@@ -37,7 +39,7 @@ const InlineLinkContainer = ({ locator, isExternal, blocks, onClick }) => {
   const linkText = pathOr(null, [0, 'model', 'text'], blocks);
   return (
     <InlineLink
-      href={makeRelativeUrlPath(locator)}
+      href={makeRelativeUrlPath(locator, isLow)}
       aria-label={isExternal ? `${linkText}${externalLinkText}` : null}
       onClick={event => {
         if (onClick) {

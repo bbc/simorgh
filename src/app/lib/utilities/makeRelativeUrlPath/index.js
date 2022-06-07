@@ -9,14 +9,14 @@ const allowList = [
   'bbcrussian.com',
 ];
 
-const makeRelativeUrlPath = urlPath => {
+const makeRelativeUrlPath = (urlPath, isLow = false) => {
   if (!urlPath) return null;
 
   const url = new Url(urlPath);
   const isBBCDomain = allowList.some(domain => url.hostname === domain);
 
   if (isBBCDomain) {
-    return `${url.pathname}${url.query}${url.hash}`;
+    return `${url.pathname}${url.query}${url.hash}${isLow ? '.low' : ''}`;
   }
 
   return urlPath;
