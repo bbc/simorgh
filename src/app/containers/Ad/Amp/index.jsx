@@ -2,17 +2,17 @@ import React, { useContext } from 'react';
 import { oneOf } from 'prop-types';
 import styled from '@emotion/styled';
 import { Helmet } from 'react-helmet';
+import pathOr from 'ramda/src/pathOr';
+import { RequestContext } from '#contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import {
   AMP_ACCESS_JS,
   AMP_ADS_JS,
 } from '#legacy/psammead-assets/src/amp-boilerplate';
 import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
 import { C_LUNAR_LIGHT, C_RHINO } from '#legacy/psammead-styles/src/colours';
-import pathOr from 'ramda/src/pathOr';
 import { getMinion } from '#legacy/gel-foundations/src/typography';
 import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
-import { RequestContext } from '#contexts/RequestContext';
-import { ServiceContext } from '#contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import AdSlot from './AdSlot';
 import { ampLeaderboardStyles, ampMpuStyles } from '../utilities/adSlotStyles';
@@ -106,7 +106,7 @@ const AdContent = props => {
 
 const AdWithoutPlaceholder = props => {
   // eslint-disable-next-line react/prop-types
-  const { ariaLabel, slotType, pageType } = props;
+  const { ariaLabel, slotType } = props;
   return (
     <DisplayWrapper amp-access="toggles.ads.enabled" amp-access-hide="true">
       <AdSection
@@ -114,7 +114,6 @@ const AdWithoutPlaceholder = props => {
         role="region"
         data-e2e="advertisement"
         aria-hidden="true"
-        pageType={pageType}
       >
         <AdContainer slotType={slotType}>
           <StyledWrapper>
@@ -128,14 +127,13 @@ const AdWithoutPlaceholder = props => {
 
 const AdWithPlaceholder = props => {
   // eslint-disable-next-line react/prop-types
-  const { ariaLabel, slotType, pageType } = props;
+  const { ariaLabel, slotType } = props;
   return (
     <AdSection
       aria-label={ariaLabel}
       role="region"
       data-e2e="advertisement"
       aria-hidden="true"
-      pageType={pageType}
     >
       <AdContainer slotType={slotType}>
         <StyledWrapper>
