@@ -2,7 +2,11 @@
 import React from 'react';
 import { node, string, bool, number } from 'prop-types';
 import styled from '@emotion/styled';
-import { C_METAL, C_POSTBOX, C_STONE } from '@bbc/psammead-styles/colours';
+import {
+  C_METAL,
+  C_POSTBOX,
+  C_STONE,
+} from '#legacy/psammead-styles/src/colours';
 import MediaIndicator from './MediaIndicator';
 import { withEpisodeContext } from './helpers';
 

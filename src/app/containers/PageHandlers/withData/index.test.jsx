@@ -1,13 +1,13 @@
 import React from 'react';
 import {
-  shouldMatchSnapshot,
-  suppressPropWarnings,
-} from '@bbc/psammead-test-helpers';
-import {
   articleDataNews,
   articleDataPersian,
 } from '#pages/ArticlePage/fixtureData';
 import frontPageDataPidgin from '#data/pidgin/frontpage';
+import {
+  shouldMatchSnapshot,
+  suppressPropWarnings,
+} from '#legacy/psammead-test-helpers/src';
 import WithData from '.';
 
 // eslint-disable-next-line react/prop-types

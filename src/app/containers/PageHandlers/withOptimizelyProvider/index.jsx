@@ -6,7 +6,7 @@ import {
 } from '@optimizely/react-sdk';
 import { ServiceContext } from '#contexts/ServiceContext';
 import isLive from '#lib/utilities/isLive';
-import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/dist/breakpoints';
+import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#legacy/gel-foundations/src/breakpoints';
 import onClient from '#lib/utilities/onClient';
 import getOptimizelyUserId from './getOptimizelyUserId';
 

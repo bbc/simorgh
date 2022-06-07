@@ -1,6 +1,9 @@
 import React from 'react';
 import * as reactDom from 'react-dom';
-import { resetWindowValue, setWindowValue } from '@bbc/psammead-test-helpers';
+import {
+  resetWindowValue,
+  setWindowValue,
+} from '#legacy/psammead-test-helpers/src';
 import '#testHelpers/loggerMock';
 
 jest.mock('react-dom');

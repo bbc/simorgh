@@ -1,6 +1,6 @@
 import React from 'react';
-import { latin, arabic } from '@bbc/gel-foundations/scripts';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { latin, arabic } from '#legacy/gel-foundations/src/scripts';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
 import ErrorMain from './index';
 
 describe('ErrorMain', () => {

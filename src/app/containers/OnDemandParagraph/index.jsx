@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { string, bool } from 'prop-types';
-import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
-import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
-import ParagraphComponent from '@bbc/psammead-paragraph';
-import { C_METAL } from '@bbc/psammead-styles/colours';
+import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
+import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#legacy/gel-foundations/src/breakpoints';
+import ParagraphComponent from '#legacy/psammead-paragraph/src';
+import { C_METAL } from '#legacy/psammead-styles/src/colours';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const StyledParagraphComponent = styled(ParagraphComponent)`
