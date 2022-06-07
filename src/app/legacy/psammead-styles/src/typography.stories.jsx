@@ -2,10 +2,10 @@ import React from 'react';
 import { shape, func } from 'prop-types';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import * as typographies from '#legacy/gel-foundations/src/typography';
-import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
-import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
 import styled from '@emotion/styled';
+import * as typographies from '#legacy/gel-foundations/src/typography';
+import { withServicesKnob } from '#legacy/psammead-storybook-helpers/src';
+import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
 import notes from '../README.md';
 
 const TypographyText = styled.p`

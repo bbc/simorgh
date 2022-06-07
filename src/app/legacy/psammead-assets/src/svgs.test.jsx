@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
 import * as svgs from './svgs';
 
 const bbcBlocks = ['BBC_BLOCKS', 'BBC_BLOCKS_DARK_MODE'];

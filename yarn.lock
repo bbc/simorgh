@@ -1784,30 +1784,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/gel-foundations@npm:7.0.0":
-  version: 7.0.0
-  resolution: "@bbc/gel-foundations@npm:7.0.0"
-  checksum: 7348015722b574a2572176061d41418dfb3a682c7e990344e5e246f94a1f4956da27e444a90de4766b8b53a359fe48860b24ef2e0aa20ee3d4e62562b928de74
-  languageName: node
-  linkType: hard
-
-"@bbc/psammead-storybook-helpers@npm:9.0.17":
-  version: 9.0.17
-  resolution: "@bbc/psammead-storybook-helpers@npm:9.0.17"
-  dependencies:
-    "@bbc/gel-foundations": 7.0.0
-    react-helmet: ^6.1.0
-  checksum: 8db16501344182548e79b70761289c4319ca23e64da5ee7b86b8475b186989a5db51d0ca4579993ad32322bf41dd31b05d53dc5d8944e07301778a90541bd137
-  languageName: node
-  linkType: hard
-
-"@bbc/psammead-test-helpers@npm:6.0.5":
-  version: 6.0.5
-  resolution: "@bbc/psammead-test-helpers@npm:6.0.5"
-  checksum: 24927b6b7bf36bbfe908af4f3b4e343796ad9e4d3f9933d052df8d73e33cebf7fba28a8dab8413adbd65f4684511aab48f7d9925faf23a70937dd86bce9d9faf
-  languageName: node
-  linkType: hard
-
 "@bbc/web-vitals@npm:1.1.1":
   version: 1.1.1
   resolution: "@bbc/web-vitals@npm:1.1.1"
@@ -17560,7 +17536,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-helmet@npm:6.1.0, react-helmet@npm:^6.1.0":
+"react-helmet@npm:6.1.0":
   version: 6.1.0
   resolution: "react-helmet@npm:6.1.0"
   dependencies:
@@ -18999,8 +18975,6 @@ __metadata:
     "@babel/preset-react": 7.16.7
     "@babel/runtime": 7.17.9
     "@bbc/apache2-license-checker": 1.1.4
-    "@bbc/psammead-storybook-helpers": 9.0.17
-    "@bbc/psammead-test-helpers": 6.0.5
     "@bbc/web-vitals": 1.1.1
     "@cypress/webpack-preprocessor": ^5.11.1
     "@emotion/babel-plugin": 11.9.2

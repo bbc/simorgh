@@ -1,12 +1,12 @@
 import React from 'react';
 import { node, string, shape, bool } from 'prop-types';
 import { render } from '@testing-library/react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { UserContext } from '#contexts/UserContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
 import ComscoreAnalytics from '.';
 
 const mockToggleDispatch = jest.fn();

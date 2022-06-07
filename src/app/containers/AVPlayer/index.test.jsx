@@ -1,10 +1,10 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
 import AVPlayer from '.';
 
 /* eslint-disable react/prop-types */

@@ -149,8 +149,6 @@
     "@babel/preset-react": "7.16.7",
     "@babel/runtime": "7.17.9",
     "@bbc/apache2-license-checker": "1.1.4",
-    "@bbc/psammead-storybook-helpers": "9.0.17",
-    "@bbc/psammead-test-helpers": "6.0.5",
     "@cypress/webpack-preprocessor": "^5.11.1",
     "@emotion/babel-plugin": "11.9.2",
     "@emotion/jest": "11.9.1",

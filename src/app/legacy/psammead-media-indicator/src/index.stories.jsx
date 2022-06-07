@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import styled from '@emotion/styled';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
-import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
+import { withServicesKnob } from '#legacy/psammead-storybook-helpers/src';
 import { C_CLOUD_LIGHT } from '#legacy/psammead-styles/src/colours';
 import { GEL_SPACING_HLF } from '#legacy/gel-foundations/src/spacings';
 import { Headline, Link } from '#legacy/psammead-story-promo/src';

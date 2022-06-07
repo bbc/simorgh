@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
 import { latin } from '#legacy/gel-foundations/src/scripts';
 import { getPica } from '#legacy/gel-foundations/src/typography';
 import Timestamp from '.';

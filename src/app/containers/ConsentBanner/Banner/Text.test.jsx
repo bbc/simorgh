@@ -1,8 +1,8 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
 import BannerText from './Text';
 
 const bannerMessaging = {

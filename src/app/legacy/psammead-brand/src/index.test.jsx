@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
 import { render } from '@testing-library/react';
 import { C_POSTBOX, C_WHITE } from '#legacy/psammead-styles/src/colours';
 import ScriptLink from '#legacy/psammead-script-link/src';
