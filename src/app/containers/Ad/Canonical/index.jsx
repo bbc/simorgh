@@ -16,7 +16,7 @@ import { leaderboardStyles, mpuStyles } from '../utilities/adSlotStyles';
 const C_GREY_3 = '#E6E8EA';
 
 const AdContainer = styled.section`
-  background-color: ${() => (isLive() ? C_LUNAR_LIGHT : C_GREY_3)};
+  background-color: ${isLive() ? C_LUNAR_LIGHT : C_GREY_3};
   ${({ slotType }) => (slotType === 'mpu' ? mpuStyles : leaderboardStyles)}
 `;
 
