@@ -89,7 +89,7 @@ export const leaderboardStyles = `
     min-height: ${LEADERBOARD_HEIGHTS.LARGE};
     padding: ${() =>
       isLive()
-        ? `0 ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING_DBL};`
+        ? `${GEL_SPACING} ${GEL_SPACING_DBL};`
         : `${GEL_SPACING_TRPL} 0`};
   }
 `;
