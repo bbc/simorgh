@@ -131,10 +131,8 @@ describe('getAdditionalPageData', () => {
       it('should recommendations data from camino, unirecs content and unirecs hybrid engine', async () => {
         const expectedOutput = {
           recommendations: recommendationsJson,
-          experimentRecommendations: {
-            unirecs_datalab_content: recommendationsJson,
-            unirecs_datalab_hybrid: recommendationsJson,
-          },
+          datalabContentRecommendations: recommendationsJson,
+          datalabHybridRecommendations: recommendationsJson,
         };
 
         hasRecommendations.mockImplementationOnce(() => true);

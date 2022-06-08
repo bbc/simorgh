@@ -48,7 +48,7 @@ const getRecommendations = (service, variant, assetUri) => {
       apiContext: 'secondary_data',
     },
     {
-      name: 'experimentRecommendations',
+      name: 'datalabContentRecommendations',
       attachAgent: true,
       engine: 'unirecs_datalab_content',
       path: portugueseRecommendationsExperimentEndpoint({
@@ -61,7 +61,7 @@ const getRecommendations = (service, variant, assetUri) => {
       apiContext: 'secondary_data',
     },
     {
-      name: 'experimentRecommendations',
+      name: 'datalabHybridRecommendations',
       attachAgent: true,
       engine: 'unirecs_datalab_hybrid',
       path: portugueseRecommendationsExperimentEndpoint({
@@ -127,10 +127,10 @@ const pageTypeUrls = async (
   }
 };
 
-const validateResponse = ({ status, json }, name, engine) => {
+const validateResponse = ({ status, json }, name) => {
   if (status === 200 && !isEmpty(json)) {
     // 004_brasil_recommendations_experiment
-    return engine ? { [name]: { [engine]: json } } : { [name]: json };
+    return { [name]: json };
   }
 
   return null;
@@ -156,7 +156,7 @@ const sortAdditionalPageData = results => {
   }, {});
 };
 
-const fetchUrl = async ({ name, path, engine, attachAgent, ...loggerArgs }) => {
+const fetchUrl = async ({ name, path, attachAgent, ...loggerArgs }) => {
   // 004_brasil_recommendations_experiment
   const agent = attachAgent ? await getAgent() : null;
 
@@ -166,7 +166,7 @@ const fetchUrl = async ({ name, path, engine, attachAgent, ...loggerArgs }) => {
     agent,
     ...loggerArgs,
   })
-    .then(response => validateResponse(response, name, engine))
+    .then(response => validateResponse(response, name))
     .catch(noop);
 };
 
@@ -185,7 +185,9 @@ const getAdditionalPageData = async ({ pageData, service, variant, env }) => {
 
   if (urlsToFetch) {
     // 004_brasil_recommendations_experiment
-    return Promise.all(urlsToFetch.map(fetchUrl)).then(sortAdditionalPageData);
+    return Promise.all(urlsToFetch.map(fetchUrl)).then(results =>
+      Object.assign({}, ...results),
+    );
   }
 
   return null;
