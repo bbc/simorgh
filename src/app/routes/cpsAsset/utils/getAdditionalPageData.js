@@ -136,26 +136,6 @@ const validateResponse = ({ status, json }, name) => {
   return null;
 };
 
-// 004_brasil_recommendations_experiment
-const sortAdditionalPageData = results => {
-  return results.reduce((accum, pageData) => {
-    if (pageData && pageData.experimentRecommendations) {
-      return {
-        ...accum,
-        experimentRecommendations: {
-          ...accum.experimentRecommendations,
-          ...pageData.experimentRecommendations,
-        },
-      };
-    }
-
-    return {
-      ...accum,
-      ...pageData,
-    };
-  }, {});
-};
-
 const fetchUrl = async ({ name, path, attachAgent, ...loggerArgs }) => {
   // 004_brasil_recommendations_experiment
   const agent = attachAgent ? await getAgent() : null;
