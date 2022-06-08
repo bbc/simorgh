@@ -61,16 +61,16 @@ export const service = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'पॉडकास्ट',
-      brandTitle: 'ड्रामा क्वीन',
+      brandTitle: 'दिन भर',
       brandDescription:
-        'बातें उन मुश्किलों की जो हमें किसी के साथ बांटने नहीं दी जातीं...',
+        'वो राष्ट्रीय और अंतरराष्ट्रीय ख़बरें जो दिनभर सुर्खियां बनीं.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/448xn/p0c04wcm.jpg',
-        alt: 'पॉडकास्ट',
+        src: 'https://ichef.bbci.co.uk/images/ic/448xn/p09ds7cb.jpg',
+        alt: 'दिन भर',
       },
       linkLabel: {
         text: 'ड्रामा क्वीन',
-        href: 'https://www.bbc.com/hindi/podcasts/p0c0530h',
+        href: 'https://www.bbc.com/hindi/podcasts/p09ds7zx',
       },
       skipLink: {
         text: 'छोड़कर %title% आगे बढ़ें',
