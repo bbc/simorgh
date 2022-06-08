@@ -65,16 +65,15 @@ export const service = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'البودكاست',
-      brandTitle: 'مراهقتي (Morahakaty)',
-      brandDescription:
-        'تابوهات المراهقة، من تقديم كريمة كواح و إعداد ميس باقي.',
+      brandTitle: 'تغيير بسيط (A Simple Change)',
+      brandDescription: 'تغيير بسيط: ما علاقة سلة مشترياتك بتغير المناخ؟',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0b3x87s.jpg',
-        alt: 'مراهقتي (Morahakaty)',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0c9wp5c.jpg',
+        alt: 'تغيير بسيط',
       },
       linkLabel: {
         text: 'الحلقات',
-        href: 'https://www.bbc.com/arabic/podcasts/p0b3xdrj',
+        href: 'https://www.bbc.com/arabic/podcasts/p0c9wp0l',
       },
       skipLink: {
         text: 'تخطى %title% وواصل القراءة',
