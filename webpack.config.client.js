@@ -68,8 +68,8 @@ module.exports = ({
         fs: false,
         crypto: false,
         stream: require.resolve('stream-browserify'),
-        https: require.resolve('https-browserify'),
-        http: require.resolve('stream-http'),
+        https: false,
+        http: false,
       },
     },
     experiments: {
