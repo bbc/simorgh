@@ -1,13 +1,5 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import {
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-} from '@bbc/gel-foundations/spacings';
-import {
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-} from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 
@@ -33,6 +25,14 @@ import {
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
 import { ServiceContext } from '#contexts/ServiceContext';
+import {
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
+} from '#legacy/gel-foundations/src/breakpoints';
+import {
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+} from '#legacy/gel-foundations/src/spacings';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 

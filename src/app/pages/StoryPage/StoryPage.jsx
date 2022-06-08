@@ -1,17 +1,6 @@
 import React, { useContext } from 'react';
 import { node } from 'prop-types';
 import styled from '@emotion/styled';
-import {
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-  GEL_SPACING_QUAD,
-  GEL_SPACING,
-} from '#legacy/gel-foundations/src/spacings';
-import SectionLabel from '#legacy/psammead-section-label/src';
-import {
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-} from '#legacy/gel-foundations/src/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 
@@ -56,6 +45,17 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
+import {
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
+} from '#legacy/gel-foundations/src/breakpoints';
+import SectionLabel from '#legacy/psammead-section-label/src';
+import {
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+  GEL_SPACING_QUAD,
+  GEL_SPACING,
+} from '#legacy/gel-foundations/src/spacings';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 
