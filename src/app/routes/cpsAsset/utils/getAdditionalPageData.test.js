@@ -181,6 +181,26 @@ describe('getAdditionalPageData', () => {
 
         expect(additionalPageData).toEqual({});
       });
+
+      it('should get recommendations from deimos endpoint on live environment', async () => {
+        process.env.SIMORGH_APP_ENV = 'live';
+        const expectedOutput = {
+          recommendations: recommendationsJson,
+        };
+        hasRecommendations.mockImplementationOnce(() => true);
+        fetchMock.mock(
+          'http://localhost/portuguese/brasil-59057279/recommendations.json',
+          recommendationsJson,
+        );
+
+        const additionalPageData = await getAdditionalPageData({
+          pageData: portugueseSty,
+          service: 'portuguese',
+        });
+
+        expect(additionalPageData).toEqual(expectedOutput);
+        delete process.env.SIMORGH_APP_ENV;
+      });
     });
   });
 });

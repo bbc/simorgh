@@ -11,6 +11,7 @@ import getRecommendationsUrl, {
   portugueseRecommendationsExperimentEndpoint,
 } from '#lib/utilities/getUrlHelpers/getRecommendationsUrl';
 import { SECONDARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
+import isLive from '#lib/utilities/isLive';
 import getAgent from '#server/utilities/getAgent/index';
 import getAssetType from './getAssetType';
 import getAssetUri from './getAssetUri';
@@ -22,7 +23,7 @@ const noop = () => {};
 
 // 004_brasil_recommendations_experiment
 const getRecommendations = (service, variant, assetUri) => {
-  if (service !== 'portuguese') {
+  if (service !== 'portuguese' || isLive()) {
     return [
       {
         name: 'recommendations',

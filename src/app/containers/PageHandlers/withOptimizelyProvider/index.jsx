@@ -5,12 +5,15 @@ import {
   setLogger,
 } from '@optimizely/react-sdk';
 import { ServiceContext } from '#contexts/ServiceContext';
+import isLive from '#lib/utilities/isLive';
 import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#legacy/gel-foundations/src/breakpoints';
 import onClient from '#lib/utilities/onClient';
 import getOptimizelyUserId from './getOptimizelyUserId';
 
 // 004_brasil_recommendations_experiment
-setLogger(null);
+if (isLive() || process.env.CYPRESS_APP_ENV) {
+  setLogger(null);
+}
 
 const optimizely = createInstance({
   sdkKey: process.env.SIMORGH_OPTIMIZELY_SDK_KEY,
