@@ -18,7 +18,7 @@ describe('getRecommendationsUrl', () => {
   });
 
   describe('Optimizely Experiments', () => {
-    describe.only('004_brasil_recommendations_experiment', () => {
+    describe('004_brasil_recommendations_experiment', () => {
       beforeEach(() => {
         process.env.RECOMMENDATIONS_ENDPOINT =
           'http://mock-recommendations-path';
