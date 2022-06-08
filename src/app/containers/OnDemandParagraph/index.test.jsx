@@ -1,10 +1,10 @@
 import React from 'react';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import {
   shouldMatchSnapshot,
   isNull,
   suppressPropWarnings,
-} from '@bbc/psammead-test-helpers';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
+} from '#legacy/psammead-test-helpers/src';
 import Paragraph from '.';
 
 describe('MediaPageBlocks Paragraph', () => {

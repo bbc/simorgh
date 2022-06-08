@@ -1,6 +1,6 @@
 import React from 'react';
 import { withKnobs, text } from '@storybook/addon-knobs';
-import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
+import { withServicesKnob } from '#legacy/psammead-storybook-helpers/src';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';

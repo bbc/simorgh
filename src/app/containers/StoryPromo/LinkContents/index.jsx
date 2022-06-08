@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import moment from 'moment-timezone';
 import { shape, bool, string } from 'prop-types';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
 import pathOr from 'ramda/src/pathOr';
 import pick from 'ramda/src/pick';
 import { ServiceContext } from '#contexts/ServiceContext';

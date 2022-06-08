@@ -1,12 +1,12 @@
 import React from 'react';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { textBlock } from '#models/blocks';
 import {
   shouldMatchSnapshot,
   isNull,
   suppressPropWarnings,
-} from '@bbc/psammead-test-helpers';
-import { latin } from '@bbc/gel-foundations/scripts';
-import { ServiceContext } from '#contexts/ServiceContext';
-import { textBlock } from '#models/blocks';
+} from '#legacy/psammead-test-helpers/src';
+import { latin } from '#legacy/gel-foundations/src/scripts';
 import FauxHeadlineContainer from '.';
 import blocksSingleFragment from '../Headings/testHelpers';
 

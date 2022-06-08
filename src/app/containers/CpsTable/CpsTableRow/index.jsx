@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { arrayOf, oneOf, shape } from 'prop-types';
 
-import { C_SPORT_MIST } from '@bbc/psammead-styles/colours';
+import { C_SPORT_MIST } from '#legacy/psammead-styles/src/colours';
 
 import { textBlockPropTypes } from '#models/propTypes/text';
 

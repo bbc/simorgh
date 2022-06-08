@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import Paragraph from '@bbc/psammead-paragraph';
+import Paragraph from '#legacy/psammead-paragraph/src';
 import styled from '@emotion/styled';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-import { GEL_SPACING_QUIN } from '@bbc/gel-foundations/spacings';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
+import { GEL_SPACING_QUIN } from '#legacy/gel-foundations/src/spacings';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { paragraphModelPropTypes } from '#models/propTypes/paragraph';
 import { GridItemMedium } from '#app/components/Grid';

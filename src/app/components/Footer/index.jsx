@@ -1,19 +1,22 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { arrayOf, shape, string, node, bool } from 'prop-types';
-import { C_EBON, C_WHITE } from '@bbc/psammead-styles/colours';
-import { getSansBold, getSansRegular } from '@bbc/psammead-styles/font-styles';
-import { getBrevier } from '@bbc/gel-foundations/typography';
+import { C_EBON, C_WHITE } from '#legacy/psammead-styles/src/colours';
+import {
+  getSansBold,
+  getSansRegular,
+} from '#legacy/psammead-styles/src/font-styles';
+import { getBrevier } from '#legacy/gel-foundations/src/typography';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_MARGIN_BELOW_400PX,
   GEL_MARGIN_ABOVE_400PX,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/src/spacings';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 
 import { AmpCookieSettingsButton } from '#app/containers/ConsentBanner/Banner/cookie.amp';
 import Link from './Link';

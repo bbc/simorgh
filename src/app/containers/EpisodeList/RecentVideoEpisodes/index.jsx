@@ -3,22 +3,22 @@ import React, { useContext } from 'react';
 import { arrayOf, shape, string, number } from 'prop-types';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import Timestamp from '@bbc/psammead-timestamp-container';
+import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
+import Timestamp from '#legacy/psammead-timestamp-container/src';
 import {
   formatDuration,
   formatUnixTimestamp,
-} from '@bbc/psammead-timestamp-container/utilities';
-import SectionLabel from '@bbc/psammead-section-label';
-import { C_WHITE, C_MIDNIGHT_BLACK } from '@bbc/psammead-styles/colours';
+} from '#legacy/psammead-timestamp-container/src/utilities';
+import SectionLabel from '#legacy/psammead-section-label/src';
+import { C_WHITE, C_MIDNIGHT_BLACK } from '#legacy/psammead-styles/src/colours';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/src/spacings';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import EpisodeList from '#containers/EpisodeList';

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { string, bool, func, arrayOf } from 'prop-types';
 import styled from '@emotion/styled';
-import ImagePlaceholder from '@bbc/psammead-image-placeholder';
+import ImagePlaceholder from '#legacy/psammead-image-placeholder/src';
 import Message from '../Message';
 
 const escapeRegex = token => token.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');

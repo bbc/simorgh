@@ -9,13 +9,13 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING,
   GEL_SPACING_HLF_TRPL,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/src/spacings';
 
 import TopicPromo from '../TopicPromo';
 

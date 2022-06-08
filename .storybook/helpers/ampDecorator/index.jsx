@@ -7,7 +7,7 @@ import {
   AMP_GEO_JS,
   AMP_CONSENT_JS,
   AMP_ANALYTICS_JS,
-} from '@bbc/psammead-assets/amp-boilerplate';
+} from '#legacy/psammead-assets/src/amp-boilerplate';
 
 /*
   Contains AMP required markup https://www.ampproject.org/docs/fundamentals/spec#required-markup

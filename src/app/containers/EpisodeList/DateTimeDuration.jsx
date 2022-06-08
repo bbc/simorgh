@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
-import { getBrevier } from '@bbc/gel-foundations/typography';
-import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
-import { C_METAL, C_PEBBLE } from '@bbc/psammead-styles/colours';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+import { getBrevier } from '#legacy/gel-foundations/src/typography';
+import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
+import { C_METAL, C_PEBBLE } from '#legacy/psammead-styles/src/colours';
+import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
 
 import { withEpisodeContext } from './helpers';
 

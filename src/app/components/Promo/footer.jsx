@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
-import { getBrevier } from '@bbc/gel-foundations/typography';
-import { C_RHINO } from '@bbc/psammead-styles/colours';
+import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
+import { getBrevier } from '#legacy/gel-foundations/src/typography';
+import { C_RHINO } from '#legacy/psammead-styles/src/colours';
 
 const Footer = styled.footer`
   ${({ service }) => getSansRegular(service)}

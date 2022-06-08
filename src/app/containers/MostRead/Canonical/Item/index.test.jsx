@@ -1,8 +1,8 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { latin, arabic } from '@bbc/gel-foundations/scripts';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
+import { latin, arabic } from '#legacy/gel-foundations/src/scripts';
 import { MostReadLink, getParentColumns } from '.';
 import { getItem, getItemWrapperArray } from '../../utilities';
 

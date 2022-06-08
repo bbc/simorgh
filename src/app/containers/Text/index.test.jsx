@@ -1,11 +1,11 @@
 import React from 'react';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import {
   shouldMatchSnapshot,
   isNull,
   suppressPropWarnings,
-} from '@bbc/psammead-test-helpers';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
+} from '#legacy/psammead-test-helpers/src';
 import TextContainer from './index';
 import { paragraphBlock, fragmentBlock } from './fixtures';
 

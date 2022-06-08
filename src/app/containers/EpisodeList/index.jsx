@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { C_CLOUD_LIGHT } from '@bbc/psammead-styles/colours';
-import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import { C_CLOUD_LIGHT } from '#legacy/psammead-styles/src/colours';
+import { GEL_SPACING_DBL } from '#legacy/gel-foundations/src/spacings';
 import { string, shape, arrayOf, oneOf, element, bool } from 'prop-types';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
 
 import { EpisodeContext } from './helpers';
 import Episode from './Episode';

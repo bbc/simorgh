@@ -1,16 +1,9 @@
-import loadable from '@loadable/component';
+import candyXmlToRichText from '#legacy/psammead-rich-text-transforms/src/candy-xml';
+import stringToRichText from '#legacy/psammead-rich-text-transforms/src/string';
+
 import { processBlock } from './helpers';
 
-const richTextTransforms = loadable(() =>
-  import(
-    /* webpackChunkName: 'rich-text-transforms' */ '@bbc/psammead-rich-text-transforms'
-  ),
-);
-
 const convertParagraph = async block => {
-  const { candyXmlToRichText, stringToRichText } =
-    await richTextTransforms.load();
-
   const xmlWrapper = innerXML =>
     `<body><paragraph>${innerXML}</paragraph></body>`;
 

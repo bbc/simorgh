@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { TEXT_VARIANTS } from '@bbc/psammead-storybook-helpers';
-import { latin } from '@bbc/gel-foundations/scripts';
-import Timestamp from '@bbc/psammead-timestamp';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { TEXT_VARIANTS } from '#legacy/psammead-storybook-helpers/src';
+import { latin } from '#legacy/gel-foundations/src/scripts';
+import Timestamp from '#legacy/psammead-timestamp/src';
 import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
 import MostReadRank from '../Canonical/Rank';
 
