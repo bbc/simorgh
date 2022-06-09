@@ -26,6 +26,12 @@ exports[`MPU should render without gel margins at all breakpoints and gel paddin
   }
 }
 
+@media (min-width: 19.75rem) {
+  .emotion-1 {
+    padding: 1rem 0 0.5rem 0;
+  }
+}
+
 @media (min-width: 37.5rem) {
   .emotion-1 {
     min-height: 17.6875rem;
