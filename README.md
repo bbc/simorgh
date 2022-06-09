@@ -245,7 +245,7 @@ Internal developers who need to work on topic pages locally should contact the t
 ### Recommendations
 Recommendations in story pages also use internal BBC data labs API's. It requires adding the key/value pair in `envConfig/secret.env` file for them to appear locally.
 
-In addition, you will also need a dev cert (client.crt), private key (client.key) and a certificate authority file (ca-bundle.crt) to access the endpoint. The client.crt will need to be in path `/etc/pki/tls/certs/` and the client.key will need to be in `/etc/pki/tls/private/` folder.
+Internal developers who need to work on article pages locally should contact the team for access.
 
 ### Other page types
 
