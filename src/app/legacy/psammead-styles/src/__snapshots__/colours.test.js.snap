@@ -66,6 +66,8 @@ exports[`Psammead Styles - Colours should match #D5D0CD for C_STONE 1`] = `"C_ST
 
 exports[`Psammead Styles - Colours should match #DBDBDB for C_SPORT_SILVER 1`] = `"C_SPORT_SILVER"`;
 
+exports[`Psammead Styles - Colours should match #E6E8EA for C_GREY_3 1`] = `"C_GREY_3"`;
+
 exports[`Psammead Styles - Colours should match #EAB3B3 for C_POSTBOX_30 1`] = `"C_POSTBOX_30"`;
 
 exports[`Psammead Styles - Colours should match #ECEAE7 for C_CHALK 1`] = `"C_CHALK"`;
