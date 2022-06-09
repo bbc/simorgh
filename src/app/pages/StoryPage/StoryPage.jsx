@@ -211,7 +211,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
               />
             );
           }
-          if (variation === 'variation_1') {
+          if (variation === 'content_recs') {
             const unirecsContentRecommendationData = path(
               ['datalabContentRecommendations'],
               pageData,
@@ -225,7 +225,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
               />
             );
           }
-          if (variation === 'variation_3') {
+          if (variation === 'hybrid_recs') {
             const unirecsHybridRecommendationData = path(
               ['datalabHybridRecommendations'],
               pageData,

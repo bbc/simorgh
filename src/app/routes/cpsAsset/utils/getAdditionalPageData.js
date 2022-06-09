@@ -138,16 +138,21 @@ const validateResponse = ({ status, json }, name) => {
 
 const fetchUrl = async ({ name, path, attachAgent, ...loggerArgs }) => {
   // 004_brasil_recommendations_experiment
-  const agent = attachAgent ? await getAgent() : null;
+  try {
+    const agent = attachAgent ? await getAgent() : null;
 
-  return fetchPageData({
-    path,
-    timeout: SECONDARY_DATA_TIMEOUT,
-    agent,
-    ...loggerArgs,
-  })
-    .then(response => validateResponse(response, name))
-    .catch(noop);
+    return fetchPageData({
+      path,
+      timeout: SECONDARY_DATA_TIMEOUT,
+      agent,
+      ...loggerArgs,
+    })
+      .then(response => validateResponse(response, name))
+      .catch(noop);
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
 };
 
 const getAdditionalPageData = async ({ pageData, service, variant, env }) => {

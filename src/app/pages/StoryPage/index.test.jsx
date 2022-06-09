@@ -43,6 +43,7 @@ import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import mundoPageData from '#data/mundo/cpsAssets/noticias-56669604';
 import mundoRecommendationsData from '#data/mundo/recommendations/index';
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
+import getAgent from '#server/utilities/getAgent/index';
 
 import russianPageDataWithoutInlinePromo from './fixtureData/russianPageDataWithoutPromo';
 import StoryPageIndex from '.';
@@ -850,14 +851,14 @@ describe('Story Page', () => {
         });
       });
 
-      describe('variation_1', () => {
+      describe('content_recs', () => {
         beforeEach(() => {
           process.env.RECOMMENDATIONS_ENDPOINT =
             'http://mock-recommendations-path';
           OptimizelyExperiment.mockImplementation(props => {
             const { children } = props;
 
-            const variation = 'variation_1';
+            const variation = 'content_recs';
 
             if (children != null && typeof children === 'function') {
               return <>{children(variation, true, false)}</>;
@@ -867,7 +868,7 @@ describe('Story Page', () => {
           });
         });
 
-        it('should fetch and render recommendations from content variant endpoint when variation is variation_1 and service is portuguese', async () => {
+        it('should fetch and render recommendations from content variant endpoint when variation is content_recs and service is portuguese', async () => {
           const toggles = {
             cpsRecommendations: {
               enabled: true,
@@ -913,14 +914,14 @@ describe('Story Page', () => {
         });
       });
 
-      describe('variation_3', () => {
+      describe('hybrid_recs', () => {
         beforeEach(() => {
           process.env.RECOMMENDATIONS_ENDPOINT =
             'http://mock-recommendations-path';
           OptimizelyExperiment.mockImplementation(props => {
             const { children } = props;
 
-            const variation = 'variation_3';
+            const variation = 'hybrid_recs';
 
             if (children != null && typeof children === 'function') {
               return <>{children(variation, true, false)}</>;
@@ -930,7 +931,7 @@ describe('Story Page', () => {
           });
         });
 
-        it('should fetch and render recommendations from datalab hybrid variant endpoint when variation is variation_3 and service is portuguese', async () => {
+        it('should fetch and render recommendations from datalab hybrid variant endpoint when variation is hybrid_recs and service is portuguese', async () => {
           const toggles = {
             cpsRecommendations: {
               enabled: true,
@@ -1564,6 +1565,43 @@ describe('Story Page', () => {
         expect(fetchMock.calls()[1][0]).toBe(recommendationsEndpoint);
         expect(recommendationsRegions).not.toBeNull();
         expect(recommendationsItems).toHaveLength(4);
+      });
+
+      it('should not return recommendations when the certificates do not exist', async () => {
+        getAgent.mockImplementation(() => {
+          throw Error('some file not found error');
+        });
+        const toggles = {
+          cpsRecommendations: {
+            enabled: true,
+          },
+        };
+
+        const recommendationsEndpoint =
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_camino';
+
+        fetchMock.mock(
+          'http://localhost/some-cps-sty-path.json',
+          portuguesePageData,
+        );
+        fetchMock.mock(recommendationsEndpoint, portugueseRecommendationData);
+
+        const { pageData } = await getInitialData({
+          path: '/some-cps-sty-path',
+          service: 'portuguese',
+          pageType,
+        });
+
+        const { getAllByRole } = render(
+          <Page pageData={pageData} service="portuguese" toggles={toggles} />,
+        );
+
+        const recommendationsRegions = getAllByRole('region').filter(
+          item =>
+            item.getAttribute('aria-labelledby') === 'recommendations-heading',
+        );
+
+        expect(recommendationsRegions).toEqual([]);
       });
     });
   });

@@ -180,7 +180,7 @@ describe('getAdditionalPageData', () => {
         expect(additionalPageData).toEqual({});
       });
 
-      it('should get recommendations from deimos endpoint on live environment', async () => {
+      it('should get recommendations from public deimos endpoint on live environment', async () => {
         process.env.SIMORGH_APP_ENV = 'live';
         const expectedOutput = {
           recommendations: recommendationsJson,
