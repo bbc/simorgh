@@ -18,7 +18,6 @@ module.exports = {
     '#pages': resolvePath('src/app/pages/'),
     '#testHelpers': resolvePath('src/testHelpers/'),
     '#server': resolvePath('src/server/'),
-    '#utils': resolvePath('src/app/routes/utils/'),
   },
   jestDirAlias: {
     '^#app(.*)$': '<rootDir>/src/app$1',

@@ -1,6 +1,6 @@
 import { TopicPage } from '#pages';
-import { temporaryTopicPath, topicPath } from '#utils/regex';
-import { TOPIC_PAGE } from '#utils/pageTypes';
+import { temporaryTopicPath, topicPath } from '#app/routes/utils/regex';
+import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import getInitialData from './getInitialData';
 
 export default {
