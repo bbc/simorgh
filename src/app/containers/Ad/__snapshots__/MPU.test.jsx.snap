@@ -2,7 +2,7 @@
 
 exports[`MPU should render without gel margins at all breakpoints and gel padding at smaller breakpoints 1`] = `
 .emotion-1 {
-  background-color: #F8F8F8;
+  background-color: #E6E8EA;
   display: none;
   visibility: hidden;
   padding: 0;
@@ -28,7 +28,7 @@ exports[`MPU should render without gel margins at all breakpoints and gel paddin
 
 @media (min-width: 19.75rem) {
   .emotion-1 {
-    padding: 0 0.5rem;
+    padding: 1rem 0 0.5rem 0;
   }
 }
 

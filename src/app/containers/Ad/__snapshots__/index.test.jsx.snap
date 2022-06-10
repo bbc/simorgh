@@ -550,14 +550,13 @@ exports[`Ad Container Snapshots AMP should render a leaderboard ad without a pla
 
 exports[`Ad Container Snapshots Canonical should correctly render a leaderboard ad 1`] = `
 .emotion-0 {
-  background-color: #F8F8F8;
+  background-color: #E6E8EA;
   display: none;
   visibility: hidden;
 }
 
 @media (min-width: 20rem) {
   .emotion-0 {
-    margin-top: 0.5rem;
     min-height: 5.1875rem;
     display: -webkit-box;
     display: -webkit-flex;
@@ -576,7 +575,7 @@ exports[`Ad Container Snapshots Canonical should correctly render a leaderboard 
 
 @media (min-width: 21rem) {
   .emotion-0 {
-    padding: 0 0.5rem;
+    padding: 1rem 0;
   }
 }
 
@@ -589,13 +588,14 @@ exports[`Ad Container Snapshots Canonical should correctly render a leaderboard 
 @media (min-width: 37.5rem) {
   .emotion-0 {
     min-height: 7.6875rem;
+    padding: 2rem 0;
   }
 }
 
 @media (min-width: 58.75rem) {
   .emotion-0 {
     min-height: 18.6875rem;
-    padding: 0.5rem 1rem;
+    padding: 1.5rem 0;
   }
 }
 
@@ -617,7 +617,7 @@ exports[`Ad Container Snapshots Canonical should correctly render a leaderboard 
 
 exports[`Ad Container Snapshots Canonical should correctly render an mpu ad 1`] = `
 .emotion-0 {
-  background-color: #F8F8F8;
+  background-color: #E6E8EA;
   display: none;
   visibility: hidden;
   padding: 0;
@@ -643,7 +643,7 @@ exports[`Ad Container Snapshots Canonical should correctly render an mpu ad 1`] 
 
 @media (min-width: 19.75rem) {
   .emotion-0 {
-    padding: 0 0.5rem;
+    padding: 1rem 0 0.5rem 0;
   }
 }
 
