@@ -32,7 +32,6 @@ module.exports = {
     '^#pages(.*)$': '<rootDir>/src/app/pages$1',
     '^#testHelpers(.*)$': '<rootDir>/src/testHelpers$1',
     '^#server(.*)$': '<rootDir>/src/server$1',
-    '^#utils(.*)$': '<rootDir>/src/app/routes/utils$1',
   },
   eslintDirAlias: {
     map: [
@@ -48,7 +47,6 @@ module.exports = {
       ['#pages', './src/app/pages'],
       ['#testHelpers', './src/testHelpers'],
       ['#server', './src/server'],
-      ['#utils', './src/app/routes/utils'],
     ],
     extensions: ['.js', '.jsx', '.json'],
   },
