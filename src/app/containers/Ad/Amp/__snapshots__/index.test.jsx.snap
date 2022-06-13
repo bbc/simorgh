@@ -157,12 +157,13 @@ exports[`AMP Ads Snapshots should correctly render an AMP mpu ad 1`] = `
 .emotion-4 {
   display: none;
   visibility: hidden;
-  padding:padding: 1rem 0 0.5rem 0;
+  padding: 0;
 }
 
 @media (min-width: 18.75rem) {
   .emotion-4 {
     min-height: 17.6875rem;
+    padding:padding: 1rem 0 0.5rem 0;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -175,7 +176,6 @@ exports[`AMP Ads Snapshots should correctly render an AMP mpu ad 1`] = `
     -webkit-justify-content: center;
     justify-content: center;
     visibility: visible;
-    min-height: 17.6875rem;
   }
 }
 
