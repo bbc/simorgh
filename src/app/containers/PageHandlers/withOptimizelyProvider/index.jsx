@@ -11,12 +11,7 @@ import onClient from '#lib/utilities/onClient';
 import getOptimizelyUserId from './getOptimizelyUserId';
 
 // 004_brasil_recommendations_experiment
-if (
-  isLive() ||
-  process.env.CYPRESS_APP_ENV === 'local' ||
-  process.env.CYPRESS_APP_ENV === 'test' ||
-  process.env.CYPRESS_APP_ENV === 'live'
-) {
+if (isLive()) {
   setLogger(null);
 }
 

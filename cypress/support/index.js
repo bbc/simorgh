@@ -13,17 +13,22 @@ Cypress.on(`window:before:load`, win => {
   });
 });
 
-// Catches an unexplained error experienced while running the following test:
-// https://github.com/bbc/simorgh/blob/49e5b72db84df57144a92963734bcd080938e45b/cypress/integration/pages/storyPage/testsForCanonicalOnly.js#L14
-// We decided we could not invest any more time in the unexplained error as the test
-// successfully functioned with this specific error caught and discarded.
+const IGNORE_ERRORS = [
+  // Catches an unexplained error experienced while running the following test:
+  // https://github.com/bbc/simorgh/blob/49e5b72db84df57144a92963734bcd080938e45b/cypress/integration/pages/storyPage/testsForCanonicalOnly.js#L14
+  // We decided we could not invest any more time in the unexplained error as the test
+  // successfully functioned with this specific error caught and discarded.
+  "Cannot read property 'postMessage' of undefined",
+
+  // Catches an error with Optimizely not having a valid object on first load
+  // The object is then instantiated correctly, however Cypress catches these as failures before that happens
+  'Optimizely object is not valid. Failing activate',
+];
+
 // eslint-disable-next-line consistent-return
 Cypress.on('uncaught:exception', (err, runnable, promise) => {
   // returning false here prevents Cypress from failing the test
-  if (
-    err.message &&
-    err.message.includes("Cannot read property 'postMessage' of undefined")
-  ) {
+  if (err.message && IGNORE_ERRORS.some(error => err.message.includes(error))) {
     return false;
   }
 
