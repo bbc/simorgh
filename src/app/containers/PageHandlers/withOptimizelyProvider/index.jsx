@@ -11,7 +11,9 @@ import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#legacy/gel-foundations/src/breakp
 import getOptimizelyUserId from './getOptimizelyUserId';
 
 // 004_brasil_recommendations_experiment
-if (isLive() || (onClient() && window.Cypress)) {
+const isCypress = onClient() && window.Cypress;
+
+if (isLive() || isCypress) {
   setLogger(null);
 }
 
