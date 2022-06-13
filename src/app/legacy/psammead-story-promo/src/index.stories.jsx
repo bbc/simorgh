@@ -5,7 +5,7 @@ import Image from '#legacy/psammead-image/src';
 import MediaIndicator from '#legacy/psammead-media-indicator/src';
 import LiveLabel from '#legacy/psammead-live-label/src';
 import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
-import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
+import { withServicesKnob } from '#legacy/psammead-storybook-helpers/src';
 import Grid from '#legacy/psammead-grid/src';
 import styled from '@emotion/styled';
 import { GEL_SPACING_HLF } from '#legacy/gel-foundations/src/spacings';

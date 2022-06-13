@@ -15,6 +15,7 @@ const CpsMetadata = ({
   imageAltText,
   aboutTags,
   hasAppleItunesAppBanner,
+  hasAmpPage,
 }) => {
   const { service, articleAuthor } = useContext(ServiceContext);
   const brandedImage = imageLocator
@@ -31,6 +32,7 @@ const CpsMetadata = ({
       imageAltText={imageAltText}
       aboutTags={aboutTags}
       hasAppleItunesAppBanner={hasAppleItunesAppBanner}
+      hasAmpPage={hasAmpPage}
     >
       <meta name="article:author" content={articleAuthor} />
       <meta name="article:published_time" content={firstPublished} />
@@ -60,6 +62,7 @@ CpsMetadata.propTypes = {
   imageAltText: string,
   aboutTags: arrayOf(tagPropTypes),
   hasAppleItunesAppBanner: bool,
+  hasAmpPage: bool,
 };
 
 CpsMetadata.defaultProps = {
@@ -67,6 +70,7 @@ CpsMetadata.defaultProps = {
   imageAltText: null,
   aboutTags: [],
   hasAppleItunesAppBanner: false,
+  hasAmpPage: true,
 };
 
 export default CpsMetadata;

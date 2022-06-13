@@ -331,7 +331,7 @@ export const service = {
       },
       {
         title: 'ভিডিও',
-        url: '/bengali/media/video',
+        url: '/bengali/topics/cxy7jg418e7t',
       },
     ],
   },

@@ -4,7 +4,10 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import InlineLink from '#legacy/psammead-inline-link/src';
-import { withServicesKnob, themes } from '@bbc/psammead-storybook-helpers';
+import {
+  withServicesKnob,
+  themes,
+} from '#legacy/psammead-storybook-helpers/src';
 import notes from '../README.md';
 import Paragraph from './index';
 

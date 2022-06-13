@@ -2,7 +2,6 @@ import React from 'react';
 import dissocPath from 'ramda/src/dissocPath';
 import identity from 'ramda/src/identity';
 import { render } from '@testing-library/react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 
 import { ServiceContext } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
@@ -11,6 +10,7 @@ import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 
 import { service as russianServiceConfig } from '#lib/config/services/russian';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
 import { InlinePodcastPromo, SecondaryColumnPodcastPromo } from '.';
 
 /* eslint-disable react/prop-types */

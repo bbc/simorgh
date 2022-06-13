@@ -331,7 +331,7 @@ export const service = {
       },
       {
         title: 'भिडियो',
-        url: '/nepali/media/video',
+        url: '/nepali/topics/cw9kv027nwnt',
       },
     ],
   },

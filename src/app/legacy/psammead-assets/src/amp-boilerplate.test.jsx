@@ -1,4 +1,4 @@
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
 import * as boilerplate from './amp-boilerplate';
 
 describe('AMP Boilerplate', () => {
