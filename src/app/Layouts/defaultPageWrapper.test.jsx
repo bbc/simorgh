@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
 import DefaultPageWrapper from './defaultPageWrapper';
 import { ServiceContextProvider } from '../contexts/ServiceContext';
 import { ToggleContext } from '../contexts/ToggleContext';

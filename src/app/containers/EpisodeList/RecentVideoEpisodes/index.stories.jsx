@@ -1,6 +1,9 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { withServicesKnob, themes } from '@bbc/psammead-storybook-helpers';
+import {
+  withServicesKnob,
+  themes,
+} from '#legacy/psammead-storybook-helpers/src';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { afrique, pashto } from './fixtures';

@@ -4,7 +4,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import {
   withServicesKnob,
   buildRTLSubstories,
-} from '@bbc/psammead-storybook-helpers';
+} from '#legacy/psammead-storybook-helpers/src';
 import { oneOf, string } from 'prop-types';
 import { ConsentBanner, ConsentBannerText } from '.';
 import notes from '../README.md';

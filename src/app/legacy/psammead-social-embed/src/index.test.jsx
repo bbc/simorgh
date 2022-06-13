@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
 import { CanonicalSocialEmbed, AmpSocialEmbed } from './index';
 import fixtures from './fixtures';
 import * as useScript from './Canonical/useScript';

@@ -6,7 +6,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import Paragraph from '#legacy/psammead-paragraph/src';
 import { Headline } from '#legacy/psammead-headings/src';
-import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
+import { withServicesKnob } from '#legacy/psammead-storybook-helpers/src';
 import notes from '../README.md';
 import ContentAnchor from './index';
 
