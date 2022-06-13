@@ -6,7 +6,6 @@
   "sideEffects": [
     "./src/app/legacy/moment-timezone-include/**/*.*",
     "./src/app/legacy/psammead-locales/**/*.*",
-    "./src/app/legacy/psammead-rich-text-transforms/**/*.*",
     "./cypress/**/*.*"
   ],
   "resolutions": {
