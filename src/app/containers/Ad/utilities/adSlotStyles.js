@@ -129,14 +129,13 @@ export const mpuStyles = `
 export const ampMpuStyles = `
   display: none;
   visibility: hidden;
-  padding: padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING} 0;;
+  padding: 0;
   @media (min-width: ${MPU_WIDTH_MIN}) {
     min-height: ${MPU_HEIGHTS.GROUP_3};
+    padding: padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING} 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     visibility: visible;
-    min-height: ${MPU_HEIGHTS.GROUP_3};
-    
   }
 `;
