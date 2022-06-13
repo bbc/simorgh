@@ -13,8 +13,6 @@ import getRecommendationsUrl, {
 import { SECONDARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
 import isLive from '#lib/utilities/isLive';
 import getAgent from '#server/utilities/getAgent/index';
-import nodeLogger from '#lib/logger.node';
-import { DATA_FETCH_ERROR } from '#lib/logger.const';
 import getAssetType from './getAssetType';
 import getAssetUri from './getAssetUri';
 import hasRecommendations from './hasRecommendations';
@@ -22,7 +20,6 @@ import hasMostRead from './hasMostRead';
 import fetchPageData from '../../utils/fetchPageData';
 
 const noop = () => {};
-const logger = nodeLogger(__filename);
 
 // 004_brasil_recommendations_experiment
 const getRecommendations = (service, variant, assetUri) => {
@@ -153,12 +150,7 @@ const fetchUrl = async ({ name, path, attachAgent, ...loggerArgs }) => {
       .then(response => validateResponse(response, name))
       .catch(noop);
   } catch (error) {
-    logger.error(DATA_FETCH_ERROR, {
-      data: path,
-      path,
-      ...loggerArgs,
-    });
-
+    console.log(error);
     return null;
   }
 };
