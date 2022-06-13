@@ -1,6 +1,6 @@
 import { ArticlePage } from '#pages';
-import { articlePath } from '#utils/regex';
-import { ARTICLE_PAGE } from '#utils/pageTypes';
+import { articlePath } from '#app/routes/utils/regex';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import getInitialData from './getInitialData';
 
 export default {
