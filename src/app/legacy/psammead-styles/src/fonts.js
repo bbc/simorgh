@@ -33,18 +33,6 @@ export const F_REITH_SERIF_REGULAR = baseUrlOverride => `
     font-display: optional;
   }`;
 
-export const F_REITH_SERIF_ITALIC = baseUrlOverride => `
-  @font-face {
-    font-family: "ReithSerif";
-    src: url("${
-      baseUrlOverride || baseFontUrl
-    }BBCReithSerif_W_It.woff2") format("woff2"), url("${
-  baseUrlOverride || baseFontUrl
-}BBCReithSerif_W_It.woff") format("woff");
-    font-style: italic;
-    font-display: optional;
-  }`;
-
 export const F_REITH_SERIF_BOLD = baseUrlOverride => `
   @font-face {
     font-family: "ReithSerif";
@@ -104,19 +92,6 @@ export const F_REITH_SERIF_MEDIUM = baseUrlOverride => `
   baseUrlOverride || baseFontUrl
 }BBCReithSerif_W_Md.woff") format("woff");
     font-weight: 500;
-    font-display: optional;
-  }`;
-
-export const F_REITH_SERIF_MEDIUM_ITALIC = baseUrlOverride => `
-  @font-face {
-    font-family: "ReithSerif";
-    src: url("${
-      baseUrlOverride || baseFontUrl
-    }BBCReithSerif_W_MdIt.woff2") format("woff2"), url("${
-  baseUrlOverride || baseFontUrl
-}BBCReithSerif_W_MdIt.woff") format("woff");
-    font-weight: 500;
-    font-style: italic;
     font-display: optional;
   }`;
 
