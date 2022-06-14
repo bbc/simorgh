@@ -57,19 +57,6 @@ export const F_REITH_SERIF_LIGHT = baseUrlOverride => `
     font-display: optional;
   }`;
 
-export const F_REITH_SERIF_LIGHT_ITALIC = baseUrlOverride => `
-  @font-face {
-    font-family: "ReithSerif";
-    src: url("${
-      baseUrlOverride || baseFontUrl
-    }BBCReithSerif_W_LtIt.woff2") format("woff2"), url("${
-  baseUrlOverride || baseFontUrl
-}BBCReithSerif_W_LtIt.woff") format("woff");
-    font-weight: 300;
-    font-style: italic;
-    font-display: optional;
-  }`;
-
 export const F_REITH_SERIF_MEDIUM = baseUrlOverride => `
   @font-face {
     font-family: "ReithSerif";
