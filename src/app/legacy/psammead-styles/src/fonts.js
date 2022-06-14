@@ -81,19 +81,6 @@ export const F_REITH_SERIF_EXTRA_BOLD = baseUrlOverride => `
     font-display: optional;
   }`;
 
-export const F_REITH_SERIF_EXTRA_BOLD_ITALIC = baseUrlOverride => `
-  @font-face {
-    font-family: "ReithSerif";
-    src: url("${
-      baseUrlOverride || baseFontUrl
-    }BBCReithSerif_W_ExBdIt.woff2") format("woff2"), url("${
-  baseUrlOverride || baseFontUrl
-}BBCReithSerif_W_ExBdIt.woff") format("woff");
-    font-weight: 800;
-    font-style: italic;
-    font-display: optional;
-  }`;
-
 // Reith Sans
 export const F_REITH_SANS_REGULAR = baseUrlOverride => `
   @font-face {
