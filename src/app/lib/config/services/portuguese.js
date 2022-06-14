@@ -352,7 +352,6 @@ export const service = {
       F_REITH_SANS_ITALIC,
       F_REITH_SANS_REGULAR,
       F_REITH_SERIF_MEDIUM,
-      F_REITH_SERIF_MEDIUM_ITALIC,
       F_REITH_SERIF_LIGHT,
     ],
     timezone: 'America/Sao_Paulo',
