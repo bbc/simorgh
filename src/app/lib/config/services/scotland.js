@@ -7,7 +7,6 @@ import {
   F_REITH_SANS_ITALIC,
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
-  F_REITH_SERIF_MEDIUM_ITALIC,
 } from '#legacy/psammead-styles/src/fonts';
 import '#legacy/psammead-locales/moment/en-gb';
 import '#legacy/moment-timezone-include/tz/Europe/London';
@@ -274,7 +273,6 @@ export const service = {
       F_REITH_SANS_ITALIC,
       F_REITH_SANS_REGULAR,
       F_REITH_SERIF_MEDIUM,
-      F_REITH_SERIF_MEDIUM_ITALIC,
     ],
     timezone: 'Europe/London',
   },

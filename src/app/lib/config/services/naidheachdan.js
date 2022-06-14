@@ -11,8 +11,7 @@ import {
   F_REITH_SANS_ITALIC,
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
-  F_REITH_SERIF_MEDIUM_ITALIC,
-} from '#legacy/psammead-styles/src/fonts';
+]} from '#legacy/psammead-styles/src/fonts';
 import { naidheachdan as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import '#legacy/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
@@ -289,7 +288,6 @@ export const service = {
       F_REITH_SANS_ITALIC,
       F_REITH_SANS_REGULAR,
       F_REITH_SERIF_MEDIUM,
-      F_REITH_SERIF_MEDIUM_ITALIC,
     ],
     timezone: 'Europe/London',
     navigation: [

@@ -11,7 +11,6 @@ import {
   F_REITH_SANS_ITALIC,
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
-  F_REITH_SERIF_MEDIUM_ITALIC,
   F_REITH_SERIF_LIGHT,
 } from '#legacy/psammead-styles/src/fonts';
 import { turkce as brandSVG } from '#legacy/psammead-assets/src/svgs';
@@ -321,7 +320,6 @@ export const service = {
       F_REITH_SANS_ITALIC,
       F_REITH_SANS_REGULAR,
       F_REITH_SERIF_MEDIUM,
-      F_REITH_SERIF_MEDIUM_ITALIC,
       F_REITH_SERIF_LIGHT,
     ],
     timezone: 'Asia/Istanbul',
