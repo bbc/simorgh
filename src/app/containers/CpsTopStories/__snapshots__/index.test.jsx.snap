@@ -409,6 +409,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
+    background-color: #FFFFFF;
   }
 
   @media (min-width: 37.5rem) {
@@ -476,7 +477,17 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 }
 
 .emotion-29 {
-  color: #222222;
+  padding: 0.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-29 {
+    padding: 1rem;
+  }
+}
+
+.emotion-31 {
+  color: #141414;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -488,20 +499,20 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-29 {
+  .emotion-31 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-29 {
+  .emotion-31 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-31 {
+.emotion-33 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -510,7 +521,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   overflow-wrap: anywhere;
 }
 
-.emotion-31:before {
+.emotion-33:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -522,17 +533,17 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   z-index: 1;
 }
 
-.emotion-31:hover,
-.emotion-31:focus {
+.emotion-33:hover,
+.emotion-33:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-31:visited {
+.emotion-33:visited {
   color: #6E6E73;
 }
 
-.emotion-33 {
+.emotion-36 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -543,14 +554,14 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-33 {
+  .emotion-36 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-33 {
+  .emotion-36 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -611,27 +622,31 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
               class="emotion-27 emotion-28"
               dir="ltr"
             >
-              <h3
+              <div
                 class="emotion-29 emotion-30"
               >
-                <a
-                  aria-labelledby="top-stories-promo-mundonoticiasinternacional51939501-1"
+                <h3
                   class="emotion-31 emotion-32"
-                  href="/mundo/noticias-internacional-51939501"
                 >
-                  <span
-                    id="top-stories-promo-mundonoticiasinternacional51939501-1"
+                  <a
+                    aria-labelledby="top-stories-promo-mundonoticiasinternacional51939501-1"
+                    class="emotion-33 emotion-34"
+                    href="/mundo/noticias-internacional-51939501"
                   >
-                    China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
-                  </span>
-                </a>
-              </h3>
-              <time
-                class="emotion-33 emotion-34"
-                datetime="2020-02-03"
-              >
-                3rd February 2020
-              </time>
+                    <span
+                      id="top-stories-promo-mundonoticiasinternacional51939501-1"
+                    >
+                      China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
+                    </span>
+                  </a>
+                </h3>
+                <time
+                  class="emotion-35 emotion-36 emotion-37"
+                  datetime="2020-02-03"
+                >
+                  3rd February 2020
+                </time>
+              </div>
             </div>
           </div>
         </li>
@@ -646,27 +661,31 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
               class="emotion-27 emotion-28"
               dir="ltr"
             >
-              <h3
+              <div
                 class="emotion-29 emotion-30"
               >
-                <a
-                  aria-labelledby="top-stories-promo-pidgintori51945757-1"
+                <h3
                   class="emotion-31 emotion-32"
-                  href="/pidgin/tori-51945757"
                 >
-                  <span
-                    id="top-stories-promo-pidgintori51945757-1"
+                  <a
+                    aria-labelledby="top-stories-promo-pidgintori51945757-1"
+                    class="emotion-33 emotion-34"
+                    href="/pidgin/tori-51945757"
                   >
-                    Nigeria don get five new cases of Coronavirus - See how e happun
-                  </span>
-                </a>
-              </h3>
-              <time
-                class="emotion-33 emotion-34"
-                datetime="2020-02-03"
-              >
-                3rd February 2020
-              </time>
+                    <span
+                      id="top-stories-promo-pidgintori51945757-1"
+                    >
+                      Nigeria don get five new cases of Coronavirus - See how e happun
+                    </span>
+                  </a>
+                </h3>
+                <time
+                  class="emotion-35 emotion-36 emotion-37"
+                  datetime="2020-02-03"
+                >
+                  3rd February 2020
+                </time>
+              </div>
             </div>
           </div>
         </li>
@@ -1051,6 +1070,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
+    background-color: #FFFFFF;
   }
 
   @media (min-width: 37.5rem) {
@@ -1118,7 +1138,17 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 }
 
 .emotion-27 {
-  color: #222222;
+  padding: 0.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-27 {
+    padding: 1rem;
+  }
+}
+
+.emotion-29 {
+  color: #141414;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1130,20 +1160,20 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-27 {
+  .emotion-29 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-27 {
+  .emotion-29 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-29 {
+.emotion-31 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -1152,7 +1182,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   overflow-wrap: anywhere;
 }
 
-.emotion-29:before {
+.emotion-31:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1164,17 +1194,17 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   z-index: 1;
 }
 
-.emotion-29:hover,
-.emotion-29:focus {
+.emotion-31:hover,
+.emotion-31:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-29:visited {
+.emotion-31:visited {
   color: #6E6E73;
 }
 
-.emotion-31 {
+.emotion-34 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -1185,14 +1215,14 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-31 {
+  .emotion-34 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-31 {
+  .emotion-34 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -1250,27 +1280,31 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
               class="emotion-25 emotion-26"
               dir="ltr"
             >
-              <h3
+              <div
                 class="emotion-27 emotion-28"
               >
-                <a
-                  aria-labelledby="top-stories-promo-mundonoticiasinternacional51939501-1"
+                <h3
                   class="emotion-29 emotion-30"
-                  href="/mundo/noticias-internacional-51939501"
                 >
-                  <span
-                    id="top-stories-promo-mundonoticiasinternacional51939501-1"
+                  <a
+                    aria-labelledby="top-stories-promo-mundonoticiasinternacional51939501-1"
+                    class="emotion-31 emotion-32"
+                    href="/mundo/noticias-internacional-51939501"
                   >
-                    China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
-                  </span>
-                </a>
-              </h3>
-              <time
-                class="emotion-31 emotion-32"
-                datetime="2020-02-03"
-              >
-                3rd February 2020
-              </time>
+                    <span
+                      id="top-stories-promo-mundonoticiasinternacional51939501-1"
+                    >
+                      China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
+                    </span>
+                  </a>
+                </h3>
+                <time
+                  class="emotion-33 emotion-34 emotion-35"
+                  datetime="2020-02-03"
+                >
+                  3rd February 2020
+                </time>
+              </div>
             </div>
           </div>
         </div>

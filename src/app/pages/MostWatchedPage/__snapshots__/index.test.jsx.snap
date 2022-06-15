@@ -456,6 +456,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
+    background-color: #FFFFFF;
   }
 
   @media (min-width: 37.5rem) {
@@ -632,7 +633,23 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
 }
 
 .emotion-38 {
-  color: #222222;
+  padding: 0.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-38 {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-38 {
+    padding: 0.5rem 1rem 1rem 1rem;
+  }
+}
+
+.emotion-40 {
+  color: #141414;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -643,20 +660,20 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-38 {
+  .emotion-40 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-38 {
+  .emotion-40 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-40 {
+.emotion-42 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -665,7 +682,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
   overflow-wrap: anywhere;
 }
 
-.emotion-40:before {
+.emotion-42:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -677,17 +694,17 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
   z-index: 1;
 }
 
-.emotion-40:hover,
-.emotion-40:focus {
+.emotion-42:hover,
+.emotion-42:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-40:visited {
+.emotion-42:visited {
   color: #6E6E73;
 }
 
-.emotion-42 {
+.emotion-44 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -698,7 +715,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
   margin: 0;
 }
 
-.emotion-44 {
+.emotion-47 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -709,14 +726,14 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-44 {
+  .emotion-47 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-44 {
+  .emotion-47 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -821,35 +838,39 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                     class="emotion-36 emotion-37"
                     dir="ltr"
                   >
-                    <h2
+                    <div
                       class="emotion-38 emotion-39"
                     >
-                      <a
-                        aria-labelledby="promo-rel-content-pidginmedia53580248-1"
+                      <h2
                         class="emotion-40 emotion-41"
-                        href="/pidgin/media-53580248"
                       >
-                        <span
-                          id="promo-rel-content-pidginmedia53580248-1"
-                          role="text"
+                        <a
+                          aria-labelledby="promo-rel-content-pidginmedia53580248-1"
+                          class="emotion-42 emotion-43"
+                          href="/pidgin/media-53580248"
                         >
                           <span
-                            class="emotion-42 emotion-43"
+                            id="promo-rel-content-pidginmedia53580248-1"
+                            role="text"
                           >
-                            Video, 
+                            <span
+                              class="emotion-44 emotion-45"
+                            >
+                              Video, 
+                            </span>
+                            <span>
+                              'I no know say I different for society until pipo begin look me one kain'
+                            </span>
                           </span>
-                          <span>
-                            'I no know say I different for society until pipo begin look me one kain'
-                          </span>
-                        </span>
-                      </a>
-                    </h2>
-                    <time
-                      class="emotion-44 emotion-45"
-                      datetime="2020-07-29"
-                    >
-                      29th July 2020
-                    </time>
+                        </a>
+                      </h2>
+                      <time
+                        class="emotion-46 emotion-47 emotion-48"
+                        datetime="2020-07-29"
+                      >
+                        29th July 2020
+                      </time>
+                    </div>
                   </div>
                 </div>
               </li>
@@ -914,35 +935,39 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                     class="emotion-36 emotion-37"
                     dir="ltr"
                   >
-                    <h2
+                    <div
                       class="emotion-38 emotion-39"
                     >
-                      <a
-                        aria-labelledby="promo-rel-content-pidginmedia53591139-2"
+                      <h2
                         class="emotion-40 emotion-41"
-                        href="/pidgin/media-53591139"
                       >
-                        <span
-                          id="promo-rel-content-pidginmedia53591139-2"
-                          role="text"
+                        <a
+                          aria-labelledby="promo-rel-content-pidginmedia53591139-2"
+                          class="emotion-42 emotion-43"
+                          href="/pidgin/media-53591139"
                         >
                           <span
-                            class="emotion-42 emotion-43"
+                            id="promo-rel-content-pidginmedia53591139-2"
+                            role="text"
                           >
-                            Video, 
+                            <span
+                              class="emotion-44 emotion-45"
+                            >
+                              Video, 
+                            </span>
+                            <span>
+                              Bundu Ama: Di community wey get only 'one' toilet
+                            </span>
                           </span>
-                          <span>
-                            Bundu Ama: Di community wey get only 'one' toilet
-                          </span>
-                        </span>
-                      </a>
-                    </h2>
-                    <time
-                      class="emotion-44 emotion-45"
-                      datetime="2020-07-30"
-                    >
-                      30th July 2020
-                    </time>
+                        </a>
+                      </h2>
+                      <time
+                        class="emotion-46 emotion-47 emotion-48"
+                        datetime="2020-07-30"
+                      >
+                        30th July 2020
+                      </time>
+                    </div>
                   </div>
                 </div>
               </li>
@@ -1007,35 +1032,39 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                     class="emotion-36 emotion-37"
                     dir="ltr"
                   >
-                    <h2
+                    <div
                       class="emotion-38 emotion-39"
                     >
-                      <a
-                        aria-labelledby="promo-rel-content-pidgintori53509788-3"
+                      <h2
                         class="emotion-40 emotion-41"
-                        href="/pidgin/tori-53509788"
                       >
-                        <span
-                          id="promo-rel-content-pidgintori53509788-3"
-                          role="text"
+                        <a
+                          aria-labelledby="promo-rel-content-pidgintori53509788-3"
+                          class="emotion-42 emotion-43"
+                          href="/pidgin/tori-53509788"
                         >
                           <span
-                            class="emotion-42 emotion-43"
+                            id="promo-rel-content-pidgintori53509788-3"
+                            role="text"
                           >
-                            Video, 
+                            <span
+                              class="emotion-44 emotion-45"
+                            >
+                              Video, 
+                            </span>
+                            <span>
+                              Naira Marley: Jude Chukwuka AKA Fada Maler say "I be Marlian for life"
+                            </span>
                           </span>
-                          <span>
-                            Naira Marley: Jude Chukwuka AKA Fada Maler say "I be Marlian for life"
-                          </span>
-                        </span>
-                      </a>
-                    </h2>
-                    <time
-                      class="emotion-44 emotion-45"
-                      datetime="2020-07-23"
-                    >
-                      23rd July 2020
-                    </time>
+                        </a>
+                      </h2>
+                      <time
+                        class="emotion-46 emotion-47 emotion-48"
+                        datetime="2020-07-23"
+                      >
+                        23rd July 2020
+                      </time>
+                    </div>
                   </div>
                 </div>
               </li>

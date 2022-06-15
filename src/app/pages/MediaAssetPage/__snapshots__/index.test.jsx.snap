@@ -3385,6 +3385,7 @@ exports[`Media Asset Page should render component 1`] = `
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
+    background-color: #FFFFFF;
   }
 
   @media (min-width: 37.5rem) {
@@ -3487,7 +3488,23 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 .emotion-264 {
-  color: #222222;
+  padding: 0.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-264 {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-264 {
+    padding: 0.5rem 1rem 1rem 1rem;
+  }
+}
+
+.emotion-266 {
+  color: #141414;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3498,20 +3515,20 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-264 {
+  .emotion-266 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-264 {
+  .emotion-266 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-266 {
+.emotion-268 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -3520,7 +3537,7 @@ exports[`Media Asset Page should render component 1`] = `
   overflow-wrap: anywhere;
 }
 
-.emotion-266:before {
+.emotion-268:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -3532,17 +3549,17 @@ exports[`Media Asset Page should render component 1`] = `
   z-index: 1;
 }
 
-.emotion-266:hover,
-.emotion-266:focus {
+.emotion-268:hover,
+.emotion-268:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-266:visited {
+.emotion-268:visited {
   color: #6E6E73;
 }
 
-.emotion-268 {
+.emotion-271 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -3553,20 +3570,20 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-268 {
+  .emotion-271 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-268 {
+  .emotion-271 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-306 {
+.emotion-312 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3578,20 +3595,20 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-306 {
+  .emotion-312 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-306 {
+  .emotion-312 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-308 {
+.emotion-314 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3603,7 +3620,7 @@ exports[`Media Asset Page should render component 1`] = `
   height: 100%;
 }
 
-.emotion-310 {
+.emotion-316 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -3612,7 +3629,7 @@ exports[`Media Asset Page should render component 1`] = `
   height: 0.8125rem;
 }
 
-.emotion-340 {
+.emotion-349 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -3621,11 +3638,11 @@ exports[`Media Asset Page should render component 1`] = `
   height: 0.75rem;
 }
 
-.emotion-342 {
+.emotion-351 {
   padding: 0 0.25rem;
 }
 
-.emotion-356 {
+.emotion-368 {
   padding-bottom: 2rem;
 }
 
@@ -4371,27 +4388,31 @@ exports[`Media Asset Page should render component 1`] = `
                         class="emotion-262 emotion-263"
                         dir="ltr"
                       >
-                        <h3
+                        <div
                           class="emotion-264 emotion-265"
                         >
-                          <a
-                            aria-labelledby="promo-rel-content-pidgintori23145776-1"
+                          <h3
                             class="emotion-266 emotion-267"
-                            href="/pidgin/tori-23145776"
                           >
-                            <span
-                              id="promo-rel-content-pidgintori23145776-1"
+                            <a
+                              aria-labelledby="promo-rel-content-pidgintori23145776-1"
+                              class="emotion-268 emotion-269"
+                              href="/pidgin/tori-23145776"
                             >
-                              Police Arrest 3 ontop Anambra Church Attack
-                            </span>
-                          </a>
-                        </h3>
-                        <time
-                          class="emotion-268 emotion-28"
-                          datetime="2017-08-08"
-                        >
-                          8th August 2017
-                        </time>
+                              <span
+                                id="promo-rel-content-pidgintori23145776-1"
+                              >
+                                Police Arrest 3 ontop Anambra Church Attack
+                              </span>
+                            </a>
+                          </h3>
+                          <time
+                            class="emotion-270 emotion-271 emotion-28"
+                            datetime="2017-08-08"
+                          >
+                            8th August 2017
+                          </time>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -4432,27 +4453,31 @@ exports[`Media Asset Page should render component 1`] = `
                         class="emotion-262 emotion-263"
                         dir="ltr"
                       >
-                        <h3
+                        <div
                           class="emotion-264 emotion-265"
                         >
-                          <a
-                            aria-labelledby="promo-rel-content-pidgintori23143754-2"
+                          <h3
                             class="emotion-266 emotion-267"
-                            href="/pidgin/tori-23143754"
                           >
-                            <span
-                              id="promo-rel-content-pidgintori23143754-2"
+                            <a
+                              aria-labelledby="promo-rel-content-pidgintori23143754-2"
+                              class="emotion-268 emotion-269"
+                              href="/pidgin/tori-23143754"
                             >
-                              Lagos 'Gay' men Appear for Court, say Dem no dey Guilty
-                            </span>
-                          </a>
-                        </h3>
-                        <time
-                          class="emotion-268 emotion-28"
-                          datetime="2017-08-08"
-                        >
-                          8th August 2017
-                        </time>
+                              <span
+                                id="promo-rel-content-pidgintori23143754-2"
+                              >
+                                Lagos 'Gay' men Appear for Court, say Dem no dey Guilty
+                              </span>
+                            </a>
+                          </h3>
+                          <time
+                            class="emotion-270 emotion-271 emotion-28"
+                            datetime="2017-08-08"
+                          >
+                            8th August 2017
+                          </time>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -4481,16 +4506,16 @@ exports[`Media Asset Page should render component 1`] = `
                           >
                             <div
                               aria-hidden="true"
-                              class="emotion-306 emotion-307"
+                              class="emotion-312 emotion-313"
                               data-e2e="media-indicator"
                               dir="ltr"
                             >
                               <div
-                                class="emotion-308 emotion-309"
+                                class="emotion-314 emotion-315"
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="emotion-310 emotion-311"
+                                  class="emotion-316 emotion-317"
                                   focusable="false"
                                   height="13px"
                                   viewBox="0 0 32 26"
@@ -4514,35 +4539,39 @@ exports[`Media Asset Page should render component 1`] = `
                         class="emotion-262 emotion-263"
                         dir="ltr"
                       >
-                        <h3
+                        <div
                           class="emotion-264 emotion-265"
                         >
-                          <a
-                            aria-labelledby="promo-rel-content-pidgin23146654-3"
+                          <h3
                             class="emotion-266 emotion-267"
-                            href="/pidgin/23146654"
                           >
-                            <span
-                              id="promo-rel-content-pidgin23146654-3"
-                              role="text"
+                            <a
+                              aria-labelledby="promo-rel-content-pidgin23146654-3"
+                              class="emotion-268 emotion-269"
+                              href="/pidgin/23146654"
                             >
                               <span
-                                class="emotion-4 emotion-5"
+                                id="promo-rel-content-pidgin23146654-3"
+                                role="text"
                               >
-                                Image gallery, 
+                                <span
+                                  class="emotion-4 emotion-5"
+                                >
+                                  Image gallery, 
+                                </span>
+                                <span>
+                                  Kenya Elections Pictures: 8 August 2017
+                                </span>
                               </span>
-                              <span>
-                                Kenya Elections Pictures: 8 August 2017
-                              </span>
-                            </span>
-                          </a>
-                        </h3>
-                        <time
-                          class="emotion-268 emotion-28"
-                          datetime="2017-08-08"
-                        >
-                          8th August 2017
-                        </time>
+                            </a>
+                          </h3>
+                          <time
+                            class="emotion-270 emotion-271 emotion-28"
+                            datetime="2017-08-08"
+                          >
+                            8th August 2017
+                          </time>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -4579,16 +4608,16 @@ exports[`Media Asset Page should render component 1`] = `
                           >
                             <div
                               aria-hidden="true"
-                              class="emotion-306 emotion-307"
+                              class="emotion-312 emotion-313"
                               data-e2e="media-indicator"
                               dir="ltr"
                             >
                               <div
-                                class="emotion-308 emotion-309"
+                                class="emotion-314 emotion-315"
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="emotion-340 emotion-341"
+                                  class="emotion-349 emotion-350"
                                   focusable="false"
                                   height="12px"
                                   viewBox="0 0 13 12"
@@ -4602,7 +4631,7 @@ exports[`Media Asset Page should render component 1`] = `
                                   />
                                 </svg>
                                 <time
-                                  class="emotion-342 emotion-343"
+                                  class="emotion-351 emotion-352"
                                   datetime="PT15S"
                                 >
                                   0:15
@@ -4616,40 +4645,44 @@ exports[`Media Asset Page should render component 1`] = `
                         class="emotion-262 emotion-263"
                         dir="ltr"
                       >
-                        <h3
+                        <div
                           class="emotion-264 emotion-265"
                         >
-                          <a
-                            aria-labelledby="promo-rel-content-pidginmedia23147054-4"
+                          <h3
                             class="emotion-266 emotion-267"
-                            href="/pidgin/media-23147054"
                           >
-                            <span
-                              id="promo-rel-content-pidginmedia23147054-4"
-                              role="text"
+                            <a
+                              aria-labelledby="promo-rel-content-pidginmedia23147054-4"
+                              class="emotion-268 emotion-269"
+                              href="/pidgin/media-23147054"
                             >
                               <span
-                                class="emotion-4 emotion-5"
+                                id="promo-rel-content-pidginmedia23147054-4"
+                                role="text"
                               >
-                                Make you listen, 
+                                <span
+                                  class="emotion-4 emotion-5"
+                                >
+                                  Make you listen, 
+                                </span>
+                                <span>
+                                  BBC News Pidgin One Minute News
+                                </span>
+                                <span
+                                  class="emotion-4 emotion-5"
+                                >
+                                  , Duration 0,15
+                                </span>
                               </span>
-                              <span>
-                                BBC News Pidgin One Minute News
-                              </span>
-                              <span
-                                class="emotion-4 emotion-5"
-                              >
-                                , Duration 0,15
-                              </span>
-                            </span>
-                          </a>
-                        </h3>
-                        <time
-                          class="emotion-268 emotion-28"
-                          datetime="2017-08-17"
-                        >
-                          17th August 2017
-                        </time>
+                            </a>
+                          </h3>
+                          <time
+                            class="emotion-270 emotion-271 emotion-28"
+                            datetime="2017-08-17"
+                          >
+                            17th August 2017
+                          </time>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -4657,7 +4690,7 @@ exports[`Media Asset Page should render component 1`] = `
               </div>
             </section>
             <div
-              class="emotion-356 emotion-357"
+              class="emotion-368 emotion-369"
             />
           </div>
         </div>

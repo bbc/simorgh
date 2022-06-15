@@ -248,6 +248,7 @@ exports[`ArticleRelatedContent should render related content 1`] = `
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
+    background-color: #FFFFFF;
   }
 
   @media (min-width: 37.5rem) {
@@ -372,7 +373,23 @@ exports[`ArticleRelatedContent should render related content 1`] = `
 }
 
 .emotion-34 {
-  color: #222222;
+  padding: 0.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-34 {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-34 {
+    padding: 0.5rem 1rem 1rem 1rem;
+  }
+}
+
+.emotion-36 {
+  color: #141414;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -383,20 +400,20 @@ exports[`ArticleRelatedContent should render related content 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-34 {
+  .emotion-36 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-34 {
+  .emotion-36 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-36 {
+.emotion-38 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -405,7 +422,7 @@ exports[`ArticleRelatedContent should render related content 1`] = `
   overflow-wrap: anywhere;
 }
 
-.emotion-36:before {
+.emotion-38:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -417,13 +434,13 @@ exports[`ArticleRelatedContent should render related content 1`] = `
   z-index: 1;
 }
 
-.emotion-36:hover,
-.emotion-36:focus {
+.emotion-38:hover,
+.emotion-38:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-36:visited {
+.emotion-38:visited {
   color: #6E6E73;
 }
 
@@ -506,17 +523,21 @@ exports[`ArticleRelatedContent should render related content 1`] = `
             <div
               class="emotion-34 emotion-35"
             >
-              <a
-                aria-labelledby="promo-news-1"
+              <div
                 class="emotion-36 emotion-37"
-                href="https://www.bbc.co.uk/news"
               >
-                <span
-                  id="promo-news-1"
+                <a
+                  aria-labelledby="promo-news-1"
+                  class="emotion-38 emotion-39"
+                  href="https://www.bbc.co.uk/news"
                 >
-                  News homepage
-                </span>
-              </a>
+                  <span
+                    id="promo-news-1"
+                  >
+                    News homepage
+                  </span>
+                </a>
+              </div>
             </div>
           </div>
         </div>

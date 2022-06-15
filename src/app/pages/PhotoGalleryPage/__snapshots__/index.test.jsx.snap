@@ -5458,6 +5458,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
+    background-color: #FFFFFF;
   }
 
   @media (min-width: 37.5rem) {
@@ -5554,7 +5555,23 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 .emotion-237 {
-  color: #222222;
+  padding: 0.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-237 {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-237 {
+    padding: 0.5rem 1rem 1rem 1rem;
+  }
+}
+
+.emotion-239 {
+  color: #141414;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5565,20 +5582,20 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-237 {
+  .emotion-239 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-237 {
+  .emotion-239 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-239 {
+.emotion-241 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -5587,7 +5604,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   overflow-wrap: anywhere;
 }
 
-.emotion-239:before {
+.emotion-241:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -5599,17 +5616,17 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   z-index: 1;
 }
 
-.emotion-239:hover,
-.emotion-239:focus {
+.emotion-241:hover,
+.emotion-241:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-239:visited {
+.emotion-241:visited {
   color: #6E6E73;
 }
 
-.emotion-241 {
+.emotion-244 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -5620,20 +5637,20 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-241 {
+  .emotion-244 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-241 {
+  .emotion-244 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-256 {
+.emotion-259 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5645,20 +5662,20 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-256 {
+  .emotion-259 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-256 {
+  .emotion-259 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-258 {
+.emotion-261 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5670,7 +5687,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   height: 100%;
 }
 
-.emotion-260 {
+.emotion-263 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -6398,30 +6415,34 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                         class="emotion-235 emotion-236"
                         dir="ltr"
                       >
-                        <h3
+                        <div
                           class="emotion-237 emotion-238"
                         >
-                          <a
-                            aria-labelledby="promo-rel-content-pidginmedia45132087-1"
+                          <h3
                             class="emotion-239 emotion-240"
-                            href="/pidgin/media-45132087"
                           >
-                            <span
-                              id="promo-rel-content-pidginmedia45132087-1"
-                              role="text"
+                            <a
+                              aria-labelledby="promo-rel-content-pidginmedia45132087-1"
+                              class="emotion-241 emotion-242"
+                              href="/pidgin/media-45132087"
                             >
-                              <span>
-                                Bole na correct Port Harcourt food.
+                              <span
+                                id="promo-rel-content-pidginmedia45132087-1"
+                                role="text"
+                              >
+                                <span>
+                                  Bole na correct Port Harcourt food.
+                                </span>
                               </span>
-                            </span>
-                          </a>
-                        </h3>
-                        <time
-                          class="emotion-241 emotion-12"
-                          datetime="2018-08-09"
-                        >
-                          9th August 2018
-                        </time>
+                            </a>
+                          </h3>
+                          <time
+                            class="emotion-243 emotion-244 emotion-12"
+                            datetime="2018-08-09"
+                          >
+                            9th August 2018
+                          </time>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -6450,16 +6471,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           >
                             <div
                               aria-hidden="true"
-                              class="emotion-256 emotion-257"
+                              class="emotion-259 emotion-260"
                               data-e2e="media-indicator"
                               dir="ltr"
                             >
                               <div
-                                class="emotion-258 emotion-259"
+                                class="emotion-261 emotion-262"
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="emotion-260 emotion-261"
+                                  class="emotion-263 emotion-264"
                                   focusable="false"
                                   height="13px"
                                   viewBox="0 0 32 26"
@@ -6483,35 +6504,39 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                         class="emotion-235 emotion-236"
                         dir="ltr"
                       >
-                        <h3
+                        <div
                           class="emotion-237 emotion-238"
                         >
-                          <a
-                            aria-labelledby="promo-rel-content-pidgintori45242255-2"
+                          <h3
                             class="emotion-239 emotion-240"
-                            href="/pidgin/tori-45242255"
                           >
-                            <span
-                              id="promo-rel-content-pidgintori45242255-2"
-                              role="text"
+                            <a
+                              aria-labelledby="promo-rel-content-pidgintori45242255-2"
+                              class="emotion-241 emotion-242"
+                              href="/pidgin/tori-45242255"
                             >
                               <span
-                                class="emotion-36 emotion-37"
+                                id="promo-rel-content-pidgintori45242255-2"
+                                role="text"
                               >
-                                Image gallery, 
+                                <span
+                                  class="emotion-36 emotion-37"
+                                >
+                                  Image gallery, 
+                                </span>
+                                <span>
+                                  Jollof Festival: West Africa no wan kwanta again unto which pesin jollof sweet pass
+                                </span>
                               </span>
-                              <span>
-                                Jollof Festival: West Africa no wan kwanta again unto which pesin jollof sweet pass
-                              </span>
-                            </span>
-                          </a>
-                        </h3>
-                        <time
-                          class="emotion-241 emotion-12"
-                          datetime="2018-08-19"
-                        >
-                          19th August 2018
-                        </time>
+                            </a>
+                          </h3>
+                          <time
+                            class="emotion-243 emotion-244 emotion-12"
+                            datetime="2018-08-19"
+                          >
+                            19th August 2018
+                          </time>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -9785,6 +9810,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
+    background-color: #FFFFFF;
   }
 
   @media (min-width: 37.5rem) {
@@ -9881,7 +9907,23 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 .emotion-451 {
-  color: #222222;
+  padding: 0.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-451 {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-451 {
+    padding: 0.5rem 1rem 1rem 1rem;
+  }
+}
+
+.emotion-453 {
+  color: #141414;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -9892,20 +9934,20 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-451 {
+  .emotion-453 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-451 {
+  .emotion-453 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-453 {
+.emotion-455 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -9914,7 +9956,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   overflow-wrap: anywhere;
 }
 
-.emotion-453:before {
+.emotion-455:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -9926,17 +9968,17 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   z-index: 1;
 }
 
-.emotion-453:hover,
-.emotion-453:focus {
+.emotion-455:hover,
+.emotion-455:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-453:visited {
+.emotion-455:visited {
   color: #6E6E73;
 }
 
-.emotion-455 {
+.emotion-458 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -9947,14 +9989,14 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-455 {
+  .emotion-458 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-455 {
+  .emotion-458 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -11372,335 +11414,31 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         class="emotion-449 emotion-450"
                         dir="ltr"
                       >
-                        <h3
-                          class="emotion-451 emotion-452"
-                        >
-                          <a
-                            aria-labelledby="promo-rel-content-azeriazerbaijan44124647-1"
-                            class="emotion-453 emotion-454"
-                            href="/azeri/azerbaijan-44124647"
-                          >
-                            <span
-                              id="promo-rel-content-azeriazerbaijan44124647-1"
-                            >
-                              ADR və Qazaxdan Qarsadək müsəlman dəhlizi ideyası
-                            </span>
-                          </a>
-                        </h3>
-                        <time
-                          class="emotion-455 emotion-12"
-                          datetime="2018-05-17"
-                        >
-                          17 May 2018
-                        </time>
-                      </div>
-                    </div>
-                  </li>
-                  <li
-                    class="emotion-3 emotion-437 emotion-438"
-                    dir="ltr"
-                  >
-                    <div
-                      class="emotion-439 emotion-440"
-                      data-e2e="story-promo"
-                    >
-                      <div
-                        class="emotion-441 emotion-442"
-                        dir="ltr"
-                      >
                         <div
-                          class="emotion-443 emotion-444"
-                        >
-                          <div
-                            class="emotion-25 emotion-26"
-                            data-e2e="image-placeholder"
-                            style="padding-bottom: 56.25%;"
-                          >
-                            <div
-                              class="lazyload-wrapper "
-                            >
-                              <div
-                                class="lazyload-placeholder"
-                              />
-                            </div>
-                          </div>
-                          <div
-                            class="emotion-447 emotion-448"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        class="emotion-449 emotion-450"
-                        dir="ltr"
-                      >
-                        <h3
                           class="emotion-451 emotion-452"
                         >
-                          <a
-                            aria-labelledby="promo-rel-content-azeriazerbaijan43540056-2"
+                          <h3
                             class="emotion-453 emotion-454"
-                            href="/azeri/azerbaijan-43540056"
                           >
-                            <span
-                              id="promo-rel-content-azeriazerbaijan43540056-2"
+                            <a
+                              aria-labelledby="promo-rel-content-azeriazerbaijan44124647-1"
+                              class="emotion-455 emotion-456"
+                              href="/azeri/azerbaijan-44124647"
                             >
-                              ADR-100: Türk Əsgəri üçün Cəbrayıl çörəyi
-                            </span>
-                          </a>
-                        </h3>
-                        <time
-                          class="emotion-455 emotion-12"
-                          datetime="2018-03-27"
-                        >
-                          27 Mart 2018
-                        </time>
-                      </div>
-                    </div>
-                  </li>
-                  <li
-                    class="emotion-3 emotion-437 emotion-438"
-                    dir="ltr"
-                  >
-                    <div
-                      class="emotion-439 emotion-440"
-                      data-e2e="story-promo"
-                    >
-                      <div
-                        class="emotion-441 emotion-442"
-                        dir="ltr"
-                      >
-                        <div
-                          class="emotion-443 emotion-444"
-                        >
-                          <div
-                            class="emotion-25 emotion-26"
-                            data-e2e="image-placeholder"
-                            style="padding-bottom: 56.25%;"
-                          >
-                            <div
-                              class="lazyload-wrapper "
-                            >
-                              <div
-                                class="lazyload-placeholder"
-                              />
-                            </div>
-                          </div>
-                          <div
-                            class="emotion-447 emotion-448"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        class="emotion-449 emotion-450"
-                        dir="ltr"
-                      >
-                        <h3
-                          class="emotion-451 emotion-452"
-                        >
-                          <a
-                            aria-labelledby="promo-rel-content-azeriazerbaijan44022776-3"
-                            class="emotion-453 emotion-454"
-                            href="/azeri/azerbaijan-44022776"
-                          >
-                            <span
-                              id="promo-rel-content-azeriazerbaijan44022776-3"
-                            >
-                              Borçalı: Tortdan hərəyə bir tikə - təkbaşına isə onu yemək olmaz
-                            </span>
-                          </a>
-                        </h3>
-                        <time
-                          class="emotion-455 emotion-12"
-                          datetime="2018-05-10"
-                        >
-                          10 May 2018
-                        </time>
-                      </div>
-                    </div>
-                  </li>
-                  <li
-                    class="emotion-3 emotion-437 emotion-438"
-                    dir="ltr"
-                  >
-                    <div
-                      class="emotion-439 emotion-440"
-                      data-e2e="story-promo"
-                    >
-                      <div
-                        class="emotion-441 emotion-442"
-                        dir="ltr"
-                      >
-                        <div
-                          class="emotion-443 emotion-444"
-                        >
-                          <div
-                            class="emotion-25 emotion-26"
-                            data-e2e="image-placeholder"
-                            style="padding-bottom: 56.25%;"
-                          >
-                            <div
-                              class="lazyload-wrapper "
-                            >
-                              <div
-                                class="lazyload-placeholder"
-                              />
-                            </div>
-                          </div>
-                          <div
-                            class="emotion-447 emotion-448"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        class="emotion-449 emotion-450"
-                        dir="ltr"
-                      >
-                        <h3
-                          class="emotion-451 emotion-452"
-                        >
-                          <a
-                            aria-labelledby="promo-rel-content-azeriazerbaijan43713137-4"
-                            class="emotion-453 emotion-454"
-                            href="/azeri/azerbaijan-43713137"
-                          >
-                            <span
-                              id="promo-rel-content-azeriazerbaijan43713137-4"
-                            >
-                              Cümhuriyyət hökuməti Azərbaycanı necə idarə edirdi? İlk 6 ayın hadisələri
-                            </span>
-                          </a>
-                        </h3>
-                        <time
-                          class="emotion-455 emotion-12"
-                          datetime="2018-04-10"
-                        >
-                          10 Aprel 2018
-                        </time>
-                      </div>
-                    </div>
-                  </li>
-                  <li
-                    class="emotion-3 emotion-437 emotion-438"
-                    dir="ltr"
-                  >
-                    <div
-                      class="emotion-439 emotion-440"
-                      data-e2e="story-promo"
-                    >
-                      <div
-                        class="emotion-441 emotion-442"
-                        dir="ltr"
-                      >
-                        <div
-                          class="emotion-443 emotion-444"
-                        >
-                          <div
-                            class="emotion-25 emotion-26"
-                            data-e2e="image-placeholder"
-                            style="padding-bottom: 56.25%;"
-                          >
-                            <div
-                              class="lazyload-wrapper "
-                            >
-                              <div
-                                class="lazyload-placeholder"
-                              />
-                            </div>
-                          </div>
-                          <div
-                            class="emotion-447 emotion-448"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        class="emotion-449 emotion-450"
-                        dir="ltr"
-                      >
-                        <h3
-                          class="emotion-451 emotion-452"
-                        >
-                          <a
-                            aria-labelledby="promo-rel-content-azeriazerbaijan37688691-5"
-                            class="emotion-453 emotion-454"
-                            href="/azeri/azerbaijan-37688691"
-                          >
-                            <span
-                              id="promo-rel-content-azeriazerbaijan37688691-5"
-                            >
-                              1918-1991: Bir müstəqilliyin iki bəyanı
-                            </span>
-                          </a>
-                        </h3>
-                        <time
-                          class="emotion-455 emotion-12"
-                          datetime="2016-10-18"
-                        >
-                          18 Oktyabr 2016
-                        </time>
-                      </div>
-                    </div>
-                  </li>
-                  <li
-                    class="emotion-3 emotion-437 emotion-438"
-                    dir="ltr"
-                  >
-                    <div
-                      class="emotion-439 emotion-440"
-                      data-e2e="story-promo"
-                    >
-                      <div
-                        class="emotion-441 emotion-442"
-                        dir="ltr"
-                      >
-                        <div
-                          class="emotion-443 emotion-444"
-                        >
-                          <div
-                            class="emotion-25 emotion-26"
-                            data-e2e="image-placeholder"
-                            style="padding-bottom: 56.25%;"
-                          >
-                            <div
-                              class="lazyload-wrapper "
-                            >
-                              <div
-                                class="lazyload-placeholder"
-                              />
-                            </div>
-                          </div>
-                          <div
-                            class="emotion-447 emotion-448"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        class="emotion-449 emotion-450"
-                        dir="ltr"
-                      >
-                        <h3
-                          class="emotion-451 emotion-452"
-                        >
-                          <a
-                            aria-labelledby="promo-rel-content-azeriazerbaijan37691096-6"
-                            class="emotion-453 emotion-454"
-                            href="/azeri/azerbaijan-37691096"
-                          >
-                            <span
-                              id="promo-rel-content-azeriazerbaijan37691096-6"
-                              role="text"
-                            >
-                              <span>
-                                Bakı sakinləri müstəqillik barədə danışır
+                              <span
+                                id="promo-rel-content-azeriazerbaijan44124647-1"
+                              >
+                                ADR və Qazaxdan Qarsadək müsəlman dəhlizi ideyası
                               </span>
-                            </span>
-                          </a>
-                        </h3>
-                        <time
-                          class="emotion-455 emotion-12"
-                          datetime="2016-10-18"
-                        >
-                          18 Oktyabr 2016
-                        </time>
+                            </a>
+                          </h3>
+                          <time
+                            class="emotion-457 emotion-458 emotion-12"
+                            datetime="2018-05-17"
+                          >
+                            17 May 2018
+                          </time>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -11741,27 +11479,31 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         class="emotion-449 emotion-450"
                         dir="ltr"
                       >
-                        <h3
+                        <div
                           class="emotion-451 emotion-452"
                         >
-                          <a
-                            aria-labelledby="promo-rel-content-azeriazerbaijan43499221-7"
+                          <h3
                             class="emotion-453 emotion-454"
-                            href="/azeri/azerbaijan-43499221"
                           >
-                            <span
-                              id="promo-rel-content-azeriazerbaijan43499221-7"
+                            <a
+                              aria-labelledby="promo-rel-content-azeriazerbaijan43540056-2"
+                              class="emotion-455 emotion-456"
+                              href="/azeri/azerbaijan-43540056"
                             >
-                              1918-ci ilə baxış: Mayın 28-nə aparan o yaz günlərində həyat necə idi?
-                            </span>
-                          </a>
-                        </h3>
-                        <time
-                          class="emotion-455 emotion-12"
-                          datetime="2018-03-22"
-                        >
-                          22 Mart 2018
-                        </time>
+                              <span
+                                id="promo-rel-content-azeriazerbaijan43540056-2"
+                              >
+                                ADR-100: Türk Əsgəri üçün Cəbrayıl çörəyi
+                              </span>
+                            </a>
+                          </h3>
+                          <time
+                            class="emotion-457 emotion-458 emotion-12"
+                            datetime="2018-03-27"
+                          >
+                            27 Mart 2018
+                          </time>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -11802,27 +11544,31 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         class="emotion-449 emotion-450"
                         dir="ltr"
                       >
-                        <h3
+                        <div
                           class="emotion-451 emotion-452"
                         >
-                          <a
-                            aria-labelledby="promo-rel-content-azeriazerbaijan44004471-8"
+                          <h3
                             class="emotion-453 emotion-454"
-                            href="/azeri/azerbaijan-44004471"
                           >
-                            <span
-                              id="promo-rel-content-azeriazerbaijan44004471-8"
+                            <a
+                              aria-labelledby="promo-rel-content-azeriazerbaijan44022776-3"
+                              class="emotion-455 emotion-456"
+                              href="/azeri/azerbaijan-44022776"
                             >
-                              #ADR100 Zaqatala: Azərbaycanın qalib gəldiyi mübahisə
-                            </span>
-                          </a>
-                        </h3>
-                        <time
-                          class="emotion-455 emotion-12"
-                          datetime="2018-05-04"
-                        >
-                          4 May 2018
-                        </time>
+                              <span
+                                id="promo-rel-content-azeriazerbaijan44022776-3"
+                              >
+                                Borçalı: Tortdan hərəyə bir tikə - təkbaşına isə onu yemək olmaz
+                              </span>
+                            </a>
+                          </h3>
+                          <time
+                            class="emotion-457 emotion-458 emotion-12"
+                            datetime="2018-05-10"
+                          >
+                            10 May 2018
+                          </time>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -11863,27 +11609,359 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         class="emotion-449 emotion-450"
                         dir="ltr"
                       >
-                        <h3
+                        <div
                           class="emotion-451 emotion-452"
                         >
-                          <a
-                            aria-labelledby="promo-rel-content-azeriazerbaijan43870815-9"
+                          <h3
                             class="emotion-453 emotion-454"
-                            href="/azeri/azerbaijan-43870815"
                           >
-                            <span
-                              id="promo-rel-content-azeriazerbaijan43870815-9"
+                            <a
+                              aria-labelledby="promo-rel-content-azeriazerbaijan43713137-4"
+                              class="emotion-455 emotion-456"
+                              href="/azeri/azerbaijan-43713137"
                             >
-                              Cümhuriyyət hökumətinin İranla əlaqələri necə idi?
-                            </span>
-                          </a>
-                        </h3>
-                        <time
-                          class="emotion-455 emotion-12"
-                          datetime="2018-04-29"
+                              <span
+                                id="promo-rel-content-azeriazerbaijan43713137-4"
+                              >
+                                Cümhuriyyət hökuməti Azərbaycanı necə idarə edirdi? İlk 6 ayın hadisələri
+                              </span>
+                            </a>
+                          </h3>
+                          <time
+                            class="emotion-457 emotion-458 emotion-12"
+                            datetime="2018-04-10"
+                          >
+                            10 Aprel 2018
+                          </time>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="emotion-3 emotion-437 emotion-438"
+                    dir="ltr"
+                  >
+                    <div
+                      class="emotion-439 emotion-440"
+                      data-e2e="story-promo"
+                    >
+                      <div
+                        class="emotion-441 emotion-442"
+                        dir="ltr"
+                      >
+                        <div
+                          class="emotion-443 emotion-444"
                         >
-                          29 Aprel 2018
-                        </time>
+                          <div
+                            class="emotion-25 emotion-26"
+                            data-e2e="image-placeholder"
+                            style="padding-bottom: 56.25%;"
+                          >
+                            <div
+                              class="lazyload-wrapper "
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="emotion-447 emotion-448"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="emotion-449 emotion-450"
+                        dir="ltr"
+                      >
+                        <div
+                          class="emotion-451 emotion-452"
+                        >
+                          <h3
+                            class="emotion-453 emotion-454"
+                          >
+                            <a
+                              aria-labelledby="promo-rel-content-azeriazerbaijan37688691-5"
+                              class="emotion-455 emotion-456"
+                              href="/azeri/azerbaijan-37688691"
+                            >
+                              <span
+                                id="promo-rel-content-azeriazerbaijan37688691-5"
+                              >
+                                1918-1991: Bir müstəqilliyin iki bəyanı
+                              </span>
+                            </a>
+                          </h3>
+                          <time
+                            class="emotion-457 emotion-458 emotion-12"
+                            datetime="2016-10-18"
+                          >
+                            18 Oktyabr 2016
+                          </time>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="emotion-3 emotion-437 emotion-438"
+                    dir="ltr"
+                  >
+                    <div
+                      class="emotion-439 emotion-440"
+                      data-e2e="story-promo"
+                    >
+                      <div
+                        class="emotion-441 emotion-442"
+                        dir="ltr"
+                      >
+                        <div
+                          class="emotion-443 emotion-444"
+                        >
+                          <div
+                            class="emotion-25 emotion-26"
+                            data-e2e="image-placeholder"
+                            style="padding-bottom: 56.25%;"
+                          >
+                            <div
+                              class="lazyload-wrapper "
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="emotion-447 emotion-448"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="emotion-449 emotion-450"
+                        dir="ltr"
+                      >
+                        <div
+                          class="emotion-451 emotion-452"
+                        >
+                          <h3
+                            class="emotion-453 emotion-454"
+                          >
+                            <a
+                              aria-labelledby="promo-rel-content-azeriazerbaijan37691096-6"
+                              class="emotion-455 emotion-456"
+                              href="/azeri/azerbaijan-37691096"
+                            >
+                              <span
+                                id="promo-rel-content-azeriazerbaijan37691096-6"
+                                role="text"
+                              >
+                                <span>
+                                  Bakı sakinləri müstəqillik barədə danışır
+                                </span>
+                              </span>
+                            </a>
+                          </h3>
+                          <time
+                            class="emotion-457 emotion-458 emotion-12"
+                            datetime="2016-10-18"
+                          >
+                            18 Oktyabr 2016
+                          </time>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="emotion-3 emotion-437 emotion-438"
+                    dir="ltr"
+                  >
+                    <div
+                      class="emotion-439 emotion-440"
+                      data-e2e="story-promo"
+                    >
+                      <div
+                        class="emotion-441 emotion-442"
+                        dir="ltr"
+                      >
+                        <div
+                          class="emotion-443 emotion-444"
+                        >
+                          <div
+                            class="emotion-25 emotion-26"
+                            data-e2e="image-placeholder"
+                            style="padding-bottom: 56.25%;"
+                          >
+                            <div
+                              class="lazyload-wrapper "
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="emotion-447 emotion-448"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="emotion-449 emotion-450"
+                        dir="ltr"
+                      >
+                        <div
+                          class="emotion-451 emotion-452"
+                        >
+                          <h3
+                            class="emotion-453 emotion-454"
+                          >
+                            <a
+                              aria-labelledby="promo-rel-content-azeriazerbaijan43499221-7"
+                              class="emotion-455 emotion-456"
+                              href="/azeri/azerbaijan-43499221"
+                            >
+                              <span
+                                id="promo-rel-content-azeriazerbaijan43499221-7"
+                              >
+                                1918-ci ilə baxış: Mayın 28-nə aparan o yaz günlərində həyat necə idi?
+                              </span>
+                            </a>
+                          </h3>
+                          <time
+                            class="emotion-457 emotion-458 emotion-12"
+                            datetime="2018-03-22"
+                          >
+                            22 Mart 2018
+                          </time>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="emotion-3 emotion-437 emotion-438"
+                    dir="ltr"
+                  >
+                    <div
+                      class="emotion-439 emotion-440"
+                      data-e2e="story-promo"
+                    >
+                      <div
+                        class="emotion-441 emotion-442"
+                        dir="ltr"
+                      >
+                        <div
+                          class="emotion-443 emotion-444"
+                        >
+                          <div
+                            class="emotion-25 emotion-26"
+                            data-e2e="image-placeholder"
+                            style="padding-bottom: 56.25%;"
+                          >
+                            <div
+                              class="lazyload-wrapper "
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="emotion-447 emotion-448"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="emotion-449 emotion-450"
+                        dir="ltr"
+                      >
+                        <div
+                          class="emotion-451 emotion-452"
+                        >
+                          <h3
+                            class="emotion-453 emotion-454"
+                          >
+                            <a
+                              aria-labelledby="promo-rel-content-azeriazerbaijan44004471-8"
+                              class="emotion-455 emotion-456"
+                              href="/azeri/azerbaijan-44004471"
+                            >
+                              <span
+                                id="promo-rel-content-azeriazerbaijan44004471-8"
+                              >
+                                #ADR100 Zaqatala: Azərbaycanın qalib gəldiyi mübahisə
+                              </span>
+                            </a>
+                          </h3>
+                          <time
+                            class="emotion-457 emotion-458 emotion-12"
+                            datetime="2018-05-04"
+                          >
+                            4 May 2018
+                          </time>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="emotion-3 emotion-437 emotion-438"
+                    dir="ltr"
+                  >
+                    <div
+                      class="emotion-439 emotion-440"
+                      data-e2e="story-promo"
+                    >
+                      <div
+                        class="emotion-441 emotion-442"
+                        dir="ltr"
+                      >
+                        <div
+                          class="emotion-443 emotion-444"
+                        >
+                          <div
+                            class="emotion-25 emotion-26"
+                            data-e2e="image-placeholder"
+                            style="padding-bottom: 56.25%;"
+                          >
+                            <div
+                              class="lazyload-wrapper "
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="emotion-447 emotion-448"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="emotion-449 emotion-450"
+                        dir="ltr"
+                      >
+                        <div
+                          class="emotion-451 emotion-452"
+                        >
+                          <h3
+                            class="emotion-453 emotion-454"
+                          >
+                            <a
+                              aria-labelledby="promo-rel-content-azeriazerbaijan43870815-9"
+                              class="emotion-455 emotion-456"
+                              href="/azeri/azerbaijan-43870815"
+                            >
+                              <span
+                                id="promo-rel-content-azeriazerbaijan43870815-9"
+                              >
+                                Cümhuriyyət hökumətinin İranla əlaqələri necə idi?
+                              </span>
+                            </a>
+                          </h3>
+                          <time
+                            class="emotion-457 emotion-458 emotion-12"
+                            datetime="2018-04-29"
+                          >
+                            29 Aprel 2018
+                          </time>
+                        </div>
                       </div>
                     </div>
                   </li>
