@@ -12,7 +12,12 @@ import {
 } from '#legacy/gel-foundations/src/breakpoints';
 import MetadataContainer from '#app/containers/Metadata';
 import LinkedData from '#app/containers/LinkedData';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import AdContainer from '#containers/Ad';
+import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
+import useToggle from '#hooks/useToggle';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
+import isLive from '#lib/utilities/isLive';
 import TopicTitle from './TopicTitle';
 import TopicGrid from './TopicGrid';
 import Pagination from './Pagination';
@@ -31,6 +36,12 @@ const TopicPage = ({ pageData }) => {
   const { lang, translations } = useContext(ServiceContext);
   const { title, description, promos, pageCount, activePage } = pageData;
 
+  const { enabled: adsEnabled } = useToggle('ads');
+  const { showAdsBasedOnLocation } = useContext(RequestContext);
+  const showAds = [!isLive(), adsEnabled, showAdsBasedOnLocation].every(
+    Boolean,
+  );
+
   const promoEntities = promos.map(promo => ({
     '@type': 'Article',
     name: promo.title,
@@ -39,16 +50,13 @@ const TopicPage = ({ pageData }) => {
     dateCreated: promo.firstPublished,
   }));
 
-  const getTranslations = () => ({
+  const { pageXOfY, previousPage, nextPage, page } = {
     pageXOfY: 'Page {x} of {y}',
     previousPage: 'Previous Page',
     nextPage: 'Next Page',
     page: 'Page',
     ...translations.pagination,
-  });
-
-  const { pageXOfY, previousPage, nextPage, page } =
-    getTranslations(translations);
+  };
 
   const translatedPage = pageXOfY
     .replace('{x}', activePage)
@@ -58,6 +66,7 @@ const TopicPage = ({ pageData }) => {
 
   return (
     <Wrapper role="main">
+      {showAds && <CanonicalAdBootstrapJs />}
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
@@ -74,6 +83,7 @@ const TopicPage = ({ pageData }) => {
         headline={title}
         entities={promoEntities}
       />
+      {showAds && <AdContainer slotType="leaderboard" />}
       <TopicTitle>{title}</TopicTitle>
       <TopicGrid promos={promos} />
       <Pagination
