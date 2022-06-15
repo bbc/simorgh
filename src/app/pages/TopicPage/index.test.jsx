@@ -17,19 +17,20 @@ const TopicPageWithContext = ({
   pageData = pidginMultipleItems,
   lang = 'pcm',
   service = 'pidgin',
-  showAds = false,
+  adsToggledOn = false,
+  showAdsBasedOnLocation = false,
 } = {}) => (
   <BrowserRouter>
     <ToggleContext.Provider
       value={{
         toggleState: {
           ads: {
-            enabled: showAds,
+            enabled: adsToggledOn,
           },
         },
       }}
     >
-      <RequestContextProvider showAdsBasedOnLocation={showAds}>
+      <RequestContextProvider showAdsBasedOnLocation={showAdsBasedOnLocation}>
         <ServiceContextProvider service={service} lang={lang}>
           <TopicPage pageData={pageData} />
         </ServiceContextProvider>
@@ -57,9 +58,26 @@ describe('A11y', () => {
   });
 
   it('should show ads when enabled', () => {
-    const { container } = render(<TopicPageWithContext showAds />);
-    expect(
-      container.querySelector('[data-e2e="advertisement"]'),
-    ).toBeInTheDocument();
+    [
+      [true, true],
+      [true, false],
+      [false, true],
+      [false, false],
+    ].forEach(([adsToggledOn, showAdsBasedOnLocation]) => {
+      const { container } = render(
+        <TopicPageWithContext
+          adsToggledOn={adsToggledOn}
+          showAdsBasedOnLocation={showAdsBasedOnLocation}
+        />,
+      );
+
+      const shouldShowAds = adsToggledOn && showAdsBasedOnLocation;
+      const adElement = container.querySelector('[data-e2e="advertisement"]');
+      if (shouldShowAds) {
+        expect(adElement).toBeInTheDocument();
+      } else {
+        expect(adElement).not.toBeInTheDocument();
+      }
+    });
   });
 });
