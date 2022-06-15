@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { C_METAL, C_EBON } from '@bbc/psammead-styles/colours';
+import { C_METAL, C_EBON } from '#legacy/psammead-styles/src/colours';
 
 const CardLink = styled.a`
   color: ${C_EBON};

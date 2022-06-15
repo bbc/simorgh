@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { arabic } from '@bbc/gel-foundations/scripts';
 import { ServiceContext } from '#contexts/ServiceContext';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { arabic } from '#legacy/gel-foundations/src/scripts';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
 import BulletedListContainer from './index';
 import { listItemD, listItemE, orderedList } from './fixtures';
 

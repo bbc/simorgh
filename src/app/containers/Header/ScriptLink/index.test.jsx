@@ -2,7 +2,6 @@ import React from 'react';
 import { node } from 'prop-types';
 import { MemoryRouter, Route } from 'react-router-dom';
 import { render, fireEvent } from '@testing-library/react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { UserContext } from '#contexts/UserContext';
@@ -18,6 +17,7 @@ import {
   legacyAssetPagePath,
   topicPath,
 } from '#app/routes/utils/regex';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
 import ScriptLinkContainer, { getVariantHref } from '.';
 
 const setPreferredVariantCookieSpy = jest.spyOn(

@@ -8,7 +8,7 @@ A change in timestamp logic would require updating the values in [expectedFormat
 
 A couple of scenarios that we expect these tests would fail and need updating would be:
 
-- Change in timestamp or timezone logic in `@bbc/moment-timezone-include`, `@bbc/psammead-locales` etc.
+- Change in timestamp or timezone logic in `#legacy/moment-timezone-include`, `#legacy/psammead-locales` etc.
 
 - Change in the timeformat logic [here](../timeFormats)
 

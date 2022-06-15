@@ -1,12 +1,12 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
 import PodcastExternalLinks from '.';
 
 /* eslint-disable react/prop-types */

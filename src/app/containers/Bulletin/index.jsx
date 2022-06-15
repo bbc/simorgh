@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { shape, bool, oneOfType } from 'prop-types';
-import Bulletin from '@bbc/psammead-bulletin';
+import Bulletin from '#legacy/psammead-bulletin/src';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#lib/utilities/ichefURL';
 import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';

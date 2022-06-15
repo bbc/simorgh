@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { string } from 'prop-types';
 import styled from '@emotion/styled';
-import { Headline, SubHeading } from '@bbc/psammead-headings';
+import { Headline, SubHeading } from '#legacy/psammead-headings/src';
 import { textDefaultPropTypes } from '#models/propTypes';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { headlineModelPropTypes } from '#models/propTypes/headline';
