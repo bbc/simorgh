@@ -1,5 +1,8 @@
 import React, { forwardRef } from 'react';
-import { StoryPromoLiBase, StoryPromoUl } from '@bbc/psammead-story-promo-list';
+import {
+  StoryPromoLiBase,
+  StoryPromoUl,
+} from '#legacy/psammead-story-promo-list/src';
 import { arrayOf, shape, number } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
 import useViewTracker from '#hooks/useViewTracker';

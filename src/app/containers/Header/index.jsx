@@ -1,5 +1,5 @@
 import React, { useContext, useRef } from 'react';
-import SkipLink from '@bbc/psammead-brand/skip-link';
+import SkipLink from '#legacy/psammead-brand/src/SkipLink';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';

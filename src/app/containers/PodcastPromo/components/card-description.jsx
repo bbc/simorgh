@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
-import { getLongPrimer } from '@bbc/gel-foundations/typography';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
-import { C_METAL } from '@bbc/psammead-styles/colours';
-import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
+import { getLongPrimer } from '#legacy/gel-foundations/src/typography';
+import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
+import { C_METAL } from '#legacy/psammead-styles/src/colours';
+import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
 
 const CardDescription = styled.p`
   ${({ script }) => getLongPrimer(script)}

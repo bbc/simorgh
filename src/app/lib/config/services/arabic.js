@@ -3,15 +3,15 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { arabic } from '@bbc/gel-foundations/scripts';
-import { arabic as brandSVG } from '@bbc/psammead-assets/svgs';
+} from '#legacy/psammead-styles/src/colours';
+import arabic from '#legacy/gel-foundations/src/scripts/arabic';
+import { arabic as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import {
   F_REITH_QALAM_REGULAR,
   F_REITH_QALAM_BOLD,
-} from '@bbc/psammead-styles/fonts';
-import '@bbc/psammead-locales/moment/ar';
-import '@bbc/moment-timezone-include/tz/GMT';
+} from '#legacy/psammead-styles/src/fonts';
+import '#legacy/psammead-locales/moment/ar';
+import '#legacy/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -65,16 +65,15 @@ export const service = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'البودكاست',
-      brandTitle: 'مراهقتي (Morahakaty)',
-      brandDescription:
-        'تابوهات المراهقة، من تقديم كريمة كواح و إعداد ميس باقي.',
+      brandTitle: 'تغيير بسيط (A Simple Change)',
+      brandDescription: 'تغيير بسيط: ما علاقة سلة مشترياتك بتغير المناخ؟',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0b3x87s.jpg',
-        alt: 'مراهقتي (Morahakaty)',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0c9wp5c.jpg',
+        alt: 'تغيير بسيط',
       },
       linkLabel: {
         text: 'الحلقات',
-        href: 'https://www.bbc.com/arabic/podcasts/p0b3xdrj',
+        href: 'https://www.bbc.com/arabic/podcasts/p0c9wp0l',
       },
       skipLink: {
         text: 'تخطى %title% وواصل القراءة',

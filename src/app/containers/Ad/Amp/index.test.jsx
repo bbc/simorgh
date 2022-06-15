@@ -1,10 +1,10 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { render } from '@testing-library/react';
-import { latinDiacritics } from '@bbc/gel-foundations/scripts';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { latinDiacritics } from '#legacy/gel-foundations/src/scripts';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
 import AmpAd, { AMP_ACCESS_FETCH } from './index';
 
 const adJsonAttributes = slotType => ({

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { withKnobs } from '@storybook/addon-knobs';
-import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
+import { withServicesKnob } from '#legacy/psammead-storybook-helpers/src';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import { OnDemandAudioPage } from '..';

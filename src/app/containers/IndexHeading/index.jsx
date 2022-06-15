@@ -1,14 +1,17 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { node } from 'prop-types';
-import IndexHeading from '@bbc/psammead-heading-index';
+import IndexHeading from '#legacy/psammead-heading-index/src';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
-import { GEL_SPACING, GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/src/breakpoints';
+import {
+  GEL_SPACING,
+  GEL_SPACING_TRPL,
+} from '#legacy/gel-foundations/src/spacings';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const StyledIndexHeading = styled(IndexHeading)`

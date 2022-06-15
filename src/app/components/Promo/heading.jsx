@@ -1,14 +1,14 @@
 import styled from '@emotion/styled';
 
-import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
-import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
-import { getBodyCopy } from '@bbc/gel-foundations/typography';
-import { C_EBON } from '@bbc/psammead-styles/colours';
+import { getSerifMedium } from '#legacy/psammead-styles/src/font-styles';
+import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
+import { getBodyCopy } from '#legacy/gel-foundations/src/typography';
+import { C_EBON } from '#legacy/psammead-styles/src/colours';
 
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 
 const Heading = styled.h2`
   ${({ service }) => getSerifMedium(service)}

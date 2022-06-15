@@ -1,10 +1,10 @@
 import React from 'react';
 import { v4 as uuid } from 'uuid';
 import { render } from '@testing-library/react';
-import { latin, arabic } from '@bbc/gel-foundations/scripts';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { blockContainingText } from '#models/blocks';
+import { latin, arabic } from '#legacy/gel-foundations/src/scripts';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
 import CaptionContainer from '.';
 
 const newsServiceContextStub = {

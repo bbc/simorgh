@@ -9,6 +9,7 @@
       "#containers/*": ["./src/app/containers/*"],
       "#data/*": ["./data/*"],
       "#hooks/*": [".src/app/hooks/*"],
+      "#legacy/*": ["./src/app/legacy/*"],
       "#lib/*": ["./src/app/lib/*"],
       "#models/*": ["./src/app/models/*"],
       "#pages/*": ["./src/app/pages/*"],

@@ -1,6 +1,5 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
@@ -9,6 +8,7 @@ import {
   articleDataPersian,
 } from '#pages/ArticlePage/fixtureData';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
 import ArticleMetadata from './index';
 
 const getISOStringDate = date => new Date(date).toISOString();

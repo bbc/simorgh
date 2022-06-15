@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { string, shape } from 'prop-types';
-import { ConsentBannerText } from '@bbc/psammead-consent-banner';
+import { ConsentBannerText } from '#legacy/psammead-consent-banner/src';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 

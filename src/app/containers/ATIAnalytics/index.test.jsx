@@ -1,12 +1,6 @@
 import React from 'react';
 import { node, string } from 'prop-types';
 import { render } from '@testing-library/react';
-import {
-  isNull,
-  suppressPropWarnings,
-  setWindowValue,
-  resetWindowValue,
-} from '@bbc/psammead-test-helpers';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 import mapAssetData from '#pages/MediaAssetPage/fixtureData.json';
 import pglAssetData from '#pages/PhotoGalleryPage/fixtureData.json';
@@ -26,6 +20,12 @@ import {
   STORY_PAGE,
   CORRESPONDENT_STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
+import {
+  isNull,
+  suppressPropWarnings,
+  setWindowValue,
+  resetWindowValue,
+} from '#legacy/psammead-test-helpers/src';
 import ATIAnalytics from '.';
 import * as amp from './amp';
 import * as canonical from './canonical';
