@@ -273,9 +273,16 @@ describe('addMpuBlock', () => {
     expect(addMpuBlock(input)).toEqual(input);
   });
 
-  it('should return input if "allowAdvertising" is not "true"', async () => {
+  it('should return input if "allowAdvertising" is "false"', async () => {
     const input = clone(styInput);
     input.metadata.allowAdvertising = false;
+
+    expect(addMpuBlock(input)).toEqual(input);
+  });
+
+  it('should return input if "allowAdvertising" is "undefined"', async () => {
+    const input = clone(styInput);
+    delete input.metadata.allowAdvertising;
 
     expect(addMpuBlock(input)).toEqual(input);
   });
