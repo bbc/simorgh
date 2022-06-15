@@ -146,4 +146,5 @@ const extractBundlesForPageType = pageType => {
   throw Error(`page type ${pageType} not mocked`);
 };
 
-exports.extractBundlesForPageType = extractBundlesForPageType;
+const _extractBundlesForPageType = extractBundlesForPageType;
+export { _extractBundlesForPageType as extractBundlesForPageType };

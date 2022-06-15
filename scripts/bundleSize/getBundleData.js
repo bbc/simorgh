@@ -1,19 +1,19 @@
-const fs = require('fs');
-const { extractBundlesForPageType } = require('./pageTypeBundleExtractor');
+import { statSync, readdirSync } from 'fs';
+import { extractBundlesForPageType } from './pageTypeBundleExtractor.js';
 
 // need fake Cypress in global scope to require service configs:
 global.Cypress = { env: () => ({}) };
 const bundleType = process.env.bundleType || 'modern';
-const cypressServiceConfigs = require('../../cypress/support/config/services');
-const { pages } = require('./pages');
+import cypressServiceConfigs from '../../cypress/support/config/services.js';
+import { pages } from './pages.js';
 
 const services = Object.keys(cypressServiceConfigs);
 
-const getFileSize = filePath => fs.statSync(filePath).size;
+const getFileSize = filePath => statSync(filePath).size;
 
-const jsFiles = fs
-  .readdirSync('build/public/static/js')
-  .filter(fileName => fileName.endsWith('.js'));
+const jsFiles = readdirSync('build/public/static/js').filter(fileName =>
+  fileName.endsWith('.js'),
+);
 
 const getBundlesData = bundles =>
   bundles.map(name => {
@@ -114,5 +114,7 @@ const getServiceBundleData = () =>
       ),
     }));
 
-exports.getPageBundleData = getPageBundleData;
-exports.getServiceBundleData = getServiceBundleData;
+const _getPageBundleData = getPageBundleData;
+export { _getPageBundleData as getPageBundleData };
+const _getServiceBundleData = getServiceBundleData;
+export { _getServiceBundleData as getServiceBundleData };

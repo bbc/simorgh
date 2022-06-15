@@ -96,7 +96,7 @@ describe('bundleSize', () => {
       let didThrow = false;
       jest.isolateModules(() => {
         try {
-          require('.'); // eslint-disable-line global-require
+          require('./index.js'); // eslint-disable-line global-require
         } catch (e) {
           didThrow = true;
         }
@@ -107,7 +107,7 @@ describe('bundleSize', () => {
     it('should use ora to show loading and success states', () => {
       jest.isolateModules(() => {
         try {
-          require('.'); // eslint-disable-line global-require
+          require('./index.js'); // eslint-disable-line global-require
         } catch (e) {
           // silence error
         }
@@ -123,7 +123,7 @@ describe('bundleSize', () => {
     it('should log a summary of bundle sizes', () => {
       jest.isolateModules(() => {
         try {
-          require('.'); // eslint-disable-line global-require
+          require('./index.js'); // eslint-disable-line global-require
         } catch (e) {
           // silence error
         }
@@ -230,7 +230,7 @@ describe('bundleSize', () => {
       let didThrow = false;
       jest.isolateModules(() => {
         try {
-          require('.'); // eslint-disable-line global-require
+          require('./index.js'); // eslint-disable-line global-require
         } catch (e) {
           didThrow = true;
         }
@@ -241,7 +241,7 @@ describe('bundleSize', () => {
     it('should use ora to show loading and failure states', () => {
       jest.isolateModules(() => {
         try {
-          require('.'); // eslint-disable-line global-require
+          require('./index.js'); // eslint-disable-line global-require
         } catch (e) {
           // silence error
         }
@@ -257,7 +257,7 @@ describe('bundleSize', () => {
     it('should log an error telling dev how to update thresholds', () => {
       jest.isolateModules(() => {
         try {
-          require('.'); // eslint-disable-line global-require
+          require('./index.js'); // eslint-disable-line global-require
         } catch (e) {
           // silence error
         }
@@ -276,7 +276,7 @@ describe('bundleSize', () => {
       let didThrow = false;
       jest.isolateModules(() => {
         try {
-          require('.'); // eslint-disable-line global-require
+          require('./index.js'); // eslint-disable-line global-require
         } catch (e) {
           didThrow = true;
         }
@@ -287,7 +287,7 @@ describe('bundleSize', () => {
     it('should use ora to show loading and failure states', () => {
       jest.isolateModules(() => {
         try {
-          require('.'); // eslint-disable-line global-require
+          require('./index.js'); // eslint-disable-line global-require
         } catch (e) {
           // silence error
         }
@@ -303,7 +303,7 @@ describe('bundleSize', () => {
     it('should log an error telling dev how to update thresholds', () => {
       jest.isolateModules(() => {
         try {
-          require('.'); // eslint-disable-line global-require
+          require('./index.js'); // eslint-disable-line global-require
         } catch (e) {
           // silence error
         }

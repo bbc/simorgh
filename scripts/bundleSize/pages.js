@@ -1,4 +1,4 @@
-exports.pages = [
+export const pages = [
   'ArticlePage',
   'ErrorPage',
   'FrontPage',

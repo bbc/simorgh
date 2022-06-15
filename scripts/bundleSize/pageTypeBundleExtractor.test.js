@@ -1,4 +1,4 @@
-import { extractBundlesForPageType } from './pageTypeBundleExtractor';
+import { extractBundlesForPageType } from './pageTypeBundleExtractor.js';
 
 jest.mock(
   '../../reports/modern.webpackBundleReport.json',

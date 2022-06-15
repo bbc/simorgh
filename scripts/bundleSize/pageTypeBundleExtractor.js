@@ -1,3 +1,6 @@
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+
 const modernBundleReport = require('../../reports/modern.webpackBundleReport.json');
 const legacyBundleReport = require('../../reports/legacy.webpackBundleReport.json');
 
@@ -17,4 +20,5 @@ const extractBundlesForPageType = pageComponent => {
   throw Error(`page type '${pageComponent}' not found`);
 };
 
-exports.extractBundlesForPageType = extractBundlesForPageType;
+const _extractBundlesForPageType = extractBundlesForPageType;
+export { _extractBundlesForPageType as extractBundlesForPageType };

@@ -1,14 +1,14 @@
 #! /usr/bin/env node
 /* eslint-disable no-console */
 
-const ora = require('ora');
-const chalk = require('chalk');
-const Table = require('cli-table');
-const sortByBundlesTotalAscending = require('./sortByBundlesTotalAscending');
-const getAverageBundleSize = require('./getAverageBundleSize');
-const createConsoleError = require('./createConsoleError');
-const { getPageBundleData, getServiceBundleData } = require('./getBundleData');
-const { MIN_SIZE, MAX_SIZE } = require('./bundleSizeConfig');
+import ora from 'ora';
+import chalk from 'chalk';
+import Table from 'cli-table';
+import sortByBundlesTotalAscending from './sortByBundlesTotalAscending.js';
+import getAverageBundleSize from './getAverageBundleSize.js';
+import createConsoleError from './createConsoleError.js';
+import { getPageBundleData, getServiceBundleData } from './getBundleData.js';
+import { MIN_SIZE, MAX_SIZE } from './bundleSizeConfig.js';
 
 const bundleType = process.env.bundleType || 'modern';
 const serviceBundleData = sortByBundlesTotalAscending(getServiceBundleData());
