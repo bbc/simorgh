@@ -14,6 +14,7 @@ import StoryPromo, {
   Summary,
   Link,
 } from '#legacy/psammead-story-promo/src';
+import { C_GREY_6 } from '#legacy/psammead-styles/src/colours';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import LiveLabel from '#legacy/psammead-live-label/src';
@@ -44,7 +45,7 @@ import useCombinedClickTrackerHandler from './useCombinedClickTrackerHandler';
 
 const logger = loggerNode(__filename);
 
-const PROMO_TYPES = ['top', 'regular', 'leading'];
+const PROMO_TYPES = ['top', 'regular', 'leading', 'topStories'];
 
 const SingleColumnStoryPromo = styled(StoryPromo)`
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
@@ -122,6 +123,10 @@ StoryPromoImage.defaultProps = {
   }),
   imageComponent: undefined,
 };
+
+const StyledPromoTimeStamp = styled(PromoTimestamp)`
+  ${({ promoType }) => promoType === 'topStories' && `color: ${C_GREY_6};`}
+`;
 
 const StoryPromoContainer = ({
   item,
@@ -262,9 +267,9 @@ const StoryPromoContainer = ({
         </Summary>
       )}
       {displayTimestamp && (
-        <PromoTimestamp serviceDatetimeLocale={serviceDatetimeLocale}>
+        <StyledPromoTimeStamp serviceDatetimeLocale={serviceDatetimeLocale}>
           {timestamp}
-        </PromoTimestamp>
+        </StyledPromoTimeStamp>
       )}
       {promoType === 'top' && relatedItems && (
         <IndexAlsosContainer

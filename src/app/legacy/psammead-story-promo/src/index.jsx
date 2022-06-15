@@ -22,7 +22,13 @@ import {
   getPica,
   getDoublePica,
 } from '#legacy/gel-foundations/src/typography';
-import { C_EBON, C_METAL, C_SHADOW } from '#legacy/psammead-styles/src/colours';
+import {
+  C_EBON,
+  C_GREY_10,
+  C_METAL,
+  C_SHADOW,
+  C_WHITE,
+} from '#legacy/psammead-styles/src/colours';
 import {
   getSansRegular,
   getSerifMedium,
@@ -32,11 +38,23 @@ import { grid } from '#legacy/psammead-styles/src/detection';
 import ImageGridItem from './ImageStyles';
 import TextGridItem from './TextStyles';
 
-const PROMO_TYPES = oneOf(['top', 'regular', 'leading']);
+const PROMO_TYPES = oneOf(['top', 'regular', 'leading', 'topStories']);
 
-const wrapperTopStoryStyles = `
+const wrapperTopStyles = `
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
     grid-template-columns: repeat(12, 1fr);
+  }
+`;
+
+const wrapperTopStoriesStyle = `
+  background-color: ${C_WHITE};
+  padding: ${GEL_SPACING};
+
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    padding: ${GEL_SPACING_DBL};
+  }
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    display: block;
   }
 `;
 
@@ -47,8 +65,9 @@ const wrapperRegularStyles = `
 `;
 
 const wrapperStyles = {
-  top: wrapperTopStoryStyles,
+  top: wrapperTopStyles,
   regular: wrapperRegularStyles,
+  topStories: wrapperTopStoriesStyle,
   leading: '',
 };
 
@@ -103,6 +122,7 @@ const mediaIndicatorStylesRegular = `
 const mediaIndicatorStyles = {
   top: mediaIndicatorStylesTopLeading,
   regular: mediaIndicatorStylesRegular,
+  topStories: mediaIndicatorStylesRegular,
   leading: mediaIndicatorStylesTopLeading,
 };
 
@@ -119,11 +139,13 @@ const headlineLeadingStoryTypography = script => getDoublePica(script);
 const headlineTypography = script => ({
   top: headlineTopStoryTypography(script),
   regular: headlineRegularTypography(script),
+  topStories: headlineRegularTypography(script),
   leading: headlineLeadingStoryTypography(script),
 });
 
 export const Headline = styled.h3`
-  color: ${C_EBON};
+  color: ${({ promoType }) =>
+    promoType === 'topStories' ? C_GREY_10 : C_EBON};
   margin: 0; /* Reset */
   padding-bottom: ${GEL_SPACING};
   ${({ service }) => getSerifMedium(service)}
@@ -167,6 +189,7 @@ const summaryRegularStyles = `
 const summaryStyles = {
   top: summaryTopStoryStyles,
   regular: summaryRegularStyles,
+  topStories: summaryRegularStyles,
   leading: summaryRegularStyles,
 };
 
@@ -196,7 +219,8 @@ Summary.defaultProps = {
 
 export const Link = styled.a`
   position: static;
-  color: ${C_EBON};
+  color: ${({ promoType }) =>
+    promoType === 'topStories' ? C_GREY_10 : C_EBON};
   text-decoration: none;
   overflow-wrap: break-word;
 

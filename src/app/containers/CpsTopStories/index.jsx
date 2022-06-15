@@ -33,6 +33,7 @@ const PromoComponent = ({ promo, dir }) => {
         serviceDatetimeLocale={serviceDatetimeLocale}
         eventTrackingData={eventTrackingData}
         sectionType="top-stories"
+        promoType="topStories"
       />
     </div>
   );
@@ -63,6 +64,7 @@ const PromoListComponent = ({ promoItems, dir }) => {
             serviceDatetimeLocale={serviceDatetimeLocale}
             eventTrackingData={eventTrackingData}
             sectionType="top-stories"
+            promoType="topStories"
           />
         </StoryPromoLi>
       ))}
