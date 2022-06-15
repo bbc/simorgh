@@ -93,12 +93,14 @@ const ImageGridFallbackLeadingStory = dir => `
 const imageGridStyles = {
   top: ImageGridColumnsTopStory,
   regular: ImageGridColumns,
+  onwardJourneys: ImageGridColumns,
   leading: ImageGridColumnsLeadingStory,
 };
 
 const imageGridFallbackStyles = {
   top: () => ImageGridFallbackTopStory,
   regular: () => ImageGridFallback,
+  onwardJourneys: () => ImageGridFallback,
   leading: dir => ImageGridFallbackLeadingStory(dir),
 };
 

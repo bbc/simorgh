@@ -31,6 +31,7 @@ const RelatedContentPromo = ({
         dir={dir}
         eventTrackingData={eventTrackingData}
         imageComponent={imageComponent}
+        promoType="onwardJourneys"
       />
     </Grid>
   );

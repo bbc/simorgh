@@ -10,6 +10,7 @@ import {
 } from 'prop-types';
 import styled from '@emotion/styled';
 import StoryPromo, {
+  OnwardJourneysWrapper,
   Headline,
   Summary,
   Link,
@@ -45,7 +46,7 @@ import useCombinedClickTrackerHandler from './useCombinedClickTrackerHandler';
 
 const logger = loggerNode(__filename);
 
-const PROMO_TYPES = ['top', 'regular', 'leading', 'topStories'];
+const PROMO_TYPES = ['top', 'regular', 'leading', 'onwardJourneys'];
 
 const SingleColumnStoryPromo = styled(StoryPromo)`
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
@@ -125,7 +126,7 @@ StoryPromoImage.defaultProps = {
 };
 
 const StyledPromoTimeStamp = styled(PromoTimestamp)`
-  ${({ promoType }) => promoType === 'topStories' && `color: ${C_GREY_6};`}
+  ${({ promoType }) => promoType === 'onwardJourneys' && `color: ${C_GREY_6};`}
 `;
 
 const StoryPromoContainer = ({
@@ -225,60 +226,65 @@ const StoryPromoContainer = ({
     overflow-wrap: anywhere;
   `;
 
+  const BoxWrapper =
+    promoType === 'onwardJourneys' ? OnwardJourneysWrapper : null;
+
   const Info = (
     <>
-      <Headline
-        script={script}
-        service={service}
-        promoType={promoType}
-        promoHasImage={displayImage}
-        as={headingTagOverride}
-      >
-        <StyledLink
-          href={url}
-          onClick={eventTrackingData ? handleClickTracking : null}
-          // Aria-labelledby a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-          aria-labelledby={linkId}
-        >
-          {isLive ? (
-            <LiveLabel
-              id={linkId}
-              service={service}
-              dir={dir}
-              liveText={liveLabel}
-              ariaHidden={liveLabelIsEnglish}
-              offScreenText={liveLabelIsEnglish ? 'Live' : null}
-            >
-              {linkcontents}
-            </LiveLabel>
-          ) : (
-            linkcontents
-          )}
-        </StyledLink>
-      </Headline>
-      {promoSummary && displaySummary && (
-        <Summary
+      <BoxWrapper promoHasImage={displayImage}>
+        <Headline
           script={script}
           service={service}
           promoType={promoType}
           promoHasImage={displayImage}
+          as={headingTagOverride}
         >
-          {promoSummary}
-        </Summary>
-      )}
-      {displayTimestamp && (
-        <StyledPromoTimeStamp serviceDatetimeLocale={serviceDatetimeLocale}>
-          {timestamp}
-        </StyledPromoTimeStamp>
-      )}
-      {promoType === 'top' && relatedItems && (
-        <IndexAlsosContainer
-          alsoItems={relatedItems}
-          script={script}
-          service={service}
-          dir={dir}
-        />
-      )}
+          <StyledLink
+            href={url}
+            onClick={eventTrackingData ? handleClickTracking : null}
+            // Aria-labelledby a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
+            aria-labelledby={linkId}
+          >
+            {isLive ? (
+              <LiveLabel
+                id={linkId}
+                service={service}
+                dir={dir}
+                liveText={liveLabel}
+                ariaHidden={liveLabelIsEnglish}
+                offScreenText={liveLabelIsEnglish ? 'Live' : null}
+              >
+                {linkcontents}
+              </LiveLabel>
+            ) : (
+              linkcontents
+            )}
+          </StyledLink>
+        </Headline>
+        {promoSummary && displaySummary && (
+          <Summary
+            script={script}
+            service={service}
+            promoType={promoType}
+            promoHasImage={displayImage}
+          >
+            {promoSummary}
+          </Summary>
+        )}
+        {displayTimestamp && (
+          <StyledPromoTimeStamp serviceDatetimeLocale={serviceDatetimeLocale}>
+            {timestamp}
+          </StyledPromoTimeStamp>
+        )}
+        {promoType === 'top' && relatedItems && (
+          <IndexAlsosContainer
+            alsoItems={relatedItems}
+            script={script}
+            service={service}
+            dir={dir}
+          />
+        )}
+      </BoxWrapper>
     </>
   );
 

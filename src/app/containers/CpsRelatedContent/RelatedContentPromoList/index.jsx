@@ -79,6 +79,7 @@ const RelatedContentPromoList = ({
             eventTrackingData={eventTrackingData}
             labelId="rel-content"
             imageComponent={imageComponent}
+            promoType="onwardJourneys"
           />
         </Grid>
       ))}
