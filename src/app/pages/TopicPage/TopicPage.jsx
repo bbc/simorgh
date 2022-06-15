@@ -34,8 +34,8 @@ const TopicPage = ({ pageData }) => {
   const { title, description, promos, pageCount, activePage } = pageData;
 
   const { enabled: adsEnabled } = useToggle('ads');
-  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
-  const showAds = [!isLive(), adsEnabled, !isAmp, showAdsBasedOnLocation].every(
+  const { showAdsBasedOnLocation } = useContext(RequestContext);
+  const showAds = [!isLive(), adsEnabled, showAdsBasedOnLocation].every(
     Boolean,
   );
 
