@@ -59,7 +59,16 @@ const wrapperOnwardJourneysStyle = ({ displayImage, displayTimestamp }) => `
         ? GEL_SPACING
         : `${GEL_SPACING} ${GEL_SPACING} 0 ${GEL_SPACING}`
     };
+
     @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+      padding: ${
+        displayTimestamp
+          ? `${GEL_SPACING_DBL} ${GEL_SPACING} `
+          : `${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING}`
+      };
+    };
+
+    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
       padding: ${
         displayTimestamp
           ? GEL_SPACING_DBL
