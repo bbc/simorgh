@@ -4,7 +4,9 @@ import addMpuBlock, { insertMpuBlock } from '.';
 const styInput = {
   metadata: {
     type: 'article',
-    allowAdvertising: true,
+    options: {
+      allowAdvertising: true,
+    },
     locators: {
       assetUri: '/news/media-333256',
     },
@@ -137,7 +139,9 @@ describe('addMpuBlock', () => {
     const expected = {
       metadata: {
         type: 'article',
-        allowAdvertising: true,
+        options: {
+          allowAdvertising: true,
+        },
         locators: {
           assetUri: '/news/media-333256',
         },
@@ -266,23 +270,16 @@ describe('addMpuBlock', () => {
     expect(addMpuBlock(input)).toEqual(expected);
   });
 
+  it('should return input if `isLive` is true', async () => {
+    const input = clone(styInput);
+    process.env.SIMORGH_APP_ENV = 'live';
+
+    expect(addMpuBlock(input)).toEqual(input);
+  });
+
   it('should return input if page type is not Article', async () => {
     const input = clone(styInput);
     input.metadata.type = 'STY';
-
-    expect(addMpuBlock(input)).toEqual(input);
-  });
-
-  it('should return input if "allowAdvertising" is "false"', async () => {
-    const input = clone(styInput);
-    input.metadata.allowAdvertising = false;
-
-    expect(addMpuBlock(input)).toEqual(input);
-  });
-
-  it('should return input if "allowAdvertising" is "undefined"', async () => {
-    const input = clone(styInput);
-    delete input.metadata.allowAdvertising;
 
     expect(addMpuBlock(input)).toEqual(input);
   });
@@ -482,7 +479,9 @@ describe('addMpuBlock', () => {
     const pageData = {
       metadata: {
         type: 'article',
-        allowAdvertising: true,
+        options: {
+          allowAdvertising: true,
+        },
         locators: {
           assetUri: '/news/media-333256',
         },
@@ -501,7 +500,9 @@ describe('addMpuBlock', () => {
     const pageData = {
       metadata: {
         type: 'article',
-        allowAdvertising: true,
+        options: {
+          allowAdvertising: true,
+        },
         locators: {
           assetUri: '/news/media-333256',
         },
