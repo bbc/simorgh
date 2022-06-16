@@ -3814,7 +3814,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  display: inline;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -4368,7 +4368,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  display: inline;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {

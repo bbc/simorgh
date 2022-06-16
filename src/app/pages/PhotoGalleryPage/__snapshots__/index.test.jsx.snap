@@ -5363,12 +5363,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   padding: 0.5rem 0 1rem;
 }
 
-@media (max-width: 62.9375rem) {
-  .emotion-223 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
-}
-
 .emotion-223:last-child {
   border: none;
 }
@@ -9713,12 +9707,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 .emotion-437 {
   padding: 0.5rem 0 1rem;
-}
-
-@media (max-width: 62.9375rem) {
-  .emotion-437 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
 }
 
 .emotion-437:last-child {
