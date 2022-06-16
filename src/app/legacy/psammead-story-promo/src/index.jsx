@@ -146,7 +146,7 @@ export const OnwardJourneysWrapper = styled.div`
   ${({ promoHasImage }) =>
     promoHasImage &&
     `@media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding: ${GEL_SPACING} ${GEL_SPACING_DBL} ${GEL_SPACING_DBL} ${GEL_SPACING_DBL};
+    padding: ${GEL_SPACING} ${GEL_SPACING_DBL};
   }`}
 `;
 

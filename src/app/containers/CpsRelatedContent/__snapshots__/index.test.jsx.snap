@@ -652,7 +652,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 
 @media (min-width: 63rem) {
   .emotion-39 {
-    padding: 0.5rem 1rem 1rem 1rem;
+    padding: 0.5rem 1rem;
   }
 }
 
@@ -1553,7 +1553,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 
 @media (min-width: 63rem) {
   .emotion-37 {
-    padding: 0.5rem 1rem 1rem 1rem;
+    padding: 0.5rem 1rem;
   }
 }
 

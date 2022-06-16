@@ -312,7 +312,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
 
 @media (min-width: 63rem) {
   .emotion-19 {
-    padding: 0.5rem 1rem 1rem 1rem;
+    padding: 0.5rem 1rem;
   }
 }
 
@@ -904,7 +904,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
 
 @media (min-width: 63rem) {
   .emotion-18 {
-    padding: 0.5rem 1rem 1rem 1rem;
+    padding: 0.5rem 1rem;
   }
 }
 

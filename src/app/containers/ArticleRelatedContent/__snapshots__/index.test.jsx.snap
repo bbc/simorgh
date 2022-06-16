@@ -384,7 +384,7 @@ exports[`ArticleRelatedContent should render related content 1`] = `
 
 @media (min-width: 63rem) {
   .emotion-34 {
-    padding: 0.5rem 1rem 1rem 1rem;
+    padding: 0.5rem 1rem;
   }
 }
 

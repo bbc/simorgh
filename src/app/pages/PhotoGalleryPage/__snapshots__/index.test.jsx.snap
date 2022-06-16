@@ -5566,7 +5566,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width: 63rem) {
   .emotion-237 {
-    padding: 0.5rem 1rem 1rem 1rem;
+    padding: 0.5rem 1rem;
   }
 }
 
@@ -9918,7 +9918,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width: 63rem) {
   .emotion-451 {
-    padding: 0.5rem 1rem 1rem 1rem;
+    padding: 0.5rem 1rem;
   }
 }
 

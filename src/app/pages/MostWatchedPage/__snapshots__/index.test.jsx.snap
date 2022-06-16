@@ -644,7 +644,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
 
 @media (min-width: 63rem) {
   .emotion-38 {
-    padding: 0.5rem 1rem 1rem 1rem;
+    padding: 0.5rem 1rem;
   }
 }
 

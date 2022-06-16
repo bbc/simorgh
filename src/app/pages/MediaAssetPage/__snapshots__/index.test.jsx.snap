@@ -3499,7 +3499,7 @@ exports[`Media Asset Page should render component 1`] = `
 
 @media (min-width: 63rem) {
   .emotion-264 {
-    padding: 0.5rem 1rem 1rem 1rem;
+    padding: 0.5rem 1rem;
   }
 }
 

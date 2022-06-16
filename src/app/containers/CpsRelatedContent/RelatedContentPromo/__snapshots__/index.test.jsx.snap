@@ -203,7 +203,7 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
 
 @media (min-width: 63rem) {
   .emotion-14 {
-    padding: 0.5rem 1rem 1rem 1rem;
+    padding: 0.5rem 1rem;
   }
 }
 
