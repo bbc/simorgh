@@ -46,10 +46,22 @@ const wrapperTopStyles = `
   }
 `;
 
-const wrapperOnwardJourneysStyle = `
+const wrapperOnwardJourneysStyle = ({ displayImage, displayTimestamp }) => `
   background-color: ${C_WHITE};
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     display: block;
+  };
+  ${
+    !displayImage &&
+    `
+    padding: ${GEL_SPACING};
+    ${!displayTimestamp && `padding-bottom: 0;`}
+    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+      padding: ${GEL_SPACING_DBL};
+      ${!displayTimestamp && `padding-bottom: ${GEL_SPACING};`}
+    }
+  }
+  `
   }
 `;
 
@@ -76,7 +88,6 @@ const StoryPromoWrapper = styled.div`
     @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
       grid-column-gap: ${GEL_SPACING_DBL};
     }
-
     ${({ promoType }) => wrapperStyles[promoType]}
   }
 `;
@@ -143,11 +154,9 @@ export const OnwardJourneysWrapper = styled.div`
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     padding: ${GEL_SPACING_DBL};
   }
-  ${({ promoHasImage }) =>
-    promoHasImage &&
-    `@media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     padding: ${GEL_SPACING} ${GEL_SPACING_DBL};
-  }`}
+  }
 `;
 
 export const Headline = styled.h3`
@@ -159,7 +168,7 @@ export const Headline = styled.h3`
   ${({ script, promoType }) => script && headlineTypography(script)[promoType]}
   ${({ promoHasImage }) =>
     !promoHasImage &&
-    `display: inline;`} /* Needed for aligning Media Indicator with Headline */
+    `display: inline-block;`} /* Needed for aligning Media Indicator with Headline */
 `;
 
 Headline.propTypes = {
@@ -259,6 +268,7 @@ const StoryPromo = ({
   promoType,
   dir,
   displayImage,
+  displayTimestamp,
   mediaIndicator,
   mediaIndicatorIsInline,
   ...props
@@ -287,7 +297,12 @@ const StoryPromo = ({
   );
 
   return (
-    <StoryPromoWrapper promoType={promoType} {...props}>
+    <StoryPromoWrapper
+      promoType={promoType}
+      displayImage={displayImage}
+      displayTimestamp={displayTimestamp}
+      {...props}
+    >
       {promoType === 'leading' ? (
         <>
           {renderText}
@@ -309,6 +324,7 @@ StoryPromo.propTypes = {
   info: node.isRequired,
   promoType: PROMO_TYPES,
   displayImage: bool,
+  displayTimestamp: bool,
   mediaIndicator: node,
   mediaIndicatorIsInline: bool,
 };
@@ -317,6 +333,7 @@ StoryPromo.defaultProps = {
   dir: 'ltr',
   promoType: 'regular',
   displayImage: true,
+  displayTimestamp: true,
   mediaIndicator: null,
   mediaIndicatorIsInline: false,
 };

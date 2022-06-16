@@ -227,10 +227,12 @@ const StoryPromoContainer = ({
   `;
 
   const BoxWrapper =
-    promoType === 'onwardJourneys' ? OnwardJourneysWrapper : React.Fragment;
+    promoType === 'onwardJourneys' && displayImage
+      ? OnwardJourneysWrapper
+      : React.Fragment;
 
   const Info = (
-    <BoxWrapper promoHasImage={displayImage}>
+    <BoxWrapper>
       <Headline
         script={script}
         service={service}
@@ -319,6 +321,7 @@ const StoryPromoContainer = ({
       promoType={promoType}
       dir={dir}
       displayImage={displayImage}
+      displayTimestamp={displayTimestamp}
     />
   );
 };
