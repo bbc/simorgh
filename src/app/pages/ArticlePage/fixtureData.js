@@ -15,7 +15,6 @@ const articleDataBuilder = (
   promoHeadline,
   summary,
   things,
-  allowAdvertising = false,
 ) => ({
   metadata: {
     id: `urn:bbc:ares::article:${id}`,
@@ -38,7 +37,6 @@ const articleDataBuilder = (
       genre: null,
     },
     tags: things,
-    allowAdvertising,
   },
   content: {
     model: {
@@ -146,18 +144,4 @@ export const articleDataPidgin = articleDataBuilder(
   'Article Headline for Promo in Pidgin',
   'Article summary in Pidgin',
   emptyThings,
-);
-
-export const articleDataPidginWithAds = articleDataBuilder(
-  'cwl08rd38l6o',
-  'Pidgin',
-  'pcm',
-  'http://www.bbc.co.uk/ontologies/passport/home/Pidgin',
-  'Article Headline in Pidgin',
-  'A paragraph in Pidgin.',
-  'Article Headline for SEO in Pidgin',
-  'Article Headline for Promo in Pidgin',
-  'Article summary in Pidgin',
-  emptyThings,
-  true,
 );
