@@ -289,7 +289,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   }
 }
 
-.emotion-30 {
+.emotion-31 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -300,14 +300,14 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-30 {
+  .emotion-31 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-30 {
+  .emotion-31 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -427,7 +427,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
         Summary text
       </p>
       <time
-        class="emotion-30 emotion-31"
+        class="emotion-30 emotion-31 emotion-32"
         datetime="2019-05-02"
       >
         2 Mee 2019
@@ -726,7 +726,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   }
 }
 
-.emotion-30 {
+.emotion-31 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -737,14 +737,14 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-30 {
+  .emotion-31 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-30 {
+  .emotion-31 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -851,7 +851,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
         Summary text
       </p>
       <time
-        class="emotion-30 emotion-31"
+        class="emotion-30 emotion-31 emotion-32"
         datetime="2019-05-02"
       >
         2 Mee 2019
@@ -1037,7 +1037,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
   }
 }
 
-.emotion-14 {
+.emotion-15 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -1048,20 +1048,20 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-14 {
+  .emotion-15 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-14 {
+  .emotion-15 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-16 {
+.emotion-17 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -1069,20 +1069,20 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-17 {
     padding-right: 0.5rem;
     width: 50%;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-16 {
+  .emotion-17 {
     width: 66.67%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-16 {
+  .emotion-17 {
     width: initial;
     padding: 0;
     grid-template-columns: repeat(6, 1fr);
@@ -1090,25 +1090,25 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-16 {
+    .emotion-17 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-16 {
+    .emotion-17 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 }
 
-.emotion-18 {
+.emotion-19 {
   position: relative;
 }
 
-.emotion-20 {
+.emotion-21 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -1123,30 +1123,30 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
 }
 
 @media (min-width: 25rem) {
-  .emotion-20 {
+  .emotion-21 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-20 {
+  .emotion-21 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-22 {
+.emotion-23 {
   position: absolute;
   bottom: 0;
 }
 
-.emotion-22>* {
+.emotion-23>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.emotion-24 {
+.emotion-25 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1158,20 +1158,20 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-24 {
+  .emotion-25 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-24 {
+  .emotion-25 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-26 {
+.emotion-27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1183,7 +1183,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
   height: 100%;
 }
 
-.emotion-28 {
+.emotion-29 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -1192,7 +1192,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
   height: 0.75rem;
 }
 
-.emotion-30 {
+.emotion-31 {
   padding: 0 0.25rem;
 }
 
@@ -1239,21 +1239,21 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
         Summary text
       </p>
       <time
-        class="emotion-14 emotion-15"
+        class="emotion-14 emotion-15 emotion-16"
         datetime="2019-05-02"
       >
         2 Mee 2019
       </time>
     </div>
     <div
-      class="emotion-16 emotion-17"
+      class="emotion-17 emotion-18"
       dir="ltr"
     >
       <div
-        class="emotion-18 emotion-19"
+        class="emotion-19 emotion-20"
       >
         <div
-          class="emotion-20 emotion-21"
+          class="emotion-21 emotion-22"
           data-e2e="image-placeholder"
           style="padding-bottom: 56.25%;"
         >
@@ -1279,20 +1279,20 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
           </amp-img>
         </div>
         <div
-          class="emotion-22 emotion-23"
+          class="emotion-23 emotion-24"
         >
           <div
             aria-hidden="true"
-            class="emotion-24 emotion-25"
+            class="emotion-25 emotion-26"
             data-e2e="media-indicator"
             dir="ltr"
           >
             <div
-              class="emotion-26 emotion-27"
+              class="emotion-27 emotion-28"
             >
               <svg
                 aria-hidden="true"
-                class="emotion-28 emotion-29"
+                class="emotion-29 emotion-30"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 13 12"
@@ -1306,7 +1306,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
                 />
               </svg>
               <time
-                class="emotion-30 emotion-31"
+                class="emotion-31 emotion-32"
                 datetime="PT3M12S"
               >
                 3:12
@@ -1609,7 +1609,7 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
   }
 }
 
-.emotion-30 {
+.emotion-31 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -1620,14 +1620,14 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-30 {
+  .emotion-31 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-30 {
+  .emotion-31 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -1747,7 +1747,7 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
         Summary text
       </p>
       <time
-        class="emotion-30 emotion-31"
+        class="emotion-30 emotion-31 emotion-32"
         datetime="2019-05-02"
       >
         2 Mee 2019
@@ -2042,7 +2042,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   }
 }
 
-.emotion-26 {
+.emotion-27 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -2053,14 +2053,14 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-26 {
+  .emotion-27 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-26 {
+  .emotion-27 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -2169,7 +2169,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
         Summary text
       </p>
       <time
-        class="emotion-26 emotion-27"
+        class="emotion-26 emotion-27 emotion-28"
         datetime="2019-05-02"
       >
         2 Mee 2019
@@ -2464,7 +2464,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   }
 }
 
-.emotion-26 {
+.emotion-27 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -2475,14 +2475,14 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-26 {
+  .emotion-27 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-26 {
+  .emotion-27 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -2578,7 +2578,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
         Summary text
       </p>
       <time
-        class="emotion-26 emotion-27"
+        class="emotion-26 emotion-27 emotion-28"
         datetime="2019-05-02"
       >
         2 Mee 2019
@@ -2764,7 +2764,7 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
   }
 }
 
-.emotion-12 {
+.emotion-13 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -2775,20 +2775,20 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
+  .emotion-13 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-13 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-14 {
+.emotion-15 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -2796,20 +2796,20 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-14 {
+  .emotion-15 {
     padding-right: 0.5rem;
     width: 50%;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-14 {
+  .emotion-15 {
     width: 66.67%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-14 {
+  .emotion-15 {
     width: initial;
     padding: 0;
     grid-template-columns: repeat(6, 1fr);
@@ -2817,25 +2817,25 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-14 {
+    .emotion-15 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-14 {
+    .emotion-15 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 }
 
-.emotion-16 {
+.emotion-17 {
   position: relative;
 }
 
-.emotion-18 {
+.emotion-19 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -2850,30 +2850,30 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
 }
 
 @media (min-width: 25rem) {
-  .emotion-18 {
+  .emotion-19 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-18 {
+  .emotion-19 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-20 {
+.emotion-21 {
   position: absolute;
   bottom: 0;
 }
 
-.emotion-20>* {
+.emotion-21>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.emotion-22 {
+.emotion-23 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2885,20 +2885,20 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-22 {
+  .emotion-23 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-22 {
+  .emotion-23 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-24 {
+.emotion-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2910,7 +2910,7 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
   height: 100%;
 }
 
-.emotion-26 {
+.emotion-27 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -2957,21 +2957,21 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
         Summary text
       </p>
       <time
-        class="emotion-12 emotion-13"
+        class="emotion-12 emotion-13 emotion-14"
         datetime="2019-05-02"
       >
         2 Mee 2019
       </time>
     </div>
     <div
-      class="emotion-14 emotion-15"
+      class="emotion-15 emotion-16"
       dir="ltr"
     >
       <div
-        class="emotion-16 emotion-17"
+        class="emotion-17 emotion-18"
       >
         <div
-          class="emotion-18 emotion-19"
+          class="emotion-19 emotion-20"
           data-e2e="image-placeholder"
           style="padding-bottom: 56.25%;"
         >
@@ -2997,20 +2997,20 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
           </amp-img>
         </div>
         <div
-          class="emotion-20 emotion-21"
+          class="emotion-21 emotion-22"
         >
           <div
             aria-hidden="true"
-            class="emotion-22 emotion-23"
+            class="emotion-23 emotion-24"
             data-e2e="media-indicator"
             dir="ltr"
           >
             <div
-              class="emotion-24 emotion-25"
+              class="emotion-25 emotion-26"
             >
               <svg
                 aria-hidden="true"
-                class="emotion-26 emotion-27"
+                class="emotion-27 emotion-28"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 13 12"
@@ -3317,7 +3317,7 @@ exports[`StoryPromo Container should render audio with no duration promoType top
   }
 }
 
-.emotion-26 {
+.emotion-27 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -3328,14 +3328,14 @@ exports[`StoryPromo Container should render audio with no duration promoType top
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-26 {
+  .emotion-27 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-26 {
+  .emotion-27 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -3444,7 +3444,7 @@ exports[`StoryPromo Container should render audio with no duration promoType top
         Summary text
       </p>
       <time
-        class="emotion-26 emotion-27"
+        class="emotion-26 emotion-27 emotion-28"
         datetime="2019-05-02"
       >
         2 Mee 2019
@@ -3682,7 +3682,7 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
   }
 }
 
-.emotion-18 {
+.emotion-19 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -3693,14 +3693,14 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -3774,7 +3774,7 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
         Summary text for feature Promo
       </p>
       <time
-        class="emotion-18 emotion-19"
+        class="emotion-18 emotion-19 emotion-20"
         datetime="2019-08-07"
       >
         7 Ọgọọst 2019
@@ -4012,7 +4012,7 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
   }
 }
 
-.emotion-18 {
+.emotion-19 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -4023,14 +4023,14 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -4091,7 +4091,7 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
         Summary text for feature Promo
       </p>
       <time
-        class="emotion-18 emotion-19"
+        class="emotion-18 emotion-19 emotion-20"
         datetime="2019-08-07"
       >
         7 Ọgọọst 2019
@@ -4266,7 +4266,7 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
   }
 }
 
-.emotion-10 {
+.emotion-11 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -4277,20 +4277,20 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-10 {
+  .emotion-11 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-11 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-12 {
+.emotion-13 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -4298,20 +4298,20 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-13 {
     padding-right: 0.5rem;
     width: 50%;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-12 {
+  .emotion-13 {
     width: 66.67%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-12 {
+  .emotion-13 {
     width: initial;
     padding: 0;
     grid-template-columns: repeat(6, 1fr);
@@ -4319,25 +4319,25 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-12 {
+    .emotion-13 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-12 {
+    .emotion-13 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 }
 
-.emotion-14 {
+.emotion-15 {
   position: relative;
 }
 
-.emotion-16 {
+.emotion-17 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -4352,25 +4352,25 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
 }
 
 @media (min-width: 25rem) {
-  .emotion-16 {
+  .emotion-17 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-16 {
+  .emotion-17 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-18 {
+.emotion-19 {
   position: absolute;
   bottom: 0;
 }
 
-.emotion-18>* {
+.emotion-19>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
@@ -4405,21 +4405,21 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
         Summary text for feature Promo
       </p>
       <time
-        class="emotion-10 emotion-11"
+        class="emotion-10 emotion-11 emotion-12"
         datetime="2019-08-07"
       >
         7 Ọgọọst 2019
       </time>
     </div>
     <div
-      class="emotion-12 emotion-13"
+      class="emotion-13 emotion-14"
       dir="ltr"
     >
       <div
-        class="emotion-14 emotion-15"
+        class="emotion-15 emotion-16"
       >
         <div
-          class="emotion-16 emotion-17"
+          class="emotion-17 emotion-18"
           data-e2e="image-placeholder"
           style="padding-bottom: 56.25%;"
         >
@@ -4445,7 +4445,7 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
           </amp-img>
         </div>
         <div
-          class="emotion-18 emotion-19"
+          class="emotion-19 emotion-20"
         />
       </div>
     </div>
@@ -4681,7 +4681,7 @@ exports[`StoryPromo Container should render featureLink promoType top on amp 1`]
   }
 }
 
-.emotion-18 {
+.emotion-19 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -4692,14 +4692,14 @@ exports[`StoryPromo Container should render featureLink promoType top on amp 1`]
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -4773,7 +4773,7 @@ exports[`StoryPromo Container should render featureLink promoType top on amp 1`]
         Summary text for feature Promo
       </p>
       <time
-        class="emotion-18 emotion-19"
+        class="emotion-18 emotion-19 emotion-20"
         datetime="2019-08-07"
       >
         7 Ọgọọst 2019
@@ -5017,7 +5017,7 @@ exports[`StoryPromo Container should render full width promos correctly for amp 
   }
 }
 
-.emotion-19 {
+.emotion-20 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -5028,14 +5028,14 @@ exports[`StoryPromo Container should render full width promos correctly for amp 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-19 {
+  .emotion-20 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-19 {
+  .emotion-20 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -5109,7 +5109,7 @@ exports[`StoryPromo Container should render full width promos correctly for amp 
         Summary text
       </p>
       <time
-        class="emotion-19 emotion-20"
+        class="emotion-19 emotion-20 emotion-21"
         datetime="2019-05-02"
       >
         2 Mee 2019
@@ -5353,7 +5353,7 @@ exports[`StoryPromo Container should render full width promos correctly for cano
   }
 }
 
-.emotion-19 {
+.emotion-20 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -5364,14 +5364,14 @@ exports[`StoryPromo Container should render full width promos correctly for cano
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-19 {
+  .emotion-20 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-19 {
+  .emotion-20 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -5432,7 +5432,7 @@ exports[`StoryPromo Container should render full width promos correctly for cano
         Summary text
       </p>
       <time
-        class="emotion-19 emotion-20"
+        class="emotion-19 emotion-20 emotion-21"
         datetime="2019-05-02"
       >
         2 Mee 2019
@@ -5670,7 +5670,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
   }
 }
 
-.emotion-18 {
+.emotion-19 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -5681,14 +5681,14 @@ exports[`StoryPromo Container should render item without an image correctly for 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -5741,7 +5741,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
         Summary text
       </p>
       <time
-        class="emotion-18 emotion-19"
+        class="emotion-18 emotion-19 emotion-20"
         datetime="2019-05-02"
       >
         2 Mee 2019
@@ -5979,7 +5979,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
   }
 }
 
-.emotion-18 {
+.emotion-19 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -5990,14 +5990,14 @@ exports[`StoryPromo Container should render item without an image correctly for 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -6050,7 +6050,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
         Summary text
       </p>
       <time
-        class="emotion-18 emotion-19"
+        class="emotion-18 emotion-19 emotion-20"
         datetime="2019-05-02"
       >
         2 Mee 2019
@@ -6225,7 +6225,7 @@ exports[`StoryPromo Container should render item without an image promoType lead
   }
 }
 
-.emotion-10 {
+.emotion-11 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -6236,20 +6236,20 @@ exports[`StoryPromo Container should render item without an image promoType lead
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-10 {
+  .emotion-11 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-11 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-12 {
+.emotion-13 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -6257,20 +6257,20 @@ exports[`StoryPromo Container should render item without an image promoType lead
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-13 {
     padding-right: 0.5rem;
     width: 50%;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-12 {
+  .emotion-13 {
     width: 66.67%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-12 {
+  .emotion-13 {
     width: initial;
     padding: 0;
     grid-template-columns: repeat(6, 1fr);
@@ -6278,25 +6278,25 @@ exports[`StoryPromo Container should render item without an image promoType lead
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-12 {
+    .emotion-13 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-12 {
+    .emotion-13 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 }
 
-.emotion-14 {
+.emotion-15 {
   position: relative;
 }
 
-.emotion-16 {
+.emotion-17 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -6311,25 +6311,25 @@ exports[`StoryPromo Container should render item without an image promoType lead
 }
 
 @media (min-width: 25rem) {
-  .emotion-16 {
+  .emotion-17 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-16 {
+  .emotion-17 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-18 {
+.emotion-19 {
   position: absolute;
   bottom: 0;
 }
 
-.emotion-18>* {
+.emotion-19>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
@@ -6364,26 +6364,26 @@ exports[`StoryPromo Container should render item without an image promoType lead
         Summary text
       </p>
       <time
-        class="emotion-10 emotion-11"
+        class="emotion-10 emotion-11 emotion-12"
         datetime="2019-05-02"
       >
         2 Mee 2019
       </time>
     </div>
     <div
-      class="emotion-12 emotion-13"
+      class="emotion-13 emotion-14"
       dir="ltr"
     >
       <div
-        class="emotion-14 emotion-15"
+        class="emotion-15 emotion-16"
       >
         <div
-          class="emotion-16 emotion-17"
+          class="emotion-17 emotion-18"
           data-e2e="image-placeholder"
           style="padding-bottom: 56.25%;"
         />
         <div
-          class="emotion-18 emotion-19"
+          class="emotion-19 emotion-20"
         />
       </div>
     </div>
@@ -6619,7 +6619,7 @@ exports[`StoryPromo Container should render item without an image promoType top 
   }
 }
 
-.emotion-18 {
+.emotion-19 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -6630,14 +6630,14 @@ exports[`StoryPromo Container should render item without an image promoType top 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -6690,7 +6690,7 @@ exports[`StoryPromo Container should render item without an image promoType top 
         Summary text
       </p>
       <time
-        class="emotion-18 emotion-19"
+        class="emotion-18 emotion-19 emotion-20"
         datetime="2019-05-02"
       >
         2 Mee 2019
@@ -8209,7 +8209,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   }
 }
 
-.emotion-18 {
+.emotion-19 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -8220,26 +8220,26 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-20 {
+.emotion-21 {
   position: relative;
   z-index: 2;
   padding: 1rem 0 0;
 }
 
-.emotion-22 {
+.emotion-23 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -8250,18 +8250,18 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   margin: 0;
 }
 
-.emotion-24 {
+.emotion-25 {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-.emotion-26 {
+.emotion-27 {
   border-top: 1px solid #F2F2F2;
   padding: 0.5rem 0;
 }
 
-.emotion-28 {
+.emotion-29 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -8273,34 +8273,34 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-28 {
+  .emotion-29 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-28 {
+  .emotion-29 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-28:hover,
-.emotion-28:focus {
+.emotion-29:hover,
+.emotion-29:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-28:visited {
+.emotion-29:visited {
   color: #6E6E73;
 }
 
-.emotion-28 svg {
+.emotion-29 svg {
   margin: 0;
 }
 
-.emotion-30 {
+.emotion-31 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -8314,20 +8314,20 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-30 {
+  .emotion-31 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-30 {
+  .emotion-31 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-32 {
+.emotion-33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8339,7 +8339,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   height: 100%;
 }
 
-.emotion-34 {
+.emotion-35 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -8403,45 +8403,45 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
         Summary text
       </p>
       <time
-        class="emotion-18 emotion-19"
+        class="emotion-18 emotion-19 emotion-20"
         datetime="2019-05-02"
       >
         2 Mee 2019
       </time>
       <div
-        class="emotion-20 emotion-21"
+        class="emotion-21 emotion-22"
         data-e2e="index-alsos"
       >
         <h4
-          class="emotion-22 emotion-23"
+          class="emotion-23 emotion-24"
         >
           Ihe ndị ọzọ n'akụkọ a
         </h4>
         <ul
-          class="emotion-24 emotion-25"
+          class="emotion-25 emotion-26"
           role="list"
         >
           <li
-            class="emotion-26 emotion-27"
+            class="emotion-27 emotion-28"
             role="listitem"
           >
             <a
               aria-labelledby="IndexAlsosLink-hausalabarai48916590"
-              class="emotion-28 emotion-29"
+              class="emotion-29 emotion-30"
               href="/hausa/labarai-48916590"
             >
               <div
                 aria-hidden="true"
-                class="emotion-30 emotion-31"
+                class="emotion-31 emotion-32"
                 data-e2e="media-indicator"
                 dir="ltr"
               >
                 <div
-                  class="emotion-32 emotion-33"
+                  class="emotion-33 emotion-34"
                 >
                   <svg
                     aria-hidden="true"
-                    class="emotion-34 emotion-35"
+                    class="emotion-35 emotion-36"
                     focusable="false"
                     height="12px"
                     viewBox="0 0 32 32"
@@ -8458,7 +8458,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
                 role="text"
               >
                 <span
-                  class="emotion-22 emotion-23"
+                  class="emotion-23 emotion-24"
                 >
                   Vidio, 
                 </span>
@@ -8469,11 +8469,11 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
             </a>
           </li>
           <li
-            class="emotion-26 emotion-27"
+            class="emotion-27 emotion-28"
             role="listitem"
           >
             <a
-              class="emotion-28 emotion-29"
+              class="emotion-29 emotion-30"
               href="/hausa/labarai-42837051"
             >
               <span>
@@ -8482,11 +8482,11 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
             </a>
           </li>
           <li
-            class="emotion-26 emotion-27"
+            class="emotion-27 emotion-28"
             role="listitem"
           >
             <a
-              class="emotion-28 emotion-29"
+              class="emotion-29 emotion-30"
               href="https://www.bbc.com/persian"
             >
               <span>
@@ -9867,7 +9867,7 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   }
 }
 
-.emotion-18 {
+.emotion-19 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -9878,14 +9878,14 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -9959,7 +9959,7 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
         Summary text
       </p>
       <time
-        class="emotion-18 emotion-19"
+        class="emotion-18 emotion-19 emotion-20"
         datetime="2019-05-02"
       >
         2 Mee 2019
@@ -10197,7 +10197,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   }
 }
 
-.emotion-18 {
+.emotion-19 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -10208,14 +10208,14 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -10276,7 +10276,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
         Summary text
       </p>
       <time
-        class="emotion-18 emotion-19"
+        class="emotion-18 emotion-19 emotion-20"
         datetime="2019-05-02"
       >
         2 Mee 2019
@@ -10451,7 +10451,7 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
   }
 }
 
-.emotion-10 {
+.emotion-11 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -10462,20 +10462,20 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-10 {
+  .emotion-11 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-11 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-12 {
+.emotion-13 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -10483,20 +10483,20 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-13 {
     padding-right: 0.5rem;
     width: 50%;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-12 {
+  .emotion-13 {
     width: 66.67%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-12 {
+  .emotion-13 {
     width: initial;
     padding: 0;
     grid-template-columns: repeat(6, 1fr);
@@ -10504,25 +10504,25 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-12 {
+    .emotion-13 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-12 {
+    .emotion-13 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 }
 
-.emotion-14 {
+.emotion-15 {
   position: relative;
 }
 
-.emotion-16 {
+.emotion-17 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -10537,25 +10537,25 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
 }
 
 @media (min-width: 25rem) {
-  .emotion-16 {
+  .emotion-17 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-16 {
+  .emotion-17 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-18 {
+.emotion-19 {
   position: absolute;
   bottom: 0;
 }
 
-.emotion-18>* {
+.emotion-19>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
@@ -10590,21 +10590,21 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
         Summary text
       </p>
       <time
-        class="emotion-10 emotion-11"
+        class="emotion-10 emotion-11 emotion-12"
         datetime="2019-05-02"
       >
         2 Mee 2019
       </time>
     </div>
     <div
-      class="emotion-12 emotion-13"
+      class="emotion-13 emotion-14"
       dir="ltr"
     >
       <div
-        class="emotion-14 emotion-15"
+        class="emotion-15 emotion-16"
       >
         <div
-          class="emotion-16 emotion-17"
+          class="emotion-17 emotion-18"
           data-e2e="image-placeholder"
           style="padding-bottom: 56.25%;"
         >
@@ -10630,7 +10630,7 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
           </amp-img>
         </div>
         <div
-          class="emotion-18 emotion-19"
+          class="emotion-19 emotion-20"
         />
       </div>
     </div>
@@ -10866,7 +10866,7 @@ exports[`StoryPromo Container should render standard promoType top on amp 1`] = 
   }
 }
 
-.emotion-18 {
+.emotion-19 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -10877,14 +10877,14 @@ exports[`StoryPromo Container should render standard promoType top on amp 1`] = 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -10958,7 +10958,7 @@ exports[`StoryPromo Container should render standard promoType top on amp 1`] = 
         Summary text
       </p>
       <time
-        class="emotion-18 emotion-19"
+        class="emotion-18 emotion-19 emotion-20"
         datetime="2019-05-02"
       >
         2 Mee 2019
@@ -11196,7 +11196,7 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
   }
 }
 
-.emotion-18 {
+.emotion-19 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -11207,14 +11207,14 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -11288,7 +11288,7 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
         Summary text
       </p>
       <time
-        class="emotion-18 emotion-19"
+        class="emotion-18 emotion-19 emotion-20"
         datetime="2019-08-07"
       >
         7 Ọgọọst 2019
@@ -11526,7 +11526,7 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
   }
 }
 
-.emotion-18 {
+.emotion-19 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -11537,14 +11537,14 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -11605,7 +11605,7 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
         Summary text
       </p>
       <time
-        class="emotion-18 emotion-19"
+        class="emotion-18 emotion-19 emotion-20"
         datetime="2019-08-07"
       >
         7 Ọgọọst 2019
@@ -11780,7 +11780,7 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
   }
 }
 
-.emotion-10 {
+.emotion-11 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -11791,20 +11791,20 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-10 {
+  .emotion-11 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-11 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-12 {
+.emotion-13 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -11812,20 +11812,20 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-13 {
     padding-right: 0.5rem;
     width: 50%;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-12 {
+  .emotion-13 {
     width: 66.67%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-12 {
+  .emotion-13 {
     width: initial;
     padding: 0;
     grid-template-columns: repeat(6, 1fr);
@@ -11833,25 +11833,25 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-12 {
+    .emotion-13 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-12 {
+    .emotion-13 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 }
 
-.emotion-14 {
+.emotion-15 {
   position: relative;
 }
 
-.emotion-16 {
+.emotion-17 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -11866,25 +11866,25 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
 }
 
 @media (min-width: 25rem) {
-  .emotion-16 {
+  .emotion-17 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-16 {
+  .emotion-17 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-18 {
+.emotion-19 {
   position: absolute;
   bottom: 0;
 }
 
-.emotion-18>* {
+.emotion-19>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
@@ -11919,21 +11919,21 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
         Summary text
       </p>
       <time
-        class="emotion-10 emotion-11"
+        class="emotion-10 emotion-11 emotion-12"
         datetime="2019-08-07"
       >
         7 Ọgọọst 2019
       </time>
     </div>
     <div
-      class="emotion-12 emotion-13"
+      class="emotion-13 emotion-14"
       dir="ltr"
     >
       <div
-        class="emotion-14 emotion-15"
+        class="emotion-15 emotion-16"
       >
         <div
-          class="emotion-16 emotion-17"
+          class="emotion-17 emotion-18"
           data-e2e="image-placeholder"
           style="padding-bottom: 56.25%;"
         >
@@ -11959,7 +11959,7 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
           </amp-img>
         </div>
         <div
-          class="emotion-18 emotion-19"
+          class="emotion-19 emotion-20"
         />
       </div>
     </div>
@@ -12195,7 +12195,7 @@ exports[`StoryPromo Container should render standardLink promoType top on amp 1`
   }
 }
 
-.emotion-18 {
+.emotion-19 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -12206,14 +12206,14 @@ exports[`StoryPromo Container should render standardLink promoType top on amp 1`
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -12287,7 +12287,7 @@ exports[`StoryPromo Container should render standardLink promoType top on amp 1`
         Summary text
       </p>
       <time
-        class="emotion-18 emotion-19"
+        class="emotion-18 emotion-19 emotion-20"
         datetime="2019-08-07"
       >
         7 Ọgọọst 2019
@@ -12525,7 +12525,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
   }
 }
 
-.emotion-18 {
+.emotion-19 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -12536,14 +12536,14 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -12617,7 +12617,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
         Overtyped summary text
       </p>
       <time
-        class="emotion-18 emotion-19"
+        class="emotion-18 emotion-19 emotion-20"
         datetime="2019-05-02"
       >
         2 Mee 2019
@@ -12855,7 +12855,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
   }
 }
 
-.emotion-18 {
+.emotion-19 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -12866,14 +12866,14 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -12934,7 +12934,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
         Overtyped summary text
       </p>
       <time
-        class="emotion-18 emotion-19"
+        class="emotion-18 emotion-19 emotion-20"
         datetime="2019-05-02"
       >
         2 Mee 2019
@@ -13109,7 +13109,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType l
   }
 }
 
-.emotion-10 {
+.emotion-11 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -13120,20 +13120,20 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType l
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-10 {
+  .emotion-11 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-11 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-12 {
+.emotion-13 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -13141,20 +13141,20 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType l
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-13 {
     padding-right: 0.5rem;
     width: 50%;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-12 {
+  .emotion-13 {
     width: 66.67%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-12 {
+  .emotion-13 {
     width: initial;
     padding: 0;
     grid-template-columns: repeat(6, 1fr);
@@ -13162,25 +13162,25 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType l
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-12 {
+    .emotion-13 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-12 {
+    .emotion-13 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 }
 
-.emotion-14 {
+.emotion-15 {
   position: relative;
 }
 
-.emotion-16 {
+.emotion-17 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -13195,25 +13195,25 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType l
 }
 
 @media (min-width: 25rem) {
-  .emotion-16 {
+  .emotion-17 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-16 {
+  .emotion-17 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-18 {
+.emotion-19 {
   position: absolute;
   bottom: 0;
 }
 
-.emotion-18>* {
+.emotion-19>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
@@ -13248,21 +13248,21 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType l
         Overtyped summary text
       </p>
       <time
-        class="emotion-10 emotion-11"
+        class="emotion-10 emotion-11 emotion-12"
         datetime="2019-05-02"
       >
         2 Mee 2019
       </time>
     </div>
     <div
-      class="emotion-12 emotion-13"
+      class="emotion-13 emotion-14"
       dir="ltr"
     >
       <div
-        class="emotion-14 emotion-15"
+        class="emotion-15 emotion-16"
       >
         <div
-          class="emotion-16 emotion-17"
+          class="emotion-17 emotion-18"
           data-e2e="image-placeholder"
           style="padding-bottom: 56.25%;"
         >
@@ -13288,7 +13288,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType l
           </amp-img>
         </div>
         <div
-          class="emotion-18 emotion-19"
+          class="emotion-19 emotion-20"
         />
       </div>
     </div>
@@ -13524,7 +13524,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType t
   }
 }
 
-.emotion-18 {
+.emotion-19 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -13535,14 +13535,14 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType t
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -13616,7 +13616,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType t
         Overtyped summary text
       </p>
       <time
-        class="emotion-18 emotion-19"
+        class="emotion-18 emotion-19 emotion-20"
         datetime="2019-05-02"
       >
         2 Mee 2019
@@ -13915,7 +13915,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   }
 }
 
-.emotion-30 {
+.emotion-31 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -13926,14 +13926,14 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-30 {
+  .emotion-31 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-30 {
+  .emotion-31 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -14050,7 +14050,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
         Summary text
       </p>
       <time
-        class="emotion-30 emotion-31"
+        class="emotion-30 emotion-31 emotion-32"
         datetime="2019-05-02"
       >
         2 Mee 2019
@@ -14349,7 +14349,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   }
 }
 
-.emotion-30 {
+.emotion-31 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -14360,14 +14360,14 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-30 {
+  .emotion-31 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-30 {
+  .emotion-31 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -14471,7 +14471,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
         Summary text
       </p>
       <time
-        class="emotion-30 emotion-31"
+        class="emotion-30 emotion-31 emotion-32"
         datetime="2019-05-02"
       >
         2 Mee 2019
@@ -14657,7 +14657,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
   }
 }
 
-.emotion-14 {
+.emotion-15 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -14668,20 +14668,20 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-14 {
+  .emotion-15 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-14 {
+  .emotion-15 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-16 {
+.emotion-17 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -14689,20 +14689,20 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-17 {
     padding-right: 0.5rem;
     width: 50%;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-16 {
+  .emotion-17 {
     width: 66.67%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-16 {
+  .emotion-17 {
     width: initial;
     padding: 0;
     grid-template-columns: repeat(6, 1fr);
@@ -14710,25 +14710,25 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-16 {
+    .emotion-17 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-16 {
+    .emotion-17 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 }
 
-.emotion-18 {
+.emotion-19 {
   position: relative;
 }
 
-.emotion-20 {
+.emotion-21 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -14743,30 +14743,30 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
 }
 
 @media (min-width: 25rem) {
-  .emotion-20 {
+  .emotion-21 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-20 {
+  .emotion-21 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-22 {
+.emotion-23 {
   position: absolute;
   bottom: 0;
 }
 
-.emotion-22>* {
+.emotion-23>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.emotion-24 {
+.emotion-25 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -14778,20 +14778,20 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-24 {
+  .emotion-25 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-24 {
+  .emotion-25 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-26 {
+.emotion-27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14803,7 +14803,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
   height: 100%;
 }
 
-.emotion-28 {
+.emotion-29 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -14812,7 +14812,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
   height: 0.75rem;
 }
 
-.emotion-30 {
+.emotion-31 {
   padding: 0 0.25rem;
 }
 
@@ -14859,21 +14859,21 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
         Summary text
       </p>
       <time
-        class="emotion-14 emotion-15"
+        class="emotion-14 emotion-15 emotion-16"
         datetime="2019-05-02"
       >
         2 Mee 2019
       </time>
     </div>
     <div
-      class="emotion-16 emotion-17"
+      class="emotion-17 emotion-18"
       dir="ltr"
     >
       <div
-        class="emotion-18 emotion-19"
+        class="emotion-19 emotion-20"
       >
         <div
-          class="emotion-20 emotion-21"
+          class="emotion-21 emotion-22"
           data-e2e="image-placeholder"
           style="padding-bottom: 56.25%;"
         >
@@ -14899,20 +14899,20 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
           </amp-img>
         </div>
         <div
-          class="emotion-22 emotion-23"
+          class="emotion-23 emotion-24"
         >
           <div
             aria-hidden="true"
-            class="emotion-24 emotion-25"
+            class="emotion-25 emotion-26"
             data-e2e="media-indicator"
             dir="ltr"
           >
             <div
-              class="emotion-26 emotion-27"
+              class="emotion-27 emotion-28"
             >
               <svg
                 aria-hidden="true"
-                class="emotion-28 emotion-29"
+                class="emotion-29 emotion-30"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 32 32"
@@ -14923,7 +14923,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
                 />
               </svg>
               <time
-                class="emotion-30 emotion-31"
+                class="emotion-31 emotion-32"
                 datetime="PT1H33M20S"
               >
                 1:33:20
@@ -15226,7 +15226,7 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
   }
 }
 
-.emotion-30 {
+.emotion-31 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -15237,14 +15237,14 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-30 {
+  .emotion-31 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-30 {
+  .emotion-31 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -15361,7 +15361,7 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
         Summary text
       </p>
       <time
-        class="emotion-30 emotion-31"
+        class="emotion-30 emotion-31 emotion-32"
         datetime="2019-05-02"
       >
         2 Mee 2019

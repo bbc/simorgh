@@ -227,65 +227,63 @@ const StoryPromoContainer = ({
   `;
 
   const BoxWrapper =
-    promoType === 'onwardJourneys' ? OnwardJourneysWrapper : null;
+    promoType === 'onwardJourneys' ? OnwardJourneysWrapper : React.Fragment;
 
   const Info = (
-    <>
-      <BoxWrapper promoHasImage={displayImage}>
-        <Headline
+    <BoxWrapper promoHasImage={displayImage}>
+      <Headline
+        script={script}
+        service={service}
+        promoType={promoType}
+        promoHasImage={displayImage}
+        as={headingTagOverride}
+      >
+        <StyledLink
+          href={url}
+          onClick={eventTrackingData ? handleClickTracking : null}
+          // Aria-labelledby a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
+          aria-labelledby={linkId}
+        >
+          {isLive ? (
+            <LiveLabel
+              id={linkId}
+              service={service}
+              dir={dir}
+              liveText={liveLabel}
+              ariaHidden={liveLabelIsEnglish}
+              offScreenText={liveLabelIsEnglish ? 'Live' : null}
+            >
+              {linkcontents}
+            </LiveLabel>
+          ) : (
+            linkcontents
+          )}
+        </StyledLink>
+      </Headline>
+      {promoSummary && displaySummary && (
+        <Summary
           script={script}
           service={service}
           promoType={promoType}
           promoHasImage={displayImage}
-          as={headingTagOverride}
         >
-          <StyledLink
-            href={url}
-            onClick={eventTrackingData ? handleClickTracking : null}
-            // Aria-labelledby a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-            aria-labelledby={linkId}
-          >
-            {isLive ? (
-              <LiveLabel
-                id={linkId}
-                service={service}
-                dir={dir}
-                liveText={liveLabel}
-                ariaHidden={liveLabelIsEnglish}
-                offScreenText={liveLabelIsEnglish ? 'Live' : null}
-              >
-                {linkcontents}
-              </LiveLabel>
-            ) : (
-              linkcontents
-            )}
-          </StyledLink>
-        </Headline>
-        {promoSummary && displaySummary && (
-          <Summary
-            script={script}
-            service={service}
-            promoType={promoType}
-            promoHasImage={displayImage}
-          >
-            {promoSummary}
-          </Summary>
-        )}
-        {displayTimestamp && (
-          <StyledPromoTimeStamp serviceDatetimeLocale={serviceDatetimeLocale}>
-            {timestamp}
-          </StyledPromoTimeStamp>
-        )}
-        {promoType === 'top' && relatedItems && (
-          <IndexAlsosContainer
-            alsoItems={relatedItems}
-            script={script}
-            service={service}
-            dir={dir}
-          />
-        )}
-      </BoxWrapper>
-    </>
+          {promoSummary}
+        </Summary>
+      )}
+      {displayTimestamp && (
+        <StyledPromoTimeStamp serviceDatetimeLocale={serviceDatetimeLocale}>
+          {timestamp}
+        </StyledPromoTimeStamp>
+      )}
+      {promoType === 'top' && relatedItems && (
+        <IndexAlsosContainer
+          alsoItems={relatedItems}
+          script={script}
+          service={service}
+          dir={dir}
+        />
+      )}
+    </BoxWrapper>
   );
 
   const imageValues = pathOr(null, ['indexImage'], item);

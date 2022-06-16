@@ -609,7 +609,7 @@ HTMLCollection [
   }
 }
 
-.emotion-45 {
+.emotion-46 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -620,61 +620,61 @@ HTMLCollection [
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-45 {
+  .emotion-46 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-45 {
+  .emotion-46 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-48 {
+.emotion-49 {
   padding: 0.5rem 0 1rem;
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-48 {
+  .emotion-49 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
-.emotion-48:last-child {
+.emotion-49:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-48 {
+  .emotion-49 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-48 {
+  .emotion-49 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-48:first-child {
+.emotion-49:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-48:first-child {
+  .emotion-49:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-48:last-child {
+.emotion-49:last-child {
   padding-bottom: 0;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-48 {
+  .emotion-49 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -683,7 +683,7 @@ HTMLCollection [
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-48 {
+  .emotion-49 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -692,7 +692,7 @@ HTMLCollection [
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-48 {
+  .emotion-49 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -701,7 +701,7 @@ HTMLCollection [
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-48 {
+  .emotion-49 {
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -710,7 +710,7 @@ HTMLCollection [
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-48 {
+  .emotion-49 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -719,7 +719,7 @@ HTMLCollection [
 }
 
 @media (min-width: 80rem) {
-  .emotion-48 {
+  .emotion-49 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -728,80 +728,80 @@ HTMLCollection [
 }
 
 @supports (display: grid) {
-  .emotion-48 {
+  .emotion-49 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-48 {
+    .emotion-49 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-48 {
+    .emotion-49 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-48 {
+    .emotion-49 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-48 {
+    .emotion-49 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-48 {
+    .emotion-49 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-48 {
+    .emotion-49 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
   }
 }
 
-.emotion-50 {
+.emotion-51 {
   position: relative;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-50 {
+  .emotion-51 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-50 {
+    .emotion-51 {
       grid-column-gap: 1rem;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-50 {
+    .emotion-51 {
       display: block;
     }
   }
 }
 
-.emotion-52 {
+.emotion-53 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -809,39 +809,39 @@ HTMLCollection [
 }
 
 @media (min-width: 63rem) {
-  .emotion-52 {
+  .emotion-53 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-52 {
+  .emotion-53 {
     width: initial;
     grid-column: 1/span 2;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-58 {
+  .emotion-59 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-58>* {
+.emotion-59>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-58>* {
+  .emotion-59>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-60 {
+.emotion-61 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -849,13 +849,13 @@ HTMLCollection [
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-60 {
+  .emotion-61 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-60 {
+  .emotion-61 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -863,7 +863,7 @@ HTMLCollection [
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-60 {
+  .emotion-61 {
     display: block;
     width: initial;
     padding: initial;
@@ -871,13 +871,13 @@ HTMLCollection [
   }
 
   @media (min-width: 63rem) {
-    .emotion-60 {
+    .emotion-61 {
       padding-top: 0.5rem;
     }
   }
 }
 
-.emotion-62 {
+.emotion-63 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -889,20 +889,20 @@ HTMLCollection [
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-62 {
+  .emotion-63 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-62 {
+  .emotion-63 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-66 {
+.emotion-67 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -914,28 +914,28 @@ HTMLCollection [
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-66 {
+  .emotion-67 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-66 {
+  .emotion-67 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-66 {
+  .emotion-67 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-66 {
+  .emotion-67 {
     display: none;
     visibility: hidden;
   }
@@ -1052,7 +1052,7 @@ HTMLCollection [
                 Summary text 1
               </p>
               <time
-                class="emotion-45 emotion-46"
+                class="emotion-45 emotion-46 emotion-47"
                 datetime="1970-01-19"
               >
                 19 Jenụwarị 1970
@@ -1061,15 +1061,15 @@ HTMLCollection [
           </div>
         </li>
         <li
-          class="emotion-16 emotion-48 emotion-21"
+          class="emotion-16 emotion-49 emotion-21"
           dir="ltr"
         >
           <div
-            class="emotion-50 emotion-23"
+            class="emotion-51 emotion-23"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-52 emotion-25"
+              class="emotion-53 emotion-25"
               dir="ltr"
             >
               <div
@@ -1089,16 +1089,16 @@ HTMLCollection [
                   </div>
                 </div>
                 <div
-                  class="emotion-58 emotion-36"
+                  class="emotion-59 emotion-36"
                 />
               </div>
             </div>
             <div
-              class="emotion-60 emotion-38"
+              class="emotion-61 emotion-38"
               dir="ltr"
             >
               <h3
-                class="emotion-62 emotion-40"
+                class="emotion-63 emotion-40"
               >
                 <a
                   aria-labelledby="promo-top-stories-1"
@@ -1113,12 +1113,12 @@ HTMLCollection [
                 </a>
               </h3>
               <p
-                class="emotion-66 emotion-44"
+                class="emotion-67 emotion-44"
               >
                 Summary text 2
               </p>
               <time
-                class="emotion-45 emotion-46"
+                class="emotion-45 emotion-46 emotion-47"
                 datetime="1970-01-19"
               >
                 19 Jenụwarị 1970
@@ -1127,15 +1127,15 @@ HTMLCollection [
           </div>
         </li>
         <li
-          class="emotion-16 emotion-48 emotion-21"
+          class="emotion-16 emotion-49 emotion-21"
           dir="ltr"
         >
           <div
-            class="emotion-50 emotion-23"
+            class="emotion-51 emotion-23"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-52 emotion-25"
+              class="emotion-53 emotion-25"
               dir="ltr"
             >
               <div
@@ -1155,16 +1155,16 @@ HTMLCollection [
                   </div>
                 </div>
                 <div
-                  class="emotion-58 emotion-36"
+                  class="emotion-59 emotion-36"
                 />
               </div>
             </div>
             <div
-              class="emotion-60 emotion-38"
+              class="emotion-61 emotion-38"
               dir="ltr"
             >
               <h3
-                class="emotion-62 emotion-40"
+                class="emotion-63 emotion-40"
               >
                 <a
                   aria-labelledby="promo-top-stories-2"
@@ -1179,12 +1179,12 @@ HTMLCollection [
                 </a>
               </h3>
               <p
-                class="emotion-66 emotion-44"
+                class="emotion-67 emotion-44"
               >
                 Summary text 3
               </p>
               <time
-                class="emotion-45 emotion-46"
+                class="emotion-45 emotion-46 emotion-47"
                 datetime="1970-01-19"
               >
                 19 Jenụwarị 1970
@@ -1193,15 +1193,15 @@ HTMLCollection [
           </div>
         </li>
         <li
-          class="emotion-16 emotion-48 emotion-21"
+          class="emotion-16 emotion-49 emotion-21"
           dir="ltr"
         >
           <div
-            class="emotion-50 emotion-23"
+            class="emotion-51 emotion-23"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-52 emotion-25"
+              class="emotion-53 emotion-25"
               dir="ltr"
             >
               <div
@@ -1221,16 +1221,16 @@ HTMLCollection [
                   </div>
                 </div>
                 <div
-                  class="emotion-58 emotion-36"
+                  class="emotion-59 emotion-36"
                 />
               </div>
             </div>
             <div
-              class="emotion-60 emotion-38"
+              class="emotion-61 emotion-38"
               dir="ltr"
             >
               <h3
-                class="emotion-62 emotion-40"
+                class="emotion-63 emotion-40"
               >
                 <a
                   aria-labelledby="promo-top-stories-3"
@@ -1245,12 +1245,12 @@ HTMLCollection [
                 </a>
               </h3>
               <p
-                class="emotion-66 emotion-44"
+                class="emotion-67 emotion-44"
               >
                 Summary text 4
               </p>
               <time
-                class="emotion-45 emotion-46"
+                class="emotion-45 emotion-46 emotion-47"
                 datetime="1970-01-19"
               >
                 19 Jenụwarị 1970
@@ -1259,15 +1259,15 @@ HTMLCollection [
           </div>
         </li>
         <li
-          class="emotion-16 emotion-48 emotion-21"
+          class="emotion-16 emotion-49 emotion-21"
           dir="ltr"
         >
           <div
-            class="emotion-50 emotion-23"
+            class="emotion-51 emotion-23"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-52 emotion-25"
+              class="emotion-53 emotion-25"
               dir="ltr"
             >
               <div
@@ -1287,16 +1287,16 @@ HTMLCollection [
                   </div>
                 </div>
                 <div
-                  class="emotion-58 emotion-36"
+                  class="emotion-59 emotion-36"
                 />
               </div>
             </div>
             <div
-              class="emotion-60 emotion-38"
+              class="emotion-61 emotion-38"
               dir="ltr"
             >
               <h3
-                class="emotion-62 emotion-40"
+                class="emotion-63 emotion-40"
               >
                 <a
                   aria-labelledby="promo-top-stories-4"
@@ -1311,12 +1311,12 @@ HTMLCollection [
                 </a>
               </h3>
               <p
-                class="emotion-66 emotion-44"
+                class="emotion-67 emotion-44"
               >
                 Summary text 5
               </p>
               <time
-                class="emotion-45 emotion-46"
+                class="emotion-45 emotion-46 emotion-47"
                 datetime="1970-01-19"
               >
                 19 Jenụwarị 1970
@@ -1953,7 +1953,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
   }
 }
 
-.emotion-47 {
+.emotion-48 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -1964,61 +1964,61 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-47 {
+  .emotion-48 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-47 {
+  .emotion-48 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-50 {
+.emotion-51 {
   padding: 0.5rem 0 1rem;
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-50 {
+  .emotion-51 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
-.emotion-50:last-child {
+.emotion-51:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-50 {
+  .emotion-51 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-50 {
+  .emotion-51 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-50:first-child {
+.emotion-51:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-50:first-child {
+  .emotion-51:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-50:last-child {
+.emotion-51:last-child {
   padding-bottom: 0;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-50 {
+  .emotion-51 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -2027,7 +2027,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-50 {
+  .emotion-51 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -2036,7 +2036,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-50 {
+  .emotion-51 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -2045,7 +2045,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-50 {
+  .emotion-51 {
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -2054,7 +2054,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-50 {
+  .emotion-51 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -2063,7 +2063,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 @media (min-width: 80rem) {
-  .emotion-50 {
+  .emotion-51 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -2072,80 +2072,80 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 @supports (display: grid) {
-  .emotion-50 {
+  .emotion-51 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-50 {
+    .emotion-51 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-50 {
+    .emotion-51 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-50 {
+    .emotion-51 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-50 {
+    .emotion-51 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-50 {
+    .emotion-51 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-50 {
+    .emotion-51 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
   }
 }
 
-.emotion-52 {
+.emotion-53 {
   position: relative;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-52 {
+  .emotion-53 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-52 {
+    .emotion-53 {
       grid-column-gap: 1rem;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-52 {
+    .emotion-53 {
       display: block;
     }
   }
 }
 
-.emotion-54 {
+.emotion-55 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -2153,39 +2153,39 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 @media (min-width: 63rem) {
-  .emotion-54 {
+  .emotion-55 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-54 {
+  .emotion-55 {
     width: initial;
     grid-column: 1/span 2;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-60 {
+  .emotion-61 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-60>* {
+.emotion-61>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-60>* {
+  .emotion-61>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-62 {
+.emotion-63 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -2193,13 +2193,13 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-62 {
+  .emotion-63 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-62 {
+  .emotion-63 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -2207,7 +2207,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-62 {
+  .emotion-63 {
     display: block;
     width: initial;
     padding: initial;
@@ -2215,13 +2215,13 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
   }
 
   @media (min-width: 63rem) {
-    .emotion-62 {
+    .emotion-63 {
       padding-top: 0.5rem;
     }
   }
 }
 
-.emotion-64 {
+.emotion-65 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -2233,20 +2233,20 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-64 {
+  .emotion-65 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-64 {
+  .emotion-65 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-68 {
+.emotion-69 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -2258,28 +2258,28 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-68 {
+  .emotion-69 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-68 {
+  .emotion-69 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-68 {
+  .emotion-69 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-68 {
+  .emotion-69 {
     display: none;
     visibility: hidden;
   }
@@ -2400,7 +2400,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                 Summary text 1
               </p>
               <time
-                class="emotion-47 emotion-48"
+                class="emotion-47 emotion-48 emotion-49"
                 datetime="1970-01-19"
               >
                 19 January 1970
@@ -2409,15 +2409,15 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
           </div>
         </li>
         <li
-          class="emotion-18 emotion-50 emotion-23"
+          class="emotion-18 emotion-51 emotion-23"
           dir="ltr"
         >
           <div
-            class="emotion-52 emotion-25"
+            class="emotion-53 emotion-25"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-54 emotion-27"
+              class="emotion-55 emotion-27"
               dir="ltr"
             >
               <div
@@ -2437,16 +2437,16 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                   </div>
                 </div>
                 <div
-                  class="emotion-60 emotion-38"
+                  class="emotion-61 emotion-38"
                 />
               </div>
             </div>
             <div
-              class="emotion-62 emotion-40"
+              class="emotion-63 emotion-40"
               dir="ltr"
             >
               <h3
-                class="emotion-64 emotion-42"
+                class="emotion-65 emotion-42"
               >
                 <a
                   aria-labelledby="promo-top-stories-1"
@@ -2461,12 +2461,12 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                 </a>
               </h3>
               <p
-                class="emotion-68 emotion-46"
+                class="emotion-69 emotion-46"
               >
                 Summary text 2
               </p>
               <time
-                class="emotion-47 emotion-48"
+                class="emotion-47 emotion-48 emotion-49"
                 datetime="1970-01-19"
               >
                 19 January 1970
@@ -2475,15 +2475,15 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
           </div>
         </li>
         <li
-          class="emotion-18 emotion-50 emotion-23"
+          class="emotion-18 emotion-51 emotion-23"
           dir="ltr"
         >
           <div
-            class="emotion-52 emotion-25"
+            class="emotion-53 emotion-25"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-54 emotion-27"
+              class="emotion-55 emotion-27"
               dir="ltr"
             >
               <div
@@ -2503,16 +2503,16 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                   </div>
                 </div>
                 <div
-                  class="emotion-60 emotion-38"
+                  class="emotion-61 emotion-38"
                 />
               </div>
             </div>
             <div
-              class="emotion-62 emotion-40"
+              class="emotion-63 emotion-40"
               dir="ltr"
             >
               <h3
-                class="emotion-64 emotion-42"
+                class="emotion-65 emotion-42"
               >
                 <a
                   aria-labelledby="promo-top-stories-2"
@@ -2527,12 +2527,12 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                 </a>
               </h3>
               <p
-                class="emotion-68 emotion-46"
+                class="emotion-69 emotion-46"
               >
                 Summary text 3
               </p>
               <time
-                class="emotion-47 emotion-48"
+                class="emotion-47 emotion-48 emotion-49"
                 datetime="1970-01-19"
               >
                 19 January 1970
@@ -2541,15 +2541,15 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
           </div>
         </li>
         <li
-          class="emotion-18 emotion-50 emotion-23"
+          class="emotion-18 emotion-51 emotion-23"
           dir="ltr"
         >
           <div
-            class="emotion-52 emotion-25"
+            class="emotion-53 emotion-25"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-54 emotion-27"
+              class="emotion-55 emotion-27"
               dir="ltr"
             >
               <div
@@ -2569,16 +2569,16 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                   </div>
                 </div>
                 <div
-                  class="emotion-60 emotion-38"
+                  class="emotion-61 emotion-38"
                 />
               </div>
             </div>
             <div
-              class="emotion-62 emotion-40"
+              class="emotion-63 emotion-40"
               dir="ltr"
             >
               <h3
-                class="emotion-64 emotion-42"
+                class="emotion-65 emotion-42"
               >
                 <a
                   aria-labelledby="promo-top-stories-3"
@@ -2593,12 +2593,12 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                 </a>
               </h3>
               <p
-                class="emotion-68 emotion-46"
+                class="emotion-69 emotion-46"
               >
                 Summary text 4
               </p>
               <time
-                class="emotion-47 emotion-48"
+                class="emotion-47 emotion-48 emotion-49"
                 datetime="1970-01-19"
               >
                 19 January 1970
@@ -2607,15 +2607,15 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
           </div>
         </li>
         <li
-          class="emotion-18 emotion-50 emotion-23"
+          class="emotion-18 emotion-51 emotion-23"
           dir="ltr"
         >
           <div
-            class="emotion-52 emotion-25"
+            class="emotion-53 emotion-25"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-54 emotion-27"
+              class="emotion-55 emotion-27"
               dir="ltr"
             >
               <div
@@ -2635,16 +2635,16 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                   </div>
                 </div>
                 <div
-                  class="emotion-60 emotion-38"
+                  class="emotion-61 emotion-38"
                 />
               </div>
             </div>
             <div
-              class="emotion-62 emotion-40"
+              class="emotion-63 emotion-40"
               dir="ltr"
             >
               <h3
-                class="emotion-64 emotion-42"
+                class="emotion-65 emotion-42"
               >
                 <a
                   aria-labelledby="promo-top-stories-4"
@@ -2659,12 +2659,12 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                 </a>
               </h3>
               <p
-                class="emotion-68 emotion-46"
+                class="emotion-69 emotion-46"
               >
                 Summary text 5
               </p>
               <time
-                class="emotion-47 emotion-48"
+                class="emotion-47 emotion-48 emotion-49"
                 datetime="1970-01-19"
               >
                 19 January 1970
@@ -3207,7 +3207,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
   }
 }
 
-.emotion-32 {
+.emotion-33 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -3218,20 +3218,20 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-32 {
+  .emotion-33 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-32 {
+  .emotion-33 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-34 {
+.emotion-35 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -3239,20 +3239,20 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-34 {
+  .emotion-35 {
     padding-right: 0.5rem;
     width: 50%;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-34 {
+  .emotion-35 {
     width: 66.67%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-34 {
+  .emotion-35 {
     width: initial;
     padding: 0;
     grid-template-columns: repeat(6, 1fr);
@@ -3260,25 +3260,25 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-34 {
+    .emotion-35 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-34 {
+    .emotion-35 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 }
 
-.emotion-36 {
+.emotion-37 {
   position: relative;
 }
 
-.emotion-38 {
+.emotion-39 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -3293,71 +3293,71 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 }
 
 @media (min-width: 25rem) {
-  .emotion-38 {
+  .emotion-39 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-38 {
+  .emotion-39 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-40 {
+.emotion-41 {
   position: absolute;
   bottom: 0;
 }
 
-.emotion-40>* {
+.emotion-41>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.emotion-43 {
+.emotion-44 {
   padding: 0.5rem 0 1rem;
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-43 {
+  .emotion-44 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
-.emotion-43:last-child {
+.emotion-44:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-43 {
+  .emotion-44 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-43 {
+  .emotion-44 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-43:first-child {
+.emotion-44:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-43:first-child {
+  .emotion-44:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-43:last-child {
+.emotion-44:last-child {
   padding-bottom: 0;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-43 {
+  .emotion-44 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -3366,7 +3366,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-43 {
+  .emotion-44 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -3375,7 +3375,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-43 {
+  .emotion-44 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -3384,7 +3384,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-43 {
+  .emotion-44 {
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -3393,7 +3393,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-43 {
+  .emotion-44 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -3402,7 +3402,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 }
 
 @media (min-width: 80rem) {
-  .emotion-43 {
+  .emotion-44 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -3411,80 +3411,80 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 }
 
 @supports (display: grid) {
-  .emotion-43 {
+  .emotion-44 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-43 {
+    .emotion-44 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-43 {
+    .emotion-44 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-43 {
+    .emotion-44 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-43 {
+    .emotion-44 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-43 {
+    .emotion-44 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-43 {
+    .emotion-44 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
   }
 }
 
-.emotion-45 {
+.emotion-46 {
   position: relative;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-45 {
+  .emotion-46 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-45 {
+    .emotion-46 {
       grid-column-gap: 1rem;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-45 {
+    .emotion-46 {
       display: block;
     }
   }
 }
 
-.emotion-47 {
+.emotion-48 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -3492,39 +3492,39 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 }
 
 @media (min-width: 63rem) {
-  .emotion-47 {
+  .emotion-48 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-47 {
+  .emotion-48 {
     width: initial;
     grid-column: 1/span 2;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-53 {
+  .emotion-54 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-53>* {
+.emotion-54>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-53>* {
+  .emotion-54>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-55 {
+.emotion-56 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -3532,13 +3532,13 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-55 {
+  .emotion-56 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-55 {
+  .emotion-56 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -3546,7 +3546,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-55 {
+  .emotion-56 {
     display: block;
     width: initial;
     padding: initial;
@@ -3554,13 +3554,13 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
   }
 
   @media (min-width: 63rem) {
-    .emotion-55 {
+    .emotion-56 {
       padding-top: 0.5rem;
     }
   }
 }
 
-.emotion-57 {
+.emotion-58 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -3572,14 +3572,14 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-57 {
+  .emotion-58 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-57 {
+  .emotion-58 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
@@ -3658,21 +3658,21 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
               Summary text 1
             </p>
             <time
-              class="emotion-32 emotion-33"
+              class="emotion-32 emotion-33 emotion-34"
               datetime="1970-01-19"
             >
               19 January 1970
             </time>
           </div>
           <div
-            class="emotion-34 emotion-35"
+            class="emotion-35 emotion-36"
             dir="ltr"
           >
             <div
-              class="emotion-36 emotion-37"
+              class="emotion-37 emotion-38"
             >
               <div
-                class="emotion-38 emotion-39"
+                class="emotion-39 emotion-40"
                 data-e2e="image-placeholder"
                 style="padding-bottom: 56.25%;"
               >
@@ -3685,29 +3685,29 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
                 </div>
               </div>
               <div
-                class="emotion-40 emotion-41"
+                class="emotion-41 emotion-42"
               />
             </div>
           </div>
         </div>
       </li>
       <li
-        class="emotion-16 emotion-43 emotion-21"
+        class="emotion-16 emotion-44 emotion-21"
         dir="ltr"
       >
         <div
-          class="emotion-45 emotion-23"
+          class="emotion-46 emotion-23"
           data-e2e="story-promo"
         >
           <div
-            class="emotion-47 emotion-35"
+            class="emotion-48 emotion-36"
             dir="ltr"
           >
             <div
-              class="emotion-36 emotion-37"
+              class="emotion-37 emotion-38"
             >
               <div
-                class="emotion-38 emotion-39"
+                class="emotion-39 emotion-40"
                 data-e2e="image-placeholder"
                 style="padding-bottom: 56.25%;"
               >
@@ -3720,16 +3720,16 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
                 </div>
               </div>
               <div
-                class="emotion-53 emotion-41"
+                class="emotion-54 emotion-42"
               />
             </div>
           </div>
           <div
-            class="emotion-55 emotion-25"
+            class="emotion-56 emotion-25"
             dir="ltr"
           >
             <h3
-              class="emotion-57 emotion-27"
+              class="emotion-58 emotion-27"
             >
               <a
                 aria-labelledby="promo-1"
@@ -3749,7 +3749,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
               Summary text 2
             </p>
             <time
-              class="emotion-32 emotion-33"
+              class="emotion-32 emotion-33 emotion-34"
               datetime="1970-01-19"
             >
               19 January 1970
@@ -4178,7 +4178,7 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
   }
 }
 
-.emotion-41 {
+.emotion-42 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -4189,14 +4189,14 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-41 {
+  .emotion-42 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-41 {
+  .emotion-42 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -4308,7 +4308,7 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
             Summary text 1
           </p>
           <time
-            class="emotion-41 emotion-42"
+            class="emotion-41 emotion-42 emotion-43"
             datetime="1970-01-19"
           >
             19 January 1970
@@ -4890,7 +4890,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
   }
 }
 
-.emotion-38 {
+.emotion-39 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -4901,61 +4901,61 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-38 {
+  .emotion-39 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-38 {
+  .emotion-39 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-41 {
+.emotion-42 {
   padding: 0.5rem 0 1rem;
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-41 {
+  .emotion-42 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
-.emotion-41:last-child {
+.emotion-42:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-41 {
+  .emotion-42 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-41 {
+  .emotion-42 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-41:first-child {
+.emotion-42:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-41:first-child {
+  .emotion-42:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-41:last-child {
+.emotion-42:last-child {
   padding-bottom: 0;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-41 {
+  .emotion-42 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -4964,7 +4964,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-41 {
+  .emotion-42 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -4973,7 +4973,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-41 {
+  .emotion-42 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -4982,7 +4982,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-41 {
+  .emotion-42 {
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -4991,7 +4991,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-41 {
+  .emotion-42 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -5000,7 +5000,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 }
 
 @media (min-width: 80rem) {
-  .emotion-41 {
+  .emotion-42 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -5009,80 +5009,80 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 }
 
 @supports (display: grid) {
-  .emotion-41 {
+  .emotion-42 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-41 {
+    .emotion-42 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-41 {
+    .emotion-42 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-41 {
+    .emotion-42 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-41 {
+    .emotion-42 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-41 {
+    .emotion-42 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-41 {
+    .emotion-42 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
   }
 }
 
-.emotion-43 {
+.emotion-44 {
   position: relative;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-43 {
+  .emotion-44 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-43 {
+    .emotion-44 {
       grid-column-gap: 1rem;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-43 {
+    .emotion-44 {
       display: block;
     }
   }
 }
 
-.emotion-45 {
+.emotion-46 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -5090,39 +5090,39 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 }
 
 @media (min-width: 63rem) {
-  .emotion-45 {
+  .emotion-46 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-45 {
+  .emotion-46 {
     width: initial;
     grid-column: 1/span 2;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-51 {
+  .emotion-52 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-51>* {
+.emotion-52>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-51>* {
+  .emotion-52>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-53 {
+.emotion-54 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -5130,13 +5130,13 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-53 {
+  .emotion-54 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-53 {
+  .emotion-54 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -5144,7 +5144,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-53 {
+  .emotion-54 {
     display: block;
     width: initial;
     padding: initial;
@@ -5152,13 +5152,13 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
   }
 
   @media (min-width: 63rem) {
-    .emotion-53 {
+    .emotion-54 {
       padding-top: 0.5rem;
     }
   }
 }
 
-.emotion-55 {
+.emotion-56 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -5170,20 +5170,20 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-55 {
+  .emotion-56 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-55 {
+  .emotion-56 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-59 {
+.emotion-60 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -5195,28 +5195,28 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-59 {
+  .emotion-60 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-59 {
+  .emotion-60 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-59 {
+  .emotion-60 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-59 {
+  .emotion-60 {
     display: none;
     visibility: hidden;
   }
@@ -5317,7 +5317,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
               Summary text 1
             </p>
             <time
-              class="emotion-38 emotion-39"
+              class="emotion-38 emotion-39 emotion-40"
               datetime="1970-01-19"
             >
               19 January 1970
@@ -5326,15 +5326,15 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
         </div>
       </li>
       <li
-        class="emotion-14 emotion-41 emotion-19"
+        class="emotion-14 emotion-42 emotion-19"
         dir="ltr"
       >
         <div
-          class="emotion-43 emotion-21"
+          class="emotion-44 emotion-21"
           data-e2e="story-promo"
         >
           <div
-            class="emotion-45 emotion-23"
+            class="emotion-46 emotion-23"
             dir="ltr"
           >
             <div
@@ -5354,16 +5354,16 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
                 </div>
               </div>
               <div
-                class="emotion-51 emotion-29"
+                class="emotion-52 emotion-29"
               />
             </div>
           </div>
           <div
-            class="emotion-53 emotion-31"
+            class="emotion-54 emotion-31"
             dir="ltr"
           >
             <h3
-              class="emotion-55 emotion-33"
+              class="emotion-56 emotion-33"
             >
               <a
                 aria-labelledby="promo-top-stories-1"
@@ -5378,12 +5378,12 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
               </a>
             </h3>
             <p
-              class="emotion-59 emotion-37"
+              class="emotion-60 emotion-37"
             >
               Summary text 2
             </p>
             <time
-              class="emotion-38 emotion-39"
+              class="emotion-38 emotion-39 emotion-40"
               datetime="1970-01-19"
             >
               19 January 1970
@@ -5392,15 +5392,15 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
         </div>
       </li>
       <li
-        class="emotion-14 emotion-41 emotion-19"
+        class="emotion-14 emotion-42 emotion-19"
         dir="ltr"
       >
         <div
-          class="emotion-43 emotion-21"
+          class="emotion-44 emotion-21"
           data-e2e="story-promo"
         >
           <div
-            class="emotion-45 emotion-23"
+            class="emotion-46 emotion-23"
             dir="ltr"
           >
             <div
@@ -5420,16 +5420,16 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
                 </div>
               </div>
               <div
-                class="emotion-51 emotion-29"
+                class="emotion-52 emotion-29"
               />
             </div>
           </div>
           <div
-            class="emotion-53 emotion-31"
+            class="emotion-54 emotion-31"
             dir="ltr"
           >
             <h3
-              class="emotion-55 emotion-33"
+              class="emotion-56 emotion-33"
             >
               <a
                 aria-labelledby="promo-top-stories-2"
@@ -5444,12 +5444,12 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
               </a>
             </h3>
             <p
-              class="emotion-59 emotion-37"
+              class="emotion-60 emotion-37"
             >
               Summary text 3
             </p>
             <time
-              class="emotion-38 emotion-39"
+              class="emotion-38 emotion-39 emotion-40"
               datetime="1970-01-19"
             >
               19 January 1970
@@ -5458,15 +5458,15 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
         </div>
       </li>
       <li
-        class="emotion-14 emotion-41 emotion-19"
+        class="emotion-14 emotion-42 emotion-19"
         dir="ltr"
       >
         <div
-          class="emotion-43 emotion-21"
+          class="emotion-44 emotion-21"
           data-e2e="story-promo"
         >
           <div
-            class="emotion-45 emotion-23"
+            class="emotion-46 emotion-23"
             dir="ltr"
           >
             <div
@@ -5486,16 +5486,16 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
                 </div>
               </div>
               <div
-                class="emotion-51 emotion-29"
+                class="emotion-52 emotion-29"
               />
             </div>
           </div>
           <div
-            class="emotion-53 emotion-31"
+            class="emotion-54 emotion-31"
             dir="ltr"
           >
             <h3
-              class="emotion-55 emotion-33"
+              class="emotion-56 emotion-33"
             >
               <a
                 aria-labelledby="promo-top-stories-3"
@@ -5510,12 +5510,12 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
               </a>
             </h3>
             <p
-              class="emotion-59 emotion-37"
+              class="emotion-60 emotion-37"
             >
               Summary text 4
             </p>
             <time
-              class="emotion-38 emotion-39"
+              class="emotion-38 emotion-39 emotion-40"
               datetime="1970-01-19"
             >
               19 January 1970
@@ -5524,15 +5524,15 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
         </div>
       </li>
       <li
-        class="emotion-14 emotion-41 emotion-19"
+        class="emotion-14 emotion-42 emotion-19"
         dir="ltr"
       >
         <div
-          class="emotion-43 emotion-21"
+          class="emotion-44 emotion-21"
           data-e2e="story-promo"
         >
           <div
-            class="emotion-45 emotion-23"
+            class="emotion-46 emotion-23"
             dir="ltr"
           >
             <div
@@ -5552,16 +5552,16 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
                 </div>
               </div>
               <div
-                class="emotion-51 emotion-29"
+                class="emotion-52 emotion-29"
               />
             </div>
           </div>
           <div
-            class="emotion-53 emotion-31"
+            class="emotion-54 emotion-31"
             dir="ltr"
           >
             <h3
-              class="emotion-55 emotion-33"
+              class="emotion-56 emotion-33"
             >
               <a
                 aria-labelledby="promo-top-stories-4"
@@ -5576,12 +5576,12 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
               </a>
             </h3>
             <p
-              class="emotion-59 emotion-37"
+              class="emotion-60 emotion-37"
             >
               Summary text 5
             </p>
             <time
-              class="emotion-38 emotion-39"
+              class="emotion-38 emotion-39 emotion-40"
               datetime="1970-01-19"
             >
               19 January 1970
