@@ -66,6 +66,7 @@ const RelatedContentPromoList = ({
             group4: isMediaContent ? 8 : 4,
             group5: isMediaContent ? 8 : 4,
           }}
+          promoType="onwardJourneys"
           as={isMediaContent ? MediaStoryPromoLi : StoryPromoLi}
           key={item.id || item.uri}
           ref={viewRef}

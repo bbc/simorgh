@@ -55,7 +55,11 @@ const PromoListComponent = ({ promoItems, dir }) => {
   return (
     <StoryPromoUl>
       {promoItems.map(item => (
-        <StoryPromoLi key={item.id || item.uri} ref={viewRef}>
+        <StoryPromoLi
+          key={item.id || item.uri}
+          ref={viewRef}
+          promoType="onwardJourneys"
+        >
           <StoryPromo
             item={item}
             dir={dir}

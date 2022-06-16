@@ -22,8 +22,9 @@ const promoListDefaultProps = {
 };
 
 export const StoryPromoLiBase = styled.li`
-  ${({ border }) =>
+  ${({ border, promoType }) =>
     border &&
+    promoType !== 'onwardJourneys' &&
     `
     @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
       border-bottom: 0.0625rem solid ${C_LUNAR};
