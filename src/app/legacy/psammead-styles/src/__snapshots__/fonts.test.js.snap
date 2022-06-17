@@ -678,7 +678,7 @@ exports[`Psammead Styles - Fonts should match REITH SERIF LIGHT base font url 1`
 "
   @font-face {
     font-family: \\"ReithSerif\\";
-    src: url(\\"https://gel.files.bbci.co.uk/r2.512/subsets/BBCReithSerif_WNumbers_Lt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.512/subsets/BBCReithSerif_WNumbers_Lt\\") format(\\"woff\\");
+    src: url(\\"https://gel.files.bbci.co.uk/r2.512/subsets/BBCReithSerif_WNumbers_Lt.woff2\\") format(\\"woff2\\"), url(\\"https://gel.files.bbci.co.uk/r2.512/subsets/BBCReithSerif_WNumbers_Lt.woff\\") format(\\"woff\\");
     font-weight: 300;
     font-display: optional;
   }"
@@ -688,7 +688,7 @@ exports[`Psammead Styles - Fonts should match REITH SERIF LIGHT with overridden 
 "
   @font-face {
     font-family: \\"ReithSerif\\";
-    src: url(\\"https://example.com/subsets/BBCReithSerif_WNumbers_Lt.woff2\\") format(\\"woff2\\"), url(\\"https://example.com/subsets/BBCReithSerif_WNumbers_Lt\\") format(\\"woff\\");
+    src: url(\\"https://example.com/subsets/BBCReithSerif_WNumbers_Lt.woff2\\") format(\\"woff2\\"), url(\\"https://example.com/subsets/BBCReithSerif_WNumbers_Lt.woff\\") format(\\"woff\\");
     font-weight: 300;
     font-display: optional;
   }"
