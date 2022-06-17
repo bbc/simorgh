@@ -77,7 +77,7 @@ export const F_REITH_SERIF_LIGHT = baseUrlOverride => `
       baseUrlOverride || baseFontUrl
     }subsets/BBCReithSerif_WNumbers_Lt.woff2") format("woff2"), url("${
   baseUrlOverride || baseFontUrl
-}subsets/BBCReithSerif_WNumbers_Lt") format("woff");
+}subsets/BBCReithSerif_WNumbers_Lt.woff") format("woff");
     font-weight: 300;
     font-display: optional;
   }`;
