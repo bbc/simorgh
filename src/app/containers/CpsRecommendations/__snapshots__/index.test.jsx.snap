@@ -169,7 +169,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 .emotion-9 {
   position: relative;
   z-index: 0;
-  color: #3F3F42;
+  color: #141414;
   margin-top: 2rem;
   margin: 0;
   padding: 0;
@@ -418,7 +418,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  color: #222222;
+  color: #141414;
   margin: 0;
   height: 100%;
   display: -webkit-box;
@@ -447,7 +447,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 .emotion-31 {
   position: static;
-  color: #222222;
+  color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -746,7 +746,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 .emotion-9 {
   position: relative;
   z-index: 0;
-  color: #3F3F42;
+  color: #141414;
   margin-top: 2rem;
   margin: 0;
   padding: 0;
@@ -1112,7 +1112,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  color: #222222;
+  color: #141414;
   margin: 0;
   height: 100%;
   display: -webkit-box;
@@ -1141,7 +1141,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 .emotion-37 {
   position: static;
-  color: #222222;
+  color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -1593,7 +1593,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 .emotion-9 {
   position: relative;
   z-index: 0;
-  color: #3F3F42;
+  color: #141414;
   margin-top: 2rem;
   margin: 0;
   padding: 0;
@@ -1959,7 +1959,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  color: #222222;
+  color: #141414;
   margin: 0;
   height: 100%;
   display: -webkit-box;
@@ -1988,7 +1988,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 .emotion-37 {
   position: static;
-  color: #222222;
+  color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;

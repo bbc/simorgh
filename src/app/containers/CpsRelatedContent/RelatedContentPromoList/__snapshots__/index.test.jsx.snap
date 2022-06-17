@@ -358,7 +358,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
 .emotion-23 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -921,7 +921,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
 .emotion-22 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
