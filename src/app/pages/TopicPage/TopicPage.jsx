@@ -17,7 +17,6 @@ import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstra
 import useToggle from '#hooks/useToggle';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
-import isLive from '#lib/utilities/isLive';
 import TopicTitle from './TopicTitle';
 import TopicGrid from './TopicGrid';
 import Pagination from './Pagination';
@@ -38,9 +37,6 @@ const TopicPage = ({ pageData }) => {
 
   const { enabled: adsEnabled } = useToggle('ads');
   const { showAdsBasedOnLocation } = useContext(RequestContext);
-  const showAds = [!isLive(), adsEnabled, showAdsBasedOnLocation].every(
-    Boolean,
-  );
 
   const promoEntities = promos.map(promo => ({
     '@type': 'Article',
@@ -65,36 +61,43 @@ const TopicPage = ({ pageData }) => {
   const pageTitle = `${title}, ${translatedPage}`;
 
   return (
-    <Wrapper role="main">
-      {showAds && <CanonicalAdBootstrapJs />}
-      <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics data={pageData} />
-      <MetadataContainer
-        title={activePage >= 2 ? pageTitle : title}
-        socialHeadline={title}
-        lang={lang}
-        description={description}
-        openGraphType="website"
-        hasAmpPage={false}
-      />
-      <LinkedData
-        type="CollectionPage"
-        seoTitle={title}
-        headline={title}
-        entities={promoEntities}
-      />
-      {showAds && <AdContainer slotType="leaderboard" />}
-      <TopicTitle>{title}</TopicTitle>
-      <TopicGrid promos={promos} />
-      <Pagination
-        activePage={activePage}
-        pageCount={pageCount}
-        pageXOfY={pageXOfY}
-        previousPage={previousPage}
-        nextPage={nextPage}
-        page={page}
-      />
-    </Wrapper>
+    <>
+      {adsEnabled && showAdsBasedOnLocation && (
+        <>
+          <CanonicalAdBootstrapJs />
+          <AdContainer slotType="leaderboard" />
+        </>
+      )}
+      <Wrapper role="main">
+        <ATIAnalytics data={pageData} />
+        <ChartbeatAnalytics data={pageData} />
+        <MetadataContainer
+          title={activePage >= 2 ? pageTitle : title}
+          socialHeadline={title}
+          lang={lang}
+          description={description}
+          openGraphType="website"
+          hasAmpPage={false}
+        />
+        <LinkedData
+          type="CollectionPage"
+          seoTitle={title}
+          headline={title}
+          entities={promoEntities}
+        />
+
+        <TopicTitle>{title}</TopicTitle>
+        <TopicGrid promos={promos} />
+        <Pagination
+          activePage={activePage}
+          pageCount={pageCount}
+          pageXOfY={pageXOfY}
+          previousPage={previousPage}
+          nextPage={nextPage}
+          page={page}
+        />
+      </Wrapper>
+    </>
   );
 };
 
