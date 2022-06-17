@@ -388,3 +388,75 @@ export const secondaryColumnContentType = {
   isLive: true,
   type: 'link',
 };
+
+export const onwardJourneyWithoutImage = {
+  headlines: {
+    headline: 'Headline',
+  },
+  locators: {
+    assetUri: '/mundo/23244196',
+    cpsUrn: 'urn:bbc:content:assetUri:mundo/23244196',
+    assetId: '23244196',
+  },
+  summary: 'Summary',
+  timestamp: 1563370009000,
+  language: 'es',
+  cpsType: 'STY',
+  indexImage: {
+    id: '63711182',
+    subType: 'index',
+    href: 'http://b.files.bbci.co.uk/6DCF/test/_63711182_perez-cruz_ecord_iodp_lb_myrtle.jpg',
+    path: '/cpsdevpb/6DCF/test/_63711182_perez-cruz_ecord_iodp_lb_myrtle.jpg',
+    height: 1152,
+    width: 2048,
+    altText: 'Picture of an oil rig',
+    caption: 'Oil rig',
+    copyrightHolder: 'BBC',
+    type: 'image',
+  },
+  options: {
+    isBreakingNews: false,
+    isFactCheck: false,
+  },
+  prominence: 'standard',
+  section: {
+    subType: 'IDX',
+    name: 'Noticias',
+    uri: '/mundo/front_page',
+    type: 'simple',
+  },
+  id: 'urn:bbc:ares::asset:mundo/23244196',
+  type: 'cps',
+};
+
+export const onwardJourney = {
+  headlines: {
+    shortHeadline: 'Wapinzani waafikiana nchini South Sudan',
+    headline: 'Mambo makuu kuhusu makubaliano mapya ya amani Sudan Kusini',
+  },
+  locators: {
+    assetUri: '/swahili/23210641',
+    cpsUrn: 'urn:bbc:content:assetUri:/swahili/23210641',
+  },
+  summary:
+    'Mahasimu nchini Sudan Kusini wameweka saini makubaliano ya kugawana madaraka huku Rais Salva Kirr akitoa wito wa kutaka kuwepo amani kwenye nchi ambapo vita vya wenyewe kwa wenyewe vimesababisha vifo vya maelfu ya watu.',
+  timestamp: 1533557370000,
+  language: 'sw',
+  cpsType: 'STY',
+  indexImage: {
+    id: '63685549',
+    subType: 'index',
+    href: 'http://b.files.bbci.co.uk/1715E/test/_63685549_c5daa10f-fea1-48bb-9570-dd61904a22bc.jpg',
+    path: '/cpsdevpb/1715E/test/_63685549_c5daa10f-fea1-48bb-9570-dd61904a22bc.jpg',
+    height: 549,
+    width: 976,
+    altText:
+      'A Sudanese man gathers branches to build his destroyed house in Abyei.',
+    caption:
+      'A Sudanese man gathers branches as he a builds a new roof for his destroyed house in Abyei.',
+    copyrightHolder: 'BBC',
+    type: 'image',
+  },
+  id: 'urn:bbc:ares::asset:swahili/23210641',
+  type: 'cps',
+};

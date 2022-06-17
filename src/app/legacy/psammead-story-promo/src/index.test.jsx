@@ -117,42 +117,91 @@ describe('StoryPromo with Media Indicator', () => {
 });
 
 describe('StoryPromo - Top Story', () => {
-  shouldMatchSnapshot(
-    'should render correctly',
-    <StoryPromo
-      image={Image}
-      info={Info({ promoType: 'top' })}
-      promoType="top"
-    />,
-  );
+  it('should render correctly', () => {
+    const { container, getByRole } = render(
+      <StoryPromo
+        image={Image}
+        info={Info({ promoType: 'top' })}
+        promoType="top"
+      />,
+    );
+    const heading = getByRole('heading');
+    const time = container.getElementsByTagName('time');
+    const image = container.getElementsByTagName('img');
+    expect(heading).toBeInTheDocument();
+    expect(time.length).toEqual(1);
+    expect(image.length).toEqual(1);
+  });
 
-  shouldMatchSnapshot(
-    'should render with Media Indicator correctly',
-    <StoryPromo
-      image={Image}
-      info={Info({ promoType: 'top' })}
-      mediaIndicator={<MediaInfo />}
-      promoType="top"
-    />,
-  );
+  it('should render with Media Indicator correctly', () => {
+    const { container } = render(
+      <StoryPromo
+        image={Image}
+        info={Info({ promoType: 'top' })}
+        promoType="top"
+        mediaIndicator={<MediaInfo />}
+      />,
+    );
 
-  shouldMatchSnapshot(
-    'should render with multiple Index Alsos correctly',
-    <StoryPromo
-      image={Image}
-      info={Info({ promoType: 'top', alsoItems: relatedItems })}
-      promoType="top"
-    />,
-  );
+    const svg = container.getElementsByTagName('svg');
+    expect(svg.length).toEqual(1);
+  });
 
-  shouldMatchSnapshot(
-    'should render with one Index Also correctly',
-    <StoryPromo
-      image={Image}
-      info={Info({ promoType: 'top', alsoItems: [relatedItems[0]] })}
-      promoType="top"
-    />,
-  );
+  it('should render with multiple Index Alsos correctly', () => {
+    const { container } = render(
+      <StoryPromo
+        image={Image}
+        info={Info({ promoType: 'top', alsoItems: relatedItems })}
+        promoType="top"
+      />,
+    );
+    const alsosHeadlines = container.getElementsByTagName('li');
+    expect(alsosHeadlines.length).toEqual(2);
+  });
+
+  it('should render with one Index Also correctly', () => {
+    const { container } = render(
+      <StoryPromo
+        image={Image}
+        info={Info({ promoType: 'top', alsoItems: [relatedItems[0]] })}
+        promoType="top"
+      />,
+    );
+    const alsosHeadlines = container.getElementsByTagName('h4');
+    expect(alsosHeadlines.length).toEqual(1);
+  });
+});
+
+describe('StoryPromo - OnwardJourney Top Story', () => {
+  it('should render correctly', () => {
+    const { container, getByRole } = render(
+      <StoryPromo
+        image={Image}
+        info={Info({ promoType: 'onwardJourneys' })}
+        promoType="onwardJourneys"
+      />,
+    );
+    const heading = getByRole('heading');
+    const time = container.getElementsByTagName('time');
+    const image = container.getElementsByTagName('img');
+    expect(heading).toBeInTheDocument();
+    expect(time.length).toEqual(1);
+    expect(image.length).toEqual(1);
+  });
+
+  it('should render with Media Indicator correctly', () => {
+    const { container } = render(
+      <StoryPromo
+        image={Image}
+        info={Info({ promoType: 'onwardJourneys' })}
+        promoType="onwardJourneys"
+        mediaIndicator={<MediaInfo />}
+      />,
+    );
+
+    const svg = container.getElementsByTagName('svg');
+    expect(svg.length).toEqual(1);
+  });
 });
 
 describe('StoryPromo - Leading Story', () => {

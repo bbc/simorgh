@@ -26,6 +26,8 @@ import {
   indexAlsosItem,
   mapWithMediaError,
   mapWithoutMediaError,
+  onwardJourneyWithoutImage,
+  onwardJourney,
 } from './helpers/fixtureData';
 import StoryPromoContainer from '.';
 import { buildUniquePromoId } from './utilities';
@@ -46,6 +48,8 @@ const fixtures = {
   featureLink: featureLinkItem,
   'item without an image': itemWithoutImage,
   podcastLink: podcastLinkItem,
+  onwardJourneyWithoutImage,
+  onwardJourney,
 };
 
 // eslint-disable-next-line react/prop-types
@@ -515,6 +519,70 @@ describe('StoryPromo Container', () => {
         render(<WrappedStoryPromo item={item} platform={platform} />);
         expect(loggerMock.warn).not.toHaveBeenCalled();
       });
+    });
+  });
+
+  describe.only('given the promo is used to render an onward Journey', () => {
+    it('should render onwardJourney with no images correctly in Canonical', () => {
+      const { getByRole, container } = render(
+        <WrappedStoryPromo
+          platform="canonical"
+          item={fixtures.onwardJourneyWithoutImage}
+          promoType="onwardJourneys"
+        />,
+      );
+      const heading = getByRole('heading');
+      const time = container.getElementsByTagName('time');
+      expect(heading).toBeInTheDocument();
+      expect(time.length).toEqual(1);
+    });
+
+    it('should render onwardJourney with no images correctly in AMP', () => {
+      const { getByRole, container } = render(
+        <WrappedStoryPromo
+          platform="amp"
+          item={fixtures.onwardJourneyWithoutImage}
+          promoType="onwardJourneys"
+        />,
+      );
+      const heading = getByRole('heading');
+      const time = container.getElementsByTagName('time');
+      expect(heading).toBeInTheDocument();
+      expect(time.length).toEqual(1);
+    });
+
+    it('should render onwardJourney with images correctly in Canonical', () => {
+      const { getByRole, container } = render(
+        <WrappedStoryPromo
+          platform="canonical"
+          item={fixtures.onwardJourney}
+          lazyLoadImage={false}
+          promoType="onwardJourneys"
+        />,
+      );
+      const heading = getByRole('heading');
+      const time = container.getElementsByTagName('time');
+      const image = container.getElementsByTagName('img');
+      expect(heading).toBeInTheDocument();
+      expect(time.length).toEqual(1);
+      expect(image.length).toEqual(1);
+    });
+
+    it('should render onwardJourney with images correctly in AMP', () => {
+      const { getByRole, container } = render(
+        <WrappedStoryPromo
+          platform="amp"
+          item={fixtures.onwardJourney}
+          lazyLoadImage={false}
+          promoType="onwardJourneys"
+        />,
+      );
+      const heading = getByRole('heading');
+      const time = container.getElementsByTagName('time');
+      const image = container.getElementsByTagName('amp-img');
+      expect(heading).toBeInTheDocument();
+      expect(time.length).toEqual(1);
+      expect(image.length).toEqual(2);
     });
   });
 });
