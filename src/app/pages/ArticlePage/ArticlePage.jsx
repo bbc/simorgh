@@ -121,10 +121,12 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const { enabled: adsEnabled } = useToggle('ads');
 
-  /* TODO: Remove `isLive` and replace with `allowAdvertisng` or similar when available in Ares */
-  const isAdsEnabled = [!isLive(), adsEnabled, showAdsBasedOnLocation].every(
-    Boolean,
-  );
+  const isAdsEnabled = [
+    !isLive(), // TODO: Remove `isLive` when editorial are happy with the ads display
+    path(['metadata', 'allowAdvertising'], pageData),
+    adsEnabled,
+    showAdsBasedOnLocation,
+  ].every(Boolean);
 
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
 
