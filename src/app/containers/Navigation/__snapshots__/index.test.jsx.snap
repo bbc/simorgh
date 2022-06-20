@@ -3,7 +3,7 @@
 exports[`Navigation Container should correctly render amp navigation 1`] = `
 .emotion-0 {
   position: relative;
-  background-color: #B80000;
+  background-color: #FFFFFF;
   border-top: 0.0625rem solid #FFFFFF;
 }
 
@@ -13,13 +13,19 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   }
 }
 
+@media (max-width: 25rem) {
+  .emotion-0 {
+    border-top: none;
+  }
+}
+
 .emotion-0::after {
   content: '';
   position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
-  border-bottom: 0.0625rem solid transparent;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-0 .emotion-70::after {
@@ -30,6 +36,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   position: relative;
   max-width: 80rem;
   margin: 0 auto;
+  background-color: #FFFFFF;
 }
 
 .emotion-4 {
@@ -57,7 +64,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #FFFFFF;
+  border: 0.25rem solid #B80000;
 }
 
 @media (min-width: 37.5rem) {
@@ -79,7 +86,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
 }
 
 .emotion-6 {
-  color: #fff;
+  color: #00000;
   fill: currentColor;
 }
 
@@ -95,7 +102,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
 }
 
 .emotion-12 {
-  background-color: #222222;
+  background-color: #FFFFFF;
   clear: both;
 }
 
@@ -110,12 +117,12 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   list-style-type: none;
   margin: 0;
   padding: 0 0.5rem;
-  border-bottom: 0.125rem solid #3F3F42;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-16 {
   padding: 0.75rem 0;
-  border-bottom: 0.0625rem solid #3F3F42;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-16:last-child {
@@ -129,7 +136,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FFFFFF;
+  color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -152,10 +159,11 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
 .emotion-18:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+  text-decoration-color: #B80000;
 }
 
 .emotion-20 {
-  border-left: 0.25rem solid #FFFFFF;
+  border-left: 0.25rem solid #B80000;
   padding-left: 0.5rem;
 }
 
@@ -185,8 +193,8 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
     pointer-events: none;
     background: linear-gradient(
             to right,
-            rgba(184, 0, 0, 0) 0%,
-            rgba(184, 0, 0, 1)
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1)
               100%
           );
   }
@@ -236,7 +244,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
     position: absolute;
     bottom: -1px;
     width: 80rem;
-    border-bottom: 0.0625rem solid #EAB3B3;
+    border-bottom: 0.0625rem solid #E6E8EA;
     z-index: -1;
   }
 }
@@ -248,6 +256,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   font-weight: 400;
   font-style: normal;
   color: #FDFDFD;
+  color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -281,8 +290,8 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
-  border-bottom: 0.3125rem solid #FFFFFF;
+  border-bottom: 0.25rem solid #B80000;
+  border-bottom: 0.3125rem solid #B80000;
 }
 
 .emotion-71:focus::after {
@@ -291,9 +300,9 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.25rem solid #B80000;
   top: 0;
-  border: 0.25rem solid #FFFFFF;
+  border: 0.25rem solid #B80000;
 }
 
 .emotion-73::after {
@@ -302,7 +311,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.25rem solid #B80000;
 }
 
 .emotion-79 {
@@ -312,6 +321,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   font-weight: 400;
   font-style: normal;
   color: #FDFDFD;
+  color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -345,7 +355,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.25rem solid #B80000;
 }
 
 .emotion-79:focus::after {
@@ -354,9 +364,9 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.25rem solid #B80000;
   top: 0;
-  border: 0.25rem solid #FFFFFF;
+  border: 0.25rem solid #B80000;
 }
 
 <div>
@@ -784,7 +794,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
 exports[`Navigation Container should correctly render amp navigation on non-home navigation page 1`] = `
 .emotion-0 {
   position: relative;
-  background-color: #B80000;
+  background-color: #FFFFFF;
   border-top: 0.0625rem solid #FFFFFF;
 }
 
@@ -794,13 +804,19 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   }
 }
 
+@media (max-width: 25rem) {
+  .emotion-0 {
+    border-top: none;
+  }
+}
+
 .emotion-0::after {
   content: '';
   position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
-  border-bottom: 0.0625rem solid transparent;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-0 .emotion-66::after {
@@ -811,6 +827,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   position: relative;
   max-width: 80rem;
   margin: 0 auto;
+  background-color: #FFFFFF;
 }
 
 .emotion-4 {
@@ -838,7 +855,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #FFFFFF;
+  border: 0.25rem solid #B80000;
 }
 
 @media (min-width: 37.5rem) {
@@ -860,7 +877,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
 }
 
 .emotion-6 {
-  color: #fff;
+  color: #00000;
   fill: currentColor;
 }
 
@@ -876,7 +893,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
 }
 
 .emotion-12 {
-  background-color: #222222;
+  background-color: #FFFFFF;
   clear: both;
 }
 
@@ -891,12 +908,12 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   list-style-type: none;
   margin: 0;
   padding: 0 0.5rem;
-  border-bottom: 0.125rem solid #3F3F42;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-16 {
   padding: 0.75rem 0;
-  border-bottom: 0.0625rem solid #3F3F42;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-16:last-child {
@@ -910,7 +927,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FFFFFF;
+  color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -933,6 +950,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
 .emotion-18:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+  text-decoration-color: #B80000;
 }
 
 @media (max-width: 37.4375rem) {
@@ -961,8 +979,8 @@ exports[`Navigation Container should correctly render amp navigation on non-home
     pointer-events: none;
     background: linear-gradient(
             to right,
-            rgba(184, 0, 0, 0) 0%,
-            rgba(184, 0, 0, 1)
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1)
               100%
           );
   }
@@ -1012,7 +1030,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
     position: absolute;
     bottom: -1px;
     width: 80rem;
-    border-bottom: 0.0625rem solid #EAB3B3;
+    border-bottom: 0.0625rem solid #E6E8EA;
     z-index: -1;
   }
 }
@@ -1024,6 +1042,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   font-weight: 400;
   font-style: normal;
   color: #FDFDFD;
+  color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1057,7 +1076,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.25rem solid #B80000;
 }
 
 .emotion-67:focus::after {
@@ -1066,9 +1085,9 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.25rem solid #B80000;
   top: 0;
-  border: 0.25rem solid #FFFFFF;
+  border: 0.25rem solid #B80000;
 }
 
 <div>
@@ -1476,7 +1495,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
 exports[`Navigation Container should correctly render amp navigation on non-navigation page 1`] = `
 .emotion-0 {
   position: relative;
-  background-color: #B80000;
+  background-color: #FFFFFF;
   border-top: 0.0625rem solid #FFFFFF;
 }
 
@@ -1486,13 +1505,19 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   }
 }
 
+@media (max-width: 25rem) {
+  .emotion-0 {
+    border-top: none;
+  }
+}
+
 .emotion-0::after {
   content: '';
   position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
-  border-bottom: 0.0625rem solid transparent;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-0 .emotion-66::after {
@@ -1503,6 +1528,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   position: relative;
   max-width: 80rem;
   margin: 0 auto;
+  background-color: #FFFFFF;
 }
 
 .emotion-4 {
@@ -1530,7 +1556,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #FFFFFF;
+  border: 0.25rem solid #B80000;
 }
 
 @media (min-width: 37.5rem) {
@@ -1552,7 +1578,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
 }
 
 .emotion-6 {
-  color: #fff;
+  color: #00000;
   fill: currentColor;
 }
 
@@ -1568,7 +1594,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
 }
 
 .emotion-12 {
-  background-color: #222222;
+  background-color: #FFFFFF;
   clear: both;
 }
 
@@ -1583,12 +1609,12 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   list-style-type: none;
   margin: 0;
   padding: 0 0.5rem;
-  border-bottom: 0.125rem solid #3F3F42;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-16 {
   padding: 0.75rem 0;
-  border-bottom: 0.0625rem solid #3F3F42;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-16:last-child {
@@ -1602,7 +1628,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FFFFFF;
+  color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -1625,6 +1651,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
 .emotion-18:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+  text-decoration-color: #B80000;
 }
 
 @media (max-width: 37.4375rem) {
@@ -1653,8 +1680,8 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
     pointer-events: none;
     background: linear-gradient(
             to right,
-            rgba(184, 0, 0, 0) 0%,
-            rgba(184, 0, 0, 1)
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1)
               100%
           );
   }
@@ -1704,7 +1731,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
     position: absolute;
     bottom: -1px;
     width: 80rem;
-    border-bottom: 0.0625rem solid #EAB3B3;
+    border-bottom: 0.0625rem solid #E6E8EA;
     z-index: -1;
   }
 }
@@ -1716,6 +1743,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   font-weight: 400;
   font-style: normal;
   color: #FDFDFD;
+  color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1749,7 +1777,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.25rem solid #B80000;
 }
 
 .emotion-67:focus::after {
@@ -1758,9 +1786,9 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.25rem solid #B80000;
   top: 0;
-  border: 0.25rem solid #FFFFFF;
+  border: 0.25rem solid #B80000;
 }
 
 <div>
@@ -2168,8 +2196,14 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
 exports[`Navigation Container should correctly render canonical navigation 1`] = `
 .emotion-0 {
   position: relative;
-  background-color: #B80000;
+  background-color: #FFFFFF;
   border-top: 0.0625rem solid #FFFFFF;
+}
+
+@media (max-width: 25rem) {
+  .emotion-0 {
+    border-top: none;
+  }
 }
 
 .emotion-0::after {
@@ -2178,7 +2212,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   bottom: 0;
   right: 0;
   left: 0;
-  border-bottom: 0.0625rem solid transparent;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-0 .emotion-17::after {
@@ -2189,6 +2223,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   position: relative;
   max-width: 80rem;
   margin: 0 auto;
+  background-color: #FFFFFF;
 }
 
 .emotion-4 {
@@ -2220,7 +2255,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #FFFFFF;
+  border: 0.25rem solid #B80000;
 }
 
 @media (min-width: 37.5rem) {
@@ -2242,7 +2277,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
 }
 
 .emotion-8 {
-  color: #fff;
+  color: #00000;
   fill: currentColor;
 }
 
@@ -2283,8 +2318,8 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
     pointer-events: none;
     background: linear-gradient(
             to right,
-            rgba(184, 0, 0, 0) 0%,
-            rgba(184, 0, 0, 1)
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1)
               100%
           );
   }
@@ -2327,7 +2362,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
     position: absolute;
     bottom: -1px;
     width: 80rem;
-    border-bottom: 0.0625rem solid #EAB3B3;
+    border-bottom: 0.0625rem solid #E6E8EA;
     z-index: -1;
   }
 }
@@ -2339,6 +2374,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   font-weight: 400;
   font-style: normal;
   color: #FDFDFD;
+  color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2372,8 +2408,8 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
-  border-bottom: 0.3125rem solid #FFFFFF;
+  border-bottom: 0.25rem solid #B80000;
+  border-bottom: 0.3125rem solid #B80000;
 }
 
 .emotion-18:focus::after {
@@ -2382,9 +2418,9 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.25rem solid #B80000;
   top: 0;
-  border: 0.25rem solid #FFFFFF;
+  border: 0.25rem solid #B80000;
 }
 
 .emotion-20::after {
@@ -2393,7 +2429,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.25rem solid #B80000;
 }
 
 .emotion-26 {
@@ -2403,6 +2439,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   font-weight: 400;
   font-style: normal;
   color: #FDFDFD;
+  color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2436,7 +2473,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.25rem solid #B80000;
 }
 
 .emotion-26:focus::after {
@@ -2445,13 +2482,13 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.25rem solid #B80000;
   top: 0;
-  border: 0.25rem solid #FFFFFF;
+  border: 0.25rem solid #B80000;
 }
 
 .emotion-64 {
-  background-color: #222222;
+  background-color: #FFFFFF;
   clear: both;
   overflow: hidden;
   height: 0;
@@ -2479,12 +2516,12 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   list-style-type: none;
   margin: 0;
   padding: 0 0.5rem;
-  border-bottom: 0.125rem solid #3F3F42;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-68 {
   padding: 0.75rem 0;
-  border-bottom: 0.0625rem solid #3F3F42;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-68:last-child {
@@ -2498,7 +2535,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FFFFFF;
+  color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -2521,10 +2558,11 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
 .emotion-70:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+  text-decoration-color: #B80000;
 }
 
 .emotion-72 {
-  border-left: 0.25rem solid #FFFFFF;
+  border-left: 0.25rem solid #B80000;
   padding-left: 0.5rem;
 }
 
@@ -2923,8 +2961,14 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
 exports[`Navigation Container should correctly render canonical navigation on non-home navigation page 1`] = `
 .emotion-0 {
   position: relative;
-  background-color: #B80000;
+  background-color: #FFFFFF;
   border-top: 0.0625rem solid #FFFFFF;
+}
+
+@media (max-width: 25rem) {
+  .emotion-0 {
+    border-top: none;
+  }
 }
 
 .emotion-0::after {
@@ -2933,7 +2977,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
   bottom: 0;
   right: 0;
   left: 0;
-  border-bottom: 0.0625rem solid transparent;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-0 .emotion-17::after {
@@ -2944,6 +2988,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
   position: relative;
   max-width: 80rem;
   margin: 0 auto;
+  background-color: #FFFFFF;
 }
 
 .emotion-4 {
@@ -2975,7 +3020,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #FFFFFF;
+  border: 0.25rem solid #B80000;
 }
 
 @media (min-width: 37.5rem) {
@@ -2997,7 +3042,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
 }
 
 .emotion-8 {
-  color: #fff;
+  color: #00000;
   fill: currentColor;
 }
 
@@ -3038,8 +3083,8 @@ exports[`Navigation Container should correctly render canonical navigation on no
     pointer-events: none;
     background: linear-gradient(
             to right,
-            rgba(184, 0, 0, 0) 0%,
-            rgba(184, 0, 0, 1)
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1)
               100%
           );
   }
@@ -3082,7 +3127,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
     position: absolute;
     bottom: -1px;
     width: 80rem;
-    border-bottom: 0.0625rem solid #EAB3B3;
+    border-bottom: 0.0625rem solid #E6E8EA;
     z-index: -1;
   }
 }
@@ -3094,6 +3139,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
   font-weight: 400;
   font-style: normal;
   color: #FDFDFD;
+  color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3127,7 +3173,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.25rem solid #B80000;
 }
 
 .emotion-18:focus::after {
@@ -3136,13 +3182,13 @@ exports[`Navigation Container should correctly render canonical navigation on no
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.25rem solid #B80000;
   top: 0;
-  border: 0.25rem solid #FFFFFF;
+  border: 0.25rem solid #B80000;
 }
 
 .emotion-60 {
-  background-color: #222222;
+  background-color: #FFFFFF;
   clear: both;
   overflow: hidden;
   height: 0;
@@ -3170,12 +3216,12 @@ exports[`Navigation Container should correctly render canonical navigation on no
   list-style-type: none;
   margin: 0;
   padding: 0 0.5rem;
-  border-bottom: 0.125rem solid #3F3F42;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-64 {
   padding: 0.75rem 0;
-  border-bottom: 0.0625rem solid #3F3F42;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-64:last-child {
@@ -3189,7 +3235,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FFFFFF;
+  color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -3212,6 +3258,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
 .emotion-66:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+  text-decoration-color: #B80000;
 }
 
 <div>
@@ -3589,8 +3636,14 @@ exports[`Navigation Container should correctly render canonical navigation on no
 exports[`Navigation Container should correctly render canonical navigation on non-navigation page 1`] = `
 .emotion-0 {
   position: relative;
-  background-color: #B80000;
+  background-color: #FFFFFF;
   border-top: 0.0625rem solid #FFFFFF;
+}
+
+@media (max-width: 25rem) {
+  .emotion-0 {
+    border-top: none;
+  }
 }
 
 .emotion-0::after {
@@ -3599,7 +3652,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
   bottom: 0;
   right: 0;
   left: 0;
-  border-bottom: 0.0625rem solid transparent;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-0 .emotion-17::after {
@@ -3610,6 +3663,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
   position: relative;
   max-width: 80rem;
   margin: 0 auto;
+  background-color: #FFFFFF;
 }
 
 .emotion-4 {
@@ -3641,7 +3695,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #FFFFFF;
+  border: 0.25rem solid #B80000;
 }
 
 @media (min-width: 37.5rem) {
@@ -3663,7 +3717,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
 }
 
 .emotion-8 {
-  color: #fff;
+  color: #00000;
   fill: currentColor;
 }
 
@@ -3704,8 +3758,8 @@ exports[`Navigation Container should correctly render canonical navigation on no
     pointer-events: none;
     background: linear-gradient(
             to right,
-            rgba(184, 0, 0, 0) 0%,
-            rgba(184, 0, 0, 1)
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1)
               100%
           );
   }
@@ -3748,7 +3802,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
     position: absolute;
     bottom: -1px;
     width: 80rem;
-    border-bottom: 0.0625rem solid #EAB3B3;
+    border-bottom: 0.0625rem solid #E6E8EA;
     z-index: -1;
   }
 }
@@ -3760,6 +3814,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
   font-weight: 400;
   font-style: normal;
   color: #FDFDFD;
+  color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3793,7 +3848,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.25rem solid #B80000;
 }
 
 .emotion-18:focus::after {
@@ -3802,13 +3857,13 @@ exports[`Navigation Container should correctly render canonical navigation on no
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.25rem solid #B80000;
   top: 0;
-  border: 0.25rem solid #FFFFFF;
+  border: 0.25rem solid #B80000;
 }
 
 .emotion-60 {
-  background-color: #222222;
+  background-color: #FFFFFF;
   clear: both;
   overflow: hidden;
   height: 0;
@@ -3836,12 +3891,12 @@ exports[`Navigation Container should correctly render canonical navigation on no
   list-style-type: none;
   margin: 0;
   padding: 0 0.5rem;
-  border-bottom: 0.125rem solid #3F3F42;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-64 {
   padding: 0.75rem 0;
-  border-bottom: 0.0625rem solid #3F3F42;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-64:last-child {
@@ -3855,7 +3910,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FFFFFF;
+  color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -3878,6 +3933,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
 .emotion-66:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+  text-decoration-color: #B80000;
 }
 
 <div>
