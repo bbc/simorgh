@@ -58,7 +58,7 @@ const PromoListComponent = ({ promoItems, dir }) => {
         <StoryPromoLi
           key={item.id || item.uri}
           ref={viewRef}
-          promoType="onwardJourneys"
+          promoType="topStories"
         >
           <StoryPromo
             item={item}
@@ -68,7 +68,7 @@ const PromoListComponent = ({ promoItems, dir }) => {
             serviceDatetimeLocale={serviceDatetimeLocale}
             eventTrackingData={eventTrackingData}
             sectionType="top-stories"
-            promoType="onwardJourneys"
+            promoType="topStories"
           />
         </StoryPromoLi>
       ))}

@@ -111,14 +111,16 @@ const TextGridFallBackLeadingStory = dir => `
 const textGridFallbackStyles = {
   top: () => TextGridFallbackTopStory,
   regular: ({ displayImage }) => TextGridFallback(displayImage),
-  onwardJourneys: ({ displayImage }) => TextGridFallback(displayImage),
+  topStories: ({ displayImage }) => TextGridFallback(displayImage),
+  relatedContent: ({ displayImage }) => TextGridFallback(displayImage),
   leading: ({ dir }) => TextGridFallBackLeadingStory(dir),
 };
 
 const textGridStyles = {
   top: () => TextGridColumnsTopStory,
   regular: ({ displayImage }) => TextGridColumns(displayImage),
-  onwardJourneys: ({ displayImage }) => TextGridColumns(displayImage),
+  topStories: ({ displayImage }) => TextGridColumns(displayImage),
+  relatedContent: ({ displayImage }) => TextGridColumns(displayImage),
   leading: () => TextGridColumnsLeadingStory,
 };
 

@@ -10,7 +10,7 @@ import {
 } from 'prop-types';
 import styled from '@emotion/styled';
 import StoryPromo, {
-  OnwardJourneysWrapper,
+  RelatedContentBoxWrapper,
   Headline,
   Summary,
   Link,
@@ -46,7 +46,13 @@ import useCombinedClickTrackerHandler from './useCombinedClickTrackerHandler';
 
 const logger = loggerNode(__filename);
 
-const PROMO_TYPES = ['top', 'regular', 'leading', 'onwardJourneys'];
+const PROMO_TYPES = [
+  'top',
+  'regular',
+  'leading',
+  'topStories',
+  'relatedContent',
+];
 
 const SingleColumnStoryPromo = styled(StoryPromo)`
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
@@ -227,9 +233,7 @@ const StoryPromoContainer = ({
   `;
 
   const BoxWrapper =
-    promoType === 'onwardJourneys' && displayImage
-      ? OnwardJourneysWrapper
-      : React.Fragment;
+    promoType === 'relatedContent' ? RelatedContentBoxWrapper : React.Fragment;
 
   const Info = (
     <BoxWrapper>
@@ -243,6 +247,7 @@ const StoryPromoContainer = ({
         <StyledLink
           href={url}
           onClick={eventTrackingData ? handleClickTracking : null}
+          promoType={promoType}
           // Aria-labelledby a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
           aria-labelledby={linkId}
         >

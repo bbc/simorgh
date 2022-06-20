@@ -66,7 +66,7 @@ const RelatedContentPromoList = ({
             group4: isMediaContent ? 8 : 4,
             group5: isMediaContent ? 8 : 4,
           }}
-          promoType="onwardJourneys"
+          promoType="relatedContent"
           as={isMediaContent ? MediaStoryPromoLi : StoryPromoLi}
           key={item.id || item.uri}
           ref={viewRef}
@@ -80,7 +80,7 @@ const RelatedContentPromoList = ({
             eventTrackingData={eventTrackingData}
             labelId="rel-content"
             imageComponent={imageComponent}
-            promoType="onwardJourneys"
+            promoType="relatedContent"
           />
         </Grid>
       ))}

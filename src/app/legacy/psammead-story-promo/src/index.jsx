@@ -38,7 +38,13 @@ import { grid } from '#legacy/psammead-styles/src/detection';
 import ImageGridItem from './ImageStyles';
 import TextGridItem from './TextStyles';
 
-const PROMO_TYPES = oneOf(['top', 'regular', 'leading', 'onwardJourneys']);
+const PROMO_TYPES = oneOf([
+  'top',
+  'regular',
+  'leading',
+  'topStories',
+  'relatedContent',
+]);
 
 const wrapperTopStyles = `
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
@@ -46,36 +52,39 @@ const wrapperTopStyles = `
   }
 `;
 
-const wrapperOnwardJourneysStyle = ({ displayImage, displayTimestamp }) => `
+const wrapperRelatedContent = `
   background-color: ${C_WHITE};
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     display: block;
   };
-  ${
-    !displayImage &&
-    `
-    padding:  ${
+`;
+
+const wrapperTopStoriesStyle = ({ displayTimestamp }) => `
+  background-color: ${C_WHITE};
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    display: block;
+  };
+  padding:  ${
+    displayTimestamp
+      ? GEL_SPACING
+      : `${GEL_SPACING} ${GEL_SPACING} 0 ${GEL_SPACING}`
+  };
+
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    padding: ${
       displayTimestamp
-        ? GEL_SPACING
-        : `${GEL_SPACING} ${GEL_SPACING} 0 ${GEL_SPACING}`
+        ? `${GEL_SPACING_DBL} ${GEL_SPACING} `
+        : `${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING}`
     };
+  };
 
-    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-      padding: ${
-        displayTimestamp
-          ? `${GEL_SPACING_DBL} ${GEL_SPACING} `
-          : `${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING}`
-      };
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    padding: ${
+      displayTimestamp
+        ? GEL_SPACING_DBL
+        : `${GEL_SPACING_DBL} ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING_DBL}`
     };
-
-    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-      padding: ${
-        displayTimestamp
-          ? GEL_SPACING_DBL
-          : `${GEL_SPACING_DBL} ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING_DBL}`
-      };
-    };`
-  }
+  };
 `;
 
 const wrapperRegularStyles = `
@@ -87,7 +96,8 @@ const wrapperRegularStyles = `
 const wrapperStyles = {
   top: wrapperTopStyles,
   regular: wrapperRegularStyles,
-  onwardJourneys: wrapperOnwardJourneysStyle,
+  topStories: wrapperTopStoriesStyle,
+  relatedContent: wrapperRelatedContent,
   leading: '',
 };
 
@@ -141,7 +151,8 @@ const mediaIndicatorStylesRegular = `
 const mediaIndicatorStyles = {
   top: mediaIndicatorStylesTopLeading,
   regular: mediaIndicatorStylesRegular,
-  onwardJourneys: mediaIndicatorStylesRegular,
+  topStories: mediaIndicatorStylesRegular,
+  relatedContent: mediaIndicatorStylesRegular,
   leading: mediaIndicatorStylesTopLeading,
 };
 
@@ -158,23 +169,21 @@ const headlineLeadingStoryTypography = script => getDoublePica(script);
 const headlineTypography = script => ({
   top: headlineTopStoryTypography(script),
   regular: headlineRegularTypography(script),
-  onwardJourneys: headlineRegularTypography(script),
+  topStories: headlineRegularTypography(script),
+  relatedContent: headlineRegularTypography(script),
   leading: headlineLeadingStoryTypography(script),
 });
 
-export const OnwardJourneysWrapper = styled.div`
-  padding: ${GEL_SPACING};
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    padding: ${GEL_SPACING_DBL};
-  }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding: ${GEL_SPACING} ${GEL_SPACING_DBL};
-  }
-`;
+const headlineColor = {
+  top: C_EBON,
+  regular: C_EBON,
+  topStories: C_GREY_10,
+  relatedContent: C_GREY_10,
+  leading: C_EBON,
+};
 
 export const Headline = styled.h3`
-  color: ${({ promoType }) =>
-    promoType === 'onwardJourneys' ? C_GREY_10 : C_EBON};
+  color: ${({ promoType }) => headlineColor[promoType]};
   margin: 0; /* Reset */
   padding-bottom: ${GEL_SPACING};
   ${({ service }) => getSerifMedium(service)}
@@ -195,6 +204,16 @@ Headline.defaultProps = {
   promoHasImage: true,
   promoType: 'regular',
 };
+
+export const RelatedContentBoxWrapper = styled.div`
+  padding: ${GEL_SPACING};
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    padding: ${GEL_SPACING_DBL};
+  }
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    padding: ${GEL_SPACING} ${GEL_SPACING_DBL};
+  }
+`;
 
 const summaryTopStoryStyles = `
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
@@ -218,7 +237,8 @@ const summaryRegularStyles = `
 const summaryStyles = {
   top: summaryTopStoryStyles,
   regular: summaryRegularStyles,
-  onwardJourneys: summaryRegularStyles,
+  topStories: summaryRegularStyles,
+  relatedContent: summaryRegularStyles,
   leading: summaryRegularStyles,
 };
 
@@ -248,8 +268,7 @@ Summary.defaultProps = {
 
 export const Link = styled.a`
   position: static;
-  color: ${({ promoType }) =>
-    promoType === 'onwardJourneys' ? C_GREY_10 : C_EBON};
+  ${({ promoType }) => `color:${headlineColor[promoType]};`}
   text-decoration: none;
   overflow-wrap: break-word;
 
