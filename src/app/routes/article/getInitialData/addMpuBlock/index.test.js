@@ -4,9 +4,7 @@ import addMpuBlock, { insertMpuBlock } from '.';
 const styInput = {
   metadata: {
     type: 'article',
-    options: {
-      allowAdvertising: true,
-    },
+    allowAdvertising: true,
     locators: {
       assetUri: '/news/media-333256',
     },
@@ -139,9 +137,7 @@ describe('addMpuBlock', () => {
     const expected = {
       metadata: {
         type: 'article',
-        options: {
-          allowAdvertising: true,
-        },
+        allowAdvertising: true,
         locators: {
           assetUri: '/news/media-333256',
         },
@@ -273,6 +269,22 @@ describe('addMpuBlock', () => {
   it('should return input if `isLive` is true', async () => {
     const input = clone(styInput);
     process.env.SIMORGH_APP_ENV = 'live';
+
+    expect(addMpuBlock(input)).toEqual(input);
+  });
+
+  it('should return input if `isLive` is true and `allowAdvertising` is true', async () => {
+    const input = clone(styInput);
+    process.env.SIMORGH_APP_ENV = 'live';
+    input.metadata.allowAdvertising = true;
+
+    expect(addMpuBlock(input)).toEqual(input);
+  });
+
+  it('should return input if `isLive` is false and `allowAdvertising` is false', async () => {
+    const input = clone(styInput);
+    process.env.SIMORGH_APP_ENV = 'test';
+    input.metadata.allowAdvertising = false;
 
     expect(addMpuBlock(input)).toEqual(input);
   });
@@ -479,9 +491,7 @@ describe('addMpuBlock', () => {
     const pageData = {
       metadata: {
         type: 'article',
-        options: {
-          allowAdvertising: true,
-        },
+        allowAdvertising: true,
         locators: {
           assetUri: '/news/media-333256',
         },
@@ -500,9 +510,7 @@ describe('addMpuBlock', () => {
     const pageData = {
       metadata: {
         type: 'article',
-        options: {
-          allowAdvertising: true,
-        },
+        allowAdvertising: true,
         locators: {
           assetUri: '/news/media-333256',
         },
