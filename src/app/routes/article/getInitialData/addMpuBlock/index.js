@@ -89,11 +89,12 @@ export const insertMpuBlock = (blocks, insertIndex) => {
 };
 
 const addMpuBlock = json => {
-  // const { allowAdvertising } = path(['metadata', 'options'], json);
+  const { allowAdvertising } = path(['metadata'], json);
   const pageType = path(['metadata', 'type'], json);
 
-  /* TODO: Remove `isLive` and replace with `allowAdvertisng` or similar when available in Ares */
-  if (isLive() || pageType !== ARTICLE_PAGE) return json;
+  /* TODO: Remove `isLive` checks when editorial are happy with the ads display */
+  if (isLive() || (!isLive() && !allowAdvertising) || pageType !== ARTICLE_PAGE)
+    return json;
 
   const pageData = clone(json);
 
