@@ -16,6 +16,7 @@ import {
 } from '#legacy/gel-foundations/src/spacings';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '#legacy/gel-foundations/src/breakpoints';
@@ -31,6 +32,7 @@ const NavWrapper = styled.div`
   position: relative;
   max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
   margin: 0 auto;
+  background-color: ${C_WHITE};
 `;
 
 const StyledUnorderedList = styled.ul`
@@ -258,7 +260,10 @@ const StyledNav = styled.nav`
         }
       }
     `}
-  border-top: 0.0625rem solid ${C_WHITE};
+    border-top: 0.0625rem solid ${C_WHITE};
+  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    border-top: none;
+  }
 
   &::after {
     content: '';
