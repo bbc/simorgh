@@ -8,12 +8,12 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import isLive from '#lib/utilities/isLive';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
-import { C_LUNAR_LIGHT, C_GREY_3 } from '#legacy/psammead-styles/src/colours';
+import { C_GREY_3 } from '#legacy/psammead-styles/src/colours';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import { leaderboardStyles, mpuStyles } from '../utilities/adSlotStyles';
 
 const AdContainer = styled.section`
-  background-color: ${isLive() ? C_LUNAR_LIGHT : C_GREY_3};
+  background-color: ${C_GREY_3};
   ${({ slotType }) => (slotType === 'mpu' ? mpuStyles : leaderboardStyles)}
 `;
 
