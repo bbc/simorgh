@@ -6,6 +6,7 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
 } from '#legacy/gel-foundations/src/breakpoints';
+import { C_WHITE } from '#legacy/psammead-styles/src/colours';
 
 // Because IE11 can't handle 8-digit hex, need to convert to rgba
 const hexToRGB = (hex, alpha = 1) => {
@@ -66,7 +67,7 @@ export const ScrollableNavigation = ({
   <StyledScrollableNav
     data-e2e="scrollable-nav"
     dir={dir}
-    brandBackgroundColour={brandBackgroundColour}
+    brandBackgroundColour={C_WHITE}
     brandHighlightColour={brandHighlightColour}
     {...props}
   >
