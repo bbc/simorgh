@@ -3,8 +3,6 @@ import { scotland as brandSVG } from '#legacy/psammead-assets/src/svgs';
 import cyrillicAndLatin from '#legacy/gel-foundations/src/scripts/latin-and-cyrillic';
 import {
   F_REITH_SANS_BOLD,
-  F_REITH_SANS_BOLD_ITALIC,
-  F_REITH_SANS_ITALIC,
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
 } from '#legacy/psammead-styles/src/fonts';
@@ -267,13 +265,7 @@ export const service = {
       copyrightText:
         'BBC. The BBC is not responsible for the content of external sites.',
     },
-    fonts: [
-      F_REITH_SANS_BOLD,
-      F_REITH_SANS_BOLD_ITALIC,
-      F_REITH_SANS_ITALIC,
-      F_REITH_SANS_REGULAR,
-      F_REITH_SERIF_MEDIUM,
-    ],
+    fonts: [F_REITH_SANS_BOLD, F_REITH_SANS_REGULAR, F_REITH_SERIF_MEDIUM],
     timezone: 'Europe/London',
   },
 };

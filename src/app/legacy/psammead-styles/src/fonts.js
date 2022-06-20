@@ -93,18 +93,6 @@ export const F_REITH_SANS_REGULAR = baseUrlOverride => `
     font-display: optional;
   }`;
 
-export const F_REITH_SANS_ITALIC = baseUrlOverride => `
-    @font-face {
-    font-family: "ReithSans";
-    src: url("${
-      baseUrlOverride || baseFontUrl
-    }BBCReithSans_W_It.woff2") format("woff2"), url("${
-  baseUrlOverride || baseFontUrl
-}BBCReithSans_W_It.woff") format("woff");
-    font-style: italic;
-    font-display: optional;
-  }`;
-
 export const F_REITH_SANS_BOLD = baseUrlOverride => `
   @font-face {
     font-family: "ReithSans";
@@ -114,19 +102,6 @@ export const F_REITH_SANS_BOLD = baseUrlOverride => `
   baseUrlOverride || baseFontUrl
 }BBCReithSans_W_Bd.woff") format("woff");
     font-weight: 700;
-    font-display: optional;
-  }`;
-
-export const F_REITH_SANS_BOLD_ITALIC = baseUrlOverride => `
-  @font-face {
-    font-family: "ReithSans";
-    src: url("${
-      baseUrlOverride || baseFontUrl
-    }BBCReithSans_W_BdIt.woff2") format("woff2"), url("${
-  baseUrlOverride || baseFontUrl
-}BBCReithSans_W_BdIt.woff") format("woff");
-    font-weight: 700;
-    font-style: italic;
     font-display: optional;
   }`;
 
@@ -164,19 +139,6 @@ export const F_REITH_SANS_MEDIUM = baseUrlOverride => `
   baseUrlOverride || baseFontUrl
 }BBCReithSans_W_Md.woff") format("woff");
     font-weight: 500;
-    font-display: optional;
-  }`;
-
-export const F_REITH_SANS_MEDIUM_ITALIC = baseUrlOverride => `
-  @font-face {
-    font-family: "ReithSans";
-    src: url("${
-      baseUrlOverride || baseFontUrl
-    }BBCReithSans_W_MdIt.woff2") format("woff2"), url("${
-  baseUrlOverride || baseFontUrl
-}BBCReithSans_W_MdIt.woff") format("woff");
-    font-weight: 500;
-    font-style: italic;
     font-display: optional;
   }`;
 
