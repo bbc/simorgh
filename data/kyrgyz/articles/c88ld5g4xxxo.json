@@ -314,7 +314,8 @@
         "types": ["tagging:TagConcept", "core:Thing", "core:Theme"],
         "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz"
       }
-    ]
+    ],
+    "allowAdvertising": true
   },
   "content": {
     "model": {
