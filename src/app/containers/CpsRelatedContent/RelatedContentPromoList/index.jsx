@@ -47,8 +47,8 @@ const RelatedContentPromoList = ({
       columns={{
         group0: 6,
         group1: 6,
-        group2: 6,
-        group3: 6,
+        group2: 8,
+        group3: 8,
         group4: 8,
         group5: 8,
       }}
@@ -61,10 +61,10 @@ const RelatedContentPromoList = ({
           columns={{
             group0: 6,
             group1: 6,
-            group2: 6,
-            group3: 6,
-            group4: isMediaContent ? 8 : 4,
-            group5: isMediaContent ? 8 : 4,
+            group2: 4,
+            group3: 4,
+            group4: 4,
+            group5: 4,
           }}
           promoType="onwardJourneys"
           as={isMediaContent ? MediaStoryPromoLi : StoryPromoLi}
