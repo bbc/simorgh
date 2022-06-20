@@ -1,4 +1,4 @@
-const baseFontUrl = 'https://gel.files.bbci.co.uk/r2.511/';
+const baseFontUrl = 'https://gel.files.bbci.co.uk/r2.512/';
 
 const baseUrlNotoSerifSinhala =
   'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifSinhala/v1.00/';
@@ -50,9 +50,9 @@ export const F_REITH_SERIF_LIGHT = baseUrlOverride => `
     font-family: "ReithSerif";
     src: url("${
       baseUrlOverride || baseFontUrl
-    }BBCReithSerif_W_Lt.woff2") format("woff2"), url("${
+    }subsets/BBCReithSerif_WNumbers_Lt.woff2") format("woff2"), url("${
   baseUrlOverride || baseFontUrl
-}BBCReithSerif_W_Lt.woff") format("woff");
+}subsets/BBCReithSerif_WNumbers_Lt.woff") format("woff");
     font-weight: 300;
     font-display: optional;
   }`;
