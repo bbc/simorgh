@@ -181,15 +181,28 @@ server.get(
       }
 
       const bbcOrigin = headers['bbc-origin'];
-      const result = await renderDocument({
-        bbcOrigin,
-        data,
-        isAmp,
-        routes,
-        service,
-        url,
-        variant,
-      });
+      let result;
+      try {
+        result = await renderDocument({
+          bbcOrigin,
+          data,
+          isAmp,
+          routes,
+          service,
+          url,
+          variant,
+        });
+      } catch {
+        result = await renderDocument({
+          bbcOrigin,
+          data: { error: true },
+          isAmp,
+          routes,
+          service,
+          url,
+          variant,
+        });
+      }
 
       logger.info(ROUTING_INFORMATION, {
         url,
