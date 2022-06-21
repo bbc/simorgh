@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { C_BLACK } from '#legacy/psammead-styles/src/colours';
 
 const svgSize = '2.75rem'; // 44px
 
 const MenuIcon = styled.svg`
-  color: #000000;
+  color: ${C_BLACK};
   fill: currentColor;
 `;
 
