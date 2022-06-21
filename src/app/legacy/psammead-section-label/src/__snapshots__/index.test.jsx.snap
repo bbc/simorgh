@@ -30,6 +30,7 @@ exports[`SectionLabel When hideSectionHeader is true should add styling to hide 
 .emotion-2 {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .emotion-4 {
@@ -165,6 +166,7 @@ exports[`SectionLabel With bar With linking title should render correctly 1`] = 
 .emotion-2 {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .emotion-4 {
@@ -366,6 +368,7 @@ exports[`SectionLabel With bar With linking title should render correctly with a
 .emotion-2 {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .emotion-4 {
@@ -567,6 +570,7 @@ exports[`SectionLabel With bar With linking title should render correctly with e
 .emotion-2 {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .emotion-4 {
@@ -768,6 +772,7 @@ exports[`SectionLabel With bar With linking title should render correctly with e
 .emotion-2 {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .emotion-4 {
@@ -969,6 +974,7 @@ exports[`SectionLabel With bar With plain title should render correctly 1`] = `
 .emotion-2 {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .emotion-4 {
@@ -1104,6 +1110,7 @@ exports[`SectionLabel With bar With plain title should render correctly with ara
 .emotion-2 {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .emotion-4 {
@@ -1239,6 +1246,7 @@ exports[`SectionLabel With bar With plain title should render correctly with exp
 .emotion-2 {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .emotion-4 {
@@ -1374,6 +1382,7 @@ exports[`SectionLabel With bar With plain title should render correctly with exp
 .emotion-2 {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .emotion-4 {
@@ -1509,6 +1518,7 @@ exports[`SectionLabel With bar With plain title should render correctly with mob
 .emotion-2 {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .emotion-4 {
@@ -1644,6 +1654,7 @@ exports[`SectionLabel With heading overriden should render a strong element inst
 .emotion-2 {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .emotion-4 {
@@ -1779,6 +1790,7 @@ exports[`SectionLabel Without bar With linking title should render correctly 1`]
 .emotion-2 {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .emotion-4 {
@@ -1980,6 +1992,7 @@ exports[`SectionLabel Without bar With linking title should render correctly wit
 .emotion-2 {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .emotion-4 {
@@ -2181,6 +2194,7 @@ exports[`SectionLabel Without bar With linking title should render correctly wit
 .emotion-2 {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .emotion-4 {
@@ -2382,6 +2396,7 @@ exports[`SectionLabel Without bar With plain title should render correctly 1`] =
 .emotion-2 {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .emotion-4 {
@@ -2517,6 +2532,7 @@ exports[`SectionLabel Without bar With plain title should render correctly with 
 .emotion-2 {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .emotion-4 {
@@ -2652,6 +2668,7 @@ exports[`SectionLabel Without bar With plain title should render correctly with 
 .emotion-2 {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .emotion-4 {

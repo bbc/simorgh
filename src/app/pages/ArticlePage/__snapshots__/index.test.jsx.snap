@@ -527,6 +527,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 .emotion-23 {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .emotion-25 {
@@ -3679,6 +3680,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
 .emotion-23 {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .emotion-25 {

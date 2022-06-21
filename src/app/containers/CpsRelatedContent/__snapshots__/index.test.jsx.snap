@@ -230,6 +230,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 .emotion-9 {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .emotion-11 {
@@ -1141,6 +1142,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 .emotion-9 {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .emotion-11 {

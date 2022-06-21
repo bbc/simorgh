@@ -3092,6 +3092,7 @@ exports[`Media Asset Page should render component 1`] = `
 .emotion-233 {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .emotion-235 {

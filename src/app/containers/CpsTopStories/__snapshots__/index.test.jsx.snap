@@ -230,6 +230,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 .emotion-9 {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .emotion-11 {
@@ -861,6 +862,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 .emotion-9 {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .emotion-11 {

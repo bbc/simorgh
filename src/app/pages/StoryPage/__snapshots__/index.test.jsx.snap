@@ -1619,6 +1619,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 .emotion-193 {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .emotion-195 {
@@ -5358,6 +5359,7 @@ exports[`Story Page should render correctly when the secondary column data is no
 .emotion-192 {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .emotion-194 {
@@ -8502,6 +8504,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 .emotion-194 {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .emotion-196 {
