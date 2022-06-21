@@ -210,7 +210,6 @@ exports[`ScrollablePromo it should match a11y snapshot for list 1`] = `
 
 .emotion-10 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -463,7 +462,6 @@ exports[`ScrollablePromo it should match a11y snapshot for list with no title 1`
 
 .emotion-6 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -703,7 +701,6 @@ exports[`ScrollablePromo it should match a11y snapshot for single card 1`] = `
 
 .emotion-8 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;

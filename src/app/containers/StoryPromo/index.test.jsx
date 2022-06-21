@@ -523,12 +523,12 @@ describe('StoryPromo Container', () => {
   });
 
   describe.only('given the promo is used to render an onward Journey', () => {
-    it('should render onwardJourney with no images correctly in Canonical', () => {
+    it('should render topStories correctly in Canonical', () => {
       const { getByRole, container } = render(
         <WrappedStoryPromo
           platform="canonical"
           item={fixtures.onwardJourneyWithoutImage}
-          promoType="onwardJourneys"
+          promoType="topStories"
         />,
       );
       const heading = getByRole('heading');
@@ -537,12 +537,12 @@ describe('StoryPromo Container', () => {
       expect(time.length).toEqual(1);
     });
 
-    it('should render onwardJourney with no images correctly in AMP', () => {
+    it('should render top Stories  correctly in AMP', () => {
       const { getByRole, container } = render(
         <WrappedStoryPromo
           platform="amp"
           item={fixtures.onwardJourneyWithoutImage}
-          promoType="onwardJourneys"
+          promoType="topStories"
         />,
       );
       const heading = getByRole('heading');
@@ -551,13 +551,13 @@ describe('StoryPromo Container', () => {
       expect(time.length).toEqual(1);
     });
 
-    it('should render onwardJourney with images correctly in Canonical', () => {
+    it('should render related content correctly in Canonical', () => {
       const { getByRole, container } = render(
         <WrappedStoryPromo
           platform="canonical"
           item={fixtures.onwardJourney}
           lazyLoadImage={false}
-          promoType="onwardJourneys"
+          promoType="relatedContent"
         />,
       );
       const heading = getByRole('heading');
@@ -568,13 +568,13 @@ describe('StoryPromo Container', () => {
       expect(image.length).toEqual(1);
     });
 
-    it('should render onwardJourney with images correctly in AMP', () => {
+    it('should render related Content correctly in AMP', () => {
       const { getByRole, container } = render(
         <WrappedStoryPromo
           platform="amp"
           item={fixtures.onwardJourney}
           lazyLoadImage={false}
-          promoType="onwardJourneys"
+          promoType="relatedContent"
         />,
       );
       const heading = getByRole('heading');

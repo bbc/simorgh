@@ -49,7 +49,6 @@ exports[`ProgramCard should render correctly for live 1`] = `
 
 .emotion-6 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -647,7 +646,6 @@ exports[`ProgramCard should render correctly for onDemand 1`] = `
 
 .emotion-6 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -943,7 +941,6 @@ exports[`ProgramCard should render correctly in RTL 1`] = `
 
 .emotion-6 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -1239,7 +1236,6 @@ exports[`ProgramCard should render correctly without summary 1`] = `
 
 .emotion-6 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;

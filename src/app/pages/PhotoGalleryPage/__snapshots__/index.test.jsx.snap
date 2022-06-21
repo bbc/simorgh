@@ -5328,16 +5328,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
     .emotion-220 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
       grid-column-gap: 0.5rem;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
     .emotion-220 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
   }
@@ -5361,6 +5361,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 .emotion-223 {
   padding: 0.5rem 0 1rem;
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-223 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
 }
 
 .emotion-223:last-child {
@@ -5393,6 +5399,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   padding-bottom: 0;
 }
 
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-223:last-child {
+    padding-top: 0;
+  }
+}
+
 @supports (display: grid) {
   .emotion-223 {
     display: block;
@@ -5416,15 +5428,15 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
     .emotion-223 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-end: span 4;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
     .emotion-223 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-end: span 4;
     }
   }
 
@@ -5461,7 +5473,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
     }
   }
 
-  @media (min-width: 63rem) {
+  @media (min-width: 25rem) {
     .emotion-225 {
       display: block;
     }
@@ -5472,20 +5484,13 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   display: inline-block;
   vertical-align: top;
   position: relative;
-  width: 33.33%;
-}
-
-@media (min-width: 63rem) {
-  .emotion-227 {
-    display: block;
-    width: 100%;
-  }
+  width: 100%;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   .emotion-227 {
     width: initial;
-    grid-column: 1/span 2;
+    width: 100%;
   }
 }
 
@@ -5565,7 +5570,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 .emotion-239 {
-  color: #141414;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5573,6 +5577,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+  color: #141414;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -5589,12 +5594,18 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 }
 
+@media (max-width: 62.9375rem) {
+  .emotion-239 {
+    padding: 0;
+  }
+}
+
 .emotion-241 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  color: #141414;
   overflow-wrap: anywhere;
 }
 
@@ -5618,6 +5629,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 .emotion-241:visited {
   color: #6E6E73;
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-241 {
+    padding: 0;
+  }
 }
 
 .emotion-244 {
@@ -9674,16 +9691,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
     .emotion-434 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
       grid-column-gap: 0.5rem;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
     .emotion-434 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
   }
@@ -9707,6 +9724,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 .emotion-437 {
   padding: 0.5rem 0 1rem;
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-437 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
 }
 
 .emotion-437:last-child {
@@ -9739,6 +9762,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   padding-bottom: 0;
 }
 
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-437:last-child {
+    padding-top: 0;
+  }
+}
+
 @supports (display: grid) {
   .emotion-437 {
     display: block;
@@ -9762,15 +9791,15 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
     .emotion-437 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-end: span 4;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
     .emotion-437 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-end: span 4;
     }
   }
 
@@ -9807,7 +9836,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
     }
   }
 
-  @media (min-width: 63rem) {
+  @media (min-width: 25rem) {
     .emotion-439 {
       display: block;
     }
@@ -9818,20 +9847,13 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   display: inline-block;
   vertical-align: top;
   position: relative;
-  width: 33.33%;
-}
-
-@media (min-width: 63rem) {
-  .emotion-441 {
-    display: block;
-    width: 100%;
-  }
+  width: 100%;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   .emotion-441 {
     width: initial;
-    grid-column: 1/span 2;
+    width: 100%;
   }
 }
 
@@ -9911,7 +9933,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 .emotion-453 {
-  color: #141414;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -9919,6 +9940,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+  color: #141414;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -9935,12 +9957,18 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
+@media (max-width: 62.9375rem) {
+  .emotion-453 {
+    padding: 0;
+  }
+}
+
 .emotion-455 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  color: #141414;
   overflow-wrap: anywhere;
 }
 
@@ -9964,6 +9992,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 .emotion-455:visited {
   color: #6E6E73;
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-455 {
+    padding: 0;
+  }
 }
 
 .emotion-458 {

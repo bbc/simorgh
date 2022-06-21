@@ -79,7 +79,7 @@ const PromoComponent = ({ promo, dir }) => {
         serviceDatetimeLocale={serviceDatetimeLocale}
         eventTrackingData={eventTrackingData}
         sectionType="top-stories"
-        promoType="onwardJourneys"
+        promoType="topStories"
       />
     </div>
   );

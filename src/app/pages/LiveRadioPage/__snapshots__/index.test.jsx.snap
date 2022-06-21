@@ -1345,7 +1345,6 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 
 .emotion-63 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;

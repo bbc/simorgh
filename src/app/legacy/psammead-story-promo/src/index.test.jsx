@@ -172,13 +172,40 @@ describe('StoryPromo - Top Story', () => {
   });
 });
 
-describe('StoryPromo - OnwardJourney Top Story', () => {
-  it('should render correctly', () => {
+describe('StoryPromo - OnwardJourney Top Story & Related Content', () => {
+  it('should render Top Story correctly', () => {
+    const { container, getByRole } = render(
+      <StoryPromo
+        info={Info({ promoType: 'topStories' })}
+        promoType="topStories"
+      />,
+    );
+    const heading = getByRole('heading');
+    const time = container.getElementsByTagName('time');
+    expect(heading).toBeInTheDocument();
+    expect(time.length).toEqual(1);
+  });
+
+  it('should render top Stories with Media Indicator correctly', () => {
+    const { container } = render(
+      <StoryPromo
+        image={Image}
+        info={Info({ promoType: 'topStories' })}
+        promoType="topStories"
+        mediaIndicator={<MediaInfo />}
+      />,
+    );
+
+    const svg = container.getElementsByTagName('svg');
+    expect(svg.length).toEqual(1);
+  });
+
+  it('should render related content correctly', () => {
     const { container, getByRole } = render(
       <StoryPromo
         image={Image}
-        info={Info({ promoType: 'onwardJourneys' })}
-        promoType="onwardJourneys"
+        info={Info({ promoType: 'relatedContent' })}
+        promoType="relatedContent"
       />,
     );
     const heading = getByRole('heading');
@@ -189,12 +216,12 @@ describe('StoryPromo - OnwardJourney Top Story', () => {
     expect(image.length).toEqual(1);
   });
 
-  it('should render with Media Indicator correctly', () => {
+  it('should render related content with Media Indicator correctly', () => {
     const { container } = render(
       <StoryPromo
         image={Image}
-        info={Info({ promoType: 'onwardJourneys' })}
-        promoType="onwardJourneys"
+        info={Info({ promoType: 'relatedContent' })}
+        promoType="relatedContent"
         mediaIndicator={<MediaInfo />}
       />,
     );

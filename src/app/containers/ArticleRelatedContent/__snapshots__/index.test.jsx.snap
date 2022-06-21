@@ -257,7 +257,7 @@ exports[`ArticleRelatedContent should render related content 1`] = `
     }
   }
 
-  @media (min-width: 63rem) {
+  @media (min-width: 25rem) {
     .emotion-22 {
       display: block;
     }
@@ -268,20 +268,13 @@ exports[`ArticleRelatedContent should render related content 1`] = `
   display: inline-block;
   vertical-align: top;
   position: relative;
-  width: 33.33%;
-}
-
-@media (min-width: 63rem) {
-  .emotion-24 {
-    display: block;
-    width: 100%;
-  }
+  width: 100%;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   .emotion-24 {
     width: initial;
-    grid-column: 1/span 2;
+    width: 100%;
   }
 }
 
@@ -389,7 +382,6 @@ exports[`ArticleRelatedContent should render related content 1`] = `
 }
 
 .emotion-36 {
-  color: #141414;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -397,6 +389,7 @@ exports[`ArticleRelatedContent should render related content 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+  color: #141414;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -413,12 +406,18 @@ exports[`ArticleRelatedContent should render related content 1`] = `
   }
 }
 
+@media (max-width: 62.9375rem) {
+  .emotion-36 {
+    padding: 0;
+  }
+}
+
 .emotion-38 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  color: #141414;
   overflow-wrap: anywhere;
 }
 
@@ -442,6 +441,12 @@ exports[`ArticleRelatedContent should render related content 1`] = `
 
 .emotion-38:visited {
   color: #6E6E73;
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-38 {
+    padding: 0;
+  }
 }
 
 <div>

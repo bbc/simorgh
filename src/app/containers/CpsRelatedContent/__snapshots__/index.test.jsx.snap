@@ -386,16 +386,16 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
     .emotion-22 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
       grid-column-gap: 0.5rem;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
     .emotion-22 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
   }
@@ -419,6 +419,12 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 
 .emotion-25 {
   padding: 0.5rem 0 1rem;
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-25 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
 }
 
 .emotion-25:last-child {
@@ -451,6 +457,12 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   padding-bottom: 0;
 }
 
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-25:last-child {
+    padding-top: 0;
+  }
+}
+
 @supports (display: grid) {
   .emotion-25 {
     display: block;
@@ -474,15 +486,15 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
     .emotion-25 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-end: span 4;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
     .emotion-25 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-end: span 4;
     }
   }
 
@@ -519,7 +531,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
     }
   }
 
-  @media (min-width: 63rem) {
+  @media (min-width: 25rem) {
     .emotion-27 {
       display: block;
     }
@@ -530,20 +542,13 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   display: inline-block;
   vertical-align: top;
   position: relative;
-  width: 33.33%;
-}
-
-@media (min-width: 63rem) {
-  .emotion-29 {
-    display: block;
-    width: 100%;
-  }
+  width: 100%;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   .emotion-29 {
     width: initial;
-    grid-column: 1/span 2;
+    width: 100%;
   }
 }
 
@@ -651,7 +656,6 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 }
 
 .emotion-41 {
-  color: #141414;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -659,6 +663,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+  color: #141414;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -675,12 +680,18 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   }
 }
 
+@media (max-width: 62.9375rem) {
+  .emotion-41 {
+    padding: 0;
+  }
+}
+
 .emotion-43 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  color: #141414;
   overflow-wrap: anywhere;
 }
 
@@ -704,6 +715,12 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 
 .emotion-43:visited {
   color: #6E6E73;
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-43 {
+    padding: 0;
+  }
 }
 
 .emotion-46 {
@@ -1420,7 +1437,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
     }
   }
 
-  @media (min-width: 63rem) {
+  @media (min-width: 25rem) {
     .emotion-25 {
       display: block;
     }
@@ -1431,20 +1448,13 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   display: inline-block;
   vertical-align: top;
   position: relative;
-  width: 33.33%;
-}
-
-@media (min-width: 63rem) {
-  .emotion-27 {
-    display: block;
-    width: 100%;
-  }
+  width: 100%;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   .emotion-27 {
     width: initial;
-    grid-column: 1/span 2;
+    width: 100%;
   }
 }
 
@@ -1552,7 +1562,6 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 }
 
 .emotion-39 {
-  color: #141414;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1560,6 +1569,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+  color: #141414;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1576,12 +1586,18 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   }
 }
 
+@media (max-width: 62.9375rem) {
+  .emotion-39 {
+    padding: 0;
+  }
+}
+
 .emotion-41 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  color: #141414;
   overflow-wrap: anywhere;
 }
 
@@ -1605,6 +1621,12 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 
 .emotion-41:visited {
   color: #6E6E73;
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-41 {
+    padding: 0;
+  }
 }
 
 .emotion-43 {

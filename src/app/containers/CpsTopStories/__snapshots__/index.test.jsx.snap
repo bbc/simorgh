@@ -360,23 +360,39 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   padding: 0;
 }
 
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-21 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 1.5rem;
+    gap: 1rem;
+  }
+}
+
 .emotion-23 {
-  padding: 0.5rem 0 1rem;
+  padding: 0 0 1rem;
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-23 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
 }
 
 .emotion-23:last-child {
   border: none;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
   .emotion-23 {
-    padding: 1rem 0 1rem;
+    padding: 0;
+    background-color: white;
   }
 }
 
 @media (min-width: 63rem) {
   .emotion-23 {
-    padding: 0 0 1.5rem;
+    padding: 0 0 1rem;
   }
 }
 
@@ -386,12 +402,18 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
   .emotion-23:first-child {
-    padding-top: 1rem;
+    padding: 0;
   }
 }
 
 .emotion-23:last-child {
   padding-bottom: 0;
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-23:last-child {
+    padding: 0;
+  }
 }
 
 .emotion-25 {
@@ -484,7 +506,6 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 }
 
 .emotion-29 {
-  color: #141414;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -493,6 +514,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   font-size: 0.9375rem;
   line-height: 1.25rem;
   display: inline-block;
+  color: #141414;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -511,10 +533,10 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 
 .emotion-31 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  color: #141414;
   overflow-wrap: anywhere;
 }
 
@@ -610,6 +632,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
       >
         <li
           class="emotion-23 emotion-24"
+          role="listitem"
         >
           <div
             class="emotion-25 emotion-26"
@@ -645,6 +668,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
         </li>
         <li
           class="emotion-23 emotion-24"
+          role="listitem"
         >
           <div
             class="emotion-25 emotion-26"
@@ -1140,7 +1164,6 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 }
 
 .emotion-27 {
-  color: #141414;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1149,6 +1172,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   font-size: 0.9375rem;
   line-height: 1.25rem;
   display: inline-block;
+  color: #141414;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1167,10 +1191,10 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 
 .emotion-29 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  color: #141414;
   overflow-wrap: anywhere;
 }
 

@@ -71,7 +71,6 @@ exports[`StoryPromo - Leading Story should render correctly 1`] = `
 }
 
 .emotion-4 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -79,6 +78,7 @@ exports[`StoryPromo - Leading Story should render correctly 1`] = `
   font-style: normal;
   font-size: 1.125rem;
   line-height: 1.375rem;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -97,7 +97,6 @@ exports[`StoryPromo - Leading Story should render correctly 1`] = `
 
 .emotion-6 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -326,7 +325,6 @@ exports[`StoryPromo - Leading Story should render with Media Indicator correctly
 }
 
 .emotion-4 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -334,6 +332,7 @@ exports[`StoryPromo - Leading Story should render with Media Indicator correctly
   font-style: normal;
   font-size: 1.125rem;
   line-height: 1.375rem;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -352,7 +351,6 @@ exports[`StoryPromo - Leading Story should render with Media Indicator correctly
 
 .emotion-6 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -689,7 +687,6 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
 }
 
 .emotion-8 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -697,6 +694,7 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -715,7 +713,6 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
 
 .emotion-10 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -950,7 +947,6 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
 }
 
 .emotion-8 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -958,6 +954,7 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -976,7 +973,6 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
 
 .emotion-10 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -1211,7 +1207,6 @@ exports[`StoryPromo should render correctly 1`] = `
 }
 
 .emotion-8 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -1219,6 +1214,7 @@ exports[`StoryPromo should render correctly 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1237,7 +1233,6 @@ exports[`StoryPromo should render correctly 1`] = `
 
 .emotion-10 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -1504,7 +1499,6 @@ exports[`StoryPromo with Media Indicator should render a RTL promo with media in
 }
 
 .emotion-18 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -1512,6 +1506,7 @@ exports[`StoryPromo with Media Indicator should render a RTL promo with media in
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1530,7 +1525,6 @@ exports[`StoryPromo with Media Indicator should render a RTL promo with media in
 
 .emotion-20 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -1829,7 +1823,6 @@ exports[`StoryPromo with Media Indicator should render correctly 1`] = `
 }
 
 .emotion-18 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -1837,6 +1830,7 @@ exports[`StoryPromo with Media Indicator should render correctly 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1855,7 +1849,6 @@ exports[`StoryPromo with Media Indicator should render correctly 1`] = `
 
 .emotion-20 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;

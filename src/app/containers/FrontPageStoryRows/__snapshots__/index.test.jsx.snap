@@ -221,7 +221,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 
 .emotion-13 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -610,7 +609,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 }
 
 .emotion-46 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -618,6 +616,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.5rem;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -636,10 +635,10 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 
 .emotion-48 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  color: #222222;
   overflow-wrap: anywhere;
 }
 
@@ -1071,7 +1070,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 }
 
 .emotion-7 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -1079,6 +1077,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
   font-style: normal;
   font-size: 1.125rem;
   line-height: 1.375rem;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1097,10 +1096,10 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 
 .emotion-9 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  color: #222222;
   overflow-wrap: anywhere;
 }
 
@@ -1472,7 +1471,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 }
 
 .emotion-43 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -1480,6 +1478,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1914,7 +1913,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 
 .emotion-13 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -2213,7 +2211,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 }
 
 .emotion-46 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -2221,6 +2218,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.5rem;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2239,10 +2237,10 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 
 .emotion-48 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  color: #222222;
   overflow-wrap: anywhere;
 }
 
@@ -2869,7 +2867,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
 }
 
 .emotion-15 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -2877,6 +2874,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2895,10 +2893,10 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
 
 .emotion-17 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  color: #222222;
   overflow-wrap: anywhere;
 }
 
@@ -3534,7 +3532,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 
 .emotion-13 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -3806,7 +3803,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 }
 
 .emotion-38 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -3815,6 +3811,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   font-size: 0.9375rem;
   line-height: 1.5rem;
   display: inline-block;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -3833,10 +3830,10 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 
 .emotion-40 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  color: #222222;
   overflow-wrap: anywhere;
 }
 
@@ -4360,7 +4357,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 }
 
 .emotion-7 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -4369,6 +4365,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
   font-size: 0.9375rem;
   line-height: 1.25rem;
   display: inline-block;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -4387,10 +4384,10 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 
 .emotion-9 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  color: #222222;
   overflow-wrap: anywhere;
 }
 
@@ -4967,7 +4964,6 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
 
 .emotion-13 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -5438,7 +5434,6 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
 }
 
 .emotion-15 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -5446,6 +5441,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
   font-style: normal;
   font-size: 1.25rem;
   line-height: 1.5rem;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -5464,10 +5460,10 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
 
 .emotion-17 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  color: #222222;
   overflow-wrap: anywhere;
 }
 

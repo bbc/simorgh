@@ -410,7 +410,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 .emotion-39 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -418,6 +417,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   font-style: normal;
   font-size: 1.25rem;
   line-height: 1.75rem;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -436,10 +436,10 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 .emotion-41 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  color: #222222;
   overflow-wrap: anywhere;
 }
 
@@ -1053,7 +1053,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 .emotion-126 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1061,6 +1060,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.5rem;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1803,7 +1803,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 .emotion-330 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -4921,7 +4920,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 .emotion-39 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -4929,6 +4927,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   font-style: normal;
   font-size: 1.25rem;
   line-height: 1.5rem;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -4947,10 +4946,10 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 
 .emotion-41 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  color: #222222;
   overflow-wrap: anywhere;
 }
 
@@ -5442,7 +5441,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 .emotion-86 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5450,6 +5448,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   font-style: normal;
   font-size: 1.125rem;
   line-height: 1.375rem;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -5793,7 +5792,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 .emotion-118 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5801,6 +5799,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {

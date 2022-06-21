@@ -76,7 +76,7 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
     }
   }
 
-  @media (min-width: 63rem) {
+  @media (min-width: 25rem) {
     .emotion-2 {
       display: block;
     }
@@ -87,20 +87,13 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
   display: inline-block;
   vertical-align: top;
   position: relative;
-  width: 33.33%;
-}
-
-@media (min-width: 63rem) {
-  .emotion-4 {
-    display: block;
-    width: 100%;
-  }
+  width: 100%;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   .emotion-4 {
     width: initial;
-    grid-column: 1/span 2;
+    width: 100%;
   }
 }
 
@@ -208,7 +201,6 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
 }
 
 .emotion-16 {
-  color: #141414;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -216,6 +208,7 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+  color: #141414;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -232,12 +225,18 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
   }
 }
 
+@media (max-width: 62.9375rem) {
+  .emotion-16 {
+    padding: 0;
+  }
+}
+
 .emotion-18 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  color: #141414;
   overflow-wrap: anywhere;
 }
 
@@ -261,6 +260,12 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
 
 .emotion-18:visited {
   color: #6E6E73;
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-18 {
+    padding: 0;
+  }
 }
 
 .emotion-20 {

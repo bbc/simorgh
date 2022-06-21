@@ -131,7 +131,6 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
 
 .emotion-10 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -515,7 +514,6 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
 
 .emotion-10 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -893,7 +891,6 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
 
 .emotion-10 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -1262,7 +1259,6 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
 
 .emotion-10 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -1628,7 +1624,6 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
 
 .emotion-10 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;

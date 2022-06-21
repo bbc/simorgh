@@ -522,7 +522,6 @@ HTMLCollection [
 }
 
 .emotion-39 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -530,6 +529,7 @@ HTMLCollection [
   font-style: normal;
   font-size: 1.25rem;
   line-height: 1.5rem;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -548,10 +548,10 @@ HTMLCollection [
 
 .emotion-41 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  color: #222222;
   overflow-wrap: anywhere;
 }
 
@@ -878,7 +878,6 @@ HTMLCollection [
 }
 
 .emotion-63 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -886,6 +885,7 @@ HTMLCollection [
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1866,7 +1866,6 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 .emotion-41 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -1874,6 +1873,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
   font-style: normal;
   font-size: 1.25rem;
   line-height: 1.5rem;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1892,10 +1892,10 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 
 .emotion-43 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  color: #222222;
   overflow-wrap: anywhere;
 }
 
@@ -2222,7 +2222,6 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 .emotion-65 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -2230,6 +2229,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -3113,7 +3113,6 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 }
 
 .emotion-26 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -3121,6 +3120,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
   font-style: normal;
   font-size: 1.125rem;
   line-height: 1.375rem;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -3139,10 +3139,10 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 
 .emotion-28 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  color: #222222;
   overflow-wrap: anywhere;
 }
 
@@ -3561,7 +3561,6 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 }
 
 .emotion-58 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -3569,6 +3568,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -4091,7 +4091,6 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
 }
 
 .emotion-35 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -4099,6 +4098,7 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
   font-style: normal;
   font-size: 1.25rem;
   line-height: 1.5rem;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -4117,10 +4117,10 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
 
 .emotion-37 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  color: #222222;
   overflow-wrap: anywhere;
 }
 
@@ -4803,7 +4803,6 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 }
 
 .emotion-32 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -4811,6 +4810,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
   font-style: normal;
   font-size: 1.25rem;
   line-height: 1.5rem;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -4829,10 +4829,10 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 
 .emotion-34 {
   position: static;
-  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  color: #222222;
   overflow-wrap: anywhere;
 }
 
@@ -5159,7 +5159,6 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 }
 
 .emotion-56 {
-  color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -5167,6 +5166,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+  color: #222222;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
