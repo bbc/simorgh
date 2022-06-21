@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
 import {
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MAX,
@@ -28,6 +29,10 @@ const ImageGridColumnsTopStory = `
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     grid-column: 1 / span 3;
   }
+`;
+
+const ImageGridColumnsRelatedContent = `
+  width: 100%;
 `;
 
 const ImageGridColumns = `
@@ -94,7 +99,7 @@ const imageGridStyles = {
   top: ImageGridColumnsTopStory,
   regular: ImageGridColumns,
   topStories: ImageGridColumns,
-  relatedContent: ImageGridColumns,
+  relatedContent: ImageGridColumnsRelatedContent,
   leading: ImageGridColumnsLeadingStory,
 };
 
@@ -102,7 +107,7 @@ const imageGridFallbackStyles = {
   top: () => ImageGridFallbackTopStory,
   regular: () => ImageGridFallback,
   topStories: () => ImageGridFallback,
-  relatedContent: () => ImageGridFallback,
+  relatedContent: () => ImageGridColumnsRelatedContent,
   leading: dir => ImageGridFallbackLeadingStory(dir),
 };
 

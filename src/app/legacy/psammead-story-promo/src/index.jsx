@@ -54,7 +54,7 @@ const wrapperTopStyles = `
 
 const wrapperRelatedContent = `
   background-color: ${C_WHITE};
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     display: block;
   };
 `;

@@ -6,7 +6,11 @@ import {
   StoryPromoLi,
   StoryPromoUl,
 } from '#legacy/psammead-story-promo-list/src';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
+import {
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MAX,
+} from '#legacy/gel-foundations/src/breakpoints';
 import { GEL_SPACING_DBL } from '#legacy/gel-foundations/src/spacings';
 import { C_LUNAR } from '#legacy/psammead-styles/src/colours';
 import { storyItem } from '#models/propTypes/storyItem';
@@ -18,6 +22,14 @@ const MediaStoryPromoLi = styled(StoryPromoLi)`
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     border-bottom: 0.0625rem solid ${C_LUNAR};
     padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING_DBL};
+  }
+`;
+
+const ContentPromoLi = styled(StoryPromoLi)`
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    &:last-child {
+      padding-top: 0;
+    }
   }
 `;
 
@@ -47,8 +59,8 @@ const RelatedContentPromoList = ({
       columns={{
         group0: 6,
         group1: 6,
-        group2: 6,
-        group3: 6,
+        group2: 8,
+        group3: 8,
         group4: 8,
         group5: 8,
       }}
@@ -61,13 +73,13 @@ const RelatedContentPromoList = ({
           columns={{
             group0: 6,
             group1: 6,
-            group2: 6,
-            group3: 6,
-            group4: isMediaContent ? 8 : 4,
-            group5: isMediaContent ? 8 : 4,
+            group2: 4,
+            group3: 4,
+            group4: 4,
+            group5: 4,
           }}
           promoType="relatedContent"
-          as={isMediaContent ? MediaStoryPromoLi : StoryPromoLi}
+          as={isMediaContent ? MediaStoryPromoLi : ContentPromoLi}
           key={item.id || item.uri}
           ref={viewRef}
         >
