@@ -1,12 +1,23 @@
 import React, { useContext } from 'react';
+import styled from '@emotion/styled';
 import { arrayOf, shape, number, oneOf, oneOfType, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 
 import {
-  StoryPromoLi,
+  StoryPromoLiBase,
   StoryPromoUl,
 } from '#legacy/psammead-story-promo-list/src';
 
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+} from '#legacy/gel-foundations/src/spacings';
+import {
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '#legacy/gel-foundations/src/breakpoints';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useViewTracker from '#hooks/useViewTracker';
@@ -18,6 +29,42 @@ const eventTrackingData = {
     componentName: 'top-stories',
   },
 };
+
+const GridStoryPromoUl = styled(StoryPromoUl)`
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: ${GEL_SPACING_TRPL};
+    gap: ${GEL_SPACING_DBL};
+  }
+`;
+
+const LayouStoryPromoLi = styled(StoryPromoLiBase)`
+  padding: 0 0 ${GEL_SPACING_DBL};
+
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    padding: 0;
+    background-color: white;
+  }
+
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    padding: 0 0 ${GEL_SPACING_DBL};
+  }
+  &:first-child {
+    padding-top: 0;
+
+    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+      padding: 0;
+    }
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+      padding: 0;
+    }
+  }
+`;
 
 const PromoComponent = ({ promo, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
@@ -53,9 +100,9 @@ const PromoListComponent = ({ promoItems, dir }) => {
   const viewRef = useViewTracker(eventTrackingData.block);
 
   return (
-    <StoryPromoUl>
+    <GridStoryPromoUl>
       {promoItems.map(item => (
-        <StoryPromoLi
+        <LayouStoryPromoLi
           key={item.id || item.uri}
           ref={viewRef}
           promoType="topStories"
@@ -70,9 +117,9 @@ const PromoListComponent = ({ promoItems, dir }) => {
             sectionType="top-stories"
             promoType="topStories"
           />
-        </StoryPromoLi>
+        </LayouStoryPromoLi>
       ))}
-    </StoryPromoUl>
+    </GridStoryPromoUl>
   );
 };
 
