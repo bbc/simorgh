@@ -90,6 +90,12 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   fill: currentColor;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-6 {
+    fill: linkText;
+  }
+}
+
 .emotion-10 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -881,6 +887,12 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   fill: currentColor;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-6 {
+    fill: linkText;
+  }
+}
+
 .emotion-10 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -1582,6 +1594,12 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   fill: currentColor;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-6 {
+    fill: linkText;
+  }
+}
+
 .emotion-10 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -2279,6 +2297,12 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
 .emotion-8 {
   color: #000000;
   fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-8 {
+    fill: linkText;
+  }
 }
 
 .emotion-10 {
@@ -3046,6 +3070,12 @@ exports[`Navigation Container should correctly render canonical navigation on no
   fill: currentColor;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-8 {
+    fill: linkText;
+  }
+}
+
 .emotion-10 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -3719,6 +3749,12 @@ exports[`Navigation Container should correctly render canonical navigation on no
 .emotion-8 {
   color: #000000;
   fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-8 {
+    fill: linkText;
+  }
 }
 
 .emotion-10 {

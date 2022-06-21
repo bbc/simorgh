@@ -516,6 +516,12 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   fill: currentColor;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-39 {
+    fill: linkText;
+  }
+}
+
 @media (max-width: 37.4375rem) {
   .emotion-43 {
     white-space: nowrap;

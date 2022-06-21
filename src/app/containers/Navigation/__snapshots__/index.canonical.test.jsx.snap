@@ -88,6 +88,12 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
   fill: currentColor;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-8 {
+    fill: linkText;
+  }
+}
+
 .emotion-10 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);

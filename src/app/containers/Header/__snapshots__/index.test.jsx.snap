@@ -501,6 +501,12 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   fill: currentColor;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-37 {
+    fill: linkText;
+  }
+}
+
 @media (max-width: 37.4375rem) {
   .emotion-41 {
     white-space: nowrap;
@@ -1620,6 +1626,12 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   fill: currentColor;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-37 {
+    fill: linkText;
+  }
+}
+
 @media (max-width: 37.4375rem) {
   .emotion-41 {
     white-space: nowrap;
@@ -2737,6 +2749,12 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 .emotion-37 {
   color: #000000;
   fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-37 {
+    fill: linkText;
+  }
 }
 
 @media (max-width: 37.4375rem) {

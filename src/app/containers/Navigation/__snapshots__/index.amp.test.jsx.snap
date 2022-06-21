@@ -90,6 +90,12 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   fill: currentColor;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-6 {
+    fill: linkText;
+  }
+}
+
 .emotion-10 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);

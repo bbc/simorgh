@@ -52,6 +52,12 @@ exports[`AMP Menu Button should render correctly 1`] = `
   fill: currentColor;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-2 {
+    fill: linkText;
+  }
+}
+
 .emotion-6 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -168,6 +174,12 @@ exports[`AMP Menu Button should render rtl correctly 1`] = `
 .emotion-2 {
   color: #000000;
   fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-2 {
+    fill: linkText;
+  }
 }
 
 .emotion-6 {
@@ -288,6 +300,12 @@ exports[`Canonical Closed menu button should render correctly 1`] = `
   fill: currentColor;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-2 {
+    fill: linkText;
+  }
+}
+
 .emotion-4 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -377,6 +395,12 @@ exports[`Canonical Closed menu button should render rtl correctly 1`] = `
 .emotion-2 {
   color: #000000;
   fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-2 {
+    fill: linkText;
+  }
 }
 
 .emotion-4 {
@@ -470,6 +494,12 @@ exports[`Canonical Open menu button should render correctly 1`] = `
   fill: currentColor;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-2 {
+    fill: linkText;
+  }
+}
+
 .emotion-4 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -560,6 +590,12 @@ exports[`Canonical Open menu button should render rtl correctly 1`] = `
 .emotion-2 {
   color: #000000;
   fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-2 {
+    fill: linkText;
+  }
 }
 
 .emotion-4 {
