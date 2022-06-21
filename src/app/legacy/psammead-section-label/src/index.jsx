@@ -48,6 +48,7 @@ const Heading = styled.h2`
   /* reset default margins */
   margin: 0;
   padding: 0;
+  font-weight: bold;
 `;
 
 const SectionLabel = ({
