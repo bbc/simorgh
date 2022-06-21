@@ -7,6 +7,9 @@ const svgSize = '2.75rem'; // 44px
 const MenuIcon = styled.svg`
   color: ${C_BLACK};
   fill: currentColor;
+  @media screen and (forced-colors: active) {
+    fill: linkText;
+  }
 `;
 
 const defaultAttrs = {
