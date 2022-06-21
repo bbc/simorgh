@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 const svgSize = '2.75rem'; // 44px
 
 const MenuIcon = styled.svg`
-  color: #00000;
+  color: #000000;
   fill: currentColor;
 `;
 
