@@ -183,7 +183,9 @@ const TopStoryColor = `
 
 const relatedContentStyle = `
   color: ${C_GREY_10};
-  padding: 0;
+  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    padding: 0;
+  }
 `;
 const headlineStyle = {
   top: StandardColor,
