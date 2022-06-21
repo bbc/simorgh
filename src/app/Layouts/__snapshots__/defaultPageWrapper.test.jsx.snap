@@ -512,7 +512,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 .emotion-39 {
-  color: #00000;
+  color: #000000;
   fill: currentColor;
 }
 

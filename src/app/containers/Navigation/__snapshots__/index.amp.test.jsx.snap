@@ -86,7 +86,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
 }
 
 .emotion-6 {
-  color: #00000;
+  color: #000000;
   fill: currentColor;
 }
 

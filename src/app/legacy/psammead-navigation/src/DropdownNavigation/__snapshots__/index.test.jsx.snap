@@ -48,7 +48,7 @@ exports[`AMP Menu Button should render correctly 1`] = `
 }
 
 .emotion-2 {
-  color: #00000;
+  color: #000000;
   fill: currentColor;
 }
 
@@ -166,7 +166,7 @@ exports[`AMP Menu Button should render rtl correctly 1`] = `
 }
 
 .emotion-2 {
-  color: #00000;
+  color: #000000;
   fill: currentColor;
 }
 
@@ -284,7 +284,7 @@ exports[`Canonical Closed menu button should render correctly 1`] = `
 }
 
 .emotion-2 {
-  color: #00000;
+  color: #000000;
   fill: currentColor;
 }
 
@@ -375,7 +375,7 @@ exports[`Canonical Closed menu button should render rtl correctly 1`] = `
 }
 
 .emotion-2 {
-  color: #00000;
+  color: #000000;
   fill: currentColor;
 }
 
@@ -466,7 +466,7 @@ exports[`Canonical Open menu button should render correctly 1`] = `
 }
 
 .emotion-2 {
-  color: #00000;
+  color: #000000;
   fill: currentColor;
 }
 
@@ -558,7 +558,7 @@ exports[`Canonical Open menu button should render rtl correctly 1`] = `
 }
 
 .emotion-2 {
-  color: #00000;
+  color: #000000;
   fill: currentColor;
 }
 

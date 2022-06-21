@@ -84,7 +84,7 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
 }
 
 .emotion-8 {
-  color: #00000;
+  color: #000000;
   fill: currentColor;
 }
 

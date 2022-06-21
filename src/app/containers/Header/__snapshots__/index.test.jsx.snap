@@ -497,7 +497,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
 }
 
 .emotion-37 {
-  color: #00000;
+  color: #000000;
   fill: currentColor;
 }
 
@@ -1616,7 +1616,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 .emotion-37 {
-  color: #00000;
+  color: #000000;
   fill: currentColor;
 }
 
@@ -2735,7 +2735,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 .emotion-37 {
-  color: #00000;
+  color: #000000;
   fill: currentColor;
 }
 
