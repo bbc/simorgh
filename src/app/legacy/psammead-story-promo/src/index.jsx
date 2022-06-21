@@ -174,16 +174,26 @@ const headlineTypography = script => ({
   leading: headlineLeadingStoryTypography(script),
 });
 
-const headlineColor = {
-  top: C_EBON,
-  regular: C_EBON,
-  topStories: C_GREY_10,
-  relatedContent: C_GREY_10,
-  leading: C_EBON,
+const StandardColor = `
+  color: ${C_EBON};
+`;
+const TopStoryColor = `
+  color: ${C_GREY_10};
+`;
+
+const relatedContentStyle = `
+  color: ${C_GREY_10};
+  padding: 0;
+`;
+const headlineStyle = {
+  top: StandardColor,
+  regular: StandardColor,
+  topStories: TopStoryColor,
+  relatedContent: relatedContentStyle,
+  leading: StandardColor,
 };
 
 export const Headline = styled.h3`
-  color: ${({ promoType }) => headlineColor[promoType]};
   margin: 0; /* Reset */
   padding-bottom: ${GEL_SPACING};
   ${({ service }) => getSerifMedium(service)}
@@ -191,6 +201,7 @@ export const Headline = styled.h3`
   ${({ promoHasImage }) =>
     !promoHasImage &&
     `display: inline-block;`} /* Needed for aligning Media Indicator with Headline */
+  ${({ promoType }) => headlineStyle[promoType]}
 `;
 
 Headline.propTypes = {
@@ -268,7 +279,6 @@ Summary.defaultProps = {
 
 export const Link = styled.a`
   position: static;
-  ${({ promoType }) => `color:${headlineColor[promoType]};`}
   text-decoration: none;
   overflow-wrap: break-word;
 
@@ -292,6 +302,7 @@ export const Link = styled.a`
   &:visited {
     color: ${C_METAL};
   }
+  ${({ promoType }) => `${headlineStyle[promoType]}`}
 `;
 
 const StoryPromo = ({

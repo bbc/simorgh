@@ -9,7 +9,6 @@ import {
 } from '#legacy/psammead-story-promo-list/src';
 
 import {
-  GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '#legacy/gel-foundations/src/spacings';
