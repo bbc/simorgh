@@ -8,8 +8,7 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
 }
 
 .emotion-2 {
-  background-color: #F8F8F8;
-  margin-top: 0.5rem;
+  background-color: #E6E8EA;
 }
 
 .emotion-4 {
@@ -32,12 +31,14 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
     -webkit-justify-content: center;
     justify-content: center;
     visibility: visible;
+    padding: 1rem 0;
   }
 }
 
 @media (min-width: 63rem) {
   .emotion-4 {
     min-height: 18.6875rem;
+    padding: 1.5rem 0;
   }
 }
 
@@ -150,8 +151,7 @@ exports[`AMP Ads Snapshots should correctly render an AMP mpu ad 1`] = `
 }
 
 .emotion-2 {
-  background-color: #F8F8F8;
-  margin-top: 0.5rem;
+  background-color: #E6E8EA;
 }
 
 .emotion-4 {
@@ -163,6 +163,7 @@ exports[`AMP Ads Snapshots should correctly render an AMP mpu ad 1`] = `
 @media (min-width: 18.75rem) {
   .emotion-4 {
     min-height: 17.6875rem;
+    padding:padding: 1rem 0 0.5rem 0;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
