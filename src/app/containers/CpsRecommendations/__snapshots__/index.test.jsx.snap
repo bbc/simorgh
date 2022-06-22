@@ -196,7 +196,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 .emotion-11 {
   margin: 0;
   padding: 0;
-  font-weight: bold;
 }
 
 .emotion-13 {
@@ -774,7 +773,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 .emotion-11 {
   margin: 0;
   padding: 0;
-  font-weight: bold;
 }
 
 .emotion-13 {
@@ -1622,7 +1620,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 .emotion-11 {
   margin: 0;
   padding: 0;
-  font-weight: bold;
 }
 
 .emotion-13 {

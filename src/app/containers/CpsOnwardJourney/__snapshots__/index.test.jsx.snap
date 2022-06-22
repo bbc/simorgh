@@ -712,7 +712,6 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
 .emotion-9 {
   margin: 0;
   padding: 0;
-  font-weight: bold;
 }
 
 .emotion-11 {
@@ -1087,7 +1086,6 @@ exports[`CpsOnwardJourney renders section label with with alternative background
 .emotion-9 {
   margin: 0;
   padding: 0;
-  font-weight: bold;
 }
 
 .emotion-11 {
@@ -1462,7 +1460,6 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
 .emotion-9 {
   margin: 0;
   padding: 0;
-  font-weight: bold;
 }
 
 .emotion-11 {
@@ -1884,7 +1881,6 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 .emotion-13 {
   margin: 0;
   padding: 0;
-  font-weight: bold;
 }
 
 .emotion-15 {
@@ -2350,7 +2346,6 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
 .emotion-13 {
   margin: 0;
   padding: 0;
-  font-weight: bold;
 }
 
 .emotion-15 {

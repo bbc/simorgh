@@ -46,7 +46,6 @@ exports[`ArticleRelatedContent should render related content 1`] = `
 .emotion-6 {
   margin: 0;
   padding: 0;
-  font-weight: bold;
 }
 
 .emotion-8 {

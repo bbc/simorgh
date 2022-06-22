@@ -34,7 +34,6 @@ exports[`Expected use should render correctly with a single tag 1`] = `
 .emotion-5 {
   margin: 0;
   padding: 0;
-  font-weight: bold;
 }
 
 .emotion-7 {
@@ -269,7 +268,6 @@ exports[`Expected use should render correctly with multiple tags 1`] = `
 .emotion-5 {
   margin: 0;
   padding: 0;
-  font-weight: bold;
 }
 
 .emotion-7 {

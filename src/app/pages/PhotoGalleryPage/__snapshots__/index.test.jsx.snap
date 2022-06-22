@@ -5172,7 +5172,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 .emotion-207 {
   margin: 0;
   padding: 0;
-  font-weight: bold;
 }
 
 .emotion-209 {
@@ -9455,7 +9454,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 .emotion-421 {
   margin: 0;
   padding: 0;
-  font-weight: bold;
 }
 
 .emotion-423 {
