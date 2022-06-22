@@ -166,7 +166,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   background-color: #FDFDFD;
   margin: 1rem 0;
@@ -1167,7 +1167,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   background-color: #F2F2F2;
   margin: 1rem 0;
@@ -4587,7 +4587,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   background-color: #FDFDFD;
   margin: 1rem 0;

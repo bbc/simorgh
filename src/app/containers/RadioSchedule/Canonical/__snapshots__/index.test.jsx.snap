@@ -115,7 +115,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   background-color: #F2F2F2;
   margin: 1rem 0;
@@ -1555,7 +1555,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   background-color: #F2F2F2;
   margin: 1rem 0;
