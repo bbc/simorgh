@@ -192,16 +192,31 @@ server.get(
           url,
           variant,
         });
-      } catch {
+      } catch ({ message }) {
+        sendCustomMetric({
+          metricName: NON_200_RESPONSE,
+          statusCode: 500,
+          pageType: derivedPageType,
+          requestUrl: url,
+        });
+
+        logger.error(SERVER_SIDE_REQUEST_FAILED, {
+          status: 500,
+          message,
+          url,
+          headers,
+        });
+
         result = await renderDocument({
           bbcOrigin,
-          data: { error: true },
+          data: { error: true, status: 500 },
           isAmp,
           routes,
           service,
           url,
           variant,
         });
+        res.status(status).send(result.html);
       }
 
       logger.info(ROUTING_INFORMATION, {
