@@ -11,7 +11,6 @@ import {
   GEL_SPACING_QUAD,
 } from '#legacy/gel-foundations/src/spacings';
 import { C_GHOST, C_GREY_10 } from '#legacy/psammead-styles/src/colours';
-import { getSansBold } from '#legacy/psammead-styles/src/font-styles';
 import { PlainTitle, LinkTitle } from './titles';
 
 const SectionLabelWrapper = styled.div`
