@@ -4,13 +4,6 @@ exports[`Navigation should render correctly 1`] = `
 .emotion-0 {
   position: relative;
   background-color: #FFFFFF;
-  border-top: 0.0625rem solid #FFFFFF;
-}
-
-@media (max-width: 25rem) {
-  .emotion-0 {
-    border-top: none;
-  }
 }
 
 .emotion-0::after {
@@ -287,18 +280,11 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
 .emotion-0 {
   position: relative;
   background-color: #FFFFFF;
-  border-top: 0.0625rem solid #FFFFFF;
 }
 
 @media (max-width: 37.4375rem) {
   .emotion-0.is-open {
     background-color: #222222;
-  }
-}
-
-@media (max-width: 25rem) {
-  .emotion-0 {
-    border-top: none;
   }
 }
 
@@ -576,13 +562,6 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
 .emotion-0 {
   position: relative;
   background-color: #222222;
-  border-top: 0.0625rem solid #FFFFFF;
-}
-
-@media (max-width: 25rem) {
-  .emotion-0 {
-    border-top: none;
-  }
 }
 
 .emotion-0::after {
@@ -898,13 +877,6 @@ exports[`Scrollable Navigation should render correctly 1`] = `
 .emotion-2 {
   position: relative;
   background-color: #FFFFFF;
-  border-top: 0.0625rem solid #FFFFFF;
-}
-
-@media (max-width: 25rem) {
-  .emotion-2 {
-    border-top: none;
-  }
 }
 
 .emotion-2::after {

@@ -417,13 +417,6 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
 .emotion-29 {
   position: relative;
   background-color: #FFFFFF;
-  border-top: 0.0625rem solid #FFFFFF;
-}
-
-@media (max-width: 25rem) {
-  .emotion-29 {
-    border-top: none;
-  }
 }
 
 .emotion-29::after {
@@ -1542,13 +1535,6 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 .emotion-29 {
   position: relative;
   background-color: #FFFFFF;
-  border-top: 0.0625rem solid #FFFFFF;
-}
-
-@media (max-width: 25rem) {
-  .emotion-29 {
-    border-top: none;
-  }
 }
 
 .emotion-29::after {
@@ -2667,13 +2653,6 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 .emotion-29 {
   position: relative;
   background-color: #FFFFFF;
-  border-top: 0.0625rem solid #FFFFFF;
-}
-
-@media (max-width: 25rem) {
-  .emotion-29 {
-    border-top: none;
-  }
 }
 
 .emotion-29::after {
