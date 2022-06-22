@@ -260,10 +260,7 @@ const StyledNav = styled.nav`
         }
       }
     `}
-    border-top: 0.0625rem solid ${C_WHITE};
-  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    border-top: none;
-  }
+  
 
   &::after {
     content: '';
