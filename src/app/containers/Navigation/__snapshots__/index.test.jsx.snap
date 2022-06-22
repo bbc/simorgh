@@ -4,18 +4,11 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
 .emotion-0 {
   position: relative;
   background-color: #FFFFFF;
-  border-top: 0.0625rem solid #FFFFFF;
 }
 
 @media (max-width: 37.4375rem) {
   .emotion-0.si-nav-open {
     background-color: #222222;
-  }
-}
-
-@media (max-width: 25rem) {
-  .emotion-0 {
-    border-top: none;
   }
 }
 
@@ -801,18 +794,11 @@ exports[`Navigation Container should correctly render amp navigation on non-home
 .emotion-0 {
   position: relative;
   background-color: #FFFFFF;
-  border-top: 0.0625rem solid #FFFFFF;
 }
 
 @media (max-width: 37.4375rem) {
   .emotion-0.si-nav-open {
     background-color: #222222;
-  }
-}
-
-@media (max-width: 25rem) {
-  .emotion-0 {
-    border-top: none;
   }
 }
 
@@ -1508,18 +1494,11 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
 .emotion-0 {
   position: relative;
   background-color: #FFFFFF;
-  border-top: 0.0625rem solid #FFFFFF;
 }
 
 @media (max-width: 37.4375rem) {
   .emotion-0.si-nav-open {
     background-color: #222222;
-  }
-}
-
-@media (max-width: 25rem) {
-  .emotion-0 {
-    border-top: none;
   }
 }
 
@@ -2215,13 +2194,6 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
 .emotion-0 {
   position: relative;
   background-color: #FFFFFF;
-  border-top: 0.0625rem solid #FFFFFF;
-}
-
-@media (max-width: 25rem) {
-  .emotion-0 {
-    border-top: none;
-  }
 }
 
 .emotion-0::after {
@@ -2986,13 +2958,6 @@ exports[`Navigation Container should correctly render canonical navigation on no
 .emotion-0 {
   position: relative;
   background-color: #FFFFFF;
-  border-top: 0.0625rem solid #FFFFFF;
-}
-
-@media (max-width: 25rem) {
-  .emotion-0 {
-    border-top: none;
-  }
 }
 
 .emotion-0::after {
@@ -3667,13 +3632,6 @@ exports[`Navigation Container should correctly render canonical navigation on no
 .emotion-0 {
   position: relative;
   background-color: #FFFFFF;
-  border-top: 0.0625rem solid #FFFFFF;
-}
-
-@media (max-width: 25rem) {
-  .emotion-0 {
-    border-top: none;
-  }
 }
 
 .emotion-0::after {

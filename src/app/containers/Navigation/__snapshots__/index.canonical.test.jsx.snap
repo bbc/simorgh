@@ -4,13 +4,6 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
 .emotion-0 {
   position: relative;
   background-color: #FFFFFF;
-  border-top: 0.0625rem solid #FFFFFF;
-}
-
-@media (max-width: 25rem) {
-  .emotion-0 {
-    border-top: none;
-  }
 }
 
 .emotion-0::after {
