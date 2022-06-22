@@ -46,7 +46,6 @@ SectionLabelWrapper.propTypes = {
 };
 
 export const Heading = styled.h2`
-  ${({ service }) => getSansBold(service)}
   /* reset default margins */
   margin: 0;
   padding: 0;
