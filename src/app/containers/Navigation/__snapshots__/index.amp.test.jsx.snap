@@ -4,18 +4,11 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
 .emotion-0 {
   position: relative;
   background-color: #FFFFFF;
-  border-top: 0.0625rem solid #FFFFFF;
 }
 
 @media (max-width: 37.4375rem) {
   .emotion-0.si-nav-open {
     background-color: #222222;
-  }
-}
-
-@media (max-width: 25rem) {
-  .emotion-0 {
-    border-top: none;
   }
 }
 
