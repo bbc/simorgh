@@ -216,7 +216,6 @@ server.get(
           url,
           variant,
         });
-        res.status(status).send(result.html);
       }
 
       logger.info(ROUTING_INFORMATION, {
