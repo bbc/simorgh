@@ -707,7 +707,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 .emotion-52 {
   font-size: 0.875rem;
   line-height: 1.25rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
@@ -1129,7 +1129,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 .emotion-11 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -2310,7 +2310,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 .emotion-52 {
   font-size: 0.875rem;
   line-height: 1.25rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
@@ -2927,7 +2927,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
 .emotion-19 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -3865,7 +3865,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 .emotion-42 {
   font-size: 0.875rem;
   line-height: 1.25rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
@@ -4419,7 +4419,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 .emotion-11 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -5496,7 +5496,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
 .emotion-19 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
