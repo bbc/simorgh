@@ -61,9 +61,6 @@ const TopicGrid = ({ promos }) => {
   const hasMultiplePromos = promos.length > 1;
   const firstPromo = promos[0];
 
-  if (promos.length === 0) {
-    return null;
-  }
   return (
     <Wrapper>
       {hasMultiplePromos ? (

@@ -224,6 +224,7 @@ server.get(
       });
 
       // Return an internal server error for any uncaught errors
+      console.log("MEssage ", message);
       res.status(500).send(message);
     }
   },
