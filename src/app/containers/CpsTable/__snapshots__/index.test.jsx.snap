@@ -142,7 +142,7 @@ exports[`CpsTable should match snapshot - fixture 0 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -470,7 +470,7 @@ exports[`CpsTable should match snapshot - fixture 1 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -798,7 +798,7 @@ exports[`CpsTable should match snapshot - fixture 2 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
 }

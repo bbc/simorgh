@@ -107,7 +107,7 @@ exports[`FauxHeadline with headline data should render correctly 1`] = `
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -266,7 +266,7 @@ exports[`FauxHeadline with plain text headline should render <strong> containing
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   display: block;
   margin: 0;
   padding: 2rem 0;

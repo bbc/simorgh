@@ -331,7 +331,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -1092,7 +1092,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -1438,7 +1438,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   margin: 0;
   padding: 1.5rem 0;
 }
@@ -1593,7 +1593,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 .emotion-191 {
   position: relative;
   z-index: 0;
-  color: #3F3F42;
+  color: #141414;
   margin-top: 2rem;
   margin-top: 0;
 }
@@ -1617,50 +1617,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 .emotion-193 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-  display: none;
-}
-
-@media screen and (-ms-high-contrast: active) {
-  .emotion-193 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-193 {
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-.emotion-195 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-@media screen and (-ms-high-contrast: active) {
-  .emotion-195 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-195 {
-    display: none;
-  }
-}
-
-.emotion-197 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-199 {
+.emotion-195 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1670,7 +1631,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   flex-direction: column;
 }
 
-.emotion-201 {
+.emotion-197 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1690,7 +1651,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-201 {
+  .emotion-197 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -1698,11 +1659,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
-.emotion-203 {
+.emotion-199 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   background-color: #FDFDFD;
   margin: 1rem 0;
@@ -1718,102 +1679,102 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-203 {
+  .emotion-199 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-203 {
+  .emotion-199 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-203 {
+  .emotion-199 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-203 {
+  .emotion-199 {
     padding-right: 1rem;
   }
 }
 
-.emotion-205 {
+.emotion-201 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.emotion-207 {
+.emotion-203 {
   padding: 0.5rem 0 1rem;
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-207 {
+  .emotion-203 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
-.emotion-207:last-child {
+.emotion-203:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-207 {
+  .emotion-203 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-207 {
+  .emotion-203 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-207:first-child {
+.emotion-203:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-207:first-child {
+  .emotion-203:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-207:last-child {
+.emotion-203:last-child {
   padding-bottom: 0;
 }
 
-.emotion-209 {
+.emotion-205 {
   position: relative;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-209 {
+  .emotion-205 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-209 {
+    .emotion-205 {
       grid-column-gap: 1rem;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-209 {
+    .emotion-205 {
       display: block;
     }
   }
 }
 
-.emotion-211 {
+.emotion-207 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -1822,25 +1783,25 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-211 {
+  .emotion-207 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-211 {
+  .emotion-207 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
   }
 }
 
-.emotion-211>div {
+.emotion-207>div {
   vertical-align: middle;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-211 {
+  .emotion-207 {
     display: block;
     width: initial;
     padding: initial;
@@ -1849,22 +1810,22 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 
   @media (min-width: 63rem) {
-    .emotion-211 {
+    .emotion-207 {
       padding-top: 0;
     }
   }
 }
 
-.emotion-211>div {
+.emotion-207>div {
   display: inline-block;
   vertical-align: initial;
 }
 
-.emotion-211 svg {
+.emotion-207 svg {
   margin: 0;
 }
 
-.emotion-213 {
+.emotion-209 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -1877,20 +1838,20 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-213 {
+  .emotion-209 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-213 {
+  .emotion-209 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-215 {
+.emotion-211 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -1899,7 +1860,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   overflow-wrap: anywhere;
 }
 
-.emotion-215:before {
+.emotion-211:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1911,20 +1872,20 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   z-index: 1;
 }
 
-.emotion-215:hover,
-.emotion-215:focus {
+.emotion-211:hover,
+.emotion-211:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-215:visited {
+.emotion-211:visited {
   color: #6E6E73;
 }
 
-.emotion-217 {
+.emotion-213 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -1932,20 +1893,20 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-217 {
+  .emotion-213 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-217 {
+  .emotion-213 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-229 {
+.emotion-225 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -1954,7 +1915,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   margin-right: 0.5rem;
 }
 
-.emotion-237 {
+.emotion-233 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1968,20 +1929,20 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-237 {
+  .emotion-233 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-237 {
+  .emotion-233 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-239 {
+.emotion-235 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1993,7 +1954,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   height: 100%;
 }
 
-.emotion-241 {
+.emotion-237 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -2002,14 +1963,14 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   height: 0.75rem;
 }
 
-.emotion-270 {
+.emotion-262 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-270 {
+  .emotion-262 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     -webkit-column-gap: 1rem;
@@ -2018,92 +1979,92 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
-.emotion-272 {
+.emotion-264 {
   padding: 0.5rem 0 1rem;
   line-height: 0;
   height: 100%;
 }
 
-.emotion-272:last-child {
+.emotion-264:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-272 {
+  .emotion-264 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-272 {
+  .emotion-264 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-272:first-child {
+.emotion-264:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-272:first-child {
+  .emotion-264:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-272:last-child {
+.emotion-264:last-child {
   padding-bottom: 0;
 }
 
-.emotion-272:first-child {
+.emotion-264:first-child {
   padding: 0 0 0.5rem 0;
 }
 
-.emotion-272:not(:first-child):not(:last-child) {
+.emotion-264:not(:first-child):not(:last-child) {
   padding: 0.5rem 0 0.5rem 0;
 }
 
-.emotion-272:last-child {
+.emotion-264:last-child {
   padding: 0.5rem 0 0 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-272 {
+  .emotion-264 {
     padding: 0;
   }
 
-  .emotion-272:first-child,
-  .emotion-272:not(:first-child):not(:last-child),
-  .emotion-272:last-child {
+  .emotion-264:first-child,
+  .emotion-264:not(:first-child):not(:last-child),
+  .emotion-264:last-child {
     padding: 0;
   }
 }
 
-.emotion-290 {
+.emotion-282 {
   margin-bottom: 1.5rem;
   padding: 1rem;
 }
 
-.emotion-293 {
+.emotion-285 {
   position: relative;
   z-index: 0;
-  color: #3F3F42;
+  color: #141414;
   margin-top: 2rem;
   margin-top: 0;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-293 {
+  .emotion-285 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-293 {
+  .emotion-285 {
     margin-bottom: 1.5rem;
   }
 }
 
-.emotion-308 {
+.emotion-296 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -2112,7 +2073,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @supports (display: grid) {
-  .emotion-308 {
+  .emotion-296 {
     display: grid;
     position: initial;
     width: initial;
@@ -2120,7 +2081,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-308 {
+    .emotion-296 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2128,7 +2089,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-308 {
+    .emotion-296 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2136,7 +2097,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-308 {
+    .emotion-296 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2144,7 +2105,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-308 {
+    .emotion-296 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -2152,7 +2113,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-308 {
+    .emotion-296 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -2160,7 +2121,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 
   @media (min-width: 80rem) {
-    .emotion-308 {
+    .emotion-296 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -2168,62 +2129,62 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
-.emotion-311 {
+.emotion-299 {
   position: relative;
   padding-bottom: 1.5rem;
 }
 
 @supports (display: grid) {
-  .emotion-311 {
+  .emotion-299 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-311 {
+    .emotion-299 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-311 {
+    .emotion-299 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-311 {
+    .emotion-299 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-311 {
+    .emotion-299 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-311 {
+    .emotion-299 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-311 {
+    .emotion-299 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 }
 
-.emotion-313 {
+.emotion-301 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2236,30 +2197,30 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-315 {
+  .emotion-303 {
     min-width: 1.75rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-315 {
+  .emotion-303 {
     min-width: 1.75rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-315 {
+  .emotion-303 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-315 {
+  .emotion-303 {
     min-width: 2.5rem;
   }
 }
 
-.emotion-317 {
+.emotion-305 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -2272,32 +2233,32 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-317 {
+  .emotion-305 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-317 {
+  .emotion-305 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
-.emotion-319 {
+.emotion-307 {
   padding-top: 0.2rem;
   padding-left: 0.5rem;
   padding-right: 1rem;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-319 {
+  .emotion-307 {
     padding-right: 0;
   }
 }
 
-.emotion-321 {
+.emotion-309 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2311,26 +2272,26 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-321 {
+  .emotion-309 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-321 {
+  .emotion-309 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-321:hover,
-.emotion-321:focus {
+.emotion-309:hover,
+.emotion-309:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-321:before {
+.emotion-309:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -2342,7 +2303,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   z-index: 1;
 }
 
-.emotion-323 {
+.emotion-311 {
   padding-top: 0.5rem;
 }
 
@@ -2932,23 +2893,17 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     <div
                       class="emotion-190 emotion-191 emotion-192"
                     >
-                      <div
-                        class="emotion-193 emotion-194"
-                      />
-                      <div
-                        class="emotion-195 emotion-196"
-                      />
                       <h2
-                        class="emotion-197 emotion-198"
+                        class="emotion-193 emotion-194"
                       >
                         <span
-                          class="emotion-199 emotion-200"
+                          class="emotion-195 emotion-196"
                         >
                           <span
-                            class="emotion-201 emotion-202"
+                            class="emotion-197 emotion-198"
                           >
                             <span
-                              class="emotion-203 emotion-204"
+                              class="emotion-199 emotion-200"
                               dir="ltr"
                               id="top-stories-heading"
                             >
@@ -2959,26 +2914,26 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       </h2>
                     </div>
                     <ul
-                      class="emotion-205 emotion-206"
+                      class="emotion-201 emotion-202"
                       role="list"
                     >
                       <li
-                        class="emotion-207 emotion-208"
+                        class="emotion-203 emotion-204"
                       >
                         <div
-                          class="emotion-209 emotion-210"
+                          class="emotion-205 emotion-206"
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-211 emotion-212"
+                            class="emotion-207 emotion-208"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-213 emotion-214"
+                              class="emotion-209 emotion-210"
                             >
                               <a
                                 aria-labelledby="top-stories-promo-igbo23182501-1"
-                                class="emotion-215 emotion-216"
+                                class="emotion-211 emotion-212"
                                 href="/igbo/23182501"
                               >
                                 <span
@@ -2989,7 +2944,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               </a>
                             </h3>
                             <time
-                              class="emotion-217 emotion-218"
+                              class="emotion-213 emotion-214"
                               datetime="2019-09-25"
                             >
                               25th September 2019
@@ -2998,22 +2953,22 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-207 emotion-208"
+                        class="emotion-203 emotion-204"
                       >
                         <div
-                          class="emotion-209 emotion-210"
+                          class="emotion-205 emotion-206"
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-211 emotion-212"
+                            class="emotion-207 emotion-208"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-213 emotion-214"
+                              class="emotion-209 emotion-210"
                             >
                               <a
                                 aria-labelledby="top-stories-promo-igboliveinstitutional23162153-1"
-                                class="emotion-215 emotion-216"
+                                class="emotion-211 emotion-212"
                                 href="/igbo/live/institutional-23162153"
                               >
                                 <span
@@ -3021,7 +2976,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                   role="text"
                                 >
                                   <span
-                                    class="emotion-229 emotion-230"
+                                    class="emotion-225 emotion-226"
                                     dir="ltr"
                                   >
                                     As E Dey Happen 
@@ -3036,28 +2991,28 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-207 emotion-208"
+                        class="emotion-203 emotion-204"
                       >
                         <div
-                          class="emotion-209 emotion-210"
+                          class="emotion-205 emotion-206"
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-211 emotion-212"
+                            class="emotion-207 emotion-208"
                             dir="ltr"
                           >
                             <div
                               aria-hidden="true"
-                              class="emotion-237 emotion-238"
+                              class="emotion-233 emotion-234"
                               data-e2e="media-indicator"
                               dir="ltr"
                             >
                               <div
-                                class="emotion-239 emotion-240"
+                                class="emotion-235 emotion-236"
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="emotion-241 emotion-242"
+                                  class="emotion-237 emotion-238"
                                   focusable="false"
                                   height="12px"
                                   viewBox="0 0 13 12"
@@ -3073,11 +3028,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               </div>
                             </div>
                             <h3
-                              class="emotion-213 emotion-214"
+                              class="emotion-209 emotion-210"
                             >
                               <a
                                 aria-labelledby="top-stories-promo-igbo23183171-1"
-                                class="emotion-215 emotion-216"
+                                class="emotion-211 emotion-212"
                                 href="/igbo/23183171"
                               >
                                 <span
@@ -3096,7 +3051,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               </a>
                             </h3>
                             <time
-                              class="emotion-217 emotion-218"
+                              class="emotion-213 emotion-214"
                               datetime="2018-01-22"
                             >
                               22nd January 2018
@@ -3119,23 +3074,17 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     <div
                       class="emotion-190 emotion-191 emotion-192"
                     >
-                      <div
-                        class="emotion-193 emotion-194"
-                      />
-                      <div
-                        class="emotion-195 emotion-196"
-                      />
                       <h2
-                        class="emotion-197 emotion-198"
+                        class="emotion-193 emotion-194"
                       >
                         <span
-                          class="emotion-199 emotion-200"
+                          class="emotion-195 emotion-196"
                         >
                           <span
-                            class="emotion-201 emotion-202"
+                            class="emotion-197 emotion-198"
                           >
                             <span
-                              class="emotion-203 emotion-204"
+                              class="emotion-199 emotion-200"
                               dir="ltr"
                               id="features-analysis-heading"
                             >
@@ -3146,67 +3095,67 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       </h2>
                     </div>
                     <ul
-                      class="emotion-270 emotion-271"
+                      class="emotion-262 emotion-263"
                       role="list"
                     >
                       <li
-                        class="emotion-272 emotion-273"
+                        class="emotion-264 emotion-265"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-272 emotion-273"
+                        class="emotion-264 emotion-265"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-272 emotion-273"
+                        class="emotion-264 emotion-265"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-272 emotion-273"
+                        class="emotion-264 emotion-265"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-272 emotion-273"
+                        class="emotion-264 emotion-265"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-272 emotion-273"
+                        class="emotion-264 emotion-265"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-272 emotion-273"
+                        class="emotion-264 emotion-265"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-272 emotion-273"
+                        class="emotion-264 emotion-265"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-272 emotion-273"
+                        class="emotion-264 emotion-265"
                       >
                         <span
                           data-testid="frosted-promo-loader"
@@ -3216,7 +3165,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </section>
                 </div>
                 <div
-                  class="emotion-290 emotion-291"
+                  class="emotion-282 emotion-283"
                 >
                   <section
                     aria-labelledby="Most-Read"
@@ -3224,25 +3173,19 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     role="region"
                   >
                     <div
-                      class="emotion-292 emotion-293 emotion-192"
+                      class="emotion-284 emotion-285 emotion-192"
                     >
-                      <div
-                        class="emotion-193 emotion-194"
-                      />
-                      <div
-                        class="emotion-195 emotion-196"
-                      />
                       <h2
-                        class="emotion-197 emotion-198"
+                        class="emotion-193 emotion-194"
                       >
                         <span
-                          class="emotion-199 emotion-200"
+                          class="emotion-195 emotion-196"
                         >
                           <span
-                            class="emotion-201 emotion-202"
+                            class="emotion-197 emotion-198"
                           >
                             <span
-                              class="emotion-203 emotion-204"
+                              class="emotion-199 emotion-200"
                               dir="ltr"
                               id="Most-Read"
                             >
@@ -3253,43 +3196,43 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       </h2>
                     </div>
                     <ol
-                      class="emotion-307 emotion-308 emotion-2"
+                      class="emotion-295 emotion-296 emotion-2"
                       dir="ltr"
                       role="list"
                     >
                       <li
-                        class="emotion-310 emotion-311 emotion-2"
+                        class="emotion-298 emotion-299 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-313 emotion-314"
+                          class="emotion-301 emotion-302"
                         >
                           <div
-                            class="emotion-315 emotion-316"
+                            class="emotion-303 emotion-304"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-317 emotion-318"
+                              class="emotion-305 emotion-306"
                             >
                               1
                             </span>
                           </div>
                           <div
-                            class="emotion-319 emotion-320"
+                            class="emotion-307 emotion-308"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-321 emotion-322"
+                              class="emotion-309 emotion-310"
                               href="/igbo/afirika-50299413"
                             >
                               Obi adịghị ndị Igbo mma n'ọnọdụ ha nọ na Naịjirịa - Ekweremadu
                             </a>
                             <div
-                              class="emotion-323 emotion-324"
+                              class="emotion-311 emotion-312"
                             >
                               <time
-                                class="emotion-217 emotion-218"
+                                class="emotion-213 emotion-214"
                                 datetime="2019-11-06"
                               >
                                 De one we dem update for: 6th November 2019
@@ -3299,38 +3242,38 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-310 emotion-311 emotion-2"
+                        class="emotion-298 emotion-299 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-313 emotion-314"
+                          class="emotion-301 emotion-302"
                         >
                           <div
-                            class="emotion-315 emotion-316"
+                            class="emotion-303 emotion-304"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-317 emotion-318"
+                              class="emotion-305 emotion-306"
                             >
                               2
                             </span>
                           </div>
                           <div
-                            class="emotion-319 emotion-320"
+                            class="emotion-307 emotion-308"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-321 emotion-322"
+                              class="emotion-309 emotion-310"
                               href="/igbo/afirika-50295552"
                             >
                               Ihe gọọmentị Naịjirịa sị a ga-eme tupu ha agbapee 'border'
                             </a>
                             <div
-                              class="emotion-323 emotion-324"
+                              class="emotion-311 emotion-312"
                             >
                               <time
-                                class="emotion-217 emotion-218"
+                                class="emotion-213 emotion-214"
                                 datetime="2019-11-05"
                               >
                                 De one we dem update for: 5th November 2019
@@ -3340,38 +3283,38 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-310 emotion-311 emotion-2"
+                        class="emotion-298 emotion-299 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-313 emotion-314"
+                          class="emotion-301 emotion-302"
                         >
                           <div
-                            class="emotion-315 emotion-316"
+                            class="emotion-303 emotion-304"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-317 emotion-318"
+                              class="emotion-305 emotion-306"
                             >
                               3
                             </span>
                           </div>
                           <div
-                            class="emotion-319 emotion-320"
+                            class="emotion-307 emotion-308"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-321 emotion-322"
+                              class="emotion-309 emotion-310"
                               href="/igbo/afirika-50227971"
                             >
                               Onye bụ 'Sarah Baartman' a e ji maka ya adọri Dice Ailes?
                             </a>
                             <div
-                              class="emotion-323 emotion-324"
+                              class="emotion-311 emotion-312"
                             >
                               <time
-                                class="emotion-217 emotion-218"
+                                class="emotion-213 emotion-214"
                                 datetime="2019-10-31"
                               >
                                 De one we dem update for: 31st October 2019
@@ -3381,38 +3324,38 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-310 emotion-311 emotion-2"
+                        class="emotion-298 emotion-299 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-313 emotion-314"
+                          class="emotion-301 emotion-302"
                         >
                           <div
-                            class="emotion-315 emotion-316"
+                            class="emotion-303 emotion-304"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-317 emotion-318"
+                              class="emotion-305 emotion-306"
                             >
                               4
                             </span>
                           </div>
                           <div
-                            class="emotion-319 emotion-320"
+                            class="emotion-307 emotion-308"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-321 emotion-322"
+                              class="emotion-309 emotion-310"
                               href="/igbo/afirika-50299416"
                             >
                               Ụlọ na-agba ọkụ n'ahia Balogun, Legọs
                             </a>
                             <div
-                              class="emotion-323 emotion-324"
+                              class="emotion-311 emotion-312"
                             >
                               <time
-                                class="emotion-217 emotion-218"
+                                class="emotion-213 emotion-214"
                                 datetime="2019-11-05"
                               >
                                 De one we dem update for: 5th November 2019
@@ -3422,38 +3365,38 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-310 emotion-311 emotion-2"
+                        class="emotion-298 emotion-299 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-313 emotion-314"
+                          class="emotion-301 emotion-302"
                         >
                           <div
-                            class="emotion-315 emotion-316"
+                            class="emotion-303 emotion-304"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-317 emotion-318"
+                              class="emotion-305 emotion-306"
                             >
                               5
                             </span>
                           </div>
                           <div
-                            class="emotion-319 emotion-320"
+                            class="emotion-307 emotion-308"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-321 emotion-322"
+                              class="emotion-309 emotion-310"
                               href="/igbo/afirika-50259685"
                             >
                               Gịnị bụ ikuchi nwaanyị n'ala Igbo?
                             </a>
                             <div
-                              class="emotion-323 emotion-324"
+                              class="emotion-311 emotion-312"
                             >
                               <time
-                                class="emotion-217 emotion-218"
+                                class="emotion-213 emotion-214"
                                 datetime="2019-11-03"
                               >
                                 De one we dem update for: 3rd November 2019
@@ -3463,38 +3406,38 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-310 emotion-311 emotion-2"
+                        class="emotion-298 emotion-299 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-313 emotion-314"
+                          class="emotion-301 emotion-302"
                         >
                           <div
-                            class="emotion-315 emotion-316"
+                            class="emotion-303 emotion-304"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-317 emotion-318"
+                              class="emotion-305 emotion-306"
                             >
                               6
                             </span>
                           </div>
                           <div
-                            class="emotion-319 emotion-320"
+                            class="emotion-307 emotion-308"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-321 emotion-322"
+                              class="emotion-309 emotion-310"
                               href="/igbo/afirika-50294336"
                             >
                               Nne ụmụaka atọ ụlọ aja dagburu n'Ebonyi amabeghị na ha nwụrụ
                             </a>
                             <div
-                              class="emotion-323 emotion-324"
+                              class="emotion-311 emotion-312"
                             >
                               <time
-                                class="emotion-217 emotion-218"
+                                class="emotion-213 emotion-214"
                                 datetime="2019-11-04"
                               >
                                 De one we dem update for: 4th November 2019
@@ -3504,38 +3447,38 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-310 emotion-311 emotion-2"
+                        class="emotion-298 emotion-299 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-313 emotion-314"
+                          class="emotion-301 emotion-302"
                         >
                           <div
-                            class="emotion-315 emotion-316"
+                            class="emotion-303 emotion-304"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-317 emotion-318"
+                              class="emotion-305 emotion-306"
                             >
                               7
                             </span>
                           </div>
                           <div
-                            class="emotion-319 emotion-320"
+                            class="emotion-307 emotion-308"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-321 emotion-322"
+                              class="emotion-309 emotion-310"
                               href="/igbo/afirika-50292027"
                             >
                               Akwamozu o kwesiri ịbụ oriri na nkwari?
                             </a>
                             <div
-                              class="emotion-323 emotion-324"
+                              class="emotion-311 emotion-312"
                             >
                               <time
-                                class="emotion-217 emotion-218"
+                                class="emotion-213 emotion-214"
                                 datetime="2019-11-04"
                               >
                                 De one we dem update for: 4th November 2019
@@ -3545,38 +3488,38 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-310 emotion-311 emotion-2"
+                        class="emotion-298 emotion-299 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-313 emotion-314"
+                          class="emotion-301 emotion-302"
                         >
                           <div
-                            class="emotion-315 emotion-316"
+                            class="emotion-303 emotion-304"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-317 emotion-318"
+                              class="emotion-305 emotion-306"
                             >
                               8
                             </span>
                           </div>
                           <div
-                            class="emotion-319 emotion-320"
+                            class="emotion-307 emotion-308"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-321 emotion-322"
+                              class="emotion-309 emotion-310"
                               href="/igbo/afirika-50289214"
                             >
                               Gịnị ka ị ma maka 'Aba Women's riot' mere afọ 90 gara aga?
                             </a>
                             <div
-                              class="emotion-323 emotion-324"
+                              class="emotion-311 emotion-312"
                             >
                               <time
-                                class="emotion-217 emotion-218"
+                                class="emotion-213 emotion-214"
                                 datetime="2019-11-04"
                               >
                                 De one we dem update for: 4th November 2019
@@ -3586,38 +3529,38 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-310 emotion-311 emotion-2"
+                        class="emotion-298 emotion-299 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-313 emotion-314"
+                          class="emotion-301 emotion-302"
                         >
                           <div
-                            class="emotion-315 emotion-316"
+                            class="emotion-303 emotion-304"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-317 emotion-318"
+                              class="emotion-305 emotion-306"
                             >
                               9
                             </span>
                           </div>
                           <div
-                            class="emotion-319 emotion-320"
+                            class="emotion-307 emotion-308"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-321 emotion-322"
+                              class="emotion-309 emotion-310"
                               href="/igbo/mba-uba-50266111"
                             >
                               Eke adọgbuola nwaanyị ji ya eme ihe olu
                             </a>
                             <div
-                              class="emotion-323 emotion-324"
+                              class="emotion-311 emotion-312"
                             >
                               <time
-                                class="emotion-217 emotion-218"
+                                class="emotion-213 emotion-214"
                                 datetime="2019-11-03"
                               >
                                 De one we dem update for: 3rd November 2019
@@ -3627,38 +3570,38 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-310 emotion-311 emotion-2"
+                        class="emotion-298 emotion-299 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-313 emotion-314"
+                          class="emotion-301 emotion-302"
                         >
                           <div
-                            class="emotion-315 emotion-316"
+                            class="emotion-303 emotion-304"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-317 emotion-318"
+                              class="emotion-305 emotion-306"
                             >
                               10
                             </span>
                           </div>
                           <div
-                            class="emotion-319 emotion-320"
+                            class="emotion-307 emotion-308"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-321 emotion-322"
+                              class="emotion-309 emotion-310"
                               href="/igbo/afirika-50279948"
                             >
                               Etu dị na nwunye zụtara ụmụaka abụọ si ma n'ọnya ndị uweojii
                             </a>
                             <div
-                              class="emotion-323 emotion-324"
+                              class="emotion-311 emotion-312"
                             >
                               <time
-                                class="emotion-217 emotion-218"
+                                class="emotion-213 emotion-214"
                                 datetime="2019-11-06"
                               >
                                 De one we dem update for: 6th November 2019
@@ -4010,7 +3953,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -4314,7 +4257,7 @@ exports[`Story Page should render correctly when the secondary column data is no
 .emotion-24 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -4912,7 +4855,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -5258,7 +5201,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   margin: 0;
   padding: 1.5rem 0;
 }
@@ -5395,7 +5338,7 @@ exports[`Story Page should render correctly when the secondary column data is no
 .emotion-190 {
   position: relative;
   z-index: 0;
-  color: #3F3F42;
+  color: #141414;
   margin-top: 2rem;
   margin-top: 0;
 }
@@ -5413,50 +5356,11 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 .emotion-192 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-  display: none;
-}
-
-@media screen and (-ms-high-contrast: active) {
-  .emotion-192 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-192 {
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-.emotion-194 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-@media screen and (-ms-high-contrast: active) {
-  .emotion-194 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-194 {
-    display: none;
-  }
-}
-
-.emotion-196 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-198 {
+.emotion-194 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5466,7 +5370,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   flex-direction: column;
 }
 
-.emotion-200 {
+.emotion-196 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5486,7 +5390,7 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-200 {
+  .emotion-196 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -5494,11 +5398,11 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 }
 
-.emotion-202 {
+.emotion-198 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   background-color: #FDFDFD;
   margin: 1rem 0;
@@ -5514,32 +5418,32 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-202 {
+  .emotion-198 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-202 {
+  .emotion-198 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-202 {
+  .emotion-198 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-202 {
+  .emotion-198 {
     padding-right: 1rem;
   }
 }
 
-.emotion-205 {
+.emotion-201 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -5548,7 +5452,7 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @supports (display: grid) {
-  .emotion-205 {
+  .emotion-201 {
     display: grid;
     position: initial;
     width: initial;
@@ -5556,7 +5460,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-205 {
+    .emotion-201 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -5564,7 +5468,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-205 {
+    .emotion-201 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -5572,7 +5476,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-205 {
+    .emotion-201 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -5580,7 +5484,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-205 {
+    .emotion-201 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -5588,7 +5492,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-205 {
+    .emotion-201 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -5596,7 +5500,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 80rem) {
-    .emotion-205 {
+    .emotion-201 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -5604,62 +5508,62 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 }
 
-.emotion-208 {
+.emotion-204 {
   position: relative;
   padding-bottom: 1.5rem;
 }
 
 @supports (display: grid) {
-  .emotion-208 {
+  .emotion-204 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-208 {
+    .emotion-204 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-208 {
+    .emotion-204 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-208 {
+    .emotion-204 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-208 {
+    .emotion-204 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-208 {
+    .emotion-204 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-208 {
+    .emotion-204 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 }
 
-.emotion-210 {
+.emotion-206 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5672,30 +5576,30 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-212 {
+  .emotion-208 {
     min-width: 1.75rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-212 {
+  .emotion-208 {
     min-width: 1.75rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-212 {
+  .emotion-208 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-212 {
+  .emotion-208 {
     min-width: 2.5rem;
   }
 }
 
-.emotion-214 {
+.emotion-210 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -5708,32 +5612,32 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-214 {
+  .emotion-210 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-214 {
+  .emotion-210 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
-.emotion-216 {
+.emotion-212 {
   padding-top: 0.2rem;
   padding-left: 0.5rem;
   padding-right: 1rem;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-216 {
+  .emotion-212 {
     padding-right: 0;
   }
 }
 
-.emotion-218 {
+.emotion-214 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5747,26 +5651,26 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-218 {
+  .emotion-214 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-218 {
+  .emotion-214 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-218:hover,
-.emotion-218:focus {
+.emotion-214:hover,
+.emotion-214:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-218:before {
+.emotion-214:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -5778,14 +5682,14 @@ exports[`Story Page should render correctly when the secondary column data is no
   z-index: 1;
 }
 
-.emotion-220 {
+.emotion-216 {
   padding-top: 0.5rem;
 }
 
-.emotion-222 {
+.emotion-218 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -5793,14 +5697,14 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-222 {
+  .emotion-218 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-222 {
+  .emotion-218 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -6391,23 +6295,17 @@ exports[`Story Page should render correctly when the secondary column data is no
                     <div
                       class="emotion-189 emotion-190 emotion-191"
                     >
-                      <div
-                        class="emotion-192 emotion-193"
-                      />
-                      <div
-                        class="emotion-194 emotion-195"
-                      />
                       <h2
-                        class="emotion-196 emotion-197"
+                        class="emotion-192 emotion-193"
                       >
                         <span
-                          class="emotion-198 emotion-199"
+                          class="emotion-194 emotion-195"
                         >
                           <span
-                            class="emotion-200 emotion-201"
+                            class="emotion-196 emotion-197"
                           >
                             <span
-                              class="emotion-202 emotion-203"
+                              class="emotion-198 emotion-199"
                               dir="ltr"
                               id="Most-Read"
                             >
@@ -6418,43 +6316,43 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </h2>
                     </div>
                     <ol
-                      class="emotion-204 emotion-205 emotion-2"
+                      class="emotion-200 emotion-201 emotion-2"
                       dir="ltr"
                       role="list"
                     >
                       <li
-                        class="emotion-207 emotion-208 emotion-2"
+                        class="emotion-203 emotion-204 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-210 emotion-211"
+                          class="emotion-206 emotion-207"
                         >
                           <div
-                            class="emotion-212 emotion-213"
+                            class="emotion-208 emotion-209"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-214 emotion-215"
+                              class="emotion-210 emotion-211"
                             >
                               1
                             </span>
                           </div>
                           <div
-                            class="emotion-216 emotion-217"
+                            class="emotion-212 emotion-213"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-218 emotion-219"
+                              class="emotion-214 emotion-215"
                               href="/pidgin/tori-46729879"
                             >
                               Public Holidays wey go happun for 2019
                             </a>
                             <div
-                              class="emotion-220 emotion-221"
+                              class="emotion-216 emotion-217"
                             >
                               <time
-                                class="emotion-222 emotion-25"
+                                class="emotion-218 emotion-25"
                                 datetime="2019-05-21"
                               >
                                 De one we dem update for: 21st May 2019
@@ -6464,38 +6362,38 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </div>
                       </li>
                       <li
-                        class="emotion-207 emotion-208 emotion-2"
+                        class="emotion-203 emotion-204 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-210 emotion-211"
+                          class="emotion-206 emotion-207"
                         >
                           <div
-                            class="emotion-212 emotion-213"
+                            class="emotion-208 emotion-209"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-214 emotion-215"
+                              class="emotion-210 emotion-211"
                             >
                               2
                             </span>
                           </div>
                           <div
-                            class="emotion-216 emotion-217"
+                            class="emotion-212 emotion-213"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-218 emotion-219"
+                              class="emotion-214 emotion-215"
                               href="/pidgin/tori-50304653"
                             >
                               Liberia banks don run out of money
                             </a>
                             <div
-                              class="emotion-220 emotion-221"
+                              class="emotion-216 emotion-217"
                             >
                               <time
-                                class="emotion-222 emotion-25"
+                                class="emotion-218 emotion-25"
                                 datetime="2019-11-05"
                               >
                                 De one we dem update for: 5th November 2019
@@ -6505,38 +6403,38 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </div>
                       </li>
                       <li
-                        class="emotion-207 emotion-208 emotion-2"
+                        class="emotion-203 emotion-204 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-210 emotion-211"
+                          class="emotion-206 emotion-207"
                         >
                           <div
-                            class="emotion-212 emotion-213"
+                            class="emotion-208 emotion-209"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-214 emotion-215"
+                              class="emotion-210 emotion-211"
                             >
                               3
                             </span>
                           </div>
                           <div
-                            class="emotion-216 emotion-217"
+                            class="emotion-212 emotion-213"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-218 emotion-219"
+                              class="emotion-214 emotion-215"
                               href="/pidgin/tori-50298882"
                             >
                               Why Oscars disqualify Genevieve Nnaji 'Lionheart' film
                             </a>
                             <div
-                              class="emotion-220 emotion-221"
+                              class="emotion-216 emotion-217"
                             >
                               <time
-                                class="emotion-222 emotion-25"
+                                class="emotion-218 emotion-25"
                                 datetime="2019-11-05"
                               >
                                 De one we dem update for: 5th November 2019
@@ -6546,38 +6444,38 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </div>
                       </li>
                       <li
-                        class="emotion-207 emotion-208 emotion-2"
+                        class="emotion-203 emotion-204 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-210 emotion-211"
+                          class="emotion-206 emotion-207"
                         >
                           <div
-                            class="emotion-212 emotion-213"
+                            class="emotion-208 emotion-209"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-214 emotion-215"
+                              class="emotion-210 emotion-211"
                             >
                               4
                             </span>
                           </div>
                           <div
-                            class="emotion-216 emotion-217"
+                            class="emotion-212 emotion-213"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-218 emotion-219"
+                              class="emotion-214 emotion-215"
                               href="/pidgin/tori-50315150"
                             >
                               Ghana opposition NDC list 51 family and friends inside Akufo-Addo govment
                             </a>
                             <div
-                              class="emotion-220 emotion-221"
+                              class="emotion-216 emotion-217"
                             >
                               <time
-                                class="emotion-222 emotion-25"
+                                class="emotion-218 emotion-25"
                                 datetime="2019-11-06"
                               >
                                 De one we dem update for: 6th November 2019
@@ -6587,38 +6485,38 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </div>
                       </li>
                       <li
-                        class="emotion-207 emotion-208 emotion-2"
+                        class="emotion-203 emotion-204 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-210 emotion-211"
+                          class="emotion-206 emotion-207"
                         >
                           <div
-                            class="emotion-212 emotion-213"
+                            class="emotion-208 emotion-209"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-214 emotion-215"
+                              class="emotion-210 emotion-211"
                             >
                               5
                             </span>
                           </div>
                           <div
-                            class="emotion-216 emotion-217"
+                            class="emotion-212 emotion-213"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-218 emotion-219"
+                              class="emotion-214 emotion-215"
                               href="/pidgin/tori-50315157"
                             >
                               How Balogun market fire kill Policeman for Lagos
                             </a>
                             <div
-                              class="emotion-220 emotion-221"
+                              class="emotion-216 emotion-217"
                             >
                               <time
-                                class="emotion-222 emotion-25"
+                                class="emotion-218 emotion-25"
                                 datetime="2019-11-06"
                               >
                                 De one we dem update for: 6th November 2019
@@ -6628,38 +6526,38 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </div>
                       </li>
                       <li
-                        class="emotion-207 emotion-208 emotion-2"
+                        class="emotion-203 emotion-204 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-210 emotion-211"
+                          class="emotion-206 emotion-207"
                         >
                           <div
-                            class="emotion-212 emotion-213"
+                            class="emotion-208 emotion-209"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-214 emotion-215"
+                              class="emotion-210 emotion-211"
                             >
                               6
                             </span>
                           </div>
                           <div
-                            class="emotion-216 emotion-217"
+                            class="emotion-212 emotion-213"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-218 emotion-219"
+                              class="emotion-214 emotion-215"
                               href="/pidgin/tori-50093818"
                             >
                               Labour, FG finally agree minimum wage salary adjustment
                             </a>
                             <div
-                              class="emotion-220 emotion-221"
+                              class="emotion-216 emotion-217"
                             >
                               <time
-                                class="emotion-222 emotion-25"
+                                class="emotion-218 emotion-25"
                                 datetime="2019-10-18"
                               >
                                 De one we dem update for: 18th October 2019
@@ -6669,38 +6567,38 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </div>
                       </li>
                       <li
-                        class="emotion-207 emotion-208 emotion-2"
+                        class="emotion-203 emotion-204 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-210 emotion-211"
+                          class="emotion-206 emotion-207"
                         >
                           <div
-                            class="emotion-212 emotion-213"
+                            class="emotion-208 emotion-209"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-214 emotion-215"
+                              class="emotion-210 emotion-211"
                             >
                               7
                             </span>
                           </div>
                           <div
-                            class="emotion-216 emotion-217"
+                            class="emotion-212 emotion-213"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-218 emotion-219"
+                              class="emotion-214 emotion-215"
                               href="/pidgin/tori-50187218"
                             >
                               Naira Marley na 'Bad Influence'?
                             </a>
                             <div
-                              class="emotion-220 emotion-221"
+                              class="emotion-216 emotion-217"
                             >
                               <time
-                                class="emotion-222 emotion-25"
+                                class="emotion-218 emotion-25"
                                 datetime="2019-10-25"
                               >
                                 De one we dem update for: 25th October 2019
@@ -6710,38 +6608,38 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </div>
                       </li>
                       <li
-                        class="emotion-207 emotion-208 emotion-2"
+                        class="emotion-203 emotion-204 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-210 emotion-211"
+                          class="emotion-206 emotion-207"
                         >
                           <div
-                            class="emotion-212 emotion-213"
+                            class="emotion-208 emotion-209"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-214 emotion-215"
+                              class="emotion-210 emotion-211"
                             >
                               8
                             </span>
                           </div>
                           <div
-                            class="emotion-216 emotion-217"
+                            class="emotion-212 emotion-213"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-218 emotion-219"
+                              class="emotion-214 emotion-215"
                               href="/pidgin/tori-48347911"
                             >
                               Tins you suppose know about Naira Marley
                             </a>
                             <div
-                              class="emotion-220 emotion-221"
+                              class="emotion-216 emotion-217"
                             >
                               <time
-                                class="emotion-222 emotion-25"
+                                class="emotion-218 emotion-25"
                                 datetime="2019-05-23"
                               >
                                 De one we dem update for: 23rd May 2019
@@ -6751,38 +6649,38 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </div>
                       </li>
                       <li
-                        class="emotion-207 emotion-208 emotion-2"
+                        class="emotion-203 emotion-204 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-210 emotion-211"
+                          class="emotion-206 emotion-207"
                         >
                           <div
-                            class="emotion-212 emotion-213"
+                            class="emotion-208 emotion-209"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-214 emotion-215"
+                              class="emotion-210 emotion-211"
                             >
                               9
                             </span>
                           </div>
                           <div
-                            class="emotion-216 emotion-217"
+                            class="emotion-212 emotion-213"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-218 emotion-219"
+                              class="emotion-214 emotion-215"
                               href="/pidgin/sport-50312710"
                             >
                               Golden Eaglets crash out of Fifa U17 World Cup
                             </a>
                             <div
-                              class="emotion-220 emotion-221"
+                              class="emotion-216 emotion-217"
                             >
                               <time
-                                class="emotion-222 emotion-25"
+                                class="emotion-218 emotion-25"
                                 datetime="2019-11-06"
                               >
                                 De one we dem update for: 6th November 2019
@@ -6792,38 +6690,38 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </div>
                       </li>
                       <li
-                        class="emotion-207 emotion-208 emotion-2"
+                        class="emotion-203 emotion-204 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-210 emotion-211"
+                          class="emotion-206 emotion-207"
                         >
                           <div
-                            class="emotion-212 emotion-213"
+                            class="emotion-208 emotion-209"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-214 emotion-215"
+                              class="emotion-210 emotion-211"
                             >
                               10
                             </span>
                           </div>
                           <div
-                            class="emotion-216 emotion-217"
+                            class="emotion-212 emotion-213"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-218 emotion-219"
+                              class="emotion-214 emotion-215"
                               href="/pidgin/tori-42945173"
                             >
                               Tiger nut drink fit wake up your sex drive - Nutritionist
                             </a>
                             <div
-                              class="emotion-220 emotion-221"
+                              class="emotion-216 emotion-217"
                             >
                               <time
-                                class="emotion-222 emotion-25"
+                                class="emotion-218 emotion-25"
                                 datetime="2019-05-21"
                               >
                                 De one we dem update for: 21st May 2019
@@ -7175,7 +7073,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -7479,7 +7377,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 .emotion-24 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -8077,7 +7975,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -8423,7 +8321,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   margin: 0;
   padding: 1.5rem 0;
 }
@@ -8578,7 +8476,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 .emotion-192 {
   position: relative;
   z-index: 0;
-  color: #3F3F42;
+  color: #141414;
   margin-top: 2rem;
   margin-top: 0;
 }
@@ -8602,50 +8500,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 .emotion-194 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-  display: none;
-}
-
-@media screen and (-ms-high-contrast: active) {
-  .emotion-194 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-194 {
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-.emotion-196 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-@media screen and (-ms-high-contrast: active) {
-  .emotion-196 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-196 {
-    display: none;
-  }
-}
-
-.emotion-198 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-200 {
+.emotion-196 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8655,7 +8514,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   flex-direction: column;
 }
 
-.emotion-202 {
+.emotion-198 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8675,7 +8534,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-202 {
+  .emotion-198 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -8683,11 +8542,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-.emotion-204 {
+.emotion-200 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   background-color: #FDFDFD;
   margin: 1rem 0;
@@ -8703,102 +8562,102 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-204 {
+  .emotion-200 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-204 {
+  .emotion-200 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-204 {
+  .emotion-200 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-204 {
+  .emotion-200 {
     padding-right: 1rem;
   }
 }
 
-.emotion-206 {
+.emotion-202 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.emotion-208 {
+.emotion-204 {
   padding: 0.5rem 0 1rem;
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-208 {
+  .emotion-204 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
-.emotion-208:last-child {
+.emotion-204:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-208 {
+  .emotion-204 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-208 {
+  .emotion-204 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-208:first-child {
+.emotion-204:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-208:first-child {
+  .emotion-204:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-208:last-child {
+.emotion-204:last-child {
   padding-bottom: 0;
 }
 
-.emotion-210 {
+.emotion-206 {
   position: relative;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-210 {
+  .emotion-206 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-210 {
+    .emotion-206 {
       grid-column-gap: 1rem;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-210 {
+    .emotion-206 {
       display: block;
     }
   }
 }
 
-.emotion-212 {
+.emotion-208 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -8807,25 +8666,25 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-212 {
+  .emotion-208 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-212 {
+  .emotion-208 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
   }
 }
 
-.emotion-212>div {
+.emotion-208>div {
   vertical-align: middle;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-212 {
+  .emotion-208 {
     display: block;
     width: initial;
     padding: initial;
@@ -8834,22 +8693,22 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 63rem) {
-    .emotion-212 {
+    .emotion-208 {
       padding-top: 0;
     }
   }
 }
 
-.emotion-212>div {
+.emotion-208>div {
   display: inline-block;
   vertical-align: initial;
 }
 
-.emotion-212 svg {
+.emotion-208 svg {
   margin: 0;
 }
 
-.emotion-214 {
+.emotion-210 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -8862,20 +8721,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-214 {
+  .emotion-210 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-214 {
+  .emotion-210 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-216 {
+.emotion-212 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -8884,7 +8743,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   overflow-wrap: anywhere;
 }
 
-.emotion-216:before {
+.emotion-212:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -8896,20 +8755,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   z-index: 1;
 }
 
-.emotion-216:hover,
-.emotion-216:focus {
+.emotion-212:hover,
+.emotion-212:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-216:visited {
+.emotion-212:visited {
   color: #6E6E73;
 }
 
-.emotion-218 {
+.emotion-214 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -8917,27 +8776,27 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-218 {
+  .emotion-214 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-218 {
+  .emotion-214 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-263 {
+.emotion-255 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-263 {
+  .emotion-255 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     -webkit-column-gap: 1rem;
@@ -8946,92 +8805,92 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-.emotion-265 {
+.emotion-257 {
   padding: 0.5rem 0 1rem;
   line-height: 0;
   height: 100%;
 }
 
-.emotion-265:last-child {
+.emotion-257:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-265 {
+  .emotion-257 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-265 {
+  .emotion-257 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-265:first-child {
+.emotion-257:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-265:first-child {
+  .emotion-257:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-265:last-child {
+.emotion-257:last-child {
   padding-bottom: 0;
 }
 
-.emotion-265:first-child {
+.emotion-257:first-child {
   padding: 0 0 0.5rem 0;
 }
 
-.emotion-265:not(:first-child):not(:last-child) {
+.emotion-257:not(:first-child):not(:last-child) {
   padding: 0.5rem 0 0.5rem 0;
 }
 
-.emotion-265:last-child {
+.emotion-257:last-child {
   padding: 0.5rem 0 0 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-265 {
+  .emotion-257 {
     padding: 0;
   }
 
-  .emotion-265:first-child,
-  .emotion-265:not(:first-child):not(:last-child),
-  .emotion-265:last-child {
+  .emotion-257:first-child,
+  .emotion-257:not(:first-child):not(:last-child),
+  .emotion-257:last-child {
     padding: 0;
   }
 }
 
-.emotion-283 {
+.emotion-275 {
   margin-bottom: 1.5rem;
   padding: 1rem;
 }
 
-.emotion-286 {
+.emotion-278 {
   position: relative;
   z-index: 0;
-  color: #3F3F42;
+  color: #141414;
   margin-top: 2rem;
   margin-top: 0;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-286 {
+  .emotion-278 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-286 {
+  .emotion-278 {
     margin-bottom: 1.5rem;
   }
 }
 
-.emotion-301 {
+.emotion-289 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -9040,7 +8899,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @supports (display: grid) {
-  .emotion-301 {
+  .emotion-289 {
     display: grid;
     position: initial;
     width: initial;
@@ -9048,7 +8907,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-301 {
+    .emotion-289 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -9056,7 +8915,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-301 {
+    .emotion-289 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -9064,7 +8923,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-301 {
+    .emotion-289 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -9072,7 +8931,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-301 {
+    .emotion-289 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -9080,7 +8939,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-301 {
+    .emotion-289 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -9088,7 +8947,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-301 {
+    .emotion-289 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -9096,62 +8955,62 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-.emotion-304 {
+.emotion-292 {
   position: relative;
   padding-bottom: 1.5rem;
 }
 
 @supports (display: grid) {
-  .emotion-304 {
+  .emotion-292 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-304 {
+    .emotion-292 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-304 {
+    .emotion-292 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-304 {
+    .emotion-292 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-304 {
+    .emotion-292 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-304 {
+    .emotion-292 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-304 {
+    .emotion-292 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 }
 
-.emotion-306 {
+.emotion-294 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9164,30 +9023,30 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-308 {
+  .emotion-296 {
     min-width: 1.75rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-308 {
+  .emotion-296 {
     min-width: 1.75rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-308 {
+  .emotion-296 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-308 {
+  .emotion-296 {
     min-width: 2.5rem;
   }
 }
 
-.emotion-310 {
+.emotion-298 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -9200,32 +9059,32 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-310 {
+  .emotion-298 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-310 {
+  .emotion-298 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
-.emotion-312 {
+.emotion-300 {
   padding-top: 0.2rem;
   padding-left: 0.5rem;
   padding-right: 1rem;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-312 {
+  .emotion-300 {
     padding-right: 0;
   }
 }
 
-.emotion-314 {
+.emotion-302 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -9239,26 +9098,26 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-314 {
+  .emotion-302 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-314 {
+  .emotion-302 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-314:hover,
-.emotion-314:focus {
+.emotion-302:hover,
+.emotion-302:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-314:before {
+.emotion-302:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -9270,7 +9129,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   z-index: 1;
 }
 
-.emotion-316 {
+.emotion-304 {
   padding-top: 0.5rem;
 }
 
@@ -9860,23 +9719,17 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     <div
                       class="emotion-191 emotion-192 emotion-193"
                     >
-                      <div
-                        class="emotion-194 emotion-195"
-                      />
-                      <div
-                        class="emotion-196 emotion-197"
-                      />
                       <h2
-                        class="emotion-198 emotion-199"
+                        class="emotion-194 emotion-195"
                       >
                         <span
-                          class="emotion-200 emotion-201"
+                          class="emotion-196 emotion-197"
                         >
                           <span
-                            class="emotion-202 emotion-203"
+                            class="emotion-198 emotion-199"
                           >
                             <span
-                              class="emotion-204 emotion-205"
+                              class="emotion-200 emotion-201"
                               dir="ltr"
                               id="top-stories-heading"
                             >
@@ -9887,26 +9740,26 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </h2>
                     </div>
                     <ul
-                      class="emotion-206 emotion-207"
+                      class="emotion-202 emotion-203"
                       role="list"
                     >
                       <li
-                        class="emotion-208 emotion-209"
+                        class="emotion-204 emotion-205"
                       >
                         <div
-                          class="emotion-210 emotion-211"
+                          class="emotion-206 emotion-207"
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-212 emotion-213"
+                            class="emotion-208 emotion-209"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-214 emotion-215"
+                              class="emotion-210 emotion-211"
                             >
                               <a
                                 aria-labelledby="top-stories-promo-pidgin23248287-1"
-                                class="emotion-216 emotion-217"
+                                class="emotion-212 emotion-213"
                                 href="/pidgin/23248287"
                               >
                                 <span
@@ -9917,7 +9770,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               </a>
                             </h3>
                             <time
-                              class="emotion-218 emotion-25"
+                              class="emotion-214 emotion-25"
                               datetime="2019-09-10"
                             >
                               10th September 2019
@@ -9926,22 +9779,22 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-208 emotion-209"
+                        class="emotion-204 emotion-205"
                       >
                         <div
-                          class="emotion-210 emotion-211"
+                          class="emotion-206 emotion-207"
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-212 emotion-213"
+                            class="emotion-208 emotion-209"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-214 emotion-215"
+                              class="emotion-210 emotion-211"
                             >
                               <a
                                 aria-labelledby="top-stories-promo-pidgintori23146434-1"
-                                class="emotion-216 emotion-217"
+                                class="emotion-212 emotion-213"
                                 href="/pidgin/tori-23146434"
                               >
                                 <span
@@ -9952,7 +9805,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               </a>
                             </h3>
                             <time
-                              class="emotion-218 emotion-25"
+                              class="emotion-214 emotion-25"
                               datetime="2017-08-08"
                             >
                               8th August 2017
@@ -9961,22 +9814,22 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-208 emotion-209"
+                        class="emotion-204 emotion-205"
                       >
                         <div
-                          class="emotion-210 emotion-211"
+                          class="emotion-206 emotion-207"
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-212 emotion-213"
+                            class="emotion-208 emotion-209"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-214 emotion-215"
+                              class="emotion-210 emotion-211"
                             >
                               <a
                                 aria-labelledby="top-stories-promo-news-feature-1"
-                                class="emotion-216 emotion-217"
+                                class="emotion-212 emotion-213"
                                 href="/news"
                               >
                                 <span
@@ -9987,7 +9840,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               </a>
                             </h3>
                             <time
-                              class="emotion-218 emotion-25"
+                              class="emotion-214 emotion-25"
                               datetime="2019-12-06"
                             >
                               6th December 2019
@@ -10010,23 +9863,17 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     <div
                       class="emotion-191 emotion-192 emotion-193"
                     >
-                      <div
-                        class="emotion-194 emotion-195"
-                      />
-                      <div
-                        class="emotion-196 emotion-197"
-                      />
                       <h2
-                        class="emotion-198 emotion-199"
+                        class="emotion-194 emotion-195"
                       >
                         <span
-                          class="emotion-200 emotion-201"
+                          class="emotion-196 emotion-197"
                         >
                           <span
-                            class="emotion-202 emotion-203"
+                            class="emotion-198 emotion-199"
                           >
                             <span
-                              class="emotion-204 emotion-205"
+                              class="emotion-200 emotion-201"
                               dir="ltr"
                               id="features-analysis-heading"
                             >
@@ -10037,67 +9884,67 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </h2>
                     </div>
                     <ul
-                      class="emotion-263 emotion-264"
+                      class="emotion-255 emotion-256"
                       role="list"
                     >
                       <li
-                        class="emotion-265 emotion-266"
+                        class="emotion-257 emotion-258"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-265 emotion-266"
+                        class="emotion-257 emotion-258"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-265 emotion-266"
+                        class="emotion-257 emotion-258"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-265 emotion-266"
+                        class="emotion-257 emotion-258"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-265 emotion-266"
+                        class="emotion-257 emotion-258"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-265 emotion-266"
+                        class="emotion-257 emotion-258"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-265 emotion-266"
+                        class="emotion-257 emotion-258"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-265 emotion-266"
+                        class="emotion-257 emotion-258"
                       >
                         <span
                           data-testid="frosted-promo-loader"
                         />
                       </li>
                       <li
-                        class="emotion-265 emotion-266"
+                        class="emotion-257 emotion-258"
                       >
                         <span
                           data-testid="frosted-promo-loader"
@@ -10107,7 +9954,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   </section>
                 </div>
                 <div
-                  class="emotion-283 emotion-284"
+                  class="emotion-275 emotion-276"
                 >
                   <section
                     aria-labelledby="Most-Read"
@@ -10115,25 +9962,19 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     role="region"
                   >
                     <div
-                      class="emotion-285 emotion-286 emotion-193"
+                      class="emotion-277 emotion-278 emotion-193"
                     >
-                      <div
-                        class="emotion-194 emotion-195"
-                      />
-                      <div
-                        class="emotion-196 emotion-197"
-                      />
                       <h2
-                        class="emotion-198 emotion-199"
+                        class="emotion-194 emotion-195"
                       >
                         <span
-                          class="emotion-200 emotion-201"
+                          class="emotion-196 emotion-197"
                         >
                           <span
-                            class="emotion-202 emotion-203"
+                            class="emotion-198 emotion-199"
                           >
                             <span
-                              class="emotion-204 emotion-205"
+                              class="emotion-200 emotion-201"
                               dir="ltr"
                               id="Most-Read"
                             >
@@ -10144,43 +9985,43 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </h2>
                     </div>
                     <ol
-                      class="emotion-300 emotion-301 emotion-2"
+                      class="emotion-288 emotion-289 emotion-2"
                       dir="ltr"
                       role="list"
                     >
                       <li
-                        class="emotion-303 emotion-304 emotion-2"
+                        class="emotion-291 emotion-292 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-306 emotion-307"
+                          class="emotion-294 emotion-295"
                         >
                           <div
-                            class="emotion-308 emotion-309"
+                            class="emotion-296 emotion-297"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-310 emotion-311"
+                              class="emotion-298 emotion-299"
                             >
                               1
                             </span>
                           </div>
                           <div
-                            class="emotion-312 emotion-313"
+                            class="emotion-300 emotion-301"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-314 emotion-315"
+                              class="emotion-302 emotion-303"
                               href="/pidgin/tori-46729879"
                             >
                               Public Holidays wey go happun for 2019
                             </a>
                             <div
-                              class="emotion-316 emotion-317"
+                              class="emotion-304 emotion-305"
                             >
                               <time
-                                class="emotion-218 emotion-25"
+                                class="emotion-214 emotion-25"
                                 datetime="2019-05-21"
                               >
                                 De one we dem update for: 21st May 2019
@@ -10190,38 +10031,38 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-303 emotion-304 emotion-2"
+                        class="emotion-291 emotion-292 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-306 emotion-307"
+                          class="emotion-294 emotion-295"
                         >
                           <div
-                            class="emotion-308 emotion-309"
+                            class="emotion-296 emotion-297"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-310 emotion-311"
+                              class="emotion-298 emotion-299"
                             >
                               2
                             </span>
                           </div>
                           <div
-                            class="emotion-312 emotion-313"
+                            class="emotion-300 emotion-301"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-314 emotion-315"
+                              class="emotion-302 emotion-303"
                               href="/pidgin/tori-50304653"
                             >
                               Liberia banks don run out of money
                             </a>
                             <div
-                              class="emotion-316 emotion-317"
+                              class="emotion-304 emotion-305"
                             >
                               <time
-                                class="emotion-218 emotion-25"
+                                class="emotion-214 emotion-25"
                                 datetime="2019-11-05"
                               >
                                 De one we dem update for: 5th November 2019
@@ -10231,38 +10072,38 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-303 emotion-304 emotion-2"
+                        class="emotion-291 emotion-292 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-306 emotion-307"
+                          class="emotion-294 emotion-295"
                         >
                           <div
-                            class="emotion-308 emotion-309"
+                            class="emotion-296 emotion-297"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-310 emotion-311"
+                              class="emotion-298 emotion-299"
                             >
                               3
                             </span>
                           </div>
                           <div
-                            class="emotion-312 emotion-313"
+                            class="emotion-300 emotion-301"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-314 emotion-315"
+                              class="emotion-302 emotion-303"
                               href="/pidgin/tori-50298882"
                             >
                               Why Oscars disqualify Genevieve Nnaji 'Lionheart' film
                             </a>
                             <div
-                              class="emotion-316 emotion-317"
+                              class="emotion-304 emotion-305"
                             >
                               <time
-                                class="emotion-218 emotion-25"
+                                class="emotion-214 emotion-25"
                                 datetime="2019-11-05"
                               >
                                 De one we dem update for: 5th November 2019
@@ -10272,38 +10113,38 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-303 emotion-304 emotion-2"
+                        class="emotion-291 emotion-292 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-306 emotion-307"
+                          class="emotion-294 emotion-295"
                         >
                           <div
-                            class="emotion-308 emotion-309"
+                            class="emotion-296 emotion-297"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-310 emotion-311"
+                              class="emotion-298 emotion-299"
                             >
                               4
                             </span>
                           </div>
                           <div
-                            class="emotion-312 emotion-313"
+                            class="emotion-300 emotion-301"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-314 emotion-315"
+                              class="emotion-302 emotion-303"
                               href="/pidgin/tori-50315150"
                             >
                               Ghana opposition NDC list 51 family and friends inside Akufo-Addo govment
                             </a>
                             <div
-                              class="emotion-316 emotion-317"
+                              class="emotion-304 emotion-305"
                             >
                               <time
-                                class="emotion-218 emotion-25"
+                                class="emotion-214 emotion-25"
                                 datetime="2019-11-06"
                               >
                                 De one we dem update for: 6th November 2019
@@ -10313,38 +10154,38 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-303 emotion-304 emotion-2"
+                        class="emotion-291 emotion-292 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-306 emotion-307"
+                          class="emotion-294 emotion-295"
                         >
                           <div
-                            class="emotion-308 emotion-309"
+                            class="emotion-296 emotion-297"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-310 emotion-311"
+                              class="emotion-298 emotion-299"
                             >
                               5
                             </span>
                           </div>
                           <div
-                            class="emotion-312 emotion-313"
+                            class="emotion-300 emotion-301"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-314 emotion-315"
+                              class="emotion-302 emotion-303"
                               href="/pidgin/tori-50315157"
                             >
                               How Balogun market fire kill Policeman for Lagos
                             </a>
                             <div
-                              class="emotion-316 emotion-317"
+                              class="emotion-304 emotion-305"
                             >
                               <time
-                                class="emotion-218 emotion-25"
+                                class="emotion-214 emotion-25"
                                 datetime="2019-11-06"
                               >
                                 De one we dem update for: 6th November 2019
@@ -10354,38 +10195,38 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-303 emotion-304 emotion-2"
+                        class="emotion-291 emotion-292 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-306 emotion-307"
+                          class="emotion-294 emotion-295"
                         >
                           <div
-                            class="emotion-308 emotion-309"
+                            class="emotion-296 emotion-297"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-310 emotion-311"
+                              class="emotion-298 emotion-299"
                             >
                               6
                             </span>
                           </div>
                           <div
-                            class="emotion-312 emotion-313"
+                            class="emotion-300 emotion-301"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-314 emotion-315"
+                              class="emotion-302 emotion-303"
                               href="/pidgin/tori-50093818"
                             >
                               Labour, FG finally agree minimum wage salary adjustment
                             </a>
                             <div
-                              class="emotion-316 emotion-317"
+                              class="emotion-304 emotion-305"
                             >
                               <time
-                                class="emotion-218 emotion-25"
+                                class="emotion-214 emotion-25"
                                 datetime="2019-10-18"
                               >
                                 De one we dem update for: 18th October 2019
@@ -10395,38 +10236,38 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-303 emotion-304 emotion-2"
+                        class="emotion-291 emotion-292 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-306 emotion-307"
+                          class="emotion-294 emotion-295"
                         >
                           <div
-                            class="emotion-308 emotion-309"
+                            class="emotion-296 emotion-297"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-310 emotion-311"
+                              class="emotion-298 emotion-299"
                             >
                               7
                             </span>
                           </div>
                           <div
-                            class="emotion-312 emotion-313"
+                            class="emotion-300 emotion-301"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-314 emotion-315"
+                              class="emotion-302 emotion-303"
                               href="/pidgin/tori-50187218"
                             >
                               Naira Marley na 'Bad Influence'?
                             </a>
                             <div
-                              class="emotion-316 emotion-317"
+                              class="emotion-304 emotion-305"
                             >
                               <time
-                                class="emotion-218 emotion-25"
+                                class="emotion-214 emotion-25"
                                 datetime="2019-10-25"
                               >
                                 De one we dem update for: 25th October 2019
@@ -10436,38 +10277,38 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-303 emotion-304 emotion-2"
+                        class="emotion-291 emotion-292 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-306 emotion-307"
+                          class="emotion-294 emotion-295"
                         >
                           <div
-                            class="emotion-308 emotion-309"
+                            class="emotion-296 emotion-297"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-310 emotion-311"
+                              class="emotion-298 emotion-299"
                             >
                               8
                             </span>
                           </div>
                           <div
-                            class="emotion-312 emotion-313"
+                            class="emotion-300 emotion-301"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-314 emotion-315"
+                              class="emotion-302 emotion-303"
                               href="/pidgin/tori-48347911"
                             >
                               Tins you suppose know about Naira Marley
                             </a>
                             <div
-                              class="emotion-316 emotion-317"
+                              class="emotion-304 emotion-305"
                             >
                               <time
-                                class="emotion-218 emotion-25"
+                                class="emotion-214 emotion-25"
                                 datetime="2019-05-23"
                               >
                                 De one we dem update for: 23rd May 2019
@@ -10477,38 +10318,38 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-303 emotion-304 emotion-2"
+                        class="emotion-291 emotion-292 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-306 emotion-307"
+                          class="emotion-294 emotion-295"
                         >
                           <div
-                            class="emotion-308 emotion-309"
+                            class="emotion-296 emotion-297"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-310 emotion-311"
+                              class="emotion-298 emotion-299"
                             >
                               9
                             </span>
                           </div>
                           <div
-                            class="emotion-312 emotion-313"
+                            class="emotion-300 emotion-301"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-314 emotion-315"
+                              class="emotion-302 emotion-303"
                               href="/pidgin/sport-50312710"
                             >
                               Golden Eaglets crash out of Fifa U17 World Cup
                             </a>
                             <div
-                              class="emotion-316 emotion-317"
+                              class="emotion-304 emotion-305"
                             >
                               <time
-                                class="emotion-218 emotion-25"
+                                class="emotion-214 emotion-25"
                                 datetime="2019-11-06"
                               >
                                 De one we dem update for: 6th November 2019
@@ -10518,38 +10359,38 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-303 emotion-304 emotion-2"
+                        class="emotion-291 emotion-292 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-306 emotion-307"
+                          class="emotion-294 emotion-295"
                         >
                           <div
-                            class="emotion-308 emotion-309"
+                            class="emotion-296 emotion-297"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-310 emotion-311"
+                              class="emotion-298 emotion-299"
                             >
                               10
                             </span>
                           </div>
                           <div
-                            class="emotion-312 emotion-313"
+                            class="emotion-300 emotion-301"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-314 emotion-315"
+                              class="emotion-302 emotion-303"
                               href="/pidgin/tori-42945173"
                             >
                               Tiger nut drink fit wake up your sex drive - Nutritionist
                             </a>
                             <div
-                              class="emotion-316 emotion-317"
+                              class="emotion-304 emotion-305"
                             >
                               <time
-                                class="emotion-218 emotion-25"
+                                class="emotion-214 emotion-25"
                                 datetime="2019-05-21"
                               >
                                 De one we dem update for: 21st May 2019

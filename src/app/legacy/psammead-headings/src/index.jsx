@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { shape, string, bool } from 'prop-types';
-import { C_SHADOW, C_LUNAR } from '#legacy/psammead-styles/src/colours';
+import { C_LUNAR, C_GREY_10 } from '#legacy/psammead-styles/src/colours';
 import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
@@ -17,7 +17,7 @@ import {
 export const Headline = styled.h1`
   ${({ script }) => script && getCanon(script)};
   ${({ service }) => getSerifMedium(service)}
-  color: ${({ darkMode }) => (darkMode ? C_LUNAR : C_SHADOW)};
+  color: ${({ darkMode }) => (darkMode ? C_LUNAR : C_GREY_10)};
   display: block; /* Explicitly set */
   margin: 0; /* Reset */
   padding: ${GEL_SPACING_QUAD} 0;
@@ -39,7 +39,7 @@ Headline.defaultProps = {
 export const SubHeading = styled.h2`
   ${({ script }) => script && getTrafalgar(script)};
   ${({ service }) => getSansBold(service)}
-  color: ${({ darkMode }) => (darkMode ? C_LUNAR : C_SHADOW)};
+  color: ${({ darkMode }) => (darkMode ? C_LUNAR : C_GREY_10)};
   margin: 0; /* Reset */
   padding: ${GEL_SPACING_TRPL} 0;
   ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
