@@ -432,13 +432,6 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 .emotion-31 {
   position: relative;
   background-color: #FFFFFF;
-  border-top: 0.0625rem solid #FFFFFF;
-}
-
-@media (max-width: 25rem) {
-  .emotion-31 {
-    border-top: none;
-  }
 }
 
 .emotion-31::after {
