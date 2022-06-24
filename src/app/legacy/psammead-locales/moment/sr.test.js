@@ -1,4 +1,5 @@
 import moment from 'moment';
+import { format } from 'prettier';
 import './sr';
 
 moment.locale('sr');
@@ -36,37 +37,39 @@ test('parse', () => {
   }
 });
 
-test('format', () => {
-  const a = [
-    ['dddd, Do MMMM YYYY, h:mm:ss a', 'nedelja, 14. februar 2010, 3:25:50 pm'],
-    ['ddd, hA', 'ned., 3PM'],
-    ['M Mo MM MMMM MMM', '2 2. 02 februar feb.'],
-    ['YYYY YY', '2010 10'],
-    ['D Do DD', '14 14. 14'],
-    ['d do dddd ddd dd', '0 0. nedelja ned. ne'],
-    ['DDD DDDo DDDD', '45 45. 045'],
-    ['w wo ww', '7 7. 07'],
-    ['h hh', '3 03'],
-    ['H HH', '15 15'],
-    ['m mm', '25 25'],
-    ['s ss', '50 50'],
-    ['a A', 'pm PM'],
-    ['[the] DDDo [day of the year]', 'the 45. day of the year'],
-    ['LTS', '15:25:50'],
-    ['L', '14.02.2010'],
-    ['LL', '14 februar 2010'],
-    ['LLL', '14 februar 2010 15:25'],
-    ['LLLL', 'nedelja, 14 februar 2010 15:25'],
-    ['l', '14.2.2010'],
-    ['ll', '14 feb. 2010'],
-    ['lll', '14 feb. 2010 15:25'],
-    ['llll', 'ned., 14 feb. 2010 15:25'],
-  ];
+const a = [
+  ['dddd, Do MMMM YYYY, h:mm:ss a', 'nedelja, 14. februar 2010, 3:25:50 pm'],
+  ['ddd, hA', 'ned., 3PM'],
+  ['M Mo MM MMMM MMM', '2 2. 02 februar feb.'],
+  ['YYYY YY', '2010 10'],
+  ['D Do DD', '14 14. 14'],
+  ['d do dddd ddd dd', '0 0. nedelja ned. ne'],
+  ['DDD DDDo DDDD', '45 45. 045'],
+  ['w wo ww', '7 7. 07'],
+  ['h hh', '3 03'],
+  ['H HH', '15 15'],
+  ['m mm', '25 25'],
+  ['s ss', '50 50'],
+  ['a A', 'pm PM'],
+  ['[the] DDDo [day of the year]', 'the 45. day of the year'],
+  ['LTS', '15:25:50'],
+  ['L', '14. 2. 2010.'],
+  ['LL', '14 februar 2010'],
+  ['LLL', '14 februar 2010 15:25'],
+  ['LLLL', 'nedelja, 14 februar 2010 15:25'],
+  ['l', '14. 2. 2010.'],
+  ['ll', '14 feb. 2010'],
+  ['lll', '14 feb. 2010 15:25'],
+  ['llll', 'ned., 14 feb. 2010 15:25'],
+];
+
+test.each(a)('format %s', (formatString, expectedDate) => {
   const b = moment(new Date(2010, 1, 14, 15, 25, 50, 125));
-  let i;
-  for (i = 0; i < a.length; i += 1) {
-    assert.equal(b.format(a[i][0]), a[i][1], `${a[i][0]} ---> ${a[i][1]}`);
-  }
+  assert.equal(
+    b.format(formatString),
+    expectedDate,
+    `${formatString} ---> ${expectedDate}`
+  );
 });
 
 test('format ordinal', () => {
@@ -190,12 +193,12 @@ test('from', () => {
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ h: 22 }), true),
-    'dan',
+    'jedan dan',
     '22 hours = a day'
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ h: 35 }), true),
-    'dan',
+    'jedan dan',
     '35 hours = a day'
   );
   assert.equal(
@@ -205,7 +208,7 @@ test('from', () => {
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 1 }), true),
-    'dan',
+    'jedan dan',
     '1 day = a day'
   );
   assert.equal(
@@ -220,17 +223,17 @@ test('from', () => {
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 26 }), true),
-    'mesec',
+    'jedan mesec',
     '26 days = a month'
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 30 }), true),
-    'mesec',
+    'jedan mesec',
     '30 days = a month'
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 43 }), true),
-    'mesec',
+    'jedan mesec',
     '43 days = a month'
   );
   assert.equal(
@@ -250,7 +253,7 @@ test('from', () => {
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ M: 1 }), true),
-    'mesec',
+    'jedan mesec',
     '1 month = a month'
   );
   assert.equal(
@@ -260,7 +263,7 @@ test('from', () => {
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 345 }), true),
-    'godinu',
+    'jedna godina',
     '345 days = a year'
   );
   assert.equal(
@@ -270,7 +273,7 @@ test('from', () => {
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ y: 1 }), true),
-    'godinu',
+    'jedna godina',
     '1 year = a year'
   );
   assert.equal(

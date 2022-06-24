@@ -156,7 +156,7 @@ test('from', () => {
   const start = moment([2007, 1, 28]);
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 44 }), true),
-    'birneçə saniyə',
+    'bir neçə saniyə',
     '44 seconds = a few seconds'
   );
   assert.equal(
@@ -292,14 +292,14 @@ test('from', () => {
 });
 
 test('suffix', () => {
-  assert.equal(moment(30000).from(0), 'birneçə saniyə sonra', 'prefix');
-  assert.equal(moment(0).from(30000), 'birneçə saniyə əvvəl', 'suffix');
+  assert.equal(moment(30000).from(0), 'bir neçə saniyə sonra', 'prefix');
+  assert.equal(moment(0).from(30000), 'bir neçə saniyə əvvəl', 'suffix');
 });
 
 test('now from now', () => {
   assert.equal(
     moment().fromNow(),
-    'birneçə saniyə əvvəl',
+    'bir neçə saniyə əvvəl',
     'now from now should display as in the past'
   );
 });
@@ -307,7 +307,7 @@ test('now from now', () => {
 test('fromNow', () => {
   assert.equal(
     moment().add({ s: 30 }).fromNow(),
-    'birneçə saniyə sonra',
+    'bir neçə saniyə sonra',
     'in a few seconds'
   );
   assert.equal(moment().add({ d: 5 }).fromNow(), '5 gün sonra', 'in 5 days');
