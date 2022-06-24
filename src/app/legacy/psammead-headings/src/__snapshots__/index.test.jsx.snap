@@ -7,7 +7,7 @@ exports[`Headline component should render correctly 1`] = `
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -91,7 +91,7 @@ exports[`Headline component should render correctly with arabic script typograph
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -133,7 +133,7 @@ exports[`SubHeading component should render correctly 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   margin: 0;
   padding: 1.5rem 0;
 }
@@ -217,7 +217,7 @@ exports[`SubHeading component should render correctly with an ID 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   margin: 0;
   padding: 1.5rem 0;
 }
@@ -260,7 +260,7 @@ exports[`SubHeading component should render correctly with arabic script typogra
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   margin: 0;
   padding: 1.5rem 0;
 }
