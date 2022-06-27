@@ -1,5 +1,6 @@
 import React from 'react';
 import { node } from 'prop-types';
+import Timestamp from '#components/Promo/timestamp';
 import H3 from '../PromoBase/Headings.styles';
 import { ListItem, OrderedList, UnorderedList } from '../PromoBase/List.styles';
 import Image from '../PromoBase/Image.styles';
@@ -19,6 +20,7 @@ Promo.Link = Link;
 Promo.ListItem = ListItem;
 Promo.OrderedList = OrderedList;
 Promo.UnorderedList = UnorderedList;
+Promo.Timestamp = Timestamp;
 
 Promo.propTypes = { children: node.isRequired };
 
