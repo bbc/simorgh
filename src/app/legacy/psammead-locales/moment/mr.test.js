@@ -307,35 +307,35 @@ test('fromNow', () => {
 });
 
 test('calendar day', () => {
-  const a = moment().hours(12).minutes(0).seconds(0);
+  const calendarTime = moment().hours(12).minutes(0).seconds(0);
 
   assert.equal(
-    moment(a).calendar(),
+    moment(calendarTime).calendar(),
     'आज दुपारी 12:00 वाजता',
     'today at the same time'
   );
   assert.equal(
-    moment(a).add({ m: 25 }).calendar(),
+    moment(calendarTime).add({ m: 25 }).calendar(),
     'आज दुपारी 12:25 वाजता',
     'Now plus 25 min'
   );
   assert.equal(
-    moment(a).add({ h: 3 }).calendar(),
+    moment(calendarTime).add({ h: 3 }).calendar(),
     'आज दुपारी 3:00 वाजता',
     'Now plus 3 hours'
   );
   assert.equal(
-    moment(a).add({ d: 1 }).calendar(),
+    moment(calendarTime).add({ d: 1 }).calendar(),
     'उद्या दुपारी 12:00 वाजता',
     'tomorrow at the same time'
   );
   assert.equal(
-    moment(a).subtract({ h: 1 }).calendar(),
+    moment(calendarTime).subtract({ h: 1 }).calendar(),
     'आज सकाळी 11:00 वाजता',
     'Now minus 1 hour'
   );
   assert.equal(
-    moment(a).subtract({ d: 1 }).calendar(),
+    moment(calendarTime).subtract({ d: 1 }).calendar(),
     'काल दुपारी 12:00 वाजता',
     'yesterday at the same time'
   );
