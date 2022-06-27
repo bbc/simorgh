@@ -1,5 +1,6 @@
 import React from 'react';
 import StoryPromo from '.';
+import topStoriesRtl from '#pages/StoryPage/topStoriesRtl.json';
 
 const Component = ({ promoType }) => <StoryPromo promoType={promoType} />;
 
@@ -8,10 +9,5 @@ export default {
   Component,
 };
 
-export const Leading = props => <Component promoType={'leading'} />;
-export const Top = props => <Component promoType={'top'} />;
-export const Regular = props => <Component promoType={'regular'} />;
-export const TopStories = props => <Component promoType={'topStories'} />;
-export const RelatedContent = props => (
-  <Component promoType={'relatedContent'} />
-);
+export const TopStories = props => <Component content={topStoriesRtl} />;
+export const RelatedContent = props => <Component content={topStoriesRtl} />;
