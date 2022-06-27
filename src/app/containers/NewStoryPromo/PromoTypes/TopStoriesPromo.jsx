@@ -1,16 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ServiceContext } from '#contexts/ServiceContext';
 import { arrayOf, string, shape } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
 import pathOr from 'ramda/src/pathOr';
 import Promo from '../Promo';
+import StyledPromoHeading from './TopStoriesPromo.styles';
 
 const SingleTopStory = ({ heading, mediaType, timestamp }) => {
+  const { script, service } = useContext(ServiceContext);
   return (
     <Promo>
       <Promo.BoxWrapper>
         <Promo.Link>
           <Promo.MediaIndicator mediaType={mediaType} />
-          <Promo.Heading>{heading}</Promo.Heading>
+          <StyledPromoHeading script={script} service={service}>
+            {heading}
+          </StyledPromoHeading>
           <Promo.Timestamp>{timestamp}</Promo.Timestamp>
         </Promo.Link>
       </Promo.BoxWrapper>
