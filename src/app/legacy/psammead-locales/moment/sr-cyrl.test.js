@@ -307,7 +307,11 @@ test('fromNow', () => {
 test('calendar day', () => {
   const calendarTime = moment().hours(12).minutes(0).seconds(0);
 
-  assert.equal(moment(a).calendar(), 'данас у 12:00', 'today at the same time');
+  assert.equal(
+    moment(calendarTime).calendar(),
+    'данас у 12:00',
+    'today at the same time'
+  );
   assert.equal(
     moment(calendarTime).add({ m: 25 }).calendar(),
     'данас у 12:25',
