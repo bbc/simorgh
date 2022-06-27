@@ -17,9 +17,17 @@ const SingleTopStory = ({ url, heading, mediaType, timestamp }) => {
     <Promo>
       <Promo.BoxWrapper>
         <Promo.Link href={url}>
-          <StyledPromoHeading script={script} service={service}>
-            {heading}
-          </StyledPromoHeading>
+          {mediaType ? (
+            <Promo.MediaIndicator mediaType={mediaType}>
+              <StyledPromoHeading script={script} service={service}>
+                {heading}
+              </StyledPromoHeading>
+            </Promo.MediaIndicator>
+          ) : (
+            <StyledPromoHeading script={script} service={service}>
+              {heading}
+            </StyledPromoHeading>
+          )}
         </Promo.Link>
         <Promo.Timestamp>{timestamp}</Promo.Timestamp>
       </Promo.BoxWrapper>
@@ -45,6 +53,7 @@ const ListTopStory = ({ content }) => {
           const timestamp = pathOr(null, ['timestamp'], promo);
           const mediaType = pathOr(null, ['media', 'format'], promo);
           const url = pathOr(null, ['locators', 'assetUri'], promo);
+          console.log('TYPE', mediaType);
           return (
             <Promo.ListItem>
               <SingleTopStory

@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import Promo from '../Promo';
 
 export const StyledPromoHeading = styled(Promo.Heading)`
+  display: inline-block;
   ${({ script }) => script && getPica(script)}
 `;
 
