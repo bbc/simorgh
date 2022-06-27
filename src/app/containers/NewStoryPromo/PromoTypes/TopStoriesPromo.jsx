@@ -17,12 +17,10 @@ const SingleTopStory = ({ url, heading, mediaType, timestamp }) => {
   const { script, service } = useContext(ServiceContext);
   return (
     <Promo.BoxWrapper>
-      <Promo.Link href={url}>
-        {mediaType && <Promo.MediaIndicator mediaType={mediaType} />}
-        <StyledPromoHeading script={script} service={service}>
-          {heading}
-        </StyledPromoHeading>
-      </Promo.Link>
+      {mediaType && <Promo.MediaIndicator mediaType={mediaType} />}
+      <StyledPromoHeading script={script} service={service}>
+        <Promo.Link href={url}>{heading}</Promo.Link>
+      </StyledPromoHeading>
       <Promo.Timestamp>{timestamp}</Promo.Timestamp>
     </Promo.BoxWrapper>
   );
@@ -46,7 +44,6 @@ const ListTopStory = ({ content }) => {
           const timestamp = pathOr(null, ['timestamp'], promo);
           const mediaType = pathOr(null, ['media', 'format'], promo);
           const url = pathOr(null, ['locators', 'assetUri'], promo);
-          console.log('TYPE', mediaType);
           return (
             <FlexListItem>
               <SingleTopStory
