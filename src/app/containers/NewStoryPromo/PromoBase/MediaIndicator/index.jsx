@@ -1,19 +1,22 @@
 import React from 'react';
-import { node, string } from 'prop-types';
+import { string } from 'prop-types';
 import { mediaIcons } from '#legacy/psammead-assets/src/svgs';
-import MediaIndicatorWrapper from './index.styles';
+import {
+  MediaIndicatorWrapper,
+  MediaIndicatorFlexWrapper,
+} from './index.styles';
 
-const MediaIndicator = ({ children, mediaType }) => {
+const MediaIndicator = ({ mediaType }) => {
   return (
     <MediaIndicatorWrapper>
-      {mediaIcons[mediaType]}
-      {children}
+      <MediaIndicatorFlexWrapper>
+        {mediaIcons[mediaType]}
+      </MediaIndicatorFlexWrapper>
     </MediaIndicatorWrapper>
   );
 };
 
 MediaIndicator.propTypes = {
-  children: node.isRequired,
   mediaType: string.isRequired,
 };
 

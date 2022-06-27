@@ -9,29 +9,22 @@ import Promo from '../Promo';
 import {
   StyledPromoHeading,
   TopStoriesPromoWrapper,
+  StoryPromoList,
+  FlexListItem,
 } from './TopStoriesPromo.styles';
 
 const SingleTopStory = ({ url, heading, mediaType, timestamp }) => {
   const { script, service } = useContext(ServiceContext);
   return (
-    <Promo>
-      <Promo.BoxWrapper>
-        <Promo.Link href={url}>
-          {mediaType ? (
-            <Promo.MediaIndicator mediaType={mediaType}>
-              <StyledPromoHeading script={script} service={service}>
-                {heading}
-              </StyledPromoHeading>
-            </Promo.MediaIndicator>
-          ) : (
-            <StyledPromoHeading script={script} service={service}>
-              {heading}
-            </StyledPromoHeading>
-          )}
-        </Promo.Link>
-        <Promo.Timestamp>{timestamp}</Promo.Timestamp>
-      </Promo.BoxWrapper>
-    </Promo>
+    <Promo.BoxWrapper>
+      <Promo.Link href={url}>
+        {mediaType && <Promo.MediaIndicator mediaType={mediaType} />}
+        <StyledPromoHeading script={script} service={service}>
+          {heading}
+        </StyledPromoHeading>
+      </Promo.Link>
+      <Promo.Timestamp>{timestamp}</Promo.Timestamp>
+    </Promo.BoxWrapper>
   );
 };
 
@@ -47,7 +40,7 @@ SingleTopStory.defaultProps = { mediaType: '', timestamp: '' };
 const ListTopStory = ({ content }) => {
   return (
     <Promo>
-      <Promo.UnorderedList>
+      <StoryPromoList>
         {content.map(promo => {
           const heading = pathOr(null, ['headlines', 'headline'], promo);
           const timestamp = pathOr(null, ['timestamp'], promo);
@@ -55,17 +48,17 @@ const ListTopStory = ({ content }) => {
           const url = pathOr(null, ['locators', 'assetUri'], promo);
           console.log('TYPE', mediaType);
           return (
-            <Promo.ListItem>
+            <FlexListItem>
               <SingleTopStory
                 url={url}
                 heading={heading}
                 mediaType={mediaType}
                 timestamp={timestamp}
               />
-            </Promo.ListItem>
+            </FlexListItem>
           );
         })}
-      </Promo.UnorderedList>
+      </StoryPromoList>
     </Promo>
   );
 };
