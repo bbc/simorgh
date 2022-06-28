@@ -41,7 +41,7 @@ export default async ({ getAgent, service, path: pathname, variant, page }) => {
       : data.summaries;
 
     const scriptSwitchId = data.variantTopicId;
-    const renderScriptSwitch = !!scriptSwitchId;
+    const renderScriptSwitch = Boolean(scriptSwitchId);
 
     return {
       status,
