@@ -10,14 +10,14 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
 } from '#app/legacy/gel-foundations/src/breakpoints';
 import styled from '@emotion/styled';
-import Promo from '../Promo';
+import Promo from '../../Promo';
 
 export const StyledPromoHeading = styled(Promo.Heading)`
   display: inline-block;
   ${({ script }) => script && getPica(script)}
 `;
 
-export const TopStoriesPromoWrapper = styled.div`
+export const TopStoriesPromoWrapper = styled.section`
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
     padding: 0 ${GEL_SPACING};
   }
