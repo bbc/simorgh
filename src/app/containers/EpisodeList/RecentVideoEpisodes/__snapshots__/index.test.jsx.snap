@@ -4,7 +4,7 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
 .emotion-1 {
   position: relative;
   z-index: 0;
-  color: #3F3F42;
+  color: #141414;
   margin-top: 2rem;
   color: #FFFFFF;
   margin-bottom: 0;
@@ -35,50 +35,11 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
 }
 
 .emotion-3 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-  display: none;
-}
-
-@media screen and (-ms-high-contrast: active) {
-  .emotion-3 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-3 {
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.5rem;
-  }
-}
-
-.emotion-5 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-@media screen and (-ms-high-contrast: active) {
-  .emotion-5 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-5 {
-    display: none;
-  }
-}
-
-.emotion-7 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-9 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -88,7 +49,7 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
   flex-direction: column;
 }
 
-.emotion-11 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -108,7 +69,7 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-11 {
+  .emotion-7 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -116,11 +77,11 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
   }
 }
 
-.emotion-13 {
+.emotion-9 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   background-color: #121212;
   margin: 1rem 0;
@@ -136,59 +97,59 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-13 {
+  .emotion-9 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-13 {
+  .emotion-9 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-13 {
+  .emotion-9 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-13 {
+  .emotion-9 {
     padding-right: 1rem;
   }
 }
 
-.emotion-15 {
+.emotion-11 {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.emotion-17 {
+.emotion-13 {
   padding: 1rem 0;
   line-height: 0;
 }
 
-.emotion-17:first-child {
+.emotion-13:first-child {
   padding-top: 0;
 }
 
-.emotion-17:last-child {
+.emotion-13:last-child {
   padding-bottom: 0;
 }
 
-.emotion-17:not(:last-child) {
+.emotion-13:not(:last-child) {
   border-bottom: 1px #BABABA solid;
 }
 
-.emotion-19 {
+.emotion-15 {
   position: relative;
 }
 
-.emotion-21 {
+.emotion-17 {
   display: inline-block;
   position: relative;
   width: 4.375rem;
@@ -196,19 +157,19 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-21 {
+  .emotion-17 {
     width: 7.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-21 {
+  .emotion-17 {
     margin-right: 1rem;
     width: 14.375rem;
   }
 }
 
-.emotion-23 {
+.emotion-19 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -223,35 +184,35 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-23 {
+  .emotion-19 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-23 {
+  .emotion-19 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-25 {
+.emotion-21 {
   width: 100%;
 }
 
-.emotion-27 {
+.emotion-23 {
   background-color: #222222;
   padding: 0.25rem;
 }
 
 @media (min-width: 25rem) {
-  .emotion-27 {
+  .emotion-23 {
     padding: 0.5rem;
   }
 }
 
-.emotion-27 svg {
+.emotion-23 svg {
   margin: 0 0 1px 0;
   height: 0.6rem;
   width: 0.7rem;
@@ -259,19 +220,19 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-27 svg {
+  .emotion-23 svg {
     fill: linkText;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-27 {
+  .emotion-23 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-29 {
+.emotion-25 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -280,7 +241,7 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
   height: 0.75rem;
 }
 
-.emotion-31 {
+.emotion-27 {
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -291,44 +252,44 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-31 {
+  .emotion-27 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-31 {
+  .emotion-27 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-33 {
+.emotion-29 {
   display: inline-block;
   max-width: calc(100% - 4.375rem - 1rem);
   vertical-align: top;
 }
 
 @media (min-width: 25rem) {
-  .emotion-33 {
+  .emotion-29 {
     max-width: calc(100% - 7.5rem - 1rem);
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-33 {
+  .emotion-29 {
     max-width: calc(100% - 14.375rem - 1rem);
   }
 }
 
-.emotion-35 {
+.emotion-31 {
   line-height: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-35:before {
+.emotion-31:before {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -339,35 +300,35 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
   z-index: 1;
 }
 
-.emotion-35 .rounded-play-button__ring,
-.emotion-35 .rounded-play-button__triangle {
+.emotion-31 .rounded-play-button__ring,
+.emotion-31 .rounded-play-button__triangle {
   color: #000;
 }
 
-.emotion-35:focus [class*='--hover'],
-.emotion-35:hover [class*='--hover'] {
+.emotion-31:focus [class*='--hover'],
+.emotion-31:hover [class*='--hover'] {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-35:focus .rounded-play-button__ring,
-.emotion-35:hover .rounded-play-button__ring,
-.emotion-35:focus .rounded-play-button__inner,
-.emotion-35:hover .rounded-play-button__inner {
+.emotion-31:focus .rounded-play-button__ring,
+.emotion-31:hover .rounded-play-button__ring,
+.emotion-31:focus .rounded-play-button__inner,
+.emotion-31:hover .rounded-play-button__inner {
   fill: currentColor;
   color: #B80000;
 }
 
-.emotion-35:focus .rounded-play-button__triangle,
-.emotion-35:hover .rounded-play-button__triangle {
+.emotion-31:focus .rounded-play-button__triangle,
+.emotion-31:hover .rounded-play-button__triangle {
   fill: transparent;
 }
 
-.emotion-35:visited [class*='--visited'] {
+.emotion-31:visited [class*='--visited'] {
   color: #D5D0CD;
 }
 
-.emotion-37 {
+.emotion-33 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -378,7 +339,7 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
   margin: 0;
 }
 
-.emotion-39 {
+.emotion-35 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -391,20 +352,20 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-39 {
+  .emotion-35 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-39 {
+  .emotion-35 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-43 {
+.emotion-39 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -417,27 +378,27 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-43 {
+  .emotion-39 {
     font-size: 0.9375rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-43 {
+  .emotion-39 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-.emotion-107 {
+.emotion-103 {
   display: inline;
 }
 
-.emotion-110 {
+.emotion-106 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -451,28 +412,28 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-110 {
+  .emotion-106 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-110 {
+  .emotion-106 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-110 {
+  .emotion-106 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-110 {
+  .emotion-106 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -486,23 +447,17 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
     <div
       class="emotion-0 emotion-1 emotion-2"
     >
-      <div
-        class="emotion-3 emotion-4"
-      />
-      <div
-        class="emotion-5 emotion-6"
-      />
       <h2
-        class="emotion-7 emotion-8"
+        class="emotion-3 emotion-4"
       >
         <span
-          class="emotion-9 emotion-10"
+          class="emotion-5 emotion-6"
         >
           <span
-            class="emotion-11 emotion-12"
+            class="emotion-7 emotion-8"
           >
             <span
-              class="emotion-13 emotion-14"
+              class="emotion-9 emotion-10"
               dir="ltr"
               id="recent-episodes"
             >
@@ -513,42 +468,42 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
       </h2>
     </div>
     <ul
-      class="emotion-15 emotion-16"
+      class="emotion-11 emotion-12"
       data-e2e="recent-episodes-list"
       role="list"
     >
       <li
-        class="emotion-17 emotion-18"
+        class="emotion-13 emotion-14"
         data-e2e="recent-episodes-list-item"
       >
         <div
-          class="emotion-19 emotion-20"
+          class="emotion-15 emotion-16"
           dir="ltr"
         >
           <div
-            class="emotion-21 emotion-22"
+            class="emotion-17 emotion-18"
             dir="ltr"
           >
             <div
-              class="emotion-23 emotion-24"
+              class="emotion-19 emotion-20"
               data-e2e="image-placeholder"
               style="padding-bottom: 56.25%;"
             >
               <img
                 alt="BBC Info"
-                class="emotion-25 emotion-26"
+                class="emotion-21 emotion-22"
                 dir="ltr"
                 src="//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png"
               />
             </div>
             <div
               aria-hidden="true"
-              class="emotion-27 emotion-28"
+              class="emotion-23 emotion-24"
               dir="ltr"
             >
               <svg
                 aria-hidden="true"
-                class="emotion-29 emotion-30"
+                class="emotion-25 emotion-26"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 32 32"
@@ -559,7 +514,7 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
                 />
               </svg>
               <span
-                class="emotion-31 emotion-32"
+                class="emotion-27 emotion-28"
                 dir="ltr"
               >
                 15:00
@@ -567,11 +522,11 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-29 emotion-30"
           >
             <a
               aria-labelledby="episodeLinkIndex-0"
-              class="emotion-35 emotion-36"
+              class="emotion-31 emotion-32"
               href="/afrique/bbc_afrique_tv/tv/w172xc9xq2gllfk"
             >
               <span
@@ -579,29 +534,29 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
                 role="text"
               >
                 <span
-                  class="emotion-37 emotion-38"
+                  class="emotion-33 emotion-34"
                 >
                   Vidéo, 
                 </span>
                 <span
-                  class="episode-list__title--hover episode-list__title--visited emotion-39 emotion-40"
+                  class="episode-list__title--hover episode-list__title--visited emotion-35 emotion-36"
                   dir="ltr"
                 >
                   BBC Info
                 </span>
                 <span
-                  class="emotion-37 emotion-38"
+                  class="emotion-33 emotion-34"
                 >
                   , 
                 </span>
                 <span
-                  class="episode-list__description--hover episode-list__description--visited emotion-43 emotion-44"
+                  class="episode-list__description--hover episode-list__description--visited emotion-39 emotion-40"
                   dir="ltr"
                 >
                   13 novembre 2020
                 </span>
                 <span
-                  class="emotion-37 emotion-38"
+                  class="emotion-33 emotion-34"
                 >
                   , Durée 15,00 
                 </span>
@@ -611,37 +566,37 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
         </div>
       </li>
       <li
-        class="emotion-17 emotion-18"
+        class="emotion-13 emotion-14"
         data-e2e="recent-episodes-list-item"
       >
         <div
-          class="emotion-19 emotion-20"
+          class="emotion-15 emotion-16"
           dir="ltr"
         >
           <div
-            class="emotion-21 emotion-22"
+            class="emotion-17 emotion-18"
             dir="ltr"
           >
             <div
-              class="emotion-23 emotion-24"
+              class="emotion-19 emotion-20"
               data-e2e="image-placeholder"
               style="padding-bottom: 56.25%;"
             >
               <img
                 alt="BBC Info"
-                class="emotion-25 emotion-26"
+                class="emotion-21 emotion-22"
                 dir="ltr"
                 src="//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png"
               />
             </div>
             <div
               aria-hidden="true"
-              class="emotion-27 emotion-28"
+              class="emotion-23 emotion-24"
               dir="ltr"
             >
               <svg
                 aria-hidden="true"
-                class="emotion-29 emotion-30"
+                class="emotion-25 emotion-26"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 32 32"
@@ -652,7 +607,7 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
                 />
               </svg>
               <span
-                class="emotion-31 emotion-32"
+                class="emotion-27 emotion-28"
                 dir="ltr"
               >
                 15:00
@@ -660,11 +615,11 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-29 emotion-30"
           >
             <a
               aria-labelledby="episodeLinkIndex-1"
-              class="emotion-35 emotion-36"
+              class="emotion-31 emotion-32"
               href="/afrique/bbc_afrique_tv/tv/w172xc9xq2ghpjg"
             >
               <span
@@ -672,29 +627,29 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
                 role="text"
               >
                 <span
-                  class="emotion-37 emotion-38"
+                  class="emotion-33 emotion-34"
                 >
                   Vidéo, 
                 </span>
                 <span
-                  class="episode-list__title--hover episode-list__title--visited emotion-39 emotion-40"
+                  class="episode-list__title--hover episode-list__title--visited emotion-35 emotion-36"
                   dir="ltr"
                 >
                   BBC Info
                 </span>
                 <span
-                  class="emotion-37 emotion-38"
+                  class="emotion-33 emotion-34"
                 >
                   , 
                 </span>
                 <span
-                  class="episode-list__description--hover episode-list__description--visited emotion-43 emotion-44"
+                  class="episode-list__description--hover episode-list__description--visited emotion-39 emotion-40"
                   dir="ltr"
                 >
                   12 novembre 2020
                 </span>
                 <span
-                  class="emotion-37 emotion-38"
+                  class="emotion-33 emotion-34"
                 >
                   , Durée 15,00 
                 </span>
@@ -704,37 +659,37 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
         </div>
       </li>
       <li
-        class="emotion-17 emotion-18"
+        class="emotion-13 emotion-14"
         data-e2e="recent-episodes-list-item"
       >
         <div
-          class="emotion-19 emotion-20"
+          class="emotion-15 emotion-16"
           dir="ltr"
         >
           <div
-            class="emotion-21 emotion-22"
+            class="emotion-17 emotion-18"
             dir="ltr"
           >
             <div
-              class="emotion-23 emotion-24"
+              class="emotion-19 emotion-20"
               data-e2e="image-placeholder"
               style="padding-bottom: 56.25%;"
             >
               <img
                 alt="BBC Info"
-                class="emotion-25 emotion-26"
+                class="emotion-21 emotion-22"
                 dir="ltr"
                 src="//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png"
               />
             </div>
             <div
               aria-hidden="true"
-              class="emotion-27 emotion-28"
+              class="emotion-23 emotion-24"
               dir="ltr"
             >
               <svg
                 aria-hidden="true"
-                class="emotion-29 emotion-30"
+                class="emotion-25 emotion-26"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 32 32"
@@ -745,7 +700,7 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
                 />
               </svg>
               <span
-                class="emotion-31 emotion-32"
+                class="emotion-27 emotion-28"
                 dir="ltr"
               >
                 15:00
@@ -753,11 +708,11 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-29 emotion-30"
           >
             <a
               aria-labelledby="episodeLinkIndex-2"
-              class="emotion-35 emotion-36"
+              class="emotion-31 emotion-32"
               href="/afrique/bbc_afrique_tv/tv/w172xc9xq2gdsmc"
             >
               <span
@@ -765,39 +720,39 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
                 role="text"
               >
                 <span
-                  class="emotion-37 emotion-38"
+                  class="emotion-33 emotion-34"
                 >
                   Vidéo, 
                 </span>
                 <span
-                  class="episode-list__title--hover episode-list__title--visited emotion-39 emotion-40"
+                  class="episode-list__title--hover episode-list__title--visited emotion-35 emotion-36"
                   dir="ltr"
                 >
                   BBC Info
                 </span>
                 <span
-                  class="emotion-37 emotion-38"
+                  class="emotion-33 emotion-34"
                 >
                   , 
                 </span>
                 <span
-                  class="episode-list__description--hover episode-list__description--visited emotion-43 emotion-44"
+                  class="episode-list__description--hover episode-list__description--visited emotion-39 emotion-40"
                   dir="ltr"
                 >
                   Oui, je suis le chef
                 </span>
                 <span
-                  class="emotion-37 emotion-38"
+                  class="emotion-33 emotion-34"
                 >
                   , Durée 15,00 
                 </span>
               </span>
             </a>
             <div
-              class="emotion-107 emotion-108"
+              class="emotion-103 emotion-104"
             >
               <time
-                class="emotion-109 emotion-110 emotion-111"
+                class="emotion-105 emotion-106 emotion-107"
                 datetime="2020-11-11"
               >
                 11 novembre 2020
