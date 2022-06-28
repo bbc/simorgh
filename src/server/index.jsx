@@ -251,7 +251,6 @@ server.get(
         headers,
       });
 
-      // Return an internal server error for any uncaught errors
       res.status(500).send(message);
     }
   },
