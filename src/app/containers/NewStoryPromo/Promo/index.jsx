@@ -26,6 +26,8 @@ Promo.Link = Link;
 Promo.ListItem = ListItem;
 Promo.OrderedList = OrderedList;
 Promo.UnorderedList = UnorderedList;
+
+// Curretly Outside NewStoryPromo as reusable
 Promo.Timestamp = Timestamp;
 Promo.SectionLabel = SectionLabel;
 Promo.Content = Content;
