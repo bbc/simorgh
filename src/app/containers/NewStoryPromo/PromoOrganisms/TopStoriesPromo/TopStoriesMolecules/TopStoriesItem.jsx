@@ -1,15 +1,16 @@
 import React, { useContext } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { shape } from 'prop-types';
-import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
+import { storyItem } from '#models/propTypes/storyItem';
 import Promo from '../../../Promo';
 import { StyledPromoHeading } from '../index.styles';
 
 const TopStoriesItem = ({ item }) => {
   const { script, service } = useContext(ServiceContext);
-  const timestamp = pathOr(null, ['timestamp'], item);
-  const mediaType = pathOr(null, ['media', 'format'], item);
-  const url = pathOr(null, ['locators', 'assetUri'], item);
+  const timestamp = path(['timestamp'], item);
+  const mediaType = path(['media', 'format'], item);
+  const url = path(['locators', 'assetUri'], item);
 
   return (
     <Promo.BoxWrapper>
@@ -24,8 +25,10 @@ const TopStoriesItem = ({ item }) => {
   );
 };
 
-TopStoriesItem.propTypes = {};
+TopStoriesItem.propTypes = {
+  item: shape(storyItem).isRequired,
+};
 
-TopStoriesItem.defaultProps = { mediaType: '', timestamp: '' };
+TopStoriesItem.defaultProps = {};
 
 export default TopStoriesItem;

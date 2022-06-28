@@ -6,7 +6,6 @@ import { StoryPromoList, FlexListItem } from '../index.styles';
 import TopStoriesItem from './TopStoriesItem';
 
 const TopStoriesList = ({ content }) => {
-  console.log(content);
   return (
     <StoryPromoList>
       {content.map(item => {
