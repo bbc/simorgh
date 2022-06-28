@@ -28,7 +28,7 @@ const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
   );
 };
 
-const HeaderContainer = ({ scriptSwitchId }) => {
+const HeaderContainer = ({ scriptSwitchId, renderScriptSwitch }) => {
   const { pageType, isAmp } = useContext(RequestContext);
   const { service, script, translations, dir, scriptLink, lang, serviceLang } =
     useContext(ServiceContext);
@@ -59,6 +59,8 @@ const HeaderContainer = ({ scriptSwitchId }) => {
     </SkipLink>
   );
 
+  const shouldRenderScriptSwitch = scriptLink && renderScriptSwitch;
+
   return (
     <header role="banner" lang={serviceLang}>
       {isAmp ? (
@@ -66,7 +68,9 @@ const HeaderContainer = ({ scriptSwitchId }) => {
           linkId="brandLink"
           skipLink={skipLink}
           scriptLink={
-            scriptLink && <ScriptLink scriptSwitchId={scriptSwitchId} />
+            shouldRenderScriptSwitch && (
+              <ScriptLink scriptSwitchId={scriptSwitchId} />
+            )
           }
         />
       ) : (
@@ -74,7 +78,9 @@ const HeaderContainer = ({ scriptSwitchId }) => {
           brandRef={brandRef}
           skipLink={skipLink}
           scriptLink={
-            scriptLink && <ScriptLink scriptSwitchId={scriptSwitchId} />
+            shouldRenderScriptSwitch && (
+              <ScriptLink scriptSwitchId={scriptSwitchId} />
+            )
           }
         />
       )}

@@ -40,6 +40,9 @@ export default async ({ getAgent, service, path: pathname, variant, page }) => {
       ? data.curations[0].summaries
       : data.summaries;
 
+    const scriptSwitchId = data.variantTopicId;
+    const renderScriptSwitch = !!scriptSwitchId;
+
     return {
       status,
       pageData: {
@@ -48,7 +51,8 @@ export default async ({ getAgent, service, path: pathname, variant, page }) => {
         promos,
         activePage: data.activePage || 1,
         pageCount: data.pageCount,
-        scriptSwitchId: data.variantTopicId,
+        scriptSwitchId,
+        renderScriptSwitch,
         metadata: {
           type: 'Topic',
         },
