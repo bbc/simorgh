@@ -9,7 +9,7 @@ import {
   UnorderedList,
 } from '../PromoAtoms/List.styles';
 import Image from '../PromoAtoms/Image.styles';
-import Link from '../PromoAtoms/Link.styles';
+import Link from '../PromoAtoms/Link';
 import MediaIndicator from '../PromoAtoms/MediaIndicator';
 import BoxWrapper from '../PromoAtoms/BoxWrapper.styles';
 

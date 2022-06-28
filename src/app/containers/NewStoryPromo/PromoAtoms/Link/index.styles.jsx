@@ -5,7 +5,7 @@ export default styled.a`
   position: static;
   color: ${C_EBON};
   text-decoration: none;
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
 
   &:hover,
   &:focus {
