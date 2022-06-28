@@ -41,7 +41,6 @@ export default async ({ getAgent, service, path: pathname, variant, page }) => {
       : data.summaries;
 
     const scriptSwitchId = data.variantTopicId;
-    const renderScriptSwitch = Boolean(scriptSwitchId);
 
     return {
       status,
@@ -52,7 +51,7 @@ export default async ({ getAgent, service, path: pathname, variant, page }) => {
         activePage: data.activePage || 1,
         pageCount: data.pageCount,
         scriptSwitchId,
-        renderScriptSwitch,
+        renderScriptSwitch: Boolean(scriptSwitchId),
         metadata: {
           type: 'Topic',
         },
