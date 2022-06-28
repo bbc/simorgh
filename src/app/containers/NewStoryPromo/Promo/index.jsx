@@ -12,6 +12,7 @@ import Image from '../PromoAtoms/Image.styles';
 import Link from '../PromoAtoms/Link';
 import MediaIndicator from '../PromoAtoms/MediaIndicator';
 import BoxWrapper from '../PromoAtoms/BoxWrapper.styles';
+import Content from '../PromoAtoms/Content';
 
 const Promo = ({ children, Wrapper }) => {
   return <Wrapper role="region">{children}</Wrapper>;
@@ -27,6 +28,7 @@ Promo.OrderedList = OrderedList;
 Promo.UnorderedList = UnorderedList;
 Promo.Timestamp = Timestamp;
 Promo.SectionLabel = SectionLabel;
+Promo.Content = Content;
 
 Promo.propTypes = { children: node.isRequired, Wrapper: node.isRequired };
 
