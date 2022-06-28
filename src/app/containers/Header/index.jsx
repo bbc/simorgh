@@ -3,7 +3,7 @@ import SkipLink from '#legacy/psammead-brand/src/SkipLink';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
-import { string } from 'prop-types';
+import { string, bool } from 'prop-types';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import ScriptLink from './ScriptLink';
@@ -91,10 +91,12 @@ const HeaderContainer = ({ scriptSwitchId, renderScriptSwitch }) => {
 
 HeaderContainer.propTypes = {
   scriptSwitchId: string,
+  renderScriptSwitch: bool,
 };
 
 HeaderContainer.defaultProps = {
   scriptSwitchId: '',
+  renderScriptSwitch: true,
 };
 
 export default HeaderContainer;
