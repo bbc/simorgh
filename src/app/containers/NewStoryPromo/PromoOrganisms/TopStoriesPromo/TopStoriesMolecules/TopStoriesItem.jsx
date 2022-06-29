@@ -16,8 +16,6 @@ const TopStoriesItem = ({ item, index, labelId }) => {
   const url = path(['locators', 'assetUri'], item);
   const isLive = getIsLive(item);
 
-  console.log(timestamp);
-
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
 
   // As screenreaders mispronounce the word 'LIVE', we use visually hidden
