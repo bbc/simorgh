@@ -9,6 +9,7 @@ import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import articleData from '#data/news/articles/c5jje4ejkqvo';
 import articleDataWithRelatedContent from '#data/afrique/articles/c7yn6nznljdo';
 import secondaryColumn from '#data/news/secondaryColumn';
+import singleStoryPromo from '#data/news/secondaryColumn/SingleStoryPromo.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import handlePromoData from '#app/routes/article/handlePromoData';
@@ -18,7 +19,10 @@ const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent);
 const Page = withPageWrapper(PageWithOptimizely);
 
 // eslint-disable-next-line react/prop-types
-const ComponentWithContext = ({ data = articleData }) => (
+const ComponentWithContext = ({
+  data = articleData,
+  secondaryColumn = secondaryColumn,
+}) => (
   <ToggleContextProvider
     toggles={{
       eventTracking: { enabled: true },
@@ -58,4 +62,8 @@ export const ArticlePageWithRelatedContent = props => (
     {...props}
     data={handlePromoData(articleDataWithRelatedContent)}
   />
+);
+
+export const ArticlePageWithSingleStoryPromo = props => (
+  <ComponentWithContext {...props} secondaryColumn={singleStoryPromo} />
 );
