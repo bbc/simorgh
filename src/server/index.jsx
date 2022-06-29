@@ -167,7 +167,7 @@ server.get(
       data.timeOnServer = Date.now();
       data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true';
 
-      const { status } = data;
+      let { status } = data;
       // Set derivedPageType based on returned page data
       if (status === OK) {
         derivedPageType = ramdaPath(['pageData', 'metadata', 'type'], data);
@@ -181,15 +181,43 @@ server.get(
       }
 
       const bbcOrigin = headers['bbc-origin'];
-      const result = await renderDocument({
-        bbcOrigin,
-        data,
-        isAmp,
-        routes,
-        service,
-        url,
-        variant,
-      });
+      let result;
+      try {
+        result = await renderDocument({
+          bbcOrigin,
+          data,
+          isAmp,
+          routes,
+          service,
+          url,
+          variant,
+        });
+      } catch ({ message }) {
+        status = 500;
+        sendCustomMetric({
+          metricName: NON_200_RESPONSE,
+          statusCode: status,
+          pageType: derivedPageType,
+          requestUrl: url,
+        });
+
+        logger.error(SERVER_SIDE_REQUEST_FAILED, {
+          status,
+          message,
+          url,
+          headers,
+        });
+
+        result = await renderDocument({
+          bbcOrigin,
+          data: { error: true, status },
+          isAmp,
+          routes,
+          service,
+          url,
+          variant,
+        });
+      }
 
       logger.info(ROUTING_INFORMATION, {
         url,
@@ -223,7 +251,6 @@ server.get(
         headers,
       });
 
-      // Return an internal server error for any uncaught errors
       res.status(500).send(message);
     }
   },
