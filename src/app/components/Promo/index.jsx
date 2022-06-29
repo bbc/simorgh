@@ -37,10 +37,7 @@ const Left = styled.div`
 `;
 const Right = styled.div`
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    ${({ dir }) =>
-      dir === 'ltr'
-        ? `padding-left: ${GEL_SPACING}`
-        : `padding-right: ${GEL_SPACING};`}
+    padding-inline-start: ${GEL_SPACING};
     width: 67%;
     display: inline-block;
     vertical-align: top;
@@ -48,7 +45,7 @@ const Right = styled.div`
 `;
 
 const Promo = ({ children }) => {
-  const { script, service, dir } = useContext(ServiceContext);
+  const { script, service } = useContext(ServiceContext);
 
   // Image components are moved to a left column on mobile
   const [leftChildren, rightChildren] = partition(
@@ -59,7 +56,7 @@ const Promo = ({ children }) => {
     <Wrapper>
       <PromoContext.Provider value={{ script, service }}>
         {leftChildren && <Left>{leftChildren}</Left>}
-        {rightChildren && <Right dir={dir}>{rightChildren}</Right>}
+        {rightChildren && <Right>{rightChildren}</Right>}
       </PromoContext.Provider>
     </Wrapper>
   );
