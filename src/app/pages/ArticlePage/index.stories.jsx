@@ -56,7 +56,10 @@ export default {
   parameters: { layout: 'fullscreen' },
 };
 
-export const ArticlePage = ComponentWithContext;
+export const ArticlePage = props => (
+  <ComponentWithContext {...props} secondaryColumn={secondaryColumn} />
+);
+
 export const ArticlePageWithRelatedContent = props => (
   <ComponentWithContext
     {...props}

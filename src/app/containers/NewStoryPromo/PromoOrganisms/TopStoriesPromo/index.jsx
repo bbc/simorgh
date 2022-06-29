@@ -29,7 +29,7 @@ const TopStoriesPromo = ({ content }) => {
       </Promo.SectionLabel>
 
       {hasSingleContent ? (
-        <TopStoriesItem content={content} labelId={LABEL_ID} />
+        <TopStoriesItem item={content[0]} index={0} labelId={LABEL_ID} />
       ) : (
         <TopStoriesList content={content} labelId={LABEL_ID} />
       )}
