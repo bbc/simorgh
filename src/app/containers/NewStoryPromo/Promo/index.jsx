@@ -3,6 +3,7 @@ import { node } from 'prop-types';
 import Timestamp from '#components/Promo/timestamp';
 import SectionLabel from '#legacy/psammead-section-label/src';
 import Content from '#app/containers/StoryPromo/LinkContents';
+import LiveLabel from '#legacy/psammead-live-label/src';
 import H3 from '../PromoAtoms/Headings.styles';
 import {
   ListItem,
@@ -31,6 +32,7 @@ Promo.UnorderedList = UnorderedList;
 Promo.Timestamp = Timestamp;
 Promo.SectionLabel = SectionLabel;
 Promo.Content = Content;
+Promo.LiveLabel = LiveLabel;
 
 Promo.propTypes = { children: node.isRequired, Wrapper: node.isRequired };
 

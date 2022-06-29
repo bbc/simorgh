@@ -1,5 +1,5 @@
 import React from 'react';
-import Promo from '../Promo';
+import Promo from '../../Promo';
 
 const RelatedContentPromo = () => {
   return (

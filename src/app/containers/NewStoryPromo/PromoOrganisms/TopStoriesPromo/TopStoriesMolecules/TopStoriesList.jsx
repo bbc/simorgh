@@ -1,17 +1,17 @@
 import React from 'react';
 
-import { arrayOf, shape } from 'prop-types';
+import { arrayOf, shape, string } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
 import { StoryPromoList, FlexListItem } from '../index.styles';
 import TopStoriesItem from './TopStoriesItem';
 
-const TopStoriesList = ({ content }) => {
+const TopStoriesList = ({ content, labelId }) => {
   return (
     <StoryPromoList>
       {content.map(item => {
         return (
           <FlexListItem>
-            <TopStoriesItem item={item} />
+            <TopStoriesItem item={item} labelId={labelId} />
           </FlexListItem>
         );
       })}
@@ -19,7 +19,10 @@ const TopStoriesList = ({ content }) => {
   );
 };
 
-TopStoriesList.propTypes = { content: arrayOf(shape(storyItem)) };
+TopStoriesList.propTypes = {
+  content: arrayOf(shape(storyItem)),
+  labelId: string.isRequired,
+};
 
 TopStoriesList.defaultProps = { content: [] };
 
