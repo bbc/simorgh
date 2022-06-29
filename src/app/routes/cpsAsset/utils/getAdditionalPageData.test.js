@@ -6,6 +6,7 @@ import fetchMock from 'fetch-mock';
 // mock data
 import mapJson from '#data/pidgin/cpsAssets/media-23256549.json';
 import styJson from '#data/mundo/cpsAssets/23263889.json';
+import portugueseSty from '#data/portuguese/cpsAssets/brasil-59057279';
 import cspJson from '#data/news/cpsAssets/business-55345826.json';
 import noRecommendationsStyJson from '#data/pidgin/cpsAssets/world-23252817.json';
 import mostReadJson from '#data/mundo/mostRead/index.json';
@@ -20,6 +21,7 @@ import getAdditionalPageData from './getAdditionalPageData';
 fetchMock.config.overwriteRoutes = false; // http://www.wheresrhys.co.uk/fetch-mock/#usageconfiguration allows us to mock the same endpoint multiple times
 
 jest.mock('./hasRecommendations', () => jest.fn());
+jest.mock('#server/utilities/getAgent/index');
 
 describe('getAdditionalPageData', () => {
   afterEach(() => {
@@ -113,5 +115,90 @@ describe('getAdditionalPageData', () => {
       secondaryColumn: cspSecondaryColumnJson,
     };
     expect(additionalPageData).toEqual(expectedOutput);
+  });
+
+  describe('Optimizely Experiments', () => {
+    describe('004_brasil_recommendations_experiment', () => {
+      beforeEach(() => {
+        process.env.RECOMMENDATIONS_ENDPOINT =
+          'http://mock-recommendations-path';
+      });
+
+      afterEach(() => {
+        delete process.env.RECOMMENDATIONS_ENDPOINT;
+      });
+
+      it('should recommendations data from camino, unirecs content and unirecs hybrid engine', async () => {
+        const expectedOutput = {
+          recommendations: recommendationsJson,
+          datalabContentRecommendations: recommendationsJson,
+          datalabHybridRecommendations: recommendationsJson,
+        };
+
+        hasRecommendations.mockImplementationOnce(() => true);
+
+        fetchMock.mock(
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279?Engine=unirecs_camino',
+          recommendationsJson,
+        );
+        fetchMock.mock(
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=content',
+          recommendationsJson,
+        );
+        fetchMock.mock(
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=hybrid',
+          recommendationsJson,
+        );
+
+        const additionalPageData = await getAdditionalPageData({
+          pageData: portugueseSty,
+          service: 'portuguese',
+        });
+
+        expect(additionalPageData).toEqual(expectedOutput);
+      });
+
+      it('should not get recommendations data when hasRecommendations is false', async () => {
+        fetchMock.mock(
+          'http://localhost/portuguese/brasil-59057279/recommendations.json',
+          recommendationsJson,
+        );
+        fetchMock.mock(
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=content',
+          recommendationsJson,
+        );
+        fetchMock.mock(
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=hybrid',
+          recommendationsJson,
+        );
+
+        const additionalPageData = await getAdditionalPageData({
+          pageData: portugueseSty,
+          service: 'portuguese',
+        });
+
+        expect(additionalPageData).toEqual({});
+      });
+
+      it('should get recommendations from public deimos endpoint on live environment', async () => {
+        process.env.SIMORGH_APP_ENV = 'live';
+        const expectedOutput = {
+          recommendations: recommendationsJson,
+        };
+        hasRecommendations.mockImplementationOnce(() => true);
+        fetchMock.mock(
+          'http://localhost/portuguese/brasil-59057279/recommendations.json',
+          recommendationsJson,
+        );
+
+        const additionalPageData = await getAdditionalPageData({
+          pageData: portugueseSty,
+          service: 'portuguese',
+        });
+
+        expect(additionalPageData).toEqual(expectedOutput);
+        delete process.env.SIMORGH_APP_ENV;
+      });
+    });
   });
 });
