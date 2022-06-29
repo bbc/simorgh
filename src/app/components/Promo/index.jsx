@@ -4,6 +4,7 @@ import { arrayOf, element } from 'prop-types';
 import partition from 'ramda/src/partition';
 
 import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '#legacy/gel-foundations/src/breakpoints';
+import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
 
 import { ServiceContext } from '#contexts/ServiceContext';
 
@@ -36,7 +37,10 @@ const Left = styled.div`
 `;
 const Right = styled.div`
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    padding-left: 0.5rem;
+    ${({ dir }) =>
+      dir === 'ltr'
+        ? `padding-left: ${GEL_SPACING}`
+        : `padding-right: ${GEL_SPACING};`}
     width: 67%;
     display: inline-block;
     vertical-align: top;
@@ -44,7 +48,7 @@ const Right = styled.div`
 `;
 
 const Promo = ({ children }) => {
-  const { script, service } = useContext(ServiceContext);
+  const { script, service, dir } = useContext(ServiceContext);
 
   // Image components are moved to a left column on mobile
   const [leftChildren, rightChildren] = partition(
@@ -55,7 +59,7 @@ const Promo = ({ children }) => {
     <Wrapper>
       <PromoContext.Provider value={{ script, service }}>
         {leftChildren && <Left>{leftChildren}</Left>}
-        {rightChildren && <Right>{rightChildren}</Right>}
+        {rightChildren && <Right dir={dir}>{rightChildren}</Right>}
       </PromoContext.Provider>
     </Wrapper>
   );
