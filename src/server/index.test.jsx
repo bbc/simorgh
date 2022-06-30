@@ -257,7 +257,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
       it('should respond with a 500', async () => {
         const { status, text } = await makeRequest(serviceURL);
         expect(status).toEqual(500);
-        expect(text).toEqual('Error!');
+        expect(text).toEqual('Internal server error');
       });
 
       assertNon200ResponseCustomMetrics({
@@ -360,7 +360,7 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
       it('should respond with a 500', async () => {
         const { status, text } = await makeRequest(articleURL);
         expect(status).toEqual(500);
-        expect(text).toEqual('Error!');
+        expect(text).toEqual('Internal server error');
       });
 
       assertNon200ResponseCustomMetrics({
@@ -469,7 +469,7 @@ const testAssetPages = ({
       it('should respond with a 500', async () => {
         const { status, text } = await makeRequest(articleURL);
         expect(status).toEqual(500);
-        expect(text).toEqual('Error!');
+        expect(text).toEqual('Internal server error');
       });
 
       assertNon200ResponseCustomMetrics({
@@ -570,7 +570,7 @@ const testMediaPages = ({
       it('should respond with a 500', async () => {
         const { status, text } = await makeRequest(mediaPageURL);
         expect(status).toEqual(500);
-        expect(text).toEqual('Error!');
+        expect(text).toEqual('Internal server error');
       });
 
       assertNon200ResponseCustomMetrics({
@@ -672,7 +672,7 @@ const testTvPages = ({
       it('should respond with a 500', async () => {
         const { status, text } = await makeRequest(mediaPageURL);
         expect(status).toEqual(500);
-        expect(text).toEqual('Error!');
+        expect(text).toEqual('Internal server error');
       });
 
       assertNon200ResponseCustomMetrics({
@@ -774,7 +774,7 @@ const testOnDemandTvEpisodePages = ({
       it('should respond with a 500', async () => {
         const { status, text } = await makeRequest(mediaPageURL);
         expect(status).toEqual(500);
-        expect(text).toEqual('Error!');
+        expect(text).toEqual('Internal server error');
       });
 
       assertNon200ResponseCustomMetrics({
