@@ -9,6 +9,7 @@ import {
 import styled from '@emotion/styled';
 
 export default styled.div`
+  position: relative;
   background-color: white;
   padding: ${GEL_SPACING};
   height: 100%;
