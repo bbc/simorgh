@@ -10,7 +10,7 @@ import Promo from '../../../Promo';
 import { StyledPromoHeading } from '../index.styles';
 
 const TopStoriesItem = ({ item, index, labelId }) => {
-  const { script, service, dir, translations } = useContext(ServiceContext);
+  const { translations } = useContext(ServiceContext);
   const timestamp = path(['timestamp'], item);
   const mediaType = path(['media', 'format'], item);
   const url = path(['locators', 'assetUri'], item);
@@ -32,13 +32,11 @@ const TopStoriesItem = ({ item, index, labelId }) => {
   return (
     <Promo.BoxWrapper>
       {mediaType && <Promo.MediaIndicator type={mediaType} />}
-      <StyledPromoHeading script={script} service={service}>
+      <StyledPromoHeading>
         <Promo.Link href={url} aria-labelledby={linkId}>
           {isLive ? (
             <Promo.LiveLabel
               id={linkId}
-              service={service}
-              dir={dir}
               liveText={liveLabel}
               ariaHidden={liveLabelIsEnglish}
               offScreenText={liveLabelIsEnglish ? 'Live' : null}

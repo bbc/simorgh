@@ -10,7 +10,7 @@ import TopStoriesItem from './TopStoriesMolecules/TopStoriesItem';
 import TopStoriesList from './TopStoriesMolecules/TopStoriesList';
 
 const TopStoriesPromo = ({ content }) => {
-  const { script, service, dir, translations } = useContext(ServiceContext);
+  const { translations } = useContext(ServiceContext);
   const title = pathOr('Top Stories', ['topStoriesTitle'], translations);
   const hasSingleContent = content.length === 1;
   const LABEL_ID = 'top-stories-heading';
@@ -18,9 +18,6 @@ const TopStoriesPromo = ({ content }) => {
   return (
     <Promo Wrapper={TopStoriesPromoWrapper}>
       <Promo.SectionLabel
-        script={script}
-        service={service}
-        dir={dir}
         labelId={LABEL_ID}
         columnType="secondary"
         backgroundColor={C_GREY_2}

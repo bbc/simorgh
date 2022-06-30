@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
-import { node, string } from 'prop-types';
+import { node } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Timestamp from '#components/Promo/timestamp';
 import SectionLabel from '#legacy/psammead-section-label/src';
 import Content from '#app/containers/StoryPromo/LinkContents';
 import LiveLabel from '#legacy/psammead-live-label/src';
-import Headings from '../PromoAtoms/Headings.styles';
+import Heading from '../PromoAtoms/Heading';
 import {
   ListItem,
   OrderedList,
@@ -35,7 +35,7 @@ const withPromoContext = Component => props =>
   );
 
 Promo.BoxWrapper = withPromoContext(BoxWrapper);
-Promo.Heading = withPromoContext(Headings);
+Promo.Heading = withPromoContext(Heading);
 Promo.Image = withPromoContext(Image);
 Promo.MediaIndicator = withPromoContext(MediaIndicator);
 Promo.Link = withPromoContext(Link);
@@ -51,9 +51,6 @@ Promo.LiveLabel = withPromoContext(LiveLabel);
 
 Promo.propTypes = {
   children: node.isRequired,
-  labelId: string.isRequired,
-  to: string.isRequired,
-  id: string.isRequired,
 };
 
 export default Promo;
