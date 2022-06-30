@@ -30,26 +30,27 @@ const TopStoriesItem = ({ item, index, labelId }) => {
   });
 
   return (
-    <Promo.BoxWrapper>
-      {mediaType && <Promo.MediaIndicator type={mediaType} />}
-      <StyledPromoHeading>
-        <Promo.Link href={url} aria-labelledby={linkId}>
-          {isLive ? (
-            <Promo.LiveLabel
-              id={linkId}
-              liveText={liveLabel}
-              ariaHidden={liveLabelIsEnglish}
-              offScreenText={liveLabelIsEnglish ? 'Live' : null}
-            >
-              <Promo.Content item={item} id={linkId} />
-            </Promo.LiveLabel>
-          ) : (
-            <Promo.Content item={item} id={linkId} />
-          )}
-        </Promo.Link>
-      </StyledPromoHeading>
-      <Promo.Timestamp>{timestamp}</Promo.Timestamp>
-    </Promo.BoxWrapper>
+    <Promo to={url} id={linkId}>
+      <Promo.BoxWrapper>
+        {mediaType && <Promo.MediaIndicator type={mediaType} />}
+        <StyledPromoHeading>
+          <Promo.Link>
+            {isLive ? (
+              <Promo.LiveLabel
+                liveText={liveLabel}
+                ariaHidden={liveLabelIsEnglish}
+                offScreenText={liveLabelIsEnglish ? 'Live' : null}
+              >
+                <Promo.Content item={item} />
+              </Promo.LiveLabel>
+            ) : (
+              <Promo.Content item={item} />
+            )}
+          </Promo.Link>
+        </StyledPromoHeading>
+        <Promo.Timestamp>{timestamp}</Promo.Timestamp>
+      </Promo.BoxWrapper>
+    </Promo>
   );
 };
 

@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { node, string } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Timestamp from '#components/Promo/timestamp';
-import SectionLabel from '#legacy/psammead-section-label/src';
 import Content from '#app/containers/StoryPromo/LinkContents';
 import LiveLabel from '#legacy/psammead-live-label/src';
 import Heading from '../PromoAtoms/Heading';
@@ -12,21 +11,18 @@ import {
   UnorderedList,
 } from '../PromoAtoms/List.styles';
 import Image from '../PromoAtoms/Image.styles';
-import Link from '../PromoAtoms/Link.styles';
+import Link from '../PromoAtoms/Link';
 import MediaIndicator from '../PromoAtoms/MediaIndicator';
 import BoxWrapper from '../PromoAtoms/BoxWrapper.styles';
-import Wrapper from '../PromoAtoms/Wrapper.styles';
 
 const PromoContext = React.createContext({});
 
-const Promo = ({ children, className }) => {
+const Promo = ({ children, to, id }) => {
   const { script, service, dir } = useContext(ServiceContext);
   return (
-    <Wrapper className={className}>
-      <PromoContext.Provider value={{ script, service, dir }}>
-        {children}
-      </PromoContext.Provider>
-    </Wrapper>
+    <PromoContext.Provider value={{ script, service, dir, to, id }}>
+      {children}
+    </PromoContext.Provider>
   );
 };
 
@@ -48,13 +44,13 @@ Promo.UnorderedList = withPromoContext(UnorderedList);
 
 // Curretly Outside NewStoryPromo as reusable
 Promo.Timestamp = withPromoContext(Timestamp);
-Promo.SectionLabel = withPromoContext(SectionLabel);
 Promo.Content = withPromoContext(Content);
 Promo.LiveLabel = withPromoContext(LiveLabel);
 
 Promo.propTypes = {
   children: node.isRequired,
-  className: string.isRequired,
+  to: string.isRequired,
+  id: string.isRequired,
 };
 
 export default Promo;

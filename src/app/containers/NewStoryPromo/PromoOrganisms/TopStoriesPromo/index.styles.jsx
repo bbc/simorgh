@@ -17,7 +17,7 @@ export const StyledPromoHeading = styled(Promo.Heading)`
   ${({ script }) => script && getPica(script)}
 `;
 
-export const StyledPromo = styled(Promo)`
+export const StyledWrapper = styled.section`
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
     padding: 0 ${GEL_SPACING};
   }
