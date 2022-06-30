@@ -120,12 +120,11 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
 }
 
 .emotion-16 {
-  padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-16:last-child {
-  padding-bottom: 1rem;
+  padding-bottom: 0.25rem;
   border: 0;
 }
 
@@ -138,6 +137,8 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0.75rem 0;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -910,12 +911,11 @@ exports[`Navigation Container should correctly render amp navigation on non-home
 }
 
 .emotion-16 {
-  padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-16:last-child {
-  padding-bottom: 1rem;
+  padding-bottom: 0.25rem;
   border: 0;
 }
 
@@ -928,6 +928,8 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0.75rem 0;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1610,12 +1612,11 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
 }
 
 .emotion-16 {
-  padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-16:last-child {
-  padding-bottom: 1rem;
+  padding-bottom: 0.25rem;
   border: 0;
 }
 
@@ -1628,6 +1629,8 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0.75rem 0;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2516,12 +2519,11 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
 }
 
 .emotion-68 {
-  padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-68:last-child {
-  padding-bottom: 1rem;
+  padding-bottom: 0.25rem;
   border: 0;
 }
 
@@ -2534,6 +2536,8 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0.75rem 0;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -3215,12 +3219,11 @@ exports[`Navigation Container should correctly render canonical navigation on no
 }
 
 .emotion-64 {
-  padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-64:last-child {
-  padding-bottom: 1rem;
+  padding-bottom: 0.25rem;
   border: 0;
 }
 
@@ -3233,6 +3236,8 @@ exports[`Navigation Container should correctly render canonical navigation on no
   color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0.75rem 0;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -3889,12 +3894,11 @@ exports[`Navigation Container should correctly render canonical navigation on no
 }
 
 .emotion-64 {
-  padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-64:last-child {
-  padding-bottom: 1rem;
+  padding-bottom: 0.25rem;
   border: 0;
 }
 
@@ -3907,6 +3911,8 @@ exports[`Navigation Container should correctly render canonical navigation on no
   color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0.75rem 0;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
