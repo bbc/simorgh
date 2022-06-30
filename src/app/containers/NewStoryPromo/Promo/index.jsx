@@ -4,6 +4,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import Timestamp from '#components/Promo/timestamp';
 import Content from '#app/containers/StoryPromo/LinkContents';
 import LiveLabel from '#legacy/psammead-live-label/src';
+import useViewTracker from '#hooks/useViewTracker';
 import Heading from '../PromoAtoms/Heading';
 import {
   ListItem,
@@ -17,12 +18,24 @@ import BoxWrapper from '../PromoAtoms/BoxWrapper.styles';
 
 const PromoContext = React.createContext({});
 
+const eventTrackingData = {
+  block: {
+    componentName: 'top-stories',
+  },
+};
+
 const Promo = ({ children, to, id }) => {
   const { script, service, dir } = useContext(ServiceContext);
+  const viewRef = useViewTracker(eventTrackingData.block);
+
   return (
-    <PromoContext.Provider value={{ script, service, dir, to, id }}>
-      {children}
-    </PromoContext.Provider>
+    <div ref={viewRef}>
+      <PromoContext.Provider
+        value={{ script, service, dir, to, id, eventTrackingData }}
+      >
+        {children}
+      </PromoContext.Provider>
+    </div>
   );
 };
 

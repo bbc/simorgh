@@ -1,10 +1,17 @@
 import React from 'react';
-import { node, string } from 'prop-types';
+import { node, string, shape } from 'prop-types';
+import useCombinedClickTrackerHandler from '#containers/StoryPromo/useCombinedClickTrackerHandler.js';
 import StyledLink from './index.styles';
 
-const Link = ({ className, children, to, id }) => {
+const Link = ({ className, children, to, id, eventTrackingData }) => {
+  const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
   return (
-    <StyledLink className={className} href={to} aria-labelledby={id}>
+    <StyledLink
+      className={className}
+      href={to}
+      aria-labelledby={id}
+      onClick={eventTrackingData ? handleClickTracking : null}
+    >
       {children}
     </StyledLink>
   );
@@ -15,6 +22,11 @@ Link.propTypes = {
   children: node.isRequired,
   to: string.isRequired,
   id: string.isRequired,
+  eventTrackingData: shape({ block: { componentName: string } }),
+};
+
+Link.defaultProps = {
+  eventTrackingData: null,
 };
 
 export default Link;
