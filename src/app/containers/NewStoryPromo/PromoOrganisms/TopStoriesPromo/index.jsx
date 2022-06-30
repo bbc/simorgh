@@ -5,7 +5,7 @@ import { storyItem } from '#models/propTypes/storyItem';
 import pathOr from 'ramda/src/pathOr';
 import { C_GREY_2 } from '#app/legacy/psammead-styles/src/colours';
 import Promo from '../../Promo';
-import { TopStoriesPromoWrapper } from './index.styles';
+import { StyledPromo } from './index.styles';
 import TopStoriesItem from './TopStoriesMolecules/TopStoriesItem';
 import TopStoriesList from './TopStoriesMolecules/TopStoriesList';
 
@@ -16,7 +16,7 @@ const TopStoriesPromo = ({ content }) => {
   const LABEL_ID = 'top-stories-heading';
 
   return (
-    <Promo Wrapper={TopStoriesPromoWrapper}>
+    <StyledPromo>
       <Promo.SectionLabel
         labelId={LABEL_ID}
         columnType="secondary"
@@ -30,7 +30,7 @@ const TopStoriesPromo = ({ content }) => {
       ) : (
         <TopStoriesList content={content} labelId={LABEL_ID} />
       )}
-    </Promo>
+    </StyledPromo>
   );
 };
 
