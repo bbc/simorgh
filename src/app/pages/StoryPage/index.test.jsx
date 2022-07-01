@@ -250,6 +250,7 @@ describe('Story Page', () => {
   const appEnv = process.env.SIMORGH_APP_ENV;
   beforeEach(() => {
     process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
+    process.env.RECOMMENDATIONS_ENDPOINT = 'http://mock-recommendations-path';
     // 004_brasil_recommendations_experiment
     OptimizelyExperiment.mockImplementation(props => {
       const { children } = props;
@@ -1096,7 +1097,7 @@ describe('Story Page', () => {
               mundoPageData,
             );
             fetchMock.mock(
-              'http://localhost/mundo/noticias-56669604/recommendations.json',
+              'http://mock-recommendations-path/recommendations/mundo/noticias-56669604',
               mundoRecommendationsData,
             );
             const { pageData } = await getInitialData({
@@ -1140,7 +1141,7 @@ describe('Story Page', () => {
               mundoPageData,
             );
             fetchMock.mock(
-              'http://localhost/mundo/noticias-56669604/recommendations.json',
+              'http://mock-recommendations-path/recommendations/mundo/noticias-56669604',
               mundoRecommendationsData,
             );
             const { pageData } = await getInitialData({
@@ -1417,7 +1418,7 @@ describe('Story Page', () => {
               mundoPageData,
             );
             fetchMock.mock(
-              'http://localhost/mundo/noticias-56669604/recommendations.json',
+              'http://mock-recommendations-path/recommendations/mundo/noticias-56669604',
               mundoRecommendationsData,
             );
             const { pageData } = await getInitialData({
@@ -1479,7 +1480,7 @@ describe('Story Page', () => {
         };
 
         const recommendationsEndpoint =
-          'http://localhost/mundo/noticias-56669604/recommendations.json';
+          'http://mock-recommendations-path/recommendations/mundo/noticias-56669604';
 
         fetchMock.mock(
           'http://localhost/some-cps-sty-path.json',
