@@ -3,18 +3,19 @@ import getRecommendationsUrl, {
 } from '.';
 
 describe('getRecommendationsUrl', () => {
-  it('should return endpoint when passed service and assetUri', () => {
+  it('should return endpoint when passed assetUri', () => {
     expect(getRecommendationsUrl({ assetUri: '/mundo/123456' })).toBe(
-      '/mundo/123456/recommendations',
+      'https://onward-journeys.api.bbci.co.uk/api/recommendations/mundo/123456',
     );
   });
-  it('should return endpoint when passed service variant and assetUri', () => {
+  it('should return endpoint when passed assetUri with a variant', () => {
     expect(
       getRecommendationsUrl({
-        variant: 'trad',
-        assetUri: '/zhongwen/123456',
+        assetUri: '/zhongwen/trad/123456',
       }),
-    ).toBe('/zhongwen/123456/recommendations/trad');
+    ).toBe(
+      'https://onward-journeys.api.bbci.co.uk/api/recommendations/zhongwen/trad/123456',
+    );
   });
 
   describe('Optimizely Experiments', () => {
