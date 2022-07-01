@@ -42,7 +42,7 @@ const MediaIcon = ({ script, service, children, type }) => {
   if (!type) return null;
   return (
     <Wrapper script={script} service={service}>
-      {mediaIcons[TYPES[type]]}
+      {mediaIcons[type]}
       {formatChildren(children)}
     </Wrapper>
   );
@@ -51,7 +51,7 @@ const MediaIcon = ({ script, service, children, type }) => {
 MediaIcon.propTypes = {
   script: shape(scriptPropType).isRequired,
   service: string.isRequired,
-  type: oneOf(Object.keys(TYPES)),
+  type: oneOf(Object.values(TYPES)),
   children: number,
 };
 
