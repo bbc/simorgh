@@ -1,5 +1,5 @@
 export default ({ assetUri }) =>
-  `https://onward-journeys.api.bbci.co.uk/api/recommendations${assetUri}`;
+  `${process.env.RECOMMENDATIONS_ENDPOINT}/recommendations${assetUri}`;
 
 export const portugueseRecommendationsExperimentEndpoint = ({
   assetUri,
