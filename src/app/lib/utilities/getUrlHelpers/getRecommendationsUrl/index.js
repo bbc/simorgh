@@ -1,7 +1,5 @@
-export default ({ assetUri, variant }) =>
-  variant
-    ? `${assetUri}/recommendations/${variant}`
-    : `${assetUri}/recommendations`;
+export default ({ assetUri }) =>
+  `https://onward-journeys.api.bbci.co.uk/api/recommendations${assetUri}`;
 
 export const portugueseRecommendationsExperimentEndpoint = ({
   assetUri,
