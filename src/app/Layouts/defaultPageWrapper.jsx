@@ -31,6 +31,7 @@ const PageWrapper = ({ children, pageData, status }) => {
 
   const isDarkMode = pathOr(false, ['darkMode'], pageData);
   const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
+  const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);
   const isErrorPage = [404, 500].includes(status);
   const pageType = isErrorPage
     ? 'WS-ERROR-PAGE'
@@ -43,7 +44,10 @@ const PageWrapper = ({ children, pageData, status }) => {
       <ManifestContainer />
       <WebVitals pageType={pageType} />
       <Wrapper id="main-wrapper" darkMode={isDarkMode}>
-        <HeaderContainer scriptSwitchId={scriptSwitchId} />
+        <HeaderContainer
+          scriptSwitchId={scriptSwitchId}
+          renderScriptSwitch={renderScriptSwitch}
+        />
         <Content>{children}</Content>
         <FooterContainer />
       </Wrapper>
