@@ -217,7 +217,7 @@ Object {
 exports[`AMP Korean Live Radio Page Header Navigation link should match text and url 2`] = `
 Object {
   "text": "비디오",
-  "url": "/korean/media/video",
+  "url": "/korean/topics/cnwng7v0e54t",
 }
 `;
 
