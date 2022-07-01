@@ -8,15 +8,6 @@ describe('getRecommendationsUrl', () => {
       'https://onward-journeys.api.bbci.co.uk/api/recommendations/mundo/123456',
     );
   });
-  it('should return endpoint when passed assetUri with a variant', () => {
-    expect(
-      getRecommendationsUrl({
-        assetUri: '/zhongwen/trad/123456',
-      }),
-    ).toBe(
-      'https://onward-journeys.api.bbci.co.uk/api/recommendations/zhongwen/trad/123456',
-    );
-  });
 
   describe('Optimizely Experiments', () => {
     describe('004_brasil_recommendations_experiment', () => {
