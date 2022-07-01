@@ -5,9 +5,12 @@ import { storyItem } from '#models/propTypes/storyItem';
 import pathOr from 'ramda/src/pathOr';
 import { C_GREY_2 } from '#app/legacy/psammead-styles/src/colours';
 import SectionLabel from '#legacy/psammead-section-label/src';
-import { StyledWrapper } from './index.styles';
-import TopStoriesItem from './TopStoriesMolecules/TopStoriesItem';
-import TopStoriesList from './TopStoriesMolecules/TopStoriesList';
+import {
+  StyledWrapper,
+  FlexPromoList,
+  FlexPromoListItem,
+} from './index.styles';
+import TopStoriesItem from './TopStoriesItem';
 
 const TopStoriesPromo = ({ content }) => {
   const { translations } = useContext(ServiceContext);
@@ -28,7 +31,13 @@ const TopStoriesPromo = ({ content }) => {
       {hasSingleContent ? (
         <TopStoriesItem item={content[0]} index={0} labelId={LABEL_ID} />
       ) : (
-        <TopStoriesList content={content} labelId={LABEL_ID} />
+        <FlexPromoList>
+          {content.map(item => (
+            <FlexPromoListItem>
+              <TopStoriesItem item={item} labelId={LABEL_ID} />
+            </FlexPromoListItem>
+          ))}
+        </FlexPromoList>
       )}
     </StyledWrapper>
   );

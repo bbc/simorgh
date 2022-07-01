@@ -1,3 +1,4 @@
+import styled from '@emotion/styled';
 import { getPica } from '#legacy/gel-foundations/src/typography';
 import {
   GEL_SPACING,
@@ -9,7 +10,10 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
 } from '#app/legacy/gel-foundations/src/breakpoints';
-import styled from '@emotion/styled';
+import {
+  StoryPromoUlBase,
+  StoryPromoLiBase,
+} from '#containers/NewStoryPromoList';
 import Promo from '../../Promo';
 
 export const StyledPromoHeading = styled(Promo.Heading)`
@@ -27,14 +31,14 @@ export const StyledWrapper = styled.section`
   }
 `;
 
-export const StoryPromoList = styled(Promo.UnorderedList)`
+export const FlexPromoList = styled(StoryPromoUlBase)`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     display: flex;
     gap: ${GEL_SPACING};
   }
 `;
 
-export const FlexListItem = styled(Promo.ListItem)`
+export const FlexPromoListItem = styled(StoryPromoLiBase)`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     flex-grow: 1;
     flex-basis: 0;

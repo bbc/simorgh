@@ -6,11 +6,11 @@ import pathOr from 'ramda/src/pathOr';
 import { storyItem } from '#models/propTypes/storyItem';
 import { buildUniquePromoId } from '#app/containers/StoryPromo/utilities';
 import { getIsLive } from '#lib/utilities/getStoryPromoInfo';
-import Promo from '../../../Promo';
-import { StyledPromoHeading } from '../index.styles';
+import Promo from '../../Promo';
+import { StyledPromoHeading } from './index.styles';
 
 const TopStoriesItem = ({ item, index, labelId }) => {
-  const { translations } = useContext(ServiceContext);
+  const { script, translations } = useContext(ServiceContext);
   const timestamp = path(['timestamp'], item);
   const mediaType = path(['media', 'format'], item);
   const url = path(['locators', 'assetUri'], item);
@@ -33,7 +33,7 @@ const TopStoriesItem = ({ item, index, labelId }) => {
     <Promo to={url} id={linkId}>
       <Promo.BoxWrapper>
         {mediaType && <Promo.MediaIndicator type={mediaType} />}
-        <StyledPromoHeading>
+        <StyledPromoHeading script={script}>
           <Promo.Link>
             {isLive ? (
               <Promo.LiveLabel
