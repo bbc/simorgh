@@ -21,7 +21,6 @@ import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });
-process.env.SENSITIVE_HTTP_HEADERS = 'x-sensitive-header,x-another-one';
 
 const path = require('path');
 const express = require('express');
@@ -1464,29 +1463,31 @@ describe('Routing Information Logging', () => {
 });
 
 describe('Exclusion of sensitive HTTP headers from logs', () => {
+  const SAFE_HEADER = 'x-safe-header';
+  const SENSITIVE_HEADER = 'x-sensitive-header';
   const act = () =>
     request(server)
       .get('/pidgin')
-      .set('x-safe-header', 'test')
-      .set('x-sensitive-header', 'test');
+      .set(SAFE_HEADER, 'test')
+      .set(SENSITIVE_HEADER, 'test');
 
-  const assertAppropriateHeadersLogged = (logger, logCategory) => {
-    // Includes safe key
+  const assertHeaderWasLogged = (logger, logCategory, header) => {
     expect(logger).toHaveBeenCalledWith(
       logCategory,
       expect.objectContaining({
         headers: expect.objectContaining({
-          'x-safe-header': 'test',
+          [header]: 'test',
         }),
       }),
     );
+  };
 
-    // Excludes sensitive key
+  const assertHeaderWasNotLogged = (logger, logCategory, header) => {
     expect(logger).toHaveBeenCalledWith(
       logCategory,
       expect.objectContaining({
         headers: expect.not.objectContaining({
-          'x-sensitive-header': 'test',
+          [header]: 'test',
         }),
       }),
     );
@@ -1494,18 +1495,42 @@ describe('Exclusion of sensitive HTTP headers from logs', () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
+    process.env.SENSITIVE_HTTP_HEADERS = 'x-sensitive-header,x-another-one';
   });
 
   afterEach(() => {
     jest.clearAllMocks();
+    delete process.env.SENSITIVE_HTTP_HEADERS;
+  });
+
+  it(`when the environment variable isn't set`, async () => {
+    delete process.env.SENSITIVE_HTTP_HEADERS;
+    await act();
+
+    assertHeaderWasLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SAFE_HEADER,
+    );
+    assertHeaderWasLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SENSITIVE_HEADER,
+    );
   });
 
   it(`when simorgh responds successfully`, async () => {
     await act();
 
-    assertAppropriateHeadersLogged(
+    assertHeaderWasLogged(
       loggerMock.info,
       SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SAFE_HEADER,
+    );
+    assertHeaderWasNotLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SENSITIVE_HEADER,
     );
   });
 
@@ -1516,13 +1541,25 @@ describe('Exclusion of sensitive HTTP headers from logs', () => {
 
     await act();
 
-    assertAppropriateHeadersLogged(
+    assertHeaderWasLogged(
       loggerMock.info,
       SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SAFE_HEADER,
     );
-    assertAppropriateHeadersLogged(
+    assertHeaderWasNotLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SENSITIVE_HEADER,
+    );
+    assertHeaderWasLogged(
       loggerMock.error,
       SERVER_SIDE_REQUEST_FAILED,
+      SAFE_HEADER,
+    );
+    assertHeaderWasNotLogged(
+      loggerMock.error,
+      SERVER_SIDE_REQUEST_FAILED,
+      SENSITIVE_HEADER,
     );
   });
 
@@ -1531,13 +1568,25 @@ describe('Exclusion of sensitive HTTP headers from logs', () => {
 
     await act();
 
-    assertAppropriateHeadersLogged(
+    assertHeaderWasLogged(
       loggerMock.info,
       SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SAFE_HEADER,
     );
-    assertAppropriateHeadersLogged(
+    assertHeaderWasNotLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SENSITIVE_HEADER,
+    );
+    assertHeaderWasLogged(
       loggerMock.error,
       SERVER_SIDE_REQUEST_FAILED,
+      SAFE_HEADER,
+    );
+    assertHeaderWasNotLogged(
+      loggerMock.error,
+      SERVER_SIDE_REQUEST_FAILED,
+      SENSITIVE_HEADER,
     );
   });
 });

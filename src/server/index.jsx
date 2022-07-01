@@ -40,9 +40,8 @@ logger.debug(
   `Application outputting logs to directory '${process.env.LOG_DIR}'`,
 );
 
-const removeSensitiveHeaders = omit(
-  (process.env.SENSITIVE_HTTP_HEADERS || '').split(','),
-);
+const removeSensitiveHeaders = headers =>
+  omit((process.env.SENSITIVE_HTTP_HEADERS || '').split(','), headers);
 
 /* eslint class-methods-use-this: ["error", { "exceptMethods": ["write"] }] */
 class LoggerStream {
