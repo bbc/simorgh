@@ -6,7 +6,11 @@ import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import defaultToggles from '#lib/config/toggles';
 import loggerMock from '#testHelpers/loggerMock';
-import { ROUTING_INFORMATION } from '#lib/logger.const';
+import {
+  ROUTING_INFORMATION,
+  SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+  SERVER_SIDE_REQUEST_FAILED,
+} from '#lib/logger.const';
 import { FRONT_PAGE, MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import Document from './Document/component';
 import routes from '../app/routes';
@@ -1455,5 +1459,134 @@ describe('Routing Information Logging', () => {
       status: 200,
       pageType: 'Page Type from Data',
     });
+  });
+});
+
+describe('Exclusion of sensitive HTTP headers from logs', () => {
+  const SAFE_HEADER = 'x-safe-header';
+  const SENSITIVE_HEADER = 'x-sensitive-header';
+  const act = () =>
+    request(server)
+      .get('/pidgin')
+      .set(SAFE_HEADER, 'test')
+      .set(SENSITIVE_HEADER, 'test');
+
+  const assertHeaderWasLogged = (logger, logCategory, header) => {
+    expect(logger).toHaveBeenCalledWith(
+      logCategory,
+      expect.objectContaining({
+        headers: expect.objectContaining({
+          [header]: 'test',
+        }),
+      }),
+    );
+  };
+
+  const assertHeaderWasNotLogged = (logger, logCategory, header) => {
+    expect(logger).toHaveBeenCalledWith(
+      logCategory,
+      expect.objectContaining({
+        headers: expect.not.objectContaining({
+          [header]: 'test',
+        }),
+      }),
+    );
+  };
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+    process.env.SENSITIVE_HTTP_HEADERS = 'x-sensitive-header,x-another-one';
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+    delete process.env.SENSITIVE_HTTP_HEADERS;
+  });
+
+  it(`when the environment variable isn't set`, async () => {
+    delete process.env.SENSITIVE_HTTP_HEADERS;
+    await act();
+
+    assertHeaderWasLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SAFE_HEADER,
+    );
+    assertHeaderWasLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SENSITIVE_HEADER,
+    );
+  });
+
+  it(`when simorgh responds successfully`, async () => {
+    await act();
+
+    assertHeaderWasLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SAFE_HEADER,
+    );
+    assertHeaderWasNotLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SENSITIVE_HEADER,
+    );
+  });
+
+  it(`when simorgh fails due to a getInitialData error`, async () => {
+    mockRouteProps({
+      dataResponse: Error('Oh no'),
+    });
+
+    await act();
+
+    assertHeaderWasLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SAFE_HEADER,
+    );
+    assertHeaderWasNotLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SENSITIVE_HEADER,
+    );
+    assertHeaderWasLogged(
+      loggerMock.error,
+      SERVER_SIDE_REQUEST_FAILED,
+      SAFE_HEADER,
+    );
+    assertHeaderWasNotLogged(
+      loggerMock.error,
+      SERVER_SIDE_REQUEST_FAILED,
+      SENSITIVE_HEADER,
+    );
+  });
+
+  it(`when simorgh fails due to a renderDocument error`, async () => {
+    renderDocument.default.mockImplementation(() => Error('Oh no'));
+
+    await act();
+
+    assertHeaderWasLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SAFE_HEADER,
+    );
+    assertHeaderWasNotLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SENSITIVE_HEADER,
+    );
+    assertHeaderWasLogged(
+      loggerMock.error,
+      SERVER_SIDE_REQUEST_FAILED,
+      SAFE_HEADER,
+    );
+    assertHeaderWasNotLogged(
+      loggerMock.error,
+      SERVER_SIDE_REQUEST_FAILED,
+      SENSITIVE_HEADER,
+    );
   });
 });

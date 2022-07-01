@@ -1,6 +1,7 @@
 import express from 'express';
 import compression from 'compression';
 import ramdaPath from 'ramda/src/path';
+import omit from 'ramda/src/omit';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
@@ -38,6 +39,9 @@ const logger = nodeLogger(__filename);
 logger.debug(
   `Application outputting logs to directory '${process.env.LOG_DIR}'`,
 );
+
+const removeSensitiveHeaders = headers =>
+  omit((process.env.SENSITIVE_HTTP_HEADERS || '').split(','), headers);
 
 /* eslint class-methods-use-this: ["error", { "exceptMethods": ["write"] }] */
 class LoggerStream {
@@ -133,7 +137,7 @@ server.get(
   async ({ url, query, headers, path: urlPath }, res) => {
     logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
       url,
-      headers,
+      headers: removeSensitiveHeaders(headers),
     });
 
     let derivedPageType = 'Unknown';
@@ -205,7 +209,7 @@ server.get(
           status,
           message,
           url,
-          headers,
+          headers: removeSensitiveHeaders(headers),
         });
 
         result = await renderDocument({
@@ -248,7 +252,7 @@ server.get(
         status,
         message,
         url,
-        headers,
+        headers: removeSensitiveHeaders(headers),
       });
 
       res.status(500).send(message);
