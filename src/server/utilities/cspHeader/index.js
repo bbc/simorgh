@@ -409,7 +409,7 @@ const helmetCsp = ({ isAmp, isLive, reportOnlyOnLive }) => ({
 });
 
 const injectCspHeader = (req, res, next) => {
-  const { isAmp } = getRouteProps(req.url);
+  const { isAmp, service } = getRouteProps(req.url);
 
   res.setHeader(
     'report-to',
@@ -430,7 +430,7 @@ const injectCspHeader = (req, res, next) => {
     helmetCsp({
       isAmp,
       isLive: isLiveEnv(),
-      reportOnlyOnLive: req.url === '/japanese',
+      reportOnlyOnLive: service === 'japanese',
     }),
   );
   middleware(req, res, next);
