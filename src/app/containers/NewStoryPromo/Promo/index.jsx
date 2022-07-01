@@ -14,7 +14,7 @@ import {
 import Image from '../PromoAtoms/Image.styles';
 import Link from '../PromoAtoms/Link';
 import MediaIndicator from '../PromoAtoms/MediaIndicator';
-import BoxWrapper from '../PromoAtoms/BoxWrapper.styles';
+import { ViewWrapper, BoxWrapper } from '../PromoAtoms/Wrappers.styles';
 
 const PromoContext = React.createContext({});
 
@@ -29,13 +29,13 @@ const Promo = ({ children, to, id }) => {
   const viewRef = useViewTracker(eventTrackingData.block);
 
   return (
-    <div ref={viewRef}>
+    <ViewWrapper ref={viewRef}>
       <PromoContext.Provider
         value={{ script, service, dir, to, id, eventTrackingData }}
       >
         {children}
       </PromoContext.Provider>
-    </div>
+    </ViewWrapper>
   );
 };
 
