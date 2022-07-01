@@ -5,10 +5,10 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import Timestamp from '#components/Promo/timestamp';
 import Content from '#app/containers/StoryPromo/LinkContents';
 import LiveLabel from '#legacy/psammead-live-label/src';
+import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
 import useViewTracker from '#hooks/useViewTracker';
 
 import Heading from '../PromoAtoms/Heading';
-import Image from '../PromoAtoms/Image.styles';
 import Link from '../PromoAtoms/Link';
 import MediaIndicator from '../PromoAtoms/MediaIndicator';
 import { ViewWrapper, BoxWrapper } from '../PromoAtoms/Wrappers.styles';
@@ -45,7 +45,6 @@ const withPromoContext = Component => props =>
 
 Promo.BoxWrapper = withPromoContext(BoxWrapper);
 Promo.Heading = withPromoContext(Heading);
-Promo.Image = withPromoContext(Image);
 Promo.MediaIndicator = withPromoContext(MediaIndicator);
 Promo.Link = withPromoContext(Link);
 
@@ -53,6 +52,7 @@ Promo.Link = withPromoContext(Link);
 Promo.Timestamp = withPromoContext(Timestamp);
 Promo.Content = withPromoContext(Content);
 Promo.LiveLabel = withPromoContext(LiveLabel);
+Promo.Image = withPromoContext(ImageWithPlaceholder);
 
 Promo.propTypes = {
   children: node.isRequired,
