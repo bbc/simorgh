@@ -357,7 +357,7 @@ export const service = {
       },
       {
         title: 'வீடியோ',
-        url: '/tamil/media/video',
+        url: '/tamil/topics/c1320722p81t',
       },
     ],
   },
