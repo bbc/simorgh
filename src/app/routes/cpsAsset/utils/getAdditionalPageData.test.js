@@ -24,7 +24,11 @@ jest.mock('./hasRecommendations', () => jest.fn());
 jest.mock('#server/utilities/getAgent/index');
 
 describe('getAdditionalPageData', () => {
+  beforeEach(() => {
+    process.env.RECOMMENDATIONS_ENDPOINT = 'http://mock-recommendations-path';
+  });
   afterEach(() => {
+    delete process.env.RECOMMENDATIONS_ENDPOINT;
     fetchMock.restore();
   });
 
@@ -49,7 +53,7 @@ describe('getAdditionalPageData', () => {
       secondaryColumnJson,
     );
     fetchMock.mock(
-      'http://localhost/mundo/23263889/recommendations.json',
+      'http://mock-recommendations-path/recommendations/mundo/23263889',
       recommendationsJson,
     );
     hasRecommendations.mockImplementationOnce(() => true);
@@ -89,7 +93,10 @@ describe('getAdditionalPageData', () => {
   it('should return an empty object when a data fetch fails', async () => {
     fetchMock.mock('http://localhost/mundo/mostread.json', 404);
     fetchMock.mock('http://localhost/mundo/sty-secondary-column.json', 404);
-    fetchMock.mock('http://localhost/mundo/23263889/recommendations.json', 404);
+    fetchMock.mock(
+      'http://mock-recommendations-path/recommendations/mundo/23263889',
+      404,
+    );
     const additionalPageData = await getAdditionalPageData({
       pageData: styJson,
       service: 'mundo',
@@ -119,15 +126,6 @@ describe('getAdditionalPageData', () => {
 
   describe('Optimizely Experiments', () => {
     describe('004_brasil_recommendations_experiment', () => {
-      beforeEach(() => {
-        process.env.RECOMMENDATIONS_ENDPOINT =
-          'http://mock-recommendations-path';
-      });
-
-      afterEach(() => {
-        delete process.env.RECOMMENDATIONS_ENDPOINT;
-      });
-
       it('should recommendations data from camino, unirecs content and unirecs hybrid engine', async () => {
         const expectedOutput = {
           recommendations: recommendationsJson,
@@ -160,7 +158,7 @@ describe('getAdditionalPageData', () => {
 
       it('should not get recommendations data when hasRecommendations is false', async () => {
         fetchMock.mock(
-          'http://localhost/portuguese/brasil-59057279/recommendations.json',
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279',
           recommendationsJson,
         );
         fetchMock.mock(
@@ -180,14 +178,14 @@ describe('getAdditionalPageData', () => {
         expect(additionalPageData).toEqual({});
       });
 
-      it('should get recommendations from public deimos endpoint on live environment', async () => {
+      it('should get recommendations from private recommendation endpoint on live environment', async () => {
         process.env.SIMORGH_APP_ENV = 'live';
         const expectedOutput = {
           recommendations: recommendationsJson,
         };
         hasRecommendations.mockImplementationOnce(() => true);
         fetchMock.mock(
-          'http://localhost/portuguese/brasil-59057279/recommendations.json',
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279',
           recommendationsJson,
         );
 
