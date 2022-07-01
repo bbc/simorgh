@@ -34,7 +34,7 @@ TopicPromo.propTypes = {
   imageAlt: string.isRequired,
   lazy: bool,
   link: string.isRequired,
-  mediaType: oneOf(Object.keys(MEDIA_TYPES)),
+  mediaType: oneOf(Object.values(MEDIA_TYPES)),
   mediaDuration: number,
 };
 
