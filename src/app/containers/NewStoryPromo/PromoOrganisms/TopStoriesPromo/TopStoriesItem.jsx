@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { shape, number, string } from 'prop-types';
-import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { storyItem } from '#models/propTypes/storyItem';
 import { buildUniquePromoId } from '#app/containers/StoryPromo/utilities';
@@ -11,9 +10,17 @@ import { StyledPromoHeading } from './index.styles';
 
 const TopStoriesItem = ({ item, index, labelId }) => {
   const { script, translations } = useContext(ServiceContext);
-  const timestamp = path(['timestamp'], item);
-  const mediaType = path(['media', 'format'], item);
-  const url = path(['locators', 'assetUri'], item);
+
+  const overtypedHeadline = pathOr('', ['headlines', 'overtyped'], item);
+  const headline =
+    overtypedHeadline || pathOr('', ['headlines', 'headline'], item);
+
+  const mediaType = pathOr(null, ['media', 'format'], item);
+  const mediaDuration = pathOr(null, ['media', 'duration'], item);
+  const isPhotoGallery = pathOr(null, ['cpsType'], item) === 'PGL';
+
+  const timestamp = pathOr(null, ['timestamp'], item);
+  const url = pathOr(null, ['locators', 'assetUri'], item);
   const isLive = getIsLive(item);
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
@@ -41,10 +48,20 @@ const TopStoriesItem = ({ item, index, labelId }) => {
                 ariaHidden={liveLabelIsEnglish}
                 offScreenText={liveLabelIsEnglish ? 'Live' : null}
               >
-                <Promo.Content item={item} />
+                <Promo.Content
+                  mediaType={mediaType}
+                  mediaDuration={mediaDuration}
+                  headline={headline}
+                  isPhotoGallery={isPhotoGallery}
+                />
               </Promo.LiveLabel>
             ) : (
-              <Promo.Content item={item} />
+              <Promo.Content
+                mediaType={mediaType}
+                mediaDuration={mediaDuration}
+                headline={headline}
+                isPhotoGallery={isPhotoGallery}
+              />
             )}
           </Promo.Link>
         </StyledPromoHeading>

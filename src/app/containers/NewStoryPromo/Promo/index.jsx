@@ -3,14 +3,14 @@ import { node, string } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 import Timestamp from '#components/Promo/timestamp';
-import Content from '#app/containers/StoryPromo/LinkContents';
 import LiveLabel from '#legacy/psammead-live-label/src';
-import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
 import useViewTracker from '#hooks/useViewTracker';
+import Image from '#legacy/psammead-image/src';
 
 import Heading from '../PromoAtoms/Heading';
 import Link from '../PromoAtoms/Link';
 import MediaIndicator from '../PromoAtoms/MediaIndicator';
+import Content from '../PromoAtoms/Content';
 import { ViewWrapper, BoxWrapper } from '../PromoAtoms/Wrappers.styles';
 
 const PromoContext = React.createContext({});
@@ -52,7 +52,7 @@ Promo.Link = withPromoContext(Link);
 Promo.Timestamp = withPromoContext(Timestamp);
 Promo.Content = withPromoContext(Content);
 Promo.LiveLabel = withPromoContext(LiveLabel);
-Promo.Image = withPromoContext(ImageWithPlaceholder);
+Promo.Image = withPromoContext(Image);
 
 Promo.propTypes = {
   children: node.isRequired,
