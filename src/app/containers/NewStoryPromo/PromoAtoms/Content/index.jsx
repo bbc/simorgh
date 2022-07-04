@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { string, number, bool } from 'prop-types';
+import { string, bool } from 'prop-types';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import VisuallyHiddenText from '#app/legacy/psammead-visually-hidden-text/src';
 import moment from 'moment';
@@ -64,7 +64,7 @@ const Content = ({
 Content.propTypes = {
   id: string.isRequired,
   mediaType: string,
-  mediaDuration: number,
+  mediaDuration: string,
   headline: string.isRequired,
   isPhotoGallery: bool,
 };

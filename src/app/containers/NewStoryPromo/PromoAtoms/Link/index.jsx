@@ -18,14 +18,16 @@ const Link = ({ className, children, to, id, eventTrackingData }) => {
 };
 
 Link.propTypes = {
-  className: string.isRequired,
+  className: string,
   children: node.isRequired,
-  to: string.isRequired,
+  to: string,
   id: string.isRequired,
   eventTrackingData: shape({ block: { componentName: string } }),
 };
 
 Link.defaultProps = {
+  className: '',
+  to: '',
   eventTrackingData: null,
 };
 

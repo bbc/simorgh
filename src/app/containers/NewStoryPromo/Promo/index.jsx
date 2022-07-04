@@ -56,8 +56,10 @@ Promo.Image = withPromoContext(Image);
 
 Promo.propTypes = {
   children: node.isRequired,
-  to: string.isRequired,
+  to: string,
   id: string.isRequired,
 };
+
+Promo.defaultProps = { to: '' };
 
 export default Promo;

@@ -15,7 +15,9 @@ Heading.propTypes = {
   children: node.isRequired,
   service: string.isRequired,
   script: shape(scriptPropType).isRequired,
-  className: string.isRequired,
+  className: string,
 };
+
+Heading.defaultProps = { className: '' };
 
 export default Heading;
