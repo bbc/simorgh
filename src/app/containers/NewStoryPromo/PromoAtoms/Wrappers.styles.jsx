@@ -10,10 +10,8 @@ import {
 } from '#app/legacy/gel-foundations/src/spacings';
 import { C_GREY_6, C_WHITE } from '#app/legacy/psammead-styles/src/colours';
 
-export const BoxWrapper = styled.div`
-  background-color: ${C_WHITE};
+export const ContentWrapper = styled.div`
   padding: ${GEL_SPACING};
-  height: 100%;
   border: ${GEL_SPACING_BORDER} solid ${C_WHITE};
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {

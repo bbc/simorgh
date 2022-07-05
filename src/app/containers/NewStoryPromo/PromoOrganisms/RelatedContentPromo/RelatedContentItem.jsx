@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import styled from '@emotion/styled';
 import { shape, string, number } from 'prop-types';
 import path from 'ramda/src/path';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -10,17 +9,6 @@ import Promo from '../../Promo';
 
 const RelatedContentItem = ({ item, labelId, index }) => {
   const { script } = useContext(ServiceContext);
-  const ILoveWraps = styled.div`
-    &:after {
-      content: '';
-      padding: 0;
-      margin: 0;
-    }
-    display: block;
-    position: static;
-    min-height: 0;
-    max-height: 100%;
-  `;
   const linkId = buildUniquePromoId({
     sectionType: 'top-stories',
     promoGroupId: labelId,
@@ -110,26 +98,24 @@ const RelatedContentItem = ({ item, labelId, index }) => {
   return (
     <Promo to={url} id={linkId}>
       <Promo.ClickableArea />
-      <ILoveWraps>
-        <Promo.ImagePlaceholder
-          src={src}
-          alt={altText}
-          srcset={primarySrcset}
-          fallbackSrcset={fallbackSrcset}
-          ratio={RATIO}
-          width={width}
-          height={height}
-          lazyload
-        />
-      </ILoveWraps>
-      <Promo.BoxWrapper>
+      <Promo.ImagePlaceholder
+        src={src}
+        alt={altText}
+        srcset={primarySrcset}
+        fallbackSrcset={fallbackSrcset}
+        ratio={RATIO}
+        width={width}
+        height={height}
+        lazyload
+      />
+      <Promo.ContentWrapper>
         <Promo.Heading script={script}>
           <Promo.Link>
             <Promo.Content headline={headline} />
           </Promo.Link>
         </Promo.Heading>
         <Promo.Timestamp>{timestamp}</Promo.Timestamp>
-      </Promo.BoxWrapper>
+      </Promo.ContentWrapper>
     </Promo>
   );
 };

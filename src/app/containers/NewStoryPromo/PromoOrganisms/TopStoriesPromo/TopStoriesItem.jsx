@@ -39,7 +39,7 @@ const TopStoriesItem = ({ item, index, labelId }) => {
   return (
     <Promo to={url} id={linkId}>
       <Promo.ClickableArea />
-      <Promo.BoxWrapper>
+      <Promo.ContentWrapper>
         {mediaType && <Promo.MediaIndicator type={mediaType} />}
         <StyledPromoHeading script={script}>
           <Promo.Link>
@@ -67,7 +67,7 @@ const TopStoriesItem = ({ item, index, labelId }) => {
           </Promo.Link>
         </StyledPromoHeading>
         <Promo.Timestamp>{timestamp}</Promo.Timestamp>
-      </Promo.BoxWrapper>
+      </Promo.ContentWrapper>
     </Promo>
   );
 };

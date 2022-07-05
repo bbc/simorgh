@@ -8,7 +8,11 @@ import tail from 'ramda/src/tail';
 import slice from 'ramda/src/slice';
 import identity from 'ramda/src/identity';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { StoryPromoUlGrid, StyledWrapper } from './index.styles';
+import {
+  StoryPromoUlGrid,
+  StyledStoryPromoLi,
+  StyledWrapper,
+} from './index.styles';
 import RelatedContentItem from './RelatedContentItem';
 
 const RelatedContentPromo = ({ content }) => {
@@ -49,13 +53,13 @@ const RelatedContentPromo = ({ content }) => {
       ) : (
         <StoryPromoUlGrid>
           {reducedStoryPromoItems.map((item, index) => (
-            <li>
+            <StyledStoryPromoLi>
               <RelatedContentItem
                 item={item}
                 index={index}
                 labelId="RelatedContent"
               />
-            </li>
+            </StyledStoryPromoLi>
           ))}
         </StoryPromoUlGrid>
       )}

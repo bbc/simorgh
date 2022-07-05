@@ -12,7 +12,7 @@ import Link from '../PromoAtoms/Link';
 import ClickableArea from '../PromoAtoms/ClickableArea';
 import MediaIndicator from '../PromoAtoms/MediaIndicator';
 import Content from '../PromoAtoms/Content';
-import { PromoWrapper, BoxWrapper } from '../PromoAtoms/Wrappers.styles';
+import { PromoWrapper, ContentWrapper } from '../PromoAtoms/Wrappers.styles';
 
 const PromoContext = React.createContext({});
 
@@ -44,7 +44,7 @@ const withPromoContext = Component => props =>
     </PromoContext.Consumer>
   );
 
-Promo.BoxWrapper = withPromoContext(BoxWrapper);
+Promo.ContentWrapper = withPromoContext(ContentWrapper);
 Promo.Heading = withPromoContext(Heading);
 Promo.MediaIndicator = withPromoContext(MediaIndicator);
 Promo.Link = withPromoContext(Link);
