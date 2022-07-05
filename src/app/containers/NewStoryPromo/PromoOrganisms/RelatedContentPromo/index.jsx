@@ -8,7 +8,7 @@ import tail from 'ramda/src/tail';
 import slice from 'ramda/src/slice';
 import identity from 'ramda/src/identity';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import StoryPromoUlGrid from './index.styles';
+import { StoryPromoUlGrid, StyledWrapper } from './index.styles';
 import RelatedContentItem from './RelatedContentItem';
 
 const RelatedContentPromo = ({ content }) => {
@@ -16,6 +16,8 @@ const RelatedContentPromo = ({ content }) => {
 
   if (!content) return null;
   const items = path(['model', 'blocks'], content);
+
+  const LABEL_ID = 'related-content-heading';
 
   const customTitle =
     pathEq([0, 'type'], 'title', items) &&
@@ -36,13 +38,13 @@ const RelatedContentPromo = ({ content }) => {
   const hasSingleContent = reducedStoryPromoItems.length === 1;
 
   return (
-    <section>
+    <StyledWrapper aria-labelledby={LABEL_ID} role="region" data-e2e={LABEL_ID}>
       <SectionLabel>{title}</SectionLabel>
       {hasSingleContent ? (
         <RelatedContentItem
           item={reducedStoryPromoItems[0]}
           index={0}
-          labelId="RelatedContent"
+          labelId={LABEL_ID}
         />
       ) : (
         <StoryPromoUlGrid>
@@ -57,7 +59,7 @@ const RelatedContentPromo = ({ content }) => {
           ))}
         </StoryPromoUlGrid>
       )}
-    </section>
+    </StyledWrapper>
   );
 };
 

@@ -8,7 +8,7 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#app/legacy/gel-foundations/src/spacings';
-import { C_WHITE } from '#app/legacy/psammead-styles/src/colours';
+import { C_GREY_6, C_WHITE } from '#app/legacy/psammead-styles/src/colours';
 
 export const BoxWrapper = styled.div`
   background-color: ${C_WHITE};
@@ -35,7 +35,7 @@ export const PromoWrapper = styled.div`
   }
   &:visited {
     a {
-      color: #e6e8ea;
+      color: ${C_GREY_6};
     }
   }
   height: 100%;

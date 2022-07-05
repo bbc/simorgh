@@ -19,7 +19,7 @@ const TopStoriesPromo = ({ content }) => {
   const LABEL_ID = 'top-stories-heading';
 
   return (
-    <StyledWrapper aria-labelledby={LABEL_ID} role="region">
+    <StyledWrapper aria-labelledby={LABEL_ID} role="region" data-e2e={LABEL_ID}>
       <SectionLabel
         labelId={LABEL_ID}
         columnType="secondary"
