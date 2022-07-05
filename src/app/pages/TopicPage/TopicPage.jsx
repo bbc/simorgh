@@ -18,9 +18,9 @@ import useToggle from '#hooks/useToggle';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import TopicTitle from './TopicTitle';
-import TopicGrid from './TopicGrid';
 import Pagination from './Pagination';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
+import Curation, { VISUAL_PROMINANCE, CURATION_TYPE } from './Curation';
 
 const Wrapper = styled.main`
   max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
@@ -87,7 +87,11 @@ const TopicPage = ({ pageData }) => {
         />
 
         <TopicTitle>{title}</TopicTitle>
-        <TopicGrid promos={promos} />
+        <Curation
+          type={CURATION_TYPE.GRID}
+          prominance={VISUAL_PROMINANCE.STANDARD}
+          promos={promos}
+        />
         <Pagination
           activePage={activePage}
           pageCount={pageCount}

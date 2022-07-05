@@ -17,7 +17,7 @@ import {
   GEL_SPACING_TRPL,
 } from '#legacy/gel-foundations/src/spacings';
 
-import TopicPromo from '../TopicPromo';
+import CurationPromo from '../CurationPromo';
 
 const direction = ({ dir }) => (dir === 'ltr' ? 'right' : 'left');
 
@@ -56,7 +56,7 @@ const Item = styled.div`
 
 const Wrapper = styled.div``;
 
-const TopicGrid = ({ promos }) => {
+const Grid = ({ promos }) => {
   const { dir } = useContext(ServiceContext);
   const hasMultiplePromos = promos.length > 1;
   const firstPromo = promos[0];
@@ -65,7 +65,7 @@ const TopicGrid = ({ promos }) => {
     return null;
   }
   return (
-    <Wrapper>
+    <Wrapper data-testid="curation-grid-standard">
       {hasMultiplePromos ? (
         <TopicList role="list" data-testid="topic-promos">
           {promos.map((promo, index) => {
@@ -73,26 +73,26 @@ const TopicGrid = ({ promos }) => {
 
             return (
               <Item key={promo.id} dir={dir} as="li">
-                <TopicPromo {...promo} lazy={!isFirstPromo} />
+                <CurationPromo {...promo} lazy={!isFirstPromo} />
               </Item>
             );
           })}
         </TopicList>
       ) : (
         <Item key={firstPromo.id} dir={dir}>
-          <TopicPromo {...firstPromo} />
+          <CurationPromo {...firstPromo} />
         </Item>
       )}
     </Wrapper>
   );
 };
 
-TopicGrid.propTypes = {
+Grid.propTypes = {
   promos: arrayOf(shape({})),
 };
 
-TopicGrid.defaultProps = {
+Grid.defaultProps = {
   promos: [],
 };
 
-export default TopicGrid;
+export default Grid;
