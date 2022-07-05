@@ -33,7 +33,6 @@ export default ({ service, pageType, variant }) => {
         topicTitle = body.data.title;
         variantTopicId = body.data.variantTopicId;
         pageCount = body.data.pageCount;
-        firstItemHeadline = body.data.curations[0].summaries[0].title;
         numberOfItems = body.data.curations[0].summaries.length;
         firstItemHeadline = body.data.curations[0].summaries[0].title;
       });
