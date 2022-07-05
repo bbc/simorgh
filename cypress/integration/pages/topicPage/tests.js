@@ -33,8 +33,9 @@ export default ({ service, pageType, variant }) => {
         topicTitle = body.data.title;
         variantTopicId = body.data.variantTopicId;
         pageCount = body.data.pageCount;
-        numberOfItems = body.data.summaries.length;
-        firstItemHeadline = body.data.summaries[0].title;
+        firstItemHeadline = body.data.curations[0].summaries[0].title;
+        numberOfItems = body.data.curations[0].summaries.length;
+        firstItemHeadline = body.data.curations[0].summaries[0].title;
       });
       cy.log(`topic id ${topicId}`);
     });
