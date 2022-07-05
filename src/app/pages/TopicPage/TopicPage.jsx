@@ -20,7 +20,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import TopicTitle from './TopicTitle';
 import Pagination from './Pagination';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
-import Curation, { VISUAL_PROMINANCE, CURATION_TYPE } from './Curation';
+import Curation, { VISUAL_PROMINANCE, VISUAL_STYLE } from './Curation';
 
 const Wrapper = styled.main`
   max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
@@ -88,8 +88,8 @@ const TopicPage = ({ pageData }) => {
 
         <TopicTitle>{title}</TopicTitle>
         <Curation
-          type={CURATION_TYPE.GRID}
-          prominance={VISUAL_PROMINANCE.STANDARD}
+          visualStyle={VISUAL_STYLE.NONE}
+          visualProminance={VISUAL_PROMINANCE.NORMAL}
           promos={promos}
         />
         <Pagination

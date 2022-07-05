@@ -3,29 +3,33 @@ import { arrayOf, oneOf, shape } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import CurationGrid from './CurationGrid';
 
-export const VISUAL_PROMINANCE = {
-  STANDARD: 'STANDARD',
+export const VISUAL_STYLE = {
+  NONE: 'NONE',
 };
 
-export const CURATION_TYPE = {
-  GRID: 'GRID',
+export const VISUAL_PROMINANCE = {
+  NORMAL: 'NORMAL',
 };
 
 // Maps a curation type and prominance to a component that renders that curation
 const components = {
-  [CURATION_TYPE.GRID]: {
+  [VISUAL_STYLE.GRID]: {
     [VISUAL_PROMINANCE.STANDARD]: CurationGrid,
   },
 };
 
-const Curation = ({ type, prominance, promos }) => {
-  const Component = pathOr(CurationGrid, [type, prominance], components);
+const Curation = ({ visualStyle, visualProminance, promos }) => {
+  const Component = pathOr(
+    CurationGrid,
+    [visualStyle, visualProminance],
+    components,
+  );
   return <Component promos={promos} />;
 };
 
 Curation.propTypes = {
-  type: oneOf(Object.values(CURATION_TYPE)).isRequired,
-  prominance: oneOf(Object.values(VISUAL_PROMINANCE)).isRequired,
+  visualStyle: oneOf(Object.values(VISUAL_STYLE)).isRequired,
+  visualProminance: oneOf(Object.values(VISUAL_PROMINANCE)).isRequired,
   promos: arrayOf(shape({})).isRequired,
 };
 

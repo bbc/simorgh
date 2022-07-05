@@ -7,13 +7,13 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 import fixture from '#data/pidgin/topics/c95y35941vrt.json';
 
-import Curation, { CURATION_TYPE, VISUAL_PROMINANCE } from '.';
+import Curation, { VISUAL_STYLE, VISUAL_PROMINANCE } from '.';
 
 const components = {
-  [CURATION_TYPE.GRID]: {
-    [VISUAL_PROMINANCE.STANDARD]: {
+  [VISUAL_STYLE.NONE]: {
+    [VISUAL_PROMINANCE.NORMAL]: {
       promos: fixture.data.summaries,
-      testId: 'curation-grid-standard',
+      testId: 'curation-grid-normal',
     },
   },
 };
@@ -46,14 +46,14 @@ describe('Topic Curations', () => {
     });
   });
 
-  it('should render the standard grid if a type/prominance is not yet supported', () => {
+  it('should render the standard grid if a type/prominance is not recognised', () => {
     const { getByTestId } = render(
       <CurationWithContext
-        type="unsupported"
-        prominance="fancy"
+        type="something-unsupported"
+        prominance="what-is-this"
         promos={fixture.data.summaries}
       />,
     );
-    expect(getByTestId('curation-grid-standard')).toBeInTheDocument();
+    expect(getByTestId('curation-grid-normal')).toBeInTheDocument();
   });
 });

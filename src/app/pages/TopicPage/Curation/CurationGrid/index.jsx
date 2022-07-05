@@ -65,7 +65,7 @@ const Grid = ({ promos }) => {
     return null;
   }
   return (
-    <Wrapper data-testid="curation-grid-standard">
+    <Wrapper data-testid="curation-grid-normal">
       {hasMultiplePromos ? (
         <TopicList role="list" data-testid="topic-promos">
           {promos.map((promo, index) => {
