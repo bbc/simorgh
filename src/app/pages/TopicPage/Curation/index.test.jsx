@@ -45,4 +45,15 @@ describe('Topic Curations', () => {
       );
     });
   });
+
+  it('should render the standard grid if a type/prominance is not yet supported', () => {
+    const { getByTestId } = render(
+      <CurationWithContext
+        type="unsupported"
+        prominance="fancy"
+        promos={fixture.data.summaries}
+      />,
+    );
+    expect(getByTestId('curation-grid-standard')).toBeInTheDocument();
+  });
 });
