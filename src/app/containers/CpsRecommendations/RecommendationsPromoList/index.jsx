@@ -1,18 +1,40 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useContext } from 'react';
 import {
   StoryPromoLiBase,
   StoryPromoUl,
 } from '#legacy/psammead-story-promo-list/src';
-import { arrayOf, shape, number } from 'prop-types';
+import { arrayOf, shape, number, string } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
 import useViewTracker from '#hooks/useViewTracker';
+import { OptimizelyContext } from '@optimizely/react-sdk';
+import { ServiceContext } from '#contexts/ServiceContext';
 import Grid from '../../../components/Grid';
 import RecommendationsPromo from '../RecommendationsPromo';
 import getEventTrackingData from './getEventTrackingData';
 
+const getEventTrackingDataWithOptimizely = ({ item, index, optimizely }) => {
+  const eventTrackingData = getEventTrackingData({ item, index });
+  return {
+    ...eventTrackingData,
+    block: {
+      ...eventTrackingData.block,
+      ...(optimizely && { optimizely }),
+    },
+  };
+};
+
 const RecommendationsPromoListItem = forwardRef(
-  ({ item, index }, forwardedRef) => {
-    const eventTrackingData = getEventTrackingData({ item, index });
+  // 004_brasil_recommendations_experiment
+  ({ item, index, service, optimizely }, forwardedRef) => {
+    const eventTrackingData =
+      service === 'portuguese'
+        ? getEventTrackingDataWithOptimizely({
+            item,
+            index,
+            optimizely,
+          })
+        : getEventTrackingData({ item, index });
+
     const linkViewEventTracker = useViewTracker(eventTrackingData.link);
     const elementRefCallback = element => {
       linkViewEventTracker(element);
@@ -45,7 +67,14 @@ const RecommendationsPromoListItem = forwardRef(
 );
 
 const RecommendationsPromoList = ({ promoItems }) => {
-  const eventTrackingData = getEventTrackingData();
+  // 004_brasil_recommendations_experiment
+  const { service } = useContext(ServiceContext);
+  const { optimizely } = useContext(OptimizelyContext);
+  const eventTrackingData =
+    service === 'portuguese'
+      ? getEventTrackingDataWithOptimizely({ optimizely })
+      : getEventTrackingData();
+
   const blockViewEventTracker = useViewTracker(eventTrackingData.block);
 
   return (
@@ -62,11 +91,14 @@ const RecommendationsPromoList = ({ promoItems }) => {
       enableGelGutters
     >
       {promoItems.map((item, index) => (
+        // 004_brasil_recommendations_experiment
         <RecommendationsPromoListItem
           key={item.id}
           ref={blockViewEventTracker}
           index={index}
           item={item}
+          optimizely={optimizely}
+          service={service}
         />
       ))}
     </Grid>
@@ -76,6 +108,8 @@ const RecommendationsPromoList = ({ promoItems }) => {
 RecommendationsPromoListItem.propTypes = {
   item: shape(storyItem).isRequired,
   index: number.isRequired,
+  service: string.isRequired,
+  optimizely: shape({}).isRequired,
 };
 
 RecommendationsPromoList.propTypes = {
