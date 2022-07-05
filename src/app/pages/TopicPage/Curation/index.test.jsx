@@ -35,8 +35,8 @@ describe('Topic Curations', () => {
         ([prominance, { promos, testId }]) => {
           const { getByTestId } = render(
             <CurationWithContext
-              type={curationType}
-              prominance={prominance}
+              visualStyle={curationType}
+              visualProminance={prominance}
               promos={promos}
             />,
           );
@@ -46,11 +46,11 @@ describe('Topic Curations', () => {
     });
   });
 
-  it('should render the standard grid if a type/prominance is not recognised', () => {
+  it('should render the standard grid if a style/prominance is not recognised', () => {
     const { getByTestId } = render(
       <CurationWithContext
-        type="something-unsupported"
-        prominance="what-is-this"
+        visualStyle="something-unsupported"
+        visualProminance="what-is-this"
         promos={fixture.data.summaries}
       />,
     );

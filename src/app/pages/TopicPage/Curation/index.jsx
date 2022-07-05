@@ -11,7 +11,7 @@ export const VISUAL_PROMINANCE = {
   NORMAL: 'NORMAL',
 };
 
-// Maps a curation type and prominance to a component that renders that curation
+// Maps a visual style and prominance to a component that renders that curation
 const components = {
   [VISUAL_STYLE.GRID]: {
     [VISUAL_PROMINANCE.STANDARD]: CurationGrid,
