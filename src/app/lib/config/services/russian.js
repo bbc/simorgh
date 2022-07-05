@@ -312,7 +312,7 @@ export const service = {
       para2: {
         text: 'Контекст',
         url: 'https://www.bbc.com/russian/resources/idt-b34bb7dd-f094-4722-92eb-cf7aff8cc1bc',
-        isExternal: true,
+        isExternal: false,
       },
       para3: '”: она поможет вам разобраться в происходящем.',
     },
