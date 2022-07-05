@@ -38,6 +38,7 @@ const TopStoriesItem = ({ item, index, labelId }) => {
 
   return (
     <Promo to={url} id={linkId}>
+      <Promo.ClickableArea />
       <Promo.BoxWrapper>
         {mediaType && <Promo.MediaIndicator type={mediaType} />}
         <StyledPromoHeading script={script}>

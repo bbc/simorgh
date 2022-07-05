@@ -5,13 +5,14 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import Timestamp from '#components/Promo/timestamp';
 import LiveLabel from '#legacy/psammead-live-label/src';
 import useViewTracker from '#hooks/useViewTracker';
-import Image from '#legacy/psammead-image/src';
+import ImageWithPlaceholder from '#app/containers/ImageWithPlaceholder';
 
 import Heading from '../PromoAtoms/Heading';
 import Link from '../PromoAtoms/Link';
+import ClickableArea from '../PromoAtoms/ClickableArea';
 import MediaIndicator from '../PromoAtoms/MediaIndicator';
 import Content from '../PromoAtoms/Content';
-import { ViewWrapper, BoxWrapper } from '../PromoAtoms/Wrappers.styles';
+import { PromoWrapper, BoxWrapper } from '../PromoAtoms/Wrappers.styles';
 
 const PromoContext = React.createContext({});
 
@@ -26,13 +27,13 @@ const Promo = ({ children, to, id }) => {
   const viewRef = useViewTracker(eventTrackingData.block);
 
   return (
-    <ViewWrapper ref={viewRef}>
+    <PromoWrapper ref={viewRef}>
       <PromoContext.Provider
         value={{ script, service, dir, to, id, eventTrackingData }}
       >
         {children}
       </PromoContext.Provider>
-    </ViewWrapper>
+    </PromoWrapper>
   );
 };
 
@@ -47,12 +48,13 @@ Promo.BoxWrapper = withPromoContext(BoxWrapper);
 Promo.Heading = withPromoContext(Heading);
 Promo.MediaIndicator = withPromoContext(MediaIndicator);
 Promo.Link = withPromoContext(Link);
+Promo.ClickableArea = withPromoContext(ClickableArea);
 
 // Outside NewStoryPromo
 Promo.Timestamp = withPromoContext(Timestamp);
 Promo.Content = withPromoContext(Content);
 Promo.LiveLabel = withPromoContext(LiveLabel);
-Promo.Image = withPromoContext(Image);
+Promo.ImagePlaceholder = withPromoContext(ImageWithPlaceholder);
 
 Promo.propTypes = {
   children: node.isRequired,

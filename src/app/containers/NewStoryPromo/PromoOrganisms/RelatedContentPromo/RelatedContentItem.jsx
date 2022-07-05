@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import styled from '@emotion/styled';
 import { shape, string, number } from 'prop-types';
 import path from 'ramda/src/path';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -9,7 +10,23 @@ import Promo from '../../Promo';
 
 const RelatedContentItem = ({ item, labelId, index }) => {
   const { script } = useContext(ServiceContext);
-
+  const ILoveWraps = styled.div`
+    &:after {
+      content: '';
+      padding: 0;
+      margin: 0;
+    }
+    display: block;
+    position: static;
+    min-height: 0;
+    max-height: 100%;
+  `;
+  const linkId = buildUniquePromoId({
+    sectionType: 'top-stories',
+    promoGroupId: labelId,
+    promoItem: item,
+    promoIndex: index,
+  });
   const headline = path(
     ['model', 'blocks', 1, 'model', 'blocks', 0, 'model', 'text'],
     item,
@@ -30,6 +47,10 @@ const RelatedContentItem = ({ item, labelId, index }) => {
     ],
     item,
   );
+
+  const RATIO = 56.25;
+  const DEFAULT_IMAGE_RES = 660;
+  const imageResolutions = [70, 95, 144, 183, 240, 320, 660];
   const locator = path(
     ['model', 'blocks', 0, 'model', 'blocks', 1, 'model', 'locator'],
     item,
@@ -39,7 +60,6 @@ const RelatedContentItem = ({ item, labelId, index }) => {
     ['model', 'blocks', 0, 'model', 'blocks', 1, 'model', 'originCode'],
     item,
   );
-
   const altText = path(
     [
       'model',
@@ -64,37 +84,44 @@ const RelatedContentItem = ({ item, labelId, index }) => {
     item,
   );
 
-  const timestamp = path(
-    ['model', 'blocks', 2, 'model', 'blocks', 0, 'model', 'timestamp'],
+  const height = path(
+    ['model', 'blocks', 0, 'model', 'blocks', 1, 'model', 'height'],
     item,
   );
 
-  const linkId = buildUniquePromoId({
-    sectionType: 'top-stories',
-    promoGroupId: labelId,
-    promoItem: item,
-    promoIndex: index,
-  });
-
-  const imageResolutions = [70, 95, 144, 183, 240, 320, 660];
-
-  const { primarySrcset } = createSrcsets({
+  const { primarySrcset, fallbackSrcset } = createSrcsets({
     originCode,
     locator,
     originalImageWidth: width,
     imageResolutions,
   });
 
-  const DEFAULT_IMAGE_RES = 660;
   const src = buildIChefURL({
     originCode,
     locator,
     resolution: DEFAULT_IMAGE_RES,
   });
 
+  const timestamp = path(
+    ['model', 'blocks', 2, 'model', 'blocks', 0, 'model', 'timestamp'],
+    item,
+  );
+
   return (
     <Promo to={url} id={linkId}>
-      <Promo.Image src={src} alt={altText} srcset={primarySrcset} />
+      <Promo.ClickableArea />
+      <ILoveWraps>
+        <Promo.ImagePlaceholder
+          src={src}
+          alt={altText}
+          srcset={primarySrcset}
+          fallbackSrcset={fallbackSrcset}
+          ratio={RATIO}
+          width={width}
+          height={height}
+          lazyload
+        />
+      </ILoveWraps>
       <Promo.BoxWrapper>
         <Promo.Heading script={script}>
           <Promo.Link>

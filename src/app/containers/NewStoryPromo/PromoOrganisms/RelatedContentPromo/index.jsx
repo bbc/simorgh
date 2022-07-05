@@ -5,8 +5,10 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import pathEq from 'ramda/src/pathEq';
 import tail from 'ramda/src/tail';
+import slice from 'ramda/src/slice';
 import identity from 'ramda/src/identity';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import StoryPromoUlGrid from './index.styles';
 import RelatedContentItem from './RelatedContentItem';
 
 const RelatedContentPromo = ({ content }) => {
@@ -29,20 +31,22 @@ const RelatedContentPromo = ({ content }) => {
 
   const storyPromoItems = customTitle ? tail(items) : identity(items);
 
-  const hasSingleContent = storyPromoItems.length === 1;
+  const reducedStoryPromoItems = slice(0, 6, storyPromoItems);
+
+  const hasSingleContent = reducedStoryPromoItems.length === 1;
 
   return (
     <section>
       <SectionLabel>{title}</SectionLabel>
       {hasSingleContent ? (
         <RelatedContentItem
-          item={storyPromoItems[0]}
+          item={reducedStoryPromoItems[0]}
           index={0}
           labelId="RelatedContent"
         />
       ) : (
-        storyPromoItems.map((item, index) => (
-          <ul>
+        <StoryPromoUlGrid>
+          {reducedStoryPromoItems.map((item, index) => (
             <li>
               <RelatedContentItem
                 item={item}
@@ -50,8 +54,8 @@ const RelatedContentPromo = ({ content }) => {
                 labelId="RelatedContent"
               />
             </li>
-          </ul>
-        ))
+          ))}
+        </StoryPromoUlGrid>
       )}
     </section>
   );
