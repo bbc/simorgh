@@ -314,7 +314,7 @@ export const service = {
         url: 'https://www.bbc.com/russian/resources/idt-b34bb7dd-f094-4722-92eb-cf7aff8cc1bc',
         isExternal: false,
       },
-      para3: '”: она поможет вам разобраться в происходящем.',
+      para3: '”: она поможет вам разобраться в событиях.',
     },
     radioSchedule: {
       hasRadioSchedule: false,
