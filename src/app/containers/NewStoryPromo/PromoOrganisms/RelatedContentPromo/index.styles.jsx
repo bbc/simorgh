@@ -37,3 +37,11 @@ export const StyledStoryPromoLi = styled(StoryPromoLiBase)`
   height: 100%;
   background-color: ${C_WHITE};
 `;
+
+export const SingleItemGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+`;
+export const SingleItemWrapper = styled.div`
+  background-color: ${C_WHITE};
+`;

@@ -49,4 +49,6 @@ export const FlexPromoListItem = styled(StoryPromoLiBase)`
   }
 `;
 
-export default StyledPromoHeading;
+export const SingleItemWrapper = styled.div`
+  background-color: ${C_WHITE};
+`;

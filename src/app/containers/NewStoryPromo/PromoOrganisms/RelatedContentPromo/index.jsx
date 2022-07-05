@@ -12,6 +12,8 @@ import {
   StoryPromoUlGrid,
   StyledStoryPromoLi,
   StyledWrapper,
+  SingleItemWrapper,
+  SingleItemGrid,
 } from './index.styles';
 import RelatedContentItem from './RelatedContentItem';
 
@@ -45,11 +47,15 @@ const RelatedContentPromo = ({ content }) => {
     <StyledWrapper aria-labelledby={LABEL_ID} role="region" data-e2e={LABEL_ID}>
       <SectionLabel>{title}</SectionLabel>
       {hasSingleContent ? (
-        <RelatedContentItem
-          item={reducedStoryPromoItems[0]}
-          index={0}
-          labelId={LABEL_ID}
-        />
+        <SingleItemGrid>
+          <SingleItemWrapper>
+            <RelatedContentItem
+              item={reducedStoryPromoItems[0]}
+              index={0}
+              labelId={LABEL_ID}
+            />
+          </SingleItemWrapper>
+        </SingleItemGrid>
       ) : (
         <StoryPromoUlGrid>
           {reducedStoryPromoItems.map((item, index) => (

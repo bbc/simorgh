@@ -9,6 +9,7 @@ import {
   StyledWrapper,
   FlexPromoList,
   FlexPromoListItem,
+  SingleItemWrapper,
 } from './index.styles';
 import TopStoriesItem from './TopStoriesItem';
 
@@ -29,7 +30,9 @@ const TopStoriesPromo = ({ content }) => {
       </SectionLabel>
 
       {hasSingleContent ? (
-        <TopStoriesItem item={content[0]} index={0} labelId={LABEL_ID} />
+        <SingleItemWrapper>
+          <TopStoriesItem item={content[0]} index={0} labelId={LABEL_ID} />
+        </SingleItemWrapper>
       ) : (
         <FlexPromoList>
           {content.map(item => (
