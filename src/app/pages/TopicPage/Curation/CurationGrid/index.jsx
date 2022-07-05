@@ -56,7 +56,7 @@ const Item = styled.div`
 
 const Wrapper = styled.div``;
 
-const Grid = ({ promos }) => {
+const CurationGrid = ({ promos }) => {
   const { dir } = useContext(ServiceContext);
   const hasMultiplePromos = promos.length > 1;
   const firstPromo = promos[0];
@@ -87,12 +87,12 @@ const Grid = ({ promos }) => {
   );
 };
 
-Grid.propTypes = {
+CurationGrid.propTypes = {
   promos: arrayOf(shape({})),
 };
 
-Grid.defaultProps = {
+CurationGrid.defaultProps = {
   promos: [],
 };
 
-export default Grid;
+export default CurationGrid;

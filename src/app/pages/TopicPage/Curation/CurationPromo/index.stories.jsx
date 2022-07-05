@@ -38,7 +38,7 @@ const WithMediaIndicator = ({ service, variant }) => {
 };
 
 export default {
-  title: 'Topic/Curations/StandardPromo',
+  title: 'Topic/Curations/Promo - Normal',
   Component,
   decorators: [withKnobs, withServicesKnob()],
   parameters: { chromatic: { disable: true } },
