@@ -13,8 +13,8 @@ import { C_GREY_2 } from '#legacy/psammead-styles/src/colours';
 
 import { articleDataPropTypes } from '#models/propTypes/article';
 
-import TopStoriesPromo from '#containers/NewStoryPromo/PromoOrganisms/TopStoriesPromo';
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
+import TopStoriesPromo from '#containers/NewStoryPromo/PagePromoSections/TopStoriesSection';
 import { Secondary, gridColumnsSecondary } from './ArticlePageGrid';
 
 const ResponsiveComponentWrapper = styled.div`
