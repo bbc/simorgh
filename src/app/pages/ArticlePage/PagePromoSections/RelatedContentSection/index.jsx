@@ -8,6 +8,7 @@ import tail from 'ramda/src/tail';
 import slice from 'ramda/src/slice';
 import identity from 'ramda/src/identity';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { C_GREY_2 } from '#app/legacy/psammead-styles/src/colours';
 import {
   StoryPromoUlGrid,
   StyledStoryPromoLi,
@@ -47,7 +48,9 @@ const RelatedContentPromo = ({ content }) => {
 
   return (
     <StyledWrapper aria-labelledby={LABEL_ID} role="region" data-e2e={LABEL_ID}>
-      <SectionLabel>{title}</SectionLabel>
+      <SectionLabel id={LABEL_ID} backgroundColor={C_GREY_2}>
+        {title}
+      </SectionLabel>
       {hasSingleContent ? (
         <SingleItemGrid>
           <SingleItemWrapper>
