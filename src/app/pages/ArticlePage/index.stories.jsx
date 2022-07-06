@@ -10,6 +10,7 @@ import articleData from '#data/news/articles/c5jje4ejkqvo';
 import articleDataWithRelatedContent from '#data/afrique/articles/c7yn6nznljdo';
 import secondaryColumn from '#data/news/secondaryColumn';
 import singleStoryPromo from '#data/news/secondaryColumn/SingleStoryPromo.json';
+import articleDataWithSingleRelatedContent from '#data/afrique/articles/cz216x22106o.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import handlePromoData from '#app/routes/article/handlePromoData';
@@ -64,6 +65,13 @@ export const ArticlePageWithRelatedContent = props => (
   <ComponentWithContext
     {...props}
     data={handlePromoData(articleDataWithRelatedContent)}
+  />
+);
+
+export const ArticlePageWithSingleRelatedContent = props => (
+  <ComponentWithContext
+    {...props}
+    data={handlePromoData(articleDataWithSingleRelatedContent)}
   />
 );
 
