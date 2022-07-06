@@ -3,20 +3,30 @@ import getRecommendationsUrl, {
 } from '.';
 
 describe('getRecommendationsUrl', () => {
-  beforeEach(() => {
-    process.env.RECOMMENDATIONS_ENDPOINT = 'http://mock-recommendations-path';
-  });
-  afterEach(() => {
-    delete process.env.RECOMMENDATIONS_ENDPOINT;
-  });
-  it('should return endpoint when passed assetUri', () => {
+  it('should return endpoint when passed service and assetUri', () => {
     expect(getRecommendationsUrl({ assetUri: '/mundo/123456' })).toBe(
-      'http://mock-recommendations-path/recommendations/mundo/123456',
+      '/mundo/123456/recommendations',
     );
+  });
+  it('should return endpoint when passed service variant and assetUri', () => {
+    expect(
+      getRecommendationsUrl({
+        variant: 'trad',
+        assetUri: '/zhongwen/123456',
+      }),
+    ).toBe('/zhongwen/123456/recommendations/trad');
   });
 
   describe('Optimizely Experiments', () => {
     describe('004_brasil_recommendations_experiment', () => {
+      beforeEach(() => {
+        process.env.RECOMMENDATIONS_ENDPOINT =
+          'http://mock-recommendations-path';
+      });
+
+      afterEach(() => {
+        delete process.env.RECOMMENDATIONS_ENDPOINT;
+      });
       it('should return portuguese experimentation endpoint with engine', () => {
         expect(
           portugueseRecommendationsExperimentEndpoint({

@@ -1,5 +1,7 @@
-export default ({ assetUri }) =>
-  `${process.env.RECOMMENDATIONS_ENDPOINT}/recommendations${assetUri}`;
+export default ({ assetUri, variant }) =>
+  variant
+    ? `${assetUri}/recommendations/${variant}`
+    : `${assetUri}/recommendations`;
 
 export const portugueseRecommendationsExperimentEndpoint = ({
   assetUri,
