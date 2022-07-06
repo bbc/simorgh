@@ -14,6 +14,7 @@ import {
   FRONT_PAGE,
   MEDIA_PAGE,
   MEDIA_ASSET_PAGE,
+  TOPIC_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
 import HeaderContainer from './index';
@@ -40,6 +41,7 @@ const HeaderContainerWithContext = ({
   bbcOrigin = 'https://www.test.bbc.com',
   variant = 'default',
   isAmp = false,
+  renderScriptSwitch = true,
 }) => (
   <ToggleContext.Provider
     value={{
@@ -58,7 +60,7 @@ const HeaderContainerWithContext = ({
         variant={variant}
       >
         <UserContextProvider>
-          <HeaderContainer />
+          <HeaderContainer renderScriptSwitch={renderScriptSwitch} />
         </UserContextProvider>
       </RequestContextProvider>
     </ServiceContext.Provider>
@@ -139,6 +141,23 @@ describe(`Header`, () => {
       );
 
       expect(container.querySelectorAll(scriptLinkSelector).length).toBe(1);
+    });
+
+    it('should not render script link on Topic page when missing variant topic ID', () => {
+      const { container } = render(
+        HeaderContainerWithContext({
+          pageType: TOPIC_PAGE,
+          service: 'serbian',
+          serviceContext: serbianServiceConfig,
+          variant: 'cyr',
+          renderScriptSwitch: false,
+        }),
+        {
+          wrapper: MemoryRouter,
+        },
+      );
+
+      expect(container.querySelectorAll(scriptLinkSelector).length).toBe(0);
     });
 
     it('should render header with lang when serviceLang is defined', () => {
