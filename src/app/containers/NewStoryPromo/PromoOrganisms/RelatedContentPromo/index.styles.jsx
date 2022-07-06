@@ -6,13 +6,14 @@ import {
 } from '#containers/NewStoryPromoList';
 import {
   GEL_SPACING,
+  GEL_SPACING_BORDER,
   GEL_SPACING_DBL,
 } from '#app/legacy/gel-foundations/src/spacings';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#app/legacy/gel-foundations/src/breakpoints';
-import { C_WHITE } from '#app/legacy/psammead-styles/src/colours';
+import { C_GREY_2, C_WHITE } from '#app/legacy/psammead-styles/src/colours';
 
 export const StoryPromoUlGrid = styled(StoryPromoUlBase)`
   display: grid;
@@ -40,6 +41,7 @@ export const StyledWrapper = styled.section`
 export const StyledStoryPromoLi = styled(StoryPromoLiBase)`
   height: 100%;
   background-color: ${C_WHITE};
+  border: ${GEL_SPACING_BORDER} solid ${C_GREY_2};
 `;
 
 export const SingleItemGrid = styled.div`
@@ -48,4 +50,5 @@ export const SingleItemGrid = styled.div`
 `;
 export const SingleItemWrapper = styled.div`
   background-color: ${C_WHITE};
+  border: ${GEL_SPACING_BORDER} solid ${C_GREY_2};
 `;

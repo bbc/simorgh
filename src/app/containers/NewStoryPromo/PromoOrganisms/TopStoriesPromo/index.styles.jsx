@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { getPica } from '#legacy/gel-foundations/src/typography';
 import {
   GEL_SPACING,
+  GEL_SPACING_BORDER,
   GEL_SPACING_DBL,
 } from '#app/legacy/gel-foundations/src/spacings';
 import {
@@ -14,7 +15,7 @@ import {
   StoryPromoUlBase,
   StoryPromoLiBase,
 } from '#containers/NewStoryPromoList';
-import { C_WHITE } from '#app/legacy/psammead-styles/src/colours';
+import { C_GREY_2, C_WHITE } from '#app/legacy/psammead-styles/src/colours';
 import Promo from '../../Promo';
 
 export const StyledPromoHeading = styled(Promo.Heading)`
@@ -41,6 +42,7 @@ export const FlexPromoList = styled(StoryPromoUlBase)`
 
 export const FlexPromoListItem = styled(StoryPromoLiBase)`
   background-color: ${C_WHITE};
+  border: ${GEL_SPACING_BORDER} solid ${C_GREY_2};
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     flex-grow: 1;
     flex-basis: 0;
@@ -50,4 +52,5 @@ export const FlexPromoListItem = styled(StoryPromoLiBase)`
 
 export const SingleItemWrapper = styled.div`
   background-color: ${C_WHITE};
+  border: ${GEL_SPACING_BORDER} solid ${C_GREY_2};
 `;
