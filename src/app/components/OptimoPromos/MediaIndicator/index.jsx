@@ -6,17 +6,19 @@ import {
   MediaIndicatorFlexWrapper,
 } from './index.styles';
 
-const MediaIndicator = ({ type }) => {
-  if (!type) return null;
+const MediaIndicator = ({ mediaType }) => {
+  if (!mediaType) return null;
   return (
     <MediaIndicatorWrapper aria-hidden>
-      <MediaIndicatorFlexWrapper>{mediaIcons[type]}</MediaIndicatorFlexWrapper>
+      <MediaIndicatorFlexWrapper>
+        {mediaIcons[mediaType]}
+      </MediaIndicatorFlexWrapper>
     </MediaIndicatorWrapper>
   );
 };
 
 MediaIndicator.propTypes = {
-  type: string.isRequired,
+  mediaType: string.isRequired,
 };
 
 export default MediaIndicator;

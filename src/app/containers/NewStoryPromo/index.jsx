@@ -24,14 +24,14 @@ const eventTrackingData = {
   },
 };
 
-const Promo = ({ children, to, id }) => {
+const Promo = ({ children, to, id, mediaType }) => {
   const { script, service, dir } = useContext(ServiceContext);
   const viewRef = useViewTracker(eventTrackingData.block);
 
   return (
     <PromoWrapper ref={viewRef}>
       <PromoContext.Provider
-        value={{ script, service, dir, to, id, eventTrackingData }}
+        value={{ script, service, dir, to, id, eventTrackingData, mediaType }}
       >
         {children}
       </PromoContext.Provider>
@@ -61,8 +61,9 @@ Promo.propTypes = {
   children: node.isRequired,
   to: string,
   id: string.isRequired,
+  mediaType: string,
 };
 
-Promo.defaultProps = { to: '' };
+Promo.defaultProps = { to: '', mediaType: '' };
 
 export default Promo;

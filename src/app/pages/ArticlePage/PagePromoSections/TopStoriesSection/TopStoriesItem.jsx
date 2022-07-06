@@ -36,11 +36,16 @@ const TopStoriesItem = ({ item, index, labelId }) => {
     promoIndex: index,
   });
 
+  const headingTagOverride = timestamp ? '' : 'div';
+
   return (
-    <Promo to={url} id={linkId}>
+    <Promo to={url} id={linkId} mediaType={mediaType}>
       <Promo.ContentWrapper>
-        {mediaType && <Promo.MediaIndicator type={mediaType} />}
-        <StyledPromoHeading script={script}>
+        {mediaType && <Promo.MediaIndicator />}
+        <StyledPromoHeading
+          script={script}
+          headingTagOverride={headingTagOverride}
+        >
           <Promo.Link>
             {isLive ? (
               <Promo.LiveLabel
@@ -49,7 +54,6 @@ const TopStoriesItem = ({ item, index, labelId }) => {
                 offScreenText={liveLabelIsEnglish ? 'Live' : null}
               >
                 <Promo.Content
-                  mediaType={mediaType}
                   mediaDuration={mediaDuration}
                   headline={headline}
                   isPhotoGallery={isPhotoGallery}
@@ -57,7 +61,6 @@ const TopStoriesItem = ({ item, index, labelId }) => {
               </Promo.LiveLabel>
             ) : (
               <Promo.Content
-                mediaType={mediaType}
                 mediaDuration={mediaDuration}
                 headline={headline}
                 isPhotoGallery={isPhotoGallery}

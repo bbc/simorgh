@@ -95,6 +95,8 @@ const RelatedContentItem = ({ item, labelId, index }) => {
     item,
   );
 
+  const headingTagOverride = timestamp ? '' : 'div';
+
   return (
     <Promo to={url} id={linkId}>
       <Promo.ImagePlaceholder
@@ -108,7 +110,7 @@ const RelatedContentItem = ({ item, labelId, index }) => {
         lazyload
       />
       <Promo.ContentWrapper>
-        <Promo.Heading script={script}>
+        <Promo.Heading headingTagOverride={headingTagOverride} script={script}>
           <Promo.Link>
             <Promo.Content headline={headline} />
           </Promo.Link>
