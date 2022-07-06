@@ -25,12 +25,12 @@ const noop = () => {};
 const logger = nodeLogger(__filename);
 
 // 004_brasil_recommendations_experiment
-const getRecommendations = (service, variant, assetUri) => {
+const getRecommendations = (service, assetUri) => {
   if (service !== 'portuguese' || isLive()) {
     return [
       {
         name: 'recommendations',
-        path: getRecommendationsUrl({ assetUri, variant }),
+        path: getRecommendationsUrl({ assetUri }),
         assetUri,
         api: 'recommendations',
         apiContext: 'secondary_data',
@@ -112,7 +112,7 @@ const pageTypeUrls = async (
         },
         // 004_brasil_recommendations_experiment
         ...((await hasRecommendations(service, variant, pageData))
-          ? getRecommendations(service, variant, assetUri)
+          ? getRecommendations(service, assetUri)
           : []),
       ].filter(i => i);
     case MEDIA_ASSET_PAGE:
