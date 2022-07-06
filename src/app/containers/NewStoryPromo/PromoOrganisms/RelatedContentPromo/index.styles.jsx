@@ -16,9 +16,13 @@ import { C_WHITE } from '#app/legacy/psammead-styles/src/colours';
 
 export const StoryPromoUlGrid = styled(StoryPromoUlBase)`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
-  gap: ${GEL_SPACING};
+  gap: ${GEL_SPACING_DBL};
+
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 export const StyledWrapper = styled.section`

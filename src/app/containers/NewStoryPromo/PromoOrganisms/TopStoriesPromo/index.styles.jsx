@@ -41,7 +41,6 @@ export const FlexPromoList = styled(StoryPromoUlBase)`
 
 export const FlexPromoListItem = styled(StoryPromoLiBase)`
   background-color: ${C_WHITE};
-  height: 100%;
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     flex-grow: 1;
     flex-basis: 0;
