@@ -97,7 +97,6 @@ const RelatedContentItem = ({ item, labelId, index }) => {
 
   return (
     <Promo to={url} id={linkId}>
-      <Promo.ClickableArea />
       <Promo.ImagePlaceholder
         src={src}
         alt={altText}

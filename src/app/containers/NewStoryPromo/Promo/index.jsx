@@ -9,7 +9,6 @@ import ImageWithPlaceholder from '#app/containers/ImageWithPlaceholder';
 
 import Heading from '../PromoAtoms/Heading';
 import Link from '../PromoAtoms/Link';
-import ClickableArea from '../PromoAtoms/ClickableArea';
 import MediaIndicator from '../PromoAtoms/MediaIndicator';
 import Content from '../PromoAtoms/Content';
 import { PromoWrapper, ContentWrapper } from '../PromoAtoms/Wrappers.styles';
@@ -48,7 +47,6 @@ Promo.ContentWrapper = withPromoContext(ContentWrapper);
 Promo.Heading = withPromoContext(Heading);
 Promo.MediaIndicator = withPromoContext(MediaIndicator);
 Promo.Link = withPromoContext(Link);
-Promo.ClickableArea = withPromoContext(ClickableArea);
 
 // Outside NewStoryPromo
 Promo.Timestamp = withPromoContext(Timestamp);
