@@ -20,6 +20,8 @@ import RelatedContentItem from './RelatedContentItem';
 const RelatedContentPromo = ({ content }) => {
   const { translations } = useContext(ServiceContext);
 
+  if (!pathEq(['type'], 'relatedContent', content)) return null;
+
   if (!content) return null;
   const items = path(['model', 'blocks'], content);
 
@@ -75,7 +77,7 @@ const RelatedContentPromo = ({ content }) => {
 
 RelatedContentPromo.propTypes = {
   content: shape({
-    type: string,
+    type: 'links',
     model: shape({
       blocks: arrayOf(
         shape({

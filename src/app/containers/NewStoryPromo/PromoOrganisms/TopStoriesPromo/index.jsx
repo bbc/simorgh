@@ -15,6 +15,9 @@ import TopStoriesItem from './TopStoriesItem';
 
 const TopStoriesPromo = ({ content }) => {
   const { translations } = useContext(ServiceContext);
+
+  if (!content) return null;
+
   const title = pathOr('Top Stories', ['topStoriesTitle'], translations);
   const hasSingleContent = content.length === 1;
   const LABEL_ID = 'top-stories-heading';
