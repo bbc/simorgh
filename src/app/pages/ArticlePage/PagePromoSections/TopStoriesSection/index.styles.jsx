@@ -15,7 +15,7 @@ import {
   StoryPromoLiBase,
 } from '#containers/NewStoryPromoList';
 import { C_WHITE } from '#app/legacy/psammead-styles/src/colours';
-import Promo from '../../Promo';
+import Promo from '#containers/NewStoryPromo';
 
 export const StyledPromoHeading = styled(Promo.Heading)`
   display: inline-block;

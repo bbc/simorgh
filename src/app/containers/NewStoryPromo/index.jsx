@@ -7,11 +7,14 @@ import LiveLabel from '#legacy/psammead-live-label/src';
 import useViewTracker from '#hooks/useViewTracker';
 import ImageWithPlaceholder from '#app/containers/ImageWithPlaceholder';
 
-import Heading from '../PromoParts/Heading';
-import Link from '../PromoParts/Link';
-import MediaIndicator from '../PromoParts/MediaIndicator';
-import Content from '../PromoParts/Content';
-import { PromoWrapper, ContentWrapper } from '../PromoParts/Wrappers.styles';
+import Heading from '#components/OptimoPromos/Heading';
+import Link from '#components/OptimoPromos/Link';
+import MediaIndicator from '#components/OptimoPromos/MediaIndicator';
+import Content from '#components/OptimoPromos/Content';
+import {
+  PromoWrapper,
+  ContentWrapper,
+} from '#components/OptimoPromos/Wrappers.styles';
 
 const PromoContext = React.createContext({});
 

@@ -5,7 +5,7 @@ import pathOr from 'ramda/src/pathOr';
 import { storyItem } from '#models/propTypes/storyItem';
 import { buildUniquePromoId } from '#app/containers/StoryPromo/utilities';
 import { getIsLive } from '#lib/utilities/getStoryPromoInfo';
-import Promo from '../../Promo';
+import Promo from '#containers/NewStoryPromo';
 import { StyledPromoHeading } from './index.styles';
 
 const TopStoriesItem = ({ item, index, labelId }) => {

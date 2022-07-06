@@ -5,7 +5,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { buildUniquePromoId } from '#app/containers/StoryPromo/utilities';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
-import Promo from '../../Promo';
+import Promo from '#containers/NewStoryPromo';
 
 const RelatedContentItem = ({ item, labelId, index }) => {
   const { script } = useContext(ServiceContext);
