@@ -268,6 +268,7 @@ describe('Story Page', () => {
   afterEach(() => {
     fetchMock.restore();
     delete process.env.SIMORGH_ICHEF_BASE_URL;
+    delete process.env.RECOMMENDATIONS_ENDPOINT;
     process.env.SIMORGH_APP_ENV = appEnv;
   });
 
@@ -781,6 +782,7 @@ describe('Story Page', () => {
         process.env.RECOMMENDATIONS_ENDPOINT =
           'http://mock-recommendations-path';
       });
+
       afterEach(() => {
         delete process.env.RECOMMENDATIONS_ENDPOINT;
         jest.clearAllMocks();
@@ -805,6 +807,10 @@ describe('Story Page', () => {
 
             return null;
           });
+        });
+
+        afterEach(() => {
+          delete process.env.RECOMMENDATIONS_ENDPOINT;
         });
 
         it('should fetch and render recommendations from current endpoint when variation is control and service is portuguese', async () => {
@@ -867,6 +873,10 @@ describe('Story Page', () => {
 
             return null;
           });
+        });
+
+        afterEach(() => {
+          delete process.env.RECOMMENDATIONS_ENDPOINT;
         });
 
         it('should fetch and render recommendations from content variant endpoint when variation is content_recs and service is portuguese', async () => {
@@ -932,6 +942,10 @@ describe('Story Page', () => {
           });
         });
 
+        afterEach(() => {
+          delete process.env.RECOMMENDATIONS_ENDPOINT;
+        });
+
         it('should fetch and render recommendations from datalab hybrid variant endpoint when variation is hybrid_recs and service is portuguese', async () => {
           const toggles = {
             cpsRecommendations: {
@@ -983,6 +997,11 @@ describe('Story Page', () => {
           process.env.RECOMMENDATIONS_ENDPOINT =
             'http://mock-recommendations-path';
         });
+
+        afterEach(() => {
+          delete process.env.RECOMMENDATIONS_ENDPOINT;
+        });
+
         describe('View Tracking', () => {
           it('should send ATI and Optimizely view tracking event when recommendations render', async () => {
             const toggles = {
