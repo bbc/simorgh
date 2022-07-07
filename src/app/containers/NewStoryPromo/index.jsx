@@ -14,6 +14,7 @@ import Content from '#components/OptimoPromos/Content';
 import {
   PromoWrapper,
   ContentWrapper,
+  BorderWrapper,
 } from '#components/OptimoPromos/Wrappers.styles';
 
 const PromoContext = React.createContext({});
@@ -25,17 +26,19 @@ const eventTrackingData = {
 };
 
 const Promo = ({ children, to, id, mediaType }) => {
-  const { script, service, dir } = useContext(ServiceContext);
+  const { script, service } = useContext(ServiceContext);
   const viewRef = useViewTracker(eventTrackingData.block);
 
   return (
-    <PromoWrapper ref={viewRef}>
-      <PromoContext.Provider
-        value={{ script, service, dir, to, id, eventTrackingData, mediaType }}
-      >
-        {children}
-      </PromoContext.Provider>
-    </PromoWrapper>
+    <BorderWrapper>
+      <PromoWrapper ref={viewRef}>
+        <PromoContext.Provider
+          value={{ script, service, to, id, eventTrackingData, mediaType }}
+        >
+          {children}
+        </PromoContext.Provider>
+      </PromoWrapper>
+    </BorderWrapper>
   );
 };
 
