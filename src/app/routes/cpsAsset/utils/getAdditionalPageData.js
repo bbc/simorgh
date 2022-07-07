@@ -30,6 +30,7 @@ const getRecommendations = (service, assetUri) => {
     return [
       {
         name: 'recommendations',
+        attachAgent: true,
         path: getRecommendationsUrl({ assetUri }),
         assetUri,
         api: 'recommendations',
