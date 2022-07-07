@@ -9,8 +9,10 @@ import slice from 'ramda/src/slice';
 import identity from 'ramda/src/identity';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { C_GREY_2 } from '#app/legacy/psammead-styles/src/colours';
-import { StyledStoryPromoLi, StyledWrapper, StyledGrid } from './index.styles';
+import { StoryPromoUlBase } from '#app/containers/NewStoryPromoList';
+import { StyledWrapper, StyledStoryPromoLi } from './index.styles';
 import RelatedContentItem from './RelatedContentItem';
+import RelatedContentGrid from './Grid';
 
 const RelatedContentPromo = ({ content }) => {
   const { translations } = useContext(ServiceContext);
@@ -46,15 +48,15 @@ const RelatedContentPromo = ({ content }) => {
         {title}
       </SectionLabel>
       {hasSingleContent ? (
-        <StyledGrid>
+        <RelatedContentGrid>
           <RelatedContentItem
             item={reducedStoryPromoItems[0]}
             index={0}
             labelId={LABEL_ID}
           />
-        </StyledGrid>
+        </RelatedContentGrid>
       ) : (
-        <StyledGrid as="ul" role="list">
+        <RelatedContentGrid as={StoryPromoUlBase}>
           {reducedStoryPromoItems.map((item, index) => (
             <StyledStoryPromoLi>
               <RelatedContentItem
@@ -64,7 +66,7 @@ const RelatedContentPromo = ({ content }) => {
               />
             </StyledStoryPromoLi>
           ))}
-        </StyledGrid>
+        </RelatedContentGrid>
       )}
     </StyledWrapper>
   );

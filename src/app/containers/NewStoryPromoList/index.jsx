@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 
 // Bases
 export const StoryPromoLiBase = styled.li`
+  height: 100%;
   margin-bottom: ${GEL_SPACING_DBL};
   &:last-child {
     margin: 0;

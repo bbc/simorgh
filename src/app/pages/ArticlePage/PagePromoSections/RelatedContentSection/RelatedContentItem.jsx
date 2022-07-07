@@ -6,7 +6,6 @@ import { buildUniquePromoId } from '#app/containers/StoryPromo/utilities';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
 import Promo from '#containers/NewStoryPromo';
-import { StyledImage } from './index.styles';
 
 const RelatedContentItem = ({ item, labelId, index }) => {
   const { script } = useContext(ServiceContext);
@@ -38,7 +37,6 @@ const RelatedContentItem = ({ item, labelId, index }) => {
     item,
   );
 
-  const RATIO = 56.25;
   const DEFAULT_IMAGE_RES = 660;
   const imageResolutions = [70, 95, 144, 183, 240, 320, 660];
   const locator = path(
@@ -101,16 +99,13 @@ const RelatedContentItem = ({ item, labelId, index }) => {
 
   return (
     <Promo to={url} id={linkId}>
-      <Promo.ImagePlaceholder
+      <Promo.Image
         src={src}
         alt={altText}
         srcset={primarySrcset}
         fallbackSrcset={fallbackSrcset}
-        ratio={RATIO}
         width={width}
         height={height}
-        lazyload
-        imageComponent={StyledImage}
       />
       <Promo.ContentWrapper>
         <Promo.Heading headingTagOverride={headingTagOverride} script={script}>

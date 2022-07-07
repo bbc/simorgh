@@ -5,14 +5,6 @@ const RelatedContentGrid = props => {
   return (
     <Grid
       {...props}
-      startOffset={{
-        group0: 0,
-        group1: 0,
-        group2: 0,
-        group3: 0,
-        group4: 0,
-        group5: 0,
-      }}
       columns={{
         group0: 1,
         group1: 1,
@@ -21,6 +13,7 @@ const RelatedContentGrid = props => {
         group4: 2,
         group5: 2,
       }}
+      enableGelGutters
     />
   );
 };

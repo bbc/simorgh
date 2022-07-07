@@ -5,7 +5,6 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import Timestamp from '#components/Promo/timestamp';
 import LiveLabel from '#legacy/psammead-live-label/src';
 import useViewTracker from '#hooks/useViewTracker';
-import ImageWithPlaceholder from '#app/containers/ImageWithPlaceholder';
 
 import Heading from '#components/OptimoPromos/Heading';
 import Link from '#components/OptimoPromos/Link';
@@ -16,6 +15,7 @@ import {
   ContentWrapper,
   BorderWrapper,
 } from '#components/OptimoPromos/Wrappers.styles';
+import Image from '#components/OptimoPromos/Image';
 
 const PromoContext = React.createContext({});
 
@@ -58,7 +58,7 @@ Promo.Link = withPromoContext(Link);
 Promo.Timestamp = withPromoContext(Timestamp);
 Promo.Content = withPromoContext(Content);
 Promo.LiveLabel = withPromoContext(LiveLabel);
-Promo.ImagePlaceholder = withPromoContext(ImageWithPlaceholder);
+Promo.Image = withPromoContext(Image);
 
 Promo.propTypes = {
   children: node.isRequired,
