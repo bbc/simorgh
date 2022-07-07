@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { getPica } from '#legacy/gel-foundations/src/typography';
 import {
   GEL_SPACING,
+  GEL_SPACING_BORDER,
   GEL_SPACING_DBL,
 } from '#app/legacy/gel-foundations/src/spacings';
 import {
@@ -50,4 +51,8 @@ export const FlexPromoListItem = styled(StoryPromoLiBase)`
 
 export const SingleItemWrapper = styled.div`
   background-color: ${C_WHITE};
+`;
+
+export const TransparentBorder = styled.div`
+  border: ${GEL_SPACING_BORDER} solid transparent;
 `;

@@ -7,6 +7,7 @@ import {
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
+  GEL_SPACING_BORDER,
 } from '#app/legacy/gel-foundations/src/spacings';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -27,7 +28,6 @@ export const StoryPromoUlGrid = styled(StoryPromoUlBase)`
 
 export const StyledWrapper = styled.section`
   padding: 0 ${GEL_SPACING};
-
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     padding: 0 ${GEL_SPACING_DBL};
   }
@@ -48,4 +48,8 @@ export const SingleItemGrid = styled.div`
 `;
 export const SingleItemWrapper = styled.div`
   background-color: ${C_WHITE};
+`;
+
+export const TransparentBorder = styled.div`
+  border: ${GEL_SPACING_BORDER} solid transparent;
 `;

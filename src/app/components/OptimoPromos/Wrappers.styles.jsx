@@ -5,7 +5,6 @@ import {
 } from '#app/legacy/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING,
-  GEL_SPACING_BORDER,
   GEL_SPACING_DBL,
 } from '#app/legacy/gel-foundations/src/spacings';
 
@@ -23,7 +22,6 @@ export const ContentWrapper = styled.div`
 
 export const PromoWrapper = styled.div`
   overflow: hidden;
-  border: ${GEL_SPACING_BORDER} solid transparent;
   position: relative;
   height: 100%;
 `;

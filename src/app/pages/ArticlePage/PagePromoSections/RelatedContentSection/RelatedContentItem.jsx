@@ -9,6 +9,7 @@ import Promo from '#containers/NewStoryPromo';
 
 const RelatedContentItem = ({ item, labelId, index }) => {
   const { script } = useContext(ServiceContext);
+
   const linkId = buildUniquePromoId({
     sectionType: 'top-stories',
     promoGroupId: labelId,

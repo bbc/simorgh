@@ -10,10 +10,11 @@ import identity from 'ramda/src/identity';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { C_GREY_2 } from '#app/legacy/psammead-styles/src/colours';
 import {
-  StoryPromoUlGrid,
   StyledStoryPromoLi,
   StyledWrapper,
   SingleItemWrapper,
+  StoryPromoUlGrid,
+  TransparentBorder,
   SingleItemGrid,
 } from './index.styles';
 import RelatedContentItem from './RelatedContentItem';
@@ -52,25 +53,29 @@ const RelatedContentPromo = ({ content }) => {
         {title}
       </SectionLabel>
       {hasSingleContent ? (
-        <SingleItemGrid>
-          <SingleItemWrapper>
-            <RelatedContentItem
-              item={reducedStoryPromoItems[0]}
-              index={0}
-              labelId={LABEL_ID}
-            />
-          </SingleItemWrapper>
+        <SingleItemGrid as="div" role="list">
+          <TransparentBorder>
+            <SingleItemWrapper>
+              <RelatedContentItem
+                item={reducedStoryPromoItems[0]}
+                index={0}
+                labelId={LABEL_ID}
+              />
+            </SingleItemWrapper>
+          </TransparentBorder>
         </SingleItemGrid>
       ) : (
         <StoryPromoUlGrid>
           {reducedStoryPromoItems.map((item, index) => (
-            <StyledStoryPromoLi>
-              <RelatedContentItem
-                item={item}
-                index={index}
-                labelId="RelatedContent"
-              />
-            </StyledStoryPromoLi>
+            <TransparentBorder>
+              <StyledStoryPromoLi>
+                <RelatedContentItem
+                  item={item}
+                  index={index}
+                  labelId="RelatedContent"
+                />
+              </StyledStoryPromoLi>
+            </TransparentBorder>
           ))}
         </StoryPromoUlGrid>
       )}
