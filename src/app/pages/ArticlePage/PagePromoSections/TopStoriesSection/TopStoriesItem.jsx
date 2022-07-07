@@ -11,6 +11,12 @@ import { StyledPromoHeading } from './index.styles';
 const TopStoriesItem = ({ item, index, labelId }) => {
   const { script, translations } = useContext(ServiceContext);
 
+  const eventTrackingData = {
+    block: {
+      componentName: 'top-stories',
+    },
+  };
+
   const overtypedHeadline = pathOr('', ['headlines', 'overtyped'], item);
   const headline =
     overtypedHeadline || pathOr('', ['headlines', 'headline'], item);
@@ -39,7 +45,12 @@ const TopStoriesItem = ({ item, index, labelId }) => {
   const headingTagOverride = timestamp ? '' : 'div';
 
   return (
-    <Promo to={url} id={linkId} mediaType={mediaType}>
+    <Promo
+      to={url}
+      id={linkId}
+      mediaType={mediaType}
+      eventTrackingData={eventTrackingData}
+    >
       <Promo.ContentWrapper>
         {mediaType && <Promo.MediaIndicator />}
         <StyledPromoHeading

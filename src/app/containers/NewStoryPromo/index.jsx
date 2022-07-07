@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { node, string } from 'prop-types';
+import { node, string, shape } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 import Timestamp from '#components/Promo/timestamp';
@@ -19,14 +19,9 @@ import Image from '#components/OptimoPromos/Image';
 
 const PromoContext = React.createContext({});
 
-const eventTrackingData = {
-  block: {
-    componentName: 'top-stories',
-  },
-};
-
-const Promo = ({ children, to, id, mediaType }) => {
+const Promo = ({ children, to, id, mediaType, eventTrackingData }) => {
   const { script, service } = useContext(ServiceContext);
+
   const viewRef = useViewTracker(eventTrackingData.block);
 
   return (
@@ -65,8 +60,9 @@ Promo.propTypes = {
   to: string,
   id: string.isRequired,
   mediaType: string,
+  eventTrackingData: shape({ block: { componentName: string } }),
 };
 
-Promo.defaultProps = { to: '', mediaType: '' };
+Promo.defaultProps = { to: '', mediaType: '', eventTrackingData: null };
 
 export default Promo;

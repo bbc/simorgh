@@ -10,6 +10,12 @@ import Promo from '#containers/NewStoryPromo';
 const RelatedContentItem = ({ item, labelId, index }) => {
   const { script } = useContext(ServiceContext);
 
+  const eventTrackingData = {
+    block: {
+      componentName: 'related-content',
+    },
+  };
+
   const linkId = buildUniquePromoId({
     sectionType: 'top-stories',
     promoGroupId: labelId,
@@ -98,7 +104,7 @@ const RelatedContentItem = ({ item, labelId, index }) => {
   const headingTagOverride = timestamp ? '' : 'div';
 
   return (
-    <Promo to={url} id={linkId}>
+    <Promo to={url} id={linkId} eventTrackingData={eventTrackingData}>
       <Promo.Image
         src={src}
         alt={altText}
