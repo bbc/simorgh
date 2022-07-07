@@ -12,11 +12,7 @@ import {
 } from '#legacy/gel-foundations/src/breakpoints';
 import { getSerifMedium } from '#legacy/psammead-styles/src/font-styles';
 import { getPica } from '#legacy/gel-foundations/src/typography';
-import {
-  C_METAL,
-  C_GREY_2,
-  C_GREY_10,
-} from '#legacy/psammead-styles/src/colours';
+import { C_EBON, C_METAL, C_GREY_2 } from '#legacy/psammead-styles/src/colours';
 import { shape, string, oneOfType } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { storyItem } from '#models/propTypes/storyItem';
@@ -64,7 +60,7 @@ const TextWrapper = styled.div`
 
 const Link = styled.a`
   position: static;
-  color: ${C_GREY_10};
+  color: ${C_EBON};
   text-decoration: none;
   overflow-wrap: break-word;
 
@@ -93,7 +89,7 @@ const Link = styled.a`
 const StyledHeadline = styled.div`
   ${({ service }) => getSerifMedium(service)}
   ${({ script }) => getPica(script)}
-  color: ${C_GREY_10};
+  color: ${C_EBON};
   margin: 0;
   height: 100%;
   display: flex;

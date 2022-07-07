@@ -204,7 +204,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 .emotion-7 {
   position: relative;
   z-index: 0;
-  color: #141414;
+  color: #3F3F42;
   margin-top: 2rem;
   margin-top: 0;
 }
@@ -228,11 +228,50 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 }
 
 .emotion-9 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+  display: none;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-9 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-9 {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+.emotion-11 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-11 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    display: none;
+  }
+}
+
+.emotion-13 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-11 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -242,7 +281,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   flex-direction: column;
 }
 
-.emotion-13 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -262,7 +301,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-13 {
+  .emotion-17 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -270,11 +309,11 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   }
 }
 
-.emotion-15 {
+.emotion-19 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   background-color: #FDFDFD;
   margin: 1rem 0;
@@ -290,102 +329,102 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-15 {
+  .emotion-19 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-19 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-19 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-19 {
     padding-right: 1rem;
   }
 }
 
-.emotion-17 {
+.emotion-21 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.emotion-19 {
+.emotion-23 {
   padding: 0.5rem 0 1rem;
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-19 {
+  .emotion-23 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
-.emotion-19:last-child {
+.emotion-23:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-19 {
+  .emotion-23 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-19 {
+  .emotion-23 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-19:first-child {
+.emotion-23:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-19:first-child {
+  .emotion-23:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-19:last-child {
+.emotion-23:last-child {
   padding-bottom: 0;
 }
 
-.emotion-21 {
+.emotion-25 {
   position: relative;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-21 {
+  .emotion-25 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-21 {
+    .emotion-25 {
       grid-column-gap: 1rem;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-21 {
+    .emotion-25 {
       display: block;
     }
   }
 }
 
-.emotion-23 {
+.emotion-27 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -394,25 +433,25 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-23 {
+  .emotion-27 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-23 {
+  .emotion-27 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
   }
 }
 
-.emotion-23>div {
+.emotion-27>div {
   vertical-align: middle;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-23 {
+  .emotion-27 {
     display: block;
     width: initial;
     padding: initial;
@@ -421,22 +460,22 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   }
 
   @media (min-width: 63rem) {
-    .emotion-23 {
+    .emotion-27 {
       padding-top: 0;
     }
   }
 }
 
-.emotion-23>div {
+.emotion-27>div {
   display: inline-block;
   vertical-align: initial;
 }
 
-.emotion-23 svg {
+.emotion-27 svg {
   margin: 0;
 }
 
-.emotion-25 {
+.emotion-29 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -449,20 +488,20 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-25 {
+  .emotion-29 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-25 {
+  .emotion-29 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-27 {
+.emotion-31 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -471,7 +510,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   overflow-wrap: anywhere;
 }
 
-.emotion-27:before {
+.emotion-31:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -483,20 +522,20 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   z-index: 1;
 }
 
-.emotion-27:hover,
-.emotion-27:focus {
+.emotion-31:hover,
+.emotion-31:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-27:visited {
+.emotion-31:visited {
   color: #6E6E73;
 }
 
-.emotion-29 {
+.emotion-33 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #545658;
+  color: #6E6E73;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -504,14 +543,14 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-29 {
+  .emotion-33 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-29 {
+  .emotion-33 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -531,17 +570,23 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
       <div
         class="emotion-6 emotion-7 emotion-8"
       >
-        <h2
+        <div
           class="emotion-9 emotion-10"
+        />
+        <div
+          class="emotion-11 emotion-12"
+        />
+        <h2
+          class="emotion-13 emotion-14"
         >
           <span
-            class="emotion-11 emotion-12"
+            class="emotion-15 emotion-16"
           >
             <span
-              class="emotion-13 emotion-14"
+              class="emotion-17 emotion-18"
             >
               <span
-                class="emotion-15 emotion-16"
+                class="emotion-19 emotion-20"
                 dir="ltr"
                 id="top-stories-heading"
               >
@@ -552,26 +597,26 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
         </h2>
       </div>
       <ul
-        class="emotion-17 emotion-18"
+        class="emotion-21 emotion-22"
         role="list"
       >
         <li
-          class="emotion-19 emotion-20"
+          class="emotion-23 emotion-24"
         >
           <div
-            class="emotion-21 emotion-22"
+            class="emotion-25 emotion-26"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-23 emotion-24"
+              class="emotion-27 emotion-28"
               dir="ltr"
             >
               <h3
-                class="emotion-25 emotion-26"
+                class="emotion-29 emotion-30"
               >
                 <a
                   aria-labelledby="top-stories-promo-mundonoticiasinternacional51939501-1"
-                  class="emotion-27 emotion-28"
+                  class="emotion-31 emotion-32"
                   href="/mundo/noticias-internacional-51939501"
                 >
                   <span
@@ -582,7 +627,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
                 </a>
               </h3>
               <time
-                class="emotion-29 emotion-30"
+                class="emotion-33 emotion-34"
                 datetime="2020-02-03"
               >
                 3rd February 2020
@@ -591,22 +636,22 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
           </div>
         </li>
         <li
-          class="emotion-19 emotion-20"
+          class="emotion-23 emotion-24"
         >
           <div
-            class="emotion-21 emotion-22"
+            class="emotion-25 emotion-26"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-23 emotion-24"
+              class="emotion-27 emotion-28"
               dir="ltr"
             >
               <h3
-                class="emotion-25 emotion-26"
+                class="emotion-29 emotion-30"
               >
                 <a
                   aria-labelledby="top-stories-promo-pidgintori51945757-1"
-                  class="emotion-27 emotion-28"
+                  class="emotion-31 emotion-32"
                   href="/pidgin/tori-51945757"
                 >
                   <span
@@ -617,7 +662,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
                 </a>
               </h3>
               <time
-                class="emotion-29 emotion-30"
+                class="emotion-33 emotion-34"
                 datetime="2020-02-03"
               >
                 3rd February 2020
@@ -835,7 +880,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 .emotion-7 {
   position: relative;
   z-index: 0;
-  color: #141414;
+  color: #3F3F42;
   margin-top: 2rem;
   margin-top: 0;
 }
@@ -859,11 +904,50 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 }
 
 .emotion-9 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+  display: none;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-9 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-9 {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+.emotion-11 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-11 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    display: none;
+  }
+}
+
+.emotion-13 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-11 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -873,7 +957,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   flex-direction: column;
 }
 
-.emotion-13 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -893,7 +977,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-13 {
+  .emotion-17 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -901,11 +985,11 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   }
 }
 
-.emotion-15 {
+.emotion-19 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   background-color: #FDFDFD;
   margin: 1rem 0;
@@ -921,68 +1005,68 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-15 {
+  .emotion-19 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-19 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-19 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-19 {
     padding-right: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-17 {
+  .emotion-21 {
     padding-top: 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-17 {
+  .emotion-21 {
     padding-bottom: 1.5rem;
   }
 }
 
-.emotion-19 {
+.emotion-23 {
   position: relative;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-19 {
+  .emotion-23 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-19 {
+    .emotion-23 {
       grid-column-gap: 1rem;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-19 {
+    .emotion-23 {
       display: block;
     }
   }
 }
 
-.emotion-21 {
+.emotion-25 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -991,25 +1075,25 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-21 {
+  .emotion-25 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-21 {
+  .emotion-25 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
   }
 }
 
-.emotion-21>div {
+.emotion-25>div {
   vertical-align: middle;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-21 {
+  .emotion-25 {
     display: block;
     width: initial;
     padding: initial;
@@ -1018,22 +1102,22 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   }
 
   @media (min-width: 63rem) {
-    .emotion-21 {
+    .emotion-25 {
       padding-top: 0;
     }
   }
 }
 
-.emotion-21>div {
+.emotion-25>div {
   display: inline-block;
   vertical-align: initial;
 }
 
-.emotion-21 svg {
+.emotion-25 svg {
   margin: 0;
 }
 
-.emotion-23 {
+.emotion-27 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -1046,20 +1130,20 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-23 {
+  .emotion-27 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-23 {
+  .emotion-27 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-25 {
+.emotion-29 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -1068,7 +1152,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   overflow-wrap: anywhere;
 }
 
-.emotion-25:before {
+.emotion-29:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1080,20 +1164,20 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   z-index: 1;
 }
 
-.emotion-25:hover,
-.emotion-25:focus {
+.emotion-29:hover,
+.emotion-29:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-25:visited {
+.emotion-29:visited {
   color: #6E6E73;
 }
 
-.emotion-27 {
+.emotion-31 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #545658;
+  color: #6E6E73;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -1101,14 +1185,14 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-27 {
+  .emotion-31 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-27 {
+  .emotion-31 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -1128,17 +1212,23 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
       <div
         class="emotion-6 emotion-7 emotion-8"
       >
-        <h2
+        <div
           class="emotion-9 emotion-10"
+        />
+        <div
+          class="emotion-11 emotion-12"
+        />
+        <h2
+          class="emotion-13 emotion-14"
         >
           <span
-            class="emotion-11 emotion-12"
+            class="emotion-15 emotion-16"
           >
             <span
-              class="emotion-13 emotion-14"
+              class="emotion-17 emotion-18"
             >
               <span
-                class="emotion-15 emotion-16"
+                class="emotion-19 emotion-20"
                 dir="ltr"
                 id="top-stories-heading"
               >
@@ -1149,23 +1239,23 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
         </h2>
       </div>
       <div
-        class="emotion-17 emotion-18"
+        class="emotion-21 emotion-22"
       >
         <div>
           <div
-            class="emotion-19 emotion-20"
+            class="emotion-23 emotion-24"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-21 emotion-22"
+              class="emotion-25 emotion-26"
               dir="ltr"
             >
               <h3
-                class="emotion-23 emotion-24"
+                class="emotion-27 emotion-28"
               >
                 <a
                   aria-labelledby="top-stories-promo-mundonoticiasinternacional51939501-1"
-                  class="emotion-25 emotion-26"
+                  class="emotion-29 emotion-30"
                   href="/mundo/noticias-internacional-51939501"
                 >
                   <span
@@ -1176,7 +1266,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
                 </a>
               </h3>
               <time
-                class="emotion-27 emotion-28"
+                class="emotion-31 emotion-32"
                 datetime="2020-02-03"
               >
                 3rd February 2020

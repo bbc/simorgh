@@ -197,7 +197,7 @@ test('from', () => {
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ h: 36 }), true),
-    'masiku 2',
+    'siku 2',
     '36 hours = 2 days'
   );
   assert.equal(
@@ -207,12 +207,12 @@ test('from', () => {
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 5 }), true),
-    'masiku 5',
+    'siku 5',
     '5 days = 5 days'
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 25 }), true),
-    'masiku 25',
+    'siku 25',
     '25 days = 25 days'
   );
   assert.equal(
@@ -316,39 +316,39 @@ test('fromNow', () => {
     'hivi punde baadaye',
     'in a few seconds'
   );
-  assert.equal(
-    moment().add({ d: 5 }).fromNow(),
-    'masiku 5 baadaye',
-    'in 5 days'
-  );
+  assert.equal(moment().add({ d: 5 }).fromNow(), 'siku 5 baadaye', 'in 5 days');
 });
 
 test('calendar day', () => {
   const a = moment().hours(12).minutes(0).seconds(0);
-  assert.equal(moment(a).calendar(), 'leo saa 12:00', 'today at the same time');
+  assert.equal(
+    moment(a).calendar(),
+    'leo saa 12:00 PM',
+    'today at the same time'
+  );
   assert.equal(
     moment(a).add({ m: 25 }).calendar(),
-    'leo saa 12:25',
+    'leo saa 12:25 PM',
     'Now plus 25 min'
   );
   assert.equal(
     moment(a).add({ h: 1 }).calendar(),
-    'leo saa 13:00',
+    'leo saa 01:00 PM',
     'Now plus 1 hour'
   );
   assert.equal(
     moment(a).add({ d: 1 }).calendar(),
-    'kesho saa 12:00',
+    'kesho saa 12:00 PM',
     'tomorrow at the same time'
   );
   assert.equal(
     moment(a).subtract({ h: 1 }).calendar(),
-    'leo saa 11:00',
+    'leo saa 11:00 AM',
     'Now minus 1 hour'
   );
   assert.equal(
     moment(a).subtract({ d: 1 }).calendar(),
-    'jana 12:00',
+    'jana 12:00 PM',
     'yesterday at the same time'
   );
 });
