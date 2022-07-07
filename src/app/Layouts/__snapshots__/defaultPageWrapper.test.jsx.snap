@@ -431,7 +431,8 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 
 .emotion-31 {
   position: relative;
-  background-color: #FFFFFF;
+  background-color: #B80000;
+  border-top: 0.0625rem solid #FFFFFF;
 }
 
 .emotion-31::after {
@@ -440,7 +441,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   bottom: 0;
   right: 0;
   left: 0;
-  border-bottom: 0.0625rem solid #E6E8EA;
+  border-bottom: 0.0625rem solid transparent;
 }
 
 .emotion-31 .emotion-48::after {
@@ -451,7 +452,6 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   position: relative;
   max-width: 80rem;
   margin: 0 auto;
-  background-color: #FFFFFF;
 }
 
 .emotion-35 {
@@ -483,7 +483,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #FFFFFF;
 }
 
 @media (min-width: 37.5rem) {
@@ -505,14 +505,8 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 .emotion-39 {
-  color: #000000;
+  color: #fff;
   fill: currentColor;
-}
-
-@media screen and (forced-colors: active) {
-  .emotion-39 {
-    fill: linkText;
-  }
 }
 
 @media (max-width: 37.4375rem) {
@@ -541,8 +535,8 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
     pointer-events: none;
     background: linear-gradient(
             to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1)
+            rgba(184, 0, 0, 0) 0%,
+            rgba(184, 0, 0, 1)
               100%
           );
   }
@@ -585,7 +579,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
     position: absolute;
     bottom: -1px;
     width: 80rem;
-    border-bottom: 0.0625rem solid #E6E8EA;
+    border-bottom: 0.0625rem solid #EAB3B3;
     z-index: -1;
   }
 }
@@ -597,7 +591,6 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   font-weight: 400;
   font-style: normal;
   color: #FDFDFD;
-  color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -631,7 +624,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
+  border-bottom: 0.25rem solid #FFFFFF;
 }
 
 .emotion-49:focus::after {
@@ -640,13 +633,13 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
+  border-bottom: 0.25rem solid #FFFFFF;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #FFFFFF;
 }
 
 .emotion-91 {
-  background-color: #FFFFFF;
+  background-color: #222222;
   clear: both;
   overflow: hidden;
   height: 0;
@@ -674,11 +667,12 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   list-style-type: none;
   margin: 0;
   padding: 0 0.5rem;
-  border-bottom: 0.0625rem solid #E6E8EA;
+  border-bottom: 0.125rem solid #3F3F42;
 }
 
 .emotion-95 {
-  border-bottom: 0.0625rem solid #E6E8EA;
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #3F3F42;
 }
 
 .emotion-95:last-child {
@@ -692,7 +686,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #141414;
+  color: #FFFFFF;
   -webkit-text-decoration: none;
   text-decoration: none;
   padding: 0.75rem 0;
@@ -717,7 +711,6 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 .emotion-97:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  text-decoration-color: #B80000;
 }
 
 .emotion-139 {

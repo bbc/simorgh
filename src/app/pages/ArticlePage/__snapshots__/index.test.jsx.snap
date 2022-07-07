@@ -307,7 +307,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #141414;
+  color: #3F3F42;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -444,7 +444,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #141414;
+  color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -502,7 +502,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 .emotion-21 {
   position: relative;
   z-index: 0;
-  color: #141414;
+  color: #3F3F42;
   margin-top: 2rem;
 }
 
@@ -525,11 +525,50 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 }
 
 .emotion-23 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+  display: none;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-23 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-23 {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+.emotion-25 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-25 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-25 {
+    display: none;
+  }
+}
+
+.emotion-27 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-25 {
+.emotion-29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -539,7 +578,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   flex-direction: column;
 }
 
-.emotion-27 {
+.emotion-31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -559,7 +598,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-27 {
+  .emotion-31 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -567,11 +606,11 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   }
 }
 
-.emotion-29 {
+.emotion-33 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   background-color: #F6F6F6;
   margin: 1rem 0;
@@ -587,32 +626,32 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-29 {
+  .emotion-33 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-29 {
+  .emotion-33 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-29 {
+  .emotion-33 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-29 {
+  .emotion-33 {
     padding-right: 1rem;
   }
 }
 
-.emotion-32 {
+.emotion-36 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -621,7 +660,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 }
 
 @supports (display: grid) {
-  .emotion-32 {
+  .emotion-36 {
     display: grid;
     position: initial;
     width: initial;
@@ -629,7 +668,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-32 {
+    .emotion-36 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -637,7 +676,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-32 {
+    .emotion-36 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -645,7 +684,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-32 {
+    .emotion-36 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -653,7 +692,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-32 {
+    .emotion-36 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -661,7 +700,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-32 {
+    .emotion-36 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -669,7 +708,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-32 {
+    .emotion-36 {
       grid-template-columns: repeat(20, 1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -678,7 +717,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-32 {
+  .emotion-36 {
     grid-template-rows: repeat(
           5,
           auto
@@ -687,18 +726,18 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 }
 
 @media (min-width: 80rem) {
-  .emotion-32 {
+  .emotion-36 {
     grid-auto-flow: row;
   }
 }
 
-.emotion-35 {
+.emotion-39 {
   position: relative;
   padding-bottom: 1.5rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-35 {
+  .emotion-39 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -706,7 +745,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-35 {
+  .emotion-39 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -714,7 +753,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-35 {
+  .emotion-39 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -722,7 +761,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-35 {
+  .emotion-39 {
     width: calc(50%);
     display: inline-block;
     vertical-align: top;
@@ -730,7 +769,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-35 {
+  .emotion-39 {
     width: calc(50%);
     display: inline-block;
     vertical-align: top;
@@ -738,7 +777,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 }
 
 @media (min-width: 80rem) {
-  .emotion-35 {
+  .emotion-39 {
     width: calc(20%);
     display: inline-block;
     vertical-align: top;
@@ -746,56 +785,56 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 }
 
 @supports (display: grid) {
-  .emotion-35 {
+  .emotion-39 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-35 {
+    .emotion-39 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-35 {
+    .emotion-39 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-35 {
+    .emotion-39 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-35 {
+    .emotion-39 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-35 {
+    .emotion-39 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-35 {
+    .emotion-39 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 }
 
-.emotion-37 {
+.emotion-41 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -808,50 +847,50 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-39 {
+  .emotion-43 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-39 {
+  .emotion-43 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-39 {
+  .emotion-43 {
     min-width: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-39 {
+  .emotion-43 {
     min-width: 4rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-39 {
+  .emotion-43 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-39 {
+    .emotion-43 {
       min-width: 2rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-39 {
+  .emotion-43 {
     min-width: 2rem;
   }
 }
 
-.emotion-41 {
+.emotion-45 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -864,32 +903,32 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-41 {
+  .emotion-45 {
     font-size: 2.5rem;
     line-height: 2.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-41 {
+  .emotion-45 {
     font-size: 3.5rem;
     line-height: 3.75rem;
   }
 }
 
-.emotion-43 {
+.emotion-47 {
   padding-top: 0.375rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-43 {
+  .emotion-47 {
     padding-right: 0;
   }
 }
 
-.emotion-45 {
+.emotion-49 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -903,26 +942,26 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-45 {
+  .emotion-49 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-45 {
+  .emotion-49 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-45:hover,
-.emotion-45:focus {
+.emotion-49:hover,
+.emotion-49:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-45:before {
+.emotion-49:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -935,34 +974,34 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-45 {
+  .emotion-49 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 
   @media (min-width: 20rem) and (max-width: 37.4375rem) {
-    .emotion-45 {
+    .emotion-49 {
       font-size: 1.125rem;
       line-height: 1.375rem;
     }
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-45 {
+    .emotion-49 {
       font-size: 1.25rem;
       line-height: 1.5rem;
     }
   }
 }
 
-.emotion-47 {
+.emotion-51 {
   padding-top: 0.5rem;
 }
 
-.emotion-49 {
+.emotion-53 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #545658;
+  color: #6E6E73;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -970,235 +1009,235 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-49 {
+  .emotion-53 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-49 {
+  .emotion-53 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-56 {
+  .emotion-60 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-56 {
+  .emotion-60 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-56 {
+  .emotion-60 {
     min-width: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-56 {
+  .emotion-60 {
     min-width: 4rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-56 {
+  .emotion-60 {
     min-width: 4rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-56 {
+    .emotion-60 {
       min-width: 2rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-56 {
+  .emotion-60 {
     min-width: 2rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-107 {
+  .emotion-111 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-107 {
+  .emotion-111 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-107 {
+  .emotion-111 {
     min-width: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-107 {
+  .emotion-111 {
     min-width: 4rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-107 {
+  .emotion-111 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-107 {
+    .emotion-111 {
       min-width: 2rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-107 {
+  .emotion-111 {
     min-width: 4rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-124 {
+  .emotion-128 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-124 {
+  .emotion-128 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-124 {
+  .emotion-128 {
     min-width: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-124 {
+  .emotion-128 {
     min-width: 4rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-124 {
+  .emotion-128 {
     min-width: 4rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-124 {
+    .emotion-128 {
       min-width: 4rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-124 {
+  .emotion-128 {
     min-width: 2rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-141 {
+  .emotion-145 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-141 {
+  .emotion-145 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-141 {
+  .emotion-145 {
     min-width: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-141 {
+  .emotion-145 {
     min-width: 4rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-141 {
+  .emotion-145 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-141 {
+    .emotion-145 {
       min-width: 4rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-141 {
+  .emotion-145 {
     min-width: 2rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-192 {
+  .emotion-196 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-192 {
+  .emotion-196 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-192 {
+  .emotion-196 {
     min-width: 3rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-192 {
+  .emotion-196 {
     min-width: 4rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-192 {
+  .emotion-196 {
     min-width: 4rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-192 {
+    .emotion-196 {
       min-width: 4rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-192 {
+  .emotion-196 {
     min-width: 4rem;
   }
 }
@@ -1258,17 +1297,23 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
       <div
         class="emotion-20 emotion-21 emotion-22"
       >
-        <h2
+        <div
           class="emotion-23 emotion-24"
+        />
+        <div
+          class="emotion-25 emotion-26"
+        />
+        <h2
+          class="emotion-27 emotion-28"
         >
           <span
-            class="emotion-25 emotion-26"
+            class="emotion-29 emotion-30"
           >
             <span
-              class="emotion-27 emotion-28"
+              class="emotion-31 emotion-32"
             >
               <span
-                class="emotion-29 emotion-30"
+                class="emotion-33 emotion-34"
                 dir="ltr"
                 id="Most-Read"
               >
@@ -1279,43 +1324,43 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
         </h2>
       </div>
       <ol
-        class="emotion-31 emotion-32 emotion-4"
+        class="emotion-35 emotion-36 emotion-4"
         dir="ltr"
         role="list"
       >
         <li
-          class="emotion-34 emotion-35 emotion-4"
+          class="emotion-38 emotion-39 emotion-4"
           dir="ltr"
           role="listitem"
         >
           <div
-            class="emotion-37 emotion-38"
+            class="emotion-41 emotion-42"
           >
             <div
-              class="emotion-39 emotion-40"
+              class="emotion-43 emotion-44"
               dir="ltr"
             >
               <span
-                class="emotion-41 emotion-42"
+                class="emotion-45 emotion-46"
               >
                 1
               </span>
             </div>
             <div
-              class="emotion-43 emotion-44"
+              class="emotion-47 emotion-48"
               dir="ltr"
             >
               <a
-                class="emotion-45 emotion-46"
+                class="emotion-49 emotion-50"
                 href="/pidgin/tori-46729879"
               >
                 Public Holidays wey go happun for 2019
               </a>
               <div
-                class="emotion-47 emotion-48"
+                class="emotion-51 emotion-52"
               >
                 <time
-                  class="emotion-49 emotion-50"
+                  class="emotion-53 emotion-54"
                   datetime="2019-05-21"
                 >
                   De one we dem update for: 21st May 2019
@@ -1325,38 +1370,38 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
           </div>
         </li>
         <li
-          class="emotion-34 emotion-35 emotion-4"
+          class="emotion-38 emotion-39 emotion-4"
           dir="ltr"
           role="listitem"
         >
           <div
-            class="emotion-37 emotion-38"
+            class="emotion-41 emotion-42"
           >
             <div
-              class="emotion-56 emotion-40"
+              class="emotion-60 emotion-44"
               dir="ltr"
             >
               <span
-                class="emotion-41 emotion-42"
+                class="emotion-45 emotion-46"
               >
                 2
               </span>
             </div>
             <div
-              class="emotion-43 emotion-44"
+              class="emotion-47 emotion-48"
               dir="ltr"
             >
               <a
-                class="emotion-45 emotion-46"
+                class="emotion-49 emotion-50"
                 href="/pidgin/tori-50304653"
               >
                 Liberia banks don run out of money
               </a>
               <div
-                class="emotion-47 emotion-48"
+                class="emotion-51 emotion-52"
               >
                 <time
-                  class="emotion-49 emotion-50"
+                  class="emotion-53 emotion-54"
                   datetime="2019-11-05"
                 >
                   De one we dem update for: 5th November 2019
@@ -1366,38 +1411,38 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
           </div>
         </li>
         <li
-          class="emotion-34 emotion-35 emotion-4"
+          class="emotion-38 emotion-39 emotion-4"
           dir="ltr"
           role="listitem"
         >
           <div
-            class="emotion-37 emotion-38"
+            class="emotion-41 emotion-42"
           >
             <div
-              class="emotion-39 emotion-40"
+              class="emotion-43 emotion-44"
               dir="ltr"
             >
               <span
-                class="emotion-41 emotion-42"
+                class="emotion-45 emotion-46"
               >
                 3
               </span>
             </div>
             <div
-              class="emotion-43 emotion-44"
+              class="emotion-47 emotion-48"
               dir="ltr"
             >
               <a
-                class="emotion-45 emotion-46"
+                class="emotion-49 emotion-50"
                 href="/pidgin/tori-50298882"
               >
                 Why Oscars disqualify Genevieve Nnaji 'Lionheart' film
               </a>
               <div
-                class="emotion-47 emotion-48"
+                class="emotion-51 emotion-52"
               >
                 <time
-                  class="emotion-49 emotion-50"
+                  class="emotion-53 emotion-54"
                   datetime="2019-11-05"
                 >
                   De one we dem update for: 5th November 2019
@@ -1407,38 +1452,38 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
           </div>
         </li>
         <li
-          class="emotion-34 emotion-35 emotion-4"
+          class="emotion-38 emotion-39 emotion-4"
           dir="ltr"
           role="listitem"
         >
           <div
-            class="emotion-37 emotion-38"
+            class="emotion-41 emotion-42"
           >
             <div
-              class="emotion-56 emotion-40"
+              class="emotion-60 emotion-44"
               dir="ltr"
             >
               <span
-                class="emotion-41 emotion-42"
+                class="emotion-45 emotion-46"
               >
                 4
               </span>
             </div>
             <div
-              class="emotion-43 emotion-44"
+              class="emotion-47 emotion-48"
               dir="ltr"
             >
               <a
-                class="emotion-45 emotion-46"
+                class="emotion-49 emotion-50"
                 href="/pidgin/tori-50315150"
               >
                 Ghana opposition NDC list 51 family and friends inside Akufo-Addo govment
               </a>
               <div
-                class="emotion-47 emotion-48"
+                class="emotion-51 emotion-52"
               >
                 <time
-                  class="emotion-49 emotion-50"
+                  class="emotion-53 emotion-54"
                   datetime="2019-11-06"
                 >
                   De one we dem update for: 6th November 2019
@@ -1448,38 +1493,38 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
           </div>
         </li>
         <li
-          class="emotion-34 emotion-35 emotion-4"
+          class="emotion-38 emotion-39 emotion-4"
           dir="ltr"
           role="listitem"
         >
           <div
-            class="emotion-37 emotion-38"
+            class="emotion-41 emotion-42"
           >
             <div
-              class="emotion-107 emotion-40"
+              class="emotion-111 emotion-44"
               dir="ltr"
             >
               <span
-                class="emotion-41 emotion-42"
+                class="emotion-45 emotion-46"
               >
                 5
               </span>
             </div>
             <div
-              class="emotion-43 emotion-44"
+              class="emotion-47 emotion-48"
               dir="ltr"
             >
               <a
-                class="emotion-45 emotion-46"
+                class="emotion-49 emotion-50"
                 href="/pidgin/tori-50315157"
               >
                 How Balogun market fire kill Policeman for Lagos
               </a>
               <div
-                class="emotion-47 emotion-48"
+                class="emotion-51 emotion-52"
               >
                 <time
-                  class="emotion-49 emotion-50"
+                  class="emotion-53 emotion-54"
                   datetime="2019-11-06"
                 >
                   De one we dem update for: 6th November 2019
@@ -1489,38 +1534,38 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
           </div>
         </li>
         <li
-          class="emotion-34 emotion-35 emotion-4"
+          class="emotion-38 emotion-39 emotion-4"
           dir="ltr"
           role="listitem"
         >
           <div
-            class="emotion-37 emotion-38"
+            class="emotion-41 emotion-42"
           >
             <div
-              class="emotion-124 emotion-40"
+              class="emotion-128 emotion-44"
               dir="ltr"
             >
               <span
-                class="emotion-41 emotion-42"
+                class="emotion-45 emotion-46"
               >
                 6
               </span>
             </div>
             <div
-              class="emotion-43 emotion-44"
+              class="emotion-47 emotion-48"
               dir="ltr"
             >
               <a
-                class="emotion-45 emotion-46"
+                class="emotion-49 emotion-50"
                 href="/pidgin/tori-50093818"
               >
                 Labour, FG finally agree minimum wage salary adjustment
               </a>
               <div
-                class="emotion-47 emotion-48"
+                class="emotion-51 emotion-52"
               >
                 <time
-                  class="emotion-49 emotion-50"
+                  class="emotion-53 emotion-54"
                   datetime="2019-10-18"
                 >
                   De one we dem update for: 18th October 2019
@@ -1530,38 +1575,38 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
           </div>
         </li>
         <li
-          class="emotion-34 emotion-35 emotion-4"
+          class="emotion-38 emotion-39 emotion-4"
           dir="ltr"
           role="listitem"
         >
           <div
-            class="emotion-37 emotion-38"
+            class="emotion-41 emotion-42"
           >
             <div
-              class="emotion-141 emotion-40"
+              class="emotion-145 emotion-44"
               dir="ltr"
             >
               <span
-                class="emotion-41 emotion-42"
+                class="emotion-45 emotion-46"
               >
                 7
               </span>
             </div>
             <div
-              class="emotion-43 emotion-44"
+              class="emotion-47 emotion-48"
               dir="ltr"
             >
               <a
-                class="emotion-45 emotion-46"
+                class="emotion-49 emotion-50"
                 href="/pidgin/tori-50187218"
               >
                 Naira Marley na 'Bad Influence'?
               </a>
               <div
-                class="emotion-47 emotion-48"
+                class="emotion-51 emotion-52"
               >
                 <time
-                  class="emotion-49 emotion-50"
+                  class="emotion-53 emotion-54"
                   datetime="2019-10-25"
                 >
                   De one we dem update for: 25th October 2019
@@ -1571,38 +1616,38 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
           </div>
         </li>
         <li
-          class="emotion-34 emotion-35 emotion-4"
+          class="emotion-38 emotion-39 emotion-4"
           dir="ltr"
           role="listitem"
         >
           <div
-            class="emotion-37 emotion-38"
+            class="emotion-41 emotion-42"
           >
             <div
-              class="emotion-124 emotion-40"
+              class="emotion-128 emotion-44"
               dir="ltr"
             >
               <span
-                class="emotion-41 emotion-42"
+                class="emotion-45 emotion-46"
               >
                 8
               </span>
             </div>
             <div
-              class="emotion-43 emotion-44"
+              class="emotion-47 emotion-48"
               dir="ltr"
             >
               <a
-                class="emotion-45 emotion-46"
+                class="emotion-49 emotion-50"
                 href="/pidgin/tori-48347911"
               >
                 Tins you suppose know about Naira Marley
               </a>
               <div
-                class="emotion-47 emotion-48"
+                class="emotion-51 emotion-52"
               >
                 <time
-                  class="emotion-49 emotion-50"
+                  class="emotion-53 emotion-54"
                   datetime="2019-05-23"
                 >
                   De one we dem update for: 23rd May 2019
@@ -1612,38 +1657,38 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
           </div>
         </li>
         <li
-          class="emotion-34 emotion-35 emotion-4"
+          class="emotion-38 emotion-39 emotion-4"
           dir="ltr"
           role="listitem"
         >
           <div
-            class="emotion-37 emotion-38"
+            class="emotion-41 emotion-42"
           >
             <div
-              class="emotion-141 emotion-40"
+              class="emotion-145 emotion-44"
               dir="ltr"
             >
               <span
-                class="emotion-41 emotion-42"
+                class="emotion-45 emotion-46"
               >
                 9
               </span>
             </div>
             <div
-              class="emotion-43 emotion-44"
+              class="emotion-47 emotion-48"
               dir="ltr"
             >
               <a
-                class="emotion-45 emotion-46"
+                class="emotion-49 emotion-50"
                 href="/pidgin/sport-50312710"
               >
                 Golden Eaglets crash out of Fifa U17 World Cup
               </a>
               <div
-                class="emotion-47 emotion-48"
+                class="emotion-51 emotion-52"
               >
                 <time
-                  class="emotion-49 emotion-50"
+                  class="emotion-53 emotion-54"
                   datetime="2019-11-06"
                 >
                   De one we dem update for: 6th November 2019
@@ -1653,38 +1698,38 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
           </div>
         </li>
         <li
-          class="emotion-34 emotion-35 emotion-4"
+          class="emotion-38 emotion-39 emotion-4"
           dir="ltr"
           role="listitem"
         >
           <div
-            class="emotion-37 emotion-38"
+            class="emotion-41 emotion-42"
           >
             <div
-              class="emotion-192 emotion-40"
+              class="emotion-196 emotion-44"
               dir="ltr"
             >
               <span
-                class="emotion-41 emotion-42"
+                class="emotion-45 emotion-46"
               >
                 10
               </span>
             </div>
             <div
-              class="emotion-43 emotion-44"
+              class="emotion-47 emotion-48"
               dir="ltr"
             >
               <a
-                class="emotion-45 emotion-46"
+                class="emotion-49 emotion-50"
                 href="/pidgin/tori-42945173"
               >
                 Tiger nut drink fit wake up your sex drive - Nutritionist
               </a>
               <div
-                class="emotion-47 emotion-48"
+                class="emotion-51 emotion-52"
               >
                 <time
-                  class="emotion-49 emotion-50"
+                  class="emotion-53 emotion-54"
                   datetime="2019-05-21"
                 >
                   De one we dem update for: 21st May 2019
@@ -2006,7 +2051,7 @@ exports[`should render a news article correctly 1`] = `
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: #141414;
+  color: #3F3F42;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -2143,7 +2188,7 @@ exports[`should render a news article correctly 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #141414;
+  color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -2536,7 +2581,7 @@ exports[`should render a news article with headline in the middle correctly 1`] 
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #141414;
+  color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -2667,7 +2712,7 @@ exports[`should render a news article with headline in the middle correctly 1`] 
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: #141414;
+  color: #3F3F42;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -3082,7 +3127,7 @@ exports[`should render a news article without headline correctly 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #141414;
+  color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -3459,7 +3504,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #141414;
+  color: #3F3F42;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -3596,7 +3641,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #141414;
+  color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -3654,7 +3699,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
 .emotion-21 {
   position: relative;
   z-index: 0;
-  color: #141414;
+  color: #3F3F42;
   margin-top: 2rem;
 }
 
@@ -3677,11 +3722,50 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
 }
 
 .emotion-23 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+  display: none;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-23 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-23 {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.5rem;
+  }
+}
+
+.emotion-25 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-25 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-25 {
+    display: none;
+  }
+}
+
+.emotion-27 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-25 {
+.emotion-29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3691,7 +3775,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   flex-direction: column;
 }
 
-.emotion-27 {
+.emotion-31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3711,7 +3795,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-27 {
+  .emotion-31 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -3719,11 +3803,11 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   }
 }
 
-.emotion-29 {
+.emotion-33 {
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   background-color: #F6F6F6;
   margin: 1rem 0;
@@ -3739,32 +3823,32 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-29 {
+  .emotion-33 {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-29 {
+  .emotion-33 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-29 {
+  .emotion-33 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-29 {
+  .emotion-33 {
     padding-left: 1rem;
   }
 }
 
-.emotion-32 {
+.emotion-36 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -3773,7 +3857,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
 }
 
 @supports (display: grid) {
-  .emotion-32 {
+  .emotion-36 {
     display: grid;
     position: initial;
     width: initial;
@@ -3781,7 +3865,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-32 {
+    .emotion-36 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -3789,7 +3873,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-32 {
+    .emotion-36 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -3797,7 +3881,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-32 {
+    .emotion-36 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -3805,7 +3889,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-32 {
+    .emotion-36 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -3813,7 +3897,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-32 {
+    .emotion-36 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -3821,7 +3905,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-32 {
+    .emotion-36 {
       grid-template-columns: repeat(20, 1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -3830,7 +3914,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-32 {
+  .emotion-36 {
     grid-template-rows: repeat(
           5,
           auto
@@ -3839,18 +3923,18 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
 }
 
 @media (min-width: 80rem) {
-  .emotion-32 {
+  .emotion-36 {
     grid-auto-flow: row;
   }
 }
 
-.emotion-35 {
+.emotion-39 {
   position: relative;
   padding-bottom: 1.5rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-35 {
+  .emotion-39 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -3858,7 +3942,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-35 {
+  .emotion-39 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -3866,7 +3950,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-35 {
+  .emotion-39 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -3874,7 +3958,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-35 {
+  .emotion-39 {
     width: calc(50%);
     display: inline-block;
     vertical-align: top;
@@ -3882,7 +3966,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-35 {
+  .emotion-39 {
     width: calc(50%);
     display: inline-block;
     vertical-align: top;
@@ -3890,7 +3974,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
 }
 
 @media (min-width: 80rem) {
-  .emotion-35 {
+  .emotion-39 {
     width: calc(20%);
     display: inline-block;
     vertical-align: top;
@@ -3898,56 +3982,56 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
 }
 
 @supports (display: grid) {
-  .emotion-35 {
+  .emotion-39 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-35 {
+    .emotion-39 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-35 {
+    .emotion-39 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-35 {
+    .emotion-39 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-35 {
+    .emotion-39 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-35 {
+    .emotion-39 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-35 {
+    .emotion-39 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 }
 
-.emotion-37 {
+.emotion-41 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3960,50 +4044,50 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-39 {
+  .emotion-43 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-39 {
+  .emotion-43 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-39 {
+  .emotion-43 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-39 {
+  .emotion-43 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-39 {
+  .emotion-43 {
     min-width: 1.5rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-39 {
+    .emotion-43 {
       min-width: 1.5rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-39 {
+  .emotion-43 {
     min-width: 1.5rem;
   }
 }
 
-.emotion-41 {
+.emotion-45 {
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -4016,32 +4100,32 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-41 {
+  .emotion-45 {
     font-size: 2.5rem;
     line-height: 2.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-41 {
+  .emotion-45 {
     font-size: 3.5rem;
     line-height: 3.75rem;
   }
 }
 
-.emotion-43 {
+.emotion-47 {
   padding-top: 0.375rem;
   padding-right: 1rem;
   padding-left: 1rem;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-43 {
+  .emotion-47 {
     padding-left: 0;
   }
 }
 
-.emotion-45 {
+.emotion-49 {
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -4055,26 +4139,26 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-45 {
+  .emotion-49 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-45 {
+  .emotion-49 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-45:hover,
-.emotion-45:focus {
+.emotion-49:hover,
+.emotion-49:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-45:before {
+.emotion-49:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -4087,34 +4171,34 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-45 {
+  .emotion-49 {
     font-size: 1.125rem;
     line-height: 1.625rem;
   }
 
   @media (min-width: 20rem) and (max-width: 37.4375rem) {
-    .emotion-45 {
+    .emotion-49 {
       font-size: 1.125rem;
       line-height: 1.625rem;
     }
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-45 {
+    .emotion-49 {
       font-size: 1.25rem;
       line-height: 1.75rem;
     }
   }
 }
 
-.emotion-47 {
+.emotion-51 {
   padding-top: 0.5rem;
 }
 
-.emotion-49 {
+.emotion-53 {
   font-size: 0.875rem;
   line-height: 1.25rem;
-  color: #545658;
+  color: #6E6E73;
   display: block;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
@@ -4122,235 +4206,235 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-49 {
+  .emotion-53 {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-49 {
+  .emotion-53 {
     font-size: 0.8125rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-56 {
+  .emotion-60 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-56 {
+  .emotion-60 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-56 {
+  .emotion-60 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-56 {
+  .emotion-60 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-56 {
+  .emotion-60 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-56 {
+    .emotion-60 {
       min-width: 1.5rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-56 {
+  .emotion-60 {
     min-width: 1.5rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-107 {
+  .emotion-111 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-107 {
+  .emotion-111 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-107 {
+  .emotion-111 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-107 {
+  .emotion-111 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-107 {
+  .emotion-111 {
     min-width: 1.5rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-107 {
+    .emotion-111 {
       min-width: 1.5rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-107 {
+  .emotion-111 {
     min-width: 2rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-124 {
+  .emotion-128 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-124 {
+  .emotion-128 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-124 {
+  .emotion-128 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-124 {
+  .emotion-128 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-124 {
+  .emotion-128 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-124 {
+    .emotion-128 {
       min-width: 2rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-124 {
+  .emotion-128 {
     min-width: 1.5rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-141 {
+  .emotion-145 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-141 {
+  .emotion-145 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-141 {
+  .emotion-145 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-141 {
+  .emotion-145 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-141 {
+  .emotion-145 {
     min-width: 1.5rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-141 {
+    .emotion-145 {
       min-width: 2rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-141 {
+  .emotion-145 {
     min-width: 1.5rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-192 {
+  .emotion-196 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-192 {
+  .emotion-196 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-192 {
+  .emotion-196 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-192 {
+  .emotion-196 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-192 {
+  .emotion-196 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-192 {
+    .emotion-196 {
       min-width: 2rem;
     }
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-192 {
+  .emotion-196 {
     min-width: 2rem;
   }
 }
@@ -4410,17 +4494,23 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
       <div
         class="emotion-20 emotion-21 emotion-22"
       >
-        <h2
+        <div
           class="emotion-23 emotion-24"
+        />
+        <div
+          class="emotion-25 emotion-26"
+        />
+        <h2
+          class="emotion-27 emotion-28"
         >
           <span
-            class="emotion-25 emotion-26"
+            class="emotion-29 emotion-30"
           >
             <span
-              class="emotion-27 emotion-28"
+              class="emotion-31 emotion-32"
             >
               <span
-                class="emotion-29 emotion-30"
+                class="emotion-33 emotion-34"
                 dir="rtl"
                 id="Most-Read"
               >
@@ -4431,43 +4521,43 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
         </h2>
       </div>
       <ol
-        class="emotion-31 emotion-32 emotion-4"
+        class="emotion-35 emotion-36 emotion-4"
         dir="rtl"
         role="list"
       >
         <li
-          class="emotion-34 emotion-35 emotion-4"
+          class="emotion-38 emotion-39 emotion-4"
           dir="rtl"
           role="listitem"
         >
           <div
-            class="emotion-37 emotion-38"
+            class="emotion-41 emotion-42"
           >
             <div
-              class="emotion-39 emotion-40"
+              class="emotion-43 emotion-44"
               dir="rtl"
             >
               <span
-                class="emotion-41 emotion-42"
+                class="emotion-45 emotion-46"
               >
                 ۱
               </span>
             </div>
             <div
-              class="emotion-43 emotion-44"
+              class="emotion-47 emotion-48"
               dir="rtl"
             >
               <a
-                class="emotion-45 emotion-46"
+                class="emotion-49 emotion-50"
                 href="/persian/world-50317704"
               >
                 توافق با جدایی‌طلبان یمن؛ ایران اعتراض کرد، سازمان ملل استقبال
               </a>
               <div
-                class="emotion-47 emotion-48"
+                class="emotion-51 emotion-52"
               >
                 <time
-                  class="emotion-49 emotion-50"
+                  class="emotion-53 emotion-54"
                   datetime="2019-11-06"
                 >
                   به روز شده در ۶ نوامبر ۲۰۱۹
@@ -4477,38 +4567,38 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
           </div>
         </li>
         <li
-          class="emotion-34 emotion-35 emotion-4"
+          class="emotion-38 emotion-39 emotion-4"
           dir="rtl"
           role="listitem"
         >
           <div
-            class="emotion-37 emotion-38"
+            class="emotion-41 emotion-42"
           >
             <div
-              class="emotion-56 emotion-40"
+              class="emotion-60 emotion-44"
               dir="rtl"
             >
               <span
-                class="emotion-41 emotion-42"
+                class="emotion-45 emotion-46"
               >
                 ۲
               </span>
             </div>
             <div
-              class="emotion-43 emotion-44"
+              class="emotion-47 emotion-48"
               dir="rtl"
             >
               <a
-                class="emotion-45 emotion-46"
+                class="emotion-49 emotion-50"
                 href="/persian/iran-50319870"
               >
                 فراخوان آذری جهرمی برای مناظره اینستاگرامی - زرآبادی: در مجلس مناظره کنیم
               </a>
               <div
-                class="emotion-47 emotion-48"
+                class="emotion-51 emotion-52"
               >
                 <time
-                  class="emotion-49 emotion-50"
+                  class="emotion-53 emotion-54"
                   datetime="2019-11-06"
                 >
                   به روز شده در ۶ نوامبر ۲۰۱۹
@@ -4518,38 +4608,38 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
           </div>
         </li>
         <li
-          class="emotion-34 emotion-35 emotion-4"
+          class="emotion-38 emotion-39 emotion-4"
           dir="rtl"
           role="listitem"
         >
           <div
-            class="emotion-37 emotion-38"
+            class="emotion-41 emotion-42"
           >
             <div
-              class="emotion-39 emotion-40"
+              class="emotion-43 emotion-44"
               dir="rtl"
             >
               <span
-                class="emotion-41 emotion-42"
+                class="emotion-45 emotion-46"
               >
                 ۳
               </span>
             </div>
             <div
-              class="emotion-43 emotion-44"
+              class="emotion-47 emotion-48"
               dir="rtl"
             >
               <a
-                class="emotion-45 emotion-46"
+                class="emotion-49 emotion-50"
                 href="/persian/world-50320610"
               >
                 ترکیه: همسر ابوبکر بغدادی را 'دستگیر کردیم'
               </a>
               <div
-                class="emotion-47 emotion-48"
+                class="emotion-51 emotion-52"
               >
                 <time
-                  class="emotion-49 emotion-50"
+                  class="emotion-53 emotion-54"
                   datetime="2019-11-06"
                 >
                   به روز شده در ۶ نوامبر ۲۰۱۹
@@ -4559,38 +4649,38 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
           </div>
         </li>
         <li
-          class="emotion-34 emotion-35 emotion-4"
+          class="emotion-38 emotion-39 emotion-4"
           dir="rtl"
           role="listitem"
         >
           <div
-            class="emotion-37 emotion-38"
+            class="emotion-41 emotion-42"
           >
             <div
-              class="emotion-56 emotion-40"
+              class="emotion-60 emotion-44"
               dir="rtl"
             >
               <span
-                class="emotion-41 emotion-42"
+                class="emotion-45 emotion-46"
               >
                 ۴
               </span>
             </div>
             <div
-              class="emotion-43 emotion-44"
+              class="emotion-47 emotion-48"
               dir="rtl"
             >
               <a
-                class="emotion-45 emotion-46"
+                class="emotion-49 emotion-50"
                 href="/persian/world-50316456"
               >
                 غنی سازی مجدد در فردو: مکرون اقدام ایران را 'عمیقا مایه نگرانی' خواند
               </a>
               <div
-                class="emotion-47 emotion-48"
+                class="emotion-51 emotion-52"
               >
                 <time
-                  class="emotion-49 emotion-50"
+                  class="emotion-53 emotion-54"
                   datetime="2019-11-06"
                 >
                   به روز شده در ۶ نوامبر ۲۰۱۹
@@ -4600,38 +4690,38 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
           </div>
         </li>
         <li
-          class="emotion-34 emotion-35 emotion-4"
+          class="emotion-38 emotion-39 emotion-4"
           dir="rtl"
           role="listitem"
         >
           <div
-            class="emotion-37 emotion-38"
+            class="emotion-41 emotion-42"
           >
             <div
-              class="emotion-107 emotion-40"
+              class="emotion-111 emotion-44"
               dir="rtl"
             >
               <span
-                class="emotion-41 emotion-42"
+                class="emotion-45 emotion-46"
               >
                 ۵
               </span>
             </div>
             <div
-              class="emotion-43 emotion-44"
+              class="emotion-47 emotion-48"
               dir="rtl"
             >
               <a
-                class="emotion-45 emotion-46"
+                class="emotion-49 emotion-50"
                 href="/persian/magazine-50249226"
               >
                 دوازده دلیل حکمرانی حشرات: سوسک می‌تواند دو هفته بدون سر زنده بماند
               </a>
               <div
-                class="emotion-47 emotion-48"
+                class="emotion-51 emotion-52"
               >
                 <time
-                  class="emotion-49 emotion-50"
+                  class="emotion-53 emotion-54"
                   datetime="2019-11-06"
                 >
                   به روز شده در ۶ نوامبر ۲۰۱۹
@@ -4641,38 +4731,38 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
           </div>
         </li>
         <li
-          class="emotion-34 emotion-35 emotion-4"
+          class="emotion-38 emotion-39 emotion-4"
           dir="rtl"
           role="listitem"
         >
           <div
-            class="emotion-37 emotion-38"
+            class="emotion-41 emotion-42"
           >
             <div
-              class="emotion-124 emotion-40"
+              class="emotion-128 emotion-44"
               dir="rtl"
             >
               <span
-                class="emotion-41 emotion-42"
+                class="emotion-45 emotion-46"
               >
                 ۶
               </span>
             </div>
             <div
-              class="emotion-43 emotion-44"
+              class="emotion-47 emotion-48"
               dir="rtl"
             >
               <a
-                class="emotion-45 emotion-46"
+                class="emotion-49 emotion-50"
                 href="/persian/world-50317700"
               >
                 انتخابات ایالتی آمریکا؛ دموکرات‌ها از جمهوری‌خواهان پیش افتادند
               </a>
               <div
-                class="emotion-47 emotion-48"
+                class="emotion-51 emotion-52"
               >
                 <time
-                  class="emotion-49 emotion-50"
+                  class="emotion-53 emotion-54"
                   datetime="2019-11-06"
                 >
                   به روز شده در ۶ نوامبر ۲۰۱۹
@@ -4682,38 +4772,38 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
           </div>
         </li>
         <li
-          class="emotion-34 emotion-35 emotion-4"
+          class="emotion-38 emotion-39 emotion-4"
           dir="rtl"
           role="listitem"
         >
           <div
-            class="emotion-37 emotion-38"
+            class="emotion-41 emotion-42"
           >
             <div
-              class="emotion-141 emotion-40"
+              class="emotion-145 emotion-44"
               dir="rtl"
             >
               <span
-                class="emotion-41 emotion-42"
+                class="emotion-45 emotion-46"
               >
                 ۷
               </span>
             </div>
             <div
-              class="emotion-43 emotion-44"
+              class="emotion-47 emotion-48"
               dir="rtl"
             >
               <a
-                class="emotion-45 emotion-46"
+                class="emotion-49 emotion-50"
                 href="/persian/sport-50322486"
               >
                 عراق اردن را به عنوان میزبان بازی با ایران معرفی کرد
               </a>
               <div
-                class="emotion-47 emotion-48"
+                class="emotion-51 emotion-52"
               >
                 <time
-                  class="emotion-49 emotion-50"
+                  class="emotion-53 emotion-54"
                   datetime="2019-11-06"
                 >
                   به روز شده در ۶ نوامبر ۲۰۱۹
@@ -4723,38 +4813,38 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
           </div>
         </li>
         <li
-          class="emotion-34 emotion-35 emotion-4"
+          class="emotion-38 emotion-39 emotion-4"
           dir="rtl"
           role="listitem"
         >
           <div
-            class="emotion-37 emotion-38"
+            class="emotion-41 emotion-42"
           >
             <div
-              class="emotion-124 emotion-40"
+              class="emotion-128 emotion-44"
               dir="rtl"
             >
               <span
-                class="emotion-41 emotion-42"
+                class="emotion-45 emotion-46"
               >
                 ۸
               </span>
             </div>
             <div
-              class="emotion-43 emotion-44"
+              class="emotion-47 emotion-48"
               dir="rtl"
             >
               <a
-                class="emotion-45 emotion-46"
+                class="emotion-49 emotion-50"
                 href="/persian/iran-features-50310665"
               >
                 آیا تهران بازی هسته ای را به هم می‌زند؟
               </a>
               <div
-                class="emotion-47 emotion-48"
+                class="emotion-51 emotion-52"
               >
                 <time
-                  class="emotion-49 emotion-50"
+                  class="emotion-53 emotion-54"
                   datetime="2019-11-06"
                 >
                   به روز شده در ۶ نوامبر ۲۰۱۹
@@ -4764,38 +4854,38 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
           </div>
         </li>
         <li
-          class="emotion-34 emotion-35 emotion-4"
+          class="emotion-38 emotion-39 emotion-4"
           dir="rtl"
           role="listitem"
         >
           <div
-            class="emotion-37 emotion-38"
+            class="emotion-41 emotion-42"
           >
             <div
-              class="emotion-141 emotion-40"
+              class="emotion-145 emotion-44"
               dir="rtl"
             >
               <span
-                class="emotion-41 emotion-42"
+                class="emotion-45 emotion-46"
               >
                 ۹
               </span>
             </div>
             <div
-              class="emotion-43 emotion-44"
+              class="emotion-47 emotion-48"
               dir="rtl"
             >
               <a
-                class="emotion-45 emotion-46"
+                class="emotion-49 emotion-50"
                 href="/persian/world-50316450"
               >
                 آمریکا: دو ایرانی اتهام جمع‌آوری اطلاعات علیه سازمان مجاهدین در خاک آمریکا را پذیرفتند
               </a>
               <div
-                class="emotion-47 emotion-48"
+                class="emotion-51 emotion-52"
               >
                 <time
-                  class="emotion-49 emotion-50"
+                  class="emotion-53 emotion-54"
                   datetime="2019-11-06"
                 >
                   به روز شده در ۶ نوامبر ۲۰۱۹
@@ -4805,38 +4895,38 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
           </div>
         </li>
         <li
-          class="emotion-34 emotion-35 emotion-4"
+          class="emotion-38 emotion-39 emotion-4"
           dir="rtl"
           role="listitem"
         >
           <div
-            class="emotion-37 emotion-38"
+            class="emotion-41 emotion-42"
           >
             <div
-              class="emotion-192 emotion-40"
+              class="emotion-196 emotion-44"
               dir="rtl"
             >
               <span
-                class="emotion-41 emotion-42"
+                class="emotion-45 emotion-46"
               >
                 ۱۰
               </span>
             </div>
             <div
-              class="emotion-43 emotion-44"
+              class="emotion-47 emotion-48"
               dir="rtl"
             >
               <a
-                class="emotion-45 emotion-46"
+                class="emotion-49 emotion-50"
                 href="/persian/sport-50318030"
               >
                 فوتبال ایران و عراق؛ ایران: امن است بازی می‌کنیم، فیفا: ناامن است بازی نکنید
               </a>
               <div
-                class="emotion-47 emotion-48"
+                class="emotion-51 emotion-52"
               >
                 <time
-                  class="emotion-49 emotion-50"
+                  class="emotion-53 emotion-54"
                   datetime="2019-11-06"
                 >
                   به روز شده در ۶ نوامبر ۲۰۱۹

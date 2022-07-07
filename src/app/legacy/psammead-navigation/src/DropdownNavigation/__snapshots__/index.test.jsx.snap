@@ -26,7 +26,7 @@ exports[`AMP Menu Button should render correctly 1`] = `
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #FFFFFF;
 }
 
 @media (min-width: 37.5rem) {
@@ -48,14 +48,8 @@ exports[`AMP Menu Button should render correctly 1`] = `
 }
 
 .emotion-2 {
-  color: #000000;
+  color: #fff;
   fill: currentColor;
-}
-
-@media screen and (forced-colors: active) {
-  .emotion-2 {
-    fill: linkText;
-  }
 }
 
 .emotion-6 {
@@ -150,7 +144,7 @@ exports[`AMP Menu Button should render rtl correctly 1`] = `
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #FFFFFF;
 }
 
 @media (min-width: 37.5rem) {
@@ -172,14 +166,8 @@ exports[`AMP Menu Button should render rtl correctly 1`] = `
 }
 
 .emotion-2 {
-  color: #000000;
+  color: #fff;
   fill: currentColor;
-}
-
-@media screen and (forced-colors: active) {
-  .emotion-2 {
-    fill: linkText;
-  }
 }
 
 .emotion-6 {
@@ -274,7 +262,7 @@ exports[`Canonical Closed menu button should render correctly 1`] = `
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #FFFFFF;
 }
 
 @media (min-width: 37.5rem) {
@@ -296,14 +284,8 @@ exports[`Canonical Closed menu button should render correctly 1`] = `
 }
 
 .emotion-2 {
-  color: #000000;
+  color: #fff;
   fill: currentColor;
-}
-
-@media screen and (forced-colors: active) {
-  .emotion-2 {
-    fill: linkText;
-  }
 }
 
 .emotion-4 {
@@ -371,7 +353,7 @@ exports[`Canonical Closed menu button should render rtl correctly 1`] = `
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #FFFFFF;
 }
 
 @media (min-width: 37.5rem) {
@@ -393,14 +375,8 @@ exports[`Canonical Closed menu button should render rtl correctly 1`] = `
 }
 
 .emotion-2 {
-  color: #000000;
+  color: #fff;
   fill: currentColor;
-}
-
-@media screen and (forced-colors: active) {
-  .emotion-2 {
-    fill: linkText;
-  }
 }
 
 .emotion-4 {
@@ -468,7 +444,7 @@ exports[`Canonical Open menu button should render correctly 1`] = `
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #FFFFFF;
 }
 
 @media (min-width: 37.5rem) {
@@ -490,14 +466,8 @@ exports[`Canonical Open menu button should render correctly 1`] = `
 }
 
 .emotion-2 {
-  color: #000000;
+  color: #fff;
   fill: currentColor;
-}
-
-@media screen and (forced-colors: active) {
-  .emotion-2 {
-    fill: linkText;
-  }
 }
 
 .emotion-4 {
@@ -566,7 +536,7 @@ exports[`Canonical Open menu button should render rtl correctly 1`] = `
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #FFFFFF;
 }
 
 @media (min-width: 37.5rem) {
@@ -588,14 +558,8 @@ exports[`Canonical Open menu button should render rtl correctly 1`] = `
 }
 
 .emotion-2 {
-  color: #000000;
+  color: #fff;
   fill: currentColor;
-}
-
-@media screen and (forced-colors: active) {
-  .emotion-2 {
-    fill: linkText;
-  }
 }
 
 .emotion-4 {
@@ -640,7 +604,7 @@ exports[`Canonical Open menu button should render rtl correctly 1`] = `
 
 exports[`Dropdown navigation should render correctly when closed 1`] = `
 .emotion-0 {
-  background-color: #FFFFFF;
+  background-color: #222222;
   clear: both;
   overflow: hidden;
   height: 0;
@@ -668,11 +632,12 @@ exports[`Dropdown navigation should render correctly when closed 1`] = `
   list-style-type: none;
   margin: 0;
   padding: 0 0.5rem;
-  border-bottom: 0.0625rem solid #E6E8EA;
+  border-bottom: 0.125rem solid #3F3F42;
 }
 
 .emotion-4 {
-  border-bottom: 0.0625rem solid #E6E8EA;
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #3F3F42;
 }
 
 .emotion-4:last-child {
@@ -686,7 +651,7 @@ exports[`Dropdown navigation should render correctly when closed 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #141414;
+  color: #FFFFFF;
   -webkit-text-decoration: none;
   text-decoration: none;
   padding: 0.75rem 0;
@@ -711,11 +676,10 @@ exports[`Dropdown navigation should render correctly when closed 1`] = `
 .emotion-6:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  text-decoration-color: #B80000;
 }
 
 .emotion-20 {
-  border-left: 0.25rem solid #B80000;
+  border-left: 0.25rem solid #FFFFFF;
   padding-left: 0.5rem;
 }
 
@@ -899,7 +863,7 @@ exports[`Dropdown navigation should render correctly when closed 1`] = `
 
 exports[`Dropdown navigation should render correctly when open 1`] = `
 .emotion-0 {
-  background-color: #FFFFFF;
+  background-color: #222222;
   clear: both;
   overflow: hidden;
   height: 0;
@@ -928,11 +892,12 @@ exports[`Dropdown navigation should render correctly when open 1`] = `
   list-style-type: none;
   margin: 0;
   padding: 0 0.5rem;
-  border-bottom: 0.0625rem solid #E6E8EA;
+  border-bottom: 0.125rem solid #3F3F42;
 }
 
 .emotion-4 {
-  border-bottom: 0.0625rem solid #E6E8EA;
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #3F3F42;
 }
 
 .emotion-4:last-child {
@@ -946,7 +911,7 @@ exports[`Dropdown navigation should render correctly when open 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #141414;
+  color: #FFFFFF;
   -webkit-text-decoration: none;
   text-decoration: none;
   padding: 0.75rem 0;
@@ -971,11 +936,10 @@ exports[`Dropdown navigation should render correctly when open 1`] = `
 .emotion-6:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  text-decoration-color: #B80000;
 }
 
 .emotion-20 {
-  border-left: 0.25rem solid #B80000;
+  border-left: 0.25rem solid #FFFFFF;
   padding-left: 0.5rem;
 }
 
