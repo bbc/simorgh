@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 import { getPica } from '#legacy/gel-foundations/src/typography';
 import {
   GEL_SPACING,
-  GEL_SPACING_BORDER,
   GEL_SPACING_DBL,
 } from '#app/legacy/gel-foundations/src/spacings';
 import {
@@ -15,7 +14,6 @@ import {
   StoryPromoUlBase,
   StoryPromoLiBase,
 } from '#containers/NewStoryPromoList';
-import { C_WHITE } from '#app/legacy/psammead-styles/src/colours';
 import Promo from '#containers/NewStoryPromo';
 
 export const StyledPromoHeading = styled(Promo.Heading)`
@@ -41,18 +39,9 @@ export const FlexPromoList = styled(StoryPromoUlBase)`
 `;
 
 export const FlexPromoListItem = styled(StoryPromoLiBase)`
-  background-color: ${C_WHITE};
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     flex-grow: 1;
     flex-basis: 0;
     margin: 0;
   }
-`;
-
-export const SingleItemWrapper = styled.div`
-  background-color: ${C_WHITE};
-`;
-
-export const TransparentBorder = styled.div`
-  border: ${GEL_SPACING_BORDER} solid transparent;
 `;

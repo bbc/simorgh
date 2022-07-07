@@ -9,8 +9,6 @@ import {
   StyledWrapper,
   FlexPromoList,
   FlexPromoListItem,
-  SingleItemWrapper,
-  TransparentBorder,
 } from './index.styles';
 import TopStoriesItem from './TopStoriesItem';
 
@@ -34,19 +32,13 @@ const TopStoriesPromo = ({ content }) => {
       </SectionLabel>
 
       {hasSingleContent ? (
-        <TransparentBorder>
-          <SingleItemWrapper>
-            <TopStoriesItem item={content[0]} index={0} labelId={LABEL_ID} />
-          </SingleItemWrapper>
-        </TransparentBorder>
+        <TopStoriesItem item={content[0]} index={0} labelId={LABEL_ID} />
       ) : (
         <FlexPromoList>
           {content.map(item => (
-            <TransparentBorder>
-              <FlexPromoListItem>
-                <TopStoriesItem item={item} labelId={LABEL_ID} />
-              </FlexPromoListItem>
-            </TransparentBorder>
+            <FlexPromoListItem>
+              <TopStoriesItem item={item} labelId={LABEL_ID} />
+            </FlexPromoListItem>
           ))}
         </FlexPromoList>
       )}
