@@ -1,9 +1,6 @@
 import styled from '@emotion/styled';
 
-import {
-  StoryPromoUlBase,
-  StoryPromoLiBase,
-} from '#containers/NewStoryPromoList';
+import { StoryPromoLiBase } from '#containers/NewStoryPromoList';
 import {
   GEL_SPACING,
   GEL_SPACING_BORDER,
@@ -15,17 +12,6 @@ import {
 } from '#app/legacy/gel-foundations/src/breakpoints';
 import Image from '#legacy/psammead-image/src';
 import RelatedContentGrid from './Grid';
-
-export const StoryPromoUlGrid = styled(StoryPromoUlBase)`
-  display: grid;
-  grid-auto-columns: 1fr;
-  grid-auto-rows: 1fr;
-  gap: ${GEL_SPACING_DBL};
-
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-`;
 
 export const StyledWrapper = styled.section`
   padding: 0 ${GEL_SPACING};
@@ -40,11 +26,6 @@ export const StyledWrapper = styled.section`
 
 export const StyledStoryPromoLi = styled(StoryPromoLiBase)`
   height: 100%;
-`;
-
-export const SingleItemGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
 `;
 
 export const StyledImage = styled(Image)`

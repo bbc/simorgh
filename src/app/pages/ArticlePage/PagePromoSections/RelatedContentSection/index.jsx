@@ -9,14 +9,8 @@ import slice from 'ramda/src/slice';
 import identity from 'ramda/src/identity';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { C_GREY_2 } from '#app/legacy/psammead-styles/src/colours';
-import {
-  StyledStoryPromoLi,
-  StyledWrapper,
-  StyledGrid,
-  SingleItemGrid,
-} from './index.styles';
+import { StyledStoryPromoLi, StyledWrapper, StyledGrid } from './index.styles';
 import RelatedContentItem from './RelatedContentItem';
-import RelatedContentGrid from './Grid';
 
 const RelatedContentPromo = ({ content }) => {
   const { translations } = useContext(ServiceContext);
