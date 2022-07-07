@@ -7,7 +7,7 @@ import { C_WHITE, C_EBON, C_SHADOW } from '#legacy/psammead-styles/src/colours';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
-  GEL_SPACING_DBL,
+  GEL_SPACING_HLF_TRPL,
 } from '#legacy/gel-foundations/src/spacings';
 import { Helmet } from 'react-helmet';
 import {
@@ -96,7 +96,7 @@ const StyledDropdownLi = styled.li`
   border-bottom: 0.0625rem solid ${C_SHADOW};
 
   &:last-child {
-    padding-bottom: ${GEL_SPACING_DBL};
+    padding-bottom: ${GEL_SPACING_HLF};
     border: 0;
   }
 `;
@@ -106,6 +106,8 @@ const StyledDropdownLink = styled.a`
   ${({ service }) => service && getSansRegular(service)}
   color: ${C_WHITE};
   text-decoration: none;
+  padding: ${GEL_SPACING_HLF_TRPL} 0;
+  display: inline-block;
 
   &:hover,
   &:focus {

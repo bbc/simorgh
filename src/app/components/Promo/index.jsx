@@ -4,6 +4,7 @@ import { arrayOf, element } from 'prop-types';
 import partition from 'ramda/src/partition';
 
 import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '#legacy/gel-foundations/src/breakpoints';
+import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
 
 import { ServiceContext } from '#contexts/ServiceContext';
 
@@ -36,7 +37,7 @@ const Left = styled.div`
 `;
 const Right = styled.div`
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    padding-left: 0.5rem;
+    padding-inline-start: ${GEL_SPACING};
     width: 67%;
     display: inline-block;
     vertical-align: top;

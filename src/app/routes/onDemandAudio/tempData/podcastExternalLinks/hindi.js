@@ -109,6 +109,16 @@ const externalLinks = {
     ],
     p09ds7zx: [
       {
+        linkText: 'Spotify',
+        linkUrl:
+          'https://open.spotify.com/show/6BGVmN2D82U8hGgDBA4N07?si=9_IClv8KTQyFS4N9jQiSpw',
+      },
+      {
+        linkText: 'Apple Podcasts',
+        linkUrl:
+          'https://podcasts.apple.com/gb/podcast/%E0%A4%A6-%E0%A4%A8%E0%A4%AD%E0%A4%B0-%E0%A4%AA-%E0%A4%B0-%E0%A4%A6-%E0%A4%A8-%E0%A4%AA-%E0%A4%B0-%E0%A4%96-%E0%A4%AC%E0%A4%B0-dinbhar/id1563251973',
+      },
+      {
         linkText: 'Jio Saavn',
         linkUrl:
           'https://www.jiosaavn.com/shows/%E0%A4%A6%E0%A4%BF%E0%A4%A8-%E0%A4%AD%E0%A4%B0/1/ZBludb0NoRM_',
