@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { shape, arrayOf, string } from 'prop-types';
 import SectionLabel from '#legacy/psammead-section-label/src';
-import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import pathEq from 'ramda/src/pathEq';
 import tail from 'ramda/src/tail';
@@ -20,13 +19,14 @@ const RelatedContentPromo = ({ content }) => {
   if (!pathEq(['type'], 'relatedContent', content)) return null;
 
   if (!content) return null;
-  const items = path(['model', 'blocks'], content);
+  const items = pathOr([], ['model', 'blocks'], content);
 
   const LABEL_ID = 'related-content-heading';
 
   const customTitle =
     pathEq([0, 'type'], 'title', items) &&
-    path(
+    pathOr(
+      [],
       [0, 'model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
       items,
     );

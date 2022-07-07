@@ -23,5 +23,6 @@ export const StyledWrapper = styled.section`
 
 export const StyledStoryPromoLi = styled(StoryPromoLiBase)`
   height: 100%;
+  margin: 0;
   padding-bottom: ${GEL_SPACING_DBL};
 `;
