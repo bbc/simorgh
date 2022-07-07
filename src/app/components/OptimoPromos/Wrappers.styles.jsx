@@ -30,4 +30,5 @@ export const PromoWrapper = styled.div`
 
 export const BorderWrapper = styled.div`
   border: ${GEL_SPACING_BORDER} solid transparent;
+  height: 100%;
 `;

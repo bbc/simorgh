@@ -12,10 +12,11 @@ import { C_GREY_2 } from '#app/legacy/psammead-styles/src/colours';
 import {
   StyledStoryPromoLi,
   StyledWrapper,
-  StoryPromoUlGrid,
+  StyledGrid,
   SingleItemGrid,
 } from './index.styles';
 import RelatedContentItem from './RelatedContentItem';
+import RelatedContentGrid from './Grid';
 
 const RelatedContentPromo = ({ content }) => {
   const { translations } = useContext(ServiceContext);
@@ -51,15 +52,15 @@ const RelatedContentPromo = ({ content }) => {
         {title}
       </SectionLabel>
       {hasSingleContent ? (
-        <SingleItemGrid>
+        <StyledGrid>
           <RelatedContentItem
             item={reducedStoryPromoItems[0]}
             index={0}
             labelId={LABEL_ID}
           />
-        </SingleItemGrid>
+        </StyledGrid>
       ) : (
-        <StoryPromoUlGrid>
+        <StyledGrid as="ul" role="list">
           {reducedStoryPromoItems.map((item, index) => (
             <StyledStoryPromoLi>
               <RelatedContentItem
@@ -69,7 +70,7 @@ const RelatedContentPromo = ({ content }) => {
               />
             </StyledStoryPromoLi>
           ))}
-        </StoryPromoUlGrid>
+        </StyledGrid>
       )}
     </StyledWrapper>
   );
