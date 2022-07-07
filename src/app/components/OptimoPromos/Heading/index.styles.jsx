@@ -6,6 +6,6 @@ import styled from '@emotion/styled';
 export default styled.h3`
   color: ${C_GREY_10};
   margin: 0; /* Reset */
-  padding-bottom: ${GEL_SPACING};
+  padding-bottom: ${({ as }) => (as === 'div' ? '0' : GEL_SPACING)};
   ${({ service }) => getSerifMedium(service)}
 `;

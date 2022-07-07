@@ -14,6 +14,7 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#app/legacy/gel-foundations/src/breakpoints';
 import { C_WHITE } from '#app/legacy/psammead-styles/src/colours';
+import Image from '#legacy/psammead-image/src';
 
 export const StoryPromoUlGrid = styled(StoryPromoUlBase)`
   display: grid;
@@ -52,4 +53,10 @@ export const SingleItemWrapper = styled.div`
 
 export const TransparentBorder = styled.div`
   border: ${GEL_SPACING_BORDER} solid transparent;
+`;
+
+export const StyledImage = styled(Image)`
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  height: auto;
 `;

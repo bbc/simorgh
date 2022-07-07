@@ -6,6 +6,7 @@ import { buildUniquePromoId } from '#app/containers/StoryPromo/utilities';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
 import Promo from '#containers/NewStoryPromo';
+import { StyledImage } from './index.styles';
 
 const RelatedContentItem = ({ item, labelId, index }) => {
   const { script } = useContext(ServiceContext);
@@ -109,6 +110,7 @@ const RelatedContentItem = ({ item, labelId, index }) => {
         width={width}
         height={height}
         lazyload
+        imageComponent={StyledImage}
       />
       <Promo.ContentWrapper>
         <Promo.Heading headingTagOverride={headingTagOverride} script={script}>
