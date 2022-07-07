@@ -10,8 +10,6 @@ export const StoryPromoLiBase = styled.li`
   }
 `;
 
-StoryPromoLiBase.defaultProps = { role: 'listitem' };
-
 export const StoryPromoUlBase = styled.ul`
   list-style-type: none;
   margin: 0;
