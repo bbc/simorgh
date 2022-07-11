@@ -1,22 +1,42 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import RelatedContentItem from './RelatedContentItem';
-import {
-  RelatedContentData,
-  RelatedContentWithNoImage,
-  RelatedContentWithNoTimestamp,
-} from './fixture/RelatedContentitemFixtures';
+import { RelatedContentData } from './fixture/RelatedContentitemFixtures';
 
 // eslint-disable-next-line react/prop-types
-const RelatedContentitem = ({ fixtureData }) => (
-  <RelatedContentItem item={fixtureData} labelId="RelatedContent" index={0} />
+const RelatedContentitem = ({ fixtureData, service = 'mundo' }) => (
+  <ServiceContextProvider service={service}>
+    <ToggleContextProvider>
+      <RelatedContentItem
+        item={fixtureData}
+        labelId="RelatedContent"
+        index={0}
+      />
+    </ToggleContextProvider>
+  </ServiceContextProvider>
 );
 
-describe('Related Content Promo', () => {
-  it('should render Related Content correctly', () => {});
+describe('Optimo Related Content Promo Item', () => {
+  it('should render Related Content when given appropriate data', () => {
+    const { getByAltText, getByText } = render(
+      <RelatedContentitem fixtureData={RelatedContentData} />,
+    );
+
+    const altText = getByAltText('Keyframe #2');
+    const heading = getByText(
+      'Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson',
+    );
+    const timestamp = getByText('17 febrero 2020');
+
+    expect(altText).toBeInTheDocument();
+    expect(heading).toBeInTheDocument();
+    expect(timestamp).toBeInTheDocument();
+  });
 
   it('should return null if no data is passed', () => {
-    const { container } = render(<RelatedContentitem blocks={{}} />);
+    const { container } = render(<RelatedContentitem fixtureData={{}} />);
     expect(container).toBeEmptyDOMElement();
   });
 });

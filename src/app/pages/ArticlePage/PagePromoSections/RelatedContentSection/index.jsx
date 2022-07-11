@@ -47,7 +47,7 @@ const RelatedContentPromo = ({ content }) => {
 
   return (
     <StyledWrapper aria-labelledby={LABEL_ID} role="region" data-e2e={LABEL_ID}>
-      <SectionLabel id={LABEL_ID} backgroundColor={C_GREY_2}>
+      <SectionLabel labelId={LABEL_ID} backgroundColor={C_GREY_2}>
         {title}
       </SectionLabel>
       {hasSingleContent ? (
@@ -61,11 +61,12 @@ const RelatedContentPromo = ({ content }) => {
       ) : (
         <RelatedContentGrid as={StoryPromoUlBase}>
           {reducedStoryPromoItems.map((item, index) => (
-            <StyledStoryPromoLi>
+            // eslint-disable-next-line react/no-array-index-key
+            <StyledStoryPromoLi key={`${LABEL_ID}-${index}`}>
               <RelatedContentItem
                 item={item}
                 index={index}
-                labelId="RelatedContent"
+                labelId={LABEL_ID}
               />
             </StyledStoryPromoLi>
           ))}

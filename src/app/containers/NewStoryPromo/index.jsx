@@ -16,13 +16,16 @@ import {
   BorderWrapper,
 } from '#components/OptimoPromos/Wrappers.styles';
 import Image from '#components/OptimoPromos/Image';
+import path from 'ramda/src/path';
 
 const PromoContext = React.createContext({});
 
 const Promo = ({ children, to, id, mediaType, eventTrackingData }) => {
   const { script, service } = useContext(ServiceContext);
 
-  const viewRef = useViewTracker(eventTrackingData.block);
+  const eventTrackingDataSend = path(['block'], eventTrackingData);
+
+  const viewRef = useViewTracker(eventTrackingDataSend);
 
   return (
     <BorderWrapper>

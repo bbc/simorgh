@@ -6,9 +6,11 @@ import { buildUniquePromoId } from '#app/containers/StoryPromo/utilities';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
 import Promo from '#containers/NewStoryPromo';
+import isEmpty from 'ramda/src/isEmpty';
 
 const RelatedContentItem = ({ item, labelId, index }) => {
   const { script } = useContext(ServiceContext);
+  if (!item || isEmpty(item)) return null;
 
   const eventTrackingData = {
     block: {
@@ -73,6 +75,7 @@ const RelatedContentItem = ({ item, labelId, index }) => {
     ],
     item,
   );
+
   const width = path(
     ['model', 'blocks', 0, 'model', 'blocks', 1, 'model', 'width'],
     item,
@@ -107,7 +110,7 @@ const RelatedContentItem = ({ item, labelId, index }) => {
     <Promo to={url} id={linkId} eventTrackingData={eventTrackingData}>
       <Promo.Image
         src={src}
-        alt={altText}
+        altText={altText}
         srcset={primarySrcset}
         fallbackSrcset={fallbackSrcset}
         width={width}

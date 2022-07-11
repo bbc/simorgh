@@ -195,132 +195,188 @@ export const RelatedContentData = {
   },
 };
 
-export const RelatedContentWithNoImage = {
-  type: 'link',
+export const RelatedContentSingleItem = {
+  type: 'links',
   model: {
-    locator: 'urn:bbc:cps:curie:asset:0f35c912-afc7-1a4b-9518-7853401c1149',
     blocks: [
       {
-        type: 'text',
+        type: 'link',
         model: {
+          locator:
+            'urn:bbc:cps:curie:asset:0f35c912-afc7-1a4b-9518-7853401c1149',
           blocks: [
             {
-              type: 'paragraph',
+              type: 'image',
               model: {
-                text: 'Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson',
                 blocks: [
                   {
-                    type: 'urlLink',
+                    type: 'altText',
                     model: {
-                      text: 'Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson',
-                      locator: 'https://www.test.bbc.com/pidgin/media-23267821',
                       blocks: [
                         {
-                          type: 'fragment',
+                          type: 'text',
                           model: {
-                            text: 'Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson',
-                            attributes: [],
+                            blocks: [
+                              {
+                                type: 'paragraph',
+                                model: {
+                                  text: 'Keyframe #2',
+                                  blocks: [
+                                    {
+                                      type: 'fragment',
+                                      model: {
+                                        text: 'Keyframe #2',
+                                        attributes: [],
+                                      },
+                                    },
+                                  ],
+                                },
+                              },
+                            ],
                           },
                         },
                       ],
-                      isExternal: false,
+                    },
+                  },
+                  {
+                    type: 'rawImage',
+                    model: {
+                      width: 1024,
+                      height: 576,
+                      locator: 'B935/test/_63731474_p01p5ql9.jpg',
+                      originCode: 'cpsdevpb',
+                      copyrightHolder: 'AFP',
+                      suitableForSyndication: true,
                     },
                   },
                 ],
               },
             },
-          ],
-        },
-      },
-      {
-        type: 'aresLink',
-        model: {
-          blocks: [
             {
-              type: 'cpsLinkMetadata',
-              model: {
-                assetType: 'MAP',
-                timestamp: 1581940273000,
-              },
-            },
-            {
-              type: 'aresMedia',
+              type: 'text',
               model: {
                 blocks: [
                   {
-                    blockId: 'urn:bbc:ares::clip:p01p5qfc',
-                    type: 'aresMediaMetadata',
+                    type: 'paragraph',
                     model: {
-                      id: 'p01p5qfc',
-                      subType: 'clip',
-                      format: 'audio_video',
-                      title:
-                        'Justin Trudeau wins Canadian election with minority government',
-                      synopses: {
-                        short:
-                          'Voters take to the polls in the Canadian election',
-                        long: "Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote.Th BBC's Lyce Ducette reports.",
-                        medium:
-                          'Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote.',
-                      },
-                      imageUrl:
-                        'ichef.test.bbci.co.uk/images/ic/$recipe/p01p5ql9.jpg',
-                      embedding: true,
-                      advertising: true,
-                      caption:
-                        "Canada's general election took place on Monday 22 October",
-                      versions: [
+                      text: 'Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson',
+                      blocks: [
                         {
-                          versionId: 'p01p5qff',
-                          types: ['Original'],
-                          duration: 67,
-                          durationISO8601: 'PT1M7S',
-                          warnings: {},
-                          availableTerritories: {
-                            uk: true,
-                            nonUk: true,
+                          type: 'urlLink',
+                          model: {
+                            text: 'Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson',
+                            locator:
+                              'https://www.test.bbc.com/pidgin/media-23267821',
+                            blocks: [
+                              {
+                                type: 'fragment',
+                                model: {
+                                  text: 'Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson',
+                                  attributes: [],
+                                },
+                              },
+                            ],
+                            isExternal: false,
                           },
-                          availableFrom: 1571751302000,
                         },
                       ],
-                      syndication: {
-                        destinations: [],
-                      },
-                      smpKind: 'programme',
+                    },
+                  },
+                ],
+              },
+            },
+            {
+              type: 'aresLink',
+              model: {
+                blocks: [
+                  {
+                    type: 'cpsLinkMetadata',
+                    model: {
+                      assetType: 'MAP',
+                      timestamp: 1581940273000,
                     },
                   },
                   {
-                    type: 'image',
+                    type: 'aresMedia',
                     model: {
                       blocks: [
                         {
-                          type: 'rawImage',
+                          blockId: 'urn:bbc:ares::clip:p01p5qfc',
+                          type: 'aresMediaMetadata',
                           model: {
-                            width: 1920,
-                            height: 1080,
-                            locator:
-                              'ichef.test.bbci.co.uk/images/ic/$widthxn/p01p5ql9.jpg',
-                            originCode: 'mpv',
+                            id: 'p01p5qfc',
+                            subType: 'clip',
+                            format: 'audio_video',
+                            title:
+                              'Justin Trudeau wins Canadian election with minority government',
+                            synopses: {
+                              short:
+                                'Voters take to the polls in the Canadian election',
+                              long: "Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote.Th BBC's Lyce Ducette reports.",
+                              medium:
+                                'Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote.',
+                            },
+                            imageUrl:
+                              'ichef.test.bbci.co.uk/images/ic/$recipe/p01p5ql9.jpg',
+                            embedding: true,
+                            advertising: true,
+                            caption:
+                              "Canada's general election took place on Monday 22 October",
+                            versions: [
+                              {
+                                versionId: 'p01p5qff',
+                                types: ['Original'],
+                                duration: 67,
+                                durationISO8601: 'PT1M7S',
+                                warnings: {},
+                                availableTerritories: {
+                                  uk: true,
+                                  nonUk: true,
+                                },
+                                availableFrom: 1571751302000,
+                              },
+                            ],
+                            syndication: {
+                              destinations: [],
+                            },
+                            smpKind: 'programme',
                           },
                         },
                         {
-                          type: 'altText',
+                          type: 'image',
                           model: {
                             blocks: [
                               {
-                                type: 'text',
+                                type: 'rawImage',
+                                model: {
+                                  width: 1920,
+                                  height: 1080,
+                                  locator:
+                                    'ichef.test.bbci.co.uk/images/ic/$widthxn/p01p5ql9.jpg',
+                                  originCode: 'mpv',
+                                },
+                              },
+                              {
+                                type: 'altText',
                                 model: {
                                   blocks: [
                                     {
-                                      type: 'paragraph',
+                                      type: 'text',
                                       model: {
-                                        text: 'Keyframe #2',
                                         blocks: [
                                           {
-                                            type: 'fragment',
+                                            type: 'paragraph',
                                             model: {
                                               text: 'Keyframe #2',
-                                              attributes: [],
+                                              blocks: [
+                                                {
+                                                  type: 'fragment',
+                                                  model: {
+                                                    text: 'Keyframe #2',
+                                                    attributes: [],
+                                                  },
+                                                },
+                                              ],
                                             },
                                           },
                                         ],
@@ -345,33 +401,194 @@ export const RelatedContentWithNoImage = {
   },
 };
 
-export const RelatedContentWithNoTimestamp = {
-  type: 'link',
+export const RelatedContentList = {
+  type: 'relatedContent',
   model: {
-    locator: 'urn:bbc:cps:curie:asset:0f35c912-afc7-1a4b-9518-7853401c1149',
     blocks: [
       {
-        type: 'image',
+        type: 'link',
         model: {
+          locator:
+            'urn:bbc:cps:curie:asset:0f35c912-afc7-1a4b-9518-7853401c1149',
           blocks: [
             {
-              type: 'altText',
+              type: 'image',
               model: {
                 blocks: [
                   {
-                    type: 'text',
+                    type: 'altText',
                     model: {
                       blocks: [
                         {
-                          type: 'paragraph',
+                          type: 'text',
                           model: {
-                            text: 'Keyframe #2',
+                            blocks: [
+                              {
+                                type: 'paragraph',
+                                model: {
+                                  text: 'Keyframe #2',
+                                  blocks: [
+                                    {
+                                      type: 'fragment',
+                                      model: {
+                                        text: 'Keyframe #2',
+                                        attributes: [],
+                                      },
+                                    },
+                                  ],
+                                },
+                              },
+                            ],
+                          },
+                        },
+                      ],
+                    },
+                  },
+                  {
+                    type: 'rawImage',
+                    model: {
+                      width: 1024,
+                      height: 576,
+                      locator: 'B935/test/_63731474_p01p5ql9.jpg',
+                      originCode: 'cpsdevpb',
+                      copyrightHolder: 'AFP',
+                      suitableForSyndication: true,
+                    },
+                  },
+                ],
+              },
+            },
+            {
+              type: 'text',
+              model: {
+                blocks: [
+                  {
+                    type: 'paragraph',
+                    model: {
+                      text: 'Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson',
+                      blocks: [
+                        {
+                          type: 'urlLink',
+                          model: {
+                            text: 'Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson',
+                            locator:
+                              'https://www.test.bbc.com/pidgin/media-23267821',
                             blocks: [
                               {
                                 type: 'fragment',
                                 model: {
-                                  text: 'Keyframe #2',
+                                  text: 'Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson',
                                   attributes: [],
+                                },
+                              },
+                            ],
+                            isExternal: false,
+                          },
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+            },
+            {
+              type: 'aresLink',
+              model: {
+                blocks: [
+                  {
+                    type: 'cpsLinkMetadata',
+                    model: {
+                      assetType: 'MAP',
+                      timestamp: 1581940273000,
+                    },
+                  },
+                  {
+                    type: 'aresMedia',
+                    model: {
+                      blocks: [
+                        {
+                          blockId: 'urn:bbc:ares::clip:p01p5qfc',
+                          type: 'aresMediaMetadata',
+                          model: {
+                            id: 'p01p5qfc',
+                            subType: 'clip',
+                            format: 'audio_video',
+                            title:
+                              'Justin Trudeau wins Canadian election with minority government',
+                            synopses: {
+                              short:
+                                'Voters take to the polls in the Canadian election',
+                              long: "Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote.Th BBC's Lyce Ducette reports.",
+                              medium:
+                                'Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote.',
+                            },
+                            imageUrl:
+                              'ichef.test.bbci.co.uk/images/ic/$recipe/p01p5ql9.jpg',
+                            embedding: true,
+                            advertising: true,
+                            caption:
+                              "Canada's general election took place on Monday 22 October",
+                            versions: [
+                              {
+                                versionId: 'p01p5qff',
+                                types: ['Original'],
+                                duration: 67,
+                                durationISO8601: 'PT1M7S',
+                                warnings: {},
+                                availableTerritories: {
+                                  uk: true,
+                                  nonUk: true,
+                                },
+                                availableFrom: 1571751302000,
+                              },
+                            ],
+                            syndication: {
+                              destinations: [],
+                            },
+                            smpKind: 'programme',
+                          },
+                        },
+                        {
+                          type: 'image',
+                          model: {
+                            blocks: [
+                              {
+                                type: 'rawImage',
+                                model: {
+                                  width: 1920,
+                                  height: 1080,
+                                  locator:
+                                    'ichef.test.bbci.co.uk/images/ic/$widthxn/p01p5ql9.jpg',
+                                  originCode: 'mpv',
+                                },
+                              },
+                              {
+                                type: 'altText',
+                                model: {
+                                  blocks: [
+                                    {
+                                      type: 'text',
+                                      model: {
+                                        blocks: [
+                                          {
+                                            type: 'paragraph',
+                                            model: {
+                                              text: 'Keyframe #2',
+                                              blocks: [
+                                                {
+                                                  type: 'fragment',
+                                                  model: {
+                                                    text: 'Keyframe #2',
+                                                    attributes: [],
+                                                  },
+                                                },
+                                              ],
+                                            },
+                                          },
+                                        ],
+                                      },
+                                    },
+                                  ],
                                 },
                               },
                             ],
@@ -383,44 +600,480 @@ export const RelatedContentWithNoTimestamp = {
                 ],
               },
             },
+          ],
+        },
+      },
+      {
+        type: 'link',
+        model: {
+          locator:
+            'urn:bbc:cps:curie:asset:800b4caf-3081-5047-ba3f-4f46a9344aae',
+          blocks: [
             {
-              type: 'rawImage',
+              type: 'image',
               model: {
-                width: 1024,
-                height: 576,
-                locator: 'B935/test/_63731474_p01p5ql9.jpg',
-                originCode: 'cpsdevpb',
-                copyrightHolder: 'AFP',
-                suitableForSyndication: true,
+                blocks: [
+                  {
+                    type: 'altText',
+                    model: {
+                      blocks: [
+                        {
+                          type: 'text',
+                          model: {
+                            blocks: [
+                              {
+                                type: 'paragraph',
+                                model: {
+                                  text: 'BBC MInute',
+                                  blocks: [
+                                    {
+                                      type: 'fragment',
+                                      model: {
+                                        text: 'BBC MInute',
+                                        attributes: [],
+                                      },
+                                    },
+                                  ],
+                                },
+                              },
+                            ],
+                          },
+                        },
+                      ],
+                    },
+                  },
+                  {
+                    type: 'rawImage',
+                    model: {
+                      width: 1024,
+                      height: 576,
+                      locator: 'B7E8/test/_63708074_mediaitem63708073.png',
+                      originCode: 'cpsdevpb',
+                      copyrightHolder: 'BBC',
+                      suitableForSyndication: true,
+                    },
+                  },
+                ],
+              },
+            },
+            {
+              type: 'text',
+              model: {
+                blocks: [
+                  {
+                    type: 'paragraph',
+                    model: {
+                      text: 'BBC News Pidgin One Minute News',
+                      blocks: [
+                        {
+                          type: 'urlLink',
+                          model: {
+                            text: 'BBC News Pidgin One Minute News',
+                            locator:
+                              'https://www.test.bbc.com/pidgin/media-23147054',
+                            blocks: [
+                              {
+                                type: 'fragment',
+                                model: {
+                                  text: 'BBC News Pidgin One Minute News',
+                                  attributes: [],
+                                },
+                              },
+                            ],
+                            isExternal: false,
+                          },
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+            },
+            {
+              type: 'aresLink',
+              model: {
+                blocks: [
+                  {
+                    type: 'cpsLinkMetadata',
+                    model: {
+                      assetType: 'MAP',
+                      timestamp: 1502963087000,
+                    },
+                  },
+                  {
+                    type: 'aresMedia',
+                    model: {
+                      blocks: [
+                        {
+                          blockId: 'urn:bbc:ares::clip:p01cqycr',
+                          type: 'aresMediaMetadata',
+                          model: {
+                            id: 'p01cqycr',
+                            subType: 'clip',
+                            format: 'audio',
+                            title: 'BBC News Piding One Minute News',
+                            synopses: {
+                              short: "The Wold's most interesting stories",
+                              medium: "The Wold's most interesting stories",
+                              long: "The Wold's most interesting stories",
+                            },
+                            imageUrl:
+                              'ichef.test.bbci.co.uk/images/ic/$recipe/p01cqz13.jpg',
+                            embedding: false,
+                            advertising: true,
+                            versions: [
+                              {
+                                versionId: 'p01cqyct',
+                                types: ['Original'],
+                                duration: 15,
+                                durationISO8601: 'PT15S',
+                                warnings: {},
+                                availableTerritories: {
+                                  uk: true,
+                                  nonUk: true,
+                                },
+                                availableFrom: 1502288512000,
+                              },
+                            ],
+                            syndication: {
+                              destinations: [],
+                            },
+                            smpKind: 'radioProgramme',
+                          },
+                        },
+                        {
+                          type: 'image',
+                          model: {
+                            blocks: [
+                              {
+                                type: 'rawImage',
+                                model: {
+                                  locator:
+                                    'ichef.test.bbci.co.uk/images/ic/$widthxn/p01cqz13.jpg',
+                                  originCode: 'mpv',
+                                },
+                              },
+                            ],
+                          },
+                        },
+                      ],
+                    },
+                  },
+                ],
               },
             },
           ],
         },
       },
       {
-        type: 'text',
+        type: 'link',
+        model: {
+          locator: 'urn:bbc:optimo:asset:cg9yj3x13m0o',
+          blocks: [
+            {
+              type: 'image',
+              model: {
+                blocks: [
+                  {
+                    type: 'altText',
+                    model: {
+                      blocks: [
+                        {
+                          type: 'text',
+                          model: {
+                            blocks: [
+                              {
+                                type: 'paragraph',
+                                model: {
+                                  text: 'test',
+                                  blocks: [
+                                    {
+                                      type: 'fragment',
+                                      model: {
+                                        text: 'test',
+                                        attributes: [],
+                                      },
+                                    },
+                                  ],
+                                },
+                              },
+                            ],
+                          },
+                        },
+                      ],
+                    },
+                  },
+                  {
+                    type: 'rawImage',
+                    model: {
+                      width: 817,
+                      height: 506,
+                      locator:
+                        '02d2/test/935efae0-a125-11ec-a7c9-255f5459b217.png',
+                      imageType: 'background',
+                      originCode: 'cpsdevpb',
+                      copyrightHolder: 'BBC',
+                    },
+                  },
+                ],
+              },
+            },
+            {
+              type: 'text',
+              model: {
+                blocks: [
+                  {
+                    type: 'paragraph',
+                    model: {
+                      text: 'This is a promo test',
+                      blocks: [
+                        {
+                          type: 'urlLink',
+                          model: {
+                            text: 'This is a promo test',
+                            locator:
+                              'https://www.test.bbc.com/pidgin/articles/cg9yj3x13m0o',
+                            blocks: [
+                              {
+                                type: 'fragment',
+                                model: {
+                                  text: 'This is a promo test',
+                                  attributes: [],
+                                },
+                              },
+                            ],
+                            isExternal: false,
+                          },
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+            },
+            {
+              type: 'aresLink',
+              model: {
+                blocks: [
+                  {
+                    type: 'optimoLinkMetadata',
+                    model: {
+                      timestamp: 1622753625680,
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
+};
+
+export const RelatedContentCustomLabel = {
+  type: 'relatedContent',
+  model: {
+    blocks: [
+      {
+        type: 'title',
         model: {
           blocks: [
             {
-              type: 'paragraph',
+              type: 'text',
               model: {
-                text: 'Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson',
                 blocks: [
                   {
-                    type: 'urlLink',
+                    type: 'paragraph',
                     model: {
-                      text: 'Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson',
-                      locator: 'https://www.test.bbc.com/pidgin/media-23267821',
+                      text: 'Related content block',
                       blocks: [
                         {
                           type: 'fragment',
                           model: {
-                            text: 'Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson',
+                            text: 'Related content block',
                             attributes: [],
                           },
                         },
                       ],
-                      isExternal: false,
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      },
+      {
+        type: 'link',
+        model: {
+          locator:
+            'urn:bbc:cps:curie:asset:b5c53243-a695-e059-e040-850a02846523',
+          blocks: [
+            {
+              type: 'image',
+              model: {
+                blocks: [
+                  {
+                    type: 'altText',
+                    model: {
+                      blocks: [
+                        {
+                          type: 'text',
+                          model: {
+                            blocks: [
+                              {
+                                type: 'paragraph',
+                                model: {
+                                  text: 'BBC Test Image',
+                                  blocks: [
+                                    {
+                                      type: 'fragment',
+                                      model: {
+                                        text: 'BBC Test Image',
+                                        attributes: [],
+                                      },
+                                    },
+                                  ],
+                                },
+                              },
+                            ],
+                          },
+                        },
+                      ],
+                    },
+                  },
+                  {
+                    type: 'rawImage',
+                    model: {
+                      width: 640,
+                      height: 562,
+                      locator:
+                        '72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png',
+                      imageType: 'background',
+                      originCode: 'cpsdevpb',
+                      copyrightHolder: 'BBC',
+                    },
+                  },
+                ],
+              },
+            },
+            {
+              type: 'text',
+              model: {
+                blocks: [
+                  {
+                    type: 'paragraph',
+                    model: {
+                      text: 'News homepage',
+                      blocks: [
+                        {
+                          type: 'urlLink',
+                          model: {
+                            text: 'News homepage',
+                            locator: 'https://www.bbc.co.uk/news',
+                            blocks: [
+                              {
+                                type: 'fragment',
+                                model: {
+                                  text: 'News homepage',
+                                  attributes: [],
+                                },
+                              },
+                            ],
+                            isExternal: false,
+                          },
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      },
+      {
+        type: 'link',
+        model: {
+          locator:
+            'urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Fmundo',
+          blocks: [
+            {
+              type: 'image',
+              model: {
+                blocks: [
+                  {
+                    type: 'altText',
+                    model: {
+                      blocks: [
+                        {
+                          type: 'text',
+                          model: {
+                            blocks: [
+                              {
+                                type: 'paragraph',
+                                model: {
+                                  text: 'Breaking News image',
+                                  blocks: [
+                                    {
+                                      type: 'fragment',
+                                      model: {
+                                        text: 'Breaking News image',
+                                        attributes: [],
+                                      },
+                                    },
+                                  ],
+                                },
+                              },
+                            ],
+                          },
+                        },
+                      ],
+                    },
+                  },
+                  {
+                    type: 'rawImage',
+                    model: {
+                      width: 976,
+                      height: 549,
+                      locator:
+                        '33e9/test/5efe5660-5431-11ec-b75b-9f9fe566903d.jpg',
+                      imageType: 'background',
+                      originCode: 'cpsdevpb',
+                      copyrightHolder: 'BBC',
+                    },
+                  },
+                ],
+              },
+            },
+            {
+              type: 'text',
+              model: {
+                blocks: [
+                  {
+                    type: 'paragraph',
+                    model: {
+                      text: 'Mundo homepage',
+                      blocks: [
+                        {
+                          type: 'urlLink',
+                          model: {
+                            text: 'Mundo homepage',
+                            locator: 'https://www.bbc.co.uk/mundo',
+                            blocks: [
+                              {
+                                type: 'fragment',
+                                model: {
+                                  text: 'Mundo homepage',
+                                  attributes: [],
+                                },
+                              },
+                            ],
+                            isExternal: false,
+                          },
+                        },
+                      ],
                     },
                   },
                 ],
