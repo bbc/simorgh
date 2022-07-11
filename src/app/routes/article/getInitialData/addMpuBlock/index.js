@@ -3,6 +3,7 @@ import splitAt from 'ramda/src/splitAt';
 import flatten from 'ramda/src/flatten';
 import clone from 'ramda/src/clone';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import isLive from '#app/lib/utilities/isLive';
 
 const mpuBlock = {
   type: 'mpu',
@@ -91,7 +92,9 @@ const addMpuBlock = json => {
   const { allowAdvertising } = path(['metadata'], json);
   const pageType = path(['metadata', 'type'], json);
 
-  if (!allowAdvertising || pageType !== ARTICLE_PAGE) return json;
+  /* TODO: Remove `isLive` checks when editorial are happy with the ads display */
+  if (isLive() || (!isLive() && !allowAdvertising) || pageType !== ARTICLE_PAGE)
+    return json;
 
   const pageData = clone(json);
 

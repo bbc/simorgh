@@ -6,6 +6,7 @@ import last from 'ramda/src/last';
 import styled from '@emotion/styled';
 import { string, node } from 'prop-types';
 import useToggle from '#hooks/useToggle';
+import isLive from '#lib/utilities/isLive';
 
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
@@ -121,6 +122,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const { enabled: adsEnabled } = useToggle('ads');
 
   const isAdsEnabled = [
+    !isLive(), // TODO: Remove `isLive` when editorial are happy with the ads display
     path(['metadata', 'allowAdvertising'], pageData),
     adsEnabled,
     showAdsBasedOnLocation,
