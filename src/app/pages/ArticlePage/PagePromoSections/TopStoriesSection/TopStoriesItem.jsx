@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { shape, number, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
+import isEmpty from 'ramda/src/isEmpty';
 import { storyItem } from '#models/propTypes/storyItem';
 import { buildUniquePromoId } from '#app/containers/StoryPromo/utilities';
 import { getIsLive } from '#lib/utilities/getStoryPromoInfo';
@@ -10,6 +11,8 @@ import { StyledPromoHeading } from './index.styles';
 
 const TopStoriesItem = ({ item, index, labelId }) => {
   const { script, translations } = useContext(ServiceContext);
+
+  if (!item || isEmpty(item)) return null;
 
   const eventTrackingData = {
     block: {
