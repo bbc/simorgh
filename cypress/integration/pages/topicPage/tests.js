@@ -74,6 +74,20 @@ export default ({ service, pageType, variant }) => {
           cy.log('No pagination as there is only one page');
         }
       });
+      it('Page 2 does not have a fallback response', () => {
+        const expectedContentType = 'text/html';
+        const isErrorPage = pageType.includes('error');
+        const expectedStatus = isErrorPage ? 404 : 200;
+        // const failOnStatusCode = !isErrorPage;
+        cy.url().then(url => {
+          const path = url;
+          cy.testResponseCodeAndType({
+            path,
+            responseCode: expectedStatus,
+            type: expectedContentType,
+          });
+        });
+      });
       it('Next button navigates to next page (3)', () => {
         if (pageCount > 2) {
           cy.get('[id="pagination-next-page"]').click();

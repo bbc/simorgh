@@ -22,8 +22,8 @@ Cypress.Commands.add(
           try {
             expect(
               headers,
-              `Mozart fallback response detected for ${path}`,
-            ).not.to.have.property('x-mfa');
+              `Belfrage fallback response detected for ${path}`,
+            ).not.to.have.property('belfrage-cache-status: STALE');
           } catch (e) {
             if (retriesLeft < 1) {
               throw e;
