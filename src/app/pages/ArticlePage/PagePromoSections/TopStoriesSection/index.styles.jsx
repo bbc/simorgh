@@ -34,12 +34,14 @@ export const StyledWrapper = styled.section`
 export const FlexPromoList = styled(StoryPromoUlBase)`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     display: flex;
+    flex-wrap: wrap;
     gap: ${GEL_SPACING};
   }
 `;
 
 export const FlexPromoListItem = styled(StoryPromoLiBase)`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    height: inherit;
     flex-grow: 1;
     flex-basis: 0;
     margin: 0;
