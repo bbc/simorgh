@@ -9,9 +9,12 @@ import identity from 'ramda/src/identity';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { C_GREY_2 } from '#app/legacy/psammead-styles/src/colours';
 import { StoryPromoUlBase } from '#app/containers/NewStoryPromoList';
-import { StyledWrapper, StyledStoryPromoLi } from './index.styles';
+import {
+  RelatedContentGrid,
+  StyledWrapper,
+  StyledStoryPromoLi,
+} from './index.styles';
 import RelatedContentItem from './RelatedContentItem';
-import RelatedContentGrid from './Grid';
 
 const RelatedContentPromo = ({ content }) => {
   const { translations } = useContext(ServiceContext);

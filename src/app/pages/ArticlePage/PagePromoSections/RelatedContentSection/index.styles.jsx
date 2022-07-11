@@ -22,7 +22,17 @@ export const StyledWrapper = styled.section`
 `;
 
 export const StyledStoryPromoLi = styled(StoryPromoLiBase)`
-  height: 100%;
+  display: flex;
   margin: 0;
-  padding-bottom: ${GEL_SPACING_DBL};
+  width: 100%;
+  height: inherit;
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    width: calc(50% - ${GEL_SPACING});
+  }
+`;
+
+export const RelatedContentGrid = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: ${GEL_SPACING_DBL};
 `;
