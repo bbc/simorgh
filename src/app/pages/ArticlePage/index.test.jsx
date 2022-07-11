@@ -1,6 +1,4 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import { render, waitFor } from '@testing-library/react';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -10,7 +8,6 @@ import {
   articleDataNews,
   articleDataPersian,
   articleDataPidgin,
-  articleDataPidginWithAds,
 } from '#pages/ArticlePage/fixtureData';
 import newsMostReadData from '#data/news/mostRead';
 import persianMostReadData from '#data/persian/mostRead';
@@ -23,6 +20,10 @@ import {
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import ArticlePage from './ArticlePage';
 
+// temporary: will be removed with https://github.com/bbc/simorgh/issues/836
+const articleDataNewsNoHeadline = JSON.parse(JSON.stringify(articleDataNews));
+articleDataNewsNoHeadline.content.model.blocks.shift();
+
 jest.mock('#containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
@@ -33,24 +34,10 @@ jest.mock('#containers/OptimizelyPageViewTracking', () => {
   return OptimizelyPageViewTracking;
 });
 
-const Context = ({
-  service = 'pidgin',
-  children,
-  adsToggledOn = false,
-  mostReadToggledOn = true,
-  showAdsBasedOnLocation = false,
-} = {}) => (
-  <BrowserRouter>
-    <ToggleContextProvider
-      toggles={{
-        mostRead: {
-          enabled: mostReadToggledOn,
-        },
-        ads: {
-          enabled: adsToggledOn,
-        },
-      }}
-    >
+// eslint-disable-next-line react/prop-types
+const Context = ({ service, children }) => (
+  <ToggleContextProvider>
+    <ServiceContextProvider service={service}>
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.co.uk"
         id="c0000000000o"
@@ -59,14 +46,11 @@ const Context = ({
         pathname="/pathname"
         service={service}
         statusCode={200}
-        showAdsBasedOnLocation={showAdsBasedOnLocation}
       >
-        <ServiceContextProvider service={service}>
-          {children}
-        </ServiceContextProvider>
+        {children}
       </RequestContextProvider>
-    </ToggleContextProvider>
-  </BrowserRouter>
+    </ServiceContextProvider>
+  </ToggleContextProvider>
 );
 
 beforeEach(() => {
@@ -224,7 +208,6 @@ it('should render a rtl article (persian) with most read correctly', async () =>
   );
 
   await waitFor(() => container.querySelector('#Most-Read'));
-
   const mostReadSection = container.querySelector('#Most-Read');
 
   expect(mostReadSection).not.toBeNull();
@@ -241,7 +224,6 @@ it('should render a ltr article (pidgin) with most read correctly', async () => 
   );
 
   await waitFor(() => container.querySelector('#Most-Read'));
-
   const mostReadSection = container.querySelector('#Most-Read');
 
   expect(mostReadSection).not.toBeNull();
@@ -337,31 +319,4 @@ it('should render the top stories and features when passed', async () => {
 
   expect(getByTestId('top-stories')).toBeInTheDocument();
   expect(getByTestId('features')).toBeInTheDocument();
-});
-
-it('should show ads when enabled', async () => {
-  [
-    [true, true],
-    [true, false],
-    [false, true],
-    [false, false],
-  ].forEach(([adsToggledOn, showAdsBasedOnLocation]) => {
-    const { container } = render(
-      <Context
-        service="pidgin"
-        adsToggledOn={adsToggledOn}
-        showAdsBasedOnLocation={showAdsBasedOnLocation}
-      >
-        <ArticlePage pageData={articleDataPidginWithAds} />
-      </Context>,
-    );
-
-    const shouldShowAds = adsToggledOn && showAdsBasedOnLocation;
-    const adElement = container.querySelector('[data-e2e="advertisement"]');
-    if (shouldShowAds) {
-      expect(adElement).toBeInTheDocument();
-    } else {
-      expect(adElement).not.toBeInTheDocument();
-    }
-  });
 });

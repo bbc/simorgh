@@ -8,69 +8,66 @@ moment.locale('pt-br');
 // An example of these tests can be seen at https://github.com/moment/moment/blob/develop/src/test/locale/en-gb.js
 const assert = { equal: (val1, val2) => expect(val1).toEqual(val2) };
 
-test('parse', () => {
-  const tests =
-    'Janeiro Jan_Fevereiro Fev_Março Mar_Abril Abr_Maio Mai_Junho Jun_Julho Jul_Agosto Ago_Setembro Set_Outubro Out_Novembro Nov_Dezembro Dez'.split(
-      '_'
-    );
+const tests =
+  'Janeiro Jan_Fevereiro Fev_Março Mar_Abril Abr_Maio Mai_Junho Jun_Julho Jul_Agosto Ago_Setembro Set_Outubro Out_Novembro Nov_Dezembro Dez'.split(
+    '_'
+  );
 
-  function equalTest(input, mmm, i) {
-    assert.equal(
-      moment(input, mmm).month(),
-      i,
-      `${input} should be month ${i + 1}`
-    );
-  }
+function equalTest(input, mmm, i) {
+  assert.equal(
+    moment(input, mmm).month(),
+    i,
+    `${input} should be month ${i + 1}`
+  );
+}
 
-  let i;
-
-  for (i = 0; i < 12; i += 1) {
-    tests[i] = tests[i].split(' ');
-    equalTest(tests[i][0], 'MMM', i);
-    equalTest(tests[i][1], 'MMM', i);
-    equalTest(tests[i][0], 'MMMM', i);
-    equalTest(tests[i][1], 'MMMM', i);
-    equalTest(tests[i][0].toLocaleLowerCase(), 'MMMM', i);
-    equalTest(tests[i][1].toLocaleLowerCase(), 'MMMM', i);
-    equalTest(tests[i][0].toLocaleUpperCase(), 'MMMM', i);
-    equalTest(tests[i][1].toLocaleUpperCase(), 'MMMM', i);
-  }
+for (let i = 0; i < 12; i += 1) {
+  tests[i] = [...tests[i].split(' '), i];
+}
+test.each(tests)('parse %s %s', (longMonth, shortMonth, i) => {
+  equalTest(longMonth, 'MMM', i);
+  equalTest(shortMonth, 'MMM', i);
+  equalTest(longMonth, 'MMMM', i);
+  equalTest(shortMonth, 'MMMM', i);
+  equalTest(longMonth.toLocaleLowerCase(), 'MMMM', i);
+  equalTest(shortMonth.toLocaleLowerCase(), 'MMMM', i);
+  equalTest(longMonth.toLocaleUpperCase(), 'MMMM', i);
+  equalTest(shortMonth.toLocaleUpperCase(), 'MMMM', i);
 });
 
-test('format', () => {
-  const a = [
-    [
-      'dddd, MMMM Do YYYY, h:mm:ss a',
-      'Domingo, fevereiro 14º 2010, 3:25:50 pm',
-    ],
-    ['ddd, hA', 'Dom, 3PM'],
-    ['M Mo MM MMMM MMM', '2 2º 02 fevereiro Fev'],
-    ['YYYY YY', '2010 10'],
-    ['D Do DD', '14 14º 14'],
-    ['d do dddd ddd', '0 0º Domingo Dom'],
-    ['DDD DDDo DDDD', '45 45º 045'],
-    ['w wo ww', '8 8º 08'],
-    ['h hh', '3 03'],
-    ['H HH', '15 15'],
-    ['m mm', '25 25'],
-    ['s ss', '50 50'],
-    ['a A', 'pm PM'],
-    ['[the] DDDo [day of the year]', 'the 45º day of the year'],
-    ['LTS', '15:25:50'],
-    ['L', '14/02/2010'],
-    ['LL', '14 fevereiro 2010'],
-    ['LLL', '14 fevereiro 2010 às 15:25'],
-    ['LLLL', 'Domingo, 14 fevereiro 2010 às 15:25'],
-    ['l', '14/2/2010'],
-    ['ll', '14 Fev 2010'],
-    ['lll', '14 Fev 2010 às 15:25'],
-    ['llll', 'Dom, 14 Fev 2010 às 15:25'],
-  ];
+const a = [
+  ['dddd, MMMM Do YYYY, h:mm:ss a', 'domingo, fevereiro 14º 2010, 3:25:50 pm'],
+  ['ddd, hA', 'dom, 3PM'],
+  ['M Mo MM MMMM MMM', '2 2º 02 fevereiro fev'],
+  ['YYYY YY', '2010 10'],
+  ['D Do DD', '14 14º 14'],
+  ['d do dddd ddd', '0 0º domingo dom'],
+  ['DDD DDDo DDDD', '45 45º 045'],
+  ['w wo ww', '8 8º 08'],
+  ['h hh', '3 03'],
+  ['H HH', '15 15'],
+  ['m mm', '25 25'],
+  ['s ss', '50 50'],
+  ['a A', 'pm PM'],
+  ['[the] DDDo [day of the year]', 'the 45º day of the year'],
+  ['LTS', '15:25:50'],
+  ['L', '14/02/2010'],
+  ['LL', '14 fevereiro 2010'],
+  ['LLL', '14 fevereiro 2010 às 15:25'],
+  ['LLLL', 'domingo, 14 fevereiro 2010 às 15:25'],
+  ['l', '14/2/2010'],
+  ['ll', '14 fev 2010'],
+  ['lll', '14 fev 2010 às 15:25'],
+  ['llll', 'dom, 14 fev 2010 às 15:25'],
+];
+
+test.each(a)('format %s', (formatString, expectedDate) => {
   const b = moment(new Date(2010, 1, 14, 15, 25, 50, 125));
-  let i;
-  for (i = 0; i < a.length; i += 1) {
-    assert.equal(b.format(a[i][0]), a[i][1], `${a[i][0]} ---> ${a[i][1]}`);
-  }
+  assert.equal(
+    b.format(formatString),
+    expectedDate,
+    `${formatString} ---> ${expectedDate}`
+  );
 });
 
 test('format ordinal', () => {
@@ -112,7 +109,7 @@ test('format ordinal', () => {
 
 test('format month', () => {
   const expected =
-    'janeiro Jan_fevereiro Fev_março Mar_abril Abr_maio Mai_junho Jun_julho Jul_agosto Ago_setembro Set_outubro Out_novembro Nov_dezembro Dez'.split(
+    'janeiro jan_fevereiro fev_março mar_abril abr_maio mai_junho jun_julho jul_agosto ago_setembro set_outubro out_novembro nov_dezembro dez'.split(
       '_'
     );
   let i;
@@ -127,7 +124,7 @@ test('format month', () => {
 
 test('format week', () => {
   const expected =
-    'Domingo Dom Do_Segunda-feira Seg 2ª_Terça-feira Ter 3ª_Quarta-feira Qua 4ª_Quinta-feira Qui 5ª_Sexta-feira Sex 6ª_Sábado Sáb Sá'.split(
+    'domingo dom do_segunda-feira seg 2ª_terça-feira ter 3ª_quarta-feira qua 4ª_quinta-feira qui 5ª_sexta-feira sex 6ª_sábado sáb sá'.split(
       '_'
     );
   let i;
@@ -299,31 +296,35 @@ test('fromNow', () => {
 });
 
 test('calendar day', () => {
-  const a = moment().hours(12).minutes(0).seconds(0);
+  const calendarTime = moment().hours(12).minutes(0).seconds(0);
 
-  assert.equal(moment(a).calendar(), 'Hoje às 12:00', 'today at the same time');
   assert.equal(
-    moment(a).add({ m: 25 }).calendar(),
+    moment(calendarTime).calendar(),
+    'Hoje às 12:00',
+    'today at the same time'
+  );
+  assert.equal(
+    moment(calendarTime).add({ m: 25 }).calendar(),
     'Hoje às 12:25',
     'Now plus 25 min'
   );
   assert.equal(
-    moment(a).add({ h: 1 }).calendar(),
+    moment(calendarTime).add({ h: 1 }).calendar(),
     'Hoje às 13:00',
     'Now plus 1 hour'
   );
   assert.equal(
-    moment(a).add({ d: 1 }).calendar(),
+    moment(calendarTime).add({ d: 1 }).calendar(),
     'Amanhã às 12:00',
     'tomorrow at the same time'
   );
   assert.equal(
-    moment(a).subtract({ h: 1 }).calendar(),
+    moment(calendarTime).subtract({ h: 1 }).calendar(),
     'Hoje às 11:00',
     'Now minus 1 hour'
   );
   assert.equal(
-    moment(a).subtract({ d: 1 }).calendar(),
+    moment(calendarTime).subtract({ d: 1 }).calendar(),
     'Ontem às 12:00',
     'yesterday at the same time'
   );

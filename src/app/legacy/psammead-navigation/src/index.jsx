@@ -2,13 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { shape, string, node, bool, oneOf } from 'prop-types';
 import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
-import {
-  C_WHITE,
-  C_EBON,
-  C_GREY_10,
-  C_GREY_3,
-  C_POSTBOX,
-} from '#legacy/psammead-styles/src/colours';
+import { C_WHITE, C_EBON } from '#legacy/psammead-styles/src/colours';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
@@ -31,7 +25,6 @@ const NavWrapper = styled.div`
   position: relative;
   max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
   margin: 0 auto;
-  background-color: ${C_WHITE};
 `;
 
 const StyledUnorderedList = styled.ul`
@@ -57,7 +50,6 @@ const StyledLink = styled.a`
   ${({ script }) => script && getPica(script)};
   ${({ service }) => getSansRegular(service)};
   ${({ brandForegroundColour }) => `color: ${brandForegroundColour};`}
-  color: ${C_GREY_10};
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
@@ -186,7 +178,7 @@ export const NavigationLi = ({
       role="listitem"
       brandForegroundColour={brandForegroundColour}
       brandHighlightColour={brandHighlightColour}
-      brandBorderColour={C_GREY_3}
+      brandBorderColour={brandBorderColour}
     >
       {active && currentPageText ? (
         <StyledLink
@@ -195,7 +187,7 @@ export const NavigationLi = ({
           service={service}
           currentLink
           brandForegroundColour={brandForegroundColour}
-          brandHighlightColour={C_POSTBOX}
+          brandHighlightColour={brandHighlightColour}
           // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
           aria-labelledby={`NavigationLinks-${link}`}
           {...props}
@@ -204,7 +196,7 @@ export const NavigationLi = ({
             linkId={link}
             script={script}
             currentPageText={currentPageText}
-            brandHighlightColour={C_POSTBOX}
+            brandHighlightColour={brandHighlightColour}
           >
             {link}
           </CurrentLink>
@@ -215,7 +207,7 @@ export const NavigationLi = ({
           script={script}
           service={service}
           brandForegroundColour={brandForegroundColour}
-          brandHighlightColour={C_POSTBOX}
+          brandHighlightColour={brandHighlightColour}
           {...props}
         >
           {link}
@@ -249,7 +241,8 @@ NavigationLi.defaultProps = {
 // color of the Navigation
 const StyledNav = styled.nav`
   position: relative;
-  ${({ isOpen }) => `background-color: ${isOpen ? C_EBON : C_WHITE};`}
+  ${({ isOpen, brandBackgroundColour }) =>
+    `background-color: ${isOpen ? C_EBON : brandBackgroundColour};`}
   ${({ ampOpenClass }) =>
     ampOpenClass &&
     `
@@ -259,7 +252,7 @@ const StyledNav = styled.nav`
         }
       }
     `}
-  
+  border-top: 0.0625rem solid ${C_WHITE};
 
   &::after {
     content: '';
@@ -267,7 +260,7 @@ const StyledNav = styled.nav`
     bottom: 0;
     right: 0;
     left: 0;
-    border-bottom: 0.0625rem solid ${C_GREY_3};
+    border-bottom: 0.0625rem solid transparent;
   }
 
   ${StyledListItem} {

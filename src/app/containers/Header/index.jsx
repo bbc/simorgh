@@ -3,7 +3,7 @@ import SkipLink from '#legacy/psammead-brand/src/SkipLink';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
-import { string } from 'prop-types';
+import { string, bool } from 'prop-types';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import ScriptLink from './ScriptLink';
@@ -28,7 +28,7 @@ const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
   );
 };
 
-const HeaderContainer = ({ scriptSwitchId }) => {
+const HeaderContainer = ({ scriptSwitchId, renderScriptSwitch }) => {
   const { pageType, isAmp } = useContext(RequestContext);
   const { service, script, translations, dir, scriptLink, lang, serviceLang } =
     useContext(ServiceContext);
@@ -59,6 +59,8 @@ const HeaderContainer = ({ scriptSwitchId }) => {
     </SkipLink>
   );
 
+  const shouldRenderScriptSwitch = scriptLink && renderScriptSwitch;
+
   return (
     <header role="banner" lang={serviceLang}>
       {isAmp ? (
@@ -66,7 +68,9 @@ const HeaderContainer = ({ scriptSwitchId }) => {
           linkId="brandLink"
           skipLink={skipLink}
           scriptLink={
-            scriptLink && <ScriptLink scriptSwitchId={scriptSwitchId} />
+            shouldRenderScriptSwitch && (
+              <ScriptLink scriptSwitchId={scriptSwitchId} />
+            )
           }
         />
       ) : (
@@ -74,7 +78,9 @@ const HeaderContainer = ({ scriptSwitchId }) => {
           brandRef={brandRef}
           skipLink={skipLink}
           scriptLink={
-            scriptLink && <ScriptLink scriptSwitchId={scriptSwitchId} />
+            shouldRenderScriptSwitch && (
+              <ScriptLink scriptSwitchId={scriptSwitchId} />
+            )
           }
         />
       )}
@@ -85,10 +91,12 @@ const HeaderContainer = ({ scriptSwitchId }) => {
 
 HeaderContainer.propTypes = {
   scriptSwitchId: string,
+  renderScriptSwitch: bool,
 };
 
 HeaderContainer.defaultProps = {
   scriptSwitchId: '',
+  renderScriptSwitch: true,
 };
 
 export default HeaderContainer;
