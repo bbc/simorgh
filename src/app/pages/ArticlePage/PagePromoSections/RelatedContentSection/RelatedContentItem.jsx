@@ -106,7 +106,7 @@ const RelatedContentItem = ({ item, labelId, index }) => {
     <Promo to={assetUri} id={linkId} eventTrackingData={eventTrackingData}>
       <Promo.Image
         src={src}
-        alt={altText}
+        altText={altText}
         srcset={primarySrcset}
         fallbackSrcset={fallbackSrcset}
         width={width}
