@@ -259,7 +259,7 @@ export const RelatedContentSingleItem = {
                   {
                     type: 'paragraph',
                     model: {
-                      text: 'Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson',
+                      text: 'Voters take to the polls in the Canadian election',
                       blocks: [
                         {
                           type: 'urlLink',
@@ -465,7 +465,7 @@ export const RelatedContentList = {
                   {
                     type: 'paragraph',
                     model: {
-                      text: 'Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson',
+                      text: 'Voters take to the polls in the Canadian election',
                       blocks: [
                         {
                           type: 'urlLink',
