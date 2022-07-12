@@ -8,7 +8,7 @@ import slice from 'ramda/src/slice';
 import identity from 'ramda/src/identity';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { C_GREY_2 } from '#app/legacy/psammead-styles/src/colours';
-import { StoryPromoUlBase } from '#app/containers/NewStoryPromoList';
+import { StoryPromoUlBase } from '#components/OptimoPromos/Lists';
 import {
   RelatedContentGrid,
   StyledWrapper,
@@ -16,7 +16,7 @@ import {
 } from './index.styles';
 import RelatedContentItem from './RelatedContentItem';
 
-const RelatedContentPromo = ({ content }) => {
+const RelatedContentSection = ({ content }) => {
   const { translations, script, service } = useContext(ServiceContext);
 
   if (!pathEq(['type'], 'relatedContent', content)) return null;
@@ -73,7 +73,7 @@ const RelatedContentPromo = ({ content }) => {
   );
 };
 
-RelatedContentPromo.propTypes = {
+RelatedContentSection.propTypes = {
   content: shape({
     type: string,
     model: shape({
@@ -86,4 +86,4 @@ RelatedContentPromo.propTypes = {
   }).isRequired,
 };
 
-export default RelatedContentPromo;
+export default RelatedContentSection;

@@ -5,7 +5,7 @@ import pathOr from 'ramda/src/pathOr';
 import isEmpty from 'ramda/src/isEmpty';
 import { storyItem } from '#models/propTypes/storyItem';
 import { getIsLive } from '#lib/utilities/getStoryPromoInfo';
-import Promo from '#containers/NewStoryPromo';
+import Promo from '#components/OptimoPromos';
 import { StyledPromoHeading } from './index.styles';
 import optimoPromoIdGenerator from '../utility';
 

@@ -13,7 +13,7 @@ import {
 } from './index.styles';
 import TopStoriesItem from './TopStoriesItem';
 
-const TopStoriesPromo = ({ content }) => {
+const TopStoriesSection = ({ content }) => {
   const { translations, script, service } = useContext(ServiceContext);
 
   if (!content || isEmpty(content)) return null;
@@ -50,8 +50,8 @@ const TopStoriesPromo = ({ content }) => {
   );
 };
 
-TopStoriesPromo.propTypes = { content: arrayOf(shape(storyItem)) };
+TopStoriesSection.propTypes = { content: arrayOf(shape(storyItem)) };
 
-TopStoriesPromo.defaultProps = { content: [] };
+TopStoriesSection.defaultProps = { content: [] };
 
-export default TopStoriesPromo;
+export default TopStoriesSection;

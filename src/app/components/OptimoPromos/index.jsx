@@ -1,22 +1,18 @@
 import React, { useContext } from 'react';
 import { node, string, shape } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
+import path from 'ramda/src/path';
 
 import Timestamp from '#components/Promo/timestamp';
 import LiveLabel from '#legacy/psammead-live-label/src';
 import useViewTracker from '#hooks/useViewTracker';
 
-import Heading from '#components/OptimoPromos/Heading';
-import Link from '#components/OptimoPromos/Link';
-import MediaIndicator from '#components/OptimoPromos/MediaIndicator';
-import Content from '#components/OptimoPromos/Content';
-import {
-  PromoWrapper,
-  ContentWrapper,
-  BorderWrapper,
-} from '#components/OptimoPromos/Wrappers.styles';
-import Image from '#components/OptimoPromos/Image';
-import path from 'ramda/src/path';
+import Heading from './Heading';
+import Link from './Link';
+import MediaIndicator from './MediaIndicator';
+import Content from './Content';
+import { PromoWrapper, ContentWrapper, BorderWrapper } from './Wrappers.styles';
+import Image from './Image';
 
 const PromoContext = React.createContext({});
 

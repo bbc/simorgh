@@ -4,7 +4,7 @@ import path from 'ramda/src/path';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
-import Promo from '#containers/NewStoryPromo';
+import Promo from '#components/OptimoPromos';
 import isEmpty from 'ramda/src/isEmpty';
 import optimoPromoIdGenerator from '../utility';
 

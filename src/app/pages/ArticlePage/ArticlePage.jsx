@@ -66,7 +66,7 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
-import ArticleRelatedContent from './PagePromoSections/RelatedContentSection';
+import RelatedContentSection from './PagePromoSections/RelatedContentSection';
 
 import SecondaryColumn from './SecondaryColumn';
 
@@ -248,7 +248,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
               tagBackgroundColour={C_WHITE}
             />
           )}
-          <ArticleRelatedContent content={last(blocks)} />
+          <RelatedContentSection content={last(blocks)} />
         </Primary>
         <SecondaryColumn pageData={pageData} />
       </ArticlePageGrid>

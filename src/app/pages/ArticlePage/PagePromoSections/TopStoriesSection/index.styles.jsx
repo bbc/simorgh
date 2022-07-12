@@ -13,8 +13,8 @@ import {
 import {
   StoryPromoUlBase,
   StoryPromoLiBase,
-} from '#containers/NewStoryPromoList';
-import Promo from '#containers/NewStoryPromo';
+} from '#components/OptimoPromos/Lists';
+import Promo from '#components/OptimoPromos';
 
 export const StyledPromoHeading = styled(Promo.Heading)`
   display: inline-block;

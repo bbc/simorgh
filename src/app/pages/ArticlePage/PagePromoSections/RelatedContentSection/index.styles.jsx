@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { StoryPromoLiBase } from '#containers/NewStoryPromoList';
+import { StoryPromoLiBase } from '#components/OptimoPromos/Lists';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,

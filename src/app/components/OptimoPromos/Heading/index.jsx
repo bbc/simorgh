@@ -1,22 +1,10 @@
 import React from 'react';
-import { node, string, shape } from 'prop-types';
-import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
+import { node, string } from 'prop-types';
 import H3 from './index.styles';
 
-const Heading = ({
-  children,
-  script,
-  service,
-  className,
-  headingTagOverride,
-}) => {
+const Heading = ({ children, service, className, headingTagOverride }) => {
   return (
-    <H3
-      as={headingTagOverride}
-      className={className}
-      script={script}
-      service={service}
-    >
+    <H3 as={headingTagOverride} className={className} service={service}>
       {children}
     </H3>
   );
@@ -25,7 +13,6 @@ const Heading = ({
 Heading.propTypes = {
   children: node.isRequired,
   service: string.isRequired,
-  script: shape(scriptPropType).isRequired,
   className: string,
   headingTagOverride: string,
 };
