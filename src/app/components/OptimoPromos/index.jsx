@@ -47,10 +47,10 @@ Promo.ContentWrapper = withPromoContext(ContentWrapper);
 Promo.Heading = withPromoContext(Heading);
 Promo.MediaIndicator = withPromoContext(MediaIndicator);
 Promo.Link = withPromoContext(Link);
+Promo.Content = withPromoContext(Content);
 
 // Outside NewStoryPromo
 Promo.Timestamp = withPromoContext(Timestamp);
-Promo.Content = withPromoContext(Content);
 Promo.LiveLabel = withPromoContext(LiveLabel);
 Promo.Image = withPromoContext(Image);
 
