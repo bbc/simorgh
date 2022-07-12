@@ -13,6 +13,7 @@ import {
   RelatedContentGrid,
   StyledWrapper,
   StyledStoryPromoLi,
+  SingleItemWrapper,
 } from './index.styles';
 import RelatedContentItem from './RelatedContentItem';
 
@@ -56,9 +57,9 @@ const RelatedContentSection = ({ content }) => {
         {title}
       </SectionLabel>
       {hasSingleContent ? (
-        <RelatedContentGrid>
+        <SingleItemWrapper>
           <RelatedContentItem item={reducedStoryPromoItems[0]} index={0} />
-        </RelatedContentGrid>
+        </SingleItemWrapper>
       ) : (
         <RelatedContentGrid as={StoryPromoUlBase}>
           {reducedStoryPromoItems.map((item, index) => (

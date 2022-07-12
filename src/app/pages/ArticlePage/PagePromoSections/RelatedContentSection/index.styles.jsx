@@ -36,3 +36,10 @@ export const RelatedContentGrid = styled.div`
   flex-wrap: wrap;
   gap: ${GEL_SPACING_DBL};
 `;
+
+export const SingleItemWrapper = styled.div`
+  width: 100%;
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    width: 50%;
+  }
+`;
