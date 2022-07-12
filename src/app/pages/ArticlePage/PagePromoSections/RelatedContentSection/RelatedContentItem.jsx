@@ -2,11 +2,11 @@ import React, { useContext } from 'react';
 import { shape, string, number } from 'prop-types';
 import path from 'ramda/src/path';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { buildUniquePromoId } from '#app/containers/StoryPromo/utilities';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
 import Promo from '#containers/NewStoryPromo';
 import isEmpty from 'ramda/src/isEmpty';
+import optimoPromoIdGenerator from '../utility';
 
 const RelatedContentItem = ({ item, labelId, index }) => {
   const { script } = useContext(ServiceContext);
@@ -18,17 +18,11 @@ const RelatedContentItem = ({ item, labelId, index }) => {
     },
   };
 
-  const linkId = buildUniquePromoId({
-    sectionType: 'top-stories',
-    promoGroupId: labelId,
-    promoItem: item,
-    promoIndex: index,
-  });
   const headline = path(
     ['model', 'blocks', 1, 'model', 'blocks', 0, 'model', 'text'],
     item,
   );
-  const url = path(
+  const assetUri = path(
     [
       'model',
       'blocks',
@@ -44,6 +38,8 @@ const RelatedContentItem = ({ item, labelId, index }) => {
     ],
     item,
   );
+
+  const linkId = optimoPromoIdGenerator(labelId, assetUri, '', '', index);
 
   const DEFAULT_IMAGE_RES = 660;
   const imageResolutions = [70, 95, 144, 183, 240, 320, 660];
@@ -107,10 +103,10 @@ const RelatedContentItem = ({ item, labelId, index }) => {
   const headingTagOverride = timestamp ? '' : 'div';
 
   return (
-    <Promo to={url} id={linkId} eventTrackingData={eventTrackingData}>
+    <Promo to={assetUri} id={linkId} eventTrackingData={eventTrackingData}>
       <Promo.Image
         src={src}
-        altText={altText}
+        alt={altText}
         srcset={primarySrcset}
         fallbackSrcset={fallbackSrcset}
         width={width}
