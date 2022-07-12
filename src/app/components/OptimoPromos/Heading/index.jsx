@@ -1,12 +1,18 @@
 import React from 'react';
 import { node, string } from 'prop-types';
-import H3 from './index.styles';
+import { TitleWithPadding, TitleNoPadding } from './index.styles';
 
 const Heading = ({ children, service, className, headingTagOverride }) => {
+  const TitleWrapper =
+    headingTagOverride === 'div' ? TitleNoPadding : TitleWithPadding;
   return (
-    <H3 as={headingTagOverride} className={className} service={service}>
+    <TitleWrapper
+      as={headingTagOverride}
+      className={className}
+      service={service}
+    >
       {children}
-    </H3>
+    </TitleWrapper>
   );
 };
 
