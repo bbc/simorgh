@@ -6,7 +6,7 @@ import RelatedContentItem from './RelatedContentItem';
 import { RelatedContentData } from './fixture';
 
 // eslint-disable-next-line react/prop-types
-const RelatedContentitem = ({ fixtureData, service = 'mundo' }) => (
+const RelatedContentItemComponent = ({ fixtureData, service = 'mundo' }) => (
   <ServiceContextProvider service={service}>
     <ToggleContextProvider>
       <RelatedContentItem
@@ -21,7 +21,7 @@ const RelatedContentitem = ({ fixtureData, service = 'mundo' }) => (
 describe('Optimo Related Content Promo Item', () => {
   it('should render Related Content when given appropriate data', () => {
     const { getByAltText, getByText } = render(
-      <RelatedContentitem fixtureData={RelatedContentData} />,
+      <RelatedContentItemComponent fixtureData={RelatedContentData} />,
     );
 
     const altText = getByAltText('Keyframe #2');
@@ -36,7 +36,9 @@ describe('Optimo Related Content Promo Item', () => {
   });
 
   it('should return null if no data is passed', () => {
-    const { container } = render(<RelatedContentitem fixtureData={{}} />);
+    const { container } = render(
+      <RelatedContentItemComponent fixtureData={{}} />,
+    );
     expect(container).toBeEmptyDOMElement();
   });
 });
