@@ -6,7 +6,7 @@ import isEmpty from 'ramda/src/isEmpty';
 import { storyItem } from '#models/propTypes/storyItem';
 import { getIsLive } from '#lib/utilities/getStoryPromoInfo';
 import Promo from '#components/OptimoPromos';
-import { StyledPromoHeading } from './index.styles';
+import { StyledPromoHeading, StyledTimestamp } from './index.styles';
 import optimoPromoIdGenerator from '../utility';
 
 const TopStoriesItem = ({ item, index }) => {
@@ -89,7 +89,7 @@ const TopStoriesItem = ({ item, index }) => {
             )}
           </Promo.Link>
         </StyledPromoHeading>
-        <Promo.Timestamp>{timestamp}</Promo.Timestamp>
+        <StyledTimestamp>{timestamp}</StyledTimestamp>
       </Promo.ContentWrapper>
     </Promo>
   );

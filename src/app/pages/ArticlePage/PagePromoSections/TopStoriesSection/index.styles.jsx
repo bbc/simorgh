@@ -17,7 +17,7 @@ import {
 import Promo from '#components/OptimoPromos';
 
 export const StyledPromoHeading = styled(Promo.Heading)`
-  display: inline-block;
+  display: inline;
   ${({ script }) => script && getPica(script)}
 `;
 
@@ -46,4 +46,8 @@ export const FlexPromoListItem = styled(StoryPromoLiBase)`
     flex-basis: 0;
     margin: 0;
   }
+`;
+
+export const StyledTimestamp = styled(Promo.Timestamp)`
+  padding-top: ${GEL_SPACING};
 `;
