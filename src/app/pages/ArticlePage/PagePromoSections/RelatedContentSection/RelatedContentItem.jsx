@@ -109,7 +109,11 @@ const RelatedContentItem = ({ item, index }) => {
   const headingTagOverride = timestamp ? '' : 'div';
 
   return (
-    <Promo toLink={assetUri} id={linkId} eventTrackingData={eventTrackingData}>
+    <Promo
+      toLink={assetUri}
+      a11yId={linkId}
+      eventTrackingData={eventTrackingData}
+    >
       <Promo.Image
         src={src}
         altText={altText}
