@@ -18,6 +18,7 @@ import useToggle from '#hooks/useToggle';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import TopicTitle from './TopicTitle';
+import TopicDescription from './TopicDescription';
 import TopicGrid from './TopicGrid';
 import Pagination from './Pagination';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
@@ -87,6 +88,7 @@ const TopicPage = ({ pageData }) => {
         />
 
         <TopicTitle>{title}</TopicTitle>
+        <TopicDescription>description</TopicDescription>
         <TopicGrid promos={promos} />
         <Pagination
           activePage={activePage}
