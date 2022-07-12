@@ -676,7 +676,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 .emotion-95:last-child {
-  padding-bottom: 1rem;
+  padding-bottom: 0.25rem;
   border: 0;
 }
 
@@ -689,6 +689,8 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   color: #FFFFFF;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0.75rem 0;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {

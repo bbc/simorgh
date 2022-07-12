@@ -314,7 +314,7 @@ export const service = {
       },
       {
         title: '비디오',
-        url: '/korean/media/video',
+        url: '/korean/topics/cnwng7v0e54t',
       },
       {
         title: '다운로드',

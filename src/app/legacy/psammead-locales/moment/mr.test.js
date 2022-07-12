@@ -36,39 +36,41 @@ test('parse', () => {
   }
 });
 
-test('format', () => {
-  const a = [
-    [
-      'dddd, Do MMMM YYYY, a h:mm:ss वाजता',
-      'रविवार, 14 फेब्रुवारी 2010, दुपारी 3:25:50 वाजता',
-    ],
-    ['ddd, a h वाजता', 'रवि, दुपारी 3 वाजता'],
-    ['M Mo MM MMMM MMM', '2 2 02 फेब्रुवारी फेब्रु.'],
-    ['YYYY YY', '2010 10'],
-    ['D Do DD', '14 14 14'],
-    ['d do dddd ddd dd', '0 0 रविवार रवि र'],
-    ['DDD DDDo DDDD', '45 45 045'],
-    ['w wo ww', '8 8 08'],
-    ['h hh', '3 03'],
-    ['H HH', '15 15'],
-    ['m mm', '25 25'],
-    ['s ss', '50 50'],
-    ['a A', 'दुपारी दुपारी'],
-    ['LTS', 'दुपारी 3:25:50 वाजता'],
-    ['L', '14/02/2010'],
-    ['LL', '14 फेब्रुवारी 2010'],
-    ['LLL', '14 फेब्रुवारी 2010, दुपारी 3:25 वाजता'],
-    ['LLLL', 'रविवार, 14 फेब्रुवारी 2010, दुपारी 3:25 वाजता'],
-    ['l', '14/2/2010'],
-    ['ll', '14 फेब्रु. 2010'],
-    ['lll', '14 फेब्रु. 2010, दुपारी 3:25 वाजता'],
-    ['llll', 'रवि, 14 फेब्रु. 2010, दुपारी 3:25 वाजता'],
-  ];
+const a = [
+  [
+    'dddd, Do MMMM YYYY, a h:mm:ss वाजता',
+    'रविवार, 14 फेब्रुवारी 2010, दुपारी 3:25:50 वाजता',
+  ],
+  ['ddd, a h वाजता', 'रवि, दुपारी 3 वाजता'],
+  ['M Mo MM MMMM MMM', '2 2 02 फेब्रुवारी फेब्रु.'],
+  ['YYYY YY', '2010 10'],
+  ['D Do DD', '14 14 14'],
+  ['d do dddd ddd dd', '0 0 रविवार रवि र'],
+  ['DDD DDDo DDDD', '45 45 045'],
+  ['w wo ww', '8 8 08'],
+  ['h hh', '3 03'],
+  ['H HH', '15 15'],
+  ['m mm', '25 25'],
+  ['s ss', '50 50'],
+  ['a A', 'दुपारी दुपारी'],
+  ['LTS', 'दुपारी 3:25:50 वाजता'],
+  ['L', '14/02/2010'],
+  ['LL', '14 फेब्रुवारी 2010'],
+  ['LLL', '14 फेब्रुवारी 2010, दुपारी 3:25 वाजता'],
+  ['LLLL', 'रविवार, 14 फेब्रुवारी 2010, दुपारी 3:25 वाजता'],
+  ['l', '14/2/2010'],
+  ['ll', '14 फेब्रु. 2010'],
+  ['lll', '14 फेब्रु. 2010, दुपारी 3:25 वाजता'],
+  ['llll', 'रवि, 14 फेब्रु. 2010, दुपारी 3:25 वाजता'],
+];
+
+test.each(a)('format %s', (formatString, expectedDate) => {
   const b = moment(new Date(2010, 1, 14, 15, 25, 50, 125));
-  let i;
-  for (i = 0; i < a.length; i += 1) {
-    assert.equal(b.format(a[i][0]), a[i][1], `${a[i][0]} ---> ${a[i][1]}`);
-  }
+  assert.equal(
+    b.format(formatString),
+    expectedDate,
+    `${formatString} ---> ${expectedDate}`
+  );
 });
 
 test('format ordinal', () => {
@@ -305,35 +307,35 @@ test('fromNow', () => {
 });
 
 test('calendar day', () => {
-  const a = moment().hours(12).minutes(0).seconds(0);
+  const calendarTime = moment().hours(12).minutes(0).seconds(0);
 
   assert.equal(
-    moment(a).calendar(),
+    moment(calendarTime).calendar(),
     'आज दुपारी 12:00 वाजता',
     'today at the same time'
   );
   assert.equal(
-    moment(a).add({ m: 25 }).calendar(),
+    moment(calendarTime).add({ m: 25 }).calendar(),
     'आज दुपारी 12:25 वाजता',
     'Now plus 25 min'
   );
   assert.equal(
-    moment(a).add({ h: 3 }).calendar(),
+    moment(calendarTime).add({ h: 3 }).calendar(),
     'आज दुपारी 3:00 वाजता',
     'Now plus 3 hours'
   );
   assert.equal(
-    moment(a).add({ d: 1 }).calendar(),
+    moment(calendarTime).add({ d: 1 }).calendar(),
     'उद्या दुपारी 12:00 वाजता',
     'tomorrow at the same time'
   );
   assert.equal(
-    moment(a).subtract({ h: 1 }).calendar(),
-    'आज दुपारी 11:00 वाजता',
+    moment(calendarTime).subtract({ h: 1 }).calendar(),
+    'आज सकाळी 11:00 वाजता',
     'Now minus 1 hour'
   );
   assert.equal(
-    moment(a).subtract({ d: 1 }).calendar(),
+    moment(calendarTime).subtract({ d: 1 }).calendar(),
     'काल दुपारी 12:00 वाजता',
     'yesterday at the same time'
   );
@@ -407,7 +409,7 @@ test('calendar all else', () => {
 test('meridiem', () => {
   assert.equal(
     moment([2011, 2, 23, 2, 30]).format('a'),
-    'रात्री',
+    'पहाटे',
     'before dawn'
   );
   assert.equal(moment([2011, 2, 23, 9, 30]).format('a'), 'सकाळी', 'morning');
@@ -430,7 +432,7 @@ test('meridiem', () => {
 
   assert.equal(
     moment([2011, 2, 23, 2, 30]).format('A'),
-    'रात्री',
+    'पहाटे',
     'before dawn'
   );
   assert.equal(moment([2011, 2, 23, 9, 30]).format('A'), 'सकाळी', 'morning');

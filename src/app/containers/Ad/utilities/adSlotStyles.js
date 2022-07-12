@@ -6,6 +6,8 @@ import {
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
+  GEL_SPACING_QUAD,
+  GEL_SPACING_TRPL,
 } from '#legacy/gel-foundations/src/spacings';
 
 // Ad Slot Widths (for custom breakpoints)
@@ -65,7 +67,6 @@ export const leaderboardStyles = `
   display: none;
   visibility: hidden;
   @media (min-width: ${LEADERBOARD_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING};
     min-height: ${LEADERBOARD_HEIGHTS.GROUP_1};
     display: flex;
     flex-direction: column;
@@ -73,17 +74,19 @@ export const leaderboardStyles = `
     visibility: visible;
   }
   @media (min-width: ${LEADERBOARD_WIDTH_MIN_PADDING}) {
-    padding: 0 ${GEL_SPACING};
+    padding: ${GEL_SPACING_DBL} 0;
   }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     min-height: ${LEADERBOARD_HEIGHTS.GROUP_2};
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     min-height: ${LEADERBOARD_HEIGHTS.GROUP_3};
+    padding: ${GEL_SPACING_QUAD} 0;
   }
   @media (min-width: ${LARGE_LEADERBOARD_WIDTH_MIN}) {
     min-height: ${LEADERBOARD_HEIGHTS.LARGE};
-    padding: ${GEL_SPACING} ${GEL_SPACING_DBL};
+    padding: ${GEL_SPACING_TRPL} 0;
+    };
   }
 `;
 
@@ -96,9 +99,11 @@ export const ampLeaderboardStyles = `
     flex-direction: column;
     justify-content: center;
     visibility: visible;
+    padding: ${GEL_SPACING_DBL} 0;
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     min-height: ${LEADERBOARD_HEIGHTS.LARGE};
+    padding: ${GEL_SPACING_TRPL} 0;
   }
 `;
 
@@ -114,7 +119,7 @@ export const mpuStyles = `
     visibility: visible;
   }
   @media (min-width: ${MPU_WIDTH_MIN_PADDING}) {
-    padding: 0 ${GEL_SPACING};
+    padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING} 0;
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     min-height: ${MPU_HEIGHTS.GROUP_3};
@@ -127,6 +132,7 @@ export const ampMpuStyles = `
   padding: 0;
   @media (min-width: ${MPU_WIDTH_MIN}) {
     min-height: ${MPU_HEIGHTS.GROUP_3};
+    padding: padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING} 0;
     display: flex;
     flex-direction: column;
     justify-content: center;

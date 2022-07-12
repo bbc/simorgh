@@ -36,15 +36,22 @@ export default async ({ getAgent, service, path: pathname, variant, page }) => {
     });
     const { data } = json;
 
+    const promos = data.curations
+      ? data.curations[0].summaries
+      : data.summaries;
+
+    const scriptSwitchId = data.variantTopicId;
+
     return {
       status,
       pageData: {
         title: data.title,
         description: data.description || data.title,
-        promos: data.summaries,
+        promos,
         activePage: data.activePage || 1,
         pageCount: data.pageCount,
-        scriptSwitchId: data.variantTopicId,
+        scriptSwitchId,
+        renderScriptSwitch: Boolean(scriptSwitchId),
         metadata: {
           type: 'Topic',
         },
