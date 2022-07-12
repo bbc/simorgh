@@ -1,6 +1,6 @@
 import React from 'react';
 import { node, string, shape } from 'prop-types';
-import useCombinedClickTrackerHandler from '#containers/StoryPromo/useCombinedClickTrackerHandler.js';
+import useCombinedClickTrackerHandler from '#containers/StoryPromo/useCombinedClickTrackerHandler';
 import StyledLink from './index.styles';
 
 const Link = ({ className, children, to, id, eventTrackingData }) => {
