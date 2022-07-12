@@ -100,7 +100,7 @@
     "@octokit/action": "3.18.0",
     "@octokit/rest": "18.12.0",
     "@optimizely/react-sdk": "2.8.1",
-    "@testing-library/user-event": "13.5.0",
+    "@testing-library/user-event": "14.2.1",
     "aws-embedded-metrics": "2.0.4",
     "compression": "1.7.4",
     "core-js": "3.22.2",
