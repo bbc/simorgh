@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { shape, number, string } from 'prop-types';
+import { shape, number } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import isEmpty from 'ramda/src/isEmpty';
 import { storyItem } from '#models/propTypes/storyItem';
@@ -9,7 +9,7 @@ import Promo from '#containers/NewStoryPromo';
 import { StyledPromoHeading } from './index.styles';
 import optimoPromoIdGenerator from '../utility';
 
-const TopStoriesItem = ({ item, index, labelId }) => {
+const TopStoriesItem = ({ item, index }) => {
   const { script, translations } = useContext(ServiceContext);
 
   if (!item || isEmpty(item)) return null;
@@ -45,7 +45,7 @@ const TopStoriesItem = ({ item, index, labelId }) => {
   const liveLabelIsEnglish = liveLabel === 'LIVE';
 
   const linkId = optimoPromoIdGenerator(
-    labelId,
+    'top-stories',
     assetUri,
     uri,
     contentType,
@@ -56,7 +56,7 @@ const TopStoriesItem = ({ item, index, labelId }) => {
 
   return (
     <Promo
-      to={assetUri || uri}
+      toLink={assetUri || uri}
       id={linkId}
       mediaType={mediaType}
       eventTrackingData={eventTrackingData}
@@ -98,7 +98,6 @@ const TopStoriesItem = ({ item, index, labelId }) => {
 TopStoriesItem.propTypes = {
   item: shape(storyItem).isRequired,
   index: number,
-  labelId: string.isRequired,
 };
 
 TopStoriesItem.defaultProps = { index: null };

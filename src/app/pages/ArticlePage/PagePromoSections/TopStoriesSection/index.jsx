@@ -14,7 +14,7 @@ import {
 import TopStoriesItem from './TopStoriesItem';
 
 const TopStoriesPromo = ({ content }) => {
-  const { translations, script } = useContext(ServiceContext);
+  const { translations, script, service } = useContext(ServiceContext);
 
   if (!content || isEmpty(content)) return null;
 
@@ -29,18 +29,19 @@ const TopStoriesPromo = ({ content }) => {
         columnType="secondary"
         backgroundColor={C_GREY_2}
         script={script}
+        service={service}
       >
         {title}
       </SectionLabel>
 
       {hasSingleContent ? (
-        <TopStoriesItem item={content[0]} index={0} labelId={LABEL_ID} />
+        <TopStoriesItem item={content[0]} index={0} />
       ) : (
         <FlexPromoList>
           {content.map((item, index) => (
             // eslint-disable-next-line react/no-array-index-key
             <FlexPromoListItem key={`${LABEL_ID}-${index}`}>
-              <TopStoriesItem item={item} labelId={LABEL_ID} index={index} />
+              <TopStoriesItem item={item} index={index} />
             </FlexPromoListItem>
           ))}
         </FlexPromoList>

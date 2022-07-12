@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { shape, string, number } from 'prop-types';
+import { shape, number } from 'prop-types';
 import path from 'ramda/src/path';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { createSrcsets } from '#lib/utilities/srcSet';
@@ -8,7 +8,7 @@ import Promo from '#containers/NewStoryPromo';
 import isEmpty from 'ramda/src/isEmpty';
 import optimoPromoIdGenerator from '../utility';
 
-const RelatedContentItem = ({ item, labelId, index }) => {
+const RelatedContentItem = ({ item, index }) => {
   const { script } = useContext(ServiceContext);
   if (!item || isEmpty(item)) return null;
 
@@ -39,7 +39,13 @@ const RelatedContentItem = ({ item, labelId, index }) => {
     item,
   );
 
-  const linkId = optimoPromoIdGenerator(labelId, assetUri, '', '', index);
+  const linkId = optimoPromoIdGenerator(
+    'promo-rel-content',
+    assetUri,
+    '',
+    '',
+    index,
+  );
 
   const DEFAULT_IMAGE_RES = 660;
   const imageResolutions = [70, 95, 144, 183, 240, 320, 660];
@@ -103,7 +109,7 @@ const RelatedContentItem = ({ item, labelId, index }) => {
   const headingTagOverride = timestamp ? '' : 'div';
 
   return (
-    <Promo to={assetUri} id={linkId} eventTrackingData={eventTrackingData}>
+    <Promo toLink={assetUri} id={linkId} eventTrackingData={eventTrackingData}>
       <Promo.Image
         src={src}
         altText={altText}
@@ -126,7 +132,6 @@ const RelatedContentItem = ({ item, labelId, index }) => {
 
 RelatedContentItem.propTypes = {
   item: shape({}).isRequired,
-  labelId: string.isRequired,
   index: number.isRequired,
 };
 

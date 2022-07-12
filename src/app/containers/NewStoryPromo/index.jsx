@@ -20,8 +20,8 @@ import path from 'ramda/src/path';
 
 const PromoContext = React.createContext({});
 
-const Promo = ({ children, to, id, mediaType, eventTrackingData }) => {
-  const { script, service } = useContext(ServiceContext);
+const Promo = ({ children, toLink, id, mediaType, eventTrackingData }) => {
+  const { service } = useContext(ServiceContext);
 
   const eventTrackingDataSend = path(['block'], eventTrackingData);
 
@@ -31,7 +31,7 @@ const Promo = ({ children, to, id, mediaType, eventTrackingData }) => {
     <BorderWrapper>
       <PromoWrapper ref={viewRef}>
         <PromoContext.Provider
-          value={{ script, service, to, id, eventTrackingData, mediaType }}
+          value={{ service, toLink, id, eventTrackingData, mediaType }}
         >
           {children}
         </PromoContext.Provider>
@@ -60,12 +60,12 @@ Promo.Image = withPromoContext(Image);
 
 Promo.propTypes = {
   children: node.isRequired,
-  to: string,
+  toLink: string,
   id: string.isRequired,
   mediaType: string,
-  eventTrackingData: shape({ block: { componentName: string } }),
+  eventTrackingData: shape({ block: shape({ componentName: string }) }),
 };
 
-Promo.defaultProps = { to: '', mediaType: '', eventTrackingData: null };
+Promo.defaultProps = { toLink: '', mediaType: '', eventTrackingData: null };
 
 export default Promo;

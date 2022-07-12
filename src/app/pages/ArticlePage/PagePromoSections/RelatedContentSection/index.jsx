@@ -17,7 +17,7 @@ import {
 import RelatedContentItem from './RelatedContentItem';
 
 const RelatedContentPromo = ({ content }) => {
-  const { translations, script } = useContext(ServiceContext);
+  const { translations, script, service } = useContext(ServiceContext);
 
   if (!pathEq(['type'], 'relatedContent', content)) return null;
 
@@ -51,27 +51,20 @@ const RelatedContentPromo = ({ content }) => {
         labelId={LABEL_ID}
         backgroundColor={C_GREY_2}
         script={script}
+        service={service}
       >
         {title}
       </SectionLabel>
       {hasSingleContent ? (
         <RelatedContentGrid>
-          <RelatedContentItem
-            item={reducedStoryPromoItems[0]}
-            index={0}
-            labelId={LABEL_ID}
-          />
+          <RelatedContentItem item={reducedStoryPromoItems[0]} index={0} />
         </RelatedContentGrid>
       ) : (
         <RelatedContentGrid as={StoryPromoUlBase}>
           {reducedStoryPromoItems.map((item, index) => (
             // eslint-disable-next-line react/no-array-index-key
             <StyledStoryPromoLi key={`${LABEL_ID}-${index}`}>
-              <RelatedContentItem
-                item={item}
-                index={index}
-                labelId={LABEL_ID}
-              />
+              <RelatedContentItem item={item} index={index} />
             </StyledStoryPromoLi>
           ))}
         </RelatedContentGrid>
@@ -82,7 +75,7 @@ const RelatedContentPromo = ({ content }) => {
 
 RelatedContentPromo.propTypes = {
   content: shape({
-    type: 'links',
+    type: string,
     model: shape({
       blocks: arrayOf(
         shape({
