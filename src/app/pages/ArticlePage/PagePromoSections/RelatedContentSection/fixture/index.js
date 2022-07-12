@@ -196,7 +196,7 @@ export const RelatedContentData = {
 };
 
 export const RelatedContentSingleItem = {
-  type: 'links',
+  type: 'relatedContent',
   model: {
     blocks: [
       {
@@ -1085,3 +1085,7 @@ export const RelatedContentCustomLabel = {
     ],
   },
 };
+
+export const RelatedContentSingleItemRtl = {};
+
+export const RelatedContentListRtl = {};

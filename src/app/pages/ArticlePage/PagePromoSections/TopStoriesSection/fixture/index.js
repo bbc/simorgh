@@ -402,3 +402,212 @@ export const topStoriesSingleItem = [
     type: 'cps',
   },
 ];
+
+export const topStoriesListRtl = [
+  {
+    headlines: {
+      headline: 'ما خطورة المشاكل التي تواجهها السعودية؟',
+    },
+    locators: {
+      assetUri: '/arabic/middleeast-52649577',
+      cpsUrn: 'urn:bbc:content:assetUri:arabic/middleeast-52649577',
+      assetId: '52649577',
+    },
+    summary:
+      'السعودية، وهي الدولة التي كانت تشتهر بأنها لا تفرض أي ضرائب على مواطنيها، أعلنت مضاعفة الضريبة المضافة ثلاث مرات من 5 في المئة إلى 15 في المئة وإيقاف صرف بدل غلاء المعيشة اعتبارا من الشهر القادم.',
+    timestamp: 1589372656000,
+    language: 'ar',
+    byline: {
+      name: 'فرانك  غاردنر',
+      title: 'محرر الشؤون الأمنية ',
+      persons: [
+        {
+          name: 'فرانك غاردنر',
+          function: 'محرر الشؤون الأمنية',
+        },
+      ],
+    },
+    passport: {
+      category: {
+        categoryId:
+          'http://www.bbc.co.uk/ontologies/applicationlogic-news/News',
+        categoryName: 'News',
+      },
+      campaigns: [
+        {
+          campaignId: '5a988e3739461b000e9dabfa',
+          campaignName: 'WS - Give me perspective',
+        },
+      ],
+      taggings: [],
+    },
+    cpsType: 'STY',
+    indexImage: {
+      id: '112240105',
+      subType: 'index',
+      href: 'http://c.files.bbci.co.uk/C3B8/production/_112240105_gettyimages-1129844897.jpg',
+      path: '/cpsprodpb/C3B8/production/_112240105_gettyimages-1129844897.jpg',
+      height: 549,
+      width: 976,
+      altText: 'إعلان يحمل صورة ولي العهد السعودي',
+      copyrightHolder: 'Getty Images',
+      type: 'image',
+    },
+    options: {
+      isBreakingNews: false,
+      isFactCheck: false,
+    },
+    prominence: 'slideshow',
+    id: 'urn:bbc:ares::asset:arabic/middleeast-52649577',
+    type: 'cps',
+  },
+  {
+    headlines: {
+      headline:
+        'البرازيل تسجل أكبر عدد وفيات بفيروس كورونا في البلاد في يوم واحد',
+    },
+    locators: {
+      assetUri: '/arabic/world-52649023',
+      cpsUrn: 'urn:bbc:content:assetUri:arabic/world-52649023',
+      assetId: '52649023',
+    },
+    summary:
+      'عدد الوفيات بفيروس كورونا في البرازيل يرتفع إلى أعلى مستوى يومي، مسجلا 881 حالة، منذ بدء انتشار الوباء، وذلك بعد أيام من ظهور تقارير ترجح وصول الفيروس إلى البلاد قبل نحو شهرين من التاريخ المعلن رسميا.',
+    timestamp: 1589377817000,
+    language: 'ar',
+    passport: {
+      category: {
+        categoryId:
+          'http://www.bbc.co.uk/ontologies/applicationlogic-news/News',
+        categoryName: 'News',
+      },
+      campaigns: [
+        {
+          campaignId: '5a988e4739461b000e9dabfc',
+          campaignName: 'WS - Update me',
+        },
+      ],
+      taggings: [],
+    },
+    cpsType: 'STY',
+    indexImage: {
+      id: '112255011',
+      subType: 'index',
+      href: 'http://c.files.bbci.co.uk/2B2F/production/_112255011_20be937c-d343-4947-adfc-7a9816fedcf7.jpg',
+      path: '/cpsprodpb/2B2F/production/_112255011_20be937c-d343-4947-adfc-7a9816fedcf7.jpg',
+      height: 549,
+      width: 976,
+      altText: 'كشف درجة الحرارة',
+      caption:
+        'قالت مصادر أكاديمية في البرازيل إن اختبار الكشف عن فيروس كورونا لا يجرى إلا للحالات التي تتوجه إلى المستشفيات بسبب الأعراض',
+      copyrightHolder: 'Getty Images',
+      type: 'image',
+    },
+    options: {
+      isBreakingNews: false,
+      isFactCheck: false,
+    },
+    prominence: 'slideshow',
+    id: 'urn:bbc:ares::asset:arabic/world-52649023',
+    type: 'cps',
+  },
+  {
+    headlines: {
+      headline:
+        'الاقتصاد البريطاني ينكمش بأسرع وتيرة منذ الأزمة المالية العالمية',
+    },
+    locators: {
+      assetUri: '/arabic/business-52650157',
+      cpsUrn: 'urn:bbc:content:assetUri:arabic/business-52650157',
+      assetId: '52650157',
+    },
+    summary:
+      'اقتصاد المملكة المتحدة يشهد أسرع انكماش له منذ الأزمة المالية التي شهدها العالم عام 2008.',
+    timestamp: 1589377951000,
+    language: 'ar',
+    passport: {
+      category: {
+        categoryId:
+          'http://www.bbc.co.uk/ontologies/applicationlogic-news/News',
+        categoryName: 'News',
+      },
+      campaigns: [
+        {
+          campaignId: '5a988e4739461b000e9dabfc',
+          campaignName: 'WS - Update me',
+        },
+      ],
+      taggings: [],
+    },
+    cpsType: 'STY',
+    indexImage: {
+      id: '112223629',
+      subType: 'index',
+      href: 'http://c.files.bbci.co.uk/169D8/production/_112223629_gettyimages-1211920916.jpg',
+      path: '/cpsprodpb/169D8/production/_112223629_gettyimages-1211920916.jpg',
+      height: 549,
+      width: 976,
+      altText: 'عامل بناء',
+      copyrightHolder: 'Getty Images',
+      type: 'image',
+    },
+    options: {
+      isBreakingNews: false,
+      isFactCheck: false,
+    },
+    prominence: 'slideshow',
+    id: 'urn:bbc:ares::asset:arabic/business-52650157',
+    type: 'cps',
+  },
+];
+
+export const topStoriesSingleItemRtl = [
+  {
+    headlines: {
+      headline:
+        'الاقتصاد البريطاني ينكمش بأسرع وتيرة منذ الأزمة المالية العالمية',
+    },
+    locators: {
+      assetUri: '/arabic/business-52650157',
+      cpsUrn: 'urn:bbc:content:assetUri:arabic/business-52650157',
+      assetId: '52650157',
+    },
+    summary:
+      'اقتصاد المملكة المتحدة يشهد أسرع انكماش له منذ الأزمة المالية التي شهدها العالم عام 2008.',
+    timestamp: 1589377951000,
+    language: 'ar',
+    passport: {
+      category: {
+        categoryId:
+          'http://www.bbc.co.uk/ontologies/applicationlogic-news/News',
+        categoryName: 'News',
+      },
+      campaigns: [
+        {
+          campaignId: '5a988e4739461b000e9dabfc',
+          campaignName: 'WS - Update me',
+        },
+      ],
+      taggings: [],
+    },
+    cpsType: 'STY',
+    indexImage: {
+      id: '112223629',
+      subType: 'index',
+      href: 'http://c.files.bbci.co.uk/169D8/production/_112223629_gettyimages-1211920916.jpg',
+      path: '/cpsprodpb/169D8/production/_112223629_gettyimages-1211920916.jpg',
+      height: 549,
+      width: 976,
+      altText: 'عامل بناء',
+      copyrightHolder: 'Getty Images',
+      type: 'image',
+    },
+    options: {
+      isBreakingNews: false,
+      isFactCheck: false,
+    },
+    prominence: 'slideshow',
+    id: 'urn:bbc:ares::asset:arabic/business-52650157',
+    type: 'cps',
+  },
+];
