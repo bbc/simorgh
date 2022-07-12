@@ -17,7 +17,7 @@ import {
 import RelatedContentItem from './RelatedContentItem';
 
 const RelatedContentPromo = ({ content }) => {
-  const { translations } = useContext(ServiceContext);
+  const { translations, script } = useContext(ServiceContext);
 
   if (!pathEq(['type'], 'relatedContent', content)) return null;
 
@@ -47,7 +47,11 @@ const RelatedContentPromo = ({ content }) => {
 
   return (
     <StyledWrapper aria-labelledby={LABEL_ID} role="region" data-e2e={LABEL_ID}>
-      <SectionLabel labelId={LABEL_ID} backgroundColor={C_GREY_2}>
+      <SectionLabel
+        labelId={LABEL_ID}
+        backgroundColor={C_GREY_2}
+        script={script}
+      >
         {title}
       </SectionLabel>
       {hasSingleContent ? (

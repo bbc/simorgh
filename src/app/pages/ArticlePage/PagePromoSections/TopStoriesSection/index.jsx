@@ -14,7 +14,7 @@ import {
 import TopStoriesItem from './TopStoriesItem';
 
 const TopStoriesPromo = ({ content }) => {
-  const { translations } = useContext(ServiceContext);
+  const { translations, script } = useContext(ServiceContext);
 
   if (!content || isEmpty(content)) return null;
 
@@ -28,6 +28,7 @@ const TopStoriesPromo = ({ content }) => {
         labelId={LABEL_ID}
         columnType="secondary"
         backgroundColor={C_GREY_2}
+        script={script}
       >
         {title}
       </SectionLabel>
