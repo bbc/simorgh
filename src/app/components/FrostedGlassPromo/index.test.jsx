@@ -9,7 +9,12 @@ import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import { promoProps, cpsPromoFixture, linkPromoFixture } from './fixtures';
+import {
+  promoProps,
+  cpsPromoFixture,
+  optimoPromoFixture,
+  linkPromoFixture,
+} from './fixtures';
 
 import Promo from '.';
 
@@ -74,7 +79,7 @@ describe('Frosted Glass Promo', () => {
     // Main image is lazy-loaded
     expect(container.querySelector('noscript')).toBeInTheDocument();
     expect(
-      container.querySelector(`a[href="${linkPromoFixture.item.uri}"]`),
+      container.querySelector('a[href="/pidgin/sport-51434980"]'),
     ).toBeInTheDocument();
   });
 
