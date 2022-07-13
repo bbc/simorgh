@@ -53,8 +53,10 @@ const Item = styled.div`
     }
   }
 `;
-
-const Wrapper = styled.div``;
+// add break point logic
+const Wrapper = styled.div`
+  margin-top: ${GEL_SPACING_TRPL};
+`;
 
 const TopicGrid = ({ promos }) => {
   const { dir } = useContext(ServiceContext);
