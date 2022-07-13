@@ -35,15 +35,23 @@ const TopStoriesSection = ({ content }) => {
       </SectionLabel>
 
       {hasSingleContent ? (
-        <TopStoriesItem item={content[0]} index={0} />
+        () => {
+          const id = pathOr('noId', ['id'], content[0]);
+          const itemId = `RelatedContent-${id}`;
+          return <TopStoriesItem item={content[0]} itemId={itemId} />;
+        }
       ) : (
         <FlexPromoList>
-          {content.map((item, index) => (
-            // eslint-disable-next-line react/no-array-index-key
-            <FlexPromoListItem key={`${LABEL_ID}-${index}`}>
-              <TopStoriesItem item={item} index={index} />
-            </FlexPromoListItem>
-          ))}
+          {content.map(item => {
+            const id = pathOr('noId', ['id'], item);
+            const itemId = `RelatedContent-${id}`;
+            return (
+              // eslint-disable-next-line react/no-array-index-key
+              <FlexPromoListItem key={itemId}>
+                <TopStoriesItem item={item} itemId={itemId} />
+              </FlexPromoListItem>
+            );
+          })}
         </FlexPromoList>
       )}
     </StyledWrapper>
