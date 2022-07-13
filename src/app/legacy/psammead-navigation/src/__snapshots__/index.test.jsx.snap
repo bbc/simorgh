@@ -3,7 +3,8 @@
 exports[`Navigation should render correctly 1`] = `
 .emotion-0 {
   position: relative;
-  background-color: #FFFFFF;
+  background-color: #B80000;
+  border-top: 0.0625rem solid #FFFFFF;
 }
 
 .emotion-0::after {
@@ -12,7 +13,7 @@ exports[`Navigation should render correctly 1`] = `
   bottom: 0;
   right: 0;
   left: 0;
-  border-bottom: 0.0625rem solid #E6E8EA;
+  border-bottom: 0.0625rem solid transparent;
 }
 
 .emotion-0 .emotion-7::after {
@@ -23,7 +24,6 @@ exports[`Navigation should render correctly 1`] = `
   position: relative;
   max-width: 80rem;
   margin: 0 auto;
-  background-color: #FFFFFF;
 }
 
 .emotion-4 {
@@ -57,7 +57,7 @@ exports[`Navigation should render correctly 1`] = `
     position: absolute;
     bottom: -1px;
     width: 80rem;
-    border-bottom: 0.0625rem solid #E6E8EA;
+    border-bottom: 0.0625rem solid #EAB3B3;
     z-index: -1;
   }
 }
@@ -69,7 +69,6 @@ exports[`Navigation should render correctly 1`] = `
   font-weight: 400;
   font-style: normal;
   color: #FDFDFD;
-  color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -103,8 +102,8 @@ exports[`Navigation should render correctly 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
-  border-bottom: 0.3125rem solid #B80000;
+  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.3125rem solid #FFFFFF;
 }
 
 .emotion-8:focus::after {
@@ -113,9 +112,9 @@ exports[`Navigation should render correctly 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
+  border-bottom: 0.25rem solid #FFFFFF;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #FFFFFF;
 }
 
 .emotion-10::after {
@@ -124,7 +123,7 @@ exports[`Navigation should render correctly 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
+  border-bottom: 0.25rem solid #FFFFFF;
 }
 
 .emotion-12 {
@@ -145,7 +144,6 @@ exports[`Navigation should render correctly 1`] = `
   font-weight: 400;
   font-style: normal;
   color: #FDFDFD;
-  color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -179,7 +177,7 @@ exports[`Navigation should render correctly 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
+  border-bottom: 0.25rem solid #FFFFFF;
 }
 
 .emotion-16:focus::after {
@@ -188,9 +186,9 @@ exports[`Navigation should render correctly 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
+  border-bottom: 0.25rem solid #FFFFFF;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #FFFFFF;
 }
 
 <div>
@@ -279,7 +277,8 @@ exports[`Navigation should render correctly 1`] = `
 exports[`Navigation should render correctly when ampOpenClass prop is provided 1`] = `
 .emotion-0 {
   position: relative;
-  background-color: #FFFFFF;
+  background-color: #B80000;
+  border-top: 0.0625rem solid #FFFFFF;
 }
 
 @media (max-width: 37.4375rem) {
@@ -294,7 +293,7 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
   bottom: 0;
   right: 0;
   left: 0;
-  border-bottom: 0.0625rem solid #E6E8EA;
+  border-bottom: 0.0625rem solid transparent;
 }
 
 .emotion-0 .emotion-7::after {
@@ -305,7 +304,6 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
   position: relative;
   max-width: 80rem;
   margin: 0 auto;
-  background-color: #FFFFFF;
 }
 
 .emotion-4 {
@@ -339,7 +337,7 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
     position: absolute;
     bottom: -1px;
     width: 80rem;
-    border-bottom: 0.0625rem solid #E6E8EA;
+    border-bottom: 0.0625rem solid #EAB3B3;
     z-index: -1;
   }
 }
@@ -351,7 +349,6 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
   font-weight: 400;
   font-style: normal;
   color: #FDFDFD;
-  color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -385,8 +382,8 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
-  border-bottom: 0.3125rem solid #B80000;
+  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.3125rem solid #FFFFFF;
 }
 
 .emotion-8:focus::after {
@@ -395,9 +392,9 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
+  border-bottom: 0.25rem solid #FFFFFF;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #FFFFFF;
 }
 
 .emotion-10::after {
@@ -406,7 +403,7 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
+  border-bottom: 0.25rem solid #FFFFFF;
 }
 
 .emotion-12 {
@@ -427,7 +424,6 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
   font-weight: 400;
   font-style: normal;
   color: #FDFDFD;
-  color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -461,7 +457,7 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
+  border-bottom: 0.25rem solid #FFFFFF;
 }
 
 .emotion-16:focus::after {
@@ -470,9 +466,9 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
+  border-bottom: 0.25rem solid #FFFFFF;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #FFFFFF;
 }
 
 <div>
@@ -562,6 +558,7 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
 .emotion-0 {
   position: relative;
   background-color: #222222;
+  border-top: 0.0625rem solid #FFFFFF;
 }
 
 .emotion-0::after {
@@ -570,7 +567,7 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
   bottom: 0;
   right: 0;
   left: 0;
-  border-bottom: 0.0625rem solid #E6E8EA;
+  border-bottom: 0.0625rem solid transparent;
 }
 
 .emotion-0 .emotion-7::after {
@@ -581,7 +578,6 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
   position: relative;
   max-width: 80rem;
   margin: 0 auto;
-  background-color: #FFFFFF;
 }
 
 .emotion-4 {
@@ -615,7 +611,7 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
     position: absolute;
     bottom: -1px;
     width: 80rem;
-    border-bottom: 0.0625rem solid #E6E8EA;
+    border-bottom: 0.0625rem solid #EAB3B3;
     z-index: -1;
   }
 }
@@ -627,7 +623,6 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
   font-weight: 400;
   font-style: normal;
   color: #FDFDFD;
-  color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -661,8 +656,8 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
-  border-bottom: 0.3125rem solid #B80000;
+  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.3125rem solid #FFFFFF;
 }
 
 .emotion-8:focus::after {
@@ -671,9 +666,9 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
+  border-bottom: 0.25rem solid #FFFFFF;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #FFFFFF;
 }
 
 .emotion-10::after {
@@ -682,7 +677,7 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
+  border-bottom: 0.25rem solid #FFFFFF;
 }
 
 .emotion-12 {
@@ -703,7 +698,6 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
   font-weight: 400;
   font-style: normal;
   color: #FDFDFD;
-  color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -737,7 +731,7 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
+  border-bottom: 0.25rem solid #FFFFFF;
 }
 
 .emotion-16:focus::after {
@@ -746,9 +740,9 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
+  border-bottom: 0.25rem solid #FFFFFF;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #FFFFFF;
 }
 
 <div>
@@ -861,8 +855,8 @@ exports[`Scrollable Navigation should render correctly 1`] = `
     pointer-events: none;
     background: linear-gradient(
             to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1)
+            rgba(184, 0, 0, 0) 0%,
+            rgba(184, 0, 0, 1)
               100%
           );
   }
@@ -876,7 +870,8 @@ exports[`Scrollable Navigation should render correctly 1`] = `
 
 .emotion-2 {
   position: relative;
-  background-color: #FFFFFF;
+  background-color: #B80000;
+  border-top: 0.0625rem solid #FFFFFF;
 }
 
 .emotion-2::after {
@@ -885,7 +880,7 @@ exports[`Scrollable Navigation should render correctly 1`] = `
   bottom: 0;
   right: 0;
   left: 0;
-  border-bottom: 0.0625rem solid #E6E8EA;
+  border-bottom: 0.0625rem solid transparent;
 }
 
 .emotion-2 .emotion-9::after {
@@ -896,7 +891,6 @@ exports[`Scrollable Navigation should render correctly 1`] = `
   position: relative;
   max-width: 80rem;
   margin: 0 auto;
-  background-color: #FFFFFF;
 }
 
 .emotion-6 {
@@ -930,7 +924,7 @@ exports[`Scrollable Navigation should render correctly 1`] = `
     position: absolute;
     bottom: -1px;
     width: 80rem;
-    border-bottom: 0.0625rem solid #E6E8EA;
+    border-bottom: 0.0625rem solid #EAB3B3;
     z-index: -1;
   }
 }
@@ -942,7 +936,6 @@ exports[`Scrollable Navigation should render correctly 1`] = `
   font-weight: 400;
   font-style: normal;
   color: #FDFDFD;
-  color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -976,8 +969,8 @@ exports[`Scrollable Navigation should render correctly 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
-  border-bottom: 0.3125rem solid #B80000;
+  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.3125rem solid #FFFFFF;
 }
 
 .emotion-10:focus::after {
@@ -986,9 +979,9 @@ exports[`Scrollable Navigation should render correctly 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
+  border-bottom: 0.25rem solid #FFFFFF;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #FFFFFF;
 }
 
 .emotion-12::after {
@@ -997,7 +990,7 @@ exports[`Scrollable Navigation should render correctly 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
+  border-bottom: 0.25rem solid #FFFFFF;
 }
 
 .emotion-14 {
@@ -1018,7 +1011,6 @@ exports[`Scrollable Navigation should render correctly 1`] = `
   font-weight: 400;
   font-style: normal;
   color: #FDFDFD;
-  color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1052,7 +1044,7 @@ exports[`Scrollable Navigation should render correctly 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
+  border-bottom: 0.25rem solid #FFFFFF;
 }
 
 .emotion-18:focus::after {
@@ -1061,9 +1053,9 @@ exports[`Scrollable Navigation should render correctly 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
+  border-bottom: 0.25rem solid #FFFFFF;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #FFFFFF;
 }
 
 <div>
