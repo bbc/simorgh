@@ -1,14 +1,15 @@
 import React, { useContext } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { shape, string } from 'prop-types';
+import { shape, number } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import isEmpty from 'ramda/src/isEmpty';
 import { storyItem } from '#models/propTypes/storyItem';
 import { getIsLive } from '#lib/utilities/getStoryPromoInfo';
 import Promo from '#components/OptimoPromos';
 import { StyledPromoHeading, StyledTimestamp } from './index.styles';
+import optimoPromoIdGenerator from '../utility';
 
-const TopStoriesItem = ({ item, itemId }) => {
+const TopStoriesItem = ({ item, index }) => {
   const { script, translations } = useContext(ServiceContext);
 
   if (!item || isEmpty(item)) return null;
@@ -35,6 +36,7 @@ const TopStoriesItem = ({ item, itemId }) => {
   const uri = pathOr('', ['uri'], item);
 
   const isLive = getIsLive(item);
+  const contentType = pathOr('', ['contentType'], item);
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
 
@@ -42,12 +44,20 @@ const TopStoriesItem = ({ item, itemId }) => {
   // text to read 'Live' instead, which screenreaders pronounce correctly.
   const liveLabelIsEnglish = liveLabel === 'LIVE';
 
+  const linkId = optimoPromoIdGenerator(
+    'top-stories',
+    assetUri,
+    uri,
+    contentType,
+    index,
+  );
+
   const headingTagOverride = timestamp ? '' : 'div';
 
   return (
     <Promo
       toLink={assetUri || uri}
-      a11yId={itemId}
+      a11yId={linkId}
       mediaType={mediaType}
       eventTrackingData={eventTrackingData}
     >
@@ -87,7 +97,9 @@ const TopStoriesItem = ({ item, itemId }) => {
 
 TopStoriesItem.propTypes = {
   item: shape(storyItem).isRequired,
-  itemId: string.isRequired,
+  index: number,
 };
+
+TopStoriesItem.defaultProps = { index: null };
 
 export default TopStoriesItem;

@@ -57,30 +57,17 @@ const RelatedContentSection = ({ content }) => {
         {title}
       </SectionLabel>
       {hasSingleContent ? (
-        () => {
-          const id = pathOr('noId', ['id'], content[0]);
-          const itemId = `RelatedContent-${id}`;
-          return (
-            <SingleItemWrapper>
-              <RelatedContentItem
-                item={reducedStoryPromoItems[0]}
-                itemId={itemId}
-              />
-            </SingleItemWrapper>
-          );
-        }
+        <SingleItemWrapper>
+          <RelatedContentItem item={reducedStoryPromoItems[0]} index={0} />
+        </SingleItemWrapper>
       ) : (
         <RelatedContentGrid as={StoryPromoUlBase}>
-          {reducedStoryPromoItems.map(item => {
-            const id = pathOr('noId', ['id'], item);
-            const itemId = `RelatedContent-${id}`;
-
-            return (
-              <StyledStoryPromoLi key={itemId}>
-                <RelatedContentItem item={item} itemId={itemId} />
-              </StyledStoryPromoLi>
-            );
-          })}
+          {reducedStoryPromoItems.map((item, index) => (
+            // eslint-disable-next-line react/no-array-index-key
+            <StyledStoryPromoLi key={`${LABEL_ID}-${index}`}>
+              <RelatedContentItem item={item} index={index} />
+            </StyledStoryPromoLi>
+          ))}
         </RelatedContentGrid>
       )}
     </StyledWrapper>
