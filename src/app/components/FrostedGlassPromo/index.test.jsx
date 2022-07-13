@@ -9,12 +9,7 @@ import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import {
-  promoProps,
-  cpsPromoFixture,
-  optimoPromoFixture,
-  linkPromoFixture,
-} from './fixtures';
+import { promoProps, cpsPromoFixture, linkPromoFixture } from './fixtures';
 
 import Promo from '.';
 
