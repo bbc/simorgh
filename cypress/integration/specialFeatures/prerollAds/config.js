@@ -38,9 +38,9 @@ export const mapsWithPreroll = {
       ],
     },
     {
-      service: 'russian',
+      service: 'mundo',
       paths: [
-        'https://www.bbc.com/russian/media-52728860', // CPS Video, advertising enabled, preroll enabled for russian service
+        'https://www.bbc.com/mundo/media-41174775', // CPS Video, advertising enabled, preroll enabled for mundo service
       ],
     },
   ],
