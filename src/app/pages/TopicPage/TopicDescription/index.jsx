@@ -8,6 +8,7 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#legacy/gel-foundations/src/breakpoints';
 import {
+  GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '#legacy/gel-foundations/src/spacings';
@@ -22,7 +23,7 @@ const Paragraph = styled.p`
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     font-size: 1.25rem;
-    width: 49%;
+    width: calc(50% - ${GEL_SPACING});
     display: inline-block;
   }
 `;

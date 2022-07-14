@@ -46,7 +46,7 @@ export default async ({ getAgent, service, path: pathname, variant, page }) => {
       status,
       pageData: {
         title: data.title,
-        description: data.description || data.title,
+        description: data.description,
         promos,
         activePage: data.activePage || 1,
         pageCount: data.pageCount,
