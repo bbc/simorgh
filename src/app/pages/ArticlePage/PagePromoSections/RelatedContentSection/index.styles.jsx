@@ -27,7 +27,7 @@ export const StyledStoryPromoLi = styled(StoryPromoLiBase)`
   width: 100%;
   height: inherit;
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    width: calc(50% - ${GEL_SPACING});
+    width: calc(33.33% - ${GEL_SPACING_DBL});
   }
 `;
 
@@ -40,6 +40,6 @@ export const RelatedContentGrid = styled.div`
 export const SingleItemWrapper = styled.div`
   width: 100%;
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    width: 50%;
+    width: 33.33%;
   }
 `;
