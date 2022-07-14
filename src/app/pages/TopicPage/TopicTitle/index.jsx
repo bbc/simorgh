@@ -23,17 +23,17 @@ const H1 = styled.h1`
   font-size: 1.75rem;
   line-height: 2rem;
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    margin: ${GEL_SPACING_QUAD} 0 ${GEL_SPACING_QUAD} 0;
+    margin-top: ${GEL_SPACING_QUAD};
     font-size: 2rem;
     line-height: 2.25rem;
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin: ${GEL_SPACING_SEXT} 0 ${GEL_SPACING_SEXT} 0;
+    margin-top: ${GEL_SPACING_SEXT};
     font-size: 3.25rem;
     line-height: 3.5rem;
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin: ${GEL_SPACING_QUIN} 0 ${GEL_SPACING_SEXT} 0;
+    margin-top: ${GEL_SPACING_QUIN};
     font-size: 2.75rem;
     line-height: 3rem;
   }

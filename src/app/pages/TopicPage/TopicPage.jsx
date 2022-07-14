@@ -91,7 +91,8 @@ const TopicPage = ({ pageData }) => {
         {/* {description && <TopicDescription>{description}</TopicDescription>} */}
         <TopicDescription>
           this is a test for a long description that spans over multiple lines
-          and has multiple words
+          and has multiple words test test test test test test test test test
+          test test test test test test test test test test test test test test
         </TopicDescription>
         <TopicGrid promos={promos} />
         <Pagination

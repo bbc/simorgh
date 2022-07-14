@@ -5,6 +5,7 @@ import { arrayOf, shape } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 import {
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
@@ -15,6 +16,8 @@ import {
   GEL_SPACING_HLF_TRPL,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
+  GEL_SPACING_QUAD,
+  GEL_SPACING_SEXT,
 } from '#legacy/gel-foundations/src/spacings';
 
 import TopicPromo from '../TopicPromo';
@@ -56,6 +59,12 @@ const Item = styled.div`
 // add break point logic
 const Wrapper = styled.div`
   margin-top: ${GEL_SPACING_TRPL};
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    margin-top: ${GEL_SPACING_QUAD};
+  }
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin-top: ${GEL_SPACING_SEXT};
+  }
 `;
 
 const TopicGrid = ({ promos }) => {
