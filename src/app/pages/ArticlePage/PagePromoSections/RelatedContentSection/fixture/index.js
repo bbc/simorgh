@@ -1086,6 +1086,343 @@ export const RelatedContentCustomLabel = {
   },
 };
 
-export const RelatedContentSingleItemRtl = {};
+export const RelatedContentSingleItemRtl = {
+  type: 'relatedContent',
+  model: {
+    blocks: [
+      {
+        type: 'title',
+        model: {
+          blocks: [
+            {
+              type: 'text',
+              model: {
+                blocks: [
+                  {
+                    type: 'paragraph',
+                    model: {
+                      text: 'Arabic 3 line limit',
+                      blocks: [
+                        {
+                          type: 'fragment',
+                          model: {
+                            text: 'Arabic 3 line limit',
+                            attributes: [],
+                          },
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      },
+      {
+        type: 'link',
+        model: {
+          locator:
+            'urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Fbrasil',
+          blocks: [
+            {
+              type: 'image',
+              model: {
+                blocks: [
+                  {
+                    type: 'altText',
+                    model: {
+                      blocks: [
+                        {
+                          type: 'text',
+                          model: {
+                            blocks: [
+                              {
+                                type: 'paragraph',
+                                model: {
+                                  text: 'فتاة سورية',
+                                  blocks: [
+                                    {
+                                      type: 'fragment',
+                                      model: {
+                                        text: 'فتاة سورية',
+                                        attributes: [],
+                                      },
+                                    },
+                                  ],
+                                },
+                              },
+                            ],
+                          },
+                        },
+                      ],
+                    },
+                  },
+                  {
+                    type: 'rawImage',
+                    model: {
+                      width: 640,
+                      height: 562,
+                      locator:
+                        '72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png',
+                      imageType: 'background',
+                      originCode: 'cpsdevpb',
+                      copyrightHolder: 'BBC',
+                    },
+                  },
+                ],
+              },
+            },
+            {
+              type: 'text',
+              model: {
+                blocks: [
+                  {
+                    type: 'paragraph',
+                    model: {
+                      text: 'الرابط 6',
+                      blocks: [
+                        {
+                          type: 'urlLink',
+                          model: {
+                            text: 'الرابط 6',
+                            locator: 'https://www.bbc.co.uk/brasil',
+                            blocks: [
+                              {
+                                type: 'fragment',
+                                model: {
+                                  text: 'الرابط 6',
+                                  attributes: [],
+                                },
+                              },
+                            ],
+                            isExternal: false,
+                          },
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
+};
 
-export const RelatedContentListRtl = {};
+export const RelatedContentListRtl = {
+  type: 'relatedContent',
+  model: {
+    blocks: [
+      {
+        type: 'title',
+        model: {
+          blocks: [
+            {
+              type: 'text',
+              model: {
+                blocks: [
+                  {
+                    type: 'paragraph',
+                    model: {
+                      text: 'Arabic 3 line limit',
+                      blocks: [
+                        {
+                          type: 'fragment',
+                          model: {
+                            text: 'Arabic 3 line limit',
+                            attributes: [],
+                          },
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      },
+      {
+        type: 'link',
+        model: {
+          locator:
+            'urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Farabic',
+          blocks: [
+            {
+              type: 'image',
+              model: {
+                blocks: [
+                  {
+                    type: 'altText',
+                    model: {
+                      blocks: [
+                        {
+                          type: 'text',
+                          model: {
+                            blocks: [
+                              {
+                                type: 'paragraph',
+                                model: {
+                                  text: 'BBC Test Image',
+                                  blocks: [
+                                    {
+                                      type: 'fragment',
+                                      model: {
+                                        text: 'BBC Test Image',
+                                        attributes: [],
+                                      },
+                                    },
+                                  ],
+                                },
+                              },
+                            ],
+                          },
+                        },
+                      ],
+                    },
+                  },
+                  {
+                    type: 'rawImage',
+                    model: {
+                      width: 640,
+                      height: 562,
+                      locator:
+                        '72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png',
+                      imageType: 'background',
+                      originCode: 'cpsdevpb',
+                      copyrightHolder: 'BBC',
+                    },
+                  },
+                ],
+              },
+            },
+            {
+              type: 'text',
+              model: {
+                blocks: [
+                  {
+                    type: 'paragraph',
+                    model: {
+                      text: 'هذا عنوان طويل يجب أن يتم اقتطاعه بعد ثلاثة أسطر. إنها تستمر وتطول وتطول وتطول. آمل أن يكون هذا طويلا بما فيه الكفاية.',
+                      blocks: [
+                        {
+                          type: 'urlLink',
+                          model: {
+                            text: 'هذا عنوان طويل يجب أن يتم اقتطاعه بعد ثلاثة أسطر. إنها تستمر وتطول وتطول وتطول. آمل أن يكون هذا طويلا بما فيه الكفاية.',
+                            locator: 'https://www.bbc.co.uk/arabic',
+                            blocks: [
+                              {
+                                type: 'fragment',
+                                model: {
+                                  text: 'هذا عنوان طويل يجب أن يتم اقتطاعه بعد ثلاثة أسطر. إنها تستمر وتطول وتطول وتطول. آمل أن يكون هذا طويلا بما فيه الكفاية.',
+                                  attributes: [],
+                                },
+                              },
+                            ],
+                            isExternal: false,
+                          },
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      },
+      {
+        type: 'link',
+        model: {
+          locator:
+            'urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Fbrasil',
+          blocks: [
+            {
+              type: 'image',
+              model: {
+                blocks: [
+                  {
+                    type: 'altText',
+                    model: {
+                      blocks: [
+                        {
+                          type: 'text',
+                          model: {
+                            blocks: [
+                              {
+                                type: 'paragraph',
+                                model: {
+                                  text: 'فتاة سورية',
+                                  blocks: [
+                                    {
+                                      type: 'fragment',
+                                      model: {
+                                        text: 'فتاة سورية',
+                                        attributes: [],
+                                      },
+                                    },
+                                  ],
+                                },
+                              },
+                            ],
+                          },
+                        },
+                      ],
+                    },
+                  },
+                  {
+                    type: 'rawImage',
+                    model: {
+                      width: 640,
+                      height: 562,
+                      locator:
+                        '72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png',
+                      imageType: 'background',
+                      originCode: 'cpsdevpb',
+                      copyrightHolder: 'BBC',
+                    },
+                  },
+                ],
+              },
+            },
+            {
+              type: 'text',
+              model: {
+                blocks: [
+                  {
+                    type: 'paragraph',
+                    model: {
+                      text: 'الرابط 6',
+                      blocks: [
+                        {
+                          type: 'urlLink',
+                          model: {
+                            text: 'الرابط 6',
+                            locator: 'https://www.bbc.co.uk/brasil',
+                            blocks: [
+                              {
+                                type: 'fragment',
+                                model: {
+                                  text: 'الرابط 6',
+                                  attributes: [],
+                                },
+                              },
+                            ],
+                            isExternal: false,
+                          },
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
+};
