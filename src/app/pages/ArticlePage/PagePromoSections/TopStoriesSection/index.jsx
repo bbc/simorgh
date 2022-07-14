@@ -12,6 +12,7 @@ import {
   FlexPromoListItem,
 } from './index.styles';
 import TopStoriesItem from './TopStoriesItem';
+import optimoPromoIdGenerator from '../utility';
 
 const TopStoriesSection = ({ content }) => {
   const { translations, script, service } = useContext(ServiceContext);
@@ -21,6 +22,21 @@ const TopStoriesSection = ({ content }) => {
   const title = pathOr('Top Stories', ['topStoriesTitle'], translations);
   const hasSingleContent = content.length === 1;
   const LABEL_ID = 'top-stories-heading';
+
+  const singleItem = () => {
+    const contentType = pathOr('', ['contentType'], content[0]);
+    const assetUri = pathOr('', ['locators', 'assetUri'], content[0]);
+    const uri = pathOr('', ['uri'], content[0]);
+    const a11yId = optimoPromoIdGenerator(
+      'top-stories',
+      assetUri,
+      uri,
+      contentType,
+      0,
+    );
+
+    return <TopStoriesItem item={content[0]} a11yId={a11yId} />;
+  };
 
   return (
     <StyledWrapper aria-labelledby={LABEL_ID} role="region" data-e2e={LABEL_ID}>
@@ -35,15 +51,28 @@ const TopStoriesSection = ({ content }) => {
       </SectionLabel>
 
       {hasSingleContent ? (
-        <TopStoriesItem item={content[0]} index={0} />
+        singleItem()
       ) : (
         <FlexPromoList>
-          {content.map((item, index) => (
-            // eslint-disable-next-line react/no-array-index-key
-            <FlexPromoListItem key={`${LABEL_ID}-${index}`}>
-              <TopStoriesItem item={item} index={index} />
-            </FlexPromoListItem>
-          ))}
+          {content.map((item, index) => {
+            const contentType = pathOr('', ['contentType'], item);
+            const assetUri = pathOr('', ['locators', 'assetUri'], item);
+            const uri = pathOr('', ['uri'], item);
+
+            const a11yId = optimoPromoIdGenerator(
+              'top-stories',
+              assetUri,
+              uri,
+              contentType,
+              index,
+            );
+
+            return (
+              <FlexPromoListItem key={a11yId}>
+                <TopStoriesItem item={item} a11yId={a11yId} />
+              </FlexPromoListItem>
+            );
+          })}
         </FlexPromoList>
       )}
     </StyledWrapper>

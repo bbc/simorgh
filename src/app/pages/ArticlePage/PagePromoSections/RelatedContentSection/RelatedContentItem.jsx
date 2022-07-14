@@ -1,14 +1,13 @@
 import React, { useContext } from 'react';
-import { shape, number } from 'prop-types';
+import { shape, string } from 'prop-types';
 import path from 'ramda/src/path';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
 import Promo from '#components/OptimoPromos';
 import isEmpty from 'ramda/src/isEmpty';
-import optimoPromoIdGenerator from '../utility';
 
-const RelatedContentItem = ({ item, index }) => {
+const RelatedContentItem = ({ item, a11yId }) => {
   const { script } = useContext(ServiceContext);
   if (!item || isEmpty(item)) return null;
 
@@ -37,14 +36,6 @@ const RelatedContentItem = ({ item, index }) => {
       'locator',
     ],
     item,
-  );
-
-  const linkId = optimoPromoIdGenerator(
-    'promo-rel-content',
-    assetUri,
-    '',
-    '',
-    index,
   );
 
   const DEFAULT_IMAGE_RES = 660;
@@ -111,7 +102,7 @@ const RelatedContentItem = ({ item, index }) => {
   return (
     <Promo
       toLink={assetUri}
-      a11yId={linkId}
+      a11yId={a11yId}
       eventTrackingData={eventTrackingData}
     >
       <Promo.Image
@@ -136,7 +127,7 @@ const RelatedContentItem = ({ item, index }) => {
 
 RelatedContentItem.propTypes = {
   item: shape({}).isRequired,
-  index: number.isRequired,
+  a11yId: string.isRequired,
 };
 
 export default RelatedContentItem;

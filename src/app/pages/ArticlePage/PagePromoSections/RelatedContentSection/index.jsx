@@ -16,6 +16,7 @@ import {
   SingleItemWrapper,
 } from './index.styles';
 import RelatedContentItem from './RelatedContentItem';
+import optimoPromoIdGenerator from '../utility';
 
 const RelatedContentSection = ({ content }) => {
   const { translations, script, service } = useContext(ServiceContext);
@@ -46,6 +47,37 @@ const RelatedContentSection = ({ content }) => {
 
   const hasSingleContent = reducedStoryPromoItems.length === 1;
 
+  const singleItem = () => {
+    const assetUri = pathOr(
+      '',
+      [
+        'model',
+        'blocks',
+        1,
+        'model',
+        'blocks',
+        0,
+        'model',
+        'blocks',
+        0,
+        'model',
+        'locator',
+      ],
+      reducedStoryPromoItems[0],
+    );
+    const a11yId = optimoPromoIdGenerator(
+      'promo-rel-content',
+      assetUri,
+      '',
+      '',
+      0,
+    );
+
+    return (
+      <RelatedContentItem item={reducedStoryPromoItems[0]} a11yId={a11yId} />
+    );
+  };
+
   return (
     <StyledWrapper aria-labelledby={LABEL_ID} role="region" data-e2e={LABEL_ID}>
       <SectionLabel
@@ -57,17 +89,42 @@ const RelatedContentSection = ({ content }) => {
         {title}
       </SectionLabel>
       {hasSingleContent ? (
-        <SingleItemWrapper>
-          <RelatedContentItem item={reducedStoryPromoItems[0]} index={0} />
-        </SingleItemWrapper>
+        <SingleItemWrapper>{singleItem()}</SingleItemWrapper>
       ) : (
         <RelatedContentGrid as={StoryPromoUlBase}>
-          {reducedStoryPromoItems.map((item, index) => (
-            // eslint-disable-next-line react/no-array-index-key
-            <StyledStoryPromoLi key={`${LABEL_ID}-${index}`}>
-              <RelatedContentItem item={item} index={index} />
-            </StyledStoryPromoLi>
-          ))}
+          {reducedStoryPromoItems.map((item, index) => {
+            const assetUri = pathOr(
+              '',
+              [
+                'model',
+                'blocks',
+                1,
+                'model',
+                'blocks',
+                0,
+                'model',
+                'blocks',
+                0,
+                'model',
+                'locator',
+              ],
+              item,
+            );
+
+            const a11yId = optimoPromoIdGenerator(
+              'promo-rel-content',
+              assetUri,
+              '',
+              '',
+              index,
+            );
+
+            return (
+              <StyledStoryPromoLi key={a11yId}>
+                <RelatedContentItem item={item} a11yId={a11yId} />
+              </StyledStoryPromoLi>
+            );
+          })}
         </RelatedContentGrid>
       )}
     </StyledWrapper>
