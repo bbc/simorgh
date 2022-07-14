@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { getPica } from '#legacy/gel-foundations/src/typography';
 import {
   GEL_SPACING,
   GEL_SPACING_BORDER,
@@ -15,12 +14,6 @@ import {
   StoryPromoUlBase,
   StoryPromoLiBase,
 } from '#components/OptimoPromos/Lists';
-import Promo from '#components/OptimoPromos';
-
-export const StyledPromoHeading = styled(Promo.Heading)`
-  display: inline;
-  ${({ script }) => script && getPica(script)}
-`;
 
 export const StyledWrapper = styled.section`
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
@@ -47,8 +40,4 @@ export const FlexPromoListItem = styled(StoryPromoLiBase)`
     flex-basis: 0;
     margin: 0;
   }
-`;
-
-export const StyledTimestamp = styled(Promo.Timestamp)`
-  padding-top: ${GEL_SPACING};
 `;

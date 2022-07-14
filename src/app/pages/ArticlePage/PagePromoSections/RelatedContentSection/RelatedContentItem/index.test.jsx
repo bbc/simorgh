@@ -2,8 +2,8 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import RelatedContentItem from './RelatedContentItem';
-import { RelatedContentData } from './fixture';
+import RelatedContentItem from '.';
+import { RelatedContentData } from '../fixture';
 
 // eslint-disable-next-line react/prop-types
 const RelatedContentItemComponent = ({ fixtureData, service = 'mundo' }) => (

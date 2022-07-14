@@ -2,12 +2,12 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import TopStoriesItem from './TopStoriesItem';
+import TopStoriesItem from '.';
 import {
   topStoriesItem,
   topStoriesLiveLabelItem,
   topStoriesMediaContentItem,
-} from './fixture';
+} from '../fixture';
 
 // eslint-disable-next-line react/prop-types
 const TopStoriesItemComponent = ({ fixtureData, service = 'news' }) => (
