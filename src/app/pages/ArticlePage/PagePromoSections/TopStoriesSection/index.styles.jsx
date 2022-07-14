@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { getPica } from '#legacy/gel-foundations/src/typography';
 import {
   GEL_SPACING,
+  GEL_SPACING_BORDER,
   GEL_SPACING_DBL,
 } from '#app/legacy/gel-foundations/src/spacings';
 import {
@@ -35,7 +36,7 @@ export const FlexPromoList = styled(StoryPromoUlBase)`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     display: flex;
     flex-wrap: wrap;
-    gap: ${GEL_SPACING};
+    gap: calc(${GEL_SPACING_DBL} - ${GEL_SPACING_BORDER});
   }
 `;
 
