@@ -18,6 +18,7 @@ import {
   C_GREY_8,
   C_METAL,
 } from '#legacy/psammead-styles/src/colours';
+import makeRelativeUrlPath from '#lib/utilities/makeRelativeUrlPath';
 
 import FrostedGlassPanel from './FrostedGlassPanel';
 
@@ -107,10 +108,11 @@ const FrostedGlassPromo = ({
   const { script, service } = useContext(ServiceContext);
   const { isAmp } = useContext(RequestContext);
   const isCanonical = !isAmp;
+  const relativeUrl = makeRelativeUrlPath(url);
 
   const clickTracker = useClickTrackerHandler({
     ...(eventTrackingData || {}),
-    url,
+    url: relativeUrl,
   });
 
   const onClick = eventTrackingData ? clickTracker : () => {};
@@ -121,7 +123,7 @@ const FrostedGlassPromo = ({
         <A
           script={script}
           service={service}
-          href={url}
+          href={relativeUrl}
           onClick={onClick}
           isAmp={isAmp}
         >
@@ -138,7 +140,7 @@ const FrostedGlassPromo = ({
   return (
     <Wrapper data-testid={`frosted-promo-${index}`}>
       <ClickableArea
-        href={url}
+        href={relativeUrl}
         onClick={onClick}
         aria-hidden="true"
         tabIndex="-1"
