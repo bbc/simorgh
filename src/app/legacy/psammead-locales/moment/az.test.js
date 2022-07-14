@@ -10,7 +10,7 @@ const assert = { equal: (val1, val2) => expect(val1).toEqual(val2) };
 
 test('parse', () => {
   const tests =
-    'Yanvar yan_Fevral fev_Mart mar_Aprel apr_May may_Iyun iyn_Iyul iyl_Avqust avq_Sentyabr sen_Oktyabr okt_Noyabr noy_Dekabr dek'.split(
+    'Yanvar yan_Fevral fev_Mart mar_Aprel apr_May may_İyun iyn_İyul iyl_Avqust avq_Sentyabr sen_Oktyabr okt_Noyabr noy_Dekabr dek'.split(
       '_'
     );
 
@@ -124,7 +124,7 @@ test('format ordinal', () => {
 
 test('format month', () => {
   const expected =
-    'Yanvar yan_Fevral fev_Mart mar_Aprel apr_May may_Iyun iyn_Iyul iyl_Avqust avq_Sentyabr sen_Oktyabr okt_Noyabr noy_Dekabr dek'.split(
+    'Yanvar yan_Fevral fev_Mart mar_Aprel apr_May may_İyun iyn_İyul iyl_Avqust avq_Sentyabr sen_Oktyabr okt_Noyabr noy_Dekabr dek'.split(
       '_'
     );
   let i;
