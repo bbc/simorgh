@@ -35,7 +35,7 @@ The entry point also wraps the Promo children in a React Context Provider, and p
 | children          | node                           | The content included between the opening and closing tags of the Promo    |
 | toLink            | string                         | The url for the Promo's link                                              |
 | a11yId            | string                         | Id used to fix a bug in TalkBack.                                         |
-| mediaType         | string                         | The media type of the pages Promoed                                       |
+| mediaType         | string                         | The media type of the page Promoed                                        |
 | eventTrackingData | shape({componentName: string}) | Tracking data needed for ati to track view and click of individual promos |
 
 ## A11y notes
