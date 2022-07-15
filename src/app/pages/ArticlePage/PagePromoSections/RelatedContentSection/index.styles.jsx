@@ -3,7 +3,6 @@ import styled from '@emotion/styled';
 import { StoryPromoLiBase } from '#components/OptimoPromos/Lists';
 import {
   GEL_SPACING,
-  GEL_SPACING_BORDER,
   GEL_SPACING_BORDER_HLF,
   GEL_SPACING_DBL,
 } from '#app/legacy/gel-foundations/src/spacings';
