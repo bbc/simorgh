@@ -24,3 +24,60 @@ const contentExample = {
 
 <RelatedContentSection content={contentExample}/>
 ```
+
+## Uninuitive implementation
+
+Inside index.styled.jsx you will find the Grid Wrappers for the Recommendation Section and it's list items:
+
+### Grid Parent Wrapper:
+
+```javascript
+export const RelatedContentGrid = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(-${GEL_SPACING} - ${GEL_SPACING_BORDER_HLF});
+`;
+```
+
+### Grid ListItem Wrapper:
+
+```javascript
+export const StyledStoryPromoLi = styled(StoryPromoLiBase)`
+  display: flex;
+  margin: 0;
+  width: 100%;
+  height: inherit;
+  padding: calc(${GEL_SPACING} - ${GEL_SPACING_BORDER_HLF});
+
+  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
+    width: 50%;
+  }
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    width: 33.33%;
+  }
+`;
+```
+
+### Implementation explanation
+
+### Grid Layout Using `display: flex;`
+
+This is a Grid layout using flexbox. In `RelatedContentGrid` we use the `flex-wrap: wrap;` property to wrap all children items into multiple rows. The number of items per rows gets decided by the `width` in % specified in `StyledStoryPromoLi`, where:
+| width (%) | number of columns (unit) |
+| ------- | ------ |
+| 100% | 1 |
+| 50% | 2 |
+| 33.33% | 3 |
+
+> ### Why?
+>
+> `display: grid;` is not supported by OperaMini browser, therefore we need to implement a grid layout using flexbox.
+
+### flex gap using padding & margin
+
+We use padding in `StyledStoryPromoLi` to create an equal gap between all children of the Grid. We then compensate for the extra padding around the Grid by adding a negatve margin to the Grid: `margin: calc(-${GEL_SPACING} - ${GEL_SPACING_BORDER_HLF});`.
+
+> ### Why?
+>
+> The `gap` property causes the items to leave a space at the end of each row as showed below.
+> This could have been fixed by using `flex-grow: 1;`. However, this causes all children with less row's items to grow larger than other row's items as showed below.
