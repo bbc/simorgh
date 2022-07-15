@@ -6507,12 +6507,12 @@ module.exports = () => ({
       topicPage: {
         environments: {
           live: {
-            paths: ['/serbian/lat/new_topics/c06g871g3knt'],
-            enabled: false,
+            paths: ['/serbian/lat/topics/c1gd303q6y6t'],
+            enabled: true,
           },
           test: {
-            paths: ['/serbian/lat/new_topics/c06g871g3knt'],
-            enabled: false,
+            paths: ['/serbian/lat/topics/c1gd303q6y6t'],
+            enabled: true,
           },
           local: {
             paths: [''],
