@@ -1,4 +1,4 @@
-# Related Content Item
+# Top Stories Item
 
 ## Description
 
