@@ -8933,7 +8933,23 @@ module.exports = () => ({
       errorPage404: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/ukrainian/topics/c61k92vrqz6t'], // ukrainian in russian
+            enabled: true,
+          },
+          test: {
+            paths: ['/ukrainian/topics/c61k92vrqz6t'], // ukrainian in russian
+            enabled: true,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: { environments: undefined, smoke: false },
       mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
