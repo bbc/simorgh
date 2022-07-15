@@ -5,7 +5,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import fixture from '#data/pidgin/topics/c95y35941vrt.json';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { MEDIA_TYPES } from '#components/Promo';
-import TopicPromo from '.';
+import Promo from '.';
 
 const Wrapper = styled.div`
   max-width: 30rem;
@@ -16,7 +16,7 @@ const Component = ({ service, variant }) => {
   return (
     <ServiceContextProvider service={service} variant={variant}>
       <Wrapper>
-        <TopicPromo {...fixture.data.summaries[0]} />
+        <Promo {...fixture.data.summaries[0]} />
       </Wrapper>
     </ServiceContextProvider>
   );
@@ -27,7 +27,7 @@ const WithMediaIndicator = ({ service, variant }) => {
   return (
     <ServiceContextProvider service={service} variant={variant}>
       <Wrapper>
-        <TopicPromo
+        <Promo
           {...fixture.data.summaries[0]}
           mediaType={MEDIA_TYPES.VIDEO}
           mediaDuration={123}
@@ -38,7 +38,7 @@ const WithMediaIndicator = ({ service, variant }) => {
 };
 
 export default {
-  title: 'Topic/Promo',
+  title: 'Topic/Curations/Promo - Normal',
   Component,
   decorators: [withKnobs, withServicesKnob()],
   parameters: { chromatic: { disable: true } },
