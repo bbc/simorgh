@@ -3,6 +3,7 @@
     Assumes 16px is set as the default font-size.
     This is changeable in the user's browser settings, as the html font-size is 100%
 */
+export const GEL_SPACING_BORDER_HLF = `0.09375rem`;
 export const GEL_SPACING_BORDER = `0.1875rem`;
 export const GEL_SPACING_HLF = `0.25rem`;
 export const GEL_SPACING = `0.5rem`;

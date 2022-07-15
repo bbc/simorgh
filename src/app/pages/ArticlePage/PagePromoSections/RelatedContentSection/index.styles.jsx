@@ -4,6 +4,7 @@ import { StoryPromoLiBase } from '#components/OptimoPromos/Lists';
 import {
   GEL_SPACING,
   GEL_SPACING_BORDER,
+  GEL_SPACING_BORDER_HLF,
   GEL_SPACING_DBL,
 } from '#app/legacy/gel-foundations/src/spacings';
 import {
@@ -29,22 +30,29 @@ export const StyledStoryPromoLi = styled(StoryPromoLiBase)`
   margin: 0;
   width: 100%;
   height: inherit;
+  padding: calc(${GEL_SPACING} - ${GEL_SPACING_BORDER_HLF});
+
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
-    width: calc(50% - ${GEL_SPACING});
+    width: 50%;
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    width: calc(33.33% - ${GEL_SPACING_DBL});
+    width: 33.33%;
   }
 `;
 
 export const RelatedContentGrid = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: calc(${GEL_SPACING_DBL} - ${GEL_SPACING_BORDER});
+  margin: calc(-${GEL_SPACING} - ${GEL_SPACING_BORDER_HLF});
 `;
 
 export const SingleItemWrapper = styled.div`
   width: 100%;
+  margin: 0 -${GEL_SPACING};
+
+  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
+    width: 50%;
+  }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     width: 33.33%;
   }
