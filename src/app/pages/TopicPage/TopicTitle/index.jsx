@@ -20,6 +20,7 @@ const H1 = styled.h1`
   ${({ service }) => getSansBold(service)}
   color: ${C_GREY_10};
   margin-top: ${GEL_SPACING_TRPL};
+  margin-bottom: 0;
   font-size: 1.75rem;
   line-height: 2rem;
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
@@ -34,8 +35,10 @@ const H1 = styled.h1`
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING_QUIN};
+    padding-bottom: ${GEL_SPACING_TRPL};
     font-size: 2.75rem;
     line-height: 3rem;
+    display: inline-block;
   }
 `;
 

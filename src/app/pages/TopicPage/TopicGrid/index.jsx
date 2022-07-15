@@ -63,7 +63,7 @@ const Wrapper = styled.div`
     margin-top: ${GEL_SPACING_QUAD};
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING_SEXT};
+    margin-top: ${GEL_SPACING_TRPL};
   }
 `;
 

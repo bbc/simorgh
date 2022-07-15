@@ -17,6 +17,7 @@ import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstra
 import useToggle from '#hooks/useToggle';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
+import TopicImage from './TopicImage';
 import TopicTitle from './TopicTitle';
 import TopicDescription from './TopicDescription';
 import TopicGrid from './TopicGrid';
@@ -32,9 +33,16 @@ const Wrapper = styled.main`
   }
 `;
 
+const TitleWrapper = styled.div`
+  margin: 0;
+  align-items: center;
+  display: flex;
+`;
+
 const TopicPage = ({ pageData }) => {
   const { lang, translations } = useContext(ServiceContext);
-  const { title, description, promos, pageCount, activePage } = pageData;
+  const { title, description, images, promos, pageCount, activePage } =
+    pageData;
 
   const { enabled: adsEnabled } = useToggle('ads');
   const { showAdsBasedOnLocation } = useContext(RequestContext);
@@ -86,8 +94,12 @@ const TopicPage = ({ pageData }) => {
           headline={title}
           entities={promoEntities}
         />
-
-        <TopicTitle>{title}</TopicTitle>
+        <TitleWrapper>
+          {images && (
+            <TopicImage image={images[0].url} altText={images[0].altText} />
+          )}
+          <TopicTitle>{title}</TopicTitle>
+        </TitleWrapper>
         {description && <TopicDescription>{description}</TopicDescription>}
         {/* <TopicDescription>
           this is a test for a long description that spans over multiple lines
