@@ -818,7 +818,23 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/arabic/topics/cwr9j7nv58nt'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/arabic/topics/cwr9j7nv58nt'],
+            enabled: true,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: true,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -5448,7 +5464,7 @@ module.exports = () => ({
             enabled: false,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       mediaAssetPage: {
         environments: {
