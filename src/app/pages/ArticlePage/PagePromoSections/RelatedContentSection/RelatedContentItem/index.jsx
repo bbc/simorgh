@@ -97,7 +97,7 @@ const RelatedContentItem = ({ item, a11yId }) => {
     item,
   );
 
-  const headingTagOverride = timestamp ? '' : 'div';
+  const titleTagOverride = timestamp ? '' : 'div';
 
   return (
     <Promo
@@ -114,11 +114,11 @@ const RelatedContentItem = ({ item, a11yId }) => {
         height={height}
       />
       <Promo.ContentWrapper>
-        <Promo.Heading headingTagOverride={headingTagOverride} script={script}>
+        <Promo.Title titleTagOverride={titleTagOverride} script={script}>
           <Promo.Link>
             <Promo.Content headline={headline} />
           </Promo.Link>
-        </Promo.Heading>
+        </Promo.Title>
         <Promo.Timestamp>{timestamp}</Promo.Timestamp>
       </Promo.ContentWrapper>
     </Promo>

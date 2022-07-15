@@ -7,7 +7,7 @@ import Timestamp from '#components/Promo/timestamp';
 import LiveLabel from '#legacy/psammead-live-label/src';
 import useViewTracker from '#hooks/useViewTracker';
 
-import Heading from './Heading';
+import Title from './Title';
 import Link from './Link';
 import MediaIndicator from './MediaIndicator';
 import Content from './Content';
@@ -44,7 +44,7 @@ const withPromoContext = Component => props =>
   );
 
 Promo.ContentWrapper = withPromoContext(ContentWrapper);
-Promo.Heading = withPromoContext(Heading);
+Promo.Title = withPromoContext(Title);
 Promo.MediaIndicator = withPromoContext(MediaIndicator);
 Promo.Link = withPromoContext(Link);
 Promo.Content = withPromoContext(Content);

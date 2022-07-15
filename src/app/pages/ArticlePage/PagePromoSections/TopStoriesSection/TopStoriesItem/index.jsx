@@ -6,7 +6,7 @@ import isEmpty from 'ramda/src/isEmpty';
 import { storyItem } from '#models/propTypes/storyItem';
 import { getIsLive } from '#lib/utilities/getStoryPromoInfo';
 import Promo from '#components/OptimoPromos';
-import { StyledPromoHeading, StyledTimestamp } from './index.styles';
+import { StyledPromoTitle, StyledTimestamp } from './index.styles';
 
 const TopStoriesItem = ({ item, a11yId }) => {
   const { script, translations } = useContext(ServiceContext);
@@ -42,7 +42,7 @@ const TopStoriesItem = ({ item, a11yId }) => {
   // text to read 'Live' instead, which screenreaders pronounce correctly.
   const liveLabelIsEnglish = liveLabel === 'LIVE';
 
-  const headingTagOverride = timestamp ? '' : 'div';
+  const titleTagOverride = timestamp ? '' : 'div';
 
   return (
     <Promo
@@ -53,10 +53,7 @@ const TopStoriesItem = ({ item, a11yId }) => {
     >
       <Promo.ContentWrapper>
         {mediaType && <Promo.MediaIndicator />}
-        <StyledPromoHeading
-          script={script}
-          headingTagOverride={headingTagOverride}
-        >
+        <StyledPromoTitle script={script} titleTagOverride={titleTagOverride}>
           <Promo.Link>
             {isLive ? (
               <Promo.LiveLabel
@@ -78,7 +75,7 @@ const TopStoriesItem = ({ item, a11yId }) => {
               />
             )}
           </Promo.Link>
-        </StyledPromoHeading>
+        </StyledPromoTitle>
         <StyledTimestamp>{timestamp}</StyledTimestamp>
       </Promo.ContentWrapper>
     </Promo>

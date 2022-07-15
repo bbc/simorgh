@@ -63,11 +63,11 @@ More [here](https://github.com/bbc/simorgh/issues/9652)
       height={height}
     />
     <Promo.ContentWrapper>
-      <Promo.Heading headingTagOverride={headingTagOverride} script={script}>
+      <Promo.Title titleTagOverride={titleTagOverride} script={script}>
         <Promo.Link>
           <Promo.Content headline={headline} />
         </Promo.Link>
-      </Promo.Heading>
+      </Promo.Title>
       <Promo.Timestamp>{timestamp}</Promo.Timestamp>
     </Promo.ContentWrapper>
   </Promo>
@@ -83,7 +83,7 @@ More [here](https://github.com/bbc/simorgh/issues/9652)
     a11yId={a11yId}
     eventTrackingData={eventTrackingData}
   >
-    <Promo.Heading headingTagOverride={headingTagOverride} script={script}>
+    <Promo.Title titleTagOverride={titleTagOverride} script={script}>
     <Promo.Link>
     <Promo.LiveLabel
             liveText={liveLabel}
@@ -93,7 +93,7 @@ More [here](https://github.com/bbc/simorgh/issues/9652)
         <Promo.Content headline={headline} />
         <Promo.LiveLabel/>
     </Promo.Link>
-    </Promo.Heading>
+    </Promo.Title>
 
     <Promo.Timestamp>{timestamp}</Promo.Timestamp>
   </Promo>
@@ -110,11 +110,11 @@ More [here](https://github.com/bbc/simorgh/issues/9652)
     eventTrackingData={eventTrackingData}
   >
     <Promo.MediaIndicator />
-    <Promo.Heading headingTagOverride={headingTagOverride} script={script}>
+    <Promo.Title titleTagOverride={titleTagOverride} script={script}>
       <Promo.Link>
         <Promo.Content headline={headline} />
       </Promo.Link>
-    </Promo.Heading>
+    </Promo.Title>
 
     <Promo.Timestamp>{timestamp}</Promo.Timestamp>
   </Promo>

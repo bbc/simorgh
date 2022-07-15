@@ -7,7 +7,7 @@ export const StyledTimestamp = styled(Promo.Timestamp)`
   padding-top: ${GEL_SPACING};
 `;
 
-export const StyledPromoHeading = styled(Promo.Heading)`
+export const StyledPromoTitle = styled(Promo.Title)`
   display: inline;
   ${({ script }) => script && getPica(script)}
 `;
