@@ -42,7 +42,7 @@ const TopStoriesItem = ({ item, ariaLabelledBy }) => {
   // text to read 'Live' instead, which screenreaders pronounce correctly.
   const liveLabelIsEnglish = liveLabel === 'LIVE';
 
-  const titleTagOverride = timestamp ? '' : 'div';
+  const as = timestamp ? 'h3' : 'div';
 
   return (
     <Promo
@@ -53,7 +53,7 @@ const TopStoriesItem = ({ item, ariaLabelledBy }) => {
     >
       <Promo.ContentWrapper>
         {mediaType && <Promo.MediaIndicator />}
-        <StyledPromoTitle script={script} titleTagOverride={titleTagOverride}>
+        <StyledPromoTitle script={script} as={as}>
           <Promo.Link>
             {isLive ? (
               <Promo.LiveLabel

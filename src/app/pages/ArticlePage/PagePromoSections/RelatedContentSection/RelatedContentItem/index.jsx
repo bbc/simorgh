@@ -97,7 +97,7 @@ const RelatedContentItem = ({ item, ariaLabelledBy }) => {
     item,
   );
 
-  const titleTagOverride = timestamp ? '' : 'div';
+  const as = timestamp ? 'h3' : 'div';
 
   return (
     <Promo
@@ -114,7 +114,7 @@ const RelatedContentItem = ({ item, ariaLabelledBy }) => {
         height={height}
       />
       <Promo.ContentWrapper>
-        <Promo.Title titleTagOverride={titleTagOverride} script={script}>
+        <Promo.Title as={as} script={script}>
           <Promo.Link>
             <Promo.Content headline={headline} />
           </Promo.Link>

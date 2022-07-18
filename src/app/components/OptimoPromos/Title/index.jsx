@@ -2,11 +2,10 @@ import React from 'react';
 import { node, string } from 'prop-types';
 import { TitleOnly, TitleWithContent } from './index.styles';
 
-const Title = ({ children, service, className, titleTagOverride }) => {
-  const TitleWrapper =
-    titleTagOverride === 'div' ? TitleOnly : TitleWithContent;
+const Title = ({ children, service, className, as }) => {
+  const TitleWrapper = as === 'div' ? TitleOnly : TitleWithContent;
   return (
-    <TitleWrapper as={titleTagOverride} className={className} service={service}>
+    <TitleWrapper as={as} className={className} service={service}>
       {children}
     </TitleWrapper>
   );
@@ -16,9 +15,9 @@ Title.propTypes = {
   children: node.isRequired,
   service: string.isRequired,
   className: string,
-  titleTagOverride: string,
+  as: string,
 };
 
-Title.defaultProps = { className: '', titleTagOverride: 'h3' };
+Title.defaultProps = { className: '', as: 'div' };
 
 export default Title;
