@@ -54,7 +54,7 @@ describe('Optimo Related Content Promo', () => {
     expect(label).toBeInTheDocument();
   });
 
-  it('should have a "region" role (a11y)', () => {
+  it('should have a "region" role', () => {
     const { getByRole } = render(
       <RelatedContent fixtureData={RelatedContentList} />,
     );
@@ -62,7 +62,7 @@ describe('Optimo Related Content Promo', () => {
     expect(region).toBeInTheDocument();
   });
 
-  it("should have a section labelled-by the section label's id (a11y)", () => {
+  it("should have a section labelled-by the section label's id", () => {
     const { getByRole, getByText } = render(
       <RelatedContent fixtureData={RelatedContentList} />,
     );
@@ -71,7 +71,7 @@ describe('Optimo Related Content Promo', () => {
     expect(regionLabelId).toBe(LabelLabelId);
   });
 
-  it('should render RelatedContent component without <ul> and <li> when given single item in collection (a11y)', () => {
+  it('should render RelatedContent component without <ul> and <li> when given single item in collection', () => {
     const { queryAllByRole, queryByRole } = render(
       <RelatedContent fixtureData={RelatedContentSingleItem} />,
     );
