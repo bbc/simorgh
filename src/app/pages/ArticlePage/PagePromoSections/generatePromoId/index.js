@@ -1,4 +1,10 @@
-export default ({ sectionType, assetUri, uri, contentType, index = 0 }) => {
+const generatePromoId = ({
+  sectionType,
+  assetUri,
+  uri,
+  contentType,
+  index = 0,
+}) => {
   const asset = assetUri || uri;
   const assetParts = asset
     ? asset.split(/www(.test)?\.bbc\.(co\.uk|com)/)
@@ -12,3 +18,5 @@ export default ({ sectionType, assetUri, uri, contentType, index = 0 }) => {
     .join('-')
     .toLowerCase();
 };
+
+export default generatePromoId;

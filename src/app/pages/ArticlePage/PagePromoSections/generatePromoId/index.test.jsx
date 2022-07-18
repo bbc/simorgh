@@ -1,4 +1,4 @@
-import optimoPromoIdGenerator from '.';
+import generatePromoId from '.';
 
 describe('optimoPromoIdGenerator', () => {
   it.each`
@@ -12,7 +12,7 @@ describe('optimoPromoIdGenerator', () => {
     'should return id with$expectation',
     ({ sectionType, assetUri, uri, contentType, promoIndex, expected }) => {
       expect(
-        optimoPromoIdGenerator({
+        generatePromoId({
           sectionType,
           assetUri,
           uri,

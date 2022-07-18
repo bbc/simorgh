@@ -16,7 +16,7 @@ import {
   SingleItemWrapper,
 } from './index.styles';
 import RelatedContentItem from './RelatedContentItem';
-import optimoPromoIdGenerator from '../utility';
+import generatePromoId from '../generatePromoId';
 
 const RelatedContentSection = ({ content }) => {
   const { translations, script, service } = useContext(ServiceContext);
@@ -66,7 +66,7 @@ const RelatedContentSection = ({ content }) => {
       reducedStoryPromoItems[0],
     );
 
-    const ariaLabelledBy = optimoPromoIdGenerator({
+    const ariaLabelledBy = generatePromoId({
       sectionType: 'promo-rel-content',
       assetUri,
     });
@@ -112,7 +112,7 @@ const RelatedContentSection = ({ content }) => {
               item,
             );
 
-            const ariaLabelledBy = optimoPromoIdGenerator({
+            const ariaLabelledBy = generatePromoId({
               sectionType: 'promo-rel-content',
               assetUri,
               index,

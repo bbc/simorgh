@@ -12,7 +12,7 @@ import {
   StyledPromoList,
 } from './index.styles';
 import TopStoriesItem from './TopStoriesItem';
-import optimoPromoIdGenerator from '../utility';
+import generatePromoId from '../generatePromoId';
 
 const TopStoriesSection = ({ content }) => {
   const { translations, script, service } = useContext(ServiceContext);
@@ -27,7 +27,7 @@ const TopStoriesSection = ({ content }) => {
     const contentType = pathOr('', ['contentType'], content[0]);
     const assetUri = pathOr('', ['locators', 'assetUri'], content[0]);
     const uri = pathOr('', ['uri'], content[0]);
-    const ariaLabelledBy = optimoPromoIdGenerator({
+    const ariaLabelledBy = generatePromoId({
       sectionType: 'top-stories',
       assetUri,
       uri,
@@ -58,7 +58,7 @@ const TopStoriesSection = ({ content }) => {
             const assetUri = pathOr('', ['locators', 'assetUri'], item);
             const uri = pathOr('', ['uri'], item);
 
-            const ariaLabelledBy = optimoPromoIdGenerator({
+            const ariaLabelledBy = generatePromoId({
               sectionType: 'top-stories',
               assetUri,
               uri,
