@@ -12,13 +12,13 @@ describe('optimoPromoIdGenerator', () => {
     'should return id with$expectation',
     ({ sectionType, assetUri, uri, contentType, promoIndex, expected }) => {
       expect(
-        optimoPromoIdGenerator(
+        optimoPromoIdGenerator({
           sectionType,
           assetUri,
           uri,
           contentType,
           promoIndex,
-        ),
+        }),
       ).toEqual(expected);
     },
   );

@@ -65,13 +65,11 @@ const RelatedContentSection = ({ content }) => {
       ],
       reducedStoryPromoItems[0],
     );
-    const a11yId = optimoPromoIdGenerator(
-      'promo-rel-content',
+
+    const a11yId = optimoPromoIdGenerator({
+      sectionType: 'promo-rel-content',
       assetUri,
-      '',
-      '',
-      0,
-    );
+    });
 
     return (
       <RelatedContentItem item={reducedStoryPromoItems[0]} a11yId={a11yId} />
@@ -111,13 +109,11 @@ const RelatedContentSection = ({ content }) => {
               item,
             );
 
-            const a11yId = optimoPromoIdGenerator(
-              'promo-rel-content',
+            const a11yId = optimoPromoIdGenerator({
+              sectionType: 'promo-rel-content',
               assetUri,
-              '',
-              '',
               index,
-            );
+            });
 
             return (
               <StyledStoryPromoLi key={a11yId}>
