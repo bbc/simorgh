@@ -1,10 +1,10 @@
 import React from 'react';
 import { node, string } from 'prop-types';
-import { TitleWithPadding, TitleNoPadding } from './index.styles';
+import { TitleOnly, TitleWithContent } from './index.styles';
 
 const Title = ({ children, service, className, titleTagOverride }) => {
   const TitleWrapper =
-    titleTagOverride === 'div' ? TitleNoPadding : TitleWithPadding;
+    titleTagOverride === 'div' ? TitleOnly : TitleWithContent;
   return (
     <TitleWrapper as={titleTagOverride} className={className} service={service}>
       {children}
