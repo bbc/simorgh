@@ -10,7 +10,7 @@ import {
 } from '../fixture';
 
 // eslint-disable-next-line react/prop-types
-const TopStoriesItemComponent = ({ fixtureData, service = 'news' }) => (
+const RenderTopStoriesItem = ({ fixtureData, service = 'news' }) => (
   <ServiceContextProvider service={service}>
     <ToggleContextProvider>
       <TopStoriesItem item={fixtureData} labelId="topStories" index={0} />
@@ -21,7 +21,7 @@ const TopStoriesItemComponent = ({ fixtureData, service = 'news' }) => (
 describe('Optimo Related Content Promo Item', () => {
   it('should render Related Content when given appropriate data', () => {
     const { getByText } = render(
-      <TopStoriesItemComponent fixtureData={topStoriesItem} />,
+      <RenderTopStoriesItem fixtureData={topStoriesItem} />,
     );
 
     const heading = getByText('Covid antibodies in 1 in 10 people in December');
@@ -32,13 +32,13 @@ describe('Optimo Related Content Promo Item', () => {
   });
 
   it('should return null if no data is passed', () => {
-    const { container } = render(<TopStoriesItemComponent fixtureData={{}} />);
+    const { container } = render(<RenderTopStoriesItem fixtureData={{}} />);
     expect(container).toBeEmptyDOMElement();
   });
 
   it('should render Live Label if linked page is live', () => {
     const { getByText } = render(
-      <TopStoriesItemComponent fixtureData={topStoriesLiveLabelItem} />,
+      <RenderTopStoriesItem fixtureData={topStoriesLiveLabelItem} />,
     );
     const liveLabel = getByText('LIVE');
     expect(liveLabel).toBeInTheDocument();
@@ -46,7 +46,7 @@ describe('Optimo Related Content Promo Item', () => {
 
   it('should render Live Label with correct translations', () => {
     const { getByText } = render(
-      <TopStoriesItemComponent
+      <RenderTopStoriesItem
         fixtureData={topStoriesLiveLabelItem}
         service="mundo"
       />,
@@ -57,7 +57,7 @@ describe('Optimo Related Content Promo Item', () => {
 
   it('should render media Label if linked page has media type', () => {
     const { getByText } = render(
-      <TopStoriesItemComponent fixtureData={topStoriesMediaContentItem} />,
+      <RenderTopStoriesItem fixtureData={topStoriesMediaContentItem} />,
     );
     const mediaLabel = getByText('Listen,');
     expect(mediaLabel).toBeInTheDocument();
@@ -65,7 +65,7 @@ describe('Optimo Related Content Promo Item', () => {
 
   it('should render media Label with correct translations ', () => {
     const { getByText } = render(
-      <TopStoriesItemComponent
+      <RenderTopStoriesItem
         fixtureData={topStoriesMediaContentItem}
         service="mundo"
       />,

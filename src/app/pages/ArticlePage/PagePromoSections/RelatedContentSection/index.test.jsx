@@ -4,7 +4,7 @@ import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import * as viewTracking from '#hooks/useViewTracker';
-import RelatedContent from '.';
+import RelatedContentSection from '.';
 import {
   RelatedContentList,
   RelatedContentSingleItem,
@@ -12,23 +12,23 @@ import {
 } from './fixture';
 
 // eslint-disable-next-line react/prop-types
-const RelatedContentComponent = ({ fixtureData, service = 'mundo' }) => (
+const RelatedContent = ({ fixtureData, service = 'mundo' }) => (
   <ServiceContextProvider service={service}>
     <ToggleContextProvider>
-      <RelatedContent content={fixtureData} />
+      <RelatedContentSection content={fixtureData} />
     </ToggleContextProvider>
   </ServiceContextProvider>
 );
 
 describe('Optimo Related Content Promo', () => {
   it('should return null if no data is passed', () => {
-    const { container } = render(<RelatedContentComponent fixtureData={{}} />);
+    const { container } = render(<RelatedContent fixtureData={{}} />);
     expect(container).toBeEmptyDOMElement();
   });
 
   it('should render Related Content Ul when given More than one Related Content', () => {
     const { getAllByRole, container } = render(
-      <RelatedContentComponent fixtureData={RelatedContentList} />,
+      <RelatedContent fixtureData={RelatedContentList} />,
     );
     const listItems = getAllByRole('listitem');
     const list = container.querySelector('ul');
@@ -38,7 +38,7 @@ describe('Optimo Related Content Promo', () => {
 
   it('should render custom label text if provided ', () => {
     const { getByText } = render(
-      <RelatedContentComponent fixtureData={RelatedContentCustomLabel} />,
+      <RelatedContent fixtureData={RelatedContentCustomLabel} />,
     );
     const customLabel = getByText('Related content block');
 
@@ -47,10 +47,7 @@ describe('Optimo Related Content Promo', () => {
 
   it('should render a default title if translations are not available', () => {
     const { getByText } = render(
-      <RelatedContentComponent
-        fixtureData={RelatedContentList}
-        service="news"
-      />,
+      <RelatedContent fixtureData={RelatedContentList} service="news" />,
     );
 
     const label = getByText(`Related content`);
@@ -59,7 +56,7 @@ describe('Optimo Related Content Promo', () => {
 
   it('should have a "region" role (a11y)', () => {
     const { getByRole } = render(
-      <RelatedContentComponent fixtureData={RelatedContentList} />,
+      <RelatedContent fixtureData={RelatedContentList} />,
     );
     const region = getByRole('region');
     expect(region).toBeInTheDocument();
@@ -67,7 +64,7 @@ describe('Optimo Related Content Promo', () => {
 
   it("should have a section labelled-by the section label's id (a11y)", () => {
     const { getByRole, getByText } = render(
-      <RelatedContentComponent fixtureData={RelatedContentList} />,
+      <RelatedContent fixtureData={RelatedContentList} />,
     );
     const regionLabelId = getByRole('region').getAttribute('aria-labelledBy');
     const LabelLabelId = getByText('Contenido relacionado').getAttribute('id');
@@ -76,7 +73,7 @@ describe('Optimo Related Content Promo', () => {
 
   it('should render RelatedContent component without <ul> and <li> when given single item in collection (a11y)', () => {
     const { queryAllByRole, queryByRole } = render(
-      <RelatedContentComponent fixtureData={RelatedContentSingleItem} />,
+      <RelatedContent fixtureData={RelatedContentSingleItem} />,
     );
     const listItems = queryAllByRole('listitem');
     const list = queryByRole('list');
@@ -94,7 +91,7 @@ describe('Event Tracking', () => {
     };
     const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
 
-    render(<RelatedContentComponent fixtureData={RelatedContentList} />);
+    render(<RelatedContent fixtureData={RelatedContentList} />);
 
     const [
       [blockLevelTrackingItem1],
@@ -123,7 +120,7 @@ describe('Event Tracking', () => {
     };
     const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
 
-    render(<RelatedContentComponent fixtureData={RelatedContentList} />);
+    render(<RelatedContent fixtureData={RelatedContentList} />);
 
     const [[blockLevelTracking]] = viewTrackerSpy.mock.calls;
 
