@@ -19,7 +19,7 @@ const Fixture = ({ lazy }) => (
   </ServiceContextProvider>
 );
 
-describe('TopicPromo', () => {
+describe('Topic Curations Promo', () => {
   describe('Lazy loading', () => {
     it('should not lazy load when lazy is falsey', () => {
       render(<Fixture lazy={false} />);
