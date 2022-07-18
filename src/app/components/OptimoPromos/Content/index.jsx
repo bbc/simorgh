@@ -21,16 +21,11 @@ const Content = ({
     return <span id={ariaLabelledBy}>{headline}</span>;
   }
 
-  const getAnnouncedType = () => {
-    if (isPhotoGallery) {
-      return 'photogallery';
-    }
-    return mediaType === 'audio' ? 'listen' : mediaType;
-  };
+  const type = isPhotoGallery ? 'photogallery' : mediaType;
 
-  const type = getAnnouncedType();
+  const typeAnnounced = type === 'audio' ? 'listen' : mediaType;
 
-  const announcedMediaType = mediaTranslations[type];
+  const announcedMediaType = mediaTranslations[typeAnnounced];
 
   let offScreenDuration;
 
