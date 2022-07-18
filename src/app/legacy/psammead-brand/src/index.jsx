@@ -162,7 +162,12 @@ const StyledBrand = ({
       <>
         <BrandSvg
           height={svgHeight}
-          viewBox={`0 0 ${svg.viewbox.width} ${svg.viewbox.height}`}
+          viewBox={[
+            svg.viewbox.minX || 0,
+            svg.viewbox.minY || 0,
+            svg.viewbox.width,
+            svg.viewbox.height,
+          ].join(' ')}
           xmlns="http://www.w3.org/2000/svg"
           focusable="false"
           aria-hidden="true"

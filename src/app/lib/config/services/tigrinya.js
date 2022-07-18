@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
 import noAscendersOrDescenders from '#legacy/gel-foundations/src/scripts/no-ascenders-or-descenders';
-import { tigrinya as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/tigrinya';
 import {
   F_NOTO_SANS_ETHIOPIC_BOLD,
   F_NOTO_SANS_ETHIOPIC_REGULAR,

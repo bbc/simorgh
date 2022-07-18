@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
 import latinDiacritics from '#legacy/gel-foundations/src/scripts/latin-with-diacritics';
-import { vietnamese as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/vietnamese';
 import '#legacy/moment-timezone-include/tz/Asia/Ho_Chi_Minh';
 import 'moment/locale/vi';
 import withContext from '../../../contexts/utils/withContext';

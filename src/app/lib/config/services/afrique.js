@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#legacy/psammead-styles/src/colours';
 import latinDiacritics from '#legacy/gel-foundations/src/scripts/latin-with-diacritics';
-import { afrique as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/afrique';
 import '#legacy/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/fr';
