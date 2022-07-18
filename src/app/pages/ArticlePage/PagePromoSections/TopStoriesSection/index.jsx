@@ -14,6 +14,26 @@ import {
 import TopStoriesItem from './TopStoriesItem';
 import generatePromoId from '../generatePromoId';
 
+const renderTopStoriesList = (item, index) => {
+  const contentType = pathOr('', ['contentType'], item);
+  const assetUri = pathOr('', ['locators', 'assetUri'], item);
+  const uri = pathOr('', ['uri'], item);
+
+  const ariaLabelledBy = generatePromoId({
+    sectionType: 'top-stories',
+    assetUri,
+    uri,
+    contentType,
+    index,
+  });
+
+  return (
+    <StyledPromoItem key={ariaLabelledBy}>
+      <TopStoriesItem item={item} ariaLabelledBy={ariaLabelledBy} />
+    </StyledPromoItem>
+  );
+};
+
 const TopStoriesSection = ({ content }) => {
   const { translations, script, service } = useContext(ServiceContext);
 
@@ -23,19 +43,15 @@ const TopStoriesSection = ({ content }) => {
   const hasSingleContent = content.length === 1;
   const LABEL_ID = 'top-stories-heading';
 
-  const singleItem = () => {
-    const contentType = pathOr('', ['contentType'], content[0]);
-    const assetUri = pathOr('', ['locators', 'assetUri'], content[0]);
-    const uri = pathOr('', ['uri'], content[0]);
-    const ariaLabelledBy = generatePromoId({
-      sectionType: 'top-stories',
-      assetUri,
-      uri,
-      contentType,
-    });
-
-    return <TopStoriesItem item={content[0]} ariaLabelledBy={ariaLabelledBy} />;
-  };
+  const contentType = pathOr('', ['contentType'], content[0]);
+  const assetUri = pathOr('', ['locators', 'assetUri'], content[0]);
+  const uri = pathOr('', ['uri'], content[0]);
+  const ariaLabelledBy = generatePromoId({
+    sectionType: 'top-stories',
+    assetUri,
+    uri,
+    contentType,
+  });
 
   return (
     <StyledWrapper aria-labelledby={LABEL_ID} role="region" data-e2e={LABEL_ID}>
@@ -50,29 +66,9 @@ const TopStoriesSection = ({ content }) => {
       </SectionLabel>
 
       {hasSingleContent ? (
-        singleItem()
+        <TopStoriesItem item={content[0]} ariaLabelledBy={ariaLabelledBy} />
       ) : (
-        <StyledPromoList>
-          {content.map((item, index) => {
-            const contentType = pathOr('', ['contentType'], item);
-            const assetUri = pathOr('', ['locators', 'assetUri'], item);
-            const uri = pathOr('', ['uri'], item);
-
-            const ariaLabelledBy = generatePromoId({
-              sectionType: 'top-stories',
-              assetUri,
-              uri,
-              contentType,
-              index,
-            });
-
-            return (
-              <StyledPromoItem key={ariaLabelledBy}>
-                <TopStoriesItem item={item} ariaLabelledBy={ariaLabelledBy} />
-              </StyledPromoItem>
-            );
-          })}
-        </StyledPromoList>
+        <StyledPromoList>{content.map(renderTopStoriesList)}</StyledPromoList>
       )}
     </StyledWrapper>
   );

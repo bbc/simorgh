@@ -18,6 +18,38 @@ import {
 import RelatedContentItem from './RelatedContentItem';
 import generatePromoId from '../generatePromoId';
 
+const renderRelatedContentList = (item, index) => {
+  const assetUri = pathOr(
+    '',
+    [
+      'model',
+      'blocks',
+      1,
+      'model',
+      'blocks',
+      0,
+      'model',
+      'blocks',
+      0,
+      'model',
+      'locator',
+    ],
+    item,
+  );
+
+  const ariaLabelledBy = generatePromoId({
+    sectionType: 'promo-rel-content',
+    assetUri,
+    index,
+  });
+
+  return (
+    <StyledPromoItem key={ariaLabelledBy}>
+      <RelatedContentItem item={item} ariaLabelledBy={ariaLabelledBy} />
+    </StyledPromoItem>
+  );
+};
+
 const RelatedContentSection = ({ content }) => {
   const { translations, script, service } = useContext(ServiceContext);
 
@@ -47,37 +79,28 @@ const RelatedContentSection = ({ content }) => {
 
   const hasSingleContent = reducedStoryPromoItems.length === 1;
 
-  const singleItem = () => {
-    const assetUri = pathOr(
-      '',
-      [
-        'model',
-        'blocks',
-        1,
-        'model',
-        'blocks',
-        0,
-        'model',
-        'blocks',
-        0,
-        'model',
-        'locator',
-      ],
-      reducedStoryPromoItems[0],
-    );
+  const assetUri = pathOr(
+    '',
+    [
+      'model',
+      'blocks',
+      1,
+      'model',
+      'blocks',
+      0,
+      'model',
+      'blocks',
+      0,
+      'model',
+      'locator',
+    ],
+    reducedStoryPromoItems[0],
+  );
 
-    const ariaLabelledBy = generatePromoId({
-      sectionType: 'promo-rel-content',
-      assetUri,
-    });
-
-    return (
-      <RelatedContentItem
-        item={reducedStoryPromoItems[0]}
-        ariaLabelledBy={ariaLabelledBy}
-      />
-    );
-  };
+  const ariaLabelledBy = generatePromoId({
+    sectionType: 'promo-rel-content',
+    assetUri,
+  });
 
   return (
     <StyledWrapper aria-labelledby={LABEL_ID} role="region" data-e2e={LABEL_ID}>
@@ -90,43 +113,15 @@ const RelatedContentSection = ({ content }) => {
         {title}
       </SectionLabel>
       {hasSingleContent ? (
-        <SingleItemWrapper>{singleItem()}</SingleItemWrapper>
+        <SingleItemWrapper>
+          <RelatedContentItem
+            item={reducedStoryPromoItems[0]}
+            ariaLabelledBy={ariaLabelledBy}
+          />
+        </SingleItemWrapper>
       ) : (
         <RelatedContentGrid as={PromoList}>
-          {reducedStoryPromoItems.map((item, index) => {
-            const assetUri = pathOr(
-              '',
-              [
-                'model',
-                'blocks',
-                1,
-                'model',
-                'blocks',
-                0,
-                'model',
-                'blocks',
-                0,
-                'model',
-                'locator',
-              ],
-              item,
-            );
-
-            const ariaLabelledBy = generatePromoId({
-              sectionType: 'promo-rel-content',
-              assetUri,
-              index,
-            });
-
-            return (
-              <StyledPromoItem key={ariaLabelledBy}>
-                <RelatedContentItem
-                  item={item}
-                  ariaLabelledBy={ariaLabelledBy}
-                />
-              </StyledPromoItem>
-            );
-          })}
+          {reducedStoryPromoItems.map(renderRelatedContentList)}
         </RelatedContentGrid>
       )}
     </StyledWrapper>
