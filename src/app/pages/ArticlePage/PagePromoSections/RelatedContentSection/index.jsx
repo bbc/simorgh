@@ -8,11 +8,11 @@ import slice from 'ramda/src/slice';
 import identity from 'ramda/src/identity';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { C_GREY_2 } from '#app/legacy/psammead-styles/src/colours';
-import { StoryPromoUlBase } from '#components/OptimoPromos/Lists';
+import { PromoList } from '#components/OptimoPromos/Lists/index.styles';
 import {
   RelatedContentGrid,
   StyledWrapper,
-  StyledStoryPromoLi,
+  StyledPromoItem,
   SingleItemWrapper,
 } from './index.styles';
 import RelatedContentItem from './RelatedContentItem';
@@ -89,7 +89,7 @@ const RelatedContentSection = ({ content }) => {
       {hasSingleContent ? (
         <SingleItemWrapper>{singleItem()}</SingleItemWrapper>
       ) : (
-        <RelatedContentGrid as={StoryPromoUlBase}>
+        <RelatedContentGrid as={PromoList}>
           {reducedStoryPromoItems.map((item, index) => {
             const assetUri = pathOr(
               '',
@@ -116,9 +116,9 @@ const RelatedContentSection = ({ content }) => {
             });
 
             return (
-              <StyledStoryPromoLi key={a11yId}>
+              <StyledPromoItem key={a11yId}>
                 <RelatedContentItem item={item} a11yId={a11yId} />
-              </StyledStoryPromoLi>
+              </StyledPromoItem>
             );
           })}
         </RelatedContentGrid>

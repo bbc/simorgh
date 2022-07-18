@@ -11,9 +11,9 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
 } from '#app/legacy/gel-foundations/src/breakpoints';
 import {
-  StoryPromoUlBase,
-  StoryPromoLiBase,
-} from '#components/OptimoPromos/Lists';
+  PromoList,
+  PromoItem,
+} from '#components/OptimoPromos/Lists/index.styles';
 
 export const StyledWrapper = styled.section`
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
@@ -25,7 +25,7 @@ export const StyledWrapper = styled.section`
   }
 `;
 
-export const FlexPromoList = styled(StoryPromoUlBase)`
+export const StyledPromoList = styled(PromoList)`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     display: flex;
     flex-wrap: wrap;
@@ -33,7 +33,7 @@ export const FlexPromoList = styled(StoryPromoUlBase)`
   }
 `;
 
-export const FlexPromoListItem = styled(StoryPromoLiBase)`
+export const StyledPromoItem = styled(PromoItem)`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     height: inherit;
     flex-grow: 1;

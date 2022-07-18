@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { StoryPromoLiBase } from '#components/OptimoPromos/Lists';
+import { PromoItem } from '#components/OptimoPromos/Lists/index.styles';
 import {
   GEL_SPACING,
   GEL_SPACING_BORDER_HLF,
@@ -24,7 +24,7 @@ export const StyledWrapper = styled.section`
   }
 `;
 
-export const StyledStoryPromoLi = styled(StoryPromoLiBase)`
+export const StyledPromoItem = styled(PromoItem)`
   display: flex;
   margin: 0;
   width: 100%;

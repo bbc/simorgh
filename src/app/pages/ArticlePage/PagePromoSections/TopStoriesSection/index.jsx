@@ -8,8 +8,8 @@ import SectionLabel from '#legacy/psammead-section-label/src';
 import isEmpty from 'ramda/src/isEmpty';
 import {
   StyledWrapper,
-  FlexPromoList,
-  FlexPromoListItem,
+  StyledPromoItem,
+  StyledPromoList,
 } from './index.styles';
 import TopStoriesItem from './TopStoriesItem';
 import optimoPromoIdGenerator from '../utility';
@@ -52,7 +52,7 @@ const TopStoriesSection = ({ content }) => {
       {hasSingleContent ? (
         singleItem()
       ) : (
-        <FlexPromoList>
+        <StyledPromoList>
           {content.map((item, index) => {
             const contentType = pathOr('', ['contentType'], item);
             const assetUri = pathOr('', ['locators', 'assetUri'], item);
@@ -67,12 +67,12 @@ const TopStoriesSection = ({ content }) => {
             });
 
             return (
-              <FlexPromoListItem key={a11yId}>
+              <StyledPromoItem key={a11yId}>
                 <TopStoriesItem item={item} a11yId={a11yId} />
-              </FlexPromoListItem>
+              </StyledPromoItem>
             );
           })}
-        </FlexPromoList>
+        </StyledPromoList>
       )}
     </StyledWrapper>
   );
