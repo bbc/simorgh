@@ -11,7 +11,7 @@ import Title from './Title';
 import Link from './Link';
 import MediaIndicator from './MediaIndicator';
 import Content from './Content';
-import { PromoWrapper, ContentWrapper, BorderWrapper } from './Wrappers.styles';
+import { PromoWrapper, ContentWrapper, BorderWrapper } from './index.styles';
 import Image from './Image';
 
 const PromoContext = React.createContext({});
