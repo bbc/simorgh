@@ -11,7 +11,7 @@ import Title from './Title';
 import Link from './Link';
 import MediaIndicator from './MediaIndicator';
 import Content from './Content';
-import { PromoWrapper, ContentWrapper, BorderWrapper } from './index.styles';
+import { PromoWrapper, ContentWrapper } from './index.styles';
 import Image from './Image';
 
 const PromoContext = React.createContext({});
@@ -30,15 +30,13 @@ const Promo = ({
   const viewRef = useViewTracker(eventTrackingDataSend);
 
   return (
-    <BorderWrapper>
-      <PromoWrapper ref={viewRef}>
-        <PromoContext.Provider
-          value={{ service, to, ariaLabelledBy, eventTrackingData, mediaType }}
-        >
-          {children}
-        </PromoContext.Provider>
-      </PromoWrapper>
-    </BorderWrapper>
+    <PromoWrapper ref={viewRef}>
+      <PromoContext.Provider
+        value={{ service, to, ariaLabelledBy, eventTrackingData, mediaType }}
+      >
+        {children}
+      </PromoContext.Provider>
+    </PromoWrapper>
   );
 };
 

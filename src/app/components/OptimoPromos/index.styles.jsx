@@ -24,11 +24,7 @@ export const ContentWrapper = styled.div`
 
 export const PromoWrapper = styled.div`
   position: relative;
-  height: 100%;
-  background-color: ${C_WHITE};
-`;
-
-export const BorderWrapper = styled.div`
   border: ${GEL_SPACING_BORDER} solid transparent;
   height: 100%;
+  background-color: ${C_WHITE};
 `;
