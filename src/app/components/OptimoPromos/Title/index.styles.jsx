@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 
 export const TitleOnly = styled.div`
   color: ${C_GREY_10};
-  margin: 0; /* Reset */
+  margin: 0;
   ${({ service }) => getSerifMedium(service)}
 `;
 
