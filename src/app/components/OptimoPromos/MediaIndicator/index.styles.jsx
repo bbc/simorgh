@@ -6,7 +6,7 @@ export const MediaIndicatorWrapper = styled.div`
   padding-right: ${GEL_SPACING};
 `;
 
-export const MediaIndicatorFlexWrapper = styled.div`
+export const MediaIndicatorAlignment = styled.div`
   display: flex;
   align-items: center;
   height: 100%;
