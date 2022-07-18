@@ -1,7 +1,7 @@
 import { C_METAL, C_EBON } from '#app/legacy/psammead-styles/src/colours';
 import styled from '@emotion/styled';
 
-export default styled.a`
+const Link = styled.a`
   position: static;
   color: ${C_EBON};
   text-decoration: none;
@@ -28,3 +28,5 @@ export default styled.a`
     color: ${C_METAL};
   }
 `;
+
+export default Link;
