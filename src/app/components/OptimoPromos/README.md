@@ -24,7 +24,7 @@ The entry point also wraps the Promo children in a React Context Provider, and p
 
 > - service
 > - to
-> - a11yId
+> - ariaLabelledBy
 > - eventTrackingData
 > - mediaType
 
@@ -34,13 +34,13 @@ The entry point also wraps the Promo children in a React Context Provider, and p
 | ----------------- | ------------------------------ | ------------------------------------------------------------------------- |
 | children          | node                           | The content included between the opening and closing tags of the Promo    |
 | to                | string                         | The url for the Promo's link                                              |
-| a11yId            | string                         | Id used to fix a bug in TalkBack.                                         |
+| ariaLabelledBy    | string                         | Id used to fix a bug in TalkBack.                                         |
 | mediaType         | string                         | The media type of the page Promoed                                        |
 | eventTrackingData | shape({componentName: string}) | Tracking data needed for ati to track view and click of individual promos |
 
 ## A11y notes
 
-Due to a `TalkBack` bug causing the assistive technology to read each span on separate swipes/gestures, we need to pass a unique a11yId to fix this bug. This a11y Id is used as id for the parent span holding the Promo's text and as aria-labelledby for the parent link of the text span.
+Due to a `TalkBack` bug causing the assistive technology to read each span on separate swipes/gestures, we need to pass a unique ariaLabelledBy to fix this bug. This a11y Id is used as id for the parent span holding the Promo's text and as aria-labelledby for the parent link of the text span.
 More [here](https://github.com/bbc/simorgh/issues/9652)
 
 ## Example ltr/rtl
@@ -49,7 +49,11 @@ More [here](https://github.com/bbc/simorgh/issues/9652)
 
 ```javascript
 <Promo>
-  <Promo to={assetUri} a11yId={a11yId} eventTrackingData={eventTrackingData}>
+  <Promo
+    to={assetUri}
+    ariaLabelledBy={ariaLabelledBy}
+    eventTrackingData={eventTrackingData}
+  >
     <Promo.Image
       src={src}
       altText={altText}
@@ -76,7 +80,7 @@ More [here](https://github.com/bbc/simorgh/issues/9652)
 <Promo>
   <Promo
     to={assetUri}
-    a11yId={a11yId}
+    ariaLabelledBy={ariaLabelledBy}
     eventTrackingData={eventTrackingData}
   >
     <Promo.Title titleTagOverride={titleTagOverride} script={script}>
@@ -100,7 +104,11 @@ More [here](https://github.com/bbc/simorgh/issues/9652)
 
 ```javascript
 <Promo>
-  <Promo to={assetUri} a11yId={a11yId} eventTrackingData={eventTrackingData}>
+  <Promo
+    to={assetUri}
+    ariaLabelledBy={ariaLabelledBy}
+    eventTrackingData={eventTrackingData}
+  >
     <Promo.MediaIndicator />
     <Promo.Title titleTagOverride={titleTagOverride} script={script}>
       <Promo.Link>

@@ -6,14 +6,14 @@ A Top Stories Single item built using OptimoPromos. this component gets Optimo d
 
 ## Props
 
-| Name   | type   | Description                                                     |
-| ------ | ------ | --------------------------------------------------------------- |
-| item   | object | Single item from the top stories array in secondary column data |
-| a11yId | string | Id used to fix a bug in TalkBack.                               |
+| Name           | type   | Description                                                     |
+| -------------- | ------ | --------------------------------------------------------------- |
+| item           | object | Single item from the top stories array in secondary column data |
+| ariaLabelledBy | string | Id used to fix a bug in TalkBack.                               |
 
 ## A11y notes
 
-Due to a `TalkBack` bug causing the assistive technology to read each span on separate swipes/gestures, we need to pass a unique a11yId to fix this bug. This a11y Id is used as id for the parent span holding the Promo's text and as aria-labelledby for the parent link of the text span.
+Due to a `TalkBack` bug causing the assistive technology to read each span on separate swipes/gestures, we need to pass a unique ariaLabelledBy to fix this bug. This a11y Id is used as id for the parent span holding the Promo's text and as aria-labelledby for the parent link of the text span.
 More [here](https://github.com/bbc/simorgh/issues/9652)
 
 ## Example ltr/rtl
@@ -29,5 +29,5 @@ const itemExample = [
                     }
                 ]
 
-<TopStoriesItem item={itemExample} a11yId={"top-stories-promo-example-0/>
+<TopStoriesItem item={itemExample} ariaLabelledBy={"top-stories-promo-example-0/>
 ```

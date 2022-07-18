@@ -16,7 +16,13 @@ import Image from './Image';
 
 const PromoContext = React.createContext({});
 
-const Promo = ({ children, to, a11yId, mediaType, eventTrackingData }) => {
+const Promo = ({
+  children,
+  to,
+  ariaLabelledBy,
+  mediaType,
+  eventTrackingData,
+}) => {
   const { service } = useContext(ServiceContext);
 
   const eventTrackingDataSend = path(['block'], eventTrackingData);
@@ -27,7 +33,7 @@ const Promo = ({ children, to, a11yId, mediaType, eventTrackingData }) => {
     <BorderWrapper>
       <PromoWrapper ref={viewRef}>
         <PromoContext.Provider
-          value={{ service, to, a11yId, eventTrackingData, mediaType }}
+          value={{ service, to, ariaLabelledBy, eventTrackingData, mediaType }}
         >
           {children}
         </PromoContext.Provider>
@@ -57,7 +63,7 @@ Promo.Image = withPromoContext(Image);
 Promo.propTypes = {
   children: node.isRequired,
   to: string,
-  a11yId: string.isRequired,
+  ariaLabelledBy: string.isRequired,
   mediaType: string,
   eventTrackingData: shape({ block: shape({ componentName: string }) }),
 };

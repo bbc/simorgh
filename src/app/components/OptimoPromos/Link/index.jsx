@@ -3,13 +3,19 @@ import { node, string, shape } from 'prop-types';
 import useCombinedClickTrackerHandler from '#containers/StoryPromo/useCombinedClickTrackerHandler';
 import StyledLink from './index.styles';
 
-const Link = ({ className, children, to, a11yId, eventTrackingData }) => {
+const Link = ({
+  className,
+  children,
+  to,
+  ariaLabelledBy,
+  eventTrackingData,
+}) => {
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
   return (
     <StyledLink
       className={className}
       href={to}
-      aria-labelledby={a11yId}
+      aria-labelledby={ariaLabelledBy}
       onClick={eventTrackingData ? handleClickTracking : null}
     >
       {children}
@@ -21,7 +27,7 @@ Link.propTypes = {
   className: string,
   children: node.isRequired,
   to: string,
-  a11yId: string.isRequired,
+  ariaLabelledBy: string.isRequired,
   eventTrackingData: shape({ block: shape({ componentName: string }) }),
 };
 

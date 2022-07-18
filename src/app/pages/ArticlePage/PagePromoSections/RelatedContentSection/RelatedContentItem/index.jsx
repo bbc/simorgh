@@ -7,7 +7,7 @@ import buildIChefURL from '#app/lib/utilities/ichefURL';
 import Promo from '#components/OptimoPromos';
 import isEmpty from 'ramda/src/isEmpty';
 
-const RelatedContentItem = ({ item, a11yId }) => {
+const RelatedContentItem = ({ item, ariaLabelledBy }) => {
   const { script } = useContext(ServiceContext);
   if (!item || isEmpty(item)) return null;
 
@@ -100,7 +100,11 @@ const RelatedContentItem = ({ item, a11yId }) => {
   const titleTagOverride = timestamp ? '' : 'div';
 
   return (
-    <Promo to={assetUri} a11yId={a11yId} eventTrackingData={eventTrackingData}>
+    <Promo
+      to={assetUri}
+      ariaLabelledBy={ariaLabelledBy}
+      eventTrackingData={eventTrackingData}
+    >
       <Promo.Image
         src={src}
         altText={altText}
@@ -123,7 +127,7 @@ const RelatedContentItem = ({ item, a11yId }) => {
 
 RelatedContentItem.propTypes = {
   item: shape({}).isRequired,
-  a11yId: string.isRequired,
+  ariaLabelledBy: string.isRequired,
 };
 
 export default RelatedContentItem;

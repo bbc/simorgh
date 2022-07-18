@@ -8,7 +8,7 @@ import { getIsLive } from '#lib/utilities/getStoryPromoInfo';
 import Promo from '#components/OptimoPromos';
 import { StyledPromoTitle, StyledTimestamp } from './index.styles';
 
-const TopStoriesItem = ({ item, a11yId }) => {
+const TopStoriesItem = ({ item, ariaLabelledBy }) => {
   const { script, translations } = useContext(ServiceContext);
 
   if (!item || isEmpty(item)) return null;
@@ -47,7 +47,7 @@ const TopStoriesItem = ({ item, a11yId }) => {
   return (
     <Promo
       to={assetUri || uri}
-      a11yId={a11yId}
+      ariaLabelledBy={ariaLabelledBy}
       mediaType={mediaType}
       eventTrackingData={eventTrackingData}
     >
@@ -84,7 +84,7 @@ const TopStoriesItem = ({ item, a11yId }) => {
 
 TopStoriesItem.propTypes = {
   item: shape(storyItem).isRequired,
-  a11yId: string.isRequired,
+  ariaLabelledBy: string.isRequired,
 };
 
 export default TopStoriesItem;

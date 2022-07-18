@@ -8,7 +8,7 @@ This is a promo component that takes in key features of the promo's content and 
 
 | Name           | type    | Description                                     |
 | -------------- | ------- | ----------------------------------------------- |
-| a11yId         | string  | Unique identifier used to fix a bug in TalkBack |
+| ariaLabelledBy | string  | Unique identifier used to fix a bug in TalkBack |
 | mediaType      | string  | The media type of the pages Promoed             |
 | mediaDuration  | string  | Media duration in `ISO 8601` format             |
 | headline       | string  | Promo's title                                   |
@@ -19,7 +19,7 @@ This is a promo component that takes in key features of the promo's content and 
 ### Title only example
 
 ```javascript
-<Content a11yId="uniqueId" headline="This it the promo title" />
+<Content ariaLabelledBy="uniqueId" headline="This it the promo title" />
 ```
 
 Node Returned:
@@ -32,7 +32,7 @@ Node Returned:
 
 ```javascript
 <Content
-  a11yId="uniqueId"
+  ariaLabelledBy="uniqueId"
   mediaType="video"
   mediaDuration="PT20S"
   headline="This it the promo title"
@@ -52,7 +52,11 @@ Node Returned:
 ### Photogallery example
 
 ```javascript
-<Content a11yId="uniqueId" headline="This it the promo title" isPhotoGallery />
+<Content
+  ariaLabelledBy="uniqueId"
+  headline="This it the promo title"
+  isPhotoGallery
+/>
 ```
 
 Node Returned:

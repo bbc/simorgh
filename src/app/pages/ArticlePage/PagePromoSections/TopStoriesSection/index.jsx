@@ -27,14 +27,14 @@ const TopStoriesSection = ({ content }) => {
     const contentType = pathOr('', ['contentType'], content[0]);
     const assetUri = pathOr('', ['locators', 'assetUri'], content[0]);
     const uri = pathOr('', ['uri'], content[0]);
-    const a11yId = optimoPromoIdGenerator({
+    const ariaLabelledBy = optimoPromoIdGenerator({
       sectionType: 'top-stories',
       assetUri,
       uri,
       contentType,
     });
 
-    return <TopStoriesItem item={content[0]} a11yId={a11yId} />;
+    return <TopStoriesItem item={content[0]} ariaLabelledBy={ariaLabelledBy} />;
   };
 
   return (
@@ -58,7 +58,7 @@ const TopStoriesSection = ({ content }) => {
             const assetUri = pathOr('', ['locators', 'assetUri'], item);
             const uri = pathOr('', ['uri'], item);
 
-            const a11yId = optimoPromoIdGenerator({
+            const ariaLabelledBy = optimoPromoIdGenerator({
               sectionType: 'top-stories',
               assetUri,
               uri,
@@ -67,8 +67,8 @@ const TopStoriesSection = ({ content }) => {
             });
 
             return (
-              <StyledPromoItem key={a11yId}>
-                <TopStoriesItem item={item} a11yId={a11yId} />
+              <StyledPromoItem key={ariaLabelledBy}>
+                <TopStoriesItem item={item} ariaLabelledBy={ariaLabelledBy} />
               </StyledPromoItem>
             );
           })}

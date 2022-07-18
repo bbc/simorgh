@@ -6,7 +6,7 @@ import moment from 'moment';
 import formatDuration from '#app/lib/utilities/formatDuration';
 
 const Content = ({
-  a11yId,
+  ariaLabelledBy,
   mediaType,
   mediaDuration,
   headline,
@@ -18,7 +18,7 @@ const Content = ({
 
   if (!isPhotoGallery && !mediaType) {
     // This span is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-    return <span id={a11yId}>{headline}</span>;
+    return <span id={ariaLabelledBy}>{headline}</span>;
   }
 
   const getAnnouncedType = () => {
@@ -51,7 +51,7 @@ const Content = ({
     // role="text" is required to correct a text splitting bug on iOS VoiceOver.
     // ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     // eslint-disable-next-line jsx-a11y/aria-role
-    <span role="text" id={a11yId}>
+    <span role="text" id={ariaLabelledBy}>
       {announcedMediaType && (
         <VisuallyHiddenText>{`${announcedMediaType}, `}</VisuallyHiddenText>
       )}
@@ -62,7 +62,7 @@ const Content = ({
 };
 
 Content.propTypes = {
-  a11yId: string.isRequired,
+  ariaLabelledBy: string.isRequired,
   mediaType: string,
   mediaDuration: string,
   headline: string.isRequired,

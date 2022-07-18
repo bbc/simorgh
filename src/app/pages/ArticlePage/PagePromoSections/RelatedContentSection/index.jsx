@@ -66,13 +66,16 @@ const RelatedContentSection = ({ content }) => {
       reducedStoryPromoItems[0],
     );
 
-    const a11yId = optimoPromoIdGenerator({
+    const ariaLabelledBy = optimoPromoIdGenerator({
       sectionType: 'promo-rel-content',
       assetUri,
     });
 
     return (
-      <RelatedContentItem item={reducedStoryPromoItems[0]} a11yId={a11yId} />
+      <RelatedContentItem
+        item={reducedStoryPromoItems[0]}
+        ariaLabelledBy={ariaLabelledBy}
+      />
     );
   };
 
@@ -109,15 +112,18 @@ const RelatedContentSection = ({ content }) => {
               item,
             );
 
-            const a11yId = optimoPromoIdGenerator({
+            const ariaLabelledBy = optimoPromoIdGenerator({
               sectionType: 'promo-rel-content',
               assetUri,
               index,
             });
 
             return (
-              <StyledPromoItem key={a11yId}>
-                <RelatedContentItem item={item} a11yId={a11yId} />
+              <StyledPromoItem key={ariaLabelledBy}>
+                <RelatedContentItem
+                  item={item}
+                  ariaLabelledBy={ariaLabelledBy}
+                />
               </StyledPromoItem>
             );
           })}
