@@ -46,7 +46,7 @@ const TopStoriesItem = ({ item, a11yId }) => {
 
   return (
     <Promo
-      toLink={assetUri || uri}
+      to={assetUri || uri}
       a11yId={a11yId}
       mediaType={mediaType}
       eventTrackingData={eventTrackingData}

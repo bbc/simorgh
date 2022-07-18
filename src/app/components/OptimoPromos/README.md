@@ -23,7 +23,7 @@ The Compound Component pattern can be found inside the `index.jsx` entry point w
 The entry point also wraps the Promo children in a React Context Provider, and provides the following parameters:
 
 > - service
-> - toLink
+> - to
 > - a11yId
 > - eventTrackingData
 > - mediaType
@@ -33,7 +33,7 @@ The entry point also wraps the Promo children in a React Context Provider, and p
 | Name              | type                           | Description                                                               |
 | ----------------- | ------------------------------ | ------------------------------------------------------------------------- |
 | children          | node                           | The content included between the opening and closing tags of the Promo    |
-| toLink            | string                         | The url for the Promo's link                                              |
+| to                | string                         | The url for the Promo's link                                              |
 | a11yId            | string                         | Id used to fix a bug in TalkBack.                                         |
 | mediaType         | string                         | The media type of the page Promoed                                        |
 | eventTrackingData | shape({componentName: string}) | Tracking data needed for ati to track view and click of individual promos |
@@ -49,11 +49,7 @@ More [here](https://github.com/bbc/simorgh/issues/9652)
 
 ```javascript
 <Promo>
-  <Promo
-    toLink={assetUri}
-    a11yId={a11yId}
-    eventTrackingData={eventTrackingData}
-  >
+  <Promo to={assetUri} a11yId={a11yId} eventTrackingData={eventTrackingData}>
     <Promo.Image
       src={src}
       altText={altText}
@@ -79,7 +75,7 @@ More [here](https://github.com/bbc/simorgh/issues/9652)
 ```javascript
 <Promo>
   <Promo
-    toLink={assetUri}
+    to={assetUri}
     a11yId={a11yId}
     eventTrackingData={eventTrackingData}
   >
@@ -104,11 +100,7 @@ More [here](https://github.com/bbc/simorgh/issues/9652)
 
 ```javascript
 <Promo>
-  <Promo
-    toLink={assetUri}
-    a11yId={a11yId}
-    eventTrackingData={eventTrackingData}
-  >
+  <Promo to={assetUri} a11yId={a11yId} eventTrackingData={eventTrackingData}>
     <Promo.MediaIndicator />
     <Promo.Title titleTagOverride={titleTagOverride} script={script}>
       <Promo.Link>
