@@ -1,5 +1,4 @@
 import moment from 'moment';
-import { format } from 'prettier';
 import './sr';
 
 moment.locale('sr');
