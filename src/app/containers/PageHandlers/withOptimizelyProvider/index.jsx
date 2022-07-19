@@ -6,11 +6,14 @@ import {
 } from '@optimizely/react-sdk';
 import { ServiceContext } from '#contexts/ServiceContext';
 import isLive from '#lib/utilities/isLive';
-import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#legacy/gel-foundations/src/breakpoints';
 import onClient from '#lib/utilities/onClient';
+import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#legacy/gel-foundations/src/breakpoints';
 import getOptimizelyUserId from './getOptimizelyUserId';
 
-if (isLive()) {
+// 004_brasil_recommendations_experiment
+const isCypress = onClient() && window.Cypress;
+
+if (isLive() || isCypress) {
   setLogger(null);
 }
 

@@ -3,7 +3,7 @@ import { bool, string, number, oneOf, oneOfType } from 'prop-types';
 
 import Promo, { MEDIA_TYPES } from '#components/Promo';
 
-const TopicPromo = ({
+const CurationPromo = ({
   title,
   firstPublished,
   imageUrl,
@@ -26,7 +26,7 @@ const TopicPromo = ({
   );
 };
 
-TopicPromo.propTypes = {
+CurationPromo.propTypes = {
   title: string.isRequired,
   // epoch time or ISO8601 timestamp
   firstPublished: oneOfType([number, string]).isRequired,
@@ -34,14 +34,14 @@ TopicPromo.propTypes = {
   imageAlt: string.isRequired,
   lazy: bool,
   link: string.isRequired,
-  mediaType: oneOf(Object.keys(MEDIA_TYPES)),
+  mediaType: oneOf(Object.values(MEDIA_TYPES)),
   mediaDuration: number,
 };
 
-TopicPromo.defaultProps = {
+CurationPromo.defaultProps = {
   lazy: false,
   mediaType: null,
   mediaDuration: null,
 };
 
-export default TopicPromo;
+export default CurationPromo;

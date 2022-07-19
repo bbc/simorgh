@@ -12,7 +12,7 @@ import {
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
-  GEL_SPACING_DBL,
+  GEL_SPACING_HLF_TRPL,
 } from '#legacy/gel-foundations/src/spacings';
 import { Helmet } from 'react-helmet';
 import {
@@ -101,7 +101,7 @@ const StyledDropdownLi = styled.li`
   border-bottom: 0.0625rem solid ${C_GREY_3};
 
   &:last-child {
-    padding-bottom: ${GEL_SPACING_DBL};
+    padding-bottom: ${GEL_SPACING_HLF};
     border: 0;
   }
 `;
@@ -111,6 +111,8 @@ const StyledDropdownLink = styled.a`
   ${({ service }) => service && getSansRegular(service)}
   color: ${C_GREY_10};
   text-decoration: none;
+  padding: ${GEL_SPACING_HLF_TRPL} 0;
+  display: inline-block;
 
   &:hover,
   &:focus {

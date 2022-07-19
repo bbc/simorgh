@@ -1,6 +1,7 @@
 import express from 'express';
 import compression from 'compression';
 import ramdaPath from 'ramda/src/path';
+import omit from 'ramda/src/omit';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
@@ -38,6 +39,9 @@ const logger = nodeLogger(__filename);
 logger.debug(
   `Application outputting logs to directory '${process.env.LOG_DIR}'`,
 );
+
+const removeSensitiveHeaders = headers =>
+  omit((process.env.SENSITIVE_HTTP_HEADERS || '').split(','), headers);
 
 /* eslint class-methods-use-this: ["error", { "exceptMethods": ["write"] }] */
 class LoggerStream {
@@ -133,7 +137,7 @@ server.get(
   async ({ url, query, headers, path: urlPath }, res) => {
     logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
       url,
-      headers,
+      headers: removeSensitiveHeaders(headers),
     });
 
     let derivedPageType = 'Unknown';
@@ -167,7 +171,7 @@ server.get(
       data.timeOnServer = Date.now();
       data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true';
 
-      const { status } = data;
+      let { status } = data;
       // Set derivedPageType based on returned page data
       if (status === OK) {
         derivedPageType = ramdaPath(['pageData', 'metadata', 'type'], data);
@@ -181,15 +185,43 @@ server.get(
       }
 
       const bbcOrigin = headers['bbc-origin'];
-      const result = await renderDocument({
-        bbcOrigin,
-        data,
-        isAmp,
-        routes,
-        service,
-        url,
-        variant,
-      });
+      let result;
+      try {
+        result = await renderDocument({
+          bbcOrigin,
+          data,
+          isAmp,
+          routes,
+          service,
+          url,
+          variant,
+        });
+      } catch ({ message }) {
+        status = 500;
+        sendCustomMetric({
+          metricName: NON_200_RESPONSE,
+          statusCode: status,
+          pageType: derivedPageType,
+          requestUrl: url,
+        });
+
+        logger.error(SERVER_SIDE_REQUEST_FAILED, {
+          status,
+          message,
+          url,
+          headers: removeSensitiveHeaders(headers),
+        });
+
+        result = await renderDocument({
+          bbcOrigin,
+          data: { error: true, status },
+          isAmp,
+          routes,
+          service,
+          url,
+          variant,
+        });
+      }
 
       logger.info(ROUTING_INFORMATION, {
         url,
@@ -220,10 +252,9 @@ server.get(
         status,
         message,
         url,
-        headers,
+        headers: removeSensitiveHeaders(headers),
       });
 
-      // Return an internal server error for any uncaught errors
       res.status(500).send(message);
     }
   },
