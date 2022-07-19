@@ -1,9 +1,7 @@
 import styled from '@emotion/styled';
 
-import { PromoItem } from '#components/OptimoPromos/Lists/index.styles';
 import {
   GEL_SPACING,
-  GEL_SPACING_BORDER_HLF,
   GEL_SPACING_DBL,
 } from '#app/legacy/gel-foundations/src/spacings';
 import {
@@ -12,6 +10,9 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#app/legacy/gel-foundations/src/breakpoints';
+import PromoList from '#components/OptimoPromos/PromoList';
+import PromoItem from '#components/OptimoPromos/PromoItem/index.styles';
+import { GEL_SPACING_BORDER_HLF } from '../constants';
 
 export const StyledWrapper = styled.section`
   padding: 0 ${GEL_SPACING};
@@ -39,7 +40,7 @@ export const StyledPromoItem = styled(PromoItem)`
   }
 `;
 
-export const RelatedContentGrid = styled.div`
+export const RelatedContentGrid = styled(PromoList)`
   display: flex;
   flex-wrap: wrap;
   margin: calc(-${GEL_SPACING} - ${GEL_SPACING_BORDER_HLF});

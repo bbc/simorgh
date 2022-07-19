@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { node, string } from 'prop-types';
 import StyledTitle from './index.styles';
+import PromoContext from '../PromoContext';
 
-const Title = ({ children, service, className, as }) => {
+const Title = ({ children, className, as }) => {
+  const { service } = useContext(PromoContext);
   return (
     <StyledTitle as={as} className={className} service={service}>
       {children}
@@ -12,9 +14,8 @@ const Title = ({ children, service, className, as }) => {
 
 Title.propTypes = {
   children: node.isRequired,
-  service: string.isRequired,
-  className: string,
   as: string,
+  className: string,
 };
 
 Title.defaultProps = { className: '', as: '' };

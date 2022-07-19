@@ -57,7 +57,7 @@ const TopStoriesItem = ({ item, ariaLabelledBy }) => {
     >
       <Promo.ContentWrapper>
         {mediaType && <Promo.MediaIndicator />}
-        <Title script={script} as={titleTag}>
+        <Title as={titleTag} script={script}>
           <Promo.Link>
             {isLive ? (
               <Promo.LiveLabel

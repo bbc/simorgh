@@ -1,19 +1,16 @@
-import React from 'react';
-import { string } from 'prop-types';
+import React, { useContext } from 'react';
 import { mediaIcons } from '#legacy/psammead-assets/src/svgs';
 import { MediaIndicatorWrapper, MediaIndicatorAlignment } from './index.styles';
+import PromoContext from '../PromoContext';
 
-const MediaIndicator = ({ mediaType }) => {
+const MediaIndicator = () => {
+  const { mediaType } = useContext(PromoContext);
   if (!mediaType) return null;
   return (
     <MediaIndicatorWrapper aria-hidden>
       <MediaIndicatorAlignment>{mediaIcons[mediaType]}</MediaIndicatorAlignment>
     </MediaIndicatorWrapper>
   );
-};
-
-MediaIndicator.propTypes = {
-  mediaType: string.isRequired,
 };
 
 export default MediaIndicator;

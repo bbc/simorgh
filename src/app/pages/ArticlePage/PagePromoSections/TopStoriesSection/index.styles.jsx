@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import {
   GEL_SPACING,
-  GEL_SPACING_BORDER,
   GEL_SPACING_DBL,
 } from '#app/legacy/gel-foundations/src/spacings';
 import {
@@ -10,10 +9,9 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
 } from '#app/legacy/gel-foundations/src/breakpoints';
-import {
-  PromoList,
-  PromoItem,
-} from '#components/OptimoPromos/Lists/index.styles';
+import PromoItem from '#components/OptimoPromos/PromoItem/index.styles';
+import PromoList from '#components/OptimoPromos/PromoList';
+import { GEL_SPACING_BORDER } from '../constants';
 
 export const StyledWrapper = styled.section`
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
@@ -34,6 +32,7 @@ export const StyledPromoList = styled(PromoList)`
 `;
 
 export const StyledPromoItem = styled(PromoItem)`
+  border: ${GEL_SPACING_BORDER} solid transparent;
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     height: inherit;
     flex-grow: 1;

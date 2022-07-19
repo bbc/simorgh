@@ -1,15 +1,11 @@
-import React from 'react';
-import { node, string, shape } from 'prop-types';
+import React, { useContext } from 'react';
+import { node, string } from 'prop-types';
 import useCombinedClickTrackerHandler from '#containers/StoryPromo/useCombinedClickTrackerHandler';
 import StyledLink from './index.styles';
+import PromoContext from '../PromoContext';
 
-const Link = ({
-  className,
-  children,
-  to,
-  ariaLabelledBy,
-  eventTrackingData,
-}) => {
+const Link = ({ className, children }) => {
+  const { to, eventTrackingData, ariaLabelledBy } = useContext(PromoContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
   return (
     <StyledLink
@@ -26,15 +22,10 @@ const Link = ({
 Link.propTypes = {
   className: string,
   children: node.isRequired,
-  to: string,
-  ariaLabelledBy: string.isRequired,
-  eventTrackingData: shape({ block: shape({ componentName: string }) }),
 };
 
 Link.defaultProps = {
   className: '',
-  to: '',
-  eventTrackingData: null,
 };
 
 export default Link;

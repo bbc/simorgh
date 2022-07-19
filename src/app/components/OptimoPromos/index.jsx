@@ -13,8 +13,7 @@ import MediaIndicator from './MediaIndicator';
 import Content from './Content';
 import { PromoWrapper, ContentWrapper } from './index.styles';
 import Image from './Image';
-
-const PromoContext = React.createContext({});
+import PromoContext from './PromoContext';
 
 const Promo = ({
   children,
@@ -40,23 +39,16 @@ const Promo = ({
   );
 };
 
-const withPromoContext = Component => props =>
-  (
-    <PromoContext.Consumer>
-      {context => <Component {...context} {...props} />}
-    </PromoContext.Consumer>
-  );
+Promo.ContentWrapper = ContentWrapper;
+Promo.Title = Title;
+Promo.MediaIndicator = MediaIndicator;
+Promo.Link = Link;
+Promo.Content = Content;
 
-Promo.ContentWrapper = withPromoContext(ContentWrapper);
-Promo.Title = withPromoContext(Title);
-Promo.MediaIndicator = withPromoContext(MediaIndicator);
-Promo.Link = withPromoContext(Link);
-Promo.Content = withPromoContext(Content);
-
-// Outside NewStoryPromo
-Promo.Timestamp = withPromoContext(Timestamp);
-Promo.LiveLabel = withPromoContext(LiveLabel);
-Promo.Image = withPromoContext(Image);
+// Outside OptimoPromos
+Promo.Timestamp = Timestamp;
+Promo.LiveLabel = LiveLabel;
+Promo.Image = Image;
 
 Promo.propTypes = {
   children: node.isRequired,
