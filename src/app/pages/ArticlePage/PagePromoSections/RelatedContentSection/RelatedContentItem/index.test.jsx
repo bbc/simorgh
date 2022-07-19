@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import RelatedContentItem from '.';
@@ -20,15 +20,13 @@ const RenderRelatedContentItem = ({ fixtureData, service = 'mundo' }) => (
 
 describe('Optimo Related Content Promo Item', () => {
   it('should render Related Content when given appropriate data', () => {
-    const { getByAltText, getByText } = render(
-      <RenderRelatedContentItem fixtureData={RelatedContentData} />,
-    );
+    render(<RenderRelatedContentItem fixtureData={RelatedContentData} />);
 
-    const altText = getByAltText('Keyframe #2');
-    const heading = getByText(
+    const altText = screen.getByAltText('Keyframe #2');
+    const heading = screen.getByText(
       'Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson',
     );
-    const timestamp = getByText('17 febrero 2020');
+    const timestamp = screen.getByText('17 febrero 2020');
 
     expect(altText).toBeInTheDocument();
     expect(heading).toBeInTheDocument();

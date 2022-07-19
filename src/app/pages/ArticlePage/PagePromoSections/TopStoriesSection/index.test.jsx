@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
@@ -23,45 +23,41 @@ describe('Optimo Related Content Promo', () => {
   });
 
   it('should render Related Content Ul when given More than one Related Content', () => {
-    const { getAllByRole, container } = render(
-      <TopStories fixtureData={topStoriesList} />,
-    );
-    const listItems = getAllByRole('listitem');
+    const { container } = render(<TopStories fixtureData={topStoriesList} />);
+    const listItems = screen.getAllByRole('listitem');
     const list = container.querySelector('ul');
     expect(listItems.length).toBe(3);
     expect(list).toBeInTheDocument();
   });
 
   it('should render a default title if translations are not available', () => {
-    const { getByText } = render(
-      <TopStories fixtureData={topStoriesList} service="news" />,
-    );
+    render(<TopStories fixtureData={topStoriesList} service="news" />);
 
-    const label = getByText(`Top Stories`);
+    const label = screen.getByText(`Top Stories`);
     expect(label).toBeInTheDocument();
   });
 
   it('should have a "region" role', () => {
-    const { getByRole } = render(<TopStories fixtureData={topStoriesList} />);
-    const region = getByRole('region');
+    render(<TopStories fixtureData={topStoriesList} />);
+    const region = screen.getByRole('region');
     expect(region).toBeInTheDocument();
   });
 
   it("should have a section labelled-by the section label's id", () => {
-    const { getByRole, getByText } = render(
-      <TopStories fixtureData={topStoriesList} />,
-    );
-    const regionLabelId = getByRole('region').getAttribute('aria-labelledBy');
-    const LabelLabelId = getByText('Principales noticias').getAttribute('id');
+    render(<TopStories fixtureData={topStoriesList} />);
+    const regionLabelId = screen
+      .getByRole('region')
+      .getAttribute('aria-labelledBy');
+    const LabelLabelId = screen
+      .getByText('Principales noticias')
+      .getAttribute('id');
     expect(regionLabelId).toBe(LabelLabelId);
   });
 
   it('should render RelatedContent component without <ul> and <li> when given single item in collection', () => {
-    const { queryAllByRole, queryByRole } = render(
-      <TopStories fixtureData={topStoriesSingleItem} />,
-    );
-    const listItems = queryAllByRole('listitem');
-    const list = queryByRole('list');
+    render(<TopStories fixtureData={topStoriesSingleItem} />);
+    const listItems = screen.queryAllByRole('listitem');
+    const list = screen.queryByRole('list');
 
     expect(listItems.length).toBe(0);
     expect(list).toBeNull();
