@@ -75,20 +75,20 @@ describe('A11y', () => {
   });
 
   it('should render description without badge', () => {
-    const { container } = render(
+    const { container, queryByTestId } = render(
       <TopicPageWithContext pageData={pidginMultipleItems} service="pidgin" />,
     );
 
-    expect(container.getElementsByTagName('img').length).toEqual(4);
+    expect(queryByTestId('topic-badge')).not.toBeInTheDocument();
     expect(container.getElementsByTagName('p').length).toEqual(1);
   });
 
   it('should render only topic title without badge or description', () => {
-    const { container } = render(
+    const { container, queryByTestId } = render(
       <TopicPageWithContext pageData={amharicOnlyTitle} service="amharic" />,
     );
 
-    expect(container.getElementsByTagName('img').length).toEqual(0);
+    expect(queryByTestId('topic-badge')).not.toBeInTheDocument();
     expect(container.getElementsByTagName('p').length).toEqual(0);
   });
 
