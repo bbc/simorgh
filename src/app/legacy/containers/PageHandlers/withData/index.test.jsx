@@ -7,7 +7,7 @@ import frontPageDataPidgin from '#data/pidgin/frontpage';
 import {
   shouldMatchSnapshot,
   suppressPropWarnings,
-} from '#legacy/psammead-test-helpers/src';
+} from '#psammead/psammead-test-helpers/src';
 import WithData from '.';
 
 // eslint-disable-next-line react/prop-types

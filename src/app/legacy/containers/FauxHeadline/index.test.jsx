@@ -5,8 +5,8 @@ import {
   shouldMatchSnapshot,
   isNull,
   suppressPropWarnings,
-} from '#legacy/psammead-test-helpers/src';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+} from '#psammead/psammead-test-helpers/src';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 import FauxHeadlineContainer from '.';
 import blocksSingleFragment from '../Headings/testHelpers';
 

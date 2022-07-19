@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
-import { arabic, latin } from '#legacy/gel-foundations/src/scripts';
+import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { arabic, latin } from '#psammead/gel-foundations/src/scripts';
 import { render } from '@testing-library/react';
 import { ConsentBanner, ConsentBannerText } from '.';
 

@@ -4,7 +4,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import {
   isNull,
   suppressPropWarnings,
-} from '#legacy/psammead-test-helpers/src';
+} from '#psammead/psammead-test-helpers/src';
 import ArticleTimestamp from '.';
 import {
   timestampGenerator,

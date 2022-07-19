@@ -5,8 +5,8 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import {
   shouldMatchSnapshot,
   suppressPropWarnings,
-} from '#legacy/psammead-test-helpers/src';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+} from '#psammead/psammead-test-helpers/src';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 import relatedItems from './relatedItems';
 import IndexAlsosContainer from '.';
 

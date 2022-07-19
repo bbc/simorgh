@@ -3,8 +3,8 @@ import { v4 as uuid } from 'uuid';
 import { render } from '@testing-library/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { blockContainingText } from '#models/blocks';
-import { latin, arabic } from '#legacy/gel-foundations/src/scripts';
-import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
+import { latin, arabic } from '#psammead/gel-foundations/src/scripts';
+import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import CaptionContainer from '.';
 
 const newsServiceContextStub = {

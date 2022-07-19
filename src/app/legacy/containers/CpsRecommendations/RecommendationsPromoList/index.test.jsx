@@ -6,7 +6,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import * as viewTracking from '#hooks/useViewTracker';
-import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
+import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import RecommendationsPromoList from './index';
 
 process.env.SIMORGH_BASE_URL = 'http://bbc.com';

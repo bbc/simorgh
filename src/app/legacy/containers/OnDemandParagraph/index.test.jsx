@@ -4,7 +4,7 @@ import {
   shouldMatchSnapshot,
   isNull,
   suppressPropWarnings,
-} from '#legacy/psammead-test-helpers/src';
+} from '#psammead/psammead-test-helpers/src';
 import Paragraph from '.';
 
 describe('MediaPageBlocks Paragraph', () => {

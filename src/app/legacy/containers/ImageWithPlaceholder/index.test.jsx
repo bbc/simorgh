@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
-import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
-import { C_GHOST } from '#legacy/psammead-styles/src/colours';
+import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { C_GHOST } from '#psammead/psammead-styles/src/colours';
 import {
   ImageWithPlaceholder,
   AmpImageWithPlaceholder,

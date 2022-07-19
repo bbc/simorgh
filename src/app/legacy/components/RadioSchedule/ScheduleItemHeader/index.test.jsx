@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import * as scripts from '#legacy/gel-foundations/src/scripts';
+import * as scripts from '#psammead/gel-foundations/src/scripts';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ScheduleItemHeader from '.';
 import '@testing-library/jest-dom/extend-expect';

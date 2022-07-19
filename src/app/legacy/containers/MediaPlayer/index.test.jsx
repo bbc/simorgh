@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
+import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import {
   VideoCanonicalWithPlaceholder,
   VideoCanonicalNoPlaceholder,

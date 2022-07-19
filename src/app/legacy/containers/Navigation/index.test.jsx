@@ -4,7 +4,7 @@ import { service as newsConfig } from '#lib/config/services/news';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
+import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import Navigation from './index';
 
 describe('Navigation Container', () => {

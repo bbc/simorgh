@@ -25,7 +25,7 @@ import {
   suppressPropWarnings,
   setWindowValue,
   resetWindowValue,
-} from '#legacy/psammead-test-helpers/src';
+} from '#psammead/psammead-test-helpers/src';
 import ATIAnalytics from '.';
 import * as amp from './amp';
 import * as canonical from './canonical';

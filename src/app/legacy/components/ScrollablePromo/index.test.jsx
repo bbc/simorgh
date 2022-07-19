@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
+import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import * as viewTracking from '#hooks/useViewTracker';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContext } from '#contexts/ServiceContext';

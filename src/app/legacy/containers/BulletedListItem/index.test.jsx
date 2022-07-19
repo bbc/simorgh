@@ -1,7 +1,7 @@
 import React from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 import BulletedListItemContainer from './index';
 import { listItemA, listItemB } from '../BulletedList/fixtures';
 

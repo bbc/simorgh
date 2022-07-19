@@ -1,10 +1,10 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 import StoryPromo, {
   Headline,
   Summary,
-} from '#legacy/psammead-story-promo/src';
+} from '#psammead/psammead-story-promo/src';
 import { StoryPromoLi, StoryPromoLiBase, StoryPromoUl } from './index';
 
 const Image = <img src="https://foobar.com/image.png" alt="Alt text" />;

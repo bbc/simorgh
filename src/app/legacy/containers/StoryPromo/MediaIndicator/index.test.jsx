@@ -4,8 +4,11 @@ import {
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
 } from '#app/routes/utils/pageTypes';
-import { shouldMatchSnapshot, isNull } from '#legacy/psammead-test-helpers/src';
-import { latin, arabic } from '#legacy/gel-foundations/src/scripts';
+import {
+  shouldMatchSnapshot,
+  isNull,
+} from '#psammead/psammead-test-helpers/src';
+import { latin, arabic } from '#psammead/gel-foundations/src/scripts';
 import MediaIndicator from '.';
 
 const audioItem = {

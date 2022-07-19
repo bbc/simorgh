@@ -10,7 +10,7 @@ import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import {
   shouldMatchSnapshot,
   suppressPropWarnings,
-} from '#legacy/psammead-test-helpers/src';
+} from '#psammead/psammead-test-helpers/src';
 import {
   completeItem,
   itemWithOvertypedSummary,

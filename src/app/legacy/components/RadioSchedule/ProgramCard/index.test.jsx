@@ -1,7 +1,7 @@
 import {
   shouldMatchSnapshot,
   suppressPropWarnings,
-} from '#legacy/psammead-test-helpers/src';
+} from '#psammead/psammead-test-helpers/src';
 import { render } from '@testing-library/react';
 import { renderProgramCard, uniqueStates } from '../testHelpers/helper';
 

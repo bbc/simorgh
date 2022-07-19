@@ -3,7 +3,7 @@ import path from 'ramda/src/path';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
+import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import RelatedContentPromoList from './index';
 
 const promoItems = path(

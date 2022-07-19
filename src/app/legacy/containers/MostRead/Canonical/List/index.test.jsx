@@ -1,11 +1,11 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
+import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import {
   arabic,
   bengali,
   burmese,
   latin,
-} from '#legacy/gel-foundations/src/scripts';
+} from '#psammead/gel-foundations/src/scripts';
 import MostReadList from '.';
 import { getItemWrapperArray } from '../../utilities';
 

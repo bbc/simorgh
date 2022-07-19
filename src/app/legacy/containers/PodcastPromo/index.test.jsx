@@ -10,7 +10,7 @@ import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 
 import { service as russianServiceConfig } from '#lib/config/services/russian';
-import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
+import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { InlinePodcastPromo, SecondaryColumnPodcastPromo } from '.';
 
 /* eslint-disable react/prop-types */

@@ -5,9 +5,9 @@ import {
   C_WHITE,
   C_POSTBOX_30,
   C_GHOST,
-} from '#legacy/psammead-styles/src/colours';
-import { latin } from '#legacy/gel-foundations/src/scripts';
-import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
+} from '#psammead/psammead-styles/src/colours';
+import { latin } from '#psammead/gel-foundations/src/scripts';
+import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import AmpNavigation from './index.amp';
 import {
   dropdownTestId,

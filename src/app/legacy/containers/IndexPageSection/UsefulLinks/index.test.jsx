@@ -1,6 +1,6 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 import usefulItems from './usefulItems';
 import UsefulLinksComponent from '.';
 

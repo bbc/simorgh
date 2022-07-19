@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { formatUnixTimestamp } from '#legacy/psammead-timestamp-container/src/utilities';
+import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import FooterTimestamp from '.';

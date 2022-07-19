@@ -1,9 +1,9 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
+import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { render } from '@testing-library/react';
-import latinAndCyrillicTypography from '#legacy/gel-foundations/src/scripts/latin-and-cyrillic';
-import burmeseTypography from '#legacy/gel-foundations/src/scripts/burmese';
-import arabicTypography from '#legacy/gel-foundations/src/scripts/arabic';
+import latinAndCyrillicTypography from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import burmeseTypography from '#psammead/gel-foundations/src/scripts/burmese';
+import arabicTypography from '#psammead/gel-foundations/src/scripts/arabic';
 import { TopicTags, TopicTag } from './index';
 
 describe('TopicTags', () => {

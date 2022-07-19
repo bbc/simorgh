@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import {
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
-} from '#legacy/psammead-styles/src/fonts';
+} from '#psammead/psammead-styles/src/fonts';
 import GlobalStyles from './global-styles';
 
 /**

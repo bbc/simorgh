@@ -1,9 +1,12 @@
 import React from 'react';
-import { isNull, shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
+import {
+  isNull,
+  shouldMatchSnapshot,
+} from '#psammead/psammead-test-helpers/src';
 import { render } from '@testing-library/react';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 import moment from 'moment';
-import '#legacy/psammead-locales/moment/ha';
+import '#psammead/psammead-locales/moment/ha';
 import Timestamp from '.';
 
 const defaultTimestamp = 1539969006000; // 19 October 2018

@@ -17,7 +17,7 @@ import {
   legacyAssetPagePath,
   topicPath,
 } from '#app/routes/utils/regex';
-import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
+import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import ScriptLinkContainer, { getVariantHref } from '.';
 
 const setPreferredVariantCookieSpy = jest.spyOn(

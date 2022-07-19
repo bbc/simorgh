@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from 'react';
-import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
+import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { render } from '@testing-library/react';
-import { C_POSTBOX, C_WHITE } from '#legacy/psammead-styles/src/colours';
-import ScriptLink from '#legacy/psammead-script-link/src';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+import { C_POSTBOX, C_WHITE } from '#psammead/psammead-styles/src/colours';
+import ScriptLink from '#psammead/psammead-script-link/src';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 import Brand from '.';
 import SkipLink from './SkipLink';
 

@@ -5,7 +5,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
+import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import CpsMetadata from './index';
 
 const getISOStringDate = date => new Date(date).toISOString();

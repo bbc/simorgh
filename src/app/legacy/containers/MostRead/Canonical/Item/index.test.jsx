@@ -1,8 +1,8 @@
 import React from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
-import { latin, arabic } from '#legacy/gel-foundations/src/scripts';
+import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { latin, arabic } from '#psammead/gel-foundations/src/scripts';
 import { MostReadLink, getParentColumns } from '.';
 import { getItem, getItemWrapperArray } from '../../utilities';
 

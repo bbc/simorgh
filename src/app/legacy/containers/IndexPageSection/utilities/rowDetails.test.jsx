@@ -1,8 +1,4 @@
-import {
-  TopRow,
-  RegularRow,
-  LeadingRow,
-} from '#app/containers/FrontPageStoryRows';
+import { TopRow, RegularRow, LeadingRow } from '#containers/FrontPageStoryRows';
 import getRowDetails from './rowDetails';
 
 const rowValues = {

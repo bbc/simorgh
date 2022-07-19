@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
+import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import Grid from '.';
 import { ExampleParagraph, ExampleFigure, ExampleImage } from './testHelpers';
 

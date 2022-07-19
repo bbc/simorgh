@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import {
   shouldMatchSnapshot,
   suppressPropWarnings,
-} from '#legacy/psammead-test-helpers/src';
+} from '#psammead/psammead-test-helpers/src';
 import '@testing-library/jest-dom/extend-expect';
 
 import AudioLoader from '.';

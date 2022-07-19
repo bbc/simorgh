@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { render } from '@testing-library/react';
 import { RequestContext } from '#contexts/RequestContext';
 import isLive from '#lib/utilities/isLive';
-import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
+import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import CanonicalAd, { getBootstrapSrc } from '.';
 
 const defaultRequestContextData = {

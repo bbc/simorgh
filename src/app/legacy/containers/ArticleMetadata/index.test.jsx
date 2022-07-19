@@ -8,7 +8,7 @@ import {
   articleDataPersian,
 } from '#pages/ArticlePage/fixtureData';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
+import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import ArticleMetadata from './index';
 
 const getISOStringDate = date => new Date(date).toISOString();

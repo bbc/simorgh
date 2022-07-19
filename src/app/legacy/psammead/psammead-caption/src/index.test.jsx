@@ -1,7 +1,7 @@
 import React from 'react';
-import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
-import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
-import { latin, arabic } from '#legacy/gel-foundations/src/scripts';
+import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
+import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { latin, arabic } from '#psammead/gel-foundations/src/scripts';
 import Caption from '.';
 
 describe('Caption', () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 
 import { ServiceContext } from '#contexts/ServiceContext';
 

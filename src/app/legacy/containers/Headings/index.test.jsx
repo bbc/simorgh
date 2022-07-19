@@ -2,12 +2,12 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { textBlock } from '#models/blocks';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 import {
   shouldMatchSnapshot,
   isNull,
   suppressPropWarnings,
-} from '#legacy/psammead-test-helpers/src';
+} from '#psammead/psammead-test-helpers/src';
 import HeadingsContainer from '.';
 import blocksSingleFragment from './testHelpers';
 

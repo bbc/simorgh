@@ -1,9 +1,9 @@
-import { testUtilityPackages } from '#legacy/psammead-test-helpers/src';
+import { testUtilityPackages } from '#psammead/psammead-test-helpers/src';
 import * as underTest from '.';
 
 jest.mock('@storybook/addon-knobs');
 
-jest.mock('#legacy/gel-foundations/src/scripts', () => ({
+jest.mock('#psammead/gel-foundations/src/scripts', () => ({
   latin: 'LATIN SCRIPT OBJECT',
   arabic: 'ARABIC SCRIPT OBJECT',
   cyrillic: 'CYRILLIC SCRIPT OBJECT',

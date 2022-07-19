@@ -4,7 +4,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { service as pidginServiceConfig } from '#lib/config/services/pidgin';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
+import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import BylineContainer from './index';
 
 /* eslint-disable react/prop-types */

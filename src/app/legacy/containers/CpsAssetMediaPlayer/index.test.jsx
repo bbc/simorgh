@@ -7,7 +7,7 @@ import {
   shouldMatchSnapshot,
   isNull,
   suppressPropWarnings,
-} from '#legacy/psammead-test-helpers/src';
+} from '#psammead/psammead-test-helpers/src';
 import CpsAssetMediaPlayerContainer from '.';
 import videoBlock from './fixtures';
 

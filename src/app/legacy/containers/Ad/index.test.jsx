@@ -11,8 +11,8 @@ import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import {
   shouldMatchSnapshot,
   suppressPropWarnings,
-} from '#legacy/psammead-test-helpers/src';
-import { latinDiacritics } from '#legacy/gel-foundations/src/scripts';
+} from '#psammead/psammead-test-helpers/src';
+import { latinDiacritics } from '#psammead/gel-foundations/src/scripts';
 
 import AdContainer from './index';
 

@@ -5,7 +5,7 @@ import {
   shouldMatchSnapshot,
   isNull,
   suppressPropWarnings,
-} from '#legacy/psammead-test-helpers/src';
+} from '#psammead/psammead-test-helpers/src';
 import TextContainer from './index';
 import { paragraphBlock, fragmentBlock } from './fixtures';
 

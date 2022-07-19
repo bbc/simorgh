@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import loggerMock from '#testHelpers/loggerMock';
 import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
-import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
+import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import CpsSocialEmbedContainer from '.';
 import withContexts from '../common/testHelper';
 import { cpsTwitterBlock, cpsTwitterBlockNoEmbed } from '../common/fixtures';
