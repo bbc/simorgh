@@ -18,9 +18,11 @@ const Content = ({ mediaDuration, headline, isPhotoGallery }) => {
     return <span id={ariaLabelledBy}>{headline}</span>;
   }
 
-  const type = isPhotoGallery ? 'photogallery' : mediaType;
+  const photoGallerytype = isPhotoGallery ? 'photogallery' : mediaType;
 
-  const typeAnnounced = type === 'audio' ? 'listen' : mediaType;
+  const type = mediaType === 'audio' ? 'listen' : mediaType;
+
+  const typeAnnounced = photoGallerytype || type;
 
   const announcedMediaType = mediaTranslations[typeAnnounced];
 

@@ -3,10 +3,12 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import LinkContents from '.';
+import PromoContext from '../PromoContext';
 
 const headlineDefault = 'this is a headline';
 const mediaTypeDefault = 'video';
 const mediaDurationDefault = 'PT200S';
+const ariaLabelledByDefault = 'uniqueId';
 
 const ContentFixture = ({
   id = 0,
@@ -14,21 +16,28 @@ const ContentFixture = ({
   mediaDuration,
   headline,
   isPhotoGallery,
+  ariaLabelledBy,
 }) => (
   <ServiceContextProvider service="news">
-    <LinkContents
-      id={id}
-      headline={headline}
-      mediaType={mediaType}
-      mediaDuration={mediaDuration}
-      isPhotoGallery={isPhotoGallery}
-    />
+    <PromoContext.Provider value={{ mediaType, ariaLabelledBy }}>
+      <LinkContents
+        id={id}
+        headline={headline}
+        mediaDuration={mediaDuration}
+        isPhotoGallery={isPhotoGallery}
+      />
+    </PromoContext.Provider>
   </ServiceContextProvider>
 );
 
 describe('Promo Content', () => {
   it("should render a story's headline", () => {
-    render(<ContentFixture headline={headlineDefault} />);
+    render(
+      <ContentFixture
+        headline={headlineDefault}
+        ariaLabelledBy={ariaLabelledByDefault}
+      />,
+    );
     const heading = screen.getByText(headlineDefault);
     expect(heading).toBeInTheDocument();
   });
@@ -39,6 +48,7 @@ describe('Promo Content', () => {
         headline={headlineDefault}
         mediaType={mediaTypeDefault}
         mediaDuration={mediaDurationDefault}
+        ariaLabelledBy={ariaLabelledByDefault}
       />,
     );
 
@@ -52,7 +62,13 @@ describe('Promo Content', () => {
   });
 
   it('should render with visually hidden text for photogallery promos', () => {
-    render(<ContentFixture headline={headlineDefault} isPhotoGallery />);
+    render(
+      <ContentFixture
+        headline={headlineDefault}
+        ariaLabelledBy={ariaLabelledByDefault}
+        isPhotoGallery
+      />,
+    );
 
     const heading = screen.getByText(headlineDefault);
     const photogallery = screen.getByText('Image gallery,');
