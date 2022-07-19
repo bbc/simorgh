@@ -6,7 +6,12 @@ import isEmpty from 'ramda/src/isEmpty';
 import { storyItem } from '#models/propTypes/storyItem';
 import { getIsLive } from '#lib/utilities/getStoryPromoInfo';
 import Promo from '#components/OptimoPromos';
-import { StyledTitle, StyledTimestamp, TitleWithContent } from './index.styles';
+import {
+  StyledTitle,
+  StyledTimestamp,
+  TitleWithContent,
+  TopStoriesWrapper,
+} from './index.styles';
 
 const TopStoriesItem = ({ item, ariaLabelledBy }) => {
   const { script, translations } = useContext(ServiceContext);
@@ -49,40 +54,42 @@ const TopStoriesItem = ({ item, ariaLabelledBy }) => {
   const Title = titleHasContent ? TitleWithContent : StyledTitle;
 
   return (
-    <Promo
-      to={assetUri || uri}
-      ariaLabelledBy={ariaLabelledBy}
-      mediaType={mediaType}
-      eventTrackingData={eventTrackingData}
-    >
-      <Promo.ContentWrapper>
-        {mediaType && <Promo.MediaIndicator />}
-        <Title as={titleTag} script={script}>
-          <Promo.Link>
-            {isLive ? (
-              <Promo.LiveLabel
-                liveText={liveLabel}
-                ariaHidden={liveLabelIsEnglish}
-                offScreenText={liveLabelIsEnglish ? 'Live' : null}
-              >
+    <TopStoriesWrapper>
+      <Promo
+        to={assetUri || uri}
+        ariaLabelledBy={ariaLabelledBy}
+        mediaType={mediaType}
+        eventTrackingData={eventTrackingData}
+      >
+        <Promo.ContentWrapper>
+          {mediaType && <Promo.MediaIndicator />}
+          <Title as={titleTag} script={script}>
+            <Promo.Link>
+              {isLive ? (
+                <Promo.LiveLabel
+                  liveText={liveLabel}
+                  ariaHidden={liveLabelIsEnglish}
+                  offScreenText={liveLabelIsEnglish ? 'Live' : null}
+                >
+                  <Promo.Content
+                    mediaDuration={mediaDuration}
+                    headline={headline}
+                    isPhotoGallery={isPhotoGallery}
+                  />
+                </Promo.LiveLabel>
+              ) : (
                 <Promo.Content
                   mediaDuration={mediaDuration}
                   headline={headline}
                   isPhotoGallery={isPhotoGallery}
                 />
-              </Promo.LiveLabel>
-            ) : (
-              <Promo.Content
-                mediaDuration={mediaDuration}
-                headline={headline}
-                isPhotoGallery={isPhotoGallery}
-              />
-            )}
-          </Promo.Link>
-        </Title>
-        <StyledTimestamp>{timestamp}</StyledTimestamp>
-      </Promo.ContentWrapper>
-    </Promo>
+              )}
+            </Promo.Link>
+          </Title>
+          <StyledTimestamp>{timestamp}</StyledTimestamp>
+        </Promo.ContentWrapper>
+      </Promo>
+    </TopStoriesWrapper>
   );
 };
 

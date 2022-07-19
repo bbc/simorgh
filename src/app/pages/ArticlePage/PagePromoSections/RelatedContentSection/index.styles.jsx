@@ -12,7 +12,7 @@ import {
 } from '#app/legacy/gel-foundations/src/breakpoints';
 import PromoList from '#components/OptimoPromos/PromoList';
 import PromoItem from '#components/OptimoPromos/PromoItem/index.styles';
-import { GEL_SPACING_BORDER_HLF } from '../constants';
+import { BORDER_SPACING } from '../constants';
 
 export const StyledWrapper = styled.section`
   padding: 0 ${GEL_SPACING};
@@ -30,7 +30,7 @@ export const StyledPromoItem = styled(PromoItem)`
   margin: 0;
   width: 100%;
   height: inherit;
-  padding: calc(${GEL_SPACING} - ${GEL_SPACING_BORDER_HLF});
+  padding: calc(${GEL_SPACING} - ${BORDER_SPACING});
 
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     width: 50%;
@@ -43,7 +43,7 @@ export const StyledPromoItem = styled(PromoItem)`
 export const RelatedContentGrid = styled(PromoList)`
   display: flex;
   flex-wrap: wrap;
-  margin: calc(-${GEL_SPACING} - ${GEL_SPACING_BORDER_HLF});
+  margin: calc(-${GEL_SPACING} + ${BORDER_SPACING});
 `;
 
 export const SingleItemWrapper = styled.div`

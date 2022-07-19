@@ -1,8 +1,13 @@
 import styled from '@emotion/styled';
 import Promo from '#components/OptimoPromos';
 import { GEL_SPACING } from '#app/legacy/gel-foundations/src/spacings';
+import { BORDER_SPACING } from '../../constants';
 
-const TitleWithContent = styled(Promo.Title)`
+export const TitleWithContent = styled(Promo.Title)`
   padding-bottom: ${GEL_SPACING};
 `;
-export default TitleWithContent;
+
+export const RelatedContentWrapper = styled.div`
+  border: ${BORDER_SPACING} solid transparent;
+  height: 100%;
+`;

@@ -6,7 +6,7 @@ import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
 import Promo from '#components/OptimoPromos';
 import isEmpty from 'ramda/src/isEmpty';
-import TitleWithContent from './index.styles';
+import { TitleWithContent, RelatedContentWrapper } from './index.styles';
 
 const RelatedContentItem = ({ item, ariaLabelledBy }) => {
   const { script } = useContext(ServiceContext);
@@ -105,28 +105,30 @@ const RelatedContentItem = ({ item, ariaLabelledBy }) => {
   const Title = titleHasContent ? TitleWithContent : Promo.Title;
 
   return (
-    <Promo
-      to={assetUri}
-      ariaLabelledBy={ariaLabelledBy}
-      eventTrackingData={eventTrackingData}
-    >
-      <Promo.Image
-        src={src}
-        altText={altText}
-        srcset={primarySrcset}
-        fallbackSrcset={fallbackSrcset}
-        width={width}
-        height={height}
-      />
-      <Promo.ContentWrapper>
-        <Title as={titleTag} script={script}>
-          <Promo.Link>
-            <Promo.Content headline={headline} />
-          </Promo.Link>
-        </Title>
-        <Promo.Timestamp>{timestamp}</Promo.Timestamp>
-      </Promo.ContentWrapper>
-    </Promo>
+    <RelatedContentWrapper>
+      <Promo
+        to={assetUri}
+        ariaLabelledBy={ariaLabelledBy}
+        eventTrackingData={eventTrackingData}
+      >
+        <Promo.Image
+          src={src}
+          altText={altText}
+          srcset={primarySrcset}
+          fallbackSrcset={fallbackSrcset}
+          width={width}
+          height={height}
+        />
+        <Promo.ContentWrapper>
+          <Title as={titleTag} script={script}>
+            <Promo.Link>
+              <Promo.Content headline={headline} />
+            </Promo.Link>
+          </Title>
+          <Promo.Timestamp>{timestamp}</Promo.Timestamp>
+        </Promo.ContentWrapper>
+      </Promo>
+    </RelatedContentWrapper>
   );
 };
 
