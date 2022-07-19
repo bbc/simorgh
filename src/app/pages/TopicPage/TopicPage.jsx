@@ -23,6 +23,7 @@ import TopicDescription from './TopicDescription';
 import TopicGrid from './TopicGrid';
 import Pagination from './Pagination';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
+import Curation, { VISUAL_PROMINANCE, VISUAL_STYLE } from './Curation';
 
 const Wrapper = styled.main`
   max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
@@ -102,6 +103,11 @@ const TopicPage = ({ pageData }) => {
         </TitleWrapper>
         {description && <TopicDescription>{description}</TopicDescription>}
         <TopicGrid promos={promos} />
+        <Curation
+          visualStyle={VISUAL_STYLE.NONE}
+          visualProminance={VISUAL_PROMINANCE.NORMAL}
+          promos={promos}
+        />
         <Pagination
           activePage={activePage}
           pageCount={pageCount}
