@@ -8,7 +8,7 @@ const headlineDefault = 'this is a headline';
 const mediaTypeDefault = 'video';
 const mediaDurationDefault = 'PT200S';
 
-const ContentComponent = ({
+const ContentFixture = ({
   id = 0,
   mediaType,
   mediaDuration,
@@ -28,14 +28,14 @@ const ContentComponent = ({
 
 describe('Promo Content', () => {
   it("should render a story's headline", () => {
-    render(<ContentComponent headline={headlineDefault} />);
+    render(<ContentFixture headline={headlineDefault} />);
     const heading = screen.getByText(headlineDefault);
     expect(heading).toBeInTheDocument();
   });
 
   it('should render with visually hidden text for media promos', () => {
     render(
-      <ContentComponent
+      <ContentFixture
         headline={headlineDefault}
         mediaType={mediaTypeDefault}
         mediaDuration={mediaDurationDefault}
@@ -52,7 +52,7 @@ describe('Promo Content', () => {
   });
 
   it('should render with visually hidden text for photogallery promos', () => {
-    render(<ContentComponent headline={headlineDefault} isPhotoGallery />);
+    render(<ContentFixture headline={headlineDefault} isPhotoGallery />);
 
     const heading = screen.getByText(headlineDefault);
     const photogallery = screen.getByText('Image gallery,');

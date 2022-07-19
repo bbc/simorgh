@@ -1,6 +1,6 @@
 import generatePromoId from '.';
 
-describe('optimoPromoIdGenerator', () => {
+describe('generate Promo Id', () => {
   it.each`
     expectation                                               | sectionType          | assetUri                    | uri                          | contentType | promoIndex | expected
     ${' contentType and URI'}                                 | ${'Related-Content'} | ${'https://bbc.com/mundo'}  | ${'https://bbc.com/pidgin'}  | ${'text'}   | ${0}       | ${'related-content-promo-httpsbbccommundo-text-1'}

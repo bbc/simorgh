@@ -12,7 +12,7 @@ import {
 } from './fixture';
 
 // eslint-disable-next-line react/prop-types
-const RelatedContent = ({ fixtureData, service = 'mundo' }) => (
+const RelatedContentSectionFixture = ({ fixtureData, service = 'mundo' }) => (
   <ServiceContextProvider service={service}>
     <ToggleContextProvider>
       <RelatedContentSection content={fixtureData} />
@@ -22,13 +22,15 @@ const RelatedContent = ({ fixtureData, service = 'mundo' }) => (
 
 describe('Optimo Related Content Promo', () => {
   it('should return null if no data is passed', () => {
-    const { container } = render(<RelatedContent fixtureData={{}} />);
+    const { container } = render(
+      <RelatedContentSectionFixture fixtureData={{}} />,
+    );
     expect(container).toBeEmptyDOMElement();
   });
 
   it('should render Related Content Ul when given More than one Related Content', () => {
     const { container } = render(
-      <RelatedContent fixtureData={RelatedContentList} />,
+      <RelatedContentSectionFixture fixtureData={RelatedContentList} />,
     );
     const listItems = screen.getAllByRole('listitem');
     const list = container.querySelector('ul');
@@ -37,27 +39,34 @@ describe('Optimo Related Content Promo', () => {
   });
 
   it('should render custom label text if provided ', () => {
-    render(<RelatedContent fixtureData={RelatedContentCustomLabel} />);
+    render(
+      <RelatedContentSectionFixture fixtureData={RelatedContentCustomLabel} />,
+    );
     const customLabel = screen.getByText('Related content block');
 
     expect(customLabel).toBeInTheDocument();
   });
 
   it('should render a default title if translations are not available', () => {
-    render(<RelatedContent fixtureData={RelatedContentList} service="news" />);
+    render(
+      <RelatedContentSectionFixture
+        fixtureData={RelatedContentList}
+        service="news"
+      />,
+    );
 
     const label = screen.getByText(`Related content`);
     expect(label).toBeInTheDocument();
   });
 
   it('should have a "region" role', () => {
-    render(<RelatedContent fixtureData={RelatedContentList} />);
+    render(<RelatedContentSectionFixture fixtureData={RelatedContentList} />);
     const region = screen.getByRole('region');
     expect(region).toBeInTheDocument();
   });
 
   it("should have a section labelled-by the section label's id", () => {
-    render(<RelatedContent fixtureData={RelatedContentList} />);
+    render(<RelatedContentSectionFixture fixtureData={RelatedContentList} />);
     const regionLabelId = screen
       .getByRole('region')
       .getAttribute('aria-labelledBy');
@@ -68,7 +77,9 @@ describe('Optimo Related Content Promo', () => {
   });
 
   it('should render RelatedContent component without <ul> and <li> when given single item in collection', () => {
-    render(<RelatedContent fixtureData={RelatedContentSingleItem} />);
+    render(
+      <RelatedContentSectionFixture fixtureData={RelatedContentSingleItem} />,
+    );
     const listItems = screen.queryAllByRole('listitem');
     const list = screen.queryByRole('list');
 
@@ -85,7 +96,7 @@ describe('Event Tracking', () => {
     };
     const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
 
-    render(<RelatedContent fixtureData={RelatedContentList} />);
+    render(<RelatedContentSectionFixture fixtureData={RelatedContentList} />);
 
     const [
       [blockLevelTrackingItem1],
@@ -114,7 +125,7 @@ describe('Event Tracking', () => {
     };
     const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
 
-    render(<RelatedContent fixtureData={RelatedContentList} />);
+    render(<RelatedContentSectionFixture fixtureData={RelatedContentList} />);
 
     const [[blockLevelTracking]] = viewTrackerSpy.mock.calls;
 

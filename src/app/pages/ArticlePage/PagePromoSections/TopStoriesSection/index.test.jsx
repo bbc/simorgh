@@ -8,7 +8,7 @@ import TopStoriesSection from '.';
 import { topStoriesList, topStoriesSingleItem } from './fixture';
 
 // eslint-disable-next-line react/prop-types
-const TopStories = ({ fixtureData, service = 'mundo' }) => (
+const TopStoriesSectionFixture = ({ fixtureData, service = 'mundo' }) => (
   <ServiceContextProvider service={service}>
     <ToggleContextProvider>
       <TopStoriesSection content={fixtureData} />
@@ -18,12 +18,14 @@ const TopStories = ({ fixtureData, service = 'mundo' }) => (
 
 describe('Optimo Related Content Promo', () => {
   it('should return null if no data is passed', () => {
-    const { container } = render(<TopStories fixtureData={[]} />);
+    const { container } = render(<TopStoriesSectionFixture fixtureData={[]} />);
     expect(container).toBeEmptyDOMElement();
   });
 
   it('should render Related Content Ul when given More than one Related Content', () => {
-    const { container } = render(<TopStories fixtureData={topStoriesList} />);
+    const { container } = render(
+      <TopStoriesSectionFixture fixtureData={topStoriesList} />,
+    );
     const listItems = screen.getAllByRole('listitem');
     const list = container.querySelector('ul');
     expect(listItems.length).toBe(3);
@@ -31,20 +33,22 @@ describe('Optimo Related Content Promo', () => {
   });
 
   it('should render a default title if translations are not available', () => {
-    render(<TopStories fixtureData={topStoriesList} service="news" />);
+    render(
+      <TopStoriesSectionFixture fixtureData={topStoriesList} service="news" />,
+    );
 
     const label = screen.getByText(`Top Stories`);
     expect(label).toBeInTheDocument();
   });
 
   it('should have a "region" role', () => {
-    render(<TopStories fixtureData={topStoriesList} />);
+    render(<TopStoriesSectionFixture fixtureData={topStoriesList} />);
     const region = screen.getByRole('region');
     expect(region).toBeInTheDocument();
   });
 
   it("should have a section labelled-by the section label's id", () => {
-    render(<TopStories fixtureData={topStoriesList} />);
+    render(<TopStoriesSectionFixture fixtureData={topStoriesList} />);
     const regionLabelId = screen
       .getByRole('region')
       .getAttribute('aria-labelledBy');
@@ -55,7 +59,7 @@ describe('Optimo Related Content Promo', () => {
   });
 
   it('should render RelatedContent component without <ul> and <li> when given single item in collection', () => {
-    render(<TopStories fixtureData={topStoriesSingleItem} />);
+    render(<TopStoriesSectionFixture fixtureData={topStoriesSingleItem} />);
     const listItems = screen.queryAllByRole('listitem');
     const list = screen.queryByRole('list');
 
@@ -72,7 +76,7 @@ describe('Event Tracking', () => {
     };
     const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
 
-    render(<TopStories fixtureData={topStoriesList} />);
+    render(<TopStoriesSectionFixture fixtureData={topStoriesList} />);
 
     const [
       [blockLevelTrackingItem1],
@@ -101,7 +105,7 @@ describe('Event Tracking', () => {
     };
     const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
 
-    render(<TopStories fixtureData={topStoriesList} />);
+    render(<TopStoriesSectionFixture fixtureData={topStoriesList} />);
 
     const [[blockLevelTracking]] = viewTrackerSpy.mock.calls;
 
