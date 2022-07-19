@@ -14,7 +14,7 @@ import PromoList from '#components/OptimoPromos/PromoList';
 import PromoItem from '#components/OptimoPromos/PromoItem/index.styles';
 import { BORDER_SPACING } from '../constants';
 
-export const StyledWrapper = styled.section`
+export const StyledRelatedContentSection = styled.section`
   padding: 0 ${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     padding: 0 ${GEL_SPACING_DBL};

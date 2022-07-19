@@ -10,7 +10,7 @@ import {
   StyledTitle,
   StyledTimestamp,
   TitleWithContent,
-  TopStoriesWrapper,
+  StyledTopStoriesWrapper,
 } from './index.styles';
 
 const TopStoriesItem = ({ item, ariaLabelledBy }) => {
@@ -54,7 +54,7 @@ const TopStoriesItem = ({ item, ariaLabelledBy }) => {
   const Title = titleHasContent ? TitleWithContent : StyledTitle;
 
   return (
-    <TopStoriesWrapper>
+    <StyledTopStoriesWrapper>
       <Promo
         to={assetUri || uri}
         ariaLabelledBy={ariaLabelledBy}
@@ -89,7 +89,7 @@ const TopStoriesItem = ({ item, ariaLabelledBy }) => {
           <StyledTimestamp>{timestamp}</StyledTimestamp>
         </Promo.ContentWrapper>
       </Promo>
-    </TopStoriesWrapper>
+    </StyledTopStoriesWrapper>
   );
 };
 

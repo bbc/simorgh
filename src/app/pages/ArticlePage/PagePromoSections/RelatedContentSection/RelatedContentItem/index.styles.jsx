@@ -7,7 +7,7 @@ export const TitleWithContent = styled(Promo.Title)`
   padding-bottom: ${GEL_SPACING};
 `;
 
-export const RelatedContentWrapper = styled.div`
+export const StyledRelatedContentWrapper = styled.div`
   border: ${BORDER_SPACING} solid transparent;
   height: 100%;
 `;

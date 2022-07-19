@@ -13,7 +13,7 @@ import PromoItem from '#components/OptimoPromos/PromoItem/index.styles';
 import PromoList from '#components/OptimoPromos/PromoList';
 import { BORDER_SPACING_DBL } from '../constants';
 
-export const StyledWrapper = styled.section`
+export const StyledTopStoriesSection = styled.section`
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
     padding: 0 ${GEL_SPACING};
   }

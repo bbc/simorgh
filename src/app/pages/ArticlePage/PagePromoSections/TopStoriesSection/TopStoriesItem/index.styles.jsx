@@ -17,7 +17,7 @@ export const TitleWithContent = styled(StyledTitle)`
   padding-bottom: ${GEL_SPACING};
 `;
 
-export const TopStoriesWrapper = styled.div`
+export const StyledTopStoriesWrapper = styled.div`
   border: ${BORDER_SPACING} solid transparent;
   height: 100%;
 `;

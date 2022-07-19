@@ -10,7 +10,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { C_GREY_2 } from '#app/legacy/psammead-styles/src/colours';
 import {
   RelatedContentGrid,
-  StyledWrapper,
+  StyledRelatedContentSection,
   StyledPromoItem,
   SingleItemWrapper,
 } from './index.styles';
@@ -102,7 +102,11 @@ const RelatedContentSection = ({ content }) => {
   });
 
   return (
-    <StyledWrapper aria-labelledby={LABEL_ID} role="region" data-e2e={LABEL_ID}>
+    <StyledRelatedContentSection
+      aria-labelledby={LABEL_ID}
+      role="region"
+      data-e2e={LABEL_ID}
+    >
       <SectionLabel
         labelId={LABEL_ID}
         backgroundColor={C_GREY_2}
@@ -123,7 +127,7 @@ const RelatedContentSection = ({ content }) => {
           {reducedStoryPromoItems.map(renderRelatedContentList)}
         </RelatedContentGrid>
       )}
-    </StyledWrapper>
+    </StyledRelatedContentSection>
   );
 };
 
