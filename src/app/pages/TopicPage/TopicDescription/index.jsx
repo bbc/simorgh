@@ -7,15 +7,19 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#legacy/gel-foundations/src/breakpoints';
-import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+} from '#legacy/gel-foundations/src/spacings';
 
 const Paragraph = styled.p`
   ${({ service }) => getSansRegular(service)}
-  padding-top: 16px;
+  padding-top: ${GEL_SPACING_DBL};
   margin: 0;
   font-size: 1.125rem;
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    padding-top: 24px;
+    padding-top: ${GEL_SPACING_TRPL};
     font-size: 1.3125rem;
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {

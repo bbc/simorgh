@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { GEL_SPACING_DBL } from '#legacy/gel-foundations/src/spacings';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+  GEL_SPACING_SEXT,
+} from '#legacy/gel-foundations/src/spacings';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
@@ -11,28 +15,35 @@ const Image = styled.img`
   max-height: 100%;
   object-fit: cover;
   border-radius: 50%;
+`;
+
+const BadgeWrapper = styled.div`
+  padding-bottom: ${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    padding-bottom: 0;
   }
 `;
 
 const ImageWrapper = styled.div`
-  width: 48px;
-  height: 48px;
-
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    width: 64px;
-    height: 64px;
-  }
+  width: ${GEL_SPACING_SEXT};
+  height: ${GEL_SPACING_SEXT};
   display: flex;
   justify-content: center;
   margin-inline-end: ${GEL_SPACING_DBL};
+
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    width: 4rem;
+    height: 4rem;
+  }
 `;
 
 const TopicImage = ({ image, altText }) => {
   return (
-    <ImageWrapper>
-      <Image src={image} alt={altText} />
-    </ImageWrapper>
+    <BadgeWrapper>
+      <ImageWrapper>
+        <Image src={image} alt={altText} />
+      </ImageWrapper>
+    </BadgeWrapper>
   );
 };
 

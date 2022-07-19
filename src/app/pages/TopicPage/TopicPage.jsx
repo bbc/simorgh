@@ -5,7 +5,9 @@ import styled from '@emotion/styled';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
+  GEL_SPACING_QUIN,
   GEL_SPACING_SEXT,
 } from '#legacy/gel-foundations/src/spacings';
 import {
@@ -44,7 +46,7 @@ const InlineWrapper = styled.div`
 `;
 
 const TitleWrapper = styled.div`
-  margin: 24px 0;
+  margin: ${GEL_SPACING_TRPL} 0;
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     margin: ${GEL_SPACING_QUAD} 0;
   }
@@ -53,7 +55,7 @@ const TitleWrapper = styled.div`
   }
 
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin: 40px 0 ${GEL_SPACING_SEXT} 0;
+    margin: ${GEL_SPACING_QUIN} 0 ${GEL_SPACING_SEXT} 0;
   }
 `;
 
