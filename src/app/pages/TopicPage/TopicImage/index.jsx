@@ -37,11 +37,11 @@ const ImageWrapper = styled.div`
   }
 `;
 
-const TopicImage = ({ image, altText }) => {
+const TopicImage = ({ image }) => {
   return (
     <BadgeWrapper>
       <ImageWrapper>
-        <Image src={image} alt={altText} />
+        <Image src={image} alt="" />
       </ImageWrapper>
     </BadgeWrapper>
   );

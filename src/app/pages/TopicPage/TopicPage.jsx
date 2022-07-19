@@ -116,9 +116,7 @@ const TopicPage = ({ pageData }) => {
         />
         <TitleWrapper>
           <InlineWrapper>
-            {images && (
-              <TopicImage image={images[0].url} altText={images[0].altText} />
-            )}
+            {images && <TopicImage image={images[0].url} />}
             <TopicTitle>{title}</TopicTitle>
           </InlineWrapper>
           {description && <TopicDescription>{description}</TopicDescription>}
