@@ -4,7 +4,7 @@ import getInitialData, { hasRadioSchedule } from '.';
 import getConfig from '../../utils/getConfig';
 
 fetch.mockResponse(JSON.stringify(idxPageJson));
-jest.mock('../../utils/getConfig', () => jest.fn());
+jest.mock('../../../utils/getConfig', () => jest.fn());
 
 describe('Get intial data from IDX page', () => {
   afterEach(() => {

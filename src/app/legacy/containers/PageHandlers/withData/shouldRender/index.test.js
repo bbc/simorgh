@@ -27,7 +27,7 @@ const invalidPortugueseData = {
   status: 404,
 };
 
-jest.mock('../../../../contexts/ServiceContext', () => {
+jest.mock('../../../../../contexts/ServiceContext', () => {
   const mockReact = jest.requireActual('react');
   return jest.fn().mockImplementation(
     mockReact.createContext({

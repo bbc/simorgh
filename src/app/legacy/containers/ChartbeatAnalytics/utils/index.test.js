@@ -27,7 +27,7 @@ import {
 
 let isOnClient = false;
 
-jest.mock('../../../lib/utilities/onClient', () => jest.fn());
+jest.mock('../../../../lib/utilities/onClient', () => jest.fn());
 onClient.mockImplementation(() => isOnClient);
 
 describe('Chartbeat utilities', () => {

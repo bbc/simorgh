@@ -2,7 +2,7 @@
 import hasMostRead from './hasMostRead';
 import getConfig from '../../utils/getConfig';
 
-jest.mock('../../utils/getConfig', () => jest.fn());
+jest.mock('../../../utils/getConfig', () => jest.fn());
 
 describe('hasMostRead', () => {
   it('returns true if service has most read component enabled', async () => {

@@ -8,7 +8,7 @@ describe('sendBeacon', () => {
   beforeEach(() => {
     isOnClient = true;
     fetch.mockImplementation(() => fetchResponse);
-    jest.mock('../../utilities/onClient', () => jest.fn());
+    jest.mock('../../../utilities/onClient', () => jest.fn());
     const onClient = require('../../utilities/onClient');
     onClient.mockImplementation(() => isOnClient);
   });
