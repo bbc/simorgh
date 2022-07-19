@@ -20,8 +20,8 @@ import LinkedData from '#containers/LinkedData';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import MetadataContainer from '#containers/Metadata';
-import Grid, { GelPageGrid } from '#app/components/Grid';
-import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
+import Grid, { GelPageGrid } from '#components/Grid';
+import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import IndexHeading from '#containers/IndexHeading';
 
 const MarginWrapper = styled.div`

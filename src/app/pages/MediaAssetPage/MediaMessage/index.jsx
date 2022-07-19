@@ -15,7 +15,7 @@ import {
 
 import { MediaMessage } from '#components/MediaPlayer';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { GridItemLarge } from '#app/components/Grid';
+import { GridItemLarge } from '#components/Grid';
 import nodeLogger from '#lib/logger.node';
 import { NO_TRANSLATION_FOUND } from '#lib/logger.const';
 

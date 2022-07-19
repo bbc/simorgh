@@ -9,8 +9,8 @@ import {
 } from '#legacy/psammead-assets/src/amp-boilerplate';
 import { AMP_GEO_SCRIPT } from '#components/AmpGeo';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
-import ResourceHints from '#app/components/ResourceHints';
-import IfAboveIE9 from '#app/components/IfAboveIE9Comment';
+import ResourceHints from '#components/ResourceHints';
+import IfAboveIE9 from '#components/IfAboveIE9Comment';
 
 const Document = ({
   assetOrigins,

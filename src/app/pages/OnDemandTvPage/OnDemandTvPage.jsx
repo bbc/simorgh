@@ -18,7 +18,7 @@ import {
 import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
 import { formatUnixTimestamp } from '#legacy/psammead-timestamp-container/src/utilities';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import Grid, { GelPageGrid } from '#app/components/Grid';
+import Grid, { GelPageGrid } from '#components/Grid';
 import LinkedData from '#containers/LinkedData';
 import { RequestContext } from '#contexts/RequestContext';
 import StyledTvHeadingContainer from '#containers/OnDemandHeading/StyledTvHeadingContainer';
@@ -28,12 +28,12 @@ import getEmbedUrl, {
 } from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import AVPlayer from '#containers/AVPlayer';
 import RecentVideoEpisodes from '#containers/EpisodeList/RecentVideoEpisodes';
-import FooterTimestamp from '#app/containers/OnDemandFooterTimestamp';
+import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
+import { ServiceContext } from '#contexts/ServiceContext';
+import MetadataContainer from '#containers/Metadata';
+import ATIAnalytics from '#containers/ATIAnalytics';
+import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import MetadataContainer from '../../containers/Metadata';
-import ATIAnalytics from '../../containers/ATIAnalytics';
-import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 
 const getGroups = (zero, one, two, three, four, five) => ({
   group0: zero,

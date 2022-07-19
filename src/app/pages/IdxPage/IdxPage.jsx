@@ -19,7 +19,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import MetadataContainer from '#containers/Metadata';
 import LinkedData from '#containers/LinkedData';
 import IndexHeading from '#containers/IndexHeading';
-import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
+import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import MostReadContainer from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';

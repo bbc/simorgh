@@ -11,7 +11,7 @@ import {
 import { useLocation } from 'react-router-dom';
 import pathOr from 'ramda/src/pathOr';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import Grid, { GelPageGrid } from '#app/components/Grid';
+import Grid, { GelPageGrid } from '#components/Grid';
 import { RequestContext } from '#contexts/RequestContext';
 import StyledRadioHeadingContainer from '#containers/OnDemandHeading/StyledRadioHeadingContainer';
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
@@ -28,9 +28,9 @@ import RecentAudioEpisodes from '#containers/EpisodeList/RecentAudioEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import PodcastExternalLinks from '#containers/PodcastExternalLinks';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
-import ATIAnalytics from '../../containers/ATIAnalytics';
-import MetadataContainer from '../../containers/Metadata';
+import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+import ATIAnalytics from '#containers/ATIAnalytics';
+import MetadataContainer from '#containers/Metadata';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 

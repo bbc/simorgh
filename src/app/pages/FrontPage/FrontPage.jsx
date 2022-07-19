@@ -16,7 +16,7 @@ import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import AdContainer from '#containers/Ad';
 import MPUContainer from '#containers/Ad/MPU';
-import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
+import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import IndexPageSection from '#containers/IndexPageSection';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import MetadataContainer from '#containers/Metadata';

@@ -6,17 +6,17 @@ import Paragraph from '#legacy/psammead-paragraph/src';
 import { useLocation } from 'react-router-dom';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import Grid, { GelPageGrid } from '#app/components/Grid';
+import Grid, { GelPageGrid } from '#components/Grid';
 import AVPlayer from '#containers/AVPlayer';
 import { RequestContext } from '#contexts/RequestContext';
 import getMediaId from '#lib/utilities/getMediaId';
 import getMasterbrand from '#lib/utilities/getMasterbrand';
 import getEmbedUrl from '#lib/utilities/getUrlHelpers/getEmbedUrl';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import LinkedData from '../../containers/LinkedData';
-import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
-import MetadataContainer from '../../containers/Metadata';
-import ATIAnalytics from '../../containers/ATIAnalytics';
+import { ServiceContext } from '#contexts/ServiceContext';
+import LinkedData from '#containers/LinkedData';
+import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+import MetadataContainer from '#containers/Metadata';
+import ATIAnalytics from '#containers/ATIAnalytics';
 
 const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
 

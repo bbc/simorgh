@@ -16,8 +16,8 @@ import {
 } from '#legacy/gel-foundations/src/spacings';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
-import Grid, { GelPageGrid } from '#app/components/Grid';
-import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
+import Grid, { GelPageGrid } from '#components/Grid';
+import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import IndexHeading from '#containers/IndexHeading';
 import MostWatchedContainer from '#containers/MostWatched';
 import MetadataContainer from '#containers/Metadata';

@@ -1,4 +1,4 @@
-import withOptimizelyProvider from '#app/containers/PageHandlers/withOptimizelyProvider';
+import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import StoryPage from './StoryPage';
 import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
 
