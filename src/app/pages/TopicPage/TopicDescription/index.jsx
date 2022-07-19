@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { string } from 'prop-types';
 import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
+import { C_GREY_10 } from '#legacy/psammead-styles/src/colours';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
@@ -15,6 +16,7 @@ import {
 
 const Paragraph = styled.p`
   ${({ service }) => getSansRegular(service)}
+  color: ${C_GREY_10};
   padding-top: ${GEL_SPACING_DBL};
   margin: 0;
   font-size: 1.125rem;

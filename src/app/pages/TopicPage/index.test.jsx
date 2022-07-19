@@ -5,7 +5,12 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import TopicPage from './TopicPage';
-import { pidginMultipleItems, amharicSingleItem } from './fixtures';
+import {
+  pidginMultipleItems,
+  amharicSingleItem,
+  mundoWithBadgeAndDescr,
+  amharicOnlyTitle,
+} from './fixtures';
 
 jest.mock('../../containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
@@ -55,6 +60,36 @@ describe('A11y', () => {
     const { container, queryByRole } = render(<TopicPageWithContext />);
     expect(queryByRole('list')).toBeInTheDocument();
     expect(container.getElementsByTagName('li').length).toEqual(4);
+  });
+
+  it('should render badge and description when they exist in data', () => {
+    const { container } = render(
+      <TopicPageWithContext
+        pageData={mundoWithBadgeAndDescr}
+        service="mundo"
+      />,
+    );
+
+    expect(container.getElementsByTagName('img').length).toEqual(4);
+    expect(container.getElementsByTagName('p').length).toEqual(1);
+  });
+
+  it('should render description without badge', () => {
+    const { container } = render(
+      <TopicPageWithContext pageData={pidginMultipleItems} service="pidgin" />,
+    );
+
+    expect(container.getElementsByTagName('img').length).toEqual(4);
+    expect(container.getElementsByTagName('p').length).toEqual(1);
+  });
+
+  it('should render only topic title without badge or description', () => {
+    const { container } = render(
+      <TopicPageWithContext pageData={amharicOnlyTitle} service="amharic" />,
+    );
+
+    expect(container.getElementsByTagName('img').length).toEqual(0);
+    expect(container.getElementsByTagName('p').length).toEqual(0);
   });
 
   it('should show ads when enabled', () => {

@@ -63,3 +63,70 @@ export const pidginMultipleItems = {
   ],
   metadata: { type: 'Topic' },
 };
+
+export const mundoWithBadgeAndDescr = {
+  title: 'Colombia Peace Agreement',
+  description: 'Peace agreement between the Colombian government and FARC',
+  images: [
+    {
+      url: 'https://ichef.bbci.co.uk/news/png/480/cpsdevpb/b40b/test/5e614490-0360-11ed-b35d-c5a474731c9c.png',
+      urlTemplate:
+        'https://ichef.bbci.co.uk/news/png/{width}/cpsdevpb/b40b/test/5e614490-0360-11ed-b35d-c5a474731c9c.png',
+      originalSize: { width: 1200, height: 800 },
+      altText: 'Colombia flag',
+      copyright: 'Wikipedia',
+      type: 'badge',
+    },
+  ],
+  promos: [
+    {
+      title: 'Qué hace que los chilenos sean tan resistentes a los terremotos',
+      type: 'article',
+      firstPublished: '2017-02-03T11:38:04.000Z',
+      link: 'https://www.bbc.com/mundo/23100229',
+      imageUrl:
+        'https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/3AEA/test/_63528051_000870367-1.jpg',
+      imageAlt: 'Santiago de Chile',
+      id: '1ff8ff1a-9570-4b44-b90a-73cabca969bb',
+    },
+    {
+      title:
+        'El conflictivo pasado con Venezuela de Rex Tillerson, nuevo secretario de Estado de EEUU',
+      type: 'article',
+      firstPublished: '2017-02-03T11:26:55.000Z',
+      link: 'https://www.bbc.com/mundo/23100317',
+      imageUrl:
+        'https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/167B2/test/_63528029_036820129-1.jpg',
+      imageAlt:
+        'ExxonMobil Chairman and CEO Rex Tillerson speaks during the IHS CERAWeek 2015 energy conference in Houston, Texas April 21, 2015',
+      id: 'ff4f3677-0f70-574e-b129-6b3396788390',
+    },
+    {
+      title: 'El poder del "chilango" llegó a Londres 14',
+      type: 'article',
+      firstPublished: '2016-05-05T07:38:30.000Z',
+      link: 'https://www.bbc.com/mundo/vert-earth-23038377',
+      imageUrl:
+        'https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/17654/test/_63482859_orange1.jpg',
+      imageAlt: 'Orange 1',
+      id: 'ae7c9f51-3144-ba4b-a881-f88822b36c8c',
+    },
+  ],
+  metadata: { type: 'Topic' },
+};
+
+export const amharicOnlyTitle = {
+  title: 'ዶናልድ ትራምፕ',
+  promos: [
+    {
+      title: 'በጥቅም ላይ የዋሉ የጥንታዊ ግብፅ የህክምና ጥበባት',
+      type: 'article',
+      firstPublished: '2017-08-22T08:41:04.000Z',
+      link: 'https://www.bbc.com/amharic/news-23143874',
+      imageUrl: '',
+      imageAlt: '',
+      id: 'c31dd8c5-2e55-9143-8ed2-5f9c15d6c91c',
+    },
+  ],
+  metadata: { type: 'Topic' },
+};
