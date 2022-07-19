@@ -3,16 +3,16 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import latinDiacritics from '#legacy/gel-foundations/src/scripts/latin-with-diacritics';
+} from '#psammead/psammead-styles/src/colours';
+import latinDiacritics from '#psammead/gel-foundations/src/scripts/latin-with-diacritics';
 import {
   F_REITH_SANS_BOLD,
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_LIGHT,
-} from '#legacy/psammead-styles/src/fonts';
-import { turkce as brandSVG } from '#legacy/psammead-assets/src/svgs';
-import '#legacy/moment-timezone-include/tz/Asia/Istanbul';
+} from '#psammead/psammead-styles/src/fonts';
+import { turkce as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import '#psammead/moment-timezone-include/tz/Asia/Istanbul';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/tr';
 

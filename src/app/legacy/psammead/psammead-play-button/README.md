@@ -34,7 +34,7 @@ The `PlayButton` component renders a button with a 'video' or 'audio' icon and o
 A typical use case for this component would be to indicate to a user that a media asset placeholder contains playable media, which is either 'video' or 'audio' and, if applicable, its duration. A function triggering playback would be passed to the button's `onClick` prop.
 
 ```jsx
-import PlayButton from '#legacy/psammead-play-button/src';
+import PlayButton from '#psammead/psammead-play-button/src';
 
 <PlayButton
   service="news"

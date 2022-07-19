@@ -1,24 +1,24 @@
 import React, { useContext } from 'react';
 import { string, number, bool } from 'prop-types';
 import styled from '@emotion/styled';
-import { Headline } from '#legacy/psammead-headings/src';
-import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
+import { Headline } from '#psammead/psammead-headings/src';
+import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 import {
   MEDIA_QUERY_TYPOGRAPHY,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
-import { formatUnixTimestamp } from '#legacy/psammead-timestamp-container/src/utilities';
+} from '#psammead/gel-foundations/src/breakpoints';
+import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import {
   getDoublePica,
   getParagon,
-} from '#legacy/gel-foundations/src/typography';
-import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
+} from '#psammead/gel-foundations/src/typography';
+import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const BrandTitle = styled.span`

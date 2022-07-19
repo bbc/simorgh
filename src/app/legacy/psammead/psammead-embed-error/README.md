@@ -37,7 +37,7 @@ This component is particularly useful if you serve content in an iframe and want
 
 ```js
 // iframe content.
-import EmbedError from '#legacy/psammead-embed-error/src';
+import EmbedError from '#psammead/psammead-embed-error/src';
 
 const Page = () => {
   if (error) {

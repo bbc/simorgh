@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
-import { getBrevier } from '#legacy/gel-foundations/src/typography';
-import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
-import { C_METAL, C_PEBBLE } from '#legacy/psammead-styles/src/colours';
-import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
+import { getBrevier } from '#psammead/gel-foundations/src/typography';
+import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
+import { C_METAL, C_PEBBLE } from '#psammead/psammead-styles/src/colours';
+import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 
 import { withEpisodeContext } from './helpers';
 

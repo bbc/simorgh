@@ -16,9 +16,9 @@ npm install #legacy/psammead-assets/src --save
 ## Usage
 
 ```jsx
-import { BBC_BLOCKS, news } from '#legacy/psammead-assets/src/svgs';
+import { BBC_BLOCKS, news } from '#psammead/psammead-assets/src/svgs';
 
-import { AMP_SCRIPT } from '#legacy/psammead-assets/src/amp-boilerplate';
+import { AMP_SCRIPT } from '#psammead/psammead-assets/src/amp-boilerplate';
 ```
 
 ## Service SVGs
@@ -53,7 +53,7 @@ Core icons is an object containing styled SVG icons from GEL Iconography Core. B
 ### Usage
 
 ```jsx
-import { coreIcons } from '#legacy/psammead-assets/src/svgs';
+import { coreIcons } from '#psammead/psammead-assets/src/svgs';
 
 <p>
   {coreIcons.info} Did you know, in Switzerland it's illegal to own just one
@@ -68,7 +68,7 @@ Media icons is an object containing styled SVG icons for video, audio, photogall
 ### Usage
 
 ```jsx
-import { mediaIcons } from '#legacy/psammead-assets/src/svgs';
+import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 
 <span>
   {mediaIcons.audio}
@@ -83,7 +83,7 @@ Navigation icons is an object containing styled SVG icons for hamburger and cros
 ### Usage
 
 ```jsx
-import { navigationIcons } from '#legacy/psammead-assets/src/svgs';
+import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 
 <span>{navigationIcons.cross}</span>;
 ```

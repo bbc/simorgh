@@ -8,13 +8,13 @@ import {
   boolean,
 } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
-import * as svgs from '#legacy/psammead-assets/src/svgs';
-import { C_POSTBOX, C_WHITE } from '#legacy/psammead-styles/src/colours';
+import * as svgs from '#psammead/psammead-assets/src/svgs';
+import { C_POSTBOX, C_WHITE } from '#psammead/psammead-styles/src/colours';
 import {
   withServicesKnob,
   buildRTLSubstories,
-} from '#legacy/psammead-storybook-helpers/src';
-import ScriptLink from '#legacy/psammead-script-link/src';
+} from '#psammead/psammead-storybook-helpers/src';
+import ScriptLink from '#psammead/psammead-script-link/src';
 import Brand from './index';
 import SkipLink from './SkipLink';
 import notes from '../README.md';

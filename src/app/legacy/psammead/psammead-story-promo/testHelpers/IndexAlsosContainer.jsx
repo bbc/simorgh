@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { oneOfType, oneOf, arrayOf, shape, number, string } from 'prop-types';
-import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
-import MediaIndicator from '#legacy/psammead-media-indicator/src';
+import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
+import MediaIndicator from '#psammead/psammead-media-indicator/src';
 import {
   IndexAlsos,
   IndexAlso,

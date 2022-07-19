@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { pathToRegexp } from 'path-to-regexp';
-import InlineLink from '#legacy/psammead-inline-link/src';
+import InlineLink from '#psammead/psammead-inline-link/src';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { inlineLinkModelPropTypes } from '#models/propTypes/inlineLink';

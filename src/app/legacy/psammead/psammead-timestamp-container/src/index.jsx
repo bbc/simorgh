@@ -1,7 +1,7 @@
 import React from 'react';
 import { oneOfType, number, string, bool, shape, func } from 'prop-types';
-import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
-import Timestamp from '#legacy/psammead-timestamp/src';
+import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
+import Timestamp from '#psammead/psammead-timestamp/src';
 import {
   isValidDateTime,
   formatUnixTimestamp,

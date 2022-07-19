@@ -1,4 +1,4 @@
-import detokenise from '#legacy/psammead-detokeniser/src';
+import detokenise from '#psammead/psammead-detokeniser/src';
 import durationDictionary from '.';
 
 describe('durationDictionary', () => {

@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
 
-import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
-import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
+import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
+import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_HLF_TRPL,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 
 import PromoTimestamp from '#components/Promo/timestamp';
 

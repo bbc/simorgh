@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { node } from 'prop-types';
-import { mediaIcons } from '#legacy/psammead-assets/src/svgs';
-import { GEL_SPACING_DBL } from '#legacy/gel-foundations/src/spacings';
-import { getGreatPrimer } from '#legacy/gel-foundations/src/typography';
-import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
-import { C_EBON } from '#legacy/psammead-styles/src/colours';
+import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
+import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
+import { getGreatPrimer } from '#psammead/gel-foundations/src/typography';
+import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
+import { C_EBON } from '#psammead/psammead-styles/src/colours';
 
 const Heading = styled.h2`
   ${({ script }) => getGreatPrimer(script)}

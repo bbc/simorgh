@@ -5,15 +5,15 @@ import {
   C_EBON,
   C_WHITE,
   C_POSTBOX,
-} from '#legacy/psammead-styles/src/colours';
+} from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING,
   GEL_SPACING_TRPL,
-} from '#legacy/gel-foundations/src/spacings';
-import { GEL_MINION } from '#legacy/gel-foundations/src/typography';
-import { getSansBold } from '#legacy/psammead-styles/src/font-styles';
-import { mediaIcons } from '#legacy/psammead-assets/src/svgs';
-import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
+} from '#psammead/gel-foundations/src/spacings';
+import { GEL_MINION } from '#psammead/gel-foundations/src/typography';
+import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
+import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
+import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 
 const GEL_SPACING_DEC = '5rem';
 const BGC_TRANSITION_DURATION = '300ms';

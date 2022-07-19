@@ -8,11 +8,11 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import {
   AMP_ACCESS_JS,
   AMP_ADS_JS,
-} from '#legacy/psammead-assets/src/amp-boilerplate';
-import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
-import { C_GREY_3, C_RHINO } from '#legacy/psammead-styles/src/colours';
-import { getMinion } from '#legacy/gel-foundations/src/typography';
-import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
+} from '#psammead/psammead-assets/src/amp-boilerplate';
+import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
+import { C_GREY_3, C_RHINO } from '#psammead/psammead-styles/src/colours';
+import { getMinion } from '#psammead/gel-foundations/src/typography';
+import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import AdSlot from './AdSlot';
 import { ampLeaderboardStyles, ampMpuStyles } from '../utilities/adSlotStyles';

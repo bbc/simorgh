@@ -19,7 +19,7 @@ This does two things. Firstly it removes all timezones from the moment-timezone 
 ## Usage - Include specific timezones
 
 ```jsx
-import '#legacy/moment-timezone-include/tz/America/New_York';
+import '#psammead/moment-timezone-include/tz/America/New_York';
 ```
 
 This makes the specified timezone available to moment. It supports all moment timezones by replacing `America/New_York` in the example above with any moment timezone. The full list of timezones can be found [here](https://github.com/moment/moment-timezone/blob/develop/data/packed/latest.json).

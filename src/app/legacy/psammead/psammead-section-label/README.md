@@ -34,8 +34,8 @@ The only provided child should be the title for the section, provided as a _stri
 ## Usage
 
 ```jsx
-import SectionLabel from '#legacy/psammead-section-label/src';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+import SectionLabel from '#psammead/psammead-section-label/src';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 
 const WrappingComponent = () => (
   <div aria-labelledby="example-section-label">
@@ -54,8 +54,8 @@ const WrappingComponent = () => (
 Or, without a horizontal bar:
 
 ```jsx
-import SectionLabel from '#legacy/psammead-section-label/src';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+import SectionLabel from '#psammead/psammead-section-label/src';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 
 const WrappingComponent = () => (
   <div aria-labelledby="example-section-label">
@@ -75,8 +75,8 @@ const WrappingComponent = () => (
 On mobile, this component places a dividing line above the title. This can be disabled by setting the `mobileDivider` prop to `false`:
 
 ```jsx
-import SectionLabel from '#legacy/psammead-section-label/src';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+import SectionLabel from '#psammead/psammead-section-label/src';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 
 const WrappingComponent = () => (
   <div aria-labelledby="example-section-label">
@@ -96,8 +96,8 @@ const WrappingComponent = () => (
 You can also visually hide the SectionLabel for all breakpoints by adding the `visuallyHidden` prop:
 
 ```jsx
-import SectionLabel from '#legacy/psammead-section-label/src';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+import SectionLabel from '#psammead/psammead-section-label/src';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 
 const WrappingComponent = () => (
   <div aria-labelledby="example-section-label">
@@ -118,8 +118,8 @@ You can even use this component as a link (typically to an index of content rela
 NB. when doing this **both** the `href` **and** the `linkText` must be supplied. If either is missing, the link will not be rendered.
 
 ```jsx
-import SectionLabel from '#legacy/psammead-section-label/src';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+import SectionLabel from '#psammead/psammead-section-label/src';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 
 const WrappingComponent = () => (
   <div aria-labelledby="example-section-label">
@@ -140,8 +140,8 @@ const WrappingComponent = () => (
 You can override the header(`h2`) to any custom HTML element that fits your accesibility requirement depending on what use case or semantic meaning you want to portray in your pages with the `overrideHeadingAs` prop.
 
 ```jsx
-import SectionLabel from '#legacy/psammead-section-label/src';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+import SectionLabel from '#psammead/psammead-section-label/src';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 
 const WrappingComponent = () => (
   <div aria-labelledby="example-section-label">

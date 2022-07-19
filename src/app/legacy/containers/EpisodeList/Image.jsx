@@ -2,21 +2,21 @@ import React from 'react';
 import { string } from 'prop-types';
 import omit from 'ramda/src/omit';
 import styled from '@emotion/styled';
-import { mediaIcons } from '#legacy/psammead-assets/src/svgs';
-import { getMinion } from '#legacy/gel-foundations/src/typography';
-import { C_EBON, C_WHITE } from '#legacy/psammead-styles/src/colours';
-import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
+import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
+import { getMinion } from '#psammead/gel-foundations/src/typography';
+import { C_EBON, C_WHITE } from '#psammead/psammead-styles/src/colours';
+import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
   GEL_SPACING_DBL,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '#psammead/gel-foundations/src/breakpoints';
 
-import ImagePlaceholder from '#legacy/psammead-image-placeholder/src';
+import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
 
 import { withEpisodeContext } from './helpers';
 

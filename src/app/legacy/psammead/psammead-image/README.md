@@ -23,7 +23,7 @@ This component can be used at any point on a page.
 Importing the standard Image component renders an `<img />` tag.
 
 ```jsx
-import Image from '#legacy/psammead-image/src';
+import Image from '#psammead/psammead-image/src';
 
 const WrappingContainer = ({ alt, src, height, width, sizes }) => (
   <Img alt={alt} src={src} height={height} width={width} sizes={sizes} fade />
@@ -39,7 +39,7 @@ The Amp Image component renders an `<amp-img>` tag.
 Example:
 
 ```jsx
-import { AmpImg } from '#legacy/psammead-image/src';
+import { AmpImg } from '#psammead/psammead-image/src';
 
 const WrappingContainer = ({ alt, src, height, width, sizes }) => (
   <AmpImg

@@ -3,7 +3,7 @@ import {
   C_POSTBOX,
   C_METAL,
   C_EBON,
-} from '#legacy/psammead-styles/src/colours';
+} from '#psammead/psammead-styles/src/colours';
 
 const InlineLink = styled.a`
   color: ${C_EBON};

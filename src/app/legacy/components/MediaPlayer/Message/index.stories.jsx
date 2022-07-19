@@ -2,7 +2,7 @@
 import React from 'react';
 import { text } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
-import { withServicesKnob } from '#legacy/psammead-storybook-helpers/src';
+import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import MediaMessageComponent from '.';
 
 const StyledMessageContainer = styled.div`

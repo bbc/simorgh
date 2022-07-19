@@ -39,7 +39,7 @@
 ## Usage
 
 ```jsx
-import { latin } from '#legacy/gel-foundations/src/scripts';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 
 const WrappingContainer = () => (
   <Timestamp
@@ -61,7 +61,7 @@ const WrappingContainer = () => (
 **formatDuration**
 
 ```jsx
-import { formatDuration } from '#legacy/psammead-timestamp-container/src/utilities';
+import { formatDuration } from '#psammead/psammead-timestamp-container/src/utilities';
 
 const localisedDuration = formatDuration({ duration: 'PTM30', locale: 'my' });
 const customFormatDuration = formatDuration({
@@ -80,7 +80,7 @@ const customFormatDuration = formatDuration({
 **localisedMoment**
 
 ```jsx
-import { localisedMoment } from '#legacy/psammead-timestamp-container/src/utilities';
+import { localisedMoment } from '#psammead/psammead-timestamp-container/src/utilities';
 
 const localisedMoment = localisedMoment({ locale, timestamp });
 ```
@@ -94,7 +94,7 @@ const localisedMoment = localisedMoment({ locale, timestamp });
 **formatUnixTimestamp**
 
 ```jsx
-import { localiseTimestamp } from '#legacy/psammead-timestamp-container/src/utilities';
+import { localiseTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 
 const formattedTime = formatUnixTimestamp({
   format,

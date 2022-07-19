@@ -34,8 +34,8 @@ The typical use-case of this component is on top of images within promos for art
 Top story promos can also have related stories links called `Index Alsos`. When an Index Also item is a video, audio or photogallery, an icon should be displayed with the content using the `MediaIndicator` component passing the `isInline` prop.
 
 ```jsx
-import MediaIndicator from '#legacy/psammead-media-indicator/src';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+import MediaIndicator from '#psammead/psammead-media-indicator/src';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 
 <MediaIndicator type="audio" script={latin} service="news" />;
 ```
@@ -46,8 +46,8 @@ E.g.
 
 ```jsx
 import styled from '@emotion/styled';
-import MediaIndicator from '#legacy/psammead-media-indicator/src';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+import MediaIndicator from '#psammead/psammead-media-indicator/src';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 
 const TimeDuration = styled.time`
   margin: 0 ${GEL_SPACING_HLF};

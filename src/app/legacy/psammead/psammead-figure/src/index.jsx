@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { GEL_SPACING_TRPL } from '#legacy/gel-foundations/src/spacings';
+import { GEL_SPACING_TRPL } from '#psammead/gel-foundations/src/spacings';
 
 const Figure = styled.figure`
   margin: 0;

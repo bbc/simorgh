@@ -20,8 +20,8 @@ The `HeadingIndex` uses a `h1` HTML element and is used on index pages, such as 
 ## Usage
 
 ```jsx
-import HeadingIndex from '#legacy/psammead-heading-index/src';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+import HeadingIndex from '#psammead/psammead-heading-index/src';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 
 const Wrapper = () => (
   <Fragment>

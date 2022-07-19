@@ -1,14 +1,14 @@
 import React from 'react';
 import { string } from 'prop-types';
 import styled from '@emotion/styled';
-import Paragraph from '#legacy/psammead-paragraph/src';
-import { cyrillicAndLatin } from '#legacy/gel-foundations/src/scripts';
-import Image from '#legacy/psammead-image/src';
+import Paragraph from '#psammead/psammead-paragraph/src';
+import { cyrillicAndLatin } from '#psammead/gel-foundations/src/scripts';
+import Image from '#psammead/psammead-image/src';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
-} from '#legacy/gel-foundations/src/spacings';
-import MediaIndicator from '#legacy/psammead-media-indicator/src';
+} from '#psammead/gel-foundations/src/spacings';
+import MediaIndicator from '#psammead/psammead-media-indicator/src';
 
 export const ExampleParagraph = ({ identifier }) => (
   <Paragraph script={cyrillicAndLatin} service="news">

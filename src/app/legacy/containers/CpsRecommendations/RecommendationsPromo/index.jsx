@@ -4,15 +4,19 @@ import styled from '@emotion/styled';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
-import { getSerifMedium } from '#legacy/psammead-styles/src/font-styles';
-import { getPica } from '#legacy/gel-foundations/src/typography';
-import { C_EBON, C_METAL, C_GREY_2 } from '#legacy/psammead-styles/src/colours';
+} from '#psammead/gel-foundations/src/breakpoints';
+import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
+import { getPica } from '#psammead/gel-foundations/src/typography';
+import {
+  C_EBON,
+  C_METAL,
+  C_GREY_2,
+} from '#psammead/psammead-styles/src/colours';
 import { shape, string, oneOfType } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { storyItem } from '#models/propTypes/storyItem';

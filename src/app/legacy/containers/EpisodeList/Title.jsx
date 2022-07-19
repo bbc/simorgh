@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
-import { C_WHITE, C_EBON } from '#legacy/psammead-styles/src/colours';
-import { getPica } from '#legacy/gel-foundations/src/typography';
-import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
+import { C_WHITE, C_EBON } from '#psammead/psammead-styles/src/colours';
+import { getPica } from '#psammead/gel-foundations/src/typography';
+import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 
 import { withEpisodeContext } from './helpers';
 

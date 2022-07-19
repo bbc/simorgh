@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { bool, number } from 'prop-types';
-import { C_PEBBLE, C_METAL } from '#legacy/psammead-styles/src/colours';
-import { getLongPrimer } from '#legacy/gel-foundations/src/typography';
-import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
-import { formatUnixTimestamp } from '#legacy/psammead-timestamp-container/src/utilities';
-import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#legacy/gel-foundations/src/breakpoints';
+import { C_PEBBLE, C_METAL } from '#psammead/psammead-styles/src/colours';
+import { getLongPrimer } from '#psammead/gel-foundations/src/typography';
+import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
+import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
+import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
 
 import { ServiceContext } from '#contexts/ServiceContext';
 

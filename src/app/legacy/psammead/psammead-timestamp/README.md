@@ -31,8 +31,8 @@ When a date or time is to be displayed inline inside a paragraph.
 ## Usage
 
 ```jsx
-import { latin } from '#legacy/gel-foundations/src/scripts';
-import { getPica } from '#legacy/gel-foundations/src/typography';
+import { latin } from '#psammead/gel-foundations/src/scripts';
+import { getPica } from '#psammead/gel-foundations/src/typography';
 
 const WrappingContainer = () => (
   <Timestamp

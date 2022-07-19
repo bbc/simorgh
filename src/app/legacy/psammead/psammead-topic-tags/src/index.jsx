@@ -1,15 +1,19 @@
 import React, { forwardRef } from 'react';
 import { string, shape, node, func } from 'prop-types';
 import styled from '@emotion/styled';
-import { C_LUNAR, C_EBON, C_METAL } from '#legacy/psammead-styles/src/colours';
+import {
+  C_LUNAR,
+  C_EBON,
+  C_METAL,
+} from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
   GEL_SPACING_DBL,
-} from '#legacy/gel-foundations/src/spacings';
-import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
-import { getBrevier } from '#legacy/gel-foundations/src/typography';
-import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
+} from '#psammead/gel-foundations/src/spacings';
+import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
+import { getBrevier } from '#psammead/gel-foundations/src/typography';
+import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 
 const MIN_TAG_HEIGHT = '2.75rem'; // 44px
 

@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 import { shape, string } from 'prop-types';
-import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
-import { C_METAL } from '#legacy/psammead-styles/src/colours';
-import { getDoublePica } from '#legacy/gel-foundations/src/typography';
-import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
+import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
+import { C_METAL } from '#psammead/psammead-styles/src/colours';
+import { getDoublePica } from '#psammead/gel-foundations/src/typography';
+import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 
 const HeadingIndex = styled.h1`
   ${({ script }) => script && getDoublePica(script)};

@@ -1,22 +1,26 @@
 import React, { cloneElement, useRef } from 'react';
 import styled from '@emotion/styled';
 import { shape, string, bool, func, oneOf, node } from 'prop-types';
-import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
-import { navigationIcons } from '#legacy/psammead-assets/src/svgs';
-import { C_WHITE, C_EBON, C_SHADOW } from '#legacy/psammead-styles/src/colours';
+import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
+import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
+import {
+  C_WHITE,
+  C_EBON,
+  C_SHADOW,
+} from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
   GEL_SPACING_HLF_TRPL,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 import { Helmet } from 'react-helmet';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_B_MIN_WIDTH,
-} from '#legacy/gel-foundations/src/breakpoints';
-import { getPica } from '#legacy/gel-foundations/src/typography';
-import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
-import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
+} from '#psammead/gel-foundations/src/breakpoints';
+import { getPica } from '#psammead/gel-foundations/src/typography';
+import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
+import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 
 export const NAV_BAR_TOP_BOTTOM_SPACING = 0.75; // 12px
 

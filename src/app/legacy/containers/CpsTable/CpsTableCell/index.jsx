@@ -5,9 +5,9 @@ import { arrayOf, string } from 'prop-types';
 import {
   C_SPORT_SILVER,
   C_SPORT_MIST,
-} from '#legacy/psammead-styles/src/colours';
+} from '#psammead/psammead-styles/src/colours';
 
-import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
+import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import { textBlockPropTypes } from '#models/propTypes/text';
 
 import Blocks from '../../Blocks';

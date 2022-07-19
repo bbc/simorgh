@@ -36,8 +36,8 @@ The `headingRef` prop is used so that the title of the consent banner can be pro
 import {
   ConsentBanner,
   ConsentBannerText,
-} from '#legacy/psammead-consent-banner/src';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+} from '#psammead/psammead-consent-banner/src';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 
 const Accept = (
   <button onClick={() => {}} type="button">

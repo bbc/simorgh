@@ -27,7 +27,7 @@ Use `BulletedList` in place of a `ul` element with required props and a `Bullete
 ```jsx
 import BulletedList, {
   BulletedListItem,
-} from '#legacy/psammead-bulleted-list/src';
+} from '#psammead/psammead-bulleted-list/src';
 
 const props = {
   dir: 'ltr',

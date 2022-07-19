@@ -10,7 +10,7 @@ import {
   any,
 } from 'prop-types';
 import styled from '@emotion/styled';
-import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
+import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import {
   C_CONSENT_BACKGROUND,
   C_CONSENT_ACTION,
@@ -19,25 +19,25 @@ import {
   C_PEBBLE,
   C_EBON,
   C_GHOST,
-} from '#legacy/psammead-styles/src/colours';
+} from '#psammead/psammead-styles/src/colours';
 import {
   getDoublePica,
   getLongPrimer,
   getBodyCopy,
-} from '#legacy/gel-foundations/src/typography';
+} from '#psammead/gel-foundations/src/typography';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '#psammead/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
-} from '#legacy/gel-foundations/src/spacings';
-import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
+} from '#psammead/gel-foundations/src/spacings';
+import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 
 // Transparent border is to show the top of the wrapper and button border in high-contrast mode
 const transparentBorderHeight = '0.0625rem';

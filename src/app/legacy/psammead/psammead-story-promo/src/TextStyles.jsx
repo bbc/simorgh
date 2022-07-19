@@ -2,14 +2,14 @@ import styled from '@emotion/styled';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
-import { grid } from '#legacy/psammead-styles/src/detection';
+} from '#psammead/gel-foundations/src/breakpoints';
+import { grid } from '#psammead/psammead-styles/src/detection';
 
 const twoOfSixColumnsMaxWidthScaleable = `33.33%`;
 // (2 / 6) * 100 = 0.3333333333 = 33.33%

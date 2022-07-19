@@ -5,7 +5,7 @@ import pathOr from 'ramda/src/pathOr';
 import {
   StoryPromoLi,
   StoryPromoUl,
-} from '#legacy/psammead-story-promo-list/src';
+} from '#psammead/psammead-story-promo-list/src';
 
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';

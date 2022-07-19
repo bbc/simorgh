@@ -1,4 +1,4 @@
-import candyXmlToRichText from '#legacy/psammead-rich-text-transforms/src/candy-xml';
+import candyXmlToRichText from '#psammead/psammead-rich-text-transforms/src/candy-xml';
 
 const createBody = inner =>
   `<body xmlns="http://www.bbc.co.uk/asset" xml:space="preserve" xml:base="http://www.bbc.co.uk/article/abc123">${inner}</body>`;

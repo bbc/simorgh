@@ -1,15 +1,15 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { boolean, withKnobs } from '@storybook/addon-knobs';
-import Timestamp from '#legacy/psammead-timestamp/src';
-import Image from '#legacy/psammead-image/src';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+import Timestamp from '#psammead/psammead-timestamp/src';
+import Image from '#psammead/psammead-image/src';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 import StoryPromo, {
   Headline,
   Summary,
   Link,
-} from '#legacy/psammead-story-promo/src';
-import Grid from '#legacy/psammead-grid/src';
+} from '#psammead/psammead-story-promo/src';
+import Grid from '#psammead/psammead-grid/src';
 import { StoryPromoLi, StoryPromoLiBase, StoryPromoUl } from './index';
 import storyPromoData from '../testHelpers/fixtureData';
 import notes from '../README.md';

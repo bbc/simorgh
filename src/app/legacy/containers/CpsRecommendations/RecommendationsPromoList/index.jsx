@@ -2,7 +2,7 @@ import React, { forwardRef, useContext } from 'react';
 import {
   StoryPromoLiBase,
   StoryPromoUl,
-} from '#legacy/psammead-story-promo-list/src';
+} from '#psammead/psammead-story-promo-list/src';
 import { arrayOf, shape, number, string } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
 import useViewTracker from '#hooks/useViewTracker';

@@ -25,12 +25,12 @@ The following example shows `psammead-figure` wrapping an
 - [psammead-visually-hidden-text](https://github.com/bbc/psammead/tree/latest/packages/components/psammead-visually-hidden-text), a hidden `<span>` available only to assistive technology
 
 ```jsx
-import Caption from '#legacy/psammead-caption/src';
-import Copyright from '#legacy/psammead-copyright/src';
-import Figure from '#legacy/psammead-figure/src';
-import Image from '#legacy/psammead-image/src';
-import ImagePlaceholder from '#legacy/psammead-image-placeholder/src';
-import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
+import Caption from '#psammead/psammead-caption/src';
+import Copyright from '#psammead/psammead-copyright/src';
+import Figure from '#psammead/psammead-figure/src';
+import Image from '#psammead/psammead-image/src';
+import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
+import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 
 const Wrapper = ({ alt, captionText, ratio, src, width }) => (
   <Figure>

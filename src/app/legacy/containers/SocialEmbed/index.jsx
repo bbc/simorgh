@@ -5,7 +5,7 @@ import Lazyload from 'react-lazyload';
 import {
   AmpSocialEmbed,
   CanonicalSocialEmbed,
-} from '#legacy/psammead-social-embed/src';
+} from '#psammead/psammead-social-embed/src';
 
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';

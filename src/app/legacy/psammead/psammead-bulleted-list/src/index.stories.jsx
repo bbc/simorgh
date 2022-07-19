@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { withServicesKnob } from '#legacy/psammead-storybook-helpers/src';
+import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import notes from '../README.md';
 import BulletedList, { BulletedListItem } from './index';
 

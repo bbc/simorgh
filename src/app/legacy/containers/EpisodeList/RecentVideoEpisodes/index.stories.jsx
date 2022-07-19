@@ -3,7 +3,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import {
   withServicesKnob,
   themes,
-} from '#legacy/psammead-storybook-helpers/src';
+} from '#psammead/psammead-storybook-helpers/src';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { afrique, pashto } from './fixtures';

@@ -5,16 +5,16 @@ import {
   GEL_SPACING_TRPL,
   GEL_MARGIN_ABOVE_400PX,
   GEL_MARGIN_BELOW_400PX,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
-import { getLongPrimer } from '#legacy/gel-foundations/src/typography';
-import { C_METAL, C_GREY_6 } from '#legacy/psammead-styles/src/colours';
-import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
-import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
+} from '#psammead/gel-foundations/src/breakpoints';
+import { getLongPrimer } from '#psammead/gel-foundations/src/typography';
+import { C_METAL, C_GREY_6 } from '#psammead/psammead-styles/src/colours';
+import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
+import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 
 const rtlStyles = `
   margin-right: ${GEL_MARGIN_BELOW_400PX};

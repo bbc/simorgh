@@ -6,7 +6,7 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_QUAD,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -15,20 +15,24 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '#psammead/gel-foundations/src/breakpoints';
 import {
   getParagon,
   getLongPrimer,
   getPica,
   getDoublePica,
-} from '#legacy/gel-foundations/src/typography';
-import { C_EBON, C_METAL, C_SHADOW } from '#legacy/psammead-styles/src/colours';
+} from '#psammead/gel-foundations/src/typography';
+import {
+  C_EBON,
+  C_METAL,
+  C_SHADOW,
+} from '#psammead/psammead-styles/src/colours';
 import {
   getSansRegular,
   getSerifMedium,
-} from '#legacy/psammead-styles/src/font-styles';
-import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
-import { grid } from '#legacy/psammead-styles/src/detection';
+} from '#psammead/psammead-styles/src/font-styles';
+import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
+import { grid } from '#psammead/psammead-styles/src/detection';
 import ImageGridItem from './ImageStyles';
 import TextGridItem from './TextStyles';
 

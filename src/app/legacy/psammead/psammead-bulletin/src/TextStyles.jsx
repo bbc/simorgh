@@ -2,9 +2,9 @@ import styled from '@emotion/styled';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
-} from '#legacy/gel-foundations/src/breakpoints';
-import { GEL_SPACING_DBL } from '#legacy/gel-foundations/src/spacings';
-import { grid } from '#legacy/psammead-styles/src/detection';
+} from '#psammead/gel-foundations/src/breakpoints';
+import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
+import { grid } from '#psammead/psammead-styles/src/detection';
 
 const fourOfSixColumnsMaxWidthScaleable = `66.67%`;
 // (4 / 6) * 100 = 66.6666666667 = 66.67%

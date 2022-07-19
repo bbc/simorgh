@@ -71,7 +71,7 @@ npm install #legacy/psammead-locales --save
 
 ```jsx
 import moment from 'moment';
-import '#legacy/psammead-locales/moment/ig';
+import '#psammead/psammead-locales/moment/ig';
 
 moment.locale('ig');
 ```
@@ -82,7 +82,7 @@ moment.locale('ig');
 import {
   Bengali,
   makeNumeralTranslator,
-} from '#legacy/psammead-locales/numerals';
+} from '#psammead/psammead-locales/numerals';
 
 const translateNumerals = makeNumeralTranslator(Bengali);
 const result = translateNumerals(someInput); // returns someInput with numbers translated to Bengali

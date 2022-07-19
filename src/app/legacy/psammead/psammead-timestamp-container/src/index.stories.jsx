@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
-import { withServicesKnob } from '#legacy/psammead-storybook-helpers/src';
+import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import {
   boolean,
   number,
@@ -9,7 +9,7 @@ import {
   withKnobs,
 } from '@storybook/addon-knobs';
 import moment from 'moment';
-import { jalaali } from '#legacy/psammead-calendars/src';
+import { jalaali } from '#psammead/psammead-calendars/src';
 import notes from '../README.md';
 import TimestampContainer from '.';
 

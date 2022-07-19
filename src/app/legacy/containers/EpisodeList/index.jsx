@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { C_CLOUD_LIGHT } from '#legacy/psammead-styles/src/colours';
-import { GEL_SPACING_DBL } from '#legacy/gel-foundations/src/spacings';
+import { C_CLOUD_LIGHT } from '#psammead/psammead-styles/src/colours';
+import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 import { string, shape, arrayOf, oneOf, element, bool } from 'prop-types';
-import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
+import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 
 import { EpisodeContext } from './helpers';
 import Episode from './Episode';

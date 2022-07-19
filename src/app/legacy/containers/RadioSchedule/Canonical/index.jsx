@@ -8,18 +8,22 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '#psammead/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
   GEL_MARGIN_ABOVE_400PX,
-} from '#legacy/gel-foundations/src/spacings';
-import { getLongPrimer } from '#legacy/gel-foundations/src/typography';
-import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
-import SectionLabel from '#legacy/psammead-section-label/src';
-import { C_LUNAR, C_EBON, C_METAL } from '#legacy/psammead-styles/src/colours';
+} from '#psammead/gel-foundations/src/spacings';
+import { getLongPrimer } from '#psammead/gel-foundations/src/typography';
+import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
+import SectionLabel from '#psammead/psammead-section-label/src';
+import {
+  C_LUNAR,
+  C_EBON,
+  C_METAL,
+} from '#psammead/psammead-styles/src/colours';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import RadioSchedule from '#components/RadioSchedule';

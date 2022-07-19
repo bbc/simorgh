@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { NavigationUl, NavigationLi } from '#legacy/psammead-navigation/src';
+import { NavigationUl, NavigationLi } from '#psammead/psammead-navigation/src';
 import {
   DropdownUl,
   DropdownLi,
-} from '#legacy/psammead-navigation/src/DropdownNavigation';
+} from '#psammead/psammead-navigation/src/DropdownNavigation';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import Canonical from './index.canonical';

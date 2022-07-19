@@ -1,14 +1,14 @@
 import styled from '@emotion/styled';
 
-import { getSerifMedium } from '#legacy/psammead-styles/src/font-styles';
-import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
-import { getBodyCopy } from '#legacy/gel-foundations/src/typography';
-import { C_EBON } from '#legacy/psammead-styles/src/colours';
+import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
+import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
+import { getBodyCopy } from '#psammead/gel-foundations/src/typography';
+import { C_EBON } from '#psammead/psammead-styles/src/colours';
 
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '#psammead/gel-foundations/src/breakpoints';
 
 const Heading = styled.h2`
   ${({ service }) => getSerifMedium(service)}

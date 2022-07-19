@@ -4,12 +4,12 @@ import { withKnobs } from '@storybook/addon-knobs';
 import {
   withServicesKnob,
   buildRTLSubstories,
-} from '#legacy/psammead-storybook-helpers/src';
+} from '#psammead/psammead-storybook-helpers/src';
 import StoryPromo, {
   Headline,
   Summary,
   Link,
-} from '#legacy/psammead-story-promo/src';
+} from '#psammead/psammead-story-promo/src';
 import Grid from '.';
 import {
   ExampleImage,

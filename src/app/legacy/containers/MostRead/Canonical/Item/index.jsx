@@ -4,18 +4,18 @@ import styled from '@emotion/styled';
 import {
   getPica,
   getGreatPrimer,
-} from '#legacy/gel-foundations/src/typography';
-import { C_EBON } from '#legacy/psammead-styles/src/colours';
-import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
-import { grid } from '#legacy/psammead-styles/src/detection';
-import { getSerifMedium } from '#legacy/psammead-styles/src/font-styles';
+} from '#psammead/gel-foundations/src/typography';
+import { C_EBON } from '#psammead/psammead-styles/src/colours';
+import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
+import { grid } from '#psammead/psammead-styles/src/detection';
+import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-} from '#legacy/gel-foundations/src/spacings';
-import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
-import Grid from '#legacy/psammead-grid/src';
+} from '#psammead/gel-foundations/src/spacings';
+import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
+import Grid from '#psammead/psammead-grid/src';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import {
   mostReadListGridProps,

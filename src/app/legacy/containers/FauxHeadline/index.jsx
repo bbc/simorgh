@@ -6,12 +6,12 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
-import { Headline } from '#legacy/psammead-headings/src';
+} from '#psammead/gel-foundations/src/breakpoints';
+import { Headline } from '#psammead/psammead-headings/src';
 import { textDefaultPropTypes } from '#models/propTypes';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { headlineModelPropTypes } from '#models/propTypes/headline';

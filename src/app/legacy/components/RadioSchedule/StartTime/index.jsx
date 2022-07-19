@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { number, string, shape, oneOf } from 'prop-types';
-import { GEL_SPACING_HLF } from '#legacy/gel-foundations/src/spacings';
-import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
-import { C_RHINO, C_PEBBLE } from '#legacy/psammead-styles/src/colours';
-import { getMinion } from '#legacy/gel-foundations/src/typography';
-import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
-import { coreIcons } from '#legacy/psammead-assets/src/svgs';
-import TimestampContainer from '#legacy/psammead-timestamp-container/src';
+import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
+import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
+import { C_RHINO, C_PEBBLE } from '#psammead/psammead-styles/src/colours';
+import { getMinion } from '#psammead/gel-foundations/src/typography';
+import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
+import { coreIcons } from '#psammead/psammead-assets/src/svgs';
+import TimestampContainer from '#psammead/psammead-timestamp-container/src';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const Wrapper = styled.div`

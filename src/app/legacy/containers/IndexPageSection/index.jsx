@@ -7,15 +7,15 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '#psammead/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
-} from '#legacy/gel-foundations/src/spacings';
-import SectionLabel from '#legacy/psammead-section-label/src';
-import { StoryPromoUl } from '#legacy/psammead-story-promo-list/src';
+} from '#psammead/gel-foundations/src/spacings';
+import SectionLabel from '#psammead/psammead-section-label/src';
+import { StoryPromoUl } from '#psammead/psammead-story-promo-list/src';
 import Grid from '#components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
 import groupShape from '#models/propTypes/frontPageGroup';

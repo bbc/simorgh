@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 import { oneOf, string, shape } from 'prop-types';
-import { C_EBON, C_METAL } from '#legacy/psammead-styles/src/colours';
-import { getSansBold } from '#legacy/psammead-styles/src/font-styles';
-import { getLongPrimer } from '#legacy/gel-foundations/src/typography';
-import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
+import { C_EBON, C_METAL } from '#psammead/psammead-styles/src/colours';
+import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
+import { getLongPrimer } from '#psammead/gel-foundations/src/typography';
+import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 
 const Link = styled.a`
   ${({ script }) => script && getLongPrimer(script)}

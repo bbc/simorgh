@@ -5,10 +5,10 @@ import styled from '@emotion/styled';
 import {
   StoryPromoLi,
   StoryPromoUl,
-} from '#legacy/psammead-story-promo-list/src';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
-import { GEL_SPACING_DBL } from '#legacy/gel-foundations/src/spacings';
-import { C_LUNAR } from '#legacy/psammead-styles/src/colours';
+} from '#psammead/psammead-story-promo-list/src';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
+import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
+import { C_LUNAR } from '#psammead/psammead-styles/src/colours';
 import { storyItem } from '#models/propTypes/storyItem';
 import useViewTracker from '#hooks/useViewTracker';
 import Grid from '../../../components/Grid';

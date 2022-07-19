@@ -1,14 +1,14 @@
 import React, { useContext, Fragment } from 'react';
 import { arrayOf, shape, oneOf, number, string, oneOfType } from 'prop-types';
-import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
+import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import pathOr from 'ramda/src/pathOr';
-import MediaIndicator from '#legacy/psammead-media-indicator/src';
+import MediaIndicator from '#psammead/psammead-media-indicator/src';
 import {
   IndexAlsos,
   IndexAlso,
   IndexAlsosUl,
   IndexAlsosLi,
-} from '#legacy/psammead-story-promo/src/IndexAlsos';
+} from '#psammead/psammead-story-promo/src/IndexAlsos';
 import { ServiceContext } from '#contexts/ServiceContext';
 import {
   MEDIA_ASSET_PAGE,

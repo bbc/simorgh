@@ -4,15 +4,15 @@ import styled from '@emotion/styled';
 import {
   getFoolscap,
   getTrafalgar,
-} from '#legacy/gel-foundations/src/typography';
+} from '#psammead/gel-foundations/src/typography';
 import {
   Burmese,
   Bengali,
   EasternArabic,
   Nepali,
   WesternArabic,
-} from '#legacy/psammead-locales/src/numerals';
-import { GEL_SPACING_HLF } from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/psammead-locales/src/numerals';
+import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -21,11 +21,11 @@ import {
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
-} from '#legacy/gel-foundations/src/breakpoints';
-import { C_POSTBOX } from '#legacy/psammead-styles/src/colours';
-import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
-import { grid } from '#legacy/psammead-styles/src/detection';
-import { getSerifLight } from '#legacy/psammead-styles/src/font-styles';
+} from '#psammead/gel-foundations/src/breakpoints';
+import { C_POSTBOX } from '#psammead/psammead-styles/src/colours';
+import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
+import { grid } from '#psammead/psammead-styles/src/detection';
+import { getSerifLight } from '#psammead/psammead-styles/src/font-styles';
 import {
   doubleDigitDefault,
   doubleDigitMedium,

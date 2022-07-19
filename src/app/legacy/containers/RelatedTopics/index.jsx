@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
-import { TopicTag, TopicTags } from '#legacy/psammead-topic-tags/src';
+import { TopicTag, TopicTags } from '#psammead/psammead-topic-tags/src';
 import pathOr from 'ramda/src/pathOr';
-import SectionLabel from '#legacy/psammead-section-label/src';
+import SectionLabel from '#psammead/psammead-section-label/src';
 import styled from '@emotion/styled';
 import { arrayOf, bool, shape, string } from 'prop-types';
-import { GEL_SPACING_QUIN } from '#legacy/gel-foundations/src/spacings';
+import { GEL_SPACING_QUIN } from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '#psammead/gel-foundations/src/breakpoints';
 
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';

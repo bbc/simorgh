@@ -3,16 +3,16 @@ import styled from '@emotion/styled';
 import {
   GEL_SPACING,
   GEL_SPACING_QUIN,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
-} from '#legacy/gel-foundations/src/breakpoints';
-import { C_WHITE } from '#legacy/psammead-styles/src/colours';
-import { getPica } from '#legacy/gel-foundations/src/typography';
-import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
+} from '#psammead/gel-foundations/src/breakpoints';
+import { C_WHITE } from '#psammead/psammead-styles/src/colours';
+import { getPica } from '#psammead/gel-foundations/src/typography';
+import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { string, shape, node, func } from 'prop-types';
-import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
+import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 
 const StyledLink = styled.a`
   ${({ script }) => script && getPica(script)}

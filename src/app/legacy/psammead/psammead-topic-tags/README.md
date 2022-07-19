@@ -24,8 +24,8 @@ npm install #legacy/psammead-topic-tags/src --save
 <!-- Description of the component usage -->
 
 ```jsx
-import { TopicTags, TopicTag } from '#legacy/psammead-topic-tags/src';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+import { TopicTags, TopicTag } from '#psammead/psammead-topic-tags/src';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 
 const Wrapper = () => (
   <TopicTags script={latin} service="news" dir="ltr">

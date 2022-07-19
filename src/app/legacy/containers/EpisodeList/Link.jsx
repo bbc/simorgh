@@ -6,7 +6,7 @@ import {
   C_METAL,
   C_POSTBOX,
   C_STONE,
-} from '#legacy/psammead-styles/src/colours';
+} from '#psammead/psammead-styles/src/colours';
 import MediaIndicator from './MediaIndicator';
 import { withEpisodeContext } from './helpers';
 

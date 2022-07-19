@@ -1,4 +1,4 @@
-import { formatDuration } from '#legacy/psammead-timestamp-container/src/utilities';
+import { formatDuration } from '#psammead/psammead-timestamp-container/src/utilities';
 import {
   C_KINGFISHER,
   C_POSTBOX,
@@ -6,7 +6,7 @@ import {
   C_SHADOW,
   C_WHITE,
   C_METAL,
-} from '#legacy/psammead-styles/src/colours';
+} from '#psammead/psammead-styles/src/colours';
 
 export const programStateConfig = {
   live: {

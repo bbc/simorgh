@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 // Components
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 
 const FrontPageSection = styled.div`
   /* To centre page layout for Group 4+ */

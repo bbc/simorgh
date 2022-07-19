@@ -34,9 +34,9 @@ npm install #legacy/psammead-bulletin/src --save
 ## Usage
 
 ```jsx
-import Bulletin from '#legacy/psammead-bulletin/src';
-import { Image } from '#legacy/psammead-image/src';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+import Bulletin from '#psammead/psammead-bulletin/src';
+import { Image } from '#psammead/psammead-image/src';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 
 const WrappingComponent = () => {
   const image = <Image src="/image.png" altText="alt text" />;

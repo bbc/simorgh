@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { withServicesKnob } from '#legacy/psammead-storybook-helpers/src';
+import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { TopicTags, TopicTag } from '.';
 import notes from '../README.md';
 

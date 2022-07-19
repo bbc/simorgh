@@ -31,7 +31,7 @@ npm install #legacy/psammead-byline/src --save
 <!-- Description of the component usage -->
 
 ```jsx
-import Byline from '#legacy/psammead-byline/src';
+import Byline from '#psammead/psammead-byline/src';
 
 <Byline
   service="news"

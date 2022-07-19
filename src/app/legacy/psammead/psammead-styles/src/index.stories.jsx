@@ -4,21 +4,21 @@ import { storiesOf } from '@storybook/react';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_FF_REITH_SANS,
   getBodyCopy,
-} from '#legacy/gel-foundations/src/typography';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+} from '#psammead/gel-foundations/src/typography';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 import { select, withKnobs } from '@storybook/addon-knobs';
-import { withServicesKnob } from '#legacy/psammead-storybook-helpers/src/withServicesKnob';
+import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src/withServicesKnob';
 import json5 from 'json5';
 import {
   getSansRegular,
   getSansBold,
   getSansRegularItalic,
   getSansBoldItalic,
-} from '#legacy/psammead-styles/src/font-styles';
+} from '#psammead/psammead-styles/src/font-styles';
 import notes from '../README.md';
 import * as colours from './colours';
 import { grid } from './detection';

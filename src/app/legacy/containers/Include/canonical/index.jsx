@@ -3,7 +3,7 @@ import React from 'react';
 import { string, number } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import styled from '@emotion/styled';
-import { GEL_SPACING_QUIN } from '#legacy/gel-foundations/src/spacings';
+import { GEL_SPACING_QUIN } from '#psammead/gel-foundations/src/spacings';
 import { GridItemMedium } from '#components/Grid';
 
 /**

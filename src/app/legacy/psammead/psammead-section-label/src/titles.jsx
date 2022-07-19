@@ -3,24 +3,24 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { oneOf, shape, string } from 'prop-types';
 
-import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
+import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   MEDIA_QUERY_TYPOGRAPHY,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '#psammead/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 import {
   getLongPrimer,
   getDoublePica,
-} from '#legacy/gel-foundations/src/typography';
-import { C_EBON, C_GHOST } from '#legacy/psammead-styles/src/colours';
+} from '#psammead/gel-foundations/src/typography';
+import { C_EBON, C_GHOST } from '#psammead/psammead-styles/src/colours';
 import {
   getSansBold,
   getSansRegular,
-} from '#legacy/psammead-styles/src/font-styles';
+} from '#psammead/psammead-styles/src/font-styles';
 
 const minClickableHeightPx = 44;
 const minClickableHeightRem = minClickableHeightPx / 16;

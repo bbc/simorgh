@@ -6,17 +6,17 @@ import {
   C_SHADOW,
   C_EBON,
   C_METAL,
-} from '#legacy/psammead-styles/src/colours';
+} from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING_TRPL,
   GEL_SPACING,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 import {
   getSansRegular,
   getSansBold,
-} from '#legacy/psammead-styles/src/font-styles';
-import { GEL_BODY_COPY } from '#legacy/gel-foundations/src/typography';
-import { BBC_BLOCKS } from '#legacy/psammead-assets/src/svgs';
+} from '#psammead/psammead-styles/src/font-styles';
+import { GEL_BODY_COPY } from '#psammead/gel-foundations/src/typography';
+import { BBC_BLOCKS } from '#psammead/psammead-assets/src/svgs';
 
 const GOLDEN_RATIO_PERCENT = '38.2%';
 const BBC_BLOCKS_WIDTH = '10rem';

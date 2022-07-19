@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { number, bool, objectOf, string } from 'prop-types';
-import { C_LUNAR, C_SHADOW } from '#legacy/psammead-styles/src/colours';
+import { C_LUNAR, C_SHADOW } from '#psammead/psammead-styles/src/colours';
 import {
   BBC_BLOCKS,
   BBC_BLOCKS_DARK_MODE,
-} from '#legacy/psammead-assets/src/svgs';
+} from '#psammead/psammead-assets/src/svgs';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '#psammead/gel-foundations/src/breakpoints';
 
 export { default as ImagePlaceholderAmp } from './index.amp';
 

@@ -4,9 +4,9 @@ import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import Paragraph from '#legacy/psammead-paragraph/src';
-import { Headline } from '#legacy/psammead-headings/src';
-import { withServicesKnob } from '#legacy/psammead-storybook-helpers/src';
+import Paragraph from '#psammead/psammead-paragraph/src';
+import { Headline } from '#psammead/psammead-headings/src';
+import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import notes from '../README.md';
 import ContentAnchor from './index';
 

@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import Navigation from '#legacy/psammead-navigation/src';
+import Navigation from '#psammead/psammead-navigation/src';
 import { node, string, shape } from 'prop-types';
-import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
-import { ScrollableNavigation } from '#legacy/psammead-navigation/src/ScrollableNavigation';
+import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
+import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
 import {
   CanonicalDropdown,
   CanonicalMenuButton,
-} from '#legacy/psammead-navigation/src/DropdownNavigation';
-import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '#legacy/gel-foundations/src/breakpoints';
+} from '#psammead/psammead-navigation/src/DropdownNavigation';
+import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
 import useMediaQuery from '#hooks/useMediaQuery';
 
 const ScrollableWrapper = styled.div`

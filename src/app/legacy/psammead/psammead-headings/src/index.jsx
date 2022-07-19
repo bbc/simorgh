@@ -1,18 +1,21 @@
 import styled from '@emotion/styled';
 import { shape, string, bool } from 'prop-types';
-import { C_SHADOW, C_LUNAR } from '#legacy/psammead-styles/src/colours';
+import { C_SHADOW, C_LUNAR } from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
-} from '#legacy/gel-foundations/src/spacings';
-import { getCanon, getTrafalgar } from '#legacy/gel-foundations/src/typography';
-import { MEDIA_QUERY_TYPOGRAPHY } from '#legacy/gel-foundations/src/breakpoints';
-import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
+} from '#psammead/gel-foundations/src/spacings';
+import {
+  getCanon,
+  getTrafalgar,
+} from '#psammead/gel-foundations/src/typography';
+import { MEDIA_QUERY_TYPOGRAPHY } from '#psammead/gel-foundations/src/breakpoints';
+import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import {
   getSansBold,
   getSerifMedium,
-} from '#legacy/psammead-styles/src/font-styles';
+} from '#psammead/psammead-styles/src/font-styles';
 
 export const Headline = styled.h1`
   ${({ script }) => script && getCanon(script)};

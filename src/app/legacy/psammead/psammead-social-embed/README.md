@@ -81,7 +81,7 @@ Pass a [supported provider](#supported-providers) and valid oEmbed response. If 
 #### Example
 
 ```jsx
-import { CanonicalSocialEmbed } from '#legacy/psammead-social-embed/src';
+import { CanonicalSocialEmbed } from '#psammead/psammead-social-embed/src';
 
 <CanonicalSocialEmbed
   provider="instagram"
@@ -163,7 +163,7 @@ Pass a [supported provider](#supported-providers). If this case cannot be met, a
 Pass a valid `id`. This refers to the unique segment of the URL, which identifies the source content. E.G. `1237210910835392512` in `https://twitter.com/MileyCyrus/status/1237210910835392512`.
 
 ```jsx
-import { AmpSocialEmbed } from '#legacy/psammead-social-embed/src';
+import { AmpSocialEmbed } from '#psammead/psammead-social-embed/src';
 
 <AmpSocialEmbed
   provider="instagram"

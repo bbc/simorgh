@@ -7,21 +7,21 @@ import {
   GEL_SPACING_QUAD,
   GEL_SPACING_TRPL,
   GEL_SPACING_HLF_TRPL,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 import {
   C_POSTBOX,
   C_WHITE,
   C_GREY_6,
-} from '#legacy/psammead-styles/src/colours';
+} from '#psammead/psammead-styles/src/colours';
 import {
   getSansRegular,
   getSansBold,
-} from '#legacy/psammead-styles/src/font-styles';
+} from '#psammead/psammead-styles/src/font-styles';
 import {
   getDoublePica,
   getGreatPrimer,
-} from '#legacy/gel-foundations/src/typography';
-import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
+} from '#psammead/gel-foundations/src/typography';
+import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import { string, arrayOf, shape } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Blocks from '#containers/Blocks';

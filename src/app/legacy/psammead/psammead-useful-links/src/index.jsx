@@ -1,19 +1,19 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { getSerifMedium } from '#legacy/psammead-styles/src/font-styles';
-import { C_EBON, C_METAL } from '#legacy/psammead-styles/src/colours';
-import { grid } from '#legacy/psammead-styles/src/detection';
-import { getPica } from '#legacy/gel-foundations/src/typography';
+import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
+import { C_EBON, C_METAL } from '#psammead/psammead-styles/src/colours';
+import { grid } from '#psammead/psammead-styles/src/detection';
+import { getPica } from '#psammead/gel-foundations/src/typography';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '#psammead/gel-foundations/src/breakpoints';
 import { node, string, shape } from 'prop-types';
-import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
+import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 
 const getRowCount = (children, columns) =>
   Math.ceil(React.Children.count(children) / columns);

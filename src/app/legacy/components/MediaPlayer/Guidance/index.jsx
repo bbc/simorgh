@@ -1,14 +1,14 @@
 import React from 'react';
 import { string } from 'prop-types';
 import styled from '@emotion/styled';
-import { C_WHITE } from '#legacy/psammead-styles/src/colours';
+import { C_WHITE } from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING,
-} from '#legacy/gel-foundations/src/spacings';
-import { GEL_LONG_PRIMER } from '#legacy/gel-foundations/src/typography';
-import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
-import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
+} from '#psammead/gel-foundations/src/spacings';
+import { GEL_LONG_PRIMER } from '#psammead/gel-foundations/src/typography';
+import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
+import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 
 const GUIDANCE_BACKGROUND = 'rgba(34, 34, 34, 0.75)';
 

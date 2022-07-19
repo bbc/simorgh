@@ -35,7 +35,7 @@ npm install #legacy/psammead-useful-links/src
 <!-- Description of the component usage -->
 
 ```jsx
-import { latin } from '#legacy/gel-foundations/src/scripts';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 import { UsefulLink, UsefulLinksLi, UsefulLinksUl } from './index';
 
 const SingleUsefulItem = () => (

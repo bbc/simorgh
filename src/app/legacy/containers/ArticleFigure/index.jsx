@@ -8,7 +8,7 @@ import {
   object,
   bool,
 } from 'prop-types';
-import Figure from '#legacy/psammead-figure/src';
+import Figure from '#psammead/psammead-figure/src';
 import Grid from '#components/Grid';
 import Copyright from '../Copyright';
 import Caption from '../Caption';

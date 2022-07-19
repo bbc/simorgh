@@ -6,19 +6,19 @@ import {
   C_METAL,
   C_EBON,
   C_SHADOW,
-} from '#legacy/psammead-styles/src/colours';
+} from '#psammead/psammead-styles/src/colours';
 import {
   getSansRegular,
   getSansBold,
-} from '#legacy/psammead-styles/src/font-styles';
+} from '#psammead/psammead-styles/src/font-styles';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_BODY_COPY,
   GEL_MINION,
-} from '#legacy/gel-foundations/src/typography';
+} from '#psammead/gel-foundations/src/typography';
 
 import { detokenise, dictionaryFactory } from '../utilities';
 

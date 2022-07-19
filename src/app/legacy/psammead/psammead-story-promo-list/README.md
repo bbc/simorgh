@@ -22,9 +22,9 @@ Commonly used alongside [`psammead-story-promo`](https://github.com/BBC-News/psa
 
 ```jsx
 import React, { Fragment } from 'react';
-import StoryPromo, { Headline, Summary } from '#legacy/psammead-story-promo/src';
-import { StoryPromoLi, StoryPromoUl } from '#legacy/psammead-story-promo-list/src';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+import StoryPromo, { Headline, Summary } from '#psammead/psammead-story-promo/src';
+import { StoryPromoLi, StoryPromoUl } from '#psammead/psammead-story-promo-list/src';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 
 const Image = (
   <img src="https://foobar.com/image.jpg" />

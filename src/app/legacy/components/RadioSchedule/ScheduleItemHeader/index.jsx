@@ -2,18 +2,18 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import { oneOfType, elementType, string, number } from 'prop-types';
-import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
-import { formatUnixTimestamp } from '#legacy/psammead-timestamp-container/src/utilities';
-import detokenise from '#legacy/psammead-detokeniser/src';
-import LiveLabel from '#legacy/psammead-live-label/src';
-import { Link } from '#legacy/psammead-story-promo/src';
+import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
+import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
+import detokenise from '#psammead/psammead-detokeniser/src';
+import LiveLabel from '#psammead/psammead-live-label/src';
+import { Link } from '#psammead/psammead-story-promo/src';
 import {
   getSansBold,
   getSansRegular,
-} from '#legacy/psammead-styles/src/font-styles';
-import { getPica } from '#legacy/gel-foundations/src/typography';
-import { C_KINGFISHER } from '#legacy/psammead-styles/src/colours';
-import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/psammead-styles/src/font-styles';
+import { getPica } from '#psammead/gel-foundations/src/typography';
+import { C_KINGFISHER } from '#psammead/psammead-styles/src/colours';
+import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import { ServiceContext } from '#contexts/ServiceContext';
 import durationDictionary, { programStateConfig } from '../utilities';
 

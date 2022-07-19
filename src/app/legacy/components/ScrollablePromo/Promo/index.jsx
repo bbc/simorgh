@@ -3,25 +3,25 @@ import { arrayOf, shape, string, oneOfType, object, func } from 'prop-types';
 import styled from '@emotion/styled';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import { getPica } from '#legacy/gel-foundations/src/typography';
-import { getSerifBold } from '#legacy/psammead-styles/src/font-styles';
+import { getPica } from '#psammead/gel-foundations/src/typography';
+import { getSerifBold } from '#psammead/psammead-styles/src/font-styles';
 import {
   C_GREY_6,
   C_GREY_8,
   C_WHITE,
-} from '#legacy/psammead-styles/src/colours';
-import { Link } from '#legacy/psammead-story-promo/src';
+} from '#psammead/psammead-styles/src/colours';
+import { Link } from '#psammead/psammead-story-promo/src';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '#psammead/gel-foundations/src/breakpoints';
 import { ServiceContext } from '#contexts/ServiceContext';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';

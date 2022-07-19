@@ -3,33 +3,33 @@ import styled from '@emotion/styled';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '#psammead/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 import {
   C_WHITE,
   C_POSTBOX,
   C_SHADOW,
   C_EBON,
   C_LUNAR,
-} from '#legacy/psammead-styles/src/colours';
+} from '#psammead/psammead-styles/src/colours';
 import { string, oneOf, node, bool, shape } from 'prop-types';
 import {
   getSansRegular,
   getSerifMedium,
-} from '#legacy/psammead-styles/src/font-styles';
-import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
+} from '#psammead/psammead-styles/src/font-styles';
+import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import {
   getPica,
   getGreatPrimer,
   getLongPrimer,
-} from '#legacy/gel-foundations/src/typography';
-import { mediaIcons } from '#legacy/psammead-assets/src/svgs';
-import LiveLabel from '#legacy/psammead-live-label/src';
-import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
-import { Link } from '#legacy/psammead-story-promo/src';
+} from '#psammead/gel-foundations/src/typography';
+import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
+import LiveLabel from '#psammead/psammead-live-label/src';
+import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
+import { Link } from '#psammead/psammead-story-promo/src';
 import ImageGridItem from './ImageStyles';
 import TextGridItem from './TextStyles';
 

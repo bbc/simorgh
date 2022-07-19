@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { C_GHOST, C_EBON } from '#legacy/psammead-styles/src/colours';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
+import { C_GHOST, C_EBON } from '#psammead/psammead-styles/src/colours';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 
 const Card = styled.div`
   position: relative;

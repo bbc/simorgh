@@ -89,7 +89,7 @@ When using one of the extended Grid components, if you wish to extend it using t
 Here is an example of a `<Grid>` that has 8 columns for `group4` (from 1008px to 1279px). It has four child `<Grid item>` elements, one which spans 6/8 columns and three others which spans 2/8 columns within this breakpoint.
 
 ```jsx
-import Grid from '#legacy/psammead-grid/src';
+import Grid from '#psammead/psammead-grid/src';
 
 const MyComponent = () => (
   <Grid
@@ -167,7 +167,7 @@ Using `enableGelGutters` on the `Grid` element. Note: this should _not_ be added
 Usage of `margins` can be on either `<Grid>` or `<Grid item>`.
 
 ```jsx
-import Grid from '#legacy/psammead-grid/src';
+import Grid from '#psammead/psammead-grid/src';
 
 const MyComponent = () => (
   <Grid
@@ -236,7 +236,7 @@ Note that here, any time you use `<Grid>` that generates a new grid. The total n
 Here we have no margins on the Grid item around the Image, but there is on the Paragraph items.
 
 ```jsx
-import Grid from '#legacy/psammead-grid/src';
+import Grid from '#psammead/psammead-grid/src';
 
 const MyComponent = () => (
   <Grid
@@ -321,7 +321,7 @@ const MyComponent = () => (
 Note that, any time you render a child `<Grid>` outside of the parent grid, the parent's columns and gutters configuration is not automagically passed to the child. This causes the layout to break in browsers that do not support css grid. To ensure the configuration is passed correctly, you need to explicitly pass in these props.
 
 ```jsx
-import Grid from '#legacy/psammead-grid/src';
+import Grid from '#psammead/psammead-grid/src';
 
 const parentProps = {
   enableGelGutters: true,

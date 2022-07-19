@@ -2,8 +2,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
-import { withServicesKnob } from '#legacy/psammead-storybook-helpers/src';
-import { GEL_SPACING_DBL } from '#legacy/gel-foundations/src/spacings';
+import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
+import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 import notes from '../README.md';
 import ScriptLink from './index';
 

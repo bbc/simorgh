@@ -22,9 +22,9 @@ npm install #legacy/psammead-styles/src --save
 
 <!-- prettier-ignore -->
 ```jsx
-import { C_POSTBOX } from '#legacy/psammead-styles/src/colours';
+import { C_POSTBOX } from '#psammead/psammead-styles/src/colours';
 
-import { F_REITH_SANS_REGULAR, F_REITH_SANS_ITALIC } from '#legacy/psammead-styles/src/fonts';
+import { F_REITH_SANS_REGULAR, F_REITH_SANS_ITALIC } from '#psammead/psammead-styles/src/fonts';
 ```
 
 By importing a subset of the font-face definitions defined in this package, you can prioritise only the most commonly needed fonts for your project, with browser styling stepping in for less common scenarios. For example, in these examples, which import custom fonts for only Reith Sans Regular and Italic, any bold styling would be "faked" by the browser.
@@ -32,7 +32,7 @@ By importing a subset of the font-face definitions defined in this package, you 
 You will likely want to use these font-face definitions in tandem with the GEL-defined font stack definitions, which are available in [`#legacy/gel-foundations/src`](https://www.npmjs.com/package/#legacy/gel-foundations/src):
 
 ```jsx
-import { GEL_FF_REITH_SANS } from '#legacy/gel-foundations/src/typography';
+import { GEL_FF_REITH_SANS } from '#psammead/gel-foundations/src/typography';
 ```
 
 These values can then be used directly within CSS declarations in code. Note that font-faces should only be declared once on a page:
@@ -57,7 +57,7 @@ const SomeStyledComponent = css`
 In case you are using embedded fonts, you need to make sure you have loaded your fonts first before using the functions. If the embedded font is not loaded, the fallback font will be applied
 
 ```js
-import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
+import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 
 const fontStyle = getSansRegular('news');
 
@@ -74,7 +74,7 @@ We have defined custom feature detection statements (using CSS `@supports` synta
 - grid: We experienced issues using `@supports (display:grid)` from browsers with buggy CSS Grid implementations, and found that detecting on `@supports (grid-template-columns: fit-content(200px))` gave more consistent detection.
 
 ```js
-import { grid } from '#legacy/psammead-styles/src/detection';
+import { grid } from '#psammead/psammead-styles/src/detection';
 
 const someGridUsingComponent = css`
   @supports (${grid}) {
@@ -92,11 +92,11 @@ We export a global styles component which uses `styled-normalize` and defines cs
 This component accepts an optional `fonts` prop which is an array of font styles to be applied in the global styles.
 
 ```js
-import GlobalStyles from '#legacy/psammead-styles/src/global-styles';
+import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import {
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
-} from '#legacy/psammead-styles/src/fonts';
+} from '#psammead/psammead-styles/src/fonts';
 
 <GlobalStyles fonts={[F_REITH_SANS_REGULAR, F_REITH_SERIF_MEDIUM]} />;
 ```

@@ -1,9 +1,9 @@
 import React from 'react';
 import { node, string } from 'prop-types';
 import styled from '@emotion/styled';
-import { C_EBON, C_WHITE } from '#legacy/psammead-styles/src/colours';
-import { getSansBold } from '#legacy/psammead-styles/src/font-styles';
-import { GEL_BREVIER } from '#legacy/gel-foundations/src/typography';
+import { C_EBON, C_WHITE } from '#psammead/psammead-styles/src/colours';
+import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
+import { GEL_BREVIER } from '#psammead/gel-foundations/src/typography';
 
 import {
   detokenise,

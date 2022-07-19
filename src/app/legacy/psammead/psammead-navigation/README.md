@@ -114,12 +114,12 @@ The `#legacy/psammead-navigation/src` package is a set of two components, `Navig
 
 ```jsx
 import React from 'react';
-import { ScrollableNavigation } from '#legacy/psammead-navigation/src/scrollable';
+import { ScrollableNavigation } from '#psammead/psammead-navigation/src/scrollable';
 import Navigation, {
   NavigationUl,
   NavigationLi,
-} from '#legacy/psammead-navigation/src';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+} from '#psammead/psammead-navigation/src';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 
 <Navigation
   brandBackgroundColour="#B80000"
@@ -177,8 +177,8 @@ import {
   Dropdown,
   DropdownUl,
   DropdownLi,
-} from '#legacy/psammead-navigation/src/dropdown';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+} from '#psammead/psammead-navigation/src/dropdown';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 
 <CanonicalDropdown isOpen={isOpen}>
   <DropdownUl>
@@ -203,8 +203,8 @@ import { latin } from '#legacy/gel-foundations/src/scripts';
 
 ```jsx
 import React from 'react';
-import { CanonicalMenuButton } from '#legacy/psammead-navigation/src/dropdown';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+import { CanonicalMenuButton } from '#psammead/psammead-navigation/src/dropdown';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 
 <CanonicalMenuButton
   announcedText="Menu"
@@ -221,8 +221,8 @@ import { latin } from '#legacy/gel-foundations/src/scripts';
 
 ```jsx
 import React from 'react';
-import { AmpMenuButton } from '#legacy/psammead-navigation/src/dropdown';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+import { AmpMenuButton } from '#psammead/psammead-navigation/src/dropdown';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 
 <AmpMenuButton
   announcedText="Menu"

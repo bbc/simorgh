@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
+import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { custom, landscape, portrait, square } from './fixtureData';
 
 const snapshotTests = (Component, additionalProps) => {

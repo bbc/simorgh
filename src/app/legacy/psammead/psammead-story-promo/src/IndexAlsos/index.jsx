@@ -2,15 +2,19 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { node, string, shape } from 'prop-types';
-import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
+import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
-} from '#legacy/gel-foundations/src/spacings';
-import { C_EBON, C_METAL, C_LUNAR } from '#legacy/psammead-styles/src/colours';
-import { getBrevier } from '#legacy/gel-foundations/src/typography';
-import { getSerifMedium } from '#legacy/psammead-styles/src/font-styles';
-import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
+} from '#psammead/gel-foundations/src/spacings';
+import {
+  C_EBON,
+  C_METAL,
+  C_LUNAR,
+} from '#psammead/psammead-styles/src/colours';
+import { getBrevier } from '#psammead/gel-foundations/src/typography';
+import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
+import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 
 const StyledIndexAlsos = styled.div`
   position: relative;

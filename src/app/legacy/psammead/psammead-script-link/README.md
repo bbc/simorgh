@@ -25,8 +25,8 @@ npm install #legacy/psammead-script-link/src --save
 ## Usage
 
 ```jsx
-import ScriptLink from '#legacy/psammead-script-link/src';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+import ScriptLink from '#psammead/psammead-script-link/src';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 
 const WrappingComponent = () => (
   <div>

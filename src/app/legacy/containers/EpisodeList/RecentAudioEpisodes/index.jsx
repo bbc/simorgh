@@ -3,22 +3,22 @@ import React, { useContext } from 'react';
 import { arrayOf, shape, string, number } from 'prop-types';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
-import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
+import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import {
   formatDuration,
   formatUnixTimestamp,
-} from '#legacy/psammead-timestamp-container/src/utilities';
-import Timestamp from '#legacy/psammead-timestamp-container/src';
-import SectionLabel from '#legacy/psammead-section-label/src';
+} from '#psammead/psammead-timestamp-container/src/utilities';
+import Timestamp from '#psammead/psammead-timestamp-container/src';
+import SectionLabel from '#psammead/psammead-section-label/src';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '#psammead/gel-foundations/src/breakpoints';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import EpisodeList from '#containers/EpisodeList';

@@ -9,7 +9,7 @@
       "#containers/*": ["./src/app/legacy/containers/*"],
       "#data/*": ["./data/*"],
       "#hooks/*": [".src/app/hooks/*"],
-      "#legacy/*": ["./src/app/legacy/psammead/*"],
+      "#psammead/*": ["./src/app/legacy/psammead/*"],
       "#lib/*": ["./src/app/lib/*"],
       "#models/*": ["./src/app/models/*"],
       "#pages/*": ["./src/app/pages/*"],

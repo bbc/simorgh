@@ -3,8 +3,8 @@ import React from 'react';
 import { string, shape, number } from 'prop-types';
 import styled from '@emotion/styled';
 
-import { Img } from '#legacy/psammead-image/src';
-import { GEL_SPACING_QUIN } from '#legacy/gel-foundations/src/spacings';
+import { Img } from '#psammead/psammead-image/src';
+import { GEL_SPACING_QUIN } from '#psammead/gel-foundations/src/spacings';
 import { GridItemMedium } from '#components/Grid';
 
 const Include = styled.div`

@@ -1,22 +1,22 @@
 import React from 'react';
 import { shape, arrayOf, string } from 'prop-types';
-import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
+import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '#psammead/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 import {
   UsefulLink,
   UsefulLinksLi,
   UsefulLinksUl,
-} from '#legacy/psammead-useful-links/src';
+} from '#psammead/psammead-useful-links/src';
 import { storyItem } from '#models/propTypes/storyItem';
 
 // Apply the right margin-top between the section label and multiple useful items

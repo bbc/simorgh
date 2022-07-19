@@ -1,14 +1,14 @@
 import styled from '@emotion/styled';
 import { oneOf } from 'prop-types';
-import { C_WHITE } from '#legacy/psammead-styles/src/colours';
+import { C_WHITE } from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING,
   GEL_SPACING_HLF,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_MINION,
   GEL_FF_REITH_SANS,
-} from '#legacy/gel-foundations/src/typography';
+} from '#psammead/gel-foundations/src/typography';
 
 const Copyright = styled.p`
   ${GEL_MINION};

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { string } from 'prop-types';
-import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
-import Copyright from '#legacy/psammead-copyright/src';
+import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
+import Copyright from '#psammead/psammead-copyright/src';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const CopyrightContainer = ({ children }) => {

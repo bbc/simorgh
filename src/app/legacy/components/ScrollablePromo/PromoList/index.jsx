@@ -3,12 +3,12 @@ import styled from '@emotion/styled';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '#psammead/gel-foundations/src/breakpoints';
 import { arrayOf, shape, string, oneOfType, object, func } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';

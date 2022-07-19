@@ -2,18 +2,18 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { withServicesKnob } from '#legacy/psammead-storybook-helpers/src';
+import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import {
   getBodyCopy,
   getLongPrimer,
-} from '#legacy/gel-foundations/src/typography';
+} from '#psammead/gel-foundations/src/typography';
 import {
   getSansRegular,
   getSansBold,
   getSansRegularItalic,
   getSansBoldItalic,
-} from '#legacy/psammead-styles/src/font-styles';
-import { C_POSTBOX } from '#legacy/psammead-styles/src/colours';
+} from '#psammead/psammead-styles/src/font-styles';
+import { C_POSTBOX } from '#psammead/psammead-styles/src/colours';
 import notes from '../README.md';
 import InlineLink from './index';
 

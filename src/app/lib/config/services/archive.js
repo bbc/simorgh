@@ -1,13 +1,13 @@
-import { C_ARCHIVE_BLUE, C_WHITE } from '#legacy/psammead-styles/src/colours';
-import { archive as brandSVG } from '#legacy/psammead-assets/src/svgs';
-import cyrillicAndLatin from '#legacy/gel-foundations/src/scripts/latin-and-cyrillic';
+import { C_ARCHIVE_BLUE, C_WHITE } from '#psammead/psammead-styles/src/colours';
+import { archive as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
 import {
   F_REITH_SANS_BOLD,
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
-} from '#legacy/psammead-styles/src/fonts';
-import '#legacy/psammead-locales/moment/en-gb';
-import '#legacy/moment-timezone-include/tz/Europe/London';
+} from '#psammead/psammead-styles/src/fonts';
+import '#psammead/psammead-locales/moment/en-gb';
+import '#psammead/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

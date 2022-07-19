@@ -1,21 +1,21 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { shape, string, node, bool, oneOf } from 'prop-types';
-import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
-import { C_WHITE, C_EBON } from '#legacy/psammead-styles/src/colours';
+import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
+import { C_WHITE, C_EBON } from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
   GEL_SPACING_SEXT,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
-import { getPica } from '#legacy/gel-foundations/src/typography';
-import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
-import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
+} from '#psammead/gel-foundations/src/breakpoints';
+import { getPica } from '#psammead/gel-foundations/src/typography';
+import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
+import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { NAV_BAR_TOP_BOTTOM_SPACING } from './DropdownNavigation';
 
 const SPACING_AROUND_NAV_ITEMS = `${NAV_BAR_TOP_BOTTOM_SPACING}rem`; // 12px

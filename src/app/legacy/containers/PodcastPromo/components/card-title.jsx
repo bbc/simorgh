@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
-import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
-import { getPica } from '#legacy/gel-foundations/src/typography';
-import { getSerifMedium } from '#legacy/psammead-styles/src/font-styles';
-import { C_EBON } from '#legacy/psammead-styles/src/colours';
+import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
+import { getPica } from '#psammead/gel-foundations/src/typography';
+import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
+import { C_EBON } from '#psammead/psammead-styles/src/colours';
 
 const CardTitle = styled.h3`
   ${({ script }) => getPica(script)}

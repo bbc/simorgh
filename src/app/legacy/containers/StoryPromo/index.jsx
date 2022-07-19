@@ -13,11 +13,11 @@ import StoryPromo, {
   Headline,
   Summary,
   Link,
-} from '#legacy/psammead-story-promo/src';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
+} from '#psammead/psammead-story-promo/src';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import pathOr from 'ramda/src/pathOr';
-import LiveLabel from '#legacy/psammead-live-label/src';
-import ImagePlaceholder from '#legacy/psammead-image-placeholder/src';
+import LiveLabel from '#psammead/psammead-live-label/src';
+import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';

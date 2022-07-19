@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { string, bool } from 'prop-types';
-import { getSansBold } from '#legacy/psammead-styles/src/font-styles';
-import { C_WHITE } from '#legacy/psammead-styles/src/colours';
-import { GEL_SPACING_HLF_TRPL } from '#legacy/gel-foundations/src/spacings';
+import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
+import { C_WHITE } from '#psammead/psammead-styles/src/colours';
+import { GEL_SPACING_HLF_TRPL } from '#psammead/gel-foundations/src/spacings';
 
 const StyledLink = styled.a`
   ${({ service }) => service && getSansBold(service)}

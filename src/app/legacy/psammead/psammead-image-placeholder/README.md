@@ -23,7 +23,7 @@ Psammead Image Placeholder is designed to appear as a temporary stand-in to be r
 The ImagePlaceholder component is expected to contain an image as a child element.
 
 ```jsx
-import ImagePlaceholder from '#legacy/psammead-image-placeholder/src';
+import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
 
 const WrapperComponent = ({
   ratio,
@@ -39,7 +39,7 @@ const WrapperComponent = ({
 The ImagePlaceholderAmp component is expected to be used as a child element of an `amp-img` component. Information about `amp-img` can be found on the [AMP documentation website](https://amp.dev/documentation/components/amp-img/)
 
 ```jsx
-import ImagePlaceholderAmp from '#legacy/psammead-image-placeholder/src';
+import ImagePlaceholderAmp from '#psammead/psammead-image-placeholder/src';
 
 const WrapperComponent = () => (
   <amp-img src="http://some-image.url" width="645px" height="128px">

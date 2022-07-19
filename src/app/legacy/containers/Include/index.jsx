@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { string, bool, number } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 
-import EmbedError from '#legacy/psammead-embed-error/src';
+import EmbedError from '#psammead/psammead-embed-error/src';
 import nodeLogger from '#lib/logger.node';
 import { INCLUDE_RENDERED } from '#lib/logger.const';
 import { RequestContext } from '#contexts/RequestContext';

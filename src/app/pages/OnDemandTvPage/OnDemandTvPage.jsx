@@ -7,16 +7,16 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 import pathOr from 'ramda/src/pathOr';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
-import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
-import { formatUnixTimestamp } from '#legacy/psammead-timestamp-container/src/utilities';
+} from '#psammead/gel-foundations/src/breakpoints';
+import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
+import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
 import LinkedData from '#containers/LinkedData';

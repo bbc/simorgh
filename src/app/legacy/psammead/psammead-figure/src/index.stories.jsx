@@ -1,13 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
-import Caption from '#legacy/psammead-caption/src';
-import Copyright from '#legacy/psammead-copyright/src';
-import Image from '#legacy/psammead-image/src';
-import ImagePlaceholder from '#legacy/psammead-image-placeholder/src';
-import Paragraph from '#legacy/psammead-paragraph/src';
-import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
-import { withServicesKnob } from '#legacy/psammead-storybook-helpers/src';
+import Caption from '#psammead/psammead-caption/src';
+import Copyright from '#psammead/psammead-copyright/src';
+import Image from '#psammead/psammead-image/src';
+import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
+import Paragraph from '#psammead/psammead-paragraph/src';
+import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
+import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import notes from '../README.md';
 import Figure from '.';
 

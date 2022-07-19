@@ -22,8 +22,8 @@ It uses `#legacy/psammead-styles/src` for colours and font family and `#legacy/g
 ## Usage
 
 ```jsx
-import Paragraph from '#legacy/psammead-paragraph/src';
-import { latin } from '#legacy/gel-foundations/src/scripts';
+import Paragraph from '#psammead/psammead-paragraph/src';
+import { latin } from '#psammead/gel-foundations/src/scripts';
 
 const WrappingComponent = () => (
   <Paragraph script={latin} service="news">

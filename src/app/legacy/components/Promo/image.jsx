@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import ImagePlaceholder from '#legacy/psammead-image-placeholder/src';
+import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
 import { string, node } from 'prop-types';
-import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
+import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '#psammead/gel-foundations/src/breakpoints';
 
 const Img = styled.img`
   width: 100%;

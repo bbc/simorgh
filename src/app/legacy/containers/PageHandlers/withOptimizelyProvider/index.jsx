@@ -7,7 +7,7 @@ import {
 import { ServiceContext } from '#contexts/ServiceContext';
 import isLive from '#lib/utilities/isLive';
 import onClient from '#lib/utilities/onClient';
-import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#legacy/gel-foundations/src/breakpoints';
+import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
 import getOptimizelyUserId from './getOptimizelyUserId';
 
 // 004_brasil_recommendations_experiment

@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
+import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
-} from '#legacy/gel-foundations/src/spacings';
-import { grid } from '#legacy/psammead-styles/src/detection';
-import Grid from '#legacy/psammead-grid/src';
+} from '#psammead/gel-foundations/src/spacings';
+import { grid } from '#psammead/psammead-styles/src/detection';
+import Grid from '#psammead/psammead-grid/src';
 import { arrayOf, number, shape, string } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import ProgramCard from './ProgramCard';

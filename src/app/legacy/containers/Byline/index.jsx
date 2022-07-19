@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import Byline from '#legacy/psammead-byline/src';
+import Byline from '#psammead/psammead-byline/src';
 import { ServiceContext } from '#contexts/ServiceContext';
 import bylineBlockPropTypes from '#models/propTypes/byline';
 import { GridItemMedium } from '#components/Grid';
