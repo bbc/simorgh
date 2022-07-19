@@ -6,7 +6,7 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import articleData from '#data/news/articles/c5jje4ejkqvo';
+import articleData from '#data/news/articles/c0g992jmmkko';
 import articleDataWithRelatedContent from '#data/afrique/articles/c7yn6nznljdo';
 import secondaryColumn from '#data/news/secondaryColumn';
 import singleStoryPromo from '#data/news/secondaryColumn/SingleStoryPromo.json';
@@ -58,7 +58,11 @@ export default {
 };
 
 export const ArticlePage = props => (
-  <ComponentWithContext {...props} secondaryColumn={secondaryColumn} />
+  <ComponentWithContext
+    {...props}
+    secondaryColumn={secondaryColumn}
+    data={handlePromoData(articleData)}
+  />
 );
 
 export const ArticlePageWithRelatedContent = props => (
