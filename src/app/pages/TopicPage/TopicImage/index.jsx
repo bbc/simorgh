@@ -42,7 +42,7 @@ const TopicImage = ({ image }) => {
   return (
     <BadgeWrapper>
       <ImageWrapper>
-        <Image src={image} alt="" />
+        <Image src={image} alt="" data-test-id="topic-badge" />
       </ImageWrapper>
     </BadgeWrapper>
   );

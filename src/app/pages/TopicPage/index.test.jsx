@@ -63,14 +63,14 @@ describe('A11y', () => {
   });
 
   it('should render badge and description when they exist in data', () => {
-    const { container } = render(
+    const { container, queryByTestId } = render(
       <TopicPageWithContext
         pageData={mundoWithBadgeAndDescr}
         service="mundo"
       />,
     );
 
-    expect(container.getElementsByTagName('img').length).toEqual(4);
+    expect(queryByTestId('topic-badge')).toBeInTheDocument();
     expect(container.getElementsByTagName('p').length).toEqual(1);
   });
 
