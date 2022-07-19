@@ -18,7 +18,7 @@ const Content = ({ mediaDuration, headline, isPhotoGallery }) => {
     return <span id={ariaLabelledBy}>{headline}</span>;
   }
 
-  const photoGallerytype = isPhotoGallery ? 'photogallery' : mediaType;
+  const photoGallerytype = isPhotoGallery ? 'photogallery' : '';
 
   const type = mediaType === 'audio' ? 'listen' : mediaType;
 

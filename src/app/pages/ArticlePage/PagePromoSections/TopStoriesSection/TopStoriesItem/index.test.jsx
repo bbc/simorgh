@@ -13,12 +13,16 @@ import {
 const TopStoriesItemFixture = ({ fixtureData, service = 'news' }) => (
   <ServiceContextProvider service={service}>
     <ToggleContextProvider>
-      <TopStoriesItem item={fixtureData} labelId="topStories" index={0} />
+      <TopStoriesItem
+        item={fixtureData}
+        ariaLabelledBy="topStories"
+        index={0}
+      />
     </ToggleContextProvider>
   </ServiceContextProvider>
 );
 
-describe('Optimo Related Content Promo Item', () => {
+describe('Optimo Top Stories Promo Item', () => {
   it('should render Related Content when given appropriate data', () => {
     render(<TopStoriesItemFixture fixtureData={topStoriesItem} />);
 

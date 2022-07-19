@@ -11,7 +11,7 @@ const RelatedContentItemFixture = ({ fixtureData, service = 'mundo' }) => (
     <ToggleContextProvider>
       <RelatedContentItem
         item={fixtureData}
-        labelId="RelatedContent"
+        ariaLabelledBy="RelatedContent"
         index={0}
       />
     </ToggleContextProvider>

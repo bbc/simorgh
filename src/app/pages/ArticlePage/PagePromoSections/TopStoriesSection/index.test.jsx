@@ -16,7 +16,7 @@ const TopStoriesSectionFixture = ({ fixtureData, service = 'mundo' }) => (
   </ServiceContextProvider>
 );
 
-describe('Optimo Related Content Promo', () => {
+describe('Optimo Top Stories Promo', () => {
   it('should return null if no data is passed', () => {
     const { container } = render(<TopStoriesSectionFixture fixtureData={[]} />);
     expect(container).toBeEmptyDOMElement();
