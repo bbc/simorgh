@@ -11,9 +11,11 @@ import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
 
 const Paragraph = styled.p`
   ${({ service }) => getSansRegular(service)}
+  padding-top: 16px;
   margin: 0;
   font-size: 1.125rem;
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    padding-top: 24px;
     font-size: 1.3125rem;
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {

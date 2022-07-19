@@ -5,9 +5,12 @@ import styled from '@emotion/styled';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
+  GEL_SPACING_QUAD,
+  GEL_SPACING_SEXT,
 } from '#legacy/gel-foundations/src/spacings';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#legacy/gel-foundations/src/breakpoints';
 import MetadataContainer from '#app/containers/Metadata';
@@ -33,10 +36,25 @@ const Wrapper = styled.main`
   }
 `;
 
+const InlineWrapper = styled.div`
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    align-items: center;
+    display: flex;
+  }
+`;
+
 const TitleWrapper = styled.div`
-  margin: 0;
-  align-items: center;
-  display: flex;
+  margin: 24px 0;
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    margin: ${GEL_SPACING_QUAD} 0;
+  }
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin: ${GEL_SPACING_SEXT} 0;
+  }
+
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    margin: 40px 0 ${GEL_SPACING_SEXT} 0;
+  }
 `;
 
 const TopicPage = ({ pageData }) => {
@@ -95,12 +113,14 @@ const TopicPage = ({ pageData }) => {
           entities={promoEntities}
         />
         <TitleWrapper>
-          {images && (
-            <TopicImage image={images[0].url} altText={images[0].altText} />
-          )}
-          <TopicTitle>{title}</TopicTitle>
+          <InlineWrapper>
+            {images && (
+              <TopicImage image={images[0].url} altText={images[0].altText} />
+            )}
+            <TopicTitle>{title}</TopicTitle>
+          </InlineWrapper>
+          {description && <TopicDescription>{description}</TopicDescription>}
         </TitleWrapper>
-        {description && <TopicDescription>{description}</TopicDescription>}
         <Curation
           visualStyle={VISUAL_STYLE.NONE}
           visualProminance={VISUAL_PROMINANCE.NORMAL}

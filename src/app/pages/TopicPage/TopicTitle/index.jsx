@@ -5,12 +5,6 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { getSansBold } from '#legacy/psammead-styles/src/font-styles';
 import { C_GREY_10 } from '#legacy/psammead-styles/src/colours';
 import {
-  GEL_SPACING_TRPL,
-  GEL_SPACING_QUAD,
-  GEL_SPACING_QUIN,
-  GEL_SPACING_SEXT,
-} from '#legacy/gel-foundations/src/spacings';
-import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
@@ -19,23 +13,18 @@ import {
 const H1 = styled.h1`
   ${({ service }) => getSansBold(service)}
   color: ${C_GREY_10};
-  margin-top: ${GEL_SPACING_TRPL};
-  margin-bottom: 0;
   font-size: 1.75rem;
   line-height: 2rem;
+  margin: 0;
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING_QUAD};
     font-size: 2rem;
     line-height: 2.25rem;
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING_SEXT};
     font-size: 3.25rem;
     line-height: 3.5rem;
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING_QUIN};
-    padding-bottom: ${GEL_SPACING_TRPL};
     font-size: 2.75rem;
     line-height: 3rem;
     display: inline-block;

@@ -1,8 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { GEL_SPACING_DBL } from '#legacy/gel-foundations/src/spacings';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
+import {
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '#legacy/gel-foundations/src/breakpoints';
 
 const Image = styled.img`
   max-width: 100%;
@@ -14,8 +16,13 @@ const Image = styled.img`
 `;
 
 const ImageWrapper = styled.div`
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
+
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    width: 64px;
+    height: 64px;
+  }
   display: flex;
   justify-content: center;
   margin-inline-end: ${GEL_SPACING_DBL};
