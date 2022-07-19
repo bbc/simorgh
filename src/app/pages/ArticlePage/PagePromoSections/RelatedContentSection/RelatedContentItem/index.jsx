@@ -6,6 +6,7 @@ import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
 import Promo from '#components/OptimoPromos';
 import isEmpty from 'ramda/src/isEmpty';
+import TitleWithContent from './index.styles';
 
 const RelatedContentItem = ({ item, ariaLabelledBy }) => {
   const { script } = useContext(ServiceContext);
@@ -97,7 +98,11 @@ const RelatedContentItem = ({ item, ariaLabelledBy }) => {
     item,
   );
 
-  const as = timestamp ? 'h3' : 'div';
+  const titleTag = timestamp ? 'h3' : 'div';
+
+  const titleHasContent = titleTag === 'h3';
+
+  const Title = titleHasContent ? TitleWithContent : Promo.Title;
 
   return (
     <Promo
@@ -114,11 +119,11 @@ const RelatedContentItem = ({ item, ariaLabelledBy }) => {
         height={height}
       />
       <Promo.ContentWrapper>
-        <Promo.Title as={as} script={script}>
+        <Title as={titleTag} script={script}>
           <Promo.Link>
             <Promo.Content headline={headline} />
           </Promo.Link>
-        </Promo.Title>
+        </Title>
         <Promo.Timestamp>{timestamp}</Promo.Timestamp>
       </Promo.ContentWrapper>
     </Promo>

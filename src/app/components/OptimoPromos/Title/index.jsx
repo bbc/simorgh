@@ -1,13 +1,12 @@
 import React from 'react';
 import { node, string } from 'prop-types';
-import { TitleOnly, TitleWithContent } from './index.styles';
+import StyledTitle from './index.styles';
 
 const Title = ({ children, service, className, as }) => {
-  const TitleWrapper = as === 'div' ? TitleOnly : TitleWithContent;
   return (
-    <TitleWrapper as={as} className={className} service={service}>
+    <StyledTitle as={as} className={className} service={service}>
       {children}
-    </TitleWrapper>
+    </StyledTitle>
   );
 };
 
@@ -18,6 +17,6 @@ Title.propTypes = {
   as: string,
 };
 
-Title.defaultProps = { className: '', as: 'div' };
+Title.defaultProps = { className: '', as: '' };
 
 export default Title;
