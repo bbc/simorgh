@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { string } from 'prop-types';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -45,6 +46,10 @@ const TopicImage = ({ image }) => {
       </ImageWrapper>
     </BadgeWrapper>
   );
+};
+
+TopicImage.propTypes = {
+  image: string.isRequired,
 };
 
 export default TopicImage;
