@@ -116,6 +116,7 @@ const MetadataContainer = ({
     <Helmet htmlAttributes={htmlAttributes}>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta charSet="utf-8" />
+      <meta name="robots" content="max-image-preview:large" />
       <meta name="robots" content="noodp,noydir" />
       <meta name="theme-color" content={themeColor} />
       <meta
