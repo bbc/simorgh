@@ -353,7 +353,7 @@ it('should render the char set metadata', async () => {
 it('should render the robots meta tag', async () => {
   render(<CanonicalNewsInternationalOrigin />);
 
-  const expected = 'noodp,noydir';
+  const expected = 'noodp, noydir, max-image-preview:large';
 
   await waitFor(() => {
     const actual = document
