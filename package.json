@@ -32,7 +32,8 @@
     "simple-get": "4.0.1",
     "trim": "1.0.1",
     "minimist": "1.2.6",
-    "async": "3.2.3"
+    "async": "3.2.3",
+    "terser": "5.14.2"
   },
   "scripts": {
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
