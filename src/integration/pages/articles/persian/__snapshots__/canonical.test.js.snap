@@ -352,7 +352,7 @@ exports[`Canonical Articles SEO OG url 1`] = `"http://localhost:7080/persian/art
 
 exports[`Canonical Articles SEO Page title 1`] = `"پهپادی که برایتان قهوه می‌آورد - BBC News فارسی"`;
 
-exports[`Canonical Articles SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Articles SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Articles SEO Twitter card 1`] = `"summary_large_image"`;
 

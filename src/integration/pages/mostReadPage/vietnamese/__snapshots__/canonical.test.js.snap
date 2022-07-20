@@ -293,7 +293,7 @@ exports[`Canonical Most Read Page SEO OG url 1`] = `"http://localhost:7080/vietn
 
 exports[`Canonical Most Read Page SEO Page title 1`] = `"Đọc nhiều nhất - BBC News Tiếng Việt"`;
 
-exports[`Canonical Most Read Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Most Read Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Most Read Page SEO Twitter card 1`] = `"summary_large_image"`;
 
