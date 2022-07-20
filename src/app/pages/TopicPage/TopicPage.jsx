@@ -22,6 +22,7 @@ import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstra
 import useToggle from '#hooks/useToggle';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
+import isLive from '#lib/utilities/isLive';
 import TopicImage from './TopicImage';
 import TopicTitle from './TopicTitle';
 import TopicDescription from './TopicDescription';
@@ -116,10 +117,12 @@ const TopicPage = ({ pageData }) => {
         />
         <TitleWrapper>
           <InlineWrapper>
-            {imageData && <TopicImage image={imageData.url} />}
+            {!isLive() && imageData && <TopicImage image={imageData.url} />}
             <TopicTitle>{title}</TopicTitle>
           </InlineWrapper>
-          {description && <TopicDescription>{description}</TopicDescription>}
+          {!isLive() && description && (
+            <TopicDescription>{description}</TopicDescription>
+          )}
         </TitleWrapper>
         <Curation
           visualStyle={VISUAL_STYLE.NONE}
