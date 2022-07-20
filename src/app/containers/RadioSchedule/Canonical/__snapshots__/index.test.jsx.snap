@@ -35,7 +35,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 .emotion-3 {
   position: relative;
   z-index: 0;
-  color: #3F3F42;
+  color: #141414;
   margin-top: 2rem;
   margin: 0 auto;
   width: 100%;
@@ -69,28 +69,11 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 .emotion-5 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-@media screen and (-ms-high-contrast: active) {
-  .emotion-5 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-5 {
-    display: none;
-  }
-}
-
-.emotion-7 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-9 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -100,7 +83,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   flex-direction: column;
 }
 
-.emotion-11 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -120,7 +103,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-11 {
+  .emotion-9 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -128,11 +111,11 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   }
 }
 
-.emotion-13 {
+.emotion-11 {
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   background-color: #F2F2F2;
   margin: 1rem 0;
@@ -148,75 +131,75 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-13 {
+  .emotion-11 {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-13 {
+  .emotion-11 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-13 {
+  .emotion-11 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-13 {
+  .emotion-11 {
     padding-left: 1rem;
   }
 }
 
-.emotion-15 {
+.emotion-13 {
   margin: 0 auto;
   width: 100%;
   padding-bottom: 1rem;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-13 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-15 {
+  .emotion-13 {
     max-width: 63rem;
     padding-bottom: 1.5rem;
   }
 }
 
-.emotion-18 {
+.emotion-16 {
   padding: 0;
   margin: 0;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-18 {
+  .emotion-16 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-18 {
+  .emotion-16 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-16 {
     padding: 0 1rem;
   }
 }
 
 @supports (display: grid) {
-  .emotion-18 {
+  .emotion-16 {
     display: grid;
     position: initial;
     width: initial;
@@ -224,7 +207,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-18 {
+    .emotion-16 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
       grid-column-gap: 0.5rem;
@@ -233,7 +216,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-18 {
+    .emotion-16 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
       grid-column-gap: 0.5rem;
@@ -242,7 +225,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-18 {
+    .emotion-16 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -251,7 +234,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-18 {
+    .emotion-16 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -259,7 +242,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-18 {
+    .emotion-16 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -267,7 +250,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   }
 
   @media (min-width: 80rem) {
-    .emotion-18 {
+    .emotion-16 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -276,18 +259,18 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 @media (max-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-16 {
     padding: 0;
   }
 }
 
-.emotion-21 {
+.emotion-19 {
   position: relative;
   padding-bottom: 1rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-21 {
+  .emotion-19 {
     width: calc(4/4*(100% - 4 * 0.5rem) + 3 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -296,7 +279,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-21 {
+  .emotion-19 {
     width: calc(4/4*(100% - 4 * 0.5rem) + 3 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -305,7 +288,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-21 {
+  .emotion-19 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -314,7 +297,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-21 {
+  .emotion-19 {
     width: calc(3/6*(100% - 6 * 1rem) + 2 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -323,7 +306,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-21 {
+  .emotion-19 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -332,7 +315,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 @media (min-width: 80rem) {
-  .emotion-21 {
+  .emotion-19 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -341,49 +324,49 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 @supports (display: grid) {
-  .emotion-21 {
+  .emotion-19 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-21 {
+    .emotion-19 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-21 {
+    .emotion-19 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-21 {
+    .emotion-19 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-21 {
+    .emotion-19 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-21 {
+    .emotion-19 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-21 {
+    .emotion-19 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
@@ -391,7 +374,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-21 {
+  .emotion-19 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -402,8 +385,19 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   }
 }
 
-.emotion-23 {
+.emotion-21 {
   padding-bottom: 0.5rem;
+}
+
+.emotion-23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-25 {
@@ -415,34 +409,23 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.emotion-27 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   padding-left: 0.25rem;
 }
 
-.emotion-27>svg {
+.emotion-25>svg {
   color: #5A5A5A;
   margin: 0;
   overflow: visible;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-27>svg {
+  .emotion-25>svg {
     padding-left: 0.25rem;
     fill: canvasText;
   }
 }
 
-.emotion-29 {
+.emotion-27 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -451,7 +434,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   height: 0.725rem;
 }
 
-.emotion-31 {
+.emotion-29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -466,7 +449,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   width: 100%;
 }
 
-.emotion-31>time {
+.emotion-29>time {
   color: #5A5A5A;
   font-size: 0.75rem;
   line-height: 1.125rem;
@@ -476,20 +459,20 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-31>time {
+  .emotion-29>time {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-31>time {
+  .emotion-29>time {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
-.emotion-31::after {
+.emotion-29::after {
   content: '';
   border-top: 0.0625rem solid #AEAEB5;
   top: 1.0625rem;
@@ -497,10 +480,10 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   width: 100%;
 }
 
-.emotion-33 {
+.emotion-31 {
   font-size: 0.875rem;
   line-height: 1.25rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
@@ -508,20 +491,20 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-33 {
+  .emotion-31 {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-33 {
+  .emotion-31 {
     font-size: 0.8125rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-35 {
+.emotion-33 {
   padding-top: 0.5rem;
   background-color: #FFFFFF;
   display: -webkit-box;
@@ -535,7 +518,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   height: 100%;
 }
 
-.emotion-37 {
+.emotion-35 {
   padding: 0 0.5rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -543,7 +526,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   flex-grow: 1;
 }
 
-.emotion-39 {
+.emotion-37 {
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -554,20 +537,20 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-39 {
+  .emotion-37 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-39 {
+  .emotion-37 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-41 {
+.emotion-39 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -578,7 +561,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   margin: 0;
 }
 
-.emotion-43 {
+.emotion-41 {
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -590,20 +573,20 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-43 {
+  .emotion-41 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-43 {
+  .emotion-41 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-47 {
+.emotion-45 {
   color: #6E6E73;
   padding: 0.5rem 0;
   display: inline-block;
@@ -616,20 +599,20 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-47 {
+  .emotion-45 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-47 {
+  .emotion-45 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-51 {
+.emotion-49 {
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -641,20 +624,20 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-51 {
+  .emotion-49 {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-51 {
+  .emotion-49 {
     font-size: 0.8125rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-53 {
+.emotion-51 {
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -667,27 +650,27 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-53 {
+  .emotion-51 {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-53 {
+  .emotion-51 {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
 @media screen and (-ms-high-contrast: active) {
-  .emotion-53 {
+  .emotion-51 {
     background-color: transparent;
     outline: none;
   }
 }
 
-.emotion-55>svg {
+.emotion-53>svg {
   color: #11708C;
   fill: currentColor;
   width: 1.0625rem;
@@ -696,12 +679,12 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-55>svg {
+  .emotion-53>svg {
     fill: canvasText;
   }
 }
 
-.emotion-57 {
+.emotion-55 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -710,11 +693,11 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   height: 0.75rem;
 }
 
-.emotion-59 {
+.emotion-57 {
   padding-right: 0.5rem;
 }
 
-.emotion-80 {
+.emotion-78 {
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -725,20 +708,20 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-80 {
+  .emotion-78 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-80 {
+  .emotion-78 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-82 {
+.emotion-80 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -746,7 +729,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   overflow-wrap: break-word;
 }
 
-.emotion-82:before {
+.emotion-80:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -758,27 +741,27 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   z-index: 1;
 }
 
-.emotion-82:hover,
-.emotion-82:focus {
+.emotion-80:hover,
+.emotion-80:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-82:visited {
+.emotion-80:visited {
   color: #6E6E73;
 }
 
-.emotion-82:hover .emotion-48 {
+.emotion-80:hover .emotion-46 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-82:focus .emotion-48 {
+.emotion-80:focus .emotion-46 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-88 {
+.emotion-86 {
   color: #3F3F42;
   padding: 0.5rem 0;
   display: inline-block;
@@ -791,20 +774,20 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-88 {
+  .emotion-86 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-88 {
+  .emotion-86 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-94 {
+.emotion-92 {
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -817,27 +800,27 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-94 {
+  .emotion-92 {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-94 {
+  .emotion-92 {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
 @media screen and (-ms-high-contrast: active) {
-  .emotion-94 {
+  .emotion-92 {
     background-color: transparent;
     outline: none;
   }
 }
 
-.emotion-96>svg {
+.emotion-94>svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -846,12 +829,12 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-96>svg {
+  .emotion-94>svg {
     fill: canvasText;
   }
 }
 
-.emotion-184 {
+.emotion-182 {
   font-size: 0.9375rem;
   line-height: 1.375rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -863,26 +846,26 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-184 {
+  .emotion-182 {
     font-size: 0.9375rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-184 {
+  .emotion-182 {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }
 
-.emotion-184:hover,
-.emotion-184:focus {
+.emotion-182:hover,
+.emotion-182:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-184:visited {
+.emotion-182:visited {
   color: #6E6E73;
 }
 
@@ -895,20 +878,17 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
     <div
       class="emotion-2 emotion-3 emotion-4"
     >
-      <div
-        class="emotion-5 emotion-6"
-      />
       <h2
-        class="emotion-7 emotion-8"
+        class="emotion-5 emotion-6"
       >
         <span
-          class="emotion-9 emotion-10"
+          class="emotion-7 emotion-8"
         >
           <span
-            class="emotion-11 emotion-12"
+            class="emotion-9 emotion-10"
           >
             <span
-              class="emotion-13 emotion-14"
+              class="emotion-11 emotion-12"
               dir="rtl"
               id="Radio-Schedule"
             >
@@ -919,33 +899,33 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
       </h2>
     </div>
     <div
-      class="emotion-15 emotion-16"
+      class="emotion-13 emotion-14"
       data-e2e="radio-schedule"
     >
       <div
-        class="emotion-17 emotion-18 emotion-19"
+        class="emotion-15 emotion-16 emotion-17"
         dir="rtl"
         role="list"
       >
         <li
-          class="emotion-20 emotion-21 emotion-19"
+          class="emotion-18 emotion-19 emotion-17"
           data-e2e="next"
           dir="rtl"
           role="listitem"
         >
           <div
-            class="emotion-23 emotion-24"
+            class="emotion-21 emotion-22"
           >
             <div
-              class="emotion-25 emotion-26"
+              class="emotion-23 emotion-24"
             >
               <span
-                class="emotion-27 emotion-28"
+                class="emotion-25 emotion-26"
                 dir="rtl"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-29 emotion-30"
+                  class="emotion-27 emotion-28"
                   focusable="false"
                   height="13"
                   viewBox="0 0 13 13"
@@ -961,11 +941,11 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               </span>
               <span
                 aria-hidden="true"
-                class="emotion-31 emotion-32"
+                class="emotion-29 emotion-30"
                 dir="rtl"
               >
                 <time
-                  class="emotion-33 emotion-34"
+                  class="emotion-31 emotion-32"
                   datetime="2030-01-01"
                 >
                   09:00
@@ -974,63 +954,63 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             </div>
           </div>
           <div
-            class="emotion-35 emotion-36"
+            class="emotion-33 emotion-34"
           >
             <div
-              class="emotion-37 emotion-38"
+              class="emotion-35 emotion-36"
             >
               <h3
-                class="emotion-39 emotion-40"
+                class="emotion-37 emotion-38"
               >
                 <span
                   id="scheduleItem-p086pmsd"
                   role="text"
                 >
                   <span
-                    class="emotion-41 emotion-42"
+                    class="emotion-39 emotion-40"
                   >
                     واصل الاستماع, 
                   </span>
                   <span
                     aria-hidden="true"
-                    class="emotion-43 emotion-44"
+                    class="emotion-41 emotion-42"
                     dir="rtl"
                   >
                     لاحق 
                   </span>
                   العالم هذا الصباح
                   <span
-                    class="emotion-41 emotion-42"
+                    class="emotion-39 emotion-40"
                   >
                     , 09:00, 
                   </span>
                   <span
-                    class="emotion-47 emotion-48"
+                    class="emotion-45 emotion-46"
                   >
                     1 يناير/ كانون الثاني 2030
                   </span>
                   <span
-                    class="emotion-41 emotion-42"
+                    class="emotion-39 emotion-40"
                   >
                     , المدة 1،30،30 
                   </span>
                 </span>
               </h3>
               <p
-                class="emotion-51 emotion-52"
+                class="emotion-49 emotion-50"
               >
                 الفترة الإخبارية الرئيسية كل صباح على مدى أربع ساعات وتتناول أهم الأخبار والموضوعات الأقليمية والدولية بالتغطية والتحليل.
               </p>
             </div>
             <div
-              class="emotion-53 emotion-54"
+              class="emotion-51 emotion-52"
             >
               <span
-                class="emotion-55 emotion-56"
+                class="emotion-53 emotion-54"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-57 emotion-58"
+                  class="emotion-55 emotion-56"
                   focusable="false"
                   height="12px"
                   viewBox="0 0 13 12"
@@ -1045,7 +1025,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                 </svg>
               </span>
               <time
-                class="emotion-59 emotion-60"
+                class="emotion-57 emotion-58"
                 datetime="PT1H30M30S"
                 dir="rtl"
               >
@@ -1059,24 +1039,24 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
           </div>
         </li>
         <li
-          class="emotion-20 emotion-21 emotion-19"
+          class="emotion-18 emotion-19 emotion-17"
           data-e2e="onDemand"
           dir="rtl"
           role="listitem"
         >
           <div
-            class="emotion-23 emotion-24"
+            class="emotion-21 emotion-22"
           >
             <div
-              class="emotion-25 emotion-26"
+              class="emotion-23 emotion-24"
             >
               <span
-                class="emotion-27 emotion-28"
+                class="emotion-25 emotion-26"
                 dir="rtl"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-29 emotion-30"
+                  class="emotion-27 emotion-28"
                   focusable="false"
                   height="13"
                   viewBox="0 0 13 13"
@@ -1092,11 +1072,11 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               </span>
               <span
                 aria-hidden="true"
-                class="emotion-31 emotion-32"
+                class="emotion-29 emotion-30"
                 dir="rtl"
               >
                 <time
-                  class="emotion-33 emotion-34"
+                  class="emotion-31 emotion-32"
                   datetime="2020-03-26"
                 >
                   02:59
@@ -1105,17 +1085,17 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             </div>
           </div>
           <div
-            class="emotion-35 emotion-36"
+            class="emotion-33 emotion-34"
           >
             <div
-              class="emotion-37 emotion-38"
+              class="emotion-35 emotion-36"
             >
               <h3
-                class="emotion-80 emotion-40"
+                class="emotion-78 emotion-38"
               >
                 <a
                   aria-labelledby="scheduleItem-p086pjpz"
-                  class="emotion-82 emotion-83"
+                  class="emotion-80 emotion-81"
                   href="/arabic/bbc_arabic_radio/w172x9qcpbyctzs"
                 >
                   <span
@@ -1123,23 +1103,23 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                     role="text"
                   >
                     <span
-                      class="emotion-41 emotion-42"
+                      class="emotion-39 emotion-40"
                     >
                       استمع, 
                     </span>
                     العالم هذا الصباح
                     <span
-                      class="emotion-41 emotion-42"
+                      class="emotion-39 emotion-40"
                     >
                       , 02:59, 
                     </span>
                     <span
-                      class="emotion-88 emotion-48"
+                      class="emotion-86 emotion-46"
                     >
                       26 مارس/ آذار 2020
                     </span>
                     <span
-                      class="emotion-41 emotion-42"
+                      class="emotion-39 emotion-40"
                     >
                       , المدة 2،00،00 
                     </span>
@@ -1147,20 +1127,20 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                 </a>
               </h3>
               <p
-                class="emotion-51 emotion-52"
+                class="emotion-49 emotion-50"
               >
                 الفترة الإخبارية الرئيسية كل صباح على مدى أربع ساعات وتتناول أهم الأخبار والموضوعات الأقليمية والدولية بالتغطية والتحليل.
               </p>
             </div>
             <div
-              class="emotion-94 emotion-54"
+              class="emotion-92 emotion-52"
             >
               <span
-                class="emotion-96 emotion-56"
+                class="emotion-94 emotion-54"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-57 emotion-58"
+                  class="emotion-55 emotion-56"
                   focusable="false"
                   height="12px"
                   viewBox="0 0 13 12"
@@ -1175,7 +1155,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                 </svg>
               </span>
               <time
-                class="emotion-59 emotion-60"
+                class="emotion-57 emotion-58"
                 datetime="PT2H"
                 dir="rtl"
               >
@@ -1189,24 +1169,24 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
           </div>
         </li>
         <li
-          class="emotion-20 emotion-21 emotion-19"
+          class="emotion-18 emotion-19 emotion-17"
           data-e2e="onDemand"
           dir="rtl"
           role="listitem"
         >
           <div
-            class="emotion-23 emotion-24"
+            class="emotion-21 emotion-22"
           >
             <div
-              class="emotion-25 emotion-26"
+              class="emotion-23 emotion-24"
             >
               <span
-                class="emotion-27 emotion-28"
+                class="emotion-25 emotion-26"
                 dir="rtl"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-29 emotion-30"
+                  class="emotion-27 emotion-28"
                   focusable="false"
                   height="13"
                   viewBox="0 0 13 13"
@@ -1222,11 +1202,11 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               </span>
               <span
                 aria-hidden="true"
-                class="emotion-31 emotion-32"
+                class="emotion-29 emotion-30"
                 dir="rtl"
               >
                 <time
-                  class="emotion-33 emotion-34"
+                  class="emotion-31 emotion-32"
                   datetime="2020-03-26"
                 >
                   02:30
@@ -1235,17 +1215,17 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             </div>
           </div>
           <div
-            class="emotion-35 emotion-36"
+            class="emotion-33 emotion-34"
           >
             <div
-              class="emotion-37 emotion-38"
+              class="emotion-35 emotion-36"
             >
               <h3
-                class="emotion-80 emotion-40"
+                class="emotion-78 emotion-38"
               >
                 <a
                   aria-labelledby="scheduleItem-p086pjpx"
-                  class="emotion-82 emotion-83"
+                  class="emotion-80 emotion-81"
                   href="/arabic/bbc_arabic_radio/w172xbf7kbvtt4h"
                 >
                   <span
@@ -1253,23 +1233,23 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                     role="text"
                   >
                     <span
-                      class="emotion-41 emotion-42"
+                      class="emotion-39 emotion-40"
                     >
                       استمع, 
                     </span>
                     موجز الأنباء
                     <span
-                      class="emotion-41 emotion-42"
+                      class="emotion-39 emotion-40"
                     >
                       , 02:30, 
                     </span>
                     <span
-                      class="emotion-88 emotion-48"
+                      class="emotion-86 emotion-46"
                     >
                       26 مارس/ آذار 2020
                     </span>
                     <span
-                      class="emotion-41 emotion-42"
+                      class="emotion-39 emotion-40"
                     >
                       , المدة 02،00 
                     </span>
@@ -1277,20 +1257,20 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                 </a>
               </h3>
               <p
-                class="emotion-51 emotion-52"
+                class="emotion-49 emotion-50"
               >
                 نشرة موجزة في دقيقتين لأهم الأنباء الأقليمية والدولية
               </p>
             </div>
             <div
-              class="emotion-94 emotion-54"
+              class="emotion-92 emotion-52"
             >
               <span
-                class="emotion-96 emotion-56"
+                class="emotion-94 emotion-54"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-57 emotion-58"
+                  class="emotion-55 emotion-56"
                   focusable="false"
                   height="12px"
                   viewBox="0 0 13 12"
@@ -1305,7 +1285,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                 </svg>
               </span>
               <time
-                class="emotion-59 emotion-60"
+                class="emotion-57 emotion-58"
                 datetime="PT2M"
                 dir="rtl"
               >
@@ -1319,24 +1299,24 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
           </div>
         </li>
         <li
-          class="emotion-20 emotion-21 emotion-19"
+          class="emotion-18 emotion-19 emotion-17"
           data-e2e="onDemand"
           dir="rtl"
           role="listitem"
         >
           <div
-            class="emotion-23 emotion-24"
+            class="emotion-21 emotion-22"
           >
             <div
-              class="emotion-25 emotion-26"
+              class="emotion-23 emotion-24"
             >
               <span
-                class="emotion-27 emotion-28"
+                class="emotion-25 emotion-26"
                 dir="rtl"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-29 emotion-30"
+                  class="emotion-27 emotion-28"
                   focusable="false"
                   height="13"
                   viewBox="0 0 13 13"
@@ -1352,11 +1332,11 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               </span>
               <span
                 aria-hidden="true"
-                class="emotion-31 emotion-32"
+                class="emotion-29 emotion-30"
                 dir="rtl"
               >
                 <time
-                  class="emotion-33 emotion-34"
+                  class="emotion-31 emotion-32"
                   datetime="2020-03-26"
                 >
                   02:00
@@ -1365,17 +1345,17 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             </div>
           </div>
           <div
-            class="emotion-35 emotion-36"
+            class="emotion-33 emotion-34"
           >
             <div
-              class="emotion-37 emotion-38"
+              class="emotion-35 emotion-36"
             >
               <h3
-                class="emotion-80 emotion-40"
+                class="emotion-78 emotion-38"
               >
                 <a
                   aria-labelledby="scheduleItem-p086pjpp"
-                  class="emotion-82 emotion-83"
+                  class="emotion-80 emotion-81"
                   href="/arabic/bbc_arabic_radio/w172xbdf3m84fx2"
                 >
                   <span
@@ -1383,23 +1363,23 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                     role="text"
                   >
                     <span
-                      class="emotion-41 emotion-42"
+                      class="emotion-39 emotion-40"
                     >
                       استمع, 
                     </span>
                     نشرة الأخبار
                     <span
-                      class="emotion-41 emotion-42"
+                      class="emotion-39 emotion-40"
                     >
                       , 02:00, 
                     </span>
                     <span
-                      class="emotion-88 emotion-48"
+                      class="emotion-86 emotion-46"
                     >
                       26 مارس/ آذار 2020
                     </span>
                     <span
-                      class="emotion-41 emotion-42"
+                      class="emotion-39 emotion-40"
                     >
                       , المدة 06،00 
                     </span>
@@ -1407,20 +1387,20 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                 </a>
               </h3>
               <p
-                class="emotion-51 emotion-52"
+                class="emotion-49 emotion-50"
               >
                 نشرة اخبارية على رأس الساعة تركز على أهم أخبار المنطقة والعالم وتتضمن تصريحات المسؤولين وإفادات مراسلينا
               </p>
             </div>
             <div
-              class="emotion-94 emotion-54"
+              class="emotion-92 emotion-52"
             >
               <span
-                class="emotion-96 emotion-56"
+                class="emotion-94 emotion-54"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-57 emotion-58"
+                  class="emotion-55 emotion-56"
                   focusable="false"
                   height="12px"
                   viewBox="0 0 13 12"
@@ -1435,7 +1415,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                 </svg>
               </span>
               <time
-                class="emotion-59 emotion-60"
+                class="emotion-57 emotion-58"
                 datetime="PT6M"
                 dir="rtl"
               >
@@ -1450,7 +1430,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
         </li>
       </div>
       <a
-        class="emotion-184 emotion-185"
+        class="emotion-182 emotion-183"
         href="/arabic/tv-and-radio-57895092"
       >
         استقبال البث
@@ -1495,7 +1475,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 .emotion-3 {
   position: relative;
   z-index: 0;
-  color: #3F3F42;
+  color: #141414;
   margin-top: 2rem;
   margin: 0 auto;
   width: 100%;
@@ -1529,28 +1509,11 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 .emotion-5 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-@media screen and (-ms-high-contrast: active) {
-  .emotion-5 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-5 {
-    display: none;
-  }
-}
-
-.emotion-7 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-9 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1560,7 +1523,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   flex-direction: column;
 }
 
-.emotion-11 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1580,7 +1543,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-11 {
+  .emotion-9 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -1588,11 +1551,11 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   }
 }
 
-.emotion-13 {
+.emotion-11 {
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   background-color: #F2F2F2;
   margin: 1rem 0;
@@ -1608,75 +1571,75 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-13 {
+  .emotion-11 {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-13 {
+  .emotion-11 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-13 {
+  .emotion-11 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-13 {
+  .emotion-11 {
     padding-left: 1rem;
   }
 }
 
-.emotion-15 {
+.emotion-13 {
   margin: 0 auto;
   width: 100%;
   padding-bottom: 1rem;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-13 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-15 {
+  .emotion-13 {
     max-width: 63rem;
     padding-bottom: 1.5rem;
   }
 }
 
-.emotion-18 {
+.emotion-16 {
   padding: 0;
   margin: 0;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-18 {
+  .emotion-16 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-18 {
+  .emotion-16 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-16 {
     padding: 0 1rem;
   }
 }
 
 @supports (display: grid) {
-  .emotion-18 {
+  .emotion-16 {
     display: grid;
     position: initial;
     width: initial;
@@ -1684,7 +1647,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-18 {
+    .emotion-16 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
       grid-column-gap: 0.5rem;
@@ -1693,7 +1656,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-18 {
+    .emotion-16 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
       grid-column-gap: 0.5rem;
@@ -1702,7 +1665,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-18 {
+    .emotion-16 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1711,7 +1674,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-18 {
+    .emotion-16 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -1719,7 +1682,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-18 {
+    .emotion-16 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -1727,7 +1690,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   }
 
   @media (min-width: 80rem) {
-    .emotion-18 {
+    .emotion-16 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -1736,18 +1699,18 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 @media (max-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-16 {
     padding: 0;
   }
 }
 
-.emotion-21 {
+.emotion-19 {
   position: relative;
   padding-bottom: 1rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-21 {
+  .emotion-19 {
     width: calc(4/4*(100% - 4 * 0.5rem) + 3 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -1756,7 +1719,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-21 {
+  .emotion-19 {
     width: calc(4/4*(100% - 4 * 0.5rem) + 3 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -1765,7 +1728,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-21 {
+  .emotion-19 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -1774,7 +1737,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-21 {
+  .emotion-19 {
     width: calc(3/6*(100% - 6 * 1rem) + 2 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -1783,7 +1746,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-21 {
+  .emotion-19 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -1792,7 +1755,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 @media (min-width: 80rem) {
-  .emotion-21 {
+  .emotion-19 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -1801,49 +1764,49 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 @supports (display: grid) {
-  .emotion-21 {
+  .emotion-19 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-21 {
+    .emotion-19 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-21 {
+    .emotion-19 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-21 {
+    .emotion-19 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-21 {
+    .emotion-19 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-21 {
+    .emotion-19 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-21 {
+    .emotion-19 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
@@ -1851,7 +1814,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-21 {
+  .emotion-19 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1862,8 +1825,19 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   }
 }
 
-.emotion-23 {
+.emotion-21 {
   padding-bottom: 0.5rem;
+}
+
+.emotion-23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-25 {
@@ -1875,34 +1849,23 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.emotion-27 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   padding-left: 0.25rem;
 }
 
-.emotion-27>svg {
+.emotion-25>svg {
   color: #5A5A5A;
   margin: 0;
   overflow: visible;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-27>svg {
+  .emotion-25>svg {
     padding-left: 0.25rem;
     fill: canvasText;
   }
 }
 
-.emotion-29 {
+.emotion-27 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -1911,7 +1874,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   height: 0.725rem;
 }
 
-.emotion-31 {
+.emotion-29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1926,7 +1889,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   width: 100%;
 }
 
-.emotion-31>time {
+.emotion-29>time {
   color: #5A5A5A;
   font-size: 0.75rem;
   line-height: 1.125rem;
@@ -1936,20 +1899,20 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-31>time {
+  .emotion-29>time {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-31>time {
+  .emotion-29>time {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
-.emotion-31::after {
+.emotion-29::after {
   content: '';
   border-top: 0.0625rem solid #AEAEB5;
   top: 1.0625rem;
@@ -1957,10 +1920,10 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   width: 100%;
 }
 
-.emotion-33 {
+.emotion-31 {
   font-size: 0.875rem;
   line-height: 1.25rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
@@ -1968,20 +1931,20 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-33 {
+  .emotion-31 {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-33 {
+  .emotion-31 {
     font-size: 0.8125rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-35 {
+.emotion-33 {
   padding-top: 0.5rem;
   background-color: #FFFFFF;
   display: -webkit-box;
@@ -1995,7 +1958,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   height: 100%;
 }
 
-.emotion-37 {
+.emotion-35 {
   padding: 0 0.5rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -2003,7 +1966,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   flex-grow: 1;
 }
 
-.emotion-39 {
+.emotion-37 {
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -2014,20 +1977,20 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-39 {
+  .emotion-37 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-39 {
+  .emotion-37 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-41 {
+.emotion-39 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -2038,7 +2001,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   margin: 0;
 }
 
-.emotion-43 {
+.emotion-41 {
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -2050,20 +2013,20 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-43 {
+  .emotion-41 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-43 {
+  .emotion-41 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-47 {
+.emotion-45 {
   color: #6E6E73;
   padding: 0.5rem 0;
   display: inline-block;
@@ -2076,20 +2039,20 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-47 {
+  .emotion-45 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-47 {
+  .emotion-45 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-51 {
+.emotion-49 {
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -2101,20 +2064,20 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-51 {
+  .emotion-49 {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-51 {
+  .emotion-49 {
     font-size: 0.8125rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-53 {
+.emotion-51 {
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -2127,27 +2090,27 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-53 {
+  .emotion-51 {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-53 {
+  .emotion-51 {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
 @media screen and (-ms-high-contrast: active) {
-  .emotion-53 {
+  .emotion-51 {
     background-color: transparent;
     outline: none;
   }
 }
 
-.emotion-55>svg {
+.emotion-53>svg {
   color: #11708C;
   fill: currentColor;
   width: 1.0625rem;
@@ -2156,12 +2119,12 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-55>svg {
+  .emotion-53>svg {
     fill: canvasText;
   }
 }
 
-.emotion-57 {
+.emotion-55 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -2170,11 +2133,11 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   height: 0.75rem;
 }
 
-.emotion-59 {
+.emotion-57 {
   padding-right: 0.5rem;
 }
 
-.emotion-80 {
+.emotion-78 {
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -2185,20 +2148,20 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-80 {
+  .emotion-78 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-80 {
+  .emotion-78 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-82 {
+.emotion-80 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -2206,7 +2169,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   overflow-wrap: break-word;
 }
 
-.emotion-82:before {
+.emotion-80:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -2218,27 +2181,27 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   z-index: 1;
 }
 
-.emotion-82:hover,
-.emotion-82:focus {
+.emotion-80:hover,
+.emotion-80:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-82:visited {
+.emotion-80:visited {
   color: #6E6E73;
 }
 
-.emotion-82:hover .emotion-48 {
+.emotion-80:hover .emotion-46 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-82:focus .emotion-48 {
+.emotion-80:focus .emotion-46 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-88 {
+.emotion-86 {
   color: #3F3F42;
   padding: 0.5rem 0;
   display: inline-block;
@@ -2251,20 +2214,20 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-88 {
+  .emotion-86 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-88 {
+  .emotion-86 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-94 {
+.emotion-92 {
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -2277,27 +2240,27 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-94 {
+  .emotion-92 {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-94 {
+  .emotion-92 {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
 @media screen and (-ms-high-contrast: active) {
-  .emotion-94 {
+  .emotion-92 {
     background-color: transparent;
     outline: none;
   }
 }
 
-.emotion-96>svg {
+.emotion-94>svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -2306,12 +2269,12 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-96>svg {
+  .emotion-94>svg {
     fill: canvasText;
   }
 }
 
-.emotion-184 {
+.emotion-182 {
   font-size: 0.9375rem;
   line-height: 1.375rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -2323,26 +2286,26 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-184 {
+  .emotion-182 {
     font-size: 0.9375rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-184 {
+  .emotion-182 {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }
 
-.emotion-184:hover,
-.emotion-184:focus {
+.emotion-182:hover,
+.emotion-182:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-184:visited {
+.emotion-182:visited {
   color: #6E6E73;
 }
 
@@ -2355,20 +2318,17 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
     <div
       class="emotion-2 emotion-3 emotion-4"
     >
-      <div
-        class="emotion-5 emotion-6"
-      />
       <h2
-        class="emotion-7 emotion-8"
+        class="emotion-5 emotion-6"
       >
         <span
-          class="emotion-9 emotion-10"
+          class="emotion-7 emotion-8"
         >
           <span
-            class="emotion-11 emotion-12"
+            class="emotion-9 emotion-10"
           >
             <span
-              class="emotion-13 emotion-14"
+              class="emotion-11 emotion-12"
               dir="rtl"
               id="Radio-Schedule"
             >
@@ -2379,33 +2339,33 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
       </h2>
     </div>
     <div
-      class="emotion-15 emotion-16"
+      class="emotion-13 emotion-14"
       data-e2e="radio-schedule"
     >
       <div
-        class="emotion-17 emotion-18 emotion-19"
+        class="emotion-15 emotion-16 emotion-17"
         dir="rtl"
         role="list"
       >
         <li
-          class="emotion-20 emotion-21 emotion-19"
+          class="emotion-18 emotion-19 emotion-17"
           data-e2e="next"
           dir="rtl"
           role="listitem"
         >
           <div
-            class="emotion-23 emotion-24"
+            class="emotion-21 emotion-22"
           >
             <div
-              class="emotion-25 emotion-26"
+              class="emotion-23 emotion-24"
             >
               <span
-                class="emotion-27 emotion-28"
+                class="emotion-25 emotion-26"
                 dir="rtl"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-29 emotion-30"
+                  class="emotion-27 emotion-28"
                   focusable="false"
                   height="13"
                   viewBox="0 0 13 13"
@@ -2421,11 +2381,11 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
               </span>
               <span
                 aria-hidden="true"
-                class="emotion-31 emotion-32"
+                class="emotion-29 emotion-30"
                 dir="rtl"
               >
                 <time
-                  class="emotion-33 emotion-34"
+                  class="emotion-31 emotion-32"
                   datetime="2030-01-01"
                 >
                   09:00
@@ -2434,63 +2394,63 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
             </div>
           </div>
           <div
-            class="emotion-35 emotion-36"
+            class="emotion-33 emotion-34"
           >
             <div
-              class="emotion-37 emotion-38"
+              class="emotion-35 emotion-36"
             >
               <h3
-                class="emotion-39 emotion-40"
+                class="emotion-37 emotion-38"
               >
                 <span
                   id="scheduleItem-p086pmsd"
                   role="text"
                 >
                   <span
-                    class="emotion-41 emotion-42"
+                    class="emotion-39 emotion-40"
                   >
                     واصل الاستماع, 
                   </span>
                   <span
                     aria-hidden="true"
-                    class="emotion-43 emotion-44"
+                    class="emotion-41 emotion-42"
                     dir="rtl"
                   >
                     لاحق 
                   </span>
                   العالم هذا الصباح
                   <span
-                    class="emotion-41 emotion-42"
+                    class="emotion-39 emotion-40"
                   >
                     , 09:00, 
                   </span>
                   <span
-                    class="emotion-47 emotion-48"
+                    class="emotion-45 emotion-46"
                   >
                     1 يناير/ كانون الثاني 2030
                   </span>
                   <span
-                    class="emotion-41 emotion-42"
+                    class="emotion-39 emotion-40"
                   >
                     , المدة 1،30،30 
                   </span>
                 </span>
               </h3>
               <p
-                class="emotion-51 emotion-52"
+                class="emotion-49 emotion-50"
               >
                 الفترة الإخبارية الرئيسية كل صباح على مدى أربع ساعات وتتناول أهم الأخبار والموضوعات الأقليمية والدولية بالتغطية والتحليل.
               </p>
             </div>
             <div
-              class="emotion-53 emotion-54"
+              class="emotion-51 emotion-52"
             >
               <span
-                class="emotion-55 emotion-56"
+                class="emotion-53 emotion-54"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-57 emotion-58"
+                  class="emotion-55 emotion-56"
                   focusable="false"
                   height="12px"
                   viewBox="0 0 13 12"
@@ -2505,7 +2465,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
                 </svg>
               </span>
               <time
-                class="emotion-59 emotion-60"
+                class="emotion-57 emotion-58"
                 datetime="PT1H30M30S"
                 dir="rtl"
               >
@@ -2519,24 +2479,24 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
           </div>
         </li>
         <li
-          class="emotion-20 emotion-21 emotion-19"
+          class="emotion-18 emotion-19 emotion-17"
           data-e2e="onDemand"
           dir="rtl"
           role="listitem"
         >
           <div
-            class="emotion-23 emotion-24"
+            class="emotion-21 emotion-22"
           >
             <div
-              class="emotion-25 emotion-26"
+              class="emotion-23 emotion-24"
             >
               <span
-                class="emotion-27 emotion-28"
+                class="emotion-25 emotion-26"
                 dir="rtl"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-29 emotion-30"
+                  class="emotion-27 emotion-28"
                   focusable="false"
                   height="13"
                   viewBox="0 0 13 13"
@@ -2552,11 +2512,11 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
               </span>
               <span
                 aria-hidden="true"
-                class="emotion-31 emotion-32"
+                class="emotion-29 emotion-30"
                 dir="rtl"
               >
                 <time
-                  class="emotion-33 emotion-34"
+                  class="emotion-31 emotion-32"
                   datetime="2020-03-26"
                 >
                   02:59
@@ -2565,17 +2525,17 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
             </div>
           </div>
           <div
-            class="emotion-35 emotion-36"
+            class="emotion-33 emotion-34"
           >
             <div
-              class="emotion-37 emotion-38"
+              class="emotion-35 emotion-36"
             >
               <h3
-                class="emotion-80 emotion-40"
+                class="emotion-78 emotion-38"
               >
                 <a
                   aria-labelledby="scheduleItem-p086pjpz"
-                  class="emotion-82 emotion-83"
+                  class="emotion-80 emotion-81"
                   href="/arabic/bbc_arabic_radio/w172x9qcpbyctzs"
                 >
                   <span
@@ -2583,23 +2543,23 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
                     role="text"
                   >
                     <span
-                      class="emotion-41 emotion-42"
+                      class="emotion-39 emotion-40"
                     >
                       استمع, 
                     </span>
                     العالم هذا الصباح
                     <span
-                      class="emotion-41 emotion-42"
+                      class="emotion-39 emotion-40"
                     >
                       , 02:59, 
                     </span>
                     <span
-                      class="emotion-88 emotion-48"
+                      class="emotion-86 emotion-46"
                     >
                       26 مارس/ آذار 2020
                     </span>
                     <span
-                      class="emotion-41 emotion-42"
+                      class="emotion-39 emotion-40"
                     >
                       , المدة 2،00،00 
                     </span>
@@ -2607,20 +2567,20 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
                 </a>
               </h3>
               <p
-                class="emotion-51 emotion-52"
+                class="emotion-49 emotion-50"
               >
                 الفترة الإخبارية الرئيسية كل صباح على مدى أربع ساعات وتتناول أهم الأخبار والموضوعات الأقليمية والدولية بالتغطية والتحليل.
               </p>
             </div>
             <div
-              class="emotion-94 emotion-54"
+              class="emotion-92 emotion-52"
             >
               <span
-                class="emotion-96 emotion-56"
+                class="emotion-94 emotion-54"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-57 emotion-58"
+                  class="emotion-55 emotion-56"
                   focusable="false"
                   height="12px"
                   viewBox="0 0 13 12"
@@ -2635,7 +2595,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
                 </svg>
               </span>
               <time
-                class="emotion-59 emotion-60"
+                class="emotion-57 emotion-58"
                 datetime="PT2H"
                 dir="rtl"
               >
@@ -2649,24 +2609,24 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
           </div>
         </li>
         <li
-          class="emotion-20 emotion-21 emotion-19"
+          class="emotion-18 emotion-19 emotion-17"
           data-e2e="onDemand"
           dir="rtl"
           role="listitem"
         >
           <div
-            class="emotion-23 emotion-24"
+            class="emotion-21 emotion-22"
           >
             <div
-              class="emotion-25 emotion-26"
+              class="emotion-23 emotion-24"
             >
               <span
-                class="emotion-27 emotion-28"
+                class="emotion-25 emotion-26"
                 dir="rtl"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-29 emotion-30"
+                  class="emotion-27 emotion-28"
                   focusable="false"
                   height="13"
                   viewBox="0 0 13 13"
@@ -2682,11 +2642,11 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
               </span>
               <span
                 aria-hidden="true"
-                class="emotion-31 emotion-32"
+                class="emotion-29 emotion-30"
                 dir="rtl"
               >
                 <time
-                  class="emotion-33 emotion-34"
+                  class="emotion-31 emotion-32"
                   datetime="2020-03-26"
                 >
                   02:30
@@ -2695,17 +2655,17 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
             </div>
           </div>
           <div
-            class="emotion-35 emotion-36"
+            class="emotion-33 emotion-34"
           >
             <div
-              class="emotion-37 emotion-38"
+              class="emotion-35 emotion-36"
             >
               <h3
-                class="emotion-80 emotion-40"
+                class="emotion-78 emotion-38"
               >
                 <a
                   aria-labelledby="scheduleItem-p086pjpx"
-                  class="emotion-82 emotion-83"
+                  class="emotion-80 emotion-81"
                   href="/arabic/bbc_arabic_radio/w172xbf7kbvtt4h"
                 >
                   <span
@@ -2713,23 +2673,23 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
                     role="text"
                   >
                     <span
-                      class="emotion-41 emotion-42"
+                      class="emotion-39 emotion-40"
                     >
                       استمع, 
                     </span>
                     موجز الأنباء
                     <span
-                      class="emotion-41 emotion-42"
+                      class="emotion-39 emotion-40"
                     >
                       , 02:30, 
                     </span>
                     <span
-                      class="emotion-88 emotion-48"
+                      class="emotion-86 emotion-46"
                     >
                       26 مارس/ آذار 2020
                     </span>
                     <span
-                      class="emotion-41 emotion-42"
+                      class="emotion-39 emotion-40"
                     >
                       , المدة 02،00 
                     </span>
@@ -2737,20 +2697,20 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
                 </a>
               </h3>
               <p
-                class="emotion-51 emotion-52"
+                class="emotion-49 emotion-50"
               >
                 نشرة موجزة في دقيقتين لأهم الأنباء الأقليمية والدولية
               </p>
             </div>
             <div
-              class="emotion-94 emotion-54"
+              class="emotion-92 emotion-52"
             >
               <span
-                class="emotion-96 emotion-56"
+                class="emotion-94 emotion-54"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-57 emotion-58"
+                  class="emotion-55 emotion-56"
                   focusable="false"
                   height="12px"
                   viewBox="0 0 13 12"
@@ -2765,7 +2725,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
                 </svg>
               </span>
               <time
-                class="emotion-59 emotion-60"
+                class="emotion-57 emotion-58"
                 datetime="PT2M"
                 dir="rtl"
               >
@@ -2779,24 +2739,24 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
           </div>
         </li>
         <li
-          class="emotion-20 emotion-21 emotion-19"
+          class="emotion-18 emotion-19 emotion-17"
           data-e2e="onDemand"
           dir="rtl"
           role="listitem"
         >
           <div
-            class="emotion-23 emotion-24"
+            class="emotion-21 emotion-22"
           >
             <div
-              class="emotion-25 emotion-26"
+              class="emotion-23 emotion-24"
             >
               <span
-                class="emotion-27 emotion-28"
+                class="emotion-25 emotion-26"
                 dir="rtl"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-29 emotion-30"
+                  class="emotion-27 emotion-28"
                   focusable="false"
                   height="13"
                   viewBox="0 0 13 13"
@@ -2812,11 +2772,11 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
               </span>
               <span
                 aria-hidden="true"
-                class="emotion-31 emotion-32"
+                class="emotion-29 emotion-30"
                 dir="rtl"
               >
                 <time
-                  class="emotion-33 emotion-34"
+                  class="emotion-31 emotion-32"
                   datetime="2020-03-26"
                 >
                   02:00
@@ -2825,17 +2785,17 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
             </div>
           </div>
           <div
-            class="emotion-35 emotion-36"
+            class="emotion-33 emotion-34"
           >
             <div
-              class="emotion-37 emotion-38"
+              class="emotion-35 emotion-36"
             >
               <h3
-                class="emotion-80 emotion-40"
+                class="emotion-78 emotion-38"
               >
                 <a
                   aria-labelledby="scheduleItem-p086pjpp"
-                  class="emotion-82 emotion-83"
+                  class="emotion-80 emotion-81"
                   href="/arabic/bbc_arabic_radio/w172xbdf3m84fx2"
                 >
                   <span
@@ -2843,23 +2803,23 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
                     role="text"
                   >
                     <span
-                      class="emotion-41 emotion-42"
+                      class="emotion-39 emotion-40"
                     >
                       استمع, 
                     </span>
                     نشرة الأخبار
                     <span
-                      class="emotion-41 emotion-42"
+                      class="emotion-39 emotion-40"
                     >
                       , 02:00, 
                     </span>
                     <span
-                      class="emotion-88 emotion-48"
+                      class="emotion-86 emotion-46"
                     >
                       26 مارس/ آذار 2020
                     </span>
                     <span
-                      class="emotion-41 emotion-42"
+                      class="emotion-39 emotion-40"
                     >
                       , المدة 06،00 
                     </span>
@@ -2867,20 +2827,20 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
                 </a>
               </h3>
               <p
-                class="emotion-51 emotion-52"
+                class="emotion-49 emotion-50"
               >
                 نشرة اخبارية على رأس الساعة تركز على أهم أخبار المنطقة والعالم وتتضمن تصريحات المسؤولين وإفادات مراسلينا
               </p>
             </div>
             <div
-              class="emotion-94 emotion-54"
+              class="emotion-92 emotion-52"
             >
               <span
-                class="emotion-96 emotion-56"
+                class="emotion-94 emotion-54"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-57 emotion-58"
+                  class="emotion-55 emotion-56"
                   focusable="false"
                   height="12px"
                   viewBox="0 0 13 12"
@@ -2895,7 +2855,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
                 </svg>
               </span>
               <time
-                class="emotion-59 emotion-60"
+                class="emotion-57 emotion-58"
                 datetime="PT6M"
                 dir="rtl"
               >
@@ -2910,7 +2870,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
         </li>
       </div>
       <a
-        class="emotion-184 emotion-185"
+        class="emotion-182 emotion-183"
         href="/arabic/tv-and-radio-57895092"
       >
         استقبال البث
