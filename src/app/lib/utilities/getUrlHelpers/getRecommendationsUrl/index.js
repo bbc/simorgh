@@ -1,9 +1,10 @@
 export default ({ assetUri, engine, engineVariant }) => {
-  if (engineVariant) {
-    return `${process.env.RECOMMENDATIONS_ENDPOINT}/recommendations${assetUri}?Engine=${engine}&EngineVariant=${engineVariant}`;
-  }
+  let queryParams = '';
   if (engine) {
-    return `${process.env.RECOMMENDATIONS_ENDPOINT}/recommendations${assetUri}?Engine=${engine}`;
+    queryParams += `?Engine=${engine}`;
+    if (engineVariant) {
+      queryParams += `&EngineVariant=${engineVariant}`;
+    }
   }
-  return `${process.env.RECOMMENDATIONS_ENDPOINT}/recommendations${assetUri}`;
+  return `${process.env.RECOMMENDATIONS_ENDPOINT}/recommendations${assetUri}${queryParams}`;
 };
