@@ -13,7 +13,7 @@ const pageData = {
   mostWatched: mostWatchedData.records.slice(0, 3).map(item => item.promo),
 };
 
-jest.mock('../../../containers/ChartbeatAnalytics', () => {
+jest.mock('../../legacy/containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });

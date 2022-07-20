@@ -6,7 +6,7 @@ import * as fetchPageData from '../../utils/fetchPageData';
 fetch.mockResponse(JSON.stringify(liveRadioJson));
 const { env } = process;
 const spy = jest.spyOn(fetchPageData, 'default');
-jest.mock('../../../utils/getConfig', () => jest.fn());
+jest.mock('../../utils/getConfig', () => jest.fn());
 
 describe('Get initial data for live radio', () => {
   afterEach(() => {

@@ -7,7 +7,7 @@ import radioScheduleJson from '#data/hausa/bbc_hausa_radio/schedule.json';
 import { FRONT_PAGE as pageType } from '#app/routes/utils/pageTypes';
 import getInitialData from '.';
 
-jest.mock('../../../utils/getConfig', () => jest.fn());
+jest.mock('../../utils/getConfig', () => jest.fn());
 
 describe('Get initial data from front page', () => {
   beforeEach(() => {

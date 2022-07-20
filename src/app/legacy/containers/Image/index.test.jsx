@@ -5,9 +5,9 @@ import {
   isNull,
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
+import { blockContainingText, blockArrayModel } from '#models/blocks';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ImageContainer from './index';
-import { blockContainingText, blockArrayModel } from '../../models/blocks';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
 describe('Image', () => {
   describe('with no data', () => {

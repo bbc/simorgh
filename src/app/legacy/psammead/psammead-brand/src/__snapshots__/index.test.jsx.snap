@@ -78,8 +78,8 @@ exports[`Brand should render correctly with link not provided 1`] = `
   }
 }
 
-.e1apilav1:hover .emotion-4,
-.e1apilav1:focus .emotion-4 {
+.e10yv9r11:hover .emotion-4,
+.e10yv9r11:focus .emotion-4 {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 0.25rem solid #FFFFFF;
@@ -379,8 +379,8 @@ exports[`Brand should render correctly with no service Localised Name 1`] = `
   }
 }
 
-.e1apilav1:hover .emotion-4,
-.e1apilav1:focus .emotion-4 {
+.e10yv9r11:hover .emotion-4,
+.e10yv9r11:focus .emotion-4 {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 0.25rem solid #FFFFFF;
@@ -512,8 +512,8 @@ exports[`Brand should render correctly with transparent borders 1`] = `
   }
 }
 
-.e1apilav1:hover .emotion-4,
-.e1apilav1:focus .emotion-4 {
+.e10yv9r11:hover .emotion-4,
+.e10yv9r11:focus .emotion-4 {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 0.25rem solid #FFFFFF;

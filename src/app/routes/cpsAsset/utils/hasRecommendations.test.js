@@ -2,7 +2,7 @@
 import hasRecommendations from './hasRecommendations';
 import getConfig from '../../utils/getConfig';
 
-jest.mock('../../../utils/getConfig', () => jest.fn());
+jest.mock('../../utils/getConfig', () => jest.fn());
 
 const pageDataAdvertising = {
   metadata: { options: { allowAdvertising: true } },

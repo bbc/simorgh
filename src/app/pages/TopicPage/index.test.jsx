@@ -7,7 +7,7 @@ import { ToggleContext } from '#contexts/ToggleContext';
 import TopicPage from './TopicPage';
 import { pidginMultipleItems, amharicSingleItem } from './fixtures';
 
-jest.mock('../../../containers/ChartbeatAnalytics', () => {
+jest.mock('../../legacy/containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });

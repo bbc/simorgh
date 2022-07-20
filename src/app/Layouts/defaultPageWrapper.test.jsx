@@ -9,7 +9,7 @@ jest.mock('#psammead/psammead-styles/src/global-styles', () => () => (
   <p>I am the GlobalStyles component</p>
 ));
 
-jest.mock('../containers/ServiceWorker', () => () => (
+jest.mock('../legacy/containers/ServiceWorker', () => () => (
   <p>I am the ServiceWorker component</p>
 ));
 

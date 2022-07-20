@@ -16,7 +16,7 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
   border-bottom: 0.0625rem solid transparent;
 }
 
-.emotion-0 .e1ibkbh72::after {
+.emotion-0 .e11sm0on2::after {
   left: 0;
 }
 

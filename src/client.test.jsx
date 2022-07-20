@@ -10,7 +10,7 @@ jest.mock('react-dom');
 
 jest.mock('react-router-dom');
 
-jest.mock('./app/containers/App');
+jest.mock('./app/legacy/containers/App');
 
 jest.mock('./app/routes', () => [{ path: '/foobar/articles/:id' }]);
 
