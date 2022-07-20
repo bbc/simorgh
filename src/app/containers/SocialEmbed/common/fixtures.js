@@ -90,15 +90,27 @@ export const instagramBlock = {
           oembed: {
             indexOfType: 0,
             version: '1.0',
-            author_name: 'BBC News',
-            author_url: 'https://instagram.com/BBCNews',
+            author_name: 'BBC Turkce',
+            author_url: 'https://www.instagram.com/bbcturkce/',
             provider_name: 'Instagram',
             provider_url: 'https://instagram.com',
             url: 'https://www.instagram.com/reel/CeWO3HcIE9w/?utm_source=ig_embed&ig_rid=b6b91062-7174-4784-9a99-139d52bc5b29',
-            html: '<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Greta Thunberg says meeting fellow climate campaigner Sir David Attenborough was &quot;indescribable&quot; <a href="https://t.co/xz93WmAdfR">https://t.co/xz93WmAdfR</a></p>&mdash; BBC News (UK) (@BBCNews) <a href="https://twitter.com/BBCNews/status/1384138850478346243?ref_src=twsrc%5Etfw">April 19, 2021</a></blockquote>\n',
+            html: '<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/CgNAEjOK46_"><p><a href="https://www.instagram.com/p/CgNAEjOK46_" style="color:#000">© 2020 Instagram</a></p></blockquote> <script async src="https://www.instagram.com/embed.js"></script>',
             width: 550,
           },
         },
+      },
+    ],
+  },
+};
+
+export const instagramBlockNoEmbed = {
+  type: 'renditions',
+  model: {
+    locator: 'urn:bbc:optimo:social:2777c9b9-b3d3-4d53-b36c-be749aa528c9',
+    blocks: [
+      {
+        type: 'aresOEmbed',
       },
     ],
   },
