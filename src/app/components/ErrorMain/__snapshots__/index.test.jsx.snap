@@ -231,7 +231,7 @@ exports[`ErrorMain should correctly render for an error page for News 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
   padding-top: 0.2rem;
@@ -557,7 +557,7 @@ exports[`ErrorMain should correctly render for an error page for arabic 1`] = `
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
   padding-top: 0.2rem;
@@ -883,7 +883,7 @@ exports[`ErrorMain should correctly render for an error page for pashto 1`] = `
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
   padding-top: 0.2rem;
@@ -1209,7 +1209,7 @@ exports[`ErrorMain should correctly render for an error page for persian 1`] = `
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
   padding-top: 0.2rem;
@@ -1535,7 +1535,7 @@ exports[`ErrorMain should correctly render for an error page for urdu 1`] = `
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
   padding-top: 0.2rem;

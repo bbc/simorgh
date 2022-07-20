@@ -10,46 +10,13 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '#legacy/gel-foundations/src/spacings';
-import {
-  C_PEBBLE,
-  C_GHOST,
-  C_SHADOW,
-} from '#legacy/psammead-styles/src/colours';
+import { C_GHOST, C_GREY_10 } from '#legacy/psammead-styles/src/colours';
 import { PlainTitle, LinkTitle } from './titles';
-
-const Bar = styled.div`
-  border-top: 0.0625rem solid ${C_PEBBLE};
-  z-index: -1;
-
-  @media screen and (-ms-high-contrast: active) {
-    border-color: windowText;
-  }
-`;
-
-const DesktopBar = styled(Bar)`
-  display: none;
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-
-    /* Placing bar at the vertical midpoint of the section title */
-    top: ${({ script }) => 0.5 + script.doublePica.groupD.lineHeight / 32}rem;
-  }
-`;
-
-const MobileBar = styled(Bar)`
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    display: none;
-  }
-`;
 
 const SectionLabelWrapper = styled.div`
   position: relative;
   z-index: 0;
-  color: ${C_SHADOW};
+  color: ${C_GREY_10};
 
   margin-top: ${GEL_SPACING_QUAD};
 
@@ -77,15 +44,13 @@ SectionLabelWrapper.propTypes = {
   visuallyHidden: bool.isRequired,
 };
 
-const Heading = styled.h2`
+export const Heading = styled.h2`
   /* reset default margins */
   margin: 0;
   padding: 0;
 `;
 
 const SectionLabel = ({
-  bar,
-  mobileDivider,
   children: title,
   dir,
   href,
@@ -99,8 +64,6 @@ const SectionLabel = ({
   ...props
 }) => (
   <SectionLabelWrapper visuallyHidden={visuallyHidden} {...props}>
-    {bar && <DesktopBar script={script} />}
-    {mobileDivider && <MobileBar />}
     <Heading as={overrideHeadingAs}>
       {linkText && href ? (
         <LinkTitle
@@ -130,8 +93,6 @@ const SectionLabel = ({
 );
 
 SectionLabel.defaultProps = {
-  bar: true,
-  mobileDivider: true,
   dir: 'ltr',
   href: null,
   linkText: null,
@@ -141,8 +102,6 @@ SectionLabel.defaultProps = {
 };
 
 SectionLabel.propTypes = {
-  bar: bool,
-  mobileDivider: bool,
   children: string.isRequired,
   dir: oneOf(['ltr', 'rtl']),
   href: string,
