@@ -390,7 +390,7 @@ exports[`Canonical Story Page SEO OG url 1`] = `"http://localhost:7080/mundo/not
 
 exports[`Canonical Story Page SEO Page title 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea - BBC News Mundo"`;
 
-exports[`Canonical Story Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Story Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Story Page SEO Twitter card 1`] = `"summary_large_image"`;
 
