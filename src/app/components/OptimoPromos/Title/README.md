@@ -2,30 +2,37 @@
 
 ## Description
 
-A component that returns a styled h3 or a styled div used for promo titles.
+A component that provides a base style for the promos' title and wraps the content node with provided tag.
 
 ## Props
 
-| Name             | type   | Description                                  |
-| ---------------- | ------ | -------------------------------------------- |
-| service          | string | name of the service                          |
-| className        | string | CSS class, automatically provided my emotion |
-| titleTagOverride | string | Override for the tag to use, default is h3   |
+| Name      | type   | Description                                  |
+| --------- | ------ | -------------------------------------------- |
+| className | string | CSS class, automatically provided my emotion |
+| as        | string | Override for the tag to use, default is span |
 
 ## Example ltr/rtl
 
 Title = ({ children, service, className, titleTagOverride })
 
+### default
+
+```javascript
+<Title>This is a span title</Title>
+```
+
 ### h3
 
 ```javascript
-<Title service="news">This is a h3 title</Title>
+<Title service="news" as="h3">
+  This is a h3 title
+</Title>
 ```
 
 ### with tag override
 
 ```javascript
-<Title service="news" titleTagOverride="div">
+<Title service="news" as="div">
   This is a div title
 </Title>
 ```

@@ -6,13 +6,11 @@ This is a promo component that takes in key features of the promo's content and 
 
 ## Props
 
-| Name           | type    | Description                                     |
-| -------------- | ------- | ----------------------------------------------- |
-| ariaLabelledBy | string  | Unique identifier used to fix a bug in TalkBack |
-| mediaType      | string  | The media type of the pages Promoed             |
-| mediaDuration  | string  | Media duration in `ISO 8601` format             |
-| headline       | string  | Promo's title                                   |
-| isPhotoGallery | boolean | Is the page promoed a photogallery?             |
+| Name           | type    | Description                         |
+| -------------- | ------- | ----------------------------------- |
+| mediaDuration  | string  | Media duration in `ISO 8601` format |
+| headline       | string  | Promo's title                       |
+| isPhotoGallery | boolean | Is the page promoed a photogallery? |
 
 ## Example ltr/rtl
 

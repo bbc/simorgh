@@ -2,7 +2,7 @@
 
 ## Description
 
-A component that returns a styled h3 or a styled div used for promo titles.
+A component that is implemented using psammead-image and imageWithPlaceholder. However, this component takes it a step further by styling the psammead-image in order to fix a bug with aspect-ratio.
 
 ## Props
 

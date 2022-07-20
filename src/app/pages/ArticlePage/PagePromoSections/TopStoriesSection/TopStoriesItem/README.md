@@ -29,5 +29,5 @@ const itemExample = [
                     }
                 ]
 
-<TopStoriesItem item={itemExample} ariaLabelledBy={"top-stories-promo-example-0/>
+<TopStoriesItem item={itemExample} ariaLabelledBy={"top-stories-promo-example-0"}/>
 ```

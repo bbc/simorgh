@@ -6,10 +6,10 @@ A Related Content Single item built using OptimoPromos. this component gets Opti
 
 ## Props
 
-| Name   | type   | Description                                 |
-| ------ | ------ | ------------------------------------------- |
-| item   | object | Single link of a related content type block |
-| a11yId | string | Id used to fix a bug in TalkBack.           |
+| Name           | type   | Description                                 |
+| -------------- | ------ | ------------------------------------------- |
+| item           | object | Single link of a related content type block |
+| ariaLabelledBy | string | Id used to fix a bug in TalkBack.           |
 
 ## A11y notes
 
@@ -29,5 +29,5 @@ const itemExample = {
                     ], ...
                 }
 
-<RelatedContentItem item={itemExample} a11yId={"related-content-promo-example-0/>
+<RelatedContentItem item={itemExample} ariaLabelledBy={"related-content-promo-example-0"}/>
 ```
