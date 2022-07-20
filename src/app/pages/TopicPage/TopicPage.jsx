@@ -61,7 +61,7 @@ const TitleWrapper = styled.div`
 
 const TopicPage = ({ pageData }) => {
   const { lang, translations } = useContext(ServiceContext);
-  const { title, description, images, promos, pageCount, activePage } =
+  const { title, description, imageData, promos, pageCount, activePage } =
     pageData;
 
   const { enabled: adsEnabled } = useToggle('ads');
@@ -116,7 +116,7 @@ const TopicPage = ({ pageData }) => {
         />
         <TitleWrapper>
           <InlineWrapper>
-            {images && <TopicImage image={images[0].url} />}
+            {imageData && <TopicImage image={imageData.url} />}
             <TopicTitle>{title}</TopicTitle>
           </InlineWrapper>
           {description && <TopicDescription>{description}</TopicDescription>}
