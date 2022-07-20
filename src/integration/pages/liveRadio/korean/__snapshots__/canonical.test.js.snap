@@ -235,7 +235,7 @@ exports[`Canonical Korean Live Radio Page SEO OG url 1`] = `"http://localhost:70
 
 exports[`Canonical Korean Live Radio Page SEO Page title 1`] = `"BBC 코리아 라디오 - BBC News 코리아"`;
 
-exports[`Canonical Korean Live Radio Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Korean Live Radio Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Korean Live Radio Page SEO Twitter card 1`] = `"summary_large_image"`;
 

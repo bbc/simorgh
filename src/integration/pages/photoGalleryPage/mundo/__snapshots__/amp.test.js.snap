@@ -511,7 +511,7 @@ exports[`AMP Photo Gallery Page SEO OG url 1`] = `"http://localhost:7080/mundo/d
 
 exports[`AMP Photo Gallery Page SEO Page title 1`] = `"Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos - BBC News Mundo"`;
 
-exports[`AMP Photo Gallery Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP Photo Gallery Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP Photo Gallery Page SEO Twitter card 1`] = `"summary_large_image"`;
 

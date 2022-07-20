@@ -430,7 +430,7 @@ exports[`AMP Articles SEO OG url 1`] = `"http://localhost:7080/news/articles/c5j
 
 exports[`AMP Articles SEO Page title 1`] = `"The Germans solving rising rents with people power - BBC News"`;
 
-exports[`AMP Articles SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP Articles SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP Articles SEO Twitter card 1`] = `"summary_large_image"`;
 
