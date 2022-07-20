@@ -13,9 +13,9 @@ import {
 import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
 import { getPica } from '#psammead/gel-foundations/src/typography';
 import {
-  C_EBON,
   C_METAL,
   C_GREY_2,
+  C_GREY_10,
 } from '#psammead/psammead-styles/src/colours';
 import { shape, string, oneOfType } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -64,7 +64,7 @@ const TextWrapper = styled.div`
 
 const Link = styled.a`
   position: static;
-  color: ${C_EBON};
+  color: ${C_GREY_10};
   text-decoration: none;
   overflow-wrap: break-word;
 
@@ -93,7 +93,7 @@ const Link = styled.a`
 const StyledHeadline = styled.div`
   ${({ service }) => getSerifMedium(service)}
   ${({ script }) => getPica(script)}
-  color: ${C_EBON};
+  color: ${C_GREY_10};
   margin: 0;
   height: 100%;
   display: flex;

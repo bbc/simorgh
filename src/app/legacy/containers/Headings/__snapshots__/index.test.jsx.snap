@@ -107,7 +107,7 @@ exports[`Headings in the middle of articles should render correctly 1`] = `
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -259,7 +259,7 @@ exports[`Headings with headline data should render correctly 1`] = `
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -413,7 +413,7 @@ exports[`Headings with plain text headline should render h1 containing correct t
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -567,7 +567,7 @@ exports[`Headings with plain text subheadline should render h2 containing correc
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   margin: 0;
   padding: 1.5rem 0;
 }
@@ -715,7 +715,7 @@ exports[`Headings with rich text headline with bold text should render h1 with <
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -871,7 +871,7 @@ exports[`Headings with rich text headline with italic text should render h1 with
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -1037,7 +1037,7 @@ exports[`Headings with rich text should render headline with bold & italic text 
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -1205,7 +1205,7 @@ exports[`Headings with rich text should render headline with italic & bold text 
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -1373,7 +1373,7 @@ exports[`Headings with rich text with different attributes should render headlin
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -1541,7 +1541,7 @@ exports[`Headings with subheadline data should render correctly 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   margin: 0;
   padding: 1.5rem 0;
 }

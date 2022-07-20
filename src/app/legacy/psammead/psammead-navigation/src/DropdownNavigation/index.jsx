@@ -5,8 +5,9 @@ import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import {
   C_WHITE,
-  C_EBON,
-  C_SHADOW,
+  C_POSTBOX,
+  C_GREY_10,
+  C_GREY_3,
 } from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING_HLF,
@@ -26,12 +27,12 @@ export const NAV_BAR_TOP_BOTTOM_SPACING = 0.75; // 12px
 
 const getStyles = dir => {
   const direction = dir === 'ltr' ? 'left' : 'right';
-  return `border-${direction}: ${GEL_SPACING_HLF} solid ${C_WHITE};
+  return `border-${direction}: ${GEL_SPACING_HLF} solid ${C_POSTBOX};
           padding-${direction}: ${GEL_SPACING};`;
 };
 
 const StyledDropdown = styled.div`
-  background-color: ${C_EBON};
+  background-color: ${C_WHITE};
   clear: both;
   overflow: hidden;
 
@@ -75,7 +76,7 @@ CanonicalDropdown.propTypes = {
 };
 
 export const AmpDropdown = styled.div`
-  background-color: ${C_EBON};
+  background-color: ${C_WHITE};
   clear: both;
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
@@ -88,7 +89,7 @@ export const DropdownUl = styled.ul`
   list-style-type: none;
   margin: 0;
   padding: 0 ${GEL_SPACING};
-  border-bottom: 0.125rem solid ${C_SHADOW};
+  border-bottom: 0.0625rem solid ${C_GREY_3};
 `;
 
 DropdownUl.defaultProps = {
@@ -97,7 +98,7 @@ DropdownUl.defaultProps = {
 
 const StyledDropdownLi = styled.li`
   padding: 0.75rem 0;
-  border-bottom: 0.0625rem solid ${C_SHADOW};
+  border-bottom: 0.0625rem solid ${C_GREY_3};
 
   &:last-child {
     padding-bottom: ${GEL_SPACING_HLF};
@@ -108,7 +109,7 @@ const StyledDropdownLi = styled.li`
 const StyledDropdownLink = styled.a`
   ${({ script }) => script && getPica(script)};
   ${({ service }) => service && getSansRegular(service)}
-  color: ${C_WHITE};
+  color: ${C_GREY_10};
   text-decoration: none;
   padding: ${GEL_SPACING_HLF_TRPL} 0;
   display: inline-block;
@@ -116,6 +117,7 @@ const StyledDropdownLink = styled.a`
   &:hover,
   &:focus {
     text-decoration: underline;
+    text-decoration-color: ${C_POSTBOX};
   }
 `;
 
@@ -186,7 +188,7 @@ const iconBorder = `
   right: 0;
   bottom: 0;
   top: 0;
-  border: ${GEL_SPACING_HLF} solid ${C_WHITE};
+  border: ${GEL_SPACING_HLF} solid ${C_POSTBOX};
 `;
 
 // The sideLength of the button should be
@@ -210,7 +212,8 @@ const MenuButton = styled(Button)`
 
   ${({ dir }) => (dir === 'ltr' ? `float: left;` : `float: right;`)}
   ${({ script }) =>
-    script && getButtonDimensions(script.pica.groupA.lineHeight)}
+    script &&
+    getButtonDimensions(script.pica.groupA.lineHeight)}
 
   &:hover,
   &:focus {

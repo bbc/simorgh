@@ -271,7 +271,7 @@ exports[`Canonical Feature Index page SEO OG url 1`] = `"http://localhost:7080/u
 
 exports[`Canonical Feature Index page SEO Page title 1`] = `"کورونا وائرس: تحقیق، تشخیص اور احتیاط - BBC News اردو"`;
 
-exports[`Canonical Feature Index page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Feature Index page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Feature Index page SEO Twitter card 1`] = `"summary_large_image"`;
 

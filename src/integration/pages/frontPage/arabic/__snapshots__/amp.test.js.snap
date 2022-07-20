@@ -428,7 +428,7 @@ exports[`AMP Front Page SEO OG url 1`] = `"http://localhost:7080/arabic"`;
 
 exports[`AMP Front Page SEO Page title 1`] = `"الرئيسية - BBC News عربي"`;
 
-exports[`AMP Front Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP Front Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP Front Page SEO Twitter card 1`] = `"summary_large_image"`;
 
