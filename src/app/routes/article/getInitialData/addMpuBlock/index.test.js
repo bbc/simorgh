@@ -266,32 +266,23 @@ describe('addMpuBlock', () => {
     expect(addMpuBlock(input)).toEqual(expected);
   });
 
-  it('should return input if `isLive` is true', async () => {
+  it('should return input if page type is not Article', async () => {
     const input = clone(styInput);
-    process.env.SIMORGH_APP_ENV = 'live';
+    input.metadata.type = 'STY';
 
     expect(addMpuBlock(input)).toEqual(input);
   });
 
-  it('should return input if `isLive` is true and `allowAdvertising` is true', async () => {
+  it('should return input if "allowAdvertising" is "false"', async () => {
     const input = clone(styInput);
-    process.env.SIMORGH_APP_ENV = 'live';
-    input.metadata.allowAdvertising = true;
-
-    expect(addMpuBlock(input)).toEqual(input);
-  });
-
-  it('should return input if `isLive` is false and `allowAdvertising` is false', async () => {
-    const input = clone(styInput);
-    process.env.SIMORGH_APP_ENV = 'test';
     input.metadata.allowAdvertising = false;
 
     expect(addMpuBlock(input)).toEqual(input);
   });
 
-  it('should return input if page type is not Article', async () => {
+  it('should return input if "allowAdvertising" is "undefined"', async () => {
     const input = clone(styInput);
-    input.metadata.type = 'STY';
+    delete input.metadata.allowAdvertising;
 
     expect(addMpuBlock(input)).toEqual(input);
   });
