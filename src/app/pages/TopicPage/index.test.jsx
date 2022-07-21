@@ -116,3 +116,54 @@ describe('A11y', () => {
     });
   });
 });
+
+describe('isLive', () => {
+  afterEach(() => {
+    delete process.env.SIMORGH_APP_ENV;
+  });
+  it('should render image and description when on test', () => {
+    process.env.SIMORGH_APP_ENV = 'test';
+    const { container, queryByTestId } = render(
+      <TopicPageWithContext
+        pageData={mundoWithBadgeAndDescr}
+        service="mundo"
+      />,
+    );
+
+    expect(queryByTestId('topic-badge')).toBeInTheDocument();
+    expect(container.getElementsByTagName('p').length).toEqual(1);
+  });
+
+  it('should render descripton when on test and there is no image', () => {
+    process.env.SIMORGH_APP_ENV = 'test';
+    const { container, queryByTestId } = render(
+      <TopicPageWithContext pageData={pidginMultipleItems} service="pidgin" />,
+    );
+
+    expect(queryByTestId('topic-badge')).not.toBeInTheDocument();
+    expect(container.getElementsByTagName('p').length).toEqual(1);
+  });
+
+  it('should not render image or descripton when on live and data exists in pageData', () => {
+    process.env.SIMORGH_APP_ENV = 'live';
+    const { container, queryByTestId } = render(
+      <TopicPageWithContext
+        pageData={mundoWithBadgeAndDescr}
+        service="mundo"
+      />,
+    );
+
+    expect(queryByTestId('topic-badge')).not.toBeInTheDocument();
+    expect(container.getElementsByTagName('p').length).toEqual(0);
+  });
+
+  it('should not render image or descripton when on live and data does not exist in pageData', () => {
+    process.env.SIMORGH_APP_ENV = 'live';
+    const { container, queryByTestId } = render(
+      <TopicPageWithContext pageData={amharicOnlyTitle} service="amharic" />,
+    );
+
+    expect(queryByTestId('topic-badge')).not.toBeInTheDocument();
+    expect(container.getElementsByTagName('p').length).toEqual(0);
+  });
+});
