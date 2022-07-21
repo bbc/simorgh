@@ -228,7 +228,7 @@ exports[`Canonical Sinhala Live Radio Page SEO OG url 1`] = `"http://localhost:7
 
 exports[`Canonical Sinhala Live Radio Page SEO Page title 1`] = `"බීබීසී සිංහල සංදේශය - BBC News සිංහල"`;
 
-exports[`Canonical Sinhala Live Radio Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Sinhala Live Radio Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Sinhala Live Radio Page SEO Twitter card 1`] = `"summary_large_image"`;
 

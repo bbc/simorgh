@@ -299,7 +299,7 @@ exports[`Canonical Feature Index page SEO OG url 1`] = `"http://localhost:7080/a
 
 exports[`Canonical Feature Index page SEO Page title 1`] = `"Tout savoir sur la CAN 2019 - BBC News Afrique"`;
 
-exports[`Canonical Feature Index page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Feature Index page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Feature Index page SEO Twitter card 1`] = `"summary_large_image"`;
 

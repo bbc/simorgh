@@ -292,7 +292,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
 .emotion-30 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -729,7 +729,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
 .emotion-30 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -1040,7 +1040,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
 .emotion-14 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -1612,7 +1612,7 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
 .emotion-30 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -2045,7 +2045,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 .emotion-26 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -2467,7 +2467,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 .emotion-26 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -2767,7 +2767,7 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
 .emotion-12 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -3320,7 +3320,7 @@ exports[`StoryPromo Container should render audio with no duration promoType top
 .emotion-26 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -3685,7 +3685,7 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
 .emotion-18 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -4015,7 +4015,7 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
 .emotion-18 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -4269,7 +4269,7 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
 .emotion-10 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -4684,7 +4684,7 @@ exports[`StoryPromo Container should render featureLink promoType top on amp 1`]
 .emotion-18 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -5020,7 +5020,7 @@ exports[`StoryPromo Container should render full width promos correctly for amp 
 .emotion-19 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -5356,7 +5356,7 @@ exports[`StoryPromo Container should render full width promos correctly for cano
 .emotion-19 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -5673,7 +5673,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
 .emotion-18 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -5982,7 +5982,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
 .emotion-18 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -6228,7 +6228,7 @@ exports[`StoryPromo Container should render item without an image promoType lead
 .emotion-10 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -6622,7 +6622,7 @@ exports[`StoryPromo Container should render item without an image promoType top 
 .emotion-18 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -8212,7 +8212,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
 .emotion-18 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -9870,7 +9870,7 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
 .emotion-18 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -10200,7 +10200,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
 .emotion-18 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -10454,7 +10454,7 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
 .emotion-10 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -10869,7 +10869,7 @@ exports[`StoryPromo Container should render standard promoType top on amp 1`] = 
 .emotion-18 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -11199,7 +11199,7 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
 .emotion-18 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -11529,7 +11529,7 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
 .emotion-18 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -11783,7 +11783,7 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
 .emotion-10 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -12198,7 +12198,7 @@ exports[`StoryPromo Container should render standardLink promoType top on amp 1`
 .emotion-18 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -12528,7 +12528,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
 .emotion-18 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -12858,7 +12858,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
 .emotion-18 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -13112,7 +13112,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType l
 .emotion-10 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -13527,7 +13527,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType t
 .emotion-18 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -13918,7 +13918,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
 .emotion-30 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -14352,7 +14352,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
 .emotion-30 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -14660,7 +14660,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
 .emotion-14 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -15229,7 +15229,7 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
 .emotion-30 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
