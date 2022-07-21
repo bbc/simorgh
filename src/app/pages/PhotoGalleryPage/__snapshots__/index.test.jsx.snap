@@ -190,7 +190,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -327,7 +327,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -2113,7 +2113,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -2259,7 +2259,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 .emotion-11 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -2391,7 +2391,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -4189,7 +4189,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -4335,7 +4335,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 .emotion-11 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -4467,7 +4467,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -5146,7 +5146,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 .emotion-205 {
   position: relative;
   z-index: 0;
-  color: #3F3F42;
+  color: #141414;
   margin-top: 2rem;
   margin-top: 0;
 }
@@ -5170,50 +5170,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 .emotion-207 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-  display: none;
-}
-
-@media screen and (-ms-high-contrast: active) {
-  .emotion-207 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-207 {
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-.emotion-209 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-@media screen and (-ms-high-contrast: active) {
-  .emotion-209 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-209 {
-    display: none;
-  }
-}
-
-.emotion-211 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-213 {
+.emotion-209 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5223,7 +5184,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   flex-direction: column;
 }
 
-.emotion-215 {
+.emotion-211 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5243,7 +5204,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-215 {
+  .emotion-211 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -5251,11 +5212,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 }
 
-.emotion-217 {
+.emotion-213 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   background-color: #FDFDFD;
   margin: 1rem 0;
@@ -5271,39 +5232,39 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-217 {
+  .emotion-213 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-217 {
+  .emotion-213 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-217 {
+  .emotion-213 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-217 {
+  .emotion-213 {
     padding-right: 1rem;
   }
 }
 
-.emotion-220 {
+.emotion-216 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 @supports (display: grid) {
-  .emotion-220 {
+  .emotion-216 {
     display: grid;
     position: initial;
     width: initial;
@@ -5311,7 +5272,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-220 {
+    .emotion-216 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -5319,7 +5280,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-220 {
+    .emotion-216 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -5327,7 +5288,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-220 {
+    .emotion-216 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -5335,7 +5296,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-220 {
+    .emotion-216 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -5343,7 +5304,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-220 {
+    .emotion-216 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -5351,7 +5312,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 
   @media (min-width: 80rem) {
-    .emotion-220 {
+    .emotion-216 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -5359,121 +5320,121 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 }
 
-.emotion-223 {
+.emotion-219 {
   padding: 0.5rem 0 1rem;
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-223 {
+  .emotion-219 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
-.emotion-223:last-child {
+.emotion-219:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-223 {
+  .emotion-219 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-223 {
+  .emotion-219 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-223:first-child {
+.emotion-219:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-223:first-child {
+  .emotion-219:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-223:last-child {
+.emotion-219:last-child {
   padding-bottom: 0;
 }
 
 @supports (display: grid) {
-  .emotion-223 {
+  .emotion-219 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-223 {
+    .emotion-219 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-223 {
+    .emotion-219 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-223 {
+    .emotion-219 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-223 {
+    .emotion-219 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-223 {
+    .emotion-219 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-223 {
+    .emotion-219 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 }
 
-.emotion-225 {
+.emotion-221 {
   position: relative;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-225 {
+  .emotion-221 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-225 {
+    .emotion-221 {
       grid-column-gap: 1rem;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-225 {
+    .emotion-221 {
       display: block;
     }
   }
 }
 
-.emotion-227 {
+.emotion-223 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -5481,43 +5442,43 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 @media (min-width: 63rem) {
-  .emotion-227 {
+  .emotion-223 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-227 {
+  .emotion-223 {
     width: initial;
     grid-column: 1/span 2;
   }
 }
 
-.emotion-229 {
+.emotion-225 {
   position: relative;
 }
 
 @media (min-width: 25rem) {
-  .emotion-233 {
+  .emotion-229 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-233>* {
+.emotion-229>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-233>* {
+  .emotion-229>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-235 {
+.emotion-231 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -5525,13 +5486,13 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-235 {
+  .emotion-231 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-235 {
+  .emotion-231 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -5539,7 +5500,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-235 {
+  .emotion-231 {
     display: block;
     width: initial;
     padding: initial;
@@ -5547,13 +5508,13 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 
   @media (min-width: 63rem) {
-    .emotion-235 {
+    .emotion-231 {
       padding-top: 0.5rem;
     }
   }
 }
 
-.emotion-237 {
+.emotion-233 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -5565,20 +5526,20 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-237 {
+  .emotion-233 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-237 {
+  .emotion-233 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-239 {
+.emotion-235 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -5587,7 +5548,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   overflow-wrap: anywhere;
 }
 
-.emotion-239:before {
+.emotion-235:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -5599,20 +5560,20 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   z-index: 1;
 }
 
-.emotion-239:hover,
-.emotion-239:focus {
+.emotion-235:hover,
+.emotion-235:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-239:visited {
+.emotion-235:visited {
   color: #6E6E73;
 }
 
-.emotion-241 {
+.emotion-237 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -5620,20 +5581,20 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-241 {
+  .emotion-237 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-241 {
+  .emotion-237 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-256 {
+.emotion-252 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5645,20 +5606,20 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-256 {
+  .emotion-252 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-256 {
+  .emotion-252 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-258 {
+.emotion-254 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5670,7 +5631,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   height: 100%;
 }
 
-.emotion-260 {
+.emotion-256 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -6330,23 +6291,17 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                 <div
                   class="emotion-204 emotion-205 emotion-206"
                 >
-                  <div
-                    class="emotion-207 emotion-208"
-                  />
-                  <div
-                    class="emotion-209 emotion-210"
-                  />
                   <h2
-                    class="emotion-211 emotion-212"
+                    class="emotion-207 emotion-208"
                   >
                     <span
-                      class="emotion-213 emotion-214"
+                      class="emotion-209 emotion-210"
                     >
                       <span
-                        class="emotion-215 emotion-216"
+                        class="emotion-211 emotion-212"
                       >
                         <span
-                          class="emotion-217 emotion-218"
+                          class="emotion-213 emotion-214"
                           dir="ltr"
                           id="related-content-heading"
                         >
@@ -6357,24 +6312,24 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                   </h2>
                 </div>
                 <ul
-                  class="emotion-3 emotion-220 emotion-221"
+                  class="emotion-3 emotion-216 emotion-217"
                   dir="ltr"
                   role="list"
                 >
                   <li
-                    class="emotion-3 emotion-223 emotion-224"
+                    class="emotion-3 emotion-219 emotion-220"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-225 emotion-226"
+                      class="emotion-221 emotion-222"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-227 emotion-228"
+                        class="emotion-223 emotion-224"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-229 emotion-230"
+                          class="emotion-225 emotion-226"
                         >
                           <div
                             class="emotion-25 emotion-26"
@@ -6390,20 +6345,20 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                             </div>
                           </div>
                           <div
-                            class="emotion-233 emotion-234"
+                            class="emotion-229 emotion-230"
                           />
                         </div>
                       </div>
                       <div
-                        class="emotion-235 emotion-236"
+                        class="emotion-231 emotion-232"
                         dir="ltr"
                       >
                         <h3
-                          class="emotion-237 emotion-238"
+                          class="emotion-233 emotion-234"
                         >
                           <a
                             aria-labelledby="promo-rel-content-pidginmedia45132087-1"
-                            class="emotion-239 emotion-240"
+                            class="emotion-235 emotion-236"
                             href="/pidgin/media-45132087"
                           >
                             <span
@@ -6417,7 +6372,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           </a>
                         </h3>
                         <time
-                          class="emotion-241 emotion-12"
+                          class="emotion-237 emotion-12"
                           datetime="2018-08-09"
                         >
                           9th August 2018
@@ -6426,19 +6381,19 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     </div>
                   </li>
                   <li
-                    class="emotion-3 emotion-223 emotion-224"
+                    class="emotion-3 emotion-219 emotion-220"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-225 emotion-226"
+                      class="emotion-221 emotion-222"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-227 emotion-228"
+                        class="emotion-223 emotion-224"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-229 emotion-230"
+                          class="emotion-225 emotion-226"
                         >
                           <div
                             class="emotion-25 emotion-26"
@@ -6446,20 +6401,20 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                             style="padding-bottom: 56.25%;"
                           />
                           <div
-                            class="emotion-233 emotion-234"
+                            class="emotion-229 emotion-230"
                           >
                             <div
                               aria-hidden="true"
-                              class="emotion-256 emotion-257"
+                              class="emotion-252 emotion-253"
                               data-e2e="media-indicator"
                               dir="ltr"
                             >
                               <div
-                                class="emotion-258 emotion-259"
+                                class="emotion-254 emotion-255"
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="emotion-260 emotion-261"
+                                  class="emotion-256 emotion-257"
                                   focusable="false"
                                   height="13px"
                                   viewBox="0 0 32 26"
@@ -6480,15 +6435,15 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                         </div>
                       </div>
                       <div
-                        class="emotion-235 emotion-236"
+                        class="emotion-231 emotion-232"
                         dir="ltr"
                       >
                         <h3
-                          class="emotion-237 emotion-238"
+                          class="emotion-233 emotion-234"
                         >
                           <a
                             aria-labelledby="promo-rel-content-pidgintori45242255-2"
-                            class="emotion-239 emotion-240"
+                            class="emotion-235 emotion-236"
                             href="/pidgin/tori-45242255"
                           >
                             <span
@@ -6507,7 +6462,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           </a>
                         </h3>
                         <time
-                          class="emotion-241 emotion-12"
+                          class="emotion-237 emotion-12"
                           datetime="2018-08-19"
                         >
                           19th August 2018
@@ -6715,7 +6670,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -6861,7 +6816,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 .emotion-11 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -6993,7 +6948,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -8219,7 +8174,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   display: block;
   margin: 0;
   padding: 2rem 0;
@@ -8365,7 +8320,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 .emotion-11 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -8497,7 +8452,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
 }
@@ -9473,7 +9428,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 .emotion-419 {
   position: relative;
   z-index: 0;
-  color: #3F3F42;
+  color: #141414;
   margin-top: 2rem;
   margin-top: 0;
 }
@@ -9497,50 +9452,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 .emotion-421 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-  display: none;
-}
-
-@media screen and (-ms-high-contrast: active) {
-  .emotion-421 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-421 {
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.5rem;
-  }
-}
-
-.emotion-423 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-@media screen and (-ms-high-contrast: active) {
-  .emotion-423 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-423 {
-    display: none;
-  }
-}
-
-.emotion-425 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-427 {
+.emotion-423 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9550,7 +9466,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   flex-direction: column;
 }
 
-.emotion-429 {
+.emotion-425 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9570,7 +9486,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-429 {
+  .emotion-425 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -9578,11 +9494,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
-.emotion-431 {
+.emotion-427 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   background-color: #FDFDFD;
   margin: 1rem 0;
@@ -9598,39 +9514,39 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-431 {
+  .emotion-427 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-431 {
+  .emotion-427 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-431 {
+  .emotion-427 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-431 {
+  .emotion-427 {
     padding-right: 1rem;
   }
 }
 
-.emotion-434 {
+.emotion-430 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 @supports (display: grid) {
-  .emotion-434 {
+  .emotion-430 {
     display: grid;
     position: initial;
     width: initial;
@@ -9638,7 +9554,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-434 {
+    .emotion-430 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -9646,7 +9562,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-434 {
+    .emotion-430 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -9654,7 +9570,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-434 {
+    .emotion-430 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -9662,7 +9578,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-434 {
+    .emotion-430 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -9670,7 +9586,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-434 {
+    .emotion-430 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -9678,7 +9594,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 
   @media (min-width: 80rem) {
-    .emotion-434 {
+    .emotion-430 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -9686,121 +9602,121 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
-.emotion-437 {
+.emotion-433 {
   padding: 0.5rem 0 1rem;
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-437 {
+  .emotion-433 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
-.emotion-437:last-child {
+.emotion-433:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-437 {
+  .emotion-433 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-437 {
+  .emotion-433 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-437:first-child {
+.emotion-433:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-437:first-child {
+  .emotion-433:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-437:last-child {
+.emotion-433:last-child {
   padding-bottom: 0;
 }
 
 @supports (display: grid) {
-  .emotion-437 {
+  .emotion-433 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-437 {
+    .emotion-433 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-437 {
+    .emotion-433 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-437 {
+    .emotion-433 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-437 {
+    .emotion-433 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-437 {
+    .emotion-433 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-437 {
+    .emotion-433 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 }
 
-.emotion-439 {
+.emotion-435 {
   position: relative;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-439 {
+  .emotion-435 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-439 {
+    .emotion-435 {
       grid-column-gap: 1rem;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-439 {
+    .emotion-435 {
       display: block;
     }
   }
 }
 
-.emotion-441 {
+.emotion-437 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -9808,43 +9724,43 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 @media (min-width: 63rem) {
-  .emotion-441 {
+  .emotion-437 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-441 {
+  .emotion-437 {
     width: initial;
     grid-column: 1/span 2;
   }
 }
 
-.emotion-443 {
+.emotion-439 {
   position: relative;
 }
 
 @media (min-width: 25rem) {
-  .emotion-447 {
+  .emotion-443 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-447>* {
+.emotion-443>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-447>* {
+  .emotion-443>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-449 {
+.emotion-445 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -9852,13 +9768,13 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-449 {
+  .emotion-445 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-449 {
+  .emotion-445 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -9866,7 +9782,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-449 {
+  .emotion-445 {
     display: block;
     width: initial;
     padding: initial;
@@ -9874,13 +9790,13 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 
   @media (min-width: 63rem) {
-    .emotion-449 {
+    .emotion-445 {
       padding-top: 0.5rem;
     }
   }
 }
 
-.emotion-451 {
+.emotion-447 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -9892,20 +9808,20 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-451 {
+  .emotion-447 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-451 {
+  .emotion-447 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-453 {
+.emotion-449 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -9914,7 +9830,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   overflow-wrap: anywhere;
 }
 
-.emotion-453:before {
+.emotion-449:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -9926,20 +9842,20 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   z-index: 1;
 }
 
-.emotion-453:hover,
-.emotion-453:focus {
+.emotion-449:hover,
+.emotion-449:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-453:visited {
+.emotion-449:visited {
   color: #6E6E73;
 }
 
-.emotion-455 {
+.emotion-451 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -9947,14 +9863,14 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-455 {
+  .emotion-451 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-455 {
+  .emotion-451 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -11304,23 +11220,17 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                 <div
                   class="emotion-418 emotion-419 emotion-420"
                 >
-                  <div
-                    class="emotion-421 emotion-422"
-                  />
-                  <div
-                    class="emotion-423 emotion-424"
-                  />
                   <h2
-                    class="emotion-425 emotion-426"
+                    class="emotion-421 emotion-422"
                   >
                     <span
-                      class="emotion-427 emotion-428"
+                      class="emotion-423 emotion-424"
                     >
                       <span
-                        class="emotion-429 emotion-430"
+                        class="emotion-425 emotion-426"
                       >
                         <span
-                          class="emotion-431 emotion-432"
+                          class="emotion-427 emotion-428"
                           dir="ltr"
                           id="related-content-heading"
                         >
@@ -11331,24 +11241,24 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                   </h2>
                 </div>
                 <ul
-                  class="emotion-3 emotion-434 emotion-435"
+                  class="emotion-3 emotion-430 emotion-431"
                   dir="ltr"
                   role="list"
                 >
                   <li
-                    class="emotion-3 emotion-437 emotion-438"
+                    class="emotion-3 emotion-433 emotion-434"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-439 emotion-440"
+                      class="emotion-435 emotion-436"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-441 emotion-442"
+                        class="emotion-437 emotion-438"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-443 emotion-444"
+                          class="emotion-439 emotion-440"
                         >
                           <div
                             class="emotion-25 emotion-26"
@@ -11364,20 +11274,20 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             </div>
                           </div>
                           <div
-                            class="emotion-447 emotion-448"
+                            class="emotion-443 emotion-444"
                           />
                         </div>
                       </div>
                       <div
-                        class="emotion-449 emotion-450"
+                        class="emotion-445 emotion-446"
                         dir="ltr"
                       >
                         <h3
-                          class="emotion-451 emotion-452"
+                          class="emotion-447 emotion-448"
                         >
                           <a
                             aria-labelledby="promo-rel-content-azeriazerbaijan44124647-1"
-                            class="emotion-453 emotion-454"
+                            class="emotion-449 emotion-450"
                             href="/azeri/azerbaijan-44124647"
                           >
                             <span
@@ -11388,7 +11298,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </a>
                         </h3>
                         <time
-                          class="emotion-455 emotion-12"
+                          class="emotion-451 emotion-12"
                           datetime="2018-05-17"
                         >
                           17 May 2018
@@ -11397,19 +11307,19 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     </div>
                   </li>
                   <li
-                    class="emotion-3 emotion-437 emotion-438"
+                    class="emotion-3 emotion-433 emotion-434"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-439 emotion-440"
+                      class="emotion-435 emotion-436"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-441 emotion-442"
+                        class="emotion-437 emotion-438"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-443 emotion-444"
+                          class="emotion-439 emotion-440"
                         >
                           <div
                             class="emotion-25 emotion-26"
@@ -11425,20 +11335,20 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             </div>
                           </div>
                           <div
-                            class="emotion-447 emotion-448"
+                            class="emotion-443 emotion-444"
                           />
                         </div>
                       </div>
                       <div
-                        class="emotion-449 emotion-450"
+                        class="emotion-445 emotion-446"
                         dir="ltr"
                       >
                         <h3
-                          class="emotion-451 emotion-452"
+                          class="emotion-447 emotion-448"
                         >
                           <a
                             aria-labelledby="promo-rel-content-azeriazerbaijan43540056-2"
-                            class="emotion-453 emotion-454"
+                            class="emotion-449 emotion-450"
                             href="/azeri/azerbaijan-43540056"
                           >
                             <span
@@ -11449,7 +11359,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </a>
                         </h3>
                         <time
-                          class="emotion-455 emotion-12"
+                          class="emotion-451 emotion-12"
                           datetime="2018-03-27"
                         >
                           27 Mart 2018
@@ -11458,19 +11368,19 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     </div>
                   </li>
                   <li
-                    class="emotion-3 emotion-437 emotion-438"
+                    class="emotion-3 emotion-433 emotion-434"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-439 emotion-440"
+                      class="emotion-435 emotion-436"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-441 emotion-442"
+                        class="emotion-437 emotion-438"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-443 emotion-444"
+                          class="emotion-439 emotion-440"
                         >
                           <div
                             class="emotion-25 emotion-26"
@@ -11486,20 +11396,20 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             </div>
                           </div>
                           <div
-                            class="emotion-447 emotion-448"
+                            class="emotion-443 emotion-444"
                           />
                         </div>
                       </div>
                       <div
-                        class="emotion-449 emotion-450"
+                        class="emotion-445 emotion-446"
                         dir="ltr"
                       >
                         <h3
-                          class="emotion-451 emotion-452"
+                          class="emotion-447 emotion-448"
                         >
                           <a
                             aria-labelledby="promo-rel-content-azeriazerbaijan44022776-3"
-                            class="emotion-453 emotion-454"
+                            class="emotion-449 emotion-450"
                             href="/azeri/azerbaijan-44022776"
                           >
                             <span
@@ -11510,7 +11420,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </a>
                         </h3>
                         <time
-                          class="emotion-455 emotion-12"
+                          class="emotion-451 emotion-12"
                           datetime="2018-05-10"
                         >
                           10 May 2018
@@ -11519,19 +11429,19 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     </div>
                   </li>
                   <li
-                    class="emotion-3 emotion-437 emotion-438"
+                    class="emotion-3 emotion-433 emotion-434"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-439 emotion-440"
+                      class="emotion-435 emotion-436"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-441 emotion-442"
+                        class="emotion-437 emotion-438"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-443 emotion-444"
+                          class="emotion-439 emotion-440"
                         >
                           <div
                             class="emotion-25 emotion-26"
@@ -11547,20 +11457,20 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             </div>
                           </div>
                           <div
-                            class="emotion-447 emotion-448"
+                            class="emotion-443 emotion-444"
                           />
                         </div>
                       </div>
                       <div
-                        class="emotion-449 emotion-450"
+                        class="emotion-445 emotion-446"
                         dir="ltr"
                       >
                         <h3
-                          class="emotion-451 emotion-452"
+                          class="emotion-447 emotion-448"
                         >
                           <a
                             aria-labelledby="promo-rel-content-azeriazerbaijan43713137-4"
-                            class="emotion-453 emotion-454"
+                            class="emotion-449 emotion-450"
                             href="/azeri/azerbaijan-43713137"
                           >
                             <span
@@ -11571,7 +11481,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </a>
                         </h3>
                         <time
-                          class="emotion-455 emotion-12"
+                          class="emotion-451 emotion-12"
                           datetime="2018-04-10"
                         >
                           10 Aprel 2018
@@ -11580,19 +11490,19 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     </div>
                   </li>
                   <li
-                    class="emotion-3 emotion-437 emotion-438"
+                    class="emotion-3 emotion-433 emotion-434"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-439 emotion-440"
+                      class="emotion-435 emotion-436"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-441 emotion-442"
+                        class="emotion-437 emotion-438"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-443 emotion-444"
+                          class="emotion-439 emotion-440"
                         >
                           <div
                             class="emotion-25 emotion-26"
@@ -11608,20 +11518,20 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             </div>
                           </div>
                           <div
-                            class="emotion-447 emotion-448"
+                            class="emotion-443 emotion-444"
                           />
                         </div>
                       </div>
                       <div
-                        class="emotion-449 emotion-450"
+                        class="emotion-445 emotion-446"
                         dir="ltr"
                       >
                         <h3
-                          class="emotion-451 emotion-452"
+                          class="emotion-447 emotion-448"
                         >
                           <a
                             aria-labelledby="promo-rel-content-azeriazerbaijan37688691-5"
-                            class="emotion-453 emotion-454"
+                            class="emotion-449 emotion-450"
                             href="/azeri/azerbaijan-37688691"
                           >
                             <span
@@ -11632,7 +11542,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </a>
                         </h3>
                         <time
-                          class="emotion-455 emotion-12"
+                          class="emotion-451 emotion-12"
                           datetime="2016-10-18"
                         >
                           18 Oktyabr 2016
@@ -11641,19 +11551,19 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     </div>
                   </li>
                   <li
-                    class="emotion-3 emotion-437 emotion-438"
+                    class="emotion-3 emotion-433 emotion-434"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-439 emotion-440"
+                      class="emotion-435 emotion-436"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-441 emotion-442"
+                        class="emotion-437 emotion-438"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-443 emotion-444"
+                          class="emotion-439 emotion-440"
                         >
                           <div
                             class="emotion-25 emotion-26"
@@ -11669,20 +11579,20 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             </div>
                           </div>
                           <div
-                            class="emotion-447 emotion-448"
+                            class="emotion-443 emotion-444"
                           />
                         </div>
                       </div>
                       <div
-                        class="emotion-449 emotion-450"
+                        class="emotion-445 emotion-446"
                         dir="ltr"
                       >
                         <h3
-                          class="emotion-451 emotion-452"
+                          class="emotion-447 emotion-448"
                         >
                           <a
                             aria-labelledby="promo-rel-content-azeriazerbaijan37691096-6"
-                            class="emotion-453 emotion-454"
+                            class="emotion-449 emotion-450"
                             href="/azeri/azerbaijan-37691096"
                           >
                             <span
@@ -11696,7 +11606,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </a>
                         </h3>
                         <time
-                          class="emotion-455 emotion-12"
+                          class="emotion-451 emotion-12"
                           datetime="2016-10-18"
                         >
                           18 Oktyabr 2016
@@ -11705,19 +11615,19 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     </div>
                   </li>
                   <li
-                    class="emotion-3 emotion-437 emotion-438"
+                    class="emotion-3 emotion-433 emotion-434"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-439 emotion-440"
+                      class="emotion-435 emotion-436"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-441 emotion-442"
+                        class="emotion-437 emotion-438"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-443 emotion-444"
+                          class="emotion-439 emotion-440"
                         >
                           <div
                             class="emotion-25 emotion-26"
@@ -11733,20 +11643,20 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             </div>
                           </div>
                           <div
-                            class="emotion-447 emotion-448"
+                            class="emotion-443 emotion-444"
                           />
                         </div>
                       </div>
                       <div
-                        class="emotion-449 emotion-450"
+                        class="emotion-445 emotion-446"
                         dir="ltr"
                       >
                         <h3
-                          class="emotion-451 emotion-452"
+                          class="emotion-447 emotion-448"
                         >
                           <a
                             aria-labelledby="promo-rel-content-azeriazerbaijan43499221-7"
-                            class="emotion-453 emotion-454"
+                            class="emotion-449 emotion-450"
                             href="/azeri/azerbaijan-43499221"
                           >
                             <span
@@ -11757,7 +11667,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </a>
                         </h3>
                         <time
-                          class="emotion-455 emotion-12"
+                          class="emotion-451 emotion-12"
                           datetime="2018-03-22"
                         >
                           22 Mart 2018
@@ -11766,19 +11676,19 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     </div>
                   </li>
                   <li
-                    class="emotion-3 emotion-437 emotion-438"
+                    class="emotion-3 emotion-433 emotion-434"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-439 emotion-440"
+                      class="emotion-435 emotion-436"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-441 emotion-442"
+                        class="emotion-437 emotion-438"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-443 emotion-444"
+                          class="emotion-439 emotion-440"
                         >
                           <div
                             class="emotion-25 emotion-26"
@@ -11794,20 +11704,20 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             </div>
                           </div>
                           <div
-                            class="emotion-447 emotion-448"
+                            class="emotion-443 emotion-444"
                           />
                         </div>
                       </div>
                       <div
-                        class="emotion-449 emotion-450"
+                        class="emotion-445 emotion-446"
                         dir="ltr"
                       >
                         <h3
-                          class="emotion-451 emotion-452"
+                          class="emotion-447 emotion-448"
                         >
                           <a
                             aria-labelledby="promo-rel-content-azeriazerbaijan44004471-8"
-                            class="emotion-453 emotion-454"
+                            class="emotion-449 emotion-450"
                             href="/azeri/azerbaijan-44004471"
                           >
                             <span
@@ -11818,7 +11728,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </a>
                         </h3>
                         <time
-                          class="emotion-455 emotion-12"
+                          class="emotion-451 emotion-12"
                           datetime="2018-05-04"
                         >
                           4 May 2018
@@ -11827,19 +11737,19 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     </div>
                   </li>
                   <li
-                    class="emotion-3 emotion-437 emotion-438"
+                    class="emotion-3 emotion-433 emotion-434"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-439 emotion-440"
+                      class="emotion-435 emotion-436"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-441 emotion-442"
+                        class="emotion-437 emotion-438"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-443 emotion-444"
+                          class="emotion-439 emotion-440"
                         >
                           <div
                             class="emotion-25 emotion-26"
@@ -11855,20 +11765,20 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             </div>
                           </div>
                           <div
-                            class="emotion-447 emotion-448"
+                            class="emotion-443 emotion-444"
                           />
                         </div>
                       </div>
                       <div
-                        class="emotion-449 emotion-450"
+                        class="emotion-445 emotion-446"
                         dir="ltr"
                       >
                         <h3
-                          class="emotion-451 emotion-452"
+                          class="emotion-447 emotion-448"
                         >
                           <a
                             aria-labelledby="promo-rel-content-azeriazerbaijan43870815-9"
-                            class="emotion-453 emotion-454"
+                            class="emotion-449 emotion-450"
                             href="/azeri/azerbaijan-43870815"
                           >
                             <span
@@ -11879,7 +11789,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </a>
                         </h3>
                         <time
-                          class="emotion-455 emotion-12"
+                          class="emotion-451 emotion-12"
                           datetime="2018-04-29"
                         >
                           29 Aprel 2018

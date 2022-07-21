@@ -114,7 +114,7 @@ exports[`ArticleTimestamp should render a 'created' Timestamp correctly 1`] = `
 .emotion-3 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -269,7 +269,7 @@ exports[`ArticleTimestamp should render both a 'created' and an 'updated' Timest
 .emotion-3 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -432,7 +432,7 @@ exports[`ArticleTimestamp should render with a prefix 1`] = `
 .emotion-3 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -595,7 +595,7 @@ exports[`ArticleTimestamp should render with a suffix 1`] = `
 .emotion-3 {
   font-size: 0.875rem;
   line-height: 1.25rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
@@ -758,7 +758,7 @@ exports[`ArticleTimestamp should render with no suffix or prefix 1`] = `
 .emotion-3 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
