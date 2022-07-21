@@ -36,7 +36,7 @@ const NavWrapper = styled.div`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin: 0 0.8rem;
   }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+  @media (min-width: 66rem) {
     margin: 0 auto;
   }
 `;
