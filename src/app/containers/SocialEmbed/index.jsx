@@ -24,11 +24,16 @@ const SocialEmbedContainer = ({ blocks, source }) => {
   const { service, translations } = useContext(ServiceContext);
 
   if (!blocks || !source) return null;
+  const { model } = blocks[0];
 
-  const provider = getProviderFromSource(source);
+  const provider =
+    path(['blocks', 0, 'model', 'oembed', 'provider_name'], model) ||
+    getProviderFromSource(source);
+
+  const normalisedProvider = provider.toLowerCase();
+
   const id = getIdFromSource(source);
 
-  const { model } = blocks[0];
   const oEmbed = path(['blocks', 0, 'model', 'oembed'], model);
   const oEmbedIndexOfType = path(['indexOfType'], oEmbed);
   const oEmbedPosition = is(Number, oEmbedIndexOfType) && oEmbedIndexOfType + 1;
@@ -48,27 +53,27 @@ const SocialEmbedContainer = ({ blocks, source }) => {
     ...skipLinkTranslations,
     endTextId:
       oEmbedPosition > 0
-        ? `end-of-%provider%-content-${oEmbedPosition}`
-        : `end-of-%provider%-content`,
+        ? `end-of-%normalisedProvider%-content-${oEmbedPosition}`
+        : `end-of-%normalisedProvider%-content`,
   };
 
-  const caption = provider === 'youtube' ? captionTranslations : null;
+  const caption = normalisedProvider === 'youtube' ? captionTranslations : null;
 
   logger.info(SOCIAL_EMBED_RENDERED, {
-    provider,
+    normalisedProvider,
     href: source,
   });
 
   return (
     <GridItemMedium>
       <Wrapper
-        provider={provider}
-        data-e2e={`${provider}-embed-${source}`}
+        provider={normalisedProvider}
+        data-e2e={`${normalisedProvider}-embed-${source}`}
         oEmbed={oEmbed}
       >
         {isAmp ? (
           <AmpSocialEmbed
-            provider={provider}
+            provider={normalisedProvider}
             service={service}
             id={id}
             fallback={fallback}
@@ -78,7 +83,7 @@ const SocialEmbedContainer = ({ blocks, source }) => {
         ) : (
           <Lazyload offset={LAZYLOAD_OFFSET} once height={oEmbed?.height}>
             <CanonicalSocialEmbed
-              provider={provider}
+              provider={normalisedProvider}
               service={service}
               oEmbed={oEmbed}
               fallback={fallback}
