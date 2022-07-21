@@ -17,6 +17,7 @@ import {
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '#legacy/gel-foundations/src/breakpoints';
 import { getPica } from '#legacy/gel-foundations/src/typography';
@@ -29,9 +30,15 @@ const CURRENT_ITEM_HOVER_BORDER = '0.3125rem'; // 5px
 
 const NavWrapper = styled.div`
   position: relative;
-  max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
-  margin: 0 auto;
+  max-width: 63.4rem;
+  margin: 0;
   background-color: ${C_WHITE};
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin: 0 0.8rem;
+  }
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    margin: 0 auto;
+  }
 `;
 
 const StyledUnorderedList = styled.ul`
@@ -61,7 +68,7 @@ const StyledLink = styled.a`
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  padding: ${SPACING_AROUND_NAV_ITEMS};
+  padding: ${SPACING_AROUND_NAV_ITEMS} 0.25rem;
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     padding: ${SPACING_AROUND_NAV_ITEMS} ${GEL_SPACING};
@@ -92,6 +99,7 @@ const StyledListItem = styled.li`
   display: inline-block;
   position: relative;
   z-index: 2;
+  margin-right: 0.75rem;
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     &:last-child {

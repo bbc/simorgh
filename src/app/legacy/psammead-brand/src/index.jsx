@@ -13,8 +13,7 @@ import {
   GEL_SPACING_DBL,
 } from '#legacy/gel-foundations/src/spacings';
 
-// TODO: change to 63rem to align with chameleon nav bar once it is added
-const SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX = '80rem';
+const SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX = '63rem';
 const SCRIPT_LINK_OFFSET_BELOW_240PX = 52;
 const PADDING_AROUND_SVG_BELOW_400PX = 16;
 
