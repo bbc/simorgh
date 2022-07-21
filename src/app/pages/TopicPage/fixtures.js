@@ -67,17 +67,15 @@ export const pidginMultipleItems = {
 export const mundoWithBadgeAndDescr = {
   title: 'Colombia Peace Agreement',
   description: 'Peace agreement between the Colombian government and FARC',
-  images: [
-    {
-      url: 'https://ichef.bbci.co.uk/news/png/480/cpsdevpb/b40b/test/5e614490-0360-11ed-b35d-c5a474731c9c.png',
-      urlTemplate:
-        'https://ichef.bbci.co.uk/news/png/{width}/cpsdevpb/b40b/test/5e614490-0360-11ed-b35d-c5a474731c9c.png',
-      originalSize: { width: 1200, height: 800 },
-      altText: 'Colombia flag',
-      copyright: 'Wikipedia',
-      type: 'badge',
-    },
-  ],
+  imageData: {
+    url: 'https://ichef.bbci.co.uk/news/png/480/cpsdevpb/b40b/test/5e614490-0360-11ed-b35d-c5a474731c9c.png',
+    urlTemplate:
+      'https://ichef.bbci.co.uk/news/png/{width}/cpsdevpb/b40b/test/5e614490-0360-11ed-b35d-c5a474731c9c.png',
+    originalSize: { width: 1200, height: 800 },
+    altText: 'Colombia flag',
+    copyright: 'Wikipedia',
+    type: 'badge',
+  },
   promos: [
     {
       title: 'Qué hace que los chilenos sean tan resistentes a los terremotos',
