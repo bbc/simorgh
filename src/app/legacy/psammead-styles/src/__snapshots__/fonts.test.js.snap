@@ -262,7 +262,7 @@ exports[`Psammead Styles - Fonts should match REITH QALAM BOLD base font url 1`]
     font-family: \\"BBC Reith Qalam\\";
     font-weight: 700;
     font-style: normal;
-    src: url('https://ws-downloads.files.bbci.co.uk/fonts/ReithQalam/v1.100/bold.woff2') format('woff2'), url('https://ws-downloads.files.bbci.co.uk/fonts/ReithQalam/v1.100/bold.woff') format('woff');
+    src: url('https://ws-downloads.files.bbci.co.uk/fonts/ReithQalam/v1.210/bold.woff2') format('woff2'), url('https://ws-downloads.files.bbci.co.uk/fonts/ReithQalam/v1.210/bold.woff') format('woff');
     font-display: optional;
   }
 "
@@ -286,7 +286,7 @@ exports[`Psammead Styles - Fonts should match REITH QALAM REGULAR base font url 
     font-family: \\"BBC Reith Qalam\\";
     font-weight: 400;
     font-style: normal;
-    src: url('https://ws-downloads.files.bbci.co.uk/fonts/ReithQalam/v1.100/normal.woff2') format('woff2'), url('https://ws-downloads.files.bbci.co.uk/fonts/ReithQalam/v1.100/normal.woff') format('woff');
+    src: url('https://ws-downloads.files.bbci.co.uk/fonts/ReithQalam/v1.210/normal.woff2') format('woff2'), url('https://ws-downloads.files.bbci.co.uk/fonts/ReithQalam/v1.210/normal.woff') format('woff');
     font-display: optional;
   }
 "
