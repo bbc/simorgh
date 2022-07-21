@@ -36,6 +36,8 @@ export default async ({ getAgent, service, path: pathname, variant, page }) => {
     });
     const { data } = json;
 
+    const imageData = data.imageData || null;
+
     const promos = data.curations
       ? data.curations[0].summaries
       : data.summaries;
@@ -46,7 +48,8 @@ export default async ({ getAgent, service, path: pathname, variant, page }) => {
       status,
       pageData: {
         title: data.title,
-        description: data.description || data.title,
+        description: data.description,
+        imageData,
         promos,
         activePage: data.activePage || 1,
         pageCount: data.pageCount,
