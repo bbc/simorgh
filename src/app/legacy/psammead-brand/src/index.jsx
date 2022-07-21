@@ -128,7 +128,6 @@ const StyledBrand = ({
   linkId,
   product,
   serviceLocalisedName,
-  svgHeight,
   svg,
   logoColour,
 }) => (
@@ -136,7 +135,6 @@ const StyledBrand = ({
     {svg && (
       <>
         <BrandSvg
-          xheight={svgHeight}
           viewBox={[
             svg.viewbox.minX || 0,
             svg.viewbox.minY || 0,
