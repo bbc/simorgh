@@ -34,7 +34,7 @@ export const dictionaryFactory = ({ provider }) => ({
 });
 
 /**
- * These styles are lifted from #legacy/psammead-visually-hidden-text/src, which we
+ * These styles are lifted from #psammead/psammead-visually-hidden-text/src, which we
  * cannot use directly as we require control over _when_ they are applied.
  */
 export const visuallyHiddenStyle = `

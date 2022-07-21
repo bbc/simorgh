@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { C_BLACK } from '#legacy/psammead-styles/src/colours';
+import { C_BLACK } from '#psammead/psammead-styles/src/colours';
 
 const svgSize = '2.75rem'; // 44px
 
