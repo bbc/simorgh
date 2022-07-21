@@ -25,23 +25,17 @@ const logger = nodeLogger(__filename);
 // 004_brasil_recommendations_experiment
 const getRecommendations = (service, assetUri) => {
   if (service !== 'portuguese' || isLive()) {
+    const UNIRECS_ALLOW_LIST = ['indonesia', 'mundo', 'turkce'];
+
     return [
       {
         name: 'recommendations',
         attachAgent: true,
         path: getRecommendationsUrl({
           assetUri,
-        }),
-        assetUri,
-        api: 'recommendations',
-        apiContext: 'secondary_data',
-      },
-      {
-        name: 'recommendations',
-        attachAgent: true,
-        path: getRecommendationsUrl({
-          assetUri,
-          engine: 'unirecs_datalab',
+          ...(UNIRECS_ALLOW_LIST.includes(service) && {
+            engine: 'unirecs_datalab',
+          }),
         }),
         assetUri,
         api: 'recommendations',
