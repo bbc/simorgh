@@ -320,7 +320,7 @@ exports[`Canonical persian/afghanistan IDX page SEO OG url 1`] = `"http://localh
 
 exports[`Canonical persian/afghanistan IDX page SEO Page title 1`] = `"صفحه افغانستان - BBC News فارسی"`;
 
-exports[`Canonical persian/afghanistan IDX page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical persian/afghanistan IDX page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical persian/afghanistan IDX page SEO Twitter card 1`] = `"summary_large_image"`;
 

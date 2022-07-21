@@ -9,7 +9,7 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
 .emotion-3 {
   position: relative;
   z-index: 0;
-  color: #3F3F42;
+  color: #141414;
   margin-top: 2rem;
   margin-bottom: 0;
 }
@@ -39,28 +39,11 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
 }
 
 .emotion-5 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-@media screen and (-ms-high-contrast: active) {
-  .emotion-5 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-5 {
-    display: none;
-  }
-}
-
-.emotion-7 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-9 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -70,7 +53,7 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
   flex-direction: column;
 }
 
-.emotion-11 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -90,7 +73,7 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-11 {
+  .emotion-9 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -98,11 +81,11 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
   }
 }
 
-.emotion-13 {
+.emotion-11 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   background-color: #FDFDFD;
   margin: 1rem 0;
@@ -118,66 +101,66 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-13 {
+  .emotion-11 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-13 {
+  .emotion-11 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-13 {
+  .emotion-11 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-13 {
+  .emotion-11 {
     padding-right: 1rem;
   }
 }
 
-.emotion-15 {
+.emotion-13 {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.emotion-17 {
+.emotion-15 {
   padding: 1rem 0;
   line-height: 0;
 }
 
-.emotion-17:first-child {
+.emotion-15:first-child {
   padding-top: 0;
 }
 
-.emotion-17:last-child {
+.emotion-15:last-child {
   padding-bottom: 0;
 }
 
-.emotion-17:not(:last-child) {
+.emotion-15:not(:last-child) {
   border-bottom: 1px #BABABA solid;
 }
 
-.emotion-19 {
+.emotion-17 {
   position: relative;
   padding-left: 4rem;
 }
 
-.emotion-21 {
+.emotion-19 {
   line-height: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-21:before {
+.emotion-19:before {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -188,47 +171,47 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
   z-index: 1;
 }
 
-.emotion-21 .rounded-play-button__ring,
-.emotion-21 .rounded-play-button__triangle {
+.emotion-19 .rounded-play-button__ring,
+.emotion-19 .rounded-play-button__triangle {
   color: #000;
 }
 
-.emotion-21:focus [class*='--hover'],
-.emotion-21:hover [class*='--hover'] {
+.emotion-19:focus [class*='--hover'],
+.emotion-19:hover [class*='--hover'] {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-21:focus .rounded-play-button__ring,
-.emotion-21:hover .rounded-play-button__ring,
-.emotion-21:focus .rounded-play-button__inner,
-.emotion-21:hover .rounded-play-button__inner {
+.emotion-19:focus .rounded-play-button__ring,
+.emotion-19:hover .rounded-play-button__ring,
+.emotion-19:focus .rounded-play-button__inner,
+.emotion-19:hover .rounded-play-button__inner {
   fill: currentColor;
   color: #B80000;
 }
 
-.emotion-21:focus .rounded-play-button__triangle,
-.emotion-21:hover .rounded-play-button__triangle {
+.emotion-19:focus .rounded-play-button__triangle,
+.emotion-19:hover .rounded-play-button__triangle {
   fill: transparent;
 }
 
-.emotion-21:visited [class*='--visited'] {
+.emotion-19:visited [class*='--visited'] {
   color: #6E6E73;
 }
 
-.emotion-23 {
+.emotion-21 {
   position: absolute;
   left: 0.5rem;
   top: 0;
 }
 
-.emotion-25 {
+.emotion-23 {
   display: inline-block;
   width: 2.5rem;
   height: 2.5rem;
 }
 
-.emotion-27 {
+.emotion-25 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -239,7 +222,7 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
   margin: 0;
 }
 
-.emotion-29 {
+.emotion-27 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -252,20 +235,20 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-29 {
+  .emotion-27 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-29 {
+  .emotion-27 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-33 {
+.emotion-31 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -278,20 +261,20 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-33 {
+  .emotion-31 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-33 {
+  .emotion-31 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-.emotion-39 {
+.emotion-37 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -301,27 +284,27 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-39 {
+  .emotion-37 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-39 {
+  .emotion-37 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-41 {
+.emotion-39 {
   display: inline;
 }
 
-.emotion-45 {
+.emotion-43 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -339,28 +322,28 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-45 {
+  .emotion-43 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-45 {
+  .emotion-43 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-45 {
+  .emotion-43 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-45 {
+  .emotion-43 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -375,20 +358,17 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
     <div
       class="emotion-2 emotion-3 emotion-4"
     >
-      <div
-        class="emotion-5 emotion-6"
-      />
       <h2
-        class="emotion-7 emotion-8"
+        class="emotion-5 emotion-6"
       >
         <span
-          class="emotion-9 emotion-10"
+          class="emotion-7 emotion-8"
         >
           <span
-            class="emotion-11 emotion-12"
+            class="emotion-9 emotion-10"
           >
             <span
-              class="emotion-13 emotion-14"
+              class="emotion-11 emotion-12"
               dir="ltr"
               id="recent-episodes"
             >
@@ -399,31 +379,31 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
       </h2>
     </div>
     <ul
-      class="emotion-15 emotion-16"
+      class="emotion-13 emotion-14"
       data-e2e="recent-episodes-list"
       role="list"
     >
       <li
-        class="emotion-17 emotion-18"
+        class="emotion-15 emotion-16"
         data-e2e="recent-episodes-list-item"
       >
         <div
-          class="emotion-19 emotion-20"
+          class="emotion-17 emotion-18"
           dir="ltr"
         >
           <a
             aria-labelledby="episodeLinkIndex-0"
-            class="emotion-21 emotion-22"
+            class="emotion-19 emotion-20"
             href="/indonesia/bbc_indonesian_radio/w172xnm8j4tz686"
           >
             <div
               aria-hidden="true"
-              class="emotion-23 emotion-24"
+              class="emotion-21 emotion-22"
               dir="ltr"
             >
               <div
                 aria-hidden="true"
-                class="emotion-25 emotion-26"
+                class="emotion-23 emotion-24"
               >
                 
       
@@ -469,39 +449,39 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
               role="text"
             >
               <span
-                class="emotion-27 emotion-28"
+                class="emotion-25 emotion-26"
               >
                 Audio, 
               </span>
               <span
-                class="episode-list__title--hover episode-list__title--visited emotion-29 emotion-30"
+                class="episode-list__title--hover episode-list__title--visited emotion-27 emotion-28"
                 dir="ltr"
               >
                 Dunia Pagi Ini
               </span>
               <span
-                class="emotion-27 emotion-28"
+                class="emotion-25 emotion-26"
               >
                 , 
               </span>
               <span
-                class="episode-list__description--hover episode-list__description--visited emotion-33 emotion-34"
+                class="episode-list__description--hover episode-list__description--visited emotion-31 emotion-32"
                 dir="ltr"
               >
                 BBC Indonesia, Kamis 18 Februari 2021
               </span>
               <span
-                class="emotion-27 emotion-28"
+                class="emotion-25 emotion-26"
               >
                 , 
               </span>
               <span
-                class="emotion-27 emotion-28"
+                class="emotion-25 emotion-26"
               >
                  Durasi 15,30 
               </span>
               <span
-                class="emotion-39 emotion-40"
+                class="emotion-37 emotion-38"
                 dir="ltr"
               >
                 <span
@@ -513,10 +493,10 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
             </span>
           </a>
           <div
-            class="emotion-41 emotion-42"
+            class="emotion-39 emotion-40"
           >
             <time
-              class="emotion-40 emotion-44 emotion-45 emotion-46"
+              class="emotion-38 emotion-42 emotion-43 emotion-44"
               datetime="2020-11-17"
             >
               17 November 2020
@@ -525,26 +505,26 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
         </div>
       </li>
       <li
-        class="emotion-17 emotion-18"
+        class="emotion-15 emotion-16"
         data-e2e="recent-episodes-list-item"
       >
         <div
-          class="emotion-19 emotion-20"
+          class="emotion-17 emotion-18"
           dir="ltr"
         >
           <a
             aria-labelledby="episodeLinkIndex-1"
-            class="emotion-21 emotion-22"
+            class="emotion-19 emotion-20"
             href="/indonesia/bbc_indonesian_radio/w172xnm84wjrkv2"
           >
             <div
               aria-hidden="true"
-              class="emotion-23 emotion-24"
+              class="emotion-21 emotion-22"
               dir="ltr"
             >
               <div
                 aria-hidden="true"
-                class="emotion-25 emotion-26"
+                class="emotion-23 emotion-24"
               >
                 
       
@@ -590,39 +570,39 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
               role="text"
             >
               <span
-                class="emotion-27 emotion-28"
+                class="emotion-25 emotion-26"
               >
                 Audio, 
               </span>
               <span
-                class="episode-list__title--hover episode-list__title--visited emotion-29 emotion-30"
+                class="episode-list__title--hover episode-list__title--visited emotion-27 emotion-28"
                 dir="ltr"
               >
                 Dunia Pagi Ini
               </span>
               <span
-                class="emotion-27 emotion-28"
+                class="emotion-25 emotion-26"
               >
                 , 
               </span>
               <span
-                class="episode-list__description--hover episode-list__description--visited emotion-33 emotion-34"
+                class="episode-list__description--hover episode-list__description--visited emotion-31 emotion-32"
                 dir="ltr"
               >
                 16 November 2020
               </span>
               <span
-                class="emotion-27 emotion-28"
+                class="emotion-25 emotion-26"
               >
                 , 
               </span>
               <span
-                class="emotion-27 emotion-28"
+                class="emotion-25 emotion-26"
               >
                  Durasi 15,30 
               </span>
               <span
-                class="emotion-39 emotion-40"
+                class="emotion-37 emotion-38"
                 dir="ltr"
               >
                 <span
@@ -636,26 +616,26 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
         </div>
       </li>
       <li
-        class="emotion-17 emotion-18"
+        class="emotion-15 emotion-16"
         data-e2e="recent-episodes-list-item"
       >
         <div
-          class="emotion-19 emotion-20"
+          class="emotion-17 emotion-18"
           dir="ltr"
         >
           <a
             aria-labelledby="episodeLinkIndex-2"
-            class="emotion-21 emotion-22"
+            class="emotion-19 emotion-20"
             href="/indonesia/bbc_indonesian_radio/w172xnm84wjrg2y"
           >
             <div
               aria-hidden="true"
-              class="emotion-23 emotion-24"
+              class="emotion-21 emotion-22"
               dir="ltr"
             >
               <div
                 aria-hidden="true"
-                class="emotion-25 emotion-26"
+                class="emotion-23 emotion-24"
               >
                 
       
@@ -701,39 +681,39 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
               role="text"
             >
               <span
-                class="emotion-27 emotion-28"
+                class="emotion-25 emotion-26"
               >
                 Audio, 
               </span>
               <span
-                class="episode-list__title--hover episode-list__title--visited emotion-29 emotion-30"
+                class="episode-list__title--hover episode-list__title--visited emotion-27 emotion-28"
                 dir="ltr"
               >
                 Dunia Pagi Ini
               </span>
               <span
-                class="emotion-27 emotion-28"
+                class="emotion-25 emotion-26"
               >
                 , 
               </span>
               <span
-                class="episode-list__description--hover episode-list__description--visited emotion-33 emotion-34"
+                class="episode-list__description--hover episode-list__description--visited emotion-31 emotion-32"
                 dir="ltr"
               >
                 16 November 2020
               </span>
               <span
-                class="emotion-27 emotion-28"
+                class="emotion-25 emotion-26"
               >
                 , 
               </span>
               <span
-                class="emotion-27 emotion-28"
+                class="emotion-25 emotion-26"
               >
                  Durasi 15,30 
               </span>
               <span
-                class="emotion-39 emotion-40"
+                class="emotion-37 emotion-38"
                 dir="ltr"
               >
                 <span
@@ -747,26 +727,26 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
         </div>
       </li>
       <li
-        class="emotion-17 emotion-18"
+        class="emotion-15 emotion-16"
         data-e2e="recent-episodes-list-item"
       >
         <div
-          class="emotion-19 emotion-20"
+          class="emotion-17 emotion-18"
           dir="ltr"
         >
           <a
             aria-labelledby="episodeLinkIndex-3"
-            class="emotion-21 emotion-22"
+            class="emotion-19 emotion-20"
             href="/indonesia/bbc_indonesian_radio/w172xnm84wjgw3s"
           >
             <div
               aria-hidden="true"
-              class="emotion-23 emotion-24"
+              class="emotion-21 emotion-22"
               dir="ltr"
             >
               <div
                 aria-hidden="true"
-                class="emotion-25 emotion-26"
+                class="emotion-23 emotion-24"
               >
                 
       
@@ -812,39 +792,39 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
               role="text"
             >
               <span
-                class="emotion-27 emotion-28"
+                class="emotion-25 emotion-26"
               >
                 Audio, 
               </span>
               <span
-                class="episode-list__title--hover episode-list__title--visited emotion-29 emotion-30"
+                class="episode-list__title--hover episode-list__title--visited emotion-27 emotion-28"
                 dir="ltr"
               >
                 Dunia Pagi Ini
               </span>
               <span
-                class="emotion-27 emotion-28"
+                class="emotion-25 emotion-26"
               >
                 , 
               </span>
               <span
-                class="episode-list__description--hover episode-list__description--visited emotion-33 emotion-34"
+                class="episode-list__description--hover episode-list__description--visited emotion-31 emotion-32"
                 dir="ltr"
               >
                 Wednesday Evening
               </span>
               <span
-                class="emotion-27 emotion-28"
+                class="emotion-25 emotion-26"
               >
                 , 
               </span>
               <span
-                class="emotion-27 emotion-28"
+                class="emotion-25 emotion-26"
               >
                  Durasi 15,30 
               </span>
               <span
-                class="emotion-39 emotion-40"
+                class="emotion-37 emotion-38"
                 dir="ltr"
               >
                 <span
@@ -856,10 +836,10 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
             </span>
           </a>
           <div
-            class="emotion-41 emotion-42"
+            class="emotion-39 emotion-40"
           >
             <time
-              class="emotion-40 emotion-44 emotion-45 emotion-46"
+              class="emotion-38 emotion-42 emotion-43 emotion-44"
               datetime="2020-11-13"
             >
               13 November 2020

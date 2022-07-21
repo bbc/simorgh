@@ -1,6 +1,15 @@
 {
   "data": {
     "title": "Donald Trump",
+    "description": "Donald John Trump is an American politician, media personality, and businessman who served as the 45th president of the United States from 2017 to 2021.",
+    "images": [{
+      "url": "https://ichef.bbci.co.uk/news/480/cpsdevpb/484e/test/7aa8e800-f95c-11ec-8adf-7bf4017ee9f9.jpg",
+      "urlTemplate": "https://ichef.bbci.co.uk/news/{width}/cpsdevpb/484e/test/7aa8e800-f95c-11ec-8adf-7bf4017ee9f9.jpg",
+      "originalSize": { "width": 450, "height": 253 },
+      "altText": "Penguins",
+      "copyright": "None",
+      "type": "badge"
+    }],
     "summaries": [
       {
         "title": "Trump social-media platform don go live",
