@@ -22,13 +22,16 @@ import Pagination from './Pagination';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 import Curation, { VISUAL_PROMINANCE, VISUAL_STYLE } from './Curation';
 
-const Wrapper = styled.main`
+const OuterWrapper = styled.main`
+  margin: 0 ${GEL_SPACING};
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    margin: 0 ${GEL_SPACING_DBL};
+  }
+`;
+
+const InnerWrapper = styled.div`
   max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
   margin: 0 auto;
-  padding: 0 ${GEL_SPACING};
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    padding: 0 ${GEL_SPACING_DBL};
-  }
 `;
 
 const TopicPage = ({ pageData }) => {
@@ -68,7 +71,7 @@ const TopicPage = ({ pageData }) => {
           <AdContainer slotType="leaderboard" />
         </>
       )}
-      <Wrapper role="main">
+      <OuterWrapper role="main">
         <ATIAnalytics data={pageData} />
         <ChartbeatAnalytics data={pageData} />
         <MetadataContainer
@@ -79,28 +82,30 @@ const TopicPage = ({ pageData }) => {
           openGraphType="website"
           hasAmpPage={false}
         />
-        <LinkedData
-          type="CollectionPage"
-          seoTitle={title}
-          headline={title}
-          entities={promoEntities}
-        />
+        <InnerWrapper>
+          <LinkedData
+            type="CollectionPage"
+            seoTitle={title}
+            headline={title}
+            entities={promoEntities}
+          />
 
-        <TopicTitle>{title}</TopicTitle>
-        <Curation
-          visualStyle={VISUAL_STYLE.NONE}
-          visualProminance={VISUAL_PROMINANCE.NORMAL}
-          promos={promos}
-        />
-        <Pagination
-          activePage={activePage}
-          pageCount={pageCount}
-          pageXOfY={pageXOfY}
-          previousPage={previousPage}
-          nextPage={nextPage}
-          page={page}
-        />
-      </Wrapper>
+          <TopicTitle>{title}</TopicTitle>
+          <Curation
+            visualStyle={VISUAL_STYLE.NONE}
+            visualProminance={VISUAL_PROMINANCE.NORMAL}
+            promos={promos}
+          />
+          <Pagination
+            activePage={activePage}
+            pageCount={pageCount}
+            pageXOfY={pageXOfY}
+            previousPage={previousPage}
+            nextPage={nextPage}
+            page={page}
+          />
+        </InnerWrapper>
+      </OuterWrapper>
     </>
   );
 };
