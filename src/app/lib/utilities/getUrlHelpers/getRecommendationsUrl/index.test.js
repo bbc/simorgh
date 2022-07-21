@@ -1,8 +1,6 @@
-import getRecommendationsUrl, {
-  portugueseRecommendationsExperimentEndpoint,
-} from '.';
+import getRecommendationsUrl from '.';
 
-describe('getRecommendationsUrl', () => {
+describe('getRecommendationsUrl - getRecommendationsUrl', () => {
   beforeEach(() => {
     process.env.RECOMMENDATIONS_ENDPOINT = 'http://mock-recommendations-path';
   });
@@ -14,12 +12,22 @@ describe('getRecommendationsUrl', () => {
       'http://mock-recommendations-path/recommendations/mundo/123456',
     );
   });
+  it('should return endpoint when passed assetUri and engine', () => {
+    expect(
+      getRecommendationsUrl({
+        assetUri: '/mundo/123456',
+        engine: 'unirecs_datalab',
+      }),
+    ).toBe(
+      'http://mock-recommendations-path/recommendations/mundo/123456?Engine=unirecs_datalab',
+    );
+  });
 
   describe('Optimizely Experiments', () => {
     describe('004_brasil_recommendations_experiment', () => {
       it('should return portuguese experimentation endpoint with engine', () => {
         expect(
-          portugueseRecommendationsExperimentEndpoint({
+          getRecommendationsUrl({
             assetUri: '/portuguese/brasil-59876053',
             service: 'portuguese',
             engine: 'unirecs_datalab',
@@ -31,7 +39,7 @@ describe('getRecommendationsUrl', () => {
 
       it('should return portuguese experimentation endpoint with engine and engine variant', () => {
         expect(
-          portugueseRecommendationsExperimentEndpoint({
+          getRecommendationsUrl({
             assetUri: '/portuguese/brasil-59876053',
             service: 'portuguese',
             engine: 'unirecs_datalab',
