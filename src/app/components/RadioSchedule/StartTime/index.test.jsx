@@ -1,6 +1,6 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { latin, arabic } from '@bbc/gel-foundations/scripts';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
+import { latin, arabic } from '#legacy/gel-foundations/src/scripts';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import StartTime from './index';
 

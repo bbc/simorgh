@@ -19,6 +19,9 @@ const topicJSON = {
         id: '54321',
       },
     ],
+    activePage: 1,
+    pageCount: 14,
+    variantTopicId: null,
   },
 };
 
@@ -50,9 +53,12 @@ describe('get initial data for topic', () => {
     expect(pageData.promos[0].link).toEqual('mock-link');
     expect(pageData.promos[0].imageAlt).toEqual('mock-image-alt');
     expect(pageData.promos[0].id).toEqual('54321');
+    expect(pageData.scriptSwitchId).toBeNull();
+    expect(pageData.activePage).toEqual(1);
+    expect(pageData.pageCount).toEqual(14);
   });
 
-  it('should use the title as description if description is empty', async () => {
+  it('should return imageData as null if none is provided', async () => {
     const topicJSONWithoutDescription = assocPath(
       ['data', 'description'],
       '',
@@ -65,7 +71,23 @@ describe('get initial data for topic', () => {
       service: 'pidgin',
     });
     expect(pageData.title).toEqual('Donald Trump');
-    expect(pageData.description).toEqual('Donald Trump');
+    expect(pageData.imageData).toEqual(null);
+  });
+
+  it('should return description as blank string if none is provided', async () => {
+    const topicJSONWithoutDescription = assocPath(
+      ['data', 'description'],
+      '',
+      topicJSON,
+    );
+    fetch.mockResponse(JSON.stringify(topicJSONWithoutDescription));
+    const { pageData } = await getInitialData({
+      path: 'mock-topic-path',
+      getAgent,
+      service: 'pidgin',
+    });
+    expect(pageData.title).toEqual('Donald Trump');
+    expect(pageData.description).toEqual('');
   });
 
   it('should call fetchPageData with the correct request URL', async () => {
@@ -91,11 +113,11 @@ describe('get initial data for topic', () => {
       path: 'serbian/cyr/topics/54321',
       getAgent,
       service: 'serbian',
-      variant: 'sr-cyrl',
+      variant: 'cyr',
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=54321&service=serbian&variant=sr-cyrl',
+      path: 'https://mock-bff-path/?id=54321&service=serbian&variant=cyr',
       agent,
       optHeaders,
     });

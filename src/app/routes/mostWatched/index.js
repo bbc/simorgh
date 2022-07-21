@@ -1,6 +1,6 @@
 import { MostWatchedPage } from '#pages';
-import { mostWatchedPagePath } from '#utils/regex';
-import { MOST_WATCHED_PAGE } from '#utils/pageTypes';
+import { mostWatchedPagePath } from '#app/routes/utils/regex';
+import { MOST_WATCHED_PAGE } from '#app/routes/utils/pageTypes';
 import getInitialData from './getInitialData';
 
 export default {

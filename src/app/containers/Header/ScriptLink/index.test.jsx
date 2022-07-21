@@ -2,7 +2,6 @@ import React from 'react';
 import { node } from 'prop-types';
 import { MemoryRouter, Route } from 'react-router-dom';
 import { render, fireEvent } from '@testing-library/react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { UserContext } from '#contexts/UserContext';
@@ -16,7 +15,9 @@ import {
   errorPagePath,
   frontPagePath,
   legacyAssetPagePath,
+  topicPath,
 } from '#app/routes/utils/regex';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
 import ScriptLinkContainer, { getVariantHref } from '.';
 
 const setPreferredVariantCookieSpy = jest.spyOn(
@@ -70,12 +71,13 @@ const ScriptLinkContainerWithContext = ({
   serviceContext = serbianServiceConfig.lat,
   requestContext = requestContextMock,
   toggleContext = toggleContextMock,
+  ...props
 }) => (
   <ToggleContext.Provider value={toggleContext}>
     <ServiceContext.Provider value={serviceContext}>
       <UserContext.Provider value={userContextMock}>
         <RequestContext.Provider value={requestContext}>
-          <ScriptLinkContainer />
+          <ScriptLinkContainer {...props} />
         </RequestContext.Provider>
       </UserContext.Provider>
     </ServiceContext.Provider>
@@ -158,6 +160,24 @@ describe(`Script Link`, () => {
 
           expect(scriptLink.getAttribute('href')).toBe(variantPath);
         });
+      });
+      it(`Script Link should contain link to other variant when on topic page`, () => {
+        const matchPath = topicPath;
+        const path = '/serbian/lat/topics/c06g871g3knt';
+        const variantPath = '/serbian/cyr/topics/c7zp707dy8yt';
+        const otherVariant = 'cyr';
+
+        const { container } = withRouter(
+          <ScriptLinkContainerWithContext scriptSwitchId="c7zp707dy8yt" />,
+          matchPath,
+          path,
+        );
+
+        const scriptLink = container.querySelector(
+          `a[data-variant="${otherVariant}"]`,
+        );
+
+        expect(scriptLink.getAttribute('href')).toBe(variantPath);
       });
     });
 

@@ -78,7 +78,7 @@ exports[`Canonical Articles Image Caption should match text 1`] = `"Image captio
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="Map of France showing Paris and Cognac"
-  class="eehpdyc0 bbc-rb7xa0 e1enwo3v0"
+  class="eehpdyc0 bbc-rb7xa0 e11uq3260"
   height="351"
   src="https://ichef.bbci.co.uk/news/640/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg"
   width="624"
@@ -252,7 +252,7 @@ exports[`Canonical Articles SEO OG url 1`] = `"http://localhost:7080/scotland/ar
 
 exports[`Canonical Articles SEO Page title 1`] = `"This is the SEO headline of this test article - BBC Scotland"`;
 
-exports[`Canonical Articles SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Articles SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Articles SEO Twitter card 1`] = `"summary_large_image"`;
 

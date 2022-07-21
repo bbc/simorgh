@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -74,7 +74,7 @@ describe('Frosted Glass Promo', () => {
     // Main image is lazy-loaded
     expect(container.querySelector('noscript')).toBeInTheDocument();
     expect(
-      container.querySelector(`a[href="${linkPromoFixture.item.uri}"]`),
+      container.querySelector('a[href="/pidgin/sport-51434980"]'),
     ).toBeInTheDocument();
   });
 

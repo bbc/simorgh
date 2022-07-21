@@ -2,17 +2,17 @@ import React, { useContext } from 'react';
 import { oneOf } from 'prop-types';
 import styled from '@emotion/styled';
 import { Helmet } from 'react-helmet';
+import pathOr from 'ramda/src/pathOr';
+import { RequestContext } from '#contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import {
   AMP_ACCESS_JS,
   AMP_ADS_JS,
-} from '@bbc/psammead-assets/amp-boilerplate';
-import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
-import { C_LUNAR_LIGHT, C_RHINO } from '@bbc/psammead-styles/colours';
-import pathOr from 'ramda/src/pathOr';
-import { getMinion } from '@bbc/gel-foundations/typography';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
-import { RequestContext } from '#contexts/RequestContext';
-import { ServiceContext } from '#contexts/ServiceContext';
+} from '#legacy/psammead-assets/src/amp-boilerplate';
+import { GEL_SPACING } from '#legacy/gel-foundations/src/spacings';
+import { C_GREY_3, C_RHINO } from '#legacy/psammead-styles/src/colours';
+import { getMinion } from '#legacy/gel-foundations/src/typography';
+import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import AdSlot from './AdSlot';
 import { ampLeaderboardStyles, ampMpuStyles } from '../utilities/adSlotStyles';
@@ -23,8 +23,7 @@ import { ampLeaderboardStyles, ampMpuStyles } from '../utilities/adSlotStyles';
 const AccessDiv = props => <div {...props} />;
 
 const AdSection = styled.section`
-  background-color: ${C_LUNAR_LIGHT};
-  margin-top: ${GEL_SPACING};
+  background-color: ${C_GREY_3};
 `;
 
 const AdContainer = styled.div`

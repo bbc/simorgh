@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { bool, string, arrayOf, element, shape } from 'prop-types';
 import styled from '@emotion/styled';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
 import {
   C_CONSENT_BACKGROUND,
   C_CONSENT_ACTION,
@@ -11,18 +11,21 @@ import {
   C_WHITE,
   C_EBON,
   C_GHOST,
-} from '@bbc/psammead-styles/colours';
+} from '#legacy/psammead-styles/src/colours';
 import {
   getDoublePica,
   getLongPrimer,
   getBodyCopy,
-} from '@bbc/gel-foundations/typography';
-import { getSansBold, getSansRegular } from '@bbc/psammead-styles/font-styles';
+} from '#legacy/gel-foundations/src/typography';
+import {
+  getSansBold,
+  getSansRegular,
+} from '#legacy/psammead-styles/src/font-styles';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 import {
   GEL_MARGIN_BELOW_400PX,
   GEL_MARGIN_ABOVE_400PX,
@@ -30,7 +33,7 @@ import {
   GEL_SPACING,
   GEL_SPACING_QUAD,
   GEL_SPACING_TRPL,
-} from '@bbc/gel-foundations/spacings';
+} from '#legacy/gel-foundations/src/spacings';
 
 const BANNER_MAX_HEIGHT = '75vh';
 const MIN_TAP_HEIGHT = '2.75rem'; // 44px

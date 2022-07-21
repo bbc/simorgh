@@ -11,6 +11,7 @@ import {
   FRONT_PAGE,
   STORY_PAGE,
   ARTICLE_PAGE,
+  CORRESPONDENT_STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
 import MostReadContainer from '.';
 import { setFreshPromoTimestamp } from './utilities/testHelpers';
@@ -106,17 +107,6 @@ describe('MostReadContainerCanonical Assertion', () => {
     },
     {
       description:
-        'should not render most read on amp pages when there is no initialData',
-      service: 'pidgin',
-      mostReadToggle: true,
-      isAmp: true,
-      variant: null,
-      renderExpectation: shouldNotRenderMostRead,
-      dataResponse: setFreshPromoTimestamp(pidginMostReadData),
-      serverRenderOnAmp: false,
-    },
-    {
-      description:
         'should render most read on amp pages when initialData is passed and serverRenderOnAmp is true',
       service: 'pidgin',
       mostReadToggle: true,
@@ -206,6 +196,15 @@ describe('MostReadContainerCanonical Assertion', () => {
         pageType: ARTICLE_PAGE,
       },
       {
+        description: 'should render most read amp on CSP page for PS news',
+        service: 'news',
+        mostReadToggle: true,
+        isAmp: true,
+        variant: null,
+        renderExpectation: shouldRenderMostReadAmp,
+        pageType: CORRESPONDENT_STORY_PAGE,
+      },
+      {
         description: 'should not render most read amp on front page',
         service: 'mundo',
         mostReadToggle: true,
@@ -244,25 +243,5 @@ describe('MostReadContainerCanonical Assertion', () => {
         });
       },
     );
-
-    // Test can be removed when code is pushed live.
-    it('should not render most read amp on live environment', async () => {
-      process.env.SIMORGH_APP_ENV = 'live';
-      let container;
-      await act(async () => {
-        container = await render(
-          <MostReadWithContext
-            service="mundo"
-            mostReadToggle
-            isAmp
-            variant={null}
-            pageType={STORY_PAGE}
-          />,
-        ).container;
-      });
-
-      expect(container.querySelector('amp-script')).not.toBeInTheDocument();
-      delete process.env.SIMORGH_APP_ENV;
-    });
   });
 });

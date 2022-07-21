@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { arabic } from '@bbc/gel-foundations/scripts';
+import { shouldMatchSnapshot } from '#legacy/psammead-test-helpers/src';
+import { arabic } from '#legacy/gel-foundations/src/scripts';
 import { renderRadioSchedule } from './testHelpers/helper';
 
 describe('RadioSchedule', () => {

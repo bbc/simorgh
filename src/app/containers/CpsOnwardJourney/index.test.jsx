@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { C_GHOST, C_EBON } from '@bbc/psammead-styles/colours';
+import { C_GHOST, C_EBON } from '#legacy/psammead-styles/src/colours';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import CpsOnwardJourney from '.';
 import '@testing-library/jest-dom';

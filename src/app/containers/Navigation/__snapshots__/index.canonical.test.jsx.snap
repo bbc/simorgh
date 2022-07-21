@@ -3,8 +3,7 @@
 exports[`Canonical Navigation snapshots should correctly render Canonical navigation 1`] = `
 .emotion-0 {
   position: relative;
-  background-color: #B80000;
-  border-top: 0.0625rem solid #FFFFFF;
+  background-color: #FFFFFF;
 }
 
 .emotion-0::after {
@@ -13,10 +12,10 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
   bottom: 0;
   right: 0;
   left: 0;
-  border-bottom: 0.0625rem solid transparent;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-0 .e1lim4kn2::after {
+.emotion-0 .e1ibkbh72::after {
   left: 0;
 }
 
@@ -24,6 +23,7 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
   position: relative;
   max-width: 80rem;
   margin: 0 auto;
+  background-color: #FFFFFF;
 }
 
 .emotion-4 {
@@ -55,7 +55,7 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #FFFFFF;
+  border: 0.25rem solid #B80000;
 }
 
 @media (min-width: 37.5rem) {
@@ -77,8 +77,14 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
 }
 
 .emotion-8 {
-  color: #fff;
+  color: #000000;
   fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-8 {
+    fill: linkText;
+  }
 }
 
 .emotion-10 {
@@ -118,8 +124,8 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
     pointer-events: none;
     background: linear-gradient(
             to right,
-            rgba(184, 0, 0, 0) 0%,
-            rgba(184, 0, 0, 1)
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1)
               100%
           );
   }
@@ -132,7 +138,7 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
 }
 
 .emotion-14 {
-  background-color: #222222;
+  background-color: #FFFFFF;
   clear: both;
   overflow: hidden;
   height: 0;

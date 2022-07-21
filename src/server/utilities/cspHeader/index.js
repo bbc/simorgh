@@ -120,6 +120,7 @@ const directives = {
       'https://cdn.optimizely.com/',
       'https://logx.optimizely.com/',
       'https://europe-west1-bbc-otg-traf-mgr-bq-dev-4105.cloudfunctions.net', // Web-Vitals monitoring
+      'https://cognito-identity.eu-west-1.amazonaws.com/', // CloudWatch RUM
       ...advertisingDirectives.connectSrc,
       "'self'",
     ],
@@ -128,6 +129,7 @@ const directives = {
     ampLive: [
       ...bbcDomains,
       'https://www.youtube.com', // Social Embeds, <amp-youtube />
+      'https://www.youtube-nocookie.com', // Social Embeds, youtube no-cookie
       'https://www.instagram.com', // Social Embeds, <amp-instagram />
       'https://*.ampproject.net', // Social Embeds
       'https://www.riddle.com', // STY Includes
@@ -139,6 +141,7 @@ const directives = {
       'https://chartbeat.com',
       'https://*.chartbeat.com',
       'https://www.youtube.com', // Social Embeds
+      'https://www.youtube-nocookie.com', // Social Embeds, youtube no-cookie
       'https://platform.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
       'https://syndication.twitter.com', // Social Embeds
@@ -152,6 +155,7 @@ const directives = {
     ampNonLive: [
       ...bbcDomains,
       'https://www.youtube.com', // Social Embeds, <amp-youtube />
+      'https://www.youtube-nocookie.com', // Social Embeds, youtube no-cookie
       'https://www.instagram.com', // Social Embeds, <amp-instagram />
       'https://*.ampproject.net', // Social Embeds
       'https://www.riddle.com', // STY Includes
@@ -163,6 +167,7 @@ const directives = {
       'https://chartbeat.com',
       'https://*.chartbeat.com',
       'https://www.youtube.com', // Social Embeds
+      'https://www.youtube-nocookie.com', // Social Embeds, youtube no-cookie
       'https://platform.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
       'https://syndication.twitter.com', // Social Embeds
@@ -267,6 +272,7 @@ const directives = {
       'https://www.instagram.com', // Social Embeds
       'https://cdn.syndication.twimg.com', // Social Embeds
       'https://public.flourish.studio', // STY includes
+      'https://client.rum.us-east-1.amazonaws.com', // CloudWatch RUM
       ...advertisingDirectives.scriptSrc,
       "'self'",
       "'unsafe-inline'",
@@ -383,7 +389,7 @@ export const generatePrefetchSrc = ({ isAmp, isLive }) => {
   return directives.prefetchSrc.canonicalLive;
 };
 
-const helmetCsp = ({ isAmp, isLive }) => ({
+const helmetCsp = ({ isAmp, isLive, reportOnlyOnLive }) => ({
   directives: {
     'default-src': generateDefaultSrc(),
     'child-src': generateChildSrc({ isAmp }),
@@ -399,10 +405,11 @@ const helmetCsp = ({ isAmp, isLive }) => ({
     'report-to': 'worldsvc',
     'upgrade-insecure-requests': [],
   },
+  reportOnly: reportOnlyOnLive,
 });
 
 const injectCspHeader = (req, res, next) => {
-  const { isAmp } = getRouteProps(req.url);
+  const { isAmp, service } = getRouteProps(req.url);
 
   res.setHeader(
     'report-to',
@@ -419,7 +426,13 @@ const injectCspHeader = (req, res, next) => {
     }),
   );
 
-  const middleware = csp(helmetCsp({ isAmp, isLive: isLiveEnv() }));
+  const middleware = csp(
+    helmetCsp({
+      isAmp,
+      isLive: isLiveEnv(),
+      reportOnlyOnLive: service === 'japanese',
+    }),
+  );
   middleware(req, res, next);
 };
 

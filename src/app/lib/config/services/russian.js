@@ -3,20 +3,17 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
+} from '#legacy/psammead-styles/src/colours';
+import cyrillicAndLatin from '#legacy/gel-foundations/src/scripts/latin-and-cyrillic';
 import {
   F_REITH_SANS_BOLD,
-  F_REITH_SANS_BOLD_ITALIC,
-  F_REITH_SANS_ITALIC,
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
-  F_REITH_SERIF_MEDIUM_ITALIC,
   F_REITH_SERIF_LIGHT,
-} from '@bbc/psammead-styles/fonts';
-import { russian as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/GMT';
-import '@bbc/psammead-locales/moment/ru';
+} from '#legacy/psammead-styles/src/fonts';
+import { russian as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import '#legacy/moment-timezone-include/tz/GMT';
+import '#legacy/psammead-locales/moment/ru';
 import withContext from '../../../contexts/utils/withContext';
 
 // Translations used in the header and footer elements of the page
@@ -130,6 +127,8 @@ export const mainTranslations = {
   ads: {
     advertisementLabel: 'Реклама',
   },
+  recommendationTitle: 'По теме',
+  splitRecommendationTitle: 'Другие статьи',
   seeAll: 'Посмотреть все',
   skipLinkText: 'Перейти к содержанию',
   relatedContent: 'Читайте также',
@@ -309,25 +308,13 @@ export const service = {
       },
     },
     disclaimer: {
-      para1: 'Приложение Русской службы BBC News доступно для ',
+      para1: 'Подпишитесь на нашу рассылку ”',
       para2: {
-        text: 'IOS',
-        url: 'https://apps.apple.com/us/app/%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8-%D0%B1%D0%B8-%D0%B1%D0%B8-%D1%81%D0%B8/id504278066',
-        isExternal: true,
+        text: 'Контекст',
+        url: 'https://www.bbc.com/russian/resources/idt-b34bb7dd-f094-4722-92eb-cf7aff8cc1bc',
+        isExternal: false,
       },
-      para3: ' и ',
-      para4: {
-        text: 'Android',
-        url: 'https://play.google.com/store/apps/details?id=uk.co.bbc.russian',
-        isExternal: true,
-      },
-      para5: '. Вы можете также подписаться на наш канал в ',
-      para6: {
-        text: 'Telegram',
-        url: 'https://t.me/bbcrussian',
-        isExternal: true,
-      },
-      para7: '.',
+      para3: '”: она поможет вам разобраться в событиях.',
     },
     radioSchedule: {
       hasRadioSchedule: false,
@@ -377,11 +364,8 @@ export const service = {
     },
     fonts: [
       F_REITH_SANS_BOLD,
-      F_REITH_SANS_BOLD_ITALIC,
-      F_REITH_SANS_ITALIC,
       F_REITH_SANS_REGULAR,
       F_REITH_SERIF_MEDIUM,
-      F_REITH_SERIF_MEDIUM_ITALIC,
       F_REITH_SERIF_LIGHT,
     ],
     timezone: 'GMT',

@@ -1,8 +1,9 @@
 import React, { useContext, useRef } from 'react';
-import SkipLink from '@bbc/psammead-brand/skip-link';
+import SkipLink from '#legacy/psammead-brand/src/SkipLink';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
+import { string, bool } from 'prop-types';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import ScriptLink from './ScriptLink';
@@ -27,7 +28,7 @@ const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
   );
 };
 
-const HeaderContainer = () => {
+const HeaderContainer = ({ scriptSwitchId, renderScriptSwitch }) => {
   const { pageType, isAmp } = useContext(RequestContext);
   const { service, script, translations, dir, scriptLink, lang, serviceLang } =
     useContext(ServiceContext);
@@ -58,24 +59,44 @@ const HeaderContainer = () => {
     </SkipLink>
   );
 
+  const shouldRenderScriptSwitch = scriptLink && renderScriptSwitch;
+
   return (
     <header role="banner" lang={serviceLang}>
       {isAmp ? (
         <Header
           linkId="brandLink"
           skipLink={skipLink}
-          scriptLink={scriptLink && <ScriptLink />}
+          scriptLink={
+            shouldRenderScriptSwitch && (
+              <ScriptLink scriptSwitchId={scriptSwitchId} />
+            )
+          }
         />
       ) : (
         <Header
           brandRef={brandRef}
           skipLink={skipLink}
-          scriptLink={scriptLink && <ScriptLink />}
+          scriptLink={
+            shouldRenderScriptSwitch && (
+              <ScriptLink scriptSwitchId={scriptSwitchId} />
+            )
+          }
         />
       )}
       {showNav && <NavigationContainer />}
     </header>
   );
+};
+
+HeaderContainer.propTypes = {
+  scriptSwitchId: string,
+  renderScriptSwitch: bool,
+};
+
+HeaderContainer.defaultProps = {
+  scriptSwitchId: '',
+  renderScriptSwitch: true,
 };
 
 export default HeaderContainer;

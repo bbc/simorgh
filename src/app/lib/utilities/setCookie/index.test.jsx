@@ -1,5 +1,8 @@
 import Cookie from 'js-cookie';
-import { setWindowValue, resetWindowValue } from '@bbc/psammead-test-helpers';
+import {
+  setWindowValue,
+  resetWindowValue,
+} from '#legacy/psammead-test-helpers/src';
 import setCookie, { getCookieDomain } from '.';
 
 const cookieSpy = jest.spyOn(Cookie, 'set');

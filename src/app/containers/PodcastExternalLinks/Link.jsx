@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 import { oneOf, string, shape } from 'prop-types';
-import { C_EBON, C_METAL } from '@bbc/psammead-styles/colours';
-import { getSansBold } from '@bbc/psammead-styles/font-styles';
-import { getLongPrimer } from '@bbc/gel-foundations/typography';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+import { C_EBON, C_METAL } from '#legacy/psammead-styles/src/colours';
+import { getSansBold } from '#legacy/psammead-styles/src/font-styles';
+import { getLongPrimer } from '#legacy/gel-foundations/src/typography';
+import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
 
 const Link = styled.a`
   ${({ script }) => script && getLongPrimer(script)}

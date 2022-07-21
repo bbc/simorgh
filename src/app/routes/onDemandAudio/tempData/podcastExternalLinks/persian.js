@@ -53,6 +53,11 @@ const externalLinks = {
         linkUrl:
           'https://podcasts.apple.com/gb/podcast/bbc-persian-radio/id262741509',
       },
+      {
+        linkText: 'Castbox',
+        linkUrl:
+          'https://castbox.fm/channel/رادیو-فارسی-بیبیسی-id574405?utm_source=website&utm_medium=dlink&utm_campaign=web_share&utm_content=%D8%B1%D8%A7%D8%AF%DB%8C%D9%88%20%D9%81%D8%A7%D8%B1%D8%B3%DB%8C%20%D8%A8%DB%8C%E2%80%8C%D8%A8%DB%8C%E2%80%8C%D8%B3%DB%8C-CastBox_FM',
+      },
     ],
     p09v5lgp: [
       {

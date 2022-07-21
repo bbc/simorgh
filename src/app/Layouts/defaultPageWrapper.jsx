@@ -2,9 +2,9 @@ import React, { useContext } from 'react';
 import { node, shape, bool, number } from 'prop-types';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import GlobalStyles from '@bbc/psammead-styles/global-styles';
+import GlobalStyles from '#legacy/psammead-styles/src/global-styles';
 import styled from '@emotion/styled';
-import { C_GHOST, C_MIDNIGHT_BLACK } from '@bbc/psammead-styles/colours';
+import { C_GHOST, C_MIDNIGHT_BLACK } from '#legacy/psammead-styles/src/colours';
 import WebVitals from '#app/containers/WebVitals';
 import HeaderContainer from '../containers/Header';
 import FooterContainer from '../containers/Footer';
@@ -30,6 +30,8 @@ const PageWrapper = ({ children, pageData, status }) => {
   const fonts = fontFunctions.map(getFonts => getFonts());
 
   const isDarkMode = pathOr(false, ['darkMode'], pageData);
+  const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
+  const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);
   const isErrorPage = [404, 500].includes(status);
   const pageType = isErrorPage
     ? 'WS-ERROR-PAGE'
@@ -42,7 +44,10 @@ const PageWrapper = ({ children, pageData, status }) => {
       <ManifestContainer />
       <WebVitals pageType={pageType} />
       <Wrapper id="main-wrapper" darkMode={isDarkMode}>
-        <HeaderContainer />
+        <HeaderContainer
+          scriptSwitchId={scriptSwitchId}
+          renderScriptSwitch={renderScriptSwitch}
+        />
         <Content>{children}</Content>
         <FooterContainer />
       </Wrapper>

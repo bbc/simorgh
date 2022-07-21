@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Timestamp should add prefix and suffix 1`] = `
+.emotion-0 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #545658;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 0.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-0:last-child {
+  padding-bottom: 1rem;
+}
+
+<div>
+  <time
+    class="emotion-0 emotion-1"
+    datetime="2018-10-19"
+  >
+    Prefix here 19 October 2018 suffix here
+  </time>
+</div>
+`;
+
+exports[`Timestamp should render correctly 1`] = `
+.emotion-0 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #545658;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 0.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-0:last-child {
+  padding-bottom: 1rem;
+}
+
+<div>
+  <time
+    class="emotion-0 emotion-1"
+    datetime="2018-10-19"
+  >
+    19 October 2018
+  </time>
+</div>
+`;
+
+exports[`Timestamp should render without a leading zero on the day 1`] = `
+.emotion-0 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #545658;
+  display: block;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 0.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-0:last-child {
+  padding-bottom: 1rem;
+}
+
+<div>
+  <time
+    class="emotion-0 emotion-1"
+    datetime="2018-07-07"
+  >
+    ۷ ژوئیه ۲۰۱۸
+  </time>
+</div>
+`;

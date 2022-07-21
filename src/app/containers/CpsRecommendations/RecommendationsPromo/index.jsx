@@ -1,15 +1,22 @@
 import React, { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
-import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+} from '#legacy/gel-foundations/src/spacings';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
-import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
-import { getPica } from '@bbc/gel-foundations/typography';
-import { C_EBON, C_METAL, C_GREY_2 } from '@bbc/psammead-styles/colours';
+} from '#legacy/gel-foundations/src/breakpoints';
+import { getSerifMedium } from '#legacy/psammead-styles/src/font-styles';
+import { getPica } from '#legacy/gel-foundations/src/typography';
+import {
+  C_METAL,
+  C_GREY_2,
+  C_GREY_10,
+} from '#legacy/psammead-styles/src/colours';
 import { shape, string, oneOfType } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { storyItem } from '#models/propTypes/storyItem';
@@ -57,7 +64,7 @@ const TextWrapper = styled.div`
 
 const Link = styled.a`
   position: static;
-  color: ${C_EBON};
+  color: ${C_GREY_10};
   text-decoration: none;
   overflow-wrap: break-word;
 
@@ -86,7 +93,7 @@ const Link = styled.a`
 const StyledHeadline = styled.div`
   ${({ service }) => getSerifMedium(service)}
   ${({ script }) => getPica(script)}
-  color: ${C_EBON};
+  color: ${C_GREY_10};
   margin: 0;
   height: 100%;
   display: flex;

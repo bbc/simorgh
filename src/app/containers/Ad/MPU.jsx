@@ -1,7 +1,7 @@
 import React from 'react';
-import { GEL_GROUP_1_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
 import styled from '@emotion/styled';
 import { NEGATIVE_MARGIN } from '#lib/styles.const';
+import { GEL_GROUP_1_SCREEN_WIDTH_MAX } from '#legacy/gel-foundations/src/breakpoints';
 import BaseAdContainer from '.';
 
 const AdContainer = styled(BaseAdContainer)`

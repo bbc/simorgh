@@ -3,17 +3,17 @@ import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { oneOf, string } from 'prop-types';
 import styled from '@emotion/styled';
-import { C_LUNAR_LIGHT } from '@bbc/psammead-styles/colours';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import isLive from '#lib/utilities/isLive';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
+import { C_GREY_3 } from '#legacy/psammead-styles/src/colours';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import { leaderboardStyles, mpuStyles } from '../utilities/adSlotStyles';
 
 const AdContainer = styled.section`
-  background-color: ${C_LUNAR_LIGHT};
+  background-color: ${C_GREY_3};
   ${({ slotType }) => (slotType === 'mpu' ? mpuStyles : leaderboardStyles)}
 `;
 

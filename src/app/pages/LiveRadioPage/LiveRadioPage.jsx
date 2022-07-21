@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { string, shape } from 'prop-types';
-import { Headline } from '@bbc/psammead-headings';
+import { Headline } from '#legacy/psammead-headings/src';
 import pathOr from 'ramda/src/pathOr';
-import Paragraph from '@bbc/psammead-paragraph';
+import Paragraph from '#legacy/psammead-paragraph/src';
 import { useLocation } from 'react-router-dom';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
@@ -66,6 +66,7 @@ const LiveRadioPage = ({ pageData }) => {
         lang={language}
         description={summary}
         openGraphType="website"
+        hasAmpPage={false}
       />
       <LinkedData type="RadioChannel" seoTitle={name} />
 

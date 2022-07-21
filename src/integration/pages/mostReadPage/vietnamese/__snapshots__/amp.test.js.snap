@@ -427,7 +427,7 @@ exports[`AMP Most Read Page SEO OG url 1`] = `"http://localhost:7080/vietnamese/
 
 exports[`AMP Most Read Page SEO Page title 1`] = `"Đọc nhiều nhất - BBC News Tiếng Việt"`;
 
-exports[`AMP Most Read Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP Most Read Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP Most Read Page SEO Twitter card 1`] = `"summary_large_image"`;
 

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { shape, bool, oneOfType } from 'prop-types';
-import Bulletin from '@bbc/psammead-bulletin';
+import Bulletin from '#legacy/psammead-bulletin/src';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#lib/utilities/ichefURL';
 import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
@@ -74,6 +74,7 @@ const BulletinContainer = ({ item, lazyLoadImage }) => {
 
   const headline = pathOr(null, ['name'], item);
   const ctaLink = pathOr(null, ['uri'], item);
+  const allyLink = ctaLink.split('/').pop();
 
   if (!headline || !ctaLink) {
     return null;
@@ -115,7 +116,7 @@ const BulletinContainer = ({ item, lazyLoadImage }) => {
       liveText={liveText}
       offScreenText={offScreenText}
       lang={ctaTextIsEnglish ? 'en-GB' : null}
-      ariaId={headline}
+      ariaId={`${headline}${allyLink}`}
     />
   );
 };

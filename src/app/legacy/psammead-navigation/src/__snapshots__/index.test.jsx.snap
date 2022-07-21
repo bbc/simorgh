@@ -1,0 +1,1156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation should render correctly 1`] = `
+.emotion-0 {
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+.emotion-0::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+.emotion-0 .emotion-7::after {
+  left: 0;
+}
+
+.emotion-2 {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+}
+
+.emotion-4 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    overflow: hidden;
+  }
+}
+
+.emotion-6 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-6:last-child {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    width: 80rem;
+    border-bottom: 0.0625rem solid #E6E8EA;
+    z-index: -1;
+  }
+}
+
+.emotion-8 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  color: #141414;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-8 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+.emotion-8:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  border-bottom: 0.3125rem solid #B80000;
+}
+
+.emotion-8:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.25rem solid #B80000;
+}
+
+.emotion-10::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+}
+
+.emotion-12 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-16 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  color: #141414;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-16 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+.emotion-16:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+}
+
+.emotion-16:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.25rem solid #B80000;
+}
+
+<div>
+  <nav
+    class="emotion-0 emotion-1"
+    dir="ltr"
+    role="navigation"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <ul
+        class="emotion-4 emotion-5"
+        role="list"
+      >
+        <li
+          class="emotion-6 emotion-7"
+          dir="ltr"
+          role="listitem"
+        >
+          <a
+            aria-labelledby="NavigationLinks-Akụkọ"
+            class="emotion-8 emotion-9"
+            data-navigation="test_navigation"
+            href="/igbo"
+          >
+            <span
+              class="emotion-10 emotion-11"
+              id="NavigationLinks-Akụkọ"
+              role="text"
+            >
+              <span
+                class="emotion-12 emotion-13"
+              >
+                Current page, 
+              </span>
+              Akụkọ
+            </span>
+          </a>
+        </li>
+        <li
+          class="emotion-6 emotion-7"
+          dir="ltr"
+          role="listitem"
+        >
+          <a
+            class="emotion-16 emotion-9"
+            data-navigation="test_navigation"
+            href="/igbo/egwuregwu"
+          >
+            Egwuregwu
+          </a>
+        </li>
+        <li
+          class="emotion-6 emotion-7"
+          dir="ltr"
+          role="listitem"
+        >
+          <a
+            class="emotion-16 emotion-9"
+            data-navigation="test_navigation"
+            href="/igbo/media/video"
+          >
+            Ihe nkiri
+          </a>
+        </li>
+        <li
+          class="emotion-6 emotion-7"
+          dir="ltr"
+          role="listitem"
+        >
+          <a
+            class="emotion-16 emotion-9"
+            data-navigation="test_navigation"
+            href="/igbo/popular/read"
+          >
+            Nke ka ewuewu
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`Navigation should render correctly when ampOpenClass prop is provided 1`] = `
+.emotion-0 {
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-0.is-open {
+    background-color: #222222;
+  }
+}
+
+.emotion-0::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+.emotion-0 .emotion-7::after {
+  left: 0;
+}
+
+.emotion-2 {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+}
+
+.emotion-4 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    overflow: hidden;
+  }
+}
+
+.emotion-6 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-6:last-child {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    width: 80rem;
+    border-bottom: 0.0625rem solid #E6E8EA;
+    z-index: -1;
+  }
+}
+
+.emotion-8 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  color: #141414;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-8 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+.emotion-8:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  border-bottom: 0.3125rem solid #B80000;
+}
+
+.emotion-8:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.25rem solid #B80000;
+}
+
+.emotion-10::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+}
+
+.emotion-12 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-16 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  color: #141414;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-16 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+.emotion-16:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+}
+
+.emotion-16:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.25rem solid #B80000;
+}
+
+<div>
+  <nav
+    class="emotion-0 emotion-1"
+    dir="ltr"
+    role="navigation"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <ul
+        class="emotion-4 emotion-5"
+        role="list"
+      >
+        <li
+          class="emotion-6 emotion-7"
+          dir="ltr"
+          role="listitem"
+        >
+          <a
+            aria-labelledby="NavigationLinks-Akụkọ"
+            class="emotion-8 emotion-9"
+            data-navigation="test_navigation"
+            href="/igbo"
+          >
+            <span
+              class="emotion-10 emotion-11"
+              id="NavigationLinks-Akụkọ"
+              role="text"
+            >
+              <span
+                class="emotion-12 emotion-13"
+              >
+                Current page, 
+              </span>
+              Akụkọ
+            </span>
+          </a>
+        </li>
+        <li
+          class="emotion-6 emotion-7"
+          dir="ltr"
+          role="listitem"
+        >
+          <a
+            class="emotion-16 emotion-9"
+            data-navigation="test_navigation"
+            href="/igbo/egwuregwu"
+          >
+            Egwuregwu
+          </a>
+        </li>
+        <li
+          class="emotion-6 emotion-7"
+          dir="ltr"
+          role="listitem"
+        >
+          <a
+            class="emotion-16 emotion-9"
+            data-navigation="test_navigation"
+            href="/igbo/media/video"
+          >
+            Ihe nkiri
+          </a>
+        </li>
+        <li
+          class="emotion-6 emotion-7"
+          dir="ltr"
+          role="listitem"
+        >
+          <a
+            class="emotion-16 emotion-9"
+            data-navigation="test_navigation"
+            href="/igbo/popular/read"
+          >
+            Nke ka ewuewu
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`Navigation should render correctly when isOpen is true 1`] = `
+.emotion-0 {
+  position: relative;
+  background-color: #222222;
+}
+
+.emotion-0::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+.emotion-0 .emotion-7::after {
+  left: 0;
+}
+
+.emotion-2 {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+}
+
+.emotion-4 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    overflow: hidden;
+  }
+}
+
+.emotion-6 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-6:last-child {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    width: 80rem;
+    border-bottom: 0.0625rem solid #E6E8EA;
+    z-index: -1;
+  }
+}
+
+.emotion-8 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  color: #141414;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-8 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+.emotion-8:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  border-bottom: 0.3125rem solid #B80000;
+}
+
+.emotion-8:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.25rem solid #B80000;
+}
+
+.emotion-10::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+}
+
+.emotion-12 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-16 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  color: #141414;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-16 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+.emotion-16:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+}
+
+.emotion-16:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.25rem solid #B80000;
+}
+
+<div>
+  <nav
+    class="emotion-0 emotion-1"
+    dir="ltr"
+    role="navigation"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <ul
+        class="emotion-4 emotion-5"
+        role="list"
+      >
+        <li
+          class="emotion-6 emotion-7"
+          dir="ltr"
+          role="listitem"
+        >
+          <a
+            aria-labelledby="NavigationLinks-Akụkọ"
+            class="emotion-8 emotion-9"
+            data-navigation="test_navigation"
+            href="/igbo"
+          >
+            <span
+              class="emotion-10 emotion-11"
+              id="NavigationLinks-Akụkọ"
+              role="text"
+            >
+              <span
+                class="emotion-12 emotion-13"
+              >
+                Current page, 
+              </span>
+              Akụkọ
+            </span>
+          </a>
+        </li>
+        <li
+          class="emotion-6 emotion-7"
+          dir="ltr"
+          role="listitem"
+        >
+          <a
+            class="emotion-16 emotion-9"
+            data-navigation="test_navigation"
+            href="/igbo/egwuregwu"
+          >
+            Egwuregwu
+          </a>
+        </li>
+        <li
+          class="emotion-6 emotion-7"
+          dir="ltr"
+          role="listitem"
+        >
+          <a
+            class="emotion-16 emotion-9"
+            data-navigation="test_navigation"
+            href="/igbo/media/video"
+          >
+            Ihe nkiri
+          </a>
+        </li>
+        <li
+          class="emotion-6 emotion-7"
+          dir="ltr"
+          role="listitem"
+        >
+          <a
+            class="emotion-16 emotion-9"
+            data-navigation="test_navigation"
+            href="/igbo/popular/read"
+          >
+            Nke ka ewuewu
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`Scrollable Navigation should render correctly 1`] = `
+@media (max-width: 37.4375rem) {
+  .emotion-0 {
+    white-space: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .emotion-0::-webkit-scrollbar {
+    display: none;
+  }
+
+  .emotion-0:after {
+    content: ' ';
+    height: 100%;
+    width: 3rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1)
+              100%
+          );
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-0:after {
+      width: 6rem;
+    }
+  }
+}
+
+.emotion-2 {
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+.emotion-2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+.emotion-2 .emotion-9::after {
+  left: 0;
+}
+
+.emotion-4 {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+}
+
+.emotion-6 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    overflow: hidden;
+  }
+}
+
+.emotion-8 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-8:last-child {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    width: 80rem;
+    border-bottom: 0.0625rem solid #E6E8EA;
+    z-index: -1;
+  }
+}
+
+.emotion-10 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  color: #141414;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-10 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-10 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-10 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+.emotion-10:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  border-bottom: 0.3125rem solid #B80000;
+}
+
+.emotion-10:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.25rem solid #B80000;
+}
+
+.emotion-12::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+}
+
+.emotion-14 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-18 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  color: #141414;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-18 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-18 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-18 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+.emotion-18:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+}
+
+.emotion-18:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.25rem solid #B80000;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+    data-e2e="scrollable-nav"
+    dir="ltr"
+  >
+    <nav
+      class="emotion-2 emotion-3"
+      dir="ltr"
+      role="navigation"
+    >
+      <div
+        class="emotion-4 emotion-5"
+      >
+        <ul
+          class="emotion-6 emotion-7"
+          role="list"
+        >
+          <li
+            class="emotion-8 emotion-9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              aria-labelledby="NavigationLinks-Akụkọ"
+              class="emotion-10 emotion-11"
+              data-navigation="test_navigation"
+              href="/igbo"
+            >
+              <span
+                class="emotion-12 emotion-13"
+                id="NavigationLinks-Akụkọ"
+                role="text"
+              >
+                <span
+                  class="emotion-14 emotion-15"
+                >
+                  Current page, 
+                </span>
+                Akụkọ
+              </span>
+            </a>
+          </li>
+          <li
+            class="emotion-8 emotion-9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="emotion-18 emotion-11"
+              data-navigation="test_navigation"
+              href="/igbo/egwuregwu"
+            >
+              Egwuregwu
+            </a>
+          </li>
+          <li
+            class="emotion-8 emotion-9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="emotion-18 emotion-11"
+              data-navigation="test_navigation"
+              href="/igbo/media/video"
+            >
+              Ihe nkiri
+            </a>
+          </li>
+          <li
+            class="emotion-8 emotion-9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="emotion-18 emotion-11"
+              data-navigation="test_navigation"
+              href="/igbo/popular/read"
+            >
+              Nke ka ewuewu
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+`;

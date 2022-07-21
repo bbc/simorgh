@@ -1,5 +1,5 @@
 import React from 'react';
-import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
+import { withServicesKnob } from '#legacy/psammead-storybook-helpers/src';
 import { withKnobs } from '@storybook/addon-knobs';
 import { MemoryRouter } from 'react-router';
 
@@ -36,6 +36,8 @@ const Component = ({ service, variant }) => {
                 status={200}
                 pageData={{
                   title: fixture.data.title,
+                  description: fixture.data.description,
+                  images: fixture.data.images,
                   promos: fixture.data.summaries,
                   activePage: 1,
                   pageCount: 99,

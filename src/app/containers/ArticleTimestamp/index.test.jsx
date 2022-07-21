@@ -1,7 +1,10 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { isNull, suppressPropWarnings } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import {
+  isNull,
+  suppressPropWarnings,
+} from '#legacy/psammead-test-helpers/src';
 import ArticleTimestamp from '.';
 import {
   timestampGenerator,

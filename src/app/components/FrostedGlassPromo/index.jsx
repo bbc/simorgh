@@ -4,14 +4,22 @@ import styled from '@emotion/styled';
 import pick from 'ramda/src/pick';
 import Lazyload from 'react-lazyload';
 
-import { getSerifRegular } from '@bbc/psammead-styles/font-styles';
-import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
-import { C_WHITE, C_GREY_8 } from '@bbc/psammead-styles/colours';
-
-import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
+import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
+import { getSerifRegular } from '#legacy/psammead-styles/src/font-styles';
+import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+} from '#legacy/gel-foundations/src/spacings';
+import {
+  C_WHITE,
+  C_GREY_8,
+  C_METAL,
+} from '#legacy/psammead-styles/src/colours';
+import makeRelativeUrlPath from '#lib/utilities/makeRelativeUrlPath';
+
 import FrostedGlassPanel from './FrostedGlassPanel';
 
 import ImageWithPlaceholder from '../../containers/ImageWithPlaceholder';
@@ -70,7 +78,7 @@ const A = styled.a`
     margin: 0.875rem ${GEL_SPACING_DBL} 0 ${GEL_SPACING_DBL};
   }
   &:visited {
-    color: #e6e8ea;
+    color: ${({ isAmp }) => (isAmp ? C_METAL : '#e6e8ea')};
   }
   &:focus {
     text-decoration: underline;
@@ -81,6 +89,10 @@ const LazyloadPlaceholder = styled.div`
   background-color: ${({ isAmp }) => (isAmp ? C_WHITE : C_GREY_8)};
   min-height: 100px;
   padding-bottom: ${GEL_SPACING_DBL};
+`;
+
+const LazyloadWrapper = styled(Lazyload)`
+  height: 100%;
 `;
 
 const FrostedGlassPromo = ({
@@ -96,10 +108,11 @@ const FrostedGlassPromo = ({
   const { script, service } = useContext(ServiceContext);
   const { isAmp } = useContext(RequestContext);
   const isCanonical = !isAmp;
+  const relativeUrl = makeRelativeUrlPath(url);
 
   const clickTracker = useClickTrackerHandler({
     ...(eventTrackingData || {}),
-    url,
+    url: relativeUrl,
   });
 
   const onClick = eventTrackingData ? clickTracker : () => {};
@@ -110,7 +123,7 @@ const FrostedGlassPromo = ({
         <A
           script={script}
           service={service}
-          href={url}
+          href={relativeUrl}
           onClick={onClick}
           isAmp={isAmp}
         >
@@ -127,7 +140,7 @@ const FrostedGlassPromo = ({
   return (
     <Wrapper data-testid={`frosted-promo-${index}`}>
       <ClickableArea
-        href={url}
+        href={relativeUrl}
         onClick={onClick}
         aria-hidden="true"
         tabIndex="-1"
@@ -151,7 +164,7 @@ const FrostedGlassPromo = ({
           image,
         )}
       />
-      <Lazyload
+      <LazyloadWrapper
         offset={PANEL_OFFSET}
         once
         placeholder={
@@ -171,7 +184,7 @@ const FrostedGlassPromo = ({
         >
           {promoText}
         </FrostedGlassPanel>
-      </Lazyload>
+      </LazyloadWrapper>
     </Wrapper>
   );
 };

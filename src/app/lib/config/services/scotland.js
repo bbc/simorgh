@@ -1,16 +1,13 @@
-import { C_DARK_SALTIRE, C_WHITE } from '@bbc/psammead-styles/colours';
-import { scotland as brandSVG } from '@bbc/psammead-assets/svgs';
-import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
+import { C_DARK_SALTIRE, C_WHITE } from '#legacy/psammead-styles/src/colours';
+import { scotland as brandSVG } from '#legacy/psammead-assets/src/svgs';
+import cyrillicAndLatin from '#legacy/gel-foundations/src/scripts/latin-and-cyrillic';
 import {
   F_REITH_SANS_BOLD,
-  F_REITH_SANS_BOLD_ITALIC,
-  F_REITH_SANS_ITALIC,
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
-  F_REITH_SERIF_MEDIUM_ITALIC,
-} from '@bbc/psammead-styles/fonts';
-import '@bbc/psammead-locales/moment/en-gb';
-import '@bbc/moment-timezone-include/tz/Europe/London';
+} from '#legacy/psammead-styles/src/fonts';
+import '#legacy/psammead-locales/moment/en-gb';
+import '#legacy/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -268,14 +265,7 @@ export const service = {
       copyrightText:
         'BBC. The BBC is not responsible for the content of external sites.',
     },
-    fonts: [
-      F_REITH_SANS_BOLD,
-      F_REITH_SANS_BOLD_ITALIC,
-      F_REITH_SANS_ITALIC,
-      F_REITH_SANS_REGULAR,
-      F_REITH_SERIF_MEDIUM,
-      F_REITH_SERIF_MEDIUM_ITALIC,
-    ],
+    fonts: [F_REITH_SANS_BOLD, F_REITH_SANS_REGULAR, F_REITH_SERIF_MEDIUM],
     timezone: 'Europe/London',
   },
 };

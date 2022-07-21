@@ -3,8 +3,7 @@
 exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
 .emotion-0 {
   position: relative;
-  background-color: #B80000;
-  border-top: 0.0625rem solid #FFFFFF;
+  background-color: #FFFFFF;
 }
 
 @media (max-width: 37.4375rem) {
@@ -19,10 +18,10 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   bottom: 0;
   right: 0;
   left: 0;
-  border-bottom: 0.0625rem solid transparent;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-0 .e1lim4kn2::after {
+.emotion-0 .e1ibkbh72::after {
   left: 0;
 }
 
@@ -30,6 +29,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   position: relative;
   max-width: 80rem;
   margin: 0 auto;
+  background-color: #FFFFFF;
 }
 
 .emotion-4 {
@@ -57,7 +57,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #FFFFFF;
+  border: 0.25rem solid #B80000;
 }
 
 @media (min-width: 37.5rem) {
@@ -79,8 +79,14 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
 }
 
 .emotion-6 {
-  color: #fff;
+  color: #000000;
   fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-6 {
+    fill: linkText;
+  }
 }
 
 .emotion-10 {
@@ -95,7 +101,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
 }
 
 .emotion-12 {
-  background-color: #222222;
+  background-color: #FFFFFF;
   clear: both;
 }
 
@@ -132,8 +138,8 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
     pointer-events: none;
     background: linear-gradient(
             to right,
-            rgba(184, 0, 0, 0) 0%,
-            rgba(184, 0, 0, 1)
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1)
               100%
           );
   }

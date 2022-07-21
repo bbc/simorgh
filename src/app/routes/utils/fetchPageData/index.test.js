@@ -1,6 +1,9 @@
-import { setWindowValue, resetWindowValue } from '@bbc/psammead-test-helpers';
 import loggerMock from '#testHelpers/loggerMock'; // Must be imported before fetchPageData
 import { DATA_FETCH_ERROR, DATA_REQUEST_RECEIVED } from '#lib/logger.const';
+import {
+  setWindowValue,
+  resetWindowValue,
+} from '#legacy/psammead-test-helpers/src';
 import fetchPageData from '.';
 
 const expectedBaseUrl = 'http://localhost';

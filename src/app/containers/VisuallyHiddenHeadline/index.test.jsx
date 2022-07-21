@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import { textBlock } from '#models/blocks';
 import {
   shouldMatchSnapshot,
   isNull,
   suppressPropWarnings,
-} from '@bbc/psammead-test-helpers';
-import { textBlock } from '#models/blocks';
+} from '#legacy/psammead-test-helpers/src';
 import VisuallyHiddenHeadlineContainer from '.';
 import blocksSingleFragment from '../Headings/testHelpers';
 

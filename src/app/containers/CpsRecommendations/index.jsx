@@ -1,20 +1,20 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, func, string, number } from 'prop-types';
+import { arrayOf, shape } from 'prop-types';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#legacy/gel-foundations/src/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
-import { C_GHOST } from '@bbc/psammead-styles/colours';
+import { C_GHOST } from '#legacy/psammead-styles/src/colours';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-} from '@bbc/gel-foundations/spacings';
-import SectionLabel from '@bbc/psammead-section-label';
+} from '#legacy/gel-foundations/src/spacings';
+import SectionLabel from '#legacy/psammead-section-label/src';
 import SkipLinkWrapper from '#components/SkipLinkWrapper';
 
 import { storyItem } from '#models/propTypes/storyItem';
@@ -46,12 +46,7 @@ const LabelComponent = styled(SectionLabel)`
   }
 `;
 
-const CpsRecommendations = ({
-  items,
-  showForVariation,
-  part,
-  splitRecsViewEventTracker,
-}) => {
+const CpsRecommendations = ({ items }) => {
   const { recommendations, translations, script, service, dir } =
     useContext(ServiceContext);
   const { enabled } = useToggle('cpsRecommendations');
@@ -66,10 +61,7 @@ const CpsRecommendations = ({
 
   if (!hasStoryRecommendations || !enabled || !items.length) return null;
 
-  const titlePath =
-    showForVariation === 'variation_1' && part === 2
-      ? ['More recommended stories', ['splitRecommendationTitle']]
-      : ['Recommended stories', ['recommendationTitle']];
+  const titlePath = ['Recommended stories', ['recommendationTitle']];
 
   const title = pathOr(...titlePath, translations);
 
@@ -81,7 +73,7 @@ const CpsRecommendations = ({
 
   const isSinglePromo = items.length === 1;
 
-  const endTextId = `end-of-recommendations${part ? `-${part}` : ''}`;
+  const endTextId = `end-of-recommendations`;
 
   const skipLink = {
     endTextId,
@@ -101,6 +93,7 @@ const CpsRecommendations = ({
               dir={dir}
               labelId={labelId}
               columnType="main"
+              mobileDivider={false}
               overrideHeadingAs="strong"
               bar={false}
               backgroundColor={C_GHOST}
@@ -111,11 +104,7 @@ const CpsRecommendations = ({
           {isSinglePromo ? (
             <RecommendationsPromo promo={items[0]} />
           ) : (
-            <RecommendationsPromoList
-              promoItems={items}
-              showForVariation={showForVariation}
-              splitRecsViewEventTracker={splitRecsViewEventTracker}
-            />
+            <RecommendationsPromoList promoItems={items} />
           )}
         </SkipLinkWrapper>
       </RecommendationsWrapper>
@@ -127,14 +116,8 @@ export default CpsRecommendations;
 
 CpsRecommendations.propTypes = {
   items: arrayOf(shape(storyItem)),
-  showForVariation: string.optional,
-  part: number.optional,
-  splitRecsViewEventTracker: func.optional,
 };
 
 CpsRecommendations.defaultProps = {
   items: [],
-  showForVariation: null,
-  part: null,
-  splitRecsViewEventTracker: () => {},
 };

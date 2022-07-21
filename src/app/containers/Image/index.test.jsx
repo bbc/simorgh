@@ -4,7 +4,7 @@ import {
   shouldMatchSnapshot,
   isNull,
   suppressPropWarnings,
-} from '@bbc/psammead-test-helpers';
+} from '#legacy/psammead-test-helpers/src';
 import ImageContainer from './index';
 import { blockContainingText, blockArrayModel } from '../../models/blocks';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
