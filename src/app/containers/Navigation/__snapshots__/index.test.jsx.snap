@@ -120,6 +120,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
 }
 
 .emotion-16 {
+  padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
@@ -911,6 +912,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
 }
 
 .emotion-16 {
+  padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
@@ -1612,6 +1614,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
 }
 
 .emotion-16 {
+  padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
@@ -2519,6 +2522,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
 }
 
 .emotion-68 {
+  padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
@@ -3219,6 +3223,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
 }
 
 .emotion-64 {
+  padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
@@ -3894,6 +3899,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
 }
 
 .emotion-64 {
+  padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 

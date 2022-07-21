@@ -33,8 +33,8 @@ export default ({ service, pageType, variant }) => {
         topicTitle = body.data.title;
         variantTopicId = body.data.variantTopicId;
         pageCount = body.data.pageCount;
-        numberOfItems = body.data.summaries.length;
-        firstItemHeadline = body.data.summaries[0].title;
+        numberOfItems = body.data.curations[0].summaries.length;
+        firstItemHeadline = body.data.curations[0].summaries[0].title;
       });
       cy.log(`topic id ${topicId}`);
     });
@@ -73,6 +73,20 @@ export default ({ service, pageType, variant }) => {
         } else {
           cy.log('No pagination as there is only one page');
         }
+      });
+      it('Page 2 does not have a fallback response', () => {
+        const expectedContentType = 'text/html';
+        const isErrorPage = pageType.includes('error');
+        const expectedStatus = isErrorPage ? 404 : 200;
+        // const failOnStatusCode = !isErrorPage;
+        cy.url().then(url => {
+          const path = url;
+          cy.testResponseCodeAndType({
+            path,
+            responseCode: expectedStatus,
+            type: expectedContentType,
+          });
+        });
       });
       it('Next button navigates to next page (3)', () => {
         if (pageCount > 2) {

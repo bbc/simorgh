@@ -497,7 +497,7 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
     <a
       aria-hidden="true"
       class="emotion-2 emotion-3"
-      href="https://www.bbc.com/pidgin/sport-51434980"
+      href="/pidgin/sport-51434980"
       tabindex="-1"
     />
     <div
@@ -526,7 +526,7 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
         >
           <a
             class="emotion-12 emotion-13"
-            href="https://www.bbc.com/pidgin/sport-51434980"
+            href="/pidgin/sport-51434980"
           >
             Man City vs West Ham: Bad weather force Premier League to cancel Sunday match
           </a>

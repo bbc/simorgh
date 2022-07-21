@@ -250,6 +250,7 @@ describe('Story Page', () => {
   const appEnv = process.env.SIMORGH_APP_ENV;
   beforeEach(() => {
     process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
+    process.env.RECOMMENDATIONS_ENDPOINT = 'http://mock-recommendations-path';
     // 004_brasil_recommendations_experiment
     OptimizelyExperiment.mockImplementation(props => {
       const { children } = props;
@@ -267,6 +268,7 @@ describe('Story Page', () => {
   afterEach(() => {
     fetchMock.restore();
     delete process.env.SIMORGH_ICHEF_BASE_URL;
+    delete process.env.RECOMMENDATIONS_ENDPOINT;
     process.env.SIMORGH_APP_ENV = appEnv;
   });
 
@@ -780,6 +782,7 @@ describe('Story Page', () => {
         process.env.RECOMMENDATIONS_ENDPOINT =
           'http://mock-recommendations-path';
       });
+
       afterEach(() => {
         delete process.env.RECOMMENDATIONS_ENDPOINT;
         jest.clearAllMocks();
@@ -804,6 +807,10 @@ describe('Story Page', () => {
 
             return null;
           });
+        });
+
+        afterEach(() => {
+          delete process.env.RECOMMENDATIONS_ENDPOINT;
         });
 
         it('should fetch and render recommendations from current endpoint when variation is control and service is portuguese', async () => {
@@ -866,6 +873,10 @@ describe('Story Page', () => {
 
             return null;
           });
+        });
+
+        afterEach(() => {
+          delete process.env.RECOMMENDATIONS_ENDPOINT;
         });
 
         it('should fetch and render recommendations from content variant endpoint when variation is content_recs and service is portuguese', async () => {
@@ -931,6 +942,10 @@ describe('Story Page', () => {
           });
         });
 
+        afterEach(() => {
+          delete process.env.RECOMMENDATIONS_ENDPOINT;
+        });
+
         it('should fetch and render recommendations from datalab hybrid variant endpoint when variation is hybrid_recs and service is portuguese', async () => {
           const toggles = {
             cpsRecommendations: {
@@ -982,6 +997,11 @@ describe('Story Page', () => {
           process.env.RECOMMENDATIONS_ENDPOINT =
             'http://mock-recommendations-path';
         });
+
+        afterEach(() => {
+          delete process.env.RECOMMENDATIONS_ENDPOINT;
+        });
+
         describe('View Tracking', () => {
           it('should send ATI and Optimizely view tracking event when recommendations render', async () => {
             const toggles = {
@@ -1096,7 +1116,7 @@ describe('Story Page', () => {
               mundoPageData,
             );
             fetchMock.mock(
-              'http://localhost/mundo/noticias-56669604/recommendations.json',
+              'http://mock-recommendations-path/recommendations/mundo/noticias-56669604?Engine=unirecs_datalab',
               mundoRecommendationsData,
             );
             const { pageData } = await getInitialData({
@@ -1140,7 +1160,7 @@ describe('Story Page', () => {
               mundoPageData,
             );
             fetchMock.mock(
-              'http://localhost/mundo/noticias-56669604/recommendations.json',
+              'http://mock-recommendations-path/recommendations/mundo/noticias-56669604?Engine=unirecs_datalab',
               mundoRecommendationsData,
             );
             const { pageData } = await getInitialData({
@@ -1417,7 +1437,7 @@ describe('Story Page', () => {
               mundoPageData,
             );
             fetchMock.mock(
-              'http://localhost/mundo/noticias-56669604/recommendations.json',
+              'http://mock-recommendations-path/recommendations/mundo/noticias-56669604?Engine=unirecs_datalab',
               mundoRecommendationsData,
             );
             const { pageData } = await getInitialData({
@@ -1479,7 +1499,7 @@ describe('Story Page', () => {
         };
 
         const recommendationsEndpoint =
-          'http://localhost/mundo/noticias-56669604/recommendations.json';
+          'http://mock-recommendations-path/recommendations/mundo/noticias-56669604?Engine=unirecs_datalab';
 
         fetchMock.mock(
           'http://localhost/some-cps-sty-path.json',

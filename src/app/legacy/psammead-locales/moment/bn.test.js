@@ -5,70 +5,6 @@ moment.locale('bn');
 
 const assert = { equal: (val1, val2) => expect(val1).toEqual(val2) };
 
-test('parse', () => {
-  const tests =
-    'জানুয়ারি জানু_ফেব্রুয়ারি ফেব_মার্চ মার্চ_এপ্রিল এপ্র_মে মে_জুন জুন_জুলাই জুল_অগাস্ট আগ_সেপ্টেম্বর সেপ্ট_অক্টোবর অক্টো_নভেম্বর নভে_ডিসেম্বর ডিসে'.split(
-      '_'
-    );
-
-  function equalTest(input, mmm, i) {
-    assert.equal(
-      moment(input, mmm).month(),
-      i,
-      `${input} should be month ${i + 1}`
-    );
-  }
-
-  let i;
-  for (i = 0; i < 12; i += 1) {
-    tests[i] = tests[i].split(' ');
-    equalTest(tests[i][0], 'MMM', i);
-    equalTest(tests[i][1], 'MMM', i);
-    equalTest(tests[i][0], 'MMMM', i);
-    equalTest(tests[i][1], 'MMMM', i);
-    equalTest(tests[i][0].toLocaleLowerCase(), 'MMMM', i);
-    equalTest(tests[i][1].toLocaleLowerCase(), 'MMMM', i);
-    equalTest(tests[i][0].toLocaleUpperCase(), 'MMMM', i);
-    equalTest(tests[i][1].toLocaleUpperCase(), 'MMMM', i);
-  }
-});
-
-test('format', () => {
-  const a = [
-    [
-      'dddd, Do MMMM YYYY, a h:mm:ss সময়',
-      'রবিবার, ১৪ ফেব্রুয়ারি ২০১০, দুপুর ৩:২৫:৫০ সময়',
-    ],
-    ['ddd, a h সময়', 'রবি, দুপুর ৩ সময়'],
-    ['M Mo MM MMMM MMM', '২ ২ ০২ ফেব্রুয়ারি ফেব'],
-    ['YYYY YY', '২০১০ ১০'],
-    ['D Do DD', '১৪ ১৪ ১৪'],
-    ['d do dddd ddd dd', '০ ০ রবিবার রবি রবি'],
-    ['DDD DDDo DDDD', '৪৫ ৪৫ ০৪৫'],
-    ['w wo ww', '৮ ৮ ০৮'],
-    ['h hh', '৩ ০৩'],
-    ['H HH', '১৫ ১৫'],
-    ['m mm', '২৫ ২৫'],
-    ['s ss', '৫০ ৫০'],
-    ['a A', 'দুপুর দুপুর'],
-    ['LT', 'দুপুর ৩:২৫ সময়'],
-    ['LTS', 'দুপুর ৩:২৫:৫০ সময়'],
-    ['L', '১৪/০২/২০১০'],
-    ['LL', '১৪ ফেব্রুয়ারি ২০১০'],
-    ['LLL', '১৪ ফেব্রুয়ারি ২০১০, দুপুর ৩:২৫ সময়'],
-    ['LLLL', 'রবিবার, ১৪ ফেব্রুয়ারি ২০১০, দুপুর ৩:২৫ সময়'],
-    ['l', '১৪/২/২০১০'],
-    ['ll', '১৪ ফেব ২০১০'],
-    ['lll', '১৪ ফেব ২০১০, দুপুর ৩:২৫ সময়'],
-    ['llll', 'রবি, ১৪ ফেব ২০১০, দুপুর ৩:২৫ সময়'],
-  ];
-  const b = moment(new Date(2010, 1, 14, 15, 25, 50, 125));
-  let i;
-  for (i = 0; i < a.length; i += 1) {
-    assert.equal(b.format(a[i][0]), a[i][1], `${a[i][0]} ---> ${a[i][1]}`);
-  }
-});
-
 test('format ordinal', () => {
   assert.equal(moment([2011, 0, 1]).format('DDDo'), '১', '১');
   assert.equal(moment([2011, 0, 2]).format('DDDo'), '২', '২');
@@ -104,36 +40,6 @@ test('format ordinal', () => {
   assert.equal(moment([2011, 0, 30]).format('DDDo'), '৩০', '৩০');
 
   assert.equal(moment([2011, 0, 31]).format('DDDo'), '৩১', '৩১');
-});
-
-test('format month', () => {
-  const expected =
-    'জানুয়ারি জানু_ফেব্রুয়ারি ফেব_মার্চ মার্চ_এপ্রিল এপ্র_মে মে_জুন জুন_জুলাই জুল_অগাস্ট আগ_সেপ্টেম্বর সেপ্ট_অক্টোবর অক্টো_নভেম্বর নভে_ডিসেম্বর ডিসে'.split(
-      '_'
-    );
-  let i;
-  for (i = 0; i < expected.length; i += 1) {
-    assert.equal(
-      moment([2011, i, 1]).format('MMMM MMM'),
-      expected[i],
-      expected[i]
-    );
-  }
-});
-
-test('format week', () => {
-  const expected =
-    'রবিবার রবি রবি_সোমবার সোম সোম_মঙ্গলবার মঙ্গল মঙ্গ_বুধবার বুধ বুধ_বৃহস্পতিবার বৃহস্পতি বৃহঃ_শুক্রবার শুক্র শুক্র_শনিবার শনি শনি'.split(
-      '_'
-    );
-  let i;
-  for (i = 0; i < expected.length; i += 1) {
-    assert.equal(
-      moment([2011, 0, 2 + i]).format('dddd ddd dd'),
-      expected[i],
-      expected[i]
-    );
-  }
 });
 
 test('from', () => {

@@ -7,9 +7,7 @@ import {
 import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import getMostWatchedEndpoint from '#lib/utilities/getUrlHelpers/getMostWatchedUrl';
 import getSecondaryColumnUrl from '#lib/utilities/getUrlHelpers/getSecondaryColumnUrl';
-import getRecommendationsUrl, {
-  portugueseRecommendationsExperimentEndpoint,
-} from '#lib/utilities/getUrlHelpers/getRecommendationsUrl';
+import getRecommendationsUrl from '#lib/utilities/getUrlHelpers/getRecommendationsUrl';
 import { SECONDARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
 import isLive from '#lib/utilities/isLive';
 import getAgent from '#server/utilities/getAgent/index';
@@ -25,12 +23,20 @@ const noop = () => {};
 const logger = nodeLogger(__filename);
 
 // 004_brasil_recommendations_experiment
-const getRecommendations = (service, variant, assetUri) => {
+const getRecommendations = (service, assetUri) => {
   if (service !== 'portuguese' || isLive()) {
+    const UNIRECS_ALLOW_LIST = ['indonesia', 'mundo', 'turkce'];
+
     return [
       {
         name: 'recommendations',
-        path: getRecommendationsUrl({ assetUri, variant }),
+        attachAgent: true,
+        path: getRecommendationsUrl({
+          assetUri,
+          ...(UNIRECS_ALLOW_LIST.includes(service) && {
+            engine: 'unirecs_datalab',
+          }),
+        }),
         assetUri,
         api: 'recommendations',
         apiContext: 'secondary_data',
@@ -42,7 +48,7 @@ const getRecommendations = (service, variant, assetUri) => {
     {
       name: 'recommendations',
       attachAgent: true,
-      path: portugueseRecommendationsExperimentEndpoint({
+      path: getRecommendationsUrl({
         assetUri,
         engine: 'unirecs_camino',
       }),
@@ -54,7 +60,7 @@ const getRecommendations = (service, variant, assetUri) => {
       name: 'datalabContentRecommendations',
       attachAgent: true,
       engine: 'unirecs_datalab_content',
-      path: portugueseRecommendationsExperimentEndpoint({
+      path: getRecommendationsUrl({
         assetUri,
         engine: 'unirecs_datalab',
         engineVariant: 'content',
@@ -67,7 +73,7 @@ const getRecommendations = (service, variant, assetUri) => {
       name: 'datalabHybridRecommendations',
       attachAgent: true,
       engine: 'unirecs_datalab_hybrid',
-      path: portugueseRecommendationsExperimentEndpoint({
+      path: getRecommendationsUrl({
         assetUri,
         engine: 'unirecs_datalab',
         engineVariant: 'hybrid',
@@ -112,7 +118,7 @@ const pageTypeUrls = async (
         },
         // 004_brasil_recommendations_experiment
         ...((await hasRecommendations(service, variant, pageData))
-          ? getRecommendations(service, variant, assetUri)
+          ? getRecommendations(service, assetUri)
           : []),
       ].filter(i => i);
     case MEDIA_ASSET_PAGE:

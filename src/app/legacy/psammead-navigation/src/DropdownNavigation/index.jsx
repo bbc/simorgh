@@ -97,6 +97,7 @@ DropdownUl.defaultProps = {
 };
 
 const StyledDropdownLi = styled.li`
+  padding: 0.75rem 0;
   border-bottom: 0.0625rem solid ${C_GREY_3};
 
   &:last-child {

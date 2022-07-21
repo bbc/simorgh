@@ -663,6 +663,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
 }
 
 .emotion-81 {
+  padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
@@ -1782,6 +1783,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 .emotion-81 {
+  padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
@@ -2901,6 +2903,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 .emotion-81 {
+  padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 

@@ -5,9 +5,14 @@ import styled from '@emotion/styled';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+  GEL_SPACING_QUAD,
+  GEL_SPACING_QUIN,
+  GEL_SPACING_SEXT,
 } from '#legacy/gel-foundations/src/spacings';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#legacy/gel-foundations/src/breakpoints';
 import MetadataContainer from '#app/containers/Metadata';
@@ -17,10 +22,13 @@ import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstra
 import useToggle from '#hooks/useToggle';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
+import isLive from '#lib/utilities/isLive';
+import TopicImage from './TopicImage';
 import TopicTitle from './TopicTitle';
-import TopicGrid from './TopicGrid';
+import TopicDescription from './TopicDescription';
 import Pagination from './Pagination';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
+import Curation, { VISUAL_PROMINANCE, VISUAL_STYLE } from './Curation';
 
 const Wrapper = styled.main`
   max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
@@ -31,9 +39,31 @@ const Wrapper = styled.main`
   }
 `;
 
+const InlineWrapper = styled.div`
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    align-items: center;
+    display: flex;
+  }
+`;
+
+const TitleWrapper = styled.div`
+  margin: ${GEL_SPACING_TRPL} 0;
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    margin: ${GEL_SPACING_QUAD} 0;
+  }
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin: ${GEL_SPACING_SEXT} 0;
+  }
+
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    margin: ${GEL_SPACING_QUIN} 0 ${GEL_SPACING_SEXT} 0;
+  }
+`;
+
 const TopicPage = ({ pageData }) => {
   const { lang, translations } = useContext(ServiceContext);
-  const { title, description, promos, pageCount, activePage } = pageData;
+  const { title, description, imageData, promos, pageCount, activePage } =
+    pageData;
 
   const { enabled: adsEnabled } = useToggle('ads');
   const { showAdsBasedOnLocation } = useContext(RequestContext);
@@ -85,9 +115,20 @@ const TopicPage = ({ pageData }) => {
           headline={title}
           entities={promoEntities}
         />
-
-        <TopicTitle>{title}</TopicTitle>
-        <TopicGrid promos={promos} />
+        <TitleWrapper>
+          <InlineWrapper>
+            {!isLive() && imageData && <TopicImage image={imageData.url} />}
+            <TopicTitle>{title}</TopicTitle>
+          </InlineWrapper>
+          {!isLive() && description && (
+            <TopicDescription>{description}</TopicDescription>
+          )}
+        </TitleWrapper>
+        <Curation
+          visualStyle={VISUAL_STYLE.NONE}
+          visualProminance={VISUAL_PROMINANCE.NORMAL}
+          promos={promos}
+        />
         <Pagination
           activePage={activePage}
           pageCount={pageCount}

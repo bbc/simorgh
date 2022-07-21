@@ -389,7 +389,7 @@ export const generatePrefetchSrc = ({ isAmp, isLive }) => {
   return directives.prefetchSrc.canonicalLive;
 };
 
-const helmetCsp = ({ isAmp, isLive }) => ({
+const helmetCsp = ({ isAmp, isLive, reportOnlyOnLive }) => ({
   directives: {
     'default-src': generateDefaultSrc(),
     'child-src': generateChildSrc({ isAmp }),
@@ -405,10 +405,11 @@ const helmetCsp = ({ isAmp, isLive }) => ({
     'report-to': 'worldsvc',
     'upgrade-insecure-requests': [],
   },
+  reportOnly: reportOnlyOnLive,
 });
 
 const injectCspHeader = (req, res, next) => {
-  const { isAmp } = getRouteProps(req.url);
+  const { isAmp, service } = getRouteProps(req.url);
 
   res.setHeader(
     'report-to',
@@ -425,7 +426,13 @@ const injectCspHeader = (req, res, next) => {
     }),
   );
 
-  const middleware = csp(helmetCsp({ isAmp, isLive: isLiveEnv() }));
+  const middleware = csp(
+    helmetCsp({
+      isAmp,
+      isLive: isLiveEnv(),
+      reportOnlyOnLive: service === 'japanese',
+    }),
+  );
   middleware(req, res, next);
 };
 

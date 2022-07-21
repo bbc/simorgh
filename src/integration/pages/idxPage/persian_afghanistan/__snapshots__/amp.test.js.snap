@@ -454,7 +454,7 @@ exports[`AMP persian/afghanistan IDX page SEO OG url 1`] = `"http://localhost:70
 
 exports[`AMP persian/afghanistan IDX page SEO Page title 1`] = `"صفحه افغانستان - BBC News فارسی"`;
 
-exports[`AMP persian/afghanistan IDX page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP persian/afghanistan IDX page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP persian/afghanistan IDX page SEO Twitter card 1`] = `"summary_large_image"`;
 
