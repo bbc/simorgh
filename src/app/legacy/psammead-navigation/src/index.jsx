@@ -35,7 +35,7 @@ const NavWrapper = styled.div`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin: 0 0.8rem;
   }
-  @media (min-width: 66rem) {
+  @media (min-width: 65rem) {
     margin: 0 auto;
   }
 `;
@@ -98,7 +98,7 @@ const StyledListItem = styled.li`
   display: inline-block;
   position: relative;
   z-index: 2;
-  margin-right: 0.75rem;
+  margin-inline-end: 0.75rem;
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     &:last-child {
