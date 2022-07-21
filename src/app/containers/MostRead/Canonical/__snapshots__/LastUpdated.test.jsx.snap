@@ -4,7 +4,7 @@ exports[`MostReadCanonical - LastUpdated should render LastUpdated correctly 1`]
 .emotion-0 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #6E6E73;
+  color: #545658;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;

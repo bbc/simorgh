@@ -7,7 +7,7 @@ import {
 } from '#legacy/gel-foundations/src/spacings';
 import { getBrevier } from '#legacy/gel-foundations/src/typography';
 import { scriptPropType } from '#legacy/gel-foundations/src/prop-types';
-import { C_LUNAR, C_METAL } from '#legacy/psammead-styles/src/colours';
+import { C_LUNAR, C_GREY_6 } from '#legacy/psammead-styles/src/colours';
 import { getSansRegular } from '#legacy/psammead-styles/src/font-styles';
 
 const PADDING = `
@@ -20,7 +20,7 @@ const PADDING = `
 const StyledTimestamp = styled.time`
   ${({ script, typographyFunc }) =>
     script && typographyFunc && typographyFunc(script)}
-  color: ${({ darkMode }) => (darkMode ? C_LUNAR : C_METAL)};
+  color: ${({ darkMode }) => (darkMode ? C_LUNAR : C_GREY_6)};
   display: block;
   ${({ service }) => getSansRegular(service)}
   ${props => props.padding && PADDING}

@@ -395,7 +395,7 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page SEO OG url 1`] = `"http://loc
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Page title 1`] = `"РУС - BBC News Україна"`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Twitter card 1`] = `"summary_large_image"`;
 

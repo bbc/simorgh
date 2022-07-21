@@ -17,10 +17,7 @@ import {
   getDoublePica,
 } from '#legacy/gel-foundations/src/typography';
 import { C_EBON, C_GHOST } from '#legacy/psammead-styles/src/colours';
-import {
-  getSansBold,
-  getSansRegular,
-} from '#legacy/psammead-styles/src/font-styles';
+import { getSansBold } from '#legacy/psammead-styles/src/font-styles';
 
 const minClickableHeightPx = 44;
 const minClickableHeightRem = minClickableHeightPx / 16;
@@ -75,7 +72,7 @@ const titleMargins = `
 
 const Title = styled.span`
   ${({ script }) => script && getDoublePica(script)};
-  ${({ service }) => getSansRegular(service)}
+  ${({ service }) => getSansBold(service)}
   background-color: ${props => props.backgroundColor};
   ${titleMargins};
   ${paddingDir}: ${GEL_SPACING};

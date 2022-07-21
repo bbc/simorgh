@@ -286,7 +286,7 @@ exports[`Canonical Story Page SEO OG url 1`] = `"http://localhost:7080/kyrgyz/23
 
 exports[`Canonical Story Page SEO Page title 1`] = `"Test STY for social embeds - BBC News Кыргыз Кызматы"`;
 
-exports[`Canonical Story Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Story Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Story Page SEO Twitter card 1`] = `"summary_large_image"`;
 

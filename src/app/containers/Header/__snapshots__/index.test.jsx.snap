@@ -416,8 +416,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
 
 .emotion-29 {
   position: relative;
-  background-color: #B80000;
-  border-top: 0.0625rem solid #FFFFFF;
+  background-color: #FFFFFF;
 }
 
 .emotion-29::after {
@@ -426,7 +425,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   bottom: 0;
   right: 0;
   left: 0;
-  border-bottom: 0.0625rem solid transparent;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-29 .emotion-46::after {
@@ -437,6 +436,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   position: relative;
   max-width: 80rem;
   margin: 0 auto;
+  background-color: #FFFFFF;
 }
 
 .emotion-33 {
@@ -468,7 +468,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #FFFFFF;
+  border: 0.25rem solid #B80000;
 }
 
 @media (min-width: 37.5rem) {
@@ -490,8 +490,14 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
 }
 
 .emotion-37 {
-  color: #fff;
+  color: #000000;
   fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-37 {
+    fill: linkText;
+  }
 }
 
 @media (max-width: 37.4375rem) {
@@ -520,8 +526,8 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
     pointer-events: none;
     background: linear-gradient(
             to right,
-            rgba(184, 0, 0, 0) 0%,
-            rgba(184, 0, 0, 1)
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1)
               100%
           );
   }
@@ -564,7 +570,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
     position: absolute;
     bottom: -1px;
     width: 80rem;
-    border-bottom: 0.0625rem solid #EAB3B3;
+    border-bottom: 0.0625rem solid #E6E8EA;
     z-index: -1;
   }
 }
@@ -576,6 +582,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   font-weight: 400;
   font-style: normal;
   color: #FDFDFD;
+  color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -609,7 +616,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.25rem solid #B80000;
 }
 
 .emotion-47:focus::after {
@@ -618,13 +625,13 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.25rem solid #B80000;
   top: 0;
-  border: 0.25rem solid #FFFFFF;
+  border: 0.25rem solid #B80000;
 }
 
 .emotion-77 {
-  background-color: #222222;
+  background-color: #FFFFFF;
   clear: both;
   overflow: hidden;
   height: 0;
@@ -652,16 +659,16 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   list-style-type: none;
   margin: 0;
   padding: 0 0.5rem;
-  border-bottom: 0.125rem solid #3F3F42;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-81 {
   padding: 0.75rem 0;
-  border-bottom: 0.0625rem solid #3F3F42;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-81:last-child {
-  padding-bottom: 1rem;
+  padding-bottom: 0.25rem;
   border: 0;
 }
 
@@ -671,9 +678,11 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FFFFFF;
+  color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0.75rem 0;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -694,6 +703,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
 .emotion-83:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+  text-decoration-color: #B80000;
 }
 
 <div>
@@ -1526,8 +1536,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 
 .emotion-29 {
   position: relative;
-  background-color: #B80000;
-  border-top: 0.0625rem solid #FFFFFF;
+  background-color: #FFFFFF;
 }
 
 .emotion-29::after {
@@ -1536,7 +1545,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   bottom: 0;
   right: 0;
   left: 0;
-  border-bottom: 0.0625rem solid transparent;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-29 .emotion-46::after {
@@ -1547,6 +1556,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   position: relative;
   max-width: 80rem;
   margin: 0 auto;
+  background-color: #FFFFFF;
 }
 
 .emotion-33 {
@@ -1578,7 +1588,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #FFFFFF;
+  border: 0.25rem solid #B80000;
 }
 
 @media (min-width: 37.5rem) {
@@ -1600,8 +1610,14 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 .emotion-37 {
-  color: #fff;
+  color: #000000;
   fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-37 {
+    fill: linkText;
+  }
 }
 
 @media (max-width: 37.4375rem) {
@@ -1630,8 +1646,8 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
     pointer-events: none;
     background: linear-gradient(
             to right,
-            rgba(184, 0, 0, 0) 0%,
-            rgba(184, 0, 0, 1)
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1)
               100%
           );
   }
@@ -1674,7 +1690,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
     position: absolute;
     bottom: -1px;
     width: 80rem;
-    border-bottom: 0.0625rem solid #EAB3B3;
+    border-bottom: 0.0625rem solid #E6E8EA;
     z-index: -1;
   }
 }
@@ -1686,6 +1702,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   font-weight: 400;
   font-style: normal;
   color: #FDFDFD;
+  color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1719,7 +1736,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.25rem solid #B80000;
 }
 
 .emotion-47:focus::after {
@@ -1728,13 +1745,13 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.25rem solid #B80000;
   top: 0;
-  border: 0.25rem solid #FFFFFF;
+  border: 0.25rem solid #B80000;
 }
 
 .emotion-77 {
-  background-color: #222222;
+  background-color: #FFFFFF;
   clear: both;
   overflow: hidden;
   height: 0;
@@ -1762,16 +1779,16 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   list-style-type: none;
   margin: 0;
   padding: 0 0.5rem;
-  border-bottom: 0.125rem solid #3F3F42;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-81 {
   padding: 0.75rem 0;
-  border-bottom: 0.0625rem solid #3F3F42;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-81:last-child {
-  padding-bottom: 1rem;
+  padding-bottom: 0.25rem;
   border: 0;
 }
 
@@ -1781,9 +1798,11 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FFFFFF;
+  color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0.75rem 0;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1804,6 +1823,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 .emotion-83:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+  text-decoration-color: #B80000;
 }
 
 <div>
@@ -2636,8 +2656,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 
 .emotion-29 {
   position: relative;
-  background-color: #B80000;
-  border-top: 0.0625rem solid #FFFFFF;
+  background-color: #FFFFFF;
 }
 
 .emotion-29::after {
@@ -2646,7 +2665,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   bottom: 0;
   right: 0;
   left: 0;
-  border-bottom: 0.0625rem solid transparent;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-29 .emotion-46::after {
@@ -2657,6 +2676,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   position: relative;
   max-width: 80rem;
   margin: 0 auto;
+  background-color: #FFFFFF;
 }
 
 .emotion-33 {
@@ -2688,7 +2708,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #FFFFFF;
+  border: 0.25rem solid #B80000;
 }
 
 @media (min-width: 37.5rem) {
@@ -2710,8 +2730,14 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 .emotion-37 {
-  color: #fff;
+  color: #000000;
   fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-37 {
+    fill: linkText;
+  }
 }
 
 @media (max-width: 37.4375rem) {
@@ -2740,8 +2766,8 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
     pointer-events: none;
     background: linear-gradient(
             to right,
-            rgba(184, 0, 0, 0) 0%,
-            rgba(184, 0, 0, 1)
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1)
               100%
           );
   }
@@ -2784,7 +2810,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
     position: absolute;
     bottom: -1px;
     width: 80rem;
-    border-bottom: 0.0625rem solid #EAB3B3;
+    border-bottom: 0.0625rem solid #E6E8EA;
     z-index: -1;
   }
 }
@@ -2796,6 +2822,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   font-weight: 400;
   font-style: normal;
   color: #FDFDFD;
+  color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2829,7 +2856,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.25rem solid #B80000;
 }
 
 .emotion-47:focus::after {
@@ -2838,13 +2865,13 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.25rem solid #B80000;
   top: 0;
-  border: 0.25rem solid #FFFFFF;
+  border: 0.25rem solid #B80000;
 }
 
 .emotion-77 {
-  background-color: #222222;
+  background-color: #FFFFFF;
   clear: both;
   overflow: hidden;
   height: 0;
@@ -2872,16 +2899,16 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   list-style-type: none;
   margin: 0;
   padding: 0 0.5rem;
-  border-bottom: 0.125rem solid #3F3F42;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-81 {
   padding: 0.75rem 0;
-  border-bottom: 0.0625rem solid #3F3F42;
+  border-bottom: 0.0625rem solid #E6E8EA;
 }
 
 .emotion-81:last-child {
-  padding-bottom: 1rem;
+  padding-bottom: 0.25rem;
   border: 0;
 }
 
@@ -2891,9 +2918,11 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FFFFFF;
+  color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0.75rem 0;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2914,6 +2943,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 .emotion-83:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+  text-decoration-color: #B80000;
 }
 
 <div>

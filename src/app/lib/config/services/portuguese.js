@@ -386,7 +386,7 @@ export const service = {
       },
       {
         title: 'Vídeos',
-        url: '/portuguese/media/video',
+        url: '/portuguese/topics/c9y2j35dn2zt',
       },
     ],
   },

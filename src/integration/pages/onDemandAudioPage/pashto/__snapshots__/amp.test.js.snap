@@ -454,7 +454,7 @@ exports[`AMP On Demand Audio Page SEO OG url 1`] = `"http://localhost:7080/pasht
 
 exports[`AMP On Demand Audio Page SEO Page title 1`] = `"ماښامنۍ خپرونه - BBC News پښتو"`;
 
-exports[`AMP On Demand Audio Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP On Demand Audio Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP On Demand Audio Page SEO Twitter card 1`] = `"summary_large_image"`;
 
