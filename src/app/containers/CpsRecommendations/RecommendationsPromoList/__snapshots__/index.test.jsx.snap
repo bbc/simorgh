@@ -255,7 +255,7 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  color: #222222;
+  color: #141414;
   margin: 0;
   height: 100%;
   display: -webkit-box;
@@ -284,7 +284,7 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
 
 .emotion-18 {
   position: static;
-  color: #222222;
+  color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;

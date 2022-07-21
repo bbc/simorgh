@@ -325,7 +325,7 @@ exports[`Canonical Articles SEO OG url 1`] = `"http://localhost:7080/news/articl
 
 exports[`Canonical Articles SEO Page title 1`] = `"The Germans solving rising rents with people power - BBC News"`;
 
-exports[`Canonical Articles SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Articles SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Articles SEO Twitter card 1`] = `"summary_large_image"`;
 

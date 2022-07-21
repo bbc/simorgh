@@ -436,7 +436,7 @@ exports[`AMP Most Watched Page SEO OG url 1`] = `"http://localhost:7080/afrique/
 
 exports[`AMP Most Watched Page SEO Page title 1`] = `"Les plus vus - BBC News Afrique"`;
 
-exports[`AMP Most Watched Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP Most Watched Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP Most Watched Page SEO Twitter card 1`] = `"summary_large_image"`;
 
