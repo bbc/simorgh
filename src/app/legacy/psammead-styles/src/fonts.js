@@ -19,7 +19,7 @@ const baseUrlNotoSerifBengali =
   'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifBengali/v1.00/';
 
 const baseUrlBBCReithQalam =
-  'https://ws-downloads.files.bbci.co.uk/fonts/ReithQalam/v1.100/';
+  'https://ws-downloads.files.bbci.co.uk/fonts/ReithQalam/v1.210/';
 
 // Reith Serif
 export const F_REITH_SERIF_REGULAR = baseUrlOverride => `

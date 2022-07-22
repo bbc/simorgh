@@ -255,7 +255,7 @@ server.get(
         headers: removeSensitiveHeaders(headers),
       });
 
-      res.status(500).send(message);
+      res.status(500).send('Internal server error');
     }
   },
 );
