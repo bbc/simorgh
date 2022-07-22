@@ -2,21 +2,14 @@
 
 This folder contains components that we want to replace with new standardised components using the strangler pattern.
 
-| Previous Location  | New Location              | Remarks                                                                                                                                              |
-| ------------------ | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| src/app/legacy     | src/app/legacy/psammead   | These are components that used be maintained in a seperate component library: https://github.com/bbc/psammead                                        |
-| src/app/components | src/app/legacy/components | These are react components vaguely constituting components from the component-container pattern - we have decided not to follow this pattern anymore |
-| src/app/containers | src/app/legacy/containers | These are react components vaguely constituting containers from the component-container pattern - we have decided not to follow this pattern anymore |
+| Previous Location    | New Location                | Remarks                                                                                                                                              |
+| -------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `src/app/legacy`     | `src/app/legacy/psammead`   | These are components that used be maintained in a seperate component library: https://github.com/bbc/psammead                                        |
+| `src/app/components` | `src/app/legacy/components` | These are react components vaguely constituting components from the component-container pattern - we have decided not to follow this pattern anymore |
+| `src/app/containers` | `src/app/legacy/containers` | These are react components vaguely constituting containers from the component-container pattern - we have decided not to follow this pattern anymore |
 
-N.B. As referred to above we are moving away from the component-container pattern as engineers historically struggled to differentiate between the two and the distinction offered little from a maintenance perspective
+N.B. As referred to above we are moving away from the component-container pattern as engineers historically struggled to differentiate between the two and the distinction offered little from a maintenance perspective.
 
 The plan is to incrementally write new components that follow standards and best practices to replace the legacy components contained in this directory.
 
-The new components will be contained in /src/app/components.
-
-Psammead components used to be maintained as a seperate component library.
-
-Components and Containers were an attempt to follow the container-component pattern which is a pattern we have agreed not to follow anymore.
-
-We still have component, we have agreed to move our pages to the components directory:
-/src/app/pages -> /src/app/components/pages
+The new components will be contained in `/src/app/components`.
