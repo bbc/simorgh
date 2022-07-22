@@ -2,7 +2,7 @@ import path from 'ramda/src/path';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import config from '../../../support/config/services';
 import runAMPAdsTests from '../../../support/helpers/adsTests/testsForAMPOnly';
-import { serviceNumerals } from '../../../../src/app/containers/MostRead/Canonical/Rank';
+import { serviceNumerals } from '../../../../src/app/legacy/containers/MostRead/Canonical/Rank';
 
 export const testsThatAlwaysRunForAMPOnly = ({
   service,
