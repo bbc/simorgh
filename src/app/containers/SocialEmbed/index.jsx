@@ -53,8 +53,8 @@ const SocialEmbedContainer = ({ blocks, source }) => {
     ...skipLinkTranslations,
     endTextId:
       oEmbedPosition > 0
-        ? `end-of-%normalisedProvider%-content-${oEmbedPosition}`
-        : `end-of-%normalisedProvider%-content`,
+        ? `end-of-%provider%-content-${oEmbedPosition}`
+        : `end-of-%provider%-content`,
   };
 
   const caption = normalisedProvider === 'youtube' ? captionTranslations : null;

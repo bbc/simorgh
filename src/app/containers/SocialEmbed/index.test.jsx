@@ -38,7 +38,7 @@ describe('SocialEmbedContainer', () => {
       ).toBeTruthy();
       expect(loggerMock.info).toHaveBeenCalledTimes(1);
       expect(loggerMock.info).toHaveBeenCalledWith(SOCIAL_EMBED_RENDERED, {
-        provider: 'twitter',
+        normalisedProvider: 'twitter',
         href: 'https://twitter.com/BBCNews/status/1384138850478346243?s=20',
       });
       unmount();
