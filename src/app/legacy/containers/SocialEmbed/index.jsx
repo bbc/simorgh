@@ -30,7 +30,7 @@ const SocialEmbedContainer = ({ blocks, source }) => {
     path(['blocks', 0, 'model', 'oembed', 'provider_name'], model) ||
     getProviderFromSource(source);
 
-  const normalisedProvider = provider.toLowerCase();
+  const sanitisedProvider = provider.toLowerCase();
 
   const id = getIdFromSource(source);
 
@@ -57,23 +57,23 @@ const SocialEmbedContainer = ({ blocks, source }) => {
         : `end-of-%provider%-content`,
   };
 
-  const caption = normalisedProvider === 'youtube' ? captionTranslations : null;
+  const caption = sanitisedProvider === 'youtube' ? captionTranslations : null;
 
   logger.info(SOCIAL_EMBED_RENDERED, {
-    normalisedProvider,
+    sanitisedProvider,
     href: source,
   });
 
   return (
     <GridItemMedium>
       <Wrapper
-        provider={normalisedProvider}
-        data-e2e={`${normalisedProvider}-embed-${source}`}
+        provider={sanitisedProvider}
+        data-e2e={`${sanitisedProvider}-embed-${source}`}
         oEmbed={oEmbed}
       >
         {isAmp ? (
           <AmpSocialEmbed
-            provider={normalisedProvider}
+            provider={sanitisedProvider}
             service={service}
             id={id}
             fallback={fallback}
@@ -83,7 +83,7 @@ const SocialEmbedContainer = ({ blocks, source }) => {
         ) : (
           <Lazyload offset={LAZYLOAD_OFFSET} once height={oEmbed?.height}>
             <CanonicalSocialEmbed
-              provider={normalisedProvider}
+              provider={sanitisedProvider}
               service={service}
               oEmbed={oEmbed}
               fallback={fallback}
