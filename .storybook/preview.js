@@ -5,8 +5,8 @@ import { addDecorator } from '@storybook/react';
 import { create } from '@storybook/theming';
 import isChromatic from 'chromatic';
 import { forceVisible } from 'react-lazyload';
-import * as fontFaces from '../src/app/legacy/psammead-styles/src/fonts';
-import GlobalStyles from '../src/app/legacy/psammead-styles/src/global-styles';
+import * as fontFaces from '../src/app/legacy/psammead/psammead-styles/src/fonts';
+import GlobalStyles from '../src/app/legacy/psammead/psammead-styles/src/global-styles';
 
 const fontPathMap = [
   { prefix: 'F_MALLANNA', path: 'fonts/Mallanna/' },

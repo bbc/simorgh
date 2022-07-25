@@ -1,7 +1,7 @@
 import {
   setWindowValue,
   resetWindowValue,
-} from '#legacy/psammead-test-helpers/src';
+} from '#psammead/psammead-test-helpers/src';
 
 const windowLocation = window.location;
 

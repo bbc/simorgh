@@ -9,25 +9,25 @@ import {
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
   GEL_SPACING_SEXT,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
-import MetadataContainer from '#app/containers/Metadata';
-import LinkedData from '#app/containers/LinkedData';
+} from '#psammead/gel-foundations/src/breakpoints';
+import MetadataContainer from '#containers/Metadata';
+import LinkedData from '#containers/LinkedData';
 import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import useToggle from '#hooks/useToggle';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
+import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import isLive from '#lib/utilities/isLive';
 import TopicImage from './TopicImage';
 import TopicTitle from './TopicTitle';
 import TopicDescription from './TopicDescription';
 import Pagination from './Pagination';
-import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 import Curation, { VISUAL_PROMINANCE, VISUAL_STYLE } from './Curation';
 
 const Wrapper = styled.main`
