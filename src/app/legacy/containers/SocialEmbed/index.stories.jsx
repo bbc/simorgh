@@ -3,7 +3,12 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
-import { twitterBlock, twitterBlockNoEmbed, instagramBlock, instagramBlockNoEmbed } from './common/fixtures';
+import {
+  twitterBlock,
+  twitterBlockNoEmbed,
+  instagramBlock,
+  instagramBlockNoEmbed,
+} from './common/fixtures';
 import OptimoSocialEmbedContainer from '.';
 import withContexts from './common/testHelper';
 
@@ -57,7 +62,7 @@ export const InstagramCanonicalExample = props => (
 
 export const InstagramNoEmbed = props => (
   <Component
-    blocks={[instagramBlock]}
+    blocks={[instagramBlockNoEmbed]}
     source="https://www.instagram.com/p/CgNAEjOK46_"
     {...props}
   />
