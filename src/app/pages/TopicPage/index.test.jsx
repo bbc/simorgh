@@ -5,9 +5,14 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import TopicPage from './TopicPage';
-import { pidginMultipleItems, amharicSingleItem } from './fixtures';
+import {
+  pidginMultipleItems,
+  amharicSingleItem,
+  mundoWithBadgeAndDescr,
+  amharicOnlyTitle,
+} from './fixtures';
 
-jest.mock('../../containers/ChartbeatAnalytics', () => {
+jest.mock('../../legacy/containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });
@@ -57,6 +62,36 @@ describe('A11y', () => {
     expect(container.getElementsByTagName('li').length).toEqual(4);
   });
 
+  it('should render badge and description when they exist in data', () => {
+    const { container, queryByTestId } = render(
+      <TopicPageWithContext
+        pageData={mundoWithBadgeAndDescr}
+        service="mundo"
+      />,
+    );
+
+    expect(queryByTestId('topic-badge')).toBeInTheDocument();
+    expect(container.getElementsByTagName('p').length).toEqual(1);
+  });
+
+  it('should render description without badge', () => {
+    const { container, queryByTestId } = render(
+      <TopicPageWithContext pageData={pidginMultipleItems} service="pidgin" />,
+    );
+
+    expect(queryByTestId('topic-badge')).not.toBeInTheDocument();
+    expect(container.getElementsByTagName('p').length).toEqual(1);
+  });
+
+  it('should render only topic title without badge or description', () => {
+    const { container, queryByTestId } = render(
+      <TopicPageWithContext pageData={amharicOnlyTitle} service="amharic" />,
+    );
+
+    expect(queryByTestId('topic-badge')).not.toBeInTheDocument();
+    expect(container.getElementsByTagName('p').length).toEqual(0);
+  });
+
   it('should show ads when enabled', () => {
     [
       [true, true],
@@ -79,5 +114,56 @@ describe('A11y', () => {
         expect(adElement).not.toBeInTheDocument();
       }
     });
+  });
+});
+
+describe('isLive', () => {
+  afterEach(() => {
+    delete process.env.SIMORGH_APP_ENV;
+  });
+  it('should render image and description when on test', () => {
+    process.env.SIMORGH_APP_ENV = 'test';
+    const { container, queryByTestId } = render(
+      <TopicPageWithContext
+        pageData={mundoWithBadgeAndDescr}
+        service="mundo"
+      />,
+    );
+
+    expect(queryByTestId('topic-badge')).toBeInTheDocument();
+    expect(container.getElementsByTagName('p').length).toEqual(1);
+  });
+
+  it('should render descripton when on test and there is no image', () => {
+    process.env.SIMORGH_APP_ENV = 'test';
+    const { container, queryByTestId } = render(
+      <TopicPageWithContext pageData={pidginMultipleItems} service="pidgin" />,
+    );
+
+    expect(queryByTestId('topic-badge')).not.toBeInTheDocument();
+    expect(container.getElementsByTagName('p').length).toEqual(1);
+  });
+
+  it('should not render image or descripton when on live and data exists in pageData', () => {
+    process.env.SIMORGH_APP_ENV = 'live';
+    const { container, queryByTestId } = render(
+      <TopicPageWithContext
+        pageData={mundoWithBadgeAndDescr}
+        service="mundo"
+      />,
+    );
+
+    expect(queryByTestId('topic-badge')).not.toBeInTheDocument();
+    expect(container.getElementsByTagName('p').length).toEqual(0);
+  });
+
+  it('should not render image or descripton when on live and data does not exist in pageData', () => {
+    process.env.SIMORGH_APP_ENV = 'live';
+    const { container, queryByTestId } = render(
+      <TopicPageWithContext pageData={amharicOnlyTitle} service="amharic" />,
+    );
+
+    expect(queryByTestId('topic-badge')).not.toBeInTheDocument();
+    expect(container.getElementsByTagName('p').length).toEqual(0);
   });
 });

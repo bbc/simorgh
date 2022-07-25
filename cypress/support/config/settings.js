@@ -5447,6 +5447,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: [
+              '/pidgin/topics/c0823e52dd0t',
               '/pidgin/topics/c95y35941vrt',
               '/pidgin/topics/cnq68qvkjp1t', // One page only
             ],
@@ -5454,6 +5455,7 @@ module.exports = () => ({
           },
           test: {
             paths: [
+              '/pidgin/topics/c0823e52dd0t',
               '/pidgin/topics/cqywjyzk2vyt',
               '/pidgin/topics/cnq68qvkjp1t', // One page only
             ],

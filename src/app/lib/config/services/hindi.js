@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import devanagariAndGurmukhi from '#legacy/gel-foundations/src/scripts/devanagari-and-gurmukhi';
-import { hindi as brandSVG } from '#legacy/psammead-assets/src/svgs';
-import '#legacy/moment-timezone-include/tz/Asia/Kolkata';
-import '#legacy/psammead-locales/moment/hi';
+} from '#psammead/psammead-styles/src/colours';
+import devanagariAndGurmukhi from '#psammead/gel-foundations/src/scripts/devanagari-and-gurmukhi';
+import { hindi as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
+import '#psammead/psammead-locales/moment/hi';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -61,16 +61,16 @@ export const service = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'पॉडकास्ट',
-      brandTitle: 'दिन भर',
+      brandTitle: 'बात सरहद पार',
       brandDescription:
-        'वो राष्ट्रीय और अंतरराष्ट्रीय ख़बरें जो दिनभर सुर्खियां बनीं.',
+        'दो देश,दो शख़्सियतें और ढेर सारी बातें. आज़ादी और बँटवारे के 75 साल. सीमा पार संवाद.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/448xn/p09ds7cb.jpg',
-        alt: 'दिन भर',
+        src: 'https://ichef.bbci.co.uk/images/ic/448xn/p0clc96w.jpg',
+        alt: 'बात सरहद पार',
       },
       linkLabel: {
-        text: 'ड्रामा क्वीन',
-        href: 'https://www.bbc.com/hindi/podcasts/p09ds7zx',
+        text: 'बात सरहद पार',
+        href: 'https://www.bbc.com/hindi/podcasts/p0clc83k',
       },
       skipLink: {
         text: 'छोड़कर %title% आगे बढ़ें',

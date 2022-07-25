@@ -6,7 +6,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import MetadataContainer from '#containers/Metadata';
 import LinkedData from '#containers/LinkedData';
 import IndexHeading from '#containers/IndexHeading';
-import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
+import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import IndexPageSection from '#containers/IndexPageSection';
 import idxPageDataPropTypes from '#models/propTypes/idxPage';
 import ATIAnalytics from '#containers/ATIAnalytics';
