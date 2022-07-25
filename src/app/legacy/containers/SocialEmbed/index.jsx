@@ -16,6 +16,7 @@ import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
 import createTranslations from './common/translations';
 import { LAZYLOAD_OFFSET, Wrapper } from './common/styles';
 import { getProviderFromSource, getIdFromSource } from './sourceHelpers';
+import isLive from '#lib/utilities/isLive';
 
 const logger = nodeLogger(__filename);
 
@@ -25,12 +26,12 @@ const SocialEmbedContainer = ({ blocks, source }) => {
 
   if (!blocks || !source) return null;
   const { model } = blocks[0];
+  console.log(source);
+  const provider = getProviderFromSource(source);
 
-  const provider =
-    path(['blocks', 0, 'model', 'oembed', 'provider_name'], model) ||
-    getProviderFromSource(source);
-
-  const sanitisedProvider = provider.toLowerCase();
+  // TODO REMOVE TO GO LIVE
+  if (!isLive() && (provider === 'youtube' || provider === 'instagram'))
+    return null;
 
   const id = getIdFromSource(source);
 
@@ -57,23 +58,23 @@ const SocialEmbedContainer = ({ blocks, source }) => {
         : `end-of-%provider%-content`,
   };
 
-  const caption = sanitisedProvider === 'youtube' ? captionTranslations : null;
+  const caption = provider === 'youtube' ? captionTranslations : null;
 
   logger.info(SOCIAL_EMBED_RENDERED, {
-    sanitisedProvider,
+    provider,
     href: source,
   });
 
   return (
     <GridItemMedium>
       <Wrapper
-        provider={sanitisedProvider}
-        data-e2e={`${sanitisedProvider}-embed-${source}`}
+        provider={provider}
+        data-e2e={`${provider}-embed-${source}`}
         oEmbed={oEmbed}
       >
         {isAmp ? (
           <AmpSocialEmbed
-            provider={sanitisedProvider}
+            provider={provider}
             service={service}
             id={id}
             fallback={fallback}
@@ -83,7 +84,7 @@ const SocialEmbedContainer = ({ blocks, source }) => {
         ) : (
           <Lazyload offset={LAZYLOAD_OFFSET} once height={oEmbed?.height}>
             <CanonicalSocialEmbed
-              provider={sanitisedProvider}
+              provider={provider}
               service={service}
               oEmbed={oEmbed}
               fallback={fallback}
