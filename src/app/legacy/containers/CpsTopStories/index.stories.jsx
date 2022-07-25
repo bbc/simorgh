@@ -5,7 +5,7 @@ import topStoriesRtl from '#pages/StoryPage/topStoriesRtl.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
+import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import TopStories from '.';
 
 // eslint-disable-next-line react/prop-types

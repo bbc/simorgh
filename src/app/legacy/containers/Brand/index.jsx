@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import Brand from '#psammead/psammead-brand/src';
 import { bool, node, oneOfType, func, shape, any } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
+import Brand from '#psammead/psammead-brand/src';
 
 const StyledBrand = styled(Brand)`
   position: relative;

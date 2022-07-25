@@ -8,7 +8,7 @@ import pidginData from '#data/pidgin/frontpage/index.json';
 import russianData from '#data/russian/frontpage/index.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
-import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
+import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import IndexPageSection from '.';
 
 // eslint-disable-next-line react/prop-types

@@ -7,7 +7,8 @@ import BrandContainer from '.';
 // eslint-disable-next-line react/prop-types
 const Component = ({ service, variant }) => {
   // eslint-disable-next-line import/no-dynamic-require,global-require
-  const serviceConfig = require(`../../lib/config/services/${service}`).service;
+  const serviceConfig =
+    require(`../../../lib/config/services/${service}`).service;
 
   const configVariant = serviceConfig[variant];
   return (

@@ -2,8 +2,13 @@ import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 
-import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
-import { twitterBlock, twitterBlockNoEmbed, instagramBlock, instagramBlockNoEmbed } from './common/fixtures';
+import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
+import {
+  twitterBlock,
+  twitterBlockNoEmbed,
+  instagramBlock,
+  instagramBlockNoEmbed,
+} from './common/fixtures';
 import OptimoSocialEmbedContainer from '.';
 import withContexts from './common/testHelper';
 
