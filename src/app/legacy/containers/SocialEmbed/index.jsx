@@ -30,7 +30,7 @@ const SocialEmbedContainer = ({ blocks, source }) => {
   const provider = getProviderFromSource(source);
 
   // TODO REMOVE TO GO LIVE
-  if (!isLive() && (provider === 'youtube' || provider === 'instagram'))
+  if (isLive() && (provider === 'youtube' || provider === 'instagram'))
     return null;
 
   const id = getIdFromSource(source);
