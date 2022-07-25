@@ -138,7 +138,7 @@
         {
           "type": "social",
           "model": {
-            "source": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "source": "https://www.youtube.com/watch?v=1e05_rwHvOM",
             "blocks": [
               {
                 "type": "renditions",
@@ -151,7 +151,7 @@
                         "oembed": {
                           "title": "Rick Astley - Never Gonna Give You Up (Official Music Video)",
                           "author_name": "Rick Astley",
-                          "author_url": "https://www.youtube.com/c/RickastleyCoUkOfficial",
+                          "author_url": "https://www.youtube.com/user/BBCMundo",
                           "type": "video",
                           "height": 113,
                           "width": 200,
@@ -160,8 +160,8 @@
                           "provider_url": "https://www.youtube.com/",
                           "thumbnail_height": 360,
                           "thumbnail_width": 480,
-                          "thumbnail_url": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
-                          "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+                          "thumbnail_url": "https://i.ytimg.com/vi/chiWVxreqhU/hqdefault.jpg",
+                          "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/1e05_rwHvOM?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
                         }
                       }
                     }
@@ -190,37 +190,7 @@
             ]
           }
         },
-        {
-          "type": "social",
-          "model": {
-            "source": "https://twitter.com/EgbuchulamPrin2/status/1401151603386851328?s=20",
-            "blocks": [
-              {
-                "type": "renditions",
-                "model": {
-                  "locator": "urn:bbc:optimo:social:93510861-c60f-47e9-897d-da5d4be64d16",
-                  "blocks": [
-                    {
-                      "type": "aresOEmbed",
-                      "model": {
-                        "oembed": {
-                          "version": "1.0",
-                          "author_name": "Egbuchulam Princess Chidimma",
-                          "author_url": "https://twitter.com/EgbuchulamPrin2",
-                          "provider_name": "Twitter",
-                          "provider_url": "https://twitter.com",
-                          "url": "https://twitter.com/EgbuchulamPrin2/status/1401151603386851328",
-                          "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Wetin una still dey do here??</p>&mdash; Egbuchulam Princess Chidimma (@EgbuchulamPrin2) <a href=\"https://twitter.com/EgbuchulamPrin2/status/1401151603386851328?ref_src=twsrc%5Etfw\">June 5, 2021</a></blockquote>\n",
-                          "width": 550
-                        }
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
+
         {
           "type": "text",
           "model": {
