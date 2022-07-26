@@ -13,10 +13,10 @@ import { GridItemMedium } from '#components/Grid';
 import { socialEmbedBlockPropTypes } from '#models/propTypes/socialEmbed';
 import nodeLogger from '#lib/logger.node';
 import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
+import isLive from '#lib/utilities/isLive';
 import createTranslations from './common/translations';
 import { LAZYLOAD_OFFSET, Wrapper } from './common/styles';
 import { getProviderFromSource, getIdFromSource } from './sourceHelpers';
-import isLive from '#lib/utilities/isLive';
 
 const logger = nodeLogger(__filename);
 
