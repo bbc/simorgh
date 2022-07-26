@@ -158,9 +158,19 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   // ads
   const { enabled: adsEnabled } = useToggle('ads');
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
-  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
+  const { isAmp, showAdsBasedOnLocation, mvtExperiments } =
+    useContext(RequestContext);
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
 
+  const hasExperimentDataSaving = mvtExperiments.some(
+    ({ experimentName, variation }) =>
+      experimentName === 'simorgh_data_saving' && variation === 'saving',
+  );
+
+  if (hasExperimentDataSaving && service === 'pidgin') {
+    const dataSavingMessage = `I thought I would save you some data by not showing you anything 😂 😭 (That is a lie, it didn't save you anything lol).`;
+    return <h1>{dataSavingMessage}</h1>;
+  }
   /**
    * Should we display ads? We check:
    * 1. The CPS `allowAdvertising` field value.

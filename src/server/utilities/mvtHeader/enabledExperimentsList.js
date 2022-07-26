@@ -6,7 +6,7 @@ const enabledExperimentList = [
   },
   {
     name: 'simorgh_data_saving',
-    services: ['pidgin', 'mundo'],
+    services: ['pidgin'],
     pageTypes: ['STY', 'IDX'],
   },
 ];
