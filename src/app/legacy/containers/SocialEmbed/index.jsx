@@ -27,7 +27,6 @@ const SocialEmbedContainer = ({ blocks, source }) => {
 
   if (!blocks || !source) return null;
   const { model } = blocks[0];
-  console.log(source);
   const provider = getProviderFromSource(source);
 
   // TODO REMOVE TO GO LIVE
