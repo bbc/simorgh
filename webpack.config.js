@@ -2,7 +2,7 @@
 const { merge } = require('webpack-merge');
 const fs = require('fs');
 const path = require('path');
-const MomentTimezoneInclude = require('./src/app/legacy/moment-timezone-include/src');
+const MomentTimezoneInclude = require('./src/app/legacy/psammead/moment-timezone-include/src');
 const { webpackDirAlias } = require('./dirAlias');
 
 const appDirectory = fs.realpathSync(process.cwd());
