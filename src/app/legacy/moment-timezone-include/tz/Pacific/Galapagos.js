@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Pacific/Galapagos|-06|60|0||25e3');

@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('America/Noronha|-02|20|0||30e2');

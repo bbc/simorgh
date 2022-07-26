@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Africa/Khartoum|EAT CAT|-30 -20|01|1Usl0|51e5');

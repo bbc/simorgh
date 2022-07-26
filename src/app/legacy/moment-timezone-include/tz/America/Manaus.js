@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('America/Manaus|-04|40|0||19e5');

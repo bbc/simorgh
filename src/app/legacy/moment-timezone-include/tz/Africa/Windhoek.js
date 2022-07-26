@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Africa/Windhoek|CAT WAT|-20 -10|01010101010101010|1C1c0 11B0 1nX0 11B0 1nX0 11B0 1qL0 WN0 1qL0 11B0 1nX0 11B0 1nX0 11B0 1nX0 11B0|32e4');

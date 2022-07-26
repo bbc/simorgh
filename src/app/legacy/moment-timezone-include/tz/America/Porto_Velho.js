@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('America/Porto_Velho|-04|40|0||37e4');

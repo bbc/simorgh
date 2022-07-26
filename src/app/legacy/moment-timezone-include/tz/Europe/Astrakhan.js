@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Europe/Astrakhan|+03 +04|-30 -40|010101|1BWn0 1qM0 WM0 8Hz0 3rd0|10e5');

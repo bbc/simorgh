@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Antarctica/Syowa|+03|-30|0||20');

@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Asia/Novokuznetsk|+07 +06|-70 -60|010|1Dp80 WM0|55e4');

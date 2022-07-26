@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Africa/Casablanca|+00 +01|0 -10|0101010101010101010101010101010101010101010101|1Cco0 Db0 1zd0 Lz0 1Nf0 wM0 co0 go0 1o00 s00 dA0 vc0 11A0 A00 e00 y00 11A0 uM0 e00 Dc0 11A0 s00 e00 IM0 WM0 mo0 gM0 LA0 WM0 jA0 e00 28M0 e00 2600 e00 28M0 e00 2600 gM0 2600 e00 28M0 e00 2600 gM0|32e5');

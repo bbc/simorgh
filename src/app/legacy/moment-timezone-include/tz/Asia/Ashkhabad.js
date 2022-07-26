@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Asia/Ashkhabad|+05|-50|0||41e4');

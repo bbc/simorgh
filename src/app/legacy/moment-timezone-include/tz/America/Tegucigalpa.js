@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('America/Tegucigalpa|CST|60|0||11e5');

@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('America/Bahia_Banderas|MST CDT CST|70 50 60|012121212121212121212121212121212|1C1l0 1nW0 11B0 1nX0 11B0 1nX0 14p0 1lb0 14p0 1lb0 14p0 1lb0 14p0 1nX0 11B0 1nX0 11B0 1nX0 14p0 1lb0 14p0 1lb0 14p0 1nX0 11B0 1nX0 11B0 1nX0 14p0 1lb0 14p0 1lb0|84e3');

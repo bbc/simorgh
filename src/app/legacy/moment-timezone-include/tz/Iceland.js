@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Iceland|GMT|0|0||12e4');

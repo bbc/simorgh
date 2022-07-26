@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Asia/Qyzylorda|+06 +05|-60 -50|01|1Xei0|73e4');

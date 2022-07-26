@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Asia/Kuala_Lumpur|+08|-80|0||71e5');
