@@ -31,6 +31,7 @@ import sendCustomMetric from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
 import local from './local';
 import getAgent from './utilities/getAgent';
+import { getMvtExperiments, getMvtVaryHeaders } from './utilities/mvtHeader';
 
 const morgan = require('morgan');
 
@@ -135,9 +136,16 @@ server.get(
   '/*',
   [injectCspHeaderProdBuild, injectDefaultCacheHeader],
   async ({ url, query, headers, path: urlPath }, res) => {
+    const headersTest = {
+      ...headers,
+      ...{
+        'mvt-simorgh_dark_mode': 'experiment;control',
+        'mvt-simorgh_data_saving': 'saving',
+      },
+    };
     logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
       url,
-      headers: removeSensitiveHeaders(headers),
+      headers: removeSensitiveHeaders(headersTest),
     });
 
     let derivedPageType = 'Unknown';
@@ -169,7 +177,7 @@ server.get(
       data.toggles = toggles;
       data.path = urlPath;
       data.timeOnServer = Date.now();
-      data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true';
+      data.showAdsBasedOnLocation = headersTest['bbc-adverts'] === 'true';
 
       let { status } = data;
       // Set derivedPageType based on returned page data
@@ -184,7 +192,9 @@ server.get(
         });
       }
 
-      const bbcOrigin = headers['bbc-origin'];
+      const bbcOrigin = headersTest['bbc-origin'];
+      const mvtExperiments = getMvtExperiments(headersTest);
+
       let result;
       try {
         result = await renderDocument({
@@ -195,6 +205,7 @@ server.get(
           service,
           url,
           variant,
+          mvtExperiments,
         });
       } catch ({ message }) {
         status = 500;
@@ -209,7 +220,7 @@ server.get(
           status,
           message,
           url,
-          headers: removeSensitiveHeaders(headers),
+          headers: removeSensitiveHeaders(headersTest),
         });
 
         result = await renderDocument({
@@ -220,6 +231,7 @@ server.get(
           service,
           url,
           variant,
+          mvtExperiments,
         });
       }
 
@@ -236,6 +248,11 @@ server.get(
           'onion-location',
           `https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${urlPath}`,
         );
+
+        const mvtVaryHeaders = getMvtVaryHeaders(mvtExperiments, service, derivedPageType);
+
+        mvtVaryHeaders && console.log(mvtVaryHeaders);
+        // mvtVaryHeaders && res.set('vary', mvtVaryHeaders);
         res.status(status).send(result.html);
       } else {
         throw new Error('unknown result');
@@ -252,7 +269,7 @@ server.get(
         status,
         message,
         url,
-        headers: removeSensitiveHeaders(headers),
+        headers: removeSensitiveHeaders(headersTest),
       });
 
       res.status(500).send(message);
