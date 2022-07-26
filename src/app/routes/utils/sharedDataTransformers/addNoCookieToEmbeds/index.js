@@ -40,6 +40,8 @@ export default json => {
       const embedHtml = path(['html'], OEmbed);
       const embedProvider = path(['provider_name'], OEmbed);
 
+      if (!embedHtml) return item;
+
       const noCookieHtml = noCookieYoutube({ embedHtml, embedProvider });
 
       return setOEmbedHtml(noCookieHtml, item);
