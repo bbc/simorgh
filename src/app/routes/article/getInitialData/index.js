@@ -30,8 +30,8 @@ const transformJson = pipe(
   handlePromoData,
   augmentWithTimestamp,
   addMpuBlock,
-  addIdsToBlocks,
   addNoCookieToEmbeds,
+  addIdsToBlocks,
   applyBlockPositioning,
   addIndexesToEmbeds,
   addIndexToBlockGroups(isListWithLink, {
