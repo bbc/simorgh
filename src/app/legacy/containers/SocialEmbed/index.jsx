@@ -14,14 +14,15 @@ import { socialEmbedBlockPropTypes } from '#models/propTypes/socialEmbed';
 import nodeLogger from '#lib/logger.node';
 import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
 import isLive from '#lib/utilities/isLive';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import createTranslations from './common/translations';
 import { LAZYLOAD_OFFSET, Wrapper } from './common/styles';
 import { getProviderFromSource, getIdFromSource } from './sourceHelpers';
 
 const logger = nodeLogger(__filename);
 
-const SocialEmbedContainer = ({ blocks, source, pageType }) => {
-  const { isAmp } = useContext(RequestContext);
+const SocialEmbedContainer = ({ blocks, source }) => {
+  const { isAmp, pageType } = useContext(RequestContext);
   const { service, translations } = useContext(ServiceContext);
 
   if (!blocks || !source) return null;
@@ -29,12 +30,10 @@ const SocialEmbedContainer = ({ blocks, source, pageType }) => {
   console.log(source);
   const provider = getProviderFromSource(source);
 
-  console.log(provider);
-
   // TODO REMOVE TO GO LIVE
   if (
     isLive() &&
-    pageType === 'Article' &&
+    pageType === ARTICLE_PAGE &&
     (provider === 'youtube' || provider === 'instagram')
   )
     return null;

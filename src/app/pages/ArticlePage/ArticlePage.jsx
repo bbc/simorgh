@@ -143,7 +143,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       />
     ),
     timestamp: props => <Timestamp {...props} popOut={false} />,
-    social: props => <SocialEmbedContainer {...props} pageType="Article" />,
+    social: SocialEmbedContainer,
     group: gist,
     links: props => <ScrollablePromo {...props} />,
     mpu: props =>

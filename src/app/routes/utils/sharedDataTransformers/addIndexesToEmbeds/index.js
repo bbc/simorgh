@@ -31,8 +31,6 @@ const enrichBlocks = (accumulator, block, index, blocks) => {
   const embedProvider = getEmbedProvider(block);
   const source = getSource(block);
 
-  console.log(block);
-
   if ((embedUrl || source) && embedProvider) {
     const accumulatedBlocksByProvider = accumulator.filter(
       matchesEmbedProvider(embedProvider),
