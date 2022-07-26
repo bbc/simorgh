@@ -172,26 +172,6 @@
         {
           "type": "social",
           "model": {
-            "providerName": "Instagram",
-            "source": "https://www.instagram.com/p/CZ4ght5sIR3",
-            "blocks": [
-              {
-                "type": "renditions",
-                "model": {
-                  "locator": "urn:bbc:optimo:social:2777c9b9-b3d3-4d53-b36c-be749aa528c9",
-                  "blocks": [
-                    {
-                      "type": "aresOEmbed"
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "social",
-          "model": {
             "source": "https://www.youtube.com/watch?v=1e05_rwHvOM",
             "blocks": [
               {
