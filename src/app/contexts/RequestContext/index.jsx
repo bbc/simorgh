@@ -23,6 +23,7 @@ export const RequestContextProvider = ({
   variant,
   timeOnServer,
   showAdsBasedOnLocation,
+  mvtExperiments,
 }) => {
   const { isUK, origin } = getOriginContext(bbcOrigin);
   const env = getEnv(origin);
@@ -56,6 +57,7 @@ export const RequestContextProvider = ({
     service,
     pathname,
     ...getMetaUrls(origin, pathname),
+    mvtExperiments,
   };
 
   return (
