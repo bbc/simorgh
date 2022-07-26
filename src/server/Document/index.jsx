@@ -21,7 +21,6 @@ const renderDocument = async ({
   routes,
   service,
   url,
-  mvtExperiments,
 }) => {
   const isDev = process.env.NODE_ENV === 'development';
   const cache = createCache({ key: 'bbc' });
@@ -69,7 +68,6 @@ const renderDocument = async ({
             context={context}
             service={service}
             isAmp={isAmp}
-            mvtExperiments={mvtExperiments}
           />
         </CacheProvider>
       </ChunkExtractorManager>,
@@ -105,7 +103,6 @@ const renderDocument = async ({
       helmet={headHelmet}
       service={service}
       isAmp={isAmp}
-      mvtExperiments={mvtExperiments}
     />,
   );
 
