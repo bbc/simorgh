@@ -174,10 +174,13 @@ server.get(
         getAgent,
       });
 
+      const mvtExperiments = getMvtExperiments(headersTest);
+
       data.toggles = toggles;
       data.path = urlPath;
       data.timeOnServer = Date.now();
       data.showAdsBasedOnLocation = headersTest['bbc-adverts'] === 'true';
+      data.mvtExperiments = mvtExperiments;
 
       let { status } = data;
       // Set derivedPageType based on returned page data
@@ -193,7 +196,6 @@ server.get(
       }
 
       const bbcOrigin = headersTest['bbc-origin'];
-      const mvtExperiments = getMvtExperiments(headersTest);
 
       let result;
       try {
@@ -205,7 +207,6 @@ server.get(
           service,
           url,
           variant,
-          mvtExperiments,
         });
       } catch ({ message }) {
         status = 500;
@@ -231,7 +232,6 @@ server.get(
           service,
           url,
           variant,
-          mvtExperiments,
         });
       }
 
@@ -249,7 +249,7 @@ server.get(
           `https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${urlPath}`,
         );
 
-        const mvtVaryHeaders = getMvtVaryHeaders(mvtExperiments, service, derivedPageType);
+        const mvtVaryHeaders = !isAmp && getMvtVaryHeaders(mvtExperiments, service, derivedPageType);
 
         mvtVaryHeaders && console.log(mvtVaryHeaders);
         // mvtVaryHeaders && res.set('vary', mvtVaryHeaders);
