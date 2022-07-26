@@ -2,8 +2,18 @@ import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 
+<<<<<<< HEAD
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { twitterBlock, twitterBlockNoEmbed } from './common/fixtures';
+=======
+import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
+import {
+  twitterBlock,
+  twitterBlockNoEmbed,
+  instagramBlock,
+  instagramBlockNoEmbed,
+} from './common/fixtures';
+>>>>>>> ce3f0331dd (restore storybook)
 import OptimoSocialEmbedContainer from '.';
 import withContexts from './common/testHelper';
 
@@ -46,3 +56,22 @@ export const NoEmbed = props => (
     {...props}
   />
 );
+<<<<<<< HEAD
+=======
+
+export const InstagramCanonicalExample = props => (
+  <Component
+    blocks={[instagramBlock]}
+    source="https://www.instagram.com/p/CgNAEjOK46_"
+    {...props}
+  />
+);
+
+export const InstagramNoEmbed = props => (
+  <Component
+    blocks={[instagramBlock]}
+    source="https://www.instagram.com/p/CgNAEjOK46_"
+    {...props}
+  />
+);
+>>>>>>> ce3f0331dd (restore storybook)

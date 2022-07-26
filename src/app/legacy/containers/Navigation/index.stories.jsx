@@ -4,7 +4,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
-import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
+import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import Navigation from '.';
 
 // eslint-disable-next-line react/prop-types

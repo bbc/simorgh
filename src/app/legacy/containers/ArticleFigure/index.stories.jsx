@@ -15,7 +15,7 @@ import {
   FigureAmpImageWithCaptionContainingMultipleParagraphsAndLink,
   FigureLazyLoadImage,
 } from './fixtureData';
-import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
+import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 
 export default {
   title: 'Containers/Article/Article Figure',

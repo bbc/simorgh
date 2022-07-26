@@ -7,7 +7,7 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import fixture from './helpers/storiesFixture';
 import StoryPromoContainer from '.';
-import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
+import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import { guideLinkItem } from './helpers/fixtureData';
 
 const mediaFixture = type =>
