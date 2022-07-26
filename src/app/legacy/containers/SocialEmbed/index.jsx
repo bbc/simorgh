@@ -20,7 +20,7 @@ import { getProviderFromSource, getIdFromSource } from './sourceHelpers';
 
 const logger = nodeLogger(__filename);
 
-const SocialEmbedContainer = ({ blocks, source }) => {
+const SocialEmbedContainer = ({ blocks, source, pageType }) => {
   const { isAmp } = useContext(RequestContext);
   const { service, translations } = useContext(ServiceContext);
 
@@ -29,8 +29,14 @@ const SocialEmbedContainer = ({ blocks, source }) => {
   console.log(source);
   const provider = getProviderFromSource(source);
 
+  console.log(provider);
+
   // TODO REMOVE TO GO LIVE
-  if (isLive() && (provider === 'youtube' || provider === 'instagram'))
+  if (
+    isLive() &&
+    pageType === 'Article' &&
+    (provider === 'youtube' || provider === 'instagram')
+  )
     return null;
 
   const id = getIdFromSource(source);

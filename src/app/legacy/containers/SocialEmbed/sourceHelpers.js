@@ -17,7 +17,10 @@ export const getProviderFromSource = source => {
   if (source.match(/^https:\/\/www\.instagram\.com/)) {
     return PROVIDERS.INSTAGRAM;
   }
-  if (source.match(/^https:\/\/www\.youtube-no-cookie\.com/)) {
+  if (
+    source.match(/^https:\/\/www\.youtube-nocookie\.com/) ||
+    source.match(/^https:\/\/www\.youtube\.com/)
+  ) {
     return PROVIDERS.YOUTUBE;
   }
   return PROVIDERS.UNKNOWN;

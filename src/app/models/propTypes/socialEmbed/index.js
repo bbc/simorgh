@@ -25,6 +25,7 @@ export const cpsSocialEmbedBlockPropTypes = {
 
 export const socialEmbedBlockPropTypes = {
   source: string.isRequired,
+  pageType: string,
   // 'blocks' can contain 'renditions' blocks, whose blocks can contain
   // 'aresOEmbed' blocks. When an 'aresOEmbed' block exists, we expect to
   // find an 'oembed' object with an 'html' property.
