@@ -9,7 +9,7 @@ module.exports = {
   core: {
     builder: 'webpack5',
   },
-  stories: ['../src/app/**/!(**psammead)/*.stories.jsx'],
+  stories: ['../src/app/**/!(psammead)/*.stories.jsx'],
   addons: [
     '@storybook/addon-knobs',
     '@storybook/addon-a11y',
