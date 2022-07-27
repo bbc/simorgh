@@ -3,7 +3,7 @@ import { getProviderFromSource, getIdFromSource } from './sourceHelpers';
 describe('sourceHelpers', () => {
   const TWITTER_SOURCE =
     'https://twitter.com/BBCNews/status/1384138850478346243?s=20';
-  const UNKNOWN_SOURCE = 'https://www.youtube.com/watch?v=XWxjmToNSjQ';
+  const UNKNOWN_SOURCE = 'https://www.randomSource.com/watch?v=XWxjmToNSjQ';
 
   describe('getProviderFromSource', () => {
     it('should return a provider name for a valid source', () => {
