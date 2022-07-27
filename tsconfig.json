@@ -1,24 +1,27 @@
 {
   "compilerOptions": {
-    // Target latest version of ECMAScript.
-    "target": "esnext",
-    // Search under node_modules for non-relative imports.
-    "moduleResolution": "node",
-    // Process & infer types from .js files.
-    "allowJs": true,
-    // Don't emit; allow Babel to transform files.
-    "noEmit": true,
-    // Enable strictest settings like strictNullChecks & noImplicitAny.
-    "strict": true,
-    // Import non-ES modules as default imports.
-    "esModuleInterop": true,
-    // Ensure that .d.ts files are created by tsc, but not .js files
-    "declaration": true,
-    "emitDeclarationOnly": true,
-    // Ensure that Babel can safely transpile files in the TypeScript project
-    "isolatedModules": true
+    "target": "es6",
+    "lib": ["dom", "dom.iterable", "esnext"], // List of library files to be included in the compilation
+    "allowJs": true, // Allow JavaScript files to be compiled
+    "skipLibCheck": true, // Skip type checking of all declaration files
+    "esModuleInterop": true, // Disables namespace imports (import * as fs from "fs") and enables CJS/AMD/UMD style imports (import fs from "fs")
+    "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export
+    "strict": true, // Enable all strict type checking options
+    "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file.
+    "module": "esnext", // Specify module code generation
+    "moduleResolution": "node", // Resolve modules using Node.js style
+    "isolatedModules": true, // Unconditionally emit imports for unresolved files
+    "resolveJsonModule": true, // Include modules imported with .json extension
+    "noEmit": false,
+    "noEmitOnError": false,
+    "jsx": "react", // Support JSX in .tsx files
+    "sourceMap": true, // Generate corrresponding .map file
+    "declaration": true, // Generate corresponding .d.ts file
+    "noUnusedLocals": true, // Report errors on unused locals
+    "noUnusedParameters": true, // Report errors on unused parameters
+    "incremental": true, // Enable incremental compilation by reading/writing information from prior compilations to a file on disk
+    "noFallthroughCasesInSwitch": true // Report errors for fallthrough cases in switch statement
   },
-  "include": [
-    "src" // <-- change this to where your source files are
-  ]
+  "include": ["src/app/components/**/*"],
+  "exclude": ["node_modules", "build"]
 }

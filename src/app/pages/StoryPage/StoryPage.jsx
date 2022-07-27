@@ -42,6 +42,7 @@ import Byline from '#containers/Byline';
 import CpsSocialEmbedContainer from '#containers/SocialEmbed/Cps';
 import CpsRecommendations from '#containers/CpsRecommendations';
 import { InlinePodcastPromo } from '#containers/PodcastPromo';
+import Text from '../../components/Text';
 
 import {
   getFirstPublished,
@@ -369,6 +370,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         <CanonicalAdBootstrapJs adcampaign={adcampaign} />
       )}
       {isAdsEnabled && <AdContainer slotType="leaderboard" />}
+      <Text>Hellooooo I am TypeScript!</Text>
       <StoryPageGrid
         columns={gridColumns}
         enableGelGutters
