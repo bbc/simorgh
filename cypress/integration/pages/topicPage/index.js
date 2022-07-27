@@ -1,3 +1,4 @@
+import { v4 as uuid } from 'uuid';
 import config from '../../../support/config/services';
 import getPaths from '../../../support/helpers/getPaths';
 import serviceHasPageType from '../../../support/helpers/serviceHasPageType';
@@ -18,7 +19,11 @@ Object.keys(config)
         before(() => {
           Cypress.env('currentPath', currentPath);
 
-          const newPath = `${currentPath}${overrideRendererOnTest()}`;
+          // const newPath = `${currentPath}${overrideRendererOnTest()}`;
+          const overrideSuffix = overrideRendererOnTest();
+          const newPath = `${
+            currentPath + overrideSuffix + (overrideSuffix ? '&' : '?')
+          }id=${uuid()}`;
 
           visitPage(newPath, pageType);
         });
