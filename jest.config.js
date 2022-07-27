@@ -1,6 +1,7 @@
 const { jestDirAlias } = require('./dirAlias');
 
 const unitTests = {
+  preset: 'ts-jest',
   setupFiles: ['./src/testHelpers/jest-setup.js'],
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
   moduleNameMapper: jestDirAlias,
@@ -24,6 +25,7 @@ const unitTests = {
 };
 
 const ampIntegrationTests = {
+  preset: 'ts-jest',
   displayName: 'Integration Tests - AMP',
   testEnvironment: './src/integration/integrationTestEnvironment.js',
   testEnvironmentOptions: {
@@ -34,6 +36,7 @@ const ampIntegrationTests = {
 };
 
 const canonicalIntegrationTests = {
+  preset: 'ts-jest',
   displayName: 'Integration Tests - Canonical',
   testEnvironment: './src/integration/integrationTestEnvironment.js',
   testEnvironmentOptions: {
