@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import Image from '#legacy/psammead-image/src';
+import Image from '#psammead/psammead-image/src';
 
 export default styled(Image)`
   aspect-ratio: 16 / 9;

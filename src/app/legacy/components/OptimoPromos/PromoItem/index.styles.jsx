@@ -1,4 +1,4 @@
-import { GEL_SPACING_DBL } from '#app/legacy/gel-foundations/src/spacings';
+import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 import styled from '@emotion/styled';
 
 const PromoItem = styled.li`

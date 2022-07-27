@@ -3,13 +3,13 @@ import styled from '@emotion/styled';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
-} from '#app/legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#app/legacy/gel-foundations/src/breakpoints';
+} from '#psammead/gel-foundations/src/breakpoints';
 import PromoList from '#components/OptimoPromos/PromoList';
 import PromoItem from '#components/OptimoPromos/PromoItem/index.styles';
 import { BORDER_SPACING } from '../constants';

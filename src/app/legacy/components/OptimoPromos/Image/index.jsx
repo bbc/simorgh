@@ -1,6 +1,6 @@
 import React from 'react';
 import { string, number } from 'prop-types';
-import ImageWithPlaceholder from '#app/containers/ImageWithPlaceholder';
+import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
 import StyledImage from './index.styles';
 
 const Image = ({ src, altText, srcset, fallbackSrcset, width, height }) => {

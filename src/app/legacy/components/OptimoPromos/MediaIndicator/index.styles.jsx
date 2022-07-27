@@ -1,4 +1,4 @@
-import { GEL_SPACING } from '#app/legacy/gel-foundations/src/spacings';
+import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import styled from '@emotion/styled';
 
 export const MediaIndicatorWrapper = styled.div`

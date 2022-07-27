@@ -3,8 +3,8 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { arrayOf, shape } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
 import pathOr from 'ramda/src/pathOr';
-import { C_GREY_2 } from '#app/legacy/psammead-styles/src/colours';
-import SectionLabel from '#legacy/psammead-section-label/src';
+import { C_GREY_2 } from '#psammead/psammead-styles/src/colours';
+import SectionLabel from '#psammead/psammead-section-label/src';
 import isEmpty from 'ramda/src/isEmpty';
 import {
   StyledTopStoriesSection,

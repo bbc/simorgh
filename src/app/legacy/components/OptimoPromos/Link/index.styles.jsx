@@ -1,4 +1,4 @@
-import { C_METAL, C_EBON } from '#app/legacy/psammead-styles/src/colours';
+import { C_METAL, C_EBON } from '#psammead/psammead-styles/src/colours';
 import styled from '@emotion/styled';
 
 const Link = styled.a`

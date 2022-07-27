@@ -4,7 +4,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import path from 'ramda/src/path';
 
 import Timestamp from '#components/Promo/timestamp';
-import LiveLabel from '#legacy/psammead-live-label/src';
+import LiveLabel from '#psammead/psammead-live-label/src';
 import useViewTracker from '#hooks/useViewTracker';
 
 import Title from './Title';
