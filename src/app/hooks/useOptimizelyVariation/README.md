@@ -1,4 +1,3 @@
-
 # useOptimizelyVariation hook
 
 The `useOptimizelyVariation` hook handles:
@@ -15,9 +14,8 @@ The `useOptimizelyVariation` hook handles:
 Here's an example of its usage:
 
 ```jsx
-import withOptimizelyProvider from '#app/containers/PageHandlers/withOptimizelyProvider';
+import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
-
 
 const ExamplePage = () => {
   const variation = useOptimizelyVariation('foo-experiment-id');
@@ -29,7 +27,7 @@ const ExamplePage = () => {
   }
 
   return <p>I am not a variation</p>;
-}
+};
 
 export default withOptimizelyProvider(ExamplePage);
 ```

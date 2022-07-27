@@ -6,16 +6,16 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
   GEL_SPACING,
-} from '#legacy/gel-foundations/src/spacings';
-import SectionLabel from '#legacy/psammead-section-label/src';
+} from '#psammead/gel-foundations/src/spacings';
+import SectionLabel from '#psammead/psammead-section-label/src';
 import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '#psammead/gel-foundations/src/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 
-import Grid, { GelPageGrid, GridItemLarge } from '#app/components/Grid';
+import Grid, { GelPageGrid, GridItemLarge } from '#components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';

@@ -3,7 +3,7 @@ import Cookie from 'js-cookie';
 import {
   setWindowValue,
   resetWindowValue,
-} from '#legacy/psammead-test-helpers/src';
+} from '#psammead/psammead-test-helpers/src';
 import onClient from '../utilities/onClient';
 
 let isOnClient = true;

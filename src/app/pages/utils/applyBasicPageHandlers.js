@@ -8,7 +8,7 @@ import withError from '#containers/PageHandlers/withError';
 import withLoading from '#containers/PageHandlers/withLoading';
 import withData from '#containers/PageHandlers/withData';
 import withVariant from '#containers/PageHandlers/withVariant';
-import withHashChangeHandler from '#app/containers/PageHandlers/withHashChangeHandler';
+import withHashChangeHandler from '#containers/PageHandlers/withHashChangeHandler';
 
 const defaultValue = { addVariantHandling: false };
 
