@@ -35,9 +35,16 @@ export const getProviderFromSource = source => {
 export const getIdFromSource = source => {
   const NO_ID = '';
   const provider = getProviderFromSource(source);
-  if (provider === PROVIDERS.TWITTER) {
-    const match = source.match(/\/status\/([0-9]+)/);
-    return match ? match[1] : NO_ID;
+  if (
+    provider === PROVIDERS.TWITTER ||
+    provider === PROVIDERS.YOUTUBE ||
+    provider === PROVIDERS.INSTAGRAM
+  ) {
+    const twitterId = source.match(/\/status\/([0-9]+)/);
+    const youtubeId = source.match(/\/watch\?v=([0-9 A-Z a-z _-]+)/);
+    const instagramId = source.match(/\/p\/([0-9 A-Z a-z]+)/);
+    const Id = twitterId || instagramId || youtubeId;
+    return Id ? Id[1] : NO_ID;
   }
   return NO_ID;
 };
