@@ -7,7 +7,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import fixture from '#data/igbo/frontpage';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import BulletinContainer from '.';
-import ampDecorator from '../../../../.storybook/helpers/ampDecorator';
+import ampDecorator from '../../../../../.storybook/helpers/ampDecorator';
 
 const bulletinFixture = type =>
   pathOr(null, ['content', 'groups'], fixture)

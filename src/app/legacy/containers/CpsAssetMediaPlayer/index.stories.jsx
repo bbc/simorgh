@@ -8,7 +8,7 @@ import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import CpsAssetMediaPlayerContainer from '.';
 import videoBlock from './fixtures';
-import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
+import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 
 const defaultToggles = {
   mediaPlayer: {

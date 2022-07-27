@@ -1,6 +1,6 @@
 import React from 'react';
 import InlineLinkContainer from '.';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 
 const fragmentBlock = (text, attributes = []) => ({
   id: 1,
