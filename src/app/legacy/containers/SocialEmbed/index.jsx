@@ -13,6 +13,8 @@ import { GridItemMedium } from '#components/Grid';
 import { socialEmbedBlockPropTypes } from '#models/propTypes/socialEmbed';
 import nodeLogger from '#lib/logger.node';
 import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
+import isLive from '#lib/utilities/isLive';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import createTranslations from './common/translations';
 import { LAZYLOAD_OFFSET, Wrapper } from './common/styles';
 import { getProviderFromSource, getIdFromSource } from './sourceHelpers';
@@ -20,15 +22,23 @@ import { getProviderFromSource, getIdFromSource } from './sourceHelpers';
 const logger = nodeLogger(__filename);
 
 const SocialEmbedContainer = ({ blocks, source }) => {
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp, pageType } = useContext(RequestContext);
   const { service, translations } = useContext(ServiceContext);
 
   if (!blocks || !source) return null;
-
+  const { model } = blocks[0];
   const provider = getProviderFromSource(source);
+
+  // TODO REMOVE TO GO LIVE
+  if (
+    isLive() &&
+    pageType === ARTICLE_PAGE &&
+    (provider === 'youtube' || provider === 'instagram')
+  )
+    return null;
+
   const id = getIdFromSource(source);
 
-  const { model } = blocks[0];
   const oEmbed = path(['blocks', 0, 'model', 'oembed'], model);
   const oEmbedIndexOfType = path(['indexOfType'], oEmbed);
   const oEmbedPosition = is(Number, oEmbedIndexOfType) && oEmbedIndexOfType + 1;

@@ -15,6 +15,7 @@ import {
   addIdsToBlocks,
   applyBlockPositioning,
   addIndexesToEmbeds,
+  addNoCookieToEmbeds,
 } from '../../utils/sharedDataTransformers';
 import isListWithLink from '../../utils/isListWithLink';
 import addIndexToBlockGroups from '../../utils/sharedDataTransformers/addIndexToBlockGroups';
@@ -29,6 +30,7 @@ const transformJson = pipe(
   handlePromoData,
   augmentWithTimestamp,
   addMpuBlock,
+  addNoCookieToEmbeds,
   addIdsToBlocks,
   applyBlockPositioning,
   addIndexesToEmbeds,
