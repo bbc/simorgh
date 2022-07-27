@@ -2,14 +2,14 @@ import React from 'react';
 import path from 'ramda/src/path';
 import styled from '@emotion/styled';
 
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#legacy/gel-foundations/src/breakpoints';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 
-import { C_GREY_2 } from '#legacy/psammead-styles/src/colours';
+import { C_GREY_2 } from '#psammead/psammead-styles/src/colours';
 
 import { articleDataPropTypes } from '#models/propTypes/article';
 

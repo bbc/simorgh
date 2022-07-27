@@ -3,10 +3,10 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import noAscendersOrDescenders from '#legacy/gel-foundations/src/scripts/no-ascenders-or-descenders';
-import { ukchina as brandSVG } from '#legacy/psammead-assets/src/svgs';
-import '#legacy/moment-timezone-include/tz/GMT';
+} from '#psammead/psammead-styles/src/colours';
+import noAscendersOrDescenders from '#psammead/gel-foundations/src/scripts/no-ascenders-or-descenders';
+import { ukchina as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import '#psammead/moment-timezone-include/tz/GMT';
 import 'moment/locale/zh-cn';
 import withContext from '../../../contexts/utils/withContext';
 
