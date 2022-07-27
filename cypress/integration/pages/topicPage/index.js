@@ -19,7 +19,6 @@ Object.keys(config)
         before(() => {
           Cypress.env('currentPath', currentPath);
 
-          // const newPath = `${currentPath}${overrideRendererOnTest()}`;
           const overrideSuffix = overrideRendererOnTest();
           const newPath = `${
             currentPath + overrideSuffix + (overrideSuffix ? '&' : '?')
