@@ -48,4 +48,24 @@ module.exports = {
       alias: eslintDirAlias,
     },
   },
+  overrides: [
+    {
+      files: ['**/*.{ts,tsx}'],
+      parser: '@typescript-eslint/parser',
+      extends: [
+        'plugin:react/recommended',
+        'plugin:@typescript-eslint/recommended',
+        'prettier/@typescript-eslint',
+        'plugin:prettier/recommended',
+      ],
+      rules: {
+        'react/jsx-filename-extension': [
+          2,
+          {
+            extensions: ['.jsx', '.tsx'],
+          },
+        ],
+      },
+    },
+  ],
 };
