@@ -2,7 +2,7 @@
 import React from 'react';
 import { boolean, withKnobs } from '@storybook/addon-knobs';
 import { CanonicalMediaPlayer, AmpMediaPlayer } from '.';
-import ampDecorator from '../../../../.storybook/helpers/ampDecorator';
+import ampDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import notes from './README.mdx';
 
 const withDuration = {

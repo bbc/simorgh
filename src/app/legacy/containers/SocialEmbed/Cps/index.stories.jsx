@@ -2,7 +2,7 @@ import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 
-import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
+import AmpDecorator from '../../../../../../.storybook/helpers/ampDecorator';
 import { cpsTwitterBlock, cpsTwitterBlockNoEmbed } from '../common/fixtures';
 import CpsSocialEmbedContainer from '.';
 

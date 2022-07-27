@@ -7,7 +7,7 @@ import arabicData from '#data/arabic/cpsAssets/media-49580542.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
-import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
+import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import CpsRelatedContent from '.';
 
 const newsRelatedContentData = newsData.relatedContent.groups[0].promos;

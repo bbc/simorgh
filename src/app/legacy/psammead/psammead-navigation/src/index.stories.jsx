@@ -13,7 +13,7 @@ import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import * as svgs from '#psammead/psammead-assets/src/svgs';
 import { C_WHITE } from '#psammead/psammead-styles/src/colours';
 import Brand from '#psammead/psammead-brand/src';
-import { ampDecorator } from '../../../../.storybook/preview';
+import { ampDecorator } from '../../../../../../.storybook/preview';
 import Navigation, { NavigationUl, NavigationLi } from './index';
 import {
   CanonicalMenuButton,

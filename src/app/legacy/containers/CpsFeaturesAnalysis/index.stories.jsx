@@ -5,7 +5,7 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import featuresRtl from './fixturesRtl.json';
 import features from './fixtures.json';
-import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
+import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import FeaturesAnalysis from '.';
 
 /* eslint-disable react/prop-types */
