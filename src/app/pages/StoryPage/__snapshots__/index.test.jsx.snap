@@ -2340,9 +2340,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                 <main
                   role="main"
                 >
-                  <span>
-                    Hellooooo I am TypeScript!
-                  </span>
                   <div
                     class="emotion-6 emotion-2"
                     dir="ltr"
@@ -5747,9 +5744,6 @@ exports[`Story Page should render correctly when the secondary column data is no
                 <main
                   role="main"
                 >
-                  <span>
-                    Hellooooo I am TypeScript!
-                  </span>
                   <div
                     class="emotion-6 emotion-2"
                     dir="ltr"
@@ -9173,9 +9167,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                 <main
                   role="main"
                 >
-                  <span>
-                    Hellooooo I am TypeScript!
-                  </span>
                   <div
                     class="emotion-6 emotion-2"
                     dir="ltr"
