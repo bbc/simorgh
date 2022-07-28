@@ -1452,7 +1452,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
       dataResponse: successDataResponse,
       isAmp: true,
     });
-    getMvtVaryHeaders.mockReturnValue('');
+    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
 
     const { header } = await makeRequest('/mundo/articles/c0000000001o');
 
