@@ -249,10 +249,10 @@ server.get(
           `https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${urlPath}`,
         );
 
-        const mvtVaryHeaders = !isAmp && getMvtVaryHeaders(mvtExperiments, service, derivedPageType);
+        const mvtVaryHeaders =
+          !isAmp && getMvtVaryHeaders(mvtExperiments, service, derivedPageType);
 
-        mvtVaryHeaders && console.log(mvtVaryHeaders);
-        // mvtVaryHeaders && res.set('vary', mvtVaryHeaders);
+        if (mvtVaryHeaders) res.set('vary', mvtVaryHeaders);
         res.status(status).send(result.html);
       } else {
         throw new Error('unknown result');
