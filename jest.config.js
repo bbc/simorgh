@@ -25,7 +25,6 @@ const unitTests = {
 };
 
 const ampIntegrationTests = {
-  preset: 'ts-jest',
   displayName: 'Integration Tests - AMP',
   testEnvironment: './src/integration/integrationTestEnvironment.js',
   testEnvironmentOptions: {
@@ -36,7 +35,6 @@ const ampIntegrationTests = {
 };
 
 const canonicalIntegrationTests = {
-  preset: 'ts-jest',
   displayName: 'Integration Tests - Canonical',
   testEnvironment: './src/integration/integrationTestEnvironment.js',
   testEnvironmentOptions: {
