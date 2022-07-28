@@ -1,5 +1,7 @@
 # Coding standards
 
+## Documentation index
+
 - [Code of conduct](https://github.com/bbc/simorgh/blob/latest/.github/CODE_OF_CONDUCT.md)
 - [Coding Standards](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/index.md)
 - [Contributing guidelines](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md)
