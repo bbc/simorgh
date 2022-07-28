@@ -370,7 +370,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         <CanonicalAdBootstrapJs adcampaign={adcampaign} />
       )}
       {isAdsEnabled && <AdContainer slotType="leaderboard" />}
-      <Text>Hellooooo I am TypeScript!</Text>
       <StoryPageGrid
         columns={gridColumns}
         enableGelGutters
@@ -383,6 +382,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           parentColumns={gridColumns}
         >
           <main role="main">
+            <Text>Hellooooo I am TypeScript!</Text>
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
             <OptimizelyArticleCompleteTracking />
           </main>
