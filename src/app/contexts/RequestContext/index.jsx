@@ -1,12 +1,13 @@
 import React from 'react';
 import { bool, node, oneOf, string, number } from 'prop-types';
 import * as pageTypes from '#app/routes/utils/pageTypes';
+import mvtExperimentPropType from '#models/propTypes/mvtExperiment';
+import variantPropType from '#models/propTypes/variants';
 import getStatsDestination from './getStatsDestination';
 import getStatsPageIdentifier from './getStatsPageIdentifier';
 import getOriginContext from './getOriginContext';
 import getEnv from './getEnv';
 import getMetaUrls from './getMetaUrls';
-import variantPropType from '../../models/propTypes/variants';
 
 export const RequestContext = React.createContext({});
 
@@ -78,6 +79,7 @@ RequestContextProvider.propTypes = {
   variant: variantPropType,
   timeOnServer: number,
   showAdsBasedOnLocation: bool,
+  mvtExperiments: mvtExperimentPropType,
 };
 
 RequestContextProvider.defaultProps = {
@@ -88,4 +90,5 @@ RequestContextProvider.defaultProps = {
   variant: null,
   timeOnServer: null,
   showAdsBasedOnLocation: false,
+  mvtExperiments: null,
 };
