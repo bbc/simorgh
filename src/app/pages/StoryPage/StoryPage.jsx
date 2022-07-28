@@ -162,10 +162,12 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     useContext(RequestContext);
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
 
-  const hasExperimentDataSaving = mvtExperiments.some(
-    ({ experimentName, variation }) =>
-      experimentName === 'simorgh_data_saving' && variation === 'saving',
-  );
+  const hasExperimentDataSaving =
+    mvtExperiments &&
+    mvtExperiments.some(
+      ({ experimentName, variation }) =>
+        experimentName === 'simorgh_data_saving' && variation === 'saving',
+    );
 
   if (hasExperimentDataSaving && service === 'pidgin') {
     const dataSavingMessage = `I thought I would save you some data by not showing you anything 😂 😭 (That is a lie, it didn't save you anything lol).`;
