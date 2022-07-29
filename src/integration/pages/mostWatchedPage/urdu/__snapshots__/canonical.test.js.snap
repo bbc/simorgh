@@ -293,7 +293,7 @@ exports[`Canonical Most Watched Page SEO OG url 1`] = `"http://localhost:7080/ur
 
 exports[`Canonical Most Watched Page SEO Page title 1`] = `"سب سے زیادہ دیکھی گئی - BBC News اردو"`;
 
-exports[`Canonical Most Watched Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Most Watched Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Most Watched Page SEO Twitter card 1`] = `"summary_large_image"`;
 

@@ -153,6 +153,26 @@ const externalLinks = {
           'https://www.saavn.com/s/show/ड्रामा-क्वीन-drama-queen/1/dZOptt08D4A_',
       },
     ],
+    p0clc83k: [
+      {
+        linkText: 'Spotify',
+        linkUrl: 'https://open.spotify.com/show/0sgucaqSDSOg30tyDdq960',
+      },
+      {
+        linkText: 'Apple Podcasts',
+        linkUrl:
+          'https://podcasts.apple.com/gb/podcast/%E0%A4%AC-%E0%A4%A4-%E0%A4%B8%E0%A4%B0%E0%A4%B9%E0%A4%A6-%E0%A4%AA-%E0%A4%B0/id1634185584',
+      },
+      {
+        linkText: 'Jio Saavn',
+        linkUrl:
+          'https://www.jiosaavn.com/shows/%E0%A4%AC%E0%A4%BE%E0%A4%A4-%E0%A4%B8%E0%A4%B0%E0%A4%B9%E0%A4%A6-%E0%A4%AA%E0%A4%BE%E0%A4%B0/1/BzW104mU9GQ_',
+      },
+      {
+        linkText: 'Gaana',
+        linkUrl: 'https://gaana.com/podcast/-season-1-2022-159',
+      },
+    ],
   },
 };
 
