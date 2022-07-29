@@ -19,12 +19,12 @@ Instead, you can use logical CSS properties for bi-drectional horizontal rules, 
 ✅
 
 ```js
-    padding-inline-start: ${GEL_SPACING};
+padding-inline-start: ${GEL_SPACING};
 ```
 
 To better understand this, using `padding-inline-start` we are saying, not that we want some padding on the left of content, but that we want some padding at the start of the content, regardless of reading direction.
 
-## Use properties like `grid-gap` \*\*for spacings between elements
+## Use properties like `grid-gap` for spacings between elements
 
 For correct bi-directional spacing between elements, use properties like `grid-gap` rather than margins or paddings. Properties like `grid-gap` are better suited to bi-directional layouts.
 
@@ -95,16 +95,16 @@ Using the media queries provided in the `theme` object means our breakpoints wil
 
 ### How?
 
-```js
 ❌
 
-    const StyledWrapper = styled.div`
-      padding: ${({ theme }) => theme.spacings.HLF};
+```js
+const StyledWrapper = styled.div`
+  padding: ${({ theme }) => theme.spacings.HLF};
 
-      @media (min-width: 40rem) { {
-        padding: ${({ theme }) => theme.spacings.FULL};
-      }
-    `;
+  @media (min-width: 40rem) { {
+    padding: ${({ theme }) => theme.spacings.FULL};
+  }
+`;
 ```
 
 ✅
@@ -131,6 +131,7 @@ method than it is to keep reusable styles in functions or variables.
 By extending a styled component with `styled`, Emotion shares the CSS class name from the extended component and creates a new CSS class name for the new styles.
 
 For example:
+
 ✅
 
 ```js
@@ -181,15 +182,15 @@ Previously, we’ve done something different with shared typography styles which
 
 ```js
 const getSansRegular = () => `
-      font-size: 0.9375rem;
-      line-height: 1.25rem;
-      font-family: ReithSans, Helvetica, Arial, sans-serif;
-      font-weight: 400;
-      font-style: normal;
-      color: rgb(63, 63, 66);
-      padding-bottom: 1.5rem;
-      margin: 0px;
-    `;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(63, 63, 66);
+  padding-bottom: 1.5rem;
+  margin: 0px;
+`;
 
 const Paragraph = styled.p`
   ${getSansRegular()}
@@ -245,14 +246,14 @@ Each time you render a component with a different style prop, Emotion generates 
 ❌
 
 ```js
-    const Logo = styled.div`
-      background: some-huge-base64-string;
-      height: ${({ height }) => height}px;
-    `
+const Logo = styled.div`
+  background: some-huge-base64-string;
+  height: ${({ height }) => height}px;
+`
 
-    <Logo height={100} />
-    <Logo height={200} />
-    <Logo height={300} />
+<Logo height={100} />
+<Logo height={200} />
+<Logo height={300} />
 ```
 
 We should avoid cases like this and generally try to reduce our use of props for styling a component if it will be invoked multiple times on a page with different props.
@@ -265,7 +266,7 @@ Where CSS Grid is used Opera Mini just fall back to the default inline layout so
 
 ![](https://paper-attachments.dropbox.com/s_2A43B8E3F9C1F972929EDC9878EAFF3FE87CC9300DB1C147F888F337C763ADF5_1657696680147_Screen+Shot+2022-07-05+at+09.57.12.png)
 
-Will be become:
+Will become:
 
 ![](https://paper-attachments.dropbox.com/s_2A43B8E3F9C1F972929EDC9878EAFF3FE87CC9300DB1C147F888F337C763ADF5_1657696708114_Screen+Shot+2022-07-05+at+10.00.49.png)
 

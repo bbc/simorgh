@@ -2,14 +2,10 @@
 
 ## Name things consistently
 
-### Why?
-
 By enforcing a convention and naming things consistently, we accomplish two things: discoverability and understanding.
 
 1. Discoverability: How quickly can someone find a folder, file, component or function they need to change?
 2. Understanding: How fast can someone look at our code and understand what it is they're looking at?
-
-### How?
 
 #### Use PascalCase when naming a component.
 
@@ -90,15 +86,15 @@ const RadioSchedule = () => <div />;
 [**❌**](https://emojipedia.org/cross-mark/)
 
 ```jsx
-TopicPromo / index.js; // the component filename
-TopicPromo / TopicPromoTest.js; // the component test filename
+TopicPromo; // index.js; // the component filename
+TopicPromo; // TopicPromoTest.js; // the component test filename
 ```
 
 ✅
 
 ```jsx
-TopicPromo / index.js; // the component filename
-TopicPromo / index.test.js; // the component test filename
+TopicPromo; // index.js; // the component filename
+TopicPromo; // index.test.js; // the component test filename
 ```
 
 #### Component and component test filenames should use the `.jsx` file extension. This makes it easier to identify which files in the codebase are components.
@@ -106,15 +102,15 @@ TopicPromo / index.test.js; // the component test filename
 ❌
 
 ```jsx
-TopicPromo / index.js;
-TopicPromo / index.test.js;
+TopicPromo; // index.js;
+TopicPromo; // index.test.js;
 ```
 
 ✅
 
 ```jsx
-TopicPromo / index.jsx;
-TopicPromo / index.test.jsx;
+TopicPromo; // index.jsx;
+TopicPromo; // index.test.jsx;
 ```
 
 #### Use camelCase when naming variables, functions and methods.

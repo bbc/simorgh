@@ -1,13 +1,5 @@
 # Coding standards: Clean code
 
-### Resources
-
-- https://betterprogramming.pub/12-conventions-for-writing-clean-code-e16c51e3939a
-
-- https://x-team.com/blog/principles-clean-code/
-
-- https://www.goodreads.com/book/show/8677004-the-art-of-readable-code
-
 ## Place code as close to where it's relevant as possible (Colocation)
 
 ### Why?
@@ -18,7 +10,7 @@ This principle improves codebase maintainability by ensuring that when we delete
 
 Variables and functions should be declared close to their usage. A component’s child components, styles, hooks, utilities and tests should be kept together in the component’s directory unless they are used by more than one component.
 
-#### Even if you think something could be shared in the future, it is still recommended to #### colocate until it can be used in more than one place.
+#### Even if you think something could be shared in the future, it is still recommended to colocate until it can be used in more than one place.
 
 ### Resources
 
@@ -39,6 +31,7 @@ Follow these guidelines to help you decide when to comment code and when to take
 #### Always try to explain yourself in code
 
 TODO
+
 ❌
 
 ```js
@@ -224,16 +217,16 @@ createMenu('Foo', 'Bar', 'Baz', true);
 ✅
 
 ```js
-    function createMenu({ title, body, buttonText, cancellable }) {
-      // ...
-    }
+function createMenu({ title, body, buttonText, cancellable }) {
+  // ...
+}
 
-    createMenu({
-      cancellable: true
-      buttonText: "Baz",
-      body: "Bar",
-      title: "Foo",
-    });
+createMenu({
+  cancellable: true
+  buttonText: "Baz",
+  body: "Bar",
+  title: "Foo",
+});
 ```
 
 #### Avoid flag arguments
@@ -322,3 +315,8 @@ There are many ways to make your code more readable. Two examples are placing co
 #### Scout rule
 
 The scout rule is “Always leave the campground cleaner than you found it”. There are many ways to apply the scout rule to code, it doesn’t have to be something big. You can rename a variable to a more meaningful name, get rid of a small duplication or break up a long function. Small changes over a long time can make a big difference.
+
+#### Resources
+
+- https://x-team.com/blog/principles-clean-code/
+- https://www.goodreads.com/book/show/8677004-the-art-of-readable-code

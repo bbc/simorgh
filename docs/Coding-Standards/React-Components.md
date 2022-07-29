@@ -80,51 +80,56 @@ It’s easier to reuse components without spacings e.g. margins and restricted b
 Ensure the component does not contain any spacing styles around the component and that the component itself can fill the width of any container.
 
 The spacing and width of component should be determined by the parent element (or container element) of the component. In this example the container is a grid:
+
 ❌
 
-    const StyledPromosContainer = styled.div`
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 0.5rem;
-    `
+```jsx
+const StyledPromosContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5rem;
+`;
 
-    const StyledPromo = styled.div`
-      margin: 1rem; // spacing around component
-      width: 300px; // restricted width
-      background-color: #f5f5f5;
-    `
+const StyledPromo = styled.div`
+  margin: 1rem; // spacing around component
+  width: 300px; // restricted width
+  background-color: #f5f5f5;
+`;
 
-    const Main = () => (
-      <main>
-        <StyledPromosContainer>
-          <StyledPromo style={{ width: '100%', margin: 0 }} />
-          <StyledPromo style={{ width: '100%', margin: 0 }} />
-          <StyledPromo style={{ width: '100%', margin: 0 }} />
-         </StyledPromosContainer>
-      </main>
-    )
+const Main = () => (
+  <main>
+    <StyledPromosContainer>
+      <StyledPromo style={{ width: '100%', margin: 0 }} />
+      <StyledPromo style={{ width: '100%', margin: 0 }} />
+      <StyledPromo style={{ width: '100%', margin: 0 }} />
+    </StyledPromosContainer>
+  </main>
+);
+```
 
 ✅
 
-    const StyledPromosContainer = styled.div`
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 1rem;
-    `
+```jsx
+const StyledPromosContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+`;
 
-    const StyledPromo = styled.div`
-      background-color: #f5f5f5;
-    `
+const StyledPromo = styled.div`
+  background-color: #f5f5f5;
+`;
 
-    const Main = () => (
-      <main>
-        <StyledPromosContainer>
-          <StyledPromo />
-          <StyledPromo />
-          <StyledPromo />
-         </StyledPromosContainer>
-      </main>
-    )
+const Main = () => (
+  <main>
+    <StyledPromosContainer>
+      <StyledPromo />
+      <StyledPromo />
+      <StyledPromo />
+    </StyledPromosContainer>
+  </main>
+);
+```
 
 ## Keep styled components in a separate file
 
@@ -164,14 +169,14 @@ const Page = () => (
 ✅
 
 ```jsx
-    const { StyledWrapper, StyledMain, StyledSupplementaryContent } from './index.styled'
+const { StyledWrapper, StyledMain, StyledSupplementaryContent } from './index.styled'
 
-    const Page = () => (
-      <StyledWrapper>
-        <StyledMain />
-        <StyledSupplementaryContent />
-      </StyledWrapper>
-    )
+const Page = () => (
+  <StyledWrapper>
+    <StyledMain />
+    <StyledSupplementaryContent />
+  </StyledWrapper>
+)
 ```
 
 ## Primitive Components, Compound Components and Complex Components
