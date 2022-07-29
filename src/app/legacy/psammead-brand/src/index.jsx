@@ -92,7 +92,7 @@ const BrandSvg = styled.svg`
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    height: ${32 / 16}rem;
+    height: ${30 / 16}rem;
   }
 
   @media screen and (-ms-high-contrast: active), print {
@@ -162,7 +162,6 @@ const brandProps = {
   linkId: string.isRequired,
   product: string.isRequired,
   serviceLocalisedName: string,
-  svgHeight: number.isRequired,
   svg: shape({
     group: node.isRequired,
     ratio: number.isRequired,
