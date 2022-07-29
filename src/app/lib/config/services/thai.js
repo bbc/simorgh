@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import thai from '#legacy/gel-foundations/src/scripts/thai';
+} from '#psammead/psammead-styles/src/colours';
+import thai from '#psammead/gel-foundations/src/scripts/thai';
 import brandSVG from '#lib/chameleonLogos/thai';
-import '#legacy/moment-timezone-include/tz/Asia/Bangkok';
-import '#legacy/psammead-locales/moment/th';
+import '#psammead/moment-timezone-include/tz/Asia/Bangkok';
+import '#psammead/psammead-locales/moment/th';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

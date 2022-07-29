@@ -1,5 +1,5 @@
 import React from 'react';
-import { withServicesKnob } from '#legacy/psammead-storybook-helpers/src';
+import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { withKnobs } from '@storybook/addon-knobs';
 import { MemoryRouter } from 'react-router';
 

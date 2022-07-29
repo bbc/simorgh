@@ -3,15 +3,15 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import bengali from '#legacy/gel-foundations/src/scripts/bengali';
+} from '#psammead/psammead-styles/src/colours';
+import bengali from '#psammead/gel-foundations/src/scripts/bengali';
 import brandSVG from '#lib/chameleonLogos/bangla';
 import {
   F_NOTO_SERIF_BENGALI_BOLD,
   F_NOTO_SERIF_BENGALI_REGULAR,
-} from '#legacy/psammead-styles/src/fonts';
-import '#legacy/moment-timezone-include/tz/Asia/Dhaka';
-import '#legacy/psammead-locales/moment/bn';
+} from '#psammead/psammead-styles/src/fonts';
+import '#psammead/moment-timezone-include/tz/Asia/Dhaka';
+import '#psammead/psammead-locales/moment/bn';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

@@ -3,16 +3,16 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
+} from '#psammead/psammead-styles/src/colours';
 import brandSVG from '#lib/chameleonLogos/persian';
-import arabic from '#legacy/gel-foundations/src/scripts/arabic';
+import arabic from '#psammead/gel-foundations/src/scripts/arabic';
 import {
   F_REITH_QALAM_REGULAR,
   F_REITH_QALAM_BOLD,
-} from '#legacy/psammead-styles/src/fonts';
+} from '#psammead/psammead-styles/src/fonts';
 import 'moment/locale/fa';
-import '#legacy/moment-timezone-include/tz/GMT';
-import jalaali from '#legacy/psammead-calendars/src';
+import '#psammead/moment-timezone-include/tz/GMT';
+import jalaali from '#psammead/psammead-calendars/src';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

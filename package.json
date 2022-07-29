@@ -4,8 +4,8 @@
   "description": "Simorgh",
   "main": "./src/client.js",
   "sideEffects": [
-    "./src/app/legacy/moment-timezone-include/**/*.*",
-    "./src/app/legacy/psammead-locales/**/*.*",
+    "./src/app/legacy/psammead/moment-timezone-include/**/*.*",
+    "./src/app/legacy/psammead/psammead-locales/**/*.*",
     "./cypress/**/*.*"
   ],
   "resolutions": {
@@ -33,7 +33,8 @@
     "trim": "1.0.1",
     "minimist": "1.2.6",
     "async": "3.2.3",
-    "terser": "5.14.2"
+    "terser": "5.14.2",
+    "moment": "2.29.4"
   },
   "scripts": {
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
@@ -119,7 +120,7 @@
     "json5": "^2.1.3",
     "lru-cache": "6.0.0",
     "mkdirp": "1.0.0",
-    "moment": "^2.29.4",
+    "moment": "2.29.4",
     "moment-timezone": "0.5.26",
     "morgan": "1.10.0",
     "path-to-regexp": "6.2.0",
