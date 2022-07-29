@@ -196,6 +196,7 @@ const directives = {
       'https://syndication.twitter.com', // Social Embeds
       'https://platform.twitter.com', // Social Embeds
       'https://pbs.twimg.com', // Social Embeds
+      'https://*.cdninstagram.com', // Social Embeds
       'https://i.ytimg.com', // Social Embeds
       'https://ton.twimg.com', // Social Embeds
       ...advertisingDirectives.imgSrc,
@@ -222,6 +223,7 @@ const directives = {
       'https://syndication.twitter.com', // Social Embeds
       'https://platform.twitter.com', // Social Embeds
       'https://pbs.twimg.com', // Social Embeds
+      'https://*.cdninstagram.com', // Social Embeds
       'https://i.ytimg.com', // Social Embeds
       'https://ton.twimg.com', // Social Embeds
       ...advertisingDirectives.imgSrc,

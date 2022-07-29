@@ -9,7 +9,11 @@ module.exports = {
   core: {
     builder: 'webpack5',
   },
-  stories: ['../src/app/!(legacy)/**/*.stories.jsx'],
+  stories: [
+    '../src/app/legacy/components/**/*.stories.jsx',
+    '../src/app/legacy/containers/**/*.stories.jsx',
+    '../src/app/pages/**/*.stories.jsx',
+  ],
   addons: [
     '@storybook/addon-knobs',
     '@storybook/addon-a11y',
