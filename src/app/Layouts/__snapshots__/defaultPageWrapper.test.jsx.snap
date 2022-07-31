@@ -249,7 +249,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 
 .emotion-19 {
   background-color: #B80000;
-  height: 44px;
+  height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
   position: relative;
@@ -258,14 +258,14 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 
 @media (min-width: 25rem) {
   .emotion-19 {
-    height: 56px;
+    height: 3.5rem;
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-19 {
-    height: 64px;
+    height: 4rem;
   }
 }
 
@@ -345,7 +345,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 
 @media (min-width: 37.5rem) {
   .emotion-25 {
-    height: 2rem;
+    height: 1.875rem;
   }
 }
 
@@ -767,7 +767,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 
 .emotion-144 {
   background-color: #B80000;
-  height: 44px;
+  height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
   border-top: 0.0625rem solid transparent;
@@ -777,14 +777,14 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 
 @media (min-width: 25rem) {
   .emotion-144 {
-    height: 56px;
+    height: 3.5rem;
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-144 {
-    height: 64px;
+    height: 4rem;
   }
 }
 
@@ -1057,6 +1057,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
               aria-hidden="true"
               class="emotion-25 emotion-26"
               focusable="false"
+              height="32"
               viewBox="0 0 980 142"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -1485,6 +1486,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
               aria-hidden="true"
               class="emotion-25 emotion-26"
               focusable="false"
+              height="32"
               viewBox="0 0 980 142"
               xmlns="http://www.w3.org/2000/svg"
             >

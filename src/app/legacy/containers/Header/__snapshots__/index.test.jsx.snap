@@ -234,7 +234,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
 
 .emotion-17 {
   background-color: #B80000;
-  height: 44px;
+  height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
   position: relative;
@@ -243,14 +243,14 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
 
 @media (min-width: 25rem) {
   .emotion-17 {
-    height: 56px;
+    height: 3.5rem;
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-17 {
-    height: 64px;
+    height: 4rem;
   }
 }
 
@@ -330,7 +330,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
 
 @media (min-width: 37.5rem) {
   .emotion-23 {
-    height: 2rem;
+    height: 1.875rem;
   }
 }
 
@@ -789,6 +789,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
             aria-hidden="true"
             class="emotion-23 emotion-24"
             focusable="false"
+            height="32"
             viewBox="140 140 1395 145"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -1357,7 +1358,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 
 .emotion-17 {
   background-color: #B80000;
-  height: 44px;
+  height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
   position: relative;
@@ -1366,14 +1367,14 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 
 @media (min-width: 25rem) {
   .emotion-17 {
-    height: 56px;
+    height: 3.5rem;
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-17 {
-    height: 64px;
+    height: 4rem;
   }
 }
 
@@ -1453,7 +1454,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 
 @media (min-width: 37.5rem) {
   .emotion-23 {
-    height: 2rem;
+    height: 1.875rem;
   }
 }
 
@@ -1912,6 +1913,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
             aria-hidden="true"
             class="emotion-23 emotion-24"
             focusable="false"
+            height="32"
             viewBox="140 140 1395 145"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -2480,7 +2482,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 
 .emotion-17 {
   background-color: #B80000;
-  height: 44px;
+  height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
   position: relative;
@@ -2489,14 +2491,14 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 
 @media (min-width: 25rem) {
   .emotion-17 {
-    height: 56px;
+    height: 3.5rem;
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-17 {
-    height: 64px;
+    height: 4rem;
   }
 }
 
@@ -2576,7 +2578,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 
 @media (min-width: 37.5rem) {
   .emotion-23 {
-    height: 2rem;
+    height: 1.875rem;
   }
 }
 
@@ -3035,6 +3037,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
             aria-hidden="true"
             class="emotion-23 emotion-24"
             focusable="false"
+            height="32"
             viewBox="140 140 1395 145"
             xmlns="http://www.w3.org/2000/svg"
           >

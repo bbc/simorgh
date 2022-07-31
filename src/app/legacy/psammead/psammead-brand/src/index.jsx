@@ -36,17 +36,17 @@ const SvgWrapper = styled.div`
 
 const Banner = styled.div`
   background-color: ${props => props.backgroundColour};
-  height: 44px;
+  height: ${44 / 16}rem;
   width: 100%;
   padding: 0 ${GEL_SPACING};
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    height: 56px;
+    height: ${56 / 16}rem;
     padding: 0 ${GEL_SPACING_DBL};
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    height: 64px;
+    height: ${64 / 16}rem;
   }
 
   @media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
@@ -145,6 +145,7 @@ const StyledBrand = ({
           focusable="false"
           aria-hidden="true"
           logoColour={logoColour}
+          height="32"
         >
           {svg.group}
         </BrandSvg>

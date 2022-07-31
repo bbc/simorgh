@@ -32,7 +32,7 @@ exports[`FooterContainer should render correctly 1`] = `
 
 .emotion-3 {
   background-color: #B80000;
-  height: 44px;
+  height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
   border-top: 0.0625rem solid transparent;
@@ -42,14 +42,14 @@ exports[`FooterContainer should render correctly 1`] = `
 
 @media (min-width: 25rem) {
   .emotion-3 {
-    height: 56px;
+    height: 3.5rem;
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-3 {
-    height: 64px;
+    height: 4rem;
   }
 }
 
@@ -129,7 +129,7 @@ exports[`FooterContainer should render correctly 1`] = `
 
 @media (min-width: 37.5rem) {
   .emotion-9 {
-    height: 2rem;
+    height: 1.875rem;
   }
 }
 
@@ -318,6 +318,7 @@ exports[`FooterContainer should render correctly 1`] = `
             aria-hidden="true"
             class="emotion-9 emotion-10"
             focusable="false"
+            height="32"
             viewBox="0 0 167.95 24"
             xmlns="http://www.w3.org/2000/svg"
           >

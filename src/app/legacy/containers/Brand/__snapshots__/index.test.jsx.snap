@@ -3,7 +3,7 @@
 exports[`BrandContainer should render correctly 1`] = `
 .emotion-1 {
   background-color: #B80000;
-  height: 44px;
+  height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
   position: relative;
@@ -12,14 +12,14 @@ exports[`BrandContainer should render correctly 1`] = `
 
 @media (min-width: 25rem) {
   .emotion-1 {
-    height: 56px;
+    height: 3.5rem;
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-1 {
-    height: 64px;
+    height: 4rem;
   }
 }
 
@@ -99,7 +99,7 @@ exports[`BrandContainer should render correctly 1`] = `
 
 @media (min-width: 37.5rem) {
   .emotion-7 {
-    height: 2rem;
+    height: 1.875rem;
   }
 }
 
@@ -136,6 +136,7 @@ exports[`BrandContainer should render correctly 1`] = `
           aria-hidden="true"
           class="emotion-7 emotion-8"
           focusable="false"
+          height="32"
           viewBox="0 0 153.2569 22.19"
           xmlns="http://www.w3.org/2000/svg"
         >
