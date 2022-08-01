@@ -1,5 +1,18 @@
 import getMvtExperiments from '.';
 
+jest.mock('../enabledExperimentsList', () => [
+  {
+    name: 'simorgh_dark_mode',
+    services: ['pidgin', 'mundo'],
+    pageTypes: ['STY', 'IDX'],
+  },
+  {
+    name: 'simorgh_data_saving',
+    services: ['pidgin'],
+    pageTypes: ['STY', 'IDX'],
+  },
+]);
+
 const mockHeadersNoMvt = {
   host: 'localhost:7080',
   connection: 'keep-alive',
@@ -24,30 +37,34 @@ describe('getMvtExperiments', () => {
     expect(getMvtExperiments(mockHeadersNoMvt)).toEqual([]);
   });
 
-  it('should return an array of a single experiment object when a single mvt header is in the reponse', () => {
+  it('should return an array of a single experiment object when a single mvt header is in the response', () => {
     expect(getMvtExperiments(mockHeadersSingleMvt)).toEqual([
       {
         experimentName: 'simorgh_dark_mode',
         type: 'experiment',
         variation: 'control',
+        enabled: false,
       },
     ]);
   });
 
-  it('should return an array of multiple experiment objects when multiple mvt headers are in the reponse', () => {
+  it('should return an array of multiple experiment objects when multiple mvt headers are in the response', () => {
     expect(getMvtExperiments(mockHeadersMultipleMvt)).toEqual([
       {
         experimentName: 'simorgh_dark_mode',
         type: 'experiment',
         variation: 'control',
+        enabled: false,
       },
       {
         experimentName: 'simorgh_data_saving',
         variation: 'saving',
+        enabled: false,
       },
       {
         experimentName: 'simorgh_new_recs',
         variation: 'new',
+        enabled: false,
       },
     ]);
   });
@@ -56,7 +73,7 @@ describe('getMvtExperiments', () => {
     expect(getMvtExperiments(mockHeadersMultipleMvt)[0]).toHaveProperty('type');
   });
 
-  it('should should not a type key when a string is present with no ; delimeter', () => {
+  it('should should not create a type key when a string is present with no ; delimeter', () => {
     expect(getMvtExperiments(mockHeadersMultipleMvt)[1]).not.toHaveProperty(
       'type',
     );
@@ -67,5 +84,29 @@ describe('getMvtExperiments', () => {
       'experimentName',
       'simorgh_dark_mode',
     );
+  });
+
+  it('should return an experiment object with the enabled key set to true if the experiment is in the enabled list and matches the correct pageType and service', () => {
+    expect(
+      getMvtExperiments(mockHeadersSingleMvt, 'mundo', 'STY')[0],
+    ).toHaveProperty('enabled', true);
+  });
+
+  it('should return an experiment object with the enabled key set to false, if experiment is in the enabled list, and matches the correct pageType but does not match service', () => {
+    expect(
+      getMvtExperiments(mockHeadersSingleMvt, 'afrique', 'STY')[0],
+    ).toHaveProperty('enabled', false);
+  });
+
+  it('should return an experiment object with the enabled key set to false, if experiment is in the enabled list, and matches the correct service but does not match pageType', () => {
+    expect(
+      getMvtExperiments(mockHeadersSingleMvt, 'mundo', 'PGL')[0],
+    ).toHaveProperty('enabled', false);
+  });
+
+  it('should return an experiment object with the enabled key set to false, if the experiment is not in the enabled list', () => {
+    expect(
+      getMvtExperiments(mockHeadersMultipleMvt, 'afrique', 'STY')[2],
+    ).toHaveProperty('enabled', false);
   });
 });

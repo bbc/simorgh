@@ -149,6 +149,7 @@ server.get(
     });
 
     let derivedPageType = 'Unknown';
+    let mvtExperiments = [];
 
     try {
       const {
@@ -174,18 +175,22 @@ server.get(
         getAgent,
       });
 
-      const mvtExperiments = getMvtExperiments(headersTest);
-
       data.toggles = toggles;
       data.path = urlPath;
       data.timeOnServer = Date.now();
       data.showAdsBasedOnLocation = headersTest['bbc-adverts'] === 'true';
-      data.mvtExperiments = mvtExperiments;
 
       let { status } = data;
       // Set derivedPageType based on returned page data
       if (status === OK) {
         derivedPageType = ramdaPath(['pageData', 'metadata', 'type'], data);
+
+        mvtExperiments = getMvtExperiments(
+          headersTest,
+          service,
+          derivedPageType,
+        );
+        data.mvtExperiments = mvtExperiments;
       } else {
         sendCustomMetric({
           metricName: NON_200_RESPONSE,
@@ -249,8 +254,7 @@ server.get(
           `https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${urlPath}`,
         );
 
-        const mvtVaryHeaders =
-          !isAmp && getMvtVaryHeaders(mvtExperiments, service, derivedPageType);
+        const mvtVaryHeaders = !isAmp && getMvtVaryHeaders(mvtExperiments);
 
         if (mvtVaryHeaders) res.set('vary', mvtVaryHeaders);
         res.status(status).send(result.html);

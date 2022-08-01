@@ -167,11 +167,13 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const hasFullStackExperiment =
     mvtExperiments &&
     mvtExperiments.some(
-      ({ experimentName, variation }) =>
-        experimentName === 'full_stack_test' && variation === 'Control_1',
+      ({ experimentName, variation, enabled }) =>
+        experimentName === 'full_stack_test' &&
+        variation === 'Control_1' &&
+        enabled,
     );
 
-  if (hasFullStackExperiment && service === 'pidgin') {
+  if (hasFullStackExperiment) {
     activateExperiment(optimizely, 'full_stack_test', 'Control_1');
     const fullStackMessage = `I am the Full Stack Experiment`;
     return <h1>{fullStackMessage}</h1>;

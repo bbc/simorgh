@@ -5,7 +5,7 @@ const enabledExperimentList = [
     pageTypes: ['STY', 'IDX'],
   },
   {
-    name: 'simorgh_data_saving',
+    name: 'full_stack_test',
     services: ['pidgin'],
     pageTypes: ['STY', 'IDX'],
   },

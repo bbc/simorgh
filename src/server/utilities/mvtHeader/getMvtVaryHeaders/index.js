@@ -1,17 +1,10 @@
-import enabledExperimentList from '../enabledExperimentsList';
-
-const getMvtVaryHeaders = (mvtExperiments, service, derivedPageType) => {
-  return enabledExperimentList
+const getMvtVaryHeaders = mvtExperiments => {
+  return mvtExperiments
     .reduce((headerNames, experiment) => {
-      const { name, services, pageTypes } = experiment;
+      const { experimentName, enabled } = experiment;
 
-      const isMvtExperimentEnabled =
-        mvtExperiments.some(({ experimentName }) => experimentName === name) &&
-        services.includes(service) &&
-        pageTypes.includes(derivedPageType);
-
-      if (isMvtExperimentEnabled) {
-        return `${headerNames}mvt-${name}, `;
+      if (enabled) {
+        return `${headerNames}mvt-${experimentName}, `;
       }
       return headerNames;
     }, '')
