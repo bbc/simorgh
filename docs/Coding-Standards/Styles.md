@@ -1,5 +1,11 @@
 # Coding standards: Styles
 
+## Use Emotion best practices
+
+We use a library called [Emotion](https://emotion.sh/docs/introduction) for writing css styles with JavaScript. It builds on many other CSS-in-JS libraries such as [Styled Components](https://styled-components.com/). It has many benefits such as predictable composition to avoid specificity issues with CSS, abstractions for rendering critical CSS and the ability to colocate styles with components.
+
+It is recommended to look over [Emotion's best practices](https://emotion.sh/docs/best-practices) for recommendations on how to best use this library.
+
 ## LTR/RTL design
 
 ### When using margins, paddings, borders, use logical CSS properties
@@ -87,7 +93,7 @@ A mobile-first approach to styling means that styles are applied first to mobile
 
 - https://zellwk.com/blog/how-to-write-mobile-first-css/
 
-# Responsive styles: Use media queries provided in the `theme` object
+## Responsive styles: Use media queries provided in the `theme` object
 
 ### Why?
 
