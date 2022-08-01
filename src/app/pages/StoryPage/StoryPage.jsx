@@ -56,8 +56,9 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
-import { OptimizelyExperiment } from '@optimizely/react-sdk';
+import { OptimizelyExperiment, OptimizelyContext } from '@optimizely/react-sdk';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
+import activateExperiment from '#lib/utilities/activateExperiment';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 
@@ -160,18 +161,20 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
   const { isAmp, showAdsBasedOnLocation, mvtExperiments } =
     useContext(RequestContext);
+  const { optimizely } = useContext(OptimizelyContext);
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
 
-  const hasExperimentDataSaving =
+  const hasFullStackExperiment =
     mvtExperiments &&
     mvtExperiments.some(
       ({ experimentName, variation }) =>
-        experimentName === 'simorgh_data_saving' && variation === 'saving',
+        experimentName === 'full_stack_test' && variation === 'Control_1',
     );
 
-  if (hasExperimentDataSaving && service === 'pidgin') {
-    const dataSavingMessage = `I thought I would save you some data by not showing you anything 😂 😭 (That is a lie, it didn't save you anything lol).`;
-    return <h1>{dataSavingMessage}</h1>;
+  if (hasFullStackExperiment && service === 'pidgin') {
+    activateExperiment(optimizely, 'full_stack_test', 'Control_1');
+    const fullStackMessage = `I am the Full Stack Experiment`;
+    return <h1>{fullStackMessage}</h1>;
   }
   /**
    * Should we display ads? We check:

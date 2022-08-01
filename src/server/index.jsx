@@ -140,7 +140,7 @@ server.get(
       ...headers,
       ...{
         'mvt-simorgh_dark_mode': 'experiment;control',
-        'mvt-simorgh_data_saving': 'saving',
+        'mvt-full_stack_test': 'feature;Control_1',
       },
     };
     logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
