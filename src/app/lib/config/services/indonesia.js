@@ -289,7 +289,11 @@ export const service = {
       durationLabel: 'Durasi %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      hasStoryRecommendations: true,
+      skipLink: {
+        text: 'Lewatkan %title% dan terus membaca',
+        endTextVisuallyHidden: 'Akhir dari %title%',
+      },
     },
     footer: {
       trustProjectLink: {
