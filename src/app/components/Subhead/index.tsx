@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { string } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
 import { C_GREY_10 } from '#psammead/psammead-styles/src/colours';
@@ -9,6 +8,11 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
+
+
+interface Props {
+    children: string
+  };
 
 const H1 = styled.h1`
   ${({ service }) => getSansBold(service)}
@@ -31,7 +35,7 @@ const H1 = styled.h1`
   }
 `;
 
-const Subhead = ({ children }) => {
+const Subhead = ({ children }: Props) => {
   const { script, service } = useContext(ServiceContext);
   return (
     <H1 service={service} script={script} id="content" tabIndex="-1">
@@ -40,8 +44,6 @@ const Subhead = ({ children }) => {
   );
 };
 
-Subhead.propTypes = {
-  children: string.isRequired,
-};
+
 
 export default Subhead;
