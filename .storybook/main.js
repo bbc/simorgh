@@ -44,7 +44,7 @@ module.exports = {
       }),
     );
 
-    config.resolve.extensions.push('.js', '.jsx'); // resolves `import '../Foo'` to `../Foo/index.jsx`
+    config.resolve.extensions.push('.js', '.jsx', '.ts', '.tsx'); // resolves `import '../Foo'` to `../Foo/index.jsx`
     config.resolve.alias = {
       ...config.resolve.alias,
       ...webpackDirAlias,
