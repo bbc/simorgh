@@ -10,9 +10,11 @@ module.exports = {
     builder: 'webpack5',
   },
   stories: [
-    '../src/app/legacy/components/**/*.stories.jsx',
-    '../src/app/legacy/containers/**/*.stories.jsx',
-    '../src/app/pages/**/*.stories.jsx',
+    '../src/app/legacy/components/**/*.stories.(t|j)sx',
+    '../src/app/legacy/containers/**/*.stories.(t|j)sx',
+    '../src/app/components/**/*.stories.(t|j)sx',
+    '../src/app/containers/**/*.stories.(t|j)sx',
+    '../src/app/pages/**/*.stories.(t|j)sx',
   ],
   addons: [
     '@storybook/addon-knobs',

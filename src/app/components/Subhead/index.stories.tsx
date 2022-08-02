@@ -6,24 +6,20 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 import Subheading from '.';
 
-
-
-// @ts-ignore
+// eslint-disable-next-line react/prop-types
 const Component = ({ service, variant }) => {
   return (
     <ServiceContextProvider service={service} variant={variant}>
-        <Subheading children="These are the children"/>
+      <Subheading>These are the children</Subheading>
     </ServiceContextProvider>
   );
 };
 
-
 export default {
-  title: 'Topic/Curations/Subheading - Normal',
+  title: 'Topic/Curations/Subheading',
   Component,
   decorators: [withKnobs, withServicesKnob()],
   parameters: { chromatic: { disable: true } },
 };
 
 export const Example = Component;
-

@@ -9,10 +9,9 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 
-
 interface Props {
-    children: string
-  };
+  children: React.ReactNode;
+}
 
 const H1 = styled.h1`
   ${({ service }) => getSansBold(service)}
@@ -43,7 +42,5 @@ const Subhead = ({ children }: Props) => {
     </H1>
   );
 };
-
-
 
 export default Subhead;
