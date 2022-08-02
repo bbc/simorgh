@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { ThemeProvider, useTheme, css, Global } from '@emotion/react';
 import { node, shape, bool, number } from 'prop-types';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
@@ -14,6 +15,7 @@ import FooterContainer from '#containers/Footer';
 import ManifestContainer from '#containers/Manifest';
 import ServiceWorkerContainer from '#containers/ServiceWorker';
 import { ServiceContext } from '../contexts/ServiceContext';
+import getTheme from '../theming/getTheme';
 
 const Wrapper = styled.div`
   min-height: 100vh;
@@ -28,9 +30,20 @@ const Content = styled.div`
   flex-grow: 1;
 `;
 
+const FontFacesStyles = () => {
+  const { typography } = useTheme();
+
+  return (
+    <Global
+      styles={css`
+        ${typography.fontFaces.join('\n')};
+      `}
+    />
+  );
+};
+
 const PageWrapper = ({ children, pageData, status }) => {
-  const { fonts: fontFunctions } = useContext(ServiceContext);
-  const fonts = fontFunctions.map(getFonts => getFonts());
+  const { service } = useContext(ServiceContext);
 
   const isDarkMode = pathOr(false, ['darkMode'], pageData);
   const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
@@ -42,18 +55,21 @@ const PageWrapper = ({ children, pageData, status }) => {
 
   return (
     <>
-      <GlobalStyles fonts={fonts} />
-      <ServiceWorkerContainer />
-      <ManifestContainer />
-      <WebVitals pageType={pageType} />
-      <Wrapper id="main-wrapper" darkMode={isDarkMode}>
-        <HeaderContainer
-          scriptSwitchId={scriptSwitchId}
-          renderScriptSwitch={renderScriptSwitch}
-        />
-        <Content>{children}</Content>
-        <FooterContainer />
-      </Wrapper>
+      <ThemeProvider theme={getTheme(service)}>
+        <GlobalStyles />
+        <FontFacesStyles />
+        <ServiceWorkerContainer />
+        <ManifestContainer />
+        <WebVitals pageType={pageType} />
+        <Wrapper id="main-wrapper" darkMode={isDarkMode}>
+          <HeaderContainer
+            scriptSwitchId={scriptSwitchId}
+            renderScriptSwitch={renderScriptSwitch}
+          />
+          <Content>{children}</Content>
+          <FooterContainer />
+        </Wrapper>
+      </ThemeProvider>
     </>
   );
 };
