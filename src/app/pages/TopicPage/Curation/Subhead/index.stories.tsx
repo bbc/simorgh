@@ -1,13 +1,17 @@
 import React from 'react';
 
-import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { withKnobs } from '@storybook/addon-knobs';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
 
 import Subheading from '.';
 
-// eslint-disable-next-line react/prop-types
-const Component = ({ service, variant }) => {
+interface Props {
+  service: string;
+  variant: string;
+}
+
+const Component = ({ service, variant }: Props) => {
   return (
     <ServiceContextProvider service={service} variant={variant}>
       <Subheading>These are the children</Subheading>

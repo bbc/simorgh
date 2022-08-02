@@ -1,19 +1,21 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { ServiceContext } from '#contexts/ServiceContext';
-import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
-import { C_GREY_10 } from '#psammead/psammead-styles/src/colours';
+
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
+} from '../../../../legacy/psammead/gel-foundations/src/breakpoints';
+
+import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { getSansBold } from '../../../../legacy/psammead/psammead-styles/src/font-styles';
+import { C_GREY_10 } from '../../../../legacy/psammead/psammead-styles/src/colours';
 
 interface Props {
   children: React.ReactNode;
 }
 
-const H1 = styled.h1`
+const H1 = styled.h1<{ service: string }>`
   ${({ service }) => getSansBold(service)}
   color: ${C_GREY_10};
   font-size: 1.75rem;
@@ -35,9 +37,12 @@ const H1 = styled.h1`
 `;
 
 const Subhead = ({ children }: Props) => {
-  const { script, service } = useContext(ServiceContext);
+  const { service } = useContext(ServiceContext) as {
+    script: string;
+    service: string;
+  };
   return (
-    <H1 service={service} script={script} id="content" tabIndex="-1">
+    <H1 service={service} id="content" tabIndex={-1}>
       {children}
     </H1>
   );

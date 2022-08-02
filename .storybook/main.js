@@ -13,7 +13,6 @@ module.exports = {
     '../src/app/legacy/components/**/*.stories.(t|j)sx',
     '../src/app/legacy/containers/**/*.stories.(t|j)sx',
     '../src/app/components/**/*.stories.(t|j)sx',
-    '../src/app/containers/**/*.stories.(t|j)sx',
     '../src/app/pages/**/*.stories.(t|j)sx',
   ],
   addons: [
