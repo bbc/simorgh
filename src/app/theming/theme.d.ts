@@ -77,7 +77,7 @@ declare module '@emotion/react' {
       fontFaces: string[];
       fontFamilyVariants: {
         primary: string;
-        secondary: string;
+        secondary?: string;
       };
       script: {
         atlas: {
