@@ -19,9 +19,15 @@ describe('A11y', () => {
     render(<SubheadWithContext>My Text</SubheadWithContext>);
 
     const headingElement = document.querySelector('h2');
-    expect(headingElement).toMatchSnapshot();
     expect(headingElement.innerHTML).toBe('My Text');
   });
 
-  it('should render children within an h2', () => {});
+  it('should render children within an h2', () => {
+    render(
+      <SubheadWithContext href="https://bbc.com">My Text</SubheadWithContext>,
+    );
+
+    const anchorElement = document.querySelector('a');
+    expect(anchorElement.getAttribute('href')).toBe('https://bbc.com');
+  });
 });

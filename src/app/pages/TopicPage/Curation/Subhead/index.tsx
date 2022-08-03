@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import { H2 } from './index.styled';
+import { H2, Link } from './index.styled';
 
 import { RightChevron } from '../../icons';
 
@@ -18,9 +18,9 @@ const Subhead = ({ children, href }: Props) => {
   };
   const Wrapper = href
     ? ({ children: innerChildren }) => (
-        <a href={href}>
+        <Link href={href}>
           {innerChildren} <RightChevron />
-        </a>
+        </Link>
       )
     : React.Fragment;
   return (

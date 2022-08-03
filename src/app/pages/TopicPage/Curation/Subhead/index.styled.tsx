@@ -11,4 +11,4 @@ export const H2 = styled.h2<{ service: string; script: string }>`
   ${({ script }) => getDoublePica(script)}
 `;
 
-export const link = styled.a``;
+export const Link = styled.a``;
