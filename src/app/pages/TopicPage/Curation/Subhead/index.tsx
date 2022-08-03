@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 
 import { H2, Link } from './index.styled';
 
-import { RightChevron } from '../../icons';
+import { LeftChevron, RightChevron } from '../../icons';
 
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 
@@ -12,14 +12,15 @@ interface Props {
 }
 
 const Subhead = ({ children, href }: Props) => {
-  const { service, script } = useContext(ServiceContext) as {
+  const { service, script, dir } = useContext(ServiceContext) as {
     script: string;
     service: string;
+    dir: string;
   };
   const Wrapper = href
     ? ({ children: innerChildren }) => (
         <Link href={href}>
-          {innerChildren} <RightChevron />
+          {innerChildren} {dir === 'ltr' ? <RightChevron /> : <LeftChevron />}
         </Link>
       )
     : React.Fragment;
