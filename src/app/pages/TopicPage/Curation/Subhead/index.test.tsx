@@ -3,11 +3,6 @@ import { render } from '@testing-library/react';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import Subhead from '.';
 
-jest.mock('../../legacy/containers/ChartbeatAnalytics', () => {
-  const ChartbeatAnalytics = () => <div>chartbeat</div>;
-  return ChartbeatAnalytics;
-});
-
 /* eslint-disable react/prop-types */
 const SubheadWithContext = ({
   children = '',
@@ -20,11 +15,13 @@ const SubheadWithContext = ({
 );
 
 describe('A11y', () => {
-  it('should render an unordered list when there is more than one promo', () => {});
-});
+  it('should render a link correctly with the url contained in the href', () => {
+    render(<SubheadWithContext>My Text</SubheadWithContext>);
 
-describe('isLive', () => {
-  afterEach(() => {
-    delete process.env.SIMORGH_APP_ENV;
+    const headingElement = document.querySelector('h2');
+    expect(headingElement).toMatchSnapshot();
+    expect(headingElement.innerHTML).toBe('My Text');
   });
+
+  it('should render children within an h2', () => {});
 });

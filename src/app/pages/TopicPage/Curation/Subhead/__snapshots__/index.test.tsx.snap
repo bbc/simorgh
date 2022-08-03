@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`A11y should render a link correctly with the url contained in the href 1`] = `
+.emotion-0 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #141414;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+<h2
+  class="emotion-0 emotion-1"
+  id="content"
+  tabindex="-1"
+>
+  My Text
+</h2>
+`;
