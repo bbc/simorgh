@@ -32,7 +32,7 @@ const getBaseConfig = BUNDLE_TYPE => ({
   mode: IS_PROD ? 'production' : 'development',
   devtool: IS_PROD ? 'source-map' : 'eval-source-map',
   resolve: {
-    extensions: ['.js', '.jsx'], // resolves `import '../Foo'` to `../Foo/index.jsx`
+    extensions: ['.ts', '.tsx', '.js', '.jsx'], // resolves `import '../Foo'` to `../Foo/index.jsx`
     alias: {
       ...webpackDirAlias,
       /*
@@ -84,6 +84,18 @@ const getBaseConfig = BUNDLE_TYPE => ({
               babelrc: true,
               cacheDirectory: true,
               presets: [],
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'ts-loader',
+            options: {
+              transpileOnly: true,
             },
           },
         ],

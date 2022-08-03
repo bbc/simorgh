@@ -72,6 +72,7 @@ export default ({ service, pageType, variant }) => {
               .should('have.attr', 'href')
               .then($href => {
                 cy.log($href);
+
                 // Clicks the first item, then checks the page navigates to has the expected url
                 cy.get('a').click();
                 cy.url()
@@ -102,11 +103,12 @@ export default ({ service, pageType, variant }) => {
                   });
               });
           });
-        cy.go('back');
       });
     });
     describe(`Pagination`, () => {
       it('should show pagination if there is more than one page', () => {
+        // First return to the topics page. Last test has page on article
+        cy.go('back');
         cy.log(`pagecount is ${pageCount}`);
         // Checks pagination only is on page if there is more than one page
         if (pageCount > 1) {
