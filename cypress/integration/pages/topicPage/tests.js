@@ -41,8 +41,6 @@ export default ({ service, pageType, variant }) => {
 
     describe(`Pagination`, () => {
       it('should show pagination if there is more than one page', () => {
-        // First return to the topics page. Last test has page on article
-        cy.go('back');
         cy.log(`pagecount is ${pageCount}`);
         // Checks pagination only is on page if there is more than one page
         if (pageCount > 1) {
