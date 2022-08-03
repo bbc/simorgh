@@ -18,7 +18,6 @@ import {
 } from '#lib/logger.const';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { OK } from '#lib/statusCodes.const';
-import isLive from '#lib/utilities/isLive';
 import injectCspHeader from './utilities/cspHeader';
 import logResponseTime from './utilities/logResponseTime';
 import renderDocument from './Document';
@@ -131,23 +130,10 @@ const injectDefaultCacheHeader = (req, res, next) => {
   next();
 };
 
-const injectTestEmbedHeaderControl = (req, res, next) => {
-  if (!isLive()) {
-    res
-      .set('x-frame-options', 'SAMEORIGIN')
-      .removeHeader('X-Permitted-Cross-Domain-Policies');
-  }
-  next();
-};
-
 // Catch all for all routes
 server.get(
   '/*',
-  [
-    injectCspHeaderProdBuild,
-    injectDefaultCacheHeader,
-    injectTestEmbedHeaderControl,
-  ],
+  [injectCspHeaderProdBuild, injectDefaultCacheHeader],
   async ({ url, query, headers, path: urlPath }, res) => {
     logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
       url,
