@@ -68,12 +68,14 @@ export const AmpSocialEmbed = ({
   caption,
   fallback,
 }) => {
+  const { pageType } = useContext(RequestContext);
+  const embedCaption = getCaptionText({ pageType, caption, provider });
+
   if (!id) {
     return null;
   }
 
   const AmpElement = AmpElements[provider];
-  const hasCaption = caption && caption.text;
 
   if (!AmpElement)
     return (
@@ -84,8 +86,8 @@ export const AmpSocialEmbed = ({
 
   return (
     <SkipLinkWrapper service={service} provider={provider} {...skipLink}>
-      {hasCaption ? (
-        <CaptionWrapper service={service} {...caption}>
+      {embedCaption ? (
+        <CaptionWrapper service={service} {...embedCaption}>
           <AmpElement id={id} />
         </CaptionWrapper>
       ) : (
