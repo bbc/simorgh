@@ -38,9 +38,9 @@ export const dictionaryFactory = ({ provider }) => ({
 export const getCaptionText = ({ pageType, caption, provider }) => {
   if (!caption) return null;
 
-  const dictionary = dictionaryFactory({ provider });
-
   if (pageType === ARTICLE_PAGE) {
+    const dictionary = dictionaryFactory({ provider });
+
     return {
       text: caption.articleText,
       ...(provider === 'youtube' && {
@@ -49,6 +49,7 @@ export const getCaptionText = ({ pageType, caption, provider }) => {
       textPrefixVisuallyHidden: caption.textPrefixVisuallyHidden,
     };
   }
+
   return {
     text: caption.text,
     textPrefixVisuallyHidden: caption.textPrefixVisuallyHidden,
