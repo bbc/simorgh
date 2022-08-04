@@ -54,7 +54,7 @@ describe('createTranslations', () => {
       caption: {
         text: 'Warning: Third party content may contain adverts',
         textPrefixVisuallyHidden: 'Video caption, ',
-        articleAdditionalText: '%provider_name% content may contain adverts',
+        articleAdditionalText: ' %provider_name% content may contain adverts',
         articleText:
           'Warning: The BBC is not responsible for the content of external sites.',
       },
