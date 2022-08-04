@@ -14,7 +14,7 @@ const SubheadWithContext = ({
   </ServiceContextProvider>
 );
 
-describe('A11y', () => {
+describe('Curation Subhead Component', () => {
   it('should render a link correctly with the url contained in the href', () => {
     render(<SubheadWithContext>My Text</SubheadWithContext>);
 
