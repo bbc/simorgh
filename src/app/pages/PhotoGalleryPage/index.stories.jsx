@@ -22,6 +22,7 @@ export default {
   Component,
   title: 'Pages/Photo Gallery Page',
   decorators: [story => <WithTimeMachine>{story()}</WithTimeMachine>],
+  parameters: { chromatic: { disable: true } },
 };
 
 export const Azeri = Component;
