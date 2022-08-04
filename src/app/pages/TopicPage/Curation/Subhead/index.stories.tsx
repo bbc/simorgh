@@ -14,7 +14,7 @@ interface Props {
 const Component = ({ service, variant }: Props) => {
   return (
     <ServiceContextProvider service={service} variant={variant}>
-      <Subheading>These are the children</Subheading>
+      <Subheading>Destacamos</Subheading>
     </ServiceContextProvider>
   );
 };
@@ -22,7 +22,7 @@ const Component = ({ service, variant }: Props) => {
 const WithLink = ({ service, variant }: Props) => {
   return (
     <ServiceContextProvider service={service} variant={variant}>
-      <Subheading href="https://bbc.com">These are the children</Subheading>
+      <Subheading href="https://bbc.com">Destacamos</Subheading>
     </ServiceContextProvider>
   );
 };

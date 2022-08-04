@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import { H2, Link } from './index.styled';
+import Link from './index.styled';
 
 import { LeftChevron, RightChevron } from '../../icons';
 
@@ -19,15 +19,19 @@ const Subhead = ({ children, href }: Props) => {
   };
   const Wrapper = href
     ? ({ children: innerChildren }) => (
-        <Link href={href}>
-          {innerChildren} {dir === 'ltr' ? <RightChevron /> : <LeftChevron />}
+        <Link href={href} service={service} script={script}>
+          <span>
+            {innerChildren}
+            <div />
+          </span>
+          {dir === 'ltr' ? <RightChevron /> : <LeftChevron />}
         </Link>
       )
     : React.Fragment;
   return (
-    <H2 service={service} script={script} id="content" tabIndex={-1}>
+    <h2 id="content" tabIndex={-1}>
       <Wrapper>{children}</Wrapper>
-    </H2>
+    </h2>
   );
 };
 
