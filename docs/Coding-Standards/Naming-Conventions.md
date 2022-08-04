@@ -59,7 +59,7 @@ const useToggle = () => {};
 const getPath = () => {};
 ```
 
-#### The definition name and filename should be identical. This makes it easier to locate code.
+#### The definition name and directory name should be identical. This makes it easier to locate code.
 
 ❌
 

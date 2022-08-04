@@ -197,13 +197,13 @@ In our worked example we create a `Promo` that allows customised versions of `Ti
 
 ### Complex Components
 
-These components are components that use Primitive components to build a reusable component that isn’t suitable to be implemented as a Compound Component. It needs limited or no customisation for usages on different pages. A Complex Component could later be converted to Compound Component if it needed significant customisation that differed across Page Types.
+These components use Primitive components to build a reusable component that isn’t suitable to be implemented as a Compound Component. It needs limited or no customisation for usages on different pages. A Complex Component could later be converted to Compound Component if it needed significant customisation that differed across Page Types.
 
 In our example below we have a `Byline` component used on both Article and Story Pages with no customisation at all.
 
 ### Applied Compound Components
 
-At this level we take a ‘Compound Component’ and build an ‘Applied Compound Component’ that is very specific to the page’s use case. At this level we can apply specific styling and add in additional functionality completly bespoke to that page’s requirements; we are:
+At this level we take a ‘Compound Component’ and build an ‘Applied Compound Component’ that is very specific to the page’s use case. At this level we can apply specific styling and add in additional functionality completely bespoke to that page’s requirements; we are:
 
 - Reusing the functionality common across all pages from the Primitive Components
 - Reusing the functionality common to all usages of a particular user experience from the Compound Component
@@ -219,7 +219,7 @@ Below is the full worked example. The example shows our Article and Story pages 
 
 ### Summary
 
-In the past we built, highly configurable, reusable components that required large amounts of props to be ‘drilled’ into component to allow them to work on a particular page; a particular example of this was the [StoryPromo](https://github.com/bbc/simorgh/blob/d025086b41fb8753ec1a3992977bef5b013410b7/src/app/containers/StoryPromo/index.jsx#L126) component. With these highly configurable components the complexity grew and grew as they were reused in more places.
+In the past we built highly configurable, reusable components that required large amounts of props to be ‘drilled’ into components to allow them to work on a particular page. An example of this was the [StoryPromo](https://github.com/bbc/simorgh/blob/d025086b41fb8753ec1a3992977bef5b013410b7/src/app/containers/StoryPromo/index.jsx#L126) component. With these highly configurable components the complexity grew and grew as they were reused in more places.
 
 In the new approach we make simple highly reusable primitive components with few customisation options, we create CompoundComponents to guide reuse through a set of child components and then we apply these for our specific page types, pushing specialisation to the top of the component hierarchy.
 
@@ -253,11 +253,11 @@ And all components meeting our standards will from now on will be maintained in 
 
 ### Applying Standardisation
 
-Where possible we want apply standardisation as an ‘opportunitistic refactor’. As we look to use existing components to deliver a feature, we commit to rebuilding those components or porting them across applying new best practices. Through doing this we gradually improve the consistency and standards of our components rather then embarking on a unrealistic drive to rebuild all components to a new standard. The necessity of delivering a feature keeps scope under control while the standards maintain the quality of the code for that feature.
+Where possible we want to apply standardisation as an ‘opportunistic refactor’. As we look to use existing components to deliver a feature, we commit to rebuilding those components or porting them across applying new best practices. Through doing this we gradually improve the consistency and standards of our components rather then embarking on a unrealistic drive to rebuild all components to a new standard. The necessity of delivering a feature keeps scope under control while the standards maintain the quality of the code for that feature.
 
 ## Typescript for Frontend Components
 
-- Our visual components should be written in typescript clearly document each component’s API and get benefits of compile-time type checking between components.
+- Our visual components should be written in TypeScript to clearly document each component’s API and get the benefits of compile-time type checking between components.
 - Types should be co-located with the component that uses them; they should only be maintained in a shared location where they are used by multiple visual components
   - Here is an example of shared types in our BFF application: https://github.com/bbc/fabl-modules/tree/master/modules/application/simorgh-bff/src/models
   - We can locate any shared types in `src/app/components/models`
@@ -278,7 +278,7 @@ Component Health should include:
 - Accessibility swarm document
 - Whether the component has ‘right-to-left’ support
 
-All docs linked too must be secure and not publically editable
+All linked docs must be secure and not publicly editable
 
 ## Readme
 
@@ -289,4 +289,4 @@ All components should have a readme that includes
 - A11y notes: explaination of implmentation details specific to a11y requirements
 - Usage examples including RTL
 - List any third party dependencies in use
-- An explaination of any unsual/uninuitive implementation decisions required to work around an external bug (e.g. browser bug) or to deliver quickly to a deadline
+- An explanation of any unusual/uninuitive implementation decisions required to work around an external bug (e.g. browser bug) or to deliver quickly to a deadline
