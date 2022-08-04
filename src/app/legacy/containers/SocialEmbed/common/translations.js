@@ -59,7 +59,7 @@ const createTranslations = ({ translations, index }) => {
         translations,
       ),
       articleAdditionalText: pathOr(
-        '%provider_name% content may contain adverts',
+        ' %provider_name% content may contain adverts',
         ['socialEmbed', 'caption', 'articleAdditionalText'],
         translations,
       ),
