@@ -31,7 +31,7 @@ const H1 = styled.h1`
   }
 `;
 
-const Subhead = ({ children }) => {
+const TopicTitle = ({ children }) => {
   const { script, service } = useContext(ServiceContext);
   return (
     <H1 service={service} script={script} id="content" tabIndex="-1">
@@ -40,8 +40,8 @@ const Subhead = ({ children }) => {
   );
 };
 
-Subhead.propTypes = {
+TopicTitle.propTypes = {
   children: string.isRequired,
 };
 
-export default Subhead;
+export default TopicTitle;
