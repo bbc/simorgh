@@ -62,13 +62,13 @@ const TitleWrapper = styled.div`
 
 const TopicPage = ({ pageData }) => {
   const { lang, translations } = useContext(ServiceContext);
-  const { title, description, imageData, promos, pageCount, activePage } =
+  const { title, description, imageData, curations, pageCount, activePage } =
     pageData;
 
   const { enabled: adsEnabled } = useToggle('ads');
   const { showAdsBasedOnLocation } = useContext(RequestContext);
 
-  const promoEntities = promos.map(promo => ({
+  const promoEntities = curations.map(promo => ({
     '@type': 'Article',
     name: promo.title,
     headline: promo.title,
@@ -124,11 +124,14 @@ const TopicPage = ({ pageData }) => {
             <TopicDescription>{description}</TopicDescription>
           )}
         </TitleWrapper>
-        <Curation
-          visualStyle={VISUAL_STYLE.NONE}
-          visualProminance={VISUAL_PROMINANCE.NORMAL}
-          promos={promos}
-        />
+        {curations.map(({ summaries, curationId }) => (
+          <Curation
+            key={curationId}
+            visualStyle={VISUAL_STYLE.NONE}
+            visualProminance={VISUAL_PROMINANCE.NORMAL}
+            promos={summaries}
+          />
+        ))}
         <Pagination
           activePage={activePage}
           pageCount={pageCount}
@@ -145,7 +148,7 @@ const TopicPage = ({ pageData }) => {
 TopicPage.propTypes = {
   pageData: shape({
     title: string.isRequired,
-    promos: arrayOf(shape({})).isRequired,
+    curations: arrayOf(shape({})).isRequired,
   }).isRequired,
 };
 
