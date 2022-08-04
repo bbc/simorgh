@@ -1,5 +1,10 @@
-import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../colours';
-import latin from '../typography/scripts/latin';
+import {
+  SPORT_YELLOW,
+  BLACK,
+  MIDNIGHT_BLACK,
+  SPORT_YELLOW_30,
+} from '../colours';
+import latinScript from '../typography/scripts/latin';
 import {
   REITH_SANS_BOLD,
   REITH_SANS_REGULAR,
@@ -8,16 +13,16 @@ import {
 } from '../typography/fontFaces';
 import { REITH_SANS, REITH_SERIF } from '../typography/fontFamilies';
 
-const mundo = {
+const sportTheme = {
   colours: {
-    BRAND_BACKGROUND: POSTBOX,
-    BRAND_LOGO: WHITE,
-    BRAND_FOREGROUND: GHOST,
-    BRAND_HIGHLIGHT: WHITE,
-    BRAND_BORDER: POSTBOX_30,
+    BRAND_BACKGROUND: SPORT_YELLOW,
+    BRAND_LOGO: BLACK,
+    BRAND_FOREGROUND: MIDNIGHT_BLACK,
+    BRAND_HIGHLIGHT: SPORT_YELLOW_30,
+    BRAND_BORDER: BLACK,
   },
   typography: {
-    script: latin,
+    script: latinScript,
     fontFamilyVariants: {
       primary: REITH_SANS,
       secondary: REITH_SERIF,
@@ -31,4 +36,4 @@ const mundo = {
   },
 };
 
-export default mundo;
+export default sportTheme;

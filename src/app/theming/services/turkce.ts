@@ -1,5 +1,5 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../colours';
-import latin from '../typography/scripts/latin';
+import latinWithDiacriticsScript from '../typography/scripts/latinWithDiacritics';
 import {
   REITH_SANS_BOLD,
   REITH_SANS_REGULAR,
@@ -8,7 +8,7 @@ import {
 } from '../typography/fontFaces';
 import { REITH_SANS, REITH_SERIF } from '../typography/fontFamilies';
 
-const mundo = {
+const turkceTheme = {
   colours: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -17,7 +17,7 @@ const mundo = {
     BRAND_BORDER: POSTBOX_30,
   },
   typography: {
-    script: latin,
+    script: latinWithDiacriticsScript,
     fontFamilyVariants: {
       primary: REITH_SANS,
       secondary: REITH_SERIF,
@@ -31,4 +31,4 @@ const mundo = {
   },
 };
 
-export default mundo;
+export default turkceTheme;

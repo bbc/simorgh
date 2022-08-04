@@ -3,6 +3,11 @@ import '@emotion/react';
 declare module '@emotion/react' {
   export interface Theme {
     colours: {
+      BRAND_BACKGROUND: string;
+      BRAND_LOGO: string;
+      BRAND_FOREGROUND: string;
+      BRAND_HIGHLIGHT: string;
+      BRAND_BORDER: string;
       EBON: string;
       POSTBOX: string;
       STORM: string;

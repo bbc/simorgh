@@ -1,5 +1,5 @@
-import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../colours';
-import latin from '../typography/scripts/latin';
+import { ARCHIVE_BLUE, WHITE } from '../colours';
+import latinScript from '../typography/scripts/latin';
 import {
   REITH_SANS_BOLD,
   REITH_SANS_REGULAR,
@@ -8,16 +8,16 @@ import {
 } from '../typography/fontFaces';
 import { REITH_SANS, REITH_SERIF } from '../typography/fontFamilies';
 
-const mundo = {
+const archiveTheme = {
   colours: {
-    BRAND_BACKGROUND: POSTBOX,
+    BRAND_BACKGROUND: ARCHIVE_BLUE,
     BRAND_LOGO: WHITE,
-    BRAND_FOREGROUND: GHOST,
+    BRAND_FOREGROUND: WHITE,
     BRAND_HIGHLIGHT: WHITE,
-    BRAND_BORDER: POSTBOX_30,
+    BRAND_BORDER: WHITE,
   },
   typography: {
-    script: latin,
+    script: latinScript,
     fontFamilyVariants: {
       primary: REITH_SANS,
       secondary: REITH_SERIF,
@@ -31,4 +31,4 @@ const mundo = {
   },
 };
 
-export default mundo;
+export default archiveTheme;
