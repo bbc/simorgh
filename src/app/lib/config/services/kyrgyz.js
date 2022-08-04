@@ -240,6 +240,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Видеонун түшүндүрмөсү, ',
           text: 'Эскертүү: Жарнамалар болушу ыктымал',
+          articleText:
+            'Эскертүү: Би-Би-Си тышкы сайттардын мазмуну үчүн жооп бербейт.',
+          articleAdditionalText:
+            ' %provider_name% мазмунунда жарнама болушу мүмкүн',
         },
         fallback: {
           text: 'Баракча ачылбайт',

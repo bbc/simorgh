@@ -237,6 +237,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Видео тагсўзи, ',
           text: 'Огоҳлантириш:Учинчи манба материалида реклама бўлиши мумкин',
+          articleText:
+            'Огоҳлантириш: Би-би-си ташқи саҳифалардаги контент учун масъул эмас',
+          articleAdditionalText:
+            ' %provider_name% бу контентда реклама бўлиши мумкин',
         },
         fallback: {
           text: 'Бу материалга кириш имконсиз',

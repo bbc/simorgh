@@ -1,3 +1,5 @@
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+
 /**
  * Returns a string of a known provider name.
  * @param {String} provider A given provider.
@@ -32,6 +34,26 @@ export const dictionaryFactory = ({ provider }) => ({
   '%provider_name%': getProviderName(provider) || provider,
   '%provider%': provider,
 });
+
+export const getCaptionText = ({ pageType, caption, provider }) => {
+  if (!caption) return null;
+
+  const dictionary = dictionaryFactory({ provider });
+
+  if (pageType === ARTICLE_PAGE) {
+    return {
+      text: caption.articleText,
+      ...(provider === 'youtube' && {
+        additionalText: detokenise(caption.articleAdditionalText, dictionary),
+      }),
+      textPrefixVisuallyHidden: caption.textPrefixVisuallyHidden,
+    };
+  }
+  return {
+    text: caption.text,
+    textPrefixVisuallyHidden: caption.textPrefixVisuallyHidden,
+  };
+};
 
 /**
  * These styles are lifted from #psammead/psammead-visually-hidden-text/src, which we

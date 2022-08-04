@@ -258,6 +258,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'التعليق على الفيديو، ',
           text: 'تحذير: المحتوى من طرف ثالث قد يتضمن إعلانات',
+          articleText: 'تحذير: بي بي سي غير مسؤولة عن محتوى المواقع الخارجية',
+          articleAdditionalText:
+            ' المحتوى في موقع %provider_name% قد يتضمن إعلانات',
         },
         fallback: {
           text: 'المحتوى غير متاح',

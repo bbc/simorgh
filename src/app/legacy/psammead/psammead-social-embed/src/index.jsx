@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { shape, string, func } from 'prop-types';
+import { RequestContext } from '#contexts/RequestContext';
 
 import SkipLinkWrapper from './SkipLinkWrapper';
 import CaptionWrapper from './CaptionWrapper';
@@ -7,6 +8,7 @@ import Notice from './Notice';
 
 import CanonicalEmbed, { providers } from './Canonical';
 import AmpElements from './Amp';
+import { getCaptionText } from './utilities';
 
 /**
  * Returns a social embed or fallback component for use on Canonical pages.
@@ -21,8 +23,10 @@ export const CanonicalSocialEmbed = ({
   fallback,
   onRender,
 }) => {
+  const { pageType } = useContext(RequestContext);
+  const embedCaption = getCaptionText({ pageType, caption, provider });
+
   const isSupportedProvider = Object.keys(providers).includes(provider);
-  const hasCaption = caption && caption.text;
 
   if (!isSupportedProvider || !oEmbed)
     return (
@@ -33,8 +37,8 @@ export const CanonicalSocialEmbed = ({
 
   return (
     <SkipLinkWrapper service={service} provider={provider} {...skipLink}>
-      {hasCaption ? (
-        <CaptionWrapper service={service} {...caption}>
+      {embedCaption ? (
+        <CaptionWrapper service={service} {...embedCaption}>
           <CanonicalEmbed
             provider={provider}
             oEmbed={oEmbed}

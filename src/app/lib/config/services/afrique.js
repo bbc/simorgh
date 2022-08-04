@@ -241,6 +241,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Légende vidéo, ',
           text: 'Attention: le contenu externe peut contenir des messages publicitaires',
+          articleText:
+            "Attention: La BBC n'est pas responsable du contenu des sites externes.",
+          articleAdditionalText:
+            ' Le contenu du site %provider_name% peut contenir des publicités.',
         },
         fallback: {
           text: "Ce contenu n'est pas disponible",

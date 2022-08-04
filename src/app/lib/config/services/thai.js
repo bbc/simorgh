@@ -227,6 +227,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'คำบรรยายวิดีโอ, ',
           text: 'คำเตือน:เนื้อหาภายนอกอาจมีโฆษณา',
+          articleText:
+            'คำเตือน: บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาที่มาจากภายนอก',
+          articleAdditionalText: '  เนื้อหาจาก %provider_name% อาจมีโฆษณา ',
         },
         fallback: {
           text: 'ไม่มีเนื้อหานี้',

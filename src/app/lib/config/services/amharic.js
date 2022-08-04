@@ -224,6 +224,8 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'የቪዲዮ መግለጫ, ',
           text: 'ማሳሰቢያ፡ የሦስተኛ ወገን ይዘቶች ማስታወቂያ ሊኖራቸው ይችላል',
+          articleText: 'ማሳሰቢያ: በሌሎች ገጾች ላይ ላሉ ይዘቶች ቢቢሲ ኃላፊነት አይወስድም።',
+          articleAdditionalText: ' %provider_name%] ማስታወቂያ ሊኖረው ይችላል።',
         },
         fallback: {
           text: 'የሚፈልጉት ይዘት የለም',

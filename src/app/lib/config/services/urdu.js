@@ -250,6 +250,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'ویڈیو کیپشن, ',
           text: 'تنبیہ: دیگر مواد میں اشتہار موجود ہو سکتے ہیں',
+          articleText:
+            'تنبیہ: بی بی سی دیگر ویب سائٹس کے مواد کی ذمہ دار نہیں ہے۔',
+          articleAdditionalText:
+            ' %provider_name%  کے مواد میں اشتہارات ہو سکتے ہیں۔',
         },
         fallback: {
           text: 'مواد دستیاب نہیں ہے',

@@ -234,6 +234,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'వీడియో క్యాప్షన్, ',
           text: 'హెచ్చరిక: థర్డ్ పార్టీ కంటెంట్‌లో ప్రకటనలు ఉండొచ్చు',
+          articleText:
+            'హెచ్చరిక: బయటి సైట్‌ల కంటెంట్‌కు బీబీసీ బాధ్యత వహించదు.',
+          articleAdditionalText:
+            ' %provider_name% ఈ సమాచారంలో ప్రకటనలు ఉండొచ్చు.',
         },
         fallback: {
           text: 'కంటెంట్ అందుబాటులో లేదు',

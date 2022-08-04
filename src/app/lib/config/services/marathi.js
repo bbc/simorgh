@@ -247,6 +247,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'व्हीडिओ कॅप्शन, ',
           text: 'सावधान: बाहेरच्या मजकुरावर काही अॅड असू शकतात',
+          articleText:
+            'सावधान: अन्य वेबसाईट्सवरील मजकुरासाठी बीबीसी जबाबदार नाही.  ',
+          articleAdditionalText:
+            ' (सोशल मीडिया साईट)  मजुकरात जाहिरातींचा समावेश असू शकतो.',
         },
         fallback: {
           text: 'मजकूर उपलब्ध नाही',

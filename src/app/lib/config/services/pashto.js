@@ -244,6 +244,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'د ویډیو تشریح، ',
           text: 'خبرداری:‌ ښايي درېیمګړي ته اړوند منځپانګه کې اعلانونه وي',
+          articleText:
+            'خبرداری: بي بي سي د بهرنیو وېبپاڼو د منځپانګې مسؤله نه ده',
+          articleAdditionalText:
+            ' په %provider_name%  کې منځپانګه ښايي خبرتیاوې ولري.',
         },
         fallback: {
           text: 'منځپانګه نه شته',

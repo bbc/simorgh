@@ -245,6 +245,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Insiguro ya video, ',
           text: "Uragaba: Ibitangwa n'izindi mbuga bishobora kubamwo gutangaza",
+          articleText: 'Uragaba: BBC ntibazwa ibiva ku zindi mbuga.',
+          articleAdditionalText:
+            ' Ibiri kuri %provider_name% birashobora kubamwo kuranga ibicuruzwa.',
         },
         fallback: {
           text: 'Ibi ntibiboneka',
