@@ -27,9 +27,21 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
 
 .emotion-2 {
   position: relative;
-  max-width: 80rem;
-  margin: 0 auto;
+  max-width: 63.4rem;
+  margin: 0;
   background-color: #FFFFFF;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    margin: 0 0.8rem;
+  }
+}
+
+@media (min-width: 66rem) {
+  .emotion-2 {
+    margin: 0 auto;
+  }
 }
 
 .emotion-4 {
