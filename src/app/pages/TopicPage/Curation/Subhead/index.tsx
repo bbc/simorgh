@@ -20,10 +20,7 @@ const Subhead = ({ children, href }: Props) => {
   const Wrapper = href
     ? ({ children: innerChildren }) => (
         <Link href={href} service={service} script={script}>
-          <span>
-            {innerChildren}
-            <div />
-          </span>
+          <span>{innerChildren}</span>
           {dir === 'ltr' ? <RightChevron /> : <LeftChevron />}
         </Link>
       )

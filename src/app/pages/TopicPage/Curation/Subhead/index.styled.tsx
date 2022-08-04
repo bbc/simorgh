@@ -14,9 +14,7 @@ export default styled.a<{ service: string; script: string }>`
   color: ${C_GREY_10};
   text-decoration: none;
   display: inline-block;
-  div {
-    display: none;
-  }
+
   span {
     display: inline-block;
     position: relative;
@@ -24,14 +22,14 @@ export default styled.a<{ service: string; script: string }>`
   &:hover,
   &:focus {
     color: ${C_POSTBOX};
-    div {
-      position: absolute;
-      display: inline-block;
-      height: ${2 / 16}rem;
-      bottom: ${4 / 16}rem;
-      left: 0;
+    span::after {
+      bottom: ${3 / 16}rem;
+      content: '';
+      background: ${C_POSTBOX};
       width: 100%;
-      background-color: ${C_POSTBOX};
+      height: ${2 / 16}rem;
+      position: absolute;
+      left: 0;
     }
   }
   svg {
