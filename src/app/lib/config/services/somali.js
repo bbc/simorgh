@@ -244,7 +244,7 @@ export const service = {
           articleText:
             'Digniin: BBC macluumaadka ku qoran bog kale masuul kama ahan',
           articleAdditionalText:
-            ' %provider_name% Waxaa laga yaabaa inay ku jirta xayasiis',
+            '%provider_name% Waxaa laga yaabaa inay ku jirta xayasiis',
         },
         fallback: {
           text: 'Macluumaadkan lama heli karo',

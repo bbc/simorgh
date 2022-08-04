@@ -247,7 +247,7 @@ export const service = {
           articleText:
             'எச்சரிக்கை: வெளியார் தளங்களில் உள்ள பதிவுகளுக்கு பிபிசி பொறுப்பேற்காது',
           articleAdditionalText:
-            ' %provider_name%பதிவில் விளம்பரங்கள் இருக்கக்கூடும்',
+            '%provider_name%பதிவில் விளம்பரங்கள் இருக்கக்கூடும்',
         },
         fallback: {
           text: 'தகவல் இல்லை',

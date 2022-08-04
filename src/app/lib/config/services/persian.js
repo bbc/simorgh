@@ -274,7 +274,7 @@ export const service = {
           text: 'توضیح: محتوای مربوط به طرف ثالث ممکن است شامل آگهی باشد',
           articleText: 'توضیح: بی بی سی مسئول محتوای سایت های دیگر نیست.',
           articleAdditionalText:
-            ' محتوای %provider_name%  ممکن است شامل آگهی باشد.',
+            'محتوای %provider_name%  ممکن است شامل آگهی باشد.',
         },
         fallback: {
           text: 'محتوا در دسترس نیست',

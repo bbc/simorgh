@@ -243,7 +243,7 @@ export const service = {
           articleText:
             'Эскертүү: Би-Би-Си тышкы сайттардын мазмуну үчүн жооп бербейт.',
           articleAdditionalText:
-            ' %provider_name% мазмунунда жарнама болушу мүмкүн',
+            '%provider_name% мазмунунда жарнама болушу мүмкүн',
         },
         fallback: {
           text: 'Баракча ачылбайт',

@@ -263,7 +263,7 @@ export const service = {
           articleText:
             'Alerta: A BBC não se responsabiliza pelo conteúdo de sites externos',
           articleAdditionalText:
-            ' %provider_name% conteúdo pode conter propaganda.',
+            '%provider_name% conteúdo pode conter propaganda.',
         },
         fallback: {
           text: 'Conteúdo não disponível',

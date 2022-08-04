@@ -237,7 +237,7 @@ export const service = {
           articleText:
             'హెచ్చరిక: బయటి సైట్‌ల కంటెంట్‌కు బీబీసీ బాధ్యత వహించదు.',
           articleAdditionalText:
-            ' %provider_name% ఈ సమాచారంలో ప్రకటనలు ఉండొచ్చు.',
+            '%provider_name% ఈ సమాచారంలో ప్రకటనలు ఉండొచ్చు.',
         },
         fallback: {
           text: 'కంటెంట్ అందుబాటులో లేదు',

@@ -240,7 +240,7 @@ export const service = {
           articleText:
             'Огоҳлантириш: Би-би-си ташқи саҳифалардаги контент учун масъул эмас',
           articleAdditionalText:
-            ' %provider_name% бу контентда реклама бўлиши мумкин',
+            '%provider_name% бу контентда реклама бўлиши мумкин',
         },
         fallback: {
           text: 'Бу материалга кириш имконсиз',

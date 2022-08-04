@@ -335,7 +335,7 @@ export const service = {
           articleText:
             'Upozorenje: BBC nije odgovoran za sadržaj drugih sajtova.',
           articleAdditionalText:
-            ' Sadržaj %provider_name% može da sadrži reklame.',
+            'Sadržaj %provider_name% može da sadrži reklame.',
         },
         fallback: {
           text: 'Sadržaj nije dostupan',
@@ -643,7 +643,7 @@ export const service = {
           text: 'Warning: Third party content may contain adverts',
           articleText: 'Warning: ББЦ није одговоран за садржај других сајтова.',
           articleAdditionalText:
-            ' Садржај %provider_name% може да садржи рекламе.',
+            'Садржај %provider_name% може да садржи рекламе.',
         },
         fallback: {
           text: 'Content is not available',

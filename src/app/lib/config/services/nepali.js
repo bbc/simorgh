@@ -238,7 +238,7 @@ export const service = {
           articleText:
             'चेतावनी: बाह्य वेबसाइटका सामग्रीप्रति बीबीसी जिम्मेवार हुने छैन।',
           articleAdditionalText:
-            ' %provider_name% का सामग्रीमा विज्ञापन हुन सक्छन्।',
+            '%provider_name% का सामग्रीमा विज्ञापन हुन सक्छन्।',
         },
         fallback: {
           text: 'सामग्री उपलब्ध छैन',

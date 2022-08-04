@@ -47,8 +47,7 @@ const CaptionWrapper = ({
       {children}
       <FigCaption isArticlePage={pageType === ARTICLE_PAGE} service={service}>
         {textPrefixVisuallyHidden && <span>{textPrefixVisuallyHidden}</span>}
-        {text}
-        {additionalText && additionalText}
+        {`${text}${additionalText ? ` ${additionalText}` : ''}`}
       </FigCaption>
     </Figure>
   );

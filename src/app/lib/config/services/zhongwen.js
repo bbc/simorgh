@@ -334,7 +334,7 @@ export const service = {
           textPrefixVisuallyHidden: '视频加注文字，',
           text: '告知：第三方内容可能包含广告',
           articleText: '告知: BBC 不对外来网站内容负责',
-          articleAdditionalText: ' %provider_name% 内容可能含有广告',
+          articleAdditionalText: '%provider_name% 内容可能含有广告',
         },
         fallback: {
           text: '无内容',
@@ -621,7 +621,7 @@ export const service = {
           textPrefixVisuallyHidden: '視頻加註文字，',
           text: '告知：協作方內容可能包含廣告',
           articleText: '告知: BBC不對外來網站内容負責',
-          articleAdditionalText: ' %provider_name% 内容可能包含廣告',
+          articleAdditionalText: '%provider_name% 内容可能包含廣告',
         },
         fallback: {
           text: '無內容',

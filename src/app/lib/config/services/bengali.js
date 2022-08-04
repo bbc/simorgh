@@ -239,8 +239,7 @@ export const service = {
           text: 'সতর্কবাণী: তৃতীয়পক্ষের কন্টেন্টে বিজ্ঞাপন থাকতে পারে',
           articleText:
             'সতর্কবাণী: বিবিসির নয় এমন ওয়েবসাইটের কনটেন্টের জন্য বিবিসি দায়ী না',
-          articleAdditionalText:
-            ' %provider_name% কনটেন্টে বিজ্ঞাপন থাকতে পারে',
+          articleAdditionalText: '%provider_name% কনটেন্টে বিজ্ঞাপন থাকতে পারে',
         },
         fallback: {
           text: 'ছবির কপিরাইট',

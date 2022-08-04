@@ -235,7 +235,7 @@ export const service = {
           text: 'Uyarı: Üçüncü tarafların sağladığı içerikte reklam bulunabilir.',
           articleText:
             'Uyarı: BBC üçüncü taraf sitelerin içeriğinden sorumlu değildir.',
-          articleAdditionalText: ' %provider_name% içerik reklam içerebilir',
+          articleAdditionalText: '%provider_name% içerik reklam içerebilir',
         },
         fallback: {
           text: 'İçerik bulunamadı',

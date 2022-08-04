@@ -228,7 +228,7 @@ export const service = {
           articleText:
             'Cảnh báo: BBC không chịu trách nhiệm về nội dung các trang bên ngoài.',
           articleAdditionalText:
-            ' Nội dung trên %provider_name% có thể kèm quảng cáo.',
+            'Nội dung trên %provider_name% có thể kèm quảng cáo.',
         },
         fallback: {
           text: 'Nội dung không có',

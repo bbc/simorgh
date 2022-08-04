@@ -260,7 +260,7 @@ export const service = {
           text: 'تحذير: المحتوى من طرف ثالث قد يتضمن إعلانات',
           articleText: 'تحذير: بي بي سي غير مسؤولة عن محتوى المواقع الخارجية',
           articleAdditionalText:
-            ' المحتوى في موقع %provider_name% قد يتضمن إعلانات',
+            'المحتوى في موقع %provider_name% قد يتضمن إعلانات',
         },
         fallback: {
           text: 'المحتوى غير متاح',

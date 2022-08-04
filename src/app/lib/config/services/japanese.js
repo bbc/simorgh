@@ -225,7 +225,7 @@ export const service = {
           text: 'ご注意：外部コンテンツには広告が含まれるかもしれません',
           articleText: 'ご注意: BBCは外部サイトの内容に責任を負いません。.',
           articleAdditionalText:
-            ' %provider_name%には広告が含まれる場合があります。',
+            '%provider_name%には広告が含まれる場合があります。',
         },
         fallback: {
           text: 'このコンテンツは開けません',

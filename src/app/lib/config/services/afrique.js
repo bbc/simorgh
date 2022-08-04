@@ -244,7 +244,7 @@ export const service = {
           articleText:
             "Attention: La BBC n'est pas responsable du contenu des sites externes.",
           articleAdditionalText:
-            ' Le contenu du site %provider_name% peut contenir des publicités.',
+            'Le contenu du site %provider_name% peut contenir des publicités.',
         },
         fallback: {
           text: "Ce contenu n'est pas disponible",

@@ -240,7 +240,7 @@ export const service = {
           articleText:
             'අනතුරු ඇඟවීමයි: බාහිර වෙබ් අඩවිවල අන්තර්ගතය සඳහා BBCය වගකියනු නොලැබේ.',
           articleAdditionalText:
-            ' %provider_name% අන්තර්ගතයේ දැන්වීම් අඩංගු විය හැකි ය.',
+            '%provider_name% අන්තර්ගතයේ දැන්වීම් අඩංගු විය හැකි ය.',
         },
         fallback: {
           text: 'මෙහි අන්තර්ගතය නැත',

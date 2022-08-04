@@ -67,7 +67,7 @@ describe('getCaptionText', () => {
       articleText:
         'Advertencia: La BBC no se hace responsable por el contenido de sitios externos.',
       articleAdditionalText:
-        ' Este contenido de %provider_name% puede contener publicidad.',
+        'Este contenido de %provider_name% puede contener publicidad.',
     };
 
     expect(
@@ -78,7 +78,7 @@ describe('getCaptionText', () => {
       }),
     ).toEqual({
       textPrefixVisuallyHidden: 'Título del video, ',
-      additionalText: ' Este contenido de YouTube puede contener publicidad.',
+      additionalText: 'Este contenido de YouTube puede contener publicidad.',
       text: 'Advertencia: La BBC no se hace responsable por el contenido de sitios externos.',
     });
   });

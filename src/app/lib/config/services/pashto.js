@@ -247,7 +247,7 @@ export const service = {
           articleText:
             'خبرداری: بي بي سي د بهرنیو وېبپاڼو د منځپانګې مسؤله نه ده',
           articleAdditionalText:
-            ' په %provider_name%  کې منځپانګه ښايي خبرتیاوې ولري.',
+            'په %provider_name%  کې منځپانګه ښايي خبرتیاوې ولري.',
         },
         fallback: {
           text: 'منځپانګه نه شته',

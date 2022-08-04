@@ -206,8 +206,7 @@ export const mainTranslations = {
       text: 'Внимание: Контент других сайтов может содержать рекламу.',
       articleText:
         'Внимание: Би-би-си не несет ответственности за контент других сайтов.',
-      articleAdditionalText:
-        ' Контент %provider_name% может содержать рекламу.',
+      articleAdditionalText: 'Контент %provider_name% может содержать рекламу.',
     },
     fallback: {
       text: 'Контент недоступен',

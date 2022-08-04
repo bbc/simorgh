@@ -228,7 +228,7 @@ export const service = {
           articleText:
             'ਚਿਤਾਵਨੀ: ਬੀਬੀਸੀ ਦੂਜੀਆਂ ਵੈਬਸਾਈਟਸ ਦੀ ਸਮੱਗਰੀ ਲਈ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ।',
           articleAdditionalText:
-            ' %provider_name% ਦੀ ਸਮੱਗਰੀ ਵਿੱਚ ਵਿਗਿਆਪਨ ਹੋ ਸਕਦਾ ਹੈ',
+            '%provider_name% ਦੀ ਸਮੱਗਰੀ ਵਿੱਚ ਵਿਗਿਆਪਨ ਹੋ ਸਕਦਾ ਹੈ',
         },
         fallback: {
           text: 'ਸਮੱਗਰੀ ਉਪਲਬਧ ਨਹੀਂ ਹੈ',

@@ -234,7 +234,7 @@ export const service = {
           text: 'Warning: Third party content may contain adverts',
           articleText: "Warning: BBC amaghị maka ihe ndị si n'ọbaozi ndị ọzọ.",
           articleAdditionalText:
-            ' %provider_name% mgbasaozi azụmaahịa nwereike ịdị na ya',
+            '%provider_name% mgbasaozi azụmaahịa nwereike ịdị na ya',
         },
         fallback: {
           text: 'Content is not available',

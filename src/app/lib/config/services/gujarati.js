@@ -233,7 +233,7 @@ export const service = {
           text: 'થર્ડ પાર્ટી કન્ટેટમાં જાહેરખબર હોય શકે છે',
           articleText: 'બીબીસી બહારની સાઇટ્સના કન્ટેન્ટ માટે જવાબદાર નથી.',
           articleAdditionalText:
-            ' %provider_name% કન્ટેન્ટમાં જાહેરાત હોઈ શકે છે. ',
+            '%provider_name% કન્ટેન્ટમાં જાહેરાત હોઈ શકે છે. ',
         },
         fallback: {
           text: 'આ કન્ટેન્ટ ઉપલબ્ધ નથી',

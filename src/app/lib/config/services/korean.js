@@ -227,8 +227,7 @@ export const service = {
           text: '경고: 타사 콘텐츠에는 광고가 포함될 수 있습니다',
           articleText:
             '경고: BBC는 외부 사이트의 콘텐츠에 대한 책임을 지지 않습니다. ',
-          articleAdditionalText:
-            ' %provider_name%는 광고를 포함할 수 있습니다.',
+          articleAdditionalText: '%provider_name%는 광고를 포함할 수 있습니다.',
         },
         fallback: {
           text: '콘텐츠를 불러올 수 없습니다',

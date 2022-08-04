@@ -237,7 +237,7 @@ export const service = {
           textPrefixVisuallyHidden: 'Maelezo ya video, ',
           text: 'Onyo: Imetoka kwingine na inaweza kuwa na matangazo',
           articleText: 'Onyo: BBC haihusiki na maudhui ya nje',
-          articleAdditionalText: ' Mitandao ya kijamii inaweza beba matangazo',
+          articleAdditionalText: 'Mitandao ya kijamii inaweza beba matangazo',
         },
         fallback: {
           text: 'Haipatikani tena',
