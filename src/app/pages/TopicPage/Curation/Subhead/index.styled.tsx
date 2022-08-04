@@ -35,7 +35,7 @@ export default styled.a<{ service: string; script: string }>`
   svg {
     margin-inline-start: 0.5rem;
     fill: currentColor;
-    height: ${7 / 8}rem;
+    height: ${14 / 16}rem;
     position: relative;
   }
 `;
