@@ -11,12 +11,12 @@ import { STORY_PAGE } from '#app/routes/utils/pageTypes';
  * @param {Object} Configuration A configuration object.
  */
 const withContexts =
-  (Component, { isAmp, service = 'news' }) =>
+  (Component, { isAmp, service = 'news', pageType = STORY_PAGE }) =>
   props =>
     (
       <RequestContextProvider
         isAmp={isAmp}
-        pageType={STORY_PAGE}
+        pageType={pageType}
         service={service}
         pathname="/pathname"
       >

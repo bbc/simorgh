@@ -156,7 +156,7 @@ exports[`SocialEmbedContainer AMP should render correctly 1`] = `
 
 .emotion-8 {
   margin: 0;
-  background-color: #000000;
+  background-color: transparent;
 }
 
 .emotion-10 {
@@ -165,8 +165,8 @@ exports[`SocialEmbedContainer AMP should render correctly 1`] = `
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: #FFFFFF;
-  padding: 0.5rem;
+  color: #545658;
+  padding: 0.5rem 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -236,7 +236,7 @@ exports[`SocialEmbedContainer AMP should render correctly 1`] = `
             <span>
               Video caption, 
             </span>
-            Warning: Third party content may contain adverts
+            Warning: The BBC is not responsible for the content of external sites.
           </figcaption>
         </figure>
         <p
@@ -408,7 +408,7 @@ exports[`SocialEmbedContainer Canonical should render and unmount correctly 1`] 
 
 .emotion-8 {
   margin: 0;
-  background-color: #000000;
+  background-color: transparent;
 }
 
 .emotion-10 {
@@ -437,8 +437,8 @@ exports[`SocialEmbedContainer Canonical should render and unmount correctly 1`] 
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: #FFFFFF;
-  padding: 0.5rem;
+  color: #545658;
+  padding: 0.5rem 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -528,7 +528,7 @@ exports[`SocialEmbedContainer Canonical should render and unmount correctly 1`] 
           <span>
             Video caption, 
           </span>
-          Warning: Third party content may contain adverts
+          Warning: The BBC is not responsible for the content of external sites.
         </figcaption>
       </figure>
       <p
