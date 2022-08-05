@@ -27,9 +27,21 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
 
 .emotion-2 {
   position: relative;
-  max-width: 80rem;
-  margin: 0 auto;
+  max-width: 63.4rem;
+  margin: 0;
   background-color: #FFFFFF;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    margin: 0 0.8rem;
+  }
+}
+
+@media (min-width: 66rem) {
+  .emotion-2 {
+    margin: 0 auto;
+  }
 }
 
 .emotion-4 {
@@ -231,6 +243,8 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   display: inline-block;
   position: relative;
   z-index: 2;
+  -webkit-margin-end: 0.75rem;
+  margin-inline-end: 0.75rem;
 }
 
 @media (max-width: 37.4375rem) {
@@ -262,7 +276,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem;
+  padding: 0.75rem 0.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -327,7 +341,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem;
+  padding: 0.75rem 0.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -819,9 +833,21 @@ exports[`Navigation Container should correctly render amp navigation on non-home
 
 .emotion-2 {
   position: relative;
-  max-width: 80rem;
-  margin: 0 auto;
+  max-width: 63.4rem;
+  margin: 0;
   background-color: #FFFFFF;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    margin: 0 0.8rem;
+  }
+}
+
+@media (min-width: 66rem) {
+  .emotion-2 {
+    margin: 0 auto;
+  }
 }
 
 .emotion-4 {
@@ -1018,6 +1044,8 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   display: inline-block;
   position: relative;
   z-index: 2;
+  -webkit-margin-end: 0.75rem;
+  margin-inline-end: 0.75rem;
 }
 
 @media (max-width: 37.4375rem) {
@@ -1049,7 +1077,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem;
+  padding: 0.75rem 0.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1521,9 +1549,21 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
 
 .emotion-2 {
   position: relative;
-  max-width: 80rem;
-  margin: 0 auto;
+  max-width: 63.4rem;
+  margin: 0;
   background-color: #FFFFFF;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    margin: 0 0.8rem;
+  }
+}
+
+@media (min-width: 66rem) {
+  .emotion-2 {
+    margin: 0 auto;
+  }
 }
 
 .emotion-4 {
@@ -1720,6 +1760,8 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   display: inline-block;
   position: relative;
   z-index: 2;
+  -webkit-margin-end: 0.75rem;
+  margin-inline-end: 0.75rem;
 }
 
 @media (max-width: 37.4375rem) {
@@ -1751,7 +1793,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem;
+  padding: 0.75rem 0.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2217,9 +2259,21 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
 
 .emotion-2 {
   position: relative;
-  max-width: 80rem;
-  margin: 0 auto;
+  max-width: 63.4rem;
+  margin: 0;
   background-color: #FFFFFF;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    margin: 0 0.8rem;
+  }
+}
+
+@media (min-width: 66rem) {
+  .emotion-2 {
+    margin: 0 auto;
+  }
 }
 
 .emotion-4 {
@@ -2350,6 +2404,8 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   display: inline-block;
   position: relative;
   z-index: 2;
+  -webkit-margin-end: 0.75rem;
+  margin-inline-end: 0.75rem;
 }
 
 @media (max-width: 37.4375rem) {
@@ -2381,7 +2437,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem;
+  padding: 0.75rem 0.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2446,7 +2502,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem;
+  padding: 0.75rem 0.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2983,9 +3039,21 @@ exports[`Navigation Container should correctly render canonical navigation on no
 
 .emotion-2 {
   position: relative;
-  max-width: 80rem;
-  margin: 0 auto;
+  max-width: 63.4rem;
+  margin: 0;
   background-color: #FFFFFF;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    margin: 0 0.8rem;
+  }
+}
+
+@media (min-width: 66rem) {
+  .emotion-2 {
+    margin: 0 auto;
+  }
 }
 
 .emotion-4 {
@@ -3116,6 +3184,8 @@ exports[`Navigation Container should correctly render canonical navigation on no
   display: inline-block;
   position: relative;
   z-index: 2;
+  -webkit-margin-end: 0.75rem;
+  margin-inline-end: 0.75rem;
 }
 
 @media (max-width: 37.4375rem) {
@@ -3147,7 +3217,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem;
+  padding: 0.75rem 0.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -3659,9 +3729,21 @@ exports[`Navigation Container should correctly render canonical navigation on no
 
 .emotion-2 {
   position: relative;
-  max-width: 80rem;
-  margin: 0 auto;
+  max-width: 63.4rem;
+  margin: 0;
   background-color: #FFFFFF;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    margin: 0 0.8rem;
+  }
+}
+
+@media (min-width: 66rem) {
+  .emotion-2 {
+    margin: 0 auto;
+  }
 }
 
 .emotion-4 {
@@ -3792,6 +3874,8 @@ exports[`Navigation Container should correctly render canonical navigation on no
   display: inline-block;
   position: relative;
   z-index: 2;
+  -webkit-margin-end: 0.75rem;
+  margin-inline-end: 0.75rem;
 }
 
 @media (max-width: 37.4375rem) {
@@ -3823,7 +3907,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem;
+  padding: 0.75rem 0.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {

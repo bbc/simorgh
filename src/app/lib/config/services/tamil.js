@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
 import tamil from '#psammead/gel-foundations/src/scripts/tamil';
-import { tamil as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/tamil';
 import {
   F_NOTO_SANS_TAMIL_BOLD,
   F_NOTO_SANS_TAMIL_REGULAR,

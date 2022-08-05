@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
 import arabic from '#psammead/gel-foundations/src/scripts/arabic';
-import { pashto as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/pashto';
 import {
   F_REITH_QALAM_REGULAR,
   F_REITH_QALAM_BOLD,

@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
-import { azeri as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/azeri';
 import latinDiacritics from '#psammead/gel-foundations/src/scripts/latin-with-diacritics';
 import '#psammead/moment-timezone-include/tz/Asia/Baku';
 import '#psammead/psammead-locales/moment/az';
