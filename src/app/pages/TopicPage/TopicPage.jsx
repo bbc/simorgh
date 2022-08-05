@@ -71,6 +71,8 @@ const TopicPage = ({ pageData }) => {
   const { enabled: adsEnabled } = useToggle('ads');
   const { showAdsBasedOnLocation } = useContext(RequestContext);
 
+  // This needs changed. We are currently mapping over each curation,
+  // not each summary within each curation
   const promoEntities = curations.map(promo => ({
     '@type': 'Article',
     name: promo.title,

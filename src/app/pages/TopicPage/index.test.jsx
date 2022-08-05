@@ -9,6 +9,7 @@ import {
   pidginMultipleItems,
   amharicSingleItem,
   mundoWithBadgeAndDescr,
+  mundoMultipleCurations,
   amharicOnlyTitle,
 } from './fixtures';
 
@@ -44,7 +45,7 @@ const TopicPageWithContext = ({
   </BrowserRouter>
 );
 
-describe('A11y', () => {
+describe('Topic Page', () => {
   it('should not render an unordered list when there is only one promo', () => {
     const { queryByRole } = render(
       <TopicPageWithContext
@@ -60,6 +61,17 @@ describe('A11y', () => {
     const { container, queryByRole } = render(<TopicPageWithContext />);
     expect(queryByRole('list')).toBeInTheDocument();
     expect(container.getElementsByTagName('li').length).toEqual(4);
+  });
+
+  it('should render multiple curations', () => {
+    const { getAllByRole } = render(
+      <TopicPageWithContext
+        pageData={mundoMultipleCurations}
+        service="mundo"
+      />,
+    );
+    expect(getAllByRole('list').length).toEqual(2);
+    expect(getAllByRole('listitem').length).toEqual(4);
   });
 
   it('should render badge and description when they exist in data', () => {

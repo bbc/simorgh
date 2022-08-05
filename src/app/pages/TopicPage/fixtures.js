@@ -16,7 +16,7 @@ export const amharicSingleItem = {
       ],
       activePage: 1,
       pageCount: 1,
-      curationId: 'urn:bbc:vivo:curation:bf45c519-cfee-4627-812f-41759cdeb30c',
+      curationId: 'urn:bbc:vivo:curation:bf45c519-cfee-4627-832f-41759cdeb30c',
       curationType: 'vivo-stream',
       visualProminence: 'NORMAL',
     },
@@ -84,6 +84,95 @@ export const pidginMultipleItems = {
   metadata: { type: 'Topic' },
 };
 
+export const mundoMultipleCurations = {
+  title: 'Colombia Peace Agreement',
+  description: 'Peace agreement between the Colombian government and FARC',
+  imageData: {
+    url: 'https://ichef.bbci.co.uk/news/png/480/cpsdevpb/162f/test/04adc6f0-1312-11ed-adc3-595fb3bc204b.png',
+    urlTemplate:
+      'https://ichef.bbci.co.uk/news/png/{width}/cpsdevpb/162f/test/04adc6f0-1312-11ed-adc3-595fb3bc204b.png',
+    originalSize: { width: 456, height: 456 },
+    altText: 'Highland Cow',
+    copyright: 'RM',
+    type: 'badge',
+  },
+  curations: [
+    {
+      summaries: [
+        {
+          title: 'El poder del "chilango" llegó a Londres 14',
+          type: 'article',
+          firstPublished: '2016-05-05T07:38:30.000Z',
+          link: 'https://www.bbc.com/mundo/vert-earth-23038377',
+          imageUrl:
+            'https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/17654/test/_63482859_orange1.jpg',
+          description:
+            'A Los de Abajo los encontramos en el legendario Marquee de Londres, casa de grandes como Jimi Hendrix, U2, REM y The Who.',
+          imageAlt: 'Orange 1',
+          id: 'ae7c9f51-3144-ba4b-a881-f88822b36c8c',
+        },
+        {
+          title:
+            'El conflictivo pasado con Venezuela de Rex Tillerson, nuevo secretario de Estado de EEUU',
+          type: 'article',
+          firstPublished: '2017-02-03T11:26:55.000Z',
+          link: 'https://www.bbc.com/mundo/23100317',
+          imageUrl:
+            'https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/167B2/test/_63528029_036820129-1.jpg',
+          description:
+            'Es posiblemente en lo único que se ponen de acuerdo gobierno y oposición en Venezuela: ambos tienen esperanzas en una mejor relación con Estados Unidos y que eso les ayude en sus objetivos contrapuestos.',
+          imageAlt:
+            'ExxonMobil Chairman and CEO Rex Tillerson speaks during the IHS CERAWeek 2015 energy conference in Houston, Texas April 21, 2015',
+          id: 'ff4f3677-0f70-574e-b129-6b3396788390',
+        },
+      ],
+      activePage: 1,
+      pageCount: 1,
+      curationId: 'urn:bbc:tipo:list:d0348c91-39f5-4224-91cf-6ca9f2812376',
+      curationType: 'tipo-curation',
+      position: 0,
+      visualProminence: 'NORMAL',
+    },
+    {
+      summaries: [
+        {
+          title: 'El video de prueba',
+          type: 'video',
+          firstPublished: '2022-05-12T10:41:21.000Z',
+          link: 'https://www.bbc.com/mundo/23048701',
+          imageUrl:
+            'https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/FA0D/test/_63931046_p00wjk8v.jpg',
+          description: 'Es porque le falta el sumario?',
+          imageAlt: 'Al Tag',
+          id: 'c696c8a1-8939-3e4b-b87b-5aa1de1b4c96',
+        },
+        {
+          title: 'El video de prueba',
+          type: 'video',
+          firstPublished: '2022-05-12T10:41:21.000Z',
+          link: 'https://www.bbc.com/mundo/23048701',
+          imageUrl:
+            'https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/FA0D/test/_63931046_p00wjk8v.jpg',
+          description: 'Es porque le falta el sumario?',
+          imageAlt: 'Al Tag',
+          id: 'c696c8a1-8939-34k2-b87b-5aa1de1b4c96',
+        },
+      ],
+      activePage: 1,
+      pageCount: 1,
+      curationId: 'urn:bbc:vivo:curation:22f2633b-f31e-4195-81d6-5dd5f766ca42',
+      curationType: 'vivo-stream',
+      position: 1,
+      title: 'Video',
+      visualProminence: 'NORMAL',
+    },
+  ],
+  activePage: null,
+  pageCount: null,
+  variantTopicId: null,
+  contentType: 'application/json; charset=utf-8',
+};
+
 export const mundoWithBadgeAndDescr = {
   title: 'Colombia Peace Agreement',
   description: 'Peace agreement between the Colombian government and FARC',
@@ -135,7 +224,7 @@ export const mundoWithBadgeAndDescr = {
       ],
       activePage: 1,
       pageCount: 1,
-      curationId: 'urn:bbc:vivo:curation:bf45c519-cfee-4627-812f-41759cdeb30c',
+      curationId: 'urn:bbc:vivo:curation:bf45c519-cfee-4627-812f-67800cdeb30c',
       curationType: 'vivo-stream',
       visualProminence: 'NORMAL',
     },
@@ -160,7 +249,7 @@ export const amharicOnlyTitle = {
       ],
       activePage: 1,
       pageCount: 1,
-      curationId: 'urn:bbc:vivo:curation:bf45c519-cfee-4627-812f-41759cdeb30c',
+      curationId: 'urn:bbc:vivo:curation:bf45c519-cfee-4627-812f-54329cdeb30c',
       curationType: 'vivo-stream',
       visualProminence: 'NORMAL',
     },
