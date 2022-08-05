@@ -15,7 +15,7 @@ import {
 } from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_5_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 
 import { AmpCookieSettingsButton } from '#containers/ConsentBanner/Banner/cookie.amp';
@@ -36,7 +36,7 @@ const SitewideLinksWrapper = styled.div`
 `;
 
 const ConstrainedWrapper = styled.div`
-  max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
+  max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
   margin: 0 auto;
   ${({ trustProjectLink }) =>
     trustProjectLink && `padding-top: ${GEL_SPACING};`}

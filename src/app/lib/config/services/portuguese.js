@@ -11,7 +11,7 @@ import {
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_LIGHT,
 } from '#psammead/psammead-styles/src/fonts';
-import { portuguese as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/portuguese';
 import '#psammead/moment-timezone-include/tz/America/Sao_Paulo';
 import '#psammead/psammead-locales/moment/pt-br';
 import withContext from '../../../contexts/utils/withContext';
