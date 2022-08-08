@@ -3,7 +3,7 @@
 exports[`BrandContainer should render correctly 1`] = `
 .emotion-1 {
   background-color: #B80000;
-  min-height: 2.5rem;
+  height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
   position: relative;
@@ -12,8 +12,14 @@ exports[`BrandContainer should render correctly 1`] = `
 
 @media (min-width: 25rem) {
   .emotion-1 {
-    min-height: 3.25rem;
+    height: 3.5rem;
     padding: 0 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    height: 4rem;
   }
 }
 
@@ -28,6 +34,7 @@ exports[`BrandContainer should render correctly 1`] = `
 }
 
 .emotion-3 {
+  height: 100%;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -44,7 +51,7 @@ exports[`BrandContainer should render correctly 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  max-width: 78rem;
+  max-width: 63rem;
   margin: 0 auto;
 }
 
@@ -55,49 +62,44 @@ exports[`BrandContainer should render correctly 1`] = `
 }
 
 .emotion-5 {
-  display: inline-block;
-  width: 100%;
-  max-width: 10.359862550698512rem;
-  min-width: 6.906575033799008rem;
-  -webkit-flex: 1 1 6.906575033799008rem;
-  -ms-flex: 1 1 6.906575033799008rem;
-  flex: 1 1 6.906575033799008rem;
-  -ms-flex-preferred-size: 10.359862550698512rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  bottom: 0.125rem;
+  padding-top: 0.125rem;
 }
 
-@media (max-width: 14.9375rem) {
-  .emotion-5 {
-    display: block;
-  }
+.emotion-5:hover,
+.emotion-5:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.25rem solid #FFFFFF;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-7 {
   box-sizing: content-box;
   color: #FFFFFF;
   fill: currentColor;
-  padding-top: 0.625rem;
-  padding-bottom: 0.375rem;
-  height: 1.5rem;
-  width: 100%;
-  max-width: 10.359862550698512rem;
-  min-width: 6.906575033799008rem;
-  -webkit-flex: 1 1 6.906575033799008rem;
-  -ms-flex: 1 1 6.906575033799008rem;
-  flex: 1 1 6.906575033799008rem;
-  -ms-flex-preferred-size: 10.359862550698512rem;
+  height: 1.25rem;
 }
 
 @media (min-width: 25rem) {
   .emotion-7 {
-    padding-top: 1rem;
-    padding-bottom: 0.75rem;
+    height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-7 {
-    padding-top: 1.25rem;
-    padding-bottom: 1rem;
+    height: 1.875rem;
   }
 }
 
@@ -105,14 +107,6 @@ exports[`BrandContainer should render correctly 1`] = `
   .emotion-7 {
     fill: windowText;
   }
-}
-
-.emotion-6:hover .emotion-7,
-.emotion-6:focus .emotion-7 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-bottom: 0.25rem solid #FFFFFF;
-  margin-bottom: -0.25rem;
 }
 
 .emotion-9 {
@@ -142,7 +136,7 @@ exports[`BrandContainer should render correctly 1`] = `
           aria-hidden="true"
           class="emotion-7 emotion-8"
           focusable="false"
-          height="24"
+          height="32"
           viewBox="0 0 153.2569 22.19"
           xmlns="http://www.w3.org/2000/svg"
         >
