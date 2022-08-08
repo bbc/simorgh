@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { ThemeProvider, useTheme, css, Global } from '@emotion/react';
 import { node, shape, bool, number } from 'prop-types';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
@@ -15,7 +14,7 @@ import FooterContainer from '#containers/Footer';
 import ManifestContainer from '#containers/Manifest';
 import ServiceWorkerContainer from '#containers/ServiceWorker';
 import { ServiceContext } from '../contexts/ServiceContext';
-import getTheme from '../theming/getTheme';
+import ThemeProvider from '../components/ThemeProvider';
 
 const Wrapper = styled.div`
   min-height: 100vh;
@@ -30,21 +29,8 @@ const Content = styled.div`
   flex-grow: 1;
 `;
 
-const FontFacesStyles = () => {
-  const { typography } = useTheme();
-
-  return (
-    <Global
-      styles={css`
-        ${typography.fontFaces.join('\n')};
-      `}
-    />
-  );
-};
-
 const PageWrapper = ({ children, pageData, status }) => {
   const { service } = useContext(ServiceContext);
-
   const isDarkMode = pathOr(false, ['darkMode'], pageData);
   const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
   const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);
@@ -55,9 +41,8 @@ const PageWrapper = ({ children, pageData, status }) => {
 
   return (
     <>
-      <ThemeProvider theme={getTheme(service)}>
+      <ThemeProvider service={service}>
         <GlobalStyles />
-        <FontFacesStyles />
         <ServiceWorkerContainer />
         <ManifestContainer />
         <WebVitals pageType={pageType} />
