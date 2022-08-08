@@ -28,7 +28,7 @@ describe('defaultPageWrapper', () => {
     let container;
 
     await act(async () => {
-      container = await render(
+      ({ container } = await render(
         <ServiceContextProvider service="news">
           <RequestContext.Provider value={{ env: 'test' }}>
             <ToggleContext.Provider value={{ toggleState: defaultToggles }}>
@@ -36,8 +36,9 @@ describe('defaultPageWrapper', () => {
             </ToggleContext.Provider>
           </RequestContext.Provider>
         </ServiceContextProvider>,
-      ).container;
+      ));
     });
+
     expect(container).toMatchSnapshot();
   });
 });
