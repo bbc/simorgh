@@ -344,7 +344,6 @@ export const service = {
       copyrightText:
         'BBC. बाहरी साइटों की सामग्री के लिए बीबीसी ज़िम्मेदार नहीं है.',
     },
-    fonts: [],
     timezone: 'Asia/Kolkata',
     navigation: [
       {

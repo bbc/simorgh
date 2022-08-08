@@ -322,7 +322,6 @@ export const service = {
       copyrightText:
         "BBC. La BBC n'est pas responsable du contenu des sites externes.",
     },
-    fonts: [],
     timezone: 'GMT',
     navigation: [
       {

@@ -1,7 +1,6 @@
 import { GHOST, WHITE, BLUEJAY, POSTBOX_30 } from '../colours';
 import latin from '../typography/scripts/latin';
-import { REITH_SANS_BOLD, REITH_SANS_REGULAR } from '../typography/fontFaces';
-import { REITH_SANS } from '../typography/fontFamilies';
+import { HELMET } from '../typography/fontFamilies';
 import withThemeProvider from '../withThemeProvider';
 
 const pidginTheme = {
@@ -15,9 +14,9 @@ const pidginTheme = {
   typography: {
     script: latin,
     fontFamilyVariants: {
-      primary: REITH_SANS,
+      primary: HELMET,
     },
-    fontFaces: [REITH_SANS_BOLD, REITH_SANS_REGULAR],
+    fontFaces: [],
   },
 };
 

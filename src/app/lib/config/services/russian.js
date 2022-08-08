@@ -5,12 +5,6 @@ import {
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
 import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
-import {
-  F_REITH_SANS_BOLD,
-  F_REITH_SANS_REGULAR,
-  F_REITH_SERIF_MEDIUM,
-  F_REITH_SERIF_LIGHT,
-} from '#psammead/psammead-styles/src/fonts';
 import { russian as brandSVG } from '#psammead/psammead-assets/src/svgs';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ru';
@@ -362,12 +356,6 @@ export const service = {
       copyrightText:
         'BBC. Би-би-си не несет ответственности за содержание других сайтов.',
     },
-    fonts: [
-      F_REITH_SANS_BOLD,
-      F_REITH_SANS_REGULAR,
-      F_REITH_SERIF_MEDIUM,
-      F_REITH_SERIF_LIGHT,
-    ],
     timezone: 'GMT',
     navigation: [
       {

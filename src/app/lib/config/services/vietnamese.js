@@ -302,7 +302,6 @@ export const service = {
       copyrightText:
         'BBC. BBC không chịu trách nhiệm nội dung các trang ngoài.',
     },
-    fonts: [],
     timezone: 'Asia/Ho_Chi_Minh',
     navigation: [
       {

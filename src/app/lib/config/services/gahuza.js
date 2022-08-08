@@ -324,7 +324,6 @@ export const service = {
       ],
       copyrightText: 'BBC. BBC ntibazwa ibivuye ku zindi mbuga.',
     },
-    fonts: [],
     timezone: 'GMT',
     navigation: [
       {

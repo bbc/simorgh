@@ -307,7 +307,6 @@ export const service = {
       copyrightText:
         'BBC. BBC kò mọ̀ nípa àwọn ohun tí ó wà ní àwọn ojú òpó tí ó wà ní ìta.',
     },
-    fonts: [],
     timezone: 'Africa/Lagos',
     navigation: [
       {

@@ -6,7 +6,6 @@ import {
 } from '#psammead/psammead-styles/src/colours';
 import devanagariAndGurmukhi from '#psammead/gel-foundations/src/scripts/devanagari-and-gurmukhi';
 import { telugu as brandSVG } from '#psammead/psammead-assets/src/svgs';
-import { F_MALLANNA_REGULAR } from '#psammead/psammead-styles/src/fonts';
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/te';
@@ -312,7 +311,6 @@ export const service = {
       copyrightText:
         ' BBC. ఇతర వెబ్‌సైట్లలో సమాచారానికి బీబీసీ బాధ్యత వహించదు.',
     },
-    fonts: [F_MALLANNA_REGULAR],
     timezone: 'Asia/Kolkata',
     navigation: [
       {

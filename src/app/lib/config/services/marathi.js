@@ -322,7 +322,6 @@ export const service = {
       copyrightText:
         'BBC. बीबीसी बाह्य इंटरनेट साइट्सच्या सामग्रीसाठी बीबीसी जबाबदार नाही. बाह्य लिंक्सबद्दल आम्हाल काय वाटतं? इथे वाचा.',
     },
-    fonts: [],
     timezone: 'Asia/Kolkata',
     navigation: [
       {

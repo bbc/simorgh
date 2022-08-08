@@ -43,7 +43,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Domot',
-    fonts: [],
     noBylinesPolicy:
       'https://www.bbc.com/pidgin/institutional-48528766#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/pidgin/institutional-48528766',

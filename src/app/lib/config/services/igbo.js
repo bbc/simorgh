@@ -43,7 +43,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Ogbako',
-    fonts: [],
     noBylinesPolicy:
       'https://www.bbc.com/igbo/institutional-48529074#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/igbo/institutional-48529074',

@@ -5,12 +5,6 @@ import {
 } from '#psammead/psammead-styles/src/colours';
 import { newsround as brandSVG } from '#psammead/psammead-assets/src/svgs';
 import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
-import {
-  F_REITH_SANS_BOLD,
-  F_REITH_SANS_REGULAR,
-  F_REITH_SERIF_MEDIUM,
-  F_REITH_SERIF_LIGHT,
-} from '#psammead/psammead-styles/src/fonts';
 import '#psammead/psammead-locales/moment/en-gb';
 import '#psammead/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
@@ -273,12 +267,6 @@ export const service = {
       copyrightText:
         'BBC. The BBC is not responsible for the content of external sites.',
     },
-    fonts: [
-      F_REITH_SANS_BOLD,
-      F_REITH_SANS_REGULAR,
-      F_REITH_SERIF_MEDIUM,
-      F_REITH_SERIF_LIGHT,
-    ],
     timezone: 'Europe/London',
     navigation: [],
   },

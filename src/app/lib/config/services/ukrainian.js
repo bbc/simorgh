@@ -325,7 +325,6 @@ const baseServiceConfig = {
     ],
     copyrightText: 'BBC. BBC не несе відповідальності за контент інших сайтів.',
   },
-  fonts: [],
   timezone: 'GMT',
   navigation: [
     {

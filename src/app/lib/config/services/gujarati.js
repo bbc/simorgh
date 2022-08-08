@@ -308,7 +308,6 @@ export const service = {
       ],
       copyrightText: 'BBC. બહારની વેબસાઇટ્સની સામગ્રી માટે બીબીસી જવાબદાર નથી.',
     },
-    fonts: [],
     timezone: 'Asia/Kolkata',
     navigation: [
       {

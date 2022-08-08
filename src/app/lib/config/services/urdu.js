@@ -6,10 +6,6 @@ import {
 } from '#psammead/psammead-styles/src/colours';
 import arabic from '#psammead/gel-foundations/src/scripts/arabic';
 import { urdu as brandSVG } from '#psammead/psammead-assets/src/svgs';
-import {
-  F_REITH_QALAM_REGULAR,
-  F_REITH_QALAM_BOLD,
-} from '#psammead/psammead-styles/src/fonts';
 import '#psammead/moment-timezone-include/tz/Asia/Karachi';
 import '#psammead/psammead-locales/moment/ur';
 import withContext from '../../../contexts/utils/withContext';
@@ -331,7 +327,6 @@ export const service = {
       copyrightText:
         'بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں',
     },
-    fonts: [F_REITH_QALAM_REGULAR, F_REITH_QALAM_BOLD],
     timezone: 'Asia/Karachi',
     navigation: [
       {

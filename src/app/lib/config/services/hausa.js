@@ -333,7 +333,6 @@ export const service = {
       copyrightText:
         'BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba. ',
     },
-    fonts: [],
     timezone: 'GMT',
     navigation: [
       {

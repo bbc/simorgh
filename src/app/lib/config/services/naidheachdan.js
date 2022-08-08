@@ -5,11 +5,6 @@ import {
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
 import latinDiacritics from '#psammead/gel-foundations/src/scripts/latin-with-diacritics';
-import {
-  F_REITH_SANS_BOLD,
-  F_REITH_SANS_REGULAR,
-  F_REITH_SERIF_MEDIUM,
-} from '#psammead/psammead-styles/src/fonts';
 import { naidheachdan as brandSVG } from '#psammead/psammead-assets/src/svgs';
 import '#psammead/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
@@ -280,7 +275,6 @@ export const service = {
       copyrightText:
         "BBC. Chan eil am BBC an urra ris na tha a' nochdadh air làraichean-lìn air an taobh a-muigh",
     },
-    fonts: [F_REITH_SANS_BOLD, F_REITH_SANS_REGULAR, F_REITH_SERIF_MEDIUM],
     timezone: 'Europe/London',
     navigation: [
       {
