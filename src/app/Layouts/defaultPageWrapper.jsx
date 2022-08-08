@@ -40,22 +40,20 @@ const PageWrapper = ({ children, pageData, status }) => {
     : path(['metadata', 'type'], pageData);
 
   return (
-    <>
-      <ThemeProvider service={service}>
-        <GlobalStyles />
-        <ServiceWorkerContainer />
-        <ManifestContainer />
-        <WebVitals pageType={pageType} />
-        <Wrapper id="main-wrapper" darkMode={isDarkMode}>
-          <HeaderContainer
-            scriptSwitchId={scriptSwitchId}
-            renderScriptSwitch={renderScriptSwitch}
-          />
-          <Content>{children}</Content>
-          <FooterContainer />
-        </Wrapper>
-      </ThemeProvider>
-    </>
+    <ThemeProvider service={service}>
+      <GlobalStyles />
+      <ServiceWorkerContainer />
+      <ManifestContainer />
+      <WebVitals pageType={pageType} />
+      <Wrapper id="main-wrapper" darkMode={isDarkMode}>
+        <HeaderContainer
+          scriptSwitchId={scriptSwitchId}
+          renderScriptSwitch={renderScriptSwitch}
+        />
+        <Content>{children}</Content>
+        <FooterContainer />
+      </Wrapper>
+    </ThemeProvider>
   );
 };
 
