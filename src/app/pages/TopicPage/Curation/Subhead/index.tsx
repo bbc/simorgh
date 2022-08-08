@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { PropsWithChildren, useContext } from 'react';
 
 import Link from './index.styled';
 
@@ -7,11 +7,10 @@ import { LeftChevron, RightChevron } from '../../icons';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 interface Props {
-  children: React.ReactNode;
   href?: string;
 }
 
-const Subhead = ({ children, href }: Props) => {
+const Subhead = ({ children, href }: PropsWithChildren<Props>) => {
   const { service, script, dir } = useContext(ServiceContext) as {
     script: string;
     service: string;
