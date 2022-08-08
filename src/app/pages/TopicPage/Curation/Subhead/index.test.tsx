@@ -16,18 +16,20 @@ const SubheadWithContext = ({
 
 describe('Curation Subhead Component', () => {
   it('should render a link correctly with the url contained in the href', () => {
-    render(<SubheadWithContext>My Text</SubheadWithContext>);
+    const { container } = render(
+      <SubheadWithContext>My Text</SubheadWithContext>
+    );
 
-    const headingElement = document.querySelector('h2');
+    const headingElement = container.querySelector('h2');
     expect(headingElement.innerHTML).toBe('My Text');
   });
 
   it('should render children within an h2', () => {
-    render(
+    const { container } = render(
       <SubheadWithContext href="https://bbc.com">My Text</SubheadWithContext>,
     );
 
-    const anchorElement = document.querySelector('a');
+    const anchorElement = container.querySelector('a');
     expect(anchorElement.getAttribute('href')).toBe('https://bbc.com');
   });
 });
