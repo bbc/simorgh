@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
 import latinDiacritics from '#psammead/gel-foundations/src/scripts/latin-with-diacritics';
-import { portuguese as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/portuguese';
 import '#psammead/moment-timezone-include/tz/America/Sao_Paulo';
 import '#psammead/psammead-locales/moment/pt-br';
 import withContext from '../../../contexts/utils/withContext';

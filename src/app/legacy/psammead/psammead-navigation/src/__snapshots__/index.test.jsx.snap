@@ -21,9 +21,21 @@ exports[`Navigation should render correctly 1`] = `
 
 .emotion-2 {
   position: relative;
-  max-width: 80rem;
-  margin: 0 auto;
+  max-width: 63.4rem;
+  margin: 0;
   background-color: #FFFFFF;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    margin: 0 0.8rem;
+  }
+}
+
+@media (min-width: 66rem) {
+  .emotion-2 {
+    margin: 0 auto;
+  }
 }
 
 .emotion-4 {
@@ -43,6 +55,8 @@ exports[`Navigation should render correctly 1`] = `
   display: inline-block;
   position: relative;
   z-index: 2;
+  -webkit-margin-end: 0.75rem;
+  margin-inline-end: 0.75rem;
 }
 
 @media (max-width: 37.4375rem) {
@@ -74,7 +88,7 @@ exports[`Navigation should render correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem;
+  padding: 0.75rem 0.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -150,7 +164,7 @@ exports[`Navigation should render correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem;
+  padding: 0.75rem 0.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -303,9 +317,21 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
 
 .emotion-2 {
   position: relative;
-  max-width: 80rem;
-  margin: 0 auto;
+  max-width: 63.4rem;
+  margin: 0;
   background-color: #FFFFFF;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    margin: 0 0.8rem;
+  }
+}
+
+@media (min-width: 66rem) {
+  .emotion-2 {
+    margin: 0 auto;
+  }
 }
 
 .emotion-4 {
@@ -325,6 +351,8 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
   display: inline-block;
   position: relative;
   z-index: 2;
+  -webkit-margin-end: 0.75rem;
+  margin-inline-end: 0.75rem;
 }
 
 @media (max-width: 37.4375rem) {
@@ -356,7 +384,7 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem;
+  padding: 0.75rem 0.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -432,7 +460,7 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem;
+  padding: 0.75rem 0.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -579,9 +607,21 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
 
 .emotion-2 {
   position: relative;
-  max-width: 80rem;
-  margin: 0 auto;
+  max-width: 63.4rem;
+  margin: 0;
   background-color: #FFFFFF;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    margin: 0 0.8rem;
+  }
+}
+
+@media (min-width: 66rem) {
+  .emotion-2 {
+    margin: 0 auto;
+  }
 }
 
 .emotion-4 {
@@ -601,6 +641,8 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
   display: inline-block;
   position: relative;
   z-index: 2;
+  -webkit-margin-end: 0.75rem;
+  margin-inline-end: 0.75rem;
 }
 
 @media (max-width: 37.4375rem) {
@@ -632,7 +674,7 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem;
+  padding: 0.75rem 0.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -708,7 +750,7 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem;
+  padding: 0.75rem 0.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -894,9 +936,21 @@ exports[`Scrollable Navigation should render correctly 1`] = `
 
 .emotion-4 {
   position: relative;
-  max-width: 80rem;
-  margin: 0 auto;
+  max-width: 63.4rem;
+  margin: 0;
   background-color: #FFFFFF;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    margin: 0 0.8rem;
+  }
+}
+
+@media (min-width: 66rem) {
+  .emotion-4 {
+    margin: 0 auto;
+  }
 }
 
 .emotion-6 {
@@ -916,6 +970,8 @@ exports[`Scrollable Navigation should render correctly 1`] = `
   display: inline-block;
   position: relative;
   z-index: 2;
+  -webkit-margin-end: 0.75rem;
+  margin-inline-end: 0.75rem;
 }
 
 @media (max-width: 37.4375rem) {
@@ -947,7 +1003,7 @@ exports[`Scrollable Navigation should render correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem;
+  padding: 0.75rem 0.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1023,7 +1079,7 @@ exports[`Scrollable Navigation should render correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem;
+  padding: 0.75rem 0.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {

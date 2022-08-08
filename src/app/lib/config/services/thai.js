@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
 import thai from '#psammead/gel-foundations/src/scripts/thai';
-import { thai as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/thai';
 import '#psammead/moment-timezone-include/tz/Asia/Bangkok';
 import '#psammead/psammead-locales/moment/th';
 import withContext from '../../../contexts/utils/withContext';

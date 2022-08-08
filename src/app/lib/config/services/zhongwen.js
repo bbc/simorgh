@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
 import noAscendersOrDescenders from '#psammead/gel-foundations/src/scripts/no-ascenders-or-descenders';
-import { zhongwen as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/zhongwen';
 import '#psammead/moment-timezone-include/tz/GMT';
 import 'moment/locale/zh-cn';
 import withContext from '../../../contexts/utils/withContext';

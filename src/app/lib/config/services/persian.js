@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
-import { persian as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/persian';
 import arabic from '#psammead/gel-foundations/src/scripts/arabic';
 import 'moment/locale/fa';
 import '#psammead/moment-timezone-include/tz/GMT';

@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
 import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
-import { kyrgyz as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/kyrgyz';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ky';
 import withContext from '../../../contexts/utils/withContext';
