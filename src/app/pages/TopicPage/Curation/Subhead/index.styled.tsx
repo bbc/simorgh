@@ -8,7 +8,12 @@ import {
   C_GREY_10,
 } from '../../../../legacy/psammead/psammead-styles/src/colours';
 
-export default styled.a<{ service: string; script: string }>`
+interface Props {
+  service: string;
+  script: string;
+}
+
+export default styled.h2<Props>`
   ${({ service }) => getSansBold(service)}
   ${({ script }) => getDoublePica(script)}
   color: ${C_GREY_10};
@@ -19,8 +24,11 @@ export default styled.a<{ service: string; script: string }>`
     display: inline-block;
     position: relative;
   }
-  &:hover,
-  &:focus {
+  a:visited {
+    color: ${C_GREY_10};
+  }
+  a:hover,
+  a:focus {
     color: ${C_POSTBOX};
     span::after {
       bottom: ${3 / 16}rem;
