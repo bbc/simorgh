@@ -111,7 +111,7 @@
     "express": "4.18.0",
     "express-static-gzip": "2.1.5",
     "gnu-terry-pratchett": "0.0.2",
-    "helmet": "4.6.0",
+    "helmet": "5.1.1",
     "helmet-csp": "3.4.0",
     "intersection-observer": "0.12.0",
     "isarray": "2.0.5",
