@@ -17,8 +17,11 @@ export default styled.h2<Props>`
   ${({ service }) => getSansBold(service)}
   ${({ script }) => getDoublePica(script)}
   color: ${C_GREY_10};
-  text-decoration: none;
-  display: inline-block;
+  a {
+    color: ${C_GREY_10};
+    text-decoration: none;
+    display: inline-block;
+  }
 
   span {
     display: inline-block;
