@@ -17,7 +17,7 @@ const SubheadWithContext = ({
 describe('Curation Subhead Component', () => {
   it('should render a link correctly with the url contained in the href', () => {
     const { container } = render(
-      <SubheadWithContext>My Text</SubheadWithContext>
+      <SubheadWithContext>My Text</SubheadWithContext>,
     );
 
     const headingElement = container.querySelector('h2');
