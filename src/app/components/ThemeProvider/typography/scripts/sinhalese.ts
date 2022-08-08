@@ -1,212 +1,214 @@
+import pixelsToRem from '../../../../utilities/pixelsToRem';
+
 const sinhalese = {
   atlas: {
     groupA: {
-      fontSize: 78,
-      lineHeight: 84,
+      fontSize: pixelsToRem(78),
+      lineHeight: pixelsToRem(84),
     },
     groupB: {
-      fontSize: 96,
-      lineHeight: 104,
+      fontSize: pixelsToRem(96),
+      lineHeight: pixelsToRem(104),
     },
     groupD: {
-      fontSize: 140,
-      lineHeight: 148,
+      fontSize: pixelsToRem(140),
+      lineHeight: pixelsToRem(148),
     },
   },
   elephant: {
     groupA: {
-      fontSize: 60,
-      lineHeight: 64,
+      fontSize: pixelsToRem(60),
+      lineHeight: pixelsToRem(64),
     },
     groupB: {
-      fontSize: 78,
-      lineHeight: 84,
+      fontSize: pixelsToRem(78),
+      lineHeight: pixelsToRem(84),
     },
     groupD: {
-      fontSize: 116,
-      lineHeight: 124,
+      fontSize: pixelsToRem(116),
+      lineHeight: pixelsToRem(124),
     },
   },
   imperial: {
     groupA: {
-      fontSize: 50,
-      lineHeight: 54,
+      fontSize: pixelsToRem(50),
+      lineHeight: pixelsToRem(54),
     },
     groupB: {
-      fontSize: 53,
-      lineHeight: 72,
+      fontSize: pixelsToRem(53),
+      lineHeight: pixelsToRem(72),
     },
     groupD: {
-      fontSize: 77,
-      lineHeight: 104,
+      fontSize: pixelsToRem(77),
+      lineHeight: pixelsToRem(104),
     },
   },
   royal: {
     groupA: {
-      fontSize: 40,
-      lineHeight: 44,
+      fontSize: pixelsToRem(40),
+      lineHeight: pixelsToRem(44),
     },
     groupB: {
-      fontSize: 42,
-      lineHeight: 60,
+      fontSize: pixelsToRem(42),
+      lineHeight: pixelsToRem(60),
     },
     groupD: {
-      fontSize: 61,
-      lineHeight: 84,
+      fontSize: pixelsToRem(61),
+      lineHeight: pixelsToRem(84),
     },
   },
   foolscap: {
     groupA: {
-      fontSize: 32,
-      lineHeight: 36,
+      fontSize: pixelsToRem(32),
+      lineHeight: pixelsToRem(36),
     },
     groupB: {
-      fontSize: 32,
-      lineHeight: 44,
+      fontSize: pixelsToRem(32),
+      lineHeight: pixelsToRem(44),
     },
     groupD: {
-      fontSize: 45,
-      lineHeight: 60,
+      fontSize: pixelsToRem(45),
+      lineHeight: pixelsToRem(60),
     },
   },
   canon: {
     groupA: {
-      fontSize: 25,
-      lineHeight: 32,
+      fontSize: pixelsToRem(25),
+      lineHeight: pixelsToRem(32),
     },
     groupB: {
-      fontSize: 31,
-      lineHeight: 40,
+      fontSize: pixelsToRem(31),
+      lineHeight: pixelsToRem(40),
     },
     groupD: {
-      fontSize: 42,
-      lineHeight: 58,
+      fontSize: pixelsToRem(42),
+      lineHeight: pixelsToRem(58),
     },
   },
   trafalgar: {
     groupA: {
-      fontSize: 20,
-      lineHeight: 24,
+      fontSize: pixelsToRem(20),
+      lineHeight: pixelsToRem(24),
     },
     groupB: {
-      fontSize: 27,
-      lineHeight: 36,
+      fontSize: pixelsToRem(27),
+      lineHeight: pixelsToRem(36),
     },
     groupD: {
-      fontSize: 32,
-      lineHeight: 44,
+      fontSize: pixelsToRem(32),
+      lineHeight: pixelsToRem(44),
     },
   },
   paragon: {
     groupA: {
-      fontSize: 19,
-      lineHeight: 24,
+      fontSize: pixelsToRem(19),
+      lineHeight: pixelsToRem(24),
     },
     groupB: {
-      fontSize: 23,
-      lineHeight: 32,
+      fontSize: pixelsToRem(23),
+      lineHeight: pixelsToRem(32),
     },
     groupD: {
-      fontSize: 28,
-      lineHeight: 38,
+      fontSize: pixelsToRem(28),
+      lineHeight: pixelsToRem(38),
     },
   },
   doublePica: {
     groupA: {
-      fontSize: 18,
-      lineHeight: 22,
+      fontSize: pixelsToRem(18),
+      lineHeight: pixelsToRem(22),
     },
     groupB: {
-      fontSize: 21,
-      lineHeight: 30,
+      fontSize: pixelsToRem(21),
+      lineHeight: pixelsToRem(30),
     },
     groupD: {
-      fontSize: 24,
-      lineHeight: 34,
+      fontSize: pixelsToRem(24),
+      lineHeight: pixelsToRem(34),
     },
   },
   greatPrimer: {
     groupA: {
-      fontSize: 18,
-      lineHeight: 22,
+      fontSize: pixelsToRem(18),
+      lineHeight: pixelsToRem(22),
     },
     groupB: {
-      fontSize: 19,
-      lineHeight: 24,
+      fontSize: pixelsToRem(19),
+      lineHeight: pixelsToRem(24),
     },
     groupD: {
-      fontSize: 19,
-      lineHeight: 24,
+      fontSize: pixelsToRem(19),
+      lineHeight: pixelsToRem(24),
     },
   },
   bodyCopy: {
     groupA: {
-      fontSize: 18,
-      lineHeight: 28,
+      fontSize: pixelsToRem(18),
+      lineHeight: pixelsToRem(28),
     },
     groupB: {
-      fontSize: 18,
-      lineHeight: 28,
+      fontSize: pixelsToRem(18),
+      lineHeight: pixelsToRem(28),
     },
     groupD: {
-      fontSize: 18,
-      lineHeight: 28,
+      fontSize: pixelsToRem(18),
+      lineHeight: pixelsToRem(28),
     },
   },
   pica: {
     groupA: {
-      fontSize: 17,
-      lineHeight: 28,
+      fontSize: pixelsToRem(17),
+      lineHeight: pixelsToRem(28),
     },
     groupB: {
-      fontSize: 17,
-      lineHeight: 24,
+      fontSize: pixelsToRem(17),
+      lineHeight: pixelsToRem(24),
     },
     groupD: {
-      fontSize: 17,
-      lineHeight: 24,
+      fontSize: pixelsToRem(17),
+      lineHeight: pixelsToRem(24),
     },
   },
   longPrimer: {
     groupA: {
-      fontSize: 15,
-      lineHeight: 22,
+      fontSize: pixelsToRem(15),
+      lineHeight: pixelsToRem(22),
     },
     groupB: {
-      fontSize: 15,
-      lineHeight: 22,
+      fontSize: pixelsToRem(15),
+      lineHeight: pixelsToRem(22),
     },
     groupD: {
-      fontSize: 15,
-      lineHeight: 22,
+      fontSize: pixelsToRem(15),
+      lineHeight: pixelsToRem(22),
     },
   },
   brevier: {
     groupA: {
-      fontSize: 14,
-      lineHeight: 22,
+      fontSize: pixelsToRem(14),
+      lineHeight: pixelsToRem(22),
     },
     groupB: {
-      fontSize: 14,
-      lineHeight: 22,
+      fontSize: pixelsToRem(14),
+      lineHeight: pixelsToRem(22),
     },
     groupD: {
-      fontSize: 14,
-      lineHeight: 22,
+      fontSize: pixelsToRem(14),
+      lineHeight: pixelsToRem(22),
     },
   },
   minion: {
     groupA: {
-      fontSize: 13,
-      lineHeight: 22,
+      fontSize: pixelsToRem(13),
+      lineHeight: pixelsToRem(22),
     },
     groupB: {
-      fontSize: 13,
-      lineHeight: 22,
+      fontSize: pixelsToRem(13),
+      lineHeight: pixelsToRem(22),
     },
     groupD: {
-      fontSize: 13,
-      lineHeight: 22,
+      fontSize: pixelsToRem(13),
+      lineHeight: pixelsToRem(22),
     },
   },
 };
