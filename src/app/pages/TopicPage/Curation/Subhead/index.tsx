@@ -26,7 +26,7 @@ const Subhead = ({ children, href }: Props) => {
       )
     : React.Fragment;
   return (
-    <h2 id="content" tabIndex={-1}>
+    <h2>
       <Wrapper>{children}</Wrapper>
     </h2>
   );
