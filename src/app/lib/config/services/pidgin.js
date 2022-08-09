@@ -231,6 +231,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Wetin we call dis Video, ',
           text: 'Warning: Third party content may contain adverts',
+          articleText:
+            'Warning: Di BBC no dey responsible for di content of external sites.',
+          articleAdditionalText: '%provider_name% content fit contain adverts.',
         },
         fallback: {
           text: 'Content is not available',

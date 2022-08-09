@@ -231,6 +231,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: "Ibsa waa'ee viidiyoo, ",
           text: 'Hubachiisa: qabiyyeen qaama sadaffaa beeksisa qabaachuu malu',
+          articleText:
+            'Hubachiisa: Qabiyyee marsariitiiwwan alaatiif BBCn itti gaafatamummaa hin fudhatu.',
+          articleAdditionalText: "%provider_name% beeksisa qabaachuu danda'a.",
         },
         fallback: {
           text: 'Qabiyyeen kun hin argamne',

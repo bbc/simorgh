@@ -46,7 +46,7 @@ const SocialEmbedContainer = ({ blocks, source }) => {
   const {
     fallback: fallbackTranslations,
     skipLink: skipLinkTranslations,
-    caption: captionTranslations,
+    caption,
   } = createTranslations({ translations, index: oEmbedPosition });
 
   const fallback = {
@@ -61,8 +61,6 @@ const SocialEmbedContainer = ({ blocks, source }) => {
         ? `end-of-%provider%-content-${oEmbedPosition}`
         : `end-of-%provider%-content`,
   };
-
-  const caption = provider === 'youtube' ? captionTranslations : null;
 
   logger.info(SOCIAL_EMBED_RENDERED, {
     provider,

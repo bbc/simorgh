@@ -6,6 +6,10 @@ describe('createTranslations', () => {
       caption: {
         textPrefixVisuallyHidden: 'Título del video: ',
         text: 'Advertencia: El contenido de sitios externos y terceras partes puede contener publicidad',
+        articleText:
+          'Advertencia: La BBC no se hace responsable por el contenido de sitios externos.',
+        articleAdditionalText:
+          'Este contenido de %provider_name% puede contener publicidad.',
       },
       fallback: {
         text: 'Contenido no disponible',
@@ -26,6 +30,10 @@ describe('createTranslations', () => {
       caption: {
         textPrefixVisuallyHidden: 'Título del video: ',
         text: 'Advertencia: El contenido de sitios externos y terceras partes puede contener publicidad',
+        articleText:
+          'Advertencia: La BBC no se hace responsable por el contenido de sitios externos.',
+        articleAdditionalText:
+          'Este contenido de %provider_name% puede contener publicidad.',
       },
       fallback: {
         text: 'Contenido no disponible',
@@ -46,6 +54,9 @@ describe('createTranslations', () => {
       caption: {
         text: 'Warning: Third party content may contain adverts',
         textPrefixVisuallyHidden: 'Video caption, ',
+        articleAdditionalText: '%provider_name% content may contain adverts',
+        articleText:
+          'Warning: The BBC is not responsible for the content of external sites.',
       },
       fallback: {
         linkText: 'View content on %provider_name%',
