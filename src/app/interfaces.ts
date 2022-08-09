@@ -77,7 +77,7 @@ interface Spacings {
   FULL: number;
   DOUBLE: number;
   TRIPLE: number;
-  QUADRIPLE: number;
+  QUADRUPLE: number;
 }
 
 declare module '@emotion/react' {
