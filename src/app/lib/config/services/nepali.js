@@ -235,6 +235,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'भिडिओ क्याप्शन सुरु हुँदैछ, ',
           text: 'चेतावनी: तेस्रो पक्षको सामग्रीमा विज्ञापन हुनसक्छ',
+          articleText:
+            'चेतावनी: बाह्य वेबसाइटका सामग्रीप्रति बीबीसी जिम्मेवार हुने छैन।',
+          articleAdditionalText:
+            '%provider_name% का सामग्रीमा विज्ञापन हुन सक्छन्।',
         },
         fallback: {
           text: 'सामग्री उपलब्ध छैन',
