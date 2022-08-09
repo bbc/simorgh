@@ -204,6 +204,9 @@ export const mainTranslations = {
     caption: {
       textPrefixVisuallyHidden: 'Подпись к видео, ',
       text: 'Внимание: Контент других сайтов может содержать рекламу.',
+      articleText:
+        'Внимание: Би-би-си не несет ответственности за контент других сайтов.',
+      articleAdditionalText: 'Контент %provider_name% может содержать рекламу.',
     },
     fallback: {
       text: 'Контент недоступен',

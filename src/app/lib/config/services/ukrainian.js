@@ -248,6 +248,9 @@ const baseServiceConfig = {
       caption: {
         textPrefixVisuallyHidden: 'Підпис до відео, ',
         text: 'Увага: інші сайти можуть містити рекламу',
+        articleText:
+          'Увага: BBC не несе відповідальності за контент зовнішніх сайтів.',
+        articleAdditionalText: 'Контент %provider_name% може містити рекламу',
       },
       fallback: {
         text: 'Контент недоступний',
