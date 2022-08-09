@@ -28,7 +28,7 @@ const buildScript = ({
         '${applicationId}',
         '1.0.0',
         'eu-west-1',
-        ${SCRIPT_SRC},
+        '${SCRIPT_SRC}',
         {
           sessionSampleRate: ${sessionSampleRate},
           guestRoleArn: "${guestRoleArn}",
