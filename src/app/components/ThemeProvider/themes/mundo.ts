@@ -1,3 +1,4 @@
+import brandLogo from '../brandLogos/mundo';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../colours';
 import latin from '../typography/scripts/latin';
 import {
@@ -10,6 +11,7 @@ import { REITH_SANS, REITH_SERIF } from '../typography/fontFamilies';
 import withThemeProvider from '../withThemeProvider';
 
 const mundoTheme = {
+  brandLogo,
   colours: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,

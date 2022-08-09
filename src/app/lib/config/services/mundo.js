@@ -5,7 +5,6 @@ import {
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
 import latinDiacritics from '#psammead/gel-foundations/src/scripts/latin-with-diacritics';
-import brandSVG from '#lib/chameleonLogos/mundo';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/es';
 import withContext from '../../../contexts/utils/withContext';
@@ -255,7 +254,6 @@ export const service = {
       topStoriesTitle: 'Principales noticias',
       featuresAnalysisTitle: 'No te lo pierdas',
     },
-    brandSVG,
     mostRead: {
       header: 'Más leídas',
       lastUpdated: 'Última actualización:',

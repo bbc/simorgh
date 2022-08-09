@@ -73,6 +73,13 @@ interface MediaQueries {
   GROUP_5_MIN_WIDTH: string;
 }
 
+interface Spacings {
+  FULL: number;
+  DOUBLE: number;
+  TRIPLE: number;
+  QUADRIPLE: number;
+}
+
 export interface Typography {
   fontFaces: {
     '@font-face'?: {
@@ -305,6 +312,7 @@ declare module '@emotion/react' {
   export interface Theme {
     colours: Colours;
     mq: MediaQueries;
+    spacings: Spacings;
     typography: Typography;
   }
 }

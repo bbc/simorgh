@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
 import Brand from '#psammead/psammead-brand/src';
 import { bool, node, oneOfType, func, shape, any } from 'prop-types';
@@ -15,13 +16,14 @@ const StyledBrand = styled(Brand)`
 `;
 
 const BrandContainer = ({ skipLink, scriptLink, brandRef, ...props }) => {
-  const { product, serviceLocalizedName, brandSVG, service, theming } =
+  const { brandLogo } = useTheme();
+  const { product, serviceLocalizedName, service, theming } =
     useContext(ServiceContext);
 
   const { brandBackgroundColour, brandLogoColour } = theming;
   const svgMaxHeight = 24;
   const svgMinHeight = 16;
-  const svgRatio = brandSVG && brandSVG.ratio;
+  const svgRatio = brandLogo && brandLogo.ratio;
   const minWidth = svgRatio * svgMinHeight;
   const maxWidth = svgRatio * svgMaxHeight;
 
@@ -34,7 +36,7 @@ const BrandContainer = ({ skipLink, scriptLink, brandRef, ...props }) => {
       svgHeight={svgMaxHeight}
       minWidth={minWidth}
       maxWidth={maxWidth}
-      svg={brandSVG}
+      svg={brandLogo}
       url={`/${service}`}
       skipLink={skipLink}
       scriptLink={scriptLink}

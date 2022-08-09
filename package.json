@@ -34,7 +34,10 @@
     "minimist": "1.2.6",
     "async": "3.2.3",
     "terser": "5.14.2",
-    "moment": "2.29.4"
+    "moment": "2.29.4",
+    "@testing-library/dom": "8.16.1",
+    "@types/react": "17.0.2",
+    "@types/react-dom": "17.0.2"
   },
   "scripts": {
     "type-check": "tsc",
@@ -167,14 +170,12 @@
     "@storybook/manager-webpack5": "6.4.19",
     "@storybook/react": "6.4.22",
     "@storybook/theming": "6.4.22",
-    "@testing-library/dom": "8.13.0",
     "@testing-library/jest-dom": "5.16.4",
     "@testing-library/react": "12.1.5",
     "@testing-library/react-hooks": "8.0.0",
     "@types/jest": "26.0.24",
     "@types/loadable__component": "5.13.4",
-    "@types/react": "18.0.15",
-    "@types/react-dom": "18.0.6",
+    "@types/testing-library__react": "10.2.0",
     "@typescript-eslint/eslint-plugin": "5.31.0",
     "@typescript-eslint/parser": "5.31.0",
     "amphtml-validator": "1.0.35",
