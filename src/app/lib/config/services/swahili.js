@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
 import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
-import { swahili as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/swahili';
 import '#psammead/moment-timezone-include/tz/Africa/Nairobi';
 import '#psammead/psammead-locales/moment/sw';
 import withContext from '../../../contexts/utils/withContext';
@@ -321,6 +321,10 @@ export const service = {
       {
         title: 'Habari',
         url: '/swahili',
+      },
+      {
+        title: 'Uchaguzi Kenya',
+        url: '/swahili/habari-61042508',
       },
       {
         title: 'Michezo',
