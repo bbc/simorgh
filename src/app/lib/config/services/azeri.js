@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import { azeri as brandSVG } from '#legacy/psammead-assets/src/svgs';
-import latinDiacritics from '#legacy/gel-foundations/src/scripts/latin-with-diacritics';
-import '#legacy/moment-timezone-include/tz/Asia/Baku';
-import '#legacy/psammead-locales/moment/az';
+} from '#psammead/psammead-styles/src/colours';
+import brandSVG from '#lib/chameleonLogos/azeri';
+import latinDiacritics from '#psammead/gel-foundations/src/scripts/latin-with-diacritics';
+import '#psammead/moment-timezone-include/tz/Asia/Baku';
+import '#psammead/psammead-locales/moment/az';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

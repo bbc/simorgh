@@ -2,14 +2,17 @@ import React, { useContext } from 'react';
 import { node, shape, bool, number } from 'prop-types';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import GlobalStyles from '#legacy/psammead-styles/src/global-styles';
+import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import styled from '@emotion/styled';
-import { C_GHOST, C_MIDNIGHT_BLACK } from '#legacy/psammead-styles/src/colours';
-import WebVitals from '#app/containers/WebVitals';
-import HeaderContainer from '../containers/Header';
-import FooterContainer from '../containers/Footer';
-import ManifestContainer from '../containers/Manifest';
-import ServiceWorkerContainer from '../containers/ServiceWorker';
+import {
+  C_GHOST,
+  C_MIDNIGHT_BLACK,
+} from '#psammead/psammead-styles/src/colours';
+import WebVitals from '#containers/WebVitals';
+import HeaderContainer from '#containers/Header';
+import FooterContainer from '#containers/Footer';
+import ManifestContainer from '#containers/Manifest';
+import ServiceWorkerContainer from '#containers/ServiceWorker';
 import { ServiceContext } from '../contexts/ServiceContext';
 
 const Wrapper = styled.div`
@@ -31,6 +34,7 @@ const PageWrapper = ({ children, pageData, status }) => {
 
   const isDarkMode = pathOr(false, ['darkMode'], pageData);
   const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
+  const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);
   const isErrorPage = [404, 500].includes(status);
   const pageType = isErrorPage
     ? 'WS-ERROR-PAGE'
@@ -43,7 +47,10 @@ const PageWrapper = ({ children, pageData, status }) => {
       <ManifestContainer />
       <WebVitals pageType={pageType} />
       <Wrapper id="main-wrapper" darkMode={isDarkMode}>
-        <HeaderContainer scriptSwitchId={scriptSwitchId} />
+        <HeaderContainer
+          scriptSwitchId={scriptSwitchId}
+          renderScriptSwitch={renderScriptSwitch}
+        />
         <Content>{children}</Content>
         <FooterContainer />
       </Wrapper>

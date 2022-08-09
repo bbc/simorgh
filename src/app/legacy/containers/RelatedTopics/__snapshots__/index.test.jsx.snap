@@ -1,0 +1,492 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Expected use should render correctly with a single tag 1`] = `
+.emotion-0 {
+  padding-bottom: 2.5rem;
+}
+
+.emotion-3 {
+  position: relative;
+  z-index: 0;
+  color: #141414;
+  margin-top: 2rem;
+  margin-top: 0;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-3 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-3 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-3 {
+    margin-bottom: 1rem;
+  }
+}
+
+.emotion-5 {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-flow: row nowrap;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-9 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+.emotion-11 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-11 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    margin: 0;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    padding-right: 1rem;
+  }
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: -0.5rem;
+  margin-bottom: 0;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
+  padding: 0;
+}
+
+.emotion-15 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  word-break: break-word;
+  margin-top: 0.5rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-15 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-15 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-15 a {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  min-height: 2.75rem;
+  padding: 0.5rem 1rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #F2F2F2;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #222222;
+}
+
+.emotion-15 a:hover,
+.emotion-15 a:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-15 a:visited {
+  color: #6E6E73;
+}
+
+<div>
+  <aside
+    aria-labelledby="related-topics"
+    class="emotion-0 emotion-1"
+    role="complementary"
+  >
+    <div
+      class="emotion-2 emotion-3 emotion-4"
+    >
+      <h2
+        class="emotion-5 emotion-6"
+      >
+        <span
+          class="emotion-7 emotion-8"
+        >
+          <span
+            class="emotion-9 emotion-10"
+          >
+            <span
+              class="emotion-11 emotion-12"
+              dir="ltr"
+              id="related-topics"
+            >
+              Temas relacionados
+            </span>
+          </span>
+        </span>
+      </h2>
+    </div>
+    <div
+      class="emotion-13 emotion-14"
+    >
+      <div
+        class="emotion-15 emotion-16"
+      >
+        <a
+          href="/mundo/topics/123"
+        >
+          topic
+        </a>
+      </div>
+    </div>
+  </aside>
+</div>
+`;
+
+exports[`Expected use should render correctly with multiple tags 1`] = `
+.emotion-0 {
+  padding-bottom: 2.5rem;
+}
+
+.emotion-3 {
+  position: relative;
+  z-index: 0;
+  color: #141414;
+  margin-top: 2rem;
+  margin-top: 0;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-3 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-3 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-3 {
+    margin-bottom: 1rem;
+  }
+}
+
+.emotion-5 {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-flow: row nowrap;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-9 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+.emotion-11 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-11 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    margin: 0;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    padding-right: 1rem;
+  }
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: -0.5rem;
+  margin-bottom: 0;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
+  padding: 0;
+  list-style-type: none;
+}
+
+.emotion-15 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  word-break: break-word;
+  margin-top: 0.5rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-15 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-15 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-15 a {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  min-height: 2.75rem;
+  padding: 0.5rem 1rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #F2F2F2;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #222222;
+}
+
+.emotion-15 a:hover,
+.emotion-15 a:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-15 a:visited {
+  color: #6E6E73;
+}
+
+<div>
+  <aside
+    aria-labelledby="related-topics"
+    class="emotion-0 emotion-1"
+    role="complementary"
+  >
+    <div
+      class="emotion-2 emotion-3 emotion-4"
+    >
+      <h2
+        class="emotion-5 emotion-6"
+      >
+        <span
+          class="emotion-7 emotion-8"
+        >
+          <span
+            class="emotion-9 emotion-10"
+          >
+            <span
+              class="emotion-11 emotion-12"
+              dir="ltr"
+              id="related-topics"
+            >
+              Temas relacionados
+            </span>
+          </span>
+        </span>
+      </h2>
+    </div>
+    <ul
+      class="emotion-13 emotion-14"
+      role="list"
+    >
+      <li
+        class="emotion-15 emotion-16"
+      >
+        <a
+          href="/mundo/topics/1"
+        >
+          topic1
+        </a>
+      </li>
+      <li
+        class="emotion-15 emotion-16"
+      >
+        <a
+          href="/mundo/topics/2"
+        >
+          topic2
+        </a>
+      </li>
+      <li
+        class="emotion-15 emotion-16"
+      >
+        <a
+          href="/mundo/topics/3"
+        >
+          topic3
+        </a>
+      </li>
+    </ul>
+  </aside>
+  ,
+</div>
+`;
+
+exports[`Expected use should render correctly with no tags 1`] = `<div />`;

@@ -3,22 +3,22 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import arabic from '#legacy/gel-foundations/src/scripts/arabic';
-import { arabic as brandSVG } from '#legacy/psammead-assets/src/svgs';
+} from '#psammead/psammead-styles/src/colours';
+import arabic from '#psammead/gel-foundations/src/scripts/arabic';
+import brandSVG from '#lib/chameleonLogos/arabic';
 import {
   F_REITH_QALAM_REGULAR,
   F_REITH_QALAM_BOLD,
-} from '#legacy/psammead-styles/src/fonts';
-import '#legacy/psammead-locales/moment/ar';
-import '#legacy/moment-timezone-include/tz/GMT';
+} from '#psammead/psammead-styles/src/fonts';
+import '#psammead/psammead-locales/moment/ar';
+import '#psammead/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
     lang: 'ar',
     articleAuthor: 'https://www.facebook.com/bbcnews',
-    articleTimestampPrefix: 'جدّد في',
+    articleTimestampPrefix: 'آخر تحديث',
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-arabic',
     atiAnalyticsProducerId: '5',
@@ -65,16 +65,15 @@ export const service = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'البودكاست',
-      brandTitle: 'مراهقتي (Morahakaty)',
-      brandDescription:
-        'تابوهات المراهقة، من تقديم كريمة كواح و إعداد ميس باقي.',
+      brandTitle: 'تغيير بسيط (A Simple Change)',
+      brandDescription: 'تغيير بسيط: ما علاقة سلة مشترياتك بتغير المناخ؟',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0b3x87s.jpg',
-        alt: 'مراهقتي (Morahakaty)',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0c9wp5c.jpg',
+        alt: 'تغيير بسيط',
       },
       linkLabel: {
         text: 'الحلقات',
-        href: 'https://www.bbc.com/arabic/podcasts/p0b3xdrj',
+        href: 'https://www.bbc.com/arabic/podcasts/p0c9wp0l',
       },
       skipLink: {
         text: 'تخطى %title% وواصل القراءة',
@@ -91,7 +90,8 @@ export const service = {
       ads: {
         advertisementLabel: 'إعلان',
       },
-      recommendationTitle: 'مواضيع قد تهمك',
+      recommendationTitle: 'قصص مقترحة',
+      splitRecommendationTitle: 'مزيد من القصص المقترحة',
       seeAll: 'المزيد',
       home: 'الرئيسية',
       currentPage: 'الصفحة الحالية',

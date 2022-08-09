@@ -3,20 +3,17 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import latinDiacritics from '#legacy/gel-foundations/src/scripts/latin-with-diacritics';
+} from '#psammead/psammead-styles/src/colours';
+import latinDiacritics from '#psammead/gel-foundations/src/scripts/latin-with-diacritics';
 import {
   F_REITH_SANS_BOLD,
-  F_REITH_SANS_BOLD_ITALIC,
-  F_REITH_SANS_ITALIC,
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
-  F_REITH_SERIF_MEDIUM_ITALIC,
   F_REITH_SERIF_LIGHT,
-} from '#legacy/psammead-styles/src/fonts';
-import { portuguese as brandSVG } from '#legacy/psammead-assets/src/svgs';
-import '#legacy/moment-timezone-include/tz/America/Sao_Paulo';
-import '#legacy/psammead-locales/moment/pt-br';
+} from '#psammead/psammead-styles/src/fonts';
+import brandSVG from '#lib/chameleonLogos/portuguese';
+import '#psammead/moment-timezone-include/tz/America/Sao_Paulo';
+import '#psammead/psammead-locales/moment/pt-br';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -98,7 +95,8 @@ export const service = {
       ads: {
         advertisementLabel: 'Publicidade',
       },
-      recommendationTitle: 'Talvez também te interesse',
+      recommendationTitle: 'Matérias recomendadas',
+      splitRecommendationTitle: 'Mais matérias recomendadas',
       seeAll: 'Ver todos',
       home: 'Início',
       currentPage: 'Página atual',
@@ -348,11 +346,8 @@ export const service = {
     },
     fonts: [
       F_REITH_SANS_BOLD,
-      F_REITH_SANS_BOLD_ITALIC,
-      F_REITH_SANS_ITALIC,
       F_REITH_SANS_REGULAR,
       F_REITH_SERIF_MEDIUM,
-      F_REITH_SERIF_MEDIUM_ITALIC,
       F_REITH_SERIF_LIGHT,
     ],
     timezone: 'America/Sao_Paulo',
@@ -391,7 +386,7 @@ export const service = {
       },
       {
         title: 'Vídeos',
-        url: '/portuguese/media/video',
+        url: '/portuguese/topics/c9y2j35dn2zt',
       },
     ],
   },

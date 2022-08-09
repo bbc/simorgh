@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import thai from '#legacy/gel-foundations/src/scripts/thai';
-import { thai as brandSVG } from '#legacy/psammead-assets/src/svgs';
-import '#legacy/moment-timezone-include/tz/Asia/Bangkok';
-import '#legacy/psammead-locales/moment/th';
+} from '#psammead/psammead-styles/src/colours';
+import thai from '#psammead/gel-foundations/src/scripts/thai';
+import brandSVG from '#lib/chameleonLogos/thai';
+import '#psammead/moment-timezone-include/tz/Asia/Bangkok';
+import '#psammead/psammead-locales/moment/th';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -67,6 +67,8 @@ export const service = {
       ads: {
         advertisementLabel: 'โฆษณา',
       },
+      recommendationTitle: 'เรื่องแนะนำ',
+      splitRecommendationTitle: 'เรื่่องแนะนำอื่น ๆ',
       seeAll: 'ดูทั้งหมด',
       home: 'หน้าแรก',
       currentPage: 'หน้าปัจจุบัน',
@@ -291,7 +293,7 @@ export const service = {
       },
       {
         title: 'วิดีโอ',
-        url: '/thai/media/video',
+        url: '/thai/topics/c5ljd3jng4nt',
       },
       {
         title: 'ยอดนิยม',

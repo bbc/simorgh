@@ -109,6 +109,7 @@ export default async ({
       variant,
       env,
     });
+
     const processedAdditionalData = processMostWatched({
       data: additionalPageData,
       service,

@@ -58,7 +58,7 @@ describe('get initial data for topic', () => {
     expect(pageData.pageCount).toEqual(14);
   });
 
-  it('should use the title as description if description is empty', async () => {
+  it('should return imageData as null if none is provided', async () => {
     const topicJSONWithoutDescription = assocPath(
       ['data', 'description'],
       '',
@@ -71,7 +71,23 @@ describe('get initial data for topic', () => {
       service: 'pidgin',
     });
     expect(pageData.title).toEqual('Donald Trump');
-    expect(pageData.description).toEqual('Donald Trump');
+    expect(pageData.imageData).toEqual(null);
+  });
+
+  it('should return description as blank string if none is provided', async () => {
+    const topicJSONWithoutDescription = assocPath(
+      ['data', 'description'],
+      '',
+      topicJSON,
+    );
+    fetch.mockResponse(JSON.stringify(topicJSONWithoutDescription));
+    const { pageData } = await getInitialData({
+      path: 'mock-topic-path',
+      getAgent,
+      service: 'pidgin',
+    });
+    expect(pageData.title).toEqual('Donald Trump');
+    expect(pageData.description).toEqual('');
   });
 
   it('should call fetchPageData with the correct request URL', async () => {

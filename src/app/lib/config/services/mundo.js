@@ -3,20 +3,17 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import latinDiacritics from '#legacy/gel-foundations/src/scripts/latin-with-diacritics';
+} from '#psammead/psammead-styles/src/colours';
+import latinDiacritics from '#psammead/gel-foundations/src/scripts/latin-with-diacritics';
 import {
   F_REITH_SANS_BOLD,
-  F_REITH_SANS_BOLD_ITALIC,
-  F_REITH_SANS_ITALIC,
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
-  F_REITH_SERIF_MEDIUM_ITALIC,
   F_REITH_SERIF_LIGHT,
-} from '#legacy/psammead-styles/src/fonts';
-import { mundo as brandSVG } from '#legacy/psammead-assets/src/svgs';
-import '#legacy/moment-timezone-include/tz/GMT';
-import '#legacy/psammead-locales/moment/es';
+} from '#psammead/psammead-styles/src/fonts';
+import brandSVG from '#lib/chameleonLogos/mundo';
+import '#psammead/moment-timezone-include/tz/GMT';
+import '#psammead/psammead-locales/moment/es';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -78,7 +75,8 @@ export const service = {
       ads: {
         advertisementLabel: 'Publicidad',
       },
-      recommendationTitle: 'Quizás también te interese',
+      recommendationTitle: 'Recomendamos',
+      splitRecommendationTitle: 'Más recomendaciones',
       seeAll: 'Ver todo',
       home: 'Página de inicio',
       currentPage: 'Página actual',
@@ -327,11 +325,8 @@ export const service = {
     },
     fonts: [
       F_REITH_SANS_BOLD,
-      F_REITH_SANS_BOLD_ITALIC,
-      F_REITH_SANS_ITALIC,
       F_REITH_SANS_REGULAR,
       F_REITH_SERIF_MEDIUM,
-      F_REITH_SERIF_MEDIUM_ITALIC,
       F_REITH_SERIF_LIGHT,
     ],
     timezone: 'GMT',

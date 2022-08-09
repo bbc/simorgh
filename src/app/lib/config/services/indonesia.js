@@ -3,10 +3,10 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import cyrillicAndLatin from '#legacy/gel-foundations/src/scripts/latin-and-cyrillic';
-import { indonesia as brandSVG } from '#legacy/psammead-assets/src/svgs';
-import '#legacy/moment-timezone-include/tz/Asia/Jakarta';
+} from '#psammead/psammead-styles/src/colours';
+import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import brandSVG from '#lib/chameleonLogos/indonesian';
+import '#psammead/moment-timezone-include/tz/Asia/Jakarta';
 import 'moment/locale/id';
 import withContext from '../../../contexts/utils/withContext';
 
@@ -86,6 +86,8 @@ export const service = {
       ads: {
         advertisementLabel: 'Iklan',
       },
+      recommendationTitle: 'Artikel-artikel yang direkomendasikan',
+      splitRecommendationTitle: 'Artikel-artikel lainnya yang direkomendasikan',
       seeAll: 'Lihat semua',
       home: 'Berita',
       currentPage: 'Halaman saat ini',
@@ -287,7 +289,11 @@ export const service = {
       durationLabel: 'Durasi %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      hasStoryRecommendations: true,
+      skipLink: {
+        text: 'Lewatkan %title% dan terus membaca',
+        endTextVisuallyHidden: 'Akhir dari %title%',
+      },
     },
     footer: {
       trustProjectLink: {
