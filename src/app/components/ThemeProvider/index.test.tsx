@@ -32,7 +32,7 @@ describe('ThemeProvider', () => {
     expect(container).toMatchInlineSnapshot(`
       <div>
         <div
-          style="background-color: rgb(184, 0, 0); color: rgb(0, 0, 0); padding: 2rem;"
+          style="background-color: rgb(184, 0, 0); color: rgb(0, 0, 0); padding: 1rem;"
         />
       </div>
     `);
