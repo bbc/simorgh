@@ -3,11 +3,11 @@ import {
   BLACK,
   MIDNIGHT_BLACK,
   SPORT_YELLOW_30,
-} from '../colours';
+} from '../palette';
 import withThemeProvider from '../withThemeProvider';
 
 const sportTheme = {
-  colours: {
+  palette: {
     BRAND_BACKGROUND: SPORT_YELLOW,
     BRAND_LOGO: BLACK,
     BRAND_FOREGROUND: MIDNIGHT_BLACK,

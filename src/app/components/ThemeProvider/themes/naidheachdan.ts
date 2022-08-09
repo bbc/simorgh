@@ -1,8 +1,8 @@
-import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../colours';
+import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import withThemeProvider from '../withThemeProvider';
 
 const naidheachdanTheme = {
-  colours: {
+  palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
     BRAND_FOREGROUND: GHOST,

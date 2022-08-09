@@ -1,8 +1,8 @@
-import { GHOST, WHITE, BLUEJAY, POSTBOX_30 } from '../colours';
+import { GHOST, WHITE, BLUEJAY, POSTBOX_30 } from '../palette';
 import withThemeProvider from '../withThemeProvider';
 
 const pidginTheme = {
-  colours: {
+  palette: {
     BRAND_BACKGROUND: BLUEJAY,
     BRAND_LOGO: WHITE,
     BRAND_FOREGROUND: GHOST,

@@ -1,25 +1,25 @@
 import { ThemeProvider as EmotionThemeProvider } from '@emotion/react';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 
-import * as colours from './colours';
+import * as palette from './palette';
 import * as mq from './mediaQueries';
 import * as spacings from './spacings';
 
-import { BrandColours } from '../../interfaces';
+import { BrandPalette } from '../../interfaces';
 
 interface ServiceTheme {
-  colours: BrandColours;
+  palette: BrandPalette;
 }
 
 type Props = {
-  children: JSX.Element | JSX.Element[];
+  children: React.ReactNode;
 };
 
 const withThemeProvider = (serviceTheme: ServiceTheme) => {
-  const ThemeProvider: React.FC<Props> = ({ children }: Props) => (
+  const ThemeProvider: React.FC<Props> = ({ children }) => (
     <EmotionThemeProvider
       theme={mergeDeepLeft(serviceTheme, {
-        colours,
+        palette,
         mq,
         spacings,
       })}

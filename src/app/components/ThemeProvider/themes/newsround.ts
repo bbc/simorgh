@@ -1,8 +1,8 @@
-import { NEWSROUND_PURPLE, NEWSROUND_PURPLE_30, WHITE } from '../colours';
+import { NEWSROUND_PURPLE, NEWSROUND_PURPLE_30, WHITE } from '../palette';
 import withThemeProvider from '../withThemeProvider';
 
 const newsroundTheme = {
-  colours: {
+  palette: {
     BRAND_BACKGROUND: NEWSROUND_PURPLE,
     BRAND_LOGO: WHITE,
     BRAND_FOREGROUND: WHITE,

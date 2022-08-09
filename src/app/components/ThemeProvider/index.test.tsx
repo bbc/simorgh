@@ -4,13 +4,13 @@ import { render, act } from '@testing-library/react';
 import ThemeProvider from '.';
 
 const Fixture = () => {
-  const { colours, spacings } = useTheme();
+  const { palette, spacings } = useTheme();
 
   return (
     <div
       style={{
-        backgroundColor: colours.BRAND_BACKGROUND,
-        color: colours.BLACK,
+        backgroundColor: palette.BRAND_BACKGROUND,
+        color: palette.BLACK,
         padding: `${spacings.DOUBLE}rem`,
       }}
     />

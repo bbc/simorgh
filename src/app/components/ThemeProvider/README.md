@@ -17,7 +17,7 @@ Add `ThemeProvider` to the top level of your app and access the theme with props
 ```tsx
 <ThemeProvider service="news">
   <div css={theme => ({
-    color: theme.colors.BRAND_BACKGROUND,
+    color: theme.palette.BRAND_BACKGROUND,
     padding: theme.spacings.DOUBLE
   })}
 />

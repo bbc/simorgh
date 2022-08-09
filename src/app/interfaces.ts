@@ -1,4 +1,4 @@
-export interface BrandColours {
+export interface BrandPalette {
   BRAND_BACKGROUND: string;
   BRAND_LOGO: string;
   BRAND_FOREGROUND: string;
@@ -6,7 +6,7 @@ export interface BrandColours {
   BRAND_BORDER: string;
 }
 
-interface Colours extends BrandColours {
+interface Palette extends BrandPalette {
   ARCHIVE_BLUE: string;
   BLACK: string;
   BLUEJAY: string;
@@ -82,7 +82,7 @@ interface Spacings {
 
 declare module '@emotion/react' {
   export interface Theme {
-    colours: Colours;
+    palette: Palette;
     mq: MediaQueries;
     spacings: Spacings;
   }
