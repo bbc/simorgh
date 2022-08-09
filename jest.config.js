@@ -1,6 +1,7 @@
 const { jestDirAlias } = require('./dirAlias');
 
 const unitTests = {
+  preset: 'ts-jest',
   setupFiles: ['./src/testHelpers/jest-setup.js'],
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
   moduleNameMapper: jestDirAlias,

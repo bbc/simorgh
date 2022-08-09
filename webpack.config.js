@@ -2,7 +2,7 @@
 const { merge } = require('webpack-merge');
 const fs = require('fs');
 const path = require('path');
-const MomentTimezoneInclude = require('./src/app/legacy/moment-timezone-include/src');
+const MomentTimezoneInclude = require('./src/app/legacy/psammead/moment-timezone-include/src');
 const { webpackDirAlias } = require('./dirAlias');
 
 const appDirectory = fs.realpathSync(process.cwd());
@@ -32,7 +32,7 @@ const getBaseConfig = BUNDLE_TYPE => ({
   mode: IS_PROD ? 'production' : 'development',
   devtool: IS_PROD ? 'source-map' : 'eval-source-map',
   resolve: {
-    extensions: ['.js', '.jsx'], // resolves `import '../Foo'` to `../Foo/index.jsx`
+    extensions: ['.ts', '.tsx', '.js', '.jsx'], // resolves `import '../Foo'` to `../Foo/index.jsx`
     alias: {
       ...webpackDirAlias,
       /*
@@ -84,6 +84,18 @@ const getBaseConfig = BUNDLE_TYPE => ({
               babelrc: true,
               cacheDirectory: true,
               presets: [],
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'ts-loader',
+            options: {
+              transpileOnly: true,
             },
           },
         ],

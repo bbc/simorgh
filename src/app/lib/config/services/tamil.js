@@ -3,15 +3,15 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import tamil from '#legacy/gel-foundations/src/scripts/tamil';
-import { tamil as brandSVG } from '#legacy/psammead-assets/src/svgs';
+} from '#psammead/psammead-styles/src/colours';
+import tamil from '#psammead/gel-foundations/src/scripts/tamil';
+import brandSVG from '#lib/chameleonLogos/tamil';
 import {
   F_NOTO_SANS_TAMIL_BOLD,
   F_NOTO_SANS_TAMIL_REGULAR,
-} from '#legacy/psammead-styles/src/fonts';
-import '#legacy/moment-timezone-include/tz/GMT';
-import '#legacy/psammead-locales/moment/ta';
+} from '#psammead/psammead-styles/src/fonts';
+import '#psammead/moment-timezone-include/tz/GMT';
+import '#psammead/psammead-locales/moment/ta';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {

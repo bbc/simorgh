@@ -3,17 +3,17 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import cyrillicAndLatin from '#legacy/gel-foundations/src/scripts/latin-and-cyrillic';
+} from '#psammead/psammead-styles/src/colours';
+import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
 import {
   F_REITH_SANS_BOLD,
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_LIGHT,
-} from '#legacy/psammead-styles/src/fonts';
-import { russian as brandSVG } from '#legacy/psammead-assets/src/svgs';
-import '#legacy/moment-timezone-include/tz/GMT';
-import '#legacy/psammead-locales/moment/ru';
+} from '#psammead/psammead-styles/src/fonts';
+import brandSVG from '#lib/chameleonLogos/russian';
+import '#psammead/moment-timezone-include/tz/GMT';
+import '#psammead/psammead-locales/moment/ru';
 import withContext from '../../../contexts/utils/withContext';
 
 // Translations used in the header and footer elements of the page
