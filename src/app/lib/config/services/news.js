@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
-import { news as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/news';
 import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
 import {
   F_REITH_SANS_BOLD,
