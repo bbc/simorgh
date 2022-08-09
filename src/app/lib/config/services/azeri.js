@@ -226,6 +226,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Videonun alt yazısı, ',
           text: 'Xəbərdarlıq : Üçüncü tərəfin məzmununda reklam ola bilər',
+          articleText:
+            'Xəbərdarlıq : BBC kənar saytların məzmununa görə cavabdeh deyil.',
+          articleAdditionalText: '%provider_name% məzmununda reklam ola bilər.',
         },
         fallback: {
           text: 'Məzmun mövcud deyil',

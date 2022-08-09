@@ -53,6 +53,16 @@ const createTranslations = ({ translations, index }) => {
         ['socialEmbed', 'caption', 'text'],
         translations,
       ),
+      articleText: pathOr(
+        'Warning: The BBC is not responsible for the content of external sites.',
+        ['socialEmbed', 'caption', 'articleText'],
+        translations,
+      ),
+      articleAdditionalText: pathOr(
+        '%provider_name% content may contain adverts',
+        ['socialEmbed', 'caption', 'articleAdditionalText'],
+        translations,
+      ),
     },
   };
 };

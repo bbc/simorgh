@@ -241,6 +241,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Qoraalka Muuqaalka, ',
           text: 'Digniin: Waxaa suuragal ah in macluumaadka dad kale ay ku jiraan xayaysiin',
+          articleText:
+            'Digniin: BBC macluumaadka ku qoran bog kale masuul kama ahan',
+          articleAdditionalText:
+            '%provider_name% Waxaa laga yaabaa inay ku jirta xayasiis',
         },
         fallback: {
           text: 'Macluumaadkan lama heli karo',
