@@ -233,6 +233,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Video altyazısı: ',
           text: 'Uyarı: Üçüncü tarafların sağladığı içerikte reklam bulunabilir.',
+          articleText:
+            'Uyarı: BBC üçüncü taraf sitelerin içeriğinden sorumlu değildir.',
+          articleAdditionalText: '%provider_name% içerik reklam içerebilir',
         },
         fallback: {
           text: 'İçerik bulunamadı',
