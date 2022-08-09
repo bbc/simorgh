@@ -250,6 +250,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Bayanan bidiyo ',
           text: 'Gargadi: Ana iya samun talla wanda ba na BBC ba ne',
+          articleText:
+            'Gargadi: BBC ba za ta dauki alhakin bayanan da aka wallafa a shafukan da ba nata ne ba.',
+          articleAdditionalText: 'Ana yi samun tallace-tallace %provider_name%',
         },
         fallback: {
           text: 'Babu karin bayanai',
