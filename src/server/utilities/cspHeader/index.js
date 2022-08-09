@@ -98,6 +98,8 @@ const directives = {
       'https://cdn.optimizely.com/',
       'https://logx.optimizely.com/',
       'https://europe-west1-bbc-otg-traf-mgr-bq-prod-4591.cloudfunctions.net', // Web-Vitals monitoring
+      'https://cognito-identity.eu-west-1.amazonaws.com/', // CloudWatch RUM
+      'https://sts.eu-west-1.amazonaws.com/', // CloudWatch RUM
       ...advertisingDirectives.connectSrc,
       "'self'",
     ],
@@ -121,6 +123,7 @@ const directives = {
       'https://logx.optimizely.com/',
       'https://europe-west1-bbc-otg-traf-mgr-bq-dev-4105.cloudfunctions.net', // Web-Vitals monitoring
       'https://cognito-identity.eu-west-1.amazonaws.com/', // CloudWatch RUM
+      'https://sts.eu-west-1.amazonaws.com/', // CloudWatch RUM
       ...advertisingDirectives.connectSrc,
       "'self'",
     ],
@@ -250,6 +253,7 @@ const directives = {
       'https://www.instagram.com', // Social Embeds
       'https://cdn.syndication.twimg.com', // Social Embeds
       'https://public.flourish.studio', // STY includes
+      'https://client.rum.us-east-1.amazonaws.com', // CloudWatch RUM
       ...advertisingDirectives.scriptSrc,
       "'self'",
       "'unsafe-inline'",

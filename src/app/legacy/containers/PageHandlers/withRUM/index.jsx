@@ -2,6 +2,18 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import isLive from '#lib/utilities/isLive';
 
+// Note - if changing one of these constants, the other will also need to change
+// See https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity
+const SCRIPT_SRC = 'https://client.rum.us-east-1.amazonaws.com/1.2.1/cwr.js';
+const SCRIPT_INTEGRITY =
+  'sha384-eCJxxyQILPZN5He1/UBN7E0nPIPBXIMDEPYubMaxQsCcQ+Vh8W9n6zRgQdqNgL0D';
+
+// TODO: we cannot use subresource integrity as the AWS response doesn't have a CORS header
+const USE_SUBRESOURCE_INTEGRITY = false;
+const SRI_STRING = USE_SUBRESOURCE_INTEGRITY
+  ? `z.integrity = ${SCRIPT_INTEGRITY};`
+  : '';
+
 const buildScript = ({
   applicationId,
   sessionSampleRate,
@@ -11,12 +23,12 @@ const buildScript = ({
   <Helmet>
     <script>
       {`
-        (function(n,i,v,r,s,c,x,z){x=window.AwsRumClient={q:[],n:n,i:i,v:v,r:r,c:c};window[n]=function(c,p){x.q.push({c:c,p:p});};z=document.createElement('script');z.async=true;z.src=s;document.head.insertBefore(z,document.head.getElementsByTagName('script')[0]);})(
+        (function(n,i,v,r,s,c,x,z){x=window.AwsRumClient={q:[],n:n,i:i,v:v,r:r,c:c};window[n]=function(c,p){x.q.push({c:c,p:p});};z=document.createElement('script');z.async=true;z.src=s;${SRI_STRING}document.head.insertBefore(z,document.head.getElementsByTagName('script')[0]);})(
         'cwr',
         '${applicationId}',
         '1.0.0',
         'eu-west-1',
-        'https://client.rum.us-east-1.amazonaws.com/1.2.1/cwr.js',
+        ${SCRIPT_SRC},
         {
           sessionSampleRate: ${sessionSampleRate},
           guestRoleArn: "${guestRoleArn}",
@@ -37,7 +49,15 @@ const RUMLoader = Component => {
 
     const testConfig = {
       applicationId: '0007b574-fe46-4f8d-94d3-fe1c1a375af6',
-      sessionSampleRate: 1, // TODO: remember to reduce this in live config
+      sessionSampleRate: 1,
+      identityPoolId: 'eu-west-1:7c038459-fac4-4622-86ba-92a8fbcf7fcd',
+      guestRoleArn:
+        'arn:aws:iam::657504540040:role/AAACognito_RUMMonitoreuwest16575045400403910436461561Unauth_Role',
+    };
+
+    const liveConfig = {
+      applicationId: '0007b574-fe46-4f8d-94d3-fe1c1a375af6',
+      sessionSampleRate: 0.00001,
       identityPoolId: 'eu-west-1:7c038459-fac4-4622-86ba-92a8fbcf7fcd',
       guestRoleArn:
         'arn:aws:iam::657504540040:role/AAACognito_RUMMonitoreuwest16575045400403910436461561Unauth_Role',
@@ -45,7 +65,7 @@ const RUMLoader = Component => {
 
     return (
       <>
-        {buildScript(testConfig)}
+        {buildScript(isLive() ? liveConfig : testConfig)}
         <Component {...props} />
       </>
     );
