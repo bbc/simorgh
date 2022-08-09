@@ -56,11 +56,11 @@ const RUMLoader = Component => {
     };
 
     const liveConfig = {
-      applicationId: '0007b574-fe46-4f8d-94d3-fe1c1a375af6',
+      applicationId: 'a6f74d21-ce3e-4773-a1ce-5f68eae84130',
       sessionSampleRate: 0.00001,
-      identityPoolId: 'eu-west-1:7c038459-fac4-4622-86ba-92a8fbcf7fcd',
+      identityPoolId: 'eu-west-1:adc4104d-a198-402d-9e00-1db021dacb71',
       guestRoleArn:
-        'arn:aws:iam::657504540040:role/AAACognito_RUMMonitoreuwest16575045400403910436461561Unauth_Role',
+        'arn:aws:iam::923061562593:role/RUM-Monitor-eu-west-1-923061562593-2635993079561-Unauth',
     };
 
     return (
