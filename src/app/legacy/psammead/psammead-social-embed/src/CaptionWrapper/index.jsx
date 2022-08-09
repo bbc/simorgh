@@ -41,11 +41,12 @@ const CaptionWrapper = ({
   additionalText,
 }) => {
   const { pageType } = useContext(RequestContext);
+  const isArticlePage = pageType === ARTICLE_PAGE;
 
   return (
-    <Figure isArticlePage={pageType === ARTICLE_PAGE}>
+    <Figure isArticlePage={isArticlePage}>
       {children}
-      <FigCaption isArticlePage={pageType === ARTICLE_PAGE} service={service}>
+      <FigCaption isArticlePage={isArticlePage} service={service}>
         {textPrefixVisuallyHidden && <span>{textPrefixVisuallyHidden}</span>}
         {`${text}${additionalText ? ` ${additionalText}` : ''}`}
       </FigCaption>
