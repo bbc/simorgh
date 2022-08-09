@@ -12483,10 +12483,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"helmet@npm:4.6.0":
-  version: 4.6.0
-  resolution: "helmet@npm:4.6.0"
-  checksum: 139ad678d1cab207b043c206f50f6744eff2ef1f463e4626d36718b45b337485c77d10260ef9d89d292fa678da5153d86b08172b3b365cc8e680241015ed3a49
+"helmet@npm:5.1.1":
+  version: 5.1.1
+  resolution: "helmet@npm:5.1.1"
+  checksum: b72ba26cc431804ad3b8ecdc18db95409a492cbb7a7e825efc27fc502b9433fec39fc083f2aad4fe7ed1a89a4287560b59f4435f9689eebbae6a2b61a1ec1b7d
   languageName: node
   linkType: hard
 
@@ -19750,7 +19750,7 @@ __metadata:
     fetch-mock: 9.11.0
     glob: 7.2.0
     gnu-terry-pratchett: 0.0.2
-    helmet: 4.6.0
+    helmet: 5.1.1
     helmet-csp: 3.4.0
     history: 4.10.1
     husky: 7.0.4
