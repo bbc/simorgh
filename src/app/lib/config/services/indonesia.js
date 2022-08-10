@@ -250,6 +250,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Keterangan video, ',
           text: 'Peringatan: Konten pihak ketiga mungkin berisi iklan',
+          articleText:
+            'Peringatan: BBC tidak bertanggung jawab atas konten situs eksternal',
+          articleAdditionalText: 'Konten %provider_name% mungkin memuat iklan',
         },
         fallback: {
           text: 'Konten tidak tersedia',

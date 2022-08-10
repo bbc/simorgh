@@ -23,7 +23,6 @@ import useToggle from '#hooks/useToggle';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
-import isLive from '#lib/utilities/isLive';
 import TopicImage from './TopicImage';
 import TopicTitle from './TopicTitle';
 import TopicDescription from './TopicDescription';
@@ -123,12 +122,10 @@ const TopicPage = ({ pageData }) => {
           />
           <TitleWrapper>
             <InlineWrapper>
-              {!isLive() && imageData && <TopicImage image={imageData.url} />}
+              {imageData && <TopicImage image={imageData.url} />}
               <TopicTitle>{title}</TopicTitle>
             </InlineWrapper>
-            {!isLive() && description && (
-              <TopicDescription>{description}</TopicDescription>
-            )}
+            {description && <TopicDescription>{description}</TopicDescription>}
           </TitleWrapper>
           {curations.map(({ summaries, curationId }) => (
             <Curation

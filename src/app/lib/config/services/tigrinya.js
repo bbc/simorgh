@@ -222,6 +222,8 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'መግለጺ ቪድዮ፡, ',
           text: 'Warning: Third party content may contain adverts',
+          articleText: 'Warning: ቢቢሲ ኣብ ካልእ ገጻት ንዘሎ ሓበሬታ ሓላፍነት ኣይወስድን።',
+          articleAdditionalText: "ትሕዝቶ %provider_name% መወዓውዒታት ክህልዎ ይኽእል'ዩ።",
         },
         fallback: {
           text: 'Content is not available',
