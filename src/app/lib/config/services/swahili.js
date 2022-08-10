@@ -317,7 +317,6 @@ export const service = {
       ],
       copyrightText: 'BBC. BBC haihusiki na taarifa za kutoka mitandao ya nje.',
     },
-    fonts: [],
     timezone: 'Africa/Nairobi',
     navigation: [
       {

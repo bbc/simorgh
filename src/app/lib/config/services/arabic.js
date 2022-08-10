@@ -6,10 +6,6 @@ import {
 } from '#psammead/psammead-styles/src/colours';
 import arabic from '#psammead/gel-foundations/src/scripts/arabic';
 import brandSVG from '#lib/chameleonLogos/arabic';
-import {
-  F_REITH_QALAM_REGULAR,
-  F_REITH_QALAM_BOLD,
-} from '#psammead/psammead-styles/src/fonts';
 import '#psammead/psammead-locales/moment/ar';
 import '#psammead/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
@@ -347,7 +343,6 @@ export const service = {
       copyrightText:
         'بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية.',
     },
-    fonts: [F_REITH_QALAM_REGULAR, F_REITH_QALAM_BOLD],
     timezone: 'GMT',
     navigation: [
       {

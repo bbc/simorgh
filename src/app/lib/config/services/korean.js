@@ -309,7 +309,6 @@ export const service = {
       copyrightText:
         'BBC. BBC는 외부 사이트 및 타사 콘텐츠에 대한 책임을 지지 않습니다',
     },
-    fonts: [],
     navigation: [
       {
         title: '뉴스',

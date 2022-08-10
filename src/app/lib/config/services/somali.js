@@ -326,7 +326,6 @@ export const service = {
       copyrightText:
         'BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda.',
     },
-    fonts: [],
     timezone: 'Africa/Mogadishu',
     navigation: [
       {

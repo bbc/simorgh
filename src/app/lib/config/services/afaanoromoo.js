@@ -315,7 +315,6 @@ export const service = {
       copyrightText:
         "BBC. Qabiyyeewwan maddawwan alaa irraa ta'aniif BBCn itti gaafatamaa miti.",
     },
-    fonts: [],
     navigation: [
       {
         title: 'Oduu',

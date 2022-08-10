@@ -318,7 +318,6 @@ export const service = {
       copyrightText:
         'बीबीसी। अन्य वेबसाइटका सामग्रीहरूका लागि बीबीसी जिम्मेवार छैन।',
     },
-    fonts: [],
     timezone: 'Asia/Kathmandu',
     navigation: [
       {

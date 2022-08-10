@@ -6,10 +6,6 @@ import {
 } from '#psammead/psammead-styles/src/colours';
 import bengali from '#psammead/gel-foundations/src/scripts/bengali';
 import brandSVG from '#lib/chameleonLogos/bangla';
-import {
-  F_NOTO_SERIF_BENGALI_BOLD,
-  F_NOTO_SERIF_BENGALI_REGULAR,
-} from '#psammead/psammead-styles/src/fonts';
 import '#psammead/moment-timezone-include/tz/Asia/Dhaka';
 import '#psammead/psammead-locales/moment/bn';
 import withContext from '../../../contexts/utils/withContext';
@@ -321,7 +317,6 @@ export const service = {
       copyrightText:
         'বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।',
     },
-    fonts: [F_NOTO_SERIF_BENGALI_BOLD, F_NOTO_SERIF_BENGALI_REGULAR],
     timezone: 'Asia/Dhaka',
     navigation: [
       {

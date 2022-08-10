@@ -6,10 +6,6 @@ import {
 } from '#psammead/psammead-styles/src/colours';
 import brandSVG from '#lib/chameleonLogos/persian';
 import arabic from '#psammead/gel-foundations/src/scripts/arabic';
-import {
-  F_REITH_QALAM_REGULAR,
-  F_REITH_QALAM_BOLD,
-} from '#psammead/psammead-styles/src/fonts';
 import 'moment/locale/fa';
 import '#psammead/moment-timezone-include/tz/GMT';
 import jalaali from '#psammead/psammead-calendars/src';
@@ -358,7 +354,6 @@ export const service = {
       copyrightText: 'بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست.',
     },
     timezone: 'GMT',
-    fonts: [F_REITH_QALAM_REGULAR, F_REITH_QALAM_BOLD],
     navigation: [
       {
         title: 'صفحه اول',

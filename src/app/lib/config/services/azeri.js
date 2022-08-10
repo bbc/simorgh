@@ -306,7 +306,6 @@ export const service = {
       ],
       copyrightText: 'BBC. BBC kənar saytların məzmununa məsul deyil.',
     },
-    fonts: [],
     timezone: 'Asia/baku',
     navigation: [
       {

@@ -44,7 +44,6 @@ const baseServiceConfig = {
   showAdPlaceholder: false,
   showRelatedTopics: true,
   brandSVG,
-  fonts: [],
   timezone: 'GMT',
 };
 

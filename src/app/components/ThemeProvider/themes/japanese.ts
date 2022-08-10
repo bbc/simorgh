@@ -1,4 +1,6 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
+import noAscOrDescScript from '../typography/scripts/noAscOrDesc';
+import { HIRAGINO_KAGU_GOTHIC_PRO } from '../typography/fontFamilies';
 import withThemeProvider from '../withThemeProvider';
 
 const japaneseTheme = {
@@ -8,6 +10,13 @@ const japaneseTheme = {
     BRAND_FOREGROUND: GHOST,
     BRAND_HIGHLIGHT: WHITE,
     BRAND_BORDER: POSTBOX_30,
+  },
+  typography: {
+    script: noAscOrDescScript,
+    fontFamilyVariants: {
+      primary: HIRAGINO_KAGU_GOTHIC_PRO,
+    },
+    fontFaces: [],
   },
 };
 

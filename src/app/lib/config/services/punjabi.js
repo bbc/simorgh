@@ -332,7 +332,6 @@ export const service = {
       ],
       copyrightText: 'BBC. ਬਾਹਰੀ ਸਾਈਟਾਂ ਦੀ ਸਮਗਰੀ ਲਈ ਬੀਬੀਸੀ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ',
     },
-    fonts: [],
     timezone: 'Asia/Kolkata',
   },
 };

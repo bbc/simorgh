@@ -1,14 +1,15 @@
-import { ThemeProvider as EmotionThemeProvider } from '@emotion/react';
+import { Global, ThemeProvider as EmotionThemeProvider } from '@emotion/react';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 
 import * as palette from './palette';
 import * as mq from './mediaQueries';
 import * as spacings from './spacings';
 
-import { BrandPalette } from '../../interfaces';
+import { BrandPalette, Typography } from '../../interfaces';
 
 interface ServiceTheme {
   palette: BrandPalette;
+  typography: Typography;
 }
 
 type Props = {
@@ -24,6 +25,7 @@ const withThemeProvider = (serviceTheme: ServiceTheme) => {
         spacings,
       })}
     >
+      <Global styles={({ typography }) => typography.fontFaces} />
       {children}
     </EmotionThemeProvider>
   );

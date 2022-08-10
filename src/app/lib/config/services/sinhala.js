@@ -6,10 +6,6 @@ import {
 } from '#psammead/psammead-styles/src/colours';
 import sinhalese from '#psammead/gel-foundations/src/scripts/sinhalese';
 import brandSVG from '#lib/chameleonLogos/sinhala';
-import {
-  F_NOTO_SERIF_SINHALA_BOLD,
-  F_NOTO_SERIF_SINHALA_REGULAR,
-} from '#psammead/psammead-styles/src/fonts';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/si';
 import withContext from '../../../contexts/utils/withContext';
@@ -314,7 +310,6 @@ export const service = {
       ],
       copyrightText: 'BBC. බාහිර වෙබ් අඩවිවල අන්තර්ගතයට බීබීසී වගකියනු නොලැබේ.',
     },
-    fonts: [F_NOTO_SERIF_SINHALA_BOLD, F_NOTO_SERIF_SINHALA_REGULAR],
     timezone: 'GMT',
     navigation: [
       {

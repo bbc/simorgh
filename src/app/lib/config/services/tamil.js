@@ -6,10 +6,6 @@ import {
 } from '#psammead/psammead-styles/src/colours';
 import tamil from '#psammead/gel-foundations/src/scripts/tamil';
 import brandSVG from '#lib/chameleonLogos/tamil';
-import {
-  F_NOTO_SANS_TAMIL_BOLD,
-  F_NOTO_SANS_TAMIL_REGULAR,
-} from '#psammead/psammead-styles/src/fonts';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ta';
 import withContext from '../../../contexts/utils/withContext';
@@ -328,7 +324,6 @@ export const service = {
       copyrightText:
         'பிபிசி. வெளியார் இணைய தளங்களின் உள்ளடக்கத்துக்கு பிபிசி பொறுப்பாகாது.',
     },
-    fonts: [F_NOTO_SANS_TAMIL_BOLD, F_NOTO_SANS_TAMIL_REGULAR],
     timezone: 'GMT',
     navigation: [
       {

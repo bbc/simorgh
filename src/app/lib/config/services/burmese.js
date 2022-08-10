@@ -5,11 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
 import burmese from '#psammead/gel-foundations/src/scripts/burmese';
-import brandSVG from '#lib/chameleonLogos/burmese';
-import {
-  F_PADAUK_BOLD,
-  F_PADAUK_REGULAR,
-} from '#psammead/psammead-styles/src/fonts';
+import { burmese as brandSVG } from '#psammead/psammead-assets/src/svgs';
 import '#psammead/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/my';
@@ -340,7 +336,6 @@ export const service = {
       copyrightText:
         'BBC. ပြင်ပဝက်ဆိုက်များတွင် ပါဝင်သော အကြောင်းအရာများအတွက် ဘီဘီစီက တာဝန်မယူပါ။',
     },
-    fonts: [F_PADAUK_BOLD, F_PADAUK_REGULAR],
     timezone: 'GMT',
     navigation: [
       {

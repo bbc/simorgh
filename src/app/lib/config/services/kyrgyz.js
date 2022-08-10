@@ -322,7 +322,6 @@ export const service = {
       copyrightText:
         'BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес.',
     },
-    fonts: [],
     timezone: 'GMT',
     navigation: [
       {

@@ -338,7 +338,6 @@ export const service = {
       copyrightText:
         'BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal.',
     },
-    fonts: [],
     navigation: [
       {
         title: 'Berita',

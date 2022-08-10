@@ -30,8 +30,7 @@ const Content = styled.div`
 `;
 
 const PageWrapper = ({ children, pageData, status }) => {
-  const { fonts: fontFunctions, service } = useContext(ServiceContext);
-  const fonts = fontFunctions.map(getFonts => getFonts());
+  const { service } = useContext(ServiceContext);
   const isDarkMode = pathOr(false, ['darkMode'], pageData);
   const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
   const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);
@@ -42,7 +41,7 @@ const PageWrapper = ({ children, pageData, status }) => {
 
   return (
     <ThemeProvider service={service}>
-      <GlobalStyles fonts={fonts} />
+      <GlobalStyles />
       <ServiceWorkerContainer />
       <ManifestContainer />
       <WebVitals pageType={pageType} />

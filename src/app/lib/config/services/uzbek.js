@@ -314,7 +314,6 @@ export const service = {
       ],
       copyrightText: 'BBC. Би-би-си ташқи сайтлар мазмуни учун масъул эмас.',
     },
-    fonts: [],
     timezone: 'GMT',
     navigation: [
       {
