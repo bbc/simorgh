@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import styled from '@emotion/styled';
 import { node } from 'prop-types';
 import IndexHeading from '#psammead/psammead-heading-index/src';

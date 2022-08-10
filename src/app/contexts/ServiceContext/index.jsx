@@ -1,11 +1,11 @@
-import React from 'react';
+import { createContext } from 'react';
 import { node, string } from 'prop-types';
 import services from '#lib/config/services/loadableConfig';
 import { getVariant } from '#lib/utilities/variantHandler';
 import getLangOverride from '#lib/utilities/langHandler';
 import variantPropType from '../../models/propTypes/variants';
 
-export const ServiceContext = React.createContext({});
+export const ServiceContext = createContext({});
 
 export const ServiceContextProvider = ({
   children,

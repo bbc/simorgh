@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import { NEGATIVE_MARGIN } from '#lib/styles.const';
 import { GEL_GROUP_1_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';

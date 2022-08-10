@@ -1,4 +1,3 @@
-import React from 'react';
 import moment from 'moment-timezone';
 import styled from '@emotion/styled';
 import { shape, string, number, oneOf } from 'prop-types';

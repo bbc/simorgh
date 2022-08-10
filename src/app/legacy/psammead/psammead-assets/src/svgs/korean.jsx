@@ -1,5 +1,3 @@
-import React from 'react';
-
 const height = 24.59;
 const width = 233.3404;
 const korean = {
