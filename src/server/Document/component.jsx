@@ -1,5 +1,11 @@
 /* eslint-disable react/no-danger, react/prop-types */
-import { AMP_SCRIPT, AMP_NO_SCRIPT, AMP_JS, AMP_CONSENT_JS, AMP_ANALYTICS_JS } from '#psammead/psammead-assets/src/amp-boilerplate';
+import {
+  AMP_SCRIPT,
+  AMP_NO_SCRIPT,
+  AMP_JS,
+  AMP_CONSENT_JS,
+  AMP_ANALYTICS_JS,
+} from '#psammead/psammead-assets/src/amp-boilerplate';
 import { AMP_GEO_SCRIPT } from '#components/AmpGeo';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
 import ResourceHints from '#components/ResourceHints';
