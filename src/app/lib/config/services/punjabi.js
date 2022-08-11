@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
 import devanagariAndGurmukhi from '#psammead/gel-foundations/src/scripts/devanagari-and-gurmukhi';
-import { punjabi as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/punjabi';
 import '#psammead/psammead-locales/moment/pa-in';
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
 import withContext from '../../../contexts/utils/withContext';
@@ -225,6 +225,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'ਵੀਡੀਓ ਕੈਪਸ਼ਨ, ',
           text: "ਚਿਤਾਵਨੀ: ਬਾਹਰੀ ਸਾਈਟਾਂ ਦੀ ਸਮਗਰੀ 'ਚ ਇਸ਼ਤਿਹਾਰ ਹੋ ਸਕਦੇ ਹਨ",
+          articleText:
+            'ਚਿਤਾਵਨੀ: ਬੀਬੀਸੀ ਦੂਜੀਆਂ ਵੈਬਸਾਈਟਸ ਦੀ ਸਮੱਗਰੀ ਲਈ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ।',
+          articleAdditionalText:
+            '%provider_name% ਦੀ ਸਮੱਗਰੀ ਵਿੱਚ ਵਿਗਿਆਪਨ ਹੋ ਸਕਦਾ ਹੈ',
         },
         fallback: {
           text: 'ਸਮੱਗਰੀ ਉਪਲਬਧ ਨਹੀਂ ਹੈ',

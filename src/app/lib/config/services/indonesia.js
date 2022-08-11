@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
 import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
-import { indonesia as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/indonesian';
 import '#psammead/moment-timezone-include/tz/Asia/Jakarta';
 import 'moment/locale/id';
 import withContext from '../../../contexts/utils/withContext';
@@ -250,6 +250,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Keterangan video, ',
           text: 'Peringatan: Konten pihak ketiga mungkin berisi iklan',
+          articleText:
+            'Peringatan: BBC tidak bertanggung jawab atas konten situs eksternal',
+          articleAdditionalText: 'Konten %provider_name% mungkin memuat iklan',
         },
         fallback: {
           text: 'Konten tidak tersedia',

@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
 import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
-import { gahuza as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/gahuza';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/rw';
 import withContext from '../../../contexts/utils/withContext';
@@ -245,6 +245,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Insiguro ya video, ',
           text: "Uragaba: Ibitangwa n'izindi mbuga bishobora kubamwo gutangaza",
+          articleText: 'Uragaba: BBC ntibazwa ibiva ku zindi mbuga.',
+          articleAdditionalText:
+            'Ibiri kuri %provider_name% birashobora kubamwo kuranga ibicuruzwa.',
         },
         fallback: {
           text: 'Ibi ntibiboneka',

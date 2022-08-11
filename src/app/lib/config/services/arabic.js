@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
 import arabic from '#psammead/gel-foundations/src/scripts/arabic';
-import { arabic as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/arabic';
 import {
   F_REITH_QALAM_REGULAR,
   F_REITH_QALAM_BOLD,
@@ -258,6 +258,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'التعليق على الفيديو، ',
           text: 'تحذير: المحتوى من طرف ثالث قد يتضمن إعلانات',
+          articleText: 'تحذير: بي بي سي غير مسؤولة عن محتوى المواقع الخارجية',
+          articleAdditionalText:
+            'المحتوى في موقع %provider_name% قد يتضمن إعلانات',
         },
         fallback: {
           text: 'المحتوى غير متاح',
