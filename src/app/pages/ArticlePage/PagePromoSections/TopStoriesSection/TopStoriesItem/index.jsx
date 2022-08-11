@@ -47,7 +47,7 @@ const TopStoriesItem = ({ item, ariaLabelledBy }) => {
   // text to read 'Live' instead, which screenreaders pronounce correctly.
   const liveLabelIsEnglish = liveLabel === 'LIVE';
 
-  const titleTag = timestamp ? 'h3' : 'div';
+  const titleTag = timestamp || isLive ? 'h3' : 'div';
 
   const titleHasContent = titleTag === 'h3';
 
