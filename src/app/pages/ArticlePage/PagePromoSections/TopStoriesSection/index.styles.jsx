@@ -9,9 +9,17 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
 } from '#psammead/gel-foundations/src/breakpoints';
+import SectionLabel from '#psammead/psammead-section-label/src';
 import PromoItem from '#components/OptimoPromos/PromoItem/index.styles';
 import PromoList from '#components/OptimoPromos/PromoList';
 import { BORDER_SPACING_DBL } from '../constants';
+
+export const StyledSectionLabel = styled(SectionLabel)`
+  margin-top: 0;
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin-top: 0;
+  }
+`;
 
 export const StyledTopStoriesSection = styled.section`
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {

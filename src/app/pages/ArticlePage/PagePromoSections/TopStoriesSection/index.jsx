@@ -4,9 +4,9 @@ import { arrayOf, shape } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
 import pathOr from 'ramda/src/pathOr';
 import { C_GREY_2 } from '#psammead/psammead-styles/src/colours';
-import SectionLabel from '#psammead/psammead-section-label/src';
 import isEmpty from 'ramda/src/isEmpty';
 import {
+  StyledSectionLabel,
   StyledTopStoriesSection,
   StyledPromoItem,
   StyledPromoList,
@@ -59,7 +59,7 @@ const TopStoriesSection = ({ content }) => {
       role="region"
       data-e2e={LABEL_ID}
     >
-      <SectionLabel
+      <StyledSectionLabel
         labelId={LABEL_ID}
         columnType="secondary"
         backgroundColor={C_GREY_2}
@@ -67,7 +67,7 @@ const TopStoriesSection = ({ content }) => {
         service={service}
       >
         {title}
-      </SectionLabel>
+      </StyledSectionLabel>
 
       {hasSingleContent ? (
         <TopStoriesItem item={content[0]} ariaLabelledBy={ariaLabelledBy} />
