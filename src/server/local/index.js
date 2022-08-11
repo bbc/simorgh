@@ -169,9 +169,15 @@ export default server => {
       sendDataFile(res, `${dataFilePath}.json`, next);
     })
     .get(topicDataPath, async ({ params }, res, next) => {
-      const { service, id } = params;
+      const { service, variant, id } = params;
 
-      const dataFilePath = path.join(process.cwd(), 'data', service, id);
+      const dataFilePath = path.join(
+        process.cwd(),
+        'data',
+        service,
+        variant,
+        id,
+      );
 
       sendDataFile(res, `${dataFilePath}.json`, next);
     })

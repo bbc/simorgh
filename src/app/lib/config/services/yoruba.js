@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { yoruba as brandSVG } from '@bbc/psammead-assets/svgs';
-import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
-import '@bbc/psammead-locales/moment/yo';
-import '@bbc/moment-timezone-include/tz/Africa/Lagos';
+} from '#psammead/psammead-styles/src/colours';
+import brandSVG from '#lib/chameleonLogos/yoruba';
+import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import '#psammead/psammead-locales/moment/yo';
+import '#psammead/moment-timezone-include/tz/Africa/Lagos';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -59,6 +59,11 @@ export const service = {
     swPath: '/sw.js',
     frontPageTitle: 'Àbáwọlé',
     translations: {
+      pagination: {
+        previousPage: 'Ìṣájú',
+        nextPage: 'Tókàn',
+        pageXOfY: 'Page {x} nínú {y}',
+      },
       ads: {
         advertisementLabel: 'Advertisement',
       },
@@ -223,6 +228,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Àkọlé fídíò, ',
           text: 'Warning: Third party content may contain adverts',
+          articleText:
+            'Warning: The BBC is not responsible for the content of external sites.',
+          articleAdditionalText: '%provider_name% content may contain adverts.',
         },
         fallback: {
           text: 'Content is not available',
@@ -289,7 +297,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853973',
+          href: 'https://www.bbc.co.uk/yoruba/send/u50853973',
           text: 'Kàn sí BBC',
         },
         {

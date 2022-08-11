@@ -183,7 +183,7 @@ Object {
 exports[`AMP Front Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "Call BBC",
-  "url": "https://www.bbc.co.uk/send/u50853577",
+  "url": "https://www.bbc.co.uk/pidgin/send/u50853577",
 }
 `;
 
@@ -407,7 +407,7 @@ exports[`AMP Front Page SEO OG url 1`] = `"http://localhost:7080/pidgin"`;
 
 exports[`AMP Front Page SEO Page title 1`] = `"Domot - BBC News Pidgin"`;
 
-exports[`AMP Front Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP Front Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP Front Page SEO Twitter card 1`] = `"summary_large_image"`;
 
@@ -439,7 +439,7 @@ exports[`AMP Front Page Sections should match headline text 7`] = `"2018 World C
 
 exports[`AMP Front Page Sections should match headline text 8`] = `"Podcast"`;
 
-exports[`Story Promo Headline should match text 1`] = `"AS E DE HAPPEN Senators don begin vote for Senate President"`;
+exports[`Story Promo Headline should match text 1`] = `"As E Dey Happen Senators don begin vote for Senate President"`;
 
 exports[`Story Promo Image should match image 1`] = `
 <amp-img

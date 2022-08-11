@@ -22,6 +22,17 @@ const externalLinks = {
           'https://podcasts.apple.com/gb/podcast/global-newsbeat/id1537379741',
       },
     ],
+    p0btnmzx: [
+      {
+        linkText: 'Spotify',
+        linkUrl: 'https://open.spotify.com/show/4bSkrXP20pPmiF4Mjb2Wuw',
+      },
+      {
+        linkText: 'Apple',
+        linkUrl:
+          'https://podcasts.apple.com/us/podcast/investigasi-skandal-adopsi/id1613760117',
+      },
+    ],
   },
 };
 

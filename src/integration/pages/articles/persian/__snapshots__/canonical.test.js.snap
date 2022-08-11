@@ -49,7 +49,7 @@ Object {
 exports[`Canonical Articles Footer Anchors should match text and url 7`] = `
 Object {
   "text": "تماس با بی بی سی",
-  "url": "https://www.bbc.co.uk/send/u50853555",
+  "url": "https://www.bbc.co.uk/persian/send/u50853555",
 }
 `;
 
@@ -82,89 +82,96 @@ Object {
 
 exports[`Canonical Articles Header Navigation link should match text and url 2`] = `
 Object {
+  "text": "اوکراین",
+  "url": "/persian/topics/cw9q48x6558t",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 3`] = `
+Object {
   "text": "کرونا",
   "url": "/persian/science-52004647",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 3`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 4`] = `
 Object {
   "text": "پخش زنده",
   "url": "/persian/media-49522521",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 4`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 5`] = `
 Object {
   "text": "ویدیو",
   "url": "/persian/media/video",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 5`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
 Object {
   "text": "تلویزیون",
   "url": "/persian/tv-and-radio-37434377",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 7`] = `
 Object {
   "text": "رادیو",
   "url": "/persian/tv-and-radio-37434376",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 7`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 8`] = `
 Object {
   "text": "ايران",
   "url": "/persian/topics/ckdxnwvwwjnt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 8`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 9`] = `
 Object {
   "text": "افغانستان",
   "url": "/persian/afghanistan",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 9`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 10`] = `
 Object {
   "text": "جهان",
   "url": "/persian/topics/c1d8ye58xl8t",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 10`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 11`] = `
 Object {
   "text": "هنر",
   "url": "/persian/topics/c9wpm0epm45t",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 11`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 12`] = `
 Object {
   "text": "ورزش",
   "url": "/persian/topics/cnq6879k7yjt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 12`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 13`] = `
 Object {
   "text": "اقتصاد",
   "url": "/persian/topics/cl8l9mvlllqt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 13`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 14`] = `
 Object {
   "text": "دانش",
   "url": "/persian/topics/ckdxnwr4r1yt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 14`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 15`] = `
 Object {
   "text": "ناظران می‌گویند",
   "url": "/persian/blogs-54099951",
@@ -176,9 +183,8 @@ exports[`Canonical Articles Image Caption should match text 1`] = `"توضیح �
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="قهوه"
-  class="eehpdyc0 bbc-rb7xa0 e1enwo3v0"
+  class="e3vrtyk0 bbc-rb7xa0 e1mo64ex0"
   height="576"
-  sizes="(min-width: 1008px) 760px, 100vw"
   src="https://ichef.bbci.co.uk/news/640/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg"
   width="1024"
 />
@@ -346,7 +352,7 @@ exports[`Canonical Articles SEO OG url 1`] = `"http://localhost:7080/persian/art
 
 exports[`Canonical Articles SEO Page title 1`] = `"پهپادی که برایتان قهوه می‌آورد - BBC News فارسی"`;
 
-exports[`Canonical Articles SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Articles SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Articles SEO Twitter card 1`] = `"summary_large_image"`;
 

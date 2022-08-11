@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
-import { afaanoromoo as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
-import '@bbc/psammead-locales/moment/om';
+} from '#psammead/psammead-styles/src/colours';
+import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import brandSVG from '#lib/chameleonLogos/afaanoromoo';
+import '#psammead/moment-timezone-include/tz/Africa/Addis_Ababa';
+import '#psammead/psammead-locales/moment/om';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -61,6 +61,11 @@ export const service = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: 'Kan duraa',
+        nextPage: 'Itti aanee',
+        pageXOfY: 'Page {x} Keessaa {y}',
+      },
       ads: {
         advertisementLabel: 'Beeksiisa',
       },
@@ -226,6 +231,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: "Ibsa waa'ee viidiyoo, ",
           text: 'Hubachiisa: qabiyyeen qaama sadaffaa beeksisa qabaachuu malu',
+          articleText:
+            'Hubachiisa: Qabiyyee marsariitiiwwan alaatiif BBCn itti gaafatamummaa hin fudhatu.',
+          articleAdditionalText: "%provider_name% beeksisa qabaachuu danda'a.",
         },
         fallback: {
           text: 'Qabiyyeen kun hin argamne',
@@ -294,7 +302,7 @@ export const service = {
           text: 'Kuus-yaadannoo',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50777768',
+          href: 'https://www.bbc.co.uk/afaanoromoo/send/u50777768',
           text: 'BBC qunnami',
         },
         {

@@ -49,7 +49,7 @@ Object {
 exports[`Canonical Feature Index page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "Contactez la BBC",
-  "url": "https://www.bbc.co.uk/send/u50853159",
+  "url": "https://www.bbc.co.uk/afrique/send/u50853159",
 }
 `;
 
@@ -299,7 +299,7 @@ exports[`Canonical Feature Index page SEO OG url 1`] = `"http://localhost:7080/a
 
 exports[`Canonical Feature Index page SEO Page title 1`] = `"Tout savoir sur la CAN 2019 - BBC News Afrique"`;
 
-exports[`Canonical Feature Index page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Feature Index page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Feature Index page SEO Twitter card 1`] = `"summary_large_image"`;
 
@@ -322,9 +322,8 @@ exports[`Canonical Feature Index page Story Promo Headline should match text 1`]
 exports[`Canonical Feature Index page Story Promo Image should match image 1`] = `
 <img
   alt="CAN 2019 : le Sénégal en huitième de finale"
-  class="eehpdyc0 bbc-rb7xa0 e1enwo3v0"
+  class="e3vrtyk0 bbc-rb7xa0 e1mo64ex0"
   height="549"
-  sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/4826/production/_107707481_equipesenegal.jpg"
   width="976"
 />

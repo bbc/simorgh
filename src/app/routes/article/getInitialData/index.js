@@ -8,12 +8,17 @@ import fetchPageData from '../../utils/fetchPageData';
 import handleGroupBlocks from '../handleGroupBlocks';
 import handleEmptyParagraphBlocks from '../handleEmptyParagraphBlocks';
 import handlePromoData from '../handlePromoData';
+import addMpuBlock from './addMpuBlock';
+
 import {
   augmentWithTimestamp,
   addIdsToBlocks,
   applyBlockPositioning,
   addIndexesToEmbeds,
+  addNoCookieToEmbeds,
 } from '../../utils/sharedDataTransformers';
+import isListWithLink from '../../utils/isListWithLink';
+import addIndexToBlockGroups from '../../utils/sharedDataTransformers/addIndexToBlockGroups';
 
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
@@ -24,9 +29,14 @@ const transformJson = pipe(
   handleEmptyParagraphBlocks,
   handlePromoData,
   augmentWithTimestamp,
+  addMpuBlock,
+  addNoCookieToEmbeds,
   addIdsToBlocks,
   applyBlockPositioning,
   addIndexesToEmbeds,
+  addIndexToBlockGroups(isListWithLink, {
+    blockGroupType: 'edOjLinks',
+  }),
 );
 
 const validateResponse = ({ status, json }) => {

@@ -1,19 +1,6 @@
 import React from 'react';
 import { bool, node, oneOf, string, number } from 'prop-types';
-import {
-  ARTICLE_PAGE,
-  FRONT_PAGE,
-  MEDIA_PAGE,
-  MOST_READ_PAGE,
-  MOST_WATCHED_PAGE,
-  ERROR_PAGE,
-  INDEX_PAGE,
-  FEATURE_INDEX_PAGE,
-  MEDIA_ASSET_PAGE,
-  PHOTO_GALLERY_PAGE,
-  STORY_PAGE,
-  CORRESPONDENT_STORY_PAGE,
-} from '#app/routes/utils/pageTypes';
+import * as pageTypes from '#app/routes/utils/pageTypes';
 import getStatsDestination from './getStatsDestination';
 import getStatsPageIdentifier from './getStatsPageIdentifier';
 import getOriginContext from './getOriginContext';
@@ -81,20 +68,7 @@ RequestContextProvider.propTypes = {
   children: node.isRequired,
   id: string,
   isAmp: bool.isRequired,
-  pageType: oneOf([
-    ARTICLE_PAGE,
-    FRONT_PAGE,
-    MEDIA_PAGE,
-    MOST_READ_PAGE,
-    MOST_WATCHED_PAGE,
-    ERROR_PAGE,
-    MEDIA_ASSET_PAGE,
-    FEATURE_INDEX_PAGE,
-    STORY_PAGE,
-    CORRESPONDENT_STORY_PAGE,
-    PHOTO_GALLERY_PAGE,
-    INDEX_PAGE,
-  ]).isRequired,
+  pageType: oneOf(Object.values(pageTypes)).isRequired,
   service: string.isRequired,
   statusCode: number,
   pathname: string.isRequired,

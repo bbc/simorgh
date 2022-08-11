@@ -3,15 +3,13 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import {
-  latinDiacritics,
-  cyrillicAndLatin,
-} from '@bbc/gel-foundations/scripts';
-import { serbian as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/GMT';
-import '@bbc/psammead-locales/moment/sr-cyrl';
-import '@bbc/psammead-locales/moment/sr';
+} from '#psammead/psammead-styles/src/colours';
+import latinDiacritics from '#psammead/gel-foundations/src/scripts/latin-with-diacritics';
+import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import brandSVG from '#lib/chameleonLogos/serbian';
+import '#psammead/moment-timezone-include/tz/GMT';
+import '#psammead/psammead-locales/moment/sr-cyrl';
+import '#psammead/psammead-locales/moment/sr';
 import withContext from '../../../contexts/utils/withContext';
 
 const baseServiceConfig = {
@@ -104,7 +102,7 @@ export const service = {
           text: 'Kolačići',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853665',
+          href: 'https://www.bbc.co.uk/serbian/send/u50853665',
           text: 'Kontaktirajte BBC',
         },
         {
@@ -131,6 +129,10 @@ export const service = {
       {
         title: 'Početna strana',
         url: '/serbian/lat',
+      },
+      {
+        title: 'Ukrajina',
+        url: '/serbian/lat/topics/c5wzvzzz5vrt',
       },
       {
         title: 'Korona virus',
@@ -162,6 +164,12 @@ export const service = {
       variant: 'cyr',
     },
     translations: {
+      pagination: {
+        page: 'Stranica',
+        previousPage: 'Prethodno',
+        nextPage: 'Sledeće',
+        pageXOfY: 'Stranica {x} od {y}',
+      },
       ads: {
         advertisementLabel: 'Advertisement',
       },
@@ -324,6 +332,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Potpis ispod videa, ',
           text: 'Upozorenje: Sadržaj drugih sajtova može da sadrži i reklame',
+          articleText:
+            'Upozorenje: BBC nije odgovoran za sadržaj drugih sajtova.',
+          articleAdditionalText:
+            'Sadržaj %provider_name% može da sadrži reklame.',
         },
         fallback: {
           text: 'Sadržaj nije dostupan',
@@ -398,7 +410,7 @@ export const service = {
           text: 'Колачићи',
         },
         {
-          href: 'https://www.bbc.com/serbian/cyr/institutional-43543431',
+          href: 'https://www.bbc.co.uk/serbian/send/u50853665',
           text: 'Контактирајте ББЦ',
         },
         {
@@ -425,6 +437,10 @@ export const service = {
       {
         title: 'Почетна страна',
         url: '/serbian/cyr',
+      },
+      {
+        title: 'Украјина',
+        url: '/serbian/cyr/topics/cqwvxvvw9qrt',
       },
       {
         title: 'Корона вирус',
@@ -456,6 +472,12 @@ export const service = {
       variant: 'lat',
     },
     translations: {
+      pagination: {
+        page: 'Страница',
+        previousPage: 'Претходно',
+        nextPage: 'Следеће',
+        pageXOfY: 'Страница {x} од {y}',
+      },
       ads: {
         advertisementLabel: 'Advertisement',
       },
@@ -619,6 +641,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Video caption, ',
           text: 'Warning: Third party content may contain adverts',
+          articleText: 'Warning: ББЦ није одговоран за садржај других сајтова.',
+          articleAdditionalText:
+            'Садржај %provider_name% може да садржи рекламе.',
         },
         fallback: {
           text: 'Content is not available',

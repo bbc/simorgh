@@ -175,8 +175,8 @@ Object {
 
 exports[`AMP Sinhala Live Radio Page Footer Anchors should match text and url 6`] = `
 Object {
-  "text": "බීබීසී අමතන්න",
-  "url": "https://www.bbc.co.uk/send/u50853687",
+  "text": "බීබීසී ය අමතන්න",
+  "url": "https://www.bbc.co.uk/sinhala/send/u50853687",
 }
 `;
 
@@ -362,7 +362,7 @@ exports[`AMP Sinhala Live Radio Page SEO OG url 1`] = `"http://localhost:7080/si
 
 exports[`AMP Sinhala Live Radio Page SEO Page title 1`] = `"බීබීසී සිංහල සංදේශය - BBC News සිංහල"`;
 
-exports[`AMP Sinhala Live Radio Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP Sinhala Live Radio Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP Sinhala Live Radio Page SEO Twitter card 1`] = `"summary_large_image"`;
 

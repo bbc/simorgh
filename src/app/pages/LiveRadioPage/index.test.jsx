@@ -33,7 +33,7 @@ const Page = ({ pageData, service, lang, isAmp = false }) => (
 
 analyticsUtils.getAtUserId = jest.fn();
 
-jest.mock('../../containers/ChartbeatAnalytics', () => {
+jest.mock('../../legacy/containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });
@@ -100,7 +100,7 @@ describe('Radio Page Main', () => {
       .getAttribute('src');
 
     expect(audioPlayerIframeSrc).toEqual(
-      'https://www.test.bbc.com/ws/av-embeds/media/bbc_afrique_radio/liveradio/fr?morph_env=live',
+      '/ws/av-embeds/media/bbc_afrique_radio/liveradio/fr?morph_env=live',
     );
   });
 

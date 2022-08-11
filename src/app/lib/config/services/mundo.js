@@ -3,20 +3,17 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { latinDiacritics } from '@bbc/gel-foundations/scripts';
+} from '#psammead/psammead-styles/src/colours';
+import latinDiacritics from '#psammead/gel-foundations/src/scripts/latin-with-diacritics';
 import {
   F_REITH_SANS_BOLD,
-  F_REITH_SANS_BOLD_ITALIC,
-  F_REITH_SANS_ITALIC,
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
-  F_REITH_SERIF_MEDIUM_ITALIC,
   F_REITH_SERIF_LIGHT,
-} from '@bbc/psammead-styles/fonts';
-import { mundo as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/GMT';
-import '@bbc/psammead-locales/moment/es';
+} from '#psammead/psammead-styles/src/fonts';
+import brandSVG from '#lib/chameleonLogos/mundo';
+import '#psammead/moment-timezone-include/tz/GMT';
+import '#psammead/psammead-locales/moment/es';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -69,10 +66,17 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        page: 'Página',
+        previousPage: 'Anterior',
+        nextPage: 'Siguiente',
+        pageXOfY: 'Página {x} de {y}',
+      },
       ads: {
         advertisementLabel: 'Publicidad',
       },
-      recommendationTitle: 'Quizás también te interese',
+      recommendationTitle: 'Recomendamos',
+      splitRecommendationTitle: 'Más recomendaciones',
       seeAll: 'Ver todo',
       home: 'Página de inicio',
       currentPage: 'Página actual',
@@ -235,6 +239,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Título del video, ',
           text: 'Advertencia: El contenido de sitios externos y terceras partes puede contener publicidad',
+          articleText:
+            'Advertencia: La BBC no se hace responsable por el contenido de sitios externos.',
+          articleAdditionalText:
+            'Este contenido de %provider_name% puede contener publicidad.',
         },
         fallback: {
           text: 'Contenido no disponible',
@@ -306,8 +314,8 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853489',
-          text: 'Contacta a la BBC',
+          href: 'https://www.bbc.co.uk/mundo/send/u50853489',
+          text: 'Escribe a BBC Mundo',
         },
         {
           id: 'COOKIE_SETTINGS',
@@ -321,11 +329,8 @@ export const service = {
     },
     fonts: [
       F_REITH_SANS_BOLD,
-      F_REITH_SANS_BOLD_ITALIC,
-      F_REITH_SANS_ITALIC,
       F_REITH_SANS_REGULAR,
       F_REITH_SERIF_MEDIUM,
-      F_REITH_SERIF_MEDIUM_ITALIC,
       F_REITH_SERIF_LIGHT,
     ],
     timezone: 'GMT',
@@ -356,23 +361,23 @@ export const service = {
       },
       {
         title: 'Economía',
-        url: '/mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342',
+        url: '/mundo/topics/c06gq9v4xp3t',
       },
       {
         title: 'Ciencia',
-        url: '/mundo/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53',
+        url: '/mundo/topics/ckdxnw959n7t',
       },
       {
         title: 'Salud',
-        url: '/mundo/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2',
+        url: '/mundo/topics/cpzd498zkxgt',
       },
       {
         title: 'Cultura',
-        url: '/mundo/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864',
+        url: '/mundo/topics/c2dwq9zyv4yt',
       },
       {
         title: 'Tecnología',
-        url: '/mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a',
+        url: '/mundo/topics/cyx5krnw38vt',
       },
       {
         title: 'Video',

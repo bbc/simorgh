@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
-import { gahuza as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/GMT';
-import '@bbc/psammead-locales/moment/rw';
+} from '#psammead/psammead-styles/src/colours';
+import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import brandSVG from '#lib/chameleonLogos/gahuza';
+import '#psammead/moment-timezone-include/tz/GMT';
+import '#psammead/psammead-locales/moment/rw';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -72,6 +72,11 @@ export const service = {
       },
     },
     translations: {
+      pagination: {
+        previousPage: 'Subira inyuma',
+        nextPage: 'Ibikurikira',
+        pageXOfY: 'Page {x} ya {y}',
+      },
       ads: {
         advertisementLabel: 'Kwamamaza',
       },
@@ -240,6 +245,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Insiguro ya video, ',
           text: "Uragaba: Ibitangwa n'izindi mbuga bishobora kubamwo gutangaza",
+          articleText: 'Uragaba: BBC ntibazwa ibiva ku zindi mbuga.',
+          articleAdditionalText:
+            'Ibiri kuri %provider_name% birashobora kubamwo kuranga ibicuruzwa.',
         },
         fallback: {
           text: 'Ibi ntibiboneka',
@@ -307,7 +315,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853291',
+          href: 'https://www.bbc.co.uk/gahuza/send/u50853291',
           text: 'Vugana na BBC',
         },
         {

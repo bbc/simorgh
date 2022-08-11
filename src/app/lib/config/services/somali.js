@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
-import { somali as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/Africa/Mogadishu';
-import '@bbc/psammead-locales/moment/so';
+} from '#psammead/psammead-styles/src/colours';
+import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import brandSVG from '#lib/chameleonLogos/somali';
+import '#psammead/moment-timezone-include/tz/Africa/Mogadishu';
+import '#psammead/psammead-locales/moment/so';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -59,6 +59,12 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        page: 'Bog',
+        previousPage: 'Biggii Hore',
+        nextPage: 'Bogga Xiga',
+        pageXOfY: 'Bog {x} of {y}',
+      },
       ads: {
         advertisementLabel: 'Xayeysiin',
       },
@@ -235,6 +241,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Qoraalka Muuqaalka, ',
           text: 'Digniin: Waxaa suuragal ah in macluumaadka dad kale ay ku jiraan xayaysiin',
+          articleText:
+            'Digniin: BBC macluumaadka ku qoran bog kale masuul kama ahan',
+          articleAdditionalText:
+            '%provider_name% Waxaa laga yaabaa inay ku jirta xayasiis',
         },
         fallback: {
           text: 'Macluumaadkan lama heli karo',
@@ -303,7 +313,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853709',
+          href: 'https://www.bbc.co.uk/somali/send/u50853709',
           text: 'La xiriir BBC',
         },
         {

@@ -7,31 +7,33 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
-} from '@bbc/gel-foundations/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 import pathOr from 'ramda/src/pathOr';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
+} from '#psammead/gel-foundations/src/breakpoints';
+import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
+import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import Grid, { GelPageGrid } from '#app/components/Grid';
+import Grid, { GelPageGrid } from '#components/Grid';
 import LinkedData from '#containers/LinkedData';
 import { RequestContext } from '#contexts/RequestContext';
 import StyledTvHeadingContainer from '#containers/OnDemandHeading/StyledTvHeadingContainer';
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
-import getEmbedUrl from '#lib/utilities/getUrlHelpers/getEmbedUrl';
+import getEmbedUrl, {
+  makeAbsolute,
+} from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import AVPlayer from '#containers/AVPlayer';
 import RecentVideoEpisodes from '#containers/EpisodeList/RecentVideoEpisodes';
-import FooterTimestamp from '#app/containers/OnDemandFooterTimestamp';
+import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
+import { ServiceContext } from '#contexts/ServiceContext';
+import MetadataContainer from '#containers/Metadata';
+import ATIAnalytics from '#containers/ATIAnalytics';
+import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import MetadataContainer from '../../containers/Metadata';
-import ATIAnalytics from '../../containers/ATIAnalytics';
-import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 
 const getGroups = (zero, one, two, three, four, five) => ({
   group0: zero,
@@ -125,6 +127,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
         lang={language}
         description={shortSynopsis}
         openGraphType="website"
+        hasAmpPage={false}
       />
       <LinkedData
         type="WebPage"
@@ -139,7 +142,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
                   thumbnailUrl: thumbnailImageUrl,
                   duration: durationISO8601,
                   uploadDate: new Date(releaseDateTimeStamp).toISOString(),
-                  embedURL: embedUrl,
+                  embedURL: makeAbsolute(embedUrl),
                 },
               ]
             : []

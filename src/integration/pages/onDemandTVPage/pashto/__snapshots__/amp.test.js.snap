@@ -183,7 +183,7 @@ Object {
 exports[`AMP On Demand T V Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "زموږ سره اړیکي",
-  "url": "https://www.bbc.co.uk/send/u50853533",
+  "url": "https://www.bbc.co.uk/pashto/send/u50853533",
 }
 `;
 
@@ -452,7 +452,7 @@ exports[`AMP On Demand T V Page SEO OG url 1`] = `"http://localhost:7080/pashto/
 
 exports[`AMP On Demand T V Page SEO Page title 1`] = `"نړۍ دا وخت - BBC News پښتو"`;
 
-exports[`AMP On Demand T V Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP On Demand T V Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP On Demand T V Page SEO Twitter card 1`] = `"summary_large_image"`;
 

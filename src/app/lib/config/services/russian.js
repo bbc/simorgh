@@ -3,20 +3,17 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
+} from '#psammead/psammead-styles/src/colours';
+import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
 import {
   F_REITH_SANS_BOLD,
-  F_REITH_SANS_BOLD_ITALIC,
-  F_REITH_SANS_ITALIC,
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
-  F_REITH_SERIF_MEDIUM_ITALIC,
   F_REITH_SERIF_LIGHT,
-} from '@bbc/psammead-styles/fonts';
-import { russian as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/GMT';
-import '@bbc/psammead-locales/moment/ru';
+} from '#psammead/psammead-styles/src/fonts';
+import brandSVG from '#lib/chameleonLogos/russian';
+import '#psammead/moment-timezone-include/tz/GMT';
+import '#psammead/psammead-locales/moment/ru';
 import withContext from '../../../contexts/utils/withContext';
 
 // Translations used in the header and footer elements of the page
@@ -122,9 +119,16 @@ const headerFooterTranslations = {
 
 // Translations used in the main element of the page
 export const mainTranslations = {
+  pagination: {
+    previousPage: 'НАЗАД',
+    nextPage: 'ВПЕРЕД',
+    pageXOfY: 'Page {x} из {y}',
+  },
   ads: {
     advertisementLabel: 'Реклама',
   },
+  recommendationTitle: 'По теме',
+  splitRecommendationTitle: 'Другие статьи',
   seeAll: 'Посмотреть все',
   skipLinkText: 'Перейти к содержанию',
   relatedContent: 'Читайте также',
@@ -200,6 +204,9 @@ export const mainTranslations = {
     caption: {
       textPrefixVisuallyHidden: 'Подпись к видео, ',
       text: 'Внимание: Контент других сайтов может содержать рекламу.',
+      articleText:
+        'Внимание: Би-би-си не несет ответственности за контент других сайтов.',
+      articleAdditionalText: 'Контент %provider_name% может содержать рекламу.',
     },
     fallback: {
       text: 'Контент недоступен',
@@ -220,6 +227,7 @@ export const mainTranslations = {
   },
   topStoriesTitle: 'Главное',
   featuresAnalysisTitle: 'Не пропустите',
+  infoBannerLabel: 'Информация',
 };
 
 export const service = {
@@ -303,7 +311,13 @@ export const service = {
       },
     },
     disclaimer: {
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim mattis enim, porta viverra nulla bibendum nec. In hac habitasse platea dictumst. Fusce dui urna, iaculis vel odio sed, faucibus ultricies turpis. Ut sit amet odio eu lectus rhoncus blandit. Donec porta dignissim fringilla. Integer vel erat tellus. Aenean nec dui sapien.',
+      para1: 'Подпишитесь на нашу рассылку ”',
+      para2: {
+        text: 'Контекст',
+        url: 'https://www.bbc.com/russian/resources/idt-b34bb7dd-f094-4722-92eb-cf7aff8cc1bc',
+        isExternal: false,
+      },
+      para3: '”: она поможет вам разобраться в событиях.',
     },
     radioSchedule: {
       hasRadioSchedule: false,
@@ -338,7 +352,7 @@ export const service = {
           text: 'Куки',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853643',
+          href: 'https://www.bbc.co.uk/russian/send/u50853643',
           text: 'Связаться с Би-би-си',
         },
         {
@@ -353,11 +367,8 @@ export const service = {
     },
     fonts: [
       F_REITH_SANS_BOLD,
-      F_REITH_SANS_BOLD_ITALIC,
-      F_REITH_SANS_ITALIC,
       F_REITH_SANS_REGULAR,
       F_REITH_SERIF_MEDIUM,
-      F_REITH_SERIF_MEDIUM_ITALIC,
       F_REITH_SERIF_LIGHT,
     ],
     timezone: 'GMT',
@@ -365,6 +376,10 @@ export const service = {
       {
         title: 'Главная',
         url: '/russian',
+      },
+      {
+        title: 'Война в Украине',
+        url: '/russian/topics/cez0n29ggrdt',
       },
       {
         title: 'Коронавирус',

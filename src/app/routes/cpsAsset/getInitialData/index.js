@@ -59,8 +59,8 @@ const processOptimoBlocks = toggles =>
     addBylineBlock,
     addRecommendationsBlock,
     addMpuBlock,
-    addIdsToBlocks,
     applyBlockPositioning,
+    addIdsToBlocks,
     cpsOnlyOnwardJourneys,
     addIndexToBlockGroups(isListWithLink, {
       blockGroupType: 'listWithLink',
@@ -109,6 +109,7 @@ export default async ({
       variant,
       env,
     });
+
     const processedAdditionalData = processMostWatched({
       data: additionalPageData,
       service,

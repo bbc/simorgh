@@ -1,0 +1,2190 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c88ld5g4xxxo",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c88ld5g4xxxo",
+      "canonicalUrl": "https://www.bbc.com/kyrgyz/articles/c88ld5g4xxxo"
+    },
+    "type": "article",
+    "createdBy": "Kyrgyz",
+    "language": "ky",
+    "lastUpdated": 1646980103000,
+    "firstPublished": 1646978875317,
+    "lastPublished": 1646978875317,
+    "timestamp": 1646978875317,
+    "options": {},
+    "analyticsLabels": {
+      "ldp_tags": "Russia-Ukraine+war~Russia~Economics~Military~Ukraine",
+      "page": "kyrgyz.articles.c88ld5g4xxxo.page",
+      "ldp_ids": "23d96e97-b777-413a-a8c5-85a2eda98613~39267b85-1784-4f4b-80ed-f8cb4a35f337~ca170ae3-99c1-48db-9b67-2866f85e7342~ce5c43ee-8982-4f88-9472-9aa79aeb09cc~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+      "contentId": "urn:bbc:optimo:asset:c88ld5g4xxxo",
+      "producer": "Kyrgyz"
+    },
+    "passport": {
+      "language": "ky",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
+      "locator": "urn:bbc:optimo:asset:c88ld5g4xxxo",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+          "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id"
+        }
+      ],
+      "schemaVersion": "1.4.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+            "thingLabel": "Россия-Украина согушу",
+            "thingUri": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+            "thingId": "23d96e97-b777-413a-a8c5-85a2eda98613",
+            "thingType": ["tagging:TagConcept", "core:Event", "core:Thing"],
+            "thingSameAs": ["http://www.wikidata.org/entity/Q110254389"],
+            "thingEnglishLabel": "Russia-Ukraine war",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+            "thingLabel": "Орусия",
+            "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+            "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+            "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
+            "thingSameAs": ["http://sws.geonames.org/2017370/"],
+            "thingEnglishLabel": "Russia",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+            "thingLabel": "Экономика",
+            "thingUri": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+            "thingId": "ca170ae3-99c1-48db-9b67-2866f85e7342",
+            "thingType": ["core:Theme", "core:Thing", "tagging:TagConcept"],
+            "thingSameAs": ["http://dbpedia.org/resource/Economy"],
+            "thingEnglishLabel": "Economics",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id",
+            "thingLabel": "Аскердик",
+            "thingUri": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id",
+            "thingId": "ce5c43ee-8982-4f88-9472-9aa79aeb09cc",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+            "thingSameAs": ["http://dbpedia.org/resource/Military"],
+            "thingEnglishLabel": "Military",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+            "thingLabel": "Украина",
+            "thingUri": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+            "thingId": "ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Place"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Ukraine",
+              "http://www.wikidata.org/entity/Q212",
+              "http://sws.geonames.org/690791/"
+            ],
+            "thingEnglishLabel": "Ukraine",
+            "type": "about"
+          }
+        ],
+        "infoClass": [
+          {
+            "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+            "type": "infoClass"
+          }
+        ],
+        "motivation": [
+          {
+            "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id",
+            "type": "motivation"
+          }
+        ]
+      }
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Россия-Украина согушу",
+          "thingUri": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+          "thingId": "23d96e97-b777-413a-a8c5-85a2eda98613",
+          "thingType": ["tagging:TagConcept", "core:Event", "core:Thing"],
+          "thingSameAs": ["http://www.wikidata.org/entity/Q110254389"],
+          "topicName": "Россия-Украина согушу",
+          "topicId": "c0109l9xrpnt",
+          "curationList": [
+            {
+              "curationId": "7eb3fb5c-3bd3-4aae-a53e-cd6e82e57965",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Russia-Ukraine war",
+          "thingLabelLanguage": "ky",
+          "thingPreferredLabel": "Russia-Ukraine war"
+        },
+        {
+          "thingLabel": "Орусия",
+          "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+          "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+          "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
+          "thingSameAs": ["http://sws.geonames.org/2017370/"],
+          "topicName": "Орусия",
+          "topicId": "c404vn7x5k7t",
+          "curationList": [
+            {
+              "curationId": "7d91c2c9-6985-4576-97b6-836175afda0a",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Russia",
+          "thingLabelLanguage": "ky",
+          "thingPreferredLabel": "Russia"
+        },
+        {
+          "thingLabel": "Экономика",
+          "thingUri": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+          "thingId": "ca170ae3-99c1-48db-9b67-2866f85e7342",
+          "thingType": ["core:Theme", "core:Thing", "tagging:TagConcept"],
+          "thingSameAs": ["http://dbpedia.org/resource/Economy"],
+          "topicName": "Экономика",
+          "topicId": "c404vn7yn2pt",
+          "curationList": [
+            {
+              "curationId": "78e7d422-63fa-44cd-a3e3-c7e4609e20ef",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Economics",
+          "thingLabelLanguage": "ky",
+          "thingPreferredLabel": "Economics"
+        },
+        {
+          "thingLabel": "Аскердик",
+          "thingUri": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id",
+          "thingId": "ce5c43ee-8982-4f88-9472-9aa79aeb09cc",
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+          "thingSameAs": ["http://dbpedia.org/resource/Military"],
+          "topicName": "Аскердик",
+          "topicId": "cwr9j8qzkgrt",
+          "curationList": [
+            {
+              "curationId": "9842e9e7-0ff9-4ee7-942d-7b4a5a166aaf",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Military",
+          "thingLabelLanguage": "ky",
+          "thingPreferredLabel": "Military"
+        },
+        {
+          "thingLabel": "Украина",
+          "thingUri": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+          "thingId": "ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Place"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Ukraine",
+            "http://www.wikidata.org/entity/Q212",
+            "http://sws.geonames.org/690791/"
+          ],
+          "thingEnglishLabel": "Ukraine",
+          "thingLabelLanguage": "ky",
+          "thingPreferredLabel": "Ukraine"
+        }
+      ]
+    },
+    "version": "v1.4.2",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment",
+      "image",
+      "altText",
+      "rawImage",
+      "subheadline",
+      "links",
+      "link",
+      "urlLink",
+      "caption",
+      "aresLink"
+    ],
+    "suitableForSyndication": true,
+    "readTime": 4,
+    "topics": [
+      {
+        "topicName": "Россия-Украина согушу",
+        "topicId": "c0109l9xrpnt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "7eb3fb5c-3bd3-4aae-a53e-cd6e82e57965",
+            "curationType": "vivo-stream",
+            "position": 0,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Event", "core:Thing"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz"
+      },
+      {
+        "topicName": "Орусия",
+        "topicId": "c404vn7x5k7t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "7d91c2c9-6985-4576-97b6-836175afda0a",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["core:Place", "tagging:TagConcept", "core:Thing"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz"
+      },
+      {
+        "topicName": "Экономика",
+        "topicId": "c404vn7yn2pt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "78e7d422-63fa-44cd-a3e3-c7e4609e20ef",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["core:Theme", "core:Thing", "tagging:TagConcept"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz"
+      },
+      {
+        "topicName": "Аскердик",
+        "topicId": "cwr9j8qzkgrt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "9842e9e7-0ff9-4ee7-942d-7b4a5a166aaf",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz"
+      }
+    ],
+    "allowAdvertising": true
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Орусия-Украина согушу: сүйлөшүүлөрдөн майнап чыккан жок, каза болгондордун саны өсүүдө",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Орусия-Украина согушу: сүйлөшүүлөрдөн майнап чыккан жок, каза болгондордун саны өсүүдө",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Украина",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Украина",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 1440,
+                  "height": 810,
+                  "locator": "aae8/live/e57322d0-a101-11ec-9e16-398f2b454303.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "BBC",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Украинанын аймагында орус армиясы менен украин күчтөрүнүн ортосундагы согуш 15 күндөн бери уланууда. БУУнун маалыматы боюнча, Украинада согуш башталгандан бери 549 жай тургун набыт болгон. 11-мартка карата соңку окуяларды баяндайбыз.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Украинанын аймагында орус армиясы менен украин күчтөрүнүн ортосундагы согуш 15 күндөн бери уланууда. БУУнун маалыматы боюнча, Украинада согуш башталгандан бери 549 жай тургун набыт болгон. 11-мартка карата соңку окуяларды баяндайбыз.",
+                        "attributes": ["bold"]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Украинадагы согуштун Орусияга тийгизген таасири",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Украинадагы согуштун Орусияга тийгизген таасири",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Орусия өлкө ичиндеги азык-түлүк таңкыстыгын алдын алуу үчүн буудай, кара буудай, арпа жана жүгөрүнү 31-августка чейин Евразия экономикалык биримдигине (ЕАЭБ) экспорттоону токтотот.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Орусия өлкө ичиндеги азык-түлүк таңкыстыгын алдын алуу үчүн буудай, кара буудай, арпа жана жүгөрүнү 31-августка чейин Евразия экономикалык биримдигине (ЕАЭБ) экспорттоону токтотот.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "ЕАЭБге Армения, Беларус, Казакстан, Кыргызстан жана Орусия кирет.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "ЕАЭБге Армения, Беларус, Казакстан, Кыргызстан жана Орусия кирет.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Ошондой эле Орусия 2022-жылдын жай мезгилинин аягына чейин кумшекерди үчүнчү өлкөлөргө экспорттоого тыюу салды. Бирок айрым ЕАЭБ өлкөлөрүнө чектөөнүн тиешеси болбошу ыктымал.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Ошондой эле Орусия 2022-жылдын жай мезгилинин аягына чейин кумшекерди үчүнчү өлкөлөргө экспорттоого тыюу салды. Бирок айрым ЕАЭБ өлкөлөрүнө чектөөнүн тиешеси болбошу ыктымал.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Орусиянын Борбордук банкы юридикалык жактар менен жеке ишкерлерге чет элдик валюта менен акча алууга чектөө киргизди.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Орусиянын Борбордук банкы юридикалык жактар менен жеке ишкерлерге чет элдик валюта менен акча алууга чектөө киргизди.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Орусия",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Орусия",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 414,
+                  "locator": "a8f5/live/0f6e7860-a101-11ec-9e16-398f2b454303.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "EPA",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "links",
+          "model": {
+            "blocks": [
+              {
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:optimo:asset:cw052g495wjo",
+                  "blocks": [
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Менчик аскердик компания",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Менчик аскердик компания",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 976,
+                              "height": 758,
+                              "locator": "720b/live/e97a56a0-a066-11ec-9e16-398f2b454303.jpg",
+                              "originCode": "cpsprodpb",
+                              "copyrightHolder": "BBC",
+                              "suitableForSyndication": true
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Украинадагы согушка менчик аскер компаниялары катышабы?",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "Украинадагы согушка менчик аскер компаниялары катышабы?",
+                                    "locator": "https://www.bbc.com/kyrgyz/articles/cw052g495wjo",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Украинадагы согушка менчик аскер компаниялары катышабы?",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "aresLink",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "optimoLinkMetadata",
+                            "model": {
+                              "timestamp": 1646912992130
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:optimo:asset:cgx2kx0g5y3o",
+                  "blocks": [
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Украина",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Украина",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 800,
+                              "height": 450,
+                              "locator": "6210/live/5ff771e0-a02c-11ec-9e16-398f2b454303.jpg",
+                              "originCode": "cpsprodpb",
+                              "copyrightHolder": "BBC",
+                              "suitableForSyndication": true
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Украинага Батыштын куралы жардам берип жатабы?",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "Украинага Батыштын куралы жардам берип жатабы?",
+                                    "locator": "https://www.bbc.com/kyrgyz/articles/cgx2kx0g5y3o",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Украинага Батыштын куралы жардам берип жатабы?",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "aresLink",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "optimoLinkMetadata",
+                            "model": {
+                              "timestamp": 1646887693799
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:optimo:asset:c72lj2kpmyno",
+                  "blocks": [
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Украинадагы согуш",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Украинадагы согуш",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 976,
+                              "height": 549,
+                              "locator": "9b0c/live/bd6bd570-9edb-11ec-9e16-398f2b454303.jpg",
+                              "originCode": "cpsprodpb",
+                              "copyrightHolder": "Getty Images",
+                              "suitableForSyndication": true
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Украинадагы согуш кантип бүтөт? Беш сценарий",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "Украинадагы согуш кантип бүтөт? Беш сценарий",
+                                    "locator": "https://www.bbc.com/kyrgyz/articles/c72lj2kpmyno",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Украинадагы согуш кантип бүтөт? Беш сценарий",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "aresLink",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "optimoLinkMetadata",
+                            "model": {
+                              "timestamp": 1646743287164
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Эми Орусиянын жарандары, тактап айтканда, орусиялык юридикалык жактар менен жеке ишкерлер доллар, евро, фунт жана жапон иенин 5 миң доллардын тегерегинде гана накталай ала алышат.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Эми Орусиянын жарандары, тактап айтканда, орусиялык юридикалык жактар менен жеке ишкерлер доллар, евро, фунт жана жапон иенин 5 миң доллардын тегерегинде гана накталай ала алышат.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Мындай накталай акча чет өлкөдөгү командировкалар үчүн гана бөлүнүп берилет.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Мындай накталай акча чет өлкөдөгү командировкалар үчүн гана бөлүнүп берилет.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Ал эми чет өлкөнүн жарандары болгон юридикалык жактар менен жеке ишерлер чет элдик валюта менен жөнөтүлгөн акчаны накталай ала алышпайт.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Ал эми чет өлкөнүн жарандары болгон юридикалык жактар менен жеке ишерлер чет элдик валюта менен жөнөтүлгөн акчаны накталай ала алышпайт.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Бул чектөө 2022-жылдын 10-сентябрына чейин күчүндө болот. Борбордук банк ушул аптада өлкө ичиндеги капиталды жүгүртүү боюнча да чектөөлөрдү киргизмекчи.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Бул чектөө 2022-жылдын 10-сентябрына чейин күчүндө болот. Борбордук банк ушул аптада өлкө ичиндеги капиталды жүгүртүү боюнча да чектөөлөрдү киргизмекчи.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Украинадагы жоготуулар",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Украинадагы жоготуулар",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Украинадагы Мариуполь шаарынын мэринин орун басары Сергей Орлов Би-Би-Сиге билдиргендей, соңку маалыматтар боюнча шаарда 1207 киши өлгөн.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Украинадагы Мариуполь шаарынын мэринин орун басары Сергей Орлов Би-Би-Сиге билдиргендей, соңку маалыматтар боюнча шаарда 1207 киши өлгөн.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Орловдун айтымында, “алар көчөдөн топтогон сөөктөр гана”.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Орловдун айтымында, “алар көчөдөн топтогон сөөктөр гана”.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Анын сөздөрүн тастыктоочу көз карандысыз маалыматтар азырынча жок.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Анын сөздөрүн тастыктоочу көз карандысыз маалыматтар азырынча жок.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Бириккен Улуттар Уюмунан (БУУ) маалымдашкандай, Украинада 15 күндөн бери жүрүп жаткан согушта 549 жай тургун каза болгон.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Бириккен Улуттар Уюмунан (БУУ) маалымдашкандай, Украинада 15 күндөн бери жүрүп жаткан согушта ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "549 жай тургун каза болгон",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "549 жай тургун каза болгон",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.ohchr.org/EN/NewsEvents/Pages/DisplayNews.aspx?NewsID=28233&LangID=E",
+                        "isExternal": true
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": ".",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Андан тышкары 957 киши жаракат алган.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Андан тышкары 957 киши жаракат алган.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "БУУнун эсеби боюнча, Украинадан 2,3 млн киши үй-жайын таштап кетүүгө аргасыз болгон",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "БУУнун эсеби боюнча, Украинадан 2,3 млн киши үй-жайын таштап кетүүгө аргасыз болгон",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Украина",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Украина",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 416,
+                  "locator": "f716/live/ee4bea60-a0ff-11ec-9e16-398f2b454303.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "AFP",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Оор артиллериядан аткылоонун, ракета жана авиациялык соккулардын натыйжасында жай тургундардын өмүрү кыйылган.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Оор артиллериядан аткылоонун, ракета жана авиациялык соккулардын натыйжасында жай тургундардын өмүрү кыйылган.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "БУУнун эсеби боюнча, Орусиянын кол салуусунан улам Украинадан 2,3 млн киши өз үй-жайын таштап кетүүгө аргасыз болгон. Алардын дээрлик жарымы жаш балдар.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "БУУнун эсеби боюнча, Орусиянын кол салуусунан улам Украинадан 2,3 млн киши өз үй-жайын таштап кетүүгө аргасыз болгон. Алардын дээрлик жарымы жаш балдар.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "“Биологиялык жана химиялык курал”",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "“Биологиялык жана химиялык курал”",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Украинанын президенти Владимир Зеленский Кремлдин билдирүүсү боюнча комментарий берди. Москва Украинада биологиялык курал иштеп чыгуучу лабораториялар бар деп айтып чыккан. Төмөндө Зеленскийдин сөзү:",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Украинанын президенти Владимир Зеленский Кремлдин билдирүүсү боюнча комментарий берди. Москва Украинада биологиялык курал иштеп чыгуучу лабораториялар бар деп айтып чыккан. Төмөндө Зеленскийдин сөзү:",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "“Алар бизди күнөөлөп жатышат…. Кайра эле бизди! Биз биологиялык курал иштеп чыгып жаткан имишпиз. Химиялык чабуулга даярданып жаткан имишпиз.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "“Алар бизди күнөөлөп жатышат…. Кайра эле бизди! Биз биологиялык курал иштеп чыгып жаткан имишпиз. Химиялык чабуулга даярданып жаткан имишпиз.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Орусиянын пландары жөнүндө билгиң келип жатса, Орусия башкаларды эмне деп күнөөлөп жатканына көңүл бур.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Орусиянын пландары жөнүндө билгиң келип жатса, Орусия башкаларды эмне деп күнөөлөп жатканына көңүл бур.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Менин акыл-эсим жайында. Акыл-эстүү элдин, акыл-эси ордунда болгон өлкөнүн президентимин. Эки баланын атасымын. Менин жеримде эч кандай химиялык же кандайдыр бир массалык кыйратуучу курал иштелип чыккан эмес.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Менин акыл-эсим жайында. Акыл-эстүү элдин, акыл-эси ордунда болгон өлкөнүн президентимин. Эки баланын атасымын. Менин жеримде эч кандай химиялык же кандайдыр бир массалык кыйратуучу курал иштелип чыккан эмес.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Муну дүйнө жүзү билет. Силер да билесиңер.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Муну дүйнө жүзү билет. Силер да билесиңер.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Эгерде силер бизге каршы ошондой курал колдонсоңор, эң катаал санкциялык жооп аласыңар”, — деди Зеленский орус тилинде.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Эгерде силер бизге каршы ошондой курал колдонсоңор, эң катаал санкциялык жооп аласыңар”, — деди Зеленский орус тилинде.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Харьков - Украинадагы согушта зыянга эң көп учураган шаарлардын бири",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Харьков - Украинадагы согушта зыянга эң көп учураган шаарлардын бири",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Харьков",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Харьков",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 415,
+                  "locator": "3647/live/33d8c940-a100-11ec-9e16-398f2b454303.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "AFP",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "АКШдагы Пентагондун жогорку мансаптуу өкүлү билдиргендей, Орусиянын Украина биологиялык жана химиялык курал өндүрөт деген сөзү Москва агрессивдүүрөөк аракеттер үчүн кандайдыр бир шылтоо даярдап жатканынан кабар бериши мүмкүн.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "АКШдагы Пентагондун жогорку мансаптуу өкүлү билдиргендей, Орусиянын Украина биологиялык жана химиялык курал өндүрөт деген сөзү Москва агрессивдүүрөөк аракеттер үчүн кандайдыр бир шылтоо даярдап жатканынан кабар бериши мүмкүн.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "“Орусия чагым уюштуруп, ал үчүн Украинаны, ал тургай АКШны да күнөөлөп жибериши мүмкүн болуп турат”, — деп билдирди ал.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "“Орусия чагым уюштуруп, ал үчүн Украинаны, ал тургай АКШны да күнөөлөп жибериши мүмкүн болуп турат”, — деп билдирди ал.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Пентагондон айтышкандай, АКШнын коргоо министринин биологиялык курал өндүрүү боюнча Украинада да, дүйнөнүн башка жеринде да эч кандай лабораториясы жок.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Пентагондон айтышкандай, АКШнын коргоо министринин биологиялык курал өндүрүү боюнча Украинада да, дүйнөнүн башка жеринде да эч кандай лабораториясы жок.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Орусиянын күчтөрү Киевге жакындап калды",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Орусиянын күчтөрү Киевге жакындап калды",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Пентагондон маалымдашкандай, орус күчтөрү соңку 24 саат ичинде Киевге болжолдуу 5 км жакын жылып барган.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Пентагондон маалымдашкандай, орус күчтөрү соңку 24 саат ичинде Киевге болжолдуу 5 км жакын жылып барган.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Орусиянын армиясы Украинанын борборуна эки топ болуп баратат. Бири түндүк-батыштан, экинчиси чыгыш жактан. Биринчи топ Киевден 15 км алыстыкта турат. Башкача айтканда, алар шаар четине жетип барышкан. Чыгыштап бастырып бараткан топ 40 км аралыкта турат.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Орусиянын армиясы Украинанын борборуна эки топ болуп баратат. Бири түндүк-батыштан, экинчиси чыгыш жактан. Биринчи топ Киевден 15 км алыстыкта турат. Башкача айтканда, алар шаар четине жетип барышкан. Чыгыштап бастырып бараткан топ 40 км аралыкта турат.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Украинанын аба коргонуу күчтөрү соңку суткада өлкө аймагында Орусиянын 10 учагын атып түшүргөнүн билдирди.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Украинанын аба коргонуу күчтөрү соңку суткада өлкө аймагында Орусиянын 10 учагын атып түшүргөнүн билдирди.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Ар кандай тараптар жана байкоочулар согуштагы жоготууларды түрдүүчө баалап жатышат. Алардын маалыматын согуш шартында ыкчам тастыктоо мүмкүн эмес.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Ар кандай тараптар жана байкоочулар согуштагы жоготууларды түрдүүчө баалап жатышат. Алардын маалыматын согуш шартында ыкчам тастыктоо мүмкүн эмес.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Киев",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Киев",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 391,
+                  "locator": "a9db/live/a7bb61b0-a100-11ec-9e16-398f2b454303.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "Maxar",
+                  "suitableForSyndication": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "links",
+          "model": {
+            "blocks": [
+              {
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:optimo:asset:cqq3zx121rgo",
+                  "blocks": [
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Харьков",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Харьков",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 976,
+                              "height": 549,
+                              "locator": "17e6/live/39db4b80-994c-11ec-9acc-37a09ce5ea88.jpg",
+                              "originCode": "cpsprodpb",
+                              "copyrightHolder": "Getty Images",
+                              "suitableForSyndication": true
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Путин эмнеге Украинага кол салды?",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "Путин эмнеге Украинага кол салды?",
+                                    "locator": "https://www.bbc.com/kyrgyz/articles/cqq3zx121rgo",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Путин эмнеге Украинага кол салды?",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "aresLink",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "optimoLinkMetadata",
+                            "model": {
+                              "timestamp": 1646132436834
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:optimo:asset:cprjwewxg8ro",
+                  "blocks": [
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Путин",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Путин",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 976,
+                              "height": 549,
+                              "locator": "b017/live/de2e51e0-9e07-11ec-9e16-398f2b454303.jpg",
+                              "originCode": "cpsprodpb",
+                              "copyrightHolder": "Орусиянын президенттик администрациясы",
+                              "suitableForSyndication": false
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Путиндин жакын чөйрөсүнө кимдер кирет?",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "Путиндин жакын чөйрөсүнө кимдер кирет?",
+                                    "locator": "https://www.bbc.com/kyrgyz/articles/cprjwewxg8ro",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Путиндин жакын чөйрөсүнө кимдер кирет?",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "aresLink",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "optimoLinkMetadata",
+                            "model": {
+                              "timestamp": 1646653262278
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:cps:curie:asset:d4cb4d0a-8cf3-4d91-a2f5-f53e4a3fbc9d",
+                  "blocks": [
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "President Putin on 15 April last year",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "President Putin on 15 April last year",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 976,
+                              "height": 549,
+                              "locator": "6F0E/production/_123403482_60507619.jpg",
+                              "originCode": "cpsprodpb",
+                              "copyrightHolder": "Getty Images",
+                              "suitableForSyndication": true
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Владимир Путиндин өмүр баяны",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "Владимир Путиндин өмүр баяны",
+                                    "locator": "https://www.bbc.com/kyrgyz/60570235",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Владимир Путиндин өмүр баяны",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "aresLink",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "cpsLinkMetadata",
+                            "model": {
+                              "assetType": "STY",
+                              "timestamp": 1646369990000
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Евробиримдикке кирген өлкөлөрдүн башчылары Украинага каршы согушка жол бергендер жазаланарын билдирип, Эл аралык кылмыш сотунун иликтөө баштоо чечимин жактырды.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Евробиримдикке кирген өлкөлөрдүн башчылары Украинага каршы согушка жол бергендер жазаланарын билдирип, Эл аралык кылмыш сотунун иликтөө баштоо чечимин жактырды.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "АКШнын президенти Жо Байден Орусия менен кадыресе соода мамилесин токтотууну Конгресске жума күнү сунуштайт. Ал ишке кирсе, Орусиядан импорттоого тарифтин баасы көтөрүлөт. Бул туурасында Рейтер агенттиги өз булактарына таянып маалымдады.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "АКШнын президенти Жо Байден Орусия менен кадыресе соода мамилесин токтотууну Конгресске жума күнү сунуштайт. Ал ишке кирсе, Орусиядан импорттоого тарифтин баасы көтөрүлөт. Бул туурасында Рейтер агенттиги өз булактарына таянып маалымдады.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Шейшембиде Байден Орусиянын мунайы менен газына эмбарго жарыялаган.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Шейшембиде Байден Орусиянын мунайы менен газына эмбарго жарыялаган.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Түркияда Орусиянын жана Украинанын тышкы иштер министрлери Сергей Лавров менен Дмитрий Кулеба сүйлөшүүлөрдү өткөрдү. Сүйлөшүүлөр эч кандай натыйжа берген эмес. Франциянын президенти Эммануэль Макрон сүйлөшүүлөр жакынкы күндөрдө ок атышууну токтотууга алып барарына ишенбей жатканын билдирди. (EA)",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Түркияда Орусиянын жана Украинанын тышкы иштер министрлери Сергей Лавров менен Дмитрий Кулеба сүйлөшүүлөрдү өткөрдү. Сүйлөшүүлөр эч кандай натыйжа берген эмес. Франциянын президенти Эммануэль Макрон сүйлөшүүлөр жакынкы күндөрдө ок атышууну токтотууга алып барарына ишенбей жатканын билдирди. (EA)",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c88ld5g4xxxo",
+      "canonicalUrl": "https://www.bbc.com/kyrgyz/articles/c88ld5g4xxxo"
+    },
+    "timestamp": 1646978875317,
+    "suitableForSyndication": true,
+    "language": "ky",
+    "headlines": {
+      "seoHeadline": "Украинагы согуш: сүйлөшүүлөрдөн майнап чыккан жок, каза болгондордун саны өсүүдө",
+      "promoHeadline": {
+        "blocks": [
+          {
+            "type": "text",
+            "model": {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "model": {
+                    "text": "Орусия-Украина согушу: сүйлөшүүлөрдөн майнап чыккан жок, каза болгондордун саны өсүүдө",
+                    "blocks": [
+                      {
+                        "type": "fragment",
+                        "model": {
+                          "text": "Орусия-Украина согушу: сүйлөшүүлөрдөн майнап чыккан жок, каза болгондордун саны өсүүдө",
+                          "attributes": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "images": {
+      "defaultPromoImage": {
+        "blocks": [
+          {
+            "type": "altText",
+            "model": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Украина",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Украина",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "rawImage",
+            "model": {
+              "width": 1440,
+              "height": 810,
+              "locator": "aae8/live/e57322d0-a101-11ec-9e16-398f2b454303.jpg",
+              "originCode": "cpsprodpb",
+              "copyrightHolder": "BBC",
+              "suitableForSyndication": true
+            }
+          }
+        ]
+      }
+    },
+    "summary": {
+      "blocks": [
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Украинанын аймагында орус армиясы менен украин күчтөрүнүн ортосундагы согуш 15 күндөн бери уланууда. БУУнун маалыматы боюнча, Украинада согуш башталгандан бери 549 жай тургун набыт болгон. 11-мартка карата соңку окуяларды баяндайбыз.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Украинанын аймагында орус армиясы менен украин күчтөрүнүн ортосундагы согуш 15 күндөн бери уланууда. БУУнун маалыматы боюнча, Украинада согуш башталгандан бери 549 жай тургун набыт болгон. 11-мартка карата соңку окуяларды баяндайбыз.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "passport": {
+      "language": "ky",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
+      "locator": "urn:bbc:optimo:asset:c88ld5g4xxxo",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+          "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id"
+        }
+      ],
+      "schemaVersion": "1.4.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+            "thingLabel": "Россия-Украина согушу",
+            "thingUri": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+            "thingId": "23d96e97-b777-413a-a8c5-85a2eda98613",
+            "thingType": ["tagging:TagConcept", "core:Event", "core:Thing"],
+            "thingSameAs": ["http://www.wikidata.org/entity/Q110254389"],
+            "thingEnglishLabel": "Russia-Ukraine war",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+            "thingLabel": "Орусия",
+            "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+            "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+            "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
+            "thingSameAs": ["http://sws.geonames.org/2017370/"],
+            "thingEnglishLabel": "Russia",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+            "thingLabel": "Экономика",
+            "thingUri": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+            "thingId": "ca170ae3-99c1-48db-9b67-2866f85e7342",
+            "thingType": ["core:Theme", "core:Thing", "tagging:TagConcept"],
+            "thingSameAs": ["http://dbpedia.org/resource/Economy"],
+            "thingEnglishLabel": "Economics",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id",
+            "thingLabel": "Аскердик",
+            "thingUri": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id",
+            "thingId": "ce5c43ee-8982-4f88-9472-9aa79aeb09cc",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+            "thingSameAs": ["http://dbpedia.org/resource/Military"],
+            "thingEnglishLabel": "Military",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+            "thingLabel": "Украина",
+            "thingUri": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+            "thingId": "ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Place"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Ukraine",
+              "http://www.wikidata.org/entity/Q212",
+              "http://sws.geonames.org/690791/"
+            ],
+            "thingEnglishLabel": "Ukraine",
+            "type": "about"
+          }
+        ],
+        "infoClass": [
+          {
+            "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+            "type": "infoClass"
+          }
+        ],
+        "motivation": [
+          {
+            "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id",
+            "type": "motivation"
+          }
+        ]
+      }
+    },
+    "id": "urn:bbc:ares::article:c88ld5g4xxxo",
+    "type": "optimo"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Kyrgyz",
+      "uri": "/kyrgyz",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
-import { ukrainian as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/GMT';
-import '@bbc/psammead-locales/moment/uk';
+} from '#psammead/psammead-styles/src/colours';
+import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import brandSVG from '#lib/chameleonLogos/ukrainian';
+import '#psammead/moment-timezone-include/tz/GMT';
+import '#psammead/psammead-locales/moment/uk';
 import withContext from '../../../contexts/utils/withContext';
 import { mainTranslations as russianMainTranslations } from './russian';
 
@@ -74,6 +74,11 @@ const baseServiceConfig = {
     },
   },
   translations: {
+    pagination: {
+      previousPage: 'Повернутися',
+      nextPage: 'Наступна',
+      pageXOfY: 'Page {x} із {y}',
+    },
     ads: {
       advertisementLabel: 'Реклама',
     },
@@ -243,6 +248,9 @@ const baseServiceConfig = {
       caption: {
         textPrefixVisuallyHidden: 'Підпис до відео, ',
         text: 'Увага: інші сайти можуть містити рекламу',
+        articleText:
+          'Увага: BBC не несе відповідальності за контент зовнішніх сайтів.',
+        articleAdditionalText: 'Контент %provider_name% може містити рекламу',
       },
       fallback: {
         text: 'Контент недоступний',
@@ -308,8 +316,8 @@ const baseServiceConfig = {
         text: 'Cookies',
       },
       {
-        href: 'https://www.bbc.co.uk/send/u50853885',
-        text: "Зв'язатися з BBC",
+        href: 'https://www.bbc.co.uk/ukrainian/send/u50853885',
+        text: 'Напишіть на ВВС',
       },
       {
         id: 'COOKIE_SETTINGS',
@@ -328,8 +336,8 @@ const baseServiceConfig = {
       url: '/ukrainian',
     },
     {
-      title: 'Коронавірус',
-      url: '/ukrainian/topics/c87z2kmre5nt',
+      title: 'Війна з Росією',
+      url: '/ukrainian/topics/czp6w66edqpt',
     },
     {
       title: 'Історії',

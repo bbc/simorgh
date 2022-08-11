@@ -12,6 +12,7 @@ export const testsThatAlwaysRunForCanonicalOnly = () => {
     // our story pages should not do this. The test checks the core content has been removed
     // following progressive enhancement by the include's inline scripts.
     // This test specifically is targeted at this test asset: '/mundo/23263889'
+
     it('should load the eclipse VJ include successfully', () => {
       cy.window().then(win => {
         if (win.location.pathname.includes('/mundo/23263889')) {
@@ -21,6 +22,32 @@ export const testsThatAlwaysRunForCanonicalOnly = () => {
           cy.get(
             '#responsive-embed-vjamericas-176-eclipse-lookup-app-core-content',
           ).should('not.exist');
+        }
+      });
+    });
+    it('Hearken include is visible on the page - only /mundo/23263889', () => {
+      cy.window().then(win => {
+        if (win.location.pathname.includes('/mundo/23263889')) {
+          cy.get(`div[id="hearken-curiosity-14838"] > div`).within(() => {
+            cy.get('div[id*="hearken-embed-module"]').within(() => {
+              cy.get('div[class="embed-content-container"]')
+                .should('exist')
+                .and('be.visible');
+            });
+          });
+        }
+      });
+    });
+    it('Riddle include is visible on the page - only /mundo/23263889', () => {
+      cy.window().then(win => {
+        if (win.location.pathname.includes('/mundo/23263889')) {
+          cy.get(`div[class="riddle-target-initialised"] > iframe`)
+            .its('0.contentDocument')
+            .within(() => {
+              cy.get('body[ng-controller="RiddleEmbedController"]')
+                .should('exist')
+                .and('be.visible');
+            });
         }
       });
     });

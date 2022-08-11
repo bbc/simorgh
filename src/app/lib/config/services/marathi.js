@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { devanagariAndGurmukhi } from '@bbc/gel-foundations/scripts';
-import { marathi as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
-import '@bbc/psammead-locales/moment/mr';
+} from '#psammead/psammead-styles/src/colours';
+import devanagariAndGurmukhi from '#psammead/gel-foundations/src/scripts/devanagari-and-gurmukhi';
+import brandSVG from '#lib/chameleonLogos/marathi';
+import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
+import '#psammead/psammead-locales/moment/mr';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -72,6 +72,12 @@ export const service = {
       },
     },
     translations: {
+      pagination: {
+        page: 'पान',
+        previousPage: 'मागील',
+        nextPage: 'पुढील',
+        pageXOfY: 'पान {x} पैकी {y}',
+      },
       ads: {
         advertisementLabel: 'जाहिरात',
       },
@@ -241,6 +247,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'व्हीडिओ कॅप्शन, ',
           text: 'सावधान: बाहेरच्या मजकुरावर काही अॅड असू शकतात',
+          articleText:
+            'सावधान: अन्य वेबसाईट्सवरील मजकुरासाठी बीबीसी जबाबदार नाही.  ',
+          articleAdditionalText:
+            '%provider_name% मजुकरात जाहिरातींचा समावेश असू शकतो.',
         },
         fallback: {
           text: 'मजकूर उपलब्ध नाही',
@@ -303,8 +313,8 @@ export const service = {
           text: 'कुकीज',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853467',
-          text: 'बीबीसीशी संपर्क साधा',
+          href: 'https://www.bbc.co.uk/marathi/send/u50853467',
+          text: 'बीबीसीशी संपर्क साधाा',
         },
         {
           id: 'COOKIE_SETTINGS',

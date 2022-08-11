@@ -28,7 +28,8 @@
     "analyticsLabels": {
       "cps_asset_type": "map",
       "counterName": "pidgin.news.media_asset.49450859.page",
-      "cps_asset_id": "49450859"
+      "cps_asset_id": "49450859",
+      "contentId": "urn:bbc:cps:curie:asset:a753e377-f11b-5646-9c9b-4775bfa4e692"
     },
     "atiAnalytics": {
       "chapter": "overrideAtiChapter",

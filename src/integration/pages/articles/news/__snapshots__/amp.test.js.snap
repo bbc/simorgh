@@ -253,6 +253,7 @@ exports[`AMP Articles Image should match snapshot 1`] = `
 <amp-img
   alt="group of residents"
   attribution="@twitterhandle"
+  data-hero="true"
   height="549"
   layout="responsive"
   src="https://ichef.bbci.co.uk/news/640/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg"
@@ -262,6 +263,7 @@ exports[`AMP Articles Image should match snapshot 1`] = `
   <amp-img
     alt="group of residents"
     attribution="@twitterhandle"
+    data-hero="true"
     fallback=""
     height="549"
     layout="responsive"
@@ -428,7 +430,7 @@ exports[`AMP Articles SEO OG url 1`] = `"http://localhost:7080/news/articles/c5j
 
 exports[`AMP Articles SEO Page title 1`] = `"The Germans solving rising rents with people power - BBC News"`;
 
-exports[`AMP Articles SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP Articles SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP Articles SEO Twitter card 1`] = `"summary_large_image"`;
 

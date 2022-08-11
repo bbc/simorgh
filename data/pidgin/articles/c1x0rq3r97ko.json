@@ -486,18 +486,18 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "This is a long headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ",
+                              "text": "This is a long headline that should be truncated to 4 lines only in the promo. I could go on and on and on and on and on. ",
                               "blocks": [
                                 {
                                   "type": "urlLink",
                                   "model": {
-                                    "text": "This is a long headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ",
+                                    "text": "This is a long headline that should be truncated to 4 lines only in the promo. I could go on and on and on and on and on. ",
                                     "locator": "https://www.bbc.co.uk/yoruba",
                                     "blocks": [
                                       {
                                         "type": "fragment",
                                         "model": {
-                                          "text": "This is a long headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ",
+                                          "text": "This is a long headline that should be truncated to 4 lines only in the promo. I could go on and on and on and on and on. ",
                                           "attributes": []
                                         }
                                       }

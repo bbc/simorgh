@@ -3,10 +3,10 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { noAscendersOrDescenders } from '@bbc/gel-foundations/scripts';
-import { korean as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/Asia/Seoul';
+} from '#psammead/psammead-styles/src/colours';
+import noAscendersOrDescenders from '#psammead/gel-foundations/src/scripts/no-ascenders-or-descenders';
+import brandSVG from '#lib/chameleonLogos/korean';
+import '#psammead/moment-timezone-include/tz/Asia/Seoul';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/ko';
 
@@ -59,6 +59,11 @@ export const service = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: '이전',
+        nextPage: '다음',
+        pageXOfY: 'Page {x} / {y}',
+      },
       ads: {
         advertisementLabel: '광고',
       },
@@ -220,6 +225,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: '동영상 설명, ',
           text: '경고: 타사 콘텐츠에는 광고가 포함될 수 있습니다',
+          articleText:
+            '경고: BBC는 외부 사이트의 콘텐츠에 대한 책임을 지지 않습니다. ',
+          articleAdditionalText: '%provider_name%는 광고를 포함할 수 있습니다.',
         },
         fallback: {
           text: '콘텐츠를 불러올 수 없습니다',
@@ -288,7 +296,7 @@ export const service = {
           text: '쿠키정책',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853423',
+          href: 'https://www.bbc.co.uk/korean/send/u50853423',
           text: '고객센터',
         },
         {
@@ -309,7 +317,7 @@ export const service = {
       },
       {
         title: '비디오',
-        url: '/korean/media/video',
+        url: '/korean/topics/cnwng7v0e54t',
       },
       {
         title: '다운로드',

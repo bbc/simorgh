@@ -183,7 +183,7 @@ Object {
 exports[`AMP Front Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "اتصل بـ بي بي سي",
-  "url": "https://www.bbc.co.uk/send/u50853203",
+  "url": "https://www.bbc.co.uk/arabic/send/u50853203",
 }
 `;
 
@@ -271,6 +271,13 @@ Object {
 `;
 
 exports[`AMP Front Page Header Navigation link should match text and url 10`] = `
+Object {
+  "text": "بودكاست",
+  "url": "/arabic/tv-and-radio-52067221",
+}
+`;
+
+exports[`AMP Front Page Header Navigation link should match text and url 11`] = `
 Object {
   "text": "برامجنا",
   "url": "/arabic/tv-and-radio-37728883",
@@ -421,7 +428,7 @@ exports[`AMP Front Page SEO OG url 1`] = `"http://localhost:7080/arabic"`;
 
 exports[`AMP Front Page SEO Page title 1`] = `"الرئيسية - BBC News عربي"`;
 
-exports[`AMP Front Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP Front Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP Front Page SEO Twitter card 1`] = `"summary_large_image"`;
 

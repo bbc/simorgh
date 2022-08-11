@@ -1,0 +1,1021 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Inline Should render correctly 1`] = `
+.emotion-0 {
+  float: right;
+  background: #F2F2F2;
+  margin: 1.5rem 0;
+  height: auto;
+}
+
+@media (min-width: 15rem) {
+  .emotion-0 {
+    width: 45%;
+    margin: 1.5rem 0.25rem;
+  }
+}
+
+@media (min-width: 16.25rem) {
+  .emotion-0 {
+    margin: 1.5rem 0.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    margin: 1.5rem 1rem;
+  }
+}
+
+.emotion-3 {
+  background-color: #F2F2F2;
+  padding: 1rem;
+  padding: 1rem 0.5rem 0.5rem 0.5rem;
+}
+
+.emotion-5 {
+  position: relative;
+}
+
+.emotion-7 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  color: #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-7 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-7 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-7:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-9 {
+  margin: 0 0 1rem;
+}
+
+.emotion-11 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: inline;
+  color: #222222;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-11 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-11>svg {
+  margin-left: 0;
+  width: 1.375rem;
+  height: 1.375rem;
+  fill: currentColor;
+  position: relative;
+  bottom: 0.3125rem;
+  right: 0.1875rem;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-11>svg {
+    fill: canvasText;
+  }
+}
+
+.emotion-13 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-15 {
+  position: relative;
+  background-color: #FDFDFD;
+  display: block;
+}
+
+@media (min-width: 63rem) {
+  .emotion-15 {
+    display: block;
+  }
+}
+
+.emotion-15:hover .podcast-promo--hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-17 {
+  margin: 0.5rem 0 0.5rem 0.5rem;
+  display: none;
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+@media (min-width: 20rem) {
+  .emotion-17 {
+    display: block;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-flex-basis: 6.5rem;
+    -ms-flex-preferred-size: 6.5rem;
+    flex-basis: 6.5rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-17 {
+    -webkit-flex-basis: 6.8125rem;
+    -ms-flex-preferred-size: 6.8125rem;
+    flex-basis: 6.8125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-17 {
+    -webkit-flex-basis: 11.125rem;
+    -ms-flex-preferred-size: 11.125rem;
+    flex-basis: 11.125rem;
+    margin: 0;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-17 {
+    margin: 0;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-17 {
+    display: none;
+  }
+}
+
+.emotion-19 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #F2F2F2;
+  -webkit-background-position: center center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 60px 17px;
+  background-size: 60px 17px;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+@media (min-width: 25rem) {
+  .emotion-19 {
+    -webkit-background-size: 77px 22px;
+    background-size: 77px 22px;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-19 {
+    -webkit-background-size: 93px 27px;
+    background-size: 93px 27px;
+  }
+}
+
+.emotion-21 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-21 {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-21 {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-21 {
+    padding: 0.5rem;
+  }
+}
+
+@media (min-width: 15rem) {
+  .emotion-21 {
+    padding: 0 0.5rem 0.5rem 0.5rem;
+  }
+}
+
+.emotion-23 {
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  display: block;
+}
+
+.emotion-23:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  overflow: hidden;
+  z-index: 1;
+}
+
+.emotion-23:visited .podcast-promo--visited {
+  color: #6E6E73;
+}
+
+.emotion-23:focus .podcast-promo--focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-23 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-23 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-23 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+
+  @media (min-width: 20rem) and (max-width: 37.4375rem) {
+    .emotion-23 {
+      font-size: 1rem;
+      line-height: 1.25rem;
+    }
+  }
+
+  @media (min-width: 37.5rem) {
+    .emotion-23 {
+      font-size: 1rem;
+      line-height: 1.25rem;
+    }
+  }
+}
+
+.emotion-26 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  max-width: 30rem;
+  color: #6E6E73;
+  margin-top: 0.5rem;
+  margin: 0.5rem 0;
+  overflow-wrap: break-word;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-26 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-26 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-29 {
+  display: inline;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #6E6E73;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-29 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-29 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-29>svg {
+  fill: currentColor;
+  color: unset;
+  width: 1rem;
+  height: 1rem;
+  position: relative;
+  bottom: 0.125rem;
+  right: 0.1875rem;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-29>svg {
+    fill: canvasText;
+  }
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-29 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-29 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-29 {
+    margin: 0 0.25rem;
+  }
+}
+
+@media (min-width: 15rem) {
+  .emotion-29 {
+    margin: 0;
+  }
+}
+
+@media (min-width: 16.25rem) {
+  .emotion-29 {
+    margin: 0;
+  }
+}
+
+@media (min-width: 20rem) {
+  .emotion-29 {
+    margin: 0 0.25rem;
+  }
+}
+
+@media (min-width: 22.5rem) {
+  .emotion-29 {
+    margin: 0;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-29 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+    margin: 0 0.25rem;
+  }
+
+  @media (min-width: 20rem) and (max-width: 37.4375rem) {
+    .emotion-29 {
+      font-size: 0.9375rem;
+      line-height: 1.125rem;
+    }
+  }
+
+  @media (min-width: 37.5rem) {
+    .emotion-29 {
+      font-size: 0.875rem;
+      line-height: 1.125rem;
+    }
+  }
+}
+
+.emotion-31 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-33 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+    dir="ltr"
+  >
+    <section
+      aria-labelledby="podcast-promo"
+      class="emotion-2 emotion-3 emotion-4"
+      role="region"
+    >
+      <div
+        class="emotion-5 emotion-6"
+      >
+        <a
+          class="emotion-7 emotion-8"
+          href="#end-of-podcasts"
+        >
+          Пропустить Подкаст и продолжить чтение.
+        </a>
+        <div
+          class="emotion-9 emotion-10"
+        >
+          <strong
+            class="emotion-11 emotion-12"
+            dir="ltr"
+            id="podcast-promo"
+          >
+            <svg
+              aria-hidden="true"
+              class="emotion-13 emotion-14"
+              focusable="false"
+              height="32"
+              viewBox="0 0 32 32"
+              width="32"
+            >
+              <path
+                d="M18.7,31h-5.3l-2.3-10.4C12.3,19.5,14,19,16,19s3.7,0.5,4.9,1.7L18.7,31z M22,8.2c-1.7-1.7-3.9-2.5-6.1-2.5s-4.4,0.9-6,2.5 l1.7,1.7c1.2-1.2,2.7-1.8,4.3-1.8s3.1,0.6,4.3,1.8L22,8.2z M25.5,4.9c-2.6-2.7-6.1-4-9.5-4S9.1,2.3,6.5,4.9l1.7,1.7 c2.1-2.1,4.9-3.2,7.7-3.2c2.8,0,5.6,1.1,7.8,3.2L25.5,4.9z M12.4,14c0,2,1.5,3.6,3.6,3.6c2,0,3.6-1.5,3.6-3.6 c0-2.1-1.5-3.6-3.6-3.6C13.9,10.4,12.4,11.9,12.4,14z"
+              />
+            </svg>
+            Подкаст
+          </strong>
+        </div>
+        <div
+          class="emotion-15 emotion-16"
+        >
+          <div
+            class="emotion-17 emotion-18"
+          >
+            <div
+              class="emotion-19 emotion-20"
+              data-e2e="image-placeholder"
+              style="padding-bottom: 100%;"
+            >
+              <div
+                class="lazyload-wrapper "
+              >
+                <div
+                  class="lazyload-placeholder"
+                />
+              </div>
+              <noscript />
+            </div>
+          </div>
+          <div
+            class="emotion-21 emotion-22"
+          >
+            <a
+              class="emotion-23 emotion-24"
+              href="/russian/media-47937790"
+            >
+              <span
+                class="podcast-promo--hover podcast-promo--focus podcast-promo--visited"
+              >
+                Что это было?
+              </span>
+            </a>
+            <p
+              class="emotion-25 emotion-26 emotion-27"
+            >
+              Мы быстро, просто и понятно объясняем, что случилось, почему это важно и что будет дальше.
+            </p>
+            <p
+              class="emotion-28 emotion-29 emotion-30"
+              dir="ltr"
+            >
+              <svg
+                aria-hidden="true"
+                class="emotion-31 emotion-32"
+                focusable="false"
+                height="32"
+                viewBox="0 0 32 32"
+                width="32"
+              >
+                <polygon
+                  points="4 6 11.1 6 26 6 26 28 28 28 28 4 4 4 4 6"
+                />
+                <polygon
+                  points="8 0 8 2 30 2 30 24 32 24 32 0 8 0"
+                />
+                <path
+                  d="M0,32H24V8H0ZM4,12H20V28H4Z"
+                />
+              </svg>
+              эпизоды
+            </p>
+          </div>
+        </div>
+        <p
+          class="emotion-33 emotion-34"
+          id="end-of-podcasts"
+          tabindex="-1"
+        >
+          Конец истории Подкаст
+        </p>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`SecondaryColumn Should render correctly 1`] = `
+.emotion-0 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 63rem) {
+  .emotion-0 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+  }
+}
+
+.emotion-2 {
+  background-color: #F2F2F2;
+  padding: 1rem;
+}
+
+.emotion-4 {
+  margin: 0 0 1rem;
+}
+
+.emotion-6 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: inline;
+  color: #222222;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-6>svg {
+  margin-left: 0;
+  width: 1.375rem;
+  height: 1.375rem;
+  fill: currentColor;
+  position: relative;
+  bottom: 0.3125rem;
+  right: 0.1875rem;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-6>svg {
+    fill: canvasText;
+  }
+}
+
+.emotion-8 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-10 {
+  position: relative;
+  background-color: #FDFDFD;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-shadow: 0 0 0.3125rem 0.3125rem #22222208;
+}
+
+@media (min-width: 63rem) {
+  .emotion-10 {
+    display: block;
+  }
+}
+
+.emotion-10:hover .podcast-promo--hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-12 {
+  margin: 0.5rem 0 0.5rem 0.5rem;
+  display: none;
+}
+
+@media (min-width: 20rem) {
+  .emotion-12 {
+    display: block;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-flex-basis: 6.5rem;
+    -ms-flex-preferred-size: 6.5rem;
+    flex-basis: 6.5rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-12 {
+    -webkit-flex-basis: 6.8125rem;
+    -ms-flex-preferred-size: 6.8125rem;
+    flex-basis: 6.8125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    -webkit-flex-basis: 11.125rem;
+    -ms-flex-preferred-size: 11.125rem;
+    flex-basis: 11.125rem;
+    margin: 0;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-12 {
+    margin: 0;
+  }
+}
+
+.emotion-14 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #F2F2F2;
+  -webkit-background-position: center center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 60px 17px;
+  background-size: 60px 17px;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+@media (min-width: 25rem) {
+  .emotion-14 {
+    -webkit-background-size: 77px 22px;
+    background-size: 77px 22px;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-14 {
+    -webkit-background-size: 93px 27px;
+    background-size: 93px 27px;
+  }
+}
+
+.emotion-16 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-16 {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-16 {
+    padding: 1rem;
+  }
+}
+
+.emotion-18 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #222222;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-18 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-18 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-20 {
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-20:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  overflow: hidden;
+  z-index: 1;
+}
+
+.emotion-20:visited .podcast-promo--visited {
+  color: #6E6E73;
+}
+
+.emotion-20:focus .podcast-promo--focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-22 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  max-width: 30rem;
+  color: #6E6E73;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-22 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-22 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-24 {
+  display: inline;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #6E6E73;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-24 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-24 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-24>svg {
+  fill: currentColor;
+  color: unset;
+  width: 1rem;
+  height: 1rem;
+  position: relative;
+  bottom: 0.125rem;
+  right: 0.1875rem;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-24>svg {
+    fill: canvasText;
+  }
+}
+
+.emotion-26 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 1rem;
+  height: 1rem;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <section
+      aria-labelledby="podcast-promo"
+      class="emotion-2 emotion-3"
+      role="region"
+    >
+      <div
+        class="emotion-4 emotion-5"
+      >
+        <h2
+          class="emotion-6 emotion-7"
+          dir="ltr"
+          id="podcast-promo"
+        >
+          <svg
+            aria-hidden="true"
+            class="emotion-8 emotion-9"
+            focusable="false"
+            height="32"
+            viewBox="0 0 32 32"
+            width="32"
+          >
+            <path
+              d="M18.7,31h-5.3l-2.3-10.4C12.3,19.5,14,19,16,19s3.7,0.5,4.9,1.7L18.7,31z M22,8.2c-1.7-1.7-3.9-2.5-6.1-2.5s-4.4,0.9-6,2.5 l1.7,1.7c1.2-1.2,2.7-1.8,4.3-1.8s3.1,0.6,4.3,1.8L22,8.2z M25.5,4.9c-2.6-2.7-6.1-4-9.5-4S9.1,2.3,6.5,4.9l1.7,1.7 c2.1-2.1,4.9-3.2,7.7-3.2c2.8,0,5.6,1.1,7.8,3.2L25.5,4.9z M12.4,14c0,2,1.5,3.6,3.6,3.6c2,0,3.6-1.5,3.6-3.6 c0-2.1-1.5-3.6-3.6-3.6C13.9,10.4,12.4,11.9,12.4,14z"
+            />
+          </svg>
+          Подкаст
+        </h2>
+      </div>
+      <div
+        class="emotion-10 emotion-11"
+      >
+        <div
+          class="emotion-12 emotion-13"
+        >
+          <div
+            class="emotion-14 emotion-15"
+            data-e2e="image-placeholder"
+            style="padding-bottom: 100%;"
+          >
+            <div
+              class="lazyload-wrapper "
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+            </div>
+            <noscript />
+          </div>
+        </div>
+        <div
+          class="emotion-16 emotion-17"
+        >
+          <h3
+            class="emotion-18 emotion-19"
+          >
+            <a
+              class="emotion-20 emotion-21"
+              href="/russian/media-47937790"
+            >
+              <span
+                class="podcast-promo--hover podcast-promo--focus podcast-promo--visited"
+              >
+                Что это было?
+              </span>
+            </a>
+          </h3>
+          <p
+            class="emotion-22 emotion-23"
+          >
+            Мы быстро, просто и понятно объясняем, что случилось, почему это важно и что будет дальше.
+          </p>
+          <p
+            class="emotion-24 emotion-25"
+            dir="ltr"
+          >
+            <svg
+              aria-hidden="true"
+              class="emotion-26 emotion-27"
+              focusable="false"
+              height="32"
+              viewBox="0 0 32 32"
+              width="32"
+            >
+              <polygon
+                points="4 6 11.1 6 26 6 26 28 28 28 28 4 4 4 4 6"
+              />
+              <polygon
+                points="8 0 8 2 30 2 30 24 32 24 32 0 8 0"
+              />
+              <path
+                d="M0,32H24V8H0ZM4,12H20V28H4Z"
+              />
+            </svg>
+            эпизоды
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;

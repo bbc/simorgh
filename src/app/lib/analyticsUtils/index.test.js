@@ -1,6 +1,9 @@
 /* eslint-disable no-template-curly-in-string */
 import Cookie from 'js-cookie';
-import { setWindowValue, resetWindowValue } from '@bbc/psammead-test-helpers';
+import {
+  setWindowValue,
+  resetWindowValue,
+} from '#psammead/psammead-test-helpers/src';
 import onClient from '../utilities/onClient';
 
 let isOnClient = true;
@@ -32,7 +35,17 @@ const {
   getCustomMarketingString,
   getDisplayMarketingString,
   getATIMarketingString,
+  onOnionTld,
+  getContentId,
 } = require('./index');
+
+const FIXTURE_PAGEDATA = {
+  metadata: {
+    analyticsLabels: {
+      contentId: 'urn:bbc:cps:curie:asset:29375628-9511-42e6-be88-ebaa1158f597',
+    },
+  },
+};
 
 const SRC_RSS_FIXTURE = {
   key: 'src_medium',
@@ -281,6 +294,25 @@ describe('isLocServeCookieSet', () => {
   });
 });
 
+describe('getContentId', () => {
+  it('should return content id when its present in the data', () => {
+    const expectedResult =
+      'urn:bbc:cps:curie:asset:29375628-9511-42e6-be88-ebaa1158f597';
+    const result = getContentId(FIXTURE_PAGEDATA);
+    expect(result).toEqual(expectedResult);
+  });
+
+  it('should return null when no data is present', () => {
+    const result = getContentId({});
+    expect(result).toEqual(null);
+  });
+
+  it('should return null when data is invalid', () => {
+    const result = getContentId('hello world');
+    expect(result).toEqual(null);
+  });
+});
+
 describe('getHref', () => {
   const windowLocation = window.location;
 
@@ -447,7 +479,7 @@ describe('getAtUserId', () => {
   });
 
   it('should return the AT user id', () => {
-    Cookie.set('atuserid', { val: 'some-random-uuid' });
+    Cookie.set('atuserid', '{ "val": "some-random-uuid" }');
     cookieSetterSpy.mockClear();
     const atUserId = getAtUserId();
 
@@ -455,7 +487,7 @@ describe('getAtUserId', () => {
   });
 
   it('should store the existing AT user id as a stringified JSON value in cookies again so that we update the cookie expiration date', () => {
-    Cookie.set('atuserid', { val: 'some-random-uuid' });
+    Cookie.set('atuserid', '{ "val": "some-random-uuid" }');
     cookieSetterSpy.mockClear();
     const atUserId = getAtUserId();
     const [[cookieName, cookieValue, cookieOptions]] =
@@ -553,7 +585,7 @@ describe('getCampaignType', () => {
 });
 
 describe('getRSSMarketingString', () => {
-  describe.only('"RSS" prefix', () => {
+  describe('"RSS" prefix', () => {
     it('returns "src_medium" when marketing string is present in url', () => {
       const href = 'https://www.bbc.com/mundo?at_medium=RSS';
       expect(getRSSMarketingString(href, 'RSS')).toEqual([SRC_RSS_FIXTURE]);
@@ -797,5 +829,30 @@ describe('getATIMarketingString', () => {
         );
       },
     );
+  });
+
+  describe('onOnionTld', () => {
+    const { location } = window;
+
+    beforeEach(() => {
+      delete window.location;
+    });
+    afterEach(() => {
+      window.location = location;
+    });
+
+    it.each`
+      expectation               | currentUrl                                                                                            | expectedValue
+      ${'true for onion TLD'}   | ${'https://www.bbcnewsd73hkzno2ini43t4gblxvycyac5aw4gnv7t2rccijh7745uqd.onion/news'}                  | ${true}
+      ${'true for onion TLD'}   | ${'https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/russian'}               | ${true}
+      ${'true for onion TLD'}   | ${'https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/russian/news-60699063'} | ${true}
+      ${'false for .co.uk TLD'} | ${'https://www.bbc.co.uk/news'}                                                                       | ${false}
+      ${'false for .com TLD'}   | ${'https://www.bbc.com/news'}                                                                         | ${false}
+      ${'false for .com TLD'}   | ${'https://www.bbcrussian.com/russian/live/news-60661774'}                                            | ${false}
+    `('should return $expectation', ({ currentUrl, expectedValue }) => {
+      window.location = new URL(currentUrl);
+
+      expect(onOnionTld()).toEqual(expectedValue);
+    });
   });
 });

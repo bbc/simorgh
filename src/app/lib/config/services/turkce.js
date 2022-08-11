@@ -3,19 +3,16 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { latinDiacritics } from '@bbc/gel-foundations/scripts';
+} from '#psammead/psammead-styles/src/colours';
+import latinDiacritics from '#psammead/gel-foundations/src/scripts/latin-with-diacritics';
 import {
   F_REITH_SANS_BOLD,
-  F_REITH_SANS_BOLD_ITALIC,
-  F_REITH_SANS_ITALIC,
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
-  F_REITH_SERIF_MEDIUM_ITALIC,
   F_REITH_SERIF_LIGHT,
-} from '@bbc/psammead-styles/fonts';
-import { turkce as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/Asia/Istanbul';
+} from '#psammead/psammead-styles/src/fonts';
+import brandSVG from '#lib/chameleonLogos/turkish';
+import '#psammead/moment-timezone-include/tz/Asia/Istanbul';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/tr';
 
@@ -68,10 +65,16 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: 'Önceki',
+        nextPage: 'Sonraki',
+        pageXOfY: 'Page {x} / {y}',
+      },
       ads: {
         advertisementLabel: 'Reklam',
       },
-      recommendationTitle: 'Bunlar da ilginizi çekebilir',
+      recommendationTitle: 'Önerilen hikayeler',
+      splitRecommendationTitle: 'Daha fazla önerilen hikaye',
       seeAll: 'Hepsini görüntüle',
       home: 'Ana sayfa',
       currentPage: 'Bulunduğunuz sayfa',
@@ -230,6 +233,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Video altyazısı: ',
           text: 'Uyarı: Üçüncü tarafların sağladığı içerikte reklam bulunabilir.',
+          articleText:
+            'Uyarı: BBC üçüncü taraf sitelerin içeriğinden sorumlu değildir.',
+          articleAdditionalText: '%provider_name% içerik reklam içerebilir',
         },
         fallback: {
           text: 'İçerik bulunamadı',
@@ -296,8 +302,8 @@ export const service = {
           text: 'Çerezler',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853841',
-          text: "BBC'yle temas kurun",
+          href: 'https://www.bbc.co.uk/turkce/send/u50853841',
+          text: "BBC'ye ulaş",
         },
         {
           id: 'COOKIE_SETTINGS',
@@ -311,11 +317,8 @@ export const service = {
     },
     fonts: [
       F_REITH_SANS_BOLD,
-      F_REITH_SANS_BOLD_ITALIC,
-      F_REITH_SANS_ITALIC,
       F_REITH_SANS_REGULAR,
       F_REITH_SERIF_MEDIUM,
-      F_REITH_SERIF_MEDIUM_ITALIC,
       F_REITH_SERIF_LIGHT,
     ],
     timezone: 'Asia/Istanbul',
@@ -327,6 +330,10 @@ export const service = {
       {
         title: 'Türkiye',
         url: '/turkce/topics/ckdxn2xk95gt',
+      },
+      {
+        title: 'Rusya-Ukrayna Savaşı',
+        url: '/turkce/topics/cy0ryl4pvx6t',
       },
       {
         title: 'Ekonomi',

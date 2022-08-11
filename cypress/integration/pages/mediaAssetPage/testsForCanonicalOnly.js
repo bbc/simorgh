@@ -27,8 +27,8 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
             ({ body: jsonData }) => {
               if (hasMedia(jsonData)) {
                 const embedUrl = getEmbedUrl(jsonData, language);
-
-                cy.get(`iframe[src="${embedUrl}"]`).should('be.visible');
+                cy.log(embedUrl);
+                cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
                 cy.testResponseCodeAndTypeRetry({
                   path: embedUrl,
                   responseCode: 200,

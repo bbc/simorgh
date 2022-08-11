@@ -2,7 +2,7 @@
 
 exports[`Canonical Media Asset Page A11y I can see the skip to content link 1`] = `"مشاهده محتوا"`;
 
-exports[`Canonical Media Asset Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=69&amp;p=iran%3A%3Apersian.iran.media_asset.23231114.page&amp;x1=[urn%3Abbc%3Acps%3A43667729-4c50-834f-a4b5-c0c95c3cafcf]&amp;x2=[responsive]&amp;x3=[news-persian]&amp;x4=[fa]&amp;x7=[article-media-asset]&amp;x8=[simorgh-nojs]&amp;x9=[Trump%2Blong%2Bheadline%2B-%2BBBC%2BNews%2B%D9%81%D8%A7%D8%B1%D8%B3%DB%8C]&amp;x11=[2019-02-15T12%3A47%3A51.000Z]&amp;x12=[2019-02-15T12%3A47%3A51.000Z]\\"/>"`;
+exports[`Canonical Media Asset Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=69&amp;p=iran%3A%3Apersian.iran.media_asset.23231114.page&amp;x2=[responsive]&amp;x3=[news-persian]&amp;x4=[fa]&amp;x7=[article-media-asset]&amp;x8=[simorgh-nojs]&amp;x9=[Trump%2Blong%2Bheadline%2B-%2BBBC%2BNews%2B%D9%81%D8%A7%D8%B1%D8%B3%DB%8C]&amp;x11=[2019-02-15T12%3A47%3A51.000Z]&amp;x12=[2019-02-15T12%3A47%3A51.000Z]\\"/>"`;
 
 exports[`Canonical Media Asset Page Footer Anchors should match text and url 1`] = `
 Object {
@@ -49,7 +49,7 @@ Object {
 exports[`Canonical Media Asset Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "تماس با بی بی سی",
-  "url": "https://www.bbc.co.uk/send/u50853555",
+  "url": "https://www.bbc.co.uk/persian/send/u50853555",
 }
 `;
 
@@ -82,89 +82,96 @@ Object {
 
 exports[`Canonical Media Asset Page Header Navigation link should match text and url 2`] = `
 Object {
+  "text": "اوکراین",
+  "url": "/persian/topics/cw9q48x6558t",
+}
+`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 3`] = `
+Object {
   "text": "کرونا",
   "url": "/persian/science-52004647",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 3`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 4`] = `
 Object {
   "text": "پخش زنده",
   "url": "/persian/media-49522521",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 4`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "ویدیو",
   "url": "/persian/media/video",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 5`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "تلویزیون",
   "url": "/persian/tv-and-radio-37434377",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 6`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "رادیو",
   "url": "/persian/tv-and-radio-37434376",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 7`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "ايران",
   "url": "/persian/topics/ckdxnwvwwjnt",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 8`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 9`] = `
 Object {
   "text": "افغانستان",
   "url": "/persian/afghanistan",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 9`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 10`] = `
 Object {
   "text": "جهان",
   "url": "/persian/topics/c1d8ye58xl8t",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 10`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 11`] = `
 Object {
   "text": "هنر",
   "url": "/persian/topics/c9wpm0epm45t",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 11`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 12`] = `
 Object {
   "text": "ورزش",
   "url": "/persian/topics/cnq6879k7yjt",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 12`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 13`] = `
 Object {
   "text": "اقتصاد",
   "url": "/persian/topics/cl8l9mvlllqt",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 13`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 14`] = `
 Object {
   "text": "دانش",
   "url": "/persian/topics/ckdxnwr4r1yt",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 14`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 15`] = `
 Object {
   "text": "ناظران می‌گویند",
   "url": "/persian/blogs-54099951",
@@ -344,7 +351,7 @@ exports[`Canonical Media Asset Page SEO OG url 1`] = `"http://localhost:7080/per
 
 exports[`Canonical Media Asset Page SEO Page title 1`] = `"Trump long headline - BBC News فارسی"`;
 
-exports[`Canonical Media Asset Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Media Asset Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Media Asset Page SEO Twitter card 1`] = `"summary_large_image"`;
 
