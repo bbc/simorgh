@@ -14,3 +14,4 @@ export const TopicPage = loadable(() => import('./TopicPage'));
 export const StoryPage = loadable(() => import('./StoryPage'));
 export const IdxPage = loadable(() => import('./IdxPage'));
 export const FeatureIdxPage = loadable(() => import('./FeatureIdxPage'));
+export const JonsAmazingPage = loadable(() => import('./JonsAmazingPage'));

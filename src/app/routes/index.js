@@ -1,3 +1,5 @@
+import { JonsAmazingPage } from '#pages';
+
 import article from './article';
 import cpsAsset from './cpsAsset';
 import home from './home';
@@ -25,6 +27,13 @@ export default [
   idx,
   cpsAsset,
   error,
+  {
+    path: '/jons-amazing-page',
+    exact: true,
+    component: JonsAmazingPage,
+    getInitialData: () => Promise.resolve({ status: 200 }),
+    pageType: 'JONS_AMAZING_PAGE',
+  },
   errorNoRouteMatch, // When none of the above routes match, it will fall to this.
   // Please ensure that when adding new pages, it is above this element in the array.
 ];
