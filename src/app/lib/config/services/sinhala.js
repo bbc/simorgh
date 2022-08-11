@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
 import sinhalese from '#psammead/gel-foundations/src/scripts/sinhalese';
-import { sinhala as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/sinhala';
 import {
   F_NOTO_SERIF_SINHALA_BOLD,
   F_NOTO_SERIF_SINHALA_REGULAR,
@@ -237,6 +237,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'වීඩියෝ ශීර්ෂ වැකිය, ',
           text: 'අනතුරු ඇඟවීමයි: බීබීසී නොවන වාර්තාවල වෙළෙඳ දැන්වීම් අඩංගු විය හැකිය',
+          articleText:
+            'අනතුරු ඇඟවීමයි: බාහිර වෙබ් අඩවිවල අන්තර්ගතය සඳහා BBCය වගකියනු නොලැබේ.',
+          articleAdditionalText:
+            '%provider_name% අන්තර්ගතයේ දැන්වීම් අඩංගු විය හැකි ය.',
         },
         fallback: {
           text: 'මෙහි අන්තර්ගතය නැත',

@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
 import devanagariAndGurmukhi from '#psammead/gel-foundations/src/scripts/devanagari-and-gurmukhi';
-import { nepali as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/nepali';
 import '#psammead/moment-timezone-include/tz/Asia/Kathmandu';
 import '#psammead/psammead-locales/moment/ne';
 import withContext from '../../../contexts/utils/withContext';
@@ -235,6 +235,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'भिडिओ क्याप्शन सुरु हुँदैछ, ',
           text: 'चेतावनी: तेस्रो पक्षको सामग्रीमा विज्ञापन हुनसक्छ',
+          articleText:
+            'चेतावनी: बाह्य वेबसाइटका सामग्रीप्रति बीबीसी जिम्मेवार हुने छैन।',
+          articleAdditionalText:
+            '%provider_name% का सामग्रीमा विज्ञापन हुन सक्छन्।',
         },
         fallback: {
           text: 'सामग्री उपलब्ध छैन',

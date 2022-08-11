@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
 import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
-import { somali as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/somali';
 import '#psammead/moment-timezone-include/tz/Africa/Mogadishu';
 import '#psammead/psammead-locales/moment/so';
 import withContext from '../../../contexts/utils/withContext';
@@ -241,6 +241,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Qoraalka Muuqaalka, ',
           text: 'Digniin: Waxaa suuragal ah in macluumaadka dad kale ay ku jiraan xayaysiin',
+          articleText:
+            'Digniin: BBC macluumaadka ku qoran bog kale masuul kama ahan',
+          articleAdditionalText:
+            '%provider_name% Waxaa laga yaabaa inay ku jirta xayasiis',
         },
         fallback: {
           text: 'Macluumaadkan lama heli karo',

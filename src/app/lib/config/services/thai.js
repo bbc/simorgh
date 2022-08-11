@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
 import thai from '#psammead/gel-foundations/src/scripts/thai';
-import { thai as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/thai';
 import '#psammead/moment-timezone-include/tz/Asia/Bangkok';
 import '#psammead/psammead-locales/moment/th';
 import withContext from '../../../contexts/utils/withContext';
@@ -227,6 +227,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'คำบรรยายวิดีโอ, ',
           text: 'คำเตือน:เนื้อหาภายนอกอาจมีโฆษณา',
+          articleText:
+            'คำเตือน: บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาที่มาจากภายนอก',
+          articleAdditionalText: 'เนื้อหาจาก %provider_name% อาจมีโฆษณา ',
         },
         fallback: {
           text: 'ไม่มีเนื้อหานี้',

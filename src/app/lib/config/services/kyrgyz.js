@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
 import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
-import { kyrgyz as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/kyrgyz';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ky';
 import withContext from '../../../contexts/utils/withContext';
@@ -240,6 +240,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Видеонун түшүндүрмөсү, ',
           text: 'Эскертүү: Жарнамалар болушу ыктымал',
+          articleText:
+            'Эскертүү: Би-Би-Си тышкы сайттардын мазмуну үчүн жооп бербейт.',
+          articleAdditionalText:
+            '%provider_name% мазмунунда жарнама болушу мүмкүн',
         },
         fallback: {
           text: 'Баракча ачылбайт',

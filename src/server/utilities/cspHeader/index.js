@@ -97,7 +97,7 @@ const directives = {
       'https://*.akamaihd.net',
       'https://cdn.optimizely.com/',
       'https://logx.optimizely.com/',
-      'https://europe-west1-bbc-otg-traf-mgr-bq-prod-4591.cloudfunctions.net', // Web-Vitals monitoring
+      'https://ws.bbc-reporting-api.app', // Web-Vitals monitoring
       ...advertisingDirectives.connectSrc,
       "'self'",
     ],
@@ -119,7 +119,7 @@ const directives = {
       'https://logws1363.ati-host.net', // ATI
       'https://cdn.optimizely.com/',
       'https://logx.optimizely.com/',
-      'https://europe-west1-bbc-otg-traf-mgr-bq-dev-4105.cloudfunctions.net', // Web-Vitals monitoring
+      'https://ws.bbc-reporting-api.app', // Web-Vitals monitoring
       'https://cognito-identity.eu-west-1.amazonaws.com/', // CloudWatch RUM
       ...advertisingDirectives.connectSrc,
       "'self'",
@@ -196,6 +196,7 @@ const directives = {
       'https://syndication.twitter.com', // Social Embeds
       'https://platform.twitter.com', // Social Embeds
       'https://pbs.twimg.com', // Social Embeds
+      'https://*.cdninstagram.com', // Social Embeds
       'https://i.ytimg.com', // Social Embeds
       'https://ton.twimg.com', // Social Embeds
       ...advertisingDirectives.imgSrc,
@@ -222,6 +223,7 @@ const directives = {
       'https://syndication.twitter.com', // Social Embeds
       'https://platform.twitter.com', // Social Embeds
       'https://pbs.twimg.com', // Social Embeds
+      'https://*.cdninstagram.com', // Social Embeds
       'https://i.ytimg.com', // Social Embeds
       'https://ton.twimg.com', // Social Embeds
       ...advertisingDirectives.imgSrc,

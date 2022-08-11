@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
 import latinDiacritics from '#psammead/gel-foundations/src/scripts/latin-with-diacritics';
-import { vietnamese as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/vietnamese';
 import '#psammead/moment-timezone-include/tz/Asia/Ho_Chi_Minh';
 import 'moment/locale/vi';
 import withContext from '../../../contexts/utils/withContext';
@@ -225,6 +225,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Chụp lại video, ',
           text: 'Cảnh báo: Nội dung bên thứ ba có thể có quảng cáo',
+          articleText:
+            'Cảnh báo: BBC không chịu trách nhiệm về nội dung các trang bên ngoài.',
+          articleAdditionalText:
+            'Nội dung trên %provider_name% có thể kèm quảng cáo.',
         },
         fallback: {
           text: 'Nội dung không có',

@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
-import { persian as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/persian';
 import arabic from '#psammead/gel-foundations/src/scripts/arabic';
 import {
   F_REITH_QALAM_REGULAR,
@@ -272,6 +272,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'توضیح ویدیو، ',
           text: 'توضیح: محتوای مربوط به طرف ثالث ممکن است شامل آگهی باشد',
+          articleText: 'توضیح: بی بی سی مسئول محتوای سایت های دیگر نیست.',
+          articleAdditionalText:
+            'محتوای %provider_name%  ممکن است شامل آگهی باشد.',
         },
         fallback: {
           text: 'محتوا در دسترس نیست',

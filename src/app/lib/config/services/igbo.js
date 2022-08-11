@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
-import { igbo as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/igbo';
 import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
 import '#psammead/psammead-locales/moment/ig';
 import '#psammead/moment-timezone-include/tz/Africa/Lagos';
@@ -232,6 +232,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Aha onyonyo, ',
           text: 'Warning: Third party content may contain adverts',
+          articleText: "Warning: BBC amaghị maka ihe ndị si n'ọbaozi ndị ọzọ.",
+          articleAdditionalText:
+            '%provider_name% mgbasaozi azụmaahịa nwereike ịdị na ya',
         },
         fallback: {
           text: 'Content is not available',

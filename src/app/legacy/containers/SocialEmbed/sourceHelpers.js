@@ -33,11 +33,20 @@ export const getProviderFromSource = source => {
  * @returns {string}
  */
 export const getIdFromSource = source => {
+  const sourceIds = {
+    twitter: /\/status\/([0-9]+)/,
+    youtube: /\/watch\?v=([0-9 A-Z a-z _-]+)/,
+    instagram: /\/p\/([0-9 A-Z a-z]+)/,
+  };
   const NO_ID = '';
   const provider = getProviderFromSource(source);
-  if (provider === PROVIDERS.TWITTER) {
-    const match = source.match(/\/status\/([0-9]+)/);
-    return match ? match[1] : NO_ID;
+  if (
+    [PROVIDERS.TWITTER, PROVIDERS.YOUTUBE, PROVIDERS.INSTAGRAM].includes(
+      provider,
+    )
+  ) {
+    const id = source.match(sourceIds[provider]);
+    return id ? id[1] : NO_ID;
   }
   return NO_ID;
 };
