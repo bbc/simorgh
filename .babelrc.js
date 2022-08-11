@@ -1,5 +1,5 @@
 var plugins = [
-  '@emotion',
+  '@emotion/babel-plugin',
   '@babel/plugin-proposal-object-rest-spread', // allows ...spread notation
   '@babel/plugin-syntax-dynamic-import', // allows `await import()` syntax
   '@babel/plugin-proposal-export-default-from',
@@ -65,7 +65,13 @@ module.exports = api => {
         corejs: '3',
       },
     ],
-    ['@babel/preset-react', { runtime: 'automatic' }], // transform JSX to JS
+    [
+      '@babel/preset-react',
+      {
+        runtime: 'automatic',
+        importSource: '@emotion/react',
+      },
+    ], // transform JSX to JS
     '@babel/preset-typescript',
   ];
 

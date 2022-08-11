@@ -60,6 +60,8 @@ import { OptimizelyExperiment } from '@optimizely/react-sdk';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
+import Heading from '../../components/Heading';
+import Paragraph from '../../components/Paragraph';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -381,6 +383,8 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           parentColumns={gridColumns}
         >
           <main role="main">
+            <Heading>My name is Jon</Heading>
+            <Paragraph>Welcome to new components.</Paragraph>
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
             <OptimizelyArticleCompleteTracking />
           </main>
