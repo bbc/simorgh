@@ -225,6 +225,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'ਵੀਡੀਓ ਕੈਪਸ਼ਨ, ',
           text: "ਚਿਤਾਵਨੀ: ਬਾਹਰੀ ਸਾਈਟਾਂ ਦੀ ਸਮਗਰੀ 'ਚ ਇਸ਼ਤਿਹਾਰ ਹੋ ਸਕਦੇ ਹਨ",
+          articleText:
+            'ਚਿਤਾਵਨੀ: ਬੀਬੀਸੀ ਦੂਜੀਆਂ ਵੈਬਸਾਈਟਸ ਦੀ ਸਮੱਗਰੀ ਲਈ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ।',
+          articleAdditionalText:
+            '%provider_name% ਦੀ ਸਮੱਗਰੀ ਵਿੱਚ ਵਿਗਿਆਪਨ ਹੋ ਸਕਦਾ ਹੈ',
         },
         fallback: {
           text: 'ਸਮੱਗਰੀ ਉਪਲਬਧ ਨਹੀਂ ਹੈ',
