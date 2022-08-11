@@ -70,15 +70,18 @@ const TopicPage = ({ pageData }) => {
   const { enabled: adsEnabled } = useToggle('ads');
   const { showAdsBasedOnLocation } = useContext(RequestContext);
 
-  // This needs changed. We are currently mapping over each curation,
-  // not each summary within each curation
-  const promoEntities = curations.map(promo => ({
-    '@type': 'Article',
-    name: promo.title,
-    headline: promo.title,
-    url: promo.link,
-    dateCreated: promo.firstPublished,
-  }));
+  const summaryEntities = summaries =>
+    summaries.map(summary => ({
+      '@type': 'Article',
+      name: summary.title,
+      headline: summary.title,
+      url: summary.link,
+      dateCreated: summary.firstPublished,
+    }));
+
+  const linkedDataEntities = [].concat(
+    ...curations.map(({ summaries }) => summaryEntities(summaries)),
+  );
 
   const { pageXOfY, previousPage, nextPage, page } = {
     pageXOfY: 'Page {x} of {y}',
@@ -118,7 +121,7 @@ const TopicPage = ({ pageData }) => {
             type="CollectionPage"
             seoTitle={title}
             headline={title}
-            entities={promoEntities}
+            entities={linkedDataEntities}
           />
           <TitleWrapper>
             <InlineWrapper>
