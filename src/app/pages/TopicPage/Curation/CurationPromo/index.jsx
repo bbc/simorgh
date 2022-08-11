@@ -21,6 +21,11 @@ const CurationPromo = ({
       <Promo.Heading>
         <Promo.A href={link}>{title}</Promo.A>
       </Promo.Heading>
+      <p className="promo-paragraph">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel
+        eros sollicitudin, ullamcorper massa eget, rutrum ipsum. Praesent urna
+        ante, tristique auctor augue ac
+      </p>
       <Promo.Timestamp>{firstPublished}</Promo.Timestamp>
     </Promo>
   );
