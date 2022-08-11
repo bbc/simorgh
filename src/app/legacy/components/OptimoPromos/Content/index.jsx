@@ -6,12 +6,16 @@ import moment from 'moment';
 import formatDuration from '#app/lib/utilities/formatDuration';
 import PromoContext from '../PromoContext';
 
-const Content = ({ mediaDuration, headline, isPhotoGallery }) => {
+const Content = ({ mediaDuration, headline, isPhotoGallery, isLive }) => {
   const {
     translations: { media: mediaTranslations },
   } = useContext(ServiceContext);
 
   const { ariaLabelledBy, mediaType } = useContext(PromoContext);
+
+  if (isLive) {
+    return <span>{headline}</span>;
+  }
 
   if (!isPhotoGallery && !mediaType) {
     // This span is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
@@ -59,10 +63,12 @@ Content.propTypes = {
   mediaDuration: string,
   headline: string.isRequired,
   isPhotoGallery: bool,
+  isLive: bool,
 };
 Content.defaultProps = {
   mediaDuration: null,
   isPhotoGallery: false,
+  isLive: false,
 };
 
 export default Content;

@@ -70,11 +70,13 @@ const TopStoriesItem = ({ item, ariaLabelledBy }) => {
                   liveText={liveLabel}
                   ariaHidden={liveLabelIsEnglish}
                   offScreenText={liveLabelIsEnglish ? 'Live' : null}
+                  id={ariaLabelledBy}
                 >
                   <Promo.Content
                     mediaDuration={mediaDuration}
                     headline={headline}
                     isPhotoGallery={isPhotoGallery}
+                    isLive={isLive}
                   />
                 </Promo.LiveLabel>
               ) : (
