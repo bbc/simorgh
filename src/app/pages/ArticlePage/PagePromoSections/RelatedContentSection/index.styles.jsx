@@ -5,7 +5,6 @@ import {
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
 import {
-  GEL_GROUP_1_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
@@ -32,7 +31,7 @@ export const StyledPromoItem = styled(PromoItem)`
   height: inherit;
   padding: calc(${GEL_SPACING} - ${BORDER_SPACING});
 
-  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     width: 50%;
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
@@ -50,7 +49,7 @@ export const SingleItemWrapper = styled.div`
   width: 100%;
   margin: 0 -${GEL_SPACING};
 
-  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     width: 50%;
   }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
