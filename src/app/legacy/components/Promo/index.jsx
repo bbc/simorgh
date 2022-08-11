@@ -42,10 +42,8 @@ const Promo = ({ children }) => {
   return (
     <Wrapper>
       <PromoContext.Provider value={{ script, service }}>
-        {leftChildren && <Left className="promo-left">{leftChildren}</Left>}
-        {rightChildren && (
-          <Right className="promo-right">{rightChildren}</Right>
-        )}
+        {leftChildren && <Left className="promo-image">{leftChildren}</Left>}
+        {rightChildren && <Right className="promo-text">{rightChildren}</Right>}
       </PromoContext.Provider>
     </Wrapper>
   );

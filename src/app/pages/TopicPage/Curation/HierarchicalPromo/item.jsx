@@ -4,6 +4,16 @@ import styled from '@emotion/styled';
 import fixture from '#data/pidgin/topics/c95y35941vrt.json';
 import CurationPromo from '../CurationPromo';
 
+const horizontal = `
+    .promo-text { padding-inline-start: 0.5rem;
+    width: 67%;
+    display: inline-block;
+    vertical-align: top; }
+    .promo-image { width: 33%;
+      display: inline-block;
+      vertical-align: top; }
+`;
+
 const Item = styled.div`
   position: relative;
   .promo-paragraph {
@@ -20,44 +30,132 @@ const C1 = styled(Item)`
   .promo-paragraph {
     display: block;
   }
+  @media (max-width: 239px) {
+    grid-column: span 1;
+  }
+  @media (max-width: 399px) {
+    .promo-paragraph {
+      display: none;
+    }
+  }
 `;
 
-const C2 = styled(Item)``;
-const C3 = styled(Item)``;
-const C4 = styled(Item)``;
-const C5 = styled(Item)``;
+const C2 = styled(Item)`
+  @media (max-width: 239px) {
+    ${horizontal}
+  }
+`;
+const C3 = styled(Item)`
+  @media (max-width: 239px) {
+    ${horizontal}
+  }
+`;
+const C4 = styled(Item)`
+  @media (min-width: 400px) and (max-width: 599px) {
+    .promo-image {
+      display: none;
+    }
+  }
+  @media (max-width: 239px) {
+    ${horizontal}
+  }
+`;
+const C5 = styled(Item)`
+  @media (min-width: 400px) and (max-width: 599px) {
+    .promo-image {
+      display: none;
+    }
+  }
+  @media (max-width: 239px) {
+    ${horizontal}
+  }
+`;
 const C6 = styled(Item)`
   grid-row: span 2;
+
+  @media (min-width: 400px) and (max-width: 599px) {
+    grid-row: span 1;
+    .promo-image {
+      display: none;
+    }
+  }
+
+  @media (max-width: 399px) {
+    grid-row: span 1;
+  }
+  @media (max-width: 239px) {
+    ${horizontal}
+  }
 `;
 
 const C7 = styled(Item)`
-  .promo-left {
-    display: none;
+  @media (min-width: 400px) {
+    .promo-image {
+      display: none;
+    }
+  }
+  @media (max-width: 239px) {
+    ${horizontal}
   }
 `;
 const C8 = styled(Item)`
-  .promo-left {
+  .promo-image {
     display: none;
+  }
+  @media (max-width: 399px) {
+    grid-column: span 2;
+    ${horizontal}
+  }
+  @media (max-width: 239px) {
+    grid-column: span 1;
   }
 `;
 const C9 = styled(Item)`
-  .promo-left {
+  .promo-image {
     display: none;
+  }
+  @media (max-width: 399px) {
+    grid-column: span 2;
+    ${horizontal}
+  }
+  @media (max-width: 239px) {
+    grid-column: span 1;
   }
 `;
 const C10 = styled(Item)`
-  .promo-left {
+  .promo-image {
     display: none;
+  }
+  @media (max-width: 399px) {
+    grid-column: span 2;
+    ${horizontal}
+  }
+  @media (max-width: 239px) {
+    grid-column: span 1;
   }
 `;
 const C11 = styled(Item)`
-  .promo-left {
+  .promo-image {
     display: none;
+  }
+  @media (max-width: 399px) {
+    grid-column: span 2;
+    ${horizontal}
+  }
+  @media (max-width: 239px) {
+    grid-column: span 1;
   }
 `;
 const C12 = styled(Item)`
-  .promo-left {
+  .promo-image {
     display: none;
+  }
+  @media (max-width: 399px) {
+    grid-column: span 2;
+    ${horizontal}
+  }
+  @media (max-width: 239px) {
+    grid-column: span 1;
   }
 `;
 
