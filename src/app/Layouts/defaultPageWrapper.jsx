@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { node, shape, bool, number } from 'prop-types';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
@@ -13,6 +13,7 @@ import HeaderContainer from '#containers/Header';
 import FooterContainer from '#containers/Footer';
 import ManifestContainer from '#containers/Manifest';
 import ServiceWorkerContainer from '#containers/ServiceWorker';
+import { ExperimentContextProvider } from '#contexts/ExperimentContext';
 import { ServiceContext } from '../contexts/ServiceContext';
 
 const Wrapper = styled.div`
@@ -31,6 +32,9 @@ const Content = styled.div`
 const PageWrapper = ({ children, pageData, status }) => {
   const { fonts: fontFunctions } = useContext(ServiceContext);
   const fonts = fontFunctions.map(getFonts => getFonts());
+  const [dataMvt, setDataMvt] = useState('test');
+  const dataMvtValue = { dataMvt, setDataMvt };
+  console.log('dataMvt: ', dataMvt);
 
   const isDarkMode = pathOr(false, ['darkMode'], pageData);
   const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
@@ -46,14 +50,20 @@ const PageWrapper = ({ children, pageData, status }) => {
       <ServiceWorkerContainer />
       <ManifestContainer />
       <WebVitals pageType={pageType} />
-      <Wrapper id="main-wrapper" darkMode={isDarkMode}>
-        <HeaderContainer
-          scriptSwitchId={scriptSwitchId}
-          renderScriptSwitch={renderScriptSwitch}
-        />
-        <Content>{children}</Content>
-        <FooterContainer />
-      </Wrapper>
+      <ExperimentContextProvider dataMvtValue={dataMvtValue}>
+        <Wrapper
+          id="main-wrapper"
+          darkMode={isDarkMode}
+          data-mvt={dataMvt.slice(0, -2)}
+        >
+          <HeaderContainer
+            scriptSwitchId={scriptSwitchId}
+            renderScriptSwitch={renderScriptSwitch}
+          />
+          <Content>{children}</Content>
+          <FooterContainer />
+        </Wrapper>
+      </ExperimentContextProvider>
     </>
   );
 };
