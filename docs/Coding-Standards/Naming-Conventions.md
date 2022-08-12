@@ -83,7 +83,7 @@ const RadioSchedule = () => <div />;
 
 #### Component test filenames should be identical to the component filename with `.test` preceding the file extension. This makes it easier to locate tests for the component.
 
-[**❌**](https://emojipedia.org/cross-mark/)
+❌
 
 ```jsx
 TopicPromo; // index.js; // the component filename
