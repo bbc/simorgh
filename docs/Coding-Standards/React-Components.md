@@ -215,7 +215,7 @@ In our example these are `RelatedContentPromo` and `TopStoriesPromo` respectivel
 
 Below is the full worked example. The example shows our Article and Story pages implementing their own Applied Components for Related Content and Top Stories. They also use a Complex Component to implement a Byline at the top of the article, it needs no customisation between the page types. The Promo Compound Component and Byline Complex Component use the Primitive Components to present a resuable component for use across page types.
 
-![](https://paper-attachments.dropbox.com/s_2A43B8E3F9C1F972929EDC9878EAFF3FE87CC9300DB1C147F888F337C763ADF5_1656492576866_file.png)
+![Applied Compound Components](./images/compound-components.png)
 
 ### Summary
 
@@ -269,7 +269,7 @@ Where possible we want to apply standardisation as an ‘opportunistic refactor�
 
 All components should have a component health visualisation in Storybook similar to [webcore](https://paper.dropbox.com/doc/What-is-component-health--BfG_Ski_wr7eLwwMF_aQZlIAAg-2qI1jQCZhKoaGVX4TVlCf?noDesktopRedirect=1)’s implementation:
 
-![](https://paper-attachments.dropbox.com/s_0A228B6278B754FD729F6444013C8CCE0645C344FE8C5686DEE4A9889366E8C3_1623683012926_Screenshot+2021-06-14+at+16.03.01.png)
+![Component Health](./images/component-health.png)
 
 Component Health should include:
 
