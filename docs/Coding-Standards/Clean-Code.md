@@ -158,7 +158,8 @@ const CDN_URL = 'https://cdn.bbc.com';
 ✅
 
 ```js
-// add good example
+// Changes here will need replicated to the content security policy
+const CDN_URL = 'https://cdn.bbc.com';
 ```
 
 ## Functions
