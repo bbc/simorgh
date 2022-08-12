@@ -132,6 +132,12 @@ export const service = {
           callToActionLinkUrl: 'https://www.bbc.com/indonesia',
         },
       },
+      byline: {
+        articleInformation: 'Informasi artikel',
+        published: 'Telah diterbitkan',
+        reportingFrom: 'Melaporkan dari',
+        role: 'Peranan',
+      },
       consentBanner: {
         privacy: {
           title: 'Kami telah memperbarui Kebijakan Privasi dan Cookies kami',

@@ -119,6 +119,12 @@ export const service = {
           callToActionLinkUrl: 'https://www.bbc.com/turkce',
         },
       },
+      byline: {
+        articleInformation: 'Haber bilgisi',
+        published: 'Yayın tarihi',
+        reportingFrom: 'Bildirdiği yer',
+        role: 'Unvan',
+      },
       consentBanner: {
         privacy: {
           title: 'Gizlilik ve çerez politikamızı güncelledik',

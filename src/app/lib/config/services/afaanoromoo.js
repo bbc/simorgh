@@ -113,6 +113,12 @@ export const service = {
           callToActionLinkUrl: 'https://www.bbc.com/afaanoromoo',
         },
       },
+      byline: {
+        articleInformation: 'Odeeffannoo barreeffamichaa',
+        published: 'Maxxanfame',
+        reportingFrom: 'Gabaasni irraati',
+        role: 'Gahee',
+      },
       consentBanner: {
         privacy: {
           title: 'Imaammata mateenyaafi kuus-yadannoo keenyaa haaromsiineera.',

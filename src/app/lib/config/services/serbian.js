@@ -217,6 +217,12 @@ export const service = {
           callToActionLinkUrl: 'https://www.bbc.com/serbian/lat',
         },
       },
+      byline: {
+        articleInformation: 'Podaci o članku',
+        published: 'Objavljeno',
+        reportingFrom: 'Izveštava iz',
+        role: 'Funkcija',
+      },
       consentBanner: {
         privacy: {
           title: 'Osvežili smo našu politiku privatnosti i kolačića',
@@ -524,6 +530,12 @@ export const service = {
           callToActionLast: '.',
           callToActionLinkUrl: 'https://www.bbc.com/serbian/cyr',
         },
+      },
+      byline: {
+        articleInformation: 'Подаци о чланку',
+        published: 'Објављено',
+        reportingFrom: 'Извештава из',
+        role: 'Функција',
       },
       consentBanner: {
         privacy: {

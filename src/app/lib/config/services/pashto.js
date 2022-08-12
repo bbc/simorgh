@@ -116,6 +116,12 @@ export const service = {
           callToActionLinkUrl: 'https://www.bbc.com/pashto',
         },
       },
+      byline: {
+        articleInformation: 'د مطلب په اړه جزییات',
+        published: 'د خپرېدو وخت',
+        reportingFrom: 'رپوټ له:',
+        role: 'دنده',
+      },
       consentBanner: {
         privacy: {
           title: 'موږ د محرمیت او ډېټا په اړه خپله تګلاره تازه کړې',

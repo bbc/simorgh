@@ -170,6 +170,12 @@ export const mainTranslations = {
       callToActionLinkUrl: 'https://www.bbc.com/russian',
     },
   },
+  byline: {
+    articleInformation: 'О статье',
+    published: 'Опубликовано',
+    reportingFrom: 'Место сообщения',
+    role: 'Должность',
+  },
   media: {
     noJs: 'Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер',
     contentExpired: 'Контент больше не доступен.',

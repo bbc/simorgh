@@ -108,6 +108,12 @@ export const service = {
           callToActionLinkUrl: 'https://www.bbc.com/punjabi',
         },
       },
+      byline: {
+        articleInformation: '...ਵਿੱਚ',
+        published: 'ਪ੍ਰਕਾਸ਼ਿਤ',
+        reportingFrom: '...ਤੋਂ',
+        role: 'ਰੋਲ',
+      },
       consentBanner: {
         privacy: {
           title: 'ਅਸੀਂ ਆਪਣੀ ਨਿੱਜਤਾ ਤੇ ਕੁਕੀਜ਼ ਪਾਲਿਸੀ ਨੂੰ ਅਪਡੇਟ ਕਰ ਦਿੱਤਾ ਹੈ',

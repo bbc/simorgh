@@ -116,6 +116,12 @@ export const service = {
           callToActionLinkUrl: 'https://www.bbc.com/tamil',
         },
       },
+      byline: {
+        articleInformation: 'கட்டுரை தகவல்',
+        published: 'பிரசுரிக்கப்பட்டது',
+        reportingFrom: 'இருந்து',
+        role: 'பதவி',
+      },
       consentBanner: {
         privacy: {
           title:

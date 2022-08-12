@@ -138,6 +138,12 @@ export const service = {
           callToActionLinkUrl: 'https://www.bbc.com/persian',
         },
       },
+      byline: {
+        articleInformation: 'اطلاعات مقاله',
+        published: 'منتشر شده در',
+        reportingFrom: 'در',
+        role: 'شغل',
+      },
       consentBanner: {
         privacy: {
           title:

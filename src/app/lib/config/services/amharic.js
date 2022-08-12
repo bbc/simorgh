@@ -111,6 +111,10 @@ export const service = {
           callToActionLinkUrl: 'https://www.bbc.com/amharic',
         },
       },
+      byline: {
+        published: 'ታትሟል',
+        role: 'የሥራ ድርሻ',
+      },
       consentBanner: {
         privacy: {
           title: 'በፕራይቬሲና ኩኪዎችን በመጠቀም ፖሊሲዎቻችን ላይ ማሻሻያ አድርገናል።',

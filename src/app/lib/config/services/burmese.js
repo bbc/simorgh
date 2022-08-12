@@ -129,6 +129,12 @@ export const service = {
           callToActionLinkUrl: 'https://www.bbc.com/burmese',
         },
       },
+      byline: {
+        articleInformation: 'ဆောင်းပါးအချက်အလက်',
+        published: 'ရေးသားခဲ့သည်။',
+        reportingFrom: 'ရေးသားပေးပို့သည့်နေရာ',
+        role: 'ရာထူးတာဝန်',
+      },
       consentBanner: {
         privacy: {
           title:

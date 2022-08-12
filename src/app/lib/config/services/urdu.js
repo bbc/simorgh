@@ -132,6 +132,12 @@ export const service = {
           callToActionLinkUrl: 'https://www.bbc.com/urdu',
         },
       },
+      byline: {
+        articleInformation: 'مضمون کی تفصیل',
+        published: 'وقت اشاعت',
+        reportingFrom: 'مقام',
+        role: 'عہدہ',
+      },
       consentBanner: {
         privacy: {
           title: 'ہم نے اپنی پرائیویسی اور کوکیز پالیسی اپ ڈیٹ کر دی ہے',
