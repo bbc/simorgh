@@ -109,8 +109,8 @@ TopicPromo; // index.test.js;
 ✅
 
 ```jsx
-TopicPromo; // index.jsx;
-TopicPromo; // index.test.jsx;
+TopicPromo; // index.tsx;
+TopicPromo; // index.test.tsx;
 ```
 
 #### Use camelCase when naming variables, functions and methods.
