@@ -129,14 +129,18 @@ const TopicPage = ({ pageData }) => {
             </InlineWrapper>
             {description && <TopicDescription>{description}</TopicDescription>}
           </TitleWrapper>
-          {curations.map(({ summaries, curationId }) => (
-            <Curation
-              key={curationId}
-              visualStyle={VISUAL_STYLE.NONE}
-              visualProminance={VISUAL_PROMINANCE.NORMAL}
-              promos={summaries}
-            />
-          ))}
+          {curations.map(
+            ({ summaries, curationId, title: curationTitle, link }) => (
+              <Curation
+                key={curationId}
+                visualStyle={VISUAL_STYLE.NONE}
+                visualProminance={VISUAL_PROMINANCE.NORMAL}
+                promos={summaries}
+                title={curationTitle}
+                link={link}
+              />
+            ),
+          )}
           <Pagination
             activePage={activePage}
             pageCount={pageCount}
