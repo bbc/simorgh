@@ -37,6 +37,7 @@ const Component = ({ service, variant }) => {
                 pageData={{
                   title: fixture.data.title,
                   description: fixture.data.description,
+                  imageData: fixture.data.imageData,
                   images: fixture.data.images,
                   curations: fixture.data.curations,
                   activePage: null,
