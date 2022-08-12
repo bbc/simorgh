@@ -27,7 +27,7 @@ const Curation = ({ visualStyle, visualProminance, promos, title, link }) => {
   );
   return (
     <>
-      <Subheading href={link}>{title}</Subheading>
+      {title && <Subheading href={link}>{title}</Subheading>}
       <Component promos={promos} />
     </>
   );
