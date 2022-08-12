@@ -270,11 +270,11 @@ We should avoid cases like this and generally try to reduce our use of props for
 
 Where CSS Grid is used Opera Mini just fall back to the default inline layout so on a desktop this layout in css grid:
 
-![](https://paper-attachments.dropbox.com/s_2A43B8E3F9C1F972929EDC9878EAFF3FE87CC9300DB1C147F888F337C763ADF5_1657696680147_Screen+Shot+2022-07-05+at+09.57.12.png)
+![](./images/grid-modern-browser.png)
 
 Will become:
 
-![](https://paper-attachments.dropbox.com/s_2A43B8E3F9C1F972929EDC9878EAFF3FE87CC9300DB1C147F888F337C763ADF5_1657696708114_Screen+Shot+2022-07-05+at+10.00.49.png)
+![](./images/grid-opera-mini.png)
 
 This fallback behaviour in most cases will provide an acceptable experience for a mobile page layout. Given Opera Mini is a mobile only browser, we can assume that a single column page layout will be acceptable and thus we can use CSS grid to layout pages for other browsers with confidence the fallback on Opera Mini will be acceptable. We still need to test the layout on Opera Mini before going live to ensure we don’t have any unacceptable layout issues.
 
