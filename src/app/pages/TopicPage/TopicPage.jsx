@@ -70,17 +70,16 @@ const TopicPage = ({ pageData }) => {
   const { enabled: adsEnabled } = useToggle('ads');
   const { showAdsBasedOnLocation } = useContext(RequestContext);
 
-  const summaryEntities = summaries =>
-    summaries.map(summary => ({
-      '@type': 'Article',
-      name: summary.title,
-      headline: summary.title,
-      url: summary.link,
-      dateCreated: summary.firstPublished,
-    }));
-
   const linkedDataEntities = [].concat(
-    ...curations.map(({ summaries }) => summaryEntities(summaries)),
+    ...curations.map(({ summaries }) =>
+      summaries.map(summary => ({
+        '@type': 'Article',
+        name: summary.title,
+        headline: summary.title,
+        url: summary.link,
+        dateCreated: summary.firstPublished,
+      })),
+    ),
   );
 
   const { pageXOfY, previousPage, nextPage, page } = {
