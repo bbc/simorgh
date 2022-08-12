@@ -12,8 +12,8 @@ import { C_GREY_2 } from '#psammead/psammead-styles/src/colours';
 
 import { articleDataPropTypes } from '#models/propTypes/article';
 
-import TopStories from '#containers/CpsTopStories';
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
+import TopStoriesSection from './PagePromoSections/TopStoriesSection';
 import { Secondary, gridColumnsSecondary } from './ArticlePageGrid';
 
 const ResponsiveComponentWrapper = styled.div`
@@ -34,11 +34,7 @@ const SecondaryColumn = ({ pageData }) => {
     <Secondary>
       {topStoriesContent && (
         <ResponsiveComponentWrapper data-testid="top-stories">
-          <TopStories
-            content={topStoriesContent}
-            parentColumns={gridColumnsSecondary}
-            sectionLabelBackground={C_GREY_2}
-          />
+          <TopStoriesSection content={topStoriesContent} />
         </ResponsiveComponentWrapper>
       )}
       {featuresContent && (
