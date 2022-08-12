@@ -41,8 +41,7 @@ TODO
 ✅
 
 ```js
-// add good example
-```
+const ANALYTICS_ENDPOINT = 'https://analytics.bbc.com';
 
 #### Don't add obvious noise
 
