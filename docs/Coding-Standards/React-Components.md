@@ -264,6 +264,7 @@ Where possible we want to apply standardisation as an â€˜opportunistic refactorâ
 - Types should be as strict as possible
   - Avoid use of the `any` type and try and define a more specific type
   - Where a prop has a fixed set of options use a `[union](https://camchenry.com/blog/typescript-union-type)` [type](https://camchenry.com/blog/typescript-union-type) [](https://camchenry.com/blog/typescript-union-type)to restrict the prop to those fixed options
+- Typescript components do not use directory aliases because previously this has been used as a band-aid on poor file organisation. In theory, by relying on the principle of code colocation and not nesting files mutliple directory levels deep, then import paths should not be so difficult to maintain and not reach for code in far away places.
 
 ## Component Health
 
