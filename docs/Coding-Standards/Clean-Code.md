@@ -274,7 +274,12 @@ Pure functions are also extremely independent meaning they are easy to move arou
 ❌
 
 ```js
-// add bad example
+// Modifies argument
+const getLastElement = data => data.pop();
+
+// Accesses external data, so not guaranteed to return the same result for the same arguments
+const externalVariable = [1, 2, 3];
+const getLastElement = () => externalVariable[externalVariable.length - 1]
 ```
 
 ✅
