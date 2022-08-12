@@ -97,7 +97,7 @@ TopicPromo; // index.js; // the component filename
 TopicPromo; // index.test.js; // the component test filename
 ```
 
-#### Component and component test filenames should use the `.jsx` file extension. This makes it easier to identify which files in the codebase are components.
+#### Component and component test filenames should use the `.tsx` file extension. This makes it easier to identify which files in the codebase are components.
 
 ❌
 

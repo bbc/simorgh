@@ -227,7 +227,7 @@ In the new approach we make simple highly reusable primitive components with few
 
 ### Legacy Components
 
-Before looking to apply our component standards we have a huge body of components that will not meet the existing standards to provide a ‘clean slate’ these can be moved to a legacy location in the following manner:
+Before looking to apply our component standards we have a huge body of components that will not meet the existing standards to provide a ‘clean slate’. These have been moved to a legacy location in the following manner:
 
 | Previous Location  | New Location              | Remarks                                                                                                                                                                                                                        |
 | ------------------ | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
