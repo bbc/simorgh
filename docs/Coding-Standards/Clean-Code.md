@@ -137,7 +137,11 @@ TODO
 ✅
 
 ```js
-// add good example
+// Tigrinya is misspelt in the API response - see [API-1234]
+const mapServiceToProducer = (service) => {
+  if (service === 'tigrinia') return 'tigrinya';
+  return producer;
+};
 ```
 
 #### Use as warning of consequences
