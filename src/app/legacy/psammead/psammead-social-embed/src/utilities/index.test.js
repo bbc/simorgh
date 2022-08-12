@@ -1,4 +1,9 @@
-import { getProviderName, detokenise, dictionaryFactory } from './index';
+import {
+  getProviderName,
+  getCaptionText,
+  detokenise,
+  dictionaryFactory,
+} from './index';
 
 describe('getProviderName', () => {
   it('transforms the given provider correctly', () => {
@@ -36,5 +41,51 @@ describe('dictionaryFactory', () => {
       '%provider_name%': 'unknown',
       '%provider%': 'unknown',
     });
+  });
+});
+
+describe('getCaptionText', () => {
+  it('returns caption text for a CPS page', () => {
+    const cpsCaption = {
+      textPrefixVisuallyHidden: 'Título del video, ',
+      text: 'Advertencia: El contenido de sitios externos y terceras partes puede contener publicidad',
+    };
+
+    expect(
+      getCaptionText({
+        pageType: 'STY',
+        caption: cpsCaption,
+        provider: 'youtube',
+      }),
+    ).toEqual(cpsCaption);
+  });
+
+  it('returns caption text for an Article page', () => {
+    const articleCaption = {
+      textPrefixVisuallyHidden: 'Título del video, ',
+      text: 'Advertencia: El contenido de sitios externos y terceras partes puede contener publicidad',
+      articleText:
+        'Advertencia: La BBC no se hace responsable por el contenido de sitios externos.',
+      articleAdditionalText:
+        'Este contenido de %provider_name% puede contener publicidad.',
+    };
+
+    expect(
+      getCaptionText({
+        pageType: 'article',
+        caption: articleCaption,
+        provider: 'youtube',
+      }),
+    ).toEqual({
+      textPrefixVisuallyHidden: 'Título del video, ',
+      additionalText: 'Este contenido de YouTube puede contener publicidad.',
+      text: 'Advertencia: La BBC no se hace responsable por el contenido de sitios externos.',
+    });
+  });
+
+  it('returns null if no caption object is given', () => {
+    expect(
+      getCaptionText({ pageType: 'article', provider: 'youtube' }),
+    ).toBeNull();
   });
 });
