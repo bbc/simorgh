@@ -131,6 +131,7 @@ export const mundoMultipleCurations = {
       curationId: 'urn:bbc:tipo:list:d0348c91-39f5-4224-91cf-6ca9f2812376',
       curationType: 'tipo-curation',
       position: 0,
+      title: 'Analysis',
       visualProminence: 'NORMAL',
     },
     {

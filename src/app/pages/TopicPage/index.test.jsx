@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render } from '@testing-library/react';
+import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
@@ -36,7 +37,12 @@ const TopicPageWithContext = ({
         },
       }}
     >
-      <RequestContextProvider showAdsBasedOnLocation={showAdsBasedOnLocation}>
+      <RequestContextProvider
+        showAdsBasedOnLocation={showAdsBasedOnLocation}
+        isAmp={false}
+        pageType={TOPIC_PAGE}
+        service={service}
+      >
         <ServiceContextProvider service={service} lang={lang}>
           <TopicPage pageData={pageData} />
         </ServiceContextProvider>
@@ -72,6 +78,16 @@ describe('Topic Page', () => {
     );
     expect(getAllByRole('list').length).toEqual(2);
     expect(getAllByRole('listitem').length).toEqual(4);
+  });
+
+  it('should render curation subheading when curation title exists', () => {
+    const { container } = render(
+      <TopicPageWithContext
+        pageData={mundoMultipleCurations}
+        service="mundo"
+      />,
+    );
+    expect(container.querySelector('h2').textContent).toEqual('Analysis');
   });
 
   it('should render badge and description when they exist in data', () => {
