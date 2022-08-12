@@ -147,7 +147,8 @@ TODO
 ❌
 
 ```js
-// add bad example
+// Changing this is risky
+const CDN_URL = 'https://cdn.bbc.com';
 ```
 
 ✅
