@@ -47,6 +47,7 @@ import MostReadContainer from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
 import SocialEmbedContainer from '#containers/SocialEmbed';
+
 import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 
@@ -65,7 +66,7 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
-import RelatedContentSection from './PagePromoSections/RelatedContentSection';
+import ArticleRelatedContent from '#containers/ArticleRelatedContent';
 
 import SecondaryColumn from './SecondaryColumn';
 
@@ -246,7 +247,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
               tagBackgroundColour={C_WHITE}
             />
           )}
-          <RelatedContentSection content={last(blocks)} />
+          <ArticleRelatedContent content={last(blocks)} />
         </Primary>
         <SecondaryColumn pageData={pageData} />
       </ArticlePageGrid>

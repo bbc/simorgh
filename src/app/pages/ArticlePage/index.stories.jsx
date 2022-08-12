@@ -6,11 +6,9 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import articleData from '#data/news/articles/c0g992jmmkko';
+import articleData from '#data/news/articles/c5jje4ejkqvo';
 import articleDataWithRelatedContent from '#data/afrique/articles/c7yn6nznljdo';
 import secondaryColumn from '#data/news/secondaryColumn';
-import singleStoryPromo from '#data/news/secondaryColumn/SingleStoryPromo.json';
-import articleDataWithSingleRelatedContent from '#data/afrique/articles/cz216x22106o.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import handlePromoData from '#app/routes/article/handlePromoData';
@@ -20,10 +18,7 @@ const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent);
 const Page = withPageWrapper(PageWithOptimizely);
 
 // eslint-disable-next-line react/prop-types
-const ComponentWithContext = ({
-  data = articleData,
-  secondaryColumn = secondaryColumn,
-}) => (
+const ComponentWithContext = ({ data = articleData }) => (
   <ToggleContextProvider
     toggles={{
       eventTracking: { enabled: true },
@@ -57,28 +52,10 @@ export default {
   parameters: { layout: 'fullscreen' },
 };
 
-export const ArticlePage = props => (
-  <ComponentWithContext
-    {...props}
-    secondaryColumn={secondaryColumn}
-    data={handlePromoData(articleData)}
-  />
-);
-
+export const ArticlePage = ComponentWithContext;
 export const ArticlePageWithRelatedContent = props => (
   <ComponentWithContext
     {...props}
     data={handlePromoData(articleDataWithRelatedContent)}
   />
-);
-
-export const ArticlePageWithSingleRelatedContent = props => (
-  <ComponentWithContext
-    {...props}
-    data={handlePromoData(articleDataWithSingleRelatedContent)}
-  />
-);
-
-export const ArticlePageWithSingleStoryPromo = props => (
-  <ComponentWithContext {...props} secondaryColumn={singleStoryPromo} />
 );
