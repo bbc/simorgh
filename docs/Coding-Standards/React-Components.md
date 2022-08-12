@@ -139,7 +139,7 @@ Component files are easier to reason about when you separate the presentation fr
 
 ### How?
 
-Put styled components in a file with the same filename as the component but with `.styled` before the `.jsx` file extension. For example, `index.styled.jsx`. Then reference the styled components in the component file.
+Put styled components in a file with the same filename as the component but with `.styled` before the `.tsx` file extension. For example, `index.styled.jsx`. Then reference the styled components in the component file.
 
 ❌
 
