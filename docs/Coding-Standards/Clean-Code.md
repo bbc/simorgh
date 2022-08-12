@@ -285,7 +285,7 @@ const getLastElement = () => externalVariable[externalVariable.length - 1]
 ✅
 
 ```js
-// add good example
+const getLastElement = data => data[data.length-1];
 ```
 
 #### Use consistent names
