@@ -289,4 +289,4 @@ All components should have a readme that includes
 - A11y notes: explaination of implmentation details specific to a11y requirements
 - Usage examples including RTL
 - List any third party dependencies in use
-- An explanation of any unusual/uninuitive implementation decisions required to work around an external bug (e.g. browser bug) or to deliver quickly to a deadline
+- An explanation of any unusual/unintuitive implementation decisions required to work around an external bug (e.g. browser bug) or to deliver quickly to a deadline
