@@ -35,14 +35,13 @@ TODO
 ❌
 
 ```js
-// add bad example
-```
+// analytics endpoint
+const URL = 'https://analytics.bbc.com';
 
 ✅
 
 ```js
-// add good example
-```
+const ANALYTICS_ENDPOINT = 'https://analytics.bbc.com';
 
 #### Don't add obvious noise
 
@@ -119,7 +118,10 @@ TODO
 ✅
 
 ```js
-// add good example
+// This is the detection method recommended by opera
+// See https://dev.opera.com/articles/opera-mini-and-javascript/
+const isOperaMini = () =>
+  Object.prototype.toString.call(window.operamini) === '[object OperaMini]';
 ```
 
 #### Use as clarification of code
@@ -135,7 +137,11 @@ TODO
 ✅
 
 ```js
-// add good example
+// Tigrinya is misspelt in the API response - see [API-1234]
+const mapServiceToProducer = (service) => {
+  if (service === 'tigrinia') return 'tigrinya';
+  return producer;
+};
 ```
 
 #### Use as warning of consequences
@@ -145,13 +151,15 @@ TODO
 ❌
 
 ```js
-// add bad example
+// Changing this is risky
+const CDN_URL = 'https://cdn.bbc.com';
 ```
 
 ✅
 
 ```js
-// add good example
+// Changes here will need replicated to the content security policy
+const CDN_URL = 'https://cdn.bbc.com';
 ```
 
 ## Functions
@@ -266,13 +274,18 @@ Pure functions are also extremely independent meaning they are easy to move arou
 ❌
 
 ```js
-// add bad example
+// Modifies argument
+const getLastElement = data => data.pop();
+
+// Accesses external data, so not guaranteed to return the same result for the same arguments
+const externalVariable = [1, 2, 3];
+const getLastElement = () => externalVariable[externalVariable.length - 1]
 ```
 
 ✅
 
 ```js
-// add good example
+const getLastElement = data => data[data.length-1];
 ```
 
 #### Use consistent names
