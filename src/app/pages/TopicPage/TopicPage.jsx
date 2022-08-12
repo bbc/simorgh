@@ -70,8 +70,8 @@ const TopicPage = ({ pageData }) => {
   const { enabled: adsEnabled } = useToggle('ads');
   const { showAdsBasedOnLocation } = useContext(RequestContext);
 
-  const linkedDataEntities = [].concat(
-    ...curations.map(({ summaries }) =>
+  const linkedDataEntities = curations
+    .map(({ summaries }) =>
       summaries.map(summary => ({
         '@type': 'Article',
         name: summary.title,
@@ -79,8 +79,8 @@ const TopicPage = ({ pageData }) => {
         url: summary.link,
         dateCreated: summary.firstPublished,
       })),
-    ),
-  );
+    )
+    .flat();
 
   const { pageXOfY, previousPage, nextPage, page } = {
     pageXOfY: 'Page {x} of {y}',
