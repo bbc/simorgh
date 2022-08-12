@@ -122,6 +122,12 @@ export const service = {
           callToActionLinkUrl: 'https://www.bbc.com/hausa',
         },
       },
+      byline: {
+        articleInformation: 'Bayani kan maƙala',
+        published: 'An wallafa',
+        reportingFrom: 'Aiko rahoto daga',
+        role: 'Sanya sunan wanda ya rubuta labari',
+      },
       consentBanner: {
         privacy: {
           title: "Mun sabunta Ka'idojinmu na Tsare Sirri",

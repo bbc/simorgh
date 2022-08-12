@@ -110,6 +110,12 @@ export const service = {
           callToActionLinkUrl: 'https://www.bbc.com/vietnamese',
         },
       },
+      byline: {
+        articleInformation: '',
+        published: 'Được đăng',
+        reportingFrom: '',
+        role: 'Vai trò',
+      },
       consentBanner: {
         privacy: {
           title: 'Chúng tôi đã cập nhật Chính sách về Riêng tư và Cookie',

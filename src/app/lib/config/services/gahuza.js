@@ -124,6 +124,12 @@ export const service = {
           callToActionLinkUrl: 'https://www.bbc.com/gahuza',
         },
       },
+      byline: {
+        articleInformation: 'Ibiranga iyi nkuru',
+        published: 'Yatangajwe',
+        reportingFrom: '',
+        role: 'Igikorwa',
+      },
       consentBanner: {
         privacy: {
           title: "Twaravuguriye ibijanye n'ubuzima bwite n'ibigenga Cookies",

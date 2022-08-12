@@ -112,6 +112,12 @@ export const service = {
           callToActionLinkUrl: 'https://www.bbc.com/azeri',
         },
       },
+      byline: {
+        articleInformation: 'Məqalə barədə məlumat',
+        published: 'Çap edildi',
+        reportingFrom: 'Məkan',
+        role: 'Vəzifə',
+      },
       consentBanner: {
         privacy: {
           title: 'Biz Məxfilik və Kukilər (Cookies) Siyasətimizi yeniləmişik.',

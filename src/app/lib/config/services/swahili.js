@@ -112,6 +112,12 @@ export const service = {
           callToActionLinkUrl: 'https://www.bbc.com/swahili',
         },
       },
+      byline: {
+        articleInformation: 'Maelezo kuhusu taarifa',
+        published: 'Iliyochapishwa',
+        reportingFrom: 'Akiripoti kutoka',
+        role: 'Nafasi',
+      },
       consentBanner: {
         privacy: {
           title: 'Tumeboresha sera yetu ya faragha na vidakuzi au cookies',
