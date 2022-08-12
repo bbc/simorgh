@@ -35,8 +35,8 @@ TODO
 ❌
 
 ```js
-// add bad example
-```
+// analytics endpoint
+const URL = 'https://analytics.bbc.com';
 
 ✅
 
