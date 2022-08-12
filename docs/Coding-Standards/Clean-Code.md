@@ -118,7 +118,10 @@ TODO
 ✅
 
 ```js
-// add good example
+// This is the detection method recommended by opera
+// See https://dev.opera.com/articles/opera-mini-and-javascript/
+const isOperaMini = () =>
+  Object.prototype.toString.call(window.operamini) === '[object OperaMini]';
 ```
 
 #### Use as clarification of code
