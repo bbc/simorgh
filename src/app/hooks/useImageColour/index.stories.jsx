@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import { withKnobs, text, color, number } from '@storybook/addon-knobs';
 

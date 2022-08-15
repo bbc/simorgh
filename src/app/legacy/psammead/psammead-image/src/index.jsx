@@ -1,4 +1,3 @@
-import React from 'react';
 import { number, oneOfType, string, bool, func } from 'prop-types';
 import styled from '@emotion/styled';
 import { keyframes, css } from '@emotion/react';

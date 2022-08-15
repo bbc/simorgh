@@ -1,4 +1,3 @@
-import React from 'react';
 import { render } from '@testing-library/react';
 import loggerMock from '#testHelpers/loggerMock';
 import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';

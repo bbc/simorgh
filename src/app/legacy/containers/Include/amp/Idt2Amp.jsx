@@ -1,4 +1,3 @@
-import React from 'react';
 import { string, shape, number } from 'prop-types';
 import { AmpImg } from '#psammead/psammead-image/src';
 import { GridItemMedium } from '#components/Grid';

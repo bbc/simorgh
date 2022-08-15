@@ -1,4 +1,3 @@
-import React from 'react';
 import { arrayOf, bool, shape, string, oneOf } from 'prop-types';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { latin } from '#psammead/gel-foundations/src/scripts';

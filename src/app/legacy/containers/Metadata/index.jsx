@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { string, node, shape, arrayOf, bool, number } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { ServiceContext } from '#contexts/ServiceContext';

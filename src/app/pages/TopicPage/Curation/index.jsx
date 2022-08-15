@@ -1,4 +1,3 @@
-import React from 'react';
 import { arrayOf, oneOf, shape } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import CurationGrid from './CurationGrid';

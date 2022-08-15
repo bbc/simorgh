@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { string, shape } from 'prop-types';
 import { Headline } from '#psammead/psammead-headings/src';
 import pathOr from 'ramda/src/pathOr';
