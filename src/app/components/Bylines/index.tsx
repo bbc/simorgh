@@ -1,16 +1,26 @@
 import React, { useContext } from 'react';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
-import { AccorditionIcon } from '#psammead/psammead-assets/src/svgs';
+import { ArrowIcon } from '#psammead/psammead-assets/src/svgs';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import pathOr from 'ramda/src/pathOr';
+import {
+  Author,
+  JobRole,
+  BylineItem,
+  BylineList,
+  LineBreak,
+} from './index.styles';
 
 type Props = {
   authorName: string;
   jobRole: string;
+  children?: JSX.Element;
 };
 
-const Byline = ({ authorName, jobRole }: Props) => {
-  const { translations } = useContext(ServiceContext) as {
+const Byline = ({ authorName, jobRole, children }: Props) => {
+  const { script, service, translations } = useContext(ServiceContext) as {
+    script: any;
+    service: string;
     translations: any;
   };
 
@@ -18,22 +28,32 @@ const Byline = ({ authorName, jobRole }: Props) => {
   const jobRoleTranslated = pathOr('Role', ['byline', 'role'], translations);
 
   return (
-    <>
-      <li>
+    <BylineList>
+      <BylineItem>
         <span role="text">
           <VisuallyHiddenText>{`${authorTranslated}, `} </VisuallyHiddenText>
-          <span>{authorName}</span>
+          <Author script={script} service={service}>
+            {authorName}
+          </Author>
         </span>
-        <AccorditionIcon />
-      </li>
-      <li>
+        <ArrowIcon />
+      </BylineItem>
+      <BylineItem>
         <span role="text">
           <VisuallyHiddenText>{`${jobRoleTranslated}, `} </VisuallyHiddenText>
-          <span>{jobRole}</span>
+          <JobRole script={script} service={service}>
+            {jobRole}
+          </JobRole>
         </span>
-      </li>
-    </>
+      </BylineItem>
+      <LineBreak />
+      {children}
+    </BylineList>
   );
+};
+
+Byline.defaultProps = {
+  children: null,
 };
 
 export default Byline;

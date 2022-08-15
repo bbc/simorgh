@@ -1,13 +1,19 @@
 import React from 'react';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import Byline from '.';
 
 interface Props {
   authorName: string;
   jobRole: string;
+  service: string;
 }
 
-const Component = ({ authorName, jobRole }: Props) => {
-  return <Byline authorName={authorName} jobRole={jobRole} />;
+const Component = ({ authorName, jobRole, service }: Props) => {
+  return (
+    <ServiceContextProvider service={service}>
+      <Byline authorName={authorName} jobRole={jobRole} />
+    </ServiceContextProvider>
+  );
 };
 
 export default {
@@ -17,5 +23,9 @@ export default {
 };
 
 export const Example = () => (
-  <Component authorName="Dario" jobRole="Software Engineer" />
+  <Component
+    authorName="Dario Russo"
+    jobRole="Software Engineer"
+    service="news"
+  />
 );

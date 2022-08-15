@@ -195,6 +195,8 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     children: node.isRequired,
   };
 
+  console.log(pageData);
+
   return (
     <Wrapper>
       <ATIAnalytics data={pageData} />

@@ -2,24 +2,25 @@ import styled from '@emotion/styled';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
 import { C_EBON } from '#psammead/psammead-styles/src/colours';
 
-const StyledAccordition = styled.svg`
+const StyledArrowIcon = styled.svg`
   vertical-align: middle;
   margin: 0 ${GEL_SPACING_HLF};
   color: ${C_EBON};
   fill: currentColor;
-  transform: rotate(-90deg);
 `;
 
-const AccorditionIcon = () => (
-  <StyledAccordition
+const Arrow = () => (
+  <StyledArrowIcon
     width="12px"
     height="12px"
     viewBox="0 0 32 32"
     focusable="false"
     aria-hidden="true"
   >
-    <path d="M16 29L32 3h-7.2L16 18.3 7.2 3H0"></path>
-  </StyledAccordition>
+    <g>
+      <path d="M21.6,14.3L5.5,31h6.4l14.6-15L11.9,1H5.5l16.1,16.7V14.3z" />
+    </g>
+  </StyledArrowIcon>
 );
 
-export default AccorditionIcon;
+export default Arrow;
