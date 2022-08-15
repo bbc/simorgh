@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { element, string, number } from 'prop-types';
 import ErrorPage from '#pages/ErrorPage/ErrorPage';
 import { pageDataPropType } from '#models/propTypes/data';

@@ -1,4 +1,4 @@
-import React from 'react';
+import { createContext } from 'react';
 import styled from '@emotion/styled';
 import { string, shape, arrayOf, element } from 'prop-types';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
@@ -14,7 +14,7 @@ import CardTitle from './card-title';
 import CardDescription from './card-description';
 import CardEpisodesText from './card-episodes-text';
 
-const PodcastContext = React.createContext({});
+const PodcastContext = createContext({});
 const withPodcastContext = Component => props =>
   (
     <PodcastContext.Consumer>

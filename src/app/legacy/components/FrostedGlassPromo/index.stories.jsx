@@ -1,4 +1,3 @@
-import React from 'react';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { withKnobs, text, number } from '@storybook/addon-knobs';
 

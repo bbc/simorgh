@@ -1,4 +1,3 @@
-import React from 'react';
 import { shape, string, oneOfType, elementType } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
 import useViewTracker from '#hooks/useViewTracker';

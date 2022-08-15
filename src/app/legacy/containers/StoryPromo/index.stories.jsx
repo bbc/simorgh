@@ -1,4 +1,3 @@
-import React from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { withKnobs, select, boolean } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '#contexts/ServiceContext';

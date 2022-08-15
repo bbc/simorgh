@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import { string, func, shape, oneOf } from 'prop-types';
 import Image from '#psammead/psammead-image/src';

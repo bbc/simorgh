@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, act } from '@testing-library/react';
 import fetchMock from 'fetch-mock';
 import dariRadioScheduleData from '#data/persian/bbc_dari_radio/schedule.json';

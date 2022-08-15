@@ -1,6 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { addDecorator } from '@storybook/react';
 import { create } from '@storybook/theming';
 import isChromatic from 'chromatic';

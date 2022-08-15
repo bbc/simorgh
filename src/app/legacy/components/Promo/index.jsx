@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { createContext, useContext } from 'react';
 import styled from '@emotion/styled';
 import { arrayOf, element } from 'prop-types';
 import partition from 'ramda/src/partition';
@@ -16,7 +16,7 @@ import Footer from './footer';
 import A from './a';
 import Timestamp from './timestamp';
 
-const PromoContext = React.createContext({});
+const PromoContext = createContext({});
 const withPromoContext = Component => props =>
   (
     <PromoContext.Consumer>

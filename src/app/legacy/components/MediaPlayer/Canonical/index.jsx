@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { string, bool, func, arrayOf } from 'prop-types';
 import styled from '@emotion/styled';
 import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
