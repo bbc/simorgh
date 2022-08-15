@@ -1,4 +1,3 @@
-import React from 'react';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';

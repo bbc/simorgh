@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import { C_CLOUD_LIGHT } from '#psammead/psammead-styles/src/colours';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';

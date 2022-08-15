@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { shape, arrayOf, string } from 'prop-types';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import pathOr from 'ramda/src/pathOr';

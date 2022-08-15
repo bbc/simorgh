@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const getIconAssetUrl = (service, size) =>
   `https://static.files.bbci.co.uk/ws/simorgh-assets/public/${service}/images/icons/icon-${size}.png`;
 

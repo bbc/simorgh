@@ -1,4 +1,4 @@
-import React from 'react';
+import { Children } from 'react';
 import styled from '@emotion/styled';
 import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
 import { C_EBON, C_METAL } from '#psammead/psammead-styles/src/colours';
@@ -16,7 +16,7 @@ import { node, string, shape } from 'prop-types';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 
 const getRowCount = (children, columns) =>
-  Math.ceil(React.Children.count(children) / columns);
+  Math.ceil(Children.count(children) / columns);
 
 export const UsefulLink = styled.a`
   ${({ script }) => script && getPica(script)};

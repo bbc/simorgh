@@ -1,4 +1,3 @@
-import React from 'react';
 import { oneOf, string } from 'prop-types';
 import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,

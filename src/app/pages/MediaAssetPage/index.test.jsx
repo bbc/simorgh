@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
 import fetchMock from 'fetch-mock';
 import { render, waitFor } from '@testing-library/react';
 import { StaticRouter } from 'react-router-dom';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 import newsData from '#data/news/cpsAssets/uk-55808266.json';

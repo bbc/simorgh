@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { number, bool, string } from 'prop-types';
 import Timestamp from '#psammead/psammead-timestamp-container/src';
 import { GridItemMedium, PopOutGridItemMedium } from '#components/Grid';

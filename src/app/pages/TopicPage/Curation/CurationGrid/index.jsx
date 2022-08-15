@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import styled from '@emotion/styled';
 import { arrayOf, shape } from 'prop-types';
 

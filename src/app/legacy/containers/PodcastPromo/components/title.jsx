@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import { node } from 'prop-types';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';

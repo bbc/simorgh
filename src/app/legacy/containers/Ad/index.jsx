@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { oneOf, string } from 'prop-types';
 import useToggle from '#hooks/useToggle';
 import { RequestContext } from '#contexts/RequestContext';

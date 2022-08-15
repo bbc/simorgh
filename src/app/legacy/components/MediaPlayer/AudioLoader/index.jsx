@@ -1,4 +1,3 @@
-import React from 'react';
 import { bool, element } from 'prop-types';
 import styled from '@emotion/styled';
 
