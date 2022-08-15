@@ -54,11 +54,11 @@ import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
+import useOptimizelyMvtVariation from '#hooks/useOptimizelyMvtVariation';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
-import { OptimizelyExperiment, OptimizelyContext } from '@optimizely/react-sdk';
+import { OptimizelyExperiment } from '@optimizely/react-sdk';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
-import activateExperiment from '#lib/utilities/activateExperiment';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 
@@ -159,22 +159,12 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   // ads
   const { enabled: adsEnabled } = useToggle('ads');
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
-  const { isAmp, showAdsBasedOnLocation, mvtExperiments } =
-    useContext(RequestContext);
-  const { optimizely } = useContext(OptimizelyContext);
+  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
 
-  const hasFullStackExperiment =
-    mvtExperiments &&
-    mvtExperiments.some(
-      ({ experimentName, variation, enabled }) =>
-        experimentName === 'full_stack_test' &&
-        variation === 'Control_1' &&
-        enabled,
-    );
+  const fullStackVariation = useOptimizelyMvtVariation('full_stack_test');
 
-  if (hasFullStackExperiment) {
-    activateExperiment(optimizely, 'full_stack_test', 'Control_1');
+  if (fullStackVariation === 'Control_1' && service === 'pidgin') {
     const fullStackMessage = `I am the Full Stack Experiment`;
     return <h1>{fullStackMessage}</h1>;
   }

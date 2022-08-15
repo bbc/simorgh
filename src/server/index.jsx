@@ -33,6 +33,7 @@ import local from './local';
 import getAgent from './utilities/getAgent';
 import { getMvtExperiments, getMvtVaryHeaders } from './utilities/mvtHeader';
 
+const { performance } = require('perf_hooks');
 const morgan = require('morgan');
 
 const logger = nodeLogger(__filename);
@@ -185,11 +186,7 @@ server.get(
       if (status === OK) {
         derivedPageType = ramdaPath(['pageData', 'metadata', 'type'], data);
 
-        mvtExperiments = getMvtExperiments(
-          headersTest,
-          service,
-          derivedPageType,
-        );
+        mvtExperiments = getMvtExperiments(headersTest);
         data.mvtExperiments = mvtExperiments;
       } else {
         sendCustomMetric({
@@ -240,6 +237,23 @@ server.get(
         });
       }
 
+      // let startTime = performance.now();
+
+      let mvtVaryHeadersTest;
+      const getIndexOfDataMvt = result.html.indexOf('data-mvt="');
+
+      if (getIndexOfDataMvt !== -1) {
+        const startOfDataMvtValue = result.html.slice(getIndexOfDataMvt + 10);
+        mvtVaryHeadersTest = startOfDataMvtValue.slice(
+          0,
+          startOfDataMvtValue.indexOf('"'),
+        );
+      } else {
+        mvtVaryHeadersTest = null;
+      }
+
+      // let endTime = performance.now();
+
       logger.info(ROUTING_INFORMATION, {
         url,
         status,
@@ -254,7 +268,7 @@ server.get(
           `https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${urlPath}`,
         );
 
-        const mvtVaryHeaders = !isAmp && getMvtVaryHeaders(mvtExperiments);
+        const mvtVaryHeaders = !isAmp && mvtVaryHeadersTest;
 
         if (mvtVaryHeaders) res.set('vary', mvtVaryHeaders);
         res.status(status).send(result.html);
