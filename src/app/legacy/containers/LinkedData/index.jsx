@@ -79,7 +79,7 @@ const LinkedData = ({
     '@type': ORG_TYPE,
     name: AUTHOR_PUBLISHER_NAME,
     ...(isTrustProjectParticipant && { publishingPrinciples }),
-    publisherLogo,
+    logo: publisherLogo,
   };
   const mainEntityOfPage = {
     '@type': WEB_PAGE_TYPE,
