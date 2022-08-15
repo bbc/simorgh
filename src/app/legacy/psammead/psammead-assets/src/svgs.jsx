@@ -1,3 +1,4 @@
+export AccorditionIcon from './svgs/accordition';
 export BBC_BLOCKS from './svgs/bbcBlocks';
 export BBC_BLOCKS_DARK_MODE from './svgs/bbcBlocksDarkMode';
 export coreIcons from './svgs/coreIcons';
