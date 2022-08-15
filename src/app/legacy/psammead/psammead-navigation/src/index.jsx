@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import { shape, string, node, bool, oneOf } from 'prop-types';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';

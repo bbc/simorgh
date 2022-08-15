@@ -1,5 +1,3 @@
-import React from 'react';
-
 const height = 24.59;
 const width = 240.0157;
 const somali = {

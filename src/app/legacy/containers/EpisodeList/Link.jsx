@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/aria-role */
-import React from 'react';
 import { node, string, bool, number } from 'prop-types';
 import styled from '@emotion/styled';
 import {

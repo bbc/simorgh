@@ -1,4 +1,4 @@
-import React, { useContext, Fragment } from 'react';
+import { useContext, Fragment } from 'react';
 import path from 'ramda/src/path';
 import styled from '@emotion/styled';
 import { node, string } from 'prop-types';

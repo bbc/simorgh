@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import styled from '@emotion/styled';
 import { string } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';

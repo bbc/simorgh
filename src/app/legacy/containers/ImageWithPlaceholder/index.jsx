@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { string, number, bool, node, elementType } from 'prop-types';
 import styled from '@emotion/styled';
 import LazyLoad from 'react-lazyload';

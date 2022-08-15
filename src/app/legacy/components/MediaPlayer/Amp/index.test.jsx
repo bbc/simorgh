@@ -1,4 +1,3 @@
-import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { render } from '@testing-library/react';
 import Amp from '.';

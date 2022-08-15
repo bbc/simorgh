@@ -1,4 +1,3 @@
-import React from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
