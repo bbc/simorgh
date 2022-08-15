@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { shape, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
