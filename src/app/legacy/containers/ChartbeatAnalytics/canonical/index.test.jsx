@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, act, waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import CanonicalChartbeatAnalytics from '.';

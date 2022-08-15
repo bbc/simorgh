@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { string, shape, arrayOf } from 'prop-types';
 import getBrandedImage from '#lib/utilities/getBrandedImage';
 import { ServiceContext } from '#contexts/ServiceContext';

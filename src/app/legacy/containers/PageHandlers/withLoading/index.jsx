@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { bool, element } from 'prop-types';
 import styled from '@emotion/styled';
 import { GridWrapper, GridItemMedium } from '#components/Grid';

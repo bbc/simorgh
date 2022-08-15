@@ -5,9 +5,9 @@
     {
       "packagePatterns": ["*"],
       "excludePackagePatterns": ["^@bbc", "^@loadable", "webpack"],
-      "updateTypes": ["patch"],
-      "groupName": "all 3rd party patch dependencies",
-      "groupSlug": "all-patch"
+      "updateTypes": ["minor", "patch"],
+      "groupName": "all 3rd party non-major dependencies",
+      "groupSlug": "all-minor-patch"
     },
     {
       "packagePatterns": ["^@loadable"],

@@ -1,4 +1,3 @@
-import React from 'react';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { imageModelPropTypes } from '#models/propTypes/image';
 import {

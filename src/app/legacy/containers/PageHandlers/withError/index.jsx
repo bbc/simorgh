@@ -1,4 +1,3 @@
-import React from 'react';
 import { string, element, shape, number } from 'prop-types';
 import ErrorPage from '#pages/ErrorPage/ErrorPage';
 

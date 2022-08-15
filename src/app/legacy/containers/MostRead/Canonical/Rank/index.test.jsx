@@ -1,4 +1,3 @@
-import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { latin, arabic } from '#psammead/gel-foundations/src/scripts';
 import MostReadRank from '.';

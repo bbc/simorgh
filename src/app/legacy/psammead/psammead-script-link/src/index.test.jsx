@@ -1,4 +1,3 @@
-import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { render, fireEvent } from '@testing-library/react';
 import { latin } from '#psammead/gel-foundations/src/scripts';

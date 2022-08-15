@@ -1,4 +1,3 @@
-import React from 'react';
 import { render } from '@testing-library/react';
 import { service as newsConfig } from '#lib/config/services/news';
 import { RequestContextProvider } from '#contexts/RequestContext';

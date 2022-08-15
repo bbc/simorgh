@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { string, bool } from 'prop-types';
 import { useLocation } from 'react-router-dom';
 import moment from 'moment-timezone';

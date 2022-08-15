@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import { string, arrayOf, shape, element } from 'prop-types';
 import { C_SHADOW } from '#psammead/psammead-styles/src/colours';

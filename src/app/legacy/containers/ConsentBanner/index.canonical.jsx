@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { oneOfType, func, shape, any } from 'prop-types';
 
 import { UserContext } from '#contexts/UserContext';

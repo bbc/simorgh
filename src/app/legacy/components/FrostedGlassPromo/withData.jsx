@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import path from 'ramda/src/path';
 import hasPath from 'ramda/src/hasPath';

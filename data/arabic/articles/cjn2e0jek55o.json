@@ -463,6 +463,53 @@
                   "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Farabic",
                   "blocks": [
                     {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "BBC Test Image",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "BBC Test Image",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 640,
+                              "height": 562,
+                              "locator": "72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png",
+                              "imageType": "background",
+                              "originCode": "cpsdevpb",
+                              "copyrightHolder": "BBC"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
                       "type": "text",
                       "model": {
                         "blocks": [
@@ -502,6 +549,53 @@
                 "model": {
                   "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Fbrasil",
                   "blocks": [
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "فتاة سورية",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "فتاة سورية",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 640,
+                              "height": 562,
+                              "locator": "72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png",
+                              "imageType": "background",
+                              "originCode": "cpsdevpb",
+                              "copyrightHolder": "BBC"
+                            }
+                          }
+                        ]
+                      }
+                    },
                     {
                       "type": "text",
                       "model": {
