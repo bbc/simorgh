@@ -1,5 +1,3 @@
-import React from 'react';
-
 const height = 24;
 const width = 189.442;
 const sport = {

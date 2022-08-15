@@ -1,4 +1,3 @@
-import React from 'react';
 import * as optimizelyReactSdk from '@optimizely/react-sdk';
 import { render } from '@testing-library/react';
 import { latin } from '#psammead/gel-foundations/src/scripts';

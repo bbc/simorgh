@@ -1,4 +1,3 @@
-import React from 'react';
 import { string } from 'prop-types';
 import omit from 'ramda/src/omit';
 import styled from '@emotion/styled';

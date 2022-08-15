@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
 import { string, node } from 'prop-types';

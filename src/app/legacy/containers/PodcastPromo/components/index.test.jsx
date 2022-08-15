@@ -1,4 +1,3 @@
-import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';

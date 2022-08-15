@@ -1,4 +1,3 @@
-import React from 'react';
 import { blockContainingText, singleTextBlock } from '#models/blocks';
 import {
   shouldMatchSnapshot,

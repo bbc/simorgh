@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react';
+import { Fragment, useEffect, useState, useContext } from 'react';
 import 'isomorphic-fetch';
 import { oneOf, string, elementType, shape } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
@@ -165,7 +165,7 @@ CanonicalMostRead.defaultProps = {
   columnLayout: 'multiColumn',
   size: 'default',
   initialData: null,
-  wrapper: React.Fragment,
+  wrapper: Fragment,
   eventTrackingData: null,
 };
 

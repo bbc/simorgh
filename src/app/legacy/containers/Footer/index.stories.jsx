@@ -1,4 +1,3 @@
-import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { ServiceContextProvider } from '#contexts/ServiceContext';

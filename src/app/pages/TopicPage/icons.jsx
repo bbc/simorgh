@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const Ellipsis = () => (
   <svg
     viewBox="0 0 32 32"

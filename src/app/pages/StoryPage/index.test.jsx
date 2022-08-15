@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
 import { StaticRouter } from 'react-router-dom';
 import deepClone from 'ramda/src/clone';
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { latin, arabic } from '#psammead/gel-foundations/src/scripts';

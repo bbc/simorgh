@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import useToggle from '#hooks/useToggle';
 import CanonicalChartbeatBeacon from '#containers/ChartbeatAnalytics/canonical';
 import { canonicalChartbeatPropTypes } from '#models/propTypes/chartbeatAnalytics';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { arrayOf, shape, bool, oneOf } from 'prop-types';
 import { StoryPromoLi } from '#psammead/psammead-story-promo-list/src';
 import Grid from '#components/Grid';
