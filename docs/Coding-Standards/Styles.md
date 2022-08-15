@@ -69,7 +69,7 @@ The `dir` attribute should normally only be present on the `html` element unless
 
 ### Why?
 
-Styles for larger screens are usually more complicated than styles for smaller screens. Writing styles for mobile first helps to simplify responsive styles.
+A mobile-first approach prioritises developing for the mobile view which is arguably the simplest and most important and often accounts for a higher proportion of user visits. It also prevents desktop-centric development which often leads to complex styles when retrofitting a desktop-centric site to work on mobile devices.
 
 ### How?
 
@@ -79,14 +79,47 @@ A mobile-first approach to styling means that styles are applied first to mobile
 
 ❌
 
-```js
-// add bad example
+```css
+@media (max-width: 37.4375rem) {
+  .promo-wrapper {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .promo-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .promo-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
 ```
 
 ✅
 
-```js
-// add good example
+```css
+.promo-wrapper {
+  display: inline-block;
+}
+
+@media (min-width: 37.5rem) {
+  .promo-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 63rem) {
+  .promo-wrapper {
+    justify-content: center;
+  }
+}
 ```
 
 ### Resources

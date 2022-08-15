@@ -30,11 +30,9 @@ Follow these guidelines to help you decide when to comment code and when to take
 
 #### Always try to explain yourself in code
 
-TODO
-
 ❌
 
-```js
+````js
 // analytics endpoint
 const URL = 'https://analytics.bbc.com';
 
@@ -50,40 +48,25 @@ Good code _mostly_ documents itself.
 ❌
 
 ```js
-function hashIt(data) {
-  // The hash
-  let hash = 0;
+const ref = useRef() // ref for the button
 
-  // Length of string
-  const length = data.length;
+useEffect(() => {
+  // on component mount
 
-  // Loop through every character in data
-  for (let i = 0; i < length; i++) {
-    // Get character code.
-    const char = data.charCodeAt(i);
-    // Make the hash
-    hash = (hash << 5) - hash + char;
-    // Convert to 32-bit integer
-    hash &= hash;
-  }
-}
-```
+  ref.current.click() // clicks the button
+}, [])
+````
 
 ✅
 
 ```js
-function hashIt(data) {
-  let hash = 0;
-  const length = data.length;
+const buttonRef = useRef();
 
-  for (let i = 0; i < length; i++) {
-    const char = data.charCodeAt(i);
-    hash = (hash << 5) - hash + char;
+useEffect(() => {
+  const buttonEl = buttonRef.current;
 
-    // Convert to 32-bit integer
-    hash &= hash;
-  }
-}
+  buttonEl.click();
+}, []);
 ```
 
 #### Don't comment out code. Just remove
@@ -107,14 +90,6 @@ doStuff();
 
 #### Use as explanation of intent
 
-TODO
-
-❌
-
-```js
-// add bad example
-```
-
 ✅
 
 ```js
@@ -126,27 +101,17 @@ const isOperaMini = () =>
 
 #### Use as clarification of code
 
-TODO
-
-❌
-
-```js
-// add bad example
-```
-
 ✅
 
 ```js
 // Tigrinya is misspelt in the API response - see [API-1234]
-const mapServiceToProducer = (service) => {
+const mapServiceToProducer = service => {
   if (service === 'tigrinia') return 'tigrinya';
   return producer;
 };
 ```
 
 #### Use as warning of consequences
-
-TODO
 
 ❌
 
@@ -166,8 +131,6 @@ const CDN_URL = 'https://cdn.bbc.com';
 
 ### Why?
 
-TODO
-
 ### How?
 
 #### Keep functions small
@@ -177,32 +140,47 @@ Small functions are easier to understand. Ideally a function should do just one 
 ❌
 
 ```js
-// add bad example
+const getPromoData = data => {
+  const { assetType } = data;
+  const headline =
+    assetType === 'PODCAST' ? episode.name : data.headlines.headline;
+  const url =
+    assetType === 'PODCAST'
+      ? data.url.replace('https://bbc.com/', '/')
+      : data.locators.assetUri;
+
+  return { headline, url };
+};
 ```
 
 ✅
 
 ```js
-// add good example
+const getAssetType = ({ assetType }) => assetType;
+
+const isPodcast = data => getAssetType(data) === 'PODCAST';
+
+const getPodcastEpisodeName = ({ episode }) => episode.name;
+
+const getArticleHeadline = ({ headlines }) => headlines.headline;
+
+const convertBbcUrlToRelativePath = url => url.replace('https://bbc.com/', '/');
+
+const getPodcastEpisodePath = ({ episode }) =>
+  convertBbcUrlToRelativePath(episode.url);
+
+const getArticleUrl = ({ locators }) => locators.assetUri;
+
+const getPromoTitle = data =>
+  isPodcast(data) ? getPodcastEpisodeName(data) : getArticleHeadline(data);
+
+const getPromoUrl = data =>
+  isPodcast(data) ? getPodcastEpisodePath(data) : getArticleUrl(data);
 ```
 
 #### Have fewer function arguments
 
-Try to limit the number of arguments in a function. When possible, try to avoid two or more arguments. More arguments make a function harder to read and understand. It is also more difficult to test, since they create the need to write test cases for every combination of arguments.
-
-❌
-
-```js
-// add bad example
-```
-
-✅
-
-```js
-// add good example
-```
-
-#### Use object destructuring for functions that require multiple arguments
+Try to limit the number of arguments in a function. More arguments make a function harder to read and understand. It is also more difficult to test, since they create the need to write test cases for every combination of arguments.
 
 Sometimes you can’t avoid having multiple function arguments. When this is the case it is recommended to use 1 object argument with object destructuring syntax. This has a few advantages over multiple arguments:
 
@@ -279,13 +257,13 @@ const getLastElement = data => data.pop();
 
 // Accesses external data, so not guaranteed to return the same result for the same arguments
 const externalVariable = [1, 2, 3];
-const getLastElement = () => externalVariable[externalVariable.length - 1]
+const getLastElement = () => externalVariable[externalVariable.length - 1];
 ```
 
 ✅
 
 ```js
-const getLastElement = data => data[data.length-1];
+const getLastElement = data => data[data.length - 1];
 ```
 
 #### Use consistent names

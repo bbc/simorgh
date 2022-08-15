@@ -29,16 +29,18 @@ Arrange, Act, Assert is a great way to structure test cases. It prescribes an or
 2. **_Act_** \**\*\*on the target behaviour. *Act\* steps should cover the main thing to be tested. This could be calling a function or method, calling a REST API, or interacting with a web page. Keep actions focused on the target behaviour.
 3. **_Assert_** \**\*\*expected outcomes. *Act* steps should elicit some sort of response. *Assert\* steps verify the goodness or badness of that response. Sometimes, assertions are as simple as checking numeric or string values. Other times, they may require checking multiple facets of a system. Assertions will ultimately determine if the test passes or fails.
 
-❌
-
 ```js
-// add bad example
-```
+it('should render the cookie banner when the privacy banner is dismissed', async () => {
+  // arrange
+  render(<ConsentBanner />);
 
-✅
+  // act
+  fireEvent.click(screen.queryByText('OK'));
 
-```js
-// add good example
+  // assert
+  expect(screen.queryByText(COOKIE_BANNER_TEXT)).toBeInTheDocument();
+  expect(screen.queryByText(PRIVACY_BANNER_TEXT)).not.toBeInTheDocument();
+});
 ```
 
 ## One assertion per test
@@ -48,13 +50,35 @@ This helps us to have well-focused tests so that if one fails, the cause of its 
 ❌
 
 ```js
-// add bad example
+it('should render the promo', async () => {
+  render(<Promo />);
+
+  expect(screen.queryByText('The promo title')).toBeInTheDocument();
+  expect(screen.queryByText('The promo subtitle')).toBeInTheDocument();
+  expect(screen.getByAltText('The promo image alt text')).toBeInTheDocument();
+});
 ```
 
 ✅
 
 ```js
-// add good example
+it('should render the promo title', async () => {
+  render(<Promo />);
+
+  expect(screen.queryByText('The promo title')).toBeInTheDocument();
+});
+
+it('should render the promo subtitle', async () => {
+  render(<Promo />);
+
+  expect(screen.queryByText('The promo subtitle')).toBeInTheDocument();
+});
+
+it('should render the promo image', async () => {
+  render(<Promo />);
+
+  expect(screen.getByAltText('The promo image alt text')).toBeInTheDocument();
+});
 ```
 
 ## Use Jest’s `.each` helper method to simplify repetitive tests
