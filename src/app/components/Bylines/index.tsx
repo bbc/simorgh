@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
-import { ArrowIcon } from '#psammead/psammead-assets/src/svgs';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import pathOr from 'ramda/src/pathOr';
 import {
@@ -27,28 +26,38 @@ const Byline = ({ authorName, jobRole, children }: Props) => {
   const authorTranslated = pathOr('Author', ['byline', 'author'], translations);
   const jobRoleTranslated = pathOr('Role', ['byline', 'role'], translations);
 
+  const articleInformationTranslated = pathOr(
+    'Article information',
+    ['byline', 'articleInformation'],
+    translations,
+  );
+
   return (
-    <BylineList>
-      <BylineItem>
-        <span role="text">
-          <VisuallyHiddenText>{`${authorTranslated}, `} </VisuallyHiddenText>
-          <Author script={script} service={service}>
-            {authorName}
-          </Author>
-        </span>
-        <ArrowIcon />
-      </BylineItem>
-      <BylineItem>
-        <span role="text">
-          <VisuallyHiddenText>{`${jobRoleTranslated}, `} </VisuallyHiddenText>
-          <JobRole script={script} service={service}>
-            {jobRole}
-          </JobRole>
-        </span>
-      </BylineItem>
-      <LineBreak />
-      {children}
-    </BylineList>
+    <section role="region" aria-labelledby="article-byline">
+      <VisuallyHiddenText id="article-byline">
+        {articleInformationTranslated}{' '}
+      </VisuallyHiddenText>
+      <BylineList role="list">
+        <BylineItem>
+          <span role="text">
+            <VisuallyHiddenText>{`${authorTranslated}, `} </VisuallyHiddenText>
+            <Author script={script} service={service}>
+              {authorName}
+            </Author>
+          </span>
+        </BylineItem>
+        <BylineItem>
+          <span role="text">
+            <VisuallyHiddenText>{`${jobRoleTranslated}, `} </VisuallyHiddenText>
+            <JobRole script={script} service={service}>
+              {jobRole}
+            </JobRole>
+          </span>
+        </BylineItem>
+        <LineBreak aria-hidden />
+        {children}
+      </BylineList>
+    </section>
   );
 };
 
