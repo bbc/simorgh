@@ -23,7 +23,6 @@ const LinkedData = ({
     brandName,
     publishingPrinciples,
     defaultImage,
-    publisherImage,
     noBylinesPolicy,
     isTrustProjectParticipant,
     service,
@@ -55,18 +54,17 @@ const LinkedData = ({
     '@type': IMG_TYPE,
     width: 103,
     height: 16,
-    url: "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/publisher-nx16.png",
-  }
+    url: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/publisher-nx16.png',
+  };
 
-  const isNews = service => {
-    if (service == "news") { return true; }
+  const isNews = () => {
+    if (service === 'news') {
+      return true;
+    }
     return false;
-  }
+  };
 
-  console.log (service);
-  console.log (isNews(service));
-
-  const publisherLogo = isNews(service) ? newsPublisherLogo : logo;
+  const publisherLogo = isNews() ? newsPublisherLogo : logo;
 
   const image = {
     '@type': IMG_TYPE,
