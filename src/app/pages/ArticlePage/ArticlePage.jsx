@@ -65,6 +65,7 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
+import Byline from '#app/components/Byline';
 import RelatedContentSection from './PagePromoSections/RelatedContentSection';
 
 import SecondaryColumn from './SecondaryColumn';
@@ -134,6 +135,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     audio: articleMediaPlayer,
     video: articleMediaPlayer,
     text,
+    byline: Byline,
     image: props => (
       <Image
         {...props}
@@ -194,8 +196,6 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   MostReadWrapper.propTypes = {
     children: node.isRequired,
   };
-
-  console.log(pageData);
 
   return (
     <Wrapper>

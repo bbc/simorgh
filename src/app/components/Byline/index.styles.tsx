@@ -35,8 +35,8 @@ export const LineBreak = styled.hr`
   width: ${40 / 16}rem;
   margin: ${GEL_SPACING_DBL} 0;
 `;
-export const BylineItem = styled.li``;
 
 export const BylineList = styled.ul`
   list-style: none;
+  padding: 0;
 `;
