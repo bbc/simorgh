@@ -143,7 +143,6 @@ describe('cspHeader', () => {
         'https://*.akamaihd.net',
         'https://cdn.optimizely.com/',
         'https://logx.optimizely.com/',
-        'https://europe-west1-bbc-otg-traf-mgr-bq-prod-4591.cloudfunctions.net',
         'https://cognito-identity.eu-west-1.amazonaws.com/',
         'https://sts.eu-west-1.amazonaws.com/',
         'https://ws.bbc-reporting-api.app',
