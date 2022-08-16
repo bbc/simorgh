@@ -5,13 +5,18 @@ import fixture from '#data/pidgin/topics/c95y35941vrt.json';
 import CurationPromo from '../CurationPromo';
 
 const horizontal = `
-    .promo-text { padding-inline-start: 0.5rem;
+  .promo-text {
+    padding-inline-start: 0.5rem;
     width: 67%;
     display: inline-block;
-    vertical-align: top; }
-    .promo-image { width: 33%;
-      display: inline-block;
-      vertical-align: top; }
+    vertical-align: top;
+  }
+
+  .promo-image {
+    width: 33%;
+    display: inline-block;
+    vertical-align: top;
+  }
 `;
 
 const Item = styled.div`
