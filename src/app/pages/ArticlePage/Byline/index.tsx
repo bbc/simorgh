@@ -16,42 +16,21 @@ const Byline = ({ blocks, children }: Props) => {
     translations: any;
   };
 
-  const authorName = pathOr(
-    '',
-    [
-      0,
-      'model',
-      'blocks',
-      0,
-      'model',
-      'blocks',
-      0,
-      'model',
-      'blocks',
-      0,
-      'model',
-      'text',
-    ],
-    blocks,
-  );
-  const jobRole = pathOr(
-    '',
-    [
-      0,
-      'model',
-      'blocks',
-      1,
-      'model',
-      'blocks',
-      0,
-      'model',
-      'blocks',
-      0,
-      'model',
-      'text',
-    ],
-    blocks,
-  );
+  const bylineBlocks = pathOr({}, [0, 'model', 'blocks'], blocks);
+
+  const bylineInfo = {};
+  bylineBlocks.forEach(block => {
+    const type = pathOr('', ['type'], block);
+    const value = pathOr(
+      '',
+      ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
+      block,
+    );
+    bylineInfo[type] = value;
+  });
+
+  const authorName = pathOr('', ['name'], bylineInfo);
+  const jobRole = pathOr('', ['role'], bylineInfo);
 
   if (!(authorName && jobRole)) return null;
 
