@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, useContext } from 'react';
+import { Fragment, PropsWithChildren, useContext } from 'react';
 
 import H2 from './index.styled';
 
@@ -17,13 +17,13 @@ const Subhead = ({ children, href }: PropsWithChildren<Props>) => {
     dir: string;
   };
   const Wrapper = href
-    ? ({ children: innerChildren }) => (
+    ? ({ children: innerChildren }: PropsWithChildren<Props>) => (
         <a href={href}>
           <span>{innerChildren}</span>
           {dir === 'ltr' ? <RightChevron /> : <LeftChevron />}
         </a>
       )
-    : React.Fragment;
+    : Fragment;
   return (
     <H2 service={service} script={script}>
       <Wrapper>{children}</Wrapper>
