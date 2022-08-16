@@ -57,6 +57,11 @@ const Byline = ({ blocks, children }: Props) => {
 
   const authorTranslated = pathOr('Author', ['byline', 'author'], translations);
   const jobRoleTranslated = pathOr('Role', ['byline', 'role'], translations);
+  const publishedTranslated = pathOr(
+    'Published, ',
+    ['byline', 'published'],
+    translations,
+  );
 
   const articleInformationTranslated = pathOr(
     'Article information',
@@ -87,7 +92,16 @@ const Byline = ({ blocks, children }: Props) => {
           </span>
         </li>
         <LineBreak aria-hidden />
-        {children}
+        {children ? (
+          <li>
+            <span role="text">
+              <VisuallyHiddenText>
+                {`${publishedTranslated}, `}{' '}
+              </VisuallyHiddenText>
+              {children}
+            </span>
+          </li>
+        ) : null}
       </BylineList>
     </section>
   );

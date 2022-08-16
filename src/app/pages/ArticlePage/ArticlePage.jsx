@@ -148,13 +148,11 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     byline: props =>
       hasByline ? (
         <Byline {...props} popOut={false}>
-          <li>
-            <Timestamp
-              firstPublished={new Date(firstPublished).getTime()}
-              lastPublished={new Date(lastPublished).getTime()}
-              popOut={false}
-            />
-          </li>
+          <Timestamp
+            firstPublished={new Date(firstPublished).getTime()}
+            lastPublished={new Date(lastPublished).getTime()}
+            popOut={false}
+          />
         </Byline>
       ) : null,
     image: props => (
