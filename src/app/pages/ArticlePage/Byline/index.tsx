@@ -1,7 +1,7 @@
-import React, { useContext } from 'react';
-import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
-import { ServiceContext } from '#app/contexts/ServiceContext';
+import { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
+import { ServiceContext } from '../../../contexts/ServiceContext';
+import VisuallyHiddenText from '../../../legacy/psammead/psammead-visually-hidden-text/src';
 import { Author, JobRole, BylineList, LineBreak } from './index.styles';
 
 type Props = {

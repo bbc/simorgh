@@ -65,7 +65,7 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
-import Byline from '#app/components/Byline';
+import Byline from './Byline';
 import RelatedContentSection from './PagePromoSections/RelatedContentSection';
 
 import SecondaryColumn from './SecondaryColumn';
