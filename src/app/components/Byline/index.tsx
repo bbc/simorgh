@@ -15,7 +15,7 @@ const Byline = ({ blocks, children }: Props) => {
     service: string;
     translations: any;
   };
-  console.log(blocks);
+
   const authorName = pathOr(
     '',
     [
@@ -52,7 +52,6 @@ const Byline = ({ blocks, children }: Props) => {
     ],
     blocks,
   );
-  console.log(jobRole);
 
   if (!(authorName && jobRole)) return null;
 

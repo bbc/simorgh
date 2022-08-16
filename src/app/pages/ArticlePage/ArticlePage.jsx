@@ -128,29 +128,6 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
 
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
 
-  const componentsToRender = {
-    visuallyHiddenHeadline,
-    headline: headings,
-    subheadline: headings,
-    audio: articleMediaPlayer,
-    video: articleMediaPlayer,
-    text,
-    byline: Byline,
-    image: props => (
-      <Image
-        {...props}
-        sizes="(min-width: 1008px) 760px, 100vw"
-        shouldPreload={preloadLeadImageToggle}
-      />
-    ),
-    timestamp: props => <Timestamp {...props} popOut={false} />,
-    social: SocialEmbedContainer,
-    group: gist,
-    links: props => <ScrollablePromo {...props} />,
-    mpu: props =>
-      isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
-  };
-
   const headline = getHeadline(pageData);
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
@@ -159,6 +136,41 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const topics = path(['metadata', 'topics'], pageData);
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
   const startsWithHeading = propEq('type', 'headline')(blocks[0] || {});
+  const hasByline = true;
+  const componentsToRender = {
+    visuallyHiddenHeadline,
+    headline: headings,
+    subheadline: headings,
+    audio: articleMediaPlayer,
+    video: articleMediaPlayer,
+    text,
+    byline: props =>
+      hasByline ? (
+        <Byline {...props} popOut={false}>
+          <li>
+            <Timestamp
+              firstPublished={new Date(firstPublished).getTime()}
+              lastPublished={new Date(lastPublished).getTime()}
+              popOut={false}
+            />
+          </li>
+        </Byline>
+      ) : null,
+    image: props => (
+      <Image
+        {...props}
+        sizes="(min-width: 1008px) 760px, 100vw"
+        shouldPreload={preloadLeadImageToggle}
+      />
+    ),
+    timestamp: props =>
+      hasByline ? null : <Timestamp {...props} popOut={false} />,
+    social: SocialEmbedContainer,
+    group: gist,
+    links: props => <ScrollablePromo {...props} />,
+    mpu: props =>
+      isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
+  };
 
   const visuallyHiddenBlock = {
     id: null,
