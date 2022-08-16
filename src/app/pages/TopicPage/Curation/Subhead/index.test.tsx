@@ -1,4 +1,3 @@
-import React from 'react';
 import { render } from '@testing-library/react';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import Subhead from '.';
@@ -21,7 +20,7 @@ describe('Curation Subhead Component', () => {
     );
 
     const headingElement = container.querySelector('h2');
-    expect(headingElement.innerHTML).toBe('My Text');
+    expect(headingElement?.innerHTML).toBe('My Text');
   });
 
   it('should render children within an h2', () => {
@@ -30,6 +29,6 @@ describe('Curation Subhead Component', () => {
     );
 
     const anchorElement = container.querySelector('a');
-    expect(anchorElement.getAttribute('href')).toBe('https://bbc.com');
+    expect(anchorElement?.getAttribute('href')).toBe('https://bbc.com');
   });
 });
