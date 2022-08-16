@@ -1,4 +1,3 @@
-import React from 'react';
 import omit from 'ramda/src/omit';
 import { number, string } from 'prop-types';
 

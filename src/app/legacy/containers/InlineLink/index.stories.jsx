@@ -1,4 +1,3 @@
-import React from 'react';
 import InlineLinkContainer from '.';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 

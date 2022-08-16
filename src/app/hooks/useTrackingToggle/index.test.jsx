@@ -1,4 +1,3 @@
-import React from 'react';
 import { renderHook } from '@testing-library/react-hooks';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import useTrackingToggle from '#hooks/useTrackingToggle';

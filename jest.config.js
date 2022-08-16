@@ -9,17 +9,20 @@ const unitTests = {
   transform: {
     '^.+\\.js$': 'babel-jest',
     '^.+\\.jsx$': 'babel-jest',
+    '^.+\\.ts$': 'babel-jest',
+    '^.+\\.tsx$': 'babel-jest',
   },
   displayName: 'Unit Tests',
   collectCoverageFrom: [
-    '**/(src|scripts)/**/*.{js,jsx}',
+    '**/(src|scripts)/**/*.{js,jsx,ts,tsx}',
     '!**/src/testHelpers/**',
     '!**/*.stories.jsx',
+    '!**/*.stories.tsx',
     '!**/src/integration/!(utils)/**/*',
   ],
   testMatch: [
-    '**/__tests__/**/*.js?(x)',
-    '**/?(*.)+(spec|test).js?(x)',
+    '**/__tests__/**/*.{js,jsx,ts,tsx}',
+    '**/?(*.)+(spec|test).{js,jsx,ts,tsx}',
     '!**/src/integration/!(utils)/**/*',
   ],
 };

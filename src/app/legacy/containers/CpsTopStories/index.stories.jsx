@@ -1,4 +1,3 @@
-import React from 'react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import newsTopStories from '#pages/StoryPage/newsTopStories.json';
 import topStoriesRtl from '#pages/StoryPage/topStoriesRtl.json';

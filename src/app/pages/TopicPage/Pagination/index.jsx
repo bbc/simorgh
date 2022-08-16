@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import styled from '@emotion/styled';
 import { number, string } from 'prop-types';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
@@ -25,7 +25,7 @@ import {
 import { ServiceContext } from '#contexts/ServiceContext';
 
 import buildBlocks, { TYPE, VISIBILITY } from './buildBlocks';
-import { Ellipsis, LeftChevron, RightChevron } from './icons';
+import { Ellipsis, LeftChevron, RightChevron } from '../icons';
 
 const visibilityToMediaQuery = visibility =>
   ({

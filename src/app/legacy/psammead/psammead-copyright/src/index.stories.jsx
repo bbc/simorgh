@@ -1,4 +1,3 @@
-import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select, text } from '@storybook/addon-knobs';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';

@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from 'react';
+import { createContext, useContext } from 'react';
 import { node } from 'prop-types';
 
 import { pageDataPropType } from '#models/propTypes/data';

@@ -1,8 +1,7 @@
-import React from 'react';
 import path from 'ramda/src/path';
 import { Helmet } from 'react-helmet';
 import { select } from '@storybook/addon-knobs';
-import * as scripts from '#psammead/gel-foundations/src/scripts';
+import * as scripts from '../../gel-foundations/src/scripts';
 import TEXT_VARIANTS from './text-variants';
 
 const DEFAULT_SERVICE = 'news';
