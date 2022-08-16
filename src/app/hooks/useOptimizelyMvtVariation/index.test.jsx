@@ -29,17 +29,17 @@ describe('useOptimizelyMvtVariation custom hook', () => {
     }).result.current;
   };
 
-  it('should return null if mvtExperiments is falsy', async () => {
+  it('should return null if mvtExperiments is falsy', () => {
     const result = renderUseOptimizelyMvtVariation(undefined, 'foo');
     expect(result).toEqual(null);
   });
 
-  it('should return null if mvtExperiments is an empty array', async () => {
+  it('should return null if mvtExperiments is an empty array', () => {
     const result = renderUseOptimizelyMvtVariation([], 'foo');
     expect(result).toEqual(null);
   });
 
-  it('should return a variation when the experiment is enabled', async () => {
+  it('should return a variation when the experiment is enabled', () => {
     const mockMvtExperiments = [
       {
         experimentName: 'foo',
@@ -52,7 +52,7 @@ describe('useOptimizelyMvtVariation custom hook', () => {
     expect(result).toEqual('control');
   });
 
-  it('should return null when the experiment is not enabled', async () => {
+  it('should return null when the experiment is not enabled', () => {
     const mockMvtExperiments = [
       {
         experimentName: 'foo',
@@ -65,7 +65,7 @@ describe('useOptimizelyMvtVariation custom hook', () => {
     expect(result).toBeFalsy();
   });
 
-  it('should call activate experiment if experiment is enabled', async () => {
+  it('should call activate experiment if experiment is enabled', () => {
     const mockMvtExperiments = [
       {
         experimentName: 'foo',
@@ -78,7 +78,7 @@ describe('useOptimizelyMvtVariation custom hook', () => {
     expect(spyActivateExperiment).toHaveBeenCalled();
   });
 
-  it('should not call activate experiment if experiment is disabled', async () => {
+  it('should not call activate experiment if experiment is disabled', () => {
     const mockMvtExperiments = [
       {
         experimentName: 'foo',
