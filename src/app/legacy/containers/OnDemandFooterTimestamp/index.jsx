@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import styled from '@emotion/styled';
 import { bool, number } from 'prop-types';
 import { C_PEBBLE, C_METAL } from '#psammead/psammead-styles/src/colours';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { string, shape, arrayOf, object, bool, oneOfType } from 'prop-types';
 import { BrowserRouter } from 'react-router-dom';
 import { singleTextBlock } from '#models/blocks';

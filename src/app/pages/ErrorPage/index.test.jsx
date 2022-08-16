@@ -1,4 +1,3 @@
-import React from 'react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import ErrorPage from './ErrorPage';

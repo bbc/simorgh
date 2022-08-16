@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { arrayOf, shape, string, oneOfType, object, number } from 'prop-types';
 import {
   GEL_SPACING,

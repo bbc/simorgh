@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { node, string, shape } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import path from 'ramda/src/path';

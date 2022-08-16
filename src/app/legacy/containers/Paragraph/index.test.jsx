@@ -1,4 +1,3 @@
-import React from 'react';
 import { v4 as uuid } from 'uuid';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { latin } from '#psammead/gel-foundations/src/scripts';

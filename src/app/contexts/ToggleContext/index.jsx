@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from 'react';
+import { createContext, useReducer } from 'react';
 import { node, object } from 'prop-types';
 import defaultToggles from '#lib/config/toggles';
 import { toggleReducer } from './reducer';

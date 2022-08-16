@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import moment from 'moment-timezone';
 import { shape, bool, string } from 'prop-types';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';

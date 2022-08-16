@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { oneOfType, object, arrayOf, shape, string } from 'prop-types';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import Caption from '#psammead/psammead-caption/src';

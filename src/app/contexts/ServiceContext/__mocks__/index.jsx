@@ -1,4 +1,4 @@
-import React from 'react';
+import { createContext } from 'react';
 import { node, string } from 'prop-types';
 import services from '#server/utilities/serviceConfigs';
 import { getVariant } from '#lib/utilities/variantHandler';
@@ -8,7 +8,7 @@ import getLangOverride from '#lib/utilities/langHandler';
  * async behavior in tests across the application when
  * using service contexts.
  */
-export const ServiceContext = React.createContext({});
+export const ServiceContext = createContext({});
 export const ServiceContextProvider = ({
   children,
   pageLang,

@@ -1,4 +1,3 @@
-import React from 'react';
 import path from 'ramda/src/path';
 import { Helmet } from 'react-helmet';
 import { select } from '@storybook/addon-knobs';
