@@ -25,7 +25,7 @@ import {
 import { ServiceContext } from '#contexts/ServiceContext';
 
 import buildBlocks, { TYPE, VISIBILITY } from './buildBlocks';
-import { Ellipsis, LeftChevron, RightChevron } from '../icons';
+import { Ellipsis, LeftChevron, RightChevron } from '../../../components/icons';
 
 const visibilityToMediaQuery = visibility =>
   ({
