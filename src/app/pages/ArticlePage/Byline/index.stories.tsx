@@ -1,4 +1,3 @@
-import styled from '@emotion/styled';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import Timestamp from '../../../legacy/containers/ArticleTimestamp';
 import Byline from '.';
@@ -160,14 +159,6 @@ const data = [
   },
 ];
 
-const StyledTimestamp = styled(Timestamp)`
-  li > span,
-  div {
-    padding: 0 !important;
-    color: red;
-  }
-`;
-
 const Component = ({ service, children }: Props) => {
   return (
     <ServiceContextProvider service={service}>
@@ -185,7 +176,7 @@ export default {
 export const Example = () => <Component service="news" />;
 export const ExampleWithTimestamp = () => (
   <Component service="news">
-    <StyledTimestamp
+    <Timestamp
       firstPublished={1660658887}
       lastPublished={1660658887}
       popOut={false}
