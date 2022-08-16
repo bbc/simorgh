@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';

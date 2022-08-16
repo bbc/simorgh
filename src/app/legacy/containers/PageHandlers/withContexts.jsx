@@ -1,4 +1,3 @@
-import React from 'react';
 import { bool, element, string, number, object } from 'prop-types';
 import path from 'ramda/src/path';
 import variantPropType from '#models/propTypes/variants';

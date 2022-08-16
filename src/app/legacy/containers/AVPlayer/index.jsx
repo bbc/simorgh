@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import { useState, useContext } from 'react';
 import { string, bool, func, oneOf } from 'prop-types';
 import styled from '@emotion/styled';
 import {

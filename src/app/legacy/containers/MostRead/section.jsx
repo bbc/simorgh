@@ -1,4 +1,3 @@
-import React from 'react';
 import { node, string } from 'prop-types';
 
 const MostReadSection = ({ children, className }) => (

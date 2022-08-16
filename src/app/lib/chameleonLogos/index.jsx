@@ -1,6 +1,3 @@
-import React from 'react';
-
-// Chameleon logos have an additional margin on their viewbox
 const buildLogo = ({ width, height, group, viewbox }) => {
   const margin = 140;
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import AmpDecorator from './index';
 
 describe('AmpDecorator', () => {

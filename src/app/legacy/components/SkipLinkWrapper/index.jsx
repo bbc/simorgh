@@ -1,4 +1,3 @@
-import React from 'react';
 import { node, string, shape } from 'prop-types';
 import styled from '@emotion/styled';
 import detokenise from '#psammead/psammead-detokeniser/src';

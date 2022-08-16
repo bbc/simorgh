@@ -1,5 +1,4 @@
 /* eslint-disable no-alert */
-import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { boolean, text, withKnobs } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';

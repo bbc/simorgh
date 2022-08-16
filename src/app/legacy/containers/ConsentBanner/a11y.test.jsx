@@ -1,4 +1,4 @@
-import React, { createRef } from 'react';
+import { forwardRef, createRef } from 'react';
 import { render } from '@testing-library/react';
 import { UserContextProvider } from '#contexts/UserContext';
 import { ToggleContext } from '#contexts/ToggleContext';
@@ -40,7 +40,7 @@ const AmpBannerWithContext = ({ service, serviceConfig, variant }) => {
   );
 };
 
-const CanonicalBannerWithContext = React.forwardRef(
+const CanonicalBannerWithContext = forwardRef(
   // eslint-disable-next-line react/prop-types
   ({ serviceConfig, variant }, ref) => {
     return (

@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
 import assocPath from 'ramda/src/assocPath';
 import { render, act } from '@testing-library/react';
 import { StaticRouter } from 'react-router-dom';

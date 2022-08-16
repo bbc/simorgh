@@ -1,5 +1,4 @@
 /* eslint-disable react/no-danger, react/prop-types */
-import React from 'react';
 import {
   AMP_SCRIPT,
   AMP_NO_SCRIPT,

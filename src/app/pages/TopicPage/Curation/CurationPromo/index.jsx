@@ -1,4 +1,3 @@
-import React from 'react';
 import { bool, string, number, oneOf, oneOfType } from 'prop-types';
 
 import Promo, { MEDIA_TYPES } from '#components/Promo';

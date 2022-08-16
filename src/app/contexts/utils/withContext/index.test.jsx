@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
+import { createContext, useContext } from 'react';
 import { cleanup, render, waitFor } from '@testing-library/react';
 import withContext from '.';
 
-const NewContext = React.createContext({});
+const NewContext = createContext({});
 
 describe('withContext', () => {
   afterEach(() => {

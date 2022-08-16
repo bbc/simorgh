@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { render } from '@testing-library/react';
 import { C_POSTBOX, C_WHITE } from '#psammead/psammead-styles/src/colours';
