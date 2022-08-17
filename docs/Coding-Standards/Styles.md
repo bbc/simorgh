@@ -23,24 +23,41 @@ Here are some of the benefits of using the `css` prop:
 ✅
 
 ```jsx
-// import from the Button component's styles.tsx file
-const buttonStyles = css({
-  background: '#08e',
-  color: 'white',
-  padding: '6px 10px',
-  border: 'none',
-});
+// the component's styles.tsx file
+import { css } from '@emotion/react';
 
-const Button = props => <button css={buttonStyles} />;
+const styles = {
+  wrapper: css({
+    backgroundColor: 'white',
+    border: '1px solid #eee',
+    borderRadius: '0.5rem',
+    padding: '1rem',
+  }),
+
+  title: css({
+    fontSize: '1.25rem',
+  }),
+};
+
+// the component's .tsx file
+const Promo = ({ title, children }) => (
+  <div css={styles.wrapper}>
+    <h5 css={styles.title}>{title}</h5>
+    {children}
+  </div>
+);
 ```
 
-Using an array for style reuse or applying one of styles to override default styles
+Using an array for style reuse or applying one off styles to override default styles
 
 ✅
 
 ```jsx
-const LargeButton = props => (
-  <button css={[buttonStyles, css({ fontSize: '2rem' })]} />
+const Promo = ({ title, children }) => (
+  <div css={styles.wrapper}>
+    <h5 css={[styles.title, css({ fontSize: '2rem' })]}>{title}</h5>
+    {children}
+  </div>
 );
 ```
 
@@ -49,15 +66,27 @@ Getting access to the theme in styles
 ✅
 
 ```jsx
-const getThemedButtonStyles = theme =>
-  css({
-    background: theme.colours.primary,
-    color: 'white',
-    padding: '6px 10px',
-    border: 'none',
-  });
-
-const Button = props => <button css={theme => getThemedButtonStyles(theme)} />;
+// the component's styles.tsx file
+const styles = {
+  wrapper: css({
+    backgroundColor: 'white',
+    border: '1px solid #eee',
+    borderRadius: '0.5rem',
+    padding: '1rem',
+  }),
+  title: theme =>
+    css({
+      color: theme.colours.primary,
+      fontSize: '1.25rem',
+    }),
+};
+// the component's .tsx file
+const Promo = ({ title, children }) => (
+  <div css={styles.wrapper}>
+    <h5 css={styles.title}>{title}</h5>
+    {children}
+  </div>
+);
 ```
 
 ## LTR/RTL design
