@@ -101,9 +101,9 @@ describe('Byline', () => {
 
   it.each`
     expectation    | info           | text
-    ${'Author'}    | ${'author'}    | ${'Author,'}
-    ${'Role'}      | ${'role'}      | ${'Role,'}
-    ${'Published'} | ${'timestamp'} | ${'Published,'}
+    ${'Author'}    | ${'Author'}    | ${'Author,'}
+    ${'Role'}      | ${'Role'}      | ${'Role,'}
+    ${'Published'} | ${'Published'} | ${'Published,'}
   `('should correctly announce $expectation for $info', ({ text }) => {
     render(
       <FixtureByline fixture={bylineWithNameAndRole} service="news">
@@ -120,12 +120,12 @@ describe('Byline', () => {
 
   it.each`
     info           | translation
-    ${'author'}    | ${'Author,'}
-    ${'role'}      | ${'Role,'}
-    ${'timestamp'} | ${'Published,'}
+    ${'author'}    | ${'Barreessaa,'}
+    ${'role'}      | ${'Gahee,'}
+    ${'published'} | ${'Maxxanfame,'}
   `('should translate ${info} announcement correctly', ({ translation }) => {
     render(
-      <FixtureByline fixture={bylineWithNameAndRole} service="afaaronomoo">
+      <FixtureByline fixture={bylineWithNameAndRole} service="afaanoromoo">
         <ArticleTimestamp
           firstPublished={1660658887}
           lastPublished={1660658887}
