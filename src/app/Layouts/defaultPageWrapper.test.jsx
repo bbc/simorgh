@@ -1,3 +1,4 @@
+import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import DefaultPageWrapper from './defaultPageWrapper';
 import { ServiceContextProvider } from '../contexts/ServiceContext';

@@ -1,3 +1,4 @@
+import React from 'react';
 import { latin, arabic } from '#psammead/gel-foundations/src/scripts';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import ErrorMain from './index';

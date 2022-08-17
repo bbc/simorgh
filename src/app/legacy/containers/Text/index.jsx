@@ -1,3 +1,4 @@
+import React from 'react';
 import { arrayOf, shape, string, objectOf, elementType } from 'prop-types';
 import paragraph from '../Paragraph';
 import unorderedList from '../BulletedList';

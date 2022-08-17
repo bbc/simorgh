@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { bool, string } from 'prop-types';
 import { ConsentBanner } from '#psammead/psammead-consent-banner/src';
 import { ServiceContext } from '#contexts/ServiceContext';

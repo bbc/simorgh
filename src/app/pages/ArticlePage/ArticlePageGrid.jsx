@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from '@emotion/styled';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import { GEL_SPACING_QUAD } from '#psammead/gel-foundations/src/spacings';

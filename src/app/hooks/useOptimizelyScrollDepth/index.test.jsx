@@ -1,3 +1,4 @@
+import React from 'react';
 import { node, string, bool } from 'prop-types';
 import { renderHook, act, cleanup } from '@testing-library/react-hooks';
 import { OptimizelyProvider } from '@optimizely/react-sdk';

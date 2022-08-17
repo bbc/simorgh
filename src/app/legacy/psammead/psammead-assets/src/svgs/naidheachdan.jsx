@@ -1,3 +1,5 @@
+import React from 'react';
+
 const height = 22.465;
 const width = 269.0145;
 const naidheachdan = {

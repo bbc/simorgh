@@ -1,4 +1,4 @@
-import { forwardRef, Children, cloneElement } from 'react';
+import React from 'react';
 import { bool, node, number, shape, oneOf } from 'prop-types';
 import styled from '@emotion/styled';
 import {
@@ -277,7 +277,7 @@ const GridComponent = styled.div`
   }
 `;
 
-const Grid = forwardRef(
+const Grid = React.forwardRef(
   (
     {
       children,
@@ -287,12 +287,12 @@ const Grid = forwardRef(
     ref,
   ) => {
     const renderChildren = () =>
-      Children.map(children, child => {
+      React.Children.map(children, child => {
         if (child) {
           const isNestedGridComponent = child.type === Grid;
 
           if (isNestedGridComponent) {
-            return cloneElement(child, {
+            return React.cloneElement(child, {
               parentColumns: otherProps.columns,
               parentEnableGelGutters: otherProps.enableGelGutters,
             });

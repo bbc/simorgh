@@ -1,3 +1,4 @@
+import React from 'react';
 import { render, getByText, getByRole } from '@testing-library/react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';

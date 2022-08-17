@@ -1,5 +1,4 @@
-import { useContext } from 'react';
-import * as React from 'react';
+import React, { useContext } from 'react';
 import ReactDOM from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import { UserContext, UserContextProvider } from '.';
