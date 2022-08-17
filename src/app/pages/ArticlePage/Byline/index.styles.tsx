@@ -7,7 +7,7 @@ import {
 import {
   C_GREY_6,
   C_GREY_10,
-  C_PHILIPPINE_GREY,
+  C_GREY_5,
 } from '#psammead/psammead-styles/src/colours';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 
@@ -31,7 +31,7 @@ export const JobRole = styled.span<Props>`
 `;
 
 export const LineBreak = styled.hr`
-  border-color: ${C_PHILIPPINE_GREY};
+  border-color: ${C_GREY_5};
   width: ${40 / 16}rem;
   margin: ${GEL_SPACING_DBL} 0;
 `;
