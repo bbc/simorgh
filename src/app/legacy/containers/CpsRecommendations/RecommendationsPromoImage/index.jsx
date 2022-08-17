@@ -1,3 +1,4 @@
+import React from 'react';
 import { shape, bool } from 'prop-types';
 import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
 import { createSrcsets } from '#lib/utilities/srcSet';

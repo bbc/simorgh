@@ -1,4 +1,4 @@
-import { Fragment, useContext } from 'react';
+import React, { useContext } from 'react';
 import { string, number, bool } from 'prop-types';
 import styled from '@emotion/styled';
 import { Headline } from '#psammead/psammead-headings/src';
@@ -74,7 +74,7 @@ const OnDemandHeadingContainer = ({
     isRelative: false,
   });
 
-  const TextWrapper = ariaHidden ? Fragment : 'span';
+  const TextWrapper = ariaHidden ? React.Fragment : 'span';
 
   return (
     <Headline

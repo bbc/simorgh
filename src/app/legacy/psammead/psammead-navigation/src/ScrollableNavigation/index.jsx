@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from '@emotion/styled';
 import { node, oneOf, string } from 'prop-types';
 import { GEL_SPACING_SEXT } from '#psammead/gel-foundations/src/spacings';

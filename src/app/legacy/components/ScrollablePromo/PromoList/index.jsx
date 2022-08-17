@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING,

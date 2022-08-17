@@ -1,3 +1,4 @@
+import React from 'react';
 import { StaticRouter } from 'react-router-dom';
 import { render, fireEvent } from '@testing-library/react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';

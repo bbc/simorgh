@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { pathToRegexp } from 'path-to-regexp';
 import InlineLink from '#psammead/psammead-inline-link/src';

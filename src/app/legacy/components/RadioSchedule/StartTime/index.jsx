@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { number, string, shape, oneOf } from 'prop-types';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';

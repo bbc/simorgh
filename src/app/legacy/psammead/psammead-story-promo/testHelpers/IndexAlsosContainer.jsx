@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { oneOfType, oneOf, arrayOf, shape, number, string } from 'prop-types';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';

@@ -1,3 +1,4 @@
+import React from 'react';
 import { node, string, elementType } from 'prop-types';
 
 const withContext = data => {

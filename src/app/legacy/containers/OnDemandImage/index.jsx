@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import is from 'ramda/src/is';
 import { string } from 'prop-types';
 import styled from '@emotion/styled';

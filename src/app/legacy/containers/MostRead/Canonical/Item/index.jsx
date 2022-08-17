@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import React from 'react';
 import { shape, string, oneOf, node } from 'prop-types';
 import styled from '@emotion/styled';
 import {
@@ -153,7 +153,7 @@ StyledGrid.defaultProps = {
   role: 'listitem',
 };
 
-export const MostReadItemWrapper = forwardRef(
+export const MostReadItemWrapper = React.forwardRef(
   ({ dir, children, columnLayout }, ref) => (
     <StyledGrid
       {...mostReadItemGridProps(columnLayout)}
