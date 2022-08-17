@@ -1,5 +1,4 @@
-/* eslint-disable react/react-in-jsx-scope */
-import { Fragment, PropsWithChildren, useContext } from 'react';
+import React, { Fragment, PropsWithChildren, useContext } from 'react';
 
 import H2 from './index.styled';
 

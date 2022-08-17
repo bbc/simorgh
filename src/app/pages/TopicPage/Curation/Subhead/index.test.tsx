@@ -1,4 +1,4 @@
-/* eslint-disable react/react-in-jsx-scope */
+import React from 'react';
 import { render } from '@testing-library/react';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import Subhead from '.';
