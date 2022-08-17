@@ -9,6 +9,14 @@ import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
  * View the developer console for errors.
  */
 
+const cloudwatchRumDirectives = {
+  connectSrc: [
+    'https://cognito-identity.eu-west-1.amazonaws.com/',
+    'https://sts.eu-west-1.amazonaws.com/',
+    'https://dataplane.rum.eu-west-1.amazonaws.com/',
+  ],
+};
+
 const advertisingDirectives = {
   connectSrc: [
     'https://csi.gstatic.com',
@@ -97,9 +105,8 @@ const directives = {
       'https://*.akamaihd.net',
       'https://cdn.optimizely.com/',
       'https://logx.optimizely.com/',
-      'https://cognito-identity.eu-west-1.amazonaws.com/', // CloudWatch RUM
-      'https://sts.eu-west-1.amazonaws.com/', // CloudWatch RUM
       'https://ws.bbc-reporting-api.app', // Web-Vitals monitoring
+      ...cloudwatchRumDirectives.connectSrc,
       ...advertisingDirectives.connectSrc,
       "'self'",
     ],
@@ -122,8 +129,7 @@ const directives = {
       'https://cdn.optimizely.com/',
       'https://logx.optimizely.com/',
       'https://ws.bbc-reporting-api.app', // Web-Vitals monitoring
-      'https://cognito-identity.eu-west-1.amazonaws.com/', // CloudWatch RUM
-      'https://sts.eu-west-1.amazonaws.com/', // CloudWatch RUM
+      ...cloudwatchRumDirectives.connectSrc,
       ...advertisingDirectives.connectSrc,
       "'self'",
     ],
