@@ -23,20 +23,22 @@ import useToggle from '#hooks/useToggle';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
-import isLive from '#lib/utilities/isLive';
 import TopicImage from './TopicImage';
 import TopicTitle from './TopicTitle';
 import TopicDescription from './TopicDescription';
 import Pagination from './Pagination';
 import Curation, { VISUAL_PROMINANCE, VISUAL_STYLE } from './Curation';
 
-const Wrapper = styled.main`
+const OuterWrapper = styled.main`
+  margin: 0 ${GEL_SPACING};
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    margin: 0 ${GEL_SPACING_DBL};
+  }
+`;
+
+const InnerWrapper = styled.div`
   max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
   margin: 0 auto;
-  padding: 0 ${GEL_SPACING};
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    padding: 0 ${GEL_SPACING_DBL};
-  }
 `;
 
 const InlineWrapper = styled.div`
@@ -62,19 +64,23 @@ const TitleWrapper = styled.div`
 
 const TopicPage = ({ pageData }) => {
   const { lang, translations } = useContext(ServiceContext);
-  const { title, description, imageData, promos, pageCount, activePage } =
+  const { title, description, imageData, curations, pageCount, activePage } =
     pageData;
 
   const { enabled: adsEnabled } = useToggle('ads');
   const { showAdsBasedOnLocation } = useContext(RequestContext);
 
-  const promoEntities = promos.map(promo => ({
-    '@type': 'Article',
-    name: promo.title,
-    headline: promo.title,
-    url: promo.link,
-    dateCreated: promo.firstPublished,
-  }));
+  const linkedDataEntities = curations
+    .map(({ summaries }) =>
+      summaries.map(summary => ({
+        '@type': 'Article',
+        name: summary.title,
+        headline: summary.title,
+        url: summary.link,
+        dateCreated: summary.firstPublished,
+      })),
+    )
+    .flat();
 
   const { pageXOfY, previousPage, nextPage, page } = {
     pageXOfY: 'Page {x} of {y}',
@@ -98,46 +104,53 @@ const TopicPage = ({ pageData }) => {
           <AdContainer slotType="leaderboard" />
         </>
       )}
-      <Wrapper role="main">
-        <ATIAnalytics data={pageData} />
-        <ChartbeatAnalytics data={pageData} />
-        <MetadataContainer
-          title={activePage >= 2 ? pageTitle : title}
-          socialHeadline={title}
-          lang={lang}
-          description={description}
-          openGraphType="website"
-          hasAmpPage={false}
-        />
-        <LinkedData
-          type="CollectionPage"
-          seoTitle={title}
-          headline={title}
-          entities={promoEntities}
-        />
-        <TitleWrapper>
-          <InlineWrapper>
-            {!isLive() && imageData && <TopicImage image={imageData.url} />}
-            <TopicTitle>{title}</TopicTitle>
-          </InlineWrapper>
-          {!isLive() && description && (
-            <TopicDescription>{description}</TopicDescription>
+      <OuterWrapper role="main">
+        <InnerWrapper>
+          <ATIAnalytics data={pageData} />
+          <ChartbeatAnalytics data={pageData} />
+          <MetadataContainer
+            title={activePage >= 2 ? pageTitle : title}
+            socialHeadline={title}
+            lang={lang}
+            description={description}
+            openGraphType="website"
+            hasAmpPage={false}
+          />
+          <LinkedData
+            type="CollectionPage"
+            seoTitle={title}
+            headline={title}
+            entities={linkedDataEntities}
+          />
+          <TitleWrapper>
+            <InlineWrapper>
+              {imageData && <TopicImage image={imageData.url} />}
+              <TopicTitle>{title}</TopicTitle>
+            </InlineWrapper>
+            {description && <TopicDescription>{description}</TopicDescription>}
+          </TitleWrapper>
+          {curations.map(
+            ({ summaries, curationId, title: curationTitle, link }) => (
+              <Curation
+                key={curationId}
+                visualStyle={VISUAL_STYLE.NONE}
+                visualProminance={VISUAL_PROMINANCE.NORMAL}
+                promos={summaries}
+                title={curationTitle}
+                link={link}
+              />
+            ),
           )}
-        </TitleWrapper>
-        <Curation
-          visualStyle={VISUAL_STYLE.NONE}
-          visualProminance={VISUAL_PROMINANCE.NORMAL}
-          promos={promos}
-        />
-        <Pagination
-          activePage={activePage}
-          pageCount={pageCount}
-          pageXOfY={pageXOfY}
-          previousPage={previousPage}
-          nextPage={nextPage}
-          page={page}
-        />
-      </Wrapper>
+          <Pagination
+            activePage={activePage}
+            pageCount={pageCount}
+            pageXOfY={pageXOfY}
+            previousPage={previousPage}
+            nextPage={nextPage}
+            page={page}
+          />
+        </InnerWrapper>
+      </OuterWrapper>
     </>
   );
 };
@@ -145,7 +158,7 @@ const TopicPage = ({ pageData }) => {
 TopicPage.propTypes = {
   pageData: shape({
     title: string.isRequired,
-    promos: arrayOf(shape({})).isRequired,
+    curations: arrayOf(shape({})).isRequired,
   }).isRequired,
 };
 

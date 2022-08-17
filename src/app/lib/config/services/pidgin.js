@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
-import { pidgin as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/pidgin';
 import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
 import '#psammead/psammead-locales/moment/pcm';
 import '#psammead/moment-timezone-include/tz/Africa/Lagos';
@@ -231,6 +231,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Wetin we call dis Video, ',
           text: 'Warning: Third party content may contain adverts',
+          articleText:
+            'Warning: Di BBC no dey responsible for di content of external sites.',
+          articleAdditionalText: '%provider_name% content fit contain adverts.',
         },
         fallback: {
           text: 'Content is not available',

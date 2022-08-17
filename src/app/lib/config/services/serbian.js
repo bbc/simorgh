@@ -6,7 +6,7 @@ import {
 } from '#psammead/psammead-styles/src/colours';
 import latinDiacritics from '#psammead/gel-foundations/src/scripts/latin-with-diacritics';
 import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
-import { serbian as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/serbian';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/sr-cyrl';
 import '#psammead/psammead-locales/moment/sr';
@@ -332,6 +332,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Potpis ispod videa, ',
           text: 'Upozorenje: Sadržaj drugih sajtova može da sadrži i reklame',
+          articleText:
+            'Upozorenje: BBC nije odgovoran za sadržaj drugih sajtova.',
+          articleAdditionalText:
+            'Sadržaj %provider_name% može da sadrži reklame.',
         },
         fallback: {
           text: 'Sadržaj nije dostupan',
@@ -637,6 +641,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Video caption, ',
           text: 'Warning: Third party content may contain adverts',
+          articleText: 'Warning: ББЦ није одговоран за садржај других сајтова.',
+          articleAdditionalText:
+            'Садржај %provider_name% може да садржи рекламе.',
         },
         fallback: {
           text: 'Content is not available',

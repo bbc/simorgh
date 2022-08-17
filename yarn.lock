@@ -14486,9 +14486,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsdom@npm:18.1.1":
-  version: 18.1.1
-  resolution: "jsdom@npm:18.1.1"
+"jsdom@npm:19.0.0":
+  version: 19.0.0
+  resolution: "jsdom@npm:19.0.0"
   dependencies:
     abab: ^2.0.5
     acorn: ^8.5.0
@@ -14522,7 +14522,7 @@ __metadata:
   peerDependenciesMeta:
     canvas:
       optional: true
-  checksum: 3273861aac93cb92499f58400a32ad95c07dc86c9e127c230e7ea7466fbb0d6a7185e1dbd525897527385f8c6f8f23c49b72f8d954878e4356bc7547433656fd
+  checksum: 94b693bf4a394097dd96705550bb7b6cd3c8db3c5414e6e9c92a0995ed8b61067597da2f37fca6bed4b5a2f1ef33960ee759522156dccd0b306311988ea87cfb
   languageName: node
   linkType: hard
 
@@ -19765,7 +19765,7 @@ __metadata:
     jest-serializer-html: 7.1.0
     jest-silent-reporter: 0.5.0
     js-cookie: 3.0.1
-    jsdom: 18.1.1
+    jsdom: 19.0.0
     json5: ^2.1.3
     lru-cache: 6.0.0
     minimist: 1.2.6
@@ -19802,7 +19802,7 @@ __metadata:
     timemachine: 0.3.2
     ts-jest: 26.5.6
     ts-loader: 9.3.1
-    typescript: 4.7.4
+    typescript: 4.6.4
     url-parse: 1.5.10
     uuid: 8.3.2
     wait-on: 6.0.1
@@ -21474,23 +21474,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:4.7.4":
-  version: 4.7.4
-  resolution: "typescript@npm:4.7.4"
+"typescript@npm:4.6.4":
+  version: 4.6.4
+  resolution: "typescript@npm:4.6.4"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 5750181b1cd7e6482c4195825547e70f944114fb47e58e4aa7553e62f11b3f3173766aef9c281783edfd881f7b8299cf35e3ca8caebe73d8464528c907a164df
+  checksum: e7bfcc39cd4571a63a54e5ea21f16b8445268b9900bf55aee0e02ad981be576acc140eba24f1af5e3c1457767c96cea6d12861768fb386cf3ffb34013718631a
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@4.7.4#~builtin<compat/typescript>":
-  version: 4.7.4
-  resolution: "typescript@patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=bda367"
+"typescript@patch:typescript@4.6.4#~builtin<compat/typescript>":
+  version: 4.6.4
+  resolution: "typescript@patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 96d3030cb01143570567cb4f3a616b10df65f658f0e74e853e77a089a6a954e35c800be7db8b9bfe9a1ae05d9c2897e281359f65e4caa1caf266368e1c4febd3
+  checksum: 1cb434fbc637d347be90e3a0c6cd05e33c38f941713c8786d3031faf1842c2c148ba91d2fac01e7276b0ae3249b8633f1660e32686cc7a8c6a8fd5361dc52c66
   languageName: node
   linkType: hard
 

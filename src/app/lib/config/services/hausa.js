@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
 import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
-import { hausa as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/hausa';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ha';
 import withContext from '../../../contexts/utils/withContext';
@@ -250,6 +250,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Bayanan bidiyo ',
           text: 'Gargadi: Ana iya samun talla wanda ba na BBC ba ne',
+          articleText:
+            'Gargadi: BBC ba za ta dauki alhakin bayanan da aka wallafa a shafukan da ba nata ne ba.',
+          articleAdditionalText: 'Ana yi samun tallace-tallace %provider_name%',
         },
         fallback: {
           text: 'Babu karin bayanai',

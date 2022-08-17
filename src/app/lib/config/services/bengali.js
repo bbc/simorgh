@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
 import bengali from '#psammead/gel-foundations/src/scripts/bengali';
-import { bengali as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/bangla';
 import {
   F_NOTO_SERIF_BENGALI_BOLD,
   F_NOTO_SERIF_BENGALI_REGULAR,
@@ -237,6 +237,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'ভিডিওর ক্যাপশান: ',
           text: 'সতর্কবাণী: তৃতীয়পক্ষের কন্টেন্টে বিজ্ঞাপন থাকতে পারে',
+          articleText:
+            'সতর্কবাণী: বিবিসির নয় এমন ওয়েবসাইটের কনটেন্টের জন্য বিবিসি দায়ী না',
+          articleAdditionalText: '%provider_name% কনটেন্টে বিজ্ঞাপন থাকতে পারে',
         },
         fallback: {
           text: 'ছবির কপিরাইট',

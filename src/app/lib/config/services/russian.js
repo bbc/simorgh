@@ -11,7 +11,7 @@ import {
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_LIGHT,
 } from '#psammead/psammead-styles/src/fonts';
-import { russian as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/russian';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ru';
 import withContext from '../../../contexts/utils/withContext';
@@ -204,6 +204,9 @@ export const mainTranslations = {
     caption: {
       textPrefixVisuallyHidden: 'Подпись к видео, ',
       text: 'Внимание: Контент других сайтов может содержать рекламу.',
+      articleText:
+        'Внимание: Би-би-си не несет ответственности за контент других сайтов.',
+      articleAdditionalText: 'Контент %provider_name% может содержать рекламу.',
     },
     fallback: {
       text: 'Контент недоступен',

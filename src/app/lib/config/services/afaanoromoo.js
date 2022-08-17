@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
 import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
-import { afaanoromoo as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/afaanoromoo';
 import '#psammead/moment-timezone-include/tz/Africa/Addis_Ababa';
 import '#psammead/psammead-locales/moment/om';
 import withContext from '../../../contexts/utils/withContext';
@@ -231,6 +231,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: "Ibsa waa'ee viidiyoo, ",
           text: 'Hubachiisa: qabiyyeen qaama sadaffaa beeksisa qabaachuu malu',
+          articleText:
+            'Hubachiisa: Qabiyyee marsariitiiwwan alaatiif BBCn itti gaafatamummaa hin fudhatu.',
+          articleAdditionalText: "%provider_name% beeksisa qabaachuu danda'a.",
         },
         fallback: {
           text: 'Qabiyyeen kun hin argamne',

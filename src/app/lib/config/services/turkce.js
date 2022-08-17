@@ -11,7 +11,7 @@ import {
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_LIGHT,
 } from '#psammead/psammead-styles/src/fonts';
-import { turkce as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/turkish';
 import '#psammead/moment-timezone-include/tz/Asia/Istanbul';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/tr';
@@ -233,6 +233,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Video altyazısı: ',
           text: 'Uyarı: Üçüncü tarafların sağladığı içerikte reklam bulunabilir.',
+          articleText:
+            'Uyarı: BBC üçüncü taraf sitelerin içeriğinden sorumlu değildir.',
+          articleAdditionalText: '%provider_name% içerik reklam içerebilir',
         },
         fallback: {
           text: 'İçerik bulunamadı',

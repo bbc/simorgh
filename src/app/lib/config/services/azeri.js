@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
-import { azeri as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/azeri';
 import latinDiacritics from '#psammead/gel-foundations/src/scripts/latin-with-diacritics';
 import '#psammead/moment-timezone-include/tz/Asia/Baku';
 import '#psammead/psammead-locales/moment/az';
@@ -226,6 +226,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Videonun alt yazısı, ',
           text: 'Xəbərdarlıq : Üçüncü tərəfin məzmununda reklam ola bilər',
+          articleText:
+            'Xəbərdarlıq : BBC kənar saytların məzmununa görə cavabdeh deyil.',
+          articleAdditionalText: '%provider_name% məzmununda reklam ola bilər.',
         },
         fallback: {
           text: 'Məzmun mövcud deyil',

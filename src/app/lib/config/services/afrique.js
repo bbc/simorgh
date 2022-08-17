@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
 import latinDiacritics from '#psammead/gel-foundations/src/scripts/latin-with-diacritics';
-import { afrique as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '#lib/chameleonLogos/afrique';
 import '#psammead/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/fr';
@@ -241,6 +241,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Légende vidéo, ',
           text: 'Attention: le contenu externe peut contenir des messages publicitaires',
+          articleText:
+            "Attention: La BBC n'est pas responsable du contenu des sites externes.",
+          articleAdditionalText:
+            'Le contenu du site %provider_name% peut contenir des publicités.',
         },
         fallback: {
           text: "Ce contenu n'est pas disponible",
