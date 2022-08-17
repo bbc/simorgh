@@ -1,15 +1,15 @@
 import styled from '@emotion/styled';
-import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
 import {
   getBodyCopy,
   getBrevier,
-} from '#psammead/gel-foundations/src/typography';
+} from '../../../legacy/psammead/gel-foundations/src/typography';
 import {
   C_GREY_6,
   C_GREY_10,
   C_GREY_5,
-} from '#psammead/psammead-styles/src/colours';
-import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
+} from '../../../legacy/psammead/psammead-styles/src/colours';
+import { GEL_SPACING_DBL } from '../../../legacy/psammead/gel-foundations/src/spacings';
+import { getSansBold } from '../../../legacy/psammead/psammead-styles/src/font-styles';
 
 interface Props {
   service: string;

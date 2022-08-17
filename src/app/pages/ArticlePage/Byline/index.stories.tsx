@@ -1,3 +1,4 @@
+import React from 'react';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import Timestamp from '../../../legacy/containers/ArticleTimestamp';
 import { bylineWithNameAndRole } from './fixture';

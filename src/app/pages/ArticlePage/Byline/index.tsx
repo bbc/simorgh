@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import VisuallyHiddenText from '../../../legacy/psammead/psammead-visually-hidden-text/src';
@@ -16,9 +16,9 @@ const Byline = ({ blocks, children }: Props) => {
     translations: any;
   };
 
-  const bylineBlocks = pathOr({}, [0, 'model', 'blocks'], blocks);
+  const bylineBlocks = pathOr([], [0, 'model', 'blocks'], blocks);
 
-  const bylineInfo = {};
+  const bylineInfo = {} as Record<string, unknown>;
   bylineBlocks.forEach(block => {
     const type = pathOr('', ['type'], block);
     const value = pathOr(
