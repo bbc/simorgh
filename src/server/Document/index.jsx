@@ -6,7 +6,7 @@ import { CacheProvider } from '@emotion/react';
 import createEmotionServer from '@emotion/server/create-instance';
 import createCache from '@emotion/cache';
 import { Helmet } from 'react-helmet';
-import { ServerApp } from '#app/containers/App';
+import { ServerApp } from '#containers/App';
 import getAssetOrigins from '../utilities/getAssetOrigins';
 import DocumentComponent from './component';
 import {

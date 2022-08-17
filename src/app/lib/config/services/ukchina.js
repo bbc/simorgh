@@ -3,10 +3,10 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { noAscendersOrDescenders } from '@bbc/gel-foundations/scripts';
-import { ukchina as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/GMT';
+} from '#psammead/psammead-styles/src/colours';
+import noAscendersOrDescenders from '#psammead/gel-foundations/src/scripts/no-ascenders-or-descenders';
+import brandSVG from '#lib/chameleonLogos/zhongwen';
+import '#psammead/moment-timezone-include/tz/GMT';
 import 'moment/locale/zh-cn';
 import withContext from '../../../contexts/utils/withContext';
 

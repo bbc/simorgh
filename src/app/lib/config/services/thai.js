@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { thai } from '@bbc/gel-foundations/scripts';
-import { thai as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/Asia/Bangkok';
-import '@bbc/psammead-locales/moment/th';
+} from '#psammead/psammead-styles/src/colours';
+import thai from '#psammead/gel-foundations/src/scripts/thai';
+import brandSVG from '#lib/chameleonLogos/thai';
+import '#psammead/moment-timezone-include/tz/Asia/Bangkok';
+import '#psammead/psammead-locales/moment/th';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -227,6 +227,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'คำบรรยายวิดีโอ, ',
           text: 'คำเตือน:เนื้อหาภายนอกอาจมีโฆษณา',
+          articleText:
+            'คำเตือน: บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาที่มาจากภายนอก',
+          articleAdditionalText: 'เนื้อหาจาก %provider_name% อาจมีโฆษณา ',
         },
         fallback: {
           text: 'ไม่มีเนื้อหานี้',

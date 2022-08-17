@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { latinDiacritics } from '@bbc/gel-foundations/scripts';
-import { azeri as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/Asia/Baku';
-import '@bbc/psammead-locales/moment/az';
+} from '#psammead/psammead-styles/src/colours';
+import brandSVG from '#lib/chameleonLogos/azeri';
+import latinDiacritics from '#psammead/gel-foundations/src/scripts/latin-with-diacritics';
+import '#psammead/moment-timezone-include/tz/Asia/Baku';
+import '#psammead/psammead-locales/moment/az';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -226,6 +226,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Videonun alt yazısı, ',
           text: 'Xəbərdarlıq : Üçüncü tərəfin məzmununda reklam ola bilər',
+          articleText:
+            'Xəbərdarlıq : BBC kənar saytların məzmununa görə cavabdeh deyil.',
+          articleAdditionalText: '%provider_name% məzmununda reklam ola bilər.',
         },
         fallback: {
           text: 'Məzmun mövcud deyil',

@@ -3,16 +3,16 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { persian as brandSVG } from '@bbc/psammead-assets/svgs';
-import { arabic } from '@bbc/gel-foundations/scripts';
+} from '#psammead/psammead-styles/src/colours';
+import brandSVG from '#lib/chameleonLogos/persian';
+import arabic from '#psammead/gel-foundations/src/scripts/arabic';
 import {
   F_REITH_QALAM_REGULAR,
   F_REITH_QALAM_BOLD,
-} from '@bbc/psammead-styles/fonts';
+} from '#psammead/psammead-styles/src/fonts';
 import 'moment/locale/fa';
-import '@bbc/moment-timezone-include/tz/GMT';
-import { jalaali } from '@bbc/psammead-calendars';
+import '#psammead/moment-timezone-include/tz/GMT';
+import jalaali from '#psammead/psammead-calendars/src';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -272,6 +272,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'توضیح ویدیو، ',
           text: 'توضیح: محتوای مربوط به طرف ثالث ممکن است شامل آگهی باشد',
+          articleText: 'توضیح: بی بی سی مسئول محتوای سایت های دیگر نیست.',
+          articleAdditionalText:
+            'محتوای %provider_name%  ممکن است شامل آگهی باشد.',
         },
         fallback: {
           text: 'محتوا در دسترس نیست',

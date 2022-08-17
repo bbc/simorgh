@@ -9,6 +9,14 @@ import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
  * View the developer console for errors.
  */
 
+const cloudwatchRumDirectives = {
+  connectSrc: [
+    'https://cognito-identity.eu-west-1.amazonaws.com/',
+    'https://sts.eu-west-1.amazonaws.com/',
+    'https://dataplane.rum.eu-west-1.amazonaws.com/',
+  ],
+};
+
 const advertisingDirectives = {
   connectSrc: [
     'https://csi.gstatic.com',
@@ -97,7 +105,8 @@ const directives = {
       'https://*.akamaihd.net',
       'https://cdn.optimizely.com/',
       'https://logx.optimizely.com/',
-      'https://europe-west1-bbc-otg-traf-mgr-bq-prod-4591.cloudfunctions.net', // Web-Vitals monitoring
+      'https://ws.bbc-reporting-api.app', // Web-Vitals monitoring
+      ...cloudwatchRumDirectives.connectSrc,
       ...advertisingDirectives.connectSrc,
       "'self'",
     ],
@@ -119,8 +128,8 @@ const directives = {
       'https://logws1363.ati-host.net', // ATI
       'https://cdn.optimizely.com/',
       'https://logx.optimizely.com/',
-      'https://europe-west1-bbc-otg-traf-mgr-bq-dev-4105.cloudfunctions.net', // Web-Vitals monitoring
-      'https://cognito-identity.eu-west-1.amazonaws.com/', // CloudWatch RUM
+      'https://ws.bbc-reporting-api.app', // Web-Vitals monitoring
+      ...cloudwatchRumDirectives.connectSrc,
       ...advertisingDirectives.connectSrc,
       "'self'",
     ],
@@ -196,6 +205,7 @@ const directives = {
       'https://syndication.twitter.com', // Social Embeds
       'https://platform.twitter.com', // Social Embeds
       'https://pbs.twimg.com', // Social Embeds
+      'https://*.cdninstagram.com', // Social Embeds
       'https://i.ytimg.com', // Social Embeds
       'https://ton.twimg.com', // Social Embeds
       ...advertisingDirectives.imgSrc,
@@ -222,6 +232,7 @@ const directives = {
       'https://syndication.twitter.com', // Social Embeds
       'https://platform.twitter.com', // Social Embeds
       'https://pbs.twimg.com', // Social Embeds
+      'https://*.cdninstagram.com', // Social Embeds
       'https://i.ytimg.com', // Social Embeds
       'https://ton.twimg.com', // Social Embeds
       ...advertisingDirectives.imgSrc,
@@ -248,6 +259,7 @@ const directives = {
       'https://www.instagram.com', // Social Embeds
       'https://cdn.syndication.twimg.com', // Social Embeds
       'https://public.flourish.studio', // STY includes
+      'https://client.rum.us-east-1.amazonaws.com', // CloudWatch RUM
       ...advertisingDirectives.scriptSrc,
       "'self'",
       "'unsafe-inline'",
@@ -389,7 +401,7 @@ export const generatePrefetchSrc = ({ isAmp, isLive }) => {
   return directives.prefetchSrc.canonicalLive;
 };
 
-const helmetCsp = ({ isAmp, isLive }) => ({
+const helmetCsp = ({ isAmp, isLive, reportOnlyOnLive }) => ({
   directives: {
     'default-src': generateDefaultSrc(),
     'child-src': generateChildSrc({ isAmp }),
@@ -405,10 +417,11 @@ const helmetCsp = ({ isAmp, isLive }) => ({
     'report-to': 'worldsvc',
     'upgrade-insecure-requests': [],
   },
+  reportOnly: reportOnlyOnLive,
 });
 
 const injectCspHeader = (req, res, next) => {
-  const { isAmp } = getRouteProps(req.url);
+  const { isAmp, service } = getRouteProps(req.url);
 
   res.setHeader(
     'report-to',
@@ -425,7 +438,13 @@ const injectCspHeader = (req, res, next) => {
     }),
   );
 
-  const middleware = csp(helmetCsp({ isAmp, isLive: isLiveEnv() }));
+  const middleware = csp(
+    helmetCsp({
+      isAmp,
+      isLive: isLiveEnv(),
+      reportOnlyOnLive: service === 'japanese',
+    }),
+  );
   middleware(req, res, next);
 };
 

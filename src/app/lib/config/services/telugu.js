@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { devanagariAndGurmukhi } from '@bbc/gel-foundations/scripts';
-import { telugu as brandSVG } from '@bbc/psammead-assets/svgs';
-import { F_MALLANNA_REGULAR } from '@bbc/psammead-styles/fonts';
-import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
+} from '#psammead/psammead-styles/src/colours';
+import devanagariAndGurmukhi from '#psammead/gel-foundations/src/scripts/devanagari-and-gurmukhi';
+import brandSVG from '#lib/chameleonLogos/telugu';
+import { F_MALLANNA_REGULAR } from '#psammead/psammead-styles/src/fonts';
+import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/te';
 
@@ -234,6 +234,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'వీడియో క్యాప్షన్, ',
           text: 'హెచ్చరిక: థర్డ్ పార్టీ కంటెంట్‌లో ప్రకటనలు ఉండొచ్చు',
+          articleText:
+            'హెచ్చరిక: బయటి సైట్‌ల కంటెంట్‌కు బీబీసీ బాధ్యత వహించదు.',
+          articleAdditionalText:
+            '%provider_name% ఈ సమాచారంలో ప్రకటనలు ఉండొచ్చు.',
         },
         fallback: {
           text: 'కంటెంట్ అందుబాటులో లేదు',

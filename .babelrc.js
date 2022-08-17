@@ -2,6 +2,7 @@ var plugins = [
   '@emotion',
   '@babel/plugin-proposal-object-rest-spread', // allows ...spread notation
   '@babel/plugin-syntax-dynamic-import', // allows `await import()` syntax
+  '@babel/plugin-proposal-export-default-from',
   '@babel/plugin-transform-runtime',
   '@loadable/babel-plugin',
 ];
@@ -65,6 +66,7 @@ module.exports = api => {
       },
     ],
     '@babel/preset-react', // transform JSX to JS
+    '@babel/preset-typescript',
   ];
 
   return {

@@ -408,6 +408,129 @@
               }
             ]
           }
+        },
+        {
+          "type": "links",
+          "model": {
+            "blocks": [
+              {
+                "type": "title",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "This is my title",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "This is my title",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com",
+                  "blocks": [
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Dog",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Dog",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1200,
+                              "height": 602,
+                              "locator": "b498/test/67b83de0-7284-11ec-9534-9f1d59fb8b32.jpg",
+                              "imageType": "background",
+                              "originCode": "cpsdevpb",
+                              "copyrightHolder": "Getty Images"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "This is a dog",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "This is a dog",
+                                    "locator": "https://www.bbc.com",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "This is a dog",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
         }
       ]
     }

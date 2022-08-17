@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Numeral systems should return Bengali numerals 1`] = `
+Array [
+  "০",
+  "১",
+  "২",
+  "৩",
+  "৪",
+  "৫",
+  "৬",
+  "৭",
+  "৮",
+  "৯",
+  "১০",
+]
+`;
+
+exports[`Numeral systems should return Burmese numerals 1`] = `
+Array [
+  "၀",
+  "၁",
+  "၂",
+  "၃",
+  "၄",
+  "၅",
+  "၆",
+  "၇",
+  "၈",
+  "၉",
+  "၁၀",
+]
+`;
+
+exports[`Numeral systems should return EasternArabic numerals 1`] = `
+Array [
+  "۰",
+  "۱",
+  "۲",
+  "۳",
+  "۴",
+  "۵",
+  "۶",
+  "۷",
+  "۸",
+  "۹",
+  "۱۰",
+]
+`;
+
+exports[`Numeral systems should return Nepali numerals 1`] = `
+Array [
+  "०",
+  "१",
+  "२",
+  "३",
+  "४",
+  "५",
+  "६",
+  "७",
+  "८",
+  "९",
+  "१०",
+]
+`;
+
+exports[`Numeral systems should return WesternArabic numerals 1`] = `
+Array [
+  "0",
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10",
+]
+`;

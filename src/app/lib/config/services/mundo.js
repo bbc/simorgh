@@ -3,20 +3,17 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { latinDiacritics } from '@bbc/gel-foundations/scripts';
+} from '#psammead/psammead-styles/src/colours';
+import latinDiacritics from '#psammead/gel-foundations/src/scripts/latin-with-diacritics';
 import {
   F_REITH_SANS_BOLD,
-  F_REITH_SANS_BOLD_ITALIC,
-  F_REITH_SANS_ITALIC,
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
-  F_REITH_SERIF_MEDIUM_ITALIC,
   F_REITH_SERIF_LIGHT,
-} from '@bbc/psammead-styles/fonts';
-import { mundo as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/GMT';
-import '@bbc/psammead-locales/moment/es';
+} from '#psammead/psammead-styles/src/fonts';
+import brandSVG from '#lib/chameleonLogos/mundo';
+import '#psammead/moment-timezone-include/tz/GMT';
+import '#psammead/psammead-locales/moment/es';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -242,6 +239,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Título del video, ',
           text: 'Advertencia: El contenido de sitios externos y terceras partes puede contener publicidad',
+          articleText:
+            'Advertencia: La BBC no se hace responsable por el contenido de sitios externos.',
+          articleAdditionalText:
+            'Este contenido de %provider_name% puede contener publicidad.',
         },
         fallback: {
           text: 'Contenido no disponible',
@@ -328,11 +329,8 @@ export const service = {
     },
     fonts: [
       F_REITH_SANS_BOLD,
-      F_REITH_SANS_BOLD_ITALIC,
-      F_REITH_SANS_ITALIC,
       F_REITH_SANS_REGULAR,
       F_REITH_SERIF_MEDIUM,
-      F_REITH_SERIF_MEDIUM_ITALIC,
       F_REITH_SERIF_LIGHT,
     ],
     timezone: 'GMT',
