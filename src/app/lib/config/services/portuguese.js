@@ -3,17 +3,17 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import latinDiacritics from '#legacy/gel-foundations/src/scripts/latin-with-diacritics';
+} from '#psammead/psammead-styles/src/colours';
+import latinDiacritics from '#psammead/gel-foundations/src/scripts/latin-with-diacritics';
 import {
   F_REITH_SANS_BOLD,
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_LIGHT,
-} from '#legacy/psammead-styles/src/fonts';
-import { portuguese as brandSVG } from '#legacy/psammead-assets/src/svgs';
-import '#legacy/moment-timezone-include/tz/America/Sao_Paulo';
-import '#legacy/psammead-locales/moment/pt-br';
+} from '#psammead/psammead-styles/src/fonts';
+import brandSVG from '#lib/chameleonLogos/portuguese';
+import '#psammead/moment-timezone-include/tz/America/Sao_Paulo';
+import '#psammead/psammead-locales/moment/pt-br';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -260,6 +260,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Legenda do vídeo, ',
           text: 'Alerta: Conteúdo de terceiros pode conter publicidade',
+          articleText:
+            'Alerta: A BBC não se responsabiliza pelo conteúdo de sites externos',
+          articleAdditionalText:
+            '%provider_name% conteúdo pode conter propaganda.',
         },
         fallback: {
           text: 'Conteúdo não disponível',

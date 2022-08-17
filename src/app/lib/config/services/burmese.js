@@ -3,14 +3,14 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import burmese from '#legacy/gel-foundations/src/scripts/burmese';
-import { burmese as brandSVG } from '#legacy/psammead-assets/src/svgs';
+} from '#psammead/psammead-styles/src/colours';
+import burmese from '#psammead/gel-foundations/src/scripts/burmese';
+import brandSVG from '#lib/chameleonLogos/burmese';
 import {
   F_PADAUK_BOLD,
   F_PADAUK_REGULAR,
-} from '#legacy/psammead-styles/src/fonts';
-import '#legacy/moment-timezone-include/tz/GMT';
+} from '#psammead/psammead-styles/src/fonts';
+import '#psammead/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/my';
 
@@ -259,6 +259,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'ဗီဒီယို ပုံစာ - ',
           text: 'သတိပေးချက်- ဘီဘီစီပြင်ပ ဝက်ဆိုက်များမှ ဖော်ပြချက်များတွင် ကြော်ငြာများပါနိုင်ပါသည်။',
+          articleText:
+            'သတိပေးချက်- ပြင်ပဝက်ဆိုက်များတွင်ပါဝင်သောအကြောင်းအရာများအတွက် ဘီဘီစီကတာဝန်မယူပါ။',
+          articleAdditionalText:
+            '%provider_name% တွင်ကြော်ငြာများပါဝင်နိုင်ပါသည်။',
         },
         fallback: {
           text: 'ကြည့်ရန် မရနိုင်သေးပါ။',

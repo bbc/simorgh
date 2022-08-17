@@ -1,5 +1,5 @@
 import React from 'react';
-import { withServicesKnob } from '#legacy/psammead-storybook-helpers/src';
+import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { withKnobs } from '@storybook/addon-knobs';
 import { MemoryRouter } from 'react-router';
 
@@ -9,7 +9,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
 
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
-import fixture from '#data/pidgin/topics/c95y35941vrt.json';
+import fixture from '#data/mundo/topics/c1en6xwmpkvt.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import Page from './TopicPage';
 
@@ -36,9 +36,12 @@ const Component = ({ service, variant }) => {
                 status={200}
                 pageData={{
                   title: fixture.data.title,
-                  promos: fixture.data.summaries,
-                  activePage: 1,
-                  pageCount: 99,
+                  description: fixture.data.description,
+                  imageData: fixture.data.imageData,
+                  images: fixture.data.images,
+                  curations: fixture.data.curations,
+                  activePage: null,
+                  pageCount: null,
                 }}
               />
             </MemoryRouter>
@@ -53,7 +56,7 @@ export default {
   title: 'Topic/Page',
   Component,
   decorators: [withKnobs, withServicesKnob({ defaultService: 'mundo' })],
-  parameters: { chromatic: { disable: true } },
+  parameters: { chromatic: { disable: true }, layout: 'fullscreen' },
 };
 
 export const Example = Component;

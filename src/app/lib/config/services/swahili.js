@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import cyrillicAndLatin from '#legacy/gel-foundations/src/scripts/latin-and-cyrillic';
-import { swahili as brandSVG } from '#legacy/psammead-assets/src/svgs';
-import '#legacy/moment-timezone-include/tz/Africa/Nairobi';
-import '#legacy/psammead-locales/moment/sw';
+} from '#psammead/psammead-styles/src/colours';
+import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import brandSVG from '#lib/chameleonLogos/swahili';
+import '#psammead/moment-timezone-include/tz/Africa/Nairobi';
+import '#psammead/psammead-locales/moment/sw';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -236,6 +236,8 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Maelezo ya video, ',
           text: 'Onyo: Imetoka kwingine na inaweza kuwa na matangazo',
+          articleText: 'Onyo: BBC haihusiki na maudhui ya nje',
+          articleAdditionalText: 'Mitandao ya kijamii inaweza beba matangazo',
         },
         fallback: {
           text: 'Haipatikani tena',
@@ -321,6 +323,10 @@ export const service = {
       {
         title: 'Habari',
         url: '/swahili',
+      },
+      {
+        title: 'Uchaguzi Kenya',
+        url: '/swahili/habari-61042508',
       },
       {
         title: 'Michezo',

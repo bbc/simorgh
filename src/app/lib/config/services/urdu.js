@@ -3,15 +3,15 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import arabic from '#legacy/gel-foundations/src/scripts/arabic';
-import { urdu as brandSVG } from '#legacy/psammead-assets/src/svgs';
+} from '#psammead/psammead-styles/src/colours';
+import arabic from '#psammead/gel-foundations/src/scripts/arabic';
+import brandSVG from '#lib/chameleonLogos/urdu';
 import {
   F_REITH_QALAM_REGULAR,
   F_REITH_QALAM_BOLD,
-} from '#legacy/psammead-styles/src/fonts';
-import '#legacy/moment-timezone-include/tz/Asia/Karachi';
-import '#legacy/psammead-locales/moment/ur';
+} from '#psammead/psammead-styles/src/fonts';
+import '#psammead/moment-timezone-include/tz/Asia/Karachi';
+import '#psammead/psammead-locales/moment/ur';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -250,6 +250,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'ویڈیو کیپشن, ',
           text: 'تنبیہ: دیگر مواد میں اشتہار موجود ہو سکتے ہیں',
+          articleText:
+            'تنبیہ: بی بی سی دیگر ویب سائٹس کے مواد کی ذمہ دار نہیں ہے۔',
+          articleAdditionalText:
+            '%provider_name%  کے مواد میں اشتہارات ہو سکتے ہیں۔',
         },
         fallback: {
           text: 'مواد دستیاب نہیں ہے',

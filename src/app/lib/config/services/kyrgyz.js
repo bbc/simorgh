@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import cyrillicAndLatin from '#legacy/gel-foundations/src/scripts/latin-and-cyrillic';
-import { kyrgyz as brandSVG } from '#legacy/psammead-assets/src/svgs';
-import '#legacy/moment-timezone-include/tz/GMT';
-import '#legacy/psammead-locales/moment/ky';
+} from '#psammead/psammead-styles/src/colours';
+import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import brandSVG from '#lib/chameleonLogos/kyrgyz';
+import '#psammead/moment-timezone-include/tz/GMT';
+import '#psammead/psammead-locales/moment/ky';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -240,6 +240,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Видеонун түшүндүрмөсү, ',
           text: 'Эскертүү: Жарнамалар болушу ыктымал',
+          articleText:
+            'Эскертүү: Би-Би-Си тышкы сайттардын мазмуну үчүн жооп бербейт.',
+          articleAdditionalText:
+            '%provider_name% мазмунунда жарнама болушу мүмкүн',
         },
         fallback: {
           text: 'Баракча ачылбайт',

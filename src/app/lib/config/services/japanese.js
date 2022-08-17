@@ -3,10 +3,10 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import noAscendersOrDescenders from '#legacy/gel-foundations/src/scripts/no-ascenders-or-descenders';
-import { japanese as brandSVG } from '#legacy/psammead-assets/src/svgs';
-import '#legacy/moment-timezone-include/tz/Asia/Tokyo';
+} from '#psammead/psammead-styles/src/colours';
+import noAscendersOrDescenders from '#psammead/gel-foundations/src/scripts/no-ascenders-or-descenders';
+import { japanese as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import '#psammead/moment-timezone-include/tz/Asia/Tokyo';
 import 'moment/locale/ja';
 import withContext from '../../../contexts/utils/withContext';
 
@@ -223,6 +223,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: '動画説明, ',
           text: 'ご注意：外部コンテンツには広告が含まれるかもしれません',
+          articleText: 'ご注意: BBCは外部サイトの内容に責任を負いません。.',
+          articleAdditionalText:
+            '%provider_name%には広告が含まれる場合があります。',
         },
         fallback: {
           text: 'このコンテンツは開けません',

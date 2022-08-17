@@ -1,5 +1,5 @@
-import candyXmlToRichText from '#legacy/psammead-rich-text-transforms/src/candy-xml';
-import stringToRichText from '#legacy/psammead-rich-text-transforms/src/string';
+import candyXmlToRichText from '#psammead/psammead-rich-text-transforms/src/candy-xml';
+import stringToRichText from '#psammead/psammead-rich-text-transforms/src/string';
 
 import { processBlock } from './helpers';
 

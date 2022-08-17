@@ -1,0 +1,3373 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
+.emotion-0 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2147483647;
+}
+
+.emotion-2 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #323232;
+  border-top: solid 0.0625rem transparent;
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-2 {
+    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
+  }
+}
+
+.emotion-4 {
+  max-width: 37.4375rem;
+  margin: 0 auto;
+}
+
+.emotion-4 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: solid 0.0625rem #AEAEB5;
+}
+
+.emotion-4 a:focus,
+.emotion-4 a:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-4 a:hover,
+.emotion-4 a:focus {
+  border-bottom: solid 0.125rem transparent;
+}
+
+.emotion-6 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+.emotion-6:focus {
+  outline: none;
+}
+
+.emotion-8 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  color: #BEBEBE;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    margin-top: 1.5rem;
+  }
+}
+
+.emotion-10 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #F6A21D;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-10 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-10 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-10 li+li {
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-10 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+
+  .emotion-10 li+li {
+    margin-top: 0;
+  }
+}
+
+.emotion-12 {
+  text-align: center;
+  width: 100%;
+  word-break: break-word;
+}
+
+.emotion-12 button {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  width: 100%;
+  min-height: 2.75rem;
+  color: #222222;
+  font-weight: bold;
+  background-color: #FDFDFD;
+  border: solid 0.0625rem transparent;
+  margin: 0;
+  cursor: pointer;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-12 button {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 button {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-12 button:focus,
+.emotion-12 button:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-12 button:hover,
+.emotion-12 button:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+@media (min-width: 25rem) {
+  .emotion-12 {
+    width: 17.3125rem;
+  }
+}
+
+.emotion-17 {
+  background-color: #B80000;
+  height: 2.75rem;
+  width: 100%;
+  padding: 0 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 25rem) {
+  .emotion-17 {
+    height: 3.5rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-17 {
+    height: 4rem;
+  }
+}
+
+.emotion-17 svg {
+  fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-17 svg {
+    fill: linkText;
+  }
+}
+
+.emotion-19 {
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 63rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-19 {
+    display: block;
+  }
+}
+
+.emotion-21 {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  bottom: 0.125rem;
+  padding-top: 0.125rem;
+}
+
+.emotion-21:hover,
+.emotion-21:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.25rem solid #FFFFFF;
+  margin-bottom: -0.25rem;
+}
+
+.emotion-23 {
+  box-sizing: content-box;
+  color: #FFFFFF;
+  fill: currentColor;
+  height: 1.25rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-23 {
+    height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-23 {
+    height: 1.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast: active),print {
+  .emotion-23 {
+    fill: windowText;
+  }
+}
+
+.emotion-25 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-27 {
+  position: absolute;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  padding: 0.75rem 0.5rem;
+  background-color: #FFFFFF;
+  border: 0.1875rem solid #000;
+  color: #333;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-27 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-27 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-27:focus {
+  -webkit-clip-path: none;
+  clip-path: none;
+  clip: auto;
+  height: auto;
+  width: auto;
+  top: 0;
+  left: 0;
+}
+
+@media (min-width: 25rem) {
+  .emotion-27:focus {
+    top: 0.5rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-27 {
+    padding: 0.5rem;
+  }
+}
+
+.emotion-29 {
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+.emotion-29::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+.emotion-29 .emotion-46::after {
+  left: 0;
+}
+
+.emotion-31 {
+  position: relative;
+  max-width: 63.4rem;
+  margin: 0;
+  background-color: #FFFFFF;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-31 {
+    margin: 0 0.8rem;
+  }
+}
+
+@media (min-width: 66rem) {
+  .emotion-31 {
+    margin: 0 auto;
+  }
+}
+
+.emotion-33 {
+  position: relative;
+}
+
+.emotion-35 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  float: left;
+  height: 2.75rem;
+  width: 2.75rem;
+}
+
+.emotion-35:hover,
+.emotion-35:focus {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0.25rem #FFFFFF;
+}
+
+.emotion-35:hover::after,
+.emotion-35:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: 0.25rem solid #B80000;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-35 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 20rem) {
+  .emotion-35 {
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+}
+
+.emotion-35 svg {
+  vertical-align: middle;
+}
+
+.emotion-37 {
+  color: #000000;
+  fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-37 {
+    fill: linkText;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-41 {
+    white-space: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .emotion-41::-webkit-scrollbar {
+    display: none;
+  }
+
+  .emotion-41:after {
+    content: ' ';
+    height: 100%;
+    width: 3rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1)
+              100%
+          );
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-41:after {
+      width: 6rem;
+    }
+  }
+}
+
+.emotion-43 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-43 {
+    overflow: hidden;
+  }
+}
+
+.emotion-45 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  -webkit-margin-end: 0.75rem;
+  margin-inline-end: 0.75rem;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-45:last-child {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-45::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    width: 80rem;
+    border-bottom: 0.0625rem solid #E6E8EA;
+    z-index: -1;
+  }
+}
+
+.emotion-47 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  color: #141414;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem 0.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-47 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-47 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-47 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+.emotion-47:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+}
+
+.emotion-47:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.25rem solid #B80000;
+}
+
+.emotion-77 {
+  background-color: #FFFFFF;
+  clear: both;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+  visibility: hidden;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-77 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .emotion-77 {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.emotion-79 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0.5rem;
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+.emotion-81 {
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+.emotion-81:last-child {
+  padding-bottom: 0.25rem;
+  border: 0;
+}
+
+.emotion-83 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #141414;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.75rem 0;
+  display: inline-block;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-83 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-83 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-83:hover,
+.emotion-83:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-color: #B80000;
+}
+
+<div>
+  <header
+    role="banner"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+        dir="ltr"
+      >
+        <div
+          class="emotion-4 emotion-5"
+          dir="ltr"
+        >
+          <h2
+            class="emotion-6 emotion-7"
+            dir="ltr"
+            tabindex="-1"
+          >
+            We don update our Privacy and Cookies Policy
+          </h2>
+          <p
+            class="emotion-8 emotion-9"
+            dir="ltr"
+          >
+            We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.
+          </p>
+          <ul
+            class="emotion-10 emotion-11"
+            dir="ltr"
+            role="list"
+          >
+            <li
+              class="emotion-12 emotion-13"
+              dir="ltr"
+            >
+              <button
+                type="button"
+              >
+                OK
+              </button>
+            </li>
+            <li
+              class="emotion-12 emotion-13"
+              dir="ltr"
+            >
+              <span>
+                <a
+                  href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                >
+                  Find out wetin don change
+                </a>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div
+      class="emotion-16 emotion-17 emotion-18"
+    >
+      <div
+        class="emotion-19 emotion-20"
+      >
+        <a
+          aria-labelledby="BrandLink-topPage"
+          class="emotion-21 emotion-22"
+          href="/pidgin"
+          id="topPage"
+        >
+          <svg
+            aria-hidden="true"
+            class="emotion-23 emotion-24"
+            focusable="false"
+            height="32"
+            viewBox="140 140 1395 145"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill-rule="evenodd"
+              stroke="#000"
+              stroke-width=".335"
+              style="stroke: #fff;"
+            >
+              <path
+                d="M759.928 265.75a4646.67 4646.67 0 00-23.49-37.242 2633.129 2633.129 0 00-23.49-36.2v73.442h-22.003V159.452h23.192a2668.556 2668.556 0 0123.713 36.052 2774.159 2774.159 0 0123.267 36.647v-72.699h22.003V265.75h-23.193zM804.186 159.452h73.146v19.03h-50.25v23.044h44.6v19.029h-44.6v26.166h53.075v19.03h-75.97V159.451zM982.1 265.75a3174.441 3174.441 0 01-9.886-35.978 3159.855 3159.855 0 01-9.44-35.977 2391.54 2391.54 0 01-9.218 35.977 2452.296 2452.296 0 01-9.812 35.978h-24.233a2032.839 2032.839 0 01-14.57-52.628c-4.66-17.74-9.068-35.63-13.231-53.67h24.976a2003.215 2003.215 0 007.88 41.33 1444.404 1444.404 0 008.771 40.586 3259.894 3259.894 0 0018.881-77.456h22.3a3251.95 3251.95 0 0018.733 75.821 1999.976 1999.976 0 008.623-39.843 1455.41 1455.41 0 007.73-40.438h24.53a1845.28 1845.28 0 01-13.23 53.67 2041.61 2041.61 0 01-14.57 52.628H982.1zM1077.47 267.98c-5.848 0-11.62-.645-17.32-1.932a66.227 66.227 0 01-16.427-6.096v-20.516c10.604 6.444 21.854 9.663 33.748 9.663 6.739 0 11.868-1.138 15.387-3.419 3.517-2.28 5.278-5.45 5.278-9.515 0-3.07-.869-5.475-2.602-7.21-1.735-1.733-4.04-3.122-6.913-4.163-2.876-1.04-6.095-2.007-9.663-2.899-5.85-1.387-11.002-2.974-15.462-4.757-4.46-1.784-8.228-3.889-11.299-6.319-3.073-2.427-5.403-5.352-6.987-8.771-1.587-3.42-2.38-7.508-2.38-12.265 0-6.74 1.71-12.537 5.13-17.395 3.42-4.855 8.251-8.597 14.495-11.225 6.244-2.624 13.678-3.939 22.3-3.939 5.65 0 11.2.646 16.652 1.933 5.45 1.289 10.355 3.024 14.718 5.203v20.22c-4.363-2.677-9.292-4.758-14.793-6.245-5.5-1.487-11.027-2.23-16.576-2.23-6.047 0-10.73 1.04-14.05 3.122-3.321 2.081-4.98 5.055-4.98 8.92 0 2.776.792 4.98 2.379 6.616 1.584 1.635 3.84 2.973 6.764 4.014 2.922 1.04 6.367 2.058 10.333 3.047 5.054 1.29 9.76 2.702 14.123 4.238 4.36 1.537 8.2 3.493 11.522 5.872 3.32 2.379 5.895 5.403 7.73 9.069 1.834 3.668 2.75 8.177 2.75 13.529 0 7.038-1.734 13.06-5.202 18.063-3.47 5.006-8.475 8.823-15.016 11.447-6.541 2.626-14.42 3.94-23.638 3.94z"
+              />
+              <path
+                d="M141.732 141.732v141.733h141.732V141.732H141.732zm98.839 100.024c-2.422 3.42-5.873 6.06-10.353 7.917-4.482 1.859-9.865 2.788-16.152 2.788h-31.763v-79.725h29.92c8.816 0 15.646 1.767 20.489 5.297 4.84 3.531 7.263 8.604 7.263 15.22 0 3.79-.867 7.08-2.602 9.868-1.735 2.787-4.3 5-7.697 6.634 4.697 1.561 8.293 4.033 10.787 7.415 2.493 3.383 3.74 7.49 3.74 12.321 0 4.758-1.211 8.847-3.632 12.265zm-20.272-38.97c2.204-1.82 3.307-4.366 3.307-7.638 0-6.317-4.301-9.477-12.9-9.477h-12.25v19.847h12.25c4.19 0 7.388-.91 9.593-2.732zm-7.534 15.22h-14.31v21.52h14.093c4.841 0 8.564-.91 11.166-2.731 2.601-1.821 3.903-4.441 3.903-7.861 0-7.285-4.952-10.928-14.852-10.928zM318.898 141.732v141.733H460.63V141.732H318.898zm98.838 100.024c-2.422 3.42-5.872 6.06-10.352 7.917-4.482 1.859-9.865 2.788-16.153 2.788h-31.763v-79.725h29.92c8.817 0 15.646 1.767 20.489 5.296 4.841 3.532 7.263 8.605 7.263 15.22 0 3.792-.867 7.081-2.602 9.869-1.734 2.787-4.3 5-7.696 6.634 4.697 1.56 8.293 4.033 10.786 7.415 2.494 3.383 3.74 7.49 3.74 12.321 0 4.758-1.211 8.847-3.632 12.265zm-20.271-38.97c2.203-1.82 3.306-4.366 3.306-7.638 0-6.317-4.301-9.477-12.9-9.477h-12.25v19.847h12.25c4.19 0 7.388-.91 9.594-2.732zm-7.535 15.22h-14.309v21.52h14.093c4.84 0 8.564-.91 11.165-2.732 2.602-1.82 3.903-4.44 3.903-7.86 0-7.285-4.951-10.928-14.852-10.928zM496.063 283.465h141.732V141.732H496.063v141.733zm101.793-36.057c-3.302 1.822-7.128 3.261-11.478 4.316-4.352 1.056-8.929 1.586-13.729 1.586-6.377 0-12.116-.93-17.217-2.787-5.102-1.858-9.415-4.536-12.941-8.033-3.527-3.498-6.228-7.777-8.102-12.842-1.876-5.063-2.814-10.766-2.814-17.105 0-6.192.975-11.784 2.926-16.776 1.95-4.99 4.764-9.271 8.44-12.842 3.675-3.569 8.083-6.301 13.222-8.197 5.139-1.893 10.896-2.841 17.274-2.841 4.426 0 8.609.456 12.547 1.366 3.939.912 7.596 2.24 10.972 3.99v15.518a36.771 36.771 0 00-10.016-4.644c-3.6-1.056-7.39-1.585-11.365-1.585-5.477 0-10.147 1.021-14.01 3.06-3.865 2.04-6.827 4.992-8.89 8.853-2.064 3.863-3.094 8.562-3.094 14.098 0 5.539.993 10.257 2.982 14.154 1.987 3.898 4.875 6.868 8.664 8.907 3.788 2.04 8.384 3.06 13.786 3.06 8.251 0 15.866-2.148 22.843-6.448v15.192z"
+              />
+              <path
+                d="M1174.479 252.462v-79.724h27.095c10.108 0 17.857 2.213 23.248 6.634 5.388 4.424 8.084 10.76 8.084 19.012 0 5.427-1.227 10.054-3.68 13.881-2.453 3.83-6.021 6.729-10.704 8.698-4.683 1.97-10.37 2.955-17.06 2.955h-13.046v28.544h-13.937zM1188.416 184v28.656h12.154c6.021 0 10.537-1.151 13.548-3.456 3.01-2.304 4.515-5.91 4.515-10.816 0-4.906-1.505-8.53-4.515-10.872-3.011-2.34-7.49-3.512-13.436-3.512h-12.266zM1245.728 172.738h14.16v79.724h-14.16v-79.724zM1273.938 252.462v-79.724h29.102c8.324 0 15.443 1.561 21.352 4.683 5.91 3.122 10.443 7.638 13.604 13.548 3.158 5.91 4.738 13.065 4.738 21.464 0 8.474-1.58 15.685-4.738 21.631-3.161 5.949-7.694 10.5-13.604 13.66-5.91 3.16-13.065 4.738-21.464 4.738h-28.99zm14.16-67.681v55.639h14.05c8.324 0 14.718-2.378 19.178-7.136 4.46-4.757 6.69-11.708 6.69-20.85 0-8.994-2.193-15.851-6.579-20.573-4.386-4.72-10.779-7.08-19.178-7.08h-14.16zM1422.57 247.556c-2.453 1.338-5.24 2.509-8.363 3.512a63.097 63.097 0 01-9.812 2.286c-3.42.52-6.84.78-10.259.78-6.466 0-12.247-.947-17.338-2.843-5.092-1.895-9.422-4.627-12.99-8.195-3.568-3.568-6.3-7.934-8.195-13.102-1.895-5.165-2.843-10.983-2.843-17.45 0-6.317.965-12.023 2.899-17.115 1.932-5.09 4.739-9.458 8.418-13.102 3.68-3.64 8.084-6.428 13.213-8.362 5.129-1.933 10.889-2.9 17.283-2.9 9.812 0 18.434 1.971 25.868 5.91v13.27c-3.495-2.231-7.323-3.94-11.485-5.13-4.163-1.188-8.549-1.784-13.157-1.784-5.948 0-11.038 1.154-15.276 3.456-4.237 2.305-7.47 5.631-9.7 9.98-2.23 4.349-3.345 9.609-3.345 15.778 0 6.244 1.076 11.578 3.233 16 2.155 4.424 5.278 7.788 9.366 10.09 4.088 2.305 9.032 3.458 14.83 3.458a43.66 43.66 0 007.304-.614 42.091 42.091 0 007.08-1.84v-19.066h-16.28v-11.262h29.548v38.245zM1436.953 172.738h14.161v79.724h-14.16v-79.724zM1519.13 252.462a2631.127 2631.127 0 00-12.99-20.07 4050.107 4050.107 0 00-13.213-20.07 1251.917 1251.917 0 00-13.046-19.29v59.43h-13.603v-79.724h14.272a1753.243 1753.243 0 0119.79 29.214 2207.234 2207.234 0 0119.458 29.882v-59.096h13.604v79.724h-14.272z"
+              />
+            </g>
+          </svg>
+          <span
+            class="emotion-25 emotion-26"
+            id="BrandLink-topPage"
+            role="text"
+          >
+            <span
+              lang="en-GB"
+            >
+              BBC News, 
+            </span>
+            <span>
+              Pidgin
+            </span>
+          </span>
+        </a>
+        <a
+          class="emotion-27 emotion-28"
+          dir="ltr"
+          href="#content"
+        >
+          <div>
+            Waka go wetin de inside
+          </div>
+        </a>
+      </div>
+    </div>
+    <nav
+      class="emotion-29 emotion-30"
+      dir="ltr"
+      role="navigation"
+    >
+      <div
+        class="emotion-31 emotion-32"
+      >
+        <div
+          class="emotion-33 emotion-34"
+        >
+          <button
+            aria-expanded="false"
+            class="emotion-35 emotion-36"
+            dir="ltr"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="emotion-37 emotion-38"
+              focusable="false"
+              height="2.75rem"
+              viewBox="0 0 44 44"
+              width="2.75rem"
+            >
+              <path
+                d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+              />
+            </svg>
+            <span
+              class="emotion-25 emotion-26"
+            >
+              Plenti seshon
+            </span>
+          </button>
+          <div
+            class="emotion-41 emotion-42"
+            data-e2e="scrollable-nav"
+            dir="ltr"
+          >
+            <ul
+              class="emotion-43 emotion-44"
+              role="list"
+            >
+              <li
+                class="emotion-45 emotion-46"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-47 emotion-48"
+                  href="/pidgin"
+                >
+                  Home
+                </a>
+              </li>
+              <li
+                class="emotion-45 emotion-46"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-47 emotion-48"
+                  href="/pidgin/topics/c2dwqd1zr92t"
+                >
+                  Nigeria
+                </a>
+              </li>
+              <li
+                class="emotion-45 emotion-46"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-47 emotion-48"
+                  href="/pidgin/topics/c404v061z85t"
+                >
+                  Africa
+                </a>
+              </li>
+              <li
+                class="emotion-45 emotion-46"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-47 emotion-48"
+                  href="/pidgin/topics/c0823e52dd0t"
+                >
+                  World
+                </a>
+              </li>
+              <li
+                class="emotion-45 emotion-46"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-47 emotion-48"
+                  href="/pidgin/media/video"
+                >
+                  Video
+                </a>
+              </li>
+              <li
+                class="emotion-45 emotion-46"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-47 emotion-48"
+                  href="/pidgin/topics/cjgn7gv77vrt"
+                >
+                  Sport
+                </a>
+              </li>
+              <li
+                class="emotion-45 emotion-46"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-47 emotion-48"
+                  href="/pidgin/topics/cqywjyzk2vyt"
+                >
+                  Entertainment
+                </a>
+              </li>
+              <li
+                class="emotion-45 emotion-46"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-47 emotion-48"
+                  href="/pidgin/popular/read"
+                >
+                  Most popular
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="emotion-77 emotion-78"
+          data-e2e="dropdown-nav"
+          height="0"
+        >
+          <ul
+            class="emotion-79 emotion-80"
+            role="list"
+          >
+            <li
+              class="emotion-81 emotion-82"
+              role="listitem"
+            >
+              <a
+                aria-labelledby="dropdownNavigation-home"
+                class="emotion-83 emotion-84"
+                href="/pidgin"
+              >
+                <span
+                  id="dropdownNavigation-home"
+                >
+                  Home
+                </span>
+              </a>
+            </li>
+            <li
+              class="emotion-81 emotion-82"
+              role="listitem"
+            >
+              <a
+                aria-labelledby="dropdownNavigation-nigeria"
+                class="emotion-83 emotion-84"
+                href="/pidgin/topics/c2dwqd1zr92t"
+              >
+                <span
+                  id="dropdownNavigation-nigeria"
+                >
+                  Nigeria
+                </span>
+              </a>
+            </li>
+            <li
+              class="emotion-81 emotion-82"
+              role="listitem"
+            >
+              <a
+                aria-labelledby="dropdownNavigation-africa"
+                class="emotion-83 emotion-84"
+                href="/pidgin/topics/c404v061z85t"
+              >
+                <span
+                  id="dropdownNavigation-africa"
+                >
+                  Africa
+                </span>
+              </a>
+            </li>
+            <li
+              class="emotion-81 emotion-82"
+              role="listitem"
+            >
+              <a
+                aria-labelledby="dropdownNavigation-world"
+                class="emotion-83 emotion-84"
+                href="/pidgin/topics/c0823e52dd0t"
+              >
+                <span
+                  id="dropdownNavigation-world"
+                >
+                  World
+                </span>
+              </a>
+            </li>
+            <li
+              class="emotion-81 emotion-82"
+              role="listitem"
+            >
+              <a
+                aria-labelledby="dropdownNavigation-video"
+                class="emotion-83 emotion-84"
+                href="/pidgin/media/video"
+              >
+                <span
+                  id="dropdownNavigation-video"
+                >
+                  Video
+                </span>
+              </a>
+            </li>
+            <li
+              class="emotion-81 emotion-82"
+              role="listitem"
+            >
+              <a
+                aria-labelledby="dropdownNavigation-sport"
+                class="emotion-83 emotion-84"
+                href="/pidgin/topics/cjgn7gv77vrt"
+              >
+                <span
+                  id="dropdownNavigation-sport"
+                >
+                  Sport
+                </span>
+              </a>
+            </li>
+            <li
+              class="emotion-81 emotion-82"
+              role="listitem"
+            >
+              <a
+                aria-labelledby="dropdownNavigation-entertainment"
+                class="emotion-83 emotion-84"
+                href="/pidgin/topics/cqywjyzk2vyt"
+              >
+                <span
+                  id="dropdownNavigation-entertainment"
+                >
+                  Entertainment
+                </span>
+              </a>
+            </li>
+            <li
+              class="emotion-81 emotion-82"
+              role="listitem"
+            >
+              <a
+                aria-labelledby="dropdownNavigation-most-popular"
+                class="emotion-83 emotion-84"
+                href="/pidgin/popular/read"
+              >
+                <span
+                  id="dropdownNavigation-most-popular"
+                >
+                  Most popular
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>
+`;
+
+exports[`Header Snapshots should render correctly for WS radio page 1`] = `
+.emotion-0 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2147483647;
+}
+
+.emotion-2 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #323232;
+  border-top: solid 0.0625rem transparent;
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-2 {
+    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
+  }
+}
+
+.emotion-4 {
+  max-width: 37.4375rem;
+  margin: 0 auto;
+}
+
+.emotion-4 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: solid 0.0625rem #AEAEB5;
+}
+
+.emotion-4 a:focus,
+.emotion-4 a:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-4 a:hover,
+.emotion-4 a:focus {
+  border-bottom: solid 0.125rem transparent;
+}
+
+.emotion-6 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+.emotion-6:focus {
+  outline: none;
+}
+
+.emotion-8 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  color: #BEBEBE;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    margin-top: 1.5rem;
+  }
+}
+
+.emotion-10 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #F6A21D;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-10 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-10 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-10 li+li {
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-10 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+
+  .emotion-10 li+li {
+    margin-top: 0;
+  }
+}
+
+.emotion-12 {
+  text-align: center;
+  width: 100%;
+  word-break: break-word;
+}
+
+.emotion-12 button {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  width: 100%;
+  min-height: 2.75rem;
+  color: #222222;
+  font-weight: bold;
+  background-color: #FDFDFD;
+  border: solid 0.0625rem transparent;
+  margin: 0;
+  cursor: pointer;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-12 button {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 button {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-12 button:focus,
+.emotion-12 button:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-12 button:hover,
+.emotion-12 button:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+@media (min-width: 25rem) {
+  .emotion-12 {
+    width: 17.3125rem;
+  }
+}
+
+.emotion-17 {
+  background-color: #B80000;
+  height: 2.75rem;
+  width: 100%;
+  padding: 0 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 25rem) {
+  .emotion-17 {
+    height: 3.5rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-17 {
+    height: 4rem;
+  }
+}
+
+.emotion-17 svg {
+  fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-17 svg {
+    fill: linkText;
+  }
+}
+
+.emotion-19 {
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 63rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-19 {
+    display: block;
+  }
+}
+
+.emotion-21 {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  bottom: 0.125rem;
+  padding-top: 0.125rem;
+}
+
+.emotion-21:hover,
+.emotion-21:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.25rem solid #FFFFFF;
+  margin-bottom: -0.25rem;
+}
+
+.emotion-23 {
+  box-sizing: content-box;
+  color: #FFFFFF;
+  fill: currentColor;
+  height: 1.25rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-23 {
+    height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-23 {
+    height: 1.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast: active),print {
+  .emotion-23 {
+    fill: windowText;
+  }
+}
+
+.emotion-25 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-27 {
+  position: absolute;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  padding: 0.75rem 0.5rem;
+  background-color: #FFFFFF;
+  border: 0.1875rem solid #000;
+  color: #333;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-27 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-27 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-27:focus {
+  -webkit-clip-path: none;
+  clip-path: none;
+  clip: auto;
+  height: auto;
+  width: auto;
+  top: 0;
+  left: 0;
+}
+
+@media (min-width: 25rem) {
+  .emotion-27:focus {
+    top: 0.5rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-27 {
+    padding: 0.5rem;
+  }
+}
+
+.emotion-29 {
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+.emotion-29::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+.emotion-29 .emotion-46::after {
+  left: 0;
+}
+
+.emotion-31 {
+  position: relative;
+  max-width: 63.4rem;
+  margin: 0;
+  background-color: #FFFFFF;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-31 {
+    margin: 0 0.8rem;
+  }
+}
+
+@media (min-width: 66rem) {
+  .emotion-31 {
+    margin: 0 auto;
+  }
+}
+
+.emotion-33 {
+  position: relative;
+}
+
+.emotion-35 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  float: left;
+  height: 2.75rem;
+  width: 2.75rem;
+}
+
+.emotion-35:hover,
+.emotion-35:focus {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0.25rem #FFFFFF;
+}
+
+.emotion-35:hover::after,
+.emotion-35:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: 0.25rem solid #B80000;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-35 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 20rem) {
+  .emotion-35 {
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+}
+
+.emotion-35 svg {
+  vertical-align: middle;
+}
+
+.emotion-37 {
+  color: #000000;
+  fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-37 {
+    fill: linkText;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-41 {
+    white-space: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .emotion-41::-webkit-scrollbar {
+    display: none;
+  }
+
+  .emotion-41:after {
+    content: ' ';
+    height: 100%;
+    width: 3rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1)
+              100%
+          );
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-41:after {
+      width: 6rem;
+    }
+  }
+}
+
+.emotion-43 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-43 {
+    overflow: hidden;
+  }
+}
+
+.emotion-45 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  -webkit-margin-end: 0.75rem;
+  margin-inline-end: 0.75rem;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-45:last-child {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-45::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    width: 80rem;
+    border-bottom: 0.0625rem solid #E6E8EA;
+    z-index: -1;
+  }
+}
+
+.emotion-47 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  color: #141414;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem 0.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-47 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-47 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-47 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+.emotion-47:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+}
+
+.emotion-47:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.25rem solid #B80000;
+}
+
+.emotion-77 {
+  background-color: #FFFFFF;
+  clear: both;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+  visibility: hidden;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-77 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .emotion-77 {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.emotion-79 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0.5rem;
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+.emotion-81 {
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+.emotion-81:last-child {
+  padding-bottom: 0.25rem;
+  border: 0;
+}
+
+.emotion-83 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #141414;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.75rem 0;
+  display: inline-block;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-83 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-83 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-83:hover,
+.emotion-83:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-color: #B80000;
+}
+
+<div>
+  <header
+    role="banner"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+        dir="ltr"
+      >
+        <div
+          class="emotion-4 emotion-5"
+          dir="ltr"
+        >
+          <h2
+            class="emotion-6 emotion-7"
+            dir="ltr"
+            tabindex="-1"
+          >
+            We don update our Privacy and Cookies Policy
+          </h2>
+          <p
+            class="emotion-8 emotion-9"
+            dir="ltr"
+          >
+            We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.
+          </p>
+          <ul
+            class="emotion-10 emotion-11"
+            dir="ltr"
+            role="list"
+          >
+            <li
+              class="emotion-12 emotion-13"
+              dir="ltr"
+            >
+              <button
+                type="button"
+              >
+                OK
+              </button>
+            </li>
+            <li
+              class="emotion-12 emotion-13"
+              dir="ltr"
+            >
+              <span>
+                <a
+                  href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                >
+                  Find out wetin don change
+                </a>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div
+      class="emotion-16 emotion-17 emotion-18"
+    >
+      <div
+        class="emotion-19 emotion-20"
+      >
+        <a
+          aria-labelledby="BrandLink-topPage"
+          class="emotion-21 emotion-22"
+          href="/pidgin"
+          id="topPage"
+        >
+          <svg
+            aria-hidden="true"
+            class="emotion-23 emotion-24"
+            focusable="false"
+            height="32"
+            viewBox="140 140 1395 145"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill-rule="evenodd"
+              stroke="#000"
+              stroke-width=".335"
+              style="stroke: #fff;"
+            >
+              <path
+                d="M759.928 265.75a4646.67 4646.67 0 00-23.49-37.242 2633.129 2633.129 0 00-23.49-36.2v73.442h-22.003V159.452h23.192a2668.556 2668.556 0 0123.713 36.052 2774.159 2774.159 0 0123.267 36.647v-72.699h22.003V265.75h-23.193zM804.186 159.452h73.146v19.03h-50.25v23.044h44.6v19.029h-44.6v26.166h53.075v19.03h-75.97V159.451zM982.1 265.75a3174.441 3174.441 0 01-9.886-35.978 3159.855 3159.855 0 01-9.44-35.977 2391.54 2391.54 0 01-9.218 35.977 2452.296 2452.296 0 01-9.812 35.978h-24.233a2032.839 2032.839 0 01-14.57-52.628c-4.66-17.74-9.068-35.63-13.231-53.67h24.976a2003.215 2003.215 0 007.88 41.33 1444.404 1444.404 0 008.771 40.586 3259.894 3259.894 0 0018.881-77.456h22.3a3251.95 3251.95 0 0018.733 75.821 1999.976 1999.976 0 008.623-39.843 1455.41 1455.41 0 007.73-40.438h24.53a1845.28 1845.28 0 01-13.23 53.67 2041.61 2041.61 0 01-14.57 52.628H982.1zM1077.47 267.98c-5.848 0-11.62-.645-17.32-1.932a66.227 66.227 0 01-16.427-6.096v-20.516c10.604 6.444 21.854 9.663 33.748 9.663 6.739 0 11.868-1.138 15.387-3.419 3.517-2.28 5.278-5.45 5.278-9.515 0-3.07-.869-5.475-2.602-7.21-1.735-1.733-4.04-3.122-6.913-4.163-2.876-1.04-6.095-2.007-9.663-2.899-5.85-1.387-11.002-2.974-15.462-4.757-4.46-1.784-8.228-3.889-11.299-6.319-3.073-2.427-5.403-5.352-6.987-8.771-1.587-3.42-2.38-7.508-2.38-12.265 0-6.74 1.71-12.537 5.13-17.395 3.42-4.855 8.251-8.597 14.495-11.225 6.244-2.624 13.678-3.939 22.3-3.939 5.65 0 11.2.646 16.652 1.933 5.45 1.289 10.355 3.024 14.718 5.203v20.22c-4.363-2.677-9.292-4.758-14.793-6.245-5.5-1.487-11.027-2.23-16.576-2.23-6.047 0-10.73 1.04-14.05 3.122-3.321 2.081-4.98 5.055-4.98 8.92 0 2.776.792 4.98 2.379 6.616 1.584 1.635 3.84 2.973 6.764 4.014 2.922 1.04 6.367 2.058 10.333 3.047 5.054 1.29 9.76 2.702 14.123 4.238 4.36 1.537 8.2 3.493 11.522 5.872 3.32 2.379 5.895 5.403 7.73 9.069 1.834 3.668 2.75 8.177 2.75 13.529 0 7.038-1.734 13.06-5.202 18.063-3.47 5.006-8.475 8.823-15.016 11.447-6.541 2.626-14.42 3.94-23.638 3.94z"
+              />
+              <path
+                d="M141.732 141.732v141.733h141.732V141.732H141.732zm98.839 100.024c-2.422 3.42-5.873 6.06-10.353 7.917-4.482 1.859-9.865 2.788-16.152 2.788h-31.763v-79.725h29.92c8.816 0 15.646 1.767 20.489 5.297 4.84 3.531 7.263 8.604 7.263 15.22 0 3.79-.867 7.08-2.602 9.868-1.735 2.787-4.3 5-7.697 6.634 4.697 1.561 8.293 4.033 10.787 7.415 2.493 3.383 3.74 7.49 3.74 12.321 0 4.758-1.211 8.847-3.632 12.265zm-20.272-38.97c2.204-1.82 3.307-4.366 3.307-7.638 0-6.317-4.301-9.477-12.9-9.477h-12.25v19.847h12.25c4.19 0 7.388-.91 9.593-2.732zm-7.534 15.22h-14.31v21.52h14.093c4.841 0 8.564-.91 11.166-2.731 2.601-1.821 3.903-4.441 3.903-7.861 0-7.285-4.952-10.928-14.852-10.928zM318.898 141.732v141.733H460.63V141.732H318.898zm98.838 100.024c-2.422 3.42-5.872 6.06-10.352 7.917-4.482 1.859-9.865 2.788-16.153 2.788h-31.763v-79.725h29.92c8.817 0 15.646 1.767 20.489 5.296 4.841 3.532 7.263 8.605 7.263 15.22 0 3.792-.867 7.081-2.602 9.869-1.734 2.787-4.3 5-7.696 6.634 4.697 1.56 8.293 4.033 10.786 7.415 2.494 3.383 3.74 7.49 3.74 12.321 0 4.758-1.211 8.847-3.632 12.265zm-20.271-38.97c2.203-1.82 3.306-4.366 3.306-7.638 0-6.317-4.301-9.477-12.9-9.477h-12.25v19.847h12.25c4.19 0 7.388-.91 9.594-2.732zm-7.535 15.22h-14.309v21.52h14.093c4.84 0 8.564-.91 11.165-2.732 2.602-1.82 3.903-4.44 3.903-7.86 0-7.285-4.951-10.928-14.852-10.928zM496.063 283.465h141.732V141.732H496.063v141.733zm101.793-36.057c-3.302 1.822-7.128 3.261-11.478 4.316-4.352 1.056-8.929 1.586-13.729 1.586-6.377 0-12.116-.93-17.217-2.787-5.102-1.858-9.415-4.536-12.941-8.033-3.527-3.498-6.228-7.777-8.102-12.842-1.876-5.063-2.814-10.766-2.814-17.105 0-6.192.975-11.784 2.926-16.776 1.95-4.99 4.764-9.271 8.44-12.842 3.675-3.569 8.083-6.301 13.222-8.197 5.139-1.893 10.896-2.841 17.274-2.841 4.426 0 8.609.456 12.547 1.366 3.939.912 7.596 2.24 10.972 3.99v15.518a36.771 36.771 0 00-10.016-4.644c-3.6-1.056-7.39-1.585-11.365-1.585-5.477 0-10.147 1.021-14.01 3.06-3.865 2.04-6.827 4.992-8.89 8.853-2.064 3.863-3.094 8.562-3.094 14.098 0 5.539.993 10.257 2.982 14.154 1.987 3.898 4.875 6.868 8.664 8.907 3.788 2.04 8.384 3.06 13.786 3.06 8.251 0 15.866-2.148 22.843-6.448v15.192z"
+              />
+              <path
+                d="M1174.479 252.462v-79.724h27.095c10.108 0 17.857 2.213 23.248 6.634 5.388 4.424 8.084 10.76 8.084 19.012 0 5.427-1.227 10.054-3.68 13.881-2.453 3.83-6.021 6.729-10.704 8.698-4.683 1.97-10.37 2.955-17.06 2.955h-13.046v28.544h-13.937zM1188.416 184v28.656h12.154c6.021 0 10.537-1.151 13.548-3.456 3.01-2.304 4.515-5.91 4.515-10.816 0-4.906-1.505-8.53-4.515-10.872-3.011-2.34-7.49-3.512-13.436-3.512h-12.266zM1245.728 172.738h14.16v79.724h-14.16v-79.724zM1273.938 252.462v-79.724h29.102c8.324 0 15.443 1.561 21.352 4.683 5.91 3.122 10.443 7.638 13.604 13.548 3.158 5.91 4.738 13.065 4.738 21.464 0 8.474-1.58 15.685-4.738 21.631-3.161 5.949-7.694 10.5-13.604 13.66-5.91 3.16-13.065 4.738-21.464 4.738h-28.99zm14.16-67.681v55.639h14.05c8.324 0 14.718-2.378 19.178-7.136 4.46-4.757 6.69-11.708 6.69-20.85 0-8.994-2.193-15.851-6.579-20.573-4.386-4.72-10.779-7.08-19.178-7.08h-14.16zM1422.57 247.556c-2.453 1.338-5.24 2.509-8.363 3.512a63.097 63.097 0 01-9.812 2.286c-3.42.52-6.84.78-10.259.78-6.466 0-12.247-.947-17.338-2.843-5.092-1.895-9.422-4.627-12.99-8.195-3.568-3.568-6.3-7.934-8.195-13.102-1.895-5.165-2.843-10.983-2.843-17.45 0-6.317.965-12.023 2.899-17.115 1.932-5.09 4.739-9.458 8.418-13.102 3.68-3.64 8.084-6.428 13.213-8.362 5.129-1.933 10.889-2.9 17.283-2.9 9.812 0 18.434 1.971 25.868 5.91v13.27c-3.495-2.231-7.323-3.94-11.485-5.13-4.163-1.188-8.549-1.784-13.157-1.784-5.948 0-11.038 1.154-15.276 3.456-4.237 2.305-7.47 5.631-9.7 9.98-2.23 4.349-3.345 9.609-3.345 15.778 0 6.244 1.076 11.578 3.233 16 2.155 4.424 5.278 7.788 9.366 10.09 4.088 2.305 9.032 3.458 14.83 3.458a43.66 43.66 0 007.304-.614 42.091 42.091 0 007.08-1.84v-19.066h-16.28v-11.262h29.548v38.245zM1436.953 172.738h14.161v79.724h-14.16v-79.724zM1519.13 252.462a2631.127 2631.127 0 00-12.99-20.07 4050.107 4050.107 0 00-13.213-20.07 1251.917 1251.917 0 00-13.046-19.29v59.43h-13.603v-79.724h14.272a1753.243 1753.243 0 0119.79 29.214 2207.234 2207.234 0 0119.458 29.882v-59.096h13.604v79.724h-14.272z"
+              />
+            </g>
+          </svg>
+          <span
+            class="emotion-25 emotion-26"
+            id="BrandLink-topPage"
+            role="text"
+          >
+            <span
+              lang="en-GB"
+            >
+              BBC News, 
+            </span>
+            <span>
+              Pidgin
+            </span>
+          </span>
+        </a>
+        <a
+          class="emotion-27 emotion-28"
+          dir="ltr"
+          href="#content"
+        >
+          <div>
+            Waka go wetin de inside
+          </div>
+        </a>
+      </div>
+    </div>
+    <nav
+      class="emotion-29 emotion-30"
+      dir="ltr"
+      role="navigation"
+    >
+      <div
+        class="emotion-31 emotion-32"
+      >
+        <div
+          class="emotion-33 emotion-34"
+        >
+          <button
+            aria-expanded="false"
+            class="emotion-35 emotion-36"
+            dir="ltr"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="emotion-37 emotion-38"
+              focusable="false"
+              height="2.75rem"
+              viewBox="0 0 44 44"
+              width="2.75rem"
+            >
+              <path
+                d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+              />
+            </svg>
+            <span
+              class="emotion-25 emotion-26"
+            >
+              Plenti seshon
+            </span>
+          </button>
+          <div
+            class="emotion-41 emotion-42"
+            data-e2e="scrollable-nav"
+            dir="ltr"
+          >
+            <ul
+              class="emotion-43 emotion-44"
+              role="list"
+            >
+              <li
+                class="emotion-45 emotion-46"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-47 emotion-48"
+                  href="/pidgin"
+                >
+                  Home
+                </a>
+              </li>
+              <li
+                class="emotion-45 emotion-46"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-47 emotion-48"
+                  href="/pidgin/topics/c2dwqd1zr92t"
+                >
+                  Nigeria
+                </a>
+              </li>
+              <li
+                class="emotion-45 emotion-46"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-47 emotion-48"
+                  href="/pidgin/topics/c404v061z85t"
+                >
+                  Africa
+                </a>
+              </li>
+              <li
+                class="emotion-45 emotion-46"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-47 emotion-48"
+                  href="/pidgin/topics/c0823e52dd0t"
+                >
+                  World
+                </a>
+              </li>
+              <li
+                class="emotion-45 emotion-46"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-47 emotion-48"
+                  href="/pidgin/media/video"
+                >
+                  Video
+                </a>
+              </li>
+              <li
+                class="emotion-45 emotion-46"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-47 emotion-48"
+                  href="/pidgin/topics/cjgn7gv77vrt"
+                >
+                  Sport
+                </a>
+              </li>
+              <li
+                class="emotion-45 emotion-46"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-47 emotion-48"
+                  href="/pidgin/topics/cqywjyzk2vyt"
+                >
+                  Entertainment
+                </a>
+              </li>
+              <li
+                class="emotion-45 emotion-46"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-47 emotion-48"
+                  href="/pidgin/popular/read"
+                >
+                  Most popular
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="emotion-77 emotion-78"
+          data-e2e="dropdown-nav"
+          height="0"
+        >
+          <ul
+            class="emotion-79 emotion-80"
+            role="list"
+          >
+            <li
+              class="emotion-81 emotion-82"
+              role="listitem"
+            >
+              <a
+                aria-labelledby="dropdownNavigation-home"
+                class="emotion-83 emotion-84"
+                href="/pidgin"
+              >
+                <span
+                  id="dropdownNavigation-home"
+                >
+                  Home
+                </span>
+              </a>
+            </li>
+            <li
+              class="emotion-81 emotion-82"
+              role="listitem"
+            >
+              <a
+                aria-labelledby="dropdownNavigation-nigeria"
+                class="emotion-83 emotion-84"
+                href="/pidgin/topics/c2dwqd1zr92t"
+              >
+                <span
+                  id="dropdownNavigation-nigeria"
+                >
+                  Nigeria
+                </span>
+              </a>
+            </li>
+            <li
+              class="emotion-81 emotion-82"
+              role="listitem"
+            >
+              <a
+                aria-labelledby="dropdownNavigation-africa"
+                class="emotion-83 emotion-84"
+                href="/pidgin/topics/c404v061z85t"
+              >
+                <span
+                  id="dropdownNavigation-africa"
+                >
+                  Africa
+                </span>
+              </a>
+            </li>
+            <li
+              class="emotion-81 emotion-82"
+              role="listitem"
+            >
+              <a
+                aria-labelledby="dropdownNavigation-world"
+                class="emotion-83 emotion-84"
+                href="/pidgin/topics/c0823e52dd0t"
+              >
+                <span
+                  id="dropdownNavigation-world"
+                >
+                  World
+                </span>
+              </a>
+            </li>
+            <li
+              class="emotion-81 emotion-82"
+              role="listitem"
+            >
+              <a
+                aria-labelledby="dropdownNavigation-video"
+                class="emotion-83 emotion-84"
+                href="/pidgin/media/video"
+              >
+                <span
+                  id="dropdownNavigation-video"
+                >
+                  Video
+                </span>
+              </a>
+            </li>
+            <li
+              class="emotion-81 emotion-82"
+              role="listitem"
+            >
+              <a
+                aria-labelledby="dropdownNavigation-sport"
+                class="emotion-83 emotion-84"
+                href="/pidgin/topics/cjgn7gv77vrt"
+              >
+                <span
+                  id="dropdownNavigation-sport"
+                >
+                  Sport
+                </span>
+              </a>
+            </li>
+            <li
+              class="emotion-81 emotion-82"
+              role="listitem"
+            >
+              <a
+                aria-labelledby="dropdownNavigation-entertainment"
+                class="emotion-83 emotion-84"
+                href="/pidgin/topics/cqywjyzk2vyt"
+              >
+                <span
+                  id="dropdownNavigation-entertainment"
+                >
+                  Entertainment
+                </span>
+              </a>
+            </li>
+            <li
+              class="emotion-81 emotion-82"
+              role="listitem"
+            >
+              <a
+                aria-labelledby="dropdownNavigation-most-popular"
+                class="emotion-83 emotion-84"
+                href="/pidgin/popular/read"
+              >
+                <span
+                  id="dropdownNavigation-most-popular"
+                >
+                  Most popular
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>
+`;
+
+exports[`Header Snapshots should render correctly for news article 1`] = `
+.emotion-0 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2147483647;
+}
+
+.emotion-2 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #323232;
+  border-top: solid 0.0625rem transparent;
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-2 {
+    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
+  }
+}
+
+.emotion-4 {
+  max-width: 37.4375rem;
+  margin: 0 auto;
+}
+
+.emotion-4 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: solid 0.0625rem #AEAEB5;
+}
+
+.emotion-4 a:focus,
+.emotion-4 a:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-4 a:hover,
+.emotion-4 a:focus {
+  border-bottom: solid 0.125rem transparent;
+}
+
+.emotion-6 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+.emotion-6:focus {
+  outline: none;
+}
+
+.emotion-8 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  color: #BEBEBE;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    margin-top: 1.5rem;
+  }
+}
+
+.emotion-10 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #F6A21D;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-10 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-10 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-10 li+li {
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-10 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+
+  .emotion-10 li+li {
+    margin-top: 0;
+  }
+}
+
+.emotion-12 {
+  text-align: center;
+  width: 100%;
+  word-break: break-word;
+}
+
+.emotion-12 button {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  width: 100%;
+  min-height: 2.75rem;
+  color: #222222;
+  font-weight: bold;
+  background-color: #FDFDFD;
+  border: solid 0.0625rem transparent;
+  margin: 0;
+  cursor: pointer;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-12 button {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 button {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-12 button:focus,
+.emotion-12 button:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-12 button:hover,
+.emotion-12 button:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+@media (min-width: 25rem) {
+  .emotion-12 {
+    width: 17.3125rem;
+  }
+}
+
+.emotion-17 {
+  background-color: #B80000;
+  height: 2.75rem;
+  width: 100%;
+  padding: 0 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 25rem) {
+  .emotion-17 {
+    height: 3.5rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-17 {
+    height: 4rem;
+  }
+}
+
+.emotion-17 svg {
+  fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-17 svg {
+    fill: linkText;
+  }
+}
+
+.emotion-19 {
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 63rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-19 {
+    display: block;
+  }
+}
+
+.emotion-21 {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  bottom: 0.125rem;
+  padding-top: 0.125rem;
+}
+
+.emotion-21:hover,
+.emotion-21:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.25rem solid #FFFFFF;
+  margin-bottom: -0.25rem;
+}
+
+.emotion-23 {
+  box-sizing: content-box;
+  color: #FFFFFF;
+  fill: currentColor;
+  height: 1.25rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-23 {
+    height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-23 {
+    height: 1.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast: active),print {
+  .emotion-23 {
+    fill: windowText;
+  }
+}
+
+.emotion-25 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-27 {
+  position: absolute;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  padding: 0.75rem 0.5rem;
+  background-color: #FFFFFF;
+  border: 0.1875rem solid #000;
+  color: #333;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-27 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-27 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-27:focus {
+  -webkit-clip-path: none;
+  clip-path: none;
+  clip: auto;
+  height: auto;
+  width: auto;
+  top: 0;
+  left: 0;
+}
+
+@media (min-width: 25rem) {
+  .emotion-27:focus {
+    top: 0.5rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-27 {
+    padding: 0.5rem;
+  }
+}
+
+.emotion-29 {
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+.emotion-29::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+.emotion-29 .emotion-46::after {
+  left: 0;
+}
+
+.emotion-31 {
+  position: relative;
+  max-width: 63.4rem;
+  margin: 0;
+  background-color: #FFFFFF;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-31 {
+    margin: 0 0.8rem;
+  }
+}
+
+@media (min-width: 66rem) {
+  .emotion-31 {
+    margin: 0 auto;
+  }
+}
+
+.emotion-33 {
+  position: relative;
+}
+
+.emotion-35 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  float: left;
+  height: 2.75rem;
+  width: 2.75rem;
+}
+
+.emotion-35:hover,
+.emotion-35:focus {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0.25rem #FFFFFF;
+}
+
+.emotion-35:hover::after,
+.emotion-35:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: 0.25rem solid #B80000;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-35 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 20rem) {
+  .emotion-35 {
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+}
+
+.emotion-35 svg {
+  vertical-align: middle;
+}
+
+.emotion-37 {
+  color: #000000;
+  fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-37 {
+    fill: linkText;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-41 {
+    white-space: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .emotion-41::-webkit-scrollbar {
+    display: none;
+  }
+
+  .emotion-41:after {
+    content: ' ';
+    height: 100%;
+    width: 3rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1)
+              100%
+          );
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-41:after {
+      width: 6rem;
+    }
+  }
+}
+
+.emotion-43 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-43 {
+    overflow: hidden;
+  }
+}
+
+.emotion-45 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  -webkit-margin-end: 0.75rem;
+  margin-inline-end: 0.75rem;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-45:last-child {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-45::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    width: 80rem;
+    border-bottom: 0.0625rem solid #E6E8EA;
+    z-index: -1;
+  }
+}
+
+.emotion-47 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  color: #141414;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem 0.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-47 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-47 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-47 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+.emotion-47:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+}
+
+.emotion-47:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.25rem solid #B80000;
+}
+
+.emotion-77 {
+  background-color: #FFFFFF;
+  clear: both;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+  visibility: hidden;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-77 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .emotion-77 {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.emotion-79 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0.5rem;
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+.emotion-81 {
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+.emotion-81:last-child {
+  padding-bottom: 0.25rem;
+  border: 0;
+}
+
+.emotion-83 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #141414;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.75rem 0;
+  display: inline-block;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-83 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-83 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-83:hover,
+.emotion-83:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-color: #B80000;
+}
+
+<div>
+  <header
+    role="banner"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+        dir="ltr"
+      >
+        <div
+          class="emotion-4 emotion-5"
+          dir="ltr"
+        >
+          <h2
+            class="emotion-6 emotion-7"
+            dir="ltr"
+            tabindex="-1"
+          >
+            We don update our Privacy and Cookies Policy
+          </h2>
+          <p
+            class="emotion-8 emotion-9"
+            dir="ltr"
+          >
+            We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.
+          </p>
+          <ul
+            class="emotion-10 emotion-11"
+            dir="ltr"
+            role="list"
+          >
+            <li
+              class="emotion-12 emotion-13"
+              dir="ltr"
+            >
+              <button
+                type="button"
+              >
+                OK
+              </button>
+            </li>
+            <li
+              class="emotion-12 emotion-13"
+              dir="ltr"
+            >
+              <span>
+                <a
+                  href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                >
+                  Find out wetin don change
+                </a>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div
+      class="emotion-16 emotion-17 emotion-18"
+    >
+      <div
+        class="emotion-19 emotion-20"
+      >
+        <a
+          aria-labelledby="BrandLink-topPage"
+          class="emotion-21 emotion-22"
+          href="/pidgin"
+          id="topPage"
+        >
+          <svg
+            aria-hidden="true"
+            class="emotion-23 emotion-24"
+            focusable="false"
+            height="32"
+            viewBox="140 140 1395 145"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill-rule="evenodd"
+              stroke="#000"
+              stroke-width=".335"
+              style="stroke: #fff;"
+            >
+              <path
+                d="M759.928 265.75a4646.67 4646.67 0 00-23.49-37.242 2633.129 2633.129 0 00-23.49-36.2v73.442h-22.003V159.452h23.192a2668.556 2668.556 0 0123.713 36.052 2774.159 2774.159 0 0123.267 36.647v-72.699h22.003V265.75h-23.193zM804.186 159.452h73.146v19.03h-50.25v23.044h44.6v19.029h-44.6v26.166h53.075v19.03h-75.97V159.451zM982.1 265.75a3174.441 3174.441 0 01-9.886-35.978 3159.855 3159.855 0 01-9.44-35.977 2391.54 2391.54 0 01-9.218 35.977 2452.296 2452.296 0 01-9.812 35.978h-24.233a2032.839 2032.839 0 01-14.57-52.628c-4.66-17.74-9.068-35.63-13.231-53.67h24.976a2003.215 2003.215 0 007.88 41.33 1444.404 1444.404 0 008.771 40.586 3259.894 3259.894 0 0018.881-77.456h22.3a3251.95 3251.95 0 0018.733 75.821 1999.976 1999.976 0 008.623-39.843 1455.41 1455.41 0 007.73-40.438h24.53a1845.28 1845.28 0 01-13.23 53.67 2041.61 2041.61 0 01-14.57 52.628H982.1zM1077.47 267.98c-5.848 0-11.62-.645-17.32-1.932a66.227 66.227 0 01-16.427-6.096v-20.516c10.604 6.444 21.854 9.663 33.748 9.663 6.739 0 11.868-1.138 15.387-3.419 3.517-2.28 5.278-5.45 5.278-9.515 0-3.07-.869-5.475-2.602-7.21-1.735-1.733-4.04-3.122-6.913-4.163-2.876-1.04-6.095-2.007-9.663-2.899-5.85-1.387-11.002-2.974-15.462-4.757-4.46-1.784-8.228-3.889-11.299-6.319-3.073-2.427-5.403-5.352-6.987-8.771-1.587-3.42-2.38-7.508-2.38-12.265 0-6.74 1.71-12.537 5.13-17.395 3.42-4.855 8.251-8.597 14.495-11.225 6.244-2.624 13.678-3.939 22.3-3.939 5.65 0 11.2.646 16.652 1.933 5.45 1.289 10.355 3.024 14.718 5.203v20.22c-4.363-2.677-9.292-4.758-14.793-6.245-5.5-1.487-11.027-2.23-16.576-2.23-6.047 0-10.73 1.04-14.05 3.122-3.321 2.081-4.98 5.055-4.98 8.92 0 2.776.792 4.98 2.379 6.616 1.584 1.635 3.84 2.973 6.764 4.014 2.922 1.04 6.367 2.058 10.333 3.047 5.054 1.29 9.76 2.702 14.123 4.238 4.36 1.537 8.2 3.493 11.522 5.872 3.32 2.379 5.895 5.403 7.73 9.069 1.834 3.668 2.75 8.177 2.75 13.529 0 7.038-1.734 13.06-5.202 18.063-3.47 5.006-8.475 8.823-15.016 11.447-6.541 2.626-14.42 3.94-23.638 3.94z"
+              />
+              <path
+                d="M141.732 141.732v141.733h141.732V141.732H141.732zm98.839 100.024c-2.422 3.42-5.873 6.06-10.353 7.917-4.482 1.859-9.865 2.788-16.152 2.788h-31.763v-79.725h29.92c8.816 0 15.646 1.767 20.489 5.297 4.84 3.531 7.263 8.604 7.263 15.22 0 3.79-.867 7.08-2.602 9.868-1.735 2.787-4.3 5-7.697 6.634 4.697 1.561 8.293 4.033 10.787 7.415 2.493 3.383 3.74 7.49 3.74 12.321 0 4.758-1.211 8.847-3.632 12.265zm-20.272-38.97c2.204-1.82 3.307-4.366 3.307-7.638 0-6.317-4.301-9.477-12.9-9.477h-12.25v19.847h12.25c4.19 0 7.388-.91 9.593-2.732zm-7.534 15.22h-14.31v21.52h14.093c4.841 0 8.564-.91 11.166-2.731 2.601-1.821 3.903-4.441 3.903-7.861 0-7.285-4.952-10.928-14.852-10.928zM318.898 141.732v141.733H460.63V141.732H318.898zm98.838 100.024c-2.422 3.42-5.872 6.06-10.352 7.917-4.482 1.859-9.865 2.788-16.153 2.788h-31.763v-79.725h29.92c8.817 0 15.646 1.767 20.489 5.296 4.841 3.532 7.263 8.605 7.263 15.22 0 3.792-.867 7.081-2.602 9.869-1.734 2.787-4.3 5-7.696 6.634 4.697 1.56 8.293 4.033 10.786 7.415 2.494 3.383 3.74 7.49 3.74 12.321 0 4.758-1.211 8.847-3.632 12.265zm-20.271-38.97c2.203-1.82 3.306-4.366 3.306-7.638 0-6.317-4.301-9.477-12.9-9.477h-12.25v19.847h12.25c4.19 0 7.388-.91 9.594-2.732zm-7.535 15.22h-14.309v21.52h14.093c4.84 0 8.564-.91 11.165-2.732 2.602-1.82 3.903-4.44 3.903-7.86 0-7.285-4.951-10.928-14.852-10.928zM496.063 283.465h141.732V141.732H496.063v141.733zm101.793-36.057c-3.302 1.822-7.128 3.261-11.478 4.316-4.352 1.056-8.929 1.586-13.729 1.586-6.377 0-12.116-.93-17.217-2.787-5.102-1.858-9.415-4.536-12.941-8.033-3.527-3.498-6.228-7.777-8.102-12.842-1.876-5.063-2.814-10.766-2.814-17.105 0-6.192.975-11.784 2.926-16.776 1.95-4.99 4.764-9.271 8.44-12.842 3.675-3.569 8.083-6.301 13.222-8.197 5.139-1.893 10.896-2.841 17.274-2.841 4.426 0 8.609.456 12.547 1.366 3.939.912 7.596 2.24 10.972 3.99v15.518a36.771 36.771 0 00-10.016-4.644c-3.6-1.056-7.39-1.585-11.365-1.585-5.477 0-10.147 1.021-14.01 3.06-3.865 2.04-6.827 4.992-8.89 8.853-2.064 3.863-3.094 8.562-3.094 14.098 0 5.539.993 10.257 2.982 14.154 1.987 3.898 4.875 6.868 8.664 8.907 3.788 2.04 8.384 3.06 13.786 3.06 8.251 0 15.866-2.148 22.843-6.448v15.192z"
+              />
+              <path
+                d="M1174.479 252.462v-79.724h27.095c10.108 0 17.857 2.213 23.248 6.634 5.388 4.424 8.084 10.76 8.084 19.012 0 5.427-1.227 10.054-3.68 13.881-2.453 3.83-6.021 6.729-10.704 8.698-4.683 1.97-10.37 2.955-17.06 2.955h-13.046v28.544h-13.937zM1188.416 184v28.656h12.154c6.021 0 10.537-1.151 13.548-3.456 3.01-2.304 4.515-5.91 4.515-10.816 0-4.906-1.505-8.53-4.515-10.872-3.011-2.34-7.49-3.512-13.436-3.512h-12.266zM1245.728 172.738h14.16v79.724h-14.16v-79.724zM1273.938 252.462v-79.724h29.102c8.324 0 15.443 1.561 21.352 4.683 5.91 3.122 10.443 7.638 13.604 13.548 3.158 5.91 4.738 13.065 4.738 21.464 0 8.474-1.58 15.685-4.738 21.631-3.161 5.949-7.694 10.5-13.604 13.66-5.91 3.16-13.065 4.738-21.464 4.738h-28.99zm14.16-67.681v55.639h14.05c8.324 0 14.718-2.378 19.178-7.136 4.46-4.757 6.69-11.708 6.69-20.85 0-8.994-2.193-15.851-6.579-20.573-4.386-4.72-10.779-7.08-19.178-7.08h-14.16zM1422.57 247.556c-2.453 1.338-5.24 2.509-8.363 3.512a63.097 63.097 0 01-9.812 2.286c-3.42.52-6.84.78-10.259.78-6.466 0-12.247-.947-17.338-2.843-5.092-1.895-9.422-4.627-12.99-8.195-3.568-3.568-6.3-7.934-8.195-13.102-1.895-5.165-2.843-10.983-2.843-17.45 0-6.317.965-12.023 2.899-17.115 1.932-5.09 4.739-9.458 8.418-13.102 3.68-3.64 8.084-6.428 13.213-8.362 5.129-1.933 10.889-2.9 17.283-2.9 9.812 0 18.434 1.971 25.868 5.91v13.27c-3.495-2.231-7.323-3.94-11.485-5.13-4.163-1.188-8.549-1.784-13.157-1.784-5.948 0-11.038 1.154-15.276 3.456-4.237 2.305-7.47 5.631-9.7 9.98-2.23 4.349-3.345 9.609-3.345 15.778 0 6.244 1.076 11.578 3.233 16 2.155 4.424 5.278 7.788 9.366 10.09 4.088 2.305 9.032 3.458 14.83 3.458a43.66 43.66 0 007.304-.614 42.091 42.091 0 007.08-1.84v-19.066h-16.28v-11.262h29.548v38.245zM1436.953 172.738h14.161v79.724h-14.16v-79.724zM1519.13 252.462a2631.127 2631.127 0 00-12.99-20.07 4050.107 4050.107 0 00-13.213-20.07 1251.917 1251.917 0 00-13.046-19.29v59.43h-13.603v-79.724h14.272a1753.243 1753.243 0 0119.79 29.214 2207.234 2207.234 0 0119.458 29.882v-59.096h13.604v79.724h-14.272z"
+              />
+            </g>
+          </svg>
+          <span
+            class="emotion-25 emotion-26"
+            id="BrandLink-topPage"
+            role="text"
+          >
+            <span
+              lang="en-GB"
+            >
+              BBC News, 
+            </span>
+            <span>
+              Pidgin
+            </span>
+          </span>
+        </a>
+        <a
+          class="emotion-27 emotion-28"
+          dir="ltr"
+          href="#content"
+        >
+          <div>
+            Waka go wetin de inside
+          </div>
+        </a>
+      </div>
+    </div>
+    <nav
+      class="emotion-29 emotion-30"
+      dir="ltr"
+      role="navigation"
+    >
+      <div
+        class="emotion-31 emotion-32"
+      >
+        <div
+          class="emotion-33 emotion-34"
+        >
+          <button
+            aria-expanded="false"
+            class="emotion-35 emotion-36"
+            dir="ltr"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="emotion-37 emotion-38"
+              focusable="false"
+              height="2.75rem"
+              viewBox="0 0 44 44"
+              width="2.75rem"
+            >
+              <path
+                d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+              />
+            </svg>
+            <span
+              class="emotion-25 emotion-26"
+            >
+              Plenti seshon
+            </span>
+          </button>
+          <div
+            class="emotion-41 emotion-42"
+            data-e2e="scrollable-nav"
+            dir="ltr"
+          >
+            <ul
+              class="emotion-43 emotion-44"
+              role="list"
+            >
+              <li
+                class="emotion-45 emotion-46"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-47 emotion-48"
+                  href="/pidgin"
+                >
+                  Home
+                </a>
+              </li>
+              <li
+                class="emotion-45 emotion-46"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-47 emotion-48"
+                  href="/pidgin/topics/c2dwqd1zr92t"
+                >
+                  Nigeria
+                </a>
+              </li>
+              <li
+                class="emotion-45 emotion-46"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-47 emotion-48"
+                  href="/pidgin/topics/c404v061z85t"
+                >
+                  Africa
+                </a>
+              </li>
+              <li
+                class="emotion-45 emotion-46"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-47 emotion-48"
+                  href="/pidgin/topics/c0823e52dd0t"
+                >
+                  World
+                </a>
+              </li>
+              <li
+                class="emotion-45 emotion-46"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-47 emotion-48"
+                  href="/pidgin/media/video"
+                >
+                  Video
+                </a>
+              </li>
+              <li
+                class="emotion-45 emotion-46"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-47 emotion-48"
+                  href="/pidgin/topics/cjgn7gv77vrt"
+                >
+                  Sport
+                </a>
+              </li>
+              <li
+                class="emotion-45 emotion-46"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-47 emotion-48"
+                  href="/pidgin/topics/cqywjyzk2vyt"
+                >
+                  Entertainment
+                </a>
+              </li>
+              <li
+                class="emotion-45 emotion-46"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="emotion-47 emotion-48"
+                  href="/pidgin/popular/read"
+                >
+                  Most popular
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="emotion-77 emotion-78"
+          data-e2e="dropdown-nav"
+          height="0"
+        >
+          <ul
+            class="emotion-79 emotion-80"
+            role="list"
+          >
+            <li
+              class="emotion-81 emotion-82"
+              role="listitem"
+            >
+              <a
+                aria-labelledby="dropdownNavigation-home"
+                class="emotion-83 emotion-84"
+                href="/pidgin"
+              >
+                <span
+                  id="dropdownNavigation-home"
+                >
+                  Home
+                </span>
+              </a>
+            </li>
+            <li
+              class="emotion-81 emotion-82"
+              role="listitem"
+            >
+              <a
+                aria-labelledby="dropdownNavigation-nigeria"
+                class="emotion-83 emotion-84"
+                href="/pidgin/topics/c2dwqd1zr92t"
+              >
+                <span
+                  id="dropdownNavigation-nigeria"
+                >
+                  Nigeria
+                </span>
+              </a>
+            </li>
+            <li
+              class="emotion-81 emotion-82"
+              role="listitem"
+            >
+              <a
+                aria-labelledby="dropdownNavigation-africa"
+                class="emotion-83 emotion-84"
+                href="/pidgin/topics/c404v061z85t"
+              >
+                <span
+                  id="dropdownNavigation-africa"
+                >
+                  Africa
+                </span>
+              </a>
+            </li>
+            <li
+              class="emotion-81 emotion-82"
+              role="listitem"
+            >
+              <a
+                aria-labelledby="dropdownNavigation-world"
+                class="emotion-83 emotion-84"
+                href="/pidgin/topics/c0823e52dd0t"
+              >
+                <span
+                  id="dropdownNavigation-world"
+                >
+                  World
+                </span>
+              </a>
+            </li>
+            <li
+              class="emotion-81 emotion-82"
+              role="listitem"
+            >
+              <a
+                aria-labelledby="dropdownNavigation-video"
+                class="emotion-83 emotion-84"
+                href="/pidgin/media/video"
+              >
+                <span
+                  id="dropdownNavigation-video"
+                >
+                  Video
+                </span>
+              </a>
+            </li>
+            <li
+              class="emotion-81 emotion-82"
+              role="listitem"
+            >
+              <a
+                aria-labelledby="dropdownNavigation-sport"
+                class="emotion-83 emotion-84"
+                href="/pidgin/topics/cjgn7gv77vrt"
+              >
+                <span
+                  id="dropdownNavigation-sport"
+                >
+                  Sport
+                </span>
+              </a>
+            </li>
+            <li
+              class="emotion-81 emotion-82"
+              role="listitem"
+            >
+              <a
+                aria-labelledby="dropdownNavigation-entertainment"
+                class="emotion-83 emotion-84"
+                href="/pidgin/topics/cqywjyzk2vyt"
+              >
+                <span
+                  id="dropdownNavigation-entertainment"
+                >
+                  Entertainment
+                </span>
+              </a>
+            </li>
+            <li
+              class="emotion-81 emotion-82"
+              role="listitem"
+            >
+              <a
+                aria-labelledby="dropdownNavigation-most-popular"
+                class="emotion-83 emotion-84"
+                href="/pidgin/popular/read"
+              >
+                <span
+                  id="dropdownNavigation-most-popular"
+                >
+                  Most popular
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>
+`;

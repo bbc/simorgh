@@ -3,16 +3,16 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import arabic from '#legacy/gel-foundations/src/scripts/arabic';
-import { pashto as brandSVG } from '#legacy/psammead-assets/src/svgs';
+} from '#psammead/psammead-styles/src/colours';
+import arabic from '#psammead/gel-foundations/src/scripts/arabic';
+import brandSVG from '#lib/chameleonLogos/pashto';
 import {
   F_REITH_QALAM_REGULAR,
   F_REITH_QALAM_BOLD,
-} from '#legacy/psammead-styles/src/fonts';
-import '#legacy/psammead-locales/moment/ps';
-import '#legacy/moment-timezone-include/tz/GMT';
-import jalaali from '#legacy/psammead-calendars/src';
+} from '#psammead/psammead-styles/src/fonts';
+import '#psammead/psammead-locales/moment/ps';
+import '#psammead/moment-timezone-include/tz/GMT';
+import jalaali from '#psammead/psammead-calendars/src';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -244,6 +244,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'د ویډیو تشریح، ',
           text: 'خبرداری:‌ ښايي درېیمګړي ته اړوند منځپانګه کې اعلانونه وي',
+          articleText:
+            'خبرداری: بي بي سي د بهرنیو وېبپاڼو د منځپانګې مسؤله نه ده',
+          articleAdditionalText:
+            'په %provider_name%  کې منځپانګه ښايي خبرتیاوې ولري.',
         },
         fallback: {
           text: 'منځپانګه نه شته',

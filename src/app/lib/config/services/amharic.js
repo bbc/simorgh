@@ -3,15 +3,15 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import noAscendersOrDescenders from '#legacy/gel-foundations/src/scripts/no-ascenders-or-descenders';
-import { amharic as brandSVG } from '#legacy/psammead-assets/src/svgs';
+} from '#psammead/psammead-styles/src/colours';
+import noAscendersOrDescenders from '#psammead/gel-foundations/src/scripts/no-ascenders-or-descenders';
+import brandSVG from '#lib/chameleonLogos/amharic';
 import {
   F_NOTO_SANS_ETHIOPIC_BOLD,
   F_NOTO_SANS_ETHIOPIC_REGULAR,
-} from '#legacy/psammead-styles/src/fonts';
-import '#legacy/moment-timezone-include/tz/Africa/Addis_Ababa';
-import '#legacy/psammead-locales/moment/am';
+} from '#psammead/psammead-styles/src/fonts';
+import '#psammead/moment-timezone-include/tz/Africa/Addis_Ababa';
+import '#psammead/psammead-locales/moment/am';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -224,6 +224,8 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'የቪዲዮ መግለጫ, ',
           text: 'ማሳሰቢያ፡ የሦስተኛ ወገን ይዘቶች ማስታወቂያ ሊኖራቸው ይችላል',
+          articleText: 'ማሳሰቢያ: በሌሎች ገጾች ላይ ላሉ ይዘቶች ቢቢሲ ኃላፊነት አይወስድም።',
+          articleAdditionalText: '%provider_name%] ማስታወቂያ ሊኖረው ይችላል።',
         },
         fallback: {
           text: 'የሚፈልጉት ይዘት የለም',

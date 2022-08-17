@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import { igbo as brandSVG } from '#legacy/psammead-assets/src/svgs';
-import cyrillicAndLatin from '#legacy/gel-foundations/src/scripts/latin-and-cyrillic';
-import '#legacy/psammead-locales/moment/ig';
-import '#legacy/moment-timezone-include/tz/Africa/Lagos';
+} from '#psammead/psammead-styles/src/colours';
+import brandSVG from '#lib/chameleonLogos/igbo';
+import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import '#psammead/psammead-locales/moment/ig';
+import '#psammead/moment-timezone-include/tz/Africa/Lagos';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -232,6 +232,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Aha onyonyo, ',
           text: 'Warning: Third party content may contain adverts',
+          articleText: "Warning: BBC amaghị maka ihe ndị si n'ọbaozi ndị ọzọ.",
+          articleAdditionalText:
+            '%provider_name% mgbasaozi azụmaahịa nwereike ịdị na ya',
         },
         fallback: {
           text: 'Content is not available',

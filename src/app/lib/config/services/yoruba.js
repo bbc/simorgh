@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import { yoruba as brandSVG } from '#legacy/psammead-assets/src/svgs';
-import cyrillicAndLatin from '#legacy/gel-foundations/src/scripts/latin-and-cyrillic';
-import '#legacy/psammead-locales/moment/yo';
-import '#legacy/moment-timezone-include/tz/Africa/Lagos';
+} from '#psammead/psammead-styles/src/colours';
+import brandSVG from '#lib/chameleonLogos/yoruba';
+import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import '#psammead/psammead-locales/moment/yo';
+import '#psammead/moment-timezone-include/tz/Africa/Lagos';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -228,6 +228,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Àkọlé fídíò, ',
           text: 'Warning: Third party content may contain adverts',
+          articleText:
+            'Warning: The BBC is not responsible for the content of external sites.',
+          articleAdditionalText: '%provider_name% content may contain adverts.',
         },
         fallback: {
           text: 'Content is not available',

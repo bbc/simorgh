@@ -33,14 +33,14 @@ A click event is also fired to Optimizely using the same mechanism, but only if 
 
 ### Props
 
-| Argument          | Type    | Required | Example                                                                                                                                                                                                              |
-| ----------------- | ------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| campaignID        | string  | no       | Provide this to override the `campaignID` provided by the `EventTrackingContext` component. This is useful for specific campaigns where you want to use a custom campaign ID                                         |
-| componentName     | string  | yes      | The name of the component or an url encoded title of a promo e.g. `most_read` or `This%20is%20a%20promo%20title`.                                                                                                    |
-| format            | string  | no       | Can be used to track things like the position of a promo e.g. `[CHD=promo::2]`                                                                                                                                       |
-| url               | string  | no       | If the component being tracked changes the location of the user upon click then it's necessary to include the URL through this prop.                                                                                 |
-| preventNavigation | boolean | no       | Use this if you need to perform any additional tasks after sending the click event by setting to `true` and awaiting the event handler callback. Ensure you redirect the user to their destination when you are done |
-| optimizely | object | no       | Need to provide this prop if event tracking is needed for Optimizely, the standard method is to consume the Optimizely context via React's `useContext` and imported from the Optimizely SDK `import { OptimizelyContext } from '@optimizely/react-sdk';`, the HOC `withOptimizelyProvider` needs to be located higher up in the component tree as well for this to work. |
+| Argument          | Type    | Required | Example                                                                                                                                                                                                                                                                                                                                                                   |
+| ----------------- | ------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| campaignID        | string  | no       | Provide this to override the `campaignID` provided by the `EventTrackingContext` component. This is useful for specific campaigns where you want to use a custom campaign ID                                                                                                                                                                                              |
+| componentName     | string  | yes      | The name of the component or an url encoded title of a promo e.g. `most_read` or `This%20is%20a%20promo%20title`.                                                                                                                                                                                                                                                         |
+| format            | string  | no       | Can be used to track things like the position of a promo e.g. `[CHD=promo::2]`                                                                                                                                                                                                                                                                                            |
+| url               | string  | no       | If the component being tracked changes the location of the user upon click then it's necessary to include the URL through this prop.                                                                                                                                                                                                                                      |
+| preventNavigation | boolean | no       | Use this if you need to perform any additional tasks after sending the click event by setting to `true` and awaiting the event handler callback. Ensure you redirect the user to their destination when you are done                                                                                                                                                      |
+| optimizely        | object  | no       | Need to provide this prop if event tracking is needed for Optimizely, the standard method is to consume the Optimizely context via React's `useContext` and imported from the Optimizely SDK `import { OptimizelyContext } from '@optimizely/react-sdk';`, the HOC `withOptimizelyProvider` needs to be located higher up in the component tree as well for this to work. |
 
 ### Usage
 
@@ -149,7 +149,7 @@ const TopStories = () => {
  */
 
 import { useContext } from 'react';
-import withOptimizelyProvider from '#app/containers/PageHandlers/withOptimizelyProvider';
+import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 
 const Promo = () => {

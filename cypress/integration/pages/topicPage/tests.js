@@ -38,9 +38,77 @@ export default ({ service, pageType, variant }) => {
       });
       cy.log(`topic id ${topicId}`);
     });
+    describe(`Page content`, () => {
+      it('should render a H1, which contains/displays topic title', () => {
+        cy.log(Cypress.env('currentPath'));
 
+        cy.get('h1').should('contain', topicTitle);
+      });
+      it('should render the correct number of items', () => {
+        cy.log(numberOfItems);
+        // Checks number of items on page
+        cy.get('[data-testid="topic-promos"]')
+          .children()
+          .its('length')
+          .should('eq', numberOfItems);
+      });
+      it('First item has correct headline', () => {
+        cy.log(firstItemHeadline);
+        // Goes down into the first item's h2 text and compares to title
+        cy.get('[data-testid="topic-promos"]')
+          .children()
+          .first()
+          .within(() => {
+            cy.get('h2').should('have.text', firstItemHeadline);
+          });
+      });
+      it('Clicking the first item should navigate to the correct page (goes to live article)', () => {
+        // Goes down into the first item's href
+        cy.get('[data-testid="topic-promos"]')
+          .children()
+          .first()
+          .within(() => {
+            cy.get('a')
+              .should('have.attr', 'href')
+              .then($href => {
+                cy.log($href);
+
+                // Clicks the first item, then checks the page navigates to has the expected url
+                cy.get('a').click();
+                cy.url()
+                  .should('eq', $href)
+                  .then(url => {
+                    // Check the page navigated to has the short headline that was on the topic item
+                    cy.request(`${url}.json`).then(({ body }) => {
+                      if (body.metadata.locators.cpsUrn) {
+                        cy.log('cps article');
+                        const { shortHeadline } = body.promo.headlines;
+                        expect(shortHeadline).to.equal(firstItemHeadline);
+                      }
+                      if (body.promo.locators.optimoUrn) {
+                        cy.log('optimo article');
+                        cy.window().then(win => {
+                          const jsonData = win.SIMORGH_DATA.pageData;
+                          const headline =
+                            jsonData.promo.headlines.promoHeadline.blocks[0]
+                              .model.blocks[0].model.text;
+                          cy.log(
+                            jsonData.promo.headlines.promoHeadline.blocks[0]
+                              .model.blocks[0].model.text,
+                          );
+                          expect(headline).to.equal(firstItemHeadline);
+                        });
+                      }
+                    });
+                  });
+              });
+          });
+      });
+    });
     describe(`Pagination`, () => {
       it('should show pagination if there is more than one page', () => {
+        // First return to the topics page. Last test has page on article
+        cy.go('back');
         cy.log(`pagecount is ${pageCount}`);
         // Checks pagination only is on page if there is more than one page
         if (pageCount > 1) {
@@ -101,7 +169,7 @@ export default ({ service, pageType, variant }) => {
         if (pageCount > 1) {
           cy.get('[data-testid="topic-pagination"] > ul > li').last().click();
           cy.url().should('include', `?page=${pageCount}`);
-          cy.get('[data-testid="topic-promos"] li');
+          cy.get('[data-testid="curation-grid-normal"]');
         } else {
           cy.log('No pagination as there is only one page');
         }
@@ -173,72 +241,6 @@ export default ({ service, pageType, variant }) => {
         } else {
           cy.log('Not a script switch service');
         }
-      });
-    });
-    describe(`Page content`, () => {
-      it('should render a H1, which contains/displays topic title', () => {
-        cy.log(Cypress.env('currentPath'));
-
-        cy.get('h1').should('contain', topicTitle);
-      });
-      it('should render the correct number of items', () => {
-        cy.log(numberOfItems);
-        // Checks number of items on page
-        cy.get('[data-testid="topic-promos"]')
-          .children()
-          .its('length')
-          .should('eq', numberOfItems);
-      });
-      it('First item has correct headline', () => {
-        cy.log(firstItemHeadline);
-        // Goes down into the first item's h2 text and compares to title
-        cy.get('[data-testid="topic-promos"]')
-          .children()
-          .first()
-          .within(() => {
-            cy.get('h2').should('have.text', firstItemHeadline);
-          });
-      });
-      it('Clicking the first item should navigate to the correct page (goes to live article)', () => {
-        // Goes down into the first item's href
-        cy.get('[data-testid="topic-promos"]')
-          .children()
-          .first()
-          .within(() => {
-            cy.get('a')
-              .should('have.attr', 'href')
-              .then($href => {
-                cy.log($href);
-                // Clicks the first item, then checks the page navigates to has the expected url
-                cy.get('a').click();
-                cy.url()
-                  .should('eq', $href)
-                  .then(url => {
-                    // Check the page navigated to has the short headline that was on the topic item
-                    cy.request(`${url}.json`).then(({ body }) => {
-                      if (body.metadata.locators.cpsUrn) {
-                        cy.log('cps article');
-                        const { shortHeadline } = body.promo.headlines;
-                        expect(shortHeadline).to.equal(firstItemHeadline);
-                      }
-                      if (body.promo.locators.optimoUrn) {
-                        cy.log('optimo article');
-                        cy.window().then(win => {
-                          const jsonData = win.SIMORGH_DATA.pageData;
-                          const headline =
-                            jsonData.promo.headlines.promoHeadline.blocks[0]
-                              .model.blocks[0].model.text;
-                          cy.log(
-                            jsonData.promo.headlines.promoHeadline.blocks[0]
-                              .model.blocks[0].model.text,
-                          );
-                          expect(headline).to.equal(firstItemHeadline);
-                        });
-                      }
-                    });
-                  });
-              });
-          });
       });
     });
   });

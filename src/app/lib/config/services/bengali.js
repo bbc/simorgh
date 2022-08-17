@@ -3,15 +3,15 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import bengali from '#legacy/gel-foundations/src/scripts/bengali';
-import { bengali as brandSVG } from '#legacy/psammead-assets/src/svgs';
+} from '#psammead/psammead-styles/src/colours';
+import bengali from '#psammead/gel-foundations/src/scripts/bengali';
+import brandSVG from '#lib/chameleonLogos/bangla';
 import {
   F_NOTO_SERIF_BENGALI_BOLD,
   F_NOTO_SERIF_BENGALI_REGULAR,
-} from '#legacy/psammead-styles/src/fonts';
-import '#legacy/moment-timezone-include/tz/Asia/Dhaka';
-import '#legacy/psammead-locales/moment/bn';
+} from '#psammead/psammead-styles/src/fonts';
+import '#psammead/moment-timezone-include/tz/Asia/Dhaka';
+import '#psammead/psammead-locales/moment/bn';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -237,6 +237,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'ভিডিওর ক্যাপশান: ',
           text: 'সতর্কবাণী: তৃতীয়পক্ষের কন্টেন্টে বিজ্ঞাপন থাকতে পারে',
+          articleText:
+            'সতর্কবাণী: বিবিসির নয় এমন ওয়েবসাইটের কনটেন্টের জন্য বিবিসি দায়ী না',
+          articleAdditionalText: '%provider_name% কনটেন্টে বিজ্ঞাপন থাকতে পারে',
         },
         fallback: {
           text: 'ছবির কপিরাইট',

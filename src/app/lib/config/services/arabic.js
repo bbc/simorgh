@@ -3,15 +3,15 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import arabic from '#legacy/gel-foundations/src/scripts/arabic';
-import { arabic as brandSVG } from '#legacy/psammead-assets/src/svgs';
+} from '#psammead/psammead-styles/src/colours';
+import arabic from '#psammead/gel-foundations/src/scripts/arabic';
+import brandSVG from '#lib/chameleonLogos/arabic';
 import {
   F_REITH_QALAM_REGULAR,
   F_REITH_QALAM_BOLD,
-} from '#legacy/psammead-styles/src/fonts';
-import '#legacy/psammead-locales/moment/ar';
-import '#legacy/moment-timezone-include/tz/GMT';
+} from '#psammead/psammead-styles/src/fonts';
+import '#psammead/psammead-locales/moment/ar';
+import '#psammead/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -258,6 +258,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'التعليق على الفيديو، ',
           text: 'تحذير: المحتوى من طرف ثالث قد يتضمن إعلانات',
+          articleText: 'تحذير: بي بي سي غير مسؤولة عن محتوى المواقع الخارجية',
+          articleAdditionalText:
+            'المحتوى في موقع %provider_name% قد يتضمن إعلانات',
         },
         fallback: {
           text: 'المحتوى غير متاح',

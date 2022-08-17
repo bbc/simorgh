@@ -3,17 +3,17 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import latinDiacritics from '#legacy/gel-foundations/src/scripts/latin-with-diacritics';
+} from '#psammead/psammead-styles/src/colours';
+import latinDiacritics from '#psammead/gel-foundations/src/scripts/latin-with-diacritics';
 import {
   F_REITH_SANS_BOLD,
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_LIGHT,
-} from '#legacy/psammead-styles/src/fonts';
-import { mundo as brandSVG } from '#legacy/psammead-assets/src/svgs';
-import '#legacy/moment-timezone-include/tz/GMT';
-import '#legacy/psammead-locales/moment/es';
+} from '#psammead/psammead-styles/src/fonts';
+import brandSVG from '#lib/chameleonLogos/mundo';
+import '#psammead/moment-timezone-include/tz/GMT';
+import '#psammead/psammead-locales/moment/es';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -239,6 +239,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Título del video, ',
           text: 'Advertencia: El contenido de sitios externos y terceras partes puede contener publicidad',
+          articleText:
+            'Advertencia: La BBC no se hace responsable por el contenido de sitios externos.',
+          articleAdditionalText:
+            'Este contenido de %provider_name% puede contener publicidad.',
         },
         fallback: {
           text: 'Contenido no disponible',

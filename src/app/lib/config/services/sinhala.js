@@ -3,15 +3,15 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#legacy/psammead-styles/src/colours';
-import sinhalese from '#legacy/gel-foundations/src/scripts/sinhalese';
-import { sinhala as brandSVG } from '#legacy/psammead-assets/src/svgs';
+} from '#psammead/psammead-styles/src/colours';
+import sinhalese from '#psammead/gel-foundations/src/scripts/sinhalese';
+import brandSVG from '#lib/chameleonLogos/sinhala';
 import {
   F_NOTO_SERIF_SINHALA_BOLD,
   F_NOTO_SERIF_SINHALA_REGULAR,
-} from '#legacy/psammead-styles/src/fonts';
-import '#legacy/moment-timezone-include/tz/GMT';
-import '#legacy/psammead-locales/moment/si';
+} from '#psammead/psammead-styles/src/fonts';
+import '#psammead/moment-timezone-include/tz/GMT';
+import '#psammead/psammead-locales/moment/si';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -237,6 +237,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'වීඩියෝ ශීර්ෂ වැකිය, ',
           text: 'අනතුරු ඇඟවීමයි: බීබීසී නොවන වාර්තාවල වෙළෙඳ දැන්වීම් අඩංගු විය හැකිය',
+          articleText:
+            'අනතුරු ඇඟවීමයි: බාහිර වෙබ් අඩවිවල අන්තර්ගතය සඳහා BBCය වගකියනු නොලැබේ.',
+          articleAdditionalText:
+            '%provider_name% අන්තර්ගතයේ දැන්වීම් අඩංගු විය හැකි ය.',
         },
         fallback: {
           text: 'මෙහි අන්තර්ගතය නැත',
