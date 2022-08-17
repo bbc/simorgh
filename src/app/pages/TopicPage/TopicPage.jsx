@@ -64,19 +64,23 @@ const TitleWrapper = styled.div`
 
 const TopicPage = ({ pageData }) => {
   const { lang, translations } = useContext(ServiceContext);
-  const { title, description, imageData, promos, pageCount, activePage } =
+  const { title, description, imageData, curations, pageCount, activePage } =
     pageData;
 
   const { enabled: adsEnabled } = useToggle('ads');
   const { showAdsBasedOnLocation } = useContext(RequestContext);
 
-  const promoEntities = promos.map(promo => ({
-    '@type': 'Article',
-    name: promo.title,
-    headline: promo.title,
-    url: promo.link,
-    dateCreated: promo.firstPublished,
-  }));
+  const linkedDataEntities = curations
+    .map(({ summaries }) =>
+      summaries.map(summary => ({
+        '@type': 'Article',
+        name: summary.title,
+        headline: summary.title,
+        url: summary.link,
+        dateCreated: summary.firstPublished,
+      })),
+    )
+    .flat();
 
   const { pageXOfY, previousPage, nextPage, page } = {
     pageXOfY: 'Page {x} of {y}',
@@ -116,7 +120,7 @@ const TopicPage = ({ pageData }) => {
             type="CollectionPage"
             seoTitle={title}
             headline={title}
-            entities={promoEntities}
+            entities={linkedDataEntities}
           />
           <TitleWrapper>
             <InlineWrapper>
@@ -125,11 +129,18 @@ const TopicPage = ({ pageData }) => {
             </InlineWrapper>
             {description && <TopicDescription>{description}</TopicDescription>}
           </TitleWrapper>
-          <Curation
-            visualStyle={VISUAL_STYLE.NONE}
-            visualProminance={VISUAL_PROMINANCE.NORMAL}
-            promos={promos}
-          />
+          {curations.map(
+            ({ summaries, curationId, title: curationTitle, link }) => (
+              <Curation
+                key={curationId}
+                visualStyle={VISUAL_STYLE.NONE}
+                visualProminance={VISUAL_PROMINANCE.NORMAL}
+                promos={summaries}
+                title={curationTitle}
+                link={link}
+              />
+            ),
+          )}
           <Pagination
             activePage={activePage}
             pageCount={pageCount}
@@ -147,7 +158,7 @@ const TopicPage = ({ pageData }) => {
 TopicPage.propTypes = {
   pageData: shape({
     title: string.isRequired,
-    promos: arrayOf(shape({})).isRequired,
+    curations: arrayOf(shape({})).isRequired,
   }).isRequired,
 };
 
