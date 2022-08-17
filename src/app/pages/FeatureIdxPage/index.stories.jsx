@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 import afriqueData from '#data/afrique/cpsAssets/reduced-48465371';

@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { oneOfType, func, shape, any } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import Canonical from './index.canonical';

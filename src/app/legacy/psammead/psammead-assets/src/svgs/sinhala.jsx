@@ -1,3 +1,5 @@
+import React from 'react';
+
 const height = 24.59;
 const width = 241.5665;
 const sinhala = {

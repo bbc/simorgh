@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import React, { memo } from 'react';
 import { string } from 'prop-types';
 import styled from '@emotion/styled';
 import {

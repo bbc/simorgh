@@ -1,3 +1,4 @@
+import React from 'react';
 import { string } from 'prop-types';
 import styled from '@emotion/styled';
 import Paragraph from '#psammead/psammead-paragraph/src';

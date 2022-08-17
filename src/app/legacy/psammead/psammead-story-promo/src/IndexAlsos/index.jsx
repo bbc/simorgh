@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
+import React from 'react';
 import styled from '@emotion/styled';
 import { node, string, shape } from 'prop-types';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';

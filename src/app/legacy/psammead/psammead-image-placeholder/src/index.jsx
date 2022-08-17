@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from '@emotion/styled';
 import { number, bool, objectOf, string } from 'prop-types';
 import { C_LUNAR, C_SHADOW } from '#psammead/psammead-styles/src/colours';

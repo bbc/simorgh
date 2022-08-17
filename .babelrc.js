@@ -65,7 +65,7 @@ module.exports = api => {
         corejs: '3',
       },
     ],
-    ['@babel/preset-react', { runtime: 'automatic' }], // transform JSX to JS
+    '@babel/preset-react', // transform JSX to JS
     '@babel/preset-typescript',
   ];
 

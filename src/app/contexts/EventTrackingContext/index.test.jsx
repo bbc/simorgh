@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-console */
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { render, screen } from '@testing-library/react';
 
 import { RequestContextProvider } from '#contexts/RequestContext';

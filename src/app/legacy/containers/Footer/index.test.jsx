@@ -1,3 +1,4 @@
+import React from 'react';
 import { render } from '@testing-library/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { C_POSTBOX, C_WHITE } from '#psammead/psammead-styles/src/colours';

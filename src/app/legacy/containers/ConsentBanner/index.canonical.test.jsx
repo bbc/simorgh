@@ -1,4 +1,5 @@
 /* eslint-disable global-require */
+import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import Cookies from 'js-cookie';
 

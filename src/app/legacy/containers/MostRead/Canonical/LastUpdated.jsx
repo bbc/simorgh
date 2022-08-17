@@ -1,3 +1,4 @@
+import React from 'react';
 import { number, string, shape } from 'prop-types';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import Timestamp from '#psammead/psammead-timestamp-container/src';

@@ -1,3 +1,4 @@
+import React from 'react';
 import { GridWrapper } from '#components/Grid';
 import ImageContainer from '.';
 import {

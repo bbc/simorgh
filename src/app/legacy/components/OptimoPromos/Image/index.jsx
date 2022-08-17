@@ -1,3 +1,4 @@
+import React from 'react';
 import { string, number } from 'prop-types';
 import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
 import StyledImage from './index.styles';

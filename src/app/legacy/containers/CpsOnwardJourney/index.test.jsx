@@ -1,3 +1,4 @@
+import React from 'react';
 import { render } from '@testing-library/react';
 import { C_GHOST, C_EBON } from '#psammead/psammead-styles/src/colours';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
