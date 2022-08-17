@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { arrayOf, oneOf, shape, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import CurationGrid from './CurationGrid';

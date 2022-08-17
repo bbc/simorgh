@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { withKnobs } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import { withServicesKnob } from '../../../../legacy/psammead/psammead-storybook-helpers/src';

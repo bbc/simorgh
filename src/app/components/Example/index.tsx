@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 // This file exists so that Babel is able to compile.
 // Delete this file when we create our first tsx component.
 
