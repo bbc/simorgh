@@ -114,6 +114,7 @@ export const service = {
         },
       },
       byline: {
+        author: 'Barreessaa',
         articleInformation: 'Odeeffannoo barreeffamichaa',
         published: 'Maxxanfame',
         reportingFrom: 'Gabaasni irraati',
