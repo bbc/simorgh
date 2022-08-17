@@ -37,7 +37,7 @@ const Byline = ({ blocks, children }: Props) => {
   const authorTranslated = pathOr('Author', ['byline', 'author'], translations);
   const jobRoleTranslated = pathOr('Role', ['byline', 'role'], translations);
   const publishedTranslated = pathOr(
-    'Published, ',
+    'Published',
     ['byline', 'published'],
     translations,
   );

@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import Byline from '.';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import ArticleTimestamp from '../../../legacy/containers/ArticleTimestamp';
 import {
   bylineWithNoRole,
   bylineWithNoAuthor,
@@ -28,8 +29,8 @@ describe('Byline', () => {
     const author = screen.getByText('Single Byline (all values)');
     const role = screen.getByText('Test');
 
-    expect(author).toBeTruthy();
-    expect(role).toBeTruthy();
+    expect(author).toBeInTheDocument();
+    expect(role).toBeInTheDocument();
   });
 
   it('Should return null when there is no role in the data', () => {
@@ -49,12 +50,90 @@ describe('Byline', () => {
   });
 
   it('should render a section with role region', () => {
-    const { container } = render(
-      <FixtureByline fixture={bylineWithNoAuthor} service="news" />,
-    );
+    render(<FixtureByline fixture={bylineWithNameAndRole} service="news" />);
+
+    const region = screen.getByRole('region');
+    expect(region).toBeInTheDocument();
   });
-  it('should render a list', () => {});
-  it('should render timestamp if passed as a children', () => {});
-  it('should correctly traslate author announcement', () => {});
-  it('should correctly translate role announcement', () => {});
+  it('should render a list when required data is passed correctly', () => {
+    render(<FixtureByline fixture={bylineWithNameAndRole} service="news" />);
+
+    const list = screen.getByRole('list');
+    expect(list).toBeInTheDocument();
+  });
+
+  it('should render all listitems correctyle', () => {
+    render(<FixtureByline fixture={bylineWithNameAndRole} service="news" />);
+
+    const listItems = screen.getAllByRole('listitem');
+    expect(listItems.length).toBe(2);
+  });
+
+  it('should correctly render Timestamp when passeed as a children', () => {
+    render(
+      <FixtureByline fixture={bylineWithNameAndRole} service="news">
+        <ArticleTimestamp
+          firstPublished={1660658887}
+          lastPublished={1660658887}
+          popOut={false}
+        />
+      </FixtureByline>,
+    );
+
+    const timestamp = screen.getByText('20 January 1970');
+    expect(timestamp).toBeInTheDocument();
+  });
+
+  it('should correctly render an extra listitem for Timestamp', () => {
+    render(
+      <FixtureByline fixture={bylineWithNameAndRole} service="news">
+        <ArticleTimestamp
+          firstPublished={1660658887}
+          lastPublished={1660658887}
+          popOut={false}
+        />
+      </FixtureByline>,
+    );
+    const listItems = screen.getAllByRole('listitem');
+
+    expect(listItems.length).toBe(3);
+  });
+
+  it.each`
+    expectation    | info           | text
+    ${'Author'}    | ${'author'}    | ${'Author,'}
+    ${'Role'}      | ${'role'}      | ${'Role,'}
+    ${'Published'} | ${'timestamp'} | ${'Published,'}
+  `('should correctly announce $expectation for $info', ({ text }) => {
+    render(
+      <FixtureByline fixture={bylineWithNameAndRole} service="news">
+        <ArticleTimestamp
+          firstPublished={1660658887}
+          lastPublished={1660658887}
+          popOut={false}
+        />
+      </FixtureByline>,
+    );
+    const findText = screen.getByText(text);
+    expect(findText).toBeInTheDocument();
+  });
+
+  it.each`
+    info           | translation
+    ${'author'}    | ${'Author,'}
+    ${'role'}      | ${'Role,'}
+    ${'timestamp'} | ${'Published,'}
+  `('should translate ${info} announcement correctly', ({ translation }) => {
+    render(
+      <FixtureByline fixture={bylineWithNameAndRole} service="afaaronomoo">
+        <ArticleTimestamp
+          firstPublished={1660658887}
+          lastPublished={1660658887}
+          popOut={false}
+        />
+      </FixtureByline>,
+    );
+    const findTranslation = screen.getByText(translation);
+    expect(findTranslation).toBeInTheDocument();
+  });
 });
