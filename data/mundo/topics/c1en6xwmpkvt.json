@@ -1,0 +1,244 @@
+{
+  "data": {
+    "title": "Colombia Peace Agreement",
+    "description": "Peace agreement between the Colombian government and FARC",
+    "imageData": {
+      "url": "https://ichef.bbci.co.uk/news/png/480/cpsdevpb/162f/test/04adc6f0-1312-11ed-adc3-595fb3bc204b.png",
+      "urlTemplate": "https://ichef.bbci.co.uk/news/png/{width}/cpsdevpb/162f/test/04adc6f0-1312-11ed-adc3-595fb3bc204b.png",
+      "originalSize": { "width": 456, "height": 456 },
+      "altText": "Highland Cow",
+      "copyright": "RM",
+      "type": "badge"
+    },
+    "curations": [
+      {
+        "summaries": [
+          {
+            "title": "El poder del \"chilango\" llegó a Londres 14",
+            "type": "article",
+            "firstPublished": "2016-05-05T07:38:30.000Z",
+            "link": "https://www.bbc.com/mundo/vert-earth-23038377",
+            "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/17654/test/_63482859_orange1.jpg",
+            "description": "A Los de Abajo los encontramos en el legendario Marquee de Londres, casa de grandes como Jimi Hendrix, U2, REM y The Who.",
+            "imageAlt": "Orange 1",
+            "id": "ae7c9f51-3144-ba4b-a881-f88822b36c8c"
+          },
+          {
+            "title": "El conflictivo pasado con Venezuela de Rex Tillerson, nuevo secretario de Estado de EEUU",
+            "type": "article",
+            "firstPublished": "2017-02-03T11:26:55.000Z",
+            "link": "https://www.bbc.com/mundo/23100317",
+            "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/167B2/test/_63528029_036820129-1.jpg",
+            "description": "Es posiblemente en lo único que se ponen de acuerdo gobierno y oposición en Venezuela: ambos tienen esperanzas en una mejor relación con Estados Unidos y que eso les ayude en sus objetivos contrapuestos.",
+            "imageAlt": "ExxonMobil Chairman and CEO Rex Tillerson speaks during the IHS CERAWeek 2015 energy conference in Houston, Texas April 21, 2015",
+            "id": "ff4f3677-0f70-574e-b129-6b3396788390"
+          },
+          {
+            "title": "Qué hace que los chilenos sean tan resistentes a los terremotos",
+            "type": "article",
+            "firstPublished": "2017-02-03T11:38:04.000Z",
+            "link": "https://www.bbc.com/mundo/23100229",
+            "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/3AEA/test/_63528051_000870367-1.jpg",
+            "description": "A medida que salía de la región del Maule, azotada esta semana por los insaciables incendios forestales de Chile, me fui involucrando en la historia que vine a contar.",
+            "imageAlt": "Santiago de Chile",
+            "id": "1ff8ff1a-9570-4b44-b90a-73cabca969bb"
+          },
+          {
+            "title": "¿Por qué dejarán de sonar las campanas del Big Ben?",
+            "type": "audio",
+            "firstPublished": "2016-05-04T12:42:40.000Z",
+            "link": "https://www.bbc.com/mundo/deportes-23038138",
+            "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/17DC0/test/_63482779_p0133f26.jpg",
+            "description": "En esta nueva serie, los periodistas de la BBC te ayudan a practicar inglés con los titulares de las noticias de la semana. Mira el video y aprende nuevo vocabulario.",
+            "imageAlt": "Aprende inglés con las noticias",
+            "id": "fb03a8e4-6993-8e4e-9fc0-bd94eca3c31f"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:d0348c91-39f5-4224-91cf-6ca9f2812376",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "visualProminence": "NORMAL"
+      },
+      {
+        "summaries": [
+          {
+            "title": "El video de prueba",
+            "type": "video",
+            "firstPublished": "2022-05-12T10:41:21.000Z",
+            "link": "https://www.bbc.com/mundo/23048701",
+            "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/FA0D/test/_63931046_p00wjk8v.jpg",
+            "description": "Es porque le falta el sumario?",
+            "imageAlt": "Al Tag",
+            "id": "c696c8a1-8939-3e4b-b87b-5aa1de1b4c96"
+          },
+          {
+            "title": "Anuncio del acuerdo",
+            "type": "video",
+            "firstPublished": "2022-05-12T10:41:14.000Z",
+            "link": "https://www.bbc.com/mundo/noticias-internacional-23452772",
+            "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/ABED/test/_63931044_p0182w7g.jpg",
+            "description": "This is the summary",
+            "imageAlt": "Keyframe #2",
+            "id": "2a8bce57-5456-4ca6-af4a-be5172718345"
+          },
+          {
+            "title": "Hippopotamos tomando el sol",
+            "type": "video",
+            "firstPublished": "2022-05-12T10:41:02.000Z",
+            "link": "https://www.bbc.com/mundo/noticias-america-latina-23049956",
+            "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/1482D/test/_63931048_p012z4jy.jpg",
+            "description": "Two baby hippos have been born at a zoo in Mexico.",
+            "imageAlt": "Two baby hippos have been born at a zoo in Mexico.",
+            "id": "04107481-098f-6f49-a710-fc5494bf7991"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:vivo:curation:22f2633b-f31e-4195-81d6-5dd5f766ca42",
+        "curationType": "vivo-stream",
+        "position": 1,
+        "title": "Video",
+        "link": "https://www.google.co.uk/",
+        "visualProminence": "NORMAL"
+      },
+      {
+        "summaries": [
+          {
+            "title": "El video de prueba",
+            "type": "video",
+            "firstPublished": "2022-05-12T10:41:21.000Z",
+            "link": "https://www.bbc.com/mundo/23048701",
+            "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/FA0D/test/_63931046_p00wjk8v.jpg",
+            "description": "Es porque le falta el sumario?",
+            "imageAlt": "Al Tag",
+            "id": "c696c8a1-8939-3e4b-b87b-5aa1de1b4c96"
+          },
+          {
+            "title": "Anuncio del acuerdo",
+            "type": "video",
+            "firstPublished": "2022-05-12T10:41:14.000Z",
+            "link": "https://www.bbc.com/mundo/noticias-internacional-23452772",
+            "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/ABED/test/_63931044_p0182w7g.jpg",
+            "description": "This is the summary",
+            "imageAlt": "Keyframe #2",
+            "id": "2a8bce57-5456-4ca6-af4a-be5172718345"
+          },
+          {
+            "title": "Hippopotamos tomando el sol",
+            "type": "video",
+            "firstPublished": "2022-05-12T10:41:02.000Z",
+            "link": "https://www.bbc.com/mundo/noticias-america-latina-23049956",
+            "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/1482D/test/_63931048_p012z4jy.jpg",
+            "description": "Two baby hippos have been born at a zoo in Mexico.",
+            "imageAlt": "Two baby hippos have been born at a zoo in Mexico.",
+            "id": "04107481-098f-6f49-a710-fc5494bf7991"
+          },
+          {
+            "title": "Un pagina de video de prueba",
+            "type": "audio",
+            "firstPublished": "2020-04-01T13:44:41.000Z",
+            "link": "https://www.bbc.com/mundo/media-23283126",
+            "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/0D05/test/_63733330_p01mt2kt.jpg",
+            "description": "test",
+            "imageAlt": "England star Fran Kirby",
+            "id": "22720ea0-aaf8-8749-afa1-a0b36a632a71"
+          },
+          {
+            "title": "¿Cuán viable es que el petro, la criptomoneda de Venezuela, sirva para aliviar la crisis en el país?",
+            "type": "article",
+            "firstPublished": "2018-06-28T10:07:24.000Z",
+            "link": "https://www.bbc.com/mundo/noticias-america-latina-23206504",
+            "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/105E0/test/_63604076_000233729-1.jpg",
+            "description": "El presidente de Venezuela anuncia la creación del petro, una criptomoneda respaldada en \"petróleo, oro, gas y diamantes\"",
+            "imageAlt": "A group of venezuelan protesters with banners",
+            "id": "c9f32707-e700-ea45-b009-5834a3d27190"
+          },
+          {
+            "title": "El conflictivo pasado con Venezuela de Rex Tillerson, nuevo secretario de Estado de EEUU",
+            "type": "article",
+            "firstPublished": "2017-02-03T11:26:55.000Z",
+            "link": "https://www.bbc.com/mundo/23100317",
+            "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/167B2/test/_63528029_036820129-1.jpg",
+            "description": "Es posiblemente en lo único que se ponen de acuerdo gobierno y oposición en Venezuela: ambos tienen esperanzas en una mejor relación con Estados Unidos y que eso les ayude en sus objetivos contrapuestos.",
+            "imageAlt": "ExxonMobil Chairman and CEO Rex Tillerson speaks during the IHS CERAWeek 2015 energy conference in Houston, Texas April 21, 2015",
+            "id": "ff4f3677-0f70-574e-b129-6b3396788390"
+          },
+          {
+            "title": "Otro video",
+            "type": "video",
+            "firstPublished": "2016-06-06T20:04:53.000Z",
+            "link": "https://www.bbc.com/mundo/noticias-america-latina-23050039",
+            "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/79D4/test/_63488113_p013p2z1.jpg",
+            "description": "Bu, tek başına hayatta kalma mücadelesi veren 16 yaşındaki Suriyeli bir göçmen çocuğun hikayesi...",
+            "imageAlt": "Keyframe #1",
+            "id": "aa301157-71b6-2e48-a783-c873f7a15650"
+          },
+          {
+            "title": "¿Por qué dejarán de sonar las campanas del Big Ben?",
+            "type": "audio",
+            "firstPublished": "2016-05-04T12:42:40.000Z",
+            "link": "https://www.bbc.com/mundo/deportes-23038138",
+            "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/17DC0/test/_63482779_p0133f26.jpg",
+            "description": "En esta nueva serie, los periodistas de la BBC te ayudan a practicar inglés con los titulares de las noticias de la semana. Mira el video y aprende nuevo vocabulario.",
+            "imageAlt": "Aprende inglés con las noticias",
+            "id": "fb03a8e4-6993-8e4e-9fc0-bd94eca3c31f"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:vivo:curation:8c1500fa-88b3-4465-98f0-76e69259ed9e",
+        "curationType": "vivo-stream",
+        "position": 3,
+        "title": "Analysis",
+        "visualProminence": "NORMAL"
+      },
+      {
+        "summaries": [
+          {
+            "title": "El poder del \"chilango\" llegó a Londres 14",
+            "type": "article",
+            "firstPublished": "2016-05-05T07:38:30.000Z",
+            "link": "https://www.bbc.com/mundo/vert-earth-23038377",
+            "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/17654/test/_63482859_orange1.jpg",
+            "description": "A Los de Abajo los encontramos en el legendario Marquee de Londres, casa de grandes como Jimi Hendrix, U2, REM y The Who.",
+            "imageAlt": "Orange 1",
+            "id": "ae7c9f51-3144-ba4b-a881-f88822b36c8c"
+          },
+          {
+            "title": "El conflictivo pasado con Venezuela de Rex Tillerson, nuevo secretario de Estado de EEUU",
+            "type": "article",
+            "firstPublished": "2017-02-03T11:26:55.000Z",
+            "link": "https://www.bbc.com/mundo/23100317",
+            "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/167B2/test/_63528029_036820129-1.jpg",
+            "description": "Es posiblemente en lo único que se ponen de acuerdo gobierno y oposición en Venezuela: ambos tienen esperanzas en una mejor relación con Estados Unidos y que eso les ayude en sus objetivos contrapuestos.",
+            "imageAlt": "ExxonMobil Chairman and CEO Rex Tillerson speaks during the IHS CERAWeek 2015 energy conference in Houston, Texas April 21, 2015",
+            "id": "ff4f3677-0f70-574e-b129-6b3396788390"
+          },
+          {
+            "title": "Qué hace que los chilenos sean tan resistentes a los terremotos",
+            "type": "article",
+            "firstPublished": "2017-02-03T11:38:04.000Z",
+            "link": "https://www.bbc.com/mundo/23100229",
+            "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/3AEA/test/_63528051_000870367-1.jpg",
+            "description": "A medida que salía de la región del Maule, azotada esta semana por los insaciables incendios forestales de Chile, me fui involucrando en la historia que vine a contar.",
+            "imageAlt": "Santiago de Chile",
+            "id": "1ff8ff1a-9570-4b44-b90a-73cabca969bb"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:d0348c91-39f5-4224-91cf-6ca9f2812376",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "title": "More Analysis",
+        "visualProminence": "NORMAL"
+      }
+    ],
+    "activePage": null,
+    "pageCount": null,
+    "variantTopicId": null
+  },
+  "contentType": "application/json; charset=utf-8"
+}

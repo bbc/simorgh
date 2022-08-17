@@ -1,6 +1,7 @@
-import { arrayOf, oneOf, shape } from 'prop-types';
+import { arrayOf, oneOf, shape, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import CurationGrid from './CurationGrid';
+import Subheading from './Subhead';
 
 export const VISUAL_STYLE = {
   NONE: 'NONE',
@@ -17,19 +18,31 @@ const components = {
   },
 };
 
-const Curation = ({ visualStyle, visualProminance, promos }) => {
+const Curation = ({ visualStyle, visualProminance, promos, title, link }) => {
   const Component = pathOr(
     CurationGrid,
     [visualStyle, visualProminance],
     components,
   );
-  return <Component promos={promos} />;
+  return (
+    <>
+      {title && <Subheading href={link}>{title}</Subheading>}
+      <Component promos={promos} />
+    </>
+  );
 };
 
 Curation.propTypes = {
   visualStyle: oneOf(Object.values(VISUAL_STYLE)).isRequired,
   visualProminance: oneOf(Object.values(VISUAL_PROMINANCE)).isRequired,
   promos: arrayOf(shape({})).isRequired,
+  title: string,
+  link: string,
+};
+
+Curation.defaultProps = {
+  title: '',
+  link: '',
 };
 
 export default Curation;
