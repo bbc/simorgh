@@ -1,3 +1,4 @@
+import React from 'react';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';

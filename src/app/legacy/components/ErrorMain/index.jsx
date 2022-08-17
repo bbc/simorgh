@@ -1,3 +1,4 @@
+import React from 'react';
 import { string, arrayOf, shape } from 'prop-types';
 import styled from '@emotion/styled';
 import InlineLink from '#psammead/psammead-inline-link/src';

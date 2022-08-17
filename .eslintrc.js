@@ -24,8 +24,6 @@ module.exports = {
   ignorePatterns: ['**/tz/**', 'index.stories.jsx', 'index.amp.stories.jsx'],
   plugins: ['prettier', 'json', 'jsx-a11y', 'react-hooks', 'cypress', 'import'],
   rules: {
-    'react/jsx-uses-react': 'off',
-    'react/react-in-jsx-scope': 'off',
     'react/forbid-foreign-prop-types': 'error',
     'react/jsx-one-expression-per-line': 'off',
     'react/jsx-props-no-spreading': 'off',

@@ -1,4 +1,4 @@
-import { Children, cloneElement, forwardRef } from 'react';
+import React, { Children, cloneElement, forwardRef } from 'react';
 import styled from '@emotion/styled';
 import { node, string } from 'prop-types';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';

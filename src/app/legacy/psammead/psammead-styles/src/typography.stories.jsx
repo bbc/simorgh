@@ -1,3 +1,4 @@
+import React from 'react';
 import { shape, func } from 'prop-types';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import { bool, string, arrayOf, element, shape } from 'prop-types';
 import styled from '@emotion/styled';

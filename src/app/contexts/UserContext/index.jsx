@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import React, { useState } from 'react';
 import { node } from 'prop-types';
 import {
   getCookiePolicy,
@@ -7,7 +7,7 @@ import {
 } from './cookies';
 import Chartbeat from './Chartbeat';
 
-export const UserContext = createContext({});
+export const UserContext = React.createContext({});
 
 export const UserContextProvider = ({ children }) => {
   const [cookiePolicy, setCookiePolicy] = useState(getCookiePolicy());

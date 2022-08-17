@@ -1,3 +1,4 @@
+import React from 'react';
 import { string } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';

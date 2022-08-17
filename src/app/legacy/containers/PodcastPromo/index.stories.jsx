@@ -1,3 +1,4 @@
+import React from 'react';
 import { latin } from '#psammead/gel-foundations/src/scripts';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';

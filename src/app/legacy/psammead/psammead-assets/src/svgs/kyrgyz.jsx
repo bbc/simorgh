@@ -1,3 +1,5 @@
+import React from 'react';
+
 const height = 24.59;
 const width = 326.9954;
 const kyrgyz = {

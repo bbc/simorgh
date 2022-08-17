@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+import React from 'react';
 import { render, waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { CanonicalSocialEmbed, AmpSocialEmbed } from './index';

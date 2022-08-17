@@ -1,3 +1,4 @@
+import React from 'react';
 import { arrayOf, shape, bool } from 'prop-types';
 import { render } from '@testing-library/react';
 

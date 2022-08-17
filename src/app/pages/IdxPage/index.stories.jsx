@@ -1,3 +1,4 @@
+import React from 'react';
 import persianAfghanistanIdxData from '#data/persian/afghanistan';
 import ukraineInRussianIdxData from '#data/ukrainian/ukraine_in_russian';
 import IdxPageWithContext from './testHelpers';

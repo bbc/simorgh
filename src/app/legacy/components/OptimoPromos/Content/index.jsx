@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { string, bool } from 'prop-types';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';

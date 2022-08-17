@@ -1,3 +1,4 @@
+import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { BrowserRouter } from 'react-router-dom';
 import { ServiceContextProvider } from '#contexts/ServiceContext';

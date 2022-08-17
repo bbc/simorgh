@@ -1,4 +1,5 @@
 /* eslint-disable react/no-danger */
+import React from 'react';
 import { string, number } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import styled from '@emotion/styled';

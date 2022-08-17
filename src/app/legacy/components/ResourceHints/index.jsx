@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { arrayOf, string } from 'prop-types';
 
 const ResourceHints = ({ assetOrigins }) => (

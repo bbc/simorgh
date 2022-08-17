@@ -1,5 +1,4 @@
-import { useContext } from 'react';
-import * as React from 'react';
+import React, { useContext } from 'react';
 import { render } from '@testing-library/react';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import * as getStatsDestination from './getStatsDestination';

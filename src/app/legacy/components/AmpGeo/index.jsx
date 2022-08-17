@@ -1,3 +1,5 @@
+import React from 'react';
+
 const configuration = {
   AmpBind: true,
   ISOCountryGroups: {

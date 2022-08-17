@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { memo, useEffect } from 'react';
+import React, { memo, useEffect } from 'react';
 import { func, shape, string } from 'prop-types';
 import styled from '@emotion/styled';
 import useScript from './useScript';

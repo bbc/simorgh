@@ -1,3 +1,4 @@
+import React from 'react';
 import { element, shape, oneOf } from 'prop-types';
 import { EPISODE_STATUS } from '..';
 import ErrorMessage from '../ErrorMessage';

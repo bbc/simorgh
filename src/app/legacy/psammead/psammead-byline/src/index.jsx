@@ -1,3 +1,4 @@
+import React from 'react';
 import { string, shape } from 'prop-types';
 import styled from '@emotion/styled';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';

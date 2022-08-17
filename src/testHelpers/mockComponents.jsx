@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { oneOfType, string, object } from 'prop-types';
 
 // eslint-disable-next-line import/prefer-default-export
