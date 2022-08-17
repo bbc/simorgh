@@ -48,7 +48,6 @@ module.exports = (on, config) => {
           },
         ],
       },
-      plugins: [new MomentTimezoneInclude({ startYear: 2010, endYear: 2025 })],
     },
   };
 
