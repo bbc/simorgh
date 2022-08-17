@@ -12,9 +12,9 @@ When Simorgh and Psammead components were first created, they used Styled Compon
 
 Here are some of the benefits of using the `css` prop:
 
-- The Emotion docs state that using the CSS prop is the primary way to style components. This puts in a good position if Emotion ever decides to drop support for the `styled` API
-- With the styled API you're more likely to pollute the dom with incorrect attributes — a common problem when passing props to styled components to achieve dynamic styles.
-- The `css` object is typechecked and provides autocompletion for the CSS property with a description of the property and all possible values e.g. you type `display` and autocomplete gives you a list to choose from `block, flex, inline-flex, grid` etc. TypeScript will also highlight an incorrect value for a property and fail a type check.
+- The Emotion docs state that using the CSS prop is the primary way to style components. This puts us in a good position if Emotion ever decides to drop support for the `styled` API
+- With the styled API you're more likely to pollute the DOM with incorrect attributes — a common problem when passing props to styled components to achieve dynamic styles.
+- The CSS object is typechecked and provides autocompletion for the CSS property with a description of the property and all possible values e.g. you type `display` and autocomplete gives you a list to choose from `block, flex, inline-flex, grid` etc. TypeScript will also highlight an incorrect value for a property and fail a type check.
 - Naming components using the `styled` API (e.g. `StyledWrapper`, `StyledDateTime`, `StyledSpan`) can be burdensome especially when applying small custom styles, such as altering margins or padding. This results in many components which lack the obvious semantic importance you get when using the actual HTML elements. Using the `css` prop avoids having to create and name React components for every element that needs styles.
 - Style reuse is easier because you can pass in an array of style objects to the css prop
 
