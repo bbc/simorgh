@@ -1,4 +1,5 @@
-import { storiesOf } from '@storybook/react';
+import React from 'react';
+import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
 import { text, select, boolean, withKnobs } from '@storybook/addon-knobs';
 import * as typography from '#psammead/gel-foundations/src/typography';
 import {

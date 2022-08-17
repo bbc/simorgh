@@ -1,3 +1,4 @@
+import React from 'react';
 import { render, waitFor } from '@testing-library/react';
 import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/schedule.json';
 import RadioSchedulesWithContext from './utilities/testHelpers';

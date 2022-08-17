@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { shape, node, string, number } from 'prop-types';
 import styled from '@emotion/styled';
 import pick from 'ramda/src/pick';

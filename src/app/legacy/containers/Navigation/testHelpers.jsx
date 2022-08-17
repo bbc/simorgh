@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const dropdownTestId = 'dropdown';
 export const scrollableTestId = 'scrollable-list';
 

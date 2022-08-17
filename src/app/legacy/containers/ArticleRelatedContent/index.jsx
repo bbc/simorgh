@@ -1,3 +1,4 @@
+import React from 'react';
 import { arrayOf, shape, string } from 'prop-types';
 import tail from 'ramda/src/tail';
 import identity from 'ramda/src/identity';

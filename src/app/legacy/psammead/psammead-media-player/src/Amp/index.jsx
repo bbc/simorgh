@@ -1,3 +1,4 @@
+import React from 'react';
 import { string, number } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { AmpImg } from '#psammead/psammead-image/src';

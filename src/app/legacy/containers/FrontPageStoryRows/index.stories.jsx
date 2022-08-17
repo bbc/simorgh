@@ -1,3 +1,4 @@
+import React from 'react';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 import Grid from '#components/Grid';
 import { ServiceContextProvider } from '#contexts/ServiceContext';

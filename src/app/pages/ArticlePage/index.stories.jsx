@@ -1,3 +1,4 @@
+import React from 'react';
 import { MemoryRouter } from 'react-router';
 import { withKnobs } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '#contexts/ServiceContext';

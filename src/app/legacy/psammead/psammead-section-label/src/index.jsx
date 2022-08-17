@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from '@emotion/styled';
 import { bool, oneOf, shape, string } from 'prop-types';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';

@@ -1,3 +1,4 @@
+import React from 'react';
 import { node, string } from 'prop-types';
 import { render } from '@testing-library/react';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';

@@ -1,3 +1,4 @@
+import React from 'react';
 import { storiesOf } from '@storybook/react';
 import styled from '@emotion/styled';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';

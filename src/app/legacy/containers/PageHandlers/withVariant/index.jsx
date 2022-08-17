@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
+import React from 'react';
 import { Redirect } from 'react-router-dom';
 import getVariantRedirectUrl from './getVariantRedirectUrl';
 

@@ -1,4 +1,5 @@
 /* eslint react/prop-types: 0 */
+import React from 'react';
 import { bool } from 'prop-types';
 import { C_LUNAR, C_SHADOW } from '#psammead/psammead-styles/src/colours';
 import {

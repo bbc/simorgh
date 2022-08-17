@@ -1,3 +1,4 @@
+import React from 'react';
 import { node, string } from 'prop-types';
 import styled from '@emotion/styled';
 import { C_EBON, C_WHITE } from '#psammead/psammead-styles/src/colours';

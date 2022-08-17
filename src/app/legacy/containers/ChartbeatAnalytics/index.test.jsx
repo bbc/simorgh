@@ -1,3 +1,4 @@
+import React from 'react';
 import { node, string, shape } from 'prop-types';
 import { render } from '@testing-library/react';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';

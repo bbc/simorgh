@@ -1,3 +1,4 @@
+import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { latin } from '#psammead/gel-foundations/src/scripts';
 import Byline from './index';

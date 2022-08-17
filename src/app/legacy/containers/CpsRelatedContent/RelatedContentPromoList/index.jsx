@@ -1,3 +1,4 @@
+import React from 'react';
 import path from 'ramda/src/path';
 import { arrayOf, bool, elementType, shape, string } from 'prop-types';
 import styled from '@emotion/styled';

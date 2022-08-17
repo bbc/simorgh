@@ -1,3 +1,4 @@
+import React from 'react';
 import { render } from '@testing-library/react';
 import path from 'ramda/src/path';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';

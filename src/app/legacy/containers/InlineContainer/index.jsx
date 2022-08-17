@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { inlineModelPropTypes } from '#models/propTypes/inline';
 import Blocks from '../Blocks';

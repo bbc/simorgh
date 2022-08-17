@@ -1,4 +1,4 @@
-import { Fragment, useContext } from 'react';
+import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet';
 import { string, oneOf, elementType } from 'prop-types';
 import styled from '@emotion/styled';
@@ -148,7 +148,7 @@ AmpMostRead.propTypes = {
 AmpMostRead.defaultProps = {
   endpoint: '',
   size: 'default',
-  wrapper: Fragment,
+  wrapper: React.Fragment,
 };
 
 export default AmpMostRead;
