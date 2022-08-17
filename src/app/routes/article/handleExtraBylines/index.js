@@ -5,10 +5,14 @@ export default json => {
   const pageData = clone(json);
   const blocks = path(['content', 'model', 'blocks'], pageData);
 
-  const blocksWithoutExtraByline = blocks.map((block, index) => {
+  let foundFirstByline = false;
+  const blocksWithoutExtraByline = blocks.map(block => {
     const type = path(['type'], block);
-    if (type === 'byline' && index !== 2) {
-      return null;
+    if (type === 'byline') {
+      if (foundFirstByline) {
+        return null;
+      }
+      foundFirstByline = true;
     }
     return block;
   });
