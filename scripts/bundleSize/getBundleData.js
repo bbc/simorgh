@@ -94,7 +94,7 @@ const getPageBundleData = () => {
   });
 };
 
-const getServiceBundleData = () =>
+const getServiceConfigBundleData = () =>
   services
     .map(service => {
       const bundlesData = getBundlesData(
@@ -114,5 +114,28 @@ const getServiceBundleData = () =>
       ),
     }));
 
+const getServiceThemeBundleData = () =>
+  services
+    .map(service => {
+      const bundlesData = getBundlesData(
+        jsFiles.filter(file =>
+          file.startsWith(`${bundleType}.themes-${service}`),
+        ),
+      );
+
+      return { serviceName: service, bundles: bundlesData };
+    })
+    .filter(({ bundles }) => bundles.length)
+    .map(({ serviceName, bundles }) => ({
+      serviceName,
+      bundles,
+      totalSize: bundles.reduce((acc, { size }) => acc + size, 0),
+      totalSizeInBytes: bundles.reduce(
+        (acc, { sizeInBytes }) => acc + sizeInBytes,
+        0,
+      ),
+    }));
+
 exports.getPageBundleData = getPageBundleData;
-exports.getServiceBundleData = getServiceBundleData;
+exports.getServiceConfigBundleData = getServiceConfigBundleData;
+exports.getServiceThemeBundleData = getServiceThemeBundleData;
