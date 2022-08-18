@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const envConfig = require('../support/config/envs');
 const { webpackDirAlias } = require('../../dirAlias');
+const MomentTimezoneInclude = require('../../src/app/legacy/psammead/moment-timezone-include/src');
 
 const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
@@ -47,6 +48,7 @@ module.exports = (on, config) => {
           },
         ],
       },
+      plugins: [new MomentTimezoneInclude({ startYear: 2010, endYear: 2025 })],
     },
   };
 
