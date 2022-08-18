@@ -33,7 +33,7 @@ describe('Extra Byline delation', () => {
     description                                                  | testBlock
     ${'not change data when only one byline is present '}        | ${createFixture([headlineBlock, bylineBlock, randomBlock])}
     ${'delete all extra byline when there are multiple bylines'} | ${createFixture([headlineBlock, randomBlock, bylineBlock, bylineBlock, bylineBlock])}
-  `('should $description', ({ testBlock, expected }) => {
+  `('should $description', ({ testBlock }) => {
     const transformedByline = handleBylineBlocks(testBlock);
     const blocks = path(
       ['content', 'model', 'blocks'],
