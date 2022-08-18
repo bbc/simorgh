@@ -81,6 +81,7 @@ describe('cspHeader', () => {
       frameSrcExpectation: [
         ...bbcDomains,
         'https://www.youtube.com',
+        'https://www.youtube-nocookie.com',
         'https://www.instagram.com',
         'https://*.ampproject.net',
         'https://www.riddle.com',
@@ -140,7 +141,12 @@ describe('cspHeader', () => {
         ...bbcDomains,
         'https://modules.wearehearken.eu',
         'https://*.akamaihd.net',
-        'https://europe-west1-bbc-otg-traf-mgr-bq-prod-4591.cloudfunctions.net',
+        'https://cdn.optimizely.com/',
+        'https://logx.optimizely.com/',
+        'https://ws.bbc-reporting-api.app',
+        'https://cognito-identity.eu-west-1.amazonaws.com/',
+        'https://sts.eu-west-1.amazonaws.com/',
+        'https://dataplane.rum.eu-west-1.amazonaws.com/',
         'https://csi.gstatic.com',
         'https://pagead2.googlesyndication.com',
         'https://*.g.doubleclick.net',
@@ -171,6 +177,7 @@ describe('cspHeader', () => {
         'https://chartbeat.com',
         'https://*.chartbeat.com',
         'https://www.youtube.com',
+        'https://www.youtube-nocookie.com',
         'https://platform.twitter.com',
         'https://www.instagram.com',
         'https://syndication.twitter.com',
@@ -192,6 +199,7 @@ describe('cspHeader', () => {
         'https://syndication.twitter.com',
         'https://platform.twitter.com',
         'https://pbs.twimg.com',
+        'https://*.cdninstagram.com',
         'https://i.ytimg.com',
         'https://ton.twimg.com',
         'https://collector.effectivemeasure.net',
@@ -223,6 +231,7 @@ describe('cspHeader', () => {
         'https://www.instagram.com',
         'https://cdn.syndication.twimg.com',
         'https://public.flourish.studio',
+        'https://client.rum.us-east-1.amazonaws.com',
         'https://adservice.google.co.uk',
         'https://adservice.google.com',
         'https://cdn.ampproject.org',
@@ -292,6 +301,7 @@ describe('cspHeader', () => {
       frameSrcExpectation: [
         ...bbcDomains,
         'https://www.youtube.com',
+        'https://www.youtube-nocookie.com',
         'https://www.instagram.com',
         'https://*.ampproject.net',
         'https://www.riddle.com',
@@ -354,7 +364,12 @@ describe('cspHeader', () => {
         'https://modules.wearehearken.eu',
         'https://*.akamaihd.net',
         'https://logws1363.ati-host.net',
-        'https://europe-west1-bbc-otg-traf-mgr-bq-dev-4105.cloudfunctions.net',
+        'https://cdn.optimizely.com/',
+        'https://logx.optimizely.com/',
+        'https://ws.bbc-reporting-api.app',
+        'https://cognito-identity.eu-west-1.amazonaws.com/',
+        'https://sts.eu-west-1.amazonaws.com/',
+        'https://dataplane.rum.eu-west-1.amazonaws.com/',
         'https://csi.gstatic.com',
         'https://pagead2.googlesyndication.com',
         'https://*.g.doubleclick.net',
@@ -385,6 +400,7 @@ describe('cspHeader', () => {
         'https://chartbeat.com',
         'https://*.chartbeat.com',
         'https://www.youtube.com',
+        'https://www.youtube-nocookie.com',
         'https://platform.twitter.com',
         'https://www.instagram.com',
         'https://syndication.twitter.com',
@@ -408,6 +424,7 @@ describe('cspHeader', () => {
         'https://syndication.twitter.com',
         'https://platform.twitter.com',
         'https://pbs.twimg.com',
+        'https://*.cdninstagram.com',
         'https://i.ytimg.com',
         'https://ton.twimg.com',
         'https://collector.effectivemeasure.net',
@@ -441,6 +458,7 @@ describe('cspHeader', () => {
         'https://www.instagram.com',
         'https://cdn.syndication.twimg.com',
         'https://public.flourish.studio',
+        'https://client.rum.us-east-1.amazonaws.com',
         'https://adservice.google.co.uk',
         'https://adservice.google.com',
         'https://cdn.ampproject.org',
@@ -572,7 +590,7 @@ describe('cspHeader', () => {
             `media-src ${mediaSrcExpectation.join(' ')};` +
             `worker-src ${workerSrcExpectation.join(' ')};` +
             `prefetch-src ${prefetchSrcExpectation.join(' ')};` +
-            `report-to default;` +
+            `report-to worldsvc;` +
             `upgrade-insecure-requests`;
 
           expect(headers['Content-Security-Policy']).toEqual(

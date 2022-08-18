@@ -1,9 +1,9 @@
 import React from 'react';
 import { node, string } from 'prop-types';
-import services from '#lib/config/services/loadableConfig';
+import services from '../../lib/config/services/loadableConfig';
+import { getVariant } from '../../lib/utilities/variantHandler';
+import getLangOverride from '../../lib/utilities/langHandler';
 import variantPropType from '../../models/propTypes/variants';
-import { getVariant } from '#lib/utilities/variantHandler';
-import getLangOverride from '#lib/utilities/langHandler';
 
 export const ServiceContext = React.createContext({});
 

@@ -13,6 +13,7 @@ const logCodes = {
   DATA_FETCH_ERROR_SECONDARY_COLUMN: 'data_fetch_error_secondary_column',
   DATA_NOT_FOUND: 'data_response_404',
   DATA_REQUEST_RECEIVED: 'data_request_received',
+  BFF_FETCH_ERROR: 'bff_fetch_error',
 
   // Files
   LOCAL_SENDFILE_ERROR: 'local_sendfile_error',
@@ -51,6 +52,7 @@ const logCodes = {
   SERVER_SIDE_RENDER_REQUEST_RECEIVED: 'ssr_request_received',
   SERVER_SIDE_REQUEST_FAILED: 'ssr_request_failed',
   SERVICE_WORKER_SENDFILE_ERROR: 'server_sendfile_error_sw',
+  SERVER_STATUS_ENDPOINT_ERROR: 'server_status_endpoint_error',
 
   // Config
   CONFIG_REQUEST_RECEIVED: 'config_request_received',

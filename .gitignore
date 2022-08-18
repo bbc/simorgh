@@ -24,3 +24,6 @@ yarn-error.log
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+secret.env
+src/app/legacy/moment-timezone-include/tz
+tsconfig.tsbuildinfo

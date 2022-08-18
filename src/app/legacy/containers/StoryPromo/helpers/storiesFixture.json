@@ -1,0 +1,614 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::index:news/front_page/desktop/domestic",
+    "locators": {
+      "assetUri": "/news/front_page",
+      "cpsUrn": "urn:bbc:content:assetUri:news/front_page",
+      "curie": "http://www.bbc.co.uk/asset/52f3c7b1-83ed-2338-e050-17ac8045cd94/desktop/domestic"
+    },
+    "type": "IDX",
+    "createdBy": "news",
+    "language": "en-gb",
+    "lastUpdated": 1560249022470,
+    "firstPublished": 1499440608,
+    "lastPublished": 1560249011,
+    "options": {
+      "allowAdvertising": true
+    },
+    "analyticsLabels": {
+      "counterName": "news.page",
+      "cps_asset_id": "40423314",
+      "cps_asset_type": "idx"
+    },
+    "tags": {},
+    "version": "v1.0.10",
+    "blockTypes": [
+      "responsive-top-stories",
+      "responsive-cluster",
+      "responsive-must-see",
+      "responsive-inspire",
+      "responsive-in-depth",
+      "special-reports",
+      "featured-site-top-stories"
+    ],
+    "title": "Home",
+    "summary": "Visit BBC News for up-to-the-minute news, breaking news, video, audio and feature stories. BBC News provides trusted World and UK news as well as local and regional perspectives. Also entertainment, business, science, technology and health news."
+  },
+  "content": {
+    "groups": [
+      {
+        "type": "responsive-top-stories",
+        "title": "Top Stories",
+        "maxRelatedLinks": 3,
+        "items": [
+          {
+            "type": "podcast-promotion",
+            "title": "Podcasts",
+            "items": [
+              {
+                "name": "This is a Pidgin podcast",
+                "summary": "BBC Pidgin podcast",
+                "indexImage": {
+                  "id": "63603127",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/119C2/test/_63603127_78f41206-ccc7-43e2-92a1-3255208a606e.jpg",
+                  "path": "/cpsdevpb/119C2/test/_63603127_78f41206-ccc7-43e2-92a1-3255208a606e.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "slavery",
+                  "caption": "Ghanaians in chains in Libya",
+                  "copyrightHolder": "Reuters"
+                },
+                "uri": "http://www.bbc.com",
+                "contentType": "Podcast",
+                "assetTypeCode": "PRO",
+                "timestamp": 1580900812000,
+                "type": "link"
+              }
+            ],
+            "strapline": {
+              "name": "Podcast"
+            },
+            "semanticGroupName": "Podcasts"
+          },
+          {
+            "headlines": {
+              "headline": "Scotland has highest drug death rate in EU"
+            },
+            "locators": {
+              "assetUri": "/news/uk-scotland-48938509",
+              "cpsUrn": "urn:bbc:content:assetUri:news/uk-scotland-48938509"
+            },
+            "summary": "The number of drug-related deaths in the country soared last year, with the rate now three times that of the UK as a whole.",
+            "timestamp": 1560234412000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                },
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "LIV",
+            "indexImage": {
+              "id": "107328539",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/40EB/production/_107891661_mumsister.jpg",
+              "path": "/cpsprodpb/40EB/production/_107891661_mumsister.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Margaret and Kayleigh",
+              "caption": "Jacquie's mother Margaret [left], who died in 2010, with Jacquie's sister Kayleigh, who died in 2007",
+              "copyrightHolder": "Family Handout"
+            },
+            "commentary": {
+              "order": "descending",
+              "assetUUID": "A8F17B8D05CD9549B2905B8C4E2C5019",
+              "channels": {
+                "enhancedmobile": "bbc.cps.asset.48591365_EnhancedMobile",
+                "desktop": "bbc.cps.asset.48591365_HighWeb",
+                "highweb": "bbc.cps.asset.48591365_HighWeb",
+                "mobile": "bbc.cps.asset.48591365_EnhancedMobile"
+              }
+            },
+            "isLive": true,
+            "imageThumbnail": {
+              "id": "107329104",
+              "subType": "index-thumbnail",
+              "href": "http://c.files.bbci.co.uk/40EB/production/_107891661_mumsister.jpg",
+              "path": "/cpsprodpb/40EB/production/_107891661_mumsister.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "Margaret and Kayleigh",
+              "caption": "Jacquie's mother Margaret [left], who died in 2010, with Jacquie's sister Kayleigh, who died in 2007",
+              "copyrightHolder": "Other"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "relatedItems": [
+              {
+                "headlines": {
+                  "headline": "Scotland's drug death crisis in six charts"
+                },
+                "locators": {
+                  "assetUri": "/news/uk-scotland-48853004",
+                  "cpsUrn": "urn:bbc:content:assetUri:/news/uk-scotland-48853004"
+                },
+                "summary": "Nearly 1,200 people died of drug-related deaths in Scotland last year, the highest ever total.",
+                "timestamp": 1560229039000,
+                "cpsType": "STY",
+                "id": "urn:bbc:ares::asset:news/uk-scotland-48853004",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "'I lost my whole family to drugs'"
+                },
+                "locators": {
+                  "assetUri": "/news/uk-scotland-48993861",
+                  "cpsUrn": "urn:bbc:content:assetUri:/news/uk-scotland-48993861"
+                },
+                "summary": "Jacquie says it was like a fire ripping through her family after five relatives died because of drug addiction.",
+                "timestamp": 1552922728000,
+                "cpsType": "STY",
+                "id": "urn:bbc:ares::asset:news/uk-scotland-48993861",
+                "type": "cps"
+              }
+            ],
+            "id": "urn:bbc:ares::asset:news/uk-scotland-48993861",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "BBC Pidgin Minute"
+            },
+            "locators": {
+              "assetUri": "/pidgin/media-44221514",
+              "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-44221514"
+            },
+            "summary": "All the local and world stories that you need to know in 60 seconds!",
+            "timestamp": 1560244488000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                },
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                },
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                },
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07ct6cd",
+              "subType": "clip",
+              "format": "audio",
+              "title": "BBC Pidgin Minute",
+              "synopses": {
+                "short": "BBC Pidgin Minute",
+                "medium": "All the local and world stories that you need to know in 60 seconds!"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07ct6pt.jpg",
+              "embedding": false,
+              "advertising": false,
+              "caption": "BBC Pidgin Minute",
+              "versions": [
+                {
+                  "versionId": "p07ct6cg",
+                  "types": ["Original"],
+                  "duration": 59,
+                  "durationISO8601": "PT59S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableUntil": 1560330010,
+                  "availableFrom": 1560243610
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "107315302",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/4F7F/production/_107315302_p07cr6sy.jpg",
+              "path": "/cpsprodpb/4F7F/production/_107315302_p07cr6sy.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "BBC Pidgin Minute",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "id": "urn:bbc:ares::asset:pidgin/media-44221514",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Chaos and killings: 10 minutes at London Bridge"
+            },
+            "locators": {
+              "assetUri": "/news/uk-48619714",
+              "cpsUrn": "urn:bbc:content:assetUri:/news/uk-48619714"
+            },
+            "summary": "An account of one devastating summer's night in June 2017 when eight people are killed and 48 more injured.",
+            "timestamp": 1560248900000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107331410",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/709E/production/_107903882_p07h198h.jpg",
+              "path": "/cpsprodpb/709E/production/_107903882_p07h198h.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "London Bridge attacks",
+              "copyrightHolder": "ugc paul clarke "
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "id": "urn:bbc:ares::asset:news/uk-49009486",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "MEPs elect first female EU Commission president"
+            },
+            "locators": {
+              "assetUri": "/news/world-europe-49010801",
+              "cpsUrn": "urn:bbc:content:assetUri:news/world-europe-49010801"
+            },
+            "summary": "German Ursula von der Leyen will replace Jean-Claude Juncker on 1 November after a close vote.",
+            "timestamp": 1560247904000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107329121",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/D8FE/production/_107905555_hi055337177.jpg",
+              "path": "/cpsprodpb/D8FE/production/_107905555_hi055337177.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Elected European Commission President Ursula von der Leyen reacts after the vote",
+              "caption": "Elected European Commission President Ursula von der Leyen reacts after the vote",
+              "copyrightHolder": "EPA"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "id": "urn:bbc:ares::asset:pidgin/tori-48579283",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "Top tori"
+        },
+        "semanticGroupName": "Top Stories"
+      },
+      {
+        "type": "featured-site-top-stories",
+        "title": "Congresswomen hit back in Trump race row",
+        "items": [
+          {
+            "name": "Congresswomen hit back in Trump race row",
+            "indexImage": {
+              "id": "101999926",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/4222/production/_107903961_mediaitem107903960.jpg",
+              "path": "/cpsprodpb/4222/production/_107903961_mediaitem107903960.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Donald Trump at White House - 15 July",
+              "copyrightHolder": "EPA"
+            },
+            "uri": "/news/world/us_and_canada",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1528968307000,
+            "type": "link"
+          },
+          {
+            "name": "Audio promo",
+            "summary": "Summary",
+            "indexImage": {
+              "id": "63692548",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/4222/production/_107903961_mediaitem107903960.jpg",
+              "path": "/cpsprodpb/4222/production/_107903961_mediaitem107903960.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "A lone Koala perches in a eucalyptus tree",
+              "caption": "Koalas are from Australia",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "http://www.bbc.com/pidgin",
+            "contentType": "Audio",
+            "assetTypeCode": "PRO",
+            "timestamp": 1565097889000,
+            "type": "link"
+          },
+          {
+            "name": "Age limit for lottery could be raised",
+            "indexImage": {
+              "id": "101972889",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/38A4/production/_107900541_mediaitem107900540.jpg",
+              "path": "/cpsprodpb/38A4/production/_107900541_mediaitem107900540.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "National lottery sign",
+              "caption": "National lottery sign",
+              "copyrightHolder": "PA Media"
+            },
+            "uri": "https://www.bbc.com/news/uk",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1528975335000,
+            "type": "link"
+          },
+          {
+            "name": "How doctors separate twins joined at the head",
+            "indexImage": {
+              "id": "101952925",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/CEBD/production/_101952925_wcbanner-2.png",
+              "path": "/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png",
+              "height": 549,
+              "width": 976,
+              "altText": "Safa and Marwa",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "https://www.bbc.com/pidgin/sport-44425543",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1528978068000,
+            "type": "link"
+          },
+          {
+            "name": "How doctors separate twins joined at the head",
+            "indexImage": {
+              "id": "101952925",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/CEBD/production/_101952925_wcbanner-2.png",
+              "path": "/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png",
+              "height": 549,
+              "width": 976,
+              "altText": "Safa and Marwa",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "https://www.bbc.com/pidgin/sport-44425543",
+            "contentType": "Feature",
+            "assetTypeCode": "PRO",
+            "timestamp": 1528978068001,
+            "type": "link"
+          },
+          {
+            "name": "How doctors separate twins joined at the head - Video",
+            "indexImage": {
+              "id": "101952925",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/CEBD/production/_101952925_wcbanner-2.png",
+              "path": "/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png",
+              "height": 549,
+              "width": 976,
+              "altText": "Safa and Marwa",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "https://www.bbc.com/pidgin/sport-44425543",
+            "contentType": "Video",
+            "assetTypeCode": "PRO",
+            "timestamp": 1528978068000,
+            "type": "link"
+          },
+          {
+            "headlines": {
+              "headline": "Inside Iran: Are Tehran's poor paying the price?"
+            },
+            "locators": {
+              "assetUri": "/news/world-middle-east-49009336",
+              "cpsUrn": "urn:bbc:content:assetUri:news/world-middle-east-49009336"
+            },
+            "summary": "US imposed sanctions are crippling the economy, making food and medicines unaffordable.",
+            "timestamp": 1560233405000,
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07csxg6",
+              "subType": "clip",
+              "format": "video",
+              "title": "Inside Iran: Are Tehran's poor paying the price?",
+              "synopses": {
+                "short": "Inside Iran: Are Tehran's poorest paying the price?",
+                "long": "Donald Trump withdrew from the Iran nuclear deal in 2018 and has imposed ever tightening sanctions on the country in a move designed to force Tehran to curtail their nuclear ambitions. \n\nThe sanctions have led to increased prices and the local currency has fallen significantly. Iranians are being dragged into poverty and the poorest are feeling the effects.\n\nAs tensions rise between Iran, the United States and its allies, the BBC has been given rare access to Iran.\n\nBBC Middle East correspondent Martin Patience, has been in Tehran looking at the impact of sanctions. While in the country, filming access was controlled - as with all foreign media the team was accompanied by a government representative at all times.",
+                "medium": "US imposed sanctions are crippling the economy, making food and medicines unaffordable."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07h1rmc.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "Tehran's poorest hit by US sanctions",
+              "versions": [
+                {
+                  "versionId": "p07h1n7c",
+                  "types": ["Original"],
+                  "duration": 144,
+                  "durationISO8601": "PT2M24S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1560232614
+                }
+              ]
+            },
+            "indexImage": {
+              "id": "107329096",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/7A6C/production/_107904313_p07h1rmc.jpg",
+              "path": "/cpsprodpb/7A6C/production/_107904313_p07h1rmc.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Inside Iran",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:news/world-middle-east-49009336",
+            "type": "cps"
+          },
+          {
+            "name": "VIP abuse accuser 'habitual liar', court hears",
+            "indexImage": {
+              "id": "101890910",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/66FC/production/_107746362_mediaitem107746361.jpg",
+              "path": "/cpsprodpb/66FC/production/_107746362_mediaitem107746361.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Carl Beech",
+              "copyrightHolder": "PA Media"
+            },
+            "uri": "https://www.bbc.com/news/uk",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1528978790000,
+            "type": "link"
+          },
+          {
+            "name": "US Air Force warning over Area 51 Facebook event",
+            "summary": "More than a million people RSVP to an event calling for people to break into the Nevada base.",
+            "indexImage": {
+              "id": "105038413",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/D5DD/production/_107894745_alien976.jpg",
+              "path": "/cpsprodpb/D5DD/production/_107894745_alien976.jpg",
+              "height": 364,
+              "width": 647,
+              "altText": "A Roswell-style alien and UFO",
+              "caption": "Some people believe Area 51 is home to crashed alien spaceships",
+              "copyrightHolder": "Getty Images"
+            },
+            "indexThumbnail": {
+              "id": "97486099",
+              "subType": "index-thumbnail",
+              "href": "http://c.files.bbci.co.uk/D5DD/production/_107894745_alien976.jpg",
+              "path": "/cpsprodpb/D5DD/production/_107894745_alien976.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "A Roswell-style alien and UFO",
+              "caption": "Some people believe Area 51 is home to crashed alien spaceships",
+              "copyrightHolder": "Getty Images"
+            },
+            "uri": "http://www.bbc.com/afrique/37733017",
+            "contentType": "Podcast",
+            "assetTypeCode": "PRO",
+            "timestamp": 1546455546000,
+            "type": "link"
+          },
+          {
+            "name": "Gallery promo",
+            "indexImage": {
+              "id": "63692548",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/14A31/test/_63692548_000327537-1.jpg",
+              "path": "/cpsdevpb/14A31/test/_63692548_000327537-1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "A lone Koala perches in a eucalyptus tree",
+              "caption": "Koalas are from Australia",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "http://www.bbc.com/azeri",
+            "contentType": "Gallery",
+            "assetTypeCode": "PRO",
+            "timestamp": 1565192199000,
+            "type": "link"
+          }
+        ],
+        "strapline": {
+          "name": "2018 World Cup"
+        },
+        "semanticGroupName": "Frequency info"
+      }
+    ]
+  },
+  "promo": {
+    "subType": "IDX",
+    "name": "Home",
+    "uri": "/news/front_page",
+    "id": "urn:bbc:ares::index:news/front_page/mobile/domestic",
+    "type": "simple"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Home",
+      "uri": "/news/front_page",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC News",
+      "uri": "/news",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

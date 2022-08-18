@@ -3,17 +3,17 @@ import { render, act } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import MostReadPage from './MostReadPage';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
+import MostReadPage from './MostReadPage';
 
 fetch.mockResponse(JSON.stringify(pidginMostReadData));
 
 analyticsUtils.getAtUserId = jest.fn();
 
-jest.mock('../../containers/ChartbeatAnalytics', () => {
+jest.mock('../../legacy/containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });

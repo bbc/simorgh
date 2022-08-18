@@ -2,7 +2,7 @@
 
 exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"Skip to content"`;
 
-exports[`Canonical Articles Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598286&amp;s2=64&amp;p=news.articles.c5jje4ejkqvo.page&amp;x1=[urn%3Abbc%3Aoptimo%3Ac5jje4ejkqvo]&amp;x2=[responsive]&amp;x3=[news]&amp;x4=[en-gb]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[The%2BGermans%2Bsolving%2Brising%2Brents%2Bwith%2Bpeople%2Bpower]&amp;x11=[2019-03-27T16%3A13%3A36.863Z]&amp;x12=[2019-03-27T16%3A20%3A33.751Z]\\"/>"`;
+exports[`Canonical Articles Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598286&amp;s2=64&amp;p=news.articles.c5jje4ejkqvo.page&amp;x1=[urn%3Abbc%3Aoptimo%3Aasset%3Ac5jje4ejkqvo]&amp;x2=[responsive]&amp;x3=[news]&amp;x4=[en-gb]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[The%2BGermans%2Bsolving%2Brising%2Brents%2Bwith%2Bpeople%2Bpower]&amp;x11=[2019-03-27T16%3A13%3A36.863Z]&amp;x12=[2019-03-27T16%3A20%3A33.751Z]\\"/>"`;
 
 exports[`Canonical Articles Footer Anchors should match text and url 1`] = `
 Object {
@@ -76,7 +76,7 @@ Object {
 
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/news"`;
 
-exports[`Canonical Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
+exports[`Canonical Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
 
 exports[`Canonical Articles Header I can see the branding 1`] = `"BBC News"`;
 
@@ -162,11 +162,9 @@ exports[`Canonical Articles Image Caption should match text 1`] = `"Image captio
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="group of residents"
-  class="eehpdyc0 bbc-100dhyn e1enwo3v0"
+  class="e3vrtyk0 bbc-rb7xa0 e1mo64ex0"
   height="549"
-  sizes="(min-width: 1008px) 760px, 100vw"
   src="https://ichef.bbci.co.uk/news/640/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg"
-  srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg 800w"
   width="976"
 />
 `;
@@ -327,7 +325,7 @@ exports[`Canonical Articles SEO OG url 1`] = `"http://localhost:7080/news/articl
 
 exports[`Canonical Articles SEO Page title 1`] = `"The Germans solving rising rents with people power - BBC News"`;
 
-exports[`Canonical Articles SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Articles SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Articles SEO Twitter card 1`] = `"summary_large_image"`;
 

@@ -5,13 +5,13 @@ import { render, act } from '@testing-library/react';
 import { StaticRouter } from 'react-router-dom';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import _OnDemandTvPage from './OnDemandTvPage';
 import pashtoPageData from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandTV/getInitialData';
 import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
+import _OnDemandTvPage from './OnDemandTvPage';
 
 const OnDemandTvPage = withMediaError(_OnDemandTvPage);
 
@@ -54,7 +54,7 @@ const renderPage = async ({ pageData, service, isAmp = false }) => {
 
 analyticsUtils.getAtUserId = jest.fn();
 
-jest.mock('../../containers/ChartbeatAnalytics', () => {
+jest.mock('../../legacy/containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });
@@ -210,7 +210,7 @@ it('should show the video player on canonical with no live override', async () =
     .getAttribute('src');
 
   expect(videoPlayerIframeSrc).toEqual(
-    'https://www.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps',
+    '/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps',
   );
 });
 
@@ -253,7 +253,7 @@ it('should show the video player on canonical with live override', async () => {
     .getAttribute('src');
 
   expect(videoPlayerIframeSrc).toEqual(
-    'https://www.test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live',
+    '/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live',
   );
 });
 

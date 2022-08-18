@@ -49,7 +49,7 @@ Object {
 exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "زموږ سره اړیکي",
-  "url": "https://www.bbc.co.uk/send/u50853533",
+  "url": "https://www.bbc.co.uk/pashto/send/u50853533",
 }
 `;
 
@@ -69,7 +69,7 @@ Object {
 
 exports[`Canonical On Demand Audio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pashto"`;
 
-exports[`Canonical On Demand Audio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
+exports[`Canonical On Demand Audio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
 
 exports[`Canonical On Demand Audio Page Header I can see the branding 1`] = `"BBC News, پښتو"`;
 
@@ -327,7 +327,7 @@ exports[`Canonical On Demand Audio Page SEO OG url 1`] = `"http://localhost:7080
 
 exports[`Canonical On Demand Audio Page SEO Page title 1`] = `"ماښامنۍ خپرونه - BBC News پښتو"`;
 
-exports[`Canonical On Demand Audio Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical On Demand Audio Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical On Demand Audio Page SEO Twitter card 1`] = `"summary_large_image"`;
 

@@ -6,14 +6,15 @@ import { renderHook } from '@testing-library/react-hooks';
 import { render, act, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { waitFor } from '@testing-library/dom';
-import useClickTrackerHandler from '.';
-import pidginData from './fixtureData/tori-51745682.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import * as trackingToggle from '#hooks/useTrackingToggle';
+import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
+import pidginData from './fixtureData/tori-51745682.json';
+import useClickTrackerHandler from '.';
 
 const trackingToggleSpy = jest.spyOn(trackingToggle, 'default');
 
@@ -310,6 +311,52 @@ describe('Click tracking', () => {
     expect(urlToObject(viewEventUrl).searchParams.atc).toEqual(
       'PUB-[custom-campaign]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[]',
     );
+  });
+
+  it('should fire event to Optimizely if optimizely object exists', async () => {
+    const mockOptimizelyTrack = jest.fn();
+    const mockUserId = 'test';
+    const mockAttributes = { foo: 'bar' };
+    const mockOverrideAttributes = {
+      ...mockAttributes,
+      [`clicked_${OPTIMIZELY_CONFIG.viewClickAttributeId}`]: true,
+    };
+    const mockOptimizely = {
+      optimizely: {
+        track: mockOptimizelyTrack,
+        user: { attributes: mockAttributes, id: mockUserId },
+      },
+    };
+
+    const { getByTestId } = render(
+      <WithContexts pageData={pidginData}>
+        <TestComponent hookProps={{ ...defaultProps, ...mockOptimizely }} />
+      </WithContexts>,
+    );
+
+    fireEvent.click(getByTestId('test-component'));
+
+    expect(mockOptimizelyTrack).toHaveBeenCalledTimes(1);
+    expect(mockOptimizelyTrack).toHaveBeenCalledWith(
+      'component_clicks',
+      mockUserId,
+      mockOverrideAttributes,
+    );
+  });
+
+  it('should not fire event to Optimizely if optimizely object is undefined', async () => {
+    const mockOptimizelyTrack = jest.fn();
+    const mockOptimizely = undefined;
+
+    const { getByTestId } = render(
+      <WithContexts pageData={pidginData}>
+        <TestComponent hookProps={{ ...defaultProps, ...mockOptimizely }} />
+      </WithContexts>,
+    );
+
+    fireEvent.click(getByTestId('test-component'));
+
+    expect(mockOptimizelyTrack).toHaveBeenCalledTimes(0);
   });
 });
 

@@ -1,5 +1,10 @@
 import pipe from 'ramda/src/pipe';
 import path from 'ramda/src/path';
+import {
+  MEDIA_ASSET_PAGE,
+  STORY_PAGE,
+  PHOTO_GALLERY_PAGE,
+} from '#app/routes/utils/pageTypes';
 import fetchPageData from '../../utils/fetchPageData';
 import {
   augmentWithTimestamp,
@@ -20,13 +25,10 @@ import addAnalyticsCounterName from './addAnalyticsCounterName';
 import convertToOptimoBlocks from './convertToOptimoBlocks';
 import processUnavailableMedia from './processUnavailableMedia';
 import processMostWatched from '../../utils/processMostWatched';
-import {
-  MEDIA_ASSET_PAGE,
-  STORY_PAGE,
-  PHOTO_GALLERY_PAGE,
-} from '#app/routes/utils/pageTypes';
 import getAdditionalPageData from '../utils/getAdditionalPageData';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
+import isListWithLink from '../../utils/isListWithLink';
+import addIndexToBlockGroups from '../../utils/sharedDataTransformers/addIndexToBlockGroups';
 
 export const only =
   (pageTypes, transformer) =>
@@ -57,9 +59,13 @@ const processOptimoBlocks = toggles =>
     addBylineBlock,
     addRecommendationsBlock,
     addMpuBlock,
-    addIdsToBlocks,
     applyBlockPositioning,
+    addIdsToBlocks,
     cpsOnlyOnwardJourneys,
+    addIndexToBlockGroups(isListWithLink, {
+      blockGroupType: 'listWithLink',
+      pathToBlockGroup: ['model', 'blocks', 0],
+    }),
   );
 
 // Here pathname is passed as a prop specifically for CPS includes
@@ -103,6 +109,7 @@ export default async ({
       variant,
       env,
     });
+
     const processedAdditionalData = processMostWatched({
       data: additionalPageData,
       service,

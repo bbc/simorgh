@@ -98,7 +98,7 @@ exports[`AMP Photo Gallery Page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=62&p=sport%3A%3Amundo.sport.photo_gallery.36935058.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3A08e22e90-7361-cd47-b586-7cb53fc5a012]&x2=[amp]&x3=[news-mundo]&x4=[es]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[R%C3%ADo%2B2016%2C%2Bel%2Bantes%2By%2Bel%2Bahora%3A%2Bc%C3%B3mo%2Bha%2Bcambiado%2Bla%2Bropa%2Bdeportiva%2Ben%2Bm%C3%A1s%2Bde%2Bun%2Bsiglo%2Bde%2Bjuegos%2Bol%C3%ADmpicos%2B-%2BBBC%2BNews%2BMundo]&x11=[2016-08-07T09%3A21%3A02.000Z]&x12=[2016-08-07T09%3A21%3A02.000Z]&x13=[Olympics~Brazil~Rio%2B2016~Sport]&x14=[0d205538-c52e-41c7-a4a1-50efd6c1da59~15f1bcf6-b6ab-48e8-b708-efed41e43d31~1d2e1514-faa8-425d-8481-a1cc4da6cc24~4063f80f-cccc-44c8-9449-5ca44e4c8592]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=62&p=sport%3A%3Amundo.sport.photo_gallery.36935058.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x2=[amp]&x3=[news-mundo]&x4=[es]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[R%C3%ADo%2B2016%2C%2Bel%2Bantes%2By%2Bel%2Bahora%3A%2Bc%C3%B3mo%2Bha%2Bcambiado%2Bla%2Bropa%2Bdeportiva%2Ben%2Bm%C3%A1s%2Bde%2Bun%2Bsiglo%2Bde%2Bjuegos%2Bol%C3%ADmpicos%2B-%2BBBC%2BNews%2BMundo]&x11=[2016-08-07T09%3A21%3A02.000Z]&x12=[2016-08-07T09%3A21%3A02.000Z]&x13=[Olympics~Brazil~Rio%2B2016~Sport]&x14=[0d205538-c52e-41c7-a4a1-50efd6c1da59~15f1bcf6-b6ab-48e8-b708-efed41e43d31~1d2e1514-faa8-425d-8481-a1cc4da6cc24~4063f80f-cccc-44c8-9449-5ca44e4c8592]&ref=\${documentReferrer}",
   },
   "transport": Object {
     "beacon": false,
@@ -182,8 +182,8 @@ Object {
 
 exports[`AMP Photo Gallery Page Footer Anchors should match text and url 7`] = `
 Object {
-  "text": "Contacta a la BBC",
-  "url": "https://www.bbc.co.uk/send/u50853489",
+  "text": "Escribe a BBC Mundo",
+  "url": "https://www.bbc.co.uk/mundo/send/u50853489",
 }
 `;
 
@@ -203,7 +203,7 @@ Object {
 
 exports[`AMP Photo Gallery Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
-exports[`AMP Photo Gallery Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+exports[`AMP Photo Gallery Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
 exports[`AMP Photo Gallery Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
@@ -252,35 +252,35 @@ Object {
 exports[`AMP Photo Gallery Page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "Economía",
-  "url": "/mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342",
+  "url": "/mundo/topics/c06gq9v4xp3t",
 }
 `;
 
 exports[`AMP Photo Gallery Page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "Ciencia",
-  "url": "/mundo/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+  "url": "/mundo/topics/ckdxnw959n7t",
 }
 `;
 
 exports[`AMP Photo Gallery Page Header Navigation link should match text and url 9`] = `
 Object {
   "text": "Salud",
-  "url": "/mundo/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+  "url": "/mundo/topics/cpzd498zkxgt",
 }
 `;
 
 exports[`AMP Photo Gallery Page Header Navigation link should match text and url 10`] = `
 Object {
   "text": "Cultura",
-  "url": "/mundo/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864",
+  "url": "/mundo/topics/c2dwq9zyv4yt",
 }
 `;
 
 exports[`AMP Photo Gallery Page Header Navigation link should match text and url 11`] = `
 Object {
   "text": "Tecnología",
-  "url": "/mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a",
+  "url": "/mundo/topics/cyx5krnw38vt",
 }
 `;
 
@@ -314,9 +314,20 @@ exports[`AMP Photo Gallery Page Image should match snapshot 1`] = `
   height="549"
   layout="responsive"
   src="https://ichef.bbci.co.uk/news/640/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg"
-  srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 480w, https://ichef.bbci.co.uk/news/549/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 549w"
+  srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg.webp 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg.webp 480w, https://ichef.bbci.co.uk/news/549/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg.webp 549w"
   width="549"
-/>
+>
+  <amp-img
+    alt="Tenista de 1904"
+    attribution="Getty Images"
+    fallback=""
+    height="549"
+    layout="responsive"
+    src="https://ichef.bbci.co.uk/news/640/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg"
+    srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 480w, https://ichef.bbci.co.uk/news/549/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 549w"
+    width="549"
+  />
+</amp-img>
 `;
 
 exports[`AMP Photo Gallery Page Main heading should match text 1`] = `"Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos"`;
@@ -451,7 +462,7 @@ Object {
       "image": Object {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://ichef.test.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg",
+        "url": "https://ichef.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg",
         "width": 1024,
       },
       "inLanguage": Object {
@@ -475,7 +486,7 @@ Object {
         "name": "BBC News Mundo",
         "publishingPrinciples": "https://www.bbc.com/mundo/institucional-51359666",
       },
-      "thumbnailUrl": "https://ichef.test.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg",
+      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg",
       "url": "http://localhost:7080/mundo/deportes-36935058",
     },
   ],
@@ -484,7 +495,7 @@ Object {
 
 exports[`AMP Photo Gallery Page SEO OG description 1`] = `"La estética de la ropa deportiva ha ido evolucionando en cada edición olímpica, pero no solo se trata de lucir bien, pues en varias competencias contar con un traje adecuado puede ser un factor que contribuya al triunfo."`;
 
-exports[`AMP Photo Gallery Page SEO OG image 1`] = `"https://ichef.test.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg"`;
+exports[`AMP Photo Gallery Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg"`;
 
 exports[`AMP Photo Gallery Page SEO OG image alt 1`] = `"Gimnastas en los primeros juegos"`;
 
@@ -500,7 +511,7 @@ exports[`AMP Photo Gallery Page SEO OG url 1`] = `"http://localhost:7080/mundo/d
 
 exports[`AMP Photo Gallery Page SEO Page title 1`] = `"Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos - BBC News Mundo"`;
 
-exports[`AMP Photo Gallery Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP Photo Gallery Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP Photo Gallery Page SEO Twitter card 1`] = `"summary_large_image"`;
 
@@ -510,7 +521,7 @@ exports[`AMP Photo Gallery Page SEO Twitter description 1`] = `"La estética de 
 
 exports[`AMP Photo Gallery Page SEO Twitter image alt 1`] = `"Gimnastas en los primeros juegos"`;
 
-exports[`AMP Photo Gallery Page SEO Twitter image src 1`] = `"https://ichef.test.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg"`;
+exports[`AMP Photo Gallery Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg"`;
 
 exports[`AMP Photo Gallery Page SEO Twitter site 1`] = `"@bbcmundo"`;
 

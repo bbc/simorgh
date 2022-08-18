@@ -4,10 +4,11 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon/index';
-import { isValidClick } from './clickTypes';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useTrackingToggle from '#hooks/useTrackingToggle';
+import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
+import { isValidClick } from './clickTypes';
 
 const EVENT_TYPE = 'click';
 
@@ -17,6 +18,7 @@ const useClickTrackerHandler = (props = {}) => {
   const url = path(['url'], props);
   const advertiserID = path(['advertiserID'], props);
   const format = path(['format'], props);
+  const optimizely = path(['optimizely'], props);
 
   const { trackingIsEnabled } = useTrackingToggle(componentName);
   const [clicked, setClicked] = useState(false);
@@ -57,6 +59,19 @@ const useClickTrackerHandler = (props = {}) => {
           event.stopPropagation();
           event.preventDefault();
 
+          if (optimizely) {
+            const overrideAttributes = {
+              ...optimizely.user.attributes,
+              [`clicked_${OPTIMIZELY_CONFIG.viewClickAttributeId}`]: true,
+            };
+
+            optimizely.track(
+              'component_clicks',
+              optimizely.user.id,
+              overrideAttributes,
+            );
+          }
+
           try {
             await sendEventBeacon({
               type: EVENT_TYPE,
@@ -73,6 +88,9 @@ const useClickTrackerHandler = (props = {}) => {
             });
           } finally {
             if (nextPageUrl && !preventNavigation) {
+              if (optimizely) {
+                optimizely.close();
+              }
               window.location.assign(nextPageUrl);
             }
           }
@@ -93,6 +111,7 @@ const useClickTrackerHandler = (props = {}) => {
       url,
       advertiserID,
       format,
+      optimizely,
     ],
   );
 };

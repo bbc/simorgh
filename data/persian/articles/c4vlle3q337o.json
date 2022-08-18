@@ -4,6 +4,9 @@
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c4vlle3q337o"
     },
+    "analyticsLabels": {
+      "contentId": "urn:bbc:optimo:asset:c4vlle3q337o"
+    },
     "type": "article",
     "createdBy": "",
     "created": 1535122662000,

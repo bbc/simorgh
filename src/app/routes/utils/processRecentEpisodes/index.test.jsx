@@ -1,7 +1,7 @@
 import assocPath from 'ramda/src/assocPath';
-import processRecentEpisodes from '.';
 import videoPageData from '#data/afrique/bbc_afrique_tv/tv_programmes/w13xttmz.json';
 import audioPageData from '#data/indonesia/bbc_indonesian_radio/w13xtt0s.json';
+import processRecentEpisodes from '.';
 
 describe('processRecentEpisodes', () => {
   it('should correctly format TV episodes using a custom URL formatter', () => {

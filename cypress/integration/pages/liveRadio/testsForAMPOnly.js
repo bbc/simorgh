@@ -1,5 +1,4 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import envConfig from '../../../support/config/envs';
 import getEmbedUrl from '../../../support/helpers/getEmbedUrl';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 
@@ -31,9 +30,9 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
       });
 
       it('should render an image placeholder', () => {
-        cy.get(
-          `amp-img[src="${envConfig.assetUrl}/images/amp_audio_placeholder.png"]`,
-        ).should('exist');
+        cy.get(`div[data-e2e="image-placeholder"][placeholder]`).should(
+          'exist',
+        );
       });
 
       it('embed URL should be reachable', () => {

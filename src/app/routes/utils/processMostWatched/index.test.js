@@ -1,10 +1,10 @@
 import nodeLogger from '#testHelpers/loggerMock';
-import processMostWatched from '.';
 import mostWatchedData from '#data/pidgin/mostWatched/index.json';
 import {
   MOST_WATCHED_PROCESS_ERROR,
   MOST_WATCHED_STALE_DATA,
 } from '#lib/logger.const';
+import processMostWatched from '.';
 
 const toggles = {
   mostPopularMedia: { enabled: true, value: '5' },

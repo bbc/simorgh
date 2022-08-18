@@ -16,6 +16,10 @@ const P = (characterCount = 0) => ({
   type: 'paragraph',
   text: 'a'.repeat(characterCount),
 });
+const XMLP = (characterCount = 0) => ({
+  type: 'paragraph',
+  text: '<bold>a</bold>'.repeat(characterCount),
+});
 const Paragraphs = length => Array(length).fill(P());
 
 describe('insertPodcastPromo', () => {
@@ -42,6 +46,8 @@ describe('insertPodcastPromo', () => {
     ${7}     | ${[...Paragraphs(7), P(500)]}                    | ${-1}
     ${8}     | ${[...Paragraphs(7), P(500), H, P(500)]}         | ${-1}
     ${9}     | ${[...Paragraphs(7), P(500), H, P(500), P(500)]} | ${9}
+    ${10}    | ${[...Paragraphs(7), XMLP(500)]}                 | ${-1}
+    ${11}    | ${[...Paragraphs(7), XMLP(1000)]}                | ${7}
   `(
     '[scenario $scenario]: places podcast promo at correct index',
     ({ inputBlocks, expectedIndex }) => {

@@ -1,4 +1,3 @@
-import filterUnknownContentTypes from '.';
 import azeriFixtureData from '#data/azeri/frontpage/index.json';
 import igboFixtureData from '#data/igbo/frontpage/index.json';
 import {
@@ -6,6 +5,7 @@ import {
   MEDIA_ASSET_PAGE,
   STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
+import filterUnknownContentTypes from '.';
 
 /*
  * CPS types

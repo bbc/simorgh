@@ -1,7 +1,7 @@
 import { LiveRadioPage } from '#pages';
-import { liveRadioPath } from '#utils/regex';
+import { liveRadioPath } from '#app/routes/utils/regex';
+import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import getInitialData from './getInitialData';
-import { MEDIA_PAGE } from '#utils/pageTypes';
 
 export default {
   path: liveRadioPath,

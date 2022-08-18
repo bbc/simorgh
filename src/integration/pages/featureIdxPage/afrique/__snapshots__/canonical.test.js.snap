@@ -49,7 +49,7 @@ Object {
 exports[`Canonical Feature Index page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "Contactez la BBC",
-  "url": "https://www.bbc.co.uk/send/u50853159",
+  "url": "https://www.bbc.co.uk/afrique/send/u50853159",
 }
 `;
 
@@ -69,7 +69,7 @@ Object {
 
 exports[`Canonical Feature Index page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/afrique"`;
 
-exports[`Canonical Feature Index page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. La BBC n'est pas responsable du contenu des sites externes. Découvrez notre approche en matière de liens externes."`;
+exports[`Canonical Feature Index page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. La BBC n'est pas responsable du contenu des sites externes. Découvrez notre approche en matière de liens externes."`;
 
 exports[`Canonical Feature Index page Header I can see the branding 1`] = `"BBC News, Afrique"`;
 
@@ -96,43 +96,43 @@ Object {
 
 exports[`Canonical Feature Index page Header Navigation link should match text and url 4`] = `
 Object {
-  "text": "Sports",
-  "url": "/afrique/topics/c404v54yrqyt",
+  "text": "Santé",
+  "url": "/afrique/topics/c06gq9jxz3rt",
 }
 `;
 
 exports[`Canonical Feature Index page Header Navigation link should match text and url 5`] = `
 Object {
-  "text": "Economie",
-  "url": "/afrique/topics/cnq687nr9v1t",
+  "text": "Bien-être",
+  "url": "/afrique/topics/c0vmyy90q8zt",
 }
 `;
 
 exports[`Canonical Feature Index page Header Navigation link should match text and url 6`] = `
 Object {
-  "text": "Culture",
-  "url": "/afrique/topics/cnq687nrrw8t",
+  "text": "Science",
+  "url": "/afrique/topics/cdr561vr57gt",
 }
 `;
 
 exports[`Canonical Feature Index page Header Navigation link should match text and url 7`] = `
-Object {
-  "text": "Au féminin",
-  "url": "/afrique/38058576",
-}
-`;
-
-exports[`Canonical Feature Index page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "Technologie",
   "url": "/afrique/topics/cnq687nn703t",
 }
 `;
 
+exports[`Canonical Feature Index page Header Navigation link should match text and url 8`] = `
+Object {
+  "text": "Economie",
+  "url": "/afrique/topics/cnq687nr9v1t",
+}
+`;
+
 exports[`Canonical Feature Index page Header Navigation link should match text and url 9`] = `
 Object {
-  "text": "Santé",
-  "url": "/afrique/topics/c06gq9jxz3rt",
+  "text": "Culture",
+  "url": "/afrique/topics/cnq687nrrw8t",
 }
 `;
 
@@ -147,6 +147,13 @@ exports[`Canonical Feature Index page Header Navigation link should match text a
 Object {
   "text": "Nos émissions",
   "url": "/afrique/media-54074891",
+}
+`;
+
+exports[`Canonical Feature Index page Header Navigation link should match text and url 12`] = `
+Object {
+  "text": "Ecoutez en direct",
+  "url": "/afrique/bbc_afrique_radio/liveradio",
 }
 `;
 
@@ -292,7 +299,7 @@ exports[`Canonical Feature Index page SEO OG url 1`] = `"http://localhost:7080/a
 
 exports[`Canonical Feature Index page SEO Page title 1`] = `"Tout savoir sur la CAN 2019 - BBC News Afrique"`;
 
-exports[`Canonical Feature Index page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Feature Index page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Feature Index page SEO Twitter card 1`] = `"summary_large_image"`;
 
@@ -315,11 +322,9 @@ exports[`Canonical Feature Index page Story Promo Headline should match text 1`]
 exports[`Canonical Feature Index page Story Promo Image should match image 1`] = `
 <img
   alt="CAN 2019 : le Sénégal en huitième de finale"
-  class="eehpdyc0 bbc-100dhyn e1enwo3v0"
+  class="e3vrtyk0 bbc-rb7xa0 e1mo64ex0"
   height="549"
-  sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/4826/production/_107707481_equipesenegal.jpg"
-  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 660w"
   width="976"
 />
 `;

@@ -18,6 +18,7 @@ import {
   STORY_PAGE,
   PHOTO_GALLERY_PAGE,
   CORRESPONDENT_STORY_PAGE,
+  TOPIC_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 export const EventTrackingContext = createContext({});
@@ -35,6 +36,7 @@ const getCampaignID = pageType => {
     [STORY_PAGE]: 'article-sty',
     [PHOTO_GALLERY_PAGE]: 'article-photo-gallery',
     [CORRESPONDENT_STORY_PAGE]: 'article-csp',
+    [TOPIC_PAGE]: 'topic-page',
   }[pageType];
 
   if (!campaignID) {

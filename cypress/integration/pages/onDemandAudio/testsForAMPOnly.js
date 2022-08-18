@@ -1,5 +1,4 @@
 /* eslint-disable consistent-return */
-import envConfig from '../../../support/config/envs';
 import {
   isAvailable,
   overrideRendererOnTest,
@@ -16,9 +15,9 @@ export default ({ service, pageType }) => {
             return cy.log(`Episode unavailable: ${Cypress.env('currentPath')}`);
           }
 
-          cy.get(
-            `amp-img[src="${envConfig.assetUrl}/images/amp_audio_placeholder.png"]`,
-          ).should('exist');
+          cy.get(`div[data-e2e="image-placeholder"][placeholder]`).should(
+            'exist',
+          );
         });
       });
     });

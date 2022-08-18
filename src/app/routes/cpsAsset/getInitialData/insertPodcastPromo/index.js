@@ -21,7 +21,10 @@ const podcastPromoBlock = {
 };
 
 const isParagraphBlock = block => block.type === 'paragraph';
-const countParagraphCharacters = block => block.text?.length || 0;
+const countParagraphCharacters = block => {
+  const sanitizedText = block.text.replace(/(<([^>]+)>)/gi, '');
+  return sanitizedText?.length || 0;
+};
 
 // Find the starting point for the first continuous sequence of
 // text blocks that meet our requirements, or -1 if none do

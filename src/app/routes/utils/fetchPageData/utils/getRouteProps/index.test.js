@@ -1,8 +1,8 @@
 import reactRouterConfig from 'react-router-config';
 import isAmpPath from '#app/routes/utils/isAmpPath';
+import { ERROR_PAGE } from '#app/routes/utils/pageTypes';
 import getRouteProps from '.';
 import fallbackServiceParam from './fallbackServiceParam';
-import { ERROR_PAGE } from '#app/routes/utils/pageTypes';
 
 jest.mock('react-router-config');
 

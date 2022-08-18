@@ -5,10 +5,8 @@ import { render, act, waitFor } from '@testing-library/react';
 import { StaticRouter } from 'react-router-dom';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import _OnDemandAudioPage from './OnDemandAudioPage';
 import pashtoPageData from '#data/pashto/bbc_pashto_radio/w3ct0lz1';
 import koreanPageData from '#data/korean/bbc_korean_radio/w3ct0kn5';
-import koreanPageWithScheduleData from './fixtureData/korean.json';
 import zhongwenPageData from '#data/zhongwen/bbc_cantonese_radio/w172xf3r5x8hw4v';
 import indonesiaPageData from '#data/indonesia/bbc_indonesian_radio/w172xh267fpn19l';
 import afaanoromooPageData from '#data/afaanoromoo/bbc_afaanoromoo_radio/w13xttnw';
@@ -18,6 +16,8 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandAudio/getInitialData';
 import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
+import koreanPageWithScheduleData from './fixtureData/korean.json';
+import _OnDemandAudioPage from './OnDemandAudioPage';
 
 const OnDemandAudioPage = withMediaError(_OnDemandAudioPage);
 
@@ -76,7 +76,7 @@ const renderPage = async ({
 
 analyticsUtils.getAtUserId = jest.fn();
 
-jest.mock('../../containers/ChartbeatAnalytics', () => {
+jest.mock('../../legacy/containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });
@@ -293,7 +293,7 @@ describe('OnDemand Radio Page ', () => {
       .getAttribute('src');
 
     expect(audioPlayerIframeSrc).toEqual(
-      'https://www.test.bbc.com/ws/av-embeds/media/korean/bbc_korean_radio/w3ct0kn5/ko?morph_env=live',
+      '/ws/av-embeds/media/korean/bbc_korean_radio/w3ct0kn5/ko?morph_env=live',
     );
   });
 
@@ -313,7 +313,7 @@ describe('OnDemand Radio Page ', () => {
       .getAttribute('src');
 
     expect(audioPlayerIframeSrc).toEqual(
-      'https://www.bbc.com/ws/av-embeds/media/korean/bbc_korean_radio/w3ct0kn5/ko',
+      '/ws/av-embeds/media/korean/bbc_korean_radio/w3ct0kn5/ko',
     );
   });
 
@@ -430,7 +430,7 @@ describe('OnDemand Radio Page ', () => {
       .getAttribute('src');
 
     expect(audioPlayerIframeSrc).toEqual(
-      'https://www.test.bbc.com/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om?morph_env=live',
+      '/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om?morph_env=live',
     );
   });
 

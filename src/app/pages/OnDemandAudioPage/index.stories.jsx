@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { withKnobs } from '@storybook/addon-knobs';
-import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
+import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
+import WithTimeMachine from '#testHelpers/withTimeMachine';
+import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import { OnDemandAudioPage } from '..';
 import indonesia from './fixtureData/indonesia';
 import pashto from './fixtureData/pashto';
-import WithTimeMachine from '#testHelpers/withTimeMachine';
-import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 
 const onDemandRadioFixtures = {
   indonesia,

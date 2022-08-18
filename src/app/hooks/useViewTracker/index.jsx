@@ -7,6 +7,7 @@ import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useTrackingToggle from '#hooks/useTrackingToggle';
+import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 
 const EVENT_TYPE = 'view';
 const VIEWED_DURATION_MS = 1000;
@@ -17,6 +18,7 @@ const useViewTracker = (props = {}) => {
   const format = path(['format'], props);
   const advertiserID = path(['advertiserID'], props);
   const url = path(['url'], props);
+  const optimizely = path(['optimizely'], props);
 
   const observer = useRef();
   const timer = useRef(null);
@@ -32,6 +34,7 @@ const useViewTracker = (props = {}) => {
     props,
   );
   const { service } = useContext(ServiceContext);
+
   const initObserver = async () => {
     if (typeof window.IntersectionObserver === 'undefined') {
       // Polyfill IntersectionObserver, e.g. for IE11
@@ -69,6 +72,19 @@ const useViewTracker = (props = {}) => {
         ].every(Boolean);
 
         if (shouldSendEvent) {
+          if (optimizely) {
+            const overrideAttributes = {
+              ...optimizely.user.attributes,
+              [`viewed_${OPTIMIZELY_CONFIG.viewClickAttributeId}`]: true,
+            };
+
+            optimizely.track(
+              'component_views',
+              optimizely.user.id,
+              overrideAttributes,
+            );
+          }
+
           sendEventBeacon({
             campaignID,
             componentName,
@@ -110,6 +126,7 @@ const useViewTracker = (props = {}) => {
     eventSent,
     advertiserID,
     url,
+    optimizely,
   ]);
 
   return async element => {

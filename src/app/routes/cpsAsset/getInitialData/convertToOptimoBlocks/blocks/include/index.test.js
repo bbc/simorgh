@@ -1,8 +1,8 @@
 import loggerMock from '#testHelpers/loggerMock'; // Must be imported before convertInclude
 
+import { INCLUDE_MISSING_URL, INCLUDE_UNSUPPORTED } from '#lib/logger.const';
 import convertInclude from '.';
 import pageData from './fixtures';
-import { INCLUDE_MISSING_URL, INCLUDE_UNSUPPORTED } from '#lib/logger.const';
 
 import * as fetchMarkup from './fetchMarkup';
 import * as getImageBlock from './getImageBlock';

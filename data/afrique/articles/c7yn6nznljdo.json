@@ -7,29 +7,127 @@
     },
     "type": "article",
     "createdBy": "Afrique",
-    "language": "en-gb",
-    "lastUpdated": 1627984921880,
+    "language": "fr",
+    "lastUpdated": 1641867455976,
     "firstPublished": 1627470119562,
     "lastPublished": 1627470119562,
     "timestamp": 1627470119562,
     "options": {},
-    "analyticsLabels": {},
+    "analyticsLabels": {
+      "contentId": "urn:bbc:optimo:asset:c7yn6nznljdo",
+      "producer": "Afrique"
+    },
     "passport": {
-      "language": "en-gb",
+      "language": "fr",
       "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
       "locator": "urn:bbc:optimo:asset:c7yn6nznljdo",
       "availability": "AVAILABLE",
       "taggings": [
         {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/b3c67683-6ada-46da-a329-16fbd4a12c96#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/genre",
+          "value": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/genre",
+          "value": "http://www.bbc.co.uk/things/bd7b89a7-78bd-4c60-a78c-9983a479f70f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/genre",
+          "value": "http://www.bbc.co.uk/things/921a13d0-6fc6-6740-af87-8af4655ec20f#id"
+        },
+        {
           "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
           "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/654e1609-7a9f-470a-bd87-fb8e8144c374#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/genre",
+          "value": "http://www.bbc.co.uk/things/27ed8ba8-005a-5044-87dd-5373d679a020#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/genre",
+          "value": "http://www.bbc.co.uk/things/b3a086df-ab42-2b44-be8b-76b600bfcdce#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/e5edf40d-b1e6-48f5-be62-8fe6d7fe857a#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id"
         }
       ],
       "schemaVersion": "1.3.0",
-      "publishedState": "PUBLISHED"
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id",
+            "thingLabel": "Analysis",
+            "thingUri": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id",
+            "thingId": "170f311e-fd87-4255-85db-8b4aee12594d",
+            "thingType": ["tagging:TagConcept", "tagging:Format"],
+            "thingSameAs": [
+              "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis"
+            ],
+            "thingEnglishLabel": "Analysis",
+            "thingPreferredLabel": "Analysis",
+            "thingLabelLanguage": "fr",
+            "type": "formats"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/654e1609-7a9f-470a-bd87-fb8e8144c374#id",
+            "thingLabel": "Opinion",
+            "thingUri": "http://www.bbc.co.uk/things/654e1609-7a9f-470a-bd87-fb8e8144c374#id",
+            "thingId": "654e1609-7a9f-470a-bd87-fb8e8144c374",
+            "thingType": [
+              "core:Theme",
+              "core:Thing",
+              "tagging:TagConcept",
+              "tagging:AmbiguousTerm",
+              "tagging:Format"
+            ],
+            "thingSameAs": [
+              "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
+              "http://www.wikidata.org/entity/Q3962655",
+              "http://dbpedia.org/resource/Opinion"
+            ],
+            "thingEnglishLabel": "Opinion",
+            "thingPreferredLabel": "Opinion",
+            "thingLabelLanguage": "fr",
+            "type": "formats"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/b3c67683-6ada-46da-a329-16fbd4a12c96#id",
+            "thingLabel": "Interview",
+            "thingUri": "http://www.bbc.co.uk/things/b3c67683-6ada-46da-a329-16fbd4a12c96#id",
+            "thingId": "b3c67683-6ada-46da-a329-16fbd4a12c96",
+            "thingType": ["core:Thing", "tagging:TagConcept", "tagging:Format"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q178651",
+              "http://dbpedia.org/resource/Interview"
+            ],
+            "thingEnglishLabel": "Interview",
+            "thingPreferredLabel": "Interview",
+            "thingLabelLanguage": "fr",
+            "type": "formats"
+          }
+        ]
+      }
     },
     "tags": {},
-    "version": "v1.3.13",
+    "version": "v1.3.15",
     "blockTypes": [
       "headline",
       "text",
@@ -39,11 +137,14 @@
       "unorderedList",
       "listItem",
       "urlLink",
-      "video",
-      "caption",
       "image",
       "altText",
       "rawImage",
+      "video",
+      "caption",
+      "links",
+      "title",
+      "link",
       "aresMedia"
     ],
     "suitableForSyndication": true,
@@ -63,12 +164,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "Ryan's Test Article",
+                        "text": "Glasgow Police Raid Gun Shop, Find Weapons",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Ryan's Test Article",
+                              "text": "Glasgow Police Raid Gun Shop, Find Weapons",
                               "attributes": []
                             }
                           }
@@ -283,132 +384,6 @@
           }
         },
         {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p01kx42s",
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "トランプ氏、香港人権法案に署名　中国は反発",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "トランプ氏、香港人権法案に署名　中国は反発",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "aresMedia",
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p01kx42s",
-                      "type": "aresMediaMetadata",
-                      "model": {
-                        "id": "p01kx42s",
-                        "subType": "clip",
-                        "format": "audio_video",
-                        "title": "トランプ氏、香港人権法案に署名　中国は反発",
-                        "synopses": {
-                          "short": "トランプ氏、香港人権法案に署名　中国は反発",
-                          "long": "トランプ氏、香港人権法案に署名　中国は反発",
-                          "medium": "トランプ氏、香港人権法案に署名　中国は反発"
-                        },
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
-                        "embedding": false,
-                        "advertising": true,
-                        "caption": "トランプ氏、香港人権法案に署名　中国は反発",
-                        "versions": [
-                          {
-                            "versionId": "p01kx42v",
-                            "types": ["Original"],
-                            "duration": 5,
-                            "durationISO8601": "PT5S",
-                            "warnings": {},
-                            "availableTerritories": {
-                              "uk": true,
-                              "nonUk": true
-                            },
-                            "availableFrom": 1545304011000
-                          }
-                        ],
-                        "syndication": {
-                          "destinations": []
-                        },
-                        "smpKind": "programme"
-                      }
-                    },
-                    {
-                      "type": "image",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "rawImage",
-                            "model": {
-                              "width": 976,
-                              "height": 549,
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p012zl0f.jpg",
-                              "originCode": "mpv"
-                            }
-                          },
-                          {
-                            "type": "altText",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "text",
-                                  "model": {
-                                    "blocks": [
-                                      {
-                                        "type": "paragraph",
-                                        "model": {
-                                          "text": "World Service Thumbnail",
-                                          "blocks": [
-                                            {
-                                              "type": "fragment",
-                                              "model": {
-                                                "text": "World Service Thumbnail",
-                                                "attributes": []
-                                              }
-                                            }
-                                          ]
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
           "type": "text",
           "model": {
             "blocks": [
@@ -420,7 +395,49 @@
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis  ultrices lacus convallis dictum. In tellus diam, vehicula non ornare id,  hendrerit et urna. Fusce vel metus accumsan, consectetur augue ut,  facilisis augue. Maecenas ut interdum orci, in faucibus nisl.",
+                        "text": "Lorem ipsum ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "dolor",
+                        "attributes": ["bold"]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " sit amet, ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "consectetur",
+                        "attributes": ["bold", "italic"]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " adipiscing ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "elit",
+                        "attributes": ["italic"]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": ". Sed venenatis  ultrices lacus convallis dictum. In tellus diam, vehicula non ornare id,  hendrerit et urna. Fusce vel metus accumsan, consectetur augue ut,  facilisis augue. Maecenas ut interdum orci, in faucibus nisl.",
                         "attributes": []
                       }
                     }
@@ -460,12 +477,12 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "My Image",
+                              "text": "Picture of Guns",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
-                                    "text": "My Image",
+                                    "text": "Picture of Guns",
                                     "attributes": []
                                   }
                                 }
@@ -481,9 +498,9 @@
               {
                 "type": "rawImage",
                 "model": {
-                  "width": 3115,
-                  "height": 4672,
-                  "locator": "0297/test/c5ed58d0-f441-11eb-a33b-d7e701902f6d.jpg",
+                  "width": 750,
+                  "height": 422,
+                  "locator": "9db4/test/f8497930-f522-11eb-a33b-d7e701902f6d.jpg",
                   "originCode": "cpsdevpb",
                   "copyrightHolder": "BBC",
                   "suitableForSyndication": true
@@ -558,6 +575,339 @@
               }
             ]
           }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01t1jmm",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "\"มหาวิหารน้ำแข็ง\" สถาปัตยกรรมงดงามที่ธรรมชาติรังสรรค์ในสวิตเซอร์แลนด์",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "\"มหาวิหารน้ำแข็ง\" สถาปัตยกรรมงดงามที่ธรรมชาติรังสรรค์ในสวิตเซอร์แลนด์",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01t1jmm",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01t1jmm",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "\"มหาวิหารน้ำแข็ง\" สถาปัตยกรรมงดงามที่ธรรมชาติรังสรรค์ในสวิตเซอร์แลนด์",
+                        "synopses": {
+                          "short": "\"มหาวิหารน้ำแข็ง\" สถาปัตยกรรมงดงามที่ธรรมชาติรังสรรค์ในสวิตเซอร์แลนด์"
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01t1jn0.jpg",
+                        "embedding": true,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p01t1jmp",
+                            "types": ["Original"],
+                            "duration": 30,
+                            "durationISO8601": "PT30S",
+                            "warnings": {},
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1635949574000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        },
+                        "smpKind": "programme"
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1280,
+                              "height": 720,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01t1jn0.jpg",
+                              "originCode": "mpv"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Keyframe #2",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Keyframe #2",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "links",
+          "model": {
+            "blocks": [
+              {
+                "type": "title",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "This is my title",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "This is my title",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com",
+                  "blocks": [
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Dog",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Dog",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1200,
+                              "height": 602,
+                              "locator": "b498/test/67b83de0-7284-11ec-9534-9f1d59fb8b32.jpg",
+                              "imageType": "background",
+                              "originCode": "cpsdevpb",
+                              "copyrightHolder": "Getty Images"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "This is a dog",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "This is a dog",
+                                    "locator": "https://www.bbc.com",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "This is a dog",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com",
+                  "blocks": [
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Not a dog",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Not a dog",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 976,
+                              "height": 549,
+                              "locator": "dbe8/test/7dfe4c70-7284-11ec-9534-9f1d59fb8b32.jpg",
+                              "imageType": "background",
+                              "originCode": "cpsdevpb",
+                              "copyrightHolder": "NASA"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "This is not a dog",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "This is not a dog",
+                                    "locator": "https://www.bbc.com",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "This is not a dog",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
         }
       ]
     }
@@ -569,9 +919,9 @@
     },
     "timestamp": 1627470119562,
     "suitableForSyndication": true,
-    "language": "en-gb",
+    "language": "fr",
     "headlines": {
-      "seoHeadline": "Ryan's Test Article",
+      "seoHeadline": "Gist Test Article",
       "promoHeadline": {
         "blocks": [
           {
@@ -581,12 +931,12 @@
                 {
                   "type": "paragraph",
                   "model": {
-                    "text": "Ryan's Test Article",
+                    "text": "Glasgow Police Raid Gun Shop, Find Weapons",
                     "blocks": [
                       {
                         "type": "fragment",
                         "model": {
-                          "text": "Ryan's Test Article",
+                          "text": "Glasgow Police Raid Gun Shop, Find Weapons",
                           "attributes": []
                         }
                       }
@@ -613,12 +963,12 @@
                       {
                         "type": "paragraph",
                         "model": {
-                          "text": "My Image",
+                          "text": "Picture of Guns",
                           "blocks": [
                             {
                               "type": "fragment",
                               "model": {
-                                "text": "My Image",
+                                "text": "Picture of Guns",
                                 "attributes": []
                               }
                             }
@@ -634,9 +984,9 @@
           {
             "type": "rawImage",
             "model": {
-              "width": 3115,
-              "height": 4672,
-              "locator": "0297/test/c5ed58d0-f441-11eb-a33b-d7e701902f6d.jpg",
+              "width": 750,
+              "height": 422,
+              "locator": "9db4/test/f8497930-f522-11eb-a33b-d7e701902f6d.jpg",
               "originCode": "cpsdevpb",
               "copyrightHolder": "BBC",
               "suitableForSyndication": true
@@ -672,18 +1022,113 @@
       ]
     },
     "passport": {
-      "language": "en-gb",
+      "language": "fr",
       "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
       "locator": "urn:bbc:optimo:asset:c7yn6nznljdo",
       "availability": "AVAILABLE",
       "taggings": [
         {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/b3c67683-6ada-46da-a329-16fbd4a12c96#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/genre",
+          "value": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/genre",
+          "value": "http://www.bbc.co.uk/things/bd7b89a7-78bd-4c60-a78c-9983a479f70f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/genre",
+          "value": "http://www.bbc.co.uk/things/921a13d0-6fc6-6740-af87-8af4655ec20f#id"
+        },
+        {
           "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
           "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/654e1609-7a9f-470a-bd87-fb8e8144c374#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/genre",
+          "value": "http://www.bbc.co.uk/things/27ed8ba8-005a-5044-87dd-5373d679a020#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/genre",
+          "value": "http://www.bbc.co.uk/things/b3a086df-ab42-2b44-be8b-76b600bfcdce#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/e5edf40d-b1e6-48f5-be62-8fe6d7fe857a#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id"
         }
       ],
       "schemaVersion": "1.3.0",
-      "publishedState": "PUBLISHED"
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id",
+            "thingLabel": "Analysis",
+            "thingUri": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id",
+            "thingId": "170f311e-fd87-4255-85db-8b4aee12594d",
+            "thingType": ["tagging:TagConcept", "tagging:Format"],
+            "thingSameAs": [
+              "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis"
+            ],
+            "thingEnglishLabel": "Analysis",
+            "thingPreferredLabel": "Analysis",
+            "thingLabelLanguage": "fr",
+            "type": "formats"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/654e1609-7a9f-470a-bd87-fb8e8144c374#id",
+            "thingLabel": "Opinion",
+            "thingUri": "http://www.bbc.co.uk/things/654e1609-7a9f-470a-bd87-fb8e8144c374#id",
+            "thingId": "654e1609-7a9f-470a-bd87-fb8e8144c374",
+            "thingType": [
+              "core:Theme",
+              "core:Thing",
+              "tagging:TagConcept",
+              "tagging:AmbiguousTerm",
+              "tagging:Format"
+            ],
+            "thingSameAs": [
+              "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
+              "http://www.wikidata.org/entity/Q3962655",
+              "http://dbpedia.org/resource/Opinion"
+            ],
+            "thingEnglishLabel": "Opinion",
+            "thingPreferredLabel": "Opinion",
+            "thingLabelLanguage": "fr",
+            "type": "formats"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/b3c67683-6ada-46da-a329-16fbd4a12c96#id",
+            "thingLabel": "Interview",
+            "thingUri": "http://www.bbc.co.uk/things/b3c67683-6ada-46da-a329-16fbd4a12c96#id",
+            "thingId": "b3c67683-6ada-46da-a329-16fbd4a12c96",
+            "thingType": ["core:Thing", "tagging:TagConcept", "tagging:Format"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q178651",
+              "http://dbpedia.org/resource/Interview"
+            ],
+            "thingEnglishLabel": "Interview",
+            "thingPreferredLabel": "Interview",
+            "thingLabelLanguage": "fr",
+            "type": "formats"
+          }
+        ]
+      }
     },
     "id": "urn:bbc:ares::article:c7yn6nznljdo",
     "type": "optimo"

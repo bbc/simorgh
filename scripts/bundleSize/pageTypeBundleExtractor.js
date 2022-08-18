@@ -1,7 +1,14 @@
-const bundleReport = require('../../reports/webpackBundleReport.json');
+const modernBundleReport = require('../../reports/modern.webpackBundleReport.json');
+const legacyBundleReport = require('../../reports/legacy.webpackBundleReport.json');
+
+const bundleReports = {
+  modern: modernBundleReport,
+  legacy: legacyBundleReport,
+};
+const bundleType = process.env.bundleType || 'modern';
 
 const extractBundlesForPageType = pageComponent => {
-  const chunkGroup = bundleReport.namedChunkGroups[pageComponent];
+  const chunkGroup = bundleReports[bundleType].namedChunkGroups[pageComponent];
   if (chunkGroup) {
     return chunkGroup.assets
       .filter(({ name }) => name.endsWith('.js'))

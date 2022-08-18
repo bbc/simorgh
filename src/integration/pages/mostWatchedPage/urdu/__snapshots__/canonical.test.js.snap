@@ -49,7 +49,7 @@ Object {
 exports[`Canonical Most Watched Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "بی بی سی سے رابطہ کریں",
-  "url": "https://www.bbc.co.uk/send/u50853907",
+  "url": "https://www.bbc.co.uk/urdu/send/u50853907",
 }
 `;
 
@@ -69,7 +69,7 @@ Object {
 
 exports[`Canonical Most Watched Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/urdu"`;
 
-exports[`Canonical Most Watched Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں بیرونی لنکس کے بارے میں ہماری پالیسی."`;
+exports[`Canonical Most Watched Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں بیرونی لنکس کے بارے میں ہماری پالیسی."`;
 
 exports[`Canonical Most Watched Page Header I can see the branding 1`] = `"BBC News, اردو"`;
 
@@ -293,7 +293,7 @@ exports[`Canonical Most Watched Page SEO OG url 1`] = `"http://localhost:7080/ur
 
 exports[`Canonical Most Watched Page SEO Page title 1`] = `"سب سے زیادہ دیکھی گئی - BBC News اردو"`;
 
-exports[`Canonical Most Watched Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Most Watched Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Most Watched Page SEO Twitter card 1`] = `"summary_large_image"`;
 

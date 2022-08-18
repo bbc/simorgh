@@ -1,8 +1,8 @@
 // components to test
+import styJson from '#data/mundo/cpsAssets/23263889.json';
 import getAssetUri from './getAssetUri';
 
 // mock data
-import styJson from '#data/mundo/cpsAssets/23263889.json';
 
 describe('getAssetType', () => {
   it('should return the assetUri', () => {

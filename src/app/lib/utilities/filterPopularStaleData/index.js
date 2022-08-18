@@ -1,9 +1,9 @@
 import nodeLogger from '#lib/logger.node';
-import { isDataStale } from './isDataStale';
 import {
   MOST_WATCHED_STALE_DATA,
   MOST_READ_STALE_DATA,
 } from '#lib/logger.const';
+import { isDataStale } from './isDataStale';
 
 const logger = nodeLogger(__filename);
 

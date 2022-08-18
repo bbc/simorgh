@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
+import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import MediaAssetPage from '.';
 import pageData from './fixtureData';
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ isAmp = false } = {}) => (

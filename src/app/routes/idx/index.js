@@ -1,7 +1,7 @@
 import { IdxPage } from '#pages';
+import { IdxPagePath } from '#app/routes/utils/regex';
+import { INDEX_PAGE } from '#app/routes/utils/pageTypes';
 import getInitialData from './getInitialData';
-import { IdxPagePath } from '#utils/regex';
-import { INDEX_PAGE } from '#utils/pageTypes';
 
 export default {
   path: IdxPagePath,

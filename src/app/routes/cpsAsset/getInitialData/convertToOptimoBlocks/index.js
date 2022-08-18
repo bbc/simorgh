@@ -2,6 +2,7 @@ import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import pick from 'ramda/src/pick';
 import identity from 'ramda/src/identity';
+import { UNSUPPORTED_BLOCK_TYPE } from '#lib/logger.const';
 import clone from '../../../utils/jsonClone';
 import paragraph from './blocks/paragraph';
 import media from './blocks/media';
@@ -13,7 +14,6 @@ import version from './blocks/version';
 import include from './blocks/include';
 import socialEmbed from './blocks/socialEmbed';
 import table from './blocks/table';
-import { UNSUPPORTED_BLOCK_TYPE } from '#lib/logger.const';
 
 const nodeLogger = require('#lib/logger.node');
 

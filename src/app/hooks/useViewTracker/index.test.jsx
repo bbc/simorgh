@@ -7,9 +7,10 @@ import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import useViewTracker from '.';
 
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import fixtureData from './fixtureData.json';
 
 process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
@@ -528,6 +529,96 @@ describe('Expected use', () => {
     expect(urlToObject(viewEventUrl).searchParams.ati).toEqual(
       'PUB-[custom-campaign]-[most-read]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://www.bbc.com/pidgin/tori-51745682]',
     );
+  });
+
+  it('should send event to Optimizely when element is 50% or more in view for more than 1 second and optimizely object exists', async () => {
+    const mockOptimizelyTrack = jest.fn();
+    const mockUserId = 'test';
+    const mockAttributes = { foo: 'bar' };
+    const mockOverrideAttributes = {
+      ...mockAttributes,
+      [`viewed_${OPTIMIZELY_CONFIG.viewClickAttributeId}`]: true,
+    };
+    const mockOptimizely = {
+      optimizely: {
+        track: mockOptimizelyTrack,
+        user: { attributes: mockAttributes, id: mockUserId },
+      },
+    };
+
+    const { result } = renderHook(
+      () => useViewTracker({ ...trackingData, ...mockOptimizely }),
+      {
+        wrapper,
+        initialProps: {
+          pageData: fixtureData,
+        },
+      },
+    );
+    const element = document.createElement('div');
+
+    await result.current(element);
+
+    const observerInstance = getObserverInstance(element);
+
+    act(() => {
+      triggerIntersection({
+        changes: [{ isIntersecting: true }],
+        observer: observerInstance,
+      });
+    });
+
+    act(() => {
+      jest.advanceTimersByTime(1100);
+    });
+
+    const [[, options]] = global.IntersectionObserver.mock.calls;
+
+    expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
+    expect(options).toEqual({ threshold: [0.5] });
+    expect(mockOptimizelyTrack).toHaveBeenCalledTimes(1);
+    expect(mockOptimizelyTrack).toHaveBeenCalledWith(
+      'component_views',
+      mockUserId,
+      mockOverrideAttributes,
+    );
+  });
+
+  it('should not send event to Optimizely when element is 50% or more in view for more than 1 second and optimizely object is undefined', async () => {
+    const mockOptimizelyTrack = jest.fn();
+    const mockOptimizely = undefined;
+
+    const { result } = renderHook(
+      () => useViewTracker({ ...trackingData, ...mockOptimizely }),
+      {
+        wrapper,
+        initialProps: {
+          pageData: fixtureData,
+        },
+      },
+    );
+    const element = document.createElement('div');
+
+    await result.current(element);
+
+    const observerInstance = getObserverInstance(element);
+
+    act(() => {
+      triggerIntersection({
+        changes: [{ isIntersecting: true }],
+        observer: observerInstance,
+      });
+    });
+
+    act(() => {
+      jest.advanceTimersByTime(1100);
+    });
+
+    const [[, options]] = global.IntersectionObserver.mock.calls;
+
+    expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
+    expect(options).toEqual({ threshold: [0.5] });
+    expect(mockOptimizelyTrack).toHaveBeenCalledTimes(0);
   });
 });
 

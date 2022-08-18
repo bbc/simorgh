@@ -1,4 +1,6 @@
 import loggerMock from '#testHelpers/loggerMock'; // Must be imported before convertToOptimoBlocks
+import { UNSUPPORTED_BLOCK_TYPE } from '#lib/logger.const';
+import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import { CPSMediaBlock, optimoVideoBlock } from './blocks/media/fixtures';
 import { CPSVersionBlock, optimoVersionBlock } from './blocks/version/fixtures';
 import {
@@ -10,8 +12,6 @@ import {
 import includeBlockData from './blocks/include/fixtures';
 import convertToOptimoBlocks from '.';
 import { optimoTextWithParagraph, optimoSubheadline } from './utils/helpers';
-import { UNSUPPORTED_BLOCK_TYPE } from '#lib/logger.const';
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 
 describe('convertToOptimoBlocks', () => {
   it('should convert CPS data into Optimo format', async () => {

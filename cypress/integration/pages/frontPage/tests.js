@@ -29,6 +29,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               done();
               return false;
             });
+
             let currentURL = null;
             cy.get('h3')
               .eq(3)

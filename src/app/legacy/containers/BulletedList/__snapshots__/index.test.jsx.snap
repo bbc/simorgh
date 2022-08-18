@@ -1,0 +1,351 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BulletedListContainer should render ltr correctly 1`] = `
+.emotion-1 {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-1 {
+    padding: 0 0.5rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-1 {
+    padding: 0 0.5rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    padding: 0 1rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-1 {
+    padding: 0 1rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-1 {
+    margin-right: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-1 {
+    margin-right: 40%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-1 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(10, 1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-3 {
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 0;
+  list-style-type: none;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-3 {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-3 {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+}
+
+.emotion-3>li {
+  position: relative;
+}
+
+.emotion-3>li::before {
+  top: 0.5rem;
+  content: ' ';
+  position: absolute;
+  border-width: 1rem;
+  border: 0.1875rem solid #3F3F42;
+  background-color: #3F3F42;
+  border-radius: 50%;
+  right: -1rem;
+}
+
+.emotion-5 {
+  margin-bottom: 1rem;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1 emotion-2"
+    dir="rtl"
+  >
+    <ul
+      class="emotion-3 emotion-4"
+      dir="rtl"
+      role="list"
+    >
+      <li
+        class="emotion-5 emotion-6"
+        role="listitem"
+      >
+        It is unordered
+      </li>
+      <li
+        class="emotion-5 emotion-6"
+        role="listitem"
+      >
+        It has three list items
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`BulletedListContainer should render rtl correctly 1`] = `
+.emotion-1 {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-1 {
+    padding: 0 0.5rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-1 {
+    padding: 0 0.5rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    padding: 0 1rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-1 {
+    padding: 0 1rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-1 {
+    margin-right: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-1 {
+    margin-right: 40%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-1 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(10, 1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-3 {
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 0;
+  list-style-type: none;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-3 {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-3 {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+}
+
+.emotion-3>li {
+  position: relative;
+}
+
+.emotion-3>li::before {
+  top: 0.5rem;
+  content: ' ';
+  position: absolute;
+  border-width: 1rem;
+  border: 0.1875rem solid #3F3F42;
+  background-color: #3F3F42;
+  border-radius: 50%;
+  right: -1rem;
+}
+
+.emotion-5 {
+  margin-bottom: 1rem;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1 emotion-2"
+    dir="rtl"
+  >
+    <ul
+      class="emotion-3 emotion-4"
+      dir="rtl"
+      role="list"
+    >
+      <li
+        class="emotion-5 emotion-6"
+        role="listitem"
+      >
+        It is unordered
+      </li>
+      <li
+        class="emotion-5 emotion-6"
+        role="listitem"
+      >
+        It has three list items
+      </li>
+    </ul>
+  </div>
+</div>
+`;

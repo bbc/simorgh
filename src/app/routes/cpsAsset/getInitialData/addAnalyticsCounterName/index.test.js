@@ -1,6 +1,6 @@
 import assocPath from 'ramda/src/assocPath';
-import transformer from '.';
 import legacyPageData from '#data/hausa/legacyAssets/multimedia/2012/07/120712_click';
+import transformer from '.';
 
 describe('addAnalyticsCounterName', () => {
   it('should add an analytics counter name', async () => {

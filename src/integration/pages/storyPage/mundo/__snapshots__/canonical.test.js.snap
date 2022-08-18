@@ -2,7 +2,7 @@
 
 exports[`Canonical Story Page A11y I can see the skip to content link 1`] = `"Ir al contenido"`;
 
-exports[`Canonical Story Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=62&amp;p=world%3A%3Amundo.world.story.51266689.page&amp;x1=[urn%3Abbc%3Acps%3Afaf2993a-dcc0-0746-81a6-a6aca4cd59b1]&amp;x2=[responsive]&amp;x3=[news-mundo]&amp;x4=[es]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[Brexit%3A%2Bqu%C3%A9%2Bcambiar%C3%A1%2Bpara%2Bvisitar%2C%2Btrabajar%2By%2Bestudiar%2Ben%2BReino%2BUnido%2Btras%2Bla%2Bsalida%2Bdel%2Bpa%C3%ADs%2Bde%2Bla%2BUni%C3%B3n%2BEuropea%2B-%2BBBC%2BNews%2BMundo]&amp;x11=[2020-01-30T06%3A35%3A49.000Z]&amp;x12=[2020-01-31T23%3A08%3A08.000Z]&amp;x14=[0b0bfd5a-81b8-43fa-91fc-57f1fcd24487~2e91364c-5c77-4660-b76e-d76202785e64~6a73afa3-ea6b-45c1-80bb-49060b99f864~9a18805c-fb88-40ba-9763-bcc121d5d55c~ca170ae3-99c1-48db-9b67-2866f85e7342~f94293fd-ff83-400e-8bc0-89ec01930fce]&amp;x16=[WS%20-%20Give%20me%20perspective]&amp;x17=[Explainer]\\"/>"`;
+exports[`Canonical Story Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=62&amp;p=world%3A%3Amundo.world.story.51266689.page&amp;x2=[responsive]&amp;x3=[news-mundo]&amp;x4=[es]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[Brexit%3A%2Bqu%C3%A9%2Bcambiar%C3%A1%2Bpara%2Bvisitar%2C%2Btrabajar%2By%2Bestudiar%2Ben%2BReino%2BUnido%2Btras%2Bla%2Bsalida%2Bdel%2Bpa%C3%ADs%2Bde%2Bla%2BUni%C3%B3n%2BEuropea%2B-%2BBBC%2BNews%2BMundo]&amp;x11=[2020-01-30T06%3A35%3A49.000Z]&amp;x12=[2020-01-31T23%3A08%3A08.000Z]&amp;x14=[0b0bfd5a-81b8-43fa-91fc-57f1fcd24487~2e91364c-5c77-4660-b76e-d76202785e64~6a73afa3-ea6b-45c1-80bb-49060b99f864~9a18805c-fb88-40ba-9763-bcc121d5d55c~ca170ae3-99c1-48db-9b67-2866f85e7342~f94293fd-ff83-400e-8bc0-89ec01930fce]&amp;x16=[WS%20-%20Give%20me%20perspective]&amp;x17=[Explainer]\\"/>"`;
 
 exports[`Canonical Story Page Apple iTunes App meta tag should match name and content 1`] = `
 Object {
@@ -55,8 +55,8 @@ Object {
 
 exports[`Canonical Story Page Footer Anchors should match text and url 7`] = `
 Object {
-  "text": "Contacta a la BBC",
-  "url": "https://www.bbc.co.uk/send/u50853489",
+  "text": "Escribe a BBC Mundo",
+  "url": "https://www.bbc.co.uk/mundo/send/u50853489",
 }
 `;
 
@@ -76,7 +76,7 @@ Object {
 
 exports[`Canonical Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
-exports[`Canonical Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+exports[`Canonical Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
 exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
@@ -125,35 +125,35 @@ Object {
 exports[`Canonical Story Page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "Economía",
-  "url": "/mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342",
+  "url": "/mundo/topics/c06gq9v4xp3t",
 }
 `;
 
 exports[`Canonical Story Page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "Ciencia",
-  "url": "/mundo/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+  "url": "/mundo/topics/ckdxnw959n7t",
 }
 `;
 
 exports[`Canonical Story Page Header Navigation link should match text and url 9`] = `
 Object {
   "text": "Salud",
-  "url": "/mundo/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+  "url": "/mundo/topics/cpzd498zkxgt",
 }
 `;
 
 exports[`Canonical Story Page Header Navigation link should match text and url 10`] = `
 Object {
   "text": "Cultura",
-  "url": "/mundo/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864",
+  "url": "/mundo/topics/c2dwq9zyv4yt",
 }
 `;
 
 exports[`Canonical Story Page Header Navigation link should match text and url 11`] = `
 Object {
   "text": "Tecnología",
-  "url": "/mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a",
+  "url": "/mundo/topics/cyx5krnw38vt",
 }
 `;
 
@@ -183,11 +183,9 @@ exports[`Canonical Story Page Image Caption should match text 1`] = `"Pie de fot
 exports[`Canonical Story Page Image should match snapshot 1`] = `
 <img
   alt="A person holding a union jack umbrella in front of Big Ben"
-  class="eehpdyc0 bbc-100dhyn e1enwo3v0"
+  class="e3vrtyk0 bbc-rb7xa0 e1mo64ex0"
   height="549"
-  sizes="(min-width: 1008px) 645px, 100vw"
   src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg"
-  srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 800w"
   width="976"
 />
 `;
@@ -343,7 +341,7 @@ Object {
       "image": Object {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://ichef.test.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg",
+        "url": "https://ichef.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg",
         "width": 1024,
       },
       "inLanguage": Object {
@@ -367,7 +365,7 @@ Object {
         "name": "BBC News Mundo",
         "publishingPrinciples": "https://www.bbc.com/mundo/institucional-51359666",
       },
-      "thumbnailUrl": "https://ichef.test.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg",
+      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg",
       "url": "http://localhost:7080/mundo/noticias-internacional-51266689",
     },
   ],
@@ -376,7 +374,7 @@ Object {
 
 exports[`Canonical Story Page SEO OG description 1`] = `"Tras casi cuatro años de desacuerdos y negociaciones, este viernes Reino Unido dejará formalmente la Unión Europea. ¿Qué cambios supone esto para quienes quieran hacer turismo, estudiar o trabajar en Reino Unido?"`;
 
-exports[`Canonical Story Page SEO OG image 1`] = `"https://ichef.test.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg"`;
+exports[`Canonical Story Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg"`;
 
 exports[`Canonical Story Page SEO OG image alt 1`] = `"A person holding a union jack umbrella in front of Big Ben"`;
 
@@ -392,7 +390,7 @@ exports[`Canonical Story Page SEO OG url 1`] = `"http://localhost:7080/mundo/not
 
 exports[`Canonical Story Page SEO Page title 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea - BBC News Mundo"`;
 
-exports[`Canonical Story Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Story Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Story Page SEO Twitter card 1`] = `"summary_large_image"`;
 
@@ -402,7 +400,7 @@ exports[`Canonical Story Page SEO Twitter description 1`] = `"Tras casi cuatro a
 
 exports[`Canonical Story Page SEO Twitter image alt 1`] = `"A person holding a union jack umbrella in front of Big Ben"`;
 
-exports[`Canonical Story Page SEO Twitter image src 1`] = `"https://ichef.test.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg"`;
+exports[`Canonical Story Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg"`;
 
 exports[`Canonical Story Page SEO Twitter site 1`] = `"@bbcmundo"`;
 

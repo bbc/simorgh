@@ -3,14 +3,11 @@ import pathOr from 'ramda/src/pathOr';
 const getOptimoUrn = articleData =>
   pathOr(null, ['metadata', 'locators', 'optimoUrn'], articleData);
 
-export const getContentId = articleData => {
-  const optimoUrn = getOptimoUrn(articleData);
-  const id = optimoUrn ? optimoUrn.split(':').pop() : null;
-  if (!id) {
-    return null;
-  }
-  return `urn:bbc:optimo:${id}`;
-};
+export const getContentId = pathOr(null, [
+  'metadata',
+  'analyticsLabels',
+  'contentId',
+]);
 
 export const getOptimoId = articleData => {
   const optimoUrn = getOptimoUrn(articleData);
@@ -27,3 +24,11 @@ export const getLanguage = articleData =>
 
 export const getPromoHeadline = articleData =>
   pathOr(null, ['promo', 'headlines', 'seoHeadline'], articleData);
+
+export const getNationsProducer = articleData => {
+  return pathOr(
+    null,
+    ['metadata', 'analyticsLabels', 'nations_producer'],
+    articleData,
+  );
+};

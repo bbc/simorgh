@@ -11,9 +11,9 @@ import {
   NOT_FOUND,
   UPSTREAM_CODES_TO_PROPAGATE_IN_SIMORGH,
 } from '#lib/statusCodes.const';
-import getErrorStatusCode from './utils/getErrorStatusCode';
 import { PRIMARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
 import onClient from '#lib/utilities/onClient';
+import getErrorStatusCode from './utils/getErrorStatusCode';
 import getUrl from './utils/getUrl';
 
 const logger = nodeLogger(__filename);
@@ -25,21 +25,27 @@ const logger = nodeLogger(__filename);
  * for request for 'secondary data'. The fetch timeout defaults to the 'primary
  * data' timeout if this is not provided.
  * Timeout values here: https://github.com/bbc/simorgh/blob/latest/src/app/lib/utilities/getFetchTimeouts/index.js
+ * @param {object} agent Optional parameter to provide an agent object with the fetch
  * @param {...string} loggerArgs Additional arguments for richer logging.
  */
 const fetchPageData = async ({
   path,
   timeout,
   shouldLogFetchTime = !onClient(),
+  agent,
+  optHeaders,
   ...loggerArgs
 }) => {
   const url = path.startsWith('http') ? path : getUrl(path);
+
   const effectiveTimeout = timeout || PRIMARY_DATA_TIMEOUT;
   const fetchOptions = {
     headers: {
       'User-Agent': 'Simorgh/ws-web-rendering',
+      ...(optHeaders && optHeaders),
     },
     timeout: effectiveTimeout,
+    ...(agent && { agent }),
   };
 
   logger.info(DATA_REQUEST_RECEIVED, {

@@ -1,7 +1,7 @@
 import {
   any,
   arrayOf,
-  boolean,
+  bool,
   number,
   objectOf,
   shape,
@@ -75,7 +75,7 @@ const cpsMetaDataPropTypes = {
   firstPublished: number.isRequired,
   lastPublished: number.isRequired,
   options: shape({
-    allowAdvertising: boolean,
+    allowAdvertising: bool,
   }),
   analyticsLabels: shape({
     counterName: string.isRequired,

@@ -1,0 +1,1150 @@
+{
+    "metadata":{
+       "id":"urn:bbc:ares::asset:portuguese/brasil-59057279",
+       "locators":{
+          "assetUri":"/portuguese/brasil-59057279",
+          "cpsUrn":"urn:bbc:content:assetUri:portuguese/brasil-59057279",
+          "curie":"http://www.bbc.co.uk/asset/d85052a4-e634-4cbc-9be5-2af0a4b232f9",
+          "assetId":"59057279"
+       },
+       "type":"STY",
+       "createdBy":"brasil-v6",
+       "language":"pt-BR",
+       "lastUpdated":1635777336948,
+       "firstPublished":1635291020000,
+       "lastPublished":1635291020000,
+       "timestamp":1635291020000,
+       "options":{
+          "isIgorSeoTagsEnabled":false,
+          "includeComments":false,
+          "allowRightHandSide":true,
+          "isFactCheck":false,
+          "allowDateStamp":true,
+          "suitableForSyndication":true,
+          "hasNewsTracker":false,
+          "allowRelatedStoriesBox":true,
+          "isKeyContent":false,
+          "allowHeadline":true,
+          "allowAdvertising":true,
+          "hasContentWarning":false,
+          "isBreakingNews":false,
+          "allowPrintingSharingLinks":true
+       },
+       "analyticsLabels":{
+          "ldp_tags":"Coronavirus+pandemic~National+Congress+of+Brazil~Politics~Jair+Bolsonaro",
+          "cps_asset_id":"59057279",
+          "ldp_ids":"5fe79b8d-56e5-4aff-8b05-21f9ad731912~75354734-2a5f-4a06-b8a1-335e36b6508f~75612fa6-147c-4a43-97fa-fcf70d9cced3~f21d4493-e3bd-47df-b23c-1d57f0e3e818",
+          "contentId":"urn:bbc:cps:curie:asset:d85052a4-e634-4cbc-9be5-2af0a4b232f9",
+          "counterName":"portuguese.brasil.story.59057279.page",
+          "cps_asset_type":"sty"
+       },
+       "passport":{
+          "language":"pt-br",
+          "home":"http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+          "locator":"urn:bbc:cps:curie:asset:d85052a4-e634-4cbc-9be5-2af0a4b232f9",
+          "availability":"AVAILABLE",
+          "taggings":[
+             {
+                "predicate":"http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                "value":"http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+             },
+             {
+                "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+                "value":"http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id"
+             },
+             {
+                "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+                "value":"http://www.bbc.co.uk/things/75354734-2a5f-4a06-b8a1-335e36b6508f#id"
+             },
+             {
+                "predicate":"http://www.bbc.co.uk/ontologies/bbc/contributor",
+                "value":"http://www.bbc.co.uk/things/4abb18b9-d7ab-452d-891d-39b8f9ebfdb6#id"
+             },
+             {
+                "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+                "value":"http://www.bbc.co.uk/things/f21d4493-e3bd-47df-b23c-1d57f0e3e818#id"
+             },
+             {
+                "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+                "value":"http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id"
+             },
+             {
+                "predicate":"http://www.bbc.co.uk/ontologies/creativework/format",
+                "value":"http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+             },
+             {
+                "predicate":"http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                "value":"http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+             }
+          ],
+          "schemaVersion":"1.3.0",
+          "publishedState":"PUBLISHED",
+          "predicates":{
+             "about":[
+                {
+                   "value":"http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+                   "thingLabel":"Coronavírus",
+                   "thingUri":"http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+                   "thingId":"5fe79b8d-56e5-4aff-8b05-21f9ad731912",
+                   "thingType":[
+                      "tagging:TagConcept",
+                      "core:Thing",
+                      "core:Event"
+                   ],
+                   "thingSameAs":[
+                      "http://dbpedia.org/resource/COVID-19_pandemic",
+                      "http://www.wikidata.org/entity/Q81068910"
+                   ],
+                   "thingEnglishLabel":"Coronavirus pandemic",
+                   "type":"about"
+                },
+                {
+                   "value":"http://www.bbc.co.uk/things/75354734-2a5f-4a06-b8a1-335e36b6508f#id",
+                   "thingLabel":"Congresso Nacional",
+                   "thingUri":"http://www.bbc.co.uk/things/75354734-2a5f-4a06-b8a1-335e36b6508f#id",
+                   "thingId":"75354734-2a5f-4a06-b8a1-335e36b6508f",
+                   "thingType":[
+                      "core:Thing",
+                      "tagging:TagConcept",
+                      "core:Organisation",
+                      "tagging:AmbiguousTerm",
+                      "tagging:Agent"
+                   ],
+                   "thingSameAs":[
+                      "http://www.wikidata.org/entity/Q949699",
+                      "http://dbpedia.org/resource/National_Congress_of_Brazil"
+                   ],
+                   "thingEnglishLabel":"National Congress of Brazil",
+                   "type":"about"
+                },
+                {
+                   "value":"http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                   "thingLabel":"Política",
+                   "thingUri":"http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                   "thingId":"75612fa6-147c-4a43-97fa-fcf70d9cced3",
+                   "thingType":[
+                      "tagging:Genre",
+                      "tagging:TagConcept",
+                      "tagging:AmbiguousTerm",
+                      "core:Theme",
+                      "core:Thing"
+                   ],
+                   "thingSameAs":[
+                      "http://dbpedia.org/resource/Politics"
+                   ],
+                   "thingEnglishLabel":"Politics",
+                   "type":"about"
+                },
+                {
+                   "value":"http://www.bbc.co.uk/things/f21d4493-e3bd-47df-b23c-1d57f0e3e818#id",
+                   "thingLabel":"Jair Bolsonaro                               ",
+                   "thingUri":"http://www.bbc.co.uk/things/f21d4493-e3bd-47df-b23c-1d57f0e3e818#id",
+                   "thingId":"f21d4493-e3bd-47df-b23c-1d57f0e3e818",
+                   "thingType":[
+                      "core:Thing",
+                      "tagging:TagConcept",
+                      "tagging:Agent",
+                      "core:Person",
+                      "tagging:AmbiguousTerm"
+                   ],
+                   "thingSameAs":[
+                      "http://dbpedia.org/resource/Jair_Bolsonaro",
+                      "http://www.wikidata.org/entity/Q10304982"
+                   ],
+                   "thingEnglishLabel":"Jair Bolsonaro",
+                   "type":"about"
+                }
+             ],
+             "formats":[
+                {
+                   "value":"http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                   "thingLabel":"Report",
+                   "thingUri":"http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                   "thingId":"46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                   "thingType":[
+                      "tagging:TagConcept",
+                      "tagging:Format"
+                   ],
+                   "thingSameAs":[
+                      
+                   ],
+                   "thingEnglishLabel":"Report",
+                   "thingPreferredLabel":"Report",
+                   "thingLabelLanguage":"pt-br",
+                   "type":"formats"
+                }
+             ]
+          }
+       },
+       "tags":{
+          "about":[
+             {
+                "thingLabel":"Coronavírus",
+                "thingUri":"http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+                "thingId":"5fe79b8d-56e5-4aff-8b05-21f9ad731912",
+                "thingType":[
+                   "tagging:TagConcept",
+                   "core:Thing",
+                   "core:Event"
+                ],
+                "thingSameAs":[
+                   "http://dbpedia.org/resource/COVID-19_pandemic",
+                   "http://www.wikidata.org/entity/Q81068910"
+                ],
+                "topicName":"Coronavírus",
+                "topicId":"clmq8rgyyvjt",
+                "curationList":[
+                   {
+                      "curationId":"ec8f5da4-6474-40af-a497-8d9643ba4723",
+                      "curationType":"vivo-stream"
+                   }
+                ],
+                "thingEnglishLabel":"Coronavirus pandemic",
+                "thingLabelLanguage":"pt-br",
+                "thingPreferredLabel":"Coronavirus pandemic"
+             },
+             {
+                "thingLabel":"Congresso Nacional",
+                "thingUri":"http://www.bbc.co.uk/things/75354734-2a5f-4a06-b8a1-335e36b6508f#id",
+                "thingId":"75354734-2a5f-4a06-b8a1-335e36b6508f",
+                "thingType":[
+                   "core:Thing",
+                   "tagging:TagConcept",
+                   "core:Organisation",
+                   "tagging:AmbiguousTerm",
+                   "tagging:Agent"
+                ],
+                "thingSameAs":[
+                   "http://www.wikidata.org/entity/Q949699",
+                   "http://dbpedia.org/resource/National_Congress_of_Brazil"
+                ],
+                "topicName":"Congresso Nacional",
+                "topicId":"c2lemz0vkm8t",
+                "curationList":[
+                   {
+                      "curationId":"4f4a1d7a-c76e-4469-b9fe-c27bc0e48239",
+                      "curationType":"vivo-stream"
+                   }
+                ],
+                "thingEnglishLabel":"National Congress of Brazil",
+                "thingLabelLanguage":"pt-br",
+                "thingPreferredLabel":"National Congress of Brazil"
+             },
+             {
+                "thingLabel":"Política",
+                "thingUri":"http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                "thingId":"75612fa6-147c-4a43-97fa-fcf70d9cced3",
+                "thingType":[
+                   "tagging:Genre",
+                   "tagging:TagConcept",
+                   "tagging:AmbiguousTerm",
+                   "core:Theme",
+                   "core:Thing"
+                ],
+                "thingSameAs":[
+                   "http://dbpedia.org/resource/Politics"
+                ],
+                "topicName":"Política",
+                "topicId":"cg7267qwzx1t",
+                "curationList":[
+                   {
+                      "curationId":"a69e456a-3cdc-417b-bd7d-92e2a44cf04e",
+                      "curationType":"vivo-stream"
+                   }
+                ],
+                "thingEnglishLabel":"Politics",
+                "thingLabelLanguage":"pt-br",
+                "thingPreferredLabel":"Politics"
+             },
+             {
+                "thingLabel":"Jair Bolsonaro                               ",
+                "thingUri":"http://www.bbc.co.uk/things/f21d4493-e3bd-47df-b23c-1d57f0e3e818#id",
+                "thingId":"f21d4493-e3bd-47df-b23c-1d57f0e3e818",
+                "thingType":[
+                   "core:Thing",
+                   "tagging:TagConcept",
+                   "tagging:Agent",
+                   "core:Person",
+                   "tagging:AmbiguousTerm"
+                ],
+                "thingSameAs":[
+                   "http://dbpedia.org/resource/Jair_Bolsonaro",
+                   "http://www.wikidata.org/entity/Q10304982"
+                ],
+                "topicName":"Jair Bolsonaro                               ",
+                "topicId":"cg7267qv6q0t",
+                "curationList":[
+                   {
+                      "curationId":"41a09a3f-973d-4d50-b157-72a3eec30b55",
+                      "curationType":"vivo-stream"
+                   }
+                ],
+                "thingEnglishLabel":"Jair Bolsonaro",
+                "thingLabelLanguage":"pt-br",
+                "thingPreferredLabel":"Jair Bolsonaro"
+             }
+          ]
+       },
+       "version":"v1.3.14",
+       "blockTypes":[
+          "image",
+          "paragraph",
+          "list",
+          "crosshead",
+          "social_embed"
+       ],
+       "includeComments":false,
+       "atiAnalytics":{
+          "producerName":"BRASIL",
+          "producerId":"33"
+       },
+       "readTime":10,
+       "siteUri":"/portuguese",
+       "topics":[
+          {
+             "topicName":"Congresso Nacional",
+             "topicId":"c2lemz0vkm8t",
+             "subjectList":[
+                {
+                   "subjectId":"http://www.bbc.co.uk/things/75354734-2a5f-4a06-b8a1-335e36b6508f#id",
+                   "subjectType":"tag"
+                }
+             ],
+             "curationList":[
+                {
+                   "curationId":"4f4a1d7a-c76e-4469-b9fe-c27bc0e48239",
+                   "curationType":"vivo-stream",
+                   "position":0,
+                   "visualProminence":"NORMAL"
+                }
+             ],
+             "types":[
+                "core:Thing",
+                "tagging:TagConcept",
+                "core:Organisation",
+                "tagging:AmbiguousTerm",
+                "tagging:Agent"
+             ],
+             "home":"http://www.bbc.co.uk/ontologies/passport/home/Brasil"
+          },
+          {
+             "topicName":"Jair Bolsonaro                               ",
+             "topicId":"cg7267qv6q0t",
+             "subjectList":[
+                {
+                   "subjectId":"http://www.bbc.co.uk/things/f21d4493-e3bd-47df-b23c-1d57f0e3e818#id",
+                   "subjectType":"tag"
+                }
+             ],
+             "curationList":[
+                {
+                   "curationId":"41a09a3f-973d-4d50-b157-72a3eec30b55",
+                   "curationType":"vivo-stream",
+                   "visualProminence":"NORMAL"
+                }
+             ],
+             "types":[
+                "core:Thing",
+                "tagging:TagConcept",
+                "tagging:Agent",
+                "core:Person",
+                "tagging:AmbiguousTerm"
+             ],
+             "home":"http://www.bbc.co.uk/ontologies/passport/home/Brasil"
+          },
+          {
+             "topicName":"Política",
+             "topicId":"cg7267qwzx1t",
+             "subjectList":[
+                {
+                   "subjectId":"http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                   "subjectType":"tag"
+                }
+             ],
+             "curationList":[
+                {
+                   "curationId":"a69e456a-3cdc-417b-bd7d-92e2a44cf04e",
+                   "curationType":"vivo-stream",
+                   "visualProminence":"NORMAL"
+                }
+             ],
+             "types":[
+                "tagging:TagConcept",
+                "core:Theme",
+                "core:Thing"
+             ],
+             "home":"http://www.bbc.co.uk/ontologies/passport/home/Brasil"
+          },
+          {
+             "topicName":"Coronavírus",
+             "topicId":"clmq8rgyyvjt",
+             "subjectList":[
+                {
+                   "subjectId":"http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+                   "subjectType":"tag"
+                }
+             ],
+             "curationList":[
+                {
+                   "curationId":"ec8f5da4-6474-40af-a497-8d9643ba4723",
+                   "curationType":"vivo-stream",
+                   "visualProminence":"NORMAL"
+                }
+             ],
+             "types":[
+                "tagging:TagConcept",
+                "core:Thing",
+                "core:Event"
+             ],
+             "home":"http://www.bbc.co.uk/ontologies/passport/home/Brasil"
+          }
+       ]
+    },
+    "content":{
+       "blocks":[
+          {
+             "id":"121230635",
+             "subType":"body",
+             "href":"http://c.files.bbci.co.uk/D163/production/_121230635_53b9de6c-afdc-49b6-867c-59caecc9549f.jpg",
+             "path":"/cpsprodpb/D163/production/_121230635_53b9de6c-afdc-49b6-867c-59caecc9549f.jpg",
+             "height":549,
+             "width":976,
+             "altText":"Sessão da CPI nesta terça, com a votação de relatório final",
+             "caption":"Sessão da CPI nesta terça, com a votação de relatório que pede indiciamento de presidente e outras 77 pessoas e 2 empresas",
+             "copyrightHolder":"Reuters",
+             "positionHint":"full-width",
+             "originCode":"cpsprodpb",
+             "type":"image"
+          },
+          {
+             "text":"O relatório final da Comissão Parlamentar de Inquérito (CPI) da Covid, apresentado na semana passada pelo senador Renan Calheiros (MDB-AL), foi aprovado por 7 votos a 4 em sessão nesta terça-feira (26/10).",
+             "role":"introduction",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"O texto, votado pelos membros titulares da comissão, recomenda que o presidente Jair Bolsonaro seja investigado e, eventualmente, responsabilizado em três frentes devido à gestão do seu governo na pandemia de coronavírus: por crimes comuns, por crimes de responsabilidade e por crimes contra a humanidade. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"Com o resultado, essas acusações contra o presidente serão analisadas em três órgãos.",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"Além do presidente, o relatório pede o indiciamento de 77 pessoas - incluindo ex-ministros, ministros, políticos, servidores públicos, empresários, membros do chamado &quot;gabinete paralelo&quot; - e duas empresas, a Precisa Medicamentos e a VTCLog.",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"Entre os que tiveram o pedido de indiciamento mencionado no relatório estão o ex-ministro da Saúde Eduardo Pazuello, o atual titular da Pasta Marcelo Queiroga, Ernesto Araújo (ex-chanceler), Walter Braga Netto, ministro da Defesa, Onyx Lorenzoni (ministro-chefe da Secretaria Geral da Presidência), Mayra Pinheiro (secretária do Ministério da Saúde conhecida como &quot;capitã cloroquina&quot;), Roberto Dias (ex-diretor de Logística do ministério), Francisco Maximiano (sócio da Precisa), Flavio, Eduardo e Carlos Bolsonaro (filhos do presidente e respectivamente senador, deputado e vereador), Bia Kicis e Carla Zambelli (deputadas governistas), os empresários Carlos Wizard, Luciano Hang e Otávio Fakhoury e os médicos Nise Yamaguchi, Paolo Zanotto e Rodrigo Esper, entre outros <link><caption>(veja o relatório completo da CPI aqui</caption><altText>https://www12.senado.leg.br/noticias/arquivos/2021/10/26/relatorio_final-26102021-12h40-1.pdf </altText><url href=\"https://www12.senado.leg.br/noticias/arquivos/2021/10/26/relatorio_final-26102021-12h40-1.pdf\" platform=\"highweb\"/></link>; o nome do senador Luis Carlos Heinze, do PP gaúcho, foi retirado na reta final das discussões). ",
+             "markupType":"candy_xml",
+             "type":"paragraph"
+          },
+          {
+             "text":"Os pedidos de indiciamento serão encaminhados a outros órgãos.",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"No caso de Bolsonaro, as suspeitas de crime comum serão encaminhadas à Procuradoria-Geral da República (PGR), que avaliará uma possível denúncia criminal contra Bolsonaro. Já as de crime de responsabilidade vão para análise da Câmara dos Deputados, para possível abertura de processo de impeachment. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"Por fim, as acusações de crimes contra a humanidade serão enviadas ao Tribunal Penal Internacional (TPI), onde o presidente poderia sofrer um processo. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"No entanto, juristas ouvidos pela BBC News Brasil consideram que os três caminhos oferecem obstáculos hoje para que o presidente de fato venha a ser punido por possíveis crimes durante a pandemia de coronavírus, doença que já matou mais de 606 mil pessoas no Brasil desde março de 2020. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "numbered":false,
+             "items":[
+                {
+                   "text":"<itemMeta>portuguese/brasil-58989965</itemMeta>",
+                   "meta":[
+                      {
+                         "headlines":{
+                            "shortHeadline":"Bolsonaro acusado de crimes contra humanidade é destaque na imprensa estrangeira",
+                            "headline":"Bolsonaro acusado de crimes contra humanidade é destaque na imprensa estrangeira",
+                            "overtyped":"Bolsonaro acusado de crimes contra humanidade é destaque na imprensa estrangeira"
+                         },
+                         "locators":{
+                            "href":"https://www.bbc.com/portuguese/brasil-58989965"
+                         },
+                         "summary":"Leitura de relatório da CPI da Covid virou manchete em periódicos globais, que destacaram, porém, que impacto jurídico pode ser nulo.",
+                         "timestamp":1634761756000,
+                         "language":"pt-BR",
+                         "passport":{
+                            "category":{
+                               "categoryId":"",
+                               "categoryName":""
+                            },
+                            "taggings":[
+                               
+                            ]
+                         },
+                         "id":"urn:bbc:ares::asset:portuguese/brasil-58989965",
+                         "type":"cps"
+                      }
+                   ],
+                   "markupType":"candy_xml",
+                   "type":"listItem"
+                },
+                {
+                   "text":"<itemMeta>portuguese/brasil-58932821</itemMeta>",
+                   "meta":[
+                      {
+                         "headlines":{
+                            "shortHeadline":"Renan diz que amizade com Lula não tira legitimidade da CPI",
+                            "headline":"Renan diz que amizade com Lula não tira legitimidade da CPI",
+                            "overtyped":"Renan diz que amizade com Lula não tira legitimidade da CPI "
+                         },
+                         "locators":{
+                            "href":"https://www.bbc.com/portuguese/brasil-58932821"
+                         },
+                         "summary":"Na relatoria da comissão, Calheiros voltou a atrair as atenções ao atuar como investigador principal das condutas do governo federal em relação ao enfrentamento à pandemia. Em entrevista à BBC, ele comenta relação com Lula e faz acusações contra Bolsonaro.",
+                         "timestamp":1634327409000,
+                         "language":"pt-BR",
+                         "passport":{
+                            "category":{
+                               "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                               "categoryName":"News"
+                            },
+                            "taggings":[
+                               
+                            ]
+                         },
+                         "id":"urn:bbc:ares::asset:portuguese/brasil-58932821",
+                         "type":"cps"
+                      }
+                   ],
+                   "markupType":"candy_xml",
+                   "type":"listItem"
+                },
+                {
+                   "text":"<itemMeta>portuguese/brasil-58986678</itemMeta>",
+                   "meta":[
+                      {
+                         "headlines":{
+                            "shortHeadline":"As 9 acusações contra Bolsonaro no relatório da CPI - e a manobra governista para tentar blindá-lo",
+                            "headline":"As 9 acusações contra Bolsonaro no relatório da CPI - e a manobra governista para tentar blindá-lo",
+                            "overtyped":"As 9 acusações contra Bolsonaro no relatório da CPI - e a manobra governista para tentar blindá-lo"
+                         },
+                         "locators":{
+                            "href":"https://www.bbc.com/portuguese/brasil-58986678"
+                         },
+                         "summary":"Senador Marcos Rogério tentou manobra para impedir que documento sugerisse indiciamento de Bolsonaro. Porém, pedido foi negado.",
+                         "timestamp":1634752276000,
+                         "language":"pt-BR",
+                         "passport":{
+                            "category":{
+                               "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                               "categoryName":"News"
+                            },
+                            "taggings":[
+                               
+                            ]
+                         },
+                         "id":"urn:bbc:ares::asset:portuguese/brasil-58986678",
+                         "type":"cps"
+                      }
+                   ],
+                   "markupType":"candy_xml",
+                   "type":"listItem"
+                }
+             ],
+             "type":"list"
+          },
+          {
+             "text":"Durante viagem ao Ceará, enquanto Calheiros lia seu relatório na CPI, na semana passada, Bolsonaro negou qualquer responsabilidade nas mortes. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "id":"121157704",
+             "subType":"body",
+             "href":"http://c.files.bbci.co.uk/9F47/production/_121157704_51610994896_8c809b122a_z.jpg",
+             "path":"/cpsprodpb/9F47/production/_121157704_51610994896_8c809b122a_z.jpg",
+             "height":549,
+             "width":976,
+             "altText":"Renan Calheiros",
+             "caption":"Relatório de Renan Calheiros ainda precisa ser aprovado por maioria da CPI; votação ocorre na próxima semana",
+             "copyrightHolder":"Agência Senado",
+             "positionHint":"full-width",
+             "originCode":"cpsprodpb",
+             "type":"image"
+          },
+          {
+             "text":"&quot;Como seria bom se aquela CPI tivesse fazendo algo de produtivo para nosso Brasil. Tomaram tempo de nosso ministro da Saúde, de servidores, de pessoas humildes e de empresários&quot;, criticou o presidente.",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"&quot;Nada produziram, a não ser o ódio e o rancor entre alguns de nós. Mas sabemos que não temos culpa de absolutamente nada, fizemos a coisa certa desde o primeiro momento&quot;, disse ainda.",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"Entenda a seguir o que pode acontecer concretamente contra o presidente nos três tipos de crimes que Bolsonaro é citado no texto de Calheiros. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"1) Acusações de crimes de responsabilidade",
+             "markupType":"plain_text",
+             "type":"crosshead"
+          },
+          {
+             "text":"Calheiros ressalta em seu relatório que, entre os crimes de responsabilidade previstos na legislação brasileira, está o ato de atentar contra o exercício dos direitos sociais e contra a probidade na administração. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"Além disso, ele destaca que o direito à saúde é previsto como um dos direitos sociais no artigo 6º da Constituição, enquanto o artigo 196 estabelece que &quot;a saúde é direito de todos e dever do Estado, garantido mediante políticas sociais e econômicas que visem à redução do risco de doença e de outros agravos e ao acesso universal e igualitário às ações e serviços para sua promoção, proteção e recuperação&quot;.",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"Na avaliação de Calheiros, porém, a investigação da CPI mostrou que a gestão de Bolsonaro agiu em sentido contrário: ao invés de proteger a vida dos brasileiros da covid-19, o presidente teria contribuído para o agravamento da pandemia ao demorar a comprar vacinas, incentivar o uso de medicamentos sem comprovação científica, promover aglomerações, entre outros comportamentos. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"&quot;A minimização constante da gravidade da covid-19, a criação de mecanismos ineficazes de controle e tratamento da doença, com ênfase em protocolo de tratamento precoce sem o aval das autoridades sanitárias, o déficit de coordenação política, a falta de campanhas educativas sobre a importância de medidas não farmacológicas, o comportamento pessoal contra essas medidas, e, por fim, a omissão e o atraso na aquisição de vacinas e a contratação de cobertura populacional baixa do consórcio da OMS foram algumas das condutas do chefe do Poder Executivo Federal que incontestavelmente atentaram contra a saúde pública e a probidade administrativa&quot;, diz trecho do relatório.",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"Apesar das duras acusações do relator, porém, hoje parece pouco provável que elas gerem abertura de um processo de impeachment contra Bolsonaro. O único que pode iniciar esse procedimento é o presidente da Câmara dos Deputados, Arthur Lira (PP-AL), que atualmente mantém boa relação com presidente. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"E, a partir dessa aliança com Lira, o Palácio do Planalto construiu uma base de apoio entre os deputados do chamado Centrão (siglas de centro-direita de comportamento mais fisiológico), sustentada pela distribuição de cargos para indicados desses parlamentares e pelo envio de verbas federais para investimentos em seus redutos eleitorais. Com isso, hoje o presidente parece reunir o mínimo de 172 votos na Câmara necessários para barrar a aprovação de um processo de impeachment. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "id":"121157703",
+             "subType":"body",
+             "href":"http://c.files.bbci.co.uk/7837/production/_121157703_tv071249315.jpg",
+             "path":"/cpsprodpb/7837/production/_121157703_tv071249315.jpg",
+             "height":549,
+             "width":976,
+             "altText":"Bolsonaro se atrapalha ao colocar máscara",
+             "caption":"CPI investigou atos e omissões do governo Bolsonaro durante a pandemia",
+             "copyrightHolder":"Reuters",
+             "positionHint":"full-width",
+             "originCode":"cpsprodpb",
+             "type":"image"
+          },
+          {
+             "text":"Outro elemento que reduz as chances desse processo ser iniciado é o fato de os protestos de rua realizados ao longo desse ano pedindo a cassação do presidente não terem reunidos um público tão grande quantos os atos que pressionaram pelo impeachment da presidente Dilma Rousseff (PT) em 2016. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"Já as pesquisas de opinião têm indicado que o governo Bolsonaro é reprovado pela maioria da população, mas ainda é bem avaliado por cerca de um terço dos brasileiros — patamar de aprovação superior ao que Dilma tinha quando foi cassada.",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"2) Acusações de crimes comuns",
+             "markupType":"plain_text",
+             "type":"crosshead"
+          },
+          {
+             "text":"Para Calheiros, as condutas de Bolsonaro também podem ser enquadradas em sete crimes comuns, previstos no Código Penal. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"São eles: epidemia com resultado de morte (por suspeita de propagar o vírus); infração de medida sanitária preventiva (por realizar aglomerações e não usar máscara); charlatanismo (devido ao incentivo de uso de medicamentos sem eficácia), incitação ao crime (por incentivar aglomeração e o não uso de máscara); falsificação de documento particular (por ter apresentado uma falsificação como sendo um documento oficial do Tribunal de Contas da União que provaria haver um excesso na contabilização de mortes por covid-19); emprego irregular de verbas públicas (por uso de recursos públicos na compra de medicamentos ineficazes); e prevaricação (por supostamente não ter mandado investigar denúncias de corrupção na compra de vacinas). ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"Caso o relatório seja aprovado, os elementos que baseiam essas acusações serão encaminhadas à PGR, pois o procurador-geral da República, Augusto Aras, é a única autoridade que pode apresentar uma denúncia criminal contra o presidente no Supremo Tribunal Federal (STF). ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"Aras é visto como aliado de Bolsonaro e hoje parece improvável que o denuncie, já que a PGR tem arquivado diversas queixas-crimes que já foram apresentadas solicitando a investigação criminal de Bolsonaro por sua conduta na pandemia. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"A PGR, por exemplo, já arquivou pedido de investigação devido ao não uso de máscara por entender que isso configura infração administrativa, sujeita a multa, e não um crime. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"O órgão também recusou pedido de investigação por causa das aglomerações provocadas pelo presidente. Segundo a PGR, Bolsonaro só poderia ser processado por disseminar coronavírus se estivesse contaminado com a doença e contrariasse ordem médica para se isolar. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "id":"121157706",
+             "subType":"body",
+             "href":"http://c.files.bbci.co.uk/ED67/production/_121157706_tv071414964.jpg",
+             "path":"/cpsprodpb/ED67/production/_121157706_tv071414964.jpg",
+             "height":549,
+             "width":976,
+             "altText":"Protesto em Brasília contra as mais de 600 mil mortes por covid",
+             "caption":"Protesto em Brasília contra as mais de 600 mil mortes por covid",
+             "copyrightHolder":"Reuters",
+             "positionHint":"full-width",
+             "originCode":"cpsprodpb",
+             "type":"image"
+          },
+          {
+             "text":"Por outra lado, a PGR já abriu inquérito para investigar se Bolsonaro prevaricou ao não tomar providências após ser informado pelo deputado Luiz Miranda (DEM-DF) de supostas ilegalidades no contrato para compra da vacina indiana Covaxin. A investigação está em andamento.",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"Quanto a suspeitas de crimes pelo incentivo de Bolsonaro ao chamado &quot;tratamento precoce&quot; (uso de medicamentos sem eficácia contra covid-19), Aras informou ao STF em junho que havia iniciado uma apuração preliminar para avaliar a abertura de investigação. Críticos de Aras, porém, o acusam de usar esse tipo de procedimento para responder a pressões para investigar Bolsonaro sem de fato adotar medidas concretas contra o presidente.",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"Para o criminalista Pierpaolo Bottini, professor da Universidade de São Paulo (USP), é difícil cravar que Aras não dará qualquer encaminhamento as acusações do relatório da CPI. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"&quot;Não é só uma avaliação política, tem uma avaliação jurídica que ele terá que fazer. Ele vai ter que motivar (justificar juridicamente) seja qual for a decisão dele. Se tiver muito subsídio (sustentando as acusações), também é difícil ele deixar de dar qualquer encaminhamento&quot;, acredita. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"Segundo Bottini, há um outro caminho jurídico para Bolsonaro ser denunciado no STF. Em caso de omissão da PGR, ou seja, se o órgão demorar para dar alguma resposta ao relatório da CPI, as próprias vítimas da pandemia poderiam processar o presidente por meio de uma ação penal privada subsidiária da pública. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"A Associação de Vítimas e Familiares de Vítimas da Covid-19 (Avico) disse à BBC News Brasil que de fato analisa essa possibilidade. A organização apresentou em junho à PGR um pedido de investigação contra Bolsonaro, mas a análise desse pedido tem transcorrido em sigilo e a própria Avico enfrenta dificuldades para obter informações sobre seu andamento. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"Eventual apresentação de uma ação contra Bolsonaro pelas vítimas da pandemia seria algo inédito. Segundo Bottini, provavelmente o STF faria uma primeira avaliação de admissibilidade (decidir se a ação está dentro dos requisitos jurídicos necessários) e depois encaminharia a denúncia para análise da Câmara dos Deputados. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"O professor ressalta que a Constituição só permite que o Presidente da República seja processado após aval de 342 deputados (mesmo número necessário para abertura de um processo de impeachment). ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"3) Acusações de crimes contra a humanidade",
+             "markupType":"plain_text",
+             "type":"crosshead"
+          },
+          {
+             "text":"Calheiros também defende em seu relatório que Bolsonaro seja investigado no Tribunal Penal Internacional (TPI), Corte sediada em Haia, na Holanda, que julga graves violações de direitos humanos, como genocídio, crimes contra a humanidade e crimes de guerra.",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"No entanto, são poucas as denúncias recebidas pelo Tribunal que de fato geram investigações - e, quando isso ocorre, os casos se alongam por muitos anos, explicou à BBC News Brasil o juiz criminal e professor da USP Marcos Zilli, estudioso do funcionamento do Tribunal Penal Internacional. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"Em tese, diz ele, o TPI pode condenar criminosos a penas de 30 anos de prisão e até a prisão perpétua, mas essas punições máximas nunca foram aplicadas pela Corte. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"A intenção inicial de Calheiros era acusar o presidente de crime de genocídio contra populações indígenas, mas essa ideia foi abandonada devido à oposição de outros membros da CPI. Com isso, a proposta do relator é enviar ao TPI duas acusações de crimes contra a humanidade por parte do presidente. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"Esses crimes estão previstos no Tratado de Roma, incorporado ao direito brasileiro desde setembro de 2002. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "id":"121232151",
+             "subType":"body",
+             "href":"http://c.files.bbci.co.uk/3B13/production/_121232151_a0054076-90b0-4034-8ae6-a4471160fadd.jpg",
+             "path":"/cpsprodpb/3B13/production/_121232151_a0054076-90b0-4034-8ae6-a4471160fadd.jpg",
+             "height":549,
+             "width":976,
+             "altText":"Flavio Bolsonaro",
+             "caption":"Senador Flavio Bolsonaro e seus irmãos Carlos e Eduardo estão entre os políticos com pedido de indiciamento pela CPI",
+             "copyrightHolder":"EPA",
+             "positionHint":"full-width",
+             "originCode":"cpsprodpb",
+             "type":"image"
+          },
+          {
+             "text":"Uma das acusações propostas por Calheiros sustenta que Bolsonaro cometeu crime contra a humanidade a praticar &quot;ato desumano que afete gravemente a integridade física ou a saúde física ou mental&quot;. Isso teria ocorrido, segundo o senador, quando vidas humanas foram usadas como &quot;cobaias&quot; em estudos fraudulentos para aplicação de tratamentos sem eficácia contra covid-19. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"Ele cita, por exemplo, a promoção do &quot;tratamento precoce&quot; pelo Ministério da Saúde durante a crise de falta de oxigênio em Manaus, no início de 2021. Outro argumento usado pelo senador foi o uso em massa de hidroxicloroquina pelo plano de saúde Prevent Senior. Resultados de um suposta pesquisa da empresa atestando a eficácia do remédio contra covid foram divulgados por Bolsonaro - no entanto, o estudo não havia sido autorizado pela Comissão Nacional de Ética em Pesquisa (Conep) e ex-médicos da Prevent Senior acusaram o plano de fraudar os resultados. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"A outra acusação é de crime contra a humanidade devido à postura do governo Bolsonaro em relação aos povos indígenas. O relatório destaca a decisão do STF de determinar em julho de 2020 a adoção de um plano emergencial pelo governo de apoio a essas populações durante a pandemia &quot;diante das muitas falhas na política de enfrentamento à pandemia junto aos povos indígenas e da preocupação com a rápida interiorização da doença, que prenunciavam um desastre&quot;. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"Ainda segundo o parecer de Calheiros, &quot;esta CPI identifica o Presidente da República Jair Messias Bolsonaro como o responsável máximo por atos e omissões intencionais que submeteram os indígenas a condições de vida, tais como a privação do acesso a alimentos ou medicamentos, com vista a causar a destruição dessa parte da população, que configuram atos de extermínio, além de privação intencional e grave de direitos fundamentais em violação do direito internacional, por motivos relacionados com a identidade do grupo ou da coletividade em causa, que configura atos de perseguição&quot;. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "id":"119030793",
+             "subType":"body",
+             "href":"http://c.files.bbci.co.uk/9B17/production/_119030793_51255323936_bd62a58567_z.jpg",
+             "path":"/cpsprodpb/9B17/production/_119030793_51255323936_bd62a58567_z.jpg",
+             "height":549,
+             "width":976,
+             "altText":"Plenário da CPI da Covid",
+             "caption":"O relatório final da CPI da covid foi lido no Senado nesta quarta-feira",
+             "copyrightHolder":"Agência Senado",
+             "positionHint":"full-width",
+             "originCode":"cpsprodpb",
+             "type":"image"
+          },
+          {
+             "text":"Segundo o professor Marcos Zilli, essas acusações, caso sejam realmente apresentadas pela CPI ao TPI, passarão por um longo processo de análise e não necessariamente vão gerar investigações internacionais contra o presidente brasileiro. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"Todas as representações criminais feitas ao TPI são analisadas pela Procuradoria da Corte, órgão responsável por realizar investigações de forma independente. Um filtro inicial da procuradoria descarta casos em que os crimes denunciados claramente não são de competência do Tribunal. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"Se a representação passar dessa etapa, ela é submetida a um exame preliminar, em que a Procuradoria avalia a presença dos elementos necessários à instauração de uma investigação formal. Nesse momento, é analisado, por exemplo, a gravidade dos crimes apontados na representação e se há omissão da Justiça nacional em apurar esses delitos. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"&quot;A experiência que nós temos no Tribunal Penal Internacional revelam que os casos demandam muitos anos de investigação, caso uma investigação seja instaurada, e muitos anos de processo também, caso o processo seja aberto&quot;, explica Zilli.",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"Na sua avaliação, a acusação envolvendo populações indígenas é a que teria mais potencial de prosperar no TPI, devido ao contexto mais amplo de ações da gestão Bolsonaro relacionadas a esses povos, como a redução da proteção aos seus territórios e falas recorrentes do presidente defendendo a exploração econômica das terras indígenas. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "text":"O TPI, inclusive, já recebeu algumas acusações contra Bolsonaro, envolvendo tanto os povos indígenas como a conduta na pandemia. Por enquanto, apenas uma relacionada aos indígenas, apresentada em 2019, avançou para a etapa de análise preliminar pela procuradoria. ",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "id":"108039321",
+             "subType":"body",
+             "href":"http://c.files.bbci.co.uk/3069/production/_108039321_lnea.jpg",
+             "path":"/cpsprodpb/3069/production/_108039321_lnea.jpg",
+             "height":2,
+             "width":464,
+             "altText":"Línea",
+             "copyrightHolder":"BBC",
+             "positionHint":"body-width",
+             "originCode":"cpsprodpb",
+             "type":"image"
+          },
+          {
+             "text":"<bold>Já assistiu aos nossos novos vídeos no </bold><link><caption>YouTube</caption><url href=\"https://www.youtube.com/channel/UCthbIFAxbXTTQEC7EcQvP1Q\" platform=\"highweb\"/><url href=\"https://www.youtube.com/channel/UCthbIFAxbXTTQEC7EcQvP1Q\" platform=\"enhancedmobile\"/></link><bold>? Inscreva-se no nosso canal! </bold>",
+             "markupType":"candy_xml",
+             "type":"paragraph"
+          },
+          {
+             "href":"https://www.youtube.com/watch?v=E3ODAt3iZhw",
+             "source":"youtube",
+             "embed":{
+                "oembed":{
+                   "version":"1.0",
+                   "title":"Mulher é presa após se negar a usar máscara em banco no Texas",
+                   "author_name":"BBC News Brasil",
+                   "author_url":"https://www.youtube.com/user/BBCBrasil",
+                   "provider_name":"YouTube",
+                   "provider_url":"https://www.youtube.com/",
+                   "thumbnail_url":"https://i.ytimg.com/vi/E3ODAt3iZhw/hqdefault.jpg",
+                   "thumbnail_width":480,
+                   "thumbnail_height":360,
+                   "html":"<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/E3ODAt3iZhw?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                   "width":200,
+                   "height":113
+                },
+                "fallback_image":{
+                   "fallback_image_width":500,
+                   "fallback_image_height":269,
+                   "alt_text":"YouTube post by BBC News Brasil: Mulher é presa após se negar a usar máscara em banco no Texas"
+                }
+             },
+             "id":"E3ODAt3iZhw",
+             "type":"social_embed"
+          },
+          {
+             "href":"https://www.youtube.com/watch?v=5qBp6KPbi4s",
+             "source":"youtube",
+             "embed":{
+                "oembed":{
+                   "version":"1.0",
+                   "title":"Covid-19: mapa da Fiocruz mostra UTIs brasileiras no vermelho",
+                   "author_name":"BBC News Brasil",
+                   "author_url":"https://www.youtube.com/user/BBCBrasil",
+                   "provider_name":"YouTube",
+                   "provider_url":"https://www.youtube.com/",
+                   "thumbnail_url":"https://i.ytimg.com/vi/5qBp6KPbi4s/hqdefault.jpg",
+                   "thumbnail_width":480,
+                   "thumbnail_height":360,
+                   "html":"<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/5qBp6KPbi4s?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                   "width":200,
+                   "height":113
+                },
+                "fallback_image":{
+                   "fallback_image_width":500,
+                   "fallback_image_height":269,
+                   "alt_text":"YouTube post by BBC News Brasil: Covid-19: mapa da Fiocruz mostra UTIs brasileiras no vermelho"
+                }
+             },
+             "id":"5qBp6KPbi4s",
+             "type":"social_embed"
+          },
+          {
+             "href":"https://www.youtube.com/watch?v=b8RvSNtmdXw",
+             "source":"youtube",
+             "embed":{
+                "oembed":{
+                   "version":"1.0",
+                   "title":"Covid-19: o americano que é naturalmente imune à doença",
+                   "author_name":"BBC News Brasil",
+                   "author_url":"https://www.youtube.com/user/BBCBrasil",
+                   "provider_name":"YouTube",
+                   "provider_url":"https://www.youtube.com/",
+                   "thumbnail_url":"https://i.ytimg.com/vi/b8RvSNtmdXw/hqdefault.jpg",
+                   "thumbnail_width":480,
+                   "thumbnail_height":360,
+                   "html":"<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/b8RvSNtmdXw?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                   "width":200,
+                   "height":113
+                },
+                "fallback_image":{
+                   "fallback_image_width":500,
+                   "fallback_image_height":269,
+                   "alt_text":"YouTube post by BBC News Brasil: Covid-19: o americano que é naturalmente imune à doença"
+                }
+             },
+             "id":"b8RvSNtmdXw",
+             "type":"social_embed"
+          }
+       ]
+    },
+    "promo":{
+       "headlines":{
+          "shortHeadline":"CPI da Covid aprova relatório que pede indiciamento de Bolsonaro e outros 79; o que acontece agora",
+          "headline":"CPI da Covid aprova relatório que pede indiciamento de Bolsonaro e outros 79; o que acontece agora"
+       },
+       "locators":{
+          "assetUri":"/portuguese/brasil-59057279",
+          "cpsUrn":"urn:bbc:content:assetUri:portuguese/brasil-59057279",
+          "curie":"http://www.bbc.co.uk/asset/d85052a4-e634-4cbc-9be5-2af0a4b232f9",
+          "assetId":"59057279"
+       },
+       "summary":"Texto foi aprovado em votação no início da noite por 7 votos a 4; entenda o que pode acontecer com presidente da República nos três tipos de crimes dos quais é acusado.",
+       "timestamp":1635291020000,
+       "language":"pt-BR",
+       "byline":{
+          "name":"Mariana Schreiber - @marischreiber",
+          "title":"Da BBC News Brasil em Brasília",
+          "persons":[
+             {
+                "name":"Mariana Schreiber - @marischreiber",
+                "function":"Da BBC News Brasil em Brasília"
+             }
+          ]
+       },
+       "passport":{
+          "language":"pt-br",
+          "home":"http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+          "locator":"urn:bbc:cps:curie:asset:d85052a4-e634-4cbc-9be5-2af0a4b232f9",
+          "availability":"AVAILABLE",
+          "taggings":[
+             {
+                "predicate":"http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                "value":"http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+             },
+             {
+                "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+                "value":"http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id"
+             },
+             {
+                "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+                "value":"http://www.bbc.co.uk/things/75354734-2a5f-4a06-b8a1-335e36b6508f#id"
+             },
+             {
+                "predicate":"http://www.bbc.co.uk/ontologies/bbc/contributor",
+                "value":"http://www.bbc.co.uk/things/4abb18b9-d7ab-452d-891d-39b8f9ebfdb6#id"
+             },
+             {
+                "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+                "value":"http://www.bbc.co.uk/things/f21d4493-e3bd-47df-b23c-1d57f0e3e818#id"
+             },
+             {
+                "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+                "value":"http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id"
+             },
+             {
+                "predicate":"http://www.bbc.co.uk/ontologies/creativework/format",
+                "value":"http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+             },
+             {
+                "predicate":"http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                "value":"http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+             }
+          ],
+          "schemaVersion":"1.3.0",
+          "publishedState":"PUBLISHED",
+          "predicates":{
+             "about":[
+                {
+                   "value":"http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+                   "thingLabel":"Coronavírus",
+                   "thingUri":"http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+                   "thingId":"5fe79b8d-56e5-4aff-8b05-21f9ad731912",
+                   "thingType":[
+                      "tagging:TagConcept",
+                      "core:Thing",
+                      "core:Event"
+                   ],
+                   "thingSameAs":[
+                      "http://dbpedia.org/resource/COVID-19_pandemic",
+                      "http://www.wikidata.org/entity/Q81068910"
+                   ],
+                   "thingEnglishLabel":"Coronavirus pandemic",
+                   "type":"about"
+                },
+                {
+                   "value":"http://www.bbc.co.uk/things/75354734-2a5f-4a06-b8a1-335e36b6508f#id",
+                   "thingLabel":"Congresso Nacional",
+                   "thingUri":"http://www.bbc.co.uk/things/75354734-2a5f-4a06-b8a1-335e36b6508f#id",
+                   "thingId":"75354734-2a5f-4a06-b8a1-335e36b6508f",
+                   "thingType":[
+                      "core:Thing",
+                      "tagging:TagConcept",
+                      "core:Organisation",
+                      "tagging:AmbiguousTerm",
+                      "tagging:Agent"
+                   ],
+                   "thingSameAs":[
+                      "http://www.wikidata.org/entity/Q949699",
+                      "http://dbpedia.org/resource/National_Congress_of_Brazil"
+                   ],
+                   "thingEnglishLabel":"National Congress of Brazil",
+                   "type":"about"
+                },
+                {
+                   "value":"http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                   "thingLabel":"Política",
+                   "thingUri":"http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                   "thingId":"75612fa6-147c-4a43-97fa-fcf70d9cced3",
+                   "thingType":[
+                      "tagging:Genre",
+                      "tagging:TagConcept",
+                      "tagging:AmbiguousTerm",
+                      "core:Theme",
+                      "core:Thing"
+                   ],
+                   "thingSameAs":[
+                      "http://dbpedia.org/resource/Politics"
+                   ],
+                   "thingEnglishLabel":"Politics",
+                   "type":"about"
+                },
+                {
+                   "value":"http://www.bbc.co.uk/things/f21d4493-e3bd-47df-b23c-1d57f0e3e818#id",
+                   "thingLabel":"Jair Bolsonaro                               ",
+                   "thingUri":"http://www.bbc.co.uk/things/f21d4493-e3bd-47df-b23c-1d57f0e3e818#id",
+                   "thingId":"f21d4493-e3bd-47df-b23c-1d57f0e3e818",
+                   "thingType":[
+                      "core:Thing",
+                      "tagging:TagConcept",
+                      "tagging:Agent",
+                      "core:Person",
+                      "tagging:AmbiguousTerm"
+                   ],
+                   "thingSameAs":[
+                      "http://dbpedia.org/resource/Jair_Bolsonaro",
+                      "http://www.wikidata.org/entity/Q10304982"
+                   ],
+                   "thingEnglishLabel":"Jair Bolsonaro",
+                   "type":"about"
+                }
+             ],
+             "formats":[
+                {
+                   "value":"http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                   "thingLabel":"Report",
+                   "thingUri":"http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                   "thingId":"46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                   "thingType":[
+                      "tagging:TagConcept",
+                      "tagging:Format"
+                   ],
+                   "thingSameAs":[
+                      
+                   ],
+                   "thingEnglishLabel":"Report",
+                   "thingPreferredLabel":"Report",
+                   "thingLabelLanguage":"pt-br",
+                   "type":"formats"
+                }
+             ]
+          }
+       },
+       "indexImage":{
+          "id":"121157703",
+          "subType":"index",
+          "href":"http://c.files.bbci.co.uk/7837/production/_121157703_tv071249315.jpg",
+          "path":"/cpsprodpb/7837/production/_121157703_tv071249315.jpg",
+          "height":549,
+          "width":976,
+          "altText":"Bolsonaro se atrapalha ao colocar máscara",
+          "caption":"CPI investigou atos e omissões do governo Bolsonaro durante a pandemia",
+          "copyrightHolder":"Reuters",
+          "originCode":"cpsprodpb",
+          "type":"image"
+       },
+       "id":"urn:bbc:ares::asset:portuguese/brasil-59057279",
+       "type":"cps"
+    },
+    "relatedContent":{
+       "section":{
+          "subType":"index",
+          "name":"Brasil",
+          "uri":"/portuguese/brasil",
+          "type":"simple"
+       },
+       "site":{
+          "subType":"site",
+          "name":"BBC Brasil",
+          "uri":"/portuguese",
+          "type":"simple"
+       },
+       "groups":[
+          
+       ]
+    }
+ }

@@ -17,7 +17,7 @@ export default service => {
 
   it('Media player image placeholder', () => {
     const audioPlaceholderImage = document.querySelector(
-      'amp-img[src="http://localhost:7080/images/amp_audio_placeholder.png"]',
+      'div[data-e2e="image-placeholder"][placeholder]',
     );
 
     expect(audioPlaceholderImage).toBeInTheDocument();

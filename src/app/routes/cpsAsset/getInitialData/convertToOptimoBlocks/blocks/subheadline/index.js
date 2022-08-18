@@ -1,6 +1,6 @@
 import nodeLogger from '#lib/logger.node';
-import convertParagraph from '../paragraph';
 import { blockBase } from '#app/models/blocks';
+import convertParagraph from '../paragraph';
 
 const logger = nodeLogger(__filename);
 

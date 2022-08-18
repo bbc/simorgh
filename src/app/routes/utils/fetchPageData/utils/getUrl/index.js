@@ -1,8 +1,8 @@
 import { getQueryString, getUrlPath } from '#lib/utilities/urlParser';
-import getBaseUrl from '../getBaseUrl';
 import onClient from '#lib/utilities/onClient';
 import isLive from '#lib/utilities/isLive';
 import { AMP_REGEX } from '#app/lib/regex.const';
+import getBaseUrl from '../getBaseUrl';
 
 const baseUrl = onClient()
   ? getBaseUrl(window.location.origin)

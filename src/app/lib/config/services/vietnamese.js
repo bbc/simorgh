@@ -3,10 +3,10 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { latinDiacritics } from '@bbc/gel-foundations/scripts';
-import { vietnamese as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/Asia/Ho_Chi_Minh';
+} from '#psammead/psammead-styles/src/colours';
+import latinDiacritics from '#psammead/gel-foundations/src/scripts/latin-with-diacritics';
+import brandSVG from '#lib/chameleonLogos/vietnamese';
+import '#psammead/moment-timezone-include/tz/Asia/Ho_Chi_Minh';
 import 'moment/locale/vi';
 import withContext from '../../../contexts/utils/withContext';
 
@@ -61,6 +61,11 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: 'Quay Lại',
+        nextPage: 'Xem Tiếp',
+        pageXOfY: 'Page {x} của {y}',
+      },
       ads: {
         advertisementLabel: 'Quảng cáo',
       },
@@ -220,6 +225,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Chụp lại video, ',
           text: 'Cảnh báo: Nội dung bên thứ ba có thể có quảng cáo',
+          articleText:
+            'Cảnh báo: BBC không chịu trách nhiệm về nội dung các trang bên ngoài.',
+          articleAdditionalText:
+            'Nội dung trên %provider_name% có thể kèm quảng cáo.',
         },
         fallback: {
           text: 'Nội dung không có',
@@ -247,7 +256,7 @@ export const service = {
       hasMostRead: true,
     },
     mostWatched: {
-      header: 'Nghe nhiều nhất',
+      header: 'Nghe/Xem nhiều nhất',
       numberOfItems: 10,
       hasMostWatched: true,
     },
@@ -284,7 +293,7 @@ export const service = {
           text: 'Cookie',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853951',
+          href: 'https://www.bbc.co.uk/vietnamese/send/u50853951',
           text: 'Liên hệ BBC',
         },
         {

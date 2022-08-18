@@ -3,17 +3,20 @@ import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';
 import dotenv from 'dotenv';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
-import getToggles from '#app/lib/utilities/getToggles/withCache';
 import defaultToggles from '#lib/config/toggles';
+import loggerMock from '#testHelpers/loggerMock';
+import {
+  ROUTING_INFORMATION,
+  SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+  SERVER_SIDE_REQUEST_FAILED,
+} from '#lib/logger.const';
+import { FRONT_PAGE, MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import Document from './Document/component';
 import routes from '../app/routes';
 import getAssetOrigins from './utilities/getAssetOrigins';
 import * as renderDocument from './Document';
 import sendCustomMetrics from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
-import loggerMock from '#testHelpers/loggerMock';
-import { ROUTING_INFORMATION } from '#lib/logger.const';
-import { FRONT_PAGE, MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });
@@ -21,6 +24,7 @@ dotenv.config({ path: './envConfig/local.env' });
 const path = require('path');
 const express = require('express');
 const server = require('./index').default;
+const getToggles = require('../app/lib/utilities/getToggles/withCache').default;
 
 const sendFileSpy = jest.spyOn(express.response, 'sendFile');
 
@@ -46,13 +50,18 @@ jest.mock('react-helmet', () => ({
   },
 }));
 
-jest.mock('@loadable/server', () => ({
-  ChunkExtractor: () => ({
-    collectChunks: arg => arg,
-    getScriptElements: () => '__mock_script_elements__',
-    getLinkElements: () => '__mock_link_elements__',
-  }),
-}));
+jest.mock('@loadable/server', () => {
+  class ChunkExtractor {
+    collectChunks = arg => arg;
+
+    getScriptElements = () => '__mock_script_elements__';
+
+    getLinkElements = () => '__mock_link_elements__';
+  }
+  return {
+    ChunkExtractor,
+  };
+});
 
 jest.mock('#app/routes/utils/fetchPageData/utils/getRouteProps');
 jest.mock('#app/lib/utilities/getToggles/withCache');
@@ -118,7 +127,8 @@ const testRenderedData =
         helmet={{ head: 'tags' }}
         isAmp={isAmp}
         service={service}
-        scripts="__mock_script_elements__"
+        legacyScripts="__mock_script_elements__"
+        modernScripts="__mock_script_elements__"
         links="__mock_link_elements__"
       />,
     );
@@ -251,7 +261,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
       it('should respond with a 500', async () => {
         const { status, text } = await makeRequest(serviceURL);
         expect(status).toEqual(500);
-        expect(text).toEqual('Error!');
+        expect(text).toEqual('Internal server error');
       });
 
       assertNon200ResponseCustomMetrics({
@@ -354,7 +364,7 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
       it('should respond with a 500', async () => {
         const { status, text } = await makeRequest(articleURL);
         expect(status).toEqual(500);
-        expect(text).toEqual('Error!');
+        expect(text).toEqual('Internal server error');
       });
 
       assertNon200ResponseCustomMetrics({
@@ -463,7 +473,7 @@ const testAssetPages = ({
       it('should respond with a 500', async () => {
         const { status, text } = await makeRequest(articleURL);
         expect(status).toEqual(500);
-        expect(text).toEqual('Error!');
+        expect(text).toEqual('Internal server error');
       });
 
       assertNon200ResponseCustomMetrics({
@@ -564,7 +574,7 @@ const testMediaPages = ({
       it('should respond with a 500', async () => {
         const { status, text } = await makeRequest(mediaPageURL);
         expect(status).toEqual(500);
-        expect(text).toEqual('Error!');
+        expect(text).toEqual('Internal server error');
       });
 
       assertNon200ResponseCustomMetrics({
@@ -666,7 +676,7 @@ const testTvPages = ({
       it('should respond with a 500', async () => {
         const { status, text } = await makeRequest(mediaPageURL);
         expect(status).toEqual(500);
-        expect(text).toEqual('Error!');
+        expect(text).toEqual('Internal server error');
       });
 
       assertNon200ResponseCustomMetrics({
@@ -768,7 +778,7 @@ const testOnDemandTvEpisodePages = ({
       it('should respond with a 500', async () => {
         const { status, text } = await makeRequest(mediaPageURL);
         expect(status).toEqual(500);
-        expect(text).toEqual('Error!');
+        expect(text).toEqual('Internal server error');
       });
 
       assertNon200ResponseCustomMetrics({
@@ -786,13 +796,9 @@ describe('Server', () => {
 
   describe('/status', () => {
     it('should respond with a 200', async () => {
-      const { statusCode, body } = await makeRequest('/status');
+      const { statusCode, text } = await makeRequest('/status');
       expect(statusCode).toBe(200);
-      expect(body).toStrictEqual({
-        commitHash: '383522b',
-        deployEnvironment: 'green',
-        version: '1.0.0',
-      });
+      expect(text).toEqual('Ok');
     });
   });
 
@@ -1316,7 +1322,8 @@ describe('Server', () => {
             helmet={{ head: 'tags' }}
             isAmp={isAmp}
             service={service}
-            scripts="__mock_script_elements__"
+            legacyScripts="__mock_script_elements__"
+            modernScripts="__mock_script_elements__"
             links="__mock_link_elements__"
           />,
         );
@@ -1331,7 +1338,7 @@ describe('Server', () => {
   });
 });
 
-describe('Server HTTP Headers', () => {
+describe('Server HTTP Headers - Status Endpoint', () => {
   let statusRequest;
 
   beforeAll(async () => {
@@ -1396,6 +1403,16 @@ describe('Server HTTP Headers', () => {
   });
 });
 
+describe('Server HTTP Headers - Page Endpoints', () => {
+  it(`should set a cache-control header`, async () => {
+    const { header } = await makeRequest('/mundo');
+
+    expect(header['cache-control']).toBe(
+      'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
+    );
+  });
+});
+
 describe('Routing Information Logging', () => {
   const service = 'igbo';
   const isAmp = false;
@@ -1442,5 +1459,134 @@ describe('Routing Information Logging', () => {
       status: 200,
       pageType: 'Page Type from Data',
     });
+  });
+});
+
+describe('Exclusion of sensitive HTTP headers from logs', () => {
+  const SAFE_HEADER = 'x-safe-header';
+  const SENSITIVE_HEADER = 'x-sensitive-header';
+  const act = () =>
+    request(server)
+      .get('/pidgin')
+      .set(SAFE_HEADER, 'test')
+      .set(SENSITIVE_HEADER, 'test');
+
+  const assertHeaderWasLogged = (logger, logCategory, header) => {
+    expect(logger).toHaveBeenCalledWith(
+      logCategory,
+      expect.objectContaining({
+        headers: expect.objectContaining({
+          [header]: 'test',
+        }),
+      }),
+    );
+  };
+
+  const assertHeaderWasNotLogged = (logger, logCategory, header) => {
+    expect(logger).toHaveBeenCalledWith(
+      logCategory,
+      expect.objectContaining({
+        headers: expect.not.objectContaining({
+          [header]: 'test',
+        }),
+      }),
+    );
+  };
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+    process.env.SENSITIVE_HTTP_HEADERS = 'x-sensitive-header,x-another-one';
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+    delete process.env.SENSITIVE_HTTP_HEADERS;
+  });
+
+  it(`when the environment variable isn't set`, async () => {
+    delete process.env.SENSITIVE_HTTP_HEADERS;
+    await act();
+
+    assertHeaderWasLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SAFE_HEADER,
+    );
+    assertHeaderWasLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SENSITIVE_HEADER,
+    );
+  });
+
+  it(`when simorgh responds successfully`, async () => {
+    await act();
+
+    assertHeaderWasLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SAFE_HEADER,
+    );
+    assertHeaderWasNotLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SENSITIVE_HEADER,
+    );
+  });
+
+  it(`when simorgh fails due to a getInitialData error`, async () => {
+    mockRouteProps({
+      dataResponse: Error('Oh no'),
+    });
+
+    await act();
+
+    assertHeaderWasLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SAFE_HEADER,
+    );
+    assertHeaderWasNotLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SENSITIVE_HEADER,
+    );
+    assertHeaderWasLogged(
+      loggerMock.error,
+      SERVER_SIDE_REQUEST_FAILED,
+      SAFE_HEADER,
+    );
+    assertHeaderWasNotLogged(
+      loggerMock.error,
+      SERVER_SIDE_REQUEST_FAILED,
+      SENSITIVE_HEADER,
+    );
+  });
+
+  it(`when simorgh fails due to a renderDocument error`, async () => {
+    renderDocument.default.mockImplementation(() => Error('Oh no'));
+
+    await act();
+
+    assertHeaderWasLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SAFE_HEADER,
+    );
+    assertHeaderWasNotLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SENSITIVE_HEADER,
+    );
+    assertHeaderWasLogged(
+      loggerMock.error,
+      SERVER_SIDE_REQUEST_FAILED,
+      SAFE_HEADER,
+    );
+    assertHeaderWasNotLogged(
+      loggerMock.error,
+      SERVER_SIDE_REQUEST_FAILED,
+      SENSITIVE_HEADER,
+    );
   });
 });

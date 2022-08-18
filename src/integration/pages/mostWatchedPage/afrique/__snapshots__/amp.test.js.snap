@@ -172,7 +172,7 @@ Object {
 exports[`AMP Most Watched Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "Contactez la BBC",
-  "url": "https://www.bbc.co.uk/send/u50853159",
+  "url": "https://www.bbc.co.uk/afrique/send/u50853159",
 }
 `;
 
@@ -192,7 +192,7 @@ Object {
 
 exports[`AMP Most Watched Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/afrique"`;
 
-exports[`AMP Most Watched Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. La BBC n'est pas responsable du contenu des sites externes. Découvrez notre approche en matière de liens externes."`;
+exports[`AMP Most Watched Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. La BBC n'est pas responsable du contenu des sites externes. Découvrez notre approche en matière de liens externes."`;
 
 exports[`AMP Most Watched Page Header I can see the branding 1`] = `"BBC News, Afrique"`;
 
@@ -219,43 +219,43 @@ Object {
 
 exports[`AMP Most Watched Page Header Navigation link should match text and url 4`] = `
 Object {
-  "text": "Sports",
-  "url": "/afrique/topics/c404v54yrqyt",
+  "text": "Santé",
+  "url": "/afrique/topics/c06gq9jxz3rt",
 }
 `;
 
 exports[`AMP Most Watched Page Header Navigation link should match text and url 5`] = `
 Object {
-  "text": "Economie",
-  "url": "/afrique/topics/cnq687nr9v1t",
+  "text": "Bien-être",
+  "url": "/afrique/topics/c0vmyy90q8zt",
 }
 `;
 
 exports[`AMP Most Watched Page Header Navigation link should match text and url 6`] = `
 Object {
-  "text": "Culture",
-  "url": "/afrique/topics/cnq687nrrw8t",
+  "text": "Science",
+  "url": "/afrique/topics/cdr561vr57gt",
 }
 `;
 
 exports[`AMP Most Watched Page Header Navigation link should match text and url 7`] = `
-Object {
-  "text": "Au féminin",
-  "url": "/afrique/38058576",
-}
-`;
-
-exports[`AMP Most Watched Page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "Technologie",
   "url": "/afrique/topics/cnq687nn703t",
 }
 `;
 
+exports[`AMP Most Watched Page Header Navigation link should match text and url 8`] = `
+Object {
+  "text": "Economie",
+  "url": "/afrique/topics/cnq687nr9v1t",
+}
+`;
+
 exports[`AMP Most Watched Page Header Navigation link should match text and url 9`] = `
 Object {
-  "text": "Santé",
-  "url": "/afrique/topics/c06gq9jxz3rt",
+  "text": "Culture",
+  "url": "/afrique/topics/cnq687nrrw8t",
 }
 `;
 
@@ -270,6 +270,13 @@ exports[`AMP Most Watched Page Header Navigation link should match text and url 
 Object {
   "text": "Nos émissions",
   "url": "/afrique/media-54074891",
+}
+`;
+
+exports[`AMP Most Watched Page Header Navigation link should match text and url 12`] = `
+Object {
+  "text": "Ecoutez en direct",
+  "url": "/afrique/bbc_afrique_radio/liveradio",
 }
 `;
 
@@ -429,7 +436,7 @@ exports[`AMP Most Watched Page SEO OG url 1`] = `"http://localhost:7080/afrique/
 
 exports[`AMP Most Watched Page SEO Page title 1`] = `"Les plus vus - BBC News Afrique"`;
 
-exports[`AMP Most Watched Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP Most Watched Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP Most Watched Page SEO Twitter card 1`] = `"summary_large_image"`;
 

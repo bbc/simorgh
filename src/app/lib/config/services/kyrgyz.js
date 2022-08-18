@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
-import { kyrgyz as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/GMT';
-import '@bbc/psammead-locales/moment/ky';
+} from '#psammead/psammead-styles/src/colours';
+import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import brandSVG from '#lib/chameleonLogos/kyrgyz';
+import '#psammead/moment-timezone-include/tz/GMT';
+import '#psammead/psammead-locales/moment/ky';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -59,6 +59,12 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        page: 'бет',
+        previousPage: 'Артка',
+        nextPage: 'Эмики барак',
+        pageXOfY: 'бет {x} of {y}',
+      },
       ads: {
         advertisementLabel: 'Жарнама',
       },
@@ -234,6 +240,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Видеонун түшүндүрмөсү, ',
           text: 'Эскертүү: Жарнамалар болушу ыктымал',
+          articleText:
+            'Эскертүү: Би-Би-Си тышкы сайттардын мазмуну үчүн жооп бербейт.',
+          articleAdditionalText:
+            '%provider_name% мазмунунда жарнама болушу мүмкүн',
         },
         fallback: {
           text: 'Баракча ачылбайт',
@@ -299,7 +309,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853445',
+          href: 'https://www.bbc.co.uk/kyrgyz/send/u50853445',
           text: 'Би-Би-Си менен байланышыңыз',
         },
         {

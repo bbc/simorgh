@@ -6,14 +6,14 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import mostWatchedData from '#data/pidgin/mostWatched/index.json';
-import MostWatchedPage from './MostWatchedPage';
 import { MOST_WATCHED_PAGE } from '#app/routes/utils/pageTypes';
+import MostWatchedPage from './MostWatchedPage';
 
 const pageData = {
   mostWatched: mostWatchedData.records.slice(0, 3).map(item => item.promo),
 };
 
-jest.mock('../../containers/ChartbeatAnalytics', () => {
+jest.mock('../../legacy/containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });

@@ -183,7 +183,7 @@ Object {
 exports[`AMP On Demand T V Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "La xiriir BBC",
-  "url": "https://www.bbc.co.uk/send/u50853709",
+  "url": "https://www.bbc.co.uk/somali/send/u50853709",
 }
 `;
 
@@ -196,7 +196,7 @@ Object {
 
 exports[`AMP On Demand T V Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/somali"`;
 
-exports[`AMP On Demand T V Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda. Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda."`;
+exports[`AMP On Demand T V Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda. Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda."`;
 
 exports[`AMP On Demand T V Page Header I can see the branding 1`] = `"BBC News, Somali"`;
 
@@ -431,7 +431,7 @@ exports[`AMP On Demand T V Page SEO OG url 1`] = `"http://localhost:7080/somali/
 
 exports[`AMP On Demand T V Page SEO Page title 1`] = `"Caawa Iyo Caalamka - BBC News Somali"`;
 
-exports[`AMP On Demand T V Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP On Demand T V Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP On Demand T V Page SEO Twitter card 1`] = `"summary_large_image"`;
 

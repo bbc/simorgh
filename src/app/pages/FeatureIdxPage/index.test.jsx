@@ -8,8 +8,8 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import urduPageData from '#data/urdu/cpsAssets/science-51314202';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
-import FeatureIdxPage from '.';
 import { FEATURE_INDEX_PAGE } from '#app/routes/utils/pageTypes';
+import FeatureIdxPage from '.';
 
 const mockToggles = {
   comscoreAnalytics: {

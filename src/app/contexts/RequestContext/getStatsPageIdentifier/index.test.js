@@ -1,5 +1,5 @@
-import getStatsPageIdentifier from '.';
 import { ARTICLE_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import getStatsPageIdentifier from '.';
 
 describe('getStatsPageIdentifier', () => {
   const testScenarios = [

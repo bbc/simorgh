@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { devanagariAndGurmukhi } from '@bbc/gel-foundations/scripts';
-import { punjabi as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/psammead-locales/moment/pa-in';
-import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
+} from '#psammead/psammead-styles/src/colours';
+import devanagariAndGurmukhi from '#psammead/gel-foundations/src/scripts/devanagari-and-gurmukhi';
+import brandSVG from '#lib/chameleonLogos/punjabi';
+import '#psammead/psammead-locales/moment/pa-in';
+import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -59,6 +59,11 @@ export const service = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: 'ਪਿੱਛੇ',
+        nextPage: 'ਅੱਗੇ',
+        pageXOfY: 'Page {x} ਦਾ {y}',
+      },
       ads: {
         advertisementLabel: 'ਇਸ਼ਤਿਹਾਰ',
       },
@@ -220,6 +225,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'ਵੀਡੀਓ ਕੈਪਸ਼ਨ, ',
           text: "ਚਿਤਾਵਨੀ: ਬਾਹਰੀ ਸਾਈਟਾਂ ਦੀ ਸਮਗਰੀ 'ਚ ਇਸ਼ਤਿਹਾਰ ਹੋ ਸਕਦੇ ਹਨ",
+          articleText:
+            'ਚਿਤਾਵਨੀ: ਬੀਬੀਸੀ ਦੂਜੀਆਂ ਵੈਬਸਾਈਟਸ ਦੀ ਸਮੱਗਰੀ ਲਈ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ।',
+          articleAdditionalText:
+            '%provider_name% ਦੀ ਸਮੱਗਰੀ ਵਿੱਚ ਵਿਗਿਆਪਨ ਹੋ ਸਕਦਾ ਹੈ',
         },
         fallback: {
           text: 'ਸਮੱਗਰੀ ਉਪਲਬਧ ਨਹੀਂ ਹੈ',
@@ -311,7 +320,7 @@ export const service = {
           text: 'ਕੁਕੀਜ਼',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853621',
+          href: 'https://www.bbc.co.uk/punjabi/send/u50853621',
           text: 'ਬੀਬੀਸੀ ਨਾਲ ਸੰਪਰਕ ਕਰੋ',
         },
         {

@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
+import { PHOTO_GALLERY_PAGE } from '#app/routes/utils/pageTypes';
 import { PhotoGalleryPage } from '..';
 import pageData from './fixtureData';
-import { PHOTO_GALLERY_PAGE } from '#app/routes/utils/pageTypes';
 
 const Component = () => (
   <BrowserRouter>
@@ -22,6 +22,7 @@ export default {
   Component,
   title: 'Pages/Photo Gallery Page',
   decorators: [story => <WithTimeMachine>{story()}</WithTimeMachine>],
+  parameters: { chromatic: { disable: true } },
 };
 
 export const Azeri = Component;

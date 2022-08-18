@@ -1,7 +1,10 @@
-import { setWindowValue, resetWindowValue } from '@bbc/psammead-test-helpers';
 import loggerMock from '#testHelpers/loggerMock'; // Must be imported before fetchPageData
-import fetchPageData from '.';
 import { DATA_FETCH_ERROR, DATA_REQUEST_RECEIVED } from '#lib/logger.const';
+import {
+  setWindowValue,
+  resetWindowValue,
+} from '#psammead/psammead-test-helpers/src';
+import fetchPageData from '.';
 
 const expectedBaseUrl = 'http://localhost';
 const requestedPathname = '/path/to/asset';
@@ -99,6 +102,21 @@ describe('fetchPageData', () => {
       await fetchPageData({ path: requestedPathname, pageType });
 
       expect(fetch).toHaveBeenCalledWith(expectedUrl, fetchOptions);
+    });
+
+    it('should call fetch with the correct headers when passed additional headers', async () => {
+      const optHeaders = { 'ctx-service-env': 'live' };
+
+      const expectedFetchOptions = {
+        headers: {
+          'User-Agent': 'Simorgh/ws-web-rendering',
+          'ctx-service-env': 'live',
+        },
+        timeout: 4000,
+      };
+      await fetchPageData({ path: requestedPathname, pageType, optHeaders });
+
+      expect(fetch).toHaveBeenCalledWith(expectedUrl, expectedFetchOptions);
     });
 
     it('should return expected response', async () => {

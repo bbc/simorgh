@@ -1,7 +1,7 @@
-import getInitialData, { hasRadioSchedule } from '.';
 import idxPageJson from '#data/persian/afghanistan/index.json';
-import getConfig from '../../utils/getConfig';
 import { INDEX_PAGE } from '#app/routes/utils/pageTypes';
+import getInitialData, { hasRadioSchedule } from '.';
+import getConfig from '../../utils/getConfig';
 
 fetch.mockResponse(JSON.stringify(idxPageJson));
 jest.mock('../../utils/getConfig', () => jest.fn());

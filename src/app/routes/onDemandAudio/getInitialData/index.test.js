@@ -1,13 +1,13 @@
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 import dissocPath from 'ramda/src/dissocPath';
 import loggerMock from '#testHelpers/loggerMock';
-import getInitialData from '.';
-import * as fetchPageData from '../../utils/fetchPageData';
 import onDemandRadioJson from '#data/pashto/bbc_pashto_radio/w3ct0lz1';
 import podcastJson from '#data/arabic/podcasts/p02pc9qc/p08wtg4d';
-import arabicExternalLinks from '../tempData/podcastExternalLinks/arabic';
 import { RADIO_MISSING_FIELD } from '#lib/logger.const';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
+import arabicExternalLinks from '../tempData/podcastExternalLinks/arabic';
+import * as fetchPageData from '../../utils/fetchPageData';
+import getInitialData from '.';
 
 const { env } = process;
 const spy = jest.spyOn(fetchPageData, 'default');

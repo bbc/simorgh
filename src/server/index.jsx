@@ -1,35 +1,36 @@
 import express from 'express';
 import compression from 'compression';
 import ramdaPath from 'ramda/src/path';
+import omit from 'ramda/src/omit';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
 import routes from '#app/routes';
-import {
-  articleManifestPath,
-  articleSwPath,
-  frontPageManifestPath,
-  frontPageSwPath,
-} from '../app/routes/utils/regex';
 import nodeLogger from '#lib/logger.node';
-import renderDocument from './Document';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
-import logResponseTime from './utilities/logResponseTime';
-import injectCspHeader from './utilities/cspHeader';
 import {
   SERVICE_WORKER_SENDFILE_ERROR,
   MANIFEST_SENDFILE_ERROR,
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
   SERVER_SIDE_REQUEST_FAILED,
   ROUTING_INFORMATION,
+  SERVER_STATUS_ENDPOINT_ERROR,
 } from '#lib/logger.const';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { OK } from '#lib/statusCodes.const';
+import injectCspHeader from './utilities/cspHeader';
+import logResponseTime from './utilities/logResponseTime';
+import renderDocument from './Document';
+import {
+  articleManifestPath,
+  articleSwPath,
+  frontPageManifestPath,
+  frontPageSwPath,
+} from '../app/routes/utils/regex';
 import sendCustomMetric from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
 import local from './local';
-
-const fs = require('fs');
+import getAgent from './utilities/getAgent';
 
 const morgan = require('morgan');
 
@@ -38,6 +39,9 @@ const logger = nodeLogger(__filename);
 logger.debug(
   `Application outputting logs to directory '${process.env.LOG_DIR}'`,
 );
+
+const removeSensitiveHeaders = headers =>
+  omit((process.env.SENSITIVE_HTTP_HEADERS || '').split(','), headers);
 
 /* eslint class-methods-use-this: ["error", { "exceptMethods": ["write"] }] */
 class LoggerStream {
@@ -51,11 +55,6 @@ const server = express();
 /*
  * Default headers, compression, logging, status route
  */
-
-const getBuildMetadata = () => {
-  const { buildMetadata } = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-  return buildMetadata;
-};
 
 const skipMiddleware = (_req, _res, next) => {
   next();
@@ -80,10 +79,15 @@ server
     }),
   )
   .use(gnuTP())
+  .use(logResponseTime)
   .get('/status', (req, res) => {
-    res.status(200).send(getBuildMetadata());
-  })
-  .use(logResponseTime);
+    try {
+      res.status(200).send('Ok');
+    } catch (error) {
+      logger.error(SERVER_STATUS_ENDPOINT_ERROR, { error });
+      res.status(500).send('Unable to determine status');
+    }
+  });
 
 /*
  * Application env routes
@@ -118,14 +122,22 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
   local(server);
 }
 
+const injectDefaultCacheHeader = (req, res, next) => {
+  res.set(
+    'cache-control',
+    `public, stale-if-error=90, stale-while-revalidate=30, max-age=30`,
+  );
+  next();
+};
+
 // Catch all for all routes
 server.get(
   '/*',
-  injectCspHeaderProdBuild,
-  async ({ url, headers, path: urlPath }, res) => {
+  [injectCspHeaderProdBuild, injectDefaultCacheHeader],
+  async ({ url, query, headers, path: urlPath }, res) => {
     logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
       url,
-      headers,
+      headers: removeSensitiveHeaders(headers),
     });
 
     let derivedPageType = 'Unknown';
@@ -137,6 +149,7 @@ server.get(
         route: { getInitialData, pageType },
         variant,
       } = getRouteProps(urlPath);
+      const { page } = query;
 
       // Set derivedPageType based on matched route
       derivedPageType = pageType || derivedPageType;
@@ -147,8 +160,10 @@ server.get(
         path: url,
         service,
         variant,
+        page,
         pageType,
         toggles,
+        getAgent,
       });
 
       data.toggles = toggles;
@@ -156,7 +171,7 @@ server.get(
       data.timeOnServer = Date.now();
       data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true';
 
-      const { status } = data;
+      let { status } = data;
       // Set derivedPageType based on returned page data
       if (status === OK) {
         derivedPageType = ramdaPath(['pageData', 'metadata', 'type'], data);
@@ -170,15 +185,43 @@ server.get(
       }
 
       const bbcOrigin = headers['bbc-origin'];
-      const result = await renderDocument({
-        bbcOrigin,
-        data,
-        isAmp,
-        routes,
-        service,
-        url,
-        variant,
-      });
+      let result;
+      try {
+        result = await renderDocument({
+          bbcOrigin,
+          data,
+          isAmp,
+          routes,
+          service,
+          url,
+          variant,
+        });
+      } catch ({ message }) {
+        status = 500;
+        sendCustomMetric({
+          metricName: NON_200_RESPONSE,
+          statusCode: status,
+          pageType: derivedPageType,
+          requestUrl: url,
+        });
+
+        logger.error(SERVER_SIDE_REQUEST_FAILED, {
+          status,
+          message,
+          url,
+          headers: removeSensitiveHeaders(headers),
+        });
+
+        result = await renderDocument({
+          bbcOrigin,
+          data: { error: true, status },
+          isAmp,
+          routes,
+          service,
+          url,
+          variant,
+        });
+      }
 
       logger.info(ROUTING_INFORMATION, {
         url,
@@ -189,6 +232,10 @@ server.get(
       if (result.redirectUrl) {
         res.redirect(301, result.redirectUrl);
       } else if (result.html) {
+        res.set(
+          'onion-location',
+          `https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${urlPath}`,
+        );
         res.status(status).send(result.html);
       } else {
         throw new Error('unknown result');
@@ -205,11 +252,10 @@ server.get(
         status,
         message,
         url,
-        headers,
+        headers: removeSensitiveHeaders(headers),
       });
 
-      // Return an internal server error for any uncaught errors
-      res.status(500).send(message);
+      res.status(500).send('Internal server error');
     }
   },
 );

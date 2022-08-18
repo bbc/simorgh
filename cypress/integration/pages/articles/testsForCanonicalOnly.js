@@ -150,8 +150,6 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         });
       });
 
-      // temporarily disable this test until this issue is completed to investigate it:
-      // https://github.com/bbc/simorgh-infrastructure/issues/983
       it('should render an iframe with a valid URL when a user clicks play', () => {
         cy.window().then(win => {
           const body = win.SIMORGH_DATA.pageData;
@@ -163,7 +161,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
             cy.get('[data-e2e="media-player"] button')
               .click()
               .then(() => {
-                cy.get(`iframe[src="${embedUrl}"]`).should('be.visible');
+                cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
               });
             cy.testResponseCodeAndTypeRetry({
               path: embedUrl,

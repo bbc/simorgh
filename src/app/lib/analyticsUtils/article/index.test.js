@@ -3,6 +3,7 @@ const {
   getPageIdentifier,
   getLanguage,
   getPromoHeadline,
+  getNationsProducer,
 } = require('.');
 
 describe('getPageIdentifier', () => {
@@ -45,15 +46,15 @@ describe('getContentId', () => {
   it('should find value in good data', () => {
     const goodData = {
       metadata: {
-        locators: {
-          optimoUrn: 'urn:bbc:optimo:asset:c0g992jmmkko',
+        analyticsLabels: {
+          contentId: 'urn:bbc:optimo:asset:c0g992jmmkko',
         },
       },
     };
 
     const contentId = getContentId(goodData);
 
-    expect(contentId).toEqual('urn:bbc:optimo:c0g992jmmkko');
+    expect(contentId).toEqual('urn:bbc:optimo:asset:c0g992jmmkko');
   });
 
   it('should return null in bad data', () => {
@@ -128,5 +129,33 @@ describe('getPromoHeadline', () => {
     const promoHeadline = getPromoHeadline(badData);
 
     expect(promoHeadline).toEqual(null);
+  });
+});
+
+describe('getNationsProducer', () => {
+  it('should find value in good data', () => {
+    const hasNationsProducer = {
+      metadata: {
+        analyticsLabels: {
+          nations_producer: 'england',
+        },
+      },
+    };
+
+    const nationsProducer = getNationsProducer(hasNationsProducer);
+
+    expect(nationsProducer).toEqual('england');
+  });
+
+  it('should return null in bad data', () => {
+    const noNationsProducer = {
+      metadata: {
+        analyticsLabels: {},
+      },
+    };
+
+    const nationsProducer = getNationsProducer(noNationsProducer);
+
+    expect(nationsProducer).toEqual(null);
   });
 });

@@ -3,15 +3,15 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { tamil } from '@bbc/gel-foundations/scripts';
-import { tamil as brandSVG } from '@bbc/psammead-assets/svgs';
+} from '#psammead/psammead-styles/src/colours';
+import tamil from '#psammead/gel-foundations/src/scripts/tamil';
+import brandSVG from '#lib/chameleonLogos/tamil';
 import {
   F_NOTO_SANS_TAMIL_BOLD,
   F_NOTO_SANS_TAMIL_REGULAR,
-} from '@bbc/psammead-styles/fonts';
-import '@bbc/moment-timezone-include/tz/GMT';
-import '@bbc/psammead-locales/moment/ta';
+} from '#psammead/psammead-styles/src/fonts';
+import '#psammead/moment-timezone-include/tz/GMT';
+import '#psammead/psammead-locales/moment/ta';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -63,6 +63,12 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        page: 'பக்கம்',
+        previousPage: 'முந்தையது',
+        nextPage: 'அடுத்தது',
+        pageXOfY: 'பக்கம் {x} இல் {y}',
+      },
       ads: {
         advertisementLabel: 'விளம்பரம்',
       },
@@ -238,6 +244,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'காணொளிக் குறிப்பு ',
           text: 'எச்சரிக்கை: வெளியார் தகவல்களில் விளம்பரங்கள் இருக்கலாம்',
+          articleText:
+            'எச்சரிக்கை: வெளியார் தளங்களில் உள்ள பதிவுகளுக்கு பிபிசி பொறுப்பேற்காது',
+          articleAdditionalText:
+            '%provider_name%பதிவில் விளம்பரங்கள் இருக்கக்கூடும்',
         },
         fallback: {
           text: 'தகவல் இல்லை',
@@ -264,7 +274,7 @@ export const service = {
     mostRead: {
       header: 'அதிகம் படிக்கப்பட்டது',
       lastUpdated: 'கடைசியாக புதுப்பிக்கப்பட்டது:',
-      numberOfItems: 5,
+      numberOfItems: 10,
       hasMostRead: true,
     },
     mostWatched: {
@@ -305,8 +315,8 @@ export const service = {
           text: 'குக்கிகள்',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853753',
-          text: 'பிபிசி-யை தொடர்பு கொள்க',
+          href: 'https://www.bbc.co.uk/tamil/send/u50853753',
+          text: 'பிபிசியுடன் தொடர்பு கொள்ள',
         },
         {
           id: 'COOKIE_SETTINGS',
@@ -351,7 +361,7 @@ export const service = {
       },
       {
         title: 'வீடியோ',
-        url: '/tamil/media/video',
+        url: '/tamil/topics/c1320722p81t',
       },
     ],
   },

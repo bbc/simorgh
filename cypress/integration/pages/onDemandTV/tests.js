@@ -1,5 +1,6 @@
 /* eslint-disable consistent-return */
 import path from 'ramda/src/path';
+import envConfig from '../../../support/config/envs';
 import {
   isAvailable,
   overrideRendererOnTest,
@@ -28,12 +29,21 @@ export default ({ service, pageType, variant, isAmp }) => {
           const isBrandPage = isBrand(jsonData);
 
           cy.get('iframe').then(iframe => {
-            // If a brand, get the src of the iframe, otherwise, use the embed URL from the data
-            const iframeURL = isBrandPage ? iframe.prop('src') : embedUrl;
+            let iframeURL = isBrandPage ? iframe.prop('src') : embedUrl;
+            iframeURL = iframeURL.split('.com').pop();
+            cy.log(`cy.get('iframe') assertion has already happened`);
+            cy.log(
+              `used for Brand - iframe.prop('src') = ${iframe.prop('src')}`,
+            );
+            cy.log(`used for Episode - embedURL = ${embedUrl}`);
+            cy.log(`selector for iframe = iframe[src*="${iframeURL}"]`);
+            const pathTested = embedUrl.replace(/^\//, `${envConfig.baseUrl}/`);
+            cy.log(`path that will have response tested is ${pathTested}`);
 
             cy.get(`iframe[src*="${iframeURL}"]`).should('be.visible');
             cy.testResponseCodeAndTypeRetry({
-              path: embedUrl,
+              // embedUrl may be relative - making it absolute to test the response
+              path: embedUrl.replace(/^\//, `${envConfig.baseUrl}/`),
               responseCode: 200,
               type: 'text/html',
               allowFallback: true,

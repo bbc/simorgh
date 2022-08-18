@@ -1,0 +1,380 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Podcast Promo Card Content should match snapshot 1`] = `
+.emotion-0 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-0 {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-0 {
+    padding: 1rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    Content
+  </div>
+</div>
+`;
+
+exports[`Podcast Promo Card Description should match snapshot 1`] = `
+.emotion-0 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  max-width: 30rem;
+  color: #6E6E73;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+<div>
+  <p
+    class="emotion-0 emotion-1"
+  >
+    Content
+  </p>
+</div>
+`;
+
+exports[`Podcast Promo Card Episodes Text should match snapshot 1`] = `
+.emotion-0 {
+  display: inline;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #6E6E73;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-0>svg {
+  fill: currentColor;
+  color: unset;
+  width: 1rem;
+  height: 1rem;
+  position: relative;
+  bottom: 0.125rem;
+  right: 0.1875rem;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-0>svg {
+    fill: canvasText;
+  }
+}
+
+.emotion-2 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 1rem;
+  height: 1rem;
+}
+
+<div>
+  <p
+    class="emotion-0 emotion-1"
+    dir="ltr"
+  >
+    <svg
+      aria-hidden="true"
+      class="emotion-2 emotion-3"
+      focusable="false"
+      height="32"
+      viewBox="0 0 32 32"
+      width="32"
+    >
+      <polygon
+        points="4 6 11.1 6 26 6 26 28 28 28 28 4 4 4 4 6"
+      />
+      <polygon
+        points="8 0 8 2 30 2 30 24 32 24 32 0 8 0"
+      />
+      <path
+        d="M0,32H24V8H0ZM4,12H20V28H4Z"
+      />
+    </svg>
+    Episodes
+  </p>
+</div>
+`;
+
+exports[`Podcast Promo Card Image should match snapshot 1`] = `
+.emotion-0 {
+  margin: 0.5rem 0 0.5rem 0.5rem;
+  display: none;
+}
+
+@media (min-width: 20rem) {
+  .emotion-0 {
+    display: block;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-flex-basis: 6.5rem;
+    -ms-flex-preferred-size: 6.5rem;
+    flex-basis: 6.5rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-0 {
+    -webkit-flex-basis: 6.8125rem;
+    -ms-flex-preferred-size: 6.8125rem;
+    flex-basis: 6.8125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    -webkit-flex-basis: 11.125rem;
+    -ms-flex-preferred-size: 11.125rem;
+    flex-basis: 11.125rem;
+    margin: 0;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-0 {
+    margin: 0;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    Content
+  </div>
+</div>
+`;
+
+exports[`Podcast Promo Card Link should match snapshot 1`] = `
+.emotion-0 {
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  overflow: hidden;
+  z-index: 1;
+}
+
+.emotion-0:visited .podcast-promo--visited {
+  color: #6E6E73;
+}
+
+.emotion-0:focus .podcast-promo--focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+<div>
+  <a
+    class="emotion-0 emotion-1"
+    href="https://www.bbc.com"
+  >
+    Content
+  </a>
+</div>
+`;
+
+exports[`Podcast Promo Card Title should match snapshot 1`] = `
+.emotion-0 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #222222;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+<div>
+  <h3
+    class="emotion-0 emotion-1"
+  >
+    Content
+  </h3>
+</div>
+`;
+
+exports[`Podcast Promo Card should match snapshot 1`] = `
+.emotion-0 {
+  position: relative;
+  background-color: #FDFDFD;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-shadow: 0 0 0.3125rem 0.3125rem #22222208;
+}
+
+@media (min-width: 63rem) {
+  .emotion-0 {
+    display: block;
+  }
+}
+
+.emotion-0:hover .podcast-promo--hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    Content
+  </div>
+</div>
+`;
+
+exports[`Podcast Promo Title should match snapshot 1`] = `
+.emotion-0 {
+  margin: 0 0 1rem;
+}
+
+.emotion-2 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: inline;
+  color: #222222;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-2>svg {
+  margin-left: 0;
+  width: 1.375rem;
+  height: 1.375rem;
+  fill: currentColor;
+  position: relative;
+  bottom: 0.3125rem;
+  right: 0.1875rem;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-2>svg {
+    fill: canvasText;
+  }
+}
+
+.emotion-4 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 1rem;
+  height: 1rem;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <h2
+      class="emotion-2 emotion-3"
+      dir="ltr"
+    >
+      <svg
+        aria-hidden="true"
+        class="emotion-4 emotion-5"
+        focusable="false"
+        height="32"
+        viewBox="0 0 32 32"
+        width="32"
+      >
+        <path
+          d="M18.7,31h-5.3l-2.3-10.4C12.3,19.5,14,19,16,19s3.7,0.5,4.9,1.7L18.7,31z M22,8.2c-1.7-1.7-3.9-2.5-6.1-2.5s-4.4,0.9-6,2.5 l1.7,1.7c1.2-1.2,2.7-1.8,4.3-1.8s3.1,0.6,4.3,1.8L22,8.2z M25.5,4.9c-2.6-2.7-6.1-4-9.5-4S9.1,2.3,6.5,4.9l1.7,1.7 c2.1-2.1,4.9-3.2,7.7-3.2c2.8,0,5.6,1.1,7.8,3.2L25.5,4.9z M12.4,14c0,2,1.5,3.6,3.6,3.6c2,0,3.6-1.5,3.6-3.6 c0-2.1-1.5-3.6-3.6-3.6C13.9,10.4,12.4,11.9,12.4,14z"
+        />
+      </svg>
+      Content
+    </h2>
+  </div>
+</div>
+`;

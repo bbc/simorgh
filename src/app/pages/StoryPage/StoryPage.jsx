@@ -6,15 +6,16 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
   GEL_SPACING,
-} from '@bbc/gel-foundations/spacings';
-import SectionLabel from '@bbc/psammead-section-label';
+} from '#psammead/gel-foundations/src/spacings';
+import SectionLabel from '#psammead/psammead-section-label/src';
 import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#psammead/gel-foundations/src/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import Grid, { GelPageGrid, GridItemLarge } from '#app/components/Grid';
+
+import Grid, { GelPageGrid, GridItemLarge } from '#components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
@@ -32,7 +33,8 @@ import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import MostReadContainer from '#containers/MostRead';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
+import OptimizelyPageViewTracking from '#containers/OptimizelyPageViewTracking';
+import OptimizelyArticleCompleteTracking from '#containers/OptimizelyArticleCompleteTracking';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import CpsTable from '#containers/CpsTable';
@@ -46,7 +48,6 @@ import {
   getLastPublished,
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
-import categoryType from './categoryMap/index';
 import Include from '#containers/Include';
 import { ServiceContext } from '#contexts/ServiceContext';
 import AdContainer from '#containers/Ad';
@@ -55,6 +56,10 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
+import { OptimizelyExperiment } from '@optimizely/react-sdk';
+import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
+import categoryType from './categoryMap/index';
+import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -70,6 +75,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     lang,
     showRelatedTopics,
   } = useContext(ServiceContext);
+
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
@@ -101,7 +107,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     pageData,
   );
   const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
-  const recommendationsInitialData = path(['recommendations'], pageData);
+  const recommendationsData = path(['recommendations'], pageData);
   const topics = path(['metadata', 'topics'], pageData);
 
   const gridColumns = {
@@ -193,11 +199,49 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     mpu: props =>
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
     wsoj: props => (
-      <CpsRecommendations
-        {...props}
-        parentColumns={gridColsMain}
-        items={recommendationsInitialData}
-      />
+      // 004_brasil_recommendations_experiment
+      <OptimizelyExperiment experiment={OPTIMIZELY_CONFIG.experimentId}>
+        {variation => {
+          if (variation === 'control' || !variation) {
+            return (
+              <CpsRecommendations
+                {...props}
+                parentColumns={gridColsMain}
+                items={recommendationsData}
+              />
+            );
+          }
+          if (variation === 'content_recs') {
+            const unirecsContentRecommendationData = path(
+              ['datalabContentRecommendations'],
+              pageData,
+            );
+
+            return (
+              <CpsRecommendations
+                {...props}
+                parentColumns={gridColsMain}
+                items={unirecsContentRecommendationData}
+              />
+            );
+          }
+          if (variation === 'hybrid_recs') {
+            const unirecsHybridRecommendationData = path(
+              ['datalabHybridRecommendations'],
+              pageData,
+            );
+            return (
+              <CpsRecommendations
+                {...props}
+                parentColumns={gridColsMain}
+                items={unirecsHybridRecommendationData}
+              />
+            );
+          }
+
+          return null;
+        }}
+      </OptimizelyExperiment>
     ),
     disclaimer: props => (
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
@@ -268,16 +312,20 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     }
   `;
 
+  const StyledSectionLabel = styled(SectionLabel)`
+    margin-top: 0;
+  `;
+
   const MostReadWrapper = ({ children }) => (
     <section role="region" aria-labelledby="Most-Read" data-e2e="most-read">
-      <SectionLabel
+      <StyledSectionLabel
         script={script}
         labelId="Most-Read"
         service={service}
         dir={dir}
       >
         {header}
-      </SectionLabel>
+      </StyledSectionLabel>
       {children}
     </section>
   );
@@ -315,6 +363,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
       <NielsenAnalytics />
+      <OptimizelyPageViewTracking />
       {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
       {isAdsEnabled && !isAmp && (
         <CanonicalAdBootstrapJs adcampaign={adcampaign} />
@@ -333,6 +382,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         >
           <main role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+            <OptimizelyArticleCompleteTracking />
           </main>
 
           {showRelatedTopics && topics && (

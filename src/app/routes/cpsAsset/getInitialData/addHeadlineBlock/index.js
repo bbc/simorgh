@@ -1,12 +1,12 @@
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
+import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import deepClone from '../../../utils/jsonClone';
 import {
   getVisuallyHiddenHeadlineBlock,
   getFauxHeadlineBlock,
   getHeadlineBlock,
 } from './models';
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 
 const getHeadlineBlocks = json => {
   const headlineText = pathOr(null, ['promo', 'headlines', 'headline'], json);

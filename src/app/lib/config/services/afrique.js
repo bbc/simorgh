@@ -3,10 +3,10 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { latinDiacritics } from '@bbc/gel-foundations/scripts';
-import { afrique as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/GMT';
+} from '#psammead/psammead-styles/src/colours';
+import latinDiacritics from '#psammead/gel-foundations/src/scripts/latin-with-diacritics';
+import brandSVG from '#lib/chameleonLogos/afrique';
+import '#psammead/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/fr';
 
@@ -60,6 +60,12 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        page: 'Page',
+        previousPage: 'Page précédente',
+        nextPage: 'Page suivante',
+        pageXOfY: 'Page {x} de {y}',
+      },
       ads: {
         advertisementLabel: 'Publicités',
       },
@@ -235,6 +241,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Légende vidéo, ',
           text: 'Attention: le contenu externe peut contenir des messages publicitaires',
+          articleText:
+            "Attention: La BBC n'est pas responsable du contenu des sites externes.",
+          articleAdditionalText:
+            'Le contenu du site %provider_name% peut contenir des publicités.',
         },
         fallback: {
           text: "Ce contenu n'est pas disponible",
@@ -303,7 +313,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853159',
+          href: 'https://www.bbc.co.uk/afrique/send/u50853159',
           text: 'Contactez la BBC',
         },
         {
@@ -332,8 +342,20 @@ export const service = {
         url: '/afrique/topics/cvqxn21vx11t',
       },
       {
-        title: 'Sports',
-        url: '/afrique/topics/c404v54yrqyt',
+        title: 'Santé',
+        url: '/afrique/topics/c06gq9jxz3rt',
+      },
+      {
+        title: 'Bien-être',
+        url: '/afrique/topics/c0vmyy90q8zt',
+      },
+      {
+        title: 'Science',
+        url: '/afrique/topics/cdr561vr57gt',
+      },
+      {
+        title: 'Technologie',
+        url: '/afrique/topics/cnq687nn703t',
       },
       {
         title: 'Economie',
@@ -344,24 +366,16 @@ export const service = {
         url: '/afrique/topics/cnq687nrrw8t',
       },
       {
-        title: 'Au féminin',
-        url: '/afrique/38058576',
-      },
-      {
-        title: 'Technologie',
-        url: '/afrique/topics/cnq687nn703t',
-      },
-      {
-        title: 'Santé',
-        url: '/afrique/topics/c06gq9jxz3rt',
-      },
-      {
         title: 'Vidéos',
         url: '/afrique/media/video',
       },
       {
         title: 'Nos émissions',
         url: '/afrique/media-54074891',
+      },
+      {
+        title: 'Ecoutez en direct',
+        url: '/afrique/bbc_afrique_radio/liveradio',
       },
     ],
   },

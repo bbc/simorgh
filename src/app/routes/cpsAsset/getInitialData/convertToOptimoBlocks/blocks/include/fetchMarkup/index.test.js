@@ -1,12 +1,11 @@
 import loggerMock from '#testHelpers/loggerMock';
 
-import fetchMarkup from '.';
-
 import {
   INCLUDE_ERROR,
   INCLUDE_FETCH_ERROR,
   INCLUDE_REQUEST_RECEIVED,
 } from '#lib/logger.const';
+import fetchMarkup from '.';
 
 const includeMarkup = `<div>Include Markup</div><script type="text/javascript" src="localhost/idt1.js"></script>`;
 
@@ -29,6 +28,9 @@ describe('fetchMarkup', () => {
       'https://foobar.com/includes/indepthtoolkit/quizzes/123-456',
       {
         timeout: 2000,
+        headers: {
+          'User-Agent': 'Simorgh/ws-web-rendering',
+        },
       },
     );
     expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_REQUEST_RECEIVED, {
@@ -49,6 +51,9 @@ describe('fetchMarkup', () => {
       'https://foobar.com/includes/indepthtoolkit/quizzes/123-456',
       {
         timeout: 2000,
+        headers: {
+          'User-Agent': 'Simorgh/ws-web-rendering',
+        },
       },
     );
     expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_REQUEST_RECEIVED, {
@@ -75,6 +80,9 @@ describe('fetchMarkup', () => {
       'https://foobar.com/includes/indepthtoolkit/quizzes/123-456',
       {
         timeout: 2000,
+        headers: {
+          'User-Agent': 'Simorgh/ws-web-rendering',
+        },
       },
     );
     expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_REQUEST_RECEIVED, {

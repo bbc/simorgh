@@ -1,7 +1,7 @@
 import React, { createContext, useReducer } from 'react';
 import { node, object } from 'prop-types';
-import { toggleReducer } from './reducer';
 import defaultToggles from '#lib/config/toggles';
+import { toggleReducer } from './reducer';
 
 const environment = process.env.SIMORGH_APP_ENV || 'local';
 

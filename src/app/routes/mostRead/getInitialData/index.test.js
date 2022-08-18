@@ -1,6 +1,6 @@
-import getInitialData from '.';
 import mostReadJson from '#data/pidgin/mostRead';
 import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
+import getInitialData from '.';
 
 fetch.mockResponse(JSON.stringify(mostReadJson));
 

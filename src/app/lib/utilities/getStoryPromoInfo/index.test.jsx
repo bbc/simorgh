@@ -104,7 +104,7 @@ describe('getStoryPromoInfo', () => {
   describe('getUrl', () => {
     it('should return the correct url for assetTypeCode', () => {
       expect(getUrl(assetTypeCode)).toEqual(
-        'http://www.bbc.com/turkce/haberler-turkiye-42068713',
+        '/turkce/haberler-turkiye-42068713',
       );
     });
 
