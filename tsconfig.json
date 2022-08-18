@@ -21,6 +21,6 @@
     "incremental": true, // Enable incremental compilation by reading/writing information from prior compilations to a file on disk
     "noFallthroughCasesInSwitch": true // Report errors for fallthrough cases in switch statement
   },
-  "include": ["src/app/components/**/*"],
-  "exclude": ["node_modules", "build"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "build", "src/app/legacy/**/*"]
 }

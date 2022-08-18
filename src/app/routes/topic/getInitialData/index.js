@@ -38,10 +38,6 @@ export default async ({ getAgent, service, path: pathname, variant, page }) => {
 
     const imageData = data.imageData || null;
 
-    const promos = data.curations
-      ? data.curations[0].summaries
-      : data.summaries;
-
     const scriptSwitchId = data.variantTopicId;
 
     return {
@@ -50,7 +46,7 @@ export default async ({ getAgent, service, path: pathname, variant, page }) => {
         title: data.title,
         description: data.description,
         imageData,
-        promos,
+        curations: data.curations,
         activePage: data.activePage || 1,
         pageCount: data.pageCount,
         scriptSwitchId,
