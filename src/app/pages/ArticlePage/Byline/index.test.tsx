@@ -125,7 +125,7 @@ describe('Byline', () => {
     ${'author'}    | ${'Barreessaa,'}
     ${'role'}      | ${'Gahee,'}
     ${'published'} | ${'Maxxanfame,'}
-  `('should translate ${info} announcement correctly', ({ translation }) => {
+  `('should translate $info announcement correctly', ({ translation }) => {
     render(
       <FixtureByline fixture={bylineWithNameAndRole} service="afaanoromoo">
         <ArticleTimestamp

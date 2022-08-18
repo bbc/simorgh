@@ -136,7 +136,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const topics = path(['metadata', 'topics'], pageData);
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
   const startsWithHeading = propEq('type', 'headline')(blocks[0] || {});
-  const hasByline = propEq('type', 'byline')(blocks[2] || {});
+  const hasByline = blocks.find(block => block.type === 'byline');
 
   const componentsToRender = {
     visuallyHiddenHeadline,
