@@ -4,7 +4,7 @@ import { renderRoutes } from 'react-router-config';
 import { matchPath } from 'react-router';
 
 // test helpers
-import { render, act, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import fetchMock from 'fetch-mock';
 
 import defaultToggles from '#lib/config/toggles';
@@ -75,18 +75,16 @@ const getMatchingRoute = pathname =>
   );
 
 const renderRouter = props =>
-  act(() =>
-    render(
-      <MemoryRouter initialEntries={[props.pathname]}>
-        {renderRoutes(routes, {
-          bbcOrigin: 'https://www.bbc.com',
-          isAmp: false,
-          status: props.status || 200,
-          toggles: defaultToggles.local,
-          ...props,
-        })}
-      </MemoryRouter>,
-    ),
+  render(
+    <MemoryRouter initialEntries={[props.pathname]}>
+      {renderRoutes(routes, {
+        bbcOrigin: 'https://www.bbc.com',
+        isAmp: false,
+        status: props.status || 200,
+        toggles: defaultToggles.local,
+        ...props,
+      })}
+    </MemoryRouter>,
   );
 
 it('should have correct properties in each route', () => {
@@ -121,7 +119,7 @@ it('should route to and render live radio page', async () => {
     },
   });
 
-  await renderRouter({
+  const { findByText } = renderRouter({
     pathname,
     pageData,
     pageType,
@@ -130,7 +128,7 @@ it('should route to and render live radio page', async () => {
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'BBC 코리아 라디오';
 
   expect(
-    screen.getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    await findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
   ).toBeInTheDocument();
 });
 
@@ -149,7 +147,7 @@ it('should route to and render the podcast page', async () => {
       recentAudioEpisodes: { enabled: false, value: 4 },
     },
   });
-  await renderRouter({
+  const { findByText } = renderRouter({
     pathname,
     pageData,
     pageType,
@@ -159,7 +157,7 @@ it('should route to and render the podcast page', async () => {
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'BBC Xtra';
 
   expect(
-    screen.getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    await findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
   ).toBeInTheDocument();
 });
 
@@ -178,7 +176,7 @@ it('should route to and render the onDemand Radio page', async () => {
       recentAudioEpisodes: { enabled: false, value: 4 },
     },
   });
-  await renderRouter({
+  const { findByText } = renderRouter({
     pathname,
     pageData,
     pageType,
@@ -188,7 +186,7 @@ it('should route to and render the onDemand Radio page', async () => {
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'Dunia Pagi Ini';
 
   expect(
-    screen.getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    await findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
   ).toBeInTheDocument();
 });
 
@@ -207,7 +205,7 @@ it('should route to and render the onDemand TV Brand page', async () => {
       recentVideoEpisodes: { enabled: false, value: 4 },
     },
   });
-  await renderRouter({
+  const { findByText } = renderRouter({
     pathname,
     pageData,
     pageType,
@@ -217,7 +215,7 @@ it('should route to and render the onDemand TV Brand page', async () => {
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'نړۍ دا وخت';
 
   expect(
-    screen.getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    await findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
   ).toBeInTheDocument();
 });
 
@@ -230,7 +228,7 @@ it('should route to and render an article page', async () => {
     path: pathname,
     pageType,
   });
-  await renderRouter({
+  const { findByText } = renderRouter({
     pathname,
     pageData,
     pageType,
@@ -239,7 +237,7 @@ it('should route to and render an article page', async () => {
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'پهپادی که برایتان قهوه می‌آورد';
 
   expect(
-    screen.getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    await findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
   ).toBeInTheDocument();
 });
 
@@ -252,7 +250,7 @@ it('should route to and render a front page', async () => {
     path: pathname,
     service: 'pidgin',
   });
-  await renderRouter({
+  const { findByText } = renderRouter({
     pathname,
     pageData,
     pageType,
@@ -261,7 +259,7 @@ it('should route to and render a front page', async () => {
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'Yarn Me Tori';
 
   expect(
-    screen.getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    await findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
   ).toBeInTheDocument();
 });
 
@@ -276,7 +274,7 @@ it('should route to and render a most watched page', async () => {
     service: 'pidgin',
     pageType,
   });
-  await renderRouter({
+  const { findByText } = renderRouter({
     pathname,
     pageData,
     pageType,
@@ -285,7 +283,7 @@ it('should route to and render a most watched page', async () => {
   const EXPECTED_TITLE_RENDERED_IN_DOCUMENT = 'De one we dem don look';
 
   expect(
-    screen.getByText(EXPECTED_TITLE_RENDERED_IN_DOCUMENT),
+    await findByText(EXPECTED_TITLE_RENDERED_IN_DOCUMENT),
   ).toBeInTheDocument();
 });
 
@@ -301,7 +299,7 @@ it('should route to and render a media asset page', async () => {
     service: 'yoruba',
     pageType,
   });
-  await renderRouter({
+  const { findByText } = renderRouter({
     pathname,
     pageData,
     pageType,
@@ -311,7 +309,7 @@ it('should route to and render a media asset page', async () => {
     'Ko ko koo, "lọdun 2014 bi ana ni arun buruku yii wọle tọ mi wa" introduction.';
 
   expect(
-    screen.getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    await findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
   ).toBeInTheDocument();
 });
 
@@ -326,7 +324,7 @@ it('should route to and render a media asset page', async () => {
     service: 'yoruba',
     pageType,
   });
-  await renderRouter({
+  const { findByText } = renderRouter({
     pathname,
     pageData,
     pageType,
@@ -338,7 +336,7 @@ it('should route to and render a media asset page', async () => {
     'Ko ko koo, "lọdun 2014 bi ana ni arun buruku yii wọle tọ mi wa" introduction.';
 
   expect(
-    screen.getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    await findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
   ).toBeInTheDocument();
 });
 
@@ -354,7 +352,7 @@ it('should route to and render a legacy media asset page', async () => {
     service: 'azeri',
     pageType,
   });
-  await renderRouter({
+  const { findByText } = renderRouter({
     pathname,
     pageData,
     pageType,
@@ -366,7 +364,7 @@ it('should route to and render a legacy media asset page', async () => {
     'Gürcustanda məhbusların gözətçilər tərəfindən zorlandığını göstərən video görüntülər çərşənbə günü hökümətə qarşı nümayişlərlə nəticələnib.';
 
   expect(
-    screen.getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    await findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
   ).toBeInTheDocument();
 });
 
@@ -379,7 +377,7 @@ it('should route to and render a photo gallery page', async () => {
     path: pathname,
     pageType,
   });
-  await renderRouter({
+  const { findByText } = renderRouter({
     pathname,
     pageData,
     pageType,
@@ -389,7 +387,7 @@ it('should route to and render a photo gallery page', async () => {
     'Anies Baswedan, dari mantan menteri menjadi gubernur DKI Jakarta';
 
   expect(
-    screen.getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    await findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
   ).toBeInTheDocument();
 });
 
@@ -407,7 +405,7 @@ it('should route to and render a story page', async () => {
     path: pathname,
     service: 'mundo',
   });
-  await renderRouter({
+  const { findByText } = renderRouter({
     pathname,
     pageData,
     pageType,
@@ -417,7 +415,7 @@ it('should route to and render a story page', async () => {
     'Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea';
 
   expect(
-    screen.getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    await findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
   ).toBeInTheDocument();
 });
 
@@ -430,7 +428,7 @@ it('should route to and render an index page', async () => {
     path: pathname,
     service: 'ukrainian',
   });
-  await renderRouter({
+  const { findByText } = renderRouter({
     pathname,
     pageData,
     pageType,
@@ -440,7 +438,7 @@ it('should route to and render an index page', async () => {
     'Многие украинцы из-за пандемии оказались заблокированными далеко за границей: из-за закрытия украинского неба добраться домой им очень сложно.';
 
   expect(
-    screen.getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    await findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
   ).toBeInTheDocument();
 });
 
@@ -454,7 +452,7 @@ it.skip('should route to and render a feature index page', async () => {
     path: pathname,
     pageType,
   });
-  await renderRouter({
+  const { findByText } = renderRouter({
     pathname,
     pageData,
     pageType,
@@ -464,7 +462,7 @@ it.skip('should route to and render a feature index page', async () => {
     'CAN 2019 : le Sénégal qualifié pour les huitièmes de finale';
 
   expect(
-    screen.getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    await findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
   ).toBeInTheDocument();
 });
 
@@ -475,7 +473,7 @@ it('should route to and render a 500 error page', async () => {
     path: pathname,
     pageType,
   });
-  await renderRouter({
+  const { findByText } = renderRouter({
     pathname,
     pageType,
     errorCode,
@@ -484,7 +482,7 @@ it('should route to and render a 500 error page', async () => {
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '500';
 
   expect(
-    screen.getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    await findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
   ).toBeInTheDocument();
 });
 
@@ -497,7 +495,7 @@ it('should fallback to and render a 500 error page if there is a problem with pa
     path: pathname,
     pageType,
   });
-  await renderRouter({
+  const { findByText } = renderRouter({
     pathname,
     pageType: FRONT_PAGE,
     service: 'afrique',
@@ -510,7 +508,7 @@ it('should fallback to and render a 500 error page if there is a problem with pa
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '500';
 
   expect(
-    screen.getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    await findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
   ).toBeInTheDocument();
 });
 
@@ -521,7 +519,7 @@ it('should route to and render a 404 error page', async () => {
     path: pathname,
     pageType,
   });
-  await renderRouter({
+  const { findByText } = renderRouter({
     pathname,
     pageType,
     errorCode,
@@ -530,7 +528,7 @@ it('should route to and render a 404 error page', async () => {
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '404';
 
   expect(
-    screen.getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    await findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
   ).toBeInTheDocument();
 });
 
@@ -543,7 +541,7 @@ it('should render a 404 error page if a data fetch responds with a 404', async (
     path: pathname,
     pageType,
   });
-  await renderRouter({
+  const { findByText } = renderRouter({
     pathname,
     pageType,
     status,
@@ -556,7 +554,7 @@ it('should render a 404 error page if a data fetch responds with a 404', async (
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '404';
 
   expect(
-    screen.getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    await findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
   ).toBeInTheDocument();
 });
 
@@ -568,7 +566,7 @@ it('should fallback to and render a 404 error page if no route match is found', 
     path: pathname,
     pageType,
   });
-  await renderRouter({
+  const { findByText } = renderRouter({
     pathname,
     pageType,
     errorCode,
@@ -577,6 +575,6 @@ it('should fallback to and render a 404 error page if no route match is found', 
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '404';
 
   expect(
-    screen.getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    await findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
   ).toBeInTheDocument();
 });
