@@ -96,7 +96,6 @@
   "homepage": "https://github.com/bbc/simorgh#readme",
   "dependencies": {
     "@bbc/web-vitals": "1.1.1",
-    "@emotion/babel-preset-css-prop": "^11.10.0",
     "@emotion/cache": "11.7.1",
     "@emotion/react": "11.9.0",
     "@emotion/server": "11.4.0",
@@ -159,6 +158,7 @@
     "@bbc/apache2-license-checker": "1.1.4",
     "@cypress/webpack-preprocessor": "^5.11.1",
     "@emotion/babel-plugin": "11.9.2",
+    "@emotion/babel-preset-css-prop": "11.10.0",
     "@emotion/jest": "11.9.1",
     "@loadable/babel-plugin": "5.13.2",
     "@loadable/webpack-plugin": "5.15.2",

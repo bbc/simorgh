@@ -2317,7 +2317,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/babel-preset-css-prop@npm:^11.10.0":
+"@emotion/babel-preset-css-prop@npm:11.10.0":
   version: 11.10.0
   resolution: "@emotion/babel-preset-css-prop@npm:11.10.0"
   dependencies:
@@ -19786,7 +19786,7 @@ __metadata:
     "@bbc/web-vitals": 1.1.1
     "@cypress/webpack-preprocessor": ^5.11.1
     "@emotion/babel-plugin": 11.9.2
-    "@emotion/babel-preset-css-prop": ^11.10.0
+    "@emotion/babel-preset-css-prop": 11.10.0
     "@emotion/cache": 11.7.1
     "@emotion/jest": 11.9.1
     "@emotion/react": 11.9.0
