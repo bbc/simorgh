@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index Heading should render correctly 1`] = `
+.emotion-0 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #6E6E73;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+<div>
+  <h1
+    class="emotion-0 emotion-1"
+    tabindex="-1"
+  >
+    This is a page heading
+  </h1>
+</div>
+`;
+
+exports[`Index Heading should render correctly with arabic script typography values 1`] = `
+.emotion-0 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #6E6E73;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+<div>
+  <h1
+    class="emotion-0 emotion-1"
+    tabindex="-1"
+  >
+    هذا عنوان الصفحة
+  </h1>
+</div>
+`;

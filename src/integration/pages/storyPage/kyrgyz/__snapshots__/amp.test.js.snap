@@ -183,7 +183,7 @@ Object {
 exports[`AMP Story Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "Би-Би-Си менен байланышыңыз",
-  "url": "https://www.bbc.co.uk/send/u50853445",
+  "url": "https://www.bbc.co.uk/kyrgyz/send/u50853445",
 }
 `;
 
@@ -433,7 +433,7 @@ exports[`AMP Story Page SEO OG url 1`] = `"http://localhost:7080/kyrgyz/23292889
 
 exports[`AMP Story Page SEO Page title 1`] = `"Test STY for social embeds - BBC News Кыргыз Кызматы"`;
 
-exports[`AMP Story Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP Story Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP Story Page SEO Twitter card 1`] = `"summary_large_image"`;
 

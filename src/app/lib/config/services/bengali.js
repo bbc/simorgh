@@ -3,15 +3,15 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { bengali } from '@bbc/gel-foundations/scripts';
-import { bengali as brandSVG } from '@bbc/psammead-assets/svgs';
+} from '#psammead/psammead-styles/src/colours';
+import bengali from '#psammead/gel-foundations/src/scripts/bengali';
+import brandSVG from '#lib/chameleonLogos/bangla';
 import {
   F_NOTO_SERIF_BENGALI_BOLD,
   F_NOTO_SERIF_BENGALI_REGULAR,
-} from '@bbc/psammead-styles/fonts';
-import '@bbc/moment-timezone-include/tz/Asia/Dhaka';
-import '@bbc/psammead-locales/moment/bn';
+} from '#psammead/psammead-styles/src/fonts';
+import '#psammead/moment-timezone-include/tz/Asia/Dhaka';
+import '#psammead/psammead-locales/moment/bn';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -64,6 +64,12 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        page: 'পৃষ্ঠা',
+        previousPage: 'ফিরে যাব',
+        nextPage: 'পরবর্তী',
+        pageXOfY: 'পৃষ্ঠা {x} এর মধ্যে {y}',
+      },
       ads: {
         advertisementLabel: 'বিজ্ঞাপন',
       },
@@ -231,6 +237,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'ভিডিওর ক্যাপশান: ',
           text: 'সতর্কবাণী: তৃতীয়পক্ষের কন্টেন্টে বিজ্ঞাপন থাকতে পারে',
+          articleText:
+            'সতর্কবাণী: বিবিসির নয় এমন ওয়েবসাইটের কনটেন্টের জন্য বিবিসি দায়ী না',
+          articleAdditionalText: '%provider_name% কনটেন্টে বিজ্ঞাপন থাকতে পারে',
         },
         fallback: {
           text: 'ছবির কপিরাইট',
@@ -299,8 +308,8 @@ export const service = {
           text: 'কুকিজ',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853247',
-          text: 'বিবিসির সঙ্গে যোগাযোগ করুন',
+          href: 'https://www.bbc.co.uk/bengali/send/u50853247',
+          text: 'বিবিসির সাথে যোগাযোগ করুন',
         },
         {
           id: 'COOKIE_SETTINGS',
@@ -325,7 +334,7 @@ export const service = {
       },
       {
         title: 'ভিডিও',
-        url: '/bengali/media/video',
+        url: '/bengali/topics/cxy7jg418e7t',
       },
     ],
   },

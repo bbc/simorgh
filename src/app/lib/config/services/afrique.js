@@ -3,10 +3,10 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { latinDiacritics } from '@bbc/gel-foundations/scripts';
-import { afrique as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/GMT';
+} from '#psammead/psammead-styles/src/colours';
+import latinDiacritics from '#psammead/gel-foundations/src/scripts/latin-with-diacritics';
+import brandSVG from '#lib/chameleonLogos/afrique';
+import '#psammead/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/fr';
 
@@ -60,6 +60,12 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        page: 'Page',
+        previousPage: 'Page précédente',
+        nextPage: 'Page suivante',
+        pageXOfY: 'Page {x} de {y}',
+      },
       ads: {
         advertisementLabel: 'Publicités',
       },
@@ -235,6 +241,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Légende vidéo, ',
           text: 'Attention: le contenu externe peut contenir des messages publicitaires',
+          articleText:
+            "Attention: La BBC n'est pas responsable du contenu des sites externes.",
+          articleAdditionalText:
+            'Le contenu du site %provider_name% peut contenir des publicités.',
         },
         fallback: {
           text: "Ce contenu n'est pas disponible",
@@ -303,7 +313,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853159',
+          href: 'https://www.bbc.co.uk/afrique/send/u50853159',
           text: 'Contactez la BBC',
         },
         {

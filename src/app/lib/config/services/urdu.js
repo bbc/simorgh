@@ -3,15 +3,15 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { arabic } from '@bbc/gel-foundations/scripts';
-import { urdu as brandSVG } from '@bbc/psammead-assets/svgs';
+} from '#psammead/psammead-styles/src/colours';
+import arabic from '#psammead/gel-foundations/src/scripts/arabic';
+import brandSVG from '#lib/chameleonLogos/urdu';
 import {
   F_REITH_QALAM_REGULAR,
   F_REITH_QALAM_BOLD,
-} from '@bbc/psammead-styles/fonts';
-import '@bbc/moment-timezone-include/tz/Asia/Karachi';
-import '@bbc/psammead-locales/moment/ur';
+} from '#psammead/psammead-styles/src/fonts';
+import '#psammead/moment-timezone-include/tz/Asia/Karachi';
+import '#psammead/psammead-locales/moment/ur';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -63,7 +63,31 @@ export const service = {
     },
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'پوڈکاسٹ',
+      brandTitle: 'ڈرامہ کوئین',
+      brandDescription:
+        '’ڈرامہ کوئین‘ پوڈکاسٹ میں سنیے وہ باتیں جنہیں کسی کے ساتھ بانٹنے نہیں دیا جاتا',
+      image: {
+        src: 'http://ichef.bbci.co.uk/images/ic/448xn/p0c04zy8.jpg',
+        alt: 'ڈرامہ کوئین',
+      },
+      linkLabel: {
+        text: 'قسطیں',
+        href: 'https://www.bbc.com/urdu/podcasts/p0c04t7w',
+      },
+      skipLink: {
+        text: 'مواد پر جائیں',
+        endTextVisuallyHidden: 'مواد پر جائیں',
+      },
+    },
     translations: {
+      pagination: {
+        previousPage: 'پچھلا صفحہ',
+        nextPage: 'اگلا صفحہ',
+        pageXOfY: 'صفحہ {x} سے {y}',
+        page: 'صفحہ',
+      },
       ads: {
         advertisementLabel: 'اشتہار',
       },
@@ -220,11 +244,16 @@ export const service = {
         nextRadioShow: 'اگلا ریڈیو پروگرام',
         duration: 'دورانیہ',
         recentEpisodes: 'سابق پروگرام',
+        podcastExternalLinks: 'یہ پوڈکاسٹ ان پلیٹفارمز پر بھی دستیاب ہے',
       },
       socialEmbed: {
         caption: {
           textPrefixVisuallyHidden: 'ویڈیو کیپشن, ',
           text: 'تنبیہ: دیگر مواد میں اشتہار موجود ہو سکتے ہیں',
+          articleText:
+            'تنبیہ: بی بی سی دیگر ویب سائٹس کے مواد کی ذمہ دار نہیں ہے۔',
+          articleAdditionalText:
+            '%provider_name%  کے مواد میں اشتہارات ہو سکتے ہیں۔',
         },
         fallback: {
           text: 'مواد دستیاب نہیں ہے',
@@ -293,7 +322,7 @@ export const service = {
           text: 'کوکیز',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853907',
+          href: 'https://www.bbc.co.uk/urdu/send/u50853907',
           text: 'بی بی سی سے رابطہ کریں',
         },
         {

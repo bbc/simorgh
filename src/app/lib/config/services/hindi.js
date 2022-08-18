@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { devanagariAndGurmukhi } from '@bbc/gel-foundations/scripts';
-import { hindi as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
-import '@bbc/psammead-locales/moment/hi';
+} from '#psammead/psammead-styles/src/colours';
+import devanagariAndGurmukhi from '#psammead/gel-foundations/src/scripts/devanagari-and-gurmukhi';
+import brandSVG from '#lib/chameleonLogos/hindi';
+import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
+import '#psammead/psammead-locales/moment/hi';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -61,16 +61,16 @@ export const service = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'पॉडकास्ट',
-      brandTitle: 'विवेचना',
+      brandTitle: 'बात सरहद पार',
       brandDescription:
-        'नई रिलीज़ हुई फ़िल्मों की समीक्षा करता साप्ताहिक कार्यक्रम',
+        'दो देश,दो शख़्सियतें और ढेर सारी बातें. आज़ादी और बँटवारे के 75 साल. सीमा पार संवाद.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09kn96g.jpg',
-        alt: 'बीबीसी 70 एमएम',
+        src: 'https://ichef.bbci.co.uk/images/ic/448xn/p0clc96w.jpg',
+        alt: 'बात सरहद पार',
       },
       linkLabel: {
-        text: 'एपिसोड्स',
-        href: 'https://www.bbc.com/hindi/podcasts/p05523zq',
+        text: 'बात सरहद पार',
+        href: 'https://www.bbc.com/hindi/podcasts/p0clc83k',
       },
       skipLink: {
         text: 'छोड़कर %title% आगे बढ़ें',
@@ -78,6 +78,11 @@ export const service = {
       },
     },
     translations: {
+      pagination: {
+        previousPage: 'पिछला',
+        nextPage: 'अगला',
+        pageXOfY: 'Page {x} र {y}',
+      },
       ads: {
         advertisementLabel: 'विज्ञापन',
       },
@@ -255,6 +260,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'वीडियो कैप्शन ',
           text: 'चेतावनी: तीसरे पक्ष की सामग्री में विज्ञापन हो सकते हैं.',
+          articleText:
+            'चेतावनी: बीबीसी दूसरी वेबसाइट्स की सामग्री के लिए ज़िम्मेदार नहीं है.',
+          articleAdditionalText:
+            '%provider_name% सामग्री में विज्ञापन हो सकते हैं.',
         },
         fallback: {
           text: 'सामग्री् उपलब्ध नहीं है',
@@ -326,8 +335,8 @@ export const service = {
           text: 'कुकीज़',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853357',
-          text: 'बीबीसी से संपर्क करें',
+          href: 'https://www.bbc.co.uk/hindi/send/u50853357',
+          text: 'बीबीसी से संपर्क',
         },
         {
           id: 'COOKIE_SETTINGS',

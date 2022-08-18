@@ -49,7 +49,7 @@ Object {
 exports[`Canonical persian/afghanistan IDX page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "تماس با بی بی سی",
-  "url": "https://www.bbc.co.uk/send/u50853555",
+  "url": "https://www.bbc.co.uk/persian/send/u50853555",
 }
 `;
 
@@ -320,7 +320,7 @@ exports[`Canonical persian/afghanistan IDX page SEO OG url 1`] = `"http://localh
 
 exports[`Canonical persian/afghanistan IDX page SEO Page title 1`] = `"صفحه افغانستان - BBC News فارسی"`;
 
-exports[`Canonical persian/afghanistan IDX page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical persian/afghanistan IDX page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical persian/afghanistan IDX page SEO Twitter card 1`] = `"summary_large_image"`;
 
@@ -349,7 +349,7 @@ exports[`Canonical persian/afghanistan IDX page Story Promo Headline should matc
 exports[`Canonical persian/afghanistan IDX page Story Promo Image should match image 1`] = `
 <img
   alt="هبت الله آخوندزاده"
-  class="eehpdyc0 bbc-rb7xa0 e1enwo3v0"
+  class="e3vrtyk0 bbc-rb7xa0 e1mo64ex0"
   height="351"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg"
   width="624"

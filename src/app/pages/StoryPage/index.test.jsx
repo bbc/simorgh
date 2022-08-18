@@ -4,8 +4,7 @@ import { StaticRouter } from 'react-router-dom';
 import deepClone from 'ramda/src/clone';
 
 // test helpers
-import { render, waitFor } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { render, waitFor, within } from '@testing-library/react';
 import assocPath from 'ramda/src/assocPath';
 import fetchMock from 'fetch-mock';
 
@@ -30,17 +29,26 @@ import russianSecondaryColumnData from '#data/russian/secondaryColumn/index.json
 import ukrainianInRussianPageData from '#data/ukrainian/cpsAssets/news-russian-23333960.json';
 import ukrainianSecondaryColumnData from '#data/ukrainian/secondaryColumn/index.json';
 import ukrainianMostReadData from '#data/ukrainian/mostRead/index.json';
-import hindiPageData from '#data/hindi/cpsAssets/india-60426858.json';
-import hindiRecommendationsData from '#data/hindi/recommendations/index.json';
-import hindiMostRead from '#data/hindi/mostRead/index.json';
-import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
+import portuguesePageData from '#data/portuguese/cpsAssets/brasil-54196636';
+import portugueseRecommendationData from '#data/portuguese/recommendations/index';
+
+// 004_brasil_recommendations_experiment
+import userEvent from '@testing-library/user-event';
+import portugueseMostReadData from '#data/portuguese/mostRead/index';
+import {
+  OptimizelyExperiment,
+  OptimizelyProvider,
+} from '@optimizely/react-sdk';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
-import * as optimizelySDK from '@optimizely/react-sdk';
-import mundoPageData from '#data/mundo/cpsAssets/noticias-56669604.json';
-import mundoMostRead from '#data/mundo/mostRead/index.json';
-import mundoRecommendationsData from '#data/mundo/recommendations/index.json';
+import mundoPageData from '#data/mundo/cpsAssets/noticias-56669604';
+import mundoRecommendationsData from '#data/mundo/recommendations/index';
+import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
+import getAgent from '#server/utilities/getAgent/index';
+
 import russianPageDataWithoutInlinePromo from './fixtureData/russianPageDataWithoutPromo';
 import StoryPageIndex from '.';
+
+// 004_brasil_recommendations_experiment
 import StoryPage from './StoryPage';
 
 fetchMock.config.overwriteRoutes = false; // http://www.wheresrhys.co.uk/fetch-mock/#usageconfiguration allows us to mock the same endpoint multiple times
@@ -74,6 +82,7 @@ jest.mock('#containers/Ad/Canonical/CanonicalAdBootstrapJs', () => {
   return CanonicalAdBootstrapJs;
 });
 
+// 004_brasil_recommendations_experiment
 jest.mock('#containers/ATIAnalytics/beacon', () => {
   return {
     __esModule: true,
@@ -82,11 +91,17 @@ jest.mock('#containers/ATIAnalytics/beacon', () => {
   };
 });
 
-const optimizelyExperimentSpy = jest.spyOn(
-  optimizelySDK,
-  'OptimizelyExperiment',
-);
+// 004_brasil_recommendations_experiment
+jest.mock('@optimizely/react-sdk', () => {
+  const actualModules = jest.requireActual('@optimizely/react-sdk');
+  return {
+    __esModule: true,
+    ...actualModules,
+    OptimizelyExperiment: jest.fn(),
+  };
+});
 
+// 004_brasil_recommendations_experiment
 const optimizely = {
   onReady: jest.fn(() => Promise.resolve()),
   track: jest.fn(),
@@ -95,6 +110,8 @@ const optimizely = {
   },
   close: jest.fn(),
 };
+
+jest.mock('#server/utilities/getAgent/index');
 
 const defaultToggleState = {
   ads: {
@@ -107,6 +124,42 @@ const defaultToggleState = {
     enabled: true,
   },
 };
+
+// 004_brasil_recommendations_experiment
+const PageWithContext = ({
+  pageData,
+  service,
+  showAdsBasedOnLocation = false,
+  isAmp = false,
+  toggles = defaultToggleState,
+}) => (
+  <StaticRouter>
+    <ToggleContext.Provider
+      value={{ toggleState: toggles, toggleDispatch: jest.fn() }}
+    >
+      <ServiceContextProvider
+        pageLang={pageData.metadata.language}
+        service={service}
+      >
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.co.uk"
+          isAmp={isAmp}
+          pageType={pageData.metadata.type}
+          pathname={pageData.metadata.locators.assetUri}
+          service={service}
+          statusCode={200}
+          showAdsBasedOnLocation={showAdsBasedOnLocation}
+        >
+          <EventTrackingContextProvider pageData={pageData}>
+            <OptimizelyProvider optimizely={optimizely} isServerSide>
+              <StoryPage service={service} pageData={pageData} />
+            </OptimizelyProvider>
+          </EventTrackingContextProvider>
+        </RequestContextProvider>
+      </ServiceContextProvider>
+    </ToggleContext.Provider>
+  </StaticRouter>
+);
 
 const Page = ({
   pageData,
@@ -133,44 +186,6 @@ const Page = ({
           showAdsBasedOnLocation={showAdsBasedOnLocation}
         >
           <StoryPageIndex service={service} pageData={pageData} />
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ToggleContext.Provider>
-  </StaticRouter>
-);
-
-const PageWithContext = ({
-  pageData,
-  service,
-  showAdsBasedOnLocation = false,
-  isAmp = false,
-  toggles = defaultToggleState,
-}) => (
-  <StaticRouter>
-    <ToggleContext.Provider
-      value={{ toggleState: toggles, toggleDispatch: jest.fn() }}
-    >
-      <ServiceContextProvider
-        pageLang={pageData.metadata.language}
-        service={service}
-      >
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          isAmp={isAmp}
-          pageType={pageData.metadata.type}
-          pathname={pageData.metadata.locators.assetUri}
-          service={service}
-          statusCode={200}
-          showAdsBasedOnLocation={showAdsBasedOnLocation}
-        >
-          <EventTrackingContextProvider pageData={pageData}>
-            <optimizelySDK.OptimizelyProvider
-              optimizely={optimizely}
-              isServerSide
-            >
-              <StoryPage service={service} pageData={pageData} />
-            </optimizelySDK.OptimizelyProvider>
-          </EventTrackingContextProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContext.Provider>
@@ -227,17 +242,33 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
   return ContextsContainer;
 });
 
+jest.mock('#hooks/useOptimizelyVariation', () => jest.fn(() => null));
+
 const pageType = 'cpsAsset';
 
 describe('Story Page', () => {
   const appEnv = process.env.SIMORGH_APP_ENV;
   beforeEach(() => {
     process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
+    process.env.RECOMMENDATIONS_ENDPOINT = 'http://mock-recommendations-path';
+    // 004_brasil_recommendations_experiment
+    OptimizelyExperiment.mockImplementation(props => {
+      const { children } = props;
+
+      const variation = null;
+
+      if (children != null && typeof children === 'function') {
+        return <>{children(variation, true, false)}</>;
+      }
+
+      return null;
+    });
   });
 
   afterEach(() => {
     fetchMock.restore();
     delete process.env.SIMORGH_ICHEF_BASE_URL;
+    delete process.env.RECOMMENDATIONS_ENDPOINT;
     process.env.SIMORGH_APP_ENV = appEnv;
   });
 
@@ -594,6 +625,28 @@ describe('Story Page', () => {
 
   it('should not render canonical ad bootstrap on amp', async () => {
     process.env.SIMORGH_APP_ENV = 'test';
+    const observers = new Map();
+    const observerSpy = jest
+      .spyOn(global, 'IntersectionObserver')
+      .mockImplementationOnce(cb => {
+        const item = {
+          callback: cb,
+          elements: new Set(),
+        };
+
+        const instance = {
+          observe: jest.fn(element => {
+            item.elements.add(element);
+          }),
+          disconnect: jest.fn(() => {
+            item.elements.clear();
+          }),
+        };
+
+        observers.set(instance, item);
+
+        return instance;
+      });
     const toggles = {
       ads: {
         enabled: true,
@@ -624,7 +677,12 @@ describe('Story Page', () => {
     );
 
     const adBootstrap = queryByTestId('adBootstrap');
-    expect(adBootstrap).not.toBeInTheDocument();
+
+    await waitFor(() => {
+      expect(adBootstrap).not.toBeInTheDocument();
+      observers.clear();
+      observerSpy.mockRestore();
+    });
   });
 
   it('should render the inline podcast promo component on russian pages with a paragraph of 940 characters and after 8th paragraph', async () => {
@@ -718,11 +776,27 @@ describe('Story Page', () => {
     );
   });
 
-  describe.skip('Optimizely Experiments', () => {
-    describe('003_hindi_experiment_feature', () => {
+  describe('Optimizely Experiments', () => {
+    describe('004_brasil_recommendations_experiment', () => {
+      beforeEach(() => {
+        process.env.RECOMMENDATIONS_ENDPOINT =
+          'http://mock-recommendations-path';
+      });
+
+      afterEach(() => {
+        delete process.env.RECOMMENDATIONS_ENDPOINT;
+        jest.clearAllMocks();
+      });
+
+      afterAll(() => {
+        jest.restoreAllMocks();
+      });
+
       describe('control', () => {
         beforeEach(() => {
-          optimizelyExperimentSpy.mockImplementation(props => {
+          process.env.RECOMMENDATIONS_ENDPOINT =
+            'http://mock-recommendations-path';
+          OptimizelyExperiment.mockImplementation(props => {
             const { children } = props;
 
             const variation = 'control';
@@ -733,14 +807,13 @@ describe('Story Page', () => {
 
             return null;
           });
-          jest.clearAllMocks();
         });
 
-        afterAll(() => {
-          jest.restoreAllMocks();
+        afterEach(() => {
+          delete process.env.RECOMMENDATIONS_ENDPOINT;
         });
 
-        it('should render recommendations when variation is control', async () => {
+        it('should fetch and render recommendations from current endpoint when variation is control and service is portuguese', async () => {
           const toggles = {
             cpsRecommendations: {
               enabled: true,
@@ -749,455 +822,50 @@ describe('Story Page', () => {
               enabled: true,
             },
           };
+
+          const recommendationsEndpoint =
+            'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_camino';
+
           fetchMock.mock(
             'http://localhost/some-cps-sty-path.json',
-            hindiPageData,
+            portuguesePageData,
           );
-          fetchMock.mock('http://localhost/hindi/mostread.json', hindiMostRead);
-          fetchMock.mock(
-            'http://localhost/hindi/india-60426858/recommendations.json',
-            hindiRecommendationsData,
-          );
+          fetchMock.mock(recommendationsEndpoint, portugueseRecommendationData);
+
           const { pageData } = await getInitialData({
             path: '/some-cps-sty-path',
-            service: 'hindi',
+            service: 'portuguese',
             pageType,
           });
 
           const { getAllByRole } = render(
-            <PageWithContext
-              pageData={pageData}
-              service="hindi"
-              toggles={toggles}
-            />,
+            <Page pageData={pageData} service="portuguese" toggles={toggles} />,
           );
 
-          const RecommendationsRegions = getAllByRole('region').filter(
+          const [recommendationsRegions] = getAllByRole('region').filter(
             item =>
               item.getAttribute('aria-labelledby') ===
               'recommendations-heading',
           );
-          expect(RecommendationsRegions).toHaveLength(1);
-        });
 
-        it('should render recommendations when variation is null or undefined', async () => {
-          optimizelyExperimentSpy.mockImplementation(props => {
-            const { children } = props;
+          const recommendationsItems = within(
+            recommendationsRegions,
+          ).getAllByRole('listitem');
 
-            if (children != null && typeof children === 'function') {
-              return <>{children(undefined, true, false)}</>;
-            }
-
-            return null;
-          });
-          const toggles = {
-            cpsRecommendations: {
-              enabled: true,
-            },
-            eventTracking: {
-              enabled: true,
-            },
-          };
-          fetchMock.mock(
-            'http://localhost/some-cps-sty-path.json',
-            hindiPageData,
-          );
-          fetchMock.mock('http://localhost/hindi/mostread.json', hindiMostRead);
-          fetchMock.mock(
-            'http://localhost/hindi/india-60426858/recommendations.json',
-            hindiRecommendationsData,
-          );
-          const { pageData } = await getInitialData({
-            path: '/some-cps-sty-path',
-            service: 'hindi',
-            pageType,
-          });
-
-          const { getAllByRole } = render(
-            <PageWithContext
-              pageData={pageData}
-              service="hindi"
-              toggles={toggles}
-            />,
-          );
-
-          const RecommendationsRegions = getAllByRole('region').filter(
-            item =>
-              item.getAttribute('aria-labelledby') ===
-              'recommendations-heading',
-          );
-          expect(RecommendationsRegions).toHaveLength(1);
-        });
-
-        it('should not render recommendations when recommendations are not enabled', async () => {
-          const toggles = {
-            eventTracking: {
-              enabled: true,
-            },
-          };
-          fetchMock.mock(
-            'http://localhost/some-cps-sty-path.json',
-            hindiPageData,
-          );
-          fetchMock.mock('http://localhost/hindi/mostread.json', hindiMostRead);
-          fetchMock.mock(
-            'http://localhost/hindi/india-60426858/recommendations.json',
-            hindiRecommendationsData,
-          );
-          const { pageData } = await getInitialData({
-            path: '/some-cps-sty-path',
-            service: 'hindi',
-            pageType,
-          });
-
-          const { getAllByRole } = render(
-            <PageWithContext
-              pageData={pageData}
-              service="hindi"
-              toggles={toggles}
-            />,
-          );
-
-          const RecommendationsRegions = getAllByRole('region').filter(
-            item =>
-              item.getAttribute('aria-labelledby') ===
-              'recommendations-heading',
-          );
-          expect(RecommendationsRegions).toHaveLength(0);
-        });
-
-        describe('Event Tracking', () => {
-          describe('View Tracking', () => {
-            it('should send ATI and Optimizely view tracking event when recommendations render', async () => {
-              const toggles = {
-                cpsRecommendations: {
-                  enabled: true,
-                },
-                eventTracking: {
-                  enabled: true,
-                },
-              };
-              fetchMock.mock(
-                'http://localhost/some-cps-sty-path.json',
-                hindiPageData,
-              );
-              fetchMock.mock(
-                'http://localhost/hindi/mostread.json',
-                hindiMostRead,
-              );
-              fetchMock.mock(
-                'http://localhost/hindi/india-60426858/recommendations.json',
-                hindiRecommendationsData,
-              );
-              const { pageData } = await getInitialData({
-                path: '/some-cps-sty-path',
-                service: 'hindi',
-                pageType,
-              });
-
-              render(
-                <PageWithContext
-                  pageData={pageData}
-                  service="hindi"
-                  toggles={toggles}
-                />,
-              );
-
-              await waitFor(
-                () => {
-                  const wsojViewCalls = sendEventBeacon.mock.calls.filter(
-                    ([{ campaignID, componentName }]) =>
-                      componentName === 'wsoj' ||
-                      campaignID.includes('cps_wsoj'),
-                  );
-                  expect(wsojViewCalls.length).toBe(5);
-                  expect(optimizely.track).toHaveBeenCalledTimes(1);
-                  expect(optimizely.track).toBeCalledWith(
-                    'component_views',
-                    undefined,
-                    { viewed_wsoj: true },
-                  );
-                },
-                { timeout: 2000 },
-              );
-            }, 10000);
-
-            it('should not send ATI or Optimizely view tracking event when event tracking is not enabled', async () => {
-              const toggles = {
-                cpsRecommendations: {
-                  enabled: true,
-                },
-              };
-              fetchMock.mock(
-                'http://localhost/some-cps-sty-path.json',
-                hindiPageData,
-              );
-              fetchMock.mock(
-                'http://localhost/hindi/mostread.json',
-                hindiMostRead,
-              );
-              fetchMock.mock(
-                'http://localhost/hindi/india-60426858/recommendations.json',
-                hindiRecommendationsData,
-              );
-              const { pageData } = await getInitialData({
-                path: '/some-cps-sty-path',
-                service: 'hindi',
-                pageType,
-              });
-
-              render(
-                <PageWithContext
-                  pageData={pageData}
-                  service="hindi"
-                  toggles={toggles}
-                />,
-              );
-
-              await waitFor(
-                () => {
-                  const wsojViewCalls = sendEventBeacon.mock.calls.filter(
-                    ([{ campaignID, componentName }]) =>
-                      campaignID.includes('cps_wsoj') ||
-                      componentName === 'wsoj',
-                  );
-                  expect(wsojViewCalls.length).toBe(0);
-                  expect(optimizely.track).toHaveBeenCalledTimes(0);
-                },
-                { timeout: 2000 },
-              );
-            }, 10000);
-
-            it('should send only ATI view tracking event when service is not hindi', async () => {
-              const toggles = {
-                cpsRecommendations: {
-                  enabled: true,
-                },
-                eventTracking: {
-                  enabled: true,
-                },
-              };
-              fetchMock.mock(
-                'http://localhost/some-cps-sty-path.json',
-                mundoPageData,
-              );
-              fetchMock.mock(
-                'http://localhost/mundo/mostread.json',
-                mundoMostRead,
-              );
-              fetchMock.mock(
-                'http://localhost/mundo/noticias-56669604/recommendations.json',
-                mundoRecommendationsData,
-              );
-              const { pageData } = await getInitialData({
-                path: '/some-cps-sty-path',
-                service: 'mundo',
-                pageType,
-              });
-
-              render(
-                <PageWithContext
-                  pageData={pageData}
-                  service="mundo"
-                  toggles={toggles}
-                />,
-              );
-
-              await waitFor(
-                () => {
-                  const wsojViewCalls = sendEventBeacon.mock.calls.filter(
-                    ([{ campaignID, componentName }]) =>
-                      campaignID.includes('wsoj') || componentName === 'wsoj',
-                  );
-                  expect(wsojViewCalls.length).toBe(5);
-                  expect(optimizely.track).toHaveBeenCalledTimes(0);
-                },
-                { timeout: 2000 },
-              );
-            }, 10000);
-          });
-
-          describe('Click Tracking', () => {
-            it('should send ATI and Optimizely click tracking events when link is clicked', async () => {
-              const toggles = {
-                cpsRecommendations: {
-                  enabled: true,
-                },
-                eventTracking: {
-                  enabled: true,
-                },
-              };
-              fetchMock.mock(
-                'http://localhost/some-cps-sty-path.json',
-                hindiPageData,
-              );
-              fetchMock.mock(
-                'http://localhost/hindi/mostread.json',
-                hindiMostRead,
-              );
-              fetchMock.mock(
-                'http://localhost/hindi/india-60426858/recommendations.json',
-                hindiRecommendationsData,
-              );
-              const { pageData } = await getInitialData({
-                path: '/some-cps-sty-path',
-                service: 'hindi',
-                pageType,
-              });
-
-              const { getByText } = render(
-                <PageWithContext
-                  pageData={pageData}
-                  service="hindi"
-                  toggles={toggles}
-                />,
-              );
-
-              const firstBlockRecommendationLink = getByText(
-                'कोविड-19 महामारीः तो सबसे ज़्यादा मौतों की वजह वायरस नहीं होगा',
-              );
-              userEvent.click(firstBlockRecommendationLink);
-
-              await waitFor(
-                () => {
-                  const wsojClickCalls = sendEventBeacon.mock.calls.filter(
-                    ([{ type }]) => type === 'click',
-                  );
-                  expect(wsojClickCalls.length).toBe(2);
-                  const optimizelyClickCalls =
-                    optimizely.track.mock.calls.filter(
-                      ([eventName]) => eventName === 'component_clicks',
-                    );
-                  expect(optimizelyClickCalls.length).toBe(1);
-                  expect(optimizelyClickCalls[0]).toEqual([
-                    'component_clicks',
-                    undefined,
-                    { clicked_wsoj: true },
-                  ]);
-                },
-                { timeout: 2000 },
-              );
-            }, 10000);
-
-            it('should not send ATI or Optimizely click tracking events when event tracking is not enabled', async () => {
-              const toggles = {
-                cpsRecommendations: {
-                  enabled: true,
-                },
-              };
-              fetchMock.mock(
-                'http://localhost/some-cps-sty-path.json',
-                hindiPageData,
-              );
-              fetchMock.mock(
-                'http://localhost/hindi/mostread.json',
-                hindiMostRead,
-              );
-              fetchMock.mock(
-                'http://localhost/hindi/india-60426858/recommendations.json',
-                hindiRecommendationsData,
-              );
-              const { pageData } = await getInitialData({
-                path: '/some-cps-sty-path',
-                service: 'hindi',
-                pageType,
-              });
-
-              const { getByText } = render(
-                <PageWithContext
-                  pageData={pageData}
-                  service="hindi"
-                  toggles={toggles}
-                />,
-              );
-
-              const firstBlockRecommendationLink = getByText(
-                'कोविड-19 महामारीः तो सबसे ज़्यादा मौतों की वजह वायरस नहीं होगा',
-              );
-              userEvent.click(firstBlockRecommendationLink);
-
-              await waitFor(
-                () => {
-                  const wsojClickCalls = sendEventBeacon.mock.calls.filter(
-                    ([{ type }]) => type === 'click',
-                  );
-                  expect(wsojClickCalls.length).toBe(0);
-                  const optimizelyClickCalls =
-                    optimizely.track.mock.calls.filter(
-                      ([eventName]) => eventName === 'component_clicks',
-                    );
-                  expect(optimizelyClickCalls.length).toBe(0);
-                },
-                { timeout: 2000 },
-              );
-            }, 10000);
-
-            it('should send only ATI click tracking event when service is not hindi and a link is clicked', async () => {
-              const toggles = {
-                cpsRecommendations: {
-                  enabled: true,
-                },
-                eventTracking: {
-                  enabled: true,
-                },
-              };
-              fetchMock.mock(
-                'http://localhost/some-cps-sty-path.json',
-                mundoPageData,
-              );
-              fetchMock.mock(
-                'http://localhost/mundo/mostread.json',
-                mundoMostRead,
-              );
-              fetchMock.mock(
-                'http://localhost/mundo/noticias-56669604/recommendations.json',
-                mundoRecommendationsData,
-              );
-              const { pageData } = await getInitialData({
-                path: '/some-cps-sty-path',
-                service: 'mundo',
-                pageType,
-              });
-
-              const { getByText } = render(
-                <PageWithContext
-                  pageData={pageData}
-                  service="mundo"
-                  toggles={toggles}
-                />,
-              );
-
-              const firstBlockRecommendationLink = getByText(
-                'Soy una mujer genocida y aún me persiguen los recuerdos de lo que hice',
-              );
-              userEvent.click(firstBlockRecommendationLink);
-
-              await waitFor(
-                () => {
-                  const wsojClickCalls = sendEventBeacon.mock.calls.filter(
-                    ([{ type }]) => type === 'click',
-                  );
-                  expect(wsojClickCalls.length).toBe(2);
-                  expect(optimizely.track).toHaveBeenCalledTimes(0);
-                },
-                { timeout: 2000 },
-              );
-            }, 10000);
-          });
+          expect(fetchMock.calls()[1][0]).toBe(recommendationsEndpoint);
+          expect(recommendationsRegions).not.toBeNull();
+          expect(recommendationsItems).toHaveLength(4);
         });
       });
-    });
-  });
 
-  // OPTIMIZELY: 003_hindi_experiment_feature: Need to enable when experiment blocks has been added.
-  describe.skip('Optimizely Experiments', () => {
-    describe('003_hindi_experiment_feature', () => {
-      describe('variation_1', () => {
+      describe('content_recs', () => {
         beforeEach(() => {
-          optimizelyExperimentSpy.mockImplementation(props => {
+          process.env.RECOMMENDATIONS_ENDPOINT =
+            'http://mock-recommendations-path';
+          OptimizelyExperiment.mockImplementation(props => {
             const { children } = props;
 
-            const variation = 'variation_1';
+            const variation = 'content_recs';
 
             if (children != null && typeof children === 'function') {
               return <>{children(variation, true, false)}</>;
@@ -1207,11 +875,11 @@ describe('Story Page', () => {
           });
         });
 
-        afterAll(() => {
-          jest.restoreAllMocks();
+        afterEach(() => {
+          delete process.env.RECOMMENDATIONS_ENDPOINT;
         });
 
-        it('should render split recommendations when variation is variation_1', async () => {
+        it('should fetch and render recommendations from content variant endpoint when variation is content_recs and service is portuguese', async () => {
           const toggles = {
             cpsRecommendations: {
               enabled: true,
@@ -1220,760 +888,599 @@ describe('Story Page', () => {
               enabled: true,
             },
           };
+
+          const recommendationsEndpoint =
+            'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_datalab&EngineVariant=content';
+
           fetchMock.mock(
             'http://localhost/some-cps-sty-path.json',
-            hindiPageData,
+            portuguesePageData,
           );
-          fetchMock.mock('http://localhost/hindi/mostread.json', hindiMostRead);
-          fetchMock.mock(
-            'http://localhost/hindi/india-60426858/recommendations.json',
-            hindiRecommendationsData,
-          );
+
+          fetchMock.mock(recommendationsEndpoint, portugueseRecommendationData);
+
           const { pageData } = await getInitialData({
             path: '/some-cps-sty-path',
-            service: 'hindi',
+            service: 'portuguese',
             pageType,
           });
 
           const { getAllByRole } = render(
-            <PageWithContext
-              pageData={pageData}
-              service="hindi"
-              toggles={toggles}
-            />,
+            <Page pageData={pageData} service="portuguese" toggles={toggles} />,
           );
 
-          const RecommendationsRegions = getAllByRole('region').filter(
-            item =>
-              item.getAttribute('aria-labelledby') ===
-              'recommendations-heading',
-          );
-          expect(RecommendationsRegions).toHaveLength(2);
-        });
-
-        it('should not render split recommendations when recommendations are not enabled', async () => {
-          const toggles = {
-            eventTracking: {
-              enabled: true,
-            },
-          };
-          fetchMock.mock(
-            'http://localhost/some-cps-sty-path.json',
-            hindiPageData,
-          );
-          fetchMock.mock('http://localhost/hindi/mostread.json', hindiMostRead);
-          fetchMock.mock(
-            'http://localhost/hindi/india-60426858/recommendations.json',
-            hindiRecommendationsData,
-          );
-          const { pageData } = await getInitialData({
-            path: '/some-cps-sty-path',
-            service: 'hindi',
-            pageType,
-          });
-
-          const { getAllByRole } = render(
-            <PageWithContext
-              pageData={pageData}
-              service="hindi"
-              toggles={toggles}
-            />,
-          );
-
-          const RecommendationsRegions = getAllByRole('region').filter(
+          const [recommendationsRegions] = getAllByRole('region').filter(
             item =>
               item.getAttribute('aria-labelledby') ===
               'recommendations-heading',
           );
 
-          expect(RecommendationsRegions).toHaveLength(0);
-        });
+          const recommendationsItems = within(
+            recommendationsRegions,
+          ).getAllByRole('listitem');
 
-        it('should not render split recommendations when variation is not variation_1', async () => {
-          optimizelyExperimentSpy.mockImplementation(props => {
-            const { children } = props;
-
-            const variation = 'control';
-
-            if (children != null && typeof children === 'function') {
-              return <>{children(variation, true, false)}</>;
-            }
-
-            return null;
-          });
-          const toggles = {
-            cpsRecommendations: {
-              enabled: true,
-            },
-            eventTracking: {
-              enabled: true,
-            },
-          };
-          fetchMock.mock(
-            'http://localhost/some-cps-sty-path.json',
-            hindiPageData,
-          );
-          fetchMock.mock('http://localhost/hindi/mostread.json', hindiMostRead);
-          fetchMock.mock(
-            'http://localhost/hindi/india-60426858/recommendations.json',
-            hindiRecommendationsData,
-          );
-          const { pageData } = await getInitialData({
-            path: '/some-cps-sty-path',
-            service: 'hindi',
-            pageType,
-          });
-
-          const { getAllByRole } = render(
-            <PageWithContext
-              pageData={pageData}
-              service="hindi"
-              toggles={toggles}
-            />,
-          );
-
-          const RecommendationsRegions = getAllByRole('region').filter(
-            item =>
-              item.getAttribute('aria-labelledby') ===
-              'recommendations-heading',
-          );
-
-          expect(RecommendationsRegions).toHaveLength(1);
-        });
-
-        describe('Event Tracking', () => {
-          beforeEach(() => {
-            jest.useFakeTimers();
-            jest.resetModules();
-          });
-
-          afterEach(() => {
-            jest.useRealTimers();
-            jest.clearAllMocks();
-          });
-
-          // These tests override the default timeout as they fail sometimes when timeout is on default (5000)
-          describe('View Tracking', () => {
-            it('should send one view event to ATI and Optimizely when either block is viewed', async () => {
-              const expectedViewEvent = [
-                [
-                  {
-                    advertiserID: undefined,
-                    campaignID: 'article-sty',
-                    componentName: 'wsoj',
-                    format: undefined,
-                    pageIdentifier: 'india::hindi.india.story.60426858.page',
-                    platform: 'canonical',
-                    producerId: '52',
-                    service: 'hindi',
-                    statsDestination: 'WS_NEWS_LANGUAGES_TEST',
-                    type: 'view',
-                    url: undefined,
-                  },
-                ],
-              ];
-              const toggles = {
-                cpsRecommendations: {
-                  enabled: true,
-                },
-                eventTracking: {
-                  enabled: true,
-                },
-              };
-              fetchMock.mock(
-                'http://localhost/some-cps-sty-path.json',
-                hindiPageData,
-              );
-              fetchMock.mock(
-                'http://localhost/hindi/mostread.json',
-                hindiMostRead,
-              );
-              fetchMock.mock(
-                'http://localhost/hindi/india-60426858/recommendations.json',
-                hindiRecommendationsData,
-              );
-              const { pageData } = await getInitialData({
-                path: '/some-cps-sty-path',
-                service: 'hindi',
-                pageType,
-              });
-
-              render(
-                <PageWithContext
-                  pageData={pageData}
-                  service="hindi"
-                  toggles={toggles}
-                />,
-              );
-
-              await waitFor(
-                () => {
-                  const wsojViewCalls = sendEventBeacon.mock.calls.filter(
-                    ([{ componentName }]) => componentName === 'wsoj',
-                  );
-                  expect(wsojViewCalls.length).toBe(1);
-                  expect(wsojViewCalls).toEqual(expectedViewEvent);
-                  expect(optimizely.track).toHaveBeenCalledTimes(1);
-                  expect(optimizely.track).toBeCalledWith(
-                    'component_views',
-                    undefined,
-                    { viewed_wsoj: true },
-                  );
-                },
-                { timeout: 2000 },
-              );
-            }, 10000);
-
-            it('should send one view event to ATI and Optimizely when there is only one block on the page and it is viewed', async () => {
-              const expectedViewEvent = [
-                [
-                  {
-                    advertiserID: undefined,
-                    campaignID: 'article-sty',
-                    componentName: 'wsoj',
-                    format: undefined,
-                    pageIdentifier: 'india::hindi.india.story.60426858.page',
-                    platform: 'canonical',
-                    producerId: '52',
-                    service: 'hindi',
-                    statsDestination: 'WS_NEWS_LANGUAGES_TEST',
-                    type: 'view',
-                    url: undefined,
-                  },
-                ],
-              ];
-              const toggles = {
-                cpsRecommendations: {
-                  enabled: true,
-                },
-                eventTracking: {
-                  enabled: true,
-                },
-              };
-              fetchMock.mock(
-                'http://localhost/some-cps-sty-path.json',
-                hindiPageData,
-              );
-              fetchMock.mock(
-                'http://localhost/hindi/mostread.json',
-                hindiMostRead,
-              );
-              fetchMock.mock(
-                'http://localhost/hindi/india-60426858/recommendations.json',
-                hindiRecommendationsData.slice(0, 2),
-              );
-              const { pageData } = await getInitialData({
-                path: '/some-cps-sty-path',
-                service: 'hindi',
-                pageType,
-              });
-
-              render(
-                <PageWithContext
-                  pageData={pageData}
-                  service="hindi"
-                  toggles={toggles}
-                />,
-              );
-
-              await waitFor(
-                () => {
-                  const wsojViewCalls = sendEventBeacon.mock.calls.filter(
-                    ([{ componentName }]) => componentName === 'wsoj',
-                  );
-
-                  expect(wsojViewCalls.length).toBe(1);
-                  expect(wsojViewCalls).toEqual(expectedViewEvent);
-                  expect(optimizely.track).toHaveBeenCalledTimes(1);
-                  expect(optimizely.track).toBeCalledWith(
-                    'component_views',
-                    undefined,
-                    { viewed_wsoj: true },
-                  );
-                },
-                { timeout: 2000 },
-              );
-            }, 10000);
-
-            it('should not send view events to ATI and Optimizely when there are no recommendations on the page', async () => {
-              const toggles = {
-                eventTracking: {
-                  enabled: true,
-                },
-              };
-              fetchMock.mock(
-                'http://localhost/some-cps-sty-path.json',
-                hindiPageData,
-              );
-              fetchMock.mock(
-                'http://localhost/hindi/mostread.json',
-                hindiMostRead,
-              );
-              const { pageData } = await getInitialData({
-                path: '/some-cps-sty-path',
-                service: 'hindi',
-                pageType,
-              });
-
-              render(
-                <PageWithContext
-                  pageData={pageData}
-                  service="hindi"
-                  toggles={toggles}
-                />,
-              );
-
-              await waitFor(
-                () => {
-                  const wsojViewCalls = sendEventBeacon.mock.calls.filter(
-                    ([{ componentName }]) => componentName === 'wsoj',
-                  );
-                  expect(wsojViewCalls.length).toBe(0);
-                  expect(optimizely.track).toHaveBeenCalledTimes(0);
-                },
-                { timeout: 2000 },
-              );
-            }, 10000);
-
-            it('should not send view events when eventTracking is not enabled', async () => {
-              const toggles = {
-                cpsRecommendations: {
-                  enabled: true,
-                },
-              };
-              fetchMock.mock(
-                'http://localhost/some-cps-sty-path.json',
-                hindiPageData,
-              );
-              fetchMock.mock(
-                'http://localhost/hindi/mostread.json',
-                hindiMostRead,
-              );
-              const { pageData } = await getInitialData({
-                path: '/some-cps-sty-path',
-                service: 'hindi',
-                pageType,
-              });
-
-              render(
-                <PageWithContext
-                  pageData={pageData}
-                  service="hindi"
-                  toggles={toggles}
-                />,
-              );
-
-              await waitFor(
-                () => {
-                  const wsojViewCalls = sendEventBeacon.mock.calls.filter(
-                    ([{ componentName }]) => componentName === 'wsoj',
-                  );
-                  expect(wsojViewCalls.length).toBe(0);
-                  expect(optimizely.track).toHaveBeenCalledTimes(0);
-                },
-                { timeout: 2000 },
-              );
-            });
-          });
-
-          describe('Click Tracking', () => {
-            it('should send a click event to ATI and Optimizely when page has two blocks and a link in the first block is clicked', async () => {
-              const expectedATIClickEvents = [
-                [
-                  {
-                    advertiserID: undefined,
-                    campaignID: 'article-sty',
-                    componentName: 'wsoj',
-                    format: undefined,
-                    pageIdentifier: 'india::hindi.india.story.60426858.page',
-                    platform: 'canonical',
-                    producerId: '52',
-                    service: 'hindi',
-                    statsDestination: 'WS_NEWS_LANGUAGES_TEST',
-                    type: 'click',
-                    url: undefined,
-                  },
-                ],
-                [
-                  {
-                    advertiserID: 'hindi',
-                    campaignID: 'cps_wsoj',
-                    componentName:
-                      '%E0%A4%95%E0%A5%8B%E0%A4%B5%E0%A4%BF%E0%A4%A1-19%20%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%80%E0%A4%83%20%E0%A4%A4%E0%A5%8B%20%E0%A4%B8%E0%A4%AC%E0%A4%B8%E0%A5%87%20%E0%A4%9C%E0%A4%BC%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%A6%E0%A4%BE%20%E0%A4%AE%E0%A5%8C%E0%A4%A4%E0%A5%8B%E0%A4%82%20%E0%A4%95%E0%A5%80%20%E0%A4%B5%E0%A4%9C%E0%A4%B9%20%E0%A4%B5%E0%A4%BE%E0%A4%AF%E0%A4%B0%E0%A4%B8%20%E0%A4%A8%E0%A4%B9%E0%A5%80%E0%A4%82%20%E0%A4%B9%E0%A5%8B%E0%A4%97%E0%A4%BE',
-                    format: 'CHD=promo::1',
-                    pageIdentifier: 'india::hindi.india.story.60426858.page',
-                    platform: 'canonical',
-                    producerId: '52',
-                    service: 'hindi',
-                    statsDestination: 'WS_NEWS_LANGUAGES_TEST',
-                    type: 'click',
-                    url: 'undefined/hindi/vert-fut-53035307',
-                  },
-                ],
-              ];
-              const toggles = {
-                cpsRecommendations: {
-                  enabled: true,
-                },
-                eventTracking: {
-                  enabled: true,
-                },
-              };
-              fetchMock.mock(
-                'http://localhost/some-cps-sty-path.json',
-                hindiPageData,
-              );
-              fetchMock.mock(
-                'http://localhost/hindi/mostread.json',
-                hindiMostRead,
-              );
-              fetchMock.mock(
-                'http://localhost/hindi/india-60426858/recommendations.json',
-                hindiRecommendationsData,
-              );
-              const { pageData } = await getInitialData({
-                path: '/some-cps-sty-path',
-                service: 'hindi',
-                pageType,
-              });
-
-              const { getByText } = render(
-                <PageWithContext
-                  pageData={pageData}
-                  service="hindi"
-                  toggles={toggles}
-                />,
-              );
-
-              const firstBlockRecommendationLink = getByText(
-                'कोविड-19 महामारीः तो सबसे ज़्यादा मौतों की वजह वायरस नहीं होगा',
-              );
-              userEvent.click(firstBlockRecommendationLink);
-              await waitFor(
-                () => {
-                  const wsojClickCalls = sendEventBeacon.mock.calls.filter(
-                    ([{ type }]) => type === 'click',
-                  );
-                  expect(wsojClickCalls.length).toBe(2);
-                  expect(wsojClickCalls).toEqual(expectedATIClickEvents);
-                  const optimizelyClickCalls =
-                    optimizely.track.mock.calls.filter(
-                      ([eventName]) => eventName === 'component_clicks',
-                    );
-                  expect(optimizelyClickCalls.length).toBe(1);
-                  expect(optimizelyClickCalls[0]).toEqual([
-                    'component_clicks',
-                    undefined,
-                    { clicked_wsoj: true },
-                  ]);
-                },
-                { timeout: 2000 },
-              );
-            }, 10000);
-
-            it('should send a click event to ATI and Optimizely when a link is clicked in the second block is clicked', async () => {
-              const expectedATIClickEvents = [
-                [
-                  {
-                    advertiserID: undefined,
-                    campaignID: 'article-sty',
-                    componentName: 'wsoj',
-                    format: undefined,
-                    pageIdentifier: 'india::hindi.india.story.60426858.page',
-                    platform: 'canonical',
-                    producerId: '52',
-                    service: 'hindi',
-                    statsDestination: 'WS_NEWS_LANGUAGES_TEST',
-                    type: 'click',
-                    url: undefined,
-                  },
-                ],
-                [
-                  {
-                    advertiserID: 'hindi',
-                    campaignID: 'cps_wsoj',
-                    componentName:
-                      '%E0%A4%95%E0%A5%8B%E0%A4%B5%E0%A4%BF%E0%A4%A1-19%20%E0%A4%95%E0%A5%87%20%E0%A4%AC%E0%A4%BE%E0%A4%A6%20%E0%A4%B9%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%80%20%E0%A4%AF%E0%A4%BE%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%8F%E0%A4%82%20%E0%A4%95%E0%A5%88%E0%A4%B8%E0%A5%80%20%E0%A4%B9%E0%A5%8B%E0%A4%82%E0%A4%97%E0%A5%80%3F',
-                    format: 'CHD=promo::1',
-                    pageIdentifier: 'india::hindi.india.story.60426858.page',
-                    platform: 'canonical',
-                    producerId: '52',
-                    service: 'hindi',
-                    statsDestination: 'WS_NEWS_LANGUAGES_TEST',
-                    type: 'click',
-                    url: 'undefined/hindi/vert-tra-52355324',
-                  },
-                ],
-              ];
-              const toggles = {
-                cpsRecommendations: {
-                  enabled: true,
-                },
-                eventTracking: {
-                  enabled: true,
-                },
-              };
-              fetchMock.mock(
-                'http://localhost/some-cps-sty-path.json',
-                hindiPageData,
-              );
-              fetchMock.mock(
-                'http://localhost/hindi/mostread.json',
-                hindiMostRead,
-              );
-              fetchMock.mock(
-                'http://localhost/hindi/india-60426858/recommendations.json',
-                hindiRecommendationsData,
-              );
-              const { pageData } = await getInitialData({
-                path: '/some-cps-sty-path',
-                service: 'hindi',
-                pageType,
-              });
-
-              const { getByText } = render(
-                <PageWithContext
-                  pageData={pageData}
-                  service="hindi"
-                  toggles={toggles}
-                />,
-              );
-
-              const secondBlockRecommendationLink = getByText(
-                'कोविड-19 के बाद हमारी यात्राएं कैसी होंगी?',
-              );
-              userEvent.click(secondBlockRecommendationLink);
-              await waitFor(
-                () => {
-                  const wsojClickCalls = sendEventBeacon.mock.calls.filter(
-                    ([{ type }]) => type === 'click',
-                  );
-                  expect(wsojClickCalls.length).toBe(2);
-                  expect(wsojClickCalls).toEqual(expectedATIClickEvents);
-                  const optimizelyClickCalls =
-                    optimizely.track.mock.calls.filter(
-                      ([eventName]) => eventName === 'component_clicks',
-                    );
-                  expect(optimizelyClickCalls.length).toBe(1);
-                  expect(optimizelyClickCalls[0]).toEqual([
-                    'component_clicks',
-                    undefined,
-                    { clicked_wsoj: true },
-                  ]);
-                },
-                { timeout: 2000 },
-              );
-            }, 10000);
-
-            it('should send a click event to ATI and Optimizely when page has one block and a link in the block is clicked', async () => {
-              const expectedATIClickEvents = [
-                [
-                  {
-                    advertiserID: undefined,
-                    campaignID: 'article-sty',
-                    componentName: 'wsoj',
-                    format: undefined,
-                    pageIdentifier: 'india::hindi.india.story.60426858.page',
-                    platform: 'canonical',
-                    producerId: '52',
-                    service: 'hindi',
-                    statsDestination: 'WS_NEWS_LANGUAGES_TEST',
-                    type: 'click',
-                    url: undefined,
-                  },
-                ],
-                [
-                  {
-                    advertiserID: 'hindi',
-                    campaignID: 'cps_wsoj',
-                    componentName:
-                      '%E0%A4%95%E0%A5%8B%E0%A4%B5%E0%A4%BF%E0%A4%A1-19%20%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%80%E0%A4%83%20%E0%A4%A4%E0%A5%8B%20%E0%A4%B8%E0%A4%AC%E0%A4%B8%E0%A5%87%20%E0%A4%9C%E0%A4%BC%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%A6%E0%A4%BE%20%E0%A4%AE%E0%A5%8C%E0%A4%A4%E0%A5%8B%E0%A4%82%20%E0%A4%95%E0%A5%80%20%E0%A4%B5%E0%A4%9C%E0%A4%B9%20%E0%A4%B5%E0%A4%BE%E0%A4%AF%E0%A4%B0%E0%A4%B8%20%E0%A4%A8%E0%A4%B9%E0%A5%80%E0%A4%82%20%E0%A4%B9%E0%A5%8B%E0%A4%97%E0%A4%BE',
-                    format: 'CHD=promo::1',
-                    pageIdentifier: 'india::hindi.india.story.60426858.page',
-                    platform: 'canonical',
-                    producerId: '52',
-                    service: 'hindi',
-                    statsDestination: 'WS_NEWS_LANGUAGES_TEST',
-                    type: 'click',
-                    url: 'undefined/hindi/vert-fut-53035307',
-                  },
-                ],
-              ];
-              const toggles = {
-                cpsRecommendations: {
-                  enabled: true,
-                },
-                eventTracking: {
-                  enabled: true,
-                },
-              };
-              fetchMock.mock(
-                'http://localhost/some-cps-sty-path.json',
-                hindiPageData,
-              );
-              fetchMock.mock(
-                'http://localhost/hindi/mostread.json',
-                hindiMostRead,
-              );
-              fetchMock.mock(
-                'http://localhost/hindi/india-60426858/recommendations.json',
-                hindiRecommendationsData.slice(0, 2),
-              );
-              const { pageData } = await getInitialData({
-                path: '/some-cps-sty-path',
-                service: 'hindi',
-                pageType,
-              });
-
-              const { getByText } = render(
-                <PageWithContext
-                  pageData={pageData}
-                  service="hindi"
-                  toggles={toggles}
-                />,
-              );
-
-              const firstBlockRecommendationLink = getByText(
-                'कोविड-19 महामारीः तो सबसे ज़्यादा मौतों की वजह वायरस नहीं होगा',
-              );
-              userEvent.click(firstBlockRecommendationLink);
-              await waitFor(
-                () => {
-                  const wsojClickCalls = sendEventBeacon.mock.calls.filter(
-                    ([{ type }]) => type === 'click',
-                  );
-                  expect(wsojClickCalls.length).toBe(2);
-                  expect(wsojClickCalls).toEqual(expectedATIClickEvents);
-                  const optimizelyClickCalls =
-                    optimizely.track.mock.calls.filter(
-                      ([eventName]) => eventName === 'component_clicks',
-                    );
-                  expect(optimizelyClickCalls.length).toBe(1);
-                  expect(optimizelyClickCalls[0]).toEqual([
-                    'component_clicks',
-                    undefined,
-                    { clicked_wsoj: true },
-                  ]);
-                },
-                { timeout: 2000 },
-              );
-            }, 10000);
-
-            it('should not send a click event to ATI or Optimizely when no link has been clicked', async () => {
-              const toggles = {
-                cpsRecommendations: {
-                  enabled: true,
-                },
-                eventTracking: {
-                  enabled: true,
-                },
-              };
-              fetchMock.mock(
-                'http://localhost/some-cps-sty-path.json',
-                hindiPageData,
-              );
-              fetchMock.mock(
-                'http://localhost/hindi/mostread.json',
-                hindiMostRead,
-              );
-              fetchMock.mock(
-                'http://localhost/hindi/india-60426858/recommendations.json',
-                hindiRecommendationsData.slice(0, 2),
-              );
-              const { pageData } = await getInitialData({
-                path: '/some-cps-sty-path',
-                service: 'hindi',
-                pageType,
-              });
-
-              render(
-                <PageWithContext
-                  pageData={pageData}
-                  service="hindi"
-                  toggles={toggles}
-                />,
-              );
-
-              await waitFor(
-                () => {
-                  const wsojClickCalls = sendEventBeacon.mock.calls.filter(
-                    ([{ type }]) => type === 'click',
-                  );
-                  expect(wsojClickCalls.length).toBe(0);
-                  const optimizelyClickCalls =
-                    optimizely.track.mock.calls.filter(
-                      ([eventName]) => eventName === 'component_clicks',
-                    );
-                  expect(optimizelyClickCalls.length).toBe(0);
-                },
-                { timeout: 2000 },
-              );
-            });
-
-            it('should not send a click events when eventTracking is not enabled', async () => {
-              const toggles = {
-                cpsRecommendations: {
-                  enabled: true,
-                },
-              };
-              fetchMock.mock(
-                'http://localhost/some-cps-sty-path.json',
-                hindiPageData,
-              );
-              fetchMock.mock(
-                'http://localhost/hindi/mostread.json',
-                hindiMostRead,
-              );
-              fetchMock.mock(
-                'http://localhost/hindi/india-60426858/recommendations.json',
-                hindiRecommendationsData,
-              );
-              const { pageData } = await getInitialData({
-                path: '/some-cps-sty-path',
-                service: 'hindi',
-                pageType,
-              });
-
-              const { getByText } = render(
-                <PageWithContext
-                  pageData={pageData}
-                  service="hindi"
-                  toggles={toggles}
-                />,
-              );
-
-              const firstBlockRecommendationLink = getByText(
-                'कोविड-19 महामारीः तो सबसे ज़्यादा मौतों की वजह वायरस नहीं होगा',
-              );
-              userEvent.click(firstBlockRecommendationLink);
-              await waitFor(
-                () => {
-                  const wsojClickCalls = sendEventBeacon.mock.calls.filter(
-                    ([{ type }]) => type === 'click',
-                  );
-                  expect(wsojClickCalls.length).toBe(0);
-                  const optimizelyClickCalls =
-                    optimizely.track.mock.calls.filter(
-                      ([eventName]) => eventName === 'component_clicks',
-                    );
-                  expect(optimizelyClickCalls.length).toBe(0);
-                },
-                { timeout: 2000 },
-              );
-            });
-          });
+          expect(fetchMock.calls()[1][0]).toBe(recommendationsEndpoint);
+          expect(recommendationsRegions).not.toBeNull();
+          expect(recommendationsItems).toHaveLength(4);
         });
       });
-    });
-  });
-});
 
-describe.skip('Optimizely Experiments', () => {
-  describe('003_hindi_experiment_feature', () => {
-    describe('variation_3', () => {
-      const forceMockVariation = variation =>
-        optimizelyExperimentSpy.mockImplementation(props => {
+      describe('hybrid_recs', () => {
+        beforeEach(() => {
+          process.env.RECOMMENDATIONS_ENDPOINT =
+            'http://mock-recommendations-path';
+          OptimizelyExperiment.mockImplementation(props => {
+            const { children } = props;
+
+            const variation = 'hybrid_recs';
+
+            if (children != null && typeof children === 'function') {
+              return <>{children(variation, true, false)}</>;
+            }
+
+            return null;
+          });
+        });
+
+        afterEach(() => {
+          delete process.env.RECOMMENDATIONS_ENDPOINT;
+        });
+
+        it('should fetch and render recommendations from datalab hybrid variant endpoint when variation is hybrid_recs and service is portuguese', async () => {
+          const toggles = {
+            cpsRecommendations: {
+              enabled: true,
+            },
+            eventTracking: {
+              enabled: true,
+            },
+          };
+
+          const recommendationsEndpoint =
+            'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_datalab&EngineVariant=hybrid';
+
+          fetchMock.mock(
+            'http://localhost/some-cps-sty-path.json',
+            portuguesePageData,
+          );
+
+          fetchMock.mock(recommendationsEndpoint, portugueseRecommendationData);
+
+          const { pageData } = await getInitialData({
+            path: '/some-cps-sty-path',
+            service: 'portuguese',
+            pageType,
+          });
+
+          const { getAllByRole } = render(
+            <Page pageData={pageData} service="portuguese" toggles={toggles} />,
+          );
+
+          const [recommendationsRegions] = getAllByRole('region').filter(
+            item =>
+              item.getAttribute('aria-labelledby') ===
+              'recommendations-heading',
+          );
+
+          const recommendationsItems = within(
+            recommendationsRegions,
+          ).getAllByRole('listitem');
+
+          expect(fetchMock.calls()[1][0]).toBe(recommendationsEndpoint);
+          expect(recommendationsRegions).not.toBeNull();
+          expect(recommendationsItems).toHaveLength(4);
+        });
+      });
+
+      describe('Event Tracking', () => {
+        beforeEach(() => {
+          process.env.RECOMMENDATIONS_ENDPOINT =
+            'http://mock-recommendations-path';
+        });
+
+        afterEach(() => {
+          delete process.env.RECOMMENDATIONS_ENDPOINT;
+        });
+
+        describe('View Tracking', () => {
+          it('should send ATI and Optimizely view tracking event when recommendations render', async () => {
+            const toggles = {
+              cpsRecommendations: {
+                enabled: true,
+              },
+              eventTracking: {
+                enabled: true,
+              },
+            };
+            fetchMock.mock(
+              'http://localhost/some-cps-sty-path.json',
+              portuguesePageData,
+            );
+            fetchMock.mock(
+              'http://localhost/portuguese/mostread.json',
+              portugueseMostReadData,
+            );
+            fetchMock.mock(
+              'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_camino',
+              portugueseRecommendationData,
+            );
+            const { pageData } = await getInitialData({
+              path: '/some-cps-sty-path',
+              service: 'portuguese',
+              pageType,
+            });
+
+            render(
+              <PageWithContext
+                pageData={pageData}
+                service="portuguese"
+                toggles={toggles}
+              />,
+            );
+
+            await waitFor(
+              () => {
+                const wsojViewCalls = sendEventBeacon.mock.calls.filter(
+                  ([{ campaignID, componentName }]) =>
+                    componentName === 'wsoj' || campaignID.includes('cps_wsoj'),
+                );
+
+                expect(wsojViewCalls.length).toBe(5);
+                expect(optimizely.track).toHaveBeenCalledTimes(1);
+                expect(optimizely.track).toBeCalledWith(
+                  'component_views',
+                  undefined,
+                  { viewed_wsoj: true },
+                );
+              },
+              { timeout: 2000 },
+            );
+          }, 10000);
+
+          it('should not send ATI or Optimizely view tracking event when event tracking is not enabled', async () => {
+            const toggles = {
+              cpsRecommendations: {
+                enabled: true,
+              },
+            };
+            fetchMock.mock(
+              'http://localhost/some-cps-sty-path.json',
+              portuguesePageData,
+            );
+            fetchMock.mock(
+              'http://localhost/portuguese/mostread.json',
+              portugueseMostReadData,
+            );
+            fetchMock.mock(
+              'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_camino',
+              portugueseRecommendationData,
+            );
+            const { pageData } = await getInitialData({
+              path: '/some-cps-sty-path',
+              service: 'hindi',
+              pageType,
+            });
+
+            render(
+              <PageWithContext
+                pageData={pageData}
+                service="hindi"
+                toggles={toggles}
+              />,
+            );
+
+            await waitFor(
+              () => {
+                const wsojViewCalls = sendEventBeacon.mock.calls.filter(
+                  ([{ campaignID, componentName }]) =>
+                    campaignID.includes('cps_wsoj') || componentName === 'wsoj',
+                );
+                expect(wsojViewCalls.length).toBe(0);
+                expect(optimizely.track).toHaveBeenCalledTimes(0);
+              },
+              { timeout: 2000 },
+            );
+          }, 10000);
+
+          it('should not send Optimizely view tracking event when service is not portuguese', async () => {
+            const toggles = {
+              cpsRecommendations: {
+                enabled: true,
+              },
+              eventTracking: {
+                enabled: true,
+              },
+            };
+            fetchMock.mock(
+              'http://localhost/some-cps-sty-path.json',
+              mundoPageData,
+            );
+            fetchMock.mock(
+              'http://mock-recommendations-path/recommendations/mundo/noticias-56669604?Engine=unirecs_datalab',
+              mundoRecommendationsData,
+            );
+            const { pageData } = await getInitialData({
+              path: '/some-cps-sty-path',
+              service: 'mundo',
+              pageType,
+            });
+
+            render(
+              <PageWithContext
+                pageData={pageData}
+                service="mundo"
+                toggles={toggles}
+              />,
+            );
+
+            await waitFor(
+              () => {
+                const wsojViewCalls = sendEventBeacon.mock.calls.filter(
+                  ([{ campaignID, componentName }]) =>
+                    campaignID.includes('cps_wsoj') || componentName === 'wsoj',
+                );
+                expect(wsojViewCalls.length).toBe(5);
+                expect(optimizely.track).toHaveBeenCalledTimes(0);
+              },
+              { timeout: 2000 },
+            );
+          }, 10000);
+
+          it('should send only ATI view tracking event when service is not portuguese', async () => {
+            const toggles = {
+              cpsRecommendations: {
+                enabled: true,
+              },
+              eventTracking: {
+                enabled: true,
+              },
+            };
+            fetchMock.mock(
+              'http://localhost/some-cps-sty-path.json',
+              mundoPageData,
+            );
+            fetchMock.mock(
+              'http://mock-recommendations-path/recommendations/mundo/noticias-56669604?Engine=unirecs_datalab',
+              mundoRecommendationsData,
+            );
+            const { pageData } = await getInitialData({
+              path: '/some-cps-sty-path',
+              service: 'mundo',
+              pageType,
+            });
+
+            render(
+              <PageWithContext
+                pageData={pageData}
+                service="mundo"
+                toggles={toggles}
+              />,
+            );
+
+            await waitFor(
+              () => {
+                const wsojViewCalls = sendEventBeacon.mock.calls.filter(
+                  ([{ campaignID, componentName }]) =>
+                    campaignID.includes('wsoj') || componentName === 'wsoj',
+                );
+                expect(wsojViewCalls.length).toBe(5);
+                expect(optimizely.track).toHaveBeenCalledTimes(0);
+              },
+              { timeout: 2000 },
+            );
+          }, 10000);
+        });
+
+        describe('Click Tracking', () => {
+          it('should send a click event to ATI and Optimizely when a link in the block is clicked', async () => {
+            const expectedATIClickEvents = [
+              [
+                {
+                  advertiserID: undefined,
+                  campaignID: 'article-sty',
+                  componentName: 'wsoj',
+                  format: undefined,
+                  pageIdentifier:
+                    'brasil::portuguese.brasil.story.54196636.page',
+                  platform: 'canonical',
+                  producerId: '33',
+                  service: 'portuguese',
+                  statsDestination: 'WS_NEWS_LANGUAGES_TEST',
+                  type: 'click',
+                  url: undefined,
+                },
+              ],
+              [
+                {
+                  advertiserID: 'portuguese',
+                  campaignID: 'cps_wsoj',
+                  componentName:
+                    'PL%20das%20fake%20news%20pode%20acirrar%20polariza%C3%A7%C3%A3o%20pol%C3%ADtica%2C%20diz%20pesquisador',
+                  format: 'CHD=promo::1',
+                  pageIdentifier:
+                    'brasil::portuguese.brasil.story.54196636.page',
+                  platform: 'canonical',
+                  producerId: '33',
+                  service: 'portuguese',
+                  statsDestination: 'WS_NEWS_LANGUAGES_TEST',
+                  type: 'click',
+                  url: 'undefined/portuguese/brasil-53418555',
+                },
+              ],
+            ];
+            const toggles = {
+              cpsRecommendations: {
+                enabled: true,
+              },
+              eventTracking: {
+                enabled: true,
+              },
+            };
+            fetchMock.mock(
+              'http://localhost/some-cps-sty-path.json',
+              portuguesePageData,
+            );
+            fetchMock.mock(
+              'http://localhost/portuguese/mostread.json',
+              portugueseMostReadData,
+            );
+            fetchMock.mock(
+              'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_camino',
+              portugueseRecommendationData,
+            );
+            const { pageData } = await getInitialData({
+              path: '/some-cps-sty-path',
+              service: 'portuguese',
+              pageType,
+            });
+
+            const { getByText } = render(
+              <PageWithContext
+                pageData={pageData}
+                service="portuguese"
+                toggles={toggles}
+              />,
+            );
+
+            const blockRecommendationLink = getByText(
+              'PL das fake news pode acirrar polarização política, diz pesquisador',
+            );
+            userEvent.click(blockRecommendationLink);
+            await waitFor(
+              () => {
+                const wsojClickCalls = sendEventBeacon.mock.calls.filter(
+                  ([{ type }]) => type === 'click',
+                );
+                expect(wsojClickCalls.length).toBe(2);
+                expect(wsojClickCalls).toEqual(expectedATIClickEvents);
+                const optimizelyClickCalls = optimizely.track.mock.calls.filter(
+                  ([eventName]) => eventName === 'component_clicks',
+                );
+                expect(optimizelyClickCalls.length).toBe(1);
+                expect(optimizelyClickCalls[0]).toEqual([
+                  'component_clicks',
+                  undefined,
+                  { clicked_wsoj: true },
+                ]);
+              },
+              { timeout: 2000 },
+            );
+          }, 10000);
+
+          it('should not send a click event to ATI or Optimizely when no link has been clicked', async () => {
+            const toggles = {
+              cpsRecommendations: {
+                enabled: true,
+              },
+              eventTracking: {
+                enabled: true,
+              },
+            };
+            fetchMock.mock(
+              'http://localhost/some-cps-sty-path.json',
+              portuguesePageData,
+            );
+            fetchMock.mock(
+              'http://localhost/portuguese/mostread.json',
+              portugueseMostReadData,
+            );
+            fetchMock.mock(
+              'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_camino',
+              portugueseRecommendationData,
+            );
+            const { pageData } = await getInitialData({
+              path: '/some-cps-sty-path',
+              service: 'portuguese',
+              pageType,
+            });
+
+            render(
+              <PageWithContext
+                pageData={pageData}
+                service="portuguese"
+                toggles={toggles}
+              />,
+            );
+
+            await waitFor(
+              () => {
+                const wsojClickCalls = sendEventBeacon.mock.calls.filter(
+                  ([{ type }]) => type === 'click',
+                );
+                expect(wsojClickCalls.length).toBe(0);
+                const optimizelyClickCalls = optimizely.track.mock.calls.filter(
+                  ([eventName]) => eventName === 'component_clicks',
+                );
+                expect(optimizelyClickCalls.length).toBe(0);
+              },
+              { timeout: 2000 },
+            );
+          });
+
+          it('should not send a click event when eventTracking is not enabled', async () => {
+            const toggles = {
+              cpsRecommendations: {
+                enabled: true,
+              },
+            };
+            fetchMock.mock(
+              'http://localhost/some-cps-sty-path.json',
+              portuguesePageData,
+            );
+            fetchMock.mock(
+              'http://localhost/portuguese/mostread.json',
+              portugueseMostReadData,
+            );
+            fetchMock.mock(
+              'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_camino',
+              portugueseRecommendationData,
+            );
+            const { pageData } = await getInitialData({
+              path: '/some-cps-sty-path',
+              service: 'portuguese',
+              pageType,
+            });
+
+            const { getByText } = render(
+              <PageWithContext
+                pageData={pageData}
+                service="hindi"
+                toggles={toggles}
+              />,
+            );
+
+            const blockRecommendationLink = getByText(
+              'PL das fake news pode acirrar polarização política, diz pesquisador',
+            );
+            userEvent.click(blockRecommendationLink);
+            await waitFor(
+              () => {
+                const wsojClickCalls = sendEventBeacon.mock.calls.filter(
+                  ([{ type }]) => type === 'click',
+                );
+                expect(wsojClickCalls.length).toBe(0);
+                const optimizelyClickCalls = optimizely.track.mock.calls.filter(
+                  ([eventName]) => eventName === 'component_clicks',
+                );
+                expect(optimizelyClickCalls.length).toBe(0);
+              },
+              { timeout: 2000 },
+            );
+          });
+
+          it('should not send a click event to Optimizely when service is not portuguese', async () => {
+            const expectedATIClickEvents = [
+              [
+                {
+                  advertiserID: undefined,
+                  campaignID: 'article-sty',
+                  componentName: 'wsoj',
+                  format: undefined,
+                  pageIdentifier:
+                    'also_in_the_news::mundo.also_in_the_news.story.56669604.page',
+                  platform: 'canonical',
+                  producerId: '62',
+                  service: 'mundo',
+                  statsDestination: 'WS_NEWS_LANGUAGES_TEST',
+                  type: 'click',
+                  url: undefined,
+                },
+              ],
+              [
+                {
+                  advertiserID: 'mundo',
+                  campaignID: 'cps_wsoj',
+                  componentName:
+                    'La%20conmovedora%20historia%20de%20c%C3%B3mo%20una%20madre%20y%20el%20hombre%20preso%20por%20la%20muerte%20de%20su%20hija%20se%20unieron%20para%20atrapar%20al%20verdadero%20asesino',
+                  format: 'CHD=promo::1',
+                  pageIdentifier:
+                    'also_in_the_news::mundo.also_in_the_news.story.56669604.page',
+                  platform: 'canonical',
+                  producerId: '62',
+                  service: 'mundo',
+                  statsDestination: 'WS_NEWS_LANGUAGES_TEST',
+                  type: 'click',
+                  url: 'undefined/mundo/noticias-53377054',
+                },
+              ],
+            ];
+            const toggles = {
+              cpsRecommendations: {
+                enabled: true,
+              },
+              eventTracking: {
+                enabled: true,
+              },
+            };
+            fetchMock.mock(
+              'http://localhost/some-cps-sty-path.json',
+              mundoPageData,
+            );
+            fetchMock.mock(
+              'http://mock-recommendations-path/recommendations/mundo/noticias-56669604?Engine=unirecs_datalab',
+              mundoRecommendationsData,
+            );
+            const { pageData } = await getInitialData({
+              path: '/some-cps-sty-path',
+              service: 'mundo',
+              pageType,
+            });
+
+            const { getByText } = render(
+              <PageWithContext
+                pageData={pageData}
+                service="mundo"
+                toggles={toggles}
+              />,
+            );
+
+            const blockRecommendationLink = getByText(
+              'La conmovedora historia de cómo una madre y el hombre preso por la muerte de su hija se unieron para atrapar al verdadero asesino',
+            );
+            userEvent.click(blockRecommendationLink);
+            await waitFor(
+              () => {
+                const wsojClickCalls = sendEventBeacon.mock.calls.filter(
+                  ([{ type }]) => type === 'click',
+                );
+                expect(wsojClickCalls.length).toBe(2);
+                expect(wsojClickCalls).toEqual(expectedATIClickEvents);
+                const optimizelyClickCalls = optimizely.track.mock.calls.filter(
+                  ([eventName]) => eventName === 'component_clicks',
+                );
+                expect(optimizelyClickCalls.length).toBe(0);
+              },
+              { timeout: 2000 },
+            );
+          }, 10000);
+        });
+      });
+
+      it('should fetch and render recommendations from current endpoint when variation is null and service is not portuguese', async () => {
+        OptimizelyExperiment.mockImplementation(props => {
           const { children } = props;
+
+          const variation = null;
 
           if (children != null && typeof children === 'function') {
             return <>{children(variation, true, false)}</>;
@@ -1982,80 +1489,139 @@ describe.skip('Optimizely Experiments', () => {
           return null;
         });
 
-      afterAll(() => {
-        jest.restoreAllMocks();
-      });
+        const toggles = {
+          cpsRecommendations: {
+            enabled: true,
+          },
+          eventTracking: {
+            enabled: true,
+          },
+        };
 
-      it('should render EOJ variation when showForVariation has variation_3 value ', async () => {
-        forceMockVariation('variation_3');
+        const recommendationsEndpoint =
+          'http://mock-recommendations-path/recommendations/mundo/noticias-56669604?Engine=unirecs_datalab';
+
         fetchMock.mock(
           'http://localhost/some-cps-sty-path.json',
-          hindiPageData,
+          mundoPageData,
         );
-        fetchMock.mock('http://localhost/hindi/mostread.json', hindiMostRead);
-        fetchMock.mock(
-          'http://localhost/hindi/india-60426858/recommendations.json',
-          hindiRecommendationsData,
-        );
+
+        fetchMock.mock(recommendationsEndpoint, mundoRecommendationsData);
+
         const { pageData } = await getInitialData({
           path: '/some-cps-sty-path',
-          service: 'hindi',
-          pageType,
-        });
-
-        const { getAllByRole, getByText } = render(
-          <PageWithContext pageData={pageData} service="hindi" />,
-        );
-
-        const [eojRecommendations] = getAllByRole('region').filter(
-          item =>
-            item.getAttribute('aria-labelledby') ===
-            'eoj-recommendations-heading',
-        );
-
-        expect(eojRecommendations).toBeInTheDocument();
-
-        expect(
-          getByText(
-            'कोविड-19 महामारीः तो सबसे ज़्यादा मौतों की वजह वायरस नहीं होगा',
-          ),
-        ).toBeInTheDocument();
-        expect(
-          getByText('कोरोना से मिले कौन से सबक़ हम याद रखेंगे?'),
-        ).toBeInTheDocument();
-        expect(
-          getByText('कोविड-19 के बाद हमारी यात्राएं कैसी होंगी?'),
-        ).toBeInTheDocument();
-      });
-
-      it('should not render EOJ variation when showForVariation is not variation_3 ', async () => {
-        forceMockVariation('control');
-        fetchMock.mock(
-          'http://localhost/some-cps-sty-path.json',
-          hindiPageData,
-        );
-        fetchMock.mock('http://localhost/hindi/mostread.json', hindiMostRead);
-        fetchMock.mock(
-          'http://localhost/hindi/india-60426858/recommendations.json',
-          hindiRecommendationsData,
-        );
-        const { pageData } = await getInitialData({
-          path: '/some-cps-sty-path',
-          service: 'hindi',
+          service: 'mundo',
           pageType,
         });
 
         const { getAllByRole } = render(
-          <PageWithContext pageData={pageData} service="hindi" />,
+          <Page pageData={pageData} service="mundo" toggles={toggles} />,
         );
 
-        const [eojRecommendations] = getAllByRole('region').filter(
+        const [recommendationsRegions] = getAllByRole('region').filter(
           item =>
-            item.getAttribute('aria-labelledby') ===
-            'eoj-recommendations-heading',
+            item.getAttribute('aria-labelledby') === 'recommendations-heading',
         );
 
-        expect(eojRecommendations).toBe(undefined);
+        const recommendationsItems = within(
+          recommendationsRegions,
+        ).getAllByRole('listitem');
+
+        expect(fetchMock.calls()[1][0]).toBe(recommendationsEndpoint);
+        expect(recommendationsRegions).not.toBeNull();
+        expect(recommendationsItems).toHaveLength(4);
+      });
+
+      it('should fetch and render recommendations from current endpoint when variation is null and service is portuguese', async () => {
+        OptimizelyExperiment.mockImplementation(props => {
+          const { children } = props;
+
+          const variation = null;
+
+          if (children != null && typeof children === 'function') {
+            return <>{children(variation, true, false)}</>;
+          }
+
+          return null;
+        });
+
+        const toggles = {
+          cpsRecommendations: {
+            enabled: true,
+          },
+          eventTracking: {
+            enabled: true,
+          },
+        };
+
+        const recommendationsEndpoint =
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_camino';
+
+        fetchMock.mock(
+          'http://localhost/some-cps-sty-path.json',
+          portuguesePageData,
+        );
+        fetchMock.mock(recommendationsEndpoint, portugueseRecommendationData);
+
+        const { pageData } = await getInitialData({
+          path: '/some-cps-sty-path',
+          service: 'portuguese',
+          pageType,
+        });
+
+        const { getAllByRole } = render(
+          <Page pageData={pageData} service="portuguese" toggles={toggles} />,
+        );
+
+        const [recommendationsRegions] = getAllByRole('region').filter(
+          item =>
+            item.getAttribute('aria-labelledby') === 'recommendations-heading',
+        );
+
+        const recommendationsItems = within(
+          recommendationsRegions,
+        ).getAllByRole('listitem');
+
+        expect(fetchMock.calls()[1][0]).toBe(recommendationsEndpoint);
+        expect(recommendationsRegions).not.toBeNull();
+        expect(recommendationsItems).toHaveLength(4);
+      });
+
+      it('should not return recommendations when the certificates do not exist', async () => {
+        getAgent.mockImplementation(() => {
+          throw Error('some file not found error');
+        });
+        const toggles = {
+          cpsRecommendations: {
+            enabled: true,
+          },
+        };
+
+        const recommendationsEndpoint =
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_camino';
+
+        fetchMock.mock(
+          'http://localhost/some-cps-sty-path.json',
+          portuguesePageData,
+        );
+        fetchMock.mock(recommendationsEndpoint, portugueseRecommendationData);
+
+        const { pageData } = await getInitialData({
+          path: '/some-cps-sty-path',
+          service: 'portuguese',
+          pageType,
+        });
+
+        const { getAllByRole } = render(
+          <Page pageData={pageData} service="portuguese" toggles={toggles} />,
+        );
+
+        const recommendationsRegions = getAllByRole('region').filter(
+          item =>
+            item.getAttribute('aria-labelledby') === 'recommendations-heading',
+        );
+
+        expect(recommendationsRegions).toEqual([]);
       });
     });
   });

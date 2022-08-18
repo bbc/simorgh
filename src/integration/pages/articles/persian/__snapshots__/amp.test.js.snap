@@ -139,7 +139,7 @@ Object {
 exports[`AMP Articles Footer Anchors should match text and url 7`] = `
 Object {
   "text": "تماس با بی بی سی",
-  "url": "https://www.bbc.co.uk/send/u50853555",
+  "url": "https://www.bbc.co.uk/persian/send/u50853555",
 }
 `;
 
@@ -274,6 +274,7 @@ exports[`AMP Articles Image should match snapshot 1`] = `
 <amp-img
   alt="قهوه"
   attribution="Getty Images"
+  data-hero="true"
   height="576"
   layout="responsive"
   src="https://ichef.bbci.co.uk/news/640/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg"
@@ -283,6 +284,7 @@ exports[`AMP Articles Image should match snapshot 1`] = `
   <amp-img
     alt="قهوه"
     attribution="Getty Images"
+    data-hero="true"
     fallback=""
     height="576"
     layout="responsive"
@@ -455,7 +457,7 @@ exports[`AMP Articles SEO OG url 1`] = `"http://localhost:7080/persian/articles/
 
 exports[`AMP Articles SEO Page title 1`] = `"پهپادی که برایتان قهوه می‌آورد - BBC News فارسی"`;
 
-exports[`AMP Articles SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP Articles SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP Articles SEO Twitter card 1`] = `"summary_large_image"`;
 

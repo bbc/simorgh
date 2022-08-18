@@ -3,16 +3,16 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { persian as brandSVG } from '@bbc/psammead-assets/svgs';
-import { arabic } from '@bbc/gel-foundations/scripts';
+} from '#psammead/psammead-styles/src/colours';
+import brandSVG from '#lib/chameleonLogos/persian';
+import arabic from '#psammead/gel-foundations/src/scripts/arabic';
 import {
   F_REITH_QALAM_REGULAR,
   F_REITH_QALAM_BOLD,
-} from '@bbc/psammead-styles/fonts';
+} from '#psammead/psammead-styles/src/fonts';
 import 'moment/locale/fa';
-import '@bbc/moment-timezone-include/tz/GMT';
-import { jalaali } from '@bbc/psammead-calendars';
+import '#psammead/moment-timezone-include/tz/GMT';
+import jalaali from '#psammead/psammead-calendars/src';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -66,16 +66,16 @@ export const service = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'پادکست',
-      brandTitle: 'شیرازه',
+      brandTitle: 'رادیو فارسی بی‌بی‌سی',
       brandDescription:
-        '«شیرازه» پادکستی درباره کتاب‌ها است که سام فرزانه تهیه می‌کند',
+        'پادکست چشم‌انداز بامدادی رادیو بی‌بی‌سی – دوشنبه ۱۹ اردیبهشت ۱۴۰۱',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0bw81l8.jpg',
-        alt: 'رادیو فارسی بی‌بی‌سی',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0bq9rkk.jpg',
+        alt: 'پادکست چشم‌انداز بامدادی رادیو بی‌بی‌سی',
       },
       linkLabel: {
         text: 'پادکست',
-        href: 'https://www.bbc.com/persian/podcasts/p0bw80rj',
+        href: 'https://www.bbc.com/persian/podcasts/p02pc9mc',
       },
       skipLink: {
         text: 'از %title% رد شوید و به خواندن ادامه دهید',
@@ -83,9 +83,17 @@ export const service = {
       },
     },
     translations: {
+      pagination: {
+        page: 'صفحه',
+        previousPage: 'قبلی',
+        nextPage: 'بعدی',
+        pageXOfY: 'صفحه {x} از {y}',
+      },
       ads: {
         advertisementLabel: 'آگهی',
       },
+      recommendationTitle: 'مطالب پیشنهادی',
+      splitRecommendationTitle: 'مطالب پیشنهادی دیگر',
       seeAll: 'بیشتر',
       home: 'صفحه اول',
       currentPage: 'صفحه فعلی',
@@ -264,6 +272,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'توضیح ویدیو، ',
           text: 'توضیح: محتوای مربوط به طرف ثالث ممکن است شامل آگهی باشد',
+          articleText: 'توضیح: بی بی سی مسئول محتوای سایت های دیگر نیست.',
+          articleAdditionalText:
+            'محتوای %provider_name%  ممکن است شامل آگهی باشد.',
         },
         fallback: {
           text: 'محتوا در دسترس نیست',
@@ -334,7 +345,7 @@ export const service = {
           text: 'کوکی ها',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853555',
+          href: 'https://www.bbc.co.uk/persian/send/u50853555',
           text: 'تماس با بی بی سی',
         },
         {

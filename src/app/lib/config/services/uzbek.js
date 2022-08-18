@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
-import { uzbek as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/GMT';
-import '@bbc/psammead-locales/moment/uz';
+} from '#psammead/psammead-styles/src/colours';
+import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import brandSVG from '#lib/chameleonLogos/uzbek';
+import '#psammead/moment-timezone-include/tz/GMT';
+import '#psammead/psammead-locales/moment/uz';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -59,6 +59,12 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: 'Олдингиси',
+        nextPage: 'Кейингиси',
+        pageXOfY: 'саҳифа {x} ...нинг {y}',
+        page: 'саҳифа',
+      },
       ads: {
         advertisementLabel: 'Реклама',
       },
@@ -231,6 +237,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Видео тагсўзи, ',
           text: 'Огоҳлантириш:Учинчи манба материалида реклама бўлиши мумкин',
+          articleText:
+            'Огоҳлантириш: Би-би-си ташқи саҳифалардаги контент учун масъул эмас',
+          articleAdditionalText:
+            '%provider_name% бу контентда реклама бўлиши мумкин',
         },
         fallback: {
           text: 'Бу материалга кириш имконсиз',
@@ -292,8 +302,8 @@ export const service = {
           text: 'Куки(Cookies)',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853929',
-          text: 'Би-би-си билан боғланиш',
+          href: 'https://www.bbc.co.uk/uzbek/send/u50853929',
+          text: "'Bi-bi-si bilan bog’laning'",
         },
         {
           id: 'COOKIE_SETTINGS',

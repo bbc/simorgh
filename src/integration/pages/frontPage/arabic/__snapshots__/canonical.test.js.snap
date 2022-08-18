@@ -49,7 +49,7 @@ Object {
 exports[`Canonical Front Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "اتصل بـ بي بي سي",
-  "url": "https://www.bbc.co.uk/send/u50853203",
+  "url": "https://www.bbc.co.uk/arabic/send/u50853203",
 }
 `;
 
@@ -137,6 +137,13 @@ Object {
 `;
 
 exports[`Canonical Front Page Header Navigation link should match text and url 10`] = `
+Object {
+  "text": "بودكاست",
+  "url": "/arabic/tv-and-radio-52067221",
+}
+`;
+
+exports[`Canonical Front Page Header Navigation link should match text and url 11`] = `
 Object {
   "text": "برامجنا",
   "url": "/arabic/tv-and-radio-37728883",
@@ -287,7 +294,7 @@ exports[`Canonical Front Page SEO OG url 1`] = `"http://localhost:7080/arabic"`;
 
 exports[`Canonical Front Page SEO Page title 1`] = `"الرئيسية - BBC News عربي"`;
 
-exports[`Canonical Front Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Front Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Front Page SEO Twitter card 1`] = `"summary_large_image"`;
 
@@ -335,7 +342,7 @@ exports[`Canonical Front Page Sections should match headline text 15`] = `"با�
 
 exports[`Canonical Front Page Sections should match headline text 16`] = `"مباشر"`;
 
-exports[`Canonical Front Page Sections should match headline text 17`] = `"أحدث نشرة أخبار"`;
+exports[`Canonical Front Page Sections should match headline text 17`] = `"البث الإذاعي"`;
 
 exports[`Canonical Front Page Sections should match headline text 18`] = `"اخترنا لكم"`;
 
@@ -358,7 +365,7 @@ exports[`Story Promo Headline should match text 1`] = `"المجلس العسك�
 exports[`Story Promo Image should match image 1`] = `
 <img
   alt="متظاهرون يحتفلون بالتوصل لاتفاق بين المجلس العسكري والمتظاهرين"
-  class="eehpdyc0 bbc-rb7xa0 e1enwo3v0"
+  class="e3vrtyk0 bbc-rb7xa0 e1mo64ex0"
   height="549"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg"
   width="976"

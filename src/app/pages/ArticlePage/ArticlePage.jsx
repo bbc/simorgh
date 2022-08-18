@@ -5,6 +5,8 @@ import propEq from 'ramda/src/propEq';
 import last from 'ramda/src/last';
 import styled from '@emotion/styled';
 import { string, node } from 'prop-types';
+import useToggle from '#hooks/useToggle';
+
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -12,7 +14,7 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MAX,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#psammead/gel-foundations/src/breakpoints';
 import {
   GEL_MARGIN_ABOVE_400PX,
   GEL_MARGIN_BELOW_400PX,
@@ -21,11 +23,12 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
-} from '@bbc/gel-foundations/spacings';
-import { C_GREY_2, C_WHITE } from '@bbc/psammead-styles/colours';
+} from '#psammead/gel-foundations/src/spacings';
+import { C_GREY_2, C_WHITE } from '#psammead/psammead-styles/src/colours';
 import { singleTextBlock } from '#app/models/blocks';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '#containers/ArticleMetadata';
+import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import headings from '#containers/Headings';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
@@ -44,6 +47,8 @@ import MostReadContainer from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
 import SocialEmbedContainer from '#containers/SocialEmbed';
+import AdContainer from '#containers/Ad';
+import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 
 import {
   getArticleId,
@@ -60,25 +65,11 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
-import ArticleRelatedContent from '#containers/ArticleRelatedContent';
+import RelatedContentSection from './PagePromoSections/RelatedContentSection';
 
 import SecondaryColumn from './SecondaryColumn';
 
 import ArticlePageGrid, { Primary } from './ArticlePageGrid';
-
-const componentsToRender = {
-  visuallyHiddenHeadline,
-  headline: headings,
-  subheadline: headings,
-  audio: articleMediaPlayer,
-  video: articleMediaPlayer,
-  text,
-  image: props => <Image {...props} sizes="(min-width: 1008px) 760px, 100vw" />,
-  timestamp: props => <Timestamp {...props} popOut={false} />,
-  social: SocialEmbedContainer,
-  group: gist,
-  links: props => <ScrollablePromo {...props} />,
-};
 
 const Wrapper = styled.div`
   background-color: ${C_GREY_2};
@@ -118,8 +109,46 @@ const StyledRelatedTopics = styled(RelatedTopics)`
   }
 `;
 
+const MpuContainer = styled(AdContainer)`
+  margin-bottom: ${GEL_SPACING_TRPL};
+`;
+
 const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
+  const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
   const { articleAuthor, showRelatedTopics } = useContext(ServiceContext);
+  const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
+  const { enabled: adsEnabled } = useToggle('ads');
+
+  const isAdsEnabled = [
+    path(['metadata', 'allowAdvertising'], pageData),
+    adsEnabled,
+    showAdsBasedOnLocation,
+  ].every(Boolean);
+
+  const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
+
+  const componentsToRender = {
+    visuallyHiddenHeadline,
+    headline: headings,
+    subheadline: headings,
+    audio: articleMediaPlayer,
+    video: articleMediaPlayer,
+    text,
+    image: props => (
+      <Image
+        {...props}
+        sizes="(min-width: 1008px) 760px, 100vw"
+        shouldPreload={preloadLeadImageToggle}
+      />
+    ),
+    timestamp: props => <Timestamp {...props} popOut={false} />,
+    social: SocialEmbedContainer,
+    group: gist,
+    links: props => <ScrollablePromo {...props} />,
+    mpu: props =>
+      isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
+  };
+
   const headline = getHeadline(pageData);
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
@@ -197,6 +226,10 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         aboutTags={aboutTags}
         imageLocator={promoImage}
       />
+      {isAdsEnabled && !isAmp && (
+        <CanonicalAdBootstrapJs adcampaign={adcampaign} />
+      )}
+      {isAdsEnabled && <AdContainer slotType="leaderboard" />}
       <ArticlePageGrid>
         <Primary>
           <Main role="main">
@@ -213,7 +246,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
               tagBackgroundColour={C_WHITE}
             />
           )}
-          <ArticleRelatedContent content={last(blocks)} />
+          <RelatedContentSection content={last(blocks)} />
         </Primary>
         <SecondaryColumn pageData={pageData} />
       </ArticlePageGrid>

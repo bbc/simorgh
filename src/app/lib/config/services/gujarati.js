@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { devanagariAndGurmukhi } from '@bbc/gel-foundations/scripts';
-import { gujarati as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
-import '@bbc/psammead-locales/moment/gu';
+} from '#psammead/psammead-styles/src/colours';
+import devanagariAndGurmukhi from '#psammead/gel-foundations/src/scripts/devanagari-and-gurmukhi';
+import brandSVG from '#lib/chameleonLogos/gujarati';
+import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
+import '#psammead/psammead-locales/moment/gu';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -59,6 +59,11 @@ export const service = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: 'આ પહેલાં',
+        nextPage: 'આ પછી',
+        pageXOfY: 'Page {x} નું {y}',
+      },
       ads: {
         advertisementLabel: 'જાહેરાત',
       },
@@ -226,6 +231,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'વીડિયો કૅપ્શન ',
           text: 'થર્ડ પાર્ટી કન્ટેટમાં જાહેરખબર હોય શકે છે',
+          articleText: 'બીબીસી બહારની સાઇટ્સના કન્ટેન્ટ માટે જવાબદાર નથી.',
+          articleAdditionalText:
+            '%provider_name% કન્ટેન્ટમાં જાહેરાત હોઈ શકે છે. ',
         },
         fallback: {
           text: 'આ કન્ટેન્ટ ઉપલબ્ધ નથી',
@@ -291,8 +299,8 @@ export const service = {
           text: 'કુકીઝ',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853313',
-          text: 'બીબીસીનો સંપર્ક કરો',
+          href: 'https://www.bbc.co.uk/gujarati/send/u50853313',
+          text: 'BBC નો સંપર્ક કરો',
         },
         {
           id: 'COOKIE_SETTINGS',

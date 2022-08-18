@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { igbo as brandSVG } from '@bbc/psammead-assets/svgs';
-import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
-import '@bbc/psammead-locales/moment/ig';
-import '@bbc/moment-timezone-include/tz/Africa/Lagos';
+} from '#psammead/psammead-styles/src/colours';
+import brandSVG from '#lib/chameleonLogos/igbo';
+import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import '#psammead/psammead-locales/moment/ig';
+import '#psammead/moment-timezone-include/tz/Africa/Lagos';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -61,6 +61,11 @@ export const service = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      pagination: {
+        previousPage: 'Ikpeazụ',
+        nextPage: 'Osote',
+        pageXOfY: 'Page {x} nke {y}',
+      },
       ads: {
         advertisementLabel: 'Mgbasa ozi',
       },
@@ -227,6 +232,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Aha onyonyo, ',
           text: 'Warning: Third party content may contain adverts',
+          articleText: "Warning: BBC amaghị maka ihe ndị si n'ọbaozi ndị ọzọ.",
+          articleAdditionalText:
+            '%provider_name% mgbasaozi azụmaahịa nwereike ịdị na ya',
         },
         fallback: {
           text: 'Content is not available',
@@ -310,7 +318,7 @@ export const service = {
           text: 'Kuki',
         },
         {
-          href: 'https://www.bbc.co.uk/send/u50853379',
+          href: 'https://www.bbc.co.uk/igbo/send/u50853379',
           text: 'Kpọtụrụ BBC',
         },
         {

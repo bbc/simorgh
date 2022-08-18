@@ -9,7 +9,7 @@ BBC World Service News websites are rendered using Simorgh, a ReactJS based Sing
 
 Simorgh provides a fast and accessible web experience used by millions of people around the world each month ([see list of websites using Simorgh](https://github.com/bbc/simorgh/blob/latest/docs/Simorgh-Release-Info.md)). It is regularly maintained and well documented, and we welcome open source contributors.
 
-Simorgh is primarily maintained by BBC News Web Engineering teams. It delivers highly trusted news to readers all over the world, currently in ([41 languages](https://www.bbc.com/ws/languages)). We support a wide range of devices and care deeply about scale, performance, and accessibility. We work in agile, flexible teams, and have an exciting roadmap for future development.
+Simorgh is primarily maintained by the BBC News Web Engineering teams. It delivers highly trusted news to readers all over the world, currently in ([41 languages](https://www.bbc.com/ws/languages)). We support a wide range of devices and care deeply about scale, performance, and accessibility. We work in agile, flexible teams, and have an exciting roadmap for future development.
 
 We use an open source component library called [Psammead](https://github.com/bbc/psammead/) that we also maintain.
 
@@ -18,7 +18,7 @@ We use an open source component library called [Psammead](https://github.com/bbc
 Please familiarise yourself with our:
 
 - [Code of conduct](https://github.com/bbc/simorgh/blob/latest/.github/CODE_OF_CONDUCT.md)
-- [Code Standards](https://github.com/bbc/simorgh/blob/latest/docs/Code-Standards.md)
+- [Coding Standards](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/index.md)
 - [Contributing guidelines](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md)
 - [Guide to Code Reviews](https://github.com/bbc/simorgh/blob/latest/docs/Code-Reviews.md)
 - [Github Project Board Guide](https://github.com/bbc/simorgh/blob/latest/docs/Project-Board-Guide.md)
@@ -77,6 +77,8 @@ Each render is passed through a set of HOC's (Higher Order Components) to enhanc
 - withData
 - withHashChangeHandler
 
+With a selection of page types passed through withOptimizelyProvider, currently [Article](https://github.com/bbc/simorgh/blob/latest/src/app/pages/ArticlePage/index.jsx) and [Story](https://github.com/bbc/simorgh/blob/latest/src/app/pages/StoryPage/index.jsx) pages.
+
 #### withVariant
 
 The variant HOC ensures that services that have variants (e.g. `simp`, `lat`) always redirects to a url that renders the appropriate variant.
@@ -112,6 +114,10 @@ Assuming the other HOC's have returned the original Article or FrontPage contain
 #### withHashChangeHandler
 
 The withHashChangeHandler HOC is a wrapper applied to all pages that checks for changes to the URL hash value. Pages include accessibility controls to skip content should the user choose to do so, this utilises the URL hash to skip users to specific areas of the page. Due to the nature of the client side routing, changes to the URL results in a re-render. This causes some unsightly UI flickering for some components, specifically media and social embeds. This HOC applies checks to the URL so see if a re-render is necessary, or if not preventing a re-render using `React.memo`.
+
+#### withOptimizelyProvider
+
+The withOptimizelyProvider HOC returns components that have been enhanced with access to an Optimizely client, that is used to run our A/B testing. This is done to limit bundle sizes, as we seperate some of our bundles by page type, that means if we're only running A/B testing on certain page types, we can prevent polluting page type bundles with the weight of the SDK library we use for Optimizely.
 
 ### Adding a new Page type
 
@@ -235,6 +241,12 @@ envConfig/secret.env: No such file or directory
 You will not have access to topics
 
 Internal developers who need to work on topic pages locally should contact the team for access.
+
+### Recommendations
+
+Recommendations in story pages also use internal BBC data labs API's. It requires adding the key/value pair in `envConfig/secret.env` file for them to appear locally.
+
+Internal developers who need to work on article pages locally should contact the team for access.
 
 ### Other page types
 

@@ -2,7 +2,7 @@
 const { merge } = require('webpack-merge');
 const fs = require('fs');
 const path = require('path');
-const MomentTimezoneInclude = require('@bbc/moment-timezone-include');
+const MomentTimezoneInclude = require('./src/app/legacy/psammead/moment-timezone-include/src');
 const { webpackDirAlias } = require('./dirAlias');
 
 const appDirectory = fs.realpathSync(process.cwd());
@@ -32,7 +32,7 @@ const getBaseConfig = BUNDLE_TYPE => ({
   mode: IS_PROD ? 'production' : 'development',
   devtool: IS_PROD ? 'source-map' : 'eval-source-map',
   resolve: {
-    extensions: ['.js', '.jsx'], // resolves `import '../Foo'` to `../Foo/index.jsx`
+    extensions: ['.ts', '.tsx', '.js', '.jsx'], // resolves `import '../Foo'` to `../Foo/index.jsx`
     alias: {
       ...webpackDirAlias,
       /*
@@ -66,6 +66,9 @@ const getBaseConfig = BUNDLE_TYPE => ({
    * but long enough that we dont need to worry about forgetting it.
    */
   plugins: [new MomentTimezoneInclude({ startYear: 2010, endYear: 2025 })],
+  watchOptions: {
+    ignored: ['**/tz/**'],
+  },
   module: {
     rules: [
       // tell Webpack to use the .babelrc to know how to transform JS/JSX to ES2015 JS
@@ -81,6 +84,19 @@ const getBaseConfig = BUNDLE_TYPE => ({
               babelrc: true,
               cacheDirectory: true,
               presets: [],
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: [
+          'babel-loader',
+          {
+            loader: 'ts-loader',
+            options: {
+              transpileOnly: true,
             },
           },
         ],
