@@ -96,6 +96,7 @@
   "homepage": "https://github.com/bbc/simorgh#readme",
   "dependencies": {
     "@bbc/web-vitals": "1.1.1",
+    "@emotion/babel-preset-css-prop": "^11.10.0",
     "@emotion/cache": "11.7.1",
     "@emotion/react": "11.9.0",
     "@emotion/server": "11.4.0",
