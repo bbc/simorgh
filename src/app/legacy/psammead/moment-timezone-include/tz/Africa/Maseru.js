@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Africa/Maseru|SAST|-20|0||84e5');

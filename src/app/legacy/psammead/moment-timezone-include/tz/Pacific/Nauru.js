@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Pacific/Nauru|+12|-c0|0||10e3');

@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Asia/Krasnoyarsk|+07 +08|-70 -80|01010|1BWj0 1qM0 WM0 8Hz0|10e5');

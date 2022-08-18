@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Europe/Volgograd|+03 +04|-30 -40|010101|1BWn0 1qM0 WM0 8Hz0 9Jd0|10e5');

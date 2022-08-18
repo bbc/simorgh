@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Asia/Kuching|+08|-80|0||13e4');

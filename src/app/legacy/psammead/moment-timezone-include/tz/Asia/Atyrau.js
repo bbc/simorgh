@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Asia/Atyrau|+05|-50|0|');

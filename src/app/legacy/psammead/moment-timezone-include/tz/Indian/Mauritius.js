@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Indian/Mauritius|+04|-40|0||15e4');

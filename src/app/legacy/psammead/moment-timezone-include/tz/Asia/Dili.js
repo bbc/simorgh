@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Asia/Dili|+09|-90|0||19e4');

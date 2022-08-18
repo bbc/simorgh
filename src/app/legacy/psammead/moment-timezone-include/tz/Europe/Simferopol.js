@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Europe/Simferopol|EET EEST MSK MSK|-20 -30 -40 -30|01010101023|1BWp0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11z0 1nW0|33e4');

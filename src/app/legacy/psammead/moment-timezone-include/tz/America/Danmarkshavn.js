@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('America/Danmarkshavn|GMT|0|0||8');

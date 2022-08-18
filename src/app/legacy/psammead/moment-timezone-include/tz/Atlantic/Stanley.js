@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Atlantic/Stanley|-03 -04|30 40|010|1C6R0 U10|21e2');

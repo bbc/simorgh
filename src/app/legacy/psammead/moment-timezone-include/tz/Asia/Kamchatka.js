@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Asia/Kamchatka|+12 +11|-c0 -b0|010|1Dp30 WM0|18e4');

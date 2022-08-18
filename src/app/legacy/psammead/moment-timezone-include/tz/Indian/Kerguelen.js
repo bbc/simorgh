@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Indian/Kerguelen|+05|-50|0||130');

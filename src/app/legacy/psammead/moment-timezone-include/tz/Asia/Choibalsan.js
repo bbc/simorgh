@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Asia/Choibalsan|+08 +09|-80 -90|01010|1O8G0 1cJ0 1cP0 1cJ0|38e3');

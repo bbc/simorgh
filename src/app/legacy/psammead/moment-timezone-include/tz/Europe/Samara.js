@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Europe/Samara|+04 +03|-40 -30|010|1Dpb0 WM0|12e5');

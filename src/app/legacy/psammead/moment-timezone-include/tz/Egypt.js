@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Egypt|EET EEST|-20 -30|010101010|1Cby0 Fb0 c10 8n0 8Nd0 gL0 e10 mn0|15e6');

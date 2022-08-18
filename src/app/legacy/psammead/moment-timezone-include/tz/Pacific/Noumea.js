@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Pacific/Noumea|+11|-b0|0||98e3');

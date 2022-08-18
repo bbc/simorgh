@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Indian/Comoro|EAT|-30|0||47e5');

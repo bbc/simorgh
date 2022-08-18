@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Asia/Kathmandu|+0545|-5J|0||12e5');

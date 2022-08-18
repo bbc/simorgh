@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('America/Montevideo|-02 -03|20 30|010101010101|1BQQ0 1ld0 14n0 1ld0 14n0 1o10 11z0 1o10 11z0 1o10 11z0|17e5');

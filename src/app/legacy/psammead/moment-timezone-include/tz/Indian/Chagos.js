@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Indian/Chagos|+06|-60|0||30e2');

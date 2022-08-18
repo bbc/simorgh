@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('America/Barbados|AST|40|0||28e4');

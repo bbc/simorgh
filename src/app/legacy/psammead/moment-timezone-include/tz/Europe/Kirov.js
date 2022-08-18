@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Europe/Kirov|+03 +04|-30 -40|01010|1BWn0 1qM0 WM0 8Hz0|48e4');

@@ -1,0 +1,1 @@
+var moment = require("moment-timezone"); moment.tz.add('Indian/Maldives|+05|-50|0||35e4');
