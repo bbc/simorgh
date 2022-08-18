@@ -19,21 +19,21 @@ const Byline = ({ blocks, children }: Props) => {
 
   const bylineBlocks = pathOr([], [0, 'model', 'blocks'], blocks);
 
-  const bylineInfo = {} as Record<string, unknown>;
-  bylineBlocks.forEach(block => {
-    const type = pathOr('', ['type'], block);
-    const value = pathOr(
-      '',
-      ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
-      block,
-    );
-    bylineInfo[type] = value;
-  });
+  const authorBlock = bylineBlocks.find((block: any) => block.type === 'name');
+  const jobRoleBlock = bylineBlocks.find((block: any) => block.type === 'role');
 
-  const authorName = pathOr('', ['name'], bylineInfo);
-  const jobRole = pathOr('', ['role'], bylineInfo);
+  const author = pathOr(
+    '',
+    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
+    authorBlock,
+  );
+  const jobRole = pathOr(
+    '',
+    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
+    jobRoleBlock,
+  );
 
-  if (!(authorName && jobRole)) return null;
+  if (!(author && jobRole)) return null;
 
   const authorTranslated = pathOr('Author', ['byline', 'author'], translations);
   const jobRoleTranslated = pathOr('Role', ['byline', 'role'], translations);
@@ -59,7 +59,7 @@ const Byline = ({ blocks, children }: Props) => {
           <span role="text">
             <VisuallyHiddenText>{`${authorTranslated}, `} </VisuallyHiddenText>
             <Author script={script} service={service}>
-              {authorName}
+              {author}
             </Author>
           </span>
         </li>

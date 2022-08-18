@@ -147,7 +147,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     text,
     byline: props =>
       hasByline ? (
-        <Byline {...props} popOut={false}>
+        <Byline {...props}>
           <Timestamp
             firstPublished={new Date(firstPublished).getTime()}
             lastPublished={new Date(lastPublished).getTime()}
