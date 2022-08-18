@@ -50,6 +50,9 @@ module.exports = (on, config) => {
       },
       plugins: [new MomentTimezoneInclude({ startYear: 2010, endYear: 2025 })],
     },
+    watchOptions: {
+      ignored: ['**/tz/**'],
+    },
   };
 
   on('file:preprocessor', webpackPreprocessor(options));
