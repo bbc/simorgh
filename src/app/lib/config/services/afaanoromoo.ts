@@ -3,14 +3,15 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '#psammead/psammead-styles/src/colours';
-import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
-import brandSVG from '#lib/chameleonLogos/afaanoromoo';
+} from '../../../legacy/psammead/psammead-styles/src/colours';
+import cyrillicAndLatin from '../../../legacy/psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import brandSVG from '../../chameleonLogos/afaanoromoo';
 import '#psammead/moment-timezone-include/tz/Africa/Addis_Ababa';
 import '#psammead/psammead-locales/moment/om';
 import withContext from '../../../contexts/utils/withContext';
+import { DefaultService } from '../../../models/types/global';
 
-export const service = {
+export const service: DefaultService = {
   default: {
     lang: `om`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
