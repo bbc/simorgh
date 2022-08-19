@@ -40,7 +40,6 @@ describe('Application', () => {
           // Add more here if you want to awaken fresh data for other page types
           if (serviceHasPageType(service, 'topicPage')) {
             const paths = getPaths(service, 'topicPage');
-            cy.log(paths);
             paths.forEach(currentPath => {
               const fullPath = `${envConfig.baseUrl}${currentPath}`;
               cy.log(fullPath);
