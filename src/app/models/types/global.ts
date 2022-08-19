@@ -43,6 +43,7 @@ export type ServicesWithNoVariants = {
     | 'naidheachdan'
     | 'nepali'
     | 'news'
+    | 'newsround'
     | 'pashto'
     | 'persian'
     | 'pidgin'

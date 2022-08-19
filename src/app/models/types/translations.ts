@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 export interface Translations {
-  pagination: {
+  pagination?: {
     page?: string;
     previousPage: string;
     nextPage: string;
@@ -11,20 +11,24 @@ export interface Translations {
   };
   recommendationTitle?: string;
   splitRecommendationTitle?: string;
-  seeAll: string;
+  seeAll?: string;
   home: string;
   currentPage: string;
   skipLinkText: string;
   relatedContent: string;
-  relatedTopics: string;
+  topicsPath?: string;
+  relatedTopics?: string;
   navMenuText: string;
   mediaAssetPage: {
     mediaPlayer: string;
     audioPlayer: string;
     videoPlayer: string;
   };
-  gist: string;
+  gist?: string;
   error: {
+    home?: string;
+    currentPage?: string;
+    skipLinkText?: string;
     404: TranslationsError;
     500: TranslationsError;
   };
@@ -84,28 +88,48 @@ export interface Translations {
     };
   };
   media: {
-    noJs: string;
-    contentExpired: string;
-    contentNotYetAvailable: string;
+    noJs?: string;
+    contentExpired?: string;
+    contentNotYetAvailable?: string;
     audio: string;
     photogallery: string;
     video: string;
     bbc_afrique_radio?: OnDemandRadioTvTranslations;
     bbc_afrique_tv?: OnDemandRadioTvTranslations;
     bbc_arabic_radio?: OnDemandRadioTvTranslations;
+    bbc_bangla_radio?: OnDemandRadioTvTranslations;
+    bbc_burmese_radio?: OnDemandRadioTvTranslations;
+    bbc_burmese_tv?: OnDemandRadioTvTranslations;
+    bbc_gahuza_radio?: OnDemandRadioTvTranslations;
+    bbc_gujarati_tv?: OnDemandRadioTvTranslations;
+    bbc_hausa_radio?: OnDemandRadioTvTranslations;
+    bbc_hausa_tv?: OnDemandRadioTvTranslations;
+    bbc_hindi_radio?: OnDemandRadioTvTranslations;
+    bbc_hindi_tv?: OnDemandRadioTvTranslations;
+    bbc_igbo_radio?: OnDemandRadioTvTranslations;
+    bbc_kyrgyz_radio?: OnDemandRadioTvTranslations;
+    bbc_kyrgyz_tv?: OnDemandRadioTvTranslations;
+    bbc_marathi_tv?: OnDemandRadioTvTranslations;
+    bbc_nepali_radio?: OnDemandRadioTvTranslations;
+    bbc_pashto_radio?: OnDemandRadioTvTranslations;
+    bbc_pashto_tv?: OnDemandRadioTvTranslations;
+    bbc_persian_radio?: OnDemandRadioTvTranslations;
+    bbc_dari_radio?: OnDemandRadioTvTranslations;
+    bbc_persian_tv?: OnDemandRadioTvTranslations;
+    bbc_pidgin_radio?: OnDemandRadioTvTranslations;
     listen: string;
     watch: string;
-    listenLive: string;
+    listenLive?: string;
     listenNext?: string;
-    liveLabel: string;
-    nextLabel: string;
-    previousRadioShow: string;
-    nextRadioShow: string;
-    duration: string;
-    recentEpisodes: string;
+    liveLabel?: string;
+    nextLabel?: string;
+    previousRadioShow?: string;
+    nextRadioShow?: string;
+    duration?: string;
+    recentEpisodes?: string;
     podcastExternalLinks?: string;
   };
-  socialEmbed: {
+  socialEmbed?: {
     caption: {
       textPrefixVisuallyHidden: string;
       text: string;
@@ -123,12 +147,12 @@ export interface Translations {
       endTextVisuallyHidden: string;
     };
   };
-  include: {
+  include?: {
     errorMessage: string;
     linkText: string;
   };
-  topStoriesTitle: string;
-  featuresAnalysisTitle: string;
+  topStoriesTitle?: string;
+  featuresAnalysisTitle?: string;
 }
 
 export interface TranslationsError {

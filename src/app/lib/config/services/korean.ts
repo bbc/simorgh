@@ -9,9 +9,9 @@ import brandSVG from '../../chameleonLogos/korean';
 import '#psammead/moment-timezone-include/tz/Asia/Seoul';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/ko';
-import { DefaultService } from '../../../models/types/serviceConfig';
+import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
-export const service: DefaultService = {
+export const service: DefaultServiceConfig = {
   default: {
     lang: `ko`,
     articleAuthor: `https://www.facebook.com/bbcnews`,

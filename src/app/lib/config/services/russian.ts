@@ -15,7 +15,7 @@ import brandSVG from '../../chameleonLogos/russian';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ru';
 import withContext from '../../../contexts/utils/withContext';
-import { DefaultService } from '../../../models/types/serviceConfig';
+import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
 // Translations used in the header and footer elements of the page
 const headerFooterTranslations = {
@@ -231,7 +231,7 @@ export const mainTranslations = {
   infoBannerLabel: 'Информация',
 };
 
-export const service: DefaultService = {
+export const service: DefaultServiceConfig = {
   default: {
     translations: { ...mainTranslations, ...headerFooterTranslations },
     lang: `ru`,

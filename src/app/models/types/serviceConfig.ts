@@ -38,7 +38,7 @@ export type ServiceConfig = {
   chartbeatDomain: string;
   brandName: string;
   product: string;
-  serviceLocalizedName: string;
+  serviceLocalizedName?: string;
   defaultImage: string;
   defaultImageAltText: string;
   dir: string;
@@ -49,25 +49,27 @@ export type ServiceConfig = {
   defaultCaptionOffscreenText: string;
   imageCopyrightOffscreenText: string;
   locale: string;
-  isoLang: string;
+  isoLang?: string | null;
   datetimeLocale: string;
   serviceDatetimeLocale?: string;
   service: Services;
   serviceName: string;
   serviceLang?: string;
   languageName: string;
+  altCalendar?: unknown;
   themeColor: string;
   twitterCreator: string;
   twitterSite: string;
-  noBylinesPolicy: string;
-  publishingPrinciples: string;
+  noBylinesPolicy?: string | null;
+  publishingPrinciples?: string | null;
   isTrustProjectParticipant: boolean;
   script: {
     [key: string]: unknown;
   };
   manifestPath: string;
-  swPath: string;
+  swPath?: string;
   frontPageTitle: string;
+  passportHomes?: string[];
   iTunesAppId?: number;
   theming: {
     brandBackgroundColour: string;
@@ -79,18 +81,31 @@ export type ServiceConfig = {
   showAdPlaceholder: boolean;
   showRelatedTopics: boolean;
   podcastPromo?: PodcastPromo;
+  disclaimer?: {
+    para1: string;
+    para2: {
+      text: string;
+      url: string;
+      isExternal: boolean;
+    };
+    para3: string;
+  };
   translations: Translations;
   brandSVG: unknown;
   mostRead: MostRead;
   mostWatched: MostWatched;
   radioSchedule: RadioSchedule;
-  recommendations: Recommendations;
+  recommendations?: Recommendations;
   footer: Footer;
   fonts?: unknown;
   navigation?: {
     title: string;
     url: string;
   }[];
+  scriptLink?: {
+    text: string;
+    variant: string;
+  };
   timezone: string;
   liveRadioOverrides?: {
     masterBrand: {
@@ -111,7 +126,7 @@ export type PodcastPromo = {
     text: string;
     href: string;
   };
-  skipLink: {
+  skipLink?: {
     text: string;
     endTextVisuallyHidden: string;
   };
@@ -120,22 +135,25 @@ export type PodcastPromo = {
 export interface MostRead {
   header: string;
   lastUpdated: string;
-  numberOfItems: number;
+  numberOfItems?: number;
   hasMostRead: boolean;
+  onIdxPage?: boolean;
 }
 
 export interface MostWatched {
   header: string;
-  numberOfItems: number;
+  numberOfItems?: number;
   hasMostWatched: boolean;
 }
 
 export interface RadioSchedule {
-  hasRadioSchedule: boolean;
+  hasRadioSchedule?: boolean;
   frequenciesPageUrl?: string;
   frequenciesPageLabel?: string;
-  header: string;
-  durationLabel: string;
+  header?: string;
+  durationLabel?: string;
+  onIdxPage?: boolean;
+  idxPagePosition?: string;
 }
 
 export interface Recommendations {
@@ -147,11 +165,11 @@ export interface Recommendations {
 }
 
 export interface Footer {
-  trustProjectLink: {
+  trustProjectLink?: {
     href: string;
     text: string;
   };
-  externalLink: {
+  externalLink?: {
     href: string;
     text: string;
   };
@@ -161,5 +179,5 @@ export interface Footer {
     id?: string | null;
     lang?: string | null;
   }[];
-  copyrightText: string;
+  copyrightText?: string;
 }
