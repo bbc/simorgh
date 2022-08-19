@@ -1,15 +1,20 @@
 import React from 'react';
+import { withKnobs } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import Timestamp from '../../../legacy/containers/ArticleTimestamp';
 import { bylineWithNameAndRole } from './fixture';
 import Byline from '.';
+import { withServicesKnob } from '../../../legacy/psammead/psammead-storybook-helpers/src';
 
-interface Props {
+interface Service {
   service: string;
+}
+
+interface Fixture extends Service {
   children?: JSX.Element;
 }
 
-const Component = ({ service, children }: Props) => {
+const Component = ({ service, children }: Fixture) => {
   return (
     <ServiceContextProvider service={service}>
       <Byline blocks={bylineWithNameAndRole}>{children}</Byline>
@@ -20,12 +25,14 @@ const Component = ({ service, children }: Props) => {
 export default {
   title: 'Components/Byline',
   Component,
-  parameters: { chromatic: { disable: true } },
+  decorators: [withKnobs, withServicesKnob()],
 };
 
-export const Example = () => <Component service="news" />;
-export const ExampleWithTimestamp = () => (
-  <Component service="news">
+export const AuthorRoleByline = ({ service }: Service) => (
+  <Component service={service} />
+);
+export const AuthorRoleTimestampByline = ({ service }: Service) => (
+  <Component service={service}>
     <Timestamp
       firstPublished={1660658887}
       lastPublished={1660658887}
