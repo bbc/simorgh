@@ -1,5 +1,7 @@
+/** @jsx jsx */
+
 import React, { ElementType, ComponentPropsWithoutRef } from 'react';
-import { Theme } from '@emotion/react';
+import { Theme, jsx } from '@emotion/react';
 import {
   baseStyles,
   primaryFontFamilyStyles,

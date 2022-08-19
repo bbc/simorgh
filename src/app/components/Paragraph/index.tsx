@@ -1,4 +1,7 @@
+/** @jsx jsx */
+
 import React, { FC } from 'react';
+import { jsx } from '@emotion/react';
 
 import Text from '../Text';
 
