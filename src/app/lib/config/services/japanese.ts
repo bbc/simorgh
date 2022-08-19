@@ -1,4 +1,4 @@
-import { japanese as brandSVG } from '#psammead/psammead-assets/src/svgs';
+// import { japanese as brandSVG } from '#psammead/psammead-assets/src/svgs';
 import {
   C_POSTBOX,
   C_WHITE,
@@ -247,7 +247,7 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'トップ記事',
       featuresAnalysisTitle: '読み物・解説',
     },
-    brandSVG,
+    brandSVG: null,
     mostRead: {
       header: '読まれた記事ランキング',
       lastUpdated: '最終更新:',

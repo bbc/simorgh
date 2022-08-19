@@ -4,7 +4,7 @@ import {
   F_REITH_SERIF_MEDIUM,
 } from '../../../legacy/psammead/psammead-styles/src/fonts';
 import cyrillicAndLatin from '../../../legacy/psammead/gel-foundations/src/scripts/latin-and-cyrillic';
-import { archive as brandSVG } from '../../../legacy/psammead-assets/src/svgs';
+// import { archive as brandSVG } from '../../../legacy/psammead-assets/src/svgs';
 import {
   C_ARCHIVE_BLUE,
   C_WHITE,
@@ -210,7 +210,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Duration',
       },
     },
-    brandSVG,
+    brandSVG: null,
     mostRead: {
       header: 'Most read',
       lastUpdated: 'Last updated:',

@@ -3,7 +3,7 @@ import {
   C_WHITE,
   C_NEWSROUND_PURPLE_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import { newsround as brandSVG } from '../../../legacy/psammead/psammead-assets/src/svgs';
+// import { newsround as brandSVG } from '../../../legacy/psammead/psammead-assets/src/svgs';
 import cyrillicAndLatin from '../../../legacy/psammead/gel-foundations/src/scripts/latin-and-cyrillic';
 import {
   F_REITH_SANS_BOLD,
@@ -212,7 +212,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Duration',
       },
     },
-    brandSVG,
+    brandSVG: null,
     mostRead: {
       header: 'Most read',
       lastUpdated: 'Last updated:',
