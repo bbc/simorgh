@@ -50,6 +50,8 @@ const repositionByline = (json: PageData) => {
     block => getType(block) === 'byline',
   );
 
+  if (firstBylineBlockPosition === -1) return json;
+
   const newBylinePosition =
     firstHeadlineBlockPosition === -1 ? 0 : firstHeadlineBlockPosition + 1;
 
