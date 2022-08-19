@@ -226,27 +226,29 @@ Using the media queries provided in the `theme` object means our breakpoints wil
 ❌
 
 ```js
-const StyledWrapper = styled.div`
-  padding: ${({ theme }) => theme.spacings.HLF};
-
-  @media (min-width: 40rem) { {
-    padding: ${({ theme }) => theme.spacings.FULL};
-  }
-`;
+const styles = {
+  wrapper: theme =>
+    css({
+      padding: theme.spacings.HALF,
+      '@media (min-width: 40rem)': {
+        padding: theme.spacings.FULL,
+      },
+    }),
+};
 ```
 
 ✅
 
 ```js
-const StyledWrapper = styled.div`
-  padding: ${({ theme }) => theme.spacings.HLF};
-
-  ${({ theme }) => css`
-    ${theme.mq.medium} {
-      padding: ${theme.spacings.FULL};
-    }
-  `};
-`;
+const styles = {
+  wrapper: theme =>
+    css({
+      padding: theme.spacings.HALF,
+      [theme.mq.GROUP_3_MIN_WIDTH]: {
+        padding: theme.spacings.FULL,
+      },
+    }),
+};
 ```
 
 ## CSS-in-JS: For style reusability, extend styled components rather than keeping styles in reusable functions or variables
