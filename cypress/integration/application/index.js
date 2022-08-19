@@ -3,7 +3,6 @@ import appConfig from '../../../src/server/utilities/serviceConfigs';
 import serviceHasPageType from '../../support/helpers/serviceHasPageType';
 import ampOnlyServices from '../../support/helpers/ampOnlyServices';
 import envConfig from '../../support/config/envs';
-import visitPage from '../../support/helpers/visitPage';
 import getPaths from '../../support/helpers/getPaths';
 
 const servicesUsingArticlePaths = ['news', 'scotland'];
