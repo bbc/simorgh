@@ -4,14 +4,16 @@ import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import { withServicesKnob } from '../../../../legacy/psammead/psammead-storybook-helpers/src';
 
 import services from '../../../../../server/utilities/serviceConfigs';
-import { Services, Variants } from '../../../../models/types/global';
+import {
+  Services,
+  Variants,
+  ServicesAndVariants,
+} from '../../../../models/types/global';
 
 import Subheading from '.';
 
 type AllServices = {
-  [t in Services]: {
-    [s in Variants]: any;
-  };
+  [t in ServicesAndVariants['service']]: typeof services[t];
 };
 
 const allServices: AllServices = services;

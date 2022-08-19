@@ -5281,6 +5281,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/loadable__component@npm:^5.13.4":
+  version: 5.13.4
+  resolution: "@types/loadable__component@npm:5.13.4"
+  dependencies:
+    "@types/react": "*"
+  checksum: a2d1c77b952eb15c45dfad841a7a0a3e4045f828e1f0ecbab997a306a56a48cd48ee12ee75bf79f59bbcff0347bbeb120106e8e66c91a38a530a028e1598b130
+  languageName: node
+  linkType: hard
+
 "@types/mdast@npm:^3.0.0":
   version: 3.0.10
   resolution: "@types/mdast@npm:3.0.10"
@@ -19714,6 +19723,7 @@ __metadata:
     "@testing-library/react-hooks": 8.0.0
     "@testing-library/user-event": 13.5.0
     "@types/jest": 26.0.24
+    "@types/loadable__component": ^5.13.4
     "@types/react": 18.0.15
     "@types/react-dom": 18.0.6
     "@typescript-eslint/eslint-plugin": 5.31.0

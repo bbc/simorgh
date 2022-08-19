@@ -8,7 +8,7 @@ import {
   C_GREY_10,
 } from '../../../../legacy/psammead/psammead-styles/src/colours';
 
-import { ServiceConfig } from '../../../../models/types/global';
+import { ServiceConfig } from '../../../../models/types/serviceConfig';
 
 type Props = Pick<ServiceConfig, 'service' | 'script'>;
 

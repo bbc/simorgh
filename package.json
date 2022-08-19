@@ -171,6 +171,7 @@
     "@testing-library/react": "12.1.5",
     "@testing-library/react-hooks": "8.0.0",
     "@types/jest": "26.0.24",
+    "@types/loadable__component": "^5.13.4",
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",
     "@typescript-eslint/eslint-plugin": "5.31.0",

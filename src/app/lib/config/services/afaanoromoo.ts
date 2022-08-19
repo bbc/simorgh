@@ -9,9 +9,9 @@ import brandSVG from '../../chameleonLogos/afaanoromoo';
 import '#psammead/moment-timezone-include/tz/Africa/Addis_Ababa';
 import '#psammead/psammead-locales/moment/om';
 import withContext from '../../../contexts/utils/withContext';
-import { DefaultService } from '../../../models/types/global';
+import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
-export const service: DefaultService = {
+export const service: DefaultServiceConfig = {
   default: {
     lang: `om`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
