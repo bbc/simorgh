@@ -1,10 +1,10 @@
 import {
   Services,
   ServicesWithNoVariants,
-  Serbian,
-  Chinese,
-  Zhongwen,
-  Ukrainian,
+  SerbianService,
+  ChineseService,
+  ZhongwenService,
+  UkrainianService,
 } from './global';
 import { Translations } from './translations';
 
@@ -13,19 +13,19 @@ export type DefaultServiceConfig = {
 };
 
 export type SerbianConfig = {
-  [key in Serbian['variant']]: ServiceConfig;
+  [key in SerbianService['variant']]: ServiceConfig;
 };
 
 export type ChineseConfig = {
-  [key in Chinese['variant']]: ServiceConfig;
+  [key in ChineseService['variant']]: ServiceConfig;
 };
 
 export type ZhongwenConfig = {
-  [key in Zhongwen['variant']]: ServiceConfig;
+  [key in ZhongwenService['variant']]: ServiceConfig;
 };
 
 export type UkrainianConfig = {
-  [key in Ukrainian['variant']]: ServiceConfig;
+  [key in UkrainianService['variant']]: ServiceConfig;
 };
 
 export type ServiceConfig = {

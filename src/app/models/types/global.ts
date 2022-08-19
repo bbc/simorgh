@@ -1,19 +1,19 @@
-export type Serbian = {
+export type SerbianService = {
   service: 'serbian';
   variant: 'cyr' | 'lat';
 };
 
-export type Chinese = {
+export type ChineseService = {
   service: 'ukchina';
   variant: 'simp' | 'trad';
 };
 
-export type Zhongwen = {
+export type ZhongwenService = {
   service: 'zhongwen';
   variant: 'simp' | 'trad';
 };
 
-export type Ukrainian = {
+export type UkrainianService = {
   service: 'ukrainian';
   variant: 'default' | 'ru-UA';
 };
@@ -68,21 +68,21 @@ export type ServicesWithNoVariants = {
 
 export type ServicesAndVariants =
   | ServicesWithNoVariants
-  | Serbian
-  | Chinese
-  | Zhongwen
-  | Ukrainian;
+  | SerbianService
+  | ChineseService
+  | UkrainianService
+  | ZhongwenService;
 
 export type Services =
   | ServicesWithNoVariants['service']
-  | Serbian['service']
-  | Chinese['service']
-  | Zhongwen['service']
-  | Ukrainian['service'];
+  | SerbianService['service']
+  | ChineseService['service']
+  | UkrainianService['service']
+  | ZhongwenService['service'];
 
 export type Variants =
   | ServicesWithNoVariants['variant']
-  | Serbian['variant']
-  | Chinese['variant']
-  | Zhongwen['variant']
-  | Ukrainian['variant'];
+  | SerbianService['variant']
+  | ChineseService['variant']
+  | UkrainianService['variant']
+  | ZhongwenService['variant'];

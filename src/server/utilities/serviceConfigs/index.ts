@@ -53,6 +53,15 @@ import { service as vietnamese } from '../../../app/lib/config/services/vietname
 import { service as yoruba } from '../../../app/lib/config/services/yoruba';
 import { service as zhongwen } from '../../../app/lib/config/services/zhongwen';
 
+import { Services, Variants } from '../../../app/models/types/global';
+import { ServiceConfig } from '../../../app/models/types/serviceConfig';
+
+type AllServices = {
+  [t in Services]: {
+    [v in Variants]: ServiceConfig;
+  };
+};
+
 export default {
   afaanoromoo,
   afrique,
@@ -101,4 +110,4 @@ export default {
   vietnamese,
   yoruba,
   zhongwen,
-};
+} as AllServices;
