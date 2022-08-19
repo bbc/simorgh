@@ -20,11 +20,16 @@ Here are some of the benefits of using the `css` prop:
 
 `css` prop with object styles
 
+**NB**
+To use Emotion's css prop in TypeScript components we will need to specify the JSX factory at the top of every file. This is because Simorgh currently uses React's old JSX transform. More information can be found here https://emotion.sh/docs/typescript#with-the-old-jsx-transform.
+
+Simorgh cannot currently use the new JSX transform because it is not supported in Opera Mini.
+
 ✅
 
 ```jsx
-// the component's styles.tsx file
-import { css } from '@emotion/react';
+/** @jsx jsx */
+import { css, jsx } from '@emotion/react';
 
 const styles = {
   wrapper: css({
@@ -39,7 +44,6 @@ const styles = {
   }),
 };
 
-// the component's .tsx file
 const Promo = ({ title, children }) => (
   <div css={styles.wrapper}>
     <h5 css={styles.title}>{title}</h5>
@@ -66,7 +70,9 @@ Getting access to the theme in styles
 ✅
 
 ```jsx
-// the component's styles.tsx file
+/** @jsx jsx */
+import { css, jsx } from '@emotion/react';
+
 const styles = {
   wrapper: css({
     backgroundColor: 'white',
@@ -80,7 +86,7 @@ const styles = {
       fontSize: '1.25rem',
     }),
 };
-// the component's .tsx file
+
 const Promo = ({ title, children }) => (
   <div css={styles.wrapper}>
     <h5 css={styles.title}>{title}</h5>
