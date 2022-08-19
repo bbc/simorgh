@@ -15,9 +15,9 @@ import brandSVG from '../../chameleonLogos/turkish';
 import '#psammead/moment-timezone-include/tz/Asia/Istanbul';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/tr';
-import { DefaultService } from '../../../models/types/serviceConfig';
+import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
-export const service: DefaultService = {
+export const service: DefaultServiceConfig = {
   default: {
     lang: `tr`,
     articleAuthor: `https://www.facebook.com/bbcnews`,

@@ -11,6 +11,7 @@ import '#psammead/psammead-locales/moment/uk';
 import withContext from '../../../contexts/utils/withContext';
 import { mainTranslations as russianMainTranslations } from './russian';
 import { UkrainianConfig } from '../../../models/types/serviceConfig';
+import { Services } from '../../../models/types/global';
 
 const secondaryColumnTranslations = {
   topStoriesTitle: 'Головне',
@@ -35,7 +36,7 @@ const baseServiceConfig = {
   audioCaptionOffscreenText: 'Підпис до аудіо',
   defaultCaptionOffscreenText: 'Підпис, ',
   imageCopyrightOffscreenText: 'Автор фото, ',
-  service: 'ukrainian',
+  service: 'ukrainian' as Services,
   serviceName: 'Ukrainian',
   themeColor: `${C_POSTBOX}`,
   twitterCreator: '@BBC_ua',

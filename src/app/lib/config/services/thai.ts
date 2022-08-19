@@ -9,9 +9,9 @@ import brandSVG from '../../chameleonLogos/thai';
 import '#psammead/moment-timezone-include/tz/Asia/Bangkok';
 import '#psammead/psammead-locales/moment/th';
 import withContext from '../../../contexts/utils/withContext';
-import { DefaultService } from '../../../models/types/serviceConfig';
+import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
-export const service: DefaultService = {
+export const service: DefaultServiceConfig = {
   default: {
     lang: `th`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405

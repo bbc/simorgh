@@ -10,9 +10,9 @@ import { F_MALLANNA_REGULAR } from '../../../legacy/psammead/psammead-styles/src
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/te';
-import { DefaultService } from '../../../models/types/serviceConfig';
+import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
-export const service: DefaultService = {
+export const service: DefaultServiceConfig = {
   default: {
     lang: `te`,
     articleAuthor: `https://www.facebook.com/bbcnews`,

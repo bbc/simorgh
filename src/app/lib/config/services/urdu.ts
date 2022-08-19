@@ -13,9 +13,9 @@ import {
 import '#psammead/moment-timezone-include/tz/Asia/Karachi';
 import '#psammead/psammead-locales/moment/ur';
 import withContext from '../../../contexts/utils/withContext';
-import { DefaultService } from '../../../models/types/serviceConfig';
+import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
-export const service: DefaultService = {
+export const service: DefaultServiceConfig = {
   default: {
     lang: 'ur',
     product: 'BBC News',

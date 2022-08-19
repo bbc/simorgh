@@ -117,6 +117,17 @@ export interface Translations {
     bbc_dari_radio?: OnDemandRadioTvTranslations;
     bbc_persian_tv?: OnDemandRadioTvTranslations;
     bbc_pidgin_radio?: OnDemandRadioTvTranslations;
+    bbc_sinhala_tv?: OnDemandRadioTvTranslations;
+    bbc_somali_radio?: OnDemandRadioTvTranslations;
+    bbc_somali_tv?: OnDemandRadioTvTranslations;
+    bbc_swahili_radio?: OnDemandRadioTvTranslations;
+    bbc_swahili_tv?: OnDemandRadioTvTranslations;
+    bbc_tamil_radio?: OnDemandRadioTvTranslations;
+    bbc_tamil_tv?: OnDemandRadioTvTranslations;
+    bbc_telugu_tv?: OnDemandRadioTvTranslations;
+    bbc_uzbek_radio?: OnDemandRadioTvTranslations;
+    bbc_uzbek_tv?: OnDemandRadioTvTranslations;
+    bbc_yoruba_radio?: OnDemandRadioTvTranslations;
     listen: string;
     watch: string;
     listenLive?: string;
@@ -133,8 +144,8 @@ export interface Translations {
     caption: {
       textPrefixVisuallyHidden: string;
       text: string;
-      articleText: string;
-      articleAdditionalText: string;
+      articleText?: string;
+      articleAdditionalText?: string;
     };
     fallback: {
       text: string;

@@ -31,8 +31,8 @@ export type UkrainianConfig = {
 export type ServiceConfig = {
   lang: string;
   articleAuthor: string;
-  articleTimestampPrefix: string;
-  articleTimestampSuffix: string;
+  articleTimestampPrefix?: string;
+  articleTimestampSuffix?: string;
   atiAnalyticsAppName: string;
   atiAnalyticsProducerId: string;
   chartbeatDomain: string;
@@ -94,7 +94,7 @@ export type ServiceConfig = {
   brandSVG: unknown;
   mostRead: MostRead;
   mostWatched: MostWatched;
-  radioSchedule: RadioSchedule;
+  radioSchedule?: RadioSchedule;
   recommendations?: Recommendations;
   footer: Footer;
   fonts?: unknown;

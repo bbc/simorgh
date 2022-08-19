@@ -9,6 +9,8 @@ import brandSVG from '../../chameleonLogos/zhongwen';
 import '#psammead/moment-timezone-include/tz/GMT';
 import 'moment/locale/zh-cn';
 import withContext from '../../../contexts/utils/withContext';
+import { ZhongwenConfig } from '../../../models/types/serviceConfig';
+import { Services } from '../../../models/types/global';
 
 const baseServiceConfig = {
   articleAuthor: `https://www.facebook.com/bbcworldservice/`,
@@ -24,7 +26,7 @@ const baseServiceConfig = {
   defaultImageAltText: 'BBC News 中文',
   dir: `ltr`,
   datetimeLocale: `zh-cn`,
-  service: 'zhongwen',
+  service: 'zhongwen' as Services,
   serviceName: 'News 中文',
   languageName: 'Chinese',
   themeColor: `${C_POSTBOX}`,
@@ -68,7 +70,7 @@ const baseServiceConfig = {
   timezone: 'GMT',
 };
 
-export const service = {
+export const service: ZhongwenConfig = {
   simp: {
     ...baseServiceConfig,
     externalLinkText: ', 外部',
