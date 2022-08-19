@@ -3,8 +3,8 @@ import React, { FC } from 'react';
 import Text from '../Text';
 
 interface Props {
-  className: string;
-  children: JSX.Element | JSX.Element[];
+  className?: string;
+  children: React.ReactNode;
   level: 1 | 2;
 }
 

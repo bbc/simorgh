@@ -23,8 +23,8 @@ import {
 
 interface Props<T extends React.ElementType> {
   as?: T;
-  className: string;
-  children: JSX.Element | JSX.Element[];
+  className?: string;
+  children: React.ReactNode;
   fontFamilyVariant?: 'primary' | 'secondary';
   size?:
     | 'atlas'
