@@ -57,7 +57,7 @@ const RUMLoader = Component => {
 
     const liveConfig = {
       applicationId: 'a6f74d21-ce3e-4773-a1ce-5f68eae84130',
-      sessionSampleRate: 0.00001,
+      sessionSampleRate: 0.01,
       identityPoolId: 'eu-west-1:adc4104d-a198-402d-9e00-1db021dacb71',
       guestRoleArn:
         'arn:aws:iam::923061562593:role/RUM-Monitor-eu-west-1-923061562593-2635993079561-Unauth',
