@@ -69,8 +69,7 @@ const repositionByline = (json: PageData) => {
 export default (json: PageData) => {
   try {
     const transformBylines = pipe(removeExtraBylines, repositionByline);
-    const tr = transformBylines(json);
-    return tr;
+    return transformBylines(json);
   } catch (error) {
     logger.error(BYLINE_TRANSFORMATION_FAILED, {
       id: json?.metadata?.id,
