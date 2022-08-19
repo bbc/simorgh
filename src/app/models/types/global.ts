@@ -66,13 +66,6 @@ export type ServicesWithNoVariants = {
   variant: 'default';
 };
 
-export type ServicesAndVariants =
-  | ServicesWithNoVariants
-  | SerbianService
-  | ChineseService
-  | UkrainianService
-  | ZhongwenService;
-
 export type Services =
   | ServicesWithNoVariants['service']
   | SerbianService['service']
