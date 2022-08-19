@@ -18,12 +18,14 @@ Here are some of the benefits of using the `css` prop:
 - Naming components using the `styled` API (e.g. `StyledWrapper`, `StyledDateTime`, `StyledSpan`) can be burdensome especially when applying small custom styles, such as altering margins or padding. This results in many components which lack the obvious semantic importance you get when using the actual HTML elements. Using the `css` prop avoids having to create and name React components for every element that needs styles.
 - Style reuse is easier because you can pass in an array of style objects to the css prop
 
-`css` prop with object styles
-
 **NB**
 To use Emotion's css prop in TypeScript components we will need to specify the JSX factory at the top of every file. This is because Simorgh currently uses React's old JSX transform. More information can be found here https://emotion.sh/docs/typescript#with-the-old-jsx-transform.
 
 Simorgh cannot currently use the new JSX transform because it is not supported in Opera Mini.
+
+**Usage**
+
+`css` prop with object styles
 
 ✅
 
