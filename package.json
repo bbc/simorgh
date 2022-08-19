@@ -119,7 +119,7 @@
     "jalaali-js": "1.1.5",
     "js-cookie": "3.0.1",
     "json5": "^2.1.3",
-    "lru-cache": "6.0.0",
+    "lru-cache": "7.7.1",
     "mkdirp": "1.0.0",
     "moment": "2.29.4",
     "moment-timezone": "0.5.26",
