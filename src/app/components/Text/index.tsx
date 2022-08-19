@@ -1,4 +1,4 @@
-import { ElementType, ComponentPropsWithoutRef } from 'react';
+import React, { ElementType, ComponentPropsWithoutRef } from 'react';
 import { Theme } from '@emotion/react';
 import {
   baseStyles,

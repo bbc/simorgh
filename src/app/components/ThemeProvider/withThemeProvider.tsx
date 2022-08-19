@@ -1,3 +1,4 @@
+import React from 'react';
 import { Global, ThemeProvider as EmotionThemeProvider } from '@emotion/react';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 

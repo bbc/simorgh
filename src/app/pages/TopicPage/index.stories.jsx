@@ -9,7 +9,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
 
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
-import fixture from '#data/pidgin/topics/c95y35941vrt.json';
+import fixture from '#data/mundo/topics/c1en6xwmpkvt.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import Page from './TopicPage';
 
@@ -37,10 +37,11 @@ const Component = ({ service, variant }) => {
                 pageData={{
                   title: fixture.data.title,
                   description: fixture.data.description,
+                  imageData: fixture.data.imageData,
                   images: fixture.data.images,
-                  promos: fixture.data.summaries,
-                  activePage: 1,
-                  pageCount: 99,
+                  curations: fixture.data.curations,
+                  activePage: null,
+                  pageCount: null,
                 }}
               />
             </MemoryRouter>

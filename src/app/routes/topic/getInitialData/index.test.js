@@ -8,15 +8,22 @@ const topicJSON = {
   data: {
     title: 'Donald Trump',
     description: 'Donald Trump articles',
-    summaries: [
+    curations: [
       {
-        title: 'Wetin happun for January 6 one year ago?',
-        type: 'article',
-        firstPublished: '2022-01-06T19:00:29.000Z',
-        imageUrl: 'mock-image-url',
-        link: 'mock-link',
-        imageAlt: 'mock-image-alt',
-        id: '54321',
+        summaries: [
+          {
+            title: 'Wetin happun for January 6 one year ago?',
+            type: 'article',
+            firstPublished: '2022-01-06T19:00:29.000Z',
+            imageUrl: 'mock-image-url',
+            link: 'mock-link',
+            imageAlt: 'mock-image-alt',
+            id: '54321',
+          },
+        ],
+        activePage: 1,
+        pageCount: 14,
+        variantTopicId: null,
       },
     ],
     activePage: 1,
@@ -40,19 +47,20 @@ describe('get initial data for topic', () => {
       getAgent,
       service: 'pidgin',
     });
+    const { curations } = pageData;
     expect(pageData.title).toEqual('Donald Trump');
     expect(pageData.description).toEqual('Donald Trump articles');
-    expect(pageData.promos[0].title).toEqual(
+    expect(curations[0].summaries[0].title).toEqual(
       'Wetin happun for January 6 one year ago?',
     );
-    expect(pageData.promos[0].type).toEqual('article');
-    expect(pageData.promos[0].firstPublished).toEqual(
+    expect(curations[0].summaries[0].type).toEqual('article');
+    expect(curations[0].summaries[0].firstPublished).toEqual(
       '2022-01-06T19:00:29.000Z',
     );
-    expect(pageData.promos[0].imageUrl).toEqual('mock-image-url');
-    expect(pageData.promos[0].link).toEqual('mock-link');
-    expect(pageData.promos[0].imageAlt).toEqual('mock-image-alt');
-    expect(pageData.promos[0].id).toEqual('54321');
+    expect(curations[0].summaries[0].imageUrl).toEqual('mock-image-url');
+    expect(curations[0].summaries[0].link).toEqual('mock-link');
+    expect(curations[0].summaries[0].imageAlt).toEqual('mock-image-alt');
+    expect(curations[0].summaries[0].id).toEqual('54321');
     expect(pageData.scriptSwitchId).toBeNull();
     expect(pageData.activePage).toEqual(1);
     expect(pageData.pageCount).toEqual(14);
