@@ -13,7 +13,7 @@ const swahiliTheme = {
   },
   typography: {
     script: latinScript,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: HELMET,
     },
     fontFaces: [],

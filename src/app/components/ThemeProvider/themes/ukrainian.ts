@@ -13,7 +13,7 @@ const ukrainianTheme = {
   },
   typography: {
     script: cyrillicScript,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: HELMET,
     },
     fontFaces: [],

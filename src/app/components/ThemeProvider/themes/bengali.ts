@@ -17,7 +17,7 @@ const bengaliTheme = {
   },
   typography: {
     script: bengaliScript,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: NOTO_SANS_BENGALI,
     },
     fontFaces: [NOTO_SERIF_BENGALI_BOLD, NOTO_SERIF_BENGALI_REGULAR],

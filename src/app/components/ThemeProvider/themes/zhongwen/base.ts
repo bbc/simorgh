@@ -12,7 +12,7 @@ const zhongwenTheme = {
   },
   typography: {
     script: noAscOrDescScript,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: HELVETICA_CHINESE,
     },
     fontFaces: [],

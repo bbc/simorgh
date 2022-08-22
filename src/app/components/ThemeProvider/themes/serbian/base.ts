@@ -10,7 +10,7 @@ const baseSerbianTheme = {
     BRAND_BORDER: POSTBOX_30,
   },
   typography: {
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: HELMET,
     },
     fontFaces: [],

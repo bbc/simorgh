@@ -13,7 +13,7 @@ const nepaliTheme = {
   },
   typography: {
     script: devanagariScript,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: ARIAL,
     },
     fontFaces: [],

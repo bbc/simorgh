@@ -19,7 +19,7 @@ const newsroundTheme = {
   },
   typography: {
     script: latinScript,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: REITH_SANS,
       secondary: REITH_SERIF,
     },

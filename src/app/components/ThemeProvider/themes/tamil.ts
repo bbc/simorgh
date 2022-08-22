@@ -17,7 +17,7 @@ const tamilTheme = {
   },
   typography: {
     script: tamilScript,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: NOTO_SANS_TAMIL,
     },
     fontFaces: [NOTO_SANS_TAMIL_BOLD, NOTO_SANS_TAMIL_REGULAR],

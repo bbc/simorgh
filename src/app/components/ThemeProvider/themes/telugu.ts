@@ -14,7 +14,7 @@ const teluguTheme = {
   },
   typography: {
     script: devanagariScript,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: MALLANA_NOTO_SANS_TELUGU,
     },
     fontFaces: [MALLANNA_REGULAR],

@@ -14,7 +14,7 @@ const arabicTheme = {
   },
   typography: {
     script: arabicScript,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: REITH_QALAM,
     },
     fontFaces: [REITH_QALAM_BOLD, REITH_QALAM_REGULAR],

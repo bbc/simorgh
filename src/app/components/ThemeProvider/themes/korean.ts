@@ -13,7 +13,7 @@ const koreanTheme = {
   },
   typography: {
     script: noAscOrDescScript,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: APPLE_SD_GOTHIC_PRO,
     },
     fontFaces: [],

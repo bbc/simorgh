@@ -13,7 +13,7 @@ const pidginTheme = {
   },
   typography: {
     script: latin,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: HELMET,
     },
     fontFaces: [],

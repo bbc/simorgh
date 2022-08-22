@@ -17,7 +17,7 @@ const amharicTheme = {
   },
   typography: {
     script: noAscOrDescScript,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: NOTO_SANS_ETHIOPIC,
     },
     fontFaces: [NOTO_SANS_ETHIOPIC_BOLD, NOTO_SANS_ETHIOPIC_REGULAR],

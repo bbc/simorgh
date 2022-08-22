@@ -13,7 +13,7 @@ const kyrgyzTheme = {
   },
   typography: {
     script: cyrillicScript,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: HELMET,
     },
     fontFaces: [],

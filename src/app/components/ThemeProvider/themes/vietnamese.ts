@@ -13,7 +13,7 @@ const vietnameseTheme = {
   },
   typography: {
     script: latinWithDiacriticsScript,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: HELMET,
     },
     fontFaces: [],

@@ -17,7 +17,7 @@ const sinhalaTheme = {
   },
   typography: {
     script: sinhaleseScript,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: NOTO_SANS_SINHALA,
     },
     fontFaces: [NOTO_SERIF_SINHALA_BOLD, NOTO_SERIF_SINHALA_REGULAR],

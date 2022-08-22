@@ -13,7 +13,7 @@ const hindiTheme = {
   },
   typography: {
     script: devanagariScript,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: ARIAL,
     },
     fontFaces: [],

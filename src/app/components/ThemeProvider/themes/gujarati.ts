@@ -13,7 +13,7 @@ const gujaratiTheme = {
   },
   typography: {
     script: devanagariScript,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: MUKTA_VAANI,
     },
     fontFaces: [],
