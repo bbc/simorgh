@@ -2,7 +2,7 @@ import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import MostReadContainer from '.';

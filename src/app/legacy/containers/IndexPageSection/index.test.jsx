@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as SectionLabel from '#psammead/psammead-section-label/src';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import IndexPageSection from '.';
 
 const group = {

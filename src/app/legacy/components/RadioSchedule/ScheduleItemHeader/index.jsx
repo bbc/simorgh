@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import { oneOfType, elementType, string, number } from 'prop-types';
-import { ServiceContext } from '#contexts/ServiceContext';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import detokenise from '#psammead/psammead-detokeniser/src';
@@ -15,6 +14,7 @@ import {
 import { getPica } from '#psammead/gel-foundations/src/typography';
 import { C_KINGFISHER } from '#psammead/psammead-styles/src/colours';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
+import { ServiceContext } from '../../../../contexts/ServiceContext';
 import durationDictionary, { programStateConfig } from '../utilities';
 
 const TitleWrapper = styled.span`

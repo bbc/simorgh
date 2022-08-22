@@ -2,9 +2,9 @@
 import React from 'react';
 import fetchMock from 'fetch-mock';
 import { render, act } from '@testing-library/react';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import AmpMostRead from '.';
 
 const MostReadAmpWithContext = ({
