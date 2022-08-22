@@ -21,7 +21,7 @@ Object.keys(config)
           const overrideSuffix = overrideRendererOnTest();
           const newPath = `${
             currentPath + overrideSuffix + (overrideSuffix ? '&' : '?')
-          }?page=1`;
+          }page=1`;
 
           visitPage(newPath, pageType);
         });
