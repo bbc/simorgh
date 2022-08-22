@@ -50,10 +50,13 @@ interface Props {
     | 'vietnamese'
     | 'yoruba'
     | 'zhongwen';
+  variant: '' | 'cyr' | 'lat' | 'simp' | 'trad';
 }
 
 const loadTheme = /* #__LOADABLE__ */ (props: Props) =>
-  import(`./themes/${props.service}`);
+  import(
+    `./themes/${props.service}${props.variant ? `/${props.variant}` : ''}`
+  );
 
 const ThemeProvider: LoadableComponent<Props> = loadable(loadTheme);
 

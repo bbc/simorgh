@@ -14,6 +14,7 @@ import FooterContainer from '#containers/Footer';
 import ManifestContainer from '#containers/Manifest';
 import ServiceWorkerContainer from '#containers/ServiceWorker';
 import { ServiceContext } from '../contexts/ServiceContext';
+import { RequestContext } from '../contexts/RequestContext';
 import ThemeProvider from '../components/ThemeProvider';
 
 const Wrapper = styled.div`
@@ -31,6 +32,7 @@ const Content = styled.div`
 
 const PageWrapper = ({ children, pageData, status }) => {
   const { service } = useContext(ServiceContext);
+  const { variant } = useContext(RequestContext);
   const isDarkMode = pathOr(false, ['darkMode'], pageData);
   const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
   const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);
@@ -40,7 +42,7 @@ const PageWrapper = ({ children, pageData, status }) => {
     : path(['metadata', 'type'], pageData);
 
   return (
-    <ThemeProvider service={service}>
+    <ThemeProvider service={service} variant={variant}>
       <GlobalStyles />
       <ServiceWorkerContainer />
       <ManifestContainer />
