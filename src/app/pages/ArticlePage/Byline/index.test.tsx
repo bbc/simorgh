@@ -1,5 +1,5 @@
 /* eslint-disable no-template-curly-in-string */
-import React, { ReactNode } from 'react';
+import React, { PropsWithChildren } from 'react';
 import { render, screen } from '@testing-library/react';
 import Byline from '.';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
@@ -13,10 +13,13 @@ import {
 interface Props {
   fixture: any;
   service: string;
-  children?: ReactNode;
 }
 
-const FixtureByline = ({ fixture, service, children }: Props) => {
+const FixtureByline = ({
+  fixture,
+  service,
+  children,
+}: PropsWithChildren<Props>) => {
   return (
     <ServiceContextProvider service={service}>
       <Byline blocks={fixture}>{children}</Byline>
