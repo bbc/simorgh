@@ -6,8 +6,8 @@ import {
   shouldMatchSnapshot,
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
-import { latin } from '#psammead/gel-foundations/src/scripts';
 import relatedItems from './relatedItems';
+import latin from '../../../../components/ThemeProvider/typography/scripts/latin';
 import IndexAlsosContainer from '.';
 
 const withServiceContext = component => (

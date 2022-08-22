@@ -4,13 +4,13 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
-import latinDiacritics from '#psammead/gel-foundations/src/scripts/latin-with-diacritics';
-import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
 import brandSVG from '#lib/chameleonLogos/serbian';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/sr-cyrl';
 import '#psammead/psammead-locales/moment/sr';
 import withContext from '../../../contexts/utils/withContext';
+import cyrillic from '../../../components/ThemeProvider/typography/scripts/cyrillic';
+import latinWithDiacritics from '../../../components/ThemeProvider/typography/scripts/latinWithDiacritics';
 
 const baseServiceConfig = {
   articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -65,7 +65,7 @@ export const service = {
       'https://www.bbc.com/serbian/lat/institutional-50173730#authorexpertise',
     publishingPrinciples:
       'https://www.bbc.com/serbian/lat/institutional-50173730',
-    script: latinDiacritics,
+    script: latinWithDiacritics,
     serviceLocalizedName: 'na srpskom',
     serviceName: 'News na srpskom',
     defaultImageAltText: 'BBC News na srpskom',
@@ -373,7 +373,7 @@ export const service = {
       'https://www.bbc.com/serbian/cyr/institutional-50173730#authorexpertise',
     publishingPrinciples:
       'https://www.bbc.com/serbian/cyr/institutional-50173730',
-    script: cyrillicAndLatin,
+    script: cyrillic,
     serviceLocalizedName: 'на српском',
     serviceName: 'News на српском',
     defaultImageAltText: 'ББЦ News на српском',

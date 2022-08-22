@@ -5,10 +5,10 @@ import {
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
 import brandSVG from '#lib/chameleonLogos/azeri';
-import latinDiacritics from '#psammead/gel-foundations/src/scripts/latin-with-diacritics';
 import '#psammead/moment-timezone-include/tz/Asia/Baku';
 import '#psammead/psammead-locales/moment/az';
 import withContext from '../../../contexts/utils/withContext';
+import latinWithDiacritics from '../../../components/ThemeProvider/typography/scripts/latinWithDiacritics';
 
 export const service = {
   default: {
@@ -45,7 +45,7 @@ export const service = {
       'https://www.bbc.com/azeri/institutional-49283479#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/azeri/institutional-49283479',
     isTrustProjectParticipant: true,
-    script: latinDiacritics,
+    script: latinWithDiacritics,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Xəbərlər, Qaynar Xəbərlər, Analiz, Video',

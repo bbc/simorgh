@@ -5,11 +5,11 @@ import {
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
 import brandSVG from '#lib/chameleonLogos/persian';
-import arabic from '#psammead/gel-foundations/src/scripts/arabic';
 import 'moment/locale/fa';
 import '#psammead/moment-timezone-include/tz/GMT';
 import jalaali from '#psammead/psammead-calendars/src';
 import withContext from '../../../contexts/utils/withContext';
+import arabic from '../../../components/ThemeProvider/typography/scripts/arabic';
 
 export const service = {
   default: {

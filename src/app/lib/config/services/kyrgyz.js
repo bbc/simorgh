@@ -4,11 +4,11 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
-import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
 import brandSVG from '#lib/chameleonLogos/kyrgyz';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ky';
 import withContext from '../../../contexts/utils/withContext';
+import cyrillic from '../../../components/ThemeProvider/typography/scripts/cyrillic';
 
 export const service = {
   default: {
@@ -45,7 +45,7 @@ export const service = {
       'https://www.bbc.com/kyrgyz/institutional-49677275#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/kyrgyz/institutional-49677275',
     isTrustProjectParticipant: true,
-    script: cyrillicAndLatin,
+    script: cyrillic,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео',

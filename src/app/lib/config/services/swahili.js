@@ -4,11 +4,11 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
-import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
 import brandSVG from '#lib/chameleonLogos/swahili';
 import '#psammead/moment-timezone-include/tz/Africa/Nairobi';
 import '#psammead/psammead-locales/moment/sw';
 import withContext from '../../../contexts/utils/withContext';
+import latin from '../../../components/ThemeProvider/typography/scripts/latin';
 
 export const service = {
   default: {
@@ -45,7 +45,7 @@ export const service = {
       'https://www.bbc.com/swahili/taasisi-49283417#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/swahili/taasisi-49283417',
     isTrustProjectParticipant: true,
-    script: cyrillicAndLatin,
+    script: latin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Swahili',

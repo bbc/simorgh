@@ -5,10 +5,10 @@ import {
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
 import brandSVG from '#lib/chameleonLogos/news';
-import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
 import '#psammead/psammead-locales/moment/en-gb';
 import '#psammead/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
+import latin from '../../../components/ThemeProvider/typography/scripts/latin';
 
 export const service = {
   default: {
@@ -42,7 +42,7 @@ export const service = {
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
     isTrustProjectParticipant: true,
-    script: cyrillicAndLatin,
+    script: latin,
     manifestPath: '/articles/manifest.json',
     frontPageTitle: 'Home',
     theming: {

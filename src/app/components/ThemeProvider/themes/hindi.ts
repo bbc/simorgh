@@ -1,5 +1,5 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import gurmukhiScript from '../typography/scripts/gurmukhi';
+import devanagariScript from '../typography/scripts/devanagari';
 import { ARIAL } from '../typography/fontFamilies';
 import withThemeProvider from '../withThemeProvider';
 
@@ -12,7 +12,7 @@ const hindiTheme = {
     BRAND_BORDER: POSTBOX_30,
   },
   typography: {
-    script: gurmukhiScript,
+    script: devanagariScript,
     fontFamilyVariants: {
       primary: ARIAL,
     },

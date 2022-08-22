@@ -28,7 +28,7 @@ module.exports = (on, config) => {
     // as your app's code
     webpackOptions: {
       resolve: {
-        extensions: ['.js', '.jsx'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
         alias: {
           ...webpackDirAlias,
         },

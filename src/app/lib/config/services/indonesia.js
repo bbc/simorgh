@@ -4,11 +4,11 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
-import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
 import brandSVG from '#lib/chameleonLogos/indonesian';
 import '#psammead/moment-timezone-include/tz/Asia/Jakarta';
 import 'moment/locale/id';
 import withContext from '../../../contexts/utils/withContext';
+import latin from '../../../components/ThemeProvider/typography/scripts/latin';
 
 export const service = {
   default: {
@@ -46,7 +46,7 @@ export const service = {
     publishingPrinciples:
       'https://www.bbc.com/indonesia/institutional-49283175',
     isTrustProjectParticipant: true,
-    script: cyrillicAndLatin,
+    script: latin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Berita',

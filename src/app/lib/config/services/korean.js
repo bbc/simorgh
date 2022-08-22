@@ -4,11 +4,11 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
-import noAscendersOrDescenders from '#psammead/gel-foundations/src/scripts/no-ascenders-or-descenders';
 import brandSVG from '#lib/chameleonLogos/korean';
 import '#psammead/moment-timezone-include/tz/Asia/Seoul';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/ko';
+import noAscendersOrDescenders from '../../../components/ThemeProvider/typography/scripts/noAscOrDesc';
 
 export const service = {
   default: {

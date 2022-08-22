@@ -4,11 +4,11 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
-import tamil from '#psammead/gel-foundations/src/scripts/tamil';
 import brandSVG from '#lib/chameleonLogos/tamil';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ta';
 import withContext from '../../../contexts/utils/withContext';
+import tamil from '../../../components/ThemeProvider/typography/scripts/tamil';
 
 export const service = {
   default: {

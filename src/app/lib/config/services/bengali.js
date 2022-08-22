@@ -4,11 +4,11 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
-import bengali from '#psammead/gel-foundations/src/scripts/bengali';
 import brandSVG from '#lib/chameleonLogos/bangla';
 import '#psammead/moment-timezone-include/tz/Asia/Dhaka';
 import '#psammead/psammead-locales/moment/bn';
 import withContext from '../../../contexts/utils/withContext';
+import bengali from '../../../components/ThemeProvider/typography/scripts/bengali';
 
 export const service = {
   default: {

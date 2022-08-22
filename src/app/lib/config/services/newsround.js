@@ -4,10 +4,10 @@ import {
   C_NEWSROUND_PURPLE_30,
 } from '#psammead/psammead-styles/src/colours';
 import { newsround as brandSVG } from '#psammead/psammead-assets/src/svgs';
-import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
 import '#psammead/psammead-locales/moment/en-gb';
 import '#psammead/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
+import latin from '../../../components/ThemeProvider/typography/scripts/latin';
 
 export const service = {
   default: {
@@ -39,7 +39,7 @@ export const service = {
     twitterCreator: '@BBCNewsround',
     twitterSite: '@BBCNewsround',
     isTrustProjectParticipant: false,
-    script: cyrillicAndLatin,
+    script: latin,
     manifestPath: '/articles/manifest.json',
     frontPageTitle: 'Home',
     theming: {

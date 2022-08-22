@@ -43,28 +43,6 @@ To allow the typography to be fully accessible and responsive, please note that 
 
 Our typography uses `rem` for font-size and line-height. The `rem` unit represents a size relative to the document root, so we use that for font-size, line-height and spacing for a consistent look-and-feel across the document. You can read our [detailed analysis of "REMs vs EMs for spacing"](https://github.com/bbc/psammead/tree/latest/documentation/Spacing-Units.md) for more information.
 
-### Script support
-
-The utility typography function (e.g. `getLongPrimer('arabic')`) receives a script argument which is an object with the different script GEL Types Sizes and returns the `font-sizes` and `line-heights` for the specific GEL Type (e.g. `Long Premier`).
-
-You can import the script doing `import { arabic } from '#psammead/gel-foundations/src/scripts`. By default you should import the `latin` script as found on the [GEL typography guidelines](https://www.bbc.co.uk/gel/guidelines/typography#type-sizes).
-
-In addition to Latin script defaults, Psammead supports typography for a number of other scripts. We have grouped the scripts that share similiar features as follows:
-
-<!-- prettier-ignore -->
-| Group Name                  | Services |             Rationale       |
-| --------------------------- | -------- | --------------------------- |
-| latin-and-cyrillic          | News, Hausa, Gahuza, Somali, Swahili, Igbo, Pidgin, Afaan Oromo, Yoruba, Azeri, Indonesia, Uzbek, Serbian, Russian, Ukrainian, Kyrgyz, Uzbek | The typography values for Latin and Cyrillic characters are identical |
-| latin-with-diacritics | Vietnamese, Mundo, Afrique, Brasil, Turkish | The diacritics make these values differ from Latin |
-| arabic                      | Arabic, Pashto, Persian, Urdu | Group as they use the Arabic alphabet |
-| no-ascenders-or-descenders  | Korean, Japanese, Zhongwen, Ukchina, Tigrinya, Amharic | Group all alphabets without ascenders or descenders. This could be implemented as chinese, korean, ethiopic | Hindi, Nepali, Gujarati, Punjabi, Marathi, Telugu | The typography values for Devanagari and Gurmukhi characters are identical |
-| devanagari-and-gurmukhi     |  Hindi, Nepali, Gujarati, Punjabi, Marathi, Telugu | The typography values for Devanagari and Gurmukhi characters are identical |
-| thai                        | Thai     | Bespoke to the Thai characters       |
-| bengali                     | Bengali  | Bespoke to the Bengal characters     |
-| burmese                     | Burmese  | Bespoke to the Burmese characters    |
-| sinhalese                   | Sinhala  | Bespoke to the Sinhalese characters  |
-| tamil                       | Tamil    | Bespoke to the Tamil characters      |
-
 ## Contributing
 
 When **adding** a new export to this utility package the [export tests](https://github.com/bbc/psammead/blob/5d7395fd60bd8d73796d5a23775b4b5b36db1445/packages/utilities/gel-foundations/index.test.jsx#L13-L59) also need to be updated. When **removing** an exisiting export from this utility package the [export tests](https://github.com/bbc/psammead/blob/5d7395fd60bd8d73796d5a23775b4b5b36db1445/packages/utilities/gel-foundations/index.test.jsx#L13-L59) need to be updated and the package version requires a major change (EG: 1.2.1 -> 2.0.0) as this would be considered a breaking change as functionality is being removed.

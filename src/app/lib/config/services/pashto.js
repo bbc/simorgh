@@ -4,12 +4,12 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
-import arabic from '#psammead/gel-foundations/src/scripts/arabic';
 import brandSVG from '#lib/chameleonLogos/pashto';
 import '#psammead/psammead-locales/moment/ps';
 import '#psammead/moment-timezone-include/tz/GMT';
 import jalaali from '#psammead/psammead-calendars/src';
 import withContext from '../../../contexts/utils/withContext';
+import arabic from '../../../components/ThemeProvider/typography/scripts/arabic';
 
 export const service = {
   default: {

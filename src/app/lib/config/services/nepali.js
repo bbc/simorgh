@@ -4,11 +4,11 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
-import devanagariAndGurmukhi from '#psammead/gel-foundations/src/scripts/devanagari-and-gurmukhi';
 import brandSVG from '#lib/chameleonLogos/nepali';
 import '#psammead/moment-timezone-include/tz/Asia/Kathmandu';
 import '#psammead/psammead-locales/moment/ne';
 import withContext from '../../../contexts/utils/withContext';
+import devanagari from '../../../components/ThemeProvider/typography/scripts/devanagari';
 
 export const service = {
   default: {
@@ -45,7 +45,7 @@ export const service = {
       'https://www.bbc.com/nepali/institutional-50318130#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/nepali/institutional-50318130',
     isTrustProjectParticipant: true,
-    script: devanagariAndGurmukhi,
+    script: devanagari,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'मुख पृष्ठ',

@@ -4,11 +4,11 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
-import sinhalese from '#psammead/gel-foundations/src/scripts/sinhalese';
 import brandSVG from '#lib/chameleonLogos/sinhala';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/si';
 import withContext from '../../../contexts/utils/withContext';
+import sinhalese from '../../../components/ThemeProvider/typography/scripts/sinhalese';
 
 export const service = {
   default: {
