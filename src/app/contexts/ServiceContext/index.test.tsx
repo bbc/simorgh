@@ -1,6 +1,9 @@
 import React, { useContext } from 'react';
 import { cleanup, render, act } from '@testing-library/react';
-import services from '#server/utilities/serviceConfigs';
+import { ServiceContext, ServiceContextProvider } from '.';
+import services from '../../../server/utilities/serviceConfigs';
+import { Services, Variants } from '../../models/types/global';
+import { Translations } from '../../models/types/translations';
 
 // Unmock service context which is mocked globally in jest-setup.js
 jest.unmock('./index');
@@ -14,11 +17,8 @@ describe('ServiceContextProvider', () => {
   });
 
   describe('should load hydrated service context', () => {
-    const testForServiceAndVariant = (service, variant) => {
+    const testForServiceAndVariant = (service: Services, variant: Variants) => {
       it(`should have a brand name for ${service} and variant ${variant}`, async () => {
-        // eslint-disable-next-line global-require
-        const { ServiceContext, ServiceContextProvider } = require('./index');
-
         const Component = () => {
           const { brandName } = useContext(ServiceContext);
 
@@ -33,31 +33,29 @@ describe('ServiceContextProvider', () => {
           variant: variant === 'default' ? null : variant,
         };
 
-        let container;
+        let container!: HTMLElement;
+
         await act(async () => {
-          container = await render(
+          container = render(
             <ServiceContextProvider {...serviceContextProps}>
               <Component />
             </ServiceContextProvider>,
           ).container;
         });
 
-        expect(container.firstChild.innerHTML).toEqual(
+        expect(container.firstChild?.textContent).toEqual(
           services[service][variant].brandName,
         );
       });
     };
 
     Object.keys(services).forEach(service => {
-      Object.keys(services[service]).forEach(variant =>
-        testForServiceAndVariant(service, variant),
+      Object.keys(services[service as Services]).forEach(variant =>
+        testForServiceAndVariant(service as Services, variant as Variants),
       );
     });
 
     it(`should return null for foobar service`, async () => {
-      // eslint-disable-next-line global-require
-      const { ServiceContext, ServiceContextProvider } = require('./index');
-
       const Component = () => {
         const { brandName } = useContext(ServiceContext);
 
@@ -65,6 +63,7 @@ describe('ServiceContextProvider', () => {
       };
 
       const { container } = render(
+        // @ts-expect-error test passing invalid service
         <ServiceContextProvider service="foobar">
           <Component />
         </ServiceContextProvider>,
@@ -79,7 +78,7 @@ describe('ServiceContextProvider', () => {
       {
         description:
           'should load russian translations for main body translations',
-        service: 'ukrainian',
+        service: 'ukrainian' as Services,
         variant: undefined,
         pageLang: 'ru',
         expectedTranslation: 'Читайте также',
@@ -88,7 +87,7 @@ describe('ServiceContextProvider', () => {
       {
         description:
           'should load ukrainian translations for secondary column translations',
-        service: 'ukrainian',
+        service: 'ukrainian' as Services,
         variant: undefined,
         pageLang: 'ru',
         expectedTranslation: 'Головне',
@@ -97,7 +96,7 @@ describe('ServiceContextProvider', () => {
       {
         description:
           'should load ukrainian translations for header/footer translations',
-        service: 'ukrainian',
+        service: 'ukrainian' as Services,
         variant: undefined,
         pageLang: 'ru',
         expectedTranslation: 'Розділи',
@@ -105,7 +104,7 @@ describe('ServiceContextProvider', () => {
       },
       {
         description: 'should load default ukrainian translations',
-        service: 'ukrainian',
+        service: 'ukrainian' as Services,
         variant: undefined,
         pageLang: 'uk',
         expectedTranslation: 'Головне',
@@ -120,24 +119,27 @@ describe('ServiceContextProvider', () => {
         assertionValue,
       }) => {
         it(description, async () => {
-          // eslint-disable-next-line global-require
-          const { ServiceContext, ServiceContextProvider } = require('./index');
-
           const Component = () => {
             const { translations } = useContext(ServiceContext);
 
-            return <span>{translations[assertionValue]}</span>;
+            return (
+              <span>{translations[assertionValue as keyof Translations]}</span>
+            );
           };
 
-          let container;
+          let container!: HTMLElement;
+
           await act(async () => {
-            container = await render(
+            container = render(
               <ServiceContextProvider service={service} pageLang={pageLang}>
                 <Component />
               </ServiceContextProvider>,
             ).container;
           });
-          expect(container.firstChild.innerHTML).toEqual(expectedTranslation);
+
+          expect(container.firstChild?.textContent).toEqual(
+            expectedTranslation,
+          );
         });
       },
     );

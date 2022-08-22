@@ -9,9 +9,10 @@ export const ServiceContext = createContext<ServiceConfig>({} as ServiceConfig);
 
 interface Props {
   service: Services;
-  variant?: Variants;
+  variant?: Variants | null;
   pageLang?: string;
 }
+
 export const ServiceContextProvider = ({
   children,
   service,

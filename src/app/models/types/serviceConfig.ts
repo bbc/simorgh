@@ -63,9 +63,7 @@ export type ServiceConfig = {
   noBylinesPolicy?: string | null;
   publishingPrinciples?: string | null;
   isTrustProjectParticipant: boolean;
-  script: {
-    [key: string]: unknown;
-  };
+  script: string;
   manifestPath: string;
   swPath?: string;
   frontPageTitle: string;
