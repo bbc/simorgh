@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { cleanup, render, act } from '@testing-library/react';
 import services from '#server/utilities/serviceConfigs';
 

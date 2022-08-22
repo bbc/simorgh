@@ -1,4 +1,4 @@
-import { useContext, Fragment } from 'react';
+import React, { useContext, Fragment } from 'react';
 import { arrayOf, shape, oneOf, number, string, oneOfType } from 'prop-types';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import pathOr from 'ramda/src/pathOr';

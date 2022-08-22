@@ -1,3 +1,4 @@
+import React from 'react';
 import Navigation from '#psammead/psammead-navigation/src';
 import { node, string, shape } from 'prop-types';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';

@@ -1,3 +1,5 @@
+import React from 'react';
+
 const height = 24.59;
 const width = 227.8954;
 const punjabi = {

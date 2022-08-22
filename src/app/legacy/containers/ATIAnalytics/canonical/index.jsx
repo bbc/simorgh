@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { string } from 'prop-types';
 import sendBeacon from '#lib/analyticsUtils/sendBeacon';
 

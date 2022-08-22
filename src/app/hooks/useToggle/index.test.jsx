@@ -1,4 +1,5 @@
 /* eslint react/prop-types: 0 */
+import React from 'react';
 import { renderHook, act } from '@testing-library/react-hooks';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import useToggle from '.';

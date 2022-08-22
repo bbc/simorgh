@@ -1,4 +1,5 @@
 /* eslint-disable no-alert */
+import React from 'react';
 import { text } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';

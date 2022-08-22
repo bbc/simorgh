@@ -1,8 +1,8 @@
+import React from 'react';
 import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';
 import dotenv from 'dotenv';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
-import getToggles from '#app/lib/utilities/getToggles/withCache';
 import defaultToggles from '#lib/config/toggles';
 import loggerMock from '#testHelpers/loggerMock';
 import {
@@ -24,6 +24,7 @@ dotenv.config({ path: './envConfig/local.env' });
 const path = require('path');
 const express = require('express');
 const server = require('./index').default;
+const getToggles = require('../app/lib/utilities/getToggles/withCache').default;
 
 const sendFileSpy = jest.spyOn(express.response, 'sendFile');
 

@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import when from 'ramda/src/when';
 import is from 'ramda/src/is';
 import { number, string, node, oneOfType } from 'prop-types';

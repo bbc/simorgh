@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { node, shape, bool, number } from 'prop-types';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
@@ -14,6 +14,7 @@ import FooterContainer from '#containers/Footer';
 import ManifestContainer from '#containers/Manifest';
 import ServiceWorkerContainer from '#containers/ServiceWorker';
 import { ServiceContext } from '../contexts/ServiceContext';
+import ThemeProvider from '../components/ThemeProvider';
 
 const Wrapper = styled.div`
   min-height: 100vh;
@@ -29,9 +30,8 @@ const Content = styled.div`
 `;
 
 const PageWrapper = ({ children, pageData, status }) => {
-  const { fonts: fontFunctions } = useContext(ServiceContext);
+  const { fonts: fontFunctions, service } = useContext(ServiceContext);
   const fonts = fontFunctions.map(getFonts => getFonts());
-
   const isDarkMode = pathOr(false, ['darkMode'], pageData);
   const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
   const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);
@@ -41,7 +41,7 @@ const PageWrapper = ({ children, pageData, status }) => {
     : path(['metadata', 'type'], pageData);
 
   return (
-    <>
+    <ThemeProvider service={service}>
       <GlobalStyles fonts={fonts} />
       <ServiceWorkerContainer />
       <ManifestContainer />
@@ -54,7 +54,7 @@ const PageWrapper = ({ children, pageData, status }) => {
         <Content>{children}</Content>
         <FooterContainer />
       </Wrapper>
-    </>
+    </ThemeProvider>
   );
 };
 

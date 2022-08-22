@@ -1,3 +1,4 @@
+import React from 'react';
 import { renderAppleItunesApp } from './utils';
 
 describe('Metadata utils', () => {

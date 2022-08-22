@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from '@emotion/styled';
 import { C_EBON } from '#psammead/psammead-styles/src/colours';
 import {

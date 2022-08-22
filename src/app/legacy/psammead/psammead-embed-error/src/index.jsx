@@ -1,3 +1,4 @@
+import React from 'react';
 import { string, bool, shape } from 'prop-types';
 import styled from '@emotion/styled';
 import {

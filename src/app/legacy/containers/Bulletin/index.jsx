@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { shape, bool, oneOfType } from 'prop-types';
 import Bulletin from '#psammead/psammead-bulletin/src';

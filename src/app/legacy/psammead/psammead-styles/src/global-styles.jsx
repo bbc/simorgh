@@ -1,3 +1,4 @@
+import React from 'react';
 import { Global, css } from '@emotion/react';
 import { arrayOf, string } from 'prop-types';
 

@@ -1,3 +1,4 @@
+import React from 'react';
 import path from 'ramda/src/path';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
