@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
-import React, { useContext } from 'react';
+import React, { useContext, ReactNode } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import VisuallyHiddenText from '../../../legacy/psammead/psammead-visually-hidden-text/src';
@@ -7,7 +7,7 @@ import { Author, JobRole, BylineList, LineBreak } from './index.styles';
 
 type Props = {
   blocks: any;
-  children?: JSX.Element;
+  children?: ReactNode;
 };
 
 const Byline = ({ blocks, children }: Props) => {

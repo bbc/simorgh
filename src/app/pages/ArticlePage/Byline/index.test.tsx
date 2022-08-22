@@ -1,5 +1,5 @@
 /* eslint-disable no-template-curly-in-string */
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { render, screen } from '@testing-library/react';
 import Byline from '.';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
@@ -13,7 +13,7 @@ import {
 interface Props {
   fixture: any;
   service: string;
-  children?: JSX.Element;
+  children?: ReactNode;
 }
 
 const FixtureByline = ({ fixture, service, children }: Props) => {
