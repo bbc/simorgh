@@ -19,8 +19,8 @@ jest.mock('../../cypress/support/config/services', () => ({
 }));
 jest.mock('fs');
 jest.mock('./bundleSizeConfig', () => ({
-  MIN_SIZE: 490,
-  MAX_SIZE: 583,
+  MIN_SIZE: 632,
+  MAX_SIZE: 728,
 }));
 
 const setUpFSMocks = (service1FileSize, service2FileSize) => {
@@ -29,6 +29,8 @@ const setUpFSMocks = (service1FileSize, service2FileSize) => {
       'modern.main-12345.js',
       'modern.service1-12345.12345.js',
       'modern.service2-12345.12345.js',
+      'modern.themes-service1.12345.js',
+      'modern.themes-service2.12345.js',
       'modern.1111-lib-1111.js',
       'modern.commons-1111.js',
       'modern.commons-2222.js',
@@ -140,7 +142,7 @@ describe('bundleSize', () => {
         "
 
         Results
-        MODERN service bundle sizes
+        MODERN service config bundle sizes
         ┌──────────────┬─────────────────────────────────┬────────────────────┬─────────────────┐
         │ Service name │ bundles                         │ Total size (Bytes) │ Total size (kB) │
         ├──────────────┼─────────────────────────────────┼────────────────────┼─────────────────┤
@@ -149,7 +151,24 @@ describe('bundleSize', () => {
         │ service2     │ service2-12345.12345.js (146kB) │ 150000             │ 146             │
         └──────────────┴─────────────────────────────────┴────────────────────┴─────────────────┘
 
-        MODERN service bundle sizes summary
+        MODERN service config bundle sizes summary
+        ┌─────────────────────────────────┬─────┐
+        │ Smallest total bundle size (kB) │ 142 │
+        ├─────────────────────────────────┼─────┤
+        │ Largest total bundle size (kB)  │ 146 │
+        ├─────────────────────────────────┼─────┤
+        │ Average total bundle size (kB)  │ 144 │
+        └─────────────────────────────────┴─────┘
+        MODERN service theme bundle sizes
+        ┌──────────────┬──────────────────────────────────┬────────────────────┬─────────────────┐
+        │ Service name │ bundles                          │ Total size (Bytes) │ Total size (kB) │
+        ├──────────────┼──────────────────────────────────┼────────────────────┼─────────────────┤
+        │ service1     │ themes-service1.12345.js (142kB) │ 145000             │ 142             │
+        ├──────────────┼──────────────────────────────────┼────────────────────┼─────────────────┤
+        │ service2     │ themes-service2.12345.js (146kB) │ 150000             │ 146             │
+        └──────────────┴──────────────────────────────────┴────────────────────┴─────────────────┘
+
+        MODERN service theme bundle sizes summary
         ┌─────────────────────────────────┬─────┐
         │ Smallest total bundle size (kB) │ 142 │
         ├─────────────────────────────────┼─────┤
@@ -213,11 +232,11 @@ describe('bundleSize', () => {
         │ Average total bundle size (kB)  │ 407 │
         └─────────────────────────────────┴─────┘
 
-        MODERN service + page bundle sizes summary
+        MODERN service config & theme + page bundle sizes summary
         ┌────────────────────────────────────────────────────────────────────┬─────┐
-        │ Smallest total bundle size (kB) (smallest service + smallest page) │ 495 │
+        │ Smallest total bundle size (kB) (smallest service + smallest page) │ 637 │
         ├────────────────────────────────────────────────────────────────────┼─────┤
-        │ Largest total bundle size (kB) (largest service + largest page)    │ 577 │
+        │ Largest total bundle size (kB) (largest service + largest page)    │ 723 │
         └────────────────────────────────────────────────────────────────────┴─────┘"
       `);
     });
@@ -264,7 +283,7 @@ describe('bundleSize', () => {
       });
 
       expect(global.console.error).toHaveBeenCalledWith(
-        "Bundle size for service1 FrontPage is too small at 355 kB. Please update thresholds in './scripts/bundleSize/bundleSizeConfig.js'",
+        "Bundle size for service1 FrontPage is too small at 357 kB. Please update thresholds in './scripts/bundleSize/bundleSizeConfig.js'",
       );
     });
   });
@@ -310,7 +329,7 @@ describe('bundleSize', () => {
       });
 
       expect(global.console.error).toHaveBeenCalledWith(
-        "Bundle size for service2 MostWatchedPage is too large at 592 kB. Please update thresholds in './scripts/bundleSize/bundleSizeConfig.js'",
+        "Bundle size for service2 MostWatchedPage is too large at 753 kB. Please update thresholds in './scripts/bundleSize/bundleSizeConfig.js'",
       );
     });
   });

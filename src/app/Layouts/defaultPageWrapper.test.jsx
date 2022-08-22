@@ -1,5 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render, act } from '@testing-library/react';
 import DefaultPageWrapper from './defaultPageWrapper';
 import { ServiceContextProvider } from '../contexts/ServiceContext';
 import { ToggleContext } from '../contexts/ToggleContext';
@@ -24,14 +24,21 @@ describe('defaultPageWrapper', () => {
     test: {},
   };
 
-  shouldMatchSnapshot(
-    'should render default page wrapper with children',
-    <ServiceContextProvider service="news">
-      <RequestContext.Provider value={{ env: 'test' }}>
-        <ToggleContext.Provider value={{ toggleState: defaultToggles }}>
-          <DefaultPageWrapper {...propsWithChildren} />,
-        </ToggleContext.Provider>
-      </RequestContext.Provider>
-    </ServiceContextProvider>,
-  );
+  it('should render default page wrapper with children', async () => {
+    let container;
+
+    await act(async () => {
+      ({ container } = await render(
+        <ServiceContextProvider service="news">
+          <RequestContext.Provider value={{ env: 'test' }}>
+            <ToggleContext.Provider value={{ toggleState: defaultToggles }}>
+              <DefaultPageWrapper {...propsWithChildren} />,
+            </ToggleContext.Provider>
+          </RequestContext.Provider>
+        </ServiceContextProvider>,
+      ));
+    });
+
+    expect(container).toMatchSnapshot();
+  });
 });
