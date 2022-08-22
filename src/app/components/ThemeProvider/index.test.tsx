@@ -27,7 +27,7 @@ describe('ThemeProvider', () => {
 
     await act(async () => {
       ({ container } = render(
-        <ThemeProvider service="news">
+        <ThemeProvider service="news" variant={null}>
           <Fixture />
         </ThemeProvider>,
       ));
