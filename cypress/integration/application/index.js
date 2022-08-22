@@ -2,6 +2,8 @@ import config from '../../support/config/services';
 import appConfig from '../../../src/server/utilities/serviceConfigs';
 import serviceHasPageType from '../../support/helpers/serviceHasPageType';
 import ampOnlyServices from '../../support/helpers/ampOnlyServices';
+import envConfig from '../../support/config/envs';
+import getPaths from '../../support/helpers/getPaths';
 
 const servicesUsingArticlePaths = ['news', 'scotland'];
 
@@ -33,6 +35,17 @@ describe('Application', () => {
             responseCode: 200,
             type: 'application/json',
           });
+        });
+        it(`should awaken fresh data for pages for later tests`, () => {
+          // Add more here if you want to awaken fresh data for other page types
+          if (serviceHasPageType(service, 'topicPage')) {
+            const paths = getPaths(service, 'topicPage');
+            paths.forEach(currentPath => {
+              const fullPath = `${envConfig.baseUrl}${currentPath}`;
+              cy.log(fullPath);
+              cy.visit(fullPath);
+            });
+          }
         });
       }
     });
