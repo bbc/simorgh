@@ -2,7 +2,7 @@ import {
   C_DARK_SALTIRE,
   C_WHITE,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-// import { scotland as brandSVG } from '../../../legacy/psammead/psammead-assets/src/svgs';
+import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/scotland';
 import cyrillicAndLatin from '../../../legacy/psammead/gel-foundations/src/scripts/latin-and-cyrillic';
 import {
   F_REITH_SANS_BOLD,
@@ -211,7 +211,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Duration',
       },
     },
-    brandSVG: null,
+    brandSVG,
     mostRead: {
       header: 'Most read',
       lastUpdated: 'Last updated:',

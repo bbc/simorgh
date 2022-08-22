@@ -3,7 +3,7 @@ import {
   C_WHITE,
   C_NEWSROUND_PURPLE_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-// import { newsround as brandSVG } from '../../../legacy/psammead/psammead-assets/src/svgs';
+import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/newsround';
 import cyrillicAndLatin from '../../../legacy/psammead/gel-foundations/src/scripts/latin-and-cyrillic';
 import {
   F_REITH_SANS_BOLD,
@@ -15,6 +15,7 @@ import '#psammead/psammead-locales/moment/en-gb';
 import '#psammead/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import { Services } from '../../../models/types/global';
 
 export const service: DefaultServiceConfig = {
   default: {
@@ -39,7 +40,7 @@ export const service: DefaultServiceConfig = {
     imageCopyrightOffscreenText: 'Image source, ',
     locale: 'en_GB',
     datetimeLocale: 'en-gb',
-    service: 'newsround',
+    service: 'newsround' as Services,
     serviceName: 'Newsround',
     languageName: 'English',
     themeColor: `${C_NEWSROUND_PURPLE}`,
@@ -212,7 +213,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Duration',
       },
     },
-    brandSVG: null,
+    brandSVG,
     mostRead: {
       header: 'Most read',
       lastUpdated: 'Last updated:',

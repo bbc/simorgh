@@ -12,7 +12,7 @@ import { Services } from '../../../../models/types/global';
 
 type Props = {
   service: Services;
-  script: string;
+  script: object;
 };
 
 export default styled.h2<Props>`

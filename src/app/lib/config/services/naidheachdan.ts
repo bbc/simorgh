@@ -1,4 +1,4 @@
-// import { naidheachdan as brandSVG } from '#psammead/psammead-assets/src/svgs';
+import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/naidheachdan';
 import {
   C_POSTBOX,
   C_WHITE,
@@ -223,7 +223,7 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'Prìomh Sgeulachdan',
       featuresAnalysisTitle: 'Sgeulachdan Aithriseach',
     },
-    brandSVG: null,
+    brandSVG,
     mostRead: {
       header: 'As motha leughte',
       lastUpdated: 'Air ùrachadh mu dheireadh:',
