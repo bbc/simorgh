@@ -62,14 +62,14 @@ const defaultServiceVariants: { [index: string]: any } = {
   zhongwen: 'simp',
 };
 
+const getPathToTheme = (props: Props) => {
+  const variant = props.variant || defaultServiceVariants[props.service];
+
+  return variant ? `${props.service}/${variant}` : props.service;
+};
+
 const loadTheme = /* #__LOADABLE__ */ (props: Props) =>
-  import(
-    `./themes/${props.service}${
-      props.variant
-        ? `/${props.variant}`
-        : `/${defaultServiceVariants[props.service]}` || ''
-    }`
-  );
+  import(`./themes/${getPathToTheme(props)}`);
 
 const ThemeProvider: LoadableComponent<Props> = loadable(loadTheme);
 
