@@ -431,7 +431,7 @@ exports[`AMP On Demand T V Page SEO OG url 1`] = `"http://localhost:7080/somali/
 
 exports[`AMP On Demand T V Page SEO Page title 1`] = `"Caawa Iyo Caalamka - BBC News Somali"`;
 
-exports[`AMP On Demand T V Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP On Demand T V Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP On Demand T V Page SEO Twitter card 1`] = `"summary_large_image"`;
 

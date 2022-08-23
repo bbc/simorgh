@@ -294,7 +294,7 @@ exports[`Canonical Front Page SEO OG url 1`] = `"http://localhost:7080/arabic"`;
 
 exports[`Canonical Front Page SEO Page title 1`] = `"الرئيسية - BBC News عربي"`;
 
-exports[`Canonical Front Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Front Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Front Page SEO Twitter card 1`] = `"summary_large_image"`;
 
@@ -365,7 +365,7 @@ exports[`Story Promo Headline should match text 1`] = `"المجلس العسك�
 exports[`Story Promo Image should match image 1`] = `
 <img
   alt="متظاهرون يحتفلون بالتوصل لاتفاق بين المجلس العسكري والمتظاهرين"
-  class="eehpdyc0 bbc-rb7xa0 e1enwo3v0"
+  class="e3vrtyk0 bbc-rb7xa0 e1mo64ex0"
   height="549"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg"
   width="976"

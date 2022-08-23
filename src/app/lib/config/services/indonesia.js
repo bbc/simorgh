@@ -3,10 +3,10 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
-import { indonesia as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/Asia/Jakarta';
+} from '#psammead/psammead-styles/src/colours';
+import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import brandSVG from '#lib/chameleonLogos/indonesian';
+import '#psammead/moment-timezone-include/tz/Asia/Jakarta';
 import 'moment/locale/id';
 import withContext from '../../../contexts/utils/withContext';
 
@@ -86,6 +86,8 @@ export const service = {
       ads: {
         advertisementLabel: 'Iklan',
       },
+      recommendationTitle: 'Artikel-artikel yang direkomendasikan',
+      splitRecommendationTitle: 'Artikel-artikel lainnya yang direkomendasikan',
       seeAll: 'Lihat semua',
       home: 'Berita',
       currentPage: 'Halaman saat ini',
@@ -248,6 +250,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Keterangan video, ',
           text: 'Peringatan: Konten pihak ketiga mungkin berisi iklan',
+          articleText:
+            'Peringatan: BBC tidak bertanggung jawab atas konten situs eksternal',
+          articleAdditionalText: 'Konten %provider_name% mungkin memuat iklan',
         },
         fallback: {
           text: 'Konten tidak tersedia',
@@ -287,7 +292,11 @@ export const service = {
       durationLabel: 'Durasi %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      hasStoryRecommendations: true,
+      skipLink: {
+        text: 'Lewatkan %title% dan terus membaca',
+        endTextVisuallyHidden: 'Akhir dari %title%',
+      },
     },
     footer: {
       trustProjectLink: {

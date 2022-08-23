@@ -2,7 +2,7 @@ import React from 'react';
 import * as server from 'react-dom/server';
 import { ChunkExtractor } from '@loadable/server';
 import renderDocument from '.';
-import { ServerApp } from '../../app/containers/App';
+import { ServerApp } from '../../app/legacy/containers/App';
 import DocumentComponent from './component';
 
 jest.mock('../utilities/getAssetOrigins', () => () => '__mock_asset_origins__');
@@ -17,7 +17,7 @@ jest.mock('@loadable/server', () => ({
 
 jest.mock('./component', () => jest.fn());
 
-jest.mock('../../app/containers/App', () => ({
+jest.mock('../../app/legacy/containers/App', () => ({
   ServerApp: jest.fn(),
 }));
 

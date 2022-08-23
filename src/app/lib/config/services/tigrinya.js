@@ -3,15 +3,15 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { noAscendersOrDescenders } from '@bbc/gel-foundations/scripts';
-import { tigrinya as brandSVG } from '@bbc/psammead-assets/svgs';
+} from '#psammead/psammead-styles/src/colours';
+import noAscendersOrDescenders from '#psammead/gel-foundations/src/scripts/no-ascenders-or-descenders';
+import brandSVG from '#lib/chameleonLogos/tigrinya';
 import {
   F_NOTO_SANS_ETHIOPIC_BOLD,
   F_NOTO_SANS_ETHIOPIC_REGULAR,
-} from '@bbc/psammead-styles/fonts';
-import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
-import '@bbc/psammead-locales/moment/ti';
+} from '#psammead/psammead-styles/src/fonts';
+import '#psammead/moment-timezone-include/tz/Africa/Addis_Ababa';
+import '#psammead/psammead-locales/moment/ti';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -222,6 +222,8 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'መግለጺ ቪድዮ፡, ',
           text: 'Warning: Third party content may contain adverts',
+          articleText: 'Warning: ቢቢሲ ኣብ ካልእ ገጻት ንዘሎ ሓበሬታ ሓላፍነት ኣይወስድን።',
+          articleAdditionalText: "ትሕዝቶ %provider_name% መወዓውዒታት ክህልዎ ይኽእል'ዩ።",
         },
         fallback: {
           text: 'Content is not available',

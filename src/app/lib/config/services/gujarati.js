@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { devanagariAndGurmukhi } from '@bbc/gel-foundations/scripts';
-import { gujarati as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
-import '@bbc/psammead-locales/moment/gu';
+} from '#psammead/psammead-styles/src/colours';
+import devanagariAndGurmukhi from '#psammead/gel-foundations/src/scripts/devanagari-and-gurmukhi';
+import brandSVG from '#lib/chameleonLogos/gujarati';
+import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
+import '#psammead/psammead-locales/moment/gu';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -231,6 +231,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'વીડિયો કૅપ્શન ',
           text: 'થર્ડ પાર્ટી કન્ટેટમાં જાહેરખબર હોય શકે છે',
+          articleText: 'બીબીસી બહારની સાઇટ્સના કન્ટેન્ટ માટે જવાબદાર નથી.',
+          articleAdditionalText:
+            '%provider_name% કન્ટેન્ટમાં જાહેરાત હોઈ શકે છે. ',
         },
         fallback: {
           text: 'આ કન્ટેન્ટ ઉપલબ્ધ નથી',

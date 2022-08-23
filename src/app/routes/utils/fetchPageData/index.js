@@ -13,7 +13,6 @@ import {
 } from '#lib/statusCodes.const';
 import { PRIMARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
 import onClient from '#lib/utilities/onClient';
-import isLive from '#lib/utilities/isLive';
 import getErrorStatusCode from './utils/getErrorStatusCode';
 import getUrl from './utils/getUrl';
 
@@ -37,10 +36,7 @@ const fetchPageData = async ({
   optHeaders,
   ...loggerArgs
 }) => {
-  const urlPath = path.startsWith('http') ? path : getUrl(path);
-
-  // TODO: Remove this once testing of routing Article pages through Belfrage is complete
-  const url = isLive() ? urlPath : urlPath.replace('new_articles', 'articles');
+  const url = path.startsWith('http') ? path : getUrl(path);
 
   const effectiveTimeout = timeout || PRIMARY_DATA_TIMEOUT;
   const fetchOptions = {

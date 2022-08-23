@@ -3,15 +3,19 @@ import { Helmet } from 'react-helmet';
 import { node, shape, bool, number } from 'prop-types';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import GlobalStyles from '@bbc/psammead-styles/global-styles';
+import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import styled from '@emotion/styled';
-import { C_GHOST, C_MIDNIGHT_BLACK } from '@bbc/psammead-styles/colours';
-import WebVitals from '#app/containers/WebVitals';
-import HeaderContainer from '../containers/Header';
-import FooterContainer from '../containers/Footer';
-import ManifestContainer from '../containers/Manifest';
-import ServiceWorkerContainer from '../containers/ServiceWorker';
+import {
+  C_GHOST,
+  C_MIDNIGHT_BLACK,
+} from '#psammead/psammead-styles/src/colours';
+import WebVitals from '#containers/WebVitals';
+import HeaderContainer from '#containers/Header';
+import FooterContainer from '#containers/Footer';
+import ManifestContainer from '#containers/Manifest';
+import ServiceWorkerContainer from '#containers/ServiceWorker';
 import { ServiceContext } from '../contexts/ServiceContext';
+import ThemeProvider from '../components/ThemeProvider';
 
 const Wrapper = styled.div`
   min-height: 100vh;
@@ -27,10 +31,11 @@ const Content = styled.div`
 `;
 
 const PageWrapper = ({ children, pageData, status }) => {
-  const { fonts: fontFunctions } = useContext(ServiceContext);
+  const { fonts: fontFunctions, service } = useContext(ServiceContext);
   const fonts = fontFunctions.map(getFonts => getFonts());
-
   const isDarkMode = pathOr(false, ['darkMode'], pageData);
+  const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
+  const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);
   const isErrorPage = [404, 500].includes(status);
   const pageType = isErrorPage
     ? 'WS-ERROR-PAGE'
@@ -104,7 +109,7 @@ const PageWrapper = ({ children, pageData, status }) => {
 
   return (
     <>
-      <Helmet
+<Helmet
         script={[{ 
     type: 'text/javascript', 
     innerHTML: `
@@ -138,16 +143,20 @@ const PageWrapper = ({ children, pageData, status }) => {
         head.appendChild(fontStylePlaceholder);`
           }]} 
       />
-      <GlobalStyles />
+      <ThemeProvider service={service}>
+      <GlobalStyles fonts={fonts} />
       <ServiceWorkerContainer />
       <ManifestContainer />
       <WebVitals pageType={pageType} />
       <Wrapper id="main-wrapper" darkMode={isDarkMode}>
-        <HeaderContainer />
+        <HeaderContainer
+          scriptSwitchId={scriptSwitchId}
+          renderScriptSwitch={renderScriptSwitch}
+        />
         <Content>{children}</Content>
         <FooterContainer />
       </Wrapper>
-    </>
+    </ThemeProvider>
   );
 };
 

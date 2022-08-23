@@ -3,20 +3,17 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { latinDiacritics } from '@bbc/gel-foundations/scripts';
+} from '#psammead/psammead-styles/src/colours';
+import latinDiacritics from '#psammead/gel-foundations/src/scripts/latin-with-diacritics';
 import {
   F_REITH_SANS_BOLD,
-  F_REITH_SANS_BOLD_ITALIC,
-  F_REITH_SANS_ITALIC,
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
-  F_REITH_SERIF_MEDIUM_ITALIC,
   F_REITH_SERIF_LIGHT,
-} from '@bbc/psammead-styles/fonts';
-import { portuguese as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/America/Sao_Paulo';
-import '@bbc/psammead-locales/moment/pt-br';
+} from '#psammead/psammead-styles/src/fonts';
+import brandSVG from '#lib/chameleonLogos/portuguese';
+import '#psammead/moment-timezone-include/tz/America/Sao_Paulo';
+import '#psammead/psammead-locales/moment/pt-br';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -98,7 +95,8 @@ export const service = {
       ads: {
         advertisementLabel: 'Publicidade',
       },
-      recommendationTitle: 'Talvez também te interesse',
+      recommendationTitle: 'Matérias recomendadas',
+      splitRecommendationTitle: 'Mais matérias recomendadas',
       seeAll: 'Ver todos',
       home: 'Início',
       currentPage: 'Página atual',
@@ -262,6 +260,10 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Legenda do vídeo, ',
           text: 'Alerta: Conteúdo de terceiros pode conter publicidade',
+          articleText:
+            'Alerta: A BBC não se responsabiliza pelo conteúdo de sites externos',
+          articleAdditionalText:
+            '%provider_name% conteúdo pode conter propaganda.',
         },
         fallback: {
           text: 'Conteúdo não disponível',
@@ -348,11 +350,8 @@ export const service = {
     },
     fonts: [
       F_REITH_SANS_BOLD,
-      F_REITH_SANS_BOLD_ITALIC,
-      F_REITH_SANS_ITALIC,
       F_REITH_SANS_REGULAR,
       F_REITH_SERIF_MEDIUM,
-      F_REITH_SERIF_MEDIUM_ITALIC,
       F_REITH_SERIF_LIGHT,
     ],
     timezone: 'America/Sao_Paulo',
@@ -391,7 +390,7 @@ export const service = {
       },
       {
         title: 'Vídeos',
-        url: '/portuguese/media/video',
+        url: '/portuguese/topics/c9y2j35dn2zt',
       },
     ],
   },

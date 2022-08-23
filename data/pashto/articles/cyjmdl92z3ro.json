@@ -187,6 +187,52 @@
           }
         },
         {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Hello but RTL",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Hello but RTL",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": " آر ایل لینک لري",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": " آر ایل لینک لري",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.bbc.co.uk/weather",
+                        "isExternal": false
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": ".",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
           "type": "video",
           "model": {
             "locator": "urn:bbc:pips:pid:p01kf9q4",
@@ -399,6 +445,461 @@
                       "model": {
                         "text": "دا د ازموینې مقاله رامینځته شوې ترڅو موږ وکولی شو په خپله ویب پا کې د اتومات پای څخه تر پایه ازموینې پرمخ یوسو.",
                         "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "links",
+          "model": {
+            "blocks": [
+              {
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:cps:curie:asset:0f35c912-afc7-1a4b-9518-7853401c1149",
+                  "blocks": [
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "هغه کاروبارونه چې د کورونا وېروس بحران کې یې ګټه ډېره شوې",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "هغه کاروبارونه چې د کورونا وېروس بحران کې یې ګټه ډېره شوې",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1024,
+                              "height": 576,
+                              "locator": "B935/test/_63731474_p01p5ql9.jpg",
+                              "originCode": "cpsdevpb",
+                              "copyrightHolder": "AFP",
+                              "suitableForSyndication": true
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "هغه کاروبارونه چې د کورونا وېروس بحران کې یې ګټه ډېره شوې",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "هغه کاروبارونه چې د کورونا وېروس بحران کې یې ګټه ډېره شوې",
+                                    "locator": "https://www.test.bbc.com/pidgin/media-23267821",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "هغه کاروبارونه چې د کورونا وېروس بحران کې یې ګټه ډېره شوې",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "aresLink",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "cpsLinkMetadata",
+                            "model": {
+                              "assetType": "MAP",
+                              "timestamp": 1581940273000
+                            }
+                          },
+                          {
+                            "type": "aresMedia",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "blockId": "urn:bbc:ares::clip:p01p5qfc",
+                                  "type": "aresMediaMetadata",
+                                  "model": {
+                                    "id": "p01p5qfc",
+                                    "subType": "clip",
+                                    "format": "audio_video",
+                                    "title": "هغه کاروبارونه چې د کورونا وېروس بحران کې یې ګټه ډېره شوې",
+                                    "synopses": {
+                                      "short": "هغه کاروبارونه چې د کورونا وېروس بحران کې یې ګټه ډېره شوې",
+                                      "long": "هغه کاروبارونه چې د کورونا وېروس بحران کې یې ګټه ډېره شوې",
+                                      "medium": "هغه کاروبارونه چې د کورونا وېروس بحران کې یې ګټه ډېره شوې"
+                                    },
+                                    "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01p5ql9.jpg",
+                                    "embedding": true,
+                                    "advertising": true,
+                                    "caption": "هغه کاروبارونه چې د کورونا وېروس بحران کې یې ګټه ډېره شوې",
+                                    "versions": [
+                                      {
+                                        "versionId": "p01p5qff",
+                                        "types": ["Original"],
+                                        "duration": 67,
+                                        "durationISO8601": "PT1M7S",
+                                        "warnings": {},
+                                        "availableTerritories": {
+                                          "uk": true,
+                                          "nonUk": true
+                                        },
+                                        "availableFrom": 1571751302000
+                                      }
+                                    ],
+                                    "syndication": {
+                                      "destinations": []
+                                    },
+                                    "smpKind": "programme"
+                                  }
+                                },
+                                {
+                                  "type": "image",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "rawImage",
+                                        "model": {
+                                          "width": 1920,
+                                          "height": 1080,
+                                          "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01p5ql9.jpg",
+                                          "originCode": "mpv"
+                                        }
+                                      },
+                                      {
+                                        "type": "altText",
+                                        "model": {
+                                          "blocks": [
+                                            {
+                                              "type": "text",
+                                              "model": {
+                                                "blocks": [
+                                                  {
+                                                    "type": "paragraph",
+                                                    "model": {
+                                                      "text": "هغه کاروبارونه چې د کورونا وېروس بحران کې یې ګټه ډېره شوې",
+                                                      "blocks": [
+                                                        {
+                                                          "type": "fragment",
+                                                          "model": {
+                                                            "text": "هغه کاروبارونه چې د کورونا وېروس بحران کې یې ګټه ډېره شوې",
+                                                            "attributes": []
+                                                          }
+                                                        }
+                                                      ]
+                                                    }
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:cps:curie:asset:800b4caf-3081-5047-ba3f-4f46a9344aae",
+                  "blocks": [
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "هغه کاروبارونه چې د کورونا وېروس بحران کې یې ګټه ډېره شوې",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "BBC MInute",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1024,
+                              "height": 576,
+                              "locator": "B7E8/test/_63708074_mediaitem63708073.png",
+                              "originCode": "cpsdevpb",
+                              "copyrightHolder": "BBC",
+                              "suitableForSyndication": true
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "هغه کاروبارونه چې د کورونا وېروس بحران کې یې ګټه ډېره شوې",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "هغه کاروبارونه چې د کورونا وېروس بحران کې یې ګټه ډېره شوې",
+                                    "locator": "https://www.test.bbc.com/pidgin/media-23147054",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "هغه کاروبارونه چې د کورونا وېروس بحران کې یې ګټه ډېره شوې",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "aresLink",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "cpsLinkMetadata",
+                            "model": {
+                              "assetType": "MAP",
+                              "timestamp": 1502963087000
+                            }
+                          },
+                          {
+                            "type": "aresMedia",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "blockId": "urn:bbc:ares::clip:p01cqycr",
+                                  "type": "aresMediaMetadata",
+                                  "model": {
+                                    "id": "p01cqycr",
+                                    "subType": "clip",
+                                    "format": "audio",
+                                    "title": "هغه کاروبارونه چې د کورونا وېروس بحران کې یې ګټه ډېره شوې",
+                                    "synopses": {
+                                      "short": "هغه کاروبارونه چې د کورونا وېروس بحران کې یې ګټه ډېره شوې",
+                                      "medium": "هغه کاروبارونه چې د کورونا وېروس بحران کې یې ګټه ډېره شوې",
+                                      "long": "هغه کاروبارونه چې د کورونا وېروس بحران کې یې ګټه ډېره شوې"
+                                    },
+                                    "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cqz13.jpg",
+                                    "embedding": false,
+                                    "advertising": true,
+                                    "versions": [
+                                      {
+                                        "versionId": "p01cqyct",
+                                        "types": ["Original"],
+                                        "duration": 15,
+                                        "durationISO8601": "PT15S",
+                                        "warnings": {},
+                                        "availableTerritories": {
+                                          "uk": true,
+                                          "nonUk": true
+                                        },
+                                        "availableFrom": 1502288512000
+                                      }
+                                    ],
+                                    "syndication": {
+                                      "destinations": []
+                                    },
+                                    "smpKind": "radioProgramme"
+                                  }
+                                },
+                                {
+                                  "type": "image",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "rawImage",
+                                        "model": {
+                                          "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01cqz13.jpg",
+                                          "originCode": "mpv"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:optimo:asset:cg9yj3x13m0o",
+                  "blocks": [
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "test",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "test",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 817,
+                              "height": 506,
+                              "locator": "02d2/test/935efae0-a125-11ec-a7c9-255f5459b217.png",
+                              "imageType": "background",
+                              "originCode": "cpsdevpb",
+                              "copyrightHolder": "BBC"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "هغه کاروبارونه چې د کورونا وېروس بحران کې یې ګټه ډېره شوې",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "هغه کاروبارونه چې د کورونا وېروس بحران کې یې ګټه ډېره شوې",
+                                    "locator": "https://www.test.bbc.com/pidgin/articles/cg9yj3x13m0o",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "هغه کاروبارونه چې د کورونا وېروس بحران کې یې ګټه ډېره شوې",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "aresLink",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "optimoLinkMetadata",
+                            "model": {
+                              "timestamp": 1622753625680
+                            }
+                          }
+                        ]
                       }
                     }
                   ]

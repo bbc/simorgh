@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { pidgin as brandSVG } from '@bbc/psammead-assets/svgs';
-import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
-import '@bbc/psammead-locales/moment/pcm';
-import '@bbc/moment-timezone-include/tz/Africa/Lagos';
+} from '#psammead/psammead-styles/src/colours';
+import brandSVG from '#lib/chameleonLogos/pidgin';
+import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import '#psammead/psammead-locales/moment/pcm';
+import '#psammead/moment-timezone-include/tz/Africa/Lagos';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -231,6 +231,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Wetin we call dis Video, ',
           text: 'Warning: Third party content may contain adverts',
+          articleText:
+            'Warning: Di BBC no dey responsible for di content of external sites.',
+          articleAdditionalText: '%provider_name% content fit contain adverts.',
         },
         fallback: {
           text: 'Content is not available',

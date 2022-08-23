@@ -9,6 +9,9 @@ on:
   push:
     branches:
       - latest
+permissions:
+  contents: read
+
 jobs:
   cypress-run:
     runs-on: ubuntu-latest

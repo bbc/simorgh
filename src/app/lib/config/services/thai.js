@@ -3,11 +3,11 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { thai } from '@bbc/gel-foundations/scripts';
-import { thai as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/Asia/Bangkok';
-import '@bbc/psammead-locales/moment/th';
+} from '#psammead/psammead-styles/src/colours';
+import thai from '#psammead/gel-foundations/src/scripts/thai';
+import brandSVG from '#lib/chameleonLogos/thai';
+import '#psammead/moment-timezone-include/tz/Asia/Bangkok';
+import '#psammead/psammead-locales/moment/th';
 import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
@@ -67,6 +67,8 @@ export const service = {
       ads: {
         advertisementLabel: 'โฆษณา',
       },
+      recommendationTitle: 'เรื่องแนะนำ',
+      splitRecommendationTitle: 'เรื่่องแนะนำอื่น ๆ',
       seeAll: 'ดูทั้งหมด',
       home: 'หน้าแรก',
       currentPage: 'หน้าปัจจุบัน',
@@ -225,6 +227,9 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'คำบรรยายวิดีโอ, ',
           text: 'คำเตือน:เนื้อหาภายนอกอาจมีโฆษณา',
+          articleText:
+            'คำเตือน: บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาที่มาจากภายนอก',
+          articleAdditionalText: 'เนื้อหาจาก %provider_name% อาจมีโฆษณา ',
         },
         fallback: {
           text: 'ไม่มีเนื้อหานี้',
@@ -291,7 +296,7 @@ export const service = {
       },
       {
         title: 'วิดีโอ',
-        url: '/thai/media/video',
+        url: '/thai/topics/c5ljd3jng4nt',
       },
       {
         title: 'ยอดนิยม',

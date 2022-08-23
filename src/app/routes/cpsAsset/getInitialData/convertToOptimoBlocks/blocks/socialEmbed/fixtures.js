@@ -79,6 +79,43 @@ export default {
           },
         },
       },
+      {
+        text: 'Instagram',
+        markupType: 'plain_text',
+        type: 'paragraph',
+      },
+      {
+        href: 'https://www.instagram.com/p/CgNAEjOK46_',
+        source: 'instagram',
+        type: 'social_embed',
+        id: 'CgNAEjOK46_',
+        embed: {
+          oembed: {
+            author_name: 'BBC News Turkce',
+            author_url: 'https://www.instagram.com/bbcturkce/',
+            cache_age: '3153600000',
+            title: 'İngiltere tarihi sıcaklıklarla boğuşuyor',
+            html: '<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/CgNAEjOK46_"><p><a href="https://www.instagram.com/p/CgNAEjOK46_" style="color:#000">© 2020 Instagram</a></p></blockquote> <script async src="https://www.instagram.com/embed.js"></script>',
+            width: 480,
+            height: 270,
+            type: 'rich',
+            provider_name: 'Instagram',
+            provider_url: 'https://www.instagram.com',
+            version: '1.0',
+          },
+          fallback_image: {
+            fallback_image_width: 500,
+            fallback_image_height: 269,
+            alt_text: 'İngiltere tarihi sıcaklıklarla boğuşuyor',
+          },
+        },
+      },
+      {
+        href: 'https://www.instagram.com/p/CgNAEjOK46_',
+        source: 'instagram',
+        type: 'social_embed',
+        id: 'CgNAEjOK46_',
+      },
     ],
   },
 };

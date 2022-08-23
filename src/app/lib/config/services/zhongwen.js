@@ -3,10 +3,10 @@ import {
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
-} from '@bbc/psammead-styles/colours';
-import { noAscendersOrDescenders } from '@bbc/gel-foundations/scripts';
-import { zhongwen as brandSVG } from '@bbc/psammead-assets/svgs';
-import '@bbc/moment-timezone-include/tz/GMT';
+} from '#psammead/psammead-styles/src/colours';
+import noAscendersOrDescenders from '#psammead/gel-foundations/src/scripts/no-ascenders-or-descenders';
+import brandSVG from '#lib/chameleonLogos/zhongwen';
+import '#psammead/moment-timezone-include/tz/GMT';
 import 'moment/locale/zh-cn';
 import withContext from '../../../contexts/utils/withContext';
 
@@ -333,6 +333,8 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: '视频加注文字，',
           text: '告知：第三方内容可能包含广告',
+          articleText: '告知: BBC 不对外来网站内容负责',
+          articleAdditionalText: '%provider_name% 内容可能含有广告',
         },
         fallback: {
           text: '无内容',
@@ -618,6 +620,8 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: '視頻加註文字，',
           text: '告知：協作方內容可能包含廣告',
+          articleText: '告知: BBC不對外來網站内容負責',
+          articleAdditionalText: '%provider_name% 内容可能包含廣告',
         },
         fallback: {
           text: '無內容',
