@@ -130,10 +130,20 @@ const injectDefaultCacheHeader = (req, res, next) => {
   next();
 };
 
+// Set Referrer-Policy
+const injectReferrerPolicyHeader = (req, res, next) => {
+  res.set('Referrer-Policy', 'no-referrer-when-downgrade');
+  next();
+};
+
 // Catch all for all routes
 server.get(
   '/*',
-  [injectCspHeaderProdBuild, injectDefaultCacheHeader],
+  [
+    injectCspHeaderProdBuild,
+    injectDefaultCacheHeader,
+    injectReferrerPolicyHeader,
+  ],
   async ({ url, query, headers, path: urlPath }, res) => {
     logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
       url,

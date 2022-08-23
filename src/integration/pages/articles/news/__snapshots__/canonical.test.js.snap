@@ -293,9 +293,9 @@ Object {
         "@type": "NewsMediaOrganization",
         "logo": Object {
           "@type": "ImageObject",
-          "height": 576,
-          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
-          "width": 1024,
+          "height": 16,
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/publisher-nx16.png",
+          "width": 103,
         },
         "name": "BBC News",
         "publishingPrinciples": "https://www.bbc.com/news/help-41670342",

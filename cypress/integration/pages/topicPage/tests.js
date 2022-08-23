@@ -28,7 +28,7 @@ export default ({ service, pageType, variant }) => {
 
       // Gets the topic page data for all the tests
       cy.request(
-        `https://web-cdn.api.bbci.co.uk/fd/simorgh-bff?id=${topicId}&service=${service}${appendVariant}`,
+        `https://web-cdn.api.bbci.co.uk/fd/simorgh-bff?page=1&id=${topicId}&service=${service}${appendVariant}`,
       ).then(({ body }) => {
         topicTitle = body.data.title;
         variantTopicId = body.data.variantTopicId;
