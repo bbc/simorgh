@@ -1411,6 +1411,12 @@ describe('Server HTTP Headers - Page Endpoints', () => {
       'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
     );
   });
+
+  it(`should set a Referrer-Policy header`, async () => {
+    const { header } = await makeRequest('/mundo');
+
+    expect(header['referrer-policy']).toBe('no-referrer-when-downgrade');
+  });
 });
 
 describe('Routing Information Logging', () => {
