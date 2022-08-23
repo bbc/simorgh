@@ -95,6 +95,7 @@ server
 server
   .get([articleSwPath, frontPageSwPath], (req, res) => {
     const swPath = `${__dirname}/public/sw.js`;
+    res.set('Cache-Control', 'public, stale-if-error=6000, stale-while-revalidate=300, max-age=300');
     res.sendFile(swPath, {}, error => {
       if (error) {
         logger.error(SERVICE_WORKER_SENDFILE_ERROR, { error });
