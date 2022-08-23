@@ -3,7 +3,7 @@ import React from 'react';
 import { boolean, withKnobs } from '@storybook/addon-knobs';
 import { CanonicalMediaPlayer, AmpMediaPlayer } from '.';
 import ampDecorator from '../../../../../.storybook/helpers/ampDecorator';
-// import notes from './README.md';
+import notes from './README.md';
 
 const withDuration = {
   duration: '2:30',
@@ -18,7 +18,7 @@ export default {
     chromatic: {
       diffThreshold: 0.2,
     },
-    // docs: { page: notes },
+    docs: { page: notes },
   },
   decorators: [withKnobs({ escapeHTML: false })],
 };
