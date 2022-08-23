@@ -4,7 +4,7 @@ export default {
   self: ({ spacings, palette }: Theme) =>
     css({
       backgroundColor: palette.WHITE,
-      padding: `${spacings.DOUBLE}rem`,
+      padding: `${spacings.QUADRUPLE}rem ${spacings.DOUBLE}rem`,
       minHeight: 280,
       display: 'flex',
       flexDirection: 'column',
@@ -12,20 +12,39 @@ export default {
       alignItems: 'flex-start',
     }),
 
-  heading: css({}),
-
-  textBody: ({ spacings }: Theme) =>
+  heading: ({ palette }: Theme) =>
     css({
+      color: palette.GREY_10,
+    }),
+
+  textBody: ({ spacings, palette }: Theme) =>
+    css({
+      color: palette.GREY_10,
       margin: `${spacings.DOUBLE}rem 0`,
+
+      a: {
+        color: 'inherit',
+
+        '&:hover, &:focus': {
+          color: palette.BRAND_BACKGROUND,
+        },
+      },
     }),
 
   button: ({ spacings, palette }: Theme) =>
     css({
-      color: palette.WHITE,
-      backgroundColor: palette.BRAND_BACKGROUND,
-      border: 'none',
+      color: palette.GREY_10,
+      backgroundColor: palette.WHITE,
+      border: `1px solid ${palette.PHILIPPINE_GREY}`,
+      borderRadius: 0,
       fontWeight: 'bold',
       padding: `${spacings.FULL}rem`,
       cursor: 'pointer',
+
+      '&:hover, &:focus': {
+        backgroundColor: palette.BRAND_BACKGROUND,
+        color: palette.WHITE,
+        border: `1px solid ${palette.BRAND_BACKGROUND}`,
+      },
     }),
 };
