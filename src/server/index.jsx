@@ -18,6 +18,7 @@ import {
 } from '#lib/logger.const';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { OK } from '#lib/statusCodes.const';
+import isLive from '../app/lib/utilities/isLive';
 import injectCspHeader from './utilities/cspHeader';
 import logResponseTime from './utilities/logResponseTime';
 import renderDocument from './Document';
@@ -127,6 +128,9 @@ const injectDefaultCacheHeader = (req, res, next) => {
     'cache-control',
     `public, stale-if-error=90, stale-while-revalidate=30, max-age=30`,
   );
+  if (!isLive()) {
+    res.set('Referrer-Policy', 'no-referrer-when-downgrade');
+  }
   next();
 };
 
