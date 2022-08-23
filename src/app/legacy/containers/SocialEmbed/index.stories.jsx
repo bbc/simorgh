@@ -1,6 +1,7 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import {
@@ -17,6 +18,7 @@ const Component = props =>
     isEnabled: true,
     isAmp: props.isAmp,
     service: props.service,
+    pageType: ARTICLE_PAGE,
   })(props);
 
 export default {
