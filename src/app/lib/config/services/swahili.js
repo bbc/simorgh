@@ -236,6 +236,8 @@ export const service = {
         caption: {
           textPrefixVisuallyHidden: 'Maelezo ya video, ',
           text: 'Onyo: Imetoka kwingine na inaweza kuwa na matangazo',
+          articleText: 'Onyo: BBC haihusiki na maudhui ya nje',
+          articleAdditionalText: 'Mitandao ya kijamii inaweza beba matangazo',
         },
         fallback: {
           text: 'Haipatikani tena',
@@ -321,6 +323,10 @@ export const service = {
       {
         title: 'Habari',
         url: '/swahili',
+      },
+      {
+        title: 'Uchaguzi Kenya',
+        url: '/swahili/habari-61042508',
       },
       {
         title: 'Michezo',

@@ -78,7 +78,6 @@ const getBaseConfig = BUNDLE_TYPE => ({
         use: [
           {
             loader: 'babel-loader',
-
             options: {
               envName: BUNDLE_TYPE,
               babelrc: true,
@@ -92,6 +91,7 @@ const getBaseConfig = BUNDLE_TYPE => ({
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         use: [
+          'babel-loader',
           {
             loader: 'ts-loader',
             options: {
