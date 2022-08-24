@@ -3,7 +3,15 @@ import React, { useContext, PropsWithChildren } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import VisuallyHiddenText from '../../../legacy/psammead/psammead-visually-hidden-text/src';
-import { Author, JobRole, BylineList, LineBreak } from './index.styles';
+import {
+  Author,
+  JobRole,
+  BylineList,
+  LineBreak,
+  AuthorChavron,
+  TwitterChavron,
+  TwitterLink,
+} from './index.styles';
 
 type Props = {
   blocks: any;
@@ -20,6 +28,9 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
 
   const authorBlock = bylineBlocks.find((block: any) => block.type === 'name');
   const jobRoleBlock = bylineBlocks.find((block: any) => block.type === 'role');
+  const twitterBlock = bylineBlocks.find((block: any) => block.type === 'link');
+
+  console.log(twitterBlock);
 
   const author = pathOr(
     '',
@@ -30,6 +41,28 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
     '',
     ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
     jobRoleBlock,
+  );
+  const twitterText = pathOr(
+    '',
+    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
+    twitterBlock,
+  );
+  const twitterLink = pathOr(
+    '',
+    [
+      'model',
+      'blocks',
+      0,
+      'model',
+      'blocks',
+      0,
+      'model',
+      'blocks',
+      0,
+      'model',
+      'locator',
+    ],
+    twitterBlock,
   );
 
   if (!(author && jobRole)) return null;
@@ -55,12 +88,22 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
       </VisuallyHiddenText>
       <BylineList role="list">
         <li>
-          <span role="text">
-            <VisuallyHiddenText>{`${authorTranslated}, `} </VisuallyHiddenText>
-            <Author script={script} service={service}>
-              {author}
-            </Author>
-          </span>
+          {twitterLink ? (
+            <a href={twitterLink}>
+              <VisuallyHiddenText>{`${authorTranslated}, `}</VisuallyHiddenText>
+              <Author script={script} service={service}>
+                {author}
+              </Author>
+              <AuthorChavron />
+            </a>
+          ) : (
+            <span role="text">
+              <VisuallyHiddenText>{`${authorTranslated}, `}</VisuallyHiddenText>
+              <Author script={script} service={service}>
+                {author}
+              </Author>
+            </span>
+          )}
         </li>
         <li>
           <span role="text">
@@ -70,6 +113,19 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
             </JobRole>
           </span>
         </li>
+        {twitterLink ? (
+          <li>
+            <a href={twitterLink}>
+              <span role="text">
+                <VisuallyHiddenText>{`Twitter, `} </VisuallyHiddenText>
+                <TwitterLink script={script} service={service}>
+                  {`@${twitterText}`}
+                </TwitterLink>
+                <TwitterChavron />
+              </span>
+            </a>
+          </li>
+        ) : null}
         <LineBreak aria-hidden />
         {children ? (
           <li>

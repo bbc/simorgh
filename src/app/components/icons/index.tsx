@@ -23,13 +23,14 @@ export const LeftChevron = () => (
   </svg>
 );
 
-export const RightChevron = () => (
+export const RightChevron = ({ className }: { className?: string }) => (
   <svg
     viewBox="0 0 32 32"
     focusable="false"
     aria-hidden="true"
     width="12"
     height="12"
+    className={className}
   >
     <path d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z" />
   </svg>

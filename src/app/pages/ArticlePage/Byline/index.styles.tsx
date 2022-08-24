@@ -7,9 +7,15 @@ import {
   C_GREY_6,
   C_GREY_10,
   C_GREY_5,
+  C_POSTBOX,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import { GEL_SPACING_DBL } from '../../../legacy/psammead/gel-foundations/src/spacings';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+  GEL_SPACING_HLF,
+} from '../../../legacy/psammead/gel-foundations/src/spacings';
 import { getSansBold } from '../../../legacy/psammead/psammead-styles/src/font-styles';
+import { RightChevron } from '../../../components/icons';
 
 interface Props {
   service: string;
@@ -39,4 +45,26 @@ export const LineBreak = styled.hr`
 export const BylineList = styled.ul`
   list-style: none;
   padding: 0;
+`;
+
+export const AuthorChavron = styled(RightChevron)`
+  vertical-align: middle;
+  margin: 0 ${GEL_SPACING_HLF};
+  color: ${C_GREY_10};
+  fill: currentColor;
+`;
+
+export const TwitterChavron = styled(RightChevron)`
+  vertical-align: middle;
+  margin: 0 ${GEL_SPACING_HLF};
+  color: ${C_POSTBOX};
+  fill: currentColor;
+  width: ${GEL_SPACING};
+  height: ${GEL_SPACING};
+`;
+
+export const TwitterLink = styled(JobRole)`
+  color: ${C_POSTBOX};
+  display: inline-block;
+  vertical-align: middle;
 `;
