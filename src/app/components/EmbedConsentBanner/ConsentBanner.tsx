@@ -33,12 +33,6 @@ type TranslationsProps = {
   };
 };
 
-type TranslationReturnProps = {
-  heading: string;
-  body: (string | false | JSX.Element)[] | string;
-  button: string;
-};
-
 const defaultTranslations: TranslationsProps['socialEmbed']['consentBanner'] = {
   heading: 'Allow YouTube content?',
   body: `This article contains content provided by YouTube.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Google's [link] cookie policy [/link] and [link] privacy policy [/link] before accepting. To view this content choose 'accept and continue'.`,
@@ -58,6 +52,12 @@ const getProviderName = (provider: SocialEmbedProviders) => {
     youtube: 'YouTube',
     facebook: 'Facebook',
   }[provider];
+};
+
+type TranslationReturnProps = {
+  heading: string;
+  body: (string | false | JSX.Element)[] | string;
+  button: string;
 };
 
 const getTranslations = (
