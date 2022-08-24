@@ -16,22 +16,40 @@ import {
 
 import consentBannerCss from './ConsentBanner.styles';
 
-interface ConsentBannerTranslationProps {
-  heading: string;
-  body: string;
-  cookiesUrl: {
-    [key in SocialEmbedProviders]?: string;
-  };
-  privacyUrl: {
-    [key in SocialEmbedProviders]?: string;
-  };
-}
-
-interface TranslationsProps {
+// TODO: Get these from the Global Translations types
+type TranslationsProps = {
   socialEmbed: {
-    consentBanner: ConsentBannerTranslationProps;
+    consentBanner: {
+      heading: string;
+      body: string;
+      button: string;
+      cookiesUrl: {
+        [key in SocialEmbedProviders]?: string;
+      };
+      privacyUrl: {
+        [key in SocialEmbedProviders]?: string;
+      };
+    };
   };
-}
+};
+
+type TranslationReturnProps = {
+  heading: string;
+  body: (string | false | JSX.Element)[] | string;
+  button: string;
+};
+
+const defaultTranslations: TranslationsProps['socialEmbed']['consentBanner'] = {
+  heading: 'Allow YouTube content?',
+  body: `This article contains content provided by YouTube.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Google's [link] cookie policy [/link] and [link] privacy policy [/link] before accepting. To view this content choose 'accept and continue'.`,
+  button: 'Accept and continue',
+  cookiesUrl: {
+    youtube: 'https://policies.google.com/technologies/cookies',
+  },
+  privacyUrl: {
+    youtube: 'https://policies.google.com/privacy',
+  },
+};
 
 const getProviderName = (provider: SocialEmbedProviders) => {
   return {
@@ -45,31 +63,46 @@ const getProviderName = (provider: SocialEmbedProviders) => {
 const getTranslations = (
   provider: SocialEmbedProviders,
   translations: TranslationsProps,
-) => {
-  const consentTranslations = pathOr<ConsentBannerTranslationProps>(
-    {
-      heading: 'Allow YouTube content?',
-      body: `This article contains content provided by YouTube.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Google's [link] cookie policy [/link] and [link] privacy policy [/link] before accepting. To view this content choose 'accept and continue'.`,
-      cookiesUrl: {
-        youtube: 'https://policies.google.com/technologies/cookies',
-      },
-      privacyUrl: {
-        youtube: 'https://policies.google.com/privacy',
-      },
-    },
-    ['socialEmbed', 'consentBanner'],
+): TranslationReturnProps => {
+  const headingTranslations = pathOr(
+    defaultTranslations.heading,
+    ['socialEmbed', 'consentBanner', 'heading'],
+    translations,
+  );
+
+  const bodyTranslations = pathOr(
+    defaultTranslations.body,
+    ['socialEmbed', 'consentBanner', 'body'],
+    translations,
+  );
+
+  const buttonTranslations = pathOr(
+    defaultTranslations.button,
+    ['socialEmbed', 'consentBanner', 'button'],
+    translations,
+  );
+
+  const cookiesUrl = pathOr(
+    defaultTranslations.cookiesUrl[provider],
+    ['socialEmbed', 'consentBanner', 'cookiesUrl', provider],
+    translations,
+  );
+
+  const privacyUrl = pathOr(
+    defaultTranslations.privacyUrl[provider],
+    ['socialEmbed', 'consentBanner', 'privacyUrl', provider],
     translations,
   );
 
   const providerName = getProviderName(provider);
   const providerNameDelimiter = '[social_media_site]';
 
-  const headerText = consentTranslations.heading?.replaceAll(
+  const headerText = headingTranslations.replaceAll(
     providerNameDelimiter,
     providerName,
   );
 
-  const bodyText = consentTranslations.body?.replaceAll(
+  const bodyText = bodyTranslations.replaceAll(
     providerNameDelimiter,
     providerName,
   );
@@ -81,16 +114,18 @@ const getTranslations = (
     return {
       heading: headerText,
       body: bodyText,
+      button: buttonTranslations,
     };
   }
 
   const linkHtmlElements = [
     linkTextElements.length > 0 && (
       <a
-        href={consentTranslations.cookiesUrl[provider]}
+        href={cookiesUrl}
+        aria-label={`externalLink-${cookiesUrl}`}
         target="_blank"
         rel="noreferrer"
-        key={consentTranslations.cookiesUrl[provider]}
+        key={cookiesUrl}
       >
         {linkTextElements[0]
           .replaceAll('[link]', '')
@@ -100,10 +135,11 @@ const getTranslations = (
     ),
     linkTextElements.length > 1 && (
       <a
-        href={consentTranslations.privacyUrl[provider]}
+        href={privacyUrl}
+        aria-label={`externalLink-${privacyUrl}`}
         target="_blank"
         rel="noreferrer"
-        key={consentTranslations.privacyUrl[provider]}
+        key={privacyUrl}
       >
         {linkTextElements[1]
           .replaceAll('[link]', '')
@@ -126,6 +162,7 @@ const getTranslations = (
   return {
     heading: headerText,
     body: bodyTextElements,
+    button: buttonTranslations,
   };
 };
 
@@ -177,7 +214,7 @@ const Content = ({ provider, clickHandler }: ConsentBannerContentProps) => {
         type="button"
         {...clickHandler}
       >
-        Accept and continue
+        {consentTranslations.button}
       </button>
     </div>
   );
