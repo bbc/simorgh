@@ -95,6 +95,10 @@ server
 server
   .get([articleSwPath, frontPageSwPath], (req, res) => {
     const swPath = `${__dirname}/public/sw.js`;
+    res.set(
+      `Cache-Control`,
+      `public, stale-if-error=6000, stale-while-revalidate=300, max-age=300`,
+    );
     res.sendFile(swPath, {}, error => {
       if (error) {
         logger.error(SERVICE_WORKER_SENDFILE_ERROR, { error });
@@ -130,10 +134,20 @@ const injectDefaultCacheHeader = (req, res, next) => {
   next();
 };
 
+// Set Referrer-Policy
+const injectReferrerPolicyHeader = (req, res, next) => {
+  res.set('Referrer-Policy', 'no-referrer-when-downgrade');
+  next();
+};
+
 // Catch all for all routes
 server.get(
   '/*',
-  [injectCspHeaderProdBuild, injectDefaultCacheHeader],
+  [
+    injectCspHeaderProdBuild,
+    injectDefaultCacheHeader,
+    injectReferrerPolicyHeader,
+  ],
   async ({ url, query, headers, path: urlPath }, res) => {
     logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
       url,

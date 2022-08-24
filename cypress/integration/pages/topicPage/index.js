@@ -1,4 +1,3 @@
-import { v4 as uuid } from 'uuid';
 import config from '../../../support/config/services';
 import getPaths from '../../../support/helpers/getPaths';
 import serviceHasPageType from '../../../support/helpers/serviceHasPageType';
@@ -22,7 +21,7 @@ Object.keys(config)
           const overrideSuffix = overrideRendererOnTest();
           const newPath = `${
             currentPath + overrideSuffix + (overrideSuffix ? '&' : '?')
-          }id=${uuid()}`;
+          }page=1`;
 
           visitPage(newPath, pageType);
         });
