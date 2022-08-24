@@ -1,6 +1,7 @@
 import { PropsWithChildren } from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, act, fireEvent } from '@testing-library/react';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import ThemeProvider from '../ThemeProvider';
 
 import ConsentBanner from './ConsentBanner';
 
@@ -20,21 +21,27 @@ const WithContext = ({
   children,
   service,
 }: PropsWithChildren<ContextProps>) => (
-  <ServiceContextProvider service={service}>
-    {children as JSX.Element}
-  </ServiceContextProvider>
+  <ThemeProvider service={service}>
+    <ServiceContextProvider service={service}>
+      {children as JSX.Element}
+    </ServiceContextProvider>
+  </ThemeProvider>
 );
 
 describe('Embed Consent Banner', () => {
-  it('should render a consent banner with correct content for Mundo service', () => {
-    const { getByTestId } = render(
-      <WithContext service="mundo">
-        <ConsentBanner
-          provider="youtube"
-          clickHandler={mockCanonicalClickHandler}
-        />
-      </WithContext>,
-    );
+  it('should render a consent banner with correct content for Mundo service', async () => {
+    let getByTestId!: (id: string) => HTMLElement;
+
+    await act(async () => {
+      ({ getByTestId } = render(
+        <WithContext service="mundo">
+          <ConsentBanner
+            provider="youtube"
+            clickHandler={mockCanonicalClickHandler}
+          />
+        </WithContext>,
+      ));
+    });
 
     const heading = getByTestId('banner-heading');
     const body = getByTestId('banner-body');
@@ -45,29 +52,38 @@ describe('Embed Consent Banner', () => {
     );
   });
 
-  it('should render a consent banner with correct amount of anchor tags for Mundo service', () => {
-    const { container } = render(
-      <WithContext service="mundo">
-        <ConsentBanner
-          provider="youtube"
-          clickHandler={mockCanonicalClickHandler}
-        />
-      </WithContext>,
-    );
+  it('should render a consent banner with correct amount of anchor tags for Mundo service', async () => {
+    let container!: HTMLElement;
+
+    await act(async () => {
+      ({ container } = render(
+        <WithContext service="mundo">
+          <ConsentBanner
+            provider="youtube"
+            clickHandler={mockCanonicalClickHandler}
+          />
+        </WithContext>,
+      ));
+    });
+
     const anchorTags = container.querySelectorAll('a');
 
     expect(anchorTags.length).toBe(2);
   });
 
-  it('should render a consent banner with default content for a service with no translations', () => {
-    const { getByTestId } = render(
-      <WithContext service="archive">
-        <ConsentBanner
-          provider="youtube"
-          clickHandler={mockCanonicalClickHandler}
-        />
-      </WithContext>,
-    );
+  it('should render a consent banner with default content for a service with no translations', async () => {
+    let getByTestId!: (id: string) => HTMLElement;
+
+    await act(async () => {
+      ({ getByTestId } = render(
+        <WithContext service="archive">
+          <ConsentBanner
+            provider="youtube"
+            clickHandler={mockCanonicalClickHandler}
+          />
+        </WithContext>,
+      ));
+    });
 
     const heading = getByTestId('banner-heading');
     const body = getByTestId('banner-body');
@@ -78,15 +94,19 @@ describe('Embed Consent Banner', () => {
     );
   });
 
-  it('should trigger "onClick" event when banner button is clicked in canonical', () => {
-    const { getByTestId } = render(
-      <WithContext service="mundo">
-        <ConsentBanner
-          provider="youtube"
-          clickHandler={mockCanonicalClickHandler}
-        />
-      </WithContext>,
-    );
+  it('should trigger "onClick" event when banner button is clicked in canonical', async () => {
+    let getByTestId!: (id: string) => HTMLElement;
+
+    await act(async () => {
+      ({ getByTestId } = render(
+        <WithContext service="mundo">
+          <ConsentBanner
+            provider="youtube"
+            clickHandler={mockCanonicalClickHandler}
+          />
+        </WithContext>,
+      ));
+    });
 
     const button = getByTestId('banner-button');
 
@@ -95,12 +115,19 @@ describe('Embed Consent Banner', () => {
     expect(mockCanonicalClickHandler.onClick).toHaveBeenCalledTimes(1);
   });
 
-  it('should render AMP "on" action when passed AMP action handler', () => {
-    const { getByTestId } = render(
-      <WithContext service="mundo">
-        <ConsentBanner provider="youtube" clickHandler={mockAmpClickHandler} />
-      </WithContext>,
-    );
+  it('should render AMP "on" action when passed AMP action handler', async () => {
+    let getByTestId!: (id: string) => HTMLElement;
+
+    await act(async () => {
+      ({ getByTestId } = render(
+        <WithContext service="mundo">
+          <ConsentBanner
+            provider="youtube"
+            clickHandler={mockAmpClickHandler}
+          />
+        </WithContext>,
+      ));
+    });
 
     const button = getByTestId('banner-button');
 
