@@ -5,6 +5,7 @@ import ThemeProvider from '../ThemeProvider';
 
 import ConsentBanner from './ConsentBanner';
 
+// TODO: Get service from Global types
 interface ContextProps {
   service?: string;
 }

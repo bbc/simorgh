@@ -190,7 +190,11 @@ const ConsentBanner = ({
   const consentTranslations = getTranslations(provider, translations);
 
   return (
-    <div id="consentBanner" css={consentBannerCss.self}>
+    <div
+      data-testid="consentBanner"
+      id="consentBanner"
+      css={consentBannerCss.self}
+    >
       <strong
         data-testid="banner-heading"
         css={[
