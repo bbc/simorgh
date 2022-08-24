@@ -177,7 +177,10 @@ interface ConsentBannerContentProps {
       };
 }
 
-const Content = ({ provider, clickHandler }: ConsentBannerContentProps) => {
+const ConsentBanner = ({
+  provider,
+  clickHandler,
+}: ConsentBannerContentProps) => {
   const { service, script, translations } = useContext(ServiceContext) as {
     script: string;
     service: string;
@@ -191,6 +194,7 @@ const Content = ({ provider, clickHandler }: ConsentBannerContentProps) => {
       <strong
         data-testid="banner-heading"
         css={[
+          // TODO: Remove custom font functions and use theme
           consentBannerCss.heading,
           getSansBold(service),
           getGreatPrimer(script),
@@ -201,6 +205,7 @@ const Content = ({ provider, clickHandler }: ConsentBannerContentProps) => {
       <p
         data-testid="banner-body"
         css={[
+          // TODO: Remove custom font functions and use theme
           consentBannerCss.textBody,
           getSansRegular(service),
           getBodyCopy(script),
@@ -210,7 +215,12 @@ const Content = ({ provider, clickHandler }: ConsentBannerContentProps) => {
       </p>
       <button
         data-testid="banner-button"
-        css={[consentBannerCss.button, getSansBold(service), getPica(script)]}
+        css={[
+          // TODO: Remove custom font functions and use theme
+          consentBannerCss.button,
+          getSansBold(service),
+          getPica(script),
+        ]}
         type="button"
         {...clickHandler}
       >
@@ -220,4 +230,4 @@ const Content = ({ provider, clickHandler }: ConsentBannerContentProps) => {
   );
 };
 
-export default Content;
+export default ConsentBanner;
