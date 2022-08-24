@@ -11,6 +11,7 @@ import {
   AuthorChavron,
   TwitterChavron,
   TwitterLink,
+  ParentSpan,
 } from './index.styles';
 
 type Props = {
@@ -116,13 +117,13 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
         {twitterLink ? (
           <li>
             <a href={twitterLink}>
-              <span role="text">
+              <ParentSpan role="text">
                 <VisuallyHiddenText>{`Twitter, `} </VisuallyHiddenText>
                 <TwitterLink script={script} service={service}>
                   {`@${twitterText}`}
                 </TwitterLink>
                 <TwitterChavron />
-              </span>
+              </ParentSpan>
             </a>
           </li>
         ) : null}

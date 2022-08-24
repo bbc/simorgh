@@ -64,7 +64,35 @@ export const TwitterChavron = styled(RightChevron)`
 `;
 
 export const TwitterLink = styled(JobRole)`
+  position: static;
   color: ${C_POSTBOX};
   display: inline-block;
   vertical-align: middle;
+
+  text-decoration: none;
+  overflow-wrap: anywhere;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:before {
+    bottom: 0;
+    content: '';
+    left: 0;
+    overflow: hidden;
+    right: 0;
+    top: 0;
+    position: absolute;
+    white-space: nowrap;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 2rem;
+  }
+`;
+
+export const ParentSpan = styled.span`
+  position: relative;
 `;
