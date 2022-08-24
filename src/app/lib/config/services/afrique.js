@@ -4,11 +4,11 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
-import latinDiacritics from '#psammead/gel-foundations/src/scripts/latin-with-diacritics';
 import brandSVG from '#lib/chameleonLogos/afrique';
 import '#psammead/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/fr';
+import latinWithDiacritics from '../../../components/ThemeProvider/typography/scripts/latinWithDiacritics';
 
 export const service = {
   default: {
@@ -46,7 +46,7 @@ export const service = {
     publishingPrinciples:
       'https://www.bbc.com/afrique/institutionelles-49283281',
     isTrustProjectParticipant: true,
-    script: latinDiacritics,
+    script: latinWithDiacritics,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Accueil',

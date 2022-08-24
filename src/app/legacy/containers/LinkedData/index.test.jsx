@@ -129,6 +129,20 @@ describe('LinkedData', () => {
     </Context>,
   );
 
+  shouldMatchSnapshot(
+    'should correctly render publisherLogo for news',
+    <Context>
+      <LinkedData {...propsForArticle} />
+    </Context>,
+  );
+
+  shouldMatchSnapshot(
+    'should correctly render publisherLogo for non-news services',
+    <Context service="mundo">
+      <LinkedData {...propsForArticle} />
+    </Context>,
+  );
+
   describe('showAuthor', () => {
     const articleProps = assocPath(['showAuthor'], false, propsForArticle);
     it('should default to false', () => {

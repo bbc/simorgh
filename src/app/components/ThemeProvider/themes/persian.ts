@@ -14,7 +14,7 @@ const persianTheme = {
   },
   typography: {
     script: arabicScript,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: REITH_QALAM,
     },
     fontFaces: [REITH_QALAM_REGULAR, REITH_QALAM_BOLD],

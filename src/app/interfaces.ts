@@ -90,7 +90,7 @@ export interface Typography {
       fontDisplay: string;
     };
   }[];
-  fontFamilyVariants: {
+  fontFamilies: {
     primary: string;
     secondary?: string;
   };

@@ -13,7 +13,7 @@ const japaneseTheme = {
   },
   typography: {
     script: noAscOrDescScript,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: HIRAGINO_KAGU_GOTHIC_PRO,
     },
     fontFaces: [],

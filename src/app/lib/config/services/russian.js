@@ -4,11 +4,11 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
-import cyrillicAndLatin from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
 import brandSVG from '#lib/chameleonLogos/russian';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ru';
 import withContext from '../../../contexts/utils/withContext';
+import cyrillic from '../../../components/ThemeProvider/typography/scripts/cyrillic';
 
 // Translations used in the header and footer elements of the page
 const headerFooterTranslations = {
@@ -260,7 +260,7 @@ export const service = {
       'https://www.bbc.com/russian/institutional-50098149#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/russian/institutional-50098149',
     isTrustProjectParticipant: true,
-    script: cyrillicAndLatin,
+    script: cyrillic,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Главная',

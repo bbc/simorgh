@@ -13,7 +13,7 @@ const punjabiTheme = {
   },
   typography: {
     script: gurmukhiScript,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: NOTO_SANS_GURMUKHI,
     },
     fontFaces: [],

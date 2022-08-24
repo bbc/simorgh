@@ -18,7 +18,7 @@ const naidheachdanTheme = {
   },
   typography: {
     script: latinWithDiacriticsScript,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: REITH_SANS,
       secondary: REITH_SERIF,
     },

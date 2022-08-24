@@ -1,5 +1,5 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import gurmukhiScript from '../typography/scripts/gurmukhi';
+import devanagariScript from '../typography/scripts/devanagari';
 import { MUKTA_VAANI } from '../typography/fontFamilies';
 import withThemeProvider from '../withThemeProvider';
 
@@ -12,8 +12,8 @@ const gujaratiTheme = {
     BRAND_BORDER: POSTBOX_30,
   },
   typography: {
-    script: gurmukhiScript,
-    fontFamilyVariants: {
+    script: devanagariScript,
+    fontFamilies: {
       primary: MUKTA_VAANI,
     },
     fontFaces: [],

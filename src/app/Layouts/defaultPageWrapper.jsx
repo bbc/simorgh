@@ -30,7 +30,7 @@ const Content = styled.div`
 `;
 
 const PageWrapper = ({ children, pageData, status }) => {
-  const { service } = useContext(ServiceContext);
+  const { service, variant } = useContext(ServiceContext);
   const isDarkMode = pathOr(false, ['darkMode'], pageData);
   const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
   const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);
@@ -40,7 +40,7 @@ const PageWrapper = ({ children, pageData, status }) => {
     : path(['metadata', 'type'], pageData);
 
   return (
-    <ThemeProvider service={service}>
+    <ThemeProvider service={service} variant={variant}>
       <GlobalStyles />
       <ServiceWorkerContainer />
       <ManifestContainer />

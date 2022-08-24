@@ -3,8 +3,8 @@ import { render } from '@testing-library/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
-import { latinDiacritics } from '#psammead/gel-foundations/src/scripts';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import latinDiacritics from '../../../../components/ThemeProvider/typography/scripts/latinWithDiacritics';
 import AmpAd, { AMP_ACCESS_FETCH } from './index';
 
 const adJsonAttributes = slotType => ({

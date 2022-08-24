@@ -2,8 +2,9 @@
 import { boolean } from '@storybook/addon-knobs';
 import React from 'react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { arabic, latin } from '#psammead/gel-foundations/src/scripts';
 import { TEXT_VARIANTS } from '#psammead/psammead-storybook-helpers/src';
+import latin from '../../../../components/ThemeProvider/typography/scripts/latin';
+import arabic from '../../../../components/ThemeProvider/typography/scripts/arabic';
 import ProgramCard from '../ProgramCard';
 import RadioSchedule from '../index';
 

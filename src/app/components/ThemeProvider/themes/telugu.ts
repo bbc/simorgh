@@ -1,5 +1,5 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import gurmukhiScript from '../typography/scripts/gurmukhi';
+import devanagariScript from '../typography/scripts/devanagari';
 import { MALLANNA_REGULAR } from '../typography/fontFaces';
 import { MALLANA_NOTO_SANS_TELUGU } from '../typography/fontFamilies';
 import withThemeProvider from '../withThemeProvider';
@@ -13,8 +13,8 @@ const teluguTheme = {
     BRAND_BORDER: POSTBOX_30,
   },
   typography: {
-    script: gurmukhiScript,
-    fontFamilyVariants: {
+    script: devanagariScript,
+    fontFamilies: {
       primary: MALLANA_NOTO_SANS_TELUGU,
     },
     fontFaces: [MALLANNA_REGULAR],

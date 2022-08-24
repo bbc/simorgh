@@ -28,7 +28,7 @@ module.exports = (on, config) => {
     // as your app's code
     webpackOptions: {
       resolve: {
-        extensions: ['.js', '.jsx'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
         alias: {
           ...webpackDirAlias,
         },
@@ -49,6 +49,9 @@ module.exports = (on, config) => {
         ],
       },
       plugins: [new MomentTimezoneInclude({ startYear: 2010, endYear: 2025 })],
+    },
+    watchOptions: {
+      ignored: ['**/tz/**'],
     },
   };
 

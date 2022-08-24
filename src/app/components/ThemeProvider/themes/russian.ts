@@ -19,7 +19,7 @@ const russianTheme = {
   },
   typography: {
     script: cyrillicScript,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: REITH_SANS,
       secondary: REITH_SERIF,
     },

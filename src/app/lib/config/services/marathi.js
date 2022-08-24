@@ -4,11 +4,11 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
-import devanagariAndGurmukhi from '#psammead/gel-foundations/src/scripts/devanagari-and-gurmukhi';
 import brandSVG from '#lib/chameleonLogos/marathi';
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
 import '#psammead/psammead-locales/moment/mr';
 import withContext from '../../../contexts/utils/withContext';
+import devanagari from '../../../components/ThemeProvider/typography/scripts/devanagari';
 
 export const service = {
   default: {
@@ -45,7 +45,7 @@ export const service = {
       'https://www.bbc.com/marathi/institutional-50418391#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/marathi/institutional-50418391',
     isTrustProjectParticipant: true,
-    script: devanagariAndGurmukhi,
+    script: devanagari,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'बातम्या',

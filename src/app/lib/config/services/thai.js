@@ -4,11 +4,11 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
-import thai from '#psammead/gel-foundations/src/scripts/thai';
 import brandSVG from '#lib/chameleonLogos/thai';
 import '#psammead/moment-timezone-include/tz/Asia/Bangkok';
 import '#psammead/psammead-locales/moment/th';
 import withContext from '../../../contexts/utils/withContext';
+import thai from '../../../components/ThemeProvider/typography/scripts/thai';
 
 export const service = {
   default: {

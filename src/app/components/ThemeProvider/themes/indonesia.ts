@@ -13,7 +13,7 @@ const indonesiaTheme = {
   },
   typography: {
     script: latinScript,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: HELMET,
     },
     fontFaces: [],

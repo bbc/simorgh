@@ -13,7 +13,7 @@ const marathiTheme = {
   },
   typography: {
     script: devanagariScript,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: NOTO_SANS_DEVANAGARI,
     },
     fontFaces: [],

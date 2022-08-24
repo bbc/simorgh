@@ -13,7 +13,7 @@ const igboTheme = {
   },
   typography: {
     script: latinScript,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: HELMET,
     },
     fontFaces: [],

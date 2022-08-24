@@ -13,7 +13,7 @@ const azeriTheme = {
   },
   typography: {
     script: latinWithDiacriticsScript,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: HELMET,
     },
     fontFaces: [],

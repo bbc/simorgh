@@ -14,7 +14,7 @@ const burmeseTheme = {
   },
   typography: {
     script: burmeseScript,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: PADAUK,
     },
     fontFaces: [PADAUK_BOLD, PADAUK_REGULAR],

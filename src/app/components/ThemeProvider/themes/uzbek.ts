@@ -13,7 +13,7 @@ const uzbekTheme = {
   },
   typography: {
     script: cyrillicScript,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: HELMET,
     },
     fontFaces: [],

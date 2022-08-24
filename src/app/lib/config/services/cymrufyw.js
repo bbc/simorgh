@@ -4,11 +4,11 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '#psammead/psammead-styles/src/colours';
-import latinDiacritics from '#psammead/gel-foundations/src/scripts/latin-with-diacritics';
 import { cymrufyw as brandSVG } from '#psammead/psammead-assets/src/svgs';
 import '#psammead/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/cy';
+import latinWithDiacritics from '../../../components/ThemeProvider/typography/scripts/latinWithDiacritics';
 
 export const service = {
   default: {
@@ -43,7 +43,7 @@ export const service = {
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
     isTrustProjectParticipant: true,
-    script: latinDiacritics,
+    script: latinWithDiacritics,
     manifestPath: '/articles/manifest.json',
     frontPageTitle: 'Newyddion a mwy',
     theming: {

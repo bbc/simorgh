@@ -1,5 +1,5 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import cyrillicScript from '../typography/scripts/cyrillic';
+import latinScript from '../typography/scripts/latin';
 import { HELMET } from '../typography/fontFamilies';
 import withThemeProvider from '../withThemeProvider';
 
@@ -12,8 +12,8 @@ const yorubaTheme = {
     BRAND_BORDER: POSTBOX_30,
   },
   typography: {
-    script: cyrillicScript,
-    fontFamilyVariants: {
+    script: latinScript,
+    fontFamilies: {
       primary: HELMET,
     },
     fontFaces: [],

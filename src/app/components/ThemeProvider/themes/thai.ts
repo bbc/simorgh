@@ -13,7 +13,7 @@ const thaiTheme = {
   },
   typography: {
     script: thaiScript,
-    fontFamilyVariants: {
+    fontFamilies: {
       primary: TAHOMA,
     },
     fontFaces: [],

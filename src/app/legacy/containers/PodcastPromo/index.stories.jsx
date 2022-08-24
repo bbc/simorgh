@@ -1,5 +1,5 @@
 import React from 'react';
-import { latin } from '#psammead/gel-foundations/src/scripts';
+import latin from '../../../components/ThemeProvider/typography/scripts/latin';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 
