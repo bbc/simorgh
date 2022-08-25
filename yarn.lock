@@ -5519,7 +5519,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/ramda@npm:0.28.15":
+"@types/ramda@npm:^0.28.15":
   version: 0.28.15
   resolution: "@types/ramda@npm:0.28.15"
   dependencies:
@@ -19777,7 +19777,7 @@ __metadata:
     "@testing-library/user-event": 13.5.0
     "@types/jest": 26.0.24
     "@types/loadable__component": 5.13.4
-    "@types/ramda": 0.28.15
+    "@types/ramda": ^0.28.15
     "@types/react": 18.0.15
     "@types/react-dom": 18.0.6
     "@types/testing-library__react": 10.2.0
