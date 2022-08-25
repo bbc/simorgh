@@ -176,7 +176,7 @@
     "@testing-library/react-hooks": "8.0.1",
     "@types/jest": "26.0.24",
     "@types/loadable__component": "5.13.4",
-    "@types/ramda": "^0.28.15",
+    "@types/ramda": "0.28.15",
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",
     "@types/testing-library__react": "10.2.0",
