@@ -3,7 +3,13 @@ import React, { useContext, PropsWithChildren } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import VisuallyHiddenText from '../../../legacy/psammead/psammead-visually-hidden-text/src';
-import { Author, JobRole, BylineList, LineBreak } from './index.styles';
+import {
+  Author,
+  JobRole,
+  BylineList,
+  LineBreak,
+  StyledBylineSection,
+} from './index.styles';
 
 type Props = {
   blocks: any;
@@ -49,7 +55,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
   );
 
   return (
-    <section role="region" aria-labelledby="article-byline">
+    <StyledBylineSection role="region" aria-labelledby="article-byline">
       <VisuallyHiddenText id="article-byline">
         {articleInformationTranslated}
       </VisuallyHiddenText>
@@ -82,7 +88,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
           </li>
         ) : null}
       </BylineList>
-    </section>
+    </StyledBylineSection>
   );
 };
 

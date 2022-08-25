@@ -8,13 +8,34 @@ import {
   C_GREY_10,
   C_GREY_5,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import { GEL_SPACING_DBL } from '../../../legacy/psammead/gel-foundations/src/spacings';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+} from '../../../legacy/psammead/gel-foundations/src/spacings';
 import { getSansBold } from '../../../legacy/psammead/psammead-styles/src/font-styles';
+import {
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '../../../legacy/psammead/gel-foundations/src/breakpoints';
 
 interface Props {
   service: string;
   script: any;
 }
+
+export const StyledBylineSection = styled.section`
+  padding-inline-start: ${GEL_SPACING};
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    padding-inline-start: ${GEL_SPACING_DBL};
+  }
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    padding-inline-start: 0;
+  }
+
+  div {
+    padding: 0;
+  }
+`;
 
 export const Author = styled.span<Props>`
   color: ${C_GREY_10};
