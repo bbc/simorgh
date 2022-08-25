@@ -26,7 +26,7 @@ export default {
         color: 'inherit',
 
         '&:hover, &:focus': {
-          color: palette.BRAND_BACKGROUND,
+          color: palette.POSTBOX,
         },
       },
     }),
@@ -42,9 +42,9 @@ export default {
       cursor: 'pointer',
 
       '&:hover, &:focus': {
-        backgroundColor: palette.BRAND_BACKGROUND,
+        backgroundColor: palette.POSTBOX,
         color: palette.WHITE,
-        border: `1px solid ${palette.BRAND_BACKGROUND}`,
+        border: `1px solid ${palette.POSTBOX}`,
       },
     }),
 };

@@ -166,7 +166,7 @@ const getTranslations = (
   };
 };
 
-interface ConsentBannerContentProps {
+type ConsentBannerContentProps = {
   provider: SocialEmbedProviders;
   clickHandler:
     | {
@@ -175,7 +175,7 @@ interface ConsentBannerContentProps {
     | {
         onClick: () => void;
       };
-}
+};
 
 const ConsentBanner = ({
   provider,
