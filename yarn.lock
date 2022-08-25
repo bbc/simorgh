@@ -5393,7 +5393,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/loadable__component@npm:^5.13.4":
+"@types/loadable__component@npm:5.13.4":
   version: 5.13.4
   resolution: "@types/loadable__component@npm:5.13.4"
   dependencies:
@@ -19776,7 +19776,7 @@ __metadata:
     "@testing-library/react-hooks": 8.0.1
     "@testing-library/user-event": 13.5.0
     "@types/jest": 26.0.24
-    "@types/loadable__component": ^5.13.4
+    "@types/loadable__component": 5.13.4
     "@types/ramda": 0.28.15
     "@types/react": 18.0.15
     "@types/react-dom": 18.0.6
