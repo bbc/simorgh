@@ -13,7 +13,7 @@ A Byline section with all relevant article's author informations.
 
 ## Example ltr/rtl
 
-# Without Timestamp
+### Without Timestamp
 
 ```javascript
 const fixtureBlocks = {type: "byline", model: blocks: [...]}
@@ -21,7 +21,7 @@ const fixtureBlocks = {type: "byline", model: blocks: [...]}
 <Byline blocks={fixtureBlocks}/>
 ```
 
-# With Timestamp
+### With Timestamp
 
 ```javascript
 <Byline blocks={fixtureBlocks}>
