@@ -63,36 +63,28 @@ export const TwitterChavron = styled(RightChevron)`
   height: ${GEL_SPACING};
 `;
 
-export const TwitterLink = styled(JobRole)`
-  position: static;
+export const TwitteText = styled(JobRole)`
   color: ${C_POSTBOX};
   display: inline-block;
   vertical-align: middle;
+`;
 
+const Link = styled.a`
   text-decoration: none;
-  overflow-wrap: anywhere;
+  position: relative;
+  z-index: 1;
+  padding-right: 2.75rem;
 
   &:hover,
   &:focus {
     text-decoration: underline;
   }
-
-  &:before {
-    bottom: 0;
-    content: '';
-    left: 0;
-    overflow: hidden;
-    right: 0;
-    top: 0;
-    position: absolute;
-    white-space: nowrap;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    padding-bottom: 2rem;
-  }
 `;
 
-export const ParentSpan = styled.span`
-  position: relative;
+export const AuthorLink = styled(Link)`
+  padding-top: 1.375rem;
+`;
+
+export const TwitterLink = styled(Link)`
+  padding-bottom: 1.75rem;
 `;

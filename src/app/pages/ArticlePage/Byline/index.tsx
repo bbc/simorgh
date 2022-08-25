@@ -10,8 +10,9 @@ import {
   LineBreak,
   AuthorChavron,
   TwitterChavron,
+  TwitteText,
+  AuthorLink,
   TwitterLink,
-  ParentSpan,
 } from './index.styles';
 
 type Props = {
@@ -30,8 +31,6 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
   const authorBlock = bylineBlocks.find((block: any) => block.type === 'name');
   const jobRoleBlock = bylineBlocks.find((block: any) => block.type === 'role');
   const twitterBlock = bylineBlocks.find((block: any) => block.type === 'link');
-
-  console.log(twitterBlock);
 
   const author = pathOr(
     '',
@@ -90,13 +89,13 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
       <BylineList role="list">
         <li>
           {twitterLink ? (
-            <a href={twitterLink}>
+            <AuthorLink href={twitterLink}>
               <VisuallyHiddenText>{`${authorTranslated}, `}</VisuallyHiddenText>
               <Author script={script} service={service}>
                 {author}
               </Author>
               <AuthorChavron />
-            </a>
+            </AuthorLink>
           ) : (
             <span role="text">
               <VisuallyHiddenText>{`${authorTranslated}, `}</VisuallyHiddenText>
@@ -116,15 +115,17 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
         </li>
         {twitterLink ? (
           <li>
-            <a href={twitterLink}>
-              <ParentSpan role="text">
-                <VisuallyHiddenText>{`Twitter, `} </VisuallyHiddenText>
-                <TwitterLink script={script} service={service}>
+            <TwitterLink href={twitterLink}>
+              <span role="text">
+                <VisuallyHiddenText lang="en-GB">
+                  {`Twitter, `}
+                </VisuallyHiddenText>
+                <TwitteText script={script} service={service}>
                   {`@${twitterText}`}
-                </TwitterLink>
+                </TwitteText>
                 <TwitterChavron />
-              </ParentSpan>
-            </a>
+              </span>
+            </TwitterLink>
           </li>
         ) : null}
         <LineBreak aria-hidden />
