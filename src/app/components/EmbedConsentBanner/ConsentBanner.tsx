@@ -195,6 +195,7 @@ const ConsentBanner = ({
       id="consentBanner"
       css={consentBannerCss.self}
     >
+      {/* //TODO: Use 'Text' primitive component when available */}
       <strong
         data-testid="banner-heading"
         css={[
@@ -206,6 +207,7 @@ const ConsentBanner = ({
       >
         {consentTranslations.heading}
       </strong>
+      {/* //TODO: Use 'paragraph' primitive component when available */}
       <p
         data-testid="banner-body"
         css={[
