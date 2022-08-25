@@ -83,19 +83,21 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
 
   return (
     <section role="region" aria-labelledby="article-byline">
-      <VisuallyHiddenText id="article-byline">
+      <VisuallyHiddenText id="article-byline" aria-hidden>
         {articleInformationTranslated}
       </VisuallyHiddenText>
       <BylineList role="list">
         <li>
           {twitterLink ? (
-            <AuthorLink href={twitterLink}>
+            <>
               <VisuallyHiddenText>{`${authorTranslated}, `}</VisuallyHiddenText>
-              <Author script={script} service={service}>
-                {author}
-              </Author>
-              <AuthorChavron />
-            </AuthorLink>
+              <AuthorLink href={twitterLink}>
+                <Author script={script} service={service}>
+                  {author}
+                </Author>
+                <AuthorChavron />
+              </AuthorLink>
+            </>
           ) : (
             <span role="text">
               <VisuallyHiddenText>{`${authorTranslated}, `}</VisuallyHiddenText>
