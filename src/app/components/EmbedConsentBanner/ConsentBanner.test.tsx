@@ -29,7 +29,7 @@ const WithContext = ({
   </ThemeProvider>
 );
 
-describe('Embed Consent Banner', () => {
+describe('Embed Consent Banner - Content', () => {
   it('should render a consent banner with correct content for Mundo service', async () => {
     let getByTestId!: (id: string) => HTMLElement;
 
