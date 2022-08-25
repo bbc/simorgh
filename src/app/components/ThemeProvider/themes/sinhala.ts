@@ -4,7 +4,7 @@ import {
   NOTO_SERIF_SINHALA_BOLD,
   NOTO_SERIF_SINHALA_REGULAR,
 } from '../typography/fontFaces';
-import { NOTO_SANS_SINHALA } from '../typography/fontFamilies';
+import sinhalaFontVariants from '../typography/fontVariants/sinhala';
 import withThemeProvider from '../withThemeProvider';
 
 const sinhalaTheme = {
@@ -17,9 +17,7 @@ const sinhalaTheme = {
   },
   typography: {
     script: sinhaleseScript,
-    fontFamilies: {
-      primary: NOTO_SANS_SINHALA,
-    },
+    fontVariants: sinhalaFontVariants,
     fontFaces: [NOTO_SERIF_SINHALA_BOLD, NOTO_SERIF_SINHALA_REGULAR],
   },
 };

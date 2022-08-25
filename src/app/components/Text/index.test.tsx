@@ -4,19 +4,19 @@ import Text from '.';
 import { render, screen } from '../custom-react-testing-library';
 
 describe('Text', () => {
-  it('should render the text in a span element by default', async () => {
+  it('should render the text in a span element by default', () => {
     render(<Text>Hello World!</Text>);
 
     expect(screen.getByText('Hello World!').nodeName).toBe('SPAN');
   });
 
-  it('should render the text in a paragraph element using the as prop', async () => {
+  it('should render the text in a paragraph element using the as prop', () => {
     render(<Text as="p">Hello World!</Text>);
 
     expect(screen.getByText('Hello World!').nodeName).toBe('P');
   });
 
-  it('should render the correct typography for the mundo service, specifically the ReithSans font', async () => {
+  it('should render the correct typography for the mundo service, specifically the ReithSans font', () => {
     const { container } = render(<Text>Hello World!</Text>, {
       service: 'mundo',
     });
@@ -27,6 +27,8 @@ describe('Text', () => {
         font-size: 0.9375rem;
         line-height: 1.25rem;
         font-family: ReithSans,Helvetica,Arial,sans-serif;
+        font-style: normal;
+        font-weight: 400;
       }
 
       @media (min-width: 20rem) {
@@ -53,9 +55,9 @@ describe('Text', () => {
     `);
   });
 
-  it('should render the correct typography for the mundo service, specifically the ReithSerif font', async () => {
+  it('should render the correct typography for the mundo service, specifically the ReithSerif font', () => {
     const { container } = render(
-      <Text fontFamilyVariant="secondary">Hello World!</Text>,
+      <Text fontVariant="serifRegular">Hello World!</Text>,
       {
         service: 'mundo',
       },
@@ -67,6 +69,8 @@ describe('Text', () => {
         font-size: 0.9375rem;
         line-height: 1.25rem;
         font-family: ReithSerif,Helvetica,Arial,sans-serif;
+        font-style: normal;
+        font-weight: 500;
       }
 
       @media (min-width: 20rem) {
@@ -93,7 +97,7 @@ describe('Text', () => {
     `);
   });
 
-  it('should render the correct typography for the arabic service, specifically the BBC Reith Qalam font', async () => {
+  it('should render the correct typography for the arabic service, specifically the BBC Reith Qalam font', () => {
     const { container } = render(<Text>Hello World!</Text>, {
       service: 'arabic',
     });
@@ -104,6 +108,8 @@ describe('Text', () => {
         font-size: 0.9375rem;
         line-height: 1.5rem;
         font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+        font-style: normal;
+        font-weight: 400;
       }
 
       @media (min-width: 20rem) {
@@ -130,7 +136,7 @@ describe('Text', () => {
     `);
   });
 
-  it('should render the correct typography for the atlas GEL size', async () => {
+  it('should render the correct typography for the atlas GEL size', () => {
     const { container } = render(<Text size="atlas">Hello World!</Text>);
 
     expect(container).toMatchInlineSnapshot(`
@@ -139,6 +145,8 @@ describe('Text', () => {
         font-size: 4.875rem;
         line-height: 5.25rem;
         font-family: ReithSans,Helvetica,Arial,sans-serif;
+        font-style: normal;
+        font-weight: 400;
       }
 
       @media (min-width: 20rem) {
@@ -163,5 +171,131 @@ describe('Text', () => {
         </span>
       </div>
     `);
+  });
+
+  it('should render the correct typography for the mundo service, specifically the ReithSans font', () => {
+    const { container } = render(<Text>Hello World!</Text>, {
+      service: 'mundo',
+    });
+
+    expect(container).toMatchInlineSnapshot(`
+      .emotion-0 {
+        color: #141414;
+        font-size: 0.9375rem;
+        line-height: 1.25rem;
+        font-family: ReithSans,Helvetica,Arial,sans-serif;
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      @media (min-width: 20rem) {
+        .emotion-0 {
+          font-size: 1rem;
+          line-height: 1.25rem;
+        }
+      }
+
+      @media (min-width: 37.5rem) {
+        .emotion-0 {
+          font-size: 1rem;
+          line-height: 1.25rem;
+        }
+      }
+
+      <div>
+        <span
+          class="emotion-0"
+        >
+          Hello World!
+        </span>
+      </div>
+    `);
+  });
+
+  it('should render the correct typography for the mundo service, specifically the ReithSerif font', () => {
+    const { container } = render(
+      <Text fontVariant="serifRegular">Hello World!</Text>,
+      {
+        service: 'mundo',
+      },
+    );
+
+    expect(container).toMatchInlineSnapshot(`
+      .emotion-0 {
+        color: #141414;
+        font-size: 0.9375rem;
+        line-height: 1.25rem;
+        font-family: ReithSerif,Helvetica,Arial,sans-serif;
+        font-style: normal;
+        font-weight: 500;
+      }
+
+      @media (min-width: 20rem) {
+        .emotion-0 {
+          font-size: 1rem;
+          line-height: 1.25rem;
+        }
+      }
+
+      @media (min-width: 37.5rem) {
+        .emotion-0 {
+          font-size: 1rem;
+          line-height: 1.25rem;
+        }
+      }
+
+      <div>
+        <span
+          class="emotion-0"
+        >
+          Hello World!
+        </span>
+      </div>
+    `);
+  });
+
+  it('should render the correct typography for the arabic service, specifically the BBC Reith Qalam font', () => {
+    const { container } = render(<Text>Hello World!</Text>, {
+      service: 'arabic',
+    });
+
+    expect(container).toMatchInlineSnapshot(`
+      .emotion-0 {
+        color: #141414;
+        font-size: 0.9375rem;
+        line-height: 1.5rem;
+        font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      @media (min-width: 20rem) {
+        .emotion-0 {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+      }
+
+      @media (min-width: 37.5rem) {
+        .emotion-0 {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+      }
+
+      <div>
+        <span
+          class="emotion-0"
+        >
+          Hello World!
+        </span>
+      </div>
+    `);
+  });
+
+  it('should render HTML attributes', () => {
+    render(<Text tabIndex={-1}>Hello World!</Text>);
+
+    expect(screen.getByText('Hello World!')).toHaveAttribute('tabindex', '-1');
   });
 });

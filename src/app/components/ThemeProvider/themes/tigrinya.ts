@@ -4,7 +4,7 @@ import {
   NOTO_SANS_ETHIOPIC_BOLD,
   NOTO_SANS_ETHIOPIC_REGULAR,
 } from '../typography/fontFaces';
-import { NOTO_SANS_ETHIOPIC } from '../typography/fontFamilies';
+import tigrinyaFontVariants from '../typography/fontVariants/tigrinya';
 import withThemeProvider from '../withThemeProvider';
 
 const tigrinyaTheme = {
@@ -17,9 +17,7 @@ const tigrinyaTheme = {
   },
   typography: {
     script: noAscOrDescScript,
-    fontFamilies: {
-      primary: NOTO_SANS_ETHIOPIC,
-    },
+    fontVariants: tigrinyaFontVariants,
     fontFaces: [NOTO_SANS_ETHIOPIC_BOLD, NOTO_SANS_ETHIOPIC_REGULAR],
   },
 };

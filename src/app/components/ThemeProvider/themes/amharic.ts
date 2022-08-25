@@ -4,7 +4,7 @@ import {
   NOTO_SANS_ETHIOPIC_BOLD,
   NOTO_SANS_ETHIOPIC_REGULAR,
 } from '../typography/fontFaces';
-import { NOTO_SANS_ETHIOPIC } from '../typography/fontFamilies';
+import amharicFontVariants from '../typography/fontVariants/amharic';
 import withThemeProvider from '../withThemeProvider';
 
 const amharicTheme = {
@@ -17,9 +17,7 @@ const amharicTheme = {
   },
   typography: {
     script: noAscOrDescScript,
-    fontFamilies: {
-      primary: NOTO_SANS_ETHIOPIC,
-    },
+    fontVariants: amharicFontVariants,
     fontFaces: [NOTO_SANS_ETHIOPIC_BOLD, NOTO_SANS_ETHIOPIC_REGULAR],
   },
 };

@@ -21,6 +21,8 @@ describe('Paragraph', () => {
         font-size: 0.9375rem;
         line-height: 1.25rem;
         font-family: ReithSans,Helvetica,Arial,sans-serif;
+        font-style: normal;
+        font-weight: 400;
       }
 
       @media (min-width: 20rem) {

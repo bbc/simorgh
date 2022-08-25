@@ -5,7 +5,7 @@ import {
   REITH_SANS_REGULAR,
   REITH_SERIF_MEDIUM,
 } from '../typography/fontFaces';
-import { REITH_SANS, REITH_SERIF } from '../typography/fontFamilies';
+import reithFontVariants from '../typography/fontVariants/reith';
 import withThemeProvider from '../withThemeProvider';
 
 const naidheachdanTheme = {
@@ -18,10 +18,7 @@ const naidheachdanTheme = {
   },
   typography: {
     script: latinWithDiacriticsScript,
-    fontFamilies: {
-      primary: REITH_SANS,
-      secondary: REITH_SERIF,
-    },
+    fontVariants: reithFontVariants,
     fontFaces: [REITH_SANS_BOLD, REITH_SANS_REGULAR, REITH_SERIF_MEDIUM],
   },
 };

@@ -1,95 +1,93 @@
 /** @jsx jsx */
 
 import React, { ElementType, ComponentPropsWithoutRef } from 'react';
-import { Theme, jsx } from '@emotion/react';
+import { jsx } from '@emotion/react';
+
+import { GelFontSize, FontVariant } from '../../interfaces';
 import {
-  baseStyles,
-  primaryFontFamilyStyles,
-  secondaryFontFamilyStyles,
-  atlasStyles,
-  elephantStyles,
-  imperialStyles,
-  royalStyles,
-  foolscapStyles,
-  canonStyles,
-  trafalgarStyles,
-  paragonStyles,
-  doublePicaStyles,
-  greatPrimerStyles,
-  bodyCopyStyles,
-  picaStyles,
-  longPrimerStyles,
-  brevierStyles,
-  minionStyles,
+  getBaseStyles,
+  getAtlasSize,
+  getElephantSize,
+  getImperialSize,
+  getRoyalSize,
+  getFoolscapSize,
+  getCanonSize,
+  getTrafalgarSize,
+  getParagonSize,
+  getDoublePicaSize,
+  getGreatPrimerSize,
+  getBodyCopySize,
+  getPicaSize,
+  getLongPrimerSize,
+  getBrevierSize,
+  getMinionSize,
+  getSansRegular,
+  getSansRegularItalic,
+  getSansBold,
+  getSansBoldItalic,
+  getSansLight,
+  getSerifRegular,
+  getSerifMedium,
+  getSerifMediumItalic,
+  getSerifBold,
+  getSerifLight,
 } from './index.styled';
 
 interface Props<T extends React.ElementType> {
   as?: T;
   className?: string;
   children: React.ReactNode;
-  fontFamilyVariant?: 'primary' | 'secondary';
-  size?:
-    | 'atlas'
-    | 'elephant'
-    | 'imperial'
-    | 'royal'
-    | 'foolscap'
-    | 'canon'
-    | 'trafalgar'
-    | 'paragon'
-    | 'doublePica'
-    | 'greatPrimer'
-    | 'bodyCopy'
-    | 'pica'
-    | 'longPrimer'
-    | 'brevier'
-    | 'minion';
+  size?: GelFontSize;
+  fontVariant?: FontVariant;
 }
 
-const sizes = {
-  atlas: atlasStyles,
-  elephant: elephantStyles,
-  imperial: imperialStyles,
-  royal: royalStyles,
-  foolscap: foolscapStyles,
-  canon: canonStyles,
-  trafalgar: trafalgarStyles,
-  paragon: paragonStyles,
-  doublePica: doublePicaStyles,
-  greatPrimer: greatPrimerStyles,
-  bodyCopy: bodyCopyStyles,
-  pica: picaStyles,
-  longPrimer: longPrimerStyles,
-  brevier: brevierStyles,
-  minion: minionStyles,
+const fontVariants = {
+  sansRegular: getSansRegular,
+  sansRegularItalic: getSansRegularItalic,
+  sansBold: getSansBold,
+  sansBoldItalic: getSansBoldItalic,
+  sansLight: getSansLight,
+  serifRegular: getSerifRegular,
+  serifMedium: getSerifMedium,
+  serifMediumItalic: getSerifMediumItalic,
+  serifBold: getSerifBold,
+  serifLight: getSerifLight,
 };
 
-const fontFamilyVariants = {
-  primary: primaryFontFamilyStyles,
-  secondary: secondaryFontFamilyStyles,
+const sizes = {
+  atlas: getAtlasSize,
+  elephant: getElephantSize,
+  imperial: getImperialSize,
+  royal: getRoyalSize,
+  foolscap: getFoolscapSize,
+  canon: getCanonSize,
+  trafalgar: getTrafalgarSize,
+  paragon: getParagonSize,
+  doublePica: getDoublePicaSize,
+  greatPrimer: getGreatPrimerSize,
+  bodyCopy: getBodyCopySize,
+  pica: getPicaSize,
+  longPrimer: getLongPrimerSize,
+  brevier: getBrevierSize,
+  minion: getMinionSize,
 };
 
 // This is a strongly typed polymorphic component inspired by https://itnext.io/react-polymorphic-components-with-typescript-f7ce72ea7af2
-
 function Text<T extends ElementType = 'span'>({
   as,
   children,
   className,
-  fontFamilyVariant = 'primary',
   size = 'pica',
+  fontVariant = 'sansRegular',
+  ...htmlAttributes
 }: Props<T> & Omit<ComponentPropsWithoutRef<T>, keyof Props<T>>) {
   const Component = as || 'span';
 
   return (
     <Component
-      css={(theme: Theme) => [
-        baseStyles(theme),
-        sizes[size](theme),
-        fontFamilyVariants[fontFamilyVariant]
-          ? fontFamilyVariants[fontFamilyVariant](theme)
-          : fontFamilyVariants.primary(theme),
-      ]}
+      css={[getBaseStyles, sizes[size], fontVariants[fontVariant]]}
       className={className}
+      {...htmlAttributes}
     >
       {children}
     </Component>

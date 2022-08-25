@@ -81,7 +81,7 @@ const AllTheProviders: FC<Props> = ({
   toggles = {},
 }: Props) => {
   return (
-    <ThemeProvider service={service}>
+    <ThemeProvider service={service} variant={null}>
       <ToggleContextProvider toggles={toggles}>
         <ServiceContextProvider service={service}>
           <RequestContextProvider

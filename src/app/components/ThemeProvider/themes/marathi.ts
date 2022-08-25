@@ -1,6 +1,6 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import devanagariScript from '../typography/scripts/devanagari';
-import { NOTO_SANS_DEVANAGARI } from '../typography/fontFamilies';
+import marathiFontVariants from '../typography/fontVariants/marathi';
 import withThemeProvider from '../withThemeProvider';
 
 const marathiTheme = {
@@ -13,9 +13,7 @@ const marathiTheme = {
   },
   typography: {
     script: devanagariScript,
-    fontFamilies: {
-      primary: NOTO_SANS_DEVANAGARI,
-    },
+    fontVariants: marathiFontVariants,
     fontFaces: [],
   },
 };

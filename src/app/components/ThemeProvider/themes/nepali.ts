@@ -1,6 +1,6 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import devanagariScript from '../typography/scripts/devanagari';
-import { ARIAL } from '../typography/fontFamilies';
+import nepaliFontVariants from '../typography/fontVariants/nepali';
 import withThemeProvider from '../withThemeProvider';
 
 const nepaliTheme = {
@@ -13,9 +13,7 @@ const nepaliTheme = {
   },
   typography: {
     script: devanagariScript,
-    fontFamilies: {
-      primary: ARIAL,
-    },
+    fontVariants: nepaliFontVariants,
     fontFaces: [],
   },
 };

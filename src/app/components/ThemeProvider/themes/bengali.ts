@@ -4,7 +4,7 @@ import {
   NOTO_SERIF_BENGALI_BOLD,
   NOTO_SERIF_BENGALI_REGULAR,
 } from '../typography/fontFaces';
-import { NOTO_SANS_BENGALI } from '../typography/fontFamilies';
+import bengaliFontVariants from '../typography/fontVariants/bengali';
 import withThemeProvider from '../withThemeProvider';
 
 const bengaliTheme = {
@@ -17,9 +17,7 @@ const bengaliTheme = {
   },
   typography: {
     script: bengaliScript,
-    fontFamilies: {
-      primary: NOTO_SANS_BENGALI,
-    },
+    fontVariants: bengaliFontVariants,
     fontFaces: [NOTO_SERIF_BENGALI_BOLD, NOTO_SERIF_BENGALI_REGULAR],
   },
 };

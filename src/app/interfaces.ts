@@ -90,9 +90,61 @@ export interface Typography {
       fontDisplay: string;
     };
   }[];
-  fontFamilies: {
-    primary: string;
-    secondary?: string;
+  fontVariants: {
+    sans: {
+      regular: {
+        fontFamily: string;
+        fontStyle: string;
+        fontWeight: number;
+      };
+      regularItalic?: {
+        fontFamily: string;
+        fontStyle: string;
+        fontWeight: number;
+      };
+      bold: {
+        fontFamily: string;
+        fontStyle: string;
+        fontWeight: number;
+      };
+      boldItalic?: {
+        fontFamily: string;
+        fontStyle: string;
+        fontWeight: number;
+      };
+      light?: {
+        fontFamily: string;
+        fontStyle: string;
+        fontWeight: number;
+      };
+    };
+    serif?: {
+      regular: {
+        fontFamily: string;
+        fontStyle: string;
+        fontWeight: number;
+      };
+      medium: {
+        fontFamily: string;
+        fontStyle: string;
+        fontWeight: number;
+      };
+      mediumItalic: {
+        fontFamily: string;
+        fontStyle: string;
+        fontWeight: number;
+      };
+      bold: {
+        fontFamily: string;
+        fontStyle: string;
+        fontWeight: number;
+      };
+      light: {
+        fontFamily: string;
+        fontStyle: string;
+        fontWeight: number;
+      };
+    };
   };
   script: {
     atlas: {
@@ -307,6 +359,35 @@ export interface Typography {
     };
   };
 }
+
+export type GelFontSize =
+  | 'atlas'
+  | 'elephant'
+  | 'imperial'
+  | 'royal'
+  | 'foolscap'
+  | 'canon'
+  | 'trafalgar'
+  | 'paragon'
+  | 'doublePica'
+  | 'greatPrimer'
+  | 'bodyCopy'
+  | 'pica'
+  | 'longPrimer'
+  | 'brevier'
+  | 'minion';
+
+export type FontVariant =
+  | 'sansRegular'
+  | 'sansRegularItalic'
+  | 'sansBold'
+  | 'sansBoldItalic'
+  | 'sansLight'
+  | 'serifRegular'
+  | 'serifMedium'
+  | 'serifMediumItalic'
+  | 'serifBold'
+  | 'serifLight';
 
 declare module '@emotion/react' {
   export interface Theme {

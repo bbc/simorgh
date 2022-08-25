@@ -6,7 +6,7 @@ import {
   REITH_SERIF_MEDIUM,
   REITH_SERIF_LIGHT,
 } from '../typography/fontFaces';
-import { REITH_SANS, REITH_SERIF } from '../typography/fontFamilies';
+import reithFontVariants from '../typography/fontVariants/reith';
 import withThemeProvider from '../withThemeProvider';
 
 const russianTheme = {
@@ -19,10 +19,7 @@ const russianTheme = {
   },
   typography: {
     script: cyrillicScript,
-    fontFamilies: {
-      primary: REITH_SANS,
-      secondary: REITH_SERIF,
-    },
+    fontVariants: reithFontVariants,
     fontFaces: [
       REITH_SANS_BOLD,
       REITH_SANS_REGULAR,

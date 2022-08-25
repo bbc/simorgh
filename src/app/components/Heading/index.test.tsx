@@ -16,7 +16,7 @@ describe('Heading', () => {
     expect(screen.getByText('Hello World!').nodeName).toBe('H2');
   });
 
-  it('should render the correct typography for the mundo service, specifically the ReithSerif font and largest font-size to be 2.75rem;', async () => {
+  it('should render the correct typography for the mundo service, specifically the ReithSans font and largest font-size to be 2.75rem;', async () => {
     const { container } = render(<Heading level={1}>Hello World!</Heading>, {
       service: 'mundo',
     });
@@ -26,8 +26,9 @@ describe('Heading', () => {
         color: #141414;
         font-size: 1.75rem;
         line-height: 2.25rem;
-        font-family: ReithSerif,Helvetica,Arial,sans-serif;
-        font-weight: 500;
+        font-family: ReithSans,Helvetica,Arial,sans-serif;
+        font-style: normal;
+        font-weight: 400;
       }
 
       @media (min-width: 20rem) {
