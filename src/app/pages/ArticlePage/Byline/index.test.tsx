@@ -8,6 +8,7 @@ import {
   bylineWithNoRole,
   bylineWithNoAuthor,
   bylineWithNameAndRole,
+  bylineWithLink,
 } from './fixture';
 
 interface Props {
@@ -44,6 +45,18 @@ describe('Byline', () => {
     );
 
     expect(container).toBeEmptyDOMElement();
+  });
+
+  it('should render Byline correctly when passed a Twitter Link', () => {
+    render(<FixtureByline fixture={bylineWithLink} service="news" />);
+
+    const AuthorLink = screen.getByText('Single Byline (all values)');
+    const TwitterLink = screen.getByText('@test');
+    const Links = screen.getAllByRole('link');
+
+    expect(AuthorLink).toBeInTheDocument();
+    expect(TwitterLink).toBeInTheDocument();
+    expect(Links.length).toBe(2);
   });
 
   it('Should return null when there is no author in the data', () => {
@@ -108,10 +121,11 @@ describe('Byline', () => {
     expectation    | info           | text
     ${'Author'}    | ${'Author'}    | ${'Author,'}
     ${'Role'}      | ${'Role'}      | ${'Role,'}
+    ${'Twitter'}   | ${'Twitter'}   | ${'Twitter,'}
     ${'Published'} | ${'Published'} | ${'Published,'}
   `('should correctly announce $expectation for $info', ({ text }) => {
     render(
-      <FixtureByline fixture={bylineWithNameAndRole} service="news">
+      <FixtureByline fixture={bylineWithLink} service="news">
         <ArticleTimestamp
           firstPublished={1660658887}
           lastPublished={1660658887}
@@ -130,7 +144,7 @@ describe('Byline', () => {
     ${'published'} | ${'Maxxanfame,'}
   `('should translate $info announcement correctly', ({ translation }) => {
     render(
-      <FixtureByline fixture={bylineWithNameAndRole} service="afaanoromoo">
+      <FixtureByline fixture={bylineWithLink} service="afaanoromoo">
         <ArticleTimestamp
           firstPublished={1660658887}
           lastPublished={1660658887}
