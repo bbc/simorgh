@@ -13,6 +13,7 @@ import {
   TwitteText,
   AuthorLink,
   TwitterLink,
+  StyledBylineSection,
 } from './index.styles';
 
 type Props = {
@@ -82,7 +83,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
   );
 
   return (
-    <section role="region" aria-labelledby="article-byline">
+    <StyledBylineSection role="region" aria-labelledby="article-byline">
       <VisuallyHiddenText id="article-byline" aria-hidden>
         {articleInformationTranslated}
       </VisuallyHiddenText>
@@ -142,7 +143,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
           </li>
         ) : null}
       </BylineList>
-    </section>
+    </StyledBylineSection>
   );
 };
 
