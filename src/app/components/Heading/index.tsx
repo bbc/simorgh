@@ -5,6 +5,7 @@ import { jsx } from '@emotion/react';
 
 import { GelFontSize, FontVariant } from '../../interfaces';
 import Text from '../Text';
+import styles from './index.styled';
 
 interface Props {
   className?: string;
@@ -44,6 +45,7 @@ const Heading: FC<Props> = ({
       fontVariant={fontVariant}
       className={className}
       size={size || sizes[element]}
+      css={styles.heading}
       {...htmlAttributes}
     >
       {children}

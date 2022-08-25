@@ -9,10 +9,10 @@ import pixelsToRem from '../../utilities/pixelsToRem';
 */
 
 const GROUP_B_MIN_WIDTH_BP = pixelsToRem(320);
-const GROUP_C_MIN_WIDTH_BP = pixelsToRem(600);
+const GROUP_D_MIN_WIDTH_BP = pixelsToRem(600);
 
 const GROUP_B_MIN_WIDTH_MQ = `@media (min-width: ${GROUP_B_MIN_WIDTH_BP}rem)`;
-const GROUP_D_MIN_WIDTH_MQ = `@media (min-width: ${GROUP_C_MIN_WIDTH_BP}rem)`;
+const GROUP_D_MIN_WIDTH_MQ = `@media (min-width: ${GROUP_D_MIN_WIDTH_BP}rem)`;
 
 export const getBaseStyles = ({ palette }: Theme) =>
   css({

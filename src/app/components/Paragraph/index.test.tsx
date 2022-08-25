@@ -23,6 +23,7 @@ describe('Paragraph', () => {
         font-family: ReithSans,Helvetica,Arial,sans-serif;
         font-style: normal;
         font-weight: 400;
+        margin: 0;
       }
 
       @media (min-width: 20rem) {

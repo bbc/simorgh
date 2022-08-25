@@ -60,7 +60,7 @@ interface Props {
   text: string;
 }
 
-const Component = ({ service, variant, text }: Props) => (
+const TextStory = ({ service, variant, text }: Props) => (
   <ThemeProvider service={service} variant={variant}>
     <ServiceContextProvider service={service} variant={variant}>
       <Text
@@ -110,7 +110,7 @@ const Component = ({ service, variant, text }: Props) => (
 
 export default {
   title: 'NewComponents/Text',
-  Component,
+  Component: TextStory,
   decorators: [withKnobs, withServicesKnob()],
   parameters: {
     chromatic: {
@@ -119,4 +119,4 @@ export default {
   },
 };
 
-export const Example = Component;
+export const Example = TextStory;
