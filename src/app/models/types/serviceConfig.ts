@@ -89,14 +89,7 @@ export type ServiceConfig = {
     para3: string;
   };
   translations: Translations;
-  brandSVG: {
-    group: JSX.Element;
-    ratio: number;
-    viewbox: {
-      height: number;
-      width: number;
-    };
-  };
+  brandSVG: unknown;
   mostRead: MostRead;
   mostWatched: MostWatched;
   radioSchedule?: RadioSchedule;
