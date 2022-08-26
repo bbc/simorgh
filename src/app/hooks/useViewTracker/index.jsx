@@ -5,9 +5,9 @@ import prop from 'ramda/src/prop';
 
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
-import { ServiceContext } from '#contexts/ServiceContext';
 import useTrackingToggle from '#hooks/useTrackingToggle';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
+import { ServiceContext } from '../../contexts/ServiceContext';
 
 const EVENT_TYPE = 'view';
 const VIEWED_DURATION_MS = 1000;

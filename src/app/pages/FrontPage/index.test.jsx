@@ -4,12 +4,12 @@ import fetchMock from 'fetch-mock';
 import { BrowserRouter } from 'react-router-dom';
 import { render, act } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import pidginFrontPageData from '#data/pidgin/frontpage/index-light';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import getInitialData from '#app/routes/home/getInitialData';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import FrontPage from '.';
 
 const mockToggles = {

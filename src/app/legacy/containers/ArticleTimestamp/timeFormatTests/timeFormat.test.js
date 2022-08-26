@@ -1,4 +1,4 @@
-import services from '#server/utilities/serviceConfigs';
+import services from '../../../../../server/utilities/serviceConfigs';
 import expectedFormats from './expectedFormats.json';
 import { format, timestampsFixtures } from './testUtils';
 
