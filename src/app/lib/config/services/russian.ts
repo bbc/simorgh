@@ -220,6 +220,17 @@ export const mainTranslations = {
       text: 'Пропустить контент из %provider_name%',
       endTextVisuallyHidden: 'Контент из %provider_name% окончен',
     },
+    consentBanner: {
+      heading: `Разрешить контент [social_media_site]?`,
+      body: `Эта статья содержит контент, предоставленный [social_media_site].  Мы просим вашего разрешения до загрузки, потому что он может использовать кукис и другие технологии. Вы можете ознакомиться с [link] правилами кукис [/link] и [link] политикой личных данных [/link] [social_media_site], прежде чем дать согласие. Чтобы увидеть этот контент, выберите “Согласиться и продолжить”.`,
+      cookiesUrl: {
+        youtube: 'https://policies.google.com/technologies/cookies',
+      },
+      privacyUrl: {
+        youtube: 'https://policies.google.com/privacy',
+      },
+      button: 'Принять и продолжить',
+    },
   },
   include: {
     errorMessage:

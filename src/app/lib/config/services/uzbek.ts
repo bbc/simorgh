@@ -253,6 +253,17 @@ export const service: DefaultServiceConfig = {
           text: 'Ўтказиб юборинг %provider_name% пост ',
           endTextVisuallyHidden: 'Охири %provider_name% пост',
         },
+        consentBanner: {
+          heading: `[social_media_site] контентига рухсат бериш`,
+          body: `Айни мақолада [social_media_site] томонидан тақдим қилинган контент мавжуд. Биз бу контент юкланмасидан аввал сизнинг розилигингизни сўраймиз, чунки улар куки ва бошқа технологиялардан фойдаланган бўлиши мумкин. Сиз   [social_media_site] [link] ҳаволасида кукиларга доир  [/link] ва шахсий маълумотларга  оид қоидалар ҳақида аввал ўқиб,  кейин қабул қилишга рози бўлишингиз  мумкин. Кўриш учун “қабул қилиш ва давом этиш”ни танланг.`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+          button: 'Қабул қилинг ва давом этинг',
+        },
       },
       include: {
         errorMessage:
