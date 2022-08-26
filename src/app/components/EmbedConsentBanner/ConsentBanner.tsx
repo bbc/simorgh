@@ -1,4 +1,6 @@
-import React, { useContext } from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
+import { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
 
 import { ServiceContext } from '../../contexts/ServiceContext';
