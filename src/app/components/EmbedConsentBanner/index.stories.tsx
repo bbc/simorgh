@@ -1,4 +1,4 @@
-import { ReactNode, PropsWithChildren } from 'react';
+import React, { ReactNode, PropsWithChildren } from 'react';
 import { css } from '@emotion/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';

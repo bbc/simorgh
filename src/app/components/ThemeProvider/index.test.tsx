@@ -1,3 +1,4 @@
+import React from 'react';
 import { render, act } from '@testing-library/react';
 import { css, Theme } from '@emotion/react';
 

@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react';
+import React, { PropsWithChildren } from 'react';
 import { render, act, fireEvent } from '@testing-library/react';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ThemeProvider from '../ThemeProvider';
