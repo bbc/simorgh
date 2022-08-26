@@ -5,6 +5,7 @@ import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
 import { C_GREY_2 } from '../../legacy/psammead/psammead-styles/src/colours';
+import { Services, Variants } from '../../models/types/global';
 
 import { EmbedConsentBannerCanonical, EmbedConsentBannerAmp } from '.';
 
@@ -13,8 +14,8 @@ const BackgroundColorWrapper = ({ children }: PropsWithChildren<ReactNode>) => (
 );
 
 interface Props {
-  service: string;
-  variant: string;
+  service: Services;
+  variant: Variants;
   isAmp?: boolean;
 }
 

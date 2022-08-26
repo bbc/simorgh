@@ -18,24 +18,9 @@ import {
 
 import consentBannerCss from './ConsentBanner.styles';
 
-// TODO: Get these from the Global Translations types
-type TranslationsProps = {
-  socialEmbed: {
-    consentBanner: {
-      heading: string;
-      body: string;
-      button: string;
-      cookiesUrl: {
-        [key in SocialEmbedProviders]?: string;
-      };
-      privacyUrl: {
-        [key in SocialEmbedProviders]?: string;
-      };
-    };
-  };
-};
+import { Translations } from '../../models/types/translations';
 
-const defaultTranslations: TranslationsProps['socialEmbed']['consentBanner'] = {
+const defaultTranslations: Translations['socialEmbed']['consentBanner'] = {
   heading: 'Allow YouTube content?',
   body: `This article contains content provided by YouTube.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Google's [link] cookie policy [/link] and [link] privacy policy [/link] before accepting. To view this content choose 'accept and continue'.`,
   button: 'Accept and continue',
@@ -56,16 +41,10 @@ const getProviderName = (provider: SocialEmbedProviders) => {
   }[provider];
 };
 
-type TranslationReturnProps = {
-  heading: string;
-  body: (string | false | JSX.Element)[] | string;
-  button: string;
-};
-
 const getTranslations = (
   provider: SocialEmbedProviders,
-  translations: TranslationsProps,
-): TranslationReturnProps => {
+  translations: Translations,
+) => {
   const headingTranslations = pathOr(
     defaultTranslations.heading,
     ['socialEmbed', 'consentBanner', 'heading'],
@@ -183,11 +162,7 @@ const ConsentBanner = ({
   provider,
   clickHandler,
 }: ConsentBannerContentProps) => {
-  const { service, script, translations } = useContext(ServiceContext) as {
-    script: string;
-    service: string;
-    translations: TranslationsProps;
-  };
+  const { service, script, translations } = useContext(ServiceContext);
 
   const consentTranslations = getTranslations(provider, translations);
 

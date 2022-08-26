@@ -3,12 +3,12 @@ import { render, act, fireEvent } from '@testing-library/react';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { ARTICLE_PAGE, STORY_PAGE } from '../../routes/utils/pageTypes';
 import ThemeProvider from '../ThemeProvider';
+import { Services } from '../../models/types/global';
 
 import { EmbedConsentBannerCanonical } from '.';
 
-// TODO: Get service from Global types
 interface ContextProps {
-  service?: string;
+  service: Services;
 }
 
 const WithContext = ({

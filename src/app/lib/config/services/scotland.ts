@@ -210,6 +210,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
+      socialEmbed: {},
     },
     brandSVG,
     mostRead: {

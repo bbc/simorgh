@@ -2,12 +2,12 @@ import React, { PropsWithChildren } from 'react';
 import { render, act, fireEvent } from '@testing-library/react';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ThemeProvider from '../ThemeProvider';
+import { Services } from '../../models/types/global';
 
 import ConsentBanner from './ConsentBanner';
 
-// TODO: Get service from Global types
 interface ContextProps {
-  service?: string;
+  service: Services;
 }
 
 const mockCanonicalClickHandler = {
