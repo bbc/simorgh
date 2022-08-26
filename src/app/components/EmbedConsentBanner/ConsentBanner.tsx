@@ -5,6 +5,7 @@ import pathOr from 'ramda/src/pathOr';
 
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { SocialEmbedProviders } from '../../models/types/global';
+import { Translations } from '../../models/types/translations';
 
 import {
   getBodyCopy,
@@ -17,8 +18,6 @@ import {
 } from '../../legacy/psammead/psammead-styles/src/font-styles';
 
 import consentBannerCss from './ConsentBanner.styles';
-
-import { Translations } from '../../models/types/translations';
 
 const defaultTranslations: Translations['socialEmbed']['consentBanner'] = {
   heading: 'Allow YouTube content?',
