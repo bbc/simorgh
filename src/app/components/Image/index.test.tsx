@@ -21,23 +21,84 @@ describe('Image', () => {
   });
 
   it('should be a responsive image', () => {
-    expect(true).toBe(false);
+    render(
+      <Image
+        src="someSrc.jpeg"
+        alt="imageAlt"
+        originCode="cpsdevpb"
+        locator="41BC/test/_63482861_orange1.jpg"
+        originalImageWidth={500}
+        imageResolutions={[200, 500, 1000]}
+        sizes="(max-width: 600px) 480px, 800px"
+      />,
+    );
+    screen.debug();
+    const imageEl = screen.getByAltText('imageAlt');
+    expect(imageEl).toHaveAttribute(
+      'srcset',
+      'https://ichef.bbci.co.uk/news/200/cpsdevpb/41BC/test/_63482861_orange1.jpg.webp 200w, https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg.webp 500w',
+    );
+    expect(imageEl).toHaveAttribute('sizes', '(max-width: 600px) 480px, 800px');
   });
 
-  it('should support jpeg images', () => {
-    expect(true).toBe(false);
+  it.only('should support jpeg images', () => {
+    render(
+      <Image
+        src="someSrc.jpeg"
+        alt="imageAlt"
+        originCode="cpsdevpb"
+        locator="41BC/test/_63482861_orange1.jpg"
+        originalImageWidth={500}
+        imageResolutions={[200, 500, 1000]}
+        sizes="(max-width: 600px) 480px, 800px"
+      />,
+    );
+    screen.debug();
+
+    const imageEl = screen.getByAltText('imageAlt');
+    expect(imageEl?.parentNode?.children[1]).toHaveAttribute(
+      'srcset',
+      'https://ichef.bbci.co.uk/news/200/cpsdevpb/41BC/test/_63482861_orange1.jpg 200w, https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg 500w',
+    );
   });
 
   it('should support webp images', () => {
-    expect(true).toBe(false);
+    render(
+      <Image
+        src="someSrc.jpeg"
+        alt="imageAlt"
+        originCode="cpsdevpb"
+        locator="41BC/test/_63482861_orange1.jpg"
+        originalImageWidth={500}
+        imageResolutions={[200, 500, 1000]}
+        sizes="(max-width: 600px) 480px, 800px"
+      />,
+    );
+    screen.debug();
+
+    const imageEl = screen.getByAltText('imageAlt');
+    expect(imageEl?.parentNode?.firstChild).toHaveAttribute(
+      'srcset',
+      'https://ichef.bbci.co.uk/news/200/cpsdevpb/41BC/test/_63482861_orange1.jpg.webp 200w, https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg.webp 500w',
+    );
   });
 
   it('should support AMP images', () => {
-    expect(true).toBe(false);
-  });
+    render(
+      <Image
+        src="https://bbc.co.uk/iframe/amp"
+        alt="imageAlt"
+        originCode="cpsdevpb"
+        locator="41BC/test/_63482861_orange1.jpg"
+        originalImageWidth={500}
+        imageResolutions={[200, 500, 1000]}
+        sizes="(max-width: 600px) 480px, 800px"
+      />,
+    );
+    screen.debug();
 
-  it('should support jpeg images', () => {
-    expect(true).toBe(false);
+    const imageEl = document.querySelector('img') as HTMLImageElement;
+    expect(imageEl.src).toContain('https://bbc.co.uk/iframe/amp');
   });
 
   it('should support aspect ratio to prevent content layout shift', () => {
