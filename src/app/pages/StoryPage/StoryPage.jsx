@@ -49,7 +49,6 @@ import {
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
 import Include from '#containers/Include';
-import { ServiceContext } from '#contexts/ServiceContext';
 import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import { RequestContext } from '#contexts/RequestContext';
@@ -58,6 +57,7 @@ import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import { OptimizelyExperiment } from '@optimizely/react-sdk';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 

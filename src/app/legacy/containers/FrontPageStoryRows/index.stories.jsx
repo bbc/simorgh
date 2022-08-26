@@ -1,7 +1,7 @@
 import React from 'react';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 import Grid from '#components/Grid';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';

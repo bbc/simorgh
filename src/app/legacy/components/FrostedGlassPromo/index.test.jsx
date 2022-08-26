@@ -3,12 +3,12 @@ import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { promoProps, cpsPromoFixture, linkPromoFixture } from './fixtures';
 
 import Promo from '.';

@@ -7,11 +7,11 @@ import {
   AMP_MUSTACHE_JS,
   AMP_SCRIPT_JS,
 } from '#psammead/psammead-assets/src/amp-boilerplate';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import pathOr from 'ramda/src/pathOr';
 import { C_SHADOW } from '#psammead/psammead-styles/src/colours';
 import { getBodyCopy } from '#psammead/gel-foundations/src/typography';
+import { ServiceContext } from '../../../../contexts/ServiceContext';
 import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
 import MostReadRank, { serviceNumerals } from '../Canonical/Rank';
 import generateCSPHash from '../utilities/generateCPSHash';

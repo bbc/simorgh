@@ -16,7 +16,7 @@ import {
   GEL_MARGIN_ABOVE_400PX,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const Grid = React.forwardRef((props, ref) => {
   const { dir } = useContext(ServiceContext);

@@ -2,7 +2,7 @@ import React from 'react';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { withKnobs } from '@storybook/addon-knobs';
 import services from '#server/utilities/serviceConfigs';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import CopyrightContainer from '.';
 
 // eslint-disable-next-line react/prop-types

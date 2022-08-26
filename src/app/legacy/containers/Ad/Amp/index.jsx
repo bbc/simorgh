@@ -4,7 +4,6 @@ import styled from '@emotion/styled';
 import { Helmet } from 'react-helmet';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
-import { ServiceContext } from '#contexts/ServiceContext';
 import {
   AMP_ACCESS_JS,
   AMP_ADS_JS,
@@ -13,6 +12,7 @@ import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import { C_GREY_3, C_RHINO } from '#psammead/psammead-styles/src/colours';
 import { getMinion } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
+import { ServiceContext } from '../../../../contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import AdSlot from './AdSlot';
 import { ampLeaderboardStyles, ampMpuStyles } from '../utilities/adSlotStyles';

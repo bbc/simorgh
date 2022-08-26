@@ -7,12 +7,12 @@ import { render, act, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { waitFor } from '@testing-library/dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import * as trackingToggle from '#hooks/useTrackingToggle';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import pidginData from './fixtureData/tori-51745682.json';
 import useClickTrackerHandler from '.';
 
