@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { pageDataPropType } from '#models/propTypes/data';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import CanonicalATIAnalytics from './canonical';
 import AmpATIAnalytics from './amp';
 import { buildArticleATIUrl } from './params/article/buildParams';

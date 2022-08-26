@@ -2,11 +2,11 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import path from 'ramda/src/path';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import * as viewTracking from '#hooks/useViewTracker';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import RecommendationsPromoList from './index';
 
 process.env.SIMORGH_BASE_URL = 'http://bbc.com';

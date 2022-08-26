@@ -7,7 +7,6 @@ import pidginMostReadData from '#data/pidgin/mostRead';
 import nepaliMostReadData from '#data/nepali/mostRead';
 import kyrgyzMostReadData from '#data/kyrgyz/mostRead';
 import ukrainianMostReadData from '#data/ukrainian/mostRead';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import {
   MOST_READ_CLIENT_REQUEST,
@@ -15,6 +14,7 @@ import {
 } from '#lib/logger.const';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
+import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import CanonicalMostRead from '.';
 import {
   setStalePromoTimestamp,

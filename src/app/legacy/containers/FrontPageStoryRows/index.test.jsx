@@ -1,9 +1,9 @@
 import React from 'react';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import getNumberPromoFixtures from './testHelpers';
 import { TopRow, LeadingRow, RegularRow } from '.';
 

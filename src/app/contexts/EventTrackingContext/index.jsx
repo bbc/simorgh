@@ -2,7 +2,6 @@ import React, { createContext, useContext } from 'react';
 import { node } from 'prop-types';
 
 import { pageDataPropType } from '#models/propTypes/data';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import { buildATIEventTrackingParams } from '#containers/ATIAnalytics/params';
 import useToggle from '#hooks/useToggle';
@@ -20,6 +19,7 @@ import {
   CORRESPONDENT_STORY_PAGE,
   TOPIC_PAGE,
 } from '#app/routes/utils/pageTypes';
+import { ServiceContext } from '../ServiceContext';
 
 export const EventTrackingContext = createContext({});
 

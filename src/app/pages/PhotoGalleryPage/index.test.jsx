@@ -3,7 +3,6 @@ import React from 'react';
 import { StaticRouter } from 'react-router-dom';
 import { render } from '@testing-library/react';
 import assocPath from 'ramda/src/assocPath';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 
@@ -12,6 +11,7 @@ import someCpsOnwardJourneys from '#data/azeri/cpsAssets/azerbaijan-44208474.jso
 import allCpsOnwardJourneys from '#data/pidgin/cpsAssets/tori-49221071.json';
 import pglAboutData from '#data/afaanoromoo/cpsAssets/oduu-41217768';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import PhotoGalleryPage from '.';
 
 jest.mock('#containers/ChartbeatAnalytics', () => {

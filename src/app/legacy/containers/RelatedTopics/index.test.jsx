@@ -2,7 +2,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import RelatedTopics from '#containers/RelatedTopics';
@@ -10,6 +9,7 @@ import * as clickTracker from '#hooks/useClickTrackerHandler';
 import * as viewTracker from '#hooks/useViewTracker';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 
 beforeEach(() => {
   jest.resetModules();

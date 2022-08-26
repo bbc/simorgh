@@ -6,7 +6,7 @@ import partition from 'ramda/src/partition';
 import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 import Image from './image';
 import MediaIcon, { TYPES } from './media-icon';

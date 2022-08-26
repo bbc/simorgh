@@ -1,7 +1,7 @@
 import React from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { withKnobs, select, boolean } from '@storybook/addon-knobs';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';

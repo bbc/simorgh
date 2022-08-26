@@ -1,6 +1,6 @@
 import React from 'react';
 import pathOr from 'ramda/src/pathOr';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 import igboData from '#data/igbo/frontpage/index.json';

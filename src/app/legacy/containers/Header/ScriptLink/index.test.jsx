@@ -3,11 +3,8 @@ import { node } from 'prop-types';
 import { MemoryRouter, Route } from 'react-router-dom';
 import { render, fireEvent } from '@testing-library/react';
 import { RequestContext } from '#contexts/RequestContext';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { UserContext } from '#contexts/UserContext';
 import { ToggleContext } from '#contexts/ToggleContext';
-import { service as serbianServiceConfig } from '#lib/config/services/serbian';
-import { service as ukChinaServiceConfig } from '#lib/config/services/ukchina';
 import * as cookies from '#contexts/UserContext/cookies';
 import {
   articlePath,
@@ -18,6 +15,9 @@ import {
   topicPath,
 } from '#app/routes/utils/regex';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { service as ukChinaServiceConfig } from '../../../../lib/config/services/ukchina';
+import { service as serbianServiceConfig } from '../../../../lib/config/services/serbian';
+import { ServiceContext } from '../../../../contexts/ServiceContext';
 import ScriptLinkContainer, { getVariantHref } from '.';
 
 const setPreferredVariantCookieSpy = jest.spyOn(
