@@ -2,21 +2,27 @@ import React, { PropsWithChildren } from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import Timestamp from '../../../legacy/containers/ArticleTimestamp';
-import { bylineWithNameAndRole } from './fixture';
+import { bylineWithNameAndRole, bylineWithLink } from './fixture';
 import Byline from '.';
 import { withServicesKnob } from '../../../legacy/psammead/psammead-storybook-helpers/src';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 interface Props {
-  service: string;
+  service: any;
+  fixture: any;
 }
 
-const Component = ({ service, children }: PropsWithChildren<Props>) => {
-  return (
-    <ServiceContextProvider service={service}>
-      <Byline blocks={bylineWithNameAndRole}>{children}</Byline>
-    </ServiceContextProvider>
-  );
-};
+const Component = ({
+  service,
+  fixture,
+  children,
+}: PropsWithChildren<Props>) => (
+  <ServiceContextProvider service={service}>
+    <ThemeProvider service={service}>
+      <Byline blocks={fixture}>{children}</Byline>
+    </ThemeProvider>
+  </ServiceContextProvider>
+);
 
 export default {
   title: 'Components/Byline',
@@ -25,10 +31,13 @@ export default {
 };
 
 export const AuthorRoleByline = ({ service }: Props) => (
-  <Component service={service} />
+  <Component fixture={bylineWithNameAndRole} service={service} />
+);
+export const LinkByline = ({ service }: Props) => (
+  <Component fixture={bylineWithLink} service={service} />
 );
 export const AuthorRoleTimestampByline = ({ service }: Props) => (
-  <Component service={service}>
+  <Component fixture={bylineWithLink} service={service}>
     <Timestamp
       firstPublished={1660658887}
       lastPublished={1660658887}
