@@ -5,7 +5,6 @@ import { jsx } from '@emotion/react';
 
 import { GelFontSize, FontVariant } from '../../interfaces';
 import Text from '../Text';
-import styles from './index.styled';
 
 interface Props {
   className?: string;
@@ -45,7 +44,17 @@ const Heading: FC<Props> = ({
       fontVariant={fontVariant}
       className={className}
       size={size || sizes[element]}
-      css={styles.heading}
+      css={{
+        /*
+         * margin: 0 is used to cancel the default spacing
+         * above and below the component.
+         * This is because we don't rely on one default spacing
+         * for all heading elements.
+         * Each use of this component will have to explicitly set
+         * the spacings with the `css` prop.
+         */
+        margin: 0,
+      }}
       {...htmlAttributes}
     >
       {children}

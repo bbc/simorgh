@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, act } from '@testing-library/react';
-import { css, Theme, Global } from '@emotion/react';
+import { css, Theme } from '@emotion/react';
 
 import ThemeProvider from '.';
 
@@ -240,7 +240,7 @@ describe('ThemeProvider', () => {
     await act(async () => {
       render(
         <ThemeProvider service="mundo" variant={null}>
-          <Global styles={({ typography }) => typography.fontFaces} />
+          <div />
         </ThemeProvider>,
       );
     });

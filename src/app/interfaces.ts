@@ -80,6 +80,276 @@ interface Spacings {
   QUADRUPLE: number;
 }
 
+export type TypographyScript = {
+  atlas: {
+    groupA: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupB: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupD: {
+      fontSize: number;
+      lineHeight: number;
+    };
+  };
+  elephant: {
+    groupA: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupB: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupD: {
+      fontSize: number;
+      lineHeight: number;
+    };
+  };
+  imperial: {
+    groupA: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupB: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupD: {
+      fontSize: number;
+      lineHeight: number;
+    };
+  };
+  royal: {
+    groupA: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupB: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupD: {
+      fontSize: number;
+      lineHeight: number;
+    };
+  };
+  foolscap: {
+    groupA: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupB: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupD: {
+      fontSize: number;
+      lineHeight: number;
+    };
+  };
+  canon: {
+    groupA: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupB: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupD: {
+      fontSize: number;
+      lineHeight: number;
+    };
+  };
+  trafalgar: {
+    groupA: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupB: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupD: {
+      fontSize: number;
+      lineHeight: number;
+    };
+  };
+  paragon: {
+    groupA: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupB: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupD: {
+      fontSize: number;
+      lineHeight: number;
+    };
+  };
+  doublePica: {
+    groupA: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupB: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupD: {
+      fontSize: number;
+      lineHeight: number;
+    };
+  };
+  greatPrimer: {
+    groupA: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupB: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupD: {
+      fontSize: number;
+      lineHeight: number;
+    };
+  };
+  bodyCopy: {
+    groupA: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupB: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupD: {
+      fontSize: number;
+      lineHeight: number;
+    };
+  };
+  pica: {
+    groupA: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupB: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupD: {
+      fontSize: number;
+      lineHeight: number;
+    };
+  };
+  longPrimer: {
+    groupA: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupB: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupD: {
+      fontSize: number;
+      lineHeight: number;
+    };
+  };
+  brevier: {
+    groupA: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupB: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupD: {
+      fontSize: number;
+      lineHeight: number;
+    };
+  };
+  minion: {
+    groupA: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupB: {
+      fontSize: number;
+      lineHeight: number;
+    };
+    groupD: {
+      fontSize: number;
+      lineHeight: number;
+    };
+  };
+};
+
+export type FontVariants = {
+  sans: {
+    regular: {
+      fontFamily: string;
+      fontStyle: string;
+      fontWeight: number;
+    };
+    regularItalic?: {
+      fontFamily: string;
+      fontStyle: string;
+      fontWeight: number;
+    };
+    bold: {
+      fontFamily: string;
+      fontStyle: string;
+      fontWeight: number;
+    };
+    boldItalic?: {
+      fontFamily: string;
+      fontStyle: string;
+      fontWeight: number;
+    };
+    light?: {
+      fontFamily: string;
+      fontStyle: string;
+      fontWeight: number;
+    };
+  };
+  serif?: {
+    regular: {
+      fontFamily: string;
+      fontStyle: string;
+      fontWeight: number;
+    };
+    medium: {
+      fontFamily: string;
+      fontStyle: string;
+      fontWeight: number;
+    };
+    mediumItalic: {
+      fontFamily: string;
+      fontStyle: string;
+      fontWeight: number;
+    };
+    bold: {
+      fontFamily: string;
+      fontStyle: string;
+      fontWeight: number;
+    };
+    light: {
+      fontFamily: string;
+      fontStyle: string;
+      fontWeight: number;
+    };
+  };
+};
+
 export interface Typography {
   fontFaces: {
     '@font-face'?: {
@@ -90,274 +360,8 @@ export interface Typography {
       fontDisplay: string;
     };
   }[];
-  fontVariants: {
-    sans: {
-      regular: {
-        fontFamily: string;
-        fontStyle: string;
-        fontWeight: number;
-      };
-      regularItalic?: {
-        fontFamily: string;
-        fontStyle: string;
-        fontWeight: number;
-      };
-      bold: {
-        fontFamily: string;
-        fontStyle: string;
-        fontWeight: number;
-      };
-      boldItalic?: {
-        fontFamily: string;
-        fontStyle: string;
-        fontWeight: number;
-      };
-      light?: {
-        fontFamily: string;
-        fontStyle: string;
-        fontWeight: number;
-      };
-    };
-    serif?: {
-      regular: {
-        fontFamily: string;
-        fontStyle: string;
-        fontWeight: number;
-      };
-      medium: {
-        fontFamily: string;
-        fontStyle: string;
-        fontWeight: number;
-      };
-      mediumItalic: {
-        fontFamily: string;
-        fontStyle: string;
-        fontWeight: number;
-      };
-      bold: {
-        fontFamily: string;
-        fontStyle: string;
-        fontWeight: number;
-      };
-      light: {
-        fontFamily: string;
-        fontStyle: string;
-        fontWeight: number;
-      };
-    };
-  };
-  script: {
-    atlas: {
-      groupA: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupB: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupD: {
-        fontSize: number;
-        lineHeight: number;
-      };
-    };
-    elephant: {
-      groupA: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupB: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupD: {
-        fontSize: number;
-        lineHeight: number;
-      };
-    };
-    imperial: {
-      groupA: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupB: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupD: {
-        fontSize: number;
-        lineHeight: number;
-      };
-    };
-    royal: {
-      groupA: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupB: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupD: {
-        fontSize: number;
-        lineHeight: number;
-      };
-    };
-    foolscap: {
-      groupA: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupB: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupD: {
-        fontSize: number;
-        lineHeight: number;
-      };
-    };
-    canon: {
-      groupA: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupB: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupD: {
-        fontSize: number;
-        lineHeight: number;
-      };
-    };
-    trafalgar: {
-      groupA: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupB: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupD: {
-        fontSize: number;
-        lineHeight: number;
-      };
-    };
-    paragon: {
-      groupA: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupB: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupD: {
-        fontSize: number;
-        lineHeight: number;
-      };
-    };
-    doublePica: {
-      groupA: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupB: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupD: {
-        fontSize: number;
-        lineHeight: number;
-      };
-    };
-    greatPrimer: {
-      groupA: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupB: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupD: {
-        fontSize: number;
-        lineHeight: number;
-      };
-    };
-    bodyCopy: {
-      groupA: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupB: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupD: {
-        fontSize: number;
-        lineHeight: number;
-      };
-    };
-    pica: {
-      groupA: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupB: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupD: {
-        fontSize: number;
-        lineHeight: number;
-      };
-    };
-    longPrimer: {
-      groupA: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupB: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupD: {
-        fontSize: number;
-        lineHeight: number;
-      };
-    };
-    brevier: {
-      groupA: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupB: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupD: {
-        fontSize: number;
-        lineHeight: number;
-      };
-    };
-    minion: {
-      groupA: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupB: {
-        fontSize: number;
-        lineHeight: number;
-      };
-      groupD: {
-        fontSize: number;
-        lineHeight: number;
-      };
-    };
-  };
+  fontVariants: FontVariants;
+  script: TypographyScript;
 }
 
 export type GelFontSize =
@@ -377,6 +381,17 @@ export type GelFontSize =
   | 'brevier'
   | 'minion';
 
+type FontSize = {
+  [x: string]:
+    | string
+    | {
+        fontSize: string;
+        lineHeight: string;
+      };
+  fontSize: string;
+  lineHeight: string;
+};
+
 export type FontVariant =
   | 'sansRegular'
   | 'sansRegularItalic'
@@ -389,11 +404,54 @@ export type FontVariant =
   | 'serifBold'
   | 'serifLight';
 
+export type FontStyles = {
+  fontFamily: string;
+  fontStyle: string;
+  fontWeight: number;
+};
+
 declare module '@emotion/react' {
   export interface Theme {
     palette: Palette;
     mq: MediaQueries;
     spacings: Spacings;
-    typography: Typography;
+    fontSizes: {
+      atlas: FontSize;
+      elephant: FontSize;
+      imperial: FontSize;
+      royal: FontSize;
+      foolscap: FontSize;
+      canon: FontSize;
+      trafalgar: FontSize;
+      paragon: FontSize;
+      doublePica: FontSize;
+      greatPrimer: FontSize;
+      bodyCopy: FontSize;
+      pica: FontSize;
+      longPrimer: FontSize;
+      brevier: FontSize;
+      minion: FontSize;
+    };
+    fontMq: {
+      GROUP_A_MAX_WIDTH: string;
+      GROUP_A_MIN_WIDTH: string;
+      GROUP_A_ONLY: string;
+      GROUP_B_MAX_WIDTH: string;
+      GROUP_B_MIN_WIDTH: string;
+      GROUP_B_ONLY: string;
+      GROUP_D_MIN_WIDTH: string;
+    };
+    fontVariants: {
+      sansRegular: FontStyles;
+      sansRegularItalic: FontStyles;
+      sansBold: FontStyles;
+      sansBoldItalic: FontStyles;
+      sansLight: FontStyles;
+      serifRegular: FontStyles;
+      serifMedium: FontStyles;
+      serifMediumItalic: FontStyles;
+      serifBold: FontStyles;
+      serifLight: FontStyles;
+    };
   }
 }
