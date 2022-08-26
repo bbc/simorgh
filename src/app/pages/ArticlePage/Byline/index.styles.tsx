@@ -1,9 +1,15 @@
 import { css, Theme } from '@emotion/react';
 
-interface Props {
-  service: string;
-  script: any;
-}
+const link = css({
+  textDecoration: 'none',
+  position: 'relative',
+  zIndex: 1,
+  paddingRight: '2.75rem',
+
+  '&:hover, &:focus': {
+    textDecoration: 'underline',
+  },
+});
 
 export default {
   bylineSection: ({ spacings, mq }: Theme) =>
@@ -26,14 +32,11 @@ export default {
   jobRole: ({ palette }: Theme) => css({ color: palette.GREY_10 }),
 
   twitterText: ({ palette }: Theme) =>
-    css([
-      this.jobRole,
-      {
-        color: palette.POSTBOX,
-        display: 'inline-block',
-        verticalAlign: 'middle',
-      },
-    ]),
+    css({
+      color: palette.POSTBOX,
+      display: 'inline-block',
+      verticalAlign: 'middle',
+    }),
 
   authorChevron: ({ palette, spacings }: Theme) =>
     css({
@@ -60,18 +63,6 @@ export default {
       margin: `${spacings.DOUBLE}rem 0`,
     }),
 
-  link: () =>
-    css({
-      textDecoration: 'none',
-      position: 'relative',
-      zIndex: 1,
-      paddingRight: '2.75rem',
-
-      '&:hover, &:focus': {
-        textDecoration: 'underline',
-      },
-    }),
-
-  authorLink: () => css([this.link, { paddingTop: '1.375rem' }]),
-  twitterLink: () => css([this.link, { paddingBottom: '1.75rem' }]),
+  authorLink: () => css([link, { paddingTop: '1.375rem' }]),
+  twitterLink: () => css([link, { paddingBottom: '1.75rem' }]),
 };
