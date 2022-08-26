@@ -3,18 +3,8 @@ import React, { useContext, PropsWithChildren } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import VisuallyHiddenText from '../../../legacy/psammead/psammead-visually-hidden-text/src';
-import {
-  Author,
-  JobRole,
-  BylineList,
-  LineBreak,
-  AuthorChavron,
-  TwitterChavron,
-  TwitteText,
-  AuthorLink,
-  TwitterLink,
-  StyledBylineSection,
-} from './index.styles';
+import BylineCss from './index.styles';
+import { RightChevron } from '../../../components/icons';
 
 type Props = {
   blocks: any;
@@ -83,55 +73,51 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
   );
 
   return (
-    <StyledBylineSection role="region" aria-labelledby="article-byline">
+    <section
+      css={BylineCss.bylineSection}
+      role="region"
+      aria-labelledby="article-byline"
+    >
       <VisuallyHiddenText id="article-byline" aria-hidden>
         {articleInformationTranslated}
       </VisuallyHiddenText>
-      <BylineList role="list">
+      <ul css={BylineCss.bylineList} role="list">
         <li>
           {twitterLink ? (
             <>
               <VisuallyHiddenText>{`${authorTranslated}, `}</VisuallyHiddenText>
-              <AuthorLink href={twitterLink}>
-                <Author script={script} service={service}>
-                  {author}
-                </Author>
-                <AuthorChavron />
-              </AuthorLink>
+              <a css={BylineCss.authorLink} href={twitterLink}>
+                <span css={BylineCss.author}>{author}</span>
+                <RightChevron css={BylineCss.authorChevron} />
+              </a>
             </>
           ) : (
             <span role="text">
               <VisuallyHiddenText>{`${authorTranslated}, `}</VisuallyHiddenText>
-              <Author script={script} service={service}>
-                {author}
-              </Author>
+              <span css={BylineCss.author}>{author}</span>
             </span>
           )}
         </li>
         <li>
           <span role="text">
             <VisuallyHiddenText>{`${jobRoleTranslated}, `} </VisuallyHiddenText>
-            <JobRole script={script} service={service}>
-              {jobRole}
-            </JobRole>
+            <span css={BylineCss.jobRole}>{jobRole}</span>
           </span>
         </li>
         {twitterLink ? (
           <li>
-            <TwitterLink href={twitterLink}>
+            <a css={BylineCss.twitterLink} href={twitterLink}>
               <span role="text">
                 <VisuallyHiddenText lang="en-GB">
                   {`Twitter, `}
                 </VisuallyHiddenText>
-                <TwitteText script={script} service={service}>
-                  {`@${twitterText}`}
-                </TwitteText>
-                <TwitterChavron />
+                <span css={BylineCss.twitterText}>{`@${twitterText}`}</span>
+                <RightChevron css={BylineCss.twitterChevron} />
               </span>
-            </TwitterLink>
+            </a>
           </li>
         ) : null}
-        <LineBreak aria-hidden />
+        <hr css={BylineCss.lineBreak} aria-hidden />
         {children ? (
           <li>
             <span role="text">
@@ -142,8 +128,8 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
             </span>
           </li>
         ) : null}
-      </BylineList>
-    </StyledBylineSection>
+      </ul>
+    </section>
   );
 };
 

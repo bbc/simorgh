@@ -26,6 +26,7 @@ interface Palette extends BrandPalette {
   GREY_11: string;
   GREY_2: string;
   GREY_3: string;
+  GREY_5: string;
   GREY_6: string;
   GREY_8: string;
   KINGFISHER: string;
@@ -74,6 +75,7 @@ interface MediaQueries {
 }
 
 interface Spacings {
+  HLF: number;
   FULL: number;
   DOUBLE: number;
   TRIPLE: number;

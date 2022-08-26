@@ -1,109 +1,77 @@
-import styled from '@emotion/styled';
-import {
-  getBodyCopy,
-  getBrevier,
-} from '../../../legacy/psammead/gel-foundations/src/typography';
-import {
-  C_GREY_6,
-  C_GREY_10,
-  C_GREY_5,
-  C_POSTBOX,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_HLF,
-} from '../../../legacy/psammead/gel-foundations/src/spacings';
-import { getSansBold } from '../../../legacy/psammead/psammead-styles/src/font-styles';
-import {
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '../../../legacy/psammead/gel-foundations/src/breakpoints';
-
-import { RightChevron } from '../../../components/icons';
+import { css, Theme } from '@emotion/react';
 
 interface Props {
   service: string;
   script: any;
 }
 
-export const StyledBylineSection = styled.section`
-  padding-inline-start: ${GEL_SPACING};
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    padding-inline-start: ${GEL_SPACING_DBL};
-  }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding-inline-start: 0;
-  }
+export default {
+  bylineSection: ({ spacings, mq }: Theme) =>
+    css({
+      paddingInlineStart: `${spacings.FULL}rem`,
+      [mq.GROUP_2_MIN_WIDTH]: { paddingInlineStart: `${spacings.DOUBLE}rem` },
+      [mq.GROUP_4_MIN_WIDTH]: { paddingInlineStart: 0 },
+      div: { padding: 0 },
+    }),
 
-  div {
-    padding: 0;
-  }
-`;
+  bylineList: () => css({ listStyle: 'none', padding: 0 }),
 
-export const Author = styled.span<Props>`
-  color: ${C_GREY_10};
-  ${({ service }) => getSansBold(service)}
-  ${({ script }) => getBodyCopy(script)};
-  display: inline-block;
-  vertical-align: middle;
-`;
+  author: ({ palette }: Theme) =>
+    css({
+      color: palette.GREY_10,
+      display: 'inline-block',
+      verticalAlign: 'middle',
+    }),
 
-export const JobRole = styled.span<Props>`
-  color: ${C_GREY_6};
-  ${({ service }) => getSansBold(service)}
-  ${({ script }) => getBrevier(script)}
-`;
+  jobRole: ({ palette }: Theme) => css({ color: palette.GREY_10 }),
 
-export const LineBreak = styled.hr`
-  border-color: ${C_GREY_5};
-  width: ${40 / 16}rem;
-  margin: ${GEL_SPACING_DBL} 0;
-`;
+  twitterText: ({ palette }: Theme) =>
+    css([
+      this.jobRole,
+      {
+        color: palette.POSTBOX,
+        display: 'inline-block',
+        verticalAlign: 'middle',
+      },
+    ]),
 
-export const BylineList = styled.ul`
-  list-style: none;
-  padding: 0;
-`;
+  authorChevron: ({ palette, spacings }: Theme) =>
+    css({
+      verticalAlign: 'middle',
+      margin: `0 ${spacings.HLF}rem`,
+      color: palette.GREY_10,
+      fill: `currentcolor`,
+    }),
 
-export const AuthorChavron = styled(RightChevron)`
-  vertical-align: middle;
-  margin: 0 ${GEL_SPACING_HLF};
-  color: ${C_GREY_10};
-  fill: currentColor;
-`;
+  twitterChevron: ({ palette, spacings }: Theme) =>
+    css({
+      verticalAlign: 'middle',
+      margin: `0 ${spacings.HLF}rem`,
+      color: palette.POSTBOX,
+      fill: `currentcolor`,
+      width: `${spacings.FULL}rem`,
+      height: `${spacings.FULL}rem`,
+    }),
 
-export const TwitterChavron = styled(RightChevron)`
-  vertical-align: middle;
-  margin: 0 ${GEL_SPACING_HLF};
-  color: ${C_POSTBOX};
-  fill: currentColor;
-  width: ${GEL_SPACING};
-  height: ${GEL_SPACING};
-`;
+  lineBreak: ({ palette, spacings }: Theme) =>
+    css({
+      borderColor: palette.GREY_5,
+      width: `${40 / 16}rem`,
+      margin: `${spacings.DOUBLE}rem 0`,
+    }),
 
-export const TwitteText = styled(JobRole)`
-  color: ${C_POSTBOX};
-  display: inline-block;
-  vertical-align: middle;
-`;
+  link: () =>
+    css({
+      textDecoration: 'none',
+      position: 'relative',
+      zIndex: 1,
+      paddingRight: '2.75rem',
 
-const Link = styled.a`
-  text-decoration: none;
-  position: relative;
-  z-index: 1;
-  padding-right: 2.75rem;
+      '&:hover, &:focus': {
+        textDecoration: 'underline',
+      },
+    }),
 
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
-`;
-
-export const AuthorLink = styled(Link)`
-  padding-top: 1.375rem;
-`;
-
-export const TwitterLink = styled(Link)`
-  padding-bottom: 1.75rem;
-`;
+  authorLink: () => css([this.link, { paddingTop: '1.375rem' }]),
+  twitterLink: () => css([this.link, { paddingBottom: '1.75rem' }]),
+};
