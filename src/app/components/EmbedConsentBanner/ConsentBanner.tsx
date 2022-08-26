@@ -99,7 +99,7 @@ const getTranslations = (
   }
 
   const linkHtmlElements = [
-    linkTextElements.length > 0 && (
+    linkTextElements.length > 0 && cookiesUrl && (
       <a
         href={cookiesUrl}
         aria-label={`externalLink-${cookiesUrl}`}
@@ -113,7 +113,7 @@ const getTranslations = (
           .trim()}
       </a>
     ),
-    linkTextElements.length > 1 && (
+    linkTextElements.length > 1 && privacyUrl && (
       <a
         href={privacyUrl}
         aria-label={`externalLink-${privacyUrl}`}
