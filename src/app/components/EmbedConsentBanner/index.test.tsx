@@ -96,4 +96,23 @@ describe('Embed Consent Banner', () => {
 
     expect(queryByTestId('consentBanner')).not.toBeInTheDocument();
   });
+
+  it('should not render the banner when the provider is not YouTube', async () => {
+    let queryByTestId!: (id: string) => HTMLElement | null;
+
+    await act(async () => {
+      ({ queryByTestId } = render(
+        <WithContext service="mundo">
+          <EmbedConsentBannerCanonical
+            pageType={ARTICLE_PAGE}
+            provider="instagram"
+          >
+            <div>Mock iframe content</div>
+          </EmbedConsentBannerCanonical>
+        </WithContext>,
+      ));
+    });
+
+    expect(queryByTestId('consentBanner')).not.toBeInTheDocument();
+  });
 });
