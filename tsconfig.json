@@ -13,14 +13,13 @@
     "isolatedModules": true, // Unconditionally emit imports for unresolved files
     "resolveJsonModule": true, // Include modules imported with .json extension
     "noEmit": true, // Do not emit output (meaning do not compile code, only perform type checkin
-    "jsx": "react-jsx", // Support JSX in .tsx files
+    "jsx": "react", // Support JSX in .tsx files
     "sourceMap": true, // Generate corrresponding .map file
     "declaration": true, // Generate corresponding .d.ts file
     "noUnusedLocals": true, // Report errors on unused locals
     "noUnusedParameters": true, // Report errors on unused parameters
     "incremental": true, // Enable incremental compilation by reading/writing information from prior compilations to a file on disk
-    "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statement
-    "jsxImportSource": "@emotion/react"
+    "noFallthroughCasesInSwitch": true // Report errors for fallthrough cases in switch statement
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "build", "src/app/legacy/**/*"]
