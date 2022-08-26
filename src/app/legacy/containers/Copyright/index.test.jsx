@@ -1,6 +1,6 @@
 import React from 'react';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import CopyrightContainer from './index';
 
 const CopyrightWithContext = (copyrightText, contextStub) => (

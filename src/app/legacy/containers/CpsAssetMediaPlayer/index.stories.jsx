@@ -1,7 +1,7 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { BrowserRouter } from 'react-router-dom';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import WithTimeMachine from '#testHelpers/withTimeMachine';

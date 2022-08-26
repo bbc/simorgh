@@ -1,11 +1,11 @@
 import React, { useContext, useRef } from 'react';
 import SkipLink from '#psammead/psammead-brand/src/SkipLink';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import { string, bool } from 'prop-types';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import ScriptLink from './ScriptLink';
 import ConsentBanner from '../ConsentBanner';
 import NavigationContainer from '../Navigation';

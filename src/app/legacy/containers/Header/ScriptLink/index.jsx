@@ -5,8 +5,8 @@ import { string } from 'prop-types';
 import { useRouteMatch } from 'react-router-dom';
 import ScriptLink from '#psammead/psammead-script-link/src';
 import { UserContext } from '#contexts/UserContext';
-import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
+import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 export const getVariantHref = ({
   path,

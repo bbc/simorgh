@@ -2,7 +2,6 @@ import React from 'react';
 import { render, act } from '@testing-library/react';
 import fetchMock from 'fetch-mock';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import serbianLatMostReadData from '#data/serbian/mostRead/lat';
@@ -13,6 +12,7 @@ import {
   ARTICLE_PAGE,
   CORRESPONDENT_STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import MostReadContainer from '.';
 import { setFreshPromoTimestamp } from './utilities/testHelpers';
 
