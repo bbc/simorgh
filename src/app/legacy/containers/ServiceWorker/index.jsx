@@ -1,6 +1,6 @@
 import { useContext, useEffect } from 'react';
-import { ServiceContext } from '#contexts/ServiceContext';
 import onClient from '#lib/utilities/onClient';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const ServiceWorkerContainer = () => {
   const { swPath, service } = useContext(ServiceContext);

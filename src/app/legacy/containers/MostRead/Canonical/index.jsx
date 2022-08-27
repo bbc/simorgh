@@ -2,7 +2,6 @@ import React, { useEffect, useState, useContext } from 'react';
 import 'isomorphic-fetch';
 import { oneOf, string, elementType, shape } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
-import { ServiceContext } from '#contexts/ServiceContext';
 import nodeLogger from '#lib/logger.node';
 import { shouldRenderLastUpdated } from '#lib/utilities/filterPopularStaleData/isDataStale';
 import {
@@ -10,6 +9,7 @@ import {
   MOST_READ_FETCH_ERROR,
 } from '#lib/logger.const';
 import useViewTracker from '#hooks/useViewTracker';
+import { ServiceContext } from '../../../../contexts/ServiceContext';
 import { MostReadLink, MostReadItemWrapper } from './Item';
 import MostReadList from './List';
 import MostReadRank from './Rank';

@@ -9,11 +9,11 @@ import {
   IndexAlsosUl,
   IndexAlsosLi,
 } from '#psammead/psammead-story-promo/src/IndexAlsos';
-import { ServiceContext } from '#contexts/ServiceContext';
 import {
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
 } from '#app/routes/utils/pageTypes';
+import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const MAX_NUM_INDEX_ALSOS = 3; // Cap the number of Index Alsos at 3.
 

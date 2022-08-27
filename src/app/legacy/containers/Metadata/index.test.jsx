@@ -6,17 +6,17 @@ import {
   MEDIA_PAGE,
   STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import {
   articleDataNews,
   articleDataPersian,
 } from '#pages/ArticlePage/fixtureData';
-import services from '#server/utilities/serviceConfigs';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import frontPageData from '#data/igbo/frontpage/index.json';
 import liveRadioPageData from '#data/korean/bbc_korean_radio/liveradio.json';
 import { getSummary } from '#lib/utilities/parseAssetData/index';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import services from '../../../../server/utilities/serviceConfigs';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import MetadataContainer from './index';
 
 const dotComOrigin = 'https://www.bbc.com';

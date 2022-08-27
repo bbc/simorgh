@@ -1,7 +1,7 @@
 import React from 'react';
 import { withKnobs, number } from '@storybook/addon-knobs';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import Pager from '.';
 
 // eslint-disable-next-line react/prop-types
