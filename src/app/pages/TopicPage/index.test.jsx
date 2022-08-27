@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render } from '@testing-library/react';
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import TopicPage from './TopicPage';
 import {
   pidginMultipleItems,

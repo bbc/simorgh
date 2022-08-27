@@ -10,7 +10,7 @@ import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
 import { GEL_PICA } from '#psammead/gel-foundations/src/typography';
 import { Helmet } from 'react-helmet';
 import { GridItemMedium } from '#components/Grid';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const KEYLINE_WIDTH = '0.125rem';
 

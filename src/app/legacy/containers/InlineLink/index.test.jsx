@@ -1,8 +1,8 @@
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
 import { render, fireEvent } from '@testing-library/react';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import InlineLinkContainer from './index';
 
 const fragmentBlock = (text, attributes = []) => ({

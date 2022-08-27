@@ -815,6 +815,13 @@ describe('Server', () => {
       expect(sendFileSpy.mock.calls.length).toEqual(0);
       expect(statusCode).toEqual(500);
     });
+
+    it('should serve the sw.js with cache control information', async () => {
+      const { header } = await makeRequest('/pidgin/sw.js');
+      expect(header['cache-control']).toBe(
+        'public, stale-if-error=6000, stale-while-revalidate=300, max-age=300',
+      );
+    });
   });
 
   describe('Manifest json', () => {
@@ -830,6 +837,7 @@ describe('Server', () => {
       expect(sendFileSpy.mock.calls.length).toEqual(0);
       expect(statusCode).toEqual(500);
     });
+
     it('should serve a response cache control of 7 days', async () => {
       const { header } = await makeRequest('/news/articles/manifest.json');
       expect(header['cache-control']).toBe('public, max-age=604800');
@@ -1410,6 +1418,12 @@ describe('Server HTTP Headers - Page Endpoints', () => {
     expect(header['cache-control']).toBe(
       'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
     );
+  });
+
+  it(`should set a Referrer-Policy header`, async () => {
+    const { header } = await makeRequest('/mundo');
+
+    expect(header['referrer-policy']).toBe('no-referrer-when-downgrade');
   });
 });
 
