@@ -33,7 +33,7 @@ it('should render the title', async () => {
   //       </ToggleContextProvider>
   //     </ThemeProvider>,
   //   );
-  render(<SomeComponent />); // this render method comes packaged with all of providers
+  render(<SomeComponent />); // this render method comes packaged with all of the providers
 
   expect(screen.getByText('This is the title')).toBeInTheDocument();
 });
