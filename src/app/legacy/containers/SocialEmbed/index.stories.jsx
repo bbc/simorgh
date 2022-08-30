@@ -87,3 +87,4 @@ export const YoutubeWithConsentBannerAmp = props => (
     {...props}
   />
 );
+YoutubeWithConsentBannerAmp.decorators = [AmpDecorator];
