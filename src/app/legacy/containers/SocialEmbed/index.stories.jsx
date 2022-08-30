@@ -78,3 +78,12 @@ export const YoutubeWithConsentBanner = props => (
     {...props}
   />
 );
+
+export const YoutubeWithConsentBannerAmp = props => (
+  <Component
+    isAmp
+    blocks={[youtubeBlockEmbed]}
+    source="https://www.youtube.com/watch?v=1e05_rwHvOM"
+    {...props}
+  />
+);
