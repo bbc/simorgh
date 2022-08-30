@@ -9,6 +9,7 @@ import {
   twitterBlockNoEmbed,
   instagramBlock,
   instagramBlockNoEmbed,
+  youtubeBlockEmbed,
 } from './common/fixtures';
 import OptimoSocialEmbedContainer from '.';
 import withContexts from './common/testHelper';
@@ -66,6 +67,14 @@ export const InstagramNoEmbed = props => (
   <Component
     blocks={[instagramBlockNoEmbed]}
     source="https://www.instagram.com/p/CgNAEjOK46_"
+    {...props}
+  />
+);
+
+export const YoutubeWithConsentBanner = props => (
+  <Component
+    blocks={[youtubeBlockEmbed]}
+    source="https://www.youtube.com/watch?v=1e05_rwHvOM"
     {...props}
   />
 );
