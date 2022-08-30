@@ -1,15 +1,81 @@
 import React from 'react';
-import { render, act, screen } from '@testing-library/react';
-import { css, Theme } from '@emotion/react';
+import { render, screen, act, waitFor } from '@testing-library/react';
 import Image from '.';
 
 describe('Image', () => {
-  it('should preload when preload is true', () => {
-    expect(true).toBe(false);
+  it('should preload when preload is true', async () => {
+    act(() => {
+      render(
+        <Image
+          alt="orange 1"
+          originCode="cpsdevpb"
+          src="41BC/test/_63482861_orange1.jpg"
+          originalImageWidth={500}
+          imageResolutions={[200, 500, 1000]}
+          sizes="(max-width: 600px) 480px, 800px"
+          preload
+        />,
+      );
+    });
+
+    await waitFor(() => {
+      const linkEl = document.head.querySelector('link');
+
+      expect(linkEl).toHaveAttribute('rel', 'preload');
+      expect(linkEl).toHaveAttribute('as', 'image');
+      expect(linkEl).toHaveAttribute('href', '41BC/test/_63482861_orange1.jpg');
+      expect(linkEl).toHaveAttribute(
+        'imagesrcset',
+        'https://ichef.bbci.co.uk/news/200/cpsdevpb/41BC/test/_63482861_orange1.jpg.webp 200w, https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg.webp 500w',
+      );
+      expect(linkEl).toHaveAttribute(
+        'imagesizes',
+        '(max-width: 600px) 480px, 800px',
+      );
+    });
   });
 
-  it('should not preload when preload is false', () => {
-    expect(true).toBe(false);
+  it('should not preload when preload is false', async () => {
+    act(() => {
+      render(
+        <Image
+          alt="orange 1"
+          originCode="cpsdevpb"
+          src="41BC/test/_63482861_orange1.jpg"
+          originalImageWidth={500}
+          imageResolutions={[200, 500, 1000]}
+          sizes="(max-width: 600px) 480px, 800px"
+          preload={false}
+        />,
+      );
+    });
+
+    await waitFor(() => {
+      const linkEl = document.head.querySelector('link');
+
+      expect(linkEl).not.toBeInTheDocument();
+    });
+  });
+
+  it('should not preload by default', async () => {
+    act(() => {
+      render(
+        <Image
+          alt="orange 1"
+          originCode="cpsdevpb"
+          src="41BC/test/_63482861_orange1.jpg"
+          originalImageWidth={500}
+          imageResolutions={[200, 500, 1000]}
+          sizes="(max-width: 600px) 480px, 800px"
+        />,
+      );
+    });
+
+    await waitFor(() => {
+      const linkEl = document.head.querySelector('link');
+
+      expect(linkEl).not.toBeInTheDocument();
+    });
   });
 
   it('should lazy load when lazy load is true', () => {
