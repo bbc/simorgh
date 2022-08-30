@@ -1,6 +1,9 @@
 import React from 'react';
-import { fireEvent } from '@testing-library/react';
-import { render, screen } from '../react-testing-library-with-providers';
+import {
+  render,
+  screen,
+  fireEvent,
+} from '../react-testing-library-with-providers';
 import { ARTICLE_PAGE, STORY_PAGE } from '../../routes/utils/pageTypes';
 
 import { EmbedConsentBannerCanonical } from '.';
