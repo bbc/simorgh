@@ -6,6 +6,8 @@ The components in this directory adhere to our [Coding Standards](../../../docs/
 
 `custom-react-testing-library.tsx` is a utility that re-exports everything from React Testing Library but with a custom render method that comes wraps everything in all the providers used in the app. This eliminates the need to to have to wrap every component unit test in providers. Instead, you can replace use of `@testing-library/react` with this custom version.
 
+This idea comes from React Testing Library's own docs. See [Custom Render](https://testing-library.com/docs/react-testing-library/setup/#custom-render) for more info.
+
 **Usage**
 
 ```tsx
