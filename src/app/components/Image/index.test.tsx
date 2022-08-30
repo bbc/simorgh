@@ -13,49 +13,113 @@ describe('Image', () => {
   });
 
   it('should lazy load when lazy load is true', () => {
-    expect(true).toBe(false);
+    render(
+      <Image
+        alt="orange 1"
+        originCode="cpsdevpb"
+        src="41BC/test/_63482861_orange1.jpg"
+        originalImageWidth={500}
+        imageResolutions={[200, 500, 1000]}
+        sizes="(max-width: 600px) 480px, 800px"
+        lazyLoad
+      />,
+    );
+    const imageEl = screen.getByAltText('orange 1');
+    expect(imageEl).toHaveAttribute('loading', 'lazy');
   });
 
   it('should not lazy load when lazy load is false', () => {
-    expect(true).toBe(false);
-  });
-
-  it('should be a responsive image', () => {
     render(
       <Image
-        src="someSrc.jpeg"
-        alt="imageAlt"
+        alt="orange 1"
         originCode="cpsdevpb"
-        locator="41BC/test/_63482861_orange1.jpg"
+        src="41BC/test/_63482861_orange1.jpg"
+        originalImageWidth={500}
+        imageResolutions={[200, 500, 1000]}
+        sizes="(max-width: 600px) 480px, 800px"
+        lazyLoad={false}
+      />,
+    );
+
+    const imageEl = screen.getByAltText('orange 1');
+    expect(imageEl).not.toHaveAttribute('loading', 'lazy');
+  });
+
+  it('should not lazy load by default', () => {
+    render(
+      <Image
+        alt="orange 1"
+        originCode="cpsdevpb"
+        src="41BC/test/_63482861_orange1.jpg"
         originalImageWidth={500}
         imageResolutions={[200, 500, 1000]}
         sizes="(max-width: 600px) 480px, 800px"
       />,
     );
-    screen.debug();
-    const imageEl = screen.getByAltText('imageAlt');
-    expect(imageEl).toHaveAttribute(
+
+    const imageEl = screen.getByAltText('orange 1');
+    expect(imageEl).not.toHaveAttribute('loading', 'lazy');
+  });
+
+  it('should have a collection of webp image sources for responsiveness', () => {
+    render(
+      <Image
+        alt="orange 1"
+        originCode="cpsdevpb"
+        src="41BC/test/_63482861_orange1.jpg"
+        originalImageWidth={500}
+        imageResolutions={[200, 500, 1000]}
+        sizes="(max-width: 600px) 480px, 800px"
+      />,
+    );
+
+    const sourceEl = screen.getByAltText('orange 1')?.parentNode?.children[0];
+    expect(sourceEl).toHaveAttribute(
       'srcset',
       'https://ichef.bbci.co.uk/news/200/cpsdevpb/41BC/test/_63482861_orange1.jpg.webp 200w, https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg.webp 500w',
     );
-    expect(imageEl).toHaveAttribute('sizes', '(max-width: 600px) 480px, 800px');
+    expect(sourceEl).toHaveAttribute(
+      'sizes',
+      '(max-width: 600px) 480px, 800px',
+    );
   });
 
-  it.only('should support jpeg images', () => {
+  it('should have a collection of jpeg image sources for responsiveness', () => {
     render(
       <Image
-        src="someSrc.jpeg"
-        alt="imageAlt"
+        alt="orange 1"
         originCode="cpsdevpb"
-        locator="41BC/test/_63482861_orange1.jpg"
+        src="41BC/test/_63482861_orange1.jpg"
         originalImageWidth={500}
         imageResolutions={[200, 500, 1000]}
         sizes="(max-width: 600px) 480px, 800px"
       />,
     );
-    screen.debug();
 
-    const imageEl = screen.getByAltText('imageAlt');
+    const sourceEl = screen.getByAltText('orange 1')?.parentNode?.children[1];
+    expect(sourceEl).toHaveAttribute(
+      'srcset',
+      'https://ichef.bbci.co.uk/news/200/cpsdevpb/41BC/test/_63482861_orange1.jpg 200w, https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg 500w',
+    );
+    expect(sourceEl).toHaveAttribute(
+      'sizes',
+      '(max-width: 600px) 480px, 800px',
+    );
+  });
+
+  it('should support jpeg images', () => {
+    render(
+      <Image
+        alt="orange 1"
+        originCode="cpsdevpb"
+        src="41BC/test/_63482861_orange1.jpg"
+        originalImageWidth={500}
+        imageResolutions={[200, 500, 1000]}
+        sizes="(max-width: 600px) 480px, 800px"
+      />,
+    );
+
+    const imageEl = screen.getByAltText('orange 1');
     expect(imageEl?.parentNode?.children[1]).toHaveAttribute(
       'srcset',
       'https://ichef.bbci.co.uk/news/200/cpsdevpb/41BC/test/_63482861_orange1.jpg 200w, https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg 500w',
@@ -65,18 +129,16 @@ describe('Image', () => {
   it('should support webp images', () => {
     render(
       <Image
-        src="someSrc.jpeg"
-        alt="imageAlt"
+        alt="orange 1"
         originCode="cpsdevpb"
-        locator="41BC/test/_63482861_orange1.jpg"
+        src="41BC/test/_63482861_orange1.jpg"
         originalImageWidth={500}
         imageResolutions={[200, 500, 1000]}
         sizes="(max-width: 600px) 480px, 800px"
       />,
     );
-    screen.debug();
 
-    const imageEl = screen.getByAltText('imageAlt');
+    const imageEl = screen.getByAltText('orange 1');
     expect(imageEl?.parentNode?.firstChild).toHaveAttribute(
       'srcset',
       'https://ichef.bbci.co.uk/news/200/cpsdevpb/41BC/test/_63482861_orange1.jpg.webp 200w, https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg.webp 500w',
@@ -86,16 +148,14 @@ describe('Image', () => {
   it('should support AMP images', () => {
     render(
       <Image
-        src="https://bbc.co.uk/iframe/amp"
-        alt="imageAlt"
+        alt="orange 1"
         originCode="cpsdevpb"
-        locator="41BC/test/_63482861_orange1.jpg"
+        src="41BC/test/_63482861_orange1.jpg"
         originalImageWidth={500}
         imageResolutions={[200, 500, 1000]}
         sizes="(max-width: 600px) 480px, 800px"
       />,
     );
-    screen.debug();
 
     const imageEl = document.querySelector('img') as HTMLImageElement;
     expect(imageEl.src).toContain('https://bbc.co.uk/iframe/amp');
@@ -109,16 +169,36 @@ describe('Image', () => {
     expect(true).toBe(false);
   });
 
-  it('should render an alt tag', () => {
-    render(<Image src="someSrc.jpeg" alt="imageAlt" />);
-    expect(screen.getByAltText('imageAlt')).toBeInTheDocument();
+  it('should render an image with an alt tag', () => {
+    render(
+      <Image
+        alt="orange 1"
+        originCode="cpsdevpb"
+        src="41BC/test/_63482861_orange1.jpg"
+        originalImageWidth={500}
+        imageResolutions={[200, 500, 1000]}
+        sizes="(max-width: 600px) 480px, 800px"
+      />,
+    );
+    expect(screen.getByAltText('orange 1')).toBeInTheDocument();
   });
 
   it('should be able to apply custom styles', () => {
     expect(true).toBe(false);
   });
 
-  it('should render the image', () => {
-    expect(true).toBe(false);
+  it('should render the fallback image in the src attribute', () => {
+    render(
+      <Image
+        alt="orange 1"
+        originCode="cpsdevpb"
+        src="41BC/test/_63482861_orange1.jpg"
+        originalImageWidth={500}
+        imageResolutions={[200, 500, 1000]}
+        sizes="(max-width: 600px) 480px, 800px"
+      />,
+    );
+    const imageEl = screen.getByAltText('orange 1');
+    expect(imageEl).toHaveAttribute('src', '41BC/test/_63482861_orange1.jpg');
   });
 });

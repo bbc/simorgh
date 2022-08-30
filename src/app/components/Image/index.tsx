@@ -5,26 +5,26 @@ import { createSrcsets } from '../../lib/utilities/srcSet';
 interface Props {
   alt: string;
   src: string;
-  locator: string;
   originCode: string;
   originalImageWidth: number;
   imageResolutions: number[];
   sizes: string;
+  lazyLoad?: boolean;
 }
 
 const Image = ({
   src,
   alt,
   originCode,
-  locator,
   originalImageWidth,
   imageResolutions,
   sizes = '100vw',
+  lazyLoad = false,
 }: Props) => {
   const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
     createSrcsets({
       originCode,
-      locator,
+      locator: src,
       originalImageWidth,
       imageResolutions,
     });
@@ -45,7 +45,7 @@ const Image = ({
           sizes={sizes}
         />
       )}
-      <img src={src} alt={alt} />
+      <img src={src} alt={alt} loading={lazyLoad ? 'lazy' : undefined} />
     </picture>
   );
 };
