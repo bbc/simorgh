@@ -1,7 +1,10 @@
 import React from 'react';
+import { css } from '@emotion/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import ThemeProvider from '../../../components/ThemeProvider';
+import { C_GREY_2 } from '../../psammead/psammead-styles/src/colours';
 
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import {
@@ -14,8 +17,21 @@ import {
 import OptimoSocialEmbedContainer from '.';
 import withContexts from './common/testHelper';
 
+// eslint-disable-next-line react/prop-types
+const BackgroundColorWrapper = ({ children }) => (
+  <div css={css({ backgroundColor: C_GREY_2, padding: 20 })}>{children}</div>
+);
+
+const SocialEmbedComponentWithTheme = props => (
+  <ThemeProvider service={props.service}>
+    <BackgroundColorWrapper>
+      <OptimoSocialEmbedContainer {...props} />
+    </BackgroundColorWrapper>
+  </ThemeProvider>
+);
+
 const Component = props =>
-  withContexts(OptimoSocialEmbedContainer, {
+  withContexts(SocialEmbedComponentWithTheme, {
     isEnabled: true,
     isAmp: props.isAmp,
     service: props.service,
