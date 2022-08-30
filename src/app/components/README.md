@@ -4,7 +4,7 @@ The components in this directory adhere to our [Coding Standards](../../../docs/
 
 ## Custom React Testing Library
 
-`custom-react-testing-library.tsx` is a utility that re-exports everything from React Testing Library but with a custom render method that wraps everything in all the providers used in the app. This eliminates the need to to have to wrap every component's unit tests in providers. Instead, you can replace use of `@testing-library/react` with this custom version.
+`react-testing-library-with-providers.tsx` is a utility that re-exports everything from React Testing Library but with a custom render method that wraps everything in all the providers used in the app. This eliminates the need to to have to wrap every component's unit tests in providers. Instead, you can replace use of `@testing-library/react` with this custom version.
 
 This idea comes from React Testing Library's own docs. See [Custom Render](https://testing-library.com/docs/react-testing-library/setup/#custom-render) for more info.
 
@@ -12,7 +12,7 @@ This idea comes from React Testing Library's own docs. See [Custom Render](https
 
 ```tsx
 // import { render, act } from '@testing-library/react';
-import { render, screen } from '../custom-react-testing-library'; // import from the custom React Testing Library
+import { render, screen } from '../react-testing-library-with-providers'; // import from the custom React Testing Library
 
 it('should render the title', async () => {
   // This can be a typical component test setup

@@ -29,7 +29,10 @@ import storyPageRecommendationsData from '#data/mundo/recommendations/index.json
 
 import { FRONT_PAGE, ERROR_PAGE } from '#app/routes/utils/pageTypes';
 import routes from './index';
-import { render, screen } from '../components/custom-react-testing-library';
+import {
+  render,
+  screen,
+} from '../components/react-testing-library-with-providers';
 
 fetchMock.config.fallbackToNetwork = true; // ensures non mocked requests fallback to an actual network request
 
