@@ -45,7 +45,7 @@ describe('Embed Consent Banner', () => {
     expect(screen.queryByTestId('consentBanner')).not.toBeInTheDocument();
   });
 
-  it('should not render the banner when the pageType is not an Article page', async () => {
+  it('should not render the banner when the pageType is not an Article page', () => {
     render(
       <EmbedConsentBannerCanonical pageType={STORY_PAGE} provider="youtube">
         <div>Mock iframe content</div>
@@ -56,7 +56,7 @@ describe('Embed Consent Banner', () => {
     expect(screen.queryByTestId('consentBanner')).not.toBeInTheDocument();
   });
 
-  it('should not render the banner when the provider is not YouTube', async () => {
+  it('should not render the banner when the provider is not YouTube', () => {
     render(
       <EmbedConsentBannerCanonical pageType={ARTICLE_PAGE} provider="instagram">
         <div>Mock iframe content</div>
