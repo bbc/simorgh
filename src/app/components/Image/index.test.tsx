@@ -4,19 +4,17 @@ import Image from '.';
 
 describe('Image', () => {
   it('should preload when preload is true', async () => {
-    act(() => {
-      render(
-        <Image
-          alt="orange 1"
-          originCode="cpsdevpb"
-          src="41BC/test/_63482861_orange1.jpg"
-          originalImageWidth={500}
-          imageResolutions={[200, 500, 1000]}
-          sizes="(max-width: 600px) 480px, 800px"
-          preload
-        />,
-      );
-    });
+    render(
+      <Image
+        alt="orange 1"
+        originCode="cpsdevpb"
+        src="41BC/test/_63482861_orange1.jpg"
+        originalImageWidth={500}
+        imageResolutions={[200, 500, 1000]}
+        sizes="(max-width: 600px) 480px, 800px"
+        preload
+      />,
+    );
 
     await waitFor(() => {
       const linkEl = document.head.querySelector('link');
@@ -36,19 +34,17 @@ describe('Image', () => {
   });
 
   it('should not preload when preload is false', async () => {
-    act(() => {
-      render(
-        <Image
-          alt="orange 1"
-          originCode="cpsdevpb"
-          src="41BC/test/_63482861_orange1.jpg"
-          originalImageWidth={500}
-          imageResolutions={[200, 500, 1000]}
-          sizes="(max-width: 600px) 480px, 800px"
-          preload={false}
-        />,
-      );
-    });
+    render(
+      <Image
+        alt="orange 1"
+        originCode="cpsdevpb"
+        src="41BC/test/_63482861_orange1.jpg"
+        originalImageWidth={500}
+        imageResolutions={[200, 500, 1000]}
+        sizes="(max-width: 600px) 480px, 800px"
+        preload={false}
+      />,
+    );
 
     await waitFor(() => {
       const linkEl = document.head.querySelector('link');
@@ -90,6 +86,7 @@ describe('Image', () => {
         lazyLoad
       />,
     );
+
     const imageEl = screen.getByAltText('orange 1');
     expect(imageEl).toHaveAttribute('loading', 'lazy');
   });
@@ -231,9 +228,7 @@ describe('Image', () => {
     expect(true).toBe(false);
   });
 
-  it('should load a placeholder when the image has not yet loaded', () => {
-    expect(true).toBe(false);
-  });
+  it('should load a placeholder when the image has not yet loaded', async () => {});
 
   it('should render an image with an alt tag', () => {
     render(

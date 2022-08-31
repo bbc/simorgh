@@ -1,4 +1,6 @@
-import React from 'react';
+/** @jsx jsx */
+import { css, jsx } from '@emotion/react';
+import React, { Fragment } from 'react';
 import Helmet from 'react-helmet';
 import { createSrcsets } from '../../lib/utilities/srcSet';
 
@@ -11,6 +13,7 @@ interface Props {
   sizes: string;
   lazyLoad?: boolean;
   preload?: boolean;
+  placeholder?: boolean;
 }
 
 const Image = ({
@@ -22,6 +25,7 @@ const Image = ({
   sizes = '100vw',
   lazyLoad = false,
   preload = false,
+  placeholder = true,
 }: Props) => {
   const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
     createSrcsets({
@@ -32,36 +36,50 @@ const Image = ({
     });
 
   return (
-    <>
-      {preload && (
-        <Helmet>
-          <link
-            rel="preload"
-            as="image"
-            href={src}
-            imagesrcset={primarySrcset}
-            imagesizes={sizes}
-          />
-        </Helmet>
-      )}
-      <picture>
-        {primarySrcset && (
-          <source
-            srcSet={primarySrcset}
-            type={primaryMimeType || 'image/webp'}
-            sizes={sizes}
-          />
+    <div>
+      <div>
+        {preload && (
+          <Helmet>
+            <link
+              rel="preload"
+              as="image"
+              href={src}
+              imagesrcset={primarySrcset}
+              imagesizes={sizes}
+            />
+          </Helmet>
         )}
-        {fallbackSrcset && (
-          <source
-            srcSet={fallbackSrcset}
-            type={fallbackMimeType || 'image/jpeg'}
-            sizes={sizes}
+        <picture css={{ paddingBottom: '56.25%', position: 'relative' }}>
+          {primarySrcset && (
+            <source
+              srcSet={primarySrcset}
+              type={primaryMimeType || 'image/webp'}
+              sizes={sizes}
+            />
+          )}
+          {fallbackSrcset && (
+            <source
+              srcSet={fallbackSrcset}
+              type={fallbackMimeType || 'image/jpeg'}
+              sizes={sizes}
+            />
+          )}
+          <img
+            src={src}
+            alt={alt}
+            loading={lazyLoad ? 'lazy' : undefined}
+            css={{
+              backgroundColor: 'red',
+              position: 'absolute',
+              top: 0,
+              bottom: 0,
+              right: 0,
+              left: 0,
+            }}
           />
-        )}
-        <img src={src} alt={alt} loading={lazyLoad ? 'lazy' : undefined} />
-      </picture>
-    </>
+        </picture>
+      </div>
+    </div>
   );
 };
 
