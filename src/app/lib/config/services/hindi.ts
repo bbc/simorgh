@@ -367,10 +367,6 @@ export const service: DefaultServiceConfig = {
         url: '/hindi',
       },
       {
-        title: 'कोरोनावायरस',
-        url: '/hindi/international-51848794',
-      },
-      {
         title: 'भारत',
         url: '/hindi/topics/ckdxnkz7607t',
       },
@@ -397,6 +393,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'वीडियो',
         url: '/hindi/media/video',
+      },
+      {
+        title: 'पॉडकास्ट',
+        url: '/hindi/institutional-61824775',
       },
     ],
   },
