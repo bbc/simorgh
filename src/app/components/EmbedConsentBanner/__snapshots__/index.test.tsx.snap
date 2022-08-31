@@ -132,7 +132,7 @@ exports[`Embed Consent Banner should match snapshot 1`] = `
     >
       Este artículo contiene contenido proporcionado por YouTube. Solicitamos tu permiso antes de que algo  se cargue, ya que ese sitio  puede estar usando cookies y otras tecnologías. Es posible que quieras leer 
       <a
-        aria-label="externalLink-https://policies.google.com/technologies/cookies"
+        aria-label="política de cookies, external"
         href="https://policies.google.com/technologies/cookies"
         rel="noreferrer"
         target="_blank"
@@ -141,7 +141,7 @@ exports[`Embed Consent Banner should match snapshot 1`] = `
       </a>
        y 
       <a
-        aria-label="externalLink-https://policies.google.com/privacy"
+        aria-label="política de privacidad, external"
         href="https://policies.google.com/privacy"
         rel="noreferrer"
         target="_blank"
