@@ -30,13 +30,13 @@ export default {
   decorators: [withKnobs, withServicesKnob()],
 };
 
-export const AuthorRoleByline = ({ service }: Props) => (
+export const AuthorRoleByline = ({ service }: Partial<Props>) => (
   <Component fixture={bylineWithNameAndRole} service={service} />
 );
-export const LinkByline = ({ service }: Props) => (
+export const LinkByline = ({ service }: Partial<Props>) => (
   <Component fixture={bylineWithLink} service={service} />
 );
-export const AuthorRoleTimestampByline = ({ service }: Props) => (
+export const AuthorRoleTimestampByline = ({ service }: Partial<Props>) => (
   <Component fixture={bylineWithLink} service={service}>
     <Timestamp
       firstPublished={1660658887}
