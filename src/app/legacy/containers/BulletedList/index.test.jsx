@@ -1,13 +1,13 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { ServiceContext } from '#contexts/ServiceContext';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import arabic from '../../../components/ThemeProvider/typography/scripts/arabic';
 import BulletedListContainer from './index';
 import { listItemD, listItemE, orderedList } from './fixtures';
+import { ServiceContext } from '../../../contexts/ServiceContext';
+import arabic from '../../../components/ThemeProvider/typography/scripts/arabic';
 
 // eslint-disable-next-line react/prop-types
 const BulletsWithContext = ({ blocks, blockGroupIndex }) => (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import arabic from '../../../../components/ThemeProvider/typography/scripts/arabic';
 import ScheduleItemHeader from '.';
 import '@testing-library/jest-dom/extend-expect';

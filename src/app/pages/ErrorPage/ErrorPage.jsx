@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { number, oneOf, string, shape } from 'prop-types';
 import { Helmet } from 'react-helmet';
-import { ServiceContext } from '#contexts/ServiceContext';
 import ErrorMain from '#components/ErrorMain';
+import { ServiceContext } from '../../contexts/ServiceContext';
 
 /*
  * MVP Metadata for the error

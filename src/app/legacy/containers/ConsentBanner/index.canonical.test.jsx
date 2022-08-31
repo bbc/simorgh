@@ -4,9 +4,9 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import Cookies from 'js-cookie';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { UserContextProvider } from '#contexts/UserContext';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import ConsentBanner from '.';
 
 const PRIVACY_COOKIE = 'ckns_privacy';

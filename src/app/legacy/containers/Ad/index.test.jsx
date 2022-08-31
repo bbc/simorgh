@@ -2,10 +2,6 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import {
-  ServiceContext,
-  ServiceContextProvider,
-} from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import {
@@ -13,6 +9,10 @@ import {
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
 import latinDiacritics from '../../../components/ThemeProvider/typography/scripts/latinWithDiacritics';
+import {
+  ServiceContext,
+  ServiceContextProvider,
+} from '../../../contexts/ServiceContext';
 
 import AdContainer from './index';
 

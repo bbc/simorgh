@@ -20,7 +20,7 @@ import { getGreatPrimer } from '#psammead/gel-foundations/src/typography';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import Link from './Link';
 
 const EN_GB_LANG = 'en-GB';

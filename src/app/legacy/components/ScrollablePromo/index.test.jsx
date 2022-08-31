@@ -3,8 +3,8 @@ import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import * as viewTracking from '#hooks/useViewTracker';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { ServiceContext } from '#contexts/ServiceContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import {
   threeLinks,
   oneLinkOnly,

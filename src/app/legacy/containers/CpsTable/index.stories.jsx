@@ -1,7 +1,7 @@
 import React from 'react';
 import latin from '../../../components/ThemeProvider/typography/scripts/latin';
 
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 import CpsTable from '.';
 import fixtures from './fixtures';

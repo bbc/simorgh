@@ -2,7 +2,7 @@ import React from 'react';
 import { Global, ThemeProvider as EmotionThemeProvider } from '@emotion/react';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 
-import * as palette from './palette';
+import { palette } from './palette';
 import * as mq from './mediaQueries';
 import * as spacings from './spacings';
 
