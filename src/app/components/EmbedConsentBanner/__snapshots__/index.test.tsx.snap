@@ -57,11 +57,15 @@ exports[`Embed Consent Banner should match snapshot 1`] = `
 
 .emotion-2 a {
   color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 1px solid #141414;
 }
 
 .emotion-2 a:hover,
 .emotion-2 a:focus {
   color: #B80000;
+  border-bottom: 2px solid #B80000;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {

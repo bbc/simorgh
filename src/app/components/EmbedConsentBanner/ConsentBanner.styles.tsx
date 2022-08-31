@@ -24,9 +24,12 @@ export default {
 
       a: {
         color: 'inherit',
+        textDecoration: 'none',
+        borderBottom: `1px solid ${palette.GREY_10}`,
 
         '&:hover, &:focus': {
           color: palette.POSTBOX,
+          borderBottom: `2px solid ${palette.POSTBOX}`,
         },
       },
     }),
