@@ -14,6 +14,7 @@ interface Props {
   lazyLoad?: boolean;
   preload?: boolean;
   placeholder?: boolean;
+  aspectRatio?: number;
 }
 
 const Image = ({
@@ -26,6 +27,7 @@ const Image = ({
   lazyLoad = false,
   preload = false,
   placeholder = true,
+  aspectRatio = 16 / 9,
 }: Props) => {
   const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
     createSrcsets({
@@ -36,8 +38,24 @@ const Image = ({
     });
 
   return (
-    <div>
-      <div>
+    <div
+      css={{
+        paddingBottom: `${(1 / aspectRatio) * 100}%`,
+        position: 'relative',
+        height: 0,
+        overflow: 'hidden',
+      }}
+    >
+      <div
+        css={{
+          backgroundColor: 'red',
+          position: 'absolute',
+          top: 0,
+          bottom: 0,
+          right: 0,
+          left: 0,
+        }}
+      >
         {preload && (
           <Helmet>
             <link
@@ -49,7 +67,7 @@ const Image = ({
             />
           </Helmet>
         )}
-        <picture css={{ paddingBottom: '56.25%', position: 'relative' }}>
+        <picture>
           {primarySrcset && (
             <source
               srcSet={primarySrcset}
@@ -68,14 +86,7 @@ const Image = ({
             src={src}
             alt={alt}
             loading={lazyLoad ? 'lazy' : undefined}
-            css={{
-              backgroundColor: 'red',
-              position: 'absolute',
-              top: 0,
-              bottom: 0,
-              right: 0,
-              left: 0,
-            }}
+            css={{ width: '100%', height: '100%' }}
           />
         </picture>
       </div>
