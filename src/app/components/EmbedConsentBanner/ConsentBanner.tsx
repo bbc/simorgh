@@ -102,7 +102,10 @@ const getTranslations = (
     linkTextElements.length > 0 && cookiesUrl && (
       <a
         href={cookiesUrl}
-        aria-label={`externalLink-${cookiesUrl}`}
+        aria-label={`${linkTextElements[0]
+          .replaceAll('[link]', '')
+          .replaceAll('[/link]', '')
+          .trim()}, external`}
         target="_blank"
         rel="noreferrer"
         key={cookiesUrl}
@@ -116,7 +119,10 @@ const getTranslations = (
     linkTextElements.length > 1 && privacyUrl && (
       <a
         href={privacyUrl}
-        aria-label={`externalLink-${privacyUrl}`}
+        aria-label={`${linkTextElements[1]
+          .replaceAll('[link]', '')
+          .replaceAll('[/link]', '')
+          .trim()}, external`}
         target="_blank"
         rel="noreferrer"
         key={privacyUrl}
