@@ -2,20 +2,19 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { arrayOf, shape } from 'prop-types';
 
-import { ServiceContext } from '#contexts/ServiceContext';
-
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '#psammead/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING,
   GEL_SPACING_HLF_TRPL,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
+import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 import CurationPromo from '../CurationPromo';
 

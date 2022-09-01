@@ -1,13 +1,20 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render } from '@testing-library/react';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import TopicPage from './TopicPage';
-import { pidginMultipleItems, amharicSingleItem } from './fixtures';
+import {
+  pidginMultipleItems,
+  amharicSingleItem,
+  mundoWithBadgeAndDescr,
+  mundoMultipleCurations,
+  amharicOnlyTitle,
+} from './fixtures';
 
-jest.mock('../../containers/ChartbeatAnalytics', () => {
+jest.mock('../../legacy/containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });
@@ -30,7 +37,12 @@ const TopicPageWithContext = ({
         },
       }}
     >
-      <RequestContextProvider showAdsBasedOnLocation={showAdsBasedOnLocation}>
+      <RequestContextProvider
+        showAdsBasedOnLocation={showAdsBasedOnLocation}
+        isAmp={false}
+        pageType={TOPIC_PAGE}
+        service={service}
+      >
         <ServiceContextProvider service={service} lang={lang}>
           <TopicPage pageData={pageData} />
         </ServiceContextProvider>
@@ -39,7 +51,7 @@ const TopicPageWithContext = ({
   </BrowserRouter>
 );
 
-describe('A11y', () => {
+describe('Topic Page', () => {
   it('should not render an unordered list when there is only one promo', () => {
     const { queryByRole } = render(
       <TopicPageWithContext
@@ -55,6 +67,57 @@ describe('A11y', () => {
     const { container, queryByRole } = render(<TopicPageWithContext />);
     expect(queryByRole('list')).toBeInTheDocument();
     expect(container.getElementsByTagName('li').length).toEqual(4);
+  });
+
+  it('should render multiple curations', () => {
+    const { getAllByRole } = render(
+      <TopicPageWithContext
+        pageData={mundoMultipleCurations}
+        service="mundo"
+      />,
+    );
+    expect(getAllByRole('list').length).toEqual(2);
+    expect(getAllByRole('listitem').length).toEqual(4);
+  });
+
+  it('should render curation subheading when curation title exists', () => {
+    const { container } = render(
+      <TopicPageWithContext
+        pageData={mundoMultipleCurations}
+        service="mundo"
+      />,
+    );
+    expect(container.querySelector('h2').textContent).toEqual('Analysis');
+  });
+
+  it('should render badge and description when they exist in data', () => {
+    const { container, queryByTestId } = render(
+      <TopicPageWithContext
+        pageData={mundoWithBadgeAndDescr}
+        service="mundo"
+      />,
+    );
+
+    expect(queryByTestId('topic-badge')).toBeInTheDocument();
+    expect(container.getElementsByTagName('p').length).toEqual(1);
+  });
+
+  it('should render description without badge', () => {
+    const { container, queryByTestId } = render(
+      <TopicPageWithContext pageData={pidginMultipleItems} service="pidgin" />,
+    );
+
+    expect(queryByTestId('topic-badge')).not.toBeInTheDocument();
+    expect(container.getElementsByTagName('p').length).toEqual(1);
+  });
+
+  it('should render only topic title without badge or description', () => {
+    const { container, queryByTestId } = render(
+      <TopicPageWithContext pageData={amharicOnlyTitle} service="amharic" />,
+    );
+
+    expect(queryByTestId('topic-badge')).not.toBeInTheDocument();
+    expect(container.getElementsByTagName('p').length).toEqual(0);
   });
 
   it('should show ads when enabled', () => {

@@ -46,14 +46,14 @@ describe('getAdditionalPageData', () => {
     expect(additionalPageData).toEqual(expectedOutput);
   });
 
-  it('should return additional data for an STY with recommendations for service with hasStoryRecommendations set to true', async () => {
+  it('should return additional data for an STY with recommendations for service with hasStoryRecommendations set to true and is whitelisted for using the unirecs datalab engine', async () => {
     fetchMock.mock('http://localhost/mundo/mostread.json', mostReadJson);
     fetchMock.mock(
       'http://localhost/mundo/sty-secondary-column.json',
       secondaryColumnJson,
     );
     fetchMock.mock(
-      'http://mock-recommendations-path/recommendations/mundo/23263889',
+      'http://mock-recommendations-path/recommendations/mundo/23263889?Engine=unirecs_datalab',
       recommendationsJson,
     );
     hasRecommendations.mockImplementationOnce(() => true);

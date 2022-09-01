@@ -9,7 +9,6 @@ import assocPath from 'ramda/src/assocPath';
 import fetchMock from 'fetch-mock';
 
 // contexts
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 
@@ -44,6 +43,7 @@ import mundoPageData from '#data/mundo/cpsAssets/noticias-56669604';
 import mundoRecommendationsData from '#data/mundo/recommendations/index';
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
 import getAgent from '#server/utilities/getAgent/index';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
 import russianPageDataWithoutInlinePromo from './fixtureData/russianPageDataWithoutPromo';
 import StoryPageIndex from '.';
@@ -1116,7 +1116,7 @@ describe('Story Page', () => {
               mundoPageData,
             );
             fetchMock.mock(
-              'http://mock-recommendations-path/recommendations/mundo/noticias-56669604',
+              'http://mock-recommendations-path/recommendations/mundo/noticias-56669604?Engine=unirecs_datalab',
               mundoRecommendationsData,
             );
             const { pageData } = await getInitialData({
@@ -1160,7 +1160,7 @@ describe('Story Page', () => {
               mundoPageData,
             );
             fetchMock.mock(
-              'http://mock-recommendations-path/recommendations/mundo/noticias-56669604',
+              'http://mock-recommendations-path/recommendations/mundo/noticias-56669604?Engine=unirecs_datalab',
               mundoRecommendationsData,
             );
             const { pageData } = await getInitialData({
@@ -1437,7 +1437,7 @@ describe('Story Page', () => {
               mundoPageData,
             );
             fetchMock.mock(
-              'http://mock-recommendations-path/recommendations/mundo/noticias-56669604',
+              'http://mock-recommendations-path/recommendations/mundo/noticias-56669604?Engine=unirecs_datalab',
               mundoRecommendationsData,
             );
             const { pageData } = await getInitialData({
@@ -1499,7 +1499,7 @@ describe('Story Page', () => {
         };
 
         const recommendationsEndpoint =
-          'http://mock-recommendations-path/recommendations/mundo/noticias-56669604';
+          'http://mock-recommendations-path/recommendations/mundo/noticias-56669604?Engine=unirecs_datalab';
 
         fetchMock.mock(
           'http://localhost/some-cps-sty-path.json',

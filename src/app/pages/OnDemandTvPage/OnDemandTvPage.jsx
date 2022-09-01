@@ -7,18 +7,18 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 import pathOr from 'ramda/src/pathOr';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
-import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
-import { formatUnixTimestamp } from '#legacy/psammead-timestamp-container/src/utilities';
+} from '#psammead/gel-foundations/src/breakpoints';
+import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
+import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import Grid, { GelPageGrid } from '#app/components/Grid';
+import Grid, { GelPageGrid } from '#components/Grid';
 import LinkedData from '#containers/LinkedData';
 import { RequestContext } from '#contexts/RequestContext';
 import StyledTvHeadingContainer from '#containers/OnDemandHeading/StyledTvHeadingContainer';
@@ -28,12 +28,12 @@ import getEmbedUrl, {
 } from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import AVPlayer from '#containers/AVPlayer';
 import RecentVideoEpisodes from '#containers/EpisodeList/RecentVideoEpisodes';
-import FooterTimestamp from '#app/containers/OnDemandFooterTimestamp';
-import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
+import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
+import MetadataContainer from '#containers/Metadata';
+import ATIAnalytics from '#containers/ATIAnalytics';
+import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import MetadataContainer from '../../containers/Metadata';
-import ATIAnalytics from '../../containers/ATIAnalytics';
-import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
+import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
 
 const getGroups = (zero, one, two, three, four, five) => ({
   group0: zero,

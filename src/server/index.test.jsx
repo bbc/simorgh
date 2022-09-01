@@ -3,7 +3,6 @@ import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';
 import dotenv from 'dotenv';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
-import getToggles from '#app/lib/utilities/getToggles/withCache';
 import defaultToggles from '#lib/config/toggles';
 import loggerMock from '#testHelpers/loggerMock';
 import {
@@ -25,6 +24,7 @@ dotenv.config({ path: './envConfig/local.env' });
 const path = require('path');
 const express = require('express');
 const server = require('./index').default;
+const getToggles = require('../app/lib/utilities/getToggles/withCache').default;
 
 const sendFileSpy = jest.spyOn(express.response, 'sendFile');
 
@@ -261,7 +261,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
       it('should respond with a 500', async () => {
         const { status, text } = await makeRequest(serviceURL);
         expect(status).toEqual(500);
-        expect(text).toEqual('Error!');
+        expect(text).toEqual('Internal server error');
       });
 
       assertNon200ResponseCustomMetrics({
@@ -364,7 +364,7 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
       it('should respond with a 500', async () => {
         const { status, text } = await makeRequest(articleURL);
         expect(status).toEqual(500);
-        expect(text).toEqual('Error!');
+        expect(text).toEqual('Internal server error');
       });
 
       assertNon200ResponseCustomMetrics({
@@ -473,7 +473,7 @@ const testAssetPages = ({
       it('should respond with a 500', async () => {
         const { status, text } = await makeRequest(articleURL);
         expect(status).toEqual(500);
-        expect(text).toEqual('Error!');
+        expect(text).toEqual('Internal server error');
       });
 
       assertNon200ResponseCustomMetrics({
@@ -574,7 +574,7 @@ const testMediaPages = ({
       it('should respond with a 500', async () => {
         const { status, text } = await makeRequest(mediaPageURL);
         expect(status).toEqual(500);
-        expect(text).toEqual('Error!');
+        expect(text).toEqual('Internal server error');
       });
 
       assertNon200ResponseCustomMetrics({
@@ -676,7 +676,7 @@ const testTvPages = ({
       it('should respond with a 500', async () => {
         const { status, text } = await makeRequest(mediaPageURL);
         expect(status).toEqual(500);
-        expect(text).toEqual('Error!');
+        expect(text).toEqual('Internal server error');
       });
 
       assertNon200ResponseCustomMetrics({
@@ -778,7 +778,7 @@ const testOnDemandTvEpisodePages = ({
       it('should respond with a 500', async () => {
         const { status, text } = await makeRequest(mediaPageURL);
         expect(status).toEqual(500);
-        expect(text).toEqual('Error!');
+        expect(text).toEqual('Internal server error');
       });
 
       assertNon200ResponseCustomMetrics({
@@ -815,6 +815,13 @@ describe('Server', () => {
       expect(sendFileSpy.mock.calls.length).toEqual(0);
       expect(statusCode).toEqual(500);
     });
+
+    it('should serve the sw.js with cache control information', async () => {
+      const { header } = await makeRequest('/pidgin/sw.js');
+      expect(header['cache-control']).toBe(
+        'public, stale-if-error=6000, stale-while-revalidate=300, max-age=300',
+      );
+    });
   });
 
   describe('Manifest json', () => {
@@ -830,6 +837,7 @@ describe('Server', () => {
       expect(sendFileSpy.mock.calls.length).toEqual(0);
       expect(statusCode).toEqual(500);
     });
+
     it('should serve a response cache control of 7 days', async () => {
       const { header } = await makeRequest('/news/articles/manifest.json');
       expect(header['cache-control']).toBe('public, max-age=604800');
@@ -1410,6 +1418,12 @@ describe('Server HTTP Headers - Page Endpoints', () => {
     expect(header['cache-control']).toBe(
       'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
     );
+  });
+
+  it(`should set a Referrer-Policy header`, async () => {
+    const { header } = await makeRequest('/mundo');
+
+    expect(header['referrer-policy']).toBe('no-referrer-when-downgrade');
   });
 });
 

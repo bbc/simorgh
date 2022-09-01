@@ -817,38 +817,9 @@
           "model": {
             "blocks": [
               {
-                "type": "title",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Related content block",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Related content block",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
                 "type": "link",
                 "model": {
-                  "locator": "urn:bbc:cps:curie:asset:b5c53243-a695-e059-e040-850a02846523",
+                  "locator": "urn:bbc:optimo:asset:cg9yj3x13m0o",
                   "blocks": [
                     {
                       "type": "image",
@@ -865,12 +836,12 @@
                                       {
                                         "type": "paragraph",
                                         "model": {
-                                          "text": "BBC Test Image",
+                                          "text": "test",
                                           "blocks": [
                                             {
                                               "type": "fragment",
                                               "model": {
-                                                "text": "BBC Test Image",
+                                                "text": "test",
                                                 "attributes": []
                                               }
                                             }
@@ -886,9 +857,9 @@
                           {
                             "type": "rawImage",
                             "model": {
-                              "width": 640,
-                              "height": 562,
-                              "locator": "72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png",
+                              "width": 817,
+                              "height": 506,
+                              "locator": "02d2/test/935efae0-a125-11ec-a7c9-255f5459b217.png",
                               "imageType": "background",
                               "originCode": "cpsdevpb",
                               "copyrightHolder": "BBC"
@@ -904,18 +875,18 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "News homepage",
+                              "text": "This is a promo test",
                               "blocks": [
                                 {
                                   "type": "urlLink",
                                   "model": {
-                                    "text": "News homepage",
-                                    "locator": "https://www.bbc.co.uk/news",
+                                    "text": "This is a promo test",
+                                    "locator": "https://www.test.bbc.com/pidgin/articles/cg9yj3x13m0o",
                                     "blocks": [
                                       {
                                         "type": "fragment",
                                         "model": {
-                                          "text": "News homepage",
+                                          "text": "This is a promo test",
                                           "attributes": []
                                         }
                                       }
@@ -924,93 +895,19 @@
                                   }
                                 }
                               ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "link",
-                "model": {
-                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Fmundo",
-                  "blocks": [
-                    {
-                      "type": "image",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "altText",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "text",
-                                  "model": {
-                                    "blocks": [
-                                      {
-                                        "type": "paragraph",
-                                        "model": {
-                                          "text": "Breaking News image",
-                                          "blocks": [
-                                            {
-                                              "type": "fragment",
-                                              "model": {
-                                                "text": "Breaking News image",
-                                                "attributes": []
-                                              }
-                                            }
-                                          ]
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "type": "rawImage",
-                            "model": {
-                              "width": 976,
-                              "height": 549,
-                              "locator": "33e9/test/5efe5660-5431-11ec-b75b-9f9fe566903d.jpg",
-                              "imageType": "background",
-                              "originCode": "cpsdevpb",
-                              "copyrightHolder": "BBC"
                             }
                           }
                         ]
                       }
                     },
                     {
-                      "type": "text",
+                      "type": "aresLink",
                       "model": {
                         "blocks": [
                           {
-                            "type": "paragraph",
+                            "type": "optimoLinkMetadata",
                             "model": {
-                              "text": "Mundo homepage",
-                              "blocks": [
-                                {
-                                  "type": "urlLink",
-                                  "model": {
-                                    "text": "Mundo homepage",
-                                    "locator": "https://www.bbc.co.uk/mundo",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "Mundo homepage",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ],
-                                    "isExternal": false
-                                  }
-                                }
-                              ]
+                              "timestamp": 1622753625680
                             }
                           }
                         ]
