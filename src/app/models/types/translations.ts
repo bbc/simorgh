@@ -34,7 +34,7 @@ export interface Translations {
     404: TranslationsError;
     500: TranslationsError;
   };
-  byline: {
+  byline?: {
     author?: string;
     articleInformation?: string;
     published?: string;
