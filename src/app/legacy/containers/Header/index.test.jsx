@@ -2,12 +2,8 @@ import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { render } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { UserContextProvider } from '#contexts/UserContext';
-import { service as pidginServiceConfig } from '#lib/config/services/pidgin';
-import { service as serbianServiceConfig } from '#lib/config/services/serbian';
-import { service as ukrainianServiceConfig } from '#lib/config/services/ukrainian';
 import {
   INDEX_PAGE,
   ARTICLE_PAGE,
@@ -17,6 +13,10 @@ import {
   TOPIC_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { ServiceContext } from '../../../contexts/ServiceContext';
+import { service as pidginServiceConfig } from '../../../lib/config/services/pidgin';
+import { service as serbianServiceConfig } from '../../../lib/config/services/serbian';
+import { service as ukrainianServiceConfig } from '../../../lib/config/services/ukrainian';
 import HeaderContainer from './index';
 
 const defaultToggleState = {

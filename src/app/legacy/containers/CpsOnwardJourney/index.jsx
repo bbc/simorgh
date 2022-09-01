@@ -28,9 +28,9 @@ import { C_GHOST } from '#psammead/psammead-styles/src/colours';
 
 import { storyItem } from '#models/propTypes/storyItem';
 import { RequestContext } from '#contexts/RequestContext';
-import { ServiceContext } from '#contexts/ServiceContext';
 import Grid, { GridWrapper, GridItemLarge } from '#components/Grid';
 import { MOST_WATCHED_PAGE } from '#app/routes/utils/pageTypes';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import SkipLinkWrapper from '../../components/SkipLinkWrapper';
 
 const LargeGridColumns = {

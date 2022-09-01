@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
-import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import TopicPromo from '.';
 
 // eslint-disable-next-line react/prop-types

@@ -4,7 +4,6 @@ import styled from '@emotion/styled';
 import pick from 'ramda/src/pick';
 import Lazyload from 'react-lazyload';
 
-import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import { getSerifRegular } from '#psammead/psammead-styles/src/font-styles';
@@ -20,6 +19,7 @@ import {
 } from '#psammead/psammead-styles/src/colours';
 import makeRelativeUrlPath from '#lib/utilities/makeRelativeUrlPath';
 import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 import FrostedGlassPanel from './FrostedGlassPanel';
 

@@ -3,8 +3,8 @@ import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { withKnobs, text, number } from '@storybook/addon-knobs';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 
 import Promo from '.';
 import {

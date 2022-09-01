@@ -37,7 +37,7 @@ import {
   getLastPublished,
 } from '#lib/utilities/parseAssetData';
 import RelatedTopics from '#containers/RelatedTopics';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 
 const PhotoGalleryPageGrid = ({ children, ...props }) => (
   <GelPageGrid

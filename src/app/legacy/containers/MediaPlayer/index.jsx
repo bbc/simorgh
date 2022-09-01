@@ -25,11 +25,11 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import formatDuration from '#lib/utilities/formatDuration';
 import buildIChefURL from '#lib/utilities/ichefURL';
 import { RequestContext } from '#contexts/RequestContext';
-import { ServiceContext } from '#contexts/ServiceContext';
 import {
   mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import Metadata from './Metadata';
 import Caption from '../Caption';
 import logMissingMediaId from './helpers/logMissingMediaId';

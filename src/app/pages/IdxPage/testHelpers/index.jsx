@@ -3,12 +3,12 @@ import { BrowserRouter } from 'react-router-dom';
 import { getLocalMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { service as ukrainianConfig } from '#lib/config/services/ukrainian';
-import { service as persianConfig } from '#lib/config/services/persian';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { UserContextProvider } from '#contexts/UserContext';
 import IdxPage from '#pages/IdxPage/IdxPage';
 import { INDEX_PAGE } from '#app/routes/utils/pageTypes';
+import { service as ukrainianConfig } from '../../../lib/config/services/ukrainian';
+import { service as persianConfig } from '../../../lib/config/services/persian';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const radioServiceOverride = 'dari';
 

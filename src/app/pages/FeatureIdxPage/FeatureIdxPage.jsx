@@ -1,7 +1,6 @@
 import React, { useContext, Fragment } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import MetadataContainer from '#containers/Metadata';
 import LinkedData from '#containers/LinkedData';
@@ -16,6 +15,7 @@ import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstra
 import useToggle from '#hooks/useToggle';
 import AdContainer from '#containers/Ad';
 import MPUContainer from '#containers/Ad/MPU';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import flattenGroups from './flattenGroups';
 
 const FeatureIdxPage = ({ pageData }) => {

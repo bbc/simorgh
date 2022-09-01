@@ -8,10 +8,10 @@ import {
   oneOfType,
   object,
 } from 'prop-types';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { blockContainingText } from '#models/blocks';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import FigureContainer from '.';
 
 const imageAlt = 'Pauline Clayton';
