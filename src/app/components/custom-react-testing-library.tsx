@@ -7,7 +7,9 @@ import { ToggleContextProvider } from '../contexts/ToggleContext';
 import { UserContextProvider } from '../contexts/UserContext';
 import { EventTrackingContextProvider } from '../contexts/EventTrackingContext';
 import pageDataFixture from '../../../data/news/articles/c0g992jmmkko.json';
+import { Services } from '../models/types/global';
 import ThemeProvider from './ThemeProvider';
+
 
 jest.mock('./ThemeProvider');
 
@@ -17,55 +19,7 @@ interface Props {
   pageData?: any;
   pageType?: string;
   pathname?: string;
-  service?:
-    | 'afaanoromoo'
-    | 'afrique'
-    | 'amharic'
-    | 'arabic'
-    | 'archive'
-    | 'azeri'
-    | 'bengali'
-    | 'burmese'
-    | 'cymrufyw'
-    | 'gahuza'
-    | 'gujarati'
-    | 'hausa'
-    | 'hindi'
-    | 'igbo'
-    | 'indonesia'
-    | 'japanese'
-    | 'korean'
-    | 'kyrgyz'
-    | 'marathi'
-    | 'mundo'
-    | 'naidheachdan'
-    | 'nepali'
-    | 'news'
-    | 'newsround'
-    | 'pashto'
-    | 'persian'
-    | 'pidgin'
-    | 'portuguese'
-    | 'punjabi'
-    | 'russian'
-    | 'scotland'
-    | 'serbian'
-    | 'sinhala'
-    | 'somali'
-    | 'sport'
-    | 'swahili'
-    | 'tamil'
-    | 'telugu'
-    | 'thai'
-    | 'tigrinya'
-    | 'turkce'
-    | 'ukchina'
-    | 'ukrainian'
-    | 'urdu'
-    | 'uzbek'
-    | 'vietnamese'
-    | 'yoruba'
-    | 'zhongwen';
+  service?: Services
   toggles?: any;
 }
 

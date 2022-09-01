@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { bool, string } from 'prop-types';
 import { ConsentBanner } from '#psammead/psammead-consent-banner/src';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../../../contexts/ServiceContext';
 import AmpCookieBanner from './cookie.amp';
 import BannerText from './Text';
 import getDataAttribute from './getDataAttribute';

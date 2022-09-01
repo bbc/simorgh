@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { news as brandSVG } from '#psammead/psammead-assets/src/svgs';
 import { C_POSTBOX, C_WHITE } from '#psammead/psammead-styles/src/colours';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import BrandContainer from '.';
 
 const newsServiceContextStub = {

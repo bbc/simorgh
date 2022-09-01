@@ -3,59 +3,12 @@ import { withKnobs, select } from '@storybook/addon-knobs';
 
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
+import { Services } from '../../models/types/global';
 import ThemeProvider from '../ThemeProvider';
 import Text from '.';
 
 interface Props {
-  service:
-    | 'afaanoromoo'
-    | 'afrique'
-    | 'amharic'
-    | 'arabic'
-    | 'archive'
-    | 'azeri'
-    | 'bengali'
-    | 'burmese'
-    | 'cymrufyw'
-    | 'gahuza'
-    | 'gujarati'
-    | 'hausa'
-    | 'hindi'
-    | 'igbo'
-    | 'indonesia'
-    | 'japanese'
-    | 'korean'
-    | 'kyrgyz'
-    | 'marathi'
-    | 'mundo'
-    | 'naidheachdan'
-    | 'nepali'
-    | 'news'
-    | 'newsround'
-    | 'pashto'
-    | 'persian'
-    | 'pidgin'
-    | 'portuguese'
-    | 'punjabi'
-    | 'russian'
-    | 'scotland'
-    | 'serbian'
-    | 'sinhala'
-    | 'somali'
-    | 'sport'
-    | 'swahili'
-    | 'tamil'
-    | 'telugu'
-    | 'thai'
-    | 'tigrinya'
-    | 'turkce'
-    | 'ukchina'
-    | 'ukrainian'
-    | 'urdu'
-    | 'uzbek'
-    | 'vietnamese'
-    | 'yoruba'
-    | 'zhongwen';
+  service: Services;
   variant: null | 'cyr' | 'lat' | 'simp' | 'trad';
   text: string;
 }

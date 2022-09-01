@@ -2,7 +2,7 @@ import React from 'react';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { withKnobs } from '@storybook/addon-knobs';
 import pathOr from 'ramda/src/pathOr';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import fixture from '#data/igbo/frontpage';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';

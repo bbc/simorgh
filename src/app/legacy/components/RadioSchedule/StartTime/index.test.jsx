@@ -1,6 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { ServiceContextProvider } from '#app/contexts/ServiceContext';
+import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import latin from '../../../../components/ThemeProvider/typography/scripts/latin';
 import arabic from '../../../../components/ThemeProvider/typography/scripts/arabic';
 import StartTime from './index';

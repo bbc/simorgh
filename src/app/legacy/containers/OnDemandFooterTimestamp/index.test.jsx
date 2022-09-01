@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 
-import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import FooterTimestamp from '.';
 
 // eslint-disable-next-line react/prop-types
