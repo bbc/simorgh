@@ -181,7 +181,7 @@ const ConsentBanner = ({
     <div
       data-testid="consentBanner"
       id="consentBanner"
-      css={consentBannerCss.self}
+      css={consentBannerCss.parent}
     >
       <strong
         data-testid="banner-heading"

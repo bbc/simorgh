@@ -68,6 +68,11 @@ exports[`Embed Consent Banner should match snapshot 1`] = `
   border-bottom: 2px solid #B80000;
 }
 
+.emotion-2 a:visited {
+  color: #545658;
+  border-bottom: 1px solid #545658;
+}
+
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-2 {
     font-size: 1rem;

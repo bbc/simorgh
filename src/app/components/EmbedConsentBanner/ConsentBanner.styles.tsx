@@ -1,7 +1,7 @@
 import { css, Theme } from '@emotion/react';
 
 export default {
-  self: ({ spacings, palette }: Theme) =>
+  parent: ({ spacings, palette }: Theme) =>
     css({
       backgroundColor: palette.WHITE,
       padding: `${spacings.QUADRUPLE}rem ${spacings.DOUBLE}rem`,
@@ -30,6 +30,11 @@ export default {
         '&:hover, &:focus': {
           color: palette.POSTBOX,
           borderBottom: `2px solid ${palette.POSTBOX}`,
+        },
+
+        '&:visited': {
+          color: palette.GREY_6,
+          borderBottom: `1px solid ${palette.GREY_6}`,
         },
       },
     }),
