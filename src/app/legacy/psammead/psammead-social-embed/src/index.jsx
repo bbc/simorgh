@@ -1,10 +1,7 @@
 import React, { useContext } from 'react';
 import { shape, string, func } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
-import {
-  EmbedConsentBannerCanonical,
-  EmbedConsentBannerAmp,
-} from '../../../../components/EmbedConsentBanner';
+
 import SkipLinkWrapper from './SkipLinkWrapper';
 import CaptionWrapper from './CaptionWrapper';
 import Notice from './Notice';
@@ -42,22 +39,18 @@ export const CanonicalSocialEmbed = ({
     <SkipLinkWrapper service={service} provider={provider} {...skipLink}>
       {embedCaption ? (
         <CaptionWrapper service={service} {...embedCaption}>
-          <EmbedConsentBannerCanonical pageType={pageType} provider={provider}>
-            <CanonicalEmbed
-              provider={provider}
-              oEmbed={oEmbed}
-              onRender={onRender}
-            />
-          </EmbedConsentBannerCanonical>
-        </CaptionWrapper>
-      ) : (
-        <EmbedConsentBannerCanonical pageType={pageType} provider={provider}>
           <CanonicalEmbed
             provider={provider}
             oEmbed={oEmbed}
             onRender={onRender}
           />
-        </EmbedConsentBannerCanonical>
+        </CaptionWrapper>
+      ) : (
+        <CanonicalEmbed
+          provider={provider}
+          oEmbed={oEmbed}
+          onRender={onRender}
+        />
       )}
     </SkipLinkWrapper>
   );
@@ -95,14 +88,10 @@ export const AmpSocialEmbed = ({
     <SkipLinkWrapper service={service} provider={provider} {...skipLink}>
       {embedCaption ? (
         <CaptionWrapper service={service} {...embedCaption}>
-          <EmbedConsentBannerAmp pageType={pageType} provider={provider}>
-            <AmpElement id={id} />
-          </EmbedConsentBannerAmp>
+          <AmpElement id={id} />
         </CaptionWrapper>
       ) : (
-        <EmbedConsentBannerAmp pageType={pageType} provider={provider}>
-          <AmpElement id={id} />
-        </EmbedConsentBannerAmp>
+        <AmpElement id={id} />
       )}
     </SkipLinkWrapper>
   );

@@ -125,7 +125,7 @@
     "lru-cache": "7.7.1",
     "mkdirp": "1.0.4",
     "moment": "2.29.4",
-    "moment-timezone": "0.5.35",
+    "moment-timezone": "0.5.34",
     "morgan": "1.10.0",
     "path-to-regexp": "6.2.1",
     "polyfill-crypto.getrandomvalues": "1.0.0",

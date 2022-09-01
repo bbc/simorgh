@@ -15,6 +15,7 @@ import {
   GEL_MARGIN_ABOVE_400PX,
 } from '#psammead/gel-foundations/src/spacings';
 import { C_GHOST } from '#psammead/psammead-styles/src/colours';
+import { ServiceContext } from '#contexts/ServiceContext';
 import MetadataContainer from '#containers/Metadata';
 import LinkedData from '#containers/LinkedData';
 import IndexHeading from '#containers/IndexHeading';
@@ -28,7 +29,6 @@ import idxPageDataPropTypes from '#models/propTypes/idxPage';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import { ServiceContext } from '../../contexts/ServiceContext';
 
 const IdxMostReadSection = styled(MostReadSection)`
   /* To centre page layout for Group 4+ */

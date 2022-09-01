@@ -16012,12 +16012,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"moment-timezone@npm:0.5.35":
-  version: 0.5.35
-  resolution: "moment-timezone@npm:0.5.35"
+"moment-timezone@npm:0.5.34":
+  version: 0.5.34
+  resolution: "moment-timezone@npm:0.5.34"
   dependencies:
     moment: ">= 2.9.0"
-  checksum: 0f3907282dc9ae3d405fefaccf486dc4222945ff479127fd269e6c4ddc25e526e7ca9e849d6bf941c871bd17e875b256bdb276137a55db9fce4177c792a003df
+  checksum: 12a1d3d52e4ba509cf1fa36bbda59d898a08fa80ab35f6c358747e93aec1f07e617cec647eaf2e8acf5f9132e581d4704d34a9edffa9a80c5cd04bf23b277595
   languageName: node
   linkType: hard
 
@@ -19845,7 +19845,7 @@ __metadata:
     mocha: 9.2.2
     mocha-junit-reporter: 2.0.2
     moment: 2.29.4
-    moment-timezone: 0.5.35
+    moment-timezone: 0.5.34
     morgan: 1.10.0
     node-fetch: 2.6.7
     npm-run-all: 4.1.5

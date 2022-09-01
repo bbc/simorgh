@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { shape, string } from 'prop-types';
 import path from 'ramda/src/path';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
 import Promo from '#components/OptimoPromos';
 import isEmpty from 'ramda/src/isEmpty';
-import { ServiceContext } from '../../../../../contexts/ServiceContext';
 import { TitleWithContent, StyledRelatedContentWrapper } from './index.styles';
 
 const RelatedContentItem = ({ item, ariaLabelledBy }) => {

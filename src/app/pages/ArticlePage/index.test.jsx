@@ -5,6 +5,7 @@ import { render, waitFor } from '@testing-library/react';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import {
   articleDataNews,
   articleDataPersian,
@@ -20,7 +21,6 @@ import {
   singleTextBlock,
 } from '#models/blocks/index';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
 
 jest.mock('#containers/ChartbeatAnalytics', () => {

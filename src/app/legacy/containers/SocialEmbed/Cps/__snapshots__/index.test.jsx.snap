@@ -113,12 +113,13 @@ exports[`CpsSocialEmbedContainer AMP should render correctly 1`] = `
 
 .emotion-6 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
   border: 0.125rem solid #222222;
+  color: #222222;
   display: block;
   left: 0;
   line-height: 1;
@@ -140,16 +141,6 @@ exports[`CpsSocialEmbedContainer AMP should render correctly 1`] = `
   .emotion-6 {
     font-size: 0.8125rem;
   }
-}
-
-.emotion-6 span {
-  color: #222222;
-}
-
-.emotion-6:hover span,
-.emotion-6:focus span {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
 }
 
 .emotion-6:not(:focus):not(:active) {
@@ -190,9 +181,7 @@ exports[`CpsSocialEmbedContainer AMP should render correctly 1`] = `
           class="emotion-6 emotion-7"
           href="#end-of-twitter-content-2"
         >
-          <span>
-            Skip Twitter content, 2
-          </span>
+          Skip Twitter content, 2
         </a>
         <amp-twitter
           data-tweetid="1237210910835392512"
@@ -326,12 +315,13 @@ exports[`CpsSocialEmbedContainer Canonical should render and unmount correctly 1
 
 .emotion-6 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
   border: 0.125rem solid #222222;
+  color: #222222;
   display: block;
   left: 0;
   line-height: 1;
@@ -353,16 +343,6 @@ exports[`CpsSocialEmbedContainer Canonical should render and unmount correctly 1
   .emotion-6 {
     font-size: 0.8125rem;
   }
-}
-
-.emotion-6 span {
-  color: #222222;
-}
-
-.emotion-6:hover span,
-.emotion-6:focus span {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
 }
 
 .emotion-6:not(:focus):not(:active) {
@@ -422,9 +402,7 @@ exports[`CpsSocialEmbedContainer Canonical should render and unmount correctly 1
         class="emotion-6 emotion-7"
         href="#end-of-twitter-content-2"
       >
-        <span>
-          Skip Twitter content, 2
-        </span>
+        Skip Twitter content, 2
       </a>
       <div
         class="emotion-8 emotion-9"
@@ -572,12 +550,13 @@ exports[`CpsSocialEmbedContainer Canonical should render correctly without an em
 
 .emotion-6 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
   border: 0.125rem solid #222222;
+  color: #222222;
   display: block;
   left: 0;
   line-height: 1;
@@ -599,16 +578,6 @@ exports[`CpsSocialEmbedContainer Canonical should render correctly without an em
   .emotion-6 {
     font-size: 0.8125rem;
   }
-}
-
-.emotion-6 span {
-  color: #222222;
-}
-
-.emotion-6:hover span,
-.emotion-6:focus span {
-  color: #B80000;
-  border-bottom: 2px solid #B80000;
 }
 
 .emotion-6:not(:focus):not(:active) {
@@ -703,9 +672,7 @@ exports[`CpsSocialEmbedContainer Canonical should render correctly without an em
           class="emotion-6 emotion-7"
           href="#end-of-twitter-content-1"
         >
-          <span>
-            Skip Twitter content, 1
-          </span>
+          Skip Twitter content, 1
         </a>
         <div
           class="emotion-8 emotion-9"

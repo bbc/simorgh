@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
+import { ServiceContext } from '#contexts/ServiceContext';
 import { shape, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import isEmpty from 'ramda/src/isEmpty';
 import { storyItem } from '#models/propTypes/storyItem';
 import { getIsLive } from '#lib/utilities/getStoryPromoInfo';
 import Promo from '#components/OptimoPromos';
-import { ServiceContext } from '../../../../../contexts/ServiceContext';
 import {
   StyledTitle,
   StyledTimestamp,

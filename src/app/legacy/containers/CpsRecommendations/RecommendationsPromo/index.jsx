@@ -18,8 +18,8 @@ import {
   C_GREY_10,
 } from '#psammead/psammead-styles/src/colours';
 import { shape, string, oneOfType } from 'prop-types';
+import { ServiceContext } from '#contexts/ServiceContext';
 import { storyItem } from '#models/propTypes/storyItem';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
 import Grid from '../../../components/Grid';
 import RecommendationsImage from '../RecommendationsPromoImage';
 import useCombinedClickTrackerHandler from '../../StoryPromo/useCombinedClickTrackerHandler';

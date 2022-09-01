@@ -1,21 +1,14 @@
-import React, { PropsWithChildren } from 'react';
+import React from 'react';
 import { render } from '@testing-library/react';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import Subhead from '.';
-
-import { Services } from '../../../../models/types/global';
-
-interface Props {
-  service?: Services;
-  href?: string;
-}
 
 /* eslint-disable react/prop-types */
 const SubheadWithContext = ({
   children = '',
   href = '',
   service = 'mundo',
-}: PropsWithChildren<Props>) => (
+} = {}) => (
   <ServiceContextProvider service={service}>
     <Subhead href={href}>{children}</Subhead>
   </ServiceContextProvider>

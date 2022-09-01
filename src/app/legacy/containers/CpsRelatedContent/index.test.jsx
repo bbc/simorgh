@@ -2,6 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import path from 'ramda/src/path';
 
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 
@@ -11,7 +12,6 @@ import getInitialData from '#app/routes/cpsAsset/getInitialData';
 import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import * as viewTracking from '#hooks/useViewTracker';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import CpsRelatedContent from '.';
 
 const promos = path(['relatedContent', 'groups', 0, 'promos'], pidginPageData);

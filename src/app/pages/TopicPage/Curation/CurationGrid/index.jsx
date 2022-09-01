@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { arrayOf, shape } from 'prop-types';
 
+import { ServiceContext } from '#contexts/ServiceContext';
+
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -14,7 +16,6 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 import CurationPromo from '../CurationPromo';
 

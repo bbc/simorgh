@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet';
 import { string, shape, arrayOf, bool, object } from 'prop-types';
+import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
 import getBrandedImage from '#lib/utilities/getBrandedImage';
-import { ServiceContext } from '../../../contexts/ServiceContext';
 import getAboutTagsContent from './getAboutTagsContent';
 
 const LinkedData = ({

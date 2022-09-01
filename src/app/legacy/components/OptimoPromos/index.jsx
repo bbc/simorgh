@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { node, string, shape } from 'prop-types';
+import { ServiceContext } from '#contexts/ServiceContext';
 import path from 'ramda/src/path';
 
 import Timestamp from '#components/Promo/timestamp';
 import LiveLabel from '#psammead/psammead-live-label/src';
 import useViewTracker from '#hooks/useViewTracker';
-import { ServiceContext } from '../../../contexts/ServiceContext';
 
 import Title from './Title';
 import Link from './Link';

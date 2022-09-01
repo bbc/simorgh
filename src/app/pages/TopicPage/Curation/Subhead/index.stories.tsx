@@ -4,20 +4,27 @@ import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import { withServicesKnob } from '../../../../legacy/psammead/psammead-storybook-helpers/src';
 
 import services from '../../../../../server/utilities/serviceConfigs';
-import { Services, Variants } from '../../../../models/types/global';
 
 import Subheading from '.';
 
+type AllServices = {
+  [t in Props['service']]: {
+    [s in Props['variant']]: any;
+  };
+};
+
+const allServices: AllServices = services;
+
 interface Props {
-  service: Services;
-  variant: Variants;
+  service: string;
+  variant: string;
 }
 
 const Component = ({ service, variant }: Props) => {
   return (
     <ServiceContextProvider service={service} variant={variant}>
       <Subheading>
-        {services[service][variant].translations.relatedContent}
+        {allServices[service][variant].translations.relatedContent}
       </Subheading>
     </ServiceContextProvider>
   );
@@ -27,7 +34,7 @@ const WithLink = ({ service, variant }: Props) => {
   return (
     <ServiceContextProvider service={service} variant={variant}>
       <Subheading href="https://bbc.com">
-        {services[service][variant].translations.relatedContent}
+        {allServices[service][variant].translations.relatedContent}
       </Subheading>
     </ServiceContextProvider>
   );

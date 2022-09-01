@@ -28,7 +28,7 @@ module.exports = (on, config) => {
     // as your app's code
     webpackOptions: {
       resolve: {
-        extensions: ['.ts', '.tsx', '.js', '.jsx'],
+        extensions: ['.js', '.jsx'],
         alias: {
           ...webpackDirAlias,
         },
@@ -43,19 +43,6 @@ module.exports = (on, config) => {
             use: [
               {
                 loader: 'babel-loader',
-              },
-            ],
-          },
-          {
-            test: /\.(ts|tsx)$/,
-            include: [resolvePath('src')],
-            use: [
-              'babel-loader',
-              {
-                loader: 'ts-loader',
-                options: {
-                  transpileOnly: true,
-                },
               },
             ],
           },

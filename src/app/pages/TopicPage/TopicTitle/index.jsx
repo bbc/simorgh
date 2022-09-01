@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { string } from 'prop-types';
+import { ServiceContext } from '#contexts/ServiceContext';
 import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
 import { C_GREY_10 } from '#psammead/psammead-styles/src/colours';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import { getCanon } from '#psammead/gel-foundations/src/typography';
-import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const H1 = styled.h1`
   ${({ service }) => getSansBold(service)}

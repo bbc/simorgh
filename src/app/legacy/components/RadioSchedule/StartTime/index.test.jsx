@@ -1,7 +1,7 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { latin, arabic } from '#psammead/gel-foundations/src/scripts';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import StartTime from './index';
 
 const testUnixTimestamp = 1566914061212;

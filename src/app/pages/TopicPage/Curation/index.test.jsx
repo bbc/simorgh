@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 import fixture from '#data/pidgin/topics/c95y35941vrt.json';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 
 import Curation, { VISUAL_STYLE, VISUAL_PROMINANCE } from '.';
 

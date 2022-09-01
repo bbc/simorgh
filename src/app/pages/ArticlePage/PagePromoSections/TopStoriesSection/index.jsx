@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
+import { ServiceContext } from '#contexts/ServiceContext';
 import { arrayOf, shape } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
 import pathOr from 'ramda/src/pathOr';
 import { C_GREY_2 } from '#psammead/psammead-styles/src/colours';
 import isEmpty from 'ramda/src/isEmpty';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
 import {
   StyledSectionLabel,
   StyledTopStoriesSection,
