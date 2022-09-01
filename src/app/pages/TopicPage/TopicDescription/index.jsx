@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { string } from 'prop-types';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { C_GREY_10 } from '#psammead/psammead-styles/src/colours';
@@ -14,6 +13,7 @@ import {
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
 import { getGreatPrimer } from '#psammead/gel-foundations/src/typography';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const Paragraph = styled.p`
   ${({ service }) => getSansRegular(service)}

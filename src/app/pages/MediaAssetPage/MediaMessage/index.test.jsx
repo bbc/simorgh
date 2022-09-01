@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import loggerMock from '#testHelpers/loggerMock';
+import { NO_TRANSLATION_FOUND } from '#lib/logger.const';
 import {
   ServiceContextProvider,
   ServiceContext,
-} from '#contexts/ServiceContext';
-import loggerMock from '#testHelpers/loggerMock';
-import { NO_TRANSLATION_FOUND } from '#lib/logger.const';
+} from '../../../contexts/ServiceContext';
 import MediaMessage from '.';
 
 const GenerateMediaMessage = () =>

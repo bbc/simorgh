@@ -1,5 +1,4 @@
 import React from 'react';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { textBlock } from '#models/blocks';
 import {
   shouldMatchSnapshot,
@@ -7,6 +6,7 @@ import {
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
 import { latin } from '#psammead/gel-foundations/src/scripts';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import FauxHeadlineContainer from '.';
 import blocksSingleFragment from '../Headings/testHelpers';
 

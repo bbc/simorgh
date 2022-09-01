@@ -9,8 +9,8 @@ import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/brea
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
-import { ServiceContext } from '#contexts/ServiceContext';
 import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import PromoComponent from './components';
 import getPromo from './shared';
 

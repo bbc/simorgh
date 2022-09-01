@@ -4,8 +4,8 @@ import {
   DropdownUl,
   DropdownLi,
 } from '#psammead/psammead-navigation/src/DropdownNavigation';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
 

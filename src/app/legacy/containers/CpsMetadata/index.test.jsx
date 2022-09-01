@@ -1,11 +1,11 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import CpsMetadata from './index';
 
 const getISOStringDate = date => new Date(date).toISOString();

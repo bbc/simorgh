@@ -13,9 +13,9 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import { Headline } from '#psammead/psammead-headings/src';
 import { textDefaultPropTypes } from '#models/propTypes';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { headlineModelPropTypes } from '#models/propTypes/headline';
 import { GridItemLarge } from '#components/Grid';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import Fragment from '../Fragment';
 import Blocks from '../Blocks';
 

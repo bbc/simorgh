@@ -8,10 +8,12 @@ import {
   C_GREY_10,
 } from '../../../../legacy/psammead/psammead-styles/src/colours';
 
-interface Props {
-  service: string;
-  script: string;
-}
+import { Services } from '../../../../models/types/global';
+
+type Props = {
+  service: Services;
+  script: object;
+};
 
 export default styled.h2<Props>`
   ${({ service }) => getSansBold(service)}

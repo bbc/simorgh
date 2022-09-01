@@ -8,9 +8,9 @@ import {
   oneOfType,
   object,
 } from 'prop-types';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import FigureContainer from '.';
 
 const serviceContextStubNews = {
