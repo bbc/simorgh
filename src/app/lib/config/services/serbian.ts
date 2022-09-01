@@ -349,6 +349,17 @@ export const service: SerbianConfig = {
           text: 'Preskočite sadržaj sa %provider_name%',
           endTextVisuallyHidden: 'Kraj sadržaja sa %provider_name%',
         },
+        consentBanner: {
+          heading: `Dozvoliti sadržaj [social_media_site]?`,
+          body: `U ovom članku se pojavljuje sadržaj [social_media_site]. Molimo vas da date dozvolu pre nego što se sadržaj učita, pošto može da koristi kolačiće i druge tehnologije. Možda biste želeli da pročitate [social_media_site] [link] politiku kolačića [/link] i [link] politiku privatnosti [/link] pre nego što date pristanak. Da biste videli ovaj sadržaj, odaberite "Prihvatite i nastavite".`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+          button: 'Prihvatite i nastavite',
+        },
       },
       include: {
         errorMessage:
@@ -656,6 +667,17 @@ export const service: SerbianConfig = {
         skipLink: {
           text: 'Skip %provider_name% post',
           endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+        consentBanner: {
+          heading: `Дозволити садржај [social_media_site]?`,
+          body: `У овом чланку се појављује садржај [social_media_site]. Молимо вас да дате дозволу пре него што се садржај учита, пошто може да користи колачиће и друге технологије. Можда бисте желели да прочитате [social_media_site] [link] политику колачића [/link] и [link] политику приватности [/link] пре него што дате пристанак. Да бисте видели овај садржај, одаберите "Прихватите и наставите”.`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+          button: 'Прихватите и наставите',
         },
       },
       include: {

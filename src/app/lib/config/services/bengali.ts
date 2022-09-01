@@ -253,6 +253,17 @@ export const service: DefaultServiceConfig = {
           text: 'Skip %provider_name% post',
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
+        consentBanner: {
+          heading: '[social_media_site] কনটেন্টের জন্য কি অনুমতি দেবেন?',
+          body: `এই নিবন্ধে [social_media_site]এর কনটেন্ট রয়েছে। কোন কিছু লোড করার আগে আমরা আপনার অনুমতি চাইছি, কারণ তারা হয়ত কুকি এবং অন্যান্য প্রযুক্তি ব্যবহার করে থাকতে পারে।  আপনি সম্মতি দেবার আগে হয়ত [social_media_site] [link] কুকি সম্পর্কিত নীতি [/link] এবং [link] ব্যক্তিগত বিষয়ক নীতি[/link] প়ড়ে নিতে চাইতে পারেন। এই কনটেন্ট দেখতে হলে 'সম্মতি দিচ্ছি এবং এগোন' বেছে নিন।`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+          button: 'সম্মতি দিচ্ছি এবং এগোন',
+        },
       },
       include: {
         errorMessage:

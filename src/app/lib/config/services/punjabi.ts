@@ -241,6 +241,17 @@ export const service: DefaultServiceConfig = {
           text: 'Skip %provider_name% post',
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
+        consentBanner: {
+          heading: `[social_media_site] ਸਮੱਗਰੀ ਦੀ ਇਜਾਜ਼ਤ?`,
+          body: `ਇਸ ਲੇਖ ਵਿੱਚ [social_media_site] ਤੋਂ ਮਿਲੀ ਸਮੱਗਰੀ ਸ਼ਾਮਲ ਹੈ। ਕੁਝ ਵੀ ਡਾਊਨਲੋਡ ਹੋਣ ਤੋਂ ਪਹਿਲਾਂ ਅਸੀਂ ਤੁਹਾਡੀ ਇਜਾਜ਼ਤ ਮੰਗਦੇ ਹਾਂ ਕਿਉਂਕਿ ਇਸ ਵਿੱਚ ਕੁਕੀਜ਼ ਅਤੇ ਦੂਜੀਆਂ ਤਕਨੀਕਾਂ ਦਾ ਇਸਤੇਮਾਲ ਕੀਤਾ ਹੋ ਸਕਦਾ ਹੈ। ਤੁਸੀਂ ਸਵੀਕਾਰ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ [social_media_site] [link] ਕੁਕੀ ਪਾਲਿਸੀ [/link] ਤੇ ਨੂੰ ਪੜ੍ਹਨਾ ਚਾਹੋਗੇ। ਇਸ ਸਮੱਗਰੀ ਨੂੰ ਦੇਖਣ ਲਈ ਇਜਾਜ਼ਤ ਦੇਵੋ ਤੇ ਜਾਰੀ ਰੱਖੋ ਨੂੰ ਚੁਣੋ।`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+          button: 'ਸਵੀਕਾਰ ਕਰੋ ਤੇ ਜਾਰੀ ਰੱਖੋ',
+        },
       },
       include: {
         errorMessage:
