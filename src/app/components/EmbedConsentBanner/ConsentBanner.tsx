@@ -43,6 +43,7 @@ const getProviderName = (provider: SocialEmbedProviders) => {
 const getTranslations = (
   provider: SocialEmbedProviders,
   translations: Translations,
+  externalLinkText: string,
 ) => {
   const headingTranslations = pathOr(
     defaultTranslations.heading,
@@ -105,7 +106,7 @@ const getTranslations = (
         aria-label={`${linkTextElements[0]
           .replaceAll('[link]', '')
           .replaceAll('[/link]', '')
-          .trim()}, external`}
+          .trim()}${externalLinkText}`}
         target="_blank"
         rel="noreferrer"
         key={cookiesUrl}
@@ -122,7 +123,7 @@ const getTranslations = (
         aria-label={`${linkTextElements[1]
           .replaceAll('[link]', '')
           .replaceAll('[/link]', '')
-          .trim()}, external`}
+          .trim()}${externalLinkText}`}
         target="_blank"
         rel="noreferrer"
         key={privacyUrl}
@@ -167,9 +168,14 @@ const ConsentBanner = ({
   provider,
   clickHandler,
 }: ConsentBannerContentProps) => {
-  const { service, script, translations } = useContext(ServiceContext);
+  const { service, script, externalLinkText, translations } =
+    useContext(ServiceContext);
 
-  const consentTranslations = getTranslations(provider, translations);
+  const consentTranslations = getTranslations(
+    provider,
+    translations,
+    externalLinkText,
+  );
 
   return (
     <div
