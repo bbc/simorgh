@@ -11,6 +11,8 @@ const Component = () => {
       originalImageWidth={500}
       imageResolutions={[200, 500, 1000]}
       sizes="(max-width: 600px) 480px, 800px"
+      width={500}
+      height={281}
     />
   );
 };
