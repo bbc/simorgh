@@ -10,7 +10,6 @@ import pageDataFixture from '../../../data/news/articles/c0g992jmmkko.json';
 import { Services } from '../models/types/global';
 import ThemeProvider from './ThemeProvider';
 
-
 jest.mock('./ThemeProvider');
 
 interface Props {
@@ -19,7 +18,7 @@ interface Props {
   pageData?: any;
   pageType?: string;
   pathname?: string;
-  service?: Services
+  service?: Services;
   toggles?: any;
 }
 
