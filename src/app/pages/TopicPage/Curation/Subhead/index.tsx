@@ -11,11 +11,8 @@ interface Props {
 }
 
 const Subhead = ({ children, href }: PropsWithChildren<Props>) => {
-  const { service, script, dir } = useContext(ServiceContext) as {
-    script: string;
-    service: string;
-    dir: string;
-  };
+  const { service, script, dir } = useContext(ServiceContext);
+
   const Wrapper = href
     ? ({ children: innerChildren }: PropsWithChildren<Props>) => (
         <a href={href}>

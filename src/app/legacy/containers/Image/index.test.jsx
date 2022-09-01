@@ -6,7 +6,7 @@ import {
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
 import { blockContainingText, blockArrayModel } from '#models/blocks';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import ImageContainer from './index';
 
 describe('Image', () => {

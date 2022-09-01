@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { arrayOf, shape, bool } from 'prop-types';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import { storyItem } from '#models/propTypes/storyItem';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import RelatedContentPromo from '../CpsRelatedContent/RelatedContentPromo';
 import RelatedContentPromoList from '../CpsRelatedContent/RelatedContentPromoList';
