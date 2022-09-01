@@ -5,6 +5,10 @@ const link = css({
   position: 'relative',
   zIndex: 1,
   paddingRight: '2.75rem',
+
+  '&:hover, &:focus': {
+    textDecoration: 'underline',
+  },
 });
 
 export default {
@@ -32,10 +36,6 @@ export default {
       color: palette.POSTBOX,
       display: 'inline-block',
       verticalAlign: 'middle',
-
-      '&:hover, &:focus': {
-        textDecoration: 'underline',
-      },
     }),
 
   authorChevron: ({ palette, spacings }: Theme) =>
