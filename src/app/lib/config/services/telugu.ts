@@ -250,6 +250,17 @@ export const service: DefaultServiceConfig = {
           text: 'పోస్ట్‌ %provider_name% స్కిప్ చేయండి',
           endTextVisuallyHidden: 'పోస్ట్ of %provider_name% ముగిసింది',
         },
+        consentBanner: {
+          heading: `[social_media_site] ఈ సమాచారాన్ని చూడాలనుకుంటున్నారా?`,
+          body: `ఈ కథనంలో [social_media_site] అందించిన సమాచారం కూడా ఉంది. వారు కుకీలు, ఇతర టెక్నాలజీలను ఉపయోగిస్తుండొచ్చు, అందుకే సమాచారం లోడ్ అయ్యే ముందే మేం మీ అనుమతి అడుగుతాం. మీరు మీ అనుమతి ఇచ్చేముందు [social_media_site] [link] కుకీ పాలసీని [/link] , [link] ప్రైవసీ పాలసీని [/link] చదవొచ్చు. ఈ సమాచారం చూడాలనుకుంటే ‘ఆమోదించు, కొనసాగించు’ను ఎంచుకోండి.`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+          button: 'యాక్సెప్ట్ అండ్ కంటిన్యూ',
+        },
       },
       include: {
         errorMessage:

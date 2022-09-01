@@ -1,3 +1,5 @@
+import { SocialEmbedProviders } from './global';
+
 /* eslint-disable camelcase */
 export interface Translations {
   pagination?: {
@@ -140,22 +142,33 @@ export interface Translations {
     recentEpisodes?: string;
     podcastExternalLinks?: string;
   };
-  socialEmbed?: {
-    caption: {
+  socialEmbed: {
+    caption?: {
       textPrefixVisuallyHidden: string;
       text: string;
       articleText?: string;
       articleAdditionalText?: string;
     };
-    fallback: {
+    fallback?: {
       text: string;
       linkText: string;
       linkTextSuffixVisuallyHidden: string;
       warningText: string;
     };
-    skipLink: {
+    skipLink?: {
       text: string;
       endTextVisuallyHidden: string;
+    };
+    consentBanner?: {
+      heading: string;
+      body: string;
+      button?: string | undefined;
+      cookiesUrl: {
+        [key in SocialEmbedProviders]?: string;
+      };
+      privacyUrl: {
+        [key in SocialEmbedProviders]?: string;
+      };
     };
   };
   include?: {

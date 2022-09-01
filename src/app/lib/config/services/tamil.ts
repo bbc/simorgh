@@ -261,6 +261,17 @@ export const service: DefaultServiceConfig = {
           text: '%provider_name% பதிவை கடந்து செல்ல',
           endTextVisuallyHidden: '%provider_name% பதிவின் முடிவு',
         },
+        consentBanner: {
+          heading: `[social_media_site] பதிவை அனுமதிக்கலாமா?`,
+          body: "இந்தக் கட்டுரையில் [social_media_site] வழங்கிய தகவல்கள் இடம் பெற்றுள்ளன. குக்கி மற்றும் பிற தொழில்நுட்பங்கள் பயன்படுத்தப்படக்கூடும் என்பதால்  எந்த ஒரு பதிவேற்றத்துக்கும் முன்னதாக உங்கள் அனுமதியைக் கோருகிறோம். அதை ஏற்றுக்கொள்வதற்கு முன்பாக, நீங்கள் [social_media_site] [link] குக்கி கொள்கை [/link] மற்றும் [link] தனியுரிமைக் கொள்கையை [/link] அறிந்துகொள்ள விரும்பலாம். இந்த தகவலைப் படிக்க, `ஏற்றுக்கொண்டு தொடரவும்' என்பதைத் தேர்வு செய்யவும்.",
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+          button: 'ஏற்பு மற்றும் தொடரவும்',
+        },
       },
       include: {
         errorMessage:

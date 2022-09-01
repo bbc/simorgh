@@ -266,6 +266,16 @@ export const service: DefaultServiceConfig = {
           text: 'Kauce wa %provider_name%',
           endTextVisuallyHidden: 'Karshen labarin da aka sa a %provider_name%',
         },
+        consentBanner: {
+          heading: 'Ya kamata a bar bayanan [social_media_site]?',
+          body: `Wannan labari ne na dauke da bayanai da [social_media_site] suka bayar.  Muna neman amincewarku kafin mu dora muka, saboda nuna iya dauke da  wasu bayanai da aka iya adanawa. Watakila kana za ka so ka karanta [social_media_site] [link] da tsarin bayanan da za a adana [/link] da [link] da tsarin sirri [/link] kafin ka amince. Idan kana son ganin wannan bayani ka zabi ‘amince sannan ka ci gaba’.`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+        },
       },
       include: {
         errorMessage:

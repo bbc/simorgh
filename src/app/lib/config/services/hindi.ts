@@ -277,6 +277,16 @@ export const service: DefaultServiceConfig = {
           text: 'छोड़िए %provider_name% पोस्ट',
           endTextVisuallyHidden: 'पोस्ट %provider_name% समाप्त',
         },
+        consentBanner: {
+          heading: '[social_media_site] सामग्री की इजाज़त?',
+          body: `इस लेख में [social_media_site] से मिली सामग्री शामिल है. कुछ भी लोड होने से पहले हम आपकी इजाज़त मांगते हैं क्योंकि उनमें कुकीज़ और दूसरी तकनीकों का इस्तेमाल किया गया हो सकता है. आप स्वीकार करने से पहले [social_media_site] [link] cookie policy [/link] और [link] को पढ़ना चाहेंगे [/link]. इस सामग्री को देखने के लिए  'अनुमति  देंऔर जारी रखें' को चुनें.`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+        },
       },
       include: {
         errorMessage:
