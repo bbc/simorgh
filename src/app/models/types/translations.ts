@@ -34,6 +34,13 @@ export interface Translations {
     404: TranslationsError;
     500: TranslationsError;
   };
+  byline: {
+    author?: string;
+    articleInformation?: string;
+    published?: string;
+    reportingFrom?: string;
+    role?: string;
+  };
   consentBanner: {
     privacy: {
       title: string;
