@@ -189,7 +189,7 @@ The available colours. Click on any colour to see the colour in https://color-he
 - `BRAND_HIGHLIGHT`
 - `BRAND_BORDER`
 
-You can use `mq` like this:
+You can use `palette` like this:
 
 ```tsx
 <div
@@ -209,6 +209,8 @@ These are numbers that represent the rems used for spacing content. The options,
 - `DOUBLE` - 16px
 - `TRIPLE` - 24px
 - `QUADRUPLE` - 32px
+
+You can use `spacings` like this:
 
 ```tsx
 <div
