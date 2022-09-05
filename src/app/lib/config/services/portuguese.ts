@@ -271,6 +271,17 @@ export const service: DefaultServiceConfig = {
           text: 'Pule %provider_name% post',
           endTextVisuallyHidden: 'Final de %provider_name% post',
         },
+        consentBanner: {
+          heading: `Aceita conteúdo de [social_media_site]?`,
+          body: `Este item inclui conteúdo extraído de [social_media_site]. Pedimos sua autorzação antes que algo seja carregado, pois eles podem estar utilizando cookies e outras tecnologias. Você pode consultar a [link] política de uso de cookies [/link] e [link] os termos de privacidade  [/link] do [social_media_site] antes de concordar. Para acessar o conteúdo clique em "aceitar e continuar".`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+          button: 'Aceite e continue',
+        },
       },
       include: {
         errorMessage:

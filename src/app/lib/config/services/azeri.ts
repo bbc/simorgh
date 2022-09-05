@@ -241,6 +241,17 @@ export const service: DefaultServiceConfig = {
           text: 'Paylaşımını ötürün %provider_name%',
           endTextVisuallyHidden: 'Paylaşımın sonu %provider_name%',
         },
+        consentBanner: {
+          heading: '[social_media_site] məzmununa icazə varmı?',
+          body: `Bu məqalədə [social_media_site] məzmunu mövcuddur.  Nə isə yüklənməmişdən əvvəl icazənizi istəyirik, çünki onlar kukilərdən və digər texnologiyalardan istifadə edə bilərlər. Qəbul etməzdən əvvəl [social_media_site] [link] kuki siyasəti [/link] və [link] gizlilik siyasəti [/link] barədə oxumaq istəyə bilərsiniz. Bu məzmunu görmək üçün "qəbul edin və davam edin".`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+          button: 'Qəbul edin və davam edin',
+        },
       },
       include: {
         errorMessage:

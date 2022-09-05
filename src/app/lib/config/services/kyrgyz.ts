@@ -257,6 +257,16 @@ export const service: DefaultServiceConfig = {
           text: '%provider_name% баракчаны өткөрүп жиберүү, пост',
           endTextVisuallyHidden: '%provider_name% посттун аягы',
         },
+        consentBanner: {
+          heading: `[social_media_site] мазмуну көрсөтүлсүнбү?`,
+          body: `Бул макалада [social_media_site] мазмуну бар. Алар кукилерди ж.б. технологияларды колдонушу мүмкүн. Ошондуктан жүктөөрдөн мурда сизден уруксат суралат.`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+        },
       },
       include: {
         errorMessage: 'Кечиресиз, бул баракча мобилдик телефондо ачылбайт',

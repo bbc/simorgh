@@ -241,6 +241,17 @@ export const service: DefaultServiceConfig = {
           text: '%provider_name% 포스트 건너뛰기',
           endTextVisuallyHidden: '%provider_name% 포스트 마침',
         },
+        consentBanner: {
+          heading: `[social_media_site] 콘텐츠 보기를 허용하시겠습니까?`,
+          body: `이 기사는 [social_media_site]에서 제공한 콘텐츠를 포함하고 있습니다. 해당 콘텐츠는 쿠키나 다른 기술을 사용할 수 있어 기사를 보기 전 허용 여부를 묻고 있습니다. 허용을 하기 전에 [social_media_site]의 [link]쿠키 정책[/link]과 [link]개인정보 보호 정책[/link]을 참고하시길 바랍니다. 기사를 계속해서 보시려면 ‘허용하고 계속 보기’ 버튼을 누르십시오. `,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+          button: '허용하고 계속 보기',
+        },
       },
       include: {
         errorMessage:

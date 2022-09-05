@@ -215,6 +215,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
+      socialEmbed: {},
       topStoriesTitle: 'Prìomh Sgeulachdan',
       featuresAnalysisTitle: 'Sgeulachdan Aithriseach',
     },
