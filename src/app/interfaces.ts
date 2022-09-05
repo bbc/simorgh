@@ -56,8 +56,6 @@ interface Palette extends BrandPalette {
 
 interface MediaQueries {
   GROUP_0_MAX_WIDTH: string;
-  GROUP_0_MIN_WIDTH: string;
-  GROUP_0_ONLY: string;
   GROUP_1_MAX_WIDTH: string;
   GROUP_1_MIN_WIDTH: string;
   GROUP_1_ONLY: string;
@@ -434,8 +432,6 @@ declare module '@emotion/react' {
     };
     fontMq: {
       GROUP_A_MAX_WIDTH: string;
-      GROUP_A_MIN_WIDTH: string;
-      GROUP_A_ONLY: string;
       GROUP_B_MAX_WIDTH: string;
       GROUP_B_MIN_WIDTH: string;
       GROUP_B_ONLY: string;

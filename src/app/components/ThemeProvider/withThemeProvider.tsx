@@ -54,8 +54,6 @@ import {
 } from './palette';
 import {
   GROUP_0_MAX_WIDTH,
-  GROUP_0_MIN_WIDTH,
-  GROUP_0_ONLY,
   GROUP_1_MAX_WIDTH,
   GROUP_1_MIN_WIDTH,
   GROUP_1_ONLY,
@@ -102,8 +100,6 @@ import {
 } from './fontVariants';
 import {
   GROUP_A_MAX_WIDTH,
-  GROUP_A_MIN_WIDTH,
-  GROUP_A_ONLY,
   GROUP_B_MAX_WIDTH,
   GROUP_B_MIN_WIDTH,
   GROUP_B_ONLY,
@@ -163,8 +159,6 @@ const withThemeProvider = ({
     },
     fontMq: {
       GROUP_A_MAX_WIDTH,
-      GROUP_A_MIN_WIDTH,
-      GROUP_A_ONLY,
       GROUP_B_MAX_WIDTH,
       GROUP_B_MIN_WIDTH,
       GROUP_B_ONLY,
@@ -172,8 +166,6 @@ const withThemeProvider = ({
     },
     mq: {
       GROUP_0_MAX_WIDTH,
-      GROUP_0_MIN_WIDTH,
-      GROUP_0_ONLY,
       GROUP_1_MAX_WIDTH,
       GROUP_1_MIN_WIDTH,
       GROUP_1_ONLY,
