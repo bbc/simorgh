@@ -55,9 +55,9 @@ export default ({ service, pageType, variant }) => {
 
         if (promoCount !== numberOfItems) {
           cy.window().then(win => {
-            const jsonData = win.SIMORGH_DATA;
+            const pageData = win.SIMORGH_DATA;
 
-            cy.log(jsonData);
+            cy.log(pageData);
           });
         }
 
