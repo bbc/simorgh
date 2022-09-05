@@ -7,16 +7,6 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import { SocialEmbedProviders } from '../../models/types/global';
 import { Translations } from '../../models/types/translations';
 
-import {
-  getBodyCopy,
-  getGreatPrimer,
-  getPica,
-} from '../../legacy/psammead/gel-foundations/src/typography';
-import {
-  getSansBold,
-  getSansRegular,
-} from '../../legacy/psammead/psammead-styles/src/font-styles';
-
 import consentBannerCss from './ConsentBanner.styles';
 
 const defaultTranslations: Translations['socialEmbed']['consentBanner'] = {
@@ -168,8 +158,7 @@ const ConsentBanner = ({
   provider,
   clickHandler,
 }: ConsentBannerContentProps) => {
-  const { service, script, externalLinkText, translations } =
-    useContext(ServiceContext);
+  const { externalLinkText, translations } = useContext(ServiceContext);
 
   const consentTranslations = getTranslations(
     provider,
@@ -183,36 +172,15 @@ const ConsentBanner = ({
       id="consentBanner"
       css={consentBannerCss.parent}
     >
-      <strong
-        data-testid="banner-heading"
-        css={[
-          // TODO: Remove custom font functions and use theme
-          consentBannerCss.heading,
-          getSansBold(service),
-          getGreatPrimer(script),
-        ]}
-      >
+      <strong data-testid="banner-heading" css={consentBannerCss.heading}>
         {consentTranslations.heading}
       </strong>
-      <p
-        data-testid="banner-body"
-        css={[
-          // TODO: Remove custom font functions and use theme
-          consentBannerCss.textBody,
-          getSansRegular(service),
-          getBodyCopy(script),
-        ]}
-      >
+      <p data-testid="banner-body" css={consentBannerCss.textBody}>
         {consentTranslations.body}
       </p>
       <button
         data-testid="banner-button"
-        css={[
-          // TODO: Remove custom font functions and use theme
-          consentBannerCss.button,
-          getSansBold(service),
-          getPica(script),
-        ]}
+        css={consentBannerCss.button}
         type="button"
         {...clickHandler}
       >
