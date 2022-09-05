@@ -8,7 +8,7 @@ import isChromatic from 'chromatic';
 import { forceVisible } from 'react-lazyload';
 import GlobalStyles from '../src/app/legacy/psammead/psammead-styles/src/global-styles';
 
-const REITH_SERIF_REGULAR_STATIC = {
+const REITH_SERIF_REGULAR = {
   '@font-face': {
     fontFamily: 'ReithSerif',
     src: `url("fonts/Reith/BBCReithSerif_W_Rg.woff2") format("woff2"), url("fonts/Reith/BBCReithSerif_W_Rg.woff") format("woff")`,
@@ -16,7 +16,7 @@ const REITH_SERIF_REGULAR_STATIC = {
   },
 };
 
-const REITH_SERIF_BOLD_STATIC = {
+const REITH_SERIF_BOLD = {
   '@font-face': {
     fontFamily: 'ReithSerif',
     src: `url("fonts/Reith/BBCReithSerif_W_Bd.woff2") format("woff2"), url("fonts/Reith/BBCReithSerif_W_Bd.woff") format("woff")`,
@@ -25,7 +25,7 @@ const REITH_SERIF_BOLD_STATIC = {
   },
 };
 
-const REITH_SERIF_LIGHT_STATIC = {
+const REITH_SERIF_LIGHT = {
   '@font-face': {
     fontFamily: 'ReithSerif',
     src: `url("fonts/Reith/subsets/BBCReithSerif_WNumbers_Lt.woff2") format("woff2"), url("fonts/Reith/subsets/BBCReithSerif_WNumbers_Lt.woff") format("woff")`,
@@ -34,7 +34,7 @@ const REITH_SERIF_LIGHT_STATIC = {
   },
 };
 
-const REITH_SERIF_MEDIUM_STATIC = {
+const REITH_SERIF_MEDIUM = {
   '@font-face': {
     fontFamily: 'ReithSerif',
     src: `url("fonts/Reith/BBCReithSerif_W_Md.woff2") format("woff2"), url("fonts/Reith/BBCReithSerif_W_Md.woff") format("woff")`,
@@ -43,7 +43,7 @@ const REITH_SERIF_MEDIUM_STATIC = {
   },
 };
 
-const REITH_SERIF_EXTRA_BOLD_STATIC = {
+const REITH_SERIF_EXTRA_BOLD = {
   '@font-face': {
     fontFamily: 'ReithSerif',
     src: `url("fonts/Reith/BBCReithSerif_W_ExBd.woff2") format("woff2"), url("fonts/Reith/BBCReithSerif_W_ExBd.woff") format("woff")`,
@@ -52,7 +52,7 @@ const REITH_SERIF_EXTRA_BOLD_STATIC = {
   },
 };
 
-const REITH_SANS_REGULAR_STATIC = {
+const REITH_SANS_REGULAR = {
   '@font-face': {
     fontFamily: 'ReithSans',
     src: `url("fonts/Reith/BBCReithSans_W_Rg.woff2") format("woff2"), url("fonts/Reith/BBCReithSans_W_Rg.woff") format("woff")`,
@@ -60,7 +60,7 @@ const REITH_SANS_REGULAR_STATIC = {
   },
 };
 
-const REITH_SANS_BOLD_STATIC = {
+const REITH_SANS_BOLD = {
   '@font-face': {
     fontFamily: 'ReithSans',
     src: `url("fonts/Reith/BBCReithSans_W_Bd.woff2") format("woff2"), url("fonts/Reith/BBCReithSans_W_Bd.woff") format("woff")`,
@@ -69,7 +69,7 @@ const REITH_SANS_BOLD_STATIC = {
   },
 };
 
-const REITH_SANS_LIGHT_STATIC = {
+const REITH_SANS_LIGHT = {
   '@font-face': {
     fontFamily: 'ReithSans',
     src: `url("fonts/Reith/BBCReithSans_W_Lt.woff2") format("woff2"), url("fonts/Reith/BBCReithSans_W_Lt.woff") format("woff")`,
@@ -78,7 +78,7 @@ const REITH_SANS_LIGHT_STATIC = {
   },
 };
 
-const REITH_SANS_LIGHT_ITALIC_STATIC = {
+const REITH_SANS_LIGHT_ITALIC = {
   '@font-face': {
     fontFamily: 'ReithSans',
     src: `url("fonts/Reith/BBCReithSans_W_LtIt.woff2") format("woff2"), url("fonts/Reith/BBCReithSans_W_LtIt.woff") format("woff")`,
@@ -88,7 +88,7 @@ const REITH_SANS_LIGHT_ITALIC_STATIC = {
   },
 };
 
-const REITH_SANS_MEDIUM_STATIC = {
+const REITH_SANS_MEDIUM = {
   '@font-face': {
     fontFamily: 'ReithSans',
     src: `url("fonts/Reith/BBCReithSans_W_Md.woff2") format("woff2"), url("fonts/Reith/BBCReithSans_W_Md.woff") format("woff")`,
@@ -97,7 +97,7 @@ const REITH_SANS_MEDIUM_STATIC = {
   },
 };
 
-const REITH_SANS_EXTRA_BOLD_STATIC = {
+const REITH_SANS_EXTRA_BOLD = {
   '@font-face': {
     fontFamily: 'ReithSans',
     src: `url("fonts/Reith/BBCReithSans_W_ExBd.woff2") format("woff2"), url("fonts/Reith/BBCReithSans_W_ExBd.woff") format("woff")`,
@@ -106,7 +106,7 @@ const REITH_SANS_EXTRA_BOLD_STATIC = {
   },
 };
 
-const REITH_SANS_EXTRA_BOLD_ITALIC_STATIC = {
+const REITH_SANS_EXTRA_BOLD_ITALIC = {
   '@font-face': {
     fontFamily: 'ReithSans',
     src: `url("fonts/Reith/BBCReithSans_W_ExBdIt.woff2") format("woff2"), url("fonts/Reith/BBCReithSans_W_ExBdIt.woff") format("woff")`,
@@ -116,7 +116,7 @@ const REITH_SANS_EXTRA_BOLD_ITALIC_STATIC = {
   },
 };
 
-const REITH_SANS_CONDENSED_REGULAR_STATIC = {
+const REITH_SANS_CONDENSED_REGULAR = {
   '@font-face': {
     fontFamily: 'ReithSansCondensed',
     src: `url("fonts/Reith/BBCReithSansCd_W_Rg.woff2") format("woff2"), url("fonts/Reith/BBCReithSansCd_W_Rg.woff") format("woff")`,
@@ -124,7 +124,7 @@ const REITH_SANS_CONDENSED_REGULAR_STATIC = {
   },
 };
 
-const REITH_SANS_CONDENSED_BOLD_STATIC = {
+const REITH_SANS_CONDENSED_BOLD = {
   '@font-face': {
     fontFamily: 'ReithSansCondensed',
     fontWeight: 700,
@@ -133,7 +133,7 @@ const REITH_SANS_CONDENSED_BOLD_STATIC = {
   },
 };
 
-const NOTO_SERIF_SINHALA_REGULAR_STATIC = {
+const NOTO_SERIF_SINHALA_REGULAR = {
   '@font-face': {
     fontFamily: 'Noto Serif Sinhala',
     fontWeight: 400,
@@ -143,7 +143,7 @@ const NOTO_SERIF_SINHALA_REGULAR_STATIC = {
   },
 };
 
-const NOTO_SERIF_SINHALA_BOLD_STATIC = {
+const NOTO_SERIF_SINHALA_BOLD = {
   '@font-face': {
     fontFamily: 'Noto Serif Sinhala',
     fontWeight: 700,
@@ -153,7 +153,7 @@ const NOTO_SERIF_SINHALA_BOLD_STATIC = {
   },
 };
 
-const NOTO_SANS_TAMIL_REGULAR_STATIC = {
+const NOTO_SANS_TAMIL_REGULAR = {
   '@font-face': {
     fontFamily: 'Noto Sans Tamil',
     fontWeight: 400,
@@ -163,7 +163,7 @@ const NOTO_SANS_TAMIL_REGULAR_STATIC = {
   },
 };
 
-const NOTO_SANS_TAMIL_BOLD_STATIC = {
+const NOTO_SANS_TAMIL_BOLD = {
   '@font-face': {
     fontFamily: 'Noto Sans Tamil',
     fontWeight: 700,
@@ -173,7 +173,7 @@ const NOTO_SANS_TAMIL_BOLD_STATIC = {
   },
 };
 
-const MALLANNA_REGULAR_STATIC = {
+const MALLANNA_REGULAR = {
   '@font-face': {
     fontFamily: 'Mallanna',
     fontWeight: 400,
@@ -183,7 +183,7 @@ const MALLANNA_REGULAR_STATIC = {
   },
 };
 
-const NOTO_SANS_ETHIOPIC_REGULAR_STATIC = {
+const NOTO_SANS_ETHIOPIC_REGULAR = {
   '@font-face': {
     fontFamily: 'Noto Sans Ethiopic',
     fontWeight: 400,
@@ -193,7 +193,7 @@ const NOTO_SANS_ETHIOPIC_REGULAR_STATIC = {
   },
 };
 
-const NOTO_SANS_ETHIOPIC_BOLD_STATIC = {
+const NOTO_SANS_ETHIOPIC_BOLD = {
   '@font-face': {
     fontFamily: 'Noto Sans Ethiopic',
     fontWeight: 700,
@@ -203,7 +203,7 @@ const NOTO_SANS_ETHIOPIC_BOLD_STATIC = {
   },
 };
 
-const PADAUK_REGULAR_STATIC = {
+const PADAUK_REGULAR = {
   '@font-face': {
     fontFamily: 'Padauk',
     fontWeight: 400,
@@ -213,7 +213,7 @@ const PADAUK_REGULAR_STATIC = {
   },
 };
 
-const PADAUK_BOLD_STATIC = {
+const PADAUK_BOLD = {
   '@font-face': {
     fontFamily: 'Padauk',
     fontWeight: 700,
@@ -223,7 +223,7 @@ const PADAUK_BOLD_STATIC = {
   },
 };
 
-const NOTO_SERIF_BENGALI_REGULAR_STATIC = {
+const NOTO_SERIF_BENGALI_REGULAR = {
   '@font-face': {
     fontFamily: 'Noto Serif Bengali',
     fontWeight: 400,
@@ -233,7 +233,7 @@ const NOTO_SERIF_BENGALI_REGULAR_STATIC = {
   },
 };
 
-const NOTO_SERIF_BENGALI_BOLD_STATIC = {
+const NOTO_SERIF_BENGALI_BOLD = {
   '@font-face': {
     fontFamily: 'Noto Serif Bengali',
     fontWeight: 700,
@@ -243,7 +243,7 @@ const NOTO_SERIF_BENGALI_BOLD_STATIC = {
   },
 };
 
-const REITH_QALAM_REGULAR_STATIC = {
+const REITH_QALAM_REGULAR = {
   '@font-face': {
     fontFamily: 'BBC Reith Qalam',
     fontWeight: 400,
@@ -253,7 +253,7 @@ const REITH_QALAM_REGULAR_STATIC = {
   },
 };
 
-const REITH_QALAM_BOLD_STATIC = {
+const REITH_QALAM_BOLD = {
   '@font-face': {
     fontFamily: 'BBC Reith Qalam',
     fontWeight: 700,
@@ -275,33 +275,33 @@ addDecorator(story => {
     <>
       <Global
         styles={[
-          REITH_SERIF_REGULAR_STATIC,
-          REITH_SERIF_BOLD_STATIC,
-          REITH_SERIF_LIGHT_STATIC,
-          REITH_SERIF_MEDIUM_STATIC,
-          REITH_SERIF_EXTRA_BOLD_STATIC,
-          REITH_SANS_REGULAR_STATIC,
-          REITH_SANS_BOLD_STATIC,
-          REITH_SANS_LIGHT_STATIC,
-          REITH_SANS_LIGHT_ITALIC_STATIC,
-          REITH_SANS_MEDIUM_STATIC,
-          REITH_SANS_EXTRA_BOLD_STATIC,
-          REITH_SANS_EXTRA_BOLD_ITALIC_STATIC,
-          REITH_SANS_CONDENSED_REGULAR_STATIC,
-          REITH_SANS_CONDENSED_BOLD_STATIC,
-          NOTO_SERIF_SINHALA_REGULAR_STATIC,
-          NOTO_SERIF_SINHALA_BOLD_STATIC,
-          NOTO_SANS_TAMIL_REGULAR_STATIC,
-          NOTO_SANS_TAMIL_BOLD_STATIC,
-          MALLANNA_REGULAR_STATIC,
-          NOTO_SANS_ETHIOPIC_REGULAR_STATIC,
-          NOTO_SANS_ETHIOPIC_BOLD_STATIC,
-          PADAUK_REGULAR_STATIC,
-          PADAUK_BOLD_STATIC,
-          NOTO_SERIF_BENGALI_REGULAR_STATIC,
-          NOTO_SERIF_BENGALI_BOLD_STATIC,
-          REITH_QALAM_REGULAR_STATIC,
-          REITH_QALAM_BOLD_STATIC,
+          REITH_SERIF_REGULAR,
+          REITH_SERIF_BOLD,
+          REITH_SERIF_LIGHT,
+          REITH_SERIF_MEDIUM,
+          REITH_SERIF_EXTRA_BOLD,
+          REITH_SANS_REGULAR,
+          REITH_SANS_BOLD,
+          REITH_SANS_LIGHT,
+          REITH_SANS_LIGHT_ITALIC,
+          REITH_SANS_MEDIUM,
+          REITH_SANS_EXTRA_BOLD,
+          REITH_SANS_EXTRA_BOLD_ITALIC,
+          REITH_SANS_CONDENSED_REGULAR,
+          REITH_SANS_CONDENSED_BOLD,
+          NOTO_SERIF_SINHALA_REGULAR,
+          NOTO_SERIF_SINHALA_BOLD,
+          NOTO_SANS_TAMIL_REGULAR,
+          NOTO_SANS_TAMIL_BOLD,
+          MALLANNA_REGULAR,
+          NOTO_SANS_ETHIOPIC_REGULAR,
+          NOTO_SANS_ETHIOPIC_BOLD,
+          PADAUK_REGULAR,
+          PADAUK_BOLD,
+          NOTO_SERIF_BENGALI_REGULAR,
+          NOTO_SERIF_BENGALI_BOLD,
+          REITH_QALAM_REGULAR,
+          REITH_QALAM_BOLD,
         ]}
       />
       <GlobalStyles />
