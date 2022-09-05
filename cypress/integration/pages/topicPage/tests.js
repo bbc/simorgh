@@ -45,7 +45,22 @@ export default ({ service, pageType, variant }) => {
         cy.get('h1').should('contain', topicTitle);
       });
       it('should render the correct number of items', () => {
-        cy.log(numberOfItems);
+        // Print SIMORGH_DATA if the number of promos on the page does not match
+        // the number of promos in the data from the BFF
+        // This is to help find out why sometimes a promo doesn't show on the page
+        cy.log(`Number of promos in BFF data${numberOfItems}`);
+        const selector = '[data-testid="topic-promos"] > li';
+        const promoCount = Cypress.$(selector).length;
+        cy.log(`Number of promos on the page${promoCount}`);
+
+        if (promoCount !== numberOfItems) {
+          cy.window().then(win => {
+            const jsonData = win.SIMORGH_DATA;
+
+            cy.log(jsonData);
+          });
+        }
+
         // Checks number of items on page
         cy.get('[data-testid="topic-promos"]')
           .children()
