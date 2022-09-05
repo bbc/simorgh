@@ -5,9 +5,10 @@ import Timestamp from '../../../legacy/containers/ArticleTimestamp';
 import { bylineWithNameAndRole } from './fixture';
 import Byline from '.';
 import { withServicesKnob } from '../../../legacy/psammead/psammead-storybook-helpers/src';
+import { Services } from '../../../models/types/global';
 
 interface Props {
-  service: string;
+  service: Services;
 }
 
 const Component = ({ service, children }: PropsWithChildren<Props>) => {

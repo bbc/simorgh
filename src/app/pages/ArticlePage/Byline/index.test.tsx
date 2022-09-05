@@ -9,10 +9,11 @@ import {
   bylineWithNoAuthor,
   bylineWithNameAndRole,
 } from './fixture';
+import { Services } from '../../../models/types/global';
 
 interface Props {
   fixture: any;
-  service: string;
+  service: Services;
 }
 
 const FixtureByline = ({
