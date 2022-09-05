@@ -1,4 +1,6 @@
 import React from 'react';
+import { Services, Variants } from '../../../models/types/global';
+import defaultServiceVariants from '../defaultServiceVariants';
 
 import afaanoromoo from '../themes/afaanoromoo';
 import afrique from '../themes/afrique';
@@ -114,62 +116,17 @@ const themeProviders: { [index: string]: any } = {
 
 interface Props {
   children: React.ReactNode;
-  service:
-    | 'afaanoromoo'
-    | 'afrique'
-    | 'amharic'
-    | 'arabic'
-    | 'archive'
-    | 'azeri'
-    | 'bengali'
-    | 'burmese'
-    | 'cymrufyw'
-    | 'gahuza'
-    | 'gujarati'
-    | 'hausa'
-    | 'hindi'
-    | 'igbo'
-    | 'indonesia'
-    | 'japanese'
-    | 'korean'
-    | 'kyrgyz'
-    | 'marathi'
-    | 'mundo'
-    | 'naidheachdan'
-    | 'nepali'
-    | 'news'
-    | 'newsround'
-    | 'pashto'
-    | 'persian'
-    | 'pidgin'
-    | 'portuguese'
-    | 'punjabi'
-    | 'russian'
-    | 'scotland'
-    | 'serbian'
-    | 'sinhala'
-    | 'somali'
-    | 'sport'
-    | 'swahili'
-    | 'tamil'
-    | 'telugu'
-    | 'thai'
-    | 'tigrinya'
-    | 'turkce'
-    | 'ukchina'
-    | 'ukrainian'
-    | 'urdu'
-    | 'uzbek'
-    | 'vietnamese'
-    | 'yoruba'
-    | 'zhongwen';
-  variant: 'cyr' | 'lat' | 'simp' | 'trad';
+  service: Services;
+  variant: Variants;
 }
 
-const ThemeProvider = ({ children, service, variant }: Props) => {
-  const ThemeProviderSynchronous = variant
-    ? themeProviders[service][variant]
-    : themeProviders[service];
+const ThemeProvider = ({ children, service, ...rest }: Props) => {
+  const variant = rest.variant || defaultServiceVariants[service];
+  const ThemeProviderSynchronous =
+    variant === 'default' || !variant
+      ? themeProviders[service]
+      : themeProviders[service][variant];
+
   return <ThemeProviderSynchronous>{children}</ThemeProviderSynchronous>;
 };
 

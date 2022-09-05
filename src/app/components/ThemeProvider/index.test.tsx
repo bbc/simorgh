@@ -8,7 +8,7 @@ describe('ThemeProvider', () => {
   it('should provide the palette', async () => {
     await act(async () => {
       render(
-        <ThemeProvider service="mundo" variant={null}>
+        <ThemeProvider service="mundo" variant="default">
           <div
             css={({ palette }: Theme) =>
               css({
@@ -40,7 +40,7 @@ describe('ThemeProvider', () => {
   it('should provide the spacings', async () => {
     await act(async () => {
       render(
-        <ThemeProvider service="mundo" variant={null}>
+        <ThemeProvider service="mundo" variant="default">
           <div
             css={({ spacings }: Theme) =>
               css({
@@ -70,7 +70,7 @@ describe('ThemeProvider', () => {
   it('should provide the media queries', async () => {
     await act(async () => {
       render(
-        <ThemeProvider service="mundo" variant={null}>
+        <ThemeProvider service="mundo" variant="default">
           <div
             css={({ mq }: Theme) =>
               css({
@@ -239,7 +239,7 @@ describe('ThemeProvider', () => {
   it('should provide fonts', async () => {
     await act(async () => {
       render(
-        <ThemeProvider service="mundo" variant={null}>
+        <ThemeProvider service="mundo" variant="default">
           <Global styles={({ typography }) => typography.fontFaces} />
         </ThemeProvider>,
       );
