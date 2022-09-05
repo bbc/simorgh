@@ -11,6 +11,8 @@ import { Services, Variants } from '../../../models/types/global';
 interface Props {
   service: Services;
   variant: Variants;
+}
+interface ComponentProps extends Props {
   fixture: any;
 }
 
@@ -19,7 +21,7 @@ const Component = ({
   variant,
   fixture,
   children,
-}: PropsWithChildren<Props>) => (
+}: PropsWithChildren<ComponentProps>) => (
   <ServiceContextProvider service={service}>
     <ThemeProvider service={service} variant={variant}>
       <Byline blocks={fixture}>{children}</Byline>
