@@ -77,12 +77,6 @@ describe('ThemeProvider', () => {
                 [mq.GROUP_0_MAX_WIDTH]: {
                   display: 'block',
                 },
-                [mq.GROUP_0_MIN_WIDTH]: {
-                  display: 'block',
-                },
-                [mq.GROUP_0_ONLY]: {
-                  display: 'block',
-                },
                 [mq.GROUP_1_MAX_WIDTH]: {
                   display: 'block',
                 },

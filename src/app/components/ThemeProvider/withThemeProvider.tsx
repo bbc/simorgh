@@ -106,7 +106,7 @@ import {
   GROUP_D_MIN_WIDTH,
 } from './fontMediaQueries';
 
-import { BrandPalette, Typography } from '../../interfaces';
+import { BrandPalette, Typography } from '../../models/types/theming';
 
 type Props = {
   children: React.ReactNode;

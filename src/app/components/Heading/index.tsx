@@ -3,7 +3,7 @@
 import React, { FC } from 'react';
 import { jsx } from '@emotion/react';
 
-import { GelFontSize, FontVariant } from '../../interfaces';
+import { GelFontSize, FontVariant } from '../../models/types/theming';
 import Text from '../Text';
 
 interface Props {
