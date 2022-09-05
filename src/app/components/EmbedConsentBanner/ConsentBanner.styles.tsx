@@ -10,6 +10,7 @@ export default {
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'flex-start',
+      border: '0.1875rem solid transparent',
     }),
 
   heading: ({ palette }: Theme) =>
@@ -25,16 +26,16 @@ export default {
       a: {
         color: 'inherit',
         textDecoration: 'none',
-        borderBottom: `1px solid ${palette.GREY_10}`,
+        borderBottom: `0.0625rem solid ${palette.GREY_10}`,
 
         '&:hover, &:focus': {
           color: palette.POSTBOX,
-          borderBottom: `2px solid ${palette.POSTBOX}`,
+          borderBottom: `0.125rem solid ${palette.POSTBOX}`,
         },
 
         '&:visited': {
           color: palette.GREY_6,
-          borderBottom: `1px solid ${palette.GREY_6}`,
+          borderBottom: `0.0625rem solid ${palette.GREY_6}`,
         },
       },
     }),
@@ -43,7 +44,7 @@ export default {
     css({
       color: palette.GREY_10,
       backgroundColor: palette.WHITE,
-      border: `1px solid ${palette.PHILIPPINE_GREY}`,
+      border: `0.0625rem solid ${palette.PHILIPPINE_GREY}`,
       borderRadius: 0,
       fontWeight: 'bold',
       padding: `${spacings.FULL}rem`,
@@ -52,7 +53,7 @@ export default {
       '&:hover, &:focus': {
         backgroundColor: palette.POSTBOX,
         color: palette.WHITE,
-        border: `1px solid ${palette.POSTBOX}`,
+        border: `0.0625rem solid ${palette.POSTBOX}`,
       },
     }),
 };

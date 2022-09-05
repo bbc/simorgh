@@ -143,8 +143,6 @@ exports[`Embed Consent Banner should match snapshot 1`] = `
       <a
         aria-label="política de cookies, externo"
         href="https://policies.google.com/technologies/cookies"
-        rel="noreferrer"
-        target="_blank"
       >
         política de cookies
       </a>
@@ -152,8 +150,6 @@ exports[`Embed Consent Banner should match snapshot 1`] = `
       <a
         aria-label="política de privacidad, externo"
         href="https://policies.google.com/privacy"
-        rel="noreferrer"
-        target="_blank"
       >
         política de privacidad
       </a>

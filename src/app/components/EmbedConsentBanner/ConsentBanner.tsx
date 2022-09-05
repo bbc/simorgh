@@ -107,8 +107,6 @@ const getTranslations = (
           .replaceAll('[link]', '')
           .replaceAll('[/link]', '')
           .trim()}${externalLinkText}`}
-        target="_blank"
-        rel="noreferrer"
         key={cookiesUrl}
       >
         {linkTextElements[0]
@@ -124,8 +122,6 @@ const getTranslations = (
           .replaceAll('[link]', '')
           .replaceAll('[/link]', '')
           .trim()}${externalLinkText}`}
-        target="_blank"
-        rel="noreferrer"
         key={privacyUrl}
       >
         {linkTextElements[1]
