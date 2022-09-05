@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import cyrillicAndLatin from '../../../legacy/psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import cyrillic from '../../../components/ThemeProvider/typography/scripts/cyrillic';
 import brandSVG from '../../chameleonLogos/ukrainian';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/uk';
@@ -45,7 +45,7 @@ const baseServiceConfig = {
     'https://www.bbc.com/ukrainian/institutional-50170368#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/ukrainian/institutional-50170368',
   isTrustProjectParticipant: true,
-  script: cyrillicAndLatin,
+  script: cyrillic,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   frontPageTitle: 'Новини',
@@ -341,7 +341,6 @@ const baseServiceConfig = {
     ],
     copyrightText: 'BBC. BBC не несе відповідальності за контент інших сайтів.',
   },
-  fonts: [],
   timezone: 'GMT',
   navigation: [
     {

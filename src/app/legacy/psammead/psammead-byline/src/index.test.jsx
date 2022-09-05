@@ -1,6 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { latin } from '#psammead/gel-foundations/src/scripts';
+import latin from '../../../../components/ThemeProvider/typography/scripts/latin';
 import Byline from './index';
 
 describe('Byline', () => {

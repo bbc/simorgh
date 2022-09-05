@@ -4,8 +4,8 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import latinDiacritics from '../../../legacy/psammead/gel-foundations/src/scripts/latin-with-diacritics';
-import cyrillicAndLatin from '../../../legacy/psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import latinWithDiacritics from '../../../components/ThemeProvider/typography/scripts/latinWithDiacritics';
+import cyrillic from '../../../components/ThemeProvider/typography/scripts/cyrillic';
 import brandSVG from '../../chameleonLogos/serbian';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/sr-cyrl';
@@ -46,7 +46,6 @@ const baseServiceConfig = {
   showAdPlaceholder: false,
   showRelatedTopics: true,
   brandSVG,
-  fonts: [],
   timezone: 'GMT',
 };
 
@@ -68,7 +67,7 @@ export const service: SerbianConfig = {
       'https://www.bbc.com/serbian/lat/institutional-50173730#authorexpertise',
     publishingPrinciples:
       'https://www.bbc.com/serbian/lat/institutional-50173730',
-    script: latinDiacritics,
+    script: latinWithDiacritics,
     serviceLocalizedName: 'na srpskom',
     serviceName: 'News na srpskom',
     defaultImageAltText: 'BBC News na srpskom',
@@ -387,7 +386,7 @@ export const service: SerbianConfig = {
       'https://www.bbc.com/serbian/cyr/institutional-50173730#authorexpertise',
     publishingPrinciples:
       'https://www.bbc.com/serbian/cyr/institutional-50173730',
-    script: cyrillicAndLatin,
+    script: cyrillic,
     serviceLocalizedName: 'на српском',
     serviceName: 'News на српском',
     defaultImageAltText: 'ББЦ News на српском',

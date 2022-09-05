@@ -4,12 +4,8 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import noAscendersOrDescenders from '../../../legacy/psammead/gel-foundations/src/scripts/no-ascenders-or-descenders';
+import noAscendersOrDescenders from '../../../components/ThemeProvider/typography/scripts/noAscOrDesc';
 import brandSVG from '../../chameleonLogos/amharic';
-import {
-  F_NOTO_SANS_ETHIOPIC_BOLD,
-  F_NOTO_SANS_ETHIOPIC_REGULAR,
-} from '../../../legacy/psammead/psammead-styles/src/fonts';
 import '#psammead/moment-timezone-include/tz/Africa/Addis_Ababa';
 import '#psammead/psammead-locales/moment/am';
 import withContext from '../../../contexts/utils/withContext';
@@ -317,7 +313,6 @@ export const service: DefaultServiceConfig = {
       ],
       copyrightText: 'BBC. ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም.',
     },
-    fonts: [F_NOTO_SANS_ETHIOPIC_BOLD, F_NOTO_SANS_ETHIOPIC_REGULAR],
     navigation: [
       {
         title: 'ዜና',

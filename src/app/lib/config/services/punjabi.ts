@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import devanagariAndGurmukhi from '../../../legacy/psammead/gel-foundations/src/scripts/devanagari-and-gurmukhi';
+import gurmukhi from '../../../components/ThemeProvider/typography/scripts/gurmukhi';
 import brandSVG from '../../chameleonLogos/punjabi';
 import '#psammead/psammead-locales/moment/pa-in';
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
@@ -46,7 +46,7 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/punjabi/institutional-49282853#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/punjabi/institutional-49282853',
     isTrustProjectParticipant: true,
-    script: devanagariAndGurmukhi,
+    script: gurmukhi,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'ਨਿਊਜ਼',
@@ -344,7 +344,6 @@ export const service: DefaultServiceConfig = {
       ],
       copyrightText: 'BBC. ਬਾਹਰੀ ਸਾਈਟਾਂ ਦੀ ਸਮਗਰੀ ਲਈ ਬੀਬੀਸੀ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ',
     },
-    fonts: [],
     timezone: 'Asia/Kolkata',
   },
 };

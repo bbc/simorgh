@@ -1,7 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { arabic, latin } from '#psammead/gel-foundations/src/scripts';
+import arabic from '../../../../components/ThemeProvider/typography/scripts/arabic';
+import latin from '../../../../components/ThemeProvider/typography/scripts/latin';
 import BulletedList, { BulletedListItem } from './index';
 
 const ltrProps = {

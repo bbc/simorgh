@@ -32,16 +32,16 @@ const serviceConfigs = {
 };
 
 // eslint-disable-next-line react/prop-types
-const Component = ({ service, variant = 'default' } = {}) => (
+const Component = ({ service, variant } = {}) => (
   <BrowserRouter>
     <FrontPage
       isAmp={false}
       pageType={FRONT_PAGE}
       status={200}
-      pathname={serviceConfigs[service][variant].navigation[0].url}
+      pathname={serviceConfigs[service][variant || 'default'].navigation[0].url}
       service={service}
       variant={variant}
-      pageData={serviceDataSets[service][variant]}
+      pageData={serviceDataSets[service][variant || 'default']}
       mostReadEndpointOverride={getLocalMostReadEndpoint({
         service,
         variant,

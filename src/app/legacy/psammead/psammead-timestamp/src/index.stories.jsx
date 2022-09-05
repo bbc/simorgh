@@ -6,7 +6,7 @@ import {
   withServicesKnob,
   themes,
 } from '#psammead/psammead-storybook-helpers/src';
-import { latin } from '#psammead/gel-foundations/src/scripts';
+import latin from '../../../components/ThemeProvider/typography/scripts/latin';
 import notes from '../README.md';
 import Timestamp from '.';
 
