@@ -18,11 +18,7 @@ type Props = {
 };
 
 const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
-  const { service, script, translations } = useContext(ServiceContext) as {
-    service: any;
-    script: any;
-    translations: any;
-  };
+  const { service, script, translations } = useContext(ServiceContext);
 
   const bylineBlocks = pathOr([], [0, 'model', 'blocks'], blocks);
 
