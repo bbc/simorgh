@@ -1,4 +1,4 @@
-### [Font scripts](./fontScripts/)
+### Font scripts
 
 These are `font-sizes` and `line-heights` for a specific service's GEL size (e.g. `Long Primer`).
 
