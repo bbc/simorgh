@@ -6,9 +6,10 @@ import { bylineWithNameAndRole, bylineWithLink } from './fixture';
 import Byline from '.';
 import { withServicesKnob } from '../../../legacy/psammead/psammead-storybook-helpers/src';
 import ThemeProvider from '../../../components/ThemeProvider';
+import { Services } from '../../../models/types/global';
 
 interface Props {
-  service: any;
+  service: Services;
   fixture: any;
 }
 

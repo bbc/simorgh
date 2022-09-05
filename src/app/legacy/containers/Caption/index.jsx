@@ -3,7 +3,7 @@ import { oneOfType, object, arrayOf, shape, string } from 'prop-types';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import Caption from '#psammead/psammead-caption/src';
 import pathOr from 'ramda/src/pathOr';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import Blocks from '../Blocks';
 import Fragment from '../Fragment';
 import InlineLink from '../InlineLink';

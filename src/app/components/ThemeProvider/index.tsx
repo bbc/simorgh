@@ -1,59 +1,24 @@
 import loadable, { LoadableComponent } from '@loadable/component';
+import { Services, Variants } from '../../models/types/global';
+import defaultServiceVariants from './defaultServiceVariants';
 
 interface Props {
-  service:
-    | 'afaanoromoo'
-    | 'afrique'
-    | 'amharic'
-    | 'arabic'
-    | 'archive'
-    | 'azeri'
-    | 'bengali'
-    | 'burmese'
-    | 'cymrufyw'
-    | 'gahuza'
-    | 'gujarati'
-    | 'hausa'
-    | 'hindi'
-    | 'igbo'
-    | 'indonesia'
-    | 'japanese'
-    | 'korean'
-    | 'kyrgyz'
-    | 'marathi'
-    | 'mundo'
-    | 'naidheachdan'
-    | 'nepali'
-    | 'news'
-    | 'newsround'
-    | 'pashto'
-    | 'persian'
-    | 'pidgin'
-    | 'portuguese'
-    | 'punjabi'
-    | 'russian'
-    | 'scotland'
-    | 'serbian'
-    | 'sinhala'
-    | 'somali'
-    | 'sport'
-    | 'swahili'
-    | 'tamil'
-    | 'telugu'
-    | 'thai'
-    | 'tigrinya'
-    | 'turkce'
-    | 'ukchina'
-    | 'ukrainian'
-    | 'urdu'
-    | 'uzbek'
-    | 'vietnamese'
-    | 'yoruba'
-    | 'zhongwen';
+  service: Services;
+  variant: Variants;
 }
 
+const getPathToTheme = (props: Props) => {
+  const variant = props.variant || defaultServiceVariants[props.service];
+
+  if (variant === 'default' || !variant) {
+    return props.service;
+  }
+
+  return `${props.service}/${variant}`;
+};
+
 const loadTheme = /* #__LOADABLE__ */ (props: Props) =>
-  import(`./themes/${props.service}`);
+  import(`./themes/${getPathToTheme(props)}`);
 
 const ThemeProvider: LoadableComponent<Props> = loadable(loadTheme);
 

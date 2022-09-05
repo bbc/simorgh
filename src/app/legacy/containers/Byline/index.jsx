@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import Byline from '#psammead/psammead-byline/src';
-import { ServiceContext } from '#contexts/ServiceContext';
 import bylineBlockPropTypes from '#models/propTypes/byline';
 import { GridItemMedium } from '#components/Grid';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const BylineContainer = ({ blocks, className }) => {
   const { service, script } = useContext(ServiceContext);

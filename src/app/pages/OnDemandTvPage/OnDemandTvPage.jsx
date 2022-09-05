@@ -29,10 +29,10 @@ import getEmbedUrl, {
 import AVPlayer from '#containers/AVPlayer';
 import RecentVideoEpisodes from '#containers/EpisodeList/RecentVideoEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
-import { ServiceContext } from '#contexts/ServiceContext';
 import MetadataContainer from '#containers/Metadata';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
 
 const getGroups = (zero, one, two, three, four, five) => ({

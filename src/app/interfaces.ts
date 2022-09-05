@@ -82,10 +82,239 @@ interface Spacings {
   QUADRUPLE: number;
 }
 
+export interface Typography {
+  fontFaces: {
+    '@font-face'?: {
+      fontFamily: string;
+      fontWeight?: number;
+      fontStyle?: string;
+      src: string;
+      fontDisplay: string;
+    };
+  }[];
+  fontFamilies: {
+    primary: string;
+    secondary?: string;
+  };
+  script: {
+    atlas: {
+      groupA: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupB: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupD: {
+        fontSize: number;
+        lineHeight: number;
+      };
+    };
+    elephant: {
+      groupA: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupB: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupD: {
+        fontSize: number;
+        lineHeight: number;
+      };
+    };
+    imperial: {
+      groupA: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupB: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupD: {
+        fontSize: number;
+        lineHeight: number;
+      };
+    };
+    royal: {
+      groupA: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupB: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupD: {
+        fontSize: number;
+        lineHeight: number;
+      };
+    };
+    foolscap: {
+      groupA: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupB: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupD: {
+        fontSize: number;
+        lineHeight: number;
+      };
+    };
+    canon: {
+      groupA: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupB: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupD: {
+        fontSize: number;
+        lineHeight: number;
+      };
+    };
+    trafalgar: {
+      groupA: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupB: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupD: {
+        fontSize: number;
+        lineHeight: number;
+      };
+    };
+    paragon: {
+      groupA: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupB: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupD: {
+        fontSize: number;
+        lineHeight: number;
+      };
+    };
+    doublePica: {
+      groupA: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupB: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupD: {
+        fontSize: number;
+        lineHeight: number;
+      };
+    };
+    greatPrimer: {
+      groupA: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupB: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupD: {
+        fontSize: number;
+        lineHeight: number;
+      };
+    };
+    bodyCopy: {
+      groupA: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupB: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupD: {
+        fontSize: number;
+        lineHeight: number;
+      };
+    };
+    pica: {
+      groupA: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupB: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupD: {
+        fontSize: number;
+        lineHeight: number;
+      };
+    };
+    longPrimer: {
+      groupA: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupB: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupD: {
+        fontSize: number;
+        lineHeight: number;
+      };
+    };
+    brevier: {
+      groupA: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupB: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupD: {
+        fontSize: number;
+        lineHeight: number;
+      };
+    };
+    minion: {
+      groupA: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupB: {
+        fontSize: number;
+        lineHeight: number;
+      };
+      groupD: {
+        fontSize: number;
+        lineHeight: number;
+      };
+    };
+  };
+}
+
 declare module '@emotion/react' {
   export interface Theme {
     palette: Palette;
     mq: MediaQueries;
     spacings: Spacings;
+    typography: Typography;
   }
 }

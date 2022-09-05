@@ -4,7 +4,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { MemoryRouter } from 'react-router';
 
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
 

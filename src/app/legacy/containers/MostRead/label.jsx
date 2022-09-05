@@ -8,7 +8,7 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 import { C_GREY_2 } from '#psammead/psammead-styles/src/colours';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const SectionLabelWithMargin = styled(SectionLabel)`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {

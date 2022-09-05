@@ -1,9 +1,9 @@
 import React from 'react';
 import path from 'ramda/src/path';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import RelatedContentPromoList from './index';
 
 const promoItems = path(

@@ -11,9 +11,10 @@ import {
   bylineWithLink,
 } from './fixture';
 import ThemeProvider from '../../../components/ThemeProvider';
+import { Services } from '../../../models/types/global';
 
 interface Props {
-  service: any;
+  service: Services;
   fixture: any;
 }
 
