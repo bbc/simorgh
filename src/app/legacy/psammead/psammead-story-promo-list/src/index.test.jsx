@@ -4,7 +4,7 @@ import StoryPromo, {
   Headline,
   Summary,
 } from '#psammead/psammead-story-promo/src';
-import latin from '../../../../components/ThemeProvider/typography/scripts/latin';
+import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import { StoryPromoLi, StoryPromoLiBase, StoryPromoUl } from './index';
 
 const Image = <img src="https://foobar.com/image.png" alt="Alt text" />;
