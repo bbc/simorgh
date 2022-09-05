@@ -76,7 +76,7 @@ it('should pass the correct props to the story function', () => {
       'The critic, author, poet and TV host was known for his witty commentary on international television.',
     dir: 'ltr',
     locale: 'en',
-    variant: null,
+    variant: 'default',
     timezone: 'Europe/London',
     selectedService: 'news',
   };
@@ -103,7 +103,7 @@ it('should pass the correct chosen service props to the story function', () => {
       'هناك وقائع عدة تتسم بالسخرية والجدل والتنمر، ضد أهل القرية الذين أصابهم الغضب والسخط مما دفعهم إلى تقديم طلب لتغيير اسم قريتهم.',
     dir: 'rtl',
     locale: 'ar',
-    variant: null,
+    variant: 'default',
     timezone: 'GMT',
     selectedService: 'arabic',
   };

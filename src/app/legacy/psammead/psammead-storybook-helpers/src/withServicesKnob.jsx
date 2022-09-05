@@ -79,7 +79,7 @@ export default ({
       locale,
       dir,
       service,
-      variant: variant || null,
+      variant: variant || 'default',
       selectedService,
       timezone,
       brandBackgroundColour,
