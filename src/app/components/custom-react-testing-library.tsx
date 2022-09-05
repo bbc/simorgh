@@ -7,7 +7,7 @@ import { ToggleContextProvider } from '../contexts/ToggleContext';
 import { UserContextProvider } from '../contexts/UserContext';
 import { EventTrackingContextProvider } from '../contexts/EventTrackingContext';
 import pageDataFixture from '../../../data/news/articles/c0g992jmmkko.json';
-import { Services } from '../models/types/global';
+import { Services, Variants } from '../models/types/global';
 import ThemeProvider from './ThemeProvider';
 
 jest.mock('./ThemeProvider');
@@ -20,6 +20,7 @@ interface Props {
   pathname?: string;
   service?: Services;
   toggles?: any;
+  variant?: Variants;
 }
 
 // Uses a custom render so consumers don't need to wrap test fixtures in context and theme providers in every test suite
@@ -32,11 +33,12 @@ const AllTheProviders: FC<Props> = ({
   pathname = '/news/articles/c0g992jmmkko',
   service = 'news',
   toggles = {},
+  variant = 'default',
 }: Props) => {
   return (
-    <ThemeProvider service={service} variant={null}>
+    <ThemeProvider service={service} variant={variant}>
       <ToggleContextProvider toggles={toggles}>
-        <ServiceContextProvider service={service}>
+        <ServiceContextProvider service={service} variant={variant}>
           <RequestContextProvider
             bbcOrigin="https://www.test.bbc.com"
             pageType={pageType}
@@ -58,7 +60,7 @@ const customRender = (
   ui: ReactElement,
   options?: Omit<RenderOptions, 'wrapper'> & Omit<Props, 'children'>,
 ) => {
-  const { isAmp, pageData, pageType, pathname, service, toggles } =
+  const { isAmp, pageData, pageType, pathname, service, toggles, variant } =
     options || {};
 
   return render(ui, {
@@ -70,6 +72,7 @@ const customRender = (
         pathname={pathname}
         service={service}
         toggles={toggles}
+        variant={variant}
       >
         {children}
       </AllTheProviders>

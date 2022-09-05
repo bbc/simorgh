@@ -250,6 +250,16 @@ export const service: DefaultServiceConfig = {
           text: 'Saltar contenido de %provider_name%',
           endTextVisuallyHidden: 'Fin del contenido de %provider_name%',
         },
+        consentBanner: {
+          heading: '¿Permitir el contenido de [social_media_site]?',
+          body: `Este artículo contiene contenido proporcionado por [social_media_site]. Solicitamos tu permiso antes de que algo  se cargue, ya que ese sitio  puede estar usando cookies y otras tecnologías. Es posible que quieras leer [link] política de cookies [/link] y [link] política de privacidad [/link] de [social_media_site] antes de aceptar. Para ver este contenido, selecciona 'aceptar y continuar'.`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+        },
       },
       include: {
         errorMessage:

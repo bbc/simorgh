@@ -246,6 +246,17 @@ export const service: DefaultServiceConfig = {
           text: 'બદલો %provider_name% કન્ટેન્ટ',
           endTextVisuallyHidden: '%provider_name% કન્ટેન્ટ પૂર્ણ',
         },
+        consentBanner: {
+          heading: '[social_media_site] કન્ટેન્ટને મંજૂરી આપીએ?',
+          body: `આ લેખમાં [social_media_site] દ્વારા પૂરું પાડવામાં આવેલું કન્ટેન્ટ છે. કંઈ પણ લોડ થાય તે પહેલાં અમે તમારી મંજૂરી માટે પૂછીએ છીએ કારણ કે તેઓ કૂકીઝ અને અન્ય તકનીકોનો ઉપયોગ કરી શકે છે. તમે સ્વીકારતા પહેલાં [social_media_site] [link] કૂકીઝ નીતિ [/link] અને [link] ગોપનીયતાની નીતિ [/link] વાંચી શકો છો. આ સામગ્રી જોવા માટે 'સ્વીકારો અને ચાલુ રાખો'ના વિકલ્પને પસંદ કરો.`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+          button: 'સ્વિકારો અને આગળ વધો',
+        },
       },
       include: {
         errorMessage:

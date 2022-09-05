@@ -3,13 +3,13 @@ import { withKnobs, select } from '@storybook/addon-knobs';
 
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
-import { Services } from '../../models/types/global';
+import { Services, Variants } from '../../models/types/global';
 import ThemeProvider from '../ThemeProvider';
 import Text from '.';
 
 interface Props {
   service: Services;
-  variant: null | 'cyr' | 'lat' | 'simp' | 'trad';
+  variant: Variants;
   text: string;
 }
 

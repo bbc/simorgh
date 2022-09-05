@@ -264,6 +264,17 @@ export const service: DefaultServiceConfig = {
           text: '%provider_name% पोस्टवरून पुढे जा',
           endTextVisuallyHidden: '%provider_name% पोस्ट समाप्त',
         },
+        consentBanner: {
+          heading: `परवानगी (सोशल मीडिया साईट) मजकूर?`,
+          body: `या लेखात सोशल मीडियावरील वेबसाईट्सवरचा मजकुराचा समावेश आहे. कुठलाही मजकूर अपलोड करण्यापूर्वी आम्ही तुमची परवानगी विचारतो. कारण संबंधित वेबसाईट कुकीज तसंच अन्य तंत्रज्ञान वापरतं. तुम्ही स्वीकारण्यापूर्वी सोशल मीडिया वेबसाईट्सची कुकीज तसंच गोपनीयतेसंदर्भातील धोरण वाचू शकता. हा मजकूर पाहण्यासाठी 'स्वीकारा आणि पुढे सुरू ठेवा'.`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+          button: 'मान्य करा आणि पुढे जा',
+        },
       },
       include: {
         errorMessage:

@@ -264,6 +264,17 @@ const baseServiceConfig = {
         text: 'Пропустити %provider_name% допис',
         endTextVisuallyHidden: 'Кінець %provider_name% допису',
       },
+      consentBanner: {
+        heading: `Дозволити контент [social_media_site]?`,
+        body: `Ця стаття містить контент, наданий [social_media_site]. Ми питаємо про ваш дозвіл перед завантаженням, тому що сайт може використовувати файли cookie та інші технології. Ви можете ознайомитися з політикою щодо файлів [link] cookie [social_media_site] [/link] i [link] політикою конфіденційності [/link], перш ніж надати дозвіл. Щобb переглянути цей контент, виберіть "Прийняти та продовжити".`,
+        cookiesUrl: {
+          youtube: 'https://policies.google.com/technologies/cookies',
+        },
+        privacyUrl: {
+          youtube: 'https://policies.google.com/privacy',
+        },
+        button: 'Прийняти та продовжити',
+      },
     },
     include: {
       errorMessage:
