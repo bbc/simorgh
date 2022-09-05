@@ -5,7 +5,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import noAscendersOrDescenders from '../../../legacy/psammead/gel-foundations/src/scripts/no-ascenders-or-descenders';
+import noAscendersOrDescenders from '../../../components/ThemeProvider/typography/scripts/noAscOrDesc';
 import '#psammead/moment-timezone-include/tz/Asia/Tokyo';
 import 'moment/locale/ja';
 import withContext from '../../../contexts/utils/withContext';
@@ -315,7 +315,6 @@ export const service: DefaultServiceConfig = {
       ],
       copyrightText: 'BBC.　BBCは外部サイトの内容に責任を負いません。',
     },
-    fonts: [],
     timezone: 'Asia/Tokyo',
     navigation: [
       {

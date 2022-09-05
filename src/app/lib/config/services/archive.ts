@@ -1,9 +1,4 @@
-import {
-  F_REITH_SANS_BOLD,
-  F_REITH_SANS_REGULAR,
-  F_REITH_SERIF_MEDIUM,
-} from '../../../legacy/psammead/psammead-styles/src/fonts';
-import cyrillicAndLatin from '../../../legacy/psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import latin from '../../../components/ThemeProvider/typography/scripts/latin';
 import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/archive';
 import {
   C_ARCHIVE_BLUE,
@@ -46,7 +41,7 @@ export const service: DefaultServiceConfig = {
     noBylinesPolicy: null,
     publishingPrinciples: null,
     isTrustProjectParticipant: false,
-    script: cyrillicAndLatin,
+    script: latin,
     manifestPath: '/articles/manifest.json',
     swPath: '/articles/sw.js',
     frontPageTitle: 'Home',
@@ -259,7 +254,6 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'BBC. The BBC is not responsible for the content of external sites.',
     },
-    fonts: [F_REITH_SANS_BOLD, F_REITH_SANS_REGULAR, F_REITH_SERIF_MEDIUM],
     timezone: 'Europe/London',
   },
 };

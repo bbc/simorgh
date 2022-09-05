@@ -4,9 +4,8 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import devanagariAndGurmukhi from '../../../legacy/psammead/gel-foundations/src/scripts/devanagari-and-gurmukhi';
+import devanagari from '../../../components/ThemeProvider/typography/scripts/devanagari';
 import brandSVG from '../../chameleonLogos/telugu';
-import { F_MALLANNA_REGULAR } from '../../../legacy/psammead/psammead-styles/src/fonts';
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/te';
@@ -47,7 +46,7 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/telugu/institutional-50420343#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/telugu/institutional-50420343',
     isTrustProjectParticipant: true,
-    script: devanagariAndGurmukhi,
+    script: devanagari,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'వార్తలు',
@@ -334,7 +333,6 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         ' BBC. ఇతర వెబ్‌సైట్లలో సమాచారానికి బీబీసీ బాధ్యత వహించదు.',
     },
-    fonts: [F_MALLANNA_REGULAR],
     timezone: 'Asia/Kolkata',
     navigation: [
       {

@@ -39,7 +39,7 @@
 ## Usage
 
 ```jsx
-import { latin } from '#psammead/gel-foundations/src/scripts';
+import latin from '../../../components/ThemeProvider/typography/scripts/latin';
 
 const WrappingContainer = () => (
   <Timestamp

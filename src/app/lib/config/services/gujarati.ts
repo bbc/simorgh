@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import devanagariAndGurmukhi from '../../../legacy/psammead/gel-foundations/src/scripts/devanagari-and-gurmukhi';
+import devanagari from '../../../components/ThemeProvider/typography/scripts/devanagari';
 import brandSVG from '../../chameleonLogos/gujarati';
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
 import '#psammead/psammead-locales/moment/gu';
@@ -46,7 +46,7 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/gujarati/institutional-50409883#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/gujarati/institutional-50409883',
     isTrustProjectParticipant: true,
-    script: devanagariAndGurmukhi,
+    script: devanagari,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'સમાચાર',
@@ -329,7 +329,6 @@ export const service: DefaultServiceConfig = {
       ],
       copyrightText: 'BBC. બહારની વેબસાઇટ્સની સામગ્રી માટે બીબીસી જવાબદાર નથી.',
     },
-    fonts: [],
     timezone: 'Asia/Kolkata',
     navigation: [
       {

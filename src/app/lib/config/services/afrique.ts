@@ -1,5 +1,5 @@
 import brandSVG from '../../chameleonLogos/afrique';
-import latinDiacritics from '../../../legacy/psammead/gel-foundations/src/scripts/latin-with-diacritics';
+import latinWithDiacritics from '../../../components/ThemeProvider/typography/scripts/latinWithDiacritics';
 import {
   C_POSTBOX,
   C_WHITE,
@@ -47,7 +47,7 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples:
       'https://www.bbc.com/afrique/institutionelles-49283281',
     isTrustProjectParticipant: true,
-    script: latinDiacritics,
+    script: latinWithDiacritics,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Accueil',
@@ -337,7 +337,6 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         "BBC. La BBC n'est pas responsable du contenu des sites externes.",
     },
-    fonts: [],
     timezone: 'GMT',
     navigation: [
       {

@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import thai from '../../../legacy/psammead/gel-foundations/src/scripts/thai';
+import thai from '../../../components/ThemeProvider/typography/scripts/thai';
 import brandSVG from '../../chameleonLogos/thai';
 import '#psammead/moment-timezone-include/tz/Asia/Bangkok';
 import '#psammead/psammead-locales/moment/th';
@@ -354,7 +354,6 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก. นโยบายของเราเรื่องการเชื่อมต่อไปยังลิงก์ภายนอก.',
     },
-    fonts: [],
     timezone: 'Asia/Bangkok',
   },
 };

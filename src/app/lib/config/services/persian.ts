@@ -5,11 +5,7 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import brandSVG from '../../chameleonLogos/persian';
-import arabic from '../../../legacy/psammead/gel-foundations/src/scripts/arabic';
-import {
-  F_REITH_QALAM_REGULAR,
-  F_REITH_QALAM_BOLD,
-} from '../../../legacy/psammead/psammead-styles/src/fonts';
+import arabic from '../../../components/ThemeProvider/typography/scripts/arabic';
 import 'moment/locale/fa';
 import '#psammead/moment-timezone-include/tz/GMT';
 import jalaali from '../../../legacy/psammead/psammead-calendars/src';
@@ -375,7 +371,6 @@ export const service: DefaultServiceConfig = {
       copyrightText: 'بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست.',
     },
     timezone: 'GMT',
-    fonts: [F_REITH_QALAM_REGULAR, F_REITH_QALAM_BOLD],
     navigation: [
       {
         title: 'صفحه اول',
