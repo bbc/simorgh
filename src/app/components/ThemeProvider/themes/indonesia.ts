@@ -1,6 +1,6 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import latinScript from '../typography/scripts/latin';
-import helmetFontVariants from '../typography/fontVariants/helmet';
+import latinScript from '../fontScripts/latin';
+import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
 
 const indonesiaTheme = {

@@ -87,7 +87,7 @@ import {
   getLongPrimerSize,
   getBrevierSize,
   getMinionSize,
-} from './typography/fontSizes';
+} from './fontSizes';
 import {
   getSansRegular,
   getSansRegularItalic,
@@ -99,7 +99,7 @@ import {
   getSerifMediumItalic,
   getSerifBold,
   getSerifLight,
-} from './typography/fontVariants';
+} from './fontVariants';
 import {
   GROUP_A_MAX_WIDTH,
   GROUP_A_MIN_WIDTH,
@@ -108,7 +108,7 @@ import {
   GROUP_B_MIN_WIDTH,
   GROUP_B_ONLY,
   GROUP_D_MIN_WIDTH,
-} from './typography/fontMediaQueries';
+} from './fontMediaQueries';
 
 import { BrandPalette, Typography } from '../../interfaces';
 

@@ -1,6 +1,6 @@
-import pixelsToRem from '../../../utilities/pixelsToRem';
+import pixelsToRem from '../../utilities/pixelsToRem';
 import { GROUP_B_MIN_WIDTH, GROUP_D_MIN_WIDTH } from './fontMediaQueries';
-import { GelFontSize, TypographyScript } from '../../../interfaces';
+import { GelFontSize, TypographyScript } from '../../interfaces';
 
 const getGelFontSizeStyles =
   (size: GelFontSize) => (script: TypographyScript) => ({

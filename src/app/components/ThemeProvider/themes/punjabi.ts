@@ -1,6 +1,6 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import gurmukhiScript from '../typography/scripts/gurmukhi';
-import punjabiFontVariants from '../typography/fontVariants/punjabi';
+import gurmukhiScript from '../fontScripts/gurmukhi';
+import punjabiFontVariants from '../fontVariants/punjabi';
 import withThemeProvider from '../withThemeProvider';
 
 const punjabiTheme = {

@@ -1,6 +1,6 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import noAscOrDescScript from '../typography/scripts/noAscOrDesc';
-import japaneseFontVariants from '../typography/fontVariants/japanese';
+import noAscOrDescScript from '../fontScripts/noAscOrDesc';
+import japaneseFontVariants from '../fontVariants/japanese';
 import withThemeProvider from '../withThemeProvider';
 
 const japaneseTheme = {

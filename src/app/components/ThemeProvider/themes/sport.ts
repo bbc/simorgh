@@ -4,14 +4,14 @@ import {
   MIDNIGHT_BLACK,
   SPORT_YELLOW_30,
 } from '../palette';
-import latinScript from '../typography/scripts/latin';
+import latinScript from '../fontScripts/latin';
 import {
   REITH_SANS_BOLD,
   REITH_SANS_REGULAR,
   REITH_SERIF_MEDIUM,
   REITH_SERIF_LIGHT,
-} from '../typography/fontFaces';
-import reithFontVariants from '../typography/fontVariants/reith';
+} from '../fontFaces';
+import reithFontVariants from '../fontVariants/reith';
 import withThemeProvider from '../withThemeProvider';
 
 const sportTheme = {

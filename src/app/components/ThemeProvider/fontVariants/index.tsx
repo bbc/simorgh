@@ -1,4 +1,4 @@
-import { FontVariants } from '../../../../interfaces';
+import { FontVariants } from '../../../interfaces';
 
 export const getSansRegular = (fontVariants: FontVariants) =>
   fontVariants.sans.regular;

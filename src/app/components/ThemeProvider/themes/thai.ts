@@ -1,6 +1,6 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import thaiScript from '../typography/scripts/thai';
-import thaiFontVariants from '../typography/fontVariants/thai';
+import thaiScript from '../fontScripts/thai';
+import thaiFontVariants from '../fontVariants/thai';
 import withThemeProvider from '../withThemeProvider';
 
 const thaiTheme = {

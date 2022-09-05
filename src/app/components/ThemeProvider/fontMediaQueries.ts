@@ -1,4 +1,4 @@
-import pixelsToRem from '../../../utilities/pixelsToRem';
+import pixelsToRem from '../../utilities/pixelsToRem';
 
 /* 
    Screen sizes for GEL Typography

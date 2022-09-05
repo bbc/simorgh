@@ -1,6 +1,6 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import latinWithDiacriticsScript from '../typography/scripts/latinWithDiacritics';
-import helmetFontVariants from '../typography/fontVariants/helmet';
+import latinWithDiacriticsScript from '../fontScripts/latinWithDiacritics';
+import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
 
 const vietnameseTheme = {

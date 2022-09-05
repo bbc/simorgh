@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import thai from '../../../components/ThemeProvider/typography/scripts/thai';
+import thai from '../../../components/ThemeProvider/fontScripts/thai';
 import brandSVG from '../../chameleonLogos/thai';
 import '#psammead/moment-timezone-include/tz/Asia/Bangkok';
 import '#psammead/psammead-locales/moment/th';

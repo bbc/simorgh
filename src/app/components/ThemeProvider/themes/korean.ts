@@ -1,6 +1,6 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import noAscOrDescScript from '../typography/scripts/noAscOrDesc';
-import koreanFontVariants from '../typography/fontVariants/korean';
+import noAscOrDescScript from '../fontScripts/noAscOrDesc';
+import koreanFontVariants from '../fontVariants/korean';
 import withThemeProvider from '../withThemeProvider';
 
 const koreanTheme = {

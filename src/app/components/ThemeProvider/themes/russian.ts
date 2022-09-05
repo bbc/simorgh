@@ -1,12 +1,12 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import cyrillicScript from '../typography/scripts/cyrillic';
+import cyrillicScript from '../fontScripts/cyrillic';
 import {
   REITH_SANS_BOLD,
   REITH_SANS_REGULAR,
   REITH_SERIF_MEDIUM,
   REITH_SERIF_LIGHT,
-} from '../typography/fontFaces';
-import reithFontVariants from '../typography/fontVariants/reith';
+} from '../fontFaces';
+import reithFontVariants from '../fontVariants/reith';
 import withThemeProvider from '../withThemeProvider';
 
 const russianTheme = {

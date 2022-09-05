@@ -1,10 +1,10 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import noAscOrDescScript from '../typography/scripts/noAscOrDesc';
+import noAscOrDescScript from '../fontScripts/noAscOrDesc';
 import {
   NOTO_SANS_ETHIOPIC_BOLD,
   NOTO_SANS_ETHIOPIC_REGULAR,
-} from '../typography/fontFaces';
-import amharicFontVariants from '../typography/fontVariants/amharic';
+} from '../fontFaces';
+import amharicFontVariants from '../fontVariants/amharic';
 import withThemeProvider from '../withThemeProvider';
 
 const amharicTheme = {

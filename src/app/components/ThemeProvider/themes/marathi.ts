@@ -1,6 +1,6 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import devanagariScript from '../typography/scripts/devanagari';
-import marathiFontVariants from '../typography/fontVariants/marathi';
+import devanagariScript from '../fontScripts/devanagari';
+import marathiFontVariants from '../fontVariants/marathi';
 import withThemeProvider from '../withThemeProvider';
 
 const marathiTheme = {

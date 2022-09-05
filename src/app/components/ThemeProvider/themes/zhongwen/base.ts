@@ -1,6 +1,6 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../../palette';
-import noAscOrDescScript from '../../typography/scripts/noAscOrDesc';
-import chineseFontVariants from '../../typography/fontVariants/chinese';
+import noAscOrDescScript from '../../fontScripts/noAscOrDesc';
+import chineseFontVariants from '../../fontVariants/chinese';
 
 const zhongwenTheme = {
   palette: {

@@ -1,11 +1,11 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import latinWithDiacriticsScript from '../typography/scripts/latinWithDiacritics';
+import latinWithDiacriticsScript from '../fontScripts/latinWithDiacritics';
 import {
   REITH_SANS_BOLD,
   REITH_SANS_REGULAR,
   REITH_SERIF_MEDIUM,
-} from '../typography/fontFaces';
-import reithFontVariants from '../typography/fontVariants/reith';
+} from '../fontFaces';
+import reithFontVariants from '../fontVariants/reith';
 import withThemeProvider from '../withThemeProvider';
 
 const cymrufywTheme = {

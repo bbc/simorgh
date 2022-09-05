@@ -1,7 +1,7 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import arabicScript from '../typography/scripts/arabic';
-import { REITH_QALAM_BOLD, REITH_QALAM_REGULAR } from '../typography/fontFaces';
-import reithQalamFontVariants from '../typography/fontVariants/reithQalam';
+import arabicScript from '../fontScripts/arabic';
+import { REITH_QALAM_BOLD, REITH_QALAM_REGULAR } from '../fontFaces';
+import reithQalamFontVariants from '../fontVariants/reithQalam';
 import withThemeProvider from '../withThemeProvider';
 
 const arabicTheme = {

@@ -1,6 +1,6 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import devanagariScript from '../typography/scripts/devanagari';
-import gujaratiFontVariants from '../typography/fontVariants/gujarati';
+import devanagariScript from '../fontScripts/devanagari';
+import gujaratiFontVariants from '../fontVariants/gujarati';
 import withThemeProvider from '../withThemeProvider';
 
 const gujaratiTheme = {

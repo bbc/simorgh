@@ -1,10 +1,10 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import bengaliScript from '../typography/scripts/bengali';
+import bengaliScript from '../fontScripts/bengali';
 import {
   NOTO_SERIF_BENGALI_BOLD,
   NOTO_SERIF_BENGALI_REGULAR,
-} from '../typography/fontFaces';
-import bengaliFontVariants from '../typography/fontVariants/bengali';
+} from '../fontFaces';
+import bengaliFontVariants from '../fontVariants/bengali';
 import withThemeProvider from '../withThemeProvider';
 
 const bengaliTheme = {
