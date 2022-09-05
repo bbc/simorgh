@@ -1,4 +1,6 @@
 import React from 'react';
+import { Services, Variants } from '../../../models/types/global';
+import defaultServiceVariants from '../defaultServiceVariants';
 
 import afaanoromoo from '../themes/afaanoromoo';
 import afrique from '../themes/afrique';
@@ -31,7 +33,8 @@ import portuguese from '../themes/portuguese';
 import punjabi from '../themes/punjabi';
 import russian from '../themes/russian';
 import scotland from '../themes/scotland';
-import serbian from '../themes/serbian';
+import serbianCyr from '../themes/serbian/cyr';
+import serbianLat from '../themes/serbian/lat';
 import sinhala from '../themes/sinhala';
 import somali from '../themes/somali';
 import sport from '../themes/sport';
@@ -41,15 +44,15 @@ import telugu from '../themes/telugu';
 import thai from '../themes/thai';
 import tigrinya from '../themes/tigrinya';
 import turkce from '../themes/turkce';
-import ukchina from '../themes/ukchina';
+import ukchinaSimp from '../themes/ukchina/simp';
+import ukchinaTrad from '../themes/ukchina/trad';
 import ukrainian from '../themes/ukrainian';
 import urdu from '../themes/urdu';
 import uzbek from '../themes/uzbek';
 import vietnamese from '../themes/vietnamese';
 import yoruba from '../themes/yoruba';
-import zhongwen from '../themes/zhongwen';
-
-import { Services } from '../../../models/types/global';
+import zhongwenSimp from '../themes/zhongwen/simp';
+import zhongwenTrad from '../themes/zhongwen/trad';
 
 const themeProviders: { [index: string]: any } = {
   afaanoromoo,
@@ -83,7 +86,10 @@ const themeProviders: { [index: string]: any } = {
   punjabi,
   russian,
   scotland,
-  serbian,
+  serbian: {
+    cyr: serbianCyr,
+    lat: serbianLat,
+  },
   sinhala,
   somali,
   sport,
@@ -93,22 +99,33 @@ const themeProviders: { [index: string]: any } = {
   thai,
   tigrinya,
   turkce,
-  ukchina,
+  ukchina: {
+    simp: ukchinaSimp,
+    trad: ukchinaTrad,
+  },
   ukrainian,
   urdu,
   uzbek,
   vietnamese,
   yoruba,
-  zhongwen,
+  zhongwen: {
+    simp: zhongwenSimp,
+    trad: zhongwenTrad,
+  },
 };
 
 interface Props {
   children: React.ReactNode;
   service: Services;
+  variant: Variants;
 }
 
-const ThemeProvider = ({ children, service }: Props) => {
-  const ThemeProviderSynchronous = themeProviders[service];
+const ThemeProvider = ({ children, service, ...rest }: Props) => {
+  const variant = rest.variant || defaultServiceVariants[service];
+  const ThemeProviderSynchronous =
+    variant === 'default' || !variant
+      ? themeProviders[service]
+      : themeProviders[service][variant];
 
   return <ThemeProviderSynchronous>{children}</ThemeProviderSynchronous>;
 };

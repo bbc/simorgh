@@ -5,13 +5,7 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import brandSVG from '../../chameleonLogos/news';
-import cyrillicAndLatin from '../../../legacy/psammead/gel-foundations/src/scripts/latin-and-cyrillic';
-import {
-  F_REITH_SANS_BOLD,
-  F_REITH_SANS_REGULAR,
-  F_REITH_SERIF_MEDIUM,
-  F_REITH_SERIF_LIGHT,
-} from '../../../legacy/psammead/psammead-styles/src/fonts';
+import latin from '../../../components/ThemeProvider/typography/scripts/latin';
 import '#psammead/psammead-locales/moment/en-gb';
 import '#psammead/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
@@ -49,7 +43,7 @@ export const service: DefaultServiceConfig = {
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
     isTrustProjectParticipant: true,
-    script: cyrillicAndLatin,
+    script: latin,
     manifestPath: '/articles/manifest.json',
     frontPageTitle: 'Home',
     theming: {
@@ -279,12 +273,6 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'BBC. The BBC is not responsible for the content of external sites.',
     },
-    fonts: [
-      F_REITH_SANS_BOLD,
-      F_REITH_SANS_REGULAR,
-      F_REITH_SERIF_MEDIUM,
-      F_REITH_SERIF_LIGHT,
-    ],
     timezone: 'Europe/London',
     navigation: [
       {

@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import brandSVG from '../../chameleonLogos/pidgin';
-import cyrillicAndLatin from '../../../legacy/psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import latin from '../../../components/ThemeProvider/typography/scripts/latin';
 import '#psammead/psammead-locales/moment/pcm';
 import '#psammead/moment-timezone-include/tz/Africa/Lagos';
 import withContext from '../../../contexts/utils/withContext';
@@ -40,11 +40,10 @@ export const service: DefaultServiceConfig = {
     defaultCaptionOffscreenText: 'Wetin we call am, ',
     imageCopyrightOffscreenText: 'Wia dis foto come from, ',
     brandSVG,
-    script: cyrillicAndLatin,
+    script: latin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Domot',
-    fonts: [],
     noBylinesPolicy:
       'https://www.bbc.com/pidgin/institutional-48528766#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/pidgin/institutional-48528766',

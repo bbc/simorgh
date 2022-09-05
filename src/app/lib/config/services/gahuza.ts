@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import cyrillicAndLatin from '../../../legacy/psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import latin from '../../../components/ThemeProvider/typography/scripts/latin';
 import brandSVG from '../../chameleonLogos/gahuza';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/rw';
@@ -46,7 +46,7 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/gahuza/institutional-49283343#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/gahuza/institutional-49283343',
     isTrustProjectParticipant: true,
-    script: cyrillicAndLatin,
+    script: latin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: "Urupapuro rw'itangiriro",
@@ -345,7 +345,6 @@ export const service: DefaultServiceConfig = {
       ],
       copyrightText: 'BBC. BBC ntibazwa ibivuye ku zindi mbuga.',
     },
-    fonts: [],
     timezone: 'GMT',
     navigation: [
       {

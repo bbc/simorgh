@@ -4,12 +4,8 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import tamil from '../../../legacy/psammead/gel-foundations/src/scripts/tamil';
+import tamil from '../../../components/ThemeProvider/typography/scripts/tamil';
 import brandSVG from '../../chameleonLogos/tamil';
-import {
-  F_NOTO_SANS_TAMIL_BOLD,
-  F_NOTO_SANS_TAMIL_REGULAR,
-} from '../../../legacy/psammead/psammead-styles/src/fonts';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ta';
 import withContext from '../../../contexts/utils/withContext';
@@ -346,7 +342,6 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'பிபிசி. வெளியார் இணைய தளங்களின் உள்ளடக்கத்துக்கு பிபிசி பொறுப்பாகாது.',
     },
-    fonts: [F_NOTO_SANS_TAMIL_BOLD, F_NOTO_SANS_TAMIL_REGULAR],
     timezone: 'GMT',
     navigation: [
       {

@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import latinDiacritics from '../../../legacy/psammead/gel-foundations/src/scripts/latin-with-diacritics';
+import latinWithDiacritics from '../../../components/ThemeProvider/typography/scripts/latinWithDiacritics';
 import brandSVG from '../../chameleonLogos/vietnamese';
 import '#psammead/moment-timezone-include/tz/Asia/Ho_Chi_Minh';
 import 'moment/locale/vi';
@@ -48,7 +48,7 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples:
       'https://www.bbc.com/vietnamese/institutional-49283563',
     isTrustProjectParticipant: true,
-    script: latinDiacritics,
+    script: latinWithDiacritics,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Tin chính',
@@ -324,7 +324,6 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'BBC. BBC không chịu trách nhiệm nội dung các trang ngoài.',
     },
-    fonts: [],
     timezone: 'Asia/Ho_Chi_Minh',
     navigation: [
       {

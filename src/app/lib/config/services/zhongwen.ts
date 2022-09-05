@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import noAscendersOrDescenders from '../../../legacy/psammead/gel-foundations/src/scripts/no-ascenders-or-descenders';
+import noAscendersOrDescenders from '../../../components/ThemeProvider/typography/scripts/noAscOrDesc';
 import brandSVG from '../../chameleonLogos/zhongwen';
 import '#psammead/moment-timezone-include/tz/GMT';
 import 'moment/locale/zh-cn';

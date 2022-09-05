@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import cyrillicAndLatin from '../../../legacy/psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import latin from '../../../components/ThemeProvider/typography/scripts/latin';
 import brandSVG from '../../chameleonLogos/indonesian';
 import '#psammead/moment-timezone-include/tz/Asia/Jakarta';
 import 'moment/locale/id';
@@ -47,7 +47,7 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples:
       'https://www.bbc.com/indonesia/institutional-49283175',
     isTrustProjectParticipant: true,
-    script: cyrillicAndLatin,
+    script: latin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Berita',
@@ -356,7 +356,6 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal.',
     },
-    fonts: [],
     navigation: [
       {
         title: 'Berita',

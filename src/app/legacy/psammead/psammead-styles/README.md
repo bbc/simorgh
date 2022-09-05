@@ -6,10 +6,7 @@ This package provides a collection of string constants for use in CSS, containin
 
 `/colours` - Project-defined colours that will be required by multiple Psammead components or themes. These colours are not defined by GEL.
 `/detection` - Project-defined CSS feature detection statements.
-`/fonts` - Project-defined browser behaviours for the Reith font. The primary reason these are not considered GEL-defined (and not part of [`#legacy/gel-foundations/src`](https://www.npmjs.com/package/#legacy/gel-foundations/src)) is due to the custom weighting and loading definitions. [More details on the font-faces defined in this package are available here.](./font-faces.md). Also includes declarations for all World Service fonts.
-
 `/font-styles` provides functions that can be used to get font-styles for different services. If a font-style is not available all the functions will fallback to regular sans font-style of the service.
-
 `/global-styles` Provides project-defined global styles defined using `styled-normalize` and box sizing.
 
 ## Installation
@@ -23,8 +20,6 @@ npm install #legacy/psammead-styles/src --save
 <!-- prettier-ignore -->
 ```jsx
 import { C_POSTBOX } from '#psammead/psammead-styles/src/colours';
-
-import { F_REITH_SANS_REGULAR, F_REITH_SANS_ITALIC } from '#psammead/psammead-styles/src/fonts';
 ```
 
 By importing a subset of the font-face definitions defined in this package, you can prioritise only the most commonly needed fonts for your project, with browser styling stepping in for less common scenarios. For example, in these examples, which import custom fonts for only Reith Sans Regular and Italic, any bold styling would be "faked" by the browser.
@@ -42,7 +37,6 @@ import { css } from 'styled-components';
 
 // These should only be included on your page once.
 const someGlobalCSS = css`
-  ${F_REITH_SANS_REGULAR};
   ${F_REITH_SANS_ITALIC};
 `;
 
@@ -89,16 +83,11 @@ const someGridUsingComponent = css`
 ### global-styles
 
 We export a global styles component which uses `styled-normalize` and defines css rules for `box-sizing`.
-This component accepts an optional `fonts` prop which is an array of font styles to be applied in the global styles.
 
 ```js
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
-import {
-  F_REITH_SANS_REGULAR,
-  F_REITH_SERIF_MEDIUM,
-} from '#psammead/psammead-styles/src/fonts';
 
-<GlobalStyles fonts={[F_REITH_SANS_REGULAR, F_REITH_SERIF_MEDIUM]} />;
+<GlobalStyles />;
 ```
 
 ## Contributing

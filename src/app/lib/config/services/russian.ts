@@ -4,13 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import cyrillicAndLatin from '../../../legacy/psammead/gel-foundations/src/scripts/latin-and-cyrillic';
-import {
-  F_REITH_SANS_BOLD,
-  F_REITH_SANS_REGULAR,
-  F_REITH_SERIF_MEDIUM,
-  F_REITH_SERIF_LIGHT,
-} from '../../../legacy/psammead/psammead-styles/src/fonts';
+import cyrillic from '../../../components/ThemeProvider/typography/scripts/latin';
 import brandSVG from '../../chameleonLogos/russian';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ru';
@@ -284,7 +278,7 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/russian/institutional-50098149#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/russian/institutional-50098149',
     isTrustProjectParticipant: true,
-    script: cyrillicAndLatin,
+    script: cyrillic,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Главная',
@@ -383,12 +377,6 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'BBC. Би-би-си не несет ответственности за содержание других сайтов.',
     },
-    fonts: [
-      F_REITH_SANS_BOLD,
-      F_REITH_SANS_REGULAR,
-      F_REITH_SERIF_MEDIUM,
-      F_REITH_SERIF_LIGHT,
-    ],
     timezone: 'GMT',
     navigation: [
       {

@@ -4,13 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import latinDiacritics from '../../../legacy/psammead/gel-foundations/src/scripts/latin-with-diacritics';
-import {
-  F_REITH_SANS_BOLD,
-  F_REITH_SANS_REGULAR,
-  F_REITH_SERIF_MEDIUM,
-  F_REITH_SERIF_LIGHT,
-} from '../../../legacy/psammead/psammead-styles/src/fonts';
+import latinWithDiacritics from '../../../components/ThemeProvider/typography/scripts/latinWithDiacritics';
 import brandSVG from '../../chameleonLogos/turkish';
 import '#psammead/moment-timezone-include/tz/Asia/Istanbul';
 import withContext from '../../../contexts/utils/withContext';
@@ -52,7 +46,7 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/turkce/kurumsal-50221017#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/turkce/kurumsal-50221017',
     isTrustProjectParticipant: true,
-    script: latinDiacritics,
+    script: latinWithDiacritics,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Haberler',
@@ -333,12 +327,6 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'BBC. BBC, link verilen internet sitelerinin içeriğinden sorumlu değildir.',
     },
-    fonts: [
-      F_REITH_SANS_BOLD,
-      F_REITH_SANS_REGULAR,
-      F_REITH_SERIF_MEDIUM,
-      F_REITH_SERIF_LIGHT,
-    ],
     timezone: 'Asia/Istanbul',
     navigation: [
       {

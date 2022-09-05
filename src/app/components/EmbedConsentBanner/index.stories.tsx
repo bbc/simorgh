@@ -26,7 +26,7 @@ const Component = ({ service, variant, isAmp }: Props) => {
     : EmbedConsentBannerAmp;
 
   return (
-    <ThemeProvider service={service}>
+    <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
         <BackgroundColorWrapper>
           <EmbedBanner pageType={ARTICLE_PAGE} provider="youtube">

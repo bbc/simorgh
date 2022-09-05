@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import cyrillicAndLatin from '../../../legacy/psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import cyrillic from '../../../components/ThemeProvider/typography/scripts/cyrillic';
 import brandSVG from '../../chameleonLogos/uzbek';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/uz';
@@ -46,7 +46,7 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/uzbek/institutional-50220995#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/uzbek/institutional-50220995',
     isTrustProjectParticipant: true,
-    script: cyrillicAndLatin,
+    script: cyrillic,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Бош саҳифа',
@@ -326,7 +326,6 @@ export const service: DefaultServiceConfig = {
       ],
       copyrightText: 'BBC. Би-би-си ташқи сайтлар мазмуни учун масъул эмас.',
     },
-    fonts: [],
     timezone: 'GMT',
     navigation: [
       {
