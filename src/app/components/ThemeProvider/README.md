@@ -12,7 +12,7 @@ This component provides theme props for use in styles. It uses the [`@loadable/c
 
 ## How to use
 
-Add `ThemeProvider` to the top level of your app and access the theme with props.theme in a styled component or provide a function that accepts the theme as the css prop.
+Add `ThemeProvider` to the top level of your app and access the theme with `props.theme` in a styled component or provide a function that accepts the theme as the css prop.
 
 ```tsx
 <ThemeProvider service="news">
@@ -28,7 +28,7 @@ Add `ThemeProvider` to the top level of your app and access the theme with props
 
 ### fontSizes
 
-The [BBC GEL size](https://www.bbc.co.uk/gel/features/typography#type-sizes). The `font-size` and `line-height` styles change depending on the chosen size. You can use `fontSizes` like this - `theme.fontSizes.greatPrimer`. Possible values, largest to smallest, are as follows:
+The [BBC GEL size](https://www.bbc.co.uk/gel/features/typography#type-sizes). The `font-size` and `line-height` styles change depending on the chosen size. Possible values, largest to smallest, are as follows:
 
 - `atlas`
 - `elephant`
@@ -46,9 +46,17 @@ The [BBC GEL size](https://www.bbc.co.uk/gel/features/typography#type-sizes). Th
 - `brevier`
 - `minion`
 
+You can use `fontSizes` like this:
+
+```tsx
+<span css={({ fontSizes }) => fontSizes.greatPrimer}>
+  This is text in GEL's greatPrimer size.
+</span>
+```
+
 ### fontVariants
 
-This controls the `font-family`, `font-style` and `font-weight` values. If a service does not load a particular font such as sans-serif bold italic or any serif font (for performance reasons) then a fallback font variant is select. You can use `fontVariants` like this - `theme.fontVariants.serifMediumItalic`. Possible values, with any fallback font variant is as follows:
+This controls the `font-family`, `font-style` and `font-weight` values. If a service does not load a particular font such as sans-serif bold italic or any serif font (for performance reasons) then a fallback font variant is select. Possible values, with any fallback font variant is as follows:
 
 - `sansRegular`
 - `sansRegularItalic` - falls back to `sansRegular` if a service does not load a sans-serif regular font.
@@ -61,9 +69,17 @@ This controls the `font-family`, `font-style` and `font-weight` values. If a ser
 - `serifBold` - falls back to `sansBold` if a service does not load a serif bold font.
 - `serifLight` - falls back to `serifRegular` if a service does not load a serif light font.
 
+You can use `fontVariants` like this:
+
+```tsx
+<span css={({ fontVariants }) => fontVariants.serifMediumItalic}>
+  This is text in a serif medium italic font.
+</span>
+```
+
 ### fontMq
 
-The typography media queries. You can use `fontMq` like this - `theme.fontMq.GROUP_B_MIN_WIDTH`. Options are, with their screen size range in pixels is as follows:
+The typography media queries. Options, with their screen size range in pixels, are as follows:
 
 - `GROUP_A_MAX_WIDTH`: 319px and below
 - `GROUP_B_MAX_WIDTH`: 599px and below
@@ -71,9 +87,23 @@ The typography media queries. You can use `fontMq` like this - `theme.fontMq.GRO
 - `GROUP_B_ONLY`: between 320px and 599px
 - `GROUP_D_MIN_WIDTH`: 600px and above
 
+You can use `fontMq` like this:
+
+```tsx
+<span
+  css={({ fontMq }) => ({
+    [fontMq.GROUP_B_MIN_WIDTH]: {
+      display: 'none',
+    },
+  })}
+>
+  This text is hidden on screen sizes 320px and above.
+</span>
+```
+
 ### mq
 
-The content media queires. You can use `mq` like this - `theme.mq.GROUP_3_MIN_WIDTH`. Options are, with their screen size range in pixels is as follows:
+The content media queires. Options, with their screen size range in pixels, are as follows:
 
 - `GROUP_0_MAX_WIDTH`: 239px and below
 - `GROUP_1_MAX_WIDTH`: 399px and below
@@ -90,9 +120,23 @@ The content media queires. You can use `mq` like this - `theme.mq.GROUP_3_MIN_WI
 - `GROUP_4_ONLY`: between 1008px and 1279px
 - `GROUP_5_MIN_WIDTH`: 1280px and above
 
+You can use `mq` like this:
+
+```tsx
+<div
+  css={({ mq }) => ({
+    [mq.GROUP_4_MIN_WIDTH]: {
+      display: 'none',
+    },
+  })}
+>
+  This content is hidden on screen sizes 320px and above.
+</div>
+```
+
 ### palette
 
-The available colours. Click on any colour to see the colour in https://color-hex.com. You can use `palette` like this - `theme.palette.POSTBOX_30`. Colours with the prefix `BRAND_` change depending on the service.
+The available colours. Click on any colour to see the colour in https://color-hex.com. Colours with the prefix `BRAND_` change depending on the service.
 
 - [`ARCHIVE_BLUE`](https://www.color-hex.com/color/3A549C)
 - [`BLACK`](https://www.color-hex.com/color/000000)
@@ -145,11 +189,33 @@ The available colours. Click on any colour to see the colour in https://color-he
 - `BRAND_HIGHLIGHT`
 - `BRAND_BORDER`
 
+You can use `mq` like this:
+
+```tsx
+<div
+  css={({ palette }) => ({
+    backgroundColor: palette.LUNAR_LIGHT,
+  })}
+>
+  This is a div with a background-colour of #f8f8f8 (LUNAR_LIGHT).
+</div>
+```
+
 ### spacings
 
-These are numbers that represent the rems used for spacing content. You can use `spacings` like this - `theme.spacings.DOUBLE`. The options, with their size in pixels is as follows:
+These are numbers that represent the rems used for spacing content. The options, with their size in pixels is as follows:
 
 - `FULL` - 8px
 - `DOUBLE` - 16px
 - `TRIPLE` - 24px
 - `QUADRUPLE` - 32px
+
+```tsx
+<div
+  css={({ spacings }) => ({
+    padding: spacings.DOUBLE,
+  })}
+>
+  This is a div with 16px of padding (DOUBLE spacing).
+</div>
+```
