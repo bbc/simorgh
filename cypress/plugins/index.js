@@ -71,7 +71,7 @@ module.exports = (on, config) => {
   on('file:preprocessor', webpackPreprocessor(options));
 
   // eslint-disable-next-line global-require
-  require('cypress-terminal-report/src/installLogsPrinter')(on);
+  require('cypress-terminal-report/src/installLogsPrinter')(on, 10000);
 
   on('task', {
     log(message) {
