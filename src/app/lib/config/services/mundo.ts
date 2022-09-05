@@ -4,13 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import latinDiacritics from '../../../legacy/psammead/gel-foundations/src/scripts/latin-with-diacritics';
-import {
-  F_REITH_SANS_BOLD,
-  F_REITH_SANS_REGULAR,
-  F_REITH_SERIF_MEDIUM,
-  F_REITH_SERIF_LIGHT,
-} from '../../../legacy/psammead/psammead-styles/src/fonts';
+import latinWithDiacritics from '../../../components/ThemeProvider/typography/scripts/latinWithDiacritics';
 import brandSVG from '../../chameleonLogos/mundo';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/es';
@@ -52,7 +46,7 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/mundo/institucional-51359666#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/mundo/institucional-51359666',
     isTrustProjectParticipant: true,
-    script: latinDiacritics,
+    script: latinWithDiacritics,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Noticias',
@@ -256,6 +250,16 @@ export const service: DefaultServiceConfig = {
           text: 'Saltar contenido de %provider_name%',
           endTextVisuallyHidden: 'Fin del contenido de %provider_name%',
         },
+        consentBanner: {
+          heading: '¿Permitir el contenido de [social_media_site]?',
+          body: `Este artículo contiene contenido proporcionado por [social_media_site]. Solicitamos tu permiso antes de que algo  se cargue, ya que ese sitio  puede estar usando cookies y otras tecnologías. Es posible que quieras leer [link] política de cookies [/link] y [link] política de privacidad [/link] de [social_media_site] antes de aceptar. Para ver este contenido, selecciona 'aceptar y continuar'.`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+        },
       },
       include: {
         errorMessage:
@@ -328,12 +332,6 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'BBC. La BBC no se hace responsable del contenido de sitios externos.',
     },
-    fonts: [
-      F_REITH_SANS_BOLD,
-      F_REITH_SANS_REGULAR,
-      F_REITH_SERIF_MEDIUM,
-      F_REITH_SERIF_LIGHT,
-    ],
     timezone: 'GMT',
     navigation: [
       {

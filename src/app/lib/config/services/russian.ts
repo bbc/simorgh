@@ -4,13 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import cyrillicAndLatin from '../../../legacy/psammead/gel-foundations/src/scripts/latin-and-cyrillic';
-import {
-  F_REITH_SANS_BOLD,
-  F_REITH_SANS_REGULAR,
-  F_REITH_SERIF_MEDIUM,
-  F_REITH_SERIF_LIGHT,
-} from '../../../legacy/psammead/psammead-styles/src/fonts';
+import cyrillic from '../../../components/ThemeProvider/typography/scripts/latin';
 import brandSVG from '../../chameleonLogos/russian';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ru';
@@ -220,6 +214,17 @@ export const mainTranslations = {
       text: 'Пропустить контент из %provider_name%',
       endTextVisuallyHidden: 'Контент из %provider_name% окончен',
     },
+    consentBanner: {
+      heading: `Разрешить контент [social_media_site]?`,
+      body: `Эта статья содержит контент, предоставленный [social_media_site].  Мы просим вашего разрешения до загрузки, потому что он может использовать кукис и другие технологии. Вы можете ознакомиться с [link] правилами кукис [/link] и [link] политикой личных данных [/link] [social_media_site], прежде чем дать согласие. Чтобы увидеть этот контент, выберите “Согласиться и продолжить”.`,
+      cookiesUrl: {
+        youtube: 'https://policies.google.com/technologies/cookies',
+      },
+      privacyUrl: {
+        youtube: 'https://policies.google.com/privacy',
+      },
+      button: 'Принять и продолжить',
+    },
   },
   include: {
     errorMessage:
@@ -267,7 +272,7 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/russian/institutional-50098149#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/russian/institutional-50098149',
     isTrustProjectParticipant: true,
-    script: cyrillicAndLatin,
+    script: cyrillic,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Главная',
@@ -366,12 +371,6 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'BBC. Би-би-си не несет ответственности за содержание других сайтов.',
     },
-    fonts: [
-      F_REITH_SANS_BOLD,
-      F_REITH_SANS_REGULAR,
-      F_REITH_SERIF_MEDIUM,
-      F_REITH_SERIF_LIGHT,
-    ],
     timezone: 'GMT',
     navigation: [
       {

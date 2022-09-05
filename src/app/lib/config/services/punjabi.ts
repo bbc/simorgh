@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import devanagariAndGurmukhi from '../../../legacy/psammead/gel-foundations/src/scripts/devanagari-and-gurmukhi';
+import gurmukhi from '../../../components/ThemeProvider/typography/scripts/gurmukhi';
 import brandSVG from '../../chameleonLogos/punjabi';
 import '#psammead/psammead-locales/moment/pa-in';
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
@@ -46,7 +46,7 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/punjabi/institutional-49282853#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/punjabi/institutional-49282853',
     isTrustProjectParticipant: true,
-    script: devanagariAndGurmukhi,
+    script: gurmukhi,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'ਨਿਊਜ਼',
@@ -241,6 +241,17 @@ export const service: DefaultServiceConfig = {
           text: 'Skip %provider_name% post',
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
+        consentBanner: {
+          heading: `[social_media_site] ਸਮੱਗਰੀ ਦੀ ਇਜਾਜ਼ਤ?`,
+          body: `ਇਸ ਲੇਖ ਵਿੱਚ [social_media_site] ਤੋਂ ਮਿਲੀ ਸਮੱਗਰੀ ਸ਼ਾਮਲ ਹੈ। ਕੁਝ ਵੀ ਡਾਊਨਲੋਡ ਹੋਣ ਤੋਂ ਪਹਿਲਾਂ ਅਸੀਂ ਤੁਹਾਡੀ ਇਜਾਜ਼ਤ ਮੰਗਦੇ ਹਾਂ ਕਿਉਂਕਿ ਇਸ ਵਿੱਚ ਕੁਕੀਜ਼ ਅਤੇ ਦੂਜੀਆਂ ਤਕਨੀਕਾਂ ਦਾ ਇਸਤੇਮਾਲ ਕੀਤਾ ਹੋ ਸਕਦਾ ਹੈ। ਤੁਸੀਂ ਸਵੀਕਾਰ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ [social_media_site] [link] ਕੁਕੀ ਪਾਲਿਸੀ [/link] ਤੇ ਨੂੰ ਪੜ੍ਹਨਾ ਚਾਹੋਗੇ। ਇਸ ਸਮੱਗਰੀ ਨੂੰ ਦੇਖਣ ਲਈ ਇਜਾਜ਼ਤ ਦੇਵੋ ਤੇ ਜਾਰੀ ਰੱਖੋ ਨੂੰ ਚੁਣੋ।`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+          button: 'ਸਵੀਕਾਰ ਕਰੋ ਤੇ ਜਾਰੀ ਰੱਖੋ',
+        },
       },
       include: {
         errorMessage:
@@ -333,7 +344,6 @@ export const service: DefaultServiceConfig = {
       ],
       copyrightText: 'BBC. ਬਾਹਰੀ ਸਾਈਟਾਂ ਦੀ ਸਮਗਰੀ ਲਈ ਬੀਬੀਸੀ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ',
     },
-    fonts: [],
     timezone: 'Asia/Kolkata',
   },
 };

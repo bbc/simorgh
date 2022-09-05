@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import cyrillicAndLatin from '../../../legacy/psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import latin from '../../../components/ThemeProvider/typography/scripts/latin';
 import brandSVG from '../../chameleonLogos/hausa';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ha';
@@ -46,7 +46,7 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/hausa/game-da-mu-49283501#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/hausa/game-da-mu-49283501',
     isTrustProjectParticipant: true,
-    script: cyrillicAndLatin,
+    script: latin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Labaran Duniya',
@@ -266,6 +266,16 @@ export const service: DefaultServiceConfig = {
           text: 'Kauce wa %provider_name%',
           endTextVisuallyHidden: 'Karshen labarin da aka sa a %provider_name%',
         },
+        consentBanner: {
+          heading: 'Ya kamata a bar bayanan [social_media_site]?',
+          body: `Wannan labari ne na dauke da bayanai da [social_media_site] suka bayar.  Muna neman amincewarku kafin mu dora muka, saboda nuna iya dauke da  wasu bayanai da aka iya adanawa. Watakila kana za ka so ka karanta [social_media_site] [link] da tsarin bayanan da za a adana [/link] da [link] da tsarin sirri [/link] kafin ka amince. Idan kana son ganin wannan bayani ka zabi ‘amince sannan ka ci gaba’.`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+        },
       },
       include: {
         errorMessage:
@@ -337,7 +347,6 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba. ',
     },
-    fonts: [],
     timezone: 'GMT',
     navigation: [
       {

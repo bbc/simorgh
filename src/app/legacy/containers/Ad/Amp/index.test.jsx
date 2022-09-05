@@ -2,10 +2,10 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
-import { latinDiacritics } from '#psammead/gel-foundations/src/scripts';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
 import AmpAd, { AMP_ACCESS_FETCH } from './index';
+import { ServiceContext } from '../../../../contexts/ServiceContext';
+import latinDiacritics from '../../../../components/ThemeProvider/typography/scripts/latinWithDiacritics';
 
 const adJsonAttributes = slotType => ({
   targeting: {
