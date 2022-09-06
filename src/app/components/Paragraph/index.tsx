@@ -3,18 +3,20 @@
 import React, { FC } from 'react';
 import { jsx } from '@emotion/react';
 
-import { GelFontSize } from '../../models/types/theming';
+import { FontVariant, GelFontSize } from '../../models/types/theming';
 import Text from '../Text';
 
 interface Props {
   className?: string;
   children?: React.ReactNode;
+  fontVariant?: FontVariant;
   size?: GelFontSize;
 }
 
 const Paragraph: FC<Props> = ({
   children,
   className,
+  fontVariant,
   size,
   ...htmlAttributes
 }: Props) => (
@@ -32,6 +34,7 @@ const Paragraph: FC<Props> = ({
        */
       margin: 0,
     }}
+    fontVariant={fontVariant}
     size={size || 'bodyCopy'}
     {...htmlAttributes}
   >

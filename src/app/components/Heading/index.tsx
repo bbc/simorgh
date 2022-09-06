@@ -10,28 +10,30 @@ interface Props {
   className?: string;
   children: React.ReactNode;
   fontVariant?: FontVariant;
-  level: 1 | 2 | 3;
+  level: 1 | 2 | 3 | 4;
   size?: GelFontSize;
 }
 
-type Element = 'h1' | 'h2' | 'h3';
+type Element = 'h1' | 'h2' | 'h3' | 'h4';
 
 type Sizes = {
   h1: 'canon';
   h2: 'trafalgar';
   h3: 'doublePica';
+  h4: 'greatPrimer';
 };
 
 const sizes: Sizes = {
   h1: 'canon',
   h2: 'trafalgar',
   h3: 'doublePica',
+  h4: 'greatPrimer',
 };
 
 const Heading: FC<Props> = ({
   children,
   className,
-  fontVariant,
+  fontVariant = 'sansBold',
   level,
   size,
   ...htmlAttributes
