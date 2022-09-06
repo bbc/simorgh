@@ -13,53 +13,66 @@ interface Props {
   text: string;
 }
 
-const TextStory = ({ service, variant, text }: Props) => (
-  <ThemeProvider service={service} variant={variant}>
-    <ServiceContextProvider service={service} variant={variant}>
-      <Text
-        fontVariant={select(
-          'fontVariant',
-          {
-            sansRegular: 'sansRegular',
-            sansRegularItalic: 'sansRegularItalic',
-            sansBold: 'sansBold',
-            sansBoldItalic: 'sansBoldItalic',
-            sansLight: 'sansLight',
-            serifRegular: 'serifRegular',
-            serifMedium: 'serifMedium',
-            serifMediumItalic: 'serifMediumItalic',
-            serifBold: 'serifBold',
-            serifLight: 'serifLight',
-          },
-          'sansRegular',
-        )}
-        size={select(
-          'size',
-          {
-            atlas: 'atlas',
-            elephant: 'elephant',
-            imperial: 'imperial',
-            royal: 'royal',
-            foolscap: 'foolscap',
-            canon: 'canon',
-            trafalgar: 'trafalgar',
-            paragon: 'paragon',
-            doublePica: 'doublePica',
-            greatPrimer: 'greatPrimer',
-            bodyCopy: 'bodyCopy',
-            pica: 'pica',
-            longPrimer: 'longPrimer',
-            brevier: 'brevier',
-            minion: 'minion',
-          },
-          'pica',
-        )}
-      >
-        {text}
-      </Text>
-    </ServiceContextProvider>
-  </ThemeProvider>
-);
+const EMPTY_OPTION = '--';
+
+const TextStory = ({ service, variant, text }: Props) => {
+  const selectedFontVariant = select(
+    'fontVariant',
+    {
+      [EMPTY_OPTION]: EMPTY_OPTION,
+      sansRegular: 'sansRegular',
+      sansRegularItalic: 'sansRegularItalic',
+      sansBold: 'sansBold',
+      sansBoldItalic: 'sansBoldItalic',
+      sansLight: 'sansLight',
+      serifRegular: 'serifRegular',
+      serifMedium: 'serifMedium',
+      serifMediumItalic: 'serifMediumItalic',
+      serifBold: 'serifBold',
+      serifLight: 'serifLight',
+    },
+    EMPTY_OPTION,
+  );
+  const selectedSize = select(
+    'size',
+    {
+      [EMPTY_OPTION]: EMPTY_OPTION,
+      atlas: 'atlas',
+      elephant: 'elephant',
+      imperial: 'imperial',
+      royal: 'royal',
+      foolscap: 'foolscap',
+      canon: 'canon',
+      trafalgar: 'trafalgar',
+      paragon: 'paragon',
+      doublePica: 'doublePica',
+      greatPrimer: 'greatPrimer',
+      bodyCopy: 'bodyCopy',
+      pica: 'pica',
+      longPrimer: 'longPrimer',
+      brevier: 'brevier',
+      minion: 'minion',
+    },
+    EMPTY_OPTION,
+  );
+
+  return (
+    <ThemeProvider service={service} variant={variant}>
+      <ServiceContextProvider service={service} variant={variant}>
+        <Text
+          fontVariant={
+            selectedFontVariant !== EMPTY_OPTION
+              ? selectedFontVariant
+              : undefined
+          }
+          size={selectedSize !== EMPTY_OPTION ? selectedSize : undefined}
+        >
+          {text}
+        </Text>
+      </ServiceContextProvider>
+    </ThemeProvider>
+  );
+};
 
 export default {
   title: 'NewComponents/Text',
