@@ -7,7 +7,7 @@ import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
 import MostReadPage from '.';
 
 // eslint-disable-next-line react/prop-types
-const Component = ({ service, pageData, variant = 'default' } = {}) => (
+const Component = ({ service, pageData, variant } = {}) => (
   <BrowserRouter>
     <MostReadPage
       pageType={MOST_READ_PAGE}

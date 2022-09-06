@@ -1,4 +1,6 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
+import latinWithDiacriticsScript from '../typography/scripts/latinWithDiacritics';
+import { HELMET } from '../typography/fontFamilies';
 import withThemeProvider from '../withThemeProvider';
 
 const azeriTheme = {
@@ -8,6 +10,13 @@ const azeriTheme = {
     BRAND_FOREGROUND: GHOST,
     BRAND_HIGHLIGHT: WHITE,
     BRAND_BORDER: POSTBOX_30,
+  },
+  typography: {
+    script: latinWithDiacriticsScript,
+    fontFamilies: {
+      primary: HELMET,
+    },
+    fontFaces: [],
   },
 };
 

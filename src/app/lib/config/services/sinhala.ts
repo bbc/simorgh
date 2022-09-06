@@ -4,12 +4,8 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import sinhalese from '../../../legacy/psammead/gel-foundations/src/scripts/sinhalese';
+import sinhalese from '../../../components/ThemeProvider/typography/scripts/sinhalese';
 import brandSVG from '../../chameleonLogos/sinhala';
-import {
-  F_NOTO_SERIF_SINHALA_BOLD,
-  F_NOTO_SERIF_SINHALA_REGULAR,
-} from '../../../legacy/psammead/psammead-styles/src/fonts';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/si';
 import withContext from '../../../contexts/utils/withContext';
@@ -325,7 +321,6 @@ export const service: DefaultServiceConfig = {
       ],
       copyrightText: 'BBC. බාහිර වෙබ් අඩවිවල අන්තර්ගතයට බීබීසී වගකියනු නොලැබේ.',
     },
-    fonts: [F_NOTO_SERIF_SINHALA_BOLD, F_NOTO_SERIF_SINHALA_REGULAR],
     timezone: 'GMT',
     navigation: [
       {

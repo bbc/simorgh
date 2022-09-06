@@ -1,14 +1,10 @@
 import {
-  F_NOTO_SERIF_BENGALI_BOLD,
-  F_NOTO_SERIF_BENGALI_REGULAR,
-} from '../../../legacy/psammead/psammead-styles/src/fonts';
-import {
   C_POSTBOX,
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import bengali from '../../../legacy/psammead/gel-foundations/src/scripts/bengali';
+import bengali from '../../../components/ThemeProvider/typography/scripts/bengali';
 import brandSVG from '../../chameleonLogos/bangla';
 import '#psammead/moment-timezone-include/tz/Asia/Dhaka';
 import '#psammead/psammead-locales/moment/bn';
@@ -333,7 +329,6 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।',
     },
-    fonts: [F_NOTO_SERIF_BENGALI_BOLD, F_NOTO_SERIF_BENGALI_REGULAR],
     timezone: 'Asia/Dhaka',
     navigation: [
       {
