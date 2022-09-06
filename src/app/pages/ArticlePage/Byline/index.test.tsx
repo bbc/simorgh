@@ -11,6 +11,7 @@ import {
   bylineWithNoAuthor,
   bylineWithNameAndRole,
   bylineWithLink,
+  bylineWithLinkAndLocation,
 } from './fixture';
 
 describe('Byline', () => {
@@ -72,7 +73,7 @@ describe('Byline', () => {
     expect(listItems.length).toBe(2);
   });
 
-  it('should correctly render Timestamp when passeed as a child', () => {
+  it('should correctly render Timestamp when passed as a child', () => {
     render(
       <Byline blocks={bylineWithNameAndRole}>
         <ArticleTimestamp
@@ -104,15 +105,30 @@ describe('Byline', () => {
     expect(listItems.length).toBe(3);
   });
 
+  it('should render the Byline correctly with location', () => {
+    render(<Byline blocks={bylineWithLinkAndLocation} />);
+
+    const AuthorLink = screen.getByText('Single Byline (all values)');
+    const TwitterLink = screen.getByText('@test');
+    const Links = screen.getAllByRole('link');
+    const Location = screen.getByText('London');
+
+    expect(AuthorLink).toBeInTheDocument();
+    expect(TwitterLink).toBeInTheDocument();
+    expect(Links.length).toBe(2);
+    expect(Location).toBeInTheDocument();
+  });
+
   it.each`
-    expectation    | info           | text
-    ${'Author'}    | ${'Author'}    | ${'Author,'}
-    ${'Role'}      | ${'Role'}      | ${'Role,'}
-    ${'Twitter'}   | ${'Twitter'}   | ${'Twitter,'}
-    ${'Published'} | ${'Published'} | ${'Published,'}
+    expectation         | info                | text
+    ${'Author'}         | ${'Author'}         | ${'Author,'}
+    ${'Role'}           | ${'Role'}           | ${'Role,'}
+    ${'Twitter'}        | ${'Twitter'}        | ${'Twitter,'}
+    ${'Published'}      | ${'Published'}      | ${'Published,'}
+    ${'Reporting from'} | ${'Reporting from'} | ${'Reporting from'}
   `('should correctly announce $expectation for $info', ({ text }) => {
     render(
-      <Byline blocks={bylineWithLink}>
+      <Byline blocks={bylineWithLinkAndLocation}>
         <ArticleTimestamp
           firstPublished={1660658887}
           lastPublished={1660658887}
@@ -127,13 +143,14 @@ describe('Byline', () => {
   });
 
   it.each`
-    info           | translation
-    ${'author'}    | ${'Barreessaa,'}
-    ${'role'}      | ${'Gahee,'}
-    ${'published'} | ${'Maxxanfame,'}
+    info               | translation
+    ${'author'}        | ${'Barreessaa,'}
+    ${'role'}          | ${'Gahee,'}
+    ${'published'}     | ${'Maxxanfame,'}
+    ${'reportingFrom'} | ${'Gabaasni irraati'}
   `('should translate $info announcement correctly', ({ translation }) => {
     render(
-      <Byline blocks={bylineWithLink}>
+      <Byline blocks={bylineWithLinkAndLocation}>
         <ArticleTimestamp
           firstPublished={1660658887}
           lastPublished={1660658887}
