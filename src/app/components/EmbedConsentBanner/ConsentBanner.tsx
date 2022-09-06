@@ -21,7 +21,7 @@ import consentBannerCss from './ConsentBanner.styles';
 
 const defaultTranslations: Translations['socialEmbed']['consentBanner'] = {
   heading: 'Allow [social_media_site] content?',
-  body: `This article contains content provided by [social_media_site].  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read [link] [social_media_site] cookie policy [/link] and [link] [social_media_site] privacy policy [/link] before accepting. To view this content choose 'accept and continue'.`,
+  body: `This article contains content provided by YouTube.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Google's [link] cookie policy [/link] and [link] privacy policy [/link] before accepting. To view this content choose 'accept and continue'.`,
   button: 'Accept and continue',
   cookiesUrl: {
     youtube: 'https://policies.google.com/technologies/cookies',
