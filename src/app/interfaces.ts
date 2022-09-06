@@ -75,7 +75,7 @@ interface MediaQueries {
 }
 
 interface Spacings {
-  HLF: number;
+  HALF: number;
   FULL: number;
   DOUBLE: number;
   TRIPLE: number;

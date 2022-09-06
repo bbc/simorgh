@@ -41,7 +41,7 @@ export default {
   authorChevron: ({ palette, spacings }: Theme) =>
     css({
       verticalAlign: 'middle',
-      margin: `0 ${spacings.HLF}rem`,
+      margin: `0 ${spacings.HALF}rem`,
       color: palette.GREY_10,
       fill: `currentcolor`,
     }),
@@ -49,7 +49,7 @@ export default {
   twitterChevron: ({ palette, spacings }: Theme) =>
     css({
       verticalAlign: 'middle',
-      margin: `0 ${spacings.HLF}rem`,
+      margin: `0 ${spacings.HALF}rem`,
       color: palette.POSTBOX,
       fill: `currentcolor`,
       width: `${spacings.FULL}rem`,
