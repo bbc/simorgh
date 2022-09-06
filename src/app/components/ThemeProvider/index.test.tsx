@@ -130,18 +130,6 @@ describe('ThemeProvider', () => {
         }
       }
 
-      @media (min-width: 0rem) {
-        .emotion-0 {
-          display: block;
-        }
-      }
-
-      @media (min-width: 0rem) and (max-width: 14.9375rem) {
-        .emotion-0 {
-          display: block;
-        }
-      }
-
       @media (max-width: 24.9375rem) {
         .emotion-0 {
           display: block;
