@@ -28,7 +28,7 @@ describe('Heading', () => {
         line-height: 2.25rem;
         font-family: ReithSans,Helvetica,Arial,sans-serif;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 700;
         margin: 0;
       }
 
