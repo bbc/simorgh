@@ -63,6 +63,16 @@ export default {
       margin: `${spacings.DOUBLE}rem 0`,
     }),
 
+  location: ({ palette }: Theme) =>
+    css({
+      color: palette.SHADOW,
+    }),
+
+  reportingFrom: ({ palette }: Theme) =>
+    css({
+      color: palette.SHADOW,
+    }),
+
   authorLink: () => css([link, { paddingTop: '1.375rem' }]),
   twitterLink: () => css([link, { paddingBottom: '1.75rem' }]),
 };
