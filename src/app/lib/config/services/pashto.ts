@@ -4,12 +4,8 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import arabic from '../../../legacy/psammead/gel-foundations/src/scripts/arabic';
+import arabic from '../../../components/ThemeProvider/typography/scripts/arabic';
 import brandSVG from '../../chameleonLogos/pashto';
-import {
-  F_REITH_QALAM_REGULAR,
-  F_REITH_QALAM_BOLD,
-} from '../../../legacy/psammead/psammead-styles/src/fonts';
 import '#psammead/psammead-locales/moment/ps';
 import '#psammead/moment-timezone-include/tz/GMT';
 import jalaali from '../../../legacy/psammead/psammead-calendars/src';
@@ -261,6 +257,16 @@ export const service: DefaultServiceConfig = {
           text: 'دې %provider_name% پوسټ نه تېرشئ',
           endTextVisuallyHidden: 'د ‍پوسټ %provider_name% پای',
         },
+        consentBanner: {
+          heading: `ایا له [social_media_site] نه د منځپانګې اجازه شته؟`,
+          body: `دې لیکنه کې له social media راخیستل شوي مواد شته.‌ له ښودلو وړاندې یې ستاسې اجازه پکار ده، ځکه ښایي‌کوکیز یا بله تکنالوژي پکې کارول شوې وي. کولی شئ له اجازې مخکې د social media site  پالیسي ولولئ. د دې لپاره غوښتنه ومنئ او مخکې لاړ شئ`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+        },
       },
       include: {
         errorMessage:
@@ -331,7 +337,6 @@ export const service: DefaultServiceConfig = {
       ],
       copyrightText: 'بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده.',
     },
-    fonts: [F_REITH_QALAM_REGULAR, F_REITH_QALAM_BOLD],
     timezone: 'GMT',
     navigation: [
       {

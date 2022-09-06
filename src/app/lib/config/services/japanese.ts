@@ -5,7 +5,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import noAscendersOrDescenders from '../../../legacy/psammead/gel-foundations/src/scripts/no-ascenders-or-descenders';
+import noAscendersOrDescenders from '../../../components/ThemeProvider/typography/scripts/noAscOrDesc';
 import '#psammead/moment-timezone-include/tz/Asia/Tokyo';
 import 'moment/locale/ja';
 import withContext from '../../../contexts/utils/withContext';
@@ -238,6 +238,17 @@ export const service: DefaultServiceConfig = {
           text: '%provider_name% の投稿を飛ばす',
           endTextVisuallyHidden: '%provider_name% の投稿の終わり',
         },
+        consentBanner: {
+          heading: `[social_media_site] のコンテンツを表示しますか？`,
+          body: `この記事には[social_media_site] 提供の内容が含まれます。クッキーや他の技術が使われている可能性があるため、あらゆる外部コンテンツ読み込みの前に、読者の方の同意をおたずねしています。同意する前に、 [social_media_site] の[link] クッキー方針[/link] および[link] プライバシー方針 [/link] を確認することも可能です。このコンテンツを見るには「同意して続ける」を選んでください。`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+          button: '同意して続ける',
+        },
       },
       include: {
         errorMessage:
@@ -304,7 +315,6 @@ export const service: DefaultServiceConfig = {
       ],
       copyrightText: 'BBC.　BBCは外部サイトの内容に責任を負いません。',
     },
-    fonts: [],
     timezone: 'Asia/Tokyo',
     navigation: [
       {

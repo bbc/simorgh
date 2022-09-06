@@ -5,12 +5,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import latinDiacritics from '../../../legacy/psammead/gel-foundations/src/scripts/latin-with-diacritics';
-import {
-  F_REITH_SANS_BOLD,
-  F_REITH_SANS_REGULAR,
-  F_REITH_SERIF_MEDIUM,
-} from '../../../legacy/psammead/psammead-styles/src/fonts';
+import latinWithDiacritics from '../../../components/ThemeProvider/typography/scripts/latinWithDiacritics';
 import '#psammead/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/gd';
@@ -49,7 +44,7 @@ export const service: DefaultServiceConfig = {
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
     isTrustProjectParticipant: true,
-    script: latinDiacritics,
+    script: latinWithDiacritics,
     manifestPath: '/articles/manifest.json',
     frontPageTitle: 'Dachaigh',
     showAdPlaceholder: false,
@@ -220,6 +215,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
+      socialEmbed: {},
       topStoriesTitle: 'Prìomh Sgeulachdan',
       featuresAnalysisTitle: 'Sgeulachdan Aithriseach',
     },
@@ -281,7 +277,6 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         "BBC. Chan eil am BBC an urra ris na tha a' nochdadh air làraichean-lìn air an taobh a-muigh",
     },
-    fonts: [F_REITH_SANS_BOLD, F_REITH_SANS_REGULAR, F_REITH_SERIF_MEDIUM],
     timezone: 'Europe/London',
     navigation: [
       {

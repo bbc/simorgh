@@ -1,6 +1,6 @@
 import React from 'react';
-import { latin } from '#psammead/gel-foundations/src/scripts';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import latin from '../../../../components/ThemeProvider/typography/scripts/latin';
 import LastUpdated from './LastUpdated';
 
 describe('MostReadCanonical - LastUpdated', () => {

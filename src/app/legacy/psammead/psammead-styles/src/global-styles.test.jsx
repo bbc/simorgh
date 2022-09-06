@@ -1,9 +1,5 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import {
-  F_REITH_SANS_REGULAR,
-  F_REITH_SERIF_MEDIUM,
-} from '#psammead/psammead-styles/src/fonts';
 import GlobalStyles from './global-styles';
 
 /**
@@ -18,9 +14,7 @@ describe('global-styles', () => {
   });
 
   it('should render global styles with @font-face rules', () => {
-    render(
-      <GlobalStyles fonts={[F_REITH_SANS_REGULAR(), F_REITH_SERIF_MEDIUM()]} />,
-    );
+    render(<GlobalStyles />);
     expect(document.head).toMatchSnapshot();
   });
 });

@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import thai from '../../../legacy/psammead/gel-foundations/src/scripts/thai';
+import thai from '../../../components/ThemeProvider/typography/scripts/thai';
 import brandSVG from '../../chameleonLogos/thai';
 import '#psammead/moment-timezone-include/tz/Asia/Bangkok';
 import '#psammead/psammead-locales/moment/th';
@@ -243,6 +243,16 @@ export const service: DefaultServiceConfig = {
           text: 'ข้าม %provider_name% โพสต์ ',
           endTextVisuallyHidden: 'สิ้นสุด %provider_name% โพสต์',
         },
+        consentBanner: {
+          heading: `ยินยอมรับเนื้อหาจาก [social_media_site]`,
+          body: `บทความนี้ประกอบด้วยเนื้อหาจาก [social_media_site] เราขอความยินยอมจากคุณก่อนใช้คุกกี้ หรือเทคโนโลยีอื่น ๆ บันทึกอะไรลงไป คุณอาจต้องอ่านนโยบายคุกกี้ของ  [social_media_site] [link]  และนโยบายความเป็นส่วนตัวของ [/link]  [social_media_site] [link] ก่อนให้ความยินยอม [/link] หากต้องการอ่านเนื้อหานี้ โปรดเลือก "ยินยอมและไปต่อ"`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+        },
       },
       include: {
         errorMessage:
@@ -344,7 +354,6 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก. นโยบายของเราเรื่องการเชื่อมต่อไปยังลิงก์ภายนอก.',
     },
-    fonts: [],
     timezone: 'Asia/Bangkok',
   },
 };
