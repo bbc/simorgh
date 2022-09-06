@@ -14,6 +14,7 @@ interface Props {
   sizes: string;
   width: number;
   height: number;
+  className?: string;
   aspectRatio?: number;
   lazyLoad?: boolean;
   preload?: boolean;
@@ -33,6 +34,7 @@ const Image = ({
   width,
   height,
   aspectRatio,
+  className,
   lazyLoad = false,
   preload = false,
   placeholder = true,
@@ -50,6 +52,7 @@ const Image = ({
 
   return (
     <div
+      className={className}
       css={{
         paddingBottom: `${(1 / wrapperAspectRatio) * 100}%`,
         position: 'relative',
