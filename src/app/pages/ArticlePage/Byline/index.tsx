@@ -11,7 +11,11 @@ import {
   getBodyCopy,
   getBrevier,
 } from '../../../legacy/psammead/gel-foundations/src/typography';
-import { getSansBold } from '../../../legacy/psammead/psammead-styles/src/font-styles';
+import {
+  getSansBold,
+  getSansRegular,
+  getSansRegularItalic,
+} from '../../../legacy/psammead/psammead-styles/src/font-styles';
 
 type Props = {
   blocks: any;
@@ -25,6 +29,9 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
   const authorBlock = bylineBlocks.find((block: any) => block.type === 'name');
   const jobRoleBlock = bylineBlocks.find((block: any) => block.type === 'role');
   const twitterBlock = bylineBlocks.find((block: any) => block.type === 'link');
+  const locationBlock = bylineBlocks.find(
+    (block: any) => block.type === 'location',
+  );
 
   const author = pathOr(
     '',
@@ -58,6 +65,11 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
     ],
     twitterBlock,
   );
+  const location = pathOr(
+    '',
+    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
+    locationBlock,
+  );
 
   if (!(author && jobRole)) return null;
 
@@ -72,6 +84,12 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
   const articleInformationTranslated = pathOr(
     'Article information',
     ['byline', 'articleInformation'],
+    translations,
+  );
+
+  const reportingFromTranslated = pathOr(
+    'Reporting from',
+    ['byline', 'reportingFrom'],
     translations,
   );
 
@@ -148,6 +166,31 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
                 <RightChevron css={BylineCss.twitterChevron} />
               </span>
             </a>
+          </li>
+        ) : null}
+        {location ? (
+          <li>
+            <p>
+              <span
+                css={[
+                  BylineCss.reportingFrom,
+                  getSansRegularItalic(service),
+                  getBrevier(script),
+                ]}
+              >
+                {reportingFromTranslated}
+              </span>
+              <br />
+              <span
+                css={[
+                  BylineCss.location,
+                  getSansRegular(service),
+                  getBrevier(script),
+                ]}
+              >
+                {location}
+              </span>
+            </p>
           </li>
         ) : null}
         <hr css={BylineCss.lineBreak} aria-hidden />
