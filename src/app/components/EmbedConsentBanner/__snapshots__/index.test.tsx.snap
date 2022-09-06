@@ -134,13 +134,13 @@ exports[`Embed Consent Banner should match snapshot 1`] = `
       class="emotion-1"
       data-testid="banner-heading"
     >
-      ¿Permitir el contenido de YouTube?
+      ¿Permitir el contenido de Google YouTube?
     </strong>
     <p
       class="emotion-2"
       data-testid="banner-body"
     >
-      Este artículo contiene contenido proporcionado por YouTube. Solicitamos tu permiso antes de que algo  se cargue, ya que ese sitio  puede estar usando cookies y otras tecnologías. Es posible que quieras leer 
+      Este artículo contiene contenido proporcionado por Google YouTube. Solicitamos tu permiso antes de que algo  se cargue, ya que ese sitio  puede estar usando cookies y otras tecnologías. Es posible que quieras leer 
       <a
         aria-label="política de cookies, externo"
         href="https://policies.google.com/technologies/cookies"
@@ -154,7 +154,7 @@ exports[`Embed Consent Banner should match snapshot 1`] = `
       >
         política de privacidad
       </a>
-       de YouTube antes de aceptar. Para ver este contenido, selecciona 'aceptar y continuar'.
+       de Google YouTube antes de aceptar. Para ver este contenido, selecciona 'aceptar y continuar'.
     </p>
     <button
       class="emotion-3"
