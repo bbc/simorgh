@@ -1,8 +1,12 @@
 import React from 'react';
-import { render, screen, act, waitFor } from '@testing-library/react';
+import {
+  render,
+  screen,
+  waitFor,
+} from '../react-testing-library-with-providers';
 import Image from '.';
 
-describe('Image', () => {
+describe('Image - Canonical', () => {
   it('should preload when preload is true', async () => {
     render(
       <Image
@@ -206,23 +210,6 @@ describe('Image', () => {
     );
   });
 
-  it('should support AMP images', () => {
-    render(
-      <Image
-        alt="orange 1"
-        originCode="cpsdevpb"
-        src="41BC/test/_63482861_orange1.jpg"
-        originalImageWidth={500}
-        imageResolutions={[200, 500, 1000]}
-        sizes="(max-width: 600px) 480px, 800px"
-        isAmp
-      />,
-    );
-    screen.debug();
-    const imageEl = screen.getByAltText('orange 1');
-    expect(imageEl?.parentNode?.children[2]).toHaveAttribute('isAmp', true);
-  });
-
   it('should render image with correct width and height attributes', () => {
     render(
       <Image
@@ -242,7 +229,7 @@ describe('Image', () => {
     expect(imageEl).toHaveAttribute('height', '281');
   });
 
-  it.skip('should render the image correctly - container has a padding of the aspect ratio', () => {
+  it.skip('should render the image correctly with placeholder - container has a padding of the aspect ratio', () => {
     render(
       <Image
         alt="orange 1"
@@ -260,8 +247,6 @@ describe('Image', () => {
     expect(imageEl).toHaveAttribute('width', '500');
     expect(imageEl).toHaveAttribute('height', '281');
   });
-
-  it('should load a placeholder when the image has not yet loaded', async () => {});
 
   it('should render an image with an alt tag', () => {
     render(
@@ -294,5 +279,85 @@ describe('Image', () => {
     );
     const imageEl = screen.getByAltText('orange 1');
     expect(imageEl).toHaveAttribute('src', '41BC/test/_63482861_orange1.jpg');
+  });
+});
+
+describe('Image - AMP pages', () => {
+  it('should render an amp-img tag', () => {
+    render(
+      <Image
+        alt="orange 1"
+        originCode="cpsdevpb"
+        src="41BC/test/_63482861_orange1.jpg"
+        originalImageWidth={500}
+        imageResolutions={[200, 500, 1000]}
+        sizes="(max-width: 600px) 480px, 800px"
+        isAmp
+      />,
+    );
+
+    const imageEls = screen.getAllByAltText('orange 1');
+    expect(imageEls[0].nodeName).toBe('AMP-IMG');
+    expect(imageEls[1].nodeName).toBe('AMP-IMG');
+  });
+
+  it('should render an amp-img tag with fallback image', () => {
+    render(
+      <Image
+        alt="orange 1"
+        originCode="cpsdevpb"
+        src="41BC/test/_63482861_orange1.jpg"
+        originalImageWidth={500}
+        imageResolutions={[200, 500, 1000]}
+        sizes="(max-width: 600px) 480px, 800px"
+        isAmp
+      />,
+    );
+
+    const imageEls = screen.getAllByAltText('orange 1');
+    expect(imageEls[1]).toHaveAttribute('fallback', '');
+    expect(imageEls.length).toBe(2);
+  });
+
+  it('should support jpeg images', () => {
+    render(
+      <Image
+        alt="orange 1"
+        originCode="cpsdevpb"
+        src="41BC/test/_63482861_orange1.jpg"
+        originalImageWidth={500}
+        imageResolutions={[200, 500, 1000]}
+        sizes="(max-width: 600px) 480px, 800px"
+        isAmp
+      />,
+    );
+
+    const imageEls = screen.getAllByAltText('orange 1');
+    expect(imageEls[1]).toHaveAttribute('fallback', '');
+    expect(imageEls[1]).toHaveAttribute(
+      'srcset',
+      'https://ichef.bbci.co.uk/news/200/cpsdevpb/41BC/test/_63482861_orange1.jpg 200w, https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg 500w',
+    );
+  });
+
+  it('should support webp images', () => {
+    render(
+      <Image
+        alt="orange 1"
+        originCode="cpsdevpb"
+        src="41BC/test/_63482861_orange1.jpg"
+        originalImageWidth={500}
+        imageResolutions={[200, 500, 1000]}
+        sizes="(max-width: 600px) 480px, 800px"
+        isAmp
+      />,
+    );
+
+    const imageEls = screen.getAllByAltText('orange 1');
+    expect(imageEls[0]).not.toHaveAttribute('fallback', '');
+    expect(imageEls[0]).toHaveAttribute(
+      'srcset',
+      'https://ichef.bbci.co.uk/news/200/cpsdevpb/41BC/test/_63482861_orange1.jpg.webp 200w, https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg.webp 500w',
+    );
   });
 });

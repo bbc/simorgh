@@ -91,7 +91,26 @@ const Image = ({
           </Helmet>
         )}
         {isAmp ? (
-          <amp-img layout="responsive" width={width} height={height} />
+          <amp-img
+            alt={alt}
+            src={src}
+            width={width}
+            height={height}
+            srcSet={primarySrcset}
+            sizes={sizes}
+          >
+            {fallbackSrcset && (
+              <amp-img
+                alt={alt}
+                src={src}
+                width={width}
+                height={height}
+                srcSet={fallbackSrcset}
+                sizes={sizes}
+                fallback=""
+              />
+            )}
+          </amp-img>
         ) : (
           <picture>
             {primarySrcset && (
