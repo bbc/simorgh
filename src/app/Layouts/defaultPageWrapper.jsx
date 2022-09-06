@@ -109,39 +109,39 @@ const PageWrapper = ({ children, pageData, status }) => {
 
   return (
     <>
-<Helmet
+    <Helmet
         script={[{ 
-    type: 'text/javascript', 
-    innerHTML: `
+            type: 'text/javascript', 
+            innerHTML: `
 
-            const fontsForStorage = [
-            {
-                "name": "ReithSerif_M",
-                "version": 1
-            },
-            {
-                "name": "ReithSans_R",
-                "version": 1
-            }
-        ];
-        const head = document.head || document.getElementsByTagName('head')[0];
-        const fontStylePlaceholder = document.createElement('style');
-        fontStylePlaceholder.type = 'text/css';
-        let styleInnerText = '';
-        fontsForStorage.forEach(font => {
-            const storageKey = 'font-' + font.name + '-' + font.version;
-            let fontContents = localStorage.getItem(storageKey);
+                    const fontsForStorage = [
+                    {
+                        "name": "ReithSerif_M",
+                        "version": 1
+                    },
+                    {
+                        "name": "ReithSans_R",
+                        "version": 1
+                    }
+                ];
+                const head = document.head || document.getElementsByTagName('head')[0];
+                const fontStylePlaceholder = document.createElement('style');
+                fontStylePlaceholder.type = 'text/css';
+                let styleInnerText = '';
+                fontsForStorage.forEach(font => {
+                    const storageKey = 'font-' + font.name + '-' + font.version;
+                    let fontContents = localStorage.getItem(storageKey);
 
             
-            if (!fontContents) {
-                // if this wasn't a poc, we'd go and get the contents of the font from somewhere else
-            }
+                    if (!fontContents) {
+                        // if this wasn't a poc, we'd go and get the contents of the font from somewhere else
+                    }
 
-            styleInnerText += '@font-face{' + fontContents + ';font-display: swap;}';
-        });
-        fontStylePlaceholder.innerHTML = styleInnerText;
-        head.appendChild(fontStylePlaceholder);`
-          }]} 
+                    styleInnerText += '@font-face{' + fontContents + ';font-display: swap;}';
+                });
+                fontStylePlaceholder.innerHTML = styleInnerText;
+                head.appendChild(fontStylePlaceholder);`
+          }]}
       />
       <ThemeProvider service={service}>
       <GlobalStyles fonts={fonts} />
@@ -157,6 +157,7 @@ const PageWrapper = ({ children, pageData, status }) => {
         <FooterContainer />
       </Wrapper>
     </ThemeProvider>
+    </>
   );
 };
 
