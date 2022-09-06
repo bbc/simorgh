@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import brandSVG from '../../chameleonLogos/igbo';
-import cyrillicAndLatin from '../../../legacy/psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import latin from '../../../components/ThemeProvider/typography/scripts/latin';
 import '#psammead/psammead-locales/moment/ig';
 import '#psammead/moment-timezone-include/tz/Africa/Lagos';
 import withContext from '../../../contexts/utils/withContext';
@@ -40,11 +40,10 @@ export const service: DefaultServiceConfig = {
     defaultCaptionOffscreenText: 'Ihe a na-akpọ ya, ',
     imageCopyrightOffscreenText: 'Ebe foto si, ',
     brandSVG,
-    script: cyrillicAndLatin,
+    script: latin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Ogbako',
-    fonts: [],
     noBylinesPolicy:
       'https://www.bbc.com/igbo/institutional-48529074#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/igbo/institutional-48529074',
@@ -247,6 +246,17 @@ export const service: DefaultServiceConfig = {
         skipLink: {
           text: 'Skip %provider_name% post',
           endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+        consentBanner: {
+          heading: `Hapụ [social_media_site] ihe dị na ya?`,
+          body: `Edemede a nwere ihe ndị si na [social_media_site]. Anyị na-achọ ka i nye anyị ikike tupu e tinye ihe ọbụla, dịka akụrụngwa cookies na tekịnụzụ ndị ọzọ nwereike ịdị na ya. I nwereike ịgụ [social_media_site] [link] iwu cookie [/link] na [link] iwu nzuzo [/link] tupu ị nabata ya. Iji kirie ihe nọ n'ime ya, họrọ 'nabata na gaa n'ihu'.`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+          button: 'Nabata na gaa n’ihu',
         },
       },
       include: {

@@ -1,5 +1,5 @@
 import brandSVG from '../../chameleonLogos/afrique';
-import latinDiacritics from '../../../legacy/psammead/gel-foundations/src/scripts/latin-with-diacritics';
+import latinWithDiacritics from '../../../components/ThemeProvider/typography/scripts/latinWithDiacritics';
 import {
   C_POSTBOX,
   C_WHITE,
@@ -47,7 +47,7 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples:
       'https://www.bbc.com/afrique/institutionelles-49283281',
     isTrustProjectParticipant: true,
-    script: latinDiacritics,
+    script: latinWithDiacritics,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Accueil',
@@ -258,6 +258,16 @@ export const service: DefaultServiceConfig = {
           text: 'Ignorer %provider_name% publication',
           endTextVisuallyHidden: 'Fin de %provider_name% publication',
         },
+        consentBanner: {
+          heading: 'Autoriser le contenu de [social_media_site]?',
+          body: `This article contains content provided by [social_media_site].  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read the [social_media_site] [link] cookie policy [/link] and [link] privacy policy [/link] before accepting. To view this content choose 'accept and continue'.`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+        },
       },
       include: {
         errorMessage: `Désolé, nous ne pouvons pas afficher cette partie de l'article sur cette page mobile légère.`,
@@ -327,7 +337,6 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         "BBC. La BBC n'est pas responsable du contenu des sites externes.",
     },
-    fonts: [],
     timezone: 'GMT',
     navigation: [
       {

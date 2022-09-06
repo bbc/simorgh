@@ -56,7 +56,9 @@ export type ServiceConfig = {
   serviceName: string;
   serviceLang?: string;
   languageName: string;
-  altCalendar?: unknown;
+  altCalendar?: {
+    formatDate: (gregorianMoment: unknown) => string | null;
+  };
   themeColor: string;
   twitterCreator: string;
   twitterSite: string;
@@ -89,13 +91,20 @@ export type ServiceConfig = {
     para3: string;
   };
   translations: Translations;
-  brandSVG: unknown;
+  brandSVG: {
+    group: JSX.Element;
+    ratio: number;
+    viewbox: {
+      height: number;
+      width: number;
+    };
+  };
   mostRead: MostRead;
   mostWatched: MostWatched;
   radioSchedule?: RadioSchedule;
   recommendations?: Recommendations;
   footer: Footer;
-  fonts?: unknown;
+  fonts?: ((baseUrlOverride: string) => string)[];
   navigation?: {
     title: string;
     url: string;
