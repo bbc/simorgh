@@ -6,23 +6,23 @@ The `Image` component is used to render an image using the correct custom style 
 
 ## Props
 
-| Name             | type             | Description                                                                                                                                                                                                                                                                                         |
-| ---------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| alt              | string           | Stuff                                                                                                                                                                                                                                                                                               |
-| src              | string           | Stuff                                                                                                                                                                                                                                                                                               |
-| originCode       | string           | Stuff                                                                                                                                                                                                                                                                                               |
-| imageResolutions | array of numbers | Stuff                                                                                                                                                                                                                                                                                               |
-| sizes            | string           | Stuff                                                                                                                                                                                                                                                                                               |
-| width            | number           | Stuff                                                                                                                                                                                                                                                                                               |
-| height           | number           | Stuff                                                                                                                                                                                                                                                                                               |
-| className?       | string           | Stuff                                                                                                                                                                                                                                                                                               |
-| aspectRatio?     | number           | Stuff                                                                                                                                                                                                                                                                                               |
-| lazyLoad?        | boolean          | Stuff                                                                                                                                                                                                                                                                                               |
-| preload?         | boolean          | Stuff                                                                                                                                                                                                                                                                                               |
-| placeholder?     | boolean          | Stuff                                                                                                                                                                                                                                                                                               |
-| isAmp?           | boolean          | Stuff                                                                                                                                                                                                                                                                                               |
-| fontVariant?     | string           | Used to render the correct `font-family`, `font-style` and `font-weight`. Possible values are `sansRegular`, `sansRegularItalic`, `sansBold`, `sansBoldItalic`, `sansLight`, `serifRegular`, `serifMedium`, `serifMediumItalic`, `serifBold`, `serifLight`. The default is `sansRegular`.           |
-| size?            | string           | The [BBC GEL size](https://www.bbc.co.uk/gel/features/typography#type-sizes). Possible values are `atlas`, `elephant`, `imperial`, `royal`, `foolscap`, `canon`, `trafalgar`, `paragon`, `doublePica`, `greatPrimer`, `bodyCopy`, `pica`, `longPrimer`, `brevier`, `minion`. The default is `pica`. |
+| Name              | type    | Description                                                                                                             |
+| ----------------- | ------- | ----------------------------------------------------------------------------------------------------------------------- |
+| alt               | string  | the image alt text                                                                                                      |
+| src               | string  | the src attribute for the img element                                                                                   |
+| primarySrcset     | string  | the primary srcset (probably the webp images)                                                                           |
+| primaryMediaType  | string  | the primary image mediaType e.g. "image/webp"                                                                           |
+| fallbackSrcset    | string  | the fallback srcset (probably the jpeg images)                                                                          |
+| sizes             | string  | the responsive sizes attribute, used in conjunction with srcsets so the browser selects the appropriate image to render |
+| fallbackMediaType | string  | the primary image mediaType e.g. "image/jpeg"                                                                           |
+| width             | number  | the width attribute for the image element                                                                               |
+| height            | number  | the height attribute for the image element                                                                              |
+| className?        | string  | this prop is used by Emotion to provide ability to add styles                                                           |
+| aspectRatio?      | number  | use this prop if you want to use a custom aspect ratio. useful if you don't have the width and height props             |
+| lazyLoad?         | boolean | whether or not the image should lazy load                                                                               |
+| preload?          | boolean | whether or not the image should preload                                                                                 |
+| placeholder?      | boolean | whether or not to render a placeholder background image                                                                 |
+| isAmp?            | boolean | whether or not to render an AMP image                                                                                   |
 
 ## How to use
 
@@ -32,9 +32,9 @@ The `Image` component is used to render an image using the correct custom style 
   alt="orange 1"
   src="41BC/test/_63482861_orange1.jpg"
   primarySrcset="https://ichef.bbci.co.uk/news/200/cpsdevpb/41BC/test/_63482861_orange1.jpg.webp 200w, https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg.webp 500w"
-  primaryMimeType="image/webp"
+  primaryMediaType="image/webp"
   fallbackSrcset="https://ichef.bbci.co.uk/news/200/cpsdevpb/41BC/test/_63482861_orange1.jpg 200w, https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg 500w"
-  fallbackMimeType="image/jpeg"
+  fallbackMediaType="image/jpeg"
   sizes="(max-width: 600px) 480px, 800px"
   width={500}
   height={281}

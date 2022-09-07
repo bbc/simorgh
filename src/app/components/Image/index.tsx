@@ -8,14 +8,14 @@ interface Props {
   alt: string;
   aspectRatio?: number;
   className?: string;
-  fallbackMimeType: string;
+  fallbackMediaType: string;
   fallbackSrcset: string;
   height: number;
   isAmp?: boolean;
   lazyLoad?: boolean;
   placeholder?: boolean;
   preload?: boolean;
-  primaryMimeType: string;
+  primaryMediaType: string;
   primarySrcset: string;
   sizes: string;
   src: string;
@@ -28,14 +28,14 @@ const Image = ({
   alt,
   aspectRatio,
   className,
-  fallbackMimeType,
+  fallbackMediaType,
   fallbackSrcset,
   height,
   isAmp = false,
   lazyLoad = false,
   placeholder = true,
   preload = false,
-  primaryMimeType,
+  primaryMediaType,
   primarySrcset,
   sizes = '100vw',
   src,
@@ -95,14 +95,14 @@ const Image = ({
               {primarySrcset && (
                 <source
                   srcSet={primarySrcset}
-                  type={primaryMimeType || 'image/webp'}
+                  type={primaryMediaType || 'image/webp'}
                   sizes={sizes}
                 />
               )}
               {fallbackSrcset && (
                 <source
                   srcSet={fallbackSrcset}
-                  type={fallbackMimeType || 'image/jpeg'}
+                  type={fallbackMediaType || 'image/jpeg'}
                   sizes={sizes}
                 />
               )}

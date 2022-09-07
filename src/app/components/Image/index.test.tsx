@@ -11,9 +11,9 @@ const Fixture = ({ ...props }) => (
     alt="orange 1"
     src="41BC/test/_63482861_orange1.jpg"
     primarySrcset="https://ichef.bbci.co.uk/news/200/cpsdevpb/41BC/test/_63482861_orange1.jpg.webp 200w, https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg.webp 500w"
-    primaryMimeType="image/webp"
+    primaryMediaType="image/webp"
     fallbackSrcset="https://ichef.bbci.co.uk/news/200/cpsdevpb/41BC/test/_63482861_orange1.jpg 200w, https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg 500w"
-    fallbackMimeType="image/jpeg"
+    fallbackMediaType="image/jpeg"
     sizes="(max-width: 600px) 480px, 800px"
     width={500}
     height={281}
