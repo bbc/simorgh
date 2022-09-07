@@ -95,7 +95,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <span
+                <strong
                   css={[
                     BylineCss.author,
                     getSansBold(service),
@@ -103,14 +103,14 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
                   ]}
                 >
                   {author}
-                </span>
+                </strong>
                 <RightChevron css={BylineCss.authorChevron} />
               </a>
             </React.Fragment>
           ) : (
             <span role="text">
               <VisuallyHiddenText>{`${authorTranslated}, `}</VisuallyHiddenText>
-              <span
+              <strong
                 css={[
                   BylineCss.author,
                   getSansBold(service),
@@ -118,14 +118,14 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
                 ]}
               >
                 {author}
-              </span>
+              </strong>
             </span>
           )}
         </li>
         <li>
           <span role="text">
             <VisuallyHiddenText>{`${jobRoleTranslated}, `} </VisuallyHiddenText>
-            <span
+            <strong
               css={[
                 BylineCss.jobRole,
                 getSansBold(service),
@@ -133,7 +133,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
               ]}
             >
               {jobRole}
-            </span>
+            </strong>
           </span>
         </li>
         {twitterLink ? (
