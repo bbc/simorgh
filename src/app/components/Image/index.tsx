@@ -1,15 +1,14 @@
 /** @jsx jsx */
+import React from 'react';
 import { css, jsx, Theme } from '@emotion/react';
-import React, { Fragment } from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import { createSrcsets } from '../../lib/utilities/srcSet';
-import BASE64_PLACEHOLDER_IMAGE from '../Image/base64Placeholder';
+import BASE64_PLACEHOLDER_IMAGE from './base64Placeholder';
 
 interface Props {
   alt: string;
   src: string;
   originCode: string;
-  originalImageWidth: number;
   imageResolutions: number[];
   sizes: string;
   width: number;
@@ -38,7 +37,7 @@ const Image = ({
   preload = false,
   placeholder = true,
   isAmp = false,
-}: Props) => {
+}: React.PropsWithChildren<Props>) => {
   const wrapperAspectRatio =
     aspectRatio || width / height || DEFAULT_ASPECT_RATIO;
   const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
