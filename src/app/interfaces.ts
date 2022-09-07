@@ -72,6 +72,7 @@ interface MediaQueries {
   GROUP_4_MIN_WIDTH: string;
   GROUP_4_ONLY: string;
   GROUP_5_MIN_WIDTH: string;
+  HIGH_CONTRAST: string;
 }
 
 interface Spacings {

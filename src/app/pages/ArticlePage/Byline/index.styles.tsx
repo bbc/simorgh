@@ -1,12 +1,5 @@
 import { css, Theme } from '@emotion/react';
 
-const link = css({
-  textDecoration: 'none',
-  position: 'relative',
-  zIndex: 1,
-  paddingRight: '2.75rem',
-});
-
 export default {
   bylineSection: ({ spacings, mq }: Theme) =>
     css({
@@ -16,7 +9,7 @@ export default {
       div: { padding: 0 },
     }),
 
-  bylineList: () => css({ listStyle: 'none', padding: 0 }),
+  bylineList: () => css({ listStyle: 'none', padding: 0, margin: 0 }),
 
   author: ({ palette }: Theme) =>
     css({
@@ -32,21 +25,20 @@ export default {
       color: palette.POSTBOX,
       display: 'inline-block',
       verticalAlign: 'middle',
-
-      '&:hover, &:focus': {
-        textDecoration: 'underline',
-      },
     }),
 
-  authorChevron: ({ palette, spacings }: Theme) =>
+  authorChevron: ({ palette, spacings, mq }: Theme) =>
     css({
       verticalAlign: 'middle',
       margin: `0 ${spacings.HALF}rem`,
       color: palette.GREY_10,
-      fill: `currentcolor`,
+      fill: 'currentcolor',
+      width: `${spacings.FULL + spacings.HALF}rem`,
+      height: `${spacings.FULL + spacings.HALF}rem`,
+      [mq.HIGH_CONTRAST]: { fill: 'linkText' },
     }),
 
-  twitterChevron: ({ palette, spacings }: Theme) =>
+  twitterChevron: ({ palette, spacings, mq }: Theme) =>
     css({
       verticalAlign: 'middle',
       margin: `0 ${spacings.HALF}rem`,
@@ -54,6 +46,7 @@ export default {
       fill: `currentcolor`,
       width: `${spacings.FULL}rem`,
       height: `${spacings.FULL}rem`,
+      [mq.HIGH_CONTRAST]: { fill: 'linkText' },
     }),
 
   lineBreak: ({ palette, spacings }: Theme) =>
@@ -61,6 +54,18 @@ export default {
       borderColor: palette.GREY_5,
       width: `${40 / 16}rem`,
       margin: `${spacings.DOUBLE}rem 0`,
+    }),
+
+  link: () =>
+    css({
+      display: 'inline-block',
+      textDecoration: 'none',
+      paddingRight: '2.75rem',
+      '&:focus, &:hover': {
+        span: {
+          textDecoration: 'underline',
+        },
+      },
     }),
 
   location: ({ palette }: Theme) =>
@@ -73,6 +78,11 @@ export default {
       color: palette.SHADOW,
     }),
 
-  authorLink: () => css([link, { paddingTop: '1.375rem' }]),
-  twitterLink: () => css([link, { paddingBottom: '1.75rem' }]),
+  get authorLink() {
+    return css([this.link(), { paddingTop: '1.375rem' }]);
+  },
+
+  get twitterLink() {
+    return css([this.link(), { paddingBottom: '1.6rem' }]);
+  },
 };

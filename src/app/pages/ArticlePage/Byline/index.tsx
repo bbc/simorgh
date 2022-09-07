@@ -107,8 +107,13 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
           {twitterLink ? (
             <React.Fragment>
               <VisuallyHiddenText>{`${authorTranslated}, `}</VisuallyHiddenText>
-              <a css={BylineCss.authorLink} href={twitterLink}>
-                <span
+              <a
+                css={BylineCss.authorLink}
+                href={twitterLink}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <strong
                   css={[
                     BylineCss.author,
                     getSansBold(service),
@@ -116,14 +121,14 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
                   ]}
                 >
                   {author}
-                </span>
+                </strong>
                 <RightChevron css={BylineCss.authorChevron} />
               </a>
             </React.Fragment>
           ) : (
             <span role="text">
               <VisuallyHiddenText>{`${authorTranslated}, `}</VisuallyHiddenText>
-              <span
+              <strong
                 css={[
                   BylineCss.author,
                   getSansBold(service),
@@ -131,14 +136,14 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
                 ]}
               >
                 {author}
-              </span>
+              </strong>
             </span>
           )}
         </li>
         <li>
           <span role="text">
             <VisuallyHiddenText>{`${jobRoleTranslated}, `} </VisuallyHiddenText>
-            <span
+            <strong
               css={[
                 BylineCss.jobRole,
                 getSansBold(service),
@@ -146,13 +151,19 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
               ]}
             >
               {jobRole}
-            </span>
+            </strong>
           </span>
         </li>
         {twitterLink ? (
           <li>
-            <a css={BylineCss.twitterLink} href={twitterLink}>
-              <span role="text">
+            <a
+              css={BylineCss.twitterLink}
+              href={twitterLink}
+              target="_blank"
+              rel="noreferrer"
+              aria-labelledby="byline-twitter-link"
+            >
+              <span role="text" id="byline-twitter-link">
                 <VisuallyHiddenText lang="en-GB">
                   {`Twitter, `}
                 </VisuallyHiddenText>

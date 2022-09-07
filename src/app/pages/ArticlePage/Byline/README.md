@@ -2,7 +2,7 @@
 
 ## Description
 
-A Byline section with all relevant article's author informations.
+A Byline section with all relevant article's author information.
 
 ## Props
 
