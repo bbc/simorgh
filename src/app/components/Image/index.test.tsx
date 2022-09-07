@@ -286,10 +286,10 @@ describe('Image - Canonical', () => {
     );
     expect(container).toMatchInlineSnapshot(`
       .emotion-0 {
-        padding-bottom: 56.199999999999996%;
         position: relative;
         height: 0;
         overflow: hidden;
+        padding-bottom: 56.199999999999996%;
         position: relative;
       }
 
