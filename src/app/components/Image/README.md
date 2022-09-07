@@ -2,7 +2,7 @@
 
 ## Description
 
-The `Image` component is used to render an image using the correct custom style for for the service. It supports pre-load and lazy loading. The image component supports webP in the first instance and makes use of jpeg as a fallback format.
+The `Image` component is used to render an image using the correct custom style for for the service. It supports pre-load and lazy loading and can render a placeholder when image is loading. The image component supports webP in the first instance and makes use of jpeg as a fallback format.
 
 ## Props
 
@@ -27,11 +27,16 @@ The `Image` component is used to render an image using the correct custom style 
 ## How to use
 
 ```tsx
-<Image>By default, this is text in a regular sans-serif font, in bodyCopy size and inside of a p element.</Image>
-
-<Image size="atlas">This is text in a regular sans-serif font, in atlas size and inside of a p element.</Image>
-
-<Image fontVariant="serifBold">This is text in a bold serif font, in bodyCopy size and inside of a p element.</Image>
-
-<Image fontVariant="serifBold" size="atlas">This is text in a bold serif font, in atlas size and inside of a paragraph element.</Image>
+<Image
+  isAmp={false}
+  alt="orange 1"
+  src="41BC/test/_63482861_orange1.jpg"
+  primarySrcset="https://ichef.bbci.co.uk/news/200/cpsdevpb/41BC/test/_63482861_orange1.jpg.webp 200w, https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg.webp 500w"
+  primaryMimeType="image/webp"
+  fallbackSrcset="https://ichef.bbci.co.uk/news/200/cpsdevpb/41BC/test/_63482861_orange1.jpg 200w, https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg 500w"
+  fallbackMimeType="image/jpeg"
+  sizes="(max-width: 600px) 480px, 800px"
+  width={500}
+  height={281}
+/>
 ```
