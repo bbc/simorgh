@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React from 'react';
+import React, { Fragment } from 'react';
 import { css, jsx, Theme } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import { createSrcsets } from '../../lib/utilities/srcSet';
@@ -49,100 +49,102 @@ const Image = ({
     });
 
   return (
-    <div
-      className={className}
-      css={{
-        paddingBottom: `${(1 / wrapperAspectRatio) * 100}%`,
-        position: 'relative',
-        height: 0,
-        overflow: 'hidden',
-      }}
-    >
+    <React.Fragment>
+      {preload && (
+        <Helmet>
+          <link
+            rel="preload"
+            as="image"
+            href={src}
+            imagesrcset={primarySrcset}
+            imagesizes={sizes}
+          />
+        </Helmet>
+      )}
       <div
-        css={(theme: Theme) => [
-          placeholder &&
-            css({
-              backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
-              backgroundColor: theme.palette.LUNAR,
-              backgroundPosition: 'center center',
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: '60px 17px',
-              [theme.mq.GROUP_2_MIN_WIDTH]: {
-                backgroundSize: '77px 22px',
-              },
-              [theme.mq.GROUP_4_MIN_WIDTH]: {
-                backgroundSize: '93px 27px',
-              },
-            }),
-          css({
-            position: 'absolute',
-            top: 0,
-            bottom: 0,
-            right: 0,
-            left: 0,
-          }),
-        ]}
+        className={className}
+        css={{
+          paddingBottom: `${(1 / wrapperAspectRatio) * 100}%`,
+          position: 'relative',
+          height: 0,
+          overflow: 'hidden',
+        }}
       >
-        {preload && (
-          <Helmet>
-            <link
-              rel="preload"
-              as="image"
-              href={src}
-              imagesrcset={primarySrcset}
-              imagesizes={sizes}
-            />
-          </Helmet>
-        )}
-        {isAmp ? (
-          <amp-img
-            alt={alt}
-            src={src}
-            width={width}
-            height={height}
-            srcSet={primarySrcset}
-            sizes={sizes}
-          >
-            {fallbackSrcset && (
-              <amp-img
-                alt={alt}
-                src={src}
-                width={width}
-                height={height}
-                srcSet={fallbackSrcset}
-                sizes={sizes}
-                fallback=""
-              />
-            )}
-          </amp-img>
-        ) : (
-          <picture>
-            {primarySrcset && (
-              <source
-                srcSet={primarySrcset}
-                type={primaryMimeType || 'image/webp'}
-                sizes={sizes}
-              />
-            )}
-            {fallbackSrcset && (
-              <source
-                srcSet={fallbackSrcset}
-                type={fallbackMimeType || 'image/jpeg'}
-                sizes={sizes}
-              />
-            )}
-            <img
-              src={src}
+        <div
+          css={(theme: Theme) => [
+            placeholder &&
+              css({
+                backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
+                backgroundColor: theme.palette.LUNAR,
+                backgroundPosition: 'center center',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: '60px 17px',
+                [theme.mq.GROUP_2_MIN_WIDTH]: {
+                  backgroundSize: '77px 22px',
+                },
+                [theme.mq.GROUP_4_MIN_WIDTH]: {
+                  backgroundSize: '93px 27px',
+                },
+              }),
+            css({
+              position: 'absolute',
+              top: 0,
+              bottom: 0,
+              right: 0,
+              left: 0,
+            }),
+          ]}
+        >
+          {isAmp ? (
+            <amp-img
               alt={alt}
-              loading={lazyLoad ? 'lazy' : undefined}
+              src={src}
               width={width}
               height={height}
-              css={{ width: '100%', height: '100%' }}
-            />
-          </picture>
-        )}
+              srcSet={primarySrcset}
+              sizes={sizes}
+            >
+              {fallbackSrcset && (
+                <amp-img
+                  alt={alt}
+                  src={src}
+                  width={width}
+                  height={height}
+                  srcSet={fallbackSrcset}
+                  sizes={sizes}
+                  fallback=""
+                />
+              )}
+            </amp-img>
+          ) : (
+            <picture>
+              {primarySrcset && (
+                <source
+                  srcSet={primarySrcset}
+                  type={primaryMimeType || 'image/webp'}
+                  sizes={sizes}
+                />
+              )}
+              {fallbackSrcset && (
+                <source
+                  srcSet={fallbackSrcset}
+                  type={fallbackMimeType || 'image/jpeg'}
+                  sizes={sizes}
+                />
+              )}
+              <img
+                src={src}
+                alt={alt}
+                loading={lazyLoad ? 'lazy' : undefined}
+                width={width}
+                height={height}
+                css={{ width: '100%', height: '100%' }}
+              />
+            </picture>
+          )}
+        </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 
