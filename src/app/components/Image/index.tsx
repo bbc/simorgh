@@ -2,51 +2,47 @@
 import React from 'react';
 import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
-import { createSrcsets } from '../../lib/utilities/srcSet';
 import styles from './index.styles';
 
 interface Props {
   alt: string;
-  src: string;
-  originCode: string;
-  imageResolutions: number[];
-  sizes: string;
-  width: number;
-  height: number;
-  className?: string;
   aspectRatio?: number;
-  lazyLoad?: boolean;
-  preload?: boolean;
-  placeholder?: boolean;
+  className?: string;
+  fallbackMimeType: string;
+  fallbackSrcset: string;
+  height: number;
   isAmp?: boolean;
+  lazyLoad?: boolean;
+  placeholder?: boolean;
+  preload?: boolean;
+  primaryMimeType: string;
+  primarySrcset: string;
+  sizes: string;
+  src: string;
+  width: number;
 }
 
 const DEFAULT_ASPECT_RATIO = 16 / 9;
 
 const Image = ({
-  src,
   alt,
-  originCode,
-  imageResolutions,
-  sizes = '100vw',
-  width,
-  height,
   aspectRatio,
   className,
-  lazyLoad = false,
-  preload = false,
-  placeholder = true,
+  fallbackMimeType,
+  fallbackSrcset,
+  height,
   isAmp = false,
+  lazyLoad = false,
+  placeholder = true,
+  preload = false,
+  primaryMimeType,
+  primarySrcset,
+  sizes = '100vw',
+  src,
+  width,
 }: React.PropsWithChildren<Props>) => {
   const wrapperAspectRatio =
     aspectRatio || width / height || DEFAULT_ASPECT_RATIO;
-  const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
-    createSrcsets({
-      originCode,
-      locator: src,
-      originalImageWidth: width,
-      imageResolutions,
-    });
 
   return (
     <React.Fragment>
