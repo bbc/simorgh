@@ -89,7 +89,12 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
           {twitterLink ? (
             <React.Fragment>
               <VisuallyHiddenText>{`${authorTranslated}, `}</VisuallyHiddenText>
-              <a css={BylineCss.authorLink} href={twitterLink}>
+              <a
+                css={BylineCss.authorLink}
+                href={twitterLink}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <span
                   css={[
                     BylineCss.author,
@@ -133,7 +138,12 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
         </li>
         {twitterLink ? (
           <li>
-            <a css={BylineCss.twitterLink} href={twitterLink}>
+            <a
+              css={BylineCss.twitterLink}
+              href={twitterLink}
+              target="_blank"
+              rel="noreferrer"
+            >
               <span role="text">
                 <VisuallyHiddenText lang="en-GB">
                   {`Twitter, `}
