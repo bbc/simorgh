@@ -143,8 +143,9 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
               href={twitterLink}
               target="_blank"
               rel="noreferrer"
+              aria-labelledby="byline-twitter-link"
             >
-              <span role="text">
+              <span role="text" id="byline-twitter-link">
                 <VisuallyHiddenText lang="en-GB">
                   {`Twitter, `}
                 </VisuallyHiddenText>
