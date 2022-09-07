@@ -29,9 +29,11 @@ describe('Embed Consent Banner - Content', () => {
     const heading = screen.getByTestId('banner-heading');
     const body = screen.getByTestId('banner-body');
 
-    expect(heading.textContent).toEqual('¿Permitir el contenido de YouTube?');
+    expect(heading.textContent).toEqual(
+      '¿Permitir el contenido de Google YouTube?',
+    );
     expect(body.textContent).toEqual(
-      "Este artículo contiene contenido proporcionado por YouTube. Solicitamos tu permiso antes de que algo  se cargue, ya que ese sitio  puede estar usando cookies y otras tecnologías. Es posible que quieras leer política de cookies y política de privacidad de YouTube antes de aceptar. Para ver este contenido, selecciona 'aceptar y continuar'.",
+      "Este artículo contiene contenido proporcionado por Google YouTube. Solicitamos tu permiso antes de que algo  se cargue, ya que ese sitio  puede estar usando cookies y otras tecnologías. Es posible que quieras leer política de cookies y política de privacidad de Google YouTube antes de aceptar. Para ver este contenido, selecciona 'aceptar y continuar'.",
     );
   });
 
@@ -65,9 +67,9 @@ describe('Embed Consent Banner - Content', () => {
     const heading = screen.getByTestId('banner-heading');
     const body = screen.getByTestId('banner-body');
 
-    expect(heading.textContent).toEqual('Allow YouTube content?');
+    expect(heading.textContent).toEqual('Allow Google YouTube content?');
     expect(body.textContent).toEqual(
-      "This article contains content provided by YouTube.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Google's cookie policy and privacy policy before accepting. To view this content choose 'accept and continue'.",
+      "This article contains content provided by Google YouTube.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Google YouTube cookie policy and privacy policy before accepting. To view this content choose 'accept and continue'.",
     );
   });
 
