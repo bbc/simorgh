@@ -10,43 +10,35 @@ describe('Paragraph', () => {
     expect(screen.getByText('Hello World!').nodeName).toBe('P');
   });
 
-  it('should render the correct typography for the mundo service', async () => {
-    const { container } = render(<Paragraph>Hello World!</Paragraph>, {
+  it('should render the correct typography for the arabic service', async () => {
+    render(<Paragraph>Hello World!</Paragraph>, {
       service: 'mundo',
     });
 
-    expect(container).toMatchInlineSnapshot(`
-      .emotion-0 {
-        color: #141414;
-        font-size: 0.9375rem;
-        line-height: 1.25rem;
-        font-family: ReithSans,Helvetica,Arial,sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        margin: 0;
-      }
+    expect(screen.getByText('Hello World!')).toHaveStyle({
+      color: '#141414',
+      fontSize: '0.9375rem',
+      lineHeight: '1.25rem',
+      fontFamily: 'ReithSans,Helvetica,Arial,sans-serif',
+      fontStyle: 'normal',
+      fontWeight: 400,
+      margin: 0,
+    });
+  });
 
-      @media (min-width: 20rem) {
-        .emotion-0 {
-          font-size: 1rem;
-          line-height: 1.375rem;
-        }
-      }
+  it('should render the correct typography for the mundo service', async () => {
+    render(<Paragraph>Hello World!</Paragraph>, {
+      service: 'arabic',
+    });
 
-      @media (min-width: 37.5rem) {
-        .emotion-0 {
-          font-size: 1rem;
-          line-height: 1.375rem;
-        }
-      }
-
-      <div>
-        <p
-          class="emotion-0"
-        >
-          Hello World!
-        </p>
-      </div>
-    `);
+    expect(screen.getByText('Hello World!')).toHaveStyle({
+      color: '#141414',
+      fontSize: '0.9375rem',
+      lineHeight: '1.5rem',
+      fontFamily: '"BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif',
+      fontStyle: 'normal',
+      fontWeight: 400,
+      margin: 0,
+    });
   });
 });
