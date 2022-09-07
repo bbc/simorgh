@@ -3,7 +3,6 @@ import { css, Theme } from '@emotion/react';
 const link = css({
   textDecoration: 'none',
   position: 'relative',
-  zIndex: 1,
   paddingRight: '2.75rem',
 });
 
