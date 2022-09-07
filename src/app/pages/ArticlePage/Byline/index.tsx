@@ -181,10 +181,10 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
         ) : null}
         {location ? (
           <li>
-            <p>
+            <p css={[BylineCss.location]}>
               <span
                 css={[
-                  BylineCss.reportingFrom,
+                  BylineCss.reportingFromText,
                   getSansRegularItalic(service),
                   getBrevier(script),
                 ]}
@@ -194,7 +194,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
               <br />
               <span
                 css={[
-                  BylineCss.location,
+                  BylineCss.locationText,
                   getSansRegular(service),
                   getBrevier(script),
                 ]}

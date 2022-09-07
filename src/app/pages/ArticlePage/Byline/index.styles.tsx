@@ -68,12 +68,17 @@ export default {
       },
     }),
 
-  location: ({ palette }: Theme) =>
+  location: () =>
+    css({
+      margin: '0',
+    }),
+
+  locationText: ({ palette }: Theme) =>
     css({
       color: palette.SHADOW,
     }),
 
-  reportingFrom: ({ palette }: Theme) =>
+  reportingFromText: ({ palette }: Theme) =>
     css({
       color: palette.SHADOW,
     }),
