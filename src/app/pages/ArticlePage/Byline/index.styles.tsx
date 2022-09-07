@@ -37,7 +37,7 @@ export const StyledBylineSection = styled.section`
   }
 `;
 
-export const Author = styled.span<Props>`
+export const Author = styled.strong<Props>`
   color: ${C_GREY_10};
   ${({ service }) => getSansBold(service)}
   ${({ script }) => getBodyCopy(script)};
@@ -45,7 +45,7 @@ export const Author = styled.span<Props>`
   vertical-align: middle;
 `;
 
-export const JobRole = styled.span<Props>`
+export const JobRole = styled.strong<Props>`
   color: ${C_GREY_6};
   ${({ service }) => getSansBold(service)}
   ${({ script }) => getBrevier(script)}
