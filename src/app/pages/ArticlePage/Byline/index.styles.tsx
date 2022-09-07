@@ -71,11 +71,13 @@ export default {
   location: () =>
     css({
       margin: '0',
+      display: 'inline-block',
     }),
 
   locationText: ({ palette }: Theme) =>
     css({
       color: palette.SHADOW,
+      display: 'block',
     }),
 
   reportingFromText: ({ palette }: Theme) =>
