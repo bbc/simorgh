@@ -28,7 +28,6 @@ const Image = ({
   src,
   alt,
   originCode,
-  originalImageWidth,
   imageResolutions,
   sizes = '100vw',
   width,
@@ -46,7 +45,7 @@ const Image = ({
     createSrcsets({
       originCode,
       locator: src,
-      originalImageWidth,
+      originalImageWidth: width,
       imageResolutions,
     });
 
