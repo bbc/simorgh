@@ -28,7 +28,7 @@ import indexPageJson from '#data/ukrainian/ukraine_in_russian';
 import storyPageRecommendationsData from '#data/mundo/recommendations/index.json';
 
 import { FRONT_PAGE, ERROR_PAGE } from '#app/routes/utils/pageTypes';
-import routes from './index';
+import routes from '.';
 import {
   render,
   screen,
@@ -39,20 +39,7 @@ fetchMock.config.fallbackToNetwork = true; // ensures non mocked requests fallba
 global.performance.getEntriesByName = jest.fn(() => []);
 
 // mock pages/index.js to return a non async page component
-jest.mock('#pages/index.js', () => ({
-  StoryPage: jest.requireActual('#pages/StoryPage').default,
-  OnDemandTvPage: jest.requireActual('#pages/OnDemandTvPage').default,
-  PhotoGalleryPage: jest.requireActual('#pages/PhotoGalleryPage').default,
-  OnDemandAudioPage: jest.requireActual('#pages/OnDemandAudioPage').default,
-  MostReadPage: jest.requireActual('#pages/MostReadPage').default,
-  MostWatchedPage: jest.requireActual('#pages/MostWatchedPage').default,
-  MediaAssetPage: jest.requireActual('#pages/MediaAssetPage').default,
-  LiveRadioPage: jest.requireActual('#pages/LiveRadioPage').default,
-  IdxPage: jest.requireActual('#pages/IdxPage').default,
-  FrontPage: jest.requireActual('#pages/FrontPage').default,
-  ErrorPage: jest.requireActual('#pages/ErrorPage').default,
-  ArticlePage: jest.requireActual('#pages/ArticlePage').default,
-}));
+jest.mock('../pages');
 
 beforeEach(() => {
   // Mocks out CanonicalAdBootstrapJs script
@@ -88,6 +75,9 @@ const renderRouter = props =>
         ...props,
       })}
     </MemoryRouter>,
+    {
+      service: props.service,
+    },
   );
 
 it('should have correct properties in each route', () => {
