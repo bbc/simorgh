@@ -60,26 +60,29 @@ const Image = ({
       }}
     >
       <div
-        css={(theme: Theme) =>
+        css={(theme: Theme) => [
+          placeholder &&
+            css({
+              backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
+              backgroundColor: theme.palette.LUNAR,
+              backgroundPosition: 'center center',
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: '60px 17px',
+              [theme.mq.GROUP_2_MIN_WIDTH]: {
+                backgroundSize: '77px 22px',
+              },
+              [theme.mq.GROUP_4_MIN_WIDTH]: {
+                backgroundSize: '93px 27px',
+              },
+            }),
           css({
-            backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
-            backgroundColor: theme.palette.LUNAR,
-            backgroundPosition: 'center center',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: '60px 17px',
-            [theme.mq.GROUP_2_MIN_WIDTH]: {
-              backgroundSize: '77px 22px',
-            },
-            [theme.mq.GROUP_4_MIN_WIDTH]: {
-              backgroundSize: '93px 27px',
-            },
             position: 'absolute',
             top: 0,
             bottom: 0,
             right: 0,
             left: 0,
-          })
-        }
+          }),
+        ]}
       >
         {preload && (
           <Helmet>
