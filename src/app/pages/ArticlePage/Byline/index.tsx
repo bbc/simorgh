@@ -181,7 +181,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
         ) : null}
         {location ? (
           <li>
-            <p css={[BylineCss.location]}>
+            <span css={[BylineCss.location]}>
               <span
                 css={[
                   BylineCss.reportingFromText,
@@ -191,7 +191,6 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
               >
                 {reportingFromTranslated}
               </span>
-              <br />
               <span
                 css={[
                   BylineCss.locationText,
@@ -201,7 +200,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
               >
                 {location}
               </span>
-            </p>
+            </span>
           </li>
         ) : null}
         <hr css={BylineCss.lineBreak} aria-hidden />
