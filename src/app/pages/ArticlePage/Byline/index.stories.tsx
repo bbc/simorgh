@@ -63,5 +63,11 @@ export const LinkAndLocationByline = ({ service, variant }: Props) => (
     fixture={bylineWithLinkAndLocation}
     service={service}
     variant={variant}
-  />
+  >
+    <Timestamp
+      firstPublished={1660658887}
+      lastPublished={1660658887}
+      popOut={false}
+    />
+  </Component>
 );
