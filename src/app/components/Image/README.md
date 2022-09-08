@@ -2,7 +2,7 @@
 
 ## Description
 
-The `Image` component is used to render an image using the correct custom style for for the service. It supports pre-load and lazy loading and can render a placeholder when image is loading. The image component supports webP in the first instance and makes use of jpeg as a fallback format.
+The `Image` component is used to render an image using the correct custom style for for the service. It supports pre-load and lazy loading and can render a placeholder when image is loading. The image component supports webP in the first instance and makes use of jpeg as a fallback format. The image component supports AMP and canonical pages.
 
 ## Props
 
