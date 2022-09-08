@@ -124,7 +124,7 @@ describe('ServiceContextProvider', () => {
 
             return (
               <span>
-                {translations[assertionValue as keyof Translations] as string}
+                {translations[assertionValue as keyof Translations]?.toString()}
               </span>
             );
           };
