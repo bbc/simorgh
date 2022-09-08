@@ -60,7 +60,7 @@ export default {
     css({
       display: 'inline-block',
       textDecoration: 'none',
-      paddingRight: '2.75rem',
+      paddingInlineEnd: '2.75rem',
       '&:focus, &:hover': {
         span: {
           textDecoration: 'underline',
