@@ -191,6 +191,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
               >
                 {reportingFromTranslated}
               </span>
+              <VisuallyHiddenText> </VisuallyHiddenText>
               <span
                 css={[
                   BylineCss.locationText,
