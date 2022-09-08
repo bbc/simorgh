@@ -41,7 +41,7 @@ The `Image` component is used to render an image using the correct custom style 
 />
 ```
 
-You can generate the `primarySrcset`, `primaryMediaType`, `fallbackSrcset`, and `fallbackMediaType` ptops using the [`createSrcsets`](../../lib/utilities/srcSet/index.js) function. For example:
+You can generate the `primarySrcset`, `primaryMediaType`, `fallbackSrcset`, and `fallbackMediaType` props using the [`createSrcsets`](../../lib/utilities/srcSet/index.js) function. For example:
 
 ```tsx
 const src = '41BC/test/_63482861_orange1.jpg';
