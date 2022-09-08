@@ -90,7 +90,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
             <React.Fragment>
               <VisuallyHiddenText>{`${authorTranslated}, `}</VisuallyHiddenText>
               <a
-                css={BylineCss.authorLink}
+                css={[BylineCss.link, BylineCss.authorLink]}
                 href={twitterLink}
                 target="_blank"
                 rel="noreferrer"
@@ -139,7 +139,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
         {twitterLink ? (
           <li>
             <a
-              css={BylineCss.twitterLink}
+              css={[BylineCss.link, BylineCss.twitterLink]}
               href={twitterLink}
               target="_blank"
               rel="noreferrer"
@@ -150,6 +150,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
                   {`Twitter, `}
                 </VisuallyHiddenText>
                 <span
+                  className="byline__twitter-text"
                   css={[
                     BylineCss.twitterText,
                     getSansBold(service),

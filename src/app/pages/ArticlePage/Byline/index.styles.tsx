@@ -62,17 +62,13 @@ export default {
       textDecoration: 'none',
       paddingInlineEnd: '2.75rem',
       '&:focus, &:hover': {
-        span: {
+        '.byline__twitter-text': {
           textDecoration: 'underline',
         },
       },
     }),
 
-  get authorLink() {
-    return css([this.link(), { paddingTop: '1.375rem' }]);
-  },
+  authorLink: () => css({ paddingTop: '1.375rem' }),
 
-  get twitterLink() {
-    return css([this.link(), { paddingBottom: '1.6rem' }]);
-  },
+  twitterLink: () => css({ paddingBottom: '1.6rem' }),
 };
