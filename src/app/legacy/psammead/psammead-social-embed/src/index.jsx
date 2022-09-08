@@ -95,12 +95,16 @@ export const AmpSocialEmbed = ({
     <SkipLinkWrapper service={service} provider={provider} {...skipLink}>
       {embedCaption ? (
         <CaptionWrapper service={service} {...embedCaption}>
-          <EmbedConsentBannerAmp pageType={pageType} provider={provider}>
+          <EmbedConsentBannerAmp
+            pageType={pageType}
+            provider={provider}
+            id={id}
+          >
             <AmpElement id={id} />
           </EmbedConsentBannerAmp>
         </CaptionWrapper>
       ) : (
-        <EmbedConsentBannerAmp pageType={pageType} provider={provider}>
+        <EmbedConsentBannerAmp pageType={pageType} provider={provider} id={id}>
           <AmpElement id={id} />
         </EmbedConsentBannerAmp>
       )}
