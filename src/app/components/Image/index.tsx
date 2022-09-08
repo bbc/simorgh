@@ -59,12 +59,10 @@ const Image = ({
       )}
       <div
         className={className}
-        css={[
-          styles.wrapper,
-          {
-            paddingBottom: `${(1 / wrapperAspectRatio) * 100}%`,
-          },
-        ]}
+        css={styles.wrapper}
+        style={{
+          paddingBottom: `${(1 / wrapperAspectRatio) * 100}%`,
+        }}
       >
         <div
           css={[placeholder && styles.placeholder, styles.placeholderWrapper]}
