@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import React from 'react';
+/* @jsxFrag React.Fragment */
+import React, { PropsWithChildren } from 'react';
 import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import styles from './index.styles';
@@ -40,12 +41,12 @@ const Image = ({
   sizes = '100vw',
   src,
   width,
-}: React.PropsWithChildren<Props>) => {
+}: PropsWithChildren<Props>) => {
   const wrapperAspectRatio =
     aspectRatio || width / height || DEFAULT_ASPECT_RATIO;
 
   return (
-    <React.Fragment>
+    <>
       {preload && (
         <Helmet>
           <link
@@ -116,7 +117,7 @@ const Image = ({
           )}
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 
