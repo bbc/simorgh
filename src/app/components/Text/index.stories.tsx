@@ -57,7 +57,8 @@ const a11yTestingStory = ({ service, variant }: Props) => {
         </div>
         <div>
           <Heading level={4} size="pica" tabIndex={-1}>
-            This is some text rendered in a h4 element in a pica size.
+            This is some text rendered in a h4 element in a pica size with a
+            tabindex=&quot;-1&quot;
           </Heading>
         </div>
       </ServiceContextProvider>
