@@ -5,6 +5,7 @@ import {
   waitFor,
 } from '../react-testing-library-with-providers';
 import Image from '.';
+import BASE64_PLACEHOLDER_IMAGE from './base64Placeholder';
 
 const Fixture = ({ ...props }) => (
   <Image
@@ -124,15 +125,14 @@ describe('Image - Canonical', () => {
     expect(screen.getByAltText('orange 1')).toBeInTheDocument();
   });
 
-  it('should match snapshot, specifically custom styles and placeholder image', () => {
-    const { container } = render(<Fixture css={{ position: 'relative' }} />);
+  it('should match snapshot', () => {
+    const { container } = render(<Fixture />);
+
     expect(container).toMatchInlineSnapshot(`
       .emotion-0 {
         position: relative;
         height: 0;
         overflow: hidden;
-        padding-bottom: 56.199999999999996%;
-        position: relative;
       }
 
       .emotion-1 {
@@ -172,6 +172,7 @@ describe('Image - Canonical', () => {
       <div>
         <div
           class="emotion-0"
+          style="padding-bottom: 56.199999999999996%;"
         >
           <div
             class="emotion-1"
@@ -201,10 +202,108 @@ describe('Image - Canonical', () => {
     `);
   });
 
+  it('should render a placeholder image by default', () => {
+    render(<Fixture />);
+    const imageEl = screen.getByAltText('orange 1');
+    expect(imageEl.parentNode?.parentNode).toHaveStyle({
+      backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
+    });
+  });
+
+  it('should render a placeholder image when placeholder is true', () => {
+    render(<Fixture />);
+    const imageEl = screen.getByAltText('orange 1');
+    expect(imageEl.parentNode?.parentNode).toHaveStyle({
+      backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
+    });
+  });
+
+  it('should not render a placeholder image when placeholder is false', () => {
+    render(<Fixture placeholder={false} />);
+    const imageEl = screen.getByAltText('orange 1');
+    expect(imageEl.parentNode?.parentNode).not.toHaveStyle({
+      backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
+    });
+  });
+
   it('should render the fallback image in the src attribute', () => {
     render(<Fixture />);
     const imageEl = screen.getByAltText('orange 1');
     expect(imageEl).toHaveAttribute('src', '41BC/test/_63482861_orange1.jpg');
+  });
+
+  it('should render the container with an aspect ratio based on width and height', () => {
+    render(<Fixture />);
+
+    const imageEl = screen.getByAltText('orange 1');
+
+    expect(imageEl.parentNode?.parentNode?.parentNode).toHaveStyle({
+      paddingBottom: '56.199999999999996%',
+      position: 'relative',
+    });
+    expect(imageEl.parentNode?.parentNode).toHaveStyle({
+      position: 'absolute',
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0,
+    });
+  });
+
+  it('should render the container with an aspect ratio of 16/9 when width and height is not provided', () => {
+    render(<Fixture width={undefined} height={undefined} />);
+
+    const imageEl = screen.getByAltText('orange 1');
+
+    expect(imageEl.parentNode?.parentNode?.parentNode).toHaveStyle({
+      paddingBottom: '56.25%',
+      position: 'relative',
+    });
+    expect(imageEl.parentNode?.parentNode).toHaveStyle({
+      position: 'absolute',
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0,
+    });
+  });
+
+  it('should render the container with a custom aspect ratio when provided', () => {
+    render(
+      <Fixture aspectRatio={4 / 3} width={undefined} height={undefined} />,
+    );
+
+    const imageEl = screen.getByAltText('orange 1');
+
+    expect(imageEl.parentNode?.parentNode?.parentNode).toHaveStyle({
+      paddingBottom: '75%',
+      position: 'relative',
+    });
+    expect(imageEl.parentNode?.parentNode).toHaveStyle({
+      position: 'absolute',
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0,
+    });
+  });
+
+  it('should render the container with a custom aspect ratio that overrides aspect ratio based on image width and height', () => {
+    render(<Fixture aspectRatio={4 / 3} />);
+
+    const imageEl = screen.getByAltText('orange 1');
+
+    expect(imageEl.parentNode?.parentNode?.parentNode).toHaveStyle({
+      paddingBottom: '75%',
+      position: 'relative',
+    });
+    expect(imageEl.parentNode?.parentNode).toHaveStyle({
+      position: 'absolute',
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0,
+    });
   });
 });
 
@@ -290,7 +389,111 @@ describe('Image - AMP pages', () => {
     expect(imageEl[1]).toHaveAttribute('height', '281');
   });
 
-  it('should render the image correctly with placeholder - container has a padding of the aspect ratio', () => {
+  it('should render a placeholder image by default', () => {
+    render(<Fixture isAmp />);
+    const imageEl = screen.getAllByAltText('orange 1')[0];
+
+    expect(imageEl.parentNode).toHaveStyle({
+      backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
+    });
+  });
+
+  it('should render a placeholder image when placeholder is true', () => {
+    render(<Fixture isAmp />);
+    const imageEl = screen.getAllByAltText('orange 1')[0];
+    expect(imageEl.parentNode).toHaveStyle({
+      backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
+    });
+  });
+
+  it('should not render a placeholder image when placeholder is false', () => {
+    render(<Fixture placeholder={false} isAmp />);
+    const imageEl = screen.getAllByAltText('orange 1')[0];
+    expect(imageEl.parentNode).not.toHaveStyle({
+      backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
+    });
+  });
+
+  it('should render the container with an aspect ratio based on width and height', () => {
+    render(<Fixture isAmp />);
+
+    const imageEl = screen.getAllByAltText('orange 1')[0];
+
+    expect(imageEl.parentNode?.parentNode).toHaveStyle({
+      paddingBottom: '56.199999999999996%',
+      position: 'relative',
+    });
+    expect(imageEl.parentNode).toHaveStyle({
+      position: 'absolute',
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0,
+    });
+  });
+
+  it('should render the container with an aspect ratio of 16/9 when width and height is not provided', () => {
+    render(<Fixture width={undefined} height={undefined} isAmp />);
+
+    const imageEl = screen.getAllByAltText('orange 1')[0];
+
+    expect(imageEl.parentNode?.parentNode).toHaveStyle({
+      paddingBottom: '56.25%',
+      position: 'relative',
+    });
+    expect(imageEl.parentNode).toHaveStyle({
+      position: 'absolute',
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0,
+    });
+  });
+
+  it('should render the container with a custom aspect ratio when provided', () => {
+    render(
+      <Fixture
+        aspectRatio={4 / 3}
+        width={undefined}
+        height={undefined}
+        isAmp
+      />,
+    );
+
+    const imageEl = screen.getAllByAltText('orange 1')[0];
+
+    expect(imageEl.parentNode?.parentNode).toHaveStyle({
+      paddingBottom: '75%',
+      position: 'relative',
+    });
+    expect(imageEl.parentNode).toHaveStyle({
+      position: 'absolute',
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0,
+    });
+  });
+
+  it('should render the container with a custom aspect ratio that overrides aspect ratio based on image width and height', () => {
+    render(<Fixture aspectRatio={4 / 3} isAmp />);
+
+    const imageEl = screen.getAllByAltText('orange 1')[0];
+
+    expect(imageEl.parentNode?.parentNode).toHaveStyle({
+      paddingBottom: '75%',
+      position: 'relative',
+    });
+    expect(imageEl.parentNode).toHaveStyle({
+      position: 'absolute',
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0,
+    });
+  });
+
+  it('should match snapshot', () => {
     const { container } = render(<Fixture isAmp />);
 
     expect(container).toMatchInlineSnapshot(`
@@ -298,7 +501,6 @@ describe('Image - AMP pages', () => {
         position: relative;
         height: 0;
         overflow: hidden;
-        padding-bottom: 56.199999999999996%;
       }
 
       .emotion-1 {
@@ -333,6 +535,7 @@ describe('Image - AMP pages', () => {
       <div>
         <div
           class="emotion-0"
+          style="padding-bottom: 56.199999999999996%;"
         >
           <div
             class="emotion-1"
