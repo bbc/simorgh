@@ -1,11 +1,13 @@
 import React from 'react';
-import { withKnobs, select } from '@storybook/addon-knobs';
+import { withKnobs } from '@storybook/addon-knobs';
+import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
 
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
 import { Services, Variants } from '../../models/types/global';
 import ThemeProvider from '../ThemeProvider';
 import Text from '.';
+import Paragraph from '../Paragraph';
+import Heading from '../Heading';
 
 interface Props {
   service: Services;
@@ -13,70 +15,59 @@ interface Props {
   text: string;
 }
 
-const EMPTY_OPTION = '--';
-
-const TextStory = ({ service, variant, text }: Props) => {
-  const selectedFontVariant = select(
-    'fontVariant',
-    {
-      [EMPTY_OPTION]: EMPTY_OPTION,
-      sansRegular: 'sansRegular',
-      sansRegularItalic: 'sansRegularItalic',
-      sansBold: 'sansBold',
-      sansBoldItalic: 'sansBoldItalic',
-      sansLight: 'sansLight',
-      serifRegular: 'serifRegular',
-      serifMedium: 'serifMedium',
-      serifMediumItalic: 'serifMediumItalic',
-      serifBold: 'serifBold',
-      serifLight: 'serifLight',
-    },
-    EMPTY_OPTION,
-  );
-  const selectedSize = select(
-    'size',
-    {
-      [EMPTY_OPTION]: EMPTY_OPTION,
-      atlas: 'atlas',
-      elephant: 'elephant',
-      imperial: 'imperial',
-      royal: 'royal',
-      foolscap: 'foolscap',
-      canon: 'canon',
-      trafalgar: 'trafalgar',
-      paragon: 'paragon',
-      doublePica: 'doublePica',
-      greatPrimer: 'greatPrimer',
-      bodyCopy: 'bodyCopy',
-      pica: 'pica',
-      longPrimer: 'longPrimer',
-      brevier: 'brevier',
-      minion: 'minion',
-    },
-    EMPTY_OPTION,
-  );
-
+const a11yTestingStory = ({ service, variant }: Props) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
-        <Text
-          fontVariant={
-            selectedFontVariant !== EMPTY_OPTION
-              ? selectedFontVariant
-              : undefined
-          }
-          size={selectedSize !== EMPTY_OPTION ? selectedSize : undefined}
-        >
-          {text}
-        </Text>
+        <div>
+          <Text>This is some text rendered in a span element.</Text>
+        </div>
+        <div>
+          <Text fontVariant="serifRegular" size="canon">
+            This is some text rendered in a span in a serif font in canon size.
+          </Text>
+        </div>
+        <div>
+          <Text as="strong">
+            This is some text rendered in a strong element.
+          </Text>
+        </div>
+        <div>
+          <Paragraph>This is some text rendered in a paragraph.</Paragraph>
+        </div>
+        <div>
+          <Paragraph
+            fontVariant="sansBold"
+            size="greatPrimer"
+            css={{ color: 'red' }}
+          >
+            This is some text rendered in a paragraph in a sans-serif bold font
+            in greatPrimer size in a red colour.
+          </Paragraph>
+        </div>
+        <div>
+          <Heading level={1}>
+            This is some text rendered in a h1 element.
+          </Heading>
+        </div>
+        <div>
+          <Heading level={2} fontVariant="serifBold">
+            This is some text rendered in a h2 element in a serif bold font.
+          </Heading>
+        </div>
+        <div>
+          <Heading level={4} size="pica" tabIndex={-1}>
+            This is some text rendered in a h4 element in a pica size.
+          </Heading>
+        </div>
       </ServiceContextProvider>
     </ThemeProvider>
   );
 };
 
 export default {
-  title: 'NewComponents/Text',
-  Component: TextStory,
+  title: 'NewComponents/TypographyA11yTesting',
+  Component: a11yTestingStory,
   decorators: [withKnobs, withServicesKnob()],
   parameters: {
     chromatic: {
@@ -85,4 +76,4 @@ export default {
   },
 };
 
-export const Example = TextStory;
+export const Example = a11yTestingStory;
