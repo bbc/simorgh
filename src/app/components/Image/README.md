@@ -40,3 +40,30 @@ The `Image` component is used to render an image using the correct custom style 
   height={281}
 />
 ```
+
+You can generate the `primarySrcset`, `primaryMediaType`, `fallbackSrcset`, and `fallbackMediaType` ptops using the [`createSrcsets`](../../lib/utilities/srcSet/index.js) function. For example:
+
+```tsx
+const src = '41BC/test/_63482861_orange1.jpg';
+
+const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
+  createSrcsets({
+    originCode: 'cpsdevpb',
+    locator: src,
+    originalImageWidth: 500,
+    imageResolutions: [200, 500, 1000],
+  });
+
+<Image
+  isAmp={false}
+  alt="orange 1"
+  src={src}
+  primarySrcset={primarySrcset}
+  primaryMediaType={primaryMimeType}
+  fallbackSrcset={fallbackSrcset}
+  fallbackMediaType={fallbackMimeType}
+  sizes="(max-width: 600px) 480px, 800px"
+  width={500}
+  height={281}
+/>;
+```
