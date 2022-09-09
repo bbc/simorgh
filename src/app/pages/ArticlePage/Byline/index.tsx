@@ -6,7 +6,7 @@ import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import VisuallyHiddenText from '../../../legacy/psammead/psammead-visually-hidden-text/src';
 import BylineCss from './index.styles';
-import { RightChevron } from '../../../components/icons';
+import { RightChevron, LeftChevron } from '../../../components/icons';
 import {
   getBodyCopy,
   getBrevier,
@@ -18,7 +18,8 @@ type Props = {
 };
 
 const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
-  const { service, script, translations } = useContext(ServiceContext);
+  const { service, script, translations, dir } = useContext(ServiceContext);
+  const isRtl = dir === 'rtl';
 
   const bylineBlocks = pathOr([], [0, 'model', 'blocks'], blocks);
 
@@ -104,7 +105,11 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
                 >
                   {author}
                 </strong>
-                <RightChevron css={BylineCss.authorChevron} />
+                {isRtl ? (
+                  <LeftChevron css={BylineCss.authorChevron} />
+                ) : (
+                  <RightChevron css={BylineCss.authorChevron} />
+                )}
               </a>
             </React.Fragment>
           ) : (
@@ -157,7 +162,11 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
                     getBrevier(script),
                   ]}
                 >{`@${twitterText}`}</span>
-                <RightChevron css={BylineCss.twitterChevron} />
+                {isRtl ? (
+                  <LeftChevron css={BylineCss.twitterChevron} />
+                ) : (
+                  <RightChevron css={BylineCss.twitterChevron} />
+                )}
               </span>
             </a>
           </li>
