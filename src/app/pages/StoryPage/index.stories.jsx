@@ -5,10 +5,10 @@ import WithTimeMachine from '#testHelpers/withTimeMachine';
 
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import portuguesePageData from './fixtureData/portuguese';

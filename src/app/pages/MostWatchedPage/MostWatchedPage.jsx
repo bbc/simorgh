@@ -15,7 +15,6 @@ import {
   GEL_SPACING_SEXT,
 } from '#psammead/gel-foundations/src/spacings';
 import { storyItem } from '#models/propTypes/storyItem';
-import { ServiceContext } from '#contexts/ServiceContext';
 import Grid, { GelPageGrid } from '#components/Grid';
 import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import IndexHeading from '#containers/IndexHeading';
@@ -24,6 +23,7 @@ import MetadataContainer from '#containers/Metadata';
 import LinkedData from '#containers/LinkedData';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ATIAnalytics from '#containers/ATIAnalytics';
+import { ServiceContext } from '../../contexts/ServiceContext';
 
 const StyledIndexHeading = styled(IndexHeading)`
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {

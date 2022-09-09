@@ -1,8 +1,12 @@
 import React from 'react';
 import { node, string } from 'prop-types';
 import styled from '@emotion/styled';
-import { C_EBON, C_WHITE } from '#psammead/psammead-styles/src/colours';
-import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
+import {
+  C_EBON,
+  C_WHITE,
+  C_POSTBOX,
+} from '#psammead/psammead-styles/src/colours';
+import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { GEL_BREVIER } from '#psammead/gel-foundations/src/typography';
 
 import {
@@ -19,11 +23,10 @@ const Wrapper = styled.div`
 `;
 
 const SkipLink = styled.a`
-  ${({ service }) => getSansBold(service)}
+  ${({ service }) => getSansRegular(service)}
   ${GEL_BREVIER}
   background-color: ${C_WHITE};
   border: ${BORDER_WEIGHT} solid ${C_EBON};
-  color: ${C_EBON};
   display: block;
   left: 0;
   line-height: 1;
@@ -32,6 +35,18 @@ const SkipLink = styled.a`
   text-decoration: none;
   top: 0;
   z-index: 10;
+
+  span {
+    color: ${C_EBON};
+  }
+
+  &:hover,
+  &:focus {
+    span {
+      color: ${C_POSTBOX};
+      border-bottom: 2px solid ${C_POSTBOX};
+    }
+  }
 
   &:not(:focus):not(:active) {
     ${visuallyHiddenStyle}
@@ -57,7 +72,7 @@ const SkipLinkWrapper = ({
         service={service}
         href={`#${detokenise(endTextId, dictionary)}`}
       >
-        {detokenise(text, dictionary)}
+        <span>{detokenise(text, dictionary)}</span>
       </SkipLink>
       {children}
       <EndText tabIndex="-1" id={detokenise(endTextId, dictionary)}>

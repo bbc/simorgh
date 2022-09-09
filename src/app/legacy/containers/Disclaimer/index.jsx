@@ -17,9 +17,9 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import { GridItemLarge } from '#components/Grid';
 
-import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import isEmpty from 'ramda/src/isEmpty';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import InlineLink from '../InlineLink';
 
 const InfoBanner = styled.p`

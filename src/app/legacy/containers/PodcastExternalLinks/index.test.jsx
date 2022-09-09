@@ -1,12 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import { ServiceContextProvider } from '#contexts/ServiceContext';
-
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import PodcastExternalLinks from '.';
 
 /* eslint-disable react/prop-types */

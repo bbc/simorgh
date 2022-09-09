@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { oneOfType, number, string } from 'prop-types';
 import Timestamp from '#psammead/psammead-timestamp-container/src';
-import { ServiceContext } from '#contexts/ServiceContext';
 import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const PromoTimestamp = ({ children, serviceDatetimeLocale, className }) => {
   const { altCalendar, script, datetimeLocale, service, timezone } =

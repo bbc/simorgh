@@ -28,7 +28,7 @@ module.exports = (on, config) => {
     // as your app's code
     webpackOptions: {
       resolve: {
-        extensions: ['.js', '.jsx'],
+        extensions: ['.ts', '.tsx', '.js', '.jsx'],
         alias: {
           ...webpackDirAlias,
         },
@@ -46,16 +46,39 @@ module.exports = (on, config) => {
               },
             ],
           },
+          {
+            test: /\.(ts|tsx)$/,
+            include: [resolvePath('src')],
+            use: [
+              'babel-loader',
+              {
+                loader: 'ts-loader',
+                options: {
+                  transpileOnly: true,
+                },
+              },
+            ],
+          },
         ],
       },
       plugins: [new MomentTimezoneInclude({ startYear: 2010, endYear: 2025 })],
+    },
+    watchOptions: {
+      ignored: ['**/tz/**'],
     },
   };
 
   on('file:preprocessor', webpackPreprocessor(options));
 
+  // Add options for the cypress terminal report (cy.logs) here
+  const logPrinterOptions = {
+    defaultTrimLength: 2000,
+  };
   // eslint-disable-next-line global-require
-  require('cypress-terminal-report/src/installLogsPrinter')(on);
+  require('cypress-terminal-report/src/installLogsPrinter')(
+    on,
+    logPrinterOptions,
+  );
 
   on('task', {
     log(message) {

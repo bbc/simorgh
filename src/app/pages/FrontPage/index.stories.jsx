@@ -6,10 +6,10 @@ import igboData from '#data/igbo/frontpage';
 import newsData from '#data/news/frontpage';
 import serbianCyrData from '#data/serbian/frontpage/cyr';
 import serbianLatData from '#data/serbian/frontpage/lat';
-import { service as arabicConfig } from '#lib/config/services/arabic';
-import { service as igboConfig } from '#lib/config/services/igbo';
-import { service as newsConfig } from '#lib/config/services/news';
-import { service as serbianConfig } from '#lib/config/services/serbian';
+import { service as arabicConfig } from '../../lib/config/services/arabic';
+import { service as igboConfig } from '../../lib/config/services/igbo';
+import { service as newsConfig } from '../../lib/config/services/news';
+import { service as serbianConfig } from '../../lib/config/services/serbian';
 import { getLocalMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import FrontPage from '.';
@@ -32,16 +32,16 @@ const serviceConfigs = {
 };
 
 // eslint-disable-next-line react/prop-types
-const Component = ({ service, variant = 'default' } = {}) => (
+const Component = ({ service, variant } = {}) => (
   <BrowserRouter>
     <FrontPage
       isAmp={false}
       pageType={FRONT_PAGE}
       status={200}
-      pathname={serviceConfigs[service][variant].navigation[0].url}
+      pathname={serviceConfigs[service][variant || 'default'].navigation[0].url}
       service={service}
       variant={variant}
-      pageData={serviceDataSets[service][variant]}
+      pageData={serviceDataSets[service][variant || 'default']}
       mostReadEndpointOverride={getLocalMostReadEndpoint({
         service,
         variant,

@@ -4,11 +4,11 @@ import fetchMock from 'fetch-mock';
 import { BrowserRouter } from 'react-router-dom';
 import { render, act } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import urduPageData from '#data/urdu/cpsAssets/science-51314202';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 import { FEATURE_INDEX_PAGE } from '#app/routes/utils/pageTypes';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import FeatureIdxPage from '.';
 
 const mockToggles = {

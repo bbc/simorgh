@@ -2,14 +2,43 @@ import React from 'react';
 import path from 'ramda/src/path';
 import { Helmet } from 'react-helmet';
 import { select } from '@storybook/addon-knobs';
-import * as scripts from '#psammead/gel-foundations/src/scripts';
 import TEXT_VARIANTS from './text-variants';
+import arabic from '../../../../components/ThemeProvider/typography/scripts/arabic';
+import bengali from '../../../../components/ThemeProvider/typography/scripts/bengali';
+import burmese from '../../../../components/ThemeProvider/typography/scripts/burmese';
+import devanagariAndGurmukhi from '../../../../components/ThemeProvider/typography/scripts/devanagari';
+import latin from '../../../../components/ThemeProvider/typography/scripts/latin';
+import cyrillic from '../../../../components/ThemeProvider/typography/scripts/cyrillic';
+import latinDiacritics from '../../../../components/ThemeProvider/typography/scripts/latinWithDiacritics';
+import noAscendersOrDescenders from '../../../../components/ThemeProvider/typography/scripts/noAscOrDesc';
+import sinhalese from '../../../../components/ThemeProvider/typography/scripts/sinhalese';
+import tamil from '../../../../components/ThemeProvider/typography/scripts/tamil';
+import thai from '../../../../components/ThemeProvider/typography/scripts/thai';
 
 const DEFAULT_SERVICE = 'news';
 const SERVICES_LIST = Object.keys(TEXT_VARIANTS);
 const getVariant = selectedService => path([selectedService, 'variant']);
 const getService = selectedService => path([selectedService, 'service']);
 const includesService = services => service => services.includes(service);
+const scripts = {
+  arabic,
+  bengali,
+  burmese,
+  devanagariAndGurmukhi,
+  hindi: devanagariAndGurmukhi,
+  nepali: devanagariAndGurmukhi,
+  cyrillic,
+  cyrillicAndLatin: cyrillic,
+  latin,
+  latinDiacritics,
+  chinese: noAscendersOrDescenders,
+  ethiopic: noAscendersOrDescenders,
+  korean: noAscendersOrDescenders,
+  noAscendersOrDescenders,
+  sinhalese,
+  tamil,
+  thai,
+};
 
 export default ({
     defaultService = DEFAULT_SERVICE,

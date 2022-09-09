@@ -113,13 +113,12 @@ exports[`SocialEmbedContainer AMP should render correctly 1`] = `
 
 .emotion-6 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
   border: 0.125rem solid #222222;
-  color: #222222;
   display: block;
   left: 0;
   line-height: 1;
@@ -143,6 +142,16 @@ exports[`SocialEmbedContainer AMP should render correctly 1`] = `
   }
 }
 
+.emotion-6 span {
+  color: #222222;
+}
+
+.emotion-6:hover span,
+.emotion-6:focus span {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
 .emotion-6:not(:focus):not(:active) {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -155,6 +164,44 @@ exports[`SocialEmbedContainer AMP should render correctly 1`] = `
 }
 
 .emotion-8 {
+  margin: 0;
+  background-color: transparent;
+}
+
+.emotion-10 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: #545658;
+  padding: 0.5rem 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-10 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-10 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-10>span {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-12 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -181,16 +228,30 @@ exports[`SocialEmbedContainer AMP should render correctly 1`] = `
           class="emotion-6 emotion-7"
           href="#end-of-twitter-content-1"
         >
-          Skip Twitter content, 1
+          <span>
+            Skip Twitter content, 1
+          </span>
         </a>
-        <amp-twitter
-          data-tweetid="1384138850478346243"
-          height="9"
-          layout="responsive"
-          width="16"
-        />
-        <p
+        <figure
           class="emotion-8 emotion-9"
+        >
+          <amp-twitter
+            data-tweetid="1384138850478346243"
+            height="9"
+            layout="responsive"
+            width="16"
+          />
+          <figcaption
+            class="emotion-10 emotion-11"
+          >
+            <span>
+              Video caption, 
+            </span>
+            Warning: The BBC is not responsible for the content of external sites.
+          </figcaption>
+        </figure>
+        <p
+          class="emotion-12 emotion-13"
           id="end-of-twitter-content-1"
           tabindex="-1"
         >
@@ -315,13 +376,12 @@ exports[`SocialEmbedContainer Canonical should render and unmount correctly 1`] 
 
 .emotion-6 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
   border: 0.125rem solid #222222;
-  color: #222222;
   display: block;
   left: 0;
   line-height: 1;
@@ -345,6 +405,16 @@ exports[`SocialEmbedContainer Canonical should render and unmount correctly 1`] 
   }
 }
 
+.emotion-6 span {
+  color: #222222;
+}
+
+.emotion-6:hover span,
+.emotion-6:focus span {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
 .emotion-6:not(:focus):not(:active) {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -357,6 +427,11 @@ exports[`SocialEmbedContainer Canonical should render and unmount correctly 1`] 
 }
 
 .emotion-8 {
+  margin: 0;
+  background-color: transparent;
+}
+
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -367,16 +442,49 @@ exports[`SocialEmbedContainer Canonical should render and unmount correctly 1`] 
   justify-content: center;
 }
 
-.emotion-8 .twitter-tweet {
+.emotion-10 .twitter-tweet {
   margin-top: 0!important;
   margin-bottom: 10rem!important;
 }
 
-.emotion-8 .twitter-tweet-rendered {
+.emotion-10 .twitter-tweet-rendered {
   margin-bottom: 0!important;
 }
 
-.emotion-10 {
+.emotion-12 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: #545658;
+  padding: 0.5rem 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-12 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-12>span {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-14 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -402,37 +510,51 @@ exports[`SocialEmbedContainer Canonical should render and unmount correctly 1`] 
         class="emotion-6 emotion-7"
         href="#end-of-twitter-content-1"
       >
-        Skip Twitter content, 1
+        <span>
+          Skip Twitter content, 1
+        </span>
       </a>
-      <div
+      <figure
         class="emotion-8 emotion-9"
       >
-        <blockquote
-          class="twitter-tweet"
+        <div
+          class="emotion-10 emotion-11"
         >
-          <p
-            dir="ltr"
-            lang="en"
+          <blockquote
+            class="twitter-tweet"
           >
-            Greta Thunberg says meeting fellow climate campaigner Sir David Attenborough was "indescribable" 
-            <a
-              href="https://t.co/xz93WmAdfR"
+            <p
+              dir="ltr"
+              lang="en"
             >
-              https://t.co/xz93WmAdfR
+              Greta Thunberg says meeting fellow climate campaigner Sir David Attenborough was "indescribable" 
+              <a
+                href="https://t.co/xz93WmAdfR"
+              >
+                https://t.co/xz93WmAdfR
+              </a>
+            </p>
+            — BBC News (UK) (@BBCNews) 
+            <a
+              href="https://twitter.com/BBCNews/status/1384138850478346243?ref_src=twsrc%5Etfw"
+            >
+              April 19, 2021
             </a>
-          </p>
-          — BBC News (UK) (@BBCNews) 
-          <a
-            href="https://twitter.com/BBCNews/status/1384138850478346243?ref_src=twsrc%5Etfw"
-          >
-            April 19, 2021
-          </a>
-        </blockquote>
-        
+          </blockquote>
+          
 
-      </div>
+        </div>
+        <figcaption
+          class="emotion-12 emotion-13"
+        >
+          <span>
+            Video caption, 
+          </span>
+          Warning: The BBC is not responsible for the content of external sites.
+        </figcaption>
+      </figure>
       <p
-        class="emotion-10 emotion-11"
+        class="emotion-14 emotion-15"
         id="end-of-twitter-content-1"
         tabindex="-1"
       >

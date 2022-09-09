@@ -1,32 +1,18 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { string } from 'prop-types';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
 import { C_GREY_10 } from '#psammead/psammead-styles/src/colours';
-import {
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
+import { getCanon } from '#psammead/gel-foundations/src/typography';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const H1 = styled.h1`
   ${({ service }) => getSansBold(service)}
+  ${({ script }) => getCanon(script)}
   color: ${C_GREY_10};
-  font-size: 1.75rem;
-  line-height: 2rem;
   margin: 0;
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    font-size: 3.25rem;
-    line-height: 3.5rem;
-  }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    font-size: 2.75rem;
-    line-height: 3rem;
     display: inline-block;
   }
 `;

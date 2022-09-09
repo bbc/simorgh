@@ -8,13 +8,13 @@ import {
 } from '#psammead/psammead-social-embed/src';
 
 import { RequestContext } from '#contexts/RequestContext';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { GridItemMedium } from '#components/Grid';
 import { socialEmbedBlockPropTypes } from '#models/propTypes/socialEmbed';
 import nodeLogger from '#lib/logger.node';
 import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
 import isLive from '#lib/utilities/isLive';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import createTranslations from './common/translations';
 import { LAZYLOAD_OFFSET, Wrapper } from './common/styles';
 import { getProviderFromSource, getIdFromSource } from './sourceHelpers';
@@ -46,7 +46,7 @@ const SocialEmbedContainer = ({ blocks, source }) => {
   const {
     fallback: fallbackTranslations,
     skipLink: skipLinkTranslations,
-    caption: captionTranslations,
+    caption,
   } = createTranslations({ translations, index: oEmbedPosition });
 
   const fallback = {
@@ -61,8 +61,6 @@ const SocialEmbedContainer = ({ blocks, source }) => {
         ? `end-of-%provider%-content-${oEmbedPosition}`
         : `end-of-%provider%-content`,
   };
-
-  const caption = provider === 'youtube' ? captionTranslations : null;
 
   logger.info(SOCIAL_EMBED_RENDERED, {
     provider,

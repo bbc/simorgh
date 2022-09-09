@@ -20,10 +20,9 @@ import LinkedData from '#containers/LinkedData';
 import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import useToggle from '#hooks/useToggle';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
-import isLive from '#lib/utilities/isLive';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import TopicImage from './TopicImage';
 import TopicTitle from './TopicTitle';
 import TopicDescription from './TopicDescription';
@@ -65,19 +64,23 @@ const TitleWrapper = styled.div`
 
 const TopicPage = ({ pageData }) => {
   const { lang, translations } = useContext(ServiceContext);
-  const { title, description, imageData, promos, pageCount, activePage } =
+  const { title, description, imageData, curations, pageCount, activePage } =
     pageData;
 
   const { enabled: adsEnabled } = useToggle('ads');
   const { showAdsBasedOnLocation } = useContext(RequestContext);
 
-  const promoEntities = promos.map(promo => ({
-    '@type': 'Article',
-    name: promo.title,
-    headline: promo.title,
-    url: promo.link,
-    dateCreated: promo.firstPublished,
-  }));
+  const linkedDataEntities = curations
+    .map(({ summaries }) =>
+      summaries.map(summary => ({
+        '@type': 'Article',
+        name: summary.title,
+        headline: summary.title,
+        url: summary.link,
+        dateCreated: summary.firstPublished,
+      })),
+    )
+    .flat();
 
   const { pageXOfY, previousPage, nextPage, page } = {
     pageXOfY: 'Page {x} of {y}',
@@ -117,22 +120,27 @@ const TopicPage = ({ pageData }) => {
             type="CollectionPage"
             seoTitle={title}
             headline={title}
-            entities={promoEntities}
+            entities={linkedDataEntities}
           />
           <TitleWrapper>
             <InlineWrapper>
-              {!isLive() && imageData && <TopicImage image={imageData.url} />}
+              {imageData && <TopicImage image={imageData.url} />}
               <TopicTitle>{title}</TopicTitle>
             </InlineWrapper>
-            {!isLive() && description && (
-              <TopicDescription>{description}</TopicDescription>
-            )}
+            {description && <TopicDescription>{description}</TopicDescription>}
           </TitleWrapper>
-          <Curation
-            visualStyle={VISUAL_STYLE.NONE}
-            visualProminance={VISUAL_PROMINANCE.NORMAL}
-            promos={promos}
-          />
+          {curations.map(
+            ({ summaries, curationId, title: curationTitle, link }) => (
+              <Curation
+                key={curationId}
+                visualStyle={VISUAL_STYLE.NONE}
+                visualProminance={VISUAL_PROMINANCE.NORMAL}
+                promos={summaries}
+                title={curationTitle}
+                link={link}
+              />
+            ),
+          )}
           <Pagination
             activePage={activePage}
             pageCount={pageCount}
@@ -150,7 +158,7 @@ const TopicPage = ({ pageData }) => {
 TopicPage.propTypes = {
   pageData: shape({
     title: string.isRequired,
-    promos: arrayOf(shape({})).isRequired,
+    curations: arrayOf(shape({})).isRequired,
   }).isRequired,
 };
 

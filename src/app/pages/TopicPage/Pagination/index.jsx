@@ -22,10 +22,10 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
 } from '#psammead/gel-foundations/src/breakpoints';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 import buildBlocks, { TYPE, VISIBILITY } from './buildBlocks';
-import { Ellipsis, LeftChevron, RightChevron } from './icons';
+import { Ellipsis, LeftChevron, RightChevron } from '../icons';
 
 const visibilityToMediaQuery = visibility =>
   ({

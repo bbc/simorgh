@@ -7,13 +7,12 @@ exports[`AmpSocialEmbed should render a notice when the provider is unsupported 
 
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
   border: 0.125rem solid #222222;
-  color: #222222;
   display: block;
   left: 0;
   line-height: 1;
@@ -35,6 +34,16 @@ exports[`AmpSocialEmbed should render a notice when the provider is unsupported 
   .emotion-2 {
     font-size: 0.8125rem;
   }
+}
+
+.emotion-2 span {
+  color: #222222;
+}
+
+.emotion-2:hover span,
+.emotion-2:focus span {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
 }
 
 .emotion-2:not(:focus):not(:active) {
@@ -121,7 +130,9 @@ exports[`AmpSocialEmbed should render a notice when the provider is unsupported 
       class="emotion-2 emotion-3"
       href="#skip-unknown-content"
     >
-      Skip unknown content
+      <span>
+        Skip unknown content
+      </span>
     </a>
     <div
       class="emotion-4 emotion-5"
@@ -156,13 +167,12 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
 
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
   border: 0.125rem solid #222222;
-  color: #222222;
   display: block;
   left: 0;
   line-height: 1;
@@ -184,6 +194,16 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
   .emotion-2 {
     font-size: 0.8125rem;
   }
+}
+
+.emotion-2 span {
+  color: #222222;
+}
+
+.emotion-2:hover span,
+.emotion-2:focus span {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
 }
 
 .emotion-2:not(:focus):not(:active) {
@@ -216,7 +236,9 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
       class="emotion-2 emotion-3"
       href="#skip-instagram-content"
     >
-      Skip Instagram content
+      <span>
+        Skip Instagram content
+      </span>
     </a>
     <amp-instagram
       data-captioned="true"
@@ -243,13 +265,12 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
 
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
   border: 0.125rem solid #222222;
-  color: #222222;
   display: block;
   left: 0;
   line-height: 1;
@@ -271,6 +292,16 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
   .emotion-2 {
     font-size: 0.8125rem;
   }
+}
+
+.emotion-2 span {
+  color: #222222;
+}
+
+.emotion-2:hover span,
+.emotion-2:focus span {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
 }
 
 .emotion-2:not(:focus):not(:active) {
@@ -303,7 +334,9 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
       class="emotion-2 emotion-3"
       href="#skip-twitter-content"
     >
-      Skip Twitter content
+      <span>
+        Skip Twitter content
+      </span>
     </a>
     <amp-twitter
       data-tweetid="1237210910835392512"
@@ -329,13 +362,12 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
 
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
   border: 0.125rem solid #222222;
-  color: #222222;
   display: block;
   left: 0;
   line-height: 1;
@@ -359,6 +391,16 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   }
 }
 
+.emotion-2 span {
+  color: #222222;
+}
+
+.emotion-2:hover span,
+.emotion-2:focus span {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
 .emotion-2:not(:focus):not(:active) {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -371,8 +413,8 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
 }
 
 .emotion-4 {
-  background-color: #000000;
   margin: 0;
+  background-color: #000000;
 }
 
 .emotion-6 {
@@ -427,7 +469,9 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
       class="emotion-2 emotion-3"
       href="#skip-youtube-content"
     >
-      Skip YouTube content
+      <span>
+        Skip YouTube content
+      </span>
     </a>
     <figure
       class="emotion-4 emotion-5"
@@ -464,13 +508,12 @@ exports[`CanonicalSocialEmbed Instagram should render correctly for Instagram 1`
 
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
   border: 0.125rem solid #222222;
-  color: #222222;
   display: block;
   left: 0;
   line-height: 1;
@@ -492,6 +535,16 @@ exports[`CanonicalSocialEmbed Instagram should render correctly for Instagram 1`
   .emotion-2 {
     font-size: 0.8125rem;
   }
+}
+
+.emotion-2 span {
+  color: #222222;
+}
+
+.emotion-2:hover span,
+.emotion-2:focus span {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
 }
 
 .emotion-2:not(:focus):not(:active) {
@@ -540,7 +593,9 @@ exports[`CanonicalSocialEmbed Instagram should render correctly for Instagram 1`
     class="emotion-2 emotion-3"
     href="#skip-instagram-content"
   >
-    Skip Instagram content
+    <span>
+      Skip Instagram content
+    </span>
   </a>
   <div
     class="emotion-4 emotion-5"
@@ -731,13 +786,12 @@ exports[`CanonicalSocialEmbed Twitter should render correctly for Twitter 1`] = 
 
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
   border: 0.125rem solid #222222;
-  color: #222222;
   display: block;
   left: 0;
   line-height: 1;
@@ -759,6 +813,16 @@ exports[`CanonicalSocialEmbed Twitter should render correctly for Twitter 1`] = 
   .emotion-2 {
     font-size: 0.8125rem;
   }
+}
+
+.emotion-2 span {
+  color: #222222;
+}
+
+.emotion-2:hover span,
+.emotion-2:focus span {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
 }
 
 .emotion-2:not(:focus):not(:active) {
@@ -810,7 +874,9 @@ exports[`CanonicalSocialEmbed Twitter should render correctly for Twitter 1`] = 
     class="emotion-2 emotion-3"
     href="#skip-twitter-content"
   >
-    Skip Twitter content
+    <span>
+      Skip Twitter content
+    </span>
   </a>
   <div
     class="emotion-4 emotion-5"
@@ -851,13 +917,12 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
 
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
   border: 0.125rem solid #222222;
-  color: #222222;
   display: block;
   left: 0;
   line-height: 1;
@@ -881,6 +946,16 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
   }
 }
 
+.emotion-2 span {
+  color: #222222;
+}
+
+.emotion-2:hover span,
+.emotion-2:focus span {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
 .emotion-2:not(:focus):not(:active) {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -893,8 +968,8 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
 }
 
 .emotion-4 {
-  background-color: #000000;
   margin: 0;
+  background-color: #000000;
 }
 
 .emotion-6 {
@@ -971,7 +1046,9 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
     class="emotion-2 emotion-3"
     href="#skip-youtube-content"
   >
-    Skip YouTube content
+    <span>
+      Skip YouTube content
+    </span>
   </a>
   <figure
     class="emotion-4 emotion-5"
@@ -1014,13 +1091,12 @@ exports[`CanonicalSocialEmbed should render a notice when the provider is unsupp
 
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
   border: 0.125rem solid #222222;
-  color: #222222;
   display: block;
   left: 0;
   line-height: 1;
@@ -1042,6 +1118,16 @@ exports[`CanonicalSocialEmbed should render a notice when the provider is unsupp
   .emotion-2 {
     font-size: 0.8125rem;
   }
+}
+
+.emotion-2 span {
+  color: #222222;
+}
+
+.emotion-2:hover span,
+.emotion-2:focus span {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
 }
 
 .emotion-2:not(:focus):not(:active) {
@@ -1128,7 +1214,9 @@ exports[`CanonicalSocialEmbed should render a notice when the provider is unsupp
       class="emotion-2 emotion-3"
       href="#skip-unknown-content"
     >
-      Skip unknown content
+      <span>
+        Skip unknown content
+      </span>
     </a>
     <div
       class="emotion-4 emotion-5"
@@ -1164,13 +1252,12 @@ exports[`CanonicalSocialEmbed should render a notice when there is no oEmbed res
 
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
   border: 0.125rem solid #222222;
-  color: #222222;
   display: block;
   left: 0;
   line-height: 1;
@@ -1192,6 +1279,16 @@ exports[`CanonicalSocialEmbed should render a notice when there is no oEmbed res
   .emotion-2 {
     font-size: 0.8125rem;
   }
+}
+
+.emotion-2 span {
+  color: #222222;
+}
+
+.emotion-2:hover span,
+.emotion-2:focus span {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
 }
 
 .emotion-2:not(:focus):not(:active) {
@@ -1278,7 +1375,9 @@ exports[`CanonicalSocialEmbed should render a notice when there is no oEmbed res
       class="emotion-2 emotion-3"
       href="#skip-twitter-content"
     >
-      Skip Twitter content
+      <span>
+        Skip Twitter content
+      </span>
     </a>
     <div
       class="emotion-4 emotion-5"

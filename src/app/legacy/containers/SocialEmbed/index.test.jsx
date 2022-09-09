@@ -3,6 +3,7 @@ import { render } from '@testing-library/react';
 import loggerMock from '#testHelpers/loggerMock';
 import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import SocialEmbedContainer from '.';
 import withContexts from './common/testHelper';
 import { twitterBlock } from './common/fixtures';
@@ -25,6 +26,7 @@ describe('SocialEmbedContainer', () => {
         withContexts(SocialEmbedContainer, {
           isAmp: false,
           isEnabled: true,
+          pageType: ARTICLE_PAGE,
         })({
           blocks: [twitterBlock],
           source: 'https://twitter.com/BBCNews/status/1384138850478346243?s=20',
@@ -54,6 +56,7 @@ describe('SocialEmbedContainer', () => {
         withContexts(SocialEmbedContainer, {
           isAmp: false,
           isEnabled: true,
+          pageType: ARTICLE_PAGE,
         })({
           blocks: [twitterBlock],
           source: 'https://twitter.com/BBCNews/status/1384138850478346243?s=20',
@@ -68,6 +71,7 @@ describe('SocialEmbedContainer', () => {
         withContexts(SocialEmbedContainer, {
           isAmp: false,
           isEnabled: true,
+          pageType: ARTICLE_PAGE,
         })({
           blocks: [
             {
@@ -110,6 +114,7 @@ describe('SocialEmbedContainer', () => {
       withContexts(SocialEmbedContainer, {
         isAmp: true,
         isEnabled: true,
+        pageType: ARTICLE_PAGE,
       })({
         blocks: [twitterBlock],
         source: 'https://twitter.com/BBCNews/status/1384138850478346243?s=20',

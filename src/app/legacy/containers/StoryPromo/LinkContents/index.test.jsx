@@ -1,13 +1,13 @@
 import React from 'react';
 import compose from 'ramda/src/compose';
 import { render } from '@testing-library/react';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import {
   MEDIA_ASSET_PAGE,
   STORY_PAGE,
   PHOTO_GALLERY_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import LinkContents from '.';
 
 const defaultProps = {

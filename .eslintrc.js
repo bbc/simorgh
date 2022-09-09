@@ -57,6 +57,7 @@ module.exports = {
       parser: '@typescript-eslint/parser',
       extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
+        'react/prop-types': 'off',
         'react/jsx-filename-extension': [
           2,
           {
@@ -67,6 +68,7 @@ module.exports = {
           // adds support for type, interface and enum declarations https://typescript-eslint.io/rules/no-use-before-define/#how-to-use
           'no-use-before-define': 'off',
           '@typescript-eslint/no-use-before-define': ['error'],
+          'react/require-default-props': 'off',
         },
       },
     },

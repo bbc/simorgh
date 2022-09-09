@@ -4,7 +4,7 @@ import {
   withServicesKnob,
   themes,
 } from '#psammead/psammead-storybook-helpers/src';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { afrique, pashto } from './fixtures';
 import RecentVideoEpisodes from '.';
