@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 const B = css`
   grid-column: span 2;
   grid-row: span 4;
-  @media (max-width: 1007px) {
+  @media (max-width: 599px) {
     grid-row: span 3;
     .promo-paragraph {
       display: none;
