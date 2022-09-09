@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import uniq from 'ramda/src/uniq';
 import { string, shape, arrayOf, number, oneOfType, oneOf } from 'prop-types';
 import Promo, { MEDIA_TYPES } from '#components/Promo';
 import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
@@ -23,12 +24,12 @@ const Item = styled.div`
 `;
 
 const getStyles = (promoLength, i) => {
-  return [
+  return uniq([
     SMALL[promoLength - 1][i],
     MOBILE[promoLength - 1][i],
     TABLET[promoLength - 1][i],
     DESKTOP[promoLength - 1][i],
-  ];
+  ]);
 };
 
 const HiearchicalGrid = props => {
