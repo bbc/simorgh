@@ -1,12 +1,12 @@
 import { NEWSROUND_PURPLE, NEWSROUND_PURPLE_30, WHITE } from '../palette';
-import latinScript from '../typography/scripts/latin';
+import latinScript from '../fontScripts/latin';
 import {
   REITH_SANS_BOLD,
   REITH_SANS_REGULAR,
   REITH_SERIF_MEDIUM,
   REITH_SERIF_LIGHT,
-} from '../typography/fontFaces';
-import { REITH_SANS, REITH_SERIF } from '../typography/fontFamilies';
+} from '../fontFaces';
+import reithFontVariants from '../fontVariants/reith';
 import withThemeProvider from '../withThemeProvider';
 
 const newsroundTheme = {
@@ -19,10 +19,7 @@ const newsroundTheme = {
   },
   typography: {
     script: latinScript,
-    fontFamilies: {
-      primary: REITH_SANS,
-      secondary: REITH_SERIF,
-    },
+    fontVariants: reithFontVariants,
     fontFaces: [
       REITH_SANS_BOLD,
       REITH_SANS_REGULAR,

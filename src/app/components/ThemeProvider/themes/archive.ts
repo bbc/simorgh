@@ -1,11 +1,11 @@
 import { ARCHIVE_BLUE, WHITE } from '../palette';
-import latinScript from '../typography/scripts/latin';
+import latinScript from '../fontScripts/latin';
 import {
   REITH_SANS_BOLD,
   REITH_SANS_REGULAR,
   REITH_SERIF_MEDIUM,
-} from '../typography/fontFaces';
-import { REITH_SANS, REITH_SERIF } from '../typography/fontFamilies';
+} from '../fontFaces';
+import reithFontVariants from '../fontVariants/reith';
 import withThemeProvider from '../withThemeProvider';
 
 const archiveTheme = {
@@ -18,10 +18,7 @@ const archiveTheme = {
   },
   typography: {
     script: latinScript,
-    fontFamilies: {
-      primary: REITH_SANS,
-      secondary: REITH_SERIF,
-    },
+    fontVariants: reithFontVariants,
     fontFaces: [REITH_SANS_BOLD, REITH_SANS_REGULAR, REITH_SERIF_MEDIUM],
   },
 };
