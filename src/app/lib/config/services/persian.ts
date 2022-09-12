@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import brandSVG from '../../chameleonLogos/persian';
-import arabic from '../../../components/ThemeProvider/typography/scripts/arabic';
+import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import 'moment/locale/fa';
 import '#psammead/moment-timezone-include/tz/GMT';
 import jalaali from '../../../legacy/psammead/psammead-calendars/src';
