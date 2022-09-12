@@ -1,4 +1,5 @@
 import { css, Theme } from '@emotion/react';
+import pixelsToRem from '../../../utilities/pixelsToRem';
 
 export default {
   bylineSection: ({ spacings, mq }: Theme) =>
@@ -52,7 +53,7 @@ export default {
   lineBreak: ({ palette, spacings }: Theme) =>
     css({
       borderColor: palette.GREY_5,
-      width: `${40 / 16}rem`,
+      width: `${pixelsToRem(40)}rem`,
       margin: `${spacings.DOUBLE}rem 0`,
     }),
 
