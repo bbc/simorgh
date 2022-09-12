@@ -3,7 +3,7 @@ import {
   C_WHITE,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/scotland';
-import latin from '../../../components/ThemeProvider/typography/scripts/latin';
+import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/psammead-locales/moment/en-gb';
 import '#psammead/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';

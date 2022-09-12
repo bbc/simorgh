@@ -5,7 +5,7 @@ import {
 } from '#psammead/psammead-test-helpers/src';
 import { render } from '@testing-library/react';
 import moment from 'moment';
-import latin from '../../../../components/ThemeProvider/typography/scripts/latin';
+import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/psammead-locales/moment/ha';
 import Timestamp from '.';
 

@@ -1,10 +1,10 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import noAscOrDescScript from '../typography/scripts/noAscOrDesc';
+import noAscOrDescScript from '../fontScripts/noAscOrDesc';
 import {
   NOTO_SANS_ETHIOPIC_BOLD,
   NOTO_SANS_ETHIOPIC_REGULAR,
-} from '../typography/fontFaces';
-import { NOTO_SANS_ETHIOPIC } from '../typography/fontFamilies';
+} from '../fontFaces';
+import tigrinyaFontVariants from '../fontVariants/tigrinya';
 import withThemeProvider from '../withThemeProvider';
 
 const tigrinyaTheme = {
@@ -17,9 +17,7 @@ const tigrinyaTheme = {
   },
   typography: {
     script: noAscOrDescScript,
-    fontFamilies: {
-      primary: NOTO_SANS_ETHIOPIC,
-    },
+    fontVariants: tigrinyaFontVariants,
     fontFaces: [NOTO_SANS_ETHIOPIC_BOLD, NOTO_SANS_ETHIOPIC_REGULAR],
   },
 };
