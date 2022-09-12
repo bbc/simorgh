@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import noAscendersOrDescenders from '../../../components/ThemeProvider/typography/scripts/noAscOrDesc';
+import noAscendersOrDescenders from '../../../components/ThemeProvider/fontScripts/noAscOrDesc';
 import brandSVG from '../../chameleonLogos/tigrinya';
 import '#psammead/moment-timezone-include/tz/Africa/Addis_Ababa';
 import '#psammead/psammead-locales/moment/ti';

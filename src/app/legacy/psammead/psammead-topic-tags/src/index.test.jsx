@@ -1,9 +1,9 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { render } from '@testing-library/react';
-import latin from '../../../../components/ThemeProvider/typography/scripts/latin';
-import burmeseTypography from '../../../../components/ThemeProvider/typography/scripts/burmese';
-import arabicTypography from '../../../../components/ThemeProvider/typography/scripts/arabic';
+import latin from '../../../../components/ThemeProvider/fontScripts/latin';
+import burmeseTypography from '../../../../components/ThemeProvider/fontScripts/burmese';
+import arabicTypography from '../../../../components/ThemeProvider/fontScripts/arabic';
 import { TopicTags, TopicTag } from './index';
 
 describe('TopicTags', () => {
