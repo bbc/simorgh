@@ -23,6 +23,7 @@ import { ServiceContext } from '../../../../contexts/ServiceContext';
 import Grid from '../../../components/Grid';
 import RecommendationsImage from '../RecommendationsPromoImage';
 import useCombinedClickTrackerHandler from '../../StoryPromo/useCombinedClickTrackerHandler';
+import optimoToCPSImage from './utility';
 
 const StyledPromoWrapper = styled.div`
   position: relative;
@@ -103,9 +104,29 @@ const StyledHeadline = styled.div`
 const RecommendationsPromo = ({ promo, eventTrackingData }) => {
   const { script, service } = useContext(ServiceContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
-  const headline = pathOr(null, ['headlines', 'headline'], promo);
-  const url = pathOr(null, ['locators', 'assetUri'], promo);
-  const indexImage = pathOr(null, ['indexImage'], promo);
+  const headline =
+    pathOr(null, ['headlines', 'headline'], promo) ||
+    pathOr(
+      null,
+      [
+        'headlines',
+        'promoHeadline',
+        'blocks',
+        0,
+        'model',
+        'blocks',
+        0,
+        'model',
+        'text',
+      ],
+      promo,
+    );
+  const url =
+    pathOr(null, ['locators', 'assetUri'], promo) ||
+    pathOr(null, ['locators', 'canonicalUrl'], promo);
+  const indexImage =
+    pathOr(null, ['indexImage'], promo) ||
+    optimoToCPSImage({ cpsImage: pathOr(null, ['images'], promo) });
 
   return (
     <Grid

@@ -13,11 +13,19 @@ const RecommendationsImage = ({ indexImage, lazyLoad }) => {
     return <ImagePlaceholder ratio={landscapeRatio} />;
   }
 
-  const { height, width, path, altText, copyrightHolder } = indexImage;
+  const {
+    height,
+    width,
+    path,
+    altText,
+    copyrightHolder,
+    optimoLocator,
+    optimoOriginCode,
+  } = indexImage;
 
   const ratio = (height / width) * 100;
-  const originCode = getOriginCode(path);
-  const locator = getLocator(path);
+  const originCode = getOriginCode(path) || optimoOriginCode;
+  const locator = getLocator(path) || optimoLocator;
   const imageResolutions = [70, 95, 144, 183, 240, 320, 660];
   const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
     createSrcsets({

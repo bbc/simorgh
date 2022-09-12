@@ -1,221 +1,896 @@
 [
   {
-    "headlines":{
-      "shortHeadline":"La conmovedora historia de cómo una madre y el hombre preso por la muerte de su hija se unieron para atrapar al verdadero asesino",
-      "headline":"La conmovedora historia de cómo una madre y el hombre preso por la muerte de su hija se unieron para atrapar al verdadero asesino"
+    "headlines": {
+      "shortHeadline": "Enflasyon hikayeleri: 'Kütüphane oluşturma hayalim vardı, artık imkansız'",
+      "headline": "Enflasyon hikayeleri: 'Kütüphane oluşturma hayalim vardı, artık imkansız'"
     },
-    "locators":{
-      "assetUri":"/mundo/noticias-53377054",
-      "cpsUrn":"urn:bbc:content:assetUri:mundo/noticias-53377054",
-      "curie":"http://www.bbc.co.uk/asset/8d27a2ca-b69d-455c-ae8a-54181ad65975",
-      "assetId":"53377054"
+    "locators": {
+      "assetUri": "/turkce/haberler-turkiye-62677500",
+      "curieCpsUrn": "urn:bbc:cps:curie:asset:f39b0af1-026c-4604-b6d2-5ae1d3f7a6d3",
+      "assetId": "62677500",
+      "cpsUrn": "urn:bbc:content:assetUri:turkce/haberler-turkiye-62677500",
+      "curie": "http://www.bbc.co.uk/asset/f39b0af1-026c-4604-b6d2-5ae1d3f7a6d3"
     },
-    "summary":"Él estaba en la cárcel por haber matado a su hija, pero luego ella empezó a dudar si la policía había atrapado al verdadero asesino.",
-    "timestamp":1594550243000,
-    "language":"es",
-    "byline":{
-      "name":"Gareth Evans",
-      "title":"BBC News, Idaho Falls, Idaho",
-      "persons":[
-        {
-          "name":"Gareth Evans",
-          "function":"BBC News, Idaho Falls, Idaho"
-        }
-      ]
+    "summary": "Enflasyon, artan fiyatlar, ekonomik gelişmeler, bazen sadece terim, rakam ve verilerle anlatıldığında soğuk ve kuru bir gerçeğe dönüşebiliyor. Ancak bu sayıların ardında hayatları etkilenen milyonlarca insan var. Biz de yeni başlayan \u201CEnflasyon hikayeleri\u201D serisinde, bize yazdıklarınız ve anlattıklarınızdan yola çıkarak yüksek enflasyon devrini anlatalım istedik. Serinin ilk haberinde artan kitap fiyatları ve eğitim masraflarının okuyucuları ve öğrencileri nasıl etkilediğini derledik.",
+    "timestamp": 1662359229000,
+    "language": "tr",
+    "byline": {
+      "name": "Özge Özdemir",
+      "title": "BBC Türkçe",
+      "persons": [{ "name": "Özge Özdemir", "function": "BBC Türkçe" }]
     },
-    "passport":{
-      "category":{
-        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-        "categoryName":"Feature"
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
       },
-      "campaigns":[
+      "language": "tr",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Turkce",
+      "locator": "urn:bbc:cps:curie:asset:f39b0af1-026c-4604-b6d2-5ae1d3f7a6d3",
+      "availability": "AVAILABLE",
+      "taggings": [
         {
-          "campaignId":"5a988e2139461b000e9dabf7",
-          "campaignName":"WS - Inspire me"
-        }
-      ],
-      "taggings":[
-
-      ]
-    },
-    "indexImage":{
-      "id":"111155484",
-      "subType":"index",
-      "href":"http://c.files.bbci.co.uk/BD47/production/_111155484_mediaitem111155481.jpg",
-      "path":"/cpsprodpb/BD47/production/_111155484_mediaitem111155481.jpg",
-      "height":549,
-      "width":976,
-      "altText":"Angie Dodge",
-      "copyrightHolder":"BBC",
-      "type":"image"
-    },
-    "id":"urn:bbc:ares::asset:mundo/noticias-53377054",
-    "type":"cps"
-  },
-  {
-    "headlines":{
-      "shortHeadline":"\"Me retuvieron en un edificio de clase alta durante la pandemia, lo acepté y me siento culpable\"",
-      "headline":"Coronavirus en Colombia | El caso de la vigilante Edy Fonseca: \"Me retuvieron en un edificio de clase alta durante la pandemia, lo acepté y me siento culpable\""
-    },
-    "locators":{
-      "assetUri":"/mundo/noticias-america-latina-52884902",
-      "cpsUrn":"urn:bbc:content:assetUri:mundo/noticias-america-latina-52884902",
-      "curie":"http://www.bbc.co.uk/asset/f4363049-2813-b642-93df-5740002e16ea",
-      "assetId":"52884902"
-    },
-    "summary":"Edy Fonseca, una vigilante de 51 años, se quedó un mes en el edificio donde trabajaba en medio de la pandemia en Bogotá. El caso consternó a los colombianos, indignados por un supuesto \"secuestro\".",
-    "timestamp":1591360263000,
-    "language":"es",
-    "byline":{
-      "name":"Daniel Pardo",
-      "title":"Corresponsal de BBC Mundo en Colombia",
-      "persons":[
-        {
-          "name":"Daniel Pardo",
-          "function":"Corresponsal de BBC Mundo en Colombia"
-        }
-      ]
-    },
-    "passport":{
-      "category":{
-        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-        "categoryName":"News"
-      },
-      "campaigns":[
-        {
-          "campaignId":"5a988e2939461b000e9dabf8",
-          "campaignName":"WS - Educate me"
-        }
-      ],
-      "taggings":[
-
-      ]
-    },
-    "indexImage":{
-      "id":"112608137",
-      "subType":"index",
-      "href":"http://c.files.bbci.co.uk/11DDC/production/_112608137_dsc04722.jpg",
-      "path":"/cpsprodpb/11DDC/production/_112608137_dsc04722.jpg",
-      "height":549,
-      "width":976,
-      "altText":"Edy Fonseca",
-      "caption":"Fonseca, diabética y con cáncer de colon, sufrió estrés post traumático tras al incidente en el edificio Luz Marina.",
-      "copyrightHolder":"BBC",
-      "type":"image"
-    },
-    "id":"urn:bbc:ares::asset:mundo/noticias-america-latina-52884902",
-    "type":"cps"
-  },
-  {
-    "headlines":{
-      "shortHeadline":"Soy una mujer genocida y aún me persiguen los recuerdos de lo que hice",
-      "headline":"Soy una mujer genocida y aún me persiguen los recuerdos de lo que hice"
-    },
-    "locators":{
-      "assetUri":"/mundo/noticias-internacional-53113381",
-      "cpsUrn":"urn:bbc:content:assetUri:mundo/noticias-internacional-53113381",
-      "curie":"http://www.bbc.co.uk/asset/613768d7-ddfd-4ab2-9001-0b8a55d9a321",
-      "assetId":"53113381"
-    },
-    "summary":"Rara vez se habla del papel que jugaron las mujeres en el genocidio de Ruanda en 1994, donde murieron unas 800.000 personas. La periodista de la BBC Natalia Ojewska habló con algunas de las perpetradoras que están en prisión.",
-    "timestamp":1593925207000,
-    "language":"es",
-    "byline":{
-      "name":"Natalia Ojewska",
-      "title":"Para BBC News",
-      "persons":[
-        {
-          "name":"Natalia Ojewska",
-          "function":"Para BBC News"
-        }
-      ]
-    },
-    "passport":{
-      "category":{
-        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-        "categoryName":"Feature"
-      },
-      "campaigns":[
-        {
-          "campaignId":"5a988e2139461b000e9dabf7",
-          "campaignName":"WS - Inspire me"
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/f6ec89fd-3823-498e-a888-572e96f791b2#id"
         },
         {
-          "campaignId":"5a988e2939461b000e9dabf8",
-          "campaignName":"WS - Educate me"
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/06c730cd-79e2-4c05-9b16-b40e5bd53952#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+          "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/20111747-026a-4687-a5a7-0a0499746ac6#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/c02d6575-ace2-42b5-b870-6ca6c97ad5f4#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/06381136-9dc0-430f-bf48-b20106f0b18f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/5ba80305-d523-45ac-9b27-ac7ab5af3a74#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/066edbdf-d295-42ce-9df2-caf00eefb307#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
         }
       ],
-      "taggings":[
-
-      ]
+      "schemaVersion": "1.4.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "contributor": [
+          {
+            "value": "http://www.bbc.co.uk/things/06c730cd-79e2-4c05-9b16-b40e5bd53952#id",
+            "type": "contributor"
+          }
+        ],
+        "assetType": [
+          {
+            "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+            "type": "assetType"
+          }
+        ],
+        "primaryMediaType": [
+          {
+            "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+            "type": "primaryMediaType"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingLabel": "News report",
+            "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+            "thingType": ["tagging:TagConcept", "tagging:Format"],
+            "thingSameAs": [],
+            "thingEnglishLabel": "Report",
+            "thingPreferredLabel": "Report",
+            "thingLabelLanguage": "tr",
+            "type": "formats"
+          }
+        ],
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/06381136-9dc0-430f-bf48-b20106f0b18f#id",
+            "thingLabel": "Lira",
+            "thingUri": "http://www.bbc.co.uk/things/06381136-9dc0-430f-bf48-b20106f0b18f#id",
+            "thingId": "06381136-9dc0-430f-bf48-b20106f0b18f",
+            "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q172872",
+              "http://dbpedia.org/resource/Turkish_lira"
+            ],
+            "thingEnglishLabel": "Turkish Lira (TRY)",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/066edbdf-d295-42ce-9df2-caf00eefb307#id",
+            "thingLabel": "Türkiye ekonomisi",
+            "thingUri": "http://www.bbc.co.uk/things/066edbdf-d295-42ce-9df2-caf00eefb307#id",
+            "thingId": "066edbdf-d295-42ce-9df2-caf00eefb307",
+            "thingType": ["core:Theme", "core:Thing", "tagging:TagConcept"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q431095",
+              "http://dbpedia.org/resource/Economy_of_Turkey"
+            ],
+            "thingEnglishLabel": "Economy of Turkey",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/20111747-026a-4687-a5a7-0a0499746ac6#id",
+            "thingLabel": "Kişisel finansman",
+            "thingUri": "http://www.bbc.co.uk/things/20111747-026a-4687-a5a7-0a0499746ac6#id",
+            "thingId": "20111747-026a-4687-a5a7-0a0499746ac6",
+            "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q253613",
+              "http://dbpedia.org/resource/Personal_finance"
+            ],
+            "thingEnglishLabel": "Personal finance",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id",
+            "thingLabel": "Şirket Haberleri",
+            "thingUri": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id",
+            "thingId": "2f2db234-3c2d-40a4-b4ac-eea661faadd0",
+            "thingType": ["core:Theme", "tagging:TagConcept", "core:Thing"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q21857788",
+              "http://dbpedia.org/resource/Business"
+            ],
+            "thingEnglishLabel": "Business",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/5ba80305-d523-45ac-9b27-ac7ab5af3a74#id",
+            "thingLabel": "Enflasyon",
+            "thingUri": "http://www.bbc.co.uk/things/5ba80305-d523-45ac-9b27-ac7ab5af3a74#id",
+            "thingId": "5ba80305-d523-45ac-9b27-ac7ab5af3a74",
+            "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q35865",
+              "http://dbpedia.org/resource/Inflation"
+            ],
+            "thingEnglishLabel": "Inflation",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/c02d6575-ace2-42b5-b870-6ca6c97ad5f4#id",
+            "thingLabel": "Dolar",
+            "thingUri": "http://www.bbc.co.uk/things/c02d6575-ace2-42b5-b870-6ca6c97ad5f4#id",
+            "thingId": "c02d6575-ace2-42b5-b870-6ca6c97ad5f4",
+            "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q4917",
+              "http://dbpedia.org/resource/United_States_dollar"
+            ],
+            "thingEnglishLabel": "US Dollar (USD)",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+            "thingLabel": "Ekonomi",
+            "thingUri": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+            "thingId": "ca170ae3-99c1-48db-9b67-2866f85e7342",
+            "thingType": ["core:Theme", "core:Thing", "tagging:TagConcept"],
+            "thingSameAs": ["http://dbpedia.org/resource/Economy"],
+            "thingEnglishLabel": "Economics",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/f6ec89fd-3823-498e-a888-572e96f791b2#id",
+            "thingLabel": "Gençler",
+            "thingUri": "http://www.bbc.co.uk/things/f6ec89fd-3823-498e-a888-572e96f791b2#id",
+            "thingId": "f6ec89fd-3823-498e-a888-572e96f791b2",
+            "thingType": ["core:Thing", "core:Theme", "tagging:TagConcept"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Youth",
+              "http://www.wikidata.org/entity/Q190007"
+            ],
+            "thingEnglishLabel": "Young people",
+            "type": "about"
+          }
+        ]
+      }
     },
-    "indexImage":{
-      "id":"112981920",
-      "subType":"index",
-      "href":"http://c.files.bbci.co.uk/0B66/production/_112981920_53113381.jpg",
-      "path":"/cpsprodpb/0B66/production/_112981920_53113381.jpg",
-      "height":549,
-      "width":976,
-      "altText":"Martha Mukamushinzimana dice que sólo estaba siguiendo órdenes.",
-      "caption":"Martha Mukamushinzimana dice que sólo estaba siguiendo órdenes.",
-      "copyrightHolder":"NATALIA OJEWSKA",
-      "type":"image"
+    "indexImage": {
+      "id": "126550105",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/C3B9/production/_126550105_bbc.jpg",
+      "path": "/cpsprodpb/C3B9/production/_126550105_bbc.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "BBC",
+      "copyrightHolder": "BBC",
+      "originCode": "cpsprodpb",
+      "type": "image"
     },
-    "id":"urn:bbc:ares::asset:mundo/noticias-internacional-53113381",
-    "type":"cps"
+    "id": "urn:bbc:ares::asset:turkce/haberler-turkiye-62677500",
+    "type": "cps"
   },
   {
-    "headlines":{
-      "shortHeadline":"Las 10 mejores películas de lo que va de 2020 según la BBC (y que seguramente no pudiste ver en el cine)",
-      "headline":"Estrenos 2020: las 10 mejores películas de lo que va del año según la BBC (y que seguramente no pudiste ver en el cine)"
+    "headlines": {
+      "shortHeadline": "Fitch, enflasyon yüzünden Türkiye'nin kredi notunu düşürdü",
+      "headline": "Fitch, enflasyon yüzünden Türkiye'nin kredi notunu düşürdü"
     },
-    "locators":{
-      "assetUri":"/mundo/vert-cul-53370542",
-      "cpsUrn":"urn:bbc:content:assetUri:mundo/vert-cul-53370542",
-      "curie":"http://www.bbc.co.uk/asset/73b95a1d-d707-a34b-801a-bee0409a06a0",
-      "assetId":"53370542"
+    "locators": {
+      "assetUri": "/turkce/haberler-dunya-62105386",
+      "curieCpsUrn": "urn:bbc:cps:curie:asset:005a8208-34ce-468b-b226-c05cf8823b17",
+      "assetId": "62105386",
+      "cpsUrn": "urn:bbc:content:assetUri:turkce/haberler-dunya-62105386",
+      "curie": "http://www.bbc.co.uk/asset/005a8208-34ce-468b-b226-c05cf8823b17"
     },
-    "summary":"Varios filmes se han estrenado este año a pesar de que La pandemia del nuevo coronavirus ha cerrado las salas de cine en casi todo el mundo. Los críticos Nicholas Barber y Caryn James eligieron los mejores de esta primera mitad de 2020.",
-    "timestamp":1594424607000,
-    "language":"es",
-    "byline":{
-      "name":"Redacción  ",
-      "title":"BBC Culture",
-      "persons":[
-        {
-          "name":"Redacción",
-          "function":"BBC News Mundo"
-        }
-      ]
-    },
-    "passport":{
-      "category":{
-        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Review",
-        "categoryName":"Review"
+    "summary": "Uluslararası kredi derecelendirme kuruluşu Fitch Ratings, Türkiye'nin kredi notunu B+'dan B'ye indirdi, görünümünü ise \"negatif\" olarak teyit etti. Fitch, aldığı bu karara yükselen enflasyonu ve ekonomiyle ilgili endişeleri gerekçe olarak gösterdi.",
+    "timestamp": 1657356450000,
+    "language": "tr",
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
       },
-      "campaigns":[
+      "language": "tr",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Turkce",
+      "locator": "urn:bbc:cps:curie:asset:005a8208-34ce-468b-b226-c05cf8823b17",
+      "availability": "AVAILABLE",
+      "taggings": [
         {
-          "campaignId":"5a988e3139461b000e9dabf9",
-          "campaignName":"WS - Divert me"
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/06c730cd-79e2-4c05-9b16-b40e5bd53952#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+          "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/8b6b3ec4-a66d-48b7-873a-92b0379606ae#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/c02d6575-ace2-42b5-b870-6ca6c97ad5f4#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/06381136-9dc0-430f-bf48-b20106f0b18f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/066edbdf-d295-42ce-9df2-caf00eefb307#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
         }
       ],
-      "taggings":[
-
+      "schemaVersion": "1.4.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "contributor": [
+          {
+            "value": "http://www.bbc.co.uk/things/06c730cd-79e2-4c05-9b16-b40e5bd53952#id",
+            "type": "contributor"
+          }
+        ],
+        "assetType": [
+          {
+            "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+            "type": "assetType"
+          }
+        ],
+        "primaryMediaType": [
+          {
+            "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+            "type": "primaryMediaType"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingLabel": "News report",
+            "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+            "thingType": ["tagging:TagConcept", "tagging:Format"],
+            "thingSameAs": [],
+            "thingEnglishLabel": "Report",
+            "thingPreferredLabel": "Report",
+            "thingLabelLanguage": "tr",
+            "type": "formats"
+          }
+        ],
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/06381136-9dc0-430f-bf48-b20106f0b18f#id",
+            "thingLabel": "Lira",
+            "thingUri": "http://www.bbc.co.uk/things/06381136-9dc0-430f-bf48-b20106f0b18f#id",
+            "thingId": "06381136-9dc0-430f-bf48-b20106f0b18f",
+            "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q172872",
+              "http://dbpedia.org/resource/Turkish_lira"
+            ],
+            "thingEnglishLabel": "Turkish Lira (TRY)",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/066edbdf-d295-42ce-9df2-caf00eefb307#id",
+            "thingLabel": "Türkiye ekonomisi",
+            "thingUri": "http://www.bbc.co.uk/things/066edbdf-d295-42ce-9df2-caf00eefb307#id",
+            "thingId": "066edbdf-d295-42ce-9df2-caf00eefb307",
+            "thingType": ["core:Theme", "core:Thing", "tagging:TagConcept"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q431095",
+              "http://dbpedia.org/resource/Economy_of_Turkey"
+            ],
+            "thingEnglishLabel": "Economy of Turkey",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/8b6b3ec4-a66d-48b7-873a-92b0379606ae#id",
+            "thingLabel": "Merkez Bankası",
+            "thingUri": "http://www.bbc.co.uk/things/8b6b3ec4-a66d-48b7-873a-92b0379606ae#id",
+            "thingId": "8b6b3ec4-a66d-48b7-873a-92b0379606ae",
+            "thingType": [
+              "core:Organisation",
+              "tagging:Agent",
+              "tagging:AmbiguousTerm",
+              "core:Thing",
+              "tagging:TagConcept"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Central_Bank_of_the_Republic_of_Turkey",
+              "http://www.wikidata.org/entity/Q580829"
+            ],
+            "thingEnglishLabel": "Central Bank of the Republic of Turkey",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/c02d6575-ace2-42b5-b870-6ca6c97ad5f4#id",
+            "thingLabel": "Dolar",
+            "thingUri": "http://www.bbc.co.uk/things/c02d6575-ace2-42b5-b870-6ca6c97ad5f4#id",
+            "thingId": "c02d6575-ace2-42b5-b870-6ca6c97ad5f4",
+            "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q4917",
+              "http://dbpedia.org/resource/United_States_dollar"
+            ],
+            "thingEnglishLabel": "US Dollar (USD)",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+            "thingLabel": "Ekonomi",
+            "thingUri": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+            "thingId": "ca170ae3-99c1-48db-9b67-2866f85e7342",
+            "thingType": ["core:Theme", "core:Thing", "tagging:TagConcept"],
+            "thingSameAs": ["http://dbpedia.org/resource/Economy"],
+            "thingEnglishLabel": "Economics",
+            "type": "about"
+          }
+        ]
+      }
+    },
+    "indexImage": {
+      "id": "91389188",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/15886/production/_91389188_8e9f2602-895b-41eb-b0e2-a81b85eb3186.jpg",
+      "path": "/cpsprodpb/15886/production/_91389188_8e9f2602-895b-41eb-b0e2-a81b85eb3186.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Fitch binası",
+      "copyrightHolder": "Getty Images",
+      "originCode": "cpsprodpb",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:turkce/haberler-dunya-62105386",
+    "type": "cps"
+  },
+  {
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:crgwwvlqv05o",
+      "canonicalUrl": "https://www.bbc.com/turkce/articles/crgwwvlqv05o"
+    },
+    "timestamp": 1662383801519,
+    "suitableForSyndication": true,
+    "language": "tr",
+    "headlines": {
+      "seoHeadline": "Enflasyon TÜİK'e göre yüzde 80, ENAG'a göre yüzde 181: Ekonomistler ve siyasetçiler verileri nasıl yorumladı?",
+      "promoHeadline": {
+        "blocks": [
+          {
+            "type": "text",
+            "model": {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "model": {
+                    "text": "Enflasyon TÜİK'e göre yüzde 80, ENAG'a göre yüzde 181: Ekonomistler ve siyasetçiler verileri nasıl yorumladı?",
+                    "blocks": [
+                      {
+                        "type": "fragment",
+                        "model": {
+                          "text": "Enflasyon TÜİK'e göre yüzde 80, ENAG'a göre yüzde 181: Ekonomistler ve siyasetçiler verileri nasıl yorumladı?",
+                          "attributes": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "images": {
+      "defaultPromoImage": {
+        "blocks": [
+          {
+            "type": "altText",
+            "model": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "enflasyon",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "enflasyon",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "rawImage",
+            "model": {
+              "width": 819,
+              "height": 461,
+              "locator": "c7e8/live/f078f9f0-2ce0-11ed-be69-37efb676e54c.jpg",
+              "originCode": "cpsprodpb",
+              "copyrightHolder": "Getty Images",
+              "suitableForSyndication": true
+            }
+          }
+        ]
+      }
+    },
+    "summary": {
+      "blocks": [
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Türkiye İstatistik Kurumu (TÜİK) Ağustos ayı TÜFE verilerini açıkladı. Buna göre enflasyon, yıllık olarak yüzde 80,21 olarak gerçekleşti.Enflasyon Araştırma Grubu (ENAG) ise Ağustos ayı itibarıyla yıllık enflasyon oranını yüzde 181,37 olarak açıkladı.\n\n",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Türkiye İstatistik Kurumu (TÜİK) Ağustos ayı TÜFE verilerini açıkladı. Buna göre enflasyon, yıllık olarak yüzde 80,21 olarak gerçekleşti.Enflasyon Araştırma Grubu (ENAG) ise Ağustos ayı itibarıyla yıllık enflasyon oranını yüzde 181,37 olarak açıkladı.\n\n",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
       ]
     },
-    "indexImage":{
-      "id":"113334193",
-      "subType":"index",
-      "href":"http://c.files.bbci.co.uk/98E7/production/_113334193_10f06dbb-371a-4aa0-9577-7152063e5f97.jpg",
-      "path":"/cpsprodpb/98E7/production/_113334193_10f06dbb-371a-4aa0-9577-7152063e5f97.jpg",
-      "height":549,
-      "width":976,
-      "altText":"Julia Garner en The Assitant",
-      "caption":"Julia Garner protagoniza The Assistant.",
-      "copyrightHolder":"Bleecker Street",
-      "type":"image"
+    "passport": {
+      "language": "tr",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Turkce",
+      "locator": "urn:bbc:optimo:asset:crgwwvlqv05o",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+          "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+          "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/5ba80305-d523-45ac-9b27-ac7ab5af3a74#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+          "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/066edbdf-d295-42ce-9df2-caf00eefb307#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion": "1.4.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "assetType": [
+          {
+            "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+            "type": "assetType"
+          }
+        ],
+        "primaryMediaType": [
+          {
+            "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+            "type": "primaryMediaType"
+          }
+        ],
+        "motivation": [],
+        "infoClass": [
+          {
+            "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+            "type": "infoClass"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingLabel": "News report",
+            "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+            "thingType": ["tagging:TagConcept", "tagging:Format"],
+            "thingSameAs": [],
+            "thingEnglishLabel": "Report",
+            "thingPreferredLabel": "Report",
+            "thingLabelLanguage": "tr",
+            "type": "formats"
+          }
+        ],
+        "editorialSensitivity": [
+          {
+            "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+            "type": "editorialSensitivity"
+          }
+        ],
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/066edbdf-d295-42ce-9df2-caf00eefb307#id",
+            "thingLabel": "Türkiye ekonomisi",
+            "thingUri": "http://www.bbc.co.uk/things/066edbdf-d295-42ce-9df2-caf00eefb307#id",
+            "thingId": "066edbdf-d295-42ce-9df2-caf00eefb307",
+            "thingType": ["core:Theme", "core:Thing", "tagging:TagConcept"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q431095",
+              "http://dbpedia.org/resource/Economy_of_Turkey"
+            ],
+            "thingEnglishLabel": "Economy of Turkey",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/5ba80305-d523-45ac-9b27-ac7ab5af3a74#id",
+            "thingLabel": "Enflasyon",
+            "thingUri": "http://www.bbc.co.uk/things/5ba80305-d523-45ac-9b27-ac7ab5af3a74#id",
+            "thingId": "5ba80305-d523-45ac-9b27-ac7ab5af3a74",
+            "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q35865",
+              "http://dbpedia.org/resource/Inflation"
+            ],
+            "thingEnglishLabel": "Inflation",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+            "thingLabel": "Türkiye",
+            "thingUri": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+            "thingId": "a30418d5-3efe-415d-b2d2-1480eaf2eb4a",
+            "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+            "thingSameAs": ["http://sws.geonames.org/298795/"],
+            "thingEnglishLabel": "Turkey",
+            "type": "about"
+          }
+        ]
+      }
     },
-    "id":"urn:bbc:ares::asset:mundo/vert-cul-53370542",
-    "type":"cps"
+    "id": "urn:bbc:ares::article:crgwwvlqv05o",
+    "type": "optimo"
+  },
+  {
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:crg7rvwrxdlo",
+      "canonicalUrl": "https://www.bbc.com/turkce/articles/crg7rvwrxdlo"
+    },
+    "timestamp": 1660891088144,
+    "suitableForSyndication": true,
+    "language": "tr",
+    "headlines": {
+      "seoHeadline": "Merkez Bankası faiz kararı: Politika faizi neden indirildi, enflasyonu düşürmek için ne yapmalı?",
+      "promoHeadline": {
+        "blocks": [
+          {
+            "type": "text",
+            "model": {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "model": {
+                    "text": "Merkez Bankası politika faizini neden indirdi, enflasyonu düşürmek için ne yapmalı?",
+                    "blocks": [
+                      {
+                        "type": "fragment",
+                        "model": {
+                          "text": "Merkez Bankası politika faizini neden indirdi, enflasyonu düşürmek için ne yapmalı?",
+                          "attributes": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "images": {
+      "defaultPromoImage": {
+        "blocks": [
+          {
+            "type": "altText",
+            "model": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "dolar TL ",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "dolar TL ",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "rawImage",
+            "model": {
+              "width": 1023,
+              "height": 575,
+              "locator": "98dd/live/59717db0-1f53-11ed-aa9d-57accb179502.jpg",
+              "originCode": "cpsprodpb",
+              "copyrightHolder": "Getty Images",
+              "suitableForSyndication": true
+            }
+          }
+        ]
+      }
+    },
+    "summary": {
+      "blocks": [
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Kredi faizleri artıp TL, Dolar karşısında değer kaybetmeyi sürdürürken Merkez Bankası dün politika faizini 100 baz puanlık indirimle yüzde 13'e düşürdü. Peki TCMB faizi neden düşürüyor? İzlenilen 'enflasyonla büyüme' politikasının Türkiye'ye faturası ne oluyor? Prof. Dr. Selva Demiralp'in analizi",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Kredi faizleri artıp TL, Dolar karşısında değer kaybetmeyi sürdürürken Merkez Bankası dün politika faizini 100 baz puanlık indirimle yüzde 13'e düşürdü. Peki TCMB faizi neden düşürüyor? İzlenilen 'enflasyonla büyüme' politikasının Türkiye'ye faturası ne oluyor? Prof. Dr. Selva Demiralp'in analizi",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "passport": {
+      "language": "tr",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Turkce",
+      "locator": "urn:bbc:optimo:asset:crg7rvwrxdlo",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+          "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/06381136-9dc0-430f-bf48-b20106f0b18f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/066edbdf-d295-42ce-9df2-caf00eefb307#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/b1a660eb-ef14-4645-b4cd-d7bd939ce443#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+          "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+        }
+      ],
+      "schemaVersion": "1.4.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "assetType": [
+          {
+            "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+            "type": "assetType"
+          }
+        ],
+        "motivation": [],
+        "infoClass": [
+          {
+            "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+            "type": "infoClass"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingLabel": "News report",
+            "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+            "thingType": ["tagging:TagConcept", "tagging:Format"],
+            "thingSameAs": [],
+            "thingEnglishLabel": "Report",
+            "thingPreferredLabel": "Report",
+            "thingLabelLanguage": "tr",
+            "type": "formats"
+          }
+        ],
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/06381136-9dc0-430f-bf48-b20106f0b18f#id",
+            "thingLabel": "Lira",
+            "thingUri": "http://www.bbc.co.uk/things/06381136-9dc0-430f-bf48-b20106f0b18f#id",
+            "thingId": "06381136-9dc0-430f-bf48-b20106f0b18f",
+            "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q172872",
+              "http://dbpedia.org/resource/Turkish_lira"
+            ],
+            "thingEnglishLabel": "Turkish Lira (TRY)",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/066edbdf-d295-42ce-9df2-caf00eefb307#id",
+            "thingLabel": "Türkiye ekonomisi",
+            "thingUri": "http://www.bbc.co.uk/things/066edbdf-d295-42ce-9df2-caf00eefb307#id",
+            "thingId": "066edbdf-d295-42ce-9df2-caf00eefb307",
+            "thingType": ["core:Theme", "core:Thing", "tagging:TagConcept"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q431095",
+              "http://dbpedia.org/resource/Economy_of_Turkey"
+            ],
+            "thingEnglishLabel": "Economy of Turkey",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+            "thingLabel": "Türkiye",
+            "thingUri": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+            "thingId": "a30418d5-3efe-415d-b2d2-1480eaf2eb4a",
+            "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+            "thingSameAs": ["http://sws.geonames.org/298795/"],
+            "thingEnglishLabel": "Turkey",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+            "thingLabel": "Ekonomi",
+            "thingUri": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+            "thingId": "ca170ae3-99c1-48db-9b67-2866f85e7342",
+            "thingType": ["core:Theme", "core:Thing", "tagging:TagConcept"],
+            "thingSameAs": ["http://dbpedia.org/resource/Economy"],
+            "thingEnglishLabel": "Economics",
+            "type": "about"
+          }
+        ]
+      }
+    },
+    "id": "urn:bbc:ares::article:crg7rvwrxdlo",
+    "type": "optimo"
   }
 ]
