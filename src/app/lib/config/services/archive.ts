@@ -1,4 +1,4 @@
-import latin from '../../../components/ThemeProvider/typography/scripts/latin';
+import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/archive';
 import {
   C_ARCHIVE_BLUE,

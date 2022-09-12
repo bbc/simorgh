@@ -26,7 +26,7 @@ npm install #legacy/psammead-script-link/src --save
 
 ```jsx
 import ScriptLink from '#psammead/psammead-script-link/src';
-import latin from '../../../components/ThemeProvider/typography/scripts/latin';
+import latin from '../../../components/ThemeProvider/fontScripts/latin';
 
 const WrappingComponent = () => (
   <div>

@@ -8,7 +8,7 @@ import {
   shouldMatchSnapshot,
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
-import latinDiacritics from '../../../components/ThemeProvider/typography/scripts/latinWithDiacritics';
+import latinDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import {
   ServiceContext,
   ServiceContextProvider,
