@@ -44,7 +44,7 @@ export default {
       verticalAlign: 'middle',
       margin: `0 ${spacings.HALF}rem`,
       color: palette.POSTBOX,
-      fill: `currentcolor`,
+      fill: 'currentcolor',
       width: `${spacings.FULL}rem`,
       height: `${spacings.FULL}rem`,
       [mq.HIGH_CONTRAST]: { fill: 'linkText' },
@@ -57,14 +57,26 @@ export default {
       margin: `${spacings.DOUBLE}rem 0`,
     }),
 
-  link: () =>
+  link: ({ mq }: Theme) =>
     css({
       display: 'inline-block',
       textDecoration: 'none',
       paddingInlineEnd: '2.75rem',
       '&:focus, &:hover': {
-        '.byline__twitter-text': {
+        '.byline__link-text': {
           textDecoration: 'underline',
+        },
+      },
+      [mq.HIGH_CONTRAST]: {
+        '&:visited': {
+          svg: {
+            fill: 'VisitedText',
+          },
+        },
+        '&:active': {
+          svg: {
+            fill: 'ActiveText',
+          },
         },
       },
     }),
