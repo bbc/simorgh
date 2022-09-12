@@ -93,10 +93,9 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
               <a
                 css={[BylineCss.link, BylineCss.authorLink]}
                 href={twitterLink}
-                target="_blank"
-                rel="noreferrer"
               >
                 <strong
+                  className="byline__link-text"
                   css={[
                     BylineCss.author,
                     getSansBold(service),
@@ -146,8 +145,6 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
             <a
               css={[BylineCss.link, BylineCss.twitterLink]}
               href={twitterLink}
-              target="_blank"
-              rel="noreferrer"
               aria-labelledby="byline-twitter-link"
             >
               <span role="text" id="byline-twitter-link">
@@ -155,7 +152,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
                   {`Twitter, `}
                 </VisuallyHiddenText>
                 <span
-                  className="byline__twitter-text"
+                  className="byline__link-text"
                   css={[
                     BylineCss.twitterText,
                     getSansBold(service),
