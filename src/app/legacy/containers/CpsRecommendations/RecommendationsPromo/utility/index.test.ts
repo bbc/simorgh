@@ -1,8 +1,8 @@
 import path from 'ramda/src/path';
 import optimoToCPSImage from '.';
-import { cpsWithOptimoRecommendationsSingle } from '../fixture';
+import { optimoRecommendation } from '../fixture';
 
-const imageBlock = path(['images'], cpsWithOptimoRecommendationsSingle);
+const imageBlock = path(['images'], optimoRecommendation);
 
 describe('OptimoToCPSImage', () => {
   it('should convert an optimo image block to cps block', () => {

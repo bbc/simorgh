@@ -3,10 +3,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import {
-  cpsRecommendationsSingle,
-  cpsWithOptimoRecommendationsSingle,
-} from './fixture';
+import { cpsRecommendation, optimoRecommendation } from './fixture';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import RecommendationsPromo from '.';
 
@@ -29,12 +26,12 @@ const Component = ({ promo }) => {
 describe('RecommendationsPromo', () => {
   shouldMatchSnapshot(
     'it renders a Story Promo wrapped in a Grid component',
-    <Component promo={cpsRecommendationsSingle} />,
+    <Component promo={cpsRecommendation} />,
   );
 
   it('should render the title of the article as a link', () => {
     const { getByText, container } = render(
-      <Component promo={cpsRecommendationsSingle} />,
+      <Component promo={cpsRecommendation} />,
     );
 
     const links = container.querySelectorAll('a');
@@ -48,7 +45,7 @@ describe('RecommendationsPromo', () => {
 
   it('it should render recommendation correctly for optimo promos', () => {
     const { getByText, container } = render(
-      <Component promo={cpsWithOptimoRecommendationsSingle} />,
+      <Component promo={optimoRecommendation} />,
     );
 
     const links = container.querySelectorAll('a');

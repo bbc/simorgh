@@ -1,4 +1,4 @@
-export const cpsRecommendationsSingle = {
+export const cpsRecommendation = {
   headlines: {
     shortHeadline: 'Meet boys who dey convert cassava to electricity',
     headline: 'Meet boys who dey convert cassava to electricity',
@@ -28,7 +28,7 @@ export const cpsRecommendationsSingle = {
   type: 'cps',
 };
 
-export const cpsWithOptimoRecommendationsSingle = {
+export const optimoRecommendation = {
   locators: {
     optimoUrn: 'urn:bbc:optimo:asset:crg7rvwrxdlo',
     canonicalUrl: 'https://www.bbc.com/turkce/articles/crg7rvwrxdlo',
