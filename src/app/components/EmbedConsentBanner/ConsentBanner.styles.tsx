@@ -55,6 +55,7 @@ export default {
         backgroundColor: palette.POSTBOX,
         color: palette.WHITE,
         border: `${pixelsToRem(1)}rem solid ${palette.POSTBOX}`,
+        textDecoration: 'underline',
       },
     }),
 };

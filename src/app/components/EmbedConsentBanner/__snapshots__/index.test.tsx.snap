@@ -108,6 +108,8 @@ exports[`Embed Consent Banner should match snapshot - AMP 1`] = `
   background-color: #B80000;
   color: #FFFFFF;
   border: 0.0625rem solid #B80000;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -280,6 +282,8 @@ exports[`Embed Consent Banner should match snapshot 1`] = `
   background-color: #B80000;
   color: #FFFFFF;
   border: 0.0625rem solid #B80000;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
