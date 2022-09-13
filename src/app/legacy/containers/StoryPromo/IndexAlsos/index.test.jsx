@@ -6,7 +6,7 @@ import {
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
 import relatedItems from './relatedItems';
-import latin from '../../../../components/ThemeProvider/typography/scripts/latin';
+import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import IndexAlsosContainer from '.';
 

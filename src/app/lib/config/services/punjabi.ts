@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import gurmukhi from '../../../components/ThemeProvider/typography/scripts/gurmukhi';
+import gurmukhi from '../../../components/ThemeProvider/fontScripts/gurmukhi';
 import brandSVG from '../../chameleonLogos/punjabi';
 import '#psammead/psammead-locales/moment/pa-in';
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';

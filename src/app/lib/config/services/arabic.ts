@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import arabic from '../../../components/ThemeProvider/typography/scripts/arabic';
+import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import brandSVG from '../../chameleonLogos/arabic';
 import '#psammead/psammead-locales/moment/ar';
 import '#psammead/moment-timezone-include/tz/GMT';

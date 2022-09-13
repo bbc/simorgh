@@ -1,6 +1,6 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import noAscOrDescScript from '../typography/scripts/noAscOrDesc';
-import { APPLE_SD_GOTHIC_PRO } from '../typography/fontFamilies';
+import noAscOrDescScript from '../fontScripts/noAscOrDesc';
+import koreanFontVariants from '../fontVariants/korean';
 import withThemeProvider from '../withThemeProvider';
 
 const koreanTheme = {
@@ -13,9 +13,7 @@ const koreanTheme = {
   },
   typography: {
     script: noAscOrDescScript,
-    fontFamilies: {
-      primary: APPLE_SD_GOTHIC_PRO,
-    },
+    fontVariants: koreanFontVariants,
     fontFaces: [],
   },
 };
