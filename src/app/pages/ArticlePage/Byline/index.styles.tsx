@@ -50,13 +50,6 @@ export default {
       [mq.HIGH_CONTRAST]: { fill: 'linkText' },
     }),
 
-  lineBreak: ({ palette, spacings }: Theme) =>
-    css({
-      borderColor: palette.GREY_5,
-      width: `${pixelsToRem(40)}rem`,
-      margin: `${spacings.DOUBLE}rem 0`,
-    }),
-
   link: ({ mq }: Theme) =>
     css({
       display: 'inline-block',
@@ -96,6 +89,17 @@ export default {
   reportingFromText: ({ palette }: Theme) =>
     css({
       color: palette.SHADOW,
+    }),
+
+  timestampLineBreak: ({ palette, spacings }: Theme) =>
+    css({
+      '::before': {
+        content: '""',
+        borderTop: `${pixelsToRem(2)}rem solid ${palette.GREY_5}`,
+        width: `${pixelsToRem(40)}rem`,
+        display: 'block',
+        margin: `${spacings.DOUBLE}rem 0`,
+      },
     }),
 
   authorLink: () => css({ paddingTop: '1.375rem' }),

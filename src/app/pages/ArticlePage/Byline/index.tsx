@@ -211,9 +211,8 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
             </span>
           </li>
         ) : null}
-        <hr css={BylineCss.lineBreak} aria-hidden />
         {children ? (
-          <li>
+          <li css={BylineCss.timestampLineBreak}>
             <span role="text">
               <VisuallyHiddenText>
                 {`${publishedTranslated}, `}{' '}
