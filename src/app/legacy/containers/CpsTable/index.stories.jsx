@@ -2,6 +2,7 @@ import React from 'react';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 
 import { ServiceContext } from '../../../contexts/ServiceContext';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 import CpsTable from '.';
 import fixtures from './fixtures';
@@ -11,7 +12,9 @@ const Component = ({ fixture }) => (
   <ServiceContext.Provider
     value={{ script: latin, service: 'sport', dir: 'ltr' }}
   >
-    <CpsTable supportedServices={['sport']} blocks={fixture} />
+    <ThemeProvider service="sport" variant="default">
+      <CpsTable supportedServices={['sport']} blocks={fixture} />
+    </ThemeProvider>
   </ServiceContext.Provider>
 );
 
