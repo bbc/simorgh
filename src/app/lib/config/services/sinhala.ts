@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import sinhalese from '../../../components/ThemeProvider/typography/scripts/sinhalese';
+import sinhalese from '../../../components/ThemeProvider/fontScripts/sinhalese';
 import brandSVG from '../../chameleonLogos/sinhala';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/si';

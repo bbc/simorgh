@@ -7,11 +7,13 @@ import ConsentBanner from './ConsentBanner';
 interface ConsentBannerProps {
   pageType: PageTypes;
   provider: SocialEmbedProviders;
+  id?: string;
 }
 
 const EmbedConsentBannerAmp = ({
   pageType,
   provider,
+  id,
   children,
 }: PropsWithChildren<ConsentBannerProps>) => {
   if (pageType !== ARTICLE_PAGE || provider !== 'youtube')
@@ -21,9 +23,14 @@ const EmbedConsentBannerAmp = ({
     <>
       <ConsentBanner
         provider={provider}
-        clickHandler={{ on: 'tap:consentBanner.hide,embed.show' }}
+        clickHandler={{
+          on: `tap:consentBanner${id ? `-${id}` : ''}.hide,embed${
+            id ? `-${id}` : ''
+          }.show`,
+        }}
+        id={id}
       />
-      <div id="embed" hidden>
+      <div id={`embed${id ? `-${id}` : ''}`} hidden>
         {children}
       </div>
     </>
@@ -34,7 +41,7 @@ const EmbedConsentBannerCanonical = ({
   pageType,
   provider,
   children,
-}: PropsWithChildren<ConsentBannerProps>) => {
+}: PropsWithChildren<Partial<ConsentBannerProps>>) => {
   const [consented, setConsented] = useState(false);
 
   const showConsentBanner =

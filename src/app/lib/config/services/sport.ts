@@ -5,7 +5,7 @@ import {
   C_BLACK,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import brandSVG from '../../chameleonLogos/sport';
-import latin from '../../../components/ThemeProvider/typography/scripts/latin';
+import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/psammead-locales/moment/en-gb';
 import '#psammead/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
