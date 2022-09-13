@@ -1,4 +1,5 @@
 import { css, Theme } from '@emotion/react';
+import pixelsToRem from '../../../utilities/pixelsToRem';
 
 export default {
   bylineSection: ({ spacings, mq }: Theme) =>
@@ -43,7 +44,7 @@ export default {
       verticalAlign: 'middle',
       margin: `0 ${spacings.HALF}rem`,
       color: palette.POSTBOX,
-      fill: `currentcolor`,
+      fill: 'currentcolor',
       width: `${spacings.FULL}rem`,
       height: `${spacings.FULL}rem`,
       [mq.HIGH_CONTRAST]: { fill: 'linkText' },
@@ -52,18 +53,30 @@ export default {
   lineBreak: ({ palette, spacings }: Theme) =>
     css({
       borderColor: palette.GREY_5,
-      width: `${40 / 16}rem`,
+      width: `${pixelsToRem(40)}rem`,
       margin: `${spacings.DOUBLE}rem 0`,
     }),
 
-  link: () =>
+  link: ({ mq }: Theme) =>
     css({
       display: 'inline-block',
       textDecoration: 'none',
-      paddingRight: '2.75rem',
+      paddingInlineEnd: '2.75rem',
       '&:focus, &:hover': {
-        span: {
+        '.byline__link-text': {
           textDecoration: 'underline',
+        },
+      },
+      [mq.HIGH_CONTRAST]: {
+        '&:visited': {
+          svg: {
+            fill: 'VisitedText',
+          },
+        },
+        '&:active': {
+          svg: {
+            fill: 'ActiveText',
+          },
         },
       },
     }),
@@ -85,11 +98,7 @@ export default {
       color: palette.SHADOW,
     }),
 
-  get authorLink() {
-    return css([this.link(), { paddingTop: '1.375rem' }]);
-  },
+  authorLink: () => css({ paddingTop: '1.375rem' }),
 
-  get twitterLink() {
-    return css([this.link(), { paddingBottom: '1.6rem' }]);
-  },
+  twitterLink: () => css({ paddingBottom: '1.6rem' }),
 };

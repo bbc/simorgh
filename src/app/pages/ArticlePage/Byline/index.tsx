@@ -6,7 +6,7 @@ import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import VisuallyHiddenText from '../../../legacy/psammead/psammead-visually-hidden-text/src';
 import BylineCss from './index.styles';
-import { RightChevron } from '../../../components/icons';
+import { RightChevron, LeftChevron } from '../../../components/icons';
 import {
   getBodyCopy,
   getBrevier,
@@ -22,7 +22,8 @@ type Props = {
 };
 
 const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
-  const { service, script, translations } = useContext(ServiceContext);
+  const { service, script, translations, dir } = useContext(ServiceContext);
+  const isRtl = dir === 'rtl';
 
   const bylineBlocks = pathOr([], [0, 'model', 'blocks'], blocks);
 
@@ -108,12 +109,11 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
             <React.Fragment>
               <VisuallyHiddenText>{`${authorTranslated}, `}</VisuallyHiddenText>
               <a
-                css={BylineCss.authorLink}
+                css={[BylineCss.link, BylineCss.authorLink]}
                 href={twitterLink}
-                target="_blank"
-                rel="noreferrer"
               >
                 <strong
+                  className="byline__link-text"
                   css={[
                     BylineCss.author,
                     getSansBold(service),
@@ -122,7 +122,11 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
                 >
                   {author}
                 </strong>
-                <RightChevron css={BylineCss.authorChevron} />
+                {isRtl ? (
+                  <LeftChevron css={BylineCss.authorChevron} />
+                ) : (
+                  <RightChevron css={BylineCss.authorChevron} />
+                )}
               </a>
             </React.Fragment>
           ) : (
@@ -157,10 +161,8 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
         {twitterLink ? (
           <li>
             <a
-              css={BylineCss.twitterLink}
+              css={[BylineCss.link, BylineCss.twitterLink]}
               href={twitterLink}
-              target="_blank"
-              rel="noreferrer"
               aria-labelledby="byline-twitter-link"
             >
               <span role="text" id="byline-twitter-link">
@@ -168,13 +170,18 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
                   {`Twitter, `}
                 </VisuallyHiddenText>
                 <span
+                  className="byline__link-text"
                   css={[
                     BylineCss.twitterText,
                     getSansBold(service),
                     getBrevier(script),
                   ]}
                 >{`@${twitterText}`}</span>
-                <RightChevron css={BylineCss.twitterChevron} />
+                {isRtl ? (
+                  <LeftChevron css={BylineCss.twitterChevron} />
+                ) : (
+                  <RightChevron css={BylineCss.twitterChevron} />
+                )}
               </span>
             </a>
           </li>

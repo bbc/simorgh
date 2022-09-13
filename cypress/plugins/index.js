@@ -70,8 +70,15 @@ module.exports = (on, config) => {
 
   on('file:preprocessor', webpackPreprocessor(options));
 
+  // Add options for the cypress terminal report (cy.logs) here
+  const logPrinterOptions = {
+    defaultTrimLength: 2000,
+  };
   // eslint-disable-next-line global-require
-  require('cypress-terminal-report/src/installLogsPrinter')(on);
+  require('cypress-terminal-report/src/installLogsPrinter')(
+    on,
+    logPrinterOptions,
+  );
 
   on('task', {
     log(message) {

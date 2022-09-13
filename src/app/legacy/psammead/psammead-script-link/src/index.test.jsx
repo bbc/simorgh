@@ -1,7 +1,7 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { render, fireEvent } from '@testing-library/react';
-import latin from '../../../../components/ThemeProvider/typography/scripts/latin';
+import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import ScriptLink from './index';
 
 describe('ScriptLink', () => {

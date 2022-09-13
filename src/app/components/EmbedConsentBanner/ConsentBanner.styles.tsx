@@ -1,4 +1,5 @@
 import { css, Theme } from '@emotion/react';
+import pixelsToRem from '../../utilities/pixelsToRem';
 
 export default {
   parent: ({ spacings, palette }: Theme) =>
@@ -10,6 +11,7 @@ export default {
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'flex-start',
+      border: `${pixelsToRem(3)}rem solid transparent`,
     }),
 
   heading: ({ palette }: Theme) =>
@@ -25,16 +27,16 @@ export default {
       a: {
         color: 'inherit',
         textDecoration: 'none',
-        borderBottom: `1px solid ${palette.GREY_10}`,
+        borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_10}`,
 
         '&:hover, &:focus': {
           color: palette.POSTBOX,
-          borderBottom: `2px solid ${palette.POSTBOX}`,
+          borderBottom: `${pixelsToRem(2)}rem solid ${palette.POSTBOX}`,
         },
 
         '&:visited': {
           color: palette.GREY_6,
-          borderBottom: `1px solid ${palette.GREY_6}`,
+          borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_6}`,
         },
       },
     }),
@@ -43,7 +45,7 @@ export default {
     css({
       color: palette.GREY_10,
       backgroundColor: palette.WHITE,
-      border: `1px solid ${palette.PHILIPPINE_GREY}`,
+      border: `${pixelsToRem(1)}rem solid ${palette.PHILIPPINE_GREY}`,
       borderRadius: 0,
       fontWeight: 'bold',
       padding: `${spacings.FULL}rem`,
@@ -52,7 +54,7 @@ export default {
       '&:hover, &:focus': {
         backgroundColor: palette.POSTBOX,
         color: palette.WHITE,
-        border: `1px solid ${palette.POSTBOX}`,
+        border: `${pixelsToRem(1)}rem solid ${palette.POSTBOX}`,
       },
     }),
 };
