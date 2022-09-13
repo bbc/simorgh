@@ -2940,13 +2940,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@juggle/resize-observer@npm:2.4.0":
-  version: 2.4.0
-  resolution: "@juggle/resize-observer@npm:2.4.0"
-  checksum: d08ec140813bc0f7d8c974a11e3866e9fa20a1c648ec2672d74f1ced622d0df61cd09a4bb0c3fc444ba4ca4d575acc375a6dff3eb3570ab601542a89ca35f1ec
-  languageName: node
-  linkType: hard
-
 "@leichtgewicht/ip-codec@npm:^2.0.1":
   version: 2.0.4
   resolution: "@leichtgewicht/ip-codec@npm:2.0.4"
@@ -19753,7 +19746,6 @@ __metadata:
     "@emotion/react": 11.9.0
     "@emotion/server": 11.4.0
     "@emotion/styled": 11.8.1
-    "@juggle/resize-observer": 2.4.0
     "@loadable/babel-plugin": 5.13.2
     "@loadable/component": 5.15.2
     "@loadable/server": 5.15.2
