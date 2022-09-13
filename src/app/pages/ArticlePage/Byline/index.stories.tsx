@@ -2,7 +2,11 @@ import React, { PropsWithChildren } from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import Timestamp from '../../../legacy/containers/ArticleTimestamp';
-import { bylineWithNameAndRole, bylineWithLink } from './fixture';
+import {
+  bylineWithNameAndRole,
+  bylineWithLink,
+  bylineWithLinkAndLocation,
+} from './fixture';
 import Byline from '.';
 import { withServicesKnob } from '../../../legacy/psammead/psammead-storybook-helpers/src';
 import ThemeProvider from '../../../components/ThemeProvider';
@@ -47,6 +51,19 @@ export const LinkByline = ({ service, variant }: Props) => (
 );
 export const AuthorRoleTimestampByline = ({ service, variant }: Props) => (
   <Component fixture={bylineWithLink} service={service} variant={variant}>
+    <Timestamp
+      firstPublished={1660658887}
+      lastPublished={1660658887}
+      popOut={false}
+    />
+  </Component>
+);
+export const LinkAndLocationByline = ({ service, variant }: Props) => (
+  <Component
+    fixture={bylineWithLinkAndLocation}
+    service={service}
+    variant={variant}
+  >
     <Timestamp
       firstPublished={1660658887}
       lastPublished={1660658887}

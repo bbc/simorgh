@@ -81,6 +81,23 @@ export default {
       },
     }),
 
+  location: () =>
+    css({
+      margin: '0',
+      display: 'inline-block',
+    }),
+
+  locationText: ({ palette }: Theme) =>
+    css({
+      color: palette.SHADOW,
+      display: 'block',
+    }),
+
+  reportingFromText: ({ palette }: Theme) =>
+    css({
+      color: palette.SHADOW,
+    }),
+
   authorLink: () => css({ paddingTop: '1.375rem' }),
 
   twitterLink: () => css({ paddingBottom: '1.6rem' }),
