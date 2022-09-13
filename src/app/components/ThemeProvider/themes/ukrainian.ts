@@ -1,6 +1,6 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import cyrillicScript from '../fontScripts/cyrillic';
-import helmetFontVariants from '../fontVariants/helmet';
+import cyrillicScript from '../typography/scripts/cyrillic';
+import { HELMET } from '../typography/fontFamilies';
 import withThemeProvider from '../withThemeProvider';
 
 const ukrainianTheme = {
@@ -13,7 +13,9 @@ const ukrainianTheme = {
   },
   typography: {
     script: cyrillicScript,
-    fontVariants: helmetFontVariants,
+    fontFamilies: {
+      primary: HELMET,
+    },
     fontFaces: [],
   },
 };

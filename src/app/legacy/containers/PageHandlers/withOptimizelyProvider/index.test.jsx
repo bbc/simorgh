@@ -1,7 +1,7 @@
 import React from 'react';
 import * as optimizelyReactSdk from '@optimizely/react-sdk';
 import { render } from '@testing-library/react';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
+import latin from '../../../../components/ThemeProvider/typography/scripts/latin';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import withOptimizelyProvider from '.';
 

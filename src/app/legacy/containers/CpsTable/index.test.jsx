@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import latin from '../../../components/ThemeProvider/typography/scripts/latin';
 import CpsTable from '.';
 import fixtures from './fixtures';
 

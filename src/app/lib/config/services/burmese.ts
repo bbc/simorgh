@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import burmese from '../../../components/ThemeProvider/fontScripts/burmese';
+import burmese from '../../../components/ThemeProvider/typography/scripts/burmese';
 import brandSVG from '../../chameleonLogos/burmese';
 import '#psammead/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';

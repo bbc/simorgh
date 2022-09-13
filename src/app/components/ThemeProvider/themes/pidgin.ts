@@ -1,6 +1,6 @@
 import { GHOST, WHITE, BLUEJAY, POSTBOX_30 } from '../palette';
-import latin from '../fontScripts/latin';
-import helmetFontVariants from '../fontVariants/helmet';
+import latin from '../typography/scripts/latin';
+import { HELMET } from '../typography/fontFamilies';
 import withThemeProvider from '../withThemeProvider';
 
 const pidginTheme = {
@@ -13,7 +13,9 @@ const pidginTheme = {
   },
   typography: {
     script: latin,
-    fontVariants: helmetFontVariants,
+    fontFamilies: {
+      primary: HELMET,
+    },
     fontFaces: [],
   },
 };

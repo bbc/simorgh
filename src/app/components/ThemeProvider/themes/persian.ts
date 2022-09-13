@@ -1,7 +1,7 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import arabicScript from '../fontScripts/arabic';
-import { REITH_QALAM_REGULAR, REITH_QALAM_BOLD } from '../fontFaces';
-import reithQalamFontVariants from '../fontVariants/reithQalam';
+import arabicScript from '../typography/scripts/arabic';
+import { REITH_QALAM_REGULAR, REITH_QALAM_BOLD } from '../typography/fontFaces';
+import { REITH_QALAM } from '../typography/fontFamilies';
 import withThemeProvider from '../withThemeProvider';
 
 const persianTheme = {
@@ -14,7 +14,9 @@ const persianTheme = {
   },
   typography: {
     script: arabicScript,
-    fontVariants: reithQalamFontVariants,
+    fontFamilies: {
+      primary: REITH_QALAM,
+    },
     fontFaces: [REITH_QALAM_REGULAR, REITH_QALAM_BOLD],
   },
 };

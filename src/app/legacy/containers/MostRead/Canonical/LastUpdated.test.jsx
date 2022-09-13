@@ -1,6 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
+import latin from '../../../../components/ThemeProvider/typography/scripts/latin';
 import LastUpdated from './LastUpdated';
 
 describe('MostReadCanonical - LastUpdated', () => {

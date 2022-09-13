@@ -60,7 +60,7 @@ const customRender = (
   ui: ReactElement,
   options?: Omit<RenderOptions, 'wrapper'> & Omit<Props, 'children'>,
 ) => {
-  const { isAmp, pageData, pageType, pathname, service, toggles, variant } =
+  const { isAmp, pageData, pageType, pathname, service, toggles } =
     options || {};
 
   return render(ui, {
@@ -72,7 +72,6 @@ const customRender = (
         pathname={pathname}
         service={service}
         toggles={toggles}
-        variant={variant}
       >
         {children}
       </AllTheProviders>

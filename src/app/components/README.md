@@ -27,7 +27,7 @@ it('should render the title', async () => {
   //             service="mundo"
   //             pathname="/news/articles/c0g992jmmkko"
   //           >
-  //             <SomeComponent />
+  //             <UserContextProvider>{children}</UserContextProvider>
   //           </RequestContextProvider>
   //         </ServiceContextProvider>
   //       </ToggleContextProvider>

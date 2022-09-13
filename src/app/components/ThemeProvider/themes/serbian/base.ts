@@ -1,5 +1,5 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../../palette';
-import helmetFontVariants from '../../fontVariants/helmet';
+import { HELMET } from '../../typography/fontFamilies';
 
 const baseSerbianTheme = {
   palette: {
@@ -10,7 +10,9 @@ const baseSerbianTheme = {
     BRAND_BORDER: POSTBOX_30,
   },
   typography: {
-    fontVariants: helmetFontVariants,
+    fontFamilies: {
+      primary: HELMET,
+    },
     fontFaces: [],
   },
 };

@@ -1,6 +1,6 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../../palette';
-import noAscOrDescScript from '../../fontScripts/noAscOrDesc';
-import chineseFontVariants from '../../fontVariants/chinese';
+import noAscOrDescScript from '../../typography/scripts/noAscOrDesc';
+import { HELVETICA_CHINESE } from '../../typography/fontFamilies';
 
 const ukChinaTheme = {
   palette: {
@@ -12,7 +12,9 @@ const ukChinaTheme = {
   },
   typography: {
     script: noAscOrDescScript,
-    fontVariants: chineseFontVariants,
+    fontFamilies: {
+      primary: HELVETICA_CHINESE,
+    },
     fontFaces: [],
   },
 };

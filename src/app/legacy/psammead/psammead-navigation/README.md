@@ -119,7 +119,7 @@ import Navigation, {
   NavigationUl,
   NavigationLi,
 } from '#psammead/psammead-navigation/src';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import latin from '../../../components/ThemeProvider/typography/scripts/latin';
 
 <Navigation
   brandBackgroundColour="#B80000"
@@ -178,7 +178,7 @@ import {
   DropdownUl,
   DropdownLi,
 } from '#psammead/psammead-navigation/src/dropdown';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import latin from '../../../components/ThemeProvider/typography/scripts/latin';
 
 <CanonicalDropdown isOpen={isOpen}>
   <DropdownUl>
@@ -204,7 +204,7 @@ import latin from '../../../components/ThemeProvider/fontScripts/latin';
 ```jsx
 import React from 'react';
 import { CanonicalMenuButton } from '#psammead/psammead-navigation/src/dropdown';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import latin from '../../../components/ThemeProvider/typography/scripts/latin';
 
 <CanonicalMenuButton
   announcedText="Menu"
@@ -222,7 +222,7 @@ import latin from '../../../components/ThemeProvider/fontScripts/latin';
 ```jsx
 import React from 'react';
 import { AmpMenuButton } from '#psammead/psammead-navigation/src/dropdown';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import latin from '../../../components/ThemeProvider/typography/scripts/latin';
 
 <AmpMenuButton
   announcedText="Menu"

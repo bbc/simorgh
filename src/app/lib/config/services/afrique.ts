@@ -1,5 +1,5 @@
 import brandSVG from '../../chameleonLogos/afrique';
-import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
+import latinWithDiacritics from '../../../components/ThemeProvider/typography/scripts/latinWithDiacritics';
 import {
   C_POSTBOX,
   C_WHITE,

@@ -1,8 +1,8 @@
 import React from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import latin from '../../../../../components/ThemeProvider/fontScripts/latin';
-import arabic from '../../../../../components/ThemeProvider/fontScripts/arabic';
+import latin from '../../../../../components/ThemeProvider/typography/scripts/latin';
+import arabic from '../../../../../components/ThemeProvider/typography/scripts/arabic';
 import { ServiceContextProvider } from '../../../../../contexts/ServiceContext';
 import { MostReadLink, getParentColumns } from '.';
 import { getItem, getItemWrapperArray } from '../../utilities';

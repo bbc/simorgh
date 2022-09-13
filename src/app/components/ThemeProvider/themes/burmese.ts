@@ -1,7 +1,7 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import burmeseScript from '../fontScripts/burmese';
-import { PADAUK_BOLD, PADAUK_REGULAR } from '../fontFaces';
-import burmeseFontVariants from '../fontVariants/burmese';
+import burmeseScript from '../typography/scripts/burmese';
+import { PADAUK_BOLD, PADAUK_REGULAR } from '../typography/fontFaces';
+import { PADAUK } from '../typography/fontFamilies';
 import withThemeProvider from '../withThemeProvider';
 
 const burmeseTheme = {
@@ -14,7 +14,9 @@ const burmeseTheme = {
   },
   typography: {
     script: burmeseScript,
-    fontVariants: burmeseFontVariants,
+    fontFamilies: {
+      primary: PADAUK,
+    },
     fontFaces: [PADAUK_BOLD, PADAUK_REGULAR],
   },
 };

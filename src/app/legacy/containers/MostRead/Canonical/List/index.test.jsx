@@ -1,10 +1,10 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 
-import arabic from '../../../../../components/ThemeProvider/fontScripts/arabic';
-import bengali from '../../../../../components/ThemeProvider/fontScripts/bengali';
-import burmese from '../../../../../components/ThemeProvider/fontScripts/burmese';
-import latin from '../../../../../components/ThemeProvider/fontScripts/latin';
+import arabic from '../../../../../components/ThemeProvider/typography/scripts/arabic';
+import bengali from '../../../../../components/ThemeProvider/typography/scripts/bengali';
+import burmese from '../../../../../components/ThemeProvider/typography/scripts/burmese';
+import latin from '../../../../../components/ThemeProvider/typography/scripts/latin';
 
 import MostReadList from '.';
 import { getItemWrapperArray } from '../../utilities';

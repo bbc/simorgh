@@ -7,7 +7,7 @@ import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import BulletedListContainer from './index';
 import { listItemD, listItemE, orderedList } from './fixtures';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
+import arabic from '../../../components/ThemeProvider/typography/scripts/arabic';
 
 // eslint-disable-next-line react/prop-types
 const BulletsWithContext = ({ blocks, blockGroupIndex }) => (

@@ -37,7 +37,7 @@ import {
   ConsentBanner,
   ConsentBannerText,
 } from '#psammead/psammead-consent-banner/src';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import latin from '../../../components/ThemeProvider/typography/scripts/latin';
 
 const Accept = (
   <button onClick={() => {}} type="button">

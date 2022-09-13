@@ -1,6 +1,6 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import latinScript from '../fontScripts/latin';
-import helmetFontVariants from '../fontVariants/helmet';
+import latinScript from '../typography/scripts/latin';
+import { HELMET } from '../typography/fontFamilies';
 import withThemeProvider from '../withThemeProvider';
 
 const afriqueTheme = {
@@ -13,7 +13,9 @@ const afriqueTheme = {
   },
   typography: {
     script: latinScript,
-    fontVariants: helmetFontVariants,
+    fontFamilies: {
+      primary: HELMET,
+    },
     fontFaces: [],
   },
 };

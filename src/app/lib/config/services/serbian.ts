@@ -4,8 +4,8 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
-import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
+import latinWithDiacritics from '../../../components/ThemeProvider/typography/scripts/latinWithDiacritics';
+import cyrillic from '../../../components/ThemeProvider/typography/scripts/cyrillic';
 import brandSVG from '../../chameleonLogos/serbian';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/sr-cyrl';

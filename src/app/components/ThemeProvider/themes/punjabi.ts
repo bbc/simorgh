@@ -1,6 +1,6 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import gurmukhiScript from '../fontScripts/gurmukhi';
-import punjabiFontVariants from '../fontVariants/punjabi';
+import gurmukhiScript from '../typography/scripts/gurmukhi';
+import { NOTO_SANS_GURMUKHI } from '../typography/fontFamilies';
 import withThemeProvider from '../withThemeProvider';
 
 const punjabiTheme = {
@@ -13,7 +13,9 @@ const punjabiTheme = {
   },
   typography: {
     script: gurmukhiScript,
-    fontVariants: punjabiFontVariants,
+    fontFamilies: {
+      primary: NOTO_SANS_GURMUKHI,
+    },
     fontFaces: [],
   },
 };

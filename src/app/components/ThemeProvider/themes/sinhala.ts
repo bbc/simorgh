@@ -1,10 +1,10 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import sinhaleseScript from '../fontScripts/sinhalese';
+import sinhaleseScript from '../typography/scripts/sinhalese';
 import {
   NOTO_SERIF_SINHALA_BOLD,
   NOTO_SERIF_SINHALA_REGULAR,
-} from '../fontFaces';
-import sinhalaFontVariants from '../fontVariants/sinhala';
+} from '../typography/fontFaces';
+import { NOTO_SANS_SINHALA } from '../typography/fontFamilies';
 import withThemeProvider from '../withThemeProvider';
 
 const sinhalaTheme = {
@@ -17,7 +17,9 @@ const sinhalaTheme = {
   },
   typography: {
     script: sinhaleseScript,
-    fontVariants: sinhalaFontVariants,
+    fontFamilies: {
+      primary: NOTO_SANS_SINHALA,
+    },
     fontFaces: [NOTO_SERIF_SINHALA_BOLD, NOTO_SERIF_SINHALA_REGULAR],
   },
 };

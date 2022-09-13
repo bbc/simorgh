@@ -39,7 +39,7 @@
 ## Usage
 
 ```jsx
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import latin from '../../../components/ThemeProvider/typography/scripts/latin';
 
 const WrappingContainer = () => (
   <Timestamp

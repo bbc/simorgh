@@ -6,7 +6,7 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import '#psammead/moment-timezone-include/tz/Europe/London';
-import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
+import latinWithDiacritics from '../../../components/ThemeProvider/typography/scripts/latinWithDiacritics';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/cy';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';

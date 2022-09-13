@@ -1,6 +1,6 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import devanagariScript from '../fontScripts/devanagari';
-import hindiFontVariants from '../fontVariants/hindi';
+import devanagariScript from '../typography/scripts/devanagari';
+import { ARIAL } from '../typography/fontFamilies';
 import withThemeProvider from '../withThemeProvider';
 
 const hindiTheme = {
@@ -13,7 +13,9 @@ const hindiTheme = {
   },
   typography: {
     script: devanagariScript,
-    fontVariants: hindiFontVariants,
+    fontFamilies: {
+      primary: ARIAL,
+    },
     fontFaces: [],
   },
 };

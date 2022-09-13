@@ -1,6 +1,6 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import devanagariScript from '../fontScripts/devanagari';
-import gujaratiFontVariants from '../fontVariants/gujarati';
+import devanagariScript from '../typography/scripts/devanagari';
+import { MUKTA_VAANI } from '../typography/fontFamilies';
 import withThemeProvider from '../withThemeProvider';
 
 const gujaratiTheme = {
@@ -13,7 +13,9 @@ const gujaratiTheme = {
   },
   typography: {
     script: devanagariScript,
-    fontVariants: gujaratiFontVariants,
+    fontFamilies: {
+      primary: MUKTA_VAANI,
+    },
     fontFaces: [],
   },
 };

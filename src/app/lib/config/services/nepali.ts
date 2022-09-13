@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import devanagari from '../../../components/ThemeProvider/fontScripts/devanagari';
+import devanagari from '../../../components/ThemeProvider/typography/scripts/devanagari';
 import brandSVG from '../../chameleonLogos/nepali';
 import '#psammead/moment-timezone-include/tz/Asia/Kathmandu';
 import '#psammead/psammead-locales/moment/ne';
