@@ -1,63 +1,87 @@
-import styled from '@emotion/styled';
-import {
-  getBodyCopy,
-  getBrevier,
-} from '../../../legacy/psammead/gel-foundations/src/typography';
-import {
-  C_GREY_6,
-  C_GREY_10,
-  C_GREY_5,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-} from '../../../legacy/psammead/gel-foundations/src/spacings';
-import { getSansBold } from '../../../legacy/psammead/psammead-styles/src/font-styles';
-import {
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '../../../legacy/psammead/gel-foundations/src/breakpoints';
+import { css, Theme } from '@emotion/react';
+import pixelsToRem from '../../../utilities/pixelsToRem';
 
-interface Props {
-  service: string;
-  script: any;
-}
+export default {
+  bylineSection: ({ spacings, mq }: Theme) =>
+    css({
+      paddingInlineStart: `${spacings.FULL}rem`,
+      [mq.GROUP_2_MIN_WIDTH]: { paddingInlineStart: `${spacings.DOUBLE}rem` },
+      [mq.GROUP_4_MIN_WIDTH]: { paddingInlineStart: 0 },
+      div: { padding: 0 },
+    }),
 
-export const StyledBylineSection = styled.section`
-  padding-inline-start: ${GEL_SPACING};
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    padding-inline-start: ${GEL_SPACING_DBL};
-  }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding-inline-start: 0;
-  }
+  bylineList: () => css({ listStyle: 'none', padding: 0, margin: 0 }),
 
-  div {
-    padding: 0;
-  }
-`;
+  author: ({ palette }: Theme) =>
+    css({
+      color: palette.GREY_10,
+      display: 'inline-block',
+      verticalAlign: 'middle',
+    }),
 
-export const Author = styled.strong<Props>`
-  color: ${C_GREY_10};
-  ${({ service }) => getSansBold(service)}
-  ${({ script }) => getBodyCopy(script)};
-  display: inline-block;
-  vertical-align: middle;
-`;
+  jobRole: ({ palette }: Theme) => css({ color: palette.GREY_10 }),
 
-export const JobRole = styled.strong<Props>`
-  color: ${C_GREY_6};
-  ${({ service }) => getSansBold(service)}
-  ${({ script }) => getBrevier(script)}
-`;
+  twitterText: ({ palette }: Theme) =>
+    css({
+      color: palette.POSTBOX,
+      display: 'inline-block',
+      verticalAlign: 'middle',
+    }),
 
-export const LineBreak = styled.hr`
-  border-color: ${C_GREY_5};
-  width: ${40 / 16}rem;
-  margin: ${GEL_SPACING_DBL} 0;
-`;
+  authorChevron: ({ palette, spacings, mq }: Theme) =>
+    css({
+      verticalAlign: 'middle',
+      margin: `0 ${spacings.HALF}rem`,
+      color: palette.GREY_10,
+      fill: 'currentcolor',
+      width: `${spacings.FULL + spacings.HALF}rem`,
+      height: `${spacings.FULL + spacings.HALF}rem`,
+      [mq.HIGH_CONTRAST]: { fill: 'linkText' },
+    }),
 
-export const BylineList = styled.ul`
-  list-style: none;
-  padding: 0;
-`;
+  twitterChevron: ({ palette, spacings, mq }: Theme) =>
+    css({
+      verticalAlign: 'middle',
+      margin: `0 ${spacings.HALF}rem`,
+      color: palette.POSTBOX,
+      fill: 'currentcolor',
+      width: `${spacings.FULL}rem`,
+      height: `${spacings.FULL}rem`,
+      [mq.HIGH_CONTRAST]: { fill: 'linkText' },
+    }),
+
+  lineBreak: ({ palette, spacings }: Theme) =>
+    css({
+      borderColor: palette.GREY_5,
+      width: `${pixelsToRem(40)}rem`,
+      margin: `${spacings.DOUBLE}rem 0`,
+    }),
+
+  link: ({ mq }: Theme) =>
+    css({
+      display: 'inline-block',
+      textDecoration: 'none',
+      paddingInlineEnd: '2.75rem',
+      '&:focus, &:hover': {
+        '.byline__link-text': {
+          textDecoration: 'underline',
+        },
+      },
+      [mq.HIGH_CONTRAST]: {
+        '&:visited': {
+          svg: {
+            fill: 'VisitedText',
+          },
+        },
+        '&:active': {
+          svg: {
+            fill: 'ActiveText',
+          },
+        },
+      },
+    }),
+
+  authorLink: () => css({ paddingTop: '1.375rem' }),
+
+  twitterLink: () => css({ paddingBottom: '1.6rem' }),
+};

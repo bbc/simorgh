@@ -311,3 +311,110 @@ export const bylineWithNameAndRole = [
     },
   },
 ];
+
+export const bylineWithLink = [
+  {
+    type: 'contributor',
+    model: {
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Single Byline (all values)',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Single Byline (all values)',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'role',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Test',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Test',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'link',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'test',
+                        blocks: [
+                          {
+                            type: 'urlLink',
+                            model: {
+                              text: 'test',
+                              locator: 'https://twitter.com/test',
+                              blocks: [
+                                {
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'test',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                              isExternal: true,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+];

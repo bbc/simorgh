@@ -38,3 +38,5 @@ export const GROUP_4_MIN_WIDTH = `@media (min-width: ${GROUP_4_MIN_WIDTH_BP}rem)
 export const GROUP_4_ONLY = `@media (min-width: ${GROUP_4_MIN_WIDTH_BP}rem) and (max-width: ${GROUP_4_MAX_WIDTH_BP}rem)`;
 
 export const GROUP_5_MIN_WIDTH = `@media (min-width: ${GROUP_5_MIN_WIDTH_BP}rem)`;
+
+export const HIGH_CONTRAST = `@media screen and (forced-colors: active)`;
