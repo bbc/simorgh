@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 import uniq from 'ramda/src/uniq';
 import { string, shape, arrayOf, number, oneOfType, oneOf } from 'prop-types';
 import Promo, { MEDIA_TYPES } from '#components/Promo';
@@ -24,15 +25,23 @@ const Item = styled.div`
 `;
 
 const getStyles = (promoLength, i) => {
-  return uniq([
-    SMALL[promoLength - 1][i],
-    MOBILE[promoLength - 1][i],
-    TABLET[promoLength - 1][i],
-    DESKTOP[promoLength - 1][i],
-  ]);
+  return [
+    `@media (max-width: 399px) {
+      ${SMALL[promoLength - 1][i]}
+    }`,
+    `@media (min-width: 400px) and (max-width: 599px) {
+      ${MOBILE[promoLength - 1][i]}
+    }`,
+    `@media (min-width: 600px) and (max-width: 1007px) {
+      ${TABLET[promoLength - 1][i]}
+    }`,
+    `@media (min-width: 1008px) {
+      ${DESKTOP[promoLength - 1][i]}
+    }`,
+  ];
 };
 
-const HiearchicalGrid = props => {
+const HierarchicalGrid = props => {
   const { summaries } = props;
   const promoLength = summaries.length;
   return (
@@ -67,7 +76,7 @@ const HiearchicalGrid = props => {
   );
 };
 
-HiearchicalGrid.propTypes = {
+HierarchicalGrid.propTypes = {
   summaries: arrayOf(
     shape({
       title: string.isRequired,
@@ -79,4 +88,4 @@ HiearchicalGrid.propTypes = {
   ).isRequired,
 };
 
-export default HiearchicalGrid;
+export default HierarchicalGrid;
