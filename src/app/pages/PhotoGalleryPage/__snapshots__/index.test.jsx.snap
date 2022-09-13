@@ -321,34 +321,35 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   }
 }
 
-.emotion-10 {
+.emotion-11 {
+  color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  color: #141414;
-  padding-bottom: 1.5rem;
+  font-weight: 400;
   margin: 0;
+  padding-bottom: 1.5rem;
 }
 
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-10 {
+@media (min-width: 20rem) {
+  .emotion-11 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-11 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-10 {
-    padding-right: 2.5rem;
+  .emotion-11 {
+    -webkit-padding-end: 2.5rem;
+    padding-inline-end: 2.5rem;
   }
 }
 
@@ -1132,7 +1133,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
               >
                 <p
                   class="emotion-10 emotion-11"
-                  dir="ltr"
                 >
                   Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan
                 </p>
@@ -2385,34 +2385,35 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   }
 }
 
-.emotion-15 {
+.emotion-16 {
+  color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  color: #141414;
-  padding-bottom: 1.5rem;
+  font-weight: 400;
   margin: 0;
+  padding-bottom: 1.5rem;
 }
 
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-15 {
+@media (min-width: 20rem) {
+  .emotion-16 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-16 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-15 {
-    padding-right: 2.5rem;
+  .emotion-16 {
+    -webkit-padding-end: 2.5rem;
+    padding-inline-end: 2.5rem;
   }
 }
 
@@ -3208,7 +3209,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
               >
                 <p
                   class="emotion-15 emotion-16"
-                  dir="ltr"
                 >
                   Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan
                 </p>
@@ -4461,34 +4461,35 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 }
 
-.emotion-15 {
+.emotion-16 {
+  color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  color: #141414;
-  padding-bottom: 1.5rem;
+  font-weight: 400;
   margin: 0;
+  padding-bottom: 1.5rem;
 }
 
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-15 {
+@media (min-width: 20rem) {
+  .emotion-16 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-16 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-15 {
-    padding-right: 2.5rem;
+  .emotion-16 {
+    -webkit-padding-end: 2.5rem;
+    padding-inline-end: 2.5rem;
   }
 }
 
@@ -5697,7 +5698,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
               >
                 <p
                   class="emotion-15 emotion-16"
-                  dir="ltr"
                 >
                   Bole Festival wey dey celebrate one popular street food, special dish of roasted plantain and fish with pepper sauce, don start for Port Harcourt Rivers state
                 </p>
@@ -6942,34 +6942,35 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
   }
 }
 
-.emotion-15 {
+.emotion-16 {
+  color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  color: #141414;
-  padding-bottom: 1.5rem;
+  font-weight: 400;
   margin: 0;
+  padding-bottom: 1.5rem;
 }
 
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-15 {
+@media (min-width: 20rem) {
+  .emotion-16 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-16 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-15 {
-    padding-right: 2.5rem;
+  .emotion-16 {
+    -webkit-padding-end: 2.5rem;
+    padding-inline-end: 2.5rem;
   }
 }
 
@@ -7496,7 +7497,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
               >
                 <p
                   class="emotion-15 emotion-16"
-                  dir="ltr"
                 >
                   This is a test asset used in Simorgh, please do not edit it without asking.
                 </p>
@@ -8446,34 +8446,35 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
-.emotion-15 {
+.emotion-16 {
+  color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  color: #141414;
-  padding-bottom: 1.5rem;
+  font-weight: 400;
   margin: 0;
+  padding-bottom: 1.5rem;
 }
 
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-15 {
+@media (min-width: 20rem) {
+  .emotion-16 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-16 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-15 {
-    padding-right: 2.5rem;
+  .emotion-16 {
+    -webkit-padding-end: 2.5rem;
+    padding-inline-end: 2.5rem;
   }
 }
 
@@ -9933,7 +9934,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
               >
                 <p
                   class="emotion-15 emotion-16"
-                  dir="ltr"
                 >
                   Bu il mayın 28-də Azərbaycan Xalq Cümhuriyyətinin elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca həmin dövrün siyasi xadimlərinin və hadisələrin arxiv fotolarını təqdim edir.
                 </p>

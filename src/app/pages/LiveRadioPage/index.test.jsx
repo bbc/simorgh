@@ -7,10 +7,13 @@ import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import ThemeProvider from '../../components/ThemeProvider';
 import LiveRadioPage from './LiveRadioPage';
 import afriquePageData from './fixtureData/afrique';
 import indonesianPageData from './fixtureData/indonesia';
 import gahuzaPageData from './fixtureData/gahuza';
+
+jest.mock('../../components/ThemeProvider');
 
 const Page = ({ pageData, service, lang, isAmp = false }) => (
   <BrowserRouter>
@@ -24,7 +27,9 @@ const Page = ({ pageData, service, lang, isAmp = false }) => (
           service={service}
           statusCode={200}
         >
-          <LiveRadioPage pageData={pageData} />
+          <ThemeProvider service={service} variant="default">
+            <LiveRadioPage pageData={pageData} />
+          </ThemeProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContextProvider>

@@ -1086,34 +1086,35 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
-.emotion-48 {
+.emotion-49 {
+  color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  color: #141414;
-  padding-bottom: 1.5rem;
+  font-weight: 400;
   margin: 0;
+  padding-bottom: 1.5rem;
 }
 
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-48 {
+@media (min-width: 20rem) {
+  .emotion-49 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-48 {
+  .emotion-49 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-48 {
-    padding-right: 2.5rem;
+  .emotion-49 {
+    -webkit-padding-end: 2.5rem;
+    padding-inline-end: 2.5rem;
   }
 }
 
@@ -2463,7 +2464,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   >
                     <p
                       class="emotion-48 emotion-49"
-                      dir="ltr"
                     >
                       <b>
                          This is introduction text, it should be bold by default, but also support 
@@ -2485,7 +2485,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   >
                     <p
                       class="emotion-48 emotion-49"
-                      dir="ltr"
                     >
                       <i
                         class="emotion-56 emotion-57"
@@ -2556,7 +2555,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   >
                     <p
                       class="emotion-48 emotion-49"
-                      dir="ltr"
                     >
                       Feta the big cheese macaroni cheese. 
                       <a
@@ -2626,7 +2624,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   >
                     <p
                       class="emotion-48 emotion-49"
-                      dir="ltr"
                     >
                       <b>
                         Start of localised text
@@ -2639,7 +2636,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   >
                     <p
                       class="emotion-48 emotion-49"
-                      dir="ltr"
                     >
                       Minista nọ n'isi ụlọọrụ ahụ bụ Hadi Sirika sị na ya agaghị atụrụ ndị mmadụ asị na ya gaghaị arụcha ya bụ ọdọụgbọelụ na Disemba dịka ha kwuburu mana ya ga-eburu isi ụlọọrụ ya ga-gwunye n'Enugu ịhụ na ha rụchara n'Apreelụ.
                     </p>
@@ -2650,7 +2646,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   >
                     <p
                       class="emotion-48 emotion-49"
-                      dir="ltr"
                     >
                       <b>
                         End of localised text
@@ -2663,7 +2658,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   >
                     <p
                       class="emotion-48 emotion-49"
-                      dir="ltr"
                     >
                       Rubber cheese macaroni 
                       <i
@@ -2745,7 +2739,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   >
                     <p
                       class="emotion-48 emotion-49"
-                      dir="ltr"
                     >
                       Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.
                     </p>
@@ -2816,7 +2809,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   >
                     <p
                       class="emotion-48 emotion-49"
-                      dir="ltr"
                     >
                       Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.
                     </p>
@@ -2839,7 +2831,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   >
                     <p
                       class="emotion-48 emotion-49"
-                      dir="ltr"
                     >
                       Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.
                     </p>
@@ -2850,7 +2841,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   >
                     <p
                       class="emotion-48 emotion-49"
-                      dir="ltr"
                     >
                       <a
                         aria-label="This is an external link to google!, outside"
@@ -2867,7 +2857,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   >
                     <p
                       class="emotion-48 emotion-49"
-                      dir="ltr"
                     >
                       Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
                     </p>
@@ -4849,34 +4838,35 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 }
 
-.emotion-53 {
+.emotion-54 {
+  color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  color: #141414;
-  padding-bottom: 1.5rem;
+  font-weight: 400;
   margin: 0;
+  padding-bottom: 1.5rem;
 }
 
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-53 {
+@media (min-width: 20rem) {
+  .emotion-54 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-53 {
+  .emotion-54 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-53 {
-    padding-right: 2.5rem;
+  .emotion-54 {
+    -webkit-padding-end: 2.5rem;
+    padding-inline-end: 2.5rem;
   }
 }
 
@@ -5878,7 +5868,6 @@ exports[`Story Page should render correctly when the secondary column data is no
                   >
                     <p
                       class="emotion-53 emotion-54"
-                      dir="ltr"
                     >
                       <b>
                          This is introduction text, it should be bold by default, but also support 
@@ -5900,7 +5889,6 @@ exports[`Story Page should render correctly when the secondary column data is no
                   >
                     <p
                       class="emotion-53 emotion-54"
-                      dir="ltr"
                     >
                       <i
                         class="emotion-61 emotion-62"
@@ -5971,7 +5959,6 @@ exports[`Story Page should render correctly when the secondary column data is no
                   >
                     <p
                       class="emotion-53 emotion-54"
-                      dir="ltr"
                     >
                       Feta the big cheese macaroni cheese. 
                       <a
@@ -6041,7 +6028,6 @@ exports[`Story Page should render correctly when the secondary column data is no
                   >
                     <p
                       class="emotion-53 emotion-54"
-                      dir="ltr"
                     >
                       <b>
                         Start of localised text
@@ -6054,7 +6040,6 @@ exports[`Story Page should render correctly when the secondary column data is no
                   >
                     <p
                       class="emotion-53 emotion-54"
-                      dir="ltr"
                     >
                       Dem say di medicine dey offer more protection against heart attack and stroke, if you take am before you go sleep instead of for morning, dat na wetin new study suggest.
                     </p>
@@ -6065,7 +6050,6 @@ exports[`Story Page should render correctly when the secondary column data is no
                   >
                     <p
                       class="emotion-53 emotion-54"
-                      dir="ltr"
                     >
                       <b>
                         End of localised text
@@ -6078,7 +6062,6 @@ exports[`Story Page should render correctly when the secondary column data is no
                   >
                     <p
                       class="emotion-53 emotion-54"
-                      dir="ltr"
                     >
                       Rubber cheese macaroni 
                       <i
@@ -6160,7 +6143,6 @@ exports[`Story Page should render correctly when the secondary column data is no
                   >
                     <p
                       class="emotion-53 emotion-54"
-                      dir="ltr"
                     >
                       Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.
                     </p>
@@ -6219,7 +6201,6 @@ exports[`Story Page should render correctly when the secondary column data is no
                   >
                     <p
                       class="emotion-53 emotion-54"
-                      dir="ltr"
                     >
                       Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.
                     </p>
@@ -6242,7 +6223,6 @@ exports[`Story Page should render correctly when the secondary column data is no
                   >
                     <p
                       class="emotion-53 emotion-54"
-                      dir="ltr"
                     >
                       Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.
                     </p>
@@ -6253,7 +6233,6 @@ exports[`Story Page should render correctly when the secondary column data is no
                   >
                     <p
                       class="emotion-53 emotion-54"
-                      dir="ltr"
                     >
                       <a
                         aria-label="This is an external link to google!, outside"
@@ -6270,7 +6249,6 @@ exports[`Story Page should render correctly when the secondary column data is no
                   >
                     <p
                       class="emotion-53 emotion-54"
-                      dir="ltr"
                     >
                       Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
                     </p>
@@ -7969,34 +7947,35 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-.emotion-53 {
+.emotion-54 {
+  color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  color: #141414;
-  padding-bottom: 1.5rem;
+  font-weight: 400;
   margin: 0;
+  padding-bottom: 1.5rem;
 }
 
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-53 {
+@media (min-width: 20rem) {
+  .emotion-54 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-53 {
+  .emotion-54 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-53 {
-    padding-right: 2.5rem;
+  .emotion-54 {
+    -webkit-padding-end: 2.5rem;
+    padding-inline-end: 2.5rem;
   }
 }
 
@@ -9301,7 +9280,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   >
                     <p
                       class="emotion-53 emotion-54"
-                      dir="ltr"
                     >
                       <b>
                          This is introduction text, it should be bold by default, but also support 
@@ -9323,7 +9301,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   >
                     <p
                       class="emotion-53 emotion-54"
-                      dir="ltr"
                     >
                       <i
                         class="emotion-61 emotion-62"
@@ -9394,7 +9371,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   >
                     <p
                       class="emotion-53 emotion-54"
-                      dir="ltr"
                     >
                       Feta the big cheese macaroni cheese. 
                       <a
@@ -9464,7 +9440,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   >
                     <p
                       class="emotion-53 emotion-54"
-                      dir="ltr"
                     >
                       <b>
                         Start of localised text
@@ -9477,7 +9452,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   >
                     <p
                       class="emotion-53 emotion-54"
-                      dir="ltr"
                     >
                       Dem say di medicine dey offer more protection against heart attack and stroke, if you take am before you go sleep instead of for morning, dat na wetin new study suggest.
                     </p>
@@ -9488,7 +9462,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   >
                     <p
                       class="emotion-53 emotion-54"
-                      dir="ltr"
                     >
                       <b>
                         End of localised text
@@ -9501,7 +9474,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   >
                     <p
                       class="emotion-53 emotion-54"
-                      dir="ltr"
                     >
                       Rubber cheese macaroni 
                       <i
@@ -9583,7 +9555,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   >
                     <p
                       class="emotion-53 emotion-54"
-                      dir="ltr"
                     >
                       Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.
                     </p>
@@ -9642,7 +9613,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   >
                     <p
                       class="emotion-53 emotion-54"
-                      dir="ltr"
                     >
                       Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.
                     </p>
@@ -9665,7 +9635,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   >
                     <p
                       class="emotion-53 emotion-54"
-                      dir="ltr"
                     >
                       Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.
                     </p>
@@ -9676,7 +9645,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   >
                     <p
                       class="emotion-53 emotion-54"
-                      dir="ltr"
                     >
                       <a
                         aria-label="This is an external link to google!, outside"
@@ -9693,7 +9661,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   >
                     <p
                       class="emotion-53 emotion-54"
-                      dir="ltr"
                     >
                       Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
                     </p>

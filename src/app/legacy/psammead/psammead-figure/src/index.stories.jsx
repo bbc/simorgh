@@ -5,10 +5,10 @@ import Caption from '#psammead/psammead-caption/src';
 import Copyright from '#psammead/psammead-copyright/src';
 import Image from '#psammead/psammead-image/src';
 import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
-import Paragraph from '#psammead/psammead-paragraph/src';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import notes from '../README.md';
+import Paragraph from '../../../../components/Paragraph';
 import Figure from '.';
 
 const imageAlt =
@@ -55,15 +55,9 @@ storiesOf('Components/Figure', module)
               'Visually Hidden Caption',
             )}
           </VisuallyHiddenText>
-          <Paragraph script={script} service={service}>
-            {textSnippet}
-          </Paragraph>
-          <Paragraph script={script} service={service}>
-            {textSnippet}
-          </Paragraph>
-          <Paragraph script={script} service={service}>
-            {textSnippet}
-          </Paragraph>
+          <Paragraph>{textSnippet}</Paragraph>
+          <Paragraph>{textSnippet}</Paragraph>
+          <Paragraph>{textSnippet}</Paragraph>
         </Caption>
       </Figure>
     ),

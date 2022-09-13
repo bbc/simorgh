@@ -30,7 +30,7 @@ Example inline link in a paragraph:
 
 ```jsx
 import InlineLink from '#psammead/psammead-inline-link/src';
-import Paragraph from '#psammead/psammead-paragraph/src';
+import Paragraph from '../../../../components/Paragraph';
 
 const WrapperComponent = () => (
   <Paragraph>I am a paragraph that has a link to <InlineLink href="https://www.bbc.com/news">the BBC News front page</InlineLink>.<Paragraph>

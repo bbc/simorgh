@@ -12,7 +12,10 @@ import allCpsOnwardJourneys from '#data/pidgin/cpsAssets/tori-49221071.json';
 import pglAboutData from '#data/afaanoromoo/cpsAssets/oduu-41217768';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import ThemeProvider from '../../components/ThemeProvider';
 import PhotoGalleryPage from '.';
+
+jest.mock('../../components/ThemeProvider');
 
 jest.mock('#containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
@@ -36,7 +39,9 @@ const Page = ({ pageData, service }) => (
           service={service}
           statusCode={200}
         >
-          <PhotoGalleryPage service={service} pageData={pageData} />
+          <ThemeProvider service={service} variant="default">
+            <PhotoGalleryPage service={service} pageData={pageData} />
+          </ThemeProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContextProvider>

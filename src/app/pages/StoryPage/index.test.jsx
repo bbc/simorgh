@@ -44,6 +44,7 @@ import mundoRecommendationsData from '#data/mundo/recommendations/index';
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
 import getAgent from '#server/utilities/getAgent/index';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import ThemeProvider from '../../components/ThemeProvider';
 
 import russianPageDataWithoutInlinePromo from './fixtureData/russianPageDataWithoutPromo';
 import StoryPageIndex from '.';
@@ -52,6 +53,8 @@ import StoryPageIndex from '.';
 import StoryPage from './StoryPage';
 
 fetchMock.config.overwriteRoutes = false; // http://www.wheresrhys.co.uk/fetch-mock/#usageconfiguration allows us to mock the same endpoint multiple times
+
+jest.mock('../../components/ThemeProvider');
 
 jest.mock('#containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
@@ -152,7 +155,9 @@ const PageWithContext = ({
         >
           <EventTrackingContextProvider pageData={pageData}>
             <OptimizelyProvider optimizely={optimizely} isServerSide>
-              <StoryPage service={service} pageData={pageData} />
+              <ThemeProvider service={service} variant="default">
+                <StoryPage service={service} pageData={pageData} />
+              </ThemeProvider>
             </OptimizelyProvider>
           </EventTrackingContextProvider>
         </RequestContextProvider>
@@ -185,7 +190,9 @@ const Page = ({
           statusCode={200}
           showAdsBasedOnLocation={showAdsBasedOnLocation}
         >
-          <StoryPageIndex service={service} pageData={pageData} />
+          <ThemeProvider service={service} variant="default">
+            <StoryPageIndex service={service} pageData={pageData} />
+          </ThemeProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContext.Provider>

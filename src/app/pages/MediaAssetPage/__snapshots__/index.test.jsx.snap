@@ -669,34 +669,35 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 }
 
-.emotion-31 {
+.emotion-32 {
+  color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  color: #141414;
-  padding-bottom: 1.5rem;
+  font-weight: 400;
   margin: 0;
+  padding-bottom: 1.5rem;
 }
 
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-31 {
+@media (min-width: 20rem) {
+  .emotion-32 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-31 {
+  .emotion-32 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-31 {
-    padding-right: 2.5rem;
+  .emotion-32 {
+    -webkit-padding-end: 2.5rem;
+    padding-inline-end: 2.5rem;
   }
 }
 
@@ -1231,7 +1232,6 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
               >
                 <p
                   class="emotion-31 emotion-32"
-                  dir="ltr"
                 >
                   <b>
                     Ўзбек деҳқонининг косаси нега оқармайди
@@ -1244,7 +1244,6 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
               >
                 <p
                   class="emotion-31 emotion-32"
-                  dir="ltr"
                 >
                   <b>
                     Ўзбек деҳқонининг косаси нега оқармайди
@@ -1260,7 +1259,6 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
               >
                 <p
                   class="emotion-31 emotion-32"
-                  dir="ltr"
                 >
                   <i
                     class="emotion-41 emotion-42"
@@ -1284,7 +1282,6 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
               >
                 <p
                   class="emotion-31 emotion-32"
-                  dir="ltr"
                 >
                   <b>
                     Ўзбек деҳқонининг косаси нега оқармайди
@@ -1300,7 +1297,6 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
               >
                 <p
                   class="emotion-31 emotion-32"
-                  dir="ltr"
                 >
                   Шу йил апрел ойида Ўзбекистон Президенти Ислом 
                   <a
@@ -1318,7 +1314,6 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
               >
                 <p
                   class="emotion-31 emotion-32"
-                  dir="ltr"
                 >
                   Шу вақтгача ҳам ўзбекистонлик деҳқонлар ўз маҳсулотларини хорижга олиб 
                   <b>
@@ -1333,7 +1328,6 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
               >
                 <p
                   class="emotion-31 emotion-32"
-                  dir="ltr"
                 >
                   Ўз мева-сабзавотини Россияга олиб чиқишда бу компания ёрдамига умид қилган боғбонларнинг гилослари бузила бошлагани ҳақидаги хабарлар ҳам тарқалди..
                 </p>
@@ -1344,7 +1338,6 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
               >
                 <p
                   class="emotion-31 emotion-32"
-                  dir="ltr"
                 >
                   Ҳозирда Ўзбекистонда айни пишиқчилик ва етиштирилган маҳсулот учун кенгроқ бозор топиш масаласи яна долзарб турар экан, мамлакат раҳбарининг сўзларидан сўнг вазият нақадар ўзгарган?
                 </p>
@@ -1355,7 +1348,6 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
               >
                 <p
                   class="emotion-31 emotion-32"
-                  dir="ltr"
                 >
                   Би-би-си билан суҳбатда иқтисодий таҳлилчи Анвар Ҳусаиновнинг айтишича, юқори минбардан айтилган сўзларга қарамай, қишлоқ хўжалиги маҳсулотларини хорижга, жумладан Россия бозорига олиб чиқишда ҳануз кўплаб муаммолар мавжуд.
                 </p>
@@ -1366,7 +1358,6 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
               >
                 <p
                   class="emotion-31 emotion-32"
-                  dir="ltr"
                 >
                   "Албатта ўтган йилларга қараганда маҳсулотлар экспорти анча кўпайган. Россиядан юк машиналари келиб, тўғридан-тўғри деҳқонлардан нақд пулга 
                 </p>
@@ -1517,7 +1508,6 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
               >
                 <p
                   class="emotion-31 emotion-32"
-                  dir="ltr"
                 >
                   Ўзбек деҳқонининг косаси нега оқармайди transmission info 
                 </p>
@@ -1528,7 +1518,6 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
               >
                 <p
                   class="emotion-31 emotion-32"
-                  dir="ltr"
                 >
                   Ўзбек деҳқонининг косаси нега оқармайди footer 
                 </p>
@@ -2214,34 +2203,35 @@ exports[`Media Asset Page should render component 1`] = `
   }
 }
 
-.emotion-33 {
+.emotion-34 {
+  color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  color: #141414;
-  padding-bottom: 1.5rem;
+  font-weight: 400;
   margin: 0;
+  padding-bottom: 1.5rem;
 }
 
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-33 {
+@media (min-width: 20rem) {
+  .emotion-34 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-33 {
+  .emotion-34 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-33 {
-    padding-right: 2.5rem;
+  .emotion-34 {
+    -webkit-padding-end: 2.5rem;
+    padding-inline-end: 2.5rem;
   }
 }
 
@@ -3691,7 +3681,6 @@ exports[`Media Asset Page should render component 1`] = `
               >
                 <p
                   class="emotion-33 emotion-34"
-                  dir="ltr"
                 >
                   <b>
                     This is an introduction in bold. & &lt; &gt;
@@ -3740,7 +3729,6 @@ exports[`Media Asset Page should render component 1`] = `
               >
                 <p
                   class="emotion-33 emotion-34"
-                  dir="ltr"
                 >
                   This is regular paragraph text. "Lorem ipsum dolor sit amet", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
@@ -3751,7 +3739,6 @@ exports[`Media Asset Page should render component 1`] = `
               >
                 <p
                   class="emotion-33 emotion-34"
-                  dir="ltr"
                 >
                   Bulleted list:
                 </p>
@@ -3839,7 +3826,6 @@ exports[`Media Asset Page should render component 1`] = `
               >
                 <p
                   class="emotion-33 emotion-34"
-                  dir="ltr"
                 >
                   Numbered list:
                 </p>
@@ -3927,7 +3913,6 @@ exports[`Media Asset Page should render component 1`] = `
               >
                 <p
                   class="emotion-33 emotion-34"
-                  dir="ltr"
                 >
                   Lorem ipsum dolor sit amet, 
                   <b>
@@ -3959,7 +3944,6 @@ exports[`Media Asset Page should render component 1`] = `
               >
                 <p
                   class="emotion-33 emotion-34"
-                  dir="ltr"
                 >
                   Testing special characters: !"£$%^&*()_+=-{}[]:@~;'#&lt;&gt;?,./\\\`\\# 7.7 E 2₉₈₇₆₅₄₃₂₁₀⁹⁸⁷⁶⁵⁴³²¹⁰ⁿ☆★ŷŶŵŴÿþýüûúùø÷öõôóòñðïîíìëêéèçæåäãâáßÞÝÜÛÚÙØ×ÖÕÔÓÒÑÐÏÎÍÌËÊÉÈ
                 </p>
@@ -3970,7 +3954,6 @@ exports[`Media Asset Page should render component 1`] = `
               >
                 <p
                   class="emotion-33 emotion-34"
-                  dir="ltr"
                 >
                   ÇÆÆÅÄÃÂÁÀ¿¾½¼»º¸·¶µ´±°¯®¬«ª©¨§¦¥¤£¢¡ ~#
                 </p>
@@ -3981,7 +3964,6 @@ exports[`Media Asset Page should render component 1`] = `
               >
                 <p
                   class="emotion-33 emotion-34"
-                  dir="ltr"
                 >
                   Table:
                 </p>
@@ -3992,7 +3974,6 @@ exports[`Media Asset Page should render component 1`] = `
               >
                 <p
                   class="emotion-33 emotion-34"
-                  dir="ltr"
                 >
                   Social media embed:
                 </p>
@@ -4003,7 +3984,6 @@ exports[`Media Asset Page should render component 1`] = `
               >
                 <p
                   class="emotion-33 emotion-34"
-                  dir="ltr"
                 >
                   Quote box:
                 </p>
@@ -4014,7 +3994,6 @@ exports[`Media Asset Page should render component 1`] = `
               >
                 <p
                   class="emotion-33 emotion-34"
-                  dir="ltr"
                 >
                   Correspondent quote box:
                 </p>
@@ -4025,7 +4004,6 @@ exports[`Media Asset Page should render component 1`] = `
               >
                 <p
                   class="emotion-33 emotion-34"
-                  dir="ltr"
                 >
                   Fact box:
                 </p>
@@ -4036,7 +4014,6 @@ exports[`Media Asset Page should render component 1`] = `
               >
                 <p
                   class="emotion-33 emotion-34"
-                  dir="ltr"
                 >
                   ­
                 </p>
@@ -4047,7 +4024,6 @@ exports[`Media Asset Page should render component 1`] = `
               >
                 <p
                   class="emotion-33 emotion-34"
-                  dir="ltr"
                 >
                   Lorem ipsum
                   <a
@@ -4232,7 +4208,6 @@ exports[`Media Asset Page should render component 1`] = `
               >
                 <p
                   class="emotion-33 emotion-34"
-                  dir="ltr"
                 >
                   This is transmission info 
                 </p>
@@ -4243,7 +4218,6 @@ exports[`Media Asset Page should render component 1`] = `
               >
                 <p
                   class="emotion-33 emotion-34"
-                  dir="ltr"
                 >
                   This is the footer 
                 </p>

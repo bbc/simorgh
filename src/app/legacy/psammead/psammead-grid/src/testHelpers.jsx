@@ -1,17 +1,20 @@
 import React from 'react';
 import { string } from 'prop-types';
 import styled from '@emotion/styled';
-import Paragraph from '#psammead/psammead-paragraph/src';
 import Image from '#psammead/psammead-image/src';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
 } from '#psammead/gel-foundations/src/spacings';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
+import Paragraph from '../../../../components/Paragraph';
+
+const StyledParagraph = styled(Paragraph)`
+  padding-bottom: 1.5rem;
+`;
 
 export const ExampleParagraph = ({ identifier }) => (
-  <Paragraph script={latin} service="news">
+  <StyledParagraph>
     {identifier}This is a long paragraph that will wrap for several lines. This
     is a long paragraph that will wrap for several lines. This is a long
     paragraph that will wrap for several lines. This is a long paragraph that
@@ -19,7 +22,7 @@ export const ExampleParagraph = ({ identifier }) => (
     several lines. This is a long paragraph that will wrap for several lines.
     This is a long paragraph that will wrap for several lines. This is a long
     paragraph that will wrap for several lines.
-  </Paragraph>
+  </StyledParagraph>
 );
 
 export const ExampleFigure = styled.figure`

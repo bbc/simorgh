@@ -7,6 +7,7 @@ import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import { OnDemandAudioPage } from '..';
 import indonesia from './fixtureData/indonesia';
 import pashto from './fixtureData/pashto';
+import ThemeProvider from '../../components/ThemeProvider';
 
 const onDemandRadioFixtures = {
   indonesia,
@@ -26,16 +27,18 @@ const matchFixtures = service => ({
 // eslint-disable-next-line react/prop-types
 const Component = ({ service }) => (
   <BrowserRouter>
-    <OnDemandAudioPage
-      match={matchFixtures(service)}
-      pageData={onDemandRadioFixtures[service]}
-      status={200}
-      service={service}
-      isAmp={false}
-      loading={false}
-      error=""
-      pageType={MEDIA_PAGE}
-    />
+    <ThemeProvider service={service} variant="default">
+      <OnDemandAudioPage
+        match={matchFixtures(service)}
+        pageData={onDemandRadioFixtures[service]}
+        status={200}
+        service={service}
+        isAmp={false}
+        loading={false}
+        error=""
+        pageType={MEDIA_PAGE}
+      />
+    </ThemeProvider>
   </BrowserRouter>
 );
 

@@ -21,7 +21,10 @@ import {
 } from '#models/blocks/index';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import ThemeProvider from '../../components/ThemeProvider';
 import ArticlePage from './ArticlePage';
+
+jest.mock('../../components/ThemeProvider');
 
 jest.mock('#containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
@@ -62,7 +65,9 @@ const Context = ({
         showAdsBasedOnLocation={showAdsBasedOnLocation}
       >
         <ServiceContextProvider service={service}>
-          {children}
+          <ThemeProvider service={service} variant="default">
+            {children}
+          </ThemeProvider>
         </ServiceContextProvider>
       </RequestContextProvider>
     </ToggleContextProvider>

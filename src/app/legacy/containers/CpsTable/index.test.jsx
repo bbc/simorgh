@@ -2,10 +2,13 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 import { ServiceContext } from '../../../contexts/ServiceContext';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import CpsTable from '.';
 import fixtures from './fixtures';
+
+jest.mock('../../../components/ThemeProvider');
 
 const renderComponent = ({
   fixture = fixtures[0],
@@ -14,7 +17,9 @@ const renderComponent = ({
 } = {}) =>
   render(
     <ServiceContext.Provider value={{ script: latin, service, dir: 'ltr' }}>
-      <CpsTable supportedServices={supportedServices} blocks={fixture} />
+      <ThemeProvider service={service} variant="default">
+        <CpsTable supportedServices={supportedServices} blocks={fixture} />
+      </ThemeProvider>
     </ServiceContext.Provider>,
   );
 
