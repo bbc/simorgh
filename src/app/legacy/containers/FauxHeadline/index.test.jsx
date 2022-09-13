@@ -5,7 +5,7 @@ import {
   isNull,
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
-import latin from '../../../components/ThemeProvider/typography/scripts/latin';
+import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import FauxHeadlineContainer from '.';
 import blocksSingleFragment from '../Headings/testHelpers';

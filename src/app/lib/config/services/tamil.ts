@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import tamil from '../../../components/ThemeProvider/typography/scripts/tamil';
+import tamil from '../../../components/ThemeProvider/fontScripts/tamil';
 import brandSVG from '../../chameleonLogos/tamil';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ta';
