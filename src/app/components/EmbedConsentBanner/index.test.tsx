@@ -6,7 +6,7 @@ import {
 } from '../react-testing-library-with-providers';
 import { ARTICLE_PAGE, STORY_PAGE } from '../../routes/utils/pageTypes';
 
-import { EmbedConsentBannerCanonical } from '.';
+import { EmbedConsentBannerCanonical, EmbedConsentBannerAmp } from '.';
 
 describe('Embed Consent Banner', () => {
   it('should match snapshot', () => {
@@ -15,6 +15,15 @@ describe('Embed Consent Banner', () => {
         pageType={ARTICLE_PAGE}
         provider="youtube"
       />,
+      { service: 'mundo' },
+    );
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should match snapshot - AMP', () => {
+    const { container } = render(
+      <EmbedConsentBannerAmp pageType={ARTICLE_PAGE} provider="youtube" />,
       { service: 'mundo' },
     );
 
@@ -31,6 +40,22 @@ describe('Embed Consent Banner', () => {
     );
 
     expect(screen.getByTestId('consentBanner')).toBeInTheDocument();
+  });
+
+  it('should render the banner on AMP with a unique ID', () => {
+    render(
+      <EmbedConsentBannerAmp
+        pageType={ARTICLE_PAGE}
+        provider="youtube"
+        id="myId"
+      />,
+      { service: 'mundo' },
+    );
+
+    expect(screen.getByTestId('consentBanner')).toHaveAttribute(
+      'id',
+      'consentBanner-myId',
+    );
   });
 
   it('should not render the banner when the user has consented', () => {
