@@ -20,6 +20,7 @@ exports[`Embed Consent Banner should match snapshot 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+  border: 0.1875rem solid transparent;
 }
 
 .emotion-1 {
@@ -59,18 +60,18 @@ exports[`Embed Consent Banner should match snapshot 1`] = `
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border-bottom: 1px solid #141414;
+  border-bottom: 0.0625rem solid #141414;
 }
 
 .emotion-2 a:hover,
 .emotion-2 a:focus {
   color: #B80000;
-  border-bottom: 2px solid #B80000;
+  border-bottom: 0.125rem solid #B80000;
 }
 
 .emotion-2 a:visited {
   color: #545658;
-  border-bottom: 1px solid #545658;
+  border-bottom: 0.0625rem solid #545658;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -90,7 +91,7 @@ exports[`Embed Consent Banner should match snapshot 1`] = `
 .emotion-3 {
   color: #141414;
   background-color: #FFFFFF;
-  border: 1px solid #8A8C8E;
+  border: 0.0625rem solid #8A8C8E;
   border-radius: 0;
   font-weight: bold;
   padding: 0.5rem;
@@ -106,7 +107,7 @@ exports[`Embed Consent Banner should match snapshot 1`] = `
 .emotion-3:focus {
   background-color: #B80000;
   color: #FFFFFF;
-  border: 1px solid #B80000;
+  border: 0.0625rem solid #B80000;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -133,18 +134,16 @@ exports[`Embed Consent Banner should match snapshot 1`] = `
       class="emotion-1"
       data-testid="banner-heading"
     >
-      ¿Permitir el contenido de YouTube?
+      ¿Permitir el contenido de Google YouTube?
     </strong>
     <p
       class="emotion-2"
       data-testid="banner-body"
     >
-      Este artículo contiene contenido proporcionado por YouTube. Solicitamos tu permiso antes de que algo  se cargue, ya que ese sitio  puede estar usando cookies y otras tecnologías. Es posible que quieras leer 
+      Este artículo contiene contenido proporcionado por Google YouTube. Solicitamos tu permiso antes de que algo  se cargue, ya que ese sitio  puede estar usando cookies y otras tecnologías. Es posible que quieras leer 
       <a
         aria-label="política de cookies, externo"
         href="https://policies.google.com/technologies/cookies"
-        rel="noreferrer"
-        target="_blank"
       >
         política de cookies
       </a>
@@ -152,12 +151,10 @@ exports[`Embed Consent Banner should match snapshot 1`] = `
       <a
         aria-label="política de privacidad, externo"
         href="https://policies.google.com/privacy"
-        rel="noreferrer"
-        target="_blank"
       >
         política de privacidad
       </a>
-       de YouTube antes de aceptar. Para ver este contenido, selecciona 'aceptar y continuar'.
+       de Google YouTube antes de aceptar. Para ver este contenido, selecciona 'aceptar y continuar'.
     </p>
     <button
       class="emotion-3"

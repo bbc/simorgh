@@ -6,7 +6,6 @@ import pixelsToRem from '../../utilities/pixelsToRem';
   The only exception is that we have split out group 1 into 0 and 1
 */
 const GROUP_0_MAX_WIDTH_BP = pixelsToRem(239);
-const GROUP_0_MIN_WIDTH_BP = 0;
 const GROUP_1_MAX_WIDTH_BP = pixelsToRem(399);
 const GROUP_1_MIN_WIDTH_BP = pixelsToRem(240);
 const GROUP_2_MAX_WIDTH_BP = pixelsToRem(599);
@@ -18,8 +17,6 @@ const GROUP_4_MIN_WIDTH_BP = pixelsToRem(1008);
 const GROUP_5_MIN_WIDTH_BP = pixelsToRem(1280);
 
 export const GROUP_0_MAX_WIDTH = `@media (max-width: ${GROUP_0_MAX_WIDTH_BP}rem)`;
-export const GROUP_0_MIN_WIDTH = `@media (min-width: ${GROUP_0_MIN_WIDTH_BP}rem)`;
-export const GROUP_0_ONLY = `@media (min-width: ${GROUP_0_MIN_WIDTH_BP}rem) and (max-width: ${GROUP_0_MAX_WIDTH_BP}rem)`;
 
 export const GROUP_1_MAX_WIDTH = `@media (max-width: ${GROUP_1_MAX_WIDTH_BP}rem)`;
 export const GROUP_1_MIN_WIDTH = `@media (min-width: ${GROUP_1_MIN_WIDTH_BP}rem)`;

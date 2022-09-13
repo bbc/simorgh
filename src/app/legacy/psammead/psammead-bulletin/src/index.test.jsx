@@ -1,8 +1,8 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import Image from '#psammead/psammead-image/src';
-import arabic from '../../../../components/ThemeProvider/typography/scripts/arabic';
-import latin from '../../../../components/ThemeProvider/typography/scripts/latin';
+import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
+import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import Bulletin from '.';
 
 /* eslint-disable react/prop-types */

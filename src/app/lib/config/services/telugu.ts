@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import devanagari from '../../../components/ThemeProvider/typography/scripts/devanagari';
+import devanagari from '../../../components/ThemeProvider/fontScripts/devanagari';
 import brandSVG from '../../chameleonLogos/telugu';
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
 import withContext from '../../../contexts/utils/withContext';

@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import latinWithDiacritics from '../../../components/ThemeProvider/typography/scripts/latinWithDiacritics';
+import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import brandSVG from '../../chameleonLogos/turkish';
 import '#psammead/moment-timezone-include/tz/Asia/Istanbul';
 import withContext from '../../../contexts/utils/withContext';

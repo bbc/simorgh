@@ -3,8 +3,8 @@ import { boolean } from '@storybook/addon-knobs';
 import React from 'react';
 import { TEXT_VARIANTS } from '#psammead/psammead-storybook-helpers/src';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
-import latin from '../../../../components/ThemeProvider/typography/scripts/latin';
-import arabic from '../../../../components/ThemeProvider/typography/scripts/arabic';
+import latin from '../../../../components/ThemeProvider/fontScripts/latin';
+import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import ProgramCard from '../ProgramCard';
 import RadioSchedule from '../index';
 
