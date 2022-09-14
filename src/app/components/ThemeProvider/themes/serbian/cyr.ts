@@ -1,5 +1,5 @@
 import { mergeDeepLeft } from 'ramda';
-import cyrillicScript from '../../typography/scripts/cyrillic';
+import cyrillicScript from '../../fontScripts/cyrillic';
 import withThemeProvider from '../../withThemeProvider';
 import baseSerbianTheme from './base';
 

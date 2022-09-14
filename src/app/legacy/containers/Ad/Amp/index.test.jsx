@@ -5,7 +5,7 @@ import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import AmpAd, { AMP_ACCESS_FETCH } from './index';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
-import latinDiacritics from '../../../../components/ThemeProvider/typography/scripts/latinWithDiacritics';
+import latinDiacritics from '../../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 
 const adJsonAttributes = slotType => ({
   targeting: {

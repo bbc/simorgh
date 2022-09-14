@@ -1,5 +1,179 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Embed Consent Banner should match snapshot - AMP 1`] = `
+.emotion-0 {
+  background-color: #FFFFFF;
+  padding: 2rem 1rem;
+  min-height: 280px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  border: 0.1875rem solid transparent;
+}
+
+.emotion-1 {
+  color: #141414;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-2 {
+  color: #141414;
+  margin: 1rem 0;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+.emotion-2 a {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.0625rem solid #141414;
+}
+
+.emotion-2 a:hover,
+.emotion-2 a:focus {
+  color: #B80000;
+  border-bottom: 0.125rem solid #B80000;
+}
+
+.emotion-2 a:visited {
+  color: #545658;
+  border-bottom: 0.0625rem solid #545658;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-3 {
+  color: #141414;
+  background-color: #FFFFFF;
+  border: 0.0625rem solid #8A8C8E;
+  border-radius: 0;
+  font-weight: bold;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+.emotion-3:hover,
+.emotion-3:focus {
+  background-color: #B80000;
+  color: #FFFFFF;
+  border: 0.0625rem solid #B80000;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-3 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-3 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0"
+    data-testid="consentBanner"
+    id="consentBanner"
+  >
+    <strong
+      class="emotion-1"
+      data-testid="banner-heading"
+    >
+      ¿Permitir el contenido de Google YouTube?
+    </strong>
+    <p
+      class="emotion-2"
+      data-testid="banner-body"
+    >
+      Este artículo contiene contenido proporcionado por Google YouTube. Solicitamos tu permiso antes de que algo  se cargue, ya que ese sitio  puede estar usando cookies y otras tecnologías. Es posible que quieras leer 
+      <a
+        aria-label="política de cookies, externo"
+        href="https://policies.google.com/technologies/cookies"
+      >
+        política de cookies
+      </a>
+       y 
+      <a
+        aria-label="política de privacidad, externo"
+        href="https://policies.google.com/privacy"
+      >
+        política de privacidad
+      </a>
+       de Google YouTube antes de aceptar. Para ver este contenido, selecciona 'aceptar y continuar'.
+    </p>
+    <button
+      class="emotion-3"
+      data-testid="banner-button"
+      on="tap:consentBanner.hide,embed.show"
+      type="button"
+    >
+      Accept and continue
+    </button>
+  </div>
+  <div
+    hidden=""
+    id="embed"
+  />
+</div>
+`;
+
 exports[`Embed Consent Banner should match snapshot 1`] = `
 .emotion-0 {
   background-color: #FFFFFF;
@@ -108,6 +282,8 @@ exports[`Embed Consent Banner should match snapshot 1`] = `
   background-color: #B80000;
   color: #FFFFFF;
   border: 0.0625rem solid #B80000;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
