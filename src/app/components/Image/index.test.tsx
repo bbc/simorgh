@@ -222,6 +222,42 @@ describe('Image - Canonical', () => {
     `);
   });
 
+  it('should match markup for basic webp image with jpeg fallback', () => {
+    const { container } = render(
+      <Image
+        alt="orange 1"
+        src="/test-image-500.jpeg"
+        srcSet="/test-image-500.webp"
+        mediaType="image/webp"
+        fallbackSrcSet="/test-image-500.jpeg"
+        fallbackMediaType="image/jpeg"
+      />,
+    );
+
+    expect(removeStyles(container)).toMatchInlineSnapshot(`
+      <div
+        style="padding-bottom: 56.25%;"
+      >
+        <picture>
+          <source
+            sizes="100vw"
+            srcset="/test-image-500.webp"
+            type="image/webp"
+          />
+          <source
+            sizes="100vw"
+            srcset="/test-image-500.jpeg"
+            type="image/jpeg"
+          />
+          <img
+            alt="orange 1"
+            src="/test-image-500.jpeg"
+          />
+        </picture>
+      </div>
+    `);
+  });
+
   it('should match markup for a responsive image', () => {
     const { container } = render(
       <Image
