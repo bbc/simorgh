@@ -100,7 +100,7 @@ const Image = ({
                 width={width}
                 height={height}
                 srcSet={fallbackSrcSet}
-                sizes={fallbackSrcSet ? sizes : undefined}
+                sizes={sizes}
                 fallback=""
               />
             )}
