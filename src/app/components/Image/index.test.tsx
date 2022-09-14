@@ -17,8 +17,8 @@ const removeStyles = (el: HTMLElement) => {
 
 const Fixture = ({ ...props }) => (
   <Image
-    alt="orange 1"
-    src="41BC/test/_63482861_orange1.jpg"
+    alt="Test image alt text"
+    src="/test-image-500.jpg"
     srcSet="/test-image-200.webp 200w, /test-image-500.webp 500w"
     mediaType="image/webp"
     fallbackSrcSet="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
@@ -39,7 +39,7 @@ describe('Image - Canonical', () => {
 
       expect(linkEl).toHaveAttribute('rel', 'preload');
       expect(linkEl).toHaveAttribute('as', 'image');
-      expect(linkEl).toHaveAttribute('href', '41BC/test/_63482861_orange1.jpg');
+      expect(linkEl).toHaveAttribute('href', '/test-image-500.jpg');
       expect(linkEl).toHaveAttribute(
         'imagesrcset',
         '/test-image-200.webp 200w, /test-image-500.webp 500w',
@@ -74,28 +74,29 @@ describe('Image - Canonical', () => {
   it('should lazy load when lazy load is true', () => {
     render(<Fixture lazyLoad />);
 
-    const imageEl = screen.getByAltText('orange 1');
+    const imageEl = screen.getByAltText('Test image alt text');
     expect(imageEl).toHaveAttribute('loading', 'lazy');
   });
 
   it('should not lazy load when lazy load is false', () => {
     render(<Fixture lazyLoad={false} />);
 
-    const imageEl = screen.getByAltText('orange 1');
+    const imageEl = screen.getByAltText('Test image alt text');
     expect(imageEl).not.toHaveAttribute('loading', 'lazy');
   });
 
   it('should not lazy load by default', () => {
     render(<Fixture />);
 
-    const imageEl = screen.getByAltText('orange 1');
+    const imageEl = screen.getByAltText('Test image alt text');
     expect(imageEl).not.toHaveAttribute('loading', 'lazy');
   });
 
   it('should render the primary srcset and sizes', () => {
     render(<Fixture />);
 
-    const sourceEl = screen.getByAltText('orange 1')?.parentNode?.children[0];
+    const sourceEl = screen.getByAltText('Test image alt text')?.parentNode
+      ?.children[0];
     expect(sourceEl).toHaveAttribute(
       'srcset',
       '/test-image-200.webp 200w, /test-image-500.webp 500w',
@@ -109,7 +110,8 @@ describe('Image - Canonical', () => {
   it('should render the fallback srcset and sizes', () => {
     render(<Fixture />);
 
-    const sourceEl = screen.getByAltText('orange 1')?.parentNode?.children[1];
+    const sourceEl = screen.getByAltText('Test image alt text')?.parentNode
+      ?.children[1];
     expect(sourceEl).toHaveAttribute(
       'srcset',
       '/test-image-200.jpg 200w, /test-image-500.jpg 500w',
@@ -123,19 +125,19 @@ describe('Image - Canonical', () => {
   it('should render image with correct width and height attributes', () => {
     render(<Fixture />);
 
-    const imageEl = screen.getByAltText('orange 1');
+    const imageEl = screen.getByAltText('Test image alt text');
     expect(imageEl).toHaveAttribute('width', '500');
     expect(imageEl).toHaveAttribute('height', '281');
   });
 
   it('should render an image with an alt tag', () => {
     render(<Fixture />);
-    expect(screen.getByAltText('orange 1')).toBeInTheDocument();
+    expect(screen.getByAltText('Test image alt text')).toBeInTheDocument();
   });
 
   it('should render a placeholder image by default', () => {
     render(<Fixture />);
-    const imageEl = screen.getByAltText('orange 1');
+    const imageEl = screen.getByAltText('Test image alt text');
     expect(imageEl.parentNode?.parentNode).toHaveStyle({
       backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
     });
@@ -143,7 +145,7 @@ describe('Image - Canonical', () => {
 
   it('should render a placeholder image when placeholder is true', () => {
     render(<Fixture />);
-    const imageEl = screen.getByAltText('orange 1');
+    const imageEl = screen.getByAltText('Test image alt text');
     expect(imageEl.parentNode?.parentNode).toHaveStyle({
       backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
     });
@@ -151,7 +153,7 @@ describe('Image - Canonical', () => {
 
   it('should not render a placeholder image when placeholder is false', () => {
     render(<Fixture placeholder={false} />);
-    const imageEl = screen.getByAltText('orange 1');
+    const imageEl = screen.getByAltText('Test image alt text');
     expect(imageEl.parentNode?.parentNode).not.toHaveStyle({
       backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
     });
@@ -159,14 +161,14 @@ describe('Image - Canonical', () => {
 
   it('should render the fallback image in the src attribute', () => {
     render(<Fixture />);
-    const imageEl = screen.getByAltText('orange 1');
-    expect(imageEl).toHaveAttribute('src', '41BC/test/_63482861_orange1.jpg');
+    const imageEl = screen.getByAltText('Test image alt text');
+    expect(imageEl).toHaveAttribute('src', '/test-image-500.jpg');
   });
 
   it('should render the container with an aspect ratio based on width and height', () => {
     render(<Fixture />);
 
-    const imageEl = screen.getByAltText('orange 1');
+    const imageEl = screen.getByAltText('Test image alt text');
 
     expect(imageEl.parentNode?.parentNode).toHaveStyle({
       paddingBottom: '56.2%',
@@ -176,7 +178,7 @@ describe('Image - Canonical', () => {
   it('should render the container with an aspect ratio of 16/9 when width and height is not provided', () => {
     render(<Fixture width={undefined} height={undefined} />);
 
-    const imageEl = screen.getByAltText('orange 1');
+    const imageEl = screen.getByAltText('Test image alt text');
 
     expect(imageEl.parentNode?.parentNode).toHaveStyle({
       paddingBottom: '56.25%',
@@ -188,7 +190,7 @@ describe('Image - Canonical', () => {
       <Fixture aspectRatio={4 / 3} width={undefined} height={undefined} />,
     );
 
-    const imageEl = screen.getByAltText('orange 1');
+    const imageEl = screen.getByAltText('Test image alt text');
 
     expect(imageEl.parentNode?.parentNode).toHaveStyle({
       paddingBottom: '75%',
@@ -198,7 +200,7 @@ describe('Image - Canonical', () => {
   it('should render the container with a custom aspect ratio that overrides aspect ratio based on image width and height', () => {
     render(<Fixture aspectRatio={4 / 3} />);
 
-    const imageEl = screen.getByAltText('orange 1');
+    const imageEl = screen.getByAltText('Test image alt text');
 
     expect(imageEl.parentNode?.parentNode).toHaveStyle({
       paddingBottom: '75%',
@@ -207,7 +209,7 @@ describe('Image - Canonical', () => {
 
   it('should match markup for basic image', () => {
     const { container } = render(
-      <Image alt="orange 1" src="/test-image-500.jpg" />,
+      <Image alt="Test image alt text" src="/test-image-500.jpg" />,
     );
 
     expect(removeStyles(container)).toMatchInlineSnapshot(`
@@ -215,7 +217,7 @@ describe('Image - Canonical', () => {
         style="padding-bottom: 56.25%;"
       >
         <img
-          alt="orange 1"
+          alt="Test image alt text"
           src="/test-image-500.jpg"
         />
       </div>
@@ -225,7 +227,7 @@ describe('Image - Canonical', () => {
   it('should match markup for basic webp image with jpeg fallback', () => {
     const { container } = render(
       <Image
-        alt="orange 1"
+        alt="Test image alt text"
         src="/test-image-500.jpeg"
         srcSet="/test-image-500.webp"
         mediaType="image/webp"
@@ -250,7 +252,7 @@ describe('Image - Canonical', () => {
             type="image/jpeg"
           />
           <img
-            alt="orange 1"
+            alt="Test image alt text"
             src="/test-image-500.jpeg"
           />
         </picture>
@@ -261,7 +263,7 @@ describe('Image - Canonical', () => {
   it('should match markup for a responsive image', () => {
     const { container } = render(
       <Image
-        alt="orange 1"
+        alt="Test image alt text"
         src="/test-image-500.jpg"
         srcSet="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
       />,
@@ -272,7 +274,7 @@ describe('Image - Canonical', () => {
         style="padding-bottom: 56.25%;"
       >
         <img
-          alt="orange 1"
+          alt="Test image alt text"
           sizes="100vw"
           src="/test-image-500.jpg"
           srcset="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
@@ -284,7 +286,7 @@ describe('Image - Canonical', () => {
   it('should match markup for a responsive webp image with a jpeg fallback', () => {
     const { container } = render(
       <Image
-        alt="orange 1"
+        alt="Test image alt text"
         src="/test-image-500.jpeg"
         srcSet="/test-image-200.webp 200w, /test-image-500.webp 500w"
         mediaType="image/webp"
@@ -309,7 +311,7 @@ describe('Image - Canonical', () => {
             type="image/jpeg"
           />
           <img
-            alt="orange 1"
+            alt="Test image alt text"
             src="/test-image-500.jpeg"
           />
         </picture>
@@ -327,7 +329,7 @@ describe('Image - AMP pages', () => {
 
       expect(linkEl).toHaveAttribute('rel', 'preload');
       expect(linkEl).toHaveAttribute('as', 'image');
-      expect(linkEl).toHaveAttribute('href', '41BC/test/_63482861_orange1.jpg');
+      expect(linkEl).toHaveAttribute('href', '/test-image-500.jpg');
       expect(linkEl).toHaveAttribute(
         'imagesrcset',
         '/test-image-200.webp 200w, /test-image-500.webp 500w',
@@ -362,7 +364,7 @@ describe('Image - AMP pages', () => {
   it('should render 2 nested amp-img tags both with alt text', () => {
     render(<Fixture isAmp />);
 
-    const imageEls = screen.getAllByAltText('orange 1');
+    const imageEls = screen.getAllByAltText('Test image alt text');
     expect(imageEls.length).toBe(2);
     expect(imageEls[0].nodeName).toBe('AMP-IMG');
     expect(imageEls[1].nodeName).toBe('AMP-IMG');
@@ -371,7 +373,7 @@ describe('Image - AMP pages', () => {
   it('should render webp image', () => {
     render(<Fixture isAmp />);
 
-    const imageEls = screen.getAllByAltText('orange 1');
+    const imageEls = screen.getAllByAltText('Test image alt text');
     expect(imageEls[0]).not.toHaveAttribute('fallback', '');
     expect(imageEls[0]).toHaveAttribute(
       'srcset',
@@ -382,7 +384,7 @@ describe('Image - AMP pages', () => {
   it('should render jpeg fallback image', () => {
     render(<Fixture isAmp />);
 
-    const imageEls = screen.getAllByAltText('orange 1');
+    const imageEls = screen.getAllByAltText('Test image alt text');
     expect(imageEls[1]).toHaveAttribute('fallback', '');
     expect(imageEls[1]).toHaveAttribute(
       'srcset',
@@ -393,7 +395,7 @@ describe('Image - AMP pages', () => {
   it('should render image with correct width and height attributes', () => {
     render(<Fixture isAmp />);
 
-    const imageEl = screen.getAllByAltText('orange 1');
+    const imageEl = screen.getAllByAltText('Test image alt text');
     expect(imageEl[0]).toHaveAttribute('width', '500');
     expect(imageEl[0]).toHaveAttribute('height', '281');
     expect(imageEl[1]).toHaveAttribute('width', '500');
@@ -402,7 +404,7 @@ describe('Image - AMP pages', () => {
 
   it('should render a placeholder image by default', () => {
     render(<Fixture isAmp />);
-    const imageEl = screen.getAllByAltText('orange 1')[0];
+    const imageEl = screen.getAllByAltText('Test image alt text')[0];
 
     expect(imageEl.parentNode).toHaveStyle({
       backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
@@ -411,7 +413,7 @@ describe('Image - AMP pages', () => {
 
   it('should render a placeholder image when placeholder is true', () => {
     render(<Fixture isAmp />);
-    const imageEl = screen.getAllByAltText('orange 1')[0];
+    const imageEl = screen.getAllByAltText('Test image alt text')[0];
     expect(imageEl.parentNode).toHaveStyle({
       backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
     });
@@ -419,7 +421,7 @@ describe('Image - AMP pages', () => {
 
   it('should not render a placeholder image when placeholder is false', () => {
     render(<Fixture placeholder={false} isAmp />);
-    const imageEl = screen.getAllByAltText('orange 1')[0];
+    const imageEl = screen.getAllByAltText('Test image alt text')[0];
     expect(imageEl.parentNode).not.toHaveStyle({
       backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
     });
@@ -428,7 +430,7 @@ describe('Image - AMP pages', () => {
   it('should render the container with an aspect ratio based on width and height', () => {
     render(<Fixture isAmp />);
 
-    const imageEl = screen.getAllByAltText('orange 1')[0];
+    const imageEl = screen.getAllByAltText('Test image alt text')[0];
 
     expect(imageEl.parentNode).toHaveStyle({
       paddingBottom: '56.2%',
@@ -438,7 +440,7 @@ describe('Image - AMP pages', () => {
   it('should render the container with an aspect ratio of 16/9 when width and height is not provided', () => {
     render(<Fixture width={undefined} height={undefined} isAmp />);
 
-    const imageEl = screen.getAllByAltText('orange 1')[0];
+    const imageEl = screen.getAllByAltText('Test image alt text')[0];
 
     expect(imageEl.parentNode).toHaveStyle({
       paddingBottom: '56.25%',
@@ -455,7 +457,7 @@ describe('Image - AMP pages', () => {
       />,
     );
 
-    const imageEl = screen.getAllByAltText('orange 1')[0];
+    const imageEl = screen.getAllByAltText('Test image alt text')[0];
 
     expect(imageEl.parentNode).toHaveStyle({
       paddingBottom: '75%',
@@ -465,7 +467,7 @@ describe('Image - AMP pages', () => {
   it('should render the container with a custom aspect ratio that overrides aspect ratio based on image width and height', () => {
     render(<Fixture aspectRatio={4 / 3} isAmp />);
 
-    const imageEl = screen.getAllByAltText('orange 1')[0];
+    const imageEl = screen.getAllByAltText('Test image alt text')[0];
 
     expect(imageEl.parentNode).toHaveStyle({
       paddingBottom: '75%',
@@ -474,7 +476,7 @@ describe('Image - AMP pages', () => {
 
   it('should match markup for basic image', () => {
     const { container } = render(
-      <Image isAmp alt="orange 1" src="/test-image-500.jpg" />,
+      <Image isAmp alt="Test image alt text" src="/test-image-500.jpg" />,
     );
 
     expect(removeStyles(container)).toMatchInlineSnapshot(`
@@ -482,7 +484,7 @@ describe('Image - AMP pages', () => {
         style="padding-bottom: 56.25%;"
       >
         <amp-img
-          alt="orange 1"
+          alt="Test image alt text"
           layout="fill"
           src="/test-image-500.jpg"
         />
@@ -494,7 +496,7 @@ describe('Image - AMP pages', () => {
     const { container } = render(
       <Image
         isAmp
-        alt="orange 1"
+        alt="Test image alt text"
         src="/test-image-500.jpg"
         srcSet="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
       />,
@@ -505,7 +507,7 @@ describe('Image - AMP pages', () => {
         style="padding-bottom: 56.25%;"
       >
         <amp-img
-          alt="orange 1"
+          alt="Test image alt text"
           layout="fill"
           sizes="100vw"
           src="/test-image-500.jpg"
@@ -519,7 +521,7 @@ describe('Image - AMP pages', () => {
     const { container } = render(
       <Image
         isAmp
-        alt="orange 1"
+        alt="Test image alt text"
         src="/test-image-500.webp"
         srcSet="/test-image-200.webp 200w, /test-image-500.webp 500w"
         mediaType="image/webp"
@@ -533,14 +535,14 @@ describe('Image - AMP pages', () => {
         style="padding-bottom: 56.25%;"
       >
         <amp-img
-          alt="orange 1"
+          alt="Test image alt text"
           layout="fill"
           sizes="100vw"
           src="/test-image-500.webp"
           srcset="/test-image-200.webp 200w, /test-image-500.webp 500w"
         >
           <amp-img
-            alt="orange 1"
+            alt="Test image alt text"
             fallback=""
             layout="fill"
             sizes="100vw"

@@ -7,24 +7,18 @@ import Image from '.';
 export const BasicImage = () => (
   <ThemeProvider service="mundo" variant="default">
     <Image
-      alt="orange 1"
-      src="https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg"
+      alt="A penguin stands on an ice floe"
+      src="https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
     />
   </ThemeProvider>
 );
 
-export default {
-  title: 'New Components/Image',
-  Component: BasicImage,
-  parameters: { chromatic: { disable: true } },
-};
-
 export const ResponsiveImage = () => (
   <ThemeProvider service="mundo" variant="default">
     <Image
-      alt="orange 1"
-      src="https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg"
-      srcSet="https://ichef.bbci.co.uk/news/200/cpsdevpb/41BC/test/_63482861_orange1.jpg 200w, https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg 500w"
+      alt="A penguin stands on an ice floe"
+      src="https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
+      srcSet="https://ichef.bbci.co.uk/news/240/cpsprodpb/164AF/production/_110911319_antartica.jpg 240w, https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg 624w"
     />
   </ThemeProvider>
 );
@@ -32,11 +26,11 @@ export const ResponsiveImage = () => (
 export const ResponsiveWebPWithJpegFallback = () => (
   <ThemeProvider service="mundo" variant="default">
     <Image
-      alt="orange 1"
-      src="https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg.webp"
-      srcSet="https://ichef.bbci.co.uk/news/200/cpsdevpb/41BC/test/_63482861_orange1.jpg.webp 200w, https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg.webp 500w"
+      alt="A penguin stands on an ice floe"
+      src="https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
+      srcSet="https://ichef.bbci.co.uk/news/240/cpsprodpb/164AF/production/_110911319_antartica.jpg.webp 240w, https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg.webp 624w"
       mediaType="image/webp"
-      fallbackSrcSet="https://ichef.bbci.co.uk/news/200/cpsdevpb/41BC/test/_63482861_orange1.jpg 200w, https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg 500w"
+      fallbackSrcSet="https://ichef.bbci.co.uk/news/240/cpsprodpb/164AF/production/_110911319_antartica.jpg 240w, https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg 624w"
       fallbackMediaType="image/jpeg"
     />
   </ThemeProvider>
@@ -46,8 +40,8 @@ export const BasicAMPImage = () => (
   <ThemeProvider service="mundo" variant="default">
     <Image
       isAmp
-      alt="orange 1"
-      src="https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg"
+      alt="A penguin stands on an ice floe"
+      src="https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
       width={500}
       height={281}
     />
@@ -58,9 +52,9 @@ export const ResponsiveAMPImage = () => (
   <ThemeProvider service="mundo" variant="default">
     <Image
       isAmp
-      alt="orange 1"
-      src="https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg"
-      srcSet="https://ichef.bbci.co.uk/news/200/cpsdevpb/41BC/test/_63482861_orange1.jpg 200w, https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg 500w"
+      alt="A penguin stands on an ice floe"
+      src="https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
+      srcSet="https://ichef.bbci.co.uk/news/240/cpsprodpb/164AF/production/_110911319_antartica.jpg 240w, https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg 624w"
       width={500}
       height={281}
     />
@@ -71,11 +65,11 @@ export const AMPWebPWithJpegFallback = () => (
   <ThemeProvider service="mundo" variant="default">
     <Image
       isAmp
-      alt="orange 1"
-      src="https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg"
-      srcSet="https://ichef.bbci.co.uk/news/200/cpsdevpb/41BC/test/_63482861_orange1.jpg.webp 200w, https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg.webp 500w"
+      alt="A penguin stands on an ice floe"
+      src="https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
+      srcSet="https://ichef.bbci.co.uk/news/240/cpsprodpb/164AF/production/_110911319_antartica.jpg.webp 240w, https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg.webp 624w"
       mediaType="image/webp"
-      fallbackSrcSet="https://ichef.bbci.co.uk/news/200/cpsdevpb/41BC/test/_63482861_orange1.jpg 200w, https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg 500w"
+      fallbackSrcSet="https://ichef.bbci.co.uk/news/240/cpsprodpb/164AF/production/_110911319_antartica.jpg 240w, https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg 624w"
       fallbackMediaType="image/jpeg"
       width={500}
       height={281}
@@ -86,3 +80,9 @@ export const AMPWebPWithJpegFallback = () => (
 BasicAMPImage.decorators = [AmpDecorator];
 ResponsiveAMPImage.decorators = [AmpDecorator];
 AMPWebPWithJpegFallback.decorators = [AmpDecorator];
+
+export default {
+  title: 'New Components/Image',
+  Component: BasicImage,
+  parameters: { chromatic: { disable: true } },
+};

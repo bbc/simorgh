@@ -26,12 +26,12 @@ The `Image` component is used to render an image. It supports responsive images,
 
 ## How to use
 
-This is how to render a basic image:
+This is how to render a basic image (non-responsive):
 
 ```tsx
 <Image
-  alt="orange 1"
-  src="https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg"
+  alt="A penguin stands on an ice floe"
+  src="https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
   width={500}
   height={281}
 />
@@ -41,10 +41,25 @@ This is how to render a responsive image:
 
 ```tsx
 <Image
-  alt="orange 1"
-  src="https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg"
-  srcSet="https://ichef.bbci.co.uk/news/200/cpsdevpb/41BC/test/_63482861_orange1.jpg 200w, https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg 500w"
-  sizes="(max-width: 600px) 480px, 800px"
+  alt="A penguin stands on an ice floe"
+  src="https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
+  srcSet="https://ichef.bbci.co.uk/news/240/cpsprodpb/164AF/production/_110911319_antartica.jpg 240w, https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg 624w"
+  sizes="(min-width: 1008px) 645px, 100vw"
+  width={500}
+  height={281}
+/>
+```
+
+This is how to render a basic webp image with jpeg fallback (non-responsive):
+
+```tsx
+<Image
+  alt="A penguin stands on an ice floe"
+  src="https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
+  srcSet="https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg.webp"
+  mediaType="image/webp"
+  fallbackSrcSet="https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
+  fallbackMediaType="image/jpeg"
   width={500}
   height={281}
 />
@@ -54,13 +69,13 @@ This is how to render a responsive webp image with a jpeg fallback:
 
 ```tsx
 <Image
-  alt="orange 1"
-  src="https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg"
-  srcSet="https://ichef.bbci.co.uk/news/200/cpsdevpb/41BC/test/_63482861_orange1.jpg.webp 200w, https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg.webp 500w"
+  alt="A penguin stands on an ice floe"
+  src="https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
+  srcSet="https://ichef.bbci.co.uk/news/240/cpsprodpb/164AF/production/_110911319_antartica.jpg.webp 240w, https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg.webp 624w"
   mediaType="image/webp"
-  fallbackSrcSet="https://ichef.bbci.co.uk/news/200/cpsdevpb/41BC/test/_63482861_orange1.jpg 200w, https://ichef.bbci.co.uk/news/500/cpsdevpb/41BC/test/_63482861_orange1.jpg 500w"
+  fallbackSrcSet="https://ichef.bbci.co.uk/news/240/cpsprodpb/164AF/production/_110911319_antartica.jpg 240w, https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg 624w"
   fallbackMediaType="image/jpeg"
-  sizes="(max-width: 600px) 480px, 800px"
+  sizes="(min-width: 1008px) 645px, 100vw"
   width={500}
   height={281}
 />
@@ -69,11 +84,12 @@ This is how to render a responsive webp image with a jpeg fallback:
 You can generate the `srcSet`, `mediaType`, `fallbackSrcSet`, and `fallbackMediaType` props using the [`createSrcsets`](../../lib/utilities/srcSet/index.js) function. For example:
 
 ```tsx
-const src = '41BC/test/_63482861_orange1.jpg';
+const src =
+  'https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg';
 
 const { srcSet, primaryMimeType, fallbackSrcSet, fallbackMimeType } =
   createSrcsets({
-    originCode: 'cpsdevpb',
+    originCode: 'cpsprodpb',
     locator: src,
     originalImageWidth: 500,
     imageResolutions: [200, 500, 1000],
@@ -81,13 +97,13 @@ const { srcSet, primaryMimeType, fallbackSrcSet, fallbackMimeType } =
 
 <Image
   isAmp={false}
-  alt="orange 1"
+  alt="A penguin stands on an ice floe"
   src={src}
   srcSet={srcSet}
   mediaType={primaryMimeType}
   fallbackSrcSet={fallbackSrcSet}
   fallbackMediaType={fallbackMimeType}
-  sizes="(max-width: 600px) 480px, 800px"
+  sizes="(min-width: 1008px) 645px, 100vw"
   width={500}
   height={281}
 />;
