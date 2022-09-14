@@ -19,17 +19,24 @@ const components = {
   },
 };
 
-const Curation = ({ visualStyle, visualProminance, promos, title, link }) => {
+const Curation = ({
+  visualStyle,
+  visualProminance,
+  promos,
+  title,
+  link,
+  headingStyle,
+}) => {
   const Component = pathOr(
     CurationGrid,
     [visualStyle, visualProminance],
     components,
   );
   return (
-    <>
+    <section aria-labelledby={title || 'default'} role="region">
       {title && <Subheading href={link}>{title}</Subheading>}
-      <Component promos={promos} />
-    </>
+      <Component promos={promos} headingStyle={headingStyle} />
+    </section>
   );
 };
 
@@ -39,11 +46,13 @@ Curation.propTypes = {
   promos: arrayOf(shape({})).isRequired,
   title: string,
   link: string,
+  headingStyle: string,
 };
 
 Curation.defaultProps = {
   title: '',
   link: '',
+  headingStyle: 'h2',
 };
 
 export default Curation;

@@ -132,6 +132,7 @@ const TopicPage = ({ pageData }) => {
           {curations.map(
             ({ summaries, curationId, title: curationTitle, link }) => (
               <Curation
+                headingStyle={curationTitle && 'h3'}
                 key={curationId}
                 visualStyle={VISUAL_STYLE.NONE}
                 visualProminance={VISUAL_PROMINANCE.NORMAL}
