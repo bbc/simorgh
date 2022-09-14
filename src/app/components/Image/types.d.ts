@@ -12,6 +12,7 @@ declare namespace JSX {
     sizes?: string;
     children?: React.ReactNode;
     fallback?: string;
+    layout?: string;
   }
   /*
    * Overrides type for link with missing imagesrcset and imagesizes attributes

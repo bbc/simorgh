@@ -4,7 +4,6 @@ import BASE64_PLACEHOLDER_IMAGE from './base64Placeholder';
 
 const styles = {
   wrapper: css({
-    position: 'relative',
     height: 0,
     overflow: 'hidden',
   }),
@@ -22,16 +21,9 @@ const styles = {
         backgroundSize: '93px 27px',
       },
     }),
-  placeholderWrapper: css({
-    position: 'absolute',
-    top: 0,
-    bottom: 0,
-    right: 0,
-    left: 0,
-  }),
   image: css({
     width: '100%',
-    height: '100%',
+    display: 'block',
   }),
 };
 
