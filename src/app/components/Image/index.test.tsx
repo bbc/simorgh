@@ -285,7 +285,7 @@ describe('Image - Canonical', () => {
     const { container } = render(
       <Image
         alt="orange 1"
-        src="/test-image-500.webp"
+        src="/test-image-500.jpeg"
         srcSet="/test-image-200.webp 200w, /test-image-500.webp 500w"
         mediaType="image/webp"
         fallbackSrcSet="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
@@ -310,7 +310,7 @@ describe('Image - Canonical', () => {
           />
           <img
             alt="orange 1"
-            src="/test-image-500.webp"
+            src="/test-image-500.jpeg"
           />
         </picture>
       </div>
