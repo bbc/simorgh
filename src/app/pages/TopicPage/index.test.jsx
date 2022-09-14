@@ -90,6 +90,27 @@ describe('Topic Page', () => {
     expect(container.querySelector('h2').textContent).toEqual('Analysis');
   });
 
+  it('should render promo headings as h3 when curation subheading exists', () => {
+    const { container } = render(
+      <TopicPageWithContext
+        pageData={mundoMultipleCurations}
+        service="mundo"
+      />,
+    );
+
+    expect(container.getElementsByTagName('h3').length).toEqual(4);
+    expect(container.getElementsByTagName('h2').length).toEqual(2);
+  });
+
+  it('should render promo headings as h2 when there is no curation subheading', () => {
+    const { container } = render(
+      <TopicPageWithContext pageData={pidginMultipleItems} service="pidgin" />,
+    );
+
+    expect(container.getElementsByTagName('h3').length).toEqual(0);
+    expect(container.getElementsByTagName('h2').length).toEqual(4);
+  });
+
   it('should render badge and description when they exist in data', () => {
     const { container, queryByTestId } = render(
       <TopicPageWithContext
