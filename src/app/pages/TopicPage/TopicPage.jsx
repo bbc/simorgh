@@ -28,7 +28,7 @@ import TopicTitle from './TopicTitle';
 import TopicDescription from './TopicDescription';
 import Pagination from './Pagination';
 import Curation, { VISUAL_PROMINANCE, VISUAL_STYLE } from './Curation';
-import HiearchicalGrid from './HierarchicalPromo/grid';
+import HiearchicalGrid from './HierarchicalGrid';
 
 const OuterWrapper = styled.main`
   margin: 0 ${GEL_SPACING};
