@@ -42,6 +42,7 @@ import Byline from '#containers/Byline';
 import CpsSocialEmbedContainer from '#containers/SocialEmbed/Cps';
 import CpsRecommendations from '#containers/CpsRecommendations';
 import { InlinePodcastPromo } from '#containers/PodcastPromo';
+import InlineLink from '../../components/InlineLink';
 
 import {
   getFirstPublished,
@@ -381,6 +382,13 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           parentColumns={gridColumns}
         >
           <main role="main">
+            <InlineLink
+              fontVariant="serifBold"
+              size="foolscap"
+              to="/mundo/articles/ce42wzqr2mko"
+              text="I am a big CSR link"
+              allowCSR
+            />
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
             <OptimizelyArticleCompleteTracking />
           </main>
