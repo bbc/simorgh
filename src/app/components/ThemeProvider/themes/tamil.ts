@@ -1,10 +1,7 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import tamilScript from '../typography/scripts/tamil';
-import {
-  NOTO_SANS_TAMIL_BOLD,
-  NOTO_SANS_TAMIL_REGULAR,
-} from '../typography/fontFaces';
-import { NOTO_SANS_TAMIL } from '../typography/fontFamilies';
+import tamilScript from '../fontScripts/tamil';
+import { NOTO_SANS_TAMIL_BOLD, NOTO_SANS_TAMIL_REGULAR } from '../fontFaces';
+import tamilFontVariants from '../fontVariants/tamil';
 import withThemeProvider from '../withThemeProvider';
 
 const tamilTheme = {
@@ -17,9 +14,7 @@ const tamilTheme = {
   },
   typography: {
     script: tamilScript,
-    fontFamilies: {
-      primary: NOTO_SANS_TAMIL,
-    },
+    fontVariants: tamilFontVariants,
     fontFaces: [NOTO_SANS_TAMIL_BOLD, NOTO_SANS_TAMIL_REGULAR],
   },
 };

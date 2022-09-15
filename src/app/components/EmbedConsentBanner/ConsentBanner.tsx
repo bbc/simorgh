@@ -158,11 +158,13 @@ type ConsentBannerContentProps = {
     | {
         onClick: () => void;
       };
+  id?: string;
 };
 
 const ConsentBanner = ({
   provider,
   clickHandler,
+  id,
 }: ConsentBannerContentProps) => {
   const { service, script, externalLinkText, translations } =
     useContext(ServiceContext);
@@ -176,7 +178,7 @@ const ConsentBanner = ({
   return (
     <div
       data-testid="consentBanner"
-      id="consentBanner"
+      id={`consentBanner${id ? `-${id}` : ''}`}
       css={consentBannerCss.parent}
     >
       <strong

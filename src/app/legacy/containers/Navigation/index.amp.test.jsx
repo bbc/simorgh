@@ -7,7 +7,7 @@ import {
   C_GHOST,
 } from '#psammead/psammead-styles/src/colours';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import latin from '../../../components/ThemeProvider/typography/scripts/latin';
+import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import AmpNavigation from './index.amp';
 import {
   dropdownTestId,

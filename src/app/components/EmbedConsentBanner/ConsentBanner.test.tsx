@@ -80,7 +80,7 @@ describe('Embed Consent Banner - Content', () => {
         clickHandler={mockCanonicalClickHandler}
       />,
       {
-        service: 'archive',
+        service: 'mundo',
       },
     );
 
@@ -95,7 +95,7 @@ describe('Embed Consent Banner - Content', () => {
     render(
       <ConsentBanner provider="youtube" clickHandler={mockAmpClickHandler} />,
       {
-        service: 'archive',
+        service: 'mundo',
       },
     );
 
