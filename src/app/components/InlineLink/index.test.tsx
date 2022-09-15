@@ -44,9 +44,7 @@ describe('InlineLink', () => {
 
       render(<InlineLink to={to} text="Hello World!" />);
 
-      const anchorEl = screen.getByText('Hello World!');
-
-      expect(anchorEl).not.toHaveAttribute('aria-label');
+      expect(screen.getByText('Google')).not.toHaveAttribute('aria-label');
     },
   );
 
