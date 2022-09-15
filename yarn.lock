@@ -5722,6 +5722,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/url-parse@npm:^1.4.8":
+  version: 1.4.8
+  resolution: "@types/url-parse@npm:1.4.8"
+  checksum: 44a5e96ed4b579c43750f3578bfa9165f97a359c3b2a85ee126e9c16db964f6ea105e152afd3d1adbd15850a8b812043215f3820112177bb4255a60b432dbd85
+  languageName: node
+  linkType: hard
+
 "@types/webpack-env@npm:^1.16.0":
   version: 1.16.3
   resolution: "@types/webpack-env@npm:1.16.3"
@@ -19855,6 +19862,7 @@ __metadata:
     "@types/react-helmet": 6.1.5
     "@types/react-router-dom": 5.3.3
     "@types/testing-library__react": 10.2.0
+    "@types/url-parse": ^1.4.8
     "@typescript-eslint/eslint-plugin": 5.31.0
     "@typescript-eslint/parser": 5.31.0
     amphtml-validator: 1.0.35

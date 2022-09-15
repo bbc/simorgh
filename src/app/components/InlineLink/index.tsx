@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import React, { useContext, FC, HTMLAttributes } from 'react';
+import { useContext, FC, HTMLAttributes } from 'react';
 import { jsx, Theme } from '@emotion/react';
 import Url from 'url-parse';
 

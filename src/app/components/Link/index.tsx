@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import React, { FC, HTMLAttributes } from 'react';
+import { FC, HTMLAttributes } from 'react';
 import { jsx } from '@emotion/react';
 import { Link as ClientSideLink } from 'react-router-dom';
 import { pathToRegexp } from 'path-to-regexp';
@@ -10,7 +10,6 @@ import { articlePath } from '../../routes/utils/regex';
 
 interface Props extends HTMLAttributes<HTMLElement> {
   allowCSR?: boolean;
-  children: React.ReactNode;
   className?: string;
   fontVariant?: FontVariant;
   size?: GelFontSize;
