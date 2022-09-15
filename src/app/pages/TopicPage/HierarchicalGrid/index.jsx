@@ -25,24 +25,24 @@ const Item = styled.div`
   border-radius: 3px;
 `;
 
-const getStyles = (promoLength, i) => {
+const getStyles = (promoCount, i) => {
   return uniq([
-    SMALL[promoLength - 1][i],
-    MOBILE[promoLength - 1][i],
-    TABLET[promoLength - 1][i],
-    DESKTOP[promoLength - 1][i],
+    SMALL[promoCount - 1][i],
+    MOBILE[promoCount - 1][i],
+    TABLET[promoCount - 1][i],
+    DESKTOP[promoCount - 1][i],
   ]);
 };
 
 const HiearchicalGrid = props => {
   const { summaries } = props;
-  const promoLength = summaries.length;
-  if (promoLength < 3) return null;
+  const promoCount = summaries.length;
+  if (promoCount < 3) return null;
   return (
     <PromoList role="list">
       {summaries.map((promo, i) => {
         return (
-          <Item key={promo.id} css={getStyles(promoLength, i)} as="li">
+          <Item key={promo.id} css={getStyles(promoCount, i)} as="li">
             <Promo>
               <Promo.Image
                 src={promo.imageUrl}
