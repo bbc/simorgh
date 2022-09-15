@@ -128,7 +128,7 @@ const DESKTOP = [
   [B, V, V, V, V],
   [B, V, V, V, DC, DC],
   [B, V, DC, DC, V, DC, DC],
-  [B, DVT, DC, DC, DC, DC, DC, DC],
+  [B, DVT, V, V, DC, DC, DC, DC],
   [B, V, V, V, V, DC, DC, DC, DC],
   [B, V, V, V, DC, DC, DC, DC, DC, DC],
   [B, V, V, DC, DC, DC, DC, DC, DC, DC, DC],
