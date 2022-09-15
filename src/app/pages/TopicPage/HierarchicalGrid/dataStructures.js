@@ -39,6 +39,16 @@ const DVT = css`
   }
 `;
 
+const VT = css`
+  @media (min-width: 600px) and (max-width: 1007px) {
+    grid-column: span 1;
+    grid-row: span 4;
+    .promo-paragraph {
+      display: none;
+    }
+  }
+`;
+
 const C = `
   grid-column: span 1;
   grid-row: span 1;
@@ -118,7 +128,7 @@ const DESKTOP = [
   [B, V, V, V, V],
   [B, V, V, V, DC, DC],
   [B, V, DC, DC, V, DC, DC],
-  [B, V, DC, DC, DC, DC, DC, DC],
+  [B, DVT, DC, DC, DC, DC, DC, DC],
   [B, V, V, V, V, DC, DC, DC, DC],
   [B, V, V, V, DC, DC, DC, DC, DC, DC],
   [B, V, V, DC, DC, DC, DC, DC, DC, DC, DC],
@@ -130,7 +140,7 @@ const TABLET = [
   [V, V],
   [B, V, V],
   [B, TC, TC, TC],
-  [B, DVT, TC, TC, TC],
+  [B, VT, V, V, V],
   [B, V, V, V, V, V],
   [B, V, V, V, V, TC, TC],
   [B, V, V, V, TC, TC, TC, TC],

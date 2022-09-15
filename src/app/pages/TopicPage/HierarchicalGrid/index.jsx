@@ -5,7 +5,9 @@ import { string, shape, arrayOf, number, oneOfType, oneOf } from 'prop-types';
 import Promo, { MEDIA_TYPES } from '#components/Promo';
 import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
 
-const Grid = styled.div`
+const PromoList = styled.ul`
+  padding: 0;
+  margin: 0;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -18,8 +20,8 @@ const Grid = styled.div`
 `;
 
 const Item = styled.div`
-  background-color: #f2f2f2;
   position: relative;
+  display: inline;
   border-radius: 3px;
 `;
 
@@ -35,11 +37,12 @@ const getStyles = (promoLength, i) => {
 const HiearchicalGrid = props => {
   const { summaries } = props;
   const promoLength = summaries.length;
+  if (promoLength < 3) return null;
   return (
-    <Grid>
+    <PromoList role="list">
       {summaries.map((promo, i) => {
         return (
-          <Item key={promo.id} css={getStyles(promoLength, i)}>
+          <Item key={promo.id} css={getStyles(promoLength, i)} as="li">
             <Promo>
               <Promo.Image
                 src={promo.imageUrl}
@@ -63,7 +66,7 @@ const HiearchicalGrid = props => {
           </Item>
         );
       })}
-    </Grid>
+    </PromoList>
   );
 };
 
