@@ -50,7 +50,7 @@ const InlineLink: FC<Props> = ({
         size && fontSizes[size],
         fontVariant && fontVariants[fontVariant],
       ]}
-      aria-label={isExternalLink ? `${text}${externalLinkText}` : undefined}
+      aria-label={isExternalLink ? text.concat(externalLinkText) : undefined}
       to={to}
       {...htmlAttributes}
     >

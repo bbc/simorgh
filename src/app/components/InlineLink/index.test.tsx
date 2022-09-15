@@ -38,7 +38,7 @@ describe('InlineLink', () => {
     ${'/russian'}                     | ${'https://www.bbcrussian.com'}
     ${'/russan'}                      | ${'https://bbcrussian.com'}
   `(
-    'should render the internal inline link without an aria-label when navigation to $to from $currentLocation',
+    'should render the internal inline link without an aria-label when navigating to "$to" from "$currentLocation"',
     ({ to, currentLocation }) => {
       setCurrentLocation(currentLocation);
 
