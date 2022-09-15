@@ -1,8 +1,8 @@
-# InlineLink
+# Link
 
 ## Description
 
-The `Link` component is used to render link elements that can wrap any content, not just text. It can determine whether to make a client-side or server-side request based on the `allowCSR` prop and by parsing the `to` prop. If you need the the correct focus, hover and visited styles for text based link then you should use the [`InlineLink`](../InlineLink/README.md) component.
+The `Link` component is used to render link elements that can wrap any content, not just text. It can determine whether to make a client-side or server-side request based on the `allowCSR` prop and by parsing the `to` prop. If you need the the correct focus, hover and visited styles for text based link then you should use the [`Link`](../Link/README.md) component.
 
 ## Props
 
