@@ -16,13 +16,13 @@ The `Link` component is used to render link elements that can wrap any content, 
 ## Server-side routing
 
 ```tsx
-<Link to="/mundo/articles/ce42wzqr2mko">This is an inline link</Link>
+<Link to="/mundo/articles/ce42wzqr2mko">This is a link</Link>
 ```
 
 ## Client-side routing
 
 ```tsx
 <Link allowCSR to="/mundo/articles/ce42wzqr2mko">
-  This is an inline link with client-side routing enabled
+  This is a link with client-side routing enabled
 </Link>
 ```
