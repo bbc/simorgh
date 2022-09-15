@@ -26,17 +26,20 @@ const Curation = ({
   title,
   link,
   headingStyle,
+  position,
 }) => {
   const Component = pathOr(
     CurationGrid,
     [visualStyle, visualProminance],
     components,
   );
-  return (
-    <section aria-labelledby={title || 'default'} role="region">
-      {title && <Subheading href={link}>{title}</Subheading>}
+  return title || position === 0 ? (
+    <section aria-labelledby={title || 'Top Stories'} role="region">
+      <Subheading href={link}>{title}</Subheading>
       <Component promos={promos} headingStyle={headingStyle} />
     </section>
+  ) : (
+    <Component promos={promos} headingStyle={headingStyle} />
   );
 };
 

@@ -130,7 +130,13 @@ const TopicPage = ({ pageData }) => {
             {description && <TopicDescription>{description}</TopicDescription>}
           </TitleWrapper>
           {curations.map(
-            ({ summaries, curationId, title: curationTitle, link }) => (
+            ({
+              summaries,
+              curationId,
+              title: curationTitle,
+              link,
+              position,
+            }) => (
               <Curation
                 headingStyle={curationTitle && 'h3'}
                 key={curationId}
@@ -138,6 +144,7 @@ const TopicPage = ({ pageData }) => {
                 visualProminance={VISUAL_PROMINANCE.NORMAL}
                 promos={summaries}
                 title={curationTitle}
+                position={position}
                 link={link}
               />
             ),
