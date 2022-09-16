@@ -10,7 +10,7 @@ const styles = {
       textDecoration: 'none',
       '&:visited': {
         color: palette.METAL,
-        borderBottom: `${pixelsToRem(1)} solid ${palette.METAL}`,
+        borderBottom: `${pixelsToRem(1)}rem solid ${palette.METAL}`,
       },
       '&:focus, &:hover': {
         borderBottom: `${pixelsToRem(2)}rem solid ${palette.POSTBOX}`,
