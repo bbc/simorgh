@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-export-default-from": "^7.18.10",
+    "@emotion/babel-plugin": "11.10.2",
+    "@loadable/babel-plugin": "^5.13.2",
+    "@loadable/webpack-plugin": "5.15.2"
+  },
+  "dependencies": {
+    "@emotion/css": "11.10.0",
+    "@emotion/server": "11.10.0",
+    "@loadable/component": "5.15.2",
+    "@loadable/server": "5.15.2",
+    "next": "latest",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
