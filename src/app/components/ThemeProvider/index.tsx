@@ -17,8 +17,10 @@ const getPathToTheme = (props: Props) => {
   return `${props.service}/${variant}`;
 };
 
-const loadTheme = /* #__LOADABLE__ */ (props: Props) =>
-  import(`./themes/${getPathToTheme(props)}`);
+const loadTheme = /* #__LOADABLE__ */ (props: Props) => {
+  console.log('hello1 ' + `./themes/${getPathToTheme(props)}`);
+  return import(`./themes/${getPathToTheme(props)}`);
+};
 
 const ThemeProvider: LoadableComponent<Props> = loadable(loadTheme);
 

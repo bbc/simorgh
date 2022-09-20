@@ -1,4 +1,5 @@
 const { webpackDirAlias } = require('../dirAlias');
+const LoadablePlugin = require('@loadable/webpack-plugin');
 
 module.exports = {
   experimental: {
@@ -12,6 +13,8 @@ module.exports = {
       ...config.resolve.alias,
       ...webpackDirAlias,
     };
+
+    config.plugins = [...config.plugins, new LoadablePlugin()];
 
     return config;
   },
