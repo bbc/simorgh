@@ -12,6 +12,7 @@ import {
   bylineWithNameAndRole,
   bylineWithLink,
   bylineWithLinkAndLocation,
+  bylineWithPhoto,
 } from './fixture';
 
 describe('Byline', () => {
@@ -66,11 +67,19 @@ describe('Byline', () => {
   });
 
   it('should render all listitems correctly', () => {
-    render(<Byline blocks={bylineWithNameAndRole} />);
+    render(<Byline blocks={bylineWithPhoto} />);
 
     const listItems = screen.getAllByRole('listitem');
 
-    expect(listItems.length).toBe(2);
+    expect(listItems.length).toBe(5);
+  });
+
+  it('should render one image in the byline', () => {
+    render(<Byline blocks={bylineWithPhoto} />);
+
+    const image = screen.getAllByRole('img');
+
+    expect(image.length).toBe(1);
   });
 
   it('should correctly render Timestamp when passed as a child', () => {
@@ -105,18 +114,20 @@ describe('Byline', () => {
     expect(listItems.length).toBe(3);
   });
 
-  it('should render the Byline correctly with location', () => {
-    render(<Byline blocks={bylineWithLinkAndLocation} />);
+  it('should render the Byline correctly with location, image and links', () => {
+    render(<Byline blocks={bylineWithPhoto} />);
 
-    const AuthorLink = screen.getByText('Single Byline (all values)');
-    const TwitterLink = screen.getByText('@test');
+    const AuthorLink = screen.getByText('Clark Kent');
+    const TwitterLink = screen.getByText('@superman');
     const Links = screen.getAllByRole('link');
-    const Location = screen.getByText('London');
+    const Location = screen.getByText('Metropolis, US');
+    const Image = screen.getByRole('img');
 
     expect(AuthorLink).toBeInTheDocument();
     expect(TwitterLink).toBeInTheDocument();
     expect(Links.length).toBe(2);
     expect(Location).toBeInTheDocument();
+    expect(Image).toBeInTheDocument();
   });
 
   it.each`
@@ -163,6 +174,17 @@ describe('Byline', () => {
     );
 
     const findTranslation = screen.getByText(translation);
+
+    expect(findTranslation).toBeInTheDocument();
+  });
+
+  it.each`
+    info               | translation
+    ${'listItemImage'} | ${'Jerin abubuwa, hoto'}
+  `('should correctly translate image alt text', ({ translation }) => {
+    render(<Byline blocks={bylineWithPhoto} />, { service: 'hausa' });
+
+    const findTranslation = screen.getByAltText(translation);
 
     expect(findTranslation).toBeInTheDocument();
   });
