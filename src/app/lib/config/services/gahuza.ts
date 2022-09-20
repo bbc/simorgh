@@ -127,8 +127,10 @@ export const service: DefaultServiceConfig = {
       },
       byline: {
         articleInformation: 'Ibiranga iyi nkuru',
+        author: 'Umwanditsi',
+        listItemImage: 'Tondeka iyi nkuru, ifoto',
         published: 'Yatangajwe',
-        reportingFrom: '',
+        reportingFrom: 'Yakoze inkuru ari',
         role: 'Igikorwa',
       },
       consentBanner: {

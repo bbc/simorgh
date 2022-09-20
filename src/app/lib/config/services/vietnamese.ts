@@ -113,6 +113,8 @@ export const service: DefaultServiceConfig = {
       },
       byline: {
         articleInformation: '',
+        author: 'Tác giả',
+        listItemImage: 'Danh sách mục, hình ảnh',
         published: 'Được đăng',
         reportingFrom: '',
         role: 'Vai trò',

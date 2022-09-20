@@ -125,6 +125,8 @@ export const service: DefaultServiceConfig = {
       },
       byline: {
         articleInformation: 'Bayani kan maƙala',
+        author: 'Marubuci',
+        listItemImage: 'Jerin abubuwa, hoto',
         published: 'An wallafa',
         reportingFrom: 'Aiko rahoto daga',
         role: 'Sanya sunan wanda ya rubuta labari',

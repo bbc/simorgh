@@ -135,6 +135,7 @@ export const service: DefaultServiceConfig = {
       },
       byline: {
         articleInformation: '....में',
+        listItemImage: 'तस्वीर',
         published: 'प्रकाशित',
         reportingFrom: '........से',
         role: 'पदनाम',

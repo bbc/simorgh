@@ -131,6 +131,8 @@ export const service: DefaultServiceConfig = {
       },
       byline: {
         articleInformation: 'مضمون کی تفصیل',
+        author: 'مصنف',
+        listItemImage: 'لسٹ آئٹم، تصویر',
         published: 'وقت اشاعت',
         reportingFrom: 'مقام',
         role: 'عہدہ',

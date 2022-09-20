@@ -114,6 +114,8 @@ export const service: DefaultServiceConfig = {
       },
       byline: {
         articleInformation: 'కథనం',
+        author: 'రచయిత',
+        listItemImage: 'చిత్రం',
         published: 'ప్రచురణ',
         reportingFrom: 'నుంచి',
         role: 'హోదా',

@@ -115,6 +115,8 @@ export const service: DefaultServiceConfig = {
       },
       byline: {
         articleInformation: 'Məqalə barədə məlumat',
+        author: 'Müəllif',
+        listItemImage: 'Siyahı elementi, foto',
         published: 'Çap edildi',
         reportingFrom: 'Məkan',
         role: 'Vəzifə',

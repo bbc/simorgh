@@ -167,6 +167,8 @@ export const mainTranslations = {
   },
   byline: {
     articleInformation: 'О статье',
+    author: 'Автор',
+    listItemImage: 'Добавить фото',
     published: 'Опубликовано',
     reportingFrom: 'Место сообщения',
     role: 'Должность',

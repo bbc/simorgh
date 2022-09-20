@@ -220,6 +220,8 @@ export const service: SerbianConfig = {
       },
       byline: {
         articleInformation: 'Podaci o članku',
+        author: 'Autor',
+        listItemImage: 'Prikazane fotografije',
         published: 'Objavljeno',
         reportingFrom: 'Izveštava iz',
         role: 'Funkcija',
@@ -545,6 +547,8 @@ export const service: SerbianConfig = {
       },
       byline: {
         articleInformation: 'Подаци о чланку',
+        author: 'Аутор',
+        listItemImage: 'Приказане фотографије',
         published: 'Објављено',
         reportingFrom: 'Извештава из',
         role: 'Функција',

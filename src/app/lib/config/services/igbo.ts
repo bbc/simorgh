@@ -118,6 +118,8 @@ export const service: DefaultServiceConfig = {
       },
       byline: {
         articleInformation: 'Ebe akụkọ a si',
+        author: 'Onye dere ya',
+        listItemImage: 'Ndepụta ihe, foto',
         published: 'Mgbe e biputara ya',
         reportingFrom: 'Ebeg o si',
         role: 'Ndị mere akụkọ a',

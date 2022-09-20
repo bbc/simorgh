@@ -137,6 +137,8 @@ export const service: DefaultServiceConfig = {
       },
       byline: {
         articleInformation: 'اطلاعات مقاله',
+        author: 'نویسنده',
+        listItemImage: 'تصویر نویسنده مقاله',
         published: 'منتشر شده در',
         reportingFrom: 'در',
         role: 'شغل',

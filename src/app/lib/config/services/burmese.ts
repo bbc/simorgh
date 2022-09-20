@@ -128,6 +128,8 @@ export const service: DefaultServiceConfig = {
       },
       byline: {
         articleInformation: 'ဆောင်းပါးအချက်အလက်',
+        author: 'ရေးသားသူ',
+        listItemImage: 'ရုပ်ပုံ ',
         published: 'ရေးသားခဲ့သည်။',
         reportingFrom: 'ရေးသားပေးပို့သည့်နေရာ',
         role: 'ရာထူးတာဝန်',
