@@ -44,7 +44,9 @@ describe('InlineLink', () => {
 
       render(<InlineLink to={to} text="Hello World!" />);
 
-      expect(screen.getByText('Google')).not.toHaveAttribute('aria-label');
+      expect(screen.getByText('Hello World!')).not.toHaveAttribute(
+        'aria-label',
+      );
     },
   );
 
