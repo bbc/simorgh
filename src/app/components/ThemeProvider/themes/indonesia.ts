@@ -1,6 +1,6 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
-import latinScript from '../typography/scripts/latin';
-import { HELMET } from '../typography/fontFamilies';
+import latinScript from '../fontScripts/latin';
+import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
 
 const indonesiaTheme = {
@@ -13,9 +13,7 @@ const indonesiaTheme = {
   },
   typography: {
     script: latinScript,
-    fontFamilies: {
-      primary: HELMET,
-    },
+    fontVariants: helmetFontVariants,
     fontFaces: [],
   },
 };

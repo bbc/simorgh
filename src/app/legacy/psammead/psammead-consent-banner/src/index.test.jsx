@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { render } from '@testing-library/react';
-import arabic from '../../../../components/ThemeProvider/typography/scripts/arabic';
-import latin from '../../../../components/ThemeProvider/typography/scripts/latin';
+import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
+import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import { ConsentBanner, ConsentBannerText } from '.';
 
 const baseProps = {

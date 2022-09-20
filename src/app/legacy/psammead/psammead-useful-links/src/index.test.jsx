@@ -1,6 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import latin from '../../../../components/ThemeProvider/typography/scripts/latin';
+import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import { UsefulLink, UsefulLinksLi, UsefulLinksUl } from './index';
 
 const usefulCaptions = [
