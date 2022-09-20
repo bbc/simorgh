@@ -4,7 +4,7 @@ import {
   C_NEWSROUND_PURPLE_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/newsround';
-import latin from '../../../components/ThemeProvider/typography/scripts/latin';
+import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/psammead-locales/moment/en-gb';
 import '#psammead/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
