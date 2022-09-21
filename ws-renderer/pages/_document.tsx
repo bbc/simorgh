@@ -1,6 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import * as React from 'react';
-import { ChunkExtractor, ChunkExtractorManager } from '@loadable/server';
+import { ChunkExtractor } from '@loadable/server';
 import path from 'path';
 import { renderStatic } from '../shared/renderer';
 
@@ -15,6 +15,7 @@ export default class AppDocument extends Document {
           {initialProps.styles}
           <style
             data-emotion={`css ${ids.join(' ')}`}
+            // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{ __html: css }}
           />
         </>

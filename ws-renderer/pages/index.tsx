@@ -1,11 +1,12 @@
+import * as React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 import WithPageWrapper from '../../src/app/legacy/containers/PageHandlers/withPageWrapper';
 import { ServiceContextProvider } from '../../src/app/contexts/ServiceContext/index';
 import { ToggleContextProvider } from '../../src/app/contexts/ToggleContext';
 import Paragraph from '../../src/app/components/Paragraph';
-import { GEL_SPACING_TRPL } from '#psammead/gel-foundations/src/spacings';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
+import { GEL_SPACING_TRPL } from '../../src/app/legacy/psammead/gel-foundations/src/spacings';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '../../src/app/legacy/psammead/gel-foundations/src/breakpoints';
 
 const getStream = async () => {
   const res = await fetch(
@@ -30,8 +31,8 @@ const Wrapper = styled.div`
 const Home = ({ stream }) => {
   const Component = WithPageWrapper(() => (
     <Wrapper>
-      {stream.data.map(({ fact }, index) => (
-        <Paragraph css={css({ 'margin-bottom': GEL_SPACING_TRPL })} key={index}>
+      {stream.data.map(({ fact }) => (
+        <Paragraph css={css({ 'margin-bottom': GEL_SPACING_TRPL })} key={fact}>
           {fact}
         </Paragraph>
       ))}
