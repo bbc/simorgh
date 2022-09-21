@@ -22,7 +22,6 @@ const PromoList = styled.ul`
 const Item = styled.div`
   position: relative;
   display: inline;
-  border-radius: 3px;
 `;
 
 const getStyles = (promoCount, i) => {
@@ -50,15 +49,14 @@ const getStyles = (promoCount, i) => {
   ];
 };
 
-const HiearchicalGrid = props => {
-  const { summaries } = props;
-  const promoCount = summaries.length;
-  if (promoCount < 3) return null;
+const HiearchicalGrid = ({ summaries }) => {
+  if (!summaries || summaries.length < 3) return null;
+  const summaryItems = summaries.slice(0, 12);
   return (
     <PromoList role="list">
-      {summaries.map((promo, i) => {
+      {summaryItems.map((promo, i) => {
         return (
-          <Item key={promo.id} css={getStyles(promoCount, i)} as="li">
+          <Item key={promo.id} css={getStyles(summaryItems.length, i)} as="li">
             <Promo>
               <Promo.Image
                 src={promo.imageUrl}
