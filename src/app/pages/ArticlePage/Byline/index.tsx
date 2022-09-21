@@ -87,11 +87,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
     translations,
   );
   const jobRoleTranslated = pathOr('Role', ['byline', 'role'], translations);
-  const imageTranslated = pathOr(
-    'List item, image',
-    ['byline', 'listItemImage'],
-    translations,
-  );
+
   const publishedTranslated = pathOr(
     'Published',
     ['byline', 'published'],
@@ -117,19 +113,11 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
           <React.Fragment>
             {isRtl ? (
               <li css={BylineCss.imageRtl}>
-                <img
-                  css={BylineCss.imageSource}
-                  src={image}
-                  alt={imageTranslated}
-                />
+                <img css={BylineCss.imageSource} src={image} alt="" />
               </li>
             ) : (
               <li css={BylineCss.imageLtr}>
-                <img
-                  css={BylineCss.imageSource}
-                  src={image}
-                  alt={imageTranslated}
-                />
+                <img css={BylineCss.imageSource} src={image} alt="" />
               </li>
             )}
           </React.Fragment>
