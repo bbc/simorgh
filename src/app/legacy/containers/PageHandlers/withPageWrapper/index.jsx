@@ -4,7 +4,6 @@ import { pageDataPropType } from '#models/propTypes/data';
 import PageWrapper from '#app/Layouts/defaultPageWrapper';
 
 const WithPageWrapper = Component => {
-  console.log('hello');
   const PageWrapperContainer = props => (
     <PageWrapper {...props}>
       <Component {...props} />
@@ -22,7 +21,6 @@ const WithPageWrapper = Component => {
     status: null,
     bbcOrigin: null,
   };
-  console.log(PageWrapperContainer);
 
   return PageWrapperContainer;
 };

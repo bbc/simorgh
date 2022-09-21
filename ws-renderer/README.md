@@ -1,30 +1,5 @@
-# Emotion Vanilla Example
+# WS Renderer
 
-Extract and inline critical css with
-[emotion](https://github.com/emotion-js/emotion/tree/master/packages/emotion),
-[@emotion/server](https://github.com/emotion-js/emotion/tree/master/packages/server),
-[@emotion/css](https://github.com/emotion-js/emotion/tree/master/packages/css)
+This is an early POC of a nextjs app that can be deployed to utilise 'Incremental Static Regeneration' in NextJS. The goal is deploy a highly performant version of our site where users never hit origin except for newly created content (and this origin call could be eliminated with 'On-demand Static Regeneration' to follow later).
 
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-emotion-vanilla)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/next.js/tree/canary/examples/with-emotion-vanilla)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-emotion-vanilla with-emotion-vanilla-app
-```
-
-```bash
-yarn create next-app --example with-emotion-vanilla with-emotion-vanilla-app
-```
-
-```bash
-pnpm create next-app --example with-emotion-vanilla with-emotion-vanilla-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+It also utilises existing Simorgh components so as to practice 'evolutionary architecture', we gradually move towards to NextJS app without rebuilding all our React components from scratch. Gradually the original Express app goes out of use production.
