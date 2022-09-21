@@ -64,7 +64,7 @@ const LinkedData = ({
     url: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/sport/images/metadata/publisher-nx16.png',
   };
 
-  const publisherLogo = () => {
+  const choosePublisherLogo = () => {
     switch (service) {
       case 'news':
         return newsPublisherLogo;
@@ -76,6 +76,8 @@ const LinkedData = ({
         return logo;
     }
   };
+
+  const publisherLogo = choosePublisherLogo();
 
   const image = {
     '@type': IMG_TYPE,
