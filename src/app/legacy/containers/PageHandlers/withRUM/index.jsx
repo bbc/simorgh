@@ -35,7 +35,7 @@ const buildScript = ({
           identityPoolId: "${identityPoolId}",
           endpoint: "https://dataplane.rum.eu-west-1.amazonaws.com",
           telemetries: ["performance","errors","http"],
-          allowCookies: false,
+          allowCookies: true,
           enableXRay: false
         });
       `}
