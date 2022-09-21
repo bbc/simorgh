@@ -5,6 +5,7 @@ declare namespace JSX {
    */
   interface AmpImgProps {
     alt?: string;
+    attribution?: string;
     src?: string;
     width?: number;
     height?: number;

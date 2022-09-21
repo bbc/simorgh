@@ -6,23 +6,24 @@ The `Image` component is used to render an image. It supports responsive images,
 
 ## Props
 
-| Name               | type    | Description                                                                                                             |
-| ------------------ | ------- | ----------------------------------------------------------------------------------------------------------------------- |
-| alt                | string  | the image alt text                                                                                                      |
-| src                | string  | the src attribute for the img element                                                                                   |
-| srcSet?            | string  | the primary srcset (probably the webp images)                                                                           |
-| mediaType?         | string  | the primary image mediaType e.g. "image/webp"                                                                           |
-| fallbackSrcSet?    | string  | the fallback srcset (probably the jpeg images)                                                                          |
-| sizes?             | string  | the responsive sizes attribute, used in conjunction with srcsets so the browser selects the appropriate image to render |
-| fallbackMediaType? | string  | the primary image mediaType e.g. "image/jpeg"                                                                           |
-| width?             | number  | the width attribute for the image element                                                                               |
-| height?            | number  | the height attribute for the image element                                                                              |
-| className?         | string  | this prop is used by Emotion to provide ability to add styles                                                           |
-| aspectRatio?       | number  | use this prop if you want to use a custom aspect ratio. useful if you don't have the width and height props             |
-| lazyLoad?          | boolean | whether or not the image should lazy load                                                                               |
-| preload?           | boolean | whether or not the image should preload                                                                                 |
-| placeholder?       | boolean | whether or not to render a placeholder background image                                                                 |
-| isAmp?             | boolean | whether or not to render an AMP image                                                                                   |
+| Name               | type    | Description                                                                                                                                        |
+| ------------------ | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| alt                | string  | the image alt text                                                                                                                                 |
+| src                | string  | the src attribute for the img element                                                                                                              |
+| srcSet?            | string  | the primary srcset (probably the webp images)                                                                                                      |
+| mediaType?         | string  | the primary image mediaType e.g. "image/webp"                                                                                                      |
+| fallbackSrcSet?    | string  | the fallback srcset (probably the jpeg images)                                                                                                     |
+| sizes?             | string  | the responsive sizes attribute, used in conjunction with srcsets so the browser selects the appropriate image to render                            |
+| fallbackMediaType? | string  | the primary image mediaType e.g. "image/jpeg"                                                                                                      |
+| width?             | number  | the width attribute for the image element                                                                                                          |
+| height?            | number  | the height attribute for the image element                                                                                                         |
+| className?         | string  | this prop is used by Emotion to provide ability to add styles                                                                                      |
+| aspectRatio?       | number  | use this prop if you want to use a custom aspect ratio. useful if you don't have the width and height props                                        |
+| lazyLoad?          | boolean | whether or not the image should lazy load                                                                                                          |
+| preload?           | boolean | whether or not the image should preload                                                                                                            |
+| placeholder?       | boolean | whether or not to render a placeholder background image                                                                                            |
+| isAmp?             | boolean | whether or not to render an AMP image                                                                                                              |
+| attribution?       | string  | a string that indicates the attribution of the image. this is an [AMP specific](https://amp.dev/documentation/components/amp-img#attribution) prop |
 
 ## How to use
 

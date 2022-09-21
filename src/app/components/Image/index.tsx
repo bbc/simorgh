@@ -8,6 +8,7 @@ import styles from './index.styles';
 interface Props {
   alt: string;
   aspectRatio?: number;
+  attribution: string;
   className?: string;
   fallbackMediaType?: string;
   fallbackSrcSet?: string;
@@ -42,6 +43,7 @@ const roundNumber = (num: number) => Math.round(num * 100) / 100;
 const Image = ({
   alt,
   aspectRatio,
+  attribution,
   className,
   fallbackMediaType,
   fallbackSrcSet,
@@ -91,6 +93,7 @@ const Image = ({
             height={height}
             srcSet={srcSet}
             sizes={srcSet ? sizes : undefined}
+            attribution={attribution}
           >
             {fallbackSrcSet && (
               <amp-img
@@ -102,6 +105,7 @@ const Image = ({
                 srcSet={fallbackSrcSet}
                 sizes={sizes}
                 fallback=""
+                attribution={attribution}
               />
             )}
           </amp-img>

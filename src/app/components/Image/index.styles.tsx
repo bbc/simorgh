@@ -23,6 +23,7 @@ const styles = {
     }),
   image: css({
     width: '100%',
+    height: 'auto',
     display: 'block',
   }),
 };

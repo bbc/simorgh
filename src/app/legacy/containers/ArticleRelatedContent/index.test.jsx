@@ -3,6 +3,7 @@ import { render } from '@testing-library/react';
 
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 import Component, { buildStoryPromos } from '.';
 
@@ -13,21 +14,25 @@ import {
   relatedContentBlockWithTitle,
 } from './fixtures';
 
+jest.mock('../../../components/ThemeProvider');
+
 const renderComponent = ({
   content = relatedContentBlock,
   service = 'afrique',
   variant = 'default',
 } = {}) =>
   render(
-    <ServiceContextProvider service={service} variant={variant}>
-      <ToggleContextProvider
-        toggles={{
-          eventTracking: { enabled: false },
-        }}
-      >
-        <Component content={content} />
-      </ToggleContextProvider>
-    </ServiceContextProvider>,
+    <ThemeProvider service={service} variant={variant}>
+      <ServiceContextProvider service={service} variant={variant}>
+        <ToggleContextProvider
+          toggles={{
+            eventTracking: { enabled: false },
+          }}
+        >
+          <Component content={content} />
+        </ToggleContextProvider>
+      </ServiceContextProvider>
+    </ThemeProvider>,
   );
 
 describe('ArticleRelatedContent', () => {
