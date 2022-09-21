@@ -1,8 +1,9 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import * as React from 'react';
-import { renderStatic } from '../shared/renderer';
 import { ChunkExtractor, ChunkExtractorManager } from '@loadable/server';
 import path from 'path';
+import { renderStatic } from '../shared/renderer';
+
 export default class AppDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx);
@@ -10,13 +11,13 @@ export default class AppDocument extends Document {
     return {
       ...initialProps,
       styles: (
-        <React.Fragment>
+        <>
           {initialProps.styles}
           <style
             data-emotion={`css ${ids.join(' ')}`}
             dangerouslySetInnerHTML={{ __html: css }}
           />
-        </React.Fragment>
+        </>
       ),
     };
   }
@@ -25,7 +26,7 @@ export default class AppDocument extends Document {
     const statsFile = path.resolve('.next/loadable-stats.json');
 
     const chunkExtractor = new ChunkExtractor({
-      statsFile: statsFile,
+      statsFile,
     });
 
     return chunkExtractor.collectChunks(

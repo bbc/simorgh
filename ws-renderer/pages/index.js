@@ -1,9 +1,9 @@
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 import WithPageWrapper from '../../src/app/legacy/containers/PageHandlers/withPageWrapper';
 import { ServiceContextProvider } from '../../src/app/contexts/ServiceContext/index';
 import { ToggleContextProvider } from '../../src/app/contexts/ToggleContext';
 import Paragraph from '../../src/app/components/Paragraph';
-import styled from '@emotion/styled';
-import { css } from '@emotion/react';
 import { GEL_SPACING_TRPL } from '#psammead/gel-foundations/src/spacings';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 
