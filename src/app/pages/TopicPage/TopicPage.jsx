@@ -28,7 +28,6 @@ import TopicTitle from './TopicTitle';
 import TopicDescription from './TopicDescription';
 import Pagination from './Pagination';
 import Curation, { VISUAL_PROMINANCE, VISUAL_STYLE } from './Curation';
-import HiearchicalGrid from './HierarchicalGrid';
 
 const OuterWrapper = styled.main`
   margin: 0 ${GEL_SPACING};
@@ -130,9 +129,18 @@ const TopicPage = ({ pageData }) => {
             </InlineWrapper>
             {description && <TopicDescription>{description}</TopicDescription>}
           </TitleWrapper>
-          {curations.map(({ summaries }) => (
-            <HiearchicalGrid summaries={summaries} />
-          ))}
+          {curations.map(
+            ({ summaries, curationId, title: curationTitle, link }) => (
+              <Curation
+                key={curationId}
+                visualStyle={VISUAL_STYLE.NONE}
+                visualProminance={VISUAL_PROMINANCE.NORMAL}
+                promos={summaries}
+                title={curationTitle}
+                link={link}
+              />
+            ),
+          )}
           <Pagination
             activePage={activePage}
             pageCount={pageCount}
