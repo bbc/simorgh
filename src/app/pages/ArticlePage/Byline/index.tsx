@@ -109,19 +109,17 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
         {articleInformationTranslated}
       </VisuallyHiddenText>
       <ul css={BylineCss.bylineList} role="list">
-        {image ? (
-          <React.Fragment>
-            {isRtl ? (
-              <li css={BylineCss.imageRtl}>
-                <img css={BylineCss.imageSource} src={image} alt="" />
-              </li>
-            ) : (
-              <li css={BylineCss.imageLtr}>
-                <img css={BylineCss.imageSource} src={image} alt="" />
-              </li>
-            )}
-          </React.Fragment>
-        ) : null}
+        {image && (
+          <li
+            css={
+              isRtl
+                ? [BylineCss.imageRtl, BylineCss.Image]
+                : [BylineCss.imageLtr, BylineCss.Image]
+            }
+          >
+            <img css={BylineCss.imageSource} src={image} alt="" />
+          </li>
+        )}
         <li>
           {twitterLink ? (
             <React.Fragment>

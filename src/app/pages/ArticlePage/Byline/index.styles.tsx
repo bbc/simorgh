@@ -103,33 +103,37 @@ export default {
       },
     }),
 
-  imageLtr: () =>
+  Image: () =>
     css({
       display: 'block',
       width: `${pixelsToRem(80)}rem`,
       height: `${pixelsToRem(80)}rem`,
       border: `solid ${pixelsToRem(1)}rem #979797`,
-      margin: `${pixelsToRem(25)}rem ${pixelsToRem(8)}rem ${pixelsToRem(
-        16,
-      )}rem 0px`,
       backgroundColor: '#d8d8d8',
       overflow: 'hidden',
-      float: 'left',
     }),
 
+  imageLtr: () =>
+    css([
+      { ...Image },
+      {
+        float: 'left',
+        margin: `${pixelsToRem(25)}rem ${pixelsToRem(8)}rem ${pixelsToRem(
+          16,
+        )}rem 0px`,
+      },
+    ]),
+
   imageRtl: () =>
-    css({
-      display: 'block',
-      width: `${pixelsToRem(80)}rem`,
-      height: `${pixelsToRem(80)}rem`,
-      border: `solid ${pixelsToRem(1)}rem #979797`,
-      margin: `${pixelsToRem(25)}rem 0px ${pixelsToRem(16)}rem ${pixelsToRem(
-        8,
-      )}rem`,
-      backgroundColor: '#d8d8d8',
-      overflow: 'hidden',
-      float: 'right',
-    }),
+    css([
+      { ...Image },
+      {
+        float: 'right',
+        margin: `${pixelsToRem(25)}rem 0px ${pixelsToRem(16)}rem ${pixelsToRem(
+          8,
+        )}rem`,
+      },
+    ]),
 
   imageSource: () =>
     css({
