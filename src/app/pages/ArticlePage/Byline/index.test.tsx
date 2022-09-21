@@ -177,15 +177,4 @@ describe('Byline', () => {
 
     expect(findTranslation).toBeInTheDocument();
   });
-
-  it.each`
-    info               | translation
-    ${'listItemImage'} | ${'Jerin abubuwa, hoto'}
-  `('should correctly translate image alt text', ({ translation }) => {
-    render(<Byline blocks={bylineWithPhoto} />, { service: 'hausa' });
-
-    const findTranslation = screen.getByAltText(translation);
-
-    expect(findTranslation).toBeInTheDocument();
-  });
 });
