@@ -35,14 +35,8 @@ export default styled.h2<Props>`
   a:hover,
   a:focus {
     color: ${C_POSTBOX};
-    span::after {
-      bottom: ${3 / 16}rem;
-      content: '';
-      background: ${C_POSTBOX};
-      width: 100%;
-      height: ${2 / 16}rem;
-      position: absolute;
-      left: 0;
+    span {
+      text-decoration: underline;
     }
   }
   svg {
