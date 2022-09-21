@@ -68,10 +68,8 @@ const LinkedData = ({
     switch (service) {
       case 'news':
         return newsPublisherLogo;
-        break;
       case 'sport':
         return sportPublisherLogo;
-        break;
       default:
         return logo;
     }
