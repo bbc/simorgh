@@ -57,6 +57,13 @@ const LinkedData = ({
     url: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/publisher-nx16.png',
   };
 
+  const sportPublisherLogo = {
+    '@type': IMG_TYPE,
+    width: 108,
+    height: 16,
+    url: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/sport/images/metadata/publisher-nx16.png',
+  };
+
   const isNews = () => service === 'news';
 
   const publisherLogo = isNews() ? newsPublisherLogo : logo;
