@@ -8,7 +8,7 @@ import styles from './index.styles';
 interface Props {
   alt: string;
   aspectRatio?: number;
-  attribution: string;
+  attribution?: string;
   className?: string;
   fallbackMediaType?: string;
   fallbackSrcSet?: string;
