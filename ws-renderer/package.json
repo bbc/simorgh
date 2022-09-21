@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "devDependencies": {
+    "@babel/core": "^7.19.1",
     "@babel/plugin-proposal-export-default-from": "^7.18.10",
     "@emotion/babel-plugin": "11.10.2",
     "@loadable/babel-plugin": "^5.13.2",
