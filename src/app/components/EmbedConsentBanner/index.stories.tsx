@@ -1,4 +1,4 @@
-import React, { ReactNode, PropsWithChildren } from 'react';
+import React, { PropsWithChildren } from 'react';
 import { css } from '@emotion/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
@@ -10,7 +10,7 @@ import { Services, Variants } from '../../models/types/global';
 import { EmbedConsentBannerCanonical, EmbedConsentBannerAmp } from '.';
 import ThemeProvider from '../ThemeProvider';
 
-const BackgroundColorWrapper = ({ children }: PropsWithChildren<ReactNode>) => (
+const BackgroundColorWrapper = ({ children }: PropsWithChildren) => (
   <div css={css({ backgroundColor: C_GREY_2, padding: 20 })}>{children}</div>
 );
 
