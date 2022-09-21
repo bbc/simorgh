@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
 import React, { ElementType, ComponentPropsWithoutRef } from 'react';
-import { jsx, Theme } from '@emotion/react';
+import { Theme } from '@emotion/react';
 
 import { GelFontSize, FontVariant } from '../../models/types/theming';
 
