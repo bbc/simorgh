@@ -56,9 +56,6 @@ const H = css`
     display: inline-block;
     vertical-align: top;
     padding-inline-start: 16px;
-    @media (max-width: 399px) {
-      padding-inline-start: 8px;
-    }
   }
 `;
 

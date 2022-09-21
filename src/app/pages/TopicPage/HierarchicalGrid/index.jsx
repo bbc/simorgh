@@ -2,6 +2,14 @@ import React from 'react';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { string, shape, arrayOf, number, oneOfType, oneOf } from 'prop-types';
+import {
+  GEL_GROUP_1_SCREEN_WIDTH_MAX,
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MAX,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '#psammead/gel-foundations/src/breakpoints';
 import Promo, { MEDIA_TYPES } from '#components/Promo';
 import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
 
@@ -11,10 +19,10 @@ const PromoList = styled.ul`
   display: grid;
   grid-gap: 10px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  @media (max-width: 1007px) {
+  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  @media (max-width: 599px) {
+  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     grid-template-columns: 1fr 1fr;
   }
 `;
@@ -27,22 +35,22 @@ const Item = styled.div`
 const getStyles = (promoCount, i) => {
   return [
     css`
-      @media (max-width: 399px) {
+      @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
         ${SMALL[promoCount - 1][i]}
       }
     `,
     css`
-      @media (min-width: 400px) and (max-width: 599px) {
+      @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
         ${MOBILE[promoCount - 1][i]}
       }
     `,
     css`
-      @media (min-width: 600px) and (max-width: 1007px) {
+      @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
         ${TABLET[promoCount - 1][i]}
       }
     `,
     css`
-      @media (min-width: 1008px) {
+      @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
         ${DESKTOP[promoCount - 1][i]}
       }
     `,
