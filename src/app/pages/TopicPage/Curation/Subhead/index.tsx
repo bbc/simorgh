@@ -8,9 +8,10 @@ import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 interface Props {
   href?: string;
+  a11yID?: string;
 }
 
-const Subhead = ({ children, href }: PropsWithChildren<Props>) => {
+const Subhead = ({ children, href, a11yID }: PropsWithChildren<Props>) => {
   const { service, script, dir } = useContext(ServiceContext);
 
   const Wrapper = href
@@ -22,12 +23,12 @@ const Subhead = ({ children, href }: PropsWithChildren<Props>) => {
       )
     : Fragment;
   return (
-    <H2 service={service} script={script}>
-      <Wrapper>{children}</Wrapper>
+    <H2 service={service} script={script} id={a11yID}>
+      <Wrapper>{children || 'Top Stories'}</Wrapper>
     </H2>
   );
 };
 
-Subhead.defaultProps = { href: '' };
+Subhead.defaultProps = { href: '', a11yID: 'Top-Stories' };
 
 export default Subhead;

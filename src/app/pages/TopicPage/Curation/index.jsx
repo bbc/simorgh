@@ -33,9 +33,12 @@ const Curation = ({
     [visualStyle, visualProminance],
     components,
   );
+  const a11yID = title && title.replaceAll(' ', '-');
   return title || position === 0 ? (
-    <section aria-labelledby={title || 'Top Stories'} role="region">
-      <Subheading href={link}>{title}</Subheading>
+    <section aria-labelledby={a11yID || 'Top-Stories'} role="region">
+      <Subheading a11yTag={a11yID || ''} href={link}>
+        {title}
+      </Subheading>
       <Component promos={promos} headingStyle={headingStyle} />
     </section>
   ) : (
