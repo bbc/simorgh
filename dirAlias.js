@@ -4,7 +4,6 @@ const fs = require('fs');
 let appDirectory = fs.realpathSync(process.cwd());
 appDirectory = appDirectory.replace('/ws-renderer', '');
 
-console.log(appDirectory);
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 
 module.exports = {
