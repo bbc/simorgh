@@ -1,4 +1,5 @@
 import loadable, { LoadableComponent } from '@loadable/component';
+import { PropsWithChildren } from 'react';
 import { Services, Variants } from '../../models/types/global';
 import defaultServiceVariants from './defaultServiceVariants';
 
@@ -20,6 +21,7 @@ const getPathToTheme = (props: Props) => {
 const loadTheme = /* #__LOADABLE__ */ (props: Props) =>
   import(`./themes/${getPathToTheme(props)}`);
 
-const ThemeProvider: LoadableComponent<Props> = loadable(loadTheme);
+const ThemeProvider: LoadableComponent<PropsWithChildren<Props>> =
+  loadable(loadTheme);
 
 export default ThemeProvider;
