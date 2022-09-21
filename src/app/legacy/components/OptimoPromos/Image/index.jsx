@@ -17,7 +17,7 @@ const Image = ({ src, altText, srcset, fallbackSrcset, width, height }) => {
       aspectRatio={ASPECT_RATIO}
       width={width}
       height={height}
-      lazyload
+      lazyLoad
     />
   );
 };
