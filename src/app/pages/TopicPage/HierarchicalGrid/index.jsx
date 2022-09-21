@@ -38,18 +38,12 @@ const getStyles = (promoCount, i) => {
       @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
         ${SMALL[promoCount - 1][i]}
       }
-    `,
-    css`
       @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
         ${MOBILE[promoCount - 1][i]}
       }
-    `,
-    css`
       @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
         ${TABLET[promoCount - 1][i]}
       }
-    `,
-    css`
       @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
         ${DESKTOP[promoCount - 1][i]}
       }
