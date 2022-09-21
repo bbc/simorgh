@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
+import { CSSObject, SerializedStyles } from '@emotion/react';
 import React, { FC, HTMLAttributes } from 'react';
 
 import { FontVariant, GelFontSize } from '../../models/types/theming';
@@ -10,6 +11,7 @@ interface Props extends HTMLAttributes<HTMLElement> {
   children?: React.ReactNode;
   fontVariant?: FontVariant;
   size?: GelFontSize;
+  css?: SerializedStyles | CSSObject;
 }
 
 const Paragraph: FC<Props> = ({

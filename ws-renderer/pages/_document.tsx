@@ -2,7 +2,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 import * as React from 'react';
 import { ChunkExtractor } from '@loadable/server';
 import path from 'path';
-import { renderStatic } from '../shared/renderer';
+import renderStatic from '../shared/renderer';
 
 export default class AppDocument extends Document {
   static async getInitialProps(ctx) {
