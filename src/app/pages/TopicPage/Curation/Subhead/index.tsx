@@ -24,7 +24,7 @@ const Subhead = ({ children, href, a11yID }: PropsWithChildren<Props>) => {
     : Fragment;
   return (
     <H2 service={service} script={script} id={a11yID}>
-      <Wrapper>{children || 'Top Stories'}</Wrapper>
+      <Wrapper>{children}</Wrapper>
     </H2>
   );
 };
