@@ -66,13 +66,13 @@ const LinkedData = ({
 
   switch (service) {
     case 'news':
-      publisherLogo = newsPublisherLogo;
+      const publisherLogo = newsPublisherLogo;
       break;
     case 'sport':
-      publisherLogo = sportPublisherLogo;
+      const publisherLogo = sportPublisherLogo;
       break;
     default:
-      publisherLogo = logo;
+      const publisherLogo = logo;
   }
 
   const image = {
