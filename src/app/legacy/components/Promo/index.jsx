@@ -28,21 +28,8 @@ const Wrapper = styled.div`
   position: relative;
 `;
 
-const Left = styled.div`
-  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    width: 33%;
-    display: inline-block;
-    vertical-align: top;
-  }
-`;
-const Right = styled.div`
-  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    padding-inline-start: ${GEL_SPACING};
-    width: 67%;
-    display: inline-block;
-    vertical-align: top;
-  }
-`;
+const Left = styled.div``;
+const Right = styled.div``;
 
 const Promo = ({ children }) => {
   const { script, service } = useContext(ServiceContext);
@@ -55,8 +42,8 @@ const Promo = ({ children }) => {
   return (
     <Wrapper>
       <PromoContext.Provider value={{ script, service }}>
-        {leftChildren && <Left>{leftChildren}</Left>}
-        {rightChildren && <Right>{rightChildren}</Right>}
+        {leftChildren && <Left className="promo-image">{leftChildren}</Left>}
+        {rightChildren && <Right className="promo-text">{rightChildren}</Right>}
       </PromoContext.Provider>
     </Wrapper>
   );
