@@ -1163,8 +1163,6 @@ export const RelatedContentSingleItemRtl = {
                     model: {
                       width: 640,
                       height: 562,
-                      locator:
-                        '72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png',
                       imageType: 'background',
                       originCode: 'cpsdevpb',
                       copyrightHolder: 'BBC',
@@ -1289,8 +1287,6 @@ export const RelatedContentListRtl = {
                     model: {
                       width: 640,
                       height: 562,
-                      locator:
-                        '72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png',
                       imageType: 'background',
                       originCode: 'cpsdevpb',
                       copyrightHolder: 'BBC',
@@ -1378,8 +1374,6 @@ export const RelatedContentListRtl = {
                     model: {
                       width: 640,
                       height: 562,
-                      locator:
-                        '72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png',
                       imageType: 'background',
                       originCode: 'cpsdevpb',
                       copyrightHolder: 'BBC',
