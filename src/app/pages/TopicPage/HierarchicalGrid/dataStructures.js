@@ -79,7 +79,7 @@ const TABLET = [
   [V],
   [V, V],
   [DB, V, V],
-  [DB, C, C, C],
+  [DB, V, C, C],
   [DB, T, V, V, V],
   [DB, V, V, V, V, V],
   [DB, V, V, V, V, C, C],
