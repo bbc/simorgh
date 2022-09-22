@@ -8,7 +8,7 @@ import pidginSummaries from './fixtures';
 
 const Component = () => {
   return (
-    <div style={{ backgroundColor: '#f2f2f2' }}>
+    <div style={{ backgroundColor: '#F6F6F6'}}>
       <ServiceContextProvider service="pidgin">
         <HiearchicalGrid
           summaries={pidginSummaries.slice(

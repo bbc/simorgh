@@ -14,7 +14,7 @@ import Promo, { MEDIA_TYPES } from '#components/Promo';
 import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
 
 const PromoList = styled.ul`
-  padding: 0;
+  padding: 1.5rem;
   margin: 0;
   display: grid;
   grid-gap: 10px;
@@ -30,6 +30,8 @@ const PromoList = styled.ul`
 const Item = styled.div`
   position: relative;
   display: inline;
+  background-color: white;
+  padding: 1rem;
 `;
 
 const getStyles = (promoCount, i) => {
