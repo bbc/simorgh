@@ -5,11 +5,7 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import brandSVG from '../../chameleonLogos/persian';
-import arabic from '../../../legacy/psammead/gel-foundations/src/scripts/arabic';
-import {
-  F_REITH_QALAM_REGULAR,
-  F_REITH_QALAM_BOLD,
-} from '../../../legacy/psammead/psammead-styles/src/fonts';
+import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import 'moment/locale/fa';
 import '#psammead/moment-timezone-include/tz/GMT';
 import jalaali from '../../../legacy/psammead/psammead-calendars/src';
@@ -287,6 +283,16 @@ export const service: DefaultServiceConfig = {
           text: 'رد شدن از پست %provider_name%',
           endTextVisuallyHidden: 'پایان پست %provider_name%',
         },
+        consentBanner: {
+          heading: `اجازه نشان دادن محتوای [social_media_site]  را می دهید؟`,
+          body: `این مطلب شامل محتوایی از [social_media_site]  است. قبل از بارگیری این محتوا از شما اجازه می گیریم، زیرا ممکن است این سایت ها از کوکی ها و یا سایر انواع فن آوری استفاده کنند. می توانید سیاست [link]  [social_media_site]  را درباره کوکی ها [/link] و  [link] سیاست مربوط به حفظ حریم خصوصی[/link]  را پیش از موافقت بخوانید. برای دیدن این محتوا روی "موافقت و ادامه"‌کلیک کنید.`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+        },
       },
       include: {
         errorMessage:
@@ -359,7 +365,6 @@ export const service: DefaultServiceConfig = {
       copyrightText: 'بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست.',
     },
     timezone: 'GMT',
-    fonts: [F_REITH_QALAM_REGULAR, F_REITH_QALAM_BOLD],
     navigation: [
       {
         title: 'صفحه اول',

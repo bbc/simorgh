@@ -4,12 +4,8 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import arabic from '../../../legacy/psammead/gel-foundations/src/scripts/arabic';
+import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import brandSVG from '../../chameleonLogos/urdu';
-import {
-  F_REITH_QALAM_REGULAR,
-  F_REITH_QALAM_BOLD,
-} from '../../../legacy/psammead/psammead-styles/src/fonts';
 import '#psammead/moment-timezone-include/tz/Asia/Karachi';
 import '#psammead/psammead-locales/moment/ur';
 import withContext from '../../../contexts/utils/withContext';
@@ -267,6 +263,16 @@ export const service: DefaultServiceConfig = {
           text: '%provider_name% پوسٹ نظرانداز کریں',
           endTextVisuallyHidden: '%provider_name% پوسٹ کا اختتام',
         },
+        consentBanner: {
+          heading: `[social_media_site] کا مواد دکھانے کی اجازت دی جائے؟?`,
+          body: `اس تحریر میں ایسا مواد ہے جو [social_media_site] کی جانب سے دیا گیا ہے۔ کسی بھی چیز کے لوڈ ہونے سے قبل ہم آپ سے اجازت چاہتے ہیں کیونکہ یہ ممکن ہے کہ وہ کوئی مخصوص کوکیز یا ٹیکنالوجیز کا استعمال کر رہے ہوں۔ آپ اسے تسلیم کرنے سے پہلے [social_media_site] [link] ککی پالیسی [/link] اور [link] پرائیویسی پالیسی [/link] پڑھنا چاہیں گے۔ اس مواد کو دیکھنے کے لیے ’تسلیم کریں، جاری رکھیں‘ پر کلک کریں۔`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+        },
       },
       include: {
         errorMessage:
@@ -336,7 +342,6 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں',
     },
-    fonts: [F_REITH_QALAM_REGULAR, F_REITH_QALAM_BOLD],
     timezone: 'Asia/Karachi',
     navigation: [
       {

@@ -6,8 +6,8 @@ import {
   C_POSTBOX_30,
   C_GHOST,
 } from '#psammead/psammead-styles/src/colours';
-import { latin } from '#psammead/gel-foundations/src/scripts';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import AmpNavigation from './index.amp';
 import {
   dropdownTestId,

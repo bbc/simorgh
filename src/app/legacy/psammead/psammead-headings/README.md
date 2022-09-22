@@ -22,7 +22,7 @@ The Headings are a set of two components, `Headline` and `SubHeading`. They use 
 
 ```jsx
 import { Headline, SubHeading } from '#psammead/psammead-headings/src';
-import { latin } from '#psammead/gel-foundations/src/scripts';
+import latin from '../../../components/ThemeProvider/fontScripts/latin';
 
 const Wrapper = () => (
   <Fragment>

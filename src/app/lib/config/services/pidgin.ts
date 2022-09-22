@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import brandSVG from '../../chameleonLogos/pidgin';
-import cyrillicAndLatin from '../../../legacy/psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/psammead-locales/moment/pcm';
 import '#psammead/moment-timezone-include/tz/Africa/Lagos';
 import withContext from '../../../contexts/utils/withContext';
@@ -40,11 +40,10 @@ export const service: DefaultServiceConfig = {
     defaultCaptionOffscreenText: 'Wetin we call am, ',
     imageCopyrightOffscreenText: 'Wia dis foto come from, ',
     brandSVG,
-    script: cyrillicAndLatin,
+    script: latin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Domot',
-    fonts: [],
     noBylinesPolicy:
       'https://www.bbc.com/pidgin/institutional-48528766#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/pidgin/institutional-48528766',
@@ -245,6 +244,17 @@ export const service: DefaultServiceConfig = {
         skipLink: {
           text: 'Skip %provider_name% post',
           endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+        consentBanner: {
+          heading: `Allow [social_media_site] content?`,
+          body: `Dis article contain content wey [social_media_site] provide. We ask for una permission before anytin dey loaded, as dem fit dey use cookies and oda technologies. You fit wan read di [social_media_site] [link] cookie policy [/link] and [link] privacy policy [/link] before accepting. To view dis content choose 'accept and continue'.`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+          button: 'Accept and kontinu',
         },
       },
       include: {

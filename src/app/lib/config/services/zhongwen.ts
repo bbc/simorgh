@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import noAscendersOrDescenders from '../../../legacy/psammead/gel-foundations/src/scripts/no-ascenders-or-descenders';
+import noAscendersOrDescenders from '../../../components/ThemeProvider/fontScripts/noAscOrDesc';
 import brandSVG from '../../chameleonLogos/zhongwen';
 import '#psammead/moment-timezone-include/tz/GMT';
 import 'moment/locale/zh-cn';
@@ -348,6 +348,16 @@ export const service: ZhongwenConfig = {
           text: '跳过 %provider_name% 帖子',
           endTextVisuallyHidden: '结尾 %provider_name% 帖子',
         },
+        consentBanner: {
+          heading: `允许[social_media_site]内容`,
+          body: `此文包含[social_media_site}提供的内容。由于这些内容会使用曲奇或小甜饼等科技，我们在加载任何内容前会寻求您的认可。  您可能在给与许可前愿意阅读[social_media_site][link]小甜饼政策[/link]和[link]隐私政策[/link]。 希望阅读上述内容，请点击“接受并继续”。`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+        },
       },
       include: {
         errorMessage:
@@ -634,6 +644,16 @@ export const service: ZhongwenConfig = {
         skipLink: {
           text: '跳過 %provider_name% 帖子',
           endTextVisuallyHidden: '結尾 %provider_name% 帖子',
+        },
+        consentBanner: {
+          heading: `允許[social_media_site]内容`,
+          body: `此文包含[social_media_site}提供的内容。由於這些内容會使用曲奇或小甜餅等科技，我們在加載任何内容前會尋求您的認可。  您可能在給予許可前希望閲讀[social_media_site][link]曲奇政策[/link]和[link]隱私政策[/link]。希望閲讀上述内容，請點擊“接受並繼續”。`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
         },
       },
       include: {

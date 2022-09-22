@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import cyrillicAndLatin from '../../../legacy/psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import brandSVG from '../../chameleonLogos/gahuza';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/rw';
@@ -46,7 +46,7 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/gahuza/institutional-49283343#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/gahuza/institutional-49283343',
     isTrustProjectParticipant: true,
-    script: cyrillicAndLatin,
+    script: latin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: "Urupapuro rw'itangiriro",
@@ -260,6 +260,17 @@ export const service: DefaultServiceConfig = {
           text: 'Tambuka %provider_name% ubutumwa',
           endTextVisuallyHidden: 'Impera ya %provider_name% ubutumwa',
         },
+        consentBanner: {
+          heading: 'Uremeye ibiri kuri [social_media_site]?',
+          body: `Iyi nkuru irimwo ivyatanzwe na [social_media_site].  Dukeneye uruhusha rwawe imbere yuko bigushikira, kuko birashobora kuba bikoresha cookies hamwe n'ubundi buhinga.  Wobanza ugasoma aha [social_media_site] [link] amategeko agenga cookie [/link] and [link] n'ayagenga ubuzima bwite [/link] imbere yuko wemera. Kugira ubibone hitamwo 'emera hanyuma ubandanye'.`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+          button: 'Emera uce ubandanye',
+        },
       },
       include: {
         errorMessage:
@@ -328,7 +339,6 @@ export const service: DefaultServiceConfig = {
       ],
       copyrightText: 'BBC. BBC ntibazwa ibivuye ku zindi mbuga.',
     },
-    fonts: [],
     timezone: 'GMT',
     navigation: [
       {

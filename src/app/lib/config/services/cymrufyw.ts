@@ -5,13 +5,8 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import latinDiacritics from '../../../legacy/psammead/gel-foundations/src/scripts/latin-with-diacritics';
-import {
-  F_REITH_SANS_BOLD,
-  F_REITH_SANS_REGULAR,
-  F_REITH_SERIF_MEDIUM,
-} from '../../../legacy/psammead/psammead-styles/src/fonts';
 import '#psammead/moment-timezone-include/tz/Europe/London';
+import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/cy';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
@@ -49,7 +44,7 @@ export const service: DefaultServiceConfig = {
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
     isTrustProjectParticipant: true,
-    script: latinDiacritics,
+    script: latinWithDiacritics,
     manifestPath: '/articles/manifest.json',
     frontPageTitle: 'Newyddion a mwy',
     theming: {
@@ -218,6 +213,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
+      socialEmbed: {},
     },
     brandSVG,
     mostRead: {
@@ -273,7 +269,6 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         "BBC. Nid yw'r BBC yn gyfrifol am gynnwys safleoedd allanol.",
     },
-    fonts: [F_REITH_SANS_BOLD, F_REITH_SANS_REGULAR, F_REITH_SERIF_MEDIUM],
     timezone: 'Europe/London',
     navigation: [
       {

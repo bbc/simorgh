@@ -5,9 +5,9 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import brandSVG from '../../chameleonLogos/azeri';
-import latinDiacritics from '../../../legacy/psammead/gel-foundations/src/scripts/latin-with-diacritics';
 import '#psammead/moment-timezone-include/tz/Asia/Baku';
 import '#psammead/psammead-locales/moment/az';
+import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -46,7 +46,7 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/azeri/institutional-49283479#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/azeri/institutional-49283479',
     isTrustProjectParticipant: true,
-    script: latinDiacritics,
+    script: latinWithDiacritics,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Xəbərlər, Qaynar Xəbərlər, Analiz, Video',
@@ -241,6 +241,17 @@ export const service: DefaultServiceConfig = {
           text: 'Paylaşımını ötürün %provider_name%',
           endTextVisuallyHidden: 'Paylaşımın sonu %provider_name%',
         },
+        consentBanner: {
+          heading: '[social_media_site] məzmununa icazə varmı?',
+          body: `Bu məqalədə [social_media_site] məzmunu mövcuddur.  Nə isə yüklənməmişdən əvvəl icazənizi istəyirik, çünki onlar kukilərdən və digər texnologiyalardan istifadə edə bilərlər. Qəbul etməzdən əvvəl [social_media_site] [link] kuki siyasəti [/link] və [link] gizlilik siyasəti [/link] barədə oxumaq istəyə bilərsiniz. Bu məzmunu görmək üçün "qəbul edin və davam edin".`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+          button: 'Qəbul edin və davam edin',
+        },
       },
       include: {
         errorMessage:
@@ -307,7 +318,6 @@ export const service: DefaultServiceConfig = {
       ],
       copyrightText: 'BBC. BBC kənar saytların məzmununa məsul deyil.',
     },
-    fonts: [],
     timezone: 'Asia/baku',
     navigation: [
       {

@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import cyrillicAndLatin from '../../../legacy/psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
 import brandSVG from '../../chameleonLogos/ukrainian';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/uk';
@@ -45,7 +45,7 @@ const baseServiceConfig = {
     'https://www.bbc.com/ukrainian/institutional-50170368#authorexpertise',
   publishingPrinciples: 'https://www.bbc.com/ukrainian/institutional-50170368',
   isTrustProjectParticipant: true,
-  script: cyrillicAndLatin,
+  script: cyrillic,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   frontPageTitle: 'Новини',
@@ -264,6 +264,17 @@ const baseServiceConfig = {
         text: 'Пропустити %provider_name% допис',
         endTextVisuallyHidden: 'Кінець %provider_name% допису',
       },
+      consentBanner: {
+        heading: `Дозволити контент [social_media_site]?`,
+        body: `Ця стаття містить контент, наданий [social_media_site]. Ми питаємо про ваш дозвіл перед завантаженням, тому що сайт може використовувати файли cookie та інші технології. Ви можете ознайомитися з політикою щодо файлів [link] cookie [social_media_site] [/link] i [link] політикою конфіденційності [/link], перш ніж надати дозвіл. Щобb переглянути цей контент, виберіть "Прийняти та продовжити".`,
+        cookiesUrl: {
+          youtube: 'https://policies.google.com/technologies/cookies',
+        },
+        privacyUrl: {
+          youtube: 'https://policies.google.com/privacy',
+        },
+        button: 'Прийняти та продовжити',
+      },
     },
     include: {
       errorMessage:
@@ -330,7 +341,6 @@ const baseServiceConfig = {
     ],
     copyrightText: 'BBC. BBC не несе відповідальності за контент інших сайтів.',
   },
-  fonts: [],
   timezone: 'GMT',
   navigation: [
     {

@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import cyrillicAndLatin from '../../../legacy/psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import brandSVG from '../../chameleonLogos/somali';
 import '#psammead/moment-timezone-include/tz/Africa/Mogadishu';
 import '#psammead/psammead-locales/moment/so';
@@ -46,7 +46,7 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/somali/hayadeed-49283375#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/somali/hayadeed-49283375',
     isTrustProjectParticipant: true,
-    script: cyrillicAndLatin,
+    script: latin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Somali',
@@ -258,6 +258,17 @@ export const service: DefaultServiceConfig = {
           text: 'Ka bood %provider_name% boggan',
           endTextVisuallyHidden: 'Dhammaadka %provider_name% boggan',
         },
+        consentBanner: {
+          heading: `Oggolow  [social_media_site] macluumaadka`,
+          body: `Macluumaadkan waxaa daabacay [social_media_site].  Waxaan dalbanayenaa fasaxaaga ka hor inta aan la furin, waxaa laga yaabaa inay isticmaalayaan cookies iyo farsamooyin kale. hadii aad u bahato akhri [social_media_site] [link] xeerarka cokie [/link] iyo [link] kan ku saabsan xogta gaarka ah[/link] ka hor inta aadan aqbalin. si aad u aragto xogta guji ‘aqbal oo soco’.`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+          button: 'Aqbal horayna u soco',
+        },
       },
       include: {
         errorMessage:
@@ -327,7 +338,6 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda.',
     },
-    fonts: [],
     timezone: 'Africa/Mogadishu',
     navigation: [
       {

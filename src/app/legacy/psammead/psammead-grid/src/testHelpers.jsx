@@ -2,16 +2,16 @@ import React from 'react';
 import { string } from 'prop-types';
 import styled from '@emotion/styled';
 import Paragraph from '#psammead/psammead-paragraph/src';
-import { cyrillicAndLatin } from '#psammead/gel-foundations/src/scripts';
 import Image from '#psammead/psammead-image/src';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
 } from '#psammead/gel-foundations/src/spacings';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
+import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 
 export const ExampleParagraph = ({ identifier }) => (
-  <Paragraph script={cyrillicAndLatin} service="news">
+  <Paragraph script={latin} service="news">
     {identifier}This is a long paragraph that will wrap for several lines. This
     is a long paragraph that will wrap for several lines. This is a long
     paragraph that will wrap for several lines. This is a long paragraph that

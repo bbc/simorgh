@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import devanagariAndGurmukhi from '../../../legacy/psammead/gel-foundations/src/scripts/devanagari-and-gurmukhi';
+import devanagari from '../../../components/ThemeProvider/fontScripts/devanagari';
 import brandSVG from '../../chameleonLogos/hindi';
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
 import '#psammead/psammead-locales/moment/hi';
@@ -46,7 +46,7 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/hindi/institutional-50223932#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/hindi/institutional-50223932',
     isTrustProjectParticipant: true,
-    script: devanagariAndGurmukhi,
+    script: devanagari,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle:
@@ -277,6 +277,16 @@ export const service: DefaultServiceConfig = {
           text: 'छोड़िए %provider_name% पोस्ट',
           endTextVisuallyHidden: 'पोस्ट %provider_name% समाप्त',
         },
+        consentBanner: {
+          heading: '[social_media_site] सामग्री की इजाज़त?',
+          body: `इस लेख में [social_media_site] से मिली सामग्री शामिल है. कुछ भी लोड होने से पहले हम आपकी इजाज़त मांगते हैं क्योंकि उनमें कुकीज़ और दूसरी तकनीकों का इस्तेमाल किया गया हो सकता है. आप स्वीकार करने से पहले [social_media_site] [link] cookie policy [/link] और [link] को पढ़ना चाहेंगे [/link]. इस सामग्री को देखने के लिए  'अनुमति  देंऔर जारी रखें' को चुनें.`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+        },
       },
       include: {
         errorMessage:
@@ -349,16 +359,11 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'BBC. बाहरी साइटों की सामग्री के लिए बीबीसी ज़िम्मेदार नहीं है.',
     },
-    fonts: [],
     timezone: 'Asia/Kolkata',
     navigation: [
       {
         title: 'होम पेज',
         url: '/hindi',
-      },
-      {
-        title: 'कोरोनावायरस',
-        url: '/hindi/international-51848794',
       },
       {
         title: 'भारत',
@@ -387,6 +392,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'वीडियो',
         url: '/hindi/media/video',
+      },
+      {
+        title: 'पॉडकास्ट',
+        url: '/hindi/institutional-61824775',
       },
     ],
   },

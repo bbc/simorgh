@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import cyrillicAndLatin from '../../../legacy/psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import brandSVG from '../../chameleonLogos/swahili';
 import '#psammead/moment-timezone-include/tz/Africa/Nairobi';
 import '#psammead/psammead-locales/moment/sw';
@@ -46,7 +46,7 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/swahili/taasisi-49283417#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/swahili/taasisi-49283417',
     isTrustProjectParticipant: true,
-    script: cyrillicAndLatin,
+    script: latin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Swahili',
@@ -250,6 +250,17 @@ export const service: DefaultServiceConfig = {
           text: 'Ruka %provider_name% ujumbe',
           endTextVisuallyHidden: 'Mwisho wa %provider_name% ujumbe',
         },
+        consentBanner: {
+          heading: `Ruhusu maudhui? (Mitandao ya kijamii)`,
+          body: `Mkala hii imebeba madhui yaliyotoka kwenye mitandao ya kijamii. Tunaomba ruhusa yako kabla kitu chochote hakija pakiwa, sababu wanaweza wakawa wanatumia Cookies na tekinolojia nyingine. Unaweza ukasoma sera sera ya kutumia cookies katika mitandao ya kijamii kabla ya kukubali. Kutazama maudhui haya chagua accept and continue`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+          button: 'Bonyeza kisha endelea',
+        },
       },
       include: {
         errorMessage:
@@ -318,7 +329,6 @@ export const service: DefaultServiceConfig = {
       ],
       copyrightText: 'BBC. BBC haihusiki na taarifa za kutoka mitandao ya nje.',
     },
-    fonts: [],
     timezone: 'Africa/Nairobi',
     navigation: [
       {

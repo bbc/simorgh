@@ -4,12 +4,8 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import arabic from '../../../legacy/psammead/gel-foundations/src/scripts/arabic';
+import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import brandSVG from '../../chameleonLogos/arabic';
-import {
-  F_REITH_QALAM_REGULAR,
-  F_REITH_QALAM_BOLD,
-} from '../../../legacy/psammead/psammead-styles/src/fonts';
 import '#psammead/psammead-locales/moment/ar';
 import '#psammead/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
@@ -273,6 +269,16 @@ export const service: DefaultServiceConfig = {
           text: 'أهمل %provider_name% مشاركة',
           endTextVisuallyHidden: 'نهاية %provider_name% مشاركة',
         },
+        consentBanner: {
+          heading: 'هل تسمح بعرض المحتوى من [social_media_site]؟',
+          body: `تحتوي هذه الصفحة على محتوى من موقع [social_media_site]. موافقتكم مطلوبة قبل عرض أي مواد لأنها قد تتضمن ملفات ارتباط (كوكيز) وغيرها من الأدوات التقنية. قد تفضلون الاطلاع على [link] سياسة ملفات الارتباط [/link] الخاصة بموقع [social_media_site] [link] وسياسة الخصوصية [/link] قبل الموافقة. لعرض المحتوى، اختر "موافقة وإكمال"`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+        },
       },
       include: {
         errorMessage:
@@ -348,7 +354,6 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية.',
     },
-    fonts: [F_REITH_QALAM_REGULAR, F_REITH_QALAM_BOLD],
     timezone: 'GMT',
     navigation: [
       {

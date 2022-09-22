@@ -1,14 +1,10 @@
 import {
-  F_NOTO_SERIF_BENGALI_BOLD,
-  F_NOTO_SERIF_BENGALI_REGULAR,
-} from '../../../legacy/psammead/psammead-styles/src/fonts';
-import {
   C_POSTBOX,
   C_WHITE,
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import bengali from '../../../legacy/psammead/gel-foundations/src/scripts/bengali';
+import bengali from '../../../components/ThemeProvider/fontScripts/bengali';
 import brandSVG from '../../chameleonLogos/bangla';
 import '#psammead/moment-timezone-include/tz/Asia/Dhaka';
 import '#psammead/psammead-locales/moment/bn';
@@ -253,6 +249,17 @@ export const service: DefaultServiceConfig = {
           text: 'Skip %provider_name% post',
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
+        consentBanner: {
+          heading: '[social_media_site] কনটেন্টের জন্য কি অনুমতি দেবেন?',
+          body: `এই নিবন্ধে [social_media_site]এর কনটেন্ট রয়েছে। কোন কিছু লোড করার আগে আমরা আপনার অনুমতি চাইছি, কারণ তারা হয়ত কুকি এবং অন্যান্য প্রযুক্তি ব্যবহার করে থাকতে পারে।  আপনি সম্মতি দেবার আগে হয়ত [social_media_site] [link] কুকি সম্পর্কিত নীতি [/link] এবং [link] ব্যক্তিগত বিষয়ক নীতি[/link] প়ড়ে নিতে চাইতে পারেন। এই কনটেন্ট দেখতে হলে 'সম্মতি দিচ্ছি এবং এগোন' বেছে নিন।`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+          button: 'সম্মতি দিচ্ছি এবং এগোন',
+        },
       },
       include: {
         errorMessage:
@@ -322,7 +329,6 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।',
     },
-    fonts: [F_NOTO_SERIF_BENGALI_BOLD, F_NOTO_SERIF_BENGALI_REGULAR],
     timezone: 'Asia/Dhaka',
     navigation: [
       {

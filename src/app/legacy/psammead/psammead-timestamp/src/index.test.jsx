@@ -1,7 +1,7 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { latin } from '#psammead/gel-foundations/src/scripts';
 import { getPica } from '#psammead/gel-foundations/src/typography';
+import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import Timestamp from '.';
 
 describe('Timestamp', () => {

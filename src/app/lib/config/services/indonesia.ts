@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import cyrillicAndLatin from '../../../legacy/psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import brandSVG from '../../chameleonLogos/indonesian';
 import '#psammead/moment-timezone-include/tz/Asia/Jakarta';
 import 'moment/locale/id';
@@ -47,7 +47,7 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples:
       'https://www.bbc.com/indonesia/institutional-49283175',
     isTrustProjectParticipant: true,
-    script: cyrillicAndLatin,
+    script: latin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Berita',
@@ -266,6 +266,17 @@ export const service: DefaultServiceConfig = {
           text: 'Hentikan %provider_name% pesan',
           endTextVisuallyHidden: 'Lompati %provider_name% pesan',
         },
+        consentBanner: {
+          heading: `Izinkan konten [social_media_site]?`,
+          body: `Artikel ini memuat konten yang disediakan [social_media_site]. Kami meminta izin Anda sebelum ada yang dimunculkan mengingat situs itu mungkin menggunakan cookies dan teknologi lain. Anda dapat membaca [social_media_site] [link] kebijakan cookie [/link] dan [link] kebijakan privasi [/link] sebelum menerima. Untuk melihat konten ini, pilihlah 'terima dan lanjutkan'. `,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+          button: 'Terima dan lanjutkan',
+        },
       },
       include: {
         errorMessage:
@@ -339,7 +350,6 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal.',
     },
-    fonts: [],
     navigation: [
       {
         title: 'Berita',

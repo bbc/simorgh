@@ -123,7 +123,7 @@ import StoryPromo, {
   IndexAlsosLi,
 } from '#psammead/psammead-story-promo/src';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
-import { latin } from '#psammead/gel-foundations/src/scripts';
+import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import LiveLabel from '#psammead/psammead-live-label/src';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 

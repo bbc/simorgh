@@ -1,7 +1,7 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { render } from '@testing-library/react';
-import { latin } from '#psammead/gel-foundations/src/scripts';
+import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import { ScrollableNavigation } from './ScrollableNavigation';
 import Navigation, { NavigationUl, NavigationLi } from './index';
 import igboNavData from '../testHelpers/igbo';

@@ -5,13 +5,7 @@ import {
   C_BLACK,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import brandSVG from '../../chameleonLogos/sport';
-import cyrillicAndLatin from '../../../legacy/psammead/gel-foundations/src/scripts/latin-and-cyrillic';
-import {
-  F_REITH_SANS_BOLD,
-  F_REITH_SANS_REGULAR,
-  F_REITH_SERIF_MEDIUM,
-  F_REITH_SERIF_LIGHT,
-} from '../../../legacy/psammead/psammead-styles/src/fonts';
+import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/psammead-locales/moment/en-gb';
 import '#psammead/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
@@ -47,7 +41,7 @@ export const service: DefaultServiceConfig = {
     twitterCreator: '@BBCSport',
     twitterSite: '@BBCSport',
     isTrustProjectParticipant: false,
-    script: cyrillicAndLatin,
+    script: latin,
     manifestPath: '/articles/manifest.json',
     frontPageTitle: 'Home',
     theming: {
@@ -212,6 +206,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
+      socialEmbed: {},
     },
     brandSVG,
     mostRead: {
@@ -271,12 +266,6 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'BBC. The BBC is not responsible for the content of external sites.',
     },
-    fonts: [
-      F_REITH_SANS_BOLD,
-      F_REITH_SANS_REGULAR,
-      F_REITH_SERIF_MEDIUM,
-      F_REITH_SERIF_LIGHT,
-    ],
     timezone: 'Europe/London',
     navigation: [
       {

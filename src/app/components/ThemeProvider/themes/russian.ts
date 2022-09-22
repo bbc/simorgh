@@ -1,4 +1,12 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
+import cyrillicScript from '../fontScripts/cyrillic';
+import {
+  REITH_SANS_BOLD,
+  REITH_SANS_REGULAR,
+  REITH_SERIF_MEDIUM,
+  REITH_SERIF_LIGHT,
+} from '../fontFaces';
+import reithFontVariants from '../fontVariants/reith';
 import withThemeProvider from '../withThemeProvider';
 
 const russianTheme = {
@@ -8,6 +16,16 @@ const russianTheme = {
     BRAND_FOREGROUND: GHOST,
     BRAND_HIGHLIGHT: WHITE,
     BRAND_BORDER: POSTBOX_30,
+  },
+  typography: {
+    script: cyrillicScript,
+    fontVariants: reithFontVariants,
+    fontFaces: [
+      REITH_SANS_BOLD,
+      REITH_SANS_REGULAR,
+      REITH_SERIF_MEDIUM,
+      REITH_SERIF_LIGHT,
+    ],
   },
 };
 

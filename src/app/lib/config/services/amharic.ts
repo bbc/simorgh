@@ -4,12 +4,8 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import noAscendersOrDescenders from '../../../legacy/psammead/gel-foundations/src/scripts/no-ascenders-or-descenders';
+import noAscendersOrDescenders from '../../../components/ThemeProvider/fontScripts/noAscOrDesc';
 import brandSVG from '../../chameleonLogos/amharic';
-import {
-  F_NOTO_SANS_ETHIOPIC_BOLD,
-  F_NOTO_SANS_ETHIOPIC_REGULAR,
-} from '../../../legacy/psammead/psammead-styles/src/fonts';
 import '#psammead/moment-timezone-include/tz/Africa/Addis_Ababa';
 import '#psammead/psammead-locales/moment/am';
 import withContext from '../../../contexts/utils/withContext';
@@ -238,6 +234,17 @@ export const service: DefaultServiceConfig = {
           text: 'የ %provider_name% ይዘትን ይለፉት',
           endTextVisuallyHidden: 'የ %provider_name% ይዘት መጨረሻ',
         },
+        consentBanner: {
+          heading: 'ይዘቱን [social_media_site] ይፈቅዳሉ?',
+          body: `ይህ ጽሑፍ በ[social_media_site]. የቀረበ ይዘት ይዟል። ገጹ ቴክኖሎጂዎች ወይም ኩኪዎች ሊኖረው ስለሚችል ገጹ ከመከፈቱ በፊት የእርስዎን ፍቃድ እንጠይቃለን። ፍቃድዎን ከመስጠትዎ በፊት የ[social_media_site] [link] ኩኪ ፖሊሲ እና የ[link] የግለኝነት ፖሊሲ [/link] ማንበብ ይፈልጉ ይሆናል። 
+          ይዘቱን ለማንበብ ‘እቀበላለሁ ቀጥል’ የሚለውን ይምረጡ።`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+        },
       },
       include: {
         errorMessage:
@@ -306,7 +313,6 @@ export const service: DefaultServiceConfig = {
       ],
       copyrightText: 'BBC. ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም.',
     },
-    fonts: [F_NOTO_SANS_ETHIOPIC_BOLD, F_NOTO_SANS_ETHIOPIC_REGULAR],
     navigation: [
       {
         title: 'ዜና',

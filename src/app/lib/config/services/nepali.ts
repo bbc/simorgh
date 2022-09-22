@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import devanagariAndGurmukhi from '../../../legacy/psammead/gel-foundations/src/scripts/devanagari-and-gurmukhi';
+import devanagari from '../../../components/ThemeProvider/fontScripts/devanagari';
 import brandSVG from '../../chameleonLogos/nepali';
 import '#psammead/moment-timezone-include/tz/Asia/Kathmandu';
 import '#psammead/psammead-locales/moment/ne';
@@ -46,7 +46,7 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/nepali/institutional-50318130#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/nepali/institutional-50318130',
     isTrustProjectParticipant: true,
-    script: devanagariAndGurmukhi,
+    script: devanagari,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'मुख पृष्ठ',
@@ -251,6 +251,17 @@ export const service: DefaultServiceConfig = {
           text: 'यो %provider_name% पोस्ट छोड्नुहोस्',
           endTextVisuallyHidden: '%provider_name% पोस्ट समाप्त',
         },
+        consentBanner: {
+          heading: `[social_media_site] को सामग्रीलाई अनुमति छ?`,
+          body: `यो लेखमा [social_media_site] बाट प्राप्त सामग्री समाविष्ट छ। यहाँ केही लोड हुनुअघि हामी तपाईँसँग अनुमति माग्छौँ किनभने तिनले कुकीज र अन्य प्रविधि प्रयोग गरेका हुनसक्छन्। स्वीकृति दिनुअघि तपाईँ [social_media_site] [link] cookie policy [/link] र [link]पढ्न सक्नुहुन्छ।[/link] यो सामग्री हेर्नका लागि 'स्वीकार छ, अगाडि बढौँ' छान्नुहोस्।`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+          button: 'स्वीकार छ, अगाडि बढौँ',
+        },
       },
       include: {
         errorMessage: 'मोबाइलपेजमा सामग्रीको यो भाग देखाउन हामी असमर्थ छौँ।',
@@ -319,7 +330,6 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'बीबीसी। अन्य वेबसाइटका सामग्रीहरूका लागि बीबीसी जिम्मेवार छैन।',
     },
-    fonts: [],
     timezone: 'Asia/Kathmandu',
     navigation: [
       {

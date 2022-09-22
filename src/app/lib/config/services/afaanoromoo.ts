@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import cyrillicAndLatin from '../../../legacy/psammead/gel-foundations/src/scripts/latin-and-cyrillic';
+import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import brandSVG from '../../chameleonLogos/afaanoromoo';
 import '#psammead/moment-timezone-include/tz/Africa/Addis_Ababa';
 import '#psammead/psammead-locales/moment/om';
@@ -48,7 +48,7 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples:
       'https://www.bbc.com/afaanoromoo/institutional-49281861',
     isTrustProjectParticipant: true,
-    script: cyrillicAndLatin,
+    script: latin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Oduu',
@@ -247,6 +247,16 @@ export const service: DefaultServiceConfig = {
           text: 'Maxxansa %provider_name% irra dabri',
           endTextVisuallyHidden: 'Xumura maxxansa %provider_name%',
         },
+        consentBanner: {
+          heading: 'Qabiyyee [social_media_site] hayyamtaa?',
+          body: `Barreeffamni kun qabiyyee [social_media-site]n dhiyaatan qaba. Tarii 'cookies' fi teknolojiiwwan biraa fayyadamuu waan danda'aniif, osoo tokkoonsaa gadi hin buufamiin dura hayyama keessan gaafanna. Osoo hin simatin dura [social_media_site][link] imaammata cookies [/link] fi [link] imaammata mateenyaa [/link] dubbisuu barbaadda ta'a. Qabiyyee kana ilaaluuf 'waliigaluun itti fufi' filadhu.`,
+          cookiesUrl: {
+            youtube: 'https://policies.google.com/technologies/cookies',
+          },
+          privacyUrl: {
+            youtube: 'https://policies.google.com/privacy',
+          },
+        },
       },
       include: {
         errorMessage:
@@ -316,7 +326,6 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         "BBC. Qabiyyeewwan maddawwan alaa irraa ta'aniif BBCn itti gaafatamaa miti.",
     },
-    fonts: [],
     navigation: [
       {
         title: 'Oduu',
