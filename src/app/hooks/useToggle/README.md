@@ -2,8 +2,16 @@
 
 ## Feature Toggles
 
-Feature toggles are designed to be global (i.e not service specific) and are dependant on the application environment.
+Default feature toggles are designed to be global (i.e not service specific) and are dependant on the application environment. However, feature toggles can also be
+remotely configured via iSite. The remote feature toggles on iSite are service specific.
+
 Feature toggles can be found in `src/app/lib/config/toggles`
+
+## Default Toggles
+
+## Remote Toggles
+
+Remote toggles are configurable in iSite. The toggles can be manually configured for any service.
 
 ### Using the useToggle Hook
 
