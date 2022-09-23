@@ -30,7 +30,6 @@ const PromoList = styled.ul`
 const Item = styled.div`
   position: relative;
   display: inline;
-  background-color: white;
   padding: 1rem;
 `;
 
