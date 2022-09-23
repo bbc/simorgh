@@ -36,7 +36,7 @@ const Curation = ({
   const a11yID = title && title.replaceAll(' ', '-');
   return title || position === 0 ? (
     <section aria-labelledby={a11yID || 'Top-Stories'} role="region">
-      <Subheading a11yTag={a11yID} href={link}>
+      <Subheading allyId={a11yID} href={link}>
         {title}
       </Subheading>
       <Component promos={promos} headingStyle={headingStyle} />
