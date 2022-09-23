@@ -116,6 +116,8 @@ export const service: DefaultServiceConfig = {
       },
       byline: {
         articleInformation: 'Haber bilgisi',
+        author: 'Yazan',
+        listItemImage: 'Muhabir görseli',
         published: 'Yayın tarihi',
         reportingFrom: 'Bildirdiği yer',
         role: 'Unvan',

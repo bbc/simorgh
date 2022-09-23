@@ -115,6 +115,7 @@ export const service: DefaultServiceConfig = {
       },
       byline: {
         articleInformation: 'د مطلب په اړه جزییات',
+        listItemImage: 'د توکو نوملړ، انځور',
         published: 'د خپرېدو وخت',
         reportingFrom: 'رپوټ له:',
         role: 'دنده',

@@ -115,6 +115,7 @@ export const service: DefaultServiceConfig = {
       },
       byline: {
         articleInformation: 'Maelezo kuhusu taarifa',
+        listItemImage: 'Orodha,Picha',
         published: 'Iliyochapishwa',
         reportingFrom: 'Akiripoti kutoka',
         role: 'Nafasi',

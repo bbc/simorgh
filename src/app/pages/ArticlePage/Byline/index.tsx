@@ -33,6 +33,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
   const locationBlock = bylineBlocks.find(
     (block: any) => block.type === 'location',
   );
+  const imageBlock = bylineBlocks.find((block: any) => block.type === 'image');
 
   const author = pathOr(
     '',
@@ -71,23 +72,27 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
     ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
     locationBlock,
   );
+  const image = pathOr(
+    '',
+    ['model', 'blocks', 0, 'model', 'locator'],
+    imageBlock,
+  );
 
   if (!(author && jobRole)) return null;
 
   const authorTranslated = pathOr('Author', ['byline', 'author'], translations);
-  const jobRoleTranslated = pathOr('Role', ['byline', 'role'], translations);
-  const publishedTranslated = pathOr(
-    'Published',
-    ['byline', 'published'],
-    translations,
-  );
-
   const articleInformationTranslated = pathOr(
     'Article information',
     ['byline', 'articleInformation'],
     translations,
   );
+  const jobRoleTranslated = pathOr('Role', ['byline', 'role'], translations);
 
+  const publishedTranslated = pathOr(
+    'Published',
+    ['byline', 'published'],
+    translations,
+  );
   const reportingFromTranslated = pathOr(
     'Reporting from',
     ['byline', 'reportingFrom'],
@@ -104,6 +109,17 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
         {articleInformationTranslated}
       </VisuallyHiddenText>
       <ul css={BylineCss.bylineList} role="list">
+        {image && (
+          <li
+            css={
+              isRtl
+                ? [BylineCss.imageRtl, BylineCss.Image]
+                : [BylineCss.imageLtr, BylineCss.Image]
+            }
+          >
+            <img css={BylineCss.imageSource} src={image} alt="" />
+          </li>
+        )}
         <li>
           {twitterLink ? (
             <React.Fragment>

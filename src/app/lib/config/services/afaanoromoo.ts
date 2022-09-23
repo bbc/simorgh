@@ -117,6 +117,7 @@ export const service: DefaultServiceConfig = {
       byline: {
         author: 'Barreessaa',
         articleInformation: 'Odeeffannoo barreeffamichaa',
+        listItemImage: 'Tarree, suuraa',
         published: 'Maxxanfame',
         reportingFrom: 'Gabaasni irraati',
         role: 'Gahee',

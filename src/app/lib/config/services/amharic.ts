@@ -109,7 +109,11 @@ export const service: DefaultServiceConfig = {
         },
       },
       byline: {
+        author: 'ፀሐፊ',
+        articleInformation: 'የጽሁፉ መረጃ',
+        listItemImage: 'ዝርዝር፣ ምስል',
         published: 'ታትሟል',
+        reportingFrom: 'ዘገባው ከ',
         role: 'የሥራ ድርሻ',
       },
       consentBanner: {

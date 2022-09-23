@@ -554,3 +554,156 @@ export const bylineWithLinkAndLocation = [
     },
   },
 ];
+
+export const bylineWithPhoto = [
+  {
+    type: 'contributor',
+    model: {
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Clark Kent',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Single Byline (all values)',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'role',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Journalist',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Test',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'link',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'superman',
+                        blocks: [
+                          {
+                            type: 'urlLink',
+                            model: {
+                              text: 'superman',
+                              locator: 'https://twitter.com/Superman',
+                              blocks: [
+                                {
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'test',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                              isExternal: true,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'location',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Metropolis, US',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Metropolis, US',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'image',
+          model: {
+            blocks: [
+              {
+                type: 'rawImage',
+                model: {
+                  width: 640,
+                  height: 562,
+                  locator:
+                    'https://scarletjourney.rutgers.edu/crm/wp-content/uploads/sites/393/2017/12/christopher-reeve-superman.jpg',
+                  originCode: 'cpsdevpb',
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+];

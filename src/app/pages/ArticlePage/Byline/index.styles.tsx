@@ -77,7 +77,8 @@ export default {
   location: () =>
     css({
       margin: '0',
-      display: 'inline-block',
+      display: 'block',
+      clear: 'both',
     }),
 
   locationText: ({ palette }: Theme) =>
@@ -100,6 +101,44 @@ export default {
         display: 'block',
         margin: `${spacings.DOUBLE}rem 0`,
       },
+    }),
+
+  Image: () =>
+    css({
+      display: 'block',
+      width: `${pixelsToRem(80)}rem`,
+      height: `${pixelsToRem(80)}rem`,
+      border: `solid ${pixelsToRem(1)}rem #979797`,
+      backgroundColor: '#d8d8d8',
+      overflow: 'hidden',
+    }),
+
+  imageLtr: () =>
+    css([
+      { ...Image },
+      {
+        float: 'left',
+        margin: `${pixelsToRem(25)}rem ${pixelsToRem(8)}rem ${pixelsToRem(
+          16,
+        )}rem 0px`,
+      },
+    ]),
+
+  imageRtl: () =>
+    css([
+      { ...Image },
+      {
+        float: 'right',
+        margin: `${pixelsToRem(25)}rem 0px ${pixelsToRem(16)}rem ${pixelsToRem(
+          8,
+        )}rem`,
+      },
+    ]),
+
+  imageSource: () =>
+    css({
+      maxWidth: '100%',
+      height: 'auto',
     }),
 
   authorLink: () => css({ paddingTop: '1.375rem' }),

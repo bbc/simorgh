@@ -111,6 +111,8 @@ export const service: DefaultServiceConfig = {
       },
       byline: {
         articleInformation: '...ਵਿੱਚ',
+        author: 'ਲੇਖਕ',
+        listItemImage: 'ਤਸਵੀਰ',
         published: 'ਪ੍ਰਕਾਸ਼ਿਤ',
         reportingFrom: '...ਤੋਂ',
         role: 'ਰੋਲ',

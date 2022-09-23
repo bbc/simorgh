@@ -135,6 +135,8 @@ export const service: DefaultServiceConfig = {
       },
       byline: {
         articleInformation: 'Informasi artikel',
+        author: 'Penulis',
+        listItemImage: 'Daftar isi, gambar',
         published: 'Telah diterbitkan',
         reportingFrom: 'Melaporkan dari',
         role: 'Peranan',

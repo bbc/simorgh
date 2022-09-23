@@ -37,6 +37,7 @@ export interface Translations {
   byline?: {
     author?: string;
     articleInformation?: string;
+    listItemImage?: string;
     published?: string;
     reportingFrom?: string;
     role?: string;
