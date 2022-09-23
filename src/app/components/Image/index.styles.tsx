@@ -6,6 +6,7 @@ const styles = {
   wrapper: css({
     height: 0,
     overflow: 'hidden',
+    position: 'relative',
   }),
   placeholder: (theme: Theme) =>
     css({
@@ -23,7 +24,8 @@ const styles = {
     }),
   image: css({
     width: '100%',
-    display: 'block',
+    height: 'auto',
+    objectFit: 'cover', // objectFit  used in combination with inline style aspectRatio will center the image horizontally and vertically if aspectRatio prop is different from image's intrinsic aspect ratio
   }),
 };
 
