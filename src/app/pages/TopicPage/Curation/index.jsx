@@ -25,7 +25,7 @@ const Curation = ({
   promos,
   title,
   link,
-  headingStyle,
+  headingLevel,
   position,
 }) => {
   const Component = pathOr(
@@ -39,10 +39,10 @@ const Curation = ({
       <Subheading allyId={a11yID} href={link}>
         {title}
       </Subheading>
-      <Component promos={promos} headingStyle={headingStyle} />
+      <Component promos={promos} headingLevel={headingLevel} />
     </section>
   ) : (
-    <Component promos={promos} headingStyle={headingStyle} />
+    <Component promos={promos} headingLevel={headingLevel} />
   );
 };
 
@@ -52,14 +52,14 @@ Curation.propTypes = {
   promos: arrayOf(shape({})).isRequired,
   title: string,
   link: string,
-  headingStyle: string,
+  headingLevel: number,
   position: number.isRequired,
 };
 
 Curation.defaultProps = {
   title: '',
   link: '',
-  headingStyle: 'h2',
+  headingLevel: 2,
 };
 
 export default Curation;

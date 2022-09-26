@@ -138,7 +138,7 @@ const TopicPage = ({ pageData }) => {
               position,
             }) => (
               <Curation
-                headingStyle={curationTitle && 'h3'}
+                headingLevel={curationTitle && 3}
                 key={curationId}
                 visualStyle={VISUAL_STYLE.NONE}
                 visualProminance={VISUAL_PROMINANCE.NORMAL}

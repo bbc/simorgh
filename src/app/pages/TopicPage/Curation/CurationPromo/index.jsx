@@ -12,14 +12,14 @@ const CurationPromo = ({
   link,
   mediaType,
   mediaDuration,
-  headingStyle,
+  headingLevel,
 }) => {
   return (
     <Promo>
       <Promo.Image src={imageUrl} alt={imageAlt} loading={lazy ? 'lazy' : null}>
         <Promo.MediaIcon type={mediaType}>{mediaDuration}</Promo.MediaIcon>
       </Promo.Image>
-      <Promo.Heading as={headingStyle}>
+      <Promo.Heading as={`h${headingLevel}`}>
         <Promo.A href={link}>{title}</Promo.A>
       </Promo.Heading>
       <Promo.Timestamp>{firstPublished}</Promo.Timestamp>
@@ -37,14 +37,14 @@ CurationPromo.propTypes = {
   link: string.isRequired,
   mediaType: oneOf(Object.values(MEDIA_TYPES)),
   mediaDuration: number,
-  headingStyle: string,
+  headingLevel: number,
 };
 
 CurationPromo.defaultProps = {
   lazy: false,
   mediaType: null,
   mediaDuration: null,
-  headingStyle: 'h2',
+  headingLevel: 2,
 };
 
 export default CurationPromo;
