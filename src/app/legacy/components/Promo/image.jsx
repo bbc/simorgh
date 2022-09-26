@@ -61,7 +61,7 @@ const Image = props => {
         fallbackSrcSet={fallbackSrcSet}
         fallbackMediaType={fallbackMediaType}
         sizes={sizes}
-        aspectRatio={16 / 9}
+        aspectRatio={[16, 9]}
       />
       {children && <ChildWrapper>{children}</ChildWrapper>}
     </Wrapper>
