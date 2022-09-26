@@ -37,6 +37,17 @@ const externalLinks = {
           'https://podcasts.apple.com/us/podcast/as-estranhas-origens-das-guerras-culturais/id1642483075',
       },
     ],
+    p0cyhvny: [
+      {
+        linkText: 'Spotify',
+        linkUrl: 'https://open.spotify.com/show/4909a8iZAdJ01DLyJxiwcd',
+      },
+      {
+        linkText: 'Apple',
+        linkUrl:
+          'https://podcasts.apple.com/us/podcast/brasil-partido/id1643515422',
+      },
+    ],
   },
 };
 
