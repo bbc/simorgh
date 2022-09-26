@@ -23,7 +23,16 @@ const extractPromoData = ({ promo }) => {
     };
   }
 
-  const optimoImage = path(['images', 'defaultPromoImage', 'blocks'], promo);
+  const optimoImageBlocks = path<any[]>(
+    ['images', 'defaultPromoImage', 'blocks'],
+    promo,
+  );
+  const optimoImage = optimoImageBlocks?.find(
+    block => block.type === 'rawImage',
+  );
+  const optimoImageAltText = optimoImageBlocks?.find(
+    block => block.type === 'altText',
+  );
 
   return {
     headline: path(
@@ -42,15 +51,15 @@ const extractPromoData = ({ promo }) => {
     ),
     url: path(['locators', 'canonicalUrl'], promo),
     indexImage: {
-      width: path([1, 'model', 'width'], optimoImage),
-      height: path([1, 'model', 'height'], optimoImage),
+      width: path(['model', 'width'], optimoImage),
+      height: path(['model', 'height'], optimoImage),
       altText: path(
-        [0, 'model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
-        optimoImage,
+        ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
+        optimoImageAltText,
       ),
-      copyrightHolder: path([1, 'model', 'copyrightHolder'], optimoImage),
-      originCode: path([1, 'model', 'originCode'], optimoImage),
-      locator: path([1, 'model', 'locator'], optimoImage),
+      copyrightHolder: path(['model', 'copyrightHolder'], optimoImage),
+      originCode: path(['model', 'originCode'], optimoImage),
+      locator: path(['model', 'locator'], optimoImage),
     },
   };
 };
