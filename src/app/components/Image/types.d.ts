@@ -5,14 +5,16 @@ declare namespace JSX {
    */
   interface AmpImgProps {
     alt?: string;
-    src?: string;
-    width?: number;
-    height?: number;
-    srcSet?: string;
-    sizes?: string;
+    attribution?: string;
     children?: React.ReactNode;
+    class?: string;
     fallback?: string;
+    height?: number;
     layout?: string;
+    sizes?: string;
+    src?: string;
+    srcSet?: string;
+    width?: number;
   }
   /*
    * Overrides type for link with missing imagesrcset and imagesizes attributes
