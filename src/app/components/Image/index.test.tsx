@@ -187,7 +187,7 @@ describe('Image - Canonical', () => {
 
   it('should render the container with a custom aspect ratio when provided', () => {
     render(
-      <Fixture aspectRatio={4 / 3} width={undefined} height={undefined} />,
+      <Fixture aspectRatio={[4, 3]} width={undefined} height={undefined} />,
     );
 
     const imageEl = screen.getByAltText('Test image alt text');
@@ -198,7 +198,7 @@ describe('Image - Canonical', () => {
   });
 
   it('should render the container with a custom aspect ratio that overrides aspect ratio based on image width and height', () => {
-    render(<Fixture aspectRatio={4 / 3} />);
+    render(<Fixture aspectRatio={[4, 3]} />);
 
     const imageEl = screen.getByAltText('Test image alt text');
 
@@ -230,6 +230,7 @@ describe('Image - Canonical', () => {
         alt="Test image alt text"
         src="/test-image-500.jpeg"
         srcSet="/test-image-500.webp"
+        sizes="(max-width: 600px) 480px, 800px"
         mediaType="image/webp"
         fallbackSrcSet="/test-image-500.jpeg"
         fallbackMediaType="image/jpeg"
@@ -242,12 +243,12 @@ describe('Image - Canonical', () => {
       >
         <picture>
           <source
-            sizes="100vw"
+            sizes="(max-width: 600px) 480px, 800px"
             srcset="/test-image-500.webp"
             type="image/webp"
           />
           <source
-            sizes="100vw"
+            sizes="(max-width: 600px) 480px, 800px"
             srcset="/test-image-500.jpeg"
             type="image/jpeg"
           />
@@ -275,7 +276,6 @@ describe('Image - Canonical', () => {
       >
         <img
           alt="Test image alt text"
-          sizes="100vw"
           src="/test-image-500.jpg"
           srcset="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
         />
@@ -289,6 +289,7 @@ describe('Image - Canonical', () => {
         alt="Test image alt text"
         src="/test-image-500.jpeg"
         srcSet="/test-image-200.webp 200w, /test-image-500.webp 500w"
+        sizes="(max-width: 600px) 480px, 800px"
         mediaType="image/webp"
         fallbackSrcSet="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
         fallbackMediaType="image/jpeg"
@@ -301,12 +302,12 @@ describe('Image - Canonical', () => {
       >
         <picture>
           <source
-            sizes="100vw"
+            sizes="(max-width: 600px) 480px, 800px"
             srcset="/test-image-200.webp 200w, /test-image-500.webp 500w"
             type="image/webp"
           />
           <source
-            sizes="100vw"
+            sizes="(max-width: 600px) 480px, 800px"
             srcset="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
             type="image/jpeg"
           />
@@ -450,7 +451,7 @@ describe('Image - AMP pages', () => {
   it('should render the container with a custom aspect ratio when provided', () => {
     render(
       <Fixture
-        aspectRatio={4 / 3}
+        aspectRatio={[4, 3]}
         width={undefined}
         height={undefined}
         isAmp
@@ -465,7 +466,7 @@ describe('Image - AMP pages', () => {
   });
 
   it('should render the container with a custom aspect ratio that overrides aspect ratio based on image width and height', () => {
-    render(<Fixture aspectRatio={4 / 3} isAmp />);
+    render(<Fixture aspectRatio={[4, 3]} isAmp />);
 
     const imageEl = screen.getAllByAltText('Test image alt text')[0];
 
@@ -509,7 +510,6 @@ describe('Image - AMP pages', () => {
         <amp-img
           alt="Test image alt text"
           layout="fill"
-          sizes="100vw"
           src="/test-image-500.jpg"
           srcset="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
         />
@@ -524,6 +524,7 @@ describe('Image - AMP pages', () => {
         alt="Test image alt text"
         src="/test-image-500.webp"
         srcSet="/test-image-200.webp 200w, /test-image-500.webp 500w"
+        sizes="(max-width: 600px) 480px, 800px"
         mediaType="image/webp"
         fallbackSrcSet="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
         fallbackMediaType="image/jpeg"
@@ -537,7 +538,7 @@ describe('Image - AMP pages', () => {
         <amp-img
           alt="Test image alt text"
           layout="fill"
-          sizes="100vw"
+          sizes="(max-width: 600px) 480px, 800px"
           src="/test-image-500.webp"
           srcset="/test-image-200.webp 200w, /test-image-500.webp 500w"
         >
@@ -545,7 +546,7 @@ describe('Image - AMP pages', () => {
             alt="Test image alt text"
             fallback=""
             layout="fill"
-            sizes="100vw"
+            sizes="(max-width: 600px) 480px, 800px"
             src="/test-image-500.webp"
             srcset="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
           />
