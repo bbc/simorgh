@@ -18,12 +18,12 @@ const PromoList = styled.ul`
   margin: 0;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(4, 1fr);
-  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+  grid-template-columns: repeat(2, 1fr);
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     grid-template-columns: repeat(3, 1fr);
   }
-  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    grid-template-columns: repeat(2, 1fr);
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    grid-template-columns: repeat(4, 1fr);
   }
 `;
 
