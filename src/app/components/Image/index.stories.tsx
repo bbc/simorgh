@@ -42,8 +42,6 @@ export const BasicAMPImage = () => (
       isAmp
       alt="A penguin stands on an ice floe"
       src="https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
-      width={500}
-      height={281}
     />
   </ThemeProvider>
 );
@@ -55,8 +53,6 @@ export const ResponsiveAMPImage = () => (
       alt="A penguin stands on an ice floe"
       src="https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
       srcSet="https://ichef.bbci.co.uk/news/240/cpsprodpb/164AF/production/_110911319_antartica.jpg 240w, https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg 624w"
-      width={500}
-      height={281}
     />
   </ThemeProvider>
 );
@@ -71,8 +67,6 @@ export const AMPWebPWithJpegFallback = () => (
       mediaType="image/webp"
       fallbackSrcSet="https://ichef.bbci.co.uk/news/240/cpsprodpb/164AF/production/_110911319_antartica.jpg 240w, https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg 624w"
       fallbackMediaType="image/jpeg"
-      width={500}
-      height={281}
     />
   </ThemeProvider>
 );
