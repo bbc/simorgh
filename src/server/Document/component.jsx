@@ -48,10 +48,12 @@ const Document = ({
   return (
     <html lang="en-GB" {...noJsHtmlAttrs} {...htmlAttrs}>
       <head>
+        {(!isAmp && links) && (
+            <ResourceHints assetOrigins={assetOrigins} />
+        )}
         {meta}
         {!isAmp && links}
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <ResourceHints assetOrigins={assetOrigins} />
         {title}
         {isAmp ? (
           <style
