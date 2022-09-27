@@ -3,9 +3,6 @@ import styled from '@emotion/styled';
 import { arrayOf, element } from 'prop-types';
 import partition from 'ramda/src/partition';
 
-import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
-import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
-
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 import Image from './image';
@@ -28,9 +25,6 @@ const Wrapper = styled.div`
   position: relative;
 `;
 
-const Left = styled.div``;
-const Right = styled.div``;
-
 const Promo = ({ children }) => {
   const { script, service } = useContext(ServiceContext);
 
@@ -42,8 +36,8 @@ const Promo = ({ children }) => {
   return (
     <Wrapper>
       <PromoContext.Provider value={{ script, service }}>
-        {leftChildren && <Left className="promo-image">{leftChildren}</Left>}
-        {rightChildren && <Right className="promo-text">{rightChildren}</Right>}
+        {leftChildren && <div className="promo-image">{leftChildren}</div>}
+        {rightChildren && <div className="promo-text">{rightChildren}</div>}
       </PromoContext.Provider>
     </Wrapper>
   );

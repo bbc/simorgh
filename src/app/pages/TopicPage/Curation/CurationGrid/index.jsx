@@ -27,6 +27,21 @@ const TopicList = styled.ul`
 `;
 
 const Item = styled.div`
+.promo-image {
+  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    width: 33%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+.promo-text {
+  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    width: 67%;
+    display: inline-block;
+    vertical-align: top;
+    padding-inline-start: ${GEL_SPACING};
+  }
+}
   vertical-align: top;
   display: inline-block;
   margin-bottom: ${GEL_SPACING_DBL};

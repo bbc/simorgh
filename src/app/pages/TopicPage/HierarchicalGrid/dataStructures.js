@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
+import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 
 const DB = css`
   grid-column: span 2;
@@ -56,7 +56,7 @@ const H = css`
     width: 67%;
     display: inline-block;
     vertical-align: top;
-    padding-inline-start: ${GEL_SPACING_DBL};
+    padding-inline-start: ${GEL_SPACING};
   }
 `;
 
