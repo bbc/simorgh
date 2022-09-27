@@ -28,6 +28,7 @@ const Curation = ({
   link,
   headingLevel,
   position,
+  curationLength,
 }) => {
   const Component = pathOr(
     CurationGrid,
@@ -38,7 +39,7 @@ const Curation = ({
   const createID = titleText => {
     return titleText.replaceAll(' ', '-');
   };
-  return title || position === 0 ? (
+  return curationLength > 1 && (title || position === 0) ? (
     <section aria-labelledby={createID(title || topStoriesTitle)} role="region">
       <Subheading a11yID={createID(title || topStoriesTitle)} href={link}>
         {title}
@@ -59,6 +60,7 @@ Curation.propTypes = {
   headingLevel: number,
   position: number.isRequired,
   topStoriesTitle: string,
+  curationLength: number.isRequired,
 };
 
 Curation.defaultProps = {
