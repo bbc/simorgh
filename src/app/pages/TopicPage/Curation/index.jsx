@@ -24,6 +24,7 @@ const Curation = ({
   visualProminance,
   promos,
   title,
+  topStoriesTitle,
   link,
   headingLevel,
   position,
@@ -33,10 +34,13 @@ const Curation = ({
     [visualStyle, visualProminance],
     components,
   );
-  const a11yID = title && title.replaceAll(' ', '-');
+
+  const createID = titleText => {
+    return titleText.replaceAll(' ', '-');
+  };
   return title || position === 0 ? (
-    <section aria-labelledby={a11yID || 'Top-Stories'} role="region">
-      <Subheading allyId={a11yID} href={link}>
+    <section aria-labelledby={createID(title || topStoriesTitle)} role="region">
+      <Subheading a11yID={createID(title || topStoriesTitle)} href={link}>
         {title}
       </Subheading>
       <Component promos={promos} headingLevel={headingLevel} />
@@ -54,12 +58,14 @@ Curation.propTypes = {
   link: string,
   headingLevel: number,
   position: number.isRequired,
+  topStoriesTitle: string,
 };
 
 Curation.defaultProps = {
   title: '',
   link: '',
   headingLevel: 2,
+  topStoriesTitle: string,
 };
 
 export default Curation;

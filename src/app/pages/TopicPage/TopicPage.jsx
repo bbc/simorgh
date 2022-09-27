@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import { shape, arrayOf, string } from 'prop-types';
+import path from 'ramda/src/path';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING,
@@ -69,6 +70,7 @@ const TopicPage = ({ pageData }) => {
 
   const { enabled: adsEnabled } = useToggle('ads');
   const { showAdsBasedOnLocation } = useContext(RequestContext);
+  const topStoriesTitle = path(['topStoriesTitle'], translations);
 
   const linkedDataEntities = curations
     .map(({ summaries }) =>
@@ -144,6 +146,7 @@ const TopicPage = ({ pageData }) => {
                 visualProminance={VISUAL_PROMINANCE.NORMAL}
                 promos={summaries}
                 title={curationTitle}
+                topStoriesTitle={topStoriesTitle}
                 position={position}
                 link={link}
               />

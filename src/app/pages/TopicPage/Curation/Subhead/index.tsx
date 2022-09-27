@@ -29,6 +29,6 @@ const Subhead = ({ children, href, a11yID }: PropsWithChildren<Props>) => {
   );
 };
 
-Subhead.defaultProps = { href: '', a11yID: 'Top-Stories' };
+Subhead.defaultProps = { href: '', a11yID: '' };
 
 export default Subhead;
