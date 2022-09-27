@@ -80,6 +80,27 @@ describe('Topic Page', () => {
     expect(getAllByRole('listitem').length).toEqual(4);
   });
 
+  it('should render a section around each curation when more than one exists', () => {
+    const { container } = render(
+      <TopicPageWithContext
+        pageData={mundoMultipleCurations}
+        service="mundo"
+      />,
+    );
+    expect(container.getElementsByTagName('section').length).toEqual(2);
+  });
+
+  it('should not render a section when one or less exists', () => {
+    const { container } = render(
+      <TopicPageWithContext
+        pageData={amharicSingleItem}
+        lang="am"
+        service="amharic"
+      />,
+    );
+    expect(container.getElementsByTagName('section').length).toEqual(0);
+  });
+
   it('should render curation subheading when curation title exists', () => {
     const { container } = render(
       <TopicPageWithContext
