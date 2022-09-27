@@ -78,6 +78,9 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
     imageBlock,
   );
 
+  const contributorBlock = pathOr([], [0], blocks);
+  const authorTopicUrl = pathOr('', ['model', 'topicUrl'], contributorBlock);
+
   if (!(author && jobRole)) return null;
 
   const authorTranslated = pathOr('Author', ['byline', 'author'], translations);
@@ -126,7 +129,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
               <VisuallyHiddenText>{`${authorTranslated}, `}</VisuallyHiddenText>
               <a
                 css={[BylineCss.link, BylineCss.authorLink]}
-                href={twitterLink}
+                href={authorTopicUrl}
               >
                 <strong
                   className="byline__link-text"
