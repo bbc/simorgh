@@ -49,7 +49,7 @@ const Document = ({
   return (
     <html lang="en-GB" {...noJsHtmlAttrs} {...htmlAttrs}>
       <head>
-        {(!isAmp && links && service !== 'pidgin') && (
+        {service !== 'pidgin' && (
             <ResourceHints assetOrigins={assetOrigins} />
         )}
         {meta}
