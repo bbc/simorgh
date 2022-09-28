@@ -135,12 +135,6 @@ export default {
       },
     ]),
 
-  imageSource: () =>
-    css({
-      maxWidth: '100%',
-      height: 'auto',
-    }),
-
   authorLink: () => css({ paddingTop: '1.375rem' }),
 
   twitterLink: () => css({ paddingBottom: '1.6rem' }),
