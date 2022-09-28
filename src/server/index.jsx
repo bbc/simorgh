@@ -140,9 +140,11 @@ const injectResourceHintsHeader = (req, res, next) => {
     const assetOrigins = getAssetOrigins('pidgin');
     res.set(
       'Link',
-      assetOrigins.reduce((toReturn, domainName) => {
-        return `${toReturn}<${domainName}>; rel="dns-prefetch", <${domainName}>; rel="preconnect",`
-      }, '').slice(0, -1)
+      assetOrigins
+        .reduce((toReturn, domainName) => {
+          return `${toReturn}<${domainName}>; rel="dns-prefetch", <${domainName}>; rel="preconnect",`;
+        }, '')
+        .slice(0, -1),
     );
   }
   next();
