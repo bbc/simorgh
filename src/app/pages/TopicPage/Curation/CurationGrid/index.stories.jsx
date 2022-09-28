@@ -4,13 +4,16 @@ import { withKnobs } from '@storybook/addon-knobs';
 import fixture from '#data/pidgin/topics/c95y35941vrt.json';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import CurationGrid from '.';
+import ThemeProvider from '../../../../components';
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ service, variant }) => {
   return (
-    <ServiceContextProvider service={service} variant={variant}>
-      <CurationGrid promos={fixture.data.summaries} />
-    </ServiceContextProvider>
+    <ThemeProvider service={service} variant={variant}>
+      <ServiceContextProvider service={service} variant={variant}>
+        <CurationGrid promos={fixture.data.summaries} />
+      </ServiceContextProvider>
+    </ThemeProvider>
   );
 };
 
