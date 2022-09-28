@@ -4,6 +4,9 @@ export default ({ hasScriptFonts = false } = {}) => {
       const resources = [
         'http://localhost:7080',
         'https://ichef.bbci.co.uk',
+        'https://ping.chartbeat.net',
+        'https://client.rum.us-east-1.amazonaws.com',
+        'https://dataplane.rum.eu-west-1.amazonaws.com',
         ...(hasScriptFonts
           ? [
               'https://gel.files.bbci.co.uk',
