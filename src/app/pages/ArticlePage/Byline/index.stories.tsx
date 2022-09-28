@@ -6,7 +6,8 @@ import {
   bylineWithNameAndRole,
   bylineWithLink,
   bylineWithLinkAndLocation,
-  bylineWithPhoto,
+  bylineWithNonPngPhoto,
+  bylineWithPngPhoto,
 } from './fixture';
 import Byline from '.';
 import { withServicesKnob } from '../../../legacy/psammead/psammead-storybook-helpers/src';
@@ -72,8 +73,21 @@ export const LinkAndLocationByline = ({ service, variant }: Props) => (
     />
   </Component>
 );
+export const LinkLocationNoPhotoByline = ({ service, variant }: Props) => (
+  <Component
+    fixture={bylineWithNonPngPhoto}
+    service={service}
+    variant={variant}
+  >
+    <Timestamp
+      firstPublished={1660658887}
+      lastPublished={1660658887}
+      popOut={false}
+    />
+  </Component>
+);
 export const LinkLocationPhotoByline = ({ service, variant }: Props) => (
-  <Component fixture={bylineWithPhoto} service={service} variant={variant}>
+  <Component fixture={bylineWithPngPhoto} service={service} variant={variant}>
     <Timestamp
       firstPublished={1660658887}
       lastPublished={1660658887}
