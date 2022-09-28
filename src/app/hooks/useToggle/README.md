@@ -1,17 +1,8 @@
 # useToggle Hook
 
-## Feature Toggles
+### Feature Toggles
 
-Default feature toggles are designed to be global (i.e not service specific) and are dependant on the application environment. However, feature toggles can also be
-remotely configured via iSite. The remote feature toggles on iSite are service specific.
-
-Feature toggles can be found in `src/app/lib/config/toggles`
-
-## Default Toggles
-
-## Remote Toggles
-
-Remote toggles are configurable in iSite. The toggles can be manually configured for any service.
+A description of how feature toggles work can be found in `/src/app/lib/config/toggles/README.md`
 
 ### Using the useToggle Hook
 
@@ -29,7 +20,7 @@ export default Component;
 
 ### Testing
 
-When writing unit tests for components that use the `useToggle` hook, you should wrap the component in a ToggleContextProvider. Then pass to it a stub for the toggles as shown below in `defaultToggles`. This will ensure that the component's unit test is not impacted by changes in the actual toggle values.
+When writing unit tests for components that use the `useToggle` hook, you should wrap the component in a `ToggleContextProvider`. Then pass to it a stub for the toggles as shown below in `defaultToggles`. This will ensure that the component's unit test is not impacted by changes in the actual toggle values.
 
 ```
 const toggles = {

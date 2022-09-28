@@ -1,3 +1,27 @@
+# How Feature Toggles Work
+
+Feature toggles in Simorgh are fetched on the server side (or client side).
+
+The `getInitialData` fetch returns the toggle configurations from the BBC toggles API (refer to Simorgh runbook section 2.5.2) via the `toggleContextProvider` which passes state of the toggles to the `useToggle` hook in Simorgh. The toggle configurations from the BBC toggles API are set as remote toggles in iSite.
+
+Local toggle configs are global and configured for the application environment, whereas remote toggles in iSite are configured to be service specific.
+
+Simorgh has 3 toggle config files for `test`, `local` and `live` environments. Remote toggles on iSite also take precendence over local toggles when the toggle response is fetched:
+
+```
+   const cachedResponse = cache && cache.get(url);
+  if (cachedResponse) {
+    return {
+      ...defaultLocalToggles,
+      ...cachedResponse,
+    };
+  }
+```
+
+If a toggle is not configured in iSite or in the local toggle configs coupled to Simorgh, then the toggle value will default to false.
+
+Feature toggles can be found in `src/app/lib/config/toggles`
+
 # Simorgh Application Toggles
 
 | Toggle Name              | Description                                                                         | Toggle Value                                                             | Example                                               |
@@ -14,13 +38,13 @@
 | `mostRead`               | Display Most Read                                                                   |                                                                          |                                                       |
 | `mostPopularMedia`       | Display Most Popular Media (Most Watched) component on Media Asset (MAP) Pages      | Number of most popular media items to display (integer between 1 and 20) | 10                                                    |
 | `navOnArticles`          | Display Navigation on Article Pages                                                 |                                                                          |                                                       |
-| `nielsenAnalytics`       | Capture Nielsen Analytics in Australia on AMP pages                                   |
+| `nielsenAnalytics`       | Capture Nielsen Analytics in Australia on AMP pages                                 |
 | `preloadLeadImage`       | Display preload image tag on Story (STY) Pages                                      |                                                                          |                                                       |
 | `preroll`                | Display Preroll Advertisements on Media Asset (MAP) Pages                           |                                                                          |                                                       |
 | `scriptLink`             | Display Script Switching link for services with variants                            |                                                                          |                                                       |
 | `variantCookie`          | Set variant cookie for services with variants                                       |                                                                          |                                                       |
 
-## Default (Fallback) Values
+## Default Toggle (Fallback) Values
 
 [Local Environment](localConfig.js)
 
