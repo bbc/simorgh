@@ -18,7 +18,7 @@ Simorgh has 3 toggle config files for `test`, `local` and `live` environments. R
   }
 ```
 
-If a toggle is not configured in iSite or in the local toggle configs coupled to Simorgh, then the toggle value will default to false.
+If a toggle is not configured in iSite or in the local toggle configs deployed with Simorgh, then the toggle value will default to false.
 
 Feature toggles can be found in `src/app/lib/config/toggles`
 
