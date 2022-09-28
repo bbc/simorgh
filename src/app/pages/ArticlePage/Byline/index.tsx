@@ -16,6 +16,7 @@ import {
   getSansRegular,
   getSansRegularItalic,
 } from '../../../legacy/psammead/psammead-styles/src/font-styles';
+import Image from '../../../components/Image';
 
 type Props = {
   blocks: any;
@@ -72,11 +73,13 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
     ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
     locationBlock,
   );
-  const image = pathOr(
+  let image = pathOr(
     '',
     ['model', 'blocks', 0, 'model', 'locator'],
     imageBlock,
   );
+
+  if (!image.endsWith('.png')) image = '';
 
   if (!(author && jobRole)) return null;
 
@@ -117,7 +120,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
                 : [BylineCss.imageLtr, BylineCss.Image]
             }
           >
-            <img css={BylineCss.imageSource} src={image} alt="" />
+            <Image css={BylineCss.imageSource} src={image} alt="" />
           </li>
         )}
         <li>
