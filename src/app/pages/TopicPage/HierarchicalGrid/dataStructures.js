@@ -55,7 +55,7 @@ const H = css({
     width: '67%',
     display: 'inline-block',
     verticalAlign: 'top',
-    paddingInlineStart: '16px',
+    paddingInlineStart: '1rem',
   },
 });
 
