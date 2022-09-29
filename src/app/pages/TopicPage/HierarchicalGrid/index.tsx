@@ -26,12 +26,12 @@ const styles = {
     position: 'relative',
     display: 'inline',
   }),
-  list: ({ mq }: Theme) =>
+  list: ({ mq, spacings }: Theme) =>
     css({
       padding: '1.5rem',
       margin: '0',
       display: 'grid',
-      gridGap: '10px',
+      gridGap: `${spacings.FULL}rem`,
       gridTemplateColumns: 'repeat(2, 1fr)',
       [mq.GROUP_3_MIN_WIDTH]: {
         gridTemplateColumns: 'repeat(3, 1fr)',
