@@ -1,21 +1,16 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import {
+  render,
+  screen,
+} from '../../../components/react-testing-library-with-providers';
 
 import fixture from './fixtures';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 
 import HierarchicalGrid from '.';
 
-const renderComponent = ({ service = 'pidgin', summaries = fixture } = {}) =>
-  render(
-    <ServiceContextProvider service={service}>
-      <HierarchicalGrid summaries={summaries} />
-    </ServiceContextProvider>,
-  );
-
 describe('Hierarchical Grid Curation', () => {
   it('renders twelve promos when twelve items are provided', async () => {
-    renderComponent({});
+    render(<HierarchicalGrid summaries={fixture} />);
 
     expect(document.querySelectorAll('li').length).toBe(12);
   });
@@ -33,24 +28,20 @@ describe('Hierarchical Grid Curation', () => {
       imageAlt: 'January 6 timeline: Wetin happun for January 6 one year ago?',
       id: 'e2263a1c-8d5a-4a73-a00c-881acfa34381',
     });
-    renderComponent({ summaries: extraSummaries });
+    render(<HierarchicalGrid summaries={extraSummaries} />);
 
     expect(document.querySelectorAll('li').length).toBe(12);
   });
 
   it('returns null when less than three promos are in the data', async () => {
-    renderComponent({
-      summaries: fixture.splice(0, 2),
-    });
-
+    render(<HierarchicalGrid summaries={fixture.splice(0, 2)} />);
     expect(document.querySelectorAll('li').length).toBe(0);
   });
-});
-describe('a11y', () => {
-  it('should render list with role of list', async () => {
-    renderComponent({});
+
+  it('renders list with role of list', async () => {
+    render(<HierarchicalGrid summaries={fixture} />);
 
     expect(document.querySelectorAll('ul').length).toBe(1);
-    expect(document.querySelector('ul').getAttribute('role')).toBe('list');
+    expect(document.querySelector('ul')?.getAttribute('role')).toBe('list');
   });
 });

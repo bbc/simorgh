@@ -8,7 +8,7 @@ import pidginSummaries from './fixtures';
 
 const Component = () => {
   return (
-    <ThemeProvider service="pidgin">
+    <ThemeProvider service="pidgin" variant="default">
       <ServiceContextProvider service="pidgin">
         <HiearchicalGrid
           summaries={pidginSummaries.slice(

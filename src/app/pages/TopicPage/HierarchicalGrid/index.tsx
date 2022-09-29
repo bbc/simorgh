@@ -1,13 +1,31 @@
-import React from 'react';
+/** @jsx jsx */
+
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { string, shape, arrayOf, number, oneOfType, oneOf } from 'prop-types';
+import { jsx, Theme } from '@emotion/react';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
-import Promo, { MEDIA_TYPES } from '#components/Promo';
+} from '../../../legacy/psammead/gel-foundations/src/breakpoints';
+import Promo from '../../../legacy/components/Promo';
 import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
+
+type Summary = {
+  title: string,
+  description?: string,
+  type: string,
+  id: string,
+  link?: string,
+  firstPublished: string | number,
+  mediaDuration?: string | number,
+  imageUrl: string,
+  imageAlt: string,
+  mediaType?: 'audio' | 'video' | 'photogallery',
+};
+
+type Summaries = {
+  summaries: Summary[];
+};
 
 const PromoList = styled.ul`
   padding: 1.5rem;
@@ -28,7 +46,7 @@ const Item = styled.div`
   display: inline;
 `;
 
-const getStyles = (promoCount, i, mq) => {
+const getStyles = (promoCount: number, i: number, mq: any) => {
   return css`
     ${mq.GROUP_1_MAX_WIDTH} {
       ${SMALL[promoCount - 1][i]}
@@ -45,7 +63,7 @@ const getStyles = (promoCount, i, mq) => {
   `;
 };
 
-const HiearchicalGrid = ({ summaries }) => {
+const HiearchicalGrid = ({ summaries }: Summaries) => {
   if (!summaries || summaries.length < 3) return null;
   const summaryItems = summaries.slice(0, 12);
   return (
@@ -54,7 +72,7 @@ const HiearchicalGrid = ({ summaries }) => {
         return (
           <Item
             key={promo.id}
-            css={({ mq }) => getStyles(summaryItems.length, i, mq)}
+            css={({ mq }: Theme) => getStyles(summaryItems.length, i, mq)}
             as="li"
           >
             <Promo>
@@ -82,19 +100,6 @@ const HiearchicalGrid = ({ summaries }) => {
       })}
     </PromoList>
   );
-};
-
-HiearchicalGrid.propTypes = {
-  summaries: arrayOf(
-    shape({
-      title: string.isRequired,
-      type: string.isRequired,
-      firstPublished: oneOfType([number, string]).isRequired,
-      imageUrl: string.isRequired,
-      imageAlt: string.isRequired,
-      mediaType: oneOf(Object.values(MEDIA_TYPES)),
-    }),
-  ).isRequired,
 };
 
 export default HiearchicalGrid;
