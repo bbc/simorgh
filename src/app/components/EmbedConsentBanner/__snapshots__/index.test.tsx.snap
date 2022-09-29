@@ -164,7 +164,7 @@ exports[`Embed Consent Banner should match snapshot - AMP 1`] = `
       on="tap:consentBanner.hide,embed.show"
       type="button"
     >
-      Accept and continue
+      Aceptar y continuar
     </button>
   </div>
   <div
@@ -337,7 +337,7 @@ exports[`Embed Consent Banner should match snapshot 1`] = `
       data-testid="banner-button"
       type="button"
     >
-      Accept and continue
+      Aceptar y continuar
     </button>
   </div>
 </div>
