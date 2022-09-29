@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { arrayOf, shape } from 'prop-types';
+import { arrayOf, shape, number } from 'prop-types';
 
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
@@ -55,7 +55,7 @@ const Item = styled.div`
 
 const Wrapper = styled.div``;
 
-const CurationGrid = ({ promos }) => {
+const CurationGrid = ({ promos, headingLevel }) => {
   const { dir } = useContext(ServiceContext);
   const hasMultiplePromos = promos.length > 1;
   const firstPromo = promos[0];
@@ -72,7 +72,11 @@ const CurationGrid = ({ promos }) => {
 
             return (
               <Item key={promo.id} dir={dir} as="li">
-                <CurationPromo {...promo} lazy={!isFirstPromo} />
+                <CurationPromo
+                  {...promo}
+                  headingLevel={headingLevel}
+                  lazy={!isFirstPromo}
+                />
               </Item>
             );
           })}
@@ -88,10 +92,12 @@ const CurationGrid = ({ promos }) => {
 
 CurationGrid.propTypes = {
   promos: arrayOf(shape({})),
+  headingLevel: number,
 };
 
 CurationGrid.defaultProps = {
   promos: [],
+  headingLevel: 2,
 };
 
 export default CurationGrid;
