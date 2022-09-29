@@ -211,7 +211,7 @@
     "eslint-plugin-react": "7.29.4",
     "eslint-plugin-react-hooks": "4.4.0",
     "fetch-mock": "9.11.0",
-    "glob": "7.2.3",
+    "glob": "8.0.3",
     "history": "4.10.1",
     "husky": "7.0.4",
     "inspectpack": "4.7.1",
