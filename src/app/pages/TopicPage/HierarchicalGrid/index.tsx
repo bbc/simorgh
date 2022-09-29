@@ -43,20 +43,20 @@ const styles = {
 };
 
 const getStyles = (promoCount: number, i: number, mq: any) => {
-  return css`
-    ${mq.GROUP_1_MAX_WIDTH} {
-      ${SMALL[promoCount - 1][i]}
+  return css({
+    [mq.GROUP_1_MAX_WIDTH]: {
+      ...SMALL[promoCount - 1][i]
+    },
+    [mq.GROUP_2_ONLY]: {
+      ...MOBILE[promoCount - 1][i]
+    },
+    [mq.GROUP_3_ONLY]: {
+      ...TABLET[promoCount - 1][i]
+    },
+    [mq.GROUP_4_MIN_WIDTH]: {
+      ...DESKTOP[promoCount - 1][i]
     }
-    ${mq.GROUP_2_ONLY} {
-      ${MOBILE[promoCount - 1][i]}
-    }
-    ${mq.GROUP_3_ONLY} {
-      ${TABLET[promoCount - 1][i]}
-    }
-    ${mq.GROUP_4_MIN_WIDTH} {
-      ${DESKTOP[promoCount - 1][i]}
-    }
-  `;
+  });
 };
 
 const HiearchicalGrid = ({ summaries }: Summaries) => {
