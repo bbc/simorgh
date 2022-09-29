@@ -5,16 +5,16 @@ import Promo from '../../../legacy/components/Promo';
 import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
 
 type Summary = {
-  title: string,
-  description?: string,
-  type: string,
-  id: string,
-  link?: string,
-  firstPublished: string | number,
-  mediaDuration?: string | number,
-  imageUrl: string,
-  imageAlt: string,
-  mediaType?: 'audio' | 'video' | 'photogallery',
+  title: string;
+  description?: string;
+  type: string;
+  id: string;
+  link?: string;
+  firstPublished: string | number;
+  mediaDuration?: string | number;
+  imageUrl: string;
+  imageAlt: string;
+  mediaType?: 'audio' | 'video' | 'photogallery';
 };
 
 type Summaries = {
@@ -28,7 +28,7 @@ const styles = {
   }),
   list: ({ mq, spacings }: Theme) =>
     css({
-      padding: '1.5rem',
+      padding: `${spacings.TRIPLE}rem`,
       margin: '0',
       display: 'grid',
       gridGap: `${spacings.FULL}rem`,
@@ -38,24 +38,24 @@ const styles = {
       },
       [mq.GROUP_4_MIN_WIDTH]: {
         gridTemplateColumns: 'repeat(4, 1fr)',
-      }
+      },
     }),
 };
 
 const getStyles = (promoCount: number, i: number, mq: any) => {
   return css({
     [mq.GROUP_1_MAX_WIDTH]: {
-      ...SMALL[promoCount - 1][i]
+      ...SMALL[promoCount - 1][i],
     },
     [mq.GROUP_2_ONLY]: {
-      ...MOBILE[promoCount - 1][i]
+      ...MOBILE[promoCount - 1][i],
     },
     [mq.GROUP_3_ONLY]: {
-      ...TABLET[promoCount - 1][i]
+      ...TABLET[promoCount - 1][i],
     },
     [mq.GROUP_4_MIN_WIDTH]: {
-      ...DESKTOP[promoCount - 1][i]
-    }
+      ...DESKTOP[promoCount - 1][i],
+    },
   });
 };
 
@@ -68,7 +68,10 @@ const HiearchicalGrid = ({ summaries }: Summaries) => {
         return (
           <li
             key={promo.id}
-            css={({ mq }: Theme) => [styles.item, getStyles(summaryItems.length, i, mq)]}
+            css={({ mq }: Theme) => [
+              styles.item,
+              getStyles(summaryItems.length, i, mq),
+            ]}
           >
             <Promo>
               <Promo.Image
