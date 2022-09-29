@@ -1,5 +1,5 @@
 import React from 'react';
-import { arrayOf, oneOf, shape, string } from 'prop-types';
+import { arrayOf, oneOf, shape, string, number } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import CurationGrid from './CurationGrid';
 import Subheading from './Subhead';
@@ -19,17 +19,35 @@ const components = {
   },
 };
 
-const Curation = ({ visualStyle, visualProminance, promos, title, link }) => {
+const Curation = ({
+  visualStyle,
+  visualProminance,
+  promos,
+  title,
+  topStoriesTitle,
+  link,
+  headingLevel,
+  position,
+  curationLength,
+}) => {
   const Component = pathOr(
     CurationGrid,
     [visualStyle, visualProminance],
     components,
   );
-  return (
-    <>
-      {title && <Subheading href={link}>{title}</Subheading>}
-      <Component promos={promos} />
-    </>
+
+  const createID = titleText => {
+    return titleText.replaceAll(' ', '-');
+  };
+  return curationLength > 1 && (title || position === 0) ? (
+    <section aria-labelledby={createID(title || topStoriesTitle)} role="region">
+      <Subheading a11yID={createID(title || topStoriesTitle)} href={link}>
+        {title}
+      </Subheading>
+      <Component promos={promos} headingLevel={headingLevel} />
+    </section>
+  ) : (
+    <Component promos={promos} headingLevel={headingLevel} />
   );
 };
 
@@ -39,11 +57,17 @@ Curation.propTypes = {
   promos: arrayOf(shape({})).isRequired,
   title: string,
   link: string,
+  headingLevel: number,
+  position: number.isRequired,
+  topStoriesTitle: string,
+  curationLength: number.isRequired,
 };
 
 Curation.defaultProps = {
   title: '',
   link: '',
+  headingLevel: 2,
+  topStoriesTitle: string,
 };
 
 export default Curation;
