@@ -2,7 +2,7 @@
 
 ### Feature Toggles
 
-A description of how feature toggles work can be found in `/src/app/lib/config/toggles/README.md`
+A description of how feature toggles work can be found in the toggles readme [here](https://github.com/bbc/simorgh/blob/latest/src/app/lib/README.md)
 
 ### Using the useToggle Hook
 
