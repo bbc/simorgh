@@ -2,9 +2,9 @@
 
 ## Description
 
-The `InlineLink` component is used to render link elements containting text. It specifically does not render content using the `children` prop and instead uses a prop called `text` so that only a string of text can be passed in. This is to ensure that, for any external links, an `aria-label` can be rendered containing the text content with a localised "external" message to indicate to assistive technology users that the link they are reading will navigate away from a BBC domain.
+The `InlineLink` component is used to render link elements containting text. It intentionally does not render content using the `children` prop and instead uses a prop called `text` so that only a string of text can be passed in. This is to ensure that, for any external links, an `aria-label` can be rendered containing the text content with a localised "external" message to indicate to assistive technology users that the link they are reading will navigate away from a BBC domain.
 
-If you need a link component to wrap content that is not just a string of text, you should use the [`Link`](../Link/README.md) component. The `InlineLink` component extends the [`Link`](../Link/README.md) component which is responsible for determining whether to make a client-side or server-side request.
+The `InlineLink` also determines whether to make a client-side or server-side request based the `allowCSR` and whether the `to` route is in the allowed paths for client side routing.
 
 ## Props
 
