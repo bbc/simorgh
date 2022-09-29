@@ -17,7 +17,7 @@
     "ansi-html": "https://registry.yarnpkg.com/ansi-html-community/-/ansi-html-community-0.0.8.tgz",
     "ansi-regex": "5.0.1",
     "browserslist": "4.20.3",
-    "css-what": "5.1.0",
+    "css-what": "6.1.0",
     "follow-redirects": "1.14.9",
     "glob-parent": "6.0.2",
     "immer": "9.0.15",
