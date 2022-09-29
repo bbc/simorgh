@@ -15,7 +15,6 @@ const Fixture = ({ lazy }) => (
       imageAlt="Campesino indígena peruano."
       link="https://www.bbc.com/mundo/noticias-america-latina-60742314"
     />
-    ,
   </ServiceContextProvider>
 );
 
