@@ -1,11 +1,6 @@
 import React from 'react';
-import {
-  render,
-  screen,
-} from '../../../components/react-testing-library-with-providers';
-
+import { render } from '../../../components/react-testing-library-with-providers';
 import fixture from './fixtures';
-
 import HierarchicalGrid from '.';
 
 describe('Hierarchical Grid Curation', () => {
