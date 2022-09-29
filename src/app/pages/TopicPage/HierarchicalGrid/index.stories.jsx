@@ -2,13 +2,13 @@ import React from 'react';
 
 import { withKnobs, number } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
-
+import ThemeProvider from '../../../components/ThemeProvider';
 import HiearchicalGrid from './index';
 import pidginSummaries from './fixtures';
 
 const Component = () => {
   return (
-    <div style={{ backgroundColor: '#F6F6F6'}}>
+    <ThemeProvider service="pidgin">
       <ServiceContextProvider service="pidgin">
         <HiearchicalGrid
           summaries={pidginSummaries.slice(
@@ -17,7 +17,7 @@ const Component = () => {
           )}
         />
       </ServiceContextProvider>
-    </div>
+    </ThemeProvider>
   );
 };
 

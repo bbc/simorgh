@@ -3,11 +3,7 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { string, shape, arrayOf, number, oneOfType, oneOf } from 'prop-types';
 import {
-  GEL_GROUP_1_SCREEN_WIDTH_MAX,
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import Promo, { MEDIA_TYPES } from '#components/Promo';
@@ -32,18 +28,18 @@ const Item = styled.div`
   display: inline;
 `;
 
-const getStyles = (promoCount, i) => {
+const getStyles = (promoCount, i, mq) => {
   return css`
-    @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
+    ${mq.GROUP_1_MAX_WIDTH} {
       ${SMALL[promoCount - 1][i]}
     }
-    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    ${mq.GROUP_2_ONLY} {
       ${MOBILE[promoCount - 1][i]}
     }
-    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    ${mq.GROUP_3_ONLY} {
       ${TABLET[promoCount - 1][i]}
     }
-    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    ${mq.GROUP_4_MIN_WIDTH} {
       ${DESKTOP[promoCount - 1][i]}
     }
   `;
@@ -56,7 +52,11 @@ const HiearchicalGrid = ({ summaries }) => {
     <PromoList role="list">
       {summaryItems.map((promo, i) => {
         return (
-          <Item key={promo.id} css={getStyles(summaryItems.length, i)} as="li">
+          <Item
+            key={promo.id}
+            css={({ mq }) => getStyles(summaryItems.length, i, mq)}
+            as="li"
+          >
             <Promo>
               <Promo.Image
                 src={promo.imageUrl}
@@ -88,6 +88,7 @@ HiearchicalGrid.propTypes = {
   summaries: arrayOf(
     shape({
       title: string.isRequired,
+      type: string.isRequired,
       firstPublished: oneOfType([number, string]).isRequired,
       imageUrl: string.isRequired,
       imageAlt: string.isRequired,
