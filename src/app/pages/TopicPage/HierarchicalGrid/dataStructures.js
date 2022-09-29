@@ -1,64 +1,63 @@
 import { css } from '@emotion/react';
-import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 
-const DB = css`
-  grid-column: span 2;
-  grid-row: span 4;
-`;
+const DB = css({
+  gridColumn: 'span 2',
+  gridRow: 'span 4',
+});
 
-const B = css`
-  grid-row: span 3;
-  grid-column: span 2;
-  .promo-paragraph {
-    display: none;
-  }
-`;
+const B = css({
+  gridRow: 'span 3',
+  gridColumn: 'span 2',
+  '.promo-paragraph': {
+    display: 'none',
+  },
+});
 
-const V = css`
-  grid-column: span 1;
-  grid-row: span 2;
-  .promo-paragraph {
-    display: none;
-  }
-`;
+const V = css({
+  gridColumn: 'span 1',
+  gridRow: 'span 2',
+  '.promo-paragraph': {
+    display: 'none',
+  },
+});
 
-const T = css`
-  grid-column: span 1;
-  grid-row: span 4;
-  .promo-paragraph {
-    display: none;
-  }
-`;
+const T = css({
+  gridColumn: 'span 1',
+  gridRow: 'span 4',
+  ' .promo-paragraph': {
+    display: 'none',
+  },
+});
 
-const C = css`
-  grid-column: span 1;
-  grid-row: span 1;
-  .promo-image {
-    display: none;
-  }
-  .promo-paragraph {
-    display: none;
-  }
-`;
+const C = css({
+  gridColumn: 'span 1',
+  gridRow: 'span 1',
+  '.promo-image': {
+    display: 'none',
+  },
+  '.promo-paragraph': {
+    display: 'none',
+  },
+});
 
-const H = css`
-  grid-column: span 2;
-  grid-row: span 1;
-  .promo-paragraph {
-    display: none;
-  }
-  .promo-image {
-    width: 33%;
-    display: inline-block;
-    vertical-align: top;
-  }
-  .promo-text {
-    width: 67%;
-    display: inline-block;
-    vertical-align: top;
-    padding-inline-start: ${GEL_SPACING};
-  }
-`;
+const H = css({
+  gridColumn: 'span 2',
+  gridRow: 'span 1',
+  '.promo-paragraph': {
+    display: 'none',
+  },
+  '.promo-image': {
+    width: '33%',
+    display: 'inline-block',
+    verticalAlign: 'top',
+  },
+  '.promo-text': {
+    width: '67%',
+    display: 'inline-block',
+    verticalAlign: 'top',
+    paddingInlineStart: '16px',
+  },
+});
 
 const DESKTOP = [
   [V],
