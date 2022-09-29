@@ -2,14 +2,13 @@
 
 Feature toggles in Simorgh are fetched on the server side (or client side).
 
-The `getInitialData` fetch returns the toggle configurations from the BBC toggles API (refer to Simorgh runbook section 2.5.2) via the `toggleContextProvider` which passes state of the toggles to the `useToggle` hook in Simorgh. The toggle configurations from the BBC toggles API are set as remote toggles in iSite.
+The `getInitialData` fetch returns the toggle configurations from the BBC toggles API (refer to Simorgh runbook section 2.5.2) via the `toggleContextProvider` which passes the state of the toggles to the `useToggle` hook in Simorgh. The toggle configurations from the BBC toggles API are set as remote toggles in iSite.
 
 Local toggle configs are global and configured for the application environment, whereas remote toggles in iSite are configured to be service specific.
 
 Simorgh has 3 toggle config files for `test`, `local` and `live` environments. Remote toggles on iSite also take precendence over local toggles when the toggle response is fetched:
 
 https://github.com/bbc/simorgh/blob/9fecaba6ef30b3fff627ef9a75f0286d63f0a343/src/app/lib/utilities/getToggles/index.js#L48-L54
-
 
 If a toggle is not configured in iSite or in the local toggle configs deployed with Simorgh, then the toggle value will default to false.
 
