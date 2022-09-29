@@ -36,7 +36,7 @@ export const getIdFromSource = source => {
   const sourceIds = {
     twitter: /\/status\/([0-9]+)/,
     youtube: /\/watch\?v=([0-9 A-Z a-z _-]+)/,
-    instagram: /\/p\/([0-9 A-Z a-z]+)/,
+    instagram: /\/p\/([0-9 A-Z a-z _-]+)/,
   };
   const NO_ID = '';
   const provider = getProviderFromSource(source);
