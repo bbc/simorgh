@@ -101,8 +101,6 @@
     "@juggle/resize-observer": "2.4.0",
     "@loadable/component": "5.15.2",
     "@loadable/server": "5.15.2",
-    "@octokit/action": "3.18.1",
-    "@octokit/rest": "18.12.0",
     "@optimizely/react-sdk": "2.8.1",
     "@testing-library/user-event": "13.5.0",
     "aws-embedded-metrics": "2.0.6",
