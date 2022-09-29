@@ -4,7 +4,6 @@ import ramdaPath from 'ramda/src/path';
 import omit from 'ramda/src/omit';
 // not part of react-helmet
 import helmet from 'helmet';
-import gnuTP from 'gnu-terry-pratchett';
 import routes from '#app/routes';
 import nodeLogger from '#lib/logger.node';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
@@ -79,7 +78,6 @@ server
       contentSecurityPolicy: false,
     }),
   )
-  .use(gnuTP())
   .use(logResponseTime)
   .get('/status', (req, res) => {
     try {

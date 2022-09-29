@@ -111,7 +111,6 @@
     "dotenv": "16.0.2",
     "express": "4.18.1",
     "express-static-gzip": "2.1.7",
-    "gnu-terry-pratchett": "0.0.2",
     "helmet": "4.6.0",
     "helmet-csp": "3.4.0",
     "intersection-observer": "0.12.2",
