@@ -1,12 +1,6 @@
 /** @jsx jsx */
 
-import { css } from '@emotion/react';
-import styled from '@emotion/styled';
-import { jsx, Theme } from '@emotion/react';
-import {
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '../../../legacy/psammead/gel-foundations/src/breakpoints';
+import { css, jsx, Theme } from '@emotion/react';
 import Promo from '../../../legacy/components/Promo';
 import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
 
@@ -27,24 +21,26 @@ type Summaries = {
   summaries: Summary[];
 };
 
-const PromoList = styled.ul`
-  padding: 1.5rem;
-  margin: 0;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(2, 1fr);
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    grid-template-columns: repeat(4, 1fr);
-  }
-`;
-
-const Item = styled.div`
-  position: relative;
-  display: inline;
-`;
+const styles = {
+  item: css({
+    position: 'relative',
+    display: 'inline',
+  }),
+  list: ({ mq }: Theme) =>
+    css({
+      padding: '1.5rem',
+      margin: '0',
+      display: 'grid',
+      gridGap: '10px',
+      gridTemplateColumns: 'repeat(2, 1fr)',
+      [mq.GROUP_3_MIN_WIDTH]: {
+        gridTemplateColumns: 'repeat(3, 1fr)',
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        gridTemplateColumns: 'repeat(4, 1fr)',
+      }
+    }),
+};
 
 const getStyles = (promoCount: number, i: number, mq: any) => {
   return css`
@@ -67,13 +63,12 @@ const HiearchicalGrid = ({ summaries }: Summaries) => {
   if (!summaries || summaries.length < 3) return null;
   const summaryItems = summaries.slice(0, 12);
   return (
-    <PromoList role="list">
+    <ul role="list" css={styles.list}>
       {summaryItems.map((promo, i) => {
         return (
-          <Item
+          <li
             key={promo.id}
-            css={({ mq }: Theme) => getStyles(summaryItems.length, i, mq)}
-            as="li"
+            css={({ mq }: Theme) => [styles.item, getStyles(summaryItems.length, i, mq)]}
           >
             <Promo>
               <Promo.Image
@@ -95,10 +90,10 @@ const HiearchicalGrid = ({ summaries }: Summaries) => {
                 {promo.firstPublished}
               </Promo.Timestamp>
             </Promo>
-          </Item>
+          </li>
         );
       })}
-    </PromoList>
+    </ul>
   );
 };
 
