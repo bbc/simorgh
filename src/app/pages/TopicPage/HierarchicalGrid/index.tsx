@@ -2,6 +2,7 @@
 
 import { css, jsx, Theme } from '@emotion/react';
 import Promo from '../../../legacy/components/Promo';
+import { getParagon } from '../../../legacy/psammead/gel-foundations/src/typography';
 import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
 
 type Summary = {
@@ -22,14 +23,16 @@ type Summaries = {
 };
 
 const styles = {
-  item: css({
-    position: 'relative',
-    display: 'inline',
-  }),
+  item: ({ spacings }: Theme) =>
+    css({
+      position: 'relative',
+      display: 'inline',
+      paddingBottom: `${spacings.FULL}rem`,
+    }),
   list: ({ mq, spacings }: Theme) =>
     css({
-      padding: `${spacings.TRIPLE}rem`,
-      margin: '0',
+      padding: 0,
+      margin: 0,
       display: 'grid',
       gridGap: `${spacings.FULL}rem`,
       gridTemplateColumns: 'repeat(2, 1fr)',
@@ -83,7 +86,7 @@ const HiearchicalGrid = ({ summaries }: Summaries) => {
                   {promo.mediaDuration}
                 </Promo.MediaIcon>
               </Promo.Image>
-              <Promo.Heading>
+              <Promo.Heading typography={i === 0 ? getParagon : null}>
                 <Promo.A href={promo.link}>{promo.title}</Promo.A>
               </Promo.Heading>
               <Promo.Body className="promo-paragraph">
