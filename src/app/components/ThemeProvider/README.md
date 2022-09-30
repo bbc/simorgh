@@ -103,7 +103,7 @@ You can use `fontMq` like this:
 
 ### mq
 
-The content media queires. Options, with their screen size range in pixels, are as follows:
+The content media queries. Options, with their screen size range in pixels, are as follows:
 
 - `GROUP_0_MAX_WIDTH`: 239px and below
 - `GROUP_1_MAX_WIDTH`: 399px and below
