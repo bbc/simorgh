@@ -10,7 +10,7 @@ import ThemeProvider from '../../../../components/ThemeProvider';
 const Component = ({ service, variant }) => {
   return (
     <ThemeProvider service={service} variant={variant}>
-      <ServiceContextProvider>
+      <ServiceContextProvider service={service} variant={variant}>
         <CurationGrid promos={fixture.data.summaries} />
       </ServiceContextProvider>
     </ThemeProvider>
