@@ -124,7 +124,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
           </li>
         )}
         <li>
-          {twitterLink ? (
+          {authorTopicUrl ? (
             <React.Fragment>
               <VisuallyHiddenText>{`${authorTranslated}, `}</VisuallyHiddenText>
               <a
@@ -154,6 +154,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
               <strong
                 css={[
                   BylineCss.author,
+                  BylineCss.authorLink,
                   getSansBold(service),
                   getBodyCopy(script),
                 ]}

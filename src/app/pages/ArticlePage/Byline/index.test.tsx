@@ -127,7 +127,7 @@ describe('Byline', () => {
 
     expect(AuthorLink).toBeInTheDocument();
     expect(TwitterLink).toBeInTheDocument();
-    expect(Links.length).toBe(2);
+    expect(Links.length).toBe(1);
     expect(Location).toBeInTheDocument();
     expect(Image).toBeInTheDocument();
   });
