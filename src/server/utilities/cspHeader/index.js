@@ -56,9 +56,7 @@ const advertisingDirectives = {
     ...advertisingServiceCountryDomains,
   ],
   prefetchSrc: ['https://*.safeframe.googlesyndication.com'],
-  defaultSrc: [
-    ...bbcDomains, 'https://*.googlesyndication.com',
-  ],
+  defaultSrc: [...bbcDomains, 'https://*.googlesyndication.com'],
   styleSrc: ['https://fonts.googleapis.com'],
   fontSrc: ['https://fonts.gstatic.com'],
 };
@@ -175,10 +173,10 @@ const directives = {
       ...bbcDomains,
       'https://ping.chartbeat.net',
       'https://*.twitter.com', // Social Embeds
-      'https://pbs.twimg.com', // Social Embeds
+      'https://*.twimg.com', // Social Embeds
       'https://*.cdninstagram.com', // Social Embeds
       'https://i.ytimg.com', // Social Embeds
-      'https://ton.twimg.com', // Social Embeds
+      'https://*.twimg.com', // Social Embeds
       ...advertisingDirectives.imgSrc,
       'https://*.googleusercontent.com', // Google Play Store - BBC News Apps - Arabic, Hindi, Mundo, Russian
       "data: 'self'", // needed at the end to maintain proper order
@@ -201,10 +199,9 @@ const directives = {
       'https://logws1363.ati-host.net', // ATI analytics
       'http://ping.chartbeat.net', // localhost prod build
       'https://*.twitter.com', // Social Embeds
-      'https://pbs.twimg.com', // Social Embeds
+      'https://*.twimg.com', // Social Embeds
       'https://*.cdninstagram.com', // Social Embeds
       'https://i.ytimg.com', // Social Embeds
-      'https://ton.twimg.com', // Social Embeds
       ...advertisingDirectives.imgSrc,
       'https://*.googleusercontent.com', // Google Play Store - BBC News Apps - Arabic, Hindi, Mundo, Russian
       "data: 'self'", // needed at the end to maintain proper order
@@ -226,7 +223,7 @@ const directives = {
       'https://*.chartbeat.com',
       'https://platform.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
-      'https://cdn.syndication.twimg.com', // Social Embeds
+      'https://*.twimg.com', // Social Embeds
       'https://public.flourish.studio', // STY includes
       'https://client.rum.us-east-1.amazonaws.com', // CloudWatch RUM
       ...advertisingDirectives.scriptSrc,
@@ -249,7 +246,7 @@ const directives = {
       'http://localhost:1124', // for localhost canonical JavaScript
       'https://platform.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
-      'https://cdn.syndication.twimg.com', // Social Embeds
+      'https://*.twimg.com', // Social Embeds
       'https://public.flourish.studio', // STY includes
       'https://client.rum.us-east-1.amazonaws.com', // CloudWatch RUM
       ...advertisingDirectives.scriptSrc,
@@ -262,7 +259,7 @@ const directives = {
     canonicalLive: [
       ...bbcDomains,
       'https://platform.twitter.com', // Social Embeds
-      'https://ton.twimg.com', // Social Embeds
+      'https://*.twimg.com', // Social Embeds
       ...advertisingDirectives.styleSrc,
       "'unsafe-inline'",
     ],
@@ -270,7 +267,7 @@ const directives = {
     canonicalNonLive: [
       ...bbcDomains,
       'https://platform.twitter.com', // Social Embeds
-      'https://ton.twimg.com', // Social Embeds
+      'https://*.twimg.com', // Social Embeds
       ...advertisingDirectives.styleSrc,
       "'unsafe-inline'",
     ],
