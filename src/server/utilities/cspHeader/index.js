@@ -306,7 +306,7 @@ export const generateConnectSrc = ({ isAmp, isLive }) => {
   if (!isLive && isAmp) return directives.connectSrc.ampNonLive;
   if (!isLive && !isAmp) return directives.connectSrc.canonicalNonLive;
   if (isLive && isAmp) return directives.connectSrc.ampLive;
-  return directives.connectSrc.canonicalLive;
+  return directives.connectSrc.canonicalLive.sort();
 };
 
 export const generateDefaultSrc = () => {
@@ -317,42 +317,42 @@ export const generateFontSrc = ({ isAmp, isLive }) => {
   if (!isLive && isAmp) return directives.fontSrc.ampNonLive;
   if (!isLive && !isAmp) return directives.fontSrc.canonicalNonLive;
   if (isLive && isAmp) return directives.fontSrc.ampLive;
-  return directives.fontSrc.canonicalLive;
+  return directives.fontSrc.canonicalLive.sort();
 };
 
 export const generateFrameSrc = ({ isAmp, isLive }) => {
   if (!isLive && isAmp) return directives.frameSrc.ampNonLive;
   if (!isLive && !isAmp) return directives.frameSrc.canonicalNonLive;
   if (isLive && isAmp) return directives.frameSrc.ampLive;
-  return directives.frameSrc.canonicalLive;
+  return directives.frameSrc.canonicalLive.sort();
 };
 
 export const generateImgSrc = ({ isAmp, isLive }) => {
   if (!isLive && isAmp) return directives.imgSrc.ampNonLive;
   if (!isLive && !isAmp) return directives.imgSrc.canonicalNonLive;
   if (isLive && isAmp) return directives.imgSrc.ampLive;
-  return directives.imgSrc.canonicalLive;
+  return directives.imgSrc.canonicalLive.sort();
 };
 
 export const generateScriptSrc = ({ isAmp, isLive }) => {
   if (!isLive && isAmp) return directives.scriptSrc.ampNonLive;
   if (!isLive && !isAmp) return directives.scriptSrc.canonicalNonLive;
   if (isLive && isAmp) return directives.scriptSrc.ampLive;
-  return directives.scriptSrc.canonicalLive;
+  return directives.scriptSrc.canonicalLive.sort();
 };
 
 export const generateStyleSrc = ({ isAmp, isLive }) => {
   if (!isLive && isAmp) return directives.styleSrc.ampNonLive;
   if (!isLive && !isAmp) return directives.styleSrc.canonicalNonLive;
   if (isLive && isAmp) return directives.styleSrc.ampLive;
-  return directives.styleSrc.canonicalLive;
+  return directives.styleSrc.canonicalLive.sort();
 };
 
 export const generateMediaSrc = ({ isAmp, isLive }) => {
   if (!isLive && isAmp) return directives.mediaSrc.ampNonLive;
   if (!isLive && !isAmp) return directives.mediaSrc.canonicalNonLive;
   if (isLive && isAmp) return directives.mediaSrc.ampLive;
-  return directives.mediaSrc.canonicalLive;
+  return directives.mediaSrc.canonicalLive.sort();
 };
 
 export const generateWorkerSrc = ({ isAmp }) =>
@@ -362,7 +362,7 @@ export const generatePrefetchSrc = ({ isAmp, isLive }) => {
   if (!isLive && isAmp) return directives.prefetchSrc.ampNonLive;
   if (!isLive && !isAmp) return directives.prefetchSrc.canonicalNonLive;
   if (isLive && isAmp) return directives.prefetchSrc.ampLive;
-  return directives.prefetchSrc.canonicalLive;
+  return directives.prefetchSrc.canonicalLive.sort();
 };
 
 const helmetCsp = ({ isAmp, isLive, reportOnlyOnLive }) => ({

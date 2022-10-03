@@ -312,18 +312,21 @@ describe('cspHeader', () => {
         'https://*.optimizely.com/',
         'https://modules.wearehearken.eu',
         "'self'",
-      ],
+      ]
+      .sort(),
       defaultSrcExpectation: [
         ...bbcDomains,
         'https://tpc.googlesyndication.com',
         'https://*.safeframe.googlesyndication.com',
         "'self'",
-      ],
+      ]
+      .sort(),
       fontSrcExpectation: [
         ...bbcDomains,
         'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/fonts/fontawesome-webfont.woff',
         'https://fonts.gstatic.com',
-      ],
+      ]
+      .sort(),
       frameSrcExpectation: [
         ...bbcDomains,
         'https://bbc-maps.carto.com',
@@ -340,7 +343,8 @@ describe('cspHeader', () => {
         'https://www.youtube.com',
         'https://www.youtube-nocookie.com',
         "'self'",
-      ],
+      ]
+      .sort(),
       imgSrcExpectation: [
         ...bbcDomains,
         'https://ping.chartbeat.net',
@@ -362,7 +366,8 @@ describe('cspHeader', () => {
         'https://sb.scorecardresearch.com',
         'https://*.twitter.com',
         "data: 'self'",
-      ],
+      ]
+      .sort(),
       scriptSrcExpectation: [
         ...bbcDomains,
         'https://*.wearehearken.eu',
@@ -388,17 +393,19 @@ describe('cspHeader', () => {
         ...advertisingServiceCountryDomains,
         "'self'",
         "'unsafe-inline'",
-      ],
+      ]
+      .sort(),
       styleSrcExpectation: [
         ...bbcDomains,
         'https://platform.twitter.com',
         'https://*.twimg.com',
         'https://fonts.googleapis.com',
         "'unsafe-inline'",
-      ],
-      mediaSrcExpectation: [...bbcDomains],
+      ]
+      .sort(),
+      mediaSrcExpectation: [...bbcDomains].sort(),
       workerSrcExpectation: ["'self'"],
-      prefetchSrcExpectation: ['https://*.safeframe.googlesyndication.com'],
+      prefetchSrcExpectation: ['https://*.safeframe.googlesyndication.com'].sort(),
     },
   ].forEach(
     ({
