@@ -9,6 +9,7 @@ import {
 } from '#psammead/psammead-assets/src/amp-boilerplate';
 import { AMP_GEO_SCRIPT } from '#components/AmpGeo';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
+import isLive from '#lib/utilities/isLive';
 import ResourceHints from '#components/ResourceHints';
 import IfAboveIE9 from '#components/IfAboveIE9Comment';
 
@@ -49,7 +50,7 @@ const Document = ({
   return (
     <html lang="en-GB" {...noJsHtmlAttrs} {...htmlAttrs}>
       <head>
-        {service !== 'pidgin' && <ResourceHints assetOrigins={assetOrigins} />}
+        {(!(service === 'pidgin' && !isLive())) && <ResourceHints assetOrigins={assetOrigins} />}
         {meta}
         {!isAmp && links}
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
