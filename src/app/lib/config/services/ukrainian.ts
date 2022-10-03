@@ -367,10 +367,6 @@ const baseServiceConfig = {
       title: 'Подкасти',
       url: '/ukrainian/podcasts/p09jsy3h',
     },
-    {
-      title: 'РУС',
-      url: '/ukrainian/ukraine_in_russian',
-    },
   ],
 };
 
