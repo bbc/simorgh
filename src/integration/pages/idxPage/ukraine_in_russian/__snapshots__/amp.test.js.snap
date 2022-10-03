@@ -244,13 +244,6 @@ Object {
 }
 `;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 7`] = `
-Object {
-  "text": "Поточна сторінка, РУС",
-  "url": "/ukrainian/ukraine_in_russian",
-}
-`;
-
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header lang code should match text 1`] = `"uk"`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Main heading should match text 1`] = `"РУС"`;
