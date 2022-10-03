@@ -24,7 +24,7 @@ const advertisingDirectives = {
     'https://*.google.com',
     'https://*.googlesyndication.com',
     'https://csi.gstatic.com',
-    'https://secure-dcr-cert.imrworldwide.com',
+    'https://*.imrworldwide.com',
   ],
   frameSrc: [
     'https://*.doubleclick.net',
@@ -34,7 +34,7 @@ const advertisingDirectives = {
   imgSrc: [
     'https://*.adsafeprotected.com',
     'https://*.doubleclick.net',
-    'https://collector.effectivemeasure.net',
+    'https://*.effectivemeasure.net',
     'https://*.google.com',
     'https://*.googlesyndication.com',
     'https://*.gstatic.com',
@@ -43,23 +43,21 @@ const advertisingDirectives = {
   ],
   scriptSrc: [
     'https://*.adsafeprotected.com',
-    'https://adservice.google.co.uk',
-    'https://adservice.google.com',
     'https://cdn.ampproject.org',
     'https://*.g.doubleclick.net',
     'https://*.effectivemeasure.net',
-    'https://fundingchoicesmessages.google.com',
+    'https://adservice.google.co.uk',
+    'https://*.google.com',
     'https://*.googlesyndication.com',
     'https://www.googletagservices.com',
     'https://bbc.gscontxt.net',
     'https://sb.scorecardresearch.com',
-    'https://secure-us.imrworldwide.com',
+    'https://*.imrworldwide.com',
     ...advertisingServiceCountryDomains,
   ],
   prefetchSrc: ['https://*.safeframe.googlesyndication.com'],
   defaultSrc: [
-    ...bbcDomains,
-    'https://*.googlesyndication.com',
+    ...bbcDomains, 'https://*.googlesyndication.com',
   ],
   styleSrc: ['https://fonts.googleapis.com'],
   fontSrc: ['https://fonts.gstatic.com'],
@@ -81,7 +79,7 @@ const directives = {
       ...bbcDomains,
       'https://modules.wearehearken.eu',
       'https://*.akamaihd.net',
-      'https://*.optimizely.com/',
+      'https://*.optimizely.com',
       'https://ws.bbc-reporting-api.app', // Web-Vitals monitoring
       ...cloudwatchRumDirectives.connectSrc,
       ...advertisingDirectives.connectSrc,
@@ -103,7 +101,7 @@ const directives = {
       'https://modules.wearehearken.eu',
       'https://*.akamaihd.net',
       'https://logws1363.ati-host.net', // ATI
-      'https://*.optimizely.com/',
+      'https://*.optimizely.com',
       'https://ws.bbc-reporting-api.app', // Web-Vitals monitoring
       ...cloudwatchRumDirectives.connectSrc,
       ...advertisingDirectives.connectSrc,
@@ -127,9 +125,8 @@ const directives = {
       'https://*.chartbeat.com',
       'https://www.youtube.com', // Social Embeds
       'https://www.youtube-nocookie.com', // Social Embeds, youtube no-cookie
-      'https://platform.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
-      'https://syndication.twitter.com', // Social Embeds
+      'https://*.twitter.com', // Social Embeds
       'https://bbc.com', // Media Player
       'https://bbc-maps.carto.com', // STY include maps
       'https://flo.uri.sh', // STY includes
@@ -153,9 +150,8 @@ const directives = {
       'https://*.chartbeat.com',
       'https://www.youtube.com', // Social Embeds
       'https://www.youtube-nocookie.com', // Social Embeds, youtube no-cookie
-      'https://platform.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
-      'https://syndication.twitter.com', // Social Embeds
+      'https://*.twitter.com', // Social Embeds
       'https://bbc.com', // Media Player
       'https://bbc-maps.carto.com', // STY include maps
       'https://flo.uri.sh', // STY includes
@@ -204,8 +200,7 @@ const directives = {
       'https://ping.chartbeat.net', // Chartbeat
       'https://logws1363.ati-host.net', // ATI analytics
       'http://ping.chartbeat.net', // localhost prod build
-      'https://syndication.twitter.com', // Social Embeds
-      'https://platform.twitter.com', // Social Embeds
+      'https://*.twitter.com', // Social Embeds
       'https://pbs.twimg.com', // Social Embeds
       'https://*.cdninstagram.com', // Social Embeds
       'https://i.ytimg.com', // Social Embeds
