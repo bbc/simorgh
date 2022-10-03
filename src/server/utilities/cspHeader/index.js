@@ -55,7 +55,7 @@ const advertisingDirectives = {
     'https://*.imrworldwide.com',
     ...advertisingServiceCountryDomains,
   ],
-  prefetchSrc: ['https://*.safeframe.googlesyndication.com'],
+  prefetchSrc: ['https://*.googlesyndication.com'],
   defaultSrc: [...bbcDomains, 'https://*.googlesyndication.com'],
   styleSrc: ['https://fonts.googleapis.com'],
   fontSrc: ['https://fonts.gstatic.com'],
@@ -69,7 +69,7 @@ const directives = {
       'https://cdn.ampproject.org', // AMP
       'https://*.ampproject.net', // Social Embeds
       'https://amp-error-reporting.appspot.com', // AMP
-      'https://platform.twitter.com', // Social Embeds, <amp-twitter />
+      'https://*.twitter.com', // Social Embeds, <amp-twitter />
       ...advertisingDirectives.connectSrc,
       "'self'",
     ],
@@ -90,7 +90,7 @@ const directives = {
       'https://*.ampproject.net', // Social Embeds
       'https://amp-error-reporting.appspot.com',
       'https://logws1363.ati-host.net',
-      'https://platform.twitter.com', // Social Embeds, <amp-twitter />
+      'https://*.twitter.com', // Social Embeds, <amp-twitter />
       ...advertisingDirectives.connectSrc,
       "'self'",
     ],
@@ -212,7 +212,7 @@ const directives = {
       ...bbcDomains,
       'https://cdn.ampproject.org',
       'https://*.chartbeat.com',
-      'https://platform.twitter.com', // Social Embeds, <amp-twitter />
+      'https://*.twitter.com', // Social Embeds, <amp-twitter />
       "'self'",
       "'unsafe-inline'",
     ],
@@ -221,7 +221,7 @@ const directives = {
       'https://*.wearehearken.eu',
       'https://ems.wearehearken.eu',
       'https://*.chartbeat.com',
-      'https://platform.twitter.com', // Social Embeds
+      'https://*.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
       'https://*.twimg.com', // Social Embeds
       'https://public.flourish.studio', // STY includes
@@ -234,7 +234,7 @@ const directives = {
       ...bbcDomains,
       'https://cdn.ampproject.org',
       'https://*.chartbeat.com',
-      'https://platform.twitter.com', // Social Embeds, <amp-twitter />
+      'https://*.twitter.com', // Social Embeds, <amp-twitter />
       "'self'",
       "'unsafe-inline'",
     ],
@@ -244,7 +244,7 @@ const directives = {
       'https://*.chartbeat.com',
       'http://*.chartbeat.com', // for localhost canonical connecting via http
       'http://localhost:1124', // for localhost canonical JavaScript
-      'https://platform.twitter.com', // Social Embeds
+      'https://*.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
       'https://*.twimg.com', // Social Embeds
       'https://public.flourish.studio', // STY includes
@@ -258,7 +258,7 @@ const directives = {
     ampLive: [...bbcDomains, "'unsafe-inline'"],
     canonicalLive: [
       ...bbcDomains,
-      'https://platform.twitter.com', // Social Embeds
+      'https://*.twitter.com', // Social Embeds
       'https://*.twimg.com', // Social Embeds
       ...advertisingDirectives.styleSrc,
       "'unsafe-inline'",
@@ -266,7 +266,7 @@ const directives = {
     ampNonLive: [...bbcDomains, "'unsafe-inline'"],
     canonicalNonLive: [
       ...bbcDomains,
-      'https://platform.twitter.com', // Social Embeds
+      'https://*.twitter.com', // Social Embeds
       'https://*.twimg.com', // Social Embeds
       ...advertisingDirectives.styleSrc,
       "'unsafe-inline'",
