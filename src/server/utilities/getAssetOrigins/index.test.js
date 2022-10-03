@@ -23,6 +23,12 @@ const liveCookieOrigins = [
   'https://www.bbc.co.uk/cookieoven',
 ];
 
+const analyticsOrigins = [
+  'https://ping.chartbeat.net',
+  'https://client.rum.us-east-1.amazonaws.com',
+  'https://dataplane.rum.eu-west-1.amazonaws.com',
+];
+
 const fontOrigins = [
   'https://gel.files.bbci.co.uk',
   'https://ws-downloads.files.bbci.co.uk',
@@ -43,6 +49,7 @@ describe('getAssetOrigins', () => {
       'https://ichef.bbci.co.uk',
       'http://some.statichost.net',
       'http://some.ati.static.host.net',
+      ...analyticsOrigins,
     ]);
   });
 
@@ -54,6 +61,7 @@ describe('getAssetOrigins', () => {
       'https://ichef.bbci.co.uk',
       'http://some.statichost.net',
       'http://some.ati.static.host.net',
+      ...analyticsOrigins,
     ]);
   });
 
@@ -65,6 +73,7 @@ describe('getAssetOrigins', () => {
       'https://ichef.bbci.co.uk',
       'http://some.statichost.net',
       'http://some.ati.static.host.net',
+      ...analyticsOrigins,
       ...fontOrigins,
     ]);
   });
@@ -77,6 +86,7 @@ describe('getAssetOrigins', () => {
       'https://ichef.bbci.co.uk',
       'http://some.statichost.net',
       'http://some.ati.static.host.net',
+      ...analyticsOrigins,
       ...fontOrigins,
     ]);
   });
