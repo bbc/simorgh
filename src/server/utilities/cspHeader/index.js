@@ -11,77 +11,55 @@ import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
 
 const cloudwatchRumDirectives = {
   connectSrc: [
-    'https://cognito-identity.eu-west-1.amazonaws.com/',
-    'https://sts.eu-west-1.amazonaws.com/',
-    'https://dataplane.rum.eu-west-1.amazonaws.com/',
+    'https://cognito-identity.eu-west-1.amazonaws.com',
+    'https://sts.eu-west-1.amazonaws.com',
+    'https://dataplane.rum.eu-west-1.amazonaws.com',
   ],
 };
 
 const advertisingDirectives = {
   connectSrc: [
+    'https://*.doubleclick.net',
+    'https://*.effectivemeasure.net',
+    'https://*.google.com',
+    'https://*.googlesyndication.com',
     'https://csi.gstatic.com',
-    'https://pagead2.googlesyndication.com',
-    'https://*.g.doubleclick.net',
-    'https://survey.effectivemeasure.net',
-    'https://collector.effectivemeasure.net',
-    'https://detect-survey.effectivemeasure.net',
-    'https://adservice.google.com',
-    'https://tpc.googlesyndication.com',
-    'https://ad.doubleclick.net',
-    'https://fundingchoicesmessages.google.com',
     'https://secure-dcr-cert.imrworldwide.com',
-    'https://*.safeframe.googlesyndication.com',
   ],
   frameSrc: [
-    'https://*.g.doubleclick.net',
-    'https://tpc.googlesyndication.com',
+    'https://*.doubleclick.net',
     'https://edigitalsurvey.com',
-    'https://*.safeframe.googlesyndication.com',
-    'https://ad.doubleclick.net',
-    'https://secureframe.doubleclick.net',
+    'https://*.googlesyndication.com',
   ],
   imgSrc: [
+    'https://*.adsafeprotected.com',
+    'https://*.doubleclick.net',
     'https://collector.effectivemeasure.net',
-    'https://csi.gstatic.com',
-    'https://pagead2.googlesyndication.com',
-    'https://sb.scorecardresearch.com',
-    'https://secure-us.imrworldwide.com',
-    'https://uaid-linkage.imrworldwide.com',
-    'https://cloudapi.imrworldwide.com',
-    'https://*.redinuid.imrworldwide.com',
-    'https://*.g.doubleclick.net',
-    'https://tpc.googlesyndication.com',
     'https://*.google.com',
-    'https://dt.adsafeprotected.com',
-    'https://pixel.adsafeprotected.com',
-    'https://ad.doubleclick.net',
-    'https://static.doubleclick.net',
-    'https://www.gstatic.com',
+    'https://*.googlesyndication.com',
+    'https://*.gstatic.com',
+    'https://*.imrworldwide.com',
+    'https://sb.scorecardresearch.com',
   ],
   scriptSrc: [
+    'https://*.adsafeprotected.com',
     'https://adservice.google.co.uk',
     'https://adservice.google.com',
     'https://cdn.ampproject.org',
-    'https://collector.effectivemeasure.net',
-    'https://me-ssl.effectivemeasure.net',
-    'https://pixel.adsafeprotected.com',
-    'https://static.adsafeprotected.com',
-    'https://sb.scorecardresearch.com',
     'https://*.g.doubleclick.net',
-    'https://t.effectivemeasure.net',
-    'https://tpc.googlesyndication.com',
+    'https://*.effectivemeasure.net',
+    'https://fundingchoicesmessages.google.com',
+    'https://*.googlesyndication.com',
     'https://www.googletagservices.com',
     'https://bbc.gscontxt.net',
-    'https://secure-us.imrworldwide.com/',
-    'https://fundingchoicesmessages.google.com',
-    'https://pagead2.googlesyndication.com',
+    'https://sb.scorecardresearch.com',
+    'https://secure-us.imrworldwide.com',
     ...advertisingServiceCountryDomains,
   ],
   prefetchSrc: ['https://*.safeframe.googlesyndication.com'],
   defaultSrc: [
     ...bbcDomains,
-    'https://tpc.googlesyndication.com',
-    'https://*.safeframe.googlesyndication.com',
+    'https://*.googlesyndication.com',
   ],
   styleSrc: ['https://fonts.googleapis.com'],
   fontSrc: ['https://fonts.gstatic.com'],
@@ -103,8 +81,7 @@ const directives = {
       ...bbcDomains,
       'https://modules.wearehearken.eu',
       'https://*.akamaihd.net',
-      'https://cdn.optimizely.com/',
-      'https://logx.optimizely.com/',
+      'https://*.optimizely.com/',
       'https://ws.bbc-reporting-api.app', // Web-Vitals monitoring
       ...cloudwatchRumDirectives.connectSrc,
       ...advertisingDirectives.connectSrc,
@@ -126,8 +103,7 @@ const directives = {
       'https://modules.wearehearken.eu',
       'https://*.akamaihd.net',
       'https://logws1363.ati-host.net', // ATI
-      'https://cdn.optimizely.com/',
-      'https://logx.optimizely.com/',
+      'https://*.optimizely.com/',
       'https://ws.bbc-reporting-api.app', // Web-Vitals monitoring
       ...cloudwatchRumDirectives.connectSrc,
       ...advertisingDirectives.connectSrc,
@@ -202,8 +178,7 @@ const directives = {
     canonicalLive: [
       ...bbcDomains,
       'https://ping.chartbeat.net',
-      'https://syndication.twitter.com', // Social Embeds
-      'https://platform.twitter.com', // Social Embeds
+      'https://*.twitter.com', // Social Embeds
       'https://pbs.twimg.com', // Social Embeds
       'https://*.cdninstagram.com', // Social Embeds
       'https://i.ytimg.com', // Social Embeds
@@ -251,8 +226,7 @@ const directives = {
     ],
     canonicalLive: [
       ...bbcDomains,
-      'https://assets.wearehearken.eu',
-      'https://modules.wearehearken.eu',
+      'https://*.wearehearken.eu',
       'https://ems.wearehearken.eu',
       'https://*.chartbeat.com',
       'https://platform.twitter.com', // Social Embeds
@@ -274,9 +248,7 @@ const directives = {
     ],
     canonicalNonLive: [
       ...bbcDomains,
-      'https://assets.wearehearken.eu',
-      'https://modules.wearehearken.eu',
-      'https://ems.wearehearken.eu',
+      'https://*.wearehearken.eu',
       'https://*.chartbeat.com',
       'http://*.chartbeat.com', // for localhost canonical connecting via http
       'http://localhost:1124', // for localhost canonical JavaScript
@@ -312,13 +284,13 @@ const directives = {
     ampLive: [...bbcDomains],
     canonicalLive: [
       ...bbcDomains,
-      'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/fonts/fontawesome-webfont.woff', // Adverts
+      'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/', // Adverts
       ...advertisingDirectives.fontSrc,
     ],
     ampNonLive: [...bbcDomains],
     canonicalNonLive: [
       ...bbcDomains,
-      'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/fonts/fontawesome-webfont.woff', // Adverts
+      'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/', // Adverts
       ...advertisingDirectives.fontSrc,
     ],
   },
