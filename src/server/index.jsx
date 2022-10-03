@@ -135,15 +135,18 @@ const injectDefaultCacheHeader = (req, res, next) => {
 };
 
 const injectResourceHintsHeader = (req, res, next) => {
-  const isPidginService = req.originalUrl.startsWith('/pidgin')
-  
+  const isPidginService = req.originalUrl.startsWith('/pidgin');
+
   if (isPidginService && !isLive()) {
     const assetOrigins = getAssetOrigins('pidgin');
     res.set(
       'Link',
-        assetOrigins.map(
-          domainName =>`<${domainName}>; rel="dns-prefetch", <${domainName}>; rel="preconnect"`,
-        ).join(',')
+      assetOrigins
+        .map(
+          domainName =>
+            `<${domainName}>; rel="dns-prefetch", <${domainName}>; rel="preconnect"`,
+        )
+        .join(','),
     );
   }
   next();
