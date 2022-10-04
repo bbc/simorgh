@@ -2,7 +2,6 @@
 
 import { css, jsx, Theme } from '@emotion/react';
 import Promo from '../../../legacy/components/Promo';
-import { getParagon } from '../../../legacy/psammead/gel-foundations/src/typography';
 import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
 
 type Summary = {
@@ -86,7 +85,9 @@ const HiearchicalGrid = ({ summaries }: Summaries) => {
                   {promo.mediaDuration}
                 </Promo.MediaIcon>
               </Promo.Image>
-              <Promo.Heading typography={i === 0 ? getParagon : null}>
+              <Promo.Heading
+                css={(theme: Theme) => i === 0 && theme.fontSizes.paragon}
+              >
                 <Promo.A href={promo.link}>{promo.title}</Promo.A>
               </Promo.Heading>
               <Promo.Body className="promo-paragraph">
