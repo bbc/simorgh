@@ -23,7 +23,7 @@ const advertisingDirectives = {
     'https://*.effectivemeasure.net',
     'https://*.google.com',
     'https://*.googlesyndication.com',
-    'https://csi.gstatic.com',
+    'https://*.gstatic.com',
     'https://*.imrworldwide.com',
   ],
   frameSrc: [
@@ -75,7 +75,7 @@ const directives = {
     ],
     canonicalLive: [
       ...bbcDomains,
-      'https://modules.wearehearken.eu',
+      'https://*.wearehearken.eu',
       'https://*.akamaihd.net',
       'https://*.optimizely.com',
       'https://ws.bbc-reporting-api.app', // Web-Vitals monitoring
@@ -96,7 +96,7 @@ const directives = {
     ],
     canonicalNonLive: [
       ...bbcDomains,
-      'https://modules.wearehearken.eu',
+      'https://*.wearehearken.eu',
       'https://*.akamaihd.net',
       'https://logws1363.ati-host.net', // ATI
       'https://*.optimizely.com',
@@ -176,7 +176,6 @@ const directives = {
       'https://*.twimg.com', // Social Embeds
       'https://*.cdninstagram.com', // Social Embeds
       'https://i.ytimg.com', // Social Embeds
-      'https://*.twimg.com', // Social Embeds
       ...advertisingDirectives.imgSrc,
       'https://*.googleusercontent.com', // Google Play Store - BBC News Apps - Arabic, Hindi, Mundo, Russian
       "data: 'self'", // needed at the end to maintain proper order
@@ -219,7 +218,6 @@ const directives = {
     canonicalLive: [
       ...bbcDomains,
       'https://*.wearehearken.eu',
-      'https://ems.wearehearken.eu',
       'https://*.chartbeat.com',
       'https://*.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
@@ -303,55 +301,55 @@ const directives = {
 export const generateChildSrc = ({ isAmp }) => (isAmp ? ['blob:'] : ["'self'"]);
 
 export const generateConnectSrc = ({ isAmp, isLive }) => {
-  if (!isLive && isAmp) return directives.connectSrc.ampNonLive;
-  if (!isLive && !isAmp) return directives.connectSrc.canonicalNonLive;
-  if (isLive && isAmp) return directives.connectSrc.ampLive;
+  if (!isLive && isAmp) return directives.connectSrc.ampNonLive.sort();
+  if (!isLive && !isAmp) return directives.connectSrc.canonicalNonLive.sort();
+  if (isLive && isAmp) return directives.connectSrc.ampLive.sort();
   return directives.connectSrc.canonicalLive.sort();
 };
 
 export const generateDefaultSrc = () => {
-  return [...advertisingDirectives.defaultSrc, "'self'"];
+  return [...advertisingDirectives.defaultSrc, "'self'"].sort();
 };
 
 export const generateFontSrc = ({ isAmp, isLive }) => {
-  if (!isLive && isAmp) return directives.fontSrc.ampNonLive;
-  if (!isLive && !isAmp) return directives.fontSrc.canonicalNonLive;
-  if (isLive && isAmp) return directives.fontSrc.ampLive;
+  if (!isLive && isAmp) return directives.fontSrc.ampNonLive.sort();
+  if (!isLive && !isAmp) return directives.fontSrc.canonicalNonLive.sort();
+  if (isLive && isAmp) return directives.fontSrc.ampLive.sort();
   return directives.fontSrc.canonicalLive.sort();
 };
 
 export const generateFrameSrc = ({ isAmp, isLive }) => {
-  if (!isLive && isAmp) return directives.frameSrc.ampNonLive;
-  if (!isLive && !isAmp) return directives.frameSrc.canonicalNonLive;
-  if (isLive && isAmp) return directives.frameSrc.ampLive;
+  if (!isLive && isAmp) return directives.frameSrc.ampNonLive.sort();
+  if (!isLive && !isAmp) return directives.frameSrc.canonicalNonLive.sort();
+  if (isLive && isAmp) return directives.frameSrc.ampLive.sort();
   return directives.frameSrc.canonicalLive.sort();
 };
 
 export const generateImgSrc = ({ isAmp, isLive }) => {
-  if (!isLive && isAmp) return directives.imgSrc.ampNonLive;
-  if (!isLive && !isAmp) return directives.imgSrc.canonicalNonLive;
-  if (isLive && isAmp) return directives.imgSrc.ampLive;
+  if (!isLive && isAmp) return directives.imgSrc.ampNonLive.sort();
+  if (!isLive && !isAmp) return directives.imgSrc.canonicalNonLive.sort();
+  if (isLive && isAmp) return directives.imgSrc.ampLive.sort();
   return directives.imgSrc.canonicalLive.sort();
 };
 
 export const generateScriptSrc = ({ isAmp, isLive }) => {
-  if (!isLive && isAmp) return directives.scriptSrc.ampNonLive;
-  if (!isLive && !isAmp) return directives.scriptSrc.canonicalNonLive;
-  if (isLive && isAmp) return directives.scriptSrc.ampLive;
+  if (!isLive && isAmp) return directives.scriptSrc.ampNonLive.sort();
+  if (!isLive && !isAmp) return directives.scriptSrc.canonicalNonLive.sort();
+  if (isLive && isAmp) return directives.scriptSrc.ampLive.sort();
   return directives.scriptSrc.canonicalLive.sort();
 };
 
 export const generateStyleSrc = ({ isAmp, isLive }) => {
-  if (!isLive && isAmp) return directives.styleSrc.ampNonLive;
-  if (!isLive && !isAmp) return directives.styleSrc.canonicalNonLive;
-  if (isLive && isAmp) return directives.styleSrc.ampLive;
+  if (!isLive && isAmp) return directives.styleSrc.ampNonLive.sort();
+  if (!isLive && !isAmp) return directives.styleSrc.canonicalNonLive.sort();
+  if (isLive && isAmp) return directives.styleSrc.ampLive.sort();
   return directives.styleSrc.canonicalLive.sort();
 };
 
 export const generateMediaSrc = ({ isAmp, isLive }) => {
-  if (!isLive && isAmp) return directives.mediaSrc.ampNonLive;
-  if (!isLive && !isAmp) return directives.mediaSrc.canonicalNonLive;
-  if (isLive && isAmp) return directives.mediaSrc.ampLive;
+  if (!isLive && isAmp) return directives.mediaSrc.ampNonLive.sort();
+  if (!isLive && !isAmp) return directives.mediaSrc.canonicalNonLive.sort();
+  if (isLive && isAmp) return directives.mediaSrc.ampLive.sort();
   return directives.mediaSrc.canonicalLive.sort();
 };
 
@@ -359,9 +357,9 @@ export const generateWorkerSrc = ({ isAmp }) =>
   isAmp ? ['blob:'] : ["'self'"];
 
 export const generatePrefetchSrc = ({ isAmp, isLive }) => {
-  if (!isLive && isAmp) return directives.prefetchSrc.ampNonLive;
-  if (!isLive && !isAmp) return directives.prefetchSrc.canonicalNonLive;
-  if (isLive && isAmp) return directives.prefetchSrc.ampLive;
+  if (!isLive && isAmp) return directives.prefetchSrc.ampNonLive.sort();
+  if (!isLive && !isAmp) return directives.prefetchSrc.canonicalNonLive.sort();
+  if (isLive && isAmp) return directives.prefetchSrc.ampLive.sort();
   return directives.prefetchSrc.canonicalLive.sort();
 };
 
