@@ -208,7 +208,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
         ) : null}
         {location ? (
           <li>
-            <span css={BylineCss.location}>
+            <span role="text" css={BylineCss.location}>
               <span
                 css={[
                   BylineCss.reportingFromText,
