@@ -131,7 +131,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
                 css={[BylineCss.link, BylineCss.authorLink]}
                 href={authorTopicUrl}
               >
-                <strong
+                <span
                   className="byline__link-text"
                   css={[
                     BylineCss.author,
@@ -140,7 +140,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
                   ]}
                 >
                   {author}
-                </strong>
+                </span>
                 {isRtl ? (
                   <LeftChevron css={BylineCss.authorChevron} />
                 ) : (
@@ -151,7 +151,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
           ) : (
             <span role="text">
               <VisuallyHiddenText>{`${authorTranslated}, `}</VisuallyHiddenText>
-              <strong
+              <span
                 css={[
                   BylineCss.author,
                   BylineCss.authorLink,
@@ -160,14 +160,14 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
                 ]}
               >
                 {author}
-              </strong>
+              </span>
             </span>
           )}
         </li>
         <li>
           <span role="text">
             <VisuallyHiddenText>{`${jobRoleTranslated}, `} </VisuallyHiddenText>
-            <strong
+            <span
               css={[
                 BylineCss.jobRole,
                 getSansBold(service),
@@ -175,7 +175,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
               ]}
             >
               {jobRole}
-            </strong>
+            </span>
           </span>
         </li>
         {twitterLink ? (
