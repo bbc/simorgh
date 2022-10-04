@@ -2,16 +2,16 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../utilities/pixelsToRem';
 
 export default {
-  parent: ({ spacings, palette }: Theme) =>
+  parent: ({ palette }: Theme) =>
     css({
       backgroundColor: palette.WHITE,
-      padding: `${spacings.QUADRUPLE}rem ${spacings.DOUBLE}rem`,
+      padding: `${pixelsToRem(16)}rem`,
       minHeight: 280,
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'flex-start',
-      border: `${pixelsToRem(3)}rem solid transparent`,
+      border: `${pixelsToRem(1)}rem solid ${palette.GREY_5}`,
     }),
 
   heading: ({ palette }: Theme) =>

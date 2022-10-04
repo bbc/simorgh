@@ -3,7 +3,7 @@
 exports[`Embed Consent Banner should match snapshot - AMP 1`] = `
 .emotion-0 {
   background-color: #FFFFFF;
-  padding: 2rem 1rem;
+  padding: 1rem;
   min-height: 280px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -20,7 +20,7 @@ exports[`Embed Consent Banner should match snapshot - AMP 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  border: 0.1875rem solid transparent;
+  border: 0.0625rem solid #8A8C8E;
 }
 
 .emotion-1 {
@@ -177,7 +177,7 @@ exports[`Embed Consent Banner should match snapshot - AMP 1`] = `
 exports[`Embed Consent Banner should match snapshot 1`] = `
 .emotion-0 {
   background-color: #FFFFFF;
-  padding: 2rem 1rem;
+  padding: 1rem;
   min-height: 280px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -194,7 +194,7 @@ exports[`Embed Consent Banner should match snapshot 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  border: 0.1875rem solid transparent;
+  border: 0.0625rem solid #8A8C8E;
 }
 
 .emotion-1 {
