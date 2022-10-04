@@ -39,7 +39,7 @@ describe('Byline', () => {
     expect(container).toBeEmptyDOMElement();
   });
 
-  it('should render Byline correctly when passed a Twitter Link', () => {
+  it('should render Byline correctly when passed Twitter and TopicUrl links', () => {
     render(<Byline blocks={bylineWithLink} />);
 
     const AuthorLink = screen.getByText('Single Byline (all values)');
@@ -49,6 +49,8 @@ describe('Byline', () => {
     expect(AuthorLink).toBeInTheDocument();
     expect(TwitterLink).toBeInTheDocument();
     expect(Links.length).toBe(2);
+    expect(Links[0]).toHaveAttribute('href', '/news/topics/c8qx38nq177t');
+    expect(Links[1]).toHaveAttribute('href', 'https://twitter.com/test');
   });
 
   it('should render a section with role region', () => {
@@ -134,7 +136,7 @@ describe('Byline', () => {
 
     expect(AuthorLink).toBeInTheDocument();
     expect(TwitterLink).toBeInTheDocument();
-    expect(Links.length).toBe(2);
+    expect(Links.length).toBe(1);
     expect(Location).toBeInTheDocument();
     expect(Image).toBeInTheDocument();
   });

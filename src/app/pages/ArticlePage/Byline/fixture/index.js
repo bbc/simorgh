@@ -2,6 +2,8 @@ export const bylineWithNoRole = [
   {
     type: 'contributor',
     model: {
+      topicId: '',
+      topicUrl: '/news/topics/c8qx38nq177t',
       blocks: [
         {
           type: 'name',
@@ -125,6 +127,8 @@ export const bylineWithNoAuthor = [
   {
     type: 'contributor',
     model: {
+      topicId: '',
+      topicUrl: '',
       blocks: [
         {
           type: 'role',
@@ -248,6 +252,8 @@ export const bylineWithNameAndRole = [
   {
     type: 'contributor',
     model: {
+      topicId: '',
+      topicUrl: '',
       blocks: [
         {
           type: 'name',
@@ -316,6 +322,8 @@ export const bylineWithLink = [
   {
     type: 'contributor',
     model: {
+      topicId: '',
+      topicUrl: '/news/topics/c8qx38nq177t',
       blocks: [
         {
           type: 'name',
@@ -423,6 +431,8 @@ export const bylineWithLinkAndLocation = [
   {
     type: 'contributor',
     model: {
+      topicId: '',
+      topicUrl: '',
       blocks: [
         {
           type: 'name',
@@ -559,6 +569,8 @@ export const bylineWithNonPngPhoto = [
   {
     type: 'contributor',
     model: {
+      topicId: '',
+      topicUrl: '',
       blocks: [
         {
           type: 'name',

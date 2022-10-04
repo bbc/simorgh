@@ -81,6 +81,9 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
 
   if (!image.endsWith('.png')) image = '';
 
+  const contributorBlock = pathOr([], [0], blocks);
+  const authorTopicUrl = pathOr('', ['model', 'topicUrl'], contributorBlock);
+
   if (!(author && jobRole)) return null;
 
   const authorTranslated = pathOr('Author', ['byline', 'author'], translations);
@@ -124,12 +127,12 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
           </li>
         )}
         <li>
-          {twitterLink ? (
+          {authorTopicUrl ? (
             <React.Fragment>
               <VisuallyHiddenText>{`${authorTranslated}, `}</VisuallyHiddenText>
               <a
                 css={[BylineCss.link, BylineCss.authorLink]}
-                href={twitterLink}
+                href={authorTopicUrl}
               >
                 <strong
                   className="byline__link-text"
@@ -154,6 +157,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
               <strong
                 css={[
                   BylineCss.author,
+                  BylineCss.authorLink,
                   getSansBold(service),
                   getBodyCopy(script),
                 ]}
