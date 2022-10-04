@@ -85,6 +85,7 @@ export default {
     css({
       color: palette.SHADOW,
       display: 'block',
+      paddingTop: ` ${pixelsToRem(4)}rem`,
     }),
 
   reportingFromText: ({ palette }: Theme) =>
@@ -110,8 +111,7 @@ export default {
       justifyContent: 'center',
       width: `${pixelsToRem(80)}rem`,
       height: `${pixelsToRem(60)}rem`,
-      border: `solid ${pixelsToRem(1)}rem #979797`,
-      backgroundColor: '#d8d8d8',
+      backgroundColor: '#3a3c3e',
       overflow: 'visible',
     }),
 
@@ -137,7 +137,13 @@ export default {
       },
     ]),
 
-  authorLink: () => css({ paddingTop: '1.375rem' }),
+  authorLink: () =>
+    css({
+      paddingTop: '1.375rem',
+      paddingBottom: `${pixelsToRem(4)}rem`,
+      paddingInlineEnd: '2.75rem',
+    }),
 
-  twitterLink: () => css({ paddingBottom: '1.6rem' }),
+  twitterLink: () =>
+    css({ paddingBottom: '1.375rem', paddingTop: `${pixelsToRem(4)}rem` }),
 };
