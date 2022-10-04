@@ -137,20 +137,24 @@ describe('Topic Page', () => {
   });
 
   it('should show ads when enabled', () => {
-    const { container } = render(
-      <TopicPage pageData={pidginMultipleItems} />,
-      getOptionParams({
-        adsToggledOn: true,
-        showAdsBasedOnLocation: true,
-      }),
-    );
+    [
+      [true, true],
+      [true, false],
+      [false, true],
+      [false, false],
+    ].forEach(([adsToggledOn, showAdsBasedOnLocation]) => {
+      const { container } = render(
+        <TopicPage pageData={pidginMultipleItems} />,
+        getOptionParams({ adsToggledOn, showAdsBasedOnLocation }),
+      );
 
-    const shouldShowAds = true;
-    const adElement = container.querySelector('[data-e2e="advertisement"]');
-    if (shouldShowAds) {
-      expect(adElement).toBeInTheDocument();
-    } else {
-      expect(adElement).not.toBeInTheDocument();
-    }
+      const shouldShowAds = adsToggledOn && showAdsBasedOnLocation;
+      const adElement = container.querySelector('[data-e2e="advertisement"]');
+      if (shouldShowAds) {
+        expect(adElement).toBeInTheDocument();
+      } else {
+        expect(adElement).not.toBeInTheDocument();
+      }
+    });
   });
 });
