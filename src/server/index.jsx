@@ -4,7 +4,6 @@ import ramdaPath from 'ramda/src/path';
 import omit from 'ramda/src/omit';
 // not part of react-helmet
 import helmet from 'helmet';
-import gnuTP from 'gnu-terry-pratchett';
 import routes from '#app/routes';
 import nodeLogger from '#lib/logger.node';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
@@ -31,6 +30,7 @@ import sendCustomMetric from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
 import local from './local';
 import getAgent from './utilities/getAgent';
+import getAssetOrigins from './utilities/getAssetOrigins';
 
 const morgan = require('morgan');
 
@@ -78,7 +78,6 @@ server
       contentSecurityPolicy: false,
     }),
   )
-  .use(gnuTP())
   .use(logResponseTime)
   .get('/status', (req, res) => {
     try {
@@ -134,6 +133,23 @@ const injectDefaultCacheHeader = (req, res, next) => {
   next();
 };
 
+const injectResourceHintsHeader = (req, res, next) => {
+  const isPidginService = req.originalUrl.startsWith('/pidgin');
+
+  if (isPidginService) {
+    const assetOrigins = getAssetOrigins('pidgin');
+    res.set(
+      'Link',
+      assetOrigins
+        .map(
+          domainName =>
+            `<${domainName}>; rel="dns-prefetch", <${domainName}>; rel="preconnect"`,
+        )
+        .join(','),
+    );
+  }
+  next();
+};
 // Set Referrer-Policy
 const injectReferrerPolicyHeader = (req, res, next) => {
   res.set('Referrer-Policy', 'no-referrer-when-downgrade');
@@ -147,6 +163,7 @@ server.get(
     injectCspHeaderProdBuild,
     injectDefaultCacheHeader,
     injectReferrerPolicyHeader,
+    injectResourceHintsHeader,
   ],
   async ({ url, query, headers, path: urlPath }, res) => {
     logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
