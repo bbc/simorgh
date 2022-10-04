@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import { render } from '../../components/react-testing-library-with-providers';
 import TopicPage from './TopicPage';
@@ -27,10 +28,8 @@ const getOptionParams = ({
   service,
   lang,
   toggles: {
-    toggleState: {
-      ads: {
-        enabled: adsToggledOn,
-      },
+    ads: {
+      enabled: adsToggledOn,
     },
   },
 });
@@ -144,7 +143,9 @@ describe('Topic Page', () => {
       [false, false],
     ].forEach(([adsToggledOn, showAdsBasedOnLocation]) => {
       const { container } = render(
-        <TopicPage pageData={pidginMultipleItems} />,
+        <BrowserRouter>
+          <TopicPage pageData={pidginMultipleItems} />
+        </BrowserRouter>,
         getOptionParams({ adsToggledOn, showAdsBasedOnLocation }),
       );
 
