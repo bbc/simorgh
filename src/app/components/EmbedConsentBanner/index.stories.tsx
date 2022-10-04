@@ -1,7 +1,6 @@
 import React, { PropsWithChildren } from 'react';
 import { css } from '@emotion/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
 import { C_GREY_2 } from '../../legacy/psammead/psammead-styles/src/colours';
@@ -29,7 +28,7 @@ const Component = ({ service, variant, isAmp }: Props) => {
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
         <BackgroundColorWrapper>
-          <EmbedBanner pageType={ARTICLE_PAGE} provider="youtube">
+          <EmbedBanner provider="youtube">
             <div>Embed goes here</div>
           </EmbedBanner>
         </BackgroundColorWrapper>

@@ -14,13 +14,17 @@ export default {
       border: `${pixelsToRem(1)}rem solid ${palette.GREY_5}`,
     }),
 
-  heading: ({ palette }: Theme) =>
+  heading: ({ palette, fontSizes, fontVariants }: Theme) =>
     css({
+      ...fontVariants.sansBold,
+      ...fontSizes.greatPrimer,
       color: palette.GREY_10,
     }),
 
-  textBody: ({ spacings, palette }: Theme) =>
+  textBody: ({ spacings, fontSizes, fontVariants, palette }: Theme) =>
     css({
+      ...fontVariants.sansRegular,
+      ...fontSizes.bodyCopy,
       color: palette.GREY_10,
       margin: `${spacings.DOUBLE}rem 0`,
 
@@ -41,8 +45,10 @@ export default {
       },
     }),
 
-  button: ({ spacings, palette }: Theme) =>
+  button: ({ spacings, fontSizes, fontVariants, palette }: Theme) =>
     css({
+      ...fontVariants.sansBold,
+      ...fontSizes.pica,
       color: palette.GREY_10,
       backgroundColor: palette.WHITE,
       border: `${pixelsToRem(1)}rem solid ${palette.PHILIPPINE_GREY}`,
