@@ -861,7 +861,7 @@ export const bylineWithPngPhoto = [
                   width: 640,
                   height: 562,
                   locator:
-                    'https://github.com/bbc/simorgh/blob/WSTEAM1-139-bylines-image-component/src/app/pages/ArticlePage/Byline/testAssets/ReporterCutOuts_0038_Mayeni-Jones-Protrait.png',
+                    '../testAssets/ReporterCutOuts_0038_Mayeni-Jones-80x80.png',
                   originCode: 'cpsdevpb',
                 },
               },
