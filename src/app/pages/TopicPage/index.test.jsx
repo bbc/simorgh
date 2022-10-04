@@ -5,6 +5,7 @@ import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import ThemeProvider from '../../components/ThemeProvider';
 import TopicPage from './TopicPage';
 import {
   pidginMultipleItems,
@@ -43,9 +44,11 @@ const TopicPageWithContext = ({
         pageType={TOPIC_PAGE}
         service={service}
       >
-        <ServiceContextProvider service={service} lang={lang}>
-          <TopicPage pageData={pageData} />
-        </ServiceContextProvider>
+        <ThemeProvider service={service}>
+          <ServiceContextProvider service={service} lang={lang}>
+            <TopicPage pageData={pageData} />
+          </ServiceContextProvider>
+        </ThemeProvider>
       </RequestContextProvider>
     </ToggleContext.Provider>
   </BrowserRouter>
