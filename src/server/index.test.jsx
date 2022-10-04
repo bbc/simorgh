@@ -1389,26 +1389,6 @@ describe('Server HTTP Headers - Status Endpoint', () => {
   it(`should have X-XSS-Protection set to '1; mode=block' `, () => {
     validateHttpHeader(statusRequest.headers, 'x-xss-protection', '0');
   });
-
-  describe("should set 'x-clacks-overhead' header", () => {
-    it('should send the message on', async () => {
-      validateHttpHeader(
-        statusRequest.headers,
-        'x-clacks-overhead',
-        'GNU Terry Pratchett',
-      );
-    });
-
-    it('should not log the message', async () => {
-      global.console.log = jest.fn();
-
-      await makeRequest('/status');
-
-      expect(global.console.log).not.toHaveBeenCalledWith(
-        'GNU Terry Pratchett',
-      );
-    });
-  });
 });
 
 describe('Server HTTP Headers - Page Endpoints', () => {
