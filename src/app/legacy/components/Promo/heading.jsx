@@ -1,16 +1,11 @@
 import styled from '@emotion/styled';
 
-import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
-import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
-import { getBodyCopy } from '#psammead/gel-foundations/src/typography';
-import { C_EBON } from '#psammead/psammead-styles/src/colours';
-
 const Heading = styled.h2`
-  ${({ service }) => getSerifMedium(service)}
-  ${({ typography, script }) => typography?.(script) || getBodyCopy(script)}
-  color: ${C_EBON};
+  ${props => props.theme.fontVariants.serifMedium}
+  ${props => props.theme.fontSizes.bodyCopy}
+  color: ${props => props.theme.palette.C_EBON};
   margin-top: 0;
-  margin-bottom: ${GEL_SPACING};
+  margin-bottom: ${props => props.theme.spacings.FULL};
 `;
 
 export default Heading;
