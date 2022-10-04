@@ -103,14 +103,16 @@ export default {
       },
     }),
 
-  Image: () =>
+  ImageWrapper: () =>
     css({
-      display: 'block',
+      display: 'inline-flex',
+      alignItems: 'flex-end',
+      justifyContent: 'center',
       width: `${pixelsToRem(80)}rem`,
-      height: `${pixelsToRem(80)}rem`,
+      height: `${pixelsToRem(60)}rem`,
       border: `solid ${pixelsToRem(1)}rem #979797`,
       backgroundColor: '#d8d8d8',
-      overflow: 'hidden',
+      overflow: 'visible',
     }),
 
   imageLtr: () =>

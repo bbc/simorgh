@@ -119,8 +119,8 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
           <li
             css={
               isRtl
-                ? [BylineCss.imageRtl, BylineCss.Image]
-                : [BylineCss.imageLtr, BylineCss.Image]
+                ? [BylineCss.imageRtl, BylineCss.ImageWrapper]
+                : [BylineCss.imageLtr, BylineCss.ImageWrapper]
             }
           >
             <Image src={image} alt="" width={80} height={80} />
