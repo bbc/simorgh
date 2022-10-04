@@ -6,6 +6,15 @@ exports[`Document Component should render AMP version correctly 1`] = `
   lang="test"
 >
   <head>
+    <link
+      crossorigin="anonymous"
+      href="http://example.com"
+      rel="preconnect"
+    />
+    <link
+      href="http://example.com"
+      rel="dns-prefetch"
+    />
     <meta
       content="width=device-width, initial-scale=1, minimum-scale=1"
       data-react-helmet="true"
@@ -15,15 +24,6 @@ exports[`Document Component should render AMP version correctly 1`] = `
       href="/favicon.ico"
       rel="shortcut icon"
       type="image/x-icon"
-    />
-    <link
-      crossorigin="anonymous"
-      href="http://example.com"
-      rel="preconnect"
-    />
-    <link
-      href="http://example.com"
-      rel="dns-prefetch"
     />
     <title
       data-react-helmet="true"
@@ -96,6 +96,15 @@ exports[`Document Component should render correctly 1`] = `
   lang="test"
 >
   <head>
+    <link
+      crossorigin="anonymous"
+      href="http://example.com"
+      rel="preconnect"
+    />
+    <link
+      href="http://example.com"
+      rel="dns-prefetch"
+    />
     <meta
       content="width=device-width, initial-scale=1, minimum-scale=1"
       data-react-helmet="true"
@@ -117,15 +126,6 @@ exports[`Document Component should render correctly 1`] = `
       href="/favicon.ico"
       rel="shortcut icon"
       type="image/x-icon"
-    />
-    <link
-      crossorigin="anonymous"
-      href="http://example.com"
-      rel="preconnect"
-    />
-    <link
-      href="http://example.com"
-      rel="dns-prefetch"
     />
     <title
       data-react-helmet="true"
