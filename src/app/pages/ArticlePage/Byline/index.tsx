@@ -141,6 +141,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
               src={image}
               alt=""
               placeholder={false}
+              aspectRatio={[1, 1]}
             />
           </li>
         )}
