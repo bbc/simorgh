@@ -10,10 +10,10 @@ type Summary = {
   type: string;
   id: string;
   link?: string;
-  firstPublished: string | number;
+  firstPublished?: string | number;
   mediaDuration?: string | number;
-  imageUrl: string;
-  imageAlt: string;
+  imageUrl?: string;
+  imageAlt?: string;
   mediaType?: 'audio' | 'video' | 'photogallery';
 };
 
@@ -77,7 +77,7 @@ const HiearchicalGrid = ({ summaries }: Summaries) => {
           >
             <Promo>
               <Promo.Image
-                src={promo.imageUrl}
+                src={promo.imageUrl || ''}
                 alt={promo.imageAlt}
                 loading="lazy"
               >
