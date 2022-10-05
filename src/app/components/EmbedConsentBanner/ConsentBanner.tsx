@@ -3,6 +3,8 @@ import { jsx } from '@emotion/react';
 import { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
 
+import Text from '../Text';
+import Paragraph from '../Paragraph';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { SocialEmbedProviders } from '../../models/types/global';
 import { Translations } from '../../models/types/translations';
@@ -170,20 +172,28 @@ const ConsentBanner = ({
       id={`consentBanner${id ? `-${id}` : ''}`}
       css={consentBannerCss.parent}
     >
-      <strong data-testid="banner-heading" css={consentBannerCss.heading}>
+      <Text
+        as="strong"
+        data-testid="banner-heading"
+        fontVariant="sansBold"
+        size="greatPrimer"
+        css={consentBannerCss.heading}
+      >
         {consentTranslations.heading}
-      </strong>
-      <p data-testid="banner-body" css={consentBannerCss.textBody}>
+      </Text>
+      <Paragraph data-testid="banner-body" css={consentBannerCss.textBody}>
         {consentTranslations.body}
-      </p>
-      <button
-        data-testid="banner-button"
-        css={consentBannerCss.button}
+      </Paragraph>
+      <Text
+        as="button"
         type="button"
+        data-testid="banner-button"
+        fontVariant="sansBold"
+        css={consentBannerCss.button}
         {...clickHandler}
       >
         {consentTranslations.button}
-      </button>
+      </Text>
     </div>
   );
 };
