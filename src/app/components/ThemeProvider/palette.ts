@@ -19,6 +19,7 @@ export const GREY_2 = '#F6F6F6';
 export const GREY_3 = '#E6E8EA';
 export const GREY_5 = '#8A8C8E';
 export const GREY_6 = '#545658';
+export const GREY_7 = '#3A3C3E';
 export const GREY_8 = '#202224';
 export const KINGFISHER = '#11708C';
 export const LE_TEAL = '#09838B';

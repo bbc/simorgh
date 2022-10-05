@@ -104,14 +104,14 @@ export default {
       },
     }),
 
-  ImageWrapper: () =>
+  ImageWrapper: ({ palette }: Theme) =>
     css({
       display: 'inline-flex',
       alignItems: 'flex-end',
       justifyContent: 'center',
       width: `${pixelsToRem(80)}rem`,
       height: `${pixelsToRem(60)}rem`,
-      backgroundColor: '#3a3c3e',
+      backgroundColor: `${palette.GREY_7}`,
       overflow: 'visible',
     }),
 
