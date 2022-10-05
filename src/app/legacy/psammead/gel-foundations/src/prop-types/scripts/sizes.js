@@ -1,8 +1,8 @@
-import { number } from 'prop-types';
+import { string } from 'prop-types';
 
 const sizesPropTypes = {
-  fontSize: number.isRequired,
-  lineHeight: number.isRequired,
+  fontSize: string.isRequired,
+  lineHeight: string.isRequired,
 };
 
 export default sizesPropTypes;
