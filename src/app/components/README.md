@@ -41,14 +41,16 @@ it('should render the title', async () => {
 
 The custom render method uses default values in the providers. The default values are:
 
-| prop     | value                                                              |
-| -------- | ------------------------------------------------------------------ |
-| isAmp    | false                                                              |
-| pageData | [c0g992jmmkko.json](../../../data/news/articles/c0g992jmmkko.json) |
-| pageType | 'article'                                                          |
-| pathname | '/news/articles/c0g992jmmkko'                                      |
-| service  | 'news'                                                             |
-| toggles  | {}                                                                 |
+| prop                    | value                                                              |
+| ----------------------- | -------------------------------------------------------------------|
+| isAmp                   | false                                                              |
+| pageData                | [c0g992jmmkko.json](../../../data/news/articles/c0g992jmmkko.json) |
+| pageType                | 'article'                                                          |
+| pathname                | '/news/articles/c0g992jmmkko'                                      |
+| service                 | 'news'                                                             |
+| toggles                 | {}                                                                 |
+| variant                 | 'default'                                                          |
+| showAdsBasedOnLocation  | false                                                              |
 
 You can override any of these values using the options argument in the render method:
 

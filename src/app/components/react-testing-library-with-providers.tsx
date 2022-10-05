@@ -20,6 +20,7 @@ interface Props {
   pathname?: string;
   service?: Services;
   toggles?: any;
+  showAdsBasedOnLocation?: boolean;
   variant?: Variants;
 }
 
@@ -34,6 +35,7 @@ const AllTheProviders: FC<Props> = ({
   service = 'news',
   toggles = {},
   variant = 'default',
+  showAdsBasedOnLocation = false,
 }: Props) => {
   return (
     <ThemeProvider service={service} variant={variant}>
@@ -45,6 +47,7 @@ const AllTheProviders: FC<Props> = ({
             isAmp={isAmp}
             service={service}
             pathname={pathname}
+            showAdsBasedOnLocation={showAdsBasedOnLocation}
           >
             <EventTrackingContextProvider pageData={pageData}>
               <UserContextProvider>{children}</UserContextProvider>
@@ -60,8 +63,16 @@ const customRender = (
   ui: ReactElement,
   options?: Omit<RenderOptions, 'wrapper'> & Omit<Props, 'children'>,
 ) => {
-  const { isAmp, pageData, pageType, pathname, service, toggles, variant } =
-    options || {};
+  const {
+    isAmp,
+    pageData,
+    pageType,
+    pathname,
+    service,
+    toggles,
+    variant,
+    showAdsBasedOnLocation,
+  } = options || {};
 
   return render(ui, {
     wrapper: ({ children }) => (
@@ -73,6 +84,7 @@ const customRender = (
         service={service}
         toggles={toggles}
         variant={variant}
+        showAdsBasedOnLocation={showAdsBasedOnLocation}
       >
         {children}
       </AllTheProviders>
