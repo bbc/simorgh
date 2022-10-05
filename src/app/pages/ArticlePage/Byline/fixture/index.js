@@ -861,7 +861,7 @@ export const bylineWithPngPhoto = [
                   width: 640,
                   height: 562,
                   locator:
-                    '../testAssets/ReporterCutOuts_0038_Mayeni-Jones-80x80.png',
+                    'https://ichef.bbci.co.uk/news/png/480/cpsprodpb/f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
                   originCode: 'cpsdevpb',
                 },
               },
