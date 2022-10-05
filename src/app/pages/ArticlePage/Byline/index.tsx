@@ -17,6 +17,7 @@ import {
   getSansRegularItalic,
 } from '../../../legacy/psammead/psammead-styles/src/font-styles';
 import Image from '../../../components/Image';
+import buildIChefURL from '../../../lib/utilities/ichefURL';
 
 type Props = {
   blocks: any;
@@ -73,11 +74,23 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
     ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
     locationBlock,
   );
-  let image = pathOr(
+  const locator = pathOr(
     '',
     ['model', 'blocks', 0, 'model', 'locator'],
     imageBlock,
   );
+  const originCode = pathOr(
+    '',
+    ['model', 'blocks', 0, 'model', 'originCode'],
+    imageBlock,
+  );
+  const DEFAULT_IMAGE_RES = 160;
+  let image = buildIChefURL({
+    originCode,
+    locator,
+    resolution: DEFAULT_IMAGE_RES,
+    isPng: true,
+  });
 
   if (!image.endsWith('.png')) image = '';
 
