@@ -137,6 +137,12 @@ export default {
       },
     ]),
 
+  imageSrc: () =>
+    css({
+      width: `${pixelsToRem(80)}rem`,
+      height: `${pixelsToRem(80)}rem`,
+    }),
+
   authorLink: () =>
     css({
       paddingTop: '1.375rem',
