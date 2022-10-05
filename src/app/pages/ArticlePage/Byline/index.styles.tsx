@@ -85,6 +85,7 @@ export default {
     css({
       color: palette.SHADOW,
       display: 'block',
+      paddingTop: ` ${pixelsToRem(4)}rem`,
     }),
 
   reportingFromText: ({ palette }: Theme) =>
@@ -103,14 +104,15 @@ export default {
       },
     }),
 
-  Image: () =>
+  ImageWrapper: ({ palette }: Theme) =>
     css({
-      display: 'block',
+      display: 'inline-flex',
+      alignItems: 'flex-end',
+      justifyContent: 'center',
       width: `${pixelsToRem(80)}rem`,
-      height: `${pixelsToRem(80)}rem`,
-      border: `solid ${pixelsToRem(1)}rem #979797`,
-      backgroundColor: '#d8d8d8',
-      overflow: 'hidden',
+      height: `${pixelsToRem(60)}rem`,
+      backgroundColor: `${palette.GREY_7}`,
+      overflow: 'visible',
     }),
 
   imageLtr: () =>
@@ -135,13 +137,19 @@ export default {
       },
     ]),
 
-  imageSource: () =>
+  imageSrc: () =>
     css({
-      maxWidth: '100%',
-      height: 'auto',
+      width: `${pixelsToRem(80)}rem`,
+      height: `${pixelsToRem(80)}rem`,
     }),
 
-  authorLink: () => css({ paddingTop: '1.375rem' }),
+  authorLink: () =>
+    css({
+      paddingTop: '1.375rem',
+      paddingBottom: `${pixelsToRem(4)}rem`,
+      paddingInlineEnd: '2.75rem',
+    }),
 
-  twitterLink: () => css({ paddingBottom: '1.6rem' }),
+  twitterLink: () =>
+    css({ paddingBottom: '1.375rem', paddingTop: `${pixelsToRem(4)}rem` }),
 };

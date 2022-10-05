@@ -28,6 +28,7 @@ interface Palette extends BrandPalette {
   GREY_3: string;
   GREY_5: string;
   GREY_6: string;
+  GREY_7: string;
   GREY_8: string;
   KINGFISHER: string;
   LE_TEAL: string;

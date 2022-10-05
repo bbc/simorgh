@@ -16,6 +16,8 @@ import {
   getSansRegular,
   getSansRegularItalic,
 } from '../../../legacy/psammead/psammead-styles/src/font-styles';
+import Image from '../../../components/Image';
+import buildIChefURL from '../../../lib/utilities/ichefURL';
 
 type Props = {
   blocks: any;
@@ -72,11 +74,25 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
     ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
     locationBlock,
   );
-  const image = pathOr(
+  const locator = pathOr(
     '',
     ['model', 'blocks', 0, 'model', 'locator'],
     imageBlock,
   );
+  const originCode = pathOr(
+    '',
+    ['model', 'blocks', 0, 'model', 'originCode'],
+    imageBlock,
+  );
+  const DEFAULT_IMAGE_RES = 160;
+  let image = buildIChefURL({
+    originCode,
+    locator,
+    resolution: DEFAULT_IMAGE_RES,
+    isPng: true,
+  });
+
+  if (!image.endsWith('.png')) image = '';
 
   const contributorBlock = pathOr([], [0], blocks);
   const authorTopicUrl = pathOr('', ['model', 'topicUrl'], contributorBlock);
@@ -116,11 +132,16 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
           <li
             css={
               isRtl
-                ? [BylineCss.imageRtl, BylineCss.Image]
-                : [BylineCss.imageLtr, BylineCss.Image]
+                ? [BylineCss.imageRtl, BylineCss.ImageWrapper]
+                : [BylineCss.imageLtr, BylineCss.ImageWrapper]
             }
           >
-            <img css={BylineCss.imageSource} src={image} alt="" />
+            <Image
+              css={BylineCss.imageSrc}
+              src={image}
+              alt=""
+              placeholder={false}
+            />
           </li>
         )}
         <li>

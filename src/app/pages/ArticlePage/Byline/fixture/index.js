@@ -565,7 +565,7 @@ export const bylineWithLinkAndLocation = [
   },
 ];
 
-export const bylineWithPhoto = [
+export const bylineWithNonPngPhoto = [
   {
     type: 'contributor',
     model: {
@@ -588,7 +588,7 @@ export const bylineWithPhoto = [
                           {
                             type: 'fragment',
                             model: {
-                              text: 'Single Byline (all values)',
+                              text: 'Clark Kent',
                               attributes: [],
                             },
                           },
@@ -617,7 +617,7 @@ export const bylineWithPhoto = [
                           {
                             type: 'fragment',
                             model: {
-                              text: 'Test',
+                              text: 'Journalist',
                               attributes: [],
                             },
                           },
@@ -652,7 +652,7 @@ export const bylineWithPhoto = [
                                 {
                                   type: 'fragment',
                                   model: {
-                                    text: 'test',
+                                    text: 'superman',
                                     attributes: [],
                                   },
                                 },
@@ -710,6 +710,158 @@ export const bylineWithPhoto = [
                   locator:
                     'https://scarletjourney.rutgers.edu/crm/wp-content/uploads/sites/393/2017/12/christopher-reeve-superman.jpg',
                   originCode: 'cpsdevpb',
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+];
+
+export const bylineWithPngPhoto = [
+  {
+    type: 'contributor',
+    model: {
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Mayeni Jones',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Mayeni Jones',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'role',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Journalist',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Journalist',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'link',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'MayeniJones',
+                        blocks: [
+                          {
+                            type: 'urlLink',
+                            model: {
+                              text: 'MayeniJones',
+                              locator: 'https://twitter.com/MayeniJones',
+                              blocks: [
+                                {
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'MayeniJones',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                              isExternal: true,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'location',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Lagos, Ng',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Lagos, Ng',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'image',
+          model: {
+            blocks: [
+              {
+                type: 'rawImage',
+                model: {
+                  width: 640,
+                  height: 562,
+                  locator: 'f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+                  originCode: 'cpsprodpb',
                 },
               },
             ],

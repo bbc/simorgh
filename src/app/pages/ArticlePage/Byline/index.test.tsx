@@ -12,7 +12,8 @@ import {
   bylineWithNameAndRole,
   bylineWithLink,
   bylineWithLinkAndLocation,
-  bylineWithPhoto,
+  bylineWithNonPngPhoto,
+  bylineWithPngPhoto,
 } from './fixture';
 
 describe('Byline', () => {
@@ -69,19 +70,38 @@ describe('Byline', () => {
   });
 
   it('should render all listitems correctly', () => {
-    render(<Byline blocks={bylineWithPhoto} />);
+    render(<Byline blocks={bylineWithPngPhoto} />);
 
     const listItems = screen.getAllByRole('listitem');
 
     expect(listItems.length).toBe(5);
   });
 
+  it('should correctly use the buildIChefURL function to create the image url', () => {
+    render(<Byline blocks={bylineWithPngPhoto} />);
+
+    const imageSrc = screen.getAllByRole('img');
+
+    expect(imageSrc[0]).toHaveAttribute(
+      'src',
+      'https://ichef.bbci.co.uk/news/png/160/cpsprodpb/f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+    );
+  });
+
   it('should render one image in the byline', () => {
-    render(<Byline blocks={bylineWithPhoto} />);
+    render(<Byline blocks={bylineWithPngPhoto} />);
 
     const image = screen.getAllByRole('img');
 
     expect(image.length).toBe(1);
+  });
+
+  it('should not render an image if a png photo is not used', () => {
+    render(<Byline blocks={bylineWithNonPngPhoto} />);
+
+    const image = screen.queryByRole('img');
+
+    expect(image).toBeNull();
   });
 
   it('should correctly render Timestamp when passed as a child', () => {
@@ -117,12 +137,12 @@ describe('Byline', () => {
   });
 
   it('should render the Byline correctly with location, image and links', () => {
-    render(<Byline blocks={bylineWithPhoto} />);
+    render(<Byline blocks={bylineWithPngPhoto} />);
 
-    const AuthorLink = screen.getByText('Clark Kent');
-    const TwitterLink = screen.getByText('@superman');
+    const AuthorLink = screen.getByText('Mayeni Jones');
+    const TwitterLink = screen.getByText('@MayeniJones');
     const Links = screen.getAllByRole('link');
-    const Location = screen.getByText('Metropolis, US');
+    const Location = screen.getByText('Lagos, Ng');
     const Image = screen.getByRole('img');
 
     expect(AuthorLink).toBeInTheDocument();
