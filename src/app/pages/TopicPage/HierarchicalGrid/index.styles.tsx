@@ -1,4 +1,32 @@
-import { css } from '@emotion/react';
+import { css, Theme } from '@emotion/react';
+
+const styles = {
+  body: ({ spacings }: Theme) =>
+    css({
+      marginTop: 0,
+      marginBottom: `${spacings.DOUBLE}rem`,
+    }),
+  item: ({ spacings }: Theme) =>
+    css({
+      position: 'relative',
+      display: 'inline',
+      paddingBottom: `${spacings.FULL}rem`,
+    }),
+  list: ({ mq, spacings }: Theme) =>
+    css({
+      padding: 0,
+      margin: 0,
+      display: 'grid',
+      gridGap: `${spacings.FULL}rem`,
+      gridTemplateColumns: 'repeat(2, 1fr)',
+      [mq.GROUP_3_MIN_WIDTH]: {
+        gridTemplateColumns: 'repeat(3, 1fr)',
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        gridTemplateColumns: 'repeat(4, 1fr)',
+      },
+    }),
+};
 
 const DesktopBigPromo = css({
   gridColumn: 'span 2',
@@ -60,6 +88,7 @@ const HorizontalPromo = css({
 });
 
 export {
+  styles,
   DesktopBigPromo,
   BigPromo,
   VerticalPromo,

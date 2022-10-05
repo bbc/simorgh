@@ -3,6 +3,7 @@
 import { css, jsx, Theme } from '@emotion/react';
 import Promo from '../../../legacy/components/Promo';
 import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
+import { styles } from './index.styles';
 
 type Summary = {
   title: string;
@@ -19,29 +20,6 @@ type Summary = {
 
 type Summaries = {
   summaries: Summary[];
-};
-
-const styles = {
-  item: ({ spacings }: Theme) =>
-    css({
-      position: 'relative',
-      display: 'inline',
-      paddingBottom: `${spacings.FULL}rem`,
-    }),
-  list: ({ mq, spacings }: Theme) =>
-    css({
-      padding: 0,
-      margin: 0,
-      display: 'grid',
-      gridGap: `${spacings.FULL}rem`,
-      gridTemplateColumns: 'repeat(2, 1fr)',
-      [mq.GROUP_3_MIN_WIDTH]: {
-        gridTemplateColumns: 'repeat(3, 1fr)',
-      },
-      [mq.GROUP_4_MIN_WIDTH]: {
-        gridTemplateColumns: 'repeat(4, 1fr)',
-      },
-    }),
 };
 
 const getStyles = (promoCount: number, i: number, mq: any) => {
@@ -90,7 +68,7 @@ const HiearchicalGrid = ({ summaries }: Summaries) => {
               >
                 <Promo.A href={promo.link}>{promo.title}</Promo.A>
               </Promo.Heading>
-              <Promo.Body className="promo-paragraph">
+              <Promo.Body className="promo-paragraph" css={styles.body}>
                 {promo.description}
               </Promo.Body>
               <Promo.Timestamp className="promo-timestamp">
