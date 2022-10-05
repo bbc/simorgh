@@ -177,7 +177,6 @@ const ConsentBanner = ({
         data-testid="banner-heading"
         fontVariant="sansBold"
         size="greatPrimer"
-        css={consentBannerCss.heading}
       >
         {consentTranslations.heading}
       </Text>

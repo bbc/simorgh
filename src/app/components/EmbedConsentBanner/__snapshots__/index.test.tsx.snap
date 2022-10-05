@@ -30,7 +30,6 @@ exports[`Embed Consent Banner should match snapshot - AMP 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
-  color: #141414;
 }
 
 @media (min-width: 20rem) {
@@ -55,7 +54,6 @@ exports[`Embed Consent Banner should match snapshot - AMP 1`] = `
   font-style: normal;
   font-weight: 400;
   margin: 0;
-  color: #141414;
   margin: 1rem 0;
 }
 
@@ -80,15 +78,15 @@ exports[`Embed Consent Banner should match snapshot - AMP 1`] = `
   border-bottom: 0.0625rem solid #141414;
 }
 
+.emotion-2 a:visited {
+  color: #545658;
+  border-bottom: 0.0625rem solid #545658;
+}
+
 .emotion-2 a:hover,
 .emotion-2 a:focus {
   color: #B80000;
   border-bottom: 0.125rem solid #B80000;
-}
-
-.emotion-2 a:visited {
-  color: #545658;
-  border-bottom: 0.0625rem solid #545658;
 }
 
 .emotion-3 {
@@ -98,7 +96,6 @@ exports[`Embed Consent Banner should match snapshot - AMP 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
-  color: #141414;
   background-color: #FFFFFF;
   border: 0.0625rem solid #8A8C8E;
   border-radius: 0;
@@ -207,7 +204,6 @@ exports[`Embed Consent Banner should match snapshot 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
-  color: #141414;
 }
 
 @media (min-width: 20rem) {
@@ -232,7 +228,6 @@ exports[`Embed Consent Banner should match snapshot 1`] = `
   font-style: normal;
   font-weight: 400;
   margin: 0;
-  color: #141414;
   margin: 1rem 0;
 }
 
@@ -257,15 +252,15 @@ exports[`Embed Consent Banner should match snapshot 1`] = `
   border-bottom: 0.0625rem solid #141414;
 }
 
+.emotion-2 a:visited {
+  color: #545658;
+  border-bottom: 0.0625rem solid #545658;
+}
+
 .emotion-2 a:hover,
 .emotion-2 a:focus {
   color: #B80000;
   border-bottom: 0.125rem solid #B80000;
-}
-
-.emotion-2 a:visited {
-  color: #545658;
-  border-bottom: 0.0625rem solid #545658;
 }
 
 .emotion-3 {
@@ -275,7 +270,6 @@ exports[`Embed Consent Banner should match snapshot 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
-  color: #141414;
   background-color: #FFFFFF;
   border: 0.0625rem solid #8A8C8E;
   border-radius: 0;
