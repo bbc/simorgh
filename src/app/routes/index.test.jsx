@@ -66,8 +66,8 @@ const getMatchingRoute = pathname =>
   );
 
 const renderRouter = props =>
-  act(async () => {
-    await render(
+  act(() => {
+    render(
       <MemoryRouter initialEntries={[props.pathname]}>
         {renderRoutes(routes, {
           bbcOrigin: 'https://www.bbc.com',
@@ -115,7 +115,7 @@ it('should route to and render live radio page', async () => {
     },
   });
 
-  await renderRouter({
+  renderRouter({
     pathname,
     pageData,
     pageType,
@@ -143,7 +143,8 @@ it('should route to and render the podcast page', async () => {
       recentAudioEpisodes: { enabled: false, value: 4 },
     },
   });
-  await renderRouter({
+
+  renderRouter({
     pathname,
     pageData,
     pageType,
@@ -172,7 +173,8 @@ it('should route to and render the onDemand Radio page', async () => {
       recentAudioEpisodes: { enabled: false, value: 4 },
     },
   });
-  await renderRouter({
+
+  renderRouter({
     pathname,
     pageData,
     pageType,
@@ -201,7 +203,8 @@ it('should route to and render the onDemand TV Brand page', async () => {
       recentVideoEpisodes: { enabled: false, value: 4 },
     },
   });
-  await renderRouter({
+
+  renderRouter({
     pathname,
     pageData,
     pageType,
@@ -224,7 +227,8 @@ it('should route to and render an article page', async () => {
     path: pathname,
     pageType,
   });
-  await renderRouter({
+
+  renderRouter({
     pathname,
     pageData,
     pageType,
@@ -247,7 +251,7 @@ it('should route to and render a front page', async () => {
     service: 'pidgin',
   });
 
-  await renderRouter({
+  renderRouter({
     pathname,
     pageData,
     pageType,
@@ -271,7 +275,8 @@ it('should route to and render a most watched page', async () => {
     service: 'pidgin',
     pageType,
   });
-  await renderRouter({
+
+  renderRouter({
     pathname,
     pageData,
     pageType,
@@ -296,7 +301,8 @@ it('should route to and render a media asset page', async () => {
     service: 'yoruba',
     pageType,
   });
-  await renderRouter({
+
+  renderRouter({
     pathname,
     pageData,
     pageType,
@@ -321,7 +327,8 @@ it('should route to and render a media asset page', async () => {
     service: 'yoruba',
     pageType,
   });
-  await renderRouter({
+
+  renderRouter({
     pathname,
     pageData,
     pageType,
@@ -349,7 +356,8 @@ it('should route to and render a legacy media asset page', async () => {
     service: 'azeri',
     pageType,
   });
-  await renderRouter({
+
+  renderRouter({
     pathname,
     pageData,
     pageType,
@@ -374,7 +382,8 @@ it('should route to and render a photo gallery page', async () => {
     path: pathname,
     pageType,
   });
-  await renderRouter({
+
+  renderRouter({
     pathname,
     pageData,
     pageType,
@@ -402,7 +411,8 @@ it('should route to and render a story page', async () => {
     path: pathname,
     service: 'mundo',
   });
-  await renderRouter({
+
+  renderRouter({
     pathname,
     pageData,
     pageType,
@@ -425,7 +435,8 @@ it('should route to and render an index page', async () => {
     path: pathname,
     service: 'ukrainian',
   });
-  await renderRouter({
+
+  renderRouter({
     pathname,
     pageData,
     pageType,
@@ -449,7 +460,8 @@ it.skip('should route to and render a feature index page', async () => {
     path: pathname,
     pageType,
   });
-  await renderRouter({
+
+  renderRouter({
     pathname,
     pageData,
     pageType,
@@ -470,7 +482,8 @@ it('should route to and render a 500 error page', async () => {
     path: pathname,
     pageType,
   });
-  await renderRouter({
+
+  renderRouter({
     pathname,
     pageType,
     errorCode,
@@ -492,7 +505,8 @@ it('should fallback to and render a 500 error page if there is a problem with pa
     path: pathname,
     pageType,
   });
-  await renderRouter({
+
+  renderRouter({
     pathname,
     pageType: FRONT_PAGE,
     service: 'afrique',
@@ -516,7 +530,8 @@ it('should route to and render a 404 error page', async () => {
     path: pathname,
     pageType,
   });
-  await renderRouter({
+
+  renderRouter({
     pathname,
     pageType,
     errorCode,
@@ -538,7 +553,8 @@ it('should render a 404 error page if a data fetch responds with a 404', async (
     path: pathname,
     pageType,
   });
-  await renderRouter({
+
+  renderRouter({
     pathname,
     pageType,
     status,
@@ -563,7 +579,8 @@ it('should fallback to and render a 404 error page if no route match is found', 
     path: pathname,
     pageType,
   });
-  await renderRouter({
+
+  renderRouter({
     pathname,
     pageType,
     errorCode,
