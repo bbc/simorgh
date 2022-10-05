@@ -860,8 +860,8 @@ export const bylineWithPngPhoto = [
                 model: {
                   width: 640,
                   height: 562,
-                  locator: 'https://i.stack.imgur.com/eAepW.png',
-                  originCode: 'cpsdevpb',
+                  locator: 'f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+                  originCode: 'cpsprodpb',
                 },
               },
             ],
