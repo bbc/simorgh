@@ -16,7 +16,6 @@ import {
   SERVER_STATUS_ENDPOINT_ERROR,
 } from '#lib/logger.const';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
-import isLive from '#lib/utilities/isLive';
 import { OK } from '#lib/statusCodes.const';
 import injectCspHeader from './utilities/cspHeader';
 import logResponseTime from './utilities/logResponseTime';
@@ -137,7 +136,7 @@ const injectDefaultCacheHeader = (req, res, next) => {
 const injectResourceHintsHeader = (req, res, next) => {
   const isPidginService = req.originalUrl.startsWith('/pidgin');
 
-  if (isPidginService && !isLive()) {
+  if (isPidginService) {
     const assetOrigins = getAssetOrigins('pidgin');
     res.set(
       'Link',
