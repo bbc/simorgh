@@ -1097,15 +1097,15 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
 }
 
 .emotion-11 {
-  color: #141414;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.375rem;
+  color: #141414;
 }
 
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
+@media (min-width: 20rem) {
   .emotion-11 {
     font-size: 1.125rem;
     line-height: 1.375rem;
@@ -1120,13 +1120,27 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
 }
 
 .emotion-12 {
-  color: #141414;
-  margin: 1rem 0;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+  color: #141414;
+  margin: 1rem 0;
+}
+
+@media (min-width: 20rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
 }
 
 .emotion-12 a {
@@ -1147,33 +1161,32 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
   border-bottom: 0.0625rem solid #545658;
 }
 
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-12 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
 .emotion-13 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   color: #141414;
   background-color: #FFFFFF;
   border: 0.0625rem solid #8A8C8E;
   border-radius: 0;
-  font-weight: bold;
   padding: 0.5rem;
   cursor: pointer;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
+}
+
+@media (min-width: 20rem) {
+  .emotion-13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
 }
 
 .emotion-13:hover,
@@ -1183,20 +1196,6 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
   border: 0.0625rem solid #B80000;
   -webkit-text-decoration: underline;
   text-decoration: underline;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-13 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-13 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
 }
 
 .emotion-14 {
