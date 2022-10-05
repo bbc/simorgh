@@ -64,16 +64,16 @@ export const service: DefaultServiceConfig = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'Podcast',
-      brandTitle: 'BBC Lê',
+      brandTitle: 'As Estranhas Origens das Guerras Culturais',
       brandDescription:
-        'A equipe da BBC News Brasil lê para você algumas de suas melhores reportagens',
+        'Adaptação de premiado podcast da BBC ‘Things Fell Apart’, de Jon Ronson.',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p09qw181.jpg',
-        alt: 'BBC Lê',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0cx5mv5.jpg',
+        alt: 'Logo: As Estranhas Origens das Guerras Culturais',
       },
       linkLabel: {
         text: 'Episódios',
-        href: 'https://www.bbc.com/portuguese/podcasts/p09qw1cn',
+        href: 'https://www.bbc.com/portuguese/podcasts/p0cx5pt6',
       },
       skipLink: {
         text: 'Pule %title% e continue lendo',
@@ -361,6 +361,10 @@ export const service: DefaultServiceConfig = {
         url: '/portuguese',
       },
       {
+        title: 'Eleições 2022',
+        url: '/portuguese/topics/c20d7ez6mqpt',
+      },
+      {
         title: 'Brasil',
         url: '/portuguese/topics/cz74k717pw5t',
       },
@@ -383,10 +387,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Tecnologia',
         url: '/portuguese/topics/c404v027pd4t',
-      },
-      {
-        title: '#SalaSocial',
-        url: '/portuguese/topics/cx6pxx22x5pt',
       },
       {
         title: 'Vídeos',

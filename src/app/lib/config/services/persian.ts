@@ -379,14 +379,6 @@ export const service: DefaultServiceConfig = {
         url: '/persian',
       },
       {
-        title: 'اوکراین',
-        url: '/persian/topics/cw9q48x6558t',
-      },
-      {
-        title: 'کرونا',
-        url: '/persian/science-52004647',
-      },
-      {
         title: 'پخش زنده',
         url: '/persian/media-49522521',
       },

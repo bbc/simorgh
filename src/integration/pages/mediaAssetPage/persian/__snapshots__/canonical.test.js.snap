@@ -82,96 +82,82 @@ Object {
 
 exports[`Canonical Media Asset Page Header Navigation link should match text and url 2`] = `
 Object {
-  "text": "اوکراین",
-  "url": "/persian/topics/cw9q48x6558t",
-}
-`;
-
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 3`] = `
-Object {
-  "text": "کرونا",
-  "url": "/persian/science-52004647",
-}
-`;
-
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 4`] = `
-Object {
   "text": "پخش زنده",
   "url": "/persian/media-49522521",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 5`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 3`] = `
 Object {
   "text": "ویدیو",
   "url": "/persian/media/video",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 6`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 4`] = `
 Object {
   "text": "تلویزیون",
   "url": "/persian/tv-and-radio-37434377",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 7`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "رادیو",
   "url": "/persian/tv-and-radio-37434376",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 8`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "ايران",
   "url": "/persian/topics/ckdxnwvwwjnt",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 9`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "افغانستان",
   "url": "/persian/afghanistan",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 10`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "جهان",
   "url": "/persian/topics/c1d8ye58xl8t",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 11`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 9`] = `
 Object {
   "text": "هنر",
   "url": "/persian/topics/c9wpm0epm45t",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 12`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 10`] = `
 Object {
   "text": "ورزش",
   "url": "/persian/topics/cnq6879k7yjt",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 13`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 11`] = `
 Object {
   "text": "اقتصاد",
   "url": "/persian/topics/cl8l9mvlllqt",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 14`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 12`] = `
 Object {
   "text": "دانش",
   "url": "/persian/topics/ckdxnwr4r1yt",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 15`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 13`] = `
 Object {
   "text": "ناظران می‌گویند",
   "url": "/persian/blogs-54099951",
