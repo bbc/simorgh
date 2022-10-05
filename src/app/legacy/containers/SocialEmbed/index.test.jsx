@@ -1,7 +1,7 @@
 import React from 'react';
 import loggerMock from '#testHelpers/loggerMock';
 import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
-import { ARTICLE_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import SocialEmbedContainer from '.';
 import {
   render,
@@ -100,34 +100,6 @@ describe('SocialEmbedContainer', () => {
         href: 'https://www.youtube.com/embed/1e05_rwHvOM?feature=oembed',
       });
       unmount();
-    });
-
-    it('should render a Twitter block and unmount correctly for STY page', () => {
-      const { container, unmount } = render(
-        <SocialEmbedContainer
-          blocks={[twitterBlock]}
-          source="https://twitter.com/BBCNews/status/1384138850478346243?s=20"
-        />,
-        { service: 'news', isAmp: false, pageType: STORY_PAGE },
-      );
-
-      expect(container.firstChild).toMatchSnapshot();
-      expect(
-        document.querySelector(
-          'head script[src="https://platform.twitter.com/widgets.js"]',
-        ),
-      ).toBeTruthy();
-      expect(loggerMock.info).toHaveBeenCalledTimes(1);
-      expect(loggerMock.info).toHaveBeenCalledWith(SOCIAL_EMBED_RENDERED, {
-        provider: 'twitter',
-        href: 'https://twitter.com/BBCNews/status/1384138850478346243?s=20',
-      });
-      unmount();
-      expect(
-        document.querySelector(
-          'head script[src="https://platform.twitter.com/widgets.js"]',
-        ),
-      ).toBeFalsy();
     });
 
     it('should render the correct skip link text when indexOfType is provided (means this is one of multiple e.g. Twitter embeds in the article)', () => {
