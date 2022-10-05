@@ -19,7 +19,7 @@ export default {
       verticalAlign: 'middle',
     }),
 
-  jobRole: ({ palette }: Theme) => css({ color: palette.GREY_10 }),
+  jobRole: ({ palette }: Theme) => css({ color: palette.GREY_6 }),
 
   twitterText: ({ palette }: Theme) =>
     css({
