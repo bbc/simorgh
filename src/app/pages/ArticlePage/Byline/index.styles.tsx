@@ -151,5 +151,8 @@ export default {
     }),
 
   twitterLink: () =>
-    css({ paddingBottom: '1.375rem', paddingTop: `${pixelsToRem(4)}rem` }),
+    css({
+      paddingBottom: `${pixelsToRem(16)}rem`,
+      paddingTop: `${pixelsToRem(4)}rem`,
+    }),
 };
