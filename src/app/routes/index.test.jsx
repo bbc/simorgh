@@ -43,6 +43,8 @@ global.performance.getEntriesByName = jest.fn(() => []);
 jest.mock('../pages');
 
 beforeEach(() => {
+  jest.setTimeout(10000);
+
   // Mocks out CanonicalAdBootstrapJs script
   window.dotcom = {
     bootstrap: jest.fn(),
