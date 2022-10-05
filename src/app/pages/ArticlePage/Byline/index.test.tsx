@@ -77,6 +77,17 @@ describe('Byline', () => {
     expect(listItems.length).toBe(5);
   });
 
+  it('should correctly use the buildIChefURL function to create the image url', () => {
+    render(<Byline blocks={bylineWithPngPhoto} />);
+
+    const imageSrc = screen.getAllByRole('img');
+
+    expect(imageSrc[0]).toHaveAttribute(
+      'src',
+      'https://ichef.bbci.co.uk/news/png/160/cpsprodpb/f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+    );
+  });
+
   it('should render one image in the byline', () => {
     render(<Byline blocks={bylineWithPngPhoto} />);
 
