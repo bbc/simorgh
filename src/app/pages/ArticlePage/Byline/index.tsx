@@ -123,7 +123,13 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
                 : [BylineCss.imageLtr, BylineCss.ImageWrapper]
             }
           >
-            <Image src={image} alt="" width={80} height={80} />
+            <Image
+              src={image}
+              alt=""
+              width={80}
+              height={80}
+              placeholder={false}
+            />
           </li>
         )}
         <li>
