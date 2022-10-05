@@ -37,6 +37,7 @@ export default styled.h2<Props>`
     color: ${C_POSTBOX};
     span {
       text-decoration: underline;
+    }
   }
   svg {
     margin-inline-start: 0.5rem;
