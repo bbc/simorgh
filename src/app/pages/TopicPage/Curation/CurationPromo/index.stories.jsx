@@ -6,6 +6,7 @@ import fixture from '#data/pidgin/topics/c95y35941vrt.json';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import { MEDIA_TYPES } from '#components/Promo';
 import Promo from '.';
+import ThemeProvider from '../../../../components/ThemeProvider';
 
 const Wrapper = styled.div`
   max-width: 30rem;
@@ -14,26 +15,30 @@ const Wrapper = styled.div`
 // eslint-disable-next-line react/prop-types
 const Component = ({ service, variant }) => {
   return (
-    <ServiceContextProvider service={service} variant={variant}>
-      <Wrapper>
-        <Promo {...fixture.data.summaries[0]} />
-      </Wrapper>
-    </ServiceContextProvider>
+    <ThemeProvider service={service} variant={variant}>
+      <ServiceContextProvider service={service} variant={variant}>
+        <Wrapper>
+          <Promo {...fixture.data.summaries[0]} />
+        </Wrapper>
+      </ServiceContextProvider>
+    </ThemeProvider>
   );
 };
 
 // eslint-disable-next-line react/prop-types
 const WithMediaIndicator = ({ service, variant }) => {
   return (
-    <ServiceContextProvider service={service} variant={variant}>
-      <Wrapper>
-        <Promo
-          {...fixture.data.summaries[0]}
-          mediaType={MEDIA_TYPES.VIDEO}
-          mediaDuration={123}
-        />
-      </Wrapper>
-    </ServiceContextProvider>
+    <ThemeProvider service={service} variant={variant}>
+      <ServiceContextProvider service={service} variant={variant}>
+        <Wrapper>
+          <Promo
+            {...fixture.data.summaries[0]}
+            mediaType={MEDIA_TYPES.VIDEO}
+            mediaDuration={123}
+          />
+        </Wrapper>
+      </ServiceContextProvider>
+    </ThemeProvider>
   );
 };
 

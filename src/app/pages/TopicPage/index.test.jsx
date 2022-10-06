@@ -5,6 +5,7 @@ import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import ThemeProvider from '../../components/ThemeProvider';
 import TopicPage from './TopicPage';
 import {
   pidginMultipleItems,
@@ -14,6 +15,7 @@ import {
   amharicOnlyTitle,
 } from './fixtures';
 
+jest.mock('../../components/ThemeProvider');
 jest.mock('../../legacy/containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
@@ -28,26 +30,28 @@ const TopicPageWithContext = ({
   showAdsBasedOnLocation = false,
 } = {}) => (
   <BrowserRouter>
-    <ToggleContext.Provider
-      value={{
-        toggleState: {
-          ads: {
-            enabled: adsToggledOn,
+    <ThemeProvider service={service} variant="default">
+      <ToggleContext.Provider
+        value={{
+          toggleState: {
+            ads: {
+              enabled: adsToggledOn,
+            },
           },
-        },
-      }}
-    >
-      <RequestContextProvider
-        showAdsBasedOnLocation={showAdsBasedOnLocation}
-        isAmp={false}
-        pageType={TOPIC_PAGE}
-        service={service}
+        }}
       >
-        <ServiceContextProvider service={service} lang={lang}>
-          <TopicPage pageData={pageData} />
-        </ServiceContextProvider>
-      </RequestContextProvider>
-    </ToggleContext.Provider>
+        <RequestContextProvider
+          showAdsBasedOnLocation={showAdsBasedOnLocation}
+          isAmp={false}
+          pageType={TOPIC_PAGE}
+          service={service}
+        >
+          <ServiceContextProvider service={service} lang={lang}>
+            <TopicPage pageData={pageData} />
+          </ServiceContextProvider>
+        </RequestContextProvider>
+      </ToggleContext.Provider>
+    </ThemeProvider>
   </BrowserRouter>
 );
 
