@@ -56,4 +56,4 @@ jobs:
         run: |
           yarn add puppeteer@18.0.5
           yarn test:puppeteer
-          yarn remove puppeteer@18.0.5
+          yarn remove puppeteer
