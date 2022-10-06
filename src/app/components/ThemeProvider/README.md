@@ -215,7 +215,7 @@ You can use `spacings` like this:
 ```tsx
 <div
   css={({ spacings }) => ({
-    padding: spacings.DOUBLE,
+    padding: `${spacings.DOUBLE}rem`,
   })}
 >
   This is a div with 16px of padding (DOUBLE spacing).

@@ -3,19 +3,11 @@ import { jsx } from '@emotion/react';
 import { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
 
+import Text from '../Text';
+import Paragraph from '../Paragraph';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { SocialEmbedProviders } from '../../models/types/global';
 import { Translations } from '../../models/types/translations';
-
-import {
-  getBodyCopy,
-  getGreatPrimer,
-  getPica,
-} from '../../legacy/psammead/gel-foundations/src/typography';
-import {
-  getSansBold,
-  getSansRegular,
-} from '../../legacy/psammead/psammead-styles/src/font-styles';
 
 import consentBannerCss from './ConsentBanner.styles';
 
@@ -166,8 +158,7 @@ const ConsentBanner = ({
   clickHandler,
   id,
 }: ConsentBannerContentProps) => {
-  const { service, script, externalLinkText, translations } =
-    useContext(ServiceContext);
+  const { externalLinkText, translations } = useContext(ServiceContext);
 
   const consentTranslations = getTranslations(
     provider,
@@ -181,41 +172,27 @@ const ConsentBanner = ({
       id={`consentBanner${id ? `-${id}` : ''}`}
       css={consentBannerCss.parent}
     >
-      <strong
+      <Text
+        as="strong"
         data-testid="banner-heading"
-        css={[
-          // TODO: Remove custom font functions and use theme
-          consentBannerCss.heading,
-          getSansBold(service),
-          getGreatPrimer(script),
-        ]}
+        fontVariant="sansBold"
+        size="greatPrimer"
       >
         {consentTranslations.heading}
-      </strong>
-      <p
-        data-testid="banner-body"
-        css={[
-          // TODO: Remove custom font functions and use theme
-          consentBannerCss.textBody,
-          getSansRegular(service),
-          getBodyCopy(script),
-        ]}
-      >
+      </Text>
+      <Paragraph data-testid="banner-body" css={consentBannerCss.textBody}>
         {consentTranslations.body}
-      </p>
-      <button
-        data-testid="banner-button"
-        css={[
-          // TODO: Remove custom font functions and use theme
-          consentBannerCss.button,
-          getSansBold(service),
-          getPica(script),
-        ]}
+      </Paragraph>
+      <Text
+        as="button"
         type="button"
+        data-testid="banner-button"
+        fontVariant="sansBold"
+        css={consentBannerCss.button}
         {...clickHandler}
       >
         {consentTranslations.button}
-      </button>
+      </Text>
     </div>
   );
 };
