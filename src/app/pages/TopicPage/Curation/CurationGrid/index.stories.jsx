@@ -5,6 +5,7 @@ import fixture from '#data/pidgin/topics/c95y35941vrt.json';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import ThemeProvider from '../../../../components/ThemeProvider';
 import CurationGrid from '.';
+import ThemeProvider from '../../../../components/ThemeProvider';
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ service, variant }) => {

@@ -6,6 +6,8 @@ import {
 
 import TopicPromo from '.';
 
+jest.mock('../../../../components/ThemeProvider');
+
 // eslint-disable-next-line react/prop-types
 const Fixture = ({ lazy }) => (
   <TopicPromo

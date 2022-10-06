@@ -5,6 +5,8 @@ import { render } from '../../../components/react-testing-library-with-providers
 
 import Curation, { VISUAL_STYLE, VISUAL_PROMINANCE } from '.';
 
+jest.mock('../../../components/ThemeProvider');
+
 const components = {
   [VISUAL_STYLE.NONE]: {
     [VISUAL_PROMINANCE.NORMAL]: {
