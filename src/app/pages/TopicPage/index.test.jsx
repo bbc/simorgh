@@ -5,6 +5,7 @@ import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import ThemeProvider from '../../components/ThemeProvider';
 import TopicPage from './TopicPage';
 import {
   pidginMultipleItems,
@@ -14,6 +15,7 @@ import {
   amharicOnlyTitle,
 } from './fixtures';
 
+jest.mock('../../components/ThemeProvider');
 jest.mock('../../legacy/containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
@@ -28,26 +30,28 @@ const TopicPageWithContext = ({
   showAdsBasedOnLocation = false,
 } = {}) => (
   <BrowserRouter>
-    <ToggleContext.Provider
-      value={{
-        toggleState: {
-          ads: {
-            enabled: adsToggledOn,
+    <ThemeProvider service={service} variant="default">
+      <ToggleContext.Provider
+        value={{
+          toggleState: {
+            ads: {
+              enabled: adsToggledOn,
+            },
           },
-        },
-      }}
-    >
-      <RequestContextProvider
-        showAdsBasedOnLocation={showAdsBasedOnLocation}
-        isAmp={false}
-        pageType={TOPIC_PAGE}
-        service={service}
+        }}
       >
-        <ServiceContextProvider service={service} lang={lang}>
-          <TopicPage pageData={pageData} />
-        </ServiceContextProvider>
-      </RequestContextProvider>
-    </ToggleContext.Provider>
+        <RequestContextProvider
+          showAdsBasedOnLocation={showAdsBasedOnLocation}
+          isAmp={false}
+          pageType={TOPIC_PAGE}
+          service={service}
+        >
+          <ServiceContextProvider service={service} lang={lang}>
+            <TopicPage pageData={pageData} />
+          </ServiceContextProvider>
+        </RequestContextProvider>
+      </ToggleContext.Provider>
+    </ThemeProvider>
   </BrowserRouter>
 );
 
@@ -80,6 +84,27 @@ describe('Topic Page', () => {
     expect(getAllByRole('listitem').length).toEqual(4);
   });
 
+  it('should render a section around each curation when more than one exists', () => {
+    const { container } = render(
+      <TopicPageWithContext
+        pageData={mundoMultipleCurations}
+        service="mundo"
+      />,
+    );
+    expect(container.getElementsByTagName('section').length).toEqual(2);
+  });
+
+  it('should not render a section when one or less exists', () => {
+    const { container } = render(
+      <TopicPageWithContext
+        pageData={amharicSingleItem}
+        lang="am"
+        service="amharic"
+      />,
+    );
+    expect(container.getElementsByTagName('section').length).toEqual(0);
+  });
+
   it('should render curation subheading when curation title exists', () => {
     const { container } = render(
       <TopicPageWithContext
@@ -88,6 +113,27 @@ describe('Topic Page', () => {
       />,
     );
     expect(container.querySelector('h2').textContent).toEqual('Analysis');
+  });
+
+  it('should render promo headings as h3 when curation subheading exists', () => {
+    const { container } = render(
+      <TopicPageWithContext
+        pageData={mundoMultipleCurations}
+        service="mundo"
+      />,
+    );
+
+    expect(container.getElementsByTagName('h3').length).toEqual(4);
+    expect(container.getElementsByTagName('h2').length).toEqual(2);
+  });
+
+  it('should render promo headings as h2 when there is no curation subheading', () => {
+    const { container } = render(
+      <TopicPageWithContext pageData={pidginMultipleItems} service="pidgin" />,
+    );
+
+    expect(container.getElementsByTagName('h3').length).toEqual(0);
+    expect(container.getElementsByTagName('h2').length).toEqual(4);
   });
 
   it('should render badge and description when they exist in data', () => {

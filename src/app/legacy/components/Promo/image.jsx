@@ -1,17 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
 import { string, node } from 'prop-types';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-
-const Img = styled.img`
-  width: 100%;
-  object-fit: cover;
-`;
+import IMAGE from '../../../components/Image';
 
 const Wrapper = styled.div`
   margin-bottom: ${GEL_SPACING};
@@ -47,29 +42,27 @@ const createSizes = () => {
 
 const Image = props => {
   const { children, src, ...rest } = props;
-
   const isWebPSupported = WEBP_ORIGIN_CODES.some(originCode =>
     src.includes(originCode),
   );
+  const primarySrcSet = createSrcSet(src, isWebPSupported ? '.webp' : '');
+  const primaryMediaType = `image/${isWebPSupported ? 'webp' : 'jpeg'}`;
+  const fallbackSrcSet = isWebPSupported ? createSrcSet(src) : undefined;
+  const fallbackMediaType = isWebPSupported ? 'image/jpeg' : undefined;
+  const sizes = createSizes();
+
   return (
     <Wrapper>
-      <ImagePlaceholder ratio={56.25}>
-        <picture>
-          {isWebPSupported && (
-            <source
-              srcSet={createSrcSet(src, '.webp')}
-              type="image/webp"
-              sizes={createSizes()}
-            />
-          )}
-          <source
-            srcSet={createSrcSet(src)}
-            type="image/jpeg"
-            sizes={createSizes()}
-          />
-          <Img {...rest} src={src.replace('{width}', 240)} />
-        </picture>
-      </ImagePlaceholder>
+      <IMAGE
+        {...rest}
+        src={src.replace('{width}', 240)}
+        srcSet={primarySrcSet}
+        mediaType={primaryMediaType}
+        fallbackSrcSet={fallbackSrcSet}
+        fallbackMediaType={fallbackMediaType}
+        sizes={sizes}
+        aspectRatio={[16, 9]}
+      />
       {children && <ChildWrapper>{children}</ChildWrapper>}
     </Wrapper>
   );
