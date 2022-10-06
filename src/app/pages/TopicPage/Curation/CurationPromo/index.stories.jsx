@@ -7,7 +7,6 @@ import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import ThemeProvider from '../../../../components/ThemeProvider';
 import { MEDIA_TYPES } from '#components/Promo';
 import Promo from '.';
-import ThemeProvider from '../../../../components/ThemeProvider';
 
 const Wrapper = styled.div`
   max-width: 30rem;
