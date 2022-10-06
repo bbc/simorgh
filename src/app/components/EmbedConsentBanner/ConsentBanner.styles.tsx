@@ -2,26 +2,20 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../utilities/pixelsToRem';
 
 export default {
-  parent: ({ spacings, palette }: Theme) =>
+  parent: ({ palette }: Theme) =>
     css({
       backgroundColor: palette.WHITE,
-      padding: `${spacings.QUADRUPLE}rem ${spacings.DOUBLE}rem`,
+      padding: `${pixelsToRem(16)}rem`,
       minHeight: 280,
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'flex-start',
-      border: `${pixelsToRem(3)}rem solid transparent`,
-    }),
-
-  heading: ({ palette }: Theme) =>
-    css({
-      color: palette.GREY_10,
+      border: `${pixelsToRem(1)}rem solid ${palette.GREY_5}`,
     }),
 
   textBody: ({ spacings, palette }: Theme) =>
     css({
-      color: palette.GREY_10,
       margin: `${spacings.DOUBLE}rem 0`,
 
       a: {
@@ -29,25 +23,23 @@ export default {
         textDecoration: 'none',
         borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_10}`,
 
-        '&:hover, &:focus': {
-          color: palette.POSTBOX,
-          borderBottom: `${pixelsToRem(2)}rem solid ${palette.POSTBOX}`,
-        },
-
         '&:visited': {
           color: palette.GREY_6,
           borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_6}`,
+        },
+
+        '&:hover, &:focus': {
+          color: palette.POSTBOX,
+          borderBottom: `${pixelsToRem(2)}rem solid ${palette.POSTBOX}`,
         },
       },
     }),
 
   button: ({ spacings, palette }: Theme) =>
     css({
-      color: palette.GREY_10,
       backgroundColor: palette.WHITE,
       border: `${pixelsToRem(1)}rem solid ${palette.PHILIPPINE_GREY}`,
       borderRadius: 0,
-      fontWeight: 'bold',
       padding: `${spacings.FULL}rem`,
       cursor: 'pointer',
 
