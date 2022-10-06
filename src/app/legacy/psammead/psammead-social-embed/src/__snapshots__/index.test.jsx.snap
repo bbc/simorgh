@@ -440,12 +440,12 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
 }
 
 .emotion-7 {
+  color: #141414;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  color: #141414;
 }
 
 @media (min-width: 20rem) {
@@ -463,12 +463,13 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
 }
 
 .emotion-8 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  color: #141414;
+  margin: 0;
   margin: 1rem 0;
 }
 
@@ -493,24 +494,24 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   border-bottom: 0.0625rem solid #141414;
 }
 
+.emotion-8 a:visited {
+  color: #545658;
+  border-bottom: 0.0625rem solid #545658;
+}
+
 .emotion-8 a:hover,
 .emotion-8 a:focus {
   color: #B80000;
   border-bottom: 0.125rem solid #B80000;
 }
 
-.emotion-8 a:visited {
-  color: #545658;
-  border-bottom: 0.0625rem solid #545658;
-}
-
 .emotion-9 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: bold;
+  color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  color: #141414;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
   background-color: #FFFFFF;
   border: 0.0625rem solid #8A8C8E;
   border-radius: 0;
