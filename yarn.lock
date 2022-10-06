@@ -12030,13 +12030,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gnu-terry-pratchett@npm:0.0.2":
-  version: 0.0.2
-  resolution: "gnu-terry-pratchett@npm:0.0.2"
-  checksum: b4ab8fcaf133fae2da32a5a3f3f3ea592cdf2266578ef6c0b37fd4ae31348fc77dfa8fd35b9f609d6b440507d8180243b545e1f5aaff85b8ca855df13a44194e
-  languageName: node
-  linkType: hard
-
 "gonzales-pe@npm:^4.3.0":
   version: 4.3.0
   resolution: "gonzales-pe@npm:4.3.0"
@@ -19565,7 +19558,6 @@ __metadata:
     express-static-gzip: 2.1.7
     fetch-mock: 9.11.0
     glob: 8.0.3
-    gnu-terry-pratchett: 0.0.2
     helmet: 4.6.0
     helmet-csp: 3.4.0
     history: 4.10.1

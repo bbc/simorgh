@@ -361,6 +361,10 @@ export const service: DefaultServiceConfig = {
         url: '/portuguese',
       },
       {
+        title: 'Eleições 2022',
+        url: '/portuguese/topics/c20d7ez6mqpt',
+      },
+      {
         title: 'Brasil',
         url: '/portuguese/topics/cz74k717pw5t',
       },
@@ -383,10 +387,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Tecnologia',
         url: '/portuguese/topics/c404v027pd4t',
-      },
-      {
-        title: '#SalaSocial',
-        url: '/portuguese/topics/cx6pxx22x5pt',
       },
       {
         title: 'Vídeos',
