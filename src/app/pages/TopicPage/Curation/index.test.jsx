@@ -1,13 +1,16 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
+import fixture from '#data/pidgin/topics/c95y35941vrt.json';
+
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-
-import fixture from '#data/pidgin/topics/c95y35941vrt.json';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 import Curation, { VISUAL_STYLE, VISUAL_PROMINANCE } from '.';
+
+jest.mock('../../../components/ThemeProvider');
 
 const components = {
   [VISUAL_STYLE.NONE]: {
@@ -19,13 +22,15 @@ const components = {
 };
 
 const CurationWithContext = props => (
-  <ToggleContextProvider>
-    <RequestContextProvider>
-      <ServiceContextProvider service="pidgin" lang="pcm">
-        <Curation {...props} />
-      </ServiceContextProvider>
-    </RequestContextProvider>
-  </ToggleContextProvider>
+  <ThemeProvider service="pidgin" variant="default">
+    <ToggleContextProvider>
+      <RequestContextProvider>
+        <ServiceContextProvider service="pidgin" lang="pcm">
+          <Curation {...props} />
+        </ServiceContextProvider>
+      </RequestContextProvider>
+    </ToggleContextProvider>
+  </ThemeProvider>
 );
 
 describe('Topic Curations', () => {

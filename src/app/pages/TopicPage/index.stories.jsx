@@ -12,43 +12,46 @@ import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import fixture from '#data/mundo/topics/c1en6xwmpkvt.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import Page from './TopicPage';
+import ThemeProvider from '../../components/ThemeProvider';
 
 const TopicPage = withPageWrapper(Page);
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ service, variant }) => {
   return (
-    <ToggleContextProvider
-      toggles={{
-        eventTracking: { enabled: true },
-      }}
-    >
-      <ServiceContextProvider service={service} variant={variant}>
-        <RequestContextProvider
-          isAmp={false}
-          pageType={TOPIC_PAGE}
-          service="mundo"
-          pathname=""
-        >
-          <UserContextProvider>
-            <MemoryRouter>
-              <TopicPage
-                status={200}
-                pageData={{
-                  title: fixture.data.title,
-                  description: fixture.data.description,
-                  imageData: fixture.data.imageData,
-                  images: fixture.data.images,
-                  curations: fixture.data.curations,
-                  activePage: null,
-                  pageCount: null,
-                }}
-              />
-            </MemoryRouter>
-          </UserContextProvider>
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ToggleContextProvider>
+    <ThemeProvider service={service} variant={variant}>
+      <ToggleContextProvider
+        toggles={{
+          eventTracking: { enabled: true },
+        }}
+      >
+        <ServiceContextProvider service={service} variant={variant}>
+          <RequestContextProvider
+            isAmp={false}
+            pageType={TOPIC_PAGE}
+            service="mundo"
+            pathname=""
+          >
+            <UserContextProvider>
+              <MemoryRouter>
+                <TopicPage
+                  status={200}
+                  pageData={{
+                    title: fixture.data.title,
+                    description: fixture.data.description,
+                    imageData: fixture.data.imageData,
+                    images: fixture.data.images,
+                    curations: fixture.data.curations,
+                    activePage: null,
+                    pageCount: null,
+                  }}
+                />
+              </MemoryRouter>
+            </UserContextProvider>
+          </RequestContextProvider>
+        </ServiceContextProvider>
+      </ToggleContextProvider>
+    </ThemeProvider>
   );
 };
 
