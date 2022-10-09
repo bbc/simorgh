@@ -80,8 +80,17 @@ We use padding in `StyledStoryPromoLi` to create an equal gap between all childr
 > ### Why?
 >
 > The `gap` property causes the items to leave a space at the end of each row, this causes the Related Content Gap to not align with the Top Stories gaps below the component:
-> <img width="1013" alt="Screenshot 2022-07-15 at 12 57 30" src="https://user-images.githubusercontent.com/90621252/179218907-1e40b68b-70f2-40d5-bd88-82910bd0d56b.png">
-> 
+>
+> <img
+>   width="1013"
+>   alt="Screenshot 2022-07-15 at 12 57 30"
+>   src="https://user-images.githubusercontent.com/90621252/179218907-1e40b68b-70f2-40d5-bd88-82910bd0d56b.png"
+> />
+>
 > This could have been fixed by using `flex-grow: 1;`. However, this causes all children with less row's items to grow larger than other row's items:
-> 
-><img width="745" alt="Screenshot 2022-07-15 at 12 58 47" src="https://user-images.githubusercontent.com/90621252/179218944-448a1f01-2673-4f46-9bfd-67164424b329.png">
+>
+> <img
+>   width="745"
+>   alt="Screenshot 2022-07-15 at 12 58 47"
+>   src="https://user-images.githubusercontent.com/90621252/179218944-448a1f01-2673-4f46-9bfd-67164424b329.png"
+> />
