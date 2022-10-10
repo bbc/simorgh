@@ -80,6 +80,18 @@ export const providers = {
     enrich: () => {},
     onLibraryLoad: () => console.error(getOnRenderError('YouTube')),
   },
+  tiktok: {
+    script: 'https://www.tiktok.com/embed.js',
+    styles: `
+      .tiktok-embed{
+        margin-top: 0;
+        margin-bottom: 0;
+        border-radius: 8px;
+      }
+    `,
+    enrich: () => {},
+    onLibraryLoad: () => console.error(getOnRenderError('Instagram')),
+  },
 };
 
 const CanonicalEmbed = ({ provider, oEmbed, onRender }) => {

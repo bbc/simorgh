@@ -29,6 +29,7 @@ const getProviderName = (provider: SocialEmbedProviders) => {
     twitter: 'Twitter',
     youtube: 'Google YouTube',
     facebook: 'Facebook',
+    tiktok: 'TikTok',
   }[provider];
 };
 

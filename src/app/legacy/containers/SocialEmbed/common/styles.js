@@ -16,7 +16,8 @@ const getWrapperHeightStyles = oEmbed => {
    * wrappers. This helps reduce layout shift. It is not applied to fallbacks.
    */
   const MIN_HEIGHT = '14rem';
-  if (oEmbed?.height) return `min-height: ${oEmbed.height / 16}rem`;
+  if (oEmbed?.height && oEmbed?.height !== '100%')
+    return `min-height: ${oEmbed.height / 16}rem`;
   if (oEmbed) return `min-height: ${MIN_HEIGHT};`;
   return '';
 };
@@ -24,5 +25,6 @@ const getWrapperHeightStyles = oEmbed => {
 export const Wrapper = styled.div`
   margin-bottom: ${GEL_SPACING_TRPL};
   max-width: ${MAX_WIDTH};
-  ${({ oEmbed }) => getWrapperHeightStyles(oEmbed)}
+  ${({ oEmbed }) => getWrapperHeightStyles(oEmbed)}/* ${({ oEmbed }) =>
+    oEmbed?.provider_name === 'TikTok' && 'max-width: 325px;'} */
 `;

@@ -3,7 +3,7 @@ import { SocialEmbedProviders } from '../../models/types/global';
 
 import ConsentBanner from './ConsentBanner';
 
-const CONSENT_BANNER_PROVIDERS: SocialEmbedProviders[] = ['youtube'];
+const CONSENT_BANNER_PROVIDERS: SocialEmbedProviders[] = ['youtube', 'tiktok'];
 
 interface ConsentBannerProps {
   provider: SocialEmbedProviders;
