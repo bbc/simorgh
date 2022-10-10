@@ -25,6 +25,5 @@ const getWrapperHeightStyles = oEmbed => {
 export const Wrapper = styled.div`
   margin-bottom: ${GEL_SPACING_TRPL};
   max-width: ${MAX_WIDTH};
-  ${({ oEmbed }) => getWrapperHeightStyles(oEmbed)}/* ${({ oEmbed }) =>
-    oEmbed?.provider_name === 'TikTok' && 'max-width: 325px;'} */
+  ${({ oEmbed }) => getWrapperHeightStyles(oEmbed)}
 `;
