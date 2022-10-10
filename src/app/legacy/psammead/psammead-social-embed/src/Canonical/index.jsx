@@ -6,6 +6,7 @@ import useScript from './useScript';
 
 const LANDSCAPE_RATIO = '56.25%';
 const PRE_RENDER_MARGIN = '10rem';
+const TIKTOK_MAX_WIDTH = '325px';
 
 /**
  * Apply provider-specific styles.
@@ -83,14 +84,23 @@ export const providers = {
   tiktok: {
     script: 'https://www.tiktok.com/embed.js',
     styles: `
+      max-width: ${TIKTOK_MAX_WIDTH};
+
+      ~ figcaption {
+        max-width: ${TIKTOK_MAX_WIDTH};
+      }
+      
       .tiktok-embed{
         margin-top: 0;
         margin-bottom: 0;
-        border-radius: 8px;
+
+        > iframe {
+          border-radius: 8px;
+        }
       }
     `,
     enrich: () => {},
-    onLibraryLoad: () => console.error(getOnRenderError('Instagram')),
+    onLibraryLoad: () => console.error(getOnRenderError('TikTok')),
   },
 };
 

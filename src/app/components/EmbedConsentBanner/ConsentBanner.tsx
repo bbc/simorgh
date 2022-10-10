@@ -17,9 +17,11 @@ const defaultTranslations: Translations['socialEmbed']['consentBanner'] = {
   button: 'Accept and continue',
   cookiesUrl: {
     youtube: 'https://policies.google.com/technologies/cookies',
+    tiktok: 'https://www.tiktok.com/legal/cookie-policy',
   },
   privacyUrl: {
     youtube: 'https://policies.google.com/privacy',
+    tiktok: 'https://www.tiktok.com/legal/privacy-policy',
   },
 };
 
