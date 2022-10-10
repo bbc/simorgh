@@ -17,6 +17,15 @@ describe('Embed Consent Banner', () => {
     expect(container).toMatchSnapshot();
   });
 
+  it('should match snapshot for TikTok embed', () => {
+    const { container } = render(
+      <EmbedConsentBannerCanonical provider="tiktok" />,
+      { service: 'mundo' },
+    );
+
+    expect(container).toMatchSnapshot();
+  });
+
   it('should match snapshot - AMP', () => {
     const { container } = render(<EmbedConsentBannerAmp provider="youtube" />, {
       service: 'mundo',
