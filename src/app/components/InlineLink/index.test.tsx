@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { BrowserRouter } from 'react-router-dom';
 import InlineLink from '.';
 import { render, screen } from '../react-testing-library-with-providers';
 
@@ -116,4 +117,84 @@ describe('InlineLink', () => {
       );
     },
   );
+
+  it.each`
+    size          | expected
+    ${'atlas'}    | ${'4.875'}
+    ${'elephant'} | ${'3.75'}
+    ${'imperial'} | ${'3.125'}
+    ${'royal'}    | ${'2.5'}
+    ${'foolscap'} | ${'2'}
+    ${'canon'}    | ${'1.75'}
+  `('should apply provided font size ', ({ size, expected }) => {
+    render(
+      <InlineLink
+        to="/mundo/articles/ce42wzqr2mko"
+        text="Hello World!"
+        size={size}
+      />,
+    );
+
+    expect(screen.getByText('Hello World!')).toHaveStyle({
+      color: '#222222',
+      'font-size': `${expected}rem`,
+    });
+  });
+
+  it.each`
+    variant                | fontWeight | fontStyle
+    ${'sansRegularItalic'} | ${400}     | ${'italic'}
+    ${'sansBold'}          | ${700}     | ${'normal'}
+    ${'serifMediumItalic'} | ${500}     | ${'italic'}
+    ${'serifLight'}        | ${300}     | ${'normal'}
+    ${'sansLight'}         | ${300}     | ${'normal'}
+  `(
+    'should apply provided font variant ',
+    ({ variant, fontWeight, fontStyle }) => {
+      render(
+        <InlineLink
+          to="/mundo/articles/ce42wzqr2mko"
+          text="Hello World!"
+          fontVariant={variant}
+        />,
+      );
+
+      expect(screen.getByText('Hello World!')).toHaveStyle({
+        color: '#222222',
+        'font-style': fontStyle,
+        'font-weight': fontWeight,
+      });
+    },
+  );
+
+  it('should not render client side link when CSR is enabled and location does not match regex', () => {
+    render(
+      <BrowserRouter>
+        <InlineLink to="https://google.com" text="Google" allowCSR />
+      </BrowserRouter>,
+    );
+    const anchorEl = screen.queryByTestId('client-side-link');
+
+    expect(anchorEl).toBeNull();
+    expect(screen.getByText('Google')).toBeInTheDocument();
+  });
+
+  it('should render link when CSR is enabled and provided link is split at first hashtag', () => {
+    render(
+      <BrowserRouter>
+        <InlineLink
+          to="/mundo/articles/ce42wzqr2mko#test#hash"
+          text="Hello World!"
+          allowCSR
+        />
+      </BrowserRouter>,
+    );
+    const anchorEl = screen.queryByTestId('client-side-link');
+
+    expect(anchorEl).toBeInTheDocument();
+    expect(screen.getByText('Hello World!')).toHaveAttribute(
+      'href',
+      '/mundo/articles/ce42wzqr2mko#test',
+    );
+  });
 });

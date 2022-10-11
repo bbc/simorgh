@@ -79,6 +79,7 @@ const InlineLink: FC<Props> = ({
             pathname,
             hash,
           }}
+          data-testid="client-side-link"
         >
           {text}
         </ClientSideLink>
