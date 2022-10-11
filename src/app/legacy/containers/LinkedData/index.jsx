@@ -57,9 +57,25 @@ const LinkedData = ({
     url: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/publisher-nx16.png',
   };
 
-  const isNews = () => service === 'news';
+  const sportPublisherLogo = {
+    '@type': IMG_TYPE,
+    width: 108,
+    height: 16,
+    url: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/sport/images/metadata/publisher-nx16.png',
+  };
 
-  const publisherLogo = isNews() ? newsPublisherLogo : logo;
+  const choosePublisherLogo = () => {
+    switch (service) {
+      case 'news':
+        return newsPublisherLogo;
+      case 'sport':
+        return sportPublisherLogo;
+      default:
+        return logo;
+    }
+  };
+
+  const publisherLogo = choosePublisherLogo();
 
   const image = {
     '@type': IMG_TYPE,
