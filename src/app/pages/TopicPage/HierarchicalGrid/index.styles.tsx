@@ -60,11 +60,21 @@ const TallPromo = css({
 const CompactPromo = css({
   gridColumn: 'span 1',
   gridRow: 'span 1',
+  paddingTop: '0.5rem',
   '.promo-image': {
     display: 'none',
   },
   '.promo-paragraph': {
     display: 'none',
+  },
+  '::before': {
+    top: 0,
+    content: '""',
+    background: '#e6e8ea',
+    width: '100%',
+    height: `${1 / 16}rem`,
+    position: 'absolute',
+    left: 0,
   },
 });
 
