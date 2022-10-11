@@ -137,6 +137,13 @@ describe('LinkedData', () => {
   );
 
   shouldMatchSnapshot(
+    'should correctly render publisherLogo for sport',
+    <Context service="sport">
+      <LinkedData {...propsForArticle} />
+    </Context>,
+  );
+
+  shouldMatchSnapshot(
     'should correctly render publisherLogo for non-news services',
     <Context service="mundo">
       <LinkedData {...propsForArticle} />
