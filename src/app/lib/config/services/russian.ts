@@ -223,7 +223,7 @@ export const mainTranslations = {
       privacyUrl: {
         youtube: 'https://policies.google.com/privacy',
       },
-      button: 'Принять и продолжить',
+      button: 'Согласиться и продолжить',
     },
   },
   include: {
