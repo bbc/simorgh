@@ -3,12 +3,15 @@ import { SocialEmbedProviders } from '../../models/types/global';
 
 import ConsentBanner from './ConsentBanner';
 
-const CONSENT_BANNER_PROVIDERS: SocialEmbedProviders[] = ['youtube', 'tiktok'];
+export const CONSENT_BANNER_PROVIDERS: Extract<
+  SocialEmbedProviders,
+  'youtube' | 'tiktok'
+>[] = ['youtube', 'tiktok'];
 
-interface ConsentBannerProps {
-  provider: SocialEmbedProviders;
+type ConsentBannerProps = {
+  provider: typeof CONSENT_BANNER_PROVIDERS[number];
   id?: string;
-}
+};
 
 const EmbedConsentBannerAmp = ({
   provider,
