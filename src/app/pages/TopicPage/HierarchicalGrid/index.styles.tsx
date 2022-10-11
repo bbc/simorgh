@@ -1,10 +1,11 @@
 import { css, Theme } from '@emotion/react';
 
 const styles = {
-  body: ({ spacings }: Theme) =>
+  body: ({ spacings, palette }: Theme) =>
     css({
       marginTop: 0,
       marginBottom: `${spacings.DOUBLE}rem`,
+      color: palette.GREY_10,
     }),
   item: css({
     position: 'relative',
