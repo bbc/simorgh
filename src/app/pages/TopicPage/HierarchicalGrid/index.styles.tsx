@@ -17,7 +17,7 @@ const styles = {
       padding: 0,
       margin: 0,
       display: 'grid',
-      gridGap: `${spacings.FULL}rem`,
+      gridGap: `${spacings.DOUBLE}rem`,
       gridTemplateColumns: 'repeat(2, 1fr)',
       [mq.GROUP_3_MIN_WIDTH]: {
         gridTemplateColumns: 'repeat(3, 1fr)',
