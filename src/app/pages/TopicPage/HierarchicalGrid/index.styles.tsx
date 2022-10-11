@@ -6,12 +6,10 @@ const styles = {
       marginTop: 0,
       marginBottom: `${spacings.DOUBLE}rem`,
     }),
-  item: ({ spacings }: Theme) =>
-    css({
-      position: 'relative',
-      display: 'inline',
-      marginBottom: `${spacings.FULL}rem`,
-    }),
+  item: css({
+    position: 'relative',
+    display: 'inline',
+  }),
   list: ({ mq, spacings }: Theme) =>
     css({
       padding: 0,
@@ -31,17 +29,20 @@ const styles = {
 const DesktopBigPromo = css({
   gridColumn: 'span 2',
   gridRow: 'span 4',
+  marginTop: '0.5rem',
 });
 
 const BigPromo = css({
   gridRow: 'span 3',
   gridColumn: 'span 2',
+  marginTop: '0.5rem',
   '.promo-paragraph': {
     display: 'none',
   },
 });
 
 const VerticalPromo = css({
+  marginTop: '0.5rem',
   gridColumn: 'span 1',
   gridRow: 'span 2',
   '.promo-paragraph': {
@@ -52,6 +53,7 @@ const VerticalPromo = css({
 const TallPromo = css({
   gridColumn: 'span 1',
   gridRow: 'span 4',
+  marginTop: '0.5rem',
   ' .promo-paragraph': {
     display: 'none',
   },
@@ -61,6 +63,7 @@ const CompactPromo = css({
   gridColumn: 'span 1',
   gridRow: 'span 1',
   paddingTop: '0.5rem',
+  marginTop: '0.5rem',
   '.promo-image': {
     display: 'none',
   },
