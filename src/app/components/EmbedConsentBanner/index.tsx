@@ -1,22 +1,21 @@
 import React, { useState, PropsWithChildren } from 'react';
-import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
-import { PageTypes, SocialEmbedProviders } from '../../models/types/global';
+import { SocialEmbedProviders } from '../../models/types/global';
 
 import ConsentBanner from './ConsentBanner';
 
+const CONSENT_BANNER_PROVIDERS: SocialEmbedProviders[] = ['youtube'];
+
 interface ConsentBannerProps {
-  pageType: PageTypes;
   provider: SocialEmbedProviders;
   id?: string;
 }
 
 const EmbedConsentBannerAmp = ({
-  pageType,
   provider,
   id,
   children,
 }: PropsWithChildren<ConsentBannerProps>) => {
-  if (pageType !== ARTICLE_PAGE || provider !== 'youtube')
+  if (!CONSENT_BANNER_PROVIDERS.includes(provider))
     return children as JSX.Element;
 
   return (
@@ -38,14 +37,13 @@ const EmbedConsentBannerAmp = ({
 };
 
 const EmbedConsentBannerCanonical = ({
-  pageType,
   provider,
   children,
-}: PropsWithChildren<Partial<ConsentBannerProps>>) => {
+}: PropsWithChildren<Omit<ConsentBannerProps, 'id'>>) => {
   const [consented, setConsented] = useState(false);
 
   const showConsentBanner =
-    pageType === ARTICLE_PAGE && provider === 'youtube' && !consented;
+    CONSENT_BANNER_PROVIDERS.includes(provider) && !consented;
 
   if (!showConsentBanner) return children as JSX.Element;
 
