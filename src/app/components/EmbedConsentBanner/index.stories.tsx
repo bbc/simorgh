@@ -2,13 +2,13 @@ import React, { PropsWithChildren } from 'react';
 import { css } from '@emotion/react';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { C_GREY_2 } from '../../legacy/psammead/psammead-styles/src/colours';
-import {
-  Services,
-  SocialEmbedProviders,
-  Variants,
-} from '../../models/types/global';
+import { Services, Variants } from '../../models/types/global';
 
-import { EmbedConsentBannerCanonical, EmbedConsentBannerAmp } from '.';
+import {
+  EmbedConsentBannerCanonical,
+  EmbedConsentBannerAmp,
+  CONSENT_BANNER_PROVIDERS,
+} from '.';
 import ThemeProvider from '../ThemeProvider';
 
 const BackgroundColorWrapper = ({ children }: PropsWithChildren) => (
@@ -19,7 +19,7 @@ interface Props {
   service: Services;
   variant: Variants;
   isAmp?: boolean;
-  provider: SocialEmbedProviders;
+  provider: typeof CONSENT_BANNER_PROVIDERS[number];
 }
 
 const Component = ({
