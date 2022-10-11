@@ -60,7 +60,7 @@ const TopicPage = ({ pageData }) => {
           <AdContainer slotType="leaderboard" />
         </>
       )}
-      <div css={styles.main} role="main">
+      <main css={styles.main}>
         <div css={styles.inner}>
           <ATIAnalytics data={pageData} />
           <ChartbeatAnalytics data={pageData} />
@@ -116,7 +116,7 @@ const TopicPage = ({ pageData }) => {
             page={page}
           />
         </div>
-      </div>
+      </main>
     </>
   );
 };
