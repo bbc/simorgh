@@ -10,7 +10,7 @@ const styles = {
     css({
       position: 'relative',
       display: 'inline',
-      paddingBottom: `${spacings.FULL}rem`,
+      marginBottom: `${spacings.FULL}rem`,
     }),
   list: ({ mq, spacings }: Theme) =>
     css({
