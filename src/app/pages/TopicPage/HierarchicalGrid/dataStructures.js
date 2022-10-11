@@ -24,9 +24,9 @@ const DESKTOP = [
   [
     DesktopBigPromo,
     VerticalPromo,
-    CompactPromo,
-    CompactPromo,
     VerticalPromo,
+    CompactPromo,
+    CompactPromo,
     CompactPromo,
     CompactPromo,
   ],
