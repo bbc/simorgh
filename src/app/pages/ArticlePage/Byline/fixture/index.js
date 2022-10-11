@@ -833,12 +833,12 @@ export const bylineWithPngPhoto = [
                     {
                       type: 'paragraph',
                       model: {
-                        text: 'Lagos, Ng',
+                        text: 'Lagos, Nigeria',
                         blocks: [
                           {
                             type: 'fragment',
                             model: {
-                              text: 'Lagos, Ng',
+                              text: 'Lagos, Nigeria',
                               attributes: [],
                             },
                           },
