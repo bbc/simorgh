@@ -81,6 +81,7 @@ const CompactPromo = css({
 const HorizontalPromo = css({
   gridColumn: 'span 2',
   gridRow: 'span 1',
+  paddingTop: '0.5rem',
   '.promo-paragraph': {
     display: 'none',
   },
@@ -94,6 +95,15 @@ const HorizontalPromo = css({
     display: 'inline-block',
     verticalAlign: 'top',
     paddingInlineStart: '1rem',
+  },
+  '::before': {
+    top: 0,
+    content: '""',
+    background: '#e6e8ea',
+    width: '100%',
+    height: `${1 / 16}rem`,
+    position: 'absolute',
+    left: 0,
   },
 });
 
