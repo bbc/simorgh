@@ -94,7 +94,7 @@ const HorizontalPromo = css({
     width: '67%',
     display: 'inline-block',
     verticalAlign: 'top',
-    paddingInlineStart: '1rem',
+    paddingInlineStart: '0.5rem',
   },
   '::before': {
     top: 0,
