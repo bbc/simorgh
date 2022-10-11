@@ -179,11 +179,11 @@ describe('InlineLink', () => {
     expect(screen.getByText('Google')).toBeInTheDocument();
   });
 
-  it('should render link when CSR is enabled and provided link is split at first hashtag', () => {
+  it('should render link when CSR is enabled and includes a hashtag', () => {
     render(
       <BrowserRouter>
         <InlineLink
-          to="/mundo/articles/ce42wzqr2mko#test#hash"
+          to="/mundo/articles/ce42wzqr2mko#test"
           text="Hello World!"
           allowCSR
         />
@@ -195,6 +195,25 @@ describe('InlineLink', () => {
     expect(screen.getByText('Hello World!')).toHaveAttribute(
       'href',
       '/mundo/articles/ce42wzqr2mko#test',
+    );
+  });
+
+  it('should render link when CSR is enabled and does not includes a hashtag', () => {
+    render(
+      <BrowserRouter>
+        <InlineLink
+          to="/mundo/articles/ce42wzqr2mko"
+          text="Hello World!"
+          allowCSR
+        />
+      </BrowserRouter>,
+    );
+    const anchorEl = screen.queryByTestId('client-side-link');
+
+    expect(anchorEl).toBeInTheDocument();
+    expect(screen.getByText('Hello World!')).toHaveAttribute(
+      'href',
+      '/mundo/articles/ce42wzqr2mko',
     );
   });
 });
