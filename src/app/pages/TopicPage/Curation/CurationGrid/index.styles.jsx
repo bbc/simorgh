@@ -8,6 +8,21 @@ const styles = {
   }),
   item: ({ spacings, mq }) =>
     css({
+      '.promo-image': {
+        [mq.GROUP_2_MAX_WIDTH]: {
+          width: '33%',
+          display: 'inline-block',
+          verticalAlign: 'top',
+        },
+      },
+      '.promo-text': {
+        [mq.GROUP_2_MAX_WIDTH]: {
+          width: '67%',
+          display: 'inline-block',
+          verticalAlign: 'top',
+          paddingInlineStart: `${spacings.FULL}rem`,
+        },
+      },
       verticalAlign: 'top',
       display: 'inline-block',
       marginBottom: `${spacings.DOUBLE}rem`,
