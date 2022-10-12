@@ -336,10 +336,6 @@ export const service: DefaultServiceConfig = {
         url: '/swahili',
       },
       {
-        title: 'Uchaguzi Kenya',
-        url: '/swahili/habari-61042508',
-      },
-      {
         title: 'Michezo',
         url: '/swahili/topics/ckdxndddjkxt',
       },
