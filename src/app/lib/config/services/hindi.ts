@@ -293,6 +293,7 @@ export const service: DefaultServiceConfig = {
           privacyUrl: {
             youtube: 'https://policies.google.com/privacy',
           },
+          button: 'अनुमति  देंऔर जारी रखें',
         },
       },
       include: {

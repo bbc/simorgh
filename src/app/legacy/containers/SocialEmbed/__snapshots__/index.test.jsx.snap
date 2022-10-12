@@ -774,7 +774,7 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
 
 .emotion-10 {
   background-color: #FFFFFF;
-  padding: 2rem 1rem;
+  padding: 1rem;
   min-height: 280px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -791,19 +791,19 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  border: 0.1875rem solid transparent;
+  border: 0.0625rem solid #8A8C8E;
 }
 
 .emotion-11 {
   color: #141414;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: 1.125rem;
   line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
 }
 
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
+@media (min-width: 20rem) {
   .emotion-11 {
     font-size: 1.125rem;
     line-height: 1.375rem;
@@ -819,12 +819,27 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
 
 .emotion-12 {
   color: #141414;
-  margin: 1rem 0;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  margin: 1rem 0;
+}
+
+@media (min-width: 20rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
 }
 
 .emotion-12 a {
@@ -834,44 +849,43 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
   border-bottom: 0.0625rem solid #141414;
 }
 
+.emotion-12 a:visited {
+  color: #545658;
+  border-bottom: 0.0625rem solid #545658;
+}
+
 .emotion-12 a:hover,
 .emotion-12 a:focus {
   color: #B80000;
   border-bottom: 0.125rem solid #B80000;
 }
 
-.emotion-12 a:visited {
-  color: #545658;
-  border-bottom: 0.0625rem solid #545658;
+.emotion-13 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: #FFFFFF;
+  border: 0.0625rem solid #8A8C8E;
+  border-radius: 0;
+  padding: 0.5rem;
+  cursor: pointer;
 }
 
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
+@media (min-width: 20rem) {
+  .emotion-13 {
     font-size: 1rem;
-    line-height: 1.375rem;
+    line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-13 {
     font-size: 1rem;
-    line-height: 1.375rem;
+    line-height: 1.25rem;
   }
-}
-
-.emotion-13 {
-  color: #141414;
-  background-color: #FFFFFF;
-  border: 0.0625rem solid #8A8C8E;
-  border-radius: 0;
-  font-weight: bold;
-  padding: 0.5rem;
-  cursor: pointer;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
 }
 
 .emotion-13:hover,
@@ -881,20 +895,6 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
   border: 0.0625rem solid #B80000;
   -webkit-text-decoration: underline;
   text-decoration: underline;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-13 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-13 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
 }
 
 .emotion-14 {

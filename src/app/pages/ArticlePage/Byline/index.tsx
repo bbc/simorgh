@@ -98,11 +98,6 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
   );
   const jobRoleTranslated = pathOr('Role', ['byline', 'role'], translations);
 
-  const publishedTranslated = pathOr(
-    'Published',
-    ['byline', 'published'],
-    translations,
-  );
   const reportingFromTranslated = pathOr(
     'Reporting from',
     ['byline', 'reportingFrom'],
@@ -114,7 +109,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
       role="region"
       aria-labelledby="article-byline"
     >
-      <VisuallyHiddenText id="article-byline" aria-hidden>
+      <VisuallyHiddenText as="strong" id="article-byline" aria-hidden>
         {articleInformationTranslated}
       </VisuallyHiddenText>
       <ul css={BylineCss.bylineList} role="list">
@@ -213,9 +208,8 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
                 size="brevier"
                 fontVariant="sansRegularItalic"
               >
-                {reportingFromTranslated}
+                {`${reportingFromTranslated} `}{' '}
               </Text>
-              <VisuallyHiddenText> </VisuallyHiddenText>
               <Text
                 css={BylineCss.locationText}
                 size="brevier"
@@ -227,14 +221,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
           </li>
         ) : null}
         {children ? (
-          <li css={BylineCss.timestampLineBreak}>
-            <span role="text">
-              <VisuallyHiddenText>
-                {`${publishedTranslated}, `}{' '}
-              </VisuallyHiddenText>
-              {children}
-            </span>
-          </li>
+          <li css={BylineCss.timestampLineBreak}>{children}</li>
         ) : null}
       </ul>
     </section>
