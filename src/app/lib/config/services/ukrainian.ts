@@ -266,7 +266,7 @@ const baseServiceConfig = {
       },
       consentBanner: {
         heading: `Дозволити контент [social_media_site]?`,
-        body: `Ця стаття містить контент, наданий [social_media_site]. Ми питаємо про ваш дозвіл перед завантаженням, тому що сайт може використовувати файли cookie та інші технології. Ви можете ознайомитися з політикою щодо файлів [link] cookie [social_media_site] [/link] i [link] політикою конфіденційності [/link], перш ніж надати дозвіл. Щобb переглянути цей контент, виберіть "Прийняти та продовжити".`,
+        body: `Ця стаття містить контент, наданий [social_media_site]. Ми питаємо про ваш дозвіл перед завантаженням, тому що сайт може використовувати файли cookie та інші технології. Ви можете ознайомитися з політикою щодо файлів [link] cookie [social_media_site] [/link] i [link] політикою конфіденційності [/link], перш ніж надати дозвіл. Щоб переглянути цей контент, виберіть "Прийняти та продовжити".`,
         cookiesUrl: {
           youtube: 'https://policies.google.com/technologies/cookies',
         },
@@ -366,10 +366,6 @@ const baseServiceConfig = {
     {
       title: 'Подкасти',
       url: '/ukrainian/podcasts/p09jsy3h',
-    },
-    {
-      title: 'РУС',
-      url: '/ukrainian/ukraine_in_russian',
     },
   ],
 };
