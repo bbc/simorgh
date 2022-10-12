@@ -122,11 +122,8 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
     <section
       css={BylineCss.bylineSection}
       role="region"
-      aria-labelledby="article-byline"
+      aria-label={`${articleInformationTranslated}`}
     >
-      <VisuallyHiddenText id="article-byline" aria-hidden>
-        {articleInformationTranslated}
-      </VisuallyHiddenText>
       <ul css={BylineCss.bylineList} role="list">
         {image && (
           <li
@@ -238,9 +235,8 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
                   getBrevier(script),
                 ]}
               >
-                {reportingFromTranslated}
+                {`${reportingFromTranslated}, `}
               </span>
-              <VisuallyHiddenText> </VisuallyHiddenText>
               <span
                 css={[
                   BylineCss.locationText,
@@ -254,10 +250,10 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
           </li>
         ) : null}
         {children ? (
-          <li css={BylineCss.timestampLineBreak}>
-            <span role="text">
+          <li css={BylineCss.timestampLineBreak} aria-labelledby="timestamp">
+            <span role="text" id="timestamp">
               <VisuallyHiddenText>
-                {`${publishedTranslated}, `}{' '}
+                {`${publishedTranslated}, `}
               </VisuallyHiddenText>
               {children}
             </span>
