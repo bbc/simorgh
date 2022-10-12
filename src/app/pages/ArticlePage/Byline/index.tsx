@@ -235,7 +235,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
                   getBrevier(script),
                 ]}
               >
-                {`${reportingFromTranslated}, `}
+                {`${reportingFromTranslated} `}{' '}
               </span>
               <span
                 css={[
