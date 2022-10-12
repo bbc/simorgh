@@ -7,10 +7,6 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 import VisuallyHiddenText from '../../../legacy/psammead/psammead-visually-hidden-text/src';
 import BylineCss from './index.styles';
 import { RightChevron, LeftChevron } from '../../../components/icons';
-import {
-  getBodyCopy,
-  getBrevier,
-} from '../../../legacy/psammead/gel-foundations/src/typography';
 import Text from '../../../components/Text';
 import Image from '../../../components/Image';
 import buildIChefURL from '../../../lib/utilities/ichefURL';
@@ -20,7 +16,7 @@ type Props = {
 };
 
 const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
-  const { script, translations, dir } = useContext(ServiceContext);
+  const { translations, dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
   const bylineBlocks = pathOr([], [0, 'model', 'blocks'], blocks);
 
@@ -149,8 +145,9 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
               >
                 <Text
                   className="byline__link-text"
+                  size="bodyCopy"
                   fontVariant="sansBold"
-                  css={[BylineCss.author, getBodyCopy(script)]}
+                  css={BylineCss.author}
                 >
                   {author}
                 </Text>
@@ -165,11 +162,8 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
             <span role="text">
               <VisuallyHiddenText>{`${authorTranslated}, `}</VisuallyHiddenText>
               <Text
-                css={[
-                  BylineCss.author,
-                  BylineCss.authorLink,
-                  getBodyCopy(script),
-                ]}
+                css={[BylineCss.author, BylineCss.authorLink]}
+                size="bodyCopy"
                 fontVariant="sansBold"
               >
                 {author}
@@ -180,10 +174,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
         <li>
           <span role="text">
             <VisuallyHiddenText>{`${jobRoleTranslated}, `} </VisuallyHiddenText>
-            <Text
-              css={[BylineCss.jobRole, getBrevier(script)]}
-              fontVariant="sansBold"
-            >
+            <Text css={BylineCss.jobRole} fontVariant="sansBold" size="brevier">
               {jobRole}
             </Text>
           </span>
@@ -201,7 +192,8 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
                 </VisuallyHiddenText>
                 <Text
                   className="byline__link-text"
-                  css={[BylineCss.twitterText, getBrevier(script)]}
+                  css={BylineCss.twitterText}
+                  size="brevier"
                   fontVariant="sansBold"
                 >{`@${twitterText}`}</Text>
                 {isRtl ? (
@@ -217,14 +209,16 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
           <li>
             <span role="text" css={BylineCss.location}>
               <Text
-                css={[BylineCss.reportingFromText, getBrevier(script)]}
+                css={BylineCss.reportingFromText}
+                size="brevier"
                 fontVariant="sansRegularItalic"
               >
                 {reportingFromTranslated}
               </Text>
               <VisuallyHiddenText> </VisuallyHiddenText>
               <Text
-                css={[BylineCss.locationText, getBrevier(script)]}
+                css={BylineCss.locationText}
+                size="brevier"
                 fontVariant="sansRegular"
               >
                 {location}
