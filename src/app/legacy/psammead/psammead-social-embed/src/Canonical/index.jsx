@@ -6,7 +6,6 @@ import useScript from './useScript';
 
 const LANDSCAPE_RATIO = '56.25%';
 const PRE_RENDER_MARGIN = '10rem';
-const TIKTOK_MAX_WIDTH = '325px';
 
 /**
  * Apply provider-specific styles.
@@ -84,20 +83,10 @@ export const providers = provider =>
     },
     tiktok: {
       script: `https://www.tiktok.com/embed.js?t=${Date.now()}`,
-      styles: `
-      max-width: ${TIKTOK_MAX_WIDTH};
-
-      ~ figcaption {
-        max-width: ${TIKTOK_MAX_WIDTH};
-      }
-      
+      styles: `      
       .tiktok-embed{
         margin-top: 0;
         margin-bottom: 0;
-
-        > iframe {
-          border-radius: 8px;
-        }
       }
     `,
       enrich: () => {},
