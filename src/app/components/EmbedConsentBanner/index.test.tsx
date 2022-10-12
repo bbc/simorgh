@@ -8,30 +8,24 @@ import {
 import { EmbedConsentBannerCanonical, EmbedConsentBannerAmp } from '.';
 
 describe('Embed Consent Banner', () => {
-  it('should match snapshot', () => {
-    const { container } = render(
-      <EmbedConsentBannerCanonical provider="youtube" />,
-      { service: 'mundo' },
-    );
-
-    expect(container).toMatchSnapshot();
-  });
-
-  it('should match snapshot for TikTok embed', () => {
-    const { container } = render(
-      <EmbedConsentBannerCanonical provider="tiktok" />,
-      { service: 'mundo' },
-    );
-
-    expect(container).toMatchSnapshot();
-  });
-
-  it('should match snapshot - AMP', () => {
-    const { container } = render(<EmbedConsentBannerAmp provider="youtube" />, {
+  it('should render correct elements for the banner', () => {
+    render(<EmbedConsentBannerCanonical provider="youtube" />, {
       service: 'mundo',
     });
 
-    expect(container).toMatchSnapshot();
+    expect(screen.getByTestId('banner-heading')).toBeInTheDocument();
+    expect(screen.getByTestId('banner-body')).toBeInTheDocument();
+    expect(screen.getByTestId('banner-button')).toBeInTheDocument();
+  });
+
+  it('should render correct elements for the banner - AMP', () => {
+    render(<EmbedConsentBannerAmp provider="youtube" />, {
+      service: 'mundo',
+    });
+
+    expect(screen.getByTestId('banner-heading')).toBeInTheDocument();
+    expect(screen.getByTestId('banner-body')).toBeInTheDocument();
+    expect(screen.getByTestId('banner-button')).toBeInTheDocument();
   });
 
   it('should render the banner when the user has not consented', () => {
