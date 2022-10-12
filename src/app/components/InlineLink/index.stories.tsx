@@ -29,7 +29,7 @@ export const InternalInlineLink = ({
   text,
 }: Omit<Props, 'children'>) => (
   <Providers service={service} variant={variant}>
-    <InlineLink to="/" text={text} />
+    <InlineLink to="https://www.bbc.com/mundo" text={text} />
   </Providers>
 );
 
