@@ -117,8 +117,11 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
     <section
       css={BylineCss.bylineSection}
       role="region"
-      aria-label={`${articleInformationTranslated}`}
+      aria-labelledby="article-byline"
     >
+      <VisuallyHiddenText as="strong" id="article-byline" aria-hidden>
+        {articleInformationTranslated}
+      </VisuallyHiddenText>
       <ul css={BylineCss.bylineList} role="list">
         {image && (
           <li
