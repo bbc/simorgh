@@ -142,7 +142,7 @@ describe('Byline', () => {
     const AuthorLink = screen.getByText('Mayeni Jones');
     const TwitterLink = screen.getByText('@MayeniJones');
     const Links = screen.getAllByRole('link');
-    const Location = screen.getByText('Lagos, Ng');
+    const Location = screen.getByText('Lagos, Nigeria');
     const Image = screen.getByRole('img');
 
     expect(AuthorLink).toBeInTheDocument();
@@ -157,7 +157,6 @@ describe('Byline', () => {
     ${'Author'}         | ${'Author'}         | ${'Author,'}
     ${'Role'}           | ${'Role'}           | ${'Role,'}
     ${'Twitter'}        | ${'Twitter'}        | ${'Twitter,'}
-    ${'Published'}      | ${'Published'}      | ${'Published,'}
     ${'Reporting from'} | ${'Reporting from'} | ${'Reporting from'}
   `('should correctly announce $expectation for $info', ({ text }) => {
     render(
@@ -179,7 +178,6 @@ describe('Byline', () => {
     info               | translation
     ${'author'}        | ${'Barreessaa,'}
     ${'role'}          | ${'Gahee,'}
-    ${'published'}     | ${'Maxxanfame,'}
     ${'reportingFrom'} | ${'Gabaasni irraati'}
   `('should translate $info announcement correctly', ({ translation }) => {
     render(
