@@ -6,7 +6,7 @@ const styles = {
     padding: 0,
     margin: 0,
   }),
-  item: ({ spacings, mq }) =>
+  item: ({ spacings, mq, palette }) =>
     css({
       '.promo-image': {
         [mq.GROUP_2_MAX_WIDTH]: {
@@ -28,7 +28,7 @@ const styles = {
       marginBottom: `${spacings.DOUBLE}rem`,
       width: '100%',
       [mq.GROUP_2_MAX_WIDTH]: {
-        borderTop: '1px #e6e8ea solid',
+        borderTop: `1px ${palette.GREY_3} solid`,
         paddingTop: `${spacings.FULL}rem`,
       },
       [mq.GROUP_3_ONLY]: {
