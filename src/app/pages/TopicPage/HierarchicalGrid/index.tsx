@@ -64,7 +64,10 @@ const HiearchicalGrid = ({ summaries }: Summaries) => {
                 </Promo.MediaIcon>
               </Promo.Image>
               <Promo.Heading
-                css={(theme: Theme) => i === 0 && theme.fontSizes.paragon}
+                css={(theme: Theme) => ({
+                  color: theme.palette.GREY_10,
+                  ...(i === 0 && theme.fontSizes.paragon),
+                })}
               >
                 <Promo.A href={promo.link}>{promo.title}</Promo.A>
               </Promo.Heading>
