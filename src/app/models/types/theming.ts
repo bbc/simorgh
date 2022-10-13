@@ -77,6 +77,8 @@ interface Spacings {
   DOUBLE: number;
   TRIPLE: number;
   QUADRUPLE: number;
+  QUINTUPLE: number;
+  SEXTUPLE: number;
 }
 
 export type TypographyScript = {

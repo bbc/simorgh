@@ -209,6 +209,8 @@ These are numbers that represent the rems used for spacing content. The options,
 - `DOUBLE` - 16px
 - `TRIPLE` - 24px
 - `QUADRUPLE` - 32px
+- `QUINTUPLE` - 40px
+- `SEXTUPLE` - 48px
 
 You can use `spacings` like this:
 

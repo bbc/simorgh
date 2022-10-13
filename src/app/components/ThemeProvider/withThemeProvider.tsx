@@ -69,7 +69,14 @@ import {
   GROUP_4_ONLY,
   GROUP_5_MIN_WIDTH,
 } from './mediaQueries';
-import { FULL, DOUBLE, TRIPLE, QUADRUPLE } from './spacings';
+import {
+  FULL,
+  DOUBLE,
+  TRIPLE,
+  QUADRUPLE,
+  QUINTUPLE,
+  SEXTUPLE,
+} from './spacings';
 import {
   getAtlasSize,
   getElephantSize,
@@ -239,6 +246,8 @@ const withThemeProvider = ({
       DOUBLE,
       TRIPLE,
       QUADRUPLE,
+      QUINTUPLE,
+      SEXTUPLE,
     },
   };
 
