@@ -8,7 +8,7 @@ import {
 } from '#psammead/psammead-styles/src/font-styles';
 
 import {
-  C_PHILIPPINE_GREY,
+  C_GREY_5,
   C_GREY_10,
   C_GREY_6,
   C_POSTBOX,
@@ -25,7 +25,7 @@ import {
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 import buildBlocks, { TYPE, VISIBILITY } from './buildBlocks';
-import { Ellipsis, LeftChevron, RightChevron } from '../icons';
+import { Ellipsis, LeftChevron, RightChevron } from '../../../components/icons';
 
 const visibilityToMediaQuery = visibility =>
   ({
@@ -96,7 +96,7 @@ const Block = styled.li`
 `;
 
 const EllipsisBlock = styled(Block)`
-  color: ${C_PHILIPPINE_GREY};
+  color: ${C_GREY_5};
   svg {
     @media screen and (forced-colors: active) {
       fill: canvasText;

@@ -112,6 +112,14 @@ export const service: DefaultServiceConfig = {
           callToActionLinkUrl: 'https://www.bbc.com/telugu',
         },
       },
+      byline: {
+        articleInformation: 'కథనం',
+        author: 'రచయిత',
+        listItemImage: 'చిత్రం',
+        published: 'ప్రచురణ',
+        reportingFrom: 'నుంచి',
+        role: 'హోదా',
+      },
       consentBanner: {
         privacy: {
           title: 'మా ప్రైవసీ, కుకీస్ పాలసీ అప్‌డేట్ చేశాం',
