@@ -125,6 +125,14 @@ export const service: DefaultServiceConfig = {
           callToActionLinkUrl: 'https://www.bbc.com/gahuza',
         },
       },
+      byline: {
+        articleInformation: 'Ibiranga iyi nkuru',
+        author: 'Umwanditsi',
+        listItemImage: 'Tondeka iyi nkuru, ifoto',
+        published: 'Yatangajwe',
+        reportingFrom: 'Yakoze inkuru ari',
+        role: 'Igikorwa',
+      },
       consentBanner: {
         privacy: {
           title: "Twaravuguriye ibijanye n'ubuzima bwite n'ibigenga Cookies",

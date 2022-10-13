@@ -113,6 +113,13 @@ export const service: DefaultServiceConfig = {
           callToActionLinkUrl: 'https://www.bbc.com/pashto',
         },
       },
+      byline: {
+        articleInformation: 'د مطلب په اړه جزییات',
+        listItemImage: 'د توکو نوملړ، انځور',
+        published: 'د خپرېدو وخت',
+        reportingFrom: 'رپوټ له:',
+        role: 'دنده',
+      },
       consentBanner: {
         privacy: {
           title: 'موږ د محرمیت او ډېټا په اړه خپله تګلاره تازه کړې',
