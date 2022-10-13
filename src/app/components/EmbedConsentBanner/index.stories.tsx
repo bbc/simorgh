@@ -7,7 +7,7 @@ import { Services, Variants } from '../../models/types/global';
 import {
   EmbedConsentBannerCanonical,
   EmbedConsentBannerAmp,
-  CONSENT_BANNER_PROVIDERS,
+  ConsentBannerProviders,
 } from '.';
 import ThemeProvider from '../ThemeProvider';
 
@@ -19,7 +19,7 @@ interface Props {
   service: Services;
   variant: Variants;
   isAmp?: boolean;
-  provider: typeof CONSENT_BANNER_PROVIDERS[number];
+  provider: ConsentBannerProviders;
 }
 
 const Component = ({

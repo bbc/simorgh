@@ -10,7 +10,7 @@ import { SocialEmbedProviders } from '../../models/types/global';
 import { Translations } from '../../models/types/translations';
 
 import consentBannerCss from './ConsentBanner.styles';
-import { CONSENT_BANNER_PROVIDERS } from '.';
+import { ConsentBannerProviders } from '.';
 
 const defaultTranslations: Translations['socialEmbed']['consentBanner'] = {
   heading: 'Allow [social_media_site] content?',
@@ -37,7 +37,7 @@ const getProviderName = (provider: SocialEmbedProviders) => {
 };
 
 const getTranslations = (
-  provider: typeof CONSENT_BANNER_PROVIDERS[number],
+  provider: ConsentBannerProviders,
   translations: Translations,
   externalLinkText: string,
 ) => {
@@ -146,7 +146,7 @@ const getTranslations = (
 };
 
 type ConsentBannerContentProps = {
-  provider: typeof CONSENT_BANNER_PROVIDERS[number];
+  provider: ConsentBannerProviders;
   clickHandler:
     | {
         on: string;
