@@ -136,10 +136,6 @@ export const service: SerbianConfig = {
         url: '/serbian/lat/topics/c5wzvzzz5vrt',
       },
       {
-        title: 'Korona virus',
-        url: '/serbian/lat/srbija-52197807',
-      },
-      {
         title: 'Srbija',
         url: '/serbian/lat/topics/cr50vdy9q6wt',
       },
@@ -453,10 +449,6 @@ export const service: SerbianConfig = {
       {
         title: 'Украјина',
         url: '/serbian/cyr/topics/cqwvxvvw9qrt',
-      },
-      {
-        title: 'Корона вирус',
-        url: '/serbian/cyr/srbija-52197807',
       },
       {
         title: 'Србија',
