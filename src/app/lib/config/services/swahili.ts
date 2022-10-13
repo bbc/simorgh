@@ -113,6 +113,13 @@ export const service: DefaultServiceConfig = {
           callToActionLinkUrl: 'https://www.bbc.com/swahili',
         },
       },
+      byline: {
+        articleInformation: 'Maelezo kuhusu taarifa',
+        listItemImage: 'Orodha,Picha',
+        published: 'Iliyochapishwa',
+        reportingFrom: 'Akiripoti kutoka',
+        role: 'Nafasi',
+      },
       consentBanner: {
         privacy: {
           title: 'Tumeboresha sera yetu ya faragha na vidakuzi au cookies',
@@ -334,10 +341,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Habari',
         url: '/swahili',
-      },
-      {
-        title: 'Uchaguzi Kenya',
-        url: '/swahili/habari-61042508',
       },
       {
         title: 'Michezo',

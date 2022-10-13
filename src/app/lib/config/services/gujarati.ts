@@ -112,6 +112,14 @@ export const service: DefaultServiceConfig = {
           callToActionLinkUrl: 'https://www.bbc.com/gujarati',
         },
       },
+      byline: {
+        articleInformation: 'લેખની માહિતી',
+        author: 'લેેખક',
+        listItemImage: 'તસવીર',
+        published: 'પ્રકાશિત',
+        reportingFrom: 'દ્વારા રિપોર્ટિંગ',
+        role: 'પદ',
+      },
       consentBanner: {
         privacy: {
           title: 'અમે અમારી ગોપનીયતા અને કુકીઝની નીતિને અપડેટ કરી છે',
