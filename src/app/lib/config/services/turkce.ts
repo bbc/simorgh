@@ -348,8 +348,8 @@ export const service: DefaultServiceConfig = {
         url: '/turkce/topics/cg726y2k82dt',
       },
       {
-        title: 'Koronavirüs',
-        url: '/turkce/topics/ck0r47pk362t',
+        title: 'Sağlık',
+        url: '/turkce/topics/cnq68n6wgzdt',
       },
       {
         title: 'İngiltere',

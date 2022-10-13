@@ -390,10 +390,6 @@ export const service: DefaultServiceConfig = {
         url: '/russian/topics/cez0n29ggrdt',
       },
       {
-        title: 'Коронавирус',
-        url: '/russian/in-depth-51962199',
-      },
-      {
         title: 'Истории',
         url: '/russian/features-50983593',
       },

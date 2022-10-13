@@ -293,10 +293,6 @@ export const service: DefaultServiceConfig = {
         url: '/punjabi',
       },
       {
-        title: 'ਕੋਰੋਨਾਵਾਇਰਸ',
-        url: '/punjabi/india-51764906',
-      },
-      {
         title: 'ਵੀਡੀਓ',
         url: '/punjabi/media/video',
       },
