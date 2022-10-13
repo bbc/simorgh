@@ -114,6 +114,14 @@ export const service: DefaultServiceConfig = {
           callToActionLinkUrl: 'https://www.bbc.com/afaanoromoo',
         },
       },
+      byline: {
+        author: 'Barreessaa',
+        articleInformation: 'Odeeffannoo barreeffamichaa',
+        listItemImage: 'Tarree, suuraa',
+        published: 'Maxxanfame',
+        reportingFrom: 'Gabaasni irraati',
+        role: 'Gahee',
+      },
       consentBanner: {
         privacy: {
           title: 'Imaammata mateenyaafi kuus-yadannoo keenyaa haaromsiineera.',

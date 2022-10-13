@@ -2,7 +2,7 @@ import React, { Fragment, PropsWithChildren, useContext } from 'react';
 
 import H2 from './index.styled';
 
-import { LeftChevron, RightChevron } from '../../icons';
+import { LeftChevron, RightChevron } from '../../../../components/icons';
 
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 

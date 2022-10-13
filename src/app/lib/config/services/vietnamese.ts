@@ -111,6 +111,14 @@ export const service: DefaultServiceConfig = {
           callToActionLinkUrl: 'https://www.bbc.com/vietnamese',
         },
       },
+      byline: {
+        articleInformation: '',
+        author: 'Tác giả',
+        listItemImage: 'Danh sách mục, hình ảnh',
+        published: 'Được đăng',
+        reportingFrom: '',
+        role: 'Vai trò',
+      },
       consentBanner: {
         privacy: {
           title: 'Chúng tôi đã cập nhật Chính sách về Riêng tư và Cookie',

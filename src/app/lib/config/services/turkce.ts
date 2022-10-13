@@ -114,6 +114,14 @@ export const service: DefaultServiceConfig = {
           callToActionLinkUrl: 'https://www.bbc.com/turkce',
         },
       },
+      byline: {
+        articleInformation: 'Haber bilgisi',
+        author: 'Yazan',
+        listItemImage: 'Muhabir görseli',
+        published: 'Yayın tarihi',
+        reportingFrom: 'Bildirdiği yer',
+        role: 'Unvan',
+      },
       consentBanner: {
         privacy: {
           title: 'Gizlilik ve çerez politikamızı güncelledik',
