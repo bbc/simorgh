@@ -302,10 +302,6 @@ export const service: DefaultServiceConfig = {
         url: '/thai/topics/cyx5kz25zxdt',
       },
       {
-        title: 'โควิด-19',
-        url: '/thai/other-news-56319853',
-      },
-      {
         title: 'วิดีโอ',
         url: '/thai/topics/c5ljd3jng4nt',
       },
