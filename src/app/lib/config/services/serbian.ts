@@ -136,10 +136,6 @@ export const service: SerbianConfig = {
         url: '/serbian/lat/topics/c5wzvzzz5vrt',
       },
       {
-        title: 'Korona virus',
-        url: '/serbian/lat/srbija-52197807',
-      },
-      {
         title: 'Srbija',
         url: '/serbian/lat/topics/cr50vdy9q6wt',
       },
@@ -217,6 +213,14 @@ export const service: SerbianConfig = {
           callToActionLast: '.',
           callToActionLinkUrl: 'https://www.bbc.com/serbian/lat',
         },
+      },
+      byline: {
+        articleInformation: 'Podaci o članku',
+        author: 'Autor',
+        listItemImage: 'Prikazane fotografije',
+        published: 'Objavljeno',
+        reportingFrom: 'Izveštava iz',
+        role: 'Funkcija',
       },
       consentBanner: {
         privacy: {
@@ -455,10 +459,6 @@ export const service: SerbianConfig = {
         url: '/serbian/cyr/topics/cqwvxvvw9qrt',
       },
       {
-        title: 'Корона вирус',
-        url: '/serbian/cyr/srbija-52197807',
-      },
-      {
         title: 'Србија',
         url: '/serbian/cyr/topics/cvjp1d3k9dvt',
       },
@@ -536,6 +536,14 @@ export const service: SerbianConfig = {
           callToActionLast: '.',
           callToActionLinkUrl: 'https://www.bbc.com/serbian/cyr',
         },
+      },
+      byline: {
+        articleInformation: 'Подаци о чланку',
+        author: 'Аутор',
+        listItemImage: 'Приказане фотографије',
+        published: 'Објављено',
+        reportingFrom: 'Извештава из',
+        role: 'Функција',
       },
       consentBanner: {
         privacy: {

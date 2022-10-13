@@ -116,6 +116,14 @@ export const service: DefaultServiceConfig = {
           callToActionLinkUrl: 'https://www.bbc.com/igbo',
         },
       },
+      byline: {
+        articleInformation: 'Ebe akụkọ a si',
+        author: 'Onye dere ya',
+        listItemImage: 'Ndepụta ihe, foto',
+        published: 'Mgbe e biputara ya',
+        reportingFrom: 'Ebeg o si',
+        role: 'Ndị mere akụkọ a',
+      },
       consentBanner: {
         privacy: {
           title: 'Anyị ewelitela ihe nzuzo anyị nakwa iwu dị na ya.',
