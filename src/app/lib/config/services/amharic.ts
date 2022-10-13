@@ -108,6 +108,14 @@ export const service: DefaultServiceConfig = {
           callToActionLinkUrl: 'https://www.bbc.com/amharic',
         },
       },
+      byline: {
+        author: 'ፀሐፊ',
+        articleInformation: 'የጽሁፉ መረጃ',
+        listItemImage: 'ዝርዝር፣ ምስል',
+        published: 'ታትሟል',
+        reportingFrom: 'ዘገባው ከ',
+        role: 'የሥራ ድርሻ',
+      },
       consentBanner: {
         privacy: {
           title: 'በፕራይቬሲና ኩኪዎችን በመጠቀም ፖሊሲዎቻችን ላይ ማሻሻያ አድርገናል።',

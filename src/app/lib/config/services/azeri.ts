@@ -113,6 +113,14 @@ export const service: DefaultServiceConfig = {
           callToActionLinkUrl: 'https://www.bbc.com/azeri',
         },
       },
+      byline: {
+        articleInformation: 'Məqalə barədə məlumat',
+        author: 'Müəllif',
+        listItemImage: 'Siyahı elementi, foto',
+        published: 'Çap edildi',
+        reportingFrom: 'Məkan',
+        role: 'Vəzifə',
+      },
       consentBanner: {
         privacy: {
           title: 'Biz Məxfilik və Kukilər (Cookies) Siyasətimizi yeniləmişik.',
