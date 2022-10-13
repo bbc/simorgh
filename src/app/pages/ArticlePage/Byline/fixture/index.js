@@ -103,16 +103,24 @@ export const bylineWithNoRole = [
           },
         },
         {
-          type: 'image',
+          type: 'images',
           model: {
             blocks: [
               {
-                type: 'rawImage',
+                type: 'image',
                 model: {
-                  width: 640,
-                  height: 562,
-                  locator: 'f2f8/test/49056060-fea9-11ec-8adf-7bf4017ee9f9.png',
-                  originCode: 'cpsdevpb',
+                  blocks: [
+                    {
+                      type: 'rawImage',
+                      model: {
+                        width: 640,
+                        height: 562,
+                        locator:
+                          'f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+                        originCode: 'cpsprodpb',
+                      },
+                    },
+                  ],
                 },
               },
             ],
@@ -228,16 +236,24 @@ export const bylineWithNoAuthor = [
           },
         },
         {
-          type: 'image',
+          type: 'images',
           model: {
             blocks: [
               {
-                type: 'rawImage',
+                type: 'image',
                 model: {
-                  width: 640,
-                  height: 562,
-                  locator: 'f2f8/test/49056060-fea9-11ec-8adf-7bf4017ee9f9.png',
-                  originCode: 'cpsdevpb',
+                  blocks: [
+                    {
+                      type: 'rawImage',
+                      model: {
+                        width: 640,
+                        height: 562,
+                        locator:
+                          'f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+                        originCode: 'cpsprodpb',
+                      },
+                    },
+                  ],
                 },
               },
             ],
@@ -699,17 +715,24 @@ export const bylineWithNonPngPhoto = [
           },
         },
         {
-          type: 'image',
+          type: 'images',
           model: {
             blocks: [
               {
-                type: 'rawImage',
+                type: 'image',
                 model: {
-                  width: 640,
-                  height: 562,
-                  locator:
-                    'https://scarletjourney.rutgers.edu/crm/wp-content/uploads/sites/393/2017/12/christopher-reeve-superman.jpg',
-                  originCode: 'cpsdevpb',
+                  blocks: [
+                    {
+                      type: 'rawImage',
+                      model: {
+                        width: 640,
+                        height: 562,
+                        locator:
+                          'https://scarletjourney.rutgers.edu/crm/wp-content/uploads/sites/393/2017/12/christopher-reeve-superman.jpg',
+                        originCode: 'cpsdevpb',
+                      },
+                    },
+                  ],
                 },
               },
             ],
@@ -852,16 +875,24 @@ export const bylineWithPngPhoto = [
           },
         },
         {
-          type: 'image',
+          type: 'images',
           model: {
             blocks: [
               {
-                type: 'rawImage',
+                type: 'image',
                 model: {
-                  width: 640,
-                  height: 562,
-                  locator: 'f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
-                  originCode: 'cpsprodpb',
+                  blocks: [
+                    {
+                      type: 'rawImage',
+                      model: {
+                        width: 640,
+                        height: 562,
+                        locator:
+                          'f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+                        originCode: 'cpsprodpb',
+                      },
+                    },
+                  ],
                 },
               },
             ],
