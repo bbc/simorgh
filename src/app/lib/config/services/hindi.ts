@@ -133,6 +133,13 @@ export const service: DefaultServiceConfig = {
           callToActionLinkUrl: 'https://www.bbc.com/hindi',
         },
       },
+      byline: {
+        articleInformation: '....में',
+        listItemImage: 'तस्वीर',
+        published: 'प्रकाशित',
+        reportingFrom: '........से',
+        role: 'पदनाम',
+      },
       consentBanner: {
         privacy: {
           title: 'हमने अपनी गोपनीयता और कुकीज़ की नीति को अपडेट किया है',

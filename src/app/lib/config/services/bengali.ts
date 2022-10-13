@@ -336,10 +336,6 @@ export const service: DefaultServiceConfig = {
         url: '/bengali',
       },
       {
-        title: 'করোনাভাইরাস',
-        url: '/bengali/news-51941294',
-      },
-      {
         title: 'ভিডিও',
         url: '/bengali/topics/cxy7jg418e7t',
       },

@@ -133,6 +133,14 @@ export const service: DefaultServiceConfig = {
           callToActionLinkUrl: 'https://www.bbc.com/indonesia',
         },
       },
+      byline: {
+        articleInformation: 'Informasi artikel',
+        author: 'Penulis',
+        listItemImage: 'Daftar isi, gambar',
+        published: 'Telah diterbitkan',
+        reportingFrom: 'Melaporkan dari',
+        role: 'Peranan',
+      },
       consentBanner: {
         privacy: {
           title: 'Kami telah memperbarui Kebijakan Privasi dan Cookies kami',
