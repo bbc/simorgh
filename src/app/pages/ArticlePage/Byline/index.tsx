@@ -7,15 +7,7 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 import VisuallyHiddenText from '../../../legacy/psammead/psammead-visually-hidden-text/src';
 import BylineCss from './index.styles';
 import { RightChevron, LeftChevron } from '../../../components/icons';
-import {
-  getBodyCopy,
-  getBrevier,
-} from '../../../legacy/psammead/gel-foundations/src/typography';
-import {
-  getSansBold,
-  getSansRegular,
-  getSansRegularItalic,
-} from '../../../legacy/psammead/psammead-styles/src/font-styles';
+import Text from '../../../components/Text';
 import Image from '../../../components/Image';
 import buildIChefURL from '../../../lib/utilities/ichefURL';
 
@@ -24,9 +16,8 @@ type Props = {
 };
 
 const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
-  const { service, script, translations, dir } = useContext(ServiceContext);
+  const { translations, dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
-
   const bylineBlocks = pathOr([], [0, 'model', 'blocks'], blocks);
 
   const authorBlock = bylineBlocks.find((block: any) => block.type === 'name');
@@ -112,7 +103,6 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
     ['byline', 'reportingFrom'],
     translations,
   );
-
   return (
     <section
       css={BylineCss.bylineSection}
@@ -148,16 +138,14 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
                 css={[BylineCss.link, BylineCss.authorLink]}
                 href={authorTopicUrl}
               >
-                <span
+                <Text
                   className="byline__link-text"
-                  css={[
-                    BylineCss.author,
-                    getSansBold(service),
-                    getBodyCopy(script),
-                  ]}
+                  size="bodyCopy"
+                  fontVariant="sansBold"
+                  css={BylineCss.author}
                 >
                   {author}
-                </span>
+                </Text>
                 {isRtl ? (
                   <LeftChevron css={BylineCss.authorChevron} />
                 ) : (
@@ -168,31 +156,22 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
           ) : (
             <span role="text">
               <VisuallyHiddenText>{`${authorTranslated}, `}</VisuallyHiddenText>
-              <span
-                css={[
-                  BylineCss.author,
-                  BylineCss.authorLink,
-                  getSansBold(service),
-                  getBodyCopy(script),
-                ]}
+              <Text
+                css={[BylineCss.author, BylineCss.authorLink]}
+                size="bodyCopy"
+                fontVariant="sansBold"
               >
                 {author}
-              </span>
+              </Text>
             </span>
           )}
         </li>
         <li>
           <span role="text">
             <VisuallyHiddenText>{`${jobRoleTranslated}, `} </VisuallyHiddenText>
-            <span
-              css={[
-                BylineCss.jobRole,
-                getSansBold(service),
-                getBrevier(script),
-              ]}
-            >
+            <Text css={BylineCss.jobRole} fontVariant="sansBold" size="brevier">
               {jobRole}
-            </span>
+            </Text>
           </span>
         </li>
         {twitterLink ? (
@@ -206,14 +185,12 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
                 <VisuallyHiddenText lang="en-GB">
                   {`Twitter, `}
                 </VisuallyHiddenText>
-                <span
+                <Text
                   className="byline__link-text"
-                  css={[
-                    BylineCss.twitterText,
-                    getSansBold(service),
-                    getBrevier(script),
-                  ]}
-                >{`@${twitterText}`}</span>
+                  css={BylineCss.twitterText}
+                  size="brevier"
+                  fontVariant="sansBold"
+                >{`@${twitterText}`}</Text>
                 {isRtl ? (
                   <LeftChevron css={BylineCss.twitterChevron} />
                 ) : (
@@ -226,24 +203,20 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
         {location ? (
           <li>
             <span role="text" css={BylineCss.location}>
-              <span
-                css={[
-                  BylineCss.reportingFromText,
-                  getSansRegularItalic(service),
-                  getBrevier(script),
-                ]}
+              <Text
+                css={BylineCss.reportingFromText}
+                size="brevier"
+                fontVariant="sansRegularItalic"
               >
                 {`${reportingFromTranslated} `}{' '}
-              </span>
-              <span
-                css={[
-                  BylineCss.locationText,
-                  getSansRegular(service),
-                  getBrevier(script),
-                ]}
+              </Text>
+              <Text
+                css={BylineCss.locationText}
+                size="brevier"
+                fontVariant="sansRegular"
               >
                 {location}
-              </span>
+              </Text>
             </span>
           </li>
         ) : null}
