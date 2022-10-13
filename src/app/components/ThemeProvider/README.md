@@ -205,6 +205,7 @@ You can use `palette` like this:
 
 These are numbers that represent the rems used for spacing content. The options, with their size in pixels is as follows:
 
+- `HALF` - 4px
 - `FULL` - 8px
 - `DOUBLE` - 16px
 - `TRIPLE` - 24px
