@@ -399,8 +399,6 @@ it('should route to and render a story page', async () => {
     storyPageRecommendationsData,
   );
 
-  jest.setTimeout(10000);
-
   const { getInitialData, pageType } = getMatchingRoute(pathname);
   const { pageData } = await getInitialData({
     path: pathname,
