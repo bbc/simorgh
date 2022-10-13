@@ -26,10 +26,10 @@ const styles = {
         margin: `${spacings.QUADRUPLE} 0`,
       },
       [mq.GROUP_3_MIN_WIDTH]: {
-        margin: '3rem 0',
+        margin: `${spacings.SEXTUPLE}rem 0`,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        margin: '2.5rem 0 3rem 0',
+        margin: `${spacings.QUINTUPLE}rem 0 ${spacings.SEXTUPLE}rem 0`,
       },
     }),
 };
