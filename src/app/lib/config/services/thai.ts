@@ -246,12 +246,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: `ยินยอมรับเนื้อหาจาก [social_media_site]`,
           body: `บทความนี้ประกอบด้วยเนื้อหาจาก [social_media_site] เราขอความยินยอมจากคุณก่อนใช้คุกกี้ หรือเทคโนโลยีอื่น ๆ บันทึกอะไรลงไป คุณอาจต้องอ่านนโยบายคุกกี้ของ  [social_media_site] [link]  และนโยบายความเป็นส่วนตัวของ [/link]  [social_media_site] [link] ก่อนให้ความยินยอม [/link] หากต้องการอ่านเนื้อหานี้ โปรดเลือก "ยินยอมและไปต่อ"`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
         },
       },
       include: {

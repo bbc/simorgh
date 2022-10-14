@@ -260,12 +260,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: `Ruhusu maudhui? (Mitandao ya kijamii)`,
           body: `Mkala hii imebeba madhui yaliyotoka kwenye mitandao ya kijamii. Tunaomba ruhusa yako kabla kitu chochote hakija pakiwa, sababu wanaweza wakawa wanatumia Cookies na tekinolojia nyingine. Unaweza ukasoma sera sera ya kutumia cookies katika mitandao ya kijamii kabla ya kukubali. Kutazama maudhui haya chagua accept and continue`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
           button: 'Bonyeza kisha endelea',
         },
       },
