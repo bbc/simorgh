@@ -1,14 +1,21 @@
 import React, { useState, PropsWithChildren } from 'react';
+import ConsentBanner from './ConsentBanner';
 import { SocialEmbedProviders } from '../../models/types/global';
 
-import ConsentBanner from './ConsentBanner';
+export type ConsentBannerProviders = Extract<
+  SocialEmbedProviders,
+  'youtube' | 'tiktok'
+>;
 
-const CONSENT_BANNER_PROVIDERS: SocialEmbedProviders[] = ['youtube'];
+export const CONSENT_BANNER_PROVIDERS: ConsentBannerProviders[] = [
+  'youtube',
+  'tiktok',
+];
 
-interface ConsentBannerProps {
-  provider: SocialEmbedProviders;
+type ConsentBannerProps = {
+  provider: ConsentBannerProviders;
   id?: string;
-}
+};
 
 const EmbedConsentBannerAmp = ({
   provider,
