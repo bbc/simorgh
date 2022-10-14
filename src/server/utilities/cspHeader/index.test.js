@@ -79,6 +79,7 @@ describe('cspHeader', () => {
         'https://*.googlesyndication.com',
         'https://www.instagram.com',
         'https://www.riddle.com',
+        'https://www.tiktok.com',
         'https://www.youtube.com',
         'https://www.youtube-nocookie.com',
         "'self'",
@@ -95,7 +96,9 @@ describe('cspHeader', () => {
         'https://*.googleusercontent.com',
         'https://*.gstatic.com',
         'https://*.imrworldwide.com',
+        'https://*.tiktokcdn.com',
         'https://www.instagram.com',
+        'https://www.tiktok.com',
         'https://sb.scorecardresearch.com',
         'https://i.ytimg.com',
         "data: 'self'",
@@ -161,6 +164,7 @@ describe('cspHeader', () => {
         'https://*.doubleclick.net',
         'https://*.googlesyndication.com',
         'https://edigitalsurvey.com',
+        'https://www.tiktok.com',
         "'self'",
       ].sort(),
       imgSrcExpectation: [
@@ -179,6 +183,7 @@ describe('cspHeader', () => {
         'https://*.twimg.com',
         'https://*.twitter.com',
         'https://i.ytimg.com',
+        'https://*.tiktokcdn.com',
         "data: 'self'",
       ].sort(),
       scriptSrcExpectation: [
@@ -201,6 +206,7 @@ describe('cspHeader', () => {
         'https://*.twimg.com',
         'https://*.twitter.com',
         'https://*.wearehearken.eu',
+        'https://www.tiktok.com',
         ...advertisingServiceCountryDomains,
         "'self'",
         "'unsafe-inline'",
@@ -254,6 +260,7 @@ describe('cspHeader', () => {
         'https://www.riddle.com',
         'https://www.youtube.com',
         'https://www.youtube-nocookie.com',
+        'https://www.tiktok.com',
         "'self'",
       ].sort(),
       imgSrcExpectation: [
@@ -273,6 +280,8 @@ describe('cspHeader', () => {
         'https://www.instagram.com',
         'https://sb.scorecardresearch.com',
         'https://i.ytimg.com',
+        'https://www.tiktok.com',
+        'https://*.tiktokcdn.com',
         "data: 'self'",
       ].sort(),
       scriptSrcExpectation: [
@@ -337,6 +346,7 @@ describe('cspHeader', () => {
         'https://*.twitter.com',
         'https://www.youtube.com',
         'https://www.youtube-nocookie.com',
+        'https://www.tiktok.com',
         "'self'",
       ].sort(),
       imgSrcExpectation: [
@@ -357,6 +367,7 @@ describe('cspHeader', () => {
         'https://*.gstatic.com',
         'https://*.imrworldwide.com',
         'https://sb.scorecardresearch.com',
+        'https://*.tiktokcdn.com',
         "data: 'self'",
       ].sort(),
       scriptSrcExpectation: [
@@ -381,6 +392,7 @@ describe('cspHeader', () => {
         'https://bbc.gscontxt.net',
         'https://sb.scorecardresearch.com',
         'https://*.imrworldwide.com',
+        'https://www.tiktok.com',
         ...advertisingServiceCountryDomains,
         "'self'",
         "'unsafe-inline'",
