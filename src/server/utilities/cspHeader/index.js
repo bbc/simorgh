@@ -112,6 +112,7 @@ const directives = {
       'https://www.youtube.com', // Social Embeds, <amp-youtube />
       'https://www.youtube-nocookie.com', // Social Embeds, youtube no-cookie
       'https://www.instagram.com', // Social Embeds, <amp-instagram />
+      'https://www.tiktok.com', // Social Embeds, <amp-tiktok />
       'https://*.ampproject.net', // Social Embeds
       'https://www.riddle.com', // STY Includes
       ...advertisingDirectives.frameSrc,
@@ -124,6 +125,7 @@ const directives = {
       'https://www.youtube.com', // Social Embeds
       'https://www.youtube-nocookie.com', // Social Embeds, youtube no-cookie
       'https://www.instagram.com', // Social Embeds
+      'https://www.tiktok.com', // Social Embeds
       'https://*.twitter.com', // Social Embeds
       'https://bbc.com', // Media Player
       'https://bbc-maps.carto.com', // STY include maps
@@ -137,6 +139,7 @@ const directives = {
       'https://www.youtube.com', // Social Embeds, <amp-youtube />
       'https://www.youtube-nocookie.com', // Social Embeds, youtube no-cookie
       'https://www.instagram.com', // Social Embeds, <amp-instagram />
+      'https://www.tiktok.com', // Social Embeds, <amp-tiktok />
       'https://*.ampproject.net', // Social Embeds
       'https://www.riddle.com', // STY Includes
       ...advertisingDirectives.frameSrc,
@@ -149,6 +152,7 @@ const directives = {
       'https://www.youtube.com', // Social Embeds
       'https://www.youtube-nocookie.com', // Social Embeds, youtube no-cookie
       'https://www.instagram.com', // Social Embeds
+      'https://www.tiktok.com', // Social Embeds
       'https://*.twitter.com', // Social Embeds
       'https://bbc.com', // Media Player
       'https://bbc-maps.carto.com', // STY include maps
@@ -165,6 +169,8 @@ const directives = {
       'https://i.ytimg.com', // Social Embeds, <amp-youtube />
       'https://www.instagram.com', // Social Embeds, <amp-instagram />
       'https://*.cdninstagram.com', // Social Embeds, <amp-instagram />
+      'https://www.tiktok.com', // Social Embeds, <amp-tiktok />
+      'https://*.tiktokcdn.com', // Social Embeds, <amp-tiktok />
       ...advertisingDirectives.imgSrc,
       'https://*.googleusercontent.com', // Google Play Store - BBC News Apps - Arabic, Hindi, Mundo, Russian
       "data: 'self'",
@@ -175,6 +181,7 @@ const directives = {
       'https://*.twitter.com', // Social Embeds
       'https://*.twimg.com', // Social Embeds
       'https://*.cdninstagram.com', // Social Embeds
+      'https://*.tiktokcdn.com', // Social Embeds
       'https://i.ytimg.com', // Social Embeds
       ...advertisingDirectives.imgSrc,
       'https://*.googleusercontent.com', // Google Play Store - BBC News Apps - Arabic, Hindi, Mundo, Russian
@@ -188,6 +195,8 @@ const directives = {
       'https://i.ytimg.com', // Social Embeds, <amp-youtube />
       'https://www.instagram.com', // Social Embeds, <amp-instagram />
       'https://*.cdninstagram.com', // Social Embeds, <amp-instagram />
+      'https://www.tiktok.com', // Social Embeds, <amp-tiktok />
+      'https://*.tiktokcdn.com', // Social Embeds, <amp-tiktok />
       ...advertisingDirectives.imgSrc,
       'https://*.googleusercontent.com', // Google Play Store - BBC News Apps - Arabic, Hindi, Mundo, Russian
       "data: 'self'",
@@ -200,6 +209,7 @@ const directives = {
       'https://*.twitter.com', // Social Embeds
       'https://*.twimg.com', // Social Embeds
       'https://*.cdninstagram.com', // Social Embeds
+      'https://*.tiktokcdn.com', // Social Embeds
       'https://i.ytimg.com', // Social Embeds
       ...advertisingDirectives.imgSrc,
       'https://*.googleusercontent.com', // Google Play Store - BBC News Apps - Arabic, Hindi, Mundo, Russian
@@ -221,6 +231,7 @@ const directives = {
       'https://*.chartbeat.com',
       'https://*.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
+      'https://www.tiktok.com', // Social Embeds
       'https://*.twimg.com', // Social Embeds
       'https://public.flourish.studio', // STY includes
       'https://client.rum.us-east-1.amazonaws.com', // CloudWatch RUM
@@ -244,6 +255,7 @@ const directives = {
       'http://localhost:1124', // for localhost canonical JavaScript
       'https://*.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
+      'https://www.tiktok.com', // Social Embeds
       'https://*.twimg.com', // Social Embeds
       'https://public.flourish.studio', // STY includes
       'https://client.rum.us-east-1.amazonaws.com', // CloudWatch RUM
