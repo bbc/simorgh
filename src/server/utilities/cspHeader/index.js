@@ -232,6 +232,7 @@ const directives = {
       'https://*.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
       'https://www.tiktok.com', // Social Embeds
+      'https://lf16-tiktok-web.ttwstatic.com', // Social Embeds - TikTok
       'https://*.twimg.com', // Social Embeds
       'https://public.flourish.studio', // STY includes
       'https://client.rum.us-east-1.amazonaws.com', // CloudWatch RUM
@@ -256,6 +257,7 @@ const directives = {
       'https://*.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
       'https://www.tiktok.com', // Social Embeds
+      'https://lf16-tiktok-web.ttwstatic.com', // Social Embeds - TikTok
       'https://*.twimg.com', // Social Embeds
       'https://public.flourish.studio', // STY includes
       'https://client.rum.us-east-1.amazonaws.com', // CloudWatch RUM
@@ -270,6 +272,7 @@ const directives = {
       ...bbcDomains,
       'https://*.twitter.com', // Social Embeds
       'https://*.twimg.com', // Social Embeds
+      'https://lf16-tiktok-web.ttwstatic.com', // Social Embeds - TikTok
       ...advertisingDirectives.styleSrc,
       "'unsafe-inline'",
     ],
@@ -278,6 +281,7 @@ const directives = {
       ...bbcDomains,
       'https://*.twitter.com', // Social Embeds
       'https://*.twimg.com', // Social Embeds
+      'https://lf16-tiktok-web.ttwstatic.com', // Social Embeds - TikTok
       ...advertisingDirectives.styleSrc,
       "'unsafe-inline'",
     ],
