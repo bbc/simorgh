@@ -63,9 +63,9 @@ jobs:
 
       - name: Duplicate Dependency Checker
         run: yarn test:dependencies
-
-#       - name: Linting
-#         run: yarn test:lint
+        
+      - name: Linting
+        run: yarn test:lint
 
       - name: NPM Audit
         run: npx audit-ci --config audit-ci.json
