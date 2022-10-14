@@ -272,6 +272,7 @@ const directives = {
       ...bbcDomains,
       'https://*.twitter.com', // Social Embeds
       'https://*.twimg.com', // Social Embeds
+      'https://lf16-tiktok-web.ttwstatic.com', // Social Embeds - TikTok
       ...advertisingDirectives.styleSrc,
       "'unsafe-inline'",
     ],
@@ -280,6 +281,7 @@ const directives = {
       ...bbcDomains,
       'https://*.twitter.com', // Social Embeds
       'https://*.twimg.com', // Social Embeds
+      'https://lf16-tiktok-web.ttwstatic.com', // Social Embeds - TikTok
       ...advertisingDirectives.styleSrc,
       "'unsafe-inline'",
     ],
