@@ -77,11 +77,11 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
     ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'originCode'],
     imagesBlock,
   );
-  const DEFAULT_IMAGE_RES = 160;
+
   let image = buildIChefURL({
     originCode,
     locator,
-    resolution: DEFAULT_IMAGE_RES,
+    resolution: 160,
     isPng: true,
   });
 
@@ -117,11 +117,10 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
       <ul css={BylineCss.bylineList} role="list">
         {image && (
           <li
-            css={
-              isRtl
-                ? [BylineCss.imageRtl, BylineCss.ImageWrapper]
-                : [BylineCss.imageLtr, BylineCss.ImageWrapper]
-            }
+            css={[
+              BylineCss.ImageWrapper,
+              isRtl ? BylineCss.imageRtl : BylineCss.imageLtr,
+            ]}
           >
             <Image
               css={BylineCss.imageSrc}
