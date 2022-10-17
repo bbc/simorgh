@@ -85,7 +85,6 @@ describe('Embed Consent Banner', () => {
 
       expect(clickTrackerSpy).toHaveBeenCalledWith({
         componentName: 'social-consent-banner-youtube',
-        format: 'CHD=edoj',
       });
     });
   });

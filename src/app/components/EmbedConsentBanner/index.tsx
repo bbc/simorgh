@@ -16,7 +16,6 @@ export const CONSENT_BANNER_PROVIDERS: ConsentBannerProviders[] = [
 
 export const getEventTrackingData = (provider: ConsentBannerProviders) => ({
   componentName: `social-consent-banner-${provider}`,
-  format: 'CHD=edoj',
 });
 
 type ConsentBannerProps = {

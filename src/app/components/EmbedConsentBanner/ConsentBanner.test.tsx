@@ -115,7 +115,6 @@ describe('Embed Consent Banner - Content', () => {
 
       expect(viewTrackerSpy).toHaveBeenCalledWith({
         componentName: 'social-consent-banner-youtube',
-        format: 'CHD=edoj',
       });
     });
 
@@ -156,17 +155,14 @@ describe('Embed Consent Banner - Content', () => {
 
       expect(viewTrackerSpy).toHaveBeenCalledWith({
         componentName: 'social-consent-banner-youtube',
-        format: 'CHD=edoj',
       });
 
       expect(viewTrackerSpy).toHaveBeenCalledWith({
         componentName: 'social-consent-banner-youtube',
-        format: 'CHD=edoj',
       });
 
       expect(viewTrackerSpy).toHaveBeenCalledWith({
         componentName: 'social-consent-banner-tiktok',
-        format: 'CHD=edoj',
       });
     });
 
