@@ -117,7 +117,6 @@ export default {
 
   imageLtr: () =>
     css([
-      { ...Image },
       {
         float: 'left',
         margin: `${pixelsToRem(25)}rem ${pixelsToRem(8)}rem ${pixelsToRem(
@@ -128,7 +127,6 @@ export default {
 
   imageRtl: () =>
     css([
-      { ...Image },
       {
         float: 'right',
         margin: `${pixelsToRem(25)}rem 0px ${pixelsToRem(16)}rem ${pixelsToRem(
