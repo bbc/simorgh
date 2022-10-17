@@ -1,4 +1,4 @@
-import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/japanese';
+import brandSVG from '../../chameleonLogos/japanese';
 import {
   C_POSTBOX,
   C_WHITE,
