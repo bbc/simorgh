@@ -145,3 +145,31 @@ export const youtubeBlockEmbed = {
     ],
   },
 };
+
+export const tiktokBlockEmbed = {
+  type: 'renditions',
+  model: {
+    locator: 'urn:bbc:optimo:social:d4ae3e6f-51cf-4899-bbd4-16d14882cbc7',
+    blocks: [
+      {
+        type: 'aresOEmbed',
+        model: {
+          oembed: {
+            version: '1.0',
+            title:
+              'Cupcakes, You don watch my full interview for BBC Pidgin? How you see am? 🙊💖✨#BBCPidgin #CuppyOnAMission #CuppyxBBC',
+            author_name: 'Cuppy',
+            author_url: 'https://www.tiktok.com/@cuppymusic',
+            provider_name: 'TikTok',
+            provider_url: 'https://www.tiktok.com',
+            thumbnail_url:
+              'https://p16-sign-va.tiktokcdn.com/obj/tos-maliva-p-0068/328e9247ec2746b8992d5fcdde75affa_1649876928?x-expires=1663779600&x-signature=HP%2BukzBzbsK5budxvxLauElDen4%3D',
+            thumbnail_width: 576,
+            thumbnail_height: 1024,
+            html: '<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@cuppymusic/video/7086167423639997701" data-video-id="7086167423639997701" data-embed-from="oembed" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@cuppymusic" href="https://www.tiktok.com/@cuppymusic?refer=embed">@cuppymusic</a> <p>Cupcakes, You don watch my full interview for BBC Pidgin? How you see am? 🙊💖✨<a title="bbcpidgin" target="_blank" href="https://www.tiktok.com/tag/bbcpidgin?refer=embed">#BBCPidgin</a> <a title="cuppyonamission" target="_blank" href="https://www.tiktok.com/tag/cuppyonamission?refer=embed">#CuppyOnAMission</a> <a title="cuppyxbbc" target="_blank" href="https://www.tiktok.com/tag/cuppyxbbc?refer=embed">#CuppyxBBC</a></p> <a target="_blank" title="♬ original sound - Cuppy" href="https://www.tiktok.com/music/original-sound-7086167435610442501?refer=embed">♬ original sound - Cuppy</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>',
+          },
+        },
+      },
+    ],
+  },
+};

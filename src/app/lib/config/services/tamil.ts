@@ -113,6 +113,14 @@ export const service: DefaultServiceConfig = {
           callToActionLinkUrl: 'https://www.bbc.com/tamil',
         },
       },
+      byline: {
+        articleInformation: 'கட்டுரை தகவல்',
+        author: 'எழுதியவர்',
+        listItemImage: 'பட்டியல், படம்',
+        published: 'பிரசுரிக்கப்பட்டது',
+        reportingFrom: 'இருந்து',
+        role: 'பதவி',
+      },
       consentBanner: {
         privacy: {
           title:

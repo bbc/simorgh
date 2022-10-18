@@ -29,7 +29,7 @@ export const CanonicalSocialEmbed = ({
   const { pageType } = useContext(RequestContext);
   const embedCaption = getCaptionText({ pageType, caption, provider });
 
-  const isSupportedProvider = Object.keys(providers).includes(provider);
+  const isSupportedProvider = !!providers(provider);
 
   if (!isSupportedProvider || !oEmbed)
     return (
