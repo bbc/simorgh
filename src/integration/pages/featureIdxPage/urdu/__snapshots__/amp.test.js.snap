@@ -435,6 +435,7 @@ exports[`AMP Feature Index page Story Promo Image should match image 1`] = `
 <amp-img
   alt="بل گیٹس"
   attribution="AFP/getty images"
+  class="bbc-image"
   height="576"
   layout="responsive"
   sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
@@ -445,6 +446,7 @@ exports[`AMP Feature Index page Story Promo Image should match image 1`] = `
   <amp-img
     alt="بل گیٹس"
     attribution="AFP/getty images"
+    class="bbc-image"
     fallback=""
     height="576"
     layout="responsive"
