@@ -134,10 +134,10 @@ const injectDefaultCacheHeader = (req, res, next) => {
 };
 
 const injectResourceHintsHeader = (req, res, next) => {
-  const isPidginService = req.originalUrl.startsWith('/pidgin');
+  const thisService = req.originalUrl.split('/')[1];
 
-  if (isPidginService) {
-    const assetOrigins = getAssetOrigins('pidgin');
+  if (['pidgin', 'hindi'].includes(thisService)) {
+    const assetOrigins = getAssetOrigins(thisService);
     res.set(
       'Link',
       assetOrigins
