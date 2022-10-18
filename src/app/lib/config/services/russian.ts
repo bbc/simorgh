@@ -165,6 +165,14 @@ export const mainTranslations = {
       callToActionLinkUrl: 'https://www.bbc.com/russian',
     },
   },
+  byline: {
+    articleInformation: 'О статье',
+    author: 'Автор',
+    listItemImage: 'Добавить фото',
+    published: 'Опубликовано',
+    reportingFrom: 'Место сообщения',
+    role: 'Должность',
+  },
   media: {
     noJs: 'Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер',
     contentExpired: 'Контент больше не доступен.',
@@ -380,10 +388,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Война в Украине',
         url: '/russian/topics/cez0n29ggrdt',
-      },
-      {
-        title: 'Коронавирус',
-        url: '/russian/in-depth-51962199',
       },
       {
         title: 'Истории',

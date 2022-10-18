@@ -10,6 +10,7 @@ import { SocialEmbedProviders } from '../../models/types/global';
 import { Translations } from '../../models/types/translations';
 
 import consentBannerCss from './ConsentBanner.styles';
+import { ConsentBannerProviders } from '.';
 
 const defaultTranslations: Translations['socialEmbed']['consentBanner'] = {
   heading: 'Allow [social_media_site] content?',
@@ -17,9 +18,11 @@ const defaultTranslations: Translations['socialEmbed']['consentBanner'] = {
   button: 'Accept and continue',
   cookiesUrl: {
     youtube: 'https://policies.google.com/technologies/cookies',
+    tiktok: 'https://www.tiktok.com/legal/cookie-policy',
   },
   privacyUrl: {
     youtube: 'https://policies.google.com/privacy',
+    tiktok: 'https://www.tiktok.com/legal/privacy-policy',
   },
 };
 
@@ -29,11 +32,12 @@ const getProviderName = (provider: SocialEmbedProviders) => {
     twitter: 'Twitter',
     youtube: 'Google YouTube',
     facebook: 'Facebook',
+    tiktok: 'TikTok',
   }[provider];
 };
 
 const getTranslations = (
-  provider: SocialEmbedProviders,
+  provider: ConsentBannerProviders,
   translations: Translations,
   externalLinkText: string,
 ) => {
@@ -142,7 +146,7 @@ const getTranslations = (
 };
 
 type ConsentBannerContentProps = {
-  provider: SocialEmbedProviders;
+  provider: ConsentBannerProviders;
   clickHandler:
     | {
         on: string;

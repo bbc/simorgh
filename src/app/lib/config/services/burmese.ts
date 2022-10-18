@@ -126,6 +126,14 @@ export const service: DefaultServiceConfig = {
           callToActionLinkUrl: 'https://www.bbc.com/burmese',
         },
       },
+      byline: {
+        articleInformation: 'ဆောင်းပါးအချက်အလက်',
+        author: 'ရေးသားသူ',
+        listItemImage: 'ရုပ်ပုံ ',
+        published: 'ရေးသားခဲ့သည်။',
+        reportingFrom: 'ရေးသားပေးပို့သည့်နေရာ',
+        role: 'ရာထူးတာဝန်',
+      },
       consentBanner: {
         privacy: {
           title:

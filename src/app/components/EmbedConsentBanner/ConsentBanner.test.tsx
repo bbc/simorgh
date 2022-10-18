@@ -73,6 +73,26 @@ describe('Embed Consent Banner - Content', () => {
     );
   });
 
+  it('should render a TikTok consent banner with correct content for Mundo service', () => {
+    render(
+      <ConsentBanner
+        provider="tiktok"
+        clickHandler={mockCanonicalClickHandler}
+      />,
+      {
+        service: 'mundo',
+      },
+    );
+
+    const heading = screen.getByTestId('banner-heading');
+    const body = screen.getByTestId('banner-body');
+
+    expect(heading.textContent).toEqual('¿Permitir el contenido de TikTok?');
+    expect(body.textContent).toEqual(
+      "Este artículo contiene contenido proporcionado por TikTok. Solicitamos tu permiso antes de que algo  se cargue, ya que ese sitio  puede estar usando cookies y otras tecnologías. Es posible que quieras leer política de cookies y política de privacidad de TikTok antes de aceptar. Para ver este contenido, selecciona 'aceptar y continuar'.",
+    );
+  });
+
   it('should trigger "onClick" event when banner button is clicked in canonical', () => {
     render(
       <ConsentBanner

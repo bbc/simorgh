@@ -8,21 +8,24 @@ import {
 import { EmbedConsentBannerCanonical, EmbedConsentBannerAmp } from '.';
 
 describe('Embed Consent Banner', () => {
-  it('should match snapshot', () => {
-    const { container } = render(
-      <EmbedConsentBannerCanonical provider="youtube" />,
-      { service: 'mundo' },
-    );
-
-    expect(container).toMatchSnapshot();
-  });
-
-  it('should match snapshot - AMP', () => {
-    const { container } = render(<EmbedConsentBannerAmp provider="youtube" />, {
+  it('should render correct elements for the banner', () => {
+    render(<EmbedConsentBannerCanonical provider="youtube" />, {
       service: 'mundo',
     });
 
-    expect(container).toMatchSnapshot();
+    expect(screen.getByTestId('banner-heading')).toBeInTheDocument();
+    expect(screen.getByTestId('banner-body')).toBeInTheDocument();
+    expect(screen.getByTestId('banner-button')).toBeInTheDocument();
+  });
+
+  it('should render correct elements for the banner - AMP', () => {
+    render(<EmbedConsentBannerAmp provider="youtube" />, {
+      service: 'mundo',
+    });
+
+    expect(screen.getByTestId('banner-heading')).toBeInTheDocument();
+    expect(screen.getByTestId('banner-body')).toBeInTheDocument();
+    expect(screen.getByTestId('banner-button')).toBeInTheDocument();
   });
 
   it('should render the banner when the user has not consented', () => {
@@ -55,17 +58,6 @@ describe('Embed Consent Banner', () => {
     const button = screen.getByTestId('banner-button');
 
     fireEvent.click(button);
-
-    expect(screen.queryByTestId('consentBanner')).not.toBeInTheDocument();
-  });
-
-  it('should not render the banner when the provider is not YouTube', () => {
-    render(
-      <EmbedConsentBannerCanonical provider="instagram">
-        <div>Mock iframe content</div>
-      </EmbedConsentBannerCanonical>,
-      { service: 'mundo' },
-    );
 
     expect(screen.queryByTestId('consentBanner')).not.toBeInTheDocument();
   });

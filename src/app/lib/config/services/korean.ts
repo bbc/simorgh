@@ -112,6 +112,13 @@ export const service: DefaultServiceConfig = {
           callToActionLinkUrl: 'https://www.bbc.com/korean',
         },
       },
+      byline: {
+        articleInformation: '기사 관련 정보',
+        author: '기자',
+        listItemImage: '기자 사진',
+        published: '게재 시간',
+        role: '기자',
+      },
       consentBanner: {
         privacy: {
           title: '개인 정보와 쿠키 처리 방침이 업데이트되었습니다',

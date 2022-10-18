@@ -13,6 +13,7 @@ import {
   instagramBlock,
   instagramBlockNoEmbed,
   youtubeBlockEmbed,
+  tiktokBlockEmbed,
 } from './common/fixtures';
 import OptimoSocialEmbedContainer from '.';
 import withContexts from './common/testHelper';
@@ -86,6 +87,24 @@ export const InstagramNoEmbed = props => (
     {...props}
   />
 );
+
+export const TikTokWithConsentBanner = props => (
+  <Component
+    blocks={[tiktokBlockEmbed]}
+    source="https://www.tiktok.com/@cuppymusic/video/7086167423639997701"
+    {...props}
+  />
+);
+
+export const TikTokWithConsentBannerAmp = props => (
+  <Component
+    isAmp
+    blocks={[tiktokBlockEmbed]}
+    source="https://www.tiktok.com/@cuppymusic/video/7086167423639997701"
+    {...props}
+  />
+);
+TikTokWithConsentBannerAmp.decorators = [AmpDecorator];
 
 export const YoutubeWithConsentBanner = props => (
   <Component
