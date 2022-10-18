@@ -49,7 +49,9 @@ const Document = ({
   return (
     <html lang="en-GB" {...noJsHtmlAttrs} {...htmlAttrs}>
       <head>
-        {service !== 'pidgin' && <ResourceHints assetOrigins={assetOrigins} />}
+        {!['pidgin', 'hindi'].includes(service) && (
+          <ResourceHints assetOrigins={assetOrigins} />
+        )}
         {meta}
         {!isAmp && links}
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
