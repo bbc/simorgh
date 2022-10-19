@@ -1,16 +1,17 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { useContext } from 'react';
+import { useContext, MouseEvent } from 'react';
 import pathOr from 'ramda/src/pathOr';
 
 import Text from '../Text';
 import Paragraph from '../Paragraph';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import useViewTracker from '../../hooks/useViewTracker';
 import { SocialEmbedProviders } from '../../models/types/global';
 import { Translations } from '../../models/types/translations';
 
 import consentBannerCss from './ConsentBanner.styles';
-import { ConsentBannerProviders } from '.';
+import { ConsentBannerProviders, getEventTrackingData } from '.';
 
 const defaultTranslations: Translations['socialEmbed']['consentBanner'] = {
   heading: 'Allow [social_media_site] content?',
@@ -152,7 +153,7 @@ type ConsentBannerContentProps = {
         on: string;
       }
     | {
-        onClick: () => void;
+        onClick: (e: MouseEvent<HTMLButtonElement>) => void;
       };
   id?: string;
 };
@@ -170,11 +171,14 @@ const ConsentBanner = ({
     externalLinkText,
   );
 
+  const viewRef = useViewTracker(getEventTrackingData(provider));
+
   return (
     <div
       data-testid="consentBanner"
       id={`consentBanner${id ? `-${id}` : ''}`}
       css={consentBannerCss.parent}
+      ref={viewRef}
     >
       <Text
         as="strong"
