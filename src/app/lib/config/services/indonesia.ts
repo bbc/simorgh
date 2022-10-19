@@ -277,12 +277,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: `Izinkan konten [social_media_site]?`,
           body: `Artikel ini memuat konten yang disediakan [social_media_site]. Kami meminta izin Anda sebelum ada yang dimunculkan mengingat situs itu mungkin menggunakan cookies dan teknologi lain. Anda dapat membaca [social_media_site] [link] kebijakan cookie [/link] dan [link] kebijakan privasi [/link] sebelum menerima. Untuk melihat konten ini, pilihlah 'terima dan lanjutkan'. `,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
           button: 'Terima dan lanjutkan',
         },
       },

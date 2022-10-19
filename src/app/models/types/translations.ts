@@ -1,5 +1,3 @@
-import { SocialEmbedProviders } from './global';
-
 /* eslint-disable camelcase */
 export interface Translations {
   pagination?: {
@@ -171,12 +169,6 @@ export interface Translations {
       heading: string;
       body: string;
       button?: string | undefined;
-      cookiesUrl: {
-        [key in SocialEmbedProviders]?: string;
-      };
-      privacyUrl: {
-        [key in SocialEmbedProviders]?: string;
-      };
     };
   };
   include?: {
