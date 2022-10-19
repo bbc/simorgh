@@ -6,7 +6,6 @@ export default {
     css({
       backgroundColor: palette.WHITE,
       padding: `${pixelsToRem(16)}rem`,
-      minHeight: 280,
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',

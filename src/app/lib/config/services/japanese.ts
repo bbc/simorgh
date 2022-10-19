@@ -241,12 +241,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: `[social_media_site] のコンテンツを表示しますか？`,
           body: `この記事には[social_media_site] 提供の内容が含まれます。クッキーや他の技術が使われている可能性があるため、あらゆる外部コンテンツ読み込みの前に、読者の方の同意をおたずねしています。同意する前に、 [social_media_site] の[link] クッキー方針[/link] および[link] プライバシー方針 [/link] を確認することも可能です。このコンテンツを見るには「同意して続ける」を選んでください。`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
           button: '同意して続ける',
         },
       },

@@ -267,12 +267,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: `ایا له [social_media_site] نه د منځپانګې اجازه شته؟`,
           body: `دې لیکنه کې له social media راخیستل شوي مواد شته.‌ له ښودلو وړاندې یې ستاسې اجازه پکار ده، ځکه ښایي‌کوکیز یا بله تکنالوژي پکې کارول شوې وي. کولی شئ له اجازې مخکې د social media site  پالیسي ولولئ. د دې لپاره غوښتنه ومنئ او مخکې لاړ شئ`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
         },
       },
       include: {

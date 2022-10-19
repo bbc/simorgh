@@ -420,7 +420,6 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
 .emotion-6 {
   background-color: #FFFFFF;
   padding: 1rem;
-  min-height: 280px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
