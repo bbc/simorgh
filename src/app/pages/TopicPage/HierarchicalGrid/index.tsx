@@ -5,7 +5,7 @@ import Promo from '../../../legacy/components/Promo';
 import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
 import { styles } from './index.styles';
 
-type Summary = {
+type Promo = {
   title: string;
   description?: string;
   type: string;
@@ -18,8 +18,8 @@ type Summary = {
   mediaType?: 'audio' | 'video' | 'photogallery';
 };
 
-type Summaries = {
-  promos: Summary[];
+type Promos = {
+  promos: Promo[];
 };
 
 const getStyles = (promoCount: number, i: number, mq: any) => {
@@ -39,7 +39,7 @@ const getStyles = (promoCount: number, i: number, mq: any) => {
   });
 };
 
-const HiearchicalGrid = ({ promos }: Summaries) => {
+const HiearchicalGrid = ({ promos }: Promos) => {
   if (!promos || promos.length < 3) return null;
   const summaryItems = promos.slice(0, 12);
   return (
