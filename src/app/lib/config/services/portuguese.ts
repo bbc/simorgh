@@ -64,16 +64,16 @@ export const service: DefaultServiceConfig = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'Podcast',
-      brandTitle: 'As Estranhas Origens das Guerras Culturais',
+      brandTitle: 'Brasil Partido',
       brandDescription:
-        'Adaptação de premiado podcast da BBC ‘Things Fell Apart’, de Jon Ronson.',
+        'João Fellet tenta entender como brasileiros chegaram ao grau atual de divisão.',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0cx5mv5.jpg',
-        alt: 'Logo: As Estranhas Origens das Guerras Culturais',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0d67gkg.jpg',
+        alt: 'Logo: Brasil Partido',
       },
       linkLabel: {
         text: 'Episódios',
-        href: 'https://www.bbc.com/portuguese/podcasts/p0cx5pt6',
+        href: 'https://www.bbc.com/portuguese/podcasts/p0cyhvny',
       },
       skipLink: {
         text: 'Pule %title% e continue lendo',
