@@ -41,16 +41,16 @@ const getStyles = (promoCount: number, i: number, mq: any) => {
 
 const HiearchicalGrid = ({ promos }: Promos) => {
   if (!promos || promos.length < 3) return null;
-  const summaryItems = promos.slice(0, 12);
+  const promoItems = promos.slice(0, 12);
   return (
     <ul role="list" css={styles.list}>
-      {summaryItems.map((promo, i) => {
+      {promoItems.map((promo, i) => {
         return (
           <li
             key={promo.id}
             css={({ mq }: Theme) => [
               styles.item,
-              getStyles(summaryItems.length, i, mq),
+              getStyles(promoItems.length, i, mq),
             ]}
           >
             <Promo>
