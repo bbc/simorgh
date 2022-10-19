@@ -3,6 +3,7 @@ import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
+import { ToggleContextProvider } from '../../../../contexts/ToggleContext';
 
 /**
  * withContexts is a higher-order component that returns a React component
@@ -21,7 +22,13 @@ const withContexts =
         pathname="/pathname"
       >
         <ServiceContextProvider service={service}>
-          <Component {...props} />
+          <ToggleContextProvider
+            toggles={{
+              eventTracking: { enabled: false },
+            }}
+          >
+            <Component {...props} />
+          </ToggleContextProvider>
         </ServiceContextProvider>
       </RequestContextProvider>
     );
