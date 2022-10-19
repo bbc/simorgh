@@ -18,7 +18,7 @@ const Component = ({ service, variant }: Props) => {
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
         <HiearchicalGrid
-          summaries={pidginSummaries.slice(
+          promos={pidginSummaries.slice(
             0,
             number('Promo Count', 12, { min: 3, max: 12 }),
           )}

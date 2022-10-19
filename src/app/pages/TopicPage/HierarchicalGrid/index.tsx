@@ -19,7 +19,7 @@ type Summary = {
 };
 
 type Summaries = {
-  summaries: Summary[];
+  promos: Summary[];
 };
 
 const getStyles = (promoCount: number, i: number, mq: any) => {
@@ -39,9 +39,9 @@ const getStyles = (promoCount: number, i: number, mq: any) => {
   });
 };
 
-const HiearchicalGrid = ({ summaries }: Summaries) => {
-  if (!summaries || summaries.length < 3) return null;
-  const summaryItems = summaries.slice(0, 12);
+const HiearchicalGrid = ({ promos }: Summaries) => {
+  if (!promos || promos.length < 3) return null;
+  const summaryItems = promos.slice(0, 12);
   return (
     <ul role="list" css={styles.list}>
       {summaryItems.map((promo, i) => {
