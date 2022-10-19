@@ -473,7 +473,6 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
 .emotion-10 {
   background-color: #FFFFFF;
   padding: 1rem;
-  min-height: 280px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1194,7 +1193,6 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
 .emotion-10 {
   background-color: #FFFFFF;
   padding: 1rem;
-  min-height: 280px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
