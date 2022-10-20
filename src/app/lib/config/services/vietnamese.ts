@@ -252,12 +252,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: `Cho phép hiện nội dung từ [social_media_site]?`,
           body: `[social_media_site]. Chúng tôi cần sự đồng ý của quý vị trước khi bất kỳ nội dung nào được tải xuống, bởi việc này có thể đi kèm việc sử dụng cookies và các công nghệ khác. Quý vị có thể đọc chính sách cookie [link] của [social_media_site] [/link] trước khi đồng ý. Để xem nội dung này, hãy chọn 'chấp nhận và tiếp tục'.`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
           button: 'Đồng ý và tiếp tục',
         },
       },

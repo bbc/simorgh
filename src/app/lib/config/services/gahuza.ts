@@ -271,12 +271,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: 'Uremeye ibiri kuri [social_media_site]?',
           body: `Iyi nkuru irimwo ivyatanzwe na [social_media_site].  Dukeneye uruhusha rwawe imbere yuko bigushikira, kuko birashobora kuba bikoresha cookies hamwe n'ubundi buhinga.  Wobanza ugasoma aha [social_media_site] [link] amategeko agenga cookie [/link] and [link] n'ayagenga ubuzima bwite [/link] imbere yuko wemera. Kugira ubibone hitamwo 'emera hanyuma ubandanye'.`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
           button: 'Emera uce ubandanye',
         },
       },

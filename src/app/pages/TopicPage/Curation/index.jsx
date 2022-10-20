@@ -67,7 +67,7 @@ Curation.defaultProps = {
   title: '',
   link: '',
   headingLevel: 2,
-  topStoriesTitle: string,
+  topStoriesTitle: '',
 };
 
 export default Curation;
