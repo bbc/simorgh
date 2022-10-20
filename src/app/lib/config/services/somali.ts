@@ -261,12 +261,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: `Oggolow  [social_media_site] macluumaadka`,
           body: `Macluumaadkan waxaa daabacay [social_media_site].  Waxaan dalbanayenaa fasaxaaga ka hor inta aan la furin, waxaa laga yaabaa inay isticmaalayaan cookies iyo farsamooyin kale. hadii aad u bahato akhri [social_media_site] [link] xeerarka cokie [/link] iyo [link] kan ku saabsan xogta gaarka ah[/link] ka hor inta aadan aqbalin. si aad u aragto xogta guji ‘aqbal oo soco’.`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
           button: 'Aqbal horayna u soco',
         },
       },

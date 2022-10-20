@@ -16,8 +16,14 @@ const getWrapperHeightStyles = oEmbed => {
    * wrappers. This helps reduce layout shift. It is not applied to fallbacks.
    */
   const MIN_HEIGHT = '14rem';
-  if (oEmbed?.height) return `min-height: ${oEmbed.height / 16}rem`;
-  if (oEmbed) return `min-height: ${MIN_HEIGHT};`;
+
+  if (oEmbed?.height && oEmbed?.height !== '100%') {
+    return `min-height: ${oEmbed.height / 16}rem`;
+  }
+
+  if (oEmbed) {
+    return `min-height: ${MIN_HEIGHT};`;
+  }
   return '';
 };
 

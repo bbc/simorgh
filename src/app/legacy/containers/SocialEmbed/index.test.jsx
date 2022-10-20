@@ -12,6 +12,7 @@ import {
   twitterBlock,
   instagramBlock,
   youtubeBlockEmbed,
+  tiktokBlockEmbed,
 } from './common/fixtures';
 
 /* eslint-disable react/prop-types */
@@ -98,6 +99,25 @@ describe('SocialEmbedContainer', () => {
       expect(loggerMock.info).toHaveBeenCalledWith(SOCIAL_EMBED_RENDERED, {
         provider: 'youtube',
         href: 'https://www.youtube.com/embed/1e05_rwHvOM?feature=oembed',
+      });
+      unmount();
+    });
+
+    it('should render a TikTok block and unmount correctly', () => {
+      const { container, unmount } = render(
+        <SocialEmbedContainer
+          blocks={[tiktokBlockEmbed]}
+          source="https://www.tiktok.com/@cuppymusic/video/7086167423639997701"
+        />,
+        { service: 'news', isAmp: false, pageType: ARTICLE_PAGE },
+      );
+
+      expect(container.firstChild).toMatchSnapshot();
+
+      expect(loggerMock.info).toHaveBeenCalledTimes(1);
+      expect(loggerMock.info).toHaveBeenCalledWith(SOCIAL_EMBED_RENDERED, {
+        provider: 'tiktok',
+        href: 'https://www.tiktok.com/@cuppymusic/video/7086167423639997701',
       });
       unmount();
     });

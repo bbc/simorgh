@@ -135,6 +135,14 @@ export const service: DefaultServiceConfig = {
           callToActionLinkUrl: 'https://www.bbc.com/persian',
         },
       },
+      byline: {
+        articleInformation: 'اطلاعات مقاله',
+        author: 'نویسنده',
+        listItemImage: 'تصویر نویسنده مقاله',
+        published: 'منتشر شده در',
+        reportingFrom: 'در',
+        role: 'شغل',
+      },
       consentBanner: {
         privacy: {
           title:
@@ -286,12 +294,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: `اجازه نشان دادن محتوای [social_media_site]  را می دهید؟`,
           body: `این مطلب شامل محتوایی از [social_media_site]  است. قبل از بارگیری این محتوا از شما اجازه می گیریم، زیرا ممکن است این سایت ها از کوکی ها و یا سایر انواع فن آوری استفاده کنند. می توانید سیاست [link]  [social_media_site]  را درباره کوکی ها [/link] و  [link] سیاست مربوط به حفظ حریم خصوصی[/link]  را پیش از موافقت بخوانید. برای دیدن این محتوا روی "موافقت و ادامه"‌کلیک کنید.`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
         },
       },
       include: {
