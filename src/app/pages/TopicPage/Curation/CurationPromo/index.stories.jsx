@@ -33,7 +33,7 @@ const WithMediaIndicator = ({ service, variant }) => {
         <Wrapper>
           <Promo
             {...fixture.data.summaries[0]}
-            mediaType={MEDIA_TYPES.VIDEO}
+            type={MEDIA_TYPES.VIDEO}
             mediaDuration={123}
           />
         </Wrapper>
