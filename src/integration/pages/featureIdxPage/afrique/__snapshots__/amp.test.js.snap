@@ -457,6 +457,7 @@ exports[`AMP Feature Index page Story Promo Image should match image 1`] = `
 <amp-img
   alt="CAN 2019 : le Sénégal en huitième de finale"
   attribution="Getty Images"
+  class="bbc-image"
   height="549"
   layout="responsive"
   sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
@@ -467,6 +468,7 @@ exports[`AMP Feature Index page Story Promo Image should match image 1`] = `
   <amp-img
     alt="CAN 2019 : le Sénégal en huitième de finale"
     attribution="Getty Images"
+    class="bbc-image"
     fallback=""
     height="549"
     layout="responsive"

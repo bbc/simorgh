@@ -283,9 +283,10 @@ exports[`Canonical ukrainian/ukraine_in_russian IDX page Story Promo Headline sh
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Story Promo Image should match image 1`] = `
 <img
   alt="Чоловік з келихом"
-  class="bbc-1hf8woc"
+  class="bbc-1uwua2r"
   height="549"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/DE34/production/_111648865_1stimage.png"
+  style="aspect-ratio:976 / 549"
   width="976"
 />
 `;
