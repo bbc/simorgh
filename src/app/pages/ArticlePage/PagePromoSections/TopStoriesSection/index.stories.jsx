@@ -11,6 +11,8 @@ import {
   topStoriesListRtl,
   topStoriesSingleItemRtl,
 } from './fixture';
+import metadata from './metadata.json';
+import mdx from './topStoriesSection.mdx';
 
 const BackGround = styled.div`
   width: 100%;
@@ -32,7 +34,18 @@ const RelatedContentComponent = ({ content, service, script }) => (
 
 export default {
   title: 'components/OptimoPromos/TopStoriesSections',
-  TopStoriesSection,
+  component: TopStoriesSection,
+  parameters: {
+    metadata,
+    docs: {
+      component: {
+        title: 'Top Stories Section',
+        description:
+          'A component constructing the Top Stories section for Article pages. The sections can hold a list of TopStoriesItem or a single TopStoriesItem. The section can have a max of 3 items.',
+      },
+      page: mdx,
+    },
+  },
   decorators: [withKnobs, withServicesKnob()],
 };
 

@@ -1,8 +1,6 @@
-# Top Stories Section
-
-## Description
-
-A component constructing the Top Stories section for Article pages. The sections can hold a list of TopStoriesItem or a single TopStoriesItem. The section can have a max of 3 items.
+import { Source, ArgsTable } from '@storybook/addon-docs';
+import dedent from 'ts-dedent';
+import Component from '.';
 
 ## Props
 
@@ -12,8 +10,12 @@ A component constructing the Top Stories section for Article pages. The sections
 
 ## Example ltr/rtl
 
-```javascript
-const contentExample = [
+<Source
+  language="jsx"
+  dark
+  type="code"
+  code={dedent`
+    const contentExample = [
                     {
                      headlines: {headline: "headline1"},
                      timestamp: 123456789,
@@ -32,5 +34,5 @@ const contentExample = [
                     ...
                 ]
 
-<TopStoriesSection content={contentExample}/>
-```
+<TopStoriesSection content={contentExample} />
+`} />
