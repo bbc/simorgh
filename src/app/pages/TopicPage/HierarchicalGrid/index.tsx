@@ -59,7 +59,7 @@ const HiearchicalGrid = ({ promos }: Promos) => {
                 alt={promo.imageAlt}
                 loading="lazy"
               >
-                <Promo.MediaIcon type={promo.type}>
+                <Promo.MediaIcon type={promo.mediaType}>
                   {promo.mediaDuration}
                 </Promo.MediaIcon>
               </Promo.Image>

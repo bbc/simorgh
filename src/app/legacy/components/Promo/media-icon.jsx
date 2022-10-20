@@ -39,7 +39,7 @@ const formatChildren = children => {
 };
 
 const MediaIcon = ({ script, service, children, type }) => {
-  if (!type || !mediaIcons[type]) return null;
+  if (!type) return null;
   return (
     <Wrapper script={script} service={service}>
       {mediaIcons[type]}

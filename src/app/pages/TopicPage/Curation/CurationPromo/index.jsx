@@ -1,7 +1,7 @@
 import React from 'react';
-import { bool, string, number, oneOfType } from 'prop-types';
+import { bool, string, number, oneOf, oneOfType } from 'prop-types';
 
-import Promo from '#components/Promo';
+import Promo, { MEDIA_TYPES } from '#components/Promo';
 
 const CurationPromo = ({
   title,
@@ -10,14 +10,14 @@ const CurationPromo = ({
   imageAlt,
   lazy,
   link,
-  type,
+  mediaType,
   mediaDuration,
   headingLevel,
 }) => {
   return (
     <Promo>
       <Promo.Image src={imageUrl} alt={imageAlt} lazyLoad={lazy}>
-        <Promo.MediaIcon type={type}>{mediaDuration}</Promo.MediaIcon>
+        <Promo.MediaIcon type={mediaType}>{mediaDuration}</Promo.MediaIcon>
       </Promo.Image>
       <Promo.Heading as={`h${headingLevel}`}>
         <Promo.A href={link}>{title}</Promo.A>
@@ -35,14 +35,14 @@ CurationPromo.propTypes = {
   imageAlt: string.isRequired,
   lazy: bool,
   link: string.isRequired,
-  type: string,
+  mediaType: oneOf(Object.values(MEDIA_TYPES)),
   mediaDuration: number,
   headingLevel: number,
 };
 
 CurationPromo.defaultProps = {
   lazy: false,
-  type: null,
+  mediaType: null,
   mediaDuration: null,
   headingLevel: 2,
 };
