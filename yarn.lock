@@ -3329,6 +3329,35 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@storybook/addon-backgrounds@npm:6.4.22":
+  version: 6.4.22
+  resolution: "@storybook/addon-backgrounds@npm:6.4.22"
+  dependencies:
+    "@storybook/addons": 6.4.22
+    "@storybook/api": 6.4.22
+    "@storybook/client-logger": 6.4.22
+    "@storybook/components": 6.4.22
+    "@storybook/core-events": 6.4.22
+    "@storybook/csf": 0.0.2--canary.87bc651.0
+    "@storybook/theming": 6.4.22
+    core-js: ^3.8.2
+    global: ^4.4.0
+    memoizerific: ^1.11.3
+    regenerator-runtime: ^0.13.7
+    ts-dedent: ^2.0.0
+    util-deprecate: ^1.0.2
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0
+    react-dom: ^16.8.0 || ^17.0.0
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: e0c3328cf4e4887e9b6c9ed27d453d83011b44b8e50d7b769a36f358df2445bbd298a8beb7a8770cca4f604cbc1cbd4f08a428a31e137b94b335b454a5401d17
+  languageName: node
+  linkType: hard
+
 "@storybook/addon-controls@npm:6.4.22":
   version: 6.4.22
   resolution: "@storybook/addon-controls@npm:6.4.22"
@@ -19497,6 +19526,7 @@ __metadata:
     "@loadable/webpack-plugin": 5.15.2
     "@optimizely/react-sdk": 2.8.1
     "@storybook/addon-a11y": 6.4.22
+    "@storybook/addon-backgrounds": 6.4.22
     "@storybook/addon-controls": 6.4.22
     "@storybook/addon-docs": 6.4.22
     "@storybook/addon-knobs": 6.4.0

@@ -328,4 +328,17 @@ export const parameters = {
   docs: {
     container: ({ context, children }) => DocsDecorator({ context, children }),
   },
+  backgrounds: {
+    default: 'CPS',
+    values: [
+      {
+        name: 'Optimo',
+        value: '#F6F6F6',
+      },
+      {
+        name: 'CPS',
+        value: '#FFFFFF',
+      },
+    ],
+  },
 };
