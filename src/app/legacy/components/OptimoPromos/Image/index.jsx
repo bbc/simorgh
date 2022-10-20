@@ -5,7 +5,7 @@ import IMAGE from '../../../../components/Image';
 
 const Image = ({ src, altText, srcset, fallbackSrcset, width, height }) => {
   const { isAmp } = useContext(RequestContext);
-  const ASPECT_RATIO = 16 / 9;
+  const ASPECT_RATIO = [16, 9];
 
   return (
     <IMAGE
