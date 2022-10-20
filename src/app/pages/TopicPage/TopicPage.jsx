@@ -29,7 +29,7 @@ const TopicPage = ({ pageData }) => {
   const linkedDataEntities = curations
     .map(({ summaries }) =>
       summaries.map(summary => ({
-        '@type': 'Article',
+        '@type': summary.type,
         name: summary.title,
         headline: summary.title,
         url: summary.link,

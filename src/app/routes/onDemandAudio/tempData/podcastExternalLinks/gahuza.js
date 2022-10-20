@@ -11,7 +11,17 @@ const externalLinks = {
           'https://podcasts.apple.com/gb/podcast/baza-muganga/id1492445243',
       },
     ],
-    p02pcb5c: [],
+    p02pcb5c: [
+      {
+        linkText: 'Spotify',
+        linkUrl: 'https://open.spotify.com/show/4WIzS3ZAXxw1fxUx4FCTBY',
+      },
+      {
+        linkText: 'Apple',
+        linkUrl:
+          'https://podcasts.apple.com/gb/podcast/imvo-nimvano/id981906761',
+      },
+    ],
     p07yjlmf: [
       {
         linkText: 'Spotify',
