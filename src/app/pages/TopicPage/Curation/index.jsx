@@ -18,8 +18,6 @@ export const VISUAL_PROMINANCE = {
 const components = {
   [VISUAL_STYLE.NONE]: {
     [VISUAL_PROMINANCE.NORMAL]: CurationGrid,
-  },
-  [VISUAL_STYLE.NONE]: {
     [VISUAL_PROMINANCE.HIGH]: HierarchicalGrid,
   },
 };

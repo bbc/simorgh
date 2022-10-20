@@ -43,7 +43,7 @@ const HiearchicalGrid = ({ promos }: Promos) => {
   if (!promos || promos.length < 3) return null;
   const promoItems = promos.slice(0, 12);
   return (
-    <ul role="list" css={styles.list}>
+    <ul role="list" css={styles.list} data-testid="hierarchical-grid">
       {promoItems.map((promo, i) => {
         return (
           <li
