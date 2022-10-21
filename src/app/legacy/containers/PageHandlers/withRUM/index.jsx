@@ -64,8 +64,6 @@ const RUMLoader = Component => {
         'arn:aws:iam::923061562593:role/RUM-Monitor-eu-west-1-923061562593-2635993079561-Unauth',
     };
 
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-
     const ComponentWithRum = () => {
       const isOperaMini = useOperaMiniDetection();
       const scriptElement = buildScript(isLive() ? liveConfig : testConfig);
