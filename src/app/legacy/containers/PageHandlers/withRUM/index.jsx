@@ -65,14 +65,20 @@ const RUMLoader = Component => {
     };
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const isOperaMini = useOperaMiniDetection();
 
-    return (
-      <>
-        {!isOperaMini ? buildScript(isLive() ? liveConfig : testConfig) : null}
-        <Component {...props} />
-      </>
-    );
+    const ComponentWithRum = () => {
+      const isOperaMini = useOperaMiniDetection();
+      const scriptElement = buildScript(isLive() ? liveConfig : testConfig);
+
+      return (
+        <>
+          {!isOperaMini ? scriptElement : null}
+          <Component {...props} />
+        </>
+      );
+    };
+
+    return <ComponentWithRum />;
   };
 
   return withRum;
