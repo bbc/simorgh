@@ -92,12 +92,21 @@ export const providers = provider =>
       enrich: () => {},
       onLibraryLoad: () => console.error(getOnRenderError('TikTok')),
     },
+    facebook: {
+      script: 'https://connect.facebook.net/en_GB/sdk.js',
+      styles: `      
+      iframe {
+        background-color: white;
+      }
+    `,
+      enrich: () => {},
+      onLibraryLoad: () => console.error(getOnRenderError('Facebook')),
+    },
   }[provider]);
 
 const CanonicalEmbed = ({ provider, oEmbed, onRender }) => {
   const { script, styles, enrich, onLibraryLoad } = providers(provider);
   const hasLoadedLibrary = useScript(script);
-
   useEffect(enrich);
 
   useEffect(() => {
