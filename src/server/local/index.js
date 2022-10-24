@@ -36,8 +36,6 @@ const sendDataFile = (res, dataFilePath, next) => {
   });
 };
 
-const PUBLIC_DIRECTORY = 'build/public';
-
 const removeTrailingSlash = url => {
   const hasTrailingSlash = url.length > 1 && url.endsWith('/');
   const redirectUrl = hasTrailingSlash ? url.slice(0, -1) : url;
