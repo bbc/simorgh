@@ -13,6 +13,8 @@ import {
   instagramBlock,
   youtubeBlockEmbed,
   tiktokBlockEmbed,
+  facebookPostBlockEmbed,
+  facebookVideoBlockEmbed,
 } from './common/fixtures';
 
 /* eslint-disable react/prop-types */
@@ -118,6 +120,44 @@ describe('SocialEmbedContainer', () => {
       expect(loggerMock.info).toHaveBeenCalledWith(SOCIAL_EMBED_RENDERED, {
         provider: 'tiktok',
         href: 'https://www.tiktok.com/@cuppymusic/video/7086167423639997701',
+      });
+      unmount();
+    });
+
+    it('should render a Facebook Post block and unmount correctly', () => {
+      const { container, unmount } = render(
+        <SocialEmbedContainer
+          blocks={[facebookPostBlockEmbed]}
+          source="https://www.facebook.com/RickAstley/posts/545713756920775"
+        />,
+        { service: 'news', isAmp: false, pageType: ARTICLE_PAGE },
+      );
+
+      expect(container.firstChild).toMatchSnapshot();
+
+      expect(loggerMock.info).toHaveBeenCalledTimes(1);
+      expect(loggerMock.info).toHaveBeenCalledWith(SOCIAL_EMBED_RENDERED, {
+        provider: 'facebook',
+        href: 'https://www.facebook.com/RickAstley/posts/545713756920775',
+      });
+      unmount();
+    });
+
+    it('should render a Facebook Video block and unmount correctly', () => {
+      const { container, unmount } = render(
+        <SocialEmbedContainer
+          blocks={[facebookVideoBlockEmbed]}
+          source="https://www.facebook.com/RickAstley/videos/1378590239249667"
+        />,
+        { service: 'news', isAmp: false, pageType: ARTICLE_PAGE },
+      );
+
+      expect(container.firstChild).toMatchSnapshot();
+
+      expect(loggerMock.info).toHaveBeenCalledTimes(1);
+      expect(loggerMock.info).toHaveBeenCalledWith(SOCIAL_EMBED_RENDERED, {
+        provider: 'facebook',
+        href: 'https://www.facebook.com/RickAstley/videos/1378590239249667',
       });
       unmount();
     });
