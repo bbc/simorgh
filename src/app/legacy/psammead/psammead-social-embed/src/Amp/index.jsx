@@ -72,6 +72,8 @@ const Facebook = ({ source }) => {
     }
   };
 
+  const embedType = getEmbedType();
+
   return (
     <>
       <Helmet>
@@ -81,13 +83,19 @@ const Facebook = ({ source }) => {
           src="https://cdn.ampproject.org/v0/amp-facebook-0.1.js"
         />
       </Helmet>
-      <amp-facebook
-        data-href={source}
-        data-embed-as={getEmbedType()}
-        height="1"
-        width="1"
-        layout="responsive"
-      />
+      <div
+        {...(embedType === 'post' && {
+          css: ({ palette }) => ({ backgroundColor: palette.WHITE }),
+        })}
+      >
+        <amp-facebook
+          data-href={source}
+          data-embed-as={embedType}
+          height="1"
+          width="1"
+          layout="responsive"
+        />
+      </div>
     </>
   );
 };
