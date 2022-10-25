@@ -75,7 +75,7 @@ const TextStory = ({ service, variant, text }: Props) => {
 };
 
 export default {
-  title: 'NewComponents/Text',
+  title: 'New Components/Text',
   Component: TextStory,
   decorators: [withKnobs, withServicesKnob()],
   parameters: {
