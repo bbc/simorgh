@@ -85,7 +85,7 @@ const HeadingStory = ({ service, variant, text }: Props) => {
 };
 
 export default {
-  title: 'NewComponents/Heading',
+  title: 'New Components/Heading',
   Component: HeadingStory,
   decorators: [withKnobs, withServicesKnob()],
   parameters: {
