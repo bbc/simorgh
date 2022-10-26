@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { canonicalChartbeatPropTypes } from '#models/propTypes/chartbeatAnalytics';
 
-const chartbeatSource = '//static.chartbeat.com/js/chartbeat.js';
+const chartbeatSource = 'https://static.chartbeat.com/js/chartbeat.js';
 
 const CanonicalChartbeatBeacon = ({ chartbeatConfig }) => {
   const [firstLoadConfig] = useState(chartbeatConfig);
