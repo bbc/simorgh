@@ -46,7 +46,7 @@ export const getIdFromSource = source => {
     youtube: /\/watch\?v=([0-9A-Z a-z_-]+)/,
     instagram: /\/p\/([0-9A-Za-z_-]+)/,
     tiktok: /\/video\/([0-9]+)/,
-    facebook: /\/(?:posts|videos)\/([0-9]+)/,
+    facebook: /\/(?:posts|videos)\/([0-9A-Za-z]+)/,
   };
   const NO_ID = '';
   const provider = getProviderFromSource(source);
