@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import isLive from '#lib/utilities/isLive';
+import isLocal from '#lib/utilities/isLocal';
 import useOperaMiniDetection from '../../../../hooks/useOperaMiniDetection';
 
 // Note - if changing one of these constants, the other will also need to change
@@ -66,11 +67,12 @@ const RUMLoader = Component => {
 
     const ComponentWithRum = () => {
       const isOperaMini = useOperaMiniDetection();
+      const shouldAddRumScript = !isLocal() && !isOperaMini;
       const scriptElement = buildScript(isLive() ? liveConfig : testConfig);
 
       return (
         <>
-          {!isOperaMini ? scriptElement : null}
+          {shouldAddRumScript ? scriptElement : null}
           <Component {...props} />
         </>
       );
