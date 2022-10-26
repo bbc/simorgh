@@ -93,7 +93,7 @@ export const providers = provider =>
       onLibraryLoad: () => console.error(getOnRenderError('TikTok')),
     },
     facebook: {
-      script: 'https://connect.facebook.net/en_GB/sdk.js',
+      script: 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0',
       styles: `      
       position: relative;
       overflow: hidden;
