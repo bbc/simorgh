@@ -40,7 +40,7 @@ jobs:
         run: ./scripts/installNodeModules.sh
 
       - name: Chromatic UI Tests
-        uses: chromaui/action@v2
+        uses: chromaui/action@v1
         if: github.ref != 'refs/heads/latest' && github.event.pull_request.head.repo.full_name == 'bbc/simorgh' # Only run when not on latest or not a fork.
         with:
           token: ${{ secrets.SIMORGH_DEV_STORYBOOK_RELEASE }}
@@ -49,7 +49,7 @@ jobs:
           exitOnceUploaded: true
 
       - name: Chromatic UI Tests - Latest
-        uses: chromaui/action@v2
+        uses: chromaui/action@v1
         if: github.ref == 'refs/heads/latest' # Only run on latest branch
         with:
           token: ${{ secrets.SIMORGH_DEV_STORYBOOK_RELEASE }}
