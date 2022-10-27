@@ -11,7 +11,7 @@ const SingleDoc = ({
   missingLink,
 }: {
   docTitle: string;
-  docLocation: string;
+  docLocation?: string;
   announce: string;
   missingAnnounce: string;
   missingLink: string;

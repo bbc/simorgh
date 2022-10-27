@@ -55,7 +55,7 @@ const DocsDecorator = ({
   return (
     <DocsContainer context={context}>
       {metadata ? (
-        <ThemeProvider service={'news'} variant={'default'}>
+        <ThemeProvider service="news" variant="default">
           <Title>{title}</Title>
           <aside>
             <Heading>External Documentation</Heading>
