@@ -53,6 +53,7 @@ const DocsDecorator = ({
   ];
 
   return (
+    // @ts-ignore: type children not assignable.
     <DocsContainer context={context}>
       {metadata ? (
         <ThemeProvider service="news" variant="default">

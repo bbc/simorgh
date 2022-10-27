@@ -1,7 +1,6 @@
 import { css, Theme } from '@emotion/react';
 
 const styles = {
-  // icons styles
   icon: (theme: Theme) =>
     css({
       fill: 'currentcolor',
@@ -34,7 +33,6 @@ const styles = {
 
   negativeStatusIcon: { background: 'rgb(245, 26, 90)' },
 
-  //Container style
   documentationContainer: {
     display: 'flex',
     flexWrap: 'wrap',
