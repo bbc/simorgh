@@ -47,6 +47,19 @@ const YouTube = ({ id }) => (
   </>
 );
 
+const TikTok = ({ id }) => (
+  <>
+    <Helmet>
+      <script
+        async
+        custom-element="amp-tiktok"
+        src="https://cdn.ampproject.org/v0/amp-tiktok-0.1.js"
+      />
+    </Helmet>
+    <amp-tiktok data-src={id} width="325" height="575" />
+  </>
+);
+
 const sharedPropTypes = {
   id: string.isRequired,
 };
@@ -54,9 +67,11 @@ const sharedPropTypes = {
 Instagram.propTypes = sharedPropTypes;
 Twitter.propTypes = sharedPropTypes;
 YouTube.propTypes = sharedPropTypes;
+TikTok.propTypes = sharedPropTypes;
 
 export default {
   instagram: memo(Instagram),
   twitter: memo(Twitter),
   youtube: memo(YouTube),
+  tiktok: memo(TikTok),
 };

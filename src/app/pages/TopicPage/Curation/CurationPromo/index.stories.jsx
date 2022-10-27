@@ -4,9 +4,9 @@ import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { withKnobs } from '@storybook/addon-knobs';
 import fixture from '#data/pidgin/topics/c95y35941vrt.json';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
+import ThemeProvider from '../../../../components/ThemeProvider';
 import { MEDIA_TYPES } from '#components/Promo';
 import Promo from '.';
-import ThemeProvider from '../../../../components/ThemeProvider';
 
 const Wrapper = styled.div`
   max-width: 30rem;
@@ -33,7 +33,7 @@ const WithMediaIndicator = ({ service, variant }) => {
         <Wrapper>
           <Promo
             {...fixture.data.summaries[0]}
-            mediaType={MEDIA_TYPES.VIDEO}
+            type={MEDIA_TYPES.VIDEO}
             mediaDuration={123}
           />
         </Wrapper>

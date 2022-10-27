@@ -1,7 +1,12 @@
 /* eslint-disable no-console */
 import React from 'react';
-import { render, waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import {
+  render,
+  screen,
+  waitFor,
+  fireEvent,
+} from '../../../../components/react-testing-library-with-providers';
 import { CanonicalSocialEmbed, AmpSocialEmbed } from './index';
 import fixtures from './fixtures';
 import * as useScript from './Canonical/useScript';
@@ -191,12 +196,21 @@ describe('CanonicalSocialEmbed', () => {
 
     it('should render correctly for YouTube', async () => {
       const { container } = render(youtubeEmbed);
+
+      const button = screen.getByTestId('banner-button');
+
+      fireEvent.click(button);
+
       expect(container.firstChild).toMatchSnapshot();
     });
 
     it('should not invoke the onRender prop and should log an error', async () => {
       useScriptSpy.mockReturnValueOnce(true);
       render(youtubeEmbed);
+
+      const button = screen.getByTestId('banner-button');
+
+      fireEvent.click(button);
 
       expect(console.error).toHaveBeenCalledWith(
         'onRender callback function not implemented for YouTube',
@@ -259,27 +273,30 @@ describe('AmpSocialEmbed', () => {
           }
         : null;
 
-    shouldMatchSnapshot(
-      `should render correctly for ${embed.oembed.provider_name}`,
-      <AmpSocialEmbed
-        provider={provider}
-        id={id}
-        skipLink={{
-          text: 'Skip %provider_name% content',
-          endTextId: 'skip-%provider%-content',
-          endTextVisuallyHidden: 'End of %provider_name% content',
-        }}
-        fallback={{
-          text: "Sorry but we're having trouble displaying this content",
-          linkText: 'View content on %provider_name%',
-          linkHref: 'embed-url',
-          warningText:
-            'Warning: BBC is not responsible for third party content',
-        }}
-        service="news"
-        caption={caption}
-      />,
-    );
+    it(`should render correctly for ${embed.oembed.provider_name}`, () => {
+      const { container } = render(
+        <AmpSocialEmbed
+          provider={provider}
+          id={id}
+          skipLink={{
+            text: 'Skip %provider_name% content',
+            endTextId: 'skip-%provider%-content',
+            endTextVisuallyHidden: 'End of %provider_name% content',
+          }}
+          fallback={{
+            text: "Sorry but we're having trouble displaying this content",
+            linkText: 'View content on %provider_name%',
+            linkHref: 'embed-url',
+            warningText:
+              'Warning: BBC is not responsible for third party content',
+          }}
+          service="news"
+          caption={caption}
+        />,
+      );
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   shouldMatchSnapshot(
