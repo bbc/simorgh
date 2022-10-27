@@ -18,7 +18,7 @@ const serviceHasInlineLink = service =>
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRun = ({ service, pageType }) => {
-  describe(`Running testsToAlwaysRun for ${service} ${pageType}`, () => {});
+  describe(`Running testsToAlwaysRun for ${service} ${pageType}`, () => { });
 };
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
@@ -184,11 +184,90 @@ export const testsThatFollowSmokeTestConfig = ({
           });
         });
       });
+
+      describe('Social Embeds', () => {
+        it('Youtube embed is redered when it exists on page', () => {
+          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+            const youtubeSocialEmbedsData = body.content.model.blocks.filter(content => content.type === 'social')
+              .filter(content => content.model.providerName === 'YouTube');
+            // cy.log(JSON.stringify(youtubeSocialEmbedsData));
+            if (youtubeSocialEmbedsData.length > 0) {
+              youtubeSocialEmbedsData.forEach(content => {
+                const youtubeUrl = content.model.source;
+                cy.get(`[data-e2e="youtube-embed-${youtubeUrl}"]`)
+                  .scrollIntoView()
+                  .within(() => {
+                    cy.get(`[data-testid="consentBanner"]`).should('exist');
+                    cy.get(`iframe`).should('not.exist');
+                    cy.get(`[data-testid="banner-button"]`).click();
+                    cy.get(`iframe`).should('exist');
+                    // cy.get(`[data-testid="consentBanner"]`, {
+                    //   timeout: 60000,
+                    // }).should('not.exist');
+                    cy.get(`[href^="#end-of-youtube-content"]`).should('exist');
+                  });
+              });
+            } else {
+              cy.log('There is no Yotube embed in this page!');
+              cy.get(`[href^="#end-of-youtube-content"]`).should('not.exist');
+            }
+          });
+        });
+
+        it('Instagram embed is redered when it exists on page', () => {
+          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+            const instagramSocialEmbedsData = body.content.model.blocks.filter(content => content.type === 'social')
+              .filter(content => content.model.providerName === 'Instagram');
+
+            if (instagramSocialEmbedsData.length > 0) {
+              instagramSocialEmbedsData.forEach(content => {
+                const instagramUrl = content.model.source;
+                cy.get(`[data-e2e="instagram-embed-${instagramUrl}"]`)
+                  .scrollIntoView()
+                  .within(() => {
+                    cy.get(`[href^="#end-of-instagram-content"]`).should('exist');
+                    cy.get(`iframe`).should('exist');
+                  });
+              });
+            } else {
+              cy.get(`[href^="#end-of-instagram-content"]`).should('not.exist');
+            }
+          });
+        });
+
+        it('Tiktok embed is redered when it exists on page', () => {
+          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+            const tiktokSocialEmbedsData = body.content.model.blocks.filter(content => content.type === 'social')
+              .filter(content => content.model.providerName === 'TikTok');
+
+            if (tiktokSocialEmbedsData.length > 0) {
+              tiktokSocialEmbedsData.forEach(content => {
+                const tiktokUrl = content.model.source;
+                // cy.log(tiktokUrl);
+                cy.get(`[data-e2e="tiktok-embed-${tiktokUrl}"]`)
+                  .scrollIntoView()
+                  .within(() => {
+                    cy.get(`[data-testid="consentBanner"]`).should('exist');
+                    cy.get(`iframe`).should('not.exist');
+                    cy.get(`[data-testid="banner-button"]`).click();
+                    cy.get(`iframe`).should('exist');
+                    // cy.get(`[data-testid="consentBanner"]`, {
+                    //   timeout: 60000,
+                    // }).should('not.exist');
+                    cy.get(`[href^="#end-of-tiktok-content"]`).should('exist');
+                  });
+              });
+            } else {
+              cy.get(`[href^="#end-of-tiktok-content"]`).should('not.exist');
+            }
+          });
+        });
+      });
     });
   });
 };
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
 export const testsThatNeverRunDuringSmokeTesting = ({ service, pageType }) => {
-  describe(`No testsToNeverSmokeTest to run for ${service} ${pageType}`, () => {});
+  describe(`No testsToNeverSmokeTest to run for ${service} ${pageType}`, () => { });
 };
