@@ -1,26 +1,30 @@
 import React from 'react';
-import {
-  DocsContainer,
-  Title,
-  Heading,
-  Description,
-} from '@storybook/addon-docs';
+import { DocsContainer, Title, Heading } from '@storybook/addon-docs';
 import styles from './index.styles';
 import path from 'ramda/src/path';
 import ThemeProvider from '../../src/app/components/ThemeProvider';
 import SingleDoc from './SingleDoc';
+import { DocsContextProps } from '@storybook/addon-docs';
 
-const DocsDecorator = ({ context, children }) => {
-  const title = path(['parameters', 'docs', 'component', 'title'], context);
-  const description = path(
-    ['parameters', 'docs', 'component', 'description'],
+const DocsDecorator = ({
+  context,
+  children,
+}: {
+  context: DocsContextProps;
+  children: any;
+}) => {
+  const title = path(
+    ['parameters', 'docs', 'component', 'title'],
     context,
-  );
+  ) as string;
 
-  const metadata = path(['parameters', 'metadata'], context);
-  const designLocation = path(['screenReaderUx'], metadata);
-  const ACLocation = path(['accessibilityAcceptanceCriteria'], metadata);
-  const swarmLocation = path(['accessibilitySwarm'], metadata);
+  const metadata = path(['parameters', 'metadata'], context) as string;
+  const designLocation = path(['screenReaderUx'], metadata) as string;
+  const ACLocation = path(
+    ['accessibilityAcceptanceCriteria'],
+    metadata,
+  ) as string;
+  const swarmLocation = path(['accessibilitySwarm'], metadata) as string;
 
   const documentation = [
     {
@@ -53,9 +57,8 @@ const DocsDecorator = ({ context, children }) => {
       {metadata ? (
         <ThemeProvider service={'news'} variant={'default'}>
           <Title>{title}</Title>
-          <Description>{description}</Description>
           <aside>
-            <Heading>Good to show to audiance</Heading>
+            <Heading>External Documentation</Heading>
             <ul css={styles.documentationList}>
               {documentation.map(item => {
                 const {

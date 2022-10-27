@@ -12,7 +12,7 @@ import {
   topStoriesSingleItemRtl,
 } from './fixture';
 import metadata from './metadata.json';
-import mdx from './topStoriesSection.mdx';
+import md from './topStoriesSection.md';
 
 const BackGround = styled.div`
   width: 100%;
@@ -40,10 +40,8 @@ export default {
     docs: {
       component: {
         title: 'Top Stories Section',
-        description:
-          'A component constructing the Top Stories section for Article pages. The sections can hold a list of TopStoriesItem or a single TopStoriesItem. The section can have a max of 3 items.',
       },
-      page: mdx,
+      page: md,
     },
   },
   decorators: [withKnobs, withServicesKnob()],

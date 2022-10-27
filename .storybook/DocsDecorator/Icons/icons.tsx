@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Confirm = ({ className }) => (
+export const Confirm = ({ className }: { className?: string }) => (
   <svg
     viewBox="0 0 32 32"
     width="1em"
@@ -14,7 +14,7 @@ export const Confirm = ({ className }) => (
   </svg>
 );
 
-export const Close = ({ className }) => (
+export const Close = ({ className }: { className?: string }) => (
   <svg
     viewBox="0 0 32 32"
     width="1em"
@@ -28,7 +28,7 @@ export const Close = ({ className }) => (
   </svg>
 );
 
-export const ExternalLink = ({ className }) => (
+export const ExternalLink = ({ className }: { className?: string }) => (
   <svg
     viewBox="0 0 32 32"
     width="1em"
@@ -42,7 +42,7 @@ export const ExternalLink = ({ className }) => (
   </svg>
 );
 
-export const Help = ({ className }) => (
+export const Help = ({ className }: { className?: string }) => (
   <svg
     viewBox="0 0 32 32"
     width="1em"

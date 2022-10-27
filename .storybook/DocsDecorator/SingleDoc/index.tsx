@@ -9,6 +9,12 @@ const SingleDoc = ({
   announce,
   missingAnnounce,
   missingLink,
+}: {
+  docTitle: string;
+  docLocation: string;
+  announce: string;
+  missingAnnounce: string;
+  missingLink: string;
 }) => {
   return (
     <li css={styles.documentationContainer}>
