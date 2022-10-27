@@ -3,7 +3,13 @@ import Text from '../../../src/app/components/Text';
 import { Confirm, Close, ExternalLink, Help } from '../Icons/icons';
 import styles from './index.styles';
 
-const SingleDoc = ({ docTitle, docLocation, missingAnnounce, missingLink }) => {
+const SingleDoc = ({
+  docTitle,
+  docLocation,
+  announce,
+  missingAnnounce,
+  missingLink,
+}) => {
   return (
     <li css={styles.documentationContainer}>
       <div css={[styles.documentationContainer, styles.documentationType]}>
@@ -33,7 +39,7 @@ const SingleDoc = ({ docTitle, docLocation, missingAnnounce, missingLink }) => {
       <div css={styles.documentationLink}>
         <a href={docLocation || missingLink} css={styles.link}>
           <Text css={styles.link} size="brevier" fontVariant="sansBold">
-            {docLocation ? `Link to ${docTitle}` : missingAnnounce}
+            {docLocation ? announce : missingAnnounce}
           </Text>
         </a>
         <span css={[styles.iconContainer, styles.linkIconContainer]}>

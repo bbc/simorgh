@@ -1,6 +1,5 @@
 {
-  "uxDoc": "https://paper.dropbox.com/doc/Calendar-screen-reader-UX--BOYKytDhxxF5OO4_9PeOi8SBAg-Z3JW1YOYFP6xHVjMsNDVU",
-  "a11yUx": "",
-  "acceptanceCriteria": "https://paper.dropbox.com/doc/Calendar-accessibility-acceptance-criteria--BOZymtb0rUCB7N54BxQquvGDAg-3aDiyQXgREVlH7J0jKy9f",
-  "swarm": "https://paper.dropbox.com/doc/A11Y-Swarm-Calendar--BQKU6KrWJGii4F5k~rrHW~k~Ag-aGWJ58mmMOFnlZsvcy9g0"
+  "screenReaderUx": "https://paper.dropbox.com/doc/Calendar-screen-reader-UX--BOYKytDhxxF5OO4_9PeOi8SBAg-Z3JW1YOYFP6xHVjMsNDVU",
+  "accessibilityAcceptanceCriteria": "",
+  "accessibilitySwarm": "https://paper.dropbox.com/doc/Calendar-accessibility-acceptance-criteria--BOZymtb0rUCB7N54BxQquvGDAg-3aDiyQXgREVlH7J0jKy9f"
 }
