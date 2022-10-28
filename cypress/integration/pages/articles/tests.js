@@ -185,7 +185,7 @@ export const testsThatFollowSmokeTestConfig = ({
         });
       });
 
-      describe('Social Embeds', () => {
+      describe.only('Social Embeds', () => {
         it('Youtube embed is redered when it exists on page', () => {
           cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
             const youtubeSocialEmbedsData = body.content.model.blocks.filter(content => content.type === 'social')
@@ -201,9 +201,6 @@ export const testsThatFollowSmokeTestConfig = ({
                     cy.get(`iframe`).should('not.exist');
                     cy.get(`[data-testid="banner-button"]`).click();
                     cy.get(`iframe`).should('exist');
-                    // cy.get(`[data-testid="consentBanner"]`, {
-                    //   timeout: 60000,
-                    // }).should('not.exist');
                     cy.get(`[href^="#end-of-youtube-content"]`).should('exist');
                   });
               });
@@ -243,7 +240,6 @@ export const testsThatFollowSmokeTestConfig = ({
             if (tiktokSocialEmbedsData.length > 0) {
               tiktokSocialEmbedsData.forEach(content => {
                 const tiktokUrl = content.model.source;
-                // cy.log(tiktokUrl);
                 cy.get(`[data-e2e="tiktok-embed-${tiktokUrl}"]`)
                   .scrollIntoView()
                   .within(() => {
@@ -251,14 +247,32 @@ export const testsThatFollowSmokeTestConfig = ({
                     cy.get(`iframe`).should('not.exist');
                     cy.get(`[data-testid="banner-button"]`).click();
                     cy.get(`iframe`).should('exist');
-                    // cy.get(`[data-testid="consentBanner"]`, {
-                    //   timeout: 60000,
-                    // }).should('not.exist');
                     cy.get(`[href^="#end-of-tiktok-content"]`).should('exist');
                   });
               });
             } else {
               cy.get(`[href^="#end-of-tiktok-content"]`).should('not.exist');
+            }
+          });
+        });
+
+        it('Twitter embed is redered when it exists on page', () => {
+          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+            const twitterSocialEmbedsData = body.content.model.blocks.filter(content => content.type === 'social')
+              .filter(content => content.model.providerName === 'Twitter');
+
+            if (twitterSocialEmbedsData.length > 0) {
+              twitterSocialEmbedsData.forEach(content => {
+                const twitterUrl = content.model.source;
+                cy.get(`[data-e2e="twitter-embed-${twitterUrl}"]`)
+                  .scrollIntoView()
+                  .within(() => {
+                    cy.get(`iframe`).should('exist');
+                    cy.get(`[href^="#end-of-twitter-content"]`).should('exist');
+                  });
+              });
+            } else {
+              cy.get(`[href^="#end-of-twitter-content"]`).should('not.exist');
             }
           });
         });
