@@ -87,7 +87,7 @@ describe('Logger node - for the server', () => {
           level: 'info',
           maxFiles: 5,
           maxsize: 104857600,
-          tailable: true,
+          tailable: false,
         });
       });
 
@@ -103,7 +103,7 @@ describe('Logger node - for the server', () => {
           level: 'info',
           maxFiles: 5,
           maxsize: 104857600,
-          tailable: true,
+          tailable: false,
         });
       });
 
