@@ -139,6 +139,8 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const hasByline = blocks.find(block => block.type === 'byline');
 
   const articleAuthorTwitterHandle = (contentBlocks => {
+    if (!hasByline) return null;
+
     const [firstByline, ...otherBylines] = contentBlocks.filter(
       block => block.type === 'byline',
     );
