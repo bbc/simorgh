@@ -259,6 +259,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         articleId={getArticleId(pageData)}
         title={headline}
         author={articleAuthor}
+        twitterHandle={articleAuthorTwitterHandle}
         firstPublished={firstPublished}
         lastPublished={lastPublished}
         section={getArticleSection(pageData)}
