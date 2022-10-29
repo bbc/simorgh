@@ -138,6 +138,46 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const startsWithHeading = propEq('type', 'headline')(blocks[0] || {});
   const hasByline = blocks.find(block => block.type === 'byline');
 
+  const articleAuthorTwitterHandle = (contentBlocks => {
+    const [firstByline, ...otherBylines] = contentBlocks.filter(
+      block => block.type === 'byline',
+    );
+    const [firstContributor, ...otherContributors] = pathOr(
+      null,
+      ['model', 'blocks'],
+      firstByline,
+    );
+    const contributorBlocks = pathOr(
+      null,
+      ['model', 'blocks'],
+      firstContributor,
+    );
+    const contributorLink = contributorBlocks.find(
+      block => block.type === 'link',
+    );
+    const contributorHandle = pathOr(
+      null,
+      [
+        'model',
+        'blocks',
+        0,
+        'model',
+        'blocks',
+        0,
+        'model',
+        'blocks',
+        0,
+        'model',
+        'blocks',
+        0,
+        'model',
+        'text',
+      ],
+      contributorLink,
+    );
+    return contributorHandle;
+  })(blocks);
+
   const componentsToRender = {
     visuallyHiddenHeadline,
     headline: headings,
