@@ -134,7 +134,7 @@
     "react-router-dom": "5.3.4",
     "url-parse": "1.5.10",
     "uuid": "8.3.2",
-    "winston": "3.7.2",
+    "winston": "git@github.com:bbc/winston.git#1bad349eb02beb95aea0f053ba049022b9303345",
     "xmldoc": "1.1.2"
   },
   "devDependencies": {
