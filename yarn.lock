@@ -3085,6 +3085,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@bbc/winston@https://github.com/bbc/winston.git#fix-file-descriptor-leak":
+  version: 3.8.2
+  resolution: "@bbc/winston@https://github.com/bbc/winston.git#commit=e17904166082c05c65ba4b985d84bc42da995872"
+  dependencies:
+    "@colors/colors": 1.5.0
+    "@dabh/diagnostics": ^2.0.2
+    async: ^3.2.3
+    is-stream: ^2.0.0
+    logform: ^2.4.0
+    one-time: ^1.0.0
+    readable-stream: ^3.4.0
+    safe-stable-stringify: ^2.3.1
+    stack-trace: 0.0.x
+    triple-beam: ^1.3.0
+    winston-transport: ^4.5.0
+  checksum: 7d2b22615add7714c7808bfb2994dbd0bc23346475d4e326779f2fbde1b13257f96be894e592e0b64b73f17fbf018d73be031e041d47ccc068a39b7a8b92eace
+  languageName: node
+  linkType: hard
+
 "@bcoe/v8-coverage@npm:^0.2.3":
   version: 0.2.3
   resolution: "@bcoe/v8-coverage@npm:0.2.3"
@@ -20602,6 +20621,7 @@ __metadata:
     "@babel/runtime": 7.19.4
     "@bbc/apache2-license-checker": 1.1.4
     "@bbc/web-vitals": 1.1.1
+    "@bbc/winston": "https://github.com/bbc/winston.git#fix-file-descriptor-leak"
     "@cypress/webpack-preprocessor": ^5.11.1
     "@emotion/babel-plugin": 11.10.2
     "@emotion/babel-preset-css-prop": 11.10.0
@@ -20742,7 +20762,6 @@ __metadata:
     webpack-dev-server: 4.11.0
     webpack-merge: 5.8.0
     webpack-node-externals: 3.0.0
-    winston: "https://github.com/bbc/winston.git#fix-file-descriptor-leak"
     xmldoc: 1.1.2
     yaml-js: 0.3.1
   languageName: unknown
@@ -23707,25 +23726,6 @@ __metadata:
     readable-stream: ^3.6.0
     triple-beam: ^1.3.0
   checksum: a56e5678a80b88a73e77ed998fc6e19d0db19c989a356b137ec236782f2bf58ae4511b11c29163f99391fa4dc12102c7bc5738dcb6543f28877fa2819adc3ee9
-  languageName: node
-  linkType: hard
-
-"winston@https://github.com/bbc/winston.git#fix-file-descriptor-leak":
-  version: 3.8.2
-  resolution: "winston@https://github.com/bbc/winston.git#commit=e17904166082c05c65ba4b985d84bc42da995872"
-  dependencies:
-    "@colors/colors": 1.5.0
-    "@dabh/diagnostics": ^2.0.2
-    async: ^3.2.3
-    is-stream: ^2.0.0
-    logform: ^2.4.0
-    one-time: ^1.0.0
-    readable-stream: ^3.4.0
-    safe-stable-stringify: ^2.3.1
-    stack-trace: 0.0.x
-    triple-beam: ^1.3.0
-    winston-transport: ^4.5.0
-  checksum: 9897684223be918e4b230ac087330cd52379e1a635066c760448094adc3781b813da27e3fa0045e5052d06d1c5c1e21615086ee04612d460aa4564e9d6ca8a00
   languageName: node
   linkType: hard
 

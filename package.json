@@ -94,6 +94,7 @@
   "homepage": "https://github.com/bbc/simorgh#readme",
   "dependencies": {
     "@bbc/web-vitals": "1.1.1",
+    "@bbc/winston": "https://github.com/bbc/winston.git#fix-file-descriptor-leak",
     "@emotion/cache": "11.10.3",
     "@emotion/react": "11.10.4",
     "@emotion/server": "11.10.0",
@@ -134,7 +135,6 @@
     "react-router-dom": "5.3.4",
     "url-parse": "1.5.10",
     "uuid": "8.3.2",
-    "winston": "https://github.com/bbc/winston.git#fix-file-descriptor-leak",
     "xmldoc": "1.1.2"
   },
   "devDependencies": {

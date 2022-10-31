@@ -46,8 +46,8 @@ describe('Logger node - for the server', () => {
 
     describe('Configuring Winston', () => {
       beforeEach(() => {
-        jest.mock('winston', () => jest.fn());
-        winston = require('winston');
+        jest.mock('@bbc/winston', () => jest.fn());
+        winston = require('@bbc/winston');
 
         winston.format = jest.fn();
         winston.createLogger = jest.fn();
