@@ -73,5 +73,8 @@ export const getAuthorTwitterHandle = articleContentBlocks => {
     ],
     contributorLink,
   );
-  return contributorHandle;
+  const sanitizedcontributorHandle = contributorHandle
+    ? contributorHandle.replace(/^@*/, '@')
+    : null;
+  return sanitizedcontributorHandle;
 };
