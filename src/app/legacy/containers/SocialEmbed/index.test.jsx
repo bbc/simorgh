@@ -134,13 +134,22 @@ describe('SocialEmbedContainer', () => {
       );
 
       expect(container.firstChild).toMatchSnapshot();
-
+      expect(
+        document.querySelector(
+          'head script[src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0"]',
+        ),
+      ).toBeTruthy();
       expect(loggerMock.info).toHaveBeenCalledTimes(1);
       expect(loggerMock.info).toHaveBeenCalledWith(SOCIAL_EMBED_RENDERED, {
         provider: 'facebook',
         href: 'https://www.facebook.com/RickAstley/posts/545713756920775',
       });
       unmount();
+      expect(
+        document.querySelector(
+          'head script[src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0"]',
+        ),
+      ).toBeFalsy();
     });
 
     it('should render a Facebook Video block and unmount correctly', () => {
@@ -153,13 +162,22 @@ describe('SocialEmbedContainer', () => {
       );
 
       expect(container.firstChild).toMatchSnapshot();
-
+      expect(
+        document.querySelector(
+          'head script[src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0"]',
+        ),
+      ).toBeTruthy();
       expect(loggerMock.info).toHaveBeenCalledTimes(1);
       expect(loggerMock.info).toHaveBeenCalledWith(SOCIAL_EMBED_RENDERED, {
         provider: 'facebook',
         href: 'https://www.facebook.com/RickAstley/videos/1378590239249667',
       });
       unmount();
+      expect(
+        document.querySelector(
+          'head script[src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0"]',
+        ),
+      ).toBeFalsy();
     });
 
     it('should render the correct skip link text when indexOfType is provided (means this is one of multiple e.g. Twitter embeds in the article)', () => {
