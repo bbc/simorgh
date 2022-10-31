@@ -20742,7 +20742,7 @@ __metadata:
     webpack-dev-server: 4.11.0
     webpack-merge: 5.8.0
     webpack-node-externals: 3.0.0
-    winston: "https://github.com/bbc/winston.git#1bad349eb02beb95aea0f053ba049022b9303345"
+    winston: "https://github.com/bbc/winston.git#fix-file-descriptor-leak"
     xmldoc: 1.1.2
     yaml-js: 0.3.1
   languageName: unknown
@@ -23710,9 +23710,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"winston@https://github.com/bbc/winston.git#1bad349eb02beb95aea0f053ba049022b9303345":
+"winston@https://github.com/bbc/winston.git#fix-file-descriptor-leak":
   version: 3.8.2
-  resolution: "winston@https://github.com/bbc/winston.git#commit=1bad349eb02beb95aea0f053ba049022b9303345"
+  resolution: "winston@https://github.com/bbc/winston.git#commit=e17904166082c05c65ba4b985d84bc42da995872"
   dependencies:
     "@colors/colors": 1.5.0
     "@dabh/diagnostics": ^2.0.2
