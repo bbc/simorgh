@@ -56,6 +56,8 @@ export const blockContainingText = (type, text, id = null) =>
     id,
   );
 
+export const blockContainingByline = (text, id = null) => {};
+
 export const blockBase = (blockType, blockModel) => ({
   type: blockType,
   model: blockModel,

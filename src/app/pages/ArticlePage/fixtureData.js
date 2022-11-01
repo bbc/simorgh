@@ -1,21 +1,41 @@
 import {
   blockContainingText,
+  blockContainingByline,
   singleTextBlock,
   textBlock,
 } from '#models/blocks';
+
+const blocksWithHeadlineAndText = blockValues => {
+  const [headlineText, paragraphText] = blockValues;
+
+  return [
+    blockContainingText('headline', headlineText, 1),
+    singleTextBlock(paragraphText, 2),
+  ];
+};
+
+const blocksWithHeadlineTexAndByline = blockValues => {
+  const [headlineText, paragraphText, twitterHandle] = blockValues;
+
+  return [
+    blockContainingText('headline', headlineText, 1),
+    blockContainingByline(twitterHandle, 2),
+    singleTextBlock(paragraphText, 3),
+  ];
+};
 
 const articleDataBuilder = (
   id,
   createdBy,
   passportLanguage,
   home,
-  headlineText,
-  paragraphText,
+  blockValues,
   seoHeadline,
   promoHeadline,
   summary,
   things,
   allowAdvertising = false,
+  articleBlocksPopulator = blocksWithHeadlineAndText,
 ) => ({
   metadata: {
     id: `urn:bbc:ares::article:${id}`,
@@ -42,10 +62,7 @@ const articleDataBuilder = (
   },
   content: {
     model: {
-      blocks: [
-        blockContainingText('headline', headlineText, 1),
-        singleTextBlock(paragraphText, 2),
-      ],
+      blocks: articleBlocksPopulator(blockValues),
     },
   },
   promo: {
@@ -114,8 +131,7 @@ export const articleDataNews = articleDataBuilder(
   'News',
   'en-gb',
   'http://www.bbc.co.uk/ontologies/passport/home/News',
-  'Article Headline',
-  'A paragraph.',
+  ['Article Headline', 'A paragraph.'],
   'Article Headline for SEO',
   'Article Headline for Promo',
   'Article summary.',
@@ -127,8 +143,7 @@ export const articleDataPersian = articleDataBuilder(
   'Persian',
   'fa',
   'http://www.bbc.co.uk/ontologies/passport/home/Persian',
-  'سرصفحه مقاله',
-  'یک پاراگراف.',
+  ['سرصفحه مقاله', 'یک پاراگراف.'],
   'سرصفحه مقاله',
   'سرصفحه مقاله برای ارتقاء',
   'خلاصه مقاله',
@@ -140,8 +155,7 @@ export const articleDataPidgin = articleDataBuilder(
   'Pidgin',
   'pcm',
   'http://www.bbc.co.uk/ontologies/passport/home/Pidgin',
-  'Article Headline in Pidgin',
-  'A paragraph in Pidgin.',
+  ['Article Headline in Pidgin', 'A paragraph in Pidgin.'],
   'Article Headline for SEO in Pidgin',
   'Article Headline for Promo in Pidgin',
   'Article summary in Pidgin',
@@ -153,11 +167,24 @@ export const articleDataPidginWithAds = articleDataBuilder(
   'Pidgin',
   'pcm',
   'http://www.bbc.co.uk/ontologies/passport/home/Pidgin',
-  'Article Headline in Pidgin',
-  'A paragraph in Pidgin.',
+  ['Article Headline in Pidgin', 'A paragraph in Pidgin.'],
   'Article Headline for SEO in Pidgin',
   'Article Headline for Promo in Pidgin',
   'Article summary in Pidgin',
   emptyThings,
   true,
+);
+
+export const articleDataPidginWithByline = articleDataBuilder(
+  'cwl08rd38l6o',
+  'Pidgin',
+  'pcm',
+  'http://www.bbc.co.uk/ontologies/passport/home/Pidgin',
+  ['Article Headline in Pidgin', 'A paragraph in Pidgin.'],
+  'Article Headline for SEO in Pidgin',
+  'Article Headline for Promo in Pidgin',
+  'Article summary in Pidgin',
+  emptyThings,
+  undefined,
+  blocksWithHeadlineTexAndByline,
 );
