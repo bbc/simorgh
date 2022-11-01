@@ -40,7 +40,7 @@ const loggerOptions = {
     level: LOG_LEVEL,
     maxFiles: 5,
     maxsize: 104857600, // 100MB
-    tailable: false,
+    tailable: true,
     format: combine(json()),
   },
   console: {
