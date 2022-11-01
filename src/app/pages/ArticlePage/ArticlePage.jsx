@@ -59,8 +59,8 @@ import {
   getArticleSection,
   getMentions,
   getLang,
-  getAuthorTwitterHandle,
 } from '#lib/utilities/parseAssetData';
+import getAuthorTwitterHandle from '#lib/utilities/getAuthorTwitterHandle';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
