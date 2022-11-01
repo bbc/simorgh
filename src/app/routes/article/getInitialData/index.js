@@ -7,6 +7,7 @@ import nodeLogger from '#lib/logger.node';
 import fetchPageData from '../../utils/fetchPageData';
 import handleGroupBlocks from '../handleGroupBlocks';
 import handleEmptyParagraphBlocks from '../handleEmptyParagraphBlocks';
+import handleBylineBlocks from '../handleBylineBlocks';
 import handlePromoData from '../handlePromoData';
 import addMpuBlock from './addMpuBlock';
 
@@ -31,6 +32,7 @@ const transformJson = pipe(
   augmentWithTimestamp,
   addMpuBlock,
   addNoCookieToEmbeds,
+  handleBylineBlocks,
   addIdsToBlocks,
   applyBlockPositioning,
   addIndexesToEmbeds,

@@ -108,6 +108,14 @@ export const service: DefaultServiceConfig = {
           callToActionLinkUrl: 'https://www.bbc.com/amharic',
         },
       },
+      byline: {
+        author: 'ፀሐፊ',
+        articleInformation: 'የጽሁፉ መረጃ',
+        listItemImage: 'ዝርዝር፣ ምስል',
+        published: 'ታትሟል',
+        reportingFrom: 'ዘገባው ከ',
+        role: 'የሥራ ድርሻ',
+      },
       consentBanner: {
         privacy: {
           title: 'በፕራይቬሲና ኩኪዎችን በመጠቀም ፖሊሲዎቻችን ላይ ማሻሻያ አድርገናል።',
@@ -238,12 +246,6 @@ export const service: DefaultServiceConfig = {
           heading: 'ይዘቱን [social_media_site] ይፈቅዳሉ?',
           body: `ይህ ጽሑፍ በ[social_media_site]. የቀረበ ይዘት ይዟል። ገጹ ቴክኖሎጂዎች ወይም ኩኪዎች ሊኖረው ስለሚችል ገጹ ከመከፈቱ በፊት የእርስዎን ፍቃድ እንጠይቃለን። ፍቃድዎን ከመስጠትዎ በፊት የ[social_media_site] [link] ኩኪ ፖሊሲ እና የ[link] የግለኝነት ፖሊሲ [/link] ማንበብ ይፈልጉ ይሆናል። 
           ይዘቱን ለማንበብ ‘እቀበላለሁ ቀጥል’ የሚለውን ይምረጡ።`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
         },
       },
       include: {

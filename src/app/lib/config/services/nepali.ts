@@ -254,12 +254,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: `[social_media_site] को सामग्रीलाई अनुमति छ?`,
           body: `यो लेखमा [social_media_site] बाट प्राप्त सामग्री समाविष्ट छ। यहाँ केही लोड हुनुअघि हामी तपाईँसँग अनुमति माग्छौँ किनभने तिनले कुकीज र अन्य प्रविधि प्रयोग गरेका हुनसक्छन्। स्वीकृति दिनुअघि तपाईँ [social_media_site] [link] cookie policy [/link] र [link]पढ्न सक्नुहुन्छ।[/link] यो सामग्री हेर्नका लागि 'स्वीकार छ, अगाडि बढौँ' छान्नुहोस्।`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
           button: 'स्वीकार छ, अगाडि बढौँ',
         },
       },

@@ -1,14 +1,27 @@
 import React, { useState, PropsWithChildren } from 'react';
-import { SocialEmbedProviders } from '../../models/types/global';
-
 import ConsentBanner from './ConsentBanner';
 
-const CONSENT_BANNER_PROVIDERS: SocialEmbedProviders[] = ['youtube'];
+import { SocialEmbedProviders } from '../../models/types/global';
+import useClickTrackerHandler from '../../hooks/useClickTrackerHandler';
 
-interface ConsentBannerProps {
-  provider: SocialEmbedProviders;
+export type ConsentBannerProviders = Extract<
+  SocialEmbedProviders,
+  'youtube' | 'tiktok'
+>;
+
+export const CONSENT_BANNER_PROVIDERS: ConsentBannerProviders[] = [
+  'youtube',
+  'tiktok',
+];
+
+export const getEventTrackingData = (provider: ConsentBannerProviders) => ({
+  componentName: `social-consent-banner-${provider}`,
+});
+
+type ConsentBannerProps = {
+  provider: ConsentBannerProviders;
   id?: string;
-}
+};
 
 const EmbedConsentBannerAmp = ({
   provider,
@@ -42,6 +55,10 @@ const EmbedConsentBannerCanonical = ({
 }: PropsWithChildren<Omit<ConsentBannerProps, 'id'>>) => {
   const [consented, setConsented] = useState(false);
 
+  const handleClickTracking = useClickTrackerHandler(
+    getEventTrackingData(provider),
+  );
+
   const showConsentBanner =
     CONSENT_BANNER_PROVIDERS.includes(provider) && !consented;
 
@@ -50,7 +67,12 @@ const EmbedConsentBannerCanonical = ({
   return (
     <ConsentBanner
       provider={provider}
-      clickHandler={{ onClick: () => setConsented(true) }}
+      clickHandler={{
+        onClick: e => {
+          setConsented(true);
+          handleClickTracking(e);
+        },
+      }}
     />
   );
 };
