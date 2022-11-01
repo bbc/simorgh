@@ -260,7 +260,6 @@ export const testsThatFollowSmokeTestConfig = ({
           cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
             const twitterSocialEmbedsData = body.content.model.blocks.filter(content => content.type === 'social')
               .filter(content => content.model.providerName === 'Twitter');
-
             if (twitterSocialEmbedsData.length > 0) {
               twitterSocialEmbedsData.forEach(content => {
                 const twitterUrl = content.model.source;
