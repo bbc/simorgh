@@ -276,6 +276,25 @@ export const testsThatFollowSmokeTestConfig = ({
           });
         });
 
+        // it('Facebook embed is redered when it exists on page', () => {
+        //   cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+        //     const facebookSocialEmbedsData = body.content.model.blocks.filter(content => content.type === 'social')
+        //       .filter(content => content.model.providerName === 'Facebook');
+        //     if (facebookSocialEmbedsData.length > 0) {
+        //       facebookSocialEmbedsData.forEach(content => {
+        //         const facebookUrl = content.model.source;
+        //         cy.get(`[data-e2e="facebook-embed-${facebookUrl}"]`)
+        //           .scrollIntoView()
+        //           .within(() => {
+        //             cy.get(`iframe`).should('exist');
+        //             cy.get(`[href^="#end-of-facebook-content"]`).should('exist');
+        //           });
+        //       });
+        //     } else {
+        //       cy.get(`[href^="#end-of-facebook-content"]`).should('not.exist');
+        //     }
+        //   });
+        // });
       });
     });
   });
