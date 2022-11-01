@@ -46,8 +46,8 @@ describe('Logger node - for the server', () => {
 
     describe('Configuring Winston', () => {
       beforeEach(() => {
-        jest.mock('@bbc/winston', () => jest.fn());
-        winston = require('@bbc/winston');
+        jest.mock('winston', () => jest.fn());
+        winston = require('winston');
 
         winston.format = jest.fn();
         winston.createLogger = jest.fn();
@@ -87,7 +87,7 @@ describe('Logger node - for the server', () => {
           level: 'info',
           maxFiles: 5,
           maxsize: 104857600,
-          tailable: false,
+          tailable: true,
         });
       });
 
@@ -103,7 +103,7 @@ describe('Logger node - for the server', () => {
           level: 'info',
           maxFiles: 5,
           maxsize: 104857600,
-          tailable: false,
+          tailable: true,
         });
       });
 
