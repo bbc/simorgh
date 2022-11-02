@@ -72,6 +72,7 @@ const SocialEmbedContainer = ({ blocks, source }) => {
             fallback={fallback}
             skipLink={skipLink}
             caption={caption}
+            source={source}
           />
         ) : (
           <Lazyload offset={LAZYLOAD_OFFSET} once height={oEmbed?.height}>

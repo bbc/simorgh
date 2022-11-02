@@ -20429,7 +20429,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"serve-static@npm:1.14.2, serve-static@npm:^1.14.1":
+"serve-static@npm:1.14.2":
   version: 1.14.2
   resolution: "serve-static@npm:1.14.2"
   dependencies:
@@ -20441,7 +20441,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"serve-static@npm:1.15.0":
+"serve-static@npm:1.15.0, serve-static@npm:^1.14.1":
   version: 1.15.0
   resolution: "serve-static@npm:1.15.0"
   dependencies:
