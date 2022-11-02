@@ -92,37 +92,12 @@ export const providers = provider =>
       enrich: () => {},
       onLibraryLoad: () => console.error(getOnRenderError('TikTok')),
     },
-    facebook: {
-      script: 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0',
-      styles: `      
-      position: relative;
-      overflow: hidden;
-
-      .fb_iframe_widget {
-        position: unset;
-
-        > span {
-          position: unset;
-        }
-      }
-
-      iframe {
-        background-color: white;
-        left:0;
-        top:0;
-        height:100% !important;
-        width:100% !important;
-        position:absolute !important;
-      }
-    `,
-      enrich: () => {},
-      onLibraryLoad: () => console.error(getOnRenderError('Facebook')),
-    },
   }[provider]);
 
 const CanonicalEmbed = ({ provider, oEmbed, onRender }) => {
   const { script, styles, enrich, onLibraryLoad } = providers(provider);
   const hasLoadedLibrary = useScript(script);
+
   useEffect(enrich);
 
   useEffect(() => {
