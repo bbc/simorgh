@@ -70,6 +70,7 @@ const directives = {
       'https://*.ampproject.net', // Social Embeds
       'https://amp-error-reporting.appspot.com', // AMP
       'https://*.twitter.com', // Social Embeds, <amp-twitter />
+      'https://connect.facebook.net', // Social Embeds, <amp-facebook />
       ...advertisingDirectives.connectSrc,
       "'self'",
     ],
@@ -91,6 +92,7 @@ const directives = {
       'https://amp-error-reporting.appspot.com',
       'https://logws1363.ati-host.net',
       'https://*.twitter.com', // Social Embeds, <amp-twitter />
+      'https://connect.facebook.net', // Social Embeds, <amp-facebook />
       ...advertisingDirectives.connectSrc,
       "'self'",
     ],
