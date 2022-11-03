@@ -1,51 +1,50 @@
 import { css, Theme } from '@emotion/react';
 
 const styles = {
-  icon: (theme: Theme) =>
-    css({
-      fill: 'currentcolor',
-      height: '100%',
-      width: '100%',
-    }),
+  documentationContainer: {
+    display: 'flex',
+    flexWrap: 'wrap',
+  },
 
   iconContainer: {
     display: 'inline-block',
     boxSizing: 'border-box',
   },
 
-  linkIconContainer: {
-    width: '1rem',
-    height: '1rem',
-    color: 'black',
-    marginLeft: '0.5em',
-  },
+  linkIconContainer: (theme: Theme) =>
+    css({
+      width: `${theme.spacings.DOUBLE}rem`,
+      height: `${theme.spacings.DOUBLE}rem`,
+      marginLeft: `${theme.spacings.HALF}rem`,
+      color: `${theme.palette.SHADOW}`,
+    }),
 
   statusIconContainer: (theme: Theme) =>
     css({
-      color: theme.palette.WHITE,
       borderRadius: '100%',
       width: '1.25rem',
       height: '1.25rem',
       padding: '0.25rem',
     }),
 
-  positiveStatusIcon: { background: 'rgb(36, 179, 0)' },
+  positive: (theme: Theme) =>
+    css({ background: '#0A7B0A', color: `${theme.palette.WHITE}` }),
 
-  negativeStatusIcon: { background: 'rgb(245, 26, 90)' },
+  negative: (theme: Theme) =>
+    css({ background: '#D60A3D', color: `${theme.palette.WHITE}` }),
 
-  documentationContainer: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
+  missing: (theme: Theme) =>
+    css({ padding: 0, borderRadius: 0, color: `${theme.palette.SHADOW}` }),
 
   sidebarColumn: {
     margin: '0.375rem',
+    marginLeft: '0',
   },
 
-  documentationLink: {
-    margin: '0.25rem',
-    flexBasis: '16rem',
-  },
+  documentationLink: (theme: Theme) =>
+    css({
+      margin: '0.25rem',
+    }),
 
   documentationType: {
     flexGrow: 1,

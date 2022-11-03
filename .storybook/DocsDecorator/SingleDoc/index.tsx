@@ -4,17 +4,15 @@ import { Confirm, Close, ExternalLink, Help } from '../Icons/icons';
 import styles from './index.styles';
 
 const SingleDoc = ({
-  docTitle,
-  docLocation,
-  announce,
-  missingAnnounce,
-  missingLink,
+  label,
+  status,
+  url,
+  urlLabel,
 }: {
-  docTitle: string;
-  docLocation?: string;
-  announce: string;
-  missingAnnounce: string;
-  missingLink: string;
+  label: string;
+  url: string;
+  urlLabel: string;
+  status?: boolean;
 }) => {
   return (
     <li css={styles.documentationContainer}>
@@ -23,14 +21,22 @@ const SingleDoc = ({
           css={[
             styles.iconContainer,
             styles.statusIconContainer,
-            docLocation ? styles.positiveStatusIcon : styles.negativeStatusIcon,
+            typeof status === 'boolean'
+              ? status
+                ? styles.positive
+                : styles.negative
+              : styles.missing,
             styles.sidebarColumn,
           ]}
         >
-          {docLocation ? (
-            <Confirm css={styles.icon} />
+          {typeof status === 'boolean' ? (
+            status ? (
+              <Confirm />
+            ) : (
+              <Close />
+            )
           ) : (
-            <Close css={styles.icon} />
+            <Help />
           )}
         </span>
 
@@ -39,22 +45,18 @@ const SingleDoc = ({
           size="bodyCopy"
           fontVariant="sansRegular"
         >
-          {docTitle}
+          {label}
         </Text>
       </div>
       <div css={styles.documentationLink}>
-        <a href={docLocation || missingLink} css={styles.link}>
+        <a href={url} css={styles.link}>
           <Text css={styles.link} size="brevier" fontVariant="sansBold">
-            {docLocation ? announce : missingAnnounce}
+            {urlLabel}
+            <span css={[styles.iconContainer, styles.linkIconContainer]}>
+              {status ? <ExternalLink /> : <Help />}
+            </span>
           </Text>
         </a>
-        <span css={[styles.iconContainer, styles.linkIconContainer]}>
-          {docLocation ? (
-            <ExternalLink css={styles.icon} />
-          ) : (
-            <Help css={styles.icon} />
-          )}
-        </span>
       </div>
     </li>
   );

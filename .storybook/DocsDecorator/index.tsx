@@ -1,10 +1,13 @@
 import React from 'react';
-import { DocsContainer, Title, Heading } from '@storybook/addon-docs';
+import { DocsContainer, Title } from '@storybook/addon-docs';
 import styles from './index.styles';
 import path from 'ramda/src/path';
+import count from 'ramda/src/count';
 import ThemeProvider from '../../src/app/components/ThemeProvider';
 import SingleDoc from './SingleDoc';
 import { DocsContextProps } from '@storybook/addon-docs';
+import Heading from '../../src/app/components/Heading';
+import { Recommend, Warning } from './Icons/icons';
 
 const DocsDecorator = ({
   context,
@@ -19,38 +22,27 @@ const DocsDecorator = ({
   ) as string;
 
   const metadata = path(['parameters', 'metadata'], context) as string;
-  const designLocation = path(['screenReaderUx'], metadata) as string;
-  const ACLocation = path(
-    ['accessibilityAcceptanceCriteria'],
-    metadata,
-  ) as string;
-  const swarmLocation = path(['accessibilitySwarm'], metadata) as string;
 
-  const documentation = [
-    {
-      docTitle: 'UX Accessibility Documentation',
-      docLocation: designLocation,
-      announce: 'screenreader UX',
-      missingAnnounce: 'How to make screenreader UX docs',
-      missingLink: '',
-    },
-    {
-      docTitle: 'Accessibility Acceptance Criteria',
-      docLocation: ACLocation,
-      announce: 'Acceptance criteria',
-      missingAnnounce: 'How to write accessibility ACs',
-      missingLink:
-        'https://bbc.github.io/accessibility-news-and-you/guides/screen-reader-ux.html',
-    },
-    {
-      docTitle: 'Accessibility Swarm',
-      docLocation: swarmLocation,
-      announce: 'Swarm template',
-      missingAnnounce: 'How to run an accessibility swarm',
-      missingLink:
-        'https://bbc.github.io/accessibility-news-and-you/guides/accessibility-acceptance-criteria.html',
-    },
-  ];
+  const uxAccessibility = path(['uxAccessibilityDoc'], metadata);
+  const uxSwarm = path(['swarm'], metadata);
+  const acceptanceCriteria = path(['acceptanceCriteria'], metadata);
+
+  const getLabel = path(['reference', 'label']);
+  const getUrl = path(['reference', 'url']);
+  const getDone = path(['done']);
+
+  const actionCount = count(
+    x => typeof x === 'undefined' || !getDone(x),
+    [uxAccessibility, uxSwarm, acceptanceCriteria],
+  );
+
+  const toWord = ['', 'One', 'Two', 'Three'];
+
+  const headline = metadata
+    ? actionCount === 0
+      ? 'Good to show to the audience'
+      : `${toWord[actionCount]} actions outstanding`
+    : 'Component health is missing!';
 
   return (
     // @ts-ignore: type children not assignable.
@@ -58,27 +50,48 @@ const DocsDecorator = ({
       {metadata ? (
         <ThemeProvider service="news" variant="default">
           <Title>{title}</Title>
-          <aside>
-            <Heading>External Documentation</Heading>
+
+          <aside css={styles.componentHealthContainer}>
+            <div css={styles.titleContainer}>
+              <span css={styles.titleIcon}>
+                {actionCount === 0 ? (
+                  <Recommend css={styles.recommendIcon} />
+                ) : (
+                  <Warning css={styles.warningIcon} />
+                )}
+              </span>
+              <Heading size="doublePica" level={2}>
+                {headline}
+              </Heading>
+            </div>
+
             <ul css={styles.documentationList}>
-              {documentation.map(item => {
-                const {
-                  docTitle,
-                  docLocation,
-                  announce,
-                  missingAnnounce,
-                  missingLink,
-                } = item;
-                return (
-                  <SingleDoc
-                    docTitle={docTitle}
-                    docLocation={docLocation}
-                    announce={announce}
-                    missingAnnounce={missingAnnounce}
-                    missingLink={missingLink}
-                  />
-                );
-              })}
+              <SingleDoc
+                label={'Screen reader UX'}
+                url={getUrl(uxAccessibility)}
+                status={getDone(uxAccessibility)}
+                urlLabel={
+                  getLabel(uxAccessibility) ||
+                  'How to document the screen reader UX'
+                }
+              />
+              <SingleDoc
+                label={'Accessibility Acceptance Criteria'}
+                url={getUrl(acceptanceCriteria)}
+                status={getDone(acceptanceCriteria)}
+                urlLabel={
+                  getLabel(acceptanceCriteria) ||
+                  'How to write accessibility acceptance criteria'
+                }
+              />
+              <SingleDoc
+                label={'Accessibility Swarm'}
+                url={getUrl(uxSwarm)}
+                status={getDone(uxSwarm)}
+                urlLabel={
+                  getLabel(uxSwarm) || 'How to run an accessibility swarm'
+                }
+              />
             </ul>
           </aside>
         </ThemeProvider>
