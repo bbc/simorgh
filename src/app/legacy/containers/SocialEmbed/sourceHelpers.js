@@ -3,6 +3,7 @@ const PROVIDERS = {
   INSTAGRAM: 'instagram',
   YOUTUBE: 'youtube',
   TIKTOK: 'tiktok',
+  FACEBOOK: 'facebook',
   UNKNOWN: 'unknown',
 };
 
@@ -27,6 +28,9 @@ export const getProviderFromSource = source => {
   if (source.match(/^https:\/\/www\.tiktok\.com/)) {
     return PROVIDERS.TIKTOK;
   }
+  if (source.match(/^https:\/\/www\.facebook\.com/)) {
+    return PROVIDERS.FACEBOOK;
+  }
   return PROVIDERS.UNKNOWN;
 };
 
@@ -42,6 +46,7 @@ export const getIdFromSource = source => {
     youtube: /\/watch\?v=([0-9A-Z a-z_-]+)/,
     instagram: /\/p\/([0-9A-Za-z_-]+)/,
     tiktok: /\/video\/([0-9]+)/,
+    facebook: /\/(?:posts|videos)\/([0-9A-Za-z]+)/,
   };
   const NO_ID = '';
   const provider = getProviderFromSource(source);
@@ -51,6 +56,7 @@ export const getIdFromSource = source => {
       PROVIDERS.YOUTUBE,
       PROVIDERS.INSTAGRAM,
       PROVIDERS.TIKTOK,
+      PROVIDERS.FACEBOOK,
     ].includes(provider)
   ) {
     const id = source.match(sourceIds[provider]);
