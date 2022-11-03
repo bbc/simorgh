@@ -33,6 +33,7 @@ const Curation = ({
   position,
   curationLength,
 }) => {
+  if (!promos.length) return null;
   const Component = pathOr(
     CurationGrid,
     [visualStyle, visualProminance],
