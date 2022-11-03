@@ -9,6 +9,10 @@ describe('sourceHelpers', () => {
   const YOUTUBE_SOURCE = 'https://www.youtube.com/watch?v=1e05_rwHvOM';
   const TIKTOK_SOURCE =
     'https://www.tiktok.com/@cuppymusic/video/7086167423639997701';
+  const FACEBOOK_POST_SOURCE =
+    'https://www.facebook.com/RickAstley/posts/545713756920775';
+  const FACEBOOK_VIDEO_SOURCE =
+    'https://www.facebook.com/RickAstley/videos/1378590239249667';
   const UNKNOWN_SOURCE = 'https://www.randomSource.com/watch?v=XWxjmToNSjQ';
 
   describe('getProviderFromSource', () => {
@@ -42,6 +46,16 @@ describe('sourceHelpers', () => {
 
     it('should return a social embed ID for a valid TikTok source', () => {
       expect(getIdFromSource(TIKTOK_SOURCE)).toEqual('7086167423639997701');
+    });
+
+    it('should return a social embed ID for a valid Facebook Post source', () => {
+      expect(getIdFromSource(FACEBOOK_POST_SOURCE)).toEqual('545713756920775');
+    });
+
+    it('should return a social embed ID for a valid Facebook Video source', () => {
+      expect(getIdFromSource(FACEBOOK_VIDEO_SOURCE)).toEqual(
+        '1378590239249667',
+      );
     });
 
     it('should return an empty string for an unknown or invalid source', () => {
