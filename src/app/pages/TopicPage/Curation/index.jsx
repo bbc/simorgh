@@ -30,6 +30,7 @@ const Curation = ({
   position,
   curationLength,
 }) => {
+  if (!promos.length) return null;
   const Component = pathOr(
     CurationGrid,
     [visualStyle, visualProminance],
@@ -67,7 +68,7 @@ Curation.defaultProps = {
   title: '',
   link: '',
   headingLevel: 2,
-  topStoriesTitle: string,
+  topStoriesTitle: '',
 };
 
 export default Curation;

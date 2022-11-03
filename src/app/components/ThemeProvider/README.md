@@ -205,17 +205,20 @@ You can use `palette` like this:
 
 These are numbers that represent the rems used for spacing content. The options, with their size in pixels is as follows:
 
+- `HALF` - 4px
 - `FULL` - 8px
 - `DOUBLE` - 16px
 - `TRIPLE` - 24px
 - `QUADRUPLE` - 32px
+- `QUINTUPLE` - 40px
+- `SEXTUPLE` - 48px
 
 You can use `spacings` like this:
 
 ```tsx
 <div
   css={({ spacings }) => ({
-    padding: spacings.DOUBLE,
+    padding: `${spacings.DOUBLE}rem`,
   })}
 >
   This is a div with 16px of padding (DOUBLE spacing).

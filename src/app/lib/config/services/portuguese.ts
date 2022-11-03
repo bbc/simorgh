@@ -64,16 +64,16 @@ export const service: DefaultServiceConfig = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'Podcast',
-      brandTitle: 'As Estranhas Origens das Guerras Culturais',
+      brandTitle: 'Brasil Partido',
       brandDescription:
-        'Adaptação de premiado podcast da BBC ‘Things Fell Apart’, de Jon Ronson.',
+        'João Fellet tenta entender como brasileiros chegaram ao grau atual de divisão.',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0cx5mv5.jpg',
-        alt: 'Logo: As Estranhas Origens das Guerras Culturais',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0d67gkg.jpg',
+        alt: 'Logo: Brasil Partido',
       },
       linkLabel: {
         text: 'Episódios',
-        href: 'https://www.bbc.com/portuguese/podcasts/p0cx5pt6',
+        href: 'https://www.bbc.com/portuguese/podcasts/p0cyhvny',
       },
       skipLink: {
         text: 'Pule %title% e continue lendo',
@@ -274,12 +274,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: `Aceita conteúdo de [social_media_site]?`,
           body: `Este item inclui conteúdo extraído de [social_media_site]. Pedimos sua autorzação antes que algo seja carregado, pois eles podem estar utilizando cookies e outras tecnologias. Você pode consultar a [link] política de uso de cookies [/link] e [link] os termos de privacidade  [/link] do [social_media_site] antes de concordar. Para acessar o conteúdo clique em "aceitar e continuar".`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
           button: 'Aceite e continue',
         },
       },
@@ -361,6 +355,10 @@ export const service: DefaultServiceConfig = {
         url: '/portuguese',
       },
       {
+        title: 'Eleições 2022',
+        url: '/portuguese/topics/c20d7ez6mqpt',
+      },
+      {
         title: 'Brasil',
         url: '/portuguese/topics/cz74k717pw5t',
       },
@@ -383,10 +381,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Tecnologia',
         url: '/portuguese/topics/c404v027pd4t',
-      },
-      {
-        title: '#SalaSocial',
-        url: '/portuguese/topics/cx6pxx22x5pt',
       },
       {
         title: 'Vídeos',

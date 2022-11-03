@@ -6,6 +6,8 @@ import {
 } from '../react-testing-library-with-providers';
 import ConsentBanner from './ConsentBanner';
 
+import * as viewTracking from '../../hooks/useViewTracker';
+
 const mockCanonicalClickHandler = {
   onClick: jest.fn(() => null),
 };
@@ -73,10 +75,10 @@ describe('Embed Consent Banner - Content', () => {
     );
   });
 
-  it('should trigger "onClick" event when banner button is clicked in canonical', () => {
+  it('should render a TikTok consent banner with correct content for Mundo service', () => {
     render(
       <ConsentBanner
-        provider="youtube"
+        provider="tiktok"
         clickHandler={mockCanonicalClickHandler}
       />,
       {
@@ -84,11 +86,103 @@ describe('Embed Consent Banner - Content', () => {
       },
     );
 
-    const button = screen.getByTestId('banner-button');
+    const heading = screen.getByTestId('banner-heading');
+    const body = screen.getByTestId('banner-body');
 
-    fireEvent.click(button);
+    expect(heading.textContent).toEqual('¿Permitir el contenido de TikTok?');
+    expect(body.textContent).toEqual(
+      "Este artículo contiene contenido proporcionado por TikTok. Solicitamos tu permiso antes de que algo  se cargue, ya que ese sitio  puede estar usando cookies y otras tecnologías. Es posible que quieras leer política de cookies y política de privacidad de TikTok antes de aceptar. Para ver este contenido, selecciona 'aceptar y continuar'.",
+    );
+  });
 
-    expect(mockCanonicalClickHandler.onClick).toHaveBeenCalledTimes(1);
+  describe('Event tracking - Embed Consent Banner - Content', () => {
+    afterEach(() => {
+      jest.clearAllMocks();
+    });
+
+    it('should call the view tracking hook with the correct params with when the consent banner is in the viewport', () => {
+      const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+
+      render(
+        <ConsentBanner
+          provider="youtube"
+          clickHandler={mockCanonicalClickHandler}
+        />,
+        {
+          service: 'mundo',
+        },
+      );
+
+      expect(viewTrackerSpy).toHaveBeenCalledWith({
+        componentName: 'social-consent-banner-youtube',
+      });
+    });
+
+    it('should call the view tracking hook multiple times if there are multiple consent banners on the page', () => {
+      const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+
+      render(
+        <ConsentBanner
+          provider="youtube"
+          clickHandler={mockCanonicalClickHandler}
+        />,
+        {
+          service: 'mundo',
+        },
+      );
+
+      render(
+        <ConsentBanner
+          provider="youtube"
+          clickHandler={mockCanonicalClickHandler}
+        />,
+        {
+          service: 'mundo',
+        },
+      );
+
+      render(
+        <ConsentBanner
+          provider="tiktok"
+          clickHandler={mockCanonicalClickHandler}
+        />,
+        {
+          service: 'mundo',
+        },
+      );
+
+      expect(viewTrackerSpy).toHaveBeenCalledTimes(3);
+
+      expect(viewTrackerSpy).toHaveBeenCalledWith({
+        componentName: 'social-consent-banner-youtube',
+      });
+
+      expect(viewTrackerSpy).toHaveBeenCalledWith({
+        componentName: 'social-consent-banner-youtube',
+      });
+
+      expect(viewTrackerSpy).toHaveBeenCalledWith({
+        componentName: 'social-consent-banner-tiktok',
+      });
+    });
+
+    it('should trigger "onClick" event when banner button is clicked in canonical', () => {
+      render(
+        <ConsentBanner
+          provider="youtube"
+          clickHandler={mockCanonicalClickHandler}
+        />,
+        {
+          service: 'mundo',
+        },
+      );
+
+      const button = screen.getByTestId('banner-button');
+
+      fireEvent.click(button);
+
+      expect(mockCanonicalClickHandler.onClick).toHaveBeenCalledTimes(1);
+    });
   });
 
   it('should render AMP "on" action when passed AMP action handler', () => {

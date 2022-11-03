@@ -20,7 +20,7 @@ exports[`Psammead Styles - Colours should match #6C22D6 for C_NEWSROUND_PURPLE 1
 
 exports[`Psammead Styles - Colours should match #6E6E73 for C_METAL 1`] = `"C_METAL"`;
 
-exports[`Psammead Styles - Colours should match #8A8C8E for C_PHILIPPINE_GREY 1`] = `"C_PHILIPPINE_GREY"`;
+exports[`Psammead Styles - Colours should match #8A8C8E for C_GREY_5 1`] = `"C_GREY_5"`;
 
 exports[`Psammead Styles - Colours should match #68A1F8 for C_CONSENT_FOCUS 1`] = `"C_CONSENT_FOCUS"`;
 

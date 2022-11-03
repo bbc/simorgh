@@ -302,6 +302,424 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
 </div>
 `;
 
+exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount correctly 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-0 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(10, 1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-2 {
+  margin-bottom: 1.5rem;
+  max-width: 31.25rem;
+  min-height: 14rem;
+}
+
+.emotion-4 {
+  position: relative;
+}
+
+.emotion-6 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-6 span {
+  color: #222222;
+}
+
+.emotion-6:hover span,
+.emotion-6:focus span {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.emotion-6:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-8 {
+  margin: 0;
+  background-color: transparent;
+}
+
+.emotion-10 {
+  background-color: #FFFFFF;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  border: 0.0625rem solid #8A8C8E;
+}
+
+.emotion-11 {
+  color: #141414;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) {
+  .emotion-11 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-12 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  margin: 1rem 0;
+}
+
+@media (min-width: 20rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-12 a {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.0625rem solid #141414;
+}
+
+.emotion-12 a:visited {
+  color: #545658;
+  border-bottom: 0.0625rem solid #545658;
+}
+
+.emotion-12 a:hover,
+.emotion-12 a:focus {
+  color: #B80000;
+  border-bottom: 0.125rem solid #B80000;
+}
+
+.emotion-13 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: #FFFFFF;
+  border: 0.0625rem solid #8A8C8E;
+  border-radius: 0;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 20rem) {
+  .emotion-13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-13:hover,
+.emotion-13:focus {
+  background-color: #B80000;
+  color: #FFFFFF;
+  border: 0.0625rem solid #B80000;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-14 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: #545658;
+  padding: 0.5rem 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-14 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-14 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-14>span {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-16 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div
+  class="emotion-0 emotion-1"
+  dir="ltr"
+>
+  <div
+    class="emotion-2 emotion-3"
+    data-e2e="tiktok-embed-https://www.tiktok.com/@cuppymusic/video/7086167423639997701"
+  >
+    <div
+      class="emotion-4 emotion-5"
+    >
+      <a
+        class="emotion-6 emotion-7"
+        href="#end-of-tiktok-content"
+      >
+        <span>
+          Skip TikTok content
+        </span>
+      </a>
+      <figure
+        class="emotion-8 emotion-9"
+      >
+        <div
+          class="emotion-10"
+          data-testid="consentBanner"
+          id="consentBanner"
+        >
+          <strong
+            class="emotion-11"
+            data-testid="banner-heading"
+          >
+            Allow TikTok content?
+          </strong>
+          <p
+            class="emotion-12"
+            data-testid="banner-body"
+          >
+            This article contains content provided by TikTok.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read TikTok 
+            <a
+              aria-label="cookie policy, external"
+              href="https://www.tiktok.com/legal/cookie-policy"
+            >
+              cookie policy
+            </a>
+             and 
+            <a
+              aria-label="privacy policy, external"
+              href="https://www.tiktok.com/legal/privacy-policy"
+            >
+              privacy policy
+            </a>
+             before accepting. To view this content choose 'accept and continue'.
+          </p>
+          <button
+            class="emotion-13"
+            data-testid="banner-button"
+            type="button"
+          >
+            Accept and continue
+          </button>
+        </div>
+        <figcaption
+          class="emotion-14 emotion-15"
+        >
+          <span>
+            Video caption, 
+          </span>
+          Warning: The BBC is not responsible for the content of external sites. TikTok content may contain adverts
+        </figcaption>
+      </figure>
+      <p
+        class="emotion-16 emotion-17"
+        id="end-of-tiktok-content"
+        tabindex="-1"
+      >
+        End of TikTok content
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`SocialEmbedContainer Canonical should render a Twitter block and unmount correctly 1`] = `
 @media (max-width: 14.9375rem) {
   .emotion-0 {
@@ -774,8 +1192,7 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
 
 .emotion-10 {
   background-color: #FFFFFF;
-  padding: 2rem 1rem;
-  min-height: 280px;
+  padding: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -791,19 +1208,19 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  border: 0.1875rem solid transparent;
+  border: 0.0625rem solid #8A8C8E;
 }
 
 .emotion-11 {
   color: #141414;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: 1.125rem;
   line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
 }
 
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
+@media (min-width: 20rem) {
   .emotion-11 {
     font-size: 1.125rem;
     line-height: 1.375rem;
@@ -819,12 +1236,27 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
 
 .emotion-12 {
   color: #141414;
-  margin: 1rem 0;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  margin: 1rem 0;
+}
+
+@media (min-width: 20rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
 }
 
 .emotion-12 a {
@@ -834,44 +1266,43 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
   border-bottom: 0.0625rem solid #141414;
 }
 
+.emotion-12 a:visited {
+  color: #545658;
+  border-bottom: 0.0625rem solid #545658;
+}
+
 .emotion-12 a:hover,
 .emotion-12 a:focus {
   color: #B80000;
   border-bottom: 0.125rem solid #B80000;
 }
 
-.emotion-12 a:visited {
-  color: #545658;
-  border-bottom: 0.0625rem solid #545658;
+.emotion-13 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: #FFFFFF;
+  border: 0.0625rem solid #8A8C8E;
+  border-radius: 0;
+  padding: 0.5rem;
+  cursor: pointer;
 }
 
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
+@media (min-width: 20rem) {
+  .emotion-13 {
     font-size: 1rem;
-    line-height: 1.375rem;
+    line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-13 {
     font-size: 1rem;
-    line-height: 1.375rem;
+    line-height: 1.25rem;
   }
-}
-
-.emotion-13 {
-  color: #141414;
-  background-color: #FFFFFF;
-  border: 0.0625rem solid #8A8C8E;
-  border-radius: 0;
-  font-weight: bold;
-  padding: 0.5rem;
-  cursor: pointer;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
 }
 
 .emotion-13:hover,
@@ -881,20 +1312,6 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
   border: 0.0625rem solid #B80000;
   -webkit-text-decoration: underline;
   text-decoration: underline;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-13 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-13 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
 }
 
 .emotion-14 {

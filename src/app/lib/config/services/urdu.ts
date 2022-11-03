@@ -129,6 +129,14 @@ export const service: DefaultServiceConfig = {
           callToActionLinkUrl: 'https://www.bbc.com/urdu',
         },
       },
+      byline: {
+        articleInformation: 'مضمون کی تفصیل',
+        author: 'مصنف',
+        listItemImage: 'لسٹ آئٹم، تصویر',
+        published: 'وقت اشاعت',
+        reportingFrom: 'مقام',
+        role: 'عہدہ',
+      },
       consentBanner: {
         privacy: {
           title: 'ہم نے اپنی پرائیویسی اور کوکیز پالیسی اپ ڈیٹ کر دی ہے',
@@ -266,12 +274,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: `[social_media_site] کا مواد دکھانے کی اجازت دی جائے؟?`,
           body: `اس تحریر میں ایسا مواد ہے جو [social_media_site] کی جانب سے دیا گیا ہے۔ کسی بھی چیز کے لوڈ ہونے سے قبل ہم آپ سے اجازت چاہتے ہیں کیونکہ یہ ممکن ہے کہ وہ کوئی مخصوص کوکیز یا ٹیکنالوجیز کا استعمال کر رہے ہوں۔ آپ اسے تسلیم کرنے سے پہلے [social_media_site] [link] ککی پالیسی [/link] اور [link] پرائیویسی پالیسی [/link] پڑھنا چاہیں گے۔ اس مواد کو دیکھنے کے لیے ’تسلیم کریں، جاری رکھیں‘ پر کلک کریں۔`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
         },
       },
       include: {

@@ -25,7 +25,9 @@ import {
   GREY_11,
   GREY_2,
   GREY_3,
+  GREY_5,
   GREY_6,
+  GREY_7,
   GREY_8,
   KINGFISHER,
   LE_TEAL,
@@ -67,8 +69,17 @@ import {
   GROUP_4_MIN_WIDTH,
   GROUP_4_ONLY,
   GROUP_5_MIN_WIDTH,
+  HIGH_CONTRAST,
 } from './mediaQueries';
-import { FULL, DOUBLE, TRIPLE, QUADRUPLE } from './spacings';
+import {
+  HALF,
+  FULL,
+  DOUBLE,
+  TRIPLE,
+  QUADRUPLE,
+  QUINTUPLE,
+  SEXTUPLE,
+} from './spacings';
 import {
   getAtlasSize,
   getElephantSize,
@@ -179,6 +190,7 @@ const withThemeProvider = ({
       GROUP_4_MIN_WIDTH,
       GROUP_4_ONLY,
       GROUP_5_MIN_WIDTH,
+      HIGH_CONTRAST,
     },
     palette: {
       ARCHIVE_BLUE,
@@ -200,7 +212,9 @@ const withThemeProvider = ({
       GREY_11,
       GREY_2,
       GREY_3,
+      GREY_5,
       GREY_6,
+      GREY_7,
       GREY_8,
       KINGFISHER,
       LE_TEAL,
@@ -233,10 +247,13 @@ const withThemeProvider = ({
       BRAND_BORDER,
     },
     spacings: {
+      HALF,
       FULL,
       DOUBLE,
       TRIPLE,
       QUADRUPLE,
+      QUINTUPLE,
+      SEXTUPLE,
     },
   };
 

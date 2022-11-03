@@ -29,7 +29,7 @@ export const CanonicalSocialEmbed = ({
   const { pageType } = useContext(RequestContext);
   const embedCaption = getCaptionText({ pageType, caption, provider });
 
-  const isSupportedProvider = Object.keys(providers).includes(provider);
+  const isSupportedProvider = !!providers(provider);
 
   if (!isSupportedProvider || !oEmbed)
     return (
@@ -42,7 +42,7 @@ export const CanonicalSocialEmbed = ({
     <SkipLinkWrapper service={service} provider={provider} {...skipLink}>
       {embedCaption ? (
         <CaptionWrapper service={service} {...embedCaption}>
-          <EmbedConsentBannerCanonical pageType={pageType} provider={provider}>
+          <EmbedConsentBannerCanonical provider={provider}>
             <CanonicalEmbed
               provider={provider}
               oEmbed={oEmbed}
@@ -51,7 +51,7 @@ export const CanonicalSocialEmbed = ({
           </EmbedConsentBannerCanonical>
         </CaptionWrapper>
       ) : (
-        <EmbedConsentBannerCanonical pageType={pageType} provider={provider}>
+        <EmbedConsentBannerCanonical provider={provider}>
           <CanonicalEmbed
             provider={provider}
             oEmbed={oEmbed}
@@ -95,16 +95,12 @@ export const AmpSocialEmbed = ({
     <SkipLinkWrapper service={service} provider={provider} {...skipLink}>
       {embedCaption ? (
         <CaptionWrapper service={service} {...embedCaption}>
-          <EmbedConsentBannerAmp
-            pageType={pageType}
-            provider={provider}
-            id={id}
-          >
+          <EmbedConsentBannerAmp provider={provider} id={id}>
             <AmpElement id={id} />
           </EmbedConsentBannerAmp>
         </CaptionWrapper>
       ) : (
-        <EmbedConsentBannerAmp pageType={pageType} provider={provider} id={id}>
+        <EmbedConsentBannerAmp provider={provider} id={id}>
           <AmpElement id={id} />
         </EmbedConsentBannerAmp>
       )}
