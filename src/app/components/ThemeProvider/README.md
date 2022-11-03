@@ -103,7 +103,7 @@ You can use `fontMq` like this:
 
 ### mq
 
-The content media queires. Options, with their screen size range in pixels, are as follows:
+The content media queries. Options, with their screen size range in pixels, are as follows:
 
 - `GROUP_0_MAX_WIDTH`: 239px and below
 - `GROUP_1_MAX_WIDTH`: 399px and below
@@ -205,17 +205,20 @@ You can use `palette` like this:
 
 These are numbers that represent the rems used for spacing content. The options, with their size in pixels is as follows:
 
+- `HALF` - 4px
 - `FULL` - 8px
 - `DOUBLE` - 16px
 - `TRIPLE` - 24px
 - `QUADRUPLE` - 32px
+- `QUINTUPLE` - 40px
+- `SEXTUPLE` - 48px
 
 You can use `spacings` like this:
 
 ```tsx
 <div
   css={({ spacings }) => ({
-    padding: spacings.DOUBLE,
+    padding: `${spacings.DOUBLE}rem`,
   })}
 >
   This is a div with 16px of padding (DOUBLE spacing).

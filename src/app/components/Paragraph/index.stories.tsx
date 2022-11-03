@@ -74,7 +74,7 @@ const ParagraphStory = ({ service, variant, text }: Props) => {
 };
 
 export default {
-  title: 'NewComponents/Paragraph',
+  title: 'New Components/Paragraph',
   Component: ParagraphStory,
   decorators: [withKnobs, withServicesKnob()],
   parameters: {

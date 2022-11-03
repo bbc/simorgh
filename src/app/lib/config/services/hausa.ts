@@ -123,6 +123,14 @@ export const service: DefaultServiceConfig = {
           callToActionLinkUrl: 'https://www.bbc.com/hausa',
         },
       },
+      byline: {
+        articleInformation: 'Bayani kan maƙala',
+        author: 'Marubuci',
+        listItemImage: 'Jerin abubuwa, hoto',
+        published: 'An wallafa',
+        reportingFrom: 'Aiko rahoto daga',
+        role: 'Sanya sunan wanda ya rubuta labari',
+      },
       consentBanner: {
         privacy: {
           title: "Mun sabunta Ka'idojinmu na Tsare Sirri",
@@ -269,12 +277,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: 'Ya kamata a bar bayanan [social_media_site]?',
           body: `Wannan labari ne na dauke da bayanai da [social_media_site] suka bayar.  Muna neman amincewarku kafin mu dora muka, saboda nuna iya dauke da  wasu bayanai da aka iya adanawa. Watakila kana za ka so ka karanta [social_media_site] [link] da tsarin bayanan da za a adana [/link] da [link] da tsarin sirri [/link] kafin ka amince. Idan kana son ganin wannan bayani ka zabi ‘amince sannan ka ci gaba’.`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
         },
       },
       include: {

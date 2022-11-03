@@ -26,7 +26,9 @@ interface Palette extends BrandPalette {
   GREY_11: string;
   GREY_2: string;
   GREY_3: string;
+  GREY_5: string;
   GREY_6: string;
+  GREY_7: string;
   GREY_8: string;
   KINGFISHER: string;
   LE_TEAL: string;
@@ -69,13 +71,17 @@ interface MediaQueries {
   GROUP_4_MIN_WIDTH: string;
   GROUP_4_ONLY: string;
   GROUP_5_MIN_WIDTH: string;
+  HIGH_CONTRAST: string;
 }
 
 interface Spacings {
+  HALF: number;
   FULL: number;
   DOUBLE: number;
   TRIPLE: number;
   QUADRUPLE: number;
+  QUINTUPLE: number;
+  SEXTUPLE: number;
 }
 
 export type TypographyScript = {

@@ -260,12 +260,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: `[social_media_site] мазмуну көрсөтүлсүнбү?`,
           body: `Бул макалада [social_media_site] мазмуну бар. Алар кукилерди ж.б. технологияларды колдонушу мүмкүн. Ошондуктан жүктөөрдөн мурда сизден уруксат суралат.`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
         },
       },
       include: {

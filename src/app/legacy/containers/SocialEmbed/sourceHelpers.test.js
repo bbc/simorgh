@@ -4,7 +4,11 @@ describe('sourceHelpers', () => {
   const TWITTER_SOURCE =
     'https://twitter.com/BBCNews/status/1384138850478346243?s=20';
   const INSTAGRAM_SOURCE = 'https://www.instagram.com/p/CZ4ght5sIR3';
+  const INSTAGRAM_SOURCE_UNDERSCORED =
+    'https://www.instagram.com/p/CZ4ght5sIR3_';
   const YOUTUBE_SOURCE = 'https://www.youtube.com/watch?v=1e05_rwHvOM';
+  const TIKTOK_SOURCE =
+    'https://www.tiktok.com/@cuppymusic/video/7086167423639997701';
   const UNKNOWN_SOURCE = 'https://www.randomSource.com/watch?v=XWxjmToNSjQ';
 
   describe('getProviderFromSource', () => {
@@ -26,8 +30,18 @@ describe('sourceHelpers', () => {
       expect(getIdFromSource(INSTAGRAM_SOURCE)).toEqual('CZ4ght5sIR3');
     });
 
+    it('should return a social embed ID for a valid Instagram source that ends with an underscore', () => {
+      expect(getIdFromSource(INSTAGRAM_SOURCE_UNDERSCORED)).toEqual(
+        'CZ4ght5sIR3_',
+      );
+    });
+
     it('should return a social embed ID for a valid Youtube source', () => {
       expect(getIdFromSource(YOUTUBE_SOURCE)).toEqual('1e05_rwHvOM');
+    });
+
+    it('should return a social embed ID for a valid TikTok source', () => {
+      expect(getIdFromSource(TIKTOK_SOURCE)).toEqual('7086167423639997701');
     });
 
     it('should return an empty string for an unknown or invalid source', () => {

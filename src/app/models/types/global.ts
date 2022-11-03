@@ -2,7 +2,8 @@ export type SocialEmbedProviders =
   | 'facebook'
   | 'twitter'
   | 'instagram'
-  | 'youtube';
+  | 'youtube'
+  | 'tiktok';
 
 export type PageTypes =
   | 'article'

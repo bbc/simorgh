@@ -136,10 +136,6 @@ export const service: SerbianConfig = {
         url: '/serbian/lat/topics/c5wzvzzz5vrt',
       },
       {
-        title: 'Korona virus',
-        url: '/serbian/lat/srbija-52197807',
-      },
-      {
         title: 'Srbija',
         url: '/serbian/lat/topics/cr50vdy9q6wt',
       },
@@ -217,6 +213,14 @@ export const service: SerbianConfig = {
           callToActionLast: '.',
           callToActionLinkUrl: 'https://www.bbc.com/serbian/lat',
         },
+      },
+      byline: {
+        articleInformation: 'Podaci o članku',
+        author: 'Autor',
+        listItemImage: 'Prikazane fotografije',
+        published: 'Objavljeno',
+        reportingFrom: 'Izveštava iz',
+        role: 'Funkcija',
       },
       consentBanner: {
         privacy: {
@@ -351,12 +355,6 @@ export const service: SerbianConfig = {
         consentBanner: {
           heading: `Dozvoliti sadržaj [social_media_site]?`,
           body: `U ovom članku se pojavljuje sadržaj [social_media_site]. Molimo vas da date dozvolu pre nego što se sadržaj učita, pošto može da koristi kolačiće i druge tehnologije. Možda biste želeli da pročitate [social_media_site] [link] politiku kolačića [/link] i [link] politiku privatnosti [/link] pre nego što date pristanak. Da biste videli ovaj sadržaj, odaberite "Prihvatite i nastavite".`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
           button: 'Prihvatite i nastavite',
         },
       },
@@ -455,10 +453,6 @@ export const service: SerbianConfig = {
         url: '/serbian/cyr/topics/cqwvxvvw9qrt',
       },
       {
-        title: 'Корона вирус',
-        url: '/serbian/cyr/srbija-52197807',
-      },
-      {
         title: 'Србија',
         url: '/serbian/cyr/topics/cvjp1d3k9dvt',
       },
@@ -536,6 +530,14 @@ export const service: SerbianConfig = {
           callToActionLast: '.',
           callToActionLinkUrl: 'https://www.bbc.com/serbian/cyr',
         },
+      },
+      byline: {
+        articleInformation: 'Подаци о чланку',
+        author: 'Аутор',
+        listItemImage: 'Приказане фотографије',
+        published: 'Објављено',
+        reportingFrom: 'Извештава из',
+        role: 'Функција',
       },
       consentBanner: {
         privacy: {
@@ -670,12 +672,6 @@ export const service: SerbianConfig = {
         consentBanner: {
           heading: `Дозволити садржај [social_media_site]?`,
           body: `У овом чланку се појављује садржај [social_media_site]. Молимо вас да дате дозволу пре него што се садржај учита, пошто може да користи колачиће и друге технологије. Можда бисте желели да прочитате [social_media_site] [link] политику колачића [/link] и [link] политику приватности [/link] пре него што дате пристанак. Да бисте видели овај садржај, одаберите "Прихватите и наставите”.`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
           button: 'Прихватите и наставите',
         },
       },
