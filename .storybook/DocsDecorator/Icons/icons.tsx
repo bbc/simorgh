@@ -2,6 +2,7 @@ import React from 'react';
 
 export const Confirm = ({ className }: { className?: string }) => (
   <svg
+    data-testid="confirm"
     viewBox="0 0 32 32"
     width="100%"
     height="100%"
@@ -16,6 +17,7 @@ export const Confirm = ({ className }: { className?: string }) => (
 
 export const Close = ({ className }: { className?: string }) => (
   <svg
+    data-testid="close"
     viewBox="0 0 32 32"
     width="100%"
     height="100%"
@@ -30,6 +32,7 @@ export const Close = ({ className }: { className?: string }) => (
 
 export const ExternalLink = ({ className }: { className?: string }) => (
   <svg
+    data-testid="external-link"
     viewBox="0 0 32 32"
     width="100%"
     height="100%"
@@ -44,6 +47,7 @@ export const ExternalLink = ({ className }: { className?: string }) => (
 
 export const Help = ({ className }: { className?: string }) => (
   <svg
+    data-testid="help"
     viewBox="0 0 32 32"
     width="100%"
     height="100%"
@@ -58,6 +62,7 @@ export const Help = ({ className }: { className?: string }) => (
 
 export const Warning = ({ className }: { className?: string }) => (
   <svg
+    data-testid="warning"
     viewBox="0 0 32 32"
     width="100%"
     height="100%"
@@ -78,6 +83,7 @@ export const Warning = ({ className }: { className?: string }) => (
 
 export const Recommend = ({ className }: { className?: string }) => (
   <svg
+    data-testid="recommend"
     viewBox="0 0 32 32"
     width="100%"
     height="100%"

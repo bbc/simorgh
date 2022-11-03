@@ -4,26 +4,18 @@ import SingleDoc from '.';
 import ThemeProvider from '../../../src/app/components/ThemeProvider';
 
 const SingleDocFixture = ({
-  docTitle,
-  docLocation,
-  announce,
-  missingAnnounce,
-  missingLink,
+  label,
+  status,
+  url,
+  urlLabel,
 }: {
-  docTitle: string;
-  docLocation?: string;
-  announce: string;
-  missingAnnounce: string;
-  missingLink: string;
+  label: string;
+  status?: boolean;
+  url: string;
+  urlLabel: string;
 }) => (
   <ThemeProvider service="news" variant="default">
-    <SingleDoc
-      docTitle={docTitle}
-      docLocation={docLocation}
-      announce={announce}
-      missingAnnounce={missingAnnounce}
-      missingLink={missingLink}
-    />
+    <SingleDoc label={label} status={status} url={url} urlLabel={urlLabel} />
   </ThemeProvider>
 );
 
@@ -32,16 +24,15 @@ describe('Storybook SingleDoc', () => {
     await act(async () => {
       render(
         <SingleDocFixture
-          docTitle="Title"
-          docLocation="https://bbc.github.io/accessibility-news-and-you/guides/screen-reader-ux.html"
-          announce="Announce this"
-          missingAnnounce="Missing Announce"
-          missingLink="https://bbc.github.io/accessibility-news-and-you/guides/screen-reader-ux.html"
+          label={'This is the documentation title'}
+          status={true}
+          url={'https://documentation.com'}
+          urlLabel={'This is the link label'}
         />,
       );
     });
 
-    const title = screen.getByText('Title');
+    const title = screen.getByText('This is the documentation title');
     expect(title).toBeInTheDocument();
   });
 
@@ -49,51 +40,28 @@ describe('Storybook SingleDoc', () => {
     await act(async () => {
       render(
         <SingleDocFixture
-          docTitle="Title"
-          docLocation="https://bbc.github.io/accessibility-news-and-you/guides/screen-reader-ux.html"
-          announce="Announce this"
-          missingAnnounce="Missing Announce"
-          missingLink="https://bbc.github.io/accessibility-news-and-you/guides/screen-reader-ux.html"
+          label={'This is the documentation title'}
+          status={true}
+          url={'https://documentation.com'}
+          urlLabel={'This is the link label'}
         />,
       );
     });
 
-    const announce = screen.getByText('Announce this');
+    const announce = screen.getByText('This is the link label');
     const linkHref = screen.getByRole('link').getAttribute('href');
     expect(announce).toBeTruthy();
-    expect(linkHref).toBe(
-      'https://bbc.github.io/accessibility-news-and-you/guides/screen-reader-ux.html',
-    );
-  });
-
-  it('should render fallback when link is not provided', async () => {
-    await act(async () => {
-      render(
-        <SingleDocFixture
-          docTitle="Title"
-          announce="Announce this"
-          missingAnnounce="Missing Announce"
-          missingLink="https://bbc.github.io/accessibility-news-and-you/guides/screen-reader-ux.html"
-        />,
-      );
-    });
-
-    const announce = screen.getByText('Missing Announce');
-    const linkHref = screen.getByRole('link').getAttribute('href');
-    expect(announce).toBeTruthy();
-    expect(linkHref).toBe(
-      'https://bbc.github.io/accessibility-news-and-you/guides/screen-reader-ux.html',
-    );
+    expect(linkHref).toBe('https://documentation.com');
   });
 
   it('should render items in a list item', async () => {
     await act(async () => {
       render(
         <SingleDocFixture
-          docTitle="Title"
-          announce="Announce this"
-          missingAnnounce="Missing Announce"
-          missingLink="https://bbc.github.io/accessibility-news-and-you/guides/screen-reader-ux.html"
+          label={'This is the documentation title'}
+          status={true}
+          url={'https://documentation.com'}
+          urlLabel={'This is the link label'}
         />,
       );
     });
@@ -106,11 +74,10 @@ describe('Storybook SingleDoc', () => {
     await act(async () => {
       render(
         <SingleDocFixture
-          docTitle="Title"
-          docLocation="https://bbc.github.io/accessibility-news-and-you/guides/screen-reader-ux.html"
-          announce="Announce this"
-          missingAnnounce="Missing Announce"
-          missingLink="https://bbc.github.io/accessibility-news-and-you/guides/screen-reader-ux.html"
+          label={'This is the documentation title'}
+          status={true}
+          url={'https://documentation.com'}
+          urlLabel={'This is the link label'}
         />,
       );
     });
@@ -125,10 +92,10 @@ describe('Storybook SingleDoc', () => {
     await act(async () => {
       render(
         <SingleDocFixture
-          docTitle="Title"
-          announce="Announce this"
-          missingAnnounce="Missing Announce"
-          missingLink="https://bbc.github.io/accessibility-news-and-you/guides/screen-reader-ux.html"
+          label={'This is the documentation title'}
+          status={false}
+          url={'https://documentation.com'}
+          urlLabel={'This is the link label'}
         />,
       );
     });
@@ -137,5 +104,20 @@ describe('Storybook SingleDoc', () => {
     const linkSvg = screen.getByTestId('help');
     expect(checkSvg).toBeInTheDocument();
     expect(linkSvg).toBeInTheDocument();
+  });
+
+  it('should render help svgs when no status is provided', async () => {
+    await act(async () => {
+      render(
+        <SingleDocFixture
+          label={'This is the documentation title'}
+          url={'https://documentation.com'}
+          urlLabel={'This is the link label'}
+        />,
+      );
+    });
+
+    const linkSvg = screen.getAllByTestId('help');
+    expect(linkSvg.length).toBe(2);
   });
 });
