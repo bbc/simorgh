@@ -74,7 +74,6 @@ export const AmpSocialEmbed = ({
   id,
   caption,
   fallback,
-  source,
 }) => {
   const { pageType } = useContext(RequestContext);
   const embedCaption = getCaptionText({ pageType, caption, provider });
@@ -97,12 +96,12 @@ export const AmpSocialEmbed = ({
       {embedCaption ? (
         <CaptionWrapper service={service} {...embedCaption}>
           <EmbedConsentBannerAmp provider={provider} id={id}>
-            <AmpElement id={id} source={source} />
+            <AmpElement id={id} />
           </EmbedConsentBannerAmp>
         </CaptionWrapper>
       ) : (
         <EmbedConsentBannerAmp provider={provider} id={id}>
-          <AmpElement id={id} source={source} />
+          <AmpElement id={id} />
         </EmbedConsentBannerAmp>
       )}
     </SkipLinkWrapper>
@@ -143,12 +142,7 @@ CanonicalSocialEmbed.propTypes = {
   onRender: func,
 };
 
-AmpSocialEmbed.defaultProps = {
-  source: null,
-};
-
 AmpSocialEmbed.propTypes = {
   ...sharedPropTypes,
   id: string.isRequired,
-  source: string,
 };
