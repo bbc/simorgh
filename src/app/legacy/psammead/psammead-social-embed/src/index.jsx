@@ -9,9 +9,27 @@ import SkipLinkWrapper from './SkipLinkWrapper';
 import CaptionWrapper from './CaptionWrapper';
 import Notice from './Notice';
 
-import CanonicalEmbed, { providers } from './Canonical';
+import CanonicalEmbed from './Canonical';
 import AmpElements from './Amp';
 import { getCaptionText } from './utilities';
+import {
+  ARTICLE_PAGE,
+  STORY_PAGE,
+  CORRESPONDENT_STORY_PAGE,
+} from '../../../../routes/utils/pageTypes';
+
+const checkIsSupportedProvider = (provider, pageType) => {
+  // Optimo Articles support all social media providers
+  if (pageType === ARTICLE_PAGE) return provider;
+
+  // CPS Pages only support a select few
+  if ([STORY_PAGE, CORRESPONDENT_STORY_PAGE].includes(pageType)) {
+    return ['twitter', 'instagram', 'youtube'].includes(provider);
+  }
+
+  // Only Optimo and CPS articles support social embeds
+  return false;
+};
 
 /**
  * Returns a social embed or fallback component for use on Canonical pages.
@@ -29,7 +47,7 @@ export const CanonicalSocialEmbed = ({
   const { pageType } = useContext(RequestContext);
   const embedCaption = getCaptionText({ pageType, caption, provider });
 
-  const isSupportedProvider = !!providers(provider);
+  const isSupportedProvider = checkIsSupportedProvider(provider, pageType);
 
   if (!isSupportedProvider || !oEmbed)
     return (
@@ -82,10 +100,11 @@ export const AmpSocialEmbed = ({
   if (!id) {
     return null;
   }
+  const isSupportedProvider = checkIsSupportedProvider(provider, pageType);
 
   const AmpElement = AmpElements[provider];
 
-  if (!AmpElement)
+  if (!isSupportedProvider || !AmpElement)
     return (
       <SkipLinkWrapper service={service} provider={provider} {...skipLink}>
         <Notice service={service} provider={provider} {...fallback} />
