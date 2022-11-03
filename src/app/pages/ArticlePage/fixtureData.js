@@ -180,7 +180,7 @@ export const articleDataPidginWithByline = articleDataBuilder(
   'Pidgin',
   'pcm',
   'http://www.bbc.co.uk/ontologies/passport/home/Pidgin',
-  ['Article Headline in Pidgin', 'A paragraph in Pidgin.'],
+  ['Article Headline in Pidgin', 'A paragraph in Pidgin.', 'mary_harper'],
   'Article Headline for SEO in Pidgin',
   'Article Headline for Promo in Pidgin',
   'Article summary in Pidgin',

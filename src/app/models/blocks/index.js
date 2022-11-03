@@ -56,8 +56,6 @@ export const blockContainingText = (type, text, id = null) =>
     id,
   );
 
-export const blockContainingByline = (text, id = null) => {};
-
 export const blockBase = (blockType, blockModel) => ({
   type: blockType,
   model: blockModel,
@@ -78,6 +76,49 @@ export const rawVideoModel = (
   kind: videoKind,
   duration: videoDuration,
 });
+
+export const blockContainingByline = (text, id = null) => {
+  const fragment = singleFragmentBlock(text, id);
+  const urlLink = optionalIdBlock(
+    blockBase('urlLink', {
+      text,
+      locator: `https://twitter.com/${text}`,
+      blocks: [fragment],
+    }),
+    id,
+  );
+  const paragraph = optionalIdBlock(
+    blockBase('paragraph', {
+      text,
+      blocks: [urlLink],
+    }),
+    id,
+  );
+  const linkTextBlock = optionalIdBlock(
+    blockBase('text', { blocks: [paragraph] }),
+    id,
+  );
+  const link = optionalIdBlock(
+    {
+      type: 'link',
+      locator: `urn:bbc:twitter:user:@${text}`,
+      model: {
+        blocks: [linkTextBlock],
+      },
+    },
+    id,
+  );
+  const contributor = optionalIdBlock(
+    blockBase('contributor', { blocks: [link] }),
+    id,
+  );
+  const byline = optionalIdBlock(
+    blockBase('byline', { blocks: [contributor] }),
+    id,
+  );
+
+  return byline;
+};
 
 export const rawImageModel = imageLocator => ({
   locator: imageLocator,
