@@ -63,9 +63,9 @@ const TikTok = ({ id }) => (
 const Facebook = ({ source }) => {
   const getEmbedType = () => {
     switch (true) {
-      case source.includes('posts'):
+      case source?.includes('posts'):
         return 'post';
-      case source.includes('videos'):
+      case source?.includes('videos'):
         return 'video';
       default:
         return 'post';
