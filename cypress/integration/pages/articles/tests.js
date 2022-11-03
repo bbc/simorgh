@@ -1,3 +1,4 @@
+// import { onlyOn, skipOn } from '@cypress/skip-test';
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import { getBlockByType, getBlockData } from './helpers';
@@ -205,7 +206,8 @@ export const testsThatFollowSmokeTestConfig = ({
                   });
               });
             } else {
-              cy.log('There is no Yotube embed in this page!');
+              cy.log('There is no Youtube embed in this page!');
+              // cy.skipOn('There is no Youtube embed in this page!');
               cy.get(`[href^="#end-of-youtube-content"]`).should('not.exist');
             }
           });
@@ -227,6 +229,8 @@ export const testsThatFollowSmokeTestConfig = ({
                   });
               });
             } else {
+              // cy.log('There is no Instagram embed in this page!');
+              // this.skip();
               cy.get(`[href^="#end-of-instagram-content"]`).should('not.exist');
             }
           });
@@ -251,6 +255,8 @@ export const testsThatFollowSmokeTestConfig = ({
                   });
               });
             } else {
+              // cy.log('There is no Tiktok embed in this page!');
+              // this.skip();
               cy.get(`[href^="#end-of-tiktok-content"]`).should('not.exist');
             }
           });
@@ -271,30 +277,34 @@ export const testsThatFollowSmokeTestConfig = ({
                   });
               });
             } else {
+              // cy.log('There is no Twitter embed in this page!');
+              // this.skip();
               cy.get(`[href^="#end-of-twitter-content"]`).should('not.exist');
             }
           });
         });
 
-        // it('Facebook embed is redered when it exists on page', () => {
-        //   cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-        //     const facebookSocialEmbedsData = body.content.model.blocks.filter(content => content.type === 'social')
-        //       .filter(content => content.model.providerName === 'Facebook');
-        //     if (facebookSocialEmbedsData.length > 0) {
-        //       facebookSocialEmbedsData.forEach(content => {
-        //         const facebookUrl = content.model.source;
-        //         cy.get(`[data-e2e="facebook-embed-${facebookUrl}"]`)
-        //           .scrollIntoView()
-        //           .within(() => {
-        //             cy.get(`iframe`).should('exist');
-        //             cy.get(`[href^="#end-of-facebook-content"]`).should('exist');
-        //           });
-        //       });
-        //     } else {
-        //       cy.get(`[href^="#end-of-facebook-content"]`).should('not.exist');
-        //     }
-        //   });
-        // });
+        it('Facebook embed is redered when it exists on page', () => {
+          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+            const facebookSocialEmbedsData = body.content.model.blocks.filter(content => content.type === 'social')
+              .filter(content => content.model.providerName === 'Facebook');
+            if (facebookSocialEmbedsData.length > 0) {
+              facebookSocialEmbedsData.forEach(content => {
+                const facebookUrl = content.model.source;
+                cy.get(`[data-e2e="facebook-embed-${facebookUrl}"]`)
+                  .scrollIntoView()
+                  .within(() => {
+                    cy.get(`iframe`).should('exist');
+                    cy.get(`[href^="#end-of-facebook-content"]`).should('exist');
+                  });
+              });
+            } else {
+              // cy.log('There is no Facebook embed in this page!');
+              // this.skip();
+              cy.get(`[href^="#end-of-facebook-content"]`).should('not.exist');
+            }
+          });
+        });
       });
     });
   });
