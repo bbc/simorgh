@@ -302,6 +302,657 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
 </div>
 `;
 
+exports[`SocialEmbedContainer Canonical should render a Facebook Post block and unmount correctly 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-0 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(10, 1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-2 {
+  margin-bottom: 1.5rem;
+  max-width: 31.25rem;
+  min-height: 14rem;
+}
+
+.emotion-4 {
+  position: relative;
+}
+
+.emotion-6 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-6 span {
+  color: #222222;
+}
+
+.emotion-6:hover span,
+.emotion-6:focus span {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.emotion-6:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-8 {
+  margin: 0;
+  background-color: transparent;
+}
+
+.emotion-10 {
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-10 .fb_iframe_widget {
+  position: unset;
+}
+
+.emotion-10 .fb_iframe_widget>span {
+  position: unset;
+}
+
+.emotion-10 iframe {
+  background-color: white;
+  left: 0;
+  top: 0;
+  height: 100%!important;
+  width: 100%!important;
+  position: absolute!important;
+}
+
+.emotion-12 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: #545658;
+  padding: 0.5rem 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-12 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-12>span {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-14 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div
+  class="emotion-0 emotion-1"
+  dir="ltr"
+>
+  <div
+    class="emotion-2 emotion-3"
+    data-e2e="facebook-embed-https://www.facebook.com/RickAstley/posts/545713756920775"
+  >
+    <div
+      class="emotion-4 emotion-5"
+    >
+      <a
+        class="emotion-6 emotion-7"
+        href="#end-of-facebook-content"
+      >
+        <span>
+          Skip Facebook content
+        </span>
+      </a>
+      <figure
+        class="emotion-8 emotion-9"
+      >
+        <div
+          class="emotion-10 emotion-11"
+        >
+          <div
+            id="fb-root"
+          />
+          
+
+          <script
+            async="1"
+            crossorigin="anonymous"
+            defer="1"
+            nonce="fPyyhrbz"
+            src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v13.0"
+          />
+          <div
+            class="fb-post"
+            data-href="https://www.facebook.com/RickAstley/posts/545713756920775"
+            data-width="552"
+          >
+            <blockquote
+              cite="https://graph.facebook.com/100044464658204/posts/545713756920775/"
+              class="fb-xfbml-parse-ignore"
+            >
+              <p>
+                Had a fantastic time at @thescriptofficial concert in LA this week, what a gig!! Have a great US tour guys! Don’t miss...
+              </p>
+              Posted by 
+              <a
+                href="https://www.facebook.com/RickAstley"
+              >
+                Rick Astley
+              </a>
+               on 
+              <a
+                href="https://graph.facebook.com/100044464658204/posts/545713756920775/"
+              >
+                Friday, April 1, 2022
+              </a>
+            </blockquote>
+          </div>
+        </div>
+        <figcaption
+          class="emotion-12 emotion-13"
+        >
+          <span>
+            Video caption, 
+          </span>
+          Warning: The BBC is not responsible for the content of external sites.
+        </figcaption>
+      </figure>
+      <p
+        class="emotion-14 emotion-15"
+        id="end-of-facebook-content"
+        tabindex="-1"
+      >
+        End of Facebook content
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SocialEmbedContainer Canonical should render a Facebook Video block and unmount correctly 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-0 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(10, 1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-2 {
+  margin-bottom: 1.5rem;
+  max-width: 31.25rem;
+  min-height: 55.5rem;
+}
+
+.emotion-4 {
+  position: relative;
+}
+
+.emotion-6 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-6 span {
+  color: #222222;
+}
+
+.emotion-6:hover span,
+.emotion-6:focus span {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.emotion-6:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-8 {
+  margin: 0;
+  background-color: transparent;
+}
+
+.emotion-10 {
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-10 .fb_iframe_widget {
+  position: unset;
+}
+
+.emotion-10 .fb_iframe_widget>span {
+  position: unset;
+}
+
+.emotion-10 iframe {
+  background-color: white;
+  left: 0;
+  top: 0;
+  height: 100%!important;
+  width: 100%!important;
+  position: absolute!important;
+}
+
+.emotion-12 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: #545658;
+  padding: 0.5rem 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-12 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-12>span {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-14 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div
+  class="emotion-0 emotion-1"
+  dir="ltr"
+>
+  <div
+    class="emotion-2 emotion-3"
+    data-e2e="facebook-embed-https://www.facebook.com/RickAstley/videos/1378590239249667"
+  >
+    <div
+      class="emotion-4 emotion-5"
+    >
+      <a
+        class="emotion-6 emotion-7"
+        href="#end-of-facebook-content"
+      >
+        <span>
+          Skip Facebook content
+        </span>
+      </a>
+      <figure
+        class="emotion-8 emotion-9"
+      >
+        <div
+          class="emotion-10 emotion-11"
+        >
+          <div
+            id="fb-root"
+          />
+          
+
+          <script
+            async="1"
+            crossorigin="anonymous"
+            defer="1"
+            nonce="8pqnGEmE"
+            src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v13.0"
+          />
+          <div
+            class="fb-video"
+            data-href="https://www.facebook.com/RickAstley/videos/1378590239249667/"
+          >
+            <blockquote
+              cite="https://www.facebook.com/RickAstley/videos/1378590239249667/"
+              class="fb-xfbml-parse-ignore"
+            >
+              <a
+                href="https://www.facebook.com/RickAstley/videos/1378590239249667/"
+              />
+              <p>
+                Saw another great gig in LA this week, I went to see Inhaler in the @belascola and they were fantastic! Have a great show in New York tomorrow guys! Rick x @inhalerdublin
+              </p>
+              Posted by 
+              <a
+                href="https://www.facebook.com/RickAstley"
+              >
+                Rick Astley
+              </a>
+               on Saturday, April 2, 2022
+            </blockquote>
+          </div>
+        </div>
+        <figcaption
+          class="emotion-12 emotion-13"
+        >
+          <span>
+            Video caption, 
+          </span>
+          Warning: The BBC is not responsible for the content of external sites.
+        </figcaption>
+      </figure>
+      <p
+        class="emotion-14 emotion-15"
+        id="end-of-facebook-content"
+        tabindex="-1"
+      >
+        End of Facebook content
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount correctly 1`] = `
 @media (max-width: 14.9375rem) {
   .emotion-0 {
