@@ -40,10 +40,11 @@ const Curation = ({
   const createID = titleText => {
     return titleText.replaceAll(' ', '-');
   };
-  return curationLength > 1 && (title || position === 0) ? (
+  const isFirstCuration = position === 0;
+  return curationLength > 1 && (title || isFirstCuration) ? (
     <section aria-labelledby={createID(title || topStoriesTitle)} role="region">
       <Subheading a11yID={createID(title || topStoriesTitle)} href={link}>
-        {title}
+        {!isFirstCuration && title}
       </Subheading>
       <Component promos={promos} headingLevel={headingLevel} />
     </section>
