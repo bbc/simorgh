@@ -9,11 +9,13 @@ import {
 import {
   articleDataNews,
   articleDataPersian,
+  articleDataPidginWithByline,
 } from '#pages/ArticlePage/fixtureData';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import frontPageData from '#data/igbo/frontpage/index.json';
 import liveRadioPageData from '#data/korean/bbc_korean_radio/liveradio.json';
 import { getSummary } from '#lib/utilities/parseAssetData/index';
+import getAuthorTwitterHandle from '#lib/utilities/getAuthorTwitterHandle/index';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import services from '../../../../server/utilities/serviceConfigs';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
@@ -33,6 +35,12 @@ const getArticleMetadataProps = data => ({
 
 const newsArticleMetadataProps = getArticleMetadataProps(articleDataNews);
 const persianArticleMetadataProps = getArticleMetadataProps(articleDataPersian);
+const pidginArticleWithBylineMetadataProps = {
+  ...getArticleMetadataProps(articleDataPidginWithByline),
+  twitterHandle: getAuthorTwitterHandle(
+    articleDataPidginWithByline.content.model.blocks,
+  ),
+};
 
 const MetadataWithContext = ({
   /* eslint-disable react/prop-types */
@@ -44,6 +52,7 @@ const MetadataWithContext = ({
   pathname,
   title,
   lang,
+  twitterHandle,
   description,
   openGraphType,
   image,
@@ -69,6 +78,7 @@ const MetadataWithContext = ({
       <MetadataContainer
         title={title}
         lang={lang}
+        twitterHandle={twitterHandle}
         description={description}
         openGraphType={openGraphType}
         aboutTags={aboutTags}
@@ -525,6 +535,28 @@ it('should render the twitter metatags', async () => {
   });
 });
 
+it('should render the twitter handle of the author', async () => {
+  render(
+    <MetadataWithContext
+      service="pidgin"
+      bbcOrigin={dotComOrigin}
+      platform="canonical"
+      id="cwl08rd38l6o"
+      pageType={ARTICLE_PAGE}
+      pathname="/pidgin/articles/cwl08rd38l6o"
+      {...pidginArticleWithBylineMetadataProps}
+    />,
+  );
+
+  await waitFor(() => {
+    expect(
+      document
+        .querySelector('meta[name="twitter:creator"]')
+        .getAttribute('content'),
+    ).toEqual('@mary_harper');
+  });
+});
+
 it('should render the LDP tags', async () => {
   render(<CanonicalNewsInternationalOrigin />);
 
@@ -596,13 +628,13 @@ it('should render the default service image as open graph image', async () => {
     ).map(tag =>
       tag.hasAttribute('property')
         ? {
-            property: tag.getAttribute('property'),
-            content: tag.getAttribute('content'),
-          }
+          property: tag.getAttribute('property'),
+          content: tag.getAttribute('content'),
+        }
         : {
-            name: tag.getAttribute('name'),
-            content: tag.getAttribute('content'),
-          },
+          name: tag.getAttribute('name'),
+          content: tag.getAttribute('content'),
+        },
     );
 
     expect(actual).toEqual(expected);
@@ -637,13 +669,13 @@ it('should render the open graph image if provided', async () => {
     ).map(tag =>
       tag.hasAttribute('property')
         ? {
-            property: tag.getAttribute('property'),
-            content: tag.getAttribute('content'),
-          }
+          property: tag.getAttribute('property'),
+          content: tag.getAttribute('content'),
+        }
         : {
-            name: tag.getAttribute('name'),
-            content: tag.getAttribute('content'),
-          },
+          name: tag.getAttribute('name'),
+          content: tag.getAttribute('content'),
+        },
     );
 
     expect(actual).toEqual(expected);
@@ -665,6 +697,19 @@ shouldMatchSnapshot(
     pageType={ARTICLE_PAGE}
     pathname="/news/articles/c0000000001o.amp"
     {...newsArticleMetadataProps}
+  />,
+);
+
+shouldMatchSnapshot(
+  'should match for Persian News & byline twitter handle',
+  <MetadataWithContext
+    service="pidgin"
+    bbcOrigin={dotComOrigin}
+    platform="canonical"
+    id="cwl08rd38l6o"
+    pageType={ARTICLE_PAGE}
+    pathname="/pidgin/articles/cwl08rd38l6o"
+    {...pidginArticleWithBylineMetadataProps}
   />,
 );
 
