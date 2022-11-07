@@ -253,7 +253,8 @@ describe('Byline block', () => {
                                     type: 'urlLink',
                                     model: {
                                       text: '@mary_harper',
-                                      locator: 'https://twitter.com/mary_harper',
+                                      locator:
+                                        'https://twitter.com/mary_harper',
                                       blocks: [
                                         {
                                           type: 'fragment',
