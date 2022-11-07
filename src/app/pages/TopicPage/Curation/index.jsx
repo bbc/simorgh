@@ -47,7 +47,7 @@ const Curation = ({
 
   return curationLength > 1 && (title || isFirstCuration) ? (
     <section aria-labelledby={id} role="region">
-      <SubheadingComponent as="h2" a11yID={id} id={id} href={link}>
+      <SubheadingComponent as="h2" a11yID={id} id={id} link={link}>
         {title || topStoriesTitle}
       </SubheadingComponent>
       <Component promos={promos} headingLevel={headingLevel} />
