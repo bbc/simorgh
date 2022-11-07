@@ -10,6 +10,9 @@
   ],
   "resolutions": {
     "@babel/runtime": "7.19.4",
+    "@emotion/serialize": "1.1.0",
+    "@emotion/sheet": "1.2.0",
+    "@emotion/utils": "1.2.0",
     "@optimizely/js-sdk-utils": "0.4.0",
     "glob-parent": "6.0.2",
     "prismjs": "1.28.0",
