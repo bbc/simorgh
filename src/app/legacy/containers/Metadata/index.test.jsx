@@ -628,13 +628,13 @@ it('should render the default service image as open graph image', async () => {
     ).map(tag =>
       tag.hasAttribute('property')
         ? {
-          property: tag.getAttribute('property'),
-          content: tag.getAttribute('content'),
-        }
+            property: tag.getAttribute('property'),
+            content: tag.getAttribute('content'),
+          }
         : {
-          name: tag.getAttribute('name'),
-          content: tag.getAttribute('content'),
-        },
+            name: tag.getAttribute('name'),
+            content: tag.getAttribute('content'),
+          },
     );
 
     expect(actual).toEqual(expected);
@@ -669,13 +669,13 @@ it('should render the open graph image if provided', async () => {
     ).map(tag =>
       tag.hasAttribute('property')
         ? {
-          property: tag.getAttribute('property'),
-          content: tag.getAttribute('content'),
-        }
+            property: tag.getAttribute('property'),
+            content: tag.getAttribute('content'),
+          }
         : {
-          name: tag.getAttribute('name'),
-          content: tag.getAttribute('content'),
-        },
+            name: tag.getAttribute('name'),
+            content: tag.getAttribute('content'),
+          },
     );
 
     expect(actual).toEqual(expected);
