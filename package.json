@@ -15,7 +15,7 @@
     "@emotion/utils": "1.2.0",
     "@optimizely/js-sdk-utils": "0.4.0",
     "ansi-html": "https://registry.yarnpkg.com/ansi-html-community/-/ansi-html-community-0.0.8.tgz",
-    "ansi-regex": "5.0.1",
+    "ansi-regex": "6.0.1",
     "browserslist": "4.20.3",
     "css-what": "6.1.0",
     "follow-redirects": "1.14.9",
