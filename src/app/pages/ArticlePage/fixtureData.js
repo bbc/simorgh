@@ -1,6 +1,6 @@
 import {
   blockContainingText,
-  blockContainingByline,
+  bylineBlock,
   singleTextBlock,
   textBlock,
 } from '#models/blocks';
@@ -19,7 +19,7 @@ const blocksWithHeadlineTexAndByline = blockValues => {
 
   return [
     blockContainingText('headline', headlineText, 1),
-    blockContainingByline(twitterHandle, 2),
+    bylineBlock(twitterHandle, 2),
     singleTextBlock(paragraphText, 3),
   ];
 };

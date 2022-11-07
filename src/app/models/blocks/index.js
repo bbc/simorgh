@@ -77,11 +77,11 @@ export const rawVideoModel = (
   duration: videoDuration,
 });
 
-export const blockContainingByline = (text, id = null) => {
-  const fragment = singleFragmentBlock(text, id);
+export const bylineBlock = (text, id = null) => {
+  const fragment = singleFragmentBlock(`@${text}`, id);
   const urlLink = optionalIdBlock(
     blockBase('urlLink', {
-      text,
+      text: `@${text}`,
       locator: `https://twitter.com/${text}`,
       blocks: [fragment],
     }),
@@ -89,7 +89,7 @@ export const blockContainingByline = (text, id = null) => {
   );
   const paragraph = optionalIdBlock(
     blockBase('paragraph', {
-      text,
+      text: `@${text}`,
       blocks: [urlLink],
     }),
     id,
