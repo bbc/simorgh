@@ -86,7 +86,8 @@ export const contentBlockWithByline = {
                                         type: 'urlLink',
                                         model: {
                                           text: '@mary_harper',
-                                          locator: 'https://twitter.com/mary_harper',
+                                          locator:
+                                            'https://twitter.com/mary_harper',
                                           blocks: [
                                             {
                                               type: 'fragment',
@@ -178,7 +179,8 @@ export const contentBlockWithEmptyLinkFragment = {
                                         type: 'urlLink',
                                         model: {
                                           text: '@mary_harper',
-                                          locator: 'https://twitter.com/mary_harper',
+                                          locator:
+                                            'https://twitter.com/mary_harper',
                                           blocks: [
                                             {
                                               type: 'fragment',
@@ -241,7 +243,8 @@ export const contentBlockWithMultipleBylines = {
                                         type: 'urlLink',
                                         model: {
                                           text: '@mary_harper',
-                                          locator: 'https://twitter.com/mary_harper',
+                                          locator:
+                                            'https://twitter.com/mary_harper',
                                           blocks: [
                                             {
                                               type: 'fragment',
@@ -295,7 +298,8 @@ export const contentBlockWithMultipleBylines = {
                                         type: 'urlLink',
                                         model: {
                                           text: '@mary_harper',
-                                          locator: 'https://twitter.com/dpenhalewick0',
+                                          locator:
+                                            'https://twitter.com/dpenhalewick0',
                                           blocks: [
                                             {
                                               type: 'fragment',
@@ -358,7 +362,8 @@ export const contentBlockWithMultipleContributors = {
                                         type: 'urlLink',
                                         model: {
                                           text: '@cwatters1q',
-                                          locator: 'https://twitter.com/cwatters1q',
+                                          locator:
+                                            'https://twitter.com/cwatters1q',
                                           blocks: [
                                             {
                                               type: 'fragment',
@@ -405,7 +410,8 @@ export const contentBlockWithMultipleContributors = {
                                         type: 'urlLink',
                                         model: {
                                           text: '@rdawidsohn2k',
-                                          locator: 'https://twitter.com/rdawidsohn2k',
+                                          locator:
+                                            'https://twitter.com/rdawidsohn2k',
                                           blocks: [
                                             {
                                               type: 'fragment',
@@ -580,7 +586,8 @@ export const contentBlockWithMultipleHandlePrefixes = {
                                         type: 'urlLink',
                                         model: {
                                           text: '@mary_harper',
-                                          locator: 'https://twitter.com/mary_harper',
+                                          locator:
+                                            'https://twitter.com/mary_harper',
                                           blocks: [
                                             {
                                               type: 'fragment',
@@ -643,7 +650,8 @@ export const contentBlockWithNoHandlePrefixes = {
                                         type: 'urlLink',
                                         model: {
                                           text: '@mary_harper',
-                                          locator: 'https://twitter.com/mary_harper',
+                                          locator:
+                                            'https://twitter.com/mary_harper',
                                           blocks: [
                                             {
                                               type: 'fragment',
