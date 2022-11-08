@@ -35,7 +35,8 @@
     "async": "3.2.4",
     "terser": "5.14.2",
     "moment": "2.29.4",
-    "@testing-library/dom": "8.16.1"
+    "@testing-library/dom": "8.16.1",
+    "winston@3.8.2": "patch:winston@npm:3.8.2#.yarn/patches/winston-npm-3.8.2-2035e9cac4.patch"
   },
   "scripts": {
     "type-check": "tsc",
@@ -134,7 +135,7 @@
     "react-router-dom": "5.3.4",
     "url-parse": "1.5.10",
     "uuid": "8.3.2",
-    "winston": "3.7.2",
+    "winston": "patch:winston@3.8.2#./patches/winston-file-descriptor.patch",
     "xmldoc": "1.1.2"
   },
   "devDependencies": {

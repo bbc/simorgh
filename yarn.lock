@@ -20742,7 +20742,7 @@ __metadata:
     webpack-dev-server: 4.11.0
     webpack-merge: 5.8.0
     webpack-node-externals: 3.0.0
-    winston: 3.7.2
+    winston: "patch:winston@3.8.2#./patches/winston-file-descriptor.patch"
     xmldoc: 1.1.2
     yaml-js: 0.3.1
   languageName: unknown
@@ -23710,10 +23710,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"winston@npm:3.7.2":
-  version: 3.7.2
-  resolution: "winston@npm:3.7.2"
+"winston@npm:3.8.2":
+  version: 3.8.2
+  resolution: "winston@npm:3.8.2"
   dependencies:
+    "@colors/colors": 1.5.0
     "@dabh/diagnostics": ^2.0.2
     async: ^3.2.3
     is-stream: ^2.0.0
@@ -23724,7 +23725,26 @@ __metadata:
     stack-trace: 0.0.x
     triple-beam: ^1.3.0
     winston-transport: ^4.5.0
-  checksum: f1f1a860d2fa228b50880b20aaa6cc121085907791fe0d814ff9c062640f6b65da321726322094e7667eb63088b3bb67e7b4e219d998f29efcc6f583185a1cd3
+  checksum: f7b901798b92ab9e93c850110bf6e98500e9a0e762b62dab410cf928b2a4145533dfa6d3d2b24f7bf0dc94b53808d5bd28aaaeff9a4b43b89ea4c798cce308ea
+  languageName: node
+  linkType: hard
+
+"winston@patch:winston@3.8.2#./patches/winston-file-descriptor.patch::locator=simorgh%40workspace%3A.":
+  version: 3.8.2
+  resolution: "winston@patch:winston@npm%3A3.8.2#./patches/winston-file-descriptor.patch::version=3.8.2&hash=c53c25&locator=simorgh%40workspace%3A."
+  dependencies:
+    "@colors/colors": 1.5.0
+    "@dabh/diagnostics": ^2.0.2
+    async: ^3.2.3
+    is-stream: ^2.0.0
+    logform: ^2.4.0
+    one-time: ^1.0.0
+    readable-stream: ^3.4.0
+    safe-stable-stringify: ^2.3.1
+    stack-trace: 0.0.x
+    triple-beam: ^1.3.0
+    winston-transport: ^4.5.0
+  checksum: 29e1caa1c27c790f386770a073f9211876762eb5376f19e52228244b0bd84b0c1d0b4eb69cbe68d3f59ebb2128d39de2f125f75f30ada9666165e3f30a5c8e52
   languageName: node
   linkType: hard
 
