@@ -1,0 +1,48 @@
+diff --git a/lib/winston/transports/file.js b/lib/winston/transports/file.js
+index 60af7f5806f7de9dafcdb88bbcc215e426c879b9..2802601ad73b24aabe966de652d17dae40d61b95 100644
+--- a/lib/winston/transports/file.js
++++ b/lib/winston/transports/file.js
+@@ -89,6 +89,11 @@ module.exports = class File extends TransportStream {
+     this._opening = false;
+     this._ending = false;
+ 
++    // https://github.com/winstonjs/winston/issues/2100
++    // Array to collect write streams created in this transport 
++    // for destruction later
++    this._writeStreams = [];
++
+     if (this.dirname) this._createLogDirIfNotExist(this.dirname);
+     this.open();
+   }
+@@ -400,6 +405,13 @@ module.exports = class File extends TransportStream {
+       debug('stat done: %s { size: %s }', this.filename, size);
+       this._size = size;
+       this._dest = this._createStream(this._stream);
++
++      // https://github.com/winstonjs/winston/issues/2100
++      // Collect the write stream created here - at some point a new stream is created and assigned to 
++      // this._dest before _this.cleanupStream is called; this ensures we collect all streams we need to 
++      // cleanup to prevent a file descriptor leak.
++      this._writeStreams.push(this._dest);
++
+       this._opening = false;
+       this.once('open', () => {
+         if (this._stream.eventNames().includes('rotate')) {
+@@ -502,7 +514,16 @@ module.exports = class File extends TransportStream {
+    */
+   _cleanupStream(stream) {
+     stream.removeListener('error', this._onError);
+-
++    
++    // https://github.com/winstonjs/winston/issues/2100
++    // In testing it was found more than one stream is created beyond the one passed to this function;
++    // this logic ensures any streams are destroyed to prevent a file descriptor leak -
++    // the cause of additional stream is still unknown
++    let streamToClose = this._writeStreams.pop();
++    while (streamToClose) {
++      streamToClose.destroy();
++      streamToClose = this._writeStreams.pop();
++    }
+     return stream;
+   }
+ 
