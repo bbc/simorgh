@@ -50,7 +50,10 @@ const Curation = ({
       <SubheadingComponent as="h2" a11yID={id} id={id} link={link}>
         {title || topStoriesTitle}
       </SubheadingComponent>
-      <Component promos={promos} headingLevel={headingLevel} />
+      <Component
+        promos={promos}
+        headingLevel={isFirstCuration ? 3 : headingLevel}
+      />
     </section>
   ) : (
     <Component promos={promos} headingLevel={headingLevel} />
