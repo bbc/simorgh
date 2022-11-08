@@ -18,7 +18,8 @@
     "prismjs": "1.28.0",
     "react-is": "17.0.2",
     "trim": "1.0.1",
-    "loader-utils": "2.0.3"
+    "loader-utils": "2.0.3",
+    "winston@3.8.2": "patch:winston@npm:3.8.2#.yarn/patches/winston-npm-3.8.2-2035e9cac4.patch"
   },
   "scripts": {
     "type-check": "tsc",
@@ -117,7 +118,7 @@
     "react-router-dom": "5.3.4",
     "url-parse": "1.5.10",
     "uuid": "8.3.2",
-    "winston": "3.7.2",
+    "winston": "patch:winston@3.8.2#./patches/winston-file-descriptor.patch",
     "xmldoc": "1.1.2"
   },
   "devDependencies": {
