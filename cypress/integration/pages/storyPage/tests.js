@@ -126,59 +126,67 @@ export const testsThatFollowSmokeTestConfig = ({
   });
   describe(`Recommendations on ${service} ${pageType}`, () => {
     it('Recommendations have images', () => {
-      cy.getToggles(service);
-      cy.fixture(`toggles/${service}.json`).then(toggles => {
-        const recommendationsEnabled = path(
-          ['cpsRecommendations', 'enabled'],
-          toggles,
-        );
-        cy.log(`Recommendations enabled? ${recommendationsEnabled}`);
-        if (recommendationsEnabled) {
-          cy.get(`[data-e2e=recommendations-heading]`).scrollIntoView();
-          cy.get('[data-e2e=recommendations-heading] > div > ul > li').each(
-            (item, index) => {
-              cy.wrap(item).within(() => {
-                cy.log(`List item number: ${index}`);
-                cy.log(`isAmp= ${isAmp}`);
-                if (isAmp) {
-                  cy.get(
-                    `[data-e2e=story-promo-wrapper] > div > [data-e2e=image-placeholder] > amp-img`,
-                  ).should('have.attr', 'width');
-                } else {
-                  cy.get(
-                    `[data-e2e=story-promo-wrapper] > div > [data-e2e=image-placeholder] > div > picture > img`,
-                  ).should('have.attr', 'width');
-                }
-              });
-            },
+      if (Cypress.env('APP_ENV') === 'live') {
+        cy.getToggles(service);
+        cy.fixture(`toggles/${service}.json`).then(toggles => {
+          const recommendationsEnabled = path(
+            ['cpsRecommendations', 'enabled'],
+            toggles,
           );
-        }
-      });
+          cy.log(`Recommendations enabled? ${recommendationsEnabled}`);
+          if (recommendationsEnabled) {
+            cy.get(`[data-e2e=recommendations-heading]`).scrollIntoView();
+            cy.get('[data-e2e=recommendations-heading] > div > ul > li').each(
+              (item, index) => {
+                cy.wrap(item).within(() => {
+                  cy.log(`List item number: ${index}`);
+                  cy.log(`isAmp= ${isAmp}`);
+                  if (isAmp) {
+                    cy.get(
+                      `[data-e2e=story-promo-wrapper] > div > [data-e2e=image-placeholder] > amp-img`,
+                    ).should('have.attr', 'width');
+                  } else {
+                    cy.get(
+                      `[data-e2e=story-promo-wrapper] > div > [data-e2e=image-placeholder] > div > picture > img`,
+                    ).should('have.attr', 'width');
+                  }
+                });
+              },
+            );
+          }
+        });
+      } else {
+        cy.log('Only tests live due to not much test data');
+      }
     });
     it('Recommendations have titles', () => {
-      cy.getToggles(service);
-      cy.fixture(`toggles/${service}.json`).then(toggles => {
-        const recommendationsEnabled = path(
-          ['cpsRecommendations', 'enabled'],
-          toggles,
-        );
-        cy.log(`Recommendations enabled? ${recommendationsEnabled}`);
-        if (recommendationsEnabled) {
-          cy.get(`[data-e2e=recommendations-heading]`).scrollIntoView();
-          cy.get('[data-e2e=recommendations-heading] > div > ul > li').each(
-            (item, index) => {
-              cy.wrap(item).within(() => {
-                cy.log(`List item number: ${index + 1}`);
-                cy.get(`[data-e2e=story-promo-wrapper] > div > div > a`)
-                  .invoke('text')
-                  .then(text => {
-                    expect(text.length).to.be.at.least(1);
-                  });
-              });
-            },
+      if (Cypress.env('APP_ENV') === 'live') {
+        cy.getToggles(service);
+        cy.fixture(`toggles/${service}.json`).then(toggles => {
+          const recommendationsEnabled = path(
+            ['cpsRecommendations', 'enabled'],
+            toggles,
           );
-        }
-      });
+          cy.log(`Recommendations enabled? ${recommendationsEnabled}`);
+          if (recommendationsEnabled) {
+            cy.get(`[data-e2e=recommendations-heading]`).scrollIntoView();
+            cy.get('[data-e2e=recommendations-heading] > div > ul > li').each(
+              (item, index) => {
+                cy.wrap(item).within(() => {
+                  cy.log(`List item number: ${index + 1}`);
+                  cy.get(`[data-e2e=story-promo-wrapper] > div > div > a`)
+                    .invoke('text')
+                    .then(text => {
+                      expect(text.length).to.be.at.least(1);
+                    });
+                });
+              },
+            );
+          }
+        });
+      } else {
+        cy.log('Only tests live due to not much test data');
+      }
     });
   });
 };
