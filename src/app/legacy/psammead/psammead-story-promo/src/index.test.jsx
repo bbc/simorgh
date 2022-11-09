@@ -1,12 +1,12 @@
 import React from 'react';
 import { arrayOf, bool, shape, string, oneOf } from 'prop-types';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { latin } from '#psammead/gel-foundations/src/scripts';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
 import { render } from '@testing-library/react';
 import LiveLabel from '#psammead/psammead-live-label/src';
 import styled from '@emotion/styled';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
+import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import StoryPromo, { Headline, Summary, Link } from './index';
 import relatedItems from '../testHelpers/relatedItems';
 import IndexAlsosContainer from '../testHelpers/IndexAlsosContainer';

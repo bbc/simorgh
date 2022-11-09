@@ -1,9 +1,9 @@
 import React from 'react';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import services from '#server/utilities/serviceConfigs';
-import mundoRecommendationsData from '#pages/StoryPage/fixtureData/recommendations.ltr.json';
+import mundoRecommendationsData from '../../../../../data/mundo/recommendations/index.json';
 import arabicRecommendationsData from '#pages/StoryPage/fixtureData/recommendations.rtl.json';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import newsMultipleItems from './newsFixture';

@@ -13,7 +13,6 @@ const Component = (
       status={200}
       pathname="/afrique/48465371"
       service="afrique"
-      variant="default"
       pageData={afriqueData}
     />
   </BrowserRouter>

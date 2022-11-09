@@ -3,10 +3,7 @@ import styled from '@emotion/styled';
 import { arrayOf, element } from 'prop-types';
 import partition from 'ramda/src/partition';
 
-import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
-import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
-
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 import Image from './image';
 import MediaIcon, { TYPES } from './media-icon';
@@ -28,22 +25,6 @@ const Wrapper = styled.div`
   position: relative;
 `;
 
-const Left = styled.div`
-  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    width: 33%;
-    display: inline-block;
-    vertical-align: top;
-  }
-`;
-const Right = styled.div`
-  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    padding-inline-start: ${GEL_SPACING};
-    width: 67%;
-    display: inline-block;
-    vertical-align: top;
-  }
-`;
-
 const Promo = ({ children }) => {
   const { script, service } = useContext(ServiceContext);
 
@@ -55,8 +36,8 @@ const Promo = ({ children }) => {
   return (
     <Wrapper>
       <PromoContext.Provider value={{ script, service }}>
-        {leftChildren && <Left>{leftChildren}</Left>}
-        {rightChildren && <Right>{rightChildren}</Right>}
+        {leftChildren && <div className="promo-image">{leftChildren}</div>}
+        {rightChildren && <div className="promo-text">{rightChildren}</div>}
       </PromoContext.Provider>
     </Wrapper>
   );

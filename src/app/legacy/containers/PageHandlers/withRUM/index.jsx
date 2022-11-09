@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import isLive from '#lib/utilities/isLive';
+import useOperaMiniDetection from '../../../../hooks/useOperaMiniDetection';
 
 // Note - if changing one of these constants, the other will also need to change
 // See https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity
@@ -35,7 +36,7 @@ const buildScript = ({
           identityPoolId: "${identityPoolId}",
           endpoint: "https://dataplane.rum.eu-west-1.amazonaws.com",
           telemetries: ["performance","errors","http"],
-          allowCookies: false,
+          allowCookies: true,
           enableXRay: false
         });
       `}
@@ -57,18 +58,25 @@ const RUMLoader = Component => {
 
     const liveConfig = {
       applicationId: 'a6f74d21-ce3e-4773-a1ce-5f68eae84130',
-      sessionSampleRate: 0.00001,
+      sessionSampleRate: 0.01,
       identityPoolId: 'eu-west-1:adc4104d-a198-402d-9e00-1db021dacb71',
       guestRoleArn:
         'arn:aws:iam::923061562593:role/RUM-Monitor-eu-west-1-923061562593-2635993079561-Unauth',
     };
 
-    return (
-      <>
-        {buildScript(isLive() ? liveConfig : testConfig)}
-        <Component {...props} />
-      </>
-    );
+    const ComponentWithRum = () => {
+      const isOperaMini = useOperaMiniDetection();
+      const scriptElement = buildScript(isLive() ? liveConfig : testConfig);
+
+      return (
+        <>
+          {!isOperaMini ? scriptElement : null}
+          <Component {...props} />
+        </>
+      );
+    };
+
+    return <ComponentWithRum />;
   };
 
   return withRum;

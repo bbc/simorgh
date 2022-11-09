@@ -1,9 +1,9 @@
 import React from 'react';
 import assocPath from 'ramda/src/assocPath';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import LinkedData from '.';
 
 // eslint-disable-next-line react/prop-types
@@ -125,6 +125,27 @@ describe('LinkedData', () => {
   shouldMatchSnapshot(
     'should correctly render linked data for article pages for service with no trust project markup',
     <Context service="scotland">
+      <LinkedData {...propsForArticle} />
+    </Context>,
+  );
+
+  shouldMatchSnapshot(
+    'should correctly render publisherLogo for news',
+    <Context>
+      <LinkedData {...propsForArticle} />
+    </Context>,
+  );
+
+  shouldMatchSnapshot(
+    'should correctly render publisherLogo for sport',
+    <Context service="sport">
+      <LinkedData {...propsForArticle} />
+    </Context>,
+  );
+
+  shouldMatchSnapshot(
+    'should correctly render publisherLogo for non-news services',
+    <Context service="mundo">
       <LinkedData {...propsForArticle} />
     </Context>,
   );

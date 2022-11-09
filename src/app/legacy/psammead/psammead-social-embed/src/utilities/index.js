@@ -12,6 +12,7 @@ export const getProviderName = provider => {
     twitter: 'Twitter',
     youtube: 'YouTube',
     facebook: 'Facebook',
+    tiktok: 'TikTok',
   }[provider];
 };
 
@@ -41,9 +42,11 @@ export const getCaptionText = ({ pageType, caption, provider }) => {
   if (pageType === ARTICLE_PAGE) {
     const dictionary = dictionaryFactory({ provider });
 
+    const ADDITIONAL_TEXT_PROVIDERS = ['youtube', 'tiktok'];
+
     return {
       text: caption.articleText,
-      ...(provider === 'youtube' && {
+      ...(ADDITIONAL_TEXT_PROVIDERS.includes(provider) && {
         additionalText: detokenise(caption.articleAdditionalText, dictionary),
       }),
       textPrefixVisuallyHidden: caption.textPrefixVisuallyHidden,

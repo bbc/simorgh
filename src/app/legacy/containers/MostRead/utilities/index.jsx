@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { TEXT_VARIANTS } from '#psammead/psammead-storybook-helpers/src';
-import { latin } from '#psammead/gel-foundations/src/scripts';
 import Timestamp from '#psammead/psammead-timestamp/src';
+import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
+import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
 import MostReadRank from '../Canonical/Rank';
 

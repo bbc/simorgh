@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { string, node, shape, arrayOf, bool, number } from 'prop-types';
 import { Helmet } from 'react-helmet';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import {
   getIconAssetUrl,
   getIconLinks,

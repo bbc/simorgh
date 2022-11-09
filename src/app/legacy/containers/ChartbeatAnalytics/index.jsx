@@ -1,9 +1,9 @@
 import React, { useContext, useEffect } from 'react';
 import useToggle from '#hooks/useToggle';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { UserContext } from '#contexts/UserContext';
 import { RequestContext } from '#contexts/RequestContext';
 import { pageDataPropType } from '#models/propTypes/data';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import AmpChartbeatBeacon from './amp';
 import { getConfig } from './utils';
 

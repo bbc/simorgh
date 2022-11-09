@@ -1,8 +1,8 @@
 import React from 'react';
 import { v4 as uuid } from 'uuid';
-import { ServiceContext } from '#contexts/ServiceContext';
-import { latin } from '#psammead/gel-foundations/src/scripts';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { ServiceContext } from '../../../contexts/ServiceContext';
+import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import ParagraphContainer from '.';
 
 const fragmentBlock = (text, attributes = []) => ({

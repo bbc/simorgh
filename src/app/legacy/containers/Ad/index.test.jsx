@@ -2,17 +2,17 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import {
-  ServiceContext,
-  ServiceContextProvider,
-} from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import {
   shouldMatchSnapshot,
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
-import { latinDiacritics } from '#psammead/gel-foundations/src/scripts';
+import latinDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
+import {
+  ServiceContext,
+  ServiceContextProvider,
+} from '../../../contexts/ServiceContext';
 
 import AdContainer from './index';
 

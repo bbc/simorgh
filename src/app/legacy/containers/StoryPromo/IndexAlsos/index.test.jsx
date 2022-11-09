@@ -1,13 +1,13 @@
 import React from 'react';
 import compose from 'ramda/src/compose';
 import { render } from '@testing-library/react';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import {
   shouldMatchSnapshot,
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
-import { latin } from '#psammead/gel-foundations/src/scripts';
 import relatedItems from './relatedItems';
+import latin from '../../../../components/ThemeProvider/fontScripts/latin';
+import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import IndexAlsosContainer from '.';
 
 const withServiceContext = component => (

@@ -18,7 +18,7 @@ We use an open source component library called [Psammead](https://github.com/bbc
 Please familiarise yourself with our:
 
 - [Code of conduct](https://github.com/bbc/simorgh/blob/latest/.github/CODE_OF_CONDUCT.md)
-- [Coding Standards](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/index.md)
+- [Coding Standards](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/README.md)
 - [Contributing guidelines](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md)
 - [Guide to Code Reviews](https://github.com/bbc/simorgh/blob/latest/docs/Code-Reviews.md)
 - [Github Project Board Guide](https://github.com/bbc/simorgh/blob/latest/docs/Project-Board-Guide.md)
@@ -237,8 +237,9 @@ Services with variants can't be accessed using the format above, instead the var
 
 Topic pages use internal BBC APIs that are not publicly accessible. This can cause the following warnings to appear when developing locally:
 
-envConfig/secret.env: No such file or directory
-You will not have access to topics
+```
+No BFF_PATH set as environment variable, you will not have access to topics
+```
 
 Internal developers who need to work on topic pages locally should contact the team for access.
 

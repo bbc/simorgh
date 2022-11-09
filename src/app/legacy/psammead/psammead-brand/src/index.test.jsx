@@ -3,7 +3,7 @@ import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { render } from '@testing-library/react';
 import { C_POSTBOX, C_WHITE } from '#psammead/psammead-styles/src/colours';
 import ScriptLink from '#psammead/psammead-script-link/src';
-import { latin } from '#psammead/gel-foundations/src/scripts';
+import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import Brand from '.';
 import SkipLink from './SkipLink';
 

@@ -9,7 +9,6 @@ import assocPath from 'ramda/src/assocPath';
 import fetchMock from 'fetch-mock';
 
 // contexts
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 
@@ -44,6 +43,7 @@ import mundoPageData from '#data/mundo/cpsAssets/noticias-56669604';
 import mundoRecommendationsData from '#data/mundo/recommendations/index';
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
 import getAgent from '#server/utilities/getAgent/index';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
 import russianPageDataWithoutInlinePromo from './fixtureData/russianPageDataWithoutPromo';
 import StoryPageIndex from '.';
@@ -776,7 +776,7 @@ describe('Story Page', () => {
     );
   });
 
-  describe('Optimizely Experiments', () => {
+  describe.skip('Optimizely Experiments', () => {
     describe('004_brasil_recommendations_experiment', () => {
       beforeEach(() => {
         process.env.RECOMMENDATIONS_ENDPOINT =

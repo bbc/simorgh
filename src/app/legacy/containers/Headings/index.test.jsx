@@ -1,13 +1,13 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { textBlock } from '#models/blocks';
-import { latin } from '#psammead/gel-foundations/src/scripts';
 import {
   shouldMatchSnapshot,
   isNull,
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
+import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import HeadingsContainer from '.';
 import blocksSingleFragment from './testHelpers';
 

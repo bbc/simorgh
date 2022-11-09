@@ -1,6 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { arabic } from '#psammead/gel-foundations/src/scripts';
+import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import LiveLabel from './index';
 
 describe('LiveLabel', () => {

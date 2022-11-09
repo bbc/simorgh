@@ -3,7 +3,8 @@ import styled from '@emotion/styled';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { withKnobs } from '@storybook/addon-knobs';
 import fixture from '#data/pidgin/topics/c95y35941vrt.json';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
+import ThemeProvider from '../../../../components/ThemeProvider';
 import { MEDIA_TYPES } from '#components/Promo';
 import Promo from '.';
 
@@ -14,26 +15,30 @@ const Wrapper = styled.div`
 // eslint-disable-next-line react/prop-types
 const Component = ({ service, variant }) => {
   return (
-    <ServiceContextProvider service={service} variant={variant}>
-      <Wrapper>
-        <Promo {...fixture.data.summaries[0]} />
-      </Wrapper>
-    </ServiceContextProvider>
+    <ThemeProvider service={service} variant={variant}>
+      <ServiceContextProvider service={service} variant={variant}>
+        <Wrapper>
+          <Promo {...fixture.data.summaries[0]} />
+        </Wrapper>
+      </ServiceContextProvider>
+    </ThemeProvider>
   );
 };
 
 // eslint-disable-next-line react/prop-types
 const WithMediaIndicator = ({ service, variant }) => {
   return (
-    <ServiceContextProvider service={service} variant={variant}>
-      <Wrapper>
-        <Promo
-          {...fixture.data.summaries[0]}
-          mediaType={MEDIA_TYPES.VIDEO}
-          mediaDuration={123}
-        />
-      </Wrapper>
-    </ServiceContextProvider>
+    <ThemeProvider service={service} variant={variant}>
+      <ServiceContextProvider service={service} variant={variant}>
+        <Wrapper>
+          <Promo
+            {...fixture.data.summaries[0]}
+            type={MEDIA_TYPES.VIDEO}
+            mediaDuration={123}
+          />
+        </Wrapper>
+      </ServiceContextProvider>
+    </ThemeProvider>
   );
 };
 
