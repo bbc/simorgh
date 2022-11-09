@@ -11,7 +11,7 @@ const CurationPromo = ({
   lazy,
   link,
   type,
-  mediaDuration,
+  duration: mediaDuration,
   headingLevel,
 }) => {
   return (
@@ -36,14 +36,14 @@ CurationPromo.propTypes = {
   lazy: bool,
   link: string.isRequired,
   type: string,
-  mediaDuration: number,
+  duration: number,
   headingLevel: number,
 };
 
 CurationPromo.defaultProps = {
   lazy: false,
   type: null,
-  mediaDuration: null,
+  duration: null,
   headingLevel: 2,
 };
 
