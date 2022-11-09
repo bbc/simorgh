@@ -63,6 +63,7 @@ describe('cspHeader', () => {
         'https://*.gstatic.com',
         'https://*.imrworldwide.com',
         'https://*.twitter.com',
+        'https://connect.facebook.net',
         "'self'",
       ].sort(),
       defaultSrcExpectation: [
@@ -253,6 +254,7 @@ describe('cspHeader', () => {
         'https://*.gstatic.com',
         'https://*.imrworldwide.com',
         'https://*.twitter.com',
+        'https://connect.facebook.net',
         "'self'",
       ].sort(),
       defaultSrcExpectation: [
