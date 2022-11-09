@@ -127,7 +127,7 @@ const directives = {
       'https://www.youtube-nocookie.com', // Social Embeds, youtube no-cookie
       'https://www.instagram.com', // Social Embeds
       'https://www.tiktok.com', // Social Embeds
-      'https://www.facebook.com', // Social Embeds
+      'https://*.facebook.com', // Social Embeds
       'https://*.twitter.com', // Social Embeds
       'https://bbc.com', // Media Player
       'https://bbc-maps.carto.com', // STY include maps
@@ -156,7 +156,7 @@ const directives = {
       'https://www.youtube-nocookie.com', // Social Embeds, youtube no-cookie
       'https://www.instagram.com', // Social Embeds
       'https://www.tiktok.com', // Social Embeds
-      'https://www.facebook.com', // Social Embeds
+      'https://*.facebook.com', // Social Embeds
       'https://*.twitter.com', // Social Embeds
       'https://bbc.com', // Media Player
       'https://bbc-maps.carto.com', // STY include maps
@@ -175,7 +175,7 @@ const directives = {
       'https://*.cdninstagram.com', // Social Embeds, <amp-instagram />
       'https://www.tiktok.com', // Social Embeds, <amp-tiktok />
       'https://*.tiktokcdn.com', // Social Embeds, <amp-tiktok />
-      'https://www.facebook.com', // Social Embeds, <amp-facebook />
+      'https://*.facebook.com', // Social Embeds, <amp-facebook />
       'https://*.xx.fbcdn.net', // Social Embeds, <amp-facebook />
       ...advertisingDirectives.imgSrc,
       'https://*.googleusercontent.com', // Google Play Store - BBC News Apps - Arabic, Hindi, Mundo, Russian
@@ -204,7 +204,7 @@ const directives = {
       'https://*.cdninstagram.com', // Social Embeds, <amp-instagram />
       'https://www.tiktok.com', // Social Embeds, <amp-tiktok />
       'https://*.tiktokcdn.com', // Social Embeds, <amp-tiktok />
-      'https://www.facebook.com', // Social Embeds, <amp-facebook />
+      'https://*.facebook.com', // Social Embeds, <amp-facebook />
       'https://*.xx.fbcdn.net', // Social Embeds, <amp-facebook />
       ...advertisingDirectives.imgSrc,
       'https://*.googleusercontent.com', // Google Play Store - BBC News Apps - Arabic, Hindi, Mundo, Russian
@@ -243,7 +243,7 @@ const directives = {
       'https://www.instagram.com', // Social Embeds
       'https://www.tiktok.com', // Social Embeds
       'https://lf16-tiktok-web.ttwstatic.com', // Social Embeds - TikTok
-      'https://www.facebook.com', // Social Embeds
+      'https://*.facebook.com', // Social Embeds
       'https://connect.facebook.net', // Social Embeds
       'https://*.xx.fbcdn.net', // Social Embeds
       'https://*.twimg.com', // Social Embeds
@@ -271,7 +271,7 @@ const directives = {
       'https://www.instagram.com', // Social Embeds
       'https://www.tiktok.com', // Social Embeds
       'https://lf16-tiktok-web.ttwstatic.com', // Social Embeds - TikTok
-      'https://www.facebook.com', // Social Embeds
+      'https://*.facebook.com', // Social Embeds
       'https://connect.facebook.net', // Social Embeds
       'https://*.xx.fbcdn.net', // Social Embeds
       'https://*.twimg.com', // Social Embeds
