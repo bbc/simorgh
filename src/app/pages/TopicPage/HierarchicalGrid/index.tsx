@@ -12,7 +12,7 @@ type Summary = {
   id: string;
   link?: string;
   firstPublished?: string | number;
-  mediaDuration?: string | number;
+  duration?: string | number;
   imageUrl?: string;
   imageAlt?: string;
   mediaType?: 'audio' | 'video' | 'photogallery';
@@ -60,7 +60,7 @@ const HiearchicalGrid = ({ summaries }: Summaries) => {
                 loading="lazy"
               >
                 <Promo.MediaIcon type={promo.type}>
-                  {promo.mediaDuration}
+                  {promo.duration}
                 </Promo.MediaIcon>
               </Promo.Image>
               <Promo.Heading
