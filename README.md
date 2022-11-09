@@ -237,8 +237,9 @@ Services with variants can't be accessed using the format above, instead the var
 
 Topic pages use internal BBC APIs that are not publicly accessible. This can cause the following warnings to appear when developing locally:
 
-envConfig/secret.env: No such file or directory
-You will not have access to topics
+```
+No BFF_PATH set as environment variable, you will not have access to topics
+```
 
 Internal developers who need to work on topic pages locally should contact the team for access.
 
