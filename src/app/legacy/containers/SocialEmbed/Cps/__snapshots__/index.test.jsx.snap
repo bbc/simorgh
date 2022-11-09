@@ -710,7 +710,9 @@ exports[`CpsSocialEmbedContainer Canonical should render correctly without an em
         <div
           class="emotion-8 emotion-9"
         >
-          <p>
+          <p
+            data-testid="social-embed-fallback-title"
+          >
             Content is not available
           </p>
           <a

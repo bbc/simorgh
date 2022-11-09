@@ -6,7 +6,6 @@ import {
   AmpSocialEmbed,
   CanonicalSocialEmbed,
 } from '#psammead/psammead-social-embed/src';
-import isLive from '#lib/utilities/isLive';
 
 import { RequestContext } from '#contexts/RequestContext';
 import { GridItemMedium } from '#components/Grid';
@@ -27,9 +26,6 @@ const SocialEmbedContainer = ({ blocks, source }) => {
   if (!blocks || !source) return null;
   const { model } = blocks[0];
   const provider = getProviderFromSource(source);
-
-  // TODO: Remove once TikTok is allowed to go on Live
-  if (provider === 'tiktok' && isLive()) return null;
 
   const id = getIdFromSource(source);
 
@@ -76,6 +72,7 @@ const SocialEmbedContainer = ({ blocks, source }) => {
             fallback={fallback}
             skipLink={skipLink}
             caption={caption}
+            source={source}
           />
         ) : (
           <Lazyload offset={LAZYLOAD_OFFSET} once height={oEmbed?.height}>
