@@ -8,8 +8,6 @@ import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 import fetchPageData from '../../utils/fetchPageData';
 import { Services, Variants } from '../../../models/types/global';
 
-import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
-
 const logger = nodeLogger(__filename);
 
 const removeAmp = (path: string) => path.split('.')[0];
@@ -82,9 +80,7 @@ export default async ({
         secondaryColumn: secondaryData,
       },
     };
-  } catch ({ message }) {
-    const status = getErrorStatusCode();
-
+  } catch ({ message, status }) {
     logger.error(BFF_FETCH_ERROR, {
       service,
       status,
