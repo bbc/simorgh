@@ -59,15 +59,17 @@ export default async ({
 
     const optHeaders = { 'ctx-service-env': env };
 
-    if (isLocal)
+    if (isLocal) {
       fetchUrl = Url(
         `/${service}/articles/${id}${variant ? `/${variant}` : ''}`,
       );
+    }
 
+    // @ts-ignore - Ignore fetchPageData argument types
     const { status, json } = await fetchPageData({
       path: fetchUrl.toString(),
       ...(!isLocal && { agent, optHeaders }),
-    } as any);
+    });
 
     const {
       data: { article, secondaryData },
