@@ -1,9 +1,10 @@
 /* eslint-disable no-console */
 
-const JsdomEnvironment = require('jest-environment-jsdom');
-const fetchDom = require('./utils/fetchDom');
-const getPageTypeFromTestPath = require('./utils/getPageTypeFromTestPath');
-const camelCaseToText = require('./utils/camelCaseToText');
+import JsdomEnvironment from 'jest-environment-jsdom';
+
+import fetchDom from './utils/fetchDom';
+import getPageTypeFromTestPath from './utils/getPageTypeFromTestPath';
+import camelCaseToText from './utils/camelCaseToText';
 
 class IntegrationTestEnvironment extends JsdomEnvironment {
   constructor(config, context) {
@@ -60,4 +61,4 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
   }
 }
 
-module.exports = IntegrationTestEnvironment;
+export default IntegrationTestEnvironment;

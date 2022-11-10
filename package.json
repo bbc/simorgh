@@ -2,12 +2,16 @@
   "name": "simorgh",
   "version": "1.0.0",
   "description": "Simorgh",
-  "main": "./src/client.js",
+  "exports": "./src/client.js",
+  "type": "module",
   "sideEffects": [
     "./src/app/legacy/psammead/moment-timezone-include/**/*.*",
     "./src/app/legacy/psammead/psammead-locales/**/*.*",
     "./cypress/**/*.*"
   ],
+  "engines": {
+    "node": ">=16.17"
+  },
   "resolutions": {
     "@babel/runtime": "7.19.4",
     "@emotion/serialize": "1.1.0",

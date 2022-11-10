@@ -1,5 +1,5 @@
-const rawTimezones = require('moment-timezone/data/packed/latest.json');
-const writeToNestedFile = require('../writeToNestedFile');
+import rawTimezones from 'moment-timezone/data/packed/latest.json' assert { type: 'json' };
+import writeToNestedFile from '../writeToNestedFile/index.js';
 
 const replaceOriginalTimezoneData = () =>
   writeToNestedFile(
@@ -7,4 +7,4 @@ const replaceOriginalTimezoneData = () =>
     JSON.stringify({ ...rawTimezones, ...{ zones: [], links: [] } }),
   );
 
-module.exports = replaceOriginalTimezoneData;
+export default replaceOriginalTimezoneData;

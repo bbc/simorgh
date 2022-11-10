@@ -1,5 +1,5 @@
 // expected output of transformer given fixture: pidgin/23248703
-module.exports = {
+export default {
   content: {
     blocks: [
       {

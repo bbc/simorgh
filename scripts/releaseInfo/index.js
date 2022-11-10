@@ -1,8 +1,9 @@
 /* eslint-disable no-console */
-const fs = require('fs');
-const path = require('path');
-const allServices = require('../../cypress/support/config/settings');
-const launchDates = require('./launchDates');
+import fs from 'fs';
+
+import path from 'path';
+import allServices from '../../cypress/support/config/settings';
+import launchDates from './launchDates';
 
 const getUrl = (pageType, env) => {
   let url;

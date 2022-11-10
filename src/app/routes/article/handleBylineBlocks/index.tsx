@@ -4,8 +4,8 @@ import path from 'ramda/src/path';
 import assocPath from 'ramda/src/assocPath';
 
 import insert from 'ramda/src/insert';
-import { BYLINE_TRANSFORMATION_FAILED } from '../../../lib/logger.const';
 import nodeLogger from '../../../lib/logger.node';
+import logCodes from '../../../lib/logger.const';
 
 const logger = nodeLogger(__filename);
 
@@ -73,7 +73,7 @@ export default (json: PageData) => {
     const transformBylines = pipe(removeExtraBylines, repositionByline);
     return transformBylines(json);
   } catch (error) {
-    logger.error(BYLINE_TRANSFORMATION_FAILED, {
+    logger.error(logCodes.BYLINE_TRANSFORMATION_FAILED, {
       id: json?.metadata?.id,
     });
     return json;

@@ -1,6 +1,6 @@
 const SIMORGH = /^SIMORGH_/i;
 
-module.exports.getClientEnvVars = (envConfig = { parsed: {} }) => {
+export const getClientEnvVars = (envConfig = { parsed: {} }) => {
   const { parsed } = envConfig;
   const envVars = Object.keys(parsed);
   const clientEnvVars = {};

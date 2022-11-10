@@ -8,7 +8,7 @@ import {
 } from '#lib/logger.const';
 
 // dotenv should be called on entry to the application to ensure all `process.env.*` variables are correctly set from '.env'
-const dotenv = require('dotenv');
+import dotenv from 'dotenv';
 
 const DOT_ENV_CONFIG = dotenv.config();
 if (DOT_ENV_CONFIG.error) {
@@ -16,9 +16,10 @@ if (DOT_ENV_CONFIG.error) {
 }
 
 // now `process.env.*` variables are set run the rest of the app
-const http = require('http');
-const nodeLogger = require('#lib/logger.node');
-const app = require('./server').default;
+import http from 'http';
+
+import nodeLogger from '#lib/logger.node';
+import app from './server';
 
 const logger = nodeLogger(__filename);
 const port = process.env.PORT || 7080;
@@ -83,5 +84,4 @@ const startCluster = () => {
   }
 };
 
-// eslint-disable-next-line import/prefer-default-export
-export { startCluster };
+export default startCluster;

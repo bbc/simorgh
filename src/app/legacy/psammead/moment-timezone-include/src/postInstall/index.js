@@ -1,3 +1,3 @@
-const writeNewTimezoneData = require('../writeNewTimezoneData');
+import writeNewTimezoneData from '../writeNewTimezoneData';
 
 writeNewTimezoneData();

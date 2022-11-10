@@ -1,9 +1,13 @@
 /* eslint-disable import/no-dynamic-require, global-require */
-const { merge } = require('webpack-merge');
-const fs = require('fs');
-const path = require('path');
-const MomentTimezoneInclude = require('./src/app/legacy/psammead/moment-timezone-include/src');
-const { webpackDirAlias } = require('./dirAlias');
+import { fileURLToPath } from 'url';
+import { merge } from 'webpack-merge';
+
+import fs from 'fs';
+import path from 'path';
+import MomentTimezoneInclude from './src/app/legacy/psammead/moment-timezone-include/src/index.js';
+import { webpackDirAlias } from './dirAlias.js';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
@@ -132,7 +136,7 @@ const getBaseConfig = BUNDLE_TYPE => ({
 });
 
 // `shell` parameter populated via CLI, e.g. --env.platform=web
-module.exports = (shell = {}) => {
+export default (shell = {}) => {
   const CONFIG_FILE = shell.config;
   const CLIENT_LEGACY = ['client', 'legacy'];
   const CLIENT_MODERN = ['client', 'modern'];
@@ -140,13 +144,16 @@ module.exports = (shell = {}) => {
 
   const mergeIntoBaseConfig = ([app, BUNDLE_TYPE]) => {
     const baseConfig = getBaseConfig(BUNDLE_TYPE);
-    const specialisedConfig = require(`./webpack.config.${app}.js`)({
-      resolvePath,
-      IS_PROD,
-      START_DEV_SERVER,
-      IS_PROD_PROFILE,
-      BUNDLE_TYPE,
-    });
+
+    const specialisedConfig = import(`./webpack.config.${app}.js`).then(m =>
+      m.default({
+        resolvePath,
+        IS_PROD,
+        START_DEV_SERVER,
+        IS_PROD_PROFILE,
+        BUNDLE_TYPE,
+      }),
+    );
     return merge(baseConfig, specialisedConfig);
   };
 

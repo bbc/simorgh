@@ -482,4 +482,4 @@ const launchDates = {
   },
 };
 
-module.exports = launchDates;
+export default launchDates;

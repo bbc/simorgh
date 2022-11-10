@@ -1,7 +1,7 @@
-const express = require('express');
-const request = require('supertest');
-const path = require('path');
-const local = require('./index').default;
+import express from 'express';
+import request from 'supertest';
+import path from 'path';
+import local from './index';
 
 const sendFileSpy = jest.spyOn(express.response, 'sendFile');
 

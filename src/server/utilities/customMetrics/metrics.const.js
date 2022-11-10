@@ -3,4 +3,4 @@ const metrics = {
   NON_200_RESPONSE: 'non_200_response',
 };
 
-module.exports = metrics;
+export default metrics;

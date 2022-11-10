@@ -15,7 +15,7 @@ import include from './blocks/include';
 import socialEmbed from './blocks/socialEmbed';
 import table from './blocks/table';
 
-const nodeLogger = require('#lib/logger.node');
+import nodeLogger from '#lib/logger.node';
 
 const logger = nodeLogger(__filename);
 

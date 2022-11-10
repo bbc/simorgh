@@ -1,4 +1,4 @@
-const fetch = require('isomorphic-fetch');
+import fetch from 'isomorphic-fetch';
 
 jest.mock('isomorphic-fetch');
 fetch.mockImplementation(() => ({ text: () => '<html amp></html>' }));
@@ -7,7 +7,7 @@ log.mockImplementation(jest.fn);
 const error = jest.spyOn(global.console, 'error');
 error.mockImplementation(jest.fn);
 
-const { getPageString, printResult, printSummary, validate } = require('.');
+import { getPageString, printResult, printSummary, validate } from '.';
 
 describe('amp validator tests', () => {
   beforeAll(() => {

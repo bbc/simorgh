@@ -1,5 +1,5 @@
-const moment = require('moment');
-require('moment/locale/pt-br');
+import moment from 'moment';
+import 'moment/locale/pt-br';
 
 moment.updateLocale('pt-br', {
   months:

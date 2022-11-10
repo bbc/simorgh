@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   extends: 'lighthouse:default',
   settings: {
     onlyCategories: ['accessibility', 'best-practices', 'seo'],

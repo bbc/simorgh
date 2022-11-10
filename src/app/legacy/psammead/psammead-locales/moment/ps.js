@@ -1,5 +1,5 @@
-const moment = require('moment');
-const numerals = require('../src/numerals/index');
+import moment from 'moment';
+import numerals from '../src/numerals/index';
 
 // eslint-disable-next-line prettier/prettier
 const pashtoGregorianMonths =

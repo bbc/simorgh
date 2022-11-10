@@ -1,12 +1,13 @@
-const fs = require('fs');
-const {
+import fs from 'fs';
+
+import {
   logRow,
   getCategoryScores,
   isAboveThreshold,
   compareToBudget,
   readReport,
   exitResult,
-} = require('./lighthouseBudget');
+} from './lighthouseBudget';
 
 jest.mock('fs');
 

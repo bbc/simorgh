@@ -3,4 +3,4 @@ const regexes = {
   TLD_REGEX: /(\.com|\.co\.uk)/g,
 };
 
-module.exports = regexes;
+export default regexes;

@@ -1,3 +1,3 @@
-const { runValidator } = require('.');
+import { runValidator } from '.';
 
 runValidator();

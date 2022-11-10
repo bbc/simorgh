@@ -1,4 +1,4 @@
-const loggerWeb = require('./logger.web');
+import loggerWeb from './logger.web';
 
 const message = 'test message';
 const event = 'test event';

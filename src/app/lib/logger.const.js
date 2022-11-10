@@ -92,4 +92,4 @@ const logCodes = {
   TOGGLE_API_RESPONSE_TIME: 'toggle_api_response_time',
 };
 
-module.exports = logCodes;
+export default logCodes;

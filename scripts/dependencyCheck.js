@@ -1,6 +1,7 @@
 // eslint-disable no-console
-const path = require('path');
-const depcheck = require('depcheck');
+import path from 'path';
+
+import depcheck from 'depcheck';
 
 const options = {
   specials: ['bin', 'eslint', 'jest', 'babel', 'webpack'],

@@ -1,10 +1,10 @@
-const {
+import {
   getContentId,
   getPageIdentifier,
   getLanguage,
   getPromoHeadline,
   getNationsProducer,
-} = require('.');
+} from '.';
 
 describe('getPageIdentifier', () => {
   const goodData = {

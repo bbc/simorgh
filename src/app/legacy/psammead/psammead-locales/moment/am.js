@@ -1,4 +1,4 @@
-const moment = require('moment');
+import moment from 'moment';
 
 moment.defineLocale('am', {
   months: 'ጥር_የካቲት_መጋቢት_ሚያዚያ_ግንቦት_ሰኔ_ሀምሌ_ነሐሴ_መስከረም_ጥቅምት_ህዳር_ታህሳስ'.split('_'),

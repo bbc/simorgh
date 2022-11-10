@@ -1,5 +1,5 @@
-const moment = require('moment');
-require('moment/locale/si');
+import moment from 'moment';
+import 'moment/locale/si';
 
 moment.updateLocale('si', {
   relativeTime: {

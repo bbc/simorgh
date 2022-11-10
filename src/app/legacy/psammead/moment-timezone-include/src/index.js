@@ -1,6 +1,6 @@
-const webpack = require('webpack');
-const writeNewTimezoneData = require('./writeNewTimezoneData');
-const replaceOriginalTimezoneData = require('./replaceOriginalTimezoneData');
+import webpack from 'webpack';
+import writeNewTimezoneData from './writeNewTimezoneData/index.js';
+import replaceOriginalTimezoneData from './replaceOriginalTimezoneData/index.js';
 
 function MomentTimezoneInclude(options = {}) {
   const startYear = options.startYear || -Infinity;
@@ -16,4 +16,4 @@ function MomentTimezoneInclude(options = {}) {
   );
 }
 
-module.exports = MomentTimezoneInclude;
+export default MomentTimezoneInclude;

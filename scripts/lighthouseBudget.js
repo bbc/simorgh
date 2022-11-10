@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-const fs = require('fs');
+import fs from 'fs';
 
 const getCategoryScores = data => {
   const { categories } = data;
@@ -89,7 +89,7 @@ const run = () => {
   exitResult(result);
 };
 
-module.exports = {
+export default {
   getCategoryScores,
   isAboveThreshold,
   logRow,

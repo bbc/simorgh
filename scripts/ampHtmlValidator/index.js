@@ -1,7 +1,8 @@
 /* eslint-disable no-console */
-const fetch = require('isomorphic-fetch');
-const amphtmlValidator = require('amphtml-validator');
-const { getPageUrls } = require('../../cypress/support/helpers/getPageUrls');
+import fetch from 'isomorphic-fetch';
+
+import amphtmlValidator from 'amphtml-validator';
+import { getPageUrls } from '../../cypress/support/helpers/getPageUrls';
 
 const environment = 'local';
 const isSmoke = true;
@@ -83,7 +84,7 @@ const runValidator = async verbose => {
   );
 };
 
-module.exports = {
+export default {
   getPageString,
   printResult,
   printSummary,

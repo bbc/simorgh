@@ -1,5 +1,5 @@
 /* eslint-disable global-require */
-const fs = require('fs');
+import fs from 'fs';
 
 jest.mock('fs');
 

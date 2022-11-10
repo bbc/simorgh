@@ -1,4 +1,4 @@
-const moment = require('moment');
+import moment from 'moment';
 
 moment.defineLocale('ti', {
   months: 'ጥሪ_ለካቲት_መጋቢት_ሚያዝያ_ጉንቦት_ሰነ_ሓምለ_ነሓሰ_መስከረም_ጥቅምቲ_ሕዳር_ታሕሳስ'.split('_'),

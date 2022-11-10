@@ -1,5 +1,5 @@
-const moment = require('moment');
-require('moment/locale/es');
+import moment from 'moment';
+import 'moment/locale/es';
 
 moment.updateLocale('es', {
   longDateFormat: {

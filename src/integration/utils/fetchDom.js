@@ -1,7 +1,8 @@
 /* eslint-disable no-console */
-const fetch = require('isomorphic-fetch');
-const { JSDOM } = require('jsdom');
-const retry = require('retry');
+import fetch from 'isomorphic-fetch';
+
+import { JSDOM } from 'jsdom';
+import retry from 'retry';
 
 const faultTolerantDomFetch = ({ url, runScripts, headers }) =>
   new Promise((resolve, reject) => {
@@ -46,4 +47,4 @@ const faultTolerantDomFetch = ({ url, runScripts, headers }) =>
     });
   });
 
-module.exports = faultTolerantDomFetch;
+export default faultTolerantDomFetch;

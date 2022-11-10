@@ -1,7 +1,8 @@
 // Node.js logger utility using winston
-const fs = require('fs');
-const path = require('path');
-const { createLogger, format, transports } = require('winston');
+import fs from 'fs';
+
+import path from 'path';
+import { createLogger, format, transports } from 'winston';
 
 const {
   combine,
@@ -108,4 +109,4 @@ class Logger {
 
 const logger = callingFile => new Logger(callingFile);
 
-module.exports = logger;
+export default logger;

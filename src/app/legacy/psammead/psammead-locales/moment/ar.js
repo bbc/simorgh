@@ -1,5 +1,5 @@
-const moment = require('moment');
-require('moment/locale/ar');
+import moment from 'moment';
+import 'moment/locale/ar';
 
 // the months have been overridden to maintain arabic dual month names
 // other values in this locale have been left as set upstream

@@ -1,3 +1,3 @@
-const server = require('./startServer');
+import startCluster from './startServer.js';
 
-server.startCluster();
+startCluster();

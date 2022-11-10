@@ -1,7 +1,7 @@
 import onEnvironment from '../onEnvironment';
 
 // custom CW metrics
-const { metricScope, Unit } = require('aws-embedded-metrics');
+import { metricScope, Unit } from 'aws-embedded-metrics';
 
 const sendMetric = metricScope(
   metrics =>

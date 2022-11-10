@@ -1,8 +1,9 @@
 /* eslint-disable global-require */
-const nodeExternals = require('webpack-node-externals');
-const webpack = require('webpack');
+import nodeExternals from 'webpack-node-externals';
 
-module.exports = ({ resolvePath, START_DEV_SERVER }) => {
+import webpack from 'webpack';
+
+export default ({ resolvePath, START_DEV_SERVER }) => {
   const serverConfig = {
     target: 'node', // compile for server environment
     entry: START_DEV_SERVER ? ['webpack/hot/poll?100', './src'] : ['./src'],

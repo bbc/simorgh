@@ -4,15 +4,19 @@
   https://github.com/bbc/simorgh/blob/latest/docs/JavaScript-Bundling-Strategy.md
  */
 
-const fs = require('fs');
-const crypto = require('crypto');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
-const LoadablePlugin = require('@loadable/webpack-plugin');
-const webpack = require('webpack');
-const dotenv = require('dotenv');
-const { DuplicatesPlugin } = require('inspectpack/plugin');
-const { getClientEnvVars } = require('./src/clientEnvVars');
+import fs from 'fs';
+
+import crypto from 'crypto';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
+import TerserPlugin from 'terser-webpack-plugin';
+import LoadablePlugin from '@loadable/webpack-plugin';
+import BrotliPlugin from 'brotli-webpack-plugin';
+import CompressionPlugin from 'compression-webpack-plugin';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+import webpack from 'webpack';
+import dotenv from 'dotenv';
+import { DuplicatesPlugin } from 'inspectpack/plugin/index.js';
+import { getClientEnvVars } from './src/clientEnvVars.js';
 
 const FRAMEWORK_BUNDLES = ['react', 'react-dom'];
 const TOTAL_PAGE_TYPES = fs
@@ -25,7 +29,7 @@ if (DOT_ENV_CONFIG.error) {
   throw DOT_ENV_CONFIG.error;
 }
 
-module.exports = ({
+export default ({
   resolvePath,
   IS_PROD,
   START_DEV_SERVER,
@@ -67,7 +71,7 @@ module.exports = ({
         // Override webpacks default handling for these as they arnt availible on the client.
         fs: false,
         crypto: false,
-        stream: require.resolve('stream-browserify'),
+        // stream: require.resolve('stream-browserify'),
         https: false,
         http: false,
       },
@@ -243,9 +247,6 @@ module.exports = ({
   };
 
   if (IS_PROD) {
-    const BrotliPlugin = require('brotli-webpack-plugin');
-    const CompressionPlugin = require('compression-webpack-plugin');
-
     clientConfig.plugins.push(
       /**
        * Compresses Webpack assets with Brotli compression algorithm.
@@ -272,7 +273,6 @@ module.exports = ({
     );
   }
   if (IS_PROD) {
-    const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); // eslint-disable-line
     /**
      * Visualize size of webpack output files with an interactive zoomable treemap.
      * https://github.com/webpack-contrib/webpack-bundle-analyzer

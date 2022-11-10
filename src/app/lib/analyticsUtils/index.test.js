@@ -11,7 +11,7 @@ let isOnClient = true;
 jest.mock('../utilities/onClient', () => jest.fn());
 onClient.mockImplementation(() => isOnClient);
 
-const {
+import {
   getDestination,
   getScreenInfo,
   getBrowserViewPort,
@@ -37,7 +37,7 @@ const {
   getATIMarketingString,
   onOnionTld,
   getContentId,
-} = require('./index');
+} from './index';
 
 const FIXTURE_PAGEDATA = {
   metadata: {

@@ -1,5 +1,5 @@
-const moment = require('moment');
-require('moment/locale/mr');
+import moment from 'moment';
+import 'moment/locale/mr';
 
 moment.updateLocale('mr', {
   postformat: null,

@@ -1,6 +1,6 @@
 import * as genericLabelHelpers from '#lib/analyticsUtils';
 
-const { buildATIPageTrackPath, buildATIEventTrackUrl } = require('.');
+import { buildATIPageTrackPath, buildATIEventTrackUrl } from '.';
 
 const mockAndSet = ({ name, source }, response) => {
   source[name] = jest.fn(); // eslint-disable-line no-param-reassign

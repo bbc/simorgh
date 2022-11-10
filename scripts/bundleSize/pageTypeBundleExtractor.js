@@ -1,5 +1,5 @@
-const modernBundleReport = require('../../reports/modern.webpackBundleReport.json');
-const legacyBundleReport = require('../../reports/legacy.webpackBundleReport.json');
+import modernBundleReport from '../../reports/modern.webpackBundleReport.json' assert { type: 'json' };
+import legacyBundleReport from '../../reports/legacy.webpackBundleReport.json' assert { type: 'json' };
 
 const bundleReports = {
   modern: modernBundleReport,
@@ -17,4 +17,4 @@ const extractBundlesForPageType = pageComponent => {
   throw Error(`page type '${pageComponent}' not found`);
 };
 
-exports.extractBundlesForPageType = extractBundlesForPageType;
+export default extractBundlesForPageType;

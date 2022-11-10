@@ -1,8 +1,10 @@
 /* eslint-disable no-console */
 
-const { exec, spawn } = require('child_process');
-const argv = require('minimist')(process.argv.slice(2));
-const ora = require('ora');
+import { exec, spawn } from 'child_process';
+
+import argvFactory from 'minimist';
+const argv = argvFactory(process.argv.slice(2));
+import ora from 'ora';
 
 const onlyRunTests = Boolean(argv.onlyRunTests);
 const isDev = Boolean(argv.dev);

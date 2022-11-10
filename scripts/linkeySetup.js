@@ -1,4 +1,4 @@
-const fs = require('fs');
+import fs from 'fs';
 
 const dir = 'src/app/lib/config/services';
 const excludes = [
