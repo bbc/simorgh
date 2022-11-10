@@ -66,6 +66,7 @@
           {
             "title": "El video de prueba",
             "type": "video",
+            "duration": "PT5M",
             "firstPublished": "2022-05-12T10:41:21.000Z",
             "link": "https://www.bbc.com/mundo/23048701",
             "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/FA0D/test/_63931046_p00wjk8v.jpg",
@@ -76,6 +77,7 @@
           {
             "title": "Anuncio del acuerdo",
             "type": "video",
+            "duration": "PT5M",
             "firstPublished": "2022-05-12T10:41:14.000Z",
             "link": "https://www.bbc.com/mundo/noticias-internacional-23452772",
             "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/ABED/test/_63931044_p0182w7g.jpg",
@@ -86,6 +88,7 @@
           {
             "title": "Hippopotamos tomando el sol",
             "type": "video",
+            "duration": "PT5M",
             "firstPublished": "2022-05-12T10:41:02.000Z",
             "link": "https://www.bbc.com/mundo/noticias-america-latina-23049956",
             "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/1482D/test/_63931048_p012z4jy.jpg",

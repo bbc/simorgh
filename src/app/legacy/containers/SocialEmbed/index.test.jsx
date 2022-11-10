@@ -1,12 +1,21 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import loggerMock from '#testHelpers/loggerMock';
 import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import SocialEmbedContainer from '.';
-import withContexts from './common/testHelper';
-import { twitterBlock } from './common/fixtures';
+import {
+  render,
+  screen,
+} from '../../../components/react-testing-library-with-providers';
+
+import {
+  twitterBlock,
+  instagramBlock,
+  youtubeBlockEmbed,
+  tiktokBlockEmbed,
+  facebookPostBlockEmbed,
+  facebookVideoBlockEmbed,
+} from './common/fixtures';
 
 /* eslint-disable react/prop-types */
 jest.mock('react-lazyload', () => {
@@ -21,17 +30,15 @@ describe('SocialEmbedContainer', () => {
   });
 
   describe('Canonical', () => {
-    it('should render and unmount correctly', () => {
+    it('should render a Twitter block and unmount correctly', () => {
       const { container, unmount } = render(
-        withContexts(SocialEmbedContainer, {
-          isAmp: false,
-          isEnabled: true,
-          pageType: ARTICLE_PAGE,
-        })({
-          blocks: [twitterBlock],
-          source: 'https://twitter.com/BBCNews/status/1384138850478346243?s=20',
-        }),
+        <SocialEmbedContainer
+          blocks={[twitterBlock]}
+          source="https://twitter.com/BBCNews/status/1384138850478346243?s=20"
+        />,
+        { service: 'news', isAmp: false, pageType: ARTICLE_PAGE },
       );
+
       expect(container.firstChild).toMatchSnapshot();
       expect(
         document.querySelector(
@@ -51,29 +58,144 @@ describe('SocialEmbedContainer', () => {
       ).toBeFalsy();
     });
 
-    it('should render the correct skip link text when indexOfType is provided (means this is one of multiple e.g. Twitter embeds in the article)', () => {
-      const { getByText } = render(
-        withContexts(SocialEmbedContainer, {
-          isAmp: false,
-          isEnabled: true,
-          pageType: ARTICLE_PAGE,
-        })({
-          blocks: [twitterBlock],
-          source: 'https://twitter.com/BBCNews/status/1384138850478346243?s=20',
-        }),
+    it('should render an Instagram block and unmount correctly', () => {
+      const { container, unmount } = render(
+        <SocialEmbedContainer
+          blocks={[instagramBlock]}
+          source="https://www.instagram.com/reel/CeWO3HcIE9w/?utm_source=ig_embed&ig_rid=b6b91062-7174-4784-9a99-139d52bc5b29"
+        />,
+        { service: 'news', isAmp: false, pageType: ARTICLE_PAGE },
       );
 
-      expect(getByText('End of Twitter content, 1')).toBeInTheDocument();
+      expect(container.firstChild).toMatchSnapshot();
+      expect(
+        document.querySelector(
+          'head script[src="https://www.instagram.com/embed.js"]',
+        ),
+      ).toBeTruthy();
+      expect(loggerMock.info).toHaveBeenCalledTimes(1);
+      expect(loggerMock.info).toHaveBeenCalledWith(SOCIAL_EMBED_RENDERED, {
+        provider: 'instagram',
+        href: 'https://www.instagram.com/reel/CeWO3HcIE9w/?utm_source=ig_embed&ig_rid=b6b91062-7174-4784-9a99-139d52bc5b29',
+      });
+      unmount();
+      expect(
+        document.querySelector(
+          'head script[src="https://www.instagram.com/embed.js"]',
+        ),
+      ).toBeFalsy();
+    });
+
+    it('should render a YouTube block and unmount correctly', () => {
+      const { container, unmount } = render(
+        <SocialEmbedContainer
+          blocks={[youtubeBlockEmbed]}
+          source="https://www.youtube.com/embed/1e05_rwHvOM?feature=oembed"
+        />,
+        { service: 'news', isAmp: false, pageType: ARTICLE_PAGE },
+      );
+
+      expect(container.firstChild).toMatchSnapshot();
+
+      expect(loggerMock.info).toHaveBeenCalledTimes(1);
+      expect(loggerMock.info).toHaveBeenCalledWith(SOCIAL_EMBED_RENDERED, {
+        provider: 'youtube',
+        href: 'https://www.youtube.com/embed/1e05_rwHvOM?feature=oembed',
+      });
+      unmount();
+    });
+
+    it('should render a TikTok block and unmount correctly', () => {
+      const { container, unmount } = render(
+        <SocialEmbedContainer
+          blocks={[tiktokBlockEmbed]}
+          source="https://www.tiktok.com/@cuppymusic/video/7086167423639997701"
+        />,
+        { service: 'news', isAmp: false, pageType: ARTICLE_PAGE },
+      );
+
+      expect(container.firstChild).toMatchSnapshot();
+
+      expect(loggerMock.info).toHaveBeenCalledTimes(1);
+      expect(loggerMock.info).toHaveBeenCalledWith(SOCIAL_EMBED_RENDERED, {
+        provider: 'tiktok',
+        href: 'https://www.tiktok.com/@cuppymusic/video/7086167423639997701',
+      });
+      unmount();
+    });
+
+    it('should render a Facebook Post block and unmount correctly', () => {
+      const { container, unmount } = render(
+        <SocialEmbedContainer
+          blocks={[facebookPostBlockEmbed]}
+          source="https://www.facebook.com/RickAstley/posts/545713756920775"
+        />,
+        { service: 'news', isAmp: false, pageType: ARTICLE_PAGE },
+      );
+
+      expect(container.firstChild).toMatchSnapshot();
+      expect(
+        document.querySelector(
+          'head script[src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0"]',
+        ),
+      ).toBeTruthy();
+      expect(loggerMock.info).toHaveBeenCalledTimes(1);
+      expect(loggerMock.info).toHaveBeenCalledWith(SOCIAL_EMBED_RENDERED, {
+        provider: 'facebook',
+        href: 'https://www.facebook.com/RickAstley/posts/545713756920775',
+      });
+      unmount();
+      expect(
+        document.querySelector(
+          'head script[src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0"]',
+        ),
+      ).toBeFalsy();
+    });
+
+    it('should render a Facebook Video block and unmount correctly', () => {
+      const { container, unmount } = render(
+        <SocialEmbedContainer
+          blocks={[facebookVideoBlockEmbed]}
+          source="https://www.facebook.com/RickAstley/videos/1378590239249667"
+        />,
+        { service: 'news', isAmp: false, pageType: ARTICLE_PAGE },
+      );
+
+      expect(container.firstChild).toMatchSnapshot();
+      expect(
+        document.querySelector(
+          'head script[src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0"]',
+        ),
+      ).toBeTruthy();
+      expect(loggerMock.info).toHaveBeenCalledTimes(1);
+      expect(loggerMock.info).toHaveBeenCalledWith(SOCIAL_EMBED_RENDERED, {
+        provider: 'facebook',
+        href: 'https://www.facebook.com/RickAstley/videos/1378590239249667',
+      });
+      unmount();
+      expect(
+        document.querySelector(
+          'head script[src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0"]',
+        ),
+      ).toBeFalsy();
+    });
+
+    it('should render the correct skip link text when indexOfType is provided (means this is one of multiple e.g. Twitter embeds in the article)', () => {
+      render(
+        <SocialEmbedContainer
+          blocks={[twitterBlock]}
+          source="https://twitter.com/BBCNews/status/1384138850478346243?s=20"
+        />,
+        { service: 'news', isAmp: false, pageType: ARTICLE_PAGE },
+      );
+
+      expect(screen.getByText('End of Twitter content, 1')).toBeInTheDocument();
     });
 
     it('should render the correct skip link text when indexOfType is not provided (means this is the only e.g. Twitter embed in the article)', () => {
-      const { queryByText } = render(
-        withContexts(SocialEmbedContainer, {
-          isAmp: false,
-          isEnabled: true,
-          pageType: ARTICLE_PAGE,
-        })({
-          blocks: [
+      render(
+        <SocialEmbedContainer
+          blocks={[
             {
               type: 'renditions',
               model: {
@@ -98,27 +220,30 @@ describe('SocialEmbedContainer', () => {
                 ],
               },
             },
-          ],
-          source: 'https://twitter.com/BBCNews/status/1384138850478346243?s=20',
-        }),
+          ]}
+          source="https://twitter.com/BBCNews/status/1384138850478346243?s=20"
+        />,
+        { service: 'news', isAmp: false, pageType: ARTICLE_PAGE },
       );
 
-      expect(queryByText('End of Twitter content, 1')).not.toBeInTheDocument();
-      expect(queryByText('End of Twitter content')).toBeInTheDocument();
+      expect(
+        screen.queryByText('End of Twitter content, 1'),
+      ).not.toBeInTheDocument();
+      expect(screen.queryByText('End of Twitter content')).toBeInTheDocument();
     });
   });
 
   describe('AMP', () => {
-    shouldMatchSnapshot(
-      'should render correctly',
-      withContexts(SocialEmbedContainer, {
-        isAmp: true,
-        isEnabled: true,
-        pageType: ARTICLE_PAGE,
-      })({
-        blocks: [twitterBlock],
-        source: 'https://twitter.com/BBCNews/status/1384138850478346243?s=20',
-      }),
-    );
+    it('should match snapshot', () => {
+      const { container } = render(
+        <SocialEmbedContainer
+          blocks={[twitterBlock]}
+          source="https://twitter.com/BBCNews/status/1384138850478346243?s=20"
+        />,
+        { service: 'news', isAmp: false, pageType: ARTICLE_PAGE },
+      );
+
+      expect(container.firstChild).toMatchSnapshot();
+    });
   });
 });

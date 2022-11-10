@@ -8,7 +8,6 @@ import { GelFontSize, FontVariant } from '../../models/types/theming';
 interface Props<T extends React.ElementType> {
   as?: T;
   className?: string;
-  children: React.ReactNode;
   size?: GelFontSize;
   fontVariant?: FontVariant;
 }

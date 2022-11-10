@@ -498,7 +498,7 @@ describe('getAtUserId', () => {
     expect(JSON.parse(cookieValue)).toEqual({
       val: atUserId,
     });
-    expect(cookieOptions).toEqual({ expires: 397, path: '/' });
+    expect(cookieOptions).toEqual({ expires: 397, path: '/', secure: true });
     expect(cookieSetterSpy).toHaveBeenCalledTimes(1);
   });
 
@@ -514,7 +514,7 @@ describe('getAtUserId', () => {
     expect(JSON.parse(cookieValue)).toEqual({
       val: atUserId,
     });
-    expect(cookieOptions).toEqual({ expires: 397, path: '/' });
+    expect(cookieOptions).toEqual({ expires: 397, path: '/', secure: true });
     expect(cookieSetterSpy).toHaveBeenCalledTimes(1);
   });
 });

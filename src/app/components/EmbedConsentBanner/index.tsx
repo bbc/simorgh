@@ -1,22 +1,34 @@
 import React, { useState, PropsWithChildren } from 'react';
-import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
-import { PageTypes, SocialEmbedProviders } from '../../models/types/global';
-
 import ConsentBanner from './ConsentBanner';
 
-interface ConsentBannerProps {
-  pageType: PageTypes;
-  provider: SocialEmbedProviders;
+import { SocialEmbedProviders } from '../../models/types/global';
+import useClickTrackerHandler from '../../hooks/useClickTrackerHandler';
+
+export type ConsentBannerProviders = Extract<
+  SocialEmbedProviders,
+  'youtube' | 'tiktok'
+>;
+
+export const CONSENT_BANNER_PROVIDERS: ConsentBannerProviders[] = [
+  'youtube',
+  'tiktok',
+];
+
+export const getEventTrackingData = (provider: ConsentBannerProviders) => ({
+  componentName: `social-consent-banner-${provider}`,
+});
+
+type ConsentBannerProps = {
+  provider: ConsentBannerProviders;
   id?: string;
-}
+};
 
 const EmbedConsentBannerAmp = ({
-  pageType,
   provider,
   id,
   children,
 }: PropsWithChildren<ConsentBannerProps>) => {
-  if (pageType !== ARTICLE_PAGE || provider !== 'youtube')
+  if (!CONSENT_BANNER_PROVIDERS.includes(provider))
     return children as JSX.Element;
 
   return (
@@ -38,21 +50,29 @@ const EmbedConsentBannerAmp = ({
 };
 
 const EmbedConsentBannerCanonical = ({
-  pageType,
   provider,
   children,
-}: PropsWithChildren<Partial<ConsentBannerProps>>) => {
+}: PropsWithChildren<Omit<ConsentBannerProps, 'id'>>) => {
   const [consented, setConsented] = useState(false);
 
+  const handleClickTracking = useClickTrackerHandler(
+    getEventTrackingData(provider),
+  );
+
   const showConsentBanner =
-    pageType === ARTICLE_PAGE && provider === 'youtube' && !consented;
+    CONSENT_BANNER_PROVIDERS.includes(provider) && !consented;
 
   if (!showConsentBanner) return children as JSX.Element;
 
   return (
     <ConsentBanner
       provider={provider}
-      clickHandler={{ onClick: () => setConsented(true) }}
+      clickHandler={{
+        onClick: e => {
+          setConsented(true);
+          handleClickTracking(e);
+        },
+      }}
     />
   );
 };

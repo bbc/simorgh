@@ -165,6 +165,14 @@ export const mainTranslations = {
       callToActionLinkUrl: 'https://www.bbc.com/russian',
     },
   },
+  byline: {
+    articleInformation: 'О статье',
+    author: 'Автор',
+    listItemImage: 'Добавить фото',
+    published: 'Опубликовано',
+    reportingFrom: 'Место сообщения',
+    role: 'Должность',
+  },
   media: {
     noJs: 'Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер',
     contentExpired: 'Контент больше не доступен.',
@@ -216,14 +224,8 @@ export const mainTranslations = {
     },
     consentBanner: {
       heading: `Разрешить контент [social_media_site]?`,
-      body: `Эта статья содержит контент, предоставленный [social_media_site].  Мы просим вашего разрешения до загрузки, потому что он может использовать кукис и другие технологии. Вы можете ознакомиться с [link] правилами кукис [/link] и [link] политикой личных данных [/link] [social_media_site], прежде чем дать согласие. Чтобы увидеть этот контент, выберите “Согласиться и продолжить”.`,
-      cookiesUrl: {
-        youtube: 'https://policies.google.com/technologies/cookies',
-      },
-      privacyUrl: {
-        youtube: 'https://policies.google.com/privacy',
-      },
-      button: 'Принять и продолжить',
+      body: `Этот материал содержит контент, предоставленный [social_media_site].  Мы просим вашего разрешения до загрузки, потому что он может использовать кукис и другие технологии. Вы можете ознакомиться с [link] правилами кукис [/link] и [link] политикой личных данных [/link] [social_media_site], прежде чем дать согласие. Чтобы увидеть этот контент, выберите “Согласиться и продолжить”.`,
+      button: 'Согласиться и продолжить',
     },
   },
   include: {
@@ -380,10 +382,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Война в Украине',
         url: '/russian/topics/cez0n29ggrdt',
-      },
-      {
-        title: 'Коронавирус',
-        url: '/russian/in-depth-51962199',
       },
       {
         title: 'Истории',

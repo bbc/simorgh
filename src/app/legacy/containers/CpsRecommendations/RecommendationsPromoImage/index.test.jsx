@@ -3,15 +3,12 @@ import { render } from '@testing-library/react';
 import RecommendationsImage from '.';
 
 const indexFixtureData = {
-  id: '111155484',
-  subType: 'index',
-  href: 'http://c.files.bbci.co.uk/BD47/production/_111155484_mediaitem111155481.jpg',
-  path: '/cpsprodpb/BD47/production/_111155484_mediaitem111155481.jpg',
-  height: 549,
-  width: 976,
-  altText: 'Angie Dodge',
-  copyrightHolder: 'BBC',
-  type: 'image',
+  width: 1023,
+  height: 575,
+  altText: 'dolar TL',
+  copyrightHolder: 'Getty Images',
+  originCode: 'cpsprodpb',
+  locator: '98dd/live/59717db0-1f53-11ed-aa9d-57accb179502.jpg',
 };
 
 describe('RecommendationsImage', () => {
@@ -24,10 +21,10 @@ describe('RecommendationsImage', () => {
     expect(
       container.getElementsByTagName('img')[0].getAttribute('src'),
     ).toEqual(
-      `https://ichef.bbci.co.uk/news/660/cpsprodpb/BD47/production/_111155484_mediaitem111155481.jpg`,
+      `https://ichef.bbci.co.uk/news/660/cpsprodpb/98dd/live/59717db0-1f53-11ed-aa9d-57accb179502.jpg`,
     );
     expect(
       container.getElementsByTagName('img')[0].getAttribute('alt'),
-    ).toEqual('Angie Dodge');
+    ).toEqual('dolar TL');
   });
 });
