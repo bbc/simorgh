@@ -1,0 +1,471 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:burmese/in-depth-45972737",
+    "locators": {
+      "assetUri": "/burmese/in-depth-45972737",
+      "cpsUrn": "urn:bbc:content:assetUri:burmese/in-depth-45972737",
+      "curie": "http://www.bbc.co.uk/asset/bd010658-886a-6e4e-9a48-a5d1ff3b9d04",
+      "assetId": "45972737"
+    },
+    "type": "STY",
+    "createdBy": "burmese-v6",
+    "language": "my",
+    "lastUpdated": 1645356488240,
+    "firstPublished": 1540405560000,
+    "lastPublished": 1540409257000,
+    "timestamp": 1540409257000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "sty",
+      "counterName": "burmese.in_depth.story.45972737.page",
+      "cps_asset_id": "45972737",
+      "contentId": "urn:bbc:cps:curie:asset:bd010658-886a-6e4e-9a48-a5d1ff3b9d04"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/FactCheck",
+        "categoryName": "Fact Check"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e2939461b000e9dabf8",
+          "campaignName": "Educate me"
+        },
+        {
+          "campaignId": "5a988e3139461b000e9dabf9",
+          "campaignName": "Divert me"
+        },
+        {
+          "campaignId": "5a988e3e39461b000e9dabfb",
+          "campaignName": "Keep me on trend"
+        },
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "Update me"
+        }
+      ],
+      "taggings": []
+    },
+    "tags": {},
+    "version": "v1.4.0",
+    "blockTypes": ["image", "paragraph", "list", "include", "media"],
+    "includeComments": false,
+    "atiAnalytics": { "producerName": "BURMESE", "producerId": "35" },
+    "readTime": 3,
+    "siteUri": "/burmese"
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "104018504",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/9E85/production/_104018504_gettyimages-662922154.jpg",
+        "path": "/cpsprodpb/9E85/production/_104018504_gettyimages-662922154.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ရွေးကောက်ပွဲ",
+        "caption": "အခု ကြားဖြတ် ရွေးကောက်ပွဲက NLD အတွက် အစမ်းသပ်ခံ ဖြစ်နိုင်",
+        "copyrightHolder": "AFP",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "နိုဝင်ဘာလ ၃ ရက်မှာ အမျိုးသား ဒီမိုကရေစီ အဖွဲ့ချုပ် NLD ပါတီ အစိုးရ သက်တမ်း ရဲ့ ဒုတိယ အကြိမ်မြောက် ကြားဖြတ် ရွေးကောက်ပွဲ ကို ကျင်းပမှာ ဖြစ်ပါတယ်။ ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "အခု ကျင်းပမယ့် ရွေးကောက်ပွဲ ကို ပါတီ အသီးသီး က ကိုယ်စားလှယ်လောင်း တွေ၊ တစ်သီးပုဂ္ဂလ ကိုယ်စားလှယ်လောင်းတွေ စုစုပေါင်း ၆၉ ဦး ဝင်ရောက် ယှဉ်ပြိုင် ကြမှာ ဖြစ်ပါတယ်။ ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "လစ်လပ်တဲ့ မဲဆန္ဒနယ်ပေါင်း (၁၃) နေရာရှိပြီး အမျိုးသား လွှတ်တော် (၁) နေရာ၊ ပြည်သူ့ လွှတ်တော် (၄) နေရာ၊ တိုင်း လွှတ်တော် အသီးသီး ကိုယ် စားလှယ် (၇) နေရာ နဲ့ ရှမ်း တိုင်းရင်းသား ရေးရာ ဝန်ကြီး (၁) နေရာ အတွက် ရွေးချယ် ခံရမှာ ဖြစ်ပါတယ်။ ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>burmese/burma-44666132</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "ပြည်ခိုင်ဖြိုး ကြားဖြတ် ဝင်၊ မဝင် မဆုံးဖြတ်ရသေး",
+                  "headline": "ပြည်ခိုင်ဖြိုး ကြားဖြတ် ဝင်၊ မဝင် မဆုံးဖြတ်ရသေး",
+                  "overtyped": "ပြည်ခိုင်ဖြိုး ကြားဖြတ် ဝင်၊ မဝင် မဆုံးဖြတ်ရသေး"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/burmese/burma-44666132"
+                },
+                "summary": "၂၀၁၇ ကြားဖြတ်ရွေးကောက်ပွဲ ရွေးကောက်ပွဲကော်မရှင် ဆုံးဖြတ်ချက်တွေအပေါ် သံသယရှိနေ",
+                "timestamp": 1530337035000,
+                "language": "my",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:burmese/burma-44666132",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>burmese/burma-39546222</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "ဒေါ်အောင်ဆန်းစုကြည် အခြေခံဥပဒေ ချိုးဖောက်တယ်လို့ စွပ်စွဲခံရ",
+                  "headline": "ဒေါ်အောင်ဆန်းစုကြည် အခြေခံဥပဒေ ချိုးဖောက်တယ်လို့ စွပ်စွဲခံရ",
+                  "overtyped": "ဒေါ်အောင်ဆန်းစုကြည် အခြေခံဥပဒေ ချိုးဖောက်တယ်လို့ စွပ်စွဲခံရ"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/burmese/burma-39546222"
+                },
+                "summary": "ကြားဖြတ်ရွေးကောက်ပွဲအတွက် မဲဆွယ်တဲ့သဘော ပြောကြားမှုတွေက အခြေခံဥပဒေကို ချိုးဖောက်တယ်လို့ ပါတီ ၁၂ ခုက စွပ်စွဲ",
+                "timestamp": 1491746521000,
+                "language": "my",
+                "passport": {
+                  "category": { "categoryId": "", "categoryName": "" },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:burmese/burma-39546222",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>burmese/burma-45833444</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "လူ့အခွင့်အရေးကော်မရှင်က ကြားဖြတ်ရွေးကောက်ပွဲ စောင့်ကြည့်မယ်",
+                  "headline": "လူ့အခွင့်အရေးကော်မရှင်က ကြားဖြတ်ရွေးကောက်ပွဲ စောင့်ကြည့်မယ်",
+                  "overtyped": "လူ့အခွင့်အရေးကော်မရှင်က ကြားဖြတ်ရွေးကောက်ပွဲ စောင့်ကြည့်မယ်"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/burmese/burma-45833444"
+                },
+                "summary": "၂၀၂၀ အထွေထွေ ရွေးကောက်ပွဲမှာလည်း လေ့လာ စောင့်ကြည့်နိုင်ဖို့ အခုကတည်းက စတင်လုပ်ဆောင်တာ",
+                "timestamp": 1539336150000,
+                "language": "my",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:burmese/burma-45833444",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "ပြည်သူ့ လွှတ်တော် ကိုယ်စားလှယ် (၄) နေရာ လစ်လပ် နေတဲ့ နေရာ တွေက တော့ ကန်ပက်လက် (ချင်းပြည်နယ်)၊ မြင်းခြံ (မန္တလေးတိုင်း)၊ တာမွေ (ရန်ကုန်တိုင်း)၊ လဲချား (ရှမ်းပြည်နယ်) တို့ပဲဖြစ်ပါတယ်။ ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "အမျိုးသား လွှတ်တော် ကိုယ်စားလှယ် (၁) နေရာ အတွက် ကတော့ ကချင်ပြည်နယ် မဲဆန္ဒနယ် အမှတ် (၂) အတွက် ဖြစ်ပြီး အကျုံးဝင် မြို့နယ် ကတော့ မြစ်ကြီးနား မြို့နယ်ပါ။ ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "တိုင်း နဲ့ ပြည်နယ် လွှတ်တော် ကိုယ်စားလှယ် နေရာ (၇) နေရာကတော့ မတူပီ (ချင်းပြည်နယ်)၊ တမူး (စစ်ကိုင်းတိုင်း)၊ အုတ်တွင်း (ပဲခူးတိုင်း)၊ သပိတ်ကျင်း (မန္တလေးတိုင်း)၊ ရသေ့တောင် (ရခိုင်ပြည်နယ်)၊ မင်းဘူး (မကွေးတိုင်း)၊ ရန်ကုန် ဆိပ်ကမ်း (ရန်ကုန်တိုင်း) တို့ ဖြစ်ပါတယ်။ ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "required": false,
+        "title": "ပြည်နယ်တိုင်း အသီးသီး ကကိုယ်စားလှယ်လောင်းစာရင်း",
+        "href": "/include/vjeastasia/192-myanmar-by-election-candidates/burmese/app?responsive=true&newsapps=true&app-image=https://placehold.it/640x360&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://placehold.it/640x360",
+        "platform": "highweb",
+        "type": "include"
+      },
+      {
+        "text": "ရှမ်းတိုင်းရင်းသား လူမျိုးရေးရာ ဝန်ကြီး လစ်လပ် (၁) နေရာ အတွက် ကတော့ မန္တလေး တိုင်းမှာ ယှဉ်ပြိုင်ရမှာဖြစ်ပါတယ်။ ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "၂၀၁၇ ခုနှစ် ကြားဖြတ် ရွေးကောက်ပွဲ ပြီးနောက် အမျိုးသား ဒီမိုကရေစီ အဖွဲ့ချုပ် NLD ပါတီက လွှတ်တော် ကိုယ်စားလှယ် (၁၀) ဦး၊ ရှမ်းတိုင်းရင်းသား များ ဒီမိုကရေစီ အဖွဲ့ချုပ် SNLD ပါတီ က လွှတ်တော် ကိုယ်စားလှယ် (၁) ဦး တို့ ကွယ်လွန် သွားခဲ့တာကြောင့် လွှတ်တော် ကိုယ်စားလှယ် လစ်လပ် နေရာတွေ ဖြစ်ပေါ် ခဲ့တာပါ။ ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "တာမွေ မြို့နယ် ပြည်သူ့ လွှတ်တော် ကိုယ်စားလှယ် (၁) နေရာ ကတော့ သမ္မတ ဦးဝင်းမြင့် ရဲ့ မဲဆန္ဒနယ် ဖြစ်ပြီး သမ္မတ အဖြစ် တာဝန် ယူခဲ့ တာကြောင့် လစ်လပ် ခဲ့တာ ဖြစ်ပါတယ်။ နောက်ပြီး မင်းဘူး မဲဆန္ဒနယ် က လွှတ်တော် ကိုယ်စားလှယ် ဦးနေမျိုးကျော် က နုတ်ထွက် သွားခဲ့တဲ့ အတွက်လည်း လစ်လပ် နေရာ ဖြစ်ပေါ် ခဲ့တာပါ။ ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "အခု လာမယ့် ကြားဖြတ်ရွေးကောက်ပွဲမှာ နိုင်ငံရေး ပါတီ (၂၄) ပါတီ က ကိုယ်စားလှယ်လောင်း (၆၂)ဦး၊ တစ်သီး ပုဂ္ဂလ ကိုယ်စားလှယ်လောင်း (၇) ဦး က ပါဝင်ယှဉ်ပြိုင်ကြမှာ ဖြစ်ပါတယ်။ ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "နိုဝင်ဘာ ကြားဖြတ် ရွေးကောက်ပွဲ မှာ လက်ရှိ အာဏာရ NLD ပါတီက လစ်လပ် နေတဲ့ မဲဆန္ဒနယ် (၁၃) နေရာ စလုံး ကို ဝင်ရောက် ယှဉ်ပြိုင်မှာ ဖြစ်ပြီး ၁၃ နေရာ စလုံး ကို အနိုင် ရရှိဖို့ မျှော်မှန်း ထားတယ်လို့ ပါတီ ပြောရေး ဆိုခွင့် ရှိသူ ဒေါက်တာ မျိုးညွန့် က ဘီဘီစီကို ပြောပါတယ်။ ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "104017925",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/CEEB/production/_104017925_gettyimages-662730312.jpg",
+        "path": "/cpsprodpb/CEEB/production/_104017925_gettyimages-662730312.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ရွေးကောက်ပွဲ",
+        "caption": "၂၀၁၅ ရွေးကောက်ပွဲမှာ ပါဝင်မဲပေးခဲ့သူ",
+        "copyrightHolder": "AFP",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "ဒါပေမယ့် တိုင်းရင်းသား မဲဆန္ဒနယ်မြေ တချို့မှာတော့ NLD ကိုယ်စားလှယ် တွေ အနေနဲ့ အကြိတ်အနယ် ယှဉ်ပြိုင် ရနိုင်ကြောင်း NLD ပါတီ ဒုတိယ ဥက္ကဋ္ဌ လည်းဖြစ်၊ မန္တလေး တိုင်း  ဝန်ကြီးချုပ်လည်း ဖြစ်တဲ့ ဒေါက်တာ ဇော်မြင့်မောင် က သတင်းဌာန တချို့နဲ့ တွေ့ဆုံ စဉ်မှာ ပြောကြားဖူးပါတယ်။ ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "အတိုက်အခံ လို့ ခေါ်ဆို နိုင်တဲ့ ပြည်ထောင်စု ကြံ့ခိုင်ရေး နဲ့ ဖွံ့ဖြိုးရေး ပါတီ ကတော့ မဲဆန္ဒနယ် ၁၀ နေရာပဲ ဝင်ရောက် ယှဉ်ပြိုင်မှာ ဖြစ်ပါတယ်။ လဲချား၊ မတူပီ နဲ့ ရသေ့တောင် မဲဆန္ဒနယ် တွေကိုတော့ ပြည်ခိုင်ဖြိုး အနေနဲ့ လက်ရှောင်ပြီး ဝင်ရောက် ယှဉ်ပြိုင်ခြင်း မရှိခဲ့ပါဘူး။ ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "နိုဝင်ဘာ ရွေးကောက်ပွဲမှာ တခြား ပါတီတွေ ဖြစ်တဲ့ တိုင်းရင်းသား စည်းလုံး ညီညွှတ်ရေးပါတီ၊ ရှမ်းတိုင်းရင်းသားများ ဒီမိုကရေစီ အဖွဲ့ချုပ် SLND ပါတီ၊  အမျိုးသား ဒီမိုကရေစီ အင်အားစုပါတီ၊ အမျိုးသား တိုးတက်ရေး ပါတီ၊ ဒီမိုကရက်တစ် မြန်မာ ပါတီ၊ လူ့ဘောင်သစ် ဒီမိုကရက်တစ်ပါတီ၊ မြန်မာ ပြည်သူ့ ဒီမိုကရက်တစ်ပါတီ၊ အမျိုးသား ညီညွတ်သော ဒီမိုကရက်တစ် ပါတီ၊ မြန်မာ နိုင်ငံ တောင်သူ လယ်သမား ဖွံ့ဖြိုးတိုးတက်ရေး ပါတီ၊ ပြည်သူ့ အလုပ်သမား ပါတီ၊ ချင်းတိုးတက်ရေး ပါတီ၊ ချင်း ဒီမိုကရေစီ အဖွဲ့ချုပ် ပါတီ၊ ရှမ်းနီ(တိုင်းလိုင်) နှင့် မြောက်ပိုင်း ရှမ်းမျိုးနွယ်စုများ သွေးစည်း ညီညွှတ်ရေး ပါတီ၊ ပြည်ထောင်စု လယ်သမား အလုပ်သမား အင်အားစု ပါတီ၊ ဇိုတိုင်းရင်း သား ဒေသ ဖွံ့ဖြိုးရေး ပါတီ၊ ပြည်ထောင်စု တိုင်းရင်းသားများ ဖက်ဒရယ် ဒီမိုကရေစီ ပါတီ၊ ရခိုင် ဒီမိုကရေစီ အဖွဲ့ချုပ် ပါတီ စတဲ့ ပါတီ အသီးသီး က ဝင်ရောက် ယှဉ်ပြိုင်မှာ ဖြစ်ပါတယ်။ ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "တစ်သီး ပုဂ္ဂလ ကိုယ်စားလှယ် (၇) ဦးကတော့ အုတ်တွင်း မြို့နယ် က တဦး၊ ကချင် ပြည်နယ် အမျိုးသား လွှတ်တော် နေရာ အတွက် တဦး၊ မင်းဘူး မြို့နယ်မှာ နှစ်ဦး၊ ရှမ်းတိုင်းရင်းသား ကိုယ်စားလှယ် နေရာ အတွက် တဦး၊ ရသေ့တောင် မြို့နယ်မှာ တဦး၊ ရန်ကုန်တိုင်း ဆိပ်ကမ်း မြို့နယ်မှာ တဦး တို့ ပါဝင် ယှဉ်ပြိုင်ကြမှာပါ။ ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ရန်ကုန်တိုင်း  ဆိပ်ကမ်း မြို့နယ်မှာ စုစုပေါင်း ကိုယ်စားလှယ် (၉)ဦး ဝင်ရောက် ယှဉ်ပြိုင်မှာ ဖြစ်ပြီး ကိုယ်စားလှယ် အများဆုံး ယှဉ်ပြိုင်မှု ဖြစ်ပါတယ်။ ချင်းပြည်နယ် မတူပီ မြို့နယ် မှာတော့ NLD ကိုယ်စားလှယ် နဲ့ ချင်း ဒီမိုကရေစီ အဖွဲ့ချုပ် ပါတီ က ကိုယ်စားလှယ် (၂) ဦးသာ ဝင်ရောက်ယှဉ်ပြိုင်မှာ ဖြစ်လို့ ကိုယ်စားလှယ် အနည်းဆုံး ယှဉ်ပြိုင်တဲ့ မဲဆန္ဒနယ် ဖြစ်ပါတယ်။ ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "နိုဝင်ဘာ ကြားဖြတ် ရွေးကောက်ပွဲ ဟာ အမျိုးသမီး ကိုယ်စားလှယ်လောင်း(၇) ဦးသာ ပါဝင်တဲ့ အတွက် ရာခိုင်နှုန်း အားဖြင့် အင်မတန်မှ နည်းပါးတဲ့ အရေ အတွက်ပါ။  ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "104017923",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/80CB/production/_104017923_women_in_parliament_burmese_graph640-nc.png",
+        "path": "/cpsprodpb/80CB/production/_104017923_women_in_parliament_burmese_graph640-nc.png",
+        "height": 573,
+        "width": 641,
+        "altText": "ရွေးကောက်ပွဲ",
+        "caption": "လက်ရှိလွှတ်တော် တွင်းက အမျိုးသမီးကိုယ်စားလှယ် ဉီးရေ ရာခိုင်နှုန်း ပြဇယား",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "ကြားဖြတ် ရွေးကောက်ပွဲ မဲဆန္ဒနယ် (၁၃) နေရာ အနက် (၇) နေရာဟာ တိုင်းဒေသကြီးတွေမှာ ဖြစ်ပြီး ကျန် (၆) နေရာ ကတော့ ပြည်နယ်တွေမှာ ဖြစ်ပါတယ်။ ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "လက်ရှိကြားဖြတ်ရွေးကောက်ပွဲ ကျင်းပမယ့် မဲဆန္ဒနယ်အချို့က ၂၀၁၅ အထွေထွေရွေးကောက်ပွဲ မဲရလဒ် တွေကို ဖော်ပြရမယ်ဆိုရင်တော့ NLD နဲ့ ချင်း ဒီမိုကရေစီ အဖွဲ့ချုပ် ပါတီ တို့ က ကိုယ်စားလှယ်လောင်း (၂)ဦးသာ ယှဉ်ပြိုင်ကြမယ့် မတူပီ မဲဆန္ဒမှာ NLD ပါတီ က မဲရလဒ် ၅၅၄၂ မဲ နဲ့ အနိုင် ရရှိထားခဲ့တာပါ။ ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ကချင်ပြည်နယ် မဲဆန္ဒနယ် အမှတ်(၂) အမျိုးသား လွှတ်တော် ကိုယ်စားလှယ် နေရာမှာတော့ ကိုယ်စားလှယ်လောင်း (၆)ဦး ဝင်ရောက် ယှဉ်ပြိုင်မှာ ဖြစ်ပြီး ၂၀၁၅ ခုနှစ် မဲရလဒ်မှာတော့ ၄၉,၈၈၂ မဲ နဲ့ NLD ပါတီ ကိုယ်စားလှယ် က အနိုင် ရရှိခဲ့တဲ့ ဒေသ ဖြစ်ပါတယ်။ ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "မန္တလေး တိုင်း  ရှမ်းတိုင်းရင်းသား ကိုယ်စားလှယ် နေရာ အတွက် ကိုယ်စားလှယ်လောင်း (၅)ဦး ဝင်ရောက် ယှဉ်ပြိုင်မှာ ဖြစ်ပြီး ၂၀၁၅ ခုနှစ် မဲရလဒ်မှာတော့ NLD ပါတီ ကိုယ်စားလှယ် က မဲရလဒ် ၁၀,၅၀၇ မဲ နဲ့ အနိုင် ရရှိထားခဲ့တာပါ။",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "104017926",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/F5FB/production/_104017926_state_union_composition_burmese_graph640-nc.png",
+        "path": "/cpsprodpb/F5FB/production/_104017926_state_union_composition_burmese_graph640-nc.png",
+        "height": 1051,
+        "width": 641,
+        "altText": "ရွေးကောက်ပွဲ",
+        "caption": "လွှတ်တော် ၂ ရပ်ဖွဲ့စည်းပုံ",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "ချင်းပြည်နယ် ကန်ပက်လက် မြို့နယ် ပြည်သူ့ လွှတ်တော် ကိုယ်စားလှယ် နေရာ အတွက် ကိုယ်စားလှယ်လောင်း (၄)ဦး ဝင်ရောက် ယှဉ်ပြိုင်မှာ ဖြစ်ပါတယ်။ ၂၀၁၅ ခုနှစ် အထွေထွေ ရွေးကောက်ပွဲမှာတော့ NLD ပါတီ အနေနဲ့ မဲအပြတ်အသတ် အသာစီး ရယူ နိုင်ခြင်း မရှိတဲ့ မဲဆန္ဒနယ် ဖြစ်ပါတယ်။ ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ရသေ့တောင် မဲဆန္ဒနယ်မှာတော့ ကိုယ်စားလှယ်လောင်း (၄)ဦး ဝင်ရောက် ယှဉ်ပြိုင်မှာဖြစ်ပြီး အရင် ၂၀၁၅ အထွေထွေ ရွေးကောက်ပွဲမှာ ရခိုင် အမျိုသား ပါတီ ကိုယ်စားလှယ် က မဲရလဒ် ၁၇,၈၅၆ မဲ နဲ့ အနိုင် ရရှိထား တဲ့ ဒေသ ဖြစ်ပါတယ်။ ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "လဲချား မြို့နယ် မဲဆန္ဒနယ်မှာလည်း ကိုယ်စားလှယ်လောင်း (၃)ဦး ဝင်ရောက် ယှဉ်ပြိုင်မှာပါ။ အဲဒီမှာတော့ ၂၀၁၅ ခုနှစ် က ရှမ်းတိုင်းရင်းသားများ ဒီမိုကရေစီ အဖွဲ့ချုပ် ပါတီက မဲရလဒ် ၁၃,၀၅၁ မဲရလဒ်နဲ့ အနိုင် ရရှိခဲ့တာဖြစ်ပါတယ်။ ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "တမူး မဲဆန္ဒနယ်မှာတော့ ကိုယ်စားလှယ်လောင်း (၄) ဦး ပါဝင်ယှဉ်ပြိုင်မှာ ဖြစ်ပါတယ်။ ၂၀၁၅ ခုနှစ် အထွေထွေ ရွေးကောက်ပွဲ မဲရလဒ်တွေမှာတော့ NLD ပါတီ က ၈၇၂၀ မဲ နဲ့ အနိုင်ရရှိခဲ့ပါတယ်။ ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ရွေးကောက်ပွဲ ကျင်းပ ဖို့ ရက်ပိုင်းသာ လိုတော့တဲ့ အချိန်မှာ မဲပေး နိုင်တဲ့ သူ စာရင်း ကို သက်ဆိုင်ရာ မဲဆန္ဒနယ် အလိုက် မြန်မာနိုင်ငံ ရွေးကောက်ပွဲ ကော်မရှင် က ထုတ်ပြန် ထားခဲ့ပါတယ်။ ဒါပေမယ့် တချို့ ဒေသ တွေမှာ တော့ ကြားဖြတ်ရွေးကောက်ပွဲ မဲပေး နိုင်တဲ့ စာရင်းထဲမှာ နာမည် မပါသေးတဲ့ အဖြစ်အပျက် တွေကြောင့် ပြည်သူတွေ အကြားမှာ ဝေဖန် ပြောဆိုမှုတွေလည်း ရှိနေဆဲပါ။ ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "NLD အစိုးရ လက်ထက် ၂၀၁၇ ခုနှစ် အတွင်းမှာ ပထမ အကြိမ် ကြားဖြတ် ရွေးကောက်ပွဲ ကိုကျင်းပ ခဲ့ဖူးပြီး အဲဒီ အချိန်တုန်း ကတော့ လစ်လပ် မဲဆန္ဒနယ်(၁၉) ခု ရှိခဲ့ပါတယ်။ ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "p05mp7hd",
+        "subType": "clip",
+        "format": "video",
+        "title": "ရွေးကောက်ပွဲ ၂ နှစ်ပြည့် အပြောင်းအလဲ",
+        "synopses": {
+          "short": "ရွေးကောက်ပွဲ ၂ နှစ်ပြည့် အပြောင်းအလဲ",
+          "medium": "၂၀၁၅ ရွေးကောက်ပွဲကြီး ကျင်းပခဲ့တာ ဒီတစ်ပတ်အတွင်းမှာ ၂ နှစ် ပြည့်ခဲ့ပါပြီ။",
+          "long": "၂၀၁၅ ရွေးကောက်ပွဲကြီး ကျင်းပခဲ့တာ ဒီတစ်ပတ်အတွင်းမှာ ၂ နှစ် ပြည့်ခဲ့ပါပြီ။  နိုဝင်ဘာ ၈ ရွေးကောက်ပွဲ ၂ နှစ်ပြည့် အထူးအစီအစဉ်အဖြစ် ဘီဘီစီမြန်မာပိုင်းကနေ ရွေးကောက်ပွဲနဲ့ ဆိုင်တဲ့ အစီအစဉ်တွေကို ဒီတစ်ပတ်လုံး  ထည့်သွင်း တင်ဆက်ပေးနေပါတယ်။ အဲဒီထဲက တစ်ခုကတော့ ရွေးကောက်ပွဲမှာ မဲပေးခဲ့သူ တချို့ဆီ သွားပြီး ဒီ ၂နှစ်တာကာလ အတွင်း သူတို့ အတွက် ဘာတွေ ပြောင်းလဲတာ  မြင်တွေ့ခဲ့ရသလဲလို့ မေးကြည့်ပါတယ်။ ဒီနေ့တော့ ရန်ကုန်တက္ကသိုလ် နိုင်ငံတကာဆက်ဆံရေးပညာဌာန ကထိက ဒေါက်တာသန်းလွင်ဦး က ပညာရေးလောကက ဝန်ထမ်းတဦးရဲ့ အမြင်ကို အခုလို ပြောပြထားပါတယ်။"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05mpbqs.jpg",
+        "embedding": false,
+        "advertising": true,
+        "caption": "ရွေးကောက်ပွဲ ၂ နှစ်ပြည့် အပြောင်းအလဲ",
+        "versions": [
+          {
+            "versionId": "p05mp7hg",
+            "types": ["Original"],
+            "duration": 121,
+            "durationISO8601": "PT2M1S",
+            "warnings": {},
+            "availableTerritories": { "uk": true, "nonUk": true },
+            "availableFrom": 1510330282000
+          }
+        ],
+        "smpKind": "programme",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "ကြားဖြတ် ရွေးကောက်ပွဲ ဘယ်သူတွေ ပြိုင်ကြမလဲ",
+      "headline": "ကြားဖြတ် ရွေးကောက်ပွဲ ဘယ်သူတွေ ပြိုင်ကြမလဲ"
+    },
+    "locators": {
+      "assetUri": "/burmese/in-depth-45972737",
+      "cpsUrn": "urn:bbc:content:assetUri:burmese/in-depth-45972737",
+      "curie": "http://www.bbc.co.uk/asset/bd010658-886a-6e4e-9a48-a5d1ff3b9d04",
+      "assetId": "45972737"
+    },
+    "summary": "နိုဝင်ဘာလ ၃ ရက်နေ့မှာ အမျိုးသား ဒီမိုကရေစီ အဖွဲ့ချုပ် NLD ပါတီ အစိုးရ ရဲ့ ဒုတိယ အကြိမ်မြောက် ကြားဖြတ် ရွေးကောက်ပွဲ ကို ကျင်းပမှာ ဖြစ်",
+    "timestamp": 1540409257000,
+    "language": "my",
+    "byline": {
+      "name": " ကျော်ဇေယျ",
+      "title": "ဘီဘီစီမြန်မာပိုင်း ",
+      "persons": [
+        { "name": "Christian Jarrett", "function": "Especial para BBC Future" }
+      ]
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/FactCheck",
+        "categoryName": "Fact Check"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e2939461b000e9dabf8",
+          "campaignName": "Educate me"
+        },
+        {
+          "campaignId": "5a988e3139461b000e9dabf9",
+          "campaignName": "Divert me"
+        },
+        {
+          "campaignId": "5a988e3e39461b000e9dabfb",
+          "campaignName": "Keep me on trend"
+        },
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "Update me"
+        }
+      ],
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "104017925",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/CEEB/production/_104017925_gettyimages-662730312.jpg",
+      "path": "/cpsprodpb/CEEB/production/_104017925_gettyimages-662730312.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "ရွေးကောက်ပွဲ",
+      "caption": "၂၀၁၅ ရွေးကောက်ပွဲမှာ ပါဝင်မဲပေးခဲ့သူ",
+      "copyrightHolder": "AFP",
+      "originCode": "cpsprodpb",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:burmese/in-depth-45972737",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "ဆောင်းပါး",
+      "uri": "/burmese/indepth",
+      "urlIdentifier": "/burmese/indepth",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း",
+      "uri": "/burmese",
+      "urlIdentifier": "/burmese",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

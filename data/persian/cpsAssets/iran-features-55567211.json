@@ -1,0 +1,476 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:persian/iran-features-55567211",
+    "locators": {
+      "assetUri": "/persian/iran-features-55567211",
+      "cpsUrn": "urn:bbc:content:assetUri:persian/iran-features-55567211",
+      "curie": "http://www.bbc.co.uk/asset/7cd4ea07-ba99-4c75-a960-b0f2e7d38d44",
+      "assetId": "55567211"
+    },
+    "type": "STY",
+    "createdBy": "persian-v6",
+    "language": "fa",
+    "lastUpdated": 1644633290728,
+    "firstPublished": 1609963447000,
+    "lastPublished": 1609963447000,
+    "timestamp": 1609963447000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "ldp_tags": "Iran~Ukraine+Iran+plane+crash~Ukraine",
+      "cps_asset_id": "55567211",
+      "ldp_ids": "511accd7-6ee6-4dfb-8e2b-b236be8cb14c~ceeb4c52-d9f5-4242-96be-bcff77e65500~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+      "contentId": "urn:bbc:cps:curie:asset:7cd4ea07-ba99-4c75-a960-b0f2e7d38d44",
+      "counterName": "persian.iran_features.story.55567211.page",
+      "cps_asset_type": "sty"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+        "categoryName": "Explainer"
+      },
+      "campaigns": [
+        { "campaignId": "5c459d65b74f470023033417", "campaignName": "Hearken" }
+      ],
+      "language": "fa",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
+      "locator": "urn:bbc:cps:curie:asset:7cd4ea07-ba99-4c75-a960-b0f2e7d38d44",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/093fff0e-e9bb-4d78-9e0b-7920c6357368#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+          "value": "http://www.bbc.co.uk/things/ceeb4c52-d9f5-4242-96be-bcff77e65500#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/ceeb4c52-d9f5-4242-96be-bcff77e65500#id"
+        }
+      ],
+      "schemaVersion": "1.2.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id",
+            "thingLabel": "ایران",
+            "thingUri": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id",
+            "thingId": "511accd7-6ee6-4dfb-8e2b-b236be8cb14c",
+            "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+            "thingSameAs": ["http://sws.geonames.org/130758/"],
+            "thingEnglishLabel": "Iran",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/ceeb4c52-d9f5-4242-96be-bcff77e65500#id",
+            "thingLabel": "سقوط هواپیمای اوکراینی در ایران",
+            "thingUri": "http://www.bbc.co.uk/things/ceeb4c52-d9f5-4242-96be-bcff77e65500#id",
+            "thingId": "ceeb4c52-d9f5-4242-96be-bcff77e65500",
+            "thingType": ["core:Thing", "tagging:TagConcept", "core:Event"],
+            "thingSameAs": [],
+            "thingEnglishLabel": "Ukraine Iran plane crash",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+            "thingLabel": "اوکراین",
+            "thingUri": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+            "thingId": "ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Place"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Ukraine",
+              "http://www.wikidata.org/entity/Q212",
+              "http://sws.geonames.org/690791/"
+            ],
+            "thingEnglishLabel": "Ukraine",
+            "type": "about"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
+            "thingLabel": "Explainer",
+            "thingUri": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
+            "thingId": "bb3ead7c-eb94-453b-b9de-34a59aba2fbf",
+            "thingType": ["tagging:Format", "tagging:TagConcept"],
+            "thingSameAs": [
+              "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer"
+            ],
+            "thingEnglishLabel": "Explainer",
+            "thingPreferredLabel": "Explainer",
+            "thingLabelLanguage": "fa",
+            "type": "formats"
+          }
+        ],
+        "contributor": [
+          {
+            "value": "http://www.bbc.co.uk/things/093fff0e-e9bb-4d78-9e0b-7920c6357368#id",
+            "type": "contributor"
+          }
+        ],
+        "primaryMediaType": [
+          {
+            "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+            "type": "primaryMediaType"
+          }
+        ]
+      }
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "ایران",
+          "thingUri": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id",
+          "thingId": "511accd7-6ee6-4dfb-8e2b-b236be8cb14c",
+          "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+          "thingSameAs": ["http://sws.geonames.org/130758/"],
+          "topicName": "ایران",
+          "topicId": "ckdxnwvwwjnt",
+          "curationList": [
+            {
+              "curationId": "a7971bb0-8dd2-4f3f-9b5a-d22d1cda561d",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Iran",
+          "thingLabelLanguage": "fa",
+          "thingPreferredLabel": "Iran"
+        },
+        {
+          "thingLabel": "سقوط هواپیمای اوکراینی در ایران",
+          "thingUri": "http://www.bbc.co.uk/things/ceeb4c52-d9f5-4242-96be-bcff77e65500#id",
+          "thingId": "ceeb4c52-d9f5-4242-96be-bcff77e65500",
+          "thingType": ["core:Thing", "tagging:TagConcept", "core:Event"],
+          "thingSameAs": [],
+          "topicName": "سقوط هواپیمای اوکراینی در ایران",
+          "topicId": "cdvy75m9m59t",
+          "curationList": [
+            {
+              "curationId": "e7e39bf8-d318-4b24-8a9f-8d46b4ac3d7f",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Ukraine Iran plane crash",
+          "thingLabelLanguage": "fa",
+          "thingPreferredLabel": "Ukraine Iran plane crash"
+        },
+        {
+          "thingLabel": "اوکراین",
+          "thingUri": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+          "thingId": "ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Place"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Ukraine",
+            "http://www.wikidata.org/entity/Q212",
+            "http://sws.geonames.org/690791/"
+          ],
+          "topicName": "اوکراین",
+          "topicId": "cnq68798z9nt",
+          "curationList": [
+            {
+              "curationId": "6aba7d38-5a36-4351-99c1-72e5a450b4db",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Ukraine",
+          "thingLabelLanguage": "fa",
+          "thingPreferredLabel": "Ukraine"
+        }
+      ]
+    },
+    "version": "v1.4.0",
+    "blockTypes": ["image", "paragraph", "include"],
+    "includeComments": false,
+    "atiAnalytics": { "producerName": "PERSIAN", "producerId": "69" },
+    "readTime": 1,
+    "siteUri": "/persian",
+    "topics": [
+      {
+        "topicName": "سقوط هواپیمای اوکراینی در ایران",
+        "topicId": "cdvy75m9m59t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/ceeb4c52-d9f5-4242-96be-bcff77e65500#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "e7e39bf8-d318-4b24-8a9f-8d46b4ac3d7f",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["core:Thing", "tagging:TagConcept", "core:Event"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian"
+      },
+      {
+        "topicName": "ایران",
+        "topicId": "ckdxnwvwwjnt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "a7971bb0-8dd2-4f3f-9b5a-d22d1cda561d",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Place", "core:Thing"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian"
+      },
+      {
+        "topicName": "اوکراین",
+        "topicId": "cnq68798z9nt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "6aba7d38-5a36-4351-99c1-72e5a450b4db",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Thing", "core:Place"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian"
+      }
+    ]
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "116372711",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/2DCF/production/_116372711_flight_crash_facewall_1024.jpg",
+        "path": "/cpsprodpb/2DCF/production/_116372711_flight_crash_facewall_1024.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "l",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "در پرونده شلیک به هواپیمای اوکراینی نام ۱۷۶ کشته ثبت شده است. نفر ۱۷۷ ام کودک هفت‌ ماهه‌ای بود که نامش را هوگر گذاشته بودند و پیش از آمدن به دنیا، از دنیا رفت. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "در این صفحه نام تمام قربانیان بر اساس سن، جنسیت، محل اقامت و تحصیل یا ملیت دسته‌بندی شده است. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "بیشتر عکس‌ها از <link><caption>صفحه انجمن خانواده‌های قربانیان</caption><url href=\"https://www.ps752justice.com/fa/\" platform=\"highweb\"/></link> گرفته شده که برای دادخواهی خانواده مسافران پرواز ۷۵۲ ایجاد شده است.",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "required": false,
+        "title": "facewall",
+        "href": "/include/vjneareast/432-ukraine-flight-752-facewall/persian/app?responsive=true&newsapps=true&app-image=https://placehold.it/640x360&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://placehold.it/640x360&app-image-alt-text=Click%20or%20tap%20here%20to%20see%20interactive%20content",
+        "platform": "highweb",
+        "type": "include"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "چهره به چهره؛ مسافران هواپیمای اوکراینی که به مقصد نرسیدند",
+      "headline": "چهره به چهره؛ مسافران هواپیمای اوکراینی که به مقصد نرسیدند"
+    },
+    "locators": {
+      "assetUri": "/persian/iran-features-55567211",
+      "cpsUrn": "urn:bbc:content:assetUri:persian/iran-features-55567211",
+      "curie": "http://www.bbc.co.uk/asset/7cd4ea07-ba99-4c75-a960-b0f2e7d38d44",
+      "assetId": "55567211"
+    },
+    "summary": "در این صفحه نام ۱۷۶ قربانی شلیک سپاه به هواپیمای مسافری اوکراین بر اساس سن، جنسیت، محل اقامت و تحصیل یا ملیت آنان دسته‌بندی شده است.",
+    "timestamp": 1609963447000,
+    "language": "fa",
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+        "categoryName": "Explainer"
+      },
+      "campaigns": [
+        { "campaignId": "5c459d65b74f470023033417", "campaignName": "Hearken" }
+      ],
+      "language": "fa",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
+      "locator": "urn:bbc:cps:curie:asset:7cd4ea07-ba99-4c75-a960-b0f2e7d38d44",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/093fff0e-e9bb-4d78-9e0b-7920c6357368#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+          "value": "http://www.bbc.co.uk/things/ceeb4c52-d9f5-4242-96be-bcff77e65500#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/ceeb4c52-d9f5-4242-96be-bcff77e65500#id"
+        }
+      ],
+      "schemaVersion": "1.2.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id",
+            "thingLabel": "ایران",
+            "thingUri": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id",
+            "thingId": "511accd7-6ee6-4dfb-8e2b-b236be8cb14c",
+            "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+            "thingSameAs": ["http://sws.geonames.org/130758/"],
+            "thingEnglishLabel": "Iran",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/ceeb4c52-d9f5-4242-96be-bcff77e65500#id",
+            "thingLabel": "سقوط هواپیمای اوکراینی در ایران",
+            "thingUri": "http://www.bbc.co.uk/things/ceeb4c52-d9f5-4242-96be-bcff77e65500#id",
+            "thingId": "ceeb4c52-d9f5-4242-96be-bcff77e65500",
+            "thingType": ["core:Thing", "tagging:TagConcept", "core:Event"],
+            "thingSameAs": [],
+            "thingEnglishLabel": "Ukraine Iran plane crash",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+            "thingLabel": "اوکراین",
+            "thingUri": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+            "thingId": "ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Place"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Ukraine",
+              "http://www.wikidata.org/entity/Q212",
+              "http://sws.geonames.org/690791/"
+            ],
+            "thingEnglishLabel": "Ukraine",
+            "type": "about"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
+            "thingLabel": "Explainer",
+            "thingUri": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
+            "thingId": "bb3ead7c-eb94-453b-b9de-34a59aba2fbf",
+            "thingType": ["tagging:Format", "tagging:TagConcept"],
+            "thingSameAs": [
+              "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer"
+            ],
+            "thingEnglishLabel": "Explainer",
+            "thingPreferredLabel": "Explainer",
+            "thingLabelLanguage": "fa",
+            "type": "formats"
+          }
+        ],
+        "contributor": [
+          {
+            "value": "http://www.bbc.co.uk/things/093fff0e-e9bb-4d78-9e0b-7920c6357368#id",
+            "type": "contributor"
+          }
+        ],
+        "primaryMediaType": [
+          {
+            "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+            "type": "primaryMediaType"
+          }
+        ]
+      }
+    },
+    "indexImage": {
+      "id": "116372709",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/16267/production/_116372709_flight_crash_facewall_1024.jpg",
+      "path": "/cpsprodpb/16267/production/_116372709_flight_crash_facewall_1024.jpg",
+      "height": 576,
+      "width": 1024,
+      "altText": "l",
+      "copyrightHolder": "BBC",
+      "originCode": "cpsprodpb",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:persian/iran-features-55567211",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "تحلیل و گزارش - ایران",
+      "uri": "/persian/iran_features",
+      "urlIdentifier": "/persian/iran_features",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Persian",
+      "uri": "/persian",
+      "urlIdentifier": "/persian",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

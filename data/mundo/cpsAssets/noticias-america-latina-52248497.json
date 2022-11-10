@@ -1,0 +1,565 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:mundo/noticias-america-latina-52248497",
+    "locators": {
+      "assetUri": "/mundo/noticias-america-latina-52248497",
+      "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-america-latina-52248497",
+      "curie": "http://www.bbc.co.uk/asset/e4bb0efa-0805-e94c-ae87-9a22213bf25f",
+      "assetId": "52248497"
+    },
+    "type": "STY",
+    "createdBy": "mundo-v6",
+    "language": "es",
+    "lastUpdated": 1644661929654,
+    "firstPublished": 1586972010000,
+    "lastPublished": 1588009940000,
+    "timestamp": 1588009940000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "sty",
+      "counterName": "mundo.latin_america.story.52248497.page",
+      "cps_asset_id": "52248497",
+      "contentId": "urn:bbc:cps:curie:asset:e4bb0efa-0805-e94c-ae87-9a22213bf25f"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
+        "categoryName": "Interactive"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ],
+      "taggings": []
+    },
+    "tags": {},
+    "version": "v1.4.0",
+    "blockTypes": ["image", "paragraph", "list", "include", "social_embed"],
+    "includeComments": false,
+    "atiAnalytics": { "producerName": "MUNDO", "producerId": "62" },
+    "readTime": 2,
+    "siteUri": "/mundo"
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "111770111",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/2B63/production/_111770111_promo_cuarentena3.png",
+        "path": "/cpsprodpb/2B63/production/_111770111_promo_cuarentena3.png",
+        "height": 549,
+        "width": 976,
+        "altText": "Países de América Latina",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "Las medidas adoptadas contra el nuevo coronavirus por los gobiernos en América Latina van desde los toques de queda y confinamientos obligatorios hasta el que no ha impuesto restricciones, como Nicaragua.",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Muchos países enfrentan los contagios del SARS-CoV-2, causante de covid-19, con acciones que buscan evitar la sobrecarga de sus sistemas de salud, en algunos casos ya muy debilitados.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "En el siguiente mapa interactivo te mostramos cuán estricto es el nivel de cuarentena adoptado por cada país, de acuerdo con la siguiente clasificación:",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<bold>Más restrictivo</bold>: hay un toque de queda o restricciones obligatorias en el movimiento de personas y otras medidas punitivas como multas o posibilidad de encarcelamiento.",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<bold>Restrictivo:</bold> hay un toque de queda o restricciones obligatorias sobre el movimiento de personas.",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<bold>Medio alto</bold>: hay restricciones de circulación y no hay toque de queda.",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<bold>Medio</bold>: los gobiernos recomiendan (no obligan) a restringir el movimiento de población.",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<bold>Sin restricciones</bold>: no hay medidas restrictivas.",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "required": false,
+        "title": "mapa interactivo",
+        "href": "/include/vjamericas/387/mundo/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/venta-app_mapa_cuarentena_4kg4k.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/venta-app_mapa_cuarentena_4kg4k.png&app-image-alt-text=Clica%20para%20ver%20el%20mapa%20interactivo",
+        "platform": "highweb",
+        "type": "include"
+      },
+      {
+        "text": "En Argentina o Colombia, ambos países en aislamiento social obligatorio, los gobiernos permiten a la población salir a pasear o hacer actividad física una hora al día.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "En algunos países, las cuarentenas obligatorias están localizadas en ciertas regiones o zonas determinadas.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "En Chile, por ejemplo, algunas comunas de Santiago, la capital, y localidades del centro-sur y sur del país fueron puestas en cuarentena obligatoria.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>mundo/noticias-america-latina-52373038</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "Qué cambia en México con la entrada en la fase 3 de la pandemia de covid-19",
+                  "headline": "Coronavirus en México: qué significa que el gobierno de AMLO dé por iniciada la fase 3 de la pandemia de covid-19",
+                  "overtyped": "Qué cambia en México con la entrada en la fase 3 de la pandemia de covid-19"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/mundo/noticias-america-latina-52373038"
+                },
+                "summary": "El gobierno de México decretó este martes la fase 3 en la pandemia de coronavirus, donde es previsible un aumento importante en el número de contagios y fallecimientos, pero sigue descartando toques de queda o hacer obligatorios los confinamientos.",
+                "timestamp": 1587485657000,
+                "language": "es",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:mundo/noticias-america-latina-52373038",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>mundo/noticias-america-latina-52405371</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "7 gráficos para entender el avance de la pandemia de covid-19 en América Latina",
+                  "headline": "Coronavirus en América Latina: 7 gráficos para entender el avance de la pandemia de covid-19 en la región",
+                  "overtyped": "7 gráficos para entender el avance de la pandemia de covid-19 en América Latina"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/mundo/noticias-america-latina-52405371"
+                },
+                "summary": "El coronavirus ha estado haciendo de las suyas en tierras latinoamericanas desde hace dos meses pero mucho ha pasado desde la confirmación del primer caso, en Brasil, el pasado 27 de febrero. Un resumen en siete gráficos.",
+                "timestamp": 1587996103000,
+                "language": "es",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                    "categoryName": "Analysis"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:mundo/noticias-america-latina-52405371",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "El gobierno mexicano suspendió las clases a nivel nacional y recomendó (no obligó) a la población que se quedara en casa &quot;si no es indispensable&quot; salir.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "También suspendió todas las actividades laborales no esenciales y en espacios públicos como parques, plazas comerciales, playas o centros deportivos y religiosos",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "En la misma línea, el gobierno de Brasil ha hecho recomendaciones para que se mantenga el distanciamiento social pero no ha impuesto restricciones, una medida que ha resultado polémica.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Nicaragua es el país de la región que menos medidas ha tomado para hacer frente al coronavirus.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Varias organizaciones internacionales alertaron de las consecuencias que podría tener esta falta de medidas en un país que ya tiene factores de riesgo adicionales, como la ausencia de agua potable permanente o el hacinamiento, entre otros.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<italic>*</italic><italic>Este mapa se publicó originalmente el 15 de abril</italic><italic>.</italic>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "id": "111207703",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/7832/production/_111207703_cps_web_banner_top_640x3-nc.png",
+        "path": "/cpsprodpb/7832/production/_111207703_cps_web_banner_top_640x3-nc.png",
+        "height": 76,
+        "width": 640,
+        "altText": "Enlaces a más artículos sobre el coronavirus",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "MAPA: <link><caption>Alcance global del coronavirus</caption><url href=\"https://www.bbc.com/mundo/noticias-51705060\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/mundo/noticias-51705060",
+            "type": "listItem"
+          },
+          {
+            "text": "PREGUNTAS CLAVE:  <link><caption>Cuáles son los síntomas y cómo se transmite</caption><url href=\"https://www.bbc.com/mundo/noticias-51206116\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/mundo/noticias-51206116",
+            "type": "listItem"
+          },
+          {
+            "text": "TRATAMIENTOS: <link><caption>Cómo están combatiendo el coronavirus </caption><url href=\"https://www.bbc.com/mundo/noticias-51738376\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/mundo/noticias-51738376",
+            "type": "listItem"
+          },
+          {
+            "text": "PREVENCIÓN: <link><caption>Qué puedes hacer para evitar el contagio</caption><url href=\"https://www.bbc.com/mundo/noticias-51361825\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/mundo/noticias-51361825",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "<link><caption>Visita nuestra cobertura especial</caption><url href=\"https://bbc.in/3aKEgAO\" platform=\"highweb\"/></link>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "id": "111207704",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/9F42/production/_111207704_cps_web_banner_bottom_640x3-nc.png",
+        "path": "/cpsprodpb/9F42/production/_111207704_cps_web_banner_bottom_640x3-nc.png",
+        "height": 11,
+        "width": 640,
+        "altText": "Línea",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "id": "111002712",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/54D8/production/_111002712_line976.jpg",
+        "path": "/cpsprodpb/54D8/production/_111002712_line976.jpg",
+        "height": 2,
+        "width": 464,
+        "altText": "Línea",
+        "copyrightHolder": "BBC",
+        "positionHint": "body-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "<italic>Ahora puedes recibir notificaciones de BBC Mundo. Descarga la nueva versión de nuestra app y actívalas para no perderte nuestro mejor contenido.</italic>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<link><caption>¿Ya conoces nuestro canal de YouTube? ¡Suscríbete!</caption><url href=\"https://www.youtube.com/user/BBCMundo?sub_confirmation=1\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "href": "https://www.youtube.com/watch?v=8fj-C_xCda8",
+        "source": "youtube",
+        "embed": {
+          "oembed": {
+            "version": "1.0",
+            "title": "Coronavirus en Ecuador: el drama de Guayaquil con más muertos por covid-19 que países enteros",
+            "author_name": "BBC News Mundo",
+            "author_url": "https://www.youtube.com/user/BBCMundo",
+            "provider_name": "YouTube",
+            "provider_url": "https://www.youtube.com/",
+            "thumbnail_url": "https://i.ytimg.com/vi/8fj-C_xCda8/hqdefault.jpg",
+            "thumbnail_width": 480,
+            "thumbnail_height": 360,
+            "html": "<iframe width=\"480\" height=\"270\" src=\"https://www.youtube.com/embed/8fj-C_xCda8?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+            "width": 480,
+            "height": 270
+          },
+          "fallback_image": {
+            "fallback_image_width": 500,
+            "fallback_image_height": 269,
+            "alt_text": "YouTube post by BBC News Mundo: Coronavirus en Ecuador: el drama de Guayaquil con más muertos por covid-19 que países enteros"
+          }
+        },
+        "id": "8fj-C_xCda8",
+        "type": "social_embed"
+      },
+      {
+        "href": "https://www.youtube.com/watch?v=RsrBdPxW3Xw",
+        "source": "youtube",
+        "embed": {
+          "oembed": {
+            "version": "1.0",
+            "title": "Covid-19: cómo hacer fácilmente tu propia mascarilla (y no hace falta saber coser) | BBC Mundo",
+            "author_name": "BBC News Mundo",
+            "author_url": "https://www.youtube.com/user/BBCMundo",
+            "provider_name": "YouTube",
+            "provider_url": "https://www.youtube.com/",
+            "thumbnail_url": "https://i.ytimg.com/vi/RsrBdPxW3Xw/hqdefault.jpg",
+            "thumbnail_width": 480,
+            "thumbnail_height": 360,
+            "html": "<iframe width=\"480\" height=\"270\" src=\"https://www.youtube.com/embed/RsrBdPxW3Xw?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+            "width": 480,
+            "height": 270
+          },
+          "fallback_image": {
+            "fallback_image_width": 500,
+            "fallback_image_height": 269,
+            "alt_text": "YouTube post by BBC News Mundo: Covid-19: cómo hacer fácilmente tu propia mascarilla (y no hace falta saber coser) | BBC Mundo"
+          }
+        },
+        "id": "RsrBdPxW3Xw",
+        "type": "social_embed"
+      },
+      {
+        "href": "https://www.youtube.com/watch?v=2f3bWviThuQ",
+        "source": "youtube",
+        "embed": {
+          "oembed": {
+            "version": "1.0",
+            "title": "Cómo funciona el sistema inmunitario y qué hace cuando entra en contacto con el coronavirus",
+            "author_name": "BBC News Mundo",
+            "author_url": "https://www.youtube.com/user/BBCMundo",
+            "provider_name": "YouTube",
+            "provider_url": "https://www.youtube.com/",
+            "thumbnail_url": "https://i.ytimg.com/vi/2f3bWviThuQ/hqdefault.jpg",
+            "thumbnail_width": 480,
+            "thumbnail_height": 360,
+            "html": "<iframe width=\"480\" height=\"270\" src=\"https://www.youtube.com/embed/2f3bWviThuQ?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+            "width": 480,
+            "height": 270
+          },
+          "fallback_image": {
+            "fallback_image_width": 500,
+            "fallback_image_height": 269,
+            "alt_text": "YouTube post by BBC News Mundo: Cómo funciona el sistema inmunitario y qué hace cuando entra en contacto con el coronavirus"
+          }
+        },
+        "id": "2f3bWviThuQ",
+        "type": "social_embed"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "El mapa interactivo que muestra las medidas o distintos tipos de cuarentena que adoptaron los países de América Latina para combatir el coronavirus",
+      "headline": "Coronavirus: el mapa interactivo que muestra las medidas o distintos tipos de cuarentena que adoptaron los países de América Latina"
+    },
+    "locators": {
+      "assetUri": "/mundo/noticias-america-latina-52248497",
+      "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-america-latina-52248497",
+      "curie": "http://www.bbc.co.uk/asset/e4bb0efa-0805-e94c-ae87-9a22213bf25f",
+      "assetId": "52248497"
+    },
+    "summary": "La respuesta de los países latinoamericanos a la llegada del virus SARS-CoV-2 ha sido muy dispar, desde decretar el encierro obligatorio a no tomar ninguna medida.",
+    "timestamp": 1588009940000,
+    "language": "es",
+    "byline": {
+      "name": "Equipo de Periodismo Visual",
+      "title": "BBC News Mundo",
+      "persons": [{ "name": "Camilla Costa", "function": "BBC Brasil" }]
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
+        "categoryName": "Interactive"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ],
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "111770112",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/5273/production/_111770112_promo_cuarentena3.png",
+      "path": "/cpsprodpb/5273/production/_111770112_promo_cuarentena3.png",
+      "height": 549,
+      "width": 976,
+      "altText": "Países de América Latina",
+      "copyrightHolder": "BBC",
+      "originCode": "cpsprodpb",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:mundo/noticias-america-latina-52248497",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "América Latina",
+      "uri": "/mundo/america_latina",
+      "urlIdentifier": "/mundo/america_latina",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Mundo",
+      "uri": "/mundo",
+      "urlIdentifier": "/mundo",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "La amenaza del coronavirus para los pueblos indígenas (y qué epidemias han devastado a los de América Latina)",
+              "headline": "Coronavirus: la amenaza del covid-19 para los pueblos indígenas (y qué epidemias han devastado a los de América Latina)"
+            },
+            "locators": {
+              "assetUri": "/mundo/noticias-52199977",
+              "cpsUrn": "urn:bbc:content:assetUri:/mundo/noticias-52199977"
+            },
+            "summary": "Por sus características, las comunidades nativas son particularmente vulnerables a brotes y pandemias. Los expertos advierten que con el covid-19 algunas corren el riesgo de ser \"exterminadas\".",
+            "timestamp": 1586870480000,
+            "language": "es",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "111413802",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/515F/production/_111413802_bbc_kayapo.jpg",
+              "path": "/cpsprodpb/515F/production/_111413802_bbc_kayapo.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Indígenas kayapó",
+              "caption": "Los pueblos indígenas son uno de los segmentos más expuestos a la situación de vulnerabilidad ante la actual pandemia.",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:mundo/noticias-52199977",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "5 efectos devastadores que la pandemia de coronavirus tendrá en las economías de América Latina (y 1 motivo para la esperanza)",
+              "headline": "Coronavirus: 5 efectos devastadores que la pandemia tendrá en las economías de América Latina (y 1 motivo para la esperanza)"
+            },
+            "locators": {
+              "assetUri": "/mundo/noticias-52251104",
+              "cpsUrn": "urn:bbc:content:assetUri:/mundo/noticias-52251104"
+            },
+            "summary": "Así como se expande velozmente la pandemia en la región, también el contagio económico se está acelerando.",
+            "timestamp": 1586777700000,
+            "language": "es",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "111771262",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/6669/production/_111771262_gettyimages-1209152947.jpg",
+              "path": "/cpsprodpb/6669/production/_111771262_gettyimages-1209152947.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Colombia",
+              "caption": "La caída del precio de las materias primas y de los alimentos tendrá un impacto importante en América Latina.",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:mundo/noticias-52251104",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "¿Por qué Ecuador tiene el mayor número de contagios y muertos per cápita de coronavirus en Sudamérica?",
+              "headline": "Coronavirus: ¿por qué Ecuador tiene el mayor número de contagios y muertos per cápita de covid-19 en Sudamérica?"
+            },
+            "locators": {
+              "assetUri": "/mundo/noticias-america-latina-52036460",
+              "cpsUrn": "urn:bbc:content:assetUri:/mundo/noticias-america-latina-52036460"
+            },
+            "summary": "Es uno de los países de la región con mayor número de muertos y contagios aunque tiene menos habitantes y territorio que la mayoría de las otras naciones y pese a las medidas tomadas por el gobierno desde hace semanas.",
+            "timestamp": 1585820523000,
+            "language": "es",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "111434862",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/68DB/production/_111434862_whatsubject.jpg",
+              "path": "/cpsprodpb/68DB/production/_111434862_whatsubject.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "Hasta este miércoles la cifra de contagiados en Ecuador superaba a la países como Colombia, México y Argentina.",
+              "caption": "Hasta este miércoles la cifra de contagiados en Ecuador superaba a la países como Colombia, México y Argentina.",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:mundo/noticias-america-latina-52036460",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}

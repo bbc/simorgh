@@ -1588,7 +1588,7 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: ['/burmese/burma-53261612'],
+            paths: ['/burmese/burma-53261612', '/burmese/in-depth-45972737'],
             enabled: false,
           },
           test: {
@@ -1596,7 +1596,7 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: ['/burmese/world-53250349'],
+            paths: ['/burmese/world-53250349', '/burmese/in-depth-45972737'],
             enabled: false,
           },
         },
@@ -4179,7 +4179,10 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: ['/mundo/noticias-54274735'],
+            paths: [
+              '/mundo/noticias-54274735',
+              '/mundo/noticias-america-latina-52248497',
+            ],
             enabled: false,
           },
           test: {
@@ -4190,6 +4193,7 @@ module.exports = () => ({
             paths: [
               '/mundo/23263889',
               '/mundo/noticias-internacional-51266689',
+              '/mundo/noticias-america-latina-52248497',
             ],
             enabled: true,
           },
@@ -4637,7 +4641,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: ['/news/uk-56342465', '/news/technology-56294493'],
+            paths: [
+              '/news/uk-56342465',
+              '/news/technology-56294493',
+              '/news/world-46373275',
+            ],
             enabled: true,
           },
           test: {
@@ -4645,7 +4653,11 @@ module.exports = () => ({
             enabled: true,
           },
           local: {
-            paths: ['/news/uk-56342465', '/news/technology-56294493'],
+            paths: [
+              '/news/uk-56342465',
+              '/news/technology-56294493',
+              '/news/world-46373275',
+            ],
             enabled: true,
           },
         },
@@ -5251,7 +5263,10 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: ['/persian/world-features-54279309'],
+            paths: [
+              '/persian/world-features-54279309',
+              '/persian/iran-features-55567211',
+            ],
             enabled: false,
           },
           test: {
@@ -5259,7 +5274,10 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: ['/persian/arts-52166891'],
+            paths: [
+              '/persian/arts-52166891',
+              '/persian/iran-features-55567211',
+            ],
             enabled: false,
           },
         },
@@ -6127,7 +6145,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: ['/russian/features-54391793', '/russian/news-55041160'],
+            paths: [
+              '/russian/features-54391793',
+              '/russian/news-55041160',
+              '/russian/features-51979104',
+            ],
             enabled: true,
           },
           test: {
@@ -6135,7 +6157,11 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: ['/russian/features-54391793', '/russian/news-55041160'],
+            paths: [
+              '/russian/features-54391793',
+              '/russian/news-55041160',
+              '/russian/features-51979104',
+            ],
             enabled: true,
           },
         },

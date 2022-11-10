@@ -1,0 +1,169 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:news/world-46373275",
+    "locators": {
+      "assetUri": "/news/world-46373275",
+      "cpsUrn": "urn:bbc:content:assetUri:news/world-46373275",
+      "curie": "http://www.bbc.co.uk/asset/96d27a5c-2732-6f46-a634-5159a532f8de",
+      "assetId": "46373275"
+    },
+    "type": "STY",
+    "createdBy": "news",
+    "language": "en-gb",
+    "lastUpdated": 1645143502694,
+    "firstPublished": 1544056019000,
+    "lastPublished": 1544056019000,
+    "timestamp": 1544056019000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "sty",
+      "counterName": "news.world.story.46373275.page",
+      "cps_asset_id": "46373275",
+      "contentId": "urn:bbc:cps:curie:asset:96d27a5c-2732-6f46-a634-5159a532f8de"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
+        "categoryName": "Interactive"
+      },
+      "taggings": []
+    },
+    "tags": {},
+    "version": "v1.4.0",
+    "blockTypes": ["paragraph", "image", "include"],
+    "includeComments": false,
+    "atiAnalytics": {
+      "producerName": "NEWS",
+      "producerId": "64",
+      "chapter": "world"
+    },
+    "readTime": 1,
+    "siteUri": "/news"
+  },
+  "content": {
+    "blocks": [
+      {
+        "text": "Today marks 100 years since women in the UK first voted in a general election. ",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Emmeline Pankhurst led the British suffragette movement who helped women win the right to vote. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Play this quiz to find out how seven boundary-breaking women connect her to Beyonce.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "104629332",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/5B60/production/_104629332_presentational_whiteline.gif",
+        "path": "/cpsprodpb/5B60/production/_104629332_presentational_whiteline.gif",
+        "height": 2,
+        "width": 624,
+        "altText": "presentational white spacing line",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "required": false,
+        "title": "Beyonce - Riddle quiz",
+        "href": "/include/newsspec/21383-emtobey-riddle/english/app?responsive=true&newsapps=true&app-image=https://c.files.bbci.co.uk/1696/production/_104528750_beyonce_quiz_launcher-640-nc.png&app-clickable=true&amp-clickable=true&amp-image-height=1600&amp-image-width=640&amp-image=https://c.files.bbci.co.uk/D9E6/production/_104528755_beyonce_quiz_launcher-1600-nc.png",
+        "platform": "highweb",
+        "type": "include"
+      },
+      {
+        "id": "104629332",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/5B60/production/_104629332_presentational_whiteline.gif",
+        "path": "/cpsprodpb/5B60/production/_104629332_presentational_whiteline.gif",
+        "height": 2,
+        "width": 624,
+        "altText": "presentational white spacing line",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "This quiz is part of the <link><caption>BBC 100 Women season</caption><altText>BBC 100 Women page</altText><url href=\"https://www.bbc.co.uk/news/topics/c779dqxlxv2t/100-women\" platform=\"highweb\"/></link>. If you can't see the quiz above, <link><caption>tap here</caption><altText>link to quiz</altText><url href=\"https://bbc.in/2KXh5YG\" platform=\"highweb\"/></link>.",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Quiz: What links Emmeline Pankhurst to Beyonce?",
+      "headline": "Quiz: Beyonce and Emmeline Pankhurst - who links them?"
+    },
+    "locators": {
+      "assetUri": "/news/world-46373275",
+      "cpsUrn": "urn:bbc:content:assetUri:news/world-46373275",
+      "curie": "http://www.bbc.co.uk/asset/96d27a5c-2732-6f46-a634-5159a532f8de",
+      "assetId": "46373275"
+    },
+    "summary": "Can you get from suffragette Emmeline Pankhurst to Beyonce via seven groundbreaking women?",
+    "timestamp": 1544056019000,
+    "language": "en-gb",
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
+        "categoryName": "Interactive"
+      },
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "104641997",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/1382A/production/_104641997_beyonce_glasto_bbc.jpg",
+      "path": "/cpsprodpb/1382A/production/_104641997_beyonce_glasto_bbc.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Quiz: What links Beyonce to the suffragettes?",
+      "copyrightHolder": "BBC",
+      "originCode": "cpsprodpb",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:news/world-46373275",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "World",
+      "uri": "/news/world",
+      "urlIdentifier": "/news/world",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC News",
+      "uri": "/news",
+      "urlIdentifier": "/news",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

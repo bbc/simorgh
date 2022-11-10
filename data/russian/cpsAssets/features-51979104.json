@@ -1,0 +1,519 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:russian/features-51979104",
+    "locators": {
+      "assetUri": "/russian/features-51979104",
+      "cpsUrn": "urn:bbc:content:assetUri:russian/features-51979104",
+      "curie": "http://www.bbc.co.uk/asset/29842197-0887-414d-ac16-cccdbab9cfcd",
+      "assetId": "51979104"
+    },
+    "type": "STY",
+    "createdBy": "russian-v6",
+    "language": "ru",
+    "lastUpdated": 1644636170990,
+    "firstPublished": 1584719258000,
+    "lastPublished": 1606524713000,
+    "timestamp": 1606524713000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": false,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": false,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "sty",
+      "counterName": "russian.features.story.51979104.page",
+      "cps_asset_id": "51979104",
+      "contentId": "urn:bbc:cps:curie:asset:29842197-0887-414d-ac16-cccdbab9cfcd"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
+        "categoryName": "Interactive"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ],
+      "taggings": []
+    },
+    "tags": {},
+    "version": "v1.4.0",
+    "blockTypes": ["paragraph", "include", "image", "list", "media"],
+    "includeComments": false,
+    "atiAnalytics": { "producerName": "RUSSIAN", "producerId": "75" },
+    "readTime": 1,
+    "siteUri": "/russian"
+  },
+  "content": {
+    "blocks": [
+      {
+        "text": "Осенью суточный прирост новых случаев Covid-19 в России начал резко расти после летнего спада. В сентябре число новых случаев удвоилось, а в октябре в стране стали регистрировать больше заболевших, чем на пике пандемии в мае.",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<italic>Карта </italic><italic>и график последний раз </italic><italic>обновлен</italic><italic>ы</italic><italic> 30 ноября 2020 года.</italic>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Русская служба Би-би-си составила карту заражения по регионам на основе данных оперативного штаба при правительстве России.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "required": false,
+        "title": "карта коронавируса",
+        "href": "/include/vjeurope/260-covid-map-rus/russian/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-mos/640_a4qxl.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-mos/640_a4qxl.png",
+        "platform": "highweb",
+        "type": "include"
+      },
+      {
+        "required": false,
+        "title": "Москва и регионы",
+        "href": "/include/vjeurope/264/russian/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-mos/640_a4qxl.png/640x360&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-mos/640_a4qxl.png",
+        "platform": "highweb",
+        "type": "include"
+      },
+      {
+        "id": "111718391",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/4BB5/production/_111718391_cps_web_banner_top_976-nc.png",
+        "path": "/cpsprodpb/4BB5/production/_111718391_cps_web_banner_top_976-nc.png",
+        "height": 76,
+        "width": 976,
+        "altText": "Еще о коронавирусе",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>russian/features-51976187</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "Что нужно знать о коронавирусе? Ответы на главные вопросы",
+                  "headline": "Что нужно знать о коронавирусе? Ответы на главные вопросы",
+                  "overtyped": "Что нужно знать о коронавирусе? Ответы на главные вопросы"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/russian/features-51976187"
+                },
+                "summary": "Большинство экспертов полагают, что рано или поздно коронавирус SARS-CoV-2 заразит значительную часть населения планеты. Русская служба Би-би-си отвечает на основные вопросы о коронавирусе SARS-CoV-2.",
+                "timestamp": 1586287313000,
+                "language": "ru",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:russian/features-51976187",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>russian/news-51855338</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "Коронавирус: что нового мы знаем о симптомах?",
+                  "headline": "Коронавирус: что нового мы знаем о симптомах?",
+                  "overtyped": "Коронавирус: каковы симптомы и как от него защититься?"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/russian/news-51855338"
+                },
+                "summary": "Коронавирус стал причиной пандемии, унесшей жизни нескольких тысяч людей. Как уберечься от вируса и не заболеть?",
+                "timestamp": 1586972877000,
+                "language": "ru",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:russian/news-51855338",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>russian/features-51869685</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "Как самоизолироваться во время коронавируса?",
+                  "headline": "Как самоизолироваться во время коронавируса? Практическая инструкция",
+                  "overtyped": "ИНСТРУКЦИЯ: Как самоизолироваться?"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/russian/features-51869685"
+                },
+                "summary": "Пандемия коронавируса ввела в оборот новые слова. Одно из них - самоизоляция, или карантин на дому. Но что это означает на практике?",
+                "timestamp": 1584098467000,
+                "language": "ru",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                    "categoryName": "Explainer"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:russian/features-51869685",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>russian/news-51706538</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "Коронавирус в мире: данные по странам и регионам",
+                  "headline": "Коронавирус в мире: данные по странам и регионам",
+                  "overtyped": "КАРТА: Как коронавирус распространяется по планете"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/russian/news-51706538"
+                },
+                "summary": "На интерактивной обновляемой карте показаны наиболее крупные очаги Covid-19, количество заболевших и смертельных случаев по странам и регионам.",
+                "timestamp": 1635239080000,
+                "language": "ru",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
+                    "categoryName": "Interactive"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:russian/news-51706538",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "id": "111718392",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/72C5/production/_111718392_cps_web_banner_bottom_976-nc.png",
+        "path": "/cpsprodpb/72C5/production/_111718392_cps_web_banner_bottom_976-nc.png",
+        "height": 11,
+        "width": 976,
+        "altText": "Еще о коронавирусе",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "Одним из главных методов борьбы с распространением коронавируса является социальное дистанцирование: карантин. Вот как это работает.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "p088cjjz",
+        "subType": "clip",
+        "format": "video",
+        "title": "Почему мы должны оставаться дома? Простой ответ",
+        "synopses": {
+          "short": "Почему мы должны оставаться дома? Простой ответ",
+          "long": "Правительства России и большинства стран мира призывают граждан оставаться дома. С каждым днем меры становятся более строгими. \n\nНапример, Москве с 31 марта 2020 года жителям города можно выходить из дома только для того, чтобы обратиться за экстренной медицинской помощью, пойти на работу (если они обязаны это делать), сходить в ближайший продуктовый магазин или в аптеку, вынести мусор и выгулять домашнее животное (но не дальше, чем в 100 метрах от дома). \n\nНо почему оставаться дома - важно? Показываем в простой инфографике, как именно всеобщий карантин замедляет распространение вируса.",
+          "medium": "Вот что будет, если один человек начнет работать из дома, а другой - не поедет к маме."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p088cv22.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "Почему мы должны оставаться дома? Простой ответ",
+        "versions": [
+          {
+            "versionId": "p088cjkf",
+            "types": ["Original"],
+            "duration": 128,
+            "durationISO8601": "PT2M8S",
+            "warnings": {},
+            "availableTerritories": { "uk": true, "nonUk": true },
+            "availableFrom": 1585760056000
+          }
+        ],
+        "imageCopyright": "BBC",
+        "smpKind": "programme",
+        "type": "media"
+      },
+      {
+        "text": "Если у вас нет санитайзера, его можно изготовить в домашних условиях.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "p085wrbm",
+        "subType": "clip",
+        "format": "video",
+        "title": "Антисептик в дефиците. Как сделать его дома?",
+        "synopses": {
+          "short": "Антисептик в дефиците. Как сделать его дома?",
+          "long": "Эпидемия коронавируса, как и вспышка любой другой инфекции, уже привела к дефициту: в аптеках в разных странах заканчивается антисептик. Рассказываем, как сделать дезинфицирующий гель для рук самим в домашних условиях.\n\nЛучше всего использовать антисептик, только когда поблизости нет раковины. ВОЗ напоминает: лучший способ защититься от инфекции – регулярно мыть руки с мылом и стараться не притрагиваться к лицу.",
+          "medium": "Эпидемия коронавируса, как и вспышка любой другой инфекции, уже привела к дефициту: в аптеках заканчивается антисептик и защитные маски."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p085wtjd.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "Антисептик в дефиците. Как сделать его дома?",
+        "versions": [
+          {
+            "versionId": "p085wrbw",
+            "types": ["Original"],
+            "duration": 152,
+            "durationISO8601": "PT2M32S",
+            "warnings": {},
+            "availableTerritories": { "uk": true, "nonUk": true },
+            "availableFrom": 1583513429000
+          }
+        ],
+        "smpKind": "programme",
+        "type": "media"
+      },
+      {
+        "text": "И важно, конечно, держать в чистоте не только руки, но и ваш смартфон. Вот инструкция:",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "p086l0nk",
+        "subType": "clip",
+        "format": "video",
+        "title": "Как помыть свой смартфон и не испортить его. Видеоинструкция",
+        "synopses": {
+          "short": "Как помыть свой смартфон и не испортить его. Видеоинструкция",
+          "long": "Бытовая химия, антисептики для рук и абразивные салфетки могут повредить телефон, но зато его эффективно и безопасно очищают вода и мыло.\n\nДоктор Лена Цирик, микробиолог из Университетского колледжа Лондона, рассказывает, как правильно мыть свой смартфон.",
+          "medium": "Бытовая химия, антисептики для рук и абразивные салфетки могут повредить телефон, но зато его эффективно и безопасно очищают вода и мыло."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p086l4lr.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "Как помыть свой смартфон и не испортить его",
+        "versions": [
+          {
+            "versionId": "p086l0ns",
+            "types": ["Original"],
+            "duration": 111,
+            "durationISO8601": "PT1M51S",
+            "warnings": {},
+            "availableTerritories": { "uk": true, "nonUk": true },
+            "availableFrom": 1584118042000
+          }
+        ],
+        "imageCopyright": "BBC",
+        "smpKind": "programme",
+        "type": "media"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<link><caption>Смотрите другие видео на нашем канале в YouTube.</caption><url href=\"https://www.youtube.com/channel/UC8zQiuT0m1TELequJ5sp5zw\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "id": "111718392",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/72C5/production/_111718392_cps_web_banner_bottom_976-nc.png",
+        "path": "/cpsprodpb/72C5/production/_111718392_cps_web_banner_bottom_976-nc.png",
+        "height": 11,
+        "width": 976,
+        "altText": "Еще о коронавирусе",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "***",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Как коронавирус распространяется по России. Карта и графики",
+      "headline": "Как коронавирус распространяется по России. Карта и графики"
+    },
+    "locators": {
+      "assetUri": "/russian/features-51979104",
+      "cpsUrn": "urn:bbc:content:assetUri:russian/features-51979104",
+      "curie": "http://www.bbc.co.uk/asset/29842197-0887-414d-ac16-cccdbab9cfcd",
+      "assetId": "51979104"
+    },
+    "summary": "Первые случаи заболевания Covid-19 на территории России были зафиксированы в конце января.",
+    "timestamp": 1606524713000,
+    "language": "ru",
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
+        "categoryName": "Interactive"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ],
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "115701552",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/63A6/production/_115701552_web-image-nc.png",
+      "path": "/cpsprodpb/63A6/production/_115701552_web-image-nc.png",
+      "height": 549,
+      "width": 976,
+      "altText": "Коронавирус",
+      "copyrightHolder": "BBC",
+      "originCode": "cpsprodpb",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:russian/features-51979104",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Подробности",
+      "uri": "/russian/features",
+      "urlIdentifier": "/russian/features",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "Новости на русском языке",
+      "uri": "/russian",
+      "urlIdentifier": "/russian",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "\"Это похоже на какое-то кино\": интервью с пациентами коронавирусных больниц",
+              "headline": "\"Это похоже на какое-то кино\": интервью с пациентами коронавирусных больниц"
+            },
+            "locators": {
+              "assetUri": "/russian/features-51976087",
+              "cpsUrn": "urn:bbc:content:assetUri:/russian/features-51976087"
+            },
+            "summary": "Недавно две москвички вернулись в столицу из-за рубежа: Мария Теряева - из Франции, Ирина Астапова - из Италии. Поначалу обе чувствовали себя нормально, но потом у них поднялась температура. На скорых их отвезли в больницы: Марию - на Шаболовку, Ирину - в Коммунарку.",
+            "timestamp": 1584707850000,
+            "language": "ru",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "111371424",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/A5B1/production/_111371424_tass_39127976.jpg",
+              "path": "/cpsprodpb/A5B1/production/_111371424_tass_39127976.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Скорая помощь Москва",
+              "copyrightHolder": "Sergey Bobylev/Tass",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:russian/features-51976087",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Число заболевших коронавирусом в России превысило 250 человек",
+              "headline": "Число заболевших коронавирусом в России превысило 250 человек"
+            },
+            "locators": {
+              "assetUri": "/russian/news-51978955",
+              "cpsUrn": "urn:bbc:content:assetUri:/russian/news-51978955"
+            },
+            "summary": "В России за сутки выявили 54 новых случая заболевания коронавирусом, сообщает оперативный штаб по борьбе с новой инфекцией. Таким образом, количество подтвержденных случаев заболевания коронавирусом в России составляет 253.",
+            "timestamp": 1584713325000,
+            "language": "ru",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "111373593",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/9A71/production/_111373593_gettyimages-1207593929.jpg",
+              "path": "/cpsprodpb/9A71/production/_111373593_gettyimages-1207593929.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "костюмы",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:russian/news-51978955",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "\"Ситуация близка к катастрофической\": как московские рестораны выживают при эпидемии коронавируса",
+              "headline": "\"Ситуация близка к катастрофической\": как московские рестораны выживают при эпидемии коронавируса"
+            },
+            "locators": {
+              "assetUri": "/russian/features-51973003",
+              "cpsUrn": "urn:bbc:content:assetUri:/russian/features-51973003"
+            },
+            "summary": "Московские рестораны и кафе пострадали от вспышки коронавируса и ограничительных мер со стороны мэрии Москвы. Поток посетителей снизился, а ресторанам пришлось специально ограничивать количество мест в залах. Рестораторы бьют тревогу и просят помощи у государства.",
+            "timestamp": 1584712519000,
+            "language": "ru",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "111369026",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/F290/production/_111369026_tass_39109455.jpg",
+              "path": "/cpsprodpb/F290/production/_111369026_tass_39109455.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ресторан в Москве",
+              "copyrightHolder": "Valery Sharifulin/TASS",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:russian/features-51973003",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}
