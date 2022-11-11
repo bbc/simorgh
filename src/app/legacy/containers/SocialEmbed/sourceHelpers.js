@@ -44,7 +44,7 @@ export const getProviderFromSource = source => {
 export const getIdFromSource = source => {
   const sourceIds = {
     twitter: /\/status\/([0-9]+)/,
-    youtube: /([0-9A-Z a-z_-]+$)/,
+    youtube: /([0-9A-Za-z_-]+$)/,
     instagram: /\/p\/([0-9A-Za-z_-]+)/,
     tiktok: /\/video\/([0-9]+)/,
     facebook: /\/(?:posts|videos)\/([0-9A-Za-z]+)/,
