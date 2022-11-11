@@ -19,6 +19,7 @@ type Promo = {
 };
 
 type Promos = {
+  headingLevel: number;
   promos: Promo[];
 };
 
@@ -39,7 +40,7 @@ const getStyles = (promoCount: number, i: number, mq: any) => {
   });
 };
 
-const HiearchicalGrid = ({ promos }: Promos) => {
+const HiearchicalGrid = ({ promos, headingLevel }: Promos) => {
   if (!promos || promos.length < 3) return null;
   const promoItems = promos.slice(0, 12);
   return (
@@ -64,6 +65,7 @@ const HiearchicalGrid = ({ promos }: Promos) => {
                 </Promo.MediaIcon>
               </Promo.Image>
               <Promo.Heading
+                as={`h${headingLevel}`}
                 css={(theme: Theme) => ({
                   color: theme.palette.GREY_10,
                   ...(i === 0 && theme.fontSizes.paragon),
