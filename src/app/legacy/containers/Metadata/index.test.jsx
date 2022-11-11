@@ -5,6 +5,8 @@ import {
   FRONT_PAGE,
   MEDIA_PAGE,
   STORY_PAGE,
+  MEDIA_ASSET_PAGE,
+  PHOTO_GALLERY_PAGE,
 } from '#app/routes/utils/pageTypes';
 import {
   articleDataNews,
@@ -12,7 +14,7 @@ import {
   articleDataPidginWithByline,
 } from '#pages/ArticlePage/fixtureData';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import frontPageData from '#data/igbo/frontpage/index.json';
+import igboFrontPageData from '#data/igbo/frontpage/index.json';
 import somaliFrontPageData from '#data/somali/frontpage/index.json';
 import liveRadioPageData from '#data/korean/bbc_korean_radio/liveradio.json';
 import { getSummary } from '#lib/utilities/parseAssetData/index';
@@ -583,6 +585,81 @@ it('should render the default service twitter handle for a Front Page asset', as
   });
 });
 
+it('should render the default service twitter handle for a Story Page asset', async () => {
+  render(
+    <MetadataWithContext
+      service="mundo"
+      bbcOrigin={dotComOrigin}
+      platform="canonical"
+      id="53268428"
+      pageType={STORY_PAGE}
+      pathname="/mundo/noticias-internacional-51266689"
+      title="A story"
+      description="The story's description"
+      lang="en-GB"
+      openGraphType="article"
+    />,
+  );
+
+  await waitFor(() => {
+    expect(
+      document
+        .querySelector('meta[name="twitter:creator"]')
+        .getAttribute('content'),
+    ).toEqual('@bbcmundo');
+  });
+});
+
+it('should render the default service twitter handle for a Media Asset Page asset', async () => {
+  render(
+    <MetadataWithContext
+      service="arabic"
+      bbcOrigin={dotComOrigin}
+      platform="canonical"
+      id="49580542"
+      pageType={MEDIA_ASSET_PAGE}
+      pathname="/arabic/media-49580542"
+      title="A story"
+      description="The story's description"
+      lang="en-GB"
+      openGraphType="article"
+    />,
+  );
+
+  await waitFor(() => {
+    expect(
+      document
+        .querySelector('meta[name="twitter:creator"]')
+        .getAttribute('content'),
+    ).toEqual('@BBCArabic');
+  });
+});
+
+it('should render the default service twitter handle for a Photo Gallery asset', async () => {
+  render(
+    <MetadataWithContext
+      service="uzbek"
+      bbcOrigin={dotComOrigin}
+      platform="canonical"
+      id="46716844"
+      pageType={PHOTO_GALLERY_PAGE}
+      pathname="/uzbek/central-asia-46716844"
+      title="A story"
+      description="The story's description"
+      lang="en-GB"
+      openGraphType="article"
+    />,
+  );
+
+  await waitFor(() => {
+    expect(
+      document
+        .querySelector('meta[name="twitter:creator"]')
+        .getAttribute('content'),
+    ).toEqual('@bbcuzbek');
+  });
+});
+
 it('should render the LDP tags', async () => {
   render(<CanonicalNewsInternationalOrigin />);
 
@@ -775,8 +852,8 @@ shouldMatchSnapshot(
     pageType={FRONT_PAGE}
     pathname="/igbo"
     title="Ogbako"
-    lang={frontPageData.metadata.language}
-    description={frontPageData.metadata.summary}
+    lang={igboFrontPageData.metadata.language}
+    description={igboFrontPageData.metadata.summary}
     openGraphType="website"
   />,
 );
