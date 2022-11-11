@@ -1,28 +1,35 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import * as fetchPageData from '../../utils/fetchPageData';
+import nodeLogger from '../../../../testHelpers/loggerMock';
+import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 
 import getInitialData from '.';
 
-describe('Articles - BFF Fetching', () => {
-  process.env.BFF_PATH = 'https://mock-bff-path';
-  const agent = { ca: 'ca', key: 'key' };
-  const getAgent = jest.fn(() => agent);
+process.env.BFF_PATH = 'https://mock-bff-path';
 
-  const bffArticleJson = {
-    data: {
-      article: {
-        content: {},
-        metadata: {},
-        promo: {},
-        relatedContent: {},
-      },
-      secondaryData: {
-        topStories: [],
-        features: [],
-        mostRead: [],
-      },
+const agent = { ca: 'ca', key: 'key' };
+const getAgent = jest.fn(() => agent);
+
+const bffArticleJson = {
+  data: {
+    article: {
+      content: {},
+      metadata: {},
+      promo: {},
+      relatedContent: {},
     },
-  };
+    secondaryData: {
+      topStories: [],
+      features: [],
+      mostRead: [],
+    },
+  },
+};
+
+describe('Articles - BFF Fetching', () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
 
   it('should request local fixture data when the app env is "local"', async () => {
     process.env.SIMORGH_APP_ENV = 'local';
@@ -152,6 +159,53 @@ describe('Articles - BFF Fetching', () => {
       optHeaders: {
         'ctx-service-env': 'live',
       },
+    });
+  });
+
+  it('should log a 404 to node.logger when the article cannot be found', async () => {
+    process.env.SIMORGH_APP_ENV = 'local';
+
+    const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
+
+    fetchDataSpy.mockRejectedValue({ message: 'Not found', status: 404 });
+
+    // @ts-ignore - Ignore fetchPageData argument types
+    await getInitialData({
+      path: '/kyrgyz/articles/c0000000000o',
+      getAgent,
+      service: 'kyrgyz',
+    });
+
+    expect(nodeLogger.error).toHaveBeenCalledWith(BFF_FETCH_ERROR, {
+      pathname: '/kyrgyz/articles/c0000000000o',
+      service: 'kyrgyz',
+      message: 'Not found',
+      status: 404,
+    });
+  });
+
+  it('should log a 500 to node.logger when the BFF response fails', async () => {
+    process.env.SIMORGH_APP_ENV = 'local';
+
+    const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
+
+    fetchDataSpy.mockRejectedValue({
+      message: 'Internal server error',
+      status: 500,
+    });
+
+    // @ts-ignore - Ignore fetchPageData argument types
+    await getInitialData({
+      path: '/kyrgyz/articles/c0000000000o',
+      getAgent,
+      service: 'kyrgyz',
+    });
+
+    expect(nodeLogger.error).toHaveBeenCalledWith(BFF_FETCH_ERROR, {
+      pathname: '/kyrgyz/articles/c0000000000o',
+      service: 'kyrgyz',
+      message: 'Internal server error',
+      status: 500,
     });
   });
 });
