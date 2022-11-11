@@ -1,4 +1,3 @@
-const LoadablePlugin = require('@loadable/webpack-plugin');
 const { webpackDirAlias } = require('../dirAlias');
 
 module.exports = {
@@ -11,8 +10,6 @@ module.exports = {
       ...config.resolve.alias,
       ...webpackDirAlias,
     };
-
-    config.plugins.push(new LoadablePlugin());
 
     return config;
   },

@@ -8,18 +8,18 @@ interface Props {
   variant: Variants;
 }
 
-const getPathToTheme = (props: Props) => {
-  const variant = props.variant || defaultServiceVariants[props.service];
+// const getPathToTheme = (props: Props) => {
+//   const variant = props.variant || defaultServiceVariants[props.service];
 
-  if (variant === 'default' || !variant) {
-    return props.service;
-  }
+//   if (variant === 'default' || !variant) {
+//     return props.service;
+//   }
 
-  return `${props.service}/${variant}`;
-};
+//   return `${props.service}/${variant}`;
+// };
 
 const loadTheme = /* #__LOADABLE__ */ (props: Props) =>
-  import(`./themes/${getPathToTheme(props)}`);
+  import(`./themes/mundo`);
 
 const ThemeProvider: LoadableComponent<PropsWithChildren<Props>> =
   loadable(loadTheme);
