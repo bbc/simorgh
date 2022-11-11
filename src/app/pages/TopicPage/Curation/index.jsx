@@ -2,7 +2,6 @@ import React from 'react';
 import { arrayOf, oneOf, shape, string, number } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
-import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from '../HierarchicalGrid';
 import Subheading from './Subhead';
@@ -35,11 +34,12 @@ const Curation = ({
   position,
   curationLength,
 }) => {
-  const isOperaMini = useOperaMiniDetection();
   if (!promos.length) return null;
-  const Component = isOperaMini
-    ? CurationGrid
-    : pathOr(CurationGrid, [visualStyle, visualProminance], components);
+  const Component = pathOr(
+    CurationGrid,
+    [visualStyle, visualProminance],
+    components,
+  );
 
   const createID = titleText => {
     return titleText.replaceAll(' ', '-');
