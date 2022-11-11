@@ -5,7 +5,7 @@ import Promo from '../../../legacy/components/Promo';
 import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
 import { styles } from './index.styles';
 
-type Summary = {
+type Promo = {
   title: string;
   description?: string;
   type: string;
@@ -18,8 +18,8 @@ type Summary = {
   mediaType?: 'audio' | 'video' | 'photogallery';
 };
 
-type Summaries = {
-  summaries: Summary[];
+type Promos = {
+  promos: Promo[];
 };
 
 const getStyles = (promoCount: number, i: number, mq: any) => {
@@ -39,18 +39,18 @@ const getStyles = (promoCount: number, i: number, mq: any) => {
   });
 };
 
-const HiearchicalGrid = ({ summaries }: Summaries) => {
-  if (!summaries || summaries.length < 3) return null;
-  const summaryItems = summaries.slice(0, 12);
+const HiearchicalGrid = ({ promos }: Promos) => {
+  if (!promos || promos.length < 3) return null;
+  const promoItems = promos.slice(0, 12);
   return (
-    <ul role="list" css={styles.list}>
-      {summaryItems.map((promo, i) => {
+    <ul role="list" css={styles.list} data-testid="hierarchical-grid">
+      {promoItems.map((promo, i) => {
         return (
           <li
             key={promo.id}
             css={({ mq }: Theme) => [
               styles.item,
-              getStyles(summaryItems.length, i, mq),
+              getStyles(promoItems.length, i, mq),
             ]}
           >
             <Promo>
