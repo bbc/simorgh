@@ -21,7 +21,8 @@ export const getProviderFromSource = source => {
   }
   if (
     source.match(/^https:\/\/www\.youtube-nocookie\.com/) ||
-    source.match(/^https:\/\/www\.youtube\.com/)
+    source.match(/^https:\/\/www\.youtube\.com/) ||
+    source.match(/^https:\/\/youtu\.be/)
   ) {
     return PROVIDERS.YOUTUBE;
   }
@@ -43,13 +44,14 @@ export const getProviderFromSource = source => {
 export const getIdFromSource = source => {
   const sourceIds = {
     twitter: /\/status\/([0-9]+)/,
-    youtube: /\/watch\?v=([0-9A-Z a-z_-]+)/,
+    youtube: /([0-9A-Z a-z_-]+$)/,
     instagram: /\/p\/([0-9A-Za-z_-]+)/,
     tiktok: /\/video\/([0-9]+)/,
     facebook: /\/(?:posts|videos)\/([0-9A-Za-z]+)/,
   };
   const NO_ID = '';
   const provider = getProviderFromSource(source);
+
   if (
     [
       PROVIDERS.TWITTER,

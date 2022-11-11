@@ -7,6 +7,7 @@ describe('sourceHelpers', () => {
   const INSTAGRAM_SOURCE_UNDERSCORED =
     'https://www.instagram.com/p/CZ4ght5sIR3_';
   const YOUTUBE_SOURCE = 'https://www.youtube.com/watch?v=1e05_rwHvOM';
+  const YOUTUBE_SHORTENED_URL_SOURCE = 'https://youtu.be/OWMasi_9PCY';
   const TIKTOK_SOURCE =
     'https://www.tiktok.com/@cuppymusic/video/7086167423639997701';
   const FACEBOOK_POST_SOURCE =
@@ -42,6 +43,12 @@ describe('sourceHelpers', () => {
 
     it('should return a social embed ID for a valid Youtube source', () => {
       expect(getIdFromSource(YOUTUBE_SOURCE)).toEqual('1e05_rwHvOM');
+    });
+
+    it('should return a social embed ID for a valid shortened Youtube source', () => {
+      expect(getIdFromSource(YOUTUBE_SHORTENED_URL_SOURCE)).toEqual(
+        'OWMasi_9PCY',
+      );
     });
 
     it('should return a social embed ID for a valid TikTok source', () => {
