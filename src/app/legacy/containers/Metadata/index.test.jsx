@@ -13,6 +13,7 @@ import {
 } from '#pages/ArticlePage/fixtureData';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import frontPageData from '#data/igbo/frontpage/index.json';
+import somaliFrontPageData from '#data/somali/frontpage/index.json';
 import liveRadioPageData from '#data/korean/bbc_korean_radio/liveradio.json';
 import { getSummary } from '#lib/utilities/parseAssetData/index';
 import getAuthorTwitterHandle from '#lib/utilities/getAuthorTwitterHandle/index';
@@ -557,6 +558,31 @@ it('should render the twitter handle of the author', async () => {
   });
 });
 
+it('should render the default service twitter handle for a Front Page asset', async () => {
+  render(
+    <MetadataWithContext
+      service="somali"
+      bbcOrigin={dotComOrigin}
+      platform="canonical"
+      id={null}
+      pageType={FRONT_PAGE}
+      pathname="/somali"
+      title="Somali"
+      lang={somaliFrontPageData.metadata.language}
+      description={somaliFrontPageData.metadata.summary}
+      openGraphType="website"
+    />,
+  );
+
+  await waitFor(() => {
+    expect(
+      document
+        .querySelector('meta[name="twitter:creator"]')
+        .getAttribute('content'),
+    ).toEqual('@bbcsomali');
+  });
+});
+
 it('should render the LDP tags', async () => {
   render(<CanonicalNewsInternationalOrigin />);
 
@@ -628,13 +654,13 @@ it('should render the default service image as open graph image', async () => {
     ).map(tag =>
       tag.hasAttribute('property')
         ? {
-            property: tag.getAttribute('property'),
-            content: tag.getAttribute('content'),
-          }
+          property: tag.getAttribute('property'),
+          content: tag.getAttribute('content'),
+        }
         : {
-            name: tag.getAttribute('name'),
-            content: tag.getAttribute('content'),
-          },
+          name: tag.getAttribute('name'),
+          content: tag.getAttribute('content'),
+        },
     );
 
     expect(actual).toEqual(expected);
@@ -669,13 +695,13 @@ it('should render the open graph image if provided', async () => {
     ).map(tag =>
       tag.hasAttribute('property')
         ? {
-            property: tag.getAttribute('property'),
-            content: tag.getAttribute('content'),
-          }
+          property: tag.getAttribute('property'),
+          content: tag.getAttribute('content'),
+        }
         : {
-            name: tag.getAttribute('name'),
-            content: tag.getAttribute('content'),
-          },
+          name: tag.getAttribute('name'),
+          content: tag.getAttribute('content'),
+        },
     );
 
     expect(actual).toEqual(expected);
