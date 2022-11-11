@@ -15,7 +15,7 @@ const styles = {
   list: ({ mq, spacings }: Theme) =>
     css({
       padding: 0,
-      margin: 0,
+      margin: `0 0 ${spacings.QUINTUPLE}rem`,
       display: 'grid',
       gridGap: `${spacings.DOUBLE}rem`,
       gridTemplateColumns: 'repeat(2, 1fr)',
