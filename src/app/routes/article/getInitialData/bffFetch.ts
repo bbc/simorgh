@@ -11,7 +11,7 @@ import { Services, Variants } from '../../../models/types/global';
 const logger = nodeLogger(__filename);
 
 const removeAmp = (path: string) => path.split('.')[0];
-const popId = (path: string) => path.split('/').pop();
+const popId = (path: string) => path.match(/(c[a-zA-Z0-9]{10}o)/)?.[1];
 
 const getId = pipe(getUrlPath, removeAmp, popId);
 
@@ -24,6 +24,17 @@ const getEnvironment = (pathname: string) => {
   }
 
   return process.env.SIMORGH_APP_ENV;
+};
+
+interface BFFError extends Error {
+  status: number;
+}
+
+const handleError = (message: string, status: number) => {
+  const error = new Error(message) as BFFError;
+  error.status = status;
+
+  return error;
 };
 
 type Props = {
@@ -45,6 +56,8 @@ export default async ({
 
     const agent = await getAgent();
     const id = getId(pathname);
+
+    if (!id) throw handleError('Article ID is invalid', 500);
 
     let fetchUrl = Url(process.env.BFF_PATH as string).set('query', {
       id,
@@ -68,6 +81,10 @@ export default async ({
       path: fetchUrl.toString(),
       ...(!isLocal && { agent, optHeaders }),
     });
+
+    if (!json?.data?.article) {
+      throw handleError('Article data is malformed', 500);
+    }
 
     const {
       data: { article, secondaryData },

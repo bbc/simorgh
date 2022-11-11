@@ -204,4 +204,59 @@ describe('Articles - BFF Fetching', () => {
       status: 500,
     });
   });
+
+  it('should throw an error if the article ID is malformed', async () => {
+    const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
+    fetchDataSpy.mockImplementation(() =>
+      Promise.resolve({
+        status: 200,
+        json: JSON.stringify(bffArticleJson),
+      }),
+    );
+
+    // @ts-ignore - Ignore fetchPageData argument types
+    await getInitialData({
+      path: '/kyrgyz/articles/somethingelse',
+      getAgent,
+      service: 'kyrgyz',
+    });
+
+    expect(nodeLogger.error).toHaveBeenCalledWith(BFF_FETCH_ERROR, {
+      pathname: '/kyrgyz/articles/somethingelse',
+      service: 'kyrgyz',
+      message: 'Article ID is invalid',
+      status: 500,
+    });
+  });
+
+  it('should throw an error if the article metadata is malformed', async () => {
+    const malformedBffArticleJson = {
+      metadata: {},
+      content: {},
+      promo: {},
+      relatedContent: {},
+    };
+
+    const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
+    fetchDataSpy.mockImplementation(() =>
+      Promise.resolve({
+        status: 200,
+        json: JSON.stringify(malformedBffArticleJson),
+      }),
+    );
+
+    // @ts-ignore - Ignore fetchPageData argument types
+    await getInitialData({
+      path: '/kyrgyz/articles/c0000000000o',
+      getAgent,
+      service: 'kyrgyz',
+    });
+
+    expect(nodeLogger.error).toHaveBeenCalledWith(BFF_FETCH_ERROR, {
+      pathname: '/kyrgyz/articles/c0000000000o',
+      service: 'kyrgyz',
+      message: 'Article data is malformed',
+      status: 500,
+    });
+  });
 });
