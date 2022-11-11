@@ -3,6 +3,7 @@ import { arrayOf, oneOf, shape, string, number } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import CurationGrid from './CurationGrid';
+import HierarchicalGrid from '../HierarchicalGrid';
 import Subheading from './Subhead';
 
 export const VISUAL_STYLE = {
@@ -11,12 +12,14 @@ export const VISUAL_STYLE = {
 
 export const VISUAL_PROMINANCE = {
   NORMAL: 'NORMAL',
+  HIGH: 'HIGH',
 };
 
 // Maps a visual style and prominance to a component that renders that curation
 const components = {
   [VISUAL_STYLE.NONE]: {
     [VISUAL_PROMINANCE.NORMAL]: CurationGrid,
+    [VISUAL_PROMINANCE.HIGH]: HierarchicalGrid,
   },
 };
 
