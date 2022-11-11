@@ -163,8 +163,6 @@ describe('Articles - BFF Fetching', () => {
   });
 
   it('should log a 404 to node.logger when the article cannot be found', async () => {
-    process.env.SIMORGH_APP_ENV = 'local';
-
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
 
     fetchDataSpy.mockRejectedValue({ message: 'Not found', status: 404 });
@@ -185,8 +183,6 @@ describe('Articles - BFF Fetching', () => {
   });
 
   it('should log a 500 to node.logger when the BFF response fails', async () => {
-    process.env.SIMORGH_APP_ENV = 'local';
-
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
 
     fetchDataSpy.mockRejectedValue({
