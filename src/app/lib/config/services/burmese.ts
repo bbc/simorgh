@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import burmese from '../../../components/ThemeProvider/typography/scripts/burmese';
+import burmese from '../../../components/ThemeProvider/fontScripts/burmese';
 import brandSVG from '../../chameleonLogos/burmese';
 import '#psammead/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
@@ -125,6 +125,14 @@ export const service: DefaultServiceConfig = {
           callToActionLast: ' ပင်မစာမျက်နှာသို့ သွားပါ။',
           callToActionLinkUrl: 'https://www.bbc.com/burmese',
         },
+      },
+      byline: {
+        articleInformation: 'ဆောင်းပါးအချက်အလက်',
+        author: 'ရေးသားသူ',
+        listItemImage: 'ရုပ်ပုံ ',
+        published: 'ရေးသားခဲ့သည်။',
+        reportingFrom: 'ရေးသားပေးပို့သည့်နေရာ',
+        role: 'ရာထူးတာဝန်',
       },
       consentBanner: {
         privacy: {
@@ -275,12 +283,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: '[social_media_site] ၏အကြောင်းအရာများကို ပြခွင့်ပြုမှာလား။',
           body: `ယခုဆောင်းပါးတွင် [social_media_site] မှ အကြာင်းအရာများပါဝင်ပါသည်။ ယင်းဆိုက်မှ ကွတ်ကီးနှင့်အခြားနည်းပညာများသုံးနိုင်သဖြင့် စာမျက်နှာကို မဖွင့်ခင် သင့်ခွင့်ပြုချက်ကိုတောင်းခံပါသည်။ သင်မဆုံးဖြတ်ခင် [social_media_site] [link] ကွတ်ကီးမူဝါဒ [/link] နှင့် [link] ကိုယ်ရေးအချက်အလက်လုံခြုံမှု မူဝါဒ [/link] တို့ကို ဖတ်ရှုနိုင်ပါသည်။ သဘောတူလျင် 'လက်ခံပြီးဆက်သွားပါမည်' ဆိုသည်ကို ရွေးချယ်ပေးပါ။`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
           button: 'သဘောတူပြီးရှေ့ဆက်ကြည့်ရန်',
         },
       },

@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import arabic from '../../../components/ThemeProvider/typography/scripts/arabic';
+import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import brandSVG from '../../chameleonLogos/pashto';
 import '#psammead/psammead-locales/moment/ps';
 import '#psammead/moment-timezone-include/tz/GMT';
@@ -112,6 +112,13 @@ export const service: DefaultServiceConfig = {
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/pashto',
         },
+      },
+      byline: {
+        articleInformation: 'د مطلب په اړه جزییات',
+        listItemImage: 'د توکو نوملړ، انځور',
+        published: 'د خپرېدو وخت',
+        reportingFrom: 'رپوټ له:',
+        role: 'دنده',
       },
       consentBanner: {
         privacy: {
@@ -260,12 +267,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: `ایا له [social_media_site] نه د منځپانګې اجازه شته؟`,
           body: `دې لیکنه کې له social media راخیستل شوي مواد شته.‌ له ښودلو وړاندې یې ستاسې اجازه پکار ده، ځکه ښایي‌کوکیز یا بله تکنالوژي پکې کارول شوې وي. کولی شئ له اجازې مخکې د social media site  پالیسي ولولئ. د دې لپاره غوښتنه ومنئ او مخکې لاړ شئ`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
         },
       },
       include: {

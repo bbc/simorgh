@@ -21,6 +21,7 @@ const Document = ({
   modernScripts,
   legacyScripts,
   links,
+  service,
 }) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const meta = helmet.meta.toComponent();
@@ -48,10 +49,12 @@ const Document = ({
   return (
     <html lang="en-GB" {...noJsHtmlAttrs} {...htmlAttrs}>
       <head>
+        {!['pidgin', 'hindi'].includes(service) && (
+          <ResourceHints assetOrigins={assetOrigins} />
+        )}
         {meta}
         {!isAmp && links}
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <ResourceHints assetOrigins={assetOrigins} />
         {title}
         {isAmp ? (
           <style

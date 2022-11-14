@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import noAscendersOrDescenders from '../../../components/ThemeProvider/typography/scripts/noAscOrDesc';
+import noAscendersOrDescenders from '../../../components/ThemeProvider/fontScripts/noAscOrDesc';
 import brandSVG from '../../chameleonLogos/tigrinya';
 import '#psammead/moment-timezone-include/tz/Africa/Addis_Ababa';
 import '#psammead/psammead-locales/moment/ti';
@@ -235,12 +235,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: `ንትሕዝቶ [social_media_site] ተፍቅድ ዶ?`,
           body: `እዚ ጽሑፍ ካብ [social_media_site] ዝተረኽቡ ትሕዝቶታት ኣሎዎ። እንተኾነ ኩኪስ ይዅን ካልእ ቴክኖሎጂ ክጥቀሙ ስለዝኽእሉ፡ ቅድሚ ምኽፋቱ ፍቓድኩም የድሊ። ፍቓደኛታት ቅድሚ ምዃንኩም፡ ነቲ ናይ [social_media_site] [link] ፖሊሲ ኩኪስ [/link] ከምኡ’ውን [link] ፖሊሲ ብሕትና [/link] ክተንብብዎ ትኽእሉ ኢኹም። ነዚ ትሕዝቶ ንምርኣይ፡ ‘እሰማማዕ’የ ቀጽል’ ዝብል ጠውቑ።`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
         },
       },
       include: {

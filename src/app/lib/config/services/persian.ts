@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import brandSVG from '../../chameleonLogos/persian';
-import arabic from '../../../components/ThemeProvider/typography/scripts/arabic';
+import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import 'moment/locale/fa';
 import '#psammead/moment-timezone-include/tz/GMT';
 import jalaali from '../../../legacy/psammead/psammead-calendars/src';
@@ -134,6 +134,14 @@ export const service: DefaultServiceConfig = {
           callToActionLast: ' بروید',
           callToActionLinkUrl: 'https://www.bbc.com/persian',
         },
+      },
+      byline: {
+        articleInformation: 'اطلاعات مقاله',
+        author: 'نویسنده',
+        listItemImage: 'تصویر نویسنده مقاله',
+        published: 'منتشر شده در',
+        reportingFrom: 'در',
+        role: 'شغل',
       },
       consentBanner: {
         privacy: {
@@ -286,12 +294,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: `اجازه نشان دادن محتوای [social_media_site]  را می دهید؟`,
           body: `این مطلب شامل محتوایی از [social_media_site]  است. قبل از بارگیری این محتوا از شما اجازه می گیریم، زیرا ممکن است این سایت ها از کوکی ها و یا سایر انواع فن آوری استفاده کنند. می توانید سیاست [link]  [social_media_site]  را درباره کوکی ها [/link] و  [link] سیاست مربوط به حفظ حریم خصوصی[/link]  را پیش از موافقت بخوانید. برای دیدن این محتوا روی "موافقت و ادامه"‌کلیک کنید.`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
         },
       },
       include: {
@@ -369,14 +371,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'صفحه اول',
         url: '/persian',
-      },
-      {
-        title: 'اوکراین',
-        url: '/persian/topics/cw9q48x6558t',
-      },
-      {
-        title: 'کرونا',
-        url: '/persian/science-52004647',
       },
       {
         title: 'پخش زنده',

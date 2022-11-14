@@ -1,5 +1,5 @@
 import brandSVG from '../../chameleonLogos/afrique';
-import latinWithDiacritics from '../../../components/ThemeProvider/typography/scripts/latinWithDiacritics';
+import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import {
   C_POSTBOX,
   C_WHITE,
@@ -261,12 +261,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: 'Autoriser le contenu de [social_media_site]?',
           body: `This article contains content provided by [social_media_site].  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read the [social_media_site] [link] cookie policy [/link] and [link] privacy policy [/link] before accepting. To view this content choose 'accept and continue'.`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
         },
       },
       include: {

@@ -17,7 +17,9 @@ export const GREY_10 = '#141414';
 export const GREY_11 = '#BABABA';
 export const GREY_2 = '#F6F6F6';
 export const GREY_3 = '#E6E8EA';
+export const GREY_5 = '#8A8C8E';
 export const GREY_6 = '#545658';
+export const GREY_7 = '#3A3C3E';
 export const GREY_8 = '#202224';
 export const KINGFISHER = '#11708C';
 export const LE_TEAL = '#09838B';
@@ -43,51 +45,3 @@ export const STONE = '#D5D0CD';
 export const STORM = '#404040';
 export const WEATHER_BLUE = '#067EB3';
 export const WHITE = '#FFFFFF';
-
-export const palette = {
-  ARCHIVE_BLUE,
-  BLACK,
-  BLUEJAY,
-  BLUEJAY_LHT,
-  CHALK,
-  CLOUD_DARK,
-  CLOUD_LIGHT,
-  CONSENT_ACTION,
-  CONSENT_BACKGROUND,
-  CONSENT_CONTENT,
-  CONSENT_FOCUS,
-  DARK_SALTIRE,
-  DIM_GREY,
-  EBON,
-  GHOST,
-  GREY_10,
-  GREY_11,
-  GREY_2,
-  GREY_3,
-  GREY_6,
-  GREY_8,
-  KINGFISHER,
-  LE_TEAL,
-  LUNAR,
-  LUNAR_LIGHT,
-  METAL,
-  MIDNIGHT_BLACK,
-  NEWSROUND_PURPLE,
-  NEWSROUND_PURPLE_30,
-  OAT_LHT,
-  ORBIT_GREY,
-  PEBBLE,
-  PHILIPPINE_GREY,
-  POSTBOX,
-  POSTBOX_30,
-  RHINO,
-  SHADOW,
-  SPORT_MIST,
-  SPORT_SILVER,
-  SPORT_YELLOW,
-  SPORT_YELLOW_30,
-  STONE,
-  STORM,
-  WEATHER_BLUE,
-  WHITE,
-};

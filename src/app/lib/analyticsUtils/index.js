@@ -204,7 +204,11 @@ export const getAtUserId = () => {
 
   const val = path(['val'], cookie) || uuid();
 
-  Cookie.set(cookieName, JSON.stringify({ val }), { expires, path: '/' });
+  Cookie.set(cookieName, JSON.stringify({ val }), {
+    expires,
+    path: '/',
+    secure: true,
+  });
 
   return val;
 };

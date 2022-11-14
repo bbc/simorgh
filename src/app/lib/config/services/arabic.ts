@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import arabic from '../../../components/ThemeProvider/typography/scripts/arabic';
+import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import brandSVG from '../../chameleonLogos/arabic';
 import '#psammead/psammead-locales/moment/ar';
 import '#psammead/moment-timezone-include/tz/GMT';
@@ -272,12 +272,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: 'هل تسمح بعرض المحتوى من [social_media_site]؟',
           body: `تحتوي هذه الصفحة على محتوى من موقع [social_media_site]. موافقتكم مطلوبة قبل عرض أي مواد لأنها قد تتضمن ملفات ارتباط (كوكيز) وغيرها من الأدوات التقنية. قد تفضلون الاطلاع على [link] سياسة ملفات الارتباط [/link] الخاصة بموقع [social_media_site] [link] وسياسة الخصوصية [/link] قبل الموافقة. لعرض المحتوى، اختر "موافقة وإكمال"`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
         },
       },
       include: {

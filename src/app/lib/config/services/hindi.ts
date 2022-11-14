@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import devanagari from '../../../components/ThemeProvider/typography/scripts/devanagari';
+import devanagari from '../../../components/ThemeProvider/fontScripts/devanagari';
 import brandSVG from '../../chameleonLogos/hindi';
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
 import '#psammead/psammead-locales/moment/hi';
@@ -132,6 +132,13 @@ export const service: DefaultServiceConfig = {
           callToActionLast: ' पर जाएं',
           callToActionLinkUrl: 'https://www.bbc.com/hindi',
         },
+      },
+      byline: {
+        articleInformation: '....में',
+        listItemImage: 'तस्वीर',
+        published: 'प्रकाशित',
+        reportingFrom: '........से',
+        role: 'पदनाम',
       },
       consentBanner: {
         privacy: {
@@ -280,12 +287,7 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: '[social_media_site] सामग्री की इजाज़त?',
           body: `इस लेख में [social_media_site] से मिली सामग्री शामिल है. कुछ भी लोड होने से पहले हम आपकी इजाज़त मांगते हैं क्योंकि उनमें कुकीज़ और दूसरी तकनीकों का इस्तेमाल किया गया हो सकता है. आप स्वीकार करने से पहले [social_media_site] [link] cookie policy [/link] और [link] को पढ़ना चाहेंगे [/link]. इस सामग्री को देखने के लिए  'अनुमति  देंऔर जारी रखें' को चुनें.`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
+          button: 'अनुमति  देंऔर जारी रखें',
         },
       },
       include: {

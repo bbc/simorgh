@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import cyrillic from '../../../components/ThemeProvider/typography/scripts/cyrillic';
+import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
 import brandSVG from '../../chameleonLogos/uzbek';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/uz';
@@ -256,12 +256,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: `[social_media_site] контентига рухсат бериш`,
           body: `Айни мақолада [social_media_site] томонидан тақдим қилинган контент мавжуд. Биз бу контент юкланмасидан аввал сизнинг розилигингизни сўраймиз, чунки улар куки ва бошқа технологиялардан фойдаланган бўлиши мумкин. Сиз   [social_media_site] [link] ҳаволасида кукиларга доир  [/link] ва шахсий маълумотларга  оид қоидалар ҳақида аввал ўқиб,  кейин қабул қилишга рози бўлишингиз  мумкин. Кўриш учун “қабул қилиш ва давом этиш”ни танланг.`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
           button: 'Қабул қилинг ва давом этинг',
         },
       },
