@@ -18,7 +18,7 @@ import igboFrontPageData from '#data/igbo/frontpage/index.json';
 import somaliFrontPageData from '#data/somali/frontpage/index.json';
 import liveRadioPageData from '#data/korean/bbc_korean_radio/liveradio.json';
 import { getSummary } from '#lib/utilities/parseAssetData/index';
-import getAuthorTwitterHandle from '#lib/utilities/getAuthorTwitterHandle/index';
+import getAuthorTwitterHandle from '#app/pages/ArticlePage/getAuthorTwitterHandle';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import services from '../../../../server/utilities/serviceConfigs';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
@@ -731,13 +731,13 @@ it('should render the default service image as open graph image', async () => {
     ).map(tag =>
       tag.hasAttribute('property')
         ? {
-          property: tag.getAttribute('property'),
-          content: tag.getAttribute('content'),
-        }
+            property: tag.getAttribute('property'),
+            content: tag.getAttribute('content'),
+          }
         : {
-          name: tag.getAttribute('name'),
-          content: tag.getAttribute('content'),
-        },
+            name: tag.getAttribute('name'),
+            content: tag.getAttribute('content'),
+          },
     );
 
     expect(actual).toEqual(expected);
@@ -772,13 +772,13 @@ it('should render the open graph image if provided', async () => {
     ).map(tag =>
       tag.hasAttribute('property')
         ? {
-          property: tag.getAttribute('property'),
-          content: tag.getAttribute('content'),
-        }
+            property: tag.getAttribute('property'),
+            content: tag.getAttribute('content'),
+          }
         : {
-          name: tag.getAttribute('name'),
-          content: tag.getAttribute('content'),
-        },
+            name: tag.getAttribute('name'),
+            content: tag.getAttribute('content'),
+          },
     );
 
     expect(actual).toEqual(expected);

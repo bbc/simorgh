@@ -7,7 +7,7 @@ import {
   articleDataPersian,
   articleDataPidginWithByline,
 } from '#pages/ArticlePage/fixtureData';
-import getAuthorTwitterHandle from '#lib/utilities/getAuthorTwitterHandle/index';
+import getAuthorTwitterHandle from '#app/pages/ArticlePage/getAuthorTwitterHandle';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
