@@ -76,6 +76,10 @@ server
     helmet({
       frameguard: { action: 'deny' },
       contentSecurityPolicy: false,
+      crossOriginEmbedderPolicy: false,
+      crossOriginOpenerPolicy: false,
+      crossOriginResourcePolicy: false,
+      originAgentCluster: false,
     }),
   )
   .use(logResponseTime)
