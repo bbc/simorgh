@@ -18,11 +18,12 @@ import SectionLabel from '#psammead/psammead-section-label/src';
 import SkipLinkWrapper from '#components/SkipLinkWrapper';
 
 import { storyItem } from '#models/propTypes/storyItem';
-import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import { GridItemMediumNoMargin } from '#components/Grid';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import RecommendationsPromoList from './RecommendationsPromoList';
 import RecommendationsPromo from './RecommendationsPromo';
+import ErrorBoundary from './ErrorBoundary';
 
 const RecommendationsWrapper = styled.div`
   background-color: ${C_GHOST};
@@ -83,32 +84,34 @@ const CpsRecommendations = ({ items }) => {
   };
 
   return (
-    <GridItemMediumNoMargin>
-      <RecommendationsWrapper data-e2e={labelId} {...a11yAttributes}>
-        <SkipLinkWrapper service={service} {...skipLink}>
-          {title ? (
-            <LabelComponent
-              script={script}
-              service={service}
-              dir={dir}
-              labelId={labelId}
-              columnType="main"
-              mobileDivider={false}
-              overrideHeadingAs="strong"
-              bar={false}
-              backgroundColor={C_GHOST}
-            >
-              {title}
-            </LabelComponent>
-          ) : null}
-          {isSinglePromo ? (
-            <RecommendationsPromo promo={items[0]} />
-          ) : (
-            <RecommendationsPromoList promoItems={items} />
-          )}
-        </SkipLinkWrapper>
-      </RecommendationsWrapper>
-    </GridItemMediumNoMargin>
+    <ErrorBoundary recommendations={items}>
+      <GridItemMediumNoMargin>
+        <RecommendationsWrapper data-e2e={labelId} {...a11yAttributes}>
+          <SkipLinkWrapper service={service} {...skipLink}>
+            {title ? (
+              <LabelComponent
+                script={script}
+                service={service}
+                dir={dir}
+                labelId={labelId}
+                columnType="main"
+                mobileDivider={false}
+                overrideHeadingAs="strong"
+                bar={false}
+                backgroundColor={C_GHOST}
+              >
+                {title}
+              </LabelComponent>
+            ) : null}
+            {isSinglePromo ? (
+              <RecommendationsPromo promo={items[0]} />
+            ) : (
+              <RecommendationsPromoList promoItems={items} />
+            )}
+          </SkipLinkWrapper>
+        </RecommendationsWrapper>
+      </GridItemMediumNoMargin>
+    </ErrorBoundary>
   );
 };
 

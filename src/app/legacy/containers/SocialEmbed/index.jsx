@@ -8,13 +8,11 @@ import {
 } from '#psammead/psammead-social-embed/src';
 
 import { RequestContext } from '#contexts/RequestContext';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { GridItemMedium } from '#components/Grid';
 import { socialEmbedBlockPropTypes } from '#models/propTypes/socialEmbed';
 import nodeLogger from '#lib/logger.node';
 import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
-import isLive from '#lib/utilities/isLive';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import createTranslations from './common/translations';
 import { LAZYLOAD_OFFSET, Wrapper } from './common/styles';
 import { getProviderFromSource, getIdFromSource } from './sourceHelpers';
@@ -22,22 +20,16 @@ import { getProviderFromSource, getIdFromSource } from './sourceHelpers';
 const logger = nodeLogger(__filename);
 
 const SocialEmbedContainer = ({ blocks, source }) => {
-  const { isAmp, pageType } = useContext(RequestContext);
+  const { isAmp } = useContext(RequestContext);
   const { service, translations } = useContext(ServiceContext);
 
   if (!blocks || !source) return null;
   const { model } = blocks[0];
   const provider = getProviderFromSource(source);
 
-  // TODO REMOVE TO GO LIVE
-  if (
-    isLive() &&
-    pageType === ARTICLE_PAGE &&
-    (provider === 'youtube' || provider === 'instagram')
-  )
-    return null;
-
   const id = getIdFromSource(source);
+
+  if (!id) return null;
 
   const oEmbed = path(['blocks', 0, 'model', 'oembed'], model);
   const oEmbedIndexOfType = path(['indexOfType'], oEmbed);
@@ -82,6 +74,7 @@ const SocialEmbedContainer = ({ blocks, source }) => {
             fallback={fallback}
             skipLink={skipLink}
             caption={caption}
+            source={source}
           />
         ) : (
           <Lazyload offset={LAZYLOAD_OFFSET} once height={oEmbed?.height}>

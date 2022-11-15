@@ -19,7 +19,7 @@ import {
   getParagon,
 } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const BrandTitle = styled.span`
   display: block;

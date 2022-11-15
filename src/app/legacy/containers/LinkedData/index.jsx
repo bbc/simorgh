@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet';
 import { string, shape, arrayOf, bool, object } from 'prop-types';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
 import getBrandedImage from '#lib/utilities/getBrandedImage';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import getAboutTagsContent from './getAboutTagsContent';
 
 const LinkedData = ({
@@ -50,6 +50,33 @@ const LinkedData = ({
     url: defaultImage,
   };
 
+  const newsPublisherLogo = {
+    '@type': IMG_TYPE,
+    width: 103,
+    height: 16,
+    url: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/publisher-nx16.png',
+  };
+
+  const sportPublisherLogo = {
+    '@type': IMG_TYPE,
+    width: 108,
+    height: 16,
+    url: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/sport/images/metadata/publisher-nx16.png',
+  };
+
+  const choosePublisherLogo = () => {
+    switch (service) {
+      case 'news':
+        return newsPublisherLogo;
+      case 'sport':
+        return sportPublisherLogo;
+      default:
+        return logo;
+    }
+  };
+
+  const publisherLogo = choosePublisherLogo();
+
   const image = {
     '@type': IMG_TYPE,
     width: 1024,
@@ -63,7 +90,7 @@ const LinkedData = ({
     '@type': ORG_TYPE,
     name: AUTHOR_PUBLISHER_NAME,
     ...(isTrustProjectParticipant && { publishingPrinciples }),
-    logo,
+    logo: publisherLogo,
   };
   const mainEntityOfPage = {
     '@type': WEB_PAGE_TYPE,

@@ -1,7 +1,8 @@
 import React from 'react';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { latin, arabic } from '#psammead/gel-foundations/src/scripts';
+import latin from '../../../../components/ThemeProvider/fontScripts/latin';
+import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import Caption from '.';
 
 describe('Caption', () => {

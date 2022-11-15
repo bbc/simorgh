@@ -80,7 +80,9 @@ const Notice = ({
 
   return (
     <Wrapper service={service}>
-      <p>{detokenise(text, dictionary)}</p>
+      <p data-testid="social-embed-fallback-title">
+        {detokenise(text, dictionary)}
+      </p>
       <a
         href={linkHref}
         aria-label={

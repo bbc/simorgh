@@ -1,6 +1,6 @@
 import React from 'react';
-import { latin } from '#psammead/gel-foundations/src/scripts';
-import { ServiceContext } from '#contexts/ServiceContext';
+import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import HeadingsContainer from '.';
 import blocksSingleFragment from './testHelpers';
 

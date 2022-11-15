@@ -1,15 +1,15 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { render } from '@testing-library/react';
-import latinAndCyrillicTypography from '#psammead/gel-foundations/src/scripts/latin-and-cyrillic';
-import burmeseTypography from '#psammead/gel-foundations/src/scripts/burmese';
-import arabicTypography from '#psammead/gel-foundations/src/scripts/arabic';
+import latin from '../../../../components/ThemeProvider/fontScripts/latin';
+import burmeseTypography from '../../../../components/ThemeProvider/fontScripts/burmese';
+import arabicTypography from '../../../../components/ThemeProvider/fontScripts/arabic';
 import { TopicTags, TopicTag } from './index';
 
 describe('TopicTags', () => {
   const newsProps = {
     service: 'news',
-    script: latinAndCyrillicTypography,
+    script: latin,
   };
 
   shouldMatchSnapshot(

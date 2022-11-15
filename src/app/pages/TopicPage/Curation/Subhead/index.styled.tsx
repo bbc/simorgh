@@ -8,10 +8,12 @@ import {
   C_GREY_10,
 } from '../../../../legacy/psammead/psammead-styles/src/colours';
 
-interface Props {
-  service: string;
-  script: string;
-}
+import { Services } from '../../../../models/types/global';
+
+type Props = {
+  service: Services;
+  script: object;
+};
 
 export default styled.h2<Props>`
   ${({ service }) => getSansBold(service)}
@@ -33,19 +35,14 @@ export default styled.h2<Props>`
   a:hover,
   a:focus {
     color: ${C_POSTBOX};
-    span::after {
-      bottom: ${3 / 16}rem;
-      content: '';
-      background: ${C_POSTBOX};
-      width: 100%;
-      height: ${2 / 16}rem;
-      position: absolute;
-      left: 0;
+    span {
+      text-decoration: underline;
     }
   }
   svg {
     margin-inline-start: 0.5rem;
     fill: currentColor;
+    width: ${14 / 16}rem;
     height: ${14 / 16}rem;
     position: relative;
   }

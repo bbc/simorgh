@@ -177,26 +177,6 @@ describe('getAdditionalPageData', () => {
 
         expect(additionalPageData).toEqual({});
       });
-
-      it('should get recommendations from private recommendation endpoint on live environment', async () => {
-        process.env.SIMORGH_APP_ENV = 'live';
-        const expectedOutput = {
-          recommendations: recommendationsJson,
-        };
-        hasRecommendations.mockImplementationOnce(() => true);
-        fetchMock.mock(
-          'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279',
-          recommendationsJson,
-        );
-
-        const additionalPageData = await getAdditionalPageData({
-          pageData: portugueseSty,
-          service: 'portuguese',
-        });
-
-        expect(additionalPageData).toEqual(expectedOutput);
-        delete process.env.SIMORGH_APP_ENV;
-      });
     });
   });
 });

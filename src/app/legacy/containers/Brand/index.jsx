@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import Brand from '#psammead/psammead-brand/src';
 import { bool, node, oneOfType, func, shape, any } from 'prop-types';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const StyledBrand = styled(Brand)`
   position: relative;
@@ -12,6 +12,7 @@ const StyledBrand = styled(Brand)`
     @media screen and (forced-colors: active) {
       fill: linkText;
     }
+  }
 `;
 
 const BrandContainer = ({ skipLink, scriptLink, brandRef, ...props }) => {

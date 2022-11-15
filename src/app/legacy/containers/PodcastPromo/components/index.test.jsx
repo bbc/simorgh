@@ -2,13 +2,13 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import * as scripts from '#psammead/gel-foundations/src/scripts';
+import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 
 import PodcastPromo from '.';
 
 const assertTypeOfElement = (Component, type) => {
   const { container } = render(
-    <Component script={scripts.latin} service="russian">
+    <Component script={latin} service="russian">
       Content
     </Component>,
   );
@@ -22,7 +22,7 @@ describe('Podcast Promo', () => {
     assertTypeOfElement(PodcastPromo.Title, 'h2');
     shouldMatchSnapshot(
       'should match snapshot',
-      <PodcastPromo.Title script={scripts.latin} service="russian" dir="ltr">
+      <PodcastPromo.Title script={latin} service="russian" dir="ltr">
         Content
       </PodcastPromo.Title>,
     );
@@ -48,7 +48,7 @@ describe('Podcast Promo', () => {
     assertTypeOfElement(PodcastPromo.Card.Title, 'h3');
     shouldMatchSnapshot(
       'should match snapshot',
-      <PodcastPromo.Card.Title script={scripts.latin} service="russian">
+      <PodcastPromo.Card.Title script={latin} service="russian">
         Content
       </PodcastPromo.Card.Title>,
     );
@@ -58,7 +58,7 @@ describe('Podcast Promo', () => {
     assertTypeOfElement(PodcastPromo.Card.Description, 'p');
     shouldMatchSnapshot(
       'should match snapshot',
-      <PodcastPromo.Card.Description script={scripts.latin} service="russian">
+      <PodcastPromo.Card.Description script={latin} service="russian">
         Content
       </PodcastPromo.Card.Description>,
     );
@@ -87,7 +87,7 @@ describe('Podcast Promo', () => {
     shouldMatchSnapshot(
       'should match snapshot',
       <PodcastPromo.Card.EpisodesText
-        script={scripts.latin}
+        script={latin}
         service="russian"
         dir="ltr"
       >

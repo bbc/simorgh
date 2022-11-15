@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING,
@@ -18,11 +17,12 @@ import {
   C_GREY_10,
 } from '#psammead/psammead-styles/src/colours';
 import { shape, string, oneOfType } from 'prop-types';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { storyItem } from '#models/propTypes/storyItem';
+import { ServiceContext } from '../../../../contexts/ServiceContext';
 import Grid from '../../../components/Grid';
 import RecommendationsImage from '../RecommendationsPromoImage';
 import useCombinedClickTrackerHandler from '../../StoryPromo/useCombinedClickTrackerHandler';
+import extractPromoData from './utility';
 
 const StyledPromoWrapper = styled.div`
   position: relative;
@@ -103,9 +103,8 @@ const StyledHeadline = styled.div`
 const RecommendationsPromo = ({ promo, eventTrackingData }) => {
   const { script, service } = useContext(ServiceContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
-  const headline = pathOr(null, ['headlines', 'headline'], promo);
-  const url = pathOr(null, ['locators', 'assetUri'], promo);
-  const indexImage = pathOr(null, ['indexImage'], promo);
+
+  const { headline, url, indexImage } = extractPromoData({ promo });
 
   return (
     <Grid

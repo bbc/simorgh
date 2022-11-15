@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { latin } from '#psammead/gel-foundations/src/scripts';
 
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
+import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import CpsTable from '.';
 import fixtures from './fixtures';
 

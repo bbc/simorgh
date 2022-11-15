@@ -78,7 +78,6 @@ const getBaseConfig = BUNDLE_TYPE => ({
         use: [
           {
             loader: 'babel-loader',
-
             options: {
               envName: BUNDLE_TYPE,
               babelrc: true,

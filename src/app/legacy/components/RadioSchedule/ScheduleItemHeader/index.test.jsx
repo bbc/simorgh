@@ -1,11 +1,10 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import * as scripts from '#psammead/gel-foundations/src/scripts';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
+import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import ScheduleItemHeader from '.';
 import '@testing-library/jest-dom/extend-expect';
 
-const script = scripts.arabic;
 const service = 'arabic';
 const dir = 'rtl';
 const state = 'live';
@@ -18,7 +17,7 @@ const renderHeaderWithContext = () => (
   <ServiceContextProvider
     dir={dir}
     service={service}
-    script={script}
+    script={arabic}
     locale="ar"
   >
     <ScheduleItemHeader

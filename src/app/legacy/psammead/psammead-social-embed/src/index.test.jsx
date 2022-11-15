@@ -1,7 +1,18 @@
 /* eslint-disable no-console */
 import React from 'react';
-import { render, waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import {
+  render,
+  screen,
+  waitFor,
+  fireEvent,
+} from '../../../../components/react-testing-library-with-providers';
+import {
+  ARTICLE_PAGE,
+  STORY_PAGE,
+  CORRESPONDENT_STORY_PAGE,
+} from '../../../../routes/utils/pageTypes';
+
 import { CanonicalSocialEmbed, AmpSocialEmbed } from './index';
 import fixtures from './fixtures';
 import * as useScript from './Canonical/useScript';
@@ -19,6 +30,81 @@ describe('CanonicalSocialEmbed', () => {
   afterEach(() => {
     global.console.error = error;
   });
+  describe('Facebook', () => {
+    const facebookSocialEmbed = (
+      <CanonicalSocialEmbed
+        provider={fixtures.facebook.source}
+        oEmbed={fixtures.facebook.embed.oembed}
+        skipLink={{
+          text: 'Skip %provider_name% content',
+          endTextId: 'skip-%provider%-content',
+          endTextVisuallyHidden: 'End of %provider_name% content',
+        }}
+        fallback={{
+          text: "Sorry but we're having trouble displaying this content",
+          linkText: 'View content on %provider_name%',
+          linkTextSuffixVisuallyHidden: ', external',
+          linkHref: 'embed-url',
+          warningText:
+            'Warning: BBC is not responsible for third party content',
+        }}
+        service="news"
+      />
+    );
+    it('should render Facebook for Optimo article pages', async () => {
+      const { unmount } = render(facebookSocialEmbed, {
+        pageType: ARTICLE_PAGE,
+      });
+      expect(
+        document.querySelector(
+          'head script[src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0"]',
+        ),
+      ).toBeTruthy();
+      unmount();
+      expect(
+        document.querySelector(
+          'head script[src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0"]',
+        ),
+      ).toBeFalsy();
+    });
+
+    it('should not render Facebook for CPS pages', async () => {
+      render(facebookSocialEmbed, {
+        pageType: STORY_PAGE,
+      });
+      expect(
+        document.querySelector(
+          'head script[src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0"]',
+        ),
+      ).toBeFalsy();
+
+      const fallbackTitle = screen.getByTestId('social-embed-fallback-title');
+
+      expect(fallbackTitle).toBeInTheDocument();
+      expect(fallbackTitle.textContent).toEqual(
+        "Sorry but we're having trouble displaying this content",
+      );
+    });
+
+    it('should not render Facebook for Correspondent pages', async () => {
+      render(facebookSocialEmbed, {
+        pageType: CORRESPONDENT_STORY_PAGE,
+      });
+      expect(
+        document.querySelector(
+          'head script[src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0"]',
+        ),
+      ).toBeFalsy();
+
+      const fallbackTitle = screen.getByTestId('social-embed-fallback-title');
+
+      expect(fallbackTitle).toBeInTheDocument();
+      expect(fallbackTitle.textContent).toEqual(
+        "Sorry but we're having trouble displaying this content",
+      );
+    });
+  });
+
   describe('Twitter', () => {
     const twitterSocialEmbed = (
       <CanonicalSocialEmbed
@@ -191,12 +277,21 @@ describe('CanonicalSocialEmbed', () => {
 
     it('should render correctly for YouTube', async () => {
       const { container } = render(youtubeEmbed);
+
+      const button = screen.getByTestId('banner-button');
+
+      fireEvent.click(button);
+
       expect(container.firstChild).toMatchSnapshot();
     });
 
     it('should not invoke the onRender prop and should log an error', async () => {
       useScriptSpy.mockReturnValueOnce(true);
       render(youtubeEmbed);
+
+      const button = screen.getByTestId('banner-button');
+
+      fireEvent.click(button);
 
       expect(console.error).toHaveBeenCalledWith(
         'onRender callback function not implemented for YouTube',
@@ -259,27 +354,30 @@ describe('AmpSocialEmbed', () => {
           }
         : null;
 
-    shouldMatchSnapshot(
-      `should render correctly for ${embed.oembed.provider_name}`,
-      <AmpSocialEmbed
-        provider={provider}
-        id={id}
-        skipLink={{
-          text: 'Skip %provider_name% content',
-          endTextId: 'skip-%provider%-content',
-          endTextVisuallyHidden: 'End of %provider_name% content',
-        }}
-        fallback={{
-          text: "Sorry but we're having trouble displaying this content",
-          linkText: 'View content on %provider_name%',
-          linkHref: 'embed-url',
-          warningText:
-            'Warning: BBC is not responsible for third party content',
-        }}
-        service="news"
-        caption={caption}
-      />,
-    );
+    it(`should render correctly for ${embed.oembed.provider_name}`, () => {
+      const { container } = render(
+        <AmpSocialEmbed
+          provider={provider}
+          id={id}
+          skipLink={{
+            text: 'Skip %provider_name% content',
+            endTextId: 'skip-%provider%-content',
+            endTextVisuallyHidden: 'End of %provider_name% content',
+          }}
+          fallback={{
+            text: "Sorry but we're having trouble displaying this content",
+            linkText: 'View content on %provider_name%',
+            linkHref: 'embed-url',
+            warningText:
+              'Warning: BBC is not responsible for third party content',
+          }}
+          service="news"
+          caption={caption}
+        />,
+      );
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   shouldMatchSnapshot(

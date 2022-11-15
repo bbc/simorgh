@@ -115,3 +115,110 @@ export const instagramBlockNoEmbed = {
     ],
   },
 };
+
+export const youtubeBlockEmbed = {
+  type: 'renditions',
+  model: {
+    locator: 'urn:bbc:optimo:social:d4ae3e6f-51cf-4899-bbd4-16d14882cbc7',
+    blocks: [
+      {
+        type: 'aresOEmbed',
+        model: {
+          oembed: {
+            title:
+              'Rick Astley - Never Gonna Give You Up (Official Music Video)',
+            author_name: 'Rick Astley',
+            author_url: 'https://www.youtube.com/user/BBCMundo',
+            type: 'video',
+            height: 113,
+            width: 200,
+            version: '1.0',
+            provider_name: 'YouTube',
+            provider_url: 'https://www.youtube.com/',
+            thumbnail_height: 360,
+            thumbnail_width: 480,
+            thumbnail_url: 'https://i.ytimg.com/vi/chiWVxreqhU/hqdefault.jpg',
+            html: '<iframe width="200" height="113" src="https://www.youtube.com/embed/1e05_rwHvOM?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+          },
+        },
+      },
+    ],
+  },
+};
+
+export const tiktokBlockEmbed = {
+  type: 'renditions',
+  model: {
+    locator: 'urn:bbc:optimo:social:d4ae3e6f-51cf-4899-bbd4-16d14882cbc7',
+    blocks: [
+      {
+        type: 'aresOEmbed',
+        model: {
+          oembed: {
+            version: '1.0',
+            title:
+              'Cupcakes, You don watch my full interview for BBC Pidgin? How you see am? 🙊💖✨#BBCPidgin #CuppyOnAMission #CuppyxBBC',
+            author_name: 'Cuppy',
+            author_url: 'https://www.tiktok.com/@cuppymusic',
+            provider_name: 'TikTok',
+            provider_url: 'https://www.tiktok.com',
+            thumbnail_url:
+              'https://p16-sign-va.tiktokcdn.com/obj/tos-maliva-p-0068/328e9247ec2746b8992d5fcdde75affa_1649876928?x-expires=1663779600&x-signature=HP%2BukzBzbsK5budxvxLauElDen4%3D',
+            thumbnail_width: 576,
+            thumbnail_height: 1024,
+            html: '<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@cuppymusic/video/7086167423639997701" data-video-id="7086167423639997701" data-embed-from="oembed" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@cuppymusic" href="https://www.tiktok.com/@cuppymusic?refer=embed">@cuppymusic</a> <p>Cupcakes, You don watch my full interview for BBC Pidgin? How you see am? 🙊💖✨<a title="bbcpidgin" target="_blank" href="https://www.tiktok.com/tag/bbcpidgin?refer=embed">#BBCPidgin</a> <a title="cuppyonamission" target="_blank" href="https://www.tiktok.com/tag/cuppyonamission?refer=embed">#CuppyOnAMission</a> <a title="cuppyxbbc" target="_blank" href="https://www.tiktok.com/tag/cuppyxbbc?refer=embed">#CuppyxBBC</a></p> <a target="_blank" title="♬ original sound - Cuppy" href="https://www.tiktok.com/music/original-sound-7086167435610442501?refer=embed">♬ original sound - Cuppy</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>',
+          },
+        },
+      },
+    ],
+  },
+};
+
+export const facebookPostBlockEmbed = {
+  type: 'renditions',
+  model: {
+    locator: 'urn:bbc:optimo:social:d4ae3e6f-51cf-4899-bbd4-16d14882cbc7',
+    blocks: [
+      {
+        type: 'aresOEmbed',
+        model: {
+          oembed: {
+            author_name: 'Rick Astley',
+            author_url: 'https://www.facebook.com/RickAstley',
+            provider_url: 'https://www.facebook.com',
+            provider_name: 'Facebook',
+            html: '<div id="fb-root"></div>\n<script async="1" defer="1" crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&amp;version=v13.0" nonce="fPyyhrbz"></script><div class="fb-post" data-href="https://www.facebook.com/RickAstley/posts/545713756920775" data-width="552"><blockquote cite="https://graph.facebook.com/100044464658204/posts/545713756920775/" class="fb-xfbml-parse-ignore"><p>Had a fantastic time at &#064;thescriptofficial concert in LA this week, what a gig!! Have a great US tour guys! Don’t miss...</p>Posted by <a href="https://www.facebook.com/RickAstley">Rick Astley</a> on&nbsp;<a href="https://graph.facebook.com/100044464658204/posts/545713756920775/">Friday, April 1, 2022</a></blockquote></div>',
+            type: 'rich',
+            version: '1.0',
+            width: 552,
+          },
+        },
+      },
+    ],
+  },
+};
+
+export const facebookVideoBlockEmbed = {
+  type: 'renditions',
+  model: {
+    locator: 'urn:bbc:optimo:social:d4ae3e6f-51cf-4899-bbd4-16d14882cbc7',
+    blocks: [
+      {
+        type: 'aresOEmbed',
+        model: {
+          oembed: {
+            author_name: 'Rick Astley',
+            author_url: 'https://www.facebook.com/RickAstley',
+            provider_url: 'https://www.facebook.com',
+            provider_name: 'Facebook',
+            height: 888,
+            html: '<div id="fb-root"></div>\n<script async="1" defer="1" crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&amp;version=v13.0" nonce="8pqnGEmE"></script><div class="fb-video" data-href="https://www.facebook.com/RickAstley/videos/1378590239249667/"><blockquote cite="https://www.facebook.com/RickAstley/videos/1378590239249667/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/RickAstley/videos/1378590239249667/"></a><p>Saw another great gig in LA this week, I went to see Inhaler in the &#064;belascola and they were fantastic! Have a great show in New York tomorrow guys! Rick x &#064;inhalerdublin</p>Posted by <a href="https://www.facebook.com/RickAstley">Rick Astley</a> on Saturday, April 2, 2022</blockquote></div>',
+            type: 'video',
+            version: '1.0',
+            width: 500,
+          },
+        },
+      },
+    ],
+  },
+};

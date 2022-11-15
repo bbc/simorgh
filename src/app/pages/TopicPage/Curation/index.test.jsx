@@ -1,13 +1,12 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-
-import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 import fixture from '#data/pidgin/topics/c95y35941vrt.json';
+import mundoFixture from '#data/mundo/topics/c1en6xwmpkvt.json';
+import { render } from '../../../components/react-testing-library-with-providers';
 
 import Curation, { VISUAL_STYLE, VISUAL_PROMINANCE } from '.';
+
+jest.mock('../../../components/ThemeProvider');
 
 const components = {
   [VISUAL_STYLE.NONE]: {
@@ -15,18 +14,12 @@ const components = {
       promos: fixture.data.summaries,
       testId: 'curation-grid-normal',
     },
+    [VISUAL_PROMINANCE.HIGH]: {
+      promos: mundoFixture.data.curations[0].summaries,
+      testId: 'hierarchical-grid',
+    },
   },
 };
-
-const CurationWithContext = props => (
-  <ToggleContextProvider>
-    <RequestContextProvider>
-      <ServiceContextProvider service="pidgin" lang="pcm">
-        <Curation {...props} />
-      </ServiceContextProvider>
-    </RequestContextProvider>
-  </ToggleContextProvider>
-);
 
 describe('Topic Curations', () => {
   it('should render the correct component', () => {
@@ -34,7 +27,7 @@ describe('Topic Curations', () => {
       Object.entries(prominances).forEach(
         ([prominance, { promos, testId }]) => {
           const { getByTestId } = render(
-            <CurationWithContext
+            <Curation
               visualStyle={curationType}
               visualProminance={prominance}
               promos={promos}
@@ -48,7 +41,7 @@ describe('Topic Curations', () => {
 
   it('should render the standard grid if a style/prominance is not recognised', () => {
     const { getByTestId } = render(
-      <CurationWithContext
+      <Curation
         visualStyle="something-unsupported"
         visualProminance="what-is-this"
         promos={fixture.data.summaries}

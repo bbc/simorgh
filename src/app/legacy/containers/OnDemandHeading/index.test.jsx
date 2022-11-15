@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, getByText, getByRole } from '@testing-library/react';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import OnDemandHeadingContainer from '.';
 
 const releaseDateTimeStamp = 1587945600000;

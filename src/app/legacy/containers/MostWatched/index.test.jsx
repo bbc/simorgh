@@ -2,12 +2,12 @@ import React from 'react';
 import { arrayOf, shape, bool } from 'prop-types';
 import { render } from '@testing-library/react';
 
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { storyItem } from '#models/propTypes/storyItem';
 import mostWatchedData from '#data/pidgin/mostWatched/index.json';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import MostWatched from '.';
 
 const promos = mostWatchedData.records.slice(0, 5).map(item => item.promo);
