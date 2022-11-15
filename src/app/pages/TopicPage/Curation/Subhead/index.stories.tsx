@@ -26,7 +26,7 @@ const Component = ({ service, variant }: Props) => {
 const WithLink = ({ service, variant }: Props) => {
   return (
     <ServiceContextProvider service={service} variant={variant}>
-      <Subheading href="https://bbc.com">
+      <Subheading link="https://bbc.com">
         {services[service][variant].translations.relatedContent}
       </Subheading>
     </ServiceContextProvider>

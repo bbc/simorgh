@@ -42,6 +42,7 @@ export default styled.h2<Props>`
   svg {
     margin-inline-start: 0.5rem;
     fill: currentColor;
+    width: ${14 / 16}rem;
     height: ${14 / 16}rem;
     position: relative;
   }

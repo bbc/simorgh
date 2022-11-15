@@ -13,6 +13,8 @@ import {
   instagramBlock,
   youtubeBlockEmbed,
   tiktokBlockEmbed,
+  facebookPostBlockEmbed,
+  facebookVideoBlockEmbed,
 } from './common/fixtures';
 
 /* eslint-disable react/prop-types */
@@ -60,7 +62,7 @@ describe('SocialEmbedContainer', () => {
       const { container, unmount } = render(
         <SocialEmbedContainer
           blocks={[instagramBlock]}
-          source="https://www.instagram.com/reel/CeWO3HcIE9w/?utm_source=ig_embed&ig_rid=b6b91062-7174-4784-9a99-139d52bc5b29"
+          source="https://www.instagram.com/p/CgNAEjOK46_"
         />,
         { service: 'news', isAmp: false, pageType: ARTICLE_PAGE },
       );
@@ -74,7 +76,7 @@ describe('SocialEmbedContainer', () => {
       expect(loggerMock.info).toHaveBeenCalledTimes(1);
       expect(loggerMock.info).toHaveBeenCalledWith(SOCIAL_EMBED_RENDERED, {
         provider: 'instagram',
-        href: 'https://www.instagram.com/reel/CeWO3HcIE9w/?utm_source=ig_embed&ig_rid=b6b91062-7174-4784-9a99-139d52bc5b29',
+        href: 'https://www.instagram.com/p/CgNAEjOK46_',
       });
       unmount();
       expect(
@@ -120,6 +122,74 @@ describe('SocialEmbedContainer', () => {
         href: 'https://www.tiktok.com/@cuppymusic/video/7086167423639997701',
       });
       unmount();
+    });
+
+    it('should render a Facebook Post block and unmount correctly', () => {
+      const { container, unmount } = render(
+        <SocialEmbedContainer
+          blocks={[facebookPostBlockEmbed]}
+          source="https://www.facebook.com/RickAstley/posts/545713756920775"
+        />,
+        { service: 'news', isAmp: false, pageType: ARTICLE_PAGE },
+      );
+
+      expect(container.firstChild).toMatchSnapshot();
+      expect(
+        document.querySelector(
+          'head script[src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0"]',
+        ),
+      ).toBeTruthy();
+      expect(loggerMock.info).toHaveBeenCalledTimes(1);
+      expect(loggerMock.info).toHaveBeenCalledWith(SOCIAL_EMBED_RENDERED, {
+        provider: 'facebook',
+        href: 'https://www.facebook.com/RickAstley/posts/545713756920775',
+      });
+      unmount();
+      expect(
+        document.querySelector(
+          'head script[src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0"]',
+        ),
+      ).toBeFalsy();
+    });
+
+    it('should render a Facebook Video block and unmount correctly', () => {
+      const { container, unmount } = render(
+        <SocialEmbedContainer
+          blocks={[facebookVideoBlockEmbed]}
+          source="https://www.facebook.com/RickAstley/videos/1378590239249667"
+        />,
+        { service: 'news', isAmp: false, pageType: ARTICLE_PAGE },
+      );
+
+      expect(container.firstChild).toMatchSnapshot();
+      expect(
+        document.querySelector(
+          'head script[src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0"]',
+        ),
+      ).toBeTruthy();
+      expect(loggerMock.info).toHaveBeenCalledTimes(1);
+      expect(loggerMock.info).toHaveBeenCalledWith(SOCIAL_EMBED_RENDERED, {
+        provider: 'facebook',
+        href: 'https://www.facebook.com/RickAstley/videos/1378590239249667',
+      });
+      unmount();
+      expect(
+        document.querySelector(
+          'head script[src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0"]',
+        ),
+      ).toBeFalsy();
+    });
+
+    it('should not render the embed if the ID is invalid', () => {
+      const { container } = render(
+        <SocialEmbedContainer
+          blocks={[youtubeBlockEmbed]}
+          source="https://yout.be/1e05_rwHvOM"
+        />,
+        { service: 'news', isAmp: false, pageType: ARTICLE_PAGE },
+      );
+
+      expect(container.firstChild).toBe(null);
     });
 
     it('should render the correct skip link text when indexOfType is provided (means this is one of multiple e.g. Twitter embeds in the article)', () => {
