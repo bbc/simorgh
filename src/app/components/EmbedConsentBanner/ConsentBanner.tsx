@@ -1,69 +1,70 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { useContext } from 'react';
+import { useContext, MouseEvent } from 'react';
 import pathOr from 'ramda/src/pathOr';
 
 import Text from '../Text';
 import Paragraph from '../Paragraph';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import { SocialEmbedProviders } from '../../models/types/global';
 import { Translations } from '../../models/types/translations';
+import useViewTracker from '../../hooks/useViewTracker';
 
 import consentBannerCss from './ConsentBanner.styles';
+import { ConsentBannerProviders, getEventTrackingData } from '.';
 
-const defaultTranslations: Translations['socialEmbed']['consentBanner'] = {
-  heading: 'Allow [social_media_site] content?',
-  body: `This article contains content provided by [social_media_site].  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read [social_media_site] [link] cookie policy [/link] and [link] privacy policy [/link] before accepting. To view this content choose 'accept and continue'.`,
-  button: 'Accept and continue',
+type BannerUrls = {
+  cookiesUrl: {
+    [key in ConsentBannerProviders]: string;
+  };
+  privacyUrl: {
+    [key in ConsentBannerProviders]: string;
+  };
+};
+
+const BANNER_URLS: BannerUrls = {
   cookiesUrl: {
     youtube: 'https://policies.google.com/technologies/cookies',
+    tiktok: 'https://www.tiktok.com/legal/cookie-policy',
   },
   privacyUrl: {
     youtube: 'https://policies.google.com/privacy',
+    tiktok: 'https://www.tiktok.com/legal/privacy-policy',
   },
 };
 
-const getProviderName = (provider: SocialEmbedProviders) => {
+const DEFAULT_TRANSLATIONS: Translations['socialEmbed']['consentBanner'] = {
+  heading: 'Allow [social_media_site] content?',
+  body: `This article contains content provided by [social_media_site].  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read [social_media_site] [link] cookie policy [/link] and [link] privacy policy [/link] before accepting. To view this content choose 'accept and continue'.`,
+  button: 'Accept and continue',
+};
+
+const getProviderName = (provider: ConsentBannerProviders) => {
   return {
-    instagram: 'Instagram',
-    twitter: 'Twitter',
     youtube: 'Google YouTube',
-    facebook: 'Facebook',
+    tiktok: 'TikTok',
   }[provider];
 };
 
 const getTranslations = (
-  provider: SocialEmbedProviders,
+  provider: ConsentBannerProviders,
   translations: Translations,
   externalLinkText: string,
 ) => {
   const headingTranslations = pathOr(
-    defaultTranslations.heading,
+    DEFAULT_TRANSLATIONS.heading,
     ['socialEmbed', 'consentBanner', 'heading'],
     translations,
   );
 
   const bodyTranslations = pathOr(
-    defaultTranslations.body,
+    DEFAULT_TRANSLATIONS.body,
     ['socialEmbed', 'consentBanner', 'body'],
     translations,
   );
 
   const buttonTranslations = pathOr(
-    defaultTranslations.button,
+    DEFAULT_TRANSLATIONS.button,
     ['socialEmbed', 'consentBanner', 'button'],
-    translations,
-  );
-
-  const cookiesUrl = pathOr(
-    defaultTranslations.cookiesUrl[provider],
-    ['socialEmbed', 'consentBanner', 'cookiesUrl', provider],
-    translations,
-  );
-
-  const privacyUrl = pathOr(
-    defaultTranslations.privacyUrl[provider],
-    ['socialEmbed', 'consentBanner', 'privacyUrl', provider],
     translations,
   );
 
@@ -90,6 +91,9 @@ const getTranslations = (
       button: buttonTranslations,
     };
   }
+
+  const cookiesUrl = BANNER_URLS.cookiesUrl?.[provider];
+  const privacyUrl = BANNER_URLS.privacyUrl?.[provider];
 
   const linkHtmlElements = [
     linkTextElements.length > 0 && cookiesUrl && (
@@ -142,13 +146,13 @@ const getTranslations = (
 };
 
 type ConsentBannerContentProps = {
-  provider: SocialEmbedProviders;
+  provider: ConsentBannerProviders;
   clickHandler:
     | {
         on: string;
       }
     | {
-        onClick: () => void;
+        onClick: (e: MouseEvent<HTMLButtonElement>) => void;
       };
   id?: string;
 };
@@ -166,11 +170,14 @@ const ConsentBanner = ({
     externalLinkText,
   );
 
+  const viewRef = useViewTracker(getEventTrackingData(provider));
+
   return (
     <div
       data-testid="consentBanner"
       id={`consentBanner${id ? `-${id}` : ''}`}
       css={consentBannerCss.parent}
+      ref={viewRef}
     >
       <Text
         as="strong"

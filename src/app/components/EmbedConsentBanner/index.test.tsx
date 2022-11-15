@@ -7,22 +7,27 @@ import {
 
 import { EmbedConsentBannerCanonical, EmbedConsentBannerAmp } from '.';
 
+import * as clickTracking from '../../hooks/useClickTrackerHandler';
+
 describe('Embed Consent Banner', () => {
-  it('should match snapshot', () => {
-    const { container } = render(
-      <EmbedConsentBannerCanonical provider="youtube" />,
-      { service: 'mundo' },
-    );
-
-    expect(container).toMatchSnapshot();
-  });
-
-  it('should match snapshot - AMP', () => {
-    const { container } = render(<EmbedConsentBannerAmp provider="youtube" />, {
+  it('should render correct elements for the banner', () => {
+    render(<EmbedConsentBannerCanonical provider="youtube" />, {
       service: 'mundo',
     });
 
-    expect(container).toMatchSnapshot();
+    expect(screen.getByTestId('banner-heading')).toBeInTheDocument();
+    expect(screen.getByTestId('banner-body')).toBeInTheDocument();
+    expect(screen.getByTestId('banner-button')).toBeInTheDocument();
+  });
+
+  it('should render correct elements for the banner - AMP', () => {
+    render(<EmbedConsentBannerAmp provider="youtube" />, {
+      service: 'mundo',
+    });
+
+    expect(screen.getByTestId('banner-heading')).toBeInTheDocument();
+    expect(screen.getByTestId('banner-body')).toBeInTheDocument();
+    expect(screen.getByTestId('banner-button')).toBeInTheDocument();
   });
 
   it('should render the banner when the user has not consented', () => {
@@ -44,29 +49,43 @@ describe('Embed Consent Banner', () => {
     );
   });
 
-  it('should not render the banner when the user has consented', () => {
-    render(
-      <EmbedConsentBannerCanonical provider="youtube">
-        <div>Mock iframe content</div>
-      </EmbedConsentBannerCanonical>,
-      { service: 'mundo' },
-    );
+  describe('Event tracking - Embed Consent Banner', () => {
+    afterEach(() => {
+      jest.clearAllMocks();
+    });
 
-    const button = screen.getByTestId('banner-button');
+    it('should not render the banner when the user has consented', () => {
+      render(
+        <EmbedConsentBannerCanonical provider="youtube">
+          <div>Mock iframe content</div>
+        </EmbedConsentBannerCanonical>,
+        { service: 'mundo' },
+      );
 
-    fireEvent.click(button);
+      const button = screen.getByTestId('banner-button');
 
-    expect(screen.queryByTestId('consentBanner')).not.toBeInTheDocument();
-  });
+      fireEvent.click(button);
 
-  it('should not render the banner when the provider is not YouTube', () => {
-    render(
-      <EmbedConsentBannerCanonical provider="instagram">
-        <div>Mock iframe content</div>
-      </EmbedConsentBannerCanonical>,
-      { service: 'mundo' },
-    );
+      expect(screen.queryByTestId('consentBanner')).not.toBeInTheDocument();
+    });
 
-    expect(screen.queryByTestId('consentBanner')).not.toBeInTheDocument();
+    it('should call the click tracking hook when the banner button is clicked', () => {
+      const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+
+      render(
+        <EmbedConsentBannerCanonical provider="youtube">
+          <div>Mock iframe content</div>
+        </EmbedConsentBannerCanonical>,
+        { service: 'mundo' },
+      );
+
+      const button = screen.getByTestId('banner-button');
+
+      fireEvent.click(button);
+
+      expect(clickTrackerSpy).toHaveBeenCalledWith({
+        componentName: 'social-consent-banner-youtube',
+      });
+    });
   });
 });

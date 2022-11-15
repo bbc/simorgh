@@ -26,7 +26,9 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
   const locationBlock = bylineBlocks.find(
     (block: any) => block.type === 'location',
   );
-  const imageBlock = bylineBlocks.find((block: any) => block.type === 'image');
+  const imagesBlock = bylineBlocks.find(
+    (block: any) => block.type === 'images',
+  );
 
   const author = pathOr(
     '',
@@ -67,19 +69,19 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
   );
   const locator = pathOr(
     '',
-    ['model', 'blocks', 0, 'model', 'locator'],
-    imageBlock,
+    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'locator'],
+    imagesBlock,
   );
   const originCode = pathOr(
     '',
-    ['model', 'blocks', 0, 'model', 'originCode'],
-    imageBlock,
+    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'originCode'],
+    imagesBlock,
   );
-  const DEFAULT_IMAGE_RES = 160;
+
   let image = buildIChefURL({
     originCode,
     locator,
-    resolution: DEFAULT_IMAGE_RES,
+    resolution: 160,
     isPng: true,
   });
 
@@ -115,11 +117,10 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
       <ul css={BylineCss.bylineList} role="list">
         {image && (
           <li
-            css={
-              isRtl
-                ? [BylineCss.imageRtl, BylineCss.ImageWrapper]
-                : [BylineCss.imageLtr, BylineCss.ImageWrapper]
-            }
+            css={[
+              BylineCss.ImageWrapper,
+              isRtl ? BylineCss.imageRtl : BylineCss.imageLtr,
+            ]}
           >
             <Image
               css={BylineCss.imageSrc}

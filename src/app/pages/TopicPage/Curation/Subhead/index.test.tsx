@@ -7,17 +7,17 @@ import { Services } from '../../../../models/types/global';
 
 interface Props {
   service?: Services;
-  href?: string;
+  link?: string;
 }
 
 /* eslint-disable react/prop-types */
 const SubheadWithContext = ({
   children = '',
-  href = '',
+  link = '',
   service = 'mundo',
 }: PropsWithChildren<Props>) => (
   <ServiceContextProvider service={service}>
-    <Subhead href={href}>{children}</Subhead>
+    <Subhead link={link}>{children}</Subhead>
   </ServiceContextProvider>
 );
 
@@ -33,7 +33,7 @@ describe('Curation Subhead Component', () => {
 
   it('should render children within an h2', () => {
     const { container } = render(
-      <SubheadWithContext href="https://bbc.com">My Text</SubheadWithContext>,
+      <SubheadWithContext link="https://bbc.com">My Text</SubheadWithContext>,
     );
 
     const anchorElement = container.querySelector('a');
