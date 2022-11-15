@@ -24,14 +24,14 @@
             "id": "ae7c9f51-3144-ba4b-a881-f88822b36c8c"
           },
           {
-            "title": "El conflictivo pasado con Venezuela de Rex Tillerson, nuevo secretario de Estado de EEUU",
-            "type": "article",
-            "firstPublished": "2017-02-03T11:26:55.000Z",
-            "link": "https://www.bbc.com/mundo/23100317",
-            "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/167B2/test/_63528029_036820129-1.jpg",
-            "description": "Es posiblemente en lo único que se ponen de acuerdo gobierno y oposición en Venezuela: ambos tienen esperanzas en una mejor relación con Estados Unidos y que eso les ayude en sus objetivos contrapuestos.",
-            "imageAlt": "ExxonMobil Chairman and CEO Rex Tillerson speaks during the IHS CERAWeek 2015 energy conference in Houston, Texas April 21, 2015",
-            "id": "ff4f3677-0f70-574e-b129-6b3396788390"
+            "title": "Otro video",
+            "type": "video",
+            "firstPublished": "2016-06-06T20:04:53.000Z",
+            "link": "https://www.bbc.com/mundo/noticias-america-latina-23050039",
+            "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/79D4/test/_63488113_p013p2z1.jpg",
+            "description": "Bu, tek başına hayatta kalma mücadelesi veren 16 yaşındaki Suriyeli bir göçmen çocuğun hikayesi...",
+            "imageAlt": "Keyframe #1",
+            "id": "aa301157-71b6-2e48-a783-c873f7a15650"
           },
           {
             "title": "Qué hace que los chilenos sean tan resistentes a los terremotos",
@@ -52,6 +52,26 @@
             "description": "En esta nueva serie, los periodistas de la BBC te ayudan a practicar inglés con los titulares de las noticias de la semana. Mira el video y aprende nuevo vocabulario.",
             "imageAlt": "Aprende inglés con las noticias",
             "id": "fb03a8e4-6993-8e4e-9fc0-bd94eca3c31f"
+          },
+          {
+            "title": "El conflictivo pasado con Venezuela de Rex Tillerson, nuevo secretario de Estado de EEUU",
+            "type": "article",
+            "firstPublished": "2017-02-03T11:26:55.000Z",
+            "link": "https://www.bbc.com/mundo/23100317",
+            "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/167B2/test/_63528029_036820129-1.jpg",
+            "description": "Es posiblemente en lo único que se ponen de acuerdo gobierno y oposición en Venezuela: ambos tienen esperanzas en una mejor relación con Estados Unidos y que eso les ayude en sus objetivos contrapuestos.",
+            "imageAlt": "ExxonMobil Chairman and CEO Rex Tillerson speaks during the IHS CERAWeek 2015 energy conference in Houston, Texas April 21, 2015",
+            "id": "ff4f3677-0f70-574e-b129-6b3396788390"
+          },
+          {
+            "title": "Un pagina de video de prueba",
+            "type": "audio",
+            "firstPublished": "2020-04-01T13:44:41.000Z",
+            "link": "https://www.bbc.com/mundo/media-23283126",
+            "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/0D05/test/_63733330_p01mt2kt.jpg",
+            "description": "test",
+            "imageAlt": "England star Fran Kirby",
+            "id": "22720ea0-aaf8-8749-afa1-a0b36a632a71"
           }
         ],
         "activePage": 1,
@@ -59,13 +79,14 @@
         "curationId": "urn:bbc:tipo:list:d0348c91-39f5-4224-91cf-6ca9f2812376",
         "curationType": "tipo-curation",
         "position": 0,
-        "visualProminence": "NORMAL"
+        "visualProminence": "HIGH"
       },
       {
         "summaries": [
           {
             "title": "El video de prueba",
             "type": "video",
+            "duration": "PT5M",
             "firstPublished": "2022-05-12T10:41:21.000Z",
             "link": "https://www.bbc.com/mundo/23048701",
             "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/FA0D/test/_63931046_p00wjk8v.jpg",
@@ -76,6 +97,7 @@
           {
             "title": "Anuncio del acuerdo",
             "type": "video",
+            "duration": "PT5M",
             "firstPublished": "2022-05-12T10:41:14.000Z",
             "link": "https://www.bbc.com/mundo/noticias-internacional-23452772",
             "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/ABED/test/_63931044_p0182w7g.jpg",
@@ -86,6 +108,7 @@
           {
             "title": "Hippopotamos tomando el sol",
             "type": "video",
+            "duration": "PT5M",
             "firstPublished": "2022-05-12T10:41:02.000Z",
             "link": "https://www.bbc.com/mundo/noticias-america-latina-23049956",
             "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/1482D/test/_63931048_p012z4jy.jpg",
@@ -136,16 +159,6 @@
             "id": "04107481-098f-6f49-a710-fc5494bf7991"
           },
           {
-            "title": "Un pagina de video de prueba",
-            "type": "audio",
-            "firstPublished": "2020-04-01T13:44:41.000Z",
-            "link": "https://www.bbc.com/mundo/media-23283126",
-            "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/0D05/test/_63733330_p01mt2kt.jpg",
-            "description": "test",
-            "imageAlt": "England star Fran Kirby",
-            "id": "22720ea0-aaf8-8749-afa1-a0b36a632a71"
-          },
-          {
             "title": "¿Cuán viable es que el petro, la criptomoneda de Venezuela, sirva para aliviar la crisis en el país?",
             "type": "article",
             "firstPublished": "2018-06-28T10:07:24.000Z",
@@ -166,16 +179,6 @@
             "id": "ff4f3677-0f70-574e-b129-6b3396788390"
           },
           {
-            "title": "Otro video",
-            "type": "video",
-            "firstPublished": "2016-06-06T20:04:53.000Z",
-            "link": "https://www.bbc.com/mundo/noticias-america-latina-23050039",
-            "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/79D4/test/_63488113_p013p2z1.jpg",
-            "description": "Bu, tek başına hayatta kalma mücadelesi veren 16 yaşındaki Suriyeli bir göçmen çocuğun hikayesi...",
-            "imageAlt": "Keyframe #1",
-            "id": "aa301157-71b6-2e48-a783-c873f7a15650"
-          },
-          {
             "title": "¿Por qué dejarán de sonar las campanas del Big Ben?",
             "type": "audio",
             "firstPublished": "2016-05-04T12:42:40.000Z",
@@ -192,7 +195,7 @@
         "curationType": "vivo-stream",
         "position": 3,
         "title": "Analysis",
-        "visualProminence": "NORMAL"
+        "visualProminence": "HIGH"
       },
       {
         "summaries": [
