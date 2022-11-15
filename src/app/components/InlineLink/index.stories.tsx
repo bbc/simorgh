@@ -76,7 +76,7 @@ export const InlineLinkInsideText = ({
 };
 
 export default {
-  title: 'NewComponents/InlineLink',
+  title: 'New Components/InlineLink',
   Component: InternalInlineLink,
   decorators: [withKnobs, withServicesKnob()],
   parameters: {

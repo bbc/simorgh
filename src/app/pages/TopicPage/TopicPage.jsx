@@ -15,7 +15,7 @@ import TopicImage from './TopicImage';
 import TopicTitle from './TopicTitle';
 import TopicDescription from './TopicDescription';
 import Pagination from './Pagination';
-import Curation, { VISUAL_PROMINANCE, VISUAL_STYLE } from './Curation';
+import Curation, { VISUAL_STYLE } from './Curation';
 
 const TopicPage = ({ pageData }) => {
   const { lang, translations } = useContext(ServiceContext);
@@ -29,7 +29,7 @@ const TopicPage = ({ pageData }) => {
   const linkedDataEntities = curations
     .map(({ summaries }) =>
       summaries.map(summary => ({
-        '@type': 'Article',
+        '@type': summary.type,
         name: summary.title,
         headline: summary.title,
         url: summary.link,
@@ -87,6 +87,7 @@ const TopicPage = ({ pageData }) => {
           </div>
           {curations.map(
             ({
+              visualProminence,
               summaries,
               curationId,
               title: curationTitle,
@@ -97,7 +98,7 @@ const TopicPage = ({ pageData }) => {
                 headingLevel={curationTitle && 3}
                 key={curationId}
                 visualStyle={VISUAL_STYLE.NONE}
-                visualProminance={VISUAL_PROMINANCE.NORMAL}
+                visualProminance={visualProminence}
                 promos={summaries}
                 title={curationTitle}
                 topStoriesTitle={topStoriesTitle}

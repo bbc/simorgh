@@ -29,6 +29,8 @@ const SocialEmbedContainer = ({ blocks, source }) => {
 
   const id = getIdFromSource(source);
 
+  if (!id) return null;
+
   const oEmbed = path(['blocks', 0, 'model', 'oembed'], model);
   const oEmbedIndexOfType = path(['indexOfType'], oEmbed);
   const oEmbedPosition = is(Number, oEmbedIndexOfType) && oEmbedIndexOfType + 1;
@@ -72,6 +74,7 @@ const SocialEmbedContainer = ({ blocks, source }) => {
             fallback={fallback}
             skipLink={skipLink}
             caption={caption}
+            source={source}
           />
         ) : (
           <Lazyload offset={LAZYLOAD_OFFSET} once height={oEmbed?.height}>

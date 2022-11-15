@@ -137,7 +137,9 @@ exports[`AmpSocialEmbed should render a notice when the provider is unsupported 
     <div
       class="emotion-4 emotion-5"
     >
-      <p>
+      <p
+        data-testid="social-embed-fallback-title"
+      >
         Sorry but we're having trouble displaying this content
       </p>
       <a
@@ -155,6 +157,103 @@ exports[`AmpSocialEmbed should render a notice when the provider is unsupported 
       tabindex="-1"
     >
       End of unknown content
+    </p>
+  </div>
+</div>
+`;
+
+exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-2 span {
+  color: #222222;
+}
+
+.emotion-2:hover span,
+.emotion-2:focus span {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.emotion-2:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-4 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <a
+      class="emotion-2 emotion-3"
+      href="#skip-facebook-content"
+    >
+      <span>
+        Skip Facebook content
+      </span>
+    </a>
+    <amp-facebook
+      data-embed-as="post"
+      height="1"
+      layout="responsive"
+      width="1"
+    />
+    <p
+      class="emotion-4 emotion-5"
+      id="skip-facebook-content"
+      tabindex="-1"
+    >
+      End of Facebook content
     </p>
   </div>
 </div>
@@ -1390,7 +1489,9 @@ exports[`CanonicalSocialEmbed should render a notice when the provider is unsupp
     <div
       class="emotion-4 emotion-5"
     >
-      <p>
+      <p
+        data-testid="social-embed-fallback-title"
+      >
         Sorry but we're having trouble displaying this content
       </p>
       <a
@@ -1551,7 +1652,9 @@ exports[`CanonicalSocialEmbed should render a notice when there is no oEmbed res
     <div
       class="emotion-4 emotion-5"
     >
-      <p>
+      <p
+        data-testid="social-embed-fallback-title"
+      >
         Sorry but we're having trouble displaying this content
       </p>
       <a
