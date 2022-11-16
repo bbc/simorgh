@@ -22,7 +22,7 @@ const serviceHasInlineLink = service =>
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRun = ({ service, pageType }) => {
-  describe(`Running testsToAlwaysRun for ${service} ${pageType}`, () => { });
+  describe(`Running testsToAlwaysRun for ${service} ${pageType}`, () => {});
 };
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
@@ -205,7 +205,8 @@ export const testsThatFollowSmokeTestConfig = ({
                   socialMediaProviderName,
                   body,
                 );
-                const lowercaseSocialMediaProviderName = socialMediaProviderName.toLowerCase();
+                const lowercaseSocialMediaProviderName =
+                  socialMediaProviderName.toLowerCase();
                 if (SocialEmbedsData.length > 0) {
                   SocialEmbedsData.forEach(content => {
                     const socialMediaUrl = content.model.source;
@@ -215,7 +216,8 @@ export const testsThatFollowSmokeTestConfig = ({
                       .scrollIntoView()
                       .within(() => {
                         if (
-                          socialMediaProviderName === 'YouTube' || socialMediaProviderName === 'TikTok'
+                          socialMediaProviderName === 'YouTube' ||
+                          socialMediaProviderName === 'TikTok'
                         ) {
                           cy.get(`[data-testid="consentBanner"]`).should(
                             'exist',
@@ -248,5 +250,5 @@ export const testsThatFollowSmokeTestConfig = ({
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
 export const testsThatNeverRunDuringSmokeTesting = ({ service, pageType }) => {
-  describe(`No testsToNeverSmokeTest to run for ${service} ${pageType}`, () => { });
+  describe(`No testsToNeverSmokeTest to run for ${service} ${pageType}`, () => {});
 };
