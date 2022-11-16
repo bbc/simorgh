@@ -355,10 +355,6 @@ export const service: DefaultServiceConfig = {
         url: '/portuguese',
       },
       {
-        title: 'Eleições 2022',
-        url: '/portuguese/topics/c20d7ez6mqpt',
-      },
-      {
         title: 'Brasil',
         url: '/portuguese/topics/cz74k717pw5t',
       },
