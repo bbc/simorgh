@@ -22,7 +22,7 @@ const serviceHasInlineLink = service =>
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRun = ({ service, pageType }) => {
-  describe(`Running testsToAlwaysRun for ${service} ${pageType}`, () => {});
+  describe(`Running testsToAlwaysRun for ${service} ${pageType}`, () => { });
 };
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
@@ -190,128 +190,55 @@ export const testsThatFollowSmokeTestConfig = ({
       });
 
       describe('Social Embeds', () => {
-        it('Youtube embed is redered when it exists on page', () => {
-          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-            const youtubeSocialEmbedsData = getAllSocialBlocksByProviderName(
-              'YouTube',
-              body,
-            );
-            if (youtubeSocialEmbedsData.length > 0) {
-              youtubeSocialEmbedsData.forEach(content => {
-                const youtubeUrl = content.model.source;
-                cy.get(`[data-e2e="youtube-embed-${youtubeUrl}"]`)
-                  .scrollIntoView()
-                  .within(() => {
-                    cy.get(`[data-testid="consentBanner"]`).should('exist');
-                    cy.get(`iframe`).should('not.exist');
-                    cy.get(`[data-testid="banner-button"]`).click();
-                    cy.get(`iframe`).should('exist');
-                    cy.get(`[href^="#end-of-youtube-content"]`).should('exist');
+        const socialMediaProviders = [
+          'YouTube',
+          'Instagram',
+          'TikTok',
+          'Twitter',
+          'Facebook',
+        ];
+        socialMediaProviders.forEach(socialMediaProviderName => {
+          it.only(`${socialMediaProviderName} embed is redered when it exists on page`, () => {
+            cy.request(`${Cypress.env('currentPath')}.json`).then(
+              ({ body }) => {
+                const SocialEmbedsData = getAllSocialBlocksByProviderName(
+                  socialMediaProviderName,
+                  body,
+                );
+                const lowercaseSocialMediaProviderName = socialMediaProviderName.toLowerCase();
+                if (SocialEmbedsData.length > 0) {
+                  SocialEmbedsData.forEach(content => {
+                    const socialMediaUrl = content.model.source;
+                    cy.get(
+                      `[data-e2e="${lowercaseSocialMediaProviderName}-embed-${socialMediaUrl}"]`,
+                    )
+                      .scrollIntoView()
+                      .within(() => {
+                        if (
+                          socialMediaProviderName === 'YouTube' || socialMediaProviderName === 'TikTok'
+                        ) {
+                          cy.get(`[data-testid="consentBanner"]`).should(
+                            'exist',
+                          );
+                          cy.get(`iframe`).should('not.exist');
+                          cy.get(`[data-testid="banner-button"]`).click();
+                        }
+                        cy.get(`iframe`).should('exist');
+                        cy.get(
+                          `[href^="#end-of-${lowercaseSocialMediaProviderName}-content"]`,
+                        ).should('exist');
+                      });
                   });
-              });
-            } else {
-              cy.log('There is no Youtube embed in this page!');
-              cy.get(`[href^="#end-of-youtube-content"]`).should('not.exist');
-            }
-          });
-        });
-
-        it('Instagram embed is redered when it exists on page', () => {
-          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-            const instagramSocialEmbedsData = getAllSocialBlocksByProviderName(
-              'Instagram',
-              body,
+                } else {
+                  cy.log(
+                    `There is no ${socialMediaProviderName} embed in this page!`,
+                  );
+                  cy.get(
+                    `[href^="#end-of-${lowercaseSocialMediaProviderName}-content"]`,
+                  ).should('not.exist');
+                }
+              },
             );
-            if (instagramSocialEmbedsData.length > 0) {
-              instagramSocialEmbedsData.forEach(content => {
-                const instagramUrl = content.model.source;
-                cy.get(`[data-e2e="instagram-embed-${instagramUrl}"]`)
-                  .scrollIntoView()
-                  .within(() => {
-                    cy.get(`[href^="#end-of-instagram-content"]`).should(
-                      'exist',
-                    );
-                    cy.get(`iframe`).should('exist');
-                  });
-              });
-            } else {
-              cy.log('There is no Instagram embed in this page!');
-              cy.get(`[href^="#end-of-instagram-content"]`).should('not.exist');
-            }
-          });
-        });
-
-        it('Tiktok embed is redered when it exists on page', () => {
-          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-            const tiktokSocialEmbedsData = getAllSocialBlocksByProviderName(
-              'TikTok',
-              body,
-            );
-            if (tiktokSocialEmbedsData.length > 0) {
-              tiktokSocialEmbedsData.forEach(content => {
-                const tiktokUrl = content.model.source;
-                cy.get(`[data-e2e="tiktok-embed-${tiktokUrl}"]`)
-                  .scrollIntoView()
-                  .within(() => {
-                    cy.get(`[data-testid="consentBanner"]`).should('exist');
-                    cy.get(`iframe`).should('not.exist');
-                    cy.get(`[data-testid="banner-button"]`).click();
-                    cy.get(`iframe`).should('exist');
-                    cy.get(`[href^="#end-of-tiktok-content"]`).should('exist');
-                  });
-              });
-            } else {
-              cy.log('There is no Tiktok embed in this page!');
-              cy.get(`[href^="#end-of-tiktok-content"]`).should('not.exist');
-            }
-          });
-        });
-
-        it('Twitter embed is redered when it exists on page', () => {
-          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-            const twitterSocialEmbedsData = getAllSocialBlocksByProviderName(
-              'Twitter',
-              body,
-            );
-            if (twitterSocialEmbedsData.length > 0) {
-              twitterSocialEmbedsData.forEach(content => {
-                const twitterUrl = content.model.source;
-                cy.get(`[data-e2e="twitter-embed-${twitterUrl}"]`)
-                  .scrollIntoView()
-                  .within(() => {
-                    cy.get(`iframe`).should('exist');
-                    cy.get(`[href^="#end-of-twitter-content"]`).should('exist');
-                  });
-              });
-            } else {
-              cy.log('There is no Twitter embed in this page!');
-              cy.get(`[href^="#end-of-twitter-content"]`).should('not.exist');
-            }
-          });
-        });
-
-        it('Facebook embed is redered when it exists on page', () => {
-          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-            const facebookSocialEmbedsData = getAllSocialBlocksByProviderName(
-              'Facebook',
-              body,
-            );
-            if (facebookSocialEmbedsData.length > 0) {
-              facebookSocialEmbedsData.forEach(content => {
-                const facebookUrl = content.model.source;
-                cy.get(`[data-e2e="facebook-embed-${facebookUrl}"]`)
-                  .scrollIntoView()
-                  .within(() => {
-                    cy.get(`iframe`).should('exist');
-                    cy.get(`[href^="#end-of-facebook-content"]`).should(
-                      'exist',
-                    );
-                  });
-              });
-            } else {
-              cy.log('There is no Facebook embed in this page!');
-              cy.get(`[href^="#end-of-facebook-content"]`).should('not.exist');
-            }
           });
         });
       });
@@ -321,5 +248,5 @@ export const testsThatFollowSmokeTestConfig = ({
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
 export const testsThatNeverRunDuringSmokeTesting = ({ service, pageType }) => {
-  describe(`No testsToNeverSmokeTest to run for ${service} ${pageType}`, () => {});
+  describe(`No testsToNeverSmokeTest to run for ${service} ${pageType}`, () => { });
 };
