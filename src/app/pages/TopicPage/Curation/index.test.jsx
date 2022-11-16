@@ -1,6 +1,7 @@
 import React from 'react';
 
 import fixture from '#data/pidgin/topics/c95y35941vrt.json';
+import mundoFixture from '#data/mundo/topics/c1en6xwmpkvt.json';
 import { render } from '../../../components/react-testing-library-with-providers';
 
 import Curation, { VISUAL_STYLE, VISUAL_PROMINANCE } from '.';
@@ -12,6 +13,10 @@ const components = {
     [VISUAL_PROMINANCE.NORMAL]: {
       promos: fixture.data.summaries,
       testId: 'curation-grid-normal',
+    },
+    [VISUAL_PROMINANCE.HIGH]: {
+      promos: mundoFixture.data.curations[0].summaries,
+      testId: 'hierarchical-grid',
     },
   },
 };

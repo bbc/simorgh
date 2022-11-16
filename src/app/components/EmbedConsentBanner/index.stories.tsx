@@ -1,5 +1,6 @@
-import React, { PropsWithChildren } from 'react';
-import { css } from '@emotion/react';
+/** @jsx jsx */
+import { PropsWithChildren } from 'react';
+import { jsx, css } from '@emotion/react';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { C_GREY_2 } from '../../legacy/psammead/psammead-styles/src/colours';
 import { Services, Variants } from '../../models/types/global';

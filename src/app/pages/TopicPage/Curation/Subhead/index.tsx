@@ -7,16 +7,16 @@ import { LeftChevron, RightChevron } from '../../../../components/icons';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 interface Props {
-  href?: string;
+  link?: string;
   a11yID?: string;
 }
 
-const Subhead = ({ children, href, a11yID }: PropsWithChildren<Props>) => {
+const Subhead = ({ children, link, a11yID }: PropsWithChildren<Props>) => {
   const { service, script, dir } = useContext(ServiceContext);
 
-  const Wrapper = href
+  const Wrapper = link
     ? ({ children: innerChildren }: PropsWithChildren<Props>) => (
-        <a href={href}>
+        <a href={link}>
           <span>{innerChildren}</span>
           {dir === 'ltr' ? <RightChevron /> : <LeftChevron />}
         </a>
@@ -29,6 +29,6 @@ const Subhead = ({ children, href, a11yID }: PropsWithChildren<Props>) => {
   );
 };
 
-Subhead.defaultProps = { href: '', a11yID: '' };
+Subhead.defaultProps = { link: '', a11yID: '' };
 
 export default Subhead;

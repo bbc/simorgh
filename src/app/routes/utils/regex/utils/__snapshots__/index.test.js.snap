@@ -44,6 +44,4 @@ exports[`regex utils snapshots should create expected regex from getSecondaryCol
 
 exports[`regex utils snapshots should create expected regex from getSwRegex 1`] = `"/:service(news|persian|igbo)/sw.js"`;
 
-exports[`regex utils snapshots should create expected regex from getTemporaryTopicPageRegex 1`] = `"/:service(news|persian|igbo):variant(/simp|/trad|/cyr|/lat)?/new_topics/:id([a-z0-9]+)?"`;
-
 exports[`regex utils snapshots should create expected regex from getTopicPageRegex 1`] = `"/:service(news|persian|igbo):variant(/simp|/trad|/cyr|/lat)?/topics/:id([a-z0-9]+)?"`;

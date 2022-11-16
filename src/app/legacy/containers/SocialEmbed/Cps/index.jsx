@@ -28,7 +28,7 @@ const CpsSocialEmbedContainer = ({ blocks }) => {
   const id = path(['id'], model);
   const href = path(['href'], model);
 
-  if (!href) return null;
+  if (!id || !href) return null;
 
   const oEmbed = path(['embed', 'oembed'], model);
 
