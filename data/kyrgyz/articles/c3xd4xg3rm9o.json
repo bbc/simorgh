@@ -1,430 +1,771 @@
 {
-  "content": {
-    "model": {
-      "blocks": [
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "attributes": [],
-                              "text": "Бул сыноо макалада сөздүү кабарында"
-                            },
-                            "type": "fragment"
-                          }
-                        ],
-                        "text": "Бул сыноо макалада сөздүү кабарында"
-                      },
-                      "type": "paragraph"
-                    }
-                  ]
-                },
-                "type": "text"
-              }
-            ]
-          },
-          "type": "headline"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "blocks": [
-                                {
-                                  "model": {
-                                    "attributes": [],
-                                    "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар."
-                                  },
-                                  "type": "fragment"
-                                }
-                              ],
-                              "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар."
-                            },
-                            "type": "paragraph"
-                          }
-                        ]
-                      },
-                      "type": "text"
-                    }
-                  ]
-                },
-                "type": "caption"
-              },
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "blocks": [
-                                {
-                                  "model": {
-                                    "attributes": [],
-                                    "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар."
-                                  },
-                                  "type": "fragment"
-                                }
-                              ],
-                              "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар."
-                            },
-                            "type": "paragraph"
-                          }
-                        ]
-                      },
-                      "type": "text"
-                    }
-                  ]
-                },
-                "type": "altText"
-              },
-              {
-                "model": {
-                  "copyrightHolder": "BBC",
-                  "height": 351,
-                  "locator": "1b40/test/b97149a0-f640-11e9-9afe-1371928331c5.jpg",
-                  "originCode": "cpsdevpb",
-                  "width": 624
-                },
-                "type": "rawImage"
-              }
-            ]
-          },
-          "type": "image"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": "Бул "
-                      },
-                      "type": "fragment"
+  "data": {
+    "article": {
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "408aa625",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "b3d03c69",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "d7622b4f",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Бул сыноо макалада сөздүү кабарында",
+                            "blocks": [
+                              {
+                                "id": "e0f8bd71",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Бул сыноо макалада сөздүү кабарында",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
                     },
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "attributes": [],
-                              "text": "Би-Би-Си ырайы башкы"
-                            },
-                            "type": "fragment"
-                          }
-                        ],
-                        "isExternal": false,
-                        "locator": "https://www.bbc.co.uk/weather",
-                        "text": "Би-Би-Си ырайы башкы"
-                      },
-                      "type": "urlLink"
-                    },
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": " бир нускага шилтемени камтыган текст бөлүгү болуп саналат."
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": "Бул Би-Би-Си ырайы башкы бир нускага шилтемени камтыган текст бөлүгү болуп саналат."
-                },
-                "type": "paragraph"
-              }
-            ]
-          },
-          "type": "text"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "blocks": [
-                                {
-                                  "model": {
-                                    "attributes": [],
-                                    "text": "Египет салуулар: зомбулук Каир тыныгуу менен копт сөөк"
-                                  },
-                                  "type": "fragment"
-                                }
-                              ],
-                              "text": "Египет салуулар: зомбулук Каир тыныгуу менен копт сөөк"
-                            },
-                            "type": "paragraph"
-                          }
-                        ]
-                      },
-                      "type": "text"
-                    }
-                  ]
-                },
-                "type": "caption"
+                    "position": [1, 1]
+                  }
+                ]
               },
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p019dx64",
-                      "model": {
-                        "advertising": true,
-                        "caption": "Clashes broke out shortly after the funeral procession began",
-                        "embedding": false,
-                        "format": "audio_video",
-                        "id": "p019dx64",
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p019dxfg.jpg",
-                        "subType": "clip",
-                        "syndication": {
-                          "destinations": []
+              "position": [1]
+            },
+            {
+              "id": "ecbbbc70",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "2dbf7633",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "2ef9be86",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "f5b293aa",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар.",
+                                  "blocks": [
+                                    {
+                                      "id": "9ac17d50",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар.",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [2, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [2, 1]
+                  },
+                  {
+                    "id": "b7904db5",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "e828a82e",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "12482eb5",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар.",
+                                  "blocks": [
+                                    {
+                                      "id": "111f3a8a",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар.",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [2, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [2, 2]
+                  },
+                  {
+                    "id": "217e06d1",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 624,
+                      "height": 351,
+                      "locator": "1b40/test/b97149a0-f640-11e9-9afe-1371928331c5.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "BBC"
+                    },
+                    "position": [2, 3]
+                  }
+                ]
+              },
+              "position": [2]
+            },
+            {
+              "id": "3e4306ec",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1562941862686,
+                "lastPublished": 1562941862686
+              },
+              "position": [3]
+            },
+            {
+              "id": "3092cbae",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "af87a7ac",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Бул Би-Би-Си ырайы башкы бир нускага шилтемени камтыган текст бөлүгү болуп саналат.",
+                      "blocks": [
+                        {
+                          "id": "82a870de",
+                          "type": "fragment",
+                          "model": { "text": "Бул ", "attributes": [] },
+                          "position": [4, 1, 1]
                         },
-                        "synopses": {
-                          "long": "По меньшей мере 36 человек погибли в результате взрывов в двух церквях во время богослужений по случаю Вербного воскресенья.\n\nПервый взрыв прогремел в коптской церкви Св. Георгия в городе Танта, что в 130 км к юго-востоку от Александрии. Там на месте погибли 25 человек. Внутри этой церкви находился Патриарх христиан-коптов Тавадрос II. Официальные источники сообщили, что он не пострадал.\n\nЧерез некоторое время произошел второй теракт: взрывное устройство сработало в храме Св. Марка в самой Александрии. Там погибли 11 прихожан.",
-                          "short": "Egypt attacks: Coptic funerals in Cairo break into violence"
+                        {
+                          "id": "a21b5367",
+                          "type": "urlLink",
+                          "model": {
+                            "text": "Би-Би-Си ырайы башкы",
+                            "blocks": [
+                              {
+                                "id": "b1c6eebf",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Би-Би-Си ырайы башкы",
+                                  "attributes": []
+                                },
+                                "position": [4, 1, 2, 1]
+                              }
+                            ],
+                            "locator": "https://www.bbc.co.uk/weather",
+                            "isExternal": false
+                          },
+                          "position": [4, 1, 2]
                         },
-                        "title": "Clashes at Coptic funerals in Egypt",
-                        "versions": [
-                          {
-                            "availableFrom": 1491823686000,
-                            "availableTerritories": {
-                              "nonUk": true,
-                              "uk": true
-                            },
-                            "duration": 45,
-                            "durationISO8601": "PT45S",
-                            "types": ["Original"],
-                            "versionId": "p019dx68",
-                            "warnings": {}
-                          }
-                        ]
-                      },
-                      "type": "aresMediaMetadata"
+                        {
+                          "id": "2bd6aad5",
+                          "type": "fragment",
+                          "model": {
+                            "text": " бир нускага шилтемени камтыган текст бөлүгү болуп саналат.",
+                            "attributes": []
+                          },
+                          "position": [4, 1, 3]
+                        }
+                      ]
                     },
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "height": 1920,
-                              "width": 1080,
-                              "copyrightHolder": "BBC",
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p019dxfg.jpg",
-                              "originCode": "mpv"
-                            },
-                            "type": "rawImage"
-                          }
-                        ]
-                      },
-                      "type": "image"
-                    }
-                  ]
-                },
-                "type": "aresMedia"
-              }
-            ],
-            "locator": "urn:bbc:pips:pid:p019dx64"
-          },
-          "type": "video"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "attributes": [],
-                              "text": "Бул subheadline болуп саналат"
-                            },
-                            "type": "fragment"
-                          }
-                        ],
-                        "text": "Бул subheadline болуп саналат"
-                      },
-                      "type": "paragraph"
-                    }
-                  ]
-                },
-                "type": "text"
-              }
-            ]
-          },
-          "type": "subheadline"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "blocks": [
-                                {
-                                  "model": {
-                                    "attributes": [],
-                                    "text": "Бул subheadline болуп саналат"
-                                  },
-                                  "type": "fragment"
-                                }
-                              ],
-                              "text": "Бул subheadline болуп саналат"
-                            },
-                            "type": "paragraph"
-                          }
-                        ]
-                      },
-                      "type": "text"
-                    }
-                  ]
-                },
-                "type": "altText"
+                    "position": [4, 1]
+                  }
+                ]
               },
-              {
-                "model": {
-                  "copyrightHolder": "Getty Images",
-                  "height": 450,
-                  "locator": "d22a/test/2ec8f5e0-f641-11e9-9afe-1371928331c5.jpg",
-                  "originCode": "cpsdevpb",
-                  "width": 800
-                },
-                "type": "rawImage"
-              }
-            ]
-          },
-          "type": "image"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": "Бул сыноо макалада айтылгандай, биз сайтында сыноолорду алышы үчүн жаратылган."
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": "Бул сыноо макалада айтылгандай, биз сайтында сыноолорду алышы үчүн жаратылган."
-                },
-                "type": "paragraph"
-              }
-            ]
-          },
-          "type": "text"
+              "position": [4]
+            },
+            {
+              "id": "7e7e2e87",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p019dx64",
+                "blocks": [
+                  {
+                    "id": "ae43e249",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "5ca1c8bd",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "8e072215",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Египет салуулар: зомбулук Каир тыныгуу менен копт сөөк",
+                                  "blocks": [
+                                    {
+                                      "id": "a7c21c5a",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Египет салуулар: зомбулук Каир тыныгуу менен копт сөөк",
+                                        "attributes": []
+                                      },
+                                      "position": [5, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [5, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [5, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 1]
+                  },
+                  {
+                    "id": "5833aab4",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "2b535f7d",
+                          "blockId": "urn:bbc:ares::clip:p019dx64",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p019dx64",
+                            "subType": "clip",
+                            "format": "audio_video",
+                            "title": "Clashes at Coptic funerals in Egypt",
+                            "synopses": {
+                              "short": "Egypt attacks: Coptic funerals in Cairo break into violence",
+                              "long": "По меньшей мере 36 человек погибли в результате взрывов в двух церквях во время богослужений по случаю Вербного воскресенья.\n\nПервый взрыв прогремел в коптской церкви Св. Георгия в городе Танта, что в 130 км к юго-востоку от Александрии. Там на месте погибли 25 человек. Внутри этой церкви находился Патриарх христиан-коптов Тавадрос II. Официальные источники сообщили, что он не пострадал.\n\nЧерез некоторое время произошел второй теракт: взрывное устройство сработало в храме Св. Марка в самой Александрии. Там погибли 11 прихожан."
+                            },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p019dxfg.jpg",
+                            "embedding": false,
+                            "advertising": true,
+                            "caption": "Clashes broke out shortly after the funeral procession began",
+                            "versions": [
+                              {
+                                "versionId": "p019dx68",
+                                "types": ["Original"],
+                                "duration": 45,
+                                "durationISO8601": "PT45S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1491823686000
+                              }
+                            ],
+                            "syndication": { "destinations": [] },
+                            "smpKind": "programme"
+                          },
+                          "position": [5, 2, 1]
+                        },
+                        {
+                          "id": "d848cd01",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "15bb218d",
+                                "type": "rawImage",
+                                "model": {
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p019dxfg.jpg",
+                                  "originCode": "mpv"
+                                },
+                                "position": [5, 2, 2, 1]
+                              }
+                            ]
+                          },
+                          "position": [5, 2, 2]
+                        }
+                      ]
+                    },
+                    "position": [5, 2]
+                  }
+                ]
+              },
+              "position": [5]
+            },
+            {
+              "id": "d194d95c",
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "1847df2d",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "f4f6adae",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Бул subheadline болуп саналат",
+                            "blocks": [
+                              {
+                                "id": "eba81003",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Бул subheadline болуп саналат",
+                                  "attributes": []
+                                },
+                                "position": [6, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [6, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [6, 1]
+                  }
+                ]
+              },
+              "position": [6]
+            },
+            {
+              "id": "fa2ff534",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "88ccdc64",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "8c0cc143",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "9cf492b5",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Бул subheadline болуп саналат",
+                                  "blocks": [
+                                    {
+                                      "id": "384c8f4a",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Бул subheadline болуп саналат",
+                                        "attributes": []
+                                      },
+                                      "position": [7, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [7, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [7, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [7, 1]
+                  },
+                  {
+                    "id": "1b834441",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 800,
+                      "height": 450,
+                      "locator": "d22a/test/2ec8f5e0-f641-11e9-9afe-1371928331c5.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Getty Images"
+                    },
+                    "position": [7, 2]
+                  }
+                ]
+              },
+              "position": [7]
+            },
+            {
+              "id": "0e01da71",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "ac7d10dc",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Бул сыноо макалада айтылгандай, биз сайтында сыноолорду алышы үчүн жаратылган.",
+                      "blocks": [
+                        {
+                          "id": "172b83c5",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Бул сыноо макалада айтылгандай, биз сайтында сыноолорду алышы үчүн жаратылган.",
+                            "attributes": []
+                          },
+                          "position": [8, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [8, 1]
+                  }
+                ]
+              },
+              "position": [8]
+            },
+            { "id": "db85d04f", "type": "mpu", "model": {}, "position": [9] }
+          ]
         }
-      ]
+      },
+      "metadata": {
+        "id": "urn:bbc:ares::article:c3xd4xg3rm9o",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:c3xd4xg3rm9o",
+          "canonicalUrl": "https://www.bbc.com/kyrgyz/articles/c3xd4xg3rm9o"
+        },
+        "type": "article",
+        "createdBy": "Kyrgyz",
+        "language": "ky",
+        "lastUpdated": 1598599636934,
+        "firstPublished": 1562941862686,
+        "lastPublished": 1562941862686,
+        "timestamp": 1562941862686,
+        "options": {},
+        "analyticsLabels": {
+          "producer": "Kyrgyz",
+          "page": "kyrgyz.articles.c3xd4xg3rm9o.page"
+        },
+        "passport": {
+          "language": "ky",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
+          "locator": "urn:bbc:optimo:asset:c3xd4xg3rm9o",
+          "availability": "AVAILABLE",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "image",
+          "caption",
+          "altText",
+          "rawImage",
+          "urlLink",
+          "video",
+          "subheadline",
+          "aresMedia"
+        ],
+        "readTime": 1,
+        "allowAdvertising": true
+      },
+      "promo": {
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:c3xd4xg3rm9o",
+          "canonicalUrl": "https://www.bbc.com/kyrgyz/articles/c3xd4xg3rm9o"
+        },
+        "timestamp": 1562941862686,
+        "suitableForSyndication": false,
+        "language": "ky",
+        "headlines": {
+          "seoHeadline": "Интернет жылдызына айланган таксист опера ырчысы болду"
+        },
+        "images": {},
+        "passport": {
+          "language": "ky",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
+          "locator": "urn:bbc:optimo:asset:c3xd4xg3rm9o",
+          "availability": "AVAILABLE",
+          "taggings": []
+        },
+        "id": "urn:bbc:ares::article:c3xd4xg3rm9o",
+        "type": "optimo"
+      },
+      "relatedContent": {
+        "site": {
+          "subType": "site",
+          "name": "Kyrgyz",
+          "uri": "/kyrgyz",
+          "type": "simple"
+        },
+        "groups": []
+      }
+    },
+    "secondaryData": {
+      "topStories": [
+        {
+          "name": "Optimo article with Index Alsos",
+          "summary": "Optimo article with Index Alsos. This is the summary.",
+          "indexImage": {
+            "id": "63753579",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/17CFF/test/_63753579_d75f82a3-14f3-4c03-b230-9fa5df2a0ed3.jpg",
+            "path": "/cpsdevpb/17CFF/test/_63753579_d75f82a3-14f3-4c03-b230-9fa5df2a0ed3.jpg",
+            "height": 1080,
+            "width": 1920,
+            "altText": "test",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "uri": "https://www.test.bbc.co.uk/kyrgyz/articles/cgvd84xmq35o",
+          "aresUrl": "https://ares-api.test.api.bbci.co.uk/api/article/cgvd84xmq35o",
+          "contentType": "Text",
+          "assetTypeCode": "PRO",
+          "timestamp": 1621870242000,
+          "relatedItems": [
+            {
+              "headlines": {
+                "headline": "Үй-бүлөдөгү зомбулуктан эң көп аялдар жабыркайт"
+              },
+              "locators": {
+                "assetUri": "/kyrgyz/kyrgyzstan-23088783",
+                "cpsUrn": "urn:bbc:content:assetUri:/kyrgyz/kyrgyzstan-23088783"
+              },
+              "summary": "Үй-бүлөдөгү зомбулуктан эң көп аялдар жабыркайт",
+              "timestamp": 1478184211000,
+              "language": "ky",
+              "cpsType": "STY",
+              "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan-23088783",
+              "type": "cps"
+            },
+            {
+              "headlines": {
+                "headline": "АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?"
+              },
+              "locators": {
+                "assetUri": "/kyrgyz/world-23090100",
+                "cpsUrn": "urn:bbc:content:assetUri:/kyrgyz/world-23090100"
+              },
+              "summary": "Шейшембиде Америка кошмо штаттары өлкөнүн жаңы президентин тандап алуу үчүн добуш беришет.",
+              "timestamp": 1478663803000,
+              "language": "ky",
+              "cpsType": "STY",
+              "id": "urn:bbc:ares::asset:kyrgyz/world-23090100",
+              "type": "cps"
+            }
+          ],
+          "type": "link"
+        },
+        {
+          "headlines": {
+            "headline": "Мирзиёевнинг илк давлат сафари Қозоғистон"
+          },
+          "locators": {
+            "assetUri": "/kyrgyz/23103378",
+            "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/23103378",
+            "curie": "http://www.bbc.co.uk/asset/91d192e9-38dd-4f44-882b-c724bb41331f",
+            "assetId": "23103378"
+          },
+          "summary": "Ўзбекистон президентининг илк давлат сафари билан март ойида Қозоғистонга боради. Бу ҳақида Ўзбекистон ва Қозоғистон ўртасидаги ҳамкорлик бўйича тузилган ҳукуматлараро комиссиянинг Тошкентдаги мажлисида эълон қилинди.",
+          "timestamp": 1569397958000,
+          "language": "ky",
+          "passport": {
+            "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+            },
+            "taggings": []
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63529676",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/1086C/test/_63529676_000141412-1.jpg",
+            "path": "/cpsdevpb/1086C/test/_63529676_000141412-1.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Mirsiyoywv Rossiya o'rniga Qozogintonni tanladi",
+            "caption": "Mirsiyoyev Rossiya o'rniga Qozogintonni tanladi",
+            "copyrightHolder": "AP",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63529678",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/1568C/test/_63529678_000141412-1.jpg",
+            "path": "/cpsdevpb/1568C/test/_63529678_000141412-1.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Mirsiyoywv Rossiya o'rniga Qozogintonni tanladi",
+            "caption": "Mirsiyoyev Rossiya o'rniga Qozogintonni tanladi",
+            "copyrightHolder": "AP",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "prominence": "maximum",
+          "section": {
+            "subType": "IDX",
+            "name": "Башталгыч бет",
+            "uri": "/kyrgyz/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:kyrgyz/23103378",
+          "type": "cps"
+        }
+      ],
+      "features": [
+        {
+          "headlines": {
+            "headline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 42"
+          },
+          "locators": {
+            "assetUri": "/kyrgyz/kyrgyzstan-23087521",
+            "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-23087521",
+            "curie": "http://www.bbc.co.uk/asset/eda3de40-cfd2-7449-87b4-2a26392fa543",
+            "assetId": "23087521"
+          },
+          "summary": "Ушул аптанын башында Кыргызстан акыркы он жылдан бери биринчи жолу Өзбекстандын расмий делегациясын кабыл алды.",
+          "timestamp": 1477898711000,
+          "language": "ky",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63486487",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/13284/test/_63486487_63486486.jpg",
+            "path": "/cpsdevpb/13284/test/_63486487_63486486.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Өзбекстандын",
+            "caption": "Өзбекстандын",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan-23087521",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 41"
+          },
+          "locators": {
+            "assetUri": "/kyrgyz/kyrgyzstan-23087520",
+            "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-23087520",
+            "curie": "http://www.bbc.co.uk/asset/731b4ac3-ed79-b34d-93b0-64d1693c92e8",
+            "assetId": "23087520"
+          },
+          "summary": "Ушул аптанын башында Кыргызстан акыркы он жылдан бери биринчи жолу Өзбекстандын расмий делегациясын кабыл алды.",
+          "timestamp": 1477898715000,
+          "language": "ky",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63486487",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/13284/test/_63486487_63486486.jpg",
+            "path": "/cpsdevpb/13284/test/_63486487_63486486.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Өзбекстандын",
+            "caption": "Өзбекстандын",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan-23087520",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 03"
+          },
+          "locators": {
+            "assetUri": "/kyrgyz/in-depth-23087490",
+            "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/in-depth-23087490",
+            "curie": "http://www.bbc.co.uk/asset/6829e4fc-8741-4043-ba6d-f9e3bdc16542",
+            "assetId": "23087490"
+          },
+          "summary": "Ушул аптанын башында Кыргызстан акыркы он жылдан бери биринчи жолу Өзбекстандын расмий делегациясын кабыл алды.",
+          "timestamp": 1477850398000,
+          "language": "ky",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63486487",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/13284/test/_63486487_63486486.jpg",
+            "path": "/cpsdevpb/13284/test/_63486487_63486486.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Өзбекстандын",
+            "caption": "Өзбекстандын",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "section": {
+            "subType": "IDX",
+            "name": "Атайын репортаж",
+            "uri": "/kyrgyz/in_depth",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:kyrgyz/in-depth-23087490",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 03"
+          },
+          "locators": {
+            "assetUri": "/kyrgyz/entertainment-23087489",
+            "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/entertainment-23087489",
+            "curie": "http://www.bbc.co.uk/asset/d9d4314d-5936-8c49-96fb-4f072339c527",
+            "assetId": "23087489"
+          },
+          "summary": "Ушул аптанын башында Кыргызстан акыркы он жылдан бери биринчи жолу Өзбекстандын расмий делегациясын кабыл алды.",
+          "timestamp": 1477850376000,
+          "language": "ky",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63486487",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/13284/test/_63486487_63486486.jpg",
+            "path": "/cpsdevpb/13284/test/_63486487_63486486.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Өзбекстандын",
+            "caption": "Өзбекстандын",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "id": "urn:bbc:ares::asset:kyrgyz/entertainment-23087489",
+          "type": "cps"
+        }
+      ],
+      "mostRead": {
+        "generated": "2022-10-29T21:12:57.252Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T05:53:00Z",
+        "totalRecords": 0,
+        "records": []
+      }
     }
   },
-  "metadata": {
-    "analyticsLabels": {},
-    "blockTypes": [
-      "headline",
-      "text",
-      "paragraph",
-      "fragment",
-      "image",
-      "caption",
-      "altText",
-      "rawImage",
-      "urlLink",
-      "video",
-      "subheadline"
-    ],
-    "createdBy": "Kyrgyz",
-    "firstPublished": 1562941862686,
-    "id": "urn:bbc:ares::article:c3xd4xg3rm9o",
-    "language": "ky",
-    "lastPublished": 1562941862686,
-    "lastUpdated": 1571917178498,
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c3xd4xg3rm9o"
-    },
-    "options": {},
-    "passport": {
-      "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
-      "language": "ky"
-    },
-    "tags": {},
-    "type": "article",
-    "version": "v1.1.2"
-  },
-  "promo": {
-    "headlines": {
-      "seoHeadline": "Интернет жылдызына айланган таксист опера ырчысы болду"
-    },
-    "id": "urn:bbc:ares::article:c3xd4xg3rm9o",
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c3xd4xg3rm9o"
-    },
-    "summary": {
-      "blocks": [
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": ""
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": ""
-                },
-                "type": "paragraph"
-              }
-            ]
-          },
-          "type": "text"
-        }
-      ]
-    },
-    "timestamp": 1562941862686,
-    "type": "cps"
-  },
-  "relatedContent": {
-    "groups": [],
-    "site": {
-      "name": "Kyrgyz",
-      "subType": "site",
-      "type": "simple",
-      "uri": "/kyrgyz"
-    }
-  }
+  "contentType": "application/json; charset=utf-8"
 }
