@@ -18,6 +18,7 @@ const LinkedData = ({
   aboutTags,
   entities,
   imageLocator,
+  bylineLinkedData,
 }) => {
   const {
     brandName,
@@ -104,6 +105,31 @@ const LinkedData = ({
     alternateName: lang,
   };
 
+  const { authorName, authorTopicUrl, twitterLink, authorImage, location } =
+    bylineLinkedData || {};
+
+  const hasByline = !!authorName;
+
+  const authorLogo = {
+    '@type': 'ImageObject',
+    width: 1024,
+    height: 576,
+    url: defaultImage,
+  };
+
+  const sameAs = [authorTopicUrl, twitterLink].filter(Boolean);
+
+  const locationCreated = { '@place': location };
+
+  const author = {
+    '@type': hasByline ? 'Person' : ORG_TYPE,
+    name: hasByline ? authorName : AUTHOR_PUBLISHER_NAME,
+    ...(hasByline && sameAs.length && { sameAs }),
+    ...(hasByline && authorImage && { image: authorImage }),
+    ...(!hasByline && { logo: authorLogo }),
+    ...(isTrustProjectParticipant && !hasByline && { noBylinesPolicy }),
+  };
+
   const linkedData = {
     '@type': type,
     url: canonicalNonUkLink,
@@ -117,18 +143,9 @@ const LinkedData = ({
     inLanguage,
     ...(aboutTags && { about: getAboutTagsContent(aboutTags) }),
     ...(showAuthor && {
-      author: {
-        '@type': ORG_TYPE,
-        name: AUTHOR_PUBLISHER_NAME,
-        logo: {
-          '@type': 'ImageObject',
-          width: 1024,
-          height: 576,
-          url: defaultImage,
-        },
-        ...(isTrustProjectParticipant && { noBylinesPolicy }),
-      },
+      author,
     }),
+    ...(hasByline && location && { locationCreated }),
   };
 
   return (

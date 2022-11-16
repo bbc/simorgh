@@ -64,6 +64,7 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
+import bylineExtractor from './utilities/bylineExtractor';
 import Byline from './Byline';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from './PagePromoSections/RelatedContentSection';
@@ -136,7 +137,28 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const topics = path(['metadata', 'topics'], pageData);
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
   const startsWithHeading = propEq('type', 'headline')(blocks[0] || {});
-  const hasByline = blocks.find(block => block.type === 'byline');
+
+  const bylineBlock = blocks.find(block => block.type === 'byline');
+  const bylineContribBlocks = pathOr([], ['model', 'blocks'], bylineBlock);
+
+  const {
+    authorName,
+    jobRole,
+    authorTopicUrl,
+    twitterLink,
+    authorImage,
+    location,
+  } = bylineExtractor(bylineContribBlocks);
+
+  const hasByline = !!authorName && !!jobRole;
+
+  const bylineLinkedData = {
+    authorName,
+    authorTopicUrl,
+    twitterLink,
+    authorImage,
+    location,
+  };
 
   const componentsToRender = {
     visuallyHiddenHeadline,
@@ -231,6 +253,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       />
       <LinkedData
         showAuthor
+        bylineLinkedData={hasByline && bylineLinkedData}
         type="Article"
         seoTitle={headline}
         headline={headline}
