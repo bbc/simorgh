@@ -20,14 +20,14 @@ const HealthFactor = ({ metadata }: { metadata: any }) => {
     [uxAccessibility, uxSwarm, acceptanceCriteria],
   );
 
-  const toWord = ['', 'One', 'Two', 'Three'];
+  const wordNumbers = ['', 'One', 'Two', 'Three'];
 
   const headline = metadata
     ? actionCount === 0
       ? 'Good to show to the audience'
       : actionCount === 1
-      ? `${toWord[actionCount]} action outstanding`
-      : `${toWord[actionCount]} actions outstanding`
+      ? `${wordNumbers[actionCount]} action outstanding`
+      : `${wordNumbers[actionCount]} actions outstanding`
     : 'Component health is missing!';
 
   return (
