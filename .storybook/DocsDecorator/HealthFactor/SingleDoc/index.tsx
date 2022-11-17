@@ -18,6 +18,7 @@ const SingleDoc = ({
     <li css={styles.documentationContainer}>
       <div css={[styles.documentationContainer, styles.documentationType]}>
         <span
+          aria-hidden={true}
           css={[
             styles.iconContainer,
             styles.statusIconContainer,
@@ -52,7 +53,10 @@ const SingleDoc = ({
         <a href={url} css={styles.link}>
           <Text css={styles.link} size="brevier" fontVariant="sansBold">
             {urlLabel}
-            <span css={[styles.iconContainer, styles.linkIconContainer]}>
+            <span
+              aria-hidden={true}
+              css={[styles.iconContainer, styles.linkIconContainer]}
+            >
               {status ? <ExternalLink /> : <Help />}
             </span>
           </Text>

@@ -33,7 +33,7 @@ const HealthFactor = ({ metadata }: { metadata: any }) => {
   return (
     <aside css={styles.componentHealthContainer}>
       <div css={styles.titleContainer}>
-        <span css={styles.titleIcon}>
+        <span aria-hidden={true} css={styles.titleIcon}>
           {metadata ? (
             actionCount === 0 ? (
               <Recommend css={styles.recommendIcon} />
