@@ -1,5 +1,5 @@
 import React from 'react';
-import Text from '../../../src/app/components/Text';
+import Text from '../../../../src/app/components/Text';
 import { Confirm, Close, ExternalLink, Help } from '../Icons/icons';
 import styles from './index.styles';
 
