@@ -13,12 +13,12 @@ interface Props {
   pageLang?: string;
 }
 
-export const ServiceContextProvider = ({
+export function ServiceContextProvider({
   children,
   service,
   variant,
   pageLang,
-}: PropsWithChildren<Props>) => {
+}: PropsWithChildren<Props>) {
   const LoadableContextProvider = services[service];
 
   if (!LoadableContextProvider) {
@@ -36,4 +36,4 @@ export const ServiceContextProvider = ({
       {children}
     </LoadableContextProvider>
   );
-};
+}

@@ -7,11 +7,20 @@ import {
 } from './buildParams';
 
 // Mocks
-analyticsUtils.getAtUserId = jest.fn();
-analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
-analyticsUtils.getPublishedDatetime = jest
-  .fn()
-  .mockReturnValue('1970-01-01T00:00:00.000Z');
+const analyticsUtilsUserIdSpy = jest.spyOn(analyticsUtils, 'getAtUserId');
+analyticsUtilsUserIdSpy.mockReturnValue();
+
+const analyticsUtilsCurrentTimeSpy = jest.spyOn(
+  analyticsUtils,
+  'getCurrentTime',
+);
+analyticsUtilsCurrentTimeSpy.mockReturnValue('00-00-00');
+
+const analyticsUtilsPublishDateSpy = jest.spyOn(
+  analyticsUtils,
+  'getPublishedDatetime',
+);
+analyticsUtilsPublishDateSpy.mockReturnValue('1970-01-01T00:00:00.000Z');
 
 // Fixtures
 const requestContext = {

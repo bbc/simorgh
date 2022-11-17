@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import {
   Global,
   ThemeProvider as EmotionThemeProvider,
@@ -118,10 +118,6 @@ import {
 } from './fontMediaQueries';
 
 import { BrandPalette, Typography } from '../../models/types/theming';
-
-type Props = {
-  children: React.ReactNode;
-};
 
 const withThemeProvider = ({
   typography,
@@ -257,12 +253,14 @@ const withThemeProvider = ({
     },
   };
 
-  const ThemeProvider: React.FC<Props> = ({ children }) => (
-    <EmotionThemeProvider theme={theme}>
-      <Global styles={fontFaces} />
-      {children}
-    </EmotionThemeProvider>
-  );
+  function ThemeProvider({ children }: PropsWithChildren) {
+    return (
+      <EmotionThemeProvider theme={theme}>
+        <Global styles={fontFaces} />
+        {children}
+      </EmotionThemeProvider>
+    );
+  }
 
   return ThemeProvider;
 };

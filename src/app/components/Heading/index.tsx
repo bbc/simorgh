@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import React, { FC, HTMLAttributes } from 'react';
+import React, { HTMLAttributes } from 'react';
 import { jsx } from '@emotion/react';
 
 import { GelFontSize, FontVariant } from '../../models/types/theming';
@@ -30,14 +30,14 @@ const sizes: Sizes = {
   h4: 'greatPrimer',
 };
 
-const Heading: FC<Props> = ({
+function Heading({
   children,
   className,
   fontVariant = 'sansBold',
   level,
   size,
   ...htmlAttributes
-}: Props) => {
+}: Props) {
   const element: Element = `h${level}`;
 
   return (
@@ -62,6 +62,6 @@ const Heading: FC<Props> = ({
       {children}
     </Text>
   );
-};
+}
 
 export default Heading;

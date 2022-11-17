@@ -11,7 +11,7 @@ interface Props {
   a11yID?: string;
 }
 
-const Subhead = ({ children, link, a11yID }: PropsWithChildren<Props>) => {
+function Subhead({ children, link, a11yID }: PropsWithChildren<Props>) {
   const { service, script, dir } = useContext(ServiceContext);
 
   const Wrapper = link
@@ -27,7 +27,7 @@ const Subhead = ({ children, link, a11yID }: PropsWithChildren<Props>) => {
       <Wrapper>{children}</Wrapper>
     </H2>
   );
-};
+}
 
 Subhead.defaultProps = { link: '', a11yID: '' };
 

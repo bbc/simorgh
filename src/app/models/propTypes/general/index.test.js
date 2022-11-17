@@ -3,6 +3,8 @@ import { arrayOfSpecificBlocks } from './index';
 
 import * as getMissingRequiredProps from './getMissingRequiredProps';
 
+const missingPropsSpy = jest.spyOn(getMissingRequiredProps, 'default');
+
 const propData = {
   testProp: [
     { type: 'propOne', value: 'Some data' },
@@ -28,8 +30,7 @@ describe('arrayOfSpecificBlocks', () => {
   });
 
   it('should return an error if missing required props', () => {
-    getMissingRequiredProps.default = jest
-      .fn()
+    missingPropsSpy
       .mockReturnValue([])
       .mockReturnValueOnce(['missingProp', 'missingPropTwo']);
 

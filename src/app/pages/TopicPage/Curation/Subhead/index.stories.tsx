@@ -13,7 +13,7 @@ interface Props {
   variant: Variants;
 }
 
-const Component = ({ service, variant }: Props) => {
+function Component({ service, variant }: Props) {
   return (
     <ServiceContextProvider service={service} variant={variant}>
       <Subheading>
@@ -21,9 +21,9 @@ const Component = ({ service, variant }: Props) => {
       </Subheading>
     </ServiceContextProvider>
   );
-};
+}
 
-const WithLink = ({ service, variant }: Props) => {
+function WithLink({ service, variant }: Props) {
   return (
     <ServiceContextProvider service={service} variant={variant}>
       <Subheading link="https://bbc.com">
@@ -31,7 +31,7 @@ const WithLink = ({ service, variant }: Props) => {
       </Subheading>
     </ServiceContextProvider>
   );
-};
+}
 
 export default {
   title: 'Topic/Curations/Subheading',

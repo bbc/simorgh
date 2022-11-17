@@ -120,7 +120,7 @@ interface Props {
   variant: Variants;
 }
 
-const ThemeProvider = ({ children, service, ...rest }: Props) => {
+function ThemeProvider({ children, service, ...rest }: Props) {
   const variant = rest.variant || defaultServiceVariants[service];
   const ThemeProviderSynchronous =
     variant === 'default' || !variant
@@ -128,6 +128,6 @@ const ThemeProvider = ({ children, service, ...rest }: Props) => {
       : themeProviders[service][variant];
 
   return <ThemeProviderSynchronous>{children}</ThemeProviderSynchronous>;
-};
+}
 
 export default ThemeProvider;

@@ -3,8 +3,15 @@ import * as analyticsUtils from '#lib/analyticsUtils';
 import { sendEventBeacon } from '.';
 
 const sendBeaconSpy = jest.spyOn(sendBeacon, 'default');
-analyticsUtils.getAtUserId = jest.fn().mockReturnValue('123-456-789');
-analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
+
+const analyticsUtilsUserIdSpy = jest.spyOn(analyticsUtils, 'getAtUserId');
+analyticsUtilsUserIdSpy.mockReturnValue('123-456-789');
+
+const analyticsUtilsCurrentTimeSpy = jest.spyOn(
+  analyticsUtils,
+  'getCurrentTime',
+);
+analyticsUtilsCurrentTimeSpy.mockReturnValue('00-00-00');
 
 describe('beacon', () => {
   const atiBaseUrl = 'https://foobar.com?';

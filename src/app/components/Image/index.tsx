@@ -31,7 +31,7 @@ const getLegacyBrowserAspectRatio = (x: number, y: number) =>
     .toString()
     .concat('%');
 
-const Image = ({
+function Image({
   alt,
   aspectRatio,
   attribution,
@@ -48,7 +48,7 @@ const Image = ({
   sizes,
   src,
   width,
-}: PropsWithChildren<Props>) => {
+}: PropsWithChildren<Props>) {
   const [isLoaded, setIsLoaded] = useState(false);
   const showPlaceholder = placeholder && !isLoaded;
   const hasDimensions = width && height;
@@ -153,6 +153,6 @@ const Image = ({
       </div>
     </>
   );
-};
+}
 
 export default Image;

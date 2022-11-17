@@ -7,6 +7,9 @@ import pageData from './fixtures';
 import * as fetchMarkup from './fetchMarkup';
 import * as getImageBlock from './getImageBlock';
 
+const fetchMarkUpSpy = jest.spyOn(fetchMarkup, 'default');
+const getImageBlockSpy = jest.spyOn(getImageBlock, 'default');
+
 const includeMarkup = `<div>INCLUDE Markup</div><script type="text/javascript" src="localhost/idt1.js"></script>`;
 
 const canonicalPathname = 'https://www.bbc.com/service/foo';
@@ -64,7 +67,7 @@ describe('Convert Include block', () => {
 
   describe('Data dependent conditions', () => {
     beforeEach(() => {
-      fetchMarkup.default = jest.fn().mockReturnValue(includeMarkup);
+      fetchMarkUpSpy.mockReturnValue(includeMarkup);
     });
 
     it.each`
@@ -93,15 +96,15 @@ describe('Convert Include block', () => {
       jest.clearAllMocks();
     });
     it(`when fetchMarkup returns null`, async () => {
-      fetchMarkup.default = jest.fn().mockReturnValue(null);
+      fetchMarkUpSpy.mockReturnValue(null);
       expect(
         await convertInclude(idt2Block, pageData, null, canonicalPathname),
       ).toMatchSnapshot();
     });
 
     it(`when getImageBlock returns null`, async () => {
-      getImageBlock.default = jest.fn().mockReturnValue(null);
-      fetchMarkup.default = jest.fn().mockReturnValue(includeMarkup);
+      getImageBlockSpy.mockReturnValue(null);
+      fetchMarkUpSpy.mockReturnValue(includeMarkup);
       expect(
         await convertInclude(idt2Block, pageData, null, canonicalPathname),
       ).toMatchSnapshot();

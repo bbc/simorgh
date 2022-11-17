@@ -15,7 +15,7 @@ type Props = {
   blocks: any;
 };
 
-const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
+function Byline({ blocks, children }: PropsWithChildren<Props>) {
   const { translations, dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
   const bylineBlocks = pathOr([], [0, 'model', 'blocks'], blocks);
@@ -227,7 +227,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
       </ul>
     </section>
   );
-};
+}
 
 Byline.defaultProps = {
   children: null,

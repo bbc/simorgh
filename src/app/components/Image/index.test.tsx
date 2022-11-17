@@ -15,20 +15,22 @@ const removeStyles = (el: HTMLElement) => {
   return dom.window.document.body.firstChild;
 };
 
-const Fixture = ({ ...props }) => (
-  <Image
-    alt="Test image alt text"
-    src="/test-image-500.jpg"
-    srcSet="/test-image-200.webp 200w, /test-image-500.webp 500w"
-    mediaType="image/webp"
-    fallbackSrcSet="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
-    fallbackMediaType="image/jpeg"
-    sizes="(max-width: 600px) 480px, 800px"
-    width={500}
-    height={281}
-    {...props}
-  />
-);
+function Fixture({ ...props }) {
+  return (
+    <Image
+      alt="Test image alt text"
+      src="/test-image-500.jpg"
+      srcSet="/test-image-200.webp 200w, /test-image-500.webp 500w"
+      mediaType="image/webp"
+      fallbackSrcSet="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
+      fallbackMediaType="image/jpeg"
+      sizes="(max-width: 600px) 480px, 800px"
+      width={500}
+      height={281}
+      {...props}
+    />
+  );
+}
 
 describe('Image - Canonical', () => {
   it('should preload when preload is true', async () => {

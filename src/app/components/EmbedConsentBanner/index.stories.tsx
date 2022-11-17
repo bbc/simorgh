@@ -12,9 +12,11 @@ import {
 } from '.';
 import ThemeProvider from '../ThemeProvider';
 
-const BackgroundColorWrapper = ({ children }: PropsWithChildren) => (
-  <div css={css({ backgroundColor: C_GREY_2, padding: 20 })}>{children}</div>
-);
+function BackgroundColorWrapper({ children }: PropsWithChildren) {
+  return (
+    <div css={css({ backgroundColor: C_GREY_2, padding: 20 })}>{children}</div>
+  );
+}
 
 interface Props {
   service: Services;
@@ -23,12 +25,12 @@ interface Props {
   provider: ConsentBannerProviders;
 }
 
-const Component = ({
+function Component({
   service = 'news',
   variant,
   isAmp,
   provider = 'youtube',
-}: Props) => {
+}: Props) {
   const EmbedBanner = !isAmp
     ? EmbedConsentBannerCanonical
     : EmbedConsentBannerAmp;
@@ -44,7 +46,7 @@ const Component = ({
       </ServiceContextProvider>
     </ThemeProvider>
   );
-};
+}
 
 export default {
   title: 'Containers/Social Embed/Consent Banner',
@@ -52,21 +54,21 @@ export default {
   parameters: { chromatic: { disable: true } },
 };
 
-export const CanonicalYoutube = (props: Props) => (
-  <Component {...props} provider="youtube" />
-);
-export const CanonicalYoutubeMundo = (props: Props) => (
-  <Component {...props} isAmp provider="youtube" service="mundo" />
-);
-export const AmpYoutube = (props: Props) => (
-  <Component {...props} isAmp provider="youtube" />
-);
-export const CanonicalTikTok = (props: Props) => (
-  <Component {...props} provider="tiktok" />
-);
-export const CanonicalTikTokMundo = (props: Props) => (
-  <Component {...props} isAmp provider="tiktok" service="mundo" />
-);
-export const AmpTikTok = (props: Props) => (
-  <Component {...props} isAmp provider="tiktok" />
-);
+export function CanonicalYoutube(props: Props) {
+  return <Component {...props} provider="youtube" />;
+}
+export function CanonicalYoutubeMundo(props: Props) {
+  return <Component {...props} isAmp provider="youtube" service="mundo" />;
+}
+export function AmpYoutube(props: Props) {
+  return <Component {...props} isAmp provider="youtube" />;
+}
+export function CanonicalTikTok(props: Props) {
+  return <Component {...props} provider="tiktok" />;
+}
+export function CanonicalTikTokMundo(props: Props) {
+  return <Component {...props} isAmp provider="tiktok" service="mundo" />;
+}
+export function AmpTikTok(props: Props) {
+  return <Component {...props} isAmp provider="tiktok" />;
+}

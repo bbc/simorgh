@@ -13,7 +13,7 @@ interface Props {
   variant: Variants;
 }
 
-const Component = ({ service, variant }: Props) => {
+function Component({ service, variant }: Props) {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
@@ -27,7 +27,7 @@ const Component = ({ service, variant }: Props) => {
       </ServiceContextProvider>
     </ThemeProvider>
   );
-};
+}
 
 export default {
   title: 'Topic/HierarchicalGrid',

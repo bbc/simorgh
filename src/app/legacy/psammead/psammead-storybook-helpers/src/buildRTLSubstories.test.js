@@ -4,7 +4,8 @@ import * as withServicesKnob from './withServicesKnob';
 
 const mockAddStory = jest.fn();
 
-withServicesKnob.default = jest.fn(() => 'withServicesKnob');
+const withServicesSpy = jest.spyOn(withServicesKnob, 'default');
+withServicesSpy.mockImplementation = jest.fn(() => 'withServicesKnob');
 
 jest.mock('@storybook/react', () => ({
   storiesOf: jest.fn(() => ({

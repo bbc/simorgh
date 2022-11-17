@@ -15,49 +15,57 @@ interface Props {
   text: string;
 }
 
-const Providers = ({ children, service, variant }: Omit<Props, 'text'>) => (
-  <ThemeProvider service={service} variant={variant}>
-    <ServiceContextProvider service={service} variant={variant}>
-      {children}
-    </ServiceContextProvider>
-  </ThemeProvider>
-);
+function Providers({ children, service, variant }: Omit<Props, 'text'>) {
+  return (
+    <ThemeProvider service={service} variant={variant}>
+      <ServiceContextProvider service={service} variant={variant}>
+        {children}
+      </ServiceContextProvider>
+    </ThemeProvider>
+  );
+}
 
-export const InternalInlineLink = ({
+export function InternalInlineLink({
   service,
   variant,
   text,
-}: Omit<Props, 'children'>) => (
-  <Providers service={service} variant={variant}>
-    <InlineLink to="https://www.bbc.com/mundo" text={text} />
-  </Providers>
-);
+}: Omit<Props, 'children'>) {
+  return (
+    <Providers service={service} variant={variant}>
+      <InlineLink to="https://www.bbc.com/mundo" text={text} />
+    </Providers>
+  );
+}
 
-export const ExternalInlineLink = ({
+export function ExternalInlineLink({
   service,
   variant,
   text,
-}: Omit<Props, 'children'>) => (
-  <Providers service={service} variant={variant}>
-    <InlineLink to="https://google.com" text={text} />
-  </Providers>
-);
+}: Omit<Props, 'children'>) {
+  return (
+    <Providers service={service} variant={variant}>
+      <InlineLink to="https://google.com" text={text} />
+    </Providers>
+  );
+}
 
-export const InlineLinkWithTypographyStyles = ({
+export function InlineLinkWithTypographyStyles({
   service,
   variant,
   text,
-}: Omit<Props, 'children'>) => (
-  <Providers service={service} variant={variant}>
-    <InlineLink to="/" text={text} fontVariant="serifBold" size="elephant" />
-  </Providers>
-);
+}: Omit<Props, 'children'>) {
+  return (
+    <Providers service={service} variant={variant}>
+      <InlineLink to="/" text={text} fontVariant="serifBold" size="elephant" />
+    </Providers>
+  );
+}
 
-export const InlineLinkInsideText = ({
+export function InlineLinkInsideText({
   service,
   variant,
   text,
-}: Omit<Props, 'children'>) => {
+}: Omit<Props, 'children'>) {
   const words = text.split(' ');
   const middleIndex = Math.ceil(words.length / 2) - 1;
   const middleWord = words[middleIndex];
@@ -73,7 +81,7 @@ export const InlineLinkInsideText = ({
       </Text>
     </Providers>
   );
-};
+}
 
 export default {
   title: 'New Components/InlineLink',

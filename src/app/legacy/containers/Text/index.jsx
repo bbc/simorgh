@@ -4,11 +4,11 @@ import paragraph from '../Paragraph';
 import unorderedList from '../BulletedList';
 import Blocks from '../Blocks';
 
-const TextContainer = ({ blocks, componentsToRender }) => {
+function TextContainer({ blocks, componentsToRender }) {
   if (!blocks) return null;
 
   return <Blocks blocks={blocks} componentsToRender={componentsToRender} />;
-};
+}
 
 export const TextPropTypes = {
   blocks: arrayOf(

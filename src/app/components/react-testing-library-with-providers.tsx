@@ -1,4 +1,4 @@
-import React, { FC, ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 import { render, RenderOptions } from '@testing-library/react';
 
 import { ServiceContextProvider } from '../contexts/ServiceContext';
@@ -26,7 +26,7 @@ interface Props {
 
 // Uses a custom render so consumers don't need to wrap test fixtures in context and theme providers in every test suite
 // https://testing-library.com/docs/react-testing-library/setup/#custom-render
-const AllTheProviders: FC<Props> = ({
+function AllTheProviders({
   children,
   isAmp = false,
   pageData = pageDataFixture,
@@ -36,7 +36,7 @@ const AllTheProviders: FC<Props> = ({
   toggles = {},
   variant = 'default',
   showAdsBasedOnLocation = false,
-}: Props) => {
+}: Props) {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ToggleContextProvider toggles={toggles}>
@@ -57,7 +57,7 @@ const AllTheProviders: FC<Props> = ({
       </ToggleContextProvider>
     </ThemeProvider>
   );
-};
+}
 
 const customRender = (
   ui: ReactElement,

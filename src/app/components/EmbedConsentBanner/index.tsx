@@ -23,11 +23,11 @@ type ConsentBannerProps = {
   id?: string;
 };
 
-const EmbedConsentBannerAmp = ({
+function EmbedConsentBannerAmp({
   provider,
   id,
   children,
-}: PropsWithChildren<ConsentBannerProps>) => {
+}: PropsWithChildren<ConsentBannerProps>) {
   if (!CONSENT_BANNER_PROVIDERS.includes(provider))
     return children as JSX.Element;
 
@@ -47,12 +47,12 @@ const EmbedConsentBannerAmp = ({
       </div>
     </>
   );
-};
+}
 
-const EmbedConsentBannerCanonical = ({
+function EmbedConsentBannerCanonical({
   provider,
   children,
-}: PropsWithChildren<Omit<ConsentBannerProps, 'id'>>) => {
+}: PropsWithChildren<Omit<ConsentBannerProps, 'id'>>) {
   const [consented, setConsented] = useState(false);
 
   const handleClickTracking = useClickTrackerHandler(
@@ -75,6 +75,6 @@ const EmbedConsentBannerCanonical = ({
       }}
     />
   );
-};
+}
 
 export { EmbedConsentBannerCanonical, EmbedConsentBannerAmp };

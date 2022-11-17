@@ -17,12 +17,12 @@ interface Props {
  * using service contexts.
  */
 export const ServiceContext = React.createContext({});
-export const ServiceContextProvider = ({
+export function ServiceContextProvider({
   children,
   pageLang,
   service,
   variant,
-}: PropsWithChildren<Props>) => {
+}: PropsWithChildren<Props>) {
   const dataKey: Variants =
     getLangOverride({ service, pageLang }) || getVariant({ service, variant });
   return (
@@ -30,7 +30,7 @@ export const ServiceContextProvider = ({
       {children}
     </ServiceContext.Provider>
   );
-};
+}
 ServiceContextProvider.propTypes = {
   children: node.isRequired,
   service: string.isRequired,

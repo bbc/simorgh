@@ -3,6 +3,8 @@ import { render, act } from '@testing-library/react';
 import * as beacon from '#lib/analyticsUtils/sendBeacon';
 import CanonicalATIAnalytics from '.';
 
+const beaconSpy = jest.spyOn(beacon, 'default');
+
 describe('Canonical ATI Analytics', () => {
   afterEach(() => {
     jest.clearAllMocks();
@@ -10,13 +12,12 @@ describe('Canonical ATI Analytics', () => {
 
   const atiBaseUrl = 'https://foobar.com?';
   const mockPageviewParams = 'key=value&key2=value2&x8=[simorgh]';
-  const mockSendBeacon = jest.fn().mockReturnValue('beacon-return-value');
+  const mockSendBeacon = beaconSpy.mockReturnValue('beacon-return-value');
 
   it('calls atiBaseURL and sendBeacon with required params', () => {
     const expectedUrl = `${atiBaseUrl}${mockPageviewParams}`;
 
     process.env.SIMORGH_ATI_BASE_URL = atiBaseUrl;
-    beacon.default = mockSendBeacon;
 
     act(() => {
       render(<CanonicalATIAnalytics pageviewParams={mockPageviewParams} />);

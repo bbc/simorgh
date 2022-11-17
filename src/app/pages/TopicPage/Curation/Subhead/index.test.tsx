@@ -11,15 +11,17 @@ interface Props {
 }
 
 /* eslint-disable react/prop-types */
-const SubheadWithContext = ({
+function SubheadWithContext({
   children = '',
   link = '',
   service = 'mundo',
-}: PropsWithChildren<Props>) => (
-  <ServiceContextProvider service={service}>
-    <Subhead link={link}>{children}</Subhead>
-  </ServiceContextProvider>
-);
+}: PropsWithChildren<Props>) {
+  return (
+    <ServiceContextProvider service={service}>
+      <Subhead link={link}>{children}</Subhead>
+    </ServiceContextProvider>
+  );
+}
 
 describe('Curation Subhead Component', () => {
   it('should render a link correctly with the url contained in the href', () => {

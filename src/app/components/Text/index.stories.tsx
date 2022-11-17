@@ -15,7 +15,7 @@ interface Props {
 
 const EMPTY_OPTION = '--';
 
-const TextStory = ({ service, variant, text }: Props) => {
+function TextStory({ service, variant, text }: Props) {
   const selectedFontVariant = select(
     'fontVariant',
     {
@@ -72,7 +72,7 @@ const TextStory = ({ service, variant, text }: Props) => {
       </ServiceContextProvider>
     </ThemeProvider>
   );
-};
+}
 
 export default {
   title: 'New Components/Text',

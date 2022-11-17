@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import { useContext, FC, HTMLAttributes } from 'react';
+import { useContext, HTMLAttributes } from 'react';
 import { jsx, Theme } from '@emotion/react';
 import Url from 'url-parse';
 import { Link as ClientSideLink } from 'react-router-dom';
@@ -38,7 +38,7 @@ const parseLocation = (location: string) =>
     end: false,
   }).exec(location);
 
-const InlineLink: FC<Props> = ({
+function InlineLink({
   allowCSR = false,
   className,
   fontVariant,
@@ -46,7 +46,7 @@ const InlineLink: FC<Props> = ({
   text,
   to,
   ...htmlAttributes
-}: Props) => {
+}: Props) {
   const { externalLinkText } = useContext(ServiceContext);
   const { hostname } = new Url(to);
   const isExternalLink = !bbcDomains.some(bbcDomain => hostname === bbcDomain);
@@ -92,6 +92,6 @@ const InlineLink: FC<Props> = ({
       {text}
     </a>
   );
-};
+}
 
 export default InlineLink;

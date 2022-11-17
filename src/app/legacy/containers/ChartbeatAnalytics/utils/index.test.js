@@ -27,6 +27,10 @@ import {
 
 let isOnClient = false;
 
+const articleUtilsSpy = jest.spyOn(articleUtils, 'getPromoHeadline');
+
+const frontPageUtilsSpy = jest.spyOn(frontPageUtils, 'getPageTitle');
+
 jest.mock('../../../../lib/utilities/onClient', () => jest.fn());
 onClient.mockImplementation(() => isOnClient);
 
@@ -304,9 +308,9 @@ describe('Chartbeat utilities', () => {
         const mockTitle = jest.fn().mockImplementation(() => pageTitle);
 
         if (pageType === ARTICLE_PAGE) {
-          articleUtils.getPromoHeadline = mockTitle;
+          articleUtilsSpy.mockImplementation(mockTitle);
         } else {
-          frontPageUtils.getPageTitle = mockTitle;
+          frontPageUtilsSpy.mockImplementation(mockTitle);
         }
 
         expect(getTitle({ pageType, pageData, brandName })).toBe(pageTitle);
@@ -426,7 +430,7 @@ describe('Chartbeat utilities', () => {
         .fn()
         .mockImplementation(() => 'This is an index page title');
 
-      frontPageUtils.getPageTitle = mockTitle;
+      frontPageUtilsSpy.mockImplementation(mockTitle);
 
       const expectedCookieValue = 'foobar';
       jest.spyOn(Cookie, 'get').mockImplementation(() => expectedCookieValue);
@@ -919,7 +923,7 @@ describe('Chartbeat utilities', () => {
       .fn()
       .mockImplementation(() => 'This is an index page title');
 
-    frontPageUtils.getPageTitle = mockTitle;
+    frontPageUtilsSpy.mockImplementation(mockTitle);
 
     const expectedCookieValue = 'foobar';
     jest.spyOn(Cookie, 'get').mockImplementation(() => expectedCookieValue);
@@ -959,7 +963,7 @@ describe('Chartbeat utilities', () => {
       .fn()
       .mockImplementation(() => 'This is a Feature Index page title');
 
-    frontPageUtils.getPageTitle = mockTitle;
+    frontPageUtilsSpy.mockImplementation(mockTitle);
 
     const expectedCookieValue = 'foobar';
     jest.spyOn(Cookie, 'get').mockImplementation(() => expectedCookieValue);
@@ -999,7 +1003,7 @@ describe('Chartbeat utilities', () => {
       .fn()
       .mockImplementation(() => 'This is an index page title');
 
-    frontPageUtils.getPageTitle = mockTitle;
+    frontPageUtilsSpy.mockImplementation(mockTitle);
 
     const expectedCookieValue = 'foobar';
     jest.spyOn(Cookie, 'get').mockImplementation(() => expectedCookieValue);

@@ -15,7 +15,7 @@ interface Props {
 
 const EMPTY_OPTION = '--';
 
-const HeadingStory = ({ service, variant, text }: Props) => {
+function HeadingStory({ service, variant, text }: Props) {
   const selectedLevel = select(
     'level',
     {
@@ -82,7 +82,7 @@ const HeadingStory = ({ service, variant, text }: Props) => {
       </ServiceContextProvider>
     </ThemeProvider>
   );
-};
+}
 
 export default {
   title: 'New Components/Heading',

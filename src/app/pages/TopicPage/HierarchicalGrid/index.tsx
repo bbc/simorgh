@@ -40,7 +40,7 @@ const getStyles = (promoCount: number, i: number, mq: any) => {
   });
 };
 
-const HiearchicalGrid = ({ promos, headingLevel }: Promos) => {
+function HiearchicalGrid({ promos, headingLevel }: Promos) {
   if (!promos || promos.length < 3) return null;
   const promoItems = promos.slice(0, 12);
   return (
@@ -85,6 +85,6 @@ const HiearchicalGrid = ({ promos, headingLevel }: Promos) => {
       })}
     </ul>
   );
-};
+}
 
 export default HiearchicalGrid;

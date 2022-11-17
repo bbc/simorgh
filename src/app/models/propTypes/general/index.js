@@ -13,8 +13,8 @@ export const blocksWithTypes = blockTypes => ({
   blocks: arrayOf(oneOfType(blockTypes).isRequired).isRequired,
 });
 
-export const arrayOfSpecificBlocks =
-  propTypeData => (props, key, componentName) => {
+export const arrayOfSpecificBlocks = propTypeData =>
+  function (props, key, componentName) {
     const { [key]: propData } = props;
 
     if (!Array.isArray(propData)) {

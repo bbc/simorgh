@@ -157,11 +157,11 @@ type ConsentBannerContentProps = {
   id?: string;
 };
 
-const ConsentBanner = ({
+function ConsentBanner({
   provider,
   clickHandler,
   id,
-}: ConsentBannerContentProps) => {
+}: ConsentBannerContentProps) {
   const { externalLinkText, translations } = useContext(ServiceContext);
 
   const consentTranslations = getTranslations(
@@ -202,6 +202,6 @@ const ConsentBanner = ({
       </Text>
     </div>
   );
-};
+}
 
 export default ConsentBanner;

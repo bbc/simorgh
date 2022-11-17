@@ -19,11 +19,11 @@ describe('ServiceContextProvider', () => {
   describe('should load hydrated service context', () => {
     const testForServiceAndVariant = (service: Services, variant: Variants) => {
       it(`should have a brand name for ${service} and variant ${variant}`, async () => {
-        const Component = () => {
+        function Component() {
           const { brandName } = useContext(ServiceContext);
 
           return <span>{brandName}</span>;
-        };
+        }
 
         const serviceContextProps = {
           service,
@@ -56,11 +56,11 @@ describe('ServiceContextProvider', () => {
     });
 
     it(`should return null for foobar service`, async () => {
-      const Component = () => {
+      function Component() {
         const { brandName } = useContext(ServiceContext);
 
         return <span>{brandName}</span>;
-      };
+      }
 
       const { container } = render(
         // @ts-expect-error test passing invalid service
@@ -119,7 +119,7 @@ describe('ServiceContextProvider', () => {
         assertionValue,
       }) => {
         it(description, async () => {
-          const Component = () => {
+          function Component() {
             const { translations } = useContext(ServiceContext);
 
             return (
@@ -127,7 +127,7 @@ describe('ServiceContextProvider', () => {
                 {translations[assertionValue as keyof Translations]?.toString()}
               </span>
             );
-          };
+          }
 
           let container!: HTMLElement;
 
