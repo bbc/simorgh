@@ -2,7 +2,10 @@ import { css, Theme } from '@emotion/react';
 
 const styles = {
   componentHealthContainer: (theme: Theme) =>
-    css({ margin: `${theme.spacings.FULL}rem 0` }),
+    css({
+      margin: `${theme.spacings.FULL}rem 0`,
+      border: `1px solid ${theme.palette.SHADOW}`,
+    }),
 
   titleContainer: (theme: Theme) =>
     css({
