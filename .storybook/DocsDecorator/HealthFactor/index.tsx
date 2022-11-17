@@ -52,7 +52,11 @@ const HealthFactor = ({ metadata }: { metadata: any }) => {
       <ul css={styles.documentationList}>
         <SingleDoc
           label={'Screen reader UX'}
-          url={getUrl(uxAccessibility) as string}
+          url={
+            (getDone(uxAccessibility) as boolean)
+              ? (getUrl(uxAccessibility) as string)
+              : 'https://bbc.github.io/accessibility-news-and-you/guides/screen-reader-ux.html'
+          }
           status={getDone(uxAccessibility) as boolean}
           urlLabel={
             (getLabel(uxAccessibility) as string) ||
@@ -61,7 +65,11 @@ const HealthFactor = ({ metadata }: { metadata: any }) => {
         />
         <SingleDoc
           label={'Accessibility Acceptance Criteria'}
-          url={getUrl(acceptanceCriteria) as string}
+          url={
+            (getDone(acceptanceCriteria) as boolean)
+              ? (getUrl(acceptanceCriteria) as string)
+              : 'https://bbc.github.io/accessibility-news-and-you/guides/accessibility-acceptance-criteria.html'
+          }
           status={getDone(acceptanceCriteria) as boolean}
           urlLabel={
             (getLabel(acceptanceCriteria) as string) ||
@@ -70,7 +78,11 @@ const HealthFactor = ({ metadata }: { metadata: any }) => {
         />
         <SingleDoc
           label={'Accessibility Swarm'}
-          url={getUrl(uxSwarm) as string}
+          url={
+            (getDone(uxSwarm) as boolean)
+              ? (getUrl(uxSwarm) as string)
+              : 'https://confluence.dev.bbc.co.uk/display/NEWSWORLDSERVICE/A11y+Swarms'
+          }
           status={getDone(uxSwarm) as boolean}
           urlLabel={
             (getLabel(uxSwarm) as string) || 'How to run an accessibility swarm'
