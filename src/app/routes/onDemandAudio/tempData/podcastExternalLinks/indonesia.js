@@ -33,6 +33,17 @@ const externalLinks = {
           'https://podcasts.apple.com/us/podcast/investigasi-skandal-adopsi/id1613760117',
       },
     ],
+    p0dbsl80: [
+      {
+        linkText: 'Spotify',
+        linkUrl: 'https://open.spotify.com/show/43zcFT0Ac70PogTlN8v8jU',
+      },
+      {
+        linkText: 'Apple',
+        linkUrl:
+          'https://podcasts.apple.com/us/podcast/flora-carita/id1652325843',
+      },
+    ],
   },
 };
 

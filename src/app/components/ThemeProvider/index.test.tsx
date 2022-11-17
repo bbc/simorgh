@@ -1,6 +1,6 @@
-import React from 'react';
+/** @jsx jsx */
 import { render, act } from '@testing-library/react';
-import { css, Theme } from '@emotion/react';
+import { jsx, css, Theme } from '@emotion/react';
 
 import ThemeProvider from '.';
 

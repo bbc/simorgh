@@ -24,9 +24,9 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Run Simorgh E2Es
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v3
         with:
           build: yarn build
           start: yarn start
