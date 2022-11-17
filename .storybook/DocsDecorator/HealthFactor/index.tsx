@@ -6,7 +6,21 @@ import count from 'ramda/src/count';
 import path from 'ramda/src/path';
 import styles from './index.styles';
 
-const HealthFactor = ({ metadata }: { metadata: any }) => {
+interface HealthFactorItem {
+  done: boolean;
+  reference: {
+    url: string;
+    label: string;
+  };
+}
+
+interface HealthFactorMetadata {
+  uxAccessibilityDoc: HealthFactorItem;
+  acceptanceCriteria: HealthFactorItem;
+  swarm: HealthFactorItem;
+}
+
+const HealthFactor = ({ metadata }: { metadata?: HealthFactorMetadata }) => {
   const uxAccessibility = path(['uxAccessibilityDoc'], metadata);
   const uxSwarm = path(['swarm'], metadata);
   const acceptanceCriteria = path(['acceptanceCriteria'], metadata);
