@@ -81,7 +81,7 @@ export const getOnDemandTvRegex = services => {
 
 export const getTopicPageRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex}):variant(${variantRegex})?/new_topics/:id(${topicIdRegex}):amp(${ampRegex})?`;
+  return `/:service(${serviceRegex}):variant(${variantRegex})?/topics/:id(${topicIdRegex})?`;
 };
 
 export const getErrorPageRegex = services => {

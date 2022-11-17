@@ -6,17 +6,16 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
   GEL_SPACING,
-} from '@bbc/gel-foundations/spacings';
-import SectionLabel from '@bbc/psammead-section-label';
+} from '#psammead/gel-foundations/src/spacings';
+import SectionLabel from '#psammead/psammead-section-label/src';
 import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
-} from '@bbc/gel-foundations/breakpoints';
+} from '#psammead/gel-foundations/src/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import { OptimizelyExperiment } from '@optimizely/react-sdk';
 
-import Grid, { GelPageGrid, GridItemLarge } from '#app/components/Grid';
+import Grid, { GelPageGrid, GridItemLarge } from '#components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
@@ -42,7 +41,6 @@ import CpsTable from '#containers/CpsTable';
 import Byline from '#containers/Byline';
 import CpsSocialEmbedContainer from '#containers/SocialEmbed/Cps';
 import CpsRecommendations from '#containers/CpsRecommendations';
-import ExperimentalEOJ from '#app/components/ExperimentalEOJ';
 import { InlinePodcastPromo } from '#containers/PodcastPromo';
 
 import {
@@ -51,15 +49,15 @@ import {
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
 import Include from '#containers/Include';
-import { ServiceContext } from '#contexts/ServiceContext';
 import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
+import { OptimizelyExperiment } from '@optimizely/react-sdk';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
-import SplitRecommendations from '#containers/CpsRecommendations/SplitRecommendations';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 
@@ -201,61 +199,54 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     mpu: props =>
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
     wsoj: props => (
-      <CpsRecommendations
-        {...props}
-        parentColumns={gridColsMain}
-        items={recommendationsData}
-      />
+      // 004_brasil_recommendations_experiment
+      <OptimizelyExperiment experiment={OPTIMIZELY_CONFIG.experimentId}>
+        {variation => {
+          if (variation === 'control' || !variation) {
+            return (
+              <CpsRecommendations
+                {...props}
+                parentColumns={gridColsMain}
+                items={recommendationsData}
+              />
+            );
+          }
+          if (variation === 'content_recs') {
+            const unirecsContentRecommendationData = path(
+              ['datalabContentRecommendations'],
+              pageData,
+            );
+
+            return (
+              <CpsRecommendations
+                {...props}
+                parentColumns={gridColsMain}
+                items={unirecsContentRecommendationData}
+              />
+            );
+          }
+          if (variation === 'hybrid_recs') {
+            const unirecsHybridRecommendationData = path(
+              ['datalabHybridRecommendations'],
+              pageData,
+            );
+            return (
+              <CpsRecommendations
+                {...props}
+                parentColumns={gridColsMain}
+                items={unirecsHybridRecommendationData}
+              />
+            );
+          }
+
+          return null;
+        }}
+      </OptimizelyExperiment>
     ),
     disclaimer: props => (
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
     podcastPromo: podcastPromoEnabled && InlinePodcastPromo,
-    // OPTIMIZELY: 003_hindi_experiment_feature.
-    experimentBlock: props => {
-      const { showForVariation } = props;
-
-      return (
-        <OptimizelyExperiment experiment={OPTIMIZELY_CONFIG.experimentId}>
-          {variation => {
-            // Return 'control' variation if 'control' is returned from Optimizely or experiment is not enabled
-            if (
-              showForVariation === 'control' &&
-              (variation === 'control' || !variation)
-            ) {
-              return (
-                <CpsRecommendations
-                  {...props}
-                  parentColumns={gridColsMain}
-                  items={recommendationsData}
-                  showForVariation={showForVariation}
-                />
-              );
-            }
-
-            if (
-              showForVariation === 'variation_1' &&
-              variation === 'variation_1'
-            ) {
-              return (
-                <SplitRecommendations {...props} items={recommendationsData} />
-              );
-            }
-
-            if (
-              showForVariation === 'variation_3' &&
-              variation === 'variation_3'
-            ) {
-              return (
-                <ExperimentalEOJ {...props} blocks={recommendationsData} />
-              );
-            }
-
-            return null;
-          }}
-        </OptimizelyExperiment>
-      );
-    },
   };
 
   const StyledTimestamp = styled(Timestamp)`
@@ -321,16 +312,20 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     }
   `;
 
+  const StyledSectionLabel = styled(SectionLabel)`
+    margin-top: 0;
+  `;
+
   const MostReadWrapper = ({ children }) => (
     <section role="region" aria-labelledby="Most-Read" data-e2e="most-read">
-      <SectionLabel
+      <StyledSectionLabel
         script={script}
         labelId="Most-Read"
         service={service}
         dir={dir}
       >
         {header}
-      </SectionLabel>
+      </StyledSectionLabel>
       {children}
     </section>
   );
@@ -398,9 +393,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
 
           <CpsRelatedContent
             content={relatedContent}
-            recommendations={recommendationsData}
             parentColumns={gridColsMain}
-            isStoryPage
           />
         </GridPrimaryColumn>
         <GridSecondaryColumn

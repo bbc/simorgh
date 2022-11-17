@@ -9,7 +9,7 @@ We are particularly looking for help with our [open issues](https://github.com/b
 Please familiarise yourself with our:
 
 - [Code of conduct](https://github.com/bbc/simorgh/blob/latest/.github/CODE_OF_CONDUCT.md)
-- [Code Standards](https://github.com/bbc/simorgh/blob/latest/docs/Code-Standards.md)
+- [Coding Standards](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/README.md)
 - [Contributing guidelines](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md) (you are here)
 - [Guide to Code Reviews](https://github.com/bbc/simorgh/blob/latest/docs/Code-Reviews.md)
 - [Github Project Board Guide](https://github.com/bbc/simorgh/blob/latest/docs/Project-Board-Guide.md)

@@ -1,6 +1,6 @@
 import { ErrorPage } from '#pages';
-import { errorPagePath } from '#utils/regex';
-import { ERROR_PAGE } from '#utils/pageTypes';
+import { errorPagePath } from '#app/routes/utils/regex';
+import { ERROR_PAGE } from '#app/routes/utils/pageTypes';
 import getInitialData from './getInitialData';
 
 export default {

@@ -183,7 +183,7 @@ Object {
 exports[`AMP Most Read Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "Liên hệ BBC",
-  "url": "https://www.bbc.co.uk/send/u50853951",
+  "url": "https://www.bbc.co.uk/vietnamese/send/u50853951",
 }
 `;
 
@@ -427,7 +427,7 @@ exports[`AMP Most Read Page SEO OG url 1`] = `"http://localhost:7080/vietnamese/
 
 exports[`AMP Most Read Page SEO Page title 1`] = `"Đọc nhiều nhất - BBC News Tiếng Việt"`;
 
-exports[`AMP Most Read Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP Most Read Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP Most Read Page SEO Twitter card 1`] = `"summary_large_image"`;
 

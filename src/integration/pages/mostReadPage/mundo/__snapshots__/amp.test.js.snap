@@ -182,8 +182,8 @@ Object {
 
 exports[`AMP Most Read Page Footer Anchors should match text and url 7`] = `
 Object {
-  "text": "Contacta a la BBC",
-  "url": "https://www.bbc.co.uk/send/u50853489",
+  "text": "Escribe a BBC Mundo",
+  "url": "https://www.bbc.co.uk/mundo/send/u50853489",
 }
 `;
 
@@ -469,7 +469,7 @@ exports[`AMP Most Read Page SEO OG url 1`] = `"http://localhost:7080/mundo/popul
 
 exports[`AMP Most Read Page SEO Page title 1`] = `"Más leídas - BBC News Mundo"`;
 
-exports[`AMP Most Read Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP Most Read Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP Most Read Page SEO Twitter card 1`] = `"summary_large_image"`;
 

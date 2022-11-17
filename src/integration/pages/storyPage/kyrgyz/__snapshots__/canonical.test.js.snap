@@ -49,7 +49,7 @@ Object {
 exports[`Canonical Story Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "Би-Би-Си менен байланышыңыз",
-  "url": "https://www.bbc.co.uk/send/u50853445",
+  "url": "https://www.bbc.co.uk/kyrgyz/send/u50853445",
 }
 `;
 
@@ -120,7 +120,7 @@ exports[`Canonical Story Page Image Caption should match text 1`] = `"Сүрөт
 exports[`Canonical Story Page Image should match snapshot 1`] = `
 <img
   alt="social media"
-  class="eehpdyc0 bbc-rb7xa0 e1enwo3v0"
+  class="e3vrtyk0 bbc-rb7xa0 e1mo64ex0"
   height="351"
   src="https://ichef.bbci.co.uk/news/640/cpsdevpb/11D53/test/_63734037_socialmedia.jpg"
   width="624"
@@ -286,7 +286,7 @@ exports[`Canonical Story Page SEO OG url 1`] = `"http://localhost:7080/kyrgyz/23
 
 exports[`Canonical Story Page SEO Page title 1`] = `"Test STY for social embeds - BBC News Кыргыз Кызматы"`;
 
-exports[`Canonical Story Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Story Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Story Page SEO Twitter card 1`] = `"summary_large_image"`;
 

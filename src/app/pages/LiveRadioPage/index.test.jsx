@@ -2,11 +2,11 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render, waitFor } from '@testing-library/react';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import LiveRadioPage from './LiveRadioPage';
 import afriquePageData from './fixtureData/afrique';
 import indonesianPageData from './fixtureData/indonesia';
@@ -33,7 +33,7 @@ const Page = ({ pageData, service, lang, isAmp = false }) => (
 
 analyticsUtils.getAtUserId = jest.fn();
 
-jest.mock('../../containers/ChartbeatAnalytics', () => {
+jest.mock('../../legacy/containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });

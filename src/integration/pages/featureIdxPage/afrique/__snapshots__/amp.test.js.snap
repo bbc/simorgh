@@ -183,7 +183,7 @@ Object {
 exports[`AMP Feature Index page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "Contactez la BBC",
-  "url": "https://www.bbc.co.uk/send/u50853159",
+  "url": "https://www.bbc.co.uk/afrique/send/u50853159",
 }
 `;
 
@@ -433,7 +433,7 @@ exports[`AMP Feature Index page SEO OG url 1`] = `"http://localhost:7080/afrique
 
 exports[`AMP Feature Index page SEO Page title 1`] = `"Tout savoir sur la CAN 2019 - BBC News Afrique"`;
 
-exports[`AMP Feature Index page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP Feature Index page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP Feature Index page SEO Twitter card 1`] = `"summary_large_image"`;
 

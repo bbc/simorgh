@@ -182,8 +182,8 @@ Object {
 
 exports[`AMP Story Page Footer Anchors should match text and url 7`] = `
 Object {
-  "text": "Contacta a la BBC",
-  "url": "https://www.bbc.co.uk/send/u50853489",
+  "text": "Escribe a BBC Mundo",
+  "url": "https://www.bbc.co.uk/mundo/send/u50853489",
 }
 `;
 
@@ -530,7 +530,7 @@ exports[`AMP Story Page SEO OG url 1`] = `"http://localhost:7080/mundo/noticias-
 
 exports[`AMP Story Page SEO Page title 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea - BBC News Mundo"`;
 
-exports[`AMP Story Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP Story Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP Story Page SEO Twitter card 1`] = `"summary_large_image"`;
 

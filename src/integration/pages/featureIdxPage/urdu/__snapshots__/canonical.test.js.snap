@@ -49,7 +49,7 @@ Object {
 exports[`Canonical Feature Index page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "بی بی سی سے رابطہ کریں",
-  "url": "https://www.bbc.co.uk/send/u50853907",
+  "url": "https://www.bbc.co.uk/urdu/send/u50853907",
 }
 `;
 
@@ -271,7 +271,7 @@ exports[`Canonical Feature Index page SEO OG url 1`] = `"http://localhost:7080/u
 
 exports[`Canonical Feature Index page SEO Page title 1`] = `"کورونا وائرس: تحقیق، تشخیص اور احتیاط - BBC News اردو"`;
 
-exports[`Canonical Feature Index page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Feature Index page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Feature Index page SEO Twitter card 1`] = `"summary_large_image"`;
 
@@ -300,7 +300,7 @@ exports[`Canonical Feature Index page Story Promo Headline should match text 1`]
 exports[`Canonical Feature Index page Story Promo Image should match image 1`] = `
 <img
   alt="بل گیٹس"
-  class="eehpdyc0 bbc-rb7xa0 e1enwo3v0"
+  class="e3vrtyk0 bbc-rb7xa0 e1mo64ex0"
   height="576"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/B04F/production/_112753154_bill.jpg"
   width="1024"
