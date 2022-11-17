@@ -5,20 +5,7 @@ import SingleDoc from './SingleDoc';
 import count from 'ramda/src/count';
 import path from 'ramda/src/path';
 import styles from './index.styles';
-
-interface HealthFactorItem {
-  done: boolean;
-  reference: {
-    url: string;
-    label: string;
-  };
-}
-
-interface HealthFactorMetadata {
-  uxAccessibilityDoc: HealthFactorItem;
-  acceptanceCriteria: HealthFactorItem;
-  swarm: HealthFactorItem;
-}
+import HealthFactorMetadata from '../types';
 
 const HealthFactor = ({ metadata }: { metadata?: HealthFactorMetadata }) => {
   const uxAccessibility = path(['uxAccessibilityDoc'], metadata);
