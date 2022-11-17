@@ -3,10 +3,8 @@ import HealthFactor from '.';
 import ThemeProvider from '../../../src/app/components/ThemeProvider';
 import {
   allCompletedDocs,
-  oneUncompletedDocs,
-  multipleUncompletedDocs,
-  oneMissingDocs,
-  multipleMissingDocs,
+  threeOutstandingActions,
+  allMissingDocs,
 } from './fixture';
 import metadata from './metadata.json';
 import md from './HealthFactor.md';
@@ -37,11 +35,11 @@ export const HealthFactorWithCompleteDocs = props => (
 );
 
 export const HealthFactorWithUncompleteDocs = props => (
-  <HealthFactorComponent metadata={multipleUncompletedDocs} />
+  <HealthFactorComponent metadata={threeOutstandingActions} />
 );
 
 export const HealthFactorWithMissingDocs = props => (
-  <HealthFactorComponent metadata={multipleMissingDocs} />
+  <HealthFactorComponent metadata={allMissingDocs} />
 );
 
 export const MissingHealthFactor = props => (
