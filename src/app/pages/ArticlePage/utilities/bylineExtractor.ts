@@ -8,7 +8,7 @@ const pathOrZeroIndexModelBlocks = (
 ) => {
   const zeroIndexModelBlock = ['model', 'blocks', 0];
   const endModel = ['model', endModelType];
-  let givenPath: string[] = [];
+  let givenPath: any[] = [];
 
   for (let i = 0; i < noModelBlocks; i += 1) {
     givenPath = givenPath.concat(zeroIndexModelBlock);
