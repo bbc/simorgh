@@ -12,6 +12,8 @@ const HealthFactor = ({ metadata }: { metadata?: HealthFactorMetadata }) => {
   const uxSwarm = path(['swarm'], metadata);
   const acceptanceCriteria = path(['acceptanceCriteria'], metadata);
 
+  console.log('HERE');
+
   const getLabel = path(['reference', 'label']);
   const getUrl = path(['reference', 'url']);
   const getDone = path(['done']);

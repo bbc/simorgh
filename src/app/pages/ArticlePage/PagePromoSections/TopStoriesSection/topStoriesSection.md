@@ -1,3 +1,7 @@
+import { Source, ArgsTable } from '@storybook/addon-docs';
+import dedent from 'ts-dedent';
+import Component from '.';
+
 ## Description
 
 A component constructing the Top Stories section for Article pages. The sections can hold a list of TopStoriesItem or a single TopStoriesItem. The section can have a max of 3 items.
