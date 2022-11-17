@@ -1,0 +1,23 @@
+{
+  "uxAccessibilityDoc": {
+    "done": false,
+    "reference": {
+      "url": "",
+      "label": "Accessibility Section"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": false,
+    "reference": {
+      "url": "",
+      "label": "GEL Accessibility Criteria Tests"
+    }
+  },
+  "swarm": {
+    "done": false,
+    "reference": {
+      "url": "",
+      "label": "A11y swarm notes"
+    }
+  }
+}
