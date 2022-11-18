@@ -1,5 +1,5 @@
 import pathOr from 'ramda/src/pathOr';
-import buildIChefURL from '../../../lib/utilities/ichefURL';
+import buildIChefURL from '../../../../lib/utilities/ichefURL';
 
 const pathOrZeroIndexModelBlocks = (
   noModelBlocks: number,
