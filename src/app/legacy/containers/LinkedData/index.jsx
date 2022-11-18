@@ -110,25 +110,30 @@ const LinkedData = ({
 
   const hasByline = !!authorName;
 
-  const authorLogo = {
-    '@type': 'ImageObject',
-    width: 1024,
-    height: 576,
-    url: defaultImage,
-  };
-
   const sameAs = [authorTopicUrl, twitterLink].filter(Boolean);
 
   const locationCreated = { '@place': location };
 
-  const author = {
-    '@type': hasByline ? 'Person' : ORG_TYPE,
-    name: hasByline ? authorName : AUTHOR_PUBLISHER_NAME,
-    ...(hasByline && sameAs.length && { sameAs }),
-    ...(hasByline && authorImage && { image: authorImage }),
-    ...(!hasByline && { logo: authorLogo }),
-    ...(isTrustProjectParticipant && !hasByline && { noBylinesPolicy }),
+  const orgAuthor = {
+    '@type': ORG_TYPE,
+    name: AUTHOR_PUBLISHER_NAME,
+    logo: {
+      '@type': 'ImageObject',
+      width: 1024,
+      height: 576,
+      url: defaultImage,
+    },
+    ...(isTrustProjectParticipant && { noBylinesPolicy }),
   };
+
+  const bylineAuthor = {
+    '@type': 'Person',
+    name: authorName,
+    ...(sameAs.length && { sameAs }),
+    ...(authorImage && { image: authorImage }),
+  };
+
+  const author = hasByline ? bylineAuthor : orgAuthor;
 
   const linkedData = {
     '@type': type,
