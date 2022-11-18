@@ -152,13 +152,15 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
 
   const hasByline = !!authorName && !!jobRole;
 
-  const bylineLinkedData = {
-    authorName,
-    authorTopicUrl,
-    twitterLink,
-    authorImage,
-    location,
-  };
+  const bylineLinkedData = hasByline
+    ? {
+        authorName,
+        authorTopicUrl,
+        twitterLink,
+        authorImage,
+        location,
+      }
+    : null;
 
   const componentsToRender = {
     visuallyHiddenHeadline,
@@ -253,7 +255,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       />
       <LinkedData
         showAuthor
-        bylineLinkedData={hasByline && bylineLinkedData}
+        bylineLinkedData={bylineLinkedData}
         type="Article"
         seoTitle={headline}
         headline={headline}
