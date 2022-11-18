@@ -62,16 +62,16 @@ export const service: DefaultServiceConfig = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'पॉडकास्ट',
-      brandTitle: 'बात सरहद पार',
+      brandTitle: 'दिनभर: पूरा दिन,पूरी ख़बर (Dinbhar)',
       brandDescription:
-        'दो देश,दो शख़्सियतें और ढेर सारी बातें. आज़ादी और बँटवारे के 75 साल. सीमा पार संवाद.',
+        'देश और दुनिया की बड़ी ख़बरें और उनका विश्लेषण करता समसामयिक विषयों का कार्यक्रम.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/448xn/p0clc96w.jpg',
-        alt: 'बात सरहद पार',
+        src: 'https://ichef.bbci.co.uk/images/ic/448xn/p09ds7cb.jpg',
+        alt: 'दिनभर: पूरा दिन,पूरी ख़बर',
       },
       linkLabel: {
-        text: 'बात सरहद पार',
-        href: 'https://www.bbc.com/hindi/podcasts/p0clc83k',
+        text: 'दिनभर: पूरा दिन,पूरी ख़बर',
+        href: 'https://www.bbc.com/hindi/podcasts/p09ds7zx',
       },
       skipLink: {
         text: 'छोड़कर %title% आगे बढ़ें',

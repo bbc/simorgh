@@ -26,7 +26,6 @@ const externalLinks = {
         linkUrl:
           'https://podcasts.apple.com/ru/podcast/%D1%87%D1%82%D0%BE-%D1%8D%D1%82%D0%BE-%D0%B1%D1%8B%D0%BB%D0%BE/id1460240829?l=en',
       },
-      { linkText: 'Yandex', linkUrl: 'https://music.yandex.com/album/7330688' },
       { linkText: 'Castbox', linkUrl: 'https://castbox.fm/vc/2092482' },
     ],
     p08pxjzf: [
@@ -38,10 +37,6 @@ const externalLinks = {
         linkText: 'Apple',
         linkUrl:
           'https://podcasts.apple.com/gb/podcast/%D0%B0%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9-%D0%BF%D0%B8%D1%80%D0%BE%D0%B3/id1529622434',
-      },
-      {
-        linkText: 'Yandex',
-        linkUrl: 'https://music.yandex.com/album/11965335',
       },
       { linkText: 'Castbox', linkUrl: 'https://castbox.fm/vc/3283439' },
     ],
@@ -66,7 +61,6 @@ const externalLinks = {
         linkUrl:
           'https://podcasts.apple.com/gb/podcast/%D0%B1%D0%B8-%D0%B1%D0%B8-%D1%81%D0%B8-doc/id1524273697',
       },
-      { linkText: 'Yandex', linkUrl: 'https://music.yandex.ru/album/11522254' },
       {
         linkText: 'Castbox',
         linkUrl:
@@ -78,10 +72,6 @@ const externalLinks = {
         linkText: 'Apple',
         linkUrl:
           'https://podcasts.apple.com/ru/podcast/%D0%BF%D0%B0%D1%81%D1%81%D0%B0%D0%B6%D0%B8%D1%80%D1%8B-%D0%B9%D0%BE%D0%BC%D0%B5%D0%B9-%D0%BC%D0%B0%D1%80%D1%83/id1575896140',
-      },
-      {
-        linkText: 'Yandex',
-        linkUrl: 'https://music.yandex.com/album/16801020',
       },
       {
         linkText: 'Castbox',
@@ -99,7 +89,6 @@ const externalLinks = {
         linkUrl:
           'https://podcasts.apple.com/ru/podcast/8-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D0%B9-%D0%B8%D0%B7-90-%D1%85/id1470221669',
       },
-      { linkText: 'Yandex', linkUrl: 'https://music.yandex.ru/album/9875407' },
       {
         linkText: 'Castbox',
         linkUrl:
