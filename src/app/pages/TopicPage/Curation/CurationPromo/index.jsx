@@ -8,6 +8,7 @@ import Promo from '#components/Promo';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const CurationPromo = ({
+  id,
   title,
   firstPublished,
   imageUrl,
@@ -34,20 +35,24 @@ const CurationPromo = ({
         <Promo.MediaIcon type={type}>{mediaDuration}</Promo.MediaIcon>
       </Promo.Image>
       <Promo.Heading as={`h${headingLevel}`}>
-        <Promo.A href={link}>
-          <span>
-            <VisuallyHiddenText>
-              {(type === 'audio' && `${audioTranslation},`) ||
-                (type === 'video' && `${videoTranslation},`)}
-            </VisuallyHiddenText>
-            {title}
-            <VisuallyHiddenText>
-              {!mediaDuration
-                ? `, ${durationTranslation}`
-                : `, ${durationTranslation} ${durationString}`}
-            </VisuallyHiddenText>
-          </span>
-        </Promo.A>
+        {type !== 'article' ? (
+          <Promo.A href={link} aria-labelledby={id}>
+            <span id={id}>
+              <VisuallyHiddenText>
+                {(type === 'audio' && `${audioTranslation},`) ||
+                  (type === 'video' && `${videoTranslation},`)}
+              </VisuallyHiddenText>
+              {title}
+              <VisuallyHiddenText>
+                {!mediaDuration
+                  ? `, ${durationTranslation}`
+                  : `, ${durationTranslation} ${durationString}`}
+              </VisuallyHiddenText>
+            </span>
+          </Promo.A>
+        ) : (
+          <Promo.A href={link}>{title}</Promo.A>
+        )}
       </Promo.Heading>
       <Promo.Timestamp>{firstPublished}</Promo.Timestamp>
     </Promo>
@@ -55,6 +60,7 @@ const CurationPromo = ({
 };
 
 CurationPromo.propTypes = {
+  id: string.isRequired,
   title: string.isRequired,
   // epoch time or ISO8601 timestamp
   firstPublished: oneOfType([number, string]).isRequired,
