@@ -26,46 +26,48 @@ describe('Document Component', () => {
   );
   const links = (
     <>
-      <link rel="modulePreload" href="modern.main.js" />
-      <link rel="modulePreload" href="modern.vendor.js" />
-      <link rel="modulePreload" href="modern.igbo.js" />
+      <link rel="modulepreload" href="modern.main.js" />
+      <link rel="modulepreload" href="modern.vendor.js" />
+      <link rel="modulepreload" href="modern.igbo.js" />
     </>
   );
 
   // eslint-disable-next-line react/prop-types
-  const TestDocumentComponent = ({ service, isAmp }) => (
-    <DocumentComponent
-      assetOrigins={assetOrigins}
-      app={{
-        css: '.css-7prgni-StyledLink{display:inline-block;}',
-        ids: ['7prgni-StyledLink'],
-        html: renderToString(
-          <>
-            <Helmet htmlAttributes={{ lang: 'test' }}>
-              <title>Test title</title>
-              <link
-                rel="canonical"
-                href="https://www.bbc.com/news/articles/c6v11qzyv8po"
-              />
-              <meta
-                name="viewport"
-                content="width=device-width, initial-scale=1, minimum-scale=1"
-              />
-              <script type="application/ld+json" />
-            </Helmet>
-            <h1>App!</h1>
-          </>,
-        ),
-      }}
-      data={{ ...data }}
-      helmet={Helmet.renderStatic()}
-      legacyScripts={legacyScripts}
-      modernScripts={modernScripts}
-      service={service}
-      isAmp={isAmp}
-      links={links}
-    />
-  );
+  function TestDocumentComponent({ service, isAmp }) {
+    return (
+      <DocumentComponent
+        assetOrigins={assetOrigins}
+        app={{
+          css: '.css-7prgni-StyledLink{display:inline-block;}',
+          ids: ['7prgni-StyledLink'],
+          html: renderToString(
+            <>
+              <Helmet htmlAttributes={{ lang: 'test' }}>
+                <title>Test title</title>
+                <link
+                  rel="canonical"
+                  href="https://www.bbc.com/news/articles/c6v11qzyv8po"
+                />
+                <meta
+                  name="viewport"
+                  content="width=device-width, initial-scale=1, minimum-scale=1"
+                />
+                <script type="application/ld+json" />
+              </Helmet>
+              <h1>App!</h1>
+            </>,
+          ),
+        }}
+        data={{ ...data }}
+        helmet={Helmet.renderStatic()}
+        legacyScripts={legacyScripts}
+        modernScripts={modernScripts}
+        service={service}
+        isAmp={isAmp}
+        links={links}
+      />
+    );
+  }
 
   it('should render correctly', () => {
     const dom = new JSDOM(
