@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { bool, string, number, oneOfType } from 'prop-types';
+import moment from 'moment';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
+import formatDuration from '#app/lib/utilities/formatDuration';
 import path from 'ramda/src/path';
 import Promo from '#components/Promo';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
@@ -22,7 +24,10 @@ const CurationPromo = ({
   const videoTranslation = path(['media', 'video'], translations);
   const durationTranslation = path(['media', 'duration'], translations);
 
-  console.log('___________media duration', mediaDuration);
+  const duration = moment.duration(mediaDuration, 'seconds');
+  const separator = ',';
+  const durationString = formatDuration({ duration, separator });
+
   return (
     <Promo>
       <Promo.Image src={imageUrl} alt={imageAlt} lazyLoad={lazy}>
@@ -36,7 +41,11 @@ const CurationPromo = ({
                 (type === 'video' && `${videoTranslation},`)}
             </VisuallyHiddenText>
             {title}
-            <VisuallyHiddenText>{`, ${durationTranslation}`}</VisuallyHiddenText>
+            <VisuallyHiddenText>
+              {!mediaDuration
+                ? `, ${durationTranslation}`
+                : `, ${durationTranslation} ${durationString}`}
+            </VisuallyHiddenText>
           </span>
         </Promo.A>
       </Promo.Heading>
