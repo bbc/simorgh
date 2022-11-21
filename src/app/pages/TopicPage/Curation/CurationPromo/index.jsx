@@ -37,10 +37,10 @@ const CurationPromo = ({
       <Promo.Heading as={`h${headingLevel}`}>
         {type !== 'article' ? (
           <Promo.A href={link} aria-labelledby={id}>
-            <span id={id}>
+            <span id={id} role="text">
               <VisuallyHiddenText>
-                {(type === 'audio' && `${audioTranslation},`) ||
-                  (type === 'video' && `${videoTranslation},`)}
+                {(type === 'audio' && `${audioTranslation}, `) ||
+                  (type === 'video' && `${videoTranslation}, `)}
               </VisuallyHiddenText>
               {title}
               <VisuallyHiddenText>
