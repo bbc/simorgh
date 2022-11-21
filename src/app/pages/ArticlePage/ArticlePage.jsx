@@ -141,26 +141,9 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const bylineBlock = blocks.find(block => block.type === 'byline');
   const bylineContribBlocks = pathOr([], ['model', 'blocks'], bylineBlock);
 
-  const {
-    authorName,
-    jobRole,
-    authorTopicUrl,
-    twitterLink,
-    authorImage,
-    location,
-  } = bylineExtractor(bylineContribBlocks);
+  const bylineLinkedData = bylineExtractor(bylineContribBlocks);
 
-  const hasByline = !!authorName && !!jobRole;
-
-  const bylineLinkedData = hasByline
-    ? {
-        authorName,
-        authorTopicUrl,
-        twitterLink,
-        authorImage,
-        location,
-      }
-    : null;
+  const hasByline = !!bylineLinkedData;
 
   const componentsToRender = {
     visuallyHiddenHeadline,

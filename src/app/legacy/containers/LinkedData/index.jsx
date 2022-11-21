@@ -105,10 +105,10 @@ const LinkedData = ({
     alternateName: lang,
   };
 
+  const hasByline = !!bylineLinkedData;
+
   const { authorName, authorTopicUrl, twitterLink, authorImage, location } =
     bylineLinkedData || {};
-
-  const hasByline = !!authorName;
 
   const sameAs = [authorTopicUrl, twitterLink].filter(Boolean);
 

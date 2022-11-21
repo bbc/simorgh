@@ -19,6 +19,10 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
   const { translations, dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
 
+  const bylineValues = bylineExtractor(blocks);
+
+  if (!bylineValues) return null;
+
   const {
     authorName,
     jobRole,
@@ -27,9 +31,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
     authorImage,
     location,
     authorTopicUrl,
-  } = bylineExtractor(blocks);
-
-  if (!(authorName && jobRole)) return null;
+  } = bylineValues;
 
   const authorTranslated = pathOr('Author', ['byline', 'author'], translations);
   const articleInformationTranslated = pathOr(
