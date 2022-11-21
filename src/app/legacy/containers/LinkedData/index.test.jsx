@@ -112,7 +112,7 @@ describe('LinkedData', () => {
   shouldMatchSnapshot(
     'should correctly render linked data for articles with byline',
     <Context>
-      <LinkedData {...propsForArticle, ...b} />
+      <LinkedData {...propsForArticle} />
     </Context>,
   );
 
