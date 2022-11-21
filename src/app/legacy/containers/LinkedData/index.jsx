@@ -183,6 +183,15 @@ LinkedData.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   entities: arrayOf(object),
   imageLocator: string,
+  bylineLinkedData: shape({
+    authorName: string,
+    jobRole: string,
+    twitterText: string,
+    twitterLink: string,
+    authorImage: string,
+    location: string,
+    authorTopicUrl: string,
+  }),
 };
 
 LinkedData.defaultProps = {
@@ -194,6 +203,7 @@ LinkedData.defaultProps = {
   aboutTags: undefined,
   entities: [],
   imageLocator: undefined,
+  bylineLinkedData: undefined,
 };
 
 export default LinkedData;
