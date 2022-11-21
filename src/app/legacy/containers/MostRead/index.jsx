@@ -49,7 +49,6 @@ const MostReadContainer = ({
   return (
     <Canonical
       initialData={initialData}
-      endpoint={endpoint}
       wrapper={wrapper}
       columnLayout={columnLayout}
       size={size}

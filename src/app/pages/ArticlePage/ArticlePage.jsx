@@ -134,6 +134,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
   const topics = path(['metadata', 'topics'], pageData);
+  const mostRead = pathOr([], ['secondaryColumn', 'mostRead'], pageData);
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
   const startsWithHeading = propEq('type', 'headline')(blocks[0] || {});
   const hasByline = blocks.find(block => block.type === 'byline');
@@ -266,6 +267,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       <MostReadContainer
         mostReadEndpointOverride={mostReadEndpointOverride}
         wrapper={MostReadWrapper}
+        initialData={mostRead}
       />
     </Wrapper>
   );
