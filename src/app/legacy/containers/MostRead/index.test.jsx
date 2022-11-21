@@ -24,6 +24,7 @@ const MostReadWithContext = ({
   mostReadToggle,
   serverRenderOnAmp,
   pageType = FRONT_PAGE,
+  initialData,
 }) => (
   <ToggleContext.Provider
     value={{
@@ -42,7 +43,10 @@ const MostReadWithContext = ({
       variant={variant}
     >
       <ServiceContextProvider service={service} variant={variant}>
-        <MostReadContainer serverRenderOnAmp={serverRenderOnAmp} />
+        <MostReadContainer
+          serverRenderOnAmp={serverRenderOnAmp}
+          initialData={initialData}
+        />
       </ServiceContextProvider>
     </RequestContextProvider>
   </ToggleContext.Provider>
@@ -148,6 +152,7 @@ describe('MostReadContainerCanonical Assertion', () => {
               isAmp={isAmp}
               variant={variant}
               serverRenderOnAmp={serverRenderOnAmp}
+              initialData={dataResponse}
             />,
           ).container;
         });
