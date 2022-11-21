@@ -39,6 +39,7 @@ describe('LinkedData', () => {
       },
       { '@type': 'Person', name: 'Duchess of Sussex' },
     ],
+    bylineLinkedData: undefined,
   };
 
   const propsForRadio = {
@@ -109,6 +110,13 @@ describe('LinkedData', () => {
   );
 
   shouldMatchSnapshot(
+    'should correctly render linked data for articles with byline',
+    <Context>
+      <LinkedData {...propsForArticle, ...b} />
+    </Context>,
+  );
+
+  shouldMatchSnapshot(
     'should correctly render linked data for radio pages',
     <Context>
       <LinkedData {...propsForRadio} />
@@ -163,4 +171,27 @@ describe('LinkedData', () => {
       </Context>,
     );
   });
+  describe('bylineLinkedData', () => {
+    const bylineLinkedData = {
+      authorName: 'John',
+      jobRole: 'Journalist',
+      twitterText: 'BBC News',
+      twitterLink: 'https://twitter.com/BBCNews',
+      authorImage: 'https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg',
+      location: 'London',
+      authorTopicUrl: 'https://www.bbc.co.uk/news/topics/cg2gmrxlde0t',
+    };
+
+    const articleProps = assocPath(['bylineLinkedData'], bylineLinkedData, propsForArticle);
+    it('should default to provided byline data', () => {
+      expect(LinkedData.defaultProps.bylineLinkedData).toBe(bylineLinkedData);
+    });
+
+    shouldMatchSnapshot(
+      'should change author contents and locationCreated when byline is present',
+      <Context>
+        <LinkedData {...articleProps} />
+      </Context>,
+    );
+  })
 });
