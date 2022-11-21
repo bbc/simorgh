@@ -10,6 +10,7 @@ import handleEmptyParagraphBlocks from '../handleEmptyParagraphBlocks';
 import handleBylineBlocks from '../handleBylineBlocks';
 import handlePromoData from '../handlePromoData';
 import addMpuBlock from './addMpuBlock';
+import bffFetch from './bffFetch';
 
 import {
   augmentWithTimestamp,
@@ -73,7 +74,14 @@ const fetcher = ({ path, pageType, service, variant }) =>
     fetchSecondaryColumn({ service, variant }),
   ]);
 
-export default async ({ path, pageType, service, variant }) => {
+export default async ({ getAgent, path, pageType, service, variant }) => {
+  const BFF_FETCH_ALLOWLIST = ['kyrgyz'];
+  const isBffFetch = BFF_FETCH_ALLOWLIST.includes(service);
+
+  if (isBffFetch) {
+    return bffFetch({ getAgent, path, pageType, service, variant });
+  }
+
   try {
     const [{ json, status }, secondaryColumn] = await fetcher({
       path,
