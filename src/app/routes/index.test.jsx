@@ -239,6 +239,28 @@ it('should route to and render an article page', async () => {
   ).toBeInTheDocument();
 });
 
+it('should route to and render a Sport Discipline article page', async () => {
+  const pathname = '/judo/articles/cj80n66ddnko';
+  fetchMock.mock(`http://localhost${pathname}.json`, articlePageJson);
+
+  const { getInitialData, pageType } = getMatchingRoute(pathname);
+  const { pageData } = await getInitialData({
+    path: pathname,
+    pageType,
+  });
+  await renderRouter({
+    pathname,
+    pageData,
+    pageType,
+    service: 'sport',
+  });
+  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = "Great Britain's Lucy Renshall won gold at the Baku Grand Slam by defeating Mongolia's Gankhaich Bold in the final.";
+
+  expect(
+    await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+  ).toBeInTheDocument();
+});
+
 it('should route to and render a front page', async () => {
   const pathname = '/pidgin';
   fetchMock.mock(`http://localhost${pathname}.json`, frontPageJson);

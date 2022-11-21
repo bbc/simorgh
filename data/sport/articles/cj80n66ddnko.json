@@ -1,0 +1,692 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:cj80n66ddnko",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cj80n66ddnko",
+      "canonicalUrl": "https://www.bbc.com/sport/judo/articles/cj80n66ddnko"
+    },
+    "type": "article",
+    "createdBy": "Sport",
+    "language": "en-gb",
+    "lastUpdated": 1662454567165,
+    "firstPublished": 1661165030455,
+    "lastPublished": 1661165030455,
+    "timestamp": 1661165030455,
+    "options": {},
+    "analyticsLabels": {
+      "ldp_tags": "Judo~Baku",
+      "page": "sport.judo.articles.cj80n66ddnko.page",
+      "ldp_ids": "654f550c-0c2d-2341-a8f5-66e3a9ba28ba~99f3bbff-ff87-4cc4-a43f-67c60fc9d76e",
+      "contentId": "urn:bbc:optimo:asset:cj80n66ddnko",
+      "producer": "Sport"
+    },
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Sport",
+      "locator": "urn:bbc:optimo:asset:cj80n66ddnko",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+          "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/654f550c-0c2d-2341-a8f5-66e3a9ba28ba#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+          "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/99f3bbff-ff87-4cc4-a43f-67c60fc9d76e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+          "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion": "1.4.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "assetType": [
+          {
+            "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+            "type": "assetType"
+          }
+        ],
+        "primaryMediaType": [
+          {
+            "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+            "type": "primaryMediaType"
+          }
+        ],
+        "infoClass": [
+          {
+            "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+            "type": "infoClass"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingLabel": "Report",
+            "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+            "thingType": [
+              "tagging:TagConcept",
+              "tagging:Format"
+            ],
+            "thingSameAs": [],
+            "thingEnglishLabel": "Report",
+            "thingPreferredLabel": "Report",
+            "thingLabelLanguage": "en-gb",
+            "type": "formats"
+          }
+        ],
+        "editorialSensitivity": [
+          {
+            "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+            "type": "editorialSensitivity"
+          }
+        ],
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/654f550c-0c2d-2341-a8f5-66e3a9ba28ba#id",
+            "thingLabel": "Judo",
+            "thingUri": "http://www.bbc.co.uk/things/654f550c-0c2d-2341-a8f5-66e3a9ba28ba#id",
+            "thingId": "654f550c-0c2d-2341-a8f5-66e3a9ba28ba",
+            "thingType": [
+              "core:Thing",
+              "sport:SportsDiscipline",
+              "tagging:Genre",
+              "tagging:AmbiguousTerm",
+              "tagging:TagConcept"
+            ],
+            "thingSameAs": [],
+            "thingEnglishLabel": "Judo",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/99f3bbff-ff87-4cc4-a43f-67c60fc9d76e#id",
+            "thingLabel": "Baku",
+            "thingUri": "http://www.bbc.co.uk/things/99f3bbff-ff87-4cc4-a43f-67c60fc9d76e#id",
+            "thingId": "99f3bbff-ff87-4cc4-a43f-67c60fc9d76e",
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Place",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://sws.geonames.org/587084/"
+            ],
+            "thingEnglishLabel": "Baku",
+            "type": "about"
+          }
+        ]
+      }
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Judo",
+          "thingUri": "http://www.bbc.co.uk/things/654f550c-0c2d-2341-a8f5-66e3a9ba28ba#id",
+          "thingId": "654f550c-0c2d-2341-a8f5-66e3a9ba28ba",
+          "thingType": [
+            "core:Thing",
+            "sport:SportsDiscipline",
+            "tagging:Genre",
+            "tagging:AmbiguousTerm",
+            "tagging:TagConcept"
+          ],
+          "thingSameAs": [],
+          "thingEnglishLabel": "Judo",
+          "thingLabelLanguage": "en-gb",
+          "thingPreferredLabel": "Judo"
+        },
+        {
+          "thingLabel": "Baku",
+          "thingUri": "http://www.bbc.co.uk/things/99f3bbff-ff87-4cc4-a43f-67c60fc9d76e#id",
+          "thingId": "99f3bbff-ff87-4cc4-a43f-67c60fc9d76e",
+          "thingType": [
+            "tagging:TagConcept",
+            "core:Place",
+            "core:Thing"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/587084/"
+          ],
+          "thingEnglishLabel": "Baku",
+          "thingLabelLanguage": "en-gb",
+          "thingPreferredLabel": "Baku"
+        }
+      ]
+    },
+    "version": "v1.4.5",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "social",
+      "renditions",
+      "aresOEmbed"
+    ],
+    "suitableForSyndication": true,
+    "readTime": 1,
+    "consumableAsSFV": false,
+    "allowAdvertising": true
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "GB’s Renshall wins gold in Baku",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "GB’s Renshall wins gold in Baku",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Lucy Renshall picked up Silver at the Paris Grand Slam in October.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Lucy Renshall picked up Silver at the Paris Grand Slam in October.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "British judoka Lucy Renshall with her silver medal in October",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "British judoka Lucy Renshall with her silver medal in October",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "a999/test/27017af0-2206-11ed-8687-87a75c66c4be.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Great Britain's Lucy Renshall won gold at the Baku Grand Slam by defeating Mongolia's Gankhaich Bold in the final.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Great Britain's Lucy Renshall won gold at the Baku Grand Slam by defeating Mongolia's Gankhaich Bold in the final.",
+                        "attributes": [
+                          "bold"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "social",
+          "model": {
+            "source": "https://twitter.com/BBCSport/status/1567048705102041091",
+            "providerName": "Twitter",
+            "blocks": [
+              {
+                "type": "renditions",
+                "model": {
+                  "locator": "urn:bbc:optimo:social:4a6cec66-038e-442d-bdd5-404bfcc20290",
+                  "blocks": [
+                    {
+                      "type": "aresOEmbed",
+                      "model": {
+                        "oembed": {
+                          "version": "1.0",
+                          "author_name": "BBC Sport",
+                          "author_url": "https://twitter.com/BBCSport",
+                          "provider_name": "Twitter",
+                          "provider_url": "https://twitter.com",
+                          "url": "https://twitter.com/BBCSport/status/1567048705102041091",
+                          "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Rafa Nadal: &quot;I need to fix things, life, then I don&#39;t know when I&#39;m going to come back.&quot;<br><br>More 🔽 <a href=\"https://twitter.com/hashtag/BBCTennis?src=hash&amp;ref_src=twsrc%5Etfw\">#BBCTennis</a></p>&mdash; BBC Sport (@BBCSport) <a href=\"https://twitter.com/BBCSport/status/1567048705102041091?ref_src=twsrc%5Etfw\">September 6, 2022</a></blockquote>\n",
+                          "width": 550
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Renshall held Bold down for 20 seconds to win the -63kg fight and earn her second Grand Slam gold of the year.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Renshall held Bold down for 20 seconds to win the -63kg fight and earn her second Grand Slam gold of the year.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "The 25-year-old, who received a bye in the opening round, beat Australia's Katharina Haecker in the semi-final.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "The 25-year-old, who received a bye in the opening round, beat Australia's Katharina Haecker in the semi-final.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Team-mate Kelly Petersen-Pollard, 22, picked up her first Grand Slam medal, beating Germany's Julie Hoelterhoff to win bronze in the -70kg division.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Team-mate Kelly Petersen-Pollard, 22, picked up her first Grand Slam medal, beating Germany's Julie Hoelterhoff to win bronze in the -70kg division.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "On Friday, 2020 Olympic bronze medallist Chelsie Giles won silver in the women's -52kg category.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "On Friday, 2020 Olympic bronze medallist Chelsie Giles won silver in the women's -52kg category.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cj80n66ddnko",
+      "canonicalUrl": "https://www.bbc.com/sport/judo/articles/cj80n66ddnko"
+    },
+    "timestamp": 1661165030455,
+    "suitableForSyndication": true,
+    "language": "en-gb",
+    "headlines": {
+      "seoHeadline": "Lucy Renshall: British judoka wins gold at Baku Grand Slam",
+      "promoHeadline": {
+        "blocks": [
+          {
+            "type": "text",
+            "model": {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "model": {
+                    "text": "GB’s Renshall wins gold in Baku",
+                    "blocks": [
+                      {
+                        "type": "fragment",
+                        "model": {
+                          "text": "GB’s Renshall wins gold in Baku",
+                          "attributes": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "images": {
+      "defaultPromoImage": {
+        "blocks": [
+          {
+            "type": "caption",
+            "model": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Lucy Renshall picked up Silver at the Paris Grand Slam in October.",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Lucy Renshall picked up Silver at the Paris Grand Slam in October.",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "altText",
+            "model": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "British judoka Lucy Renshall with her silver medal in October",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "British judoka Lucy Renshall with her silver medal in October",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "rawImage",
+            "model": {
+              "width": 624,
+              "height": 351,
+              "locator": "a999/test/27017af0-2206-11ed-8687-87a75c66c4be.jpg",
+              "originCode": "cpsdevpb",
+              "copyrightHolder": "Getty Images",
+              "suitableForSyndication": true
+            }
+          }
+        ]
+      }
+    },
+    "summary": {
+      "blocks": [
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Great Britain’s Lucy Renshall wins gold at the Baku Grand Slam after defeating Mongolia’s Gankhaich Bold in the final.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Great Britain’s Lucy Renshall wins gold at the Baku Grand Slam after defeating Mongolia’s Gankhaich Bold in the final.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Sport",
+      "locator": "urn:bbc:optimo:asset:cj80n66ddnko",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+          "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/654f550c-0c2d-2341-a8f5-66e3a9ba28ba#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+          "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/99f3bbff-ff87-4cc4-a43f-67c60fc9d76e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+          "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion": "1.4.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "assetType": [
+          {
+            "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+            "type": "assetType"
+          }
+        ],
+        "primaryMediaType": [
+          {
+            "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+            "type": "primaryMediaType"
+          }
+        ],
+        "infoClass": [
+          {
+            "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+            "type": "infoClass"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingLabel": "Report",
+            "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+            "thingType": [
+              "tagging:TagConcept",
+              "tagging:Format"
+            ],
+            "thingSameAs": [],
+            "thingEnglishLabel": "Report",
+            "thingPreferredLabel": "Report",
+            "thingLabelLanguage": "en-gb",
+            "type": "formats"
+          }
+        ],
+        "editorialSensitivity": [
+          {
+            "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+            "type": "editorialSensitivity"
+          }
+        ],
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/654f550c-0c2d-2341-a8f5-66e3a9ba28ba#id",
+            "thingLabel": "Judo",
+            "thingUri": "http://www.bbc.co.uk/things/654f550c-0c2d-2341-a8f5-66e3a9ba28ba#id",
+            "thingId": "654f550c-0c2d-2341-a8f5-66e3a9ba28ba",
+            "thingType": [
+              "core:Thing",
+              "sport:SportsDiscipline",
+              "tagging:Genre",
+              "tagging:AmbiguousTerm",
+              "tagging:TagConcept"
+            ],
+            "thingSameAs": [],
+            "thingEnglishLabel": "Judo",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/99f3bbff-ff87-4cc4-a43f-67c60fc9d76e#id",
+            "thingLabel": "Baku",
+            "thingUri": "http://www.bbc.co.uk/things/99f3bbff-ff87-4cc4-a43f-67c60fc9d76e#id",
+            "thingId": "99f3bbff-ff87-4cc4-a43f-67c60fc9d76e",
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Place",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://sws.geonames.org/587084/"
+            ],
+            "thingEnglishLabel": "Baku",
+            "type": "about"
+          }
+        ]
+      }
+    },
+    "id": "urn:bbc:ares::article:cj80n66ddnko",
+    "type": "optimo"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Sport",
+      "uri": "/sport",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
