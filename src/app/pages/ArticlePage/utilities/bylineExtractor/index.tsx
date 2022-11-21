@@ -33,6 +33,11 @@ const bylineExtractor = (blocks: any[]) => {
 
   const authorName = pathOrZeroIndexModelBlocks(2, 'text', authorBlock);
   const jobRole = pathOrZeroIndexModelBlocks(2, 'text', jobRoleBlock);
+
+  if (!authorName || !jobRole) {
+    return null;
+  }
+
   const twitterText = pathOrZeroIndexModelBlocks(2, 'text', twitterBlock);
   const twitterLink = pathOrZeroIndexModelBlocks(3, 'locator', twitterBlock);
   const location = pathOrZeroIndexModelBlocks(2, 'text', locationBlock);
