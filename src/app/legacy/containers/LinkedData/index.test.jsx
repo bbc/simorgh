@@ -182,7 +182,11 @@ describe('LinkedData', () => {
       authorTopicUrl: 'https://www.bbc.co.uk/news/topics/cg2gmrxlde0t',
     };
 
-    const articleProps = assocPath(['bylineLinkedData'], bylineLinkedData, propsForArticle);
+    const articleProps = assocPath(
+      ['bylineLinkedData'],
+      bylineLinkedData,
+      propsForArticle,
+    );
     it('should default to provided byline data', () => {
       expect(LinkedData.defaultProps.bylineLinkedData).toBe(bylineLinkedData);
     });
@@ -193,5 +197,5 @@ describe('LinkedData', () => {
         <LinkedData {...articleProps} />
       </Context>,
     );
-  })
+  });
 });
