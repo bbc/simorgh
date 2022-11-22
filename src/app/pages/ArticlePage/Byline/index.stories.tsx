@@ -8,7 +8,7 @@ import {
   bylineWithLinkAndLocation,
   bylineWithNonPngPhoto,
   bylineWithPngPhoto,
-} from './fixture';
+} from '../fixtureData';
 import Byline from '.';
 import { withServicesKnob } from '../../../legacy/psammead/psammead-storybook-helpers/src';
 import ThemeProvider from '../../../components/ThemeProvider';
