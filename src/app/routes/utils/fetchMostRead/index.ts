@@ -32,7 +32,7 @@ const fetchMostRead = async ({ service, variant }: Props) => {
     return response.json();
   };
 
-  const handleError = (e: unknown) => {
+  const handleError = (e: any) => {
     const error = e && e.toString();
     logger.error(MOST_READ_FETCH_ERROR, { error });
   };
@@ -41,7 +41,7 @@ const fetchMostRead = async ({ service, variant }: Props) => {
     const response = await fetch(url);
 
     return handleResponse(response);
-  } catch (e: unknown) {
+  } catch (e: any) {
     return handleError(e);
   }
 };
