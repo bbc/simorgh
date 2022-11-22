@@ -1,5 +1,6 @@
 import React, { useContext, Fragment } from 'react';
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { node, string } from 'prop-types';
 import {
@@ -60,11 +61,12 @@ const MostReadWrapper = ({ children }) => (
   </IdxMostReadSection>
 );
 
-const renderMostRead = mostReadEndpointOverride => (
+const renderMostRead = ({ mostReadEndpointOverride, mostReadData }) => (
   <MostReadContainer
     mostReadEndpointOverride={mostReadEndpointOverride}
     columnLayout="twoColumn"
     wrapper={MostReadWrapper}
+    initialData={mostReadData}
   />
 );
 
@@ -87,6 +89,7 @@ const IdxPage = ({
   const radioScheduleOnIdxPage = path(['onIdxPage'], radioSchedule);
   const mostReadOnIdxPage = path(['onIdxPage'], mostRead);
   const radioScheduleIdxPosition = path(['idxPagePosition'], radioSchedule);
+  const mostReadData = pathOr([], ['secondaryColumn', 'mostRead'], pageData);
 
   return (
     <>
@@ -120,7 +123,8 @@ const IdxPage = ({
               <IndexPageSection group={group} sectionNumber={index} />
             </Fragment>
           ))}
-          {mostReadOnIdxPage && renderMostRead(mostReadEndpointOverride)}
+          {mostReadOnIdxPage &&
+            renderMostRead({ mostReadEndpointOverride, mostReadData })}
         </IndexPageContainer>
       </main>
     </>

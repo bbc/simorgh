@@ -11,6 +11,8 @@ import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
 import { INDEX_PAGE } from '#app/routes/utils/pageTypes';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
+import fetchMostRead from '../../utils/fetchMostRead';
+
 const transformJson = pipe(
   filterUnknownContentTypes,
   filterEmptyGroupItems,
@@ -41,6 +43,7 @@ export default async ({ path, service, variant, pageType }) => {
   try {
     const pageHasRadioSchedule = await hasRadioSchedule(service, variant);
     const pageDataPromise = fetchPageData({ path, pageType });
+    const mostReadData = await fetchMostRead({ service, variant });
 
     const { json, status } = pageHasRadioSchedule
       ? await withRadioSchedule({
@@ -54,7 +57,12 @@ export default async ({ path, service, variant, pageType }) => {
 
     return {
       status,
-      pageData: transformJson(json),
+      pageData: {
+        ...transformJson(json),
+        secondaryColumn: {
+          mostRead: mostReadData,
+        },
+      },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
     return { error: message, status };

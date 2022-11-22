@@ -22,10 +22,16 @@ describe('IdxPage - Persian', () => {
     fetchMock.mock(mostReadEndpoint, persianMostReadData);
     fetchMock.mock(radioScheduleEndpoint, dariRadioScheduleData);
 
+    const pageData = {
+      ...persianAfghanistanIdxData,
+      ...dariRadioScheduleData,
+      secondaryColumn: {
+        mostRead: persianMostReadData,
+      },
+    };
+
     await act(async () => {
-      container = render(
-        <IdxPageWithContext pageData={persianAfghanistanIdxData} />,
-      ).container;
+      container = render(<IdxPageWithContext pageData={pageData} />).container;
     });
   });
 

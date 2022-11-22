@@ -215,11 +215,16 @@ it('should render a news article correctly', async () => {
 });
 
 it('should render a rtl article (persian) with most read correctly', async () => {
-  fetch.mockResponse(JSON.stringify(persianMostReadData));
+  const pageData = {
+    ...articleDataPersian,
+    secondaryColumn: {
+      mostRead: persianMostReadData,
+    },
+  };
 
   const { container } = render(
     <Context service="persian">
-      <ArticlePage pageData={articleDataPersian} />
+      <ArticlePage pageData={pageData} />
     </Context>,
   );
 
@@ -232,11 +237,16 @@ it('should render a rtl article (persian) with most read correctly', async () =>
 });
 
 it('should render a ltr article (pidgin) with most read correctly', async () => {
-  fetch.mockResponse(JSON.stringify(pidginMostReadData));
+  const pageData = {
+    ...articleDataPidgin,
+    secondaryColumn: {
+      mostRead: pidginMostReadData,
+    },
+  };
 
   const { container } = render(
     <Context service="pidgin">
-      <ArticlePage pageData={articleDataPidgin} />
+      <ArticlePage pageData={pageData} />
     </Context>,
   );
 

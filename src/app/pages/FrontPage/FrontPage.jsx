@@ -1,6 +1,7 @@
 import React, { Fragment, useContext } from 'react';
 import { string, node } from 'prop-types';
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import findIndex from 'ramda/src/findIndex';
 import styled from '@emotion/styled';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
@@ -46,11 +47,12 @@ const MostReadWrapper = ({ children }) => (
   </FrontPageMostReadSection>
 );
 
-const renderMostRead = mostReadEndpointOverride => (
+const renderMostRead = ({ mostReadEndpointOverride, mostReadData }) => (
   <MostReadContainer
     mostReadEndpointOverride={mostReadEndpointOverride}
     columnLayout="twoColumn"
     wrapper={MostReadWrapper}
+    initialData={mostReadData}
   />
 );
 
@@ -70,6 +72,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const seoTitle = path(['promo', 'name'], pageData);
   const radioScheduleData = path(['radioScheduleData'], pageData);
   const radioSchedulePosition = path(['radioSchedulePosition'], pageData);
+  const mostReadData = pathOr([], ['secondaryColumn', 'mostRead'], pageData);
 
   const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
 
@@ -110,7 +113,8 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
         <IndexPageContainer>
           {groups.map((group, index) => (
             <Fragment key={group.title}>
-              {group.type === 'useful-links' && renderMostRead()}
+              {group.type === 'useful-links' &&
+                renderMostRead({ mostReadData })}
               {radioScheduleData &&
                 radioSchedulePosition === group.semanticGroupName && (
                   <StyledRadioScheduleContainer
@@ -121,7 +125,8 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
               {group.type === 'top-stories' && <MPUContainer />}
             </Fragment>
           ))}
-          {!hasUsefulLinks && renderMostRead(mostReadEndpointOverride)}
+          {!hasUsefulLinks &&
+            renderMostRead({ mostReadEndpointOverride, mostReadData })}
         </IndexPageContainer>
       </main>
     </>

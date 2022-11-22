@@ -9,6 +9,8 @@ import addIdsToGroups from '#app/routes/utils/sharedDataTransformers/addIdsToGro
 import filterGroupsWithoutStraplines from '#app/routes/utils/sharedDataTransformers/filterGroupsWithoutStraplines';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
+import fetchMostRead from '../../utils/fetchMostRead';
+
 const transformJson = pipe(
   filterUnknownContentTypes,
   filterEmptyGroupItems,
@@ -20,9 +22,16 @@ const transformJson = pipe(
 const getRadioScheduleToggle = path(['frontPageRadioSchedule', 'enabled']);
 const getRadioSchedulePosition = path(['frontPageRadioSchedule', 'value']);
 
-export default async ({ path: pathname, service, pageType, toggles }) => {
+export default async ({
+  path: pathname,
+  service,
+  variant,
+  pageType,
+  toggles,
+}) => {
   try {
     const pageDataPromise = fetchPageData({ path: pathname, pageType });
+    const mostReadData = await fetchMostRead({ service, variant });
     const radioScheduleIsEnabled = getRadioScheduleToggle(toggles);
     const radioSchedulePosition = getRadioSchedulePosition(toggles);
 
@@ -40,6 +49,9 @@ export default async ({ path: pathname, service, pageType, toggles }) => {
       pageData: {
         ...transformJson(json),
         radioSchedulePosition,
+        secondaryColumn: {
+          mostRead: mostReadData,
+        },
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {

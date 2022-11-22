@@ -146,10 +146,17 @@ describe('Front Page', () => {
         JSON.stringify(pidginMostReadData),
       );
 
+      const frontPageData = {
+        ...pageData,
+        secondaryColumn: {
+          mostRead: pidginMostReadData,
+        },
+      };
+
       let container;
       await act(async () => {
         container = render(
-          <FrontPageWithContext pageData={pageData} />,
+          <FrontPageWithContext pageData={frontPageData} />,
         ).container;
       });
 
@@ -183,10 +190,17 @@ describe('Front Page', () => {
         service: 'pidgin',
       });
 
+      const frontPageData = {
+        ...pageData,
+        secondaryColumn: {
+          mostRead: pidginMostReadData,
+        },
+      };
+
       let container;
       await act(async () => {
         container = render(
-          <FrontPageWithContext pageData={pageData} />,
+          <FrontPageWithContext pageData={frontPageData} />,
         ).container;
       });
 
