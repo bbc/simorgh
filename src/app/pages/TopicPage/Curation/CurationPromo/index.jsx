@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { bool, string, number, oneOfType } from 'prop-types';
 import moment from 'moment';
+import path from 'ramda/src/path';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import formatDuration from '#app/lib/utilities/formatDuration';
-import path from 'ramda/src/path';
 import Promo from '#components/Promo';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 
@@ -25,10 +25,11 @@ const CurationPromo = ({
   const videoTranslation = path(['media', 'video'], translations);
   const photoGalleryTranslation = path(['media', 'photogallery'], translations);
   const durationTranslation = path(['media', 'duration'], translations);
-
   const duration = moment.duration(mediaDuration, 'seconds');
   const separator = ',';
-  const durationString = formatDuration({ duration, separator });
+
+  const formattedDuration = formatDuration({ duration, separator });
+  const durationString = `${durationTranslation}, ${formattedDuration}`;
 
   return (
     <Promo>
@@ -47,12 +48,8 @@ const CurationPromo = ({
                   (type === 'photogallery' && `${photoGalleryTranslation}, `)}
               </VisuallyHiddenText>
               {title}
-              {type !== 'photogallery' && (
-                <VisuallyHiddenText>
-                  {!mediaDuration
-                    ? `, ${durationTranslation}`
-                    : `, ${durationTranslation} ${durationString}`}
-                </VisuallyHiddenText>
+              {type !== 'photogallery' && mediaDuration && (
+                <VisuallyHiddenText>{durationString}</VisuallyHiddenText>
               )}
             </span>
           </Promo.A>

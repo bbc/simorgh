@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { arrayOf, oneOf, shape, string, number } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
@@ -44,6 +44,7 @@ const Curation = ({
   const createID = titleText => {
     return titleText.replaceAll(' ', '-');
   };
+
   const isFirstCuration = position === 0;
   const SubheadingComponent = isFirstCuration ? VisuallyHiddenText : Subheading;
   const id = createID(title || topStoriesTitle);
