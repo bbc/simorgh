@@ -187,8 +187,8 @@ describe('LinkedData', () => {
       bylineLinkedData,
       propsForArticle,
     );
-    it('should default to provided byline data', () => {
-      expect(LinkedData.defaultProps.bylineLinkedData).toBe(bylineLinkedData);
+    it('should default to undefined when no byline data is passed', () => {
+      expect(LinkedData.defaultProps.bylineLinkedData).toBe(undefined);
     });
 
     shouldMatchSnapshot(
