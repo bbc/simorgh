@@ -23,6 +23,7 @@ const CurationPromo = ({
 
   const audioTranslation = path(['media', 'audio'], translations);
   const videoTranslation = path(['media', 'video'], translations);
+  const photoGalleryTranslation = path(['media', 'photogallery'], translations);
   const durationTranslation = path(['media', 'duration'], translations);
 
   const duration = moment.duration(mediaDuration, 'seconds');
@@ -32,7 +33,9 @@ const CurationPromo = ({
   return (
     <Promo>
       <Promo.Image src={imageUrl} alt={imageAlt} lazyLoad={lazy}>
-        <Promo.MediaIcon type={type}>{mediaDuration}</Promo.MediaIcon>
+        <Promo.MediaIcon type={type}>
+          {type === 'audio' || type === 'video' ? mediaDuration : ''}
+        </Promo.MediaIcon>
       </Promo.Image>
       <Promo.Heading as={`h${headingLevel}`}>
         {type !== 'article' ? (
@@ -40,14 +43,17 @@ const CurationPromo = ({
             <span id={id} role="text">
               <VisuallyHiddenText>
                 {(type === 'audio' && `${audioTranslation}, `) ||
-                  (type === 'video' && `${videoTranslation}, `)}
+                  (type === 'video' && `${videoTranslation}, `) ||
+                  (type === 'photogallery' && `${photoGalleryTranslation}, `)}
               </VisuallyHiddenText>
               {title}
-              <VisuallyHiddenText>
-                {!mediaDuration
-                  ? `, ${durationTranslation}`
-                  : `, ${durationTranslation} ${durationString}`}
-              </VisuallyHiddenText>
+              {type !== 'photogallery' && (
+                <VisuallyHiddenText>
+                  {!mediaDuration
+                    ? `, ${durationTranslation}`
+                    : `, ${durationTranslation} ${durationString}`}
+                </VisuallyHiddenText>
+              )}
             </span>
           </Promo.A>
         ) : (
