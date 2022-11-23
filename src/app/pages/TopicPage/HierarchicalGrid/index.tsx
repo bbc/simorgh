@@ -63,6 +63,7 @@ const HiearchicalGrid = ({ promos, headingLevel }: Promos) => {
         const separator = ',';
         const formattedDuration = formatDuration({ duration, separator });
         const durationString = `${durationTranslation}, ${formattedDuration}`;
+
         return (
           <li
             key={promo.id}
@@ -91,7 +92,7 @@ const HiearchicalGrid = ({ promos, headingLevel }: Promos) => {
                 {promo.type !== 'article' ? (
                   <Promo.A href={promo.link} aria-labelledby={promo.id}>
                     <span id={promo.id} role="text">
-                      <VisuallyHiddenText>
+                      <VisuallyHiddenText data-testid="visually-hidden-text">
                         {(promo.type === 'audio' && `${audioTranslation}, `) ||
                           (promo.type === 'video' && `${videoTranslation}, `) ||
                           (promo.type === 'photogallery' &&
