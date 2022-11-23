@@ -331,8 +331,8 @@ export const service: DefaultServiceConfig = {
         url: '/nepali',
       },
       {
-        title: 'कोरोनाभाइरस',
-        url: '/nepali/news-51941128',
+        title: 'नेपाल निर्वाचन २०७९',
+        url: '/nepali/topics/cp2d78r6qppt',
       },
       {
         title: 'पछिल्लो कार्यक्रम',
