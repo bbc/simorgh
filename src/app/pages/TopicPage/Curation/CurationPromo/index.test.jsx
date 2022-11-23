@@ -9,7 +9,7 @@ import TopicPromo from '.';
 jest.mock('../../../../components/ThemeProvider');
 
 // eslint-disable-next-line react/prop-types
-const Fixture = ({ lazy, type = 'article' }) => (
+const Fixture = ({ lazy, type = 'article', duration }) => (
   <TopicPromo
     lazy={lazy}
     title="Promo title"
@@ -18,10 +18,20 @@ const Fixture = ({ lazy, type = 'article' }) => (
     imageAlt="Campesino indígena peruano."
     link="https://www.bbc.com/mundo/noticias-america-latina-60742314"
     type={type}
+    duration={duration}
   />
 );
 
 describe('Topic Curations Promo', () => {
+  it('should use formatted duration when a valid duration is provided', () => {
+    const container = render(
+      <Fixture lazy={false} duration={123} type="video" />,
+    );
+
+    const durationString = 'Duration, 2,03';
+
+    expect(container.getByText(durationString)).toBeInTheDocument();
+  });
   describe('Lazy loading', () => {
     it('should not lazy load when lazy is falsey', () => {
       render(<Fixture lazy={false} />);
@@ -46,16 +56,20 @@ describe('Topic Curations Promo', () => {
 
   describe('a11y', () => {
     it('should display title with no visually hidden text when type is article', () => {
-      const { getByText, queryByTestId } = render(<Fixture lazy={false} />);
+      const container = render(<Fixture lazy={false} />);
 
-      expect(queryByTestId('visually-hidden-text')).not.toBeInTheDocument();
-      expect(getByText('Promo title')).toBeInTheDocument();
+      expect(
+        container.queryByTestId('visually-hidden-text'),
+      ).not.toBeInTheDocument();
+      expect(container.getByText('Promo title')).toBeInTheDocument();
     });
 
     it('should use visually hidden text when type is media i.e video, audio and photogallery', () => {
       const container = render(<Fixture lazy={false} type="video" />);
 
-      expect(container.getByTestId('visually-hidden-text')).toBeInTheDocument();
+      expect(
+        container.queryByTestId('visually-hidden-text'),
+      ).toBeInTheDocument();
       expect(container.getByText('Promo title')).toBeInTheDocument();
     });
   });

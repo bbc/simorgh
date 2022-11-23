@@ -26,6 +26,7 @@ const CurationPromo = ({
   const photoGalleryTranslation = path(['media', 'photogallery'], translations);
   const durationTranslation = path(['media', 'duration'], translations);
   const duration = moment.duration(mediaDuration, 'seconds');
+
   const separator = ',';
 
   const formattedDuration = formatDuration({ duration, separator });
@@ -35,7 +36,9 @@ const CurationPromo = ({
     <Promo>
       <Promo.Image src={imageUrl} alt={imageAlt} lazyLoad={lazy}>
         <Promo.MediaIcon type={type}>
-          {type === 'audio' || type === 'video' ? mediaDuration : ''}
+          {type === 'audio' || type === 'video' || mediaDuration > 0
+            ? mediaDuration
+            : ''}
         </Promo.MediaIcon>
       </Promo.Image>
       <Promo.Heading as={`h${headingLevel}`}>
