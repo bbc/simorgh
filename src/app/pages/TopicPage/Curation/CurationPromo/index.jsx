@@ -42,7 +42,7 @@ const CurationPromo = ({
         {type !== 'article' ? (
           <Promo.A href={link} aria-labelledby={id}>
             <span id={id} role="text">
-              <VisuallyHiddenText>
+              <VisuallyHiddenText data-testid="visually-hidden-text">
                 {(type === 'audio' && `${audioTranslation}, `) ||
                   (type === 'video' && `${videoTranslation}, `) ||
                   (type === 'photogallery' && `${photoGalleryTranslation}, `)}

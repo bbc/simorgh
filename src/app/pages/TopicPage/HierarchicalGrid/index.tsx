@@ -90,7 +90,7 @@ const HiearchicalGrid = ({ promos, headingLevel }: Promos) => {
               >
                 {promo.type !== 'article' ? (
                   <Promo.A href={promo.link} aria-labelledby={promo.id}>
-                    <span id={promo.id}>
+                    <span id={promo.id} role="text">
                       <VisuallyHiddenText>
                         {(promo.type === 'audio' && `${audioTranslation}, `) ||
                           (promo.type === 'video' && `${videoTranslation}, `) ||

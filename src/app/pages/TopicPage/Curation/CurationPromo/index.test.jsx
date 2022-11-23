@@ -9,7 +9,7 @@ import TopicPromo from '.';
 jest.mock('../../../../components/ThemeProvider');
 
 // eslint-disable-next-line react/prop-types
-const Fixture = ({ lazy }) => (
+const Fixture = ({ lazy, type = 'article' }) => (
   <TopicPromo
     lazy={lazy}
     title="Promo title"
@@ -17,6 +17,7 @@ const Fixture = ({ lazy }) => (
     imageUrl="https://ichef.bbci.co.uk/news/240/cpsprodpb/17CDB/production/_123699479_indigena.jpg"
     imageAlt="Campesino indígena peruano."
     link="https://www.bbc.com/mundo/noticias-america-latina-60742314"
+    type={type}
   />
 );
 
@@ -40,6 +41,22 @@ describe('Topic Curations Promo', () => {
         .getAttribute('loading');
 
       expect(loadingAttribute).toBe('lazy');
+    });
+  });
+
+  describe('a11y', () => {
+    it('should display title with no visually hidden text when type is article', () => {
+      const { getByText, queryByTestId } = render(<Fixture lazy={false} />);
+
+      expect(queryByTestId('visually-hidden-text')).not.toBeInTheDocument();
+      expect(getByText('Promo title')).toBeInTheDocument();
+    });
+
+    it('should use visually hidden text when type is media i.e video, audio and photogallery', () => {
+      const container = render(<Fixture lazy={false} type="video" />);
+
+      expect(container.getByTestId('visually-hidden-text')).toBeInTheDocument();
+      expect(container.getByText('Promo title')).toBeInTheDocument();
     });
   });
 });
