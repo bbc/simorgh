@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/aria-role */
 import React, { useContext } from 'react';
 import { bool, string, number, oneOfType } from 'prop-types';
 import moment from 'moment';
@@ -36,7 +37,8 @@ const CurationPromo = ({
     <Promo>
       <Promo.Image src={imageUrl} alt={imageAlt} lazyLoad={lazy}>
         <Promo.MediaIcon type={type}>
-          {type === 'audio' || type === 'video' || mediaDuration > 0
+          {mediaDuration &&
+          (type === 'video' || type === 'audio' || mediaDuration > 0)
             ? mediaDuration
             : ''}
         </Promo.MediaIcon>

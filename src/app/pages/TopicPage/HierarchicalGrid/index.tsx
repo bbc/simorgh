@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/aria-role */
 /** @jsx jsx */
 import { useContext } from 'react';
 import { css, jsx, Theme } from '@emotion/react';
@@ -79,6 +80,12 @@ const HiearchicalGrid = ({ promos, headingLevel }: Promos) => {
                 loading="lazy"
               >
                 <Promo.MediaIcon type={promo.type}>
+                  {promo.duration &&
+                  (promo.type === 'video' ||
+                    promo.type === 'audio' ||
+                    promo.duration > 0)
+                    ? promo.duration
+                    : ''}
                   {promo.duration}
                 </Promo.MediaIcon>
               </Promo.Image>
