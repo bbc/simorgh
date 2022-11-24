@@ -86,7 +86,6 @@ const HiearchicalGrid = ({ promos, headingLevel }: Promos) => {
                     promo.duration > 0)
                     ? promo.duration
                     : ''}
-                  {promo.duration}
                 </Promo.MediaIcon>
               </Promo.Image>
               <Promo.Heading

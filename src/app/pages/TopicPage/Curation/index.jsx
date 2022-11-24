@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { arrayOf, oneOf, shape, string, number } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
