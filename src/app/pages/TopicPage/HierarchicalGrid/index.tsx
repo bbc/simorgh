@@ -65,6 +65,10 @@ const HiearchicalGrid = ({ promos, headingLevel }: Promos) => {
         const formattedDuration = formatDuration({ duration, separator });
         const durationString = `${durationTranslation}, ${formattedDuration}`;
 
+        const showDuration =
+          promo.duration && ['video', 'audio'].includes(promo.type);
+        const isMedia = ['video', 'audio', 'photogallery'].includes(promo.type);
+
         return (
           <li
             key={promo.id}
@@ -80,12 +84,7 @@ const HiearchicalGrid = ({ promos, headingLevel }: Promos) => {
                 loading="lazy"
               >
                 <Promo.MediaIcon type={promo.type}>
-                  {promo.duration &&
-                  (promo.type === 'video' ||
-                    promo.type === 'audio' ||
-                    promo.duration > 0)
-                    ? promo.duration
-                    : ''}
+                  {showDuration ? promo.duration : ''}
                 </Promo.MediaIcon>
               </Promo.Image>
               <Promo.Heading
@@ -95,7 +94,7 @@ const HiearchicalGrid = ({ promos, headingLevel }: Promos) => {
                   ...(i === 0 && theme.fontSizes.paragon),
                 })}
               >
-                {promo.type !== 'article' ? (
+                {isMedia ? (
                   <Promo.A href={promo.link} aria-labelledby={promo.id}>
                     <span id={promo.id} role="text">
                       <VisuallyHiddenText data-testid="visually-hidden-text">
@@ -105,7 +104,7 @@ const HiearchicalGrid = ({ promos, headingLevel }: Promos) => {
                             `${photoGalleryTranslation}, `)}
                       </VisuallyHiddenText>
                       {promo.title}
-                      {promo.type !== 'photogallery' && promo.duration && (
+                      {showDuration && (
                         <VisuallyHiddenText>
                           {durationString}
                         </VisuallyHiddenText>

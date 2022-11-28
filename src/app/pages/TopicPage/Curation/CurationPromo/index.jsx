@@ -33,18 +33,18 @@ const CurationPromo = ({
   const formattedDuration = formatDuration({ duration, separator });
   const durationString = `${durationTranslation}, ${formattedDuration}`;
 
+  const showDuration = mediaDuration && ['video', 'audio'].includes(type);
+  const isMedia = ['video', 'audio', 'photogallery'].includes(type);
+
   return (
     <Promo>
       <Promo.Image src={imageUrl} alt={imageAlt} lazyLoad={lazy}>
         <Promo.MediaIcon type={type}>
-          {mediaDuration &&
-          (type === 'video' || type === 'audio' || mediaDuration > 0)
-            ? mediaDuration
-            : ''}
+          {showDuration ? mediaDuration : ''}
         </Promo.MediaIcon>
       </Promo.Image>
       <Promo.Heading as={`h${headingLevel}`}>
-        {type !== 'article' ? (
+        {isMedia ? (
           <Promo.A href={link} aria-labelledby={id}>
             <span id={id} role="text">
               <VisuallyHiddenText data-testid="visually-hidden-text">
@@ -53,7 +53,7 @@ const CurationPromo = ({
                   (type === 'photogallery' && `${photoGalleryTranslation}, `)}
               </VisuallyHiddenText>
               {title}
-              {type !== 'photogallery' && mediaDuration && (
+              {showDuration && (
                 <VisuallyHiddenText>{durationString}</VisuallyHiddenText>
               )}
             </span>
