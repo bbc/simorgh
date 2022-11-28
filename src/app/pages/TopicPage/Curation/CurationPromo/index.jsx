@@ -35,6 +35,10 @@ const CurationPromo = ({
 
   const showDuration = mediaDuration && ['video', 'audio'].includes(type);
   const isMedia = ['video', 'audio', 'photogallery'].includes(type);
+  const typeTranslated =
+    (type === 'audio' && `${audioTranslation}, `) ||
+    (type === 'video' && `${videoTranslation}, `) ||
+    (type === 'photogallery' && `${photoGalleryTranslation}, `);
 
   return (
     <Promo>
@@ -48,9 +52,7 @@ const CurationPromo = ({
           <Promo.A href={link} aria-labelledby={id}>
             <span id={id} role="text">
               <VisuallyHiddenText data-testid="visually-hidden-text">
-                {(type === 'audio' && `${audioTranslation}, `) ||
-                  (type === 'video' && `${videoTranslation}, `) ||
-                  (type === 'photogallery' && `${photoGalleryTranslation}, `)}
+                {typeTranslated}
               </VisuallyHiddenText>
               {title}
               {showDuration && (

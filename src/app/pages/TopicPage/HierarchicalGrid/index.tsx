@@ -68,6 +68,10 @@ const HiearchicalGrid = ({ promos, headingLevel }: Promos) => {
         const showDuration =
           promo.duration && ['video', 'audio'].includes(promo.type);
         const isMedia = ['video', 'audio', 'photogallery'].includes(promo.type);
+        const typeTranslated =
+          (promo.type === 'audio' && `${audioTranslation}, `) ||
+          (promo.type === 'video' && `${videoTranslation}, `) ||
+          (promo.type === 'photogallery' && `${photoGalleryTranslation}, `);
 
         return (
           <li
@@ -98,10 +102,7 @@ const HiearchicalGrid = ({ promos, headingLevel }: Promos) => {
                   <Promo.A href={promo.link} aria-labelledby={promo.id}>
                     <span id={promo.id} role="text">
                       <VisuallyHiddenText data-testid="visually-hidden-text">
-                        {(promo.type === 'audio' && `${audioTranslation}, `) ||
-                          (promo.type === 'video' && `${videoTranslation}, `) ||
-                          (promo.type === 'photogallery' &&
-                            `${photoGalleryTranslation}, `)}
+                        {typeTranslated}
                       </VisuallyHiddenText>
                       {promo.title}
                       {showDuration && (
