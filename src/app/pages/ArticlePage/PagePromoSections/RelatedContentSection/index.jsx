@@ -3,10 +3,12 @@ import { shape, arrayOf, string } from 'prop-types';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import pathOr from 'ramda/src/pathOr';
 import pathEq from 'ramda/src/pathEq';
+import path from 'ramda/src/path';
 import tail from 'ramda/src/tail';
 import slice from 'ramda/src/slice';
 import identity from 'ramda/src/identity';
 import { C_GREY_2 } from '#psammead/psammead-styles/src/colours';
+import useViewTracker from '#hooks/useViewTracker';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import {
   RelatedContentGrid,
@@ -17,7 +19,7 @@ import {
 import generatePromoId from '../generatePromoId';
 import RelatedContentItem from './RelatedContentItem';
 
-const renderRelatedContentList = (item, index) => {
+const renderRelatedContentList = (item, index, eventTrackingData, viewRef) => {
   const assetUri = pathOr(
     '',
     [
@@ -44,13 +46,26 @@ const renderRelatedContentList = (item, index) => {
 
   return (
     <StyledPromoItem key={ariaLabelledBy}>
-      <RelatedContentItem item={item} ariaLabelledBy={ariaLabelledBy} />
+      <RelatedContentItem
+        item={item}
+        ariaLabelledBy={ariaLabelledBy}
+        ref={viewRef}
+        eventTrackingData={eventTrackingData}
+      />
     </StyledPromoItem>
   );
 };
 
 const RelatedContentSection = ({ content }) => {
   const { translations, script, service } = useContext(ServiceContext);
+
+  const eventTrackingData = {
+    block: {
+      componentName: 'related-content',
+    },
+  };
+  const eventTrackingDataSend = path(['block'], eventTrackingData);
+  const viewRef = useViewTracker(eventTrackingDataSend);
 
   if (!pathEq(['type'], 'relatedContent', content)) return null;
 
@@ -120,11 +135,15 @@ const RelatedContentSection = ({ content }) => {
           <RelatedContentItem
             item={reducedStoryPromoItems[0]}
             ariaLabelledBy={ariaLabelledBy}
+            ref={viewRef}
+            eventTrackingData={eventTrackingData}
           />
         </SingleItemWrapper>
       ) : (
         <RelatedContentGrid>
-          {reducedStoryPromoItems.map(renderRelatedContentList)}
+          {reducedStoryPromoItems.map((item, index) =>
+            renderRelatedContentList(item, index, eventTrackingData, viewRef),
+          )}
         </RelatedContentGrid>
       )}
     </StyledRelatedContentSection>
