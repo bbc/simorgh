@@ -65,6 +65,7 @@ import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
 import Byline from './Byline';
+import getAuthorTwitterHandle from './getAuthorTwitterHandle';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from './PagePromoSections/RelatedContentSection';
 
@@ -137,6 +138,10 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
   const startsWithHeading = propEq('type', 'headline')(blocks[0] || {});
   const hasByline = blocks.find(block => block.type === 'byline');
+
+  const articleAuthorTwitterHandle = hasByline
+    ? getAuthorTwitterHandle(blocks)
+    : null;
 
   const componentsToRender = {
     visuallyHiddenHeadline,
@@ -219,6 +224,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         articleId={getArticleId(pageData)}
         title={headline}
         author={articleAuthor}
+        twitterHandle={articleAuthorTwitterHandle}
         firstPublished={firstPublished}
         lastPublished={lastPublished}
         section={getArticleSection(pageData)}
