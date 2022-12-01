@@ -13,7 +13,9 @@ Component health measures whether a component is in a good enough state to be sh
 ### Component Health
 
 Differently from other components, a version of the component health is already displayed in every storybook's documentation, and by default it will be displayed as follows:
-(add image)
+
+<img width="1024" alt="Screenshot 2022-12-01 at 11 40 56" src="https://user-images.githubusercontent.com/90621252/205078485-3bc1fc1f-bb72-4a33-8b83-c70aa034784e.png">
+
 
 Therefore all that needs to be done is to update the documentation status metadata that it is displaying with the correct url's and progression status. To do that you will first need to create a metadata.json file inside the component's folder you are creating. This should look like this:
 
@@ -59,7 +61,9 @@ export default {
 };
 ```
 
-This will result into storybook displaying: (add image)
+This will result into storybook displaying:
+
+<img width="1019" alt="Screenshot 2022-12-01 at 11 41 11" src="https://user-images.githubusercontent.com/90621252/205078611-5ee3c973-4bde-4ca0-a117-4ca911e08ebf.png">
 
 ### With written documentation
 
@@ -83,7 +87,8 @@ export default {
 ```
 
 And like this you have a storybook documentation page that looks as follows:
-(add image)
+
+<img width="1063" alt="Screenshot 2022-12-01 at 14 32 20" src="https://user-images.githubusercontent.com/90621252/205079307-2b4d7a89-99cc-4192-99c1-ed55d67a87b9.png">
 
 ## Implementation
 
