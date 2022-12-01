@@ -6,9 +6,6 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import pathEq from 'ramda/src/pathEq';
 import { C_GREY_2 } from '#psammead/psammead-styles/src/colours';
-import styled from '@emotion/styled';
-import Image from '#psammead/psammead-image/src';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { gridColumnsPrimary } from '#pages/ArticlePage/ArticlePageGrid';
@@ -26,14 +23,6 @@ export const getCustomTitle = path([
   'model',
   'text',
 ]);
-
-const StyledImage = styled(Image)`
-  object-fit: cover;
-  height: auto;
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    height: 12rem;
-  }
-`;
 
 // Optimo allows editorial to provide promo images of any aspect ratio
 // For rendering, we need images with a consistent aspect ratio
@@ -125,7 +114,6 @@ const ArticleRelatedContent = ({ content }) => {
       parentColumns={gridColumnsPrimary}
       content={storyPromoItems}
       sectionLabelBackground={C_GREY_2}
-      imageComponent={StyledImage}
     />
   );
 };

@@ -4,6 +4,7 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import * as viewTracking from '#hooks/useViewTracker';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
+import ThemeProvider from '../../../../components/ThemeProvider';
 import RelatedContentSection from '.';
 import {
   RelatedContentList,
@@ -11,13 +12,17 @@ import {
   RelatedContentCustomLabel,
 } from './fixture';
 
+jest.mock('../../../../components/ThemeProvider');
+
 // eslint-disable-next-line react/prop-types
 const RelatedContentSectionFixture = ({ fixtureData, service = 'mundo' }) => (
-  <ServiceContextProvider service={service}>
-    <ToggleContextProvider>
-      <RelatedContentSection content={fixtureData} />
-    </ToggleContextProvider>
-  </ServiceContextProvider>
+  <ThemeProvider service={service} variant="default">
+    <ServiceContextProvider service={service}>
+      <ToggleContextProvider>
+        <RelatedContentSection content={fixtureData} />
+      </ToggleContextProvider>
+    </ServiceContextProvider>
+  </ThemeProvider>
 );
 
 describe('Optimo Related Content Promo', () => {

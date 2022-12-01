@@ -5459,6 +5459,39 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   position: relative;
 }
 
+.emotion-227 {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+  background-color: #F2F2F2;
+  -webkit-background-position: center center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 60px 17px;
+  background-size: 60px 17px;
+}
+
+@media (min-width: 25rem) {
+  .emotion-227 {
+    -webkit-background-size: 77px 22px;
+    background-size: 77px 22px;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-227 {
+    -webkit-background-size: 93px 27px;
+    background-size: 93px 27px;
+  }
+}
+
+.emotion-228 {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 @media (min-width: 25rem) {
   .emotion-229 {
     position: absolute;
@@ -6332,17 +6365,29 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           class="emotion-225 emotion-226"
                         >
                           <div
-                            class="emotion-25 emotion-26"
-                            data-e2e="image-placeholder"
+                            class="emotion-227"
                             style="padding-bottom: 56.25%;"
                           >
-                            <div
-                              class="lazyload-wrapper "
-                            >
-                              <div
-                                class="lazyload-placeholder"
+                            <picture>
+                              <source
+                                sizes="(max-width: 1008px) 33vw, 321px"
+                                srcset="https://ichef.test.bbci.co.uk/news/70/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg.webp 70w, https://ichef.test.bbci.co.uk/news/95/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg.webp 95w, https://ichef.test.bbci.co.uk/news/144/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg.webp 144w, https://ichef.test.bbci.co.uk/news/183/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg.webp 183w, https://ichef.test.bbci.co.uk/news/240/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/660/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg.webp 660w"
+                                type="image/webp"
                               />
-                            </div>
+                              <source
+                                sizes="(max-width: 1008px) 33vw, 321px"
+                                srcset="https://ichef.test.bbci.co.uk/news/70/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg 70w, https://ichef.test.bbci.co.uk/news/95/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg 95w, https://ichef.test.bbci.co.uk/news/144/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg 144w, https://ichef.test.bbci.co.uk/news/183/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg 183w, https://ichef.test.bbci.co.uk/news/240/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg 320w, https://ichef.test.bbci.co.uk/news/660/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg 660w"
+                                type="image/jpeg"
+                              />
+                              <img
+                                alt="Keyframe #1"
+                                class="emotion-228"
+                                height="549"
+                                loading="lazy"
+                                src="https://ichef.test.bbci.co.uk/news/660/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg"
+                                width="976"
+                              />
+                            </picture>
                           </div>
                           <div
                             class="emotion-229 emotion-230"
@@ -9741,6 +9786,39 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   position: relative;
 }
 
+.emotion-441 {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+  background-color: #F2F2F2;
+  -webkit-background-position: center center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 60px 17px;
+  background-size: 60px 17px;
+}
+
+@media (min-width: 25rem) {
+  .emotion-441 {
+    -webkit-background-size: 77px 22px;
+    background-size: 77px 22px;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-441 {
+    -webkit-background-size: 93px 27px;
+    background-size: 93px 27px;
+  }
+}
+
+.emotion-442 {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 @media (min-width: 25rem) {
   .emotion-443 {
     position: absolute;
@@ -11261,17 +11339,29 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-439 emotion-440"
                         >
                           <div
-                            class="emotion-25 emotion-26"
-                            data-e2e="image-placeholder"
+                            class="emotion-441"
                             style="padding-bottom: 56.25%;"
                           >
-                            <div
-                              class="lazyload-wrapper "
-                            >
-                              <div
-                                class="lazyload-placeholder"
+                            <picture>
+                              <source
+                                sizes="(max-width: 1008px) 33vw, 321px"
+                                srcset="https://ichef.test.bbci.co.uk/news/70/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg.webp 70w, https://ichef.test.bbci.co.uk/news/95/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg.webp 95w, https://ichef.test.bbci.co.uk/news/144/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg.webp 144w, https://ichef.test.bbci.co.uk/news/183/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg.webp 183w, https://ichef.test.bbci.co.uk/news/240/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/660/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg.webp 660w"
+                                type="image/webp"
                               />
-                            </div>
+                              <source
+                                sizes="(max-width: 1008px) 33vw, 321px"
+                                srcset="https://ichef.test.bbci.co.uk/news/70/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg 70w, https://ichef.test.bbci.co.uk/news/95/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg 95w, https://ichef.test.bbci.co.uk/news/144/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg 144w, https://ichef.test.bbci.co.uk/news/183/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg 183w, https://ichef.test.bbci.co.uk/news/240/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg 320w, https://ichef.test.bbci.co.uk/news/660/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg 660w"
+                                type="image/jpeg"
+                              />
+                              <img
+                                alt="Azərbaycan Xalq Cümhuriyyətinin zabit və əsgərləri"
+                                class="emotion-442"
+                                height="549"
+                                loading="lazy"
+                                src="https://ichef.test.bbci.co.uk/news/660/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg"
+                                width="976"
+                              />
+                            </picture>
                           </div>
                           <div
                             class="emotion-443 emotion-444"
@@ -11322,17 +11412,29 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-439 emotion-440"
                         >
                           <div
-                            class="emotion-25 emotion-26"
-                            data-e2e="image-placeholder"
+                            class="emotion-441"
                             style="padding-bottom: 56.25%;"
                           >
-                            <div
-                              class="lazyload-wrapper "
-                            >
-                              <div
-                                class="lazyload-placeholder"
+                            <picture>
+                              <source
+                                sizes="(max-width: 1008px) 33vw, 321px"
+                                srcset="https://ichef.test.bbci.co.uk/news/70/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg.webp 70w, https://ichef.test.bbci.co.uk/news/95/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg.webp 95w, https://ichef.test.bbci.co.uk/news/144/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg.webp 144w, https://ichef.test.bbci.co.uk/news/183/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg.webp 183w, https://ichef.test.bbci.co.uk/news/240/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/660/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg.webp 660w"
+                                type="image/webp"
                               />
-                            </div>
+                              <source
+                                sizes="(max-width: 1008px) 33vw, 321px"
+                                srcset="https://ichef.test.bbci.co.uk/news/70/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg 70w, https://ichef.test.bbci.co.uk/news/95/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg 95w, https://ichef.test.bbci.co.uk/news/144/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg 144w, https://ichef.test.bbci.co.uk/news/183/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg 183w, https://ichef.test.bbci.co.uk/news/240/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg 320w, https://ichef.test.bbci.co.uk/news/660/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg 660w"
+                                type="image/jpeg"
+                              />
+                              <img
+                                alt="Əhməd Ağayevin şəkli"
+                                class="emotion-442"
+                                height="549"
+                                loading="lazy"
+                                src="https://ichef.test.bbci.co.uk/news/660/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg"
+                                width="976"
+                              />
+                            </picture>
                           </div>
                           <div
                             class="emotion-443 emotion-444"
@@ -11383,17 +11485,29 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-439 emotion-440"
                         >
                           <div
-                            class="emotion-25 emotion-26"
-                            data-e2e="image-placeholder"
+                            class="emotion-441"
                             style="padding-bottom: 56.25%;"
                           >
-                            <div
-                              class="lazyload-wrapper "
-                            >
-                              <div
-                                class="lazyload-placeholder"
+                            <picture>
+                              <source
+                                sizes="(max-width: 1008px) 33vw, 321px"
+                                srcset="https://ichef.test.bbci.co.uk/news/70/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg.webp 70w, https://ichef.test.bbci.co.uk/news/95/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg.webp 95w, https://ichef.test.bbci.co.uk/news/144/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg.webp 144w, https://ichef.test.bbci.co.uk/news/183/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg.webp 183w, https://ichef.test.bbci.co.uk/news/240/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/660/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg.webp 660w"
+                                type="image/webp"
                               />
-                            </div>
+                              <source
+                                sizes="(max-width: 1008px) 33vw, 321px"
+                                srcset="https://ichef.test.bbci.co.uk/news/70/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg 70w, https://ichef.test.bbci.co.uk/news/95/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg 95w, https://ichef.test.bbci.co.uk/news/144/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg 144w, https://ichef.test.bbci.co.uk/news/183/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg 183w, https://ichef.test.bbci.co.uk/news/240/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg 320w, https://ichef.test.bbci.co.uk/news/660/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg 660w"
+                                type="image/jpeg"
+                              />
+                              <img
+                                alt="Marneuli"
+                                class="emotion-442"
+                                height="549"
+                                loading="lazy"
+                                src="https://ichef.test.bbci.co.uk/news/660/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg"
+                                width="976"
+                              />
+                            </picture>
                           </div>
                           <div
                             class="emotion-443 emotion-444"
@@ -11444,17 +11558,29 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-439 emotion-440"
                         >
                           <div
-                            class="emotion-25 emotion-26"
-                            data-e2e="image-placeholder"
+                            class="emotion-441"
                             style="padding-bottom: 56.25%;"
                           >
-                            <div
-                              class="lazyload-wrapper "
-                            >
-                              <div
-                                class="lazyload-placeholder"
+                            <picture>
+                              <source
+                                sizes="(max-width: 1008px) 33vw, 321px"
+                                srcset="https://ichef.test.bbci.co.uk/news/70/cpsprodpb/1537C/production/_100780968_xoyski2.jpg.webp 70w, https://ichef.test.bbci.co.uk/news/95/cpsprodpb/1537C/production/_100780968_xoyski2.jpg.webp 95w, https://ichef.test.bbci.co.uk/news/144/cpsprodpb/1537C/production/_100780968_xoyski2.jpg.webp 144w, https://ichef.test.bbci.co.uk/news/183/cpsprodpb/1537C/production/_100780968_xoyski2.jpg.webp 183w, https://ichef.test.bbci.co.uk/news/240/cpsprodpb/1537C/production/_100780968_xoyski2.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/1537C/production/_100780968_xoyski2.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/660/cpsprodpb/1537C/production/_100780968_xoyski2.jpg.webp 660w"
+                                type="image/webp"
                               />
-                            </div>
+                              <source
+                                sizes="(max-width: 1008px) 33vw, 321px"
+                                srcset="https://ichef.test.bbci.co.uk/news/70/cpsprodpb/1537C/production/_100780968_xoyski2.jpg 70w, https://ichef.test.bbci.co.uk/news/95/cpsprodpb/1537C/production/_100780968_xoyski2.jpg 95w, https://ichef.test.bbci.co.uk/news/144/cpsprodpb/1537C/production/_100780968_xoyski2.jpg 144w, https://ichef.test.bbci.co.uk/news/183/cpsprodpb/1537C/production/_100780968_xoyski2.jpg 183w, https://ichef.test.bbci.co.uk/news/240/cpsprodpb/1537C/production/_100780968_xoyski2.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/1537C/production/_100780968_xoyski2.jpg 320w, https://ichef.test.bbci.co.uk/news/660/cpsprodpb/1537C/production/_100780968_xoyski2.jpg 660w"
+                                type="image/jpeg"
+                              />
+                              <img
+                                alt="Fətəli Xan Xoyski"
+                                class="emotion-442"
+                                height="549"
+                                loading="lazy"
+                                src="https://ichef.test.bbci.co.uk/news/660/cpsprodpb/1537C/production/_100780968_xoyski2.jpg"
+                                width="976"
+                              />
+                            </picture>
                           </div>
                           <div
                             class="emotion-443 emotion-444"
@@ -11505,17 +11631,29 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-439 emotion-440"
                         >
                           <div
-                            class="emotion-25 emotion-26"
-                            data-e2e="image-placeholder"
+                            class="emotion-441"
                             style="padding-bottom: 56.25%;"
                           >
-                            <div
-                              class="lazyload-wrapper "
-                            >
-                              <div
-                                class="lazyload-placeholder"
+                            <picture>
+                              <source
+                                sizes="(max-width: 1008px) 33vw, 321px"
+                                srcset="https://ichef.test.bbci.co.uk/news/70/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg.webp 70w, https://ichef.test.bbci.co.uk/news/95/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg.webp 95w, https://ichef.test.bbci.co.uk/news/144/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg.webp 144w, https://ichef.test.bbci.co.uk/news/183/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg.webp 183w, https://ichef.test.bbci.co.uk/news/240/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/660/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg.webp 660w"
+                                type="image/webp"
                               />
-                            </div>
+                              <source
+                                sizes="(max-width: 1008px) 33vw, 321px"
+                                srcset="https://ichef.test.bbci.co.uk/news/70/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg 70w, https://ichef.test.bbci.co.uk/news/95/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg 95w, https://ichef.test.bbci.co.uk/news/144/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg 144w, https://ichef.test.bbci.co.uk/news/183/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg 183w, https://ichef.test.bbci.co.uk/news/240/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg 320w, https://ichef.test.bbci.co.uk/news/660/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg 660w"
+                                type="image/jpeg"
+                              />
+                              <img
+                                alt="Bakı 1991"
+                                class="emotion-442"
+                                height="549"
+                                loading="lazy"
+                                src="https://ichef.test.bbci.co.uk/news/660/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg"
+                                width="976"
+                              />
+                            </picture>
                           </div>
                           <div
                             class="emotion-443 emotion-444"
@@ -11566,17 +11704,29 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-439 emotion-440"
                         >
                           <div
-                            class="emotion-25 emotion-26"
-                            data-e2e="image-placeholder"
+                            class="emotion-441"
                             style="padding-bottom: 56.25%;"
                           >
-                            <div
-                              class="lazyload-wrapper "
-                            >
-                              <div
-                                class="lazyload-placeholder"
+                            <picture>
+                              <source
+                                sizes="(max-width: 1008px) 33vw, 321px"
+                                srcset="https://ichef.test.bbci.co.uk/news/70/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg.webp 70w, https://ichef.test.bbci.co.uk/news/95/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg.webp 95w, https://ichef.test.bbci.co.uk/news/144/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg.webp 144w, https://ichef.test.bbci.co.uk/news/183/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg.webp 183w, https://ichef.test.bbci.co.uk/news/240/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/660/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg.webp 660w"
+                                type="image/webp"
                               />
-                            </div>
+                              <source
+                                sizes="(max-width: 1008px) 33vw, 321px"
+                                srcset="https://ichef.test.bbci.co.uk/news/70/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg 70w, https://ichef.test.bbci.co.uk/news/95/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg 95w, https://ichef.test.bbci.co.uk/news/144/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg 144w, https://ichef.test.bbci.co.uk/news/183/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg 183w, https://ichef.test.bbci.co.uk/news/240/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg 320w, https://ichef.test.bbci.co.uk/news/660/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg 660w"
+                                type="image/jpeg"
+                              />
+                              <img
+                                alt="sakin"
+                                class="emotion-442"
+                                height="576"
+                                loading="lazy"
+                                src="https://ichef.test.bbci.co.uk/news/660/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg"
+                                width="1024"
+                              />
+                            </picture>
                           </div>
                           <div
                             class="emotion-443 emotion-444"
@@ -11630,17 +11780,29 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-439 emotion-440"
                         >
                           <div
-                            class="emotion-25 emotion-26"
-                            data-e2e="image-placeholder"
+                            class="emotion-441"
                             style="padding-bottom: 56.25%;"
                           >
-                            <div
-                              class="lazyload-wrapper "
-                            >
-                              <div
-                                class="lazyload-placeholder"
+                            <picture>
+                              <source
+                                sizes="(max-width: 1008px) 33vw, 321px"
+                                srcset="https://ichef.test.bbci.co.uk/news/70/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg.webp 70w, https://ichef.test.bbci.co.uk/news/95/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg.webp 95w, https://ichef.test.bbci.co.uk/news/144/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg.webp 144w, https://ichef.test.bbci.co.uk/news/183/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg.webp 183w, https://ichef.test.bbci.co.uk/news/240/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/660/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg.webp 660w"
+                                type="image/webp"
                               />
-                            </div>
+                              <source
+                                sizes="(max-width: 1008px) 33vw, 321px"
+                                srcset="https://ichef.test.bbci.co.uk/news/70/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg 70w, https://ichef.test.bbci.co.uk/news/95/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg 95w, https://ichef.test.bbci.co.uk/news/144/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg 144w, https://ichef.test.bbci.co.uk/news/183/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg 183w, https://ichef.test.bbci.co.uk/news/240/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg 320w, https://ichef.test.bbci.co.uk/news/660/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg 660w"
+                                type="image/jpeg"
+                              />
+                              <img
+                                alt="Bakı neft yataqları"
+                                class="emotion-442"
+                                height="549"
+                                loading="lazy"
+                                src="https://ichef.test.bbci.co.uk/news/660/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg"
+                                width="976"
+                              />
+                            </picture>
                           </div>
                           <div
                             class="emotion-443 emotion-444"
@@ -11691,17 +11853,29 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-439 emotion-440"
                         >
                           <div
-                            class="emotion-25 emotion-26"
-                            data-e2e="image-placeholder"
+                            class="emotion-441"
                             style="padding-bottom: 56.25%;"
                           >
-                            <div
-                              class="lazyload-wrapper "
-                            >
-                              <div
-                                class="lazyload-placeholder"
+                            <picture>
+                              <source
+                                sizes="(max-width: 1008px) 33vw, 321px"
+                                srcset="https://ichef.test.bbci.co.uk/news/70/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg.webp 70w, https://ichef.test.bbci.co.uk/news/95/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg.webp 95w, https://ichef.test.bbci.co.uk/news/144/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg.webp 144w, https://ichef.test.bbci.co.uk/news/183/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg.webp 183w, https://ichef.test.bbci.co.uk/news/240/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/660/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg.webp 660w"
+                                type="image/webp"
                               />
-                            </div>
+                              <source
+                                sizes="(max-width: 1008px) 33vw, 321px"
+                                srcset="https://ichef.test.bbci.co.uk/news/70/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg 70w, https://ichef.test.bbci.co.uk/news/95/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg 95w, https://ichef.test.bbci.co.uk/news/144/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg 144w, https://ichef.test.bbci.co.uk/news/183/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg 183w, https://ichef.test.bbci.co.uk/news/240/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg 320w, https://ichef.test.bbci.co.uk/news/660/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg 660w"
+                                type="image/jpeg"
+                              />
+                              <img
+                                alt="Zaqatala"
+                                class="emotion-442"
+                                height="549"
+                                loading="lazy"
+                                src="https://ichef.test.bbci.co.uk/news/660/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg"
+                                width="976"
+                              />
+                            </picture>
                           </div>
                           <div
                             class="emotion-443 emotion-444"
@@ -11752,17 +11926,29 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-439 emotion-440"
                         >
                           <div
-                            class="emotion-25 emotion-26"
-                            data-e2e="image-placeholder"
+                            class="emotion-441"
                             style="padding-bottom: 56.25%;"
                           >
-                            <div
-                              class="lazyload-wrapper "
-                            >
-                              <div
-                                class="lazyload-placeholder"
+                            <picture>
+                              <source
+                                sizes="(max-width: 1008px) 33vw, 321px"
+                                srcset="https://ichef.test.bbci.co.uk/news/70/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg.webp 70w, https://ichef.test.bbci.co.uk/news/95/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg.webp 95w, https://ichef.test.bbci.co.uk/news/144/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg.webp 144w, https://ichef.test.bbci.co.uk/news/183/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg.webp 183w, https://ichef.test.bbci.co.uk/news/240/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/660/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg.webp 660w"
+                                type="image/webp"
                               />
-                            </div>
+                              <source
+                                sizes="(max-width: 1008px) 33vw, 321px"
+                                srcset="https://ichef.test.bbci.co.uk/news/70/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg 70w, https://ichef.test.bbci.co.uk/news/95/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg 95w, https://ichef.test.bbci.co.uk/news/144/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg 144w, https://ichef.test.bbci.co.uk/news/183/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg 183w, https://ichef.test.bbci.co.uk/news/240/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg 320w, https://ichef.test.bbci.co.uk/news/660/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg 660w"
+                                type="image/jpeg"
+                              />
+                              <img
+                                alt="İran hərbçiləri, 1911-ci il Tehran"
+                                class="emotion-442"
+                                height="549"
+                                loading="lazy"
+                                src="https://ichef.test.bbci.co.uk/news/660/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg"
+                                width="976"
+                              />
+                            </picture>
                           </div>
                           <div
                             class="emotion-443 emotion-444"
