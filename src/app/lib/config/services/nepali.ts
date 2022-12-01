@@ -335,6 +335,10 @@ export const service: DefaultServiceConfig = {
         url: '/nepali/topics/cp2d78r6qppt',
       },
       {
+        title: 'विश्वकप फुटबल २०२२',
+        url: '/nepali/topics/c00r2x03gvkt',
+      },
+      {
         title: 'पछिल्लो कार्यक्रम',
         url: '/nepali/media-54029171',
       },
