@@ -1,6 +1,7 @@
 import { BFF_FETCH_ERROR } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
 import pipe from 'ramda/src/pipe';
+import filter from 'ramda/src/filter';
 import Url from 'url-parse';
 import { getUrlPath } from '#lib/utilities/urlParser';
 import fetchPageData from '../../utils/fetchPageData';
@@ -39,6 +40,14 @@ export default async ({ getAgent, service, path: pathname, variant, page }) => {
     const imageData = data.imageData || null;
 
     const scriptSwitchId = data.variantTopicId;
+    const formatCurations = curation => {
+      if (curation.position === 0) {
+        return true;
+      }
+      return !!curation.title;
+    };
+    // curation.position !== 0 && curation.title;
+    const formattedCurations = filter(formatCurations, data.curations);
 
     return {
       status,
@@ -46,7 +55,7 @@ export default async ({ getAgent, service, path: pathname, variant, page }) => {
         title: data.title,
         description: data.description,
         imageData,
-        curations: data.curations,
+        curations: formattedCurations,
         activePage: data.activePage || 1,
         pageCount: data.pageCount,
         scriptSwitchId,

@@ -1,5 +1,6 @@
 import assocPath from 'ramda/src/assocPath';
 import * as fetchPageData from '#app/routes/utils/fetchPageData';
+import hierarchicalFixture from '../../../../../data/mundo/topics/c1en6xwmpkvt.json';
 import getInitialData from '.';
 
 process.env.BFF_PATH = 'https://mock-bff-path';
@@ -212,5 +213,32 @@ describe('get initial data for topic', () => {
       agent,
       optHeaders,
     });
+  });
+
+  it('should remove curation object from curation list when no curation title exists', async () => {
+    fetch.mockResponse(JSON.stringify(hierarchicalFixture));
+    const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
+    const { pageData } = await getInitialData({
+      path: 'mundo/topics/54321.',
+      getAgent,
+      service: 'mundo',
+    });
+
+    const { curations } = pageData;
+
+    expect(fetchDataSpy).toHaveBeenCalledWith({
+      path: 'https://mock-bff-path/?id=54321&service=mundo',
+      agent,
+      optHeaders,
+    });
+
+    expect(curations.length).toEqual(3);
+    expect(curations[0].curationId).toEqual(
+      'urn:bbc:tipo:list:d0348c91-39f5-4224-91cf-6ca9f2812376',
+    );
+
+    expect(curations).not.toContain(
+      'urn:bbc:tipo:list:d0348c91-39f5-4224-91cf-6ca9f2812377',
+    );
   });
 });
