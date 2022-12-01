@@ -20,10 +20,9 @@ const styles = {
       padding: `1.25rem ${theme.spacings.DOUBLE}rem`,
     }),
 
-  date: (theme: Theme) =>
-    css({
-      lineHeight: theme.spacings.QUADRUPLE,
-    }),
+  date: {
+    alignSelf: 'flex-end',
+  },
 
   titleIcon: (theme: Theme) =>
     css({

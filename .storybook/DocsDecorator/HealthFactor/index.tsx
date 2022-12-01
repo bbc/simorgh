@@ -14,7 +14,7 @@ const HealthFactor = ({ metadata }: { metadata?: HealthFactorMetadata }) => {
   const uxSwarm = path(['swarm'], metadata);
   const acceptanceCriteria = path(['acceptanceCriteria'], metadata);
 
-  const alpha = path(['alpha'], metadata);
+  const isAlpha = path(['alpha'], metadata);
 
   const date = new Date(
     Date.parse(
@@ -63,20 +63,23 @@ const HealthFactor = ({ metadata }: { metadata?: HealthFactorMetadata }) => {
           <span aria-hidden css={styles.titleIcon}>
             {actionIcon}
           </span>
-          <Heading size="doublePica" level={2}>
+          <Text size="doublePica" fontVariant="sansBold" as="strong">
             {headline}
-          </Heading>
+          </Text>
         </div>
 
-        <time css={styles.date}>
-          <Text size="bodyCopy" fontVariant="sansRegular">
-            {`Last Updated ${formatDate}`}
-          </Text>
-        </time>
+        <Text
+          size="bodyCopy"
+          fontVariant="sansRegular"
+          css={styles.date}
+          as="time"
+        >
+          {`Last Updated ${formatDate}`}
+        </Text>
       </div>
 
       <div css={styles.documentationContainer}>
-        {alpha && (
+        {isAlpha && (
           <p>
             <Text size="bodyCopy" fontVariant="sansRegular">
               This component is tagged alpha and is not suitable for use on
