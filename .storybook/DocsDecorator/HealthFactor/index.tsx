@@ -17,16 +17,14 @@ const HealthFactor = ({ metadata }: { metadata?: HealthFactorMetadata }) => {
 
   const date = new Date(
     Date.parse(
-      `${path(['last_updated', 'day'], metadata)} ${path(
-        ['last_updated', 'month'],
+      `${path(['lastUpdated', 'day'], metadata)} ${path(
+        ['lastUpdated', 'month'],
         metadata,
-      )} ${path(['last_updated', 'year'], metadata)}`,
+      )} ${path(['lastUpdated', 'year'], metadata)}`,
     ),
   );
 
   const formatDate = moment(date).format('Do MMMM YYYY');
-
-  console.log(typeof formatDate);
 
   const getLabel = path(['reference', 'label']);
   const getUrl = path(['reference', 'url']);
@@ -69,7 +67,7 @@ const HealthFactor = ({ metadata }: { metadata?: HealthFactorMetadata }) => {
           </Text>
         </div>
 
-        {formatDate != 'Invalid date' && (
+        {formatDate !== 'Invalid date' && (
           <Text
             size="bodyCopy"
             fontVariant="sansRegular"

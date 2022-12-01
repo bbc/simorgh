@@ -131,7 +131,7 @@ export const allMissingDocs = {};
 
 export const withDate = {
   alpha: false,
-  last_updated: {
+  lastUpdated: {
     day: 1,
     month: 'December',
     year: 2022,

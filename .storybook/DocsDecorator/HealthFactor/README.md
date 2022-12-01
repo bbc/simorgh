@@ -21,7 +21,7 @@ Therefore all that needs to be done is to update the documentation status metada
 ```json
 {
   "alpha": true,
-  "last_updated": {
+  "lastUpdated": {
     "day": 1,
     "month": "December",
     "year": 2022
@@ -124,5 +124,18 @@ The context holds all the information that Storybook uses to create a story. Spe
 The main use of this component is to wrap the ComponentHealth with the ThemeProvider and the DocsContainer. The latter can be seen as a canvas that Storybook uses to display content in the docs tab of every story. We use this DocsContainer to display our ComponentHealth and README.md documentation.
 
 Furthermore, this component will process and pass the metadata and the children to the HealthFactor component which will finally display the component health for your story.
+
+Lastly, this file controls to which storybook folders the ComponentHealth should be applied:
+
+```javascript
+const kind = path(['kind'], context) as string;
+  const lowerCaseKind = kind.toLowerCase();
+  const isComponentDoc =
+    lowerCaseKind.includes('components/') ||
+    lowerCaseKind.includes('containers/') ||
+    lowerCaseKind.includes('new components/') ||
+    lowerCaseKind.includes('pages/') ||
+    lowerCaseKind.includes('topic/');
+```
 
 This is done for every story contained in the blobs described in '.storybook/main.js'.

@@ -7,9 +7,9 @@ interface HealthFactorItem {
 }
 
 export default interface HealthFactorMetadata {
-  alpha?: Boolean;
-  last_updated?: {
-    day?: Number;
+  alpha?: boolean;
+  lastUpdated?: {
+    day?: number;
     month?:
       | 'January'
       | 'February'
@@ -23,7 +23,7 @@ export default interface HealthFactorMetadata {
       | 'October'
       | 'November'
       | 'December';
-    year?: Number;
+    year?: number;
   };
   uxAccessibilityDoc: HealthFactorItem;
   acceptanceCriteria: HealthFactorItem;
