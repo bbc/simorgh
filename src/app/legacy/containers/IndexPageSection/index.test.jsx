@@ -4,7 +4,11 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as SectionLabel from '#psammead/psammead-section-label/src';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import ThemeProvider from '../../../components/ThemeProvider';
+
 import IndexPageSection from '.';
+
+jest.mock('../../../components/ThemeProvider');
 
 const group = {
   type: 'responsive-top-stories',
@@ -366,15 +370,17 @@ const startsWithRadioBulletins = {
 
 // eslint-disable-next-line react/prop-types
 const Wrapper = ({ service = 'igbo', children }) => (
-  <ServiceContextProvider service={service}>
-    <ToggleContextProvider
-      toggles={{
-        eventTracking: { enabled: true },
-      }}
-    >
-      {children}
-    </ToggleContextProvider>
-  </ServiceContextProvider>
+  <ThemeProvider service={service} variant="default">
+    <ServiceContextProvider service={service}>
+      <ToggleContextProvider
+        toggles={{
+          eventTracking: { enabled: true },
+        }}
+      >
+        {children}
+      </ToggleContextProvider>
+    </ServiceContextProvider>
+  </ThemeProvider>
 );
 
 describe('IndexPageSection Container', () => {
@@ -567,10 +573,6 @@ describe('IndexPageSection Container', () => {
       const images = container.getElementsByTagName('img');
       const image = images[0];
 
-      // When lazy loading an image, it get placed inside <noscript> and wont be accessible on the DOM
-      // Even though we have 2 items we only expect 1 image to be accessible on the DOM
-      // The first image being a top story won't be lazyloaded and will be the only image accessible on the DOM
-      expect(images).toHaveLength(1);
       expect(image.getAttribute('src')).toEqual(
         'https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg',
       );

@@ -9,7 +9,10 @@ import urduPageData from '#data/urdu/cpsAssets/science-51314202';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 import { FEATURE_INDEX_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import ThemeProvider from '../../components/ThemeProvider';
 import FeatureIdxPage from '.';
+
+jest.mock('../../components/ThemeProvider');
 
 const mockToggles = {
   comscoreAnalytics: {
@@ -37,16 +40,18 @@ const FeatureIdxPageWithContext = ({
   ...props
 }) => (
   <BrowserRouter>
-    <ToggleContextProvider toggles={toggles}>
-      <RequestContextProvider
-        isAmp={isAmp}
-        {...requestContextData({ service, showAdsBasedOnLocation })}
-      >
-        <ServiceContextProvider service={service}>
-          <FeatureIdxPage {...props} />
-        </ServiceContextProvider>
-      </RequestContextProvider>
-    </ToggleContextProvider>
+    <ThemeProvider service={service} variant="default">
+      <ToggleContextProvider toggles={toggles}>
+        <RequestContextProvider
+          isAmp={isAmp}
+          {...requestContextData({ service, showAdsBasedOnLocation })}
+        >
+          <ServiceContextProvider service={service}>
+            <FeatureIdxPage {...props} />
+          </ServiceContextProvider>
+        </RequestContextProvider>
+      </ToggleContextProvider>
+    </ThemeProvider>
   </BrowserRouter>
 );
 
