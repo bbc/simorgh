@@ -10,9 +10,20 @@ const styles = {
   titleContainer: (theme: Theme) =>
     css({
       display: 'flex',
+      flexGrow: 1,
+    }),
+
+  headerContainer: (theme: Theme) =>
+    css({
+      display: 'flex',
       flexWrap: 'wrap',
       backgroundColor: theme.palette.GREY_2,
       padding: `1.25rem ${theme.spacings.DOUBLE}rem`,
+    }),
+
+  date: (theme: Theme) =>
+    css({
+      lineHeight: theme.spacings.QUADRUPLE,
     }),
 
   titleIcon: (theme: Theme) =>
@@ -30,11 +41,16 @@ const styles = {
 
   recommendIcon: { color: '#0A7B0A' },
 
+  documentationContainer: (theme: Theme) =>
+    css({
+      margin: 0,
+      padding: `1.25rem ${theme.spacings.DOUBLE}rem`,
+    }),
+
   documentationList: (theme: Theme) =>
     css({
       listStyle: 'none',
-      margin: 0,
-      padding: `1.25rem ${theme.spacings.DOUBLE}rem`,
+      padding: 0,
     }),
 };
 
