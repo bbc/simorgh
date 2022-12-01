@@ -28,7 +28,7 @@ const styles = {
       color: theme.palette.SHADOW,
     }),
 
-  recommendIcon: (theme: Theme) => css({ color: '#0A7B0A' }),
+  recommendIcon: { color: '#0A7B0A' },
 
   documentationList: (theme: Theme) =>
     css({

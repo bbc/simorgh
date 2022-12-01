@@ -19,13 +19,12 @@ const styles = {
       color: `${theme.palette.SHADOW}`,
     }),
 
-  statusIconContainer: (theme: Theme) =>
-    css({
-      borderRadius: '100%',
-      width: '1.25rem',
-      height: '1.25rem',
-      padding: '0.25rem',
-    }),
+  statusIconContainer: {
+    borderRadius: '100%',
+    width: '1.25rem',
+    height: '1.25rem',
+    padding: '0.25rem',
+  },
 
   positive: (theme: Theme) =>
     css({ background: '#0A7B0A', color: `${theme.palette.WHITE}` }),
@@ -41,10 +40,9 @@ const styles = {
     marginLeft: '0',
   },
 
-  documentationLink: (theme: Theme) =>
-    css({
-      margin: '0.25rem',
-    }),
+  documentationLink: {
+    margin: '0.25rem',
+  },
 
   documentationType: {
     flexGrow: 1,

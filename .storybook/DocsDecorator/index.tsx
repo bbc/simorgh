@@ -1,8 +1,7 @@
 import React from 'react';
-import { DocsContainer, Title } from '@storybook/addon-docs';
+import { DocsContainer, Title, DocsContextProps } from '@storybook/addon-docs';
 import path from 'ramda/src/path';
 import ThemeProvider from '../../src/app/components/ThemeProvider';
-import { DocsContextProps } from '@storybook/addon-docs';
 import HealthFactor from './HealthFactor';
 import HealthFactorMetadata from './types';
 
@@ -33,6 +32,7 @@ const DocsDecorator = ({
     lowerCaseKind.includes('topic/');
 
   return (
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore: type children not assignable.
     <DocsContainer context={context}>
       {isComponentDoc && (

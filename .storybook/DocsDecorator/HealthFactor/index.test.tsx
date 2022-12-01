@@ -11,8 +11,13 @@ import {
   twoMissingDocs,
   allMissingDocs,
 } from './fixture';
+import HealthFactorMetadata from '../types';
 
-const HealthFactorFixture = ({ metadata }: { metadata?: any }) => (
+const HealthFactorFixture = ({
+  metadata,
+}: {
+  metadata?: HealthFactorMetadata;
+}) => (
   <ThemeProvider service="news" variant="default">
     <HealthFactor metadata={metadata} />
   </ThemeProvider>
@@ -31,7 +36,7 @@ describe('Storybook HealthFactor Title', () => {
 
   it('should render the correct title when metadata is missing', async () => {
     await act(async () => {
-      render(<HealthFactorFixture metadata={null} />);
+      render(<HealthFactorFixture />);
     });
 
     const title = screen.getByText('Component health is missing!');
@@ -93,7 +98,7 @@ describe('Storybook HealthFactor Svg', () => {
 
   it('should render the correct title Svg when health factor is missing', async () => {
     await act(async () => {
-      render(<HealthFactorFixture metadata={null} />);
+      render(<HealthFactorFixture />);
     });
 
     const titleSvg = screen.getByTestId('activity');

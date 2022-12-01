@@ -1,9 +1,9 @@
 import React from 'react';
+import count from 'ramda/src/count';
+import path from 'ramda/src/path';
 import Heading from '../../../src/app/components/Heading';
 import { Recommend, Warning, Activity } from './Icons/icons';
 import SingleDoc from './SingleDoc';
-import count from 'ramda/src/count';
-import path from 'ramda/src/path';
 import styles from './index.styles';
 import HealthFactorMetadata from '../types';
 
@@ -12,40 +12,40 @@ const HealthFactor = ({ metadata }: { metadata?: HealthFactorMetadata }) => {
   const uxSwarm = path(['swarm'], metadata);
   const acceptanceCriteria = path(['acceptanceCriteria'], metadata);
 
-  console.log('HERE');
-
   const getLabel = path(['reference', 'label']);
   const getUrl = path(['reference', 'url']);
   const getDone = path(['done']);
+
+  const actionTitles = [
+    'Good to show to the audience',
+    'One action outstanding',
+    'Two actions outstanding',
+    'Three actions outstanding',
+  ];
 
   const actionCount = count(
     x => typeof x === 'undefined' || !getDone(x),
     [uxAccessibility, uxSwarm, acceptanceCriteria],
   );
 
-  const wordNumbers = ['', 'One', 'Two', 'Three'];
-
   const headline = metadata
-    ? actionCount === 0
-      ? 'Good to show to the audience'
-      : actionCount === 1
-      ? `${wordNumbers[actionCount]} action outstanding`
-      : `${wordNumbers[actionCount]} actions outstanding`
+    ? actionTitles[actionCount]
     : 'Component health is missing!';
+
+  const hasIcon =
+    actionCount === 0 ? (
+      <Recommend css={styles.recommendIcon} />
+    ) : (
+      <Warning css={styles.warningIcon} />
+    );
+
+  const actionIcon = metadata ? hasIcon : <Activity css={styles.warningIcon} />;
 
   return (
     <aside css={styles.componentHealthContainer}>
       <div css={styles.titleContainer}>
-        <span aria-hidden={true} css={styles.titleIcon}>
-          {metadata ? (
-            actionCount === 0 ? (
-              <Recommend css={styles.recommendIcon} />
-            ) : (
-              <Warning css={styles.warningIcon} />
-            )
-          ) : (
-            <Activity css={styles.warningIcon} />
-          )}
+        <span aria-hidden css={styles.titleIcon}>
+          {actionIcon}
         </span>
         <Heading size="doublePica" level={2}>
           {headline}
@@ -54,7 +54,7 @@ const HealthFactor = ({ metadata }: { metadata?: HealthFactorMetadata }) => {
 
       <ul css={styles.documentationList}>
         <SingleDoc
-          label={'Screen reader UX'}
+          label="Screen reader UX"
           url={
             (getDone(uxAccessibility) as boolean)
               ? (getUrl(uxAccessibility) as string)
@@ -67,7 +67,7 @@ const HealthFactor = ({ metadata }: { metadata?: HealthFactorMetadata }) => {
           }
         />
         <SingleDoc
-          label={'Accessibility Acceptance Criteria'}
+          label="Accessibility Acceptance Criteria"
           url={
             (getDone(acceptanceCriteria) as boolean)
               ? (getUrl(acceptanceCriteria) as string)
@@ -80,7 +80,7 @@ const HealthFactor = ({ metadata }: { metadata?: HealthFactorMetadata }) => {
           }
         />
         <SingleDoc
-          label={'Accessibility Swarm'}
+          label="Accessibility Swarm"
           url={
             (getDone(uxSwarm) as boolean)
               ? (getUrl(uxSwarm) as string)

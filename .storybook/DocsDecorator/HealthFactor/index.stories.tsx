@@ -10,9 +10,9 @@ import metadata from './metadata.json';
 import md from './HealthFactor.md';
 
 // eslint-disable-next-line react/prop-types
-const HealthFactorComponent = ({ metadata }) => (
+const HealthFactorComponent = ({ metadataFixture }) => (
   <ThemeProvider service="news" variant="default">
-    <HealthFactor metadata={metadata} />
+    <HealthFactor metadata={metadataFixture} />
   </ThemeProvider>
 );
 
@@ -30,18 +30,18 @@ export default {
   },
 };
 
-export const HealthFactorWithCompleteDocs = props => (
-  <HealthFactorComponent metadata={allCompletedDocs} />
+export const HealthFactorWithCompleteDocs = () => (
+  <HealthFactorComponent metadataFixture={allCompletedDocs} />
 );
 
-export const HealthFactorWithUncompleteDocs = props => (
-  <HealthFactorComponent metadata={threeOutstandingActions} />
+export const HealthFactorWithUncompleteDocs = () => (
+  <HealthFactorComponent metadataFixture={threeOutstandingActions} />
 );
 
-export const HealthFactorWithMissingDocs = props => (
-  <HealthFactorComponent metadata={allMissingDocs} />
+export const HealthFactorWithMissingDocs = () => (
+  <HealthFactorComponent metadataFixture={allMissingDocs} />
 );
 
-export const MissingHealthFactor = props => (
-  <HealthFactorComponent metadata={null} />
+export const MissingHealthFactor = () => (
+  <HealthFactorComponent metadataFixture={null} />
 );

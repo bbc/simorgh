@@ -24,10 +24,10 @@ describe('Storybook SingleDoc', () => {
     await act(async () => {
       render(
         <SingleDocFixture
-          label={'This is the documentation title'}
-          status={true}
-          url={'https://documentation.com'}
-          urlLabel={'This is the link label'}
+          label="This is the documentation title"
+          status
+          url="https://documentation.com"
+          urlLabel="This is the link label"
         />,
       );
     });
@@ -40,10 +40,10 @@ describe('Storybook SingleDoc', () => {
     await act(async () => {
       render(
         <SingleDocFixture
-          label={'This is the documentation title'}
-          status={true}
-          url={'https://documentation.com'}
-          urlLabel={'This is the link label'}
+          label="This is the documentation title"
+          status
+          url="https://documentation.com"
+          urlLabel="This is the link label"
         />,
       );
     });
@@ -58,10 +58,10 @@ describe('Storybook SingleDoc', () => {
     await act(async () => {
       render(
         <SingleDocFixture
-          label={'This is the documentation title'}
-          status={true}
-          url={'https://documentation.com'}
-          urlLabel={'This is the link label'}
+          label="This is the documentation title"
+          status
+          url="https://documentation.com"
+          urlLabel="This is the link label"
         />,
       );
     });
@@ -74,10 +74,10 @@ describe('Storybook SingleDoc', () => {
     await act(async () => {
       render(
         <SingleDocFixture
-          label={'This is the documentation title'}
-          status={true}
-          url={'https://documentation.com'}
-          urlLabel={'This is the link label'}
+          label="This is the documentation title"
+          status
+          url="https://documentation.com"
+          urlLabel="This is the link label"
         />,
       );
     });
@@ -92,10 +92,9 @@ describe('Storybook SingleDoc', () => {
     await act(async () => {
       render(
         <SingleDocFixture
-          label={'This is the documentation title'}
-          status={false}
-          url={'https://documentation.com'}
-          urlLabel={'This is the link label'}
+          label="This is the documentation title"
+          url="https://documentation.com"
+          urlLabel="This is the link label"
         />,
       );
     });
@@ -110,9 +109,9 @@ describe('Storybook SingleDoc', () => {
     await act(async () => {
       render(
         <SingleDocFixture
-          label={'This is the documentation title'}
-          url={'https://documentation.com'}
-          urlLabel={'This is the link label'}
+          label="This is the documentation title"
+          url="https://documentation.com"
+          urlLabel="This is the link label"
         />,
       );
     });

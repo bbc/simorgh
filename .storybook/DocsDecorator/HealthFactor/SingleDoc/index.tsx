@@ -14,31 +14,23 @@ const SingleDoc = ({
   urlLabel: string;
   status?: boolean;
 }) => {
+  const iconStatusStyle = status ? styles.positive : styles.negative;
+  const hasIcon = status ? <Confirm /> : <Close />;
+  const statusIcon = typeof status === 'boolean' ? hasIcon : <Help />;
+
   return (
     <li css={styles.documentationContainer}>
       <div css={[styles.documentationContainer, styles.documentationType]}>
         <span
-          aria-hidden={true}
+          aria-hidden
           css={[
             styles.iconContainer,
             styles.statusIconContainer,
-            typeof status === 'boolean'
-              ? status
-                ? styles.positive
-                : styles.negative
-              : styles.missing,
+            typeof status === 'boolean' ? iconStatusStyle : styles.missing,
             styles.sidebarColumn,
           ]}
         >
-          {typeof status === 'boolean' ? (
-            status ? (
-              <Confirm />
-            ) : (
-              <Close />
-            )
-          ) : (
-            <Help />
-          )}
+          {statusIcon}
         </span>
 
         <Text
@@ -54,7 +46,7 @@ const SingleDoc = ({
           <Text css={styles.link} size="brevier" fontVariant="sansBold">
             {urlLabel}
             <span
-              aria-hidden={true}
+              aria-hidden
               css={[styles.iconContainer, styles.linkIconContainer]}
             >
               {status ? <ExternalLink /> : <Help />}
