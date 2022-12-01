@@ -20,24 +20,30 @@ Therefore all that needs to be done is to update the documentation status metada
 
 ```json
 {
+  "alpha": true,
+  "last_updated": {
+    "day": 1,
+    "month": "December",
+    "year": 2022
+  },
   "uxAccessibilityDoc": {
-    "done": false,
+    "done": true,
     "reference": {
-      "url": "#accessibility-documentation",
-      "label": "Accessibility Section"
+      "url": "https://paper.dropbox.com/doc/Health-check-and-Health-check-summary-Screen-reader-UX--BuAOCrYE_8ZZvAuOT8zngPaAAg-y8T4oXU2Qe0ZjeQiwwnSE",
+      "label": "Screen Reader UX"
     }
   },
   "acceptanceCriteria": {
     "done": true,
     "reference": {
-      "url": "https://github.com/bbc/gel-test-docs/blob/master/act/promos.md",
-      "label": "GEL Accessibility Criteria Tests"
+      "url": "https://paper.dropbox.com/doc/Health-check-Health-check-summary-AAC--BTgPGZnrl~p5Fe0NhAfxYfTsAg-zxLRZFPMHGB5SQOtDB6NQ",
+      "label": "Accessibility Acceptance Criteria"
     }
   },
   "swarm": {
-    "done": true,
+    "done": false,
     "reference": {
-      "url": "https://paper.dropbox.com/doc/A11Y-Swarm-Promo--BL4ankwRPUBmg1CeqpcvamZ8Ag-Qi9uuHQyLm18NMCnUAtcO",
+      "url": "",
       "label": "A11y swarm notes"
     }
   }

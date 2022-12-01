@@ -1,13 +1,13 @@
 import React from 'react';
 import count from 'ramda/src/count';
 import path from 'ramda/src/path';
+import moment from 'moment';
 import Heading from '../../../src/app/components/Heading';
 import Text from '../../../src/app/components/Text';
 import { Recommend, Warning, Activity } from './Icons/icons';
 import SingleDoc from './SingleDoc';
 import styles from './index.styles';
 import HealthFactorMetadata from '../types';
-import moment from 'moment';
 
 const HealthFactor = ({ metadata }: { metadata?: HealthFactorMetadata }) => {
   const uxAccessibility = path(['uxAccessibilityDoc'], metadata);

@@ -7,11 +7,10 @@ const styles = {
       border: `1px solid ${theme.palette.SHADOW}`,
     }),
 
-  titleContainer: (theme: Theme) =>
-    css({
-      display: 'flex',
-      flexGrow: 1,
-    }),
+  titleContainer: {
+    display: 'flex',
+    flexGrow: 1,
+  },
 
   headerContainer: (theme: Theme) =>
     css({
@@ -47,11 +46,10 @@ const styles = {
       padding: `1.25rem ${theme.spacings.DOUBLE}rem`,
     }),
 
-  documentationList: (theme: Theme) =>
-    css({
-      listStyle: 'none',
-      padding: 0,
-    }),
+  documentationList: {
+    listStyle: 'none',
+    padding: 0,
+  },
 };
 
 export default styles;
