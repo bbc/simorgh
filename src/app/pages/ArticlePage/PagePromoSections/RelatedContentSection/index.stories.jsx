@@ -12,7 +12,7 @@ import {
   RelatedContentSingleItemRtl,
   RelatedContentListRtl,
 } from './fixture';
-import mdx from './README.mdx';
+import md from './README.md';
 
 const BackGround = styled.div`
   width: 100%;
@@ -45,7 +45,7 @@ export default {
   decorators: [withKnobs, withServicesKnob()],
   parameters: {
     docs: {
-      page: mdx,
+      page: md,
     },
   },
 };

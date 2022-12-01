@@ -70,7 +70,7 @@ describe('Storybook SingleDoc', () => {
     expect(listItem).toBeInTheDocument();
   });
 
-  it('should render confirm and external-link svgs when document link is provided', async () => {
+  it('should render confirm and external-link svgs when status is true', async () => {
     await act(async () => {
       render(
         <SingleDocFixture
@@ -88,11 +88,12 @@ describe('Storybook SingleDoc', () => {
     expect(linkSvg).toBeInTheDocument();
   });
 
-  it('should render close and help svgs when document link is provided', async () => {
+  it('should render close and help svgs when status is false', async () => {
     await act(async () => {
       render(
         <SingleDocFixture
           label="This is the documentation title"
+          status={false}
           url="https://documentation.com"
           urlLabel="This is the link label"
         />,

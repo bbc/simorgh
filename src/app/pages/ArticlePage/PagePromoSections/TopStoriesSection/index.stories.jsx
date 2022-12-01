@@ -12,7 +12,7 @@ import {
   topStoriesSingleItemRtl,
 } from './fixture';
 import metadata from './metadata.json';
-import md from './topStoriesSection.md';
+import md from './README.md';
 
 const BackGround = styled.div`
   width: 100%;
