@@ -5,15 +5,20 @@ import {
   FRONT_PAGE,
   MEDIA_PAGE,
   STORY_PAGE,
+  MEDIA_ASSET_PAGE,
+  PHOTO_GALLERY_PAGE,
 } from '#app/routes/utils/pageTypes';
 import {
   articleDataNews,
   articleDataPersian,
+  articleDataPidginWithByline,
 } from '#pages/ArticlePage/fixtureData';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import frontPageData from '#data/igbo/frontpage/index.json';
+import igboFrontPageData from '#data/igbo/frontpage/index.json';
+import somaliFrontPageData from '#data/somali/frontpage/index.json';
 import liveRadioPageData from '#data/korean/bbc_korean_radio/liveradio.json';
 import { getSummary } from '#lib/utilities/parseAssetData/index';
+import getAuthorTwitterHandle from '#app/pages/ArticlePage/getAuthorTwitterHandle';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import services from '../../../../server/utilities/serviceConfigs';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
@@ -33,6 +38,12 @@ const getArticleMetadataProps = data => ({
 
 const newsArticleMetadataProps = getArticleMetadataProps(articleDataNews);
 const persianArticleMetadataProps = getArticleMetadataProps(articleDataPersian);
+const pidginArticleWithBylineMetadataProps = {
+  ...getArticleMetadataProps(articleDataPidginWithByline),
+  twitterHandle: getAuthorTwitterHandle(
+    articleDataPidginWithByline.content.model.blocks,
+  ),
+};
 
 const MetadataWithContext = ({
   /* eslint-disable react/prop-types */
@@ -44,6 +55,7 @@ const MetadataWithContext = ({
   pathname,
   title,
   lang,
+  twitterHandle,
   description,
   openGraphType,
   image,
@@ -69,6 +81,7 @@ const MetadataWithContext = ({
       <MetadataContainer
         title={title}
         lang={lang}
+        twitterHandle={twitterHandle}
         description={description}
         openGraphType={openGraphType}
         aboutTags={aboutTags}
@@ -525,6 +538,128 @@ it('should render the twitter metatags', async () => {
   });
 });
 
+it('should render the twitter handle of the author', async () => {
+  render(
+    <MetadataWithContext
+      service="pidgin"
+      bbcOrigin={dotComOrigin}
+      platform="canonical"
+      id="cwl08rd38l6o"
+      pageType={ARTICLE_PAGE}
+      pathname="/pidgin/articles/cwl08rd38l6o"
+      {...pidginArticleWithBylineMetadataProps}
+    />,
+  );
+
+  await waitFor(() => {
+    expect(
+      document
+        .querySelector('meta[name="twitter:creator"]')
+        .getAttribute('content'),
+    ).toEqual('@mary_harper');
+  });
+});
+
+it('should render the default service twitter handle for a Front Page asset', async () => {
+  render(
+    <MetadataWithContext
+      service="somali"
+      bbcOrigin={dotComOrigin}
+      platform="canonical"
+      id={null}
+      pageType={FRONT_PAGE}
+      pathname="/somali"
+      title="Somali"
+      lang={somaliFrontPageData.metadata.language}
+      description={somaliFrontPageData.metadata.summary}
+      openGraphType="website"
+    />,
+  );
+
+  await waitFor(() => {
+    expect(
+      document
+        .querySelector('meta[name="twitter:creator"]')
+        .getAttribute('content'),
+    ).toEqual('@bbcsomali');
+  });
+});
+
+it('should render the default service twitter handle for a Story Page asset', async () => {
+  render(
+    <MetadataWithContext
+      service="mundo"
+      bbcOrigin={dotComOrigin}
+      platform="canonical"
+      id="53268428"
+      pageType={STORY_PAGE}
+      pathname="/mundo/noticias-internacional-51266689"
+      title="A story"
+      description="The story's description"
+      lang="en-GB"
+      openGraphType="article"
+    />,
+  );
+
+  await waitFor(() => {
+    expect(
+      document
+        .querySelector('meta[name="twitter:creator"]')
+        .getAttribute('content'),
+    ).toEqual('@bbcmundo');
+  });
+});
+
+it('should render the default service twitter handle for a Media Asset Page asset', async () => {
+  render(
+    <MetadataWithContext
+      service="arabic"
+      bbcOrigin={dotComOrigin}
+      platform="canonical"
+      id="49580542"
+      pageType={MEDIA_ASSET_PAGE}
+      pathname="/arabic/media-49580542"
+      title="A story"
+      description="The story's description"
+      lang="en-GB"
+      openGraphType="article"
+    />,
+  );
+
+  await waitFor(() => {
+    expect(
+      document
+        .querySelector('meta[name="twitter:creator"]')
+        .getAttribute('content'),
+    ).toEqual('@BBCArabic');
+  });
+});
+
+it('should render the default service twitter handle for a Photo Gallery asset', async () => {
+  render(
+    <MetadataWithContext
+      service="uzbek"
+      bbcOrigin={dotComOrigin}
+      platform="canonical"
+      id="46716844"
+      pageType={PHOTO_GALLERY_PAGE}
+      pathname="/uzbek/central-asia-46716844"
+      title="A story"
+      description="The story's description"
+      lang="en-GB"
+      openGraphType="article"
+    />,
+  );
+
+  await waitFor(() => {
+    expect(
+      document
+        .querySelector('meta[name="twitter:creator"]')
+        .getAttribute('content'),
+    ).toEqual('@bbcuzbek');
+  });
+});
+
 it('should render the LDP tags', async () => {
   render(<CanonicalNewsInternationalOrigin />);
 
@@ -669,6 +804,19 @@ shouldMatchSnapshot(
 );
 
 shouldMatchSnapshot(
+  'should match for Persian News & byline twitter handle',
+  <MetadataWithContext
+    service="pidgin"
+    bbcOrigin={dotComOrigin}
+    platform="canonical"
+    id="cwl08rd38l6o"
+    pageType={ARTICLE_PAGE}
+    pathname="/pidgin/articles/cwl08rd38l6o"
+    {...pidginArticleWithBylineMetadataProps}
+  />,
+);
+
+shouldMatchSnapshot(
   'should match for Persian News & international origin',
   <MetadataWithContext
     service="persian"
@@ -704,8 +852,8 @@ shouldMatchSnapshot(
     pageType={FRONT_PAGE}
     pathname="/igbo"
     title="Ogbako"
-    lang={frontPageData.metadata.language}
-    description={frontPageData.metadata.summary}
+    lang={igboFrontPageData.metadata.language}
+    description={igboFrontPageData.metadata.summary}
     openGraphType="website"
   />,
 );

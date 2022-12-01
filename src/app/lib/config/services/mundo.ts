@@ -335,19 +335,15 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'América Latina',
-        url: '/mundo/america_latina',
+        url: '/mundo/topics/c7zp57yyz25t',
       },
       {
         title: 'Internacional',
-        url: '/mundo/internacional',
+        url: '/mundo/topics/c2lej05epw5t',
       },
       {
-        title: 'Medio ambiente',
-        url: '/mundo/noticias-58984987',
-      },
-      {
-        title: 'Coronavirus',
-        url: '/mundo/topics/c67q9nnn8z7t',
+        title: 'Qatar 2022',
+        url: '/mundo/topics/c36v5eq58ngt',
       },
       {
         title: 'Hay Festival',
@@ -372,10 +368,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Tecnología',
         url: '/mundo/topics/cyx5krnw38vt',
-      },
-      {
-        title: 'Video',
-        url: '/mundo/media/video',
       },
       {
         title: 'Centroamérica Cuenta',
