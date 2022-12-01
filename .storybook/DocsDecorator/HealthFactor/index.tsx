@@ -2,7 +2,6 @@ import React from 'react';
 import count from 'ramda/src/count';
 import path from 'ramda/src/path';
 import moment from 'moment';
-import Heading from '../../../src/app/components/Heading';
 import Text from '../../../src/app/components/Text';
 import { Recommend, Warning, Activity } from './Icons/icons';
 import SingleDoc from './SingleDoc';
@@ -26,6 +25,8 @@ const HealthFactor = ({ metadata }: { metadata?: HealthFactorMetadata }) => {
   );
 
   const formatDate = moment(date).format('Do MMMM YYYY');
+
+  console.log(typeof formatDate);
 
   const getLabel = path(['reference', 'label']);
   const getUrl = path(['reference', 'url']);
@@ -68,14 +69,16 @@ const HealthFactor = ({ metadata }: { metadata?: HealthFactorMetadata }) => {
           </Text>
         </div>
 
-        <Text
-          size="bodyCopy"
-          fontVariant="sansRegular"
-          css={styles.date}
-          as="time"
-        >
-          {`Last Updated ${formatDate}`}
-        </Text>
+        {formatDate != 'Invalid date' && (
+          <Text
+            size="bodyCopy"
+            fontVariant="sansRegular"
+            css={styles.date}
+            as="time"
+          >
+            {`Last Updated ${formatDate}`}
+          </Text>
+        )}
       </div>
 
       <div css={styles.documentationContainer}>

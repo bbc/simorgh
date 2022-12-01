@@ -5,6 +5,8 @@ import {
   allCompletedDocs,
   threeOutstandingActions,
   allMissingDocs,
+  withDate,
+  withAlpha,
 } from './fixture';
 import metadata from './metadata.json';
 import md from './README.md';
@@ -44,4 +46,12 @@ export const HealthFactorWithMissingDocs = () => (
 
 export const MissingHealthFactor = () => (
   <HealthFactorComponent metadataFixture={null} />
+);
+
+export const WithDate = () => (
+  <HealthFactorComponent metadataFixture={withDate} />
+);
+
+export const WithAlpha = () => (
+  <HealthFactorComponent metadataFixture={withAlpha} />
 );

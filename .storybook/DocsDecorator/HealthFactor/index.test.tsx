@@ -10,6 +10,8 @@ import {
   oneMissingDoc,
   twoMissingDocs,
   allMissingDocs,
+  withAlpha,
+  withDate,
 } from './fixture';
 import HealthFactorMetadata from '../types';
 
@@ -155,5 +157,59 @@ describe('Storybook HealthFactor', () => {
     const listItems = screen.getAllByRole('listitem');
 
     expect(listItems.length).toBe(3);
+  });
+
+  it('should render the correct time when day, month, and year are valid', async () => {
+    await act(async () => {
+      render(<HealthFactorFixture metadata={withDate} />);
+    });
+
+    const time = screen.getByText('Last Updated 1st December 2022');
+
+    expect(time).toBeInTheDocument();
+  });
+
+  it('should render time in a time tag when day, month, and year are valid', async () => {
+    await act(async () => {
+      render(<HealthFactorFixture metadata={withDate} />);
+    });
+
+    const time = screen.getByText('Last Updated 1st December 2022');
+
+    expect(time.tagName).toBe('TIME');
+  });
+
+  it('should not render the time when day, month, and year are not valid', async () => {
+    await act(async () => {
+      render(<HealthFactorFixture metadata={allMissingDocs} />);
+    });
+
+    const time = screen.queryByText('Last Updated 1st December 2022');
+
+    expect(time).toBeNull();
+  });
+
+  it('should render alpha message when alpha is true', async () => {
+    await act(async () => {
+      render(<HealthFactorFixture metadata={withAlpha} />);
+    });
+
+    const alpha = screen.getByText(
+      'This component is tagged alpha and is not suitable for use on live. Upon the completion of all health checks the component is ready for use on live and the alpha tag will be removed.',
+    );
+
+    expect(alpha).toBeInTheDocument();
+  });
+
+  it('should not render alpha message when alpha is false', async () => {
+    await act(async () => {
+      render(<HealthFactorFixture metadata={allMissingDocs} />);
+    });
+
+    const alpha = screen.queryByText(
+      'This component is tagged alpha and is not suitable for use on live. Upon the completion of all health checks the component is ready for use on live and the alpha tag will be removed.',
+    );
+
+    expect(alpha).toBeNull();
   });
 });
