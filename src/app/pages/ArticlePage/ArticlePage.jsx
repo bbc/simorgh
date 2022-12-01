@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import propEq from 'ramda/src/propEq';
-import last from 'ramda/src/last';
 import styled from '@emotion/styled';
 import { string, node } from 'prop-types';
 import useToggle from '#hooks/useToggle';
@@ -265,7 +264,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
               tagBackgroundColour={C_WHITE}
             />
           )}
-          <RelatedContentSection content={last(blocks)} />
+          <RelatedContentSection content={blocks} />
         </Primary>
         <SecondaryColumn pageData={pageData} />
       </ArticlePageGrid>
