@@ -4,6 +4,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import ThemeProvider from '../../../../components/ThemeProvider';
 import RelatedContentSection from '.';
 import {
   RelatedContentSingleItem,
@@ -26,13 +27,15 @@ const RelatedContentComponent = ({
   script,
   dir,
 }) => (
-  <ToggleContextProvider>
-    <BackGround>
-      <ServiceContextProvider service={service} script={script} dir={dir}>
-        <RelatedContentSection content={content} />
-      </ServiceContextProvider>
-    </BackGround>
-  </ToggleContextProvider>
+  <ThemeProvider service={service} variant="default">
+    <ToggleContextProvider>
+      <BackGround>
+        <ServiceContextProvider service={service} script={script} dir={dir}>
+          <RelatedContentSection content={content} />
+        </ServiceContextProvider>
+      </BackGround>
+    </ToggleContextProvider>
+  </ThemeProvider>
 );
 
 export default {

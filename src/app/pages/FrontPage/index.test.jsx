@@ -10,7 +10,10 @@ import pidginMostReadData from '#data/pidgin/mostRead';
 import getInitialData from '#app/routes/home/getInitialData';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import ThemeProvider from '../../components/ThemeProvider';
 import FrontPage from '.';
+
+jest.mock('../../components/ThemeProvider');
 
 const mockToggles = {
   ads: {
@@ -39,16 +42,18 @@ const FrontPageWithContext = ({
   ...props
 }) => (
   <BrowserRouter>
-    <ToggleContextProvider toggles={toggles}>
-      <RequestContextProvider
-        isAmp={isAmp}
-        {...requestContextData({ service })}
-      >
-        <ServiceContextProvider service={service}>
-          <FrontPage {...props} />
-        </ServiceContextProvider>
-      </RequestContextProvider>
-    </ToggleContextProvider>
+    <ThemeProvider service={service} variant="default">
+      <ToggleContextProvider toggles={toggles}>
+        <RequestContextProvider
+          isAmp={isAmp}
+          {...requestContextData({ service })}
+        >
+          <ServiceContextProvider service={service}>
+            <FrontPage {...props} />
+          </ServiceContextProvider>
+        </RequestContextProvider>
+      </ToggleContextProvider>
+    </ThemeProvider>
   </BrowserRouter>
 );
 
