@@ -2,20 +2,25 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContextProvider } from '../../../../../contexts/ServiceContext';
+import ThemeProvider from '../../../../../components/ThemeProvider';
 import RelatedContentItem from '.';
 import { RelatedContentData } from '../fixture';
 
+jest.mock('../../../../../components/ThemeProvider');
+
 // eslint-disable-next-line react/prop-types
 const RelatedContentItemFixture = ({ fixtureData, service = 'mundo' }) => (
-  <ServiceContextProvider service={service}>
-    <ToggleContextProvider>
-      <RelatedContentItem
-        item={fixtureData}
-        ariaLabelledBy="RelatedContent"
-        index={0}
-      />
-    </ToggleContextProvider>
-  </ServiceContextProvider>
+  <ThemeProvider service={service} variant="default">
+    <ServiceContextProvider service={service}>
+      <ToggleContextProvider>
+        <RelatedContentItem
+          item={fixtureData}
+          ariaLabelledBy="RelatedContent"
+          index={0}
+        />
+      </ToggleContextProvider>
+    </ServiceContextProvider>
+  </ThemeProvider>
 );
 
 describe('Optimo Related Content Promo Item', () => {
