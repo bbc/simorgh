@@ -38,9 +38,6 @@ export default {
   parameters: {
     metadata,
     docs: {
-      component: {
-        title: 'Top Stories Section',
-      },
       page: md,
     },
   },

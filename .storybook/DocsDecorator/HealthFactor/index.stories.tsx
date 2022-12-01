@@ -7,7 +7,7 @@ import {
   allMissingDocs,
 } from './fixture';
 import metadata from './metadata.json';
-import md from './HealthFactor.md';
+import md from './README.md';
 
 // eslint-disable-next-line react/prop-types
 const HealthFactorComponent = ({ metadataFixture }) => (
