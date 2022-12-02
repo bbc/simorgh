@@ -4,8 +4,8 @@ import React, { Fragment, PropsWithChildren, useState, useContext } from 'react'
 import { Global, jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import styles from './index.styles';
-import { RequestContext } from '#contexts/RequestContext';
-import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { RequestContext } from '../../contexts/RequestContext';
+import { FRONT_PAGE } from '../../routes/utils/pageTypes';
 
 interface Props {
   alt: string;
