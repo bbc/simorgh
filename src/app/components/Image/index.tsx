@@ -26,10 +26,6 @@ interface Props {
   width?: number;
 }
 
-interface requestContext {
-  pageType?: string;
-};
-
 const DEFAULT_ASPECT_RATIO = [16, 9];
 const roundNumber = (num: number) => Math.round(num * 100) / 100;
 const getLegacyBrowserAspectRatio = (x: number, y: number) =>
@@ -56,6 +52,9 @@ const Image = ({
   width,
 }: PropsWithChildren<Props>) => {
 
+  interface requestContext {
+    pageType?: string;
+  };
   const requestContext = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
   const showPlaceholder = placeholder && !isLoaded;
