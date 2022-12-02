@@ -1,5 +1,5 @@
 /* eslint-disable */
-var version = 'v0.0.2beta12';
+var version = 'v0.0.3';
 
 self.addEventListener('fetch', function(event) {
     if (self.registration.scope.indexOf('/hindi/') && /^https:\/\/ichef\.bbci\.co\.uk\/news\/.+(\.jpg|\.png)$/.test(event.request.url)) {
