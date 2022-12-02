@@ -373,6 +373,10 @@ export const service: DefaultServiceConfig = {
         url: '/persian',
       },
       {
+        title: 'اعتراضات ایران',
+        url: '/persian/topics/c5j85v96d92t',
+      },
+      {
         title: 'پخش زنده',
         url: '/persian/media-49522521',
       },

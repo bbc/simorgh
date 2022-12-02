@@ -435,6 +435,7 @@ exports[`AMP Feature Index page Story Promo Image should match image 1`] = `
 <amp-img
   alt="بل گیٹس"
   attribution="AFP/getty images"
+  class="bbc-image"
   height="576"
   layout="responsive"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/B04F/production/_112753154_bill.jpg"
@@ -444,9 +445,11 @@ exports[`AMP Feature Index page Story Promo Image should match image 1`] = `
   <amp-img
     alt="بل گیٹس"
     attribution="AFP/getty images"
+    class="bbc-image"
     fallback=""
     height="576"
     layout="responsive"
+    sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
     src="https://ichef.bbci.co.uk/news/660/cpsprodpb/B04F/production/_112753154_bill.jpg"
     srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/B04F/production/_112753154_bill.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/B04F/production/_112753154_bill.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/B04F/production/_112753154_bill.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/B04F/production/_112753154_bill.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/B04F/production/_112753154_bill.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/B04F/production/_112753154_bill.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/B04F/production/_112753154_bill.jpg 660w"
     width="1024"

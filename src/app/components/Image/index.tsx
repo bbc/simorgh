@@ -105,7 +105,6 @@ const Image = ({
               width={width}
               height={height}
               srcSet={srcSet}
-              sizes={srcSet ? sizes : undefined}
               attribution={attribution}
             >
               {fallbackSrcSet && (

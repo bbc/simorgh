@@ -66,6 +66,7 @@ import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
 import bylineExtractor from './utilities/bylineExtractor';
 import Byline from './Byline';
+import getAuthorTwitterHandle from './getAuthorTwitterHandle';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from './PagePromoSections/RelatedContentSection';
 
@@ -144,6 +145,10 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const bylineLinkedData = bylineExtractor(bylineContribBlocks);
 
   const hasByline = !!bylineLinkedData;
+
+  const articleAuthorTwitterHandle = hasByline
+    ? getAuthorTwitterHandle(blocks)
+    : null;
 
   const componentsToRender = {
     visuallyHiddenHeadline,
@@ -226,6 +231,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         articleId={getArticleId(pageData)}
         title={headline}
         author={articleAuthor}
+        twitterHandle={articleAuthorTwitterHandle}
         firstPublished={firstPublished}
         lastPublished={lastPublished}
         section={getArticleSection(pageData)}
