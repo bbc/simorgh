@@ -26,7 +26,7 @@ interface Props {
   width?: number;
 }
 
-type RequestContext = {
+type requestContext = {
   pageType?: string;
 };
 
@@ -56,7 +56,7 @@ const Image = ({
   width,
 }: PropsWithChildren<Props>) => {
 
-  const { pageType } = useContext(RequestContext);
+  const requestContext = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
   const showPlaceholder = placeholder && !isLoaded;
   const hasDimensions = width && height;
@@ -135,7 +135,7 @@ const Image = ({
           <ImageWrapper>
             {hasFallback && (
               <>
-                {pageType !== FRONT_PAGE && (
+                {requestContext.pageType !== FRONT_PAGE && (
                 	<source srcSet={srcSet} type={mediaType} sizes={sizes} />
                 )}
                 <source
