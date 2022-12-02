@@ -26,6 +26,11 @@ interface Props {
   width?: number;
 }
 
+interface RequestContextType {
+  [key: string]: any;
+  pageType?: string;
+}
+
 const DEFAULT_ASPECT_RATIO = [16, 9];
 const roundNumber = (num: number) => Math.round(num * 100) / 100;
 const getLegacyBrowserAspectRatio = (x: number, y: number) =>
@@ -52,7 +57,7 @@ const Image = ({
   width,
 }: PropsWithChildren<Props>) => {
 
-  const requestContext = useContext(RequestContext);
+  const requestContext : RequestContextType = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
   const showPlaceholder = placeholder && !isLoaded;
   const hasDimensions = width && height;
@@ -131,7 +136,7 @@ const Image = ({
           <ImageWrapper>
             {hasFallback && (
               <>
-                {requestContext['pageType'] !== FRONT_PAGE && (
+                {requestContext.pageType !== FRONT_PAGE && (
                 	<source srcSet={srcSet} type={mediaType} sizes={sizes} />
                 )}
                 <source
