@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import thai from '../../../components/ThemeProvider/typography/scripts/thai';
+import thai from '../../../components/ThemeProvider/fontScripts/thai';
 import brandSVG from '../../chameleonLogos/thai';
 import '#psammead/moment-timezone-include/tz/Asia/Bangkok';
 import '#psammead/psammead-locales/moment/th';
@@ -246,12 +246,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: `ยินยอมรับเนื้อหาจาก [social_media_site]`,
           body: `บทความนี้ประกอบด้วยเนื้อหาจาก [social_media_site] เราขอความยินยอมจากคุณก่อนใช้คุกกี้ หรือเทคโนโลยีอื่น ๆ บันทึกอะไรลงไป คุณอาจต้องอ่านนโยบายคุกกี้ของ  [social_media_site] [link]  และนโยบายความเป็นส่วนตัวของ [/link]  [social_media_site] [link] ก่อนให้ความยินยอม [/link] หากต้องการอ่านเนื้อหานี้ โปรดเลือก "ยินยอมและไปต่อ"`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
         },
       },
       include: {
@@ -300,10 +294,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'สุขภาพ',
         url: '/thai/topics/cyx5kz25zxdt',
-      },
-      {
-        title: 'โควิด-19',
-        url: '/thai/other-news-56319853',
       },
       {
         title: 'วิดีโอ',

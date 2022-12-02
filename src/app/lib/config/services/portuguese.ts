@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import latinWithDiacritics from '../../../components/ThemeProvider/typography/scripts/latinWithDiacritics';
+import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import brandSVG from '../../chameleonLogos/portuguese';
 import '#psammead/moment-timezone-include/tz/America/Sao_Paulo';
 import '#psammead/psammead-locales/moment/pt-br';
@@ -64,16 +64,16 @@ export const service: DefaultServiceConfig = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'Podcast',
-      brandTitle: 'BBC Lê',
+      brandTitle: 'Brasil Partido',
       brandDescription:
-        'A equipe da BBC News Brasil lê para você algumas de suas melhores reportagens',
+        'João Fellet tenta entender como brasileiros chegaram ao grau atual de divisão.',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p09qw181.jpg',
-        alt: 'BBC Lê',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0d67gkg.jpg',
+        alt: 'Logo: Brasil Partido',
       },
       linkLabel: {
         text: 'Episódios',
-        href: 'https://www.bbc.com/portuguese/podcasts/p09qw1cn',
+        href: 'https://www.bbc.com/portuguese/podcasts/p0cyhvny',
       },
       skipLink: {
         text: 'Pule %title% e continue lendo',
@@ -274,12 +274,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: `Aceita conteúdo de [social_media_site]?`,
           body: `Este item inclui conteúdo extraído de [social_media_site]. Pedimos sua autorzação antes que algo seja carregado, pois eles podem estar utilizando cookies e outras tecnologias. Você pode consultar a [link] política de uso de cookies [/link] e [link] os termos de privacidade  [/link] do [social_media_site] antes de concordar. Para acessar o conteúdo clique em "aceitar e continuar".`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
           button: 'Aceite e continue',
         },
       },
@@ -385,12 +379,12 @@ export const service: DefaultServiceConfig = {
         url: '/portuguese/topics/c404v027pd4t',
       },
       {
-        title: '#SalaSocial',
-        url: '/portuguese/topics/cx6pxx22x5pt',
-      },
-      {
         title: 'Vídeos',
         url: '/portuguese/topics/c9y2j35dn2zt',
+      },
+      {
+        title: 'Copa do Mundo',
+        url: '/portuguese/topics/c5qvpqjz43dt',
       },
     ],
   },

@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import sinhalese from '../../../components/ThemeProvider/typography/scripts/sinhalese';
+import sinhalese from '../../../components/ThemeProvider/fontScripts/sinhalese';
 import brandSVG from '../../chameleonLogos/sinhala';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/si';
@@ -252,12 +252,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: `[social_media_site] අන්තර්ගතයට අවසරදීමට ඔබ එකඟ ද?`,
           body: `මෙම ලිපියේ [social_media_site] විසින් සපයන ලද අන්තර්ගතයන් අඩංගු වේ. ඔවුන් කුකීස් සහ වෙනත් තාක්ෂණයන් භාවිතා කරන නිසා, ඒ කිසිවක් පූරණය වීමට පෙර අපි ඔබගේ අවසරය ඉල්ලා සිටිමු. එයට අවසරදීමට පෙර ඔබට [social_media_site] [link] කුකී ප්‍රතිපත්තිය [/link] සහ [link] රහස්‍යතා ප්‍රතිපත්තිය [/link] කියවීමට අවශ්‍ය විය හැකි ය. මෙම අන්තර්ගතය බැලීමට 'පිළිගෙන ඉදිරියට යන්න' තෝරන්න.`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
         },
       },
       include: {

@@ -5,7 +5,7 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import brandSVG from '../../chameleonLogos/igbo';
-import latin from '../../../components/ThemeProvider/typography/scripts/latin';
+import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/psammead-locales/moment/ig';
 import '#psammead/moment-timezone-include/tz/Africa/Lagos';
 import withContext from '../../../contexts/utils/withContext';
@@ -115,6 +115,14 @@ export const service: DefaultServiceConfig = {
           callToActionLast: '.',
           callToActionLinkUrl: 'https://www.bbc.com/igbo',
         },
+      },
+      byline: {
+        articleInformation: 'Ebe akụkọ a si',
+        author: 'Onye dere ya',
+        listItemImage: 'Ndepụta ihe, foto',
+        published: 'Mgbe e biputara ya',
+        reportingFrom: 'Ebeg o si',
+        role: 'Ndị mere akụkọ a',
       },
       consentBanner: {
         privacy: {
@@ -250,12 +258,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: `Hapụ [social_media_site] ihe dị na ya?`,
           body: `Edemede a nwere ihe ndị si na [social_media_site]. Anyị na-achọ ka i nye anyị ikike tupu e tinye ihe ọbụla, dịka akụrụngwa cookies na tekịnụzụ ndị ọzọ nwereike ịdị na ya. I nwereike ịgụ [social_media_site] [link] iwu cookie [/link] na [link] iwu nzuzo [/link] tupu ị nabata ya. Iji kirie ihe nọ n'ime ya, họrọ 'nabata na gaa n'ihu'.`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
           button: 'Nabata na gaa n’ihu',
         },
       },

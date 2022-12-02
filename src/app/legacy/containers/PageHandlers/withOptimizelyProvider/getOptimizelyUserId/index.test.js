@@ -27,7 +27,7 @@ describe('getOptimizelyUserId', () => {
     expect(optimizelyUserId).toMatch(uuidRegex);
     expect(cookieName).toEqual('ckns_mvt');
     expect(cookieValue).toEqual(optimizelyUserId);
-    expect(cookieOptions).toEqual({ expires: 365, path: '/' });
+    expect(cookieOptions).toEqual({ expires: 365, path: '/', secure: true });
     expect(cookieSetterSpy).toHaveBeenCalledTimes(1);
   });
 });

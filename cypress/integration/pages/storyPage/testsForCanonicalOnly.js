@@ -30,9 +30,7 @@ export const testsThatAlwaysRunForCanonicalOnly = () => {
         if (win.location.pathname.includes('/mundo/23263889')) {
           cy.get(`div[id="hearken-curiosity-14838"] > div`).within(() => {
             cy.get('div[id*="hearken-embed-module"]').within(() => {
-              cy.get('div[class="embed-content-container"]')
-                .should('exist')
-                .and('be.visible');
+              cy.get('div').should('exist').and('be.visible');
             });
           });
         }

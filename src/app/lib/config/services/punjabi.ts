@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import gurmukhi from '../../../components/ThemeProvider/typography/scripts/gurmukhi';
+import gurmukhi from '../../../components/ThemeProvider/fontScripts/gurmukhi';
 import brandSVG from '../../chameleonLogos/punjabi';
 import '#psammead/psammead-locales/moment/pa-in';
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
@@ -108,6 +108,14 @@ export const service: DefaultServiceConfig = {
           callToActionLast: ` ਦੇ ਹੋਮ ਪੇਜ 'ਤੇ ਜਾਓ`,
           callToActionLinkUrl: 'https://www.bbc.com/punjabi',
         },
+      },
+      byline: {
+        articleInformation: '...ਵਿੱਚ',
+        author: 'ਲੇਖਕ',
+        listItemImage: 'ਤਸਵੀਰ',
+        published: 'ਪ੍ਰਕਾਸ਼ਿਤ',
+        reportingFrom: '...ਤੋਂ',
+        role: 'ਰੋਲ',
       },
       consentBanner: {
         privacy: {
@@ -244,12 +252,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: `[social_media_site] ਸਮੱਗਰੀ ਦੀ ਇਜਾਜ਼ਤ?`,
           body: `ਇਸ ਲੇਖ ਵਿੱਚ [social_media_site] ਤੋਂ ਮਿਲੀ ਸਮੱਗਰੀ ਸ਼ਾਮਲ ਹੈ। ਕੁਝ ਵੀ ਡਾਊਨਲੋਡ ਹੋਣ ਤੋਂ ਪਹਿਲਾਂ ਅਸੀਂ ਤੁਹਾਡੀ ਇਜਾਜ਼ਤ ਮੰਗਦੇ ਹਾਂ ਕਿਉਂਕਿ ਇਸ ਵਿੱਚ ਕੁਕੀਜ਼ ਅਤੇ ਦੂਜੀਆਂ ਤਕਨੀਕਾਂ ਦਾ ਇਸਤੇਮਾਲ ਕੀਤਾ ਹੋ ਸਕਦਾ ਹੈ। ਤੁਸੀਂ ਸਵੀਕਾਰ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ [social_media_site] [link] ਕੁਕੀ ਪਾਲਿਸੀ [/link] ਤੇ ਨੂੰ ਪੜ੍ਹਨਾ ਚਾਹੋਗੇ। ਇਸ ਸਮੱਗਰੀ ਨੂੰ ਦੇਖਣ ਲਈ ਇਜਾਜ਼ਤ ਦੇਵੋ ਤੇ ਜਾਰੀ ਰੱਖੋ ਨੂੰ ਚੁਣੋ।`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
           button: 'ਸਵੀਕਾਰ ਕਰੋ ਤੇ ਜਾਰੀ ਰੱਖੋ',
         },
       },
@@ -283,10 +285,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'ਖ਼ਬਰਾਂ',
         url: '/punjabi',
-      },
-      {
-        title: 'ਕੋਰੋਨਾਵਾਇਰਸ',
-        url: '/punjabi/india-51764906',
       },
       {
         title: 'ਵੀਡੀਓ',

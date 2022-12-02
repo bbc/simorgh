@@ -1,6 +1,6 @@
-import React from 'react';
+/** @jsx jsx */
 import { render, act } from '@testing-library/react';
-import { css, Theme, Global } from '@emotion/react';
+import { jsx, css, Theme } from '@emotion/react';
 
 import ThemeProvider from '.';
 
@@ -77,12 +77,6 @@ describe('ThemeProvider', () => {
                 [mq.GROUP_0_MAX_WIDTH]: {
                   display: 'block',
                 },
-                [mq.GROUP_0_MIN_WIDTH]: {
-                  display: 'block',
-                },
-                [mq.GROUP_0_ONLY]: {
-                  display: 'block',
-                },
                 [mq.GROUP_1_MAX_WIDTH]: {
                   display: 'block',
                 },
@@ -131,18 +125,6 @@ describe('ThemeProvider', () => {
 
     expect(document.body).toMatchInlineSnapshot(`
       @media (max-width: 14.9375rem) {
-        .emotion-0 {
-          display: block;
-        }
-      }
-
-      @media (min-width: 0rem) {
-        .emotion-0 {
-          display: block;
-        }
-      }
-
-      @media (min-width: 0rem) and (max-width: 14.9375rem) {
         .emotion-0 {
           display: block;
         }
@@ -240,7 +222,7 @@ describe('ThemeProvider', () => {
     await act(async () => {
       render(
         <ThemeProvider service="mundo" variant="default">
-          <Global styles={({ typography }) => typography.fontFaces} />
+          <div />
         </ThemeProvider>,
       );
     });
@@ -250,10 +232,6 @@ describe('ThemeProvider', () => {
         document.head.querySelectorAll('[data-emotion="css-global"]'),
       ).map(el => el.innerHTML),
     ).toEqual([
-      '@font-face{font-family:ReithSans;src:url("https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_Bd.woff2") format("woff2"),url("https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_Bd.woff") format("woff");font-weight:700;font-display:optional;}',
-      '@font-face{font-family:ReithSans;src:url("https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_Rg.woff2") format("woff2"),url("https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_Rg.woff") format("woff");font-display:optional;}',
-      '@font-face{font-family:ReithSerif;src:url("https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_Md.woff2") format("woff2"),url("https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_Md.woff") format("woff");font-weight:500;font-display:optional;}',
-      '@font-face{font-family:ReithSerif;src:url("https://gel.files.bbci.co.uk/r2.512/subsets/BBCReithSerif_WNumbers_Lt.woff2") format("woff2"),url("https://gel.files.bbci.co.uk/r2.512/subsets/BBCReithSerif_WNumbers_Lt.woff") format("woff");font-weight:300;font-display:optional;}',
       '@font-face{font-family:ReithSans;src:url("https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_Bd.woff2") format("woff2"),url("https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_Bd.woff") format("woff");font-weight:700;font-display:optional;}',
       '@font-face{font-family:ReithSans;src:url("https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_Rg.woff2") format("woff2"),url("https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_Rg.woff") format("woff");font-display:optional;}',
       '@font-face{font-family:ReithSerif;src:url("https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_Md.woff2") format("woff2"),url("https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_Md.woff") format("woff");font-weight:500;font-display:optional;}',

@@ -1,20 +1,7 @@
 import React, { useContext } from 'react';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import { shape, arrayOf, string } from 'prop-types';
-import styled from '@emotion/styled';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-  GEL_SPACING_QUAD,
-  GEL_SPACING_QUIN,
-  GEL_SPACING_SEXT,
-} from '#psammead/gel-foundations/src/spacings';
-import {
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
+import path from 'ramda/src/path';
 import MetadataContainer from '#containers/Metadata';
 import LinkedData from '#containers/LinkedData';
 import AdContainer from '#containers/Ad';
@@ -22,45 +9,13 @@ import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstra
 import useToggle from '#hooks/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+import styles from './index.styles';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import TopicImage from './TopicImage';
 import TopicTitle from './TopicTitle';
 import TopicDescription from './TopicDescription';
 import Pagination from './Pagination';
-import Curation, { VISUAL_PROMINANCE, VISUAL_STYLE } from './Curation';
-
-const OuterWrapper = styled.main`
-  margin: 0 ${GEL_SPACING};
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    margin: 0 ${GEL_SPACING_DBL};
-  }
-`;
-
-const InnerWrapper = styled.div`
-  max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
-  margin: 0 auto;
-`;
-
-const InlineWrapper = styled.div`
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    align-items: center;
-    display: flex;
-  }
-`;
-
-const TitleWrapper = styled.div`
-  margin: ${GEL_SPACING_TRPL} 0;
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    margin: ${GEL_SPACING_QUAD} 0;
-  }
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin: ${GEL_SPACING_SEXT} 0;
-  }
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin: ${GEL_SPACING_QUIN} 0 ${GEL_SPACING_SEXT} 0;
-  }
-`;
+import Curation, { VISUAL_STYLE } from './Curation';
 
 const TopicPage = ({ pageData }) => {
   const { lang, translations } = useContext(ServiceContext);
@@ -69,11 +24,12 @@ const TopicPage = ({ pageData }) => {
 
   const { enabled: adsEnabled } = useToggle('ads');
   const { showAdsBasedOnLocation } = useContext(RequestContext);
+  const topStoriesTitle = path(['topStoriesTitle'], translations);
 
   const linkedDataEntities = curations
     .map(({ summaries }) =>
       summaries.map(summary => ({
-        '@type': 'Article',
+        '@type': summary.type,
         name: summary.title,
         headline: summary.title,
         url: summary.link,
@@ -104,8 +60,8 @@ const TopicPage = ({ pageData }) => {
           <AdContainer slotType="leaderboard" />
         </>
       )}
-      <OuterWrapper role="main">
-        <InnerWrapper>
+      <main css={styles.main}>
+        <div css={styles.inner}>
           <ATIAnalytics data={pageData} />
           <ChartbeatAnalytics data={pageData} />
           <MetadataContainer
@@ -122,22 +78,33 @@ const TopicPage = ({ pageData }) => {
             headline={title}
             entities={linkedDataEntities}
           />
-          <TitleWrapper>
-            <InlineWrapper>
+          <div css={styles.title}>
+            <div css={styles.inline}>
               {imageData && <TopicImage image={imageData.url} />}
               <TopicTitle>{title}</TopicTitle>
-            </InlineWrapper>
+            </div>
             {description && <TopicDescription>{description}</TopicDescription>}
-          </TitleWrapper>
+          </div>
           {curations.map(
-            ({ summaries, curationId, title: curationTitle, link }) => (
+            ({
+              visualProminence,
+              summaries,
+              curationId,
+              title: curationTitle,
+              link,
+              position,
+            }) => (
               <Curation
+                headingLevel={curationTitle && 3}
                 key={curationId}
                 visualStyle={VISUAL_STYLE.NONE}
-                visualProminance={VISUAL_PROMINANCE.NORMAL}
+                visualProminance={visualProminence}
                 promos={summaries}
                 title={curationTitle}
+                topStoriesTitle={topStoriesTitle}
+                position={position}
                 link={link}
+                curationLength={curations && curations.length}
               />
             ),
           )}
@@ -149,8 +116,8 @@ const TopicPage = ({ pageData }) => {
             nextPage={nextPage}
             page={page}
           />
-        </InnerWrapper>
-      </OuterWrapper>
+        </div>
+      </main>
     </>
   );
 };

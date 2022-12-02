@@ -23,26 +23,27 @@ const getOnRenderError = providerName =>
  * The following object declares a list of supported Canonical providers
  * and their attributes. Not all providers have the same attributes.
  */
-export const providers = {
-  instagram: {
-    script: 'https://www.instagram.com/embed.js',
-    styles: `
+export const providers = provider =>
+  ({
+    instagram: {
+      script: 'https://www.instagram.com/embed.js',
+      styles: `
       .instagram-media {
         margin-top: 0 !important;
         margin-bottom: 0 !important;
         min-width: auto !important;
       }
     `,
-    enrich: () => {
-      if (window.instgrm) {
-        window.instgrm.Embeds.process();
-      }
+      enrich: () => {
+        if (window.instgrm) {
+          window.instgrm.Embeds.process();
+        }
+      },
+      onLibraryLoad: () => console.error(getOnRenderError('Instagram')),
     },
-    onLibraryLoad: () => console.error(getOnRenderError('Instagram')),
-  },
-  twitter: {
-    script: 'https://platform.twitter.com/widgets.js',
-    styles: `
+    twitter: {
+      script: 'https://platform.twitter.com/widgets.js',
+      styles: `
       .twitter-tweet {
         margin-top: 0 !important;
         margin-bottom: ${PRE_RENDER_MARGIN} !important;
@@ -51,19 +52,19 @@ export const providers = {
         margin-bottom: 0 !important;
       }
     `,
-    enrich: () => {
-      if (window.twttr) {
-        window.twttr.widgets.load();
-      }
+      enrich: () => {
+        if (window.twttr) {
+          window.twttr.widgets.load();
+        }
+      },
+      onLibraryLoad: onRender => {
+        window.twttr.ready(twttr => {
+          twttr.events.bind('rendered', onRender);
+        });
+      },
     },
-    onLibraryLoad: onRender => {
-      window.twttr.ready(twttr => {
-        twttr.events.bind('rendered', onRender);
-      });
-    },
-  },
-  youtube: {
-    styles: `
+    youtube: {
+      styles: `
       padding-top: ${LANDSCAPE_RATIO};
       position: relative;
       overflow: hidden;
@@ -77,28 +78,61 @@ export const providers = {
         width: 100%;
       }
     `,
-    enrich: () => {},
-    onLibraryLoad: () => console.error(getOnRenderError('YouTube')),
-  },
-};
+      enrich: () => {},
+      onLibraryLoad: () => console.error(getOnRenderError('YouTube')),
+    },
+    tiktok: {
+      script: `https://www.tiktok.com/embed.js?t=${Date.now()}`,
+      styles: `      
+      .tiktok-embed{
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    `,
+      enrich: () => {},
+      onLibraryLoad: () => console.error(getOnRenderError('TikTok')),
+    },
+    facebook: {
+      script: 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0',
+      styles: `      
+      position: relative;
+      overflow: hidden;
+
+      .fb_iframe_widget {
+        position: unset;
+
+        > span {
+          position: unset;
+        }
+      }
+
+      iframe {
+        background-color: white;
+        left:0;
+        top:0;
+        height:100% !important;
+        width:100% !important;
+        position:absolute !important;
+      }
+    `,
+      enrich: () => {},
+      onLibraryLoad: () => console.error(getOnRenderError('Facebook')),
+    },
+  }[provider]);
 
 const CanonicalEmbed = ({ provider, oEmbed, onRender }) => {
-  const hasLoadedLibrary = useScript(providers[provider].script);
-  useEffect(providers[provider].enrich);
+  const { script, styles, enrich, onLibraryLoad } = providers(provider);
+  const hasLoadedLibrary = useScript(script);
+  useEffect(enrich);
 
   useEffect(() => {
-    const { onLibraryLoad } = providers[provider];
-
     if (onRender && hasLoadedLibrary && onLibraryLoad) {
       onLibraryLoad(onRender);
     }
   }, [hasLoadedLibrary]);
 
   return (
-    <OEmbed
-      styles={providers[provider].styles}
-      dangerouslySetInnerHTML={{ __html: oEmbed.html }}
-    />
+    <OEmbed styles={styles} dangerouslySetInnerHTML={{ __html: oEmbed.html }} />
   );
 };
 

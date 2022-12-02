@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import cyrillic from '../../../components/ThemeProvider/typography/scripts/cyrillic';
+import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
 import brandSVG from '../../chameleonLogos/kyrgyz';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ky';
@@ -260,12 +260,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: `[social_media_site] мазмуну көрсөтүлсүнбү?`,
           body: `Бул макалада [social_media_site] мазмуну бар. Алар кукилерди ж.б. технологияларды колдонушу мүмкүн. Ошондуктан жүктөөрдөн мурда сизден уруксат суралат.`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
         },
       },
       include: {

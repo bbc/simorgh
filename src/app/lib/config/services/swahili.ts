@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import latin from '../../../components/ThemeProvider/typography/scripts/latin';
+import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import brandSVG from '../../chameleonLogos/swahili';
 import '#psammead/moment-timezone-include/tz/Africa/Nairobi';
 import '#psammead/psammead-locales/moment/sw';
@@ -112,6 +112,13 @@ export const service: DefaultServiceConfig = {
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/swahili',
         },
+      },
+      byline: {
+        articleInformation: 'Maelezo kuhusu taarifa',
+        listItemImage: 'Orodha,Picha',
+        published: 'Iliyochapishwa',
+        reportingFrom: 'Akiripoti kutoka',
+        role: 'Nafasi',
       },
       consentBanner: {
         privacy: {
@@ -253,12 +260,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: `Ruhusu maudhui? (Mitandao ya kijamii)`,
           body: `Mkala hii imebeba madhui yaliyotoka kwenye mitandao ya kijamii. Tunaomba ruhusa yako kabla kitu chochote hakija pakiwa, sababu wanaweza wakawa wanatumia Cookies na tekinolojia nyingine. Unaweza ukasoma sera sera ya kutumia cookies katika mitandao ya kijamii kabla ya kukubali. Kutazama maudhui haya chagua accept and continue`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
           button: 'Bonyeza kisha endelea',
         },
       },
@@ -334,10 +335,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Habari',
         url: '/swahili',
-      },
-      {
-        title: 'Uchaguzi Kenya',
-        url: '/swahili/habari-61042508',
       },
       {
         title: 'Michezo',

@@ -64,6 +64,8 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
+import Byline from './Byline';
+import getAuthorTwitterHandle from './getAuthorTwitterHandle';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from './PagePromoSections/RelatedContentSection';
 
@@ -127,28 +129,6 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
 
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
 
-  const componentsToRender = {
-    visuallyHiddenHeadline,
-    headline: headings,
-    subheadline: headings,
-    audio: articleMediaPlayer,
-    video: articleMediaPlayer,
-    text,
-    image: props => (
-      <Image
-        {...props}
-        sizes="(min-width: 1008px) 760px, 100vw"
-        shouldPreload={preloadLeadImageToggle}
-      />
-    ),
-    timestamp: props => <Timestamp {...props} popOut={false} />,
-    social: SocialEmbedContainer,
-    group: gist,
-    links: props => <ScrollablePromo {...props} />,
-    mpu: props =>
-      isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
-  };
-
   const headline = getHeadline(pageData);
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
@@ -157,6 +137,44 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const topics = path(['metadata', 'topics'], pageData);
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
   const startsWithHeading = propEq('type', 'headline')(blocks[0] || {});
+  const hasByline = blocks.find(block => block.type === 'byline');
+
+  const articleAuthorTwitterHandle = hasByline
+    ? getAuthorTwitterHandle(blocks)
+    : null;
+
+  const componentsToRender = {
+    visuallyHiddenHeadline,
+    headline: headings,
+    subheadline: headings,
+    audio: articleMediaPlayer,
+    video: articleMediaPlayer,
+    text,
+    byline: props =>
+      hasByline ? (
+        <Byline {...props}>
+          <Timestamp
+            firstPublished={new Date(firstPublished).getTime()}
+            lastPublished={new Date(lastPublished).getTime()}
+            popOut={false}
+          />
+        </Byline>
+      ) : null,
+    image: props => (
+      <Image
+        {...props}
+        sizes="(min-width: 1008px) 760px, 100vw"
+        shouldPreload={preloadLeadImageToggle}
+      />
+    ),
+    timestamp: props =>
+      hasByline ? null : <Timestamp {...props} popOut={false} />,
+    social: SocialEmbedContainer,
+    group: gist,
+    links: props => <ScrollablePromo {...props} />,
+    mpu: props =>
+      isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
+  };
 
   const visuallyHiddenBlock = {
     id: null,
@@ -206,6 +224,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         articleId={getArticleId(pageData)}
         title={headline}
         author={articleAuthor}
+        twitterHandle={articleAuthorTwitterHandle}
         firstPublished={firstPublished}
         lastPublished={lastPublished}
         section={getArticleSection(pageData)}

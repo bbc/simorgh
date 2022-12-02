@@ -9,7 +9,6 @@ import getMostWatchedEndpoint from '#lib/utilities/getUrlHelpers/getMostWatchedU
 import getSecondaryColumnUrl from '#lib/utilities/getUrlHelpers/getSecondaryColumnUrl';
 import getRecommendationsUrl from '#lib/utilities/getUrlHelpers/getRecommendationsUrl';
 import { SECONDARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
-import isLive from '#lib/utilities/isLive';
 import getAgent from '#server/utilities/getAgent/index';
 import nodeLogger from '#lib/logger.node';
 import { DATA_FETCH_ERROR } from '#lib/logger.const';
@@ -24,7 +23,7 @@ const logger = nodeLogger(__filename);
 
 // 004_brasil_recommendations_experiment
 const getRecommendations = (service, assetUri) => {
-  if (service !== 'portuguese' || isLive()) {
+  if (service !== 'portuguese') {
     const UNIRECS_ALLOW_LIST = ['indonesia', 'mundo', 'turkce'];
 
     return [

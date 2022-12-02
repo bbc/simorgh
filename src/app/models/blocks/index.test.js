@@ -9,6 +9,7 @@ import {
   imageBlock,
   rawImageModel,
   simpleListBlock,
+  bylineBlock,
 } from '.';
 
 const testModel = {
@@ -221,5 +222,75 @@ describe('High order blocks', () => {
     };
     const generatedBlock = videoBlock(testModel, testModel);
     expect(generatedBlock).toEqual(testJson);
+  });
+});
+
+describe('Byline block', () => {
+  test('generates a byline block json', () => {
+    const testJson = {
+      type: 'byline',
+      model: {
+        blocks: [
+          {
+            type: 'contributor',
+            model: {
+              blocks: [
+                {
+                  type: 'link',
+                  locator: 'urn:bbc:twitter:user:@mary_harper',
+                  model: {
+                    blocks: [
+                      {
+                        type: 'text',
+                        model: {
+                          blocks: [
+                            {
+                              type: 'paragraph',
+                              model: {
+                                text: '@mary_harper',
+                                blocks: [
+                                  {
+                                    type: 'urlLink',
+                                    model: {
+                                      text: '@mary_harper',
+                                      locator:
+                                        'https://twitter.com/mary_harper',
+                                      blocks: [
+                                        {
+                                          type: 'fragment',
+                                          model: {
+                                            text: '@mary_harper',
+                                            attributes: [],
+                                          },
+                                          id: 'testId',
+                                        },
+                                      ],
+                                    },
+                                    id: 'testId',
+                                  },
+                                ],
+                              },
+                              id: 'testId',
+                            },
+                          ],
+                        },
+                        id: 'testId',
+                      },
+                    ],
+                  },
+                  id: 'testId',
+                },
+              ],
+            },
+            id: 'testId',
+          },
+        ],
+      },
+      id: 'testId',
+    };
+
+    const block = bylineBlock('mary_harper', 'testId');
+
+    expect(block).toEqual(testJson);
   });
 });
