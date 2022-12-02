@@ -26,7 +26,7 @@ interface Props {
   width?: number;
 }
 
-type requestContext = {
+interface requestContext {
   pageType?: string;
 };
 
