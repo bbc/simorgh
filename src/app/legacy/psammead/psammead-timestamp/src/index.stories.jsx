@@ -1,11 +1,12 @@
-import { storiesOf } from '@storybook/react';
+import React from 'react';
+import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
 import { text, select, boolean, withKnobs } from '@storybook/addon-knobs';
 import * as typography from '#psammead/gel-foundations/src/typography';
 import {
   withServicesKnob,
   themes,
 } from '#psammead/psammead-storybook-helpers/src';
-import { latin } from '#psammead/gel-foundations/src/scripts';
+import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import notes from '../README.md';
 import Timestamp from '.';
 

@@ -1,7 +1,9 @@
 /* eslint-disable no-console */
+import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { render } from '@testing-library/react';
-import { latin, arabic } from '#psammead/gel-foundations/src/scripts';
+import latin from '../../../../components/ThemeProvider/fontScripts/latin';
+import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import SectionLabel from './index';
 
 describe('SectionLabel', () => {

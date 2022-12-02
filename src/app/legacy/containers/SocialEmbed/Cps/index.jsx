@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import Lazyload from 'react-lazyload';
 import {
@@ -6,11 +6,11 @@ import {
   CanonicalSocialEmbed,
 } from '#psammead/psammead-social-embed/src';
 import { RequestContext } from '#contexts/RequestContext';
-import { ServiceContext } from '#contexts/ServiceContext';
 import nodeLogger from '#lib/logger.node';
 import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
 import { GridItemMedium } from '#components/Grid';
 import { cpsSocialEmbedBlockPropTypes } from '#models/propTypes/socialEmbed';
+import { ServiceContext } from '../../../../contexts/ServiceContext';
 import createTranslations from '../common/translations';
 import { LAZYLOAD_OFFSET, Wrapper } from '../common/styles';
 
@@ -28,7 +28,7 @@ const CpsSocialEmbedContainer = ({ blocks }) => {
   const id = path(['id'], model);
   const href = path(['href'], model);
 
-  if (!href) return null;
+  if (!id || !href) return null;
 
   const oEmbed = path(['embed', 'oembed'], model);
 

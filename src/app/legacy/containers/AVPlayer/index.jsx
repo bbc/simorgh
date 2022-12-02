@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { string, bool, func, oneOf } from 'prop-types';
 import styled from '@emotion/styled';
 import {
@@ -17,7 +17,7 @@ import AudioLoader from '#components/MediaPlayer/AudioLoader';
 
 import { CanonicalMediaPlayer, AmpMediaPlayer } from '#components/MediaPlayer';
 import { RequestContext } from '#contexts/RequestContext';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const Wrapper = styled.div`
   ${props => !props.hasBottomPadding && `padding-bottom: ${GEL_SPACING_DBL};`}

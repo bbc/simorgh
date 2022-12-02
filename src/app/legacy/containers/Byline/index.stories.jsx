@@ -1,7 +1,8 @@
+import React from 'react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import BylineContainer from '.';
 

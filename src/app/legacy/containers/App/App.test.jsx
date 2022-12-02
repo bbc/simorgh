@@ -1,3 +1,4 @@
+import React from 'react';
 import reactRouterConfig from 'react-router-config';
 import { render, act } from '@testing-library/react';
 import getToggles from '#app/lib/utilities/getToggles';

@@ -28,7 +28,7 @@ export default ({ service, pageType, variant }) => {
 
       // Gets the topic page data for all the tests
       cy.request(
-        `https://web-cdn.api.bbci.co.uk/fd/simorgh-bff?id=${topicId}&service=${service}${appendVariant}`,
+        `https://web-cdn.api.bbci.co.uk/fd/simorgh-bff?page=1&id=${topicId}&service=${service}${appendVariant}`,
       ).then(({ body }) => {
         topicTitle = body.data.title;
         variantTopicId = body.data.variantTopicId;
@@ -45,7 +45,22 @@ export default ({ service, pageType, variant }) => {
         cy.get('h1').should('contain', topicTitle);
       });
       it('should render the correct number of items', () => {
-        cy.log(numberOfItems);
+        // Print SIMORGH_DATA if the number of promos on the page does not match
+        // the number of promos in the data from the BFF
+        // This is to help find out why sometimes a promo doesn't show on the page
+        cy.log(`Number of promos in BFF data${numberOfItems}`);
+        const selector = '[data-testid="topic-promos"] > li';
+        const promoCount = Cypress.$(selector).length;
+        cy.log(`Number of promos on the page${promoCount}`);
+
+        if (promoCount !== numberOfItems) {
+          cy.window().then(win => {
+            const pageData = win.SIMORGH_DATA;
+
+            cy.log(pageData);
+          });
+        }
+
         // Checks number of items on page
         cy.get('[data-testid="topic-promos"]')
           .children()

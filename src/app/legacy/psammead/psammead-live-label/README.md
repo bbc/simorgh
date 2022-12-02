@@ -28,7 +28,7 @@ The `LiveLabel` component implements a span for use on live content.
 ```jsx
 import LiveLabel from '#psammead/psammead-live-label/src';
 import { Headline, Link } from '#psammead/psammead-story-promo/src';
-import { latin } from '#psammead/gel-foundations/src/scripts';
+import latin from '../../../components/ThemeProvider/fontScripts/latin';
 
 <Headline script={latin} service="news">
   <Link href="https://www.bbc.co.uk/news">

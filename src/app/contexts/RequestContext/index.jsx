@@ -1,4 +1,4 @@
-import { createContext } from 'react';
+import React from 'react';
 import { bool, node, oneOf, string, number } from 'prop-types';
 import * as pageTypes from '#app/routes/utils/pageTypes';
 import mvtExperimentPropType from '#models/propTypes/mvtExperiment';
@@ -9,7 +9,7 @@ import getOriginContext from './getOriginContext';
 import getEnv from './getEnv';
 import getMetaUrls from './getMetaUrls';
 
-export const RequestContext = createContext({});
+export const RequestContext = React.createContext({});
 
 export const RequestContextProvider = ({
   children,

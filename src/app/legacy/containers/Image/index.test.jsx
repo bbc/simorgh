@@ -1,3 +1,4 @@
+import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
 import {
   shouldMatchSnapshot,
@@ -5,7 +6,7 @@ import {
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
 import { blockContainingText, blockArrayModel } from '#models/blocks';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import ImageContainer from './index';
 
 describe('Image', () => {

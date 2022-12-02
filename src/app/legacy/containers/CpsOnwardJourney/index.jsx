@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import {
   arrayOf,
   shape,
@@ -28,9 +28,9 @@ import { C_GHOST } from '#psammead/psammead-styles/src/colours';
 
 import { storyItem } from '#models/propTypes/storyItem';
 import { RequestContext } from '#contexts/RequestContext';
-import { ServiceContext } from '#contexts/ServiceContext';
 import Grid, { GridWrapper, GridItemLarge } from '#components/Grid';
 import { MOST_WATCHED_PAGE } from '#app/routes/utils/pageTypes';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import SkipLinkWrapper from '../../components/SkipLinkWrapper';
 
 const LargeGridColumns = {
@@ -167,7 +167,6 @@ const CpsOnwardJourney = ({
   parentColumns,
   promoListComponent: PromoListComponent,
   promoComponent: PromoComponent,
-  imageComponent,
   sectionLabelOverrideAs,
   sectionLabelBar,
   sectionLabelBackground,
@@ -227,7 +226,6 @@ const CpsOnwardJourney = ({
               promo={singleContent}
               dir={dir}
               eventTrackingData={eventTrackingData}
-              imageComponent={imageComponent}
             />
           </SingleContentWrapper>
         ) : (
@@ -236,7 +234,6 @@ const CpsOnwardJourney = ({
             dir={dir}
             isMediaContent={isMediaContent}
             eventTrackingData={eventTrackingData}
-            imageComponent={imageComponent}
           />
         )}
       </OptionallyRenderedSkipWrapper>
@@ -273,7 +270,6 @@ CpsOnwardJourney.propTypes = {
   eventTrackingData: shape({
     componentName: string,
   }),
-  imageComponent: elementType,
 };
 
 CpsOnwardJourney.defaultProps = {
@@ -288,7 +284,6 @@ CpsOnwardJourney.defaultProps = {
   sectionLabelBackground: C_GHOST,
   skipLink: null,
   eventTrackingData: null,
-  imageComponent: undefined,
 };
 
 export default CpsOnwardJourney;

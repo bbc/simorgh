@@ -1,3 +1,4 @@
+import React from 'react';
 import { render } from '@testing-library/react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import Idt2Amp from './Idt2Amp';

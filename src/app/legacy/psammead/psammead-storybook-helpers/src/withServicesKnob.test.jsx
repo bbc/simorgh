@@ -1,6 +1,8 @@
 import { render, waitFor } from '@testing-library/react';
 import * as knobs from '@storybook/addon-knobs';
-import { latin, arabic, chinese } from '#psammead/gel-foundations/src/scripts';
+import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
+import chinese from '../../../../components/ThemeProvider/fontScripts/noAscOrDesc';
+import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import withServicesKnob from './withServicesKnob';
 import TEXT_VARIANTS from './text-variants';
 

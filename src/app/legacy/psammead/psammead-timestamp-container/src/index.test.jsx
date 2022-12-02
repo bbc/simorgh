@@ -1,10 +1,11 @@
+import React from 'react';
 import {
   isNull,
   shouldMatchSnapshot,
 } from '#psammead/psammead-test-helpers/src';
 import { render } from '@testing-library/react';
-import { latin } from '#psammead/gel-foundations/src/scripts';
 import moment from 'moment';
+import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/psammead-locales/moment/ha';
 import Timestamp from '.';
 

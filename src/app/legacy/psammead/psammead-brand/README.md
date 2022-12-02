@@ -64,7 +64,7 @@ import SkipLink from '#psammead/psammead-brand/src/skip-link';
 import { igbo } from '#psammead/psammead-assets/src/svgs';
 import ScriptLink from '#psammead/psammead-script-link/src';
 import { C_POSTBOX, C_WHITE } from '#psammead/psammead-styles/src/colours';
-import { latin } from '#psammead/gel-foundations/src/scripts';
+import latin from '../../../components/ThemeProvider/fontScripts/latin';
 
 const scriptLink = (
   <ScriptLink

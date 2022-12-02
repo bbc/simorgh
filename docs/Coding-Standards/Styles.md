@@ -6,6 +6,97 @@ We use a library called [Emotion](https://emotion.sh/docs/introduction) for writ
 
 It is recommended to look over [Emotion's best practices](https://emotion.sh/docs/best-practices) for recommendations on how to best use this library.
 
+## Use the `css` prop from Emotion with object styles rather than the `styled` API.
+
+When Simorgh and Psammead components were first created, they used Styled Components rather than Emotion for attaching styles to components. When we migrated to Emotion we didn't have to remove use of Styled Component's `styled` API because Emotion provides support for this API. Now that we are building components with new standards there is the opportunity to use [Emotion's primary method to style components](https://emotion.sh/docs/css-prop) - the `css` prop.
+
+Here are some of the benefits of using the `css` prop:
+
+- The Emotion docs state that using the CSS prop is the primary way to style components. This puts us in a good position if Emotion ever decides to drop support for the `styled` API
+- With the styled API you're more likely to pollute the DOM with incorrect attributes — a common problem when passing props to styled components to achieve dynamic styles.
+- The CSS object is typechecked and provides autocompletion for the CSS property with a description of the property and all possible values e.g. you type `display` and autocomplete gives you a list to choose from `block, flex, inline-flex, grid` etc. TypeScript will also highlight an incorrect value for a property and fail a type check.
+- Naming components using the `styled` API (e.g. `StyledWrapper`, `StyledDateTime`, `StyledSpan`) can be burdensome especially when applying small custom styles, such as altering margins or padding. This results in many components which lack the obvious semantic importance you get when using the actual HTML elements. Using the `css` prop avoids having to create and name React components for every element that needs styles.
+- Style reuse is easier because you can pass in an array of style objects to the css prop
+
+**NB**
+To use Emotion's css prop in TypeScript components we will need to specify the JSX factory at the top of every file. This is because Simorgh currently uses React's old JSX transform. More information can be found here https://emotion.sh/docs/typescript#with-the-old-jsx-transform.
+
+Simorgh cannot currently use the new JSX transform because it is not supported in Opera Mini.
+
+**Usage**
+
+`css` prop with object styles
+
+✅
+
+```jsx
+/** @jsx jsx */
+import { css, jsx } from '@emotion/react';
+
+const styles = {
+  wrapper: css({
+    backgroundColor: 'white',
+    border: '1px solid #eee',
+    borderRadius: '0.5rem',
+    padding: '1rem',
+  }),
+
+  title: css({
+    fontSize: '1.25rem',
+  }),
+};
+
+const Promo = ({ title, children }) => (
+  <div css={styles.wrapper}>
+    <h5 css={styles.title}>{title}</h5>
+    {children}
+  </div>
+);
+```
+
+Using an array for style reuse or applying one off styles to override default styles
+
+✅
+
+```jsx
+const Promo = ({ title, children }) => (
+  <div css={styles.wrapper}>
+    <h5 css={[styles.title, css({ fontSize: '2rem' })]}>{title}</h5>
+    {children}
+  </div>
+);
+```
+
+Getting access to the theme in styles
+
+✅
+
+```jsx
+/** @jsx jsx */
+import { css, jsx } from '@emotion/react';
+
+const styles = {
+  wrapper: css({
+    backgroundColor: 'white',
+    border: '1px solid #eee',
+    borderRadius: '0.5rem',
+    padding: '1rem',
+  }),
+  title: theme =>
+    css({
+      color: theme.colours.primary,
+      fontSize: '1.25rem',
+    }),
+};
+
+const Promo = ({ title, children }) => (
+  <div css={styles.wrapper}>
+    <h5 css={styles.title}>{title}</h5>
+    {children}
+  </div>
+);
+```
+
 ## LTR/RTL design
 
 ### When using margins, paddings, borders, use logical CSS properties
@@ -137,142 +228,30 @@ Using the media queries provided in the `theme` object means our breakpoints wil
 ❌
 
 ```js
-const StyledWrapper = styled.div`
-  padding: ${({ theme }) => theme.spacings.HLF};
-
-  @media (min-width: 40rem) { {
-    padding: ${({ theme }) => theme.spacings.FULL};
-  }
-`;
+const styles = {
+  wrapper: theme =>
+    css({
+      padding: theme.spacings.HALF,
+      '@media (min-width: 40rem)': {
+        padding: theme.spacings.FULL,
+      },
+    }),
+};
 ```
 
 ✅
 
 ```js
-const StyledWrapper = styled.div`
-  padding: ${({ theme }) => theme.spacings.HLF};
-
-  ${({ theme }) => css`
-    ${theme.mq.medium} {
-      padding: ${theme.spacings.FULL};
-    }
-  `};
-`;
+const styles = {
+  wrapper: theme =>
+    css({
+      padding: theme.spacings.HALF,
+      [theme.mq.GROUP_3_MIN_WIDTH]: {
+        padding: theme.spacings.FULL,
+      },
+    }),
+};
 ```
-
-## CSS-in-JS: For style reusability, extend styled components rather than keeping styles in reusable functions or variables
-
-### Why?
-
-It is better for performance when sharing styles by extending components with Emotion’s `styled`
-method than it is to keep reusable styles in functions or variables.
-
-By extending a styled component with `styled`, Emotion shares the CSS class name from the extended component and creates a new CSS class name for the new styles.
-
-For example:
-
-✅
-
-```js
-const Paragraph = styled.p`
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSans, Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: rgb(63, 63, 66);
-  padding-bottom: 1.5rem;
-  margin: 0px;
-`;
-
-const RedParagraph = styled(Paragraph)`
-  color: red;
-`;
-```
-
-When the CSS and class names are generated, it will look something like this:
-
-```css
-.paragraph {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSans, Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: rgb(63, 63, 66);
-  padding-bottom: 1.5rem;
-  margin: 0px;
-}
-
-.red-paragraph {
-  color: red;
-}
-```
-
-```html
-<p class="paragraph red-paragraph">Some text</p>
-```
-
-In the above example, `Paragraph` is the component being extended so it has all of the paragraph styles but with a red colour. The `class` attribute on the HTML element will then include both the `paragraph` and the `red-paragraph` class names. This is the most performant way to share styles.
-
-Previously, we’ve done something different with shared typography styles which creates a lot of duplicated CSS:
-
-❌
-
-```js
-const getSansRegular = () => `
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSans, Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: rgb(63, 63, 66);
-  padding-bottom: 1.5rem;
-  margin: 0px;
-`;
-
-const Paragraph = styled.p`
-  ${getSansRegular()}
-`;
-
-const RedParagraph = styled.p`
-  color: red;
-  ${getSansRegular()}
-`;
-```
-
-This creates the following CSS and class names:
-
-```css
-.paragraph {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSans, Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: rgb(63, 63, 66);
-  padding-bottom: 1.5rem;
-  margin: 0px;
-}
-
-.red-paragraph {
-  color: red;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSans, Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: rgb(63, 63, 66);
-  padding-bottom: 1.5rem;
-  margin: 0px;
-}
-```
-
-```html
-<p class="red-paragraph">Some text</p>
-```
-
-Note we now have duplicated styles and no common class name that elements can share to inherit styles. This bloats the CSS which degrades performance and can cause some of our pages to exceed AMP’s 75kB stylesheet limit and cause AMP pages to be invalid.
 
 ## CSS-in-JS: Be aware that passing props to styled components will generate a new class for different arguments
 

@@ -12,4 +12,10 @@ exports[`LinkedData should correctly render linked data for front pages 1`] = `<
 
 exports[`LinkedData should correctly render linked data for radio pages 1`] = `<div />`;
 
+exports[`LinkedData should correctly render publisherLogo for news 1`] = `<div />`;
+
+exports[`LinkedData should correctly render publisherLogo for non-news services 1`] = `<div />`;
+
+exports[`LinkedData should correctly render publisherLogo for sport 1`] = `<div />`;
+
 exports[`LinkedData showAuthor should exclude author from article when false 1`] = `<div />`;

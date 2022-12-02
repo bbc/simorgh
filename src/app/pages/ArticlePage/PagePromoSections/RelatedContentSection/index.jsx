@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { shape, arrayOf, string } from 'prop-types';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import pathOr from 'ramda/src/pathOr';
@@ -6,8 +6,8 @@ import pathEq from 'ramda/src/pathEq';
 import tail from 'ramda/src/tail';
 import slice from 'ramda/src/slice';
 import identity from 'ramda/src/identity';
-import { ServiceContext } from '#app/contexts/ServiceContext';
 import { C_GREY_2 } from '#psammead/psammead-styles/src/colours';
+import { ServiceContext } from '../../../../contexts/ServiceContext';
 import {
   RelatedContentGrid,
   StyledRelatedContentSection,

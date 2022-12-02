@@ -1,3 +1,4 @@
+import React from 'react';
 import { render } from '@testing-library/react';
 import {
   MEDIA_ASSET_PAGE,
@@ -7,7 +8,8 @@ import {
   shouldMatchSnapshot,
   isNull,
 } from '#psammead/psammead-test-helpers/src';
-import { latin, arabic } from '#psammead/gel-foundations/src/scripts';
+import latin from '../../../../components/ThemeProvider/fontScripts/latin';
+import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import MediaIndicator from '.';
 
 const audioItem = {

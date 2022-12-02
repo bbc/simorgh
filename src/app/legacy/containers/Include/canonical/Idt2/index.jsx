@@ -1,4 +1,5 @@
 /* eslint-disable react/no-danger */
+import React from 'react';
 import { string, shape, number } from 'prop-types';
 import styled from '@emotion/styled';
 

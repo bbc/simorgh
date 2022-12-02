@@ -1,8 +1,8 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { string, shape } from 'prop-types';
 import { ConsentBannerText } from '#psammead/psammead-consent-banner/src';
 import { RequestContext } from '#contexts/RequestContext';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const BannerText = ({ uk, international }) => {
   const { isUK } = useContext(RequestContext);

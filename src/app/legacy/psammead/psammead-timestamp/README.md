@@ -31,7 +31,7 @@ When a date or time is to be displayed inline inside a paragraph.
 ## Usage
 
 ```jsx
-import { latin } from '#psammead/gel-foundations/src/scripts';
+import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import { getPica } from '#psammead/gel-foundations/src/typography';
 
 const WrappingContainer = () => (

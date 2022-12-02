@@ -1,13 +1,13 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { string } from 'prop-types';
 import styled from '@emotion/styled';
 import { Headline, SubHeading } from '#psammead/psammead-headings/src';
 import { textDefaultPropTypes } from '#models/propTypes';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { headlineModelPropTypes } from '#models/propTypes/headline';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import { GridItemMedium, GridItemLarge } from '#components/Grid';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import Fragment from '../Fragment';
 import InlineContainer from '../InlineContainer';
 import Blocks from '../Blocks';

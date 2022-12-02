@@ -1,3 +1,4 @@
+import React from 'react';
 import { bool, element, string, number, object } from 'prop-types';
 import path from 'ramda/src/path';
 import variantPropType from '#models/propTypes/variants';
@@ -5,11 +6,11 @@ import { pageDataPropType } from '#models/propTypes/data';
 import mvtExperimentPropType from '#models/propTypes/mvtExperiment';
 
 // context providers
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { UserContextProvider } from '#contexts/UserContext';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 
 const WithContexts = Component => {
   const WithContextsContainer = props => {

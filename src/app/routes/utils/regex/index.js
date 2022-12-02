@@ -1,4 +1,4 @@
-import services from '#lib/config/services/loadableConfig';
+import services from '../../../lib/config/services/loadableConfig';
 import {
   getArticleRegex,
   getArticleSwRegex,
@@ -12,7 +12,6 @@ import {
   getPodcastBrandRegex,
   getOnDemandRadioRegex,
   getOnDemandTvRegex,
-  getTemporaryTopicPageRegex,
   getTopicPageRegex,
   getErrorPageRegex,
   getLegacyAssetRegex,
@@ -58,7 +57,6 @@ export const podcastBrandDataPath = `${podcastBrandPath}.json`;
 export const onDemandTvPath = getOnDemandTvRegex(allServices);
 export const onDemandTvDataPath = `${onDemandTvPath}.json`;
 
-export const temporaryTopicPath = getTemporaryTopicPageRegex(allServices);
 export const topicPath = getTopicPageRegex(allServices);
 export const topicDataPath = `${topicPath}.json`;
 

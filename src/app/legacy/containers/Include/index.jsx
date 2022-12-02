@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { string, bool, number } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 
@@ -6,9 +6,9 @@ import EmbedError from '#psammead/psammead-embed-error/src';
 import nodeLogger from '#lib/logger.node';
 import { INCLUDE_RENDERED } from '#lib/logger.const';
 import { RequestContext } from '#contexts/RequestContext';
-import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import { GridItemMedium } from '#components/Grid';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 import Canonical from './canonical';
 import Idt2Canonical from './canonical/Idt2';

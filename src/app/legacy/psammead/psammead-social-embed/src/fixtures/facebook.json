@@ -1,0 +1,24 @@
+{
+  "href": "https://www.facebook.com/BBCnewsMarathi/videos/568952960644257",
+  "source": "facebook",
+  "embed": {
+    "oembed": {
+      "version": "1.0",
+      "author_name": "BBC News Marathi",
+      "author_url": "https://www.facebook.com/BBCnewsMarathi/",
+      "provider_name": "Facebook",
+      "provider_url": "https://www.facebook.com",
+      "url": "https://www.facebook.com/BBCnewsMarathi/videos/568952960644257",
+      "html": "<div class=\"fb-video\" data-href=\"https://www.facebook.com/BBCnewsMarathi/videos/568952960644257\"><blockquote cite=\"https://www.facebook.com/BBCnewsMarathi/videos/568952960644257/\" class=\"fb-xfbml-parse-ignore\"><a href=\"https://www.facebook.com/BBCnewsMarathi/videos/568952960644257/\"></a><p>जनता कर्फ्यूला टाळ्या आणि शंखनादाची साथ</p>Posted by <a href=\"https://www.facebook.com/BBCnewsMarathi/\">BBC News Marathi</a> on Sunday, March 22, 2020</blockquote></div>",
+      "width": 500,
+      "height": 889
+    },
+    "fallback_image": {
+      "fallback_image_width": 550,
+      "fallback_image_height": 1069,
+      "alt_text": "Facebook post by BBC News Marathi: जनता कर्फ्यूला टाळ्या आणि शंखनादाची साथ"
+    }
+  },
+  "id": "568952960644257",
+  "type": "social_embed"
+}

@@ -1,6 +1,6 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const ManifestContainer = () => {
   const { manifestPath, service } = useContext(ServiceContext);

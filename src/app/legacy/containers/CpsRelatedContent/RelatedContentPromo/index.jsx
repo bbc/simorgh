@@ -1,15 +1,11 @@
-import { shape, string, oneOfType, elementType } from 'prop-types';
+import React from 'react';
+import { shape, string, oneOfType } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
 import useViewTracker from '#hooks/useViewTracker';
 import Grid from '../../../components/Grid';
 import StoryPromo from '../../StoryPromo';
 
-const RelatedContentPromo = ({
-  promo,
-  dir,
-  eventTrackingData,
-  imageComponent,
-}) => {
+const RelatedContentPromo = ({ promo, dir, eventTrackingData }) => {
   const viewRef = useViewTracker(eventTrackingData);
 
   return (
@@ -29,7 +25,6 @@ const RelatedContentPromo = ({
         item={promo}
         dir={dir}
         eventTrackingData={eventTrackingData}
-        imageComponent={imageComponent}
       />
     </Grid>
   );
@@ -41,12 +36,10 @@ RelatedContentPromo.propTypes = {
   eventTrackingData: shape({
     componentName: string,
   }),
-  imageComponent: elementType,
 };
 
 RelatedContentPromo.defaultProps = {
   eventTrackingData: null,
-  imageComponent: undefined,
 };
 
 export default RelatedContentPromo;

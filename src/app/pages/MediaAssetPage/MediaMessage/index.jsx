@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import styled from '@emotion/styled';
 import {
@@ -14,10 +14,10 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 
 import { MediaMessage } from '#components/MediaPlayer';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { GridItemLarge } from '#components/Grid';
 import nodeLogger from '#lib/logger.node';
 import { NO_TRANSLATION_FOUND } from '#lib/logger.const';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const logger = nodeLogger(__filename);
 

@@ -1,5 +1,6 @@
-import { ServiceContextProvider } from '#contexts/ServiceContext';
+import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import IndexHeading from '.';
 
 const IndexHeadingWithContext = (service, pageType) => (

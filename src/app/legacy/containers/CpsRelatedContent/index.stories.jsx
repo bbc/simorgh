@@ -1,4 +1,5 @@
-import { ServiceContextProvider } from '#contexts/ServiceContext';
+import React from 'react';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 
 import newsData from '#data/news/cpsAssets/uk-55808266.json';
 import pidginData from '#data/pidgin/cpsAssets/tori-49450859.json';

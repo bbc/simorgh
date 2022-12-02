@@ -1,13 +1,16 @@
+import React from 'react';
 import { render, waitFor } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import {
   articleDataNews,
   articleDataPersian,
+  articleDataPidginWithByline,
 } from '#pages/ArticlePage/fixtureData';
+import getAuthorTwitterHandle from '#app/pages/ArticlePage/getAuthorTwitterHandle';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import ArticleMetadata from './index';
 
 const getISOStringDate = date => new Date(date).toISOString();
@@ -42,6 +45,13 @@ const propsForNewsInternational = {
   mentionsTags: articleDataNews.metadata.tags.mentions,
   lang: articleDataNews.metadata.passport.language,
   description: articleDataNews.promo.headlines.seoHeadline,
+};
+
+const propsForNewsInternationalWithByline = {
+  ...propsForNewsInternational,
+  twitterHandle: getAuthorTwitterHandle(
+    articleDataPidginWithByline.content.model.blocks,
+  ),
 };
 
 it('should render the article tags', async () => {
@@ -125,6 +135,22 @@ it('should render the article section meta tag if section provided', async () =>
   });
 });
 
+it("should render the twitter creator meta tag with the author's handle if provided in the byline", async () => {
+  render(
+    <Context service="news">
+      <ArticleMetadata {...propsForNewsInternationalWithByline} />
+    </Context>,
+  );
+
+  await waitFor(() => {
+    expect(
+      document
+        .querySelector('meta[name="twitter:creator"]')
+        .getAttribute('content'),
+    ).toEqual('@mary_harper');
+  });
+});
+
 shouldMatchSnapshot(
   'should match snapshot for News & International',
   <Context service="news">
@@ -151,5 +177,12 @@ shouldMatchSnapshot(
       lang={articleDataPersian.metadata.passport.language}
       description={articleDataPersian.promo.headlines.seoHeadline}
     />
+  </Context>,
+);
+
+shouldMatchSnapshot(
+  'should match snapshot for News article with provided author twitter handle',
+  <Context service="news">
+    <ArticleMetadata {...propsForNewsInternationalWithByline} />
   </Context>,
 );

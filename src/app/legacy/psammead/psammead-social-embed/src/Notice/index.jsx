@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import React, { memo } from 'react';
 import { string } from 'prop-types';
 import styled from '@emotion/styled';
 import {
@@ -80,7 +80,9 @@ const Notice = ({
 
   return (
     <Wrapper service={service}>
-      <p>{detokenise(text, dictionary)}</p>
+      <p data-testid="social-embed-fallback-title">
+        {detokenise(text, dictionary)}
+      </p>
       <a
         href={linkHref}
         aria-label={

@@ -1,5 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 
+import React from 'react';
 import { render, act } from '@testing-library/react';
 import styled from '@emotion/styled';
 import ContentAnchor from '.';

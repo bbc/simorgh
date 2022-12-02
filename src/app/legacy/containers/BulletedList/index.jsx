@@ -1,13 +1,13 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import pick from 'ramda/src/pick';
 import BulletedList from '#psammead/psammead-bulleted-list/src';
 import { GEL_SPACING_TRPL } from '#psammead/gel-foundations/src/spacings';
 import { arrayOf, shape, oneOf, string } from 'prop-types';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { GridItemMedium } from '#components/Grid';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import Blocks from '../Blocks';
 import listItem, { ListItemPropTypes } from '../BulletedListItem';
 

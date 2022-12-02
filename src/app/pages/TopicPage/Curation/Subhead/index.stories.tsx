@@ -1,16 +1,16 @@
 import React from 'react';
-
 import { withKnobs } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import { withServicesKnob } from '../../../../legacy/psammead/psammead-storybook-helpers/src';
 
 import services from '../../../../../server/utilities/serviceConfigs';
+import { Services, Variants } from '../../../../models/types/global';
 
 import Subheading from '.';
 
 interface Props {
-  service: string;
-  variant: string;
+  service: Services;
+  variant: Variants;
 }
 
 const Component = ({ service, variant }: Props) => {
@@ -26,7 +26,7 @@ const Component = ({ service, variant }: Props) => {
 const WithLink = ({ service, variant }: Props) => {
   return (
     <ServiceContextProvider service={service} variant={variant}>
-      <Subheading href="https://bbc.com">
+      <Subheading link="https://bbc.com">
         {services[service][variant].translations.relatedContent}
       </Subheading>
     </ServiceContextProvider>

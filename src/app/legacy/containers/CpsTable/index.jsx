@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { arrayOf, shape, string, oneOf } from 'prop-types';
 
@@ -6,7 +6,7 @@ import { GEL_BODY_COPY } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { textBlockPropTypes } from '#models/propTypes/text';
 
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import Blocks from '../Blocks';
 import CpsTableRow from './CpsTableRow';
 

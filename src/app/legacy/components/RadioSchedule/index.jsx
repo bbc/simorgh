@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import {
@@ -8,7 +8,7 @@ import {
 import { grid } from '#psammead/psammead-styles/src/detection';
 import Grid from '#psammead/psammead-grid/src';
 import { arrayOf, number, shape, string } from 'prop-types';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import ProgramCard from './ProgramCard';
 import StartTime from './StartTime';
 

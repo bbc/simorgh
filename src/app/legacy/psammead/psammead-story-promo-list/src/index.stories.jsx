@@ -1,8 +1,9 @@
+import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { boolean, withKnobs } from '@storybook/addon-knobs';
 import Timestamp from '#psammead/psammead-timestamp/src';
 import Image from '#psammead/psammead-image/src';
-import { latin } from '#psammead/gel-foundations/src/scripts';
+import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import StoryPromo, {
   Headline,
   Summary,

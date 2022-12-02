@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { node } from 'prop-types';
 import IndexHeading from '#psammead/psammead-heading-index/src';
@@ -12,7 +12,7 @@ import {
   GEL_SPACING,
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const StyledIndexHeading = styled(IndexHeading)`
   padding-bottom: ${GEL_SPACING_TRPL};

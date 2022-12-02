@@ -1,3 +1,4 @@
+import React from 'react';
 import { render, fireEvent, getByText } from '@testing-library/react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import Placeholder from '.';

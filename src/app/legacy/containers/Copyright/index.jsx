@@ -1,8 +1,8 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { string } from 'prop-types';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import Copyright from '#psammead/psammead-copyright/src';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const CopyrightContainer = ({ children }) => {
   const { dir, imageCopyrightOffscreenText, lang } = useContext(ServiceContext);

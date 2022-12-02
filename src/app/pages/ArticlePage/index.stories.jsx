@@ -1,9 +1,10 @@
+import React from 'react';
 import { MemoryRouter } from 'react-router';
 import { withKnobs } from '@storybook/addon-knobs';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import articleData from '#data/news/articles/c0g992jmmkko';
 import articleDataWithRelatedContent from '#data/afrique/articles/c7yn6nznljdo';

@@ -1,8 +1,8 @@
+import React from 'react';
 import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';
 import dotenv from 'dotenv';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
-import getToggles from '#app/lib/utilities/getToggles/withCache';
 import defaultToggles from '#lib/config/toggles';
 import loggerMock from '#testHelpers/loggerMock';
 import {
@@ -25,6 +25,7 @@ dotenv.config({ path: './envConfig/local.env' });
 const path = require('path');
 const express = require('express');
 const server = require('./index').default;
+const getToggles = require('../app/lib/utilities/getToggles/withCache').default;
 
 const sendFileSpy = jest.spyOn(express.response, 'sendFile');
 
@@ -816,6 +817,13 @@ describe('Server', () => {
       expect(sendFileSpy.mock.calls.length).toEqual(0);
       expect(statusCode).toEqual(500);
     });
+
+    it('should serve the sw.js with cache control information', async () => {
+      const { header } = await makeRequest('/pidgin/sw.js');
+      expect(header['cache-control']).toBe(
+        'public, stale-if-error=6000, stale-while-revalidate=300, max-age=300',
+      );
+    });
   });
 
   describe('Manifest json', () => {
@@ -831,6 +839,7 @@ describe('Server', () => {
       expect(sendFileSpy.mock.calls.length).toEqual(0);
       expect(statusCode).toEqual(500);
     });
+
     it('should serve a response cache control of 7 days', async () => {
       const { header } = await makeRequest('/news/articles/manifest.json');
       expect(header['cache-control']).toBe('public, max-age=604800');
@@ -1382,26 +1391,6 @@ describe('Server HTTP Headers - Status Endpoint', () => {
   it(`should have X-XSS-Protection set to '1; mode=block' `, () => {
     validateHttpHeader(statusRequest.headers, 'x-xss-protection', '0');
   });
-
-  describe("should set 'x-clacks-overhead' header", () => {
-    it('should send the message on', async () => {
-      validateHttpHeader(
-        statusRequest.headers,
-        'x-clacks-overhead',
-        'GNU Terry Pratchett',
-      );
-    });
-
-    it('should not log the message', async () => {
-      global.console.log = jest.fn();
-
-      await makeRequest('/status');
-
-      expect(global.console.log).not.toHaveBeenCalledWith(
-        'GNU Terry Pratchett',
-      );
-    });
-  });
 });
 
 describe('Server HTTP Headers - Page Endpoints', () => {
@@ -1422,6 +1411,12 @@ describe('Server HTTP Headers - Page Endpoints', () => {
     expect(header['cache-control']).toBe(
       'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
     );
+  });
+
+  it(`should set a Referrer-Policy header`, async () => {
+    const { header } = await makeRequest('/mundo');
+
+    expect(header['referrer-policy']).toBe('no-referrer-when-downgrade');
   });
 
   it(`should add mvt experiment header names to vary if they are enabled`, async () => {

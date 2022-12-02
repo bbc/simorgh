@@ -1,4 +1,4 @@
-import { forwardRef, useContext } from 'react';
+import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { string, node, number } from 'prop-types';
 import GRID from '#psammead/psammead-grid/src';
@@ -16,9 +16,9 @@ import {
   GEL_MARGIN_ABOVE_400PX,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
-const Grid = forwardRef((props, ref) => {
+const Grid = React.forwardRef((props, ref) => {
   const { dir } = useContext(ServiceContext);
 
   return <GRID dir={dir} {...props} ref={ref} />;

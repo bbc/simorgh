@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { bool, number } from 'prop-types';
 import { C_PEBBLE, C_METAL } from '#psammead/psammead-styles/src/colours';
@@ -7,7 +7,7 @@ import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
 
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const smallScreenMargin = `
   @media(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {

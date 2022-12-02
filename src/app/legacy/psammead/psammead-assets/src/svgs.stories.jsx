@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from '@emotion/styled';
 import { node, number, shape } from 'prop-types';
 import { storiesOf } from '@storybook/react';

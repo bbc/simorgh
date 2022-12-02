@@ -1,12 +1,12 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import moment from 'moment-timezone';
 import { shape, bool, string } from 'prop-types';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import pathOr from 'ramda/src/pathOr';
 import pick from 'ramda/src/pick';
-import { ServiceContext } from '#contexts/ServiceContext';
 import formatDuration from '#lib/utilities/formatDuration';
 import { storyItem } from '#models/propTypes/storyItem';
+import { ServiceContext } from '../../../../contexts/ServiceContext';
 import { isPgl, isMap } from '../utilities';
 
 const LinkContents = ({ item, isInline, id }) => {

@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from '@emotion/styled';
 import { string, bool } from 'prop-types';
 import { getSansBold } from '#psammead/psammead-styles/src/font-styles';

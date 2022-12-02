@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING_DBL,
@@ -37,7 +37,7 @@ import {
   getLastPublished,
 } from '#lib/utilities/parseAssetData';
 import RelatedTopics from '#containers/RelatedTopics';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 
 const PhotoGalleryPageGrid = ({ children, ...props }) => (
   <GelPageGrid

@@ -217,88 +217,74 @@ Object {
 exports[`AMP Story Page Header Navigation link should match text and url 2`] = `
 Object {
   "text": "América Latina",
-  "url": "/mundo/america_latina",
+  "url": "/mundo/topics/c7zp57yyz25t",
 }
 `;
 
 exports[`AMP Story Page Header Navigation link should match text and url 3`] = `
 Object {
   "text": "Internacional",
-  "url": "/mundo/internacional",
+  "url": "/mundo/topics/c2lej05epw5t",
 }
 `;
 
 exports[`AMP Story Page Header Navigation link should match text and url 4`] = `
 Object {
-  "text": "Medio ambiente",
-  "url": "/mundo/noticias-58984987",
+  "text": "Qatar 2022",
+  "url": "/mundo/topics/c36v5eq58ngt",
 }
 `;
 
 exports[`AMP Story Page Header Navigation link should match text and url 5`] = `
-Object {
-  "text": "Coronavirus",
-  "url": "/mundo/topics/c67q9nnn8z7t",
-}
-`;
-
-exports[`AMP Story Page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "Hay Festival",
   "url": "/mundo/noticias-36795069",
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 7`] = `
+exports[`AMP Story Page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "Economía",
   "url": "/mundo/topics/c06gq9v4xp3t",
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 8`] = `
+exports[`AMP Story Page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "Ciencia",
   "url": "/mundo/topics/ckdxnw959n7t",
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 9`] = `
+exports[`AMP Story Page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "Salud",
   "url": "/mundo/topics/cpzd498zkxgt",
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 10`] = `
+exports[`AMP Story Page Header Navigation link should match text and url 9`] = `
 Object {
   "text": "Cultura",
   "url": "/mundo/topics/c2dwq9zyv4yt",
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 11`] = `
+exports[`AMP Story Page Header Navigation link should match text and url 10`] = `
 Object {
   "text": "Tecnología",
   "url": "/mundo/topics/cyx5krnw38vt",
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 12`] = `
-Object {
-  "text": "Video",
-  "url": "/mundo/media/video",
-}
-`;
-
-exports[`AMP Story Page Header Navigation link should match text and url 13`] = `
+exports[`AMP Story Page Header Navigation link should match text and url 11`] = `
 Object {
   "text": "Centroamérica Cuenta",
   "url": "/mundo/noticias-43826245",
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 14`] = `
+exports[`AMP Story Page Header Navigation link should match text and url 12`] = `
 Object {
   "text": "BBC Extra",
   "url": "/mundo/noticias-48908206",

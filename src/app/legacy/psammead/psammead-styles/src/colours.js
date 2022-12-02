@@ -44,7 +44,7 @@ export const C_GREY_8 = '#202224';
 
 // Colours introduced by Chameleon
 export const C_DIM_GREY = '#696969';
-export const C_PHILIPPINE_GREY = '#8A8C8E';
 export const C_GREY_3 = '#E6E8EA';
+export const C_GREY_5 = '#8A8C8E';
 export const C_GREY_10 = '#141414';
 export const C_GREY_11 = '#BABABA';

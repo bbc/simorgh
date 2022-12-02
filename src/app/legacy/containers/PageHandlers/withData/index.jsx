@@ -1,8 +1,8 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { element, string, number } from 'prop-types';
 import ErrorPage from '#pages/ErrorPage/ErrorPage';
 import { pageDataPropType } from '#models/propTypes/data';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContext } from '../../../../contexts/ServiceContext';
 import shouldRender from './shouldRender';
 
 const WithData = Component => {

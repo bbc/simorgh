@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import { string, bool } from 'prop-types';
 import styled from '@emotion/styled';
@@ -14,13 +14,13 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '#psammead/gel-foundations/src/spacings';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { GridItemLargeNoMargin } from '#components/Grid';
 import {
   mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
 import filterForBlockType from '#lib/utilities/blockHandlers';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import MediaPlayerContainer from '../MediaPlayer';
 import getAssetUri from './utils/getAssetUri';
 

@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { arrayOf, shape, number, oneOf, oneOfType, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
@@ -7,7 +7,6 @@ import {
   StoryPromoUl,
 } from '#psammead/psammead-story-promo-list/src';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
-import { ServiceContext } from '#contexts/ServiceContext';
 import useViewTracker from '#hooks/useViewTracker';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -17,6 +16,7 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import FrostedGlassPromo from '../../components/FrostedGlassPromo/lazy';
 
