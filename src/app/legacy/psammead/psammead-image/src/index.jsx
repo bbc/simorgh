@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { number, oneOfType, string, bool, func } from 'prop-types';
 import styled from '@emotion/styled';
 import { keyframes, css } from '@emotion/react';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
@@ -47,12 +46,11 @@ export const Img = props => {
     ...otherProps
   } = props;
 
-  const { service } = useContext(ServiceContext);
   const requestContext = useContext(RequestContext);
 
   return (
     <StyledPicture onLoad={onLoad}>
-      {!(service === 'hindi' && requestContext.pageType !== FRONT_PAGE) && srcset && (
+      {requestContext.pageType !== FRONT_PAGE && srcset && (
          <source srcSet={srcset} type={primaryMimeType} sizes={sizes} />
        )}
       {fallbackSrcset && (
