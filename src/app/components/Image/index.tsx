@@ -26,6 +26,10 @@ interface Props {
   width?: number;
 }
 
+type RequestContext = {
+  pageType?: string;
+};
+
 const DEFAULT_ASPECT_RATIO = [16, 9];
 const roundNumber = (num: number) => Math.round(num * 100) / 100;
 const getLegacyBrowserAspectRatio = (x: number, y: number) =>
