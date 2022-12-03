@@ -32,6 +32,7 @@ interface Props {
 }
 
 interface RequestContextType {
+  [key: string]: any;
   pageType?: string;
 }
 
@@ -75,6 +76,16 @@ const Image = ({
   const hasFallback = srcSet && fallbackSrcSet;
   const ImageWrapper = hasFallback ? 'picture' : Fragment;
   const ampImgLayout = hasDimensions ? 'responsive' : 'fill';
+  const getImgSrcSet = () => {
+  	if (!hasFallback) return srcSet;
+    else if (requestContext.pageType !== FRONT_PAGE) return fallbackSrcSet;
+    return undefined;
+  };
+  const getImgSizes = () => {
+  	if ((!hasFallback && srcSet) || requestContext.pageType !== FRONT_PAGE) return sizes;
+    return undefined;
+  };
+  
 
   return (
     <>
@@ -137,11 +148,9 @@ const Image = ({
           </>
         ) : (
           <ImageWrapper>
-            {hasFallback && (
+            {hasFallback && requestContext.pageType === FRONT_PAGE && (
               <>
-                {requestContext.pageType !== FRONT_PAGE && (
-                  <source srcSet={srcSet} type={mediaType} sizes={sizes} />
-                )}
+                <source srcSet={srcSet} type={mediaType} sizes={sizes} />
                 <source
                   srcSet={fallbackSrcSet}
                   type={fallbackMediaType}
@@ -152,8 +161,8 @@ const Image = ({
             <img
               onLoad={() => setIsLoaded(true)}
               src={src}
-              srcSet={!hasFallback ? srcSet : undefined}
-              sizes={!hasFallback && srcSet ? sizes : undefined}
+              srcSet={getImgSrcSet()}
+              sizes={getImgSizes()}
               alt={alt}
               loading={lazyLoad ? 'lazy' : undefined}
               width={width}

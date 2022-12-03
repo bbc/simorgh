@@ -49,15 +49,31 @@ export const Img = props => {
   const requestContext = useContext(RequestContext);
 
   return (
-    <StyledPicture onLoad={onLoad}>
-      {requestContext.pageType !== FRONT_PAGE && srcset && (
-        <source srcSet={srcset} type={primaryMimeType} sizes={sizes} />
+    <>
+      {requestContext.pageType === FRONT_PAGE && (
+        <StyledPicture onLoad={onLoad}>
+          {srcset && (
+            <source srcSet={srcset} type={primaryMimeType} sizes={sizes} />
+          )}
+          {fallbackSrcset && (
+            <source
+              srcSet={fallbackSrcset}
+              type={fallbackMimeType}
+              sizes={sizes}
+            />
+          )}
+          <StyledImg src={src} {...otherProps} />
+        </StyledPicture>
       )}
-      {fallbackSrcset && (
-        <source srcSet={fallbackSrcset} type={fallbackMimeType} sizes={sizes} />
+      {requestContext.pageType !== FRONT_PAGE && (
+        <StyledImg
+          sizes={sizes}
+          srcSet={fallbackSrcset}
+          src={src}
+          {...otherProps}
+        />
       )}
-      <StyledImg src={src} {...otherProps} />
-    </StyledPicture>
+    </>
   );
 };
 
