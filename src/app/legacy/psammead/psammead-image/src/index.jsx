@@ -51,8 +51,8 @@ export const Img = props => {
   return (
     <StyledPicture onLoad={onLoad}>
       {requestContext.pageType !== FRONT_PAGE && srcset && (
-         <source srcSet={srcset} type={primaryMimeType} sizes={sizes} />
-       )}
+        <source srcSet={srcset} type={primaryMimeType} sizes={sizes} />
+      )}
       {fallbackSrcset && (
         <source srcSet={fallbackSrcset} type={fallbackMimeType} sizes={sizes} />
       )}

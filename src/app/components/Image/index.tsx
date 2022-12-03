@@ -1,6 +1,11 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import React, { Fragment, PropsWithChildren, useState, useContext } from 'react';
+import React, {
+  Fragment,
+  PropsWithChildren,
+  useState,
+  useContext,
+} from 'react';
 import { Global, jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import styles from './index.styles';
@@ -56,8 +61,7 @@ const Image = ({
   src,
   width,
 }: PropsWithChildren<Props>) => {
-
-  const requestContext : RequestContextType = useContext(RequestContext);
+  const requestContext: RequestContextType = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
   const showPlaceholder = placeholder && !isLoaded;
   const hasDimensions = width && height;
@@ -137,7 +141,7 @@ const Image = ({
             {hasFallback && (
               <>
                 {requestContext.pageType !== FRONT_PAGE && (
-                	<source srcSet={srcSet} type={mediaType} sizes={sizes} />
+                  <source srcSet={srcSet} type={mediaType} sizes={sizes} />
                 )}
                 <source
                   srcSet={fallbackSrcSet}
