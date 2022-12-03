@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import snapshotTests from './testHelpers/snapshotTests';
 import { landscape } from './testHelpers/fixtureData';
