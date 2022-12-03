@@ -32,7 +32,6 @@ interface Props {
 }
 
 interface RequestContextType {
-  [key: string]: any;
   pageType?: string;
 }
 
