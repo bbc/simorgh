@@ -76,15 +76,15 @@ const Image = ({
   const ImageWrapper = hasFallback ? 'picture' : Fragment;
   const ampImgLayout = hasDimensions ? 'responsive' : 'fill';
   const getImgSrcSet = () => {
-  	if (!hasFallback) return srcSet;
-    else if (requestContext.pageType !== FRONT_PAGE) return fallbackSrcSet;
+    if (!hasFallback) return srcSet;
+    if (requestContext.pageType !== FRONT_PAGE) return fallbackSrcSet;
     return undefined;
   };
   const getImgSizes = () => {
-  	if ((!hasFallback && srcSet) || requestContext.pageType !== FRONT_PAGE) return sizes;
+    if ((!hasFallback && srcSet) || requestContext.pageType !== FRONT_PAGE)
+      return sizes;
     return undefined;
   };
-  
 
   return (
     <>
