@@ -11,12 +11,7 @@ const ServiceWorkerContainer = () => {
       swPath && onClient() && 'serviceWorker' in navigator;
 
     if (shouldInstallServiceWorker) {
-      navigator.serviceWorker.register(`/${service}${swPath}`).then((registration) => {
-            console.log('Service worker registration succeeded:', registration);
-          }, (error) => {
-            console.log('Service worker registration failed:', error);
-          }
-      );
+      navigator.serviceWorker.register(`/${service}${swPath}`);
     }
   }, [envIsProduction, swPath, service]);
 
