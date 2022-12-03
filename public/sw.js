@@ -7,7 +7,7 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('fetch', function(event) {
-  if (self.registration.scope.indexOf('/hindi/') && /^https:\/\/ichef\.bbci\.co\.uk\/news\/.+(\.jpg|\.png)$/.test(event.request.url)) {
+  if (/^https:\/\/ichef\.bbci\.co\.uk\/news\/.+(\.jpg|\.png)$/.test(event.request.url)) {
 
     const req = event.request.clone();
 
@@ -29,7 +29,6 @@ self.addEventListener('fetch', function(event) {
   else if (event.request.destination === 'font') {
     event.respondWith(caches.open(cacheName).then(cache => {
       return cache.match(event.request).then(cachedResponse => {
-        console.log('cachedResponse', cachedResponse);
         return cachedResponse || fetch(event.request.url).then((fetchedResponse) => {
           cache.put(event.request, fetchedResponse.clone());
           return fetchedResponse;
