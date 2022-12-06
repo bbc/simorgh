@@ -28,7 +28,8 @@ const BLOCKS_TO_IGNORE = ['wsoj', 'mpu'];
 const removeCustomBlocks = pipe(
   filter(block => !BLOCKS_TO_IGNORE.includes(block.type)),
   last,
-);const renderRelatedContentList = (item, index, eventTrackingData, viewRef) => {
+);
+const renderRelatedContentList = (item, index, eventTrackingData, viewRef) => {
   const assetUri = pathOr(
     '',
     [
