@@ -23,7 +23,7 @@ import RelatedContentItem from './RelatedContentItem';
 
 const BLOCKS_TO_IGNORE = ['wsoj', 'mpu'];
 
-const filterContent = pipe(
+const removeCustomBlocks = pipe(
   filter(block => !BLOCKS_TO_IGNORE.includes(block.type)),
   last,
 );
@@ -63,13 +63,13 @@ const renderRelatedContentList = (item, index) => {
 const RelatedContentSection = ({ content }) => {
   const { translations, script, service } = useContext(ServiceContext);
 
-  const filteredContent = filterContent(content);
+  const blocks = removeCustomBlocks(content);
 
-  if (!pathEq(['type'], 'relatedContent', filteredContent)) return null;
+  if (!pathEq(['type'], 'relatedContent', blocks)) return null;
 
-  if (!filteredContent) return null;
+  if (!blocks) return null;
 
-  const items = pathOr([], ['model', 'blocks'], filteredContent);
+  const items = pathOr([], ['model', 'blocks'], blocks);
   const LABEL_ID = 'related-content-heading';
 
   const customTitle =
