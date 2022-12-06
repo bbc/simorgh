@@ -23,6 +23,9 @@ import {
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
+import ThemeProvider from '../../components/ThemeProvider';
+
+jest.mock('../../components/ThemeProvider');
 
 jest.mock('#containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
@@ -42,31 +45,33 @@ const Context = ({
   showAdsBasedOnLocation = false,
 } = {}) => (
   <BrowserRouter>
-    <ToggleContextProvider
-      toggles={{
-        mostRead: {
-          enabled: mostReadToggledOn,
-        },
-        ads: {
-          enabled: adsToggledOn,
-        },
-      }}
-    >
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.co.uk"
-        id="c0000000000o"
-        isAmp={false}
-        pageType={ARTICLE_PAGE}
-        pathname="/pathname"
-        service={service}
-        statusCode={200}
-        showAdsBasedOnLocation={showAdsBasedOnLocation}
+    <ThemeProvider service={service} variant="default">
+      <ToggleContextProvider
+        toggles={{
+          mostRead: {
+            enabled: mostReadToggledOn,
+          },
+          ads: {
+            enabled: adsToggledOn,
+          },
+        }}
       >
-        <ServiceContextProvider service={service}>
-          {children}
-        </ServiceContextProvider>
-      </RequestContextProvider>
-    </ToggleContextProvider>
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.co.uk"
+          id="c0000000000o"
+          isAmp={false}
+          pageType={ARTICLE_PAGE}
+          pathname="/pathname"
+          service={service}
+          statusCode={200}
+          showAdsBasedOnLocation={showAdsBasedOnLocation}
+        >
+          <ServiceContextProvider service={service}>
+            {children}
+          </ServiceContextProvider>
+        </RequestContextProvider>
+      </ToggleContextProvider>
+    </ThemeProvider>
   </BrowserRouter>
 );
 
@@ -99,7 +104,8 @@ it('should use headline for meta description if summary does not exist', async (
   });
 });
 
-it('should use the twitter handle where present in the byline block', async () => {
+it.only('should use the twitter handle where present in the byline block', async () => {
+  console.log(articleDataPidginWithByline);
   render(
     <Context service="pidgin">
       <ArticlePage pageData={articleDataPidginWithByline} />
