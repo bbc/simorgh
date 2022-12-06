@@ -104,8 +104,7 @@ it('should use headline for meta description if summary does not exist', async (
   });
 });
 
-it.only('should use the twitter handle where present in the byline block', async () => {
-  console.log(articleDataPidginWithByline);
+it('should use the twitter handle where present in the byline block', async () => {
   render(
     <Context service="pidgin">
       <ArticlePage pageData={articleDataPidginWithByline} />
