@@ -6,6 +6,10 @@ import pathEq from 'ramda/src/pathEq';
 import tail from 'ramda/src/tail';
 import slice from 'ramda/src/slice';
 import identity from 'ramda/src/identity';
+import last from 'ramda/src/last';
+import filter from 'ramda/src/filter';
+import pipe from 'ramda/src/pipe';
+
 import { C_GREY_2 } from '#psammead/psammead-styles/src/colours';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import {
@@ -16,6 +20,13 @@ import {
 } from './index.styles';
 import generatePromoId from '../generatePromoId';
 import RelatedContentItem from './RelatedContentItem';
+
+const BLOCKS_TO_IGNORE = ['wsoj', 'mpu'];
+
+const removeCustomBlocks = pipe(
+  filter(block => !BLOCKS_TO_IGNORE.includes(block.type)),
+  last,
+);
 
 const renderRelatedContentList = (item, index) => {
   const assetUri = pathOr(
@@ -52,11 +63,13 @@ const renderRelatedContentList = (item, index) => {
 const RelatedContentSection = ({ content }) => {
   const { translations, script, service } = useContext(ServiceContext);
 
-  if (!pathEq(['type'], 'relatedContent', content)) return null;
+  const blocks = removeCustomBlocks(content);
 
-  if (!content) return null;
-  const items = pathOr([], ['model', 'blocks'], content);
+  if (!pathEq(['type'], 'relatedContent', blocks)) return null;
 
+  if (!blocks) return null;
+
+  const items = pathOr([], ['model', 'blocks'], blocks);
   const LABEL_ID = 'related-content-heading';
 
   const customTitle =
