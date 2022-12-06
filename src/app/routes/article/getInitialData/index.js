@@ -79,6 +79,7 @@ export default async ({ getAgent, path, pageType, service, variant }) => {
     'afrique',
     'afaanoromoo',
     'amharic',
+    'arabic',
     'azeri',
     'amharic',
     'bengali',
