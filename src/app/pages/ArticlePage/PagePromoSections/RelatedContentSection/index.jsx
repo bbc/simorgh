@@ -29,6 +29,7 @@ const removeCustomBlocks = pipe(
   filter(block => !BLOCKS_TO_IGNORE.includes(block.type)),
   last,
 );
+
 const renderRelatedContentList = (item, index, eventTrackingData, viewRef) => {
   const assetUri = pathOr(
     '',
