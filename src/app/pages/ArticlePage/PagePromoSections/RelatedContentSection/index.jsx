@@ -7,6 +7,10 @@ import path from 'ramda/src/path';
 import tail from 'ramda/src/tail';
 import slice from 'ramda/src/slice';
 import identity from 'ramda/src/identity';
+import last from 'ramda/src/last';
+import filter from 'ramda/src/filter';
+import pipe from 'ramda/src/pipe';
+
 import { C_GREY_2 } from '#psammead/psammead-styles/src/colours';
 import useViewTracker from '#hooks/useViewTracker';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
@@ -19,7 +23,12 @@ import {
 import generatePromoId from '../generatePromoId';
 import RelatedContentItem from './RelatedContentItem';
 
-const renderRelatedContentList = (item, index, eventTrackingData, viewRef) => {
+const BLOCKS_TO_IGNORE = ['wsoj', 'mpu'];
+
+const removeCustomBlocks = pipe(
+  filter(block => !BLOCKS_TO_IGNORE.includes(block.type)),
+  last,
+);const renderRelatedContentList = (item, index) => {
   const assetUri = pathOr(
     '',
     [
@@ -66,12 +75,13 @@ const RelatedContentSection = ({ content }) => {
   };
   const eventTrackingDataSend = path(['block'], eventTrackingData);
   const viewRef = useViewTracker(eventTrackingDataSend);
+   const blocks = removeCustomBlocks(content);
 
-  if (!pathEq(['type'], 'relatedContent', content)) return null;
+  if (!pathEq(['type'], 'relatedContent', blocks)) return null;
 
-  if (!content) return null;
-  const items = pathOr([], ['model', 'blocks'], content);
+  if (!blocks) return null;
 
+  const items = pathOr([], ['model', 'blocks'], blocks);
   const LABEL_ID = 'related-content-heading';
 
   const customTitle =
