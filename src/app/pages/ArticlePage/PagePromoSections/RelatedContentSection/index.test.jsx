@@ -10,6 +10,8 @@ import {
   RelatedContentList,
   RelatedContentSingleItem,
   RelatedContentCustomLabel,
+  RelatedContentListWithMPU,
+  RelatedContentListWithWSOJ,
 } from './fixture';
 
 jest.mock('../../../../components/ThemeProvider');
@@ -90,6 +92,26 @@ describe('Optimo Related Content Promo', () => {
 
     expect(listItems.length).toBe(0);
     expect(list).toBeNull();
+  });
+
+  it('should render Related Content Ul if MPU block is the last block', () => {
+    const { container } = render(
+      <RelatedContentSectionFixture fixtureData={RelatedContentListWithMPU} />,
+    );
+    const listItems = screen.getAllByRole('listitem');
+    const list = container.querySelector('ul');
+    expect(listItems.length).toBe(3);
+    expect(list).toBeInTheDocument();
+  });
+
+  it('should render Related Content Ul if WSOJ block is the last block', () => {
+    const { container } = render(
+      <RelatedContentSectionFixture fixtureData={RelatedContentListWithWSOJ} />,
+    );
+    const listItems = screen.getAllByRole('listitem');
+    const list = container.querySelector('ul');
+    expect(listItems.length).toBe(3);
+    expect(list).toBeInTheDocument();
   });
 });
 
