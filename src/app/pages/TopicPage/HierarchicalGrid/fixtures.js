@@ -1,4 +1,4 @@
-const pidginSummaries = [
+const pidginPromos = [
   {
     title: 'Wetin happun for January 6 one year ago?',
     type: 'article',
@@ -151,4 +151,4 @@ const pidginSummaries = [
   },
 ];
 
-export default pidginSummaries;
+export default pidginPromos;

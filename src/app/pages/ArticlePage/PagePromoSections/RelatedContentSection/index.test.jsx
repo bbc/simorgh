@@ -4,20 +4,27 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import * as viewTracking from '#hooks/useViewTracker';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
+import ThemeProvider from '../../../../components/ThemeProvider';
 import RelatedContentSection from '.';
 import {
   RelatedContentList,
   RelatedContentSingleItem,
   RelatedContentCustomLabel,
+  RelatedContentListWithMPU,
+  RelatedContentListWithWSOJ,
 } from './fixture';
+
+jest.mock('../../../../components/ThemeProvider');
 
 // eslint-disable-next-line react/prop-types
 const RelatedContentSectionFixture = ({ fixtureData, service = 'mundo' }) => (
-  <ServiceContextProvider service={service}>
-    <ToggleContextProvider>
-      <RelatedContentSection content={fixtureData} />
-    </ToggleContextProvider>
-  </ServiceContextProvider>
+  <ThemeProvider service={service} variant="default">
+    <ServiceContextProvider service={service}>
+      <ToggleContextProvider>
+        <RelatedContentSection content={fixtureData} />
+      </ToggleContextProvider>
+    </ServiceContextProvider>
+  </ThemeProvider>
 );
 
 describe('Optimo Related Content Promo', () => {
@@ -85,6 +92,26 @@ describe('Optimo Related Content Promo', () => {
 
     expect(listItems.length).toBe(0);
     expect(list).toBeNull();
+  });
+
+  it('should render Related Content Ul if MPU block is the last block', () => {
+    const { container } = render(
+      <RelatedContentSectionFixture fixtureData={RelatedContentListWithMPU} />,
+    );
+    const listItems = screen.getAllByRole('listitem');
+    const list = container.querySelector('ul');
+    expect(listItems.length).toBe(3);
+    expect(list).toBeInTheDocument();
+  });
+
+  it('should render Related Content Ul if WSOJ block is the last block', () => {
+    const { container } = render(
+      <RelatedContentSectionFixture fixtureData={RelatedContentListWithWSOJ} />,
+    );
+    const listItems = screen.getAllByRole('listitem');
+    const list = container.querySelector('ul');
+    expect(listItems.length).toBe(3);
+    expect(list).toBeInTheDocument();
   });
 });
 

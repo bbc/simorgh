@@ -538,7 +538,6 @@ describe('Image - AMP pages', () => {
         <amp-img
           alt="Test image alt text"
           layout="fill"
-          sizes="(max-width: 600px) 480px, 800px"
           src="/test-image-500.webp"
           srcset="/test-image-200.webp 200w, /test-image-500.webp 500w"
         >
