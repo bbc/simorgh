@@ -28,7 +28,7 @@ const BLOCKS_TO_IGNORE = ['wsoj', 'mpu'];
 const removeCustomBlocks = pipe(
   filter(block => !BLOCKS_TO_IGNORE.includes(block.type)),
   last,
-);const renderRelatedContentList = (item, index) => {
+);const renderRelatedContentList = (item, index, eventTrackingData, viewRef) => {
   const assetUri = pathOr(
     '',
     [
@@ -68,6 +68,7 @@ const removeCustomBlocks = pipe(
 const RelatedContentSection = ({ content }) => {
   const { translations, script, service } = useContext(ServiceContext);
 
+  const blocks = removeCustomBlocks(content);
   const eventTrackingData = {
     block: {
       componentName: 'related-content',
@@ -75,7 +76,6 @@ const RelatedContentSection = ({ content }) => {
   };
   const eventTrackingDataSend = path(['block'], eventTrackingData);
   const viewRef = useViewTracker(eventTrackingDataSend);
-   const blocks = removeCustomBlocks(content);
 
   if (!pathEq(['type'], 'relatedContent', blocks)) return null;
 
