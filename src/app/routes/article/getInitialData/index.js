@@ -75,7 +75,18 @@ const fetcher = ({ path, pageType, service, variant }) =>
   ]);
 
 export default async ({ getAgent, path, pageType, service, variant }) => {
-  const BFF_FETCH_ALLOWLIST = ['kyrgyz'];
+  const BFF_FETCH_ALLOWLIST = [
+    'afrique',
+    'afaanoromoo',
+    'amharic',
+    'azeri',
+    'amharic',
+    'bengali',
+    'burmese',
+    'gahuza',
+    'gujarati',
+    'kyrgyz',
+  ];
   const isBffFetch = BFF_FETCH_ALLOWLIST.includes(service);
 
   if (isBffFetch) {
