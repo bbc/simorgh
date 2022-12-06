@@ -162,11 +162,13 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
 
-  const fullStackVariation = useOptimizelyMvtVariation('full_stack_test');
+  const mvtVariation = useOptimizelyMvtVariation('test_2');
+  let mvtMessage;
 
-  if (fullStackVariation === 'Control_1') {
-    const fullStackMessage = `I am the Full Stack Experiment`;
-    return <h1>{fullStackMessage}</h1>;
+  if (mvtVariation === 'variation_1') {
+    mvtMessage = 'I am variation 1 of the mvt experiment';
+  } else if (mvtVariation === 'variation_2') {
+    mvtMessage = 'I am variation 2 of the mvt experiment';
   }
   /**
    * Should we display ads? We check:
@@ -388,6 +390,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           parentColumns={gridColumns}
         >
           <main role="main">
+            {mvtMessage && <p>{mvtMessage}</p>}
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
             <OptimizelyArticleCompleteTracking />
           </main>
