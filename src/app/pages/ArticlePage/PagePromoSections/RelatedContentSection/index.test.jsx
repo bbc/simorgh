@@ -116,6 +116,9 @@ describe('Optimo Related Content Promo', () => {
 });
 
 describe('Event Tracking', () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
   it('should implement 3 BLOCK level click trackers(1 for each promo item) and 0 link level click trackers', () => {
     const expected = {
       componentName: 'related-content',
@@ -157,5 +160,13 @@ describe('Event Tracking', () => {
     const [[blockLevelTracking]] = viewTrackerSpy.mock.calls;
 
     expect(blockLevelTracking).toEqual(expected);
+  });
+
+  it('should call view tracker once when multiple items are present', () => {
+    const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+
+    render(<RelatedContentSectionFixture fixtureData={RelatedContentList} />);
+
+    expect(viewTrackerSpy).toHaveBeenCalledTimes(1);
   });
 });

@@ -2,8 +2,10 @@ import React, { useContext } from 'react';
 import { arrayOf, shape } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
 import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
 import { C_GREY_2 } from '#psammead/psammead-styles/src/colours';
 import isEmpty from 'ramda/src/isEmpty';
+import useViewTracker from '#hooks/useViewTracker';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import {
   StyledSectionLabel,
@@ -14,7 +16,7 @@ import {
 import TopStoriesItem from './TopStoriesItem';
 import generatePromoId from '../generatePromoId';
 
-const renderTopStoriesList = (item, index) => {
+const renderTopStoriesList = (item, index, eventTrackingData, viewRef) => {
   const contentType = pathOr('', ['contentType'], item);
   const assetUri = pathOr('', ['locators', 'assetUri'], item);
   const uri = pathOr('', ['uri'], item);
@@ -29,13 +31,26 @@ const renderTopStoriesList = (item, index) => {
 
   return (
     <StyledPromoItem key={ariaLabelledBy}>
-      <TopStoriesItem item={item} ariaLabelledBy={ariaLabelledBy} />
+      <TopStoriesItem
+        item={item}
+        ariaLabelledBy={ariaLabelledBy}
+        ref={viewRef}
+        eventTrackingData={eventTrackingData}
+      />
     </StyledPromoItem>
   );
 };
 
 const TopStoriesSection = ({ content }) => {
   const { translations, script, service } = useContext(ServiceContext);
+
+  const eventTrackingData = {
+    block: {
+      componentName: 'top-stories',
+    },
+  };
+  const eventTrackingDataSend = path(['block'], eventTrackingData);
+  const viewRef = useViewTracker(eventTrackingDataSend);
 
   if (!content || isEmpty(content)) return null;
 
@@ -70,9 +85,18 @@ const TopStoriesSection = ({ content }) => {
       </StyledSectionLabel>
 
       {hasSingleContent ? (
-        <TopStoriesItem item={content[0]} ariaLabelledBy={ariaLabelledBy} />
+        <TopStoriesItem
+          item={content[0]}
+          ariaLabelledBy={ariaLabelledBy}
+          ref={viewRef}
+          eventTrackingData={eventTrackingData}
+        />
       ) : (
-        <StyledPromoList>{content.map(renderTopStoriesList)}</StyledPromoList>
+        <StyledPromoList>
+          {content.map((item, index) =>
+            renderTopStoriesList(item, index, eventTrackingData, viewRef),
+          )}
+        </StyledPromoList>
       )}
     </StyledTopStoriesSection>
   );
