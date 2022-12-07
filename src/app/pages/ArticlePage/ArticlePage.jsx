@@ -48,6 +48,7 @@ import MostReadSectionLabel from '#containers/MostRead/label';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
+import useOptimizelyMvtVariation from '#hooks/useOptimizelyMvtVariation';
 
 import {
   getArticleId,
@@ -120,6 +121,15 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const { articleAuthor, showRelatedTopics } = useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const { enabled: adsEnabled } = useToggle('ads');
+
+  const mvtVariation = useOptimizelyMvtVariation('test_2');
+  let mvtMessage;
+
+  if (mvtVariation === 'variation_1') {
+    mvtMessage = 'I am variation 1 of the mvt experiment';
+  } else if (mvtVariation === 'variation_2') {
+    mvtMessage = 'I am variation 2 of the mvt experiment';
+  }
 
   const isAdsEnabled = [
     path(['metadata', 'allowAdvertising'], pageData),
@@ -251,6 +261,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       {isAdsEnabled && <AdContainer slotType="leaderboard" />}
       <ArticlePageGrid>
         <Primary>
+          {mvtMessage && <p>{mvtMessage}</p>}
           <Main role="main">
             <Blocks
               blocks={articleBlocks}
