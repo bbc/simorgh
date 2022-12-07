@@ -261,8 +261,8 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       {isAdsEnabled && <AdContainer slotType="leaderboard" />}
       <ArticlePageGrid>
         <Primary>
-          {mvtMessage && <p>{mvtMessage}</p>}
           <Main role="main">
+            {mvtMessage && <p>{mvtMessage}</p>}
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
