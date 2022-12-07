@@ -1,7 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next",
+    "setupDevEnv": "cp ../envConfig/local.env .env",
+    "dev": "yarn setupDevEnv && next",
     "build": "next build",
     "start": "next start"
   },

@@ -41,7 +41,7 @@ type Props = {
   getAgent: () => Promise<Agent>;
   service: Services;
   path: string;
-  variant: Variants;
+  variant?: Variants;
 };
 
 export default async ({
