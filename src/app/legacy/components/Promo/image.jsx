@@ -21,7 +21,7 @@ const ChildWrapper = styled.div`
 const WEBP_ORIGIN_CODES = ['cpsdevpb', 'cpsprodpb'];
 
 const createSrcSet = (imageUrl, suffix = '') => {
-  const imageResolutions = [85, 120, 170, 232, 325, 450];
+  const imageResolutions = [85, 120, 170, 232, 325, 450, 660];
 
   return imageResolutions
     .map(res => `${imageUrl.replace(`{width}`, res)}${suffix} ${res}w`)
