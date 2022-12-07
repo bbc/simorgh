@@ -93,8 +93,9 @@ export default async ({ getAgent, path, pageType, service, variant }) => {
     'indonesia',
     'japanese',
     'korean',
-    'naidheachdan',
     'marathi',
+    'mundo',
+    'naidheachdan',
   ];
   const isBffFetch = BFF_FETCH_ALLOWLIST.includes(service);
 

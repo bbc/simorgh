@@ -1,171 +1,267 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::article:c45965g63xno",
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c45965g63xno"
-    },
-    "type": "article",
-    "createdBy": "Mundo",
-    "language": "es",
-    "lastUpdated": 1562941659639,
-    "firstPublished": 1562941654757,
-    "lastPublished": 1562941654757,
-    "options": {},
-    "analyticsLabels": {},
-    "passport": {
-      "language": "es",
-      "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo"
-    },
-    "tags": {},
-    "version": "v1.1.0",
-    "blockTypes": ["headline", "text", "paragraph", "fragment"]
-  },
-  "content": {
-    "model": {
-      "blocks": [
-        {
-          "type": "headline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "Islam en México: los indígenas chamulas que viven en Chiapas con tradiciones musulmanas",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "Islam en México: los indígenas chamulas que viven en Chiapas con tradiciones musulmanas",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "El islam llegó en San Cristobal de las Casas en la década de los 90 de la mano de unos españoles que querían unirse a la lucha zapatista.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "El islam llegó en San Cristobal de las Casas en la década de los 90 de la mano de unos españoles que querían unirse a la lucha zapatista.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
+  "data": {
+    "article": {
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "cfbf8b23",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "f700828a",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "fd3b4602",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Islam en México: los indígenas chamulas que viven en Chiapas con tradiciones musulmanas",
+                            "blocks": [
+                              {
+                                "id": "b74c75d6",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Islam en México: los indígenas chamulas que viven en Chiapas con tradiciones musulmanas",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      1,
+                      1
+                    ]
+                  }
+                ]
               },
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Su mensaje se asentó entre los chamulas y fue pasando entre las familias a lo largo de los años.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Su mensaje se asentó entre los chamulas y fue pasando entre las familias a lo largo de los años.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
+              "position": [
+                1
+              ]
+            },
+            {
+              "id": "970a28e0",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1562941654757,
+                "lastPublished": 1562941654757
               },
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Hoy hay al menos 300 personas que profesan su fe en Alá, ayunan durante el Ramadán y se niegan a beber alcohol.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Hoy hay al menos 300 personas que profesan su fe en Alá, ayunan durante el Ramadán y se niegan a beber alcohol.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
+              "position": [
+                2
+              ]
+            },
+            {
+              "id": "a6c81969",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "64c32b2b",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "El islam llegó en San Cristobal de las Casas en la década de los 90 de la mano de unos españoles que querían unirse a la lucha zapatista.",
+                      "blocks": [
+                        {
+                          "id": "39bf33f1",
+                          "type": "fragment",
+                          "model": {
+                            "text": "El islam llegó en San Cristobal de las Casas en la década de los 90 de la mano de unos españoles que querían unirse a la lucha zapatista.",
+                            "attributes": []
+                          },
+                          "position": [
+                            3,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      3,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "b22cbf03",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Su mensaje se asentó entre los chamulas y fue pasando entre las familias a lo largo de los años.",
+                      "blocks": [
+                        {
+                          "id": "fa39a344",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Su mensaje se asentó entre los chamulas y fue pasando entre las familias a lo largo de los años.",
+                            "attributes": []
+                          },
+                          "position": [
+                            3,
+                            2,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      3,
+                      2
+                    ]
+                  },
+                  {
+                    "id": "8fdfa6d6",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Hoy hay al menos 300 personas que profesan su fe en Alá, ayunan durante el Ramadán y se niegan a beber alcohol.",
+                      "blocks": [
+                        {
+                          "id": "c7e53780",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Hoy hay al menos 300 personas que profesan su fe en Alá, ayunan durante el Ramadán y se niegan a beber alcohol.",
+                            "attributes": []
+                          },
+                          "position": [
+                            3,
+                            3,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      3,
+                      3
+                    ]
+                  },
+                  {
+                    "id": "fddf1d69",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Ana Gabriela Rojas, corresponsal de BBC Mundo, estuvo en esa comunidad para conocer su historia.",
+                      "blocks": [
+                        {
+                          "id": "70f03b41",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Ana Gabriela Rojas, corresponsal de BBC Mundo, estuvo en esa comunidad para conocer su historia.",
+                            "attributes": []
+                          },
+                          "position": [
+                            3,
+                            4,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      3,
+                      4
+                    ]
+                  }
+                ]
               },
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Ana Gabriela Rojas, corresponsal de BBC Mundo, estuvo en esa comunidad para conocer su historia.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Ana Gabriela Rojas, corresponsal de BBC Mundo, estuvo en esa comunidad para conocer su historia.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+              "position": [
+                3
+              ]
+            },
+            {
+              "id": "e94f12c2",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                4
+              ]
+            }
+          ]
         }
-      ]
+      },
+      "metadata": {
+        "id": "urn:bbc:ares::article:c45965g63xno",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:c45965g63xno",
+          "canonicalUrl": "https://www.bbc.com/mundo/articles/c45965g63xno"
+        },
+        "type": "article",
+        "createdBy": "Mundo",
+        "language": "es",
+        "lastUpdated": 1646736831810,
+        "firstPublished": 1562941654757,
+        "lastPublished": 1562941654757,
+        "timestamp": 1562941654757,
+        "options": {},
+        "analyticsLabels": {
+          "contentId": "urn:bbc:optimo:asset:c45965g63xno",
+          "producer": "Mundo",
+          "page": "mundo.articles.c45965g63xno.page"
+        },
+        "passport": {
+          "language": "es",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.4",
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment"
+        ],
+        "readTime": 1,
+        "allowAdvertising": true
+      },
+      "promo": {
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:c45965g63xno",
+          "canonicalUrl": "https://www.bbc.com/mundo/articles/c45965g63xno"
+        },
+        "timestamp": 1562941654757,
+        "suitableForSyndication": false,
+        "language": "es",
+        "headlines": {
+          "seoHeadline": "Islam en México: los indígenas chamulas que viven en Chiapas con tradiciones musulmanas"
+        },
+        "images": {},
+        "passport": {
+          "language": "es",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+          "taggings": []
+        },
+        "id": "urn:bbc:ares::article:c45965g63xno",
+        "type": "optimo"
+      },
+      "relatedContent": {
+        "site": {
+          "subType": "site",
+          "name": "Mundo",
+          "uri": "/mundo",
+          "type": "simple"
+        },
+        "groups": []
+      }
+    },
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null
     }
   },
-  "promo": {
-    "headlines": {
-      "seoHeadline": "Islam en México: los indígenas chamulas que viven en Chiapas con tradiciones musulmanas"
-    },
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c45965g63xno"
-    },
-    "summary": {
-      "blocks": [
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": ""
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": ""
-                },
-                "type": "paragraph"
-              }
-            ]
-          },
-          "type": "text"
-        }
-      ]
-    },
-    "timestamp": 1562941654757,
-    "id": "urn:bbc:ares::article:c45965g63xno",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "site",
-      "name": "Mundo",
-      "uri": "/mundo",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }
