@@ -21,6 +21,7 @@ const ChildWrapper = styled.div`
 const WEBP_ORIGIN_CODES = ['cpsdevpb', 'cpsprodpb'];
 
 const createSrcSet = (imageUrl, suffix = '') => {
+  // use utils function???
   const imageResolutions = [85, 120, 170, 232, 325, 450, 660];
 
   return imageResolutions
@@ -29,6 +30,9 @@ const createSrcSet = (imageUrl, suffix = '') => {
 };
 
 const createSizes = () => {
+  // ? '(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px'
+  // : '(max-width: 1008px) 33vw, 321px';
+
   // 4 columns of fixed width
   const DESKTOP_SIZE = `(min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) 232px`;
 
@@ -55,7 +59,7 @@ const Image = props => {
     <Wrapper>
       <IMAGE
         {...rest}
-        src={src.replace('{width}', 240)}
+        src={src.replace('{width}', 660)}
         srcSet={primarySrcSet}
         mediaType={primaryMediaType}
         fallbackSrcSet={fallbackSrcSet}
