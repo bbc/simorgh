@@ -8,7 +8,7 @@ const ServiceWorkerContainer = () => {
 
   useEffect(() => {
     const shouldInstallServiceWorker =
-      envIsProduction && swPath && onClient() && 'serviceWorker' in navigator;
+      swPath && onClient() && 'serviceWorker' in navigator;
 
     if (shouldInstallServiceWorker) {
       navigator.serviceWorker.register(`/${service}${swPath}`);
