@@ -4,6 +4,7 @@
 import { jsx } from '@emotion/react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { ParsedUrlQuery } from 'querystring';
+import Heading from '../../../../src/app/components/Heading';
 import Paragraph from '../../../../src/app/components/Paragraph';
 import applyBasicPageHandlers from '../../../../src/app/pages/utils/applyBasicPageHandlers';
 import { Services } from '../../../../src/app/models/types/global';
@@ -33,6 +34,8 @@ type ComponentProps = {
 const LivePage = ({ pageData, status, service }: ComponentProps) => {
   const Component = applyBasicPageHandlers({ addVariantHandling: true })(() => (
     <main css={styles.wrapper}>
+      <Heading level={1}>Test Live Page</Heading>
+      <Paragraph fontVariant="sansBold">{status}</Paragraph>
       <Paragraph>{JSON.stringify(pageData.metadata, null, 4)}</Paragraph>
     </main>
   ));

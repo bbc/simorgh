@@ -2,6 +2,8 @@
   "private": true,
   "scripts": {
     "setupDevEnv": "cp ../envConfig/local.env .env",
+    "build:test": "cp ../envConfig/test.env .env && NODE_ENV=production",
+    "build:live": "cp ../envConfig/live.env .env && NODE_ENV=production",
     "dev": "yarn setupDevEnv && next",
     "build": "next build",
     "start": "next start"
