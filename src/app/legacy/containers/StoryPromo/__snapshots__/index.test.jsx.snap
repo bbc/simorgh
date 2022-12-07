@@ -773,22 +773,14 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
           style="padding-bottom: 56.25%;"
         >
           <picture>
-            <source
-              sizes="(max-width: 1008px) 33vw, 321px"
-              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
-              type="image/webp"
-            />
-            <source
-              sizes="(max-width: 1008px) 33vw, 321px"
-              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg 660w"
-              type="image/jpeg"
-            />
             <img
               alt="Image Alt text"
               class="emotion-7"
               height="1152"
               loading="lazy"
+              sizes="(max-width: 1008px) 33vw, 321px"
               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
+              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg 660w"
               width="2048"
             />
           </picture>
@@ -2531,22 +2523,14 @@ exports[`StoryPromo Container should render audio with no duration correctly for
           style="padding-bottom: 56.25%;"
         >
           <picture>
-            <source
-              sizes="(max-width: 1008px) 33vw, 321px"
-              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
-              type="image/webp"
-            />
-            <source
-              sizes="(max-width: 1008px) 33vw, 321px"
-              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg 660w"
-              type="image/jpeg"
-            />
             <img
               alt="Image Alt text"
               class="emotion-7"
               height="1152"
               loading="lazy"
+              sizes="(max-width: 1008px) 33vw, 321px"
               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
+              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg 660w"
               width="2048"
             />
           </picture>
@@ -4099,22 +4083,14 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
           style="padding-bottom: 56.25%;"
         >
           <picture>
-            <source
-              sizes="(max-width: 1008px) 33vw, 321px"
-              srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 660w"
-              type="image/webp"
-            />
-            <source
-              sizes="(max-width: 1008px) 33vw, 321px"
-              srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 660w"
-              type="image/jpeg"
-            />
             <img
               alt="A lone Koala perches in a eucalyptus tree"
               class="emotion-7"
               height="549"
               loading="lazy"
+              sizes="(max-width: 1008px) 33vw, 321px"
               src="https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg"
+              srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 660w"
               width="976"
             />
           </picture>
@@ -5460,22 +5436,14 @@ exports[`StoryPromo Container should render full width promos correctly for cano
           style="padding-bottom: 56.25%;"
         >
           <picture>
-            <source
-              sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
-              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
-              type="image/webp"
-            />
-            <source
-              sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
-              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg 660w"
-              type="image/jpeg"
-            />
             <img
               alt="Image Alt text"
               class="emotion-8"
               height="1152"
               loading="lazy"
+              sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
+              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg 660w"
               width="2048"
             />
           </picture>
@@ -7356,22 +7324,14 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
           style="padding-bottom: 56.25%;"
         >
           <picture>
-            <source
-              sizes="(max-width: 1008px) 33vw, 321px"
-              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
-              type="image/webp"
-            />
-            <source
-              sizes="(max-width: 1008px) 33vw, 321px"
-              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg 660w"
-              type="image/jpeg"
-            />
             <img
               alt="Image Alt text"
               class="emotion-7"
               height="1152"
               loading="lazy"
+              sizes="(max-width: 1008px) 33vw, 321px"
               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
+              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg 660w"
               width="2048"
             />
           </picture>
@@ -8468,22 +8428,14 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
           style="padding-bottom: 56.25%;"
         >
           <picture>
-            <source
-              sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
-              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
-              type="image/webp"
-            />
-            <source
-              sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
-              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg 660w"
-              type="image/jpeg"
-            />
             <img
               alt="Image Alt text"
               class="emotion-7"
               height="1152"
               loading="lazy"
+              sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
+              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg 660w"
               width="2048"
             />
           </picture>
@@ -10359,22 +10311,14 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
           style="padding-bottom: 56.25%;"
         >
           <picture>
-            <source
-              sizes="(max-width: 1008px) 33vw, 321px"
-              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
-              type="image/webp"
-            />
-            <source
-              sizes="(max-width: 1008px) 33vw, 321px"
-              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg 660w"
-              type="image/jpeg"
-            />
             <img
               alt="Image Alt text"
               class="emotion-7"
               height="1152"
               loading="lazy"
+              sizes="(max-width: 1008px) 33vw, 321px"
               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
+              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg 660w"
               width="2048"
             />
           </picture>
@@ -11708,22 +11652,14 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
           style="padding-bottom: 56.25%;"
         >
           <picture>
-            <source
-              sizes="(max-width: 1008px) 33vw, 321px"
-              srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 660w"
-              type="image/webp"
-            />
-            <source
-              sizes="(max-width: 1008px) 33vw, 321px"
-              srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 660w"
-              type="image/jpeg"
-            />
             <img
               alt="A lone Koala perches in a eucalyptus tree"
               class="emotion-7"
               height="549"
               loading="lazy"
+              sizes="(max-width: 1008px) 33vw, 321px"
               src="https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg"
+              srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 660w"
               width="976"
             />
           </picture>
@@ -13057,22 +12993,14 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
           style="padding-bottom: 56.25%;"
         >
           <picture>
-            <source
-              sizes="(max-width: 1008px) 33vw, 321px"
-              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
-              type="image/webp"
-            />
-            <source
-              sizes="(max-width: 1008px) 33vw, 321px"
-              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg 660w"
-              type="image/jpeg"
-            />
             <img
               alt="Image Alt text"
               class="emotion-7"
               height="1152"
               loading="lazy"
+              sizes="(max-width: 1008px) 33vw, 321px"
               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
+              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg 660w"
               width="2048"
             />
           </picture>
@@ -14571,22 +14499,14 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
           style="padding-bottom: 56.25%;"
         >
           <picture>
-            <source
-              sizes="(max-width: 1008px) 33vw, 321px"
-              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
-              type="image/webp"
-            />
-            <source
-              sizes="(max-width: 1008px) 33vw, 321px"
-              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg 660w"
-              type="image/jpeg"
-            />
             <img
               alt="Image Alt text"
               class="emotion-7"
               height="1152"
               loading="lazy"
+              sizes="(max-width: 1008px) 33vw, 321px"
               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
+              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg 660w"
               width="2048"
             />
           </picture>
