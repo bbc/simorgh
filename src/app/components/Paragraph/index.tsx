@@ -1,7 +1,8 @@
-/** @jsxImportSource @emotion/react */
+/** @jsxRuntime classic */
+/** @jsx jsx */
 
-import { CSSObject, SerializedStyles } from '@emotion/react';
-import React, { FC, HTMLAttributes } from 'react';
+import { FC, HTMLAttributes } from 'react';
+import { jsx } from '@emotion/react';
 
 import { FontVariant, GelFontSize } from '../../models/types/theming';
 import Text from '../Text';
@@ -11,7 +12,6 @@ interface Props extends HTMLAttributes<HTMLElement> {
   children?: React.ReactNode;
   fontVariant?: FontVariant;
   size?: GelFontSize;
-  css?: SerializedStyles | CSSObject;
 }
 
 const Paragraph: FC<Props> = ({
