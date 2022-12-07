@@ -89,6 +89,7 @@ export default async ({ getAgent, path, pageType, service, variant }) => {
     'hausa',
     'hindi',
     'kyrgyz',
+    'igbo',
   ];
   const isBffFetch = BFF_FETCH_ALLOWLIST.includes(service);
 
