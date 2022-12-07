@@ -9,6 +9,7 @@ interface Props {
 }
 
 const getPathToTheme = (props: Props) => {
+  return 'mundo';
   const variant = props.variant || defaultServiceVariants[props.service];
 
   if (variant === 'default' || !variant) {
