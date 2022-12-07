@@ -14,7 +14,10 @@ import FooterContainer from '#containers/Footer';
 import ManifestContainer from '#containers/Manifest';
 import ServiceWorkerContainer from '#containers/ServiceWorker';
 import { ServiceContext } from '../contexts/ServiceContext';
-import ThemeProvider from '../components/ThemeProvider';
+import {
+  ThemeProvider,
+  ThemeProviderNextJs,
+} from '../components/ThemeProvider';
 
 const Wrapper = styled.div`
   min-height: 100vh;
@@ -29,7 +32,7 @@ const Content = styled.div`
   flex-grow: 1;
 `;
 
-const PageWrapper = ({ children, pageData, status }) => {
+const PageWrapper = ({ children, pageData, status, isNextJs }) => {
   const { service, variant } = useContext(ServiceContext);
   const isDarkMode = pathOr(false, ['darkMode'], pageData);
   const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
@@ -39,8 +42,10 @@ const PageWrapper = ({ children, pageData, status }) => {
     ? 'WS-ERROR-PAGE'
     : path(['metadata', 'type'], pageData);
 
+  const ThemeProviderComponent = isNextJs ? ThemeProviderNextJs : ThemeProvider;
+
   return (
-    <ThemeProvider service={service} variant={variant}>
+    <ThemeProviderComponent service={service} variant={variant}>
       <GlobalStyles />
       <ServiceWorkerContainer />
       <ManifestContainer />
@@ -53,7 +58,7 @@ const PageWrapper = ({ children, pageData, status }) => {
         <Content>{children}</Content>
         <FooterContainer />
       </Wrapper>
-    </ThemeProvider>
+    </ThemeProviderComponent>
   );
 };
 
@@ -61,10 +66,12 @@ PageWrapper.propTypes = {
   children: node.isRequired,
   pageData: shape({ darkMode: bool }),
   status: number.isRequired,
+  isNextJs: bool,
 };
 
 PageWrapper.defaultProps = {
   pageData: {},
+  isNextJs: false,
 };
 
 export default PageWrapper;

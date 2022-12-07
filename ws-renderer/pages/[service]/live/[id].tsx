@@ -25,7 +25,7 @@ const getPageData = async (service: Services, id: string) => {
 
 type ComponentProps = {
   pageData: {
-    metadata: any;
+    metadata: string;
   };
   service: Services;
   status: number;
@@ -39,7 +39,10 @@ const LivePage = ({ pageData, status, service }: ComponentProps) => {
       <Paragraph>{JSON.stringify(pageData.metadata, null, 4)}</Paragraph>
     </main>
   ));
-  return <Component service={service} pageData={pageData} status={status} />;
+
+  return (
+    <Component service={service} pageData={pageData} status={status} isNextJs />
+  );
 };
 
 export default LivePage;
