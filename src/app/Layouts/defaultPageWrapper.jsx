@@ -14,9 +14,7 @@ import FooterContainer from '#containers/Footer';
 import ManifestContainer from '#containers/Manifest';
 import ServiceWorkerContainer from '#containers/ServiceWorker';
 import { ServiceContext } from '../contexts/ServiceContext';
-import ThemeProvider, {
-  ThemeProviderNextJs,
-} from '../components/ThemeProvider';
+import ThemeProvider from '../components/ThemeProvider';
 
 const Wrapper = styled.div`
   min-height: 100vh;
@@ -41,13 +39,15 @@ const PageWrapper = ({ children, pageData, status, isNextJs }) => {
     ? 'WS-ERROR-PAGE'
     : path(['metadata', 'type'], pageData);
 
-  const ThemeProviderComponent = isNextJs ? ThemeProviderNextJs : ThemeProvider;
-
   return (
-    <ThemeProviderComponent service={service} variant={variant}>
+    <ThemeProvider service={service} variant={variant}>
       <GlobalStyles />
-      <ServiceWorkerContainer />
-      <ManifestContainer />
+      {!isNextJs && (
+        <>
+          <ServiceWorkerContainer />
+          <ManifestContainer />
+        </>
+      )}
       <WebVitals pageType={pageType} />
       <Wrapper id="main-wrapper" darkMode={isDarkMode}>
         <HeaderContainer
@@ -57,7 +57,7 @@ const PageWrapper = ({ children, pageData, status, isNextJs }) => {
         <Content>{children}</Content>
         <FooterContainer />
       </Wrapper>
-    </ThemeProviderComponent>
+    </ThemeProvider>
   );
 };
 
