@@ -48,12 +48,16 @@ const HealthFactor = ({ metadata }: { metadata?: HealthFactorMetadata }) => {
 
   const hasIcon =
     actionCount === 0 ? (
-      <Recommend css={styles.recommendIcon} />
+      <Recommend css={[styles.icon, styles.recommendIcon]} />
     ) : (
-      <Warning css={styles.warningIcon} />
+      <Warning css={[styles.icon, styles.warningIcon]} />
     );
 
-  const actionIcon = metadata ? hasIcon : <Activity css={styles.warningIcon} />;
+  const actionIcon = metadata ? (
+    hasIcon
+  ) : (
+    <Activity css={[styles.icon, styles.warningIcon]} />
+  );
 
   return (
     <aside css={styles.componentHealthContainer}>

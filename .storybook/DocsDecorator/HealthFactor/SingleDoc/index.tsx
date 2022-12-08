@@ -15,8 +15,13 @@ const SingleDoc = ({
   status?: boolean;
 }) => {
   const iconStatusStyle = status ? styles.positive : styles.negative;
-  const hasIcon = status ? <Confirm /> : <Close />;
-  const statusIcon = typeof status === 'boolean' ? hasIcon : <Help />;
+  const hasIcon = status ? (
+    <Confirm css={styles.icon} />
+  ) : (
+    <Close css={styles.icon} />
+  );
+  const statusIcon =
+    typeof status === 'boolean' ? hasIcon : <Help css={styles.icon} />;
 
   return (
     <li css={styles.documentationContainer}>
@@ -49,7 +54,11 @@ const SingleDoc = ({
               aria-hidden
               css={[styles.iconContainer, styles.linkIconContainer]}
             >
-              {status ? <ExternalLink /> : <Help />}
+              {status ? (
+                <ExternalLink css={styles.icon} />
+              ) : (
+                <Help css={styles.icon} />
+              )}
             </span>
           </Text>
         </a>

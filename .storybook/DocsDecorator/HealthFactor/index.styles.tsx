@@ -24,6 +24,8 @@ const styles = {
     alignSelf: 'flex-end',
   },
 
+  icon: (theme: Theme) => css({ height: '100%', width: `100%` }),
+
   titleIcon: (theme: Theme) =>
     css({
       width: '1.5rem',

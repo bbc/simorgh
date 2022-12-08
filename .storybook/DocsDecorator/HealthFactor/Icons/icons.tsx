@@ -4,8 +4,8 @@ export const Confirm = ({ className }: { className?: string }) => (
   <svg
     data-testid="confirm"
     viewBox="0 0 32 32"
-    width="100%"
-    height="100%"
+    width="1rem"
+    height="1rem"
     focusable="false"
     aria-hidden="true"
     className={className}
@@ -19,8 +19,8 @@ export const Close = ({ className }: { className?: string }) => (
   <svg
     data-testid="close"
     viewBox="0 0 32 32"
-    width="100%"
-    height="100%"
+    width="1rem"
+    height="1rem"
     focusable="false"
     aria-hidden="true"
     className={className}
@@ -34,8 +34,8 @@ export const ExternalLink = ({ className }: { className?: string }) => (
   <svg
     data-testid="external-link"
     viewBox="0 0 32 32"
-    width="100%"
-    height="100%"
+    width="1rem"
+    height="1rem"
     focusable="false"
     aria-hidden="true"
     className={className}
@@ -49,8 +49,8 @@ export const Help = ({ className }: { className?: string }) => (
   <svg
     data-testid="help"
     viewBox="0 0 32 32"
-    width="100%"
-    height="100%"
+    width="1rem"
+    height="1rem"
     focusable="false"
     aria-hidden="true"
     className={className}
@@ -64,8 +64,8 @@ export const Warning = ({ className }: { className?: string }) => (
   <svg
     data-testid="warning"
     viewBox="0 0 32 32"
-    width="100%"
-    height="100%"
+    width="1rem"
+    height="1rem"
     focusable="false"
     aria-hidden="true"
     className={className}
@@ -85,8 +85,8 @@ export const Recommend = ({ className }: { className?: string }) => (
   <svg
     data-testid="recommend"
     viewBox="0 0 32 32"
-    width="100%"
-    height="100%"
+    width="1rem"
+    height="1rem"
     focusable="false"
     aria-hidden="true"
     className={className}
@@ -106,8 +106,8 @@ export const Activity = ({ className }: { className?: string }) => (
   <svg
     data-testid="activity"
     viewBox="0 0 32 32"
-    width="100%"
-    height="100%"
+    width="1rem"
+    height="1rem"
     focusable="false"
     aria-hidden="true"
     className={className}
