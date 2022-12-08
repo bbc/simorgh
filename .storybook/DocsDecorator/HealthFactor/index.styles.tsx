@@ -49,6 +49,7 @@ const styles = {
 
   documentationList: {
     listStyle: 'none',
+    margin: 0,
     padding: 0,
   },
 };

@@ -51,7 +51,3 @@ export const MissingHealthFactor = () => (
 export const WithDate = () => (
   <HealthFactorComponent metadataFixture={withDate} />
 );
-
-export const WithAlpha = () => (
-  <HealthFactorComponent metadataFixture={withAlpha} />
-);

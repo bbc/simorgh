@@ -10,7 +10,6 @@ import {
   oneMissingDoc,
   twoMissingDocs,
   allMissingDocs,
-  withAlpha,
   withDate,
 } from './fixture';
 import HealthFactorMetadata from '../types';
@@ -187,29 +186,5 @@ describe('Storybook HealthFactor', () => {
     const time = screen.queryByText('Last Updated 1st December 2022');
 
     expect(time).toBeNull();
-  });
-
-  it('should render alpha message when alpha is true', async () => {
-    await act(async () => {
-      render(<HealthFactorFixture metadata={withAlpha} />);
-    });
-
-    const alpha = screen.getByText(
-      'This component is tagged alpha and is not suitable for use on live. Upon the completion of all health checks the component is ready for use on live and the alpha tag will be removed.',
-    );
-
-    expect(alpha).toBeInTheDocument();
-  });
-
-  it('should not render alpha message when alpha is false', async () => {
-    await act(async () => {
-      render(<HealthFactorFixture metadata={allMissingDocs} />);
-    });
-
-    const alpha = screen.queryByText(
-      'This component is tagged alpha and is not suitable for use on live. Upon the completion of all health checks the component is ready for use on live and the alpha tag will be removed.',
-    );
-
-    expect(alpha).toBeNull();
   });
 });

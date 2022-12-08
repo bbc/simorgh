@@ -13,8 +13,6 @@ const HealthFactor = ({ metadata }: { metadata?: HealthFactorMetadata }) => {
   const uxSwarm = path(['swarm'], metadata);
   const acceptanceCriteria = path(['acceptanceCriteria'], metadata);
 
-  const isAlpha = path(['alpha'], metadata);
-
   const date = new Date(
     Date.parse(
       `${path(['lastUpdated', 'day'], metadata)} ${path(
@@ -84,16 +82,6 @@ const HealthFactor = ({ metadata }: { metadata?: HealthFactorMetadata }) => {
       </div>
 
       <div css={styles.documentationContainer}>
-        {isAlpha && (
-          <p>
-            <Text size="bodyCopy" fontVariant="sansRegular">
-              This component is tagged alpha and is not suitable for use on
-              live. Upon the completion of all health checks the component is
-              ready for use on live and the alpha tag will be removed.
-            </Text>
-          </p>
-        )}
-
         <ul css={styles.documentationList}>
           <SingleDoc
             label="Screen reader UX"
