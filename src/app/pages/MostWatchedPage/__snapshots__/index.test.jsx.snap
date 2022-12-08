@@ -785,22 +785,14 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                         style="padding-bottom: 56.25%;"
                       >
                         <picture>
-                          <source
-                            sizes="(max-width: 1008px) 33vw, 321px"
-                            srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/B8C3/production/_113699274_p08m487r.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/B8C3/production/_113699274_p08m487r.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/B8C3/production/_113699274_p08m487r.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/B8C3/production/_113699274_p08m487r.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/B8C3/production/_113699274_p08m487r.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/B8C3/production/_113699274_p08m487r.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/B8C3/production/_113699274_p08m487r.jpg.webp 660w"
-                            type="image/webp"
-                          />
-                          <source
-                            sizes="(max-width: 1008px) 33vw, 321px"
-                            srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/B8C3/production/_113699274_p08m487r.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/B8C3/production/_113699274_p08m487r.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/B8C3/production/_113699274_p08m487r.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/B8C3/production/_113699274_p08m487r.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/B8C3/production/_113699274_p08m487r.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/B8C3/production/_113699274_p08m487r.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/B8C3/production/_113699274_p08m487r.jpg 660w"
-                            type="image/jpeg"
-                          />
                           <img
                             alt="BBC"
                             class="emotion-27"
                             height="549"
                             loading="lazy"
+                            sizes="(max-width: 1008px) 33vw, 321px"
                             src="https://ichef.bbci.co.uk/news/660/cpsprodpb/B8C3/production/_113699274_p08m487r.jpg"
+                            srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/B8C3/production/_113699274_p08m487r.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/B8C3/production/_113699274_p08m487r.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/B8C3/production/_113699274_p08m487r.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/B8C3/production/_113699274_p08m487r.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/B8C3/production/_113699274_p08m487r.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/B8C3/production/_113699274_p08m487r.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/B8C3/production/_113699274_p08m487r.jpg 660w"
                             width="976"
                           />
                         </picture>
@@ -890,22 +882,14 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                         style="padding-bottom: 56.25%;"
                       >
                         <picture>
-                          <source
-                            sizes="(max-width: 1008px) 33vw, 321px"
-                            srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/14C5C/production/_113748058_p08m6ztb.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/14C5C/production/_113748058_p08m6ztb.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/14C5C/production/_113748058_p08m6ztb.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/14C5C/production/_113748058_p08m6ztb.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/14C5C/production/_113748058_p08m6ztb.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/14C5C/production/_113748058_p08m6ztb.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/14C5C/production/_113748058_p08m6ztb.jpg.webp 660w"
-                            type="image/webp"
-                          />
-                          <source
-                            sizes="(max-width: 1008px) 33vw, 321px"
-                            srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/14C5C/production/_113748058_p08m6ztb.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/14C5C/production/_113748058_p08m6ztb.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/14C5C/production/_113748058_p08m6ztb.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/14C5C/production/_113748058_p08m6ztb.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/14C5C/production/_113748058_p08m6ztb.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/14C5C/production/_113748058_p08m6ztb.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/14C5C/production/_113748058_p08m6ztb.jpg 660w"
-                            type="image/jpeg"
-                          />
                           <img
                             alt="Bundu Ama na one of di biggest waterside community for Port Harcourt City, Rivers state,mNigeria."
                             class="emotion-27"
                             height="549"
                             loading="lazy"
+                            sizes="(max-width: 1008px) 33vw, 321px"
                             src="https://ichef.bbci.co.uk/news/660/cpsprodpb/14C5C/production/_113748058_p08m6ztb.jpg"
+                            srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/14C5C/production/_113748058_p08m6ztb.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/14C5C/production/_113748058_p08m6ztb.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/14C5C/production/_113748058_p08m6ztb.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/14C5C/production/_113748058_p08m6ztb.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/14C5C/production/_113748058_p08m6ztb.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/14C5C/production/_113748058_p08m6ztb.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/14C5C/production/_113748058_p08m6ztb.jpg 660w"
                             width="976"
                           />
                         </picture>
@@ -995,22 +979,14 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                         style="padding-bottom: 56.25%;"
                       >
                         <picture>
-                          <source
-                            sizes="(max-width: 1008px) 33vw, 321px"
-                            srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/14DD2/production/_113585458_nairamarley.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/14DD2/production/_113585458_nairamarley.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/14DD2/production/_113585458_nairamarley.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/14DD2/production/_113585458_nairamarley.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/14DD2/production/_113585458_nairamarley.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/14DD2/production/_113585458_nairamarley.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/14DD2/production/_113585458_nairamarley.jpg.webp 660w"
-                            type="image/webp"
-                          />
-                          <source
-                            sizes="(max-width: 1008px) 33vw, 321px"
-                            srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/14DD2/production/_113585458_nairamarley.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/14DD2/production/_113585458_nairamarley.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/14DD2/production/_113585458_nairamarley.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/14DD2/production/_113585458_nairamarley.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/14DD2/production/_113585458_nairamarley.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/14DD2/production/_113585458_nairamarley.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/14DD2/production/_113585458_nairamarley.jpg 660w"
-                            type="image/jpeg"
-                          />
                           <img
                             alt="Naira Marley, fada Marley Jude Chukwuka"
                             class="emotion-27"
                             height="549"
                             loading="lazy"
+                            sizes="(max-width: 1008px) 33vw, 321px"
                             src="https://ichef.bbci.co.uk/news/660/cpsprodpb/14DD2/production/_113585458_nairamarley.jpg"
+                            srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/14DD2/production/_113585458_nairamarley.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/14DD2/production/_113585458_nairamarley.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/14DD2/production/_113585458_nairamarley.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/14DD2/production/_113585458_nairamarley.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/14DD2/production/_113585458_nairamarley.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/14DD2/production/_113585458_nairamarley.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/14DD2/production/_113585458_nairamarley.jpg 660w"
                             width="976"
                           />
                         </picture>
