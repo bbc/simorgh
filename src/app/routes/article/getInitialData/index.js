@@ -104,6 +104,7 @@ export default async ({ getAgent, path, pageType, service, variant }) => {
     'punjabi',
     'russian',
     'scotland',
+    'sinhala',
     'turkce',
     'ukrainian',
     'urdu',
