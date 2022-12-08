@@ -147,7 +147,7 @@ export const testsThatFollowSmokeTestConfig = ({
                     ).should('have.attr', 'width');
                   } else {
                     cy.get(
-                      `[data-e2e=story-promo-wrapper] > div > [data-e2e=image-placeholder] > div > picture > img`,
+                      `[data-e2e=story-promo-wrapper] > div > [data-e2e=image-placeholder] > div > img`,
                     ).should('have.attr', 'width');
                   }
                 });
