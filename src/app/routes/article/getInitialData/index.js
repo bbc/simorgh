@@ -80,6 +80,7 @@ export default async ({ getAgent, path, pageType, service, variant }) => {
     'afaanoromoo',
     'amharic',
     'arabic',
+    'archive',
     'azeri',
     'amharic',
     'bengali',
