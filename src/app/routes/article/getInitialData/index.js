@@ -109,6 +109,7 @@ export default async ({ getAgent, path, pageType, service, variant }) => {
     'swahili',
     'tamil',
     'telugu',
+    'tigrinya',
     'turkce',
     'ukrainian',
     'urdu',
