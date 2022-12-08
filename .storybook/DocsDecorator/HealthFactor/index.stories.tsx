@@ -36,7 +36,7 @@ export const HealthFactorWithCompleteDocs = () => (
   <HealthFactorComponent metadataFixture={allCompletedDocs} />
 );
 
-export const HealthFactorWithUncompleteDocs = () => (
+export const HealthFactorsWithOutstandingDocs = () => (
   <HealthFactorComponent metadataFixture={threeOutstandingActions} />
 );
 

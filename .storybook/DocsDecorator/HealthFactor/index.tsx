@@ -58,7 +58,7 @@ const HealthFactor = ({ metadata }: { metadata?: HealthFactorMetadata }) => {
   );
 
   return (
-    <aside css={styles.componentHealthContainer}>
+    <div css={styles.componentHealthContainer}>
       <div css={styles.headerContainer}>
         <div css={styles.titleContainer}>
           <span aria-hidden css={styles.titleIcon}>
@@ -82,7 +82,7 @@ const HealthFactor = ({ metadata }: { metadata?: HealthFactorMetadata }) => {
       </div>
 
       <div css={styles.documentationContainer}>
-        <ul css={styles.documentationList}>
+        <ul role="list" css={styles.documentationList}>
           <SingleDoc
             label="Screen reader UX"
             url={
@@ -124,7 +124,7 @@ const HealthFactor = ({ metadata }: { metadata?: HealthFactorMetadata }) => {
           />
         </ul>
       </div>
-    </aside>
+    </div>
   );
 };
 
