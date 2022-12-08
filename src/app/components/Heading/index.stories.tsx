@@ -6,6 +6,7 @@ import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpe
 import { Services, Variants } from '../../models/types/global';
 import ThemeProvider from '../ThemeProvider';
 import Heading from '.';
+import md from './README.md';
 
 interface Props {
   service: Services;
@@ -91,6 +92,12 @@ export default {
   parameters: {
     chromatic: {
       disable: true,
+    },
+    docs: {
+      component: {
+        title: 'Heading',
+      },
+      page: md,
     },
   },
 };

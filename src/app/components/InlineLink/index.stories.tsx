@@ -7,6 +7,7 @@ import { Services, Variants } from '../../models/types/global';
 import ThemeProvider from '../ThemeProvider';
 import InlineLink from '.';
 import Text from '../Text';
+import md from './README.md';
 
 interface Props {
   children: React.ReactNode;
@@ -82,6 +83,12 @@ export default {
   parameters: {
     chromatic: {
       disable: true,
+    },
+    docs: {
+      component: {
+        title: 'InlineLink',
+      },
+      page: md,
     },
   },
 };

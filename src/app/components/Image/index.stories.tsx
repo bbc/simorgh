@@ -3,8 +3,9 @@ import React from 'react';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import ThemeProvider from '../ThemeProvider';
 import Image from '.';
+import md from './README.md';
 
-export const BasicImage = () => (
+const BasicImage = () => (
   <ThemeProvider service="mundo" variant="default">
     <Image
       alt="A penguin stands on an ice floe"
@@ -12,6 +13,20 @@ export const BasicImage = () => (
     />
   </ThemeProvider>
 );
+
+export default {
+  title: 'New Components/Image',
+  Component: BasicImage,
+  parameters: {
+    chromatic: { disable: true },
+    docs: {
+      component: {
+        title: 'Image',
+      },
+      page: md,
+    },
+  },
+};
 
 export const ResponsiveImage = () => (
   <ThemeProvider service="mundo" variant="default">
@@ -74,9 +89,3 @@ export const AMPWebPWithJpegFallback = () => (
 BasicAMPImage.decorators = [AmpDecorator];
 ResponsiveAMPImage.decorators = [AmpDecorator];
 AMPWebPWithJpegFallback.decorators = [AmpDecorator];
-
-export default {
-  title: 'New Components/Image',
-  Component: BasicImage,
-  parameters: { chromatic: { disable: true } },
-};

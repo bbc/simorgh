@@ -4,6 +4,7 @@ import path from 'ramda/src/path';
 import ThemeProvider from '../../src/app/components/ThemeProvider';
 import HealthFactors from './HealthFactors';
 import HealthFactorsMetadata from './types';
+import { string } from 'prop-types';
 
 const DocsDecorator = ({
   context,
@@ -20,22 +21,24 @@ const DocsDecorator = ({
   const metadata = path(
     ['parameters', 'metadata'],
     context,
-  ) as HealthsFactorMetadata;
+  ) as HealthFactorsMetadata;
 
   const kind = path(['kind'], context) as string;
   const lowerCaseKind = kind.toLowerCase();
-  const isComponentDoc =
-    lowerCaseKind.includes('components/') ||
-    lowerCaseKind.includes('containers/') ||
-    lowerCaseKind.includes('new components/') ||
-    lowerCaseKind.includes('pages/') ||
-    lowerCaseKind.includes('topic/');
+  const exemptedFoldersList = ['docs', 'coding standards', 'new components'];
+  const regexPatter = RegExp(
+    exemptedFoldersList.map(folderName => `^${folderName}\/.*`).join('|'),
+    'g',
+  );
+  const exempt = regexPatter.test(lowerCaseKind);
+
+  console.log(exempt);
 
   return (
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore: type children not assignable.
     <DocsContainer context={context}>
-      {isComponentDoc && (
+      {!exempt && (
         <ThemeProvider service="news" variant="default">
           <Title>{title}</Title>
           <HealthFactors metadata={metadata} />
