@@ -108,15 +108,6 @@ describe('Storybook HealthFactors Svg', () => {
 });
 
 describe('Storybook HealthFactors', () => {
-  it('should render the health factors in an aside tag', async () => {
-    await act(async () => {
-      render(<HealthFactorsFixture metadata={allCompletedDocs} />);
-    });
-
-    const asideContainer = screen.getByRole('complementary');
-
-    expect(asideContainer.tagName).toBe('ASIDE');
-  });
   it('should render the correct number of items when all docs are provided', async () => {
     await act(async () => {
       render(<HealthFactorsFixture metadata={allCompletedDocs} />);
