@@ -126,7 +126,7 @@ const HealthFactor = ({ metadata }: { metadata?: HealthFactorMetadata }) => {
             url={
               (getDone(uxSwarm) as boolean)
                 ? (getUrl(uxSwarm) as string)
-                : 'https://confluence.dev.bbc.co.uk/display/NEWSWORLDSERVICE/A11y+Swarms'
+                : 'https://bbc.github.io/accessibility-news-and-you/guides/accessibility-swarms.html'
             }
             status={getDone(uxSwarm) as boolean}
             urlLabel={

@@ -4,7 +4,7 @@ export const allCompletedDocs = {
     done: true,
     reference: {
       url: '#accessibility-documentation',
-      label: 'Accessibility Section',
+      label: 'Documented screen reader UX',
     },
   },
   acceptanceCriteria: {
@@ -18,7 +18,7 @@ export const allCompletedDocs = {
     done: true,
     reference: {
       url: 'https://paper.dropbox.com/doc/A11Y-Swarm-Promo--BL4ankwRPUBmg1CeqpcvamZ8Ag-Qi9uuHQyLm18NMCnUAtcO',
-      label: 'A11y swarm notes',
+      label: 'Accessibility swarm results',
     },
   },
 };
@@ -29,7 +29,7 @@ export const oneOutstandingAction = {
     done: false,
     reference: {
       url: '#accessibility-documentation',
-      label: 'Accessibility Section',
+      label: 'Documented screen reader UX',
     },
   },
   acceptanceCriteria: {
@@ -43,7 +43,7 @@ export const oneOutstandingAction = {
     done: true,
     reference: {
       url: 'https://paper.dropbox.com/doc/A11Y-Swarm-Promo--BL4ankwRPUBmg1CeqpcvamZ8Ag-Qi9uuHQyLm18NMCnUAtcO',
-      label: 'A11y swarm notes',
+      label: 'Accessibility swarm results',
     },
   },
 };
@@ -54,7 +54,7 @@ export const twoOutstandingActions = {
     done: false,
     reference: {
       url: '#accessibility-documentation',
-      label: 'Accessibility Section',
+      label: 'Documented screen reader UX',
     },
   },
   acceptanceCriteria: {
@@ -68,7 +68,7 @@ export const twoOutstandingActions = {
     done: true,
     reference: {
       url: 'https://paper.dropbox.com/doc/A11Y-Swarm-Promo--BL4ankwRPUBmg1CeqpcvamZ8Ag-Qi9uuHQyLm18NMCnUAtcO',
-      label: 'A11y swarm notes',
+      label: 'Accessibility swarm results',
     },
   },
 };
@@ -79,7 +79,7 @@ export const threeOutstandingActions = {
     done: false,
     reference: {
       url: '#accessibility-documentation',
-      label: 'Accessibility Section',
+      label: 'Documented screen reader UX',
     },
   },
   acceptanceCriteria: {
@@ -93,7 +93,7 @@ export const threeOutstandingActions = {
     done: false,
     reference: {
       url: 'https://paper.dropbox.com/doc/A11Y-Swarm-Promo--BL4ankwRPUBmg1CeqpcvamZ8Ag-Qi9uuHQyLm18NMCnUAtcO',
-      label: 'A11y swarm notes',
+      label: 'Accessibility swarm results',
     },
   },
 };
@@ -104,7 +104,7 @@ export const oneMissingDoc = {
     done: false,
     reference: {
       url: '#accessibility-documentation',
-      label: 'Accessibility Section',
+      label: 'Documented screen reader UX',
     },
   },
   acceptanceCriteria: {
@@ -122,7 +122,7 @@ export const twoMissingDocs = {
     done: false,
     reference: {
       url: '#accessibility-documentation',
-      label: 'Accessibility Section',
+      label: 'Documented screen reader UX',
     },
   },
 };
@@ -140,7 +140,7 @@ export const withDate = {
     done: true,
     reference: {
       url: '#accessibility-documentation',
-      label: 'Accessibility Section',
+      label: 'Documented screen reader UX',
     },
   },
   acceptanceCriteria: {
@@ -154,7 +154,7 @@ export const withDate = {
     done: true,
     reference: {
       url: 'https://paper.dropbox.com/doc/A11Y-Swarm-Promo--BL4ankwRPUBmg1CeqpcvamZ8Ag-Qi9uuHQyLm18NMCnUAtcO',
-      label: 'A11y swarm notes',
+      label: 'Accessibility swarm results',
     },
   },
 };
@@ -165,7 +165,7 @@ export const withAlpha = {
     done: true,
     reference: {
       url: '#accessibility-documentation',
-      label: 'Accessibility Section',
+      label: 'Documented screen reader UX',
     },
   },
   acceptanceCriteria: {
@@ -179,7 +179,7 @@ export const withAlpha = {
     done: true,
     reference: {
       url: 'https://paper.dropbox.com/doc/A11Y-Swarm-Promo--BL4ankwRPUBmg1CeqpcvamZ8Ag-Qi9uuHQyLm18NMCnUAtcO',
-      label: 'A11y swarm notes',
+      label: 'Accessibility swarm results',
     },
   },
 };
