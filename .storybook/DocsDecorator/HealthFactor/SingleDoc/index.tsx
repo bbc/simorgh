@@ -2,6 +2,7 @@ import React from 'react';
 import Text from '../../../../src/app/components/Text';
 import { Confirm, Close, ExternalLink, Help } from '../Icons/icons';
 import styles from './index.styles';
+import VisuallyHiddenText from '../../../../src/app/legacy/psammead/psammead-visually-hidden-text/src';
 
 const SingleDoc = ({
   label,
@@ -22,6 +23,10 @@ const SingleDoc = ({
   );
   const statusIcon =
     typeof status === 'boolean' ? hasIcon : <Help css={styles.icon} />;
+
+  const hasIconText = status ? 'Complete' : 'Outstanding';
+
+  const iconText = typeof status === 'boolean' ? hasIconText : 'Missing data';
 
   return (
     <li css={styles.documentationContainer}>
@@ -55,6 +60,7 @@ const SingleDoc = ({
           fontVariant="sansBold"
         >
           <span>{urlLabel}</span>
+          <VisuallyHiddenText>{iconText}</VisuallyHiddenText>
           <span
             aria-hidden
             css={[styles.iconContainer, styles.linkIconContainer]}
