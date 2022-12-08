@@ -10,6 +10,8 @@ import {
   RelatedContentList,
   RelatedContentSingleItem,
   RelatedContentCustomLabel,
+  RelatedContentListWithMPU,
+  RelatedContentListWithWSOJ,
 } from './fixture';
 
 jest.mock('../../../../components/ThemeProvider');
@@ -91,9 +93,32 @@ describe('Optimo Related Content Promo', () => {
     expect(listItems.length).toBe(0);
     expect(list).toBeNull();
   });
+
+  it('should render Related Content Ul if MPU block is the last block', () => {
+    const { container } = render(
+      <RelatedContentSectionFixture fixtureData={RelatedContentListWithMPU} />,
+    );
+    const listItems = screen.getAllByRole('listitem');
+    const list = container.querySelector('ul');
+    expect(listItems.length).toBe(3);
+    expect(list).toBeInTheDocument();
+  });
+
+  it('should render Related Content Ul if WSOJ block is the last block', () => {
+    const { container } = render(
+      <RelatedContentSectionFixture fixtureData={RelatedContentListWithWSOJ} />,
+    );
+    const listItems = screen.getAllByRole('listitem');
+    const list = container.querySelector('ul');
+    expect(listItems.length).toBe(3);
+    expect(list).toBeInTheDocument();
+  });
 });
 
 describe('Event Tracking', () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
   it('should implement 3 BLOCK level click trackers(1 for each promo item) and 0 link level click trackers', () => {
     const expected = {
       componentName: 'related-content',
@@ -135,5 +160,13 @@ describe('Event Tracking', () => {
     const [[blockLevelTracking]] = viewTrackerSpy.mock.calls;
 
     expect(blockLevelTracking).toEqual(expected);
+  });
+
+  it('should call view tracker once when multiple items are present', () => {
+    const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+
+    render(<RelatedContentSectionFixture fixtureData={RelatedContentList} />);
+
+    expect(viewTrackerSpy).toHaveBeenCalledTimes(1);
   });
 });

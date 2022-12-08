@@ -108,8 +108,13 @@ export const bylineBlock = (text, id = null) => {
     },
     id,
   );
+
+  const name = blockContainingText('name', 'Test');
+
+  const role = blockContainingText('role', 'Test');
+
   const contributor = optionalIdBlock(
-    blockBase('contributor', { blocks: [link] }),
+    blockBase('contributor', { blocks: [name, role, link] }),
     id,
   );
   const byline = optionalIdBlock(
