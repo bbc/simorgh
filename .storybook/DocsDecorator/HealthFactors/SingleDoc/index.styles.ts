@@ -45,6 +45,11 @@ const styles = {
     marginLeft: '0',
   },
 
+  sidebarText: (theme: Theme) =>
+    css({
+      color: theme.palette.SHADOW,
+    }),
+
   documentationLink: {
     margin: '0.25rem',
   },
@@ -56,7 +61,7 @@ const styles = {
   link: (theme: Theme) =>
     css({
       textDecoration: 'underline',
-      color: theme.palette.BLACK,
+      color: theme.palette.SHADOW,
       '&:hover': {
         color: theme.palette.POSTBOX,
       },
@@ -64,7 +69,7 @@ const styles = {
         color: theme.palette.WHITE,
         backgroundColor: 'rgb(0, 100, 230)',
         border: `0.125rem solid ${theme.palette.WHITE} !important`,
-        outline: `0.125rem solid ${theme.palette.BLACK}`,
+        outline: `0.125rem solid ${theme.palette.SHADOW}`,
         outlineOffset: `0.125rem`,
         padding: `${theme.spacings.DOUBLE}rem`,
       },

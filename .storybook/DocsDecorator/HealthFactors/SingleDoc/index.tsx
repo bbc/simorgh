@@ -44,7 +44,7 @@ const SingleDoc = ({
         </span>
 
         <Text
-          css={styles.sidebarColumn}
+          css={[styles.sidebarColumn, styles.sidebarText]}
           size="bodyCopy"
           fontVariant="sansRegular"
         >

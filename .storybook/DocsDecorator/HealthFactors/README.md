@@ -4,9 +4,9 @@ Component health measures whether a component is in a good enough state to be sh
 
 ## Props
 
-| Name     | type                 | Description                                                                                                                                                       |
-| -------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| metadata | HealthFactorMetadata | A metadata.json is created for every component's directory. This metadata.json describes the three main pieces of documentation that makes the component healthy. |
+| Name     | type                  | Description                                                                                                                                                       |
+| -------- | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| metadata | HealthFactorsMetadata | A metadata.json is created for every component's directory. This metadata.json describes the three main pieces of documentation that makes the component healthy. |
 
 ## Usage
 
@@ -114,7 +114,7 @@ The context holds all the information that Storybook uses to create a story. Spe
   {isComponentDoc && (
     <ThemeProvider service="news" variant="default">
       <Title>{title}</Title>
-      <HealthFactor metadata={metadata} />
+      <HealthFactors metadata={metadata} />
     </ThemeProvider>
   )}
   {children}
@@ -123,7 +123,7 @@ The context holds all the information that Storybook uses to create a story. Spe
 
 The main use of this component is to wrap the ComponentHealth with the ThemeProvider and the DocsContainer. The latter can be seen as a canvas that Storybook uses to display content in the docs tab of every story. We use this DocsContainer to display our ComponentHealth and README.md documentation.
 
-Furthermore, this component will process and pass the metadata and the children to the HealthFactor component which will finally display the component health for your story.
+Furthermore, this component will process and pass the metadata and the children to the HealthFactors component which will finally display the component health for your story.
 
 Lastly, this file controls to which storybook folders the ComponentHealth should be applied:
 

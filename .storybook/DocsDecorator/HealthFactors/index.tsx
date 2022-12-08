@@ -6,9 +6,9 @@ import Text from '../../../src/app/components/Text';
 import { Recommend, Warning, Activity } from './Icons/icons';
 import SingleDoc from './SingleDoc';
 import styles from './index.styles';
-import HealthFactorMetadata from '../types';
+import HealthFactorsMetadata from '../types';
 
-const HealthFactor = ({ metadata }: { metadata?: HealthFactorMetadata }) => {
+const HealthFactors = ({ metadata }: { metadata?: HealthFactorsMetadata }) => {
   const uxAccessibility = path(['uxAccessibilityDoc'], metadata);
   const uxSwarm = path(['swarm'], metadata);
   const acceptanceCriteria = path(['acceptanceCriteria'], metadata);
@@ -64,14 +64,19 @@ const HealthFactor = ({ metadata }: { metadata?: HealthFactorMetadata }) => {
           <span aria-hidden css={styles.titleIcon}>
             {actionIcon}
           </span>
-          <Text size="doublePica" fontVariant="sansBold" as="strong">
+          <Text
+            size="doublePica"
+            fontVariant="sansBold"
+            as="strong"
+            css={styles.title}
+          >
             {headline}
           </Text>
         </div>
 
         {formatDate !== 'Invalid date' && (
           <Text
-            size="bodyCopy"
+            size="longPrimer"
             fontVariant="sansRegular"
             css={styles.date}
             as="time"
@@ -128,4 +133,4 @@ const HealthFactor = ({ metadata }: { metadata?: HealthFactorMetadata }) => {
   );
 };
 
-export default HealthFactor;
+export default HealthFactors;

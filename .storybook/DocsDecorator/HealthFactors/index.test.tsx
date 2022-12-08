@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, act } from '@testing-library/react';
-import HealthFactor from '.';
+import HealthFactors from '.';
 import ThemeProvider from '../../../src/app/components/ThemeProvider';
 import {
   allCompletedDocs,
@@ -10,24 +10,23 @@ import {
   oneMissingDoc,
   twoMissingDocs,
   allMissingDocs,
-  withDate,
 } from './fixture';
-import HealthFactorMetadata from '../types';
+import HealthFactorsMetadata from '../types';
 
-const HealthFactorFixture = ({
+const HealthFactorsFixture = ({
   metadata,
 }: {
-  metadata?: HealthFactorMetadata;
+  metadata?: HealthFactorsMetadata;
 }) => (
   <ThemeProvider service="news" variant="default">
-    <HealthFactor metadata={metadata} />
+    <HealthFactors metadata={metadata} />
   </ThemeProvider>
 );
 
-describe('Storybook HealthFactor Title', () => {
+describe('Storybook HealthFactors Title', () => {
   it('should render the correct title when all docs are provided', async () => {
     await act(async () => {
-      render(<HealthFactorFixture metadata={allCompletedDocs} />);
+      render(<HealthFactorsFixture metadata={allCompletedDocs} />);
     });
 
     const title = screen.getByText('Good to show to the audience');
@@ -37,7 +36,7 @@ describe('Storybook HealthFactor Title', () => {
 
   it('should render the correct title when metadata is missing', async () => {
     await act(async () => {
-      render(<HealthFactorFixture />);
+      render(<HealthFactorsFixture />);
     });
 
     const title = screen.getByText('Component health is missing!');
@@ -47,7 +46,7 @@ describe('Storybook HealthFactor Title', () => {
 
   it('should render the correct title when there are one outstanding action', async () => {
     await act(async () => {
-      render(<HealthFactorFixture metadata={oneOutstandingAction} />);
+      render(<HealthFactorsFixture metadata={oneOutstandingAction} />);
     });
 
     const title = screen.getByText('One action outstanding');
@@ -57,7 +56,7 @@ describe('Storybook HealthFactor Title', () => {
 
   it('should render the correct title when there are two outstanding action', async () => {
     await act(async () => {
-      render(<HealthFactorFixture metadata={twoOutstandingActions} />);
+      render(<HealthFactorsFixture metadata={twoOutstandingActions} />);
     });
 
     const title = screen.getByText('Two actions outstanding');
@@ -67,7 +66,7 @@ describe('Storybook HealthFactor Title', () => {
 
   it('should render the correct title when there are three outstanding action', async () => {
     await act(async () => {
-      render(<HealthFactorFixture metadata={threeOutstandingActions} />);
+      render(<HealthFactorsFixture metadata={threeOutstandingActions} />);
     });
 
     const title = screen.getByText('Three actions outstanding');
@@ -76,10 +75,10 @@ describe('Storybook HealthFactor Title', () => {
   });
 });
 
-describe('Storybook HealthFactor Svg', () => {
+describe('Storybook HealthFactors Svg', () => {
   it('should render the correct title Svg when all docs are provided', async () => {
     await act(async () => {
-      render(<HealthFactorFixture metadata={allCompletedDocs} />);
+      render(<HealthFactorsFixture metadata={allCompletedDocs} />);
     });
 
     const titleSvg = screen.getByTestId('recommend');
@@ -89,7 +88,7 @@ describe('Storybook HealthFactor Svg', () => {
 
   it('should render the correct title Svg when there are outstanding actions', async () => {
     await act(async () => {
-      render(<HealthFactorFixture metadata={oneOutstandingAction} />);
+      render(<HealthFactorsFixture metadata={oneOutstandingAction} />);
     });
 
     const titleSvg = screen.getByTestId('warning');
@@ -97,9 +96,9 @@ describe('Storybook HealthFactor Svg', () => {
     expect(titleSvg).toBeInTheDocument();
   });
 
-  it('should render the correct title Svg when health factor is missing', async () => {
+  it('should render the correct title Svg when health factors is missing', async () => {
     await act(async () => {
-      render(<HealthFactorFixture />);
+      render(<HealthFactorsFixture />);
     });
 
     const titleSvg = screen.getByTestId('activity');
@@ -108,10 +107,10 @@ describe('Storybook HealthFactor Svg', () => {
   });
 });
 
-describe('Storybook HealthFactor', () => {
-  it('should render the health factor in an aside tag', async () => {
+describe('Storybook HealthFactors', () => {
+  it('should render the health factors in an aside tag', async () => {
     await act(async () => {
-      render(<HealthFactorFixture metadata={allCompletedDocs} />);
+      render(<HealthFactorsFixture metadata={allCompletedDocs} />);
     });
 
     const asideContainer = screen.getByRole('complementary');
@@ -120,7 +119,7 @@ describe('Storybook HealthFactor', () => {
   });
   it('should render the correct number of items when all docs are provided', async () => {
     await act(async () => {
-      render(<HealthFactorFixture metadata={allCompletedDocs} />);
+      render(<HealthFactorsFixture metadata={allCompletedDocs} />);
     });
 
     const listItems = screen.getAllByRole('listitem');
@@ -130,7 +129,7 @@ describe('Storybook HealthFactor', () => {
 
   it('should render the correct number of items when one doc is missing', async () => {
     await act(async () => {
-      render(<HealthFactorFixture metadata={oneMissingDoc} />);
+      render(<HealthFactorsFixture metadata={oneMissingDoc} />);
     });
 
     const listItems = screen.getAllByRole('listitem');
@@ -140,7 +139,7 @@ describe('Storybook HealthFactor', () => {
 
   it('should render the correct number of items when two docs are missing', async () => {
     await act(async () => {
-      render(<HealthFactorFixture metadata={twoMissingDocs} />);
+      render(<HealthFactorsFixture metadata={twoMissingDocs} />);
     });
 
     const listItems = screen.getAllByRole('listitem');
@@ -150,7 +149,7 @@ describe('Storybook HealthFactor', () => {
 
   it('should render the correct number of items when three docs are missing', async () => {
     await act(async () => {
-      render(<HealthFactorFixture metadata={allMissingDocs} />);
+      render(<HealthFactorsFixture metadata={allMissingDocs} />);
     });
 
     const listItems = screen.getAllByRole('listitem');
@@ -160,7 +159,7 @@ describe('Storybook HealthFactor', () => {
 
   it('should render the correct time when day, month, and year are valid', async () => {
     await act(async () => {
-      render(<HealthFactorFixture metadata={withDate} />);
+      render(<HealthFactorsFixture metadata={allCompletedDocs} />);
     });
 
     const time = screen.getByText('Last Updated 1st December 2022');
@@ -170,21 +169,11 @@ describe('Storybook HealthFactor', () => {
 
   it('should render time in a time tag when day, month, and year are valid', async () => {
     await act(async () => {
-      render(<HealthFactorFixture metadata={withDate} />);
+      render(<HealthFactorsFixture metadata={allCompletedDocs} />);
     });
 
     const time = screen.getByText('Last Updated 1st December 2022');
 
     expect(time.tagName).toBe('TIME');
-  });
-
-  it('should not render the time when day, month, and year are not valid', async () => {
-    await act(async () => {
-      render(<HealthFactorFixture metadata={allMissingDocs} />);
-    });
-
-    const time = screen.queryByText('Last Updated 1st December 2022');
-
-    expect(time).toBeNull();
   });
 });

@@ -20,9 +20,11 @@ const styles = {
       padding: `1.25rem ${theme.spacings.DOUBLE}rem`,
     }),
 
-  date: {
-    alignSelf: 'flex-end',
-  },
+  date: (theme: Theme) =>
+    css({
+      alignSelf: 'flex-end',
+      color: theme.palette.SHADOW,
+    }),
 
   icon: (theme: Theme) => css({ height: '100%', width: `100%` }),
 
@@ -30,8 +32,13 @@ const styles = {
     css({
       width: '1.5rem',
       height: '1.5rem',
-      marginRight: `${theme.spacings.HALF}rem`,
+      marginRight: theme.spacings.HALF,
       display: 'block',
+    }),
+
+  title: (theme: Theme) =>
+    css({
+      color: theme.palette.SHADOW,
     }),
 
   warningIcon: (theme: Theme) =>

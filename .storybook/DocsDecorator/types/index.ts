@@ -1,4 +1,4 @@
-interface HealthFactorItem {
+interface HealthFactorsItem {
   done?: boolean;
   reference?: {
     url: string;
@@ -6,7 +6,7 @@ interface HealthFactorItem {
   };
 }
 
-export default interface HealthFactorMetadata {
+export default interface HealthFactorsMetadata {
   alpha?: boolean;
   lastUpdated?: {
     day?: number;
@@ -25,7 +25,7 @@ export default interface HealthFactorMetadata {
       | 'December';
     year?: number;
   };
-  uxAccessibilityDoc: HealthFactorItem;
-  acceptanceCriteria: HealthFactorItem;
-  swarm: HealthFactorItem;
+  uxAccessibilityDoc: HealthFactorsItem;
+  acceptanceCriteria: HealthFactorsItem;
+  swarm: HealthFactorsItem;
 }

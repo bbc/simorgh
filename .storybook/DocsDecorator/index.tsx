@@ -2,8 +2,8 @@ import React from 'react';
 import { DocsContainer, Title, DocsContextProps } from '@storybook/addon-docs';
 import path from 'ramda/src/path';
 import ThemeProvider from '../../src/app/components/ThemeProvider';
-import HealthFactor from './HealthFactor';
-import HealthFactorMetadata from './types';
+import HealthFactors from './HealthFactors';
+import HealthFactorsMetadata from './types';
 
 const DocsDecorator = ({
   context,
@@ -20,7 +20,7 @@ const DocsDecorator = ({
   const metadata = path(
     ['parameters', 'metadata'],
     context,
-  ) as HealthFactorMetadata;
+  ) as HealthsFactorMetadata;
 
   const kind = path(['kind'], context) as string;
   const lowerCaseKind = kind.toLowerCase();
@@ -38,7 +38,7 @@ const DocsDecorator = ({
       {isComponentDoc && (
         <ThemeProvider service="news" variant="default">
           <Title>{title}</Title>
-          <HealthFactor metadata={metadata} />
+          <HealthFactors metadata={metadata} />
         </ThemeProvider>
       )}
       {children}
