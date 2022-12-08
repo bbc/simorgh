@@ -47,21 +47,25 @@ const SingleDoc = ({
         </Text>
       </div>
       <div css={styles.documentationLink}>
-        <a href={url} css={styles.link}>
-          <Text css={styles.link} size="brevier" fontVariant="sansBold">
-            {urlLabel}
-            <span
-              aria-hidden
-              css={[styles.iconContainer, styles.linkIconContainer]}
-            >
-              {status ? (
-                <ExternalLink css={styles.icon} />
-              ) : (
-                <Help css={styles.icon} />
-              )}
-            </span>
-          </Text>
-        </a>
+        <Text
+          as="a"
+          href={url}
+          css={styles.link}
+          size="brevier"
+          fontVariant="sansBold"
+        >
+          <span>{urlLabel}</span>
+          <span
+            aria-hidden
+            css={[styles.iconContainer, styles.linkIconContainer]}
+          >
+            {status ? (
+              <ExternalLink css={styles.icon} />
+            ) : (
+              <Help css={styles.icon} />
+            )}
+          </span>
+        </Text>
       </div>
     </li>
   );

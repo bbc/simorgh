@@ -16,7 +16,6 @@ const styles = {
       width: `${theme.spacings.DOUBLE}rem`,
       height: `${theme.spacings.DOUBLE}rem`,
       marginLeft: `${theme.spacings.HALF}rem`,
-      color: `${theme.palette.SHADOW}`,
     }),
 
   statusIconContainer: {
@@ -35,7 +34,11 @@ const styles = {
     css({ background: '#D60A3D', color: `${theme.palette.WHITE}` }),
 
   missing: (theme: Theme) =>
-    css({ padding: 0, borderRadius: 0, color: `${theme.palette.SHADOW}` }),
+    css({
+      padding: 0,
+      borderRadius: 0,
+      color: theme.palette.SHADOW,
+    }),
 
   sidebarColumn: {
     margin: '0.375rem',
@@ -52,10 +55,18 @@ const styles = {
 
   link: (theme: Theme) =>
     css({
-      textDecoration: 'none',
+      textDecoration: 'underline',
+      color: theme.palette.BLACK,
       '&:hover': {
-        textDecoration: 'underline',
         color: theme.palette.POSTBOX,
+      },
+      '&:focus': {
+        color: theme.palette.WHITE,
+        backgroundColor: 'rgb(0, 100, 230)',
+        border: `0.125rem solid ${theme.palette.WHITE} !important`,
+        outline: `0.125rem solid ${theme.palette.BLACK}`,
+        outlineOffset: `0.125rem`,
+        padding: `${theme.spacings.DOUBLE}rem`,
       },
     }),
 };
