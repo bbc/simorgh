@@ -3,7 +3,6 @@ import path from 'ramda/src/path';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 import topicTagsTest from '../../../support/helpers/topicTagsTest';
 import envConfig from '../../../support/config/envs';
-
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRun = ({ service, pageType }) => {
@@ -11,7 +10,11 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
 };
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
-export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
+export const testsThatFollowSmokeTestConfig = ({
+  service,
+  pageType,
+  isAmp,
+}) => {
   describe(`testsThatFollowSmokeTestConfig to run for ${service} ${pageType}`, () => {
     it('should render a description for the page', () => {
       cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
@@ -118,6 +121,71 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
         });
       } else {
         cy.log('Service is run in local.');
+      }
+    });
+  });
+  describe(`Recommendations on ${service} ${pageType}`, () => {
+    it('Recommendations have images', () => {
+      if (Cypress.env('APP_ENV') === 'live') {
+        cy.getToggles(service);
+        cy.fixture(`toggles/${service}.json`).then(toggles => {
+          const recommendationsEnabled = path(
+            ['cpsRecommendations', 'enabled'],
+            toggles,
+          );
+          cy.log(`Recommendations enabled? ${recommendationsEnabled}`);
+          if (recommendationsEnabled) {
+            cy.get(`[data-e2e=recommendations-heading]`).scrollIntoView();
+            cy.get('[data-e2e=recommendations-heading] > div > ul > li').each(
+              (item, index) => {
+                cy.wrap(item).within(() => {
+                  cy.log(`List item number: ${index}`);
+                  cy.log(`isAmp= ${isAmp}`);
+                  if (isAmp) {
+                    cy.get(
+                      `[data-e2e=story-promo-wrapper] > div > [data-e2e=image-placeholder] > amp-img`,
+                    ).should('have.attr', 'width');
+                  } else {
+                    cy.get(
+                      `[data-e2e=story-promo-wrapper] > div > [data-e2e=image-placeholder] > div > img`,
+                    ).should('have.attr', 'width');
+                  }
+                });
+              },
+            );
+          }
+        });
+      } else {
+        cy.log('Only tests live due to not much test data');
+      }
+    });
+    it('Recommendations have titles', () => {
+      if (Cypress.env('APP_ENV') === 'live') {
+        cy.getToggles(service);
+        cy.fixture(`toggles/${service}.json`).then(toggles => {
+          const recommendationsEnabled = path(
+            ['cpsRecommendations', 'enabled'],
+            toggles,
+          );
+          cy.log(`Recommendations enabled? ${recommendationsEnabled}`);
+          if (recommendationsEnabled) {
+            cy.get(`[data-e2e=recommendations-heading]`).scrollIntoView();
+            cy.get('[data-e2e=recommendations-heading] > div > ul > li').each(
+              (item, index) => {
+                cy.wrap(item).within(() => {
+                  cy.log(`List item number: ${index + 1}`);
+                  cy.get(`[data-e2e=story-promo-wrapper] > div > div > a`)
+                    .invoke('text')
+                    .then(text => {
+                      expect(text.length).to.be.at.least(1);
+                    });
+                });
+              },
+            );
+          }
+        });
+      } else {
+        cy.log('Only tests live due to not much test data');
       }
     });
   });

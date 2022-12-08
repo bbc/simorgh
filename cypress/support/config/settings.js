@@ -4180,7 +4180,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/mundo/noticias-54274735'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/mundo/23263889'],

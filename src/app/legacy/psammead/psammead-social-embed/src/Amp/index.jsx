@@ -60,6 +60,38 @@ const TikTok = ({ id }) => (
   </>
 );
 
+const Facebook = ({ source }) => {
+  const getEmbedType = () => {
+    switch (true) {
+      case source?.includes('posts'):
+        return 'post';
+      case source?.includes('videos'):
+        return 'video';
+      default:
+        return 'post';
+    }
+  };
+
+  return (
+    <>
+      <Helmet>
+        <script
+          async
+          custom-element="amp-facebook"
+          src="https://cdn.ampproject.org/v0/amp-facebook-0.1.js"
+        />
+      </Helmet>
+      <amp-facebook
+        data-href={source}
+        data-embed-as={getEmbedType()}
+        height="1"
+        width="1"
+        layout="responsive"
+      />
+    </>
+  );
+};
+
 const sharedPropTypes = {
   id: string.isRequired,
 };
@@ -68,10 +100,12 @@ Instagram.propTypes = sharedPropTypes;
 Twitter.propTypes = sharedPropTypes;
 YouTube.propTypes = sharedPropTypes;
 TikTok.propTypes = sharedPropTypes;
+Facebook.propTypes = { ...sharedPropTypes, source: string.isRequired };
 
 export default {
   instagram: memo(Instagram),
   twitter: memo(Twitter),
   youtube: memo(YouTube),
   tiktok: memo(TikTok),
+  facebook: memo(Facebook),
 };

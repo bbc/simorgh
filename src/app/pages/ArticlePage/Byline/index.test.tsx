@@ -14,7 +14,7 @@ import {
   bylineWithLinkAndLocation,
   bylineWithNonPngPhoto,
   bylineWithPngPhoto,
-} from './fixture';
+} from '../fixtureData';
 
 describe('Byline', () => {
   it('Should render Byline correctly when only required data is passed', () => {

@@ -63,21 +63,6 @@ This is how to render a responsive image:
 />
 ```
 
-This is how to render a basic webp image with jpeg fallback (non-responsive):
-
-```tsx
-<Image
-  alt="A penguin stands on an ice floe"
-  src="https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
-  srcSet="https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg.webp"
-  mediaType="image/webp"
-  fallbackSrcSet="https://ichef.bbci.co.uk/news/624/cpsprodpb/164AF/production/_110911319_antartica.jpg"
-  fallbackMediaType="image/jpeg"
-  width={500}
-  height={281}
-/>
-```
-
 This is how to render a responsive webp image with a jpeg fallback:
 
 ```tsx

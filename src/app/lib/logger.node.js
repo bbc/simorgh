@@ -1,7 +1,7 @@
 // Node.js logger utility using winston
 const fs = require('fs');
 const path = require('path');
-const { createLogger, format, transports } = require('@bbc/winston');
+const { createLogger, format, transports } = require('winston');
 
 const {
   combine,
@@ -40,7 +40,7 @@ const loggerOptions = {
     level: LOG_LEVEL,
     maxFiles: 5,
     maxsize: 104857600, // 100MB
-    tailable: false,
+    tailable: true,
     format: combine(json()),
   },
   console: {
