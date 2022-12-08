@@ -40,6 +40,7 @@ const MetadataContainer = ({
   title,
   socialHeadline,
   lang,
+  twitterHandle,
   description,
   openGraphType,
   aboutTags,
@@ -108,6 +109,8 @@ const MetadataContainer = ({
   const pageTitle = `${title} - ${brandName}`;
   const socialTitle = `${socialHeadline || title} - ${brandName}`;
 
+  const metaTwitterHandle = twitterHandle || twitterCreator;
+
   const metaImage = image || defaultImage;
   const metaImageAltText = imageAltText || defaultImageAltText;
   const linkToAmpPage = hasAmpPage && !isAmp;
@@ -158,7 +161,7 @@ const MetadataContainer = ({
       <meta property="og:type" content={openGraphType} />
       <meta property="og:url" content={canonicalNonUkLink} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:creator" content={twitterCreator} />
+      <meta name="twitter:creator" content={metaTwitterHandle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image:alt" content={metaImageAltText} />
       <meta name="twitter:image:src" content={metaImage} />
@@ -199,6 +202,7 @@ MetadataContainer.propTypes = {
   title: string.isRequired,
   socialHeadline: string,
   lang: string.isRequired,
+  twitterHandle: string,
   description: string.isRequired,
   openGraphType: string.isRequired,
   aboutTags: arrayOf(tagPropTypes),
@@ -223,6 +227,7 @@ MetadataContainer.defaultProps = {
   children: null,
   hasAppleItunesAppBanner: false,
   hasAmpPage: true,
+  twitterHandle: null,
 };
 
 export default MetadataContainer;
