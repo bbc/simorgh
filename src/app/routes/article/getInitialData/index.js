@@ -119,6 +119,7 @@ export default async ({ getAgent, path, pageType, service, variant }) => {
     'uzbek',
     'vietnamese',
     'yoruba',
+    'zhongwen',
   ];
   const isBffFetch = BFF_FETCH_ALLOWLIST.includes(service);
 
