@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`LinkedData bylineLinkedData should change author contents and locationCreated when byline is present 1`] = `<div />`;
+
 exports[`LinkedData should correctly render linked data for Ondemand Radio page 1`] = `<div />`;
 
 exports[`LinkedData should correctly render linked data for Photo Gallery page 1`] = `<div />`;
@@ -7,6 +9,8 @@ exports[`LinkedData should correctly render linked data for Photo Gallery page 1
 exports[`LinkedData should correctly render linked data for article pages for service with no trust project markup 1`] = `<div />`;
 
 exports[`LinkedData should correctly render linked data for articles 1`] = `<div />`;
+
+exports[`LinkedData should correctly render linked data for articles with byline 1`] = `<div />`;
 
 exports[`LinkedData should correctly render linked data for front pages 1`] = `<div />`;
 

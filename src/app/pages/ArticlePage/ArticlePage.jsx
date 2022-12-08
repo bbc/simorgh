@@ -63,6 +63,7 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
+import bylineExtractor from './utilities/bylineExtractor';
 import Byline from './Byline';
 import getAuthorTwitterHandle from './getAuthorTwitterHandle';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -136,7 +137,13 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const topics = path(['metadata', 'topics'], pageData);
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
   const startsWithHeading = propEq('type', 'headline')(blocks[0] || {});
-  const hasByline = blocks.find(block => block.type === 'byline');
+
+  const bylineBlock = blocks.find(block => block.type === 'byline');
+  const bylineContribBlocks = pathOr([], ['model', 'blocks'], bylineBlock);
+
+  const bylineLinkedData = bylineExtractor(bylineContribBlocks);
+
+  const hasByline = !!bylineLinkedData;
 
   const articleAuthorTwitterHandle = hasByline
     ? getAuthorTwitterHandle(blocks)
@@ -236,6 +243,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       />
       <LinkedData
         showAuthor
+        bylineLinkedData={bylineLinkedData}
         type="Article"
         seoTitle={headline}
         headline={headline}
