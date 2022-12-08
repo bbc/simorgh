@@ -34,3 +34,5 @@ export const ThemeProviderNextJs = (props: PropsWithChildren<Props>) => {
 
 export const ThemeProvider: LoadableComponent<PropsWithChildren<Props>> =
   loadable(loadTheme);
+
+export default ThemeProvider;

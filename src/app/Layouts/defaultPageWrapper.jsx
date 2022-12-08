@@ -14,8 +14,7 @@ import FooterContainer from '#containers/Footer';
 import ManifestContainer from '#containers/Manifest';
 import ServiceWorkerContainer from '#containers/ServiceWorker';
 import { ServiceContext } from '../contexts/ServiceContext';
-import {
-  ThemeProvider,
+import ThemeProvider, {
   ThemeProviderNextJs,
 } from '../components/ThemeProvider';
 
