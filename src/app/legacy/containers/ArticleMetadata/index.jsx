@@ -8,6 +8,7 @@ const ArticleMetadata = ({
   articleId,
   title,
   author,
+  twitterHandle,
   firstPublished,
   lastPublished,
   section,
@@ -27,6 +28,7 @@ const ArticleMetadata = ({
       <Metadata
         title={title}
         lang={lang}
+        twitterHandle={twitterHandle}
         description={description}
         openGraphType="article"
         aboutTags={aboutTags}
@@ -58,6 +60,7 @@ ArticleMetadata.propTypes = {
   articleId: string,
   title: string.isRequired,
   author: string.isRequired,
+  twitterHandle: string,
   firstPublished: string.isRequired,
   lastPublished: string.isRequired,
   section: string,
@@ -71,6 +74,7 @@ ArticleMetadata.propTypes = {
 
 ArticleMetadata.defaultProps = {
   articleId: '',
+  twitterHandle: null,
   section: '',
   aboutTags: [],
   mentionsTags: [],

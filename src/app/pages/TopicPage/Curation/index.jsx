@@ -44,6 +44,7 @@ const Curation = ({
   const createID = titleText => {
     return titleText.replaceAll(' ', '-');
   };
+
   const isFirstCuration = position === 0;
   const SubheadingComponent = isFirstCuration ? VisuallyHiddenText : Subheading;
   const id = createID(title || topStoriesTitle);

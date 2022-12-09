@@ -58,9 +58,6 @@ jobs:
           exitOnceUploaded: true
           autoAcceptChanges: true # Auto accept changes to accept a new baseline when merging to latest
 
-      - name: Apache License Checker
-        run: npx apache2-license-checker
-
       - name: Duplicate Dependency Checker
         run: yarn test:dependencies
 

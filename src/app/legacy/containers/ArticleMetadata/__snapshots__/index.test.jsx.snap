@@ -2,4 +2,6 @@
 
 exports[`should match snapshot for News & International 1`] = `<div />`;
 
+exports[`should match snapshot for News article with provided author twitter handle 1`] = `<div />`;
+
 exports[`should match snapshot for Persian News & UK origin 1`] = `<div />`;
