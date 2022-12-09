@@ -195,7 +195,6 @@ All page types have some common UI and functionality. Tests for the common stuff
 |  ├── footer.js
 |  ├── header.js
 |  ├── index.js
-|  └── performance.js
 ```
 
 As you can see, common UI and functionality includes header and footer UI, analytics reporting, SEO etc. We can import these in each page type's test file to run these tests.
