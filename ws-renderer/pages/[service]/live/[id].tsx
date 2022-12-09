@@ -13,16 +13,6 @@ import getAgent from '../../../../src/server/utilities/getAgent';
 
 import styles from './styles';
 
-const getPageData = async (service: Services, id: string) => {
-  const data = await bffFetch({
-    service,
-    path: `live/${id}?renderer_env=live`,
-    getAgent,
-  });
-
-  return data;
-};
-
 type ComponentProps = {
   pageData: {
     metadata: string;
@@ -51,6 +41,16 @@ interface PageParams extends ParsedUrlQuery {
   service: Services;
   id: string;
 }
+
+const getPageData = async (service: Services, id: string) => {
+  const data = await bffFetch({
+    service,
+    path: `live/${id}?renderer_env=live`,
+    getAgent,
+  });
+
+  return data;
+};
 
 export const getStaticProps: GetStaticProps = async context => {
   const { service, id } = context.params as PageParams;
