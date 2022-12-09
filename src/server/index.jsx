@@ -101,7 +101,7 @@ server
     res.sendFile(swPath, {}, error => {
       if (error) {
         logger.error(SERVICE_WORKER_SENDFILE_ERROR, { error });
-        res.status(500).send('Unable to find service worker.');
+        res.status(500).send(`Unable to find service worker in ${swPath}`);
       }
     });
   })
@@ -134,10 +134,10 @@ const injectDefaultCacheHeader = (req, res, next) => {
 };
 
 const injectResourceHintsHeader = (req, res, next) => {
-  const isPidginService = req.originalUrl.startsWith('/pidgin');
+  const thisService = req.originalUrl.split('/')[1];
 
-  if (isPidginService) {
-    const assetOrigins = getAssetOrigins('pidgin');
+  if (['pidgin', 'hindi'].includes(thisService)) {
+    const assetOrigins = getAssetOrigins(thisService);
     res.set(
       'Link',
       assetOrigins

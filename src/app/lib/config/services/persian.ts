@@ -294,12 +294,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: `اجازه نشان دادن محتوای [social_media_site]  را می دهید؟`,
           body: `این مطلب شامل محتوایی از [social_media_site]  است. قبل از بارگیری این محتوا از شما اجازه می گیریم، زیرا ممکن است این سایت ها از کوکی ها و یا سایر انواع فن آوری استفاده کنند. می توانید سیاست [link]  [social_media_site]  را درباره کوکی ها [/link] و  [link] سیاست مربوط به حفظ حریم خصوصی[/link]  را پیش از موافقت بخوانید. برای دیدن این محتوا روی "موافقت و ادامه"‌کلیک کنید.`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
         },
       },
       include: {
@@ -377,6 +371,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'صفحه اول',
         url: '/persian',
+      },
+      {
+        title: 'اعتراضات ایران',
+        url: '/persian/topics/c5j85v96d92t',
       },
       {
         title: 'پخش زنده',

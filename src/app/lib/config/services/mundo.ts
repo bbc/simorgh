@@ -253,12 +253,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: '¿Permitir el contenido de [social_media_site]?',
           body: `Este artículo contiene contenido proporcionado por [social_media_site]. Solicitamos tu permiso antes de que algo  se cargue, ya que ese sitio  puede estar usando cookies y otras tecnologías. Es posible que quieras leer [link] política de cookies [/link] y [link] política de privacidad [/link] de [social_media_site] antes de aceptar. Para ver este contenido, selecciona 'aceptar y continuar'.`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
           button: 'Aceptar y continuar',
         },
       },
@@ -341,19 +335,15 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'América Latina',
-        url: '/mundo/america_latina',
+        url: '/mundo/topics/c7zp57yyz25t',
       },
       {
         title: 'Internacional',
-        url: '/mundo/internacional',
+        url: '/mundo/topics/c2lej05epw5t',
       },
       {
-        title: 'Medio ambiente',
-        url: '/mundo/noticias-58984987',
-      },
-      {
-        title: 'Coronavirus',
-        url: '/mundo/topics/c67q9nnn8z7t',
+        title: 'Qatar 2022',
+        url: '/mundo/topics/c36v5eq58ngt',
       },
       {
         title: 'Hay Festival',
@@ -378,10 +368,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Tecnología',
         url: '/mundo/topics/cyx5krnw38vt',
-      },
-      {
-        title: 'Video',
-        url: '/mundo/media/video',
       },
       {
         title: 'Centroamérica Cuenta',

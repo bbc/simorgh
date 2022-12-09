@@ -258,12 +258,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: 'Qabiyyee [social_media_site] hayyamtaa?',
           body: `Barreeffamni kun qabiyyee [social_media-site]n dhiyaatan qaba. Tarii 'cookies' fi teknolojiiwwan biraa fayyadamuu waan danda'aniif, osoo tokkoonsaa gadi hin buufamiin dura hayyama keessan gaafanna. Osoo hin simatin dura [social_media_site][link] imaammata cookies [/link] fi [link] imaammata mateenyaa [/link] dubbisuu barbaadda ta'a. Qabiyyee kana ilaaluuf 'waliigaluun itti fufi' filadhu.`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
         },
       },
       include: {

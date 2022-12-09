@@ -254,12 +254,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: `[social_media_site] içeriğine izin veriyor musunuz?`,
           body: `Bu makalede [social_media_site] içeriği bulunmaktadır. Çerez ve diğer teknolojileri kullanıyor olabilirler, bilgisayarınıza herhangi bir şey yüklenmeden önce sizin rızanızı alırız. İzin vermeden önce çerez politikasını okumak ve gizlilik politikasına göz atmak isteyebilirsiniz. Bu içeriğe ulaşmak için lütfen "kabul et ve devam et" seçeneğine tıklayın.`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
           button: 'Kabul et ve devam et ',
         },
       },

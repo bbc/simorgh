@@ -9,7 +9,7 @@ import BylineCss from './index.styles';
 import { RightChevron, LeftChevron } from '../../../components/icons';
 import Text from '../../../components/Text';
 import Image from '../../../components/Image';
-import buildIChefURL from '../../../lib/utilities/ichefURL';
+import bylineExtractor from '../utilities/bylineExtractor';
 
 type Props = {
   blocks: any;
@@ -18,77 +18,20 @@ type Props = {
 const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
   const { translations, dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
-  const bylineBlocks = pathOr([], [0, 'model', 'blocks'], blocks);
 
-  const authorBlock = bylineBlocks.find((block: any) => block.type === 'name');
-  const jobRoleBlock = bylineBlocks.find((block: any) => block.type === 'role');
-  const twitterBlock = bylineBlocks.find((block: any) => block.type === 'link');
-  const locationBlock = bylineBlocks.find(
-    (block: any) => block.type === 'location',
-  );
-  const imageBlock = bylineBlocks.find((block: any) => block.type === 'image');
+  const bylineValues = bylineExtractor(blocks);
 
-  const author = pathOr(
-    '',
-    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
-    authorBlock,
-  );
-  const jobRole = pathOr(
-    '',
-    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
-    jobRoleBlock,
-  );
-  const twitterText = pathOr(
-    '',
-    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
-    twitterBlock,
-  );
-  const twitterLink = pathOr(
-    '',
-    [
-      'model',
-      'blocks',
-      0,
-      'model',
-      'blocks',
-      0,
-      'model',
-      'blocks',
-      0,
-      'model',
-      'locator',
-    ],
-    twitterBlock,
-  );
-  const location = pathOr(
-    '',
-    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
-    locationBlock,
-  );
-  const locator = pathOr(
-    '',
-    ['model', 'blocks', 0, 'model', 'locator'],
-    imageBlock,
-  );
-  const originCode = pathOr(
-    '',
-    ['model', 'blocks', 0, 'model', 'originCode'],
-    imageBlock,
-  );
-  const DEFAULT_IMAGE_RES = 160;
-  let image = buildIChefURL({
-    originCode,
-    locator,
-    resolution: DEFAULT_IMAGE_RES,
-    isPng: true,
-  });
+  if (!bylineValues) return null;
 
-  if (!image.endsWith('.png')) image = '';
-
-  const contributorBlock = pathOr([], [0], blocks);
-  const authorTopicUrl = pathOr('', ['model', 'topicUrl'], contributorBlock);
-
-  if (!(author && jobRole)) return null;
+  const {
+    authorName,
+    jobRole,
+    twitterText,
+    twitterLink,
+    authorImage,
+    location,
+    authorTopicUrl,
+  } = bylineValues;
 
   const authorTranslated = pathOr('Author', ['byline', 'author'], translations);
   const articleInformationTranslated = pathOr(
@@ -113,17 +56,16 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
         {articleInformationTranslated}
       </VisuallyHiddenText>
       <ul css={BylineCss.bylineList} role="list">
-        {image && (
+        {authorImage && (
           <li
-            css={
-              isRtl
-                ? [BylineCss.imageRtl, BylineCss.ImageWrapper]
-                : [BylineCss.imageLtr, BylineCss.ImageWrapper]
-            }
+            css={[
+              BylineCss.ImageWrapper,
+              isRtl ? BylineCss.imageRtl : BylineCss.imageLtr,
+            ]}
           >
             <Image
               css={BylineCss.imageSrc}
-              src={image}
+              src={authorImage}
               alt=""
               placeholder={false}
               aspectRatio={[1, 1]}
@@ -144,7 +86,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
                   fontVariant="sansBold"
                   css={BylineCss.author}
                 >
-                  {author}
+                  {authorName}
                 </Text>
                 {isRtl ? (
                   <LeftChevron css={BylineCss.authorChevron} />
@@ -161,7 +103,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
                 size="bodyCopy"
                 fontVariant="sansBold"
               >
-                {author}
+                {authorName}
               </Text>
             </span>
           )}

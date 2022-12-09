@@ -62,16 +62,16 @@ export const service: DefaultServiceConfig = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'पॉडकास्ट',
-      brandTitle: 'बात सरहद पार',
+      brandTitle: 'दिनभर: पूरा दिन,पूरी ख़बर (Dinbhar)',
       brandDescription:
-        'दो देश,दो शख़्सियतें और ढेर सारी बातें. आज़ादी और बँटवारे के 75 साल. सीमा पार संवाद.',
+        'देश और दुनिया की बड़ी ख़बरें और उनका विश्लेषण करता समसामयिक विषयों का कार्यक्रम.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/448xn/p0clc96w.jpg',
-        alt: 'बात सरहद पार',
+        src: 'https://ichef.bbci.co.uk/images/ic/448xn/p09ds7cb.jpg',
+        alt: 'दिनभर: पूरा दिन,पूरी ख़बर',
       },
       linkLabel: {
-        text: 'बात सरहद पार',
-        href: 'https://www.bbc.com/hindi/podcasts/p0clc83k',
+        text: 'दिनभर: पूरा दिन,पूरी ख़बर',
+        href: 'https://www.bbc.com/hindi/podcasts/p09ds7zx',
       },
       skipLink: {
         text: 'छोड़कर %title% आगे बढ़ें',
@@ -287,12 +287,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: '[social_media_site] सामग्री की इजाज़त?',
           body: `इस लेख में [social_media_site] से मिली सामग्री शामिल है. कुछ भी लोड होने से पहले हम आपकी इजाज़त मांगते हैं क्योंकि उनमें कुकीज़ और दूसरी तकनीकों का इस्तेमाल किया गया हो सकता है. आप स्वीकार करने से पहले [social_media_site] [link] cookie policy [/link] और [link] को पढ़ना चाहेंगे [/link]. इस सामग्री को देखने के लिए  'अनुमति  देंऔर जारी रखें' को चुनें.`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
           button: 'अनुमति  देंऔर जारी रखें',
         },
       },
