@@ -1,6 +1,6 @@
 import React from 'react';
 import path from 'ramda/src/path';
-import { arrayOf, bool, elementType, shape, string } from 'prop-types';
+import { arrayOf, bool, shape, string } from 'prop-types';
 import styled from '@emotion/styled';
 import {
   StoryPromoLi,
@@ -37,7 +37,6 @@ const RelatedContentPromoList = ({
   dir,
   isMediaContent,
   eventTrackingData,
-  imageComponent,
 }) => {
   const blockLevelEventTrackingData = path(['block'], eventTrackingData);
   const viewRef = useViewTracker(blockLevelEventTrackingData);
@@ -78,7 +77,6 @@ const RelatedContentPromoList = ({
             isSingleColumnLayout={isMediaContent}
             eventTrackingData={eventTrackingData}
             labelId="rel-content"
-            imageComponent={imageComponent}
           />
         </Grid>
       ))}
@@ -93,13 +91,11 @@ RelatedContentPromoList.propTypes = {
   eventTrackingData: shape({
     componentName: string,
   }),
-  imageComponent: elementType,
 };
 
 RelatedContentPromoList.defaultProps = {
   isMediaContent: false,
   eventTrackingData: null,
-  imageComponent: undefined,
 };
 
 export default RelatedContentPromoList;

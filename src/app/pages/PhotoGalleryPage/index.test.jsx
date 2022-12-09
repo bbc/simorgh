@@ -12,6 +12,7 @@ import allCpsOnwardJourneys from '#data/pidgin/cpsAssets/tori-49221071.json';
 import pglAboutData from '#data/afaanoromoo/cpsAssets/oduu-41217768';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import ThemeProvider from '../../components/ThemeProvider';
 import PhotoGalleryPage from '.';
 
 jest.mock('#containers/ChartbeatAnalytics', () => {
@@ -24,22 +25,26 @@ jest.mock('#containers/ComscoreAnalytics', () => {
   return ComscoreAnalytics;
 });
 
+jest.mock('../../components/ThemeProvider');
+
 const Page = ({ pageData, service }) => (
   <StaticRouter>
-    <ToggleContextProvider>
-      <ServiceContextProvider service={service}>
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          isAmp={false}
-          pageType={pageData.metadata.type}
-          pathname={pageData.metadata.locators.assetUri}
-          service={service}
-          statusCode={200}
-        >
-          <PhotoGalleryPage service={service} pageData={pageData} />
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ToggleContextProvider>
+    <ThemeProvider service={service} variant="default">
+      <ToggleContextProvider>
+        <ServiceContextProvider service={service}>
+          <RequestContextProvider
+            bbcOrigin="https://www.test.bbc.co.uk"
+            isAmp={false}
+            pageType={pageData.metadata.type}
+            pathname={pageData.metadata.locators.assetUri}
+            service={service}
+            statusCode={200}
+          >
+            <PhotoGalleryPage service={service} pageData={pageData} />
+          </RequestContextProvider>
+        </ServiceContextProvider>
+      </ToggleContextProvider>
+    </ThemeProvider>
   </StaticRouter>
 );
 

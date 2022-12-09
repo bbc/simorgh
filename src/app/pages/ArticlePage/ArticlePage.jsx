@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import propEq from 'ramda/src/propEq';
-import last from 'ramda/src/last';
 import styled from '@emotion/styled';
 import { string, node } from 'prop-types';
 import useToggle from '#hooks/useToggle';
@@ -64,7 +63,9 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
+import bylineExtractor from './utilities/bylineExtractor';
 import Byline from './Byline';
+import getAuthorTwitterHandle from './getAuthorTwitterHandle';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from './PagePromoSections/RelatedContentSection';
 
@@ -136,7 +137,17 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const topics = path(['metadata', 'topics'], pageData);
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
   const startsWithHeading = propEq('type', 'headline')(blocks[0] || {});
-  const hasByline = blocks.find(block => block.type === 'byline');
+
+  const bylineBlock = blocks.find(block => block.type === 'byline');
+  const bylineContribBlocks = pathOr([], ['model', 'blocks'], bylineBlock);
+
+  const bylineLinkedData = bylineExtractor(bylineContribBlocks);
+
+  const hasByline = !!bylineLinkedData;
+
+  const articleAuthorTwitterHandle = hasByline
+    ? getAuthorTwitterHandle(blocks)
+    : null;
 
   const componentsToRender = {
     visuallyHiddenHeadline,
@@ -219,6 +230,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         articleId={getArticleId(pageData)}
         title={headline}
         author={articleAuthor}
+        twitterHandle={articleAuthorTwitterHandle}
         firstPublished={firstPublished}
         lastPublished={lastPublished}
         section={getArticleSection(pageData)}
@@ -231,6 +243,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       />
       <LinkedData
         showAuthor
+        bylineLinkedData={bylineLinkedData}
         type="Article"
         seoTitle={headline}
         headline={headline}
@@ -259,7 +272,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
               tagBackgroundColour={C_WHITE}
             />
           )}
-          <RelatedContentSection content={last(blocks)} />
+          <RelatedContentSection content={blocks} />
         </Primary>
         <SecondaryColumn pageData={pageData} />
       </ArticlePageGrid>

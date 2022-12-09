@@ -1,22 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { string, number } from 'prop-types';
-import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
-import StyledImage from './index.styles';
+import { RequestContext } from '#contexts/RequestContext';
+import IMAGE from '../../../../components/Image';
 
 const Image = ({ src, altText, srcset, fallbackSrcset, width, height }) => {
-  const ASPECT_RATIO = (9 / 16) * 100;
+  const { isAmp } = useContext(RequestContext);
+  const ASPECT_RATIO = [16, 9];
 
   return (
-    <ImageWithPlaceholder
+    <IMAGE
+      isAmp={isAmp}
       src={src}
       alt={altText}
-      srcset={srcset}
-      fallbackSrcset={fallbackSrcset}
-      ratio={ASPECT_RATIO}
+      srcSet={srcset}
+      fallbackSrcSet={fallbackSrcset}
+      aspectRatio={ASPECT_RATIO}
       width={width}
       height={height}
-      lazyload
-      imageComponent={StyledImage}
+      lazyLoad
     />
   );
 };

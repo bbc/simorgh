@@ -36,6 +36,11 @@ const WithMediaIndicator = ({ service, variant }) => {
             type={MEDIA_TYPES.VIDEO}
             duration={123}
           />
+          <Promo
+            {...fixture.data.summaries[0]}
+            type={MEDIA_TYPES.PHOTO_GALLERY}
+            duration={123}
+          />
         </Wrapper>
       </ServiceContextProvider>
     </ThemeProvider>

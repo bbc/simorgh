@@ -83,88 +83,74 @@ Object {
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 2`] = `
 Object {
   "text": "América Latina",
-  "url": "/mundo/america_latina",
+  "url": "/mundo/topics/c7zp57yyz25t",
 }
 `;
 
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 3`] = `
 Object {
   "text": "Internacional",
-  "url": "/mundo/internacional",
+  "url": "/mundo/topics/c2lej05epw5t",
 }
 `;
 
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 4`] = `
 Object {
-  "text": "Medio ambiente",
-  "url": "/mundo/noticias-58984987",
+  "text": "Qatar 2022",
+  "url": "/mundo/topics/c36v5eq58ngt",
 }
 `;
 
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 5`] = `
-Object {
-  "text": "Coronavirus",
-  "url": "/mundo/topics/c67q9nnn8z7t",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "Hay Festival",
   "url": "/mundo/noticias-36795069",
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 7`] = `
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "Economía",
   "url": "/mundo/topics/c06gq9v4xp3t",
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 8`] = `
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "Ciencia",
   "url": "/mundo/topics/ckdxnw959n7t",
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 9`] = `
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "Salud",
   "url": "/mundo/topics/cpzd498zkxgt",
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 10`] = `
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 9`] = `
 Object {
   "text": "Cultura",
   "url": "/mundo/topics/c2dwq9zyv4yt",
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 11`] = `
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 10`] = `
 Object {
   "text": "Tecnología",
   "url": "/mundo/topics/cyx5krnw38vt",
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 12`] = `
-Object {
-  "text": "Video",
-  "url": "/mundo/media/video",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 13`] = `
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 11`] = `
 Object {
   "text": "Centroamérica Cuenta",
   "url": "/mundo/noticias-43826245",
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 14`] = `
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 12`] = `
 Object {
   "text": "BBC Extra",
   "url": "/mundo/noticias-48908206",
@@ -178,7 +164,9 @@ exports[`Canonical Photo Gallery Page Image should match snapshot 1`] = `
   alt="Tenista de 1904"
   class="e3vrtyk0 bbc-rb7xa0 e1mo64ex0"
   height="549"
+  sizes="(min-width: 600px) 80vw, (min-width: 1008px) 632px, 95vw"
   src="https://ichef.bbci.co.uk/news/640/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg"
+  srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 480w, https://ichef.bbci.co.uk/news/549/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 549w"
   width="549"
 />
 `;

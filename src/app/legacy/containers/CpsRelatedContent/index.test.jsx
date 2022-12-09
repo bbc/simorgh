@@ -12,7 +12,10 @@ import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import * as viewTracking from '#hooks/useViewTracker';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import ThemeProvider from '../../../components/ThemeProvider';
 import CpsRelatedContent from '.';
+
+jest.mock('../../../components/ThemeProvider');
 
 const promos = path(['relatedContent', 'groups', 0, 'promos'], pidginPageData);
 
@@ -24,24 +27,26 @@ const renderRelatedContent = ({
   pageType = MEDIA_ASSET_PAGE,
 } = {}) => {
   return render(
-    <ServiceContextProvider service={service}>
-      <RequestContextProvider
-        bbcOrigin={bbcOrigin}
-        isAmp={false}
-        pageType={pageType}
-        pathname="/pidgin/tori-49450859"
-        service="pidgin"
-        statusCode={200}
-      >
-        <ToggleContextProvider
-          toggles={{
-            eventTracking: { enabled: true },
-          }}
+    <ThemeProvider service={service} variant="default">
+      <ServiceContextProvider service={service}>
+        <RequestContextProvider
+          bbcOrigin={bbcOrigin}
+          isAmp={false}
+          pageType={pageType}
+          pathname="/pidgin/tori-49450859"
+          service="pidgin"
+          statusCode={200}
         >
-          <CpsRelatedContent content={content} enableGridWrapper />
-        </ToggleContextProvider>
-      </RequestContextProvider>
-    </ServiceContextProvider>,
+          <ToggleContextProvider
+            toggles={{
+              eventTracking: { enabled: true },
+            }}
+          >
+            <CpsRelatedContent content={content} enableGridWrapper />
+          </ToggleContextProvider>
+        </RequestContextProvider>
+      </ServiceContextProvider>
+    </ThemeProvider>,
   );
 };
 

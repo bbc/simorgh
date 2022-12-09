@@ -95,23 +95,7 @@ describe('Image - Canonical', () => {
   it('should render the primary srcset and sizes', () => {
     render(<Fixture />);
 
-    const sourceEl = screen.getByAltText('Test image alt text')?.parentNode
-      ?.children[0];
-    expect(sourceEl).toHaveAttribute(
-      'srcset',
-      '/test-image-200.webp 200w, /test-image-500.webp 500w',
-    );
-    expect(sourceEl).toHaveAttribute(
-      'sizes',
-      '(max-width: 600px) 480px, 800px',
-    );
-  });
-
-  it('should render the fallback srcset and sizes', () => {
-    render(<Fixture />);
-
-    const sourceEl = screen.getByAltText('Test image alt text')?.parentNode
-      ?.children[1];
+    const sourceEl = screen.getByAltText('Test image alt text');
     expect(sourceEl).toHaveAttribute(
       'srcset',
       '/test-image-200.jpg 200w, /test-image-500.jpg 500w',
@@ -224,43 +208,6 @@ describe('Image - Canonical', () => {
     `);
   });
 
-  it('should match markup for basic webp image with jpeg fallback', () => {
-    const { container } = render(
-      <Image
-        alt="Test image alt text"
-        src="/test-image-500.jpeg"
-        srcSet="/test-image-500.webp"
-        sizes="(max-width: 600px) 480px, 800px"
-        mediaType="image/webp"
-        fallbackSrcSet="/test-image-500.jpeg"
-        fallbackMediaType="image/jpeg"
-      />,
-    );
-
-    expect(removeStyles(container)).toMatchInlineSnapshot(`
-      <div
-        style="padding-bottom: 56.25%;"
-      >
-        <picture>
-          <source
-            sizes="(max-width: 600px) 480px, 800px"
-            srcset="/test-image-500.webp"
-            type="image/webp"
-          />
-          <source
-            sizes="(max-width: 600px) 480px, 800px"
-            srcset="/test-image-500.jpeg"
-            type="image/jpeg"
-          />
-          <img
-            alt="Test image alt text"
-            src="/test-image-500.jpeg"
-          />
-        </picture>
-      </div>
-    `);
-  });
-
   it('should match markup for a responsive image', () => {
     const { container } = render(
       <Image
@@ -279,43 +226,6 @@ describe('Image - Canonical', () => {
           src="/test-image-500.jpg"
           srcset="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
         />
-      </div>
-    `);
-  });
-
-  it('should match markup for a responsive webp image with a jpeg fallback', () => {
-    const { container } = render(
-      <Image
-        alt="Test image alt text"
-        src="/test-image-500.jpeg"
-        srcSet="/test-image-200.webp 200w, /test-image-500.webp 500w"
-        sizes="(max-width: 600px) 480px, 800px"
-        mediaType="image/webp"
-        fallbackSrcSet="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
-        fallbackMediaType="image/jpeg"
-      />,
-    );
-
-    expect(removeStyles(container)).toMatchInlineSnapshot(`
-      <div
-        style="padding-bottom: 56.25%;"
-      >
-        <picture>
-          <source
-            sizes="(max-width: 600px) 480px, 800px"
-            srcset="/test-image-200.webp 200w, /test-image-500.webp 500w"
-            type="image/webp"
-          />
-          <source
-            sizes="(max-width: 600px) 480px, 800px"
-            srcset="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
-            type="image/jpeg"
-          />
-          <img
-            alt="Test image alt text"
-            src="/test-image-500.jpeg"
-          />
-        </picture>
       </div>
     `);
   });
@@ -538,7 +448,6 @@ describe('Image - AMP pages', () => {
         <amp-img
           alt="Test image alt text"
           layout="fill"
-          sizes="(max-width: 600px) 480px, 800px"
           src="/test-image-500.webp"
           srcset="/test-image-200.webp 200w, /test-image-500.webp 500w"
         >
