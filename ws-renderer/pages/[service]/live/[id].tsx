@@ -42,19 +42,13 @@ interface PageParams extends ParsedUrlQuery {
   id: string;
 }
 
-const getPageData = async (service: Services, id: string) => {
-  const data = await bffFetch({
+export const getStaticProps: GetStaticProps = async context => {
+  const { service, id } = context.params as PageParams;
+  const response = await bffFetch({
     service,
     path: `live/${id}?renderer_env=live`,
     getAgent,
   });
-
-  return data;
-};
-
-export const getStaticProps: GetStaticProps = async context => {
-  const { service, id } = context.params as PageParams;
-  const response = await getPageData(service, id);
 
   return {
     props: {
