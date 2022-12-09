@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from 'react';
+import { string } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import onClient from '#lib/utilities/onClient';
 import { RequestContext } from '#contexts/RequestContext';
@@ -37,12 +38,22 @@ const ServiceWorkerContainer = () => {
     }
   }, [envIsProduction, swPath, service]);
 
-  return isAmp ? (
+  return isAmp && process.env.SIMORGH_BASE_URL.indexOf('http:') === -1 ? (
     <>
       <AmpHead />
       <AmpServiceWorker canonicalLink={canonicalLink} swSrc={swSrc} />
     </>
   ) : null;
+};
+
+AmpServiceWorker.propTypes = {
+  canonicalLink: string,
+  swSrc: string,
+};
+
+AmpServiceWorker.defaultProps = {
+  canonicalLink: '',
+  swSrc: '',
 };
 
 export default ServiceWorkerContainer;
