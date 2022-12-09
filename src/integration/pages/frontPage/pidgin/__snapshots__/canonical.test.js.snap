@@ -310,9 +310,10 @@ exports[`Story Promo Headline should match text 1`] = `"As E Dey Happen Senators
 exports[`Story Promo Image should match image 1`] = `
 <img
   alt="Senator Ahmad Lawan and Ali Ndume"
-  class="e3vrtyk0 bbc-rb7xa0 e1mo64ex0"
+  class="bbc-1uwua2r"
   height="549"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg"
+  style="aspect-ratio:976 / 549"
   width="976"
 />
 `;

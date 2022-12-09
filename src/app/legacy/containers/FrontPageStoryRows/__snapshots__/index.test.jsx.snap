@@ -508,6 +508,39 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   position: relative;
 }
 
+.emotion-34 {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+  background-color: #F2F2F2;
+  -webkit-background-position: center center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 60px 17px;
+  background-size: 60px 17px;
+}
+
+@media (min-width: 25rem) {
+  .emotion-34 {
+    -webkit-background-size: 77px 22px;
+    background-size: 77px 22px;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-34 {
+    -webkit-background-size: 93px 27px;
+    background-size: 93px 27px;
+  }
+}
+
+.emotion-35 {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 @media (min-width: 25rem) {
   .emotion-36 {
     position: absolute;
@@ -833,17 +866,29 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
           class="emotion-32 emotion-33"
         >
           <div
-            class="emotion-7 emotion-8"
-            data-e2e="image-placeholder"
+            class="emotion-34"
             style="padding-bottom: 56.25%;"
           >
-            <div
-              class="lazyload-wrapper "
-            >
-              <div
-                class="lazyload-placeholder"
+            <picture>
+              <source
+                sizes="(max-width: 1008px) 33vw, 321px"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 320w, https://ichef.bbci.co.uk/news/640/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 640w"
+                type="image/webp"
               />
-            </div>
+              <source
+                sizes="(max-width: 1008px) 33vw, 321px"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 320w, https://ichef.bbci.co.uk/news/640/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 640w"
+                type="image/jpeg"
+              />
+              <img
+                alt="سیربین"
+                class="emotion-35"
+                height="360"
+                loading="lazy"
+                src="https://ichef.bbci.co.uk/news/660/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg"
+                width="640"
+              />
+            </picture>
           </div>
           <div
             class="emotion-36 emotion-37"
@@ -1198,17 +1243,16 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 }
 
 .emotion-17 {
-  position: relative;
   height: 0;
   overflow: hidden;
+  position: relative;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
   background-color: #F2F2F2;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
 @media (min-width: 25rem) {
@@ -1223,6 +1267,12 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
+}
+
+.emotion-18 {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .emotion-19 {
@@ -1578,17 +1628,29 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
           class="emotion-15 emotion-16"
         >
           <div
-            class="emotion-17 emotion-18"
-            data-e2e="image-placeholder"
+            class="emotion-17"
             style="padding-bottom: 56.25%;"
           >
-            <div
-              class="lazyload-wrapper "
-            >
-              <div
-                class="lazyload-placeholder"
+            <picture>
+              <source
+                sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 660w"
+                type="image/webp"
               />
-            </div>
+              <source
+                sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 660w"
+                type="image/jpeg"
+              />
+              <img
+                alt="Messi, Iwobi, Ronaldo"
+                class="emotion-18"
+                height="549"
+                loading="lazy"
+                src="https://ichef.bbci.co.uk/news/660/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg"
+                width="976"
+              />
+            </picture>
           </div>
           <div
             class="emotion-19 emotion-20"
@@ -1613,17 +1675,29 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
           class="emotion-15 emotion-16"
         >
           <div
-            class="emotion-17 emotion-18"
-            data-e2e="image-placeholder"
+            class="emotion-17"
             style="padding-bottom: 56.25%;"
           >
-            <div
-              class="lazyload-wrapper "
-            >
-              <div
-                class="lazyload-placeholder"
+            <picture>
+              <source
+                sizes="(max-width: 1008px) 33vw, 321px"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 660w"
+                type="image/webp"
               />
-            </div>
+              <source
+                sizes="(max-width: 1008px) 33vw, 321px"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 660w"
+                type="image/jpeg"
+              />
+              <img
+                alt="A lone Koala perches in a eucalyptus tree"
+                class="emotion-18"
+                height="549"
+                loading="lazy"
+                src="https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg"
+                width="976"
+              />
+            </picture>
           </div>
           <div
             class="emotion-32 emotion-20"
@@ -2111,6 +2185,39 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   position: relative;
 }
 
+.emotion-34 {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+  background-color: #F2F2F2;
+  -webkit-background-position: center center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 60px 17px;
+  background-size: 60px 17px;
+}
+
+@media (min-width: 25rem) {
+  .emotion-34 {
+    -webkit-background-size: 77px 22px;
+    background-size: 77px 22px;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-34 {
+    -webkit-background-size: 93px 27px;
+    background-size: 93px 27px;
+  }
+}
+
+.emotion-35 {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 @media (min-width: 25rem) {
   .emotion-36 {
     position: absolute;
@@ -2436,17 +2543,29 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
           class="emotion-32 emotion-33"
         >
           <div
-            class="emotion-7 emotion-8"
-            data-e2e="image-placeholder"
+            class="emotion-34"
             style="padding-bottom: 56.25%;"
           >
-            <div
-              class="lazyload-wrapper "
-            >
-              <div
-                class="lazyload-placeholder"
+            <picture>
+              <source
+                sizes="(max-width: 1008px) 33vw, 321px"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 320w, https://ichef.bbci.co.uk/news/640/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg.webp 640w"
+                type="image/webp"
               />
-            </div>
+              <source
+                sizes="(max-width: 1008px) 33vw, 321px"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 320w, https://ichef.bbci.co.uk/news/640/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg 640w"
+                type="image/jpeg"
+              />
+              <img
+                alt="سیربین"
+                class="emotion-35"
+                height="360"
+                loading="lazy"
+                src="https://ichef.bbci.co.uk/news/660/cpsprodpb/7E3B/production/_94651323_5113eb4a-bc44-445b-9ebc-57559185554f.jpg"
+                width="640"
+              />
+            </picture>
           </div>
           <div
             class="emotion-36 emotion-37"
@@ -2526,17 +2645,29 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
           class="emotion-32 emotion-33"
         >
           <div
-            class="emotion-7 emotion-8"
-            data-e2e="image-placeholder"
+            class="emotion-34"
             style="padding-bottom: 56.25%;"
           >
-            <div
-              class="lazyload-wrapper "
-            >
-              <div
-                class="lazyload-placeholder"
+            <picture>
+              <source
+                sizes="(max-width: 1008px) 33vw, 321px"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/18AA/production/_107041360_ff.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/18AA/production/_107041360_ff.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/18AA/production/_107041360_ff.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/18AA/production/_107041360_ff.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/18AA/production/_107041360_ff.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/18AA/production/_107041360_ff.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/18AA/production/_107041360_ff.jpg.webp 660w"
+                type="image/webp"
               />
-            </div>
+              <source
+                sizes="(max-width: 1008px) 33vw, 321px"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/18AA/production/_107041360_ff.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/18AA/production/_107041360_ff.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/18AA/production/_107041360_ff.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/18AA/production/_107041360_ff.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/18AA/production/_107041360_ff.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/18AA/production/_107041360_ff.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/18AA/production/_107041360_ff.jpg 660w"
+                type="image/jpeg"
+              />
+              <img
+                alt="پکوان"
+                class="emotion-35"
+                height="549"
+                loading="lazy"
+                src="https://ichef.bbci.co.uk/news/660/cpsprodpb/18AA/production/_107041360_ff.jpg"
+                width="976"
+              />
+            </picture>
           </div>
           <div
             class="emotion-36 emotion-37"
@@ -2592,17 +2723,29 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
           class="emotion-32 emotion-33"
         >
           <div
-            class="emotion-7 emotion-8"
-            data-e2e="image-placeholder"
+            class="emotion-34"
             style="padding-bottom: 56.25%;"
           >
-            <div
-              class="lazyload-wrapper "
-            >
-              <div
-                class="lazyload-placeholder"
+            <picture>
+              <source
+                sizes="(max-width: 1008px) 33vw, 321px"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg.webp 660w"
+                type="image/webp"
               />
-            </div>
+              <source
+                sizes="(max-width: 1008px) 33vw, 321px"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg 660w"
+                type="image/jpeg"
+              />
+              <img
+                alt="The World Cup trophy"
+                class="emotion-35"
+                height="1152"
+                loading="lazy"
+                src="https://ichef.bbci.co.uk/news/660/cpsprodpb/1694F/production/_101059429_world_cup_trophy_getty.jpg"
+                width="2048"
+              />
+            </picture>
           </div>
           <div
             class="emotion-36 emotion-37"
@@ -2786,17 +2929,16 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
 }
 
 .emotion-9 {
-  position: relative;
   height: 0;
   overflow: hidden;
+  position: relative;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
   background-color: #F2F2F2;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
 @media (min-width: 25rem) {
@@ -2811,6 +2953,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
+}
+
+.emotion-10 {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 @media (min-width: 25rem) {
@@ -3050,17 +3198,29 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           class="emotion-7 emotion-8"
         >
           <div
-            class="emotion-9 emotion-10"
-            data-e2e="image-placeholder"
+            class="emotion-9"
             style="padding-bottom: 56.25%;"
           >
-            <div
-              class="lazyload-wrapper "
-            >
-              <div
-                class="lazyload-placeholder"
+            <picture>
+              <source
+                sizes="(max-width: 1008px) 33vw, 321px"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 660w"
+                type="image/webp"
               />
-            </div>
+              <source
+                sizes="(max-width: 1008px) 33vw, 321px"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 660w"
+                type="image/jpeg"
+              />
+              <img
+                alt="Messi, Iwobi, Ronaldo"
+                class="emotion-10"
+                height="549"
+                loading="lazy"
+                src="https://ichef.bbci.co.uk/news/660/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg"
+                width="976"
+              />
+            </picture>
           </div>
           <div
             class="emotion-11 emotion-12"
@@ -3111,17 +3271,29 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           class="emotion-7 emotion-8"
         >
           <div
-            class="emotion-9 emotion-10"
-            data-e2e="image-placeholder"
+            class="emotion-9"
             style="padding-bottom: 56.25%;"
           >
-            <div
-              class="lazyload-wrapper "
-            >
-              <div
-                class="lazyload-placeholder"
+            <picture>
+              <source
+                sizes="(max-width: 1008px) 33vw, 321px"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 660w"
+                type="image/webp"
               />
-            </div>
+              <source
+                sizes="(max-width: 1008px) 33vw, 321px"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg 660w"
+                type="image/jpeg"
+              />
+              <img
+                alt="A lone Koala perches in a eucalyptus tree"
+                class="emotion-10"
+                height="549"
+                loading="lazy"
+                src="https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg"
+                width="976"
+              />
+            </picture>
           </div>
           <div
             class="emotion-11 emotion-12"
@@ -3204,17 +3376,29 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           class="emotion-7 emotion-8"
         >
           <div
-            class="emotion-9 emotion-10"
-            data-e2e="image-placeholder"
+            class="emotion-9"
             style="padding-bottom: 56.25%;"
           >
-            <div
-              class="lazyload-wrapper "
-            >
-              <div
-                class="lazyload-placeholder"
+            <picture>
+              <source
+                sizes="(max-width: 1008px) 33vw, 321px"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg.webp 660w"
+                type="image/webp"
               />
-            </div>
+              <source
+                sizes="(max-width: 1008px) 33vw, 321px"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg 660w"
+                type="image/jpeg"
+              />
+              <img
+                alt="Rashidi"
+                class="emotion-10"
+                height="549"
+                loading="lazy"
+                src="https://ichef.bbci.co.uk/news/660/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg"
+                width="976"
+              />
+            </picture>
           </div>
           <div
             class="emotion-11 emotion-12"
@@ -3265,17 +3449,29 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           class="emotion-7 emotion-8"
         >
           <div
-            class="emotion-9 emotion-10"
-            data-e2e="image-placeholder"
+            class="emotion-9"
             style="padding-bottom: 56.25%;"
           >
-            <div
-              class="lazyload-wrapper "
-            >
-              <div
-                class="lazyload-placeholder"
+            <picture>
+              <source
+                sizes="(max-width: 1008px) 33vw, 321px"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png.webp 660w"
+                type="image/webp"
               />
-            </div>
+              <source
+                sizes="(max-width: 1008px) 33vw, 321px"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png 660w"
+                type="image/png"
+              />
+              <img
+                alt="all-time African XI promo image"
+                class="emotion-10"
+                height="549"
+                loading="lazy"
+                src="https://ichef.bbci.co.uk/news/660/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png"
+                width="976"
+              />
+            </picture>
           </div>
           <div
             class="emotion-11 emotion-12"
@@ -5361,17 +5557,16 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
 }
 
 .emotion-9 {
-  position: relative;
   height: 0;
   overflow: hidden;
+  position: relative;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
   background-color: #F2F2F2;
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
 @media (min-width: 25rem) {
@@ -5386,6 +5581,12 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
+}
+
+.emotion-10 {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .emotion-11 {
@@ -5534,17 +5735,29 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
           class="emotion-7 emotion-8"
         >
           <div
-            class="emotion-9 emotion-10"
-            data-e2e="image-placeholder"
+            class="emotion-9"
             style="padding-bottom: 56.25%;"
           >
-            <div
-              class="lazyload-wrapper "
-            >
-              <div
-                class="lazyload-placeholder"
+            <picture>
+              <source
+                sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg.webp 660w"
+                type="image/webp"
               />
-            </div>
+              <source
+                sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg 660w"
+                type="image/jpeg"
+              />
+              <img
+                alt="Messi, Iwobi, Ronaldo"
+                class="emotion-10"
+                height="549"
+                loading="lazy"
+                src="https://ichef.bbci.co.uk/news/660/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg"
+                width="976"
+              />
+            </picture>
           </div>
           <div
             class="emotion-11 emotion-12"

@@ -31,6 +31,7 @@
             "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/79D4/test/_63488113_p013p2z1.jpg",
             "description": "Bu, tek başına hayatta kalma mücadelesi veren 16 yaşındaki Suriyeli bir göçmen çocuğun hikayesi...",
             "imageAlt": "Keyframe #1",
+            "duration": "PT5M",
             "id": "aa301157-71b6-2e48-a783-c873f7a15650"
           },
           {
@@ -50,6 +51,7 @@
             "link": "https://www.bbc.com/mundo/deportes-23038138",
             "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/17DC0/test/_63482779_p0133f26.jpg",
             "description": "En esta nueva serie, los periodistas de la BBC te ayudan a practicar inglés con los titulares de las noticias de la semana. Mira el video y aprende nuevo vocabulario.",
+            "duration": "PT3M",
             "imageAlt": "Aprende inglés con las noticias",
             "id": "fb03a8e4-6993-8e4e-9fc0-bd94eca3c31f"
           },

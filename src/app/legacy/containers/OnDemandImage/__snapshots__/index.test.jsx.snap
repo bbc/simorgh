@@ -40,13 +40,7 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
   }
 }
 
-.emotion-4 {
-  display: block;
-  width: 100%;
-  visibility: visible;
-}
-
-.emotion-7 {
+.emotion-5 {
   display: block;
   width: 100%;
   height: auto;
@@ -63,21 +57,14 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
       data-e2e="image-placeholder"
       style="padding-bottom: 100%;"
     >
-      <picture
-        class="emotion-4 emotion-5"
-      >
-        <source
-          sizes="(min-width: 1008px) 228px, 30vw"
-          srcset="https://mock-url 128w,https://mock-url 240w,https://mock-url 480w"
-        />
-        <img
-          alt="BBC News"
-          class="emotion-6 emotion-7 emotion-8"
-          height="240"
-          src="https://mock-url"
-          width="240"
-        />
-      </picture>
+      <img
+        alt="BBC News"
+        class="emotion-4 emotion-5 emotion-6"
+        height="240"
+        sizes="(min-width: 1008px) 228px, 30vw"
+        src="https://mock-url"
+        width="240"
+      />
     </div>
   </div>
 </div>
