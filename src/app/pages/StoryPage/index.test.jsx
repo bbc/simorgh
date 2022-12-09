@@ -137,32 +137,32 @@ const PageWithContext = ({
   toggles = defaultToggleState,
 }) => (
   <StaticRouter>
-    <ToggleContext.Provider
-      value={{ toggleState: toggles, toggleDispatch: jest.fn() }}
-    >
-      <ServiceContextProvider
-        pageLang={pageData.metadata.language}
-        service={service}
+    <ThemeProvider service={service} variant="default">
+      <ToggleContext.Provider
+        value={{ toggleState: toggles, toggleDispatch: jest.fn() }}
       >
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          isAmp={isAmp}
-          pageType={pageData.metadata.type}
-          pathname={pageData.metadata.locators.assetUri}
+        <ServiceContextProvider
+          pageLang={pageData.metadata.language}
           service={service}
-          statusCode={200}
-          showAdsBasedOnLocation={showAdsBasedOnLocation}
         >
-          <EventTrackingContextProvider pageData={pageData}>
-            <OptimizelyProvider optimizely={optimizely} isServerSide>
-              <ThemeProvider service={service} variant="default">
+          <RequestContextProvider
+            bbcOrigin="https://www.test.bbc.co.uk"
+            isAmp={isAmp}
+            pageType={pageData.metadata.type}
+            pathname={pageData.metadata.locators.assetUri}
+            service={service}
+            statusCode={200}
+            showAdsBasedOnLocation={showAdsBasedOnLocation}
+          >
+            <EventTrackingContextProvider pageData={pageData}>
+              <OptimizelyProvider optimizely={optimizely} isServerSide>
                 <StoryPage service={service} pageData={pageData} />
-              </ThemeProvider>
-            </OptimizelyProvider>
-          </EventTrackingContextProvider>
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ToggleContext.Provider>
+              </OptimizelyProvider>
+            </EventTrackingContextProvider>
+          </RequestContextProvider>
+        </ServiceContextProvider>
+      </ToggleContext.Provider>
+    </ThemeProvider>
   </StaticRouter>
 );
 
@@ -174,28 +174,28 @@ const Page = ({
   toggles = defaultToggleState,
 }) => (
   <StaticRouter>
-    <ToggleContext.Provider
-      value={{ toggleState: toggles, toggleDispatch: jest.fn() }}
-    >
-      <ServiceContextProvider
-        pageLang={pageData.metadata.language}
-        service={service}
+    <ThemeProvider service={service} variant="default">
+      <ToggleContext.Provider
+        value={{ toggleState: toggles, toggleDispatch: jest.fn() }}
       >
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          isAmp={isAmp}
-          pageType={pageData.metadata.type}
-          pathname={pageData.metadata.locators.assetUri}
+        <ServiceContextProvider
+          pageLang={pageData.metadata.language}
           service={service}
-          statusCode={200}
-          showAdsBasedOnLocation={showAdsBasedOnLocation}
         >
-          <ThemeProvider service={service} variant="default">
+          <RequestContextProvider
+            bbcOrigin="https://www.test.bbc.co.uk"
+            isAmp={isAmp}
+            pageType={pageData.metadata.type}
+            pathname={pageData.metadata.locators.assetUri}
+            service={service}
+            statusCode={200}
+            showAdsBasedOnLocation={showAdsBasedOnLocation}
+          >
             <StoryPageIndex service={service} pageData={pageData} />
-          </ThemeProvider>
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ToggleContext.Provider>
+          </RequestContextProvider>
+        </ServiceContextProvider>
+      </ToggleContext.Provider>
+    </ThemeProvider>
   </StaticRouter>
 );
 

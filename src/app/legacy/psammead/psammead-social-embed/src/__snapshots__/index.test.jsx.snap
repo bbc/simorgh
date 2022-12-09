@@ -137,7 +137,9 @@ exports[`AmpSocialEmbed should render a notice when the provider is unsupported 
     <div
       class="emotion-4 emotion-5"
     >
-      <p>
+      <p
+        data-testid="social-embed-fallback-title"
+      >
         Sorry but we're having trouble displaying this content
       </p>
       <a
@@ -155,6 +157,103 @@ exports[`AmpSocialEmbed should render a notice when the provider is unsupported 
       tabindex="-1"
     >
       End of unknown content
+    </p>
+  </div>
+</div>
+`;
+
+exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-2 span {
+  color: #222222;
+}
+
+.emotion-2:hover span,
+.emotion-2:focus span {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.emotion-2:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-4 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <a
+      class="emotion-2 emotion-3"
+      href="#skip-facebook-content"
+    >
+      <span>
+        Skip Facebook content
+      </span>
+    </a>
+    <amp-facebook
+      data-embed-as="post"
+      height="1"
+      layout="responsive"
+      width="1"
+    />
+    <p
+      class="emotion-4 emotion-5"
+      id="skip-facebook-content"
+      tabindex="-1"
+    >
+      End of Facebook content
     </p>
   </div>
 </div>
@@ -414,32 +513,156 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
 
 .emotion-4 {
   margin: 0;
-  background-color: #000000;
+  background-color: transparent;
 }
 
 .emotion-6 {
+  background-color: #FFFFFF;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  border: 0.0625rem solid #8A8C8E;
+}
+
+.emotion-7 {
+  color: #141414;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) {
+  .emotion-7 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-7 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-8 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  margin: 1rem 0;
+}
+
+@media (min-width: 20rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-8 a {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.0625rem solid #141414;
+}
+
+.emotion-8 a:visited {
+  color: #545658;
+  border-bottom: 0.0625rem solid #545658;
+}
+
+.emotion-8 a:hover,
+.emotion-8 a:focus {
+  color: #B80000;
+  border-bottom: 0.125rem solid #B80000;
+}
+
+.emotion-9 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: #FFFFFF;
+  border: 0.0625rem solid #8A8C8E;
+  border-radius: 0;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 20rem) {
+  .emotion-9 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-9 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-9:hover,
+.emotion-9:focus {
+  background-color: #B80000;
+  color: #FFFFFF;
+  border: 0.0625rem solid #B80000;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-10 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: #FFFFFF;
-  padding: 0.5rem;
+  color: #545658;
+  padding: 0.5rem 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-6 {
+  .emotion-10 {
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-6 {
+  .emotion-10 {
     font-size: 0.8125rem;
   }
 }
 
-.emotion-6>span {
+.emotion-10>span {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -450,7 +673,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   margin: 0;
 }
 
-.emotion-8 {
+.emotion-12 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -476,20 +699,65 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
     <figure
       class="emotion-4 emotion-5"
     >
-      <amp-youtube
-        data-videoid="chiWVxreqhU"
-        height="9"
-        layout="responsive"
-        width="16"
-      />
-      <figcaption
-        class="emotion-6 emotion-7"
+      <div
+        class="emotion-6"
+        data-testid="consentBanner"
+        id="consentBanner-chiWVxreqhU"
       >
-        Warning: Third party content may contain adverts
+        <strong
+          class="emotion-7"
+          data-testid="banner-heading"
+        >
+          Allow Google YouTube content?
+        </strong>
+        <p
+          class="emotion-8"
+          data-testid="banner-body"
+        >
+          This article contains content provided by Google YouTube.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Google YouTube 
+          <a
+            aria-label="cookie policy, external"
+            href="https://policies.google.com/technologies/cookies"
+          >
+            cookie policy
+          </a>
+           and 
+          <a
+            aria-label="privacy policy, external"
+            href="https://policies.google.com/privacy"
+          >
+            privacy policy
+          </a>
+           before accepting. To view this content choose 'accept and continue'.
+        </p>
+        <button
+          class="emotion-9"
+          data-testid="banner-button"
+          on="tap:consentBanner-chiWVxreqhU.hide,embed-chiWVxreqhU.show"
+          type="button"
+        >
+          Accept and continue
+        </button>
+      </div>
+      <div
+        hidden=""
+        id="embed-chiWVxreqhU"
+      >
+        <amp-youtube
+          data-videoid="chiWVxreqhU"
+          height="9"
+          layout="responsive"
+          width="16"
+        />
+      </div>
+      <figcaption
+        class="emotion-10 emotion-11"
+      >
+        undefined
       </figcaption>
     </figure>
     <p
-      class="emotion-8 emotion-9"
+      class="emotion-12 emotion-13"
       id="skip-youtube-content"
       tabindex="-1"
     >
@@ -969,7 +1237,7 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
 
 .emotion-4 {
   margin: 0;
-  background-color: #000000;
+  background-color: transparent;
 }
 
 .emotion-6 {
@@ -1001,8 +1269,8 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
   font-style: normal;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: #FFFFFF;
-  padding: 0.5rem;
+  color: #545658;
+  padding: 0.5rem 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1071,7 +1339,7 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
       <span>
         Video caption, 
       </span>
-      Warning: Third party content may contain adverts
+      undefined
     </figcaption>
   </figure>
   <p
@@ -1221,7 +1489,9 @@ exports[`CanonicalSocialEmbed should render a notice when the provider is unsupp
     <div
       class="emotion-4 emotion-5"
     >
-      <p>
+      <p
+        data-testid="social-embed-fallback-title"
+      >
         Sorry but we're having trouble displaying this content
       </p>
       <a
@@ -1382,7 +1652,9 @@ exports[`CanonicalSocialEmbed should render a notice when there is no oEmbed res
     <div
       class="emotion-4 emotion-5"
     >
-      <p>
+      <p
+        data-testid="social-embed-fallback-title"
+      >
         Sorry but we're having trouble displaying this content
       </p>
       <a

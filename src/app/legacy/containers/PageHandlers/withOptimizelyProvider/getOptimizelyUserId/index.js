@@ -14,7 +14,7 @@ const getOptimizelyUserId = () => {
 
   if (!cookieValue) {
     const cookieUuid = uuid();
-    Cookie.set(cookieName, cookieUuid, { expires, path: '/' });
+    Cookie.set(cookieName, cookieUuid, { expires, path: '/', secure: true });
     return cookieUuid;
   }
 

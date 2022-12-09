@@ -25,7 +25,9 @@ const logger = nodeLogger(__filename);
  * for request for 'secondary data'. The fetch timeout defaults to the 'primary
  * data' timeout if this is not provided.
  * Timeout values here: https://github.com/bbc/simorgh/blob/latest/src/app/lib/utilities/getFetchTimeouts/index.js
+ * @param {boolean} shouldLogFetchTime Optional parameter to provide a true/false if the fetch time should be logged.
  * @param {object} agent Optional parameter to provide an agent object with the fetch
+ * @param {object} optHeaders Optional parameter to provide additional headers to the fetch
  * @param {...string} loggerArgs Additional arguments for richer logging.
  */
 const fetchPageData = async ({

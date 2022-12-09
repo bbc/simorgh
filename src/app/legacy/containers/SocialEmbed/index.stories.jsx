@@ -13,6 +13,9 @@ import {
   instagramBlock,
   instagramBlockNoEmbed,
   youtubeBlockEmbed,
+  tiktokBlockEmbed,
+  facebookPostBlockEmbed,
+  facebookVideoBlockEmbed,
 } from './common/fixtures';
 import OptimoSocialEmbedContainer from '.';
 import withContexts from './common/testHelper';
@@ -87,6 +90,24 @@ export const InstagramNoEmbed = props => (
   />
 );
 
+export const TikTokWithConsentBanner = props => (
+  <Component
+    blocks={[tiktokBlockEmbed]}
+    source="https://www.tiktok.com/@cuppymusic/video/7086167423639997701"
+    {...props}
+  />
+);
+
+export const TikTokWithConsentBannerAmp = props => (
+  <Component
+    isAmp
+    blocks={[tiktokBlockEmbed]}
+    source="https://www.tiktok.com/@cuppymusic/video/7086167423639997701"
+    {...props}
+  />
+);
+TikTokWithConsentBannerAmp.decorators = [AmpDecorator];
+
 export const YoutubeWithConsentBanner = props => (
   <Component
     blocks={[youtubeBlockEmbed]}
@@ -104,3 +125,39 @@ export const YoutubeWithConsentBannerAmp = props => (
   />
 );
 YoutubeWithConsentBannerAmp.decorators = [AmpDecorator];
+
+export const FacebookPostCanonicalExample = props => (
+  <Component
+    blocks={[facebookPostBlockEmbed]}
+    source="https://www.facebook.com/RickAstley/posts/545713756920775"
+    {...props}
+  />
+);
+
+export const FacebookPostAmpExample = props => (
+  <Component
+    isAmp
+    blocks={[facebookPostBlockEmbed]}
+    source="https://www.facebook.com/RickAstley/posts/545713756920775"
+    {...props}
+  />
+);
+FacebookPostAmpExample.decorators = [AmpDecorator];
+
+export const FacebookVideoCanonicalExample = props => (
+  <Component
+    blocks={[facebookVideoBlockEmbed]}
+    source="https://www.facebook.com/RickAstley/videos/1378590239249667"
+    {...props}
+  />
+);
+
+export const FacebookVideoAmpExample = props => (
+  <Component
+    isAmp
+    blocks={[facebookVideoBlockEmbed]}
+    source="https://www.facebook.com/RickAstley/videos/1378590239249667"
+    {...props}
+  />
+);
+FacebookVideoAmpExample.decorators = [AmpDecorator];

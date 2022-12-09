@@ -1,13 +1,21 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import React, { Fragment, PropsWithChildren } from 'react';
-import { jsx } from '@emotion/react';
+import React, {
+  Fragment,
+  PropsWithChildren,
+  useState,
+  useContext,
+} from 'react';
+import { Global, jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import styles from './index.styles';
+import { RequestContext } from '../../contexts/RequestContext';
+import { FRONT_PAGE } from '../../routes/utils/pageTypes';
 
 interface Props {
   alt: string;
-  aspectRatio?: number;
+  aspectRatio?: [x: number, y: number];
+  attribution?: string;
   className?: string;
   fallbackMediaType?: string;
   fallbackSrcSet?: string;
@@ -23,25 +31,21 @@ interface Props {
   width?: number;
 }
 
-const DEFAULT_ASPECT_RATIO = 16 / 9;
-const getAspectRatio = ({
-  width,
-  height,
-}: {
-  width?: number;
-  height?: number;
-}): number => {
-  if (width && height) {
-    return width / height;
-  }
+interface RequestContextType {
+  pageType?: string;
+}
 
-  return 0;
-};
+const DEFAULT_ASPECT_RATIO = [16, 9];
 const roundNumber = (num: number) => Math.round(num * 100) / 100;
+const getLegacyBrowserAspectRatio = (x: number, y: number) =>
+  roundNumber((y / x) * 100)
+    .toString()
+    .concat('%');
 
 const Image = ({
   alt,
   aspectRatio,
+  attribution,
   className,
   fallbackMediaType,
   fallbackSrcSet,
@@ -52,15 +56,35 @@ const Image = ({
   preload = false,
   mediaType,
   srcSet,
-  sizes = '100vw',
+  sizes,
   src,
   width,
 }: PropsWithChildren<Props>) => {
-  const wrapperAspectRatio =
-    aspectRatio || getAspectRatio({ width, height }) || DEFAULT_ASPECT_RATIO;
+  const requestContext: RequestContextType = useContext(RequestContext);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const showPlaceholder = placeholder && !isLoaded;
+  const hasDimensions = width && height;
+  const [aspectRatioX, aspectRatioY] =
+    (aspectRatio && aspectRatio) ||
+    (hasDimensions && [width, height]) ||
+    DEFAULT_ASPECT_RATIO;
+  const legacyBrowserAspectRatio = getLegacyBrowserAspectRatio(
+    aspectRatioX,
+    aspectRatioY,
+  );
   const hasFallback = srcSet && fallbackSrcSet;
   const ImageWrapper = hasFallback ? 'picture' : Fragment;
-  const ampImgLayout = width && height ? 'responsive' : 'fill';
+  const ampImgLayout = hasDimensions ? 'responsive' : 'fill';
+  const getImgSrcSet = () => {
+    if (!hasFallback) return srcSet;
+    if (requestContext.pageType !== FRONT_PAGE) return fallbackSrcSet;
+    return undefined;
+  };
+  const getImgSizes = () => {
+    if ((!hasFallback && srcSet) || requestContext.pageType !== FRONT_PAGE)
+      return sizes;
+    return undefined;
+  };
 
   return (
     <>
@@ -77,37 +101,53 @@ const Image = ({
       )}
       <div
         className={className}
-        css={[styles.wrapper, placeholder && styles.placeholder]}
+        css={[styles.wrapper, showPlaceholder && styles.placeholder]}
         style={{
-          paddingBottom: `${roundNumber((1 / wrapperAspectRatio) * 100)}%`,
+          paddingBottom: legacyBrowserAspectRatio,
         }}
       >
         {isAmp ? (
-          <amp-img
-            layout={ampImgLayout}
-            alt={alt}
-            src={src}
-            width={width}
-            height={height}
-            srcSet={srcSet}
-            sizes={srcSet ? sizes : undefined}
-          >
-            {fallbackSrcSet && (
-              <amp-img
-                layout={ampImgLayout}
-                alt={alt}
-                src={src}
-                width={width}
-                height={height}
-                srcSet={fallbackSrcSet}
-                sizes={sizes}
-                fallback=""
+          <>
+            {!hasDimensions && (
+              // ensures amp-img will render when width and height is not provided
+              // https://amp.dev/documentation/examples/style-layout/how_to_support_images_with_unknown_dimensions/
+              <Global
+                styles={{
+                  '.bbc-image img': {
+                    objectFit: 'cover',
+                  },
+                }}
               />
             )}
-          </amp-img>
+            <amp-img
+              class="bbc-image"
+              layout={ampImgLayout}
+              alt={alt}
+              src={src}
+              width={width}
+              height={height}
+              srcSet={srcSet}
+              attribution={attribution}
+            >
+              {fallbackSrcSet && (
+                <amp-img
+                  class="bbc-image"
+                  layout={ampImgLayout}
+                  alt={alt}
+                  src={src}
+                  width={width}
+                  height={height}
+                  srcSet={fallbackSrcSet}
+                  sizes={sizes}
+                  fallback=""
+                  attribution={attribution}
+                />
+              )}
+            </amp-img>
+          </>
         ) : (
           <ImageWrapper>
-            {hasFallback && (
+            {hasFallback && requestContext.pageType === FRONT_PAGE && (
               <>
                 <source srcSet={srcSet} type={mediaType} sizes={sizes} />
                 <source
@@ -118,14 +158,16 @@ const Image = ({
               </>
             )}
             <img
+              onLoad={() => setIsLoaded(true)}
               src={src}
-              srcSet={!hasFallback ? srcSet : undefined}
-              sizes={!hasFallback && srcSet ? sizes : undefined}
+              srcSet={getImgSrcSet()}
+              sizes={getImgSizes()}
               alt={alt}
               loading={lazyLoad ? 'lazy' : undefined}
               width={width}
               height={height}
               css={styles.image}
+              style={{ aspectRatio: `${aspectRatioX} / ${aspectRatioY}` }} // aspectRatio used in combination with the objectFit:cover will center the image horizontally and vertically if aspectRatio prop is different from image's intrinsic aspect ratio
             />
           </ImageWrapper>
         )}

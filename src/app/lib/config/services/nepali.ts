@@ -254,12 +254,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: `[social_media_site] को सामग्रीलाई अनुमति छ?`,
           body: `यो लेखमा [social_media_site] बाट प्राप्त सामग्री समाविष्ट छ। यहाँ केही लोड हुनुअघि हामी तपाईँसँग अनुमति माग्छौँ किनभने तिनले कुकीज र अन्य प्रविधि प्रयोग गरेका हुनसक्छन्। स्वीकृति दिनुअघि तपाईँ [social_media_site] [link] cookie policy [/link] र [link]पढ्न सक्नुहुन्छ।[/link] यो सामग्री हेर्नका लागि 'स्वीकार छ, अगाडि बढौँ' छान्नुहोस्।`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
           button: 'स्वीकार छ, अगाडि बढौँ',
         },
       },
@@ -337,8 +331,12 @@ export const service: DefaultServiceConfig = {
         url: '/nepali',
       },
       {
-        title: 'कोरोनाभाइरस',
-        url: '/nepali/news-51941128',
+        title: 'नेपाल निर्वाचन २०७९',
+        url: '/nepali/topics/cp2d78r6qppt',
+      },
+      {
+        title: 'विश्वकप फुटबल २०२२',
+        url: '/nepali/topics/c00r2x03gvkt',
       },
       {
         title: 'पछिल्लो कार्यक्रम',

@@ -110,13 +110,6 @@ Object {
 }
 `;
 
-exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 7`] = `
-Object {
-  "text": "Поточна сторінка, РУС",
-  "url": "/ukrainian/ukraine_in_russian",
-}
-`;
-
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Header lang code should match text 1`] = `"uk"`;
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Main heading should match text 1`] = `"РУС"`;
@@ -290,9 +283,12 @@ exports[`Canonical ukrainian/ukraine_in_russian IDX page Story Promo Headline sh
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Story Promo Image should match image 1`] = `
 <img
   alt="Чоловік з келихом"
-  class="e3vrtyk0 bbc-rb7xa0 e1mo64ex0"
+  class="bbc-1uwua2r"
   height="549"
+  sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/DE34/production/_111648865_1stimage.png"
+  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/DE34/production/_111648865_1stimage.png 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/DE34/production/_111648865_1stimage.png 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/DE34/production/_111648865_1stimage.png 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/DE34/production/_111648865_1stimage.png 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/DE34/production/_111648865_1stimage.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/DE34/production/_111648865_1stimage.png 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/DE34/production/_111648865_1stimage.png 660w"
+  style="aspect-ratio:976 / 549"
   width="976"
 />
 `;

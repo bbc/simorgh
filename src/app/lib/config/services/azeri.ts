@@ -113,6 +113,14 @@ export const service: DefaultServiceConfig = {
           callToActionLinkUrl: 'https://www.bbc.com/azeri',
         },
       },
+      byline: {
+        articleInformation: 'Məqalə barədə məlumat',
+        author: 'Müəllif',
+        listItemImage: 'Siyahı elementi, foto',
+        published: 'Çap edildi',
+        reportingFrom: 'Məkan',
+        role: 'Vəzifə',
+      },
       consentBanner: {
         privacy: {
           title: 'Biz Məxfilik və Kukilər (Cookies) Siyasətimizi yeniləmişik.',
@@ -244,12 +252,6 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: '[social_media_site] məzmununa icazə varmı?',
           body: `Bu məqalədə [social_media_site] məzmunu mövcuddur.  Nə isə yüklənməmişdən əvvəl icazənizi istəyirik, çünki onlar kukilərdən və digər texnologiyalardan istifadə edə bilərlər. Qəbul etməzdən əvvəl [social_media_site] [link] kuki siyasəti [/link] və [link] gizlilik siyasəti [/link] barədə oxumaq istəyə bilərsiniz. Bu məzmunu görmək üçün "qəbul edin və davam edin".`,
-          cookiesUrl: {
-            youtube: 'https://policies.google.com/technologies/cookies',
-          },
-          privacyUrl: {
-            youtube: 'https://policies.google.com/privacy',
-          },
           button: 'Qəbul edin və davam edin',
         },
       },

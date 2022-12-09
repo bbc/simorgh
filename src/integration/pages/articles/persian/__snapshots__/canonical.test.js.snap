@@ -82,96 +82,89 @@ Object {
 
 exports[`Canonical Articles Header Navigation link should match text and url 2`] = `
 Object {
-  "text": "اوکراین",
-  "url": "/persian/topics/cw9q48x6558t",
+  "text": "اعتراضات ایران",
+  "url": "/persian/topics/c5j85v96d92t",
 }
 `;
 
 exports[`Canonical Articles Header Navigation link should match text and url 3`] = `
-Object {
-  "text": "کرونا",
-  "url": "/persian/science-52004647",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 4`] = `
 Object {
   "text": "پخش زنده",
   "url": "/persian/media-49522521",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 5`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 4`] = `
 Object {
   "text": "ویدیو",
   "url": "/persian/media/video",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 5`] = `
 Object {
   "text": "تلویزیون",
   "url": "/persian/tv-and-radio-37434377",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 7`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
 Object {
   "text": "رادیو",
   "url": "/persian/tv-and-radio-37434376",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 8`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 7`] = `
 Object {
   "text": "ايران",
   "url": "/persian/topics/ckdxnwvwwjnt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 9`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 8`] = `
 Object {
   "text": "افغانستان",
   "url": "/persian/afghanistan",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 10`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 9`] = `
 Object {
   "text": "جهان",
   "url": "/persian/topics/c1d8ye58xl8t",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 11`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 10`] = `
 Object {
   "text": "هنر",
   "url": "/persian/topics/c9wpm0epm45t",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 12`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 11`] = `
 Object {
   "text": "ورزش",
   "url": "/persian/topics/cnq6879k7yjt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 13`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 12`] = `
 Object {
   "text": "اقتصاد",
   "url": "/persian/topics/cl8l9mvlllqt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 14`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 13`] = `
 Object {
   "text": "دانش",
   "url": "/persian/topics/ckdxnwr4r1yt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 15`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 14`] = `
 Object {
   "text": "ناظران می‌گویند",
   "url": "/persian/blogs-54099951",
@@ -185,7 +178,9 @@ exports[`Canonical Articles Image should match snapshot 1`] = `
   alt="قهوه"
   class="e3vrtyk0 bbc-rb7xa0 e1mo64ex0"
   height="576"
+  sizes="(min-width: 1008px) 760px, 100vw"
   src="https://ichef.bbci.co.uk/news/640/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg"
+  srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 800w"
   width="1024"
 />
 `;

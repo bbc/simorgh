@@ -10,6 +10,7 @@ import {
   articleDataPersian,
   articleDataPidgin,
   articleDataPidginWithAds,
+  articleDataPidginWithByline,
 } from '#pages/ArticlePage/fixtureData';
 import newsMostReadData from '#data/news/mostRead';
 import persianMostReadData from '#data/persian/mostRead';
@@ -102,6 +103,39 @@ it('should use headline for meta description if summary does not exist', async (
     ).toEqual('Article Headline for SEO');
   });
 });
+
+it('should use the twitter handle where present in the byline block', async () => {
+  render(
+    <Context service="pidgin">
+      <ArticlePage pageData={articleDataPidginWithByline} />
+    </Context>,
+  );
+
+  await waitFor(() => {
+    expect(
+      document
+        .querySelector('meta[name="twitter:creator"]')
+        .getAttribute('content'),
+    ).toEqual('@mary_harper');
+  });
+});
+
+it('should use the default twitter handle where a byline block is missing in the content blocks', async () => {
+  render(
+    <Context service="persian">
+      <ArticlePage pageData={articleDataPersian} />
+    </Context>,
+  );
+
+  await waitFor(() => {
+    expect(
+      document
+        .querySelector('meta[name="twitter:creator"]')
+        .getAttribute('content'),
+    ).toEqual('@bbcpersian');
+  });
+});
+
 describe('ArticleMetadata get branded image', () => {
   beforeEach(() => {
     process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';

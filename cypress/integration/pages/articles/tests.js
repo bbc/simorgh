@@ -1,6 +1,10 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import { getBlockByType, getBlockData } from './helpers';
+import {
+  getBlockByType,
+  getBlockData,
+  getAllSocialBlocksByProviderName,
+} from './helpers';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasFigure = service =>
@@ -180,6 +184,133 @@ export const testsThatFollowSmokeTestConfig = ({
                       .should('contain', text);
                   });
               }
+            }
+          });
+        });
+      });
+
+      describe('Social Embeds', () => {
+        it('Youtube embed is redered when it exists on page', () => {
+          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+            const youtubeSocialEmbedsData = getAllSocialBlocksByProviderName(
+              'YouTube',
+              body,
+            );
+            if (youtubeSocialEmbedsData.length > 0) {
+              youtubeSocialEmbedsData.forEach(content => {
+                const youtubeUrl = content.model.source;
+                cy.get(`[data-e2e="youtube-embed-${youtubeUrl}"]`)
+                  .scrollIntoView()
+                  .within(() => {
+                    cy.get(`[data-testid="consentBanner"]`).should('exist');
+                    cy.get(`iframe`).should('not.exist');
+                    cy.get(`[data-testid="banner-button"]`).click();
+                    cy.get(`iframe`).should('exist');
+                    cy.get(`[href^="#end-of-youtube-content"]`).should('exist');
+                  });
+              });
+            } else {
+              cy.log('There is no Youtube embed in this page!');
+              cy.get(`[href^="#end-of-youtube-content"]`).should('not.exist');
+            }
+          });
+        });
+
+        it('Instagram embed is redered when it exists on page', () => {
+          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+            const instagramSocialEmbedsData = getAllSocialBlocksByProviderName(
+              'Instagram',
+              body,
+            );
+            if (instagramSocialEmbedsData.length > 0) {
+              instagramSocialEmbedsData.forEach(content => {
+                const instagramUrl = content.model.source;
+                cy.get(`[data-e2e="instagram-embed-${instagramUrl}"]`)
+                  .scrollIntoView()
+                  .within(() => {
+                    cy.get(`[href^="#end-of-instagram-content"]`).should(
+                      'exist',
+                    );
+                    cy.get(`iframe`).should('exist');
+                  });
+              });
+            } else {
+              cy.log('There is no Instagram embed in this page!');
+              cy.get(`[href^="#end-of-instagram-content"]`).should('not.exist');
+            }
+          });
+        });
+
+        it('Tiktok embed is redered when it exists on page', () => {
+          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+            const tiktokSocialEmbedsData = getAllSocialBlocksByProviderName(
+              'TikTok',
+              body,
+            );
+            if (tiktokSocialEmbedsData.length > 0) {
+              tiktokSocialEmbedsData.forEach(content => {
+                const tiktokUrl = content.model.source;
+                cy.get(`[data-e2e="tiktok-embed-${tiktokUrl}"]`)
+                  .scrollIntoView()
+                  .within(() => {
+                    cy.get(`[data-testid="consentBanner"]`).should('exist');
+                    cy.get(`iframe`).should('not.exist');
+                    cy.get(`[data-testid="banner-button"]`).click();
+                    cy.get(`iframe`).should('exist');
+                    cy.get(`[href^="#end-of-tiktok-content"]`).should('exist');
+                  });
+              });
+            } else {
+              cy.log('There is no Tiktok embed in this page!');
+              cy.get(`[href^="#end-of-tiktok-content"]`).should('not.exist');
+            }
+          });
+        });
+
+        it('Twitter embed is redered when it exists on page', () => {
+          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+            const twitterSocialEmbedsData = getAllSocialBlocksByProviderName(
+              'Twitter',
+              body,
+            );
+            if (twitterSocialEmbedsData.length > 0) {
+              twitterSocialEmbedsData.forEach(content => {
+                const twitterUrl = content.model.source;
+                cy.get(`[data-e2e="twitter-embed-${twitterUrl}"]`)
+                  .scrollIntoView()
+                  .within(() => {
+                    cy.get(`iframe`).should('exist');
+                    cy.get(`[href^="#end-of-twitter-content"]`).should('exist');
+                  });
+              });
+            } else {
+              cy.log('There is no Twitter embed in this page!');
+              cy.get(`[href^="#end-of-twitter-content"]`).should('not.exist');
+            }
+          });
+        });
+
+        it('Facebook embed is redered when it exists on page', () => {
+          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+            const facebookSocialEmbedsData = getAllSocialBlocksByProviderName(
+              'Facebook',
+              body,
+            );
+            if (facebookSocialEmbedsData.length > 0) {
+              facebookSocialEmbedsData.forEach(content => {
+                const facebookUrl = content.model.source;
+                cy.get(`[data-e2e="facebook-embed-${facebookUrl}"]`)
+                  .scrollIntoView()
+                  .within(() => {
+                    cy.get(`iframe`).should('exist');
+                    cy.get(`[href^="#end-of-facebook-content"]`).should(
+                      'exist',
+                    );
+                  });
+              });
+            } else {
+              cy.log('There is no Facebook embed in this page!');
+              cy.get(`[href^="#end-of-facebook-content"]`).should('not.exist');
             }
           });
         });

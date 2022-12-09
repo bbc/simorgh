@@ -1,5 +1,3 @@
-import { SocialEmbedProviders } from './global';
-
 /* eslint-disable camelcase */
 export interface Translations {
   pagination?: {
@@ -33,6 +31,14 @@ export interface Translations {
     skipLinkText?: string;
     404: TranslationsError;
     500: TranslationsError;
+  };
+  byline?: {
+    author?: string;
+    articleInformation?: string;
+    listItemImage?: string;
+    published?: string;
+    reportingFrom?: string;
+    role?: string;
   };
   consentBanner: {
     privacy: {
@@ -163,12 +169,6 @@ export interface Translations {
       heading: string;
       body: string;
       button?: string | undefined;
-      cookiesUrl: {
-        [key in SocialEmbedProviders]?: string;
-      };
-      privacyUrl: {
-        [key in SocialEmbedProviders]?: string;
-      };
     };
   };
   include?: {

@@ -2,6 +2,8 @@ const PROVIDERS = {
   TWITTER: 'twitter',
   INSTAGRAM: 'instagram',
   YOUTUBE: 'youtube',
+  TIKTOK: 'tiktok',
+  FACEBOOK: 'facebook',
   UNKNOWN: 'unknown',
 };
 
@@ -19,9 +21,16 @@ export const getProviderFromSource = source => {
   }
   if (
     source.match(/^https:\/\/www\.youtube-nocookie\.com/) ||
-    source.match(/^https:\/\/www\.youtube\.com/)
+    source.match(/^https:\/\/www\.youtube\.com/) ||
+    source.match(/^https:\/\/youtu\.be/)
   ) {
     return PROVIDERS.YOUTUBE;
+  }
+  if (source.match(/^https:\/\/www\.tiktok\.com/)) {
+    return PROVIDERS.TIKTOK;
+  }
+  if (source.match(/^https:\/\/www\.facebook\.com/)) {
+    return PROVIDERS.FACEBOOK;
   }
   return PROVIDERS.UNKNOWN;
 };
@@ -35,15 +44,22 @@ export const getProviderFromSource = source => {
 export const getIdFromSource = source => {
   const sourceIds = {
     twitter: /\/status\/([0-9]+)/,
-    youtube: /\/watch\?v=([0-9 A-Z a-z _-]+)/,
-    instagram: /\/p\/([0-9 A-Z a-z]+)/,
+    youtube: /([0-9A-Za-z_-]+$)/,
+    instagram: /\/p\/([0-9A-Za-z_-]+)/,
+    tiktok: /\/video\/([0-9]+)/,
+    facebook: /\/(?:posts|videos)\/([0-9A-Za-z]+)/,
   };
   const NO_ID = '';
   const provider = getProviderFromSource(source);
+
   if (
-    [PROVIDERS.TWITTER, PROVIDERS.YOUTUBE, PROVIDERS.INSTAGRAM].includes(
-      provider,
-    )
+    [
+      PROVIDERS.TWITTER,
+      PROVIDERS.YOUTUBE,
+      PROVIDERS.INSTAGRAM,
+      PROVIDERS.TIKTOK,
+      PROVIDERS.FACEBOOK,
+    ].includes(provider)
   ) {
     const id = source.match(sourceIds[provider]);
     return id ? id[1] : NO_ID;
