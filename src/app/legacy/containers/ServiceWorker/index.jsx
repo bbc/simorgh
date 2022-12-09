@@ -1,10 +1,32 @@
-import { useContext, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import onClient from '#lib/utilities/onClient';
+import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
+
+const AmpHead = () => (
+  <Helmet>
+    <script
+      async
+      custom-element="amp-install-serviceworker"
+      src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"
+    />
+  </Helmet>
+);
+
+const AmpServiceWorker = ({ canonicalLink, swSrc }) => (
+  <amp-install-serviceworker
+    src={swSrc}
+    data-iframe-src={canonicalLink}
+    layout="nodisplay"
+  />
+);
 
 const ServiceWorkerContainer = () => {
   const { swPath, service } = useContext(ServiceContext);
+  const { isAmp, canonicalLink } = useContext(RequestContext);
   const envIsProduction = process.env.NODE_ENV === 'production';
+  const swSrc = `${process.env.SIMORGH_BASE_URL}/${service}${swPath}`;
 
   useEffect(() => {
     const shouldInstallServiceWorker =
@@ -15,7 +37,12 @@ const ServiceWorkerContainer = () => {
     }
   }, [envIsProduction, swPath, service]);
 
-  return null;
+  return isAmp ? (
+    <>
+      <AmpHead />
+      <AmpServiceWorker canonicalLink={canonicalLink} swSrc={swSrc} />
+    </>
+  ) : null;
 };
 
 export default ServiceWorkerContainer;
