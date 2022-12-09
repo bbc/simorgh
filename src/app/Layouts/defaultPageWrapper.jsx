@@ -42,16 +42,13 @@ const PageWrapper = ({ children, pageData, status, isNextJs }) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <GlobalStyles />
-      {
-        // TODO: Remove this check when SW, manifest and WebVitals work with NextJS
-        !isNextJs && (
-          <>
-            <ServiceWorkerContainer />
-            <ManifestContainer />
-            <WebVitals pageType={pageType} />
-          </>
-        )
-      }
+      {!isNextJs && (
+        <>
+          <ServiceWorkerContainer />
+          <ManifestContainer />
+        </>
+      )}
+      <WebVitals pageType={pageType} />
       <Wrapper id="main-wrapper" darkMode={isDarkMode}>
         <HeaderContainer
           scriptSwitchId={scriptSwitchId}
