@@ -34,7 +34,7 @@ type ComponentProps = {
 const LivePage = ({ pageData, status, service }: ComponentProps) => {
   const Component = applyBasicPageHandlers({ addVariantHandling: true })(() => (
     <main css={styles.wrapper}>
-      <Heading level={1}>Test Live Page</Heading>
+      <Heading level={1}>Test Next.JS Page</Heading>
       <Paragraph fontVariant="sansBold">{status}</Paragraph>
       <Paragraph>{JSON.stringify(pageData.metadata, null, 4)}</Paragraph>
     </main>
