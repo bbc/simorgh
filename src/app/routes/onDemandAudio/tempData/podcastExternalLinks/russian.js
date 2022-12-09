@@ -99,7 +99,7 @@ const externalLinks = {
         linkText: 'Castbox',
         linkUrl:
           'https://castbox.fm/channel/id3130703?utm_campaign=i_share_ch&utm_medium=dlink&utm_source=i_share&country=us',
-        linkType: 'yandex',
+        linkType: 'castbox',
       },
     ],
     p09nx6zm: [
