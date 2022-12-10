@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import { node, shape, bool, number } from 'prop-types';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
@@ -15,6 +16,7 @@ import ManifestContainer from '#containers/Manifest';
 import ServiceWorkerContainer from '#containers/ServiceWorker';
 import { ServiceContext } from '../contexts/ServiceContext';
 import ThemeProvider from '../components/ThemeProvider';
+import { getFontFromService } from '../components/ThemeProvider/fontFacesLazy';
 
 const Wrapper = styled.div`
   min-height: 100vh;
@@ -39,116 +41,74 @@ const PageWrapper = ({ children, pageData, status }) => {
     ? 'WS-ERROR-PAGE'
     : path(['metadata', 'type'], pageData);
 
-  useEffect(() => {
-    const fontsForStorage = [
-      {
-        name: 'BBCReithSerif_W_Md',
-        version: 'r2.512',
-        subsets: false,
-        fontFamily: 'ReithSerif',
-        fontWeight: 500,
-      },
-      {
-        name: 'BBCReithSans_W_Rg',
-        version: 'r2.512',
-        subsets: false,
-        fontFamily: 'ReithSans',
-        fontWeight: 400,
-      },
-      {
-        name: 'BBCReithSans_W_Bd',
-        version: 'r2.512',
-        subsets: false,
-        fontFamily: 'ReithSans',
-        fontWeight: 700,
-      },
-      {
-        name: 'BBCReithSerif_WNumbers_Lt',
-        version: 'r2.512',
-        subsets: true,
-        fontFamily: 'ReithSerif',
-        fontWeight: 300,
-      },
-    ];
-    const getFont = location => {
-      return new Promise(function (resolve, reject) {
-        fetch(location)
-          .then(function (res) {
-            return res.blob();
-          })
-          .then(function (blob) {
-            const reader = new FileReader();
-            reader.addEventListener('load', function () {
-              resolve(this.result);
-              console.log(this.result);
-            });
-            reader.readAsDataURL(blob);
-          })
-          .catch(reject);
-      });
-    };
-    fontsForStorage.forEach(font => {
-      const storageKey = `font-${font.name}`;
-      const fontContents = localStorage.getItem(storageKey);
-      const head = document.head || document.getElementsByTagName('head')[0];
-      const fontStylePlaceholder = document.createElement('style');
-      fontStylePlaceholder.type = 'text/css';
-      let styleInnerText = '';
+  const fontJs = `const fontsForStorage = ${JSON.stringify(getFontFromService(service))};
+                let getFont = (location) => {
+                	return new Promise(function (resolve, reject) {
+						fetch(location).then(function (res) {
+						  return res.blob()
+						}).then(function (blob) {
+						  var reader = new FileReader()
+						  reader.addEventListener('load', function () {
+							resolve(this.result)
+							console.log(this.result);
+						  })
+						  reader.readAsDataURL(blob)
+						}).catch(reject)
+					  })
+                };
+                fontsForStorage.forEach(font => {
+                    const storageKey = 'font-' + font.name;
+                    let fontContents = localStorage.getItem(storageKey);
+                    const head = document.head || document.getElementsByTagName('head')[0];
+                	const fontStylePlaceholder = document.createElement('style');
+                	fontStylePlaceholder.type = 'text/css';
+                	let styleInnerText = '';
 
-      if (!fontContents) {
-        // if this wasn't a poc, we'd go and get the contents of the font from somewhere else
-        const fontLocation = `https://gel.files.bbci.co.uk/${font.version}${
-          font.subsets ? '/subsets' : ''
-        }/${font.name}.woff2`;
-        window.setTimeout(() => {
-          getFont(fontLocation).then(base64Contents => {
-            const forStorage = {
-              base64Contents,
-              fontFamily: font.fontFamily,
-              fontWeight: font.fontWeight,
-              fontVersion: font.version,
-            };
-            localStorage.setItem(storageKey, JSON.stringify(forStorage));
-            styleInnerText += `@font-face{font-family:: "${font.fontFamily}"; font-weight: ${font.fontWeight};src:url("${base64Contents}") format("woff2");font-display: swap;}`;
-            fontStylePlaceholder.innerHTML = styleInnerText;
-            head.appendChild(fontStylePlaceholder);
-          });
-        }, 0);
-      } else {
-        const { base64Contents, fontFamily, fontWeight, fontVersion } =
-          JSON.parse(fontContents);
-        styleInnerText += `@font-face{font-family: "${fontFamily}"; font-weight: ${fontWeight}; src:url("${base64Contents}") format("woff2");font-display: swap;}`;
-        fontStylePlaceholder.innerHTML = styleInnerText;
-        head.appendChild(fontStylePlaceholder);
-        if (font.version !== fontVersion) {
-        	const forStorage = {
-              base64Contents,
-              fontFamily: font.fontFamily,
-              fontWeight: font.fontWeight,
-              fontVersion: font.version,
-            };
-            localStorage.setItem(storageKey, JSON.stringify(forStorage));
-        }
-      }
-    });
-  }, []);
+            
+                    if (!fontContents) {
+                        // if this wasn't a poc, we'd go and get the contents of the font from somewhere else
+                        const fontLocation = 'https://gel.files.bbci.co.uk/'+ font.version + (font.subsets ? '/subsets' : '') + '/' + font.name + '.woff2';
+                        console.log('fontLocation', fontLocation);
+                        getFont(fontLocation).then((fontContents) => {
+                        	const forStorage = { base64Contents: fontContents, fontFamily: font.fontFamily, fontWeight: font.fontWeight };
+                        	localStorage.setItem(storageKey, JSON.stringify(forStorage));
+                        	styleInnerText += '@font-face{font-family:: "' + font.fontFamily + '"; font-weight: ' + font.fontWeight + ';src:url("' + fontContents + '") format("woff2");font-display: swap;}';
+                			fontStylePlaceholder.innerHTML = styleInnerText;
+                			head.appendChild(fontStylePlaceholder);
+                        });
+                    }
+                    else {
+                    	const { base64Contents, fontFamily, fontWeight } = JSON.parse(fontContents);
+                    	console.log('base64Contents', base64Contents);
+                    	styleInnerText += '@font-face{font-family: "' + fontFamily + '"; font-weight: ' + fontWeight + '; src:url("' + base64Contents + '") format("woff2");font-display: swap;}';
+                		fontStylePlaceholder.innerHTML = styleInnerText;
+                		head.appendChild(fontStylePlaceholder);
+                    }
+                });
+    `;
 
   return (
     <>
+    <Helmet
+        script={[{ 
+            type: 'text/javascript', 
+            innerHTML: fontJs
+          }]}
+      />
       <ThemeProvider service={service} variant={variant}>
-        <GlobalStyles />
-        <ServiceWorkerContainer />
-        <ManifestContainer />
-        <WebVitals pageType={pageType} />
-        <Wrapper id="main-wrapper" darkMode={isDarkMode}>
-          <HeaderContainer
-            scriptSwitchId={scriptSwitchId}
-            renderScriptSwitch={renderScriptSwitch}
-          />
-          <Content>{children}</Content>
-          <FooterContainer />
-        </Wrapper>
-      </ThemeProvider>
+      <GlobalStyles />
+      <ServiceWorkerContainer />
+      <ManifestContainer />
+      <WebVitals pageType={pageType} />
+      <Wrapper id="main-wrapper" darkMode={isDarkMode}>
+        <HeaderContainer
+          scriptSwitchId={scriptSwitchId}
+          renderScriptSwitch={renderScriptSwitch}
+        />
+        <Content>{children}</Content>
+        <FooterContainer />
+      </Wrapper>
+    </ThemeProvider>
     </>
   );
 };
