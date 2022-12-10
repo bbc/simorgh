@@ -113,29 +113,37 @@ const PageWrapper = ({ children, pageData, status }) => {
             type: 'text/javascript', 
             innerHTML: `
 
-                    const fontsForStorage = [
+                    let fontsForStorage = [
                     {
                         "name": "BBCReithSerif_W_Md",
                         "version": "r2.512",
-                        "subsets": false
+                        "subsets": false,
+                        "fontFamily": "ReithSerif",
+                        "fontWeight": 500
                     },
                     {
                         "name": "BBCReithSans_W_Rg",
                         "version": "r2.512",
-                        "subsets": false
+                        "subsets": false,
+                        "fontFamily": "ReithSans",
+                        "fontWeight": 400
                     },
                     {
                         "name": "BBCReithSans_W_Bd",
                         "version": "r2.512",
-                        "subsets": false
+                        "subsets": false,
+                        "fontFamily": "ReithSans",
+                        "fontWeight": 700
                     },
                     {
                         "name": "BBCReithSerif_WNumbers_Lt",
                         "version": "r2.512",
-                        "subsets": true
+                        "subsets": true,
+                        "fontFamily": "ReithSerif",
+                        "fontWeight": 300
                     }
                 ];
-                const getFont = (location) => {
+                let getFont = (location) => {
                 	return new Promise(function (resolve, reject) {
 						fetch(location).then(function (res) {
 						  return res.blob()
@@ -149,13 +157,13 @@ const PageWrapper = ({ children, pageData, status }) => {
 						}).catch(reject)
 					  })
                 };
-                const head = document.head || document.getElementsByTagName('head')[0];
-                const fontStylePlaceholder = document.createElement('style');
-                fontStylePlaceholder.type = 'text/css';
-                let styleInnerText = '';
                 fontsForStorage.forEach(font => {
                     const storageKey = 'font-' + font.name + '-' + font.version;
                     let fontContents = localStorage.getItem(storageKey);
+                    const head = document.head || document.getElementsByTagName('head')[0];
+                	const fontStylePlaceholder = document.createElement('style');
+                	fontStylePlaceholder.type = 'text/css';
+                	let styleInnerText = '';
 
             
                     if (!fontContents) {
@@ -163,18 +171,20 @@ const PageWrapper = ({ children, pageData, status }) => {
                         const fontLocation = 'https://gel.files.bbci.co.uk/'+ font.version + (font.subsets ? '/subsets' : '') + '/' + font.name + '.woff2';
                         console.log('fontLocation', fontLocation);
                         getFont(fontLocation).then((fontContents) => {
-                        	localStorage.setItem(storageKey, fontContents);
-                        	styleInnerText += '@font-face{' + fontContents + ';font-display: swap;}';
+                        	const forStorage = { base64Contents: fontContents, fontFamily: font.fontFamily, fontWeight: font.fontWeight };
+                        	localStorage.setItem(storageKey, JSON.stringify(forStorage));
+                        	styleInnerText += '@font-face{font-family:: "' + font.fontFamily + '"; font-weight: ' + font.fontWeight + ';src:url("' + fontContents + '") format("woff2");font-display: swap;}';
+                			fontStylePlaceholder.innerHTML = styleInnerText;
+                			head.appendChild(fontStylePlaceholder);
                         });
                     }
                     else {
-                    	styleInnerText += '@font-face{' + fontContents + ';font-display: swap;}';
+                    	const { base64Contents, fontFamily, fontWeight } = JSON.parse(fontContents);
+                    	styleInnerText += '@font-face{font-family: "' + fontFamily + '"; font-weight: ' + fontWeight + '; src:url("' + base64Contents + '") format("woff2");font-display: swap;}';
+                		fontStylePlaceholder.innerHTML = styleInnerText;
+                		head.appendChild(fontStylePlaceholder);
                     }
-
-                    
-                });
-                fontStylePlaceholder.innerHTML = styleInnerText;
-                head.appendChild(fontStylePlaceholder);`
+                });`
           }]}
       />
       <ThemeProvider service={service} variant={variant}>
