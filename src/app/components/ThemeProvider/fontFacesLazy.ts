@@ -28,6 +28,7 @@ const REITH_SERIF_REGULAR = {
     fontWeight: 400,
     fontFamily: 'ReithSerif',
     fontDisplay: 'optional',
+    baseUrl: REITH_FONTS_DIR,
 };
 
 const REITH_SERIF_BOLD = {
@@ -36,6 +37,7 @@ const REITH_SERIF_BOLD = {
     fontFamily: 'ReithSerif',
     fontWeight: 700,
     fontDisplay: 'optional',
+    baseUrl: REITH_FONTS_DIR,
 };
 
 const REITH_SERIF_LIGHT = {
@@ -45,6 +47,7 @@ const REITH_SERIF_LIGHT = {
     fontFamily: 'ReithSerif',
     fontWeight: 300,
     fontDisplay: 'optional',
+    baseUrl: REITH_FONTS_DIR,
 };
 
 const REITH_SERIF_MEDIUM = {
@@ -54,6 +57,7 @@ const REITH_SERIF_MEDIUM = {
     fontFamily: 'ReithSerif',
     fontWeight: 500,
     fontDisplay: 'optional',
+    baseUrl: REITH_FONTS_DIR,
 };
 
 const REITH_SERIF_EXTRA_BOLD = {
@@ -63,6 +67,7 @@ const REITH_SERIF_EXTRA_BOLD = {
     fontFamily: 'ReithSerif',
     fontWeight: 800,
     fontDisplay: 'optional',
+    baseUrl: REITH_FONTS_DIR,
 };
 
 const REITH_SANS_REGULAR = {
@@ -72,6 +77,7 @@ const REITH_SANS_REGULAR = {
     fontWeight: 400,
     fontFamily: 'ReithSans',
     fontDisplay: 'optional',
+    baseUrl: REITH_FONTS_DIR,
 };
 
 const REITH_SANS_BOLD = {
@@ -81,6 +87,7 @@ const REITH_SANS_BOLD = {
     fontFamily: 'ReithSans',
     fontWeight: 700,
     fontDisplay: 'optional',
+    baseUrl: REITH_FONTS_DIR,
 };
 
 const REITH_SANS_LIGHT = {
@@ -90,6 +97,7 @@ const REITH_SANS_LIGHT = {
     fontFamily: 'ReithSans',
     fontWeight: 300,
     fontDisplay: 'optional',
+    baseUrl: REITH_FONTS_DIR,
 };
 
 const REITH_SANS_LIGHT_ITALIC = {
@@ -100,6 +108,7 @@ const REITH_SANS_LIGHT_ITALIC = {
     fontWeight: 300,
     fontStyle: 'italic',
     fontDisplay: 'optional',
+    baseUrl: REITH_FONTS_DIR,
 };
 
 const REITH_SANS_MEDIUM = {
@@ -109,6 +118,7 @@ const REITH_SANS_MEDIUM = {
     fontFamily: 'ReithSans',
     fontWeight: 500,
     fontDisplay: 'optional',
+    baseUrl: REITH_FONTS_DIR,
 };
 
 const REITH_SANS_EXTRA_BOLD = {
@@ -118,6 +128,7 @@ const REITH_SANS_EXTRA_BOLD = {
     fontFamily: 'ReithSans',
     fontWeight: 800,
     fontDisplay: 'optional',
+    baseUrl: REITH_FONTS_DIR,
 };
 
 const REITH_SANS_EXTRA_BOLD_ITALIC = {
@@ -128,6 +139,7 @@ const REITH_SANS_EXTRA_BOLD_ITALIC = {
     fontWeight: 800,
     fontStyle: 'italic',
     fontDisplay: 'optional',
+    baseUrl: REITH_FONTS_DIR,
 };
 
 const REITH_SANS_CONDENSED_REGULAR = {
@@ -136,6 +148,7 @@ const REITH_SANS_CONDENSED_REGULAR = {
 	subsets: false,
     fontFamily: 'ReithSansCondensed',
     fontDisplay: 'optional',
+    baseUrl: REITH_FONTS_DIR,
 };
 
 const REITH_SANS_CONDENSED_BOLD = {
@@ -145,6 +158,7 @@ const REITH_SANS_CONDENSED_BOLD = {
     fontFamily: 'ReithSansCondensed',
     fontWeight: 700,
     fontDisplay: 'optional',
+    baseUrl: REITH_FONTS_DIR,
 };
 
 const NOTO_SERIF_SINHALA_REGULAR = {
@@ -153,6 +167,7 @@ const NOTO_SERIF_SINHALA_REGULAR = {
     fontStyle: 'normal',
     src: `url('${NOTO_SERIF_SINHALA_FONTS_DIR}normal.woff2') format('woff2'), url('${NOTO_SERIF_SINHALA_FONTS_DIR}normal.woff') format('woff'), url('${NOTO_SERIF_SINHALA_FONTS_DIR}normal.eot') format('eot'), url('${NOTO_SERIF_SINHALA_FONTS_DIR}normal.ttf') format('ttf')`,
     fontDisplay: 'swap',
+    baseUrl: NOTO_SERIF_SINHALA_FONTS_DIR,
 };
 
 const NOTO_SERIF_SINHALA_BOLD = {
@@ -161,6 +176,7 @@ const NOTO_SERIF_SINHALA_BOLD = {
     fontStyle: 'normal',
     src: `url('${NOTO_SERIF_SINHALA_FONTS_DIR}bold.woff2') format('woff2'), url('${NOTO_SERIF_SINHALA_FONTS_DIR}bold.woff') format('woff'), url('${NOTO_SERIF_SINHALA_FONTS_DIR}bold.eot') format('eot'), url('${NOTO_SERIF_SINHALA_FONTS_DIR}bold.ttf') format('ttf')`,
     fontDisplay: 'swap',
+    baseUrl: NOTO_SERIF_SINHALA_FONTS_DIR,
 };
 
 const NOTO_SANS_TAMIL_REGULAR = {
@@ -169,6 +185,7 @@ const NOTO_SANS_TAMIL_REGULAR = {
     fontStyle: 'normal',
     src: `url('${NOTO_SANS_TAMIL_FONTS_DIR}normal.woff2') format('woff2'), url('${NOTO_SANS_TAMIL_FONTS_DIR}normal.woff') format('woff'), url('${NOTO_SANS_TAMIL_FONTS_DIR}normal.eot') format('eot'), url('${NOTO_SANS_TAMIL_FONTS_DIR}normal.ttf') format('ttf')`,
     fontDisplay: 'swap',
+    baseUrl: NOTO_SANS_TAMIL_FONTS_DIR,
 };
 
 const NOTO_SANS_TAMIL_BOLD = {
@@ -177,6 +194,7 @@ const NOTO_SANS_TAMIL_BOLD = {
     fontStyle: 'normal',
     src: `url('${NOTO_SANS_TAMIL_FONTS_DIR}bold.woff2') format('woff2'), url('${NOTO_SANS_TAMIL_FONTS_DIR}bold.woff') format('woff'), url('${NOTO_SANS_TAMIL_FONTS_DIR}normal.eot') format('eot'), url('${NOTO_SANS_TAMIL_FONTS_DIR}bold.ttf') format('ttf')`,
     fontDisplay: 'swap',
+    baseUrl: NOTO_SANS_TAMIL_FONTS_DIR,
 };
 
 const MALLANNA_REGULAR = {
@@ -185,6 +203,7 @@ const MALLANNA_REGULAR = {
     fontStyle: 'normal',
     src: `url('${MALLANA_FONTS_DIR}normal.woff') format('woff'), url('${MALLANA_FONTS_DIR}normal.eot') format('eot'), url('${MALLANA_FONTS_DIR}normal.ttf') format('ttf')`,
     fontDisplay: 'swap',
+    baseUrl: MALLANA_FONTS_DIR,
 };
 
 const NOTO_SANS_ETHIOPIC_REGULAR = {
@@ -193,6 +212,7 @@ const NOTO_SANS_ETHIOPIC_REGULAR = {
     fontStyle: 'normal',
     src: `url('${NOTO_SANS_ETHIOPIC_FONTS_DIR}normal.woff') format('woff'), url('${NOTO_SANS_ETHIOPIC_FONTS_DIR}normal.eot') format('eot'), url('${NOTO_SANS_ETHIOPIC_FONTS_DIR}normal.ttf') format('ttf')`,
     fontDisplay: 'swap',
+    baseUrl: NOTO_SANS_ETHIOPIC_FONTS_DIR,
 };
 
 const NOTO_SANS_ETHIOPIC_BOLD = {
@@ -201,6 +221,7 @@ const NOTO_SANS_ETHIOPIC_BOLD = {
     fontStyle: 'normal',
     src: `url('${NOTO_SANS_ETHIOPIC_FONTS_DIR}bold.woff') format('woff'), url('${NOTO_SANS_ETHIOPIC_FONTS_DIR}bold.eot') format('eot'), url('${NOTO_SANS_ETHIOPIC_FONTS_DIR}bold.ttf') format('ttf')`,
     fontDisplay: 'swap',
+    baseUrl: NOTO_SANS_ETHIOPIC_FONTS_DIR,
 };
 
 const PADAUK_REGULAR = {
@@ -209,6 +230,7 @@ const PADAUK_REGULAR = {
     fontStyle: 'normal',
     src: `url('${PADAUK_FONTS_DIR}normal.woff') format('woff'), url('${PADAUK_FONTS_DIR}normal.eot') format('eot'), url('${PADAUK_FONTS_DIR}normal.ttf') format('ttf')`,
     fontDisplay: 'swap',
+    baseUrl: PADAUK_FONTS_DIR,
 };
 
 const PADAUK_BOLD = {
@@ -217,37 +239,44 @@ const PADAUK_BOLD = {
     fontStyle: 'normal',
     src: `url('${PADAUK_FONTS_DIR}bold.woff') format('woff'), url('${PADAUK_FONTS_DIR}bold.eot') format('eot'), url('${PADAUK_FONTS_DIR}bold.ttf') format('ttf')`,
     fontDisplay: 'swap',
+    baseUrl: PADAUK_FONTS_DIR,
 };
 
 const NOTO_SERIF_BENGALI_REGULAR = {
+	name: "notoserifregular",
     fontFamily: 'Noto Serif Bengali',
     fontWeight: 400,
     fontStyle: 'normal',
-    src: `url('${NOTO_SERIF_BENGALI_FONTS_DIR}normal.woff2') format('woff2'), url('${NOTO_SERIF_BENGALI_FONTS_DIR}normal.woff') format('woff'), url('${NOTO_SERIF_BENGALI_FONTS_DIR}normal.eot') format('eot'), url('${NOTO_SERIF_BENGALI_FONTS_DIR}normal.ttf') format('ttf')`,
+    src: `${NOTO_SERIF_BENGALI_FONTS_DIR}normal.woff2`,
     fontDisplay: 'optional',
 };
 
 const NOTO_SERIF_BENGALI_BOLD = {
+	name: "notoserifbold",
     fontFamily: 'Noto Serif Bengali',
     fontWeight: 700,
     fontStyle: 'normal',
-    src: `url('${NOTO_SERIF_BENGALI_FONTS_DIR}bold.woff2') format('woff2'), url('${NOTO_SERIF_BENGALI_FONTS_DIR}bold.woff') format('woff'), url('${NOTO_SERIF_BENGALI_FONTS_DIR}normal.eot') format('eot'), url('${NOTO_SERIF_BENGALI_FONTS_DIR}bold.ttf') format('ttf')`,
+    src: `${NOTO_SERIF_BENGALI_FONTS_DIR}bold.woff2`,
     fontDisplay: 'optional',
 };
 
 const REITH_QALAM_REGULAR = {
+	name: "qalamNormal",
     fontFamily: 'BBC Reith Qalam',
     fontWeight: 400,
+    varsion: "v1.210",
     fontStyle: 'normal',
-    src: `url('${REITH_QALAM_FONTS_DIR}normal.woff2') format('woff2'), url('${REITH_QALAM_FONTS_DIR}normal.woff') format('woff')`,
+    src: `${REITH_QALAM_FONTS_DIR}normal.woff2`,
     fontDisplay: 'optional',
 };
 
 const REITH_QALAM_BOLD = {
+	name: "qalamBold",
     fontFamily: 'BBC Reith Qalam',
     fontWeight: 700,
+    varsion: "v1.210",
     fontStyle: 'normal',
-    src: `url('${REITH_QALAM_FONTS_DIR}bold.woff2') format('woff2'), url('${REITH_QALAM_FONTS_DIR}bold.woff') format('woff')`,
+    src: `${REITH_QALAM_FONTS_DIR}bold.woff2`,
     fontDisplay: 'optional',
 };
 

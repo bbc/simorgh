@@ -67,7 +67,7 @@ const PageWrapper = ({ children, pageData, status }) => {
             
                     if (!fontContents) {
                         // if this wasn't a poc, we'd go and get the contents of the font from somewhere else
-                        const fontLocation = 'https://gel.files.bbci.co.uk/'+ font.version + (font.subsets ? '/subsets' : '') + '/' + font.name + '.woff2';
+                        const fontLocation = font.src ? font.src : 'https://gel.files.bbci.co.uk/'+ font.version + (font.subsets ? '/subsets' : '') + '/' + font.name + '.woff2';
                         console.log('fontLocation', fontLocation);
                         getFont(fontLocation).then((fontContents) => {
                         	const forStorage = { base64Contents: fontContents, fontFamily: font.fontFamily, fontWeight: font.fontWeight };
