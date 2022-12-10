@@ -88,7 +88,7 @@ const PageWrapper = ({ children, pageData, status }) => {
       });
     };
     fontsForStorage.forEach(font => {
-      const storageKey = `font-${font.name}-${font.version}`;
+      const storageKey = `font-${font.name}`;
       const fontContents = localStorage.getItem(storageKey);
       const head = document.head || document.getElementsByTagName('head')[0];
       const fontStylePlaceholder = document.createElement('style');
@@ -106,6 +106,7 @@ const PageWrapper = ({ children, pageData, status }) => {
               base64Contents,
               fontFamily: font.fontFamily,
               fontWeight: font.fontWeight,
+              fontVersion: font.version,
             };
             localStorage.setItem(storageKey, JSON.stringify(forStorage));
             styleInnerText += `@font-face{font-family:: "${font.fontFamily}"; font-weight: ${font.fontWeight};src:url("${base64Contents}") format("woff2");font-display: swap;}`;
@@ -114,11 +115,20 @@ const PageWrapper = ({ children, pageData, status }) => {
           });
         }, 0);
       } else {
-        const { base64Contents, fontFamily, fontWeight } =
+        const { base64Contents, fontFamily, fontWeight, fontVersion } =
           JSON.parse(fontContents);
         styleInnerText += `@font-face{font-family: "${fontFamily}"; font-weight: ${fontWeight}; src:url("${base64Contents}") format("woff2");font-display: swap;}`;
         fontStylePlaceholder.innerHTML = styleInnerText;
         head.appendChild(fontStylePlaceholder);
+        if (font.version !== fontVersion) {
+        	const forStorage = {
+              base64Contents,
+              fontFamily: font.fontFamily,
+              fontWeight: font.fontWeight,
+              fontVersion: font.version,
+            };
+            localStorage.setItem(storageKey, JSON.stringify(forStorage));
+        }
       }
     });
   }, []);
