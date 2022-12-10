@@ -115,14 +115,40 @@ const PageWrapper = ({ children, pageData, status }) => {
 
                     const fontsForStorage = [
                     {
-                        "name": "ReithSerif_M",
-                        "version": 1
+                        "name": "BBCReithSerif_W_Md",
+                        "version": "r2.512",
+                        "subsets": false
                     },
                     {
-                        "name": "ReithSans_R",
-                        "version": 1
+                        "name": "BBCReithSans_W_Rg",
+                        "version": "r2.512",
+                        "subsets": false
+                    },
+                    {
+                        "name": "BBCReithSans_W_Bd",
+                        "version": "r2.512",
+                        "subsets": false
+                    },
+                    {
+                        "name": "BBCReithSerif_WNumbers_Lt",
+                        "version": "r2.512",
+                        "subsets": true
                     }
                 ];
+                const getFont = (location) => {
+                	return new Promise(function (resolve, reject) {
+						fetch(location).then(function (res) {
+						  return res.blob()
+						}).then(function (blob) {
+						  var reader = new FileReader()
+						  reader.addEventListener('load', function () {
+							resolve(this.result)
+							console.log(this.result);
+						  })
+						  reader.readAsDataURL(blob)
+						}).catch(reject)
+					  })
+                };
                 const head = document.head || document.getElementsByTagName('head')[0];
                 const fontStylePlaceholder = document.createElement('style');
                 fontStylePlaceholder.type = 'text/css';
@@ -134,16 +160,25 @@ const PageWrapper = ({ children, pageData, status }) => {
             
                     if (!fontContents) {
                         // if this wasn't a poc, we'd go and get the contents of the font from somewhere else
+                        const fontLocation = 'https://gel.files.bbci.co.uk/'+ font.version + (font.subsets ? '/subsets' : '') + '/' + font.name + '.woff2';
+                        console.log('fontLocation', fontLocation);
+                        getFont(fontLocation).then((fontContents) => {
+                        	localStorage.setItem(storageKey, fontContents);
+                        	styleInnerText += '@font-face{' + fontContents + ';font-display: swap;}';
+                        });
+                    }
+                    else {
+                    	styleInnerText += '@font-face{' + fontContents + ';font-display: swap;}';
                     }
 
-                    styleInnerText += '@font-face{' + fontContents + ';font-display: swap;}';
+                    
                 });
                 fontStylePlaceholder.innerHTML = styleInnerText;
                 head.appendChild(fontStylePlaceholder);`
           }]}
       />
       <ThemeProvider service={service} variant={variant}>
-      <GlobalStyles fonts={fonts} />
+      <GlobalStyles />
       <ServiceWorkerContainer />
       <ManifestContainer />
       <WebVitals pageType={pageType} />
