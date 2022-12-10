@@ -299,12 +299,6 @@ exports[`Media Player: Canonical Entry renders a landscape container with a plac
 .emotion-19 {
   display: block;
   width: 100%;
-  visibility: visible;
-}
-
-.emotion-21 {
-  display: block;
-  width: 100%;
 }
 
 <div>
@@ -357,15 +351,11 @@ exports[`Media Player: Canonical Entry renders a landscape container with a plac
           2:30
         </time>
       </button>
-      <picture
+      <img
+        alt=""
         class="emotion-19 emotion-20"
-      >
-        <img
-          alt=""
-          class="emotion-21 emotion-22"
-          src="http://foo.bar/placeholder.png"
-        />
-      </picture>
+        src="http://foo.bar/placeholder.png"
+      />
     </div>
   </div>
 </div>
@@ -507,12 +497,6 @@ exports[`Media Player: Canonical Entry renders a placeholder image with guidance
 .emotion-21 {
   display: block;
   width: 100%;
-  visibility: visible;
-}
-
-.emotion-23 {
-  display: block;
-  width: 100%;
 }
 
 <div>
@@ -571,15 +555,11 @@ exports[`Media Player: Canonical Entry renders a placeholder image with guidance
           2:30
         </time>
       </button>
-      <picture
+      <img
+        alt=""
         class="emotion-21 emotion-22"
-      >
-        <img
-          alt=""
-          class="emotion-23 emotion-24"
-          src="http://foo.bar/placeholder.png"
-        />
-      </picture>
+        src="http://foo.bar/placeholder.png"
+      />
     </div>
   </div>
 </div>
@@ -695,12 +675,6 @@ exports[`Media Player: Canonical Entry renders a portrait container with a place
 .emotion-19 {
   display: block;
   width: 100%;
-  visibility: visible;
-}
-
-.emotion-21 {
-  display: block;
-  width: 100%;
 }
 
 <div>
@@ -753,15 +727,11 @@ exports[`Media Player: Canonical Entry renders a portrait container with a place
           2:30
         </time>
       </button>
-      <picture
+      <img
+        alt=""
         class="emotion-19 emotion-20"
-      >
-        <img
-          alt=""
-          class="emotion-21 emotion-22"
-          src="http://foo.bar/placeholder.png"
-        />
-      </picture>
+        src="http://foo.bar/placeholder.png"
+      />
     </div>
   </div>
 </div>
@@ -996,12 +966,6 @@ exports[`Media Player: Canonical Entry renders with no-js styles when noJsClassN
 .emotion-21 {
   display: block;
   width: 100%;
-  visibility: visible;
-}
-
-.emotion-23 {
-  display: block;
-  width: 100%;
 }
 
 <div>
@@ -1060,15 +1024,11 @@ exports[`Media Player: Canonical Entry renders with no-js styles when noJsClassN
           2:30
         </time>
       </button>
-      <picture
+      <img
+        alt=""
         class="emotion-21 emotion-22"
-      >
-        <img
-          alt=""
-          class="emotion-23 emotion-24"
-          src="http://foo.bar/placeholder.png"
-        />
-      </picture>
+        src="http://foo.bar/placeholder.png"
+      />
     </div>
   </div>
 </div>

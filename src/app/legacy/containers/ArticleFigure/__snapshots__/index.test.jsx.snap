@@ -2113,13 +2113,7 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
   }
 }
 
-.emotion-8 {
-  display: block;
-  width: 100%;
-  visibility: visible;
-}
-
-.emotion-11 {
+.emotion-9 {
   display: block;
   width: 100%;
   height: auto;
@@ -2142,17 +2136,13 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
           data-e2e="image-placeholder"
           style="padding-bottom: 56.25%;"
         >
-          <picture
-            class="emotion-8 emotion-9"
-          >
-            <img
-              alt="Pauline Clayton"
-              class="emotion-10 emotion-11 emotion-12"
-              height="1240"
-              src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-              width="600"
-            />
-          </picture>
+          <img
+            alt="Pauline Clayton"
+            class="emotion-8 emotion-9 emotion-10"
+            height="1240"
+            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            width="600"
+          />
         </div>
       </div>
     </div>
@@ -2344,13 +2334,7 @@ exports[`ArticleFigure should render an image and caption for a square with nest
   }
 }
 
-.emotion-8 {
-  display: block;
-  width: 100%;
-  visibility: visible;
-}
-
-.emotion-11 {
+.emotion-9 {
   display: block;
   width: 100%;
   height: auto;
@@ -2373,17 +2357,13 @@ exports[`ArticleFigure should render an image and caption for a square with nest
           data-e2e="image-placeholder"
           style="padding-bottom: 56.25%;"
         >
-          <picture
-            class="emotion-8 emotion-9"
-          >
-            <img
-              alt="Pauline Clayton"
-              class="emotion-10 emotion-11 emotion-12"
-              height="1240"
-              src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-              width="1240"
-            />
-          </picture>
+          <img
+            alt="Pauline Clayton"
+            class="emotion-8 emotion-9 emotion-10"
+            height="1240"
+            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            width="1240"
+          />
         </div>
       </div>
     </div>
@@ -2575,13 +2555,7 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
   }
 }
 
-.emotion-8 {
-  display: block;
-  width: 100%;
-  visibility: visible;
-}
-
-.emotion-11 {
+.emotion-9 {
   display: block;
   width: 100%;
   height: auto;
@@ -2604,17 +2578,13 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
           data-e2e="image-placeholder"
           style="padding-bottom: 56.25%;"
         >
-          <picture
-            class="emotion-8 emotion-9"
-          >
-            <img
-              alt="Pauline Clayton"
-              class="emotion-10 emotion-11 emotion-12"
-              height="360"
-              src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-              width="640"
-            />
-          </picture>
+          <img
+            alt="Pauline Clayton"
+            class="emotion-8 emotion-9 emotion-10"
+            height="360"
+            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            width="640"
+          />
         </div>
       </div>
     </div>
@@ -2806,19 +2776,13 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   }
 }
 
-.emotion-8 {
-  display: block;
-  width: 100%;
-  visibility: visible;
-}
-
-.emotion-11 {
+.emotion-9 {
   display: block;
   width: 100%;
   height: auto;
 }
 
-.emotion-13 {
+.emotion-11 {
   font-size: 0.75rem;
   line-height: 1rem;
   background-color: rgba(34, 34, 34, 0.75);
@@ -2832,7 +2796,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   left: 0;
 }
 
-.emotion-15 {
+.emotion-13 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -2844,50 +2808,50 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-17 {
+  .emotion-15 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-17 {
+  .emotion-15 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-17 {
+  .emotion-15 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-17 {
+  .emotion-15 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-17 {
+  .emotion-15 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-17 {
+  .emotion-15 {
     margin-left: 0%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-17 {
+  .emotion-15 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-17 {
+    .emotion-15 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2895,7 +2859,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-17 {
+    .emotion-15 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2903,7 +2867,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-17 {
+    .emotion-15 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -2911,7 +2875,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-17 {
+    .emotion-15 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -2919,7 +2883,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-17 {
+    .emotion-15 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -2927,7 +2891,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-17 {
+    .emotion-15 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
@@ -2935,7 +2899,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   }
 }
 
-.emotion-19 {
+.emotion-17 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -2952,37 +2916,37 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-19 {
+  .emotion-17 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-19 {
+  .emotion-17 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-19 {
+  .emotion-17 {
     width: 100%;
     margin: 0.5rem 0 0;
   }
 }
 
-.emotion-19>p {
+.emotion-17>p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-19>p:last-child {
+.emotion-17>p:last-child {
   padding-bottom: 0;
 }
 
 @media (min-width: 25rem) and (max-width: 62.9375rem) {
-  .emotion-19 {
+  .emotion-17 {
     width: calc(100% - 1rem);
     margin-left: 1rem;
     padding-right: 1rem;
@@ -2991,7 +2955,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 }
 
 @media (min-width: 63rem) {
-  .emotion-19 {
+  .emotion-17 {
     padding-right: 0;
     padding-left: 0.5rem;
   }
@@ -3014,23 +2978,19 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
           data-e2e="image-placeholder"
           style="padding-bottom: 56.25%;"
         >
-          <picture
-            class="emotion-8 emotion-9"
-          >
-            <img
-              alt="Pauline Clayton"
-              class="emotion-10 emotion-11 emotion-12"
-              height="360"
-              src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-              width="640"
-            />
-          </picture>
+          <img
+            alt="Pauline Clayton"
+            class="emotion-8 emotion-9 emotion-10"
+            height="360"
+            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            width="640"
+          />
           <p
-            class="emotion-13 emotion-14"
+            class="emotion-11 emotion-12"
             role="text"
           >
             <span
-              class="emotion-15 emotion-16"
+              class="emotion-13 emotion-14"
             >
               Image source, 
             </span>
@@ -3039,15 +2999,15 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
         </div>
       </div>
       <div
-        class="emotion-17 emotion-3"
+        class="emotion-15 emotion-3"
         dir="ltr"
       >
         <figcaption
-          class="emotion-19 emotion-20"
+          class="emotion-17 emotion-18"
           dir="ltr"
         >
           <span
-            class="emotion-15 emotion-16"
+            class="emotion-13 emotion-14"
           >
             Image caption, 
           </span>
@@ -3245,63 +3205,57 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
   }
 }
 
-.emotion-8 {
-  display: block;
-  width: 100%;
-  visibility: visible;
-}
-
-.emotion-11 {
+.emotion-9 {
   display: block;
   width: 100%;
   height: auto;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-13 {
+  .emotion-11 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-13 {
+  .emotion-11 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-13 {
+  .emotion-11 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-13 {
+  .emotion-11 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-13 {
+  .emotion-11 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-13 {
+  .emotion-11 {
     margin-left: 0%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-13 {
+  .emotion-11 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-13 {
+    .emotion-11 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3309,7 +3263,7 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-13 {
+    .emotion-11 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3317,7 +3271,7 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-13 {
+    .emotion-11 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3325,7 +3279,7 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-13 {
+    .emotion-11 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -3333,7 +3287,7 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-13 {
+    .emotion-11 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -3341,7 +3295,7 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-13 {
+    .emotion-11 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
@@ -3349,7 +3303,7 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
   }
 }
 
-.emotion-15 {
+.emotion-13 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -3366,37 +3320,37 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-15 {
+  .emotion-13 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-13 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-15 {
+  .emotion-13 {
     width: 100%;
     margin: 0.5rem 0 0;
   }
 }
 
-.emotion-15>p {
+.emotion-13>p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-15>p:last-child {
+.emotion-13>p:last-child {
   padding-bottom: 0;
 }
 
 @media (min-width: 25rem) and (max-width: 62.9375rem) {
-  .emotion-15 {
+  .emotion-13 {
     width: calc(100% - 1rem);
     margin-left: 1rem;
     padding-right: 1rem;
@@ -3405,13 +3359,13 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 }
 
 @media (min-width: 63rem) {
-  .emotion-15 {
+  .emotion-13 {
     padding-right: 0;
     padding-left: 0.5rem;
   }
 }
 
-.emotion-17 {
+.emotion-15 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -3439,29 +3393,25 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
           data-e2e="image-placeholder"
           style="padding-bottom: 56.25%;"
         >
-          <picture
-            class="emotion-8 emotion-9"
-          >
-            <img
-              alt="Pauline Clayton"
-              class="emotion-10 emotion-11 emotion-12"
-              height="360"
-              src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-              width="640"
-            />
-          </picture>
+          <img
+            alt="Pauline Clayton"
+            class="emotion-8 emotion-9 emotion-10"
+            height="360"
+            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            width="640"
+          />
         </div>
       </div>
       <div
-        class="emotion-13 emotion-3"
+        class="emotion-11 emotion-3"
         dir="ltr"
       >
         <figcaption
-          class="emotion-15 emotion-16"
+          class="emotion-13 emotion-14"
           dir="ltr"
         >
           <span
-            class="emotion-17 emotion-18"
+            class="emotion-15 emotion-16"
           >
             Image caption, 
           </span>
@@ -3659,63 +3609,57 @@ exports[`ArticleFigure should render an image with caption text with inline link
   }
 }
 
-.emotion-8 {
-  display: block;
-  width: 100%;
-  visibility: visible;
-}
-
-.emotion-11 {
+.emotion-9 {
   display: block;
   width: 100%;
   height: auto;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-13 {
+  .emotion-11 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-13 {
+  .emotion-11 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-13 {
+  .emotion-11 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-13 {
+  .emotion-11 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-13 {
+  .emotion-11 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-13 {
+  .emotion-11 {
     margin-left: 0%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-13 {
+  .emotion-11 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-13 {
+    .emotion-11 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3723,7 +3667,7 @@ exports[`ArticleFigure should render an image with caption text with inline link
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-13 {
+    .emotion-11 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3731,7 +3675,7 @@ exports[`ArticleFigure should render an image with caption text with inline link
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-13 {
+    .emotion-11 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -3739,7 +3683,7 @@ exports[`ArticleFigure should render an image with caption text with inline link
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-13 {
+    .emotion-11 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -3747,7 +3691,7 @@ exports[`ArticleFigure should render an image with caption text with inline link
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-13 {
+    .emotion-11 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -3755,7 +3699,7 @@ exports[`ArticleFigure should render an image with caption text with inline link
   }
 
   @media (min-width: 80rem) {
-    .emotion-13 {
+    .emotion-11 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
@@ -3763,7 +3707,7 @@ exports[`ArticleFigure should render an image with caption text with inline link
   }
 }
 
-.emotion-15 {
+.emotion-13 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -3780,37 +3724,37 @@ exports[`ArticleFigure should render an image with caption text with inline link
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-15 {
+  .emotion-13 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-13 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-15 {
+  .emotion-13 {
     width: 100%;
     margin: 0.5rem 0 0;
   }
 }
 
-.emotion-15>p {
+.emotion-13>p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-15>p:last-child {
+.emotion-13>p:last-child {
   padding-bottom: 0;
 }
 
 @media (min-width: 25rem) and (max-width: 62.9375rem) {
-  .emotion-15 {
+  .emotion-13 {
     width: calc(100% - 1rem);
     margin-left: 1rem;
     padding-right: 1rem;
@@ -3819,13 +3763,13 @@ exports[`ArticleFigure should render an image with caption text with inline link
 }
 
 @media (min-width: 63rem) {
-  .emotion-15 {
+  .emotion-13 {
     padding-right: 0;
     padding-left: 0.5rem;
   }
 }
 
-.emotion-17 {
+.emotion-15 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -3836,20 +3780,20 @@ exports[`ArticleFigure should render an image with caption text with inline link
   margin: 0;
 }
 
-.emotion-19 {
+.emotion-17 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-19:visited {
+.emotion-17:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.emotion-19:focus,
-.emotion-19:hover {
+.emotion-17:focus,
+.emotion-17:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
@@ -3871,36 +3815,32 @@ exports[`ArticleFigure should render an image with caption text with inline link
           data-e2e="image-placeholder"
           style="padding-bottom: 56.25%;"
         >
-          <picture
-            class="emotion-8 emotion-9"
-          >
-            <img
-              alt="Pauline Clayton"
-              class="emotion-10 emotion-11 emotion-12"
-              height="360"
-              src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-              width="640"
-            />
-          </picture>
+          <img
+            alt="Pauline Clayton"
+            class="emotion-8 emotion-9 emotion-10"
+            height="360"
+            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            width="640"
+          />
         </div>
       </div>
       <div
-        class="emotion-13 emotion-3"
+        class="emotion-11 emotion-3"
         dir="ltr"
       >
         <figcaption
-          class="emotion-15 emotion-16"
+          class="emotion-13 emotion-14"
           dir="ltr"
         >
           <span
-            class="emotion-17 emotion-18"
+            class="emotion-15 emotion-16"
           >
             Image caption, 
           </span>
           <p>
             This is a caption 
             <a
-              class="emotion-19 emotion-20"
+              class="emotion-17 emotion-18"
               href="/"
             >
               containing an inline link
@@ -4098,19 +4038,13 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
   }
 }
 
-.emotion-8 {
-  display: block;
-  width: 100%;
-  visibility: visible;
-}
-
-.emotion-11 {
+.emotion-9 {
   display: block;
   width: 100%;
   height: auto;
 }
 
-.emotion-13 {
+.emotion-11 {
   font-size: 0.75rem;
   line-height: 1rem;
   background-color: rgba(34, 34, 34, 0.75);
@@ -4124,7 +4058,7 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
   left: 0;
 }
 
-.emotion-15 {
+.emotion-13 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -4152,23 +4086,19 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
           data-e2e="image-placeholder"
           style="padding-bottom: 56.25%;"
         >
-          <picture
-            class="emotion-8 emotion-9"
-          >
-            <img
-              alt="Pauline Clayton"
-              class="emotion-10 emotion-11 emotion-12"
-              height="360"
-              src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-              width="640"
-            />
-          </picture>
+          <img
+            alt="Pauline Clayton"
+            class="emotion-8 emotion-9 emotion-10"
+            height="360"
+            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+            width="640"
+          />
           <p
-            class="emotion-13 emotion-14"
+            class="emotion-11 emotion-12"
             role="text"
           >
             <span
-              class="emotion-15 emotion-16"
+              class="emotion-13 emotion-14"
             >
               Image source, 
             </span>

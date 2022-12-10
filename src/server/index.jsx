@@ -101,7 +101,7 @@ server
     res.sendFile(swPath, {}, error => {
       if (error) {
         logger.error(SERVICE_WORKER_SENDFILE_ERROR, { error });
-        res.status(500).send('Unable to find service worker.');
+        res.status(500).send(`Unable to find service worker in ${swPath}`);
       }
     });
   })
