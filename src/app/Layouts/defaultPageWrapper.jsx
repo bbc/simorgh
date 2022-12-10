@@ -1,5 +1,4 @@
 import React, { useContext, useEffect } from 'react';
-import { Helmet } from 'react-helmet';
 import { node, shape, bool, number } from 'prop-types';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
@@ -102,14 +101,14 @@ const PageWrapper = ({ children, pageData, status }) => {
           font.subsets ? '/subsets' : ''
         }/${font.name}.woff2`;
         window.setTimeout(() => {
-          getFont(fontLocation).then(fontContents => {
+          getFont(fontLocation).then(base64Contents => {
             const forStorage = {
-              base64Contents: fontContents,
+              base64Contents,
               fontFamily: font.fontFamily,
               fontWeight: font.fontWeight,
             };
             localStorage.setItem(storageKey, JSON.stringify(forStorage));
-            styleInnerText += `@font-face{font-family:: "${font.fontFamily}"; font-weight: ${font.fontWeight};src:url("${fontContents}") format("woff2");font-display: swap;}`;
+            styleInnerText += `@font-face{font-family:: "${font.fontFamily}"; font-weight: ${font.fontWeight};src:url("${base64Contents}") format("woff2");font-display: swap;}`;
             fontStylePlaceholder.innerHTML = styleInnerText;
             head.appendChild(fontStylePlaceholder);
           });
