@@ -180,7 +180,7 @@ const REITH_QALAM_BOLD = {
   fontDisplay: 'optional',
 };
 
-export const getFontFromService = (service: string) => {
+export default (service: string) => {
   switch (service) {
     case 'news':
     case 'newsround':

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet';
 import { node, shape, bool, number } from 'prop-types';
 import path from 'ramda/src/path';
@@ -14,10 +14,11 @@ import HeaderContainer from '#containers/Header';
 import FooterContainer from '#containers/Footer';
 import ManifestContainer from '#containers/Manifest';
 import ServiceWorkerContainer from '#containers/ServiceWorker';
+import onClient from '#lib/utilities/onClient';
 import { ServiceContext } from '../contexts/ServiceContext';
 import { RequestContext } from '../contexts/RequestContext';
 import ThemeProvider from '../components/ThemeProvider';
-import { getFontFromService } from '../components/ThemeProvider/fontFacesLazy';
+import fontFacesLazy from '../components/ThemeProvider/fontFacesLazy';
 
 const Wrapper = styled.div`
   min-height: 100vh;
@@ -43,23 +44,28 @@ const PageWrapper = ({ children, pageData, status }) => {
     ? 'WS-ERROR-PAGE'
     : path(['metadata', 'type'], pageData);
 
-  const serviceFonts = getFontFromService(service);
+  const serviceFonts = fontFacesLazy(service);
   const fontJs =
-    isAmp || !serviceFonts.length
+    isAmp ||
+    !serviceFonts.length ||
+    !onClient() ||
+    process.env.JEST_WORKER_ID !== undefined
       ? ''
       : `
   				if ("FileReader" in window && "Promise" in window && "fetch" in window) {
-  				const fontsForStorage = ${JSON.stringify(getFontFromService(service))};
+  				const fontsForStorage = ${JSON.stringify(serviceFonts)};
                 const getFont = (location) => {
                 	return new Promise(function (resolve, reject) {
 						fetch(location).then(function (res) {
 						  return res.blob()
 						}).then(function (blob) {
-						  var reader = new FileReader()
-						  reader.addEventListener('load', function () {
-							resolve(this.result)
-						  })
-						  reader.readAsDataURL(blob)
+						  if (blob && blob.constructor.name === 'Blob') {
+							  var reader = new FileReader()
+							  reader.addEventListener('load', function () {
+								resolve(this.result)
+							  })
+							  reader.readAsDataURL(blob)
+						  }
 						}).catch(reject)
 					  })
                 };
