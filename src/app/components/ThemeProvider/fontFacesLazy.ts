@@ -21,25 +21,6 @@ const NOTO_SERIF_BENGALI_FONTS_DIR =
 const REITH_QALAM_FONTS_DIR =
   'https://ws-downloads.files.bbci.co.uk/fonts/ReithQalam/v1.210/';
 
-const REITH_SERIF_REGULAR = {
-  name: 'BBCReithSerif_W_Rg',
-  version: 'r2.512',
-  subsets: false,
-  fontWeight: 400,
-  fontFamily: 'ReithSerif',
-  fontDisplay: 'optional',
-  baseUrl: REITH_FONTS_DIR,
-};
-
-const REITH_SERIF_BOLD = {
-  name: 'BBCReithSerif_W_Bd',
-  version: 'r2.512',
-  fontFamily: 'ReithSerif',
-  fontWeight: 700,
-  fontDisplay: 'optional',
-  baseUrl: REITH_FONTS_DIR,
-};
-
 const REITH_SERIF_LIGHT = {
   name: 'BBCReithSerif_WNumbers_Lt',
   version: 'r2.512',
@@ -60,16 +41,6 @@ const REITH_SERIF_MEDIUM = {
   baseUrl: REITH_FONTS_DIR,
 };
 
-const REITH_SERIF_EXTRA_BOLD = {
-  name: 'BBCReithSerif_W_ExBd',
-  version: 'r2.512',
-  subsets: false,
-  fontFamily: 'ReithSerif',
-  fontWeight: 800,
-  fontDisplay: 'optional',
-  baseUrl: REITH_FONTS_DIR,
-};
-
 const REITH_SANS_REGULAR = {
   name: 'BBCReithSans_W_Rg',
   version: 'r2.512',
@@ -85,77 +56,6 @@ const REITH_SANS_BOLD = {
   version: 'r2.512',
   subsets: false,
   fontFamily: 'ReithSans',
-  fontWeight: 700,
-  fontDisplay: 'optional',
-  baseUrl: REITH_FONTS_DIR,
-};
-
-const REITH_SANS_LIGHT = {
-  name: 'BBCReithSans_W_Lt',
-  version: 'r2.512',
-  subsets: false,
-  fontFamily: 'ReithSans',
-  fontWeight: 300,
-  fontDisplay: 'optional',
-  baseUrl: REITH_FONTS_DIR,
-};
-
-const REITH_SANS_LIGHT_ITALIC = {
-  name: 'BBCReithSans_W_LtIt',
-  version: 'r2.512',
-  subsets: false,
-  fontFamily: 'ReithSans',
-  fontWeight: 300,
-  fontStyle: 'italic',
-  fontDisplay: 'optional',
-  baseUrl: REITH_FONTS_DIR,
-};
-
-const REITH_SANS_MEDIUM = {
-  name: 'BBCReithSans_W_Md',
-  version: 'r2.512',
-  subsets: false,
-  fontFamily: 'ReithSans',
-  fontWeight: 500,
-  fontDisplay: 'optional',
-  baseUrl: REITH_FONTS_DIR,
-};
-
-const REITH_SANS_EXTRA_BOLD = {
-  name: 'BBCReithSans_W_ExBd',
-  version: 'r2.512',
-  subsets: false,
-  fontFamily: 'ReithSans',
-  fontWeight: 800,
-  fontDisplay: 'optional',
-  baseUrl: REITH_FONTS_DIR,
-};
-
-const REITH_SANS_EXTRA_BOLD_ITALIC = {
-  name: 'BBCReithSans_W_ExBd',
-  version: 'r2.512',
-  subsets: false,
-  fontFamily: 'ReithSans',
-  fontWeight: 800,
-  fontStyle: 'italic',
-  fontDisplay: 'optional',
-  baseUrl: REITH_FONTS_DIR,
-};
-
-const REITH_SANS_CONDENSED_REGULAR = {
-  name: 'BBCReithSansCd_W_Rg',
-  version: 'r2.512',
-  subsets: false,
-  fontFamily: 'ReithSansCondensed',
-  fontDisplay: 'optional',
-  baseUrl: REITH_FONTS_DIR,
-};
-
-const REITH_SANS_CONDENSED_BOLD = {
-  name: 'BBCReithSansCd_W_Bd',
-  version: 'r2.512',
-  subsets: false,
-  fontFamily: 'ReithSansCondensed',
   fontWeight: 700,
   fontDisplay: 'optional',
   baseUrl: REITH_FONTS_DIR,
@@ -280,7 +180,7 @@ const REITH_QALAM_BOLD = {
   fontDisplay: 'optional',
 };
 
-export const getFontFromService = service => {
+export const getFontFromService = (service: string) => {
   switch (service) {
     case 'news':
     case 'newsround':
@@ -306,6 +206,14 @@ export const getFontFromService = service => {
       return [NOTO_SERIF_BENGALI_REGULAR, NOTO_SERIF_BENGALI_BOLD];
     case 'tamil':
       return [NOTO_SANS_TAMIL_REGULAR, NOTO_SANS_TAMIL_BOLD];
+    case 'needswoff2':
+      return [
+        MALLANNA_REGULAR,
+        NOTO_SANS_ETHIOPIC_REGULAR,
+        NOTO_SANS_ETHIOPIC_BOLD,
+        PADAUK_REGULAR,
+        PADAUK_BOLD,
+      ];
     default:
       return [];
   }
