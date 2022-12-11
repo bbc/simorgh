@@ -14,7 +14,6 @@ import HeaderContainer from '#containers/Header';
 import FooterContainer from '#containers/Footer';
 import ManifestContainer from '#containers/Manifest';
 import ServiceWorkerContainer from '#containers/ServiceWorker';
-import onClient from '#lib/utilities/onClient';
 import { ServiceContext } from '../contexts/ServiceContext';
 import { RequestContext } from '../contexts/RequestContext';
 import ThemeProvider from '../components/ThemeProvider';
@@ -46,10 +45,7 @@ const PageWrapper = ({ children, pageData, status }) => {
 
   const serviceFonts = fontFacesLazy(service);
   const fontJs =
-    isAmp ||
-    !serviceFonts.length ||
-    !onClient() ||
-    process.env.JEST_WORKER_ID !== undefined
+    isAmp || !serviceFonts.length || process.env.JEST_WORKER_ID !== undefined
       ? ''
       : `
   				if ("FileReader" in window && "Promise" in window && "fetch" in window) {
@@ -69,7 +65,7 @@ const PageWrapper = ({ children, pageData, status }) => {
 						}).catch(reject)
 					  })
                 };
-                const retrieveAndStoreFont = (font, shouldAttachStyle) => {
+                const retrieveAndStoreFont = (font, storageKey, shouldAttachStyle) => {
                 	const fontLocation = font.src ? font.src : 'https://gel.files.bbci.co.uk/'+ font.version + (font.subsets ? '/subsets' : '') + '/' + font.name + '.woff2';
                     window.setTimeout(() => {
                     getFont(fontLocation).then((fontContents) => {
@@ -93,7 +89,7 @@ const PageWrapper = ({ children, pageData, status }) => {
 
             
                     if (!fontContents) {
-                        retrieveAndStoreFont(font, true);
+                        retrieveAndStoreFont(font, storageKey, true);
                     }
                     else {
                     	const { base64Contents, fontFamily, fontWeight, fontVersion } = JSON.parse(fontContents);
@@ -101,7 +97,7 @@ const PageWrapper = ({ children, pageData, status }) => {
                 		fontStylePlaceholder.innerHTML = styleInnerText;
                 		head.appendChild(fontStylePlaceholder);
                 		if (fontVersion !== font.version) {
-                			retrieveAndStoreFont(font, false);
+                			retrieveAndStoreFont(font, storageKey, false);
                 		}
                     }
                 });
