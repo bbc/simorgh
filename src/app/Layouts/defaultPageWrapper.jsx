@@ -15,6 +15,7 @@ import FooterContainer from '#containers/Footer';
 import ManifestContainer from '#containers/Manifest';
 import ServiceWorkerContainer from '#containers/ServiceWorker';
 import { ServiceContext } from '../contexts/ServiceContext';
+import { RequestContext } from '../contexts/RequestContext';
 import ThemeProvider from '../components/ThemeProvider';
 import { getFontFromService } from '../components/ThemeProvider/fontFacesLazy';
 
@@ -33,6 +34,7 @@ const Content = styled.div`
 
 const PageWrapper = ({ children, pageData, status }) => {
   const { service, variant } = useContext(ServiceContext);
+  const { isAmp } = useContext(RequestContext);
   const isDarkMode = pathOr(false, ['darkMode'], pageData);
   const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
   const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);
@@ -41,8 +43,14 @@ const PageWrapper = ({ children, pageData, status }) => {
     ? 'WS-ERROR-PAGE'
     : path(['metadata', 'type'], pageData);
 
-  const fontJs = `const fontsForStorage = ${JSON.stringify(getFontFromService(service))};
-                let getFont = (location) => {
+  const serviceFonts = getFontFromService(service);
+  const fontJs =
+    isAmp || !serviceFonts.length
+      ? ''
+      : `
+  				if ("FileReader" in window && "Promise" in window && "fetch" in window) {
+  				const fontsForStorage = ${JSON.stringify(getFontFromService(service))};
+                const getFont = (location) => {
                 	return new Promise(function (resolve, reject) {
 						fetch(location).then(function (res) {
 						  return res.blob()
@@ -50,11 +58,24 @@ const PageWrapper = ({ children, pageData, status }) => {
 						  var reader = new FileReader()
 						  reader.addEventListener('load', function () {
 							resolve(this.result)
-							console.log(this.result);
 						  })
 						  reader.readAsDataURL(blob)
 						}).catch(reject)
 					  })
+                };
+                const retrieveAndStoreFont = (font, shouldAttachStyle) => {
+                	const fontLocation = font.src ? font.src : 'https://gel.files.bbci.co.uk/'+ font.version + (font.subsets ? '/subsets' : '') + '/' + font.name + '.woff2';
+                    window.setTimeout(() => {
+                    getFont(fontLocation).then((fontContents) => {
+                    	const forStorage = { base64Contents: fontContents, fontFamily: font.fontFamily, fontWeight: font.fontWeight, fontVersion: font.version };
+                    	localStorage.setItem(storageKey, JSON.stringify(forStorage));
+                    	if (shouldAttachStyle) {
+							styleInnerText += '@font-face{font-family:: "' + font.fontFamily + '"; font-weight: ' + font.fontWeight + ';src:url("' + fontContents + '") format("woff2");font-display: swap;}';
+							fontStylePlaceholder.innerHTML = styleInnerText;
+							head.appendChild(fontStylePlaceholder);
+                		}
+                    });
+                    }, 0);
                 };
                 fontsForStorage.forEach(font => {
                     const storageKey = 'font-' + font.name;
@@ -66,49 +87,45 @@ const PageWrapper = ({ children, pageData, status }) => {
 
             
                     if (!fontContents) {
-                        // if this wasn't a poc, we'd go and get the contents of the font from somewhere else
-                        const fontLocation = font.src ? font.src : 'https://gel.files.bbci.co.uk/'+ font.version + (font.subsets ? '/subsets' : '') + '/' + font.name + '.woff2';
-                        console.log('fontLocation', fontLocation);
-                        getFont(fontLocation).then((fontContents) => {
-                        	const forStorage = { base64Contents: fontContents, fontFamily: font.fontFamily, fontWeight: font.fontWeight };
-                        	localStorage.setItem(storageKey, JSON.stringify(forStorage));
-                        	styleInnerText += '@font-face{font-family:: "' + font.fontFamily + '"; font-weight: ' + font.fontWeight + ';src:url("' + fontContents + '") format("woff2");font-display: swap;}';
-                			fontStylePlaceholder.innerHTML = styleInnerText;
-                			head.appendChild(fontStylePlaceholder);
-                        });
+                        retrieveAndStoreFont(font, true);
                     }
                     else {
-                    	const { base64Contents, fontFamily, fontWeight } = JSON.parse(fontContents);
-                    	console.log('base64Contents', base64Contents);
+                    	const { base64Contents, fontFamily, fontWeight, fontVersion } = JSON.parse(fontContents);
                     	styleInnerText += '@font-face{font-family: "' + fontFamily + '"; font-weight: ' + fontWeight + '; src:url("' + base64Contents + '") format("woff2");font-display: swap;}';
                 		fontStylePlaceholder.innerHTML = styleInnerText;
                 		head.appendChild(fontStylePlaceholder);
+                		if (fontVersion !== font.version) {
+                			retrieveAndStoreFont(font, false);
+                		}
                     }
                 });
+                }
     `;
 
   return (
     <>
-    <Helmet
-        script={[{ 
-            type: 'text/javascript', 
-            innerHTML: fontJs
-          }]}
+      <Helmet
+        script={[
+          {
+            type: 'text/javascript',
+            innerHTML: fontJs,
+          },
+        ]}
       />
       <ThemeProvider service={service} variant={variant}>
-      <GlobalStyles />
-      <ServiceWorkerContainer />
-      <ManifestContainer />
-      <WebVitals pageType={pageType} />
-      <Wrapper id="main-wrapper" darkMode={isDarkMode}>
-        <HeaderContainer
-          scriptSwitchId={scriptSwitchId}
-          renderScriptSwitch={renderScriptSwitch}
-        />
-        <Content>{children}</Content>
-        <FooterContainer />
-      </Wrapper>
-    </ThemeProvider>
+        <GlobalStyles />
+        <ServiceWorkerContainer />
+        <ManifestContainer />
+        <WebVitals pageType={pageType} />
+        <Wrapper id="main-wrapper" darkMode={isDarkMode}>
+          <HeaderContainer
+            scriptSwitchId={scriptSwitchId}
+            renderScriptSwitch={renderScriptSwitch}
+          />
+          <Content>{children}</Content>
+          <FooterContainer />
+        </Wrapper>
+      </ThemeProvider>
     </>
   );
 };
