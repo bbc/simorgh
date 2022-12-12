@@ -131,7 +131,7 @@ const withThemeProvider = ({
   palette: BrandPalette;
   typography: Typography;
 }) => {
-  let { fontVariants, fontFaces, script } = typography;
+  const { fontVariants, fontFaces, script } = typography;
   const {
     BRAND_BACKGROUND,
     BRAND_LOGO,
@@ -260,11 +260,12 @@ const withThemeProvider = ({
 
   const ThemeProvider: React.FC<Props> = ({ children }) => {
     const { isAmp } = useContext(RequestContext) as { isAmp: boolean };
-    if (!isAmp) fontFaces = [];
     return (
       <EmotionThemeProvider theme={theme}>
         {children}
-        <Global styles={fontFaces} />
+        {isAmp && (
+          <Global styles={fontFaces} />
+        )}
       </EmotionThemeProvider>
     );
   };
