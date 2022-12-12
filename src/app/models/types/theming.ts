@@ -414,6 +414,19 @@ export type FontStyles = {
   fontWeight: number;
 };
 
+export type BrandSVG = {
+  width?: number;
+  height?: number;
+  group: JSX.Element;
+  ratio?: number;
+  viewbox?: {
+    height?: number;
+    width?: number;
+    minY?: number;
+    minX?: number;
+  };
+};
+
 declare module '@emotion/react' {
   export interface Theme {
     palette: Palette;
@@ -455,5 +468,6 @@ declare module '@emotion/react' {
       serifBold: FontStyles;
       serifLight: FontStyles;
     };
+    brandSVG: BrandSVG;
   }
 }

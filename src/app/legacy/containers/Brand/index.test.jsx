@@ -1,9 +1,10 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { news as brandSVG } from '#psammead/psammead-assets/src/svgs';
 import { C_POSTBOX, C_WHITE } from '#psammead/psammead-styles/src/colours';
+import brandSVG from '../../../components/ThemeProvider/chameleonLogos/news';
+import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContext } from '../../../contexts/ServiceContext';
+import ThemeProvider from '../../../components/ThemeProvider';
 import BrandContainer from '.';
 
 const newsServiceContextStub = {
@@ -20,13 +21,15 @@ const newsServiceContextStub = {
 };
 
 const BrandContainerWithContext = (context, skipLink, scriptLink, linkId) => (
-  <ServiceContext.Provider value={context}>
-    <BrandContainer
-      skipLink={skipLink}
-      scriptLink={scriptLink}
-      linkId={linkId}
-    />
-  </ServiceContext.Provider>
+  <ThemeProvider service="news" variant="default">
+    <ServiceContext.Provider value={context}>
+      <BrandContainer
+        skipLink={skipLink}
+        scriptLink={scriptLink}
+        linkId={linkId}
+      />
+    </ServiceContext.Provider>
+  </ThemeProvider>
 );
 
 const mockSkipLink = <div data-testid="skip-link">Skip Link</div>;
