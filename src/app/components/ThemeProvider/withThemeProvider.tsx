@@ -124,6 +124,10 @@ type Props = {
   children: React.ReactNode;
 };
 
+interface Context {
+    isAmp: boolean,
+}
+
 const withThemeProvider = ({
   typography,
   palette: brandPalette,
@@ -259,7 +263,7 @@ const withThemeProvider = ({
   };
 
   const ThemeProvider: React.FC<Props> = ({ children }) => {
-    const { isAmp } = useContext(RequestContext);
+    const { isAmp } = useContext<Context>(RequestContext);
     if (!isAmp) fontFaces = [];
     return (
       <EmotionThemeProvider theme={theme}>
