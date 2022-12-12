@@ -1,5 +1,11 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import latinWithDiacriticsScript from '../fontScripts/latinWithDiacritics';
+import {
+  REITH_SANS_BOLD,
+  REITH_SANS_REGULAR,
+  REITH_SERIF_MEDIUM,
+  REITH_SERIF_LIGHT,
+} from '../fontFaces';
 import reithFontVariants from '../fontVariants/reith';
 import withThemeProvider from '../withThemeProvider';
 
@@ -14,7 +20,12 @@ const portugueseTheme = {
   typography: {
     script: latinWithDiacriticsScript,
     fontVariants: reithFontVariants,
-    fontFaces: [],
+    fontFaces: [
+      REITH_SANS_BOLD,
+      REITH_SANS_REGULAR,
+      REITH_SERIF_MEDIUM,
+      REITH_SERIF_LIGHT,
+    ],
   },
 };
 

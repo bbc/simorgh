@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   Global,
   ThemeProvider as EmotionThemeProvider,
   Theme,
 } from '@emotion/react';
+import { RequestContext } from '../../contexts/RequestContext';
 
 import {
   ARCHIVE_BLUE,
@@ -130,7 +131,7 @@ const withThemeProvider = ({
   palette: BrandPalette;
   typography: Typography;
 }) => {
-  const { fontVariants, fontFaces, script } = typography;
+  let { fontVariants, fontFaces, script } = typography;
   const {
     BRAND_BACKGROUND,
     BRAND_LOGO,
@@ -257,12 +258,16 @@ const withThemeProvider = ({
     },
   };
 
-  const ThemeProvider: React.FC<Props> = ({ children }) => (
-    <EmotionThemeProvider theme={theme}>
-      <Global styles={fontFaces} />
-      {children}
-    </EmotionThemeProvider>
-  );
+  const ThemeProvider: React.FC<Props> = ({ children }) => {
+    const { isAmp } = useContext(RequestContext);
+    if (!isAmp) fontFaces = [];
+    return (
+      <EmotionThemeProvider theme={theme}>
+        {children}
+        <Global styles={fontFaces} />
+      </EmotionThemeProvider>
+    );
+  };
 
   return ThemeProvider;
 };

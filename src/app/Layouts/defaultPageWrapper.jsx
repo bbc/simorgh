@@ -115,7 +115,6 @@ const PageWrapper = ({ children, pageData, status }) => {
         ]}
       />
       <ThemeProvider service={service} variant={variant}>
-        <GlobalStyles />
         <ServiceWorkerContainer />
         <ManifestContainer />
         <WebVitals pageType={pageType} />
@@ -127,6 +126,7 @@ const PageWrapper = ({ children, pageData, status }) => {
           <Content>{children}</Content>
           <FooterContainer />
         </Wrapper>
+        <GlobalStyles />
       </ThemeProvider>
     </>
   );

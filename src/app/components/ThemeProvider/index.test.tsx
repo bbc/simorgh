@@ -221,7 +221,7 @@ describe('ThemeProvider', () => {
   it('should provide fonts', async () => {
     await act(async () => {
       render(
-        <ThemeProvider service="turkce" variant="default">
+        <ThemeProvider service="mundo" variant="default">
           <div />
         </ThemeProvider>,
       );

@@ -1,5 +1,11 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import latinWithDiacriticsScript from '../fontScripts/latinWithDiacritics';
+import {
+  REITH_SANS_BOLD,
+  REITH_SANS_REGULAR,
+  REITH_SERIF_MEDIUM,
+  REITH_SERIF_LIGHT,
+} from '../fontFaces';
 import withThemeProvider from '../withThemeProvider';
 import reithVariants from '../fontVariants/reith';
 
@@ -13,7 +19,12 @@ const mundoTheme = {
   },
   typography: {
     script: latinWithDiacriticsScript,
-    fontFaces: [],
+    fontFaces: [
+      REITH_SANS_BOLD,
+      REITH_SANS_REGULAR,
+      REITH_SERIF_MEDIUM,
+      REITH_SERIF_LIGHT,
+    ],
     fontVariants: reithVariants,
   },
 };
