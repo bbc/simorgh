@@ -122,7 +122,6 @@ import { BrandPalette, Typography } from '../../models/types/theming';
 
 type Props = {
   children: React.ReactNode;
-  isAmp: boolean;
 };
 
 const withThemeProvider = ({
