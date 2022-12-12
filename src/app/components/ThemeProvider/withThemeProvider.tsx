@@ -263,9 +263,7 @@ const withThemeProvider = ({
     return (
       <EmotionThemeProvider theme={theme}>
         {children}
-        {isAmp && (
-          <Global styles={fontFaces} />
-        )}
+        {isAmp && <Global styles={fontFaces} />}
       </EmotionThemeProvider>
     );
   };
