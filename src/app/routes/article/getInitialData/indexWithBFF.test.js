@@ -1,23 +1,33 @@
 import fetchMock from 'fetch-mock';
-import articleJson from '#data/test/news/articles/cwl08rd38l6o.json';
-import secondaryColumnJson from '#data/test/secondaryColumn/index.json';
+import * as fetchPageData from '../../utils/fetchPageData';
+import articleJson from '#data/pidgin/articles/cwl08rd38l6o.json';
+import secondaryColumnJson from '#data/pidgin/secondaryColumn/index.json';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import loggerMock from '#testHelpers/loggerMock';
 import { DATA_FETCH_ERROR_SECONDARY_COLUMN } from '#lib/logger.const';
 
 import getInitialData from '.';
 
+jest.mock('../../utils/fetchPageData');
+
+const agent = { ca: 'ca', key: 'key' };
+const getAgent = jest.fn(() => agent);
+
 describe('articles - getInitialData', () => {
-  afterEach(() => fetchMock.reset());
+  beforeEach(() => {
+    fetchPageData.default.mockImplementation(() => Promise.resolve({
+      status: 200,
+      json: articleJson
+    }));
+  });
+
+  afterEach(() => jest.resetAllMocks());
 
   it('should return essential data for a page to render', async () => {
-    fetchMock.mock(
-      'http://localhost/test/articles/mock-article-path.json',
-      articleJson,
-    );
     const { pageData } = await getInitialData({
-      path: '/test/articles/mock-article-path',
-      service: 'test',
+      path: '/pidgin/articles/cwl08rd38l6o',
+      getAgent,
+      service: 'pidgin',
       pageType: ARTICLE_PAGE,
     });
 
@@ -30,47 +40,42 @@ describe('articles - getInitialData', () => {
   });
 
   it('should merge in secondary column data when available', async () => {
-    fetchMock.mock(
-      'http://localhost/test/articles/mock-article-path.json',
-      articleJson,
-    );
-    fetchMock.mock(
-      'http://localhost/test/sty-secondary-column.json',
-      secondaryColumnJson,
-    );
-
     const { pageData } = await getInitialData({
-      path: '/test/articles/mock-article-path',
-      service: 'test',
+      path: '/pidgin/articles/cwl08rd38l6o',
+      getAgent,
+      service: 'pidgin',
       pageType: ARTICLE_PAGE,
     });
 
-    expect(pageData.metadata.id).toEqual(articleJson.metadata.id);
-    expect(pageData.secondaryColumn).toEqual(secondaryColumnJson);
+    expect(pageData.metadata.id).toEqual(articleJson.data.article.metadata.id);
+    expect(pageData.secondaryColumn).toEqual(articleJson.data.secondaryData);
   });
 
   it('should handle secondary column data fetch errors', async () => {
-    fetchMock.mock(
-      'http://localhost/test/articles/mock-article-path.json',
-      articleJson,
-    );
-    fetchMock.mock('http://localhost/test/sty-secondary-column.json', 500);
+    const noSecondArticle = Object.assign({}, articleJson);
+    delete noSecondArticle.data.secondaryData;
+
+    fetchPageData.default.mockImplementation(() => Promise.resolve({
+      status: 200,
+      json: noSecondArticle
+    }));
 
     const { pageData } = await getInitialData({
-      path: '/test/articles/mock-article-path',
-      service: 'test',
+      path: '/pidgin/articles/cwl08rd38l6o',
+      getAgent,
+      service: 'pidgin',
       pageType: ARTICLE_PAGE,
     });
 
     // When the secondary column fetch fails, pageData should be as expected
-    expect(pageData.metadata.id).toEqual(articleJson.metadata.id);
+    expect(pageData.metadata.id).toEqual(articleJson.data.article.metadata.id);
 
     // But we set secondaryColumn to null, and log an error
     expect(pageData.secondaryColumn).toBe(null);
     expect(loggerMock.error).toHaveBeenCalledWith(
       DATA_FETCH_ERROR_SECONDARY_COLUMN,
       expect.objectContaining({
-        service: 'test',
+        service: 'pidgin',
       }),
     );
   });
