@@ -4,7 +4,10 @@ import pipe from 'ramda/src/pipe';
 import Url from 'url-parse';
 import nodeLogger from '../../../lib/logger.node';
 import { getUrlPath } from '../../../lib/utilities/urlParser';
-import { BFF_FETCH_ERROR, DATA_FETCH_ERROR_SECONDARY_COLUMN } from '../../../lib/logger.const';
+import {
+  BFF_FETCH_ERROR,
+  DATA_FETCH_ERROR_SECONDARY_COLUMN,
+} from '../../../lib/logger.const';
 import fetchPageData from '../../utils/fetchPageData';
 import { Services, Variants } from '../../../models/types/global';
 
@@ -90,9 +93,9 @@ export default async ({
       data: { article, secondaryData },
     } = json;
 
-    if(!secondaryData) {
+    if (!secondaryData) {
       logger.error(DATA_FETCH_ERROR_SECONDARY_COLUMN, {
-        service
+        service,
       });
     }
 
