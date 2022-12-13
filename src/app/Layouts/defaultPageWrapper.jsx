@@ -65,37 +65,37 @@ const PageWrapper = ({ children, pageData, status }) => {
 						}).catch(reject)
 					  })
                 };
+                const createStyleAndAttach = (styleInnerText) => {
+                    const head = document.head || document.getElementsByTagName('head')[0];
+					const fontStylePlaceholder = document.createElement('style');
+                	fontStylePlaceholder.id = 'text/css';
+					fontStylePlaceholder.innerHTML = styleInnerText;
+					head.appendChild(fontStylePlaceholder);
+                };
                 const retrieveAndStoreFont = (font, storageKey, shouldAttachStyle) => {
                 	const fontLocation = font.src ? font.src : 'https://gel.files.bbci.co.uk/'+ font.version + (font.subsets ? '/subsets' : '') + '/' + font.name + '.woff2';
-                    window.setTimeout(() => {
+                    window.addEventListener("load", (e) => {
                     getFont(fontLocation).then((fontContents) => {
                     	const forStorage = { base64Contents: fontContents, fontFamily: font.fontFamily, fontWeight: font.fontWeight, fontVersion: font.version };
                     	localStorage.setItem(storageKey, JSON.stringify(forStorage));
                     	if (shouldAttachStyle) {
-							styleInnerText += '@font-face{font-family:: "' + font.fontFamily + '"; font-weight: ' + font.fontWeight + ';src:url("' + fontContents + '") format("woff2");font-display: swap;}';
-							fontStylePlaceholder.innerHTML = styleInnerText;
-							head.appendChild(fontStylePlaceholder);
+                    		const styleInnerText = '@font-face{font-family: "' + font.fontFamily + '"; font-weight: ' + font.fontWeight + ';src:url("' + fontContents + '") format("woff2");font-display: swap;}';
+                    		createStyleAndAttach(styleInnerText);
                 		}
                     });
-                    }, 0);
+                    });
                 };
                 fontsForStorage.forEach(font => {
                     const storageKey = 'font-' + font.name;
                     let fontContents = localStorage.getItem(storageKey);
-                    const head = document.head || document.getElementsByTagName('head')[0];
-                	const fontStylePlaceholder = document.createElement('style');
-                	fontStylePlaceholder.type = 'text/css';
-                	let styleInnerText = '';
 
-            
                     if (!fontContents) {
                         retrieveAndStoreFont(font, storageKey, true);
                     }
                     else {
                     	const { base64Contents, fontFamily, fontWeight, fontVersion } = JSON.parse(fontContents);
-                    	styleInnerText += '@font-face{font-family: "' + fontFamily + '"; font-weight: ' + fontWeight + '; src:url("' + base64Contents + '") format("woff2");font-display: swap;}';
-                		fontStylePlaceholder.innerHTML = styleInnerText;
-                		head.appendChild(fontStylePlaceholder);
+                    	const styleInnerText = '@font-face{font-family: "' + fontFamily + '"; font-weight: ' + fontWeight + '; src:url("' + base64Contents + '") format("woff2");font-display: swap;}';
+                		createStyleAndAttach(styleInnerText);
                 		if (fontVersion !== font.version) {
                 			retrieveAndStoreFont(font, storageKey, false);
                 		}
