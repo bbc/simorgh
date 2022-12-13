@@ -54,7 +54,7 @@ export default async ({
     const env = getEnvironment(pathname);
     const isLocal = env === 'local';
 
-    const agent = await getAgent();
+    const agent = !isLocal ? await getAgent() : null;
     const id = getId(pathname);
 
     if (!id) throw handleError('Article ID is invalid', 500);
