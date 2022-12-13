@@ -224,7 +224,7 @@ it('should route to and render the onDemand TV Brand page', async () => {
 
 it('should route to and render an article page', async () => {
   const pathname = '/persian/articles/c4vlle3q337o';
- 
+
   fetchDataSpy.mockImplementation(() =>
     Promise.resolve({
       status: 200,
@@ -252,7 +252,7 @@ it('should route to and render an article page', async () => {
   expect(
     await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
   ).toBeInTheDocument();
-  
+
   fetchDataSpy.mockRestore();
 });
 
