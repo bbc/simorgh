@@ -1,9 +1,16 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import React, { Fragment, PropsWithChildren, useState } from 'react';
+import React, {
+  Fragment,
+  PropsWithChildren,
+  useState,
+  useContext,
+} from 'react';
 import { Global, jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import styles from './index.styles';
+import { RequestContext } from '../../contexts/RequestContext';
+import { FRONT_PAGE } from '../../routes/utils/pageTypes';
 
 interface Props {
   alt: string;
@@ -22,6 +29,10 @@ interface Props {
   sizes?: string;
   src: string;
   width?: number;
+}
+
+interface RequestContextType {
+  pageType?: string;
 }
 
 const DEFAULT_ASPECT_RATIO = [16, 9];
@@ -49,6 +60,7 @@ const Image = ({
   src,
   width,
 }: PropsWithChildren<Props>) => {
+  const requestContext: RequestContextType = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
   const showPlaceholder = placeholder && !isLoaded;
   const hasDimensions = width && height;
@@ -63,6 +75,16 @@ const Image = ({
   const hasFallback = srcSet && fallbackSrcSet;
   const ImageWrapper = hasFallback ? 'picture' : Fragment;
   const ampImgLayout = hasDimensions ? 'responsive' : 'fill';
+  const getImgSrcSet = () => {
+    if (!hasFallback) return srcSet;
+    if (requestContext.pageType !== FRONT_PAGE) return fallbackSrcSet;
+    return undefined;
+  };
+  const getImgSizes = () => {
+    if ((!hasFallback && srcSet) || requestContext.pageType !== FRONT_PAGE)
+      return sizes;
+    return undefined;
+  };
 
   return (
     <>
@@ -125,7 +147,7 @@ const Image = ({
           </>
         ) : (
           <ImageWrapper>
-            {hasFallback && (
+            {hasFallback && requestContext.pageType === FRONT_PAGE && (
               <>
                 <source srcSet={srcSet} type={mediaType} sizes={sizes} />
                 <source
@@ -138,8 +160,8 @@ const Image = ({
             <img
               onLoad={() => setIsLoaded(true)}
               src={src}
-              srcSet={!hasFallback ? srcSet : undefined}
-              sizes={!hasFallback && srcSet ? sizes : undefined}
+              srcSet={getImgSrcSet()}
+              sizes={getImgSizes()}
               alt={alt}
               loading={lazyLoad ? 'lazy' : undefined}
               width={width}
