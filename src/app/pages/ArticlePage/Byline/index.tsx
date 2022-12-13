@@ -9,7 +9,7 @@ import BylineCss from './index.styles';
 import { RightChevron, LeftChevron } from '../../../components/icons';
 import Text from '../../../components/Text';
 import Image from '../../../components/Image';
-import buildIChefURL from '../../../lib/utilities/ichefURL';
+import bylineExtractor from '../utilities/bylineExtractor';
 
 type Props = {
   blocks: any;
@@ -18,79 +18,20 @@ type Props = {
 const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
   const { translations, dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
-  const bylineBlocks = pathOr([], [0, 'model', 'blocks'], blocks);
 
-  const authorBlock = bylineBlocks.find((block: any) => block.type === 'name');
-  const jobRoleBlock = bylineBlocks.find((block: any) => block.type === 'role');
-  const twitterBlock = bylineBlocks.find((block: any) => block.type === 'link');
-  const locationBlock = bylineBlocks.find(
-    (block: any) => block.type === 'location',
-  );
-  const imagesBlock = bylineBlocks.find(
-    (block: any) => block.type === 'images',
-  );
+  const bylineValues = bylineExtractor(blocks);
 
-  const author = pathOr(
-    '',
-    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
-    authorBlock,
-  );
-  const jobRole = pathOr(
-    '',
-    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
-    jobRoleBlock,
-  );
-  const twitterText = pathOr(
-    '',
-    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
-    twitterBlock,
-  );
-  const twitterLink = pathOr(
-    '',
-    [
-      'model',
-      'blocks',
-      0,
-      'model',
-      'blocks',
-      0,
-      'model',
-      'blocks',
-      0,
-      'model',
-      'locator',
-    ],
-    twitterBlock,
-  );
-  const location = pathOr(
-    '',
-    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
-    locationBlock,
-  );
-  const locator = pathOr(
-    '',
-    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'locator'],
-    imagesBlock,
-  );
-  const originCode = pathOr(
-    '',
-    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'originCode'],
-    imagesBlock,
-  );
+  if (!bylineValues) return null;
 
-  let image = buildIChefURL({
-    originCode,
-    locator,
-    resolution: 160,
-    isPng: true,
-  });
-
-  if (!image.endsWith('.png')) image = '';
-
-  const contributorBlock = pathOr([], [0], blocks);
-  const authorTopicUrl = pathOr('', ['model', 'topicUrl'], contributorBlock);
-
-  if (!(author && jobRole)) return null;
+  const {
+    authorName,
+    jobRole,
+    twitterText,
+    twitterLink,
+    authorImage,
+    location,
+    authorTopicUrl,
+  } = bylineValues;
 
   const authorTranslated = pathOr('Author', ['byline', 'author'], translations);
   const articleInformationTranslated = pathOr(
@@ -115,7 +56,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
         {articleInformationTranslated}
       </VisuallyHiddenText>
       <ul css={BylineCss.bylineList} role="list">
-        {image && (
+        {authorImage && (
           <li
             css={[
               BylineCss.ImageWrapper,
@@ -124,7 +65,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
           >
             <Image
               css={BylineCss.imageSrc}
-              src={image}
+              src={authorImage}
               alt=""
               placeholder={false}
               aspectRatio={[1, 1]}
@@ -145,7 +86,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
                   fontVariant="sansBold"
                   css={BylineCss.author}
                 >
-                  {author}
+                  {authorName}
                 </Text>
                 {isRtl ? (
                   <LeftChevron css={BylineCss.authorChevron} />
@@ -162,7 +103,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
                 size="bodyCopy"
                 fontVariant="sansBold"
               >
-                {author}
+                {authorName}
               </Text>
             </span>
           )}

@@ -25,7 +25,7 @@ const RelatedContentItemFixture = ({ fixtureData, service = 'mundo' }) => (
 
 describe('Optimo Related Content Promo Item', () => {
   it('should render Related Content when given appropriate data', () => {
-    render(<RelatedContentItemFixture fixtureData={RelatedContentData} />);
+    render(<RelatedContentItemFixture fixtureData={RelatedContentData[0]} />);
 
     const altText = screen.getByAltText('Keyframe #2');
     const heading = screen.getByText(
