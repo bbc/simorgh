@@ -68,7 +68,6 @@ const PageWrapper = ({ children, pageData, status }) => {
                 const createStyleAndAttach = (styleInnerText) => {
                     const head = document.head || document.getElementsByTagName('head')[0];
 					const fontStylePlaceholder = document.createElement('style');
-                	fontStylePlaceholder.id = 'text/css';
 					fontStylePlaceholder.innerHTML = styleInnerText;
 					head.appendChild(fontStylePlaceholder);
                 };
