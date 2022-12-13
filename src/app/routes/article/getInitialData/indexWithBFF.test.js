@@ -52,7 +52,7 @@ describe('articles - getInitialData', () => {
   });
 
   it('should handle secondary column data fetch errors', async () => {
-    const noSecondArticle = Object.assign({}, articleJson);
+    const noSecondArticle = { ...articleJson };
     delete noSecondArticle.data.secondaryData;
 
     fetchPageData.default.mockImplementation(() =>
