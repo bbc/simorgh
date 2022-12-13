@@ -206,14 +206,13 @@ export default (service: string) => {
       return [NOTO_SERIF_BENGALI_REGULAR, NOTO_SERIF_BENGALI_BOLD];
     case 'tamil':
       return [NOTO_SANS_TAMIL_REGULAR, NOTO_SANS_TAMIL_BOLD];
-    case 'needswoff2':
-      return [
-        MALLANNA_REGULAR,
-        NOTO_SANS_ETHIOPIC_REGULAR,
-        NOTO_SANS_ETHIOPIC_BOLD,
-        PADAUK_REGULAR,
-        PADAUK_BOLD,
-      ];
+    case 'telugu':
+      return [MALLANNA_REGULAR];
+    case 'amharic':
+    case 'tigrinya':
+      return [NOTO_SANS_ETHIOPIC_REGULAR, NOTO_SANS_ETHIOPIC_BOLD];
+    case 'burmese':
+      return [PADAUK_REGULAR, PADAUK_BOLD];
     default:
       return [];
   }
