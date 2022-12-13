@@ -1,10 +1,8 @@
-import fetchMock from 'fetch-mock';
-import * as fetchPageData from '../../utils/fetchPageData';
 import articleJson from '#data/pidgin/articles/cwl08rd38l6o.json';
-import secondaryColumnJson from '#data/pidgin/secondaryColumn/index.json';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import loggerMock from '#testHelpers/loggerMock';
 import { DATA_FETCH_ERROR_SECONDARY_COLUMN } from '#lib/logger.const';
+import * as fetchPageData from '../../utils/fetchPageData';
 
 import getInitialData from '.';
 
@@ -15,10 +13,12 @@ const getAgent = jest.fn(() => agent);
 
 describe('articles - getInitialData', () => {
   beforeEach(() => {
-    fetchPageData.default.mockImplementation(() => Promise.resolve({
-      status: 200,
-      json: articleJson
-    }));
+    fetchPageData.default.mockImplementation(() =>
+      Promise.resolve({
+        status: 200,
+        json: articleJson,
+      }),
+    );
   });
 
   afterEach(() => jest.resetAllMocks());
@@ -55,10 +55,12 @@ describe('articles - getInitialData', () => {
     const noSecondArticle = Object.assign({}, articleJson);
     delete noSecondArticle.data.secondaryData;
 
-    fetchPageData.default.mockImplementation(() => Promise.resolve({
-      status: 200,
-      json: noSecondArticle
-    }));
+    fetchPageData.default.mockImplementation(() =>
+      Promise.resolve({
+        status: 200,
+        json: noSecondArticle,
+      }),
+    );
 
     const { pageData } = await getInitialData({
       path: '/pidgin/articles/cwl08rd38l6o',
