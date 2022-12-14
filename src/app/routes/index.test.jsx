@@ -550,13 +550,17 @@ it('should route to and render a 404 error page', async () => {
 
 it('should render a 404 error page if a data fetch responds with a 404', async () => {
   const pathname = '/pidgin/articles/cwl08rd38p6o';
-  fetchMock.mock(`http://localhost${pathname}.json`, 404);
+  const bffFetchSpy = jest.spyOn(fetchPageData, 'default');
+
+  bffFetchSpy.mockRejectedValue({ message: 'Not found', status: 404 });
 
   const { pageType, getInitialData } = getMatchingRoute(pathname);
   const { status, error } = await getInitialData({
     path: pathname,
-    pageType,
+    service: 'pidgin',
+    getAgent,
   });
+
   await renderRouter({
     pathname,
     pageType,
