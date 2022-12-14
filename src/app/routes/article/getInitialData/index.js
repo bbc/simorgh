@@ -118,6 +118,7 @@ export default async ({ getAgent, path, pageType, service, variant }) => {
     'turkce',
     'ukrainian',
     'urdu',
+    'ukchina',
     'uzbek',
     'vietnamese',
     'yoruba',
