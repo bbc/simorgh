@@ -477,7 +477,164 @@
               },
               "position": [8]
             },
-            { "id": "5ad70028", "type": "mpu", "model": {}, "position": [9] }
+            { "id": "5ad70028", "type": "mpu", "model": {}, "position": [9] },
+            {
+              "id": "4c7079fb",
+              "type": "relatedContent",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "7cde642e",
+                    "type": "title",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "7994857c",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "f0b55916",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "This is my title",
+                                  "blocks": [
+                                    {
+                                      "id": "2843a9b2",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "This is my title",
+                                        "attributes": []
+                                      },
+                                      "position": [10, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [10, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [10, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [10, 1]
+                  },
+                  {
+                    "id": "8b89f1c8",
+                    "type": "link",
+                    "model": {
+                      "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com",
+                      "blocks": [
+                        {
+                          "id": "1de6ecb5",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "7be16e23",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "b9c8779e",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "769f0688",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Dog",
+                                              "blocks": [
+                                                {
+                                                  "id": "b9b7ce0c",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Dog",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    10, 2, 1, 1, 1, 1, 1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [10, 2, 1, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [10, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [10, 2, 1, 1]
+                              },
+                              {
+                                "id": "28f6cb3c",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1200,
+                                  "height": 602,
+                                  "locator": "b498/test/67b83de0-7284-11ec-9534-9f1d59fb8b32.jpg",
+                                  "imageType": "background",
+                                  "originCode": "cpsdevpb",
+                                  "copyrightHolder": "Getty Images"
+                                },
+                                "position": [10, 2, 1, 2]
+                              }
+                            ]
+                          },
+                          "position": [10, 2, 1]
+                        },
+                        {
+                          "id": "0754ebb6",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "f340b46a",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "This is a Dog",
+                                  "blocks": [
+                                    {
+                                      "id": "2647b473",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "This is a Dog",
+                                        "locator": "https://www.bbc.com",
+                                        "blocks": [
+                                          {
+                                            "id": "635a2ba2",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "This is a Dog",
+                                              "attributes": []
+                                            },
+                                            "position": [10, 2, 2, 1, 1, 1]
+                                          }
+                                        ],
+                                        "isExternal": false
+                                      },
+                                      "position": [10, 2, 2, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [10, 2, 2, 1]
+                              }
+                            ]
+                          },
+                          "position": [10, 2, 2]
+                        }
+                      ]
+                    },
+                    "position": [10, 2]
+                  }
+                ]
+              },
+              "position": [10]
+            }
           ]
         }
       },
