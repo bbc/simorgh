@@ -4,10 +4,7 @@ import pipe from 'ramda/src/pipe';
 import Url from 'url-parse';
 import nodeLogger from '../../../lib/logger.node';
 import { getUrlPath } from '../../../lib/utilities/urlParser';
-import {
-  BFF_FETCH_ERROR,
-  DATA_FETCH_ERROR_SECONDARY_COLUMN,
-} from '../../../lib/logger.const';
+import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 import fetchPageData from '../../utils/fetchPageData';
 import { Services, Variants } from '../../../models/types/global';
 
@@ -44,7 +41,7 @@ type Props = {
   getAgent: () => Promise<Agent>;
   service: Services;
   path: string;
-  variant: Variants;
+  variant?: Variants;
 };
 
 export default async ({
@@ -93,17 +90,11 @@ export default async ({
       data: { article, secondaryData },
     } = json;
 
-    if (!secondaryData) {
-      logger.error(DATA_FETCH_ERROR_SECONDARY_COLUMN, {
-        service,
-      });
-    }
-
     return {
       status,
       pageData: {
         ...article,
-        secondaryColumn: secondaryData ?? null,
+        secondaryColumn: secondaryData,
       },
     };
   } catch ({ message, status }) {
