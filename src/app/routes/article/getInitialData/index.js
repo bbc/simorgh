@@ -85,6 +85,7 @@ export default async ({ getAgent, path, pageType, service, variant }) => {
     'amharic',
     'bengali',
     'burmese',
+    'cymrufyw',
     'gahuza',
     'gujarati',
     'hausa',
