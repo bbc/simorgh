@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   Global,
   ThemeProvider as EmotionThemeProvider,
   Theme,
 } from '@emotion/react';
+import { RequestContext } from '../../contexts/RequestContext';
 
 import {
   ARCHIVE_BLUE,
@@ -260,12 +261,15 @@ const withThemeProvider = ({
     brandSVG,
   };
 
-  const ThemeProvider: React.FC<Props> = ({ children }) => (
-    <EmotionThemeProvider theme={theme}>
-      <Global styles={fontFaces} />
-      {children}
-    </EmotionThemeProvider>
-  );
+  const ThemeProvider: React.FC<Props> = ({ children }) => {
+    const { isAmp } = useContext(RequestContext) as { isAmp: boolean };
+    return (
+      <EmotionThemeProvider theme={theme}>
+        {children}
+        {isAmp && <Global styles={fontFaces} />}
+      </EmotionThemeProvider>
+    );
+  };
 
   return ThemeProvider;
 };
