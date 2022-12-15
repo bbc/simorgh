@@ -25,7 +25,7 @@ const styles = {
     padding: '0.25rem',
   },
 
-  icon: (theme: Theme) => css({ height: '100%', width: `100%` }),
+  icon: { height: '100%', width: `100%` },
 
   positive: (theme: Theme) =>
     css({ background: '#0A7B0A', color: `${theme.palette.WHITE}` }),

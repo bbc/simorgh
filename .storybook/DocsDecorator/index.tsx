@@ -4,7 +4,6 @@ import path from 'ramda/src/path';
 import ThemeProvider from '../../src/app/components/ThemeProvider';
 import HealthFactors from './HealthFactors';
 import HealthFactorsMetadata from './types';
-import { string } from 'prop-types';
 
 const DocsDecorator = ({
   context,
@@ -27,7 +26,7 @@ const DocsDecorator = ({
   const lowerCaseKind = kind.toLowerCase();
   const exemptedFoldersList = ['docs', 'coding standards', 'new components'];
   const regexPatter = RegExp(
-    exemptedFoldersList.map(folderName => `^${folderName}\/.*`).join('|'),
+    exemptedFoldersList.map(folderName => `^${folderName}/.*`).join('|'),
     'g',
   );
   const exempt = regexPatter.test(lowerCaseKind);

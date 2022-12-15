@@ -26,7 +26,7 @@ const styles = {
       color: theme.palette.SHADOW,
     }),
 
-  icon: (theme: Theme) => css({ height: '100%', width: `100%` }),
+  icon: { height: '100%', width: `100%` },
 
   titleIcon: (theme: Theme) =>
     css({
