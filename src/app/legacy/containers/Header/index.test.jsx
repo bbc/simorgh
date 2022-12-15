@@ -1,6 +1,7 @@
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { UserContextProvider } from '#contexts/UserContext';
@@ -242,6 +243,52 @@ describe(`Header`, () => {
       expect(container.querySelector('#brandLink')).toBe(
         container.querySelector('a[href="/pidgin"]'),
       );
+    });
+
+    it('should remove the privacy banner when navigating from the reject button to content with tab', () => {
+      const { getByText, container } = render(
+        HeaderContainerWithContext({
+          pageType: INDEX_PAGE,
+          service: 'pidgin',
+          serviceContext: pidginServiceConfig,
+        }),
+      );
+
+      const pidginPrivacyReject =
+        pidginServiceConfig.default.translations.consentBanner.privacy.reject;
+
+      const reject = getByText(pidginPrivacyReject);
+      reject.focus();
+
+      expect(container).toContainElement(reject);
+      userEvent.tab();
+      expect(container).not.toContainElement(reject);
+    });
+
+    it.only('should remove the cookie banner when navigating from the reject button to content with tab', () => {
+      const { getByText, container } = render(
+        HeaderContainerWithContext({
+          pageType: INDEX_PAGE,
+          service: 'pidgin',
+          serviceContext: pidginServiceConfig,
+        }),
+      );
+
+      const pidginPrivacyAccept =
+        pidginServiceConfig.default.translations.consentBanner.privacy.accept;
+      const pidginCookieReject =
+        pidginServiceConfig.default.translations.consentBanner.cookie.canonical
+          .reject;
+
+      const accept = getByText(pidginPrivacyAccept);
+      accept.click();
+
+      const reject = getByText(pidginCookieReject);
+      reject.focus();
+
+      expect(container).toContainElement(reject);
+      userEvent.tab();
+      expect(container).not.toContainElement(reject);
     });
   });
 });
