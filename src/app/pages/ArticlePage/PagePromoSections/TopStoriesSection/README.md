@@ -14,29 +14,6 @@ A component constructing the Top Stories section for Article pages. The sections
 
 ## Example ltr/rtl
 
-<Source
-  language="jsx"
-  dark
-  type="code"
-  code={dedent`
-    const contentExample = [
-                    {
-                     headlines: {headline: "headline1"},
-                     timestamp: 123456789,
-                     ...
-                    },
-                    {
-                     headlines: {headline: "headline2"},
-                     timestamp: 123456789,
-                     ...
-                    },
-                    {
-                     headlines: {headline: "headline3"},
-                     timestamp: 123456789,
-                     ...
-                    },
-                    ...
-                ]
-
+```tsx
 <TopStoriesSection content={contentExample} />
-`} />
+```
