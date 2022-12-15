@@ -4,7 +4,7 @@ const styles = {
   componentHealthContainer: (theme: Theme) =>
     css({
       margin: `${theme.spacings.FULL}rem 0`,
-      border: `1px solid ${theme.palette.SHADOW}`,
+      border: `0.0625rem solid ${theme.palette.SHADOW}`,
     }),
 
   titleContainer: {
