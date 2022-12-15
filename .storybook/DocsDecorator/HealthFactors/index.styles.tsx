@@ -18,6 +18,7 @@ const styles = {
       flexWrap: 'wrap',
       backgroundColor: theme.palette.GREY_2,
       padding: `1.25rem ${theme.spacings.DOUBLE}rem`,
+      borderBottom: `0.0625rem solid transparent`,
     }),
 
   date: (theme: Theme) =>
