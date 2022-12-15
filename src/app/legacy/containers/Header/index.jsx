@@ -17,9 +17,11 @@ const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
 
   const handleBannerBlur = event => {
     const isRejectButton =
+      event.target.getAttribute('data-terms-banner') === 'reject' ||
       event.target.getAttribute('data-cookie-banner') === 'reject';
     const hasMovedToContent =
-      event.relatedTarget.getAttribute('data-cookie-banner') !== 'accept' &&
+      (event.relatedTarget.getAttribute('data-terms-banner') !== 'accept' ||
+        event.relatedTarget.getAttribute('data-cookie-banner') !== 'accept') &&
       event.relatedTarget !== 'null';
 
     if (isRejectButton && hasMovedToContent) {
