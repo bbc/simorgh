@@ -144,7 +144,7 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
       {hasMultipleLinks ? (
         <StyledList role="list">
           {links.map(({ linkText, linkUrl, linkType }) => (
-            <StyledListItem dir={dir} key={linkText}>
+            <StyledListItem dir={dir} key={`${linkText}${linkType}`}>
               <PodcastExternalLink
                 linkText={linkText}
                 linkUrl={linkUrl}
