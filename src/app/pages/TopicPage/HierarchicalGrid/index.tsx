@@ -65,6 +65,7 @@ const HiearchicalGrid = ({ promos, headingLevel }: Promos) => {
         const formattedDuration = formatDuration({ duration, separator });
         const durationString = `${durationTranslation}, ${formattedDuration}`;
 
+        const useLargeImages = i === 0 && promoItems.length >= 3;
         const showDuration =
           promo.duration && ['video', 'audio'].includes(promo.type);
         const isMedia = ['video', 'audio', 'photogallery'].includes(promo.type);
@@ -83,6 +84,7 @@ const HiearchicalGrid = ({ promos, headingLevel }: Promos) => {
           >
             <Promo>
               <Promo.Image
+                useLargeImages={useLargeImages}
                 src={promo.imageUrl || ''}
                 alt={promo.imageAlt}
                 loading="lazy"
