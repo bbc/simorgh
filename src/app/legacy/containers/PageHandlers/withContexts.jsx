@@ -3,7 +3,6 @@ import { bool, element, string, number, object } from 'prop-types';
 import path from 'ramda/src/path';
 import variantPropType from '#models/propTypes/variants';
 import { pageDataPropType } from '#models/propTypes/data';
-import mvtExperimentPropType from '#models/propTypes/mvtExperiment';
 
 // context providers
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -28,7 +27,6 @@ const WithContexts = Component => {
       timeOnServer,
       pageData,
       showAdsBasedOnLocation,
-      mvtExperiments,
     } = props;
 
     return (
@@ -50,7 +48,6 @@ const WithContexts = Component => {
             variant={variant}
             timeOnServer={timeOnServer}
             showAdsBasedOnLocation={showAdsBasedOnLocation}
-            mvtExperiments={mvtExperiments}
           >
             <EventTrackingContextProvider pageData={pageData}>
               <UserContextProvider>
@@ -78,7 +75,6 @@ const WithContexts = Component => {
     showAdsBasedOnLocation: bool,
     // eslint-disable-next-line react/forbid-prop-types
     toggles: object.isRequired,
-    mvtExperiments: mvtExperimentPropType,
   };
 
   WithContextsContainer.defaultProps = {
@@ -90,7 +86,6 @@ const WithContexts = Component => {
     variant: null,
     timeOnServer: null,
     showAdsBasedOnLocation: false,
-    mvtExperiments: null,
   };
 
   return WithContextsContainer;
