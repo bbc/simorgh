@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { string, node } from 'prop-types';
+import { string, node, boolean } from 'prop-types';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -21,16 +21,18 @@ const ChildWrapper = styled.div`
 const WEBP_ORIGIN_CODES = ['cpsdevpb', 'cpsprodpb'];
 
 const createSrcSet = (imageUrl, suffix = '') => {
-  const imageResolutions = [85, 120, 170, 232, 325, 450];
+  const imageResolutions = [85, 120, 170, 232, 325, 450, 660];
 
   return imageResolutions
     .map(res => `${imageUrl.replace(`{width}`, res)}${suffix} ${res}w`)
     .join(', ');
 };
 
-const createSizes = () => {
+const createSizes = useLargeImages => {
   // 4 columns of fixed width
-  const DESKTOP_SIZE = `(min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) 232px`;
+  const DESKTOP_SIZE = useLargeImages
+    ? `(min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) 660px`
+    : `(min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) 232px`;
 
   // 2 columns of 50% screen width - images are 100% of the column
   const TABLET_SIZE = `(min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) 50vw`;
@@ -41,7 +43,7 @@ const createSizes = () => {
 };
 
 const Image = props => {
-  const { children, src, ...rest } = props;
+  const { children, src, useLargeImages, ...rest } = props;
   const isWebPSupported = WEBP_ORIGIN_CODES.some(originCode =>
     src.includes(originCode),
   );
@@ -49,7 +51,7 @@ const Image = props => {
   const primaryMediaType = `image/${isWebPSupported ? 'webp' : 'jpeg'}`;
   const fallbackSrcSet = isWebPSupported ? createSrcSet(src) : undefined;
   const fallbackMediaType = isWebPSupported ? 'image/jpeg' : undefined;
-  const sizes = createSizes();
+  const sizes = createSizes(useLargeImages);
 
   return (
     <Wrapper>
@@ -71,10 +73,12 @@ const Image = props => {
 Image.propTypes = {
   alt: string.isRequired,
   src: string.isRequired,
+  useLargeImages: boolean,
   children: node,
 };
 
 Image.defaultProps = {
+  useLargeImages: false,
   children: null,
 };
 
