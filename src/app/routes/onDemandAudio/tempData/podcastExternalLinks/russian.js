@@ -8,12 +8,14 @@ const externalLinks = {
       },
       {
         linkText: 'Apple',
-        linkUrl: 'https://podcasts.apple.com/gb/podcast/%D1%80%D0%B0%D0%B4%D0%B8%D0%BE%D0%B0%D1%80%D1%85%D0%B8%D0%B2-%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B9-%D1%81%D0%BB%D1%83%D0%B6%D0%B1%D1%8B-%D0%B1%D0%B8-%D0%B1%D0%B8-%D1%81%D0%B8/id1248943501',
+        linkUrl:
+          'https://podcasts.apple.com/gb/podcast/%D1%80%D0%B0%D0%B4%D0%B8%D0%BE%D0%B0%D1%80%D1%85%D0%B8%D0%B2-%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B9-%D1%81%D0%BB%D1%83%D0%B6%D0%B1%D1%8B-%D0%B1%D0%B8-%D0%B1%D0%B8-%D1%81%D0%B8/id1248943501',
         linkType: 'apple',
       },
       {
         linkText: 'Castbox',
-        linkUrl: 'https://castbox.fm/channel/%D0%A0%D0%B0%D0%B4%D0%B8%D0%BE%D0%B0%D1%80%D1%85%D0%B8%D0%B2-%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B9-%D1%81%D0%BB%D1%83%D0%B6%D0%B1%D1%8B-%D0%91%D0%B8-%D0%B1%D0%B8-%D1%81%D0%B8-id933314?country=us',
+        linkUrl:
+          'https://castbox.fm/channel/%D0%A0%D0%B0%D0%B4%D0%B8%D0%BE%D0%B0%D1%80%D1%85%D0%B8%D0%B2-%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B9-%D1%81%D0%BB%D1%83%D0%B6%D0%B1%D1%8B-%D0%91%D0%B8-%D0%B1%D0%B8-%D1%81%D0%B8-id933314?country=us',
         linkType: 'castbox',
       },
     ],
@@ -25,7 +27,8 @@ const externalLinks = {
       },
       {
         linkText: 'Apple',
-        linkUrl: 'https://podcasts.apple.com/ru/podcast/%D1%87%D1%82%D0%BE-%D1%8D%D1%82%D0%BE-%D0%B1%D1%8B%D0%BB%D0%BE/id1460240829?l=en',
+        linkUrl:
+          'https://podcasts.apple.com/ru/podcast/%D1%87%D1%82%D0%BE-%D1%8D%D1%82%D0%BE-%D0%B1%D1%8B%D0%BB%D0%BE/id1460240829?l=en',
         linkType: 'apple',
       },
       {
@@ -47,7 +50,8 @@ const externalLinks = {
       },
       {
         linkText: 'Apple',
-        linkUrl: 'https://podcasts.apple.com/gb/podcast/%D0%B0%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9-%D0%BF%D0%B8%D1%80%D0%BE%D0%B3/id1529622434',
+        linkUrl:
+          'https://podcasts.apple.com/gb/podcast/%D0%B0%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9-%D0%BF%D0%B8%D1%80%D0%BE%D0%B3/id1529622434',
         linkType: 'apple',
       },
       {
@@ -56,7 +60,7 @@ const externalLinks = {
         linkType: 'yandex',
       },
       {
-        linkText: 'Castbox', 
+        linkText: 'Castbox',
         linkUrl: 'https://castbox.fm/vc/3283439',
         linkType: 'castbox',
       },
@@ -69,7 +73,8 @@ const externalLinks = {
       },
       {
         linkText: 'Apple',
-        linkUrl: 'https://podcasts.apple.com/us/podcast/%D1%80%D0%B0%D0%B7%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%D1%8B-%D1%81-%D0%B0%D1%80%D0%B1%D0%B8%D1%82%D1%80%D0%BE%D0%BC/id1459245691',
+        linkUrl:
+          'https://podcasts.apple.com/us/podcast/%D1%80%D0%B0%D0%B7%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%D1%8B-%D1%81-%D0%B0%D1%80%D0%B1%D0%B8%D1%82%D1%80%D0%BE%D0%BC/id1459245691',
         linkType: 'apple',
       },
     ],
@@ -81,7 +86,8 @@ const externalLinks = {
       },
       {
         linkText: 'Apple',
-        linkUrl: 'https://podcasts.apple.com/gb/podcast/%D0%B1%D0%B8-%D0%B1%D0%B8-%D1%81%D0%B8-doc/id1524273697',
+        linkUrl:
+          'https://podcasts.apple.com/gb/podcast/%D0%B1%D0%B8-%D0%B1%D0%B8-%D1%81%D0%B8-doc/id1524273697',
         linkType: 'apple',
       },
       {
@@ -91,14 +97,16 @@ const externalLinks = {
       },
       {
         linkText: 'Castbox',
-        linkUrl: 'https://castbox.fm/channel/id3130703?utm_campaign=i_share_ch&utm_medium=dlink&utm_source=i_share&country=us',
+        linkUrl:
+          'https://castbox.fm/channel/id3130703?utm_campaign=i_share_ch&utm_medium=dlink&utm_source=i_share&country=us',
         linkType: 'castbox',
       },
     ],
     p09nx6zm: [
       {
         linkText: 'Apple',
-        linkUrl: 'https://podcasts.apple.com/ru/podcast/%D0%BF%D0%B0%D1%81%D1%81%D0%B0%D0%B6%D0%B8%D1%80%D1%8B-%D0%B9%D0%BE%D0%BC%D0%B5%D0%B9-%D0%BC%D0%B0%D1%80%D1%83/id1575896140',
+        linkUrl:
+          'https://podcasts.apple.com/ru/podcast/%D0%BF%D0%B0%D1%81%D1%81%D0%B0%D0%B6%D0%B8%D1%80%D1%8B-%D0%B9%D0%BE%D0%BC%D0%B5%D0%B9-%D0%BC%D0%B0%D1%80%D1%83/id1575896140',
         linkType: 'apple',
       },
       {
@@ -108,7 +116,8 @@ const externalLinks = {
       },
       {
         linkText: 'Castbox',
-        linkUrl: 'https://castbox.fm/channel/%D0%9F%D0%B0%D1%81%D1%81%D0%B0%D0%B6%D0%B8%D1%80%D1%8B-%D0%99%D0%BE%D0%BC%D0%B5%D0%B9-%D0%9C%D0%B0%D1%80%D1%83-id4407848',
+        linkUrl:
+          'https://castbox.fm/channel/%D0%9F%D0%B0%D1%81%D1%81%D0%B0%D0%B6%D0%B8%D1%80%D1%8B-%D0%99%D0%BE%D0%BC%D0%B5%D0%B9-%D0%9C%D0%B0%D1%80%D1%83-id4407848',
         linkType: 'castbox',
       },
     ],
@@ -120,7 +129,8 @@ const externalLinks = {
       },
       {
         linkText: 'Apple',
-        linkUrl: 'https://podcasts.apple.com/ru/podcast/8-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D0%B9-%D0%B8%D0%B7-90-%D1%85/id1470221669',
+        linkUrl:
+          'https://podcasts.apple.com/ru/podcast/8-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D0%B9-%D0%B8%D0%B7-90-%D1%85/id1470221669',
         linkType: 'apple',
       },
       {
