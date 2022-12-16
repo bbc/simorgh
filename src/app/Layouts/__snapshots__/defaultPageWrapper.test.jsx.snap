@@ -974,9 +974,6 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 
 <div>
   <p>
-    I am the GlobalStyles component
-  </p>
-  <p>
     I am the ServiceWorker component
   </p>
   <div
@@ -1631,6 +1628,9 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
       </div>
     </footer>
   </div>
+  <p>
+    I am the GlobalStyles component
+  </p>
   ,
 </div>
 `;
