@@ -150,6 +150,7 @@ describe('cspHeader', () => {
       ].sort(),
       fontSrcExpectation: [
         ...bbcDomains,
+        'data:',
         'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/',
         'https://fonts.gstatic.com',
       ].sort(),
@@ -344,6 +345,7 @@ describe('cspHeader', () => {
       ].sort(),
       fontSrcExpectation: [
         ...bbcDomains,
+        'data:',
         'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/',
         'https://fonts.gstatic.com',
       ].sort(),
