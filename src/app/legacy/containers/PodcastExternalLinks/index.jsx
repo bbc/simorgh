@@ -123,7 +123,7 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
       {hasMultipleLinks ? (
         <StyledList role="list">
           {links.map(({ linkText, linkUrl }) => (
-            <StyledListItem dir={dir} key={linkText}>
+            <StyledListItem dir={dir} key={`${linkText}`}>
               <Link
                 // line 126 and id={`externalLinkId-${linkText}`} in line 133 are a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
                 aria-labelledby={`externalLinkId-${linkText}`}
