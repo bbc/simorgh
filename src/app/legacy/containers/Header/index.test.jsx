@@ -265,7 +265,7 @@ describe(`Header`, () => {
       expect(container).not.toContainElement(reject);
     });
 
-    it.only('should remove the cookie banner when navigating from the reject button to content with tab', () => {
+    it('should remove the cookie banner when navigating from the reject button to content with tab', () => {
       const { getByText, container } = render(
         HeaderContainerWithContext({
           pageType: INDEX_PAGE,
