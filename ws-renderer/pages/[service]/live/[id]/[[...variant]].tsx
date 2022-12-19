@@ -50,6 +50,15 @@ const LivePage = ({
     <main css={styles.wrapper}>
       <Heading level={1}>Test Next.JS Page</Heading>
       <Paragragh>
+        <pre css={styles.code}>
+          <ul>
+            <li>Service: {service}</li>
+            <li>Variant: {variant}</li>
+            <li>Path: {asPath}</li>
+          </ul>
+        </pre>
+      </Paragragh>
+      <Paragragh>
         <pre css={styles.code}>{JSON.stringify(pageData, null, 2)}</pre>
       </Paragragh>
     </main>
