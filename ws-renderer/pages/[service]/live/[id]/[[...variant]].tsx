@@ -2,11 +2,10 @@
 /** @jsx jsx */
 
 import { jsx } from '@emotion/react';
-import { GetStaticPaths, GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import { useRouter } from 'next/router';
 import Heading from '../../../../../src/app/components/Heading';
-import Paragragh from '../../../../../src/app/components/Paragraph';
 import applyBasicPageHandlers from '../../../../../src/app/pages/utils/applyBasicPageHandlers';
 import { Services, Variants } from '../../../../../src/app/models/types/global';
 import bffFetch from '../../../../../src/app/routes/article/getInitialData/bffFetch';
@@ -28,18 +27,22 @@ const getPageData = async (service: Services, id: string) => {
 };
 
 type ComponentProps = {
+  bbcOrigin?: string;
   pageData: {
     metadata: string;
   };
   service: Services;
+  showAdsBasedOnLocation: boolean;
   status: number;
   toggles: Record<string, boolean>;
   variant?: Variants;
 };
 
 const LivePage = ({
+  bbcOrigin,
   pageData,
   service,
+  showAdsBasedOnLocation,
   status,
   toggles,
   variant,
@@ -49,32 +52,30 @@ const LivePage = ({
   const Component = applyBasicPageHandlers({ addVariantHandling: true })(() => (
     <main css={styles.wrapper}>
       <Heading level={1}>Test Next.JS Page</Heading>
-      <Paragragh>
-        <pre css={styles.code}>
-          <ul>
-            <li>Service: {service}</li>
-            <li>Variant: {variant}</li>
-            <li>Path: {asPath}</li>
-          </ul>
-        </pre>
-      </Paragragh>
-      <Paragragh>
-        <pre css={styles.code}>{JSON.stringify(pageData, null, 2)}</pre>
-      </Paragragh>
+      <pre css={styles.code}>
+        <ul>
+          <li>Service: {service}</li>
+          <li>Variant: {!variant ? `${service} has no variant` : variant}</li>
+          <li>Path: {asPath}</li>
+        </ul>
+      </pre>
+      <pre css={styles.code}>{JSON.stringify(pageData, null, 2)}</pre>
     </main>
   ));
 
   return (
     <Component
-      status={status}
+      bbcOrigin={bbcOrigin}
+      isNextJs
+      isAmp={false}
       service={service}
-      variant={variant}
+      showAdsBasedOnLocation={showAdsBasedOnLocation}
+      status={status}
       pageData={pageData}
       pageType={LIVE_PAGE}
       pathname={asPath}
-      isNextJs
-      isAmp={false}
       toggles={toggles}
+      variant={variant}
     />
   );
 };
@@ -87,26 +88,20 @@ interface PageParams extends ParsedUrlQuery {
   id: string;
 }
 
-export const getStaticProps: GetStaticProps = async context => {
+export const getServerSideProps: GetServerSideProps = async context => {
   const { service, id, variant } = context.params as PageParams;
   const { data, toggles } = await getPageData(service, id);
 
   return {
     props: {
+      bbcOrigin: context.req.headers['bbc-origin'] || null,
       pageData: data?.pageData || null,
       service,
+      showAdsBasedOnLocation:
+        context.req.headers['bbc-adverts'] === 'true' || false,
       status: data.status,
       toggles,
       variant: variant?.[0] || null,
     },
-    revalidate: 60,
-  };
-};
-
-// TODO: revisit https://nextjs.org/docs/api-reference/data-fetching/get-static-paths
-export const getStaticPaths: GetStaticPaths = async () => {
-  return {
-    paths: [],
-    fallback: 'blocking',
   };
 };
