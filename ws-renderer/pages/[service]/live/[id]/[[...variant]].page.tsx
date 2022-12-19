@@ -7,11 +7,11 @@ import getAgent from '../../../../../src/server/utilities/getAgent';
 import getToggles from '../../../../../src/app/lib/utilities/getToggles/withCache';
 import { LIVE_PAGE } from '../../../../../src/app/routes/utils/pageTypes';
 
-import LivePage from './LivePage';
+import LivePageLayout from './LivePageLayout';
 
 export default applyBasicPageHandlers({
   addVariantHandling: true,
-})(LivePage);
+})(LivePageLayout);
 
 const getPageData = async (
   id: string,

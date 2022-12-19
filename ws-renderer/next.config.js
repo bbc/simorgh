@@ -12,6 +12,8 @@ module.exports = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  // Requires pages that are routed to have the .page extension, e.g. User.page.tsx
+  pageExtensions: ['page.tsx'],
   webpack: config => {
     config.resolve.alias = {
       ...config.resolve.alias,
