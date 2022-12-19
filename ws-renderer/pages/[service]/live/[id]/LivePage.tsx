@@ -1,12 +1,14 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 
+import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
-import { useRouter } from 'next/router';
 import Heading from '../../../../../src/app/components/Heading';
+import MetadataContainer from '../../../../../src/app/legacy/containers/Metadata';
 import { Services, Variants } from '../../../../../src/app/models/types/global';
 
 import styles from './styles';
+import { ServiceContext } from '../../../../../src/app/contexts/ServiceContext';
 
 type ComponentProps = {
   pageData: {
@@ -14,23 +16,41 @@ type ComponentProps = {
   };
   service: Services;
   variant?: Variants;
+  pathname: string;
+  showAdsBasedOnLocation: boolean;
 };
 
-const LivePage = ({ pageData, service, variant }: ComponentProps) => {
-  const { asPath } = useRouter();
+const LivePage = ({
+  pageData,
+  service,
+  variant,
+  pathname,
+  showAdsBasedOnLocation,
+}: ComponentProps) => {
+  const { lang } = useContext(ServiceContext);
 
   return (
-    <main css={styles.wrapper}>
-      <Heading level={1}>Test Next.JS Page</Heading>
-      <pre css={styles.code}>
-        <ul>
-          <li>Service: {service}</li>
-          <li>Variant: {!variant ? `${service} has no variant` : variant}</li>
-          <li>Path: {asPath}</li>
-        </ul>
-      </pre>
-      <pre css={styles.code}>{JSON.stringify(pageData, null, 2)}</pre>
-    </main>
+    <>
+      <MetadataContainer
+        title="Test Live Page"
+        lang={lang}
+        description="A test Live Page using Next.JS"
+        openGraphType="website"
+        hasAmpPage={false}
+      />
+      <main css={styles.wrapper}>
+        <Heading level={1}>Test Next.JS Page</Heading>
+        <pre css={styles.code}>
+          <ul>
+            <li>Service: {service}</li>
+            <li>Variant: {!variant ? `${service} has no variant` : variant}</li>
+            <li>Path: {pathname}</li>
+            <li>Show Ads: {showAdsBasedOnLocation ? `✅` : `⛔️`}</li>
+          </ul>
+        </pre>
+        <pre css={styles.code}>{JSON.stringify(pageData, null, 2)}</pre>
+      </main>
+    </>
   );
 };
 

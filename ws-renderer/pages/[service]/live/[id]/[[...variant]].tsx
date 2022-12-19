@@ -5,8 +5,9 @@ import { Services, Variants } from '../../../../../src/app/models/types/global';
 import bffFetch from '../../../../../src/app/routes/article/getInitialData/bffFetch';
 import getAgent from '../../../../../src/server/utilities/getAgent';
 import getToggles from '../../../../../src/app/lib/utilities/getToggles/withCache';
-import LivePage from './LivePage';
 import { LIVE_PAGE } from '../../../../../src/app/routes/utils/pageTypes';
+
+import LivePage from './LivePage';
 
 export default applyBasicPageHandlers({
   addVariantHandling: true,
@@ -31,19 +32,19 @@ interface PageParams extends ParsedUrlQuery {
 
 export const getServerSideProps: GetServerSideProps = async context => {
   const { service, id, variant } = context.params as PageParams;
+  const { headers: reqHeaders } = context.req;
   const { data, toggles } = await getPageData(service, id);
 
   return {
     props: {
-      bbcOrigin: context.req.headers['bbc-origin'] || null,
+      bbcOrigin: reqHeaders['bbc-origin'] || null,
       isAmp: false,
       isNextJs: true,
       pageData: data?.pageData || null,
       pageType: LIVE_PAGE,
       pathname: context.resolvedUrl,
       service,
-      showAdsBasedOnLocation:
-        context.req.headers['bbc-adverts'] === 'true' || false,
+      showAdsBasedOnLocation: reqHeaders['bbc-adverts'] === 'true' || false,
       status: data.status,
       toggles,
       variant: variant?.[0] || null,
