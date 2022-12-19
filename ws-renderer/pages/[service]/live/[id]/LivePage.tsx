@@ -5,6 +5,7 @@ import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import Heading from '../../../../../src/app/components/Heading';
 import MetadataContainer from '../../../../../src/app/legacy/containers/Metadata';
+import LinkedDataContainer from '../../../../../src/app/legacy/containers/LinkedData';
 import { Services, Variants } from '../../../../../src/app/models/types/global';
 import { ServiceContext } from '../../../../../src/app/contexts/ServiceContext';
 
@@ -38,6 +39,7 @@ const LivePage = ({
         openGraphType="website"
         hasAmpPage={false}
       />
+      <LinkedDataContainer type="CollectionPage" seoTitle="Test Live Page" />
       <main css={styles.wrapper}>
         <Heading level={1}>Test Next.JS Page</Heading>
         <pre css={styles.code}>

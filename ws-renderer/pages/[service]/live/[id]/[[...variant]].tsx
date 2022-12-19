@@ -43,6 +43,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
   return {
     props: {
       bbcOrigin: reqHeaders['bbc-origin'] || null,
+      id,
       isAmp: false,
       isNextJs: true,
       pageData: data?.pageData || null,
@@ -51,6 +52,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       service,
       showAdsBasedOnLocation: reqHeaders['bbc-adverts'] === 'true' || false,
       status: data.status,
+      timeOnServer: Date.now(), // TODO: check if needed?
       toggles,
       variant: variant?.[0] || null,
     },
