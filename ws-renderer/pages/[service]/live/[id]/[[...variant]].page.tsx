@@ -13,32 +13,46 @@ export default applyBasicPageHandlers({
   addVariantHandling: true,
 })(LivePageLayout);
 
-const getPageData = async (
-  id: string,
-  service: Services,
-  variant?: Variants,
-) => {
+interface PageDataParams extends ParsedUrlQuery {
+  id: string;
+  service: Services;
+  variant?: Variants;
+  renderer_env?: string;
+}
+
+const getPageData = async ({
+  id,
+  service,
+  variant,
+  rendererEnv,
+}: PageDataParams) => {
   const data = await bffFetch({
     getAgent,
-    path: `live/${id}?renderer_env=live`,
+    path: `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}}`,
     service,
     variant,
   });
+
   const toggles = await getToggles(service);
 
   return { data, toggles };
 };
 
-interface PageParams extends ParsedUrlQuery {
-  id: string;
-  service: Services;
-  variant?: Variants;
-}
-
 export const getServerSideProps: GetServerSideProps = async context => {
-  const { id, service, variant } = context.params as PageParams;
+  const {
+    id,
+    service,
+    variant,
+    renderer_env: rendererEnv,
+  } = context.query as PageDataParams;
+
   const { headers: reqHeaders } = context.req;
-  const { data, toggles } = await getPageData(id, service, variant);
+  const { data, toggles } = await getPageData({
+    id,
+    service,
+    variant,
+    rendererEnv,
+  });
 
   return {
     props: {
