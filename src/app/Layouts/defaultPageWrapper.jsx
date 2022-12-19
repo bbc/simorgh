@@ -32,9 +32,10 @@ const Content = styled.div`
   flex-grow: 1;
 `;
 
-const PageWrapper = ({ children, pageData, status, isNextJs }) => {
+const PageWrapper = ({ children, pageData, status }) => {
   const { service, variant } = useContext(ServiceContext);
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp, isNextJs } = useContext(RequestContext);
+
   const isDarkMode = pathOr(false, ['darkMode'], pageData);
   const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
   const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);
@@ -139,12 +140,10 @@ PageWrapper.propTypes = {
   children: node.isRequired,
   pageData: shape({ darkMode: bool }),
   status: number.isRequired,
-  isNextJs: bool,
 };
 
 PageWrapper.defaultProps = {
   pageData: {},
-  isNextJs: false,
 };
 
 export default PageWrapper;
