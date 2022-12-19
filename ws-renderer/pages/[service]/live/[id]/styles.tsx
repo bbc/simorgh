@@ -20,7 +20,7 @@ export default {
         margin: 0,
         padding: 0,
         listStyle: 'none',
-        ...fontVariants.sansBold,
+        ...fontVariants.serifBold,
       },
     }),
 };

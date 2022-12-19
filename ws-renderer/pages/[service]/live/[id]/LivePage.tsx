@@ -6,26 +6,26 @@ import { jsx } from '@emotion/react';
 import Heading from '../../../../../src/app/components/Heading';
 import MetadataContainer from '../../../../../src/app/legacy/containers/Metadata';
 import { Services, Variants } from '../../../../../src/app/models/types/global';
+import { ServiceContext } from '../../../../../src/app/contexts/ServiceContext';
 
 import styles from './styles';
-import { ServiceContext } from '../../../../../src/app/contexts/ServiceContext';
 
 type ComponentProps = {
   pageData: {
     metadata: string;
   };
-  service: Services;
-  variant?: Variants;
   pathname: string;
+  service: Services;
   showAdsBasedOnLocation: boolean;
+  variant?: Variants;
 };
 
 const LivePage = ({
   pageData,
-  service,
-  variant,
   pathname,
+  service,
   showAdsBasedOnLocation,
+  variant,
 }: ComponentProps) => {
   const { lang } = useContext(ServiceContext);
 

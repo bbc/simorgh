@@ -13,11 +13,16 @@ export default applyBasicPageHandlers({
   addVariantHandling: true,
 })(LivePage);
 
-const getPageData = async (service: Services, id: string) => {
+const getPageData = async (
+  id: string,
+  service: Services,
+  variant?: Variants,
+) => {
   const data = await bffFetch({
-    service,
-    path: `live/${id}?renderer_env=live`,
     getAgent,
+    path: `live/${id}?renderer_env=live`,
+    service,
+    variant,
   });
   const toggles = await getToggles(service);
 
@@ -25,15 +30,15 @@ const getPageData = async (service: Services, id: string) => {
 };
 
 interface PageParams extends ParsedUrlQuery {
+  id: string;
   service: Services;
   variant?: Variants;
-  id: string;
 }
 
 export const getServerSideProps: GetServerSideProps = async context => {
-  const { service, id, variant } = context.params as PageParams;
+  const { id, service, variant } = context.params as PageParams;
   const { headers: reqHeaders } = context.req;
-  const { data, toggles } = await getPageData(service, id);
+  const { data, toggles } = await getPageData(id, service, variant);
 
   return {
     props: {
