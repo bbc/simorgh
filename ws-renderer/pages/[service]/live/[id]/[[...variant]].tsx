@@ -1,19 +1,16 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-
-import { jsx } from '@emotion/react';
 import { GetServerSideProps } from 'next';
 import { ParsedUrlQuery } from 'querystring';
-import { useRouter } from 'next/router';
-import Heading from '../../../../../src/app/components/Heading';
 import applyBasicPageHandlers from '../../../../../src/app/pages/utils/applyBasicPageHandlers';
 import { Services, Variants } from '../../../../../src/app/models/types/global';
 import bffFetch from '../../../../../src/app/routes/article/getInitialData/bffFetch';
 import getAgent from '../../../../../src/server/utilities/getAgent';
-import { LIVE_PAGE } from '../../../../../src/app/routes/utils/pageTypes';
 import getToggles from '../../../../../src/app/lib/utilities/getToggles/withCache';
+import LivePage from './LivePage';
+import { LIVE_PAGE } from '../../../../../src/app/routes/utils/pageTypes';
 
-import styles from './styles';
+export default applyBasicPageHandlers({
+  addVariantHandling: true,
+})(LivePage);
 
 const getPageData = async (service: Services, id: string) => {
   const data = await bffFetch({
@@ -25,62 +22,6 @@ const getPageData = async (service: Services, id: string) => {
 
   return { data, toggles };
 };
-
-type ComponentProps = {
-  bbcOrigin?: string;
-  pageData: {
-    metadata: string;
-  };
-  service: Services;
-  showAdsBasedOnLocation: boolean;
-  status: number;
-  toggles: Record<string, boolean>;
-  variant?: Variants;
-};
-
-const LivePage = ({
-  bbcOrigin,
-  pageData,
-  service,
-  showAdsBasedOnLocation,
-  status,
-  toggles,
-  variant,
-}: ComponentProps) => {
-  const { asPath } = useRouter();
-
-  const Component = applyBasicPageHandlers({ addVariantHandling: true })(() => (
-    <main css={styles.wrapper}>
-      <Heading level={1}>Test Next.JS Page</Heading>
-      <pre css={styles.code}>
-        <ul>
-          <li>Service: {service}</li>
-          <li>Variant: {!variant ? `${service} has no variant` : variant}</li>
-          <li>Path: {asPath}</li>
-        </ul>
-      </pre>
-      <pre css={styles.code}>{JSON.stringify(pageData, null, 2)}</pre>
-    </main>
-  ));
-
-  return (
-    <Component
-      bbcOrigin={bbcOrigin}
-      isNextJs
-      isAmp={false}
-      service={service}
-      showAdsBasedOnLocation={showAdsBasedOnLocation}
-      status={status}
-      pageData={pageData}
-      pageType={LIVE_PAGE}
-      pathname={asPath}
-      toggles={toggles}
-      variant={variant}
-    />
-  );
-};
-
-export default LivePage;
 
 interface PageParams extends ParsedUrlQuery {
   service: Services;
@@ -95,7 +36,11 @@ export const getServerSideProps: GetServerSideProps = async context => {
   return {
     props: {
       bbcOrigin: context.req.headers['bbc-origin'] || null,
+      isAmp: false,
+      isNextJs: true,
       pageData: data?.pageData || null,
+      pageType: LIVE_PAGE,
+      pathname: context.resolvedUrl,
       service,
       showAdsBasedOnLocation:
         context.req.headers['bbc-adverts'] === 'true' || false,
