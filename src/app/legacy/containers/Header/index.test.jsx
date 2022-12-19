@@ -280,12 +280,15 @@ describe(`Header`, () => {
         pidginServiceConfig.default.translations.consentBanner.cookie.canonical
           .reject;
 
-      const accept = getByText(pidginPrivacyAccept);
-      accept.click();
+      const acceptPrivacy = getByText(pidginPrivacyAccept);
+      acceptPrivacy.click();
 
       const reject = getByText(pidginCookieReject);
-      reject.focus();
 
+      userEvent.tab();
+      userEvent.tab();
+      userEvent.tab();
+      userEvent.tab();
       expect(container).toContainElement(reject);
       userEvent.tab();
       expect(container).not.toContainElement(reject);
