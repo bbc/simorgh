@@ -5,23 +5,20 @@ import Document, {
   Main,
   NextScript,
   DocumentContext,
-  DocumentInitialProps,
 } from 'next/document';
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetData } from 'react-helmet';
 
-export default class AppDocument extends Document {
-  static async getInitialProps(
-    ctx: DocumentContext,
-  ): Promise<DocumentInitialProps> {
+type DocProps = { helmet: HelmetData };
+
+export default class AppDocument extends Document<DocProps> {
+  static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);
 
-    // @ts-ignore
     return { ...initialProps, helmet: Helmet.renderStatic() };
   }
 
   render() {
-    // @ts-ignore
     const { helmet } = this.props;
 
     const htmlAttrs = helmet.htmlAttributes.toComponent();
