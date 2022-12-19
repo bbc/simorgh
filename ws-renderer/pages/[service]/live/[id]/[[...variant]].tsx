@@ -6,12 +6,11 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import { useRouter } from 'next/router';
 import Heading from '../../../../../src/app/components/Heading';
+import Paragragh from '../../../../../src/app/components/Paragraph';
 import applyBasicPageHandlers from '../../../../../src/app/pages/utils/applyBasicPageHandlers';
-import withOptimizelyProvider from '../../../../../src/app/legacy/containers/PageHandlers/withOptimizelyProvider';
 import { Services, Variants } from '../../../../../src/app/models/types/global';
 import bffFetch from '../../../../../src/app/routes/article/getInitialData/bffFetch';
 import getAgent from '../../../../../src/server/utilities/getAgent';
-import ArticlePage from '../../../../../src/app/pages/ArticlePage/ArticlePage';
 import { LIVE_PAGE } from '../../../../../src/app/routes/utils/pageTypes';
 import getToggles from '../../../../../src/app/lib/utilities/getToggles/withCache';
 
@@ -23,8 +22,9 @@ const getPageData = async (service: Services, id: string) => {
     path: `live/${id}?renderer_env=live`,
     getAgent,
   });
+  const toggles = await getToggles(service);
 
-  return data;
+  return { data, toggles };
 };
 
 type ComponentProps = {
@@ -32,25 +32,26 @@ type ComponentProps = {
     metadata: string;
   };
   service: Services;
-  variant?: Variants;
   status: number;
   toggles: Record<string, boolean>;
+  variant?: Variants;
 };
 
 const LivePage = ({
   pageData,
-  status,
   service,
-  variant,
+  status,
   toggles,
+  variant,
 }: ComponentProps) => {
   const { asPath } = useRouter();
-  const OptimizelyArticle = withOptimizelyProvider(ArticlePage);
 
   const Component = applyBasicPageHandlers({ addVariantHandling: true })(() => (
     <main css={styles.wrapper}>
       <Heading level={1}>Test Next.JS Page</Heading>
-      <OptimizelyArticle pageData={pageData} />
+      <Paragragh>
+        <pre css={styles.code}>{JSON.stringify(pageData, null, 2)}</pre>
+      </Paragragh>
     </main>
   ));
 
@@ -73,21 +74,21 @@ export default LivePage;
 
 interface PageParams extends ParsedUrlQuery {
   service: Services;
+  variant?: Variants;
   id: string;
 }
 
 export const getStaticProps: GetStaticProps = async context => {
   const { service, id, variant } = context.params as PageParams;
-  const response = await getPageData(service, id);
-  const toggles = await getToggles(service);
+  const { data, toggles } = await getPageData(service, id);
 
   return {
     props: {
-      status: response.status,
-      pageData: response?.pageData || null,
+      pageData: data?.pageData || null,
       service,
-      variant: variant?.[0] || null,
+      status: data.status,
       toggles,
+      variant: variant?.[0] || null,
     },
     revalidate: 60,
   };
