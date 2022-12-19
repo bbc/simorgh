@@ -6,7 +6,7 @@ jest.mock('uuid', () => ({
 }));
 
 describe('addIdsToBlocks rule', () => {
-  it('should recursively add ids to blocks in article data', () => {
+  it('should recursively add ids to blocks in cps asset data', () => {
     const formattedAsset = {
       ...cpsAsset,
       content: {
