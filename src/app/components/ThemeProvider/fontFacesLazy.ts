@@ -101,7 +101,7 @@ const MALLANNA_REGULAR = {
   fontFamily: 'Mallanna',
   fontWeight: 400,
   fontStyle: 'normal',
-  src: `url('${MALLANA_FONTS_DIR}normal.woff') format('woff'), url('${MALLANA_FONTS_DIR}normal.eot') format('eot'), url('${MALLANA_FONTS_DIR}normal.ttf') format('ttf')`,
+  src: `${MALLANA_FONTS_DIR}normal.woff2`,
   fontDisplay: 'swap',
   baseUrl: MALLANA_FONTS_DIR,
 };
@@ -110,7 +110,7 @@ const NOTO_SANS_ETHIOPIC_REGULAR = {
   fontFamily: 'Noto Sans Ethiopic',
   fontWeight: 400,
   fontStyle: 'normal',
-  src: `url('${NOTO_SANS_ETHIOPIC_FONTS_DIR}normal.woff') format('woff'), url('${NOTO_SANS_ETHIOPIC_FONTS_DIR}normal.eot') format('eot'), url('${NOTO_SANS_ETHIOPIC_FONTS_DIR}normal.ttf') format('ttf')`,
+  src: `${NOTO_SANS_ETHIOPIC_FONTS_DIR}normal.woff2`,
   fontDisplay: 'swap',
   baseUrl: NOTO_SANS_ETHIOPIC_FONTS_DIR,
 };
@@ -119,7 +119,7 @@ const NOTO_SANS_ETHIOPIC_BOLD = {
   fontFamily: 'Noto Sans Ethiopic',
   fontWeight: 700,
   fontStyle: 'normal',
-  src: `url('${NOTO_SANS_ETHIOPIC_FONTS_DIR}bold.woff') format('woff'), url('${NOTO_SANS_ETHIOPIC_FONTS_DIR}bold.eot') format('eot'), url('${NOTO_SANS_ETHIOPIC_FONTS_DIR}bold.ttf') format('ttf')`,
+  src: `${NOTO_SANS_ETHIOPIC_FONTS_DIR}bold.woff2`,
   fontDisplay: 'swap',
   baseUrl: NOTO_SANS_ETHIOPIC_FONTS_DIR,
 };
@@ -128,7 +128,7 @@ const PADAUK_REGULAR = {
   fontFamily: 'Padauk',
   fontWeight: 400,
   fontStyle: 'normal',
-  src: `url('${PADAUK_FONTS_DIR}normal.woff') format('woff'), url('${PADAUK_FONTS_DIR}normal.eot') format('eot'), url('${PADAUK_FONTS_DIR}normal.ttf') format('ttf')`,
+  src: `${PADAUK_FONTS_DIR}normal.woff2`,
   fontDisplay: 'swap',
   baseUrl: PADAUK_FONTS_DIR,
 };
@@ -137,7 +137,7 @@ const PADAUK_BOLD = {
   fontFamily: 'Padauk',
   fontWeight: 700,
   fontStyle: 'normal',
-  src: `url('${PADAUK_FONTS_DIR}bold.woff') format('woff'), url('${PADAUK_FONTS_DIR}bold.eot') format('eot'), url('${PADAUK_FONTS_DIR}bold.ttf') format('ttf')`,
+  src: `${PADAUK_FONTS_DIR}bold.woff2`,
   fontDisplay: 'swap',
   baseUrl: PADAUK_FONTS_DIR,
 };
