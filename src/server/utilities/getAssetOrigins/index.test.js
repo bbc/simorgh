@@ -30,7 +30,6 @@ const analyticsOrigins = [
 ];
 
 const fontOrigins = [
-  'https://gel.files.bbci.co.uk',
   'https://ws-downloads.files.bbci.co.uk',
 ];
 

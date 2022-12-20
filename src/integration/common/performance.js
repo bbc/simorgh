@@ -10,7 +10,6 @@ export default ({ service = null, hasScriptFonts = false } = {}) => {
           'https://dataplane.rum.eu-west-1.amazonaws.com',
           ...(hasScriptFonts
             ? [
-                'https://gel.files.bbci.co.uk',
                 'https://ws-downloads.files.bbci.co.uk',
               ]
             : []),

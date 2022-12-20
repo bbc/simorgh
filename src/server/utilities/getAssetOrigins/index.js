@@ -18,7 +18,6 @@ const getAssetOrigins = service => {
   ];
 
   const FONTS_ORIGINS = [
-    'https://gel.files.bbci.co.uk',
     'https://ws-downloads.files.bbci.co.uk',
   ];
 
