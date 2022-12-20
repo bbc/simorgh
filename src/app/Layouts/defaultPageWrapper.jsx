@@ -13,7 +13,7 @@ import WebVitals from '#containers/WebVitals';
 import HeaderContainer from '#containers/Header';
 import FooterContainer from '#containers/Footer';
 import ManifestContainer from '#containers/Manifest';
-import ServiceWorkerContainer from '#containers/ServiceWorker';
+// import ServiceWorkerContainer from '#containers/ServiceWorker';
 import { ServiceContext } from '../contexts/ServiceContext';
 import { RequestContext } from '../contexts/RequestContext';
 import ThemeProvider from '../components/ThemeProvider';
