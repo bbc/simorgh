@@ -15,7 +15,6 @@ type ComponentProps = {
   pageData: {
     metadata: string;
   };
-  pathname: string;
   service: Services;
   showAdsBasedOnLocation: boolean;
   variant?: Variants;
@@ -23,7 +22,6 @@ type ComponentProps = {
 
 const LivePage = ({
   pageData,
-  pathname,
   service,
   showAdsBasedOnLocation,
   variant,
@@ -45,8 +43,7 @@ const LivePage = ({
         <pre css={styles.code}>
           <ul>
             <li>Service: {service}</li>
-            <li>Variant: {!variant ? `${service} has no variant` : variant}</li>
-            <li>Path: {pathname}</li>
+            {variant && <li>Variant: {variant}</li>}
             <li>Show Ads: {showAdsBasedOnLocation ? `✅` : `⛔️`}</li>
           </ul>
         </pre>
