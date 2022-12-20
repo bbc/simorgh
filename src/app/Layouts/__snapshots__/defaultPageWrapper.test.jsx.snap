@@ -973,9 +973,6 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 <div>
-  <p>
-    I am the ServiceWorker component
-  </p>
   <div
     class="emotion-0 emotion-1"
     id="main-wrapper"

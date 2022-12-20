@@ -114,7 +114,7 @@ const PageWrapper = ({ children, pageData, status }) => {
         ]}
       />
       <ThemeProvider service={service} variant={variant}>
-        <ServiceWorkerContainer />
+        {/* <ServiceWorkerContainer /> */}
         <ManifestContainer />
         <WebVitals pageType={pageType} />
         <Wrapper id="main-wrapper" darkMode={isDarkMode}>
