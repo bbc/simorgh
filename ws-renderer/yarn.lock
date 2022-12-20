@@ -2005,27 +2005,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"root-workspace-0b6124@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "root-workspace-0b6124@workspace:."
-  dependencies:
-    "@babel/core": ^7.20.2
-    "@babel/plugin-proposal-export-default-from": ^7.18.10
-    "@emotion/babel-plugin": 11.10.2
-    "@emotion/css": 11.10.0
-    "@emotion/server": 11.10.0
-    "@types/node": 18.11.9
-    "@types/react": 18.0.25
-    babel-plugin-transform-rename-import: 2.3.0
-    eslint: ^8.23.1
-    next: latest
-    typescript: 4.8.4
-  peerDependencies:
-    react: 17.0.2
-    react-dom: 17.0.2
-  languageName: unknown
-  linkType: soft
-
 "run-parallel@npm:^1.1.9":
   version: 1.2.0
   resolution: "run-parallel@npm:1.2.0"
@@ -2066,6 +2045,27 @@ __metadata:
   checksum: 1a2bcae50de99034fcd92ad4212d8e01eedf52c7ec7830eedcf886622804fe36884278f2be8be0ea5fde3fd1c23911643a4e0f726c8685b61871c8908af01222
   languageName: node
   linkType: hard
+
+"simorgh-nextjs@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "simorgh-nextjs@workspace:."
+  dependencies:
+    "@babel/core": ^7.20.2
+    "@babel/plugin-proposal-export-default-from": ^7.18.10
+    "@emotion/babel-plugin": 11.10.2
+    "@emotion/css": 11.10.0
+    "@emotion/server": 11.10.0
+    "@types/node": 18.11.9
+    "@types/react": 18.0.25
+    babel-plugin-transform-rename-import: 2.3.0
+    eslint: ^8.23.1
+    next: latest
+    typescript: 4.8.4
+  peerDependencies:
+    react: 17.0.2
+    react-dom: 17.0.2
+  languageName: unknown
+  linkType: soft
 
 "slash@npm:^3.0.0":
   version: 3.0.0
