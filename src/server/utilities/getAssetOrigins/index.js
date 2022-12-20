@@ -17,9 +17,7 @@ const getAssetOrigins = service => {
     'https://dataplane.rum.eu-west-1.amazonaws.com',
   ];
 
-  const FONTS_ORIGINS = [
-    'https://ws-downloads.files.bbci.co.uk',
-  ];
+  const FONTS_ORIGINS = ['https://ws-downloads.files.bbci.co.uk'];
 
   const assetOrigins = [
     ...COOKIE_ORIGINS,

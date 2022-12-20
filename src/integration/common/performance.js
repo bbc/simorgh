@@ -8,11 +8,7 @@ export default ({ service = null, hasScriptFonts = false } = {}) => {
           'https://ping.chartbeat.net',
           'https://client.rum.us-east-1.amazonaws.com',
           'https://dataplane.rum.eu-west-1.amazonaws.com',
-          ...(hasScriptFonts
-            ? [
-                'https://ws-downloads.files.bbci.co.uk',
-              ]
-            : []),
+          ...(hasScriptFonts ? ['https://ws-downloads.files.bbci.co.uk'] : []),
         ];
 
         resources.forEach(resource => {
