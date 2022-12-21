@@ -70,7 +70,7 @@ export default async ({
 
     const optHeaders = { 'ctx-service-env': env };
 
-    if (isLocal) {
+    if (isLocal && service !== 'kyrgyz') {
       fetchUrl = Url(
         `/${service}/articles/${id}${variant ? `/${variant}` : ''}`,
       );

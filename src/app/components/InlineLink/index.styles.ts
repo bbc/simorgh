@@ -1,4 +1,5 @@
 import { css, Theme } from '@emotion/react';
+import { none } from 'ramda';
 
 import pixelsToRem from '../../utilities/pixelsToRem';
 
@@ -15,6 +16,11 @@ const styles = {
       '&:focus, &:hover': {
         borderBottom: `${pixelsToRem(2)}rem solid ${palette.POSTBOX}`,
         color: palette.POSTBOX,
+      },
+      '&:focus-visible': {
+        outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
+        boxShadow: `${pixelsToRem(3)}rem solid ${palette.WHITE}`,
+        outlineOffset: `${pixelsToRem(3)}rem`,
       },
     }),
 };
