@@ -392,7 +392,9 @@ export const generateMediaSrc = ({ isAmp, isLive }) => {
 };
 
 export const generateWorkerSrc = ({ isAmp }) =>
-  isAmp ? ['blob:', ...bbcDomains] : ["'self'", ...bbcDomains];
+  isAmp
+    ? ['blob:', '*.bbc.co.uk', '*.bbc.com']
+    : ["'self'", '*.bbc.co.uk', '*.bbc.com'];
 
 export const generatePrefetchSrc = ({ isAmp, isLive }) => {
   if (!isLive && isAmp) return directives.prefetchSrc.ampNonLive.sort();
