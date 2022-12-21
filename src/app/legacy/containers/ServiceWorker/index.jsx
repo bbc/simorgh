@@ -38,7 +38,7 @@ const ServiceWorkerContainer = () => {
     }
   }, [envIsProduction, swPath, service]);
 
-  return isAmp && process.env.SIMORGH_BASE_URL.indexOf('http:') === -1 ? (
+  return isAmp && process.env.SIMORGH_APP_ENV !== 'local' ? (
     <>
       <AmpHead />
       <AmpServiceWorker canonicalLink={canonicalLink} swSrc={swSrc} />
