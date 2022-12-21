@@ -6,7 +6,9 @@ import {
   C_BLACK,
   C_WHITE,
 } from '#psammead/psammead-styles/src/colours';
-import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
+
+// Focus visible indicator to show around all focusable elements, links, buttons etc, across the WS sites.
+const focusIndicatorThickness = '0.1875rem';
 
 const InlineLink = styled.a`
   color: ${C_EBON};
@@ -25,9 +27,9 @@ const InlineLink = styled.a`
   }
 
   &:focus-visible {
-    outline: ${GEL_SPACING_HLF} solid ${C_BLACK};
-    box-shadow: ${GEL_SPACING_HLF} solid ${C_WHITE};
-    outline-offset: ${GEL_SPACING_HLF};
+    outline: ${focusIndicatorThickness} solid ${C_BLACK};
+    box-shadow: ${focusIndicatorThickness} solid ${C_WHITE};
+    outline-offset: ${focusIndicatorThickness};
   }
 `;
 
