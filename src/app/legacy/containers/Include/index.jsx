@@ -68,7 +68,6 @@ const IncludeContainer = props => {
 
 IncludeContainer.propTypes = {
   isAmpSupported: bool,
-  href: string.isRequired,
   type: string.isRequired,
   index: number,
 };
