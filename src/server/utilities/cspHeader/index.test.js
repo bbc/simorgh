@@ -117,7 +117,7 @@ describe('cspHeader', () => {
       ].sort(),
       styleSrcExpectation: [...bbcDomains, "'unsafe-inline'"].sort(),
       mediaSrcExpectation: [...bbcDomains].sort(),
-      workerSrcExpectation: ['blob:'],
+      workerSrcExpectation: ['blob:', '*.bbc.co.uk', '*.bbc.com'],
       prefetchSrcExpectation: ['https://*.googlesyndication.com'],
     },
     {
@@ -232,7 +232,7 @@ describe('cspHeader', () => {
         "'unsafe-inline'",
       ].sort(),
       mediaSrcExpectation: [...bbcDomains].sort(),
-      workerSrcExpectation: ["'self'"],
+      workerSrcExpectation: ["'self'", '*.bbc.co.uk', '*.bbc.com'],
       prefetchSrcExpectation: ['https://*.googlesyndication.com'],
     },
     {
@@ -311,7 +311,7 @@ describe('cspHeader', () => {
       ].sort(),
       styleSrcExpectation: [...bbcDomains, "'unsafe-inline'"].sort(),
       mediaSrcExpectation: [...bbcDomains].sort(),
-      workerSrcExpectation: ['blob:'],
+      workerSrcExpectation: ['blob:', '*.bbc.co.uk', '*.bbc.com'],
       prefetchSrcExpectation: ['https://*.googlesyndication.com'],
     },
     {
@@ -431,7 +431,7 @@ describe('cspHeader', () => {
         "'unsafe-inline'",
       ].sort(),
       mediaSrcExpectation: [...bbcDomains].sort(),
-      workerSrcExpectation: ["'self'"],
+      workerSrcExpectation: ["'self'", '*.bbc.co.uk', '*.bbc.com'],
       prefetchSrcExpectation: ['https://*.googlesyndication.com'].sort(),
     },
   ].forEach(
