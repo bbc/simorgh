@@ -1,5 +1,4 @@
 /* eslint-disable no-param-reassign */
-const { webpackDirAlias } = require('../dirAlias');
 const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezone-include/src');
 
 module.exports = {
@@ -15,11 +14,6 @@ module.exports = {
   // Requires pages that are routed to have the .page extension, e.g. User.page.tsx
   pageExtensions: ['page.tsx'],
   webpack: config => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      ...webpackDirAlias,
-    };
-
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
