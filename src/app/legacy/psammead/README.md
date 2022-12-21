@@ -50,8 +50,8 @@ You can do this in pure CSS:
     font-family: 'ReithSans';
     font-style: normal;
     font-weight: 400;
-    src: url('https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2')
-        format('woff2'), url('https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff')
+    src: url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSans_W_Rg.woff2')
+        format('woff2'), url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSans_W_Rg.woff')
         format('woff');
   }
   @font-face {
@@ -59,8 +59,8 @@ You can do this in pure CSS:
     font-family: 'ReithSerif';
     font-style: normal;
     font-weight: 600;
-    src: url('https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2')
-        format('woff2'), url('https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff')
+    src: url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSerif_W_Md.woff2')
+        format('woff2'), url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSerif_W_Md.woff')
         format('woff');
   }
 </style>
