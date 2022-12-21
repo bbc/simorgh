@@ -16,11 +16,31 @@ const styles = {
         borderBottom: `${pixelsToRem(2)}rem solid ${palette.POSTBOX}`,
         color: palette.POSTBOX,
       },
-      '&:focus-visible': {
-        outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
-        boxShadow: `${pixelsToRem(3)}rem solid ${palette.WHITE}`,
-        outlineOffset: `${pixelsToRem(3)}rem`,
+      // original solution - does not support on older browsers
+      // '&:focus-visible': {
+      //   outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
+      //   boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
+      //   outlineOffset: `${pixelsToRem(3)}rem`,
+      // },
+      // Solution that uses @support - may not be compatible with older browsers
+      '@supports selector(:focus-visible)': {
+        '&:focus-visible': {
+          outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
+          boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
+          outlineOffset: `${pixelsToRem(3)}rem`,
+        },
       },
+      // Test to see @supports without a property being declared.
+
+      // This will apply this style in any state if focus-visible is supported
+      // '@supports selector(:focus-visible)': {
+      //   backgroundColor: palette.POSTBOX,
+      // },
+
+      // This will apply this style in any state if focus-visible is not supported
+      // '@supports not selector(:focus-visible)': {
+      //   backgroundColor: palette.POSTBOX,
+      // },
     }),
 };
 

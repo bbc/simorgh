@@ -26,11 +26,32 @@ const InlineLink = styled.a`
     color: ${C_POSTBOX};
   }
 
-  &:focus-visible {
-    outline: ${focusIndicatorThickness} solid ${C_BLACK};
-    box-shadow: ${focusIndicatorThickness} solid ${C_WHITE};
-    outline-offset: ${focusIndicatorThickness};
+  // Original solution - not working with backwards compatibility
+  // &:focus-visible {
+  //   outline: ${focusIndicatorThickness} solid ${C_BLACK};
+  //   box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
+  //   outline-offset: ${focusIndicatorThickness};
+  // }
+
+  // Original solution - working with backwards compatibility using @supports
+  @supports selector(:focus-visible) {
+    &:focus-visible {
+      outline: ${focusIndicatorThickness} solid ${C_BLACK};
+      box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
+      outline-offset: ${focusIndicatorThickness};
+    }
   }
+
+  // Test to see @supports without a property being declared.
+
+  // This will apply this style in any state if focus-visible is supported
+  // @supports selector(:focus-visible) {
+  //   background-color: yellow;
+  // }
+  // This will apply this style in any state if focus-visible is not supported
+  // @supports not selector(:focus-visible) {
+  //   background-color: yellow;
+  // }
 `;
 
 export default InlineLink;
