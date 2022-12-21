@@ -11,6 +11,7 @@ interface Props {
   service: Services;
   variant?: Variants | null;
   pageLang?: string;
+  swPath?: string;
 }
 
 export const ServiceContextProvider = ({
@@ -18,7 +19,6 @@ export const ServiceContextProvider = ({
   service,
   variant,
   pageLang,
-  swPath,
 }: PropsWithChildren<Props>) => {
   const LoadableContextProvider = services[service];
 
