@@ -8,7 +8,6 @@ import DocumentComponent from './component';
 Helmet.canUseDOM = false;
 
 describe('Document Component', () => {
-  const assetOrigins = ['http://example.com'];
   const data = { test: 'data' };
   const legacyScripts = (
     <>
