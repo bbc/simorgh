@@ -1,11 +1,11 @@
 import { GetServerSideProps } from 'next';
 import { ParsedUrlQuery } from 'querystring';
-import applyBasicPageHandlers from '../../../../../src/app/pages/utils/applyBasicPageHandlers';
-import { Services, Variants } from '../../../../../src/app/models/types/global';
-import bffFetch from '../../../../../src/app/routes/topic/getInitialData';
-import getAgent from '../../../../../src/server/utilities/getAgent';
-import getToggles from '../../../../../src/app/lib/utilities/getToggles/withCache';
-import { LIVE_PAGE } from '../../../../../src/app/routes/utils/pageTypes';
+import applyBasicPageHandlers from '#pages/utils/applyBasicPageHandlers';
+import bffFetch from '#app/routes/topic/getInitialData';
+import getAgent from '#server/utilities/getAgent';
+import getToggles from '#app/lib/utilities/getToggles/withCache';
+import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
+import { Services, Variants } from '#models/types/global';
 
 import LivePageLayout from './LivePageLayout';
 

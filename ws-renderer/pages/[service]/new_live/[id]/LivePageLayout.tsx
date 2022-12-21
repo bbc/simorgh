@@ -1,14 +1,15 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
+/* @jsxFrag React.Fragment */
 
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
-import Heading from '../../../../../src/app/components/Heading';
-import MetadataContainer from '../../../../../src/app/legacy/containers/Metadata';
-import LinkedDataContainer from '../../../../../src/app/legacy/containers/LinkedData';
-import { ServiceContext } from '../../../../../src/app/contexts/ServiceContext';
-import { Services, Variants } from '../../../../../src/app/models/types/global';
-import Pagination from '../../../../../src/app/pages/TopicPage/Pagination';
+import MetadataContainer from '#app/legacy/containers/Metadata';
+import LinkedDataContainer from '#app/legacy/containers/LinkedData';
+import Pagination from '#pages/TopicPage/Pagination';
+import Heading from '#app/components/Heading';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { Services, Variants } from '#models/types/global';
 
 import styles from './styles';
 

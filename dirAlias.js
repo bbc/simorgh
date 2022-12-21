@@ -1,8 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 
-let appDirectory = fs.realpathSync(process.cwd());
-appDirectory = appDirectory.replace('/ws-renderer', '');
+const appDirectory = fs.realpathSync(process.cwd());
 
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 
@@ -50,6 +49,6 @@ module.exports = {
       ['#testHelpers', './src/testHelpers'],
       ['#server', './src/server'],
     ],
-    extensions: ['.js', '.jsx', '.json'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
   },
 };
