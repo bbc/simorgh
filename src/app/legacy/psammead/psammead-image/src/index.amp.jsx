@@ -13,15 +13,11 @@ const AmpImg = props => {
   const { srcset, fallbackSrcset, ...otherProps } = props;
 
   return (
-    <amp-img srcSet={srcset} {...omitInvalidProps(otherProps)}>
-      {fallbackSrcset && (
-        <amp-img
-          fallback=""
-          srcSet={fallbackSrcset}
-          {...omitInvalidProps(otherProps)}
-        />
-      )}
-    </amp-img>
+    <amp-img
+      fallback=""
+      srcSet={fallbackSrcset}
+      {...omitInvalidProps(otherProps)}
+    />
   );
 };
 
