@@ -310,12 +310,14 @@ const directives = {
     ampLive: [...bbcDomains],
     canonicalLive: [
       ...bbcDomains,
+      'data:', // localstorage
       'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/', // Adverts
       ...advertisingDirectives.fontSrc,
     ],
     ampNonLive: [...bbcDomains],
     canonicalNonLive: [
       ...bbcDomains,
+      'data:',
       'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/', // Adverts
       ...advertisingDirectives.fontSrc,
     ],

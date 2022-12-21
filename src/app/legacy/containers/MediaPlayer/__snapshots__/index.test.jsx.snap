@@ -159,12 +159,6 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
 .emotion-23 {
   display: block;
   width: 100%;
-  visibility: visible;
-}
-
-.emotion-25 {
-  display: block;
-  width: 100%;
 }
 
 <div>
@@ -226,19 +220,11 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
             03:11
           </time>
         </button>
-        <picture
+        <img
+          alt=""
           class="emotion-23 emotion-24"
-        >
-          <source
-            srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
-            type="image/jpeg"
-          />
-          <img
-            alt=""
-            class="emotion-25 emotion-26"
-            src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
-          />
-        </picture>
+          src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+        />
       </div>
     </div>
   </div>

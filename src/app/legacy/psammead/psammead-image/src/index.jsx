@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { number, oneOfType, string, bool, func } from 'prop-types';
 import styled from '@emotion/styled';
 import { keyframes, css } from '@emotion/react';
+import { RequestContext } from '../../../../contexts/RequestContext';
+import { FRONT_PAGE } from '../../../../routes/utils/pageTypes';
 
 export { default as AmpImg } from './index.amp';
 
@@ -44,16 +46,34 @@ export const Img = props => {
     ...otherProps
   } = props;
 
+  const requestContext = useContext(RequestContext);
+
   return (
-    <StyledPicture onLoad={onLoad}>
-      {srcset && (
-        <source srcSet={srcset} type={primaryMimeType} sizes={sizes} />
+    <>
+      {requestContext.pageType === FRONT_PAGE && (
+        <StyledPicture onLoad={onLoad}>
+          {srcset && (
+            <source srcSet={srcset} type={primaryMimeType} sizes={sizes} />
+          )}
+          {fallbackSrcset && (
+            <source
+              srcSet={fallbackSrcset}
+              type={fallbackMimeType}
+              sizes={sizes}
+            />
+          )}
+          <StyledImg src={src} {...otherProps} />
+        </StyledPicture>
       )}
-      {fallbackSrcset && (
-        <source srcSet={fallbackSrcset} type={fallbackMimeType} sizes={sizes} />
+      {requestContext.pageType !== FRONT_PAGE && (
+        <StyledImg
+          sizes={sizes}
+          srcSet={fallbackSrcset}
+          src={src}
+          {...otherProps}
+        />
       )}
-      <StyledImg src={src} {...otherProps} />
-    </StyledPicture>
+    </>
   );
 };
 

@@ -104,12 +104,6 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
 .emotion-17 {
   display: block;
   width: 100%;
-  visibility: visible;
-}
-
-.emotion-19 {
-  display: block;
-  width: 100%;
 }
 
 <div>
@@ -158,15 +152,11 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
         2:30
       </time>
     </button>
-    <picture
+    <img
+      alt=""
       class="emotion-17 emotion-18"
-    >
-      <img
-        alt=""
-        class="emotion-19 emotion-20"
-        src="http://foo.bar/placeholder.png"
-      />
-    </picture>
+      src="http://foo.bar/placeholder.png"
+    />
   </div>
 </div>
 `;
@@ -301,12 +291,6 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
 .emotion-19 {
   display: block;
   width: 100%;
-  visibility: visible;
-}
-
-.emotion-21 {
-  display: block;
-  width: 100%;
 }
 
 <div>
@@ -361,15 +345,11 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
         2:30
       </time>
     </button>
-    <picture
+    <img
+      alt=""
       class="emotion-19 emotion-20"
-    >
-      <img
-        alt=""
-        class="emotion-21 emotion-22"
-        src="http://foo.bar/placeholder.png"
-      />
-    </picture>
+      src="http://foo.bar/placeholder.png"
+    />
   </div>
 </div>
 `;
@@ -472,12 +452,6 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
 .emotion-15 {
   display: block;
   width: 100%;
-  visibility: visible;
-}
-
-.emotion-17 {
-  display: block;
-  width: 100%;
 }
 
 <div>
@@ -519,15 +493,11 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
         </svg>
       </div>
     </button>
-    <picture
+    <img
+      alt=""
       class="emotion-15 emotion-16"
-    >
-      <img
-        alt=""
-        class="emotion-17 emotion-18"
-        src="http://foo.bar/placeholder.png"
-      />
-    </picture>
+      src="http://foo.bar/placeholder.png"
+    />
   </div>
 </div>
 `;
@@ -636,12 +606,6 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
 .emotion-17 {
   display: block;
   width: 100%;
-  visibility: visible;
-}
-
-.emotion-19 {
-  display: block;
-  width: 100%;
 }
 
 <div>
@@ -693,15 +657,11 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
         2:30
       </time>
     </button>
-    <picture
+    <img
+      alt=""
       class="emotion-17 emotion-18"
-    >
-      <img
-        alt=""
-        class="emotion-19 emotion-20"
-        src="http://foo.bar/placeholder.png"
-      />
-    </picture>
+      src="http://foo.bar/placeholder.png"
+    />
   </div>
 </div>
 `;
@@ -804,12 +764,6 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
 .emotion-15 {
   display: block;
   width: 100%;
-  visibility: visible;
-}
-
-.emotion-17 {
-  display: block;
-  width: 100%;
 }
 
 <div>
@@ -854,15 +808,11 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
         </svg>
       </div>
     </button>
-    <picture
+    <img
+      alt=""
       class="emotion-15 emotion-16"
-    >
-      <img
-        alt=""
-        class="emotion-17 emotion-18"
-        src="http://foo.bar/placeholder.png"
-      />
-    </picture>
+      src="http://foo.bar/placeholder.png"
+    />
   </div>
 </div>
 `;
@@ -1014,12 +964,6 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
 .emotion-19 {
   display: block;
   width: 100%;
-  visibility: visible;
-}
-
-.emotion-21 {
-  display: block;
-  width: 100%;
 }
 
 <div>
@@ -1074,15 +1018,11 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
         2:30
       </time>
     </button>
-    <picture
+    <img
+      alt=""
       class="emotion-19 emotion-20"
-    >
-      <img
-        alt=""
-        class="emotion-21 emotion-22"
-        src="http://foo.bar/placeholder.png"
-      />
-    </picture>
+      src="http://foo.bar/placeholder.png"
+    />
   </div>
 </div>
 `;
