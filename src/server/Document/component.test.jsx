@@ -35,7 +35,6 @@ describe('Document Component', () => {
   // eslint-disable-next-line react/prop-types
   const TestDocumentComponent = ({ service, isAmp }) => (
     <DocumentComponent
-      assetOrigins={assetOrigins}
       app={{
         css: '.css-7prgni-StyledLink{display:inline-block;}',
         ids: ['7prgni-StyledLink'],

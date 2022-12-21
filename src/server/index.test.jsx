@@ -122,11 +122,9 @@ const testRenderedData =
           ids: [],
           html: '<h1>Mock app</h1>',
         }}
-        assetOrigins={assetOrigins}
         data={successDataResponse}
         helmet={{ head: 'tags' }}
         isAmp={isAmp}
-        service={service}
         legacyScripts="__mock_script_elements__"
         modernScripts="__mock_script_elements__"
         links="__mock_link_elements__"
@@ -1325,11 +1323,9 @@ describe('Server', () => {
               ids: [],
               html: '<h1>Mock app</h1>',
             }}
-            assetOrigins={assetOrigins}
             data={dataResponse}
             helmet={{ head: 'tags' }}
             isAmp={isAmp}
-            service={service}
             legacyScripts="__mock_script_elements__"
             modernScripts="__mock_script_elements__"
             links="__mock_link_elements__"
