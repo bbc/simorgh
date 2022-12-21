@@ -103,7 +103,7 @@ describe('Image', () => {
     it('should render an image with a sizes attribute', () => {
       render(<ImageContainer sizes="100vw" {...data} />);
 
-      const sourceEl = document.querySelector('source');
+      const sourceEl = document.querySelector('img');
 
       const sizesAttribute = sourceEl.getAttribute('sizes');
 

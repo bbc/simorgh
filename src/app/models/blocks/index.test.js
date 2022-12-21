@@ -236,6 +236,64 @@ describe('Byline block', () => {
             model: {
               blocks: [
                 {
+                  type: 'name',
+                  model: {
+                    blocks: [
+                      {
+                        type: 'text',
+                        model: {
+                          blocks: [
+                            {
+                              type: 'paragraph',
+                              model: {
+                                text: 'Test',
+                                blocks: [
+                                  {
+                                    type: 'fragment',
+                                    model: {
+                                      text: 'Test',
+                                      attributes: [],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+                {
+                  type: 'role',
+                  model: {
+                    blocks: [
+                      {
+                        type: 'text',
+                        model: {
+                          blocks: [
+                            {
+                              type: 'paragraph',
+                              model: {
+                                text: 'Test',
+                                blocks: [
+                                  {
+                                    type: 'fragment',
+                                    model: {
+                                      text: 'Test',
+                                      attributes: [],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+                {
                   type: 'link',
                   locator: 'urn:bbc:twitter:user:@mary_harper',
                   model: {
