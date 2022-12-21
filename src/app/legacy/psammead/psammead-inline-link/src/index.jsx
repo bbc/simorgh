@@ -26,35 +26,8 @@ const InlineLink = styled.a`
     color: ${C_POSTBOX};
   }
 
-  // SOLUTION 1 - Using @supports selector
-  // Applies all rules to focus state for browsers that don't handle focus-visible
-  &:focus {
-    border-bottom: 2px solid ${C_POSTBOX};
-    color: ${C_POSTBOX};
-    outline: ${focusIndicatorThickness} solid ${C_BLACK};
-    box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
-    outline-offset: ${focusIndicatorThickness};
-  }
-  
-  // Overrides these rules if focus-visible is supported by browser, applies different styles to focus and focus-visible
-  @supports selector(:focus-visible) {
-    &:focus {
-      border-bottom: 2px solid ${C_POSTBOX};
-      color: ${C_POSTBOX};
-      outline: none;
-      box-shadow: none;
-      outline-offset: 0;
-    },
-    &:focus-visible {
-      outline: ${focusIndicatorThickness} solid ${C_BLACK};
-      box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
-      outline-offset: ${focusIndicatorThickness};
-    },
-  }
-  // END SOLUTION 1
-
-  // // SOLUTION 2 - using focus:not(:focus-visible)
-  // // Applies all rules to focus state
+  // // SOLUTION 1 - Using @supports selector
+  // // Applies all rules to focus state for browsers that don't handle focus-visible
   // &:focus {
   //   border-bottom: 2px solid ${C_POSTBOX};
   //   color: ${C_POSTBOX};
@@ -62,22 +35,49 @@ const InlineLink = styled.a`
   //   box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
   //   outline-offset: ${focusIndicatorThickness};
   // }
-  // //
-  // // Overrides these rules depending whether focus-visible state is being used, applies different styles to focus and focus-visible
-  // &:focus:not(:focus-visible) {
-  //   border-bottom: 2px solid ${C_POSTBOX};
-  //   color: ${C_POSTBOX};
-  //   outline: none;
-  //   box-shadow: none;
-  //   outline-offset: 0;
+
+  // // Overrides these rules if focus-visible is supported by browser, applies different styles to focus and focus-visible
+  // @supports selector(:focus-visible) {
+  //   &:focus {
+  //     border-bottom: 2px solid ${C_POSTBOX};
+  //     color: ${C_POSTBOX};
+  //     outline: none;
+  //     box-shadow: none;
+  //     outline-offset: 0;
+  //   },
+  //   &:focus-visible {
+  //     outline: ${focusIndicatorThickness} solid ${C_BLACK};
+  //     box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
+  //     outline-offset: ${focusIndicatorThickness};
+  //   },
   // }
-  // //
-  // &:focus-visible {
-  //   outline: ${focusIndicatorThickness} solid ${C_BLACK};
-  //   box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
-  //   outline-offset: ${focusIndicatorThickness};
-  // }
-  // // END SOLUTION 2
+  // // END SOLUTION 1
+
+  // SOLUTION 2 - using focus:not(:focus-visible)
+  // Applies all rules to focus state
+  &:focus {
+    border-bottom: 2px solid ${C_POSTBOX};
+    color: ${C_POSTBOX};
+    outline: ${focusIndicatorThickness} solid ${C_BLACK};
+    box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
+    outline-offset: ${focusIndicatorThickness};
+  }
+  //
+  // Overrides these rules depending whether focus-visible state is being used, applies different styles to focus and focus-visible
+  &:focus:not(:focus-visible) {
+    // border-bottom: 2px solid ${C_POSTBOX};
+    // color: ${C_POSTBOX};
+    outline: none;
+    box-shadow: none;
+    outline-offset: 0;
+  }
+  //
+  &:focus-visible {
+    outline: ${focusIndicatorThickness} solid ${C_BLACK};
+    box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
+    outline-offset: ${focusIndicatorThickness};
+  }
+  // END SOLUTION 2
 
   // Original solution - not working with backwards compatibility
   // &:focus-visible {

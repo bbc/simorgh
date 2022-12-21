@@ -17,33 +17,8 @@ const styles = {
         borderBottom: `${pixelsToRem(2)}rem solid ${palette.POSTBOX}`,
         color: palette.POSTBOX,
       },
-      // // SOLUTION 1 - Using @supports selector
-      // // Applies all rules to focus state for browsers that don't handle focus-visible
-      '&:focus': {
-        borderBottom: `${pixelsToRem(2)}rem solid ${palette.POSTBOX}`,
-        color: palette.POSTBOX,
-        outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
-        boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
-        outlineOffset: `${pixelsToRem(3)}rem`,
-      },
-      // Overrides these rules if focus-visible is supported by browser, applies different styles to focus and focus-visible
-      '@supports selector(:focus-visible)': {
-        '&:focus': {
-          borderBottom: `${pixelsToRem(2)}rem solid ${palette.POSTBOX}`,
-          color: palette.POSTBOX,
-          outline: `none`,
-          boxShadow: `none`,
-          outlineOffset: 0,
-        },
-        '&:focus-visible': {
-          outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
-          boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
-          outlineOffset: `${pixelsToRem(3)}rem`,
-        },
-      },
-      // // END SOLUTION 1
-      // // SOLUTION 2 - using focus:not(:focus-visible)
-      // // Applies all rules to focus state
+      // // // SOLUTION 1 - Using @supports selector
+      // // // Applies all rules to focus state for browsers that don't handle focus-visible
       // '&:focus': {
       //   borderBottom: `${pixelsToRem(2)}rem solid ${palette.POSTBOX}`,
       //   color: palette.POSTBOX,
@@ -51,20 +26,45 @@ const styles = {
       //   boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
       //   outlineOffset: `${pixelsToRem(3)}rem`,
       // },
-      // // Overrides these rules depending whether focus-visible state is being used, applies different styles to focus and focus-visible
-      // '&:focus:not(:focus-visible)': {
-      //   borderBottom: `${pixelsToRem(2)}rem solid ${palette.POSTBOX}`,
-      //   color: palette.POSTBOX,
-      //   outline: `none`,
-      //   boxShadow: `none`,
-      //   outlineOffset: 0,
+      // // Overrides these rules if focus-visible is supported by browser, applies different styles to focus and focus-visible
+      // '@supports selector(:focus-visible)': {
+      //   '&:focus': {
+      //     borderBottom: `${pixelsToRem(2)}rem solid ${palette.POSTBOX}`,
+      //     color: palette.POSTBOX,
+      //     outline: `none`,
+      //     boxShadow: `none`,
+      //     outlineOffset: 0,
+      //   },
+      //   '&:focus-visible': {
+      //     outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
+      //     boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
+      //     outlineOffset: `${pixelsToRem(3)}rem`,
+      //   },
       // },
-      // '&:focus-visible': {
-      //   outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
-      //   boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
-      //   outlineOffset: `${pixelsToRem(3)}rem`,
-      // },
-      // // END SOLUTION 2
+      // // // END SOLUTION 1
+      // SOLUTION 2 - using focus:not(:focus-visible)
+      // Applies all rules to focus state
+      '&:focus': {
+        borderBottom: `${pixelsToRem(2)}rem solid ${palette.POSTBOX}`,
+        color: palette.POSTBOX,
+        outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
+        boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
+        outlineOffset: `${pixelsToRem(3)}rem`,
+      },
+      // Overrides these rules depending whether focus-visible state is being used, applies different styles to focus and focus-visible
+      '&:focus:not(:focus-visible)': {
+        // borderBottom: `${pixelsToRem(2)}rem solid ${palette.POSTBOX}`,
+        // color: palette.POSTBOX,
+        outline: `none`,
+        boxShadow: `none`,
+        outlineOffset: 0,
+      },
+      '&:focus-visible': {
+        outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
+        boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
+        outlineOffset: `${pixelsToRem(3)}rem`,
+      },
+      // END SOLUTION 2
       //
       // Original solution - does not have any browser backwards capabilities
       // '&:focus-visible': {
