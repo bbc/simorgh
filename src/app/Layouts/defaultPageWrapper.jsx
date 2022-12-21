@@ -122,6 +122,7 @@ const PageWrapper = ({ children, pageData, status }) => {
           </>
         )}
         <WebVitals pageType={pageType} />
+        <GlobalStyles />
         <Wrapper id="main-wrapper" darkMode={isDarkMode}>
           <HeaderContainer
             scriptSwitchId={scriptSwitchId}
@@ -130,7 +131,6 @@ const PageWrapper = ({ children, pageData, status }) => {
           <Content>{children}</Content>
           <FooterContainer />
         </Wrapper>
-        <GlobalStyles />
       </ThemeProvider>
     </>
   );
