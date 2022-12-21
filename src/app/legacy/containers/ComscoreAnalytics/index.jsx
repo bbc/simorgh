@@ -5,11 +5,10 @@ import AmpComscoreAnalytics from './Amp';
 import CanonicalComscoreAnalytics from './Canonical';
 
 const ComscoreAnalytics = () => {
-  const { isAmp, isNextJs } = useContext(RequestContext);
+  const { isAmp } = useContext(RequestContext);
   const { enabled } = useToggle('comscoreAnalytics');
 
-  // TODO: Fix this for NextJS
-  if (!enabled || isNextJs) {
+  if (!enabled) {
     return null;
   }
 

@@ -8,12 +8,14 @@ import MetadataContainer from '../../../../../src/app/legacy/containers/Metadata
 import LinkedDataContainer from '../../../../../src/app/legacy/containers/LinkedData';
 import { ServiceContext } from '../../../../../src/app/contexts/ServiceContext';
 import { Services, Variants } from '../../../../../src/app/models/types/global';
+import Pagination from '../../../../../src/app/pages/TopicPage/Pagination';
 
 import styles from './styles';
 
 type ComponentProps = {
   pageData: {
-    metadata: string;
+    pageCount: number;
+    activePage: number;
   };
   service: Services;
   showAdsBasedOnLocation: boolean;
@@ -27,6 +29,7 @@ const LivePage = ({
   variant,
 }: ComponentProps) => {
   const { lang } = useContext(ServiceContext);
+  const { pageCount, activePage } = pageData;
 
   return (
     <>
@@ -48,6 +51,14 @@ const LivePage = ({
           </ul>
         </pre>
         <pre css={styles.code}>{JSON.stringify(pageData, null, 2)}</pre>
+        <Pagination
+          activePage={activePage}
+          pageCount={pageCount}
+          pageXOfY="Page {x} of {y}"
+          previousPage="Previous Page"
+          nextPage="Next Page"
+          page="Page"
+        />
       </main>
     </>
   );

@@ -2,7 +2,7 @@ import { GetServerSideProps } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import applyBasicPageHandlers from '../../../../../src/app/pages/utils/applyBasicPageHandlers';
 import { Services, Variants } from '../../../../../src/app/models/types/global';
-import bffFetch from '../../../../../src/app/routes/article/getInitialData/bffFetch';
+import bffFetch from '../../../../../src/app/routes/topic/getInitialData';
 import getAgent from '../../../../../src/server/utilities/getAgent';
 import getToggles from '../../../../../src/app/lib/utilities/getToggles/withCache';
 import { LIVE_PAGE } from '../../../../../src/app/routes/utils/pageTypes';
@@ -15,6 +15,7 @@ export default applyBasicPageHandlers({
 
 interface PageDataParams extends ParsedUrlQuery {
   id: string;
+  page?: string;
   service: Services;
   variant?: Variants;
   renderer_env?: string;
@@ -22,12 +23,14 @@ interface PageDataParams extends ParsedUrlQuery {
 
 const getPageData = async ({
   id,
+  page,
   service,
   variant,
   rendererEnv,
 }: PageDataParams) => {
   const data = await bffFetch({
     getAgent,
+    page,
     path: `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}}`,
     service,
     variant,
@@ -43,15 +46,17 @@ export const getServerSideProps: GetServerSideProps = async context => {
     id,
     service,
     variant,
-    renderer_env: rendererEnv,
+    // renderer_env: rendererEnv,
+    page,
   } = context.query as PageDataParams;
 
   const { headers: reqHeaders } = context.req;
   const { data, toggles } = await getPageData({
     id,
+    page,
     service,
     variant,
-    rendererEnv,
+    rendererEnv: 'live', // TODO: remove hardcoding
   });
 
   return {
@@ -60,6 +65,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       id,
       isAmp: false,
       isNextJs: true,
+      page: page || null,
       pageData: data?.pageData || null,
       pageType: LIVE_PAGE,
       pathname: context.resolvedUrl,
