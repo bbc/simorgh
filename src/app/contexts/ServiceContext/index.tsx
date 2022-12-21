@@ -11,7 +11,6 @@ interface Props {
   service: Services;
   variant?: Variants | null;
   pageLang?: string;
-  swPath?: string;
 }
 
 export const ServiceContextProvider = ({
