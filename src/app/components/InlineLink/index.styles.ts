@@ -1,5 +1,4 @@
 import { css, Theme } from '@emotion/react';
-import { none } from 'ramda';
 
 import pixelsToRem from '../../utilities/pixelsToRem';
 

@@ -148,12 +148,9 @@ export default {
       paddingInlineEnd: '2.75rem',
     }),
 
-  twitterLink: ({ palette }: Theme) =>
+  twitterLink: () =>
     css({
       paddingBottom: `${pixelsToRem(22)}rem`,
       paddingTop: `${pixelsToRem(4)}rem`,
-      '&:focus-visible': {
-        border: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
-      },
     }),
 };
