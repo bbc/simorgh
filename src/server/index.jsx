@@ -30,7 +30,6 @@ import sendCustomMetric from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
 import local from './local';
 import getAgent from './utilities/getAgent';
-import { getMvtExperiments, getMvtVaryHeaders } from './utilities/mvtHeader';
 import getAssetOrigins from './utilities/getAssetOrigins';
 
 const morgan = require('morgan');
@@ -173,7 +172,6 @@ server.get(
     });
 
     let derivedPageType = 'Unknown';
-    let mvtExperiments = [];
 
     try {
       const {
@@ -208,9 +206,6 @@ server.get(
       // Set derivedPageType based on returned page data
       if (status === OK) {
         derivedPageType = ramdaPath(['pageData', 'metadata', 'type'], data);
-
-        mvtExperiments = getMvtExperiments(headers, service, derivedPageType);
-        data.mvtExperiments = mvtExperiments;
       } else {
         sendCustomMetric({
           metricName: NON_200_RESPONSE,
@@ -221,7 +216,6 @@ server.get(
       }
 
       const bbcOrigin = headers['bbc-origin'];
-
       let result;
       try {
         result = await renderDocument({
@@ -273,10 +267,6 @@ server.get(
           'onion-location',
           `https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${urlPath}`,
         );
-
-        const mvtVaryHeaders = !isAmp && getMvtVaryHeaders(mvtExperiments);
-
-        if (mvtVaryHeaders) res.set('vary', mvtVaryHeaders);
         res.status(status).send(result.html);
       } else {
         throw new Error('unknown result');
