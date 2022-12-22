@@ -1,4 +1,5 @@
 import { css, Theme } from '@emotion/react';
+import pixelsToRem from '../../../src/app/utilities/pixelsToRem';
 
 const styles = {
   componentHealthContainer: (theme: Theme) =>
@@ -17,7 +18,7 @@ const styles = {
       display: 'flex',
       flexWrap: 'wrap',
       backgroundColor: theme.palette.GREY_2,
-      padding: `1.25rem ${theme.spacings.DOUBLE}rem`,
+      padding: `${pixelsToRem(20)}rem ${theme.spacings.DOUBLE}rem`,
       borderBottom: `0.0625rem solid transparent`,
     }),
 
@@ -31,8 +32,8 @@ const styles = {
 
   titleIcon: (theme: Theme) =>
     css({
-      width: '1.5rem',
-      height: '1.5rem',
+      width: `${pixelsToRem(24)}rem`,
+      height: `${pixelsToRem(24)}rem`,
       marginRight: theme.spacings.HALF,
       display: 'block',
     }),
@@ -52,7 +53,7 @@ const styles = {
   documentationContainer: (theme: Theme) =>
     css({
       margin: 0,
-      padding: `1.25rem ${theme.spacings.DOUBLE}rem`,
+      padding: `${pixelsToRem(20)}rem ${theme.spacings.DOUBLE}rem`,
     }),
 
   documentationList: {

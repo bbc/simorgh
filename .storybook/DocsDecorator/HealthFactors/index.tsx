@@ -36,7 +36,7 @@ const HealthFactors = ({ metadata }: { metadata?: HealthFactorsMetadata }) => {
   ];
 
   const actionCount = count(
-    x => typeof x === 'undefined' || !getDone(x),
+    action => typeof action === 'undefined' || !getDone(action),
     [uxAccessibility, uxSwarm, acceptanceCriteria],
   );
 
