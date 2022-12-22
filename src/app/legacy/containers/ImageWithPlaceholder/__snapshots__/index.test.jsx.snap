@@ -84,23 +84,13 @@ exports[`ImageWithPlaceholder should render an AMP image 1`] = `
     <amp-img
       alt="Pauline Clayton"
       attribution="Getty Images"
+      fallback=""
       height="360"
       layout="responsive"
       src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-      srcset="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg.webp 640w"
+      srcset="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg 640w"
       width="640"
-    >
-      <amp-img
-        alt="Pauline Clayton"
-        attribution="Getty Images"
-        fallback=""
-        height="360"
-        layout="responsive"
-        src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-        srcset="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg 640w"
-        width="640"
-      />
-    </amp-img>
+    />
   </div>
 </div>
 `;

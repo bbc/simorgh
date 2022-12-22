@@ -310,12 +310,14 @@ const directives = {
     ampLive: [...bbcDomains],
     canonicalLive: [
       ...bbcDomains,
+      'data:', // localstorage
       'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/', // Adverts
       ...advertisingDirectives.fontSrc,
     ],
     ampNonLive: [...bbcDomains],
     canonicalNonLive: [
       ...bbcDomains,
+      'data:',
       'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/', // Adverts
       ...advertisingDirectives.fontSrc,
     ],
@@ -390,7 +392,9 @@ export const generateMediaSrc = ({ isAmp, isLive }) => {
 };
 
 export const generateWorkerSrc = ({ isAmp }) =>
-  isAmp ? ['blob:'] : ["'self'"];
+  isAmp
+    ? ['blob:', '*.bbc.co.uk', '*.bbc.com']
+    : ["'self'", '*.bbc.co.uk', '*.bbc.com'];
 
 export const generatePrefetchSrc = ({ isAmp, isLive }) => {
   if (!isLive && isAmp) return directives.prefetchSrc.ampNonLive.sort();
