@@ -5,8 +5,6 @@ import renderDocument from '.';
 import { ServerApp } from '../../app/legacy/containers/App';
 import DocumentComponent from './component';
 
-jest.mock('../utilities/getAssetOrigins', () => () => '__mock_asset_origins__');
-
 jest.mock('@loadable/server', () => ({
   ChunkExtractor: jest.fn().mockImplementation(() => ({
     collectChunks: arg => arg,
@@ -69,14 +67,12 @@ describe('Render Document', () => {
           html: 'no',
           ids: [],
         },
-        assetOrigins: '__mock_asset_origins__',
         data: { test: 'data' },
         helmet: undefined,
         isAmp: false,
         legacyScripts: '__mock_script_elements__',
         modernScripts: '__mock_script_elements__',
         links: '__mock_link_elements__',
-        service: 'news',
       });
 
       expect(
