@@ -8,6 +8,7 @@ import {
   C_GREY_10,
   C_GREY_3,
   C_POSTBOX,
+  C_BLACK,
 } from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING_HLF,
@@ -26,6 +27,9 @@ import { NAV_BAR_TOP_BOTTOM_SPACING } from './DropdownNavigation';
 
 const SPACING_AROUND_NAV_ITEMS = `${NAV_BAR_TOP_BOTTOM_SPACING}rem`; // 12px
 const CURRENT_ITEM_HOVER_BORDER = '0.3125rem'; // 5px
+
+// Focus visible indicator to show around all focusable elements, links, buttons etc, across the WS sites.
+const focusIndicatorThickness = '0.1875rem';
 
 const NavWrapper = styled.div`
   position: relative;
@@ -46,6 +50,7 @@ const StyledUnorderedList = styled.ul`
   margin: 0;
   position: relative;
 
+  // below is trimming off top of border/outline
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     overflow: hidden;
   }
@@ -68,6 +73,7 @@ const StyledLink = styled.a`
   text-decoration: none;
   display: inline-block;
   padding: ${SPACING_AROUND_NAV_ITEMS} 0.25rem;
+  background-color: yellow;
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     padding: ${SPACING_AROUND_NAV_ITEMS} ${GEL_SPACING};
@@ -84,13 +90,21 @@ const StyledLink = styled.a`
       `}
   }
 
+  // // added code
+  // &:focus-visible::after {
+  //   border: ${focusIndicatorThickness} solid ${C_WHITE};
+  //   outline: ${focusIndicatorThickness} solid ${C_BLACK};
+  //   position: absolute;
+  //   // box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
+  // }
+
+  // original code - notice ::after
   &:focus::after {
     ${ListItemBorder}
+    outline: ${GEL_SPACING_HLF} solid ${C_BLACK};
     ${({ brandHighlightColour }) =>
       `border-bottom: ${GEL_SPACING_HLF} solid ${brandHighlightColour};`}
     top: 0;
-    ${({ brandHighlightColour }) =>
-      `border: ${GEL_SPACING_HLF} solid ${brandHighlightColour};`}
   }
 `;
 
