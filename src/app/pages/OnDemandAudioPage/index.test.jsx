@@ -16,6 +16,7 @@ import getInitialData from '#app/routes/onDemandAudio/getInitialData';
 import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import ThemeProvider from '../../components/ThemeProvider';
 import koreanPageWithScheduleData from './fixtureData/korean.json';
 import _OnDemandAudioPage from './OnDemandAudioPage';
 
@@ -32,6 +33,8 @@ const toggles = {
   },
 };
 
+jest.mock('../../components/ThemeProvider');
+
 const Page = ({ pageData, service, isAmp = false, variant, lang }) => (
   <StaticRouter>
     <ToggleContextProvider>
@@ -44,7 +47,9 @@ const Page = ({ pageData, service, isAmp = false, variant, lang }) => (
           service={service}
           statusCode={200}
         >
-          <OnDemandAudioPage service={service} pageData={pageData} />
+          <ThemeProvider service={service} variant={variant || 'default'}>
+            <OnDemandAudioPage service={service} pageData={pageData} />
+          </ThemeProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContextProvider>

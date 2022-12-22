@@ -17,6 +17,8 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ThemeProvider from '../../components/ThemeProvider';
 import MediaAssetPage from '.';
 
+jest.mock('../../components/ThemeProvider');
+
 jest.mock('#containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
@@ -26,8 +28,6 @@ jest.mock('#containers/ComscoreAnalytics', () => {
   const ComscoreAnalytics = () => <div>comscore</div>;
   return ComscoreAnalytics;
 });
-
-jest.mock('../../components/ThemeProvider');
 
 const createAssetPage = ({ pageData }, service) => (
   <StaticRouter>

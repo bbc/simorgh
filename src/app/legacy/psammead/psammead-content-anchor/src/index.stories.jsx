@@ -4,10 +4,10 @@ import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import Paragraph from '#psammead/psammead-paragraph/src';
 import { Headline } from '#psammead/psammead-headings/src';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import notes from '../README.md';
+import Paragraph from '../../../../components/Paragraph';
 import ContentAnchor from './index';
 
 const Wrapper = styled.div`
@@ -20,6 +20,10 @@ const Wrapper = styled.div`
 
 const StyledImage = styled.img`
   display: block;
+`;
+
+const StyledParagraph = styled(Paragraph)`
+  padding-bottom: 1.5rem;
 `;
 
 const images = [
@@ -62,25 +66,19 @@ const StyledFigure = styled.figure`
 const StyledCaption = styled.figcaption`
   padding-top: 12px;
 `;
-const Gallery = ({ script, service, delay = 6000 }) => (
+const Gallery = ({ delay = 6000 }) => (
   <StyledFigure>
     <ContentAnchor initialHeight={200} initialWidth={400}>
       <ImageTicker delay={delay} />
     </ContentAnchor>
     <StyledCaption>
-      <Paragraph script={script} service={service}>
-        Eliud Kipchoge
-      </Paragraph>
+      <StyledParagraph>Eliud Kipchoge</StyledParagraph>
     </StyledCaption>
   </StyledFigure>
 );
 
-const renderParagraphs = ({ text, script, service }) =>
-  Array(3).fill(
-    <Paragraph script={script} service={service}>
-      {Array(5).fill(`${text} `)}
-    </Paragraph>,
-  );
+const renderParagraphs = text =>
+  Array(3).fill(<StyledParagraph>{Array(5).fill(`${text} `)}</StyledParagraph>);
 
 storiesOf('Components/ContentAnchor', module)
   .addDecorator(withKnobs)
@@ -93,9 +91,9 @@ storiesOf('Components/ContentAnchor', module)
           <Headline script={script} service={service}>
             {text}
           </Headline>
-          {renderParagraphs({ text, script, service })}
+          {renderParagraphs(text)}
           <Gallery script={script} service={service} />
-          {Array(2).fill(renderParagraphs({ text, script, service }))}
+          {Array(2).fill(renderParagraphs(text))}
         </Wrapper>
       );
     },
@@ -109,14 +107,14 @@ storiesOf('Components/ContentAnchor', module)
           <Headline script={script} service={service}>
             {text}
           </Headline>
-          {renderParagraphs({ text, script, service })}
+          {renderParagraphs(text)}
           <Gallery script={script} service={service} />
-          {renderParagraphs({ text, script, service })}
+          {renderParagraphs(text)}
           <Gallery script={script} service={service} />
-          {Array(3).fill(renderParagraphs({ text, script, service }))}
+          {Array(3).fill(renderParagraphs(text))}
           <Gallery script={script} service={service} />
           <Gallery script={script} service={service} />
-          {Array(4).fill(renderParagraphs({ text, script, service }))}
+          {Array(4).fill(renderParagraphs(text))}
         </Wrapper>
       );
     },
@@ -130,14 +128,14 @@ storiesOf('Components/ContentAnchor', module)
           <Headline script={script} service={service}>
             {text}
           </Headline>
-          {renderParagraphs({ text, script, service })}
-          <Gallery delay={4000} script={script} service={service} />
-          {renderParagraphs({ text, script, service })}
-          <Gallery delay={3000} script={script} service={service} />
-          {Array(3).fill(renderParagraphs({ text, script, service }))}
-          <Gallery delay={2000} script={script} service={service} />
-          <Gallery delay={1000} script={script} service={service} />
-          {Array(4).fill(renderParagraphs({ text, script, service }))}
+          {renderParagraphs(text)}
+          <Gallery delay={4000} />
+          {renderParagraphs(text)}
+          <Gallery delay={3000} />
+          {Array(3).fill(renderParagraphs(text))}
+          <Gallery delay={2000} />
+          <Gallery delay={1000} />
+          {Array(4).fill(renderParagraphs(text))}
         </Wrapper>
       );
     },
@@ -145,25 +143,25 @@ storiesOf('Components/ContentAnchor', module)
   )
   .add(
     'multiple time-staggered dynamic resize components',
-    ({ script, service }) => {
+    () => {
       return (
         <Wrapper>
-          <Gallery delay={1000} script={script} service={service} />
-          <Gallery delay={4000} script={script} service={service} />
-          <Gallery delay={9000} script={script} service={service} />
-          <Gallery delay={4000} script={script} service={service} />
-          <Gallery delay={7000} script={script} service={service} />
-          <Gallery delay={2000} script={script} service={service} />
-          <Gallery delay={3000} script={script} service={service} />
-          <Gallery delay={2000} script={script} service={service} />
-          <Gallery delay={5000} script={script} service={service} />
-          <Gallery delay={9000} script={script} service={service} />
-          <Gallery delay={8000} script={script} service={service} />
-          <Gallery delay={2000} script={script} service={service} />
-          <Gallery delay={6000} script={script} service={service} />
-          <Gallery delay={8000} script={script} service={service} />
-          <Gallery delay={3000} script={script} service={service} />
-          <Gallery delay={2000} script={script} service={service} />
+          <Gallery delay={1000} />
+          <Gallery delay={4000} />
+          <Gallery delay={9000} />
+          <Gallery delay={4000} />
+          <Gallery delay={7000} />
+          <Gallery delay={2000} />
+          <Gallery delay={3000} />
+          <Gallery delay={2000} />
+          <Gallery delay={5000} />
+          <Gallery delay={9000} />
+          <Gallery delay={8000} />
+          <Gallery delay={2000} />
+          <Gallery delay={6000} />
+          <Gallery delay={8000} />
+          <Gallery delay={3000} />
+          <Gallery delay={2000} />
         </Wrapper>
       );
     },

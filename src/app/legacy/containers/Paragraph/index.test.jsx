@@ -3,7 +3,10 @@ import { v4 as uuid } from 'uuid';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import ThemeProvider from '../../../components/ThemeProvider';
 import ParagraphContainer from '.';
+
+jest.mock('../../../components/ThemeProvider');
 
 const fragmentBlock = (text, attributes = []) => ({
   type: 'fragment',
@@ -65,7 +68,9 @@ const blocksWithInline = [
 
 const ParagraphContainerWithContext = blocks => (
   <ServiceContext.Provider value={{ script: latin, service: 'news' }}>
-    <ParagraphContainer blocks={blocks} />
+    <ThemeProvider service="news" variant="default">
+      <ParagraphContainer blocks={blocks} />
+    </ThemeProvider>
   </ServiceContext.Provider>
 );
 

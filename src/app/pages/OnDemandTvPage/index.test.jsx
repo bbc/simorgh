@@ -11,7 +11,10 @@ import getInitialData from '#app/routes/onDemandTV/getInitialData';
 import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import ThemeProvider from '../../components/ThemeProvider';
 import _OnDemandTvPage from './OnDemandTvPage';
+
+jest.mock('../../components/ThemeProvider');
 
 const OnDemandTvPage = withMediaError(_OnDemandTvPage);
 
@@ -34,7 +37,9 @@ const Page = ({ pageData, service, isAmp = false }) => (
           service={service}
           statusCode={200}
         >
-          <OnDemandTvPage service={service} pageData={pageData} />
+          <ThemeProvider service={service} variant="default">
+            <OnDemandTvPage service={service} pageData={pageData} />
+          </ThemeProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContextProvider>

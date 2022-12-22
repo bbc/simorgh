@@ -22,8 +22,8 @@ import {
 } from '#models/blocks/index';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import ArticlePage from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
+import ArticlePage from './ArticlePage';
 
 jest.mock('../../components/ThemeProvider');
 
@@ -45,33 +45,33 @@ const Context = ({
   showAdsBasedOnLocation = false,
 } = {}) => (
   <BrowserRouter>
-    <ThemeProvider service={service} variant="default">
-      <ToggleContextProvider
-        toggles={{
-          mostRead: {
-            enabled: mostReadToggledOn,
-          },
-          ads: {
-            enabled: adsToggledOn,
-          },
-        }}
+    <ToggleContextProvider
+      toggles={{
+        mostRead: {
+          enabled: mostReadToggledOn,
+        },
+        ads: {
+          enabled: adsToggledOn,
+        },
+      }}
+    >
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.co.uk"
+        id="c0000000000o"
+        isAmp={false}
+        pageType={ARTICLE_PAGE}
+        pathname="/pathname"
+        service={service}
+        statusCode={200}
+        showAdsBasedOnLocation={showAdsBasedOnLocation}
       >
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          id="c0000000000o"
-          isAmp={false}
-          pageType={ARTICLE_PAGE}
-          pathname="/pathname"
-          service={service}
-          statusCode={200}
-          showAdsBasedOnLocation={showAdsBasedOnLocation}
-        >
-          <ServiceContextProvider service={service}>
+        <ServiceContextProvider service={service}>
+          <ThemeProvider service={service} variant="default">
             {children}
-          </ServiceContextProvider>
-        </RequestContextProvider>
-      </ToggleContextProvider>
-    </ThemeProvider>
+          </ThemeProvider>
+        </ServiceContextProvider>
+      </RequestContextProvider>
+    </ToggleContextProvider>
   </BrowserRouter>
 );
 
