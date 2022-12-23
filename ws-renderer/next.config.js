@@ -12,7 +12,7 @@ module.exports = {
     ignoreDuringBuilds: true,
   },
   // Requires pages that are routed to have the .page extension, e.g. User.page.tsx
-  pageExtensions: ['page.tsx'],
+  pageExtensions: ['page.tsx', 'page.ts'],
   webpack: config => {
     config.resolve.fallback = {
       ...config.resolve.fallback,
