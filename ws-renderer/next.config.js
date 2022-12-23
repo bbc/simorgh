@@ -2,6 +2,7 @@
 const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezone-include/src');
 
 module.exports = {
+  distDir: 'build',
   experimental: {
     externalDir: true,
   },
