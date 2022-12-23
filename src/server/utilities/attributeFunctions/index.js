@@ -20,9 +20,8 @@ export const getScriptAttributes = bundleType => chunk => {
 
 export const getLinkAttributes = chunk => {
   const rel =
-    chunk.filename.match(
-      /modern\.commons\-n\.js$/ | /modern\.main\-src_a\.js$/,
-    ) || chunk.scriptType !== 'script'
+    /(modern\.commons-n\.js$)|(modern\.main-src_a\.js$)/.test(chunk.filename) ||
+    chunk.scriptType !== 'script'
       ? 'modulepreload'
       : '';
   return {
