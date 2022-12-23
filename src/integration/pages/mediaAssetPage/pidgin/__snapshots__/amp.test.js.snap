@@ -375,8 +375,6 @@ exports[`AMP Media Asset Page SEO Canonical link 1`] = `"http://localhost:7080/p
 
 exports[`AMP Media Asset Page SEO Dir attribute 1`] = `"ltr"`;
 
-exports[`AMP Media Asset Page SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`AMP Media Asset Page SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`AMP Media Asset Page SEO Heading level 1 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & < >"`;

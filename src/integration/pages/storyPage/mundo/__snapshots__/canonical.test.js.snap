@@ -256,8 +256,6 @@ exports[`Canonical Story Page SEO Canonical link 1`] = `"http://localhost:7080/m
 
 exports[`Canonical Story Page SEO Dir attribute 1`] = `"ltr"`;
 
-exports[`Canonical Story Page SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`Canonical Story Page SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`Canonical Story Page SEO Heading level 1 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea"`;

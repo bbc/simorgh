@@ -329,8 +329,6 @@ exports[`AMP Live Radio SEO Canonical link 1`] = `"http://localhost:7080/gahuza/
 
 exports[`AMP Live Radio SEO Dir attribute 1`] = `"ltr"`;
 
-exports[`AMP Live Radio SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`AMP Live Radio SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`AMP Live Radio SEO Heading level 1 1`] = `"Radio BBC Gahuza"`;

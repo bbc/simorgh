@@ -353,8 +353,6 @@ exports[`AMP Articles SEO Canonical link 1`] = `"http://localhost:7080/persian/a
 
 exports[`AMP Articles SEO Dir attribute 1`] = `"rtl"`;
 
-exports[`AMP Articles SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`AMP Articles SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`AMP Articles SEO Heading level 1 1`] = `"پهپادی که برایتان قهوه می‌آورد"`;

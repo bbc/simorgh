@@ -255,8 +255,6 @@ exports[`Canonical Most Read Page SEO Canonical link 1`] = `"http://localhost:70
 
 exports[`Canonical Most Read Page SEO Dir attribute 1`] = `"ltr"`;
 
-exports[`Canonical Most Read Page SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`Canonical Most Read Page SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`Canonical Most Read Page SEO Heading level 1 1`] = `"Más leídas"`;
