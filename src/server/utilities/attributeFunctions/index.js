@@ -18,8 +18,16 @@ export const getScriptAttributes = bundleType => chunk => {
   return {};
 };
 
-export const getLinkAttributes = chunk => ({
-  crossOrigin,
-  rel: 'modulepreload',
-  ...(chunk && chunk.url && { href: encodeChunkFilename(chunk) }),
-});
+export const getLinkAttributes = chunk => {
+  const rel =
+    chunk.filename.match(
+      /modern\.commons\-n\.js$/ | /modern\.main\-src_a\.js$/,
+    ) || chunk.scriptType !== 'script'
+      ? 'modulepreload'
+      : '';
+  return {
+    crossOrigin,
+    rel,
+    ...(chunk && chunk.url && { href: encodeChunkFilename(chunk) }),
+  };
+};
