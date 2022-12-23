@@ -15,6 +15,7 @@ import TopicImage from './TopicImage';
 import TopicTitle from './TopicTitle';
 import TopicDescription from './TopicDescription';
 import Pagination from './Pagination';
+import MessageBanner from '../../components/MessageBanner';
 import Curation, { VISUAL_STYLE } from './Curation';
 
 const TopicPage = ({ pageData }) => {
@@ -93,19 +94,25 @@ const TopicPage = ({ pageData }) => {
               title: curationTitle,
               link,
               position,
+              visualStyle,
             }) => (
-              <Curation
-                headingLevel={curationTitle && 3}
-                key={curationId}
-                visualStyle={VISUAL_STYLE.NONE}
-                visualProminance={visualProminence}
-                promos={summaries}
-                title={curationTitle}
-                topStoriesTitle={topStoriesTitle}
-                position={position}
-                link={link}
-                curationLength={curations && curations.length}
-              />
+              <>
+                {visualStyle === 'BANNER' && (
+                  <MessageBanner title={curationTitle} summaries={summaries} />
+                )}
+                <Curation
+                  headingLevel={curationTitle && 3}
+                  key={curationId}
+                  visualStyle={VISUAL_STYLE.NONE}
+                  visualProminance={visualProminence}
+                  promos={summaries}
+                  title={curationTitle}
+                  topStoriesTitle={topStoriesTitle}
+                  position={position}
+                  link={link}
+                  curationLength={curations && curations.length}
+                />
+              </>
             ),
           )}
           <Pagination
