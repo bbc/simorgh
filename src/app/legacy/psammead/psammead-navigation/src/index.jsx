@@ -89,15 +89,15 @@ const StyledLink = styled.a`
       `}
   }
 
-  // // added code
+  // // // added code
   // &:focus-visible::after {
-  //   border: ${focusIndicatorThickness} solid ${C_WHITE};
+  //   // border: ${focusIndicatorThickness} solid ${C_WHITE};
   //   outline: ${focusIndicatorThickness} solid ${C_BLACK};
   //   position: absolute;
-  //   // box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
+  //   box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
   // }
 
-  // original code - notice ::after
+  // original code - notice ::after and ListItemBorder
   &:focus::after {
     ${ListItemBorder}
     ${({ brandHighlightColour }) =>
