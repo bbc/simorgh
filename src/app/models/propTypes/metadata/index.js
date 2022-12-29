@@ -27,13 +27,13 @@ export const mediaMetadataPropTypes = {
 };
 
 export const optimoMetadataPropTypes = {
-  id: string.isRequired,
+  id: string,
   type: string.isRequired,
   createdBy: string,
   created: number,
   firstPublished: number.isRequired,
   lastPublished: number.isRequired,
-  lastUpdated: number.isRequired,
+  lastUpdated: number,
   locators: shape({
     optimoUrn: string.isRequired,
   }),
