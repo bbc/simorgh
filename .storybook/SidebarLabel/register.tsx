@@ -1,6 +1,6 @@
 import React from 'react';
-import { addons, types } from '@storybook/addons';
-import SidebarLabel from './';
+import { addons } from '@storybook/addons';
+import SidebarLabel from '.';
 
 const ADDON_ID = 'bbc/component-health-sidebar';
 

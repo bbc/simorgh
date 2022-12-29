@@ -1,4 +1,4 @@
-import { getActionCount, isExempt } from './';
+import { getActionCount, isExempt } from '.';
 
 const complete = {
   uxAccessibilityDoc: {

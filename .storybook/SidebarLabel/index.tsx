@@ -1,6 +1,7 @@
 import React from 'react';
 /** @jsx jsx */ import { jsx } from '@emotion/core';
 import { useStorybookApi } from '@storybook/api';
+import path from 'ramda/src/path';
 import VisuallyHiddenText from '../../src/app/legacy/psammead/psammead-visually-hidden-text/src';
 import styles from './index.styles';
 import {
@@ -9,7 +10,6 @@ import {
   Activity,
 } from '../DocsDecorator/HealthFactors/Icons/icons';
 import ThemeProvider from '../../src/app/components/ThemeProvider';
-import path from 'ramda/src/path';
 import { getActionCount, isExempt } from '../helpers/healthFactors';
 
 const SidebarLabel = ({ item }) => {
@@ -55,7 +55,10 @@ const SidebarLabel = ({ item }) => {
   return (
     <ThemeProvider service="news" variant="default">
       <div css={styles.labelWrapper}>
-        <span role="text">
+        <span
+          // eslint-disable-next-line jsx-a11y/aria-role
+          role="text"
+        >
           {name}
           <VisuallyHiddenText>{`, Component Health: ${status}`}</VisuallyHiddenText>
           <span css={styles.iconWrapper}>{actionIcon}</span>
