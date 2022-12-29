@@ -23,6 +23,7 @@ module.exports = {
     '@storybook/addon-a11y',
     '@storybook/addon-viewport',
     '@storybook/addon-controls',
+    './SidebarLabel/preset.cjs',
     {
       name: '@storybook/addon-docs',
       options: {

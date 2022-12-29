@@ -4,8 +4,8 @@ import { useStorybookApi } from '@storybook/api';
 import VisuallyHiddenText from '../../src/app/legacy/psammead/psammead-visually-hidden-text/src';
 import styles from './index.styles';
 import {
-  Confirm,
-  Close,
+  Recommend,
+  Warning,
   Activity,
 } from '../DocsDecorator/HealthFactors/Icons/icons';
 import ThemeProvider from '../../src/app/components/ThemeProvider';
@@ -36,15 +36,24 @@ const SidebarLabel = ({ item }) => {
 
   const actionCount = getActionCount(metadata);
 
-  const hasIcon = actionCount === 0 ? <Confirm /> : <Close />;
+  const hasIcon =
+    actionCount === 0 ? (
+      <Recommend css={styles.recommendIcon} />
+    ) : (
+      <Warning css={styles.warningIcon} />
+    );
 
-  const actionIcon = metadata ? hasIcon : <Activity />;
+  const actionIcon = metadata ? (
+    hasIcon
+  ) : (
+    <Activity css={styles.activityIcon} />
+  );
 
   return (
     <ThemeProvider service="news" variant="default">
-      <div>
+      <div css={styles.labelWrapper}>
         <span>{name}</span>
-        <span>{actionIcon}</span>
+        <span css={styles.iconWrapper}>{actionIcon}</span>
       </div>
     </ThemeProvider>
   );

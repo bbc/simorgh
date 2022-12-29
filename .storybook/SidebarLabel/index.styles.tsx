@@ -1,22 +1,36 @@
-import { css, Theme } from '@emotion/react';
+import pixelsToRem from '../../src/app/utilities/pixelsToRem';
 
 const styles = {
-  componentHealthContainer: (theme: Theme) =>
-    css({
-      margin: `${theme.spacing.FULL}rem 0`,
-      border: `0.0625rem solid ${theme.palette.SHADOW}`,
-    }),
+  iconWrapper: {
+    display: 'inline-block',
+    boxSizing: 'border-box',
+    marginLeft: `0.5em`,
+    userSelect: 'none',
+    width: `${pixelsToRem(12)}rem`,
+    height: `${pixelsToRem(12)}rem`,
+  },
 
-  IconWrapper: (theme: Theme) =>
-    css({
-      marginLeft: `${theme.spacing.HALF}`,
-      userSelect: 'none',
-      width: '0.75rem',
-    }),
+  recommendIcon: {
+    width: `${pixelsToRem(12)}rem`,
+    height: `${pixelsToRem(12)}rem`,
+    fill: '#0A7B0A',
+  },
 
-  SidebarLabelWrapper: {
+  activityIcon: {
+    width: `${pixelsToRem(12)}rem`,
+    height: `${pixelsToRem(12)}rem`,
+    fill: '#3f3f42',
+  },
+
+  labelWrapper: {
     display: 'flex',
     alignItems: 'center',
+  },
+
+  warningIcon: {
+    width: `${pixelsToRem(12)}rem`,
+    height: `${pixelsToRem(12)}rem`,
+    fill: '#3f3f42',
   },
 };
 

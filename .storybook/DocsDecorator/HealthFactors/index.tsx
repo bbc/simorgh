@@ -1,5 +1,4 @@
 import React from 'react';
-import count from 'ramda/src/count';
 import path from 'ramda/src/path';
 import moment from 'moment';
 import Text from '../../../src/app/components/Text';
