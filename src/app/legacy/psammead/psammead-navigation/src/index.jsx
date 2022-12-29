@@ -73,7 +73,6 @@ const StyledLink = styled.a`
   text-decoration: none;
   display: inline-block;
   padding: ${SPACING_AROUND_NAV_ITEMS} 0.25rem;
-  background-color: yellow;
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     padding: ${SPACING_AROUND_NAV_ITEMS} ${GEL_SPACING};
@@ -101,10 +100,11 @@ const StyledLink = styled.a`
   // original code - notice ::after
   &:focus::after {
     ${ListItemBorder}
-    outline: ${GEL_SPACING_HLF} solid ${C_BLACK};
     ${({ brandHighlightColour }) =>
       `border-bottom: ${GEL_SPACING_HLF} solid ${brandHighlightColour};`}
     top: 0;
+    ${({ brandHighlightColour }) =>
+      `border: ${GEL_SPACING_HLF} solid ${brandHighlightColour};`}
   }
 `;
 
