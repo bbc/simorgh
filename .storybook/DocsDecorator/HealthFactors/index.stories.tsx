@@ -38,10 +38,10 @@ export const HealthFactorsWithOutstandingDocs = () => (
   <HealthFactorsComponent metadataFixture={threeOutstandingActions} />
 );
 
-export const HealthFactorsWithMissingDocs = () => (
+export const HealthFactorsWithInvalidData = () => (
   <HealthFactorsComponent metadataFixture={allMissingDocs} />
 );
 
-export const MissingHealthFactors = () => (
+export const HealthFactorsWithNoData = () => (
   <HealthFactorsComponent metadataFixture={null} />
 );

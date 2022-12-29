@@ -34,7 +34,7 @@ const styles = {
     css({
       width: `${pixelsToRem(24)}rem`,
       height: `${pixelsToRem(24)}rem`,
-      marginRight: theme.spacings.HALF,
+      marginRight: '0.5em',
       display: 'block',
     }),
 

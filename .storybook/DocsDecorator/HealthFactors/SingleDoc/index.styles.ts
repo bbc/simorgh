@@ -14,9 +14,10 @@ const styles = {
 
   linkIconContainer: (theme: Theme) =>
     css({
-      width: `${theme.spacings.DOUBLE}rem`,
-      height: `${theme.spacings.DOUBLE}rem`,
-      marginLeft: `${theme.spacings.HALF}rem`,
+      width: `${pixelsToRem(14)}rem`,
+      height: `${pixelsToRem(14)}rem`,
+      marginLeft: '0.5em',
+      verticalAlign: `-${pixelsToRem(2)}rem`,
     }),
 
   statusIconContainer: {
@@ -65,6 +66,7 @@ const styles = {
       color: theme.palette.SHADOW,
       '&:hover': {
         color: theme.palette.POSTBOX,
+        textDecorationThickness: `${pixelsToRem(2)}rem`,
       },
       '&:focus': {
         color: theme.palette.WHITE,

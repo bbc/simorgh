@@ -65,7 +65,7 @@ const HealthFactors = ({ metadata }: { metadata?: HealthFactorsMetadata }) => {
             {actionIcon}
           </span>
           <Text
-            size="doublePica"
+            size="greatPrimer"
             fontVariant="sansBold"
             as="strong"
             css={styles.title}

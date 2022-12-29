@@ -47,8 +47,10 @@ const SingleDoc = ({
           css={[styles.sidebarColumn, styles.sidebarText]}
           size="bodyCopy"
           fontVariant="sansRegular"
+          role="text"
         >
           {label}
+          <VisuallyHiddenText>{`, ${iconText}`}</VisuallyHiddenText>
         </Text>
       </div>
       <div css={styles.documentationLink}>
@@ -60,7 +62,6 @@ const SingleDoc = ({
           fontVariant="sansBold"
         >
           <span>{urlLabel}</span>
-          <VisuallyHiddenText>{iconText}</VisuallyHiddenText>
           <span
             aria-hidden
             css={[styles.iconContainer, styles.linkIconContainer]}
