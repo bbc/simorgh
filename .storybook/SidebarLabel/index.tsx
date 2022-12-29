@@ -49,11 +49,17 @@ const SidebarLabel = ({ item }) => {
     <Activity css={styles.activityIcon} />
   );
 
+  const statusCount = actionCount === 0 ? 'complete' : 'incomplete';
+  const status = metadata ? statusCount : 'missing';
+
   return (
     <ThemeProvider service="news" variant="default">
       <div css={styles.labelWrapper}>
-        <span>{name}</span>
-        <span css={styles.iconWrapper}>{actionIcon}</span>
+        <span role="text">
+          {name}
+          <VisuallyHiddenText>{`, Component Health: ${status}`}</VisuallyHiddenText>
+          <span css={styles.iconWrapper}>{actionIcon}</span>
+        </span>
       </div>
     </ThemeProvider>
   );
