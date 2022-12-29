@@ -35,7 +35,7 @@ const NavWrapper = styled.div`
   position: relative;
   max-width: 63.4rem;
   margin: 0;
-  // change to see white
+  // Izzy - change to see white
   // background-color: ${C_WHITE};
   background-color: yellow;
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
@@ -93,22 +93,32 @@ const StyledLink = styled.a`
       `}
   }
 
-  // original code - notice ::after and ListItemBorder
+  // Izzy - adds a white box shadow to element (self calulcated width)
+  &:focus-visible {
+    box-shadow: inset 0 0 0 0.375rem white;
+  }
+
+  // original removed - Izzy
 
   &:focus::after {
     ${ListItemBorder}
     top: 0;
     border: ${focusIndicatorThickness} solid ${C_BLACK};
+    // box-shadow: inset 0 0 0 ${focusIndicatorThickness} white;
+    // outline: ${focusIndicatorThickness} solid ${C_WHITE};
   }
 
   // Overrides these rules depending whether focus-visible state is being used, applies different styles to focus and focus-visible
   &:focus::after:not(:focus-visible) {
     border: none;
+    // box-shadow: none;
   }
   //
   &:focus-visible::after {
     ${ListItemBorder}
     border: ${focusIndicatorThickness} solid ${C_BLACK};
+    // box-shadow: inset 0 0 0 ${focusIndicatorThickness} white;
+    // outline: ${focusIndicatorThickness} solid ${C_WHITE};
   }
 
   // USE WITH OVERFLOW NOT HIDDEN
