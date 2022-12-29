@@ -3,7 +3,7 @@ import Component from '.';
 import blocksSingleFragment from '../Headings/testHelpers';
 
 export default {
-  title: 'Containers/Visually Hidden Headline',
+  title: 'Containers/Visually Hidden Headline/Visually Hidden Headline',
   Component,
 };
 

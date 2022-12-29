@@ -12,7 +12,7 @@ const Component = ({ service }) => (
 );
 
 export default {
-  title: 'Containers/Footer',
+  title: 'Containers/Footer/Footer',
   Component,
   decorators: [withKnobs, withServicesKnob()],
   parameters: {

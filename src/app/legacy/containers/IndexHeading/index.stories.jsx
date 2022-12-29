@@ -12,7 +12,7 @@ const Component = ({ service }) => (
 );
 
 export default {
-  title: 'Containers/Index Heading',
+  title: 'Containers/Index Heading/Index Heading',
   Component,
   parameters: { chromatic: { disable: true } },
   decorators: [withKnobs, withServicesKnob()],

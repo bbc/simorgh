@@ -26,7 +26,7 @@ const Component = ({ service, variant }) => {
 };
 
 export default {
-  title: 'Containers/Header',
+  title: 'Containers/Header/Header',
   Component,
   parameters: {
     chromatic: { disable: true },

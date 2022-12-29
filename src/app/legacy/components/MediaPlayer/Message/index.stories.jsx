@@ -12,7 +12,7 @@ const StyledMessageContainer = styled.div`
 `;
 
 export default {
-  title: 'Components/Media Message',
+  title: 'Components/Media Message/Media Message',
   component: MediaMessageComponent,
   parameters: {
     chromatic: {

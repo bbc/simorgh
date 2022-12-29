@@ -29,7 +29,7 @@ const Component = ({ service }) => {
 
 export default {
   Component,
-  title: 'Containers/Byline',
+  title: 'Containers/Byline/Byline',
   decorators: [withKnobs, withServicesKnob()],
   parameters: {
     chromatic: { disable: true },
