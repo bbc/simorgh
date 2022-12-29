@@ -67,8 +67,5 @@ describe('AudioPlayer blocks OnDemandHeading', () => {
     );
     expect(img.getAttribute('alt')).toEqual('BBC News Afaan Oromoo');
     expect(img.getAttribute('layout')).toEqual('responsive');
-    expect(img.getAttribute('srcset')).toEqual(
-      'https://ichef.bbci.co.uk/images/ic/128x128/p063j1dv.jpg 128w,https://ichef.bbci.co.uk/images/ic/240x240/p063j1dv.jpg 240w,https://ichef.bbci.co.uk/images/ic/480x480/p063j1dv.jpg 480w',
-    );
   });
 });
