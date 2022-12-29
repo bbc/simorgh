@@ -48,6 +48,7 @@ const Link = styled.a`
   //
   // Overrides these rules depending whether focus-visible state is being used, applies different styles to focus and focus-visible
   &:focus:not(:focus-visible) {
+    // add display: none;?
     outline: none;
     box-shadow: none;
     outline-offset: 0;

@@ -19,6 +19,7 @@ const hexToRGB = (hex, alpha = 1) => {
 const StyledScrollableNav = styled.div`
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     white-space: nowrap;
+    // this is causing focus indicator to be hidden
     overflow-x: scroll;
 
     /* Avoid using smooth scrolling as it causes accessibility issues */
@@ -45,7 +46,8 @@ const StyledScrollableNav = styled.div`
       `}
       bottom: 0;
       z-index: 3;
-      overflow: hidden;
+      // Izzy hide overflow for focus indicator work
+      // overflow: hidden;
       pointer-events: none;
       background: linear-gradient(
         ${({ dir }) => (dir === 'ltr' ? 'to right' : 'to left')},

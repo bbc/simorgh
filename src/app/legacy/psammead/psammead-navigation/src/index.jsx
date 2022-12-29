@@ -35,7 +35,9 @@ const NavWrapper = styled.div`
   position: relative;
   max-width: 63.4rem;
   margin: 0;
-  background-color: ${C_WHITE};
+  // change to see white
+  // background-color: ${C_WHITE};
+  background-color: yellow;
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin: 0 0.8rem;
   }
@@ -50,7 +52,7 @@ const StyledUnorderedList = styled.ul`
   margin: 0;
   position: relative;
 
-  // below is trimming off top of border/outline
+  // Izzy below is trimming off top of border/outline. Comment out to view outline/ box-shadow solution
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     overflow: hidden;
   }
@@ -72,6 +74,8 @@ const StyledLink = styled.a`
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
+  // Izzy added for focus indicator work - stops browser default showing
+  outline: none;
   padding: ${SPACING_AROUND_NAV_ITEMS} 0.25rem;
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
@@ -89,23 +93,47 @@ const StyledLink = styled.a`
       `}
   }
 
-  // // // added code
-  // &:focus-visible::after {
-  //   // border: ${focusIndicatorThickness} solid ${C_WHITE};
-  //   outline: ${focusIndicatorThickness} solid ${C_BLACK};
-  //   position: absolute;
-  //   box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
-  // }
-
   // original code - notice ::after and ListItemBorder
+
   &:focus::after {
     ${ListItemBorder}
-    ${({ brandHighlightColour }) =>
-      `border-bottom: ${GEL_SPACING_HLF} solid ${brandHighlightColour};`}
     top: 0;
-    ${({ brandHighlightColour }) =>
-      `border: ${GEL_SPACING_HLF} solid ${brandHighlightColour};`}
+    border: ${focusIndicatorThickness} solid ${C_BLACK};
   }
+
+  // Overrides these rules depending whether focus-visible state is being used, applies different styles to focus and focus-visible
+  &:focus::after:not(:focus-visible) {
+    border: none;
+  }
+  //
+  &:focus-visible::after {
+    ${ListItemBorder}
+    border: ${focusIndicatorThickness} solid ${C_BLACK};
+  }
+
+  // USE WITH OVERFLOW NOT HIDDEN
+  // &:focus::after {
+  //   ${ListItemBorder}
+  //   top: 0;
+  //   outline: ${focusIndicatorThickness} solid ${C_BLACK};
+  //   box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
+  //   outline-offset: ${focusIndicatorThickness};
+  // }
+  // //
+  // // Overrides these rules depending whether focus-visible state is being used, applies different styles to focus and focus-visible
+  // &:focus::after:not(:focus-visible) {
+  //   outline: none;
+  //   box-shadow: none;
+  //   outline-offset: 0;
+  // }
+  // //
+  // &:focus-visible::after {
+  //   ${ListItemBorder}
+  //   top: 0;
+  //   outline: ${focusIndicatorThickness} solid ${C_BLACK};
+  //   box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
+  //   outline-offset: ${focusIndicatorThickness};
+  // }
 `;
 
 const StyledListItem = styled.li`
