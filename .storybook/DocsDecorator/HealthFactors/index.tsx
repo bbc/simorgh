@@ -7,6 +7,7 @@ import { Recommend, Warning, Activity } from './Icons/icons';
 import SingleDoc from './SingleDoc';
 import styles from './index.styles';
 import HealthFactorsMetadata from '../types';
+import { getActionCount } from '../../helpers/healthFactors';
 
 const HealthFactors = ({ metadata }: { metadata?: HealthFactorsMetadata }) => {
   const uxAccessibility = path(['uxAccessibilityDoc'], metadata);
@@ -35,10 +36,7 @@ const HealthFactors = ({ metadata }: { metadata?: HealthFactorsMetadata }) => {
     'Three actions outstanding',
   ];
 
-  const actionCount = count(
-    x => typeof x === 'undefined' || !getDone(x),
-    [uxAccessibility, uxSwarm, acceptanceCriteria],
-  );
+  const actionCount = getActionCount(metadata);
 
   const headline = metadata
     ? actionTitles[actionCount]

@@ -32,7 +32,6 @@ module.exports = {
         transcludeMarkdown: true,
       },
     },
-    // './component-health-sidebar-addon/preset.cjs',
   ],
   webpackFinal: async config => {
     config.target = ['web', 'es5'];
