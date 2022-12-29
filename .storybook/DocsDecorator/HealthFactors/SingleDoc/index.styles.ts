@@ -1,4 +1,5 @@
 import { css, Theme } from '@emotion/react';
+import pixelsToRem from '../../../../src/app/utilities/pixelsToRem';
 
 const styles = {
   documentationContainer: {
@@ -13,16 +14,17 @@ const styles = {
 
   linkIconContainer: (theme: Theme) =>
     css({
-      width: `${theme.spacings.DOUBLE}rem`,
-      height: `${theme.spacings.DOUBLE}rem`,
-      marginLeft: `${theme.spacings.HALF}rem`,
+      width: `${pixelsToRem(14)}rem`,
+      height: `${pixelsToRem(14)}rem`,
+      marginLeft: '0.5em',
+      verticalAlign: `-${pixelsToRem(2)}rem`,
     }),
 
   statusIconContainer: {
     borderRadius: '100%',
-    width: '1.25rem',
-    height: '1.25rem',
-    padding: '0.25rem',
+    width: `${pixelsToRem(20)}rem`,
+    height: `${pixelsToRem(20)}rem`,
+    padding: `${pixelsToRem(4)}rem`,
   },
 
   icon: { height: '100%', width: `100%` },
@@ -41,7 +43,7 @@ const styles = {
     }),
 
   sidebarColumn: {
-    margin: '0.375rem',
+    margin: `${pixelsToRem(6)}rem`,
     marginLeft: '0',
   },
 
@@ -51,7 +53,7 @@ const styles = {
     }),
 
   documentationLink: {
-    margin: '0.25rem',
+    margin: `${pixelsToRem(4)}rem`,
   },
 
   documentationType: {
@@ -64,13 +66,14 @@ const styles = {
       color: theme.palette.SHADOW,
       '&:hover': {
         color: theme.palette.POSTBOX,
+        textDecorationThickness: `${pixelsToRem(2)}rem`,
       },
       '&:focus': {
         color: theme.palette.WHITE,
         backgroundColor: 'rgb(0, 100, 230)',
-        border: `0.125rem solid ${theme.palette.WHITE} !important`,
-        outline: `0.125rem solid ${theme.palette.SHADOW}`,
-        outlineOffset: `0.125rem`,
+        border: `${pixelsToRem(2)}rem solid ${theme.palette.WHITE} !important`,
+        outline: `${pixelsToRem(2)}rem solid ${theme.palette.SHADOW}`,
+        outlineOffset: `${pixelsToRem(2)}rem`,
         padding: `${theme.spacings.DOUBLE}rem`,
       },
     }),

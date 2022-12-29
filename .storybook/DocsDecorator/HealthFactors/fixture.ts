@@ -15,7 +15,7 @@ export const allCompletedDocs = {
     done: true,
     reference: {
       url: 'https://github.com/bbc/gel-test-docs/blob/master/act/promos.md',
-      label: 'GEL Accessibility Criteria Tests',
+      label: 'Accessibility acceptance criteria',
     },
   },
   swarm: {
@@ -44,7 +44,7 @@ export const oneOutstandingAction = {
     done: true,
     reference: {
       url: 'https://github.com/bbc/gel-test-docs/blob/master/act/promos.md',
-      label: 'GEL Accessibility Criteria Tests',
+      label: 'Accessibility acceptance criteria',
     },
   },
   swarm: {
@@ -73,7 +73,7 @@ export const twoOutstandingActions = {
     done: false,
     reference: {
       url: 'https://github.com/bbc/gel-test-docs/blob/master/act/promos.md',
-      label: 'GEL Accessibility Criteria Tests',
+      label: 'Accessibility acceptance criteria',
     },
   },
   swarm: {
@@ -102,7 +102,7 @@ export const threeOutstandingActions = {
     done: false,
     reference: {
       url: 'https://github.com/bbc/gel-test-docs/blob/master/act/promos.md',
-      label: 'GEL Accessibility Criteria Tests',
+      label: 'Accessibility acceptance criteria',
     },
   },
   swarm: {
@@ -131,7 +131,7 @@ export const oneMissingDoc = {
     done: true,
     reference: {
       url: 'https://github.com/bbc/gel-test-docs/blob/master/act/promos.md',
-      label: 'GEL Accessibility Criteria Tests',
+      label: 'Accessibility acceptance criteria',
     },
   },
 };
