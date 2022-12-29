@@ -1,6 +1,6 @@
 import React from 'react';
 import { bool, node, oneOf, string, number } from 'prop-types';
-import * as pageTypes from '#app/routes/utils/pageTypes';
+import * as pageTypes from '../../routes/utils/pageTypes';
 import getStatsDestination from './getStatsDestination';
 import getStatsPageIdentifier from './getStatsPageIdentifier';
 import getOriginContext from './getOriginContext';

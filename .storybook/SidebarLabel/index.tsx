@@ -1,4 +1,5 @@
 import React from 'react';
+/** @jsx jsx */ import { jsx } from '@emotion/core';
 import { useStorybookApi } from '@storybook/api';
 import pathOr from 'ramda/src/pathOr';
 import VisuallyHiddenText from '../../src/app/legacy/psammead/psammead-visually-hidden-text/src';
@@ -8,6 +9,7 @@ import {
   Close,
   ExternalLink,
 } from '../DocsDecorator/HealthFactors/Icons/icons';
+import ThemeProvider from '../../src/app/components/ThemeProvider';
 
 const SidebarLabel = ({ item }) => {
   const api = useStorybookApi();
@@ -41,15 +43,17 @@ const SidebarLabel = ({ item }) => {
   const status = [];
 
   return (
-    <div css={[styles.SidebarLabelWrapper]}>
-      <span role="text">
-        {name}
-        <VisuallyHiddenText>, Component Health: {status}</VisuallyHiddenText>
-      </span>
-      <span css={[styles.IconWrapper]}>
-        <Confirm />
-      </span>
-    </div>
+    <ThemeProvider service="news" variant="default">
+      <div css={[styles.SidebarLabelWrapper]}>
+        <span role="text">
+          {name}
+          <VisuallyHiddenText>, Component Health: {status}</VisuallyHiddenText>
+        </span>
+        <span css={[styles.IconWrapper]}>
+          <Confirm />
+        </span>
+      </div>
+    </ThemeProvider>
   );
 };
 
