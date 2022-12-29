@@ -12,13 +12,12 @@ const styles = {
     boxSizing: 'border-box',
   },
 
-  linkIconContainer: (theme: Theme) =>
-    css({
-      width: `${pixelsToRem(14)}rem`,
-      height: `${pixelsToRem(14)}rem`,
-      marginLeft: '0.5em',
-      verticalAlign: `-${pixelsToRem(2)}rem`,
-    }),
+  linkIconContainer: {
+    width: `${pixelsToRem(14)}rem`,
+    height: `${pixelsToRem(14)}rem`,
+    marginLeft: '0.5em',
+    verticalAlign: `-${pixelsToRem(2)}rem`,
+  },
 
   statusIconContainer: {
     borderRadius: '100%',

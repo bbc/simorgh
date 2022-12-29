@@ -47,6 +47,7 @@ const SingleDoc = ({
           css={[styles.sidebarColumn, styles.sidebarText]}
           size="bodyCopy"
           fontVariant="sansRegular"
+          // eslint-disable-next-line jsx-a11y/aria-role
           role="text"
         >
           {label}

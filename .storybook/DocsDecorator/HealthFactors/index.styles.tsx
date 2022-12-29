@@ -30,13 +30,12 @@ const styles = {
 
   icon: { height: '100%', width: `100%` },
 
-  titleIcon: (theme: Theme) =>
-    css({
-      width: `${pixelsToRem(24)}rem`,
-      height: `${pixelsToRem(24)}rem`,
-      marginRight: '0.5em',
-      display: 'block',
-    }),
+  titleIcon: {
+    width: `${pixelsToRem(24)}rem`,
+    height: `${pixelsToRem(24)}rem`,
+    marginRight: '0.5em',
+    display: 'block',
+  },
 
   title: (theme: Theme) =>
     css({
