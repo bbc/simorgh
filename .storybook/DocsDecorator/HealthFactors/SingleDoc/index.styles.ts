@@ -69,12 +69,9 @@ const styles = {
         textDecorationThickness: `${pixelsToRem(2)}rem`,
       },
       '&:focus': {
-        color: theme.palette.WHITE,
-        backgroundColor: 'rgb(0, 100, 230)',
-        border: `${pixelsToRem(2)}rem solid ${theme.palette.WHITE} !important`,
-        outline: `${pixelsToRem(2)}rem solid ${theme.palette.SHADOW}`,
-        outlineOffset: `${pixelsToRem(2)}rem`,
-        padding: `${theme.spacings.DOUBLE}rem`,
+        outline: `${pixelsToRem(3)}rem solid ${theme.palette.BLACK}`,
+        boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${theme.palette.WHITE}`,
+        outlineOffset: `${pixelsToRem(3)}rem`,
       },
     }),
 };
