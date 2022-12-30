@@ -36,8 +36,7 @@ const getStyles = dir => {
 };
 
 const StyledDropdown = styled.div`
-  // background-color: ${C_WHITE};
-  background-color: yellow;
+  background-color: ${C_WHITE};
   clear: both;
   overflow: hidden;
 

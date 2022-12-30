@@ -35,9 +35,7 @@ const NavWrapper = styled.div`
   position: relative;
   max-width: 63.4rem;
   margin: 0;
-  // Izzy - change to see white
-  // background-color: ${C_WHITE};
-  background-color: yellow;
+  background-color: ${C_WHITE};
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin: 0 0.8rem;
   }
