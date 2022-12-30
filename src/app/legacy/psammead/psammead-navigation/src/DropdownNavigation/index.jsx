@@ -4,6 +4,7 @@ import { shape, string, bool, func, oneOf, node } from 'prop-types';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import {
+  C_BLACK,
   C_WHITE,
   C_POSTBOX,
   C_GREY_10,
@@ -25,6 +26,9 @@ import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 
 export const NAV_BAR_TOP_BOTTOM_SPACING = 0.75; // 12px
 
+// Focus visible indicator to show around all focusable elements, links, buttons etc, across the WS sites.
+const focusIndicatorThickness = '0.1875rem';
+
 const getStyles = dir => {
   const direction = dir === 'ltr' ? 'left' : 'right';
   return `border-${direction}: ${GEL_SPACING_HLF} solid ${C_POSTBOX};
@@ -32,7 +36,8 @@ const getStyles = dir => {
 };
 
 const StyledDropdown = styled.div`
-  background-color: ${C_WHITE};
+  // background-color: ${C_WHITE};
+  background-color: yellow;
   clear: both;
   overflow: hidden;
 
@@ -100,6 +105,7 @@ const StyledDropdownLi = styled.li`
   padding: 0.75rem 0;
   border-bottom: 0.0625rem solid ${C_GREY_3};
 
+  // Izzy - this is causing cut off of bottom of focus indicator. Do we need this?
   &:last-child {
     padding-bottom: ${GEL_SPACING_HLF};
     border: 0;
@@ -114,10 +120,31 @@ const StyledDropdownLink = styled.a`
   padding: ${GEL_SPACING_HLF_TRPL} 0;
   display: inline-block;
 
-  &:hover,
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: ${C_POSTBOX};
+  }
+
+  // Applies all rules to focus state
   &:focus {
     text-decoration: underline;
     text-decoration-color: ${C_POSTBOX};
+    outline: ${focusIndicatorThickness} solid ${C_BLACK};
+    box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
+    outline-offset: ${focusIndicatorThickness};
+  }
+
+  // Overrides these rules depending whether focus-visible state is being used, applies different styles to focus and focus-visible
+  &:focus:not(:focus-visible) {
+    outline: none;
+    box-shadow: none;
+    outline-offset: 0;
+  }
+
+  &:focus-visible {
+    outline: ${focusIndicatorThickness} solid ${C_BLACK};
+    box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
+    outline-offset: ${focusIndicatorThickness};
   }
 `;
 
