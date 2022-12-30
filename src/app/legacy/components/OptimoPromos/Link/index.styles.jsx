@@ -3,20 +3,11 @@ import {
   C_EBON,
   C_BLACK,
   C_WHITE,
-  C_POSTBOX,
 } from '#psammead/psammead-styles/src/colours';
 import styled from '@emotion/styled';
 
 // Focus visible indicator to show around all focusable elements, links, buttons etc, across the WS sites.
 const focusIndicatorThickness = '0.1875rem';
-
-const ListItemBorder = `
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-`;
 
 const Link = styled.a`
   position: static;
@@ -49,6 +40,7 @@ const Link = styled.a`
   // Applies all rules to focus state
   &:focus {
     text-decoration: underline;
+    display: block;
     outline: ${focusIndicatorThickness} solid ${C_BLACK};
     box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
     outline-offset: ${focusIndicatorThickness};
@@ -56,12 +48,14 @@ const Link = styled.a`
   //
   // Overrides these rules depending whether focus-visible state is being used, applies different styles to focus and focus-visible
   &:focus:not(:focus-visible) {
+    // add display: none;?
     outline: none;
     box-shadow: none;
     outline-offset: 0;
   }
   //
   &:focus-visible {
+    display: block;
     outline: ${focusIndicatorThickness} solid ${C_BLACK};
     box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
     outline-offset: ${focusIndicatorThickness};
