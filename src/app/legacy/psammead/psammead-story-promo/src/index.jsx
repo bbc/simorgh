@@ -26,6 +26,8 @@ import {
   C_EBON,
   C_METAL,
   C_SHADOW,
+  C_BLACK,
+  C_WHITE,
 } from '#psammead/psammead-styles/src/colours';
 import {
   getSansRegular,
@@ -35,6 +37,9 @@ import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { grid } from '#psammead/psammead-styles/src/detection';
 import ImageGridItem from './ImageStyles';
 import TextGridItem from './TextStyles';
+
+// Focus visible indicator to show around all focusable elements, links, buttons etc, across the WS sites.
+const focusIndicatorThickness = '0.1875rem';
 
 const PROMO_TYPES = oneOf(['top', 'regular', 'leading']);
 
@@ -216,14 +221,40 @@ export const Link = styled.a`
     z-index: 1;
   }
 
-  &:hover,
-  &:focus {
+  // remove focus
+  &:hover {
     text-decoration: underline;
   }
 
   &:visited {
     color: ${C_METAL};
   }
+
+  // SOLUTION 2 - using focus:not(:focus-visible)
+  // Applies all rules to focus state
+  &:focus {
+    text-decoration: underline;
+    display: block;
+    outline: ${focusIndicatorThickness} solid ${C_BLACK};
+    box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
+    outline-offset: ${focusIndicatorThickness};
+  }
+  //
+  // Overrides these rules depending whether focus-visible state is being used, applies different styles to focus and focus-visible
+  &:focus:not(:focus-visible) {
+    // add display: none;?
+    outline: none;
+    box-shadow: none;
+    outline-offset: 0;
+  }
+  //
+  &:focus-visible {
+    display: block;
+    outline: ${focusIndicatorThickness} solid ${C_BLACK};
+    box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
+    outline-offset: ${focusIndicatorThickness};
+  }
+  // END SOLUTION 2
 `;
 
 const StoryPromo = ({
