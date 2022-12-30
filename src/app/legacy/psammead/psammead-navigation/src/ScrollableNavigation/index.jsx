@@ -46,6 +46,7 @@ const StyledScrollableNav = styled.div`
       `}
       bottom: 0;
       z-index: 3;
+      overflow: hidden;
       pointer-events: none;
       background: linear-gradient(
         ${({ dir }) => (dir === 'ltr' ? 'to right' : 'to left')},
