@@ -15046,7 +15046,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json5@npm:2.2.1, json5@npm:2.x, json5@npm:^2.2.1":
+"json5@npm:2.2.2":
+  version: 2.2.2
+  resolution: "json5@npm:2.2.2"
+  bin:
+    json5: lib/cli.js
+  checksum: 9a878d66b72157b073cf0017f3e5d93ec209fa5943abcb38d37a54b208917c166bd473c26a24695e67a016ce65759aeb89946592991f8f9174fb96c8e2492683
+  languageName: node
+  linkType: hard
+
+"json5@npm:2.x, json5@npm:^2.2.1":
   version: 2.2.1
   resolution: "json5@npm:2.2.1"
   bin:
@@ -20040,7 +20049,7 @@ __metadata:
     jest-silent-reporter: 0.5.0
     js-cookie: 3.0.1
     jsdom: 19.0.0
-    json5: 2.2.1
+    json5: 2.2.2
     lru-cache: 7.7.1
     minimist: 1.2.7
     mkdirp: 1.0.4
