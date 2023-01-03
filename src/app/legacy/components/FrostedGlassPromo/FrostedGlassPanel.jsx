@@ -40,7 +40,6 @@ const Background = styled.div`
   }
 `;
 
-const BORDER_RADIUS = 0.1875;
 const Children = styled.div`
   position: relative;
   z-index: 3;
@@ -48,20 +47,6 @@ const Children = styled.div`
   transition: background 0.5s ease-in-out;
   background: rgb(${({ colour }) => `${colour.join(',')}`});
   height: 100%;
-  a:focus-visible { 
-    box-shadow: -${BORDER_RADIUS * 1}rem  ${BORDER_RADIUS * 1}rem white,
-                -${BORDER_RADIUS * 1}rem -${BORDER_RADIUS * 1}rem white,
-                 ${BORDER_RADIUS * 1}rem -${BORDER_RADIUS * 1}rem white,
-                 ${BORDER_RADIUS * 1}rem  ${BORDER_RADIUS * 1}rem white,
-                -${BORDER_RADIUS * 2}rem  ${BORDER_RADIUS * 2}rem black,
-                -${BORDER_RADIUS * 2}rem -${BORDER_RADIUS * 2}rem black,
-                 ${BORDER_RADIUS * 2}rem -${BORDER_RADIUS * 2}rem black,
-                 ${BORDER_RADIUS * 2}rem  ${BORDER_RADIUS * 2}rem black;
-  }
-
-  a:focus-visible {
-    outline: none;
-  }
   ${({ isLoading, colour }) =>
     !isLoading &&
     `

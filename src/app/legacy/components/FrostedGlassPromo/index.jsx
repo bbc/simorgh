@@ -26,6 +26,7 @@ import FrostedGlassPanel from './FrostedGlassPanel';
 import withData from './withData';
 
 const PANEL_OFFSET = 250;
+const BORDER_RADIUS = 0.1875;
 
 const Wrapper = styled.div`
   position: relative;
@@ -81,6 +82,18 @@ const A = styled.a`
   }
   &:focus {
     text-decoration: underline;
+  }
+
+  &:focus-visible { 
+    outline: none;
+    box-shadow: -${BORDER_RADIUS * 1}rem  ${BORDER_RADIUS * 1}rem white,
+                -${BORDER_RADIUS * 1}rem -${BORDER_RADIUS * 1}rem white,
+                 ${BORDER_RADIUS * 1}rem -${BORDER_RADIUS * 1}rem white,
+                 ${BORDER_RADIUS * 1}rem  ${BORDER_RADIUS * 1}rem white,
+                -${BORDER_RADIUS * 2}rem  ${BORDER_RADIUS * 2}rem black,
+                -${BORDER_RADIUS * 2}rem -${BORDER_RADIUS * 2}rem black,
+                 ${BORDER_RADIUS * 2}rem -${BORDER_RADIUS * 2}rem black,
+                 ${BORDER_RADIUS * 2}rem  ${BORDER_RADIUS * 2}rem black;
   }
 `;
 
