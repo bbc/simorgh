@@ -5,7 +5,11 @@ import {
   getPica,
   getGreatPrimer,
 } from '#psammead/gel-foundations/src/typography';
-import { C_EBON } from '#psammead/psammead-styles/src/colours';
+import {
+  C_EBON,
+  C_BLACK,
+  C_WHITE,
+} from '#psammead/psammead-styles/src/colours';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { grid } from '#psammead/psammead-styles/src/detection';
 import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
@@ -29,6 +33,9 @@ export const getParentColumns = columnLayout => {
   return null;
 };
 
+// Focus visible indicator to show around all focusable elements, links, buttons etc, across the WS sites.
+const focusIndicatorThickness = '0.1875rem';
+
 const StyledLink = styled.a`
   ${({ script }) => script && getPica(script)}
   ${({ service }) => getSerifMedium(service)}
@@ -38,8 +45,8 @@ const StyledLink = styled.a`
   text-decoration: none;
   margin-bottom: ${GEL_SPACING};
 
-  &:hover,
-  &:focus {
+  // removed focus
+  &:hover {
     text-decoration: underline;
   }
 
@@ -54,6 +61,34 @@ const StyledLink = styled.a`
     white-space: nowrap;
     z-index: 1;
   }
+
+  // SOLUTION 2 - using focus:not(:focus-visible)
+  // Applies all rules to focus state
+
+  &:focus {
+    text-decoration: underline;
+    display: table-cell;
+    outline: ${focusIndicatorThickness} solid ${C_BLACK};
+    box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
+    outline-offset: ${focusIndicatorThickness};
+  }
+
+  // Overrides these rules depending whether focus-visible state is being used, applies different styles to focus and focus-visible
+  &:focus:not(:focus-visible) {
+    // add display rule?
+    outline: none;
+    box-shadow: none;
+    outline-offset: 0;
+  }
+
+  &:focus-visible {
+    text-decoration: underline;
+    display: table-cell;
+    outline: ${focusIndicatorThickness} solid ${C_BLACK};
+    box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
+    outline-offset: ${focusIndicatorThickness};
+  }
+  // END SOLUTION 2
 
   ${({ script, size }) =>
     script &&
