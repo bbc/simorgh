@@ -58,7 +58,8 @@ export const EventTrackingContextProvider = ({ children, pageData }) => {
   const serviceContext = useContext(ServiceContext);
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
 
-  if (!eventTrackingIsEnabled || !pageData) {
+  // TODO: Enable event tracking for NextJS pages
+  if (!eventTrackingIsEnabled || !pageData || requestContext.isNextJs) {
     return (
       <EventTrackingContext.Provider value={NO_TRACKING_PROPS}>
         {children}
