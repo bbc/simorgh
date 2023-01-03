@@ -27,7 +27,7 @@ export const mediaMetadataPropTypes = {
 };
 
 export const optimoMetadataPropTypes = {
-  id: string,
+  id: string.isRequired,
   type: string.isRequired,
   createdBy: string,
   created: number,
