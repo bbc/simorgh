@@ -104,12 +104,26 @@ const EllipsisBlock = styled(Block)`
   }
 `;
 
+const BORDER_RADIUS = 0.1875;
+
 const A = styled.a`
   display: block;
   color: ${C_GREY_10};
   text-decoration: none;
   height: 100%;
   width: 100%;
+
+  &:focus-visible { 
+    outline: none;
+    box-shadow: -${BORDER_RADIUS * 1}rem  ${BORDER_RADIUS * 1}rem white,
+                -${BORDER_RADIUS * 1}rem -${BORDER_RADIUS * 1}rem white,
+                 ${BORDER_RADIUS * 1}rem -${BORDER_RADIUS * 1}rem white,
+                 ${BORDER_RADIUS * 1}rem  ${BORDER_RADIUS * 1}rem white,
+                -${BORDER_RADIUS * 2}rem  ${BORDER_RADIUS * 2}rem black,
+                -${BORDER_RADIUS * 2}rem -${BORDER_RADIUS * 2}rem black,
+                 ${BORDER_RADIUS * 2}rem -${BORDER_RADIUS * 2}rem black,
+                 ${BORDER_RADIUS * 2}rem  ${BORDER_RADIUS * 2}rem black;
+  }
 
   ${({ isActive }) =>
     isActive
