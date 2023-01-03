@@ -8,7 +8,7 @@
     "build:test": "cp ../envConfig/test.env .env && NODE_ENV=production && next build",
     "build:live": "cp ../envConfig/live.env .env && NODE_ENV=production && next build",
     "build": "yarn build:local",
-    "dev": "yarn setupDevEnv && next -p 7081",
+    "dev": "yarn setupDevEnv && next dev -p 7081",
     "start": "next start -p 7081 && NODE_ENV=production"
   },
   "devDependencies": {
