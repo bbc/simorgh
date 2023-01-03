@@ -41,7 +41,6 @@ const Background = styled.div`
 `;
 
 const BORDER_RADIUS = 0.1875;
-
 const Children = styled.div`
   position: relative;
   z-index: 3;
@@ -49,15 +48,15 @@ const Children = styled.div`
   transition: background 0.5s ease-in-out;
   background: rgb(${({ colour }) => `${colour.join(',')}`});
   height: 100%;
-  a:focus-visible:after {
-    content: "";
-    position: absolute;
-    top: ${BORDER_RADIUS}rem;
-    left: ${BORDER_RADIUS}rem;
-    width: calc(100% - ${BORDER_RADIUS * 2}rem);
-    height: calc(100% - ${BORDER_RADIUS * 2}rem);
-    border: ${BORDER_RADIUS}rem solid white; 
-    outline: ${BORDER_RADIUS}rem solid black;
+  a:focus-visible { 
+    box-shadow: -${BORDER_RADIUS * 1}rem  ${BORDER_RADIUS * 1}rem white,
+                -${BORDER_RADIUS * 1}rem -${BORDER_RADIUS * 1}rem white,
+                 ${BORDER_RADIUS * 1}rem -${BORDER_RADIUS * 1}rem white,
+                 ${BORDER_RADIUS * 1}rem  ${BORDER_RADIUS * 1}rem white,
+                -${BORDER_RADIUS * 2}rem  ${BORDER_RADIUS * 2}rem black,
+                -${BORDER_RADIUS * 2}rem -${BORDER_RADIUS * 2}rem black,
+                 ${BORDER_RADIUS * 2}rem -${BORDER_RADIUS * 2}rem black,
+                 ${BORDER_RADIUS * 2}rem  ${BORDER_RADIUS * 2}rem black;
   }
 
   a:focus-visible {
@@ -71,6 +70,8 @@ const Children = styled.div`
       }
     `}
 `;
+
+
 
 const FrostedGlassPanel = ({
   image,
@@ -88,6 +89,8 @@ const FrostedGlassPanel = ({
   const backgroundImageStyle = {
     backgroundImage: `url('${image}')`,
   };
+
+  console.log("CHILDREN", children.props.children[0].props.children.props.children.length)
 
   return (
     <Wrapper>
