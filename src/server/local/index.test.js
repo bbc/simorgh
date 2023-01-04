@@ -18,7 +18,7 @@ describe('Local Server', () => {
 
   it.each`
     pageType                           | dataPath                                                         | expectedDataFile
-    ${'Article'}                       | ${'/news/articles/c0000000001o.json'}                            | ${'/news/articles/c0000000001o.json'}
+    ${'Article'}                       | ${'/news/articles/c0g992jmmkko.json'}                            | ${'/news/articles/c0g992jmmkko.json'}
     ${'Article with variant'}          | ${'/zhongwen/articles/c3xd4x9prgyo/simp.json'}                   | ${'/zhongwen/articles/c3xd4x9prgyo/simp.json'}
     ${'Front Page'}                    | ${'/pidgin.json'}                                                | ${'/pidgin/frontpage/index.json'}
     ${'Front Page with variant'}       | ${'/zhongwen/trad.json'}                                         | ${'/zhongwen/frontpage/trad.json'}
