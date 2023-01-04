@@ -13,7 +13,6 @@ import {
 import { FRONT_PAGE, MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import Document from './Document/component';
 import routes from '../app/routes';
-import getAssetOrigins from './utilities/getAssetOrigins';
 import * as renderDocument from './Document';
 import sendCustomMetrics from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
@@ -111,8 +110,6 @@ const testRenderedData =
   async () => {
     const { text, status } = await makeRequest(url);
 
-    const assetOrigins = getAssetOrigins(service);
-
     expect(status).toBe(200);
 
     expect(reactDomServer.renderToString).toHaveBeenCalled();
@@ -124,11 +121,9 @@ const testRenderedData =
           ids: [],
           html: '<h1>Mock app</h1>',
         }}
-        assetOrigins={assetOrigins}
         data={successDataResponse}
         helmet={{ head: 'tags' }}
         isAmp={isAmp}
-        service={service}
         legacyScripts="__mock_script_elements__"
         modernScripts="__mock_script_elements__"
         links="__mock_link_elements__"
@@ -1314,8 +1309,6 @@ describe('Server', () => {
       it('should respond with rendered data', async () => {
         const { text, status } = await makeRequest(`/${service}/foobar`);
 
-        const assetOrigins = getAssetOrigins(service);
-
         expect(status).toBe(404);
 
         expect(reactDomServer.renderToString).toHaveBeenCalled();
@@ -1327,11 +1320,9 @@ describe('Server', () => {
               ids: [],
               html: '<h1>Mock app</h1>',
             }}
-            assetOrigins={assetOrigins}
             data={dataResponse}
             helmet={{ head: 'tags' }}
             isAmp={isAmp}
-            service={service}
             legacyScripts="__mock_script_elements__"
             modernScripts="__mock_script_elements__"
             links="__mock_link_elements__"

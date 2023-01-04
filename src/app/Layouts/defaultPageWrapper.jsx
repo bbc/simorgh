@@ -72,7 +72,7 @@ const PageWrapper = ({ children, pageData, status }) => {
 					head.appendChild(fontStylePlaceholder);
                 };
                 const retrieveAndStoreFont = (font, storageKey, shouldAttachStyle) => {
-                	const fontLocation = font.src ? font.src : 'https://gel.files.bbci.co.uk/'+ font.version + (font.subsets ? '/subsets' : '') + '/' + font.name + '.woff2';
+                	const fontLocation = font.src ? font.src : 'https://static.files.bbci.co.uk/fonts/reith/'+ font.version + (font.subsets ? '/subsets' : '') + '/' + font.name + '.woff2';
                     window.addEventListener("load", (e) => {
                     getFont(fontLocation).then((fontContents) => {
                     	const forStorage = { base64Contents: fontContents, fontFamily: font.fontFamily, fontWeight: font.fontWeight, fontVersion: font.version };

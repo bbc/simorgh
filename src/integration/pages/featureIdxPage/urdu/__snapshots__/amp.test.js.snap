@@ -203,7 +203,7 @@ Object {
 
 exports[`AMP Feature Index page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/urdu"`;
 
-exports[`AMP Feature Index page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں بیرونی لنکس کے بارے میں ہماری پالیسی."`;
+exports[`AMP Feature Index page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں بیرونی لنکس کے بارے میں ہماری پالیسی."`;
 
 exports[`AMP Feature Index page Header I can see the branding 1`] = `"BBC News, اردو"`;
 
@@ -436,25 +436,14 @@ exports[`AMP Feature Index page Story Promo Image should match image 1`] = `
   alt="بل گیٹس"
   attribution="AFP/getty images"
   class="bbc-image"
+  fallback=""
   height="576"
   layout="responsive"
+  sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/B04F/production/_112753154_bill.jpg"
-  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/B04F/production/_112753154_bill.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/B04F/production/_112753154_bill.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/B04F/production/_112753154_bill.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/B04F/production/_112753154_bill.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/B04F/production/_112753154_bill.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/B04F/production/_112753154_bill.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/B04F/production/_112753154_bill.jpg.webp 660w"
+  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/B04F/production/_112753154_bill.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/B04F/production/_112753154_bill.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/B04F/production/_112753154_bill.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/B04F/production/_112753154_bill.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/B04F/production/_112753154_bill.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/B04F/production/_112753154_bill.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/B04F/production/_112753154_bill.jpg 660w"
   width="1024"
->
-  <amp-img
-    alt="بل گیٹس"
-    attribution="AFP/getty images"
-    class="bbc-image"
-    fallback=""
-    height="576"
-    layout="responsive"
-    sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
-    src="https://ichef.bbci.co.uk/news/660/cpsprodpb/B04F/production/_112753154_bill.jpg"
-    srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/B04F/production/_112753154_bill.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/B04F/production/_112753154_bill.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/B04F/production/_112753154_bill.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/B04F/production/_112753154_bill.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/B04F/production/_112753154_bill.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/B04F/production/_112753154_bill.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/B04F/production/_112753154_bill.jpg 660w"
-    width="1024"
-  />
-</amp-img>
+/>
 `;
 
 exports[`AMP Feature Index page Story Promo Link should match text and url 1`] = `
