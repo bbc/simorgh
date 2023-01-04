@@ -47,7 +47,6 @@ const Children = styled.div`
   transition: background 0.5s ease-in-out;
   background: rgb(${({ colour }) => `${colour.join(',')}`});
   height: 100%;
-
   ${({ isLoading, colour }) =>
     !isLoading &&
     `
@@ -56,6 +55,8 @@ const Children = styled.div`
       }
     `}
 `;
+
+
 
 const FrostedGlassPanel = ({
   image,
@@ -73,6 +74,8 @@ const FrostedGlassPanel = ({
   const backgroundImageStyle = {
     backgroundImage: `url('${image}')`,
   };
+
+  console.log("CHILDREN", children.props.children[0].props.children.props.children.length)
 
   return (
     <Wrapper>

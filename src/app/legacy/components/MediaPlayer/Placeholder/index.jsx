@@ -6,6 +6,8 @@ import PlayButton from '#psammead/psammead-play-button/src';
 import { C_POSTBOX } from '#psammead/psammead-styles/src/colours';
 import Guidance from '../Guidance';
 
+const BORDER_RADIUS = 0.1875;
+
 const StyledPlayButton = styled(PlayButton)`
   position: absolute;
   bottom: 0;
@@ -16,6 +18,17 @@ const StyledPlayButton = styled(PlayButton)`
         display: none;
       }
     `}
+  &:focus-visible { 
+    outline: none;
+    box-shadow: inset -${BORDER_RADIUS * 1}rem  ${BORDER_RADIUS * 1}rem white,
+                inset -${BORDER_RADIUS * 1}rem -${BORDER_RADIUS * 1}rem white,
+                inset  ${BORDER_RADIUS * 1}rem -${BORDER_RADIUS * 1}rem white,
+                inset  ${BORDER_RADIUS * 1}rem  ${BORDER_RADIUS * 1}rem white,
+                inset -${BORDER_RADIUS * 2}rem  ${BORDER_RADIUS * 2}rem black,
+                inset -${BORDER_RADIUS * 2}rem -${BORDER_RADIUS * 2}rem black,
+                inset  ${BORDER_RADIUS * 2}rem -${BORDER_RADIUS * 2}rem black,
+                inset  ${BORDER_RADIUS * 2}rem  ${BORDER_RADIUS * 2}rem black;
+  }
 `;
 
 const StyledPlaceholder = styled.div`
