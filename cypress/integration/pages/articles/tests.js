@@ -63,7 +63,7 @@ export const testsThatFollowSmokeTestConfig = ({
 
       it('should render an H2, which contains/displays a styled subheading', () => {
         cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-          if (body.metadata.language === 'en-gb') {
+          if (body.data.article.metadata.language === 'en-gb') {
             const subheadingData = getBlockData('subheadline', body);
             cy.get('h2').should(
               'contain',
@@ -129,7 +129,7 @@ export const testsThatFollowSmokeTestConfig = ({
 
       it('should have an inline link', () => {
         cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-          if (body.metadata.language === 'en-gb') {
+          if (body.data.article.metadata.language === 'en-gb') {
             cy.get('main a');
           }
         });
