@@ -12,33 +12,38 @@ export default ({ service, pageType, variant }) => {
     beforeEach(() => {
       cy.log(Cypress.env('currentPath'));
       cy.log(service);
-
-      // eslint-disable-next-line prefer-destructuring
-      topicId = Cypress.env('currentPath').split('topics/').pop().split('?')[0];
-
-      if (scriptSwitchServices.includes(service)) {
-        appendVariant = `&variant=${variant}`;
-        if (service === 'serbian') {
-          otherVariant = variant === 'lat' ? 'cyr' : 'lat';
-        }
-        if (service === 'ukchina' || service === 'zhongwen') {
-          otherVariant = variant === 'simp' ? 'trad' : 'simp';
-        }
-      }
       const env = Cypress.env('APP_ENV');
-      // Gets the topic page data for all the tests
-      cy.request(
-        `https://web-cdn.${
-          env === 'live' ? '' : `${env}.`
-        }api.bbci.co.uk/fd/simorgh-bff?page=1&id=${topicId}&service=${service}${appendVariant}`,
-      ).then(({ body }) => {
-        topicTitle = body.data.title;
-        variantTopicId = body.data.variantTopicId;
-        pageCount = body.data.pageCount;
-        numberOfItems = body.data.curations[0].summaries.length;
-        firstItemHeadline = body.data.curations[0].summaries[0].title;
-      });
-      cy.log(`topic id ${topicId}`);
+      if (env !== 'local') {
+        // eslint-disable-next-line prefer-destructuring
+        topicId = Cypress.env('currentPath')
+          .split('topics/')
+          .pop()
+          .split('?')[0];
+
+        if (scriptSwitchServices.includes(service)) {
+          appendVariant = `&variant=${variant}`;
+          if (service === 'serbian') {
+            otherVariant = variant === 'lat' ? 'cyr' : 'lat';
+          }
+          if (service === 'ukchina' || service === 'zhongwen') {
+            otherVariant = variant === 'simp' ? 'trad' : 'simp';
+          }
+        }
+
+        // Gets the topic page data for all the tests
+        cy.request(
+          `https://web-cdn.${
+            env === 'live' ? '' : `${env}.`
+          }api.bbci.co.uk/fd/simorgh-bff?page=1&id=${topicId}&service=${service}${appendVariant}`,
+        ).then(({ body }) => {
+          topicTitle = body.data.title;
+          variantTopicId = body.data.variantTopicId;
+          pageCount = body.data.pageCount;
+          numberOfItems = body.data.curations[0].summaries.length;
+          firstItemHeadline = body.data.curations[0].summaries[0].title;
+        });
+        cy.log(`topic id ${topicId}`);
+      }
     });
     describe(`Page content`, () => {
       it('should render a H1, which contains/displays topic title', () => {
