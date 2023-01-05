@@ -229,7 +229,7 @@ export const service: DefaultServiceConfig = {
         previousRadioShow: 'पछिल्लो रेडिओ कार्यक्रम',
         nextRadioShow: 'अघिल्लो रेडिओ कार्यक्रम',
         duration: 'समयावधि',
-        recentEpisodes: 'पहिलेका कार्यक्रमहरु',
+        recentEpisodes: 'पहिलेका कार्यक्रमहरू',
         podcastExternalLinks: 'यो पडकास्ट सुन्नकालागि यहाँ उपलब्ध छ',
       },
       socialEmbed: {
@@ -335,15 +335,11 @@ export const service: DefaultServiceConfig = {
         url: '/nepali/topics/cp2d78r6qppt',
       },
       {
-        title: 'विश्वकप फुटबल २०२२',
-        url: '/nepali/topics/c00r2x03gvkt',
-      },
-      {
         title: 'पछिल्लो कार्यक्रम',
         url: '/nepali/media-54029171',
       },
       {
-        title: 'भिडियो',
+        title: 'भिडिओ',
         url: '/nepali/topics/cw9kv027nwnt',
       },
     ],

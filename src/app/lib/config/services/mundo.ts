@@ -342,10 +342,6 @@ export const service: DefaultServiceConfig = {
         url: '/mundo/topics/c2lej05epw5t',
       },
       {
-        title: 'Qatar 2022',
-        url: '/mundo/topics/c36v5eq58ngt',
-      },
-      {
         title: 'Hay Festival',
         url: '/mundo/noticias-36795069',
       },
