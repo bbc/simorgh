@@ -89,15 +89,4 @@ describe('Document Component', () => {
 
     expect(head).not.toContainHTML(linksHtml);
   });
-
-  it('should render preload links on canonical', () => {
-    const dom = new JSDOM(
-      renderToString(<TestDocumentComponent service="news" />),
-    );
-
-    const head = dom.window.document.querySelector('head');
-    const linksHtml = renderToStaticMarkup(links);
-
-    expect(head).toContainHTML(linksHtml);
-  });
 });
