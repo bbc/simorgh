@@ -152,7 +152,7 @@ export const testsThatFollowSmokeTestConfig = ({
 
       it('should have an inline link', () => {
         if (articlesData.data.article.metadata.language === 'en-gb') {
-          cy.get('main a');
+          cy.get('main a').should('exist');
         }
       });
 
