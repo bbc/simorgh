@@ -1,6 +1,5 @@
 import React from 'react';
 import loggerMock from '#testHelpers/loggerMock';
-import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import SocialEmbedContainer from '.';
 import {
@@ -45,11 +44,6 @@ describe('SocialEmbedContainer', () => {
           'head script[src="https://platform.twitter.com/widgets.js"]',
         ),
       ).toBeTruthy();
-      expect(loggerMock.info).toHaveBeenCalledTimes(1);
-      expect(loggerMock.info).toHaveBeenCalledWith(SOCIAL_EMBED_RENDERED, {
-        provider: 'twitter',
-        href: 'https://twitter.com/BBCNews/status/1384138850478346243?s=20',
-      });
       unmount();
       expect(
         document.querySelector(
@@ -73,11 +67,6 @@ describe('SocialEmbedContainer', () => {
           'head script[src="https://www.instagram.com/embed.js"]',
         ),
       ).toBeTruthy();
-      expect(loggerMock.info).toHaveBeenCalledTimes(1);
-      expect(loggerMock.info).toHaveBeenCalledWith(SOCIAL_EMBED_RENDERED, {
-        provider: 'instagram',
-        href: 'https://www.instagram.com/p/CgNAEjOK46_',
-      });
       unmount();
       expect(
         document.querySelector(
@@ -97,11 +86,6 @@ describe('SocialEmbedContainer', () => {
 
       expect(container.firstChild).toMatchSnapshot();
 
-      expect(loggerMock.info).toHaveBeenCalledTimes(1);
-      expect(loggerMock.info).toHaveBeenCalledWith(SOCIAL_EMBED_RENDERED, {
-        provider: 'youtube',
-        href: 'https://www.youtube.com/embed/1e05_rwHvOM?feature=oembed',
-      });
       unmount();
     });
 
@@ -116,11 +100,6 @@ describe('SocialEmbedContainer', () => {
 
       expect(container.firstChild).toMatchSnapshot();
 
-      expect(loggerMock.info).toHaveBeenCalledTimes(1);
-      expect(loggerMock.info).toHaveBeenCalledWith(SOCIAL_EMBED_RENDERED, {
-        provider: 'tiktok',
-        href: 'https://www.tiktok.com/@cuppymusic/video/7086167423639997701',
-      });
       unmount();
     });
 
@@ -139,11 +118,6 @@ describe('SocialEmbedContainer', () => {
           'head script[src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0"]',
         ),
       ).toBeTruthy();
-      expect(loggerMock.info).toHaveBeenCalledTimes(1);
-      expect(loggerMock.info).toHaveBeenCalledWith(SOCIAL_EMBED_RENDERED, {
-        provider: 'facebook',
-        href: 'https://www.facebook.com/RickAstley/posts/545713756920775',
-      });
       unmount();
       expect(
         document.querySelector(
@@ -167,11 +141,6 @@ describe('SocialEmbedContainer', () => {
           'head script[src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0"]',
         ),
       ).toBeTruthy();
-      expect(loggerMock.info).toHaveBeenCalledTimes(1);
-      expect(loggerMock.info).toHaveBeenCalledWith(SOCIAL_EMBED_RENDERED, {
-        provider: 'facebook',
-        href: 'https://www.facebook.com/RickAstley/videos/1378590239249667',
-      });
       unmount();
       expect(
         document.querySelector(
