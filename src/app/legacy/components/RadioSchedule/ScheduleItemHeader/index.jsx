@@ -33,7 +33,6 @@ const StyledLink = styled(Link)`
 
   &:focus ${TitleWrapper} {
     text-decoration: underline;
-    background-color: yellow;
   }
 `;
 
