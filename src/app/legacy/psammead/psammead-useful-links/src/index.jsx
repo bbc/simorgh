@@ -1,7 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
-import { C_EBON, C_METAL } from '#psammead/psammead-styles/src/colours';
+import {
+  C_EBON,
+  C_METAL,
+  C_WHITE,
+  C_BLACK,
+} from '#psammead/psammead-styles/src/colours';
 import { grid } from '#psammead/psammead-styles/src/detection';
 import { getPica } from '#psammead/gel-foundations/src/typography';
 import {
@@ -15,6 +20,9 @@ import {
 import { node, string, shape } from 'prop-types';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 
+// Focus visible indicator to show around all focusable elements, links, buttons etc, across the WS sites.
+const focusIndicatorThickness = '0.1875rem';
+
 const getRowCount = (children, columns) =>
   Math.ceil(React.Children.count(children) / columns);
 
@@ -23,14 +31,40 @@ export const UsefulLink = styled.a`
   ${({ service }) => service && getSerifMedium(service)};
   color: ${C_EBON};
   text-decoration: none;
-  &:hover,
-  &:focus {
+  // remove focus
+  &:hover {
     text-decoration: underline;
   }
 
   &:visited {
     color: ${C_METAL};
   }
+
+  // SOLUTION 2 - using focus:not(:focus-visible)
+  // Applies all rules to focus state
+  &:focus {
+    text-decoration: underline;
+    display: block;
+    outline: ${focusIndicatorThickness} solid ${C_BLACK};
+    box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
+    outline-offset: ${focusIndicatorThickness};
+  }
+  //
+  // Overrides these rules depending whether focus-visible state is being used, applies different styles to focus and focus-visible
+  &:focus:not(:focus-visible) {
+    // override display?
+    outline: none;
+    box-shadow: none;
+    outline-offset: 0;
+  }
+  //
+  &:focus-visible {
+    display: block;
+    outline: ${focusIndicatorThickness} solid ${C_BLACK};
+    box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
+    outline-offset: ${focusIndicatorThickness};
+  }
+  // END SOLUTION 2
 `;
 
 UsefulLink.propTypes = {
