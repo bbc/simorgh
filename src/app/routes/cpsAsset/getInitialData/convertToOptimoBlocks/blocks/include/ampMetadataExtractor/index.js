@@ -1,8 +1,4 @@
 import Url from 'url-parse';
-import nodeLogger from '#lib/logger.node';
-import { INCLUDE_IFRAME_REQUEST_RECEIVED } from '#lib/logger.const';
-
-const logger = nodeLogger(__filename);
 
 /**
  * Returns an object containing metadata extracted from an Include url
@@ -15,10 +11,6 @@ const ampMetadataExtractor = (href, baseUrl) => {
   const queryString = new Url(href).query;
 
   const src = `${protocol}//${hostname}${pathname}/amp${queryString}`;
-
-  logger.info(INCLUDE_IFRAME_REQUEST_RECEIVED, {
-    url: src,
-  });
 
   return {
     src,
