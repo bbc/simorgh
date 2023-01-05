@@ -19,7 +19,7 @@ import durationDictionary, { programStateConfig } from '../utilities';
 
 const TitleWrapper = styled.span`
   color: ${({ titleColor }) => titleColor};
-  padding: ${GEL_SPACING} 0;
+  padding: ${GEL_SPACING} 0 0 0;
   display: inline-block;
   width: 100%;
   ${({ service }) => service && getSansRegular(service)}
