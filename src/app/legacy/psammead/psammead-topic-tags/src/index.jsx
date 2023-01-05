@@ -5,6 +5,8 @@ import {
   C_LUNAR,
   C_EBON,
   C_METAL,
+  C_BLACK,
+  C_WHITE,
 } from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING_HLF,
@@ -16,6 +18,9 @@ import { getBrevier } from '#psammead/gel-foundations/src/typography';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 
 const MIN_TAG_HEIGHT = '2.75rem'; // 44px
+
+// Focus visible indicator to show around all focusable elements, links, buttons etc, across the WS sites.
+const focusIndicatorThickness = '0.1875rem';
 
 const CONTAINER_STYLES = `
   display: flex;
@@ -53,13 +58,34 @@ const SingleTopicTagItem = styled.div`
     text-decoration: none;
     color: ${C_EBON};
 
-    &:hover,
-    &:focus {
+    // remove focus
+    &:hover {
       text-decoration: underline;
     }
     &:visited {
       color: ${C_METAL};
     }
+
+    // SOLUTION 2 - using focus:not(:focus-visible)
+    // Applies all rules to focus state
+    &:focus {
+      text-decoration: underline;
+      outline: ${focusIndicatorThickness} solid ${C_BLACK};
+      box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
+      outline-offset: ${focusIndicatorThickness};
+    }
+    //
+    // Overrides these rules depending whether focus-visible state is being used, applies different styles to focus and focus-visible
+    &:focus:not(:focus-visible) {
+      outline: none;
+      box-shadow: none;
+      outline-offset: 0;
+    }
+    //
+    &:focus-visible {
+      outline: ${focusIndicatorThickness} solid ${C_BLACK};
+      box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
+      outline-offset: ${focusIndicatorThickness};
   }
 `;
 
