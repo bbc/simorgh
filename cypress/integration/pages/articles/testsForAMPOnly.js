@@ -29,11 +29,9 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
         let appendVariant = '';
 
         // eslint-disable-next-line prefer-destructuring
-        const articleId = Cypress.env('currentPath')
-          .split('articles/')
-          .pop()
-          .split('?')[0];
-        cy.log(articleId);
+        const articleId =
+          Cypress.env('currentPath').match(/(c[a-zA-Z0-9]{10}o)/)?.[1];
+
         if (scriptSwitchServices.includes(service)) {
           appendVariant = `&variant=${variant}`;
         }
@@ -41,7 +39,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
           env === 'live' ? '' : `${env}.`
         }api.bbci.co.uk/fd/simorgh-bff?pageType=article&id=${articleId}&service=${service}${appendVariant}`;
 
-        console.log(bffUrl);
+        cy.log(bffUrl);
         cy.request({
           url: bffUrl,
           headers: { 'ctx-service-env': env },
