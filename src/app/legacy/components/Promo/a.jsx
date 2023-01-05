@@ -19,11 +19,6 @@ const A = styled.a`
     right: 0;
     content: '';
   }
-
-  // Izzy added to test location
-  &:focus-visible {
-    outline: 0.5rem solid yellow;
-  }
 `;
 
 // TODO: event tracking
