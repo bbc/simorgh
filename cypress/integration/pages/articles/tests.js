@@ -52,7 +52,7 @@ export const testsThatFollowSmokeTestConfig = ({
           env === 'live' ? '' : `${env}.`
         }api.bbci.co.uk/fd/simorgh-bff?pageType=article&id=${articleId}&service=${service}${appendVariant}`;
 
-        console.log(bffUrl);
+        cy.log(bffUrl);
         cy.request({
           url: bffUrl,
           headers: { 'ctx-service-env': env },
@@ -86,7 +86,6 @@ export const testsThatFollowSmokeTestConfig = ({
     describe(`Article Body`, () => {
       it('should render a H1, which contains/displays a styled headline', () => {
         const headlineData = getBlockData('headline', articlesData);
-        console.log(headlineData);
         cy.get('h1').should(
           'contain',
           headlineData.model.blocks[0].model.blocks[0].model.text,
