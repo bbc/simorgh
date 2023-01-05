@@ -6,15 +6,11 @@ import {
   CanonicalSocialEmbed,
 } from '#psammead/psammead-social-embed/src';
 import { RequestContext } from '#contexts/RequestContext';
-import nodeLogger from '#lib/logger.node';
-import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
 import { GridItemMedium } from '#components/Grid';
 import { cpsSocialEmbedBlockPropTypes } from '#models/propTypes/socialEmbed';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import createTranslations from '../common/translations';
 import { LAZYLOAD_OFFSET, Wrapper } from '../common/styles';
-
-const logger = nodeLogger(__filename);
 
 const CpsSocialEmbedContainer = ({ blocks }) => {
   const { isAmp } = useContext(RequestContext);
@@ -49,11 +45,6 @@ const CpsSocialEmbedContainer = ({ blocks }) => {
   };
 
   const caption = provider === 'youtube' ? captionTranslations : null;
-
-  logger.info(SOCIAL_EMBED_RENDERED, {
-    provider,
-    href,
-  });
 
   return (
     <GridItemMedium>
