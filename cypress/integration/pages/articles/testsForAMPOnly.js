@@ -19,8 +19,39 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   service,
   pageType,
   variant,
-}) =>
+}) => {
+  let articlesData;
   describe(`Running testsForAMPOnly for ${service} ${pageType}`, () => {
+    before(() => {
+      const env = Cypress.env('APP_ENV');
+      if (env !== 'local') {
+        const scriptSwitchServices = ['serbian', 'ukchina', 'zhongwen'];
+        let appendVariant = '';
+
+        // eslint-disable-next-line prefer-destructuring
+        const articleId =
+          Cypress.env('currentPath').match(/(c[a-zA-Z0-9]{10}o)/)?.[1];
+
+        if (scriptSwitchServices.includes(service)) {
+          appendVariant = `&variant=${variant}`;
+        }
+        const bffUrl = `https://web-cdn.${
+          env === 'live' ? '' : `${env}.`
+        }api.bbci.co.uk/fd/simorgh-bff?pageType=article&id=${articleId}&service=${service}${appendVariant}`;
+
+        cy.log(bffUrl);
+        cy.request({
+          url: bffUrl,
+          headers: { 'ctx-service-env': env },
+        }).then(({ body }) => {
+          articlesData = body;
+        });
+      } else {
+        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+          articlesData = body;
+        });
+      }
+    });
     it('should contain an amp-img', () => {
       if (serviceHasFigure(service)) {
         cy.get('figure')
@@ -34,33 +65,29 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
 
     describe('Media Player: AMP', () => {
       it('should render a placeholder image', () => {
-        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-          const media = getBlockData('video', body);
-          if (media && media.type === 'video') {
-            cy.get('[data-e2e="media-player"]').within(() => {
-              cy.get('div')
-                .should('have.attr', 'data-e2e')
-                .should('not.be.empty');
-            });
-          }
-        });
+        const media = getBlockData('video', articlesData);
+        if (media && media.type === 'video') {
+          cy.get('[data-e2e="media-player"]').within(() => {
+            cy.get('div')
+              .should('have.attr', 'data-e2e')
+              .should('not.be.empty');
+          });
+        }
       });
 
       it('should render an iframe with a valid URL', () => {
-        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-          const media = getBlockData('video', body);
-          if (media && media.type === 'video') {
-            const { lang } = appConfig[service][variant];
-            const embedUrl = getVideoEmbedUrl(body, lang, true);
-            cy.get(`amp-iframe[src="${embedUrl}"]`).should('be.visible');
-            cy.testResponseCodeAndTypeRetry({
-              path: embedUrl,
-              responseCode: 200,
-              type: 'text/html',
-              allowFallback: true,
-            });
-          }
-        });
+        const media = getBlockData('video', articlesData);
+        if (media && media.type === 'video') {
+          const { lang } = appConfig[service][variant];
+          const embedUrl = getVideoEmbedUrl(articlesData, lang, true);
+          cy.get(`amp-iframe[src="${embedUrl}"]`).should('be.visible');
+          cy.testResponseCodeAndTypeRetry({
+            path: embedUrl,
+            responseCode: 200,
+            type: 'text/html',
+            allowFallback: true,
+          });
+        }
       });
     });
 
@@ -164,7 +191,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
       }
     });
   });
-
+};
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
 export const testsThatNeverRunDuringSmokeTestingForAMPOnly = ({
   service,
