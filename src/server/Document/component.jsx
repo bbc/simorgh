@@ -47,9 +47,10 @@ const Document = ({
     <html lang="en-GB" {...noJsHtmlAttrs} {...htmlAttrs}>
       <head>
         {meta}
-        {!isAmp && links}
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         {title}
+        {helmetLinkTags}
+        {headScript}
         {isAmp ? (
           <style
             amp-custom=""
@@ -66,8 +67,6 @@ const Document = ({
             }}
           />
         )}
-        {helmetLinkTags}
-        {headScript}
         {isAmp && (
           <>
             <style amp-boilerplate="">{AMP_SCRIPT}</style>
@@ -94,6 +93,7 @@ const Document = ({
             }}
           />
         )}
+        {!isAmp && links}
         {scriptsAllowed && scriptTags}
         {scriptsAllowed && (
           <script
