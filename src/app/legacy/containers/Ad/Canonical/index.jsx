@@ -66,17 +66,9 @@ const CanonicalAd = ({ slotType, className }) => {
   }, [slotType, location]);
 
   const isOperaMini = useOperaMiniDetection();
-
-  console.log("");
-  console.log("showAdsBasedOnLocation = "+showAdsBasedOnLocation)
-  console.log("");
-
-  /*
   if (!showAdsBasedOnLocation || isOperaMini) {
     return null;
   }
-
-   */
 
   return (
     <>
