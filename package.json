@@ -65,8 +65,8 @@
     "webpack:dev:client": "NODE_ENV=development webpack serve --config-name='modern' --hot --env config='client'",
     "webpack:dev:server": "wait-on ./build/public/modern-loadable-stats-local.json && NODE_ENV=development webpack --watch --progress --env config='server'",
     "start:express": "NODE_ENV=production node  --max-old-space-size=3500 build/server.js",
-    "start:nextjs": "cd ws-nextjs-app && yarn start",
-    "start": "yarn start:express & yarn start:nextjs"
+    "start:nextjs": "cd ws-nextjs-app && npm run start",
+    "start": "npm run start:express & npm run start:nextjs"
   },
   "repository": {
     "type": "git",
