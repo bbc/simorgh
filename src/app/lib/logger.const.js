@@ -43,7 +43,6 @@ const logCodes = {
 
   // Radio Schedule
   RADIO_SCHEDULE_FETCH_ERROR: 'radio_schedule_fetch_error',
-  RADIO_SCHEDULE_REQUEST_RECEIVED: 'radio_schedule_request_received',
   RADIO_SCHEDULE_DATA_INCOMPLETE_ERROR: 'radio_schedule_data_incomplete_error',
 
   // Server Side
@@ -63,6 +62,9 @@ const logCodes = {
   UNSUPPORTED_BLOCK_TYPE: 'unsupported_block_type',
   GIST_TRANSFORMATION_FAILED: 'gist_transformation_failed',
 
+  // Byline
+  BYLINE_TRANSFORMATION_FAILED: 'byline_transformation_failed',
+
   // Most Read
   MOST_READ_FETCH_ERROR: 'most_read_fetch_error',
   MOST_READ_CLIENT_REQUEST: 'most_read_client_request',
@@ -77,16 +79,13 @@ const logCodes = {
   INCLUDE_ERROR: 'include_error',
   INCLUDE_FETCH_ERROR: 'include_fetch_error',
   INCLUDE_MISSING_URL: 'include_missing_url',
-  INCLUDE_RENDERED: 'include_rendered',
-  INCLUDE_REQUEST_RECEIVED: 'include_request_received',
   INCLUDE_UNSUPPORTED: 'include_unsupported',
-  INCLUDE_IFRAME_REQUEST_RECEIVED: 'include_iframe_request_received',
-
-  // Social Embed
-  SOCIAL_EMBED_RENDERED: 'social_embed_rendered',
 
   // Toggle API
   TOGGLE_API_RESPONSE_TIME: 'toggle_api_response_time',
+
+  // Recommendations
+  RECOMMENDATIONS_MISSING_DATA: 'recommendations_missing_data',
 };
 
 module.exports = logCodes;

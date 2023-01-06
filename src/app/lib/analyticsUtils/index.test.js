@@ -3,7 +3,7 @@ import Cookie from 'js-cookie';
 import {
   setWindowValue,
   resetWindowValue,
-} from '#legacy/psammead-test-helpers/src';
+} from '#psammead/psammead-test-helpers/src';
 import onClient from '../utilities/onClient';
 
 let isOnClient = true;
@@ -498,7 +498,7 @@ describe('getAtUserId', () => {
     expect(JSON.parse(cookieValue)).toEqual({
       val: atUserId,
     });
-    expect(cookieOptions).toEqual({ expires: 397, path: '/' });
+    expect(cookieOptions).toEqual({ expires: 397, path: '/', secure: true });
     expect(cookieSetterSpy).toHaveBeenCalledTimes(1);
   });
 
@@ -514,7 +514,7 @@ describe('getAtUserId', () => {
     expect(JSON.parse(cookieValue)).toEqual({
       val: atUserId,
     });
-    expect(cookieOptions).toEqual({ expires: 397, path: '/' });
+    expect(cookieOptions).toEqual({ expires: 397, path: '/', secure: true });
     expect(cookieSetterSpy).toHaveBeenCalledTimes(1);
   });
 });

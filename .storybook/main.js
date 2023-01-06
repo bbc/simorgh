@@ -9,7 +9,12 @@ module.exports = {
   core: {
     builder: 'webpack5',
   },
-  stories: ['../src/app/!(legacy)/**/*.stories.jsx'],
+  stories: [
+    '../src/app/legacy/components/**/*.stories.@(t|j)sx',
+    '../src/app/legacy/containers/**/*.stories.@(t|j)sx',
+    '../src/app/components/**/*.stories.@(t|j)sx',
+    '../src/app/pages/**/*.stories.@(t|j)sx',
+  ],
   addons: [
     '@storybook/addon-knobs',
     '@storybook/addon-a11y',
@@ -39,7 +44,7 @@ module.exports = {
       }),
     );
 
-    config.resolve.extensions.push('.js', '.jsx'); // resolves `import '../Foo'` to `../Foo/index.jsx`
+    config.resolve.extensions.push('.js', '.jsx', '.ts', '.tsx'); // resolves `import '../Foo'` to `../Foo/index.jsx`
     config.resolve.alias = {
       ...config.resolve.alias,
       ...webpackDirAlias,

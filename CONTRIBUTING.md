@@ -9,7 +9,7 @@ We are particularly looking for help with our [open issues](https://github.com/b
 Please familiarise yourself with our:
 
 - [Code of conduct](https://github.com/bbc/simorgh/blob/latest/.github/CODE_OF_CONDUCT.md)
-- [Code Standards](https://github.com/bbc/simorgh/blob/latest/docs/Code-Standards.md)
+- [Coding Standards](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/README.md)
 - [Contributing guidelines](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md) (you are here)
 - [Guide to Code Reviews](https://github.com/bbc/simorgh/blob/latest/docs/Code-Reviews.md)
 - [Github Project Board Guide](https://github.com/bbc/simorgh/blob/latest/docs/Project-Board-Guide.md)
@@ -99,15 +99,6 @@ When committing, please use these commit guidelines:
 
 If you have a breaking change in a commit, prefix the commit message with `BREAKING CHANGE:`
 
-### Naming conventions
-
-- Component and Container directories should be capitalised as per the React convention, e.g. `/Headline/`
-- Test files should follow the dot notation as per the Jest convention, e.g. `index.test.jsx`
-- Stories should follow the dot notation as per the Storybook convention, e.g. `index.stories.jsx`
-- Files and directories should be camelCase, e.g. `storyBody.jsx`
-- The main entry file in a directory should be named `index.[extension]` e.g. `Headline/index.jsx` and `server/index.js`
-- Static assets e.g. `icon-128x128.png` do not need to be camelCased.
-
 ### Run tests
 
 All pull requests need to have linting, unit tests and integration tests passing. For new features, you should add appropriate tests in your PR.
@@ -117,23 +108,6 @@ All pull requests need to have linting, unit tests and integration tests passing
 ### Writing tests
 
 We use React Testing Library for writing our React component and custom hook unit tests. An introduction to using React Testing Library can be found [here](https://testing-library.com/docs/react-testing-library/intro/).
-
-### Run tests on your fork
-
-We use Travis CI as our continuous integration tool. It runs our linting, unit tests and integration tests on each commit and each Pull Request. PRs from your fork to the bbc/simorgh repo will be run by our TravisCI setup with no changes needed on your fork.
-
-To run these on your forked version follow these steps.
-
-- [Follow the steps in Project Setup](#project-setup)
-- Visit [travis-ci.org](https://travis-ci.org)
-- Log in with your Github account where you've forked this repo to
-- Go to [https://travis-ci.org/YourGithubUsername/simorgh](https://travis-ci.org/YourGithubUsername/simorgh)
-- Go to your Travis CI profile page and turn 'on' the toggle for the repository [https://travis-ci.org/profile/YourGithubUsername](https://travis-ci.org/profile/YourGithubUsername). You can also change the settings on your repo at will.
-- Now go to your Readme and update line 3 - to instead of using `bbc/simorgh` to use `YourGithubUsername/simorgh` - this will mean that Travis will look at your fork of Simorgh and run the tests against that.
-- Now create a branch and start committing and pushing to it!
-- You should see Travis CI and codecoverage now running against your branch and PRs within your fork. :white_check_mark:
-
-**Note**: The code coverage, CC_TEST_REPORTER_ID, is defined in [.travis.yml](.travis.yml#L3). As such, you don't need to obtain the CC_TEST_REPORTER_ID from CodeClimate and configure it in the repository settings in Travis CI. This is because, the [.travis.yml](.travis.yml#L3) takes precedence over the value configured in repository settings. See the [Travis CI public variables guide](https://docs.travis-ci.com/user/environment-variables/#defining-public-variables-in-travisyml) for more details.
 
 ### Fixture data
 
@@ -148,65 +122,9 @@ Pick a JSON file under `data/news/articles/[id].json`, and:
 
 Run `yarn dev` and you should see your component at your article of choice, eg http://localhost:7080/news/articles/c0000000001o
 
-#### Update the schema
-
-data/schema.yaml describes the Article API definition for web. We need to make it aware of our new component.
-
-Your component is more than likely a new 'block' in the data feed, so you'll need to add it to the array of which blocks the application should validate:
-
-```yaml
-    blocks:
-      type: object
-      items:
-        oneOf:
-          - $ref: '#/components/schemas/altText'
-          ... etc ...
-          - $ref: '#/components/schemas/[your component name]'
-      minItems: 2
-```
-
-You'll also need to define the block subtype itself:
-
-```yaml
-blockquote:
-  type: object
-  required:
-    - model
-    - type
-  properties:
-    model:
-      properties:
-        blocks:
-          $ref: '#/components/schemas/blocks'
-      type: object
-    type:
-      enum:
-        - blockquote
-      type: string
-```
-
-The schema check currently only happens on local data.
-
-### Create the container
-
-We've added our _component_, which should be kept as simple as possible. Now we need to create our _container_, which contains the business logic for mapping Optimo block data to the React parameters our component needs.
-
-Add a new folder under `src/app/containers/[Component Name]/`. You will need:
-
-- index.jsx - describes the mapping of Optimo block data to React parameters
-- index.test.jsx - creates "snapshots" of the component with the various different rendered outputs for the business logic in the container
-
-This step is quite complicated, so copy and paste from a similar example and tweak the code to your requirements.
-
 ### Merging a Pull Request
 
 There is a [guide](https://github.com/bbc/simorgh-infrastructure/blob/latest/documentation/MERGE_PROCESS.md) for BBC staff which documents the manual process that should be followed before merging a PR. Please note: The guide links through to our CI endpoints and therefore is hosted in a private repository.
-
-### Note: Adding files to the root of simorgh
-
-As part of our deployment & pipeline work, we have created a handy script to copy only the production files to a separate directory. The script `/script/jenkinsProductionFiles.sh` will delete node_modules, create a `pack` directory and copy all relevant configuration files and the necessary directories. Adding files to the `/src` or `/cypress` directory will not be an issue, when the code is deployed.
-
-If on the other hand you are adding new files to the root directory of simorgh, and these files are necessary for production, you have to manually add the copy commands for the relevant files to the `/script/jenkinsProductionFiles.sh`.
 
 ### `.env` is showing in my `git status`
 

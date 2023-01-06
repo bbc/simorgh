@@ -7,12 +7,11 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MAX,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '#psammead/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
-} from '#legacy/gel-foundations/src/spacings';
-import { ServiceContext } from '#contexts/ServiceContext';
+} from '#psammead/gel-foundations/src/spacings';
 import MostReadContainer from '#containers/MostRead';
 import mostReadShape from '#containers/MostRead/utilities/mostReadShape';
 import ATIAnalytics from '#containers/ATIAnalytics';
@@ -20,9 +19,10 @@ import LinkedData from '#containers/LinkedData';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import MetadataContainer from '#containers/Metadata';
-import Grid, { GelPageGrid } from '#app/components/Grid';
-import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
+import Grid, { GelPageGrid } from '#components/Grid';
+import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import IndexHeading from '#containers/IndexHeading';
+import { ServiceContext } from '../../contexts/ServiceContext';
 
 const MarginWrapper = styled.div`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {

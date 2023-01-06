@@ -2,10 +2,8 @@ import React from 'react';
 import * as server from 'react-dom/server';
 import { ChunkExtractor } from '@loadable/server';
 import renderDocument from '.';
-import { ServerApp } from '../../app/containers/App';
+import { ServerApp } from '../../app/legacy/containers/App';
 import DocumentComponent from './component';
-
-jest.mock('../utilities/getAssetOrigins', () => () => '__mock_asset_origins__');
 
 jest.mock('@loadable/server', () => ({
   ChunkExtractor: jest.fn().mockImplementation(() => ({
@@ -17,7 +15,7 @@ jest.mock('@loadable/server', () => ({
 
 jest.mock('./component', () => jest.fn());
 
-jest.mock('../../app/containers/App', () => ({
+jest.mock('../../app/legacy/containers/App', () => ({
   ServerApp: jest.fn(),
 }));
 
@@ -69,14 +67,12 @@ describe('Render Document', () => {
           html: 'no',
           ids: [],
         },
-        assetOrigins: '__mock_asset_origins__',
         data: { test: 'data' },
         helmet: undefined,
         isAmp: false,
         legacyScripts: '__mock_script_elements__',
         modernScripts: '__mock_script_elements__',
         links: '__mock_link_elements__',
-        service: 'news',
       });
 
       expect(

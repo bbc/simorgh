@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
-import withOptimizelyProvider from '#app/containers/PageHandlers/withOptimizelyProvider';
+import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import StoryPage from './StoryPage';
 import StoryPageLow from './StoryPage.low';
 import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';

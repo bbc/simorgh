@@ -69,7 +69,7 @@ Object {
 
 exports[`Canonical Live Radio Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/gahuza"`;
 
-exports[`Canonical Live Radio Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
+exports[`Canonical Live Radio Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
 
 exports[`Canonical Live Radio Header I can see the branding 1`] = `"BBC News, Gahuza"`;
 
@@ -249,7 +249,7 @@ exports[`Canonical Live Radio SEO OG url 1`] = `"http://localhost:7080/gahuza/bb
 
 exports[`Canonical Live Radio SEO Page title 1`] = `"Radio BBC Gahuza - BBC News Gahuza"`;
 
-exports[`Canonical Live Radio SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Live Radio SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Live Radio SEO Twitter card 1`] = `"summary_large_image"`;
 

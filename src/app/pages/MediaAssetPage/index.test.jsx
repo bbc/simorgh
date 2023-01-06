@@ -6,7 +6,6 @@ import { StaticRouter } from 'react-router-dom';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import assocPath from 'ramda/src/assocPath';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import mapPageData from '#data/pidgin/cpsAssets/23248703';
@@ -14,6 +13,8 @@ import uzbekPageData from '#data/uzbek/cpsAssets/sport-23248721';
 import mostWatchedData from '#data/pidgin/mostWatched/index.json';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import ThemeProvider from '../../components/ThemeProvider';
 import MediaAssetPage from '.';
 
 jest.mock('#containers/ChartbeatAnalytics', () => {
@@ -26,22 +27,26 @@ jest.mock('#containers/ComscoreAnalytics', () => {
   return ComscoreAnalytics;
 });
 
+jest.mock('../../components/ThemeProvider');
+
 const createAssetPage = ({ pageData }, service) => (
   <StaticRouter>
-    <ToggleContextProvider>
-      <ServiceContextProvider service={service}>
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          isAmp={false}
-          pageType={pageData.metadata.type}
-          pathname={pageData.metadata.locators.assetUri}
-          service={service}
-          statusCode={200}
-        >
-          <MediaAssetPage service={service} pageData={pageData} />
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ToggleContextProvider>
+    <ThemeProvider service={service} variant="default">
+      <ToggleContextProvider>
+        <ServiceContextProvider service={service}>
+          <RequestContextProvider
+            bbcOrigin="https://www.test.bbc.co.uk"
+            isAmp={false}
+            pageType={pageData.metadata.type}
+            pathname={pageData.metadata.locators.assetUri}
+            service={service}
+            statusCode={200}
+          >
+            <MediaAssetPage service={service} pageData={pageData} />
+          </RequestContextProvider>
+        </ServiceContextProvider>
+      </ToggleContextProvider>
+    </ThemeProvider>
   </StaticRouter>
 );
 

@@ -1,5 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`should match snapshot for News & International 1`] = `<div />`;
-
-exports[`should match snapshot for Persian News & UK origin 1`] = `<div />`;

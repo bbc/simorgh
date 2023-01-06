@@ -4,13 +4,16 @@ import fetchMock from 'fetch-mock';
 import { BrowserRouter } from 'react-router-dom';
 import { render, act } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import pidginFrontPageData from '#data/pidgin/frontpage/index-light';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import getInitialData from '#app/routes/home/getInitialData';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import ThemeProvider from '../../components/ThemeProvider';
 import FrontPage from '.';
+
+jest.mock('../../components/ThemeProvider');
 
 const mockToggles = {
   ads: {
@@ -39,16 +42,18 @@ const FrontPageWithContext = ({
   ...props
 }) => (
   <BrowserRouter>
-    <ToggleContextProvider toggles={toggles}>
-      <RequestContextProvider
-        isAmp={isAmp}
-        {...requestContextData({ service })}
-      >
-        <ServiceContextProvider service={service}>
-          <FrontPage {...props} />
-        </ServiceContextProvider>
-      </RequestContextProvider>
-    </ToggleContextProvider>
+    <ThemeProvider service={service} variant="default">
+      <ToggleContextProvider toggles={toggles}>
+        <RequestContextProvider
+          isAmp={isAmp}
+          {...requestContextData({ service })}
+        >
+          <ServiceContextProvider service={service}>
+            <FrontPage {...props} />
+          </ServiceContextProvider>
+        </RequestContextProvider>
+      </ToggleContextProvider>
+    </ThemeProvider>
   </BrowserRouter>
 );
 

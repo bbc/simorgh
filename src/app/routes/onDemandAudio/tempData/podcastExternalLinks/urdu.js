@@ -20,6 +20,17 @@ const externalLinks = {
       },
     ],
   },
+  p0clc9zw: [
+    {
+      linkText: 'Spotify',
+      linkUrl: 'https://open.spotify.com/show/7iOhf64Hu8wBCZDQSm0Dod',
+    },
+    {
+      linkText: 'Apple Podcasts',
+      linkUrl:
+        'https://podcasts.apple.com/gb/podcast/%D8%A8%D8%A7%D8%AA-%D8%B3%D8%B1%D8%AD%D8%AF-%D9%BE%D8%A7%D8%B1/id1634186835',
+    },
+  ],
 };
 
 export default externalLinks;

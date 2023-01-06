@@ -1,5 +1,4 @@
 var plugins = [
-  '@emotion',
   '@babel/plugin-proposal-object-rest-spread', // allows ...spread notation
   '@babel/plugin-syntax-dynamic-import', // allows `await import()` syntax
   '@babel/plugin-proposal-export-default-from',
@@ -66,6 +65,8 @@ module.exports = api => {
       },
     ],
     '@babel/preset-react', // transform JSX to JS
+    '@babel/preset-typescript',
+    '@emotion/babel-preset-css-prop',
   ];
 
   return {
