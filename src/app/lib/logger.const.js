@@ -43,7 +43,6 @@ const logCodes = {
 
   // Radio Schedule
   RADIO_SCHEDULE_FETCH_ERROR: 'radio_schedule_fetch_error',
-  RADIO_SCHEDULE_REQUEST_RECEIVED: 'radio_schedule_request_received',
   RADIO_SCHEDULE_DATA_INCOMPLETE_ERROR: 'radio_schedule_data_incomplete_error',
 
   // Server Side
@@ -80,13 +79,7 @@ const logCodes = {
   INCLUDE_ERROR: 'include_error',
   INCLUDE_FETCH_ERROR: 'include_fetch_error',
   INCLUDE_MISSING_URL: 'include_missing_url',
-  INCLUDE_RENDERED: 'include_rendered',
-  INCLUDE_REQUEST_RECEIVED: 'include_request_received',
   INCLUDE_UNSUPPORTED: 'include_unsupported',
-  INCLUDE_IFRAME_REQUEST_RECEIVED: 'include_iframe_request_received',
-
-  // Social Embed
-  SOCIAL_EMBED_RENDERED: 'social_embed_rendered',
 
   // Toggle API
   TOGGLE_API_RESPONSE_TIME: 'toggle_api_response_time',

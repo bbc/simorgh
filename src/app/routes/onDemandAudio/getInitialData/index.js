@@ -79,7 +79,6 @@ export default async ({
           service,
           path: pathname,
           radioService: getRadioService({ service, pathname }),
-          pageType: detailPageType.replace(/ /g, ''),
         })
       : await pageDataPromise;
 
