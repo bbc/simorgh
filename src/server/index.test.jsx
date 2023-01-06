@@ -943,7 +943,7 @@ describe('Server', () => {
       it('should respond with JSON', async () => {
         const { body } = await makeRequest('/news/articles/c0g992jmmkko.json');
         expect(body).toEqual(
-          expect.objectContaining({ content: expect.any(Object) }),
+          expect.objectContaining({ data: expect.any(Object) }),
         );
       });
 
