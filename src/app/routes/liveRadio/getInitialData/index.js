@@ -39,7 +39,6 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
           service,
           path: pathname,
           radioService: getRadioService({ service, pathname }),
-          pageType: 'LiveRadio',
         })
       : await pageDataPromise;
 
