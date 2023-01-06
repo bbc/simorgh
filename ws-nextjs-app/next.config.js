@@ -1,9 +1,14 @@
 /* eslint-disable no-param-reassign */
 const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezone-include/src');
 
+const assetPrefix =
+  process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
+  process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
+
 module.exports = {
   reactStrictMode: true,
   distDir: 'build',
+  assetPrefix,
   poweredByHeader: false,
   generateEtags: false,
   experimental: {
