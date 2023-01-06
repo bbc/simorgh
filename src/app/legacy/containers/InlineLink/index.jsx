@@ -4,6 +4,7 @@ import { pathToRegexp } from 'path-to-regexp';
 import InlineLink from '#psammead/psammead-inline-link/src';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../../contexts/ServiceContext';
+import { RequestContext } from '../../../contexts/RequestContext';
 import { inlineLinkModelPropTypes } from '#models/propTypes/inlineLink';
 import makeRelativeUrlPath from '#lib/utilities/makeRelativeUrlPath';
 import Blocks from '../Blocks';

@@ -5,12 +5,15 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import styled from '@emotion/styled';
-import { C_GHOST, C_MIDNIGHT_BLACK } from '#psammead/psammead-styles/src/colours';
-import WebVitals from '../legacy/containers/WebVitals';
-import HeaderContainer from '../legacy/containers/Header';
-import FooterContainer from '../legacy/containers/Footer';
-import ManifestContainer from '../legacy/containers/Manifest';
-import ServiceWorkerContainer from '../legacy/containers/ServiceWorker';
+import {
+  C_GHOST,
+  C_MIDNIGHT_BLACK,
+} from '#psammead/psammead-styles/src/colours';
+import WebVitals from '#containers/WebVitals';
+import HeaderContainer from '#containers/Header';
+import FooterContainer from '#containers/Footer';
+import ManifestContainer from '#containers/Manifest';
+import ServiceWorkerContainer from '#containers/ServiceWorker';
 import { ServiceContext } from '../contexts/ServiceContext';
 import { RequestContext } from '../contexts/RequestContext';
 import ThemeProvider from '../components/ThemeProvider';
@@ -30,9 +33,8 @@ const Content = styled.div`
 `;
 
 const PageWrapper = ({ children, pageData, status }) => {
-  const { fonts: fontFunctions } = useContext(ServiceContext);
+  const { service, variant } = useContext(ServiceContext);
   const { isAmp, isLow } = useContext(RequestContext);
-  const fonts = fontFunctions.map(getFonts => getFonts());
 
   const isDarkMode = pathOr(false, ['darkMode'], pageData);
   const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
