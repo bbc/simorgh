@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { node } from 'prop-types';
 import styled from '@emotion/styled';
+import { Helmet } from 'react-helmet';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
@@ -251,6 +252,19 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     margin-top: 0;
   `;
 
+  const fontJs = `
+    window.setTimeout(() => {
+    const lazyLoadingImages = document.querySelectorAll('[data-e2e="image-placeholder"]');
+    lazyLoadingImages.forEach(lazyImage => {
+      lazyImage.addEventListener('click', (e) => {
+        const placeholder = lazyImage.querySelector('.lazyload-placeholder');
+        const noScriptContainer = lazyImage.querySelector('noscript');
+        placeholder.innerHTML = decodeURIComponent(noScriptContainer.innerHTML).replace(/&lt;/g, "<").replace(/&gt;/g, ">");
+      }, {once : true});
+    });
+    }, 1000);
+  `;
+
   return (
     <>
       <CpsMetadata
@@ -296,6 +310,14 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           </main>
         </GridPrimaryColumn>
       </StoryPageGrid>
+      <Helmet
+        script={[
+          {
+            type: 'text/javascript',
+            innerHTML: fontJs,
+          },
+        ]}
+      />
     </>
   );
 };
