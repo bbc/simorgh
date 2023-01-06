@@ -52,12 +52,16 @@ const SeriesStackIcon = styled(MediaIcon)`
 const mediaIcons = {
   video: (
     <VideoMediaIcon
-      viewBox="0 0 32 32"
-      width="12px"
-      height="12px"
+      width="12"
+      height="12"
+      viewBox="0 0 12 12"
+      xmlns="http://www.w3.org/2000/svg"
       {...defaultAttrs}
     >
-      <polygon points="3,32 29,16 3,0" />
+      <g fill="none" fillRule="evenodd">
+        <path d="M0 0h12v12H0z" />
+        <path fill="#000" d="M1.644.36v11.28L10.356 6z" />
+      </g>
     </VideoMediaIcon>
   ),
   audio: (
