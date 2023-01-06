@@ -6,15 +6,6 @@ exports[`Document Component should render AMP version correctly 1`] = `
   lang="test"
 >
   <head>
-    <link
-      crossorigin="anonymous"
-      href="http://example.com"
-      rel="preconnect"
-    />
-    <link
-      href="http://example.com"
-      rel="dns-prefetch"
-    />
     <meta
       content="width=device-width, initial-scale=1, minimum-scale=1"
       data-react-helmet="true"
@@ -30,17 +21,17 @@ exports[`Document Component should render AMP version correctly 1`] = `
     >
       Test title
     </title>
+    <link
+      data-react-helmet="true"
+      href="https://www.bbc.com/news/articles/c6v11qzyv8po"
+      rel="canonical"
+    />
     <style
       amp-custom=""
       data-emotion-css="7prgni-StyledLink"
     >
       .css-7prgni-StyledLink{display:inline-block;}
     </style>
-    <link
-      data-react-helmet="true"
-      href="https://www.bbc.com/news/articles/c6v11qzyv8po"
-      rel="canonical"
-    />
     <style
       amp-boilerplate=""
     >
@@ -96,31 +87,10 @@ exports[`Document Component should render correctly 1`] = `
   lang="test"
 >
   <head>
-    <link
-      crossorigin="anonymous"
-      href="http://example.com"
-      rel="preconnect"
-    />
-    <link
-      href="http://example.com"
-      rel="dns-prefetch"
-    />
     <meta
       content="width=device-width, initial-scale=1, minimum-scale=1"
       data-react-helmet="true"
       name="viewport"
-    />
-    <link
-      href="modern.main.js"
-      rel="modulePreload"
-    />
-    <link
-      href="modern.vendor.js"
-      rel="modulePreload"
-    />
-    <link
-      href="modern.igbo.js"
-      rel="modulePreload"
     />
     <link
       href="/favicon.ico"
@@ -132,16 +102,16 @@ exports[`Document Component should render correctly 1`] = `
     >
       Test title
     </title>
-    <style
-      data-emotion-css="7prgni-StyledLink"
-    >
-      .css-7prgni-StyledLink{display:inline-block;}
-    </style>
     <link
       data-react-helmet="true"
       href="https://www.bbc.com/news/articles/c6v11qzyv8po"
       rel="canonical"
     />
+    <style
+      data-emotion-css="7prgni-StyledLink"
+    >
+      .css-7prgni-StyledLink{display:inline-block;}
+    </style>
   </head>
   <body>
     <div
@@ -156,6 +126,18 @@ exports[`Document Component should render correctly 1`] = `
     <script>
       window.SIMORGH_DATA={"test":"data"}
     </script>
+    <link
+      href="modern.main.js"
+      rel="modulePreload"
+    />
+    <link
+      href="modern.vendor.js"
+      rel="modulePreload"
+    />
+    <link
+      href="modern.igbo.js"
+      rel="modulePreload"
+    />
     <div>
       <!--[if !IE]&gt;&lt;!-->
     </div>
