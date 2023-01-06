@@ -50,7 +50,8 @@ import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import useToggle from '#hooks/useToggle';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 
@@ -143,6 +144,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   // ads
   const { enabled: adsEnabled } = useToggle('ads');
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
+  const { showAdsBasedOnLocation } = useContext(RequestContext);
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
 
   /**
