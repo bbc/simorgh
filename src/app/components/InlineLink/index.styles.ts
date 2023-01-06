@@ -59,11 +59,21 @@ const styles = {
         boxShadow: `none`,
         outlineOffset: 0,
       },
+
+      // WITH THINNED DOWN BORDER, Similar to live site
       '&:focus-visible': {
-        outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
-        boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
-        outlineOffset: `${pixelsToRem(3)}rem`,
+        outline: `0.125rem solid ${palette.BLACK}`,
+        boxShadow: `0 0 0 0.125rem ${palette.WHITE}`,
+        outlineOffset: `0.125rem`,
       },
+
+      // ALTERNATIVE: WITH THINNED DOWN BORDER, and inset 
+      // '&:focus-visible': {
+      //   outline: `0.125rem solid ${palette.BLACK}`,
+      //   boxShadow: `0 0 0 0.125rem ${palette.WHITE} inset`,
+      //   outlineOffset: `0rem`,
+      // },
+
       // END SOLUTION 2
       //
       // Original solution - does not have any browser backwards capabilities
