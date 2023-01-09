@@ -25,14 +25,22 @@ const links = [
   {
     linkUrl: 'https://bbc.com',
     linkText: 'Apple',
+    linkType: 'apple',
   },
   {
     linkUrl: 'https://bbc.com',
     linkText: 'Spotify',
+    linkType: 'spotify',
   },
   {
     linkUrl: 'https://bbc.com',
     linkText: 'RSS',
+    linkType: 'rss',
+  },
+  {
+    linkUrl: 'https://bbc.com',
+    linkText: 'Download',
+    linkType: 'download',
   },
 ];
 
@@ -48,8 +56,8 @@ describe('PodcastExternalLinks', () => {
     const listElements = container.getElementsByTagName('li');
     const list = getByRole('list');
 
-    expect(elements.length).toBe(3);
-    expect(listElements.length).toBe(3);
+    expect(elements.length).toBe(4);
+    expect(listElements.length).toBe(4);
     expect(list).toBeInTheDocument();
 
     const { container: emptyContainer } = render(<Component links={[]} />);
@@ -85,7 +93,7 @@ describe('PodcastExternalLinks', () => {
   it('should render hidden text in the links with external text', () => {
     const { getAllByText } = render(<Component links={links} />);
     const visuallyHiddenText = getAllByText(', A brand podcast, внешняя');
-    expect(visuallyHiddenText.length).toEqual(3);
+    expect(visuallyHiddenText.length).toEqual(4);
   });
 
   it('should contain the correct lang attribute', async () => {
@@ -111,7 +119,7 @@ describe('Event Tracking', () => {
     render(<Component links={links} />);
 
     expect(clickTrackerSpy).toHaveBeenCalledWith({
-      componentName: 'third-party',
+      componentName: `third-party-${links[0].linkType}`,
       campaignID: 'player-episode-podcast',
     });
   });
