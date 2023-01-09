@@ -227,17 +227,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c3qxeqm7ldjo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c3qxeqm7ldjo",
-          "canonicalUrl": "https://www.bbc.com/thai/articles/c3qxeqm7ldjo"
+          "optimoUrn": "urn:bbc:optimo:asset:c3qxeqm7ldjo"
         },
         "type": "article",
         "createdBy": "Thai",
         "language": "th",
-        "lastUpdated": 1645628418972,
         "firstPublished": 1562942948180,
         "lastPublished": 1562942948180,
-        "timestamp": 1562942948180,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c3qxeqm7ldjo",
           "producer": "Thai",
@@ -248,8 +244,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.0",
         "blockTypes": [
           "headline",
           "text",
@@ -257,37 +251,12 @@
           "fragment",
           "inline"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c3qxeqm7ldjo",
-          "canonicalUrl": "https://www.bbc.com/thai/articles/c3qxeqm7ldjo"
-        },
-        "timestamp": 1562942948180,
-        "suitableForSyndication": false,
-        "language": "th",
         "headlines": {
           "seoHeadline": "อวกาศ : หลุมดำมวลยิ่งยวดไม่จำเป็นต้องเกิดจากซูเปอร์โนวาเสมอไป"
-        },
-        "images": {},
-        "passport": {
-          "language": "th",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c3qxeqm7ldjo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Thai",
-          "uri": "/thai",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {

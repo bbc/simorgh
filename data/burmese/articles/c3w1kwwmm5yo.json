@@ -27,19 +27,33 @@
                                   "text": "ရှေးခေတ်ပုဂံပြည်၊ မြန်မာတွေရဲ့ ဘုရားမြို့တော်",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "63dea81f",
@@ -48,7 +62,9 @@
                 "firstPublished": 1562942742355,
                 "lastPublished": 1562942742355
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "54d9050e",
@@ -68,11 +84,18 @@
                             "text": "ပုဂံကို မြန်မာ့ယဉ်ကျေးမှုရဲ့ ပုခက်လို့ သဘောထားကြပါတယ်။ အိန္ဒိယဆန်တဲ့ ဗိသုကာ စေတီပုထိုးတွေနဲ့ ထင်ရှားတဲ့ ပုဂံဟာ မြန်မာသမိုင်းမှာ ဂန္ထဝင်ခေတ်ကြီးတခေတ် ထွန်းကားခဲ့တဲ့ ကာလကို ပြန်ပြီး အမှတ်ရစေတဲ့ မြို့ဟောင်းကြီး ဖြစ်ပါတယ်။",
                             "attributes": []
                           },
-                          "position": [3, 1, 1]
+                          "position": [
+                            3,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 1]
+                    "position": [
+                      3,
+                      1
+                    ]
                   },
                   {
                     "id": "6099d19f",
@@ -87,34 +110,46 @@
                             "text": "အီတလီလူမျိုးတွေအတွက် ရောမ၊ ဂရိတွေအတွက် အေသင်၊ ခမာလူမျိုးတွေအတွက် အန်ကာ၊ ဂျပန်တွေအတွက် နာရာနဲ့ ကျိုတို၊ အင်ဒိုနီးရှားနဲ့ မလေးကျွန်းဆွယ်အတွက် သီရိဝိဇယ နိုင်ငံနဲ့ မြို့ပြ ယဉ်ကျေးမှုတွေဟာ ဂန္ထဝင်ခေတ်ကြီးတွေ ဖြစ်ကြပါတယ်။ မြန်မာနိုင်ငံသားတွေအတွက် သရေခေတ္တရာ၊ သထုံနဲ့ ဝေသာလီ စတဲ့ ရှေးဟောင်းနိုင်ငံတွေ ရှိခဲ့ပေမယ့် ထုထည်နဲ့ အများဆုံးကျန်ခဲ့တဲ့ ရှေးဟောင်းနယ်မြေကတော့ ပုဂံ ဖြစ်ပါတယ်။",
                             "attributes": []
                           },
-                          "position": [3, 2, 1]
+                          "position": [
+                            3,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 2]
+                    "position": [
+                      3,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
-            { "id": "651ce919", "type": "mpu", "model": {}, "position": [4] }
+            {
+              "id": "651ce919",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                4
+              ]
+            }
           ]
         }
       },
       "metadata": {
         "id": "urn:bbc:ares::article:c3w1kwwmm5yo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c3w1kwwmm5yo",
-          "canonicalUrl": "https://www.bbc.com/burmese/articles/c3w1kwwmm5yo"
+          "optimoUrn": "urn:bbc:optimo:asset:c3w1kwwmm5yo"
         },
         "type": "article",
         "createdBy": "Burmese",
         "language": "my",
-        "lastUpdated": 1645628419089,
         "firstPublished": 1562942742355,
         "lastPublished": 1562942742355,
-        "timestamp": 1562942742355,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c3w1kwwmm5yo",
           "producer": "Burmese",
@@ -125,46 +160,26 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.0",
-        "blockTypes": ["headline", "text", "paragraph", "fragment"],
-        "readTime": 1,
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment"
+        ],
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c3w1kwwmm5yo",
-          "canonicalUrl": "https://www.bbc.com/burmese/articles/c3w1kwwmm5yo"
-        },
-        "timestamp": 1562942742355,
-        "suitableForSyndication": false,
-        "language": "my",
         "headlines": {
           "seoHeadline": "ရှေးခေတ်ပုဂံပြည်၊ မြန်မာတွေရဲ့ ဘုရားမြို့တော်"
-        },
-        "images": {},
-        "passport": {
-          "language": "my",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c3w1kwwmm5yo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Burmese",
-          "uri": "/burmese",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {
       "topStories": [
         {
-          "headlines": { "headline": "ဗြိတိသျှ ဘုရင်မ ပါလီမန် ဖွင့်လှစ်" },
+          "headlines": {
+            "headline": "ဗြိတိသျှ ဘုရင်မ ပါလီမန် ဖွင့်လှစ်"
+          },
           "locators": {
             "assetUri": "/burmese/live/burma-23285674",
             "cpsUrn": "urn:bbc:content:assetUri:burmese/live/burma-23285674",
@@ -197,7 +212,10 @@
             }
           },
           "isLive": true,
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "id": "urn:bbc:ares::asset:burmese/live/burma-23285674",
           "type": "cps"
@@ -235,7 +253,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -308,7 +329,10 @@
             "copyrightHolder": "AFP",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း",
@@ -356,7 +380,10 @@
             "copyrightHolder": "AFP",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း",
@@ -404,7 +431,10 @@
             "copyrightHolder": "AFP",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း",

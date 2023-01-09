@@ -27,19 +27,33 @@
                                   "text": "Українка пробилася у фінал юніорського Вімблдону",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "41590804",
@@ -48,7 +62,9 @@
                 "firstPublished": 1562941967871,
                 "lastPublished": 1562941967871
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "af3f22f9",
@@ -68,11 +84,18 @@
                             "text": "Українська тенісистка Дарія Снігур вийшла у фінал юніорського Вімблдону.",
                             "attributes": []
                           },
-                          "position": [3, 1, 1]
+                          "position": [
+                            3,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 1]
+                    "position": [
+                      3,
+                      1
+                    ]
                   },
                   {
                     "id": "c92da83c",
@@ -87,11 +110,18 @@
                             "text": "У півфіналі 17-річна українка здолала Емму Наварро зі США.",
                             "attributes": []
                           },
-                          "position": [3, 2, 1]
+                          "position": [
+                            3,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 2]
+                    "position": [
+                      3,
+                      2
+                    ]
                   },
                   {
                     "id": "47044030",
@@ -106,11 +136,18 @@
                             "text": "На це їй знадобилося 45 хвилин. Поєдинок завершився з рахунком 6:3, 6:0.",
                             "attributes": []
                           },
-                          "position": [3, 3, 1]
+                          "position": [
+                            3,
+                            3,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 3]
+                    "position": [
+                      3,
+                      3
+                    ]
                   },
                   {
                     "id": "9bf1e2b3",
@@ -125,34 +162,46 @@
                             "text": "У чвертьфіналі українка здолала 16-річну Поліну Кудерметову з Росії з рахунком 6:2, 6:4.",
                             "attributes": []
                           },
-                          "position": [3, 4, 1]
+                          "position": [
+                            3,
+                            4,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 4]
+                    "position": [
+                      3,
+                      4
+                    ]
                   }
                 ]
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
-            { "id": "c1f125b6", "type": "mpu", "model": {}, "position": [4] }
+            {
+              "id": "c1f125b6",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                4
+              ]
+            }
           ]
         }
       },
       "metadata": {
         "id": "urn:bbc:ares::article:cwe04e9zwrzo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cwe04e9zwrzo",
-          "canonicalUrl": "https://www.bbc.com/ukrainian/articles/cwe04e9zwrzo"
+          "optimoUrn": "urn:bbc:optimo:asset:cwe04e9zwrzo"
         },
         "type": "article",
         "createdBy": "Ukrainian",
         "language": "uk",
-        "lastUpdated": 1645628418977,
         "firstPublished": 1562941967871,
         "lastPublished": 1562941967871,
-        "timestamp": 1562941967871,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cwe04e9zwrzo",
           "producer": "Ukrainian",
@@ -163,40 +212,18 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.0",
-        "blockTypes": ["headline", "text", "paragraph", "fragment"],
-        "readTime": 1,
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment"
+        ],
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cwe04e9zwrzo",
-          "canonicalUrl": "https://www.bbc.com/ukrainian/articles/cwe04e9zwrzo"
-        },
-        "timestamp": 1562941967871,
-        "suitableForSyndication": false,
-        "language": "uk",
         "headlines": {
           "seoHeadline": "Українка пробилася у фінал юніорського Вімблдону"
-        },
-        "images": {},
-        "passport": {
-          "language": "uk",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:cwe04e9zwrzo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Ukrainian",
-          "uri": "/ukrainian",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {
@@ -247,7 +274,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -289,14 +319,19 @@
             "versions": [
               {
                 "versionId": "p01k6msp",
-                "types": ["Original"],
+                "types": [
+                  "Original"
+                ],
                 "duration": 191,
                 "durationISO8601": "PT3M11S",
                 "warnings": {
                   "short": "Contains strong language and adult humour.",
                   "long": "Contains strong language and adult humour."
                 },
-                "availableTerritories": { "uk": true, "nonUk": true },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
                 "availableFrom": 1540218932000
               }
             ],
@@ -326,7 +361,10 @@
             "copyrightHolder": "Magnum Photos",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:ukrainian/other-news-23279018",
           "type": "cps"
         },
@@ -367,14 +405,19 @@
             "versions": [
               {
                 "versionId": "p01k6msp",
-                "types": ["Original"],
+                "types": [
+                  "Original"
+                ],
                 "duration": 191,
                 "durationISO8601": "PT3M11S",
                 "warnings": {
                   "short": "Contains strong language and adult humour.",
                   "long": "Contains strong language and adult humour."
                 },
-                "availableTerritories": { "uk": true, "nonUk": true },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
                 "availableFrom": 1540218932000
               }
             ],
@@ -404,7 +447,10 @@
             "copyrightHolder": "Magnum Photos",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:ukrainian/world-23087423",
           "type": "cps"
         },
@@ -435,7 +481,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "site": {
             "subType": "site",
             "name": "BBC Кыргыз",

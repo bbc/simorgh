@@ -670,17 +670,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c442rl3md0eo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c442rl3md0eo",
-          "canonicalUrl": "https://www.bbc.com/thai/articles/c442rl3md0eo"
+          "optimoUrn": "urn:bbc:optimo:asset:c442rl3md0eo"
         },
         "type": "article",
         "createdBy": "Thai",
         "language": "th",
-        "lastUpdated": 1662112047263,
         "firstPublished": 1574853287993,
         "lastPublished": 1574853287993,
-        "timestamp": 1574853287993,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c442rl3md0eo",
           "producer": "Thai",
@@ -689,12 +685,8 @@
         "passport": {
           "language": "th",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai",
-          "locator": "urn:bbc:optimo:asset:c442rl3md0eo",
-          "availability": "AVAILABLE",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.7",
         "blockTypes": [
           "headline",
           "text",
@@ -709,40 +701,13 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "consumableAsSFV": false,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c442rl3md0eo",
-          "canonicalUrl": "https://www.bbc.com/thai/articles/c442rl3md0eo"
-        },
-        "timestamp": 1574853287993,
-        "suitableForSyndication": false,
-        "language": "th",
         "headlines": {
           "seoHeadline": "นี่คือหัวข้อข่าวของบทความทดสอบนี้"
-        },
-        "images": {},
-        "passport": {
-          "language": "th",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai",
-          "locator": "urn:bbc:optimo:asset:c442rl3md0eo",
-          "availability": "AVAILABLE",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c442rl3md0eo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Thai",
-          "uri": "/thai",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {

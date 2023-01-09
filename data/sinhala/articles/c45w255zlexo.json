@@ -616,17 +616,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c45w255zlexo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c45w255zlexo",
-          "canonicalUrl": "https://www.bbc.com/sinhala/articles/c45w255zlexo"
+          "optimoUrn": "urn:bbc:optimo:asset:c45w255zlexo"
         },
         "type": "article",
         "createdBy": "Sinhala",
         "language": "si",
-        "lastUpdated": 1598599649835,
         "firstPublished": 1562942502450,
         "lastPublished": 1562942502450,
-        "timestamp": 1562942502450,
-        "options": {},
         "analyticsLabels": {
           "producer": "Sinhala",
           "page": "sinhala.articles.c45w255zlexo.page"
@@ -634,12 +630,8 @@
         "passport": {
           "language": "si",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Sinhala",
-          "locator": "urn:bbc:optimo:asset:c45w255zlexo",
-          "availability": "AVAILABLE",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.3",
         "blockTypes": [
           "headline",
           "text",
@@ -654,39 +646,12 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c45w255zlexo",
-          "canonicalUrl": "https://www.bbc.com/sinhala/articles/c45w255zlexo"
-        },
-        "timestamp": 1562942502450,
-        "suitableForSyndication": false,
-        "language": "si",
         "headlines": {
           "seoHeadline": "පේටන්ට් බලපත්‍ර 107ක් හිමි රාජකීය සමාජයට එක් වූ ශ්‍රී ලංකාවේ මහාචාර්යවරයා සමග කතාබහක්"
-        },
-        "images": {},
-        "passport": {
-          "language": "si",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Sinhala",
-          "locator": "urn:bbc:optimo:asset:c45w255zlexo",
-          "availability": "AVAILABLE",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c45w255zlexo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Sinhala",
-          "uri": "/sinhala",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {
