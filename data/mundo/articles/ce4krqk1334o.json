@@ -27,33 +27,19 @@
                                   "text": "Article with anchors",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "f1112e50",
@@ -62,9 +48,7 @@
                 "firstPublished": 1620147687728,
                 "lastPublished": 1620147687728
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "110a3816",
@@ -88,33 +72,19 @@
                                 "type": "fragment",
                                 "model": {
                                   "text": "Anchor 1",
-                                  "attributes": [
-                                    "bold"
-                                  ]
+                                  "attributes": ["bold"]
                                 },
-                                "position": [
-                                  3,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [3, 1, 1, 1]
                               }
                             ],
                             "locator": "https://www.test.bbc.com/mundo/articles/ce4krqk1334o#Anchor-1",
                             "isExternal": false
                           },
-                          "position": [
-                            3,
-                            1,
-                            1
-                          ]
+                          "position": [3, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      1
-                    ]
+                    "position": [3, 1]
                   },
                   {
                     "id": "8b56993b",
@@ -135,29 +105,17 @@
                                   "text": "Anchor 2",
                                   "attributes": []
                                 },
-                                "position": [
-                                  3,
-                                  2,
-                                  1,
-                                  1
-                                ]
+                                "position": [3, 2, 1, 1]
                               }
                             ],
                             "locator": "https://www.test.bbc.com/mundo/articles/ce4krqk1334o#Anchor-2",
                             "isExternal": false
                           },
-                          "position": [
-                            3,
-                            2,
-                            1
-                          ]
+                          "position": [3, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      2
-                    ]
+                    "position": [3, 2]
                   },
                   {
                     "id": "593b9f15",
@@ -178,35 +136,21 @@
                                   "text": "Anchor 3",
                                   "attributes": []
                                 },
-                                "position": [
-                                  3,
-                                  3,
-                                  1,
-                                  1
-                                ]
+                                "position": [3, 3, 1, 1]
                               }
                             ],
                             "locator": "https://www.test.bbc.com/mundo/articles/ce4krqk1334o#Anchor-3",
                             "isExternal": false
                           },
-                          "position": [
-                            3,
-                            3,
-                            1
-                          ]
+                          "position": [3, 3, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      3
-                    ]
+                    "position": [3, 3]
                   }
                 ]
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "f0a45acc",
@@ -231,33 +175,19 @@
                                   "text": "Anchor 1",
                                   "attributes": []
                                 },
-                                "position": [
-                                  4,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [4, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            4,
-                            1,
-                            1
-                          ]
+                          "position": [4, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      1
-                    ]
+                    "position": [4, 1]
                   }
                 ]
               },
-              "position": [
-                4
-              ]
+              "position": [4]
             },
             {
               "id": "57b38ccc",
@@ -277,32 +207,21 @@
                             "text": "Fruitcake wafer dragée caramels chupa chups gummi bears. Soufflé pudding donut chocolate cake. Lollipop brownie oat cake. Chocolate donut bear claw fruitcake dragée marshmallow tootsie roll jelly beans.",
                             "attributes": []
                           },
-                          "position": [
-                            5,
-                            1,
-                            1
-                          ]
+                          "position": [5, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      5,
-                      1
-                    ]
+                    "position": [5, 1]
                   }
                 ]
               },
-              "position": [
-                5
-              ]
+              "position": [5]
             },
             {
               "id": "00f4ce94",
               "type": "mpu",
               "model": {},
-              "position": [
-                6
-              ]
+              "position": [6]
             },
             {
               "id": "17438609",
@@ -322,24 +241,15 @@
                             "text": "Tart cheesecake macaroon. Tootsie roll ice cream lemon drops. Wafer icing bear claw dragée.",
                             "attributes": []
                           },
-                          "position": [
-                            7,
-                            1,
-                            1
-                          ]
+                          "position": [7, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      7,
-                      1
-                    ]
+                    "position": [7, 1]
                   }
                 ]
               },
-              "position": [
-                7
-              ]
+              "position": [7]
             },
             {
               "id": "4081da38",
@@ -364,33 +274,19 @@
                                   "text": "Anchor 2",
                                   "attributes": []
                                 },
-                                "position": [
-                                  8,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [8, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            8,
-                            1,
-                            1
-                          ]
+                          "position": [8, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      8,
-                      1
-                    ]
+                    "position": [8, 1]
                   }
                 ]
               },
-              "position": [
-                8
-              ]
+              "position": [8]
             },
             {
               "id": "56236b8d",
@@ -410,18 +306,11 @@
                             "text": "Fruitcake wafer dragée caramels chupa chups gummi bears. Soufflé pudding donut chocolate cake. Lollipop brownie oat cake. Chocolate donut bear claw fruitcake dragée marshmallow tootsie roll jelly beans.",
                             "attributes": []
                           },
-                          "position": [
-                            9,
-                            1,
-                            1
-                          ]
+                          "position": [9, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      9,
-                      1
-                    ]
+                    "position": [9, 1]
                   },
                   {
                     "id": "7d8d20f4",
@@ -436,24 +325,15 @@
                             "text": "Tart cheesecake macaroon. Tootsie roll ice cream lemon drops. Wafer icing bear claw dragée.",
                             "attributes": []
                           },
-                          "position": [
-                            9,
-                            2,
-                            1
-                          ]
+                          "position": [9, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      9,
-                      2
-                    ]
+                    "position": [9, 2]
                   }
                 ]
               },
-              "position": [
-                9
-              ]
+              "position": [9]
             },
             {
               "id": "e628fa55",
@@ -478,33 +358,19 @@
                                   "text": "Anchor 3",
                                   "attributes": []
                                 },
-                                "position": [
-                                  10,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [10, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            10,
-                            1,
-                            1
-                          ]
+                          "position": [10, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      10,
-                      1
-                    ]
+                    "position": [10, 1]
                   }
                 ]
               },
-              "position": [
-                10
-              ]
+              "position": [10]
             },
             {
               "id": "cad65fb0",
@@ -524,18 +390,11 @@
                             "text": "Fruitcake wafer dragée caramels chupa chups gummi bears. Soufflé pudding donut chocolate cake. Lollipop brownie oat cake. Chocolate donut bear claw fruitcake dragée marshmallow tootsie roll jelly beans.",
                             "attributes": []
                           },
-                          "position": [
-                            11,
-                            1,
-                            1
-                          ]
+                          "position": [11, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      11,
-                      1
-                    ]
+                    "position": [11, 1]
                   },
                   {
                     "id": "fd74fd61",
@@ -550,18 +409,11 @@
                             "text": "Tart cheesecake macaroon. Tootsie roll ice cream lemon drops. Wafer icing bear claw dragée.",
                             "attributes": []
                           },
-                          "position": [
-                            11,
-                            2,
-                            1
-                          ]
+                          "position": [11, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      11,
-                      2
-                    ]
+                    "position": [11, 2]
                   },
                   {
                     "id": "f5e12b10",
@@ -582,35 +434,21 @@
                                   "text": "Back to top",
                                   "attributes": []
                                 },
-                                "position": [
-                                  11,
-                                  3,
-                                  1,
-                                  1
-                                ]
+                                "position": [11, 3, 1, 1]
                               }
                             ],
                             "locator": "https://www.test.bbc.com/mundo/articles/ce4krqk1334o#content",
                             "isExternal": false
                           },
-                          "position": [
-                            11,
-                            3,
-                            1
-                          ]
+                          "position": [11, 3, 1]
                         }
                       ]
                     },
-                    "position": [
-                      11,
-                      3
-                    ]
+                    "position": [11, 3]
                   }
                 ]
               },
-              "position": [
-                11
-              ]
+              "position": [11]
             }
           ]
         }
@@ -801,9 +639,7 @@
             "versions": [
               {
                 "versionId": "p01hnn2d",
-                "types": [
-                  "Original"
-                ],
+                "types": ["Original"],
                 "duration": 16,
                 "durationISO8601": "PT16S",
                 "warnings": {},
@@ -1081,10 +917,7 @@
                       "thingLabel": "News report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "tagging:Format"
-                      ],
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -1105,9 +938,7 @@
                         "tagging:TagConcept",
                         "tagging:Genre"
                       ],
-                      "thingSameAs": [
-                        "http://dbpedia.org/resource/Health"
-                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Health"],
                       "thingEnglishLabel": "Health",
                       "type": "about"
                     }

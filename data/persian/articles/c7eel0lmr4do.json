@@ -27,33 +27,19 @@
                                   "text": "پهپادی که برایتان قهوه می‌آورد",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "c0600576",
@@ -83,37 +69,19 @@
                                         "text": "قهوه",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        2,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [2, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  2,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [2, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            2,
-                            1,
-                            1
-                          ]
+                          "position": [2, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      2,
-                      1
-                    ]
+                    "position": [2, 1]
                   },
                   {
                     "id": "d95f6bea",
@@ -125,16 +93,11 @@
                       "originCode": "cpsprodpb",
                       "copyrightHolder": "Getty Images"
                     },
-                    "position": [
-                      2,
-                      2
-                    ]
+                    "position": [2, 2]
                   }
                 ]
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "cea7aa7f",
@@ -143,9 +106,7 @@
                 "firstPublished": 1549894346238,
                 "lastPublished": 1549894346238
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "decafaac",
@@ -165,18 +126,11 @@
                             "text": "شاید خیلی طول نکشد که زمانی برسد که وقتی خسته هستید و مثلا هوس فنجان قهوه‌ای را کردید، پهپادی را ببینید که با قهوه سراغتان می‌آید.",
                             "attributes": []
                           },
-                          "position": [
-                            4,
-                            1,
-                            1
-                          ]
+                          "position": [4, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      1
-                    ]
+                    "position": [4, 1]
                   },
                   {
                     "id": "48c80cf9",
@@ -191,18 +145,11 @@
                             "text": "شرکت آی‌بی‌ام چنین طرحی را ثبت اختراع (پتنت) کرده است.",
                             "attributes": []
                           },
-                          "position": [
-                            4,
-                            2,
-                            1
-                          ]
+                          "position": [4, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      2
-                    ]
+                    "position": [4, 2]
                   },
                   {
                     "id": "bf075218",
@@ -217,18 +164,11 @@
                             "text": "طبق طرحی که آی‌بی‌ام ثبت کرده، این پهپاد می‌تواند \\\"احساس نیاز\\\" کارمندان ادارات را درک کرده و برایشان قهوه ببرد.",
                             "attributes": []
                           },
-                          "position": [
-                            4,
-                            3,
-                            1
-                          ]
+                          "position": [4, 3, 1]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      3
-                    ]
+                    "position": [4, 3]
                   },
                   {
                     "id": "7736298b",
@@ -243,32 +183,21 @@
                             "text": "شرکت‌های بزرگی مانند آی‌بی‌ام به طور مرتب طرح‌هایی از این دست را ثبت می‌کنند حتی اگر قصد و نیتی برای ساخت و عرضه آن در آینده نزدیک نداشته باشند.",
                             "attributes": []
                           },
-                          "position": [
-                            4,
-                            4,
-                            1
-                          ]
+                          "position": [4, 4, 1]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      4
-                    ]
+                    "position": [4, 4]
                   }
                 ]
               },
-              "position": [
-                4
-              ]
+              "position": [4]
             },
             {
               "id": "799ed8ce",
               "type": "mpu",
               "model": {},
-              "position": [
-                5
-              ]
+              "position": [5]
             },
             {
               "id": "7ab7709a",
@@ -288,24 +217,15 @@
                             "text": "آی‌بی‌ام نگفته است که آیا قصد ساخت و عرضه پهپاد قهوه‌ پخش‌کن را دارد یا نه.",
                             "attributes": []
                           },
-                          "position": [
-                            6,
-                            1,
-                            1
-                          ]
+                          "position": [6, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      6,
-                      1
-                    ]
+                    "position": [6, 1]
                   }
                 ]
               },
-              "position": [
-                6
-              ]
+              "position": [6]
             },
             {
               "id": "73915c4c",
@@ -335,37 +255,19 @@
                                         "text": "پهپاد قهوه‌ پخش‌کن",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        7,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [7, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  7,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [7, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            7,
-                            1,
-                            1
-                          ]
+                          "position": [7, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      7,
-                      1
-                    ]
+                    "position": [7, 1]
                   },
                   {
                     "id": "4478e0db",
@@ -377,16 +279,11 @@
                       "originCode": "cpsprodpb",
                       "copyrightHolder": "IBM"
                     },
-                    "position": [
-                      7,
-                      2
-                    ]
+                    "position": [7, 2]
                   }
                 ]
               },
-              "position": [
-                7
-              ]
+              "position": [7]
             },
             {
               "id": "bf2aa8b6",
@@ -406,18 +303,11 @@
                             "text": "این طرح توسط آی‌بی‌ام در آمریکا پتنت شده و شامل چندین نوع پهپاد برای توزیع قهوه است. در یک طرح، پهپاد، قهوه را مستقیما به فنجان فرد می‌ریزد.",
                             "attributes": []
                           },
-                          "position": [
-                            8,
-                            1,
-                            1
-                          ]
+                          "position": [8, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      8,
-                      1
-                    ]
+                    "position": [8, 1]
                   },
                   {
                     "id": "6f6fd2bc",
@@ -432,18 +322,11 @@
                             "text": "در یک گزینه دیگر، نوشیدنی‌های داغ در بسته‌های در بسته فرستاده می‌شوند تا از ریختن آنها جلوگیری شود.",
                             "attributes": []
                           },
-                          "position": [
-                            8,
-                            2,
-                            1
-                          ]
+                          "position": [8, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      8,
-                      2
-                    ]
+                    "position": [8, 2]
                   },
                   {
                     "id": "6b16a088",
@@ -458,24 +341,15 @@
                             "text": "آی‌بی‌ام خاطرنشان کرده که این پهپادها مجهز به فناوری خواهند بود که فشار خون آدم‌ها، حالت چهره و اتساع مردمک را تشخیص می‌دهند و می‌توانند تشخیص بدهند آدم‌ها خواب‌آلود هستند یا ن",
                             "attributes": []
                           },
-                          "position": [
-                            8,
-                            3,
-                            1
-                          ]
+                          "position": [8, 3, 1]
                         }
                       ]
                     },
-                    "position": [
-                      8,
-                      3
-                    ]
+                    "position": [8, 3]
                   }
                 ]
               },
-              "position": [
-                8
-              ]
+              "position": [8]
             },
             {
               "id": "50e2e0c0",
@@ -505,37 +379,19 @@
                                         "text": "نوشیدنی‌ها داغ در بسته‌های سربسته توزیع می‌شوند\n",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        9,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [9, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  9,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [9, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            9,
-                            1,
-                            1
-                          ]
+                          "position": [9, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      9,
-                      1
-                    ]
+                    "position": [9, 1]
                   },
                   {
                     "id": "9d12a446",
@@ -560,37 +416,19 @@
                                         "text": "پهپاد قهوه‌ پخش‌کن",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        9,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [9, 2, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  9,
-                                  2,
-                                  1,
-                                  1
-                                ]
+                                "position": [9, 2, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            9,
-                            2,
-                            1
-                          ]
+                          "position": [9, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      9,
-                      2
-                    ]
+                    "position": [9, 2]
                   },
                   {
                     "id": "4e2a080d",
@@ -602,16 +440,11 @@
                       "originCode": "cpsprodpb",
                       "copyrightHolder": "IBM"
                     },
-                    "position": [
-                      9,
-                      3
-                    ]
+                    "position": [9, 3]
                   }
                 ]
               },
-              "position": [
-                9
-              ]
+              "position": [9]
             },
             {
               "id": "2b897050",
@@ -631,18 +464,11 @@
                             "text": "البته، کارمندان اداره می‌توانند با حرکت دست هم از پهپادها یک فنجان قهوه بخواهند.",
                             "attributes": []
                           },
-                          "position": [
-                            10,
-                            1,
-                            1
-                          ]
+                          "position": [10, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      10,
-                      1
-                    ]
+                    "position": [10, 1]
                   },
                   {
                     "id": "a89377cd",
@@ -657,18 +483,11 @@
                             "text": "شرکت آی‌بی‌ام زمانی سردمدار تولید کامپیوتر در جهان بود.",
                             "attributes": []
                           },
-                          "position": [
-                            10,
-                            2,
-                            1
-                          ]
+                          "position": [10, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      10,
-                      2
-                    ]
+                    "position": [10, 2]
                   },
                   {
                     "id": "3b6d8a9f",
@@ -683,24 +502,15 @@
                             "text": "اما در سال‌های اخیر این شرکت در زمینه تولید نرم‌افزار و هوش مصنوعی فعال شده است.",
                             "attributes": []
                           },
-                          "position": [
-                            10,
-                            3,
-                            1
-                          ]
+                          "position": [10, 3, 1]
                         }
                       ]
                     },
-                    "position": [
-                      10,
-                      3
-                    ]
+                    "position": [10, 3]
                   }
                 ]
               },
-              "position": [
-                10
-              ]
+              "position": [10]
             }
           ]
         }
@@ -1343,10 +1153,7 @@
                       "thingLabel": "News report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "tagging:Format"
-                      ],
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -1365,9 +1172,7 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": [
-                        "http://sws.geonames.org/130758/"
-                      ],
+                      "thingSameAs": ["http://sws.geonames.org/130758/"],
                       "thingEnglishLabel": "Iran",
                       "type": "about"
                     },
@@ -1617,9 +1422,7 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": [
-                        "http://sws.geonames.org/130758/"
-                      ],
+                      "thingSameAs": ["http://sws.geonames.org/130758/"],
                       "thingEnglishLabel": "Iran",
                       "type": "about"
                     },
@@ -1665,10 +1468,7 @@
                       "thingLabel": "News report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "tagging:Format"
-                      ],
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -2039,10 +1839,7 @@
                       "thingLabel": "News report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "tagging:Format"
-                      ],
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -2503,9 +2300,7 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": [
-                        "http://sws.geonames.org/1149361/"
-                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1149361/"],
                       "thingEnglishLabel": "Afghanistan",
                       "type": "about"
                     },
@@ -2746,9 +2541,7 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": [
-                        "http://sws.geonames.org/130758/"
-                      ],
+                      "thingSameAs": ["http://sws.geonames.org/130758/"],
                       "thingEnglishLabel": "Iran",
                       "type": "about"
                     },
@@ -2777,10 +2570,7 @@
                       "thingLabel": "News report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "tagging:Format"
-                      ],
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -2894,10 +2684,7 @@
                       "thingLabel": "News report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "tagging:Format"
-                      ],
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -2916,9 +2703,7 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": [
-                        "http://sws.geonames.org/130758/"
-                      ],
+                      "thingSameAs": ["http://sws.geonames.org/130758/"],
                       "thingEnglishLabel": "Iran",
                       "type": "about"
                     },
@@ -3040,10 +2825,7 @@
                       "thingLabel": "News report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "tagging:Format"
-                      ],
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -3062,9 +2844,7 @@
                         "core:Thing",
                         "core:Place"
                       ],
-                      "thingSameAs": [
-                        "http://sws.geonames.org/2921044/"
-                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2921044/"],
                       "thingEnglishLabel": "Germany",
                       "type": "about"
                     },
@@ -3207,10 +2987,7 @@
                       "thingLabel": "Fact check",
                       "thingUri": "http://www.bbc.co.uk/things/2c43504d-379c-44d1-b9a5-59b7759344b6#id",
                       "thingId": "2c43504d-379c-44d1-b9a5-59b7759344b6",
-                      "thingType": [
-                        "tagging:Format",
-                        "tagging:TagConcept"
-                      ],
+                      "thingType": ["tagging:Format", "tagging:TagConcept"],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/ontologies/applicationlogic-news/FactCheck",
                         "http://www.wikidata.org/entity/Q920093",
@@ -3399,10 +3176,7 @@
                       "thingLabel": "Feature",
                       "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
                       "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "tagging:Format"
-                      ],
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
                       ],
@@ -3660,10 +3434,7 @@
                       "thingLabel": "News report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "tagging:Format"
-                      ],
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -3682,9 +3453,7 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": [
-                        "http://sws.geonames.org/130758/"
-                      ],
+                      "thingSameAs": ["http://sws.geonames.org/130758/"],
                       "thingEnglishLabel": "Iran",
                       "type": "about"
                     }
@@ -3792,10 +3561,7 @@
                       "thingLabel": "News report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "tagging:Format"
-                      ],
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -3845,9 +3611,7 @@
                         "tagging:TagConcept",
                         "core:Thing"
                       ],
-                      "thingSameAs": [
-                        "http://sws.geonames.org/289688/"
-                      ],
+                      "thingSameAs": ["http://sws.geonames.org/289688/"],
                       "thingEnglishLabel": "Qatar",
                       "type": "about"
                     }
@@ -3963,10 +3727,7 @@
                       "thingLabel": "News report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "tagging:Format"
-                      ],
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -3985,9 +3746,7 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": [
-                        "http://sws.geonames.org/130758/"
-                      ],
+                      "thingSameAs": ["http://sws.geonames.org/130758/"],
                       "thingEnglishLabel": "Iran",
                       "type": "about"
                     },
@@ -4145,10 +3904,7 @@
                       "thingLabel": "Feature",
                       "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
                       "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "tagging:Format"
-                      ],
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
                       ],
@@ -4185,9 +3941,7 @@
                         "tagging:TagConcept",
                         "core:Thing"
                       ],
-                      "thingSameAs": [
-                        "http://sws.geonames.org/2017370/"
-                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2017370/"],
                       "thingEnglishLabel": "Russia",
                       "type": "about"
                     },
@@ -4201,9 +3955,7 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": [
-                        "http://sws.geonames.org/298795/"
-                      ],
+                      "thingSameAs": ["http://sws.geonames.org/298795/"],
                       "thingEnglishLabel": "Turkey",
                       "type": "about"
                     },
@@ -4743,9 +4495,7 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": [
-                        "http://sws.geonames.org/6252001/"
-                      ],
+                      "thingSameAs": ["http://sws.geonames.org/6252001/"],
                       "thingEnglishLabel": "United States",
                       "type": "about"
                     },
@@ -4759,9 +4509,7 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": [
-                        "http://sws.geonames.org/102358/"
-                      ],
+                      "thingSameAs": ["http://sws.geonames.org/102358/"],
                       "thingEnglishLabel": "Saudi Arabia",
                       "type": "about"
                     }

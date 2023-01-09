@@ -27,33 +27,19 @@
                                   "text": "මෙම පරීක්ෂණ ලිපියේ සිරස්තලය මෙයයි",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "3796bfc3",
@@ -83,37 +69,19 @@
                                         "text": "මෙම පරීක්ෂණ රූපය, ප්‍රකාශන හිමිකම් බීබීසී, ප්‍රංශයේ සිතියමක් පෙන්වයි. රූපය පළමු කොටස් තුනෙහි ඇති අතර මෙම ශීර්ෂ පා ය ඇත.\r",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        2,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [2, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  2,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [2, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            2,
-                            1,
-                            1
-                          ]
+                          "position": [2, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      2,
-                      1
-                    ]
+                    "position": [2, 1]
                   },
                   {
                     "id": "82e9097a",
@@ -138,37 +106,19 @@
                                         "text": "මෙම පරීක්ෂණ රූපය, ප්‍රකාශන හිමිකම් බීබීසී, ප්‍රංශයේ සිතියමක් පෙන්වයි. රූපය පළමු කොටස් තුනෙහි ඇති අතර මෙම ශීර්ෂ පා ය ඇත.\r",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        2,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [2, 2, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  2,
-                                  2,
-                                  1,
-                                  1
-                                ]
+                                "position": [2, 2, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            2,
-                            2,
-                            1
-                          ]
+                          "position": [2, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      2,
-                      2
-                    ]
+                    "position": [2, 2]
                   },
                   {
                     "id": "60b3c117",
@@ -180,16 +130,11 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "BBC"
                     },
-                    "position": [
-                      2,
-                      3
-                    ]
+                    "position": [2, 3]
                   }
                 ]
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "c11ebc3e",
@@ -198,9 +143,7 @@
                 "firstPublished": 1562942502450,
                 "lastPublished": 1562942502450
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "a96d00a8",
@@ -220,11 +163,7 @@
                             "text": "මෙය පෙළ වාරණයක් වන අතර එය බීබීසී කාලගුණ මුල් පිටුවට ",
                             "attributes": []
                           },
-                          "position": [
-                            4,
-                            1,
-                            1
-                          ]
+                          "position": [4, 1, 1]
                         },
                         {
                           "id": "0726fb6e",
@@ -239,22 +178,13 @@
                                   "text": "සබැඳියක් අඩංගු වේ",
                                   "attributes": []
                                 },
-                                "position": [
-                                  4,
-                                  1,
-                                  2,
-                                  1
-                                ]
+                                "position": [4, 1, 2, 1]
                               }
                             ],
                             "locator": "https://www.bbc.co.uk/weather",
                             "isExternal": false
                           },
-                          "position": [
-                            4,
-                            1,
-                            2
-                          ]
+                          "position": [4, 1, 2]
                         },
                         {
                           "id": "d9e6621b",
@@ -263,24 +193,15 @@
                             "text": ".",
                             "attributes": []
                           },
-                          "position": [
-                            4,
-                            1,
-                            3
-                          ]
+                          "position": [4, 1, 3]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      1
-                    ]
+                    "position": [4, 1]
                   }
                 ]
               },
-              "position": [
-                4
-              ]
+              "position": [4]
             },
             {
               "id": "0a6f1a46",
@@ -311,37 +232,19 @@
                                         "text": "චීන සුපිරි අධිවේගී මාර්ග භාවිතා කරන්නන් නව මංසන්ධියෙන් මවිතයට පත් වේ",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        5,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [5, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  5,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [5, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            5,
-                            1,
-                            1
-                          ]
+                          "position": [5, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      5,
-                      1
-                    ]
+                    "position": [5, 1]
                   },
                   {
                     "id": "cc1d01f7",
@@ -369,9 +272,7 @@
                             "versions": [
                               {
                                 "versionId": "p01djw2p",
-                                "types": [
-                                  "Original"
-                                ],
+                                "types": ["Original"],
                                 "duration": 28,
                                 "durationISO8601": "PT28S",
                                 "warnings": {},
@@ -387,11 +288,7 @@
                             },
                             "smpKind": "programme"
                           },
-                          "position": [
-                            5,
-                            2,
-                            1
-                          ]
+                          "position": [5, 2, 1]
                         },
                         {
                           "id": "5d5eae08",
@@ -405,33 +302,19 @@
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01djw9d.jpg",
                                   "originCode": "mpv"
                                 },
-                                "position": [
-                                  5,
-                                  2,
-                                  2,
-                                  1
-                                ]
+                                "position": [5, 2, 2, 1]
                               }
                             ]
                           },
-                          "position": [
-                            5,
-                            2,
-                            2
-                          ]
+                          "position": [5, 2, 2]
                         }
                       ]
                     },
-                    "position": [
-                      5,
-                      2
-                    ]
+                    "position": [5, 2]
                   }
                 ]
               },
-              "position": [
-                5
-              ]
+              "position": [5]
             },
             {
               "id": "04be7358",
@@ -456,33 +339,19 @@
                                   "text": "මෙය උප සිරස්තලයකි",
                                   "attributes": []
                                 },
-                                "position": [
-                                  6,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [6, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            6,
-                            1,
-                            1
-                          ]
+                          "position": [6, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      6,
-                      1
-                    ]
+                    "position": [6, 1]
                   }
                 ]
               },
-              "position": [
-                6
-              ]
+              "position": [6]
             },
             {
               "id": "d8ff8bc2",
@@ -512,37 +381,19 @@
                                         "text": "මෙය උප සිරස්තලයකි",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        7,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [7, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  7,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [7, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            7,
-                            1,
-                            1
-                          ]
+                          "position": [7, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      7,
-                      1
-                    ]
+                    "position": [7, 1]
                   },
                   {
                     "id": "c1760e5e",
@@ -554,16 +405,11 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "Getty Images"
                     },
-                    "position": [
-                      7,
-                      2
-                    ]
+                    "position": [7, 2]
                   }
                 ]
               },
-              "position": [
-                7
-              ]
+              "position": [7]
             },
             {
               "id": "b31762c9",
@@ -583,32 +429,21 @@
                             "text": "අපගේ වෙබ් අඩවියේ පරීක්ෂණ ක්‍රියාත්මක කිරීමට හැකිවන පරිදි මෙම පරීක්ෂණ ලිපිය නිර්මාණය කර ඇත.\r",
                             "attributes": []
                           },
-                          "position": [
-                            8,
-                            1,
-                            1
-                          ]
+                          "position": [8, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      8,
-                      1
-                    ]
+                    "position": [8, 1]
                   }
                 ]
               },
-              "position": [
-                8
-              ]
+              "position": [8]
             },
             {
               "id": "6a31f7e6",
               "type": "mpu",
               "model": {},
-              "position": [
-                9
-              ]
+              "position": [9]
             }
           ]
         }

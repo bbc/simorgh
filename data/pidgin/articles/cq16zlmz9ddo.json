@@ -33,37 +33,19 @@
                                         "text": "test",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        1,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [1, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   },
                   {
                     "id": "9f7575f9",
@@ -88,9 +70,7 @@
                             "versions": [
                               {
                                 "versionId": "p01sk2m3",
-                                "types": [
-                                  "Editorial"
-                                ],
+                                "types": ["Editorial"],
                                 "duration": 10,
                                 "durationISO8601": "PT10S",
                                 "warnings": {},
@@ -106,11 +86,7 @@
                             },
                             "smpKind": "programme"
                           },
-                          "position": [
-                            1,
-                            2,
-                            1
-                          ]
+                          "position": [1, 2, 1]
                         },
                         {
                           "id": "f64c7954",
@@ -126,12 +102,7 @@
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p012zl0f.jpg",
                                   "originCode": "mpv"
                                 },
-                                "position": [
-                                  1,
-                                  2,
-                                  2,
-                                  1
-                                ]
+                                "position": [1, 2, 2, 1]
                               },
                               {
                                 "id": "d8d0bc6e",
@@ -157,65 +128,32 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    1,
-                                                    2,
-                                                    2,
-                                                    2,
-                                                    1,
-                                                    1,
-                                                    1
+                                                    1, 2, 2, 2, 1, 1, 1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [
-                                              1,
-                                              2,
-                                              2,
-                                              2,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [1, 2, 2, 2, 1, 1]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        1,
-                                        2,
-                                        2,
-                                        2,
-                                        1
-                                      ]
+                                      "position": [1, 2, 2, 2, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  1,
-                                  2,
-                                  2,
-                                  2
-                                ]
+                                "position": [1, 2, 2, 2]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            2,
-                            2
-                          ]
+                          "position": [1, 2, 2]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      2
-                    ]
+                    "position": [1, 2]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "3c01af2f",
@@ -240,33 +178,19 @@
                                   "text": "Test: Skip to Content",
                                   "attributes": []
                                 },
-                                "position": [
-                                  2,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [2, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            2,
-                            1,
-                            1
-                          ]
+                          "position": [2, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      2,
-                      1
-                    ]
+                    "position": [2, 1]
                   }
                 ]
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "e0110d79",
@@ -296,37 +220,19 @@
                                         "text": "Test Image",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        3,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [3, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  3,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [3, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            3,
-                            1,
-                            1
-                          ]
+                          "position": [3, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      1
-                    ]
+                    "position": [3, 1]
                   },
                   {
                     "id": "4d11e53f",
@@ -351,37 +257,19 @@
                                         "text": "Woman with sign",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        3,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [3, 2, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  3,
-                                  2,
-                                  1,
-                                  1
-                                ]
+                                "position": [3, 2, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            3,
-                            2,
-                            1
-                          ]
+                          "position": [3, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      2
-                    ]
+                    "position": [3, 2]
                   },
                   {
                     "id": "05c27a62",
@@ -394,16 +282,11 @@
                       "copyrightHolder": "BBC",
                       "suitableForSyndication": true
                     },
-                    "position": [
-                      3,
-                      3
-                    ]
+                    "position": [3, 3]
                   }
                 ]
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "5bf18a46",
@@ -412,9 +295,7 @@
                 "firstPublished": 1629274175607,
                 "lastPublished": 1629274330168
               },
-              "position": [
-                4
-              ]
+              "position": [4]
             },
             {
               "id": "0bdad170",
@@ -434,32 +315,21 @@
                             "text": "Test text",
                             "attributes": []
                           },
-                          "position": [
-                            5,
-                            1,
-                            1
-                          ]
+                          "position": [5, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      5,
-                      1
-                    ]
+                    "position": [5, 1]
                   }
                 ]
               },
-              "position": [
-                5
-              ]
+              "position": [5]
             },
             {
               "id": "d9641de4",
               "type": "mpu",
               "model": {},
-              "position": [
-                6
-              ]
+              "position": [6]
             }
           ]
         }
@@ -823,9 +693,7 @@
             "versions": [
               {
                 "versionId": "p01p5qff",
-                "types": [
-                  "Original"
-                ],
+                "types": ["Original"],
                 "duration": 67,
                 "durationISO8601": "PT1M7S",
                 "warnings": {},
@@ -1802,9 +1670,7 @@
                         "core:Thing",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": [
-                        "http://sws.geonames.org/2328926/"
-                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2328926/"],
                       "thingEnglishLabel": "Nigeria",
                       "type": "about"
                     },
@@ -1836,9 +1702,7 @@
                         "core:Thing",
                         "core:Theme"
                       ],
-                      "thingSameAs": [
-                        "http://dbpedia.org/resource/Transport"
-                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Transport"],
                       "thingEnglishLabel": "Transport",
                       "type": "about"
                     }

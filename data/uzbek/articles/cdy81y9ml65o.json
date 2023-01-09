@@ -27,33 +27,19 @@
                                   "text": "Dunyoda misli koʻrilmagan tajriba: Oʻzbekiston Orol dengizi tubini oʻrmonga aylantirmoqda",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "dcc9b5aa",
@@ -62,9 +48,7 @@
                 "firstPublished": 1562942148973,
                 "lastPublished": 1562942148973
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "7971200d",
@@ -84,18 +68,11 @@
                             "text": "Orol dengizining qurishi insoniyat tarixidagi dunyoning eng yirik ekologik fojialaridan biri boʻldi. Sahroga aylangan dengiz tubidagi tuzlar, qum-chang va zaharli oʻgʻitlar insonlarhayoti va tabiatni xavf ostiga qoʻygan.",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            1,
-                            1
-                          ]
+                          "position": [3, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      1
-                    ]
+                    "position": [3, 1]
                   },
                   {
                     "id": "f93f792b",
@@ -110,18 +87,11 @@
                             "text": "Ammo bugun Oʻzbekiston dunyoda misli koʻrilmagan tajribaga qoʻl urmoqda: dengiz oʻrnidagi sahroni oʻrmonga aylantirmoqchi.",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            2,
-                            1
-                          ]
+                          "position": [3, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      2
-                    ]
+                    "position": [3, 2]
                   },
                   {
                     "id": "a0309867",
@@ -136,32 +106,21 @@
                             "text": "Bu Qoraqalpogʻistonda hayotni asrab qola oladimi?",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            3,
-                            1
-                          ]
+                          "position": [3, 3, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      3
-                    ]
+                    "position": [3, 3]
                   }
                 ]
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "5be22240",
               "type": "mpu",
               "model": {},
-              "position": [
-                4
-              ]
+              "position": [4]
             }
           ]
         }
@@ -185,12 +144,7 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Uzbek",
           "taggings": []
         },
-        "blockTypes": [
-          "headline",
-          "text",
-          "paragraph",
-          "fragment"
-        ],
+        "blockTypes": ["headline", "text", "paragraph", "fragment"],
         "consumableAsSFV": false,
         "allowAdvertising": true,
         "consumableOnRedButton": false,

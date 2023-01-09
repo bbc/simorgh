@@ -27,33 +27,19 @@
                                   "text": "Social Test multiple (Simorgh Instas)",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "5d20e7a1",
@@ -62,9 +48,7 @@
                 "firstPublished": 1658757788461,
                 "lastPublished": 1658920829524
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "aa776b8b",
@@ -89,33 +73,19 @@
                                   "text": "Social Test 1 - Multiple Instagram",
                                   "attributes": []
                                 },
-                                "position": [
-                                  3,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [3, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            3,
-                            1,
-                            1
-                          ]
+                          "position": [3, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      1
-                    ]
+                    "position": [3, 1]
                   }
                 ]
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "4534eb62",
@@ -135,24 +105,15 @@
                             "text": "1st embed below",
                             "attributes": []
                           },
-                          "position": [
-                            4,
-                            1,
-                            1
-                          ]
+                          "position": [4, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      1
-                    ]
+                    "position": [4, 1]
                   }
                 ]
               },
-              "position": [
-                4
-              ]
+              "position": [4]
             },
             {
               "id": "0fee7c58",
@@ -183,24 +144,15 @@
                               "indexOfType": 0
                             }
                           },
-                          "position": [
-                            5,
-                            1,
-                            1
-                          ]
+                          "position": [5, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      5,
-                      1
-                    ]
+                    "position": [5, 1]
                   }
                 ]
               },
-              "position": [
-                5
-              ]
+              "position": [5]
             },
             {
               "id": "dfd512f9",
@@ -220,24 +172,15 @@
                             "text": "2nd embed below",
                             "attributes": []
                           },
-                          "position": [
-                            6,
-                            1,
-                            1
-                          ]
+                          "position": [6, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      6,
-                      1
-                    ]
+                    "position": [6, 1]
                   }
                 ]
               },
-              "position": [
-                6
-              ]
+              "position": [6]
             },
             {
               "id": "e41a18a8",
@@ -268,24 +211,15 @@
                               "indexOfType": 1
                             }
                           },
-                          "position": [
-                            7,
-                            1,
-                            1
-                          ]
+                          "position": [7, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      7,
-                      1
-                    ]
+                    "position": [7, 1]
                   }
                 ]
               },
-              "position": [
-                7
-              ]
+              "position": [7]
             },
             {
               "id": "c8470049",
@@ -305,24 +239,15 @@
                             "text": "3rd embed below",
                             "attributes": []
                           },
-                          "position": [
-                            8,
-                            1,
-                            1
-                          ]
+                          "position": [8, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      8,
-                      1
-                    ]
+                    "position": [8, 1]
                   }
                 ]
               },
-              "position": [
-                8
-              ]
+              "position": [8]
             },
             {
               "id": "162a9315",
@@ -353,32 +278,21 @@
                               "indexOfType": 2
                             }
                           },
-                          "position": [
-                            9,
-                            1,
-                            1
-                          ]
+                          "position": [9, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      9,
-                      1
-                    ]
+                    "position": [9, 1]
                   }
                 ]
               },
-              "position": [
-                9
-              ]
+              "position": [9]
             },
             {
               "id": "1ced11cb",
               "type": "mpu",
               "model": {},
-              "position": [
-                10
-              ]
+              "position": [10]
             }
           ]
         }
@@ -666,9 +580,7 @@
             "versions": [
               {
                 "versionId": "p01p5qff",
-                "types": [
-                  "Original"
-                ],
+                "types": ["Original"],
                 "duration": 67,
                 "durationISO8601": "PT1M7S",
                 "warnings": {},
@@ -1645,9 +1557,7 @@
                         "core:Thing",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": [
-                        "http://sws.geonames.org/2328926/"
-                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2328926/"],
                       "thingEnglishLabel": "Nigeria",
                       "type": "about"
                     },
@@ -1679,9 +1589,7 @@
                         "core:Thing",
                         "core:Theme"
                       ],
-                      "thingSameAs": [
-                        "http://dbpedia.org/resource/Transport"
-                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Transport"],
                       "thingEnglishLabel": "Transport",
                       "type": "about"
                     }

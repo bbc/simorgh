@@ -27,33 +27,19 @@
                                   "text": "Royal wedding flowers given to Hackney hospice",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "9e8a42e3",
@@ -83,37 +69,19 @@
                                         "text": "Former embroider Pauline Clayton described the gift as \"lovely\"",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        2,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [2, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  2,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [2, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            2,
-                            1,
-                            1
-                          ]
+                          "position": [2, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      2,
-                      1
-                    ]
+                    "position": [2, 1]
                   },
                   {
                     "id": "12a24f28",
@@ -138,37 +106,19 @@
                                         "text": "Pauline Clayton",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        2,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [2, 2, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  2,
-                                  2,
-                                  1,
-                                  1
-                                ]
+                                "position": [2, 2, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            2,
-                            2,
-                            1
-                          ]
+                          "position": [2, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      2,
-                      2
-                    ]
+                    "position": [2, 2]
                   },
                   {
                     "id": "3c61716e",
@@ -180,16 +130,11 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "St Joseph's Hospice"
                     },
-                    "position": [
-                      2,
-                      3
-                    ]
+                    "position": [2, 3]
                   }
                 ]
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "a0231575",
@@ -198,9 +143,7 @@
                 "firstPublished": 1559050699412,
                 "lastPublished": 1559050699412
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "4bcbce79",
@@ -220,18 +163,11 @@
                             "text": "Patients at an east London hospice were \"thrilled\" to be handed bouquets of flowers from the royal wedding of Prince Harry and Meghan Markle.",
                             "attributes": []
                           },
-                          "position": [
-                            4,
-                            1,
-                            1
-                          ]
+                          "position": [4, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      1
-                    ]
+                    "position": [4, 1]
                   },
                   {
                     "id": "53d50f3f",
@@ -246,18 +182,11 @@
                             "text": "The flowers, which had adorned St George's Chapel at Windsor Castle, were delivered to St Joseph's Hospice in Hackney on Sunday.",
                             "attributes": []
                           },
-                          "position": [
-                            4,
-                            2,
-                            1
-                          ]
+                          "position": [4, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      2
-                    ]
+                    "position": [4, 2]
                   },
                   {
                     "id": "4b2c56b1",
@@ -272,18 +201,11 @@
                             "text": "Designed by Philippa Craddock, the flowers were hand-tied into bouquets for the hospice residents.",
                             "attributes": []
                           },
-                          "position": [
-                            4,
-                            3,
-                            1
-                          ]
+                          "position": [4, 3, 1]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      3
-                    ]
+                    "position": [4, 3]
                   },
                   {
                     "id": "e9a11e2d",
@@ -298,11 +220,7 @@
                             "text": "Meghan's own bouquet was ",
                             "attributes": []
                           },
-                          "position": [
-                            4,
-                            4,
-                            1
-                          ]
+                          "position": [4, 4, 1]
                         },
                         {
                           "id": "0cc0710a",
@@ -317,22 +235,13 @@
                                   "text": "placed on the tomb of the unknown warrior",
                                   "attributes": []
                                 },
-                                "position": [
-                                  4,
-                                  4,
-                                  2,
-                                  1
-                                ]
+                                "position": [4, 4, 2, 1]
                               }
                             ],
                             "locator": "https://www.test.bbc.co.uk/news/articles/cl55zn0w0l4o",
                             "isExternal": false
                           },
-                          "position": [
-                            4,
-                            4,
-                            2
-                          ]
+                          "position": [4, 4, 2]
                         },
                         {
                           "id": "bf2da28b",
@@ -341,32 +250,21 @@
                             "text": " at Westminster Abbey, following royal tradition.",
                             "attributes": []
                           },
-                          "position": [
-                            4,
-                            4,
-                            3
-                          ]
+                          "position": [4, 4, 3]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      4
-                    ]
+                    "position": [4, 4]
                   }
                 ]
               },
-              "position": [
-                4
-              ]
+              "position": [4]
             },
             {
               "id": "6158fef8",
               "type": "mpu",
               "model": {},
-              "position": [
-                5
-              ]
+              "position": [5]
             },
             {
               "id": "5ed77b44",
@@ -386,18 +284,11 @@
                             "text": "\"We are so honoured to receive this wonderful gift,\" the hospice said.",
                             "attributes": []
                           },
-                          "position": [
-                            6,
-                            1,
-                            1
-                          ]
+                          "position": [6, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      6,
-                      1
-                    ]
+                    "position": [6, 1]
                   },
                   {
                     "id": "9c536c33",
@@ -412,24 +303,15 @@
                             "text": "Respite patient Pauline Clayton, 89, was especially pleased with the gift. At the age of 19 she worked for royal dressmaker Norman Hartnell and helped to embroider the 15ft (4.5m) Botticelli-inspired train of Queen Elizabeth II's wedding dress.",
                             "attributes": []
                           },
-                          "position": [
-                            6,
-                            2,
-                            1
-                          ]
+                          "position": [6, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      6,
-                      2
-                    ]
+                    "position": [6, 2]
                   }
                 ]
               },
-              "position": [
-                6
-              ]
+              "position": [6]
             },
             {
               "id": "c0383bd6",
@@ -459,37 +341,19 @@
                                         "text": "The flowers had adorned the chapel at Windsor Castle",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        7,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [7, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  7,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [7, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            7,
-                            1,
-                            1
-                          ]
+                          "position": [7, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      7,
-                      1
-                    ]
+                    "position": [7, 1]
                   },
                   {
                     "id": "68425257",
@@ -514,37 +378,19 @@
                                         "text": "Royal wedding",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        7,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [7, 2, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  7,
-                                  2,
-                                  1,
-                                  1
-                                ]
+                                "position": [7, 2, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            7,
-                            2,
-                            1
-                          ]
+                          "position": [7, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      7,
-                      2
-                    ]
+                    "position": [7, 2]
                   },
                   {
                     "id": "344460e9",
@@ -556,16 +402,11 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "EPA"
                     },
-                    "position": [
-                      7,
-                      3
-                    ]
+                    "position": [7, 3]
                   }
                 ]
               },
-              "position": [
-                7
-              ]
+              "position": [7]
             },
             {
               "id": "81c747ab",
@@ -595,37 +436,19 @@
                                         "text": "Philippa Craddock directed a team to create the wedding displays",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        8,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [8, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  8,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [8, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            8,
-                            1,
-                            1
-                          ]
+                          "position": [8, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      8,
-                      1
-                    ]
+                    "position": [8, 1]
                   },
                   {
                     "id": "5ddbf15f",
@@ -650,37 +473,19 @@
                                         "text": "Flowers adorning the chapel at Windsor Castle",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        8,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [8, 2, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  8,
-                                  2,
-                                  1,
-                                  1
-                                ]
+                                "position": [8, 2, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            8,
-                            2,
-                            1
-                          ]
+                          "position": [8, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      8,
-                      2
-                    ]
+                    "position": [8, 2]
                   },
                   {
                     "id": "d05d6ce0",
@@ -692,16 +497,11 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "Reuters"
                     },
-                    "position": [
-                      8,
-                      3
-                    ]
+                    "position": [8, 3]
                   }
                 ]
               },
-              "position": [
-                8
-              ]
+              "position": [8]
             },
             {
               "id": "d36685a0",
@@ -721,18 +521,11 @@
                             "text": "\"We were on rationing then so we weren't allowed to sew on any embellishments so the train was embroidered,\" she said.",
                             "attributes": []
                           },
-                          "position": [
-                            9,
-                            1,
-                            1
-                          ]
+                          "position": [9, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      9,
-                      1
-                    ]
+                    "position": [9, 1]
                   },
                   {
                     "id": "acfa1920",
@@ -747,24 +540,15 @@
                             "text": "\"There were four of us girls working on it and we earned 49 and a half hours overtime doing that.\"",
                             "attributes": []
                           },
-                          "position": [
-                            9,
-                            2,
-                            1
-                          ]
+                          "position": [9, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      9,
-                      2
-                    ]
+                    "position": [9, 2]
                   }
                 ]
               },
-              "position": [
-                9
-              ]
+              "position": [9]
             },
             {
               "id": "a88c8aa9",
@@ -794,37 +578,19 @@
                                         "text": "Pauline Clayton helped to embroider the train of Queen Elizabeth II's wedding dress",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        10,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [10, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  10,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [10, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            10,
-                            1,
-                            1
-                          ]
+                          "position": [10, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      10,
-                      1
-                    ]
+                    "position": [10, 1]
                   },
                   {
                     "id": "ae5abe5e",
@@ -849,37 +615,19 @@
                                         "text": "The Queen and Prince Philip pose for an official photograph on their wedding day.",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        10,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [10, 2, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  10,
-                                  2,
-                                  1,
-                                  1
-                                ]
+                                "position": [10, 2, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            10,
-                            2,
-                            1
-                          ]
+                          "position": [10, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      10,
-                      2
-                    ]
+                    "position": [10, 2]
                   },
                   {
                     "id": "6581023f",
@@ -891,16 +639,11 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "Press Assocation"
                     },
-                    "position": [
-                      10,
-                      3
-                    ]
+                    "position": [10, 3]
                   }
                 ]
               },
-              "position": [
-                10
-              ]
+              "position": [10]
             },
             {
               "id": "38e7ac97",
@@ -920,18 +663,11 @@
                             "text": "\"I really liked working for the Queen Mother and I helped to make many of her dresses during my 20-year career with Norman Hartnell.",
                             "attributes": []
                           },
-                          "position": [
-                            11,
-                            1,
-                            1
-                          ]
+                          "position": [11, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      11,
-                      1
-                    ]
+                    "position": [11, 1]
                   },
                   {
                     "id": "dbe8b918",
@@ -946,18 +682,11 @@
                             "text": "\"With my royal connections it's such a lovely coincidence to be at St Joseph's and receive these wedding flowers.",
                             "attributes": []
                           },
-                          "position": [
-                            11,
-                            2,
-                            1
-                          ]
+                          "position": [11, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      11,
-                      2
-                    ]
+                    "position": [11, 2]
                   },
                   {
                     "id": "b2714ba0",
@@ -972,24 +701,15 @@
                             "text": "\"They are beautiful and very special.\"",
                             "attributes": []
                           },
-                          "position": [
-                            11,
-                            3,
-                            1
-                          ]
+                          "position": [11, 3, 1]
                         }
                       ]
                     },
-                    "position": [
-                      11,
-                      3
-                    ]
+                    "position": [11, 3]
                   }
                 ]
               },
-              "position": [
-                11
-              ]
+              "position": [11]
             },
             {
               "id": "67550de4",
@@ -1019,37 +739,19 @@
                                         "text": "The floral displays in St George's Chapel were created using locally sourced foliage",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        12,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [12, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  12,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [12, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            12,
-                            1,
-                            1
-                          ]
+                          "position": [12, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      12,
-                      1
-                    ]
+                    "position": [12, 1]
                   },
                   {
                     "id": "7ca8e6b5",
@@ -1074,37 +776,19 @@
                                         "text": "St George's Chapel, Windsor",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        12,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [12, 2, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  12,
-                                  2,
-                                  1,
-                                  1
-                                ]
+                                "position": [12, 2, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            12,
-                            2,
-                            1
-                          ]
+                          "position": [12, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      12,
-                      2
-                    ]
+                    "position": [12, 2]
                   },
                   {
                     "id": "49aa45b0",
@@ -1116,16 +800,11 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "EPA"
                     },
-                    "position": [
-                      12,
-                      3
-                    ]
+                    "position": [12, 3]
                   }
                 ]
               },
-              "position": [
-                12
-              ]
+              "position": [12]
             },
             {
               "id": "26eedf5c",
@@ -1145,18 +824,11 @@
                             "text": "Nigel Harding, chief executive of the hospice, said: \"The flowers are simply stunning and our patients were both surprised and delighted to receive them.",
                             "attributes": []
                           },
-                          "position": [
-                            13,
-                            1,
-                            1
-                          ]
+                          "position": [13, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      13,
-                      1
-                    ]
+                    "position": [13, 1]
                   },
                   {
                     "id": "b434e135",
@@ -1171,18 +843,11 @@
                             "text": "\"A huge thank you to Philippa Craddock and her team - and of course to the Royal bride and groom.\"",
                             "attributes": []
                           },
-                          "position": [
-                            13,
-                            2,
-                            1
-                          ]
+                          "position": [13, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      13,
-                      2
-                    ]
+                    "position": [13, 2]
                   },
                   {
                     "id": "58aa0caf",
@@ -1197,24 +862,15 @@
                             "text": "Flowers from gardens and parklands of The Crown Estate and Windsor Great Park were used to make the bouquets, and included branches of beech, birch and hornbeam as well as foxgloves and peonies.",
                             "attributes": []
                           },
-                          "position": [
-                            13,
-                            3,
-                            1
-                          ]
+                          "position": [13, 3, 1]
                         }
                       ]
                     },
-                    "position": [
-                      13,
-                      3
-                    ]
+                    "position": [13, 3]
                   }
                 ]
               },
-              "position": [
-                13
-              ]
+              "position": [13]
             }
           ]
         }
@@ -1263,11 +919,7 @@
                 "thingLabel": "Wedding of Prince Harry and Meghan Markle",
                 "thingUri": "http://www.bbc.co.uk/things/2351f2b2-ce36-4f44-996d-c3c4f7f90eaa#id",
                 "thingId": "2351f2b2-ce36-4f44-996d-c3c4f7f90eaa",
-                "thingType": [
-                  "core:Thing",
-                  "tagging:TagConcept",
-                  "core:Event"
-                ],
+                "thingType": ["core:Thing", "tagging:TagConcept", "core:Event"],
                 "thingSameAs": [],
                 "thingEnglishLabel": "Wedding of Prince Harry and Meghan Markle",
                 "type": "about"
@@ -1284,9 +936,7 @@
                   "core:Person",
                   "tagging:AmbiguousTerm"
                 ],
-                "thingSameAs": [
-                  "http://dbpedia.org/resource/Meghan_Markle"
-                ],
+                "thingSameAs": ["http://dbpedia.org/resource/Meghan_Markle"],
                 "thingEnglishLabel": "Duchess of Sussex",
                 "type": "about"
               },
@@ -1295,14 +945,8 @@
                 "thingLabel": "Hackney",
                 "thingUri": "http://www.bbc.co.uk/things/dba7dfeb-87d3-4801-80ba-fa8be6c9555e#id",
                 "thingId": "dba7dfeb-87d3-4801-80ba-fa8be6c9555e",
-                "thingType": [
-                  "tagging:TagConcept",
-                  "core:Thing",
-                  "core:Place"
-                ],
-                "thingSameAs": [
-                  "http://sws.geonames.org/2647694/"
-                ],
+                "thingType": ["tagging:TagConcept", "core:Thing", "core:Place"],
+                "thingSameAs": ["http://sws.geonames.org/2647694/"],
                 "thingEnglishLabel": "Hackney",
                 "type": "about"
               },
@@ -1311,14 +955,8 @@
                 "thingLabel": "Windsor",
                 "thingUri": "http://www.bbc.co.uk/things/f94940f0-476c-4ec7-b48d-e58120bb1956#id",
                 "thingId": "f94940f0-476c-4ec7-b48d-e58120bb1956",
-                "thingType": [
-                  "core:Thing",
-                  "core:Place",
-                  "tagging:TagConcept"
-                ],
-                "thingSameAs": [
-                  "http://sws.geonames.org/2633842/"
-                ],
+                "thingType": ["core:Thing", "core:Place", "tagging:TagConcept"],
+                "thingSameAs": ["http://sws.geonames.org/2633842/"],
                 "thingEnglishLabel": "Windsor",
                 "type": "about"
               }
@@ -1331,11 +969,7 @@
               "thingLabel": "Wedding of Prince Harry and Meghan Markle",
               "thingUri": "http://www.bbc.co.uk/things/2351f2b2-ce36-4f44-996d-c3c4f7f90eaa#id",
               "thingId": "2351f2b2-ce36-4f44-996d-c3c4f7f90eaa",
-              "thingType": [
-                "core:Thing",
-                "tagging:TagConcept",
-                "core:Event"
-              ],
+              "thingType": ["core:Thing", "tagging:TagConcept", "core:Event"],
               "thingSameAs": [],
               "thingEnglishLabel": "Wedding of Prince Harry and Meghan Markle",
               "thingLabelLanguage": "en-gb",
@@ -1352,9 +986,7 @@
                 "core:Person",
                 "tagging:AmbiguousTerm"
               ],
-              "thingSameAs": [
-                "http://dbpedia.org/resource/Meghan_Markle"
-              ],
+              "thingSameAs": ["http://dbpedia.org/resource/Meghan_Markle"],
               "thingEnglishLabel": "Duchess of Sussex",
               "thingLabelLanguage": "en-gb",
               "thingPreferredLabel": "Duchess of Sussex"
@@ -1363,14 +995,8 @@
               "thingLabel": "Hackney",
               "thingUri": "http://www.bbc.co.uk/things/dba7dfeb-87d3-4801-80ba-fa8be6c9555e#id",
               "thingId": "dba7dfeb-87d3-4801-80ba-fa8be6c9555e",
-              "thingType": [
-                "tagging:TagConcept",
-                "core:Thing",
-                "core:Place"
-              ],
-              "thingSameAs": [
-                "http://sws.geonames.org/2647694/"
-              ],
+              "thingType": ["tagging:TagConcept", "core:Thing", "core:Place"],
+              "thingSameAs": ["http://sws.geonames.org/2647694/"],
               "topicName": "Hackney",
               "topicId": "cmg0810x955t",
               "curationList": [
@@ -1387,14 +1013,8 @@
               "thingLabel": "Windsor",
               "thingUri": "http://www.bbc.co.uk/things/f94940f0-476c-4ec7-b48d-e58120bb1956#id",
               "thingId": "f94940f0-476c-4ec7-b48d-e58120bb1956",
-              "thingType": [
-                "core:Thing",
-                "core:Place",
-                "tagging:TagConcept"
-              ],
-              "thingSameAs": [
-                "http://sws.geonames.org/2633842/"
-              ],
+              "thingType": ["core:Thing", "core:Place", "tagging:TagConcept"],
+              "thingSameAs": ["http://sws.geonames.org/2633842/"],
               "topicName": "Windsor",
               "topicId": "cy489180198t",
               "curationList": [
@@ -2467,10 +2087,7 @@
                       "thingLabel": "Design and Technology",
                       "thingUri": "http://www.bbc.co.uk/things/add89d72-af77-4490-b479-25fd45bb5e72#id",
                       "thingId": "add89d72-af77-4490-b479-25fd45bb5e72",
-                      "thingType": [
-                        "core:Thing",
-                        "tagging:TagConcept"
-                      ],
+                      "thingType": ["core:Thing", "tagging:TagConcept"],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/education/subjects/zykw2hv#field-of-study"
                       ],
@@ -2628,10 +2245,7 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "tagging:Format"
-                      ],
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",

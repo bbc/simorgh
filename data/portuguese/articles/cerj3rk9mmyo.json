@@ -27,33 +27,19 @@
                                   "text": "Homófonos: O que são e qual a sua relevância em inglês?",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "185919ab",
@@ -62,9 +48,7 @@
                 "firstPublished": 1562941526269,
                 "lastPublished": 1562941526269
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "a50ec162",
@@ -84,18 +68,11 @@
                             "text": "Quem já tentou aprender outro idioma sabe que a tarefa não é nada fácil.",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            1,
-                            1
-                          ]
+                          "position": [3, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      1
-                    ]
+                    "position": [3, 1]
                   },
                   {
                     "id": "54a38dc9",
@@ -110,18 +87,11 @@
                             "text": "Para incorporar as nuances da língua estrangeira, o aluno tem que se desligar das regras de seu próprio idioma, evitando cair nas inúmeras armadilhas que cada língua apresenta, como por exemplo os falsos cognatos - aquelas palavras que por similaridade gráfica, fonética, ou ambas, com vocábulos de seu próprio idioma, sugerem ser algo que na verdade não são.",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            2,
-                            1
-                          ]
+                          "position": [3, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      2
-                    ]
+                    "position": [3, 2]
                   },
                   {
                     "id": "b692999e",
@@ -136,26 +106,16 @@
                             "text": "Um bom exemplo é a palavra inglesa ",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            3,
-                            1
-                          ]
+                          "position": [3, 3, 1]
                         },
                         {
                           "id": "71976155",
                           "type": "fragment",
                           "model": {
                             "text": "actually",
-                            "attributes": [
-                              "italic"
-                            ]
+                            "attributes": ["italic"]
                           },
-                          "position": [
-                            3,
-                            3,
-                            2
-                          ]
+                          "position": [3, 3, 2]
                         },
                         {
                           "id": "ea743281",
@@ -164,26 +124,16 @@
                             "text": " que quer dizer ",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            3,
-                            3
-                          ]
+                          "position": [3, 3, 3]
                         },
                         {
                           "id": "0dbe1c12",
                           "type": "fragment",
                           "model": {
                             "text": "realmente",
-                            "attributes": [
-                              "italic"
-                            ]
+                            "attributes": ["italic"]
                           },
-                          "position": [
-                            3,
-                            3,
-                            4
-                          ]
+                          "position": [3, 3, 4]
                         },
                         {
                           "id": "20eb0539",
@@ -192,26 +142,16 @@
                             "text": " em português e não ",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            3,
-                            5
-                          ]
+                          "position": [3, 3, 5]
                         },
                         {
                           "id": "9baf700c",
                           "type": "fragment",
                           "model": {
                             "text": "atualmente",
-                            "attributes": [
-                              "italic"
-                            ]
+                            "attributes": ["italic"]
                           },
-                          "position": [
-                            3,
-                            3,
-                            6
-                          ]
+                          "position": [3, 3, 6]
                         },
                         {
                           "id": "c37d0f76",
@@ -220,18 +160,11 @@
                             "text": " como a grafia sugere.",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            3,
-                            7
-                          ]
+                          "position": [3, 3, 7]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      3
-                    ]
+                    "position": [3, 3]
                   },
                   {
                     "id": "da69cf1f",
@@ -246,32 +179,21 @@
                             "text": "Nessa linha de grande dificuldade linguística estão os homófonos, palavras pronunciadas da mesma forma, porém com sentido e grafia diferentes - são um dos grandes obstáculos a quem tenta aprender uma nova língua.",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            4,
-                            1
-                          ]
+                          "position": [3, 4, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      4
-                    ]
+                    "position": [3, 4]
                   }
                 ]
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "98aa779e",
               "type": "mpu",
               "model": {},
-              "position": [
-                4
-              ]
+              "position": [4]
             }
           ]
         }
@@ -296,12 +218,7 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
           "taggings": []
         },
-        "blockTypes": [
-          "headline",
-          "text",
-          "paragraph",
-          "fragment"
-        ],
+        "blockTypes": ["headline", "text", "paragraph", "fragment"],
         "consumableAsSFV": false,
         "allowAdvertising": true,
         "consumableOnRedButton": false,

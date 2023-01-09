@@ -27,33 +27,19 @@
                                   "text": "花木兰真人版：迪士尼斥巨资集结明星重拍的中国经典",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "635af9ad",
@@ -62,9 +48,7 @@
                 "firstPublished": 1562943152251,
                 "lastPublished": 1562943152251
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "1b757ab3",
@@ -84,18 +68,11 @@
                             "text": "这一次，电影里不会再有唱段，也不会再有会说话的龙，故事里的反派也不再是匈奴的军队，而变成了一个女巫……但是，不管怎样，《花木兰》终于要重登上银幕了。",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            1,
-                            1
-                          ]
+                          "position": [3, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      1
-                    ]
+                    "position": [3, 1]
                   },
                   {
                     "id": "a1c84071",
@@ -110,18 +87,11 @@
                             "text": "本周，迪士尼（Disney）发布了真人版电影的初版预告片，宣告这部1998年经典动画的重制作品即将问世。中国古代女子女扮男装代父从军上战场的传奇故事，将再次与观众见面。",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            2,
-                            1
-                          ]
+                          "position": [3, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      2
-                    ]
+                    "position": [3, 2]
                   },
                   {
                     "id": "c3f17c64",
@@ -136,18 +106,11 @@
                             "text": "迪士尼在21世纪已经重拍过一系列来自该公司1990年代的经典作品，包括《灰姑娘》、《美女与野兽》和《阿拉丁》等。",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            3,
-                            1
-                          ]
+                          "position": [3, 3, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      3
-                    ]
+                    "position": [3, 3]
                   },
                   {
                     "id": "bfad3bb7",
@@ -162,32 +125,21 @@
                             "text": "20多年前，动画版的《花木兰》却在故事发源地中国遭遇惨败；这一次，迪士尼想尽了一切办法要以新版的女英雄传奇征服中国观众。",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            4,
-                            1
-                          ]
+                          "position": [3, 4, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      4
-                    ]
+                    "position": [3, 4]
                   }
                 ]
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "145d569a",
               "type": "mpu",
               "model": {},
-              "position": [
-                4
-              ]
+              "position": [4]
             }
           ]
         }
@@ -211,12 +163,7 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
           "taggings": []
         },
-        "blockTypes": [
-          "headline",
-          "text",
-          "paragraph",
-          "fragment"
-        ],
+        "blockTypes": ["headline", "text", "paragraph", "fragment"],
         "allowAdvertising": true
       },
       "promo": {
@@ -257,9 +204,7 @@
             "versions": [
               {
                 "versionId": "p01plp1c",
-                "types": [
-                  "Original"
-                ],
+                "types": ["Original"],
                 "duration": 29,
                 "durationISO8601": "PT29S",
                 "warnings": {},

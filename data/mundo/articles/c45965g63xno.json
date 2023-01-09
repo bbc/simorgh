@@ -27,33 +27,19 @@
                                   "text": "Islam en México: los indígenas chamulas que viven en Chiapas con tradiciones musulmanas",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "dfe135f4",
@@ -62,9 +48,7 @@
                 "firstPublished": 1562941654757,
                 "lastPublished": 1562941654757
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "b5eb9b5f",
@@ -84,18 +68,11 @@
                             "text": "El islam llegó en San Cristobal de las Casas en la década de los 90 de la mano de unos españoles que querían unirse a la lucha zapatista.",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            1,
-                            1
-                          ]
+                          "position": [3, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      1
-                    ]
+                    "position": [3, 1]
                   },
                   {
                     "id": "22217fc8",
@@ -110,18 +87,11 @@
                             "text": "Su mensaje se asentó entre los chamulas y fue pasando entre las familias a lo largo de los años.",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            2,
-                            1
-                          ]
+                          "position": [3, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      2
-                    ]
+                    "position": [3, 2]
                   },
                   {
                     "id": "30e1f18b",
@@ -136,18 +106,11 @@
                             "text": "Hoy hay al menos 300 personas que profesan su fe en Alá, ayunan durante el Ramadán y se niegan a beber alcohol.",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            3,
-                            1
-                          ]
+                          "position": [3, 3, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      3
-                    ]
+                    "position": [3, 3]
                   },
                   {
                     "id": "13a3c443",
@@ -162,32 +125,21 @@
                             "text": "Ana Gabriela Rojas, corresponsal de BBC Mundo, estuvo en esa comunidad para conocer su historia.",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            4,
-                            1
-                          ]
+                          "position": [3, 4, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      4
-                    ]
+                    "position": [3, 4]
                   }
                 ]
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "46648217",
               "type": "mpu",
               "model": {},
-              "position": [
-                4
-              ]
+              "position": [4]
             }
           ]
         }
@@ -212,12 +164,7 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
           "taggings": []
         },
-        "blockTypes": [
-          "headline",
-          "text",
-          "paragraph",
-          "fragment"
-        ],
+        "blockTypes": ["headline", "text", "paragraph", "fragment"],
         "allowAdvertising": true
       },
       "promo": {
@@ -324,9 +271,7 @@
             "versions": [
               {
                 "versionId": "p01hnn2d",
-                "types": [
-                  "Original"
-                ],
+                "types": ["Original"],
                 "duration": 16,
                 "durationISO8601": "PT16S",
                 "warnings": {},
@@ -604,10 +549,7 @@
                       "thingLabel": "News report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "tagging:Format"
-                      ],
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -628,9 +570,7 @@
                         "tagging:TagConcept",
                         "tagging:Genre"
                       ],
-                      "thingSameAs": [
-                        "http://dbpedia.org/resource/Health"
-                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Health"],
                       "thingEnglishLabel": "Health",
                       "type": "about"
                     }

@@ -27,33 +27,19 @@
                                   "text": "የቀደመው ዘመናዊ ሰው ከአፍሪካ ውጪ ተገኘ",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "f27d8b15",
@@ -62,9 +48,7 @@
                 "firstPublished": 1562942682443,
                 "lastPublished": 1562942682443
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "c3fb1f86",
@@ -84,18 +68,11 @@
                             "text": "ተመራማሪዎች ከዘመናዊ ሰው ጋር ተቀራራቢ የሆነ ዝርያ ከአፍሪካ ውጪ አገኙ።",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            1,
-                            1
-                          ]
+                          "position": [3, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      1
-                    ]
+                    "position": [3, 1]
                   },
                   {
                     "id": "c527854e",
@@ -110,18 +87,11 @@
                             "text": "በግሪክ የተገኘው የራስ ቅል አውሮጳ በኒያንደርታሎች በተወረረችበት ወቅት 210 ሺህ ዓመት ያስቆጠረ ነው ተብሏል።",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            2,
-                            1
-                          ]
+                          "position": [3, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      2
-                    ]
+                    "position": [3, 2]
                   },
                   {
                     "id": "2fe69409",
@@ -136,18 +106,11 @@
                             "text": "ጥናቱ ይፋ እንዳደረገው፤ የሰው ልጅ ከአፍሪካ ወደ አውሮጳ ቅድመ ፍልሰት ስለማድረጉ ታሪክ ምንም አይነት የዘረመል ማስረጃ የለውም ለሚለው ሌላ አስረጅ ሆኖ ቀርቧል።",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            3,
-                            1
-                          ]
+                          "position": [3, 3, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      3
-                    ]
+                    "position": [3, 3]
                   },
                   {
                     "id": "4cfadde2",
@@ -162,32 +125,21 @@
                             "text": "ይህ ግኝት የታተመው 'ኔቸር' በተሰኘው ጆርናል ላይ ነው።",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            4,
-                            1
-                          ]
+                          "position": [3, 4, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      4
-                    ]
+                    "position": [3, 4]
                   }
                 ]
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "7d2a53ac",
               "type": "mpu",
               "model": {},
-              "position": [
-                4
-              ]
+              "position": [4]
             },
             {
               "id": "ff3a092c",
@@ -207,24 +159,15 @@
                             "text": "ተመራማሪዎች በ1970ዎቹ በግሪክ አፒዲማ ዋሻ ውስጥ ሁለት ጠቃሚ ቅሪተ አካል አግኝተው ነበር።",
                             "attributes": []
                           },
-                          "position": [
-                            5,
-                            1,
-                            1
-                          ]
+                          "position": [5, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      5,
-                      1
-                    ]
+                    "position": [5, 1]
                   }
                 ]
               },
-              "position": [
-                5
-              ]
+              "position": [5]
             }
           ]
         }
@@ -249,12 +192,7 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Amharic",
           "taggings": []
         },
-        "blockTypes": [
-          "headline",
-          "text",
-          "paragraph",
-          "fragment"
-        ],
+        "blockTypes": ["headline", "text", "paragraph", "fragment"],
         "allowAdvertising": true
       },
       "promo": {
@@ -386,9 +324,7 @@
             "versions": [
               {
                 "versionId": "p01cj5w6",
-                "types": [
-                  "Original"
-                ],
+                "types": ["Original"],
                 "duration": 59,
                 "durationISO8601": "PT59S",
                 "warnings": {},

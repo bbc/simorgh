@@ -27,33 +27,19 @@
                                   "text": "Українка пробилася у фінал юніорського Вімблдону",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "41590804",
@@ -62,9 +48,7 @@
                 "firstPublished": 1562941967871,
                 "lastPublished": 1562941967871
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "af3f22f9",
@@ -84,18 +68,11 @@
                             "text": "Українська тенісистка Дарія Снігур вийшла у фінал юніорського Вімблдону.",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            1,
-                            1
-                          ]
+                          "position": [3, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      1
-                    ]
+                    "position": [3, 1]
                   },
                   {
                     "id": "c92da83c",
@@ -110,18 +87,11 @@
                             "text": "У півфіналі 17-річна українка здолала Емму Наварро зі США.",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            2,
-                            1
-                          ]
+                          "position": [3, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      2
-                    ]
+                    "position": [3, 2]
                   },
                   {
                     "id": "47044030",
@@ -136,18 +106,11 @@
                             "text": "На це їй знадобилося 45 хвилин. Поєдинок завершився з рахунком 6:3, 6:0.",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            3,
-                            1
-                          ]
+                          "position": [3, 3, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      3
-                    ]
+                    "position": [3, 3]
                   },
                   {
                     "id": "9bf1e2b3",
@@ -162,32 +125,21 @@
                             "text": "У чвертьфіналі українка здолала 16-річну Поліну Кудерметову з Росії з рахунком 6:2, 6:4.",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            4,
-                            1
-                          ]
+                          "position": [3, 4, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      4
-                    ]
+                    "position": [3, 4]
                   }
                 ]
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "c1f125b6",
               "type": "mpu",
               "model": {},
-              "position": [
-                4
-              ]
+              "position": [4]
             }
           ]
         }
@@ -212,12 +164,7 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
           "taggings": []
         },
-        "blockTypes": [
-          "headline",
-          "text",
-          "paragraph",
-          "fragment"
-        ],
+        "blockTypes": ["headline", "text", "paragraph", "fragment"],
         "allowAdvertising": true
       },
       "promo": {
@@ -319,9 +266,7 @@
             "versions": [
               {
                 "versionId": "p01k6msp",
-                "types": [
-                  "Original"
-                ],
+                "types": ["Original"],
                 "duration": 191,
                 "durationISO8601": "PT3M11S",
                 "warnings": {
@@ -405,9 +350,7 @@
             "versions": [
               {
                 "versionId": "p01k6msp",
-                "types": [
-                  "Original"
-                ],
+                "types": ["Original"],
                 "duration": 191,
                 "durationISO8601": "PT3M11S",
                 "warnings": {

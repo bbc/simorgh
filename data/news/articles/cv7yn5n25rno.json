@@ -27,33 +27,19 @@
                                   "text": "English with Persian Block",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "1394e0b5",
@@ -62,9 +48,7 @@
                 "firstPublished": 1562930939502,
                 "lastPublished": 1563358511643
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "db8845ae",
@@ -84,18 +68,11 @@
                             "text": "I am a text block written in English. Below this is a block with the language 'Farsi' containing text 'روباه چه میگوید'. ",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            1,
-                            1
-                          ]
+                          "position": [3, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      1
-                    ]
+                    "position": [3, 1]
                   },
                   {
                     "id": "deba2583",
@@ -116,28 +93,16 @@
                                   "text": "روباه چه میگوید",
                                   "attributes": []
                                 },
-                                "position": [
-                                  3,
-                                  2,
-                                  1,
-                                  1
-                                ]
+                                "position": [3, 2, 1, 1]
                               }
                             ],
                             "language": "fa"
                           },
-                          "position": [
-                            3,
-                            2,
-                            1
-                          ]
+                          "position": [3, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      2
-                    ]
+                    "position": [3, 2]
                   },
                   {
                     "id": "8916e1c9",
@@ -152,18 +117,11 @@
                             "text": "Below is a link in language 'Farsi' with the title 'چیسربرگر'",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            3,
-                            1
-                          ]
+                          "position": [3, 3, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      3
-                    ]
+                    "position": [3, 3]
                   },
                   {
                     "id": "5f01d7e9",
@@ -190,54 +148,32 @@
                                         "text": "چیسربرگر",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        3,
-                                        4,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [3, 4, 1, 1, 1]
                                     }
                                   ],
                                   "locator": "https://google.com",
                                   "isExternal": true
                                 },
-                                "position": [
-                                  3,
-                                  4,
-                                  1,
-                                  1
-                                ]
+                                "position": [3, 4, 1, 1]
                               }
                             ],
                             "language": "fa"
                           },
-                          "position": [
-                            3,
-                            4,
-                            1
-                          ]
+                          "position": [3, 4, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      4
-                    ]
+                    "position": [3, 4]
                   }
                 ]
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "2d82acf8",
               "type": "mpu",
               "model": {},
-              "position": [
-                4
-              ]
+              "position": [4]
             },
             {
               "id": "fd60f3e8",
@@ -257,24 +193,15 @@
                             "text": "🤷",
                             "attributes": []
                           },
-                          "position": [
-                            5,
-                            1,
-                            1
-                          ]
+                          "position": [5, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      5,
-                      1
-                    ]
+                    "position": [5, 1]
                   }
                 ]
               },
-              "position": [
-                5
-              ]
+              "position": [5]
             }
           ]
         }
@@ -1354,10 +1281,7 @@
                       "thingLabel": "Design and Technology",
                       "thingUri": "http://www.bbc.co.uk/things/add89d72-af77-4490-b479-25fd45bb5e72#id",
                       "thingId": "add89d72-af77-4490-b479-25fd45bb5e72",
-                      "thingType": [
-                        "core:Thing",
-                        "tagging:TagConcept"
-                      ],
+                      "thingType": ["core:Thing", "tagging:TagConcept"],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/education/subjects/zykw2hv#field-of-study"
                       ],
@@ -1515,10 +1439,7 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "tagging:Format"
-                      ],
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",

@@ -27,33 +27,19 @@
                                   "text": "Test Links page",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "64388c43",
@@ -62,9 +48,7 @@
                 "firstPublished": 1637670147913,
                 "lastPublished": 1638873511565
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "42979518",
@@ -84,24 +68,15 @@
                             "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            1,
-                            1
-                          ]
+                          "position": [3, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      1
-                    ]
+                    "position": [3, 1]
                   }
                 ]
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "1f8fd587",
@@ -131,37 +106,19 @@
                                         "text": "Show all links (no images)",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        4,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [4, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  4,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [4, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            4,
-                            1,
-                            1
-                          ]
+                          "position": [4, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      1
-                    ]
+                    "position": [4, 1]
                   },
                   {
                     "id": "2e3e4a0e",
@@ -198,44 +155,20 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    4,
-                                                    2,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1
+                                                    4, 2, 1, 1, 1, 1, 1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [
-                                              4,
-                                              2,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [4, 2, 1, 1, 1, 1]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        4,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [4, 2, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  4,
-                                  2,
-                                  1,
-                                  1
-                                ]
+                                "position": [4, 2, 1, 1]
                               },
                               {
                                 "id": "5e6f8691",
@@ -248,20 +181,11 @@
                                   "originCode": "cpsdevpb",
                                   "copyrightHolder": "BBC"
                                 },
-                                "position": [
-                                  4,
-                                  2,
-                                  1,
-                                  2
-                                ]
+                                "position": [4, 2, 1, 2]
                               }
                             ]
                           },
-                          "position": [
-                            4,
-                            2,
-                            1
-                          ]
+                          "position": [4, 2, 1]
                         },
                         {
                           "id": "b99642e9",
@@ -288,49 +212,24 @@
                                               "text": "Show headline",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              4,
-                                              2,
-                                              2,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [4, 2, 2, 1, 1, 1]
                                           }
                                         ],
                                         "isExternal": false
                                       },
-                                      "position": [
-                                        4,
-                                        2,
-                                        2,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [4, 2, 2, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  4,
-                                  2,
-                                  2,
-                                  1
-                                ]
+                                "position": [4, 2, 2, 1]
                               }
                             ]
                           },
-                          "position": [
-                            4,
-                            2,
-                            2
-                          ]
+                          "position": [4, 2, 2]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      2
-                    ]
+                    "position": [4, 2]
                   },
                   {
                     "id": "6c748657",
@@ -363,49 +262,24 @@
                                               "text": "Link with Headline",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              4,
-                                              3,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [4, 3, 1, 1, 1, 1]
                                           }
                                         ],
                                         "isExternal": false
                                       },
-                                      "position": [
-                                        4,
-                                        3,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [4, 3, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  4,
-                                  3,
-                                  1,
-                                  1
-                                ]
+                                "position": [4, 3, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            4,
-                            3,
-                            1
-                          ]
+                          "position": [4, 3, 1]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      3
-                    ]
+                    "position": [4, 3]
                   },
                   {
                     "id": "b1b85edd",
@@ -438,55 +312,28 @@
                                               "text": "https://www.bbc.com/brasil",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              4,
-                                              4,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [4, 4, 1, 1, 1, 1]
                                           }
                                         ],
                                         "isExternal": false
                                       },
-                                      "position": [
-                                        4,
-                                        4,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [4, 4, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  4,
-                                  4,
-                                  1,
-                                  1
-                                ]
+                                "position": [4, 4, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            4,
-                            4,
-                            1
-                          ]
+                          "position": [4, 4, 1]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      4
-                    ]
+                    "position": [4, 4]
                   }
                 ]
               },
-              "position": [
-                4
-              ],
+              "position": [4],
               "blockGroupType": "edOjLinks",
               "blockGroupIndex": 1
             },
@@ -508,24 +355,15 @@
                             "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
                             "attributes": []
                           },
-                          "position": [
-                            5,
-                            1,
-                            1
-                          ]
+                          "position": [5, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      5,
-                      1
-                    ]
+                    "position": [5, 1]
                   }
                 ]
               },
-              "position": [
-                5
-              ]
+              "position": [5]
             },
             {
               "id": "b916405b",
@@ -555,37 +393,19 @@
                                         "text": "Single link",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        6,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [6, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  6,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [6, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            6,
-                            1,
-                            1
-                          ]
+                          "position": [6, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      6,
-                      1
-                    ]
+                    "position": [6, 1]
                   },
                   {
                     "id": "1a19361e",
@@ -618,55 +438,28 @@
                                               "text": "Single link",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              6,
-                                              2,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [6, 2, 1, 1, 1, 1]
                                           }
                                         ],
                                         "isExternal": false
                                       },
-                                      "position": [
-                                        6,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [6, 2, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  6,
-                                  2,
-                                  1,
-                                  1
-                                ]
+                                "position": [6, 2, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            6,
-                            2,
-                            1
-                          ]
+                          "position": [6, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      6,
-                      2
-                    ]
+                    "position": [6, 2]
                   }
                 ]
               },
-              "position": [
-                6
-              ],
+              "position": [6],
               "blockGroupType": "edOjLinks",
               "blockGroupIndex": 2
             },
@@ -688,24 +481,15 @@
                             "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
                             "attributes": []
                           },
-                          "position": [
-                            7,
-                            1,
-                            1
-                          ]
+                          "position": [7, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      7,
-                      1
-                    ]
+                    "position": [7, 1]
                   }
                 ]
               },
-              "position": [
-                7
-              ]
+              "position": [7]
             },
             {
               "id": "1cfd72ed",
@@ -735,37 +519,19 @@
                                         "text": "Long headline ",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        8,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [8, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  8,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [8, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            8,
-                            1,
-                            1
-                          ]
+                          "position": [8, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      8,
-                      1
-                    ]
+                    "position": [8, 1]
                   },
                   {
                     "id": "6fb603a0",
@@ -798,55 +564,28 @@
                                               "text": "This is a long headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              8,
-                                              2,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [8, 2, 1, 1, 1, 1]
                                           }
                                         ],
                                         "isExternal": false
                                       },
-                                      "position": [
-                                        8,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [8, 2, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  8,
-                                  2,
-                                  1,
-                                  1
-                                ]
+                                "position": [8, 2, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            8,
-                            2,
-                            1
-                          ]
+                          "position": [8, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      8,
-                      2
-                    ]
+                    "position": [8, 2]
                   }
                 ]
               },
-              "position": [
-                8
-              ],
+              "position": [8],
               "blockGroupType": "edOjLinks",
               "blockGroupIndex": 3
             },
@@ -868,32 +607,21 @@
                             "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
                             "attributes": []
                           },
-                          "position": [
-                            9,
-                            1,
-                            1
-                          ]
+                          "position": [9, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      9,
-                      1
-                    ]
+                    "position": [9, 1]
                   }
                 ]
               },
-              "position": [
-                9
-              ]
+              "position": [9]
             },
             {
               "id": "9c794317",
               "type": "mpu",
               "model": {},
-              "position": [
-                10
-              ]
+              "position": [10]
             },
             {
               "id": "ee0240d5",
@@ -923,37 +651,19 @@
                                         "text": "Only show 3 links",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        11,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [11, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  11,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [11, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            11,
-                            1,
-                            1
-                          ]
+                          "position": [11, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      11,
-                      1
-                    ]
+                    "position": [11, 1]
                   },
                   {
                     "id": "0ec615de",
@@ -986,49 +696,24 @@
                                               "text": "Link 1",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              11,
-                                              2,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [11, 2, 1, 1, 1, 1]
                                           }
                                         ],
                                         "isExternal": false
                                       },
-                                      "position": [
-                                        11,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [11, 2, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  11,
-                                  2,
-                                  1,
-                                  1
-                                ]
+                                "position": [11, 2, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            11,
-                            2,
-                            1
-                          ]
+                          "position": [11, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      11,
-                      2
-                    ]
+                    "position": [11, 2]
                   },
                   {
                     "id": "9e8f67ba",
@@ -1061,49 +746,24 @@
                                               "text": "Link 2",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              11,
-                                              3,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [11, 3, 1, 1, 1, 1]
                                           }
                                         ],
                                         "isExternal": false
                                       },
-                                      "position": [
-                                        11,
-                                        3,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [11, 3, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  11,
-                                  3,
-                                  1,
-                                  1
-                                ]
+                                "position": [11, 3, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            11,
-                            3,
-                            1
-                          ]
+                          "position": [11, 3, 1]
                         }
                       ]
                     },
-                    "position": [
-                      11,
-                      3
-                    ]
+                    "position": [11, 3]
                   },
                   {
                     "id": "811c620b",
@@ -1136,49 +796,24 @@
                                               "text": "Link 3",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              11,
-                                              4,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [11, 4, 1, 1, 1, 1]
                                           }
                                         ],
                                         "isExternal": false
                                       },
-                                      "position": [
-                                        11,
-                                        4,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [11, 4, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  11,
-                                  4,
-                                  1,
-                                  1
-                                ]
+                                "position": [11, 4, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            11,
-                            4,
-                            1
-                          ]
+                          "position": [11, 4, 1]
                         }
                       ]
                     },
-                    "position": [
-                      11,
-                      4
-                    ]
+                    "position": [11, 4]
                   },
                   {
                     "id": "db96d591",
@@ -1211,49 +846,24 @@
                                               "text": "Link 4 (not shown)",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              11,
-                                              5,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [11, 5, 1, 1, 1, 1]
                                           }
                                         ],
                                         "isExternal": false
                                       },
-                                      "position": [
-                                        11,
-                                        5,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [11, 5, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  11,
-                                  5,
-                                  1,
-                                  1
-                                ]
+                                "position": [11, 5, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            11,
-                            5,
-                            1
-                          ]
+                          "position": [11, 5, 1]
                         }
                       ]
                     },
-                    "position": [
-                      11,
-                      5
-                    ]
+                    "position": [11, 5]
                   },
                   {
                     "id": "6a5d2012",
@@ -1286,55 +896,28 @@
                                               "text": "Link 5 (not shown)",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              11,
-                                              6,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [11, 6, 1, 1, 1, 1]
                                           }
                                         ],
                                         "isExternal": false
                                       },
-                                      "position": [
-                                        11,
-                                        6,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [11, 6, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  11,
-                                  6,
-                                  1,
-                                  1
-                                ]
+                                "position": [11, 6, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            11,
-                            6,
-                            1
-                          ]
+                          "position": [11, 6, 1]
                         }
                       ]
                     },
-                    "position": [
-                      11,
-                      6
-                    ]
+                    "position": [11, 6]
                   }
                 ]
               },
-              "position": [
-                11
-              ],
+              "position": [11],
               "blockGroupType": "edOjLinks",
               "blockGroupIndex": 4
             },
@@ -1356,24 +939,15 @@
                             "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
                             "attributes": []
                           },
-                          "position": [
-                            12,
-                            1,
-                            1
-                          ]
+                          "position": [12, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      12,
-                      1
-                    ]
+                    "position": [12, 1]
                   }
                 ]
               },
-              "position": [
-                12
-              ]
+              "position": [12]
             },
             {
               "id": "fbc2b102",
@@ -1403,37 +977,19 @@
                                         "text": "Related content block",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        13,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [13, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  13,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [13, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            13,
-                            1,
-                            1
-                          ]
+                          "position": [13, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      13,
-                      1
-                    ]
+                    "position": [13, 1]
                   },
                   {
                     "id": "e915ee15",
@@ -1470,44 +1026,20 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    13,
-                                                    2,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1
+                                                    13, 2, 1, 1, 1, 1, 1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [
-                                              13,
-                                              2,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [13, 2, 1, 1, 1, 1]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        13,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [13, 2, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  13,
-                                  2,
-                                  1,
-                                  1
-                                ]
+                                "position": [13, 2, 1, 1]
                               },
                               {
                                 "id": "cc18ce94",
@@ -1520,20 +1052,11 @@
                                   "originCode": "cpsdevpb",
                                   "copyrightHolder": "BBC"
                                 },
-                                "position": [
-                                  13,
-                                  2,
-                                  1,
-                                  2
-                                ]
+                                "position": [13, 2, 1, 2]
                               }
                             ]
                           },
-                          "position": [
-                            13,
-                            2,
-                            1
-                          ]
+                          "position": [13, 2, 1]
                         },
                         {
                           "id": "11db37ab",
@@ -1560,49 +1083,24 @@
                                               "text": "News homepage",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              13,
-                                              2,
-                                              2,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [13, 2, 2, 1, 1, 1]
                                           }
                                         ],
                                         "isExternal": false
                                       },
-                                      "position": [
-                                        13,
-                                        2,
-                                        2,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [13, 2, 2, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  13,
-                                  2,
-                                  2,
-                                  1
-                                ]
+                                "position": [13, 2, 2, 1]
                               }
                             ]
                           },
-                          "position": [
-                            13,
-                            2,
-                            2
-                          ]
+                          "position": [13, 2, 2]
                         }
                       ]
                     },
-                    "position": [
-                      13,
-                      2
-                    ]
+                    "position": [13, 2]
                   },
                   {
                     "id": "9c5d7a4c",
@@ -1639,44 +1137,20 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    13,
-                                                    3,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1
+                                                    13, 3, 1, 1, 1, 1, 1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [
-                                              13,
-                                              3,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [13, 3, 1, 1, 1, 1]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        13,
-                                        3,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [13, 3, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  13,
-                                  3,
-                                  1,
-                                  1
-                                ]
+                                "position": [13, 3, 1, 1]
                               },
                               {
                                 "id": "7e36fe1b",
@@ -1689,20 +1163,11 @@
                                   "originCode": "cpsdevpb",
                                   "copyrightHolder": "BBC"
                                 },
-                                "position": [
-                                  13,
-                                  3,
-                                  1,
-                                  2
-                                ]
+                                "position": [13, 3, 1, 2]
                               }
                             ]
                           },
-                          "position": [
-                            13,
-                            3,
-                            1
-                          ]
+                          "position": [13, 3, 1]
                         },
                         {
                           "id": "53b03fe8",
@@ -1729,55 +1194,28 @@
                                               "text": "Mundo homepage",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              13,
-                                              3,
-                                              2,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [13, 3, 2, 1, 1, 1]
                                           }
                                         ],
                                         "isExternal": false
                                       },
-                                      "position": [
-                                        13,
-                                        3,
-                                        2,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [13, 3, 2, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  13,
-                                  3,
-                                  2,
-                                  1
-                                ]
+                                "position": [13, 3, 2, 1]
                               }
                             ]
                           },
-                          "position": [
-                            13,
-                            3,
-                            2
-                          ]
+                          "position": [13, 3, 2]
                         }
                       ]
                     },
-                    "position": [
-                      13,
-                      3
-                    ]
+                    "position": [13, 3]
                   }
                 ]
               },
-              "position": [
-                13
-              ]
+              "position": [13]
             }
           ]
         }
@@ -2118,9 +1556,7 @@
             "versions": [
               {
                 "versionId": "p01p5qff",
-                "types": [
-                  "Original"
-                ],
+                "types": ["Original"],
                 "duration": 67,
                 "durationISO8601": "PT1M7S",
                 "warnings": {},
@@ -3097,9 +2533,7 @@
                         "core:Thing",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": [
-                        "http://sws.geonames.org/2328926/"
-                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2328926/"],
                       "thingEnglishLabel": "Nigeria",
                       "type": "about"
                     },
@@ -3131,9 +2565,7 @@
                         "core:Thing",
                         "core:Theme"
                       ],
-                      "thingSameAs": [
-                        "http://dbpedia.org/resource/Transport"
-                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Transport"],
                       "thingEnglishLabel": "Transport",
                       "type": "about"
                     }

@@ -27,33 +27,19 @@
                                   "text": "Single Byline (required)",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "587772cb",
@@ -88,41 +74,19 @@
                                               "text": "Single Byline",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              2,
-                                              1,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [2, 1, 1, 1, 1, 1]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        2,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [2, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  2,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [2, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            2,
-                            1,
-                            1
-                          ]
+                          "position": [2, 1, 1]
                         },
                         {
                           "id": "b0af518d",
@@ -147,54 +111,27 @@
                                               "text": "Test",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              2,
-                                              1,
-                                              2,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [2, 1, 2, 1, 1, 1]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        2,
-                                        1,
-                                        2,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [2, 1, 2, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  2,
-                                  1,
-                                  2,
-                                  1
-                                ]
+                                "position": [2, 1, 2, 1]
                               }
                             ]
                           },
-                          "position": [
-                            2,
-                            1,
-                            2
-                          ]
+                          "position": [2, 1, 2]
                         }
                       ]
                     },
-                    "position": [
-                      2,
-                      1
-                    ]
+                    "position": [2, 1]
                   }
                 ]
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "8c5d9292",
@@ -203,9 +140,7 @@
                 "firstPublished": 1657276284147,
                 "lastPublished": 1657276284147
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "4f0125d8",
@@ -225,32 +160,21 @@
                             "text": "Byline with required values only",
                             "attributes": []
                           },
-                          "position": [
-                            4,
-                            1,
-                            1
-                          ]
+                          "position": [4, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      1
-                    ]
+                    "position": [4, 1]
                   }
                 ]
               },
-              "position": [
-                4
-              ]
+              "position": [4]
             },
             {
               "id": "6e7ae40e",
               "type": "mpu",
               "model": {},
-              "position": [
-                5
-              ]
+              "position": [5]
             }
           ]
         }
@@ -538,9 +462,7 @@
             "versions": [
               {
                 "versionId": "p01p5qff",
-                "types": [
-                  "Original"
-                ],
+                "types": ["Original"],
                 "duration": 67,
                 "durationISO8601": "PT1M7S",
                 "warnings": {},
@@ -1517,9 +1439,7 @@
                         "core:Thing",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": [
-                        "http://sws.geonames.org/2328926/"
-                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2328926/"],
                       "thingEnglishLabel": "Nigeria",
                       "type": "about"
                     },
@@ -1551,9 +1471,7 @@
                         "core:Thing",
                         "core:Theme"
                       ],
-                      "thingSameAs": [
-                        "http://dbpedia.org/resource/Transport"
-                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Transport"],
                       "thingEnglishLabel": "Transport",
                       "type": "about"
                     }

@@ -27,33 +27,19 @@
                                   "text": "Ratovi zvezda: Niški džedaji pomažu decu bez roditelja",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "de8a748a",
@@ -62,9 +48,7 @@
                 "firstPublished": 1562943337219,
                 "lastPublished": 1562943337219
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "8fe73f23",
@@ -84,18 +68,11 @@
                             "text": "U dalekoj galaksiji, na jugu Srbije, u Nišu, sila se probudila.",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            1,
-                            1
-                          ]
+                          "position": [3, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      1
-                    ]
+                    "position": [3, 1]
                   },
                   {
                     "id": "161f074e",
@@ -110,26 +87,16 @@
                             "text": "Iako ih prema aktuelnim dešavanjima u serijalu ",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            2,
-                            1
-                          ]
+                          "position": [3, 2, 1]
                         },
                         {
                           "id": "5c83190a",
                           "type": "fragment",
                           "model": {
                             "text": "Ratovi zvezda",
-                            "attributes": [
-                              "italic"
-                            ]
+                            "attributes": ["italic"]
                           },
-                          "position": [
-                            3,
-                            2,
-                            2
-                          ]
+                          "position": [3, 2, 2]
                         },
                         {
                           "id": "f2216806",
@@ -138,18 +105,11 @@
                             "text": " gotovo i nema, džedaji se već nekoliko godina uspešno okupljaju u Nišu.",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            2,
-                            3
-                          ]
+                          "position": [3, 2, 3]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      2
-                    ]
+                    "position": [3, 2]
                   },
                   {
                     "id": "f00fcd29",
@@ -164,18 +124,11 @@
                             "text": "Sa više od sto članova, niški Džedajski pokret možda ne održava mir u svemiru, ali pokušava da živote nekih Nišlija učini boljim.",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            3,
-                            1
-                          ]
+                          "position": [3, 3, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      3
-                    ]
+                    "position": [3, 3]
                   },
                   {
                     "id": "a441052c",
@@ -190,26 +143,16 @@
                             "text": "Pored popkulturnih konvencija na kojima okupljaju fanove ",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            4,
-                            1
-                          ]
+                          "position": [3, 4, 1]
                         },
                         {
                           "id": "76b4ff66",
                           "type": "fragment",
                           "model": {
                             "text": "Ratova zvezda",
-                            "attributes": [
-                              "italic"
-                            ]
+                            "attributes": ["italic"]
                           },
-                          "position": [
-                            3,
-                            4,
-                            2
-                          ]
+                          "position": [3, 4, 2]
                         },
                         {
                           "id": "b0507b53",
@@ -218,32 +161,21 @@
                             "text": ", niški džedaji organizuju i humanitarne akcije.",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            4,
-                            3
-                          ]
+                          "position": [3, 4, 3]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      4
-                    ]
+                    "position": [3, 4]
                   }
                 ]
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "fdcc71a1",
               "type": "mpu",
               "model": {},
-              "position": [
-                4
-              ]
+              "position": [4]
             },
             {
               "id": "fe8c4b5c",
@@ -263,18 +195,11 @@
                             "text": "A ovog leta su rešili da odu korak dalje i organizuju kamp namenjen deci bez roditelja.",
                             "attributes": []
                           },
-                          "position": [
-                            5,
-                            1,
-                            1
-                          ]
+                          "position": [5, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      5,
-                      1
-                    ]
+                    "position": [5, 1]
                   },
                   {
                     "id": "ebc5c2ba",
@@ -289,24 +214,15 @@
                             "text": "Kamp, koji će biti održan na Vlasinskom jezeru, nosiće naziv „Sila prati hrabre\".",
                             "attributes": []
                           },
-                          "position": [
-                            5,
-                            2,
-                            1
-                          ]
+                          "position": [5, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      5,
-                      2
-                    ]
+                    "position": [5, 2]
                   }
                 ]
               },
-              "position": [
-                5
-              ]
+              "position": [5]
             }
           ]
         }
@@ -330,12 +246,7 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Serbian",
           "taggings": []
         },
-        "blockTypes": [
-          "headline",
-          "text",
-          "paragraph",
-          "fragment"
-        ],
+        "blockTypes": ["headline", "text", "paragraph", "fragment"],
         "allowAdvertising": true
       },
       "promo": {
@@ -398,9 +309,7 @@
             "versions": [
               {
                 "versionId": "p01qjbvb",
-                "types": [
-                  "Editorial"
-                ],
+                "types": ["Editorial"],
                 "duration": 15,
                 "durationISO8601": "PT15S",
                 "warnings": {},
@@ -470,9 +379,7 @@
             "versions": [
               {
                 "versionId": "p01n6yb1",
-                "types": [
-                  "Original"
-                ],
+                "types": ["Original"],
                 "duration": 343,
                 "durationISO8601": "PT5M43S",
                 "warnings": {
@@ -1191,9 +1098,7 @@
                         "tagging:TagConcept",
                         "tagging:Genre"
                       ],
-                      "thingSameAs": [
-                        "http://dbpedia.org/resource/Health"
-                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Health"],
                       "thingEnglishLabel": "Health",
                       "type": "about"
                     }
@@ -1297,9 +1202,7 @@
                         "core:Place",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": [
-                        "http://sws.geonames.org/6290252/"
-                      ],
+                      "thingSameAs": ["http://sws.geonames.org/6290252/"],
                       "thingEnglishLabel": "Serbia",
                       "type": "about"
                     }

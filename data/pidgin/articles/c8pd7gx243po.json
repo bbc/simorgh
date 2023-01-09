@@ -27,33 +27,19 @@
                                   "text": "Multiple Facebook Post Embed Test",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "ade65a8e",
@@ -62,9 +48,7 @@
                 "firstPublished": 1666706395827,
                 "lastPublished": 1666707859180
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "ae019498",
@@ -89,33 +73,19 @@
                                   "text": "First Test",
                                   "attributes": []
                                 },
-                                "position": [
-                                  3,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [3, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            3,
-                            1,
-                            1
-                          ]
+                          "position": [3, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      1
-                    ]
+                    "position": [3, 1]
                   }
                 ]
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "aab97c2e",
@@ -145,24 +115,15 @@
                               "indexOfType": 0
                             }
                           },
-                          "position": [
-                            4,
-                            1,
-                            1
-                          ]
+                          "position": [4, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      1
-                    ]
+                    "position": [4, 1]
                   }
                 ]
               },
-              "position": [
-                4
-              ]
+              "position": [4]
             },
             {
               "id": "d39eb3fe",
@@ -187,33 +148,19 @@
                                   "text": "Second Test",
                                   "attributes": []
                                 },
-                                "position": [
-                                  5,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [5, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            5,
-                            1,
-                            1
-                          ]
+                          "position": [5, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      5,
-                      1
-                    ]
+                    "position": [5, 1]
                   }
                 ]
               },
-              "position": [
-                5
-              ]
+              "position": [5]
             },
             {
               "id": "a1592e58",
@@ -243,24 +190,15 @@
                               "indexOfType": 1
                             }
                           },
-                          "position": [
-                            6,
-                            1,
-                            1
-                          ]
+                          "position": [6, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      6,
-                      1
-                    ]
+                    "position": [6, 1]
                   }
                 ]
               },
-              "position": [
-                6
-              ]
+              "position": [6]
             },
             {
               "id": "d7d9599d",
@@ -285,33 +223,19 @@
                                   "text": "Third Test",
                                   "attributes": []
                                 },
-                                "position": [
-                                  7,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [7, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            7,
-                            1,
-                            1
-                          ]
+                          "position": [7, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      7,
-                      1
-                    ]
+                    "position": [7, 1]
                   }
                 ]
               },
-              "position": [
-                7
-              ]
+              "position": [7]
             },
             {
               "id": "4d2d8de3",
@@ -345,24 +269,15 @@
                               "height": 113
                             }
                           },
-                          "position": [
-                            8,
-                            1,
-                            1
-                          ]
+                          "position": [8, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      8,
-                      1
-                    ]
+                    "position": [8, 1]
                   }
                 ]
               },
-              "position": [
-                8
-              ]
+              "position": [8]
             },
             {
               "id": "0c9d5f61",
@@ -387,33 +302,19 @@
                                   "text": "Fourth Test",
                                   "attributes": []
                                 },
-                                "position": [
-                                  9,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [9, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            9,
-                            1,
-                            1
-                          ]
+                          "position": [9, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      9,
-                      1
-                    ]
+                    "position": [9, 1]
                   }
                 ]
               },
-              "position": [
-                9
-              ]
+              "position": [9]
             },
             {
               "id": "d367c883",
@@ -445,24 +346,15 @@
                               "html": "<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@cuppymusic/video/7086167423639997701\" data-video-id=\"7086167423639997701\" data-embed-from=\"oembed\" style=\"max-width: 605px;min-width: 325px;\" > <section> <a target=\"_blank\" title=\"@cuppymusic\" href=\"https://www.tiktok.com/@cuppymusic?refer=embed\">@cuppymusic</a> <p>Cupcakes, You don watch my full interview for BBC Pidgin? How you see am? 🙊💖✨<a title=\"bbcpidgin\" target=\"_blank\" href=\"https://www.tiktok.com/tag/bbcpidgin?refer=embed\">#BBCPidgin</a> <a title=\"cuppyonamission\" target=\"_blank\" href=\"https://www.tiktok.com/tag/cuppyonamission?refer=embed\">#CuppyOnAMission</a> <a title=\"cuppyxbbc\" target=\"_blank\" href=\"https://www.tiktok.com/tag/cuppyxbbc?refer=embed\">#CuppyxBBC</a></p> <a target=\"_blank\" title=\"♬ original sound - Cuppy\" href=\"https://www.tiktok.com/music/original-sound-7086167435610442501?refer=embed\">♬ original sound - Cuppy</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>"
                             }
                           },
-                          "position": [
-                            10,
-                            1,
-                            1
-                          ]
+                          "position": [10, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      10,
-                      1
-                    ]
+                    "position": [10, 1]
                   }
                 ]
               },
-              "position": [
-                10
-              ]
+              "position": [10]
             },
             {
               "id": "4997097a",
@@ -487,33 +379,19 @@
                                   "text": "Fifth Test",
                                   "attributes": []
                                 },
-                                "position": [
-                                  11,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [11, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            11,
-                            1,
-                            1
-                          ]
+                          "position": [11, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      11,
-                      1
-                    ]
+                    "position": [11, 1]
                   }
                 ]
               },
-              "position": [
-                11
-              ]
+              "position": [11]
             },
             {
               "id": "fb5d4a94",
@@ -544,32 +422,21 @@
                               "width": 658
                             }
                           },
-                          "position": [
-                            12,
-                            1,
-                            1
-                          ]
+                          "position": [12, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      12,
-                      1
-                    ]
+                    "position": [12, 1]
                   }
                 ]
               },
-              "position": [
-                12
-              ]
+              "position": [12]
             },
             {
               "id": "408ae076",
               "type": "mpu",
               "model": {},
-              "position": [
-                13
-              ]
+              "position": [13]
             }
           ]
         }
@@ -858,9 +725,7 @@
             "versions": [
               {
                 "versionId": "p01p5qff",
-                "types": [
-                  "Original"
-                ],
+                "types": ["Original"],
                 "duration": 67,
                 "durationISO8601": "PT1M7S",
                 "warnings": {},
@@ -1837,9 +1702,7 @@
                         "core:Thing",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": [
-                        "http://sws.geonames.org/2328926/"
-                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2328926/"],
                       "thingEnglishLabel": "Nigeria",
                       "type": "about"
                     },
@@ -1871,9 +1734,7 @@
                         "core:Thing",
                         "core:Theme"
                       ],
-                      "thingSameAs": [
-                        "http://dbpedia.org/resource/Transport"
-                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Transport"],
                       "thingEnglishLabel": "Transport",
                       "type": "about"
                     }

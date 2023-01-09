@@ -27,33 +27,19 @@
                                   "text": "መቐለ 70 እንደርታ፡ \"እንታይ ክፍጠር ይኸውን? ብዝብሉ ስግኣታት ተወጢርና ዛዚምናዮ\"",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "88e77b72",
@@ -62,9 +48,7 @@
                 "firstPublished": 1562942994618,
                 "lastPublished": 1562942994618
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "72c12e75",
@@ -84,18 +68,11 @@
                             "text": "ሙሁራት፡ \"ናይ ፍልጠት ከተማ\" [city of Knowledge] ፣ ዘየምቲ \"ዓይኒ ትግራይ\"፣ ነጋዶ \"ሞተር ቑጠባ\"፣ መናእሰይ ድማ፡ \"ከተማ ፍቕሪ\" ኢሎም ይጽውዑዋ።",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            1,
-                            1
-                          ]
+                          "position": [3, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      1
-                    ]
+                    "position": [3, 1]
                   },
                   {
                     "id": "7575e74d",
@@ -110,18 +87,11 @@
                             "text": "እዛ ከተማ፡ ካብ ሰዓታት ድሕሪ ቐትሪ ዝሓለፈ ሰንበት ጀሚሩ ብዝነበረ ፍሉይ ስምዒት ዓወት፣ ደስታ ዘሰነፎ ዕጹው ጉሮሮ ከዚመላ ዘውግሐ፣ ሓጎስ ሓሊፉወን ዝሕንዝሕ ንብዓተን ዘውረዳ አዒንቲ፡ ኮታስ ሕውስው ዝበሉን ንምግላጾም ዝኸብዱን ስምዒታት ክተአንግድ ዘምሰየትን ዝሓደረትን ከተማ መቐለ'ያ።",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            2,
-                            1
-                          ]
+                          "position": [3, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      2
-                    ]
+                    "position": [3, 2]
                   },
                   {
                     "id": "b66abd23",
@@ -136,18 +106,11 @@
                             "text": "ቅድሚ እዛ ናይ ትማሊ ዝነበራ ሰናብቲ፡ ብሓዘንን ቁጥዐን ተኸቢባ ብትዝታ ተሸሚማ ዝነበረት ከተማ፡ ገና ኣርብዓ መዓልቲ ከይመልኣ ሓዘና ዝድብስ ኣጋጣሚ ክፍጠር'ዩ ኢሉ ዝገመተ ኣይነበረነን እንተተብሃለ ምግናን ኣይክኸውንን።",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            3,
-                            1
-                          ]
+                          "position": [3, 3, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      3
-                    ]
+                    "position": [3, 3]
                   },
                   {
                     "id": "abda8a63",
@@ -162,32 +125,21 @@
                             "text": "ኣርማ ብሄራዊ ስምዒት ህዝቢ እታ ከተማን፡ ቅመም ወግዒ መናእሰይን ፖለቲከኛታትን ኮይኑ ዝሓገየ ብስም እታ ከተማ ዝተሰመየ ጋንታ ኩዕሶ እግሪ መቐለ 70 እንደርታ ድማ፡ ደባሲት እቲ ሃንደበታዊ ሓዘን'ዩ።",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            4,
-                            1
-                          ]
+                          "position": [3, 4, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      4
-                    ]
+                    "position": [3, 4]
                   }
                 ]
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "ecb63820",
               "type": "mpu",
               "model": {},
-              "position": [
-                4
-              ]
+              "position": [4]
             },
             {
               "id": "19a1af9a",
@@ -207,24 +159,15 @@
                             "text": "ሰንበት 30 ሰነ 2011 [ብኣቆጻጽራ ኢትዮጵያ]፡ ኣብ ሰዓታት ድሕሪ ቐትሪ፡ ልዕሊ 60 ሽሕ ዝግመት ህዝቢ፡ 'ካልእ ቦታ የብልካን!' ዝተብሃለ ይመስል ኣብ ስታድየም ትግራይ ዓሪዱ።",
                             "attributes": []
                           },
-                          "position": [
-                            5,
-                            1,
-                            1
-                          ]
+                          "position": [5, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      5,
-                      1
-                    ]
+                    "position": [5, 1]
                   }
                 ]
               },
-              "position": [
-                5
-              ]
+              "position": [5]
             }
           ]
         }
@@ -249,12 +192,7 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Tigrinya",
           "taggings": []
         },
-        "blockTypes": [
-          "headline",
-          "text",
-          "paragraph",
-          "fragment"
-        ],
+        "blockTypes": ["headline", "text", "paragraph", "fragment"],
         "allowAdvertising": true
       },
       "promo": {

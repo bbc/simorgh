@@ -27,33 +27,19 @@
                                   "text": "【写真で見る】日本の古墳群も　今年新たに決まった世界遺産",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "f178e08c",
@@ -62,9 +48,7 @@
                 "firstPublished": 1562943050727,
                 "lastPublished": 1562943050727
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "0244d436",
@@ -82,22 +66,13 @@
                           "type": "fragment",
                           "model": {
                             "text": "ユネスコ（国連教育科学文化機関）は毎年、人類にとって「顕著な普遍的価値」を持つ場所を世界遺産として発表している。",
-                            "attributes": [
-                              "bold"
-                            ]
+                            "attributes": ["bold"]
                           },
-                          "position": [
-                            3,
-                            1,
-                            1
-                          ]
+                          "position": [3, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      1
-                    ]
+                    "position": [3, 1]
                   },
                   {
                     "id": "96ccdded",
@@ -112,18 +87,11 @@
                             "text": "10日までアゼルバイジャンの首都バクーで行われていた第43回世界遺産委員会では、新たに29カ所が世界遺産に登録された。",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            2,
-                            1
-                          ]
+                          "position": [3, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      2
-                    ]
+                    "position": [3, 2]
                   },
                   {
                     "id": "26ccc194",
@@ -138,32 +106,21 @@
                             "text": "その中からいくつかの場所を写真で紹介する。",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            3,
-                            1
-                          ]
+                          "position": [3, 3, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      3
-                    ]
+                    "position": [3, 3]
                   }
                 ]
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "0f1e0887",
               "type": "mpu",
               "model": {},
-              "position": [
-                4
-              ]
+              "position": [4]
             }
           ]
         }
@@ -188,12 +145,7 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Japanese",
           "taggings": []
         },
-        "blockTypes": [
-          "headline",
-          "text",
-          "paragraph",
-          "fragment"
-        ],
+        "blockTypes": ["headline", "text", "paragraph", "fragment"],
         "allowAdvertising": true
       },
       "promo": {

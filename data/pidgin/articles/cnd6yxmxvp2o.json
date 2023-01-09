@@ -27,33 +27,19 @@
                                   "text": "WS Test: Links Block",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "191518f3",
@@ -62,9 +48,7 @@
                 "firstPublished": 1646994589132,
                 "lastPublished": 1646994589132
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "ed72bdff",
@@ -84,18 +68,11 @@
                             "text": "Testing inline links block. ",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            1,
-                            1
-                          ]
+                          "position": [3, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      1
-                    ]
+                    "position": [3, 1]
                   },
                   {
                     "id": "007b9a42",
@@ -110,24 +87,15 @@
                             "text": "Inline links with media, timestamp and no title. ",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            2,
-                            1
-                          ]
+                          "position": [3, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      2
-                    ]
+                    "position": [3, 2]
                   }
                 ]
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "7ac18c59",
@@ -169,44 +137,20 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    4,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1
+                                                    4, 1, 1, 1, 1, 1, 1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [
-                                              4,
-                                              1,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [4, 1, 1, 1, 1, 1]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        4,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [4, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  4,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [4, 1, 1, 1]
                               },
                               {
                                 "id": "73fa6995",
@@ -219,20 +163,11 @@
                                   "copyrightHolder": "BBC",
                                   "suitableForSyndication": true
                                 },
-                                "position": [
-                                  4,
-                                  1,
-                                  1,
-                                  2
-                                ]
+                                "position": [4, 1, 1, 2]
                               }
                             ]
                           },
-                          "position": [
-                            4,
-                            1,
-                            1
-                          ]
+                          "position": [4, 1, 1]
                         },
                         {
                           "id": "dedaebfb",
@@ -259,42 +194,20 @@
                                               "text": "BBC News Pidgin One Minute News",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              4,
-                                              1,
-                                              2,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [4, 1, 2, 1, 1, 1]
                                           }
                                         ],
                                         "isExternal": false
                                       },
-                                      "position": [
-                                        4,
-                                        1,
-                                        2,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [4, 1, 2, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  4,
-                                  1,
-                                  2,
-                                  1
-                                ]
+                                "position": [4, 1, 2, 1]
                               }
                             ]
                           },
-                          "position": [
-                            4,
-                            1,
-                            2
-                          ]
+                          "position": [4, 1, 2]
                         },
                         {
                           "id": "d6eb07c4",
@@ -309,12 +222,7 @@
                                   "timestamp": 1502963087000,
                                   "mediaType": "audio"
                                 },
-                                "position": [
-                                  4,
-                                  1,
-                                  3,
-                                  1
-                                ]
+                                "position": [4, 1, 3, 1]
                               },
                               {
                                 "id": "bb540518",
@@ -341,9 +249,7 @@
                                         "versions": [
                                           {
                                             "versionId": "p01cqyct",
-                                            "types": [
-                                              "Original"
-                                            ],
+                                            "types": ["Original"],
                                             "duration": 15,
                                             "durationISO8601": "PT15S",
                                             "warnings": {},
@@ -359,13 +265,7 @@
                                         },
                                         "smpKind": "radioProgramme"
                                       },
-                                      "position": [
-                                        4,
-                                        1,
-                                        3,
-                                        2,
-                                        1
-                                      ]
+                                      "position": [4, 1, 3, 2, 1]
                                     },
                                     {
                                       "id": "879b5064",
@@ -379,48 +279,23 @@
                                               "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01cqz13.jpg",
                                               "originCode": "mpv"
                                             },
-                                            "position": [
-                                              4,
-                                              1,
-                                              3,
-                                              2,
-                                              2,
-                                              1
-                                            ]
+                                            "position": [4, 1, 3, 2, 2, 1]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        4,
-                                        1,
-                                        3,
-                                        2,
-                                        2
-                                      ]
+                                      "position": [4, 1, 3, 2, 2]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  4,
-                                  1,
-                                  3,
-                                  2
-                                ]
+                                "position": [4, 1, 3, 2]
                               }
                             ]
                           },
-                          "position": [
-                            4,
-                            1,
-                            3
-                          ]
+                          "position": [4, 1, 3]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      1
-                    ]
+                    "position": [4, 1]
                   },
                   {
                     "id": "68e3928f",
@@ -457,44 +332,20 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    4,
-                                                    2,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1
+                                                    4, 2, 1, 1, 1, 1, 1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [
-                                              4,
-                                              2,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [4, 2, 1, 1, 1, 1]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        4,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [4, 2, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  4,
-                                  2,
-                                  1,
-                                  1
-                                ]
+                                "position": [4, 2, 1, 1]
                               },
                               {
                                 "id": "0728a652",
@@ -507,20 +358,11 @@
                                   "copyrightHolder": "AFP",
                                   "suitableForSyndication": true
                                 },
-                                "position": [
-                                  4,
-                                  2,
-                                  1,
-                                  2
-                                ]
+                                "position": [4, 2, 1, 2]
                               }
                             ]
                           },
-                          "position": [
-                            4,
-                            2,
-                            1
-                          ]
+                          "position": [4, 2, 1]
                         },
                         {
                           "id": "4cb5af41",
@@ -547,42 +389,20 @@
                                               "text": "Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              4,
-                                              2,
-                                              2,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [4, 2, 2, 1, 1, 1]
                                           }
                                         ],
                                         "isExternal": false
                                       },
-                                      "position": [
-                                        4,
-                                        2,
-                                        2,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [4, 2, 2, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  4,
-                                  2,
-                                  2,
-                                  1
-                                ]
+                                "position": [4, 2, 2, 1]
                               }
                             ]
                           },
-                          "position": [
-                            4,
-                            2,
-                            2
-                          ]
+                          "position": [4, 2, 2]
                         },
                         {
                           "id": "b1cb8c59",
@@ -596,12 +416,7 @@
                                   "assetType": "MAP",
                                   "timestamp": 1581940273000
                                 },
-                                "position": [
-                                  4,
-                                  2,
-                                  3,
-                                  1
-                                ]
+                                "position": [4, 2, 3, 1]
                               },
                               {
                                 "id": "ee19b74d",
@@ -629,9 +444,7 @@
                                         "versions": [
                                           {
                                             "versionId": "p01p5qff",
-                                            "types": [
-                                              "Original"
-                                            ],
+                                            "types": ["Original"],
                                             "duration": 67,
                                             "durationISO8601": "PT1M7S",
                                             "warnings": {},
@@ -647,13 +460,7 @@
                                         },
                                         "smpKind": "programme"
                                       },
-                                      "position": [
-                                        4,
-                                        2,
-                                        3,
-                                        2,
-                                        1
-                                      ]
+                                      "position": [4, 2, 3, 2, 1]
                                     },
                                     {
                                       "id": "818832b3",
@@ -669,14 +476,7 @@
                                               "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01p5ql9.jpg",
                                               "originCode": "mpv"
                                             },
-                                            "position": [
-                                              4,
-                                              2,
-                                              3,
-                                              2,
-                                              2,
-                                              1
-                                            ]
+                                            "position": [4, 2, 3, 2, 2, 1]
                                           },
                                           {
                                             "id": "fcab4b64",
@@ -702,86 +502,41 @@
                                                                 "attributes": []
                                                               },
                                                               "position": [
-                                                                4,
-                                                                2,
-                                                                3,
-                                                                2,
-                                                                2,
-                                                                2,
-                                                                1,
-                                                                1,
-                                                                1
+                                                                4, 2, 3, 2, 2,
+                                                                2, 1, 1, 1
                                                               ]
                                                             }
                                                           ]
                                                         },
                                                         "position": [
-                                                          4,
-                                                          2,
-                                                          3,
-                                                          2,
-                                                          2,
-                                                          2,
-                                                          1,
-                                                          1
+                                                          4, 2, 3, 2, 2, 2, 1, 1
                                                         ]
                                                       }
                                                     ]
                                                   },
                                                   "position": [
-                                                    4,
-                                                    2,
-                                                    3,
-                                                    2,
-                                                    2,
-                                                    2,
-                                                    1
+                                                    4, 2, 3, 2, 2, 2, 1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [
-                                              4,
-                                              2,
-                                              3,
-                                              2,
-                                              2,
-                                              2
-                                            ]
+                                            "position": [4, 2, 3, 2, 2, 2]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        4,
-                                        2,
-                                        3,
-                                        2,
-                                        2
-                                      ]
+                                      "position": [4, 2, 3, 2, 2]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  4,
-                                  2,
-                                  3,
-                                  2
-                                ]
+                                "position": [4, 2, 3, 2]
                               }
                             ]
                           },
-                          "position": [
-                            4,
-                            2,
-                            3
-                          ]
+                          "position": [4, 2, 3]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      2
-                    ]
+                    "position": [4, 2]
                   },
                   {
                     "id": "ff488f69",
@@ -818,44 +573,20 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    4,
-                                                    3,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1
+                                                    4, 3, 1, 1, 1, 1, 1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [
-                                              4,
-                                              3,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [4, 3, 1, 1, 1, 1]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        4,
-                                        3,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [4, 3, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  4,
-                                  3,
-                                  1,
-                                  1
-                                ]
+                                "position": [4, 3, 1, 1]
                               },
                               {
                                 "id": "7835dcf9",
@@ -868,20 +599,11 @@
                                   "originCode": "cpsdevpb",
                                   "copyrightHolder": "AFP"
                                 },
-                                "position": [
-                                  4,
-                                  3,
-                                  1,
-                                  2
-                                ]
+                                "position": [4, 3, 1, 2]
                               }
                             ]
                           },
-                          "position": [
-                            4,
-                            3,
-                            1
-                          ]
+                          "position": [4, 3, 1]
                         },
                         {
                           "id": "d5b403c6",
@@ -908,42 +630,20 @@
                                               "text": "This is a promo test",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              4,
-                                              3,
-                                              2,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [4, 3, 2, 1, 1, 1]
                                           }
                                         ],
                                         "isExternal": false
                                       },
-                                      "position": [
-                                        4,
-                                        3,
-                                        2,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [4, 3, 2, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  4,
-                                  3,
-                                  2,
-                                  1
-                                ]
+                                "position": [4, 3, 2, 1]
                               }
                             ]
                           },
-                          "position": [
-                            4,
-                            3,
-                            2
-                          ]
+                          "position": [4, 3, 2]
                         },
                         {
                           "id": "8e10c527",
@@ -956,33 +656,19 @@
                                 "model": {
                                   "timestamp": 1622753625680
                                 },
-                                "position": [
-                                  4,
-                                  3,
-                                  3,
-                                  1
-                                ]
+                                "position": [4, 3, 3, 1]
                               }
                             ]
                           },
-                          "position": [
-                            4,
-                            3,
-                            3
-                          ]
+                          "position": [4, 3, 3]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      3
-                    ]
+                    "position": [4, 3]
                   }
                 ]
               },
-              "position": [
-                4
-              ],
+              "position": [4],
               "blockGroupType": "edOjLinks",
               "blockGroupIndex": 1
             },
@@ -1004,24 +690,15 @@
                             "text": "Testing links block with title ",
                             "attributes": []
                           },
-                          "position": [
-                            5,
-                            1,
-                            1
-                          ]
+                          "position": [5, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      5,
-                      1
-                    ]
+                    "position": [5, 1]
                   }
                 ]
               },
-              "position": [
-                5
-              ]
+              "position": [5]
             },
             {
               "id": "5d9b5905",
@@ -1051,37 +728,19 @@
                                         "text": "This is a test links block title",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        6,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [6, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  6,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [6, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            6,
-                            1,
-                            1
-                          ]
+                          "position": [6, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      6,
-                      1
-                    ]
+                    "position": [6, 1]
                   },
                   {
                     "id": "2bab5835",
@@ -1118,44 +777,20 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    6,
-                                                    2,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1
+                                                    6, 2, 1, 1, 1, 1, 1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [
-                                              6,
-                                              2,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [6, 2, 1, 1, 1, 1]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        6,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [6, 2, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  6,
-                                  2,
-                                  1,
-                                  1
-                                ]
+                                "position": [6, 2, 1, 1]
                               },
                               {
                                 "id": "555cf7e0",
@@ -1168,20 +803,11 @@
                                   "copyrightHolder": "AFP",
                                   "suitableForSyndication": true
                                 },
-                                "position": [
-                                  6,
-                                  2,
-                                  1,
-                                  2
-                                ]
+                                "position": [6, 2, 1, 2]
                               }
                             ]
                           },
-                          "position": [
-                            6,
-                            2,
-                            1
-                          ]
+                          "position": [6, 2, 1]
                         },
                         {
                           "id": "bfd9a91f",
@@ -1208,42 +834,20 @@
                                               "text": "Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              6,
-                                              2,
-                                              2,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [6, 2, 2, 1, 1, 1]
                                           }
                                         ],
                                         "isExternal": false
                                       },
-                                      "position": [
-                                        6,
-                                        2,
-                                        2,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [6, 2, 2, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  6,
-                                  2,
-                                  2,
-                                  1
-                                ]
+                                "position": [6, 2, 2, 1]
                               }
                             ]
                           },
-                          "position": [
-                            6,
-                            2,
-                            2
-                          ]
+                          "position": [6, 2, 2]
                         },
                         {
                           "id": "b00267b0",
@@ -1257,12 +861,7 @@
                                   "assetType": "MAP",
                                   "timestamp": 1581940273000
                                 },
-                                "position": [
-                                  6,
-                                  2,
-                                  3,
-                                  1
-                                ]
+                                "position": [6, 2, 3, 1]
                               },
                               {
                                 "id": "33c758be",
@@ -1290,9 +889,7 @@
                                         "versions": [
                                           {
                                             "versionId": "p01p5qff",
-                                            "types": [
-                                              "Original"
-                                            ],
+                                            "types": ["Original"],
                                             "duration": 67,
                                             "durationISO8601": "PT1M7S",
                                             "warnings": {},
@@ -1308,13 +905,7 @@
                                         },
                                         "smpKind": "programme"
                                       },
-                                      "position": [
-                                        6,
-                                        2,
-                                        3,
-                                        2,
-                                        1
-                                      ]
+                                      "position": [6, 2, 3, 2, 1]
                                     },
                                     {
                                       "id": "995ff7c1",
@@ -1330,14 +921,7 @@
                                               "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01p5ql9.jpg",
                                               "originCode": "mpv"
                                             },
-                                            "position": [
-                                              6,
-                                              2,
-                                              3,
-                                              2,
-                                              2,
-                                              1
-                                            ]
+                                            "position": [6, 2, 3, 2, 2, 1]
                                           },
                                           {
                                             "id": "2179b58f",
@@ -1363,86 +947,41 @@
                                                                 "attributes": []
                                                               },
                                                               "position": [
-                                                                6,
-                                                                2,
-                                                                3,
-                                                                2,
-                                                                2,
-                                                                2,
-                                                                1,
-                                                                1,
-                                                                1
+                                                                6, 2, 3, 2, 2,
+                                                                2, 1, 1, 1
                                                               ]
                                                             }
                                                           ]
                                                         },
                                                         "position": [
-                                                          6,
-                                                          2,
-                                                          3,
-                                                          2,
-                                                          2,
-                                                          2,
-                                                          1,
-                                                          1
+                                                          6, 2, 3, 2, 2, 2, 1, 1
                                                         ]
                                                       }
                                                     ]
                                                   },
                                                   "position": [
-                                                    6,
-                                                    2,
-                                                    3,
-                                                    2,
-                                                    2,
-                                                    2,
-                                                    1
+                                                    6, 2, 3, 2, 2, 2, 1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [
-                                              6,
-                                              2,
-                                              3,
-                                              2,
-                                              2,
-                                              2
-                                            ]
+                                            "position": [6, 2, 3, 2, 2, 2]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        6,
-                                        2,
-                                        3,
-                                        2,
-                                        2
-                                      ]
+                                      "position": [6, 2, 3, 2, 2]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  6,
-                                  2,
-                                  3,
-                                  2
-                                ]
+                                "position": [6, 2, 3, 2]
                               }
                             ]
                           },
-                          "position": [
-                            6,
-                            2,
-                            3
-                          ]
+                          "position": [6, 2, 3]
                         }
                       ]
                     },
-                    "position": [
-                      6,
-                      2
-                    ]
+                    "position": [6, 2]
                   },
                   {
                     "id": "8d4461eb",
@@ -1479,44 +1018,20 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    6,
-                                                    3,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1
+                                                    6, 3, 1, 1, 1, 1, 1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [
-                                              6,
-                                              3,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [6, 3, 1, 1, 1, 1]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        6,
-                                        3,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [6, 3, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  6,
-                                  3,
-                                  1,
-                                  1
-                                ]
+                                "position": [6, 3, 1, 1]
                               },
                               {
                                 "id": "f82c802d",
@@ -1529,20 +1044,11 @@
                                   "copyrightHolder": "BBC",
                                   "suitableForSyndication": true
                                 },
-                                "position": [
-                                  6,
-                                  3,
-                                  1,
-                                  2
-                                ]
+                                "position": [6, 3, 1, 2]
                               }
                             ]
                           },
-                          "position": [
-                            6,
-                            3,
-                            1
-                          ]
+                          "position": [6, 3, 1]
                         },
                         {
                           "id": "5186e531",
@@ -1569,42 +1075,20 @@
                                               "text": "BBC News Pidgin One Minute News",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              6,
-                                              3,
-                                              2,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [6, 3, 2, 1, 1, 1]
                                           }
                                         ],
                                         "isExternal": false
                                       },
-                                      "position": [
-                                        6,
-                                        3,
-                                        2,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [6, 3, 2, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  6,
-                                  3,
-                                  2,
-                                  1
-                                ]
+                                "position": [6, 3, 2, 1]
                               }
                             ]
                           },
-                          "position": [
-                            6,
-                            3,
-                            2
-                          ]
+                          "position": [6, 3, 2]
                         },
                         {
                           "id": "fbe69435",
@@ -1619,12 +1103,7 @@
                                   "timestamp": 1502963087000,
                                   "mediaType": "audio"
                                 },
-                                "position": [
-                                  6,
-                                  3,
-                                  3,
-                                  1
-                                ]
+                                "position": [6, 3, 3, 1]
                               },
                               {
                                 "id": "852fc7b3",
@@ -1651,9 +1130,7 @@
                                         "versions": [
                                           {
                                             "versionId": "p01cqyct",
-                                            "types": [
-                                              "Original"
-                                            ],
+                                            "types": ["Original"],
                                             "duration": 15,
                                             "durationISO8601": "PT15S",
                                             "warnings": {},
@@ -1669,13 +1146,7 @@
                                         },
                                         "smpKind": "radioProgramme"
                                       },
-                                      "position": [
-                                        6,
-                                        3,
-                                        3,
-                                        2,
-                                        1
-                                      ]
+                                      "position": [6, 3, 3, 2, 1]
                                     },
                                     {
                                       "id": "3ebb8d15",
@@ -1689,54 +1160,27 @@
                                               "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01cqz13.jpg",
                                               "originCode": "mpv"
                                             },
-                                            "position": [
-                                              6,
-                                              3,
-                                              3,
-                                              2,
-                                              2,
-                                              1
-                                            ]
+                                            "position": [6, 3, 3, 2, 2, 1]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        6,
-                                        3,
-                                        3,
-                                        2,
-                                        2
-                                      ]
+                                      "position": [6, 3, 3, 2, 2]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  6,
-                                  3,
-                                  3,
-                                  2
-                                ]
+                                "position": [6, 3, 3, 2]
                               }
                             ]
                           },
-                          "position": [
-                            6,
-                            3,
-                            3
-                          ]
+                          "position": [6, 3, 3]
                         }
                       ]
                     },
-                    "position": [
-                      6,
-                      3
-                    ]
+                    "position": [6, 3]
                   }
                 ]
               },
-              "position": [
-                6
-              ],
+              "position": [6],
               "blockGroupType": "edOjLinks",
               "blockGroupIndex": 2
             },
@@ -1758,32 +1202,21 @@
                             "text": "Below is a links block with no title -  it should be rendered like related content",
                             "attributes": []
                           },
-                          "position": [
-                            7,
-                            1,
-                            1
-                          ]
+                          "position": [7, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      7,
-                      1
-                    ]
+                    "position": [7, 1]
                   }
                 ]
               },
-              "position": [
-                7
-              ]
+              "position": [7]
             },
             {
               "id": "02ce4812",
               "type": "mpu",
               "model": {},
-              "position": [
-                8
-              ]
+              "position": [8]
             },
             {
               "id": "f191b9cf",
@@ -1825,44 +1258,20 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    9,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1
+                                                    9, 1, 1, 1, 1, 1, 1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [
-                                              9,
-                                              1,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [9, 1, 1, 1, 1, 1]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        9,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [9, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  9,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [9, 1, 1, 1]
                               },
                               {
                                 "id": "f66170d6",
@@ -1875,20 +1284,11 @@
                                   "copyrightHolder": "AFP",
                                   "suitableForSyndication": true
                                 },
-                                "position": [
-                                  9,
-                                  1,
-                                  1,
-                                  2
-                                ]
+                                "position": [9, 1, 1, 2]
                               }
                             ]
                           },
-                          "position": [
-                            9,
-                            1,
-                            1
-                          ]
+                          "position": [9, 1, 1]
                         },
                         {
                           "id": "8466d440",
@@ -1915,42 +1315,20 @@
                                               "text": "Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              9,
-                                              1,
-                                              2,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [9, 1, 2, 1, 1, 1]
                                           }
                                         ],
                                         "isExternal": false
                                       },
-                                      "position": [
-                                        9,
-                                        1,
-                                        2,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [9, 1, 2, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  9,
-                                  1,
-                                  2,
-                                  1
-                                ]
+                                "position": [9, 1, 2, 1]
                               }
                             ]
                           },
-                          "position": [
-                            9,
-                            1,
-                            2
-                          ]
+                          "position": [9, 1, 2]
                         },
                         {
                           "id": "1d47f2b0",
@@ -1964,12 +1342,7 @@
                                   "assetType": "MAP",
                                   "timestamp": 1581940273000
                                 },
-                                "position": [
-                                  9,
-                                  1,
-                                  3,
-                                  1
-                                ]
+                                "position": [9, 1, 3, 1]
                               },
                               {
                                 "id": "ce8dc8be",
@@ -1997,9 +1370,7 @@
                                         "versions": [
                                           {
                                             "versionId": "p01p5qff",
-                                            "types": [
-                                              "Original"
-                                            ],
+                                            "types": ["Original"],
                                             "duration": 67,
                                             "durationISO8601": "PT1M7S",
                                             "warnings": {},
@@ -2015,13 +1386,7 @@
                                         },
                                         "smpKind": "programme"
                                       },
-                                      "position": [
-                                        9,
-                                        1,
-                                        3,
-                                        2,
-                                        1
-                                      ]
+                                      "position": [9, 1, 3, 2, 1]
                                     },
                                     {
                                       "id": "82efd837",
@@ -2037,14 +1402,7 @@
                                               "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01p5ql9.jpg",
                                               "originCode": "mpv"
                                             },
-                                            "position": [
-                                              9,
-                                              1,
-                                              3,
-                                              2,
-                                              2,
-                                              1
-                                            ]
+                                            "position": [9, 1, 3, 2, 2, 1]
                                           },
                                           {
                                             "id": "dff4d483",
@@ -2070,86 +1428,41 @@
                                                                 "attributes": []
                                                               },
                                                               "position": [
-                                                                9,
-                                                                1,
-                                                                3,
-                                                                2,
-                                                                2,
-                                                                2,
-                                                                1,
-                                                                1,
-                                                                1
+                                                                9, 1, 3, 2, 2,
+                                                                2, 1, 1, 1
                                                               ]
                                                             }
                                                           ]
                                                         },
                                                         "position": [
-                                                          9,
-                                                          1,
-                                                          3,
-                                                          2,
-                                                          2,
-                                                          2,
-                                                          1,
-                                                          1
+                                                          9, 1, 3, 2, 2, 2, 1, 1
                                                         ]
                                                       }
                                                     ]
                                                   },
                                                   "position": [
-                                                    9,
-                                                    1,
-                                                    3,
-                                                    2,
-                                                    2,
-                                                    2,
-                                                    1
+                                                    9, 1, 3, 2, 2, 2, 1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [
-                                              9,
-                                              1,
-                                              3,
-                                              2,
-                                              2,
-                                              2
-                                            ]
+                                            "position": [9, 1, 3, 2, 2, 2]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        9,
-                                        1,
-                                        3,
-                                        2,
-                                        2
-                                      ]
+                                      "position": [9, 1, 3, 2, 2]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  9,
-                                  1,
-                                  3,
-                                  2
-                                ]
+                                "position": [9, 1, 3, 2]
                               }
                             ]
                           },
-                          "position": [
-                            9,
-                            1,
-                            3
-                          ]
+                          "position": [9, 1, 3]
                         }
                       ]
                     },
-                    "position": [
-                      9,
-                      1
-                    ]
+                    "position": [9, 1]
                   },
                   {
                     "id": "37d8d3f2",
@@ -2186,44 +1499,20 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    9,
-                                                    2,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1
+                                                    9, 2, 1, 1, 1, 1, 1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [
-                                              9,
-                                              2,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [9, 2, 1, 1, 1, 1]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        9,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [9, 2, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  9,
-                                  2,
-                                  1,
-                                  1
-                                ]
+                                "position": [9, 2, 1, 1]
                               },
                               {
                                 "id": "f2bfb3ad",
@@ -2236,20 +1525,11 @@
                                   "copyrightHolder": "BBC",
                                   "suitableForSyndication": true
                                 },
-                                "position": [
-                                  9,
-                                  2,
-                                  1,
-                                  2
-                                ]
+                                "position": [9, 2, 1, 2]
                               }
                             ]
                           },
-                          "position": [
-                            9,
-                            2,
-                            1
-                          ]
+                          "position": [9, 2, 1]
                         },
                         {
                           "id": "410a785b",
@@ -2276,42 +1556,20 @@
                                               "text": "BBC News Pidgin One Minute News",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              9,
-                                              2,
-                                              2,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [9, 2, 2, 1, 1, 1]
                                           }
                                         ],
                                         "isExternal": false
                                       },
-                                      "position": [
-                                        9,
-                                        2,
-                                        2,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [9, 2, 2, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  9,
-                                  2,
-                                  2,
-                                  1
-                                ]
+                                "position": [9, 2, 2, 1]
                               }
                             ]
                           },
-                          "position": [
-                            9,
-                            2,
-                            2
-                          ]
+                          "position": [9, 2, 2]
                         },
                         {
                           "id": "bcf1e37f",
@@ -2326,12 +1584,7 @@
                                   "timestamp": 1502963087000,
                                   "mediaType": "audio"
                                 },
-                                "position": [
-                                  9,
-                                  2,
-                                  3,
-                                  1
-                                ]
+                                "position": [9, 2, 3, 1]
                               },
                               {
                                 "id": "6f1c0272",
@@ -2358,9 +1611,7 @@
                                         "versions": [
                                           {
                                             "versionId": "p01cqyct",
-                                            "types": [
-                                              "Original"
-                                            ],
+                                            "types": ["Original"],
                                             "duration": 15,
                                             "durationISO8601": "PT15S",
                                             "warnings": {},
@@ -2376,13 +1627,7 @@
                                         },
                                         "smpKind": "radioProgramme"
                                       },
-                                      "position": [
-                                        9,
-                                        2,
-                                        3,
-                                        2,
-                                        1
-                                      ]
+                                      "position": [9, 2, 3, 2, 1]
                                     },
                                     {
                                       "id": "daabff6e",
@@ -2396,48 +1641,23 @@
                                               "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01cqz13.jpg",
                                               "originCode": "mpv"
                                             },
-                                            "position": [
-                                              9,
-                                              2,
-                                              3,
-                                              2,
-                                              2,
-                                              1
-                                            ]
+                                            "position": [9, 2, 3, 2, 2, 1]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        9,
-                                        2,
-                                        3,
-                                        2,
-                                        2
-                                      ]
+                                      "position": [9, 2, 3, 2, 2]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  9,
-                                  2,
-                                  3,
-                                  2
-                                ]
+                                "position": [9, 2, 3, 2]
                               }
                             ]
                           },
-                          "position": [
-                            9,
-                            2,
-                            3
-                          ]
+                          "position": [9, 2, 3]
                         }
                       ]
                     },
-                    "position": [
-                      9,
-                      2
-                    ]
+                    "position": [9, 2]
                   },
                   {
                     "id": "a12d60ab",
@@ -2474,44 +1694,20 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    9,
-                                                    3,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1
+                                                    9, 3, 1, 1, 1, 1, 1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [
-                                              9,
-                                              3,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [9, 3, 1, 1, 1, 1]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        9,
-                                        3,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [9, 3, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  9,
-                                  3,
-                                  1,
-                                  1
-                                ]
+                                "position": [9, 3, 1, 1]
                               },
                               {
                                 "id": "d810f6a1",
@@ -2524,20 +1720,11 @@
                                   "originCode": "cpsdevpb",
                                   "copyrightHolder": "BBC"
                                 },
-                                "position": [
-                                  9,
-                                  3,
-                                  1,
-                                  2
-                                ]
+                                "position": [9, 3, 1, 2]
                               }
                             ]
                           },
-                          "position": [
-                            9,
-                            3,
-                            1
-                          ]
+                          "position": [9, 3, 1]
                         },
                         {
                           "id": "5df4e134",
@@ -2564,42 +1751,20 @@
                                               "text": "This is a promo test",
                                               "attributes": []
                                             },
-                                            "position": [
-                                              9,
-                                              3,
-                                              2,
-                                              1,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [9, 3, 2, 1, 1, 1]
                                           }
                                         ],
                                         "isExternal": false
                                       },
-                                      "position": [
-                                        9,
-                                        3,
-                                        2,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [9, 3, 2, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  9,
-                                  3,
-                                  2,
-                                  1
-                                ]
+                                "position": [9, 3, 2, 1]
                               }
                             ]
                           },
-                          "position": [
-                            9,
-                            3,
-                            2
-                          ]
+                          "position": [9, 3, 2]
                         },
                         {
                           "id": "6debf162",
@@ -2612,33 +1777,19 @@
                                 "model": {
                                   "timestamp": 1622753625680
                                 },
-                                "position": [
-                                  9,
-                                  3,
-                                  3,
-                                  1
-                                ]
+                                "position": [9, 3, 3, 1]
                               }
                             ]
                           },
-                          "position": [
-                            9,
-                            3,
-                            3
-                          ]
+                          "position": [9, 3, 3]
                         }
                       ]
                     },
-                    "position": [
-                      9,
-                      3
-                    ]
+                    "position": [9, 3]
                   }
                 ]
               },
-              "position": [
-                9
-              ]
+              "position": [9]
             }
           ]
         }
@@ -2976,9 +2127,7 @@
             "versions": [
               {
                 "versionId": "p01p5qff",
-                "types": [
-                  "Original"
-                ],
+                "types": ["Original"],
                 "duration": 67,
                 "durationISO8601": "PT1M7S",
                 "warnings": {},
@@ -3955,9 +3104,7 @@
                         "core:Thing",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": [
-                        "http://sws.geonames.org/2328926/"
-                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2328926/"],
                       "thingEnglishLabel": "Nigeria",
                       "type": "about"
                     },
@@ -3989,9 +3136,7 @@
                         "core:Thing",
                         "core:Theme"
                       ],
-                      "thingSameAs": [
-                        "http://dbpedia.org/resource/Transport"
-                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Transport"],
                       "thingEnglishLabel": "Transport",
                       "type": "about"
                     }

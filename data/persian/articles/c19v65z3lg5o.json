@@ -27,28 +27,16 @@
                                   "text": "جام جهانی ",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               },
                               {
                                 "id": "c382b734",
                                 "type": "fragment",
                                 "model": {
                                   "text": "فوتبال",
-                                  "attributes": [
-                                    "italic"
-                                  ]
+                                  "attributes": ["italic"]
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  2
-                                ]
+                                "position": [1, 1, 1, 2]
                               },
                               {
                                 "id": "3b2929f7",
@@ -57,33 +45,19 @@
                                   "text": " زنان؛ تفاوت دستمزد با مردان چقدر است؟",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  3
-                                ]
+                                "position": [1, 1, 1, 3]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "b90412b8",
@@ -92,9 +66,7 @@
                 "firstPublished": 1560347946274,
                 "lastPublished": 1560347946274
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "d54fad78",
@@ -114,11 +86,7 @@
                             "text": "جام جهانی فوتبال زنان  - ",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            1,
-                            1
-                          ]
+                          "position": [3, 1, 1]
                         },
                         {
                           "id": "163748b7",
@@ -133,21 +101,12 @@
                                   "text": "FIFA Women's World Cup",
                                   "attributes": []
                                 },
-                                "position": [
-                                  3,
-                                  1,
-                                  2,
-                                  1
-                                ]
+                                "position": [3, 1, 2, 1]
                               }
                             ],
                             "language": "en-gb"
                           },
-                          "position": [
-                            3,
-                            1,
-                            2
-                          ]
+                          "position": [3, 1, 2]
                         },
                         {
                           "id": "4cd0f24b",
@@ -156,18 +115,11 @@
                             "text": " - به سرعت محبوب می‌شود و پیشبینی شده است که تعداد بیننده‌های جام جهانی ۲۰۱۹ فرانسه به یک میلیارد نفر برسد.",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            1,
-                            3
-                          ]
+                          "position": [3, 1, 3]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      1
-                    ]
+                    "position": [3, 1]
                   },
                   {
                     "id": "cc725eae",
@@ -182,26 +134,16 @@
                             "text": "اما بازیکنان حاضر در این رقابت از ",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            2,
-                            1
-                          ]
+                          "position": [3, 2, 1]
                         },
                         {
                           "id": "3192396a",
                           "type": "fragment",
                           "model": {
                             "text": "حقوقی",
-                            "attributes": [
-                              "bold"
-                            ]
+                            "attributes": ["bold"]
                           },
-                          "position": [
-                            3,
-                            2,
-                            2
-                          ]
+                          "position": [3, 2, 2]
                         },
                         {
                           "id": "92d3db79",
@@ -210,26 +152,16 @@
                             "text": " که می‌گیرند و میزان ",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            2,
-                            3
-                          ]
+                          "position": [3, 2, 3]
                         },
                         {
                           "id": "8bb737d6",
                           "type": "fragment",
                           "model": {
                             "text": "جایزه‌ها",
-                            "attributes": [
-                              "italic"
-                            ]
+                            "attributes": ["italic"]
                           },
-                          "position": [
-                            3,
-                            2,
-                            4
-                          ]
+                          "position": [3, 2, 4]
                         },
                         {
                           "id": "1f60233f",
@@ -238,18 +170,11 @@
                             "text": " در مقایسه با فوتبال مردان ناراضی هستند.",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            2,
-                            5
-                          ]
+                          "position": [3, 2, 5]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      2
-                    ]
+                    "position": [3, 2]
                   },
                   {
                     "id": "1dc8d6f2",
@@ -270,28 +195,16 @@
                                   "text": "English paragraph to be added here when functionality promoted to Optimo test",
                                   "attributes": []
                                 },
-                                "position": [
-                                  3,
-                                  3,
-                                  1,
-                                  1
-                                ]
+                                "position": [3, 3, 1, 1]
                               }
                             ],
                             "language": "en-gb"
                           },
-                          "position": [
-                            3,
-                            3,
-                            1
-                          ]
+                          "position": [3, 3, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      3
-                    ]
+                    "position": [3, 3]
                   },
                   {
                     "id": "6dbafa00",
@@ -306,32 +219,21 @@
                             "text": "هوپ سولو، فوتبالیست آمریکایی که سابقه قهرمانی در جام جهانی را نیز دارد، معقتد است تفاوت جایزه مادی بین زنان و مردان نشانه‌ای از نهادینه شدن \"برتر پنداری مردان\" در فیفا است.",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            4,
-                            1
-                          ]
+                          "position": [3, 4, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      4
-                    ]
+                    "position": [3, 4]
                   }
                 ]
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "30a7b0fc",
               "type": "mpu",
               "model": {},
-              "position": [
-                4
-              ]
+              "position": [4]
             },
             {
               "id": "3442b72e",
@@ -351,24 +253,15 @@
                             "text": "این مطلب نگاهی دارد به آمار و ارقام فوتبال زنان و جایزه‌هایی که بازیکنان می‌توانند بگیرند.",
                             "attributes": []
                           },
-                          "position": [
-                            5,
-                            1,
-                            1
-                          ]
+                          "position": [5, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      5,
-                      1
-                    ]
+                    "position": [5, 1]
                   }
                 ]
               },
-              "position": [
-                5
-              ]
+              "position": [5]
             },
             {
               "id": "801a765a",
@@ -399,30 +292,16 @@
                                         "text": "تیم ملی فوتبال زنان آمریکا قهرمانی در جام ",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        6,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [6, 1, 1, 1, 1]
                                     },
                                     {
                                       "id": "289f88eb",
                                       "type": "fragment",
                                       "model": {
                                         "text": "جهانی",
-                                        "attributes": [
-                                          "italic"
-                                        ]
+                                        "attributes": ["italic"]
                                       },
-                                      "position": [
-                                        6,
-                                        1,
-                                        1,
-                                        1,
-                                        2
-                                      ]
+                                      "position": [6, 1, 1, 1, 2]
                                     },
                                     {
                                       "id": "076654bf",
@@ -431,37 +310,19 @@
                                         "text": " ۲۰۱۵ را جشن گرفته است",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        6,
-                                        1,
-                                        1,
-                                        1,
-                                        3
-                                      ]
+                                      "position": [6, 1, 1, 1, 3]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  6,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [6, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            6,
-                            1,
-                            1
-                          ]
+                          "position": [6, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      6,
-                      1
-                    ]
+                    "position": [6, 1]
                   },
                   {
                     "id": "411358ef",
@@ -487,9 +348,7 @@
                             "versions": [
                               {
                                 "versionId": "p01m7d09",
-                                "types": [
-                                  "Original"
-                                ],
+                                "types": ["Original"],
                                 "duration": 127,
                                 "durationISO8601": "PT2M7S",
                                 "warnings": {
@@ -508,11 +367,7 @@
                             },
                             "smpKind": "radioProgramme"
                           },
-                          "position": [
-                            6,
-                            2,
-                            1
-                          ]
+                          "position": [6, 2, 1]
                         },
                         {
                           "id": "7c669c9d",
@@ -529,12 +384,7 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "Getty Images"
                                 },
-                                "position": [
-                                  6,
-                                  2,
-                                  2,
-                                  1
-                                ]
+                                "position": [6, 2, 2, 1]
                               },
                               {
                                 "id": "8a35ac73",
@@ -560,65 +410,32 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    6,
-                                                    2,
-                                                    2,
-                                                    2,
-                                                    1,
-                                                    1,
-                                                    1
+                                                    6, 2, 2, 2, 1, 1, 1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [
-                                              6,
-                                              2,
-                                              2,
-                                              2,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [6, 2, 2, 2, 1, 1]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        6,
-                                        2,
-                                        2,
-                                        2,
-                                        1
-                                      ]
+                                      "position": [6, 2, 2, 2, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  6,
-                                  2,
-                                  2,
-                                  2
-                                ]
+                                "position": [6, 2, 2, 2]
                               }
                             ]
                           },
-                          "position": [
-                            6,
-                            2,
-                            2
-                          ]
+                          "position": [6, 2, 2]
                         }
                       ]
                     },
-                    "position": [
-                      6,
-                      2
-                    ]
+                    "position": [6, 2]
                   }
                 ]
               },
-              "position": [
-                6
-              ]
+              "position": [6]
             },
             {
               "id": "900b6866",
@@ -649,37 +466,19 @@
                                         "text": "به دلیل مشکلات مربوط به برابری جنسیتی آدا هگربرگ برنده توپ طلای ۲۰۱۷ برای نروژ در جام جهانی بازی نمی‌کند",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        7,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [7, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  7,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [7, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            7,
-                            1,
-                            1
-                          ]
+                          "position": [7, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      7,
-                      1
-                    ]
+                    "position": [7, 1]
                   },
                   {
                     "id": "75177327",
@@ -706,9 +505,7 @@
                             "versions": [
                               {
                                 "versionId": "p01mt129",
-                                "types": [
-                                  "Original"
-                                ],
+                                "types": ["Original"],
                                 "duration": 10,
                                 "durationISO8601": "PT10S",
                                 "warnings": {},
@@ -724,11 +521,7 @@
                             },
                             "smpKind": "programme"
                           },
-                          "position": [
-                            7,
-                            2,
-                            1
-                          ]
+                          "position": [7, 2, 1]
                         },
                         {
                           "id": "92b38445",
@@ -745,12 +538,7 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "Simon Rollings"
                                 },
-                                "position": [
-                                  7,
-                                  2,
-                                  2,
-                                  1
-                                ]
+                                "position": [7, 2, 2, 1]
                               },
                               {
                                 "id": "f452870a",
@@ -776,65 +564,32 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    7,
-                                                    2,
-                                                    2,
-                                                    2,
-                                                    1,
-                                                    1,
-                                                    1
+                                                    7, 2, 2, 2, 1, 1, 1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [
-                                              7,
-                                              2,
-                                              2,
-                                              2,
-                                              1,
-                                              1
-                                            ]
+                                            "position": [7, 2, 2, 2, 1, 1]
                                           }
                                         ]
                                       },
-                                      "position": [
-                                        7,
-                                        2,
-                                        2,
-                                        2,
-                                        1
-                                      ]
+                                      "position": [7, 2, 2, 2, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  7,
-                                  2,
-                                  2,
-                                  2
-                                ]
+                                "position": [7, 2, 2, 2]
                               }
                             ]
                           },
-                          "position": [
-                            7,
-                            2,
-                            2
-                          ]
+                          "position": [7, 2, 2]
                         }
                       ]
                     },
-                    "position": [
-                      7,
-                      2
-                    ]
+                    "position": [7, 2]
                   }
                 ]
               },
-              "position": [
-                7
-              ]
+              "position": [7]
             },
             {
               "id": "c821df39",
@@ -859,28 +614,16 @@
                                   "text": "بازیکنان تمام مبلغ ",
                                   "attributes": []
                                 },
-                                "position": [
-                                  8,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [8, 1, 1, 1]
                               },
                               {
                                 "id": "2ef22984",
                                 "type": "fragment",
                                 "model": {
                                   "text": "جایزه",
-                                  "attributes": [
-                                    "italic"
-                                  ]
+                                  "attributes": ["italic"]
                                 },
-                                "position": [
-                                  8,
-                                  1,
-                                  1,
-                                  2
-                                ]
+                                "position": [8, 1, 1, 2]
                               },
                               {
                                 "id": "76fedfe3",
@@ -889,33 +632,19 @@
                                   "text": " را می‌گیرند؟",
                                   "attributes": []
                                 },
-                                "position": [
-                                  8,
-                                  1,
-                                  1,
-                                  3
-                                ]
+                                "position": [8, 1, 1, 3]
                               }
                             ]
                           },
-                          "position": [
-                            8,
-                            1,
-                            1
-                          ]
+                          "position": [8, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      8,
-                      1
-                    ]
+                    "position": [8, 1]
                   }
                 ]
               },
-              "position": [
-                8
-              ]
+              "position": [8]
             },
             {
               "id": "89b223ad",
@@ -941,29 +670,17 @@
                                   "text": "خبرهای بیشتر را در کانال تلگرام بی‌بی‌سی فارسی دنبال کنید",
                                   "attributes": []
                                 },
-                                "position": [
-                                  9,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [9, 1, 1, 1]
                               }
                             ],
                             "locator": "http://t.me/bbcpersian",
                             "isExternal": true
                           },
-                          "position": [
-                            9,
-                            1,
-                            1
-                          ]
+                          "position": [9, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      9,
-                      1
-                    ]
+                    "position": [9, 1]
                   },
                   {
                     "id": "d27aee35",
@@ -978,18 +695,11 @@
                             "text": "کل جایزه‌ای که فیفا به تیم‌های حاضر در جام جهانی زنان می‌دهد ۳۰ میلیون دلار است. این در حالی است که کل جایزه‌ای که پارسال فیفا به تیم‌های حاضر در جام جهانی مردان داد ۴۰۰ میلیون دلار بود؛ بیش از ده برابر.",
                             "attributes": []
                           },
-                          "position": [
-                            9,
-                            2,
-                            1
-                          ]
+                          "position": [9, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      9,
-                      2
-                    ]
+                    "position": [9, 2]
                   },
                   {
                     "id": "d3f07818",
@@ -1010,35 +720,21 @@
                                   "text": "آنچه باید درباره جام جهانی فوتبال زنان ۲۰۱۹ بدانید",
                                   "attributes": []
                                 },
-                                "position": [
-                                  9,
-                                  3,
-                                  1,
-                                  1
-                                ]
+                                "position": [9, 3, 1, 1]
                               }
                             ],
                             "locator": "http://www.bbc.com/persian/sport-48547907",
                             "isExternal": false
                           },
-                          "position": [
-                            9,
-                            3,
-                            1
-                          ]
+                          "position": [9, 3, 1]
                         }
                       ]
                     },
-                    "position": [
-                      9,
-                      3
-                    ]
+                    "position": [9, 3]
                   }
                 ]
               },
-              "position": [
-                9
-              ]
+              "position": [9]
             },
             {
               "id": "e236a748",
@@ -1068,37 +764,19 @@
                                         "text": "جیل الیس",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        10,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [10, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  10,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [10, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            10,
-                            1,
-                            1
-                          ]
+                          "position": [10, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      10,
-                      1
-                    ]
+                    "position": [10, 1]
                   },
                   {
                     "id": "bd9afd1f",
@@ -1110,16 +788,11 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "Getty Images"
                     },
-                    "position": [
-                      10,
-                      2
-                    ]
+                    "position": [10, 2]
                   }
                 ]
               },
-              "position": [
-                10
-              ]
+              "position": [10]
             }
           ]
         }

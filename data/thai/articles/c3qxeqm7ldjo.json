@@ -27,33 +27,19 @@
                                   "text": "อวกาศ : หลุมดำมวลยิ่งยวดไม่จำเป็นต้องเกิดจากซูเปอร์โนวาเสมอไป",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "825ab24a",
@@ -62,9 +48,7 @@
                 "firstPublished": 1562942948180,
                 "lastPublished": 1562942948180
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "6ad94f6a",
@@ -84,18 +68,11 @@
                             "text": "ปริศนาที่มีมานานของวงการฟิสิกส์ดาราศาสตร์ ซึ่งว่าด้วยกำเนิดของหลุมดำมวลยิ่งยวดอายุเก่าแก่ที่ก่อตัวหลังยุคแรกเริ่มของจักรวาลไม่นานนั้น เพิ่งได้รับคำอธิบายที่ให้ความกระจ่างเพิ่มขึ้นในอีกขั้นหนึ่งแล้ว",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            1,
-                            1
-                          ]
+                          "position": [3, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      1
-                    ]
+                    "position": [3, 1]
                   },
                   {
                     "id": "963e5a0a",
@@ -110,11 +87,7 @@
                             "text": "ศาสตราจารย์ศานตนุ ภสุ และศาสตราจารย์อาร์ปัน ดาส จากมหาวิทยาลัยเวสเทิร์นของสหรัฐฯ ตีพิมพ์รายงานที่อธิบายถึงปรากฎการณ์ดังกล่าวลงในวารสาร ",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            2,
-                            1
-                          ]
+                          "position": [3, 2, 1]
                         },
                         {
                           "id": "e9f085e0",
@@ -129,21 +102,12 @@
                                   "text": "The Astrophysical Journal Letters",
                                   "attributes": []
                                 },
-                                "position": [
-                                  3,
-                                  2,
-                                  2,
-                                  1
-                                ]
+                                "position": [3, 2, 2, 1]
                               }
                             ],
                             "language": "en-gb"
                           },
-                          "position": [
-                            3,
-                            2,
-                            2
-                          ]
+                          "position": [3, 2, 2]
                         },
                         {
                           "id": "b3fda0ea",
@@ -152,11 +116,7 @@
                             "text": " โดยชี้ว่าหลุมดำชนิดนี้เกิดและโตขึ้นอย่างรวดเร็วเหลือเชื่อด้วยเงื่อนไขพิเศษ คือไม่ได้ผ่านขั้นตอนการระเบิดของดาวฤกษ์หรือซูเปอร์โนวา (",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            2,
-                            3
-                          ]
+                          "position": [3, 2, 3]
                         },
                         {
                           "id": "0033a075",
@@ -171,21 +131,12 @@
                                   "text": "Supernova",
                                   "attributes": []
                                 },
-                                "position": [
-                                  3,
-                                  2,
-                                  4,
-                                  1
-                                ]
+                                "position": [3, 2, 4, 1]
                               }
                             ],
                             "language": "en-gb"
                           },
-                          "position": [
-                            3,
-                            2,
-                            4
-                          ]
+                          "position": [3, 2, 4]
                         },
                         {
                           "id": "abbf270a",
@@ -194,32 +145,21 @@
                             "text": ") ในแบบเดียวกับหลุมดำโดยทั่วไป",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            2,
-                            5
-                          ]
+                          "position": [3, 2, 5]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      2
-                    ]
+                    "position": [3, 2]
                   }
                 ]
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "5850296d",
               "type": "mpu",
               "model": {},
-              "position": [
-                4
-              ]
+              "position": [4]
             }
           ]
         }
@@ -244,13 +184,7 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai",
           "taggings": []
         },
-        "blockTypes": [
-          "headline",
-          "text",
-          "paragraph",
-          "fragment",
-          "inline"
-        ],
+        "blockTypes": ["headline", "text", "paragraph", "fragment", "inline"],
         "allowAdvertising": true
       },
       "promo": {
@@ -963,9 +897,7 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": [
-                        "http://sws.geonames.org/2635167/"
-                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2635167/"],
                       "thingEnglishLabel": "United Kingdom",
                       "type": "about"
                     }

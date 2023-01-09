@@ -27,33 +27,19 @@
                                   "text": "اختبار القائمة العربية للخدمة العالمية",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "15279b37",
@@ -62,9 +48,7 @@
                 "firstPublished": 1626435198031,
                 "lastPublished": 1626435198031
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "5d268f46",
@@ -84,18 +68,11 @@
                             "text": "ابدأ قائمة لم يتم فرزها",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            1,
-                            1
-                          ]
+                          "position": [3, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      1
-                    ]
+                    "position": [3, 1]
                   },
                   {
                     "id": "8d6fc875",
@@ -120,30 +97,15 @@
                                         "text": "مورد 1 را لیست کنید",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        3,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [3, 2, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  3,
-                                  2,
-                                  1,
-                                  1
-                                ]
+                                "position": [3, 2, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            3,
-                            2,
-                            1
-                          ]
+                          "position": [3, 2, 1]
                         },
                         {
                           "id": "d07a8221",
@@ -163,30 +125,15 @@
                                         "text": "مورد 2 را لیست کنید",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        3,
-                                        2,
-                                        2,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [3, 2, 2, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  3,
-                                  2,
-                                  2,
-                                  1
-                                ]
+                                "position": [3, 2, 2, 1]
                               }
                             ]
                           },
-                          "position": [
-                            3,
-                            2,
-                            2
-                          ]
+                          "position": [3, 2, 2]
                         },
                         {
                           "id": "6b18165e",
@@ -206,37 +153,19 @@
                                         "text": "مورد 3 را لیست کنید",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        3,
-                                        2,
-                                        3,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [3, 2, 3, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  3,
-                                  2,
-                                  3,
-                                  1
-                                ]
+                                "position": [3, 2, 3, 1]
                               }
                             ]
                           },
-                          "position": [
-                            3,
-                            2,
-                            3
-                          ]
+                          "position": [3, 2, 3]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      2
-                    ]
+                    "position": [3, 2]
                   },
                   {
                     "id": "fea9b0e7",
@@ -251,18 +180,11 @@
                             "text": "إنهاء قائمة لم يتم فرزها",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            3,
-                            1
-                          ]
+                          "position": [3, 3, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      3
-                    ]
+                    "position": [3, 3]
                   },
                   {
                     "id": "3e2faab6",
@@ -277,32 +199,21 @@
                             "text": "\nبدء القائمة المصنفة",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            4,
-                            1
-                          ]
+                          "position": [3, 4, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      4
-                    ]
+                    "position": [3, 4]
                   }
                 ]
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "8c4d26cd",
               "type": "mpu",
               "model": {},
-              "position": [
-                4
-              ]
+              "position": [4]
             },
             {
               "id": "67a128f2",
@@ -332,30 +243,15 @@
                                         "text": "مورد 1 را لیست کنید",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        5,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [5, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  5,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [5, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            5,
-                            1,
-                            1
-                          ]
+                          "position": [5, 1, 1]
                         },
                         {
                           "id": "e4befbcf",
@@ -375,30 +271,15 @@
                                         "text": "مورد 2 را لیست کنید",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        5,
-                                        1,
-                                        2,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [5, 1, 2, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  5,
-                                  1,
-                                  2,
-                                  1
-                                ]
+                                "position": [5, 1, 2, 1]
                               }
                             ]
                           },
-                          "position": [
-                            5,
-                            1,
-                            2
-                          ]
+                          "position": [5, 1, 2]
                         },
                         {
                           "id": "1fb272c9",
@@ -418,37 +299,19 @@
                                         "text": "مورد 3 را لیست کنید",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        5,
-                                        1,
-                                        3,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [5, 1, 3, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  5,
-                                  1,
-                                  3,
-                                  1
-                                ]
+                                "position": [5, 1, 3, 1]
                               }
                             ]
                           },
-                          "position": [
-                            5,
-                            1,
-                            3
-                          ]
+                          "position": [5, 1, 3]
                         }
                       ]
                     },
-                    "position": [
-                      5,
-                      1
-                    ]
+                    "position": [5, 1]
                   },
                   {
                     "id": "c9f854aa",
@@ -463,24 +326,15 @@
                             "text": "إنهاء القائمة المصنفةه",
                             "attributes": []
                           },
-                          "position": [
-                            5,
-                            2,
-                            1
-                          ]
+                          "position": [5, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      5,
-                      2
-                    ]
+                    "position": [5, 2]
                   }
                 ]
               },
-              "position": [
-                5
-              ]
+              "position": [5]
             }
           ]
         }

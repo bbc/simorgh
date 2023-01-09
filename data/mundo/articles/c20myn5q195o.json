@@ -27,33 +27,19 @@
                                   "text": "Mundo Twitter Test ",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "9497aa7e",
@@ -62,9 +48,7 @@
                 "firstPublished": 1624964861434,
                 "lastPublished": 1624964861434
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "eb8eadc4",
@@ -89,33 +73,19 @@
                                   "text": "Hola Mundo!",
                                   "attributes": []
                                 },
-                                "position": [
-                                  3,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [3, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            3,
-                            1,
-                            1
-                          ]
+                          "position": [3, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      1
-                    ]
+                    "position": [3, 1]
                   }
                 ]
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "18a3bb55",
@@ -145,24 +115,15 @@
                               "indexOfType": 0
                             }
                           },
-                          "position": [
-                            4,
-                            1,
-                            1
-                          ]
+                          "position": [4, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      1
-                    ]
+                    "position": [4, 1]
                   }
                 ]
               },
-              "position": [
-                4
-              ]
+              "position": [4]
             },
             {
               "id": "c07e0ece",
@@ -182,24 +143,15 @@
                             "text": "Comes estas? ",
                             "attributes": []
                           },
-                          "position": [
-                            5,
-                            1,
-                            1
-                          ]
+                          "position": [5, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      5,
-                      1
-                    ]
+                    "position": [5, 1]
                   }
                 ]
               },
-              "position": [
-                5
-              ]
+              "position": [5]
             },
             {
               "id": "c4e577b0",
@@ -229,24 +181,15 @@
                               "indexOfType": 1
                             }
                           },
-                          "position": [
-                            6,
-                            1,
-                            1
-                          ]
+                          "position": [6, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      6,
-                      1
-                    ]
+                    "position": [6, 1]
                   }
                 ]
               },
-              "position": [
-                6
-              ]
+              "position": [6]
             },
             {
               "id": "4510cd4d",
@@ -266,24 +209,15 @@
                             "text": "Noticias del mundo ",
                             "attributes": []
                           },
-                          "position": [
-                            7,
-                            1,
-                            1
-                          ]
+                          "position": [7, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      7,
-                      1
-                    ]
+                    "position": [7, 1]
                   }
                 ]
               },
-              "position": [
-                7
-              ]
+              "position": [7]
             },
             {
               "id": "37651a9c",
@@ -313,32 +247,21 @@
                               "indexOfType": 2
                             }
                           },
-                          "position": [
-                            8,
-                            1,
-                            1
-                          ]
+                          "position": [8, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      8,
-                      1
-                    ]
+                    "position": [8, 1]
                   }
                 ]
               },
-              "position": [
-                8
-              ]
+              "position": [8]
             },
             {
               "id": "620db851",
               "type": "mpu",
               "model": {},
-              "position": [
-                9
-              ]
+              "position": [9]
             }
           ]
         }
@@ -544,9 +467,7 @@
             "versions": [
               {
                 "versionId": "p01hnn2d",
-                "types": [
-                  "Original"
-                ],
+                "types": ["Original"],
                 "duration": 16,
                 "durationISO8601": "PT16S",
                 "warnings": {},
@@ -824,10 +745,7 @@
                       "thingLabel": "News report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "tagging:Format"
-                      ],
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -848,9 +766,7 @@
                         "tagging:TagConcept",
                         "tagging:Genre"
                       ],
-                      "thingSameAs": [
-                        "http://dbpedia.org/resource/Health"
-                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Health"],
                       "thingEnglishLabel": "Health",
                       "type": "about"
                     }
