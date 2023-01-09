@@ -99,7 +99,23 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/afaanoromoo/topics/c2dwqdy81y1t'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/afaanoromoo/topics/c2dwqdy81y1t'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/afaanoromoo/topics/c2dwqdy81y1t'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -462,6 +478,23 @@ module.exports = () => ({
           },
         },
         smoke: true,
+      },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/afrique/topics/cnq687nn703t'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/afrique/topics/cnq687nn703t'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/afrique/topics/cnq687nn703t'],
+            enabled: false,
+          },
+        },
+        smoke: false,
       },
     },
     specialFeatures: {
