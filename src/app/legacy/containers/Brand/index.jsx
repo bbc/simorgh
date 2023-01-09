@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import Brand from '#psammead/psammead-brand/src';
 import { bool, node, oneOfType, func, shape, any } from 'prop-types';
+import { useTheme } from '@emotion/react';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const StyledBrand = styled(Brand)`
@@ -16,8 +17,9 @@ const StyledBrand = styled(Brand)`
 `;
 
 const BrandContainer = ({ skipLink, scriptLink, brandRef, ...props }) => {
-  const { product, serviceLocalizedName, brandSVG, service, theming } =
+  const { product, serviceLocalizedName, service, theming } =
     useContext(ServiceContext);
+  const { brandSVG } = useTheme();
 
   const { brandBackgroundColour, brandLogoColour } = theming;
   const svgMaxHeight = 24;

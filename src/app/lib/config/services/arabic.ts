@@ -5,7 +5,6 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
-import brandSVG from '../../chameleonLogos/arabic';
 import '#psammead/psammead-locales/moment/ar';
 import '#psammead/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
@@ -282,7 +281,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'الأخبار الرئيسية',
       featuresAnalysisTitle: 'اخترنا لكم',
     },
-    brandSVG,
     mostRead: {
       header: 'الأكثر قراءة',
       lastUpdated: 'آخر تحديث',

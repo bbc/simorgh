@@ -2,6 +2,7 @@ import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import gurmukhiScript from '../fontScripts/gurmukhi';
 import punjabiFontVariants from '../fontVariants/punjabi';
 import withThemeProvider from '../withThemeProvider';
+import brandSVG from '../chameleonLogos/punjabi';
 
 const punjabiTheme = {
   palette: {
@@ -16,6 +17,7 @@ const punjabiTheme = {
     fontVariants: punjabiFontVariants,
     fontFaces: [],
   },
+  brandSVG,
 };
 
 export default withThemeProvider(punjabiTheme);

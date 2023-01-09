@@ -5,7 +5,6 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import devanagari from '../../../components/ThemeProvider/fontScripts/devanagari';
-import brandSVG from '../../chameleonLogos/gujarati';
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
 import '#psammead/psammead-locales/moment/gu';
 import withContext from '../../../contexts/utils/withContext';
@@ -268,7 +267,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'નવાજૂની',
       featuresAnalysisTitle: 'બીબીસી વિશેષ',
     },
-    brandSVG,
     mostRead: {
       header: 'સૌથી વધારે વંચાયેલા સમાચાર',
       lastUpdated: 'લાસ્ટ અપડેટ:',
