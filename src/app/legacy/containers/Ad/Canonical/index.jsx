@@ -27,7 +27,9 @@ export const getBootstrapSrc = (queryString, useLegacy = false) => {
   const adsLegacyLiveScript =
     'https://gn-web-assets.api.bbc.com/ngas/latest/dotcom-bootstrap-legacy.js';
 
-  const useLiveSrc = isLive() || queryString.includes('ads-js-env=live');
+  const useLiveSrc =
+    (isLive() && !queryString.includes('ads-test=true')) ||
+    queryString.includes('ads-js-env=live');
 
   if (useLiveSrc) {
     return useLegacy ? adsLegacyLiveScript : adsLiveScript;
@@ -64,7 +66,6 @@ const CanonicalAd = ({ slotType, className }) => {
   }, [slotType, location]);
 
   const isOperaMini = useOperaMiniDetection();
-
   if (!showAdsBasedOnLocation || isOperaMini) {
     return null;
   }
