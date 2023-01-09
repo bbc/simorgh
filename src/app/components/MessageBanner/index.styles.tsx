@@ -1,6 +1,5 @@
 import { css, Theme } from '@emotion/react';
-// pass in the emotion prop you're trying to get access to
-// just do normal css in a css ({}) entry
+
 const styles = {
   container: ({ palette }: Theme) =>
     css({

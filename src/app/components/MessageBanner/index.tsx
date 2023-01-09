@@ -24,8 +24,6 @@ const MessageBanner = ({ summaries, title }: MessageBanner) => {
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
 
-  console.log(summaries, '______');
-
   return (
     <div css={styles.container}>
       <section css={styles.card}>
