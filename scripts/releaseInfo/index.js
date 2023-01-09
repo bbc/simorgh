@@ -32,6 +32,7 @@ const pageTypeTitleMappings = {
   featureIndexPage: 'FIX',
   mostWatchedPage: 'Most Watched',
   onDemandAudio: 'On Demand Audio',
+  topicPage: 'Topics',
 };
 
 const excludedPageTypes = ['errorPage404'];
@@ -46,6 +47,7 @@ const generateLinks = (service, env) => {
   const output = [];
 
   const serviceData = allServices()[service];
+  console.log(service, Object.keys(serviceData.pageTypes));
 
   Object.keys(serviceData.pageTypes)
     .sort()
@@ -88,8 +90,8 @@ stream.once('open', () => {
     const items = [
       service,
       generateLinks(service, 'local'),
-      generateLinks(service, 'test', 'https://www.test.bbc.com'),
-      generateLinks(service, 'live', 'https://www.bbc.com'),
+      generateLinks(service, 'test'),
+      generateLinks(service, 'live'),
     ];
 
     stream.write(`| ${items.join(' | ')} |\n`);
