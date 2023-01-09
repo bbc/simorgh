@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
+import { Agent } from 'https';
 import * as fetchPageData from '../../utils/fetchPageData';
 import nodeLogger from '../../../../testHelpers/loggerMock';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
@@ -7,8 +7,8 @@ import getInitialData from '.';
 
 process.env.BFF_PATH = 'https://mock-bff-path';
 
-const agent = { ca: 'ca', key: 'key' };
-const getAgent = jest.fn(() => agent);
+const agent = { cert: 'cert', ca: 'ca', key: 'key' };
+const getAgent = jest.fn(() => Promise.resolve(agent as unknown as Agent));
 
 const bffArticleJson = {
   data: {
@@ -42,7 +42,6 @@ describe('Articles - BFF Fetching', () => {
       }),
     );
 
-    // @ts-ignore - Ignore fetchPageData argument types
     await getInitialData({
       path: '/kyrgyz/articles/c0000000000o',
       getAgent,
@@ -65,7 +64,6 @@ describe('Articles - BFF Fetching', () => {
       }),
     );
 
-    // @ts-ignore - Ignore fetchPageData argument types
     await getInitialData({
       path: '/kyrgyz/articles/c0000000000o',
       getAgent,
@@ -92,7 +90,6 @@ describe('Articles - BFF Fetching', () => {
       }),
     );
 
-    // @ts-ignore - Ignore fetchPageData argument types
     await getInitialData({
       path: '/kyrgyz/articles/c0000000000o',
       getAgent,
@@ -119,7 +116,6 @@ describe('Articles - BFF Fetching', () => {
       }),
     );
 
-    // @ts-ignore - Ignore fetchPageData argument types
     await getInitialData({
       path: '/kyrgyz/articles/c0000000000o?renderer_env=test',
       getAgent,
@@ -146,7 +142,6 @@ describe('Articles - BFF Fetching', () => {
       }),
     );
 
-    // @ts-ignore - Ignore fetchPageData argument types
     await getInitialData({
       path: '/kyrgyz/articles/c0000000000o?renderer_env=live',
       getAgent,
@@ -167,7 +162,6 @@ describe('Articles - BFF Fetching', () => {
 
     fetchDataSpy.mockRejectedValue({ message: 'Not found', status: 404 });
 
-    // @ts-ignore - Ignore fetchPageData argument types
     await getInitialData({
       path: '/kyrgyz/articles/c0000000000o',
       getAgent,
@@ -190,7 +184,6 @@ describe('Articles - BFF Fetching', () => {
       status: 500,
     });
 
-    // @ts-ignore - Ignore fetchPageData argument types
     await getInitialData({
       path: '/kyrgyz/articles/c0000000000o',
       getAgent,
@@ -214,7 +207,6 @@ describe('Articles - BFF Fetching', () => {
       }),
     );
 
-    // @ts-ignore - Ignore fetchPageData argument types
     await getInitialData({
       path: '/kyrgyz/articles/somethingelse',
       getAgent,
@@ -245,7 +237,6 @@ describe('Articles - BFF Fetching', () => {
       }),
     );
 
-    // @ts-ignore - Ignore fetchPageData argument types
     await getInitialData({
       path: '/kyrgyz/articles/c0000000000o',
       getAgent,
