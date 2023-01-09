@@ -9,10 +9,8 @@ import Text from '../Text';
 import { LeftChevron, RightChevron } from '../icons';
 import styles from './index.styles';
 import { ServiceContext } from '../../contexts/ServiceContext';
-
 //  gonna use title, link, linktext, image (optional), subtitle(optional),
 // PropsWithChildren
-
 interface MessageBanner {
   summaries: {
     imageUrl?: string;
@@ -23,45 +21,50 @@ interface MessageBanner {
   }[];
   title: string;
 }
-
 const MessageBanner = ({ summaries, title }: MessageBanner) => {
   const { dir } = useContext(ServiceContext);
-
   const isRtl = dir === 'rtl';
 
   console.log(summaries, '______');
+
   return (
-    <section css={styles.card}>
-      <Heading level={2} size="paragon">
-        {title}
-      </Heading>
-      {summaries.map(summary => {
-        return (
-          <>
-            <div css={styles.linkbackground}>
-              <Text size="pica">
-                <a href={summary.link} css={styles.link}>
-                  {summary.title}
-                </a>
-                {isRtl ? <LeftChevron /> : <RightChevron />}
-              </Text>
-            </div>
-            <Paragraph size="longPrimer">{summary.description}</Paragraph>
-            {summary.imageUrl && (
-              <Image
-                alt={summary.imageAlt}
-                src={summary.imageUrl.replace('{width}', '600')}
-                placeholder={false}
-                css={styles.image}
-              >
-                {summary.imageUrl}
-              </Image>
-            )}
-          </>
-        );
-      })}
-    </section>
+    <div css={styles.container}>
+      <section css={styles.card}>
+        {summaries.map(summary => {
+          return (
+            <>
+              <Heading level={2} size="paragon" css={styles.heading}>
+                {title}
+              </Heading>
+              <Paragraph size="longPrimer" css={styles.paragraph}>
+                {summary.description}
+              </Paragraph>
+              <div css={styles.flex}>
+                {summary.imageUrl && (
+                  <div css={styles.image}>
+                    <Image
+                      alt={summary.imageAlt}
+                      src={summary.imageUrl.replace('{width}', '600')}
+                      placeholder={false}
+                    >
+                      {summary.imageUrl}
+                    </Image>
+                  </div>
+                )}
+                <div css={styles.linkbackground}>
+                  <Text size="pica" fontVariant="sansBold">
+                    <a href={summary.link} css={styles.link}>
+                      {summary.title}
+                    </a>
+                    {isRtl ? <LeftChevron /> : <RightChevron />}
+                  </Text>
+                </div>
+              </div>
+            </>
+          );
+        })}
+      </section>
+    </div>
   );
 };
-
 export default MessageBanner;
