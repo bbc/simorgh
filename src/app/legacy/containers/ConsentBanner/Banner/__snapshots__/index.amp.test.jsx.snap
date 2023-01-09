@@ -1047,6 +1047,7 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
           dir="ltr"
         >
           <button
+            data-terms-banner="accept"
             on="tap:cookieId.show, privacyId.hide"
             type="button"
           >
@@ -1059,6 +1060,7 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
         >
           <span>
             <a
+              data-terms-banner="reject"
               href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
               on="tap:cookieId.show, privacyId.hide"
             >
@@ -1330,6 +1332,7 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
           dir="rtl"
         >
           <button
+            data-terms-banner="accept"
             on="tap:cookieId.show, privacyId.hide"
             type="button"
           >
@@ -1342,6 +1345,7 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
         >
           <span>
             <a
+              data-terms-banner="reject"
               href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
               on="tap:cookieId.show, privacyId.hide"
             >

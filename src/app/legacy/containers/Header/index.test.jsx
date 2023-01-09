@@ -7,6 +7,7 @@ import {
   MEDIA_ASSET_PAGE,
   TOPIC_PAGE,
 } from '#app/routes/utils/pageTypes';
+import userEvent from '@testing-library/user-event';
 import {
   render,
   screen,
@@ -193,6 +194,47 @@ describe(`Header`, () => {
       expect(container.querySelector('#brandLink')).toBe(
         container.querySelector('a[href="/pidgin"]'),
       );
+    });
+
+    it('should remove the privacy banner when navigating from the reject button to content with tab', () => {
+      const { container } = HeaderContainerWithContext({
+        renderOptions: { pageType: INDEX_PAGE, service: 'pidgin' },
+      });
+
+      const pidginPrivacyReject =
+        pidginServiceConfig.default.translations.consentBanner.privacy.reject;
+
+      const reject = screen.getByText(pidginPrivacyReject);
+      reject.focus();
+
+      expect(container).toContainElement(reject);
+      userEvent.tab();
+      expect(container).not.toContainElement(reject);
+    });
+
+    it('should remove the cookie banner when navigating from the reject button to content with tab', () => {
+      const { container } = HeaderContainerWithContext({
+        renderOptions: { pageType: INDEX_PAGE, service: 'pidgin' },
+      });
+
+      const pidginPrivacyAccept =
+        pidginServiceConfig.default.translations.consentBanner.privacy.accept;
+      const pidginCookieReject =
+        pidginServiceConfig.default.translations.consentBanner.cookie.canonical
+          .reject;
+
+      const acceptPrivacy = screen.getByText(pidginPrivacyAccept);
+      acceptPrivacy.click();
+
+      const reject = screen.getByText(pidginCookieReject);
+
+      userEvent.tab();
+      userEvent.tab();
+      userEvent.tab();
+      userEvent.tab();
+      expect(container).toContainElement(reject);
+      userEvent.tab();
+      expect(container).not.toContainElement(reject);
     });
   });
 });
