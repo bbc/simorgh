@@ -118,7 +118,7 @@ import {
   GROUP_D_MIN_WIDTH,
 } from './fontMediaQueries';
 
-import { BrandPalette, Typography } from '../../models/types/theming';
+import { BrandPalette, Typography, BrandSVG } from '../../models/types/theming';
 
 type Props = {
   children: React.ReactNode;
@@ -127,9 +127,11 @@ type Props = {
 const withThemeProvider = ({
   typography,
   palette: brandPalette,
+  brandSVG,
 }: {
   palette: BrandPalette;
   typography: Typography;
+  brandSVG: BrandSVG;
 }) => {
   const { fontVariants, fontFaces, script } = typography;
   const {
@@ -256,6 +258,7 @@ const withThemeProvider = ({
       QUINTUPLE,
       SEXTUPLE,
     },
+    brandSVG,
   };
 
   const ThemeProvider: React.FC<Props> = ({ children }) => {

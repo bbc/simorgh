@@ -3,8 +3,6 @@ import { string, bool, number } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 
 import EmbedError from '#psammead/psammead-embed-error/src';
-import nodeLogger from '#lib/logger.node';
-import { INCLUDE_RENDERED } from '#lib/logger.const';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import { GridItemMedium } from '#components/Grid';
@@ -14,8 +12,6 @@ import Canonical from './canonical';
 import Idt2Canonical from './canonical/Idt2';
 import Idt2Amp from './amp/Idt2Amp';
 import VjAmp from './amp/VjAmp';
-
-const logger = nodeLogger(__filename);
 
 const componentsToRender = {
   amp: {
@@ -47,7 +43,7 @@ const IncludeContainer = props => {
   );
 
   if (!enabled) return null;
-  const { isAmpSupported, href, type, index } = props;
+  const { isAmpSupported, type, index } = props;
 
   if (!isAmpSupported && isAmp) {
     return (
@@ -63,11 +59,6 @@ const IncludeContainer = props => {
     );
   }
 
-  logger.info(INCLUDE_RENDERED, {
-    includeUrl: href,
-    type,
-  });
-
   const platform = isAmp ? 'amp' : 'canonical';
 
   return componentsToRender[platform][type]
@@ -77,7 +68,6 @@ const IncludeContainer = props => {
 
 IncludeContainer.propTypes = {
   isAmpSupported: bool,
-  href: string.isRequired,
   type: string.isRequired,
   index: number,
 };

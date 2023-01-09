@@ -1,4 +1,3 @@
-import brandSVG from '../../chameleonLogos/afrique';
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import {
   C_POSTBOX,
@@ -271,7 +270,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'À la une',
       featuresAnalysisTitle: 'Le choix de la rédaction',
     },
-    brandSVG,
     mostRead: {
       header: 'Les plus lus',
       lastUpdated: 'Dernière mise à jour:',
