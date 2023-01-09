@@ -258,6 +258,7 @@ export const service: DefaultServiceConfig = {
         duration: 'ကြာမြင့်ချိန်',
         recentEpisodes: 'ထုတ်လွှင့်ပြီး အစီအစဉ်မျာ',
         podcastExternalLinks: 'ဒီပေါ့ဒ်ကတ်စ်ကို နောက်ထပ်ရနိုင်သည့်နေရာ',
+        download: 'ဒေါင်းလုပ်လုပ် ရယူရန်',
       },
       socialEmbed: {
         caption: {
