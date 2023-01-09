@@ -8,6 +8,7 @@ import {
 } from '../fontFaces';
 import reithFontVariants from '../fontVariants/reith';
 import withThemeProvider from '../withThemeProvider';
+import brandSVG from '../chameleonLogos/portuguese';
 
 const portugueseTheme = {
   palette: {
@@ -27,6 +28,7 @@ const portugueseTheme = {
       REITH_SERIF_LIGHT,
     ],
   },
+  brandSVG,
 };
 
 export default withThemeProvider(portugueseTheme);
