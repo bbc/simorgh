@@ -9,8 +9,7 @@ import Text from '../Text';
 import { LeftChevron, RightChevron } from '../icons';
 import styles from './index.styles';
 import { ServiceContext } from '../../contexts/ServiceContext';
-//  gonna use title, link, linktext, image (optional), subtitle(optional),
-//  PropsWithChildren
+
 interface MessageBanner {
   summaries: {
     imageUrl?: string;
