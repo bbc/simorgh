@@ -5,7 +5,6 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import devanagari from '../../../components/ThemeProvider/fontScripts/devanagari';
-import brandSVG from '../../chameleonLogos/telugu';
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/te';
@@ -271,7 +270,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'ముఖ్యమైన కథనాలు',
       featuresAnalysisTitle: 'ఫీచర్లు',
     },
-    brandSVG,
     mostRead: {
       header: 'ఎక్కువమంది చదివినవి',
       lastUpdated: 'చివరిగా అప్‌డేట్ అయిన తేదీ:',
