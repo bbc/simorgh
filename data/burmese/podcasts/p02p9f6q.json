@@ -1,0 +1,1303 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:brand:bbc_burmese_radio/p02p9f6q",
+    "locators": { "pid": "p0dmqj1b", "brandPid": "p02p9f6q" },
+    "type": "WSRADIO",
+    "createdBy": "bbc_burmese_radio",
+    "language": "my",
+    "lastUpdated": 1670498922489,
+    "firstPublished": 1670456864000,
+    "lastPublished": 1670456864000,
+    "timestamp": 1670456864000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ် - BBC News မြန်မာ",
+      "pageIdentifier": "burmese.bbc_burmese_radio.podcasts.programmes.p02p9f6q.page",
+      "producerId": "35",
+      "contentType": "player-episode",
+      "producer": "BURMESE"
+    },
+    "passport": { "home": "", "taggings": [] },
+    "tags": {},
+    "version": "v1.4.8",
+    "blockTypes": ["media"],
+    "title": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်",
+    "releaseDateTimeStamp": 1670371200000
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p0dmqj1b",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "",
+        "synopses": {
+          "short": "စစ်ကိုင်းတိုင်း ဒီပဲယင်းမြို့နယ်ထဲက စစ်ရှောင်ပြည်သူတွေ အခက်အခဲတွေနဲ့ ရင်ဆိုင်နေရ",
+          "long": "အာရပ်ကမ္ဘာမှာ တရုတ်နိုင်ငံရဲ့ အကြီးဆုံး သံတမန်ရေး ကနဦးခြေလှမ်းအဖြစ် သမ္မတ ရှီကျင်းပင် ဆော်ဒီကို သွားရောက်"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "p0dmqhv4",
+            "types": ["Podcast"],
+            "duration": 751,
+            "durationISO8601": "PT12M31S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableUntil": 1673048700000,
+            "availableFrom": 1670456700000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "တရုတ်သမ္မတ ရှီကျင်းပင်ရဲ့ ဆော်ဒီခရီးစဥ် စတင်",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": { "headline": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်" },
+    "locators": { "pid": "p0dmqj1b", "brandPid": "p02p9f6q" },
+    "media": {
+      "id": "p0dmqj1b",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "",
+      "synopses": {
+        "short": "စစ်ကိုင်းတိုင်း ဒီပဲယင်းမြို့နယ်ထဲက စစ်ရှောင်ပြည်သူတွေ အခက်အခဲတွေနဲ့ ရင်ဆိုင်နေရ",
+        "long": "အာရပ်ကမ္ဘာမှာ တရုတ်နိုင်ငံရဲ့ အကြီးဆုံး သံတမန်ရေး ကနဦးခြေလှမ်းအဖြစ် သမ္မတ ရှီကျင်းပင် ဆော်ဒီကို သွားရောက်"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "p0dmqhv4",
+          "types": ["Podcast"],
+          "duration": 751,
+          "durationISO8601": "PT12M31S",
+          "warnings": {},
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableUntil": 1673048700000,
+          "availableFrom": 1670456700000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "radioProgramme",
+      "episodeTitle": "တရုတ်သမ္မတ ရှီကျင်းပင်ရဲ့ ဆော်ဒီခရီးစဥ် စတင်",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1670371200000,
+    "brand": {
+      "pid": "p02p9f6q",
+      "title": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+    },
+    "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p0dmqj1b",
+    "type": "ws_radio"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Burmese",
+      "uri": "/burmese",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": {
+              "headline": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "locators": { "pid": "p0dmdk3t", "brandPid": "p02p9f6q" },
+            "media": {
+              "id": "p0dmdk3t",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "စစ်ပွဲအန္တရာယ်ကြောင့် လောက်ကိုင်မြို့ကနေ လူအများအပြား ထွက်ခွာ - BBC News မြန်မာ",
+                "long": "မြန်မာစစ်တပ်နဲ့ ကိုးကန့်တပ်ကြား တိုက်ပွဲဖြစ်မှာစိုးလို့ လောက်ကိုင်မြို့ကနေ ပြည်သူအများအပြား စတင်ထွက်ခွာ"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0dmdjv7",
+                  "types": ["Podcast"],
+                  "duration": 741,
+                  "durationISO8601": "PT12M21S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1672965420000,
+                  "availableFrom": 1670373420000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "စစ်ပွဲအန္တရာယ်ကြောင့် လောက်ကိုင်မြို့ကနေ လူအများအပြား ထွက်ခွာ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1670371200000,
+            "brand": {
+              "pid": "p02p9f6q",
+              "title": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p0dmdk3t",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "locators": { "pid": "p0dm1x73", "brandPid": "p02p9f6q" },
+            "media": {
+              "id": "p0dm1x73",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "တရုတ်မြန်မာနယ်စပ် ဂိတ်၅ခုအနက် ၁ခုဘဲဖွင့်ထားလို့ ကုန်သွယ်ရေးနှောက်နှေးနေတယ်လို့ ဆိုကြပြီ",
+                "medium": "KBC ဥက္ကဋ္ဌဟောင်းကိုဖမ်းဆီးတာဟာ ဘာသာရေးအပေါ် အနိုင်ကျင့်မှုသက်သက်ဘဲလို့ KIO မီဒီယာ တာ၀န်ခံပြော",
+                "long": "- ရခိုင်မှာ လူမှုကယ်ဆယ်ရေးအကူအညီတွေလမ်းဖွင့်ပေးဖို့ အပစ်ရပ်ခဲ့ပေမယ့် အကူအညီမရသေးလို့ အငတ်ဆိုက်နေတဲ့ အခြေအနေကို စစ်ရှောင်စခန်းတာ၀န်ခံတွေပြောပြ\n- ရုရှားဒုံးကျည်တိုက်ခိုက်မှုတွေကြောင့် ယူကရိန်းဓါတ်အားပေးလိုင်းတွေ ထိမှန်ပြီး မြို့တော်တော်များများ မီးပြတ်ကာ ဆောင်းအ၀င် အနွေးပေးစက်တွေလည်း အသုံးပြုမရဖြစ်နေ\n- တလောက ပစ်ခတ်တိုက်ခိုက်ခံရလို့ ပျက်စီးသွားတဲ့ ခရိုင်းမီးယား တံတားကို ရုရှားသမ္မတပူတင် လာရောက်စစ်ဆေး\n- မနှစ်က စစ်အာဏာသိမ်းပြီးနောက်ပဋိပက္ခတွေဖြစ်ခဲ့တဲ့ ဆူဒန်မှာ စစ်တပ်နဲ့သဘောတူညီချက်ယူလို့ ဆန္ဒပြကြပြီ\n- အိမ်ထောင်ရှိရက်နဲ့ဖောက်ပြန်သူတွေ ၊ လက်မထပ်ဘဲအတူနေသူတွေကို အပြစ်ပေးမယ့် ဥပဒေတွေ အင်ဒိုနီးရှားမှာ ပြင်ဆင်ပြဌာန်းတော့မယ်\n- ဂျပန်ကို ပန်နယ်တီမှာ နိုင်တဲ့ ခရိုအေးရှားနဲ့ တောင်ကိုရီးယားကို ၄ဂိုး-၁ဂိုးနဲ့ နိုင်တဲ့ ဘရာဇီးတို့ ဒီဇင်ဘာ၉ရက်မှာ ကွာတားဖိုင်နယ် ကန်ကြမယ့် အကြောင်း အပါအ၀င် အင်္ဂါ မနက်ခင်း နောက်ဆုံးရ မြန်မာနဲ့ နိုင်ငံတကာ သတင်းတွေကို ဘီဘီစီမြန်မာပိုင်းရဲ့ ပေါ့ဒ်ကတ်စ်၊ ဝက်ဘ်ဆိုက်၊ ဖေ့စ်ဘုတ်နဲ့ ယူကျုတို့မှာ တင်ဆက်ပေးနေပါတယ်။\nမနက်ပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625862\nညပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625858\nဝက်ဘ်ဆိုက် - https://www.bbcburmese.com\nဖေ့စ်ဘွတ်ခ် - https://www.facebook.com/BBCnewsBurmese\nအင်စတာဂရမ် - https://www.instagram.com/bbcburmese/\nယူကျု - http://youtube.com/thebbcburmese"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0dm1x6s",
+                  "types": ["Podcast"],
+                  "duration": 636,
+                  "durationISO8601": "PT10M36S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1672885380000,
+                  "availableFrom": 1670293380000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "ဒီပဲယင်းဘက်ကရွာတွေမှာ စစ်ကောင်စီတပ်တွေ မီးရှို့နေတာ ၃ရက်ရှိပြီလို့ ဒေသခံပြော",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1670284800000,
+            "brand": {
+              "pid": "p02p9f6q",
+              "title": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p0dm1x73",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "locators": { "pid": "p0dlt8qt", "brandPid": "p02p9f6q" },
+            "media": {
+              "id": "p0dlt8qt",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "တာ၀န်ပြီးဆုံးလို့ တရုတ်အာကာသယာဥ်မှူးတွေ ကမ္ဘာမြေပေါ် ပြန်လည်ဆင်းသက်လာကြ",
+                "medium": "ဆီးရီးယားမှာ ကုန်စျေးနှုန်းကြီးမြင့်မှု၊အစိုးရအဖွဲ့ လာဘ်စားမှုတွေကြောင့် အစိုးရအဆောက်အအုံကို ဆန္ဒပြသူတွေ ၀င်ရောက်စီးနင်း",
+                "long": "- မန္တလေးတိုင်းမြို့နယ် ၅ ခုမှာ စစ်ကောင်စီအဖွဲ့ဝင်တွေက မီးရှို့ရာမှာ နိုဝင်ဘာ တစ်လအတွင်း နေအိမ် ၃၀၀ နီးပါး မီးလောင်ဆုံးရှုံးခဲ့တယ်လို့ NUG ထုတ်ပြန်\n- စစ်ကိုင်းတိုင်း ထီးချိုင့်ဘက်မှာတော့ နိုဝင်ဘာလကုန်ကနေ ခုဒီဇင်ဘာလဆန်းအထိ ကျေးရွာ ၇ရွာလောက်မှာ စစ်ကောင်စီတပ်တွေ၀င်မီးရှို့လို့ ‌နေအိမ်ရာနဲ့ချီ မီးလောင်ပျက်စီးထားပြီလို့ ဒေသခံတွေကပြောသလို KIA နဲ့ PDF တပ်ဖွဲ့တွေ ဆုတ်ခွာရင်းမီးရှို့ခဲ့လို့ နေအိမ်ရာနဲ့ချီ ဆုံးရှုံးတယ်လို့ စစ်ကောင်စီကထုတ်ပြန်\n- ရခိုင်ပြည်နယ် ပုဏ္ဏားကျွန်း ဆင်အင်းကြီးရွာမှာ စစ်ကောင်စီတပ်ဖွဲ့တွေက လက်ချက်ကြောင့် အရပ်သား ၁၀ ယောက်သေဆုံးခဲ့ပြီး ဒါဇင်နဲ့ချီ ဒဏ်ရာရရှိခဲ့တဲ့အကြောင်း ဒေသခံရဲ့ ပြောပြချက်\n- ကိုဗစ်ကာလ နေရပ်ပြန်လိုသူတွေကို အခကြေးငွေယူပြီး ကယ်ဆယ်ရေးလေကြောင်းခရီးစဥ်တွေပေါ် တင်ပေးတဲ့ ဗီယက်နမ်သံအရာရှိတွေ ဖမ်းဆီး ခံရ\n- ဆီနီဂေါကို နိုင်တဲ့ အင်္ဂလန် နဲ့ ပိုလန်ကိုနိုင်တဲ့ ပြင်သစ်တို့ ကွာတားဖိုင်နယ် တက်သွားပြီး လာမယ့် ဒီဇင်ဘာမှာ ကစားမယ့်  အကြောင်း အပါအ၀င် တနင်္လာ မနက်ခင်း နောက်ဆုံးရ မြန်မာနဲ့ နိုင်ငံတကာ သတင်းတွေကို ဘီဘီစီမြန်မာပိုင်းရဲ့ ပေါ့ဒ်ကတ်စ်၊ ဝက်ဘ်ဆိုက်၊ ဖေ့စ်ဘုတ်နဲ့ ယူကျုတို့မှာ တင်ဆက်ပေးနေပါတယ်။\nမနက်ပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625862\nညပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625858\nဝက်ဘ်ဆိုက် - https://www.bbcburmese.com\nဖေ့စ်ဘွတ်ခ် - https://www.facebook.com/BBCnewsBurmese\nအင်စတာဂရမ် - https://www.instagram.com/bbcburmese/\nယူကျု - http://youtube.com/thebbcburmese"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0dlt8n7",
+                  "types": ["Podcast"],
+                  "duration": 534,
+                  "durationISO8601": "PT8M54S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1672798620000,
+                  "availableFrom": 1670206620000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "ဘင်္ဂလားဒေ့ရှ်မှာ လေထုညစ်ညမ်းမှုကြောင့် နိုင်ငံစီးပွားရေးကို ထိခိုက်လာစေတယ်လို့ ကမ္ဘာဘဏ်ထုတ်ပြန်",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1670198400000,
+            "brand": {
+              "pid": "p02p9f6q",
+              "title": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p0dlt8qt",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "locators": { "pid": "p0dlp9z8", "brandPid": "p02p9f6q" },
+            "media": {
+              "id": "p0dlp9z8",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "အစိုးရနဲ့ အပစ်ရပ်မှု ရပ်ဆိုင်းထားတဲ့ ပါကစ္စတန်တာလီဘန်တွေ ချုံခိုတိုက်ခိုက်လို့ ရဲတွေသေ",
+                "medium": "အသတ်ခံရတဲ့ ငါးဖမ်းဌာနအရာရှိကိစ္စနဲ့ပတ်သက်လို့ ဖုံးကွယ်ထားတယ်ဆိုပြီး တောင်ကိုရီးယား လုံခြုံရေးအကြံပေးဟောင်း ဖမ်းဆီးခံရ",
+                "long": "- ကန့်ဘလူနဲ့ကျွန်းလှ တ၀ိုက် ဒေသခံတွေကို စစ်ကောင်စီတပ်ဖွဲ့တွေက ပျူစောထီးသင်တန်း တက်ခိုင်းနေပြီး မတက်တဲ့သူတွေကို တအိမ် ကျပ်သုံးသောင်းတစ်ထောင် ကောက်ခံလျက်ရှိတယ်လို့ ဆိုပြီ\n- တမူးကိစ္စ ဗီဒီယိုဖိုင်နဲ့ ပတ်သက်လို့ စုံစမ်းနေပြီး ကျူးလွန်တာမှန်ရင် ထိရောက်တဲ့အရေးယူတွေ လုပ်ဆောင်သွားမယ်လို့ အမျိုးသားညီညွတ်ရေးအစိုးရ လူ့အခွင့်အရေး၀န်ကြီးပြောကြား\n- ၂၀၀၈ ဖွဲ့စည်းပုံ အခြေခံဥပဒေ ပြင်ဆင်ရေး နိုင်ငံရေးပါတီ ၁၆ခုက ဆွေးနွေးနေတာ ပုဒ်မပေါင်း ၅၀ကျော်ရှိပြီလို့ ဦးစိုင်းအိုက်ပေါင်းပြော\n- အဂတိလိုက်စားမှု ကင်းအောင်လုပ်မယ်ဆိုပြီး အာဏာရလာတဲ့ တောင်အာဖရိက သမ္မတ အိမ်မှာ ဒေါ်လာသန်းချီ ငွေသားတွေ ၀ှက်ထားတဲ့ကိစ္စပေါ်ပေါက်ခဲ့လို့ သမ္မတ ရာထူးက ဆင်းပေးဖို့ တောင်းဆိုနေကြပြီ\n- ဂန္ဓ၀င်ဘောလုံးသမားကြီး ပီလီ အူမကြီးကင်ဆာနဲ့ ခွဲစိတ်ထားရာက ဆေးရုံပြန်တက်နေရပြီး သူနေပြန်ကောင်းဖို့ ဆုတောင်းနေကြပြီ\n- အမေရိကန်ကို နိုင်တဲ့ နယ်သာလန်နဲ့ သြစတြေးလျကို နိုင်တဲ့ အာဂျင်တီးနား တို့ ကွာတားဖိုင်နယ် အဆင့် တက်လှမ်းကြတဲ့ အကြောင်း အပါအ၀င် တနင်္ဂနွေ မနက်ခင်း နောက်ဆုံးရ မြန်မာနဲ့ နိုင်ငံတကာ သတင်းတွေကို ဘီဘီစီမြန်မာပိုင်းရဲ့ ပေါ့ဒ်ကတ်စ်၊ ဝက်ဘ်ဆိုက်၊ ဖေ့စ်ဘုတ်နဲ့ ယူကျုတို့မှာ တင်ဆက်ပေးနေပါတယ်။\nမနက်ပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625862\nညပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625858\nဝက်ဘ်ဆိုက် - https://www.bbcburmese.com\nဖေ့စ်ဘွတ်ခ် - https://www.facebook.com/BBCnewsBurmese\nအင်စတာဂရမ် - https://www.instagram.com/bbcburmese/\nယူကျု - http://youtube.com/thebbcburmese"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0dlp9yp",
+                  "types": ["Podcast"],
+                  "duration": 644,
+                  "durationISO8601": "PT10M44S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1672713960000,
+                  "availableFrom": 1670121960000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "တစ်စင်းကို ဒေါ်လာသန်း ၇၀၀တန် ရေဒါနဲ့ဖမ်းလို့မရတဲ့ B 21 ဗုံးကြဲလေယာဥ် အမေရိကန် မိတ်ဆက်ပြသ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1670112000000,
+            "brand": {
+              "pid": "p02p9f6q",
+              "title": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p0dlp9z8",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "locators": { "pid": "p0dljrzc", "brandPid": "p02p9f6q" },
+            "media": {
+              "id": "p0dljrzc",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "ဘရာဇီးလ်နဲ့ ဆွစ်ဇာလန် နောက်တဆင့်တက်",
+                "long": "စနေနေ့ မနက်ခင်း သတင်းများ ( ၃ ဒီဇင်ဘာ၊ ၂၀၂၂)\n\nထီးချိုင့်မြို့နယ်ထဲမှာ စစ်ကောင်စီက လေကြောင်းနဲ့ ဗုံးကြဲတာ ရွာတွေကို မီးရှို့ခဲ့တာကြောင့်  ဒေသခံတွေ ဘယ်လို ရင်ဆိုင်နေရပါသလဲ။ \n\nတရုတ်နှစ်ကူးနီးလာပေမဲ့ ကျောက်စိမ်းအရောင်းအဝယ်အေး။ \n\nယူကရိန်းရဲ့ အခြေခံအဆောက်အအုံတွေကို ရုရှားက ပစ်မှတ်ထား တိုက်ခိုက်တာ အခြေခံ လူ့အခွင့်အရေးကို ချိုးဖောက်လို့ စိုးရိမ်လို့ ကုလပြော။ \n\nနိုဝင်ဘာတလတည်း အလုပ်အကိုင် နှစ်သိန်းခြောက်သောင်းကျော်ဖန်တီးလို့ အမေရိကန် အလုပ်သမားဌာနပြော။ \n\nတရုတ်ရဲ့ ကိုဗစ် ကန့်သတ်ချက်လျော့ချမှု ကမ္ဘာ့ကျန်းမာရေးအဖွဲ့ အပြုသဘော တုံ့ပြန်။ \n\nစန္ဒယားတီးတာက ဦးနှောက်အလုပ်လုပ်ပုံကို ပိုကောင်းစေ။\n\nကမ္ဘာဖလားပြိုင်ပွဲရလဒ်။ \n\nဘရာဇီးလ်နဲ့ ဆွစ်ဇာလန် နောက်တဆင့်တက်။ \n\nအမေရိကန် နယ်သာလန်၊ အာဂျင်တီးနား သြစတြေးလျ ရှုံးထွက်ကစားမယ်။ \n\nမနက်ပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625862\nညပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625858\nယူကျု - http://youtube.com/thebbcburmese\nအင်စတာဂရမ် - https://www.instagram.com/bbcburmese/\nဝက်ဘ်ဆိုက် - https://www.bbcburmese.com\n#ဘီဘီစီမြန်မာပိုင်း #မနက်ခင်းသတင်း #ကိုရိုနာဗိုင်းရပ်စ်"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0dljr4r",
+                  "types": ["Podcast"],
+                  "duration": 665,
+                  "durationISO8601": "PT11M5S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1672619040000,
+                  "availableFrom": 1670027040000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "တရုတ်နှစ်ကူးနီးလာပေမဲ့ ကျောက်စိမ်းအရောင်းအဝယ်အေ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1670025600000,
+            "brand": {
+              "pid": "p02p9f6q",
+              "title": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p0dljrzc",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "locators": { "pid": "p0dl8z3m", "brandPid": "p02p9f6q" },
+            "media": {
+              "id": "p0dl8z3m",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "ဒီမိုကရေစီလိုလားတဲ့ တိုက်ပွဲဝင်သူ ၂၀၀၀ကျော် သေဆုံးခဲ့တယ်လို့ အန်ယူဂျီ ယာယီသမ္မတပြော",
+                "long": "သောကြာနေ့ မနက်ခင်း သတင်းများ (၂ ဒီဇင်ဘာ၊ ၂၀၂၂)\n\nဒီမိုကရေစီလိုလားတဲ့ တိုက်ပွဲဝင်သူ ၂၀၀၀ကျော် သေဆုံးခဲ့တယ်လို့ အန်ယူဂျီ ယာယီသမ္မတပြော။ \n\nရွှေဘိုပေါ်ဆန်း ၂၄ ပြည်ပါတစ်အိတ်ကို ကျပ် လေးထောင်ကျော် စျေးတက်။\n\nထောင်ဒဏ် ၂၄ နှစ်အထိ ချခံထားရတဲ့ ပြည်သူ့လွှတ်တော် ဒုဥက္ကဋ္ဌ ဦးထွန်းထွန်းဟိန်ရဲ့ ကျန်းမာရေး အခြေအနေ ဘယ်လိုရှိနေပါသလဲ။\n\nမတူတာတွေကိုကျော်လွှားပြီး ပြင်သစ်နဲ့ အတူလက်တွဲလုပ်မယ်လို့ အမေရိကန် သမ္မတ ဂျိုးဘိုင်ဒန်ပြော။\n\nကိုဗစ်နဲ့ ပတ်သက်ပြီး အခြေအနေသစ်တမျိုးရင်ဆိုင်နေရတဲ့ တရုတ်။\n\nလျှပ်စစ်နဲ့ သဘာဝဓာတ်ငွေ့သုံး သုံးဘီးတွေကို အိန္ဒိယ လေထုညစ်ညမ်းမှု တိုက်ဖျက်ရေး ကော်မတီက မှတ်ပုံတင်ရန်ညွှန်ကြား။ \n\nကမ္ဘာဖလားပြိုင်ပွဲရလဒ်။\n\nကော့စတာရီကာနဲ့ ဂျာမနီပွဲမှာ ပထမဆုံး အမျိုးသမီး ဒိုင်တွေ တာဝန်ယူ။ \n\nဂျာမနီကမ္ဘာ့ဖလားပြိုင်ပွဲ အုပ်စု အဆင့်ကနေ ထွက်။ \n\nမနက်ပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625862\nညပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625858\nယူကျု - http://youtube.com/thebbcburmese\nအင်စတာဂရမ် - https://www.instagram.com/bbcburmese/\nဝက်ဘ်ဆိုက် - https://www.bbcburmese.com\n#ဘီဘီစီမြန်မာပိုင်း #မနက်ခင်းသတင်း #ကိုရိုနာဗိုင်းရပ်စ်"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0dl8yc8",
+                  "types": ["Podcast"],
+                  "duration": 652,
+                  "durationISO8601": "PT10M52S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1672532460000,
+                  "availableFrom": 1669940460000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "ရွှေဘိုပေါ်ဆန်း ၂၄ပြည်ပါတစ်အိတ် ကျပ်လေးထောင်ကျော် စျေးတက်",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1669939200000,
+            "brand": {
+              "pid": "p02p9f6q",
+              "title": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p0dl8z3m",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "locators": { "pid": "p0dl0hmg", "brandPid": "p02p9f6q" },
+            "media": {
+              "id": "p0dl0hmg",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "လျှပ်စစ်မီးမရလို့ မန္တလေးတိုင်းတွင်းက လုပ်ငန်းတချို့ ရပ်ဆိုင်းထားရ",
+                "long": "ရခိုင်ပြည်နယ်တွင်း ဖမ်းဆီးခံထားရတဲ့ အရပ်သားတွေ ပြန်လွှတ်ပေးဖို့ ဒေသခံတွေ တောင်းဆို၊"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0dl0gmh",
+                  "types": ["Podcast"],
+                  "duration": 454,
+                  "durationISO8601": "PT7M34S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1672444200000,
+                  "availableFrom": 1669852200000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "လျှပ်စစ်မီးမရလို့ မန္တလေးတိုင်းတွင်းက လုပ်ငန်းတချို့ ရပ်ဆိုင်းထားရ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1669766400000,
+            "brand": {
+              "pid": "p02p9f6q",
+              "title": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p0dl0hmg",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "locators": { "pid": "p0dkqpgg", "brandPid": "p02p9f6q" },
+            "media": {
+              "id": "p0dkqpgg",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "ခင်ဦးမြို့နယ်တွင်း နေအိမ်အလုံးပေါင်း ၈၀၀ နီးပါး မီးရှို့ဖျက်ဆီးခံရ",
+                "medium": "မန္တလေးတိုင်း မြို့နယ်တချို့မှာ ကျူးကျော်လို့ စွပ်စွဲပြီး နေအိမ်အလုံးပေါင်း ၁၀၀ ကျော် ဖယ်ရှားခံရ",
+                "long": "စစ်ကိုင်းတိုင်းခင်ဦးမြို့နယ်မှာ ဆယ်ရက်အတွင်း နေအိမ်အလုံးပေါင်း ၈၀၀ နီးပါး မီးရှို့ဖျက်ဆီးခံရ"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0dkqp35",
+                  "types": ["Podcast"],
+                  "duration": 647,
+                  "durationISO8601": "PT10M47S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1672360020000,
+                  "availableFrom": 1669768020000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "ခင်ဦးမြို့နယ်တွင်း နေအိမ်အလုံးပေါင်း ၈၀၀ နီးပါး မီးရှို့ဖျက်ဆီးခံရ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1669766400000,
+            "brand": {
+              "pid": "p02p9f6q",
+              "title": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p0dkqpgg",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "locators": { "pid": "p0dkh6p9", "brandPid": "p02p9f6q" },
+            "media": {
+              "id": "p0dkh6p9",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "WHO က မျောက်ကျောက်ရောဂါကို  MPOX လို့ အမည်ပေး",
+                "medium": "အီရန်မှာ အစိုးရဆန္ဒပြမှုကို ထောက်ခံတဲ့ Rapper အကျင့်ပျက်မှုနဲ့ တရားစွဲခံရပြီး သေဒဏ် ကျခံရနိုင်ဖွယ်ရှိ",
+                "long": "- အမေရိကန်က စျေးသက်သာပြီး ပစ်မှတ်ကို တည့်တည့်ထိနိုင်တဲ့ လက်နက်တွေ ယူကရိန်းကို ထောက်ပံ့ပေးတော့မယ်\n- ပါကစ္စတန်မှာ တာလီဘန်တွေက အစိုးရနဲ့ အပစ်ရပ်ရေး အဆုံးသတ်ပြီး လုံခြုံရေးတပ်ဖွဲ့တွေကို တိုက်ခိုက်သွားတော့မယ်လို့ဆို\n- နိုင်ငံကူးလက်မှတ်သက်တမ်းကုန်တာကို ပွဲစားနဲ့လုပ်ခိုင်းတဲ့ ထိုင်းကမြန်မာသံရုံးအကြောင်း\n- ကပ်ဘေး စစ်ရေးကြားက အမျိုးသမီးနဲ့ ကလေးသူငယ်တွေ အခွင့်အရေးဘယ်လောက်ဆုံးရှုံးနေလဲ\n- ကမ္ဘာဖလားဘောလုံးပွဲက အနိုင်အရှုံး အကြောင်း အပါအ၀င် အင်္ဂါ မနက်ခင်း နောက်ဆုံးရ မြန်မာနဲ့ နိုင်ငံတကာ သတင်းတွေကို ဘီဘီစီမြန်မာပိုင်းရဲ့ ပေါ့ဒ်ကတ်စ်၊ ဝက်ဘ်ဆိုက်၊ ဖေ့စ်ဘုတ်နဲ့ ယူကျုတို့မှာ တင်ဆက်ပေးနေပါတယ်။\nမနက်ပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625862\nညပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625858\nဝက်ဘ်ဆိုက် - https://www.bbcburmese.com\nဖေ့စ်ဘွတ်ခ် - https://www.facebook.com/BBCnewsBurmese\nအင်စတာဂရမ် - https://www.instagram.com/bbcburmese/\nယူကျု - http://youtube.com/thebbcburmese"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0dkh6jl",
+                  "types": ["Podcast"],
+                  "duration": 684,
+                  "durationISO8601": "PT11M24S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1672282560000,
+                  "availableFrom": 1669690560000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "အိန္ဒိယမှာ ရဲစခန်းကို လူအုပ်ကြီးက၀င်ရောက်စီးနင်း တိုက်ခိုက်ခဲ့တာကြောင့် ရဲအရာရှိ ၃၆ယောက် ဒဏ်ရာရ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1669680000000,
+            "brand": {
+              "pid": "p02p9f6q",
+              "title": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p0dkh6p9",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "locators": { "pid": "p0dk616q", "brandPid": "p02p9f6q" },
+            "media": {
+              "id": "p0dk616q",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "လူ့အခွင့်အရေးချိုးဖောက်တဲ့ အဆိုးရွားဆုံး ၁၀ နိုင်ငံမှာ မြန်မာနိုင်ငံက ပါဝင်နေတဲ့အကြောင်း",
+                "medium": "ရခိုင်မှာ စစ်ကောင်စီနဲ့ အေအေ အပစ်ရပ်ပြီးနောက် အငူမော် မောင်တောလမ်းပြန်ဖွင့်ဖို့ ဒေသခံတွေမျှော်လင့်နေ",
+                "long": "- ကိုဗစ်လော့ခ်ဒေါင်းချ၊ ကူးစက်မှုစစ်ဆေးတာ ၃နှစ်ကြာရှိခဲ့ပြီးနောက် တရုတ်မြို့ကြီးတွေမှာ ဆန့်ကျင် ဆန္ဒပြ\n- သမီးဖြစ်သူကို ဒုတိယအကြိမ် ထုတ်ပြတဲ့ မြောက်ကိုရီးယားခေါင်းဆောင်နဲ့ Hwasong-17  ဒုံးကျည်စမ်းသပ်မှု\n- အီရန်အလံပုံပေါ်က အမှတ်သင်္ကေကို ဖယ်ရှားပစ်လို့ အမေရိကန်အသင်းကို အီရန်ဘောလုံးအဖွဲ့ချုပ်တိုင်ကြား\n- ဘယ်လ်ဂျီယံကို ၂ဂိုး ဂိုးမရှိနဲ့ အနိုင်ရခဲ့လို့ မော်ရိုကို နိုင်ငံသားတွေ အောင်ပွဲခံနေ\n- ဂျာမနီကို အနိုင်ယူခဲ့တဲ့ ဂျပန်ဘောလုံးအသင်း ကော့စတာရီကာကို ၁ဂိုး ဂိုးမရှိနဲ့ ရှုံးနိမ့်ခဲ့ပြီး စပိန်နဲ့ ဂျာမနီ ပွဲမှာ သရေကျခဲ့ပေမယ့် ခရိုအေးရှားက ကနေဒါကို ၄ဂိုး ၁ဂိုးနဲ့ အနိုင်ရခဲ့တဲ့အကြောင်း အပါအ၀င် တနင်္လာ မနက်ခင်း နောက်ဆုံးရ မြန်မာနဲ့ နိုင်ငံတကာ သတင်းတွေကို ဘီဘီစီမြန်မာပိုင်းရဲ့ ပေါ့ဒ်ကတ်စ်၊ ဝက်ဘ်ဆိုက်၊ ဖေ့စ်ဘုတ်နဲ့ ယူကျုတို့မှာ တင်ဆက်ပေးနေပါတယ်။\nမနက်ပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625862\nညပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625858\nဝက်ဘ်ဆိုက် - https://www.bbcburmese.com\nဖေ့စ်ဘွတ်ခ် - https://www.facebook.com/BBCnewsBurmese\nအင်စတာဂရမ် - https://www.instagram.com/bbcburmese/\nယူကျု - http://youtube.com/thebbcburmese"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0dk616b",
+                  "types": ["Podcast"],
+                  "duration": 502,
+                  "durationISO8601": "PT8M22S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1672192200000,
+                  "availableFrom": 1669600200000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "မိုးဗြဲမှာ မိုင်းထိတဲ့ ဆယ်ကျော်သက်ကလေးတွေထဲက ခေါင်းထိထားသူဟာ စိုးရိမ်ရတယ်လို့ ပြော",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1669593600000,
+            "brand": {
+              "pid": "p02p9f6q",
+              "title": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p0dk616q",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "locators": { "pid": "p0dk1y76", "brandPid": "p02p9f6q" },
+            "media": {
+              "id": "p0dk1y76",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "Squid Game ထဲက အသက်၇၈နှစ် မင်းသား O Yeong-su လိင်ပိုင်းဆိုင်ရာထိပါးမှုနဲ့တရားစွဲခံရ",
+                "medium": "ထိုင်၀မ်ရွေးကောက်ပွဲမှာ အာဏာရပါတီရလဒ်မကောင်းလို့ သမ္မတဆိုင်အင်၀မ်း ပါတီခေါင်းဆောင်အဖြစ်ကနုတ်ထွက်",
+                "long": "- အီတလီရေကြီးမြေပြိုမှု လူတစ်ယောက်သေ ၁၂ယောက်ပျောက်ကာ ရာသီဥတုဆိုးလို့ ကယ်ဆယ်ရေးနှောင့်နှေး\n- ခင်ဦး က မြစ်တော်ကျေးရွာကိုစစ်ကောင်စီတပ် မီး၀င်ရှို့ပြီး သက်ကြီးအမျိုးသားတစ်ယောက်ကို ပစ်သတ်သွားခဲ့တယ်လို့ ဒေသခံပြော\n- ငွေစျေးမတည်ငြိမ်မှု စိုက်ပျိုးသွင်းအားစု စရိတ်ကြီးမြင့်မှုတွေတောင် နှမ်းစိုက်တောင်သူတွေ အရှုံးပေါ်နေတယ်လို့ဆို\n- ပေါ်တူဂီ တိုက်စစ်မှူး ခရစ်တီယာနို ရော်နယ်ဒိုဟာ ထူးခြားတဲ့ ဘောလုံးသမား ပါရမီရှင်ဘဲလို့ ဖီဖာပြော\n- လက်ရှိကမ္ဘာဖလားချန်ပီယံ ပြင်သစ်က ဒိန်းမတ်ကို နိုင်ပြီး ရှုံးထွက်အဆင့်တက် ၊ ပိုလန်နဲ့ ဆော်ဒီကို ၊ အာဂျင်တီးနားက မက်ဆီနဲ့ ဖနန်းဒက်စ် တို့ရဲ့ သွင်းဂိုးတွေနဲ့ မက္ကဆီကို ကို အနိုင်ယူ ၊ သြစတြေးလျက တူနီးရှား တစ်ဂိုး ဂိုးမရှိနဲ့ အနိုင်ရခဲ့တဲ့အကြောင်း အပါအ၀င် တနင်္ဂနွေ မနက်ခင်း နောက်ဆုံးရ မြန်မာနဲ့ နိုင်ငံတကာ သတင်းတွေကို ဘီဘီစီမြန်မာပိုင်းရဲ့ ပေါ့ဒ်ကတ်စ်၊ ဝက်ဘ်ဆိုက်၊ ဖေ့စ်ဘုတ်နဲ့ ယူကျုတို့မှာ တင်ဆက်ပေးနေပါတယ်။\nမနက်ပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625862\nညပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625858\nဝက်ဘ်ဆိုက် - https://www.bbcburmese.com\nဖေ့စ်ဘွတ်ခ် - https://www.facebook.com/BBCnewsBurmese\nအင်စတာဂရမ် - https://www.instagram.com/bbcburmese/\nယူကျု - http://youtube.com/thebbcburmese"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0dk1y63",
+                  "types": ["Podcast"],
+                  "duration": 559,
+                  "durationISO8601": "PT9M19S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1672108680000,
+                  "availableFrom": 1669516680000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "မောင်းသူမဲ့ဘတ်စ်ကားတွေ တောင်ကိုရီးယားနိုင်ငံ ဆိုးလ်မြို့လယ်မှာ စတင်ပြေးဆွဲနေပြီ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1669507200000,
+            "brand": {
+              "pid": "p02p9f6q",
+              "title": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p0dk1y76",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "locators": { "pid": "p0djx8z4", "brandPid": "p02p9f6q" },
+            "media": {
+              "id": "p0djx8z4",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "ရုရှားသမ္မတ ပူတင် တိုက်ပွဲဝင်စစ်သားမိခင်များနဲ့တွေ့ဆုံ",
+                "long": "စနေနေ့ မနက်ခင်း သတင်းများ (၂၆ နိုဝင်ဘာ၊ ၂၀၂၂)\n\nမြန်မာနိုင်ငံဆိုင်ရာအာဆီယံ အထူးကိုယ်စားလှယ် ပရတ်ဆော့ခွန်းအလွန် စစ်ကောင်စီကို အာဆီယံက ဆက်ဖိအားပေးနိုင်မလား။ \n\nအရာတော်မြို့နယ် နွားမသင်းရွာကို စစ်ကောင်စီတပ်ဖွဲ့ဝင်တွေ မီးရှို့လို့ ဒေသခံတွေ ပြော။\n\nရုရှားသမ္မတ ပူတင် တိုက်ပွဲဝင် စစ်သားမိခင်များနဲ့တွေ့ဆုံ။\n\nရုရှားရဲ့ ဆက်တိုက်တိုက်ခိုက်မှုကြောင့် ယူကရိန်း ခါဆွန်မှာ ဆေးရုံက လူနာတွေ ပြောင်းရွှေ့နေရ။\n\nသောကြာနေ့ ဝတ်ပြုသူများကို အီရန်လုံခြုံရေးတပ်ဖွဲ့ပစ်ခတ်။ \n\nကမ္ဘာဖလားပြိုင်ပွဲရလဒ်။ \n\nဘရာဇီးလ်တိုက်စစ်မှူးနေမာ ဒဏ်ရာကြောင့် နှစ်ပွဲ နားရမယ်။ \n\nအိမ်ရှင် ကာတာအသင်း ကမ္ဘာဖလားကနေ ပထမဆုံးထွက်ရတဲ့ အသင်းဖြစ်လာ။ \n\nမနက်ပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625862\nညပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625858\nယူကျု - http://youtube.com/thebbcburmese\nအင်စတာဂရမ် - https://www.instagram.com/bbcburmese/\nဝက်ဘ်ဆိုက် - https://www.bbcburmese.com\n#ဘီဘီစီမြန်မာပိုင်း #မနက်ခင်းသတင်း #ကိုရိုနာဗိုင်းရပ်စ်"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0djx8lj",
+                  "types": ["Podcast"],
+                  "duration": 592,
+                  "durationISO8601": "PT9M52S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1672011960000,
+                  "availableFrom": 1669419960000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "အာဆီယံ အထူးကိုယ်စားလှယ် ပရတ်ဆော့ခွန်းအလွန် စစ်ကောင်စီကို အာဆီယံက ဆက်ဖိအားပေးနိုင်မလား",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1669334400000,
+            "brand": {
+              "pid": "p02p9f6q",
+              "title": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p0djx8z4",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "locators": { "pid": "p0djnc83", "brandPid": "p02p9f6q" },
+            "media": {
+              "id": "p0djnc83",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "မန္တလေးမြို့မှာ အမျိုးသမီးတစ်ဦးအက်ဆက်နဲ့ အပက်ခံရ",
+                "long": "သောကြာနေ့ မနက်ခင်း သတင်းများ (၂၅ နိုဝင်ဘာ၊ ၂၀၂၂)\n\nအယောင်ဆောင်ဖမ်းဆီးတာတွေများလာချိန်မှာ မြေအောက်လှုပ်ရှားမှုအဖွဲ့တွေရဲ့ ရပ်တည်မှု ဘယ်လောက်ခက်ခဲလာလဲ။\n\nကားတင်သွင်းခွင့်မပြုတာ ကုန်ကျစရိတ်တွေ များတာကြောင့် ကားအရောင်း စင်တာတွေ ပိတ်သိမ်းလာ။ \n\nမန္တလေးမြို့မှာ အမျိုးသမီးတစ်ဦးအက်ဆက်နဲ့ အပက်ခံရ။ \n\nအီရန်မှာ ဆန္ဒပြသူတွေကို အကြမ်းဖက်ဖြိုခွဲတာကို စုံစမ်းဖို့ ကုလလူ့အခွင့်အရေး ကောင်စီအမိန့်ချ။\n\nတရုတ်ထုတ် စောင့်ကြည့် ကင်မရာတွေကို အသုံးမပြုဖို့ ဗြိတိန်အစိုးရ ညွှန်ကြား။ \n\nအမေရိကန်မှာ ငှက်သန်း ၅၀ကျော် ဒီနှစ်အတွင်း ငှက်တုပ်ကွေးကူးစက်ခံရ။\n\nဗြိတိန်က မားစ်ရိုဗာကို အာကာသထဲ ပြန်လွှတ်မယ်။ \n\nကမ္ဘာဖလားပြိုင်ပွဲရလဒ်။\n\nမနက်ပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625862\nညပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625858\nယူကျု - http://youtube.com/thebbcburmese\nအင်စတာဂရမ် - https://www.instagram.com/bbcburmese/\nဝက်ဘ်ဆိုက် - https://www.bbcburmese.com\n#ဘီဘီစီမြန်မာပိုင်း #မနက်ခင်းသတင်း #ကိုရိုနာဗိုင်းရပ်စ်"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0djnc2m",
+                  "types": ["Podcast"],
+                  "duration": 667,
+                  "durationISO8601": "PT11M7S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1671927720000,
+                  "availableFrom": 1669335720000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "ဖမ်းဆီးတာတွေများလာချိန်မှာ မြေအောက်လှုပ်ရှားမှုအဖွဲ့တွေရဲ့ ရပ်တည်မှု ဘယ်လောက်ခက်ခဲလဲ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1669334400000,
+            "brand": {
+              "pid": "p02p9f6q",
+              "title": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p0djnc83",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "locators": { "pid": "p0djf56z", "brandPid": "p02p9f6q" },
+            "media": {
+              "id": "p0djf56z",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "ကိုဗစ်ကြောင့် ကလေး သန်း၄၀ ဒီနှစ်မှာ ဝက်သက်ကာကွယ်ဆေး ထိုးနိုင်မှာ မဟုတ်",
+                "long": "ကြာသပတေးနေ့ မနက်ခင်း သတင်းများ (၂၄ နိုဝင်ဘာ၊ ၂၀၂၂)\n\nခွဲခြားမှုဆန့်ကျင်ရေး လက်ပတ်ဝတ်ဆင်ဖို့ ဖီဖာ တားမြစ်ချက် ဂျာမနီအသင်းသားတွေ ဆန္ဒပြ။ \n\nမကွေးတိုင်း မြိုင်မြို့နယ်ထဲက စစ်ကောင်စီ စစ်ကြောင်းထိုးနေတာကြောင့် ရွာတွေရဲ့ အခြေအနေဘယ်လိုရှိလဲ။ \n\nကြက်သွန်နီနဲ့ ငရုတ်သီးတွေ ထိုင်းနဲ့ ဗီယက်နမ်က တောက်လျှောက်ဝယ်ယူနေလို့ စျေးရ။ \n\nရခိုင်ပြည်နယ် ကျောက်တော်မှာ ရိတ်သိမ်းချိန်တန်တဲ့ စပါးတွေ ရိတ်သိမ်းခွင့်ရဖို့ တောင်သူတွေ သက်ဆိုင်ရာကို တင်ပြ။\nယူကရိန်းက စွမ်းအင် အခြေခံ အဆောက်အအုံတွေကို ရုရှား ဒုံးနဲ့ ဆက်ပစ်။ \nတရုတ်မှာ ကာကွယ်ဆေးထိုးတဲ့နှုန်း ထပ်မြင့်ဖို့ အိုင်အမ်အက်ဖ် တရုတ်ကို တောင်းဆို။ \n\nကိုဗစ်ကြောင့် ကလေး သန်း၄၀ ဒီနှစ်မှာ ဝက်သက်ကာကွယ်ဆေး ထိုးနိုင်မှာ မဟုတ်။ \n\nကမ္ဘာ့ဖလားပြိုင်ပွဲရလဒ်။\n\nမနက်ပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625862\nညပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625858\nယူကျု - http://youtube.com/thebbcburmese\nအင်စတာဂရမ် - https://www.instagram.com/bbcburmese/\nဝက်ဘ်ဆိုက် - https://www.bbcburmese.com\n#ဘီဘီစီမြန်မာပိုင်း #မနက်ခင်းသတင်း #ကိုရိုနာဗိုင်းရပ်စ်"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0djf4sr",
+                  "types": ["Podcast"],
+                  "duration": 720,
+                  "durationISO8601": "PT12M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1671843720000,
+                  "availableFrom": 1669251720000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "ခွဲခြားမှုဆန့်ကျင်ရေး လက်ပတ်ဝတ်ဆင်ဖို့ ဖီဖာ တားမြစ်ချက် ဂျာမနီအသင်းသားတွေ ဆန္ဒပြ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1669248000000,
+            "brand": {
+              "pid": "p02p9f6q",
+              "title": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p0djf56z",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "locators": { "pid": "p0dj52kv", "brandPid": "p02p9f6q" },
+            "media": {
+              "id": "p0dj52kv",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "ရှေ့တန်းတိုက်စစ်မှူး ရော်နယ်ဒိုနဲ့ မန်ချက်စတာ ယူနိုက်တက် အသင်းတို့ လမ်းခွဲတော့မယ်",
+                "medium": "အာဂျင်တီးနားကို ၂ဂိုး၁ဂိုးနဲ့နိုင်လို့ ဆော်ဒီမှာ ဒီနေ့အများပြည်သူရုံးပိတ်ရက်အဖြစ် ဘုရင်ဆော်လမန်ကြေညာ",
+                "long": "- ကာတာမှာ OneLove လက်ပတ်၀တ်ပြီး တိုက်ရိုက်ထုတ်လွှင့်တဲ့ ဒိန်းနစ်ရှ် တီဗီသတင်းသမား တားမြစ်ခံရ\n- အမေရိကန်ကိုရောက်နိုင်တဲ့ ဒုံးကျည်ပစ်လွှတ်စမ်းသပ်မှု လုပ်ခဲ့တဲ့မြောက်ကိုရီးယားကို အရေးယူပေးဖို့ လုံခြုံရေးကောင်စီကို အမေရိကန်သံအမတ်တောင်းဆို\n- ကျွဲနွားတွေ လမ်းပေါ်ပစ်ထားမှုနဲ့ အမျိုးသားတစ်ယောက်ကို ဂူဂျာရက်တရားရုံးက ထောင်၆လပြစ်ဒဏ်ချ\n- ရွေးကောက်ပွဲပြီးနောက်မလေးရှား၀န်ကြီးချုပ်သစ်ကို သူ့ဖာသာရွေးတော့မယ်လို့ ဘုရင်အပ္ဗဒူလာ မနေ့က ကြေညာ\n- တရုတ်မှာ စက်ရုံမီးလောင်လို့ လူပေါင်း ၃၈ယောက် အသက်ဆုံးရှုံးခဲ့ရ\n- ပေါက်မြို့နယ် ကျွန်းတိုင်းရွာကို စစ်ကောင်စီတပ် မီး၀င်ရှို့တယ်လို့ ဒေသခံကပြော\n- ကုန်းလမ်း ၊ ရေလမ်း ပိတ်ထားတဲ့အပြင် ရွာချင်း ၊ မြို့ချင်းဆက်လမ်းတွေပါ ဆက်သွယ် သွားလာခွင့် ပိတ်ထားတဲ့ ရခိုင်ပြည်နယ် ရသေ့တောင်မှာ စစ်ရှောင်တွေ စား၀တ်နေရေးအခက်ကြုံနေ\n- လက်ရှိကမ္ဘာဖလားချန်ပီယံ ပြင်သစ်က သြစတြေးလျကို နိုင်ပေမယ့် ပိုလန်နဲ့ မက်ဆီကို ၊ ဒိန်းမတ်နဲ့ တူနီးရှား ပွဲစဥ်တွေမှာ သရေကျခဲ့တဲ့အကြောင်း အပါအ၀င် ဗုဒ္ဓဟူး မနက်ခင်း နောက်ဆုံးရ မြန်မာနဲ့ နိုင်ငံတကာ သတင်းတွေကို ဘီဘီစီမြန်မာပိုင်းရဲ့ ပေါ့ဒ်ကတ်စ်၊ ဝက်ဘ်ဆိုက်၊ ဖေ့စ်ဘုတ်နဲ့ ယူကျုတို့မှာ တင်ဆက်ပေးနေပါတယ်။\nမနက်ပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625862\nညပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625858\nဝက်ဘ်ဆိုက် - https://www.bbcburmese.com\nဖေ့စ်ဘွတ်ခ် - https://www.facebook.com/BBCnewsBurmese\nအင်စတာဂရမ် - https://www.instagram.com/bbcburmese/\nယူကျု - http://youtube.com/thebbcburmese\n\t\n #ဘီဘီစီမြန်မာပိုင်း #တရုတ်-မြန်မာ ဆက်ဆံရေး #ရုရှား-မြန်မာ #စစ်ကောင်စီ #လုံခြုံရေးကောင်စီ"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0dj52g9",
+                  "types": ["Podcast"],
+                  "duration": 515,
+                  "durationISO8601": "PT8M35S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1671762180000,
+                  "availableFrom": 1669170180000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "မန်ယူကို ထုတ်ရောင်းဖို့ စဥ်းစားနေပြီလို့ အသင်းပိုင်ရှင် ဂလေဇာ မိသားစု ထုတ်ပြန်",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1669161600000,
+            "brand": {
+              "pid": "p02p9f6q",
+              "title": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p0dj52kv",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "locators": { "pid": "p0dhvfvg", "brandPid": "p02p9f6q" },
+            "media": {
+              "id": "p0dhvfvg",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "အမေရိကန်မှာ Apple Store ထဲ ကားနဲ့၀င်တိုက်လို့ လူတစ်ယောက်သေ အများအပြားဒဏ်ရာရ",
+                "medium": "သြစတြေးလျက မူလတန်းကျောင်းမှာ သိပ္ပံစမ်းသပ်မှုလုပ်ရင်း ဆရာ၁ယောက်နဲ့ ကလေး ၁၁ယောက် ဒဏ်ရာရ",
+                "long": "- သီရိလင်္ကာမှာ ကလေးတွေ အာဟာရချို့တဲ့နေပြီး လူသန်းနဲ့ချီနှပ်မှန်အောင် မစားရတဲ့အခြေအနေဆိုက်နေတယ်လို့ ကုလသတိပေး\n- အိန္ဒိယမှာ အွန်လိုင်းပေါ် review အတုရေးတာတွေကို တိုက်ဖျက်ဖို့ စည်းမျဥ်းတွေ အစိုးရထုတ်ပြန်\n- မြိုင်က ဗဟင်းရဲစခန်းမီးလောင်နေပြီး အနီးက လူနေအိမ်တွေကို မီးကူးနေတယ်လို့ ဗိုလ်လကျာ်ပြော\n- ပလက်၀မှာ အသက်၅၀ကျော်အမျိုးသား၂ယောက်ကို အေအေတပ်ဖွဲ့အတွက် ငွေကြေးကောက်ခံမှုတွေ ပြုလုပ်ပေးတယ်ဆိုတဲ့ စွပ်စွဲချက်နဲ့ ထောင်၃နှစ်စီ ချမှတ်\n- အမေရိကန်နဲ့ ၀ေလ အသင်းတို့ တစ်ဂိုးစီ သရေကျ အနိုင်ပွဲတွေ ရှိခဲ့တဲ့ ကမ္ဘာ့ဖလား ဘောလုံးပွဲတွေအကြောင်း အပါအ၀င် အင်္ဂါ မနက်ခင်း နောက်ဆုံးရ မြန်မာနဲ့ နိုင်ငံတကာ သတင်းတွေကို ဘီဘီစီမြန်မာပိုင်းရဲ့ ပေါ့ဒ်ကတ်စ်၊ ဝက်ဘ်ဆိုက်၊ ဖေ့စ်ဘုတ်နဲ့ ယူကျုတို့မှာ တင်ဆက်ပေးနေပါတယ်။\nမနက်ပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625862\nညပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625858\nဝက်ဘ်ဆိုက် - https://www.bbcburmese.com\nဖေ့စ်ဘွတ်ခ် - https://www.facebook.com/BBCnewsBurmese\nအင်စတာဂရမ် - https://www.instagram.com/bbcburmese/\nယူကျု - http://youtube.com/thebbcburmese"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0dhvfn6",
+                  "types": ["Podcast"],
+                  "duration": 475,
+                  "durationISO8601": "PT7M55S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1671674280000,
+                  "availableFrom": 1669082280000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "လာမယ့်ဆောင်းရာသီ ယူကရိန်းပြည်သူတွေအသက်အန္တရာယ်ကြုံရနိုင်တယ်လို့ WHO ပြော",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1669075200000,
+            "brand": {
+              "pid": "p02p9f6q",
+              "title": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p0dhvfvg",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "locators": { "pid": "p0dhm11q", "brandPid": "p02p9f6q" },
+            "media": {
+              "id": "p0dhm11q",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "ကမ္ဘာဖလားအဖွင့်ပွဲစဥ်မှာ အိမ်ရှင်အသင်း ကာတာက အီကွေဒေါကို ၂ဂိုး ဂိုးမရှိနဲ့ ရှုံးနိမ့်သွား",
+                "medium": "- စစ်တွေအကျဥ်းထောင်ထဲ ပြစ်ဒဏ်၁၃နှစ်ချခံထားရတဲ့ ရခိုင်၀န်ကြီးချုပ် ဦးညီပု မျက်စိတဘက် မမြင်ရတော့",
+                "long": "- ပြည်မြို့အကျဥ်းထောင်ထဲမှာလဲ နိုင်ငံရေးအကျဥ်းသားတွေ ထောင်၀င်စာမရ ဆေးကုသမှုခက်ခဲနေပြီး အကြမ်းဖက် အဖွဲ့ဆက်သွယ်မှုနဲ့ ထောင်ချခံထားရတဲ့ ရွှေတောင်အမတ်ကို အကြမ်းဖက်ဆက်သွယ်မှုနဲ့ အမှုထပ်ဖွင့်တဲ့အခြေအနေ\n- အစိုးရဆန့်ကျင်ဆန္ဒပြမှုကိုထောက်ခံလို့ဆိုပြီး အီရန်ကနာမယ်ကြီးမင်းသမီး ဖမ်းဆီးထိန်းသိမ်းခံရ\n- ဘင်္ဂလားဒေ့ရှ်မှာ သေဒဏ်စီရင်ဖို့ပို့ဆောင်စဥ် အစ္စလာမ်မစ် စစ်သွေးကြွနှစ်ယောက် လွတ်မြောက်သွား\n- အစ္စတန်ဘူးလ်မြို့ကို ဗုံးကြဲလို့ဆိုပြီး ကာ့ဒ်သူပုန်တွေရှိရာကို တူရကီအစိုးရ လေကြောင်းကတိုက်ခိုက်ခဲ့တဲ့ အကြောင်း အပါအ၀င်  တနင်္လာ မနက်ခင်း နောက်ဆုံးရ မြန်မာနဲ့ နိုင်ငံတကာ သတင်းတွေကို ဘီဘီစီမြန်မာပိုင်းရဲ့ ပေါ့ဒ်ကတ်စ်၊ ဝက်ဘ်ဆိုက်၊ ဖေ့စ်ဘုတ်နဲ့ ယူကျုတို့မှာ တင်ဆက်ပေးနေပါတယ်။\nမနက်ပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625862\nညပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625858\nဝက်ဘ်ဆိုက် - https://www.bbcburmese.com\nဖေ့စ်ဘွတ်ခ် - https://www.facebook.com/BBCnewsBurmese\nအင်စတာဂရမ် - https://www.instagram.com/bbcburmese/\nယူကျု - http://youtube.com/thebbcburmese"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0dhm11j",
+                  "types": ["Podcast"],
+                  "duration": 497,
+                  "durationISO8601": "PT8M17S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1671587640000,
+                  "availableFrom": 1668995640000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "BTS အဖွဲ့ထဲက ဂျန်ကွတ်ခ်ရဲ့ ဖျော်ဖြေမှုနဲ့ ကမ္ဘာဖလား ဖွင့်ပွဲအခမ်းအနား",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1668988800000,
+            "brand": {
+              "pid": "p02p9f6q",
+              "title": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p0dhm11q",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "locators": { "pid": "p0dhgsk2", "brandPid": "p02p9f6q" },
+            "media": {
+              "id": "p0dhgsk2",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "မြင်းမူမှာလည်း စစ်ကောင်စီ ယာဥ်တန်းတွေကို နေရာ၅ခုမှာ မိုင်းဆွဲတိုက်ခိုက်ခဲ့တယ်လို့ PDF ပြော",
+                "medium": "ပြီးခဲ့တဲ့တစ်နှစ်အတွင်းကျူးကျော်ဆိုပြီးအိမ်ခြေတစ်သောင်းကျော် အဖျက်ခံရတဲ့ မန္တလေးက အခြေအနေ",
+                "long": "- ပြီးခဲ့တဲ့၂နှစ်အတွင်း မြန်မာပြည်သူတွေ အလွန်ခက်ခဲတဲ့အခြေအနေရင်ဆိုင်နေတဲ့အတွက် သူဆုတောင်းပေး နေတယ်လို့ အောင်လအန်ဆန်ပြော\n- သိန်းရာထောင်ချီ အလုပ်လုပ်နေကြတဲ့ ကျောက်စိမ်းမြေ ဖားကန့်မှာ တစ်သောင်းတန်ငွေစက္ကူအတုတွေပြန့်နှံ့\n - မလေးရှားမှာ ကြားဖြတ်ရွေးကောက်ပွဲပြီးသွားပေးမယ့် ဘယ်ပါတီကမှ ပြတ်ပြတ်သားသား မဲအနိုင်မရ\n- ထိုင်းအိမ်အကူက ဆော်ဒီမင်းသားတစ်ပါးဆီက ဒေါ်လာသန်း၂၀ဖိုးရတနာတွေခိုးသွားပြီးနောက် နှစ်နိုင်ငံ ဆက်ဆံရေးတင်းမာခဲ့ပေမယ့် အခုတော့ စီးပွားရေးပူးပေါင်းဆောင်ရွက်ဖို့ လက်မှတ်ထိုးကြပြီ\n- ဒုံးကျည်စမ်းသပ်ပစ်လွှတ်ရာ လူမြင်ကွင်းကို သမီးဖြစ်သူကိုခေါ်လာတဲ့ မြောက်ကိုရီးယားခေါင်းဆောင် အကြောင်း\n- စီးပွားရေးအခက်ကြုံနေတဲ့ ယူကေက ယူကရိန်းကို နောက်ထပ် ဒေါ်လာသန်း၆၀ ထောက်ပံ့မယ်လို့ ကြေညာ\n- ကမ္ဘာဖလား ဘောလုံးပွဲ ဖွင့်ပွဲ ကျင်းပမယ့် အကြောင်း အပါအ၀င် တနင်္ဂနွေ မနက်ခင်း နောက်ဆုံးရ မြန်မာနဲ့ နိုင်ငံတကာ သတင်းတွေကို ဘီဘီစီမြန်မာပိုင်းရဲ့ ပေါ့ဒ်ကတ်စ်၊ ဝက်ဘ်ဆိုက်၊ ဖေ့စ်ဘုတ်နဲ့ ယူကျုတို့မှာ တင်ဆက်ပေးနေပါတယ်။\nမနက်ပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625862\nညပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625858\nဝက်ဘ်ဆိုက် - https://www.bbcburmese.com\nဖေ့စ်ဘွတ်ခ် - https://www.facebook.com/BBCnewsBurmese\nအင်စတာဂရမ် - https://www.instagram.com/bbcburmese/\nယူကျု - http://youtube.com/thebbcburmese"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0dhgsh0",
+                  "types": ["Podcast"],
+                  "duration": 673,
+                  "durationISO8601": "PT11M13S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1671502260000,
+                  "availableFrom": 1668910260000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "စစ်ကောင်စီနဲ့ CNDF ၅ရက်တိုက်ပွဲအတွင်း စစ်ကောင်စီ အရာရှိနဲ့ တပ်ဖွဲ့၀င် ၃၀ သေဆုံးတယ်လို့ CNO ထုတ်ပြန်",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1668902400000,
+            "brand": {
+              "pid": "p02p9f6q",
+              "title": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p0dhgsk2",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "locators": { "pid": "p0dhb73t", "brandPid": "p02p9f6q" },
+            "media": {
+              "id": "p0dhb73t",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "မန္တလေးနဲ့ နယ်စပ်ကုန်သွယ်ရေး အခြေအနေဘယ်လိုရှိနေလဲ",
+                "long": "စနေနေ့ မနက်ခင်း သတင်းများ (၁၉ နိုဝင်ဘာ၊ ၂၀၂၂)\n\nကုလသမဂ္ဂ မြန်မာနိုင်ငံဆိုင်ရာလူ့အခွင့်အရေးအထူးကိုယ်စားလှယ် မစ္စတာ တွမ်အင်ဒရူးစ်နဲ့ NUGရဲ့ ကိုရီးယားနိုင်ငံဆိုင်ရာ ကိုယ်စားလှယ်တို့ ဘာဆွေးနွေးကြလဲ။\n\nမန္တလေးနဲ့ နယ်စပ်ကုန်သွယ်ရေး အခြေအနေဘယ်လိုရှိနေလဲ။\n\nရုရှားရဲ့ တိုက်ခိုက်မှုကြောင့် ယူကရိန်းရဲ့ စွမ်းအင်စနစ် တဝက်နီးပါးပြိုလဲ။\n\nဆင်းရဲတဲ့ နိုင်ငံတွေအတွက် ရန်ပုံငွေနဲ့ ပတ်သက်ပြီး ညှိနှိုင်းဆွေးနွေးဖို့ ရာသီဥတု ထိပ်သီးဆွေးနွေးပွဲ တရက်ထပ်တိုး။ \n\nမြောက်ကိုရီးယားရဲ့ နောက်ဆုံးစမ်းသပ် ပစ်ခတ်တဲ့ ပဲ့ထိန်း ဒုံးကျည် ခြိမ်းခြောက်မှု အမေရိကန် လျော့ချ။\n\nစွမ်းအင် လျော့သုံးဖို့ ဆောင်းတွင်းမှာ လည်ရှည်ခေါင်းစွပ်အကျီတွေ ဝတ်ဖို့ တိုကျို အုပ်ချုပ်ရေးမှူး တိုက်တွန်း။ \n\nကမ္ဘာဖလားကျင်းပမယ့် ဘောလုံးကွင်းမှာ အရက်မရောင်းဖို့ ဖီဖာတားမြစ်။\n\nရော်နယ်ဒိုနဲ့ စာချုပ် အဆုံးသတ်ဖို့ မန်ယူ ဥပဒေကြောင်းအရ ဆွေးနွေး။ \n\nမနက်ပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625862\nညပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625858\nယူကျု - http://youtube.com/thebbcburmese\nအင်စတာဂရမ် - https://www.instagram.com/bbcburmese/\nဝက်ဘ်ဆိုက် - https://www.bbcburmese.com\n#ဘီဘီစီမြန်မာပိုင်း #မနက်ခင်းသတင်း #ကိုရိုနာဗိုင်းရပ်စ်"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0dhb4xy",
+                  "types": ["Podcast"],
+                  "duration": 514,
+                  "durationISO8601": "PT8M34S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1671412320000,
+                  "availableFrom": 1668820320000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "ကုလမြန်မာ့လူ့အခွင့်အရေးအထူးကိုယ်စားလှယ်နဲ့ NUGကိုရီးယားနိုင်ငံကိုယ်စားလှယ်တို့ ဘာဆွေးနွေးကြလဲ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1668816000000,
+            "brand": {
+              "pid": "p02p9f6q",
+              "title": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p0dhb73t",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "locators": { "pid": "p0dh0tdl", "brandPid": "p02p9f6q" },
+            "media": {
+              "id": "p0dh0tdl",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "ကြံစျေးကောင်းလို့ ကြံတောင်သူတွေ အဆင်ပြေ",
+                "long": "သောကြာနေ့ မနက်ခင်း သတင်းများ (၁၈ နိုဝင်ဘာ၊ ၂၀၂၂)\n\nစစ်ကောင်စီရဲ့ လွှတ်ငြိမ်းချမ်းသာခွင့်အပေါ် နိုင်ငံရေးသမားတွေ ဘာပြောလဲ။ \n\nမတ္တရာမှာ စစ်ကောင်စီနဲ့ ဒေသခံကာကွယ်ရေး တပ်ဖွဲ့အကြား ထိတွေ့မှုတွေ ဆက်ဖြစ်။\n\nကြံစျေးကောင်းလို့ ကြံတောင်သူတွေ အဆင်ပြေ။ \n\nအောက်လွှတ်တော် ဥက္ကဋ္ဌအဖြစ် အရွေးခံမှာ မဟုတ်ဘူးလို့ လက်ရှိဥက္ကဋ္ဌ နန်စီပါလိုစီ ပြော။ \n\nယူကရိန်းစွမ်းအင် အခြေခံအဆောက်အအုံတွေ အရေးပေါ် အခြေအနေကို ရောက်လို့ ဥရောပသမဂ္ဂ တာဝန်ရှိသူပြော။ \n\nမလေးရှားလေကြောင်းလိုင်းက လေယာဥ်ပစ်ချလို့ အမျိုးသား ၃ဦးကို နယ်သာလန် တရားရုံးက ထောင်ဒဏ်ချ။\n\nကိုလံဘီယာမှာ အစိုးရနဲ့ သူပုန် ငြိမ်းချမ်းရေး ပြန်ဆွေးနွေးမယ်။ \n\nအပူချိန်ကြောင့် ကမ္ဘာ့ဖလားပြိုင်ပွဲဝင် ဝေးလ်အသင်း အချိန်ပြောင်း လေ့ကျင်ရ။\n\nဖီဖာဥက္ကဋ္ဌ အင်ဖာတီနို တတိယသက်တမ်း ဥက္ကဋ္ဌအဖြစ် အရွေးခံမယ်။\n\nမနက်ပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625862\nညပိုင်း ပေါ့ဒ်ကတ်စ် ရယူရန် - https://www.bbc.com/burmese/media-45625858\nယူကျု - http://youtube.com/thebbcburmese\nအင်စတာဂရမ် - https://www.instagram.com/bbcburmese/\nဝက်ဘ်ဆိုက် - https://www.bbcburmese.com\n#ဘီဘီစီမြန်မာပိုင်း #မနက်ခင်းသတင်း #ကိုရိုနာဗိုင်းရပ်စ်"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0dh0shn",
+                  "types": ["Podcast"],
+                  "duration": 738,
+                  "durationISO8601": "PT12M18S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1671324240000,
+                  "availableFrom": 1668732240000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "စစ်ကောင်စီရဲ့ လွှတ်ငြိမ်းချမ်းသာခွင့်အပေါ် နိုင်ငံရေးသမားတွေ ဘာပြောလဲ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02p90fw.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1668729600000,
+            "brand": {
+              "pid": "p02p9f6q",
+              "title": "ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_radio/p0dh0tdl",
+            "type": "ws_radio"
+          }
+        ]
+      }
+    ]
+  }
+}
