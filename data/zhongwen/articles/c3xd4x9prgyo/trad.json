@@ -27,19 +27,33 @@
                                   "text": "花木兰真人版：迪士尼斥巨资集结明星重拍的中国经典",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "e2deb532",
@@ -48,7 +62,9 @@
                 "firstPublished": 1562943152251,
                 "lastPublished": 1562943152251
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "c858faa8",
@@ -68,11 +84,18 @@
                             "text": "这一次，电影里不会再有唱段，也不会再有会说话的龙，故事里的反派也不再是匈奴的军队，而变成了一个女巫……但是，不管怎样，《花木兰》终于要重登上银幕了。",
                             "attributes": []
                           },
-                          "position": [3, 1, 1]
+                          "position": [
+                            3,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 1]
+                    "position": [
+                      3,
+                      1
+                    ]
                   },
                   {
                     "id": "391c93cc",
@@ -87,11 +110,18 @@
                             "text": "本周，迪士尼（Disney）发布了真人版电影的初版预告片，宣告这部1998年经典动画的重制作品即将问世。中国古代女子女扮男装代父从军上战场的传奇故事，将再次与观众见面。",
                             "attributes": []
                           },
-                          "position": [3, 2, 1]
+                          "position": [
+                            3,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 2]
+                    "position": [
+                      3,
+                      2
+                    ]
                   },
                   {
                     "id": "515941a0",
@@ -106,11 +136,18 @@
                             "text": "迪士尼在21世纪已经重拍过一系列来自该公司1990年代的经典作品，包括《灰姑娘》、《美女与野兽》和《阿拉丁》等。",
                             "attributes": []
                           },
-                          "position": [3, 3, 1]
+                          "position": [
+                            3,
+                            3,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 3]
+                    "position": [
+                      3,
+                      3
+                    ]
                   },
                   {
                     "id": "616b31e4",
@@ -125,30 +162,46 @@
                             "text": "20多年前，动画版的《花木兰》却在故事发源地中国遭遇惨败；这一次，迪士尼想尽了一切办法要以新版的女英雄传奇征服中国观众。",
                             "attributes": []
                           },
-                          "position": [3, 4, 1]
+                          "position": [
+                            3,
+                            4,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 4]
+                    "position": [
+                      3,
+                      4
+                    ]
                   }
                 ]
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
-            { "id": "75b2293d", "type": "mpu", "model": {}, "position": [4] }
+            {
+              "id": "75b2293d",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                4
+              ]
+            }
           ]
         }
       },
       "metadata": {
         "id": "urn:bbc:ares::article:c3xd4x9prgyo",
-        "locators": { "optimoUrn": "urn:bbc:optimo:asset:c3xd4x9prgyo" },
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:c3xd4x9prgyo"
+        },
         "type": "article",
         "createdBy": "Zhongwen",
         "language": "zh-hans",
-        "lastUpdated": 1645628370461,
         "firstPublished": 1562943152251,
         "lastPublished": 1562943152251,
-        "timestamp": 1562943152251,
         "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c3xd4x9prgyo",
@@ -160,42 +213,29 @@
           "taggings": []
         },
         "tags": {},
-        "version": "v1.4.0",
-        "blockTypes": ["headline", "text", "paragraph", "fragment"],
-        "readTime": 1,
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment"
+        ],
         "allowAdvertising": true
       },
       "promo": {
-        "locators": { "optimoUrn": "urn:bbc:optimo:asset:c3xd4x9prgyo" },
-        "timestamp": 1562943152251,
-        "suitableForSyndication": false,
-        "language": "zh-hans",
+        "locators": {},
         "headlines": {
           "seoHeadline": "花木兰真人版：迪士尼斥巨资集结明星重拍的中国经典"
         },
         "images": {},
-        "passport": {
-          "language": "zh-hans",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c3xd4x9prgyo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Zhongwen",
-          "uri": "/zhongwen",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {
       "topStories": [
         {
-          "headlines": { "headline": "NEWSPALDECOM-738" },
+          "headlines": {
+            "headline": "NEWSPALDECOM-738"
+          },
           "locators": {
             "assetUri": "/zhongwen/trad/23285038",
             "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/23285038",
@@ -222,18 +262,26 @@
             "versions": [
               {
                 "versionId": "p01plp1c",
-                "types": ["Original"],
+                "types": [
+                  "Original"
+                ],
                 "duration": 29,
                 "durationISO8601": "PT29S",
                 "warnings": {},
-                "availableTerritories": { "uk": true, "nonUk": true },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
                 "availableFrom": 1575384062000
               }
             ],
             "smpKind": "programme",
             "type": "media"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -271,7 +319,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:zhongwen/trad/hong-kong-review-23093903",
           "type": "cps"
         },
@@ -300,12 +351,17 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-23093909",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "數字時代 你憑什麼輕鬆成為網戀高手" },
+          "headlines": {
+            "headline": "數字時代 你憑什麼輕鬆成為網戀高手"
+          },
           "locators": {
             "assetUri": "/zhongwen/trad/press-review-23093898",
             "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/press-review-23093898",
@@ -327,12 +383,17 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:zhongwen/trad/press-review-23093898",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "美到難以置信的世界奇蹟" },
+          "headlines": {
+            "headline": "美到難以置信的世界奇蹟"
+          },
           "locators": {
             "assetUri": "/zhongwen/trad/chinese-news-23093874",
             "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/chinese-news-23093874",
@@ -354,12 +415,17 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-23093874",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Cosplay少女：動漫是我的生命" },
+          "headlines": {
+            "headline": "Cosplay少女：動漫是我的生命"
+          },
           "locators": {
             "assetUri": "/zhongwen/trad/uk-23093872",
             "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/uk-23093872",
@@ -381,7 +447,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "英國動態",
@@ -417,7 +486,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "overtypedSummary": "音樂不但可以佐餐，增添餐桌的情趣。它還可以影響你口中食物的味道，真是這樣嗎？",
           "id": "urn:bbc:ares::asset:zhongwen/trad/world-23093875",
           "type": "cps"
