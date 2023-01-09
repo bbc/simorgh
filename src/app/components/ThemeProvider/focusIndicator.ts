@@ -25,6 +25,10 @@ const focusIndicator = ({ palette }: Theme) => css`
     box-shadow: 0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE};
     outline-offset: ${pixelsToRem(3)}rem;
   }
+
+  .someClassName {
+    background-color: yellow;
+  }
 `;
 
 export default focusIndicator;

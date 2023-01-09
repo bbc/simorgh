@@ -198,7 +198,7 @@ Summary.defaultProps = {
   promoType: 'regular',
 };
 
-export const Link = styled.a`
+const TestLink = styled.a`
   position: static;
   color: ${C_EBON};
   text-decoration: none;
@@ -293,5 +293,20 @@ StoryPromo.defaultProps = {
   mediaIndicator: null,
   mediaIndicatorIsInline: false,
 };
+
+export const Link = props => {
+  const { children } = props;
+  return <TestLink className="someClassName">{children}</TestLink>;
+};
+
+Link.propTypes = {
+  children: node.isRequired,
+};
+
+// const Link = (props) => (
+//   <div className={props.someClassName}>{props.children}</div>
+// )
+
+// export default MyComponent
 
 export default StoryPromo;
