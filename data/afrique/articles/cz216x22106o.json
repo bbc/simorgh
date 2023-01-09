@@ -27,19 +27,33 @@
                                   "text": "C'est le titre de cet article de test",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "d3153a22",
@@ -69,19 +83,37 @@
                                         "text": "Cette image test, sous copyright BBC, montre une carte de la France. L'image est dans les trois premiers blocs et porte cette légende.",
                                         "attributes": []
                                       },
-                                      "position": [2, 1, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 1]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 1, 1]
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 1]
+                    "position": [
+                      2,
+                      1
+                    ]
                   },
                   {
                     "id": "d4fbe1c7",
@@ -106,19 +138,37 @@
                                         "text": "Carte de France montrant Paris et Cognac",
                                         "attributes": []
                                       },
-                                      "position": [2, 2, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 2, 1, 1]
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 2, 1]
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 2]
+                    "position": [
+                      2,
+                      2
+                    ]
                   },
                   {
                     "id": "29b20771",
@@ -130,11 +180,16 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "BBC"
                     },
-                    "position": [2, 3]
+                    "position": [
+                      2,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "6d3f4e5f",
@@ -143,7 +198,9 @@
                 "firstPublished": 1562936294950,
                 "lastPublished": 1569595708548
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
             {
               "id": "f3cfedee",
@@ -163,7 +220,11 @@
                             "text": "Ceci est un bloc de texte contenant un lien URL vers ",
                             "attributes": []
                           },
-                          "position": [4, 1, 1]
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
                         },
                         {
                           "id": "b063ced9",
@@ -178,27 +239,48 @@
                                   "text": "la page d'accueil BBC Weather",
                                   "attributes": []
                                 },
-                                "position": [4, 1, 2, 1]
+                                "position": [
+                                  4,
+                                  1,
+                                  2,
+                                  1
+                                ]
                               }
                             ],
                             "locator": "https://www.bbc.co.uk/weather",
                             "isExternal": false
                           },
-                          "position": [4, 1, 2]
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
                         },
                         {
                           "id": "2a0c7a02",
                           "type": "fragment",
-                          "model": { "text": ".", "attributes": [] },
-                          "position": [4, 1, 3]
+                          "model": {
+                            "text": ".",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            3
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 1]
+                    "position": [
+                      4,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [4]
+              "position": [
+                4
+              ]
             },
             {
               "id": "4ee93f7d",
@@ -229,19 +311,37 @@
                                         "text": "Ceci est un bloc vidéo contenant une vidéo sur les fourmis",
                                         "attributes": []
                                       },
-                                      "position": [5, 1, 1, 1, 1]
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 1, 1, 1]
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 1, 1]
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   },
                   {
                     "id": "0d89615c",
@@ -267,7 +367,9 @@
                             "versions": [
                               {
                                 "versionId": "p01k6msp",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 191,
                                 "durationISO8601": "PT3M11S",
                                 "warnings": {
@@ -281,10 +383,16 @@
                                 "availableFrom": 1540218932000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [5, 2, 1]
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "612f53f1",
@@ -301,7 +409,12 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "BBC"
                                 },
-                                "position": [5, 2, 2, 1]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
                                 "id": "a8784e72",
@@ -327,32 +440,65 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    5, 2, 2, 2, 1, 1, 1
+                                                    5,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [5, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              5,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [5, 2, 2, 2, 1]
+                                      "position": [
+                                        5,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 2, 2, 2]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 2, 2]
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 2]
+                    "position": [
+                      5,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
             },
             {
               "id": "ecd2e59c",
@@ -377,19 +523,33 @@
                                   "text": "Ceci est un bloc de sous-titre",
                                   "attributes": []
                                 },
-                                "position": [6, 1, 1, 1]
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [6, 1, 1]
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 1]
+                    "position": [
+                      6,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [6]
+              "position": [
+                6
+              ]
             },
             {
               "id": "205ac732",
@@ -419,19 +579,37 @@
                                         "text": "Footballeurs après un match",
                                         "attributes": []
                                       },
-                                      "position": [7, 1, 1, 1, 1]
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [7, 1, 1, 1]
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [7, 1, 1]
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 1]
+                    "position": [
+                      7,
+                      1
+                    ]
                   },
                   {
                     "id": "922c7636",
@@ -443,11 +621,16 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "Getty Images"
                     },
-                    "position": [7, 2]
+                    "position": [
+                      7,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [7]
+              "position": [
+                7
+              ]
             },
             {
               "id": "bfb239d2",
@@ -467,17 +650,33 @@
                             "text": "Cet article de test a été créé afin que nous puissions exécuter des tests automatisés de bout en bout sur notre site Web.",
                             "attributes": []
                           },
-                          "position": [8, 1, 1]
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 1]
+                    "position": [
+                      8,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [8]
+              "position": [
+                8
+              ]
             },
-            { "id": "5ad70028", "type": "mpu", "model": {}, "position": [9] },
+            {
+              "id": "5ad70028",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            },
             {
               "id": "4c7079fb",
               "type": "relatedContent",
@@ -506,19 +705,37 @@
                                         "text": "This is my title",
                                         "attributes": []
                                       },
-                                      "position": [10, 1, 1, 1, 1]
+                                      "position": [
+                                        10,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [10, 1, 1, 1]
+                                "position": [
+                                  10,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [10, 1, 1]
+                          "position": [
+                            10,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [10, 1]
+                    "position": [
+                      10,
+                      1
+                    ]
                   },
                   {
                     "id": "8b89f1c8",
@@ -555,20 +772,44 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    10, 2, 1, 1, 1, 1, 1
+                                                    10,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [10, 2, 1, 1, 1, 1]
+                                            "position": [
+                                              10,
+                                              2,
+                                              1,
+                                              1,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [10, 2, 1, 1, 1]
+                                      "position": [
+                                        10,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [10, 2, 1, 1]
+                                "position": [
+                                  10,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               },
                               {
                                 "id": "28f6cb3c",
@@ -581,11 +822,20 @@
                                   "originCode": "cpsdevpb",
                                   "copyrightHolder": "Getty Images"
                                 },
-                                "position": [10, 2, 1, 2]
+                                "position": [
+                                  10,
+                                  2,
+                                  1,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [10, 2, 1]
+                          "position": [
+                            10,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "0754ebb6",
@@ -612,28 +862,55 @@
                                               "text": "This is a Dog",
                                               "attributes": []
                                             },
-                                            "position": [10, 2, 2, 1, 1, 1]
+                                            "position": [
+                                              10,
+                                              2,
+                                              2,
+                                              1,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ],
                                         "isExternal": false
                                       },
-                                      "position": [10, 2, 2, 1, 1]
+                                      "position": [
+                                        10,
+                                        2,
+                                        2,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [10, 2, 2, 1]
+                                "position": [
+                                  10,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [10, 2, 2]
+                          "position": [
+                            10,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [10, 2]
+                    "position": [
+                      10,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [10]
+              "position": [
+                10
+              ]
             }
           ]
         }
@@ -641,17 +918,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cz216x22106o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cz216x22106o",
-          "canonicalUrl": "https://www.bbc.com/afrique/articles/cz216x22106o"
+          "optimoUrn": "urn:bbc:optimo:asset:cz216x22106o"
         },
         "type": "article",
         "createdBy": "Afrique",
         "language": "fr",
-        "lastUpdated": 1601025313126,
         "firstPublished": 1562936294950,
         "lastPublished": 1569595708548,
-        "timestamp": 1569595708548,
-        "options": {},
         "analyticsLabels": {
           "producer": "Afrique",
           "page": "afrique.articles.cz216x22106o.page"
@@ -659,12 +932,8 @@
         "passport": {
           "language": "fr",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
-          "locator": "urn:bbc:optimo:asset:cz216x22106o",
-          "availability": "AVAILABLE",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.7",
         "blockTypes": [
           "headline",
           "text",
@@ -679,39 +948,12 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cz216x22106o",
-          "canonicalUrl": "https://www.bbc.com/afrique/articles/cz216x22106o"
-        },
-        "timestamp": 1569595708548,
-        "suitableForSyndication": false,
-        "language": "fr",
         "headlines": {
           "seoHeadline": "CAN 2019 : Le Nigéria file en demi-finales au détriment de l'Afrique du Sud"
-        },
-        "images": {},
-        "passport": {
-          "language": "fr",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
-          "locator": "urn:bbc:optimo:asset:cz216x22106o",
-          "availability": "AVAILABLE",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:cz216x22106o",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Afrique",
-          "uri": "/afrique",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {
@@ -750,7 +992,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -770,7 +1015,9 @@
       ],
       "features": [
         {
-          "headlines": { "headline": "Commémoration du massacre de Soweto 35" },
+          "headlines": {
+            "headline": "Commémoration du massacre de Soweto 35"
+          },
           "locators": {
             "assetUri": "/afrique/23053027",
             "cpsUrn": "urn:bbc:content:assetUri:afrique/23053027",
@@ -804,7 +1051,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Accueil",
@@ -815,7 +1065,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Commémoration du massacre de Soweto 36" },
+          "headlines": {
+            "headline": "Commémoration du massacre de Soweto 36"
+          },
           "locators": {
             "assetUri": "/afrique/23053028",
             "cpsUrn": "urn:bbc:content:assetUri:afrique/23053028",
@@ -849,7 +1101,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Accueil",
@@ -860,7 +1115,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Commémoration du massacre de Soweto 19" },
+          "headlines": {
+            "headline": "Commémoration du massacre de Soweto 19"
+          },
           "locators": {
             "assetUri": "/afrique/23052941",
             "cpsUrn": "urn:bbc:content:assetUri:afrique/23052941",
@@ -894,7 +1151,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Accueil",
@@ -905,7 +1165,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Commémoration du massacre de Soweto 20" },
+          "headlines": {
+            "headline": "Commémoration du massacre de Soweto 20"
+          },
           "locators": {
             "assetUri": "/afrique/23052943",
             "cpsUrn": "urn:bbc:content:assetUri:afrique/23052943",
@@ -939,7 +1201,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Accueil",
@@ -950,7 +1215,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Commémoration du massacre de Soweto 21" },
+          "headlines": {
+            "headline": "Commémoration du massacre de Soweto 21"
+          },
           "locators": {
             "assetUri": "/afrique/23052944",
             "cpsUrn": "urn:bbc:content:assetUri:afrique/23052944",
@@ -984,7 +1251,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Accueil",
@@ -995,7 +1265,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Commémoration du massacre de Soweto 25" },
+          "headlines": {
+            "headline": "Commémoration du massacre de Soweto 25"
+          },
           "locators": {
             "assetUri": "/afrique/23052995",
             "cpsUrn": "urn:bbc:content:assetUri:afrique/23052995",
@@ -1029,7 +1301,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Accueil",
@@ -1040,7 +1315,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Commémoration du massacre de Soweto 26" },
+          "headlines": {
+            "headline": "Commémoration du massacre de Soweto 26"
+          },
           "locators": {
             "assetUri": "/afrique/23052996",
             "cpsUrn": "urn:bbc:content:assetUri:afrique/23052996",
@@ -1074,7 +1351,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Accueil",
@@ -1085,7 +1365,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Commémoration du massacre de Soweto 27" },
+          "headlines": {
+            "headline": "Commémoration du massacre de Soweto 27"
+          },
           "locators": {
             "assetUri": "/afrique/23052997",
             "cpsUrn": "urn:bbc:content:assetUri:afrique/23052997",
@@ -1119,7 +1401,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Accueil",

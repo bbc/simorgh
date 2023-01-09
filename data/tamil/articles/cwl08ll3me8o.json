@@ -603,17 +603,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cwl08ll3me8o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cwl08ll3me8o",
-          "canonicalUrl": "https://www.bbc.com/tamil/articles/cwl08ll3me8o"
+          "optimoUrn": "urn:bbc:optimo:asset:cwl08ll3me8o"
         },
         "type": "article",
         "createdBy": "Tamil",
         "language": "ta",
-        "lastUpdated": 1598599653250,
         "firstPublished": 1562942569172,
         "lastPublished": 1562942569172,
-        "timestamp": 1562942569172,
-        "options": {},
         "analyticsLabels": {
           "producer": "Tamil",
           "page": "tamil.articles.cwl08ll3me8o.page"
@@ -621,12 +617,8 @@
         "passport": {
           "language": "ta",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Tamil",
-          "locator": "urn:bbc:optimo:asset:cwl08ll3me8o",
-          "availability": "AVAILABLE",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.3",
         "blockTypes": [
           "headline",
           "text",
@@ -641,39 +633,12 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cwl08ll3me8o",
-          "canonicalUrl": "https://www.bbc.com/tamil/articles/cwl08ll3me8o"
-        },
-        "timestamp": 1562942569172,
-        "suitableForSyndication": false,
-        "language": "ta",
         "headlines": {
           "seoHeadline": "‘தல’ தோனி மற்றும் இறுதி ஓவர்கள் - என்றும் மாறாத காதல் கதை"
-        },
-        "images": {},
-        "passport": {
-          "language": "ta",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Tamil",
-          "locator": "urn:bbc:optimo:asset:cwl08ll3me8o",
-          "availability": "AVAILABLE",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:cwl08ll3me8o",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Tamil",
-          "uri": "/tamil",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {

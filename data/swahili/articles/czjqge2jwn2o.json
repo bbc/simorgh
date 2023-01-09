@@ -670,17 +670,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:czjqge2jwn2o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:czjqge2jwn2o",
-          "canonicalUrl": "https://www.bbc.com/swahili/articles/czjqge2jwn2o"
+          "optimoUrn": "urn:bbc:optimo:asset:czjqge2jwn2o"
         },
         "type": "article",
         "createdBy": "Swahili",
         "language": "sw",
-        "lastUpdated": 1598599651867,
         "firstPublished": 1562936569893,
         "lastPublished": 1562936569893,
-        "timestamp": 1562936569893,
-        "options": {},
         "analyticsLabels": {
           "producer": "Swahili",
           "page": "swahili.articles.czjqge2jwn2o.page"
@@ -688,12 +684,8 @@
         "passport": {
           "language": "sw",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili",
-          "locator": "urn:bbc:optimo:asset:czjqge2jwn2o",
-          "availability": "AVAILABLE",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.3",
         "blockTypes": [
           "headline",
           "text",
@@ -708,39 +700,12 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:czjqge2jwn2o",
-          "canonicalUrl": "https://www.bbc.com/swahili/articles/czjqge2jwn2o"
-        },
-        "timestamp": 1562936569893,
-        "suitableForSyndication": false,
-        "language": "sw",
         "headlines": {
           "seoHeadline": "Hii ndio kichwa cha SEO cha makala haya ya majaribio"
-        },
-        "images": {},
-        "passport": {
-          "language": "sw",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili",
-          "locator": "urn:bbc:optimo:asset:czjqge2jwn2o",
-          "availability": "AVAILABLE",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:czjqge2jwn2o",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Swahili",
-          "uri": "/swahili",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {

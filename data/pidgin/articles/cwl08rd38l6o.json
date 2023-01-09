@@ -924,17 +924,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cwl08rd38l6o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cwl08rd38l6o",
-          "canonicalUrl": "https://www.bbc.com/pidgin/articles/cwl08rd38l6o"
+          "optimoUrn": "urn:bbc:optimo:asset:cwl08rd38l6o"
         },
         "type": "article",
         "createdBy": "Pidgin",
         "language": "pcm",
-        "lastUpdated": 1667410226880,
         "firstPublished": 1562936404940,
         "lastPublished": 1665673819230,
-        "timestamp": 1665673819230,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cwl08rd38l6o",
           "producer": "Pidgin",
@@ -943,14 +939,8 @@
         "passport": {
           "language": "pcm",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
-          "locator": "urn:bbc:optimo:asset:cwl08rd38l6o",
-          "availability": "AVAILABLE",
-          "taggings": [],
-          "schemaVersion": "1.4.0",
-          "publishedState": "PUBLISHED"
+          "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.8",
         "blockTypes": [
           "headline",
           "text",
@@ -968,20 +958,12 @@
           "aresOEmbed",
           "aresMedia"
         ],
-        "readTime": 1,
         "consumableAsSFV": false,
         "allowAdvertising": true,
         "consumableOnRedButton": false,
         "consumableOnlyOnRedButton": false
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cwl08rd38l6o",
-          "canonicalUrl": "https://www.bbc.com/pidgin/articles/cwl08rd38l6o"
-        },
-        "timestamp": 1665673819230,
-        "suitableForSyndication": false,
-        "language": "pcm",
         "headlines": {
           "seoHeadline": "This is the SEO headline of this test article",
           "promoHeadline": {
@@ -1110,27 +1092,7 @@
               }
             }
           ]
-        },
-        "passport": {
-          "language": "pcm",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
-          "locator": "urn:bbc:optimo:asset:cwl08rd38l6o",
-          "availability": "AVAILABLE",
-          "taggings": [],
-          "schemaVersion": "1.4.0",
-          "publishedState": "PUBLISHED"
-        },
-        "id": "urn:bbc:ares::article:cwl08rd38l6o",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Pidgin",
-          "uri": "/pidgin",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {

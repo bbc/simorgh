@@ -27,19 +27,33 @@
                                   "text": "Mwaramukanye amahoro mwese muteze amatwi\n\n",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "18f31918",
@@ -69,19 +83,37 @@
                                         "text": "Abarihimbye turi kumwe muri iki kiganiro, barabidusobanurira neza.",
                                         "attributes": []
                                       },
-                                      "position": [2, 1, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 1]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 1, 1]
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 1]
+                    "position": [
+                      2,
+                      1
+                    ]
                   },
                   {
                     "id": "29519e7f",
@@ -106,19 +138,37 @@
                                         "text": "Ibyo ni byo tugiye kuganiraho muri iki kiganiro",
                                         "attributes": []
                                       },
-                                      "position": [2, 2, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 2, 1, 1]
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 2, 1]
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 2]
+                    "position": [
+                      2,
+                      2
+                    ]
                   },
                   {
                     "id": "4a1396e9",
@@ -130,11 +180,16 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "BBC"
                     },
-                    "position": [2, 3]
+                    "position": [
+                      2,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "87719708",
@@ -143,7 +198,9 @@
                 "firstPublished": 1562936358638,
                 "lastPublished": 1562936358638
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
             {
               "id": "bbdc6f89",
@@ -163,7 +220,11 @@
                             "text": "Iki kiganiro mwagiteguriwe kandi murakigezwaho ",
                             "attributes": []
                           },
-                          "position": [4, 1, 1]
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
                         },
                         {
                           "id": "475c669d",
@@ -178,27 +239,48 @@
                                   "text": "umuyobozi w'ishami rya BBC",
                                   "attributes": []
                                 },
-                                "position": [4, 1, 2, 1]
+                                "position": [
+                                  4,
+                                  1,
+                                  2,
+                                  1
+                                ]
                               }
                             ],
                             "locator": "https://www.bbc.co.uk/weather",
                             "isExternal": false
                           },
-                          "position": [4, 1, 2]
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
                         },
                         {
                           "id": "be38dfb5",
                           "type": "fragment",
-                          "model": { "text": ".", "attributes": [] },
-                          "position": [4, 1, 3]
+                          "model": {
+                            "text": ".",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            3
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 1]
+                    "position": [
+                      4,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [4]
+              "position": [
+                4
+              ]
             },
             {
               "id": "bead2b2b",
@@ -229,19 +311,37 @@
                                         "text": "Kumenya aho ivuye se aho iri ubu n'aho igana ho hifashe.",
                                         "attributes": []
                                       },
-                                      "position": [5, 1, 1, 1, 1]
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 1, 1, 1]
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 1, 1]
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   },
                   {
                     "id": "1ed95bd0",
@@ -267,7 +367,9 @@
                             "versions": [
                               {
                                 "versionId": "p01k6msp",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 191,
                                 "durationISO8601": "PT3M11S",
                                 "warnings": {
@@ -281,10 +383,16 @@
                                 "availableFrom": 1540218932000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [5, 2, 1]
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "caa864f0",
@@ -301,7 +409,12 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "BBC"
                                 },
-                                "position": [5, 2, 2, 1]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
                                 "id": "990e3157",
@@ -327,32 +440,65 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    5, 2, 2, 2, 1, 1, 1
+                                                    5,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [5, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              5,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [5, 2, 2, 2, 1]
+                                      "position": [
+                                        5,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 2, 2, 2]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 2, 2]
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 2]
+                    "position": [
+                      5,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
             },
             {
               "id": "ef4d22b4",
@@ -377,19 +523,33 @@
                                   "text": "Abarundi bari mu mishyikirano y'amahoro\n\n",
                                   "attributes": []
                                 },
-                                "position": [6, 1, 1, 1]
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [6, 1, 1]
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 1]
+                    "position": [
+                      6,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [6]
+              "position": [
+                6
+              ]
             },
             {
               "id": "236c254f",
@@ -419,19 +579,37 @@
                                         "text": "Footballers after a match",
                                         "attributes": []
                                       },
-                                      "position": [7, 1, 1, 1, 1]
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [7, 1, 1, 1]
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [7, 1, 1]
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 1]
+                    "position": [
+                      7,
+                      1
+                    ]
                   },
                   {
                     "id": "06c5d1a8",
@@ -443,11 +621,16 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "Getty Images"
                     },
-                    "position": [7, 2]
+                    "position": [
+                      7,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [7]
+              "position": [
+                7
+              ]
             },
             {
               "id": "a5355174",
@@ -467,34 +650,46 @@
                             "text": "Izina Gahuzamiryango ninaho ryavuye, kwari uguhuza imiryango babisabwe n'uwari umuyobozi w'ishami.\n\n\n\n.",
                             "attributes": []
                           },
-                          "position": [8, 1, 1]
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 1]
+                    "position": [
+                      8,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [8]
+              "position": [
+                8
+              ]
             },
-            { "id": "43e8bf87", "type": "mpu", "model": {}, "position": [9] }
+            {
+              "id": "43e8bf87",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            }
           ]
         }
       },
       "metadata": {
         "id": "urn:bbc:ares::article:cey23zx8wx8o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cey23zx8wx8o",
-          "canonicalUrl": "https://www.bbc.com/gahuza/articles/cey23zx8wx8o"
+          "optimoUrn": "urn:bbc:optimo:asset:cey23zx8wx8o"
         },
         "type": "article",
         "createdBy": "Gahuza",
         "language": "rw",
-        "lastUpdated": 1598599628556,
         "firstPublished": 1562936358638,
         "lastPublished": 1562936358638,
-        "timestamp": 1562936358638,
-        "options": {},
         "analyticsLabels": {
           "producer": "Gahuza",
           "page": "gahuza.articles.cey23zx8wx8o.page"
@@ -502,12 +697,8 @@
         "passport": {
           "language": "rw",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza",
-          "locator": "urn:bbc:optimo:asset:cey23zx8wx8o",
-          "availability": "AVAILABLE",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.3",
         "blockTypes": [
           "headline",
           "text",
@@ -522,39 +713,12 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cey23zx8wx8o",
-          "canonicalUrl": "https://www.bbc.com/gahuza/articles/cey23zx8wx8o"
-        },
-        "timestamp": 1562936358638,
-        "suitableForSyndication": false,
-        "language": "rw",
         "headlines": {
           "seoHeadline": "Abarihimbye turi kumwe muri iki kiganiro barabidusobanurira neza."
-        },
-        "images": {},
-        "passport": {
-          "language": "rw",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza",
-          "locator": "urn:bbc:optimo:asset:cey23zx8wx8o",
-          "availability": "AVAILABLE",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:cey23zx8wx8o",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Gahuza",
-          "uri": "/gahuza",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {
@@ -593,7 +757,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "maximum",
           "section": {
             "subType": "IDX",
@@ -607,7 +774,9 @@
       ],
       "features": [
         {
-          "headlines": { "headline": "gfggghfghdghd" },
+          "headlines": {
+            "headline": "gfggghfghdghd"
+          },
           "locators": {
             "assetUri": "/gahuza/amakuru-23029740",
             "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23029740",
@@ -631,7 +800,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:gahuza/amakuru-23029740",
           "type": "cps"
         },
@@ -669,7 +841,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:gahuza/amakuru-23022558",
           "type": "cps"
         },
@@ -700,7 +875,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:gahuza/amakuru-23022559",
           "type": "cps"
         },
@@ -731,7 +909,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:gahuza/amakuru-23022560",
           "type": "cps"
         },
@@ -762,7 +943,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:gahuza/amakuru-23022516",
           "type": "cps"
         },
@@ -793,12 +977,17 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:gahuza/amakuru-23022515",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Amaziko ya Turabi yitabwe n'ibihumbi" },
+          "headlines": {
+            "headline": "Amaziko ya Turabi yitabwe n'ibihumbi"
+          },
           "locators": {
             "assetUri": "/gahuza/amakuru-23028132",
             "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23028132",
@@ -822,12 +1011,17 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:gahuza/amakuru-23028132",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Buhari avuga ku ifaranga rya Naira 12" },
+          "headlines": {
+            "headline": "Buhari avuga ku ifaranga rya Naira 12"
+          },
           "locators": {
             "assetUri": "/gahuza/amakuru-23058546",
             "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23058546",
@@ -883,7 +1077,10 @@
             "copyrightHolder": "Agency",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:gahuza/amakuru-23058546",
           "type": "cps"
         }
@@ -1204,7 +1401,10 @@
                 "name": "Donald Brilliant",
                 "title": "SUPER REPORTER",
                 "persons": [
-                  { "name": "Aastha Dabral", "function": "Graphics Designer" }
+                  {
+                    "name": "Aastha Dabral",
+                    "function": "Graphics Designer"
+                  }
                 ]
               },
               "passport": {

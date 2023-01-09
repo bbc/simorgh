@@ -615,17 +615,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:ck7pz7re3zgo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:ck7pz7re3zgo",
-          "canonicalUrl": "https://www.bbc.com/russian/articles/ck7pz7re3zgo"
+          "optimoUrn": "urn:bbc:optimo:asset:ck7pz7re3zgo"
         },
         "type": "article",
         "createdBy": "Russian",
         "language": "ru",
-        "lastUpdated": 1598599648014,
         "firstPublished": 1562941784981,
         "lastPublished": 1562941784981,
-        "timestamp": 1562941784981,
-        "options": {},
         "analyticsLabels": {
           "ldp_tags": "Russia",
           "ldp_ids": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
@@ -635,8 +631,6 @@
         "passport": {
           "language": "ru",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
-          "locator": "urn:bbc:optimo:asset:ck7pz7re3zgo",
-          "availability": "AVAILABLE",
           "taggings": [
             {
               "predicate": "http://www.bbc.co.uk/ontologies/passport/predicate/About",
@@ -692,7 +686,6 @@
             }
           ]
         },
-        "version": "v1.4.3",
         "blockTypes": [
           "headline",
           "text",
@@ -707,64 +700,12 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:ck7pz7re3zgo",
-          "canonicalUrl": "https://www.bbc.com/russian/articles/ck7pz7re3zgo"
-        },
-        "timestamp": 1562941784981,
-        "suitableForSyndication": false,
-        "language": "ru",
         "headlines": {
           "seoHeadline": "Пугало полицейского с камерой следит за водителями под Ливерпулем"
-        },
-        "images": {},
-        "passport": {
-          "language": "ru",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
-          "locator": "urn:bbc:optimo:asset:ck7pz7re3zgo",
-          "availability": "AVAILABLE",
-          "taggings": [
-            {
-              "predicate": "http://www.bbc.co.uk/ontologies/passport/predicate/About",
-              "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id"
-            }
-          ],
-          "predicates": {
-            "about": [
-              {
-                "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
-                "thingLabel": "Россия",
-                "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
-                "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
-                "thingType": [
-                  "core:Place",
-                  "tagging:TagConcept",
-                  "core:Thing"
-                ],
-                "thingSameAs": [
-                  "http://sws.geonames.org/2017370/"
-                ],
-                "thingEnglishLabel": "Russia",
-                "type": "about"
-              }
-            ]
-          }
-        },
-        "id": "urn:bbc:ares::article:ck7pz7re3zgo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Russian",
-          "uri": "/russian",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {

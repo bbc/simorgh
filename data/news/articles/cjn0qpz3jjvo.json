@@ -27,19 +27,33 @@
                                   "text": "AV test article ",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "ced9a45c",
@@ -48,7 +62,9 @@
                 "firstPublished": 1571146595887,
                 "lastPublished": 1571149356325
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "16aeacd8",
@@ -68,15 +84,24 @@
                             "text": "Text block before a media block",
                             "attributes": []
                           },
-                          "position": [3, 1, 1]
+                          "position": [
+                            3,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 1]
+                    "position": [
+                      3,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
             {
               "id": "96bab837",
@@ -107,19 +132,37 @@
                                         "text": "They may be tiny, but us humans could learn a thing or two from ants.",
                                         "attributes": []
                                       },
-                                      "position": [4, 1, 1, 1, 1]
+                                      "position": [
+                                        4,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [4, 1, 1, 1]
+                                "position": [
+                                  4,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [4, 1, 1]
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 1]
+                    "position": [
+                      4,
+                      1
+                    ]
                   },
                   {
                     "id": "f879ac37",
@@ -145,7 +188,9 @@
                             "versions": [
                               {
                                 "versionId": "p01k6msp",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 191,
                                 "durationISO8601": "PT3M11S",
                                 "warnings": {
@@ -159,10 +204,16 @@
                                 "availableFrom": 1540218932000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [4, 2, 1]
+                          "position": [
+                            4,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "71542044",
@@ -179,7 +230,12 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "BBC"
                                 },
-                                "position": [4, 2, 2, 1]
+                                "position": [
+                                  4,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
                                 "id": "d3a0f66a",
@@ -205,32 +261,65 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    4, 2, 2, 2, 1, 1, 1
+                                                    4,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [4, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              4,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [4, 2, 2, 2, 1]
+                                      "position": [
+                                        4,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [4, 2, 2, 2]
+                                "position": [
+                                  4,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [4, 2, 2]
+                          "position": [
+                            4,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 2]
+                    "position": [
+                      4,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [4]
+              "position": [
+                4
+              ]
             },
             {
               "id": "e0fcee0a",
@@ -250,15 +339,24 @@
                             "text": "Text block after an media block.",
                             "attributes": []
                           },
-                          "position": [5, 1, 1]
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
             },
             {
               "id": "80dfed12",
@@ -289,19 +387,37 @@
                                         "text": "They may be tiny, but us humans could learn a thing or two from ants.",
                                         "attributes": []
                                       },
-                                      "position": [6, 1, 1, 1, 1]
+                                      "position": [
+                                        6,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [6, 1, 1, 1]
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [6, 1, 1]
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 1]
+                    "position": [
+                      6,
+                      1
+                    ]
                   },
                   {
                     "id": "5081b055",
@@ -327,7 +443,9 @@
                             "versions": [
                               {
                                 "versionId": "p01k6msp",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 191,
                                 "durationISO8601": "PT3M11S",
                                 "warnings": {
@@ -341,10 +459,16 @@
                                 "availableFrom": 1540218932000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [6, 2, 1]
+                          "position": [
+                            6,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "4966231f",
@@ -361,7 +485,12 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "BBC"
                                 },
-                                "position": [6, 2, 2, 1]
+                                "position": [
+                                  6,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
                                 "id": "011572b6",
@@ -387,32 +516,65 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    6, 2, 2, 2, 1, 1, 1
+                                                    6,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [6, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              6,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [6, 2, 2, 2, 1]
+                                      "position": [
+                                        6,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [6, 2, 2, 2]
+                                "position": [
+                                  6,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [6, 2, 2]
+                          "position": [
+                            6,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 2]
+                    "position": [
+                      6,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [6]
+              "position": [
+                6
+              ]
             },
             {
               "id": "bfc2e5e9",
@@ -442,19 +604,37 @@
                                         "text": "Image block after a media block",
                                         "attributes": []
                                       },
-                                      "position": [7, 1, 1, 1, 1]
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [7, 1, 1, 1]
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [7, 1, 1]
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 1]
+                    "position": [
+                      7,
+                      1
+                    ]
                   },
                   {
                     "id": "f074db45",
@@ -479,19 +659,37 @@
                                         "text": "Image after an AV block",
                                         "attributes": []
                                       },
-                                      "position": [7, 2, 1, 1, 1]
+                                      "position": [
+                                        7,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [7, 2, 1, 1]
+                                "position": [
+                                  7,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [7, 2, 1]
+                          "position": [
+                            7,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 2]
+                    "position": [
+                      7,
+                      2
+                    ]
                   },
                   {
                     "id": "d28b4522",
@@ -503,11 +701,16 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "BBC"
                     },
-                    "position": [7, 3]
+                    "position": [
+                      7,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [7]
+              "position": [
+                7
+              ]
             },
             {
               "id": "9806c8f2",
@@ -538,19 +741,37 @@
                                         "text": "They may be tiny, but us humans could learn a thing or two from ants.",
                                         "attributes": []
                                       },
-                                      "position": [8, 1, 1, 1, 1]
+                                      "position": [
+                                        8,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [8, 1, 1, 1]
+                                "position": [
+                                  8,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [8, 1, 1]
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 1]
+                    "position": [
+                      8,
+                      1
+                    ]
                   },
                   {
                     "id": "62e854b0",
@@ -576,7 +797,9 @@
                             "versions": [
                               {
                                 "versionId": "p01k6msp",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 191,
                                 "durationISO8601": "PT3M11S",
                                 "warnings": {
@@ -590,10 +813,16 @@
                                 "availableFrom": 1540218932000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [8, 2, 1]
+                          "position": [
+                            8,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "56c9da76",
@@ -610,7 +839,12 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "BBC"
                                 },
-                                "position": [8, 2, 2, 1]
+                                "position": [
+                                  8,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
                                 "id": "f034a806",
@@ -636,32 +870,65 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    8, 2, 2, 2, 1, 1, 1
+                                                    8,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [8, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              8,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [8, 2, 2, 2, 1]
+                                      "position": [
+                                        8,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [8, 2, 2, 2]
+                                "position": [
+                                  8,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [8, 2, 2]
+                          "position": [
+                            8,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 2]
+                    "position": [
+                      8,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [8]
+              "position": [
+                8
+              ]
             },
             {
               "id": "0270ddc8",
@@ -686,19 +953,33 @@
                                   "text": "Subheadline block after a media block",
                                   "attributes": []
                                 },
-                                "position": [9, 1, 1, 1]
+                                "position": [
+                                  9,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [9, 1, 1]
+                          "position": [
+                            9,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [9, 1]
+                    "position": [
+                      9,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [9]
+              "position": [
+                9
+              ]
             },
             {
               "id": "f485b8a6",
@@ -729,19 +1010,37 @@
                                         "text": "They may be tiny, but us humans could learn a thing or two from ants.",
                                         "attributes": []
                                       },
-                                      "position": [10, 1, 1, 1, 1]
+                                      "position": [
+                                        10,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [10, 1, 1, 1]
+                                "position": [
+                                  10,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [10, 1, 1]
+                          "position": [
+                            10,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [10, 1]
+                    "position": [
+                      10,
+                      1
+                    ]
                   },
                   {
                     "id": "8cf908cb",
@@ -767,7 +1066,9 @@
                             "versions": [
                               {
                                 "versionId": "p01k6msp",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 191,
                                 "durationISO8601": "PT3M11S",
                                 "warnings": {
@@ -781,10 +1082,16 @@
                                 "availableFrom": 1540218932000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [10, 2, 1]
+                          "position": [
+                            10,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "dcc1e497",
@@ -801,7 +1108,12 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "BBC"
                                 },
-                                "position": [10, 2, 2, 1]
+                                "position": [
+                                  10,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
                                 "id": "6f5339ac",
@@ -827,32 +1139,65 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    10, 2, 2, 2, 1, 1, 1
+                                                    10,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [10, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              10,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [10, 2, 2, 2, 1]
+                                      "position": [
+                                        10,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [10, 2, 2, 2]
+                                "position": [
+                                  10,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [10, 2, 2]
+                          "position": [
+                            10,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [10, 2]
+                    "position": [
+                      10,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [10]
+              "position": [
+                10
+              ]
             },
             {
               "id": "d51bb992",
@@ -883,19 +1228,37 @@
                                         "text": "They may be tiny, but us humans could learn a thing or two from ants.",
                                         "attributes": []
                                       },
-                                      "position": [11, 1, 1, 1, 1]
+                                      "position": [
+                                        11,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [11, 1, 1, 1]
+                                "position": [
+                                  11,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [11, 1, 1]
+                          "position": [
+                            11,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [11, 1]
+                    "position": [
+                      11,
+                      1
+                    ]
                   },
                   {
                     "id": "f5abe70e",
@@ -921,7 +1284,9 @@
                             "versions": [
                               {
                                 "versionId": "p01k6msp",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 191,
                                 "durationISO8601": "PT3M11S",
                                 "warnings": {
@@ -935,10 +1300,16 @@
                                 "availableFrom": 1540218932000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [11, 2, 1]
+                          "position": [
+                            11,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "bf1021b6",
@@ -955,7 +1326,12 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "BBC"
                                 },
-                                "position": [11, 2, 2, 1]
+                                "position": [
+                                  11,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
                                 "id": "dd1999b0",
@@ -981,32 +1357,65 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    11, 2, 2, 2, 1, 1, 1
+                                                    11,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [11, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              11,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [11, 2, 2, 2, 1]
+                                      "position": [
+                                        11,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [11, 2, 2, 2]
+                                "position": [
+                                  11,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [11, 2, 2]
+                          "position": [
+                            11,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [11, 2]
+                    "position": [
+                      11,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [11]
+              "position": [
+                11
+              ]
             },
             {
               "id": "cdbea0ad",
@@ -1026,34 +1435,46 @@
                             "text": "Above is two media blocks one after the other.",
                             "attributes": []
                           },
-                          "position": [12, 1, 1]
+                          "position": [
+                            12,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [12, 1]
+                    "position": [
+                      12,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [12]
+              "position": [
+                12
+              ]
             },
-            { "id": "b2d64efe", "type": "mpu", "model": {}, "position": [13] }
+            {
+              "id": "b2d64efe",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                13
+              ]
+            }
           ]
         }
       },
       "metadata": {
         "id": "urn:bbc:ares::article:cjn0qpz3jjvo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cjn0qpz3jjvo",
-          "canonicalUrl": "https://www.bbc.com/news/articles/cjn0qpz3jjvo"
+          "optimoUrn": "urn:bbc:optimo:asset:cjn0qpz3jjvo"
         },
         "type": "article",
         "createdBy": "News",
         "language": "en-gb",
-        "lastUpdated": 1645661829925,
         "firstPublished": 1571146595887,
         "lastPublished": 1571149356325,
-        "timestamp": 1571149356325,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cjn0qpz3jjvo",
           "producer": "News",
@@ -1062,12 +1483,8 @@
         "passport": {
           "language": "en-gb",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
-          "locator": "urn:bbc:optimo:asset:cjn0qpz3jjvo",
-          "availability": "AVAILABLE",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.0",
         "blockTypes": [
           "headline",
           "text",
@@ -1081,37 +1498,12 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cjn0qpz3jjvo",
-          "canonicalUrl": "https://www.bbc.com/news/articles/cjn0qpz3jjvo"
-        },
-        "timestamp": 1571149356325,
-        "suitableForSyndication": false,
-        "language": "en-gb",
-        "headlines": { "seoHeadline": "AV test article " },
-        "images": {},
-        "passport": {
-          "language": "en-gb",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
-          "locator": "urn:bbc:optimo:asset:cjn0qpz3jjvo",
-          "availability": "AVAILABLE",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:cjn0qpz3jjvo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "News",
-          "uri": "/news",
-          "type": "simple"
-        },
-        "groups": []
+        "headlines": {
+          "seoHeadline": "AV test article "
+        }
       }
     },
     "secondaryData": {
@@ -1133,7 +1525,12 @@
           "byline": {
             "name": "By Sarah Collerton",
             "title": "BBC News",
-            "persons": [{ "name": "Sarah Collerton", "function": "BBC News" }]
+            "persons": [
+              {
+                "name": "Sarah Collerton",
+                "function": "BBC News"
+              }
+            ]
           },
           "cpsType": "STY",
           "indexImage": {
@@ -1164,7 +1561,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Angela Lansbury 1925 - 2022" },
+          "headlines": {
+            "headline": "Angela Lansbury 1925 - 2022"
+          },
           "locators": {
             "assetUri": "/news/23531477",
             "curieCpsUrn": "urn:bbc:cps:curie:asset:acab4bbb-ff5a-499b-8617-b8fa24d5e088",
@@ -1371,7 +1770,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Lego Titanic sunk" },
+          "headlines": {
+            "headline": "Lego Titanic sunk"
+          },
           "locators": {
             "assetUri": "/news/business-23481281",
             "curieCpsUrn": "urn:bbc:cps:curie:asset:06cb5998-373d-41ea-b249-6aec87d3329b",
@@ -1491,7 +1892,12 @@
           "byline": {
             "name": "By Sian Prescott",
             "title": "BBC News",
-            "persons": [{ "name": "Sian Prescott", "function": "BBC News" }]
+            "persons": [
+              {
+                "name": "Sian Prescott",
+                "function": "BBC News"
+              }
+            ]
           },
           "cpsType": "STY",
           "indexImage": {
@@ -1551,7 +1957,10 @@
                 "name": "By Benjamen Walker",
                 "title": "BBC World Service",
                 "persons": [
-                  { "name": "Benjamen Walker", "function": "BBC World Service" }
+                  {
+                    "name": "Benjamen Walker",
+                    "function": "BBC World Service"
+                  }
                 ]
               },
               "indexImage": {
@@ -1771,7 +2180,10 @@
                 "name": "By Cindy Sui",
                 "title": "BBC News, Taipei",
                 "persons": [
-                  { "name": "Cindy Sui", "function": "BBC News, Taipei" }
+                  {
+                    "name": "Cindy Sui",
+                    "function": "BBC News, Taipei"
+                  }
                 ]
               },
               "indexImage": {
@@ -2133,7 +2545,10 @@
                       "thingLabel": "Design and Technology",
                       "thingUri": "http://www.bbc.co.uk/things/add89d72-af77-4490-b479-25fd45bb5e72#id",
                       "thingId": "add89d72-af77-4490-b479-25fd45bb5e72",
-                      "thingType": ["core:Thing", "tagging:TagConcept"],
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/education/subjects/zykw2hv#field-of-study"
                       ],
@@ -2226,7 +2641,12 @@
               "byline": {
                 "name": "By Will Grant",
                 "title": "BBC News, Mexico",
-                "persons": [{ "name": "Will Grant", "function": "BBC News" }]
+                "persons": [
+                  {
+                    "name": "Will Grant",
+                    "function": "BBC News"
+                  }
+                ]
               },
               "passport": {
                 "category": {
@@ -2286,7 +2706,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
