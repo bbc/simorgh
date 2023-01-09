@@ -10,14 +10,10 @@ import {
 import { RequestContext } from '#contexts/RequestContext';
 import { GridItemMedium } from '#components/Grid';
 import { socialEmbedBlockPropTypes } from '#models/propTypes/socialEmbed';
-import nodeLogger from '#lib/logger.node';
-import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import createTranslations from './common/translations';
 import { LAZYLOAD_OFFSET, Wrapper } from './common/styles';
 import { getProviderFromSource, getIdFromSource } from './sourceHelpers';
-
-const logger = nodeLogger(__filename);
 
 const SocialEmbedContainer = ({ blocks, source }) => {
   const { isAmp } = useContext(RequestContext);
@@ -53,11 +49,6 @@ const SocialEmbedContainer = ({ blocks, source }) => {
         ? `end-of-%provider%-content-${oEmbedPosition}`
         : `end-of-%provider%-content`,
   };
-
-  logger.info(SOCIAL_EMBED_RENDERED, {
-    provider,
-    href: source,
-  });
 
   return (
     <GridItemMedium>

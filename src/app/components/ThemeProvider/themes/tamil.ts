@@ -3,6 +3,7 @@ import tamilScript from '../fontScripts/tamil';
 import { NOTO_SANS_TAMIL_BOLD, NOTO_SANS_TAMIL_REGULAR } from '../fontFaces';
 import tamilFontVariants from '../fontVariants/tamil';
 import withThemeProvider from '../withThemeProvider';
+import brandSVG from '../chameleonLogos/tamil';
 
 const tamilTheme = {
   palette: {
@@ -17,6 +18,7 @@ const tamilTheme = {
     fontVariants: tamilFontVariants,
     fontFaces: [NOTO_SANS_TAMIL_BOLD, NOTO_SANS_TAMIL_REGULAR],
   },
+  brandSVG,
 };
 
 export default withThemeProvider(tamilTheme);
