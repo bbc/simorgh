@@ -5,7 +5,6 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import burmese from '../../../components/ThemeProvider/fontScripts/burmese';
-import brandSVG from '../../chameleonLogos/burmese';
 import '#psammead/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/my';
@@ -294,7 +293,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'ထိပ်တန်း သတင်းများ',
       featuresAnalysisTitle: 'ဆောင်းပါး',
     },
-    brandSVG,
     mostRead: {
       header: 'အဖတ်အများဆုံး',
       lastUpdated: 'နောက်ဆုံးအသစ်တင်ချိန်:',

@@ -5,7 +5,6 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import brandSVG from '../../chameleonLogos/somali';
 import '#psammead/moment-timezone-include/tz/Africa/Mogadishu';
 import '#psammead/psammead-locales/moment/so';
 import withContext from '../../../contexts/utils/withContext';
@@ -272,7 +271,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'Wararka ugu waaweyn',
       featuresAnalysisTitle: 'Xul',
     },
-    brandSVG,
     mostRead: {
       header: 'Ugu akhris badan',
       lastUpdated: 'Markii ugu dambeysay ee la cusbooneysiiyay:',
