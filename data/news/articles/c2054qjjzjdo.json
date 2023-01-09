@@ -27,19 +27,33 @@
                                   "text": "Test in-line blocks",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "d0a38c42",
@@ -48,7 +62,9 @@
                 "firstPublished": 1574263957594,
                 "lastPublished": 1574263957594
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "2896c9b9",
@@ -68,7 +84,11 @@
                             "text": "Lots of text in one language followed by text ",
                             "attributes": []
                           },
-                          "position": [3, 1, 1]
+                          "position": [
+                            3,
+                            1,
+                            1
+                          ]
                         },
                         {
                           "id": "38b4aaaf",
@@ -83,12 +103,21 @@
                                   "text": "texte dans une autre langue",
                                   "attributes": []
                                 },
-                                "position": [3, 1, 2, 1]
+                                "position": [
+                                  3,
+                                  1,
+                                  2,
+                                  1
+                                ]
                               }
                             ],
                             "language": "fr"
                           },
-                          "position": [3, 1, 2]
+                          "position": [
+                            3,
+                            1,
+                            2
+                          ]
                         },
                         {
                           "id": "b5e44cd3",
@@ -97,11 +126,18 @@
                             "text": ". That's called an inline block.",
                             "attributes": []
                           },
-                          "position": [3, 1, 3]
+                          "position": [
+                            3,
+                            1,
+                            3
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 1]
+                    "position": [
+                      3,
+                      1
+                    ]
                   },
                   {
                     "id": "0f392f76",
@@ -116,7 +152,11 @@
                             "text": "And look, here's another inline block: ",
                             "attributes": []
                           },
-                          "position": [3, 2, 1]
+                          "position": [
+                            3,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "28b65e63",
@@ -131,12 +171,21 @@
                                   "text": "چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟",
                                   "attributes": []
                                 },
-                                "position": [3, 2, 2, 1]
+                                "position": [
+                                  3,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               }
                             ],
                             "language": "fa"
                           },
-                          "position": [3, 2, 2]
+                          "position": [
+                            3,
+                            2,
+                            2
+                          ]
                         },
                         {
                           "id": "af7f24df",
@@ -145,11 +194,18 @@
                             "text": " This time, the inline block was in Arabic.\n\n",
                             "attributes": []
                           },
-                          "position": [3, 2, 3]
+                          "position": [
+                            3,
+                            2,
+                            3
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 2]
+                    "position": [
+                      3,
+                      2
+                    ]
                   },
                   {
                     "id": "9fce3154",
@@ -160,16 +216,28 @@
                         {
                           "id": "39298aea",
                           "type": "fragment",
-                          "model": { "text": "\n\n", "attributes": [] },
-                          "position": [3, 3, 1]
+                          "model": {
+                            "text": "\n\n",
+                            "attributes": []
+                          },
+                          "position": [
+                            3,
+                            3,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 3]
+                    "position": [
+                      3,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
             {
               "id": "1ad31b75",
@@ -199,7 +267,13 @@
                                         "text": "This image caption has an inline block: ",
                                         "attributes": []
                                       },
-                                      "position": [4, 1, 1, 1, 1]
+                                      "position": [
+                                        4,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     },
                                     {
                                       "id": "18504e05",
@@ -214,12 +288,25 @@
                                               "text": "هذا هو كتلة مضمنة",
                                               "attributes": []
                                             },
-                                            "position": [4, 1, 1, 1, 2, 1]
+                                            "position": [
+                                              4,
+                                              1,
+                                              1,
+                                              1,
+                                              2,
+                                              1
+                                            ]
                                           }
                                         ],
                                         "language": "ar"
                                       },
-                                      "position": [4, 1, 1, 1, 2]
+                                      "position": [
+                                        4,
+                                        1,
+                                        1,
+                                        1,
+                                        2
+                                      ]
                                     },
                                     {
                                       "id": "94a03492",
@@ -228,19 +315,37 @@
                                         "text": ". See, what a lovely inline block.\n",
                                         "attributes": []
                                       },
-                                      "position": [4, 1, 1, 1, 3]
+                                      "position": [
+                                        4,
+                                        1,
+                                        1,
+                                        1,
+                                        3
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [4, 1, 1, 1]
+                                "position": [
+                                  4,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [4, 1, 1]
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 1]
+                    "position": [
+                      4,
+                      1
+                    ]
                   },
                   {
                     "id": "93123d97",
@@ -265,19 +370,37 @@
                                         "text": "Europe",
                                         "attributes": []
                                       },
-                                      "position": [4, 2, 1, 1, 1]
+                                      "position": [
+                                        4,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [4, 2, 1, 1]
+                                "position": [
+                                  4,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [4, 2, 1]
+                          "position": [
+                            4,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 2]
+                    "position": [
+                      4,
+                      2
+                    ]
                   },
                   {
                     "id": "78d81a8d",
@@ -289,11 +412,16 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "BBC"
                     },
-                    "position": [4, 3]
+                    "position": [
+                      4,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [4]
+              "position": [
+                4
+              ]
             },
             {
               "id": "cc09406e",
@@ -324,7 +452,13 @@
                                         "text": "This is a media block caption. It also has an inline block: ",
                                         "attributes": []
                                       },
-                                      "position": [5, 1, 1, 1, 1]
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     },
                                     {
                                       "id": "f0442870",
@@ -339,12 +473,25 @@
                                               "text": "هذا هو كتلة مضمنة",
                                               "attributes": []
                                             },
-                                            "position": [5, 1, 1, 1, 2, 1]
+                                            "position": [
+                                              5,
+                                              1,
+                                              1,
+                                              1,
+                                              2,
+                                              1
+                                            ]
                                           }
                                         ],
                                         "language": "ar"
                                       },
-                                      "position": [5, 1, 1, 1, 2]
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        2
+                                      ]
                                     },
                                     {
                                       "id": "34d2f7c3",
@@ -353,19 +500,37 @@
                                         "text": ". See, what a lovely inline block.",
                                         "attributes": []
                                       },
-                                      "position": [5, 1, 1, 1, 3]
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        3
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 1, 1, 1]
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 1, 1]
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   },
                   {
                     "id": "0e7cb83e",
@@ -391,7 +556,9 @@
                             "versions": [
                               {
                                 "versionId": "p01k6msp",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 191,
                                 "durationISO8601": "PT3M11S",
                                 "warnings": {
@@ -405,10 +572,16 @@
                                 "availableFrom": 1540218932000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [5, 2, 1]
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "6def25d8",
@@ -425,7 +598,12 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "BBC"
                                 },
-                                "position": [5, 2, 2, 1]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
                                 "id": "d02ff1ef",
@@ -451,32 +629,65 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    5, 2, 2, 2, 1, 1, 1
+                                                    5,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [5, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              5,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [5, 2, 2, 2, 1]
+                                      "position": [
+                                        5,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 2, 2, 2]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 2, 2]
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 2]
+                    "position": [
+                      5,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
             },
             {
               "id": "f5431964",
@@ -506,7 +717,13 @@
                                         "text": "Oh my gosh! Another image caption with an ",
                                         "attributes": []
                                       },
-                                      "position": [6, 1, 1, 1, 1]
+                                      "position": [
+                                        6,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     },
                                     {
                                       "id": "5dbd80fe",
@@ -521,12 +738,25 @@
                                               "text": "bloc en ligne",
                                               "attributes": []
                                             },
-                                            "position": [6, 1, 1, 1, 2, 1]
+                                            "position": [
+                                              6,
+                                              1,
+                                              1,
+                                              1,
+                                              2,
+                                              1
+                                            ]
                                           }
                                         ],
                                         "language": "fr"
                                       },
-                                      "position": [6, 1, 1, 1, 2]
+                                      "position": [
+                                        6,
+                                        1,
+                                        1,
+                                        1,
+                                        2
+                                      ]
                                     },
                                     {
                                       "id": "98a3f08f",
@@ -535,19 +765,37 @@
                                         "text": ". In French this time.",
                                         "attributes": []
                                       },
-                                      "position": [6, 1, 1, 1, 3]
+                                      "position": [
+                                        6,
+                                        1,
+                                        1,
+                                        1,
+                                        3
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [6, 1, 1, 1]
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [6, 1, 1]
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 1]
+                    "position": [
+                      6,
+                      1
+                    ]
                   },
                   {
                     "id": "e84485bb",
@@ -572,19 +820,37 @@
                                         "text": "Map",
                                         "attributes": []
                                       },
-                                      "position": [6, 2, 1, 1, 1]
+                                      "position": [
+                                        6,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [6, 2, 1, 1]
+                                "position": [
+                                  6,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [6, 2, 1]
+                          "position": [
+                            6,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 2]
+                    "position": [
+                      6,
+                      2
+                    ]
                   },
                   {
                     "id": "eb12f3d7",
@@ -596,30 +862,38 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "BBC"
                     },
-                    "position": [6, 3]
+                    "position": [
+                      6,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [6]
+              "position": [
+                6
+              ]
             },
-            { "id": "d0f9a787", "type": "mpu", "model": {}, "position": [7] }
+            {
+              "id": "d0f9a787",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                7
+              ]
+            }
           ]
         }
       },
       "metadata": {
         "id": "urn:bbc:ares::article:c2054qjjzjdo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c2054qjjzjdo",
-          "canonicalUrl": "https://www.bbc.com/news/articles/c2054qjjzjdo"
+          "optimoUrn": "urn:bbc:optimo:asset:c2054qjjzjdo"
         },
         "type": "article",
         "createdBy": "News",
         "language": "en-gb",
-        "lastUpdated": 1645661830046,
         "firstPublished": 1574263957594,
         "lastPublished": 1574263957594,
-        "timestamp": 1574263957594,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c2054qjjzjdo",
           "producer": "News",
@@ -628,12 +902,8 @@
         "passport": {
           "language": "en-gb",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
-          "locator": "urn:bbc:optimo:asset:c2054qjjzjdo",
-          "availability": "AVAILABLE",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.0",
         "blockTypes": [
           "headline",
           "text",
@@ -647,37 +917,12 @@
           "video",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c2054qjjzjdo",
-          "canonicalUrl": "https://www.bbc.com/news/articles/c2054qjjzjdo"
-        },
-        "timestamp": 1574263957594,
-        "suitableForSyndication": false,
-        "language": "en-gb",
-        "headlines": { "seoHeadline": "Test in-line blocks" },
-        "images": {},
-        "passport": {
-          "language": "en-gb",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
-          "locator": "urn:bbc:optimo:asset:c2054qjjzjdo",
-          "availability": "AVAILABLE",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c2054qjjzjdo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "News",
-          "uri": "/news",
-          "type": "simple"
-        },
-        "groups": []
+        "headlines": {
+          "seoHeadline": "Test in-line blocks"
+        }
       }
     },
     "secondaryData": {
@@ -699,7 +944,12 @@
           "byline": {
             "name": "By Sarah Collerton",
             "title": "BBC News",
-            "persons": [{ "name": "Sarah Collerton", "function": "BBC News" }]
+            "persons": [
+              {
+                "name": "Sarah Collerton",
+                "function": "BBC News"
+              }
+            ]
           },
           "cpsType": "STY",
           "indexImage": {
@@ -730,7 +980,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Angela Lansbury 1925 - 2022" },
+          "headlines": {
+            "headline": "Angela Lansbury 1925 - 2022"
+          },
           "locators": {
             "assetUri": "/news/23531477",
             "curieCpsUrn": "urn:bbc:cps:curie:asset:acab4bbb-ff5a-499b-8617-b8fa24d5e088",
@@ -937,7 +1189,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Lego Titanic sunk" },
+          "headlines": {
+            "headline": "Lego Titanic sunk"
+          },
           "locators": {
             "assetUri": "/news/business-23481281",
             "curieCpsUrn": "urn:bbc:cps:curie:asset:06cb5998-373d-41ea-b249-6aec87d3329b",
@@ -1057,7 +1311,12 @@
           "byline": {
             "name": "By Sian Prescott",
             "title": "BBC News",
-            "persons": [{ "name": "Sian Prescott", "function": "BBC News" }]
+            "persons": [
+              {
+                "name": "Sian Prescott",
+                "function": "BBC News"
+              }
+            ]
           },
           "cpsType": "STY",
           "indexImage": {
@@ -1117,7 +1376,10 @@
                 "name": "By Benjamen Walker",
                 "title": "BBC World Service",
                 "persons": [
-                  { "name": "Benjamen Walker", "function": "BBC World Service" }
+                  {
+                    "name": "Benjamen Walker",
+                    "function": "BBC World Service"
+                  }
                 ]
               },
               "indexImage": {
@@ -1337,7 +1599,10 @@
                 "name": "By Cindy Sui",
                 "title": "BBC News, Taipei",
                 "persons": [
-                  { "name": "Cindy Sui", "function": "BBC News, Taipei" }
+                  {
+                    "name": "Cindy Sui",
+                    "function": "BBC News, Taipei"
+                  }
                 ]
               },
               "indexImage": {
@@ -1699,7 +1964,10 @@
                       "thingLabel": "Design and Technology",
                       "thingUri": "http://www.bbc.co.uk/things/add89d72-af77-4490-b479-25fd45bb5e72#id",
                       "thingId": "add89d72-af77-4490-b479-25fd45bb5e72",
-                      "thingType": ["core:Thing", "tagging:TagConcept"],
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/education/subjects/zykw2hv#field-of-study"
                       ],
@@ -1792,7 +2060,12 @@
               "byline": {
                 "name": "By Will Grant",
                 "title": "BBC News, Mexico",
-                "persons": [{ "name": "Will Grant", "function": "BBC News" }]
+                "persons": [
+                  {
+                    "name": "Will Grant",
+                    "function": "BBC News"
+                  }
+                ]
               },
               "passport": {
                 "category": {
@@ -1852,7 +2125,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",

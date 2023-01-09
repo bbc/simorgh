@@ -27,19 +27,33 @@
                                   "text": "Article with anchors",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "f1112e50",
@@ -48,7 +62,9 @@
                 "firstPublished": 1620147687728,
                 "lastPublished": 1620147687728
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "110a3816",
@@ -72,19 +88,33 @@
                                 "type": "fragment",
                                 "model": {
                                   "text": "Anchor 1",
-                                  "attributes": ["bold"]
+                                  "attributes": [
+                                    "bold"
+                                  ]
                                 },
-                                "position": [3, 1, 1, 1]
+                                "position": [
+                                  3,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ],
                             "locator": "https://www.test.bbc.com/mundo/articles/ce4krqk1334o#Anchor-1",
                             "isExternal": false
                           },
-                          "position": [3, 1, 1]
+                          "position": [
+                            3,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 1]
+                    "position": [
+                      3,
+                      1
+                    ]
                   },
                   {
                     "id": "8b56993b",
@@ -105,17 +135,29 @@
                                   "text": "Anchor 2",
                                   "attributes": []
                                 },
-                                "position": [3, 2, 1, 1]
+                                "position": [
+                                  3,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ],
                             "locator": "https://www.test.bbc.com/mundo/articles/ce4krqk1334o#Anchor-2",
                             "isExternal": false
                           },
-                          "position": [3, 2, 1]
+                          "position": [
+                            3,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 2]
+                    "position": [
+                      3,
+                      2
+                    ]
                   },
                   {
                     "id": "593b9f15",
@@ -136,21 +178,35 @@
                                   "text": "Anchor 3",
                                   "attributes": []
                                 },
-                                "position": [3, 3, 1, 1]
+                                "position": [
+                                  3,
+                                  3,
+                                  1,
+                                  1
+                                ]
                               }
                             ],
                             "locator": "https://www.test.bbc.com/mundo/articles/ce4krqk1334o#Anchor-3",
                             "isExternal": false
                           },
-                          "position": [3, 3, 1]
+                          "position": [
+                            3,
+                            3,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 3]
+                    "position": [
+                      3,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
             {
               "id": "f0a45acc",
@@ -175,19 +231,33 @@
                                   "text": "Anchor 1",
                                   "attributes": []
                                 },
-                                "position": [4, 1, 1, 1]
+                                "position": [
+                                  4,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [4, 1, 1]
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 1]
+                    "position": [
+                      4,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [4]
+              "position": [
+                4
+              ]
             },
             {
               "id": "57b38ccc",
@@ -207,17 +277,33 @@
                             "text": "Fruitcake wafer dragée caramels chupa chups gummi bears. Soufflé pudding donut chocolate cake. Lollipop brownie oat cake. Chocolate donut bear claw fruitcake dragée marshmallow tootsie roll jelly beans.",
                             "attributes": []
                           },
-                          "position": [5, 1, 1]
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
             },
-            { "id": "00f4ce94", "type": "mpu", "model": {}, "position": [6] },
+            {
+              "id": "00f4ce94",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                6
+              ]
+            },
             {
               "id": "17438609",
               "type": "text",
@@ -236,15 +322,24 @@
                             "text": "Tart cheesecake macaroon. Tootsie roll ice cream lemon drops. Wafer icing bear claw dragée.",
                             "attributes": []
                           },
-                          "position": [7, 1, 1]
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 1]
+                    "position": [
+                      7,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [7]
+              "position": [
+                7
+              ]
             },
             {
               "id": "4081da38",
@@ -269,19 +364,33 @@
                                   "text": "Anchor 2",
                                   "attributes": []
                                 },
-                                "position": [8, 1, 1, 1]
+                                "position": [
+                                  8,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [8, 1, 1]
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 1]
+                    "position": [
+                      8,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [8]
+              "position": [
+                8
+              ]
             },
             {
               "id": "56236b8d",
@@ -301,11 +410,18 @@
                             "text": "Fruitcake wafer dragée caramels chupa chups gummi bears. Soufflé pudding donut chocolate cake. Lollipop brownie oat cake. Chocolate donut bear claw fruitcake dragée marshmallow tootsie roll jelly beans.",
                             "attributes": []
                           },
-                          "position": [9, 1, 1]
+                          "position": [
+                            9,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [9, 1]
+                    "position": [
+                      9,
+                      1
+                    ]
                   },
                   {
                     "id": "7d8d20f4",
@@ -320,15 +436,24 @@
                             "text": "Tart cheesecake macaroon. Tootsie roll ice cream lemon drops. Wafer icing bear claw dragée.",
                             "attributes": []
                           },
-                          "position": [9, 2, 1]
+                          "position": [
+                            9,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [9, 2]
+                    "position": [
+                      9,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [9]
+              "position": [
+                9
+              ]
             },
             {
               "id": "e628fa55",
@@ -353,19 +478,33 @@
                                   "text": "Anchor 3",
                                   "attributes": []
                                 },
-                                "position": [10, 1, 1, 1]
+                                "position": [
+                                  10,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [10, 1, 1]
+                          "position": [
+                            10,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [10, 1]
+                    "position": [
+                      10,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [10]
+              "position": [
+                10
+              ]
             },
             {
               "id": "cad65fb0",
@@ -385,11 +524,18 @@
                             "text": "Fruitcake wafer dragée caramels chupa chups gummi bears. Soufflé pudding donut chocolate cake. Lollipop brownie oat cake. Chocolate donut bear claw fruitcake dragée marshmallow tootsie roll jelly beans.",
                             "attributes": []
                           },
-                          "position": [11, 1, 1]
+                          "position": [
+                            11,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [11, 1]
+                    "position": [
+                      11,
+                      1
+                    ]
                   },
                   {
                     "id": "fd74fd61",
@@ -404,11 +550,18 @@
                             "text": "Tart cheesecake macaroon. Tootsie roll ice cream lemon drops. Wafer icing bear claw dragée.",
                             "attributes": []
                           },
-                          "position": [11, 2, 1]
+                          "position": [
+                            11,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [11, 2]
+                    "position": [
+                      11,
+                      2
+                    ]
                   },
                   {
                     "id": "f5e12b10",
@@ -429,21 +582,35 @@
                                   "text": "Back to top",
                                   "attributes": []
                                 },
-                                "position": [11, 3, 1, 1]
+                                "position": [
+                                  11,
+                                  3,
+                                  1,
+                                  1
+                                ]
                               }
                             ],
                             "locator": "https://www.test.bbc.com/mundo/articles/ce4krqk1334o#content",
                             "isExternal": false
                           },
-                          "position": [11, 3, 1]
+                          "position": [
+                            11,
+                            3,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [11, 3]
+                    "position": [
+                      11,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [11]
+              "position": [
+                11
+              ]
             }
           ]
         }
@@ -451,17 +618,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:ce4krqk1334o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:ce4krqk1334o",
-          "canonicalUrl": "https://www.bbc.com/mundo/articles/ce4krqk1334o"
+          "optimoUrn": "urn:bbc:optimo:asset:ce4krqk1334o"
         },
         "type": "article",
         "createdBy": "Mundo",
         "language": "es",
-        "lastUpdated": 1645643783184,
         "firstPublished": 1620147687728,
         "lastPublished": 1620147687728,
-        "timestamp": 1620147687728,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:ce4krqk1334o",
           "producer": "Mundo",
@@ -470,14 +633,8 @@
         "passport": {
           "language": "es",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
-          "locator": "urn:bbc:optimo:asset:ce4krqk1334o",
-          "availability": "AVAILABLE",
-          "taggings": [],
-          "schemaVersion": "1.2.0",
-          "publishedState": "PUBLISHED"
+          "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.7",
         "blockTypes": [
           "headline",
           "text",
@@ -486,18 +643,9 @@
           "urlLink",
           "subheadline"
         ],
-        "suitableForSyndication": true,
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:ce4krqk1334o",
-          "canonicalUrl": "https://www.bbc.com/mundo/articles/ce4krqk1334o"
-        },
-        "timestamp": 1620147687728,
-        "suitableForSyndication": true,
-        "language": "es",
         "headlines": {
           "seoHeadline": "Article with anchors",
           "promoHeadline": {
@@ -527,7 +675,6 @@
             ]
           }
         },
-        "images": {},
         "summary": {
           "blocks": [
             {
@@ -553,27 +700,7 @@
               }
             }
           ]
-        },
-        "passport": {
-          "language": "es",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
-          "locator": "urn:bbc:optimo:asset:ce4krqk1334o",
-          "availability": "AVAILABLE",
-          "taggings": [],
-          "schemaVersion": "1.2.0",
-          "publishedState": "PUBLISHED"
-        },
-        "id": "urn:bbc:ares::article:ce4krqk1334o",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Mundo",
-          "uri": "/mundo",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {
@@ -606,7 +733,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -661,7 +791,9 @@
             "subType": "clip",
             "format": "audio",
             "title": "CPS Audio clip",
-            "synopses": { "short": "Please do not edit this asset" },
+            "synopses": {
+              "short": "Please do not edit this asset"
+            },
             "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01hnn31.jpg",
             "embedding": true,
             "advertising": true,
@@ -669,11 +801,16 @@
             "versions": [
               {
                 "versionId": "p01hnn2d",
-                "types": ["Original"],
+                "types": [
+                  "Original"
+                ],
                 "duration": 16,
                 "durationISO8601": "PT16S",
                 "warnings": {},
-                "availableTerritories": { "uk": true, "nonUk": true },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
                 "availableFrom": 1526050744000
               }
             ],
@@ -692,7 +829,10 @@
             "copyrightHolder": "Alamy",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -730,7 +870,10 @@
             "name": "Aled Scourfield",
             "title": "BBC News, Wales",
             "persons": [
-              { "name": "Aled Scourfield", "function": "BBC News, Wales" }
+              {
+                "name": "Aled Scourfield",
+                "function": "BBC News, Wales"
+              }
             ]
           },
           "cpsType": "STY",
@@ -747,7 +890,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:mundo/internacional-23038380",
           "type": "cps"
         },
@@ -770,7 +916,10 @@
             "name": "Aled Scourfield",
             "title": "BBC News, Wales",
             "persons": [
-              { "name": "Aled Scourfield", "function": "BBC News, Wales" }
+              {
+                "name": "Aled Scourfield",
+                "function": "BBC News, Wales"
+              }
             ]
           },
           "cpsType": "STY",
@@ -786,7 +935,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:mundo/vert-cap-23038373",
           "type": "cps"
         }
@@ -929,7 +1081,10 @@
                       "thingLabel": "News report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -950,7 +1105,9 @@
                         "tagging:TagConcept",
                         "tagging:Genre"
                       ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Health"],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Health"
+                      ],
                       "thingEnglishLabel": "Health",
                       "type": "about"
                     }
@@ -1232,7 +1389,10 @@
                 "name": "Aled Scourfield",
                 "title": "BBC News, Wales",
                 "persons": [
-                  { "name": "Aled Scourfield", "function": "BBC News, Wales" }
+                  {
+                    "name": "Aled Scourfield",
+                    "function": "BBC News, Wales"
+                  }
                 ]
               },
               "passport": {
@@ -1323,7 +1483,12 @@
               "byline": {
                 "name": "BBC Reporter",
                 "title": "Damascus",
-                "persons": [{ "name": "BBC Reporter", "function": "Damascus" }]
+                "persons": [
+                  {
+                    "name": "BBC Reporter",
+                    "function": "Damascus"
+                  }
+                ]
               },
               "indexImage": {
                 "id": "63487915",
@@ -1457,7 +1622,10 @@
                 "name": "Aled Scourfield",
                 "title": "BBC News, Wales",
                 "persons": [
-                  { "name": "Aled Scourfield", "function": "BBC News, Wales" }
+                  {
+                    "name": "Aled Scourfield",
+                    "function": "BBC News, Wales"
+                  }
                 ]
               },
               "passport": {
@@ -1505,7 +1673,10 @@
                 "name": "Stefania  Gozzer",
                 "title": "Reportera",
                 "persons": [
-                  { "name": "Stefania Gozzer", "function": "Reportera" }
+                  {
+                    "name": "Stefania Gozzer",
+                    "function": "Reportera"
+                  }
                 ]
               },
               "passport": {
@@ -1646,7 +1817,10 @@
                 "name": "Aled Scourfield",
                 "title": "BBC News, Wales",
                 "persons": [
-                  { "name": "Aled Scourfield", "function": "BBC News, Wales" }
+                  {
+                    "name": "Aled Scourfield",
+                    "function": "BBC News, Wales"
+                  }
                 ]
               },
               "passport": {

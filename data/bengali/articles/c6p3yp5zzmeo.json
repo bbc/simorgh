@@ -27,19 +27,33 @@
                                   "text": "এটি এই পরীক্ষার নিবন্ধটির শিরোনাম",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "d5c45493",
@@ -69,19 +83,37 @@
                                         "text": "এই পরীক্ষার চিত্র, কপিরাইট বিবিসি, ফ্রান্সের মানচিত্র দেখায়। চিত্রটি প্রথম তিনটি ব্লকের মধ্যে রয়েছে এবং এতে ক্যাপশন রয়েছে।\n",
                                         "attributes": []
                                       },
-                                      "position": [2, 1, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 1]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 1, 1]
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 1]
+                    "position": [
+                      2,
+                      1
+                    ]
                   },
                   {
                     "id": "9bae2093",
@@ -106,19 +138,37 @@
                                         "text": "এই পরীক্ষার চিত্র, কপিরাইট বিবিসি, ফ্রান্সের মানচিত্র দেখায়। চিত্রটি প্রথম তিনটি ব্লকের মধ্যে রয়েছে এবং এতে ক্যাপশন রয়েছে।",
                                         "attributes": []
                                       },
-                                      "position": [2, 2, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 2, 1, 1]
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 2, 1]
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 2]
+                    "position": [
+                      2,
+                      2
+                    ]
                   },
                   {
                     "id": "e1bee75d",
@@ -130,11 +180,16 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "BBC"
                     },
-                    "position": [2, 3]
+                    "position": [
+                      2,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "14412ac1",
@@ -143,7 +198,9 @@
                 "firstPublished": 1562942411695,
                 "lastPublished": 1562942411695
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
             {
               "id": "3f891c5d",
@@ -163,7 +220,11 @@
                             "text": "এটি একটি পাঠ্য ব্লক, এতে বিবিসি আবহাওয়ার হোমপেজে একটি ইউআরএল ",
                             "attributes": []
                           },
-                          "position": [4, 1, 1]
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
                         },
                         {
                           "id": "f1d06b00",
@@ -178,21 +239,35 @@
                                   "text": "লিঙ্ক রয়েছে।",
                                   "attributes": []
                                 },
-                                "position": [4, 1, 2, 1]
+                                "position": [
+                                  4,
+                                  1,
+                                  2,
+                                  1
+                                ]
                               }
                             ],
                             "locator": "https://www.bbc.co.uk/weather",
                             "isExternal": false
                           },
-                          "position": [4, 1, 2]
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 1]
+                    "position": [
+                      4,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [4]
+              "position": [
+                4
+              ]
             },
             {
               "id": "7366ff1b",
@@ -223,19 +298,37 @@
                                         "text": "এটি একটি ভিডিওযুক্ত একটি ভিডিও ব্লক",
                                         "attributes": []
                                       },
-                                      "position": [5, 1, 1, 1, 1]
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 1, 1, 1]
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 1, 1]
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   },
                   {
                     "id": "75134c73",
@@ -251,14 +344,18 @@
                             "subType": "clip",
                             "format": "audio_video",
                             "title": "Test asset with square image",
-                            "synopses": { "short": "test asset" },
+                            "synopses": {
+                              "short": "test asset"
+                            },
                             "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p019qd93.jpg",
                             "embedding": false,
                             "advertising": true,
                             "versions": [
                               {
                                 "versionId": "p019qd7k",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 16,
                                 "durationISO8601": "PT16S",
                                 "warnings": {},
@@ -269,10 +366,16 @@
                                 "availableFrom": 1493293493000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [5, 2, 1]
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "fe368b2a",
@@ -286,19 +389,33 @@
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p019qd93.jpg",
                                   "originCode": "mpv"
                                 },
-                                "position": [5, 2, 2, 1]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 2, 2]
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 2]
+                    "position": [
+                      5,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
             },
             {
               "id": "1fdf90bd",
@@ -323,19 +440,33 @@
                                   "text": "\rএটি একটি সাবহেডলাইন ব্লক",
                                   "attributes": []
                                 },
-                                "position": [6, 1, 1, 1]
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [6, 1, 1]
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 1]
+                    "position": [
+                      6,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [6]
+              "position": [
+                6
+              ]
             },
             {
               "id": "18a3f4f8",
@@ -365,19 +496,37 @@
                                         "text": "\rএটি একটি সাবহেডলাইন ব্লক",
                                         "attributes": []
                                       },
-                                      "position": [7, 1, 1, 1, 1]
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [7, 1, 1, 1]
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [7, 1, 1]
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 1]
+                    "position": [
+                      7,
+                      1
+                    ]
                   },
                   {
                     "id": "ffebece0",
@@ -389,11 +538,16 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "Getty Images"
                     },
-                    "position": [7, 2]
+                    "position": [
+                      7,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [7]
+              "position": [
+                7
+              ]
             },
             {
               "id": "821a4913",
@@ -413,34 +567,46 @@
                             "text": "এই পরীক্ষার নিবন্ধটি তৈরি করা হয়েছে যাতে আমরা আমাদের ওয়েবসাইটে পরীক্ষা চালাতে পারি।",
                             "attributes": []
                           },
-                          "position": [8, 1, 1]
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 1]
+                    "position": [
+                      8,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [8]
+              "position": [
+                8
+              ]
             },
-            { "id": "a77b0a72", "type": "mpu", "model": {}, "position": [9] }
+            {
+              "id": "a77b0a72",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            }
           ]
         }
       },
       "metadata": {
         "id": "urn:bbc:ares::article:c6p3yp5zzmeo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c6p3yp5zzmeo",
-          "canonicalUrl": "https://www.bbc.com/bengali/articles/c6p3yp5zzmeo"
+          "optimoUrn": "urn:bbc:optimo:asset:c6p3yp5zzmeo"
         },
         "type": "article",
         "createdBy": "Bengali",
         "language": "bn",
-        "lastUpdated": 1598599625727,
         "firstPublished": 1562942411695,
         "lastPublished": 1562942411695,
-        "timestamp": 1562942411695,
-        "options": {},
         "analyticsLabels": {
           "producer": "Bengali",
           "page": "bengali.articles.c6p3yp5zzmeo.page"
@@ -448,12 +614,8 @@
         "passport": {
           "language": "bn",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali",
-          "locator": "urn:bbc:optimo:asset:c6p3yp5zzmeo",
-          "availability": "AVAILABLE",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.4",
         "blockTypes": [
           "headline",
           "text",
@@ -468,45 +630,20 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c6p3yp5zzmeo",
-          "canonicalUrl": "https://www.bbc.com/bengali/articles/c6p3yp5zzmeo"
-        },
-        "timestamp": 1562942411695,
-        "suitableForSyndication": false,
-        "language": "bn",
         "headlines": {
           "seoHeadline": "ক্রিকেট বিশ্বকাপ ২০১৯: ম্যান অফ দা টুর্নামেন্টের দৌড়ে এগিয়ে কারা?"
-        },
-        "images": {},
-        "passport": {
-          "language": "bn",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali",
-          "locator": "urn:bbc:optimo:asset:c6p3yp5zzmeo",
-          "availability": "AVAILABLE",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c6p3yp5zzmeo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Bengali",
-          "uri": "/bengali",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {
       "topStories": [
         {
-          "headlines": { "headline": "faceapp craze in social media" },
+          "headlines": {
+            "headline": "faceapp craze in social media"
+          },
           "locators": {
             "assetUri": "/bengali/23244764",
             "cpsUrn": "urn:bbc:content:assetUri:bengali/23244764",
@@ -529,7 +666,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "maximum",
           "section": {
             "subType": "IDX",
@@ -579,7 +719,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "maximum",
           "section": {
             "subType": "IDX",
@@ -591,7 +734,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Missing teenager Gaia found in London" },
+          "headlines": {
+            "headline": "Missing teenager Gaia found in London"
+          },
           "locators": {
             "assetUri": "/news/uk-england-dorset-23164553",
             "cpsUrn": "urn:bbc:content:assetUri:news/uk-england-dorset-23164553",
@@ -604,7 +749,12 @@
           "byline": {
             "name": "By Faisal  Titumir",
             "title": "Broadcast Journalist",
-            "persons": [{ "name": "Faisal Titumir", "function": "BBC Bengali" }]
+            "persons": [
+              {
+                "name": "Faisal Titumir",
+                "function": "BBC Bengali"
+              }
+            ]
           },
           "passport": {
             "category": {
@@ -626,7 +776,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "maximum",
           "section": {
             "subType": "IDX",
@@ -684,7 +837,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "খবর, সর্বশেষ খবর, ব্রেকিং নিউজ, বিশ্লেষণ",
@@ -733,7 +889,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "খবর, সর্বশেষ খবর, ব্রেকিং নিউজ, বিশ্লেষণ",
@@ -782,7 +941,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "খবর, সর্বশেষ খবর, ব্রেকিং নিউজ, বিশ্লেষণ",
@@ -831,7 +993,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "খবর, সর্বশেষ খবর, ব্রেকিং নিউজ, বিশ্লেষণ",
@@ -1116,7 +1281,10 @@
             "count": 7111,
             "urn": "urn:bbc:curie:asset:2c0928b2-8e03-1f43-851b-32f426868a4e",
             "promo": {
-              "headlines": { "shortHeadline": "test", "headline": "test" },
+              "headlines": {
+                "shortHeadline": "test",
+                "headline": "test"
+              },
               "locators": {
                 "assetUri": "/news/business-23150724",
                 "cpsUrn": "urn:bbc:content:assetUri:news/business-23150724",
@@ -1369,7 +1537,10 @@
                 "name": "Qadir Kallol",
                 "title": "BBC Bengali",
                 "persons": [
-                  { "name": "Qadir Kallol", "function": "BBC Bengali" }
+                  {
+                    "name": "Qadir Kallol",
+                    "function": "BBC Bengali"
+                  }
                 ]
               },
               "indexImage": {

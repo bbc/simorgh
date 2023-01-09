@@ -1127,17 +1127,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c19v65z3lg5o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c19v65z3lg5o",
-          "canonicalUrl": "https://www.bbc.com/persian/articles/c19v65z3lg5o"
+          "optimoUrn": "urn:bbc:optimo:asset:c19v65z3lg5o"
         },
         "type": "article",
         "createdBy": "Persian",
         "language": "fa",
-        "lastUpdated": 1669738697954,
         "firstPublished": 1560347946274,
         "lastPublished": 1560347946274,
-        "timestamp": 1560347946274,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c19v65z3lg5o",
           "producer": "Persian",
@@ -1148,8 +1144,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.10",
         "blockTypes": [
           "headline",
           "text",
@@ -1166,40 +1160,15 @@
           "rawImage",
           "aresMedia"
         ],
-        "readTime": 1,
         "consumableAsSFV": false,
         "allowAdvertising": true,
         "consumableOnRedButton": false,
         "consumableOnlyOnRedButton": false
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c19v65z3lg5o",
-          "canonicalUrl": "https://www.bbc.com/persian/articles/c19v65z3lg5o"
-        },
-        "timestamp": 1560347946274,
-        "suitableForSyndication": false,
-        "language": "fa",
         "headlines": {
           "seoHeadline": "جام جهانی فوتبال زنان؛ تفاوت دستمزد با مردان چقدر است؟"
-        },
-        "images": {},
-        "passport": {
-          "language": "fa",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c19v65z3lg5o",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Persian",
-          "uri": "/persian",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {

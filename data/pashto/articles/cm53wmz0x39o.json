@@ -850,17 +850,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cm53wmz0x39o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cm53wmz0x39o",
-          "canonicalUrl": "https://www.bbc.com/pashto/articles/cm53wmz0x39o"
+          "optimoUrn": "urn:bbc:optimo:asset:cm53wmz0x39o"
         },
         "type": "article",
         "createdBy": "Pashto",
         "language": "ps",
-        "lastUpdated": 1669738483298,
         "firstPublished": 1564562095074,
         "lastPublished": 1564562095074,
-        "timestamp": 1564562095074,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cm53wmz0x39o",
           "producer": "Pashto",
@@ -871,8 +867,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Pashto",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.10",
         "blockTypes": [
           "headline",
           "text",
@@ -884,40 +878,15 @@
           "altText",
           "rawImage"
         ],
-        "readTime": 2,
         "consumableAsSFV": false,
         "allowAdvertising": true,
         "consumableOnRedButton": false,
         "consumableOnlyOnRedButton": false
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cm53wmz0x39o",
-          "canonicalUrl": "https://www.bbc.com/pashto/articles/cm53wmz0x39o"
-        },
-        "timestamp": 1564562095074,
-        "suitableForSyndication": false,
-        "language": "ps",
         "headlines": {
           "seoHeadline": "په روسي تلویزیون کې روباټ خبرونه وړاندې کوي"
-        },
-        "images": {},
-        "passport": {
-          "language": "ps",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Pashto",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:cm53wmz0x39o",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Pashto",
-          "uri": "/pashto",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {

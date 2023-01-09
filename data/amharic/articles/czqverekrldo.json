@@ -27,19 +27,33 @@
                                   "text": "የዚህ የሙከራ ጽሑፍ ርዕስ ይህ ነው",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "fd778117",
@@ -69,19 +83,37 @@
                                         "text": "ይህ የሙከራ ምስል የቅጂ መብት ቢቢሲ የፈረንሳይን ካርታ ያሳያል ፡፡ ምስሉ በመጀመሪያዎቹ ሦስት ብሎኮች ውስጥ የሚገኝ ሲሆን ይህ መግለጫ ጽሑፍ አለው ፡፡",
                                         "attributes": []
                                       },
-                                      "position": [2, 1, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 1]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 1, 1]
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 1]
+                    "position": [
+                      2,
+                      1
+                    ]
                   },
                   {
                     "id": "0fc3a564",
@@ -106,19 +138,37 @@
                                         "text": "ይህ የሙከራ ምስል የቅጂ መብት ቢቢሲ የፈረንሳይን ካርታ ያሳያል ፡፡ ምስሉ በመጀመሪያዎቹ ሦስት ብሎኮች ውስጥ የሚገኝ ሲሆን ይህ መግለጫ ጽሑፍ አለው ፡፡",
                                         "attributes": []
                                       },
-                                      "position": [2, 2, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 2, 1, 1]
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 2, 1]
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 2]
+                    "position": [
+                      2,
+                      2
+                    ]
                   },
                   {
                     "id": "b995e99c",
@@ -130,11 +180,16 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "BBC"
                     },
-                    "position": [2, 3]
+                    "position": [
+                      2,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "7da7a79a",
@@ -143,7 +198,9 @@
                 "firstPublished": 1574854374815,
                 "lastPublished": 1574854374815
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
             {
               "id": "948fdc90",
@@ -163,7 +220,11 @@
                             "text": "ይህ ለቢቢሲ የአየር ሁኔታ መነሻ ገጽ የዩ.አር.ኤል አገናኝ ",
                             "attributes": []
                           },
-                          "position": [4, 1, 1]
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
                         },
                         {
                           "id": "5615a0b2",
@@ -178,21 +239,35 @@
                                   "text": "የያዘ የጽሑፍ ማገጃ ነው።",
                                   "attributes": []
                                 },
-                                "position": [4, 1, 2, 1]
+                                "position": [
+                                  4,
+                                  1,
+                                  2,
+                                  1
+                                ]
                               }
                             ],
                             "locator": "https://www.bbc.co.uk/weather",
                             "isExternal": false
                           },
-                          "position": [4, 1, 2]
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 1]
+                    "position": [
+                      4,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [4]
+              "position": [
+                4
+              ]
             },
             {
               "id": "c9dcfb0f",
@@ -223,19 +298,37 @@
                                         "text": "ይህ ንዑስ ርዕስ ነው",
                                         "attributes": []
                                       },
-                                      "position": [5, 1, 1, 1, 1]
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 1, 1, 1]
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 1, 1]
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   },
                   {
                     "id": "900104a5",
@@ -261,7 +354,9 @@
                             "versions": [
                               {
                                 "versionId": "p01k6msp",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 191,
                                 "durationISO8601": "PT3M11S",
                                 "warnings": {
@@ -275,10 +370,16 @@
                                 "availableFrom": 1540218932000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [5, 2, 1]
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "93861a12",
@@ -295,7 +396,12 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "BBC"
                                 },
-                                "position": [5, 2, 2, 1]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
                                 "id": "d159456a",
@@ -321,32 +427,65 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    5, 2, 2, 2, 1, 1, 1
+                                                    5,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [5, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              5,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [5, 2, 2, 2, 1]
+                                      "position": [
+                                        5,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 2, 2, 2]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 2, 2]
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 2]
+                    "position": [
+                      5,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
             },
             {
               "id": "ef9c977c",
@@ -371,19 +510,33 @@
                                   "text": "ይህ ንዑስ ርዕስ ነው",
                                   "attributes": []
                                 },
-                                "position": [6, 1, 1, 1]
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [6, 1, 1]
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 1]
+                    "position": [
+                      6,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [6]
+              "position": [
+                6
+              ]
             },
             {
               "id": "8f89bdf8",
@@ -413,19 +566,37 @@
                                         "text": "ይህ ንዑስ ርዕስ ነው",
                                         "attributes": []
                                       },
-                                      "position": [7, 1, 1, 1, 1]
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [7, 1, 1, 1]
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [7, 1, 1]
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 1]
+                    "position": [
+                      7,
+                      1
+                    ]
                   },
                   {
                     "id": "684af303",
@@ -437,11 +608,16 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "Getty Images"
                     },
-                    "position": [7, 2]
+                    "position": [
+                      7,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [7]
+              "position": [
+                7
+              ]
             },
             {
               "id": "dcc4ddb1",
@@ -461,34 +637,46 @@
                             "text": "ይህ የሙከራ ጽሑፍ በራስ-ሰር የመጨረሻ-መጨረሻ-ሙከራዎችን በእኛ ድር ጣቢያ ላይ ማካሄድ እንድንችል ተፈጥሯል።",
                             "attributes": []
                           },
-                          "position": [8, 1, 1]
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 1]
+                    "position": [
+                      8,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [8]
+              "position": [
+                8
+              ]
             },
-            { "id": "185ac690", "type": "mpu", "model": {}, "position": [9] }
+            {
+              "id": "185ac690",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            }
           ]
         }
       },
       "metadata": {
         "id": "urn:bbc:ares::article:czqverekrldo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:czqverekrldo",
-          "canonicalUrl": "https://www.bbc.com/amharic/articles/czqverekrldo"
+          "optimoUrn": "urn:bbc:optimo:asset:czqverekrldo"
         },
         "type": "article",
         "createdBy": "Amharic",
         "language": "am",
-        "lastUpdated": 1598599621239,
         "firstPublished": 1574854374815,
         "lastPublished": 1574854374815,
-        "timestamp": 1574854374815,
-        "options": {},
         "analyticsLabels": {
           "producer": "Amharic",
           "page": "amharic.articles.czqverekrldo.page"
@@ -496,12 +684,8 @@
         "passport": {
           "language": "am",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Amharic",
-          "locator": "urn:bbc:optimo:asset:czqverekrldo",
-          "availability": "AVAILABLE",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.3",
         "blockTypes": [
           "headline",
           "text",
@@ -516,43 +700,20 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:czqverekrldo",
-          "canonicalUrl": "https://www.bbc.com/amharic/articles/czqverekrldo"
-        },
-        "timestamp": 1574854374815,
-        "suitableForSyndication": false,
-        "language": "am",
-        "headlines": { "seoHeadline": "የዚህ የሙከራ ጽሑፍ ርዕስ ይህ ነው" },
-        "images": {},
-        "passport": {
-          "language": "am",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Amharic",
-          "locator": "urn:bbc:optimo:asset:czqverekrldo",
-          "availability": "AVAILABLE",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:czqverekrldo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Amharic",
-          "uri": "/amharic",
-          "type": "simple"
-        },
-        "groups": []
+        "headlines": {
+          "seoHeadline": "የዚህ የሙከራ ጽሑፍ ርዕስ ይህ ነው"
+        }
       }
     },
     "secondaryData": {
       "topStories": [
         {
-          "headlines": { "headline": "Rugby World Cup: New Zealand Wins" },
+          "headlines": {
+            "headline": "Rugby World Cup: New Zealand Wins"
+          },
           "locators": {
             "assetUri": "/amharic/23229261",
             "cpsUrn": "urn:bbc:content:assetUri:amharic/23229261",
@@ -575,7 +736,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -587,7 +751,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Royal Wedding Picture Collections" },
+          "headlines": {
+            "headline": "Royal Wedding Picture Collections"
+          },
           "locators": {
             "assetUri": "/amharic/23229137",
             "cpsUrn": "urn:bbc:content:assetUri:amharic/23229137",
@@ -623,7 +789,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -635,7 +804,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "''አይ.ኤስን መቀላቀል የፈለኩበት ምክንያት. . . ''" },
+          "headlines": {
+            "headline": "''አይ.ኤስን መቀላቀል የፈለኩበት ምክንያት. . . ''"
+          },
           "locators": {
             "assetUri": "/amharic/23118972",
             "cpsUrn": "urn:bbc:content:assetUri:amharic/23118972",
@@ -650,7 +821,9 @@
             "subType": "clip",
             "format": "video",
             "title": "''አይ.ኤስን መቀላቀል የፈለኩበት ምክንያት''",
-            "synopses": { "short": "ቪድዮ" },
+            "synopses": {
+              "short": "ቪድዮ"
+            },
             "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cj70g.jpg",
             "embedding": false,
             "advertising": true,
@@ -658,11 +831,16 @@
             "versions": [
               {
                 "versionId": "p01cj5w6",
-                "types": ["Original"],
+                "types": [
+                  "Original"
+                ],
                 "duration": 59,
                 "durationISO8601": "PT59S",
                 "warnings": {},
-                "availableTerritories": { "uk": true, "nonUk": true },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
                 "availableFrom": 1501161311000
               }
             ],
@@ -691,7 +869,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -705,7 +886,9 @@
       ],
       "features": [
         {
-          "headlines": { "headline": "መሪዎች ስደተኛ ቢሆኑ ምን ይመስሉ ነበር?" },
+          "headlines": {
+            "headline": "መሪዎች ስደተኛ ቢሆኑ ምን ይመስሉ ነበር?"
+          },
           "locators": {
             "assetUri": "/amharic/news-23148117",
             "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23148117",
@@ -715,12 +898,17 @@
           "timestamp": 1503497035000,
           "language": "am",
           "cpsType": "PGL",
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:amharic/news-23148117",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "ከእግር ኳስ ሜዳ ወደ ኮኛክ ጠመቃ" },
+          "headlines": {
+            "headline": "ከእግር ኳስ ሜዳ ወደ ኮኛክ ጠመቃ"
+          },
           "locators": {
             "assetUri": "/amharic/sport-23141115",
             "cpsUrn": "urn:bbc:content:assetUri:amharic/sport-23141115",
@@ -730,12 +918,17 @@
           "timestamp": 1500628096000,
           "language": "am",
           "cpsType": "STY",
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:amharic/sport-23141115",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "የአፍሪካን ታሪክ ከቅኝ ገዢዎች ነጻ የማውጣት ተጋድሎ" },
+          "headlines": {
+            "headline": "የአፍሪካን ታሪክ ከቅኝ ገዢዎች ነጻ የማውጣት ተጋድሎ"
+          },
           "locators": {
             "assetUri": "/amharic/news-23141014",
             "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23141014",
@@ -770,12 +963,17 @@
             "copyrightHolder": "AFP",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:amharic/news-23141014",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "በጉንዳን ኃይል የሚንቀሳቀስ ኣዉቶቡስ" },
+          "headlines": {
+            "headline": "በጉንዳን ኃይል የሚንቀሳቀስ ኣዉቶቡስ"
+          },
           "locators": {
             "assetUri": "/amharic/news-23140994",
             "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23140994",
@@ -810,12 +1008,17 @@
             "copyrightHolder": "CHRIST CLIJSEN",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:amharic/news-23140994",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "ተመራማሪዎች፡ ትዳር \"ጤናን ይጠብቃል\"" },
+          "headlines": {
+            "headline": "ተመራማሪዎች፡ ትዳር \"ጤናን ይጠብቃል\""
+          },
           "locators": {
             "assetUri": "/amharic/news-23140715",
             "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23140715",
@@ -828,7 +1031,10 @@
             "name": "Kalkidan Yibeltal",
             "title": "BBC Amharic",
             "persons": [
-              { "name": "Kalkidan Yibeltal", "function": "BBC Amharic" }
+              {
+                "name": "Kalkidan Yibeltal",
+                "function": "BBC Amharic"
+              }
             ]
           },
           "cpsType": "STY",
@@ -855,7 +1061,10 @@
             "copyrightHolder": "ኩዝሚክስቱዲዮ/ጌቲ",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:amharic/news-23140715",
           "type": "cps"
         },
@@ -897,12 +1106,17 @@
             "copyrightHolder": "Getty Images",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:amharic/news-23148096",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "ቅድመ እና ድህረ ፕሬዝደንቱ ትራምፕ!" },
+          "headlines": {
+            "headline": "ቅድመ እና ድህረ ፕሬዝደንቱ ትራምፕ!"
+          },
           "locators": {
             "assetUri": "/amharic/23143895",
             "cpsUrn": "urn:bbc:content:assetUri:amharic/23143895",
@@ -937,7 +1151,10 @@
             "copyrightHolder": "AFP",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "ዜና",
@@ -948,7 +1165,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "በህይወት የሌለው የዓለማችን ሀብታሙ ሰው" },
+          "headlines": {
+            "headline": "በህይወት የሌለው የዓለማችን ሀብታሙ ሰው"
+          },
           "locators": {
             "assetUri": "/amharic/news-23140375",
             "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23140375",
@@ -982,12 +1201,17 @@
             "copyrightHolder": "Getty Images",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:amharic/news-23140375",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "2ችግር ፈቺውን የአፍሪካውያን የፈጠራ ውጤትን ይተዋወቁ" },
+          "headlines": {
+            "headline": "2ችግር ፈቺውን የአፍሪካውያን የፈጠራ ውጤትን ይተዋወቁ"
+          },
           "locators": {
             "assetUri": "/amharic/news-23143386",
             "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23143386",
@@ -1009,7 +1233,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:amharic/news-23143386",
           "type": "cps"
         }
@@ -1565,7 +1792,10 @@
                 "name": "Kalkidan Yibeltal",
                 "title": "BBC Amharic",
                 "persons": [
-                  { "name": "Kalkidan Yibeltal", "function": "BBC Amharic" }
+                  {
+                    "name": "Kalkidan Yibeltal",
+                    "function": "BBC Amharic"
+                  }
                 ]
               },
               "indexImage": {

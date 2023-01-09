@@ -708,17 +708,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c7eel0lmr4do",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c7eel0lmr4do",
-          "canonicalUrl": "https://www.bbc.com/persian/articles/c7eel0lmr4do"
+          "optimoUrn": "urn:bbc:optimo:asset:c7eel0lmr4do"
         },
         "type": "article",
         "createdBy": "Persian",
         "language": "fa",
-        "lastUpdated": 1646742768816,
         "firstPublished": 1549894346238,
         "lastPublished": 1549894346238,
-        "timestamp": 1549894346238,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c7eel0lmr4do",
           "producer": "Persian",
@@ -729,8 +725,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.2",
         "blockTypes": [
           "headline",
           "text",
@@ -741,37 +735,12 @@
           "rawImage",
           "caption"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c7eel0lmr4do",
-          "canonicalUrl": "https://www.bbc.com/persian/articles/c7eel0lmr4do"
-        },
-        "timestamp": 1549894346238,
-        "suitableForSyndication": false,
-        "language": "fa",
         "headlines": {
           "seoHeadline": "پهپادی که برایتان قهوه می‌آورد"
-        },
-        "images": {},
-        "passport": {
-          "language": "fa",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c7eel0lmr4do",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Persian",
-          "uri": "/persian",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {

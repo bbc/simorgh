@@ -27,19 +27,33 @@
                                   "text": "આ આ પરીક્ષણ લેખની મુખ્ય મથાળા છે",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "63a48be9",
@@ -69,19 +83,37 @@
                                         "text": "ક પિરાઇટ બીબીસીની આ પરીક્ષણ છબી, ફ્રાન્સનો નકશો બતાવે છે. છબી પ્રથમ ત્રણ બ્લોક્સની છે અને તેમાં કtionપ્શન છે.",
                                         "attributes": []
                                       },
-                                      "position": [2, 1, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 1]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 1, 1]
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 1]
+                    "position": [
+                      2,
+                      1
+                    ]
                   },
                   {
                     "id": "33f1e88f",
@@ -106,19 +138,37 @@
                                         "text": "ક પિરાઇટ બીબીસીની આ પરીક્ષણ છબી, ફ્રાન્સનો નકશો બતાવે છે. છબી પ્રથમ ત્રણ બ્લોક્સની છે અને તેમાં કtionપ્શન છે.",
                                         "attributes": []
                                       },
-                                      "position": [2, 2, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 2, 1, 1]
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 2, 1]
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 2]
+                    "position": [
+                      2,
+                      2
+                    ]
                   },
                   {
                     "id": "50aefe2f",
@@ -130,11 +180,16 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "BBC"
                     },
-                    "position": [2, 3]
+                    "position": [
+                      2,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "eeceb255",
@@ -143,7 +198,9 @@
                 "firstPublished": 1562942802532,
                 "lastPublished": 1562942802532
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
             {
               "id": "756d2843",
@@ -163,7 +220,11 @@
                             "text": "આ એક ટેક્સ્ટ બ્લ છે, જેમાં બીબીસી હવામાન હોમપેજ",
                             "attributes": []
                           },
-                          "position": [4, 1, 1]
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
                         },
                         {
                           "id": "be7816f1",
@@ -178,27 +239,48 @@
                                   "text": " પર લિંક શામેલ છે",
                                   "attributes": []
                                 },
-                                "position": [4, 1, 2, 1]
+                                "position": [
+                                  4,
+                                  1,
+                                  2,
+                                  1
+                                ]
                               }
                             ],
                             "locator": "https://www.bbc.co.uk/weather",
                             "isExternal": false
                           },
-                          "position": [4, 1, 2]
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
                         },
                         {
                           "id": "51dc3d50",
                           "type": "fragment",
-                          "model": { "text": ".", "attributes": [] },
-                          "position": [4, 1, 3]
+                          "model": {
+                            "text": ".",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            3
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 1]
+                    "position": [
+                      4,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [4]
+              "position": [
+                4
+              ]
             },
             {
               "id": "d1ce6960",
@@ -229,19 +311,37 @@
                                         "text": "નવા જંકશનથી ચાઇનીઝ સુપરહિગવે વપરાશકર્તાઓ આશ્ચર્યચકિત થયા",
                                         "attributes": []
                                       },
-                                      "position": [5, 1, 1, 1, 1]
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 1, 1, 1]
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 1, 1]
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   },
                   {
                     "id": "466b1356",
@@ -269,7 +369,9 @@
                             "versions": [
                               {
                                 "versionId": "p01djw2p",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 28,
                                 "durationISO8601": "PT28S",
                                 "warnings": {},
@@ -280,10 +382,16 @@
                                 "availableFrom": 1507025738000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [5, 2, 1]
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "5603c3b4",
@@ -297,19 +405,33 @@
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01djw9d.jpg",
                                   "originCode": "mpv"
                                 },
-                                "position": [5, 2, 2, 1]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 2, 2]
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 2]
+                    "position": [
+                      5,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
             },
             {
               "id": "26d00c6c",
@@ -334,19 +456,33 @@
                                   "text": "\rઆ એક સબહેડલાઇન છે",
                                   "attributes": []
                                 },
-                                "position": [6, 1, 1, 1]
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [6, 1, 1]
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 1]
+                    "position": [
+                      6,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [6]
+              "position": [
+                6
+              ]
             },
             {
               "id": "46f61992",
@@ -376,19 +512,37 @@
                                         "text": "\rઆ એક સબહેડલાઇન છે",
                                         "attributes": []
                                       },
-                                      "position": [7, 1, 1, 1, 1]
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [7, 1, 1, 1]
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [7, 1, 1]
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 1]
+                    "position": [
+                      7,
+                      1
+                    ]
                   },
                   {
                     "id": "895514d1",
@@ -400,11 +554,16 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "Getty Images"
                     },
-                    "position": [7, 2]
+                    "position": [
+                      7,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [7]
+              "position": [
+                7
+              ]
             },
             {
               "id": "54506ed0",
@@ -424,34 +583,46 @@
                             "text": "આ પરીક્ષણ લેખ બનાવવામાં આવ્યો છે જેથી આપણે અમારી વેબસાઇટ પર ચલાવી શકીએ.",
                             "attributes": []
                           },
-                          "position": [8, 1, 1]
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 1]
+                    "position": [
+                      8,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [8]
+              "position": [
+                8
+              ]
             },
-            { "id": "f9dffda5", "type": "mpu", "model": {}, "position": [9] }
+            {
+              "id": "f9dffda5",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            }
           ]
         }
       },
       "metadata": {
         "id": "urn:bbc:ares::article:cr5el5kw591o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cr5el5kw591o",
-          "canonicalUrl": "https://www.bbc.com/gujarati/articles/cr5el5kw591o"
+          "optimoUrn": "urn:bbc:optimo:asset:cr5el5kw591o"
         },
         "type": "article",
         "createdBy": "Gujarati",
         "language": "gu",
-        "lastUpdated": 1598599629160,
         "firstPublished": 1562942802532,
         "lastPublished": 1562942802532,
-        "timestamp": 1562942802532,
-        "options": {},
         "analyticsLabels": {
           "producer": "Gujarati",
           "page": "gujarati.articles.cr5el5kw591o.page"
@@ -459,12 +630,8 @@
         "passport": {
           "language": "gu",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
-          "locator": "urn:bbc:optimo:asset:cr5el5kw591o",
-          "availability": "AVAILABLE",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.3",
         "blockTypes": [
           "headline",
           "text",
@@ -479,39 +646,12 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cr5el5kw591o",
-          "canonicalUrl": "https://www.bbc.com/gujarati/articles/cr5el5kw591o"
-        },
-        "timestamp": 1562942802532,
-        "suitableForSyndication": false,
-        "language": "gu",
         "headlines": {
           "seoHeadline": "SacredGames2 : એ ગુજરાતી જેમણે 'સેક્રેડ ગેમ્સ'ના સિમ્બૉલ્સ બનાવ્યા છે"
-        },
-        "images": {},
-        "passport": {
-          "language": "gu",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
-          "locator": "urn:bbc:optimo:asset:cr5el5kw591o",
-          "availability": "AVAILABLE",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:cr5el5kw591o",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Gujarati",
-          "uri": "/gujarati",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {
@@ -560,7 +700,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "મુખ્ય સમાચાર",
@@ -572,7 +715,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Flights axed as Monarch ceases trading" },
+          "headlines": {
+            "headline": "Flights axed as Monarch ceases trading"
+          },
           "locators": {
             "assetUri": "/gujarati/india-23155321",
             "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23155321",
@@ -603,7 +748,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:gujarati/india-23155321",
           "type": "cps"
         },
@@ -656,12 +804,17 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:gujarati/international-23129726",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 15" },
+          "headlines": {
+            "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 15"
+          },
           "locators": {
             "assetUri": "/gujarati/india-23126391",
             "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126391",
@@ -697,12 +850,17 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:gujarati/india-23126391",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 20" },
+          "headlines": {
+            "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 20"
+          },
           "locators": {
             "assetUri": "/gujarati/india-23126396",
             "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126396",
@@ -738,12 +896,17 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:gujarati/india-23126396",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "યુવરાજની ઇનિંગ પર બોલ્યો વિરાટ" },
+          "headlines": {
+            "headline": "યુવરાજની ઇનિંગ પર બોલ્યો વિરાટ"
+          },
           "locators": {
             "assetUri": "/gujarati/media-23130284",
             "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-23130284",
@@ -778,11 +941,16 @@
             "versions": [
               {
                 "versionId": "p01blkbd",
-                "types": ["Original"],
+                "types": [
+                  "Original"
+                ],
                 "duration": 20,
                 "durationISO8601": "PT20S",
                 "warnings": {},
-                "availableTerritories": { "uk": true, "nonUk": true },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
                 "availableFrom": 1496677744000
               }
             ],
@@ -800,12 +968,17 @@
             "copyrightHolder": "વવમ લાૈે",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:gujarati/media-23130284",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 19" },
+          "headlines": {
+            "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 19"
+          },
           "locators": {
             "assetUri": "/gujarati/india-23126395",
             "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126395",
@@ -841,7 +1014,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:gujarati/india-23126395",
           "type": "cps"
         },
@@ -891,7 +1067,10 @@
             "copyrightHolder": "BBC ગુજરાતી",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:gujarati/other-news-23130528",
           "type": "cps"
         },
@@ -921,12 +1100,17 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:gujarati/other-news-23129728",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 27" },
+          "headlines": {
+            "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 27"
+          },
           "locators": {
             "assetUri": "/gujarati/india-23126403",
             "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126403",
@@ -962,12 +1146,17 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:gujarati/india-23126403",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 29" },
+          "headlines": {
+            "headline": "મૌરિટિયન લોકોની વસ્તી અને રિયુનિયન 29"
+          },
           "locators": {
             "assetUri": "/gujarati/india-23126405",
             "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-23126405",
@@ -1003,7 +1192,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:gujarati/india-23126405",
           "type": "cps"
         }
@@ -1652,7 +1844,10 @@
                 "name": "લિવિયા ગેરશન,",
                 "title": "BBC કેપિટલ",
                 "persons": [
-                  { "name": "Abdihafid Ismail", "function": "bbc somali" }
+                  {
+                    "name": "Abdihafid Ismail",
+                    "function": "bbc somali"
+                  }
                 ]
               },
               "indexImage": {

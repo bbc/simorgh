@@ -27,19 +27,33 @@
                                   "text": "이것이이 테스트 기사의 헤드 라인입니다.",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "29927604",
@@ -69,19 +83,37 @@
                                         "text": "이 테스트 이미지 인 저작권 는 프랑스지도를 보여줍니다. 이미지는 처음 세 블록에 있으며이 캡션이 있습니다.",
                                         "attributes": []
                                       },
-                                      "position": [2, 1, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 1]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 1, 1]
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 1]
+                    "position": [
+                      2,
+                      1
+                    ]
                   },
                   {
                     "id": "fd06a5ea",
@@ -106,19 +138,37 @@
                                         "text": "이 테스트 이미지 인 저작권 BBC는 프랑스지도를 보여줍니다. 이미지는 처음 세 블록에 있으며이 캡션이 있습니다.",
                                         "attributes": []
                                       },
-                                      "position": [2, 2, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 2, 1, 1]
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 2, 1]
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 2]
+                    "position": [
+                      2,
+                      2
+                    ]
                   },
                   {
                     "id": "acd26fd3",
@@ -130,11 +180,16 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "BBC"
                     },
-                    "position": [2, 3]
+                    "position": [
+                      2,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "9209a59d",
@@ -143,7 +198,9 @@
                 "firstPublished": 1574855147209,
                 "lastPublished": 1574855147209
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
             {
               "id": "b7e9d405",
@@ -159,8 +216,15 @@
                         {
                           "id": "2dc0db84",
                           "type": "fragment",
-                          "model": { "text": "이것은 ", "attributes": [] },
-                          "position": [4, 1, 1]
+                          "model": {
+                            "text": "이것은 ",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
                         },
                         {
                           "id": "c768f96f",
@@ -175,13 +239,22 @@
                                   "text": "홈페이지에 대한",
                                   "attributes": []
                                 },
-                                "position": [4, 1, 2, 1]
+                                "position": [
+                                  4,
+                                  1,
+                                  2,
+                                  1
+                                ]
                               }
                             ],
                             "locator": "https://www.bbc.co.uk/weather",
                             "isExternal": false
                           },
-                          "position": [4, 1, 2]
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
                         },
                         {
                           "id": "fdff227a",
@@ -190,15 +263,24 @@
                             "text": " 링크를 포함하는 텍스트 블록입니다.",
                             "attributes": []
                           },
-                          "position": [4, 1, 3]
+                          "position": [
+                            4,
+                            1,
+                            3
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 1]
+                    "position": [
+                      4,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [4]
+              "position": [
+                4
+              ]
             },
             {
               "id": "862435fb",
@@ -229,19 +311,37 @@
                                         "text": "이것은 크를 포함하는 텍스트 블록입니다.",
                                         "attributes": []
                                       },
-                                      "position": [5, 1, 1, 1, 1]
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 1, 1, 1]
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 1, 1]
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   },
                   {
                     "id": "269d3e36",
@@ -267,7 +367,9 @@
                             "versions": [
                               {
                                 "versionId": "p01k6msp",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 191,
                                 "durationISO8601": "PT3M11S",
                                 "warnings": {
@@ -281,10 +383,16 @@
                                 "availableFrom": 1540218932000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [5, 2, 1]
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "ba2f861a",
@@ -301,7 +409,12 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "BBC"
                                 },
-                                "position": [5, 2, 2, 1]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
                                 "id": "f9924c77",
@@ -327,32 +440,65 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    5, 2, 2, 2, 1, 1, 1
+                                                    5,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [5, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              5,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [5, 2, 2, 2, 1]
+                                      "position": [
+                                        5,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 2, 2, 2]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 2, 2]
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 2]
+                    "position": [
+                      5,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
             },
             {
               "id": "00309664",
@@ -377,19 +523,33 @@
                                   "text": "이것은 소제목입니다",
                                   "attributes": []
                                 },
-                                "position": [6, 1, 1, 1]
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [6, 1, 1]
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 1]
+                    "position": [
+                      6,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [6]
+              "position": [
+                6
+              ]
             },
             {
               "id": "d15a48c2",
@@ -419,19 +579,37 @@
                                         "text": "이것은 소제목입니다",
                                         "attributes": []
                                       },
-                                      "position": [7, 1, 1, 1, 1]
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [7, 1, 1, 1]
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [7, 1, 1]
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 1]
+                    "position": [
+                      7,
+                      1
+                    ]
                   },
                   {
                     "id": "f2379892",
@@ -443,11 +621,16 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "Getty Images"
                     },
-                    "position": [7, 2]
+                    "position": [
+                      7,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [7]
+              "position": [
+                7
+              ]
             },
             {
               "id": "5a5d478b",
@@ -467,34 +650,46 @@
                             "text": "이 테스트 기사는 웹 사이트에서 자동화 된 엔드 투 엔드 테스트를 실행할 수 있도록 작성되었습니다.",
                             "attributes": []
                           },
-                          "position": [8, 1, 1]
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 1]
+                    "position": [
+                      8,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [8]
+              "position": [
+                8
+              ]
             },
-            { "id": "e8ad53cb", "type": "mpu", "model": {}, "position": [9] }
+            {
+              "id": "e8ad53cb",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            }
           ]
         }
       },
       "metadata": {
         "id": "urn:bbc:ares::article:c3mn1lvz65xo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c3mn1lvz65xo",
-          "canonicalUrl": "https://www.bbc.com/korean/articles/c3mn1lvz65xo"
+          "optimoUrn": "urn:bbc:optimo:asset:c3mn1lvz65xo"
         },
         "type": "article",
         "createdBy": "Korean",
         "language": "ko",
-        "lastUpdated": 1598599637013,
         "firstPublished": 1574855147209,
         "lastPublished": 1574855147209,
-        "timestamp": 1574855147209,
-        "options": {},
         "analyticsLabels": {
           "producer": "Korean",
           "page": "korean.articles.c3mn1lvz65xo.page"
@@ -502,12 +697,8 @@
         "passport": {
           "language": "ko",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Korean",
-          "locator": "urn:bbc:optimo:asset:c3mn1lvz65xo",
-          "availability": "AVAILABLE",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.3",
         "blockTypes": [
           "headline",
           "text",
@@ -522,45 +713,20 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c3mn1lvz65xo",
-          "canonicalUrl": "https://www.bbc.com/korean/articles/c3mn1lvz65xo"
-        },
-        "timestamp": 1574855147209,
-        "suitableForSyndication": false,
-        "language": "ko",
         "headlines": {
           "seoHeadline": "이것이이 테스트 기사의 헤드 라인입니다."
-        },
-        "images": {},
-        "passport": {
-          "language": "ko",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Korean",
-          "locator": "urn:bbc:optimo:asset:c3mn1lvz65xo",
-          "availability": "AVAILABLE",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c3mn1lvz65xo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Korean",
-          "uri": "/korean",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {
       "topStories": [
         {
-          "headlines": { "headline": "Capturing East Harlem in the 80s" },
+          "headlines": {
+            "headline": "Capturing East Harlem in the 80s"
+          },
           "locators": {
             "assetUri": "/korean/23228543",
             "cpsUrn": "urn:bbc:content:assetUri:korean/23228543",
@@ -596,7 +762,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "홈페이지",
@@ -607,7 +776,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "hjdgjlsddfb" },
+          "headlines": {
+            "headline": "hjdgjlsddfb"
+          },
           "locators": {
             "assetUri": "/gahuza/amakuru-23193186",
             "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23193186",
@@ -636,7 +807,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "site": {
             "subType": "site",
             "name": "BBC Gahuza",
@@ -647,7 +821,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "one" },
+          "headlines": {
+            "headline": "one"
+          },
           "locators": {
             "assetUri": "/news/uk-23228568",
             "cpsUrn": "urn:bbc:content:assetUri:news/uk-23228568",
@@ -670,7 +846,10 @@
             "taggings": []
           },
           "cpsType": "STY",
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "UK",
@@ -745,7 +924,10 @@
             "copyrightHolder": "Getty Images",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "홈페이지",
@@ -801,7 +983,10 @@
             "copyrightHolder": "Getty Images",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "overtypedSummary": "기아자동차가 2년 연속 미국의 최고 권위 시장조사 업체 제이디 파워 (J.D. Power)가 선정한 2017 최고 품질 상인 ‘Initial Quality Study (IQS)’를 수상했다 2 overtype.",
           "id": "urn:bbc:ares::asset:korean/features-23136354",
           "type": "cps"
@@ -831,7 +1016,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:korean/features-23132180",
           "type": "cps"
         },
@@ -860,7 +1048,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:korean/news-23132179",
           "type": "cps"
         },
@@ -889,7 +1080,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:korean/news-23132176",
           "type": "cps"
         },
@@ -925,7 +1119,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:korean/media-23132235",
           "type": "cps"
         },
@@ -954,7 +1151,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:korean/features-23132184",
           "type": "cps"
         },
@@ -983,7 +1183,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:korean/news-23132255",
           "type": "cps"
         },
@@ -1012,7 +1215,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:korean/news-23132245",
           "type": "cps"
         }
@@ -1151,7 +1357,10 @@
                 "name": "Jamila Ibrahimova",
                 "title": "BBC Azeri",
                 "persons": [
-                  { "name": "Jamila Ibrahimova", "function": "BBC Azeri" }
+                  {
+                    "name": "Jamila Ibrahimova",
+                    "function": "BBC Azeri"
+                  }
                 ]
               },
               "indexImage": {
@@ -1414,7 +1623,10 @@
                 "name": "Jong Un Kim",
                 "title": "Korea Correspondent",
                 "persons": [
-                  { "name": "Jong Un Kim", "function": "Korea Correspondent" }
+                  {
+                    "name": "Jong Un Kim",
+                    "function": "Korea Correspondent"
+                  }
                 ]
               },
               "indexImage": {

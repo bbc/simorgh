@@ -670,17 +670,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cgn6emk3jm8o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cgn6emk3jm8o",
-          "canonicalUrl": "https://www.bbc.com/somali/articles/cgn6emk3jm8o"
+          "optimoUrn": "urn:bbc:optimo:asset:cgn6emk3jm8o"
         },
         "type": "article",
         "createdBy": "Somali",
         "language": "so",
-        "lastUpdated": 1598599650317,
         "firstPublished": 1562936492234,
         "lastPublished": 1562936492234,
-        "timestamp": 1562936492234,
-        "options": {},
         "analyticsLabels": {
           "producer": "Somali",
           "page": "somali.articles.cgn6emk3jm8o.page"
@@ -688,12 +684,8 @@
         "passport": {
           "language": "so",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
-          "locator": "urn:bbc:optimo:asset:cgn6emk3jm8o",
-          "availability": "AVAILABLE",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.3",
         "blockTypes": [
           "headline",
           "text",
@@ -708,39 +700,12 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cgn6emk3jm8o",
-          "canonicalUrl": "https://www.bbc.com/somali/articles/cgn6emk3jm8o"
-        },
-        "timestamp": 1562936492234,
-        "suitableForSyndication": false,
-        "language": "so",
         "headlines": {
           "seoHeadline": "Tani waa cinwaanka SEO ee maqaalkan tijaabada ah"
-        },
-        "images": {},
-        "passport": {
-          "language": "so",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
-          "locator": "urn:bbc:optimo:asset:cgn6emk3jm8o",
-          "availability": "AVAILABLE",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:cgn6emk3jm8o",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Somali",
-          "uri": "/somali",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {

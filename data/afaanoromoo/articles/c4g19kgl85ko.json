@@ -27,19 +27,33 @@
                                   "text": "Tiraampi yaada 'godaantota miila keessa dha'uu jedhu dhiyeessan'\n\n",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "41b059e9",
@@ -65,12 +79,26 @@
                                     {
                                       "id": "dd630b69",
                                       "type": "fragment",
-                                      "model": { "text": "", "attributes": [] },
-                                      "position": [2, 1, 1, 1, 1]
+                                      "model": {
+                                        "text": "",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 1]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               },
                               {
                                 "id": "fdc0def4",
@@ -85,19 +113,37 @@
                                         "text": "Akka baqqattoonni karaa daangaa kibba gara US hin seenne dhorkuudhaaf yaada Tiraamp dhiyeessan jedhan keessaa dallaa elektiriikaan ijaarame.",
                                         "attributes": []
                                       },
-                                      "position": [2, 1, 1, 2, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 2]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 1, 1]
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 1]
+                    "position": [
+                      2,
+                      1
+                    ]
                   },
                   {
                     "id": "6bafcb04",
@@ -122,19 +168,37 @@
                                         "text": "Yaada dhiheenya kana ka'aa jiruuf ",
                                         "attributes": []
                                       },
-                                      "position": [2, 2, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 2, 1, 1]
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 2, 1]
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 2]
+                    "position": [
+                      2,
+                      2
+                    ]
                   },
                   {
                     "id": "5fdb357d",
@@ -146,11 +210,16 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "BBC"
                     },
-                    "position": [2, 3]
+                    "position": [
+                      2,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "43c1a8a3",
@@ -159,7 +228,9 @@
                 "firstPublished": 1562936153914,
                 "lastPublished": 1569857685157
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
             {
               "id": "a155adb2",
@@ -185,13 +256,22 @@
                                   "text": "Inline link",
                                   "attributes": []
                                 },
-                                "position": [4, 1, 1, 1]
+                                "position": [
+                                  4,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ],
                             "locator": "https://www.test.bbc.com/afrique/articles/cz216x22106o",
                             "isExternal": false
                           },
-                          "position": [4, 1, 1]
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
                         },
                         {
                           "id": "ab940666",
@@ -200,7 +280,11 @@
                             "text": " Kitaaba kana keessa barreeffamni jiru akka jedhutti, pirezedaantichi akka dhuunfaa isaaniitti garee gargaarsaaf ",
                             "attributes": []
                           },
-                          "position": [4, 1, 2]
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
                         },
                         {
                           "id": "eb3f5a4d",
@@ -215,27 +299,48 @@
                                   "text": "yaada yeroo dhiyeessan",
                                   "attributes": []
                                 },
-                                "position": [4, 1, 3, 1]
+                                "position": [
+                                  4,
+                                  1,
+                                  3,
+                                  1
+                                ]
                               }
                             ],
                             "locator": "https://www.bbc.co.uk/weather",
                             "isExternal": false
                           },
-                          "position": [4, 1, 3]
+                          "position": [
+                            4,
+                            1,
+                            3
+                          ]
                         },
                         {
                           "id": "41798d79",
                           "type": "fragment",
-                          "model": { "text": ".", "attributes": [] },
-                          "position": [4, 1, 4]
+                          "model": {
+                            "text": ".",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            4
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 1]
+                    "position": [
+                      4,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [4]
+              "position": [
+                4
+              ]
             },
             {
               "id": "c2708a38",
@@ -266,19 +371,37 @@
                                         "text": "This is a video block containing a video Daangaarratti maaltu ta'aa jira\n\n",
                                         "attributes": []
                                       },
-                                      "position": [5, 1, 1, 1, 1]
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 1, 1, 1]
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 1, 1]
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   },
                   {
                     "id": "9aa378e5",
@@ -304,7 +427,9 @@
                             "versions": [
                               {
                                 "versionId": "p01k6msp",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 191,
                                 "durationISO8601": "PT3M11S",
                                 "warnings": {
@@ -318,10 +443,16 @@
                                 "availableFrom": 1540218932000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [5, 2, 1]
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "49841c6f",
@@ -338,7 +469,12 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "BBC"
                                 },
-                                "position": [5, 2, 2, 1]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
                                 "id": "c1a9fc69",
@@ -364,32 +500,65 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    5, 2, 2, 2, 1, 1, 1
+                                                    5,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [5, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              5,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [5, 2, 2, 2, 1]
+                                      "position": [
+                                        5,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 2, 2, 2]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 2, 2]
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 2]
+                    "position": [
+                      5,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
             },
             {
               "id": "1d429ed6",
@@ -414,19 +583,33 @@
                                   "text": "Waliigalteen sun waltumsuuf\n\n",
                                   "attributes": []
                                 },
-                                "position": [6, 1, 1, 1]
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [6, 1, 1]
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 1]
+                    "position": [
+                      6,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [6]
+              "position": [
+                6
+              ]
             },
             {
               "id": "56a97cf1",
@@ -456,19 +639,37 @@
                                         "text": "Footballers after a match",
                                         "attributes": []
                                       },
-                                      "position": [7, 1, 1, 1, 1]
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [7, 1, 1, 1]
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [7, 1, 1]
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 1]
+                    "position": [
+                      7,
+                      1
+                    ]
                   },
                   {
                     "id": "3432cd7a",
@@ -480,11 +681,16 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "Getty Images"
                     },
-                    "position": [7, 2]
+                    "position": [
+                      7,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [7]
+              "position": [
+                7
+              ]
             },
             {
               "id": "0d62191a",
@@ -504,34 +710,46 @@
                             "text": "Haa ta'u malee, seeraan ala daangaa US ce'uun erga bara as akka walii galaati hir'achaa dhufus.\n\n",
                             "attributes": []
                           },
-                          "position": [8, 1, 1]
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 1]
+                    "position": [
+                      8,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [8]
+              "position": [
+                8
+              ]
             },
-            { "id": "bdf50e6a", "type": "mpu", "model": {}, "position": [9] }
+            {
+              "id": "bdf50e6a",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            }
           ]
         }
       },
       "metadata": {
         "id": "urn:bbc:ares::article:c4g19kgl85ko",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c4g19kgl85ko",
-          "canonicalUrl": "https://www.bbc.com/afaanoromoo/articles/c4g19kgl85ko"
+          "optimoUrn": "urn:bbc:optimo:asset:c4g19kgl85ko"
         },
         "type": "article",
         "createdBy": "Afaanoromoo",
         "language": "om",
-        "lastUpdated": 1619441332471,
         "firstPublished": 1562936153914,
         "lastPublished": 1569857685157,
-        "timestamp": 1569857685157,
-        "options": {},
         "analyticsLabels": {
           "producer": "Afaan Oromoo",
           "page": "afaanoromoo.articles.c4g19kgl85ko.page"
@@ -539,13 +757,8 @@
         "passport": {
           "language": "om",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/AfaanOromoo",
-          "locator": "urn:bbc:optimo:asset:c4g19kgl85ko",
-          "availability": "AVAILABLE",
-          "taggings": [],
-          "publishedState": "PUBLISHED"
+          "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.7",
         "blockTypes": [
           "headline",
           "text",
@@ -560,17 +773,9 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c4g19kgl85ko",
-          "canonicalUrl": "https://www.bbc.com/afaanoromoo/articles/c4g19kgl85ko"
-        },
-        "timestamp": 1569857685157,
-        "suitableForSyndication": false,
-        "language": "om",
         "headlines": {
           "seoHeadline": "Namoonni godaanan kunneen hedduun isaanii biyya isaaniirraa miidhaa fi hiyyummaa warra baqatanii karaa.",
           "promoHeadline": {
@@ -618,7 +823,10 @@
                               "blocks": [
                                 {
                                   "type": "fragment",
-                                  "model": { "text": "", "attributes": [] }
+                                  "model": {
+                                    "text": "",
+                                    "attributes": []
+                                  }
                                 }
                               ]
                             }
@@ -699,7 +907,10 @@
                       "blocks": [
                         {
                           "type": "fragment",
-                          "model": { "text": "", "attributes": [] }
+                          "model": {
+                            "text": "",
+                            "attributes": []
+                          }
                         }
                       ]
                     }
@@ -708,32 +919,15 @@
               }
             }
           ]
-        },
-        "passport": {
-          "language": "om",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/AfaanOromoo",
-          "locator": "urn:bbc:optimo:asset:c4g19kgl85ko",
-          "availability": "AVAILABLE",
-          "taggings": [],
-          "publishedState": "PUBLISHED"
-        },
-        "id": "urn:bbc:ares::article:c4g19kgl85ko",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Afaanoromoo",
-          "uri": "/afaanoromoo",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {
       "topStories": [
         {
-          "headlines": { "headline": "Masiriin Pireezidantii Filachuuf jirti" },
+          "headlines": {
+            "headline": "Masiriin Pireezidantii Filachuuf jirti"
+          },
           "locators": {
             "assetUri": "/afaanoromoo/23193700",
             "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/23193700",
@@ -776,7 +970,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -833,7 +1030,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -881,7 +1081,10 @@
             "copyrightHolder": "Yadeta",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23141504",
           "type": "cps"
@@ -927,7 +1130,10 @@
             "copyrightHolder": "Getty Images",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23142445",
           "type": "cps"
         },
@@ -958,7 +1164,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23141324",
           "type": "cps"
         },
@@ -1001,7 +1210,10 @@
             "copyrightHolder": "Reuters",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Oduu",
@@ -1012,7 +1224,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Guyyaa xumuraa dhiifama Saawudii" },
+          "headlines": {
+            "headline": "Guyyaa xumuraa dhiifama Saawudii"
+          },
           "locators": {
             "assetUri": "/afaanoromoo/oduu-23142374",
             "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-23142374",
@@ -1046,7 +1260,10 @@
             "copyrightHolder": "Getty Images",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23142374",
           "type": "cps"
         },
@@ -1089,7 +1306,10 @@
             "copyrightHolder": "Getty Images",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23143414",
           "type": "cps"
         },
@@ -1107,7 +1327,10 @@
           "timestamp": 1500988312000,
           "language": "om",
           "cpsType": "STY",
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23142344",
           "type": "cps"
         },
@@ -1138,7 +1361,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23141354",
           "type": "cps"
         },
@@ -1169,7 +1395,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "overtypedSummary": "Gareen barattootaa Awutobisii guddaa asiidii goondaan maddisiistu \"Formic Acid\" jedhamuun socho'u kalaqan.",
           "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23141155",
           "type": "cps"
@@ -1211,7 +1440,10 @@
             "copyrightHolder": "Getty Images",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23141334",
           "type": "cps"
         }

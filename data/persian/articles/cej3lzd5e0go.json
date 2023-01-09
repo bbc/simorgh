@@ -664,17 +664,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cej3lzd5e0go",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cej3lzd5e0go",
-          "canonicalUrl": "https://www.bbc.com/persian/articles/cej3lzd5e0go"
+          "optimoUrn": "urn:bbc:optimo:asset:cej3lzd5e0go"
         },
         "type": "article",
         "createdBy": "Persian",
         "language": "fa",
-        "lastUpdated": 1662111922227,
         "firstPublished": 1570185405464,
         "lastPublished": 1570185405464,
-        "timestamp": 1570185405464,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cej3lzd5e0go",
           "producer": "Persian",
@@ -683,14 +679,8 @@
         "passport": {
           "language": "fa",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
-          "locator": "urn:bbc:optimo:asset:cej3lzd5e0go",
-          "availability": "AVAILABLE",
-          "taggings": [],
-          "schemaVersion": "1.3.0",
-          "publishedState": "PUBLISHED"
+          "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.7",
         "blockTypes": [
           "headline",
           "text",
@@ -705,18 +695,10 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "consumableAsSFV": false,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cej3lzd5e0go",
-          "canonicalUrl": "https://www.bbc.com/persian/articles/cej3lzd5e0go"
-        },
-        "timestamp": 1570185405464,
-        "suitableForSyndication": false,
-        "language": "fa",
         "headlines": {
           "seoHeadline": "این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.",
           "promoHeadline": {
@@ -845,27 +827,7 @@
               }
             }
           ]
-        },
-        "passport": {
-          "language": "fa",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
-          "locator": "urn:bbc:optimo:asset:cej3lzd5e0go",
-          "availability": "AVAILABLE",
-          "taggings": [],
-          "schemaVersion": "1.3.0",
-          "publishedState": "PUBLISHED"
-        },
-        "id": "urn:bbc:ares::article:cej3lzd5e0go",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Persian",
-          "uri": "/persian",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {

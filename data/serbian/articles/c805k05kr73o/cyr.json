@@ -27,19 +27,33 @@
                                   "text": "Ratovi zvezda: Niški džedaji pomažu decu bez roditelja",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "e84abe65",
@@ -48,7 +62,9 @@
                 "firstPublished": 1562943337219,
                 "lastPublished": 1562943337219
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "ed2a92fa",
@@ -68,11 +84,18 @@
                             "text": "U dalekoj galaksiji, na jugu Srbije, u Nišu, sila se probudila.",
                             "attributes": []
                           },
-                          "position": [3, 1, 1]
+                          "position": [
+                            3,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 1]
+                    "position": [
+                      3,
+                      1
+                    ]
                   },
                   {
                     "id": "61b68f08",
@@ -87,16 +110,26 @@
                             "text": "Iako ih prema aktuelnim dešavanjima u serijalu ",
                             "attributes": []
                           },
-                          "position": [3, 2, 1]
+                          "position": [
+                            3,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "43217e45",
                           "type": "fragment",
                           "model": {
                             "text": "Ratovi zvezda",
-                            "attributes": ["italic"]
+                            "attributes": [
+                              "italic"
+                            ]
                           },
-                          "position": [3, 2, 2]
+                          "position": [
+                            3,
+                            2,
+                            2
+                          ]
                         },
                         {
                           "id": "693e9a1a",
@@ -105,11 +138,18 @@
                             "text": " gotovo i nema, džedaji se već nekoliko godina uspešno okupljaju u Nišu.",
                             "attributes": []
                           },
-                          "position": [3, 2, 3]
+                          "position": [
+                            3,
+                            2,
+                            3
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 2]
+                    "position": [
+                      3,
+                      2
+                    ]
                   },
                   {
                     "id": "eafdc9cf",
@@ -124,11 +164,18 @@
                             "text": "Sa više od sto članova, niški Džedajski pokret možda ne održava mir u svemiru, ali pokušava da živote nekih Nišlija učini boljim.",
                             "attributes": []
                           },
-                          "position": [3, 3, 1]
+                          "position": [
+                            3,
+                            3,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 3]
+                    "position": [
+                      3,
+                      3
+                    ]
                   },
                   {
                     "id": "603dbd7f",
@@ -143,16 +190,26 @@
                             "text": "Pored popkulturnih konvencija na kojima okupljaju fanove ",
                             "attributes": []
                           },
-                          "position": [3, 4, 1]
+                          "position": [
+                            3,
+                            4,
+                            1
+                          ]
                         },
                         {
                           "id": "55de7677",
                           "type": "fragment",
                           "model": {
                             "text": "Ratova zvezda",
-                            "attributes": ["italic"]
+                            "attributes": [
+                              "italic"
+                            ]
                           },
-                          "position": [3, 4, 2]
+                          "position": [
+                            3,
+                            4,
+                            2
+                          ]
                         },
                         {
                           "id": "d48b68f7",
@@ -161,17 +218,33 @@
                             "text": ", niški džedaji organizuju i humanitarne akcije.",
                             "attributes": []
                           },
-                          "position": [3, 4, 3]
+                          "position": [
+                            3,
+                            4,
+                            3
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 4]
+                    "position": [
+                      3,
+                      4
+                    ]
                   }
                 ]
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
-            { "id": "0a3f629e", "type": "mpu", "model": {}, "position": [4] },
+            {
+              "id": "0a3f629e",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                4
+              ]
+            },
             {
               "id": "ac7aa295",
               "type": "text",
@@ -190,11 +263,18 @@
                             "text": "A ovog leta su rešili da odu korak dalje i organizuju kamp namenjen deci bez roditelja.",
                             "attributes": []
                           },
-                          "position": [5, 1, 1]
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   },
                   {
                     "id": "0aa3f03c",
@@ -209,30 +289,38 @@
                             "text": "Kamp, koji će biti održan na Vlasinskom jezeru, nosiće naziv „Sila prati hrabre\".",
                             "attributes": []
                           },
-                          "position": [5, 2, 1]
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 2]
+                    "position": [
+                      5,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
             }
           ]
         }
       },
       "metadata": {
         "id": "urn:bbc:ares::article:c805k05kr73o",
-        "locators": { "optimoUrn": "urn:bbc:optimo:asset:c805k05kr73o" },
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:c805k05kr73o"
+        },
         "type": "article",
         "createdBy": "Serbian",
         "language": "sr-latn",
-        "lastUpdated": 1645628370352,
         "firstPublished": 1562943337219,
         "lastPublished": 1562943337219,
-        "timestamp": 1562943337219,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c805k05kr73o",
           "producer": "Serbian"
@@ -242,37 +330,18 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Serbian",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.4",
-        "blockTypes": ["headline", "text", "paragraph", "fragment"],
-        "readTime": 1,
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment"
+        ],
         "allowAdvertising": true
       },
       "promo": {
-        "locators": { "optimoUrn": "urn:bbc:optimo:asset:c805k05kr73o" },
-        "timestamp": 1562943337219,
-        "suitableForSyndication": false,
-        "language": "sr-latn",
         "headlines": {
           "seoHeadline": "Ratovi zvezda: Niški džedaji pomažu decu bez roditelja"
-        },
-        "images": {},
-        "passport": {
-          "language": "sr-latn",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Serbian",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c805k05kr73o",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Serbian",
-          "uri": "/serbian",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {
@@ -329,11 +398,16 @@
             "versions": [
               {
                 "versionId": "p01qjbvb",
-                "types": ["Editorial"],
+                "types": [
+                  "Editorial"
+                ],
                 "duration": 15,
                 "durationISO8601": "PT15S",
                 "warnings": {},
-                "availableTerritories": { "uk": true, "nonUk": true },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
                 "availableFrom": 1582890367000
               }
             ],
@@ -352,7 +426,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -364,7 +441,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Serbia MAP test" },
+          "headlines": {
+            "headline": "Serbia MAP test"
+          },
           "locators": {
             "assetUri": "/serbian/cyr/srbija-23278974",
             "curieCpsUrn": "urn:bbc:cps:curie:asset:00f43a6d-42bb-7a4c-995c-44462411e646",
@@ -381,7 +460,9 @@
             "subType": "episode",
             "format": "audio",
             "title": "Audio test for articles, UK only",
-            "synopses": { "short": "Audio test for articles, UK only" },
+            "synopses": {
+              "short": "Audio test for articles, UK only"
+            },
             "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n6y7l.jpg",
             "embedding": false,
             "advertising": false,
@@ -389,14 +470,19 @@
             "versions": [
               {
                 "versionId": "p01n6yb1",
-                "types": ["Original"],
+                "types": [
+                  "Original"
+                ],
                 "duration": 343,
                 "durationISO8601": "PT5M43S",
                 "warnings": {
                   "short": "Contains some strong language.",
                   "long": "Contains some strong language."
                 },
-                "availableTerritories": { "uk": true, "nonUk": false },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": false
+                },
                 "availableFrom": 1563782700000
               }
             ],
@@ -414,7 +500,10 @@
             "copyrightHolder": "Google",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "id": "urn:bbc:ares::asset:serbian/cyr/srbija-23278974",
           "type": "cps"
@@ -461,7 +550,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:serbian/cyr/media-23169628",
           "type": "cps"
         },
@@ -505,7 +597,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:serbian/cyr/media-23169629",
           "type": "cps"
         },
@@ -549,7 +644,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:serbian/cyr/media-23169630",
           "type": "cps"
         },
@@ -593,7 +691,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:serbian/cyr/media-23169631",
           "type": "cps"
         },
@@ -637,7 +738,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:serbian/cyr/media-23169632",
           "type": "cps"
         },
@@ -681,7 +785,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:serbian/cyr/media-23169633",
           "type": "cps"
         }
@@ -1248,7 +1355,9 @@
                         "tagging:TagConcept",
                         "tagging:Genre"
                       ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Health"],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Health"
+                      ],
                       "thingEnglishLabel": "Health",
                       "type": "about"
                     }

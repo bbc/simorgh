@@ -27,19 +27,33 @@
                                   "text": "Glasgow Police Raid Gun Shop, Find Weapons",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "21b7aea4",
@@ -76,15 +90,33 @@
                                               "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                                               "attributes": []
                                             },
-                                            "position": [2, 1, 1, 1, 1, 1]
+                                            "position": [
+                                              2,
+                                              1,
+                                              1,
+                                              1,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [2, 1, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 1]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               },
                               {
                                 "id": "2d4b664c",
@@ -104,15 +136,33 @@
                                               "text": "Sed venenatis ultrices lacus convallis dictum.",
                                               "attributes": []
                                             },
-                                            "position": [2, 1, 1, 2, 1, 1]
+                                            "position": [
+                                              2,
+                                              1,
+                                              1,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [2, 1, 1, 2, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 2]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  2
+                                ]
                               },
                               {
                                 "id": "35a908df",
@@ -132,16 +182,32 @@
                                               "text": "This text is ",
                                               "attributes": []
                                             },
-                                            "position": [2, 1, 1, 3, 1, 1]
+                                            "position": [
+                                              2,
+                                              1,
+                                              1,
+                                              3,
+                                              1,
+                                              1
+                                            ]
                                           },
                                           {
                                             "id": "3b983169",
                                             "type": "fragment",
                                             "model": {
                                               "text": "bold, ",
-                                              "attributes": ["bold"]
+                                              "attributes": [
+                                                "bold"
+                                              ]
                                             },
-                                            "position": [2, 1, 1, 3, 1, 2]
+                                            "position": [
+                                              2,
+                                              1,
+                                              1,
+                                              3,
+                                              1,
+                                              2
+                                            ]
                                           },
                                           {
                                             "id": "eb25aa57",
@@ -150,16 +216,32 @@
                                               "text": "this is",
                                               "attributes": []
                                             },
-                                            "position": [2, 1, 1, 3, 1, 3]
+                                            "position": [
+                                              2,
+                                              1,
+                                              1,
+                                              3,
+                                              1,
+                                              3
+                                            ]
                                           },
                                           {
                                             "id": "9e473ac5",
                                             "type": "fragment",
                                             "model": {
                                               "text": " italic ",
-                                              "attributes": ["italic"]
+                                              "attributes": [
+                                                "italic"
+                                              ]
                                             },
-                                            "position": [2, 1, 1, 3, 1, 4]
+                                            "position": [
+                                              2,
+                                              1,
+                                              1,
+                                              3,
+                                              1,
+                                              4
+                                            ]
                                           },
                                           {
                                             "id": "a5f77165",
@@ -168,24 +250,52 @@
                                               "text": "and this is ",
                                               "attributes": []
                                             },
-                                            "position": [2, 1, 1, 3, 1, 5]
+                                            "position": [
+                                              2,
+                                              1,
+                                              1,
+                                              3,
+                                              1,
+                                              5
+                                            ]
                                           },
                                           {
                                             "id": "de772ce9",
                                             "type": "fragment",
                                             "model": {
                                               "text": "bold italic.",
-                                              "attributes": ["bold", "italic"]
+                                              "attributes": [
+                                                "bold",
+                                                "italic"
+                                              ]
                                             },
-                                            "position": [2, 1, 1, 3, 1, 6]
+                                            "position": [
+                                              2,
+                                              1,
+                                              1,
+                                              3,
+                                              1,
+                                              6
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [2, 1, 1, 3, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        3,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 3]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  3
+                                ]
                               },
                               {
                                 "id": "4ed0585a",
@@ -205,16 +315,33 @@
                                               "text": "We can have",
                                               "attributes": []
                                             },
-                                            "position": [2, 1, 1, 4, 1, 1]
+                                            "position": [
+                                              2,
+                                              1,
+                                              1,
+                                              4,
+                                              1,
+                                              1
+                                            ]
                                           },
                                           {
                                             "id": "a68b5e55",
                                             "type": "fragment",
                                             "model": {
                                               "text": " ",
-                                              "attributes": ["bold", "italic"]
+                                              "attributes": [
+                                                "bold",
+                                                "italic"
+                                              ]
                                             },
-                                            "position": [2, 1, 1, 4, 1, 2]
+                                            "position": [
+                                              2,
+                                              1,
+                                              1,
+                                              4,
+                                              1,
+                                              2
+                                            ]
                                           },
                                           {
                                             "id": "2fa6675a",
@@ -230,14 +357,27 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    2, 1, 1, 4, 1, 3, 1
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    4,
+                                                    1,
+                                                    3,
+                                                    1
                                                   ]
                                                 }
                                               ],
                                               "locator": "https://www.google.com",
                                               "isExternal": true
                                             },
-                                            "position": [2, 1, 1, 4, 1, 3]
+                                            "position": [
+                                              2,
+                                              1,
+                                              1,
+                                              4,
+                                              1,
+                                              3
+                                            ]
                                           },
                                           {
                                             "id": "04537085",
@@ -246,7 +386,14 @@
                                               "text": " here which can also be ",
                                               "attributes": []
                                             },
-                                            "position": [2, 1, 1, 4, 1, 4]
+                                            "position": [
+                                              2,
+                                              1,
+                                              1,
+                                              4,
+                                              1,
+                                              4
+                                            ]
                                           },
                                           {
                                             "id": "7926d391",
@@ -265,14 +412,27 @@
                                                     ]
                                                   },
                                                   "position": [
-                                                    2, 1, 1, 4, 1, 5, 1
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    4,
+                                                    1,
+                                                    5,
+                                                    1
                                                   ]
                                                 }
                                               ],
                                               "locator": "https://www.google.com",
                                               "isExternal": true
                                             },
-                                            "position": [2, 1, 1, 4, 1, 5]
+                                            "position": [
+                                              2,
+                                              1,
+                                              1,
+                                              4,
+                                              1,
+                                              5
+                                            ]
                                           },
                                           {
                                             "id": "adcb9979",
@@ -281,27 +441,54 @@
                                               "text": ".",
                                               "attributes": []
                                             },
-                                            "position": [2, 1, 1, 4, 1, 6]
+                                            "position": [
+                                              2,
+                                              1,
+                                              1,
+                                              4,
+                                              1,
+                                              6
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [2, 1, 1, 4, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        4,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 4]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  4
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 1, 1]
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 1]
+                    "position": [
+                      2,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "56477cf4",
@@ -310,7 +497,9 @@
                 "firstPublished": 1627470119562,
                 "lastPublished": 1627470119562
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
             {
               "id": "6be099ba",
@@ -326,41 +515,87 @@
                         {
                           "id": "e54a7e7c",
                           "type": "fragment",
-                          "model": { "text": "Lorem ipsum ", "attributes": [] },
-                          "position": [4, 1, 1]
+                          "model": {
+                            "text": "Lorem ipsum ",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
                         },
                         {
                           "id": "5860f8e1",
                           "type": "fragment",
-                          "model": { "text": "dolor", "attributes": ["bold"] },
-                          "position": [4, 1, 2]
+                          "model": {
+                            "text": "dolor",
+                            "attributes": [
+                              "bold"
+                            ]
+                          },
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
                         },
                         {
                           "id": "c65d7ab5",
                           "type": "fragment",
-                          "model": { "text": " sit amet, ", "attributes": [] },
-                          "position": [4, 1, 3]
+                          "model": {
+                            "text": " sit amet, ",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            3
+                          ]
                         },
                         {
                           "id": "e209c88c",
                           "type": "fragment",
                           "model": {
                             "text": "consectetur",
-                            "attributes": ["bold", "italic"]
+                            "attributes": [
+                              "bold",
+                              "italic"
+                            ]
                           },
-                          "position": [4, 1, 4]
+                          "position": [
+                            4,
+                            1,
+                            4
+                          ]
                         },
                         {
                           "id": "b4434fdc",
                           "type": "fragment",
-                          "model": { "text": " adipiscing ", "attributes": [] },
-                          "position": [4, 1, 5]
+                          "model": {
+                            "text": " adipiscing ",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            5
+                          ]
                         },
                         {
                           "id": "8468fe0a",
                           "type": "fragment",
-                          "model": { "text": "elit", "attributes": ["italic"] },
-                          "position": [4, 1, 6]
+                          "model": {
+                            "text": "elit",
+                            "attributes": [
+                              "italic"
+                            ]
+                          },
+                          "position": [
+                            4,
+                            1,
+                            6
+                          ]
                         },
                         {
                           "id": "dd8f02da",
@@ -369,11 +604,18 @@
                             "text": ". Sed venenatis  ultrices lacus convallis dictum. In tellus diam, vehicula non ornare id,  hendrerit et urna. Fusce vel metus accumsan, consectetur augue ut,  facilisis augue. Maecenas ut interdum orci, in faucibus nisl.",
                             "attributes": []
                           },
-                          "position": [4, 1, 7]
+                          "position": [
+                            4,
+                            1,
+                            7
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 1]
+                    "position": [
+                      4,
+                      1
+                    ]
                   },
                   {
                     "id": "081b6d99",
@@ -388,15 +630,24 @@
                             "text": "Donec eget  ex cursus est tincidunt laoreet ac vitae nulla. Suspendisse ullamcorper  id dolor non aliquam. Aenean ipsum lorem, laoreet venenatis pretium eu,  tincidunt id mauris. Aliquam faucibus tellus eget erat auctor, vitae  rutrum risus porttitor. ",
                             "attributes": []
                           },
-                          "position": [4, 2, 1]
+                          "position": [
+                            4,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 2]
+                    "position": [
+                      4,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [4]
+              "position": [
+                4
+              ]
             },
             {
               "id": "2c4f7015",
@@ -426,19 +677,37 @@
                                         "text": "This is a caption ",
                                         "attributes": []
                                       },
-                                      "position": [5, 1, 1, 1, 1]
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 1, 1, 1]
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 1, 1]
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   },
                   {
                     "id": "1fc9cb0b",
@@ -463,19 +732,37 @@
                                         "text": "Picture of Guns",
                                         "attributes": []
                                       },
-                                      "position": [5, 2, 1, 1, 1]
+                                      "position": [
+                                        5,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 2, 1, 1]
+                                "position": [
+                                  5,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 2, 1]
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 2]
+                    "position": [
+                      5,
+                      2
+                    ]
                   },
                   {
                     "id": "d7b11b79",
@@ -488,11 +775,16 @@
                       "copyrightHolder": "BBC",
                       "suitableForSyndication": true
                     },
-                    "position": [5, 3]
+                    "position": [
+                      5,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
             },
             {
               "id": "f34af4e9",
@@ -512,11 +804,18 @@
                             "text": "Praesent vel sem nisi. Etiam elementum libero mollis felis scelerisque  consectetur. Cras in porttitor orci.",
                             "attributes": []
                           },
-                          "position": [6, 1, 1]
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 1]
+                    "position": [
+                      6,
+                      1
+                    ]
                   },
                   {
                     "id": "13f3fa4f",
@@ -531,17 +830,33 @@
                             "text": "Pellentesque tempor eros venenatis  est tincidunt, vitae pretium lacus tempor. Donec lobortis vulputate  mattis. Sed sit amet dui vitae nibh egestas bibendum. Mauris congue urna  at condimentum congue.",
                             "attributes": []
                           },
-                          "position": [6, 2, 1]
+                          "position": [
+                            6,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 2]
+                    "position": [
+                      6,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [6]
+              "position": [
+                6
+              ]
             },
-            { "id": "c9d0346c", "type": "mpu", "model": {}, "position": [7] },
+            {
+              "id": "c9d0346c",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                7
+              ]
+            },
             {
               "id": "913c1cda",
               "type": "text",
@@ -560,11 +875,18 @@
                             "text": "Nulla gravida pulvinar purus, sit amet faucibus  libero rutrum at. Phasellus porttitor quam leo. Curabitur a hendrerit  arcu, quis euismod ligula. Pellentesque non sagittis ante. Morbi magna  tellus, tincidunt non porta id, tempus eu nisi. Cras luctus quis urna  sed pellentesque.",
                             "attributes": []
                           },
-                          "position": [8, 1, 1]
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 1]
+                    "position": [
+                      8,
+                      1
+                    ]
                   },
                   {
                     "id": "8879457b",
@@ -579,15 +901,24 @@
                             "text": "Duis eget egestas augue, non vestibulum risus. ",
                             "attributes": []
                           },
-                          "position": [8, 2, 1]
+                          "position": [
+                            8,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 2]
+                    "position": [
+                      8,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [8]
+              "position": [
+                8
+              ]
             },
             {
               "id": "3090cb6f",
@@ -618,19 +949,37 @@
                                         "text": "Running Horses",
                                         "attributes": []
                                       },
-                                      "position": [9, 1, 1, 1, 1]
+                                      "position": [
+                                        9,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [9, 1, 1, 1]
+                                "position": [
+                                  9,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [9, 1, 1]
+                          "position": [
+                            9,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [9, 1]
+                    "position": [
+                      9,
+                      1
+                    ]
                   },
                   {
                     "id": "e9290042",
@@ -655,7 +1004,9 @@
                             "versions": [
                               {
                                 "versionId": "p01t1jmp",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 30,
                                 "durationISO8601": "PT30S",
                                 "warnings": {},
@@ -666,10 +1017,16 @@
                                 "availableFrom": 1635949574000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [9, 2, 1]
+                          "position": [
+                            9,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "c56b18bd",
@@ -685,7 +1042,12 @@
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01t1jn0.jpg",
                                   "originCode": "mpv"
                                 },
-                                "position": [9, 2, 2, 1]
+                                "position": [
+                                  9,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
                                 "id": "e2fb0610",
@@ -711,32 +1073,65 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    9, 2, 2, 2, 1, 1, 1
+                                                    9,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [9, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              9,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [9, 2, 2, 2, 1]
+                                      "position": [
+                                        9,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [9, 2, 2, 2]
+                                "position": [
+                                  9,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [9, 2, 2]
+                          "position": [
+                            9,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [9, 2]
+                    "position": [
+                      9,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [9]
+              "position": [
+                9
+              ]
             },
             {
               "id": "4c7079fb",
@@ -766,19 +1161,37 @@
                                         "text": "This is my title",
                                         "attributes": []
                                       },
-                                      "position": [10, 1, 1, 1, 1]
+                                      "position": [
+                                        10,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [10, 1, 1, 1]
+                                "position": [
+                                  10,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [10, 1, 1]
+                          "position": [
+                            10,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [10, 1]
+                    "position": [
+                      10,
+                      1
+                    ]
                   },
                   {
                     "id": "8b89f1c8",
@@ -815,20 +1228,44 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    10, 2, 1, 1, 1, 1, 1
+                                                    10,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [10, 2, 1, 1, 1, 1]
+                                            "position": [
+                                              10,
+                                              2,
+                                              1,
+                                              1,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [10, 2, 1, 1, 1]
+                                      "position": [
+                                        10,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [10, 2, 1, 1]
+                                "position": [
+                                  10,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               },
                               {
                                 "id": "28f6cb3c",
@@ -841,11 +1278,20 @@
                                   "originCode": "cpsdevpb",
                                   "copyrightHolder": "Getty Images"
                                 },
-                                "position": [10, 2, 1, 2]
+                                "position": [
+                                  10,
+                                  2,
+                                  1,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [10, 2, 1]
+                          "position": [
+                            10,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "0754ebb6",
@@ -872,24 +1318,49 @@
                                               "text": "This is a Dog",
                                               "attributes": []
                                             },
-                                            "position": [10, 2, 2, 1, 1, 1]
+                                            "position": [
+                                              10,
+                                              2,
+                                              2,
+                                              1,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ],
                                         "isExternal": false
                                       },
-                                      "position": [10, 2, 2, 1, 1]
+                                      "position": [
+                                        10,
+                                        2,
+                                        2,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [10, 2, 2, 1]
+                                "position": [
+                                  10,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [10, 2, 2]
+                          "position": [
+                            10,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [10, 2]
+                    "position": [
+                      10,
+                      2
+                    ]
                   },
                   {
                     "id": "45c2bb03",
@@ -926,20 +1397,44 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    10, 3, 1, 1, 1, 1, 1
+                                                    10,
+                                                    3,
+                                                    1,
+                                                    1,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [10, 3, 1, 1, 1, 1]
+                                            "position": [
+                                              10,
+                                              3,
+                                              1,
+                                              1,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [10, 3, 1, 1, 1]
+                                      "position": [
+                                        10,
+                                        3,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [10, 3, 1, 1]
+                                "position": [
+                                  10,
+                                  3,
+                                  1,
+                                  1
+                                ]
                               },
                               {
                                 "id": "a811610c",
@@ -952,11 +1447,20 @@
                                   "originCode": "cpsdevpb",
                                   "copyrightHolder": "NASA"
                                 },
-                                "position": [10, 3, 1, 2]
+                                "position": [
+                                  10,
+                                  3,
+                                  1,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [10, 3, 1]
+                          "position": [
+                            10,
+                            3,
+                            1
+                          ]
                         },
                         {
                           "id": "76833d3d",
@@ -983,24 +1487,49 @@
                                               "text": "This is not",
                                               "attributes": []
                                             },
-                                            "position": [10, 3, 2, 1, 1, 1]
+                                            "position": [
+                                              10,
+                                              3,
+                                              2,
+                                              1,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ],
                                         "isExternal": false
                                       },
-                                      "position": [10, 3, 2, 1, 1]
+                                      "position": [
+                                        10,
+                                        3,
+                                        2,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [10, 3, 2, 1]
+                                "position": [
+                                  10,
+                                  3,
+                                  2,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [10, 3, 2]
+                          "position": [
+                            10,
+                            3,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [10, 3]
+                    "position": [
+                      10,
+                      3
+                    ]
                   },
                   {
                     "id": "8d5b75f9",
@@ -1037,20 +1566,44 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    10, 4, 1, 1, 1, 1, 1
+                                                    10,
+                                                    4,
+                                                    1,
+                                                    1,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [10, 4, 1, 1, 1, 1]
+                                            "position": [
+                                              10,
+                                              4,
+                                              1,
+                                              1,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [10, 4, 1, 1, 1]
+                                      "position": [
+                                        10,
+                                        4,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [10, 4, 1, 1]
+                                "position": [
+                                  10,
+                                  4,
+                                  1,
+                                  1
+                                ]
                               },
                               {
                                 "id": "3298a59d",
@@ -1063,11 +1616,20 @@
                                   "originCode": "cpsdevpb",
                                   "copyrightHolder": "AFP"
                                 },
-                                "position": [10, 4, 1, 2]
+                                "position": [
+                                  10,
+                                  4,
+                                  1,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [10, 4, 1]
+                          "position": [
+                            10,
+                            4,
+                            1
+                          ]
                         },
                         {
                           "id": "946fda9f",
@@ -1094,20 +1656,42 @@
                                               "text": "Another Optimo Article",
                                               "attributes": []
                                             },
-                                            "position": [10, 4, 2, 1, 1, 1]
+                                            "position": [
+                                              10,
+                                              4,
+                                              2,
+                                              1,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ],
                                         "isExternal": false
                                       },
-                                      "position": [10, 4, 2, 1, 1]
+                                      "position": [
+                                        10,
+                                        4,
+                                        2,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [10, 4, 2, 1]
+                                "position": [
+                                  10,
+                                  4,
+                                  2,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [10, 4, 2]
+                          "position": [
+                            10,
+                            4,
+                            2
+                          ]
                         },
                         {
                           "id": "09d22881",
@@ -1117,20 +1701,36 @@
                               {
                                 "id": "32ddf415",
                                 "type": "optimoLinkMetadata",
-                                "model": { "timestamp": 1656938572862 },
-                                "position": [10, 4, 3, 1]
+                                "model": {
+                                  "timestamp": 1656938572862
+                                },
+                                "position": [
+                                  10,
+                                  4,
+                                  3,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [10, 4, 3]
+                          "position": [
+                            10,
+                            4,
+                            3
+                          ]
                         }
                       ]
                     },
-                    "position": [10, 4]
+                    "position": [
+                      10,
+                      4
+                    ]
                   }
                 ]
               },
-              "position": [10]
+              "position": [
+                10
+              ]
             }
           ]
         }
@@ -1138,17 +1738,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c7yn6nznljdo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c7yn6nznljdo",
-          "canonicalUrl": "https://www.bbc.com/afrique/articles/c7yn6nznljdo"
+          "optimoUrn": "urn:bbc:optimo:asset:c7yn6nznljdo"
         },
         "type": "article",
         "createdBy": "Afrique",
         "language": "fr",
-        "lastUpdated": 1657202021552,
         "firstPublished": 1627470119562,
         "lastPublished": 1627470119562,
-        "timestamp": 1627470119562,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c7yn6nznljdo",
           "producer": "Afrique",
@@ -1157,8 +1753,6 @@
         "passport": {
           "language": "fr",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
-          "locator": "urn:bbc:optimo:asset:c7yn6nznljdo",
-          "availability": "AVAILABLE",
           "taggings": [
             {
               "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
@@ -1205,8 +1799,6 @@
               "value": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id"
             }
           ],
-          "schemaVersion": "1.4.0",
-          "publishedState": "PUBLISHED",
           "predicates": {
             "formats": [
               {
@@ -1214,7 +1806,10 @@
                 "thingLabel": "Analysis",
                 "thingUri": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id",
                 "thingId": "170f311e-fd87-4255-85db-8b4aee12594d",
-                "thingType": ["tagging:TagConcept", "tagging:Format"],
+                "thingType": [
+                  "tagging:TagConcept",
+                  "tagging:Format"
+                ],
                 "thingSameAs": [
                   "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis"
                 ],
@@ -1228,7 +1823,10 @@
                 "thingLabel": "Interview",
                 "thingUri": "http://www.bbc.co.uk/things/b3c67683-6ada-46da-a329-16fbd4a12c96#id",
                 "thingId": "b3c67683-6ada-46da-a329-16fbd4a12c96",
-                "thingType": ["tagging:TagConcept", "tagging:Format"],
+                "thingType": [
+                  "tagging:TagConcept",
+                  "tagging:Format"
+                ],
                 "thingSameAs": [
                   "http://www.wikidata.org/entity/Q178651",
                   "http://dbpedia.org/resource/Interview"
@@ -1269,8 +1867,6 @@
             ]
           }
         },
-        "tags": {},
-        "version": "v1.4.4",
         "blockTypes": [
           "headline",
           "text",
@@ -1291,19 +1887,10 @@
           "aresLink",
           "aresMedia"
         ],
-        "suitableForSyndication": true,
-        "readTime": 2,
         "consumableAsSFV": false,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c7yn6nznljdo",
-          "canonicalUrl": "https://www.bbc.com/afrique/articles/c7yn6nznljdo"
-        },
-        "timestamp": 1627470119562,
-        "suitableForSyndication": true,
-        "language": "fr",
         "headlines": {
           "seoHeadline": "Gist Test Article",
           "promoHeadline": {
@@ -1421,7 +2008,10 @@
                       "blocks": [
                         {
                           "type": "fragment",
-                          "model": { "text": "", "attributes": [] }
+                          "model": {
+                            "text": "",
+                            "attributes": []
+                          }
                         }
                       ]
                     }
@@ -1430,133 +2020,7 @@
               }
             }
           ]
-        },
-        "passport": {
-          "language": "fr",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
-          "locator": "urn:bbc:optimo:asset:c7yn6nznljdo",
-          "availability": "AVAILABLE",
-          "taggings": [
-            {
-              "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
-              "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
-            },
-            {
-              "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
-              "value": "http://www.bbc.co.uk/things/b3c67683-6ada-46da-a329-16fbd4a12c96#id"
-            },
-            {
-              "predicate": "http://www.bbc.co.uk/ontologies/creativework/genre",
-              "value": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id"
-            },
-            {
-              "predicate": "http://www.bbc.co.uk/ontologies/creativework/genre",
-              "value": "http://www.bbc.co.uk/things/bd7b89a7-78bd-4c60-a78c-9983a479f70f#id"
-            },
-            {
-              "predicate": "http://www.bbc.co.uk/ontologies/creativework/genre",
-              "value": "http://www.bbc.co.uk/things/921a13d0-6fc6-6740-af87-8af4655ec20f#id"
-            },
-            {
-              "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
-              "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
-            },
-            {
-              "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
-              "value": "http://www.bbc.co.uk/things/654e1609-7a9f-470a-bd87-fb8e8144c374#id"
-            },
-            {
-              "predicate": "http://www.bbc.co.uk/ontologies/creativework/genre",
-              "value": "http://www.bbc.co.uk/things/27ed8ba8-005a-5044-87dd-5373d679a020#id"
-            },
-            {
-              "predicate": "http://www.bbc.co.uk/ontologies/creativework/genre",
-              "value": "http://www.bbc.co.uk/things/b3a086df-ab42-2b44-be8b-76b600bfcdce#id"
-            },
-            {
-              "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
-              "value": "http://www.bbc.co.uk/things/e5edf40d-b1e6-48f5-be62-8fe6d7fe857a#id"
-            },
-            {
-              "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
-              "value": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id"
-            }
-          ],
-          "schemaVersion": "1.4.0",
-          "publishedState": "PUBLISHED",
-          "predicates": {
-            "formats": [
-              {
-                "value": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id",
-                "thingLabel": "Analysis",
-                "thingUri": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id",
-                "thingId": "170f311e-fd87-4255-85db-8b4aee12594d",
-                "thingType": ["tagging:TagConcept", "tagging:Format"],
-                "thingSameAs": [
-                  "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis"
-                ],
-                "thingEnglishLabel": "Analysis",
-                "thingPreferredLabel": "Analysis",
-                "thingLabelLanguage": "fr",
-                "type": "formats"
-              },
-              {
-                "value": "http://www.bbc.co.uk/things/b3c67683-6ada-46da-a329-16fbd4a12c96#id",
-                "thingLabel": "Interview",
-                "thingUri": "http://www.bbc.co.uk/things/b3c67683-6ada-46da-a329-16fbd4a12c96#id",
-                "thingId": "b3c67683-6ada-46da-a329-16fbd4a12c96",
-                "thingType": ["tagging:TagConcept", "tagging:Format"],
-                "thingSameAs": [
-                  "http://www.wikidata.org/entity/Q178651",
-                  "http://dbpedia.org/resource/Interview"
-                ],
-                "thingEnglishLabel": "Interview",
-                "thingPreferredLabel": "Interview",
-                "thingLabelLanguage": "fr",
-                "type": "formats"
-              }
-            ],
-            "genre": [
-              {
-                "value": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id",
-                "type": "genre"
-              },
-              {
-                "value": "http://www.bbc.co.uk/things/bd7b89a7-78bd-4c60-a78c-9983a479f70f#id",
-                "type": "genre"
-              },
-              {
-                "value": "http://www.bbc.co.uk/things/921a13d0-6fc6-6740-af87-8af4655ec20f#id",
-                "type": "genre"
-              },
-              {
-                "value": "http://www.bbc.co.uk/things/27ed8ba8-005a-5044-87dd-5373d679a020#id",
-                "type": "genre"
-              },
-              {
-                "value": "http://www.bbc.co.uk/things/b3a086df-ab42-2b44-be8b-76b600bfcdce#id",
-                "type": "genre"
-              }
-            ],
-            "infoClass": [
-              {
-                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
-                "type": "infoClass"
-              }
-            ]
-          }
-        },
-        "id": "urn:bbc:ares::article:c7yn6nznljdo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Afrique",
-          "uri": "/afrique",
-          "type": "simple"
-        },
-        "groups": []
+        }
       }
     },
     "secondaryData": {
@@ -1595,7 +2059,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -1615,7 +2082,9 @@
       ],
       "features": [
         {
-          "headlines": { "headline": "Commémoration du massacre de Soweto 35" },
+          "headlines": {
+            "headline": "Commémoration du massacre de Soweto 35"
+          },
           "locators": {
             "assetUri": "/afrique/23053027",
             "cpsUrn": "urn:bbc:content:assetUri:afrique/23053027",
@@ -1649,7 +2118,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Accueil",
@@ -1660,7 +2132,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Commémoration du massacre de Soweto 36" },
+          "headlines": {
+            "headline": "Commémoration du massacre de Soweto 36"
+          },
           "locators": {
             "assetUri": "/afrique/23053028",
             "cpsUrn": "urn:bbc:content:assetUri:afrique/23053028",
@@ -1694,7 +2168,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Accueil",
@@ -1705,7 +2182,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Commémoration du massacre de Soweto 19" },
+          "headlines": {
+            "headline": "Commémoration du massacre de Soweto 19"
+          },
           "locators": {
             "assetUri": "/afrique/23052941",
             "cpsUrn": "urn:bbc:content:assetUri:afrique/23052941",
@@ -1739,7 +2218,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Accueil",
@@ -1750,7 +2232,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Commémoration du massacre de Soweto 20" },
+          "headlines": {
+            "headline": "Commémoration du massacre de Soweto 20"
+          },
           "locators": {
             "assetUri": "/afrique/23052943",
             "cpsUrn": "urn:bbc:content:assetUri:afrique/23052943",
@@ -1784,7 +2268,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Accueil",
@@ -1795,7 +2282,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Commémoration du massacre de Soweto 21" },
+          "headlines": {
+            "headline": "Commémoration du massacre de Soweto 21"
+          },
           "locators": {
             "assetUri": "/afrique/23052944",
             "cpsUrn": "urn:bbc:content:assetUri:afrique/23052944",
@@ -1829,7 +2318,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Accueil",
@@ -1840,7 +2332,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Commémoration du massacre de Soweto 25" },
+          "headlines": {
+            "headline": "Commémoration du massacre de Soweto 25"
+          },
           "locators": {
             "assetUri": "/afrique/23052995",
             "cpsUrn": "urn:bbc:content:assetUri:afrique/23052995",
@@ -1874,7 +2368,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Accueil",
@@ -1885,7 +2382,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Commémoration du massacre de Soweto 26" },
+          "headlines": {
+            "headline": "Commémoration du massacre de Soweto 26"
+          },
           "locators": {
             "assetUri": "/afrique/23052996",
             "cpsUrn": "urn:bbc:content:assetUri:afrique/23052996",
@@ -1919,7 +2418,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Accueil",
@@ -1930,7 +2432,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Commémoration du massacre de Soweto 27" },
+          "headlines": {
+            "headline": "Commémoration du massacre de Soweto 27"
+          },
           "locators": {
             "assetUri": "/afrique/23052997",
             "cpsUrn": "urn:bbc:content:assetUri:afrique/23052997",
@@ -1964,7 +2468,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Accueil",
