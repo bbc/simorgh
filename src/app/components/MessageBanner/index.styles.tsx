@@ -31,7 +31,7 @@ const styles = {
   image: ({ mq }: Theme) =>
     css({
       maxWidth: '184px',
-      // [mq.GROUP_1_MIN_WIDTH]: { display: 'inline-block' },
+      //  [mq.GROUP_1_MIN_WIDTH]: { display: 'inline-block' },
     }),
   linkbackground: ({ palette }: Theme) =>
     css({
