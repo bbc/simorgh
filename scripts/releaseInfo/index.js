@@ -47,7 +47,6 @@ const generateLinks = (service, env) => {
   const output = [];
 
   const serviceData = allServices()[service];
-  console.log(service, Object.keys(serviceData.pageTypes));
 
   Object.keys(serviceData.pageTypes)
     .sort()
