@@ -8,7 +8,7 @@ import {
   FeatureIdxPage,
   ArticlePage,
 } from '#pages';
-import getInitialData from './getInitialData';
+import getInitialData from '../article/getInitialData';
 import { cpsAssetPagePath, legacyAssetPagePath } from '../utils/regex';
 import {
   FEATURE_INDEX_PAGE,

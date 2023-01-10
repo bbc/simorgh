@@ -55,7 +55,7 @@ export default async ({
     const isLocal = env === 'local';
 
     const agent = !isLocal ? await getAgent() : null;
-    const id = getId(pathname);
+    const id = '/mundo/noticias-america-latina-64218613';
 
     if (!id) throw handleError('Article ID is invalid', 500);
 
