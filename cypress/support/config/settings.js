@@ -1935,7 +1935,23 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/gahuza/topics/crvnv566zx9t'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/gahuza/topics/crvnv566zx9t'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/gahuza/topics/crvnv566zx9t'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
