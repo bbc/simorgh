@@ -42,7 +42,6 @@ export const frontPageManifestPath = getManifestRegex(allServices);
 export const cpsAssetPagePath = getCpsAssetRegex(allServices);
 export const cpsAssetPageDataPath = `${cpsAssetPagePath}.json`;
 
-
 export const liveRadioPath = getLiveRadioRegex(allServices);
 export const liveRadioDataPath = `${liveRadioPath}.json`;
 

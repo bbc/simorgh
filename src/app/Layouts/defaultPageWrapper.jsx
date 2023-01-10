@@ -46,7 +46,10 @@ const PageWrapper = ({ children, pageData, status }) => {
 
   const serviceFonts = fontFacesLazy(service);
   const fontJs =
-    isLow || isAmp || !serviceFonts.length || process.env.JEST_WORKER_ID !== undefined
+    isLow ||
+    isAmp ||
+    !serviceFonts.length ||
+    process.env.JEST_WORKER_ID !== undefined
       ? ''
       : `
   				if ("FileReader" in window && "Promise" in window && "fetch" in window) {

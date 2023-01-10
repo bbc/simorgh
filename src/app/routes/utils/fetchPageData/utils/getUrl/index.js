@@ -13,5 +13,8 @@ export default pathname => {
 
   const params = isLive() ? '' : getQueryString(pathname);
   const basePath = getUrlPath(pathname);
-  return `${baseUrl}${basePath.replace(AMP_REGEX, '').replace(APP_REGEX, '').replace(LOW_REGEX, '')}.json${params}`; // Remove .amp at the end of pathnames for AMP pages.
+  return `${baseUrl}${basePath
+    .replace(AMP_REGEX, '')
+    .replace(APP_REGEX, '')
+    .replace(LOW_REGEX, '')}.json${params}`; // Remove .amp at the end of pathnames for AMP pages.
 };

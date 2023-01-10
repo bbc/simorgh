@@ -194,7 +194,7 @@ server.get(
         if (!isLow && headers.saveData === true) {
           return res.redirect(302, `${urlPath}.low`);
         }
-        else if (isLow && !headers.saveData) {
+        if (isLow && !headers.saveData) {
           return res.redirect(302, urlPath.replace('.low', ''));
         }
       }
@@ -277,16 +277,16 @@ server.get(
       });
 
       if (result.redirectUrl) {
-        res.redirect(301, result.redirectUrl);
-      } else if (result.html) {
+        return res.redirect(301, result.redirectUrl);
+      }
+      if (result.html) {
         res.set(
           'onion-location',
           `https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${urlPath}`,
         );
-        res.status(status).send(result.html);
-      } else {
-        throw new Error('unknown result');
+        return res.status(status).send(result.html);
       }
+      throw new Error('unknown result');
     } catch ({ message, status = 500 }) {
       sendCustomMetric({
         metricName: NON_200_RESPONSE,
@@ -302,7 +302,7 @@ server.get(
         headers: removeSensitiveHeaders(headers),
       });
 
-      res.status(500).send('Internal server error');
+      return res.status(500).send('Internal server error');
     }
   },
 );
