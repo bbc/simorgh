@@ -6914,7 +6914,7 @@ module.exports = () => ({
             enabled: true,
           },
           local: {
-            paths: [''],
+            paths: ['/serbian/lat/topics/c1gd303q6y6t'],
             enabled: false,
           },
         },
