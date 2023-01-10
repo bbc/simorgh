@@ -1,5 +1,6 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../../palette';
 import helmetFontVariants from '../../fontVariants/helmet';
+import brandSVG from '../../chameleonLogos/serbian';
 
 const baseSerbianTheme = {
   palette: {
@@ -13,6 +14,7 @@ const baseSerbianTheme = {
     fontVariants: helmetFontVariants,
     fontFaces: [],
   },
+  brandSVG,
 };
 
 export default baseSerbianTheme;

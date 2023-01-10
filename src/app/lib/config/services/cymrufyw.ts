@@ -1,4 +1,3 @@
-import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/cymrufyw';
 import {
   C_POSTBOX,
   C_WHITE,
@@ -215,7 +214,6 @@ export const service: DefaultServiceConfig = {
       },
       socialEmbed: {},
     },
-    brandSVG,
     mostRead: {
       header: 'Mwyaf poblogaidd',
       lastUpdated: 'Diweddariad diwethaf:',

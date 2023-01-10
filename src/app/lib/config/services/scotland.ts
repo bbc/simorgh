@@ -2,7 +2,6 @@ import {
   C_DARK_SALTIRE,
   C_WHITE,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/scotland';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/psammead-locales/moment/en-gb';
 import '#psammead/moment-timezone-include/tz/Europe/London';
@@ -207,7 +206,6 @@ export const service: DefaultServiceConfig = {
       },
       socialEmbed: {},
     },
-    brandSVG,
     mostRead: {
       header: 'Most read',
       lastUpdated: 'Last updated:',

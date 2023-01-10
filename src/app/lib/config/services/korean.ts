@@ -5,7 +5,6 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import noAscendersOrDescenders from '../../../components/ThemeProvider/fontScripts/noAscOrDesc';
-import brandSVG from '../../chameleonLogos/korean';
 import '#psammead/moment-timezone-include/tz/Asia/Seoul';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/ko';
@@ -262,7 +261,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: '주요뉴스',
       featuresAnalysisTitle: '이 시간 이슈',
     },
-    brandSVG,
     mostRead: {
       header: 'TOP 뉴스',
       lastUpdated: '마지막 업데이트일',
