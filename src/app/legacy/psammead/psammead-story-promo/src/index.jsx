@@ -198,7 +198,7 @@ Summary.defaultProps = {
   promoType: 'regular',
 };
 
-const TestLink = styled.a`
+export const Link = styled.a`
   position: static;
   color: ${C_EBON};
   text-decoration: none;
@@ -226,20 +226,20 @@ const TestLink = styled.a`
   }
 `;
 
-export const Link = ({ className, children }) => {
-  const myString = `${className} focusIndicatorDisplayBlock`;
+// export const Link = ({ className, children }) => {
+//   const myString = `${className} focusIndicatorDisplayBlock`;
 
-  return <TestLink className={myString}>{children}</TestLink>;
-};
+//   return <TestLink className={myString}>{children}</TestLink>;
+// };
 
-Link.propTypes = {
-  className: string,
-  children: node.isRequired,
-};
+// Link.propTypes = {
+//   className: string,
+//   children: node.isRequired,
+// };
 
-Link.defaultProps = {
-  className: '',
-};
+// Link.defaultProps = {
+//   className: '',
+// };
 
 const StoryPromo = ({
   image,
