@@ -3640,7 +3640,23 @@ module.exports = () => ({
         smoke: true,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/korean/topics/cnwng7v0e54t'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/korean/topics/cnwng7v0e54t'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/korean/topics/cnwng7v0e54t'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
