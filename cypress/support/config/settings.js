@@ -8688,7 +8688,23 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/tigrinya/topics/cdr56vr8qvnt'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/tigrinya/topics/cdr56vr8qvnt'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/tigrinya/topics/cdr56vr8qvnt'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
