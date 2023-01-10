@@ -3187,7 +3187,23 @@ module.exports = () => ({
         smoke: true,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/indonesia/topics/cjgn7k8yx4gt'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/indonesia/topics/cjgn7k8yx4gt'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/indonesia/topics/cjgn7k8yx4gt'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -3381,7 +3397,23 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/japanese/topics/cyx5k201n3qt'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/japanese/topics/cyx5k201n3qt'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/japanese/topics/cyx5k201n3qt'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
