@@ -2747,9 +2747,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           allow="autoplay"
                           allowfullscreen=""
                           class="emotion-145 emotion-146"
+                          height="362.953125"
+                          loading="lazy"
                           scrolling="no"
                           src="/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/pcm"
                           title="Media player"
+                          width="645.25"
                         />
                         <noscript />
                       </div>
@@ -6144,9 +6147,12 @@ exports[`Story Page should render correctly when the secondary column data is no
                           allow="autoplay"
                           allowfullscreen=""
                           class="emotion-150 emotion-151"
+                          height="362.953125"
+                          loading="lazy"
                           scrolling="no"
                           src="/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
                           title="Media player"
+                          width="645.25"
                         />
                         <noscript />
                       </div>
@@ -9549,9 +9555,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           allow="autoplay"
                           allowfullscreen=""
                           class="emotion-150 emotion-151"
+                          height="362.953125"
+                          loading="lazy"
                           scrolling="no"
                           src="/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
                           title="Media player"
+                          width="645.25"
                         />
                         <noscript />
                       </div>

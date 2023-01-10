@@ -247,8 +247,6 @@ exports[`Canonical Most Watched Page SEO Canonical link 1`] = `"http://localhost
 
 exports[`Canonical Most Watched Page SEO Dir attribute 1`] = `"ltr"`;
 
-exports[`Canonical Most Watched Page SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`Canonical Most Watched Page SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`Canonical Most Watched Page SEO Heading level 1 1`] = `"Les plus vus"`;

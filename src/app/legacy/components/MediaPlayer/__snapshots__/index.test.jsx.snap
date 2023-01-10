@@ -763,9 +763,12 @@ exports[`Media Player: Canonical Entry renders an iframe when showPlaceholder is
       allow="autoplay"
       allowfullscreen=""
       class="emotion-2 emotion-3"
+      height="362.953125"
+      loading="lazy"
       scrolling="no"
       src="http://foo.bar/iframe"
       title="Media player"
+      width="645.25"
     />
     <noscript />
   </div>
@@ -804,9 +807,12 @@ exports[`Media Player: Canonical Entry renders the audio skin 1`] = `
       allow="autoplay"
       allowfullscreen=""
       class="emotion-2 emotion-3"
+      height="362.953125"
+      loading="lazy"
       scrolling="no"
       src="https://www.test.bbc.com/ws/av-embeds/media/bbc_korean_radio/liveradio"
       title="Audio player"
+      width="645.25"
     />
     <noscript />
   </div>
@@ -1097,9 +1103,12 @@ exports[`Media Player: Canonical Entry shows a loading image before the player i
       allow="autoplay"
       allowfullscreen=""
       class="emotion-2 emotion-3"
+      height="362.953125"
+      loading="lazy"
       scrolling="no"
       src="http://foo.bar/iframe"
       title="Media player"
+      width="645.25"
     />
     <div
       class="emotion-4 emotion-5"
