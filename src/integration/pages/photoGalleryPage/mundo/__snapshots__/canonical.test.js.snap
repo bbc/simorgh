@@ -240,8 +240,6 @@ exports[`Canonical Photo Gallery Page SEO Canonical link 1`] = `"http://localhos
 
 exports[`Canonical Photo Gallery Page SEO Dir attribute 1`] = `"ltr"`;
 
-exports[`Canonical Photo Gallery Page SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`Canonical Photo Gallery Page SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`Canonical Photo Gallery Page SEO Heading level 1 1`] = `"Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos"`;
