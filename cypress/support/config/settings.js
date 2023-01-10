@@ -2724,7 +2724,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/hindi/topics/ckdxnkz7607t'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/hindi/topics/ckdxnkz7607t'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/hindi/topics/ckdxnkz7607t'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
