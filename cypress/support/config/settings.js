@@ -4723,7 +4723,23 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/nepali/topics/cp2d78r6qppt'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/nepali/topics/cp2d78r6qppt'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/nepali/topics/cp2d78r6qppt'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
