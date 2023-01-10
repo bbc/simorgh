@@ -877,7 +877,7 @@ module.exports = () => ({
             enabled: true,
           },
           local: {
-            paths: [],
+            paths: ['/arabic/topics/cwr9j7nv58nt'],
             enabled: false,
           },
         },
