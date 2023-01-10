@@ -9,7 +9,7 @@ Please familiarise yourself with our:
 - [Contributing guidelines](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md)
 - [Guide to Code Reviews](https://github.com/bbc/simorgh/blob/latest/docs/Code-Reviews.md)
 - [Github Project Board Guide](https://github.com/bbc/simorgh/blob/latest/docs/Project-Board-Guide.md)
-- [GPG Signing Guide](docs/GPG-Signing-Guide.md) (you are here)
+- [GPG Signing Guide](./GPG-Signing-Guide.md#gpg-signing-guide) (you are here)
 - [Primary README](https://github.com/bbc/simorgh/blob/latest/README.md)
 - [Recommended Tools](https://github.com/bbc/simorgh/blob/latest/docs/Recommended-Tools.md)
 - [Troubleshooting](https://github.com/bbc/simorgh/blob/latest/docs/Troubleshooting.md)
