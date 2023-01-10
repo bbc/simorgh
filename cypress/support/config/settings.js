@@ -6203,7 +6203,23 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/punjabi/topics/cz74k76gjqxt'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/punjabi/topics/cz74k76gjqxt'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/punjabi/topics/cz74k76gjqxt'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
