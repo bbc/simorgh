@@ -10562,7 +10562,23 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/yoruba/topics/c340q0y3p5kt'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/yoruba/topics/c340q0y3p5kt'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/yoruba/topics/c340q0y3p5kt'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
