@@ -79,7 +79,7 @@ stream.once('open', () => {
 
   stream.write(
     '| Service | Local | Test | Live |\n' +
-      '|---------|-------|------|-------|\n',
+      '| :--: | :-- | :-- | :-- |\n',
   );
 
   const services = allServices('');
