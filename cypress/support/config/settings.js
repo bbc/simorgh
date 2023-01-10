@@ -6433,7 +6433,23 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/russian/topics/cez0n29ggrdt'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/russian/topics/cez0n29ggrdt'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/russian/topics/cez0n29ggrdt'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
