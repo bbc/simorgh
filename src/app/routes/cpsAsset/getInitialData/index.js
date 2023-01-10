@@ -73,11 +73,11 @@ const processOptimoBlocks = toggles =>
 const transformJson = async (json, pathname, toggles) => {
   try {
     const formattedPageData = formatPageData(json);
-    const optimoBlocks = await convertToOptimoBlocks(
-      formattedPageData,
-      pathname,
-    );
-    return processOptimoBlocks(toggles)(optimoBlocks);
+    // const optimoBlocks = await convertToOptimoBlocks(
+    //   formattedPageData,
+    //   pathname,
+    // );
+    return processOptimoBlocks(toggles)(formattedPageData);
   } catch (e) {
     // We can arrive here if the CPS asset is a FIX page
     // TODO: consider checking if FIX then don't transform JSON
@@ -91,16 +91,20 @@ export default async ({
   variant,
   pageType,
   toggles,
+  getAgent,
 }) => {
   try {
+    const agent = await getAgent();
+
     const env = pathname.includes('renderer_env=live')
       ? 'live'
       : process.env.SIMORGH_APP_ENV;
     const { json, status } = await fetchPageData({
-      path: pathname,
+      path: `https://ares-api.api.bbci.co.uk/api/article${pathname}`,
       pageType,
       api: 'asset',
       apiContext: 'primary_data',
+      agent,
     });
 
     const additionalPageData = await getAdditionalPageData({
