@@ -7106,7 +7106,23 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/sinhala/topics/cg7267dz901t'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/sinhala/topics/cg7267dz901t'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/sinhala/topics/cg7267dz901t'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
