@@ -11,9 +11,12 @@ import { Services, Variants } from '../../../models/types/global';
 const logger = nodeLogger(__filename);
 
 const removeAmp = (path: string) => path.split('.')[0];
-const popId = (path: string) => path.match(/(c[a-zA-Z0-9]{10}o)/)?.[1];
+const getOptimoId = (path: string) => path.match(/(c[a-zA-Z0-9]{10}o)/)?.[1];
+const getCpsId = (path: string) =>
+  `${path.split('/')[1]}/${path.split('/').pop()}`;
 
-const getId = pipe(getUrlPath, removeAmp, popId);
+const getId = (pageType: string) =>
+  pipe(getUrlPath, removeAmp, pageType === 'article' ? getOptimoId : getCpsId);
 
 const getEnvironment = (pathname: string) => {
   if (pathname.includes('renderer_env=test')) {
@@ -40,6 +43,7 @@ const handleError = (message: string, status: number) => {
 type Props = {
   getAgent: () => Promise<Agent>;
   service: Services;
+  pageType: string;
   path: string;
   variant?: Variants;
 };
@@ -47,6 +51,7 @@ type Props = {
 export default async ({
   getAgent,
   service,
+  pageType,
   path: pathname,
   variant,
 }: Props) => {
@@ -55,7 +60,7 @@ export default async ({
     const isLocal = env === 'local';
 
     const agent = !isLocal ? await getAgent() : null;
-    const id = '/mundo/noticias-america-latina-64218613';
+    const id = getId(pageType)(pathname);
 
     if (!id) throw handleError('Article ID is invalid', 500);
 
