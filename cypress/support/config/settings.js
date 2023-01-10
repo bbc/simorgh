@@ -2172,7 +2172,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/gujarati/topics/c06gq3993v3t'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/gujarati/topics/c06gq3993v3t'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/gujarati/topics/c06gq3993v3t'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
