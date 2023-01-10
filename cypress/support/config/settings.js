@@ -7715,7 +7715,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/swahili/topics/ckdxndddjkxt'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/swahili/topics/ckdxndddjkxt'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/swahili/topics/ckdxndddjkxt'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
