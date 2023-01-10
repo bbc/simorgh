@@ -84,16 +84,17 @@ const A = styled.a`
     text-decoration: underline;
   }
 
+  // Option using box shadow - would need to find an alternative for high contrast mode.
   // &:focus-visible {
   //   outline: none;
-  //   box-shadow: -${BORDER_RADIUS * 1}rem  ${BORDER_RADIUS * 1}rem white,
-  //               -${BORDER_RADIUS * 1}rem -${BORDER_RADIUS * 1}rem white,
-  //                ${BORDER_RADIUS * 1}rem -${BORDER_RADIUS * 1}rem white,
-  //                ${BORDER_RADIUS * 1}rem  ${BORDER_RADIUS * 1}rem white,
-  //               -${BORDER_RADIUS * 2}rem  ${BORDER_RADIUS * 2}rem black,
-  //               -${BORDER_RADIUS * 2}rem -${BORDER_RADIUS * 2}rem black,
-  //                ${BORDER_RADIUS * 2}rem -${BORDER_RADIUS * 2}rem black,
-  //                ${BORDER_RADIUS * 2}rem  ${BORDER_RADIUS * 2}rem black;
+  // box-shadow: -${BORDER_RADIUS * 1}rem ${BORDER_RADIUS * 1}rem white,
+  //   -${BORDER_RADIUS * 1}rem -${BORDER_RADIUS * 1}rem white,
+  //   ${BORDER_RADIUS * 1}rem -${BORDER_RADIUS * 1}rem white,
+  //   ${BORDER_RADIUS * 1}rem ${BORDER_RADIUS * 1}rem white,
+  //   -${BORDER_RADIUS * 2}rem ${BORDER_RADIUS * 2}rem black,
+  //   -${BORDER_RADIUS * 2}rem -${BORDER_RADIUS * 2}rem black,
+  //   ${BORDER_RADIUS * 2}rem -${BORDER_RADIUS * 2}rem black,
+  //   ${BORDER_RADIUS * 2}rem ${BORDER_RADIUS * 2}rem black;
   // }
 
   // SOLUTION 2 - using focus:not(:focus-visible)

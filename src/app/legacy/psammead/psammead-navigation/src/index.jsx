@@ -91,13 +91,6 @@ const StyledLink = styled.a`
       `}
   }
 
-  // Izzy - adds a white box shadow to element (self calulcated width)
-  &:focus-visible {
-    box-shadow: inset 0 0 0 0.375rem white;
-  }
-
-  // original removed - Izzy
-
   &:focus::after {
     ${ListItemBorder}
     top: 0;

@@ -34,14 +34,9 @@ const StyledLink = styled.a`
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     height: ${GEL_SPACING_QUIN};
   }
-  &:focus {
-    outline: ${focusIndicatorThickness} solid ${C_BLACK};
-  }
-  &:focus:not(:focus-visible) {
-    outline: none;
-
+  // removes browser default styling. Focus styling applied as focus-indicator
   &:focus-visible {
-    outline: ${focusIndicatorThickness} solid ${C_BLACK};
+    outline: none;
   }
 `;
 

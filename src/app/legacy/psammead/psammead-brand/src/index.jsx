@@ -69,6 +69,8 @@ const Banner = styled.div`
     borderBottom && `border-bottom: ${TRANSPARENT_BORDER}`};
 `;
 
+const BORDER_RADIUS = 0.1875;
+
 const StyledLink = styled.a`
   height: 100%;
   display: flex;
@@ -87,24 +89,24 @@ const StyledLink = styled.a`
   &:focus {
     text-decoration: none;
     border-bottom: ${GEL_SPACING_HLF} solid ${props => props.logoColour};
+    outline: ${focusIndicatorThickness} solid ${C_WHITE};
+    box-shadow: 0 0 0 ${BORDER_RADIUS}rem white;
     margin-bottom: -${GEL_SPACING_HLF};
-    outline: ${focusIndicatorThickness} solid ${C_BLACK};
-    box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
-    outline-offset: ${focusIndicatorThickness};
   }
   //
   // Overrides these rules depending whether focus-visible state is being used, applies different styles to focus and focus-visible
   &:focus:not(:focus-visible) {
     outline: none;
-    box-shadow: none;
     outline-offset: 0;
+    // box-shadow: none;
   }
   //
   &:focus-visible {
-    outline: ${focusIndicatorThickness} solid ${C_BLACK};
-    box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
-    outline-offset: ${focusIndicatorThickness};
-  }
+    outline: ${focusIndicatorThickness} solid ${C_WHITE};
+    box-shadow: 0 0 0 ${BORDER_RADIUS}rem white;
+    // outline-offset: ${focusIndicatorThickness};
+    // box-shadow: -5px 0 #333 inset, 5px 0 #333 inset, -5px 5px #333 inset;
+    // top - 0 5px #333 inset
   // END SOLUTION 2
 `;
 
