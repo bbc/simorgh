@@ -2934,7 +2934,23 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/igbo/topics/cnq68k0x2vrt'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/igbo/topics/cnq68k0x2vrt'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/igbo/topics/cnq68k0x2vrt'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
