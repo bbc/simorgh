@@ -1,6 +1,7 @@
 {
   "presets": [["next/babel"]],
   "plugins": [
+    "@emotion/babel-plugin",
     "@babel/plugin-proposal-export-default-from",
     [
       "transform-rename-import",

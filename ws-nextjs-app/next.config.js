@@ -8,7 +8,12 @@ const assetPrefix =
 module.exports = {
   reactStrictMode: true,
   distDir: 'build',
-  assetPrefix,
+  output: 'standalone',
+  assetPrefix: process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN.includes(
+    'localhost',
+  )
+    ? ''
+    : assetPrefix,
   poweredByHeader: false,
   generateEtags: false,
   experimental: {
