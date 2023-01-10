@@ -615,7 +615,23 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/amharic/topics/c7zp57r92v5t'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/amharic/topics/c7zp57r92v5t'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/amharic/topics/c7zp57r92v5t'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -705,7 +721,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-
       idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
         environments: {
