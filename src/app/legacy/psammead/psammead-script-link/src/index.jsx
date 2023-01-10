@@ -36,18 +36,12 @@ const StyledLink = styled.a`
   }
   &:focus {
     outline: ${focusIndicatorThickness} solid ${C_BLACK};
-    box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
-    outline-offset: ${focusIndicatorThickness};
   }
   &:focus:not(:focus-visible) {
     outline: none;
-    box-shadow: none;
-    outline-offset: 0;
 
   &:focus-visible {
     outline: ${focusIndicatorThickness} solid ${C_BLACK};
-    box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
-    outline-offset: ${focusIndicatorThickness};
   }
 `;
 
