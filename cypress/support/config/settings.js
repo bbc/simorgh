@@ -8426,7 +8426,23 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/thai/topics/cjgn73g98rqt'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/thai/topics/cjgn73g98rqt'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/thai/topics/cjgn73g98rqt'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
