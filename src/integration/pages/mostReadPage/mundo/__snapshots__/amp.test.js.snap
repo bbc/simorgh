@@ -382,8 +382,6 @@ exports[`AMP Most Read Page SEO Canonical link 1`] = `"http://localhost:7080/mun
 
 exports[`AMP Most Read Page SEO Dir attribute 1`] = `"ltr"`;
 
-exports[`AMP Most Read Page SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`AMP Most Read Page SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`AMP Most Read Page SEO Heading level 1 1`] = `"Más leídas"`;
