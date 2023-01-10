@@ -1075,7 +1075,23 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/azeri/topics/c7zp571g7y7t'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/azeri/topics/c7zp571g7y7t'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/azeri/topics/c7zp571g7y7t'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
