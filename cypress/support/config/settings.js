@@ -4165,7 +4165,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/marathi/topics/c5qvpxvv7y3t'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/marathi/topics/c5qvpxvv7y3t'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/marathi/topics/c5qvpxvv7y3t'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
