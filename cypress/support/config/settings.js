@@ -10138,7 +10138,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/uzbek/topics/c8y949r98pgt'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/uzbek/topics/c8y949r98pgt'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/uzbek/topics/c8y949r98pgt'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
