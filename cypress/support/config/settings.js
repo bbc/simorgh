@@ -6700,7 +6700,23 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/serbian/cyr/topics/cqwvxvvw9qrt'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/serbian/cyr/topics/cqwvxvvw9qrt'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/serbian/cyr/topics/cqwvxvvw9qrt'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
