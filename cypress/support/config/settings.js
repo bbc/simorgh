@@ -495,23 +495,6 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      topicPage: {
-        environments: {
-          live: {
-            paths: ['/afrique/topics/cnq687nn703t'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/afrique/topics/cnq687nn703t'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/afrique/topics/cnq687nn703t'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
