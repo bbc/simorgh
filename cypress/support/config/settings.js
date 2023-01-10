@@ -2447,7 +2447,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/hausa/topics/cg726kz37wdt'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/hausa/topics/cg726kz37wdt'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/hausa/topics/cg726kz37wdt'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
