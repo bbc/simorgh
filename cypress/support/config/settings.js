@@ -5153,7 +5153,23 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/pashto/topics/cr50y57xj52t'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/pashto/topics/cr50y57xj52t'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/pashto/topics/cr50y57xj52t'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
