@@ -4370,7 +4370,23 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/mundo/topics/c2lej05epw5t'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/mundo/topics/c2lej05epw5t'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/mundo/topics/c2lej05epw5t'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
