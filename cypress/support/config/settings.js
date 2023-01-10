@@ -9471,7 +9471,7 @@ module.exports = () => ({
             enabled: true,
           },
           local: {
-            paths: ['/ukrainian/topics/c61k92vrqz6t'],
+            paths: ['/ukrainian/topics/c61k92vrqz6t'], // ukrainian in russian
             enabled: false,
           },
         },
