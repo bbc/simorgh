@@ -84,17 +84,42 @@ const A = styled.a`
     text-decoration: underline;
   }
 
-  &:focus-visible { 
-    outline: none;
-    box-shadow: -${BORDER_RADIUS * 1}rem  ${BORDER_RADIUS * 1}rem white,
-                -${BORDER_RADIUS * 1}rem -${BORDER_RADIUS * 1}rem white,
-                 ${BORDER_RADIUS * 1}rem -${BORDER_RADIUS * 1}rem white,
-                 ${BORDER_RADIUS * 1}rem  ${BORDER_RADIUS * 1}rem white,
-                -${BORDER_RADIUS * 2}rem  ${BORDER_RADIUS * 2}rem black,
-                -${BORDER_RADIUS * 2}rem -${BORDER_RADIUS * 2}rem black,
-                 ${BORDER_RADIUS * 2}rem -${BORDER_RADIUS * 2}rem black,
-                 ${BORDER_RADIUS * 2}rem  ${BORDER_RADIUS * 2}rem black;
+  // &:focus-visible {
+  //   outline: none;
+  //   box-shadow: -${BORDER_RADIUS * 1}rem  ${BORDER_RADIUS * 1}rem white,
+  //               -${BORDER_RADIUS * 1}rem -${BORDER_RADIUS * 1}rem white,
+  //                ${BORDER_RADIUS * 1}rem -${BORDER_RADIUS * 1}rem white,
+  //                ${BORDER_RADIUS * 1}rem  ${BORDER_RADIUS * 1}rem white,
+  //               -${BORDER_RADIUS * 2}rem  ${BORDER_RADIUS * 2}rem black,
+  //               -${BORDER_RADIUS * 2}rem -${BORDER_RADIUS * 2}rem black,
+  //                ${BORDER_RADIUS * 2}rem -${BORDER_RADIUS * 2}rem black,
+  //                ${BORDER_RADIUS * 2}rem  ${BORDER_RADIUS * 2}rem black;
+  // }
+
+  // SOLUTION 2 - using focus:not(:focus-visible)
+  // Applies all rules to focus state
+  &:focus {
+    text-decoration: underline;
+    display: block;
+    outline: ${BORDER_RADIUS}rem solid black;
+    box-shadow: 0 0 0 ${BORDER_RADIUS}rem white;
+    outline-offset: ${BORDER_RADIUS}rem;
   }
+  //
+  // Overrides these rules depending whether focus-visible state is being used, applies different styles to focus and focus-visible
+  &:focus:not(:focus-visible) {
+    outline: none;
+    box-shadow: none;
+    outline-offset: 0;
+  }
+  //
+  &:focus-visible {
+    display: block;
+    outline: ${BORDER_RADIUS}rem solid black;
+    box-shadow: 0 0 0 ${BORDER_RADIUS}rem white;
+    outline-offset: ${BORDER_RADIUS}rem;
+  }
+  // END SOLUTION 2
 `;
 
 const LazyloadPlaceholder = styled.div`
