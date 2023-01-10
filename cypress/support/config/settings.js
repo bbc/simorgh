@@ -5488,7 +5488,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/persian/topics/c5j85v96d92t'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/persian/topics/c5j85v96d92t'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/persian/topics/c5j85v96d92t'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
