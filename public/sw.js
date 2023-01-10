@@ -1,5 +1,5 @@
 /* eslint-disable */
-const version = 'v0.0.4';
+const version = 'v0.0.5';
 const cacheName = 'simorghCache_v1';
 
 self.addEventListener('install', (event) => {
@@ -26,7 +26,7 @@ self.addEventListener('fetch', function(event) {
     }
     
   }
-  else if (/((amazonaws.com\/1\.2\.1\/cwr\.js$)|(\.woff2$)|(modern\.frosted_promo\.32caa641\.js$)|(\/moment\-lib\.dfdb34b8\.js$))/.test(event.request.url)) {
+  else if (/((\.woff2$)|(modern\.frosted_promo\.32caa641\.js$)|(\/moment\-lib\.dfdb34b8\.js$))/.test(event.request.url)) {
     event.respondWith(caches.open(cacheName).then(cache => {
       return cache.match(event.request).then(cachedResponse => {
         return cachedResponse || fetch(event.request.url).then((fetchedResponse) => {
