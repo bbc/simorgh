@@ -9866,7 +9866,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/urdu/topics/cjgn7n9zzq7t'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/urdu/topics/cjgn7n9zzq7t'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/urdu/topics/cjgn7n9zzq7t'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
