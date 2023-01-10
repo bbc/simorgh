@@ -20,6 +20,7 @@ const mundo = require('./services/mundo');
 const naidheachdan = require('./services/naidheachdan');
 const nepali = require('./services/nepali');
 const news = require('./services/news');
+const newsround = require('./services/newsround');
 const pashto = require('./services/pashto');
 const persian = require('./services/persian');
 const pidgin = require('./services/pidgin');
@@ -68,6 +69,7 @@ module.exports = {
   naidheachdan,
   nepali,
   news,
+  newsround,
   pashto,
   persian,
   pidgin,
