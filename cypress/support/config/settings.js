@@ -7987,7 +7987,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/tamil/topics/c40379e2n2zt'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/tamil/topics/c40379e2n2zt'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/tamil/topics/c40379e2n2zt'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
