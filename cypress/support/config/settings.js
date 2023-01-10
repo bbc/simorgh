@@ -7351,7 +7351,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/somali/topics/cpzd4zj1pn2t'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/somali/topics/cpzd4zj1pn2t'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/somali/topics/cpzd4zj1pn2t'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       onDemandTV: {
         environments: {
           live: {
