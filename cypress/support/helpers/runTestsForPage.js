@@ -82,7 +82,7 @@ const runTestsForPage = ({
           };
 
           if (!ampOnlyServices.includes(service)) {
-            // Enables overriding of the smoke test values in the config/settings.js file
+            // Enables overriding of the smoke test values in the config/settings/services/*.js files
             testsThatAlwaysRunForAllPages(testArgs);
             testsThatAlwaysRunForAllCanonicalPages(testArgs);
             // Page specific tests
@@ -124,7 +124,7 @@ const runTestsForPage = ({
             isAmp: true,
           };
 
-          // Enables overriding of the smoke test values in the config/settings.js file
+          // Enables overriding of the smoke test values in the config/settings/services/*.js files
           testsThatAlwaysRunForAllPages(testArgs);
           testsThatAlwaysRunForAllAMPPages(testArgs);
           // Page specific tests
