@@ -1603,7 +1603,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/burmese/topics/c404v08p1wxt'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/burmese/topics/c404v08p1wxt'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/burmese/topics/c404v08p1wxt'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
