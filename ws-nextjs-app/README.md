@@ -1,5 +1,11 @@
-# WS Renderer
+# WS NextJS App
 
-This is an early POC of a nextjs app that can be deployed to utilise 'Incremental Static Regeneration' in NextJS. The goal is deploy a highly performant version of our site where users never hit origin except for newly created content (and this origin call could be eliminated with 'On-demand Static Regeneration' to follow later).
+This is an early POC of a NextJS app to test rendering the new Live pages.
 
-It also utilises existing Simorgh components so as to practice 'evolutionary architecture', we gradually move towards to NextJS app without rebuilding all our React components from scratch. Gradually the original Express app goes out of use production.
+It utilises existing Simorgh components so as to practice 'evolutionary architecture', we gradually move towards to NextJS app without rebuilding all our React components from scratch. We will gradually migrate across our other page types to this app in the future.
+
+## Setup
+
+- Run `yarn install` to install dependencies
+- Run `yarn dev` to start the development server on `http://localhost:7081`
+- Navigate to `http://localhost:7081/kyrgyz/new_live/cz74kjpyk07t` to see the page
