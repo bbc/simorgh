@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 const fs = require('fs');
 const path = require('path');
-const allServices = require('../../cypress/support/config/settings');
+const allServices = require('../../cypress/support/config/settings/index.js');
 
 const getUrl = (pageType, env) => {
   let url;
@@ -46,13 +46,13 @@ const environmentDomainMappings = {
 const generateLinks = (service, env) => {
   const output = [];
 
-  const serviceData = allServices()[service];
+  const serviceData = allServices[service];
 
-  Object.keys(serviceData.pageTypes)
+  Object.keys(serviceData?.pageTypes)
     .sort()
     .forEach(pageType => {
       if (!excludedPageTypes.includes(pageType)) {
-        const url = getUrl(serviceData.pageTypes[pageType], env);
+        const url = getUrl(serviceData?.pageTypes[pageType], env);
 
         if (url) {
           output.push(
@@ -82,9 +82,7 @@ stream.once('open', () => {
       '| :--: | :-- | :-- | :-- |\n',
   );
 
-  const services = allServices('');
-
-  Object.keys(services).forEach(service => {
+  Object.keys(allServices).forEach(service => {
     console.log(`Generating information for ${service}`);
     const items = [
       service,
