@@ -8893,7 +8893,23 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/turkce/topics/ckdxn2xk95gt'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/turkce/topics/ckdxn2xk95gt'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/turkce/topics/ckdxn2xk95gt'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
