@@ -9588,7 +9588,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/ukrainian/topics/czp6w66edqpt'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/ukrainian/topics/czp6w66edqpt'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/ukrainian/topics/czp6w66edqpt'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
