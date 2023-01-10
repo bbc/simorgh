@@ -10797,7 +10797,23 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/zhongwen/simp/topics/ck2l9z0em07t'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/zhongwen/simp/topics/ck2l9z0em07t'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/zhongwen/simp/topics/ck2l9z0em07t'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
