@@ -339,8 +339,6 @@ exports[`AMP Feature Index page SEO Canonical link 1`] = `"http://localhost:7080
 
 exports[`AMP Feature Index page SEO Dir attribute 1`] = `"rtl"`;
 
-exports[`AMP Feature Index page SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`AMP Feature Index page SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`AMP Feature Index page SEO Heading level 1 1`] = `"کورونا وائرس: تحقیق، تشخیص اور احتیاط"`;
