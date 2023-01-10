@@ -9,7 +9,7 @@ const Link = ({ className, children }) => {
   const { to, eventTrackingData, ariaLabelledBy } = useContext(PromoContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
-  const myString = `${className} someClassName`;
+  const myString = `${className} focusIndicatorDisplayBlock`;
 
   return (
     <StyledLink

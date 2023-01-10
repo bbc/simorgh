@@ -226,6 +226,21 @@ const TestLink = styled.a`
   }
 `;
 
+export const Link = ({ className, children }) => {
+  const myString = `${className} focusIndicatorDisplayBlock`;
+
+  return <TestLink className={myString}>{children}</TestLink>;
+};
+
+Link.propTypes = {
+  className: string,
+  children: node.isRequired,
+};
+
+Link.defaultProps = {
+  className: '',
+};
+
 const StoryPromo = ({
   image,
   info,
@@ -293,20 +308,5 @@ StoryPromo.defaultProps = {
   mediaIndicator: null,
   mediaIndicatorIsInline: false,
 };
-
-export const Link = props => {
-  const { children } = props;
-  return <TestLink className="someClassName">{children}</TestLink>;
-};
-
-Link.propTypes = {
-  children: node.isRequired,
-};
-
-// const Link = (props) => (
-//   <div className={props.someClassName}>{props.children}</div>
-// )
-
-// export default MyComponent
 
 export default StoryPromo;
