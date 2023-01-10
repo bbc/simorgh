@@ -237,8 +237,6 @@ exports[`Canonical Media Asset Page SEO Canonical link 1`] = `"http://localhost:
 
 exports[`Canonical Media Asset Page SEO Dir attribute 1`] = `"rtl"`;
 
-exports[`Canonical Media Asset Page SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`Canonical Media Asset Page SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`Canonical Media Asset Page SEO Heading level 1 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
