@@ -8221,7 +8221,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/telugu/topics/c5qvp16w7dnt'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/telugu/topics/c5qvp16w7dnt'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/telugu/topics/c5qvp16w7dnt'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
