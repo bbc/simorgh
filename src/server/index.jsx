@@ -54,7 +54,9 @@ class LoggerStream {
 }
 
 const getDefaultMaxAge = req => {
-	return req.originalUrl.indexOf('arabic/') !== -1 ? EXPERIMENTAL_CACHE_TTL : NORMAL_CACHE_TTL;
+  return req.originalUrl.indexOf('arabic/') !== -1
+    ? EXPERIMENTAL_CACHE_TTL
+    : NORMAL_CACHE_TTL;
 };
 
 const server = express();
@@ -134,7 +136,10 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
 
 const injectDefaultCacheHeader = (req, res, next) => {
   const defaultMaxAge = getDefaultMaxAge(req);
-  const maxAge = req.originalUrl.indexOf('/topics/') !== -1 ? defaultMaxAge * 2 : defaultMaxAge;
+  const maxAge =
+    req.originalUrl.indexOf('/topics/') !== -1
+      ? defaultMaxAge * 2
+      : defaultMaxAge;
   res.set(
     'Cache-Control',
     `public, stale-if-error=${
