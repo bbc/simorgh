@@ -5,7 +5,6 @@ const getAssetOrigins = service => {
 
   const ANALYTICS_ORIGINS = [
     'https://ping.chartbeat.net',
-    'https://client.rum.us-east-1.amazonaws.com',
     'https://dataplane.rum.eu-west-1.amazonaws.com',
   ];
 
