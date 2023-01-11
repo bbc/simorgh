@@ -9,12 +9,10 @@ const Link = ({ className, children }) => {
   const { to, eventTrackingData, ariaLabelledBy } = useContext(PromoContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
-  const myString = `${className} focusIndicatorDisplayBlock`;
-
   return (
     <StyledLink
       data-testid="promo-link"
-      className={myString}
+      className={`${className} focusIndicatorDisplayBlock`}
       href={makeRelativeUrlPath(to)}
       aria-labelledby={ariaLabelledBy}
       onClick={eventTrackingData ? handleClickTracking : null}
