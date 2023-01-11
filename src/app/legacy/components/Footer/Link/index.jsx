@@ -12,7 +12,7 @@ const StyledLink = styled.a`
   ${({ service }) => service && getSansBold(service)}
   color: ${C_WHITE};
   display: ${({ inline }) => (inline ? 'inline' : 'block')};
-  padding: ${GEL_SPACING_HLF_TRPL} 0 ${GEL_SPACING_HLF_TRPL};
+  margin: ${GEL_SPACING_HLF_TRPL} 0 ${GEL_SPACING_HLF_TRPL};
   text-decoration: none;
 
   // removed focus

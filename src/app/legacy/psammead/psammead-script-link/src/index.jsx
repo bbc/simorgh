@@ -8,14 +8,11 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
 } from '#psammead/gel-foundations/src/breakpoints';
-import { C_WHITE, C_BLACK } from '#psammead/psammead-styles/src/colours';
+import { C_WHITE } from '#psammead/psammead-styles/src/colours';
 import { getPica } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { string, shape, node, func } from 'prop-types';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
-
-// Focus visible indicator to show around all focusable elements, links, buttons etc, across the WS sites.
-const focusIndicatorThickness = '0.1875rem';
 
 const StyledLink = styled.a`
   ${({ script }) => script && getPica(script)}
@@ -34,20 +31,9 @@ const StyledLink = styled.a`
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     height: ${GEL_SPACING_QUIN};
   }
-  &:focus {
-    outline: ${focusIndicatorThickness} solid ${C_BLACK};
-    box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
-    outline-offset: ${focusIndicatorThickness};
-  }
-  &:focus:not(:focus-visible) {
-    outline: none;
-    box-shadow: none;
-    outline-offset: 0;
-
+  // removes browser default styling. Focus styling applied as focus-indicator
   &:focus-visible {
-    outline: ${focusIndicatorThickness} solid ${C_BLACK};
-    box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
-    outline-offset: ${focusIndicatorThickness};
+    outline: none;
   }
 `;
 
