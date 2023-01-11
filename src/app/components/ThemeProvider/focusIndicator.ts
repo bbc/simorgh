@@ -26,6 +26,12 @@ const focusIndicator = ({ palette }: Theme) => css`
     display: block;
   }
 
+  // add inline-block display default styling
+  a.focusIndicatorDisplayInlineBlock:focus-visible {
+    display: inline-block;
+    width: 100%;
+  }
+
   a.someClassName:focus-visible {
     background-color: yellow;
   }

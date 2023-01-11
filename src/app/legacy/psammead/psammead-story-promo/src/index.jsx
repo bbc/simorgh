@@ -226,21 +226,6 @@ export const Link = styled.a`
   }
 `;
 
-// export const Link = ({ className, children }) => {
-//   const myString = `${className} focusIndicatorDisplayBlock`;
-
-//   return <TestLink className={myString}>{children}</TestLink>;
-// };
-
-// Link.propTypes = {
-//   className: string,
-//   children: node.isRequired,
-// };
-
-// Link.defaultProps = {
-//   className: '',
-// };
-
 const StoryPromo = ({
   image,
   info,
