@@ -32,6 +32,11 @@ const focusIndicator = ({ palette }: Theme) => css`
     width: 100%;
   }
 
+  // add table-cell display default styling
+  a.focusIndicatorDisplayTableCell:focus-visible {
+    display: table-cell;
+  }
+
   a.someClassName:focus-visible {
     background-color: yellow;
   }

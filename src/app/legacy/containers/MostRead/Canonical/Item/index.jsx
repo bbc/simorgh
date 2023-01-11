@@ -109,6 +109,7 @@ export const MostReadLink = ({
         service={service}
         size={size}
         onClick={clickTrackerHandler}
+        className="focusIndicatorDisplayTableCell"
       >
         {title}
       </StyledLink>
