@@ -196,7 +196,6 @@ describe('cspHeader', () => {
       scriptSrcExpectation: [
         ...bbcDomains,
         'https://*.adsafeprotected.com',
-        'https://client.rum.us-east-1.amazonaws.com',
         'https://cdn.ampproject.org',
         'https://*.chartbeat.com',
         'https://*.g.doubleclick.net',
@@ -400,7 +399,6 @@ describe('cspHeader', () => {
         'https://www.instagram.com',
         'https://*.twimg.com',
         'https://public.flourish.studio',
-        'https://client.rum.us-east-1.amazonaws.com',
         'https://*.adsafeprotected.com',
         'https://cdn.ampproject.org',
         'https://*.g.doubleclick.net',
