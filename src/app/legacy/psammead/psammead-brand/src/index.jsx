@@ -12,10 +12,11 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import { C_BLACK, C_WHITE } from '#psammead/psammead-styles/src/colours';
+import { C_WHITE } from '#psammead/psammead-styles/src/colours';
 
 // Focus visible indicator to show around all focusable elements, links, buttons etc, across the WS sites.
 const focusIndicatorThickness = '0.1875rem';
+const BORDER_RADIUS = 0.1875;
 
 const SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX = '63rem';
 const SCRIPT_LINK_OFFSET_BELOW_240PX = 52;
@@ -88,22 +89,23 @@ const StyledLink = styled.a`
     text-decoration: none;
     border-bottom: ${GEL_SPACING_HLF} solid ${props => props.logoColour};
     margin-bottom: -${GEL_SPACING_HLF};
-    outline: ${focusIndicatorThickness} solid ${C_BLACK};
-    box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
-    outline-offset: ${focusIndicatorThickness};
+    outline: ${focusIndicatorThickness} solid ${C_WHITE};
+    box-shadow: 0 0 0 ${BORDER_RADIUS}rem white;
   }
   //
   // Overrides these rules depending whether focus-visible state is being used, applies different styles to focus and focus-visible
   &:focus:not(:focus-visible) {
     outline: none;
     box-shadow: none;
-    outline-offset: 0;
+    // outline-offset: 0;
   }
   //
   &:focus-visible {
-    outline: ${focusIndicatorThickness} solid ${C_BLACK};
-    box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE};
-    outline-offset: ${focusIndicatorThickness};
+    outline: ${focusIndicatorThickness} solid ${C_WHITE};
+    box-shadow: 0 0 0 ${BORDER_RADIUS}rem white;
+    // outline-offset: ${focusIndicatorThickness};
+    // box-shadow: -5px 0 #333 inset, 5px 0 #333 inset, -5px 5px #333 inset;
+    // top - 0 5px #333 inset
   }
   // END SOLUTION 2
 `;
