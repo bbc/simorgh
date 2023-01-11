@@ -125,6 +125,7 @@ const FrostedGlassPromo = ({
           href={relativeUrl}
           onClick={onClick}
           isAmp={isAmp}
+          className="focusIndicatorDisplayBlock"
         >
           {children}
         </A>

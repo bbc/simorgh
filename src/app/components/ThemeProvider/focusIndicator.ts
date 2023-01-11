@@ -22,24 +22,50 @@ const focusIndicator = ({ palette }: Theme) => css`
   }
 
   // add block display default styling
+  a.focusIndicatorDisplayBlock:focus {
+    display: block;
+  }
+
+  a.focusIndicatorDisplayBlock:focus:not(:focus-visible) {
+    display: revert;
+  }
+
   a.focusIndicatorDisplayBlock:focus-visible {
     display: block;
   }
 
   // add inline-block display default styling
+  a.focusIndicatorDisplayInlineBlock:focus {
+    display: inline-block;
+    width: 100%;
+  }
+
+  a.focusIndicatorDisplayInlineBlock:focus:not(:focus-visible) {
+    display: revert;
+    width: revert;
+  }
+
   a.focusIndicatorDisplayInlineBlock:focus-visible {
     display: inline-block;
     width: 100%;
   }
 
   // add table-cell display default styling
+  a.focusIndicatorDisplayTableCell:focus {
+    display: table-cell;
+  }
+
+  a.focusIndicatorDisplayTableCell:focus:not(:focus-visible) {
+    display: revert;
+  }
+
   a.focusIndicatorDisplayTableCell:focus-visible {
     display: table-cell;
   }
 
-  a.someClassName:focus-visible {
-    background-color: yellow;
-  }
+  // a.someClassName:focus-visible {
+  //   background-color: yellow;
+  // }
 `;
 
 export default focusIndicator;
