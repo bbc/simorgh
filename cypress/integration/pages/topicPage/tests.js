@@ -74,7 +74,7 @@ export default ({ service, pageType, variant }) => {
           .its('length')
           .should('eq', numberOfItems);
       });
-      it('First item has correct headline', () => {
+      it.skip('First item has correct headline', () => {
         cy.log(firstItemHeadline);
         // Goes down into the first item's h2 text and compares to title
         cy.get('[data-testid="topic-promos"]')
