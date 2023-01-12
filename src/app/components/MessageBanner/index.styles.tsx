@@ -31,6 +31,9 @@ const styles = {
       [mq.GROUP_3_ONLY]: {
         maxWidth: '224px',
       },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        width: '224px',
+      },
     }),
   linkbackground: ({ mq, palette }: Theme) =>
     css({
@@ -43,8 +46,13 @@ const styles = {
         margin: '0 0 1rem 0',
         paddingBottom: '1rem',
       },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        width: 'auto',
+        margin: '0 0 1rem 0',
+        paddingBottom: '1rem',
+      },
     }),
-  link: ({ palette }: Theme) =>
+  link: ({ palette, mq }: Theme) =>
     css({
       color: palette.BLACK,
       textDecoration: 'none',
@@ -73,6 +81,12 @@ const styles = {
       flexDirection: 'column',
       alignItems: 'center',
       [mq.GROUP_3_ONLY]: {
+        display: 'flex',
+        flexDirection: 'row-reverse',
+        justifyContent: 'space-between',
+        alignItems: 'flex-end',
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
         display: 'flex',
         flexDirection: 'row-reverse',
         justifyContent: 'space-between',
