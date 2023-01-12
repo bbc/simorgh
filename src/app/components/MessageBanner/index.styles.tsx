@@ -28,7 +28,7 @@ const styles = {
   image: ({ mq }: Theme) =>
     css({
       maxWidth: '184px',
-      [mq.GROUP_3_MIN_WIDTH]: {
+      [mq.GROUP_3_ONLY]: {
         maxWidth: '224px',
       },
     }),
@@ -38,7 +38,7 @@ const styles = {
       backgroundColor: palette.WHITE,
       margin: '0 1rem 1rem 1rem',
       width: '100%',
-      [mq.GROUP_3_MIN_WIDTH]: {
+      [mq.GROUP_3_ONLY]: {
         width: 'auto',
         margin: '0 0 1rem 0',
         paddingBottom: '1rem',
@@ -52,6 +52,13 @@ const styles = {
         textDecoration: 'underline',
       },
       paddingRight: '0.5rem',
+      verticalAlign: 'middle',
+    }),
+  chevron: ({ palette }: Theme) =>
+    css({
+      width: '1rem',
+      height: '1rem',
+      verticalAlign: 'middle',
     }),
   linkAndChevron: ({ palette }: Theme) =>
     css({
@@ -65,7 +72,7 @@ const styles = {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      [mq.GROUP_3_MIN_WIDTH]: {
+      [mq.GROUP_3_ONLY]: {
         display: 'flex',
         flexDirection: 'row-reverse',
         justifyContent: 'space-between',

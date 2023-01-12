@@ -53,7 +53,7 @@ const MessageBanner = ({ summaries, title }: MessageBanner) => {
                       <a href={summary.link} css={styles.link}>
                         {summary.title}
                       </a>
-                      {isRtl ? <LeftChevron /> : <RightChevron />}
+                      {isRtl ? <LeftChevron css={styles.chevron}/> : <RightChevron css={styles.chevron} />}
                     </Text>
                   </div>
                 </div>
