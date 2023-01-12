@@ -14,6 +14,15 @@ const styles = {
       paddingLeft: '1rem',
       paddingRight: '1rem',
     }),
+  textWrap: ({ palette, mq }: Theme) =>
+    css({
+      [mq.GROUP_3_ONLY]: {
+        width: '66%',
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        width: '75%',
+      },
+    }),
   heading: ({ palette }: Theme) =>
     css({
       paddingTop: '1.5rem',

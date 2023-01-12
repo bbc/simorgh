@@ -30,12 +30,14 @@ const MessageBanner = ({ summaries, title }: MessageBanner) => {
         {summaries.map(summary => {
           return (
             <>
-              <Heading level={2} size="paragon" css={styles.heading}>
-                {title}
-              </Heading>
-              <Paragraph size="longPrimer" css={styles.paragraph}>
-                {summary.description}
-              </Paragraph>
+              <div css={styles.textWrap}>
+                <Heading level={2} size="paragon" css={styles.heading}>
+                  {title}
+                </Heading>
+                <Paragraph size="longPrimer" css={styles.paragraph}>
+                  {summary.description}
+                </Paragraph>
+              </div>
               <div css={styles.flex}>
                 {summary.imageUrl && (
                   <div css={styles.image}>
