@@ -247,8 +247,6 @@ exports[`Canonical Articles SEO Canonical link 1`] = `"http://localhost:7080/new
 
 exports[`Canonical Articles SEO Dir attribute 1`] = `"ltr"`;
 
-exports[`Canonical Articles SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`Canonical Articles SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`Canonical Articles SEO Heading level 1 1`] = `"Royal wedding flowers given to Hackney hospice"`;

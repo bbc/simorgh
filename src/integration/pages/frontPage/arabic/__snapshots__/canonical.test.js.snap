@@ -228,8 +228,6 @@ exports[`Canonical Front Page SEO Canonical link 1`] = `"http://localhost:7080/a
 
 exports[`Canonical Front Page SEO Dir attribute 1`] = `"rtl"`;
 
-exports[`Canonical Front Page SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`Canonical Front Page SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`Canonical Front Page SEO Heading level 1 1`] = `"BBC News, عربي - الرئيسية"`;
