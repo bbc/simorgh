@@ -21,6 +21,32 @@ const focusIndicator = ({ palette }: Theme) => css`
     outline-offset: ${pixelsToRem(3)}rem;
   }
 
+  // reverts custom styling. Display default browser styling
+  a.focusIndicatorRevert:focus {
+    outline: revert;
+    box-shadow: revert;
+    outline-offset: revert;
+  }
+
+  a.focusIndicatorRevert:focus-visible {
+    outline: revert;
+    box-shadow: revert;
+    outline-offset: revert;
+  }
+
+  // removes custom styling. Stops default browser styling from displaying
+  a.focusIndicatorRemove:focus {
+    outline: none;
+    box-shadow: none;
+    outline-offset: 0;
+  }
+
+  a.focusIndicatorRemove:focus-visible {
+    outline: none;
+    box-shadow: none;
+    outline-offset: 0;
+  }
+
   // add block display default styling
   a.focusIndicatorDisplayBlock:focus {
     display: block;
@@ -63,9 +89,23 @@ const focusIndicator = ({ palette }: Theme) => css`
     display: table-cell;
   }
 
-  // a.someClassName:focus-visible {
-  //   background-color: yellow;
-  // }
+  a.focusIndicatorReducedWidth:focus {
+    outline: ${pixelsToRem(2)}rem solid ${palette.BLACK};
+    box-shadow: 0 0 0 ${pixelsToRem(1)}rem ${palette.WHITE};
+    outline-offset: ${pixelsToRem(1)}rem;
+  }
+
+  a.focusIndicatorReducedWidth:focus:not(:focus-visible) {
+    outline: none;
+    box-shadow: none;
+    outline-offset: 0;
+  }
+
+  a.focusIndicatorReducedWidth:focus-visible {
+    outline: ${pixelsToRem(2)}rem solid ${palette.BLACK};
+    box-shadow: 0 0 0 ${pixelsToRem(1)}rem ${palette.WHITE};
+    outline-offset: ${pixelsToRem(1)}rem;
+  }
 `;
 
 export default focusIndicator;
