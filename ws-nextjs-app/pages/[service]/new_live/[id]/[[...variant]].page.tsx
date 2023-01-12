@@ -1,11 +1,17 @@
 import { GetServerSideProps } from 'next';
 import { ParsedUrlQuery } from 'querystring';
+import omit from 'ramda/src/omit';
 import applyBasicPageHandlers from '#pages/utils/applyBasicPageHandlers';
 import bffFetch from '#app/routes/topic/getInitialData';
 import getAgent from '#server/utilities/getAgent';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import { Services, Variants } from '#models/types/global';
+import nodeLogger from '#lib/logger.node';
+import {
+  ROUTING_INFORMATION,
+  SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+} from '#app/lib/logger.const';
 
 import LivePageLayout from './LivePageLayout';
 
@@ -43,6 +49,8 @@ const getPageData = async ({
 };
 
 export const getServerSideProps: GetServerSideProps = async context => {
+  const logger = nodeLogger(__filename);
+
   const {
     id,
     service,
@@ -52,12 +60,27 @@ export const getServerSideProps: GetServerSideProps = async context => {
   } = context.query as PageDataParams;
 
   const { headers: reqHeaders } = context.req;
+
+  logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
+    url: context.resolvedUrl,
+    headers: omit(
+      (process.env.SENSITIVE_HTTP_HEADERS || '').split(','),
+      reqHeaders,
+    ),
+  });
+
   const { data, toggles } = await getPageData({
     id,
     page,
     service,
     variant,
     rendererEnv: 'live', // TODO: remove hardcoding
+  });
+
+  logger.info(ROUTING_INFORMATION, {
+    url: context.resolvedUrl,
+    status: data.status,
+    pageType: 'LIVE',
   });
 
   return {

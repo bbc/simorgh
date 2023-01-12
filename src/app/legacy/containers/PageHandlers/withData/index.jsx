@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { element, string, number, bool } from 'prop-types';
+import { element, string, number } from 'prop-types';
 import ErrorPage from '#pages/ErrorPage/ErrorPage';
 import { pageDataPropType } from '#models/propTypes/data';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
@@ -23,13 +23,11 @@ const WithData = Component => {
     pageData: pageDataPropType,
     status: number.isRequired,
     service: string,
-    isNextJs: bool,
   };
 
   DataContainer.defaultProps = {
     pageData: null,
     service: 'default',
-    isNextJs: false,
   };
 
   return DataContainer;

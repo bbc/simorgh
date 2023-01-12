@@ -115,12 +115,8 @@ const PageWrapper = ({ children, pageData, status }) => {
         ]}
       />
       <ThemeProvider service={service} variant={variant}>
-        {!isNextJs && (
-          <>
-            <ServiceWorkerContainer />
-            <ManifestContainer />
-          </>
-        )}
+        {!isNextJs && <ServiceWorkerContainer />}
+        <ManifestContainer />
         <WebVitals pageType={pageType} />
         <GlobalStyles />
         <Wrapper id="main-wrapper" darkMode={isDarkMode}>
