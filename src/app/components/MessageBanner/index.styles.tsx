@@ -1,7 +1,5 @@
 import { css, Theme } from '@emotion/react';
 
-// these are the styles
-
 const styles = {
   container: ({ palette }: Theme) =>
     css({
