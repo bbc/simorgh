@@ -5,6 +5,7 @@ import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import { C_METAL, C_SHADOW } from '#psammead/psammead-styles/src/colours';
 import { getLongPrimer } from '#psammead/gel-foundations/src/typography';
+import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 
 const AVATAR_DIAMETER = '4rem';
 
@@ -64,7 +65,7 @@ Byline.defaultProps = {
 
 Byline.propTypes = {
   service: string.isRequired,
-  script: string.isRequired,
+  script: shape(scriptPropType).isRequired,
   avatar: shape({
     src: string.isRequired,
     alt: string,
