@@ -43,7 +43,7 @@ const MessageBanner = ({ summaries, title }: MessageBanner) => {
                   <div css={styles.image}>
                     <Image
                       alt={summary.imageAlt}
-                      src={summary.imageUrl.replace('{width}', '600')}
+                      src={summary.imageUrl.replace('{width}', 'raw')}
                       placeholder={false}
                     >
                       {summary.imageUrl}

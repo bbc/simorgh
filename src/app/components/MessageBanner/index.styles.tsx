@@ -43,6 +43,7 @@ const styles = {
       [mq.GROUP_4_MIN_WIDTH]: {
         maxWidth: '224px',
       },
+      img: { objectPosition: 'top' },
     }),
   linkbackground: ({ mq, palette }: Theme) =>
     css({
@@ -52,12 +53,12 @@ const styles = {
       width: '100%',
       [mq.GROUP_3_ONLY]: {
         width: 'auto',
-        margin: '0 0 1.5rem 0',
+        margin: '0 0 1rem 0',
         paddingBottom: '1rem',
       },
       [mq.GROUP_4_MIN_WIDTH]: {
         width: 'auto',
-        margin: '0 0 1.5rem 0',
+        margin: '0 0 1rem 0',
         paddingBottom: '1rem',
       },
     }),
