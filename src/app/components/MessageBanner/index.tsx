@@ -23,7 +23,6 @@ interface MessageBanner {
 const MessageBanner = ({ summaries, title }: MessageBanner) => {
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
-
   return (
     <div css={styles.container}>
       <section css={styles.card}>
@@ -49,12 +48,14 @@ const MessageBanner = ({ summaries, title }: MessageBanner) => {
                   </div>
                 )}
                 <div css={styles.linkbackground}>
-                  <Text size="pica" fontVariant="sansBold">
-                    <a href={summary.link} css={styles.link}>
-                      {summary.title}
-                    </a>
-                    {isRtl ? <LeftChevron /> : <RightChevron />}
-                  </Text>
+                  <div css={styles.linkAndChevron}>
+                    <Text size="pica" fontVariant="sansBold">
+                      <a href={summary.link} css={styles.link}>
+                        {summary.title}
+                      </a>
+                      {isRtl ? <LeftChevron /> : <RightChevron />}
+                    </Text>
+                  </div>
                 </div>
               </div>
             </>
