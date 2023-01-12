@@ -12,6 +12,7 @@ import {
   ARTICLE_PAGE,
   CORRESPONDENT_STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import MostReadContainer from '.';
 import { setFreshPromoTimestamp } from './utilities/testHelpers';
@@ -225,6 +226,7 @@ describe('MostReadContainerCanonical Assertion', () => {
         pageType,
       }) => {
         it(description, async () => {
+          suppressPropWarnings(['listIndex', 'string']);
           let container;
           await act(async () => {
             container = await render(
