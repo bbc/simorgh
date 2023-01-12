@@ -24,6 +24,7 @@ const MessageBanner = ({ summaries, title }: MessageBanner) => {
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
   return (
+    // should section and div below be swapped?
     <div css={styles.container}>
       <section css={styles.card}>
         {summaries.map(summary => {

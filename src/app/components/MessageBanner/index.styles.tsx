@@ -32,7 +32,7 @@ const styles = {
         maxWidth: '224px',
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        width: '224px',
+        maxWidth: '224px',
       },
     }),
   linkbackground: ({ mq, palette }: Theme) =>
@@ -43,12 +43,12 @@ const styles = {
       width: '100%',
       [mq.GROUP_3_ONLY]: {
         width: 'auto',
-        margin: '0 0 1rem 0',
+        margin: '0 0 1.5rem 0',
         paddingBottom: '1rem',
       },
       [mq.GROUP_4_MIN_WIDTH]: {
         width: 'auto',
-        margin: '0 0 1rem 0',
+        margin: '0 0 1.5rem 0',
         paddingBottom: '1rem',
       },
     }),
