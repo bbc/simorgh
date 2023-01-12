@@ -1,6 +1,7 @@
 import React from 'react';
 import InlineLinkContainer from '.';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 const fragmentBlock = (text, attributes = []) => ({
   id: 1,
@@ -17,11 +18,13 @@ const Component = ({
   locator = 'https://www.bbc.com/news',
   blocks,
 }) => (
-  <InlineLinkContainer
-    locator={locator}
-    blocks={blocks}
-    isExternal={isExternal}
-  />
+  <ThemeProvider service="news">
+    <InlineLinkContainer
+      locator={locator}
+      blocks={blocks}
+      isExternal={isExternal}
+    />
+  </ThemeProvider>
 );
 
 export default {
