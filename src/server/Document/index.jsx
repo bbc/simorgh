@@ -57,7 +57,7 @@ const renderDocument = async ({
 
   const app = extractCritical(
     renderToString(
-      <ChunkExtractorManager extractor={commonLoadableState}>
+      <ChunkExtractorManager extractor={commonLoadableState} css>
         <CacheProvider value={cache}>
           <ServerApp
             location={url}
