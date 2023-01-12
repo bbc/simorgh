@@ -1681,9 +1681,12 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
               allow="autoplay"
               allowfullscreen=""
               class="emotion-20 emotion-21"
+              height="362.953125"
+              loading="lazy"
               scrolling="no"
               src="/ws/av-embeds/media/bbc_afrique_radio/liveradio/fr?morph_env=live"
               title="Lecteur audio"
+              width="645.25"
             />
             <noscript />
           </div>

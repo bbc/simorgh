@@ -5,7 +5,6 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
-import brandSVG from '../../chameleonLogos/pashto';
 import '#psammead/psammead-locales/moment/ps';
 import '#psammead/moment-timezone-include/tz/GMT';
 import jalaali from '../../../legacy/psammead/psammead-calendars/src';
@@ -277,7 +276,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'مهم خبرونه',
       featuresAnalysisTitle: 'ځانګړي مطالب',
     },
-    brandSVG,
     mostRead: {
       header: 'ډېر لوستل شوي',
       lastUpdated: 'د خپرېدو نیټه',

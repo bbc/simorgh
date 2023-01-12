@@ -136,18 +136,16 @@ const injectDefaultCacheHeader = (req, res, next) => {
 const injectResourceHintsHeader = (req, res, next) => {
   const thisService = req.originalUrl.split('/')[1];
 
-  if (['pidgin', 'hindi'].includes(thisService)) {
-    const assetOrigins = getAssetOrigins(thisService);
-    res.set(
-      'Link',
-      assetOrigins
-        .map(
-          domainName =>
-            `<${domainName}>; rel="dns-prefetch", <${domainName}>; rel="preconnect"`,
-        )
-        .join(','),
-    );
-  }
+  const assetOrigins = getAssetOrigins(thisService);
+  res.set(
+    'Link',
+    assetOrigins
+      .map(
+        domainName =>
+          `<${domainName}>; rel="dns-prefetch", <${domainName}>; rel="preconnect"`,
+      )
+      .join(','),
+  );
   next();
 };
 // Set Referrer-Policy
@@ -166,6 +164,7 @@ server.get(
     injectResourceHintsHeader,
   ],
   async ({ url, query, headers, path: urlPath }, res) => {
+    res.removeHeader('Expect-CT');
     logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
       url,
       headers: removeSensitiveHeaders(headers),

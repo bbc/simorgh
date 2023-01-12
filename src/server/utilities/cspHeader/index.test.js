@@ -117,7 +117,7 @@ describe('cspHeader', () => {
       ].sort(),
       styleSrcExpectation: [...bbcDomains, "'unsafe-inline'"].sort(),
       mediaSrcExpectation: [...bbcDomains].sort(),
-      workerSrcExpectation: ['blob:'],
+      workerSrcExpectation: ['blob:', '*.bbc.co.uk', '*.bbc.com'],
       prefetchSrcExpectation: ['https://*.googlesyndication.com'],
     },
     {
@@ -196,7 +196,6 @@ describe('cspHeader', () => {
       scriptSrcExpectation: [
         ...bbcDomains,
         'https://*.adsafeprotected.com',
-        'https://client.rum.us-east-1.amazonaws.com',
         'https://cdn.ampproject.org',
         'https://*.chartbeat.com',
         'https://*.g.doubleclick.net',
@@ -232,7 +231,7 @@ describe('cspHeader', () => {
         "'unsafe-inline'",
       ].sort(),
       mediaSrcExpectation: [...bbcDomains].sort(),
-      workerSrcExpectation: ["'self'"],
+      workerSrcExpectation: ["'self'", '*.bbc.co.uk', '*.bbc.com'],
       prefetchSrcExpectation: ['https://*.googlesyndication.com'],
     },
     {
@@ -311,7 +310,7 @@ describe('cspHeader', () => {
       ].sort(),
       styleSrcExpectation: [...bbcDomains, "'unsafe-inline'"].sort(),
       mediaSrcExpectation: [...bbcDomains].sort(),
-      workerSrcExpectation: ['blob:'],
+      workerSrcExpectation: ['blob:', '*.bbc.co.uk', '*.bbc.com'],
       prefetchSrcExpectation: ['https://*.googlesyndication.com'],
     },
     {
@@ -400,7 +399,6 @@ describe('cspHeader', () => {
         'https://www.instagram.com',
         'https://*.twimg.com',
         'https://public.flourish.studio',
-        'https://client.rum.us-east-1.amazonaws.com',
         'https://*.adsafeprotected.com',
         'https://cdn.ampproject.org',
         'https://*.g.doubleclick.net',
@@ -431,7 +429,7 @@ describe('cspHeader', () => {
         "'unsafe-inline'",
       ].sort(),
       mediaSrcExpectation: [...bbcDomains].sort(),
-      workerSrcExpectation: ["'self'"],
+      workerSrcExpectation: ["'self'", '*.bbc.co.uk', '*.bbc.com'],
       prefetchSrcExpectation: ['https://*.googlesyndication.com'].sort(),
     },
   ].forEach(

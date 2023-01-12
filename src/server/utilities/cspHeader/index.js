@@ -250,7 +250,6 @@ const directives = {
       'https://*.xx.fbcdn.net', // Social Embeds
       'https://*.twimg.com', // Social Embeds
       'https://public.flourish.studio', // STY includes
-      'https://client.rum.us-east-1.amazonaws.com', // CloudWatch RUM
       ...advertisingDirectives.scriptSrc,
       "'self'",
       "'unsafe-inline'",
@@ -278,7 +277,6 @@ const directives = {
       'https://*.xx.fbcdn.net', // Social Embeds
       'https://*.twimg.com', // Social Embeds
       'https://public.flourish.studio', // STY includes
-      'https://client.rum.us-east-1.amazonaws.com', // CloudWatch RUM
       ...advertisingDirectives.scriptSrc,
       "'self'",
       "'unsafe-inline'",
@@ -392,7 +390,9 @@ export const generateMediaSrc = ({ isAmp, isLive }) => {
 };
 
 export const generateWorkerSrc = ({ isAmp }) =>
-  isAmp ? ['blob:'] : ["'self'"];
+  isAmp
+    ? ['blob:', '*.bbc.co.uk', '*.bbc.com']
+    : ["'self'", '*.bbc.co.uk', '*.bbc.com'];
 
 export const generatePrefetchSrc = ({ isAmp, isLive }) => {
   if (!isLive && isAmp) return directives.prefetchSrc.ampNonLive.sort();

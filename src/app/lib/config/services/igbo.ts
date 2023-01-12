@@ -4,7 +4,6 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import brandSVG from '../../chameleonLogos/igbo';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/psammead-locales/moment/ig';
 import '#psammead/moment-timezone-include/tz/Africa/Lagos';
@@ -39,7 +38,6 @@ export const service: DefaultServiceConfig = {
     audioCaptionOffscreenText: 'Aha nkeananụānụ, ',
     defaultCaptionOffscreenText: 'Ihe a na-akpọ ya, ',
     imageCopyrightOffscreenText: 'Ebe foto si, ',
-    brandSVG,
     script: latin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
