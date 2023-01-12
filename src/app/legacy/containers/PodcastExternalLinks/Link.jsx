@@ -23,7 +23,7 @@ const Link = styled.a`
     color: ${C_METAL};
   }
 
-  &:focus,
+  &:focus > span,
   &:hover > span {
     text-decoration: underline;
   }
