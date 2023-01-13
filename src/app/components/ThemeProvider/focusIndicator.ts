@@ -21,7 +21,7 @@ const focusIndicator = ({ palette }: Theme) => css`
     outline-offset: ${pixelsToRem(3)}rem;
   }
 
-  // reverts custom styling. Display default browser styling
+  // reverts focus indicator styling. Display default browser styling
   a.focusIndicatorRevert:focus {
     outline: revert;
     box-shadow: revert;
@@ -34,7 +34,7 @@ const focusIndicator = ({ palette }: Theme) => css`
     outline-offset: revert;
   }
 
-  // removes custom styling. Stops default browser styling from displaying
+  // removes focus indicator styling. Stops default browser styling from displaying
   a.focusIndicatorRemove:focus {
     outline: none;
     box-shadow: none;
