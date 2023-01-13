@@ -66,7 +66,7 @@ describe('Image', () => {
       ),
     ]);
 
-    const dataWithoutAltText = blockArrayModel([rawImageBlock, null]);
+    const dataWithoutAltText = blockArrayModel([rawImageBlock]);
 
     describe('with no rawImageBlock', () => {
       suppressPropWarnings(['Missing', 'rawImage']);
@@ -77,8 +77,6 @@ describe('Image', () => {
     });
 
     describe('with no altTextBlock', () => {
-      suppressPropWarnings(['type', 'null']);
-
       it('should not render the image', () => {
         render(<ImageContainer sizes="100vw" {...dataWithoutAltText} />);
 
