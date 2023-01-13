@@ -3,6 +3,7 @@ import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import {
   getBlockByType,
   getBlockData,
+  getAllBlocksDataByType,
   getAllSocialBlocksByProviderName,
 } from './helpers';
 
@@ -22,7 +23,7 @@ const serviceHasInlineLink = service =>
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRun = ({ service, pageType }) => {
-  describe(`Running testsToAlwaysRun for ${service} ${pageType}`, () => {});
+  describe(`Running testsToAlwaysRun for ${service} ${pageType}`, () => { });
 };
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
@@ -205,7 +206,19 @@ export const testsThatFollowSmokeTestConfig = ({
         });
       });
 
+      const availableSocialMediaOnPage = [];
+
       describe('Social Embeds', () => {
+        before(() => {
+          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+            availableSocialMediaOnPage.push(
+              ...getAllBlocksDataByType('social', body).map(
+                block => block.model.providerName,
+              ),
+            );
+          });
+        });
+
         const socialMediaProviders = [
           'YouTube',
           'Instagram',
@@ -213,17 +226,21 @@ export const testsThatFollowSmokeTestConfig = ({
           'Twitter',
           'Facebook',
         ];
+
+        const socialIsOnPage = social =>
+          availableSocialMediaOnPage.includes(social);
+
         socialMediaProviders.forEach(socialMediaProviderName => {
-          it(`${socialMediaProviderName} embed is rendered when it exists on page`, () => {
-            cy.request(`${Cypress.env('currentPath')}.json`).then(
-              ({ body }) => {
-                const SocialEmbedsData = getAllSocialBlocksByProviderName(
-                  socialMediaProviderName,
-                  body,
-                );
-                const lowercaseSocialMediaProviderName =
-                  socialMediaProviderName.toLowerCase();
-                if (SocialEmbedsData.length > 0) {
+          it(`${socialMediaProviderName} embed is rendered when it exists on page`, function () {
+            if (socialIsOnPage(socialMediaProviderName)) {
+              cy.request(`${Cypress.env('currentPath')}.json`).then(
+                ({ body }) => {
+                  const SocialEmbedsData = getAllSocialBlocksByProviderName(
+                    socialMediaProviderName,
+                    body,
+                  );
+                  const lowercaseSocialMediaProviderName =
+                    socialMediaProviderName.toLowerCase();
                   SocialEmbedsData.forEach(content => {
                     const socialMediaUrl = content.model.source;
                     cy.get(
@@ -247,13 +264,12 @@ export const testsThatFollowSmokeTestConfig = ({
                         ).should('exist');
                       });
                   });
-                } else {
-                  cy.log(
-                    `There is no ${socialMediaProviderName} embed in this page!`,
-                  );
-                }
-              },
-            );
+                },
+              );
+            } else {
+              cy.log(`No ${socialMediaProviderName} embed on page`);
+              this.skip();
+            }
           });
         });
       });
@@ -263,5 +279,5 @@ export const testsThatFollowSmokeTestConfig = ({
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
 export const testsThatNeverRunDuringSmokeTesting = ({ service, pageType }) => {
-  describe(`No testsToNeverSmokeTest to run for ${service} ${pageType}`, () => {});
+  describe(`No testsToNeverSmokeTest to run for ${service} ${pageType}`, () => { });
 };
