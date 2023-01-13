@@ -13,9 +13,11 @@ const Link = styled.a`
   color: ${C_EBON};
   text-decoration: none;
   display: inline-block;
+  margin: 0.1875rem 0;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
 
   > span {
-    margin: 0.8125rem 0;
     display: inline-block;
   }
 

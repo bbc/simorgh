@@ -2,7 +2,7 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../utilities/pixelsToRem';
 
 const focusIndicator = ({ palette }: Theme) => css`
-  // default styling
+  // default styling for <a> elements
   a:focus {
     outline: ${pixelsToRem(3)}rem solid ${palette.BLACK};
     box-shadow: 0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE};
@@ -16,6 +16,25 @@ const focusIndicator = ({ palette }: Theme) => css`
   }
 
   a:focus-visible {
+    outline: ${pixelsToRem(3)}rem solid ${palette.BLACK};
+    box-shadow: 0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE};
+    outline-offset: ${pixelsToRem(3)}rem;
+  }
+
+  // default styling for <button> elements
+  button:focus {
+    outline: ${pixelsToRem(3)}rem solid ${palette.BLACK};
+    box-shadow: 0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE};
+    outline-offset: ${pixelsToRem(3)}rem;
+  }
+
+  button:focus:not(:focus-visible) {
+    outline: none;
+    box-shadow: none;
+    outline-offset: 0;
+  }
+
+  button:focus-visible {
     outline: ${pixelsToRem(3)}rem solid ${palette.BLACK};
     box-shadow: 0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE};
     outline-offset: ${pixelsToRem(3)}rem;

@@ -4,26 +4,29 @@ import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import ConsentBanner from '.';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ platform }) => (
-  <ServiceContextProvider service="news">
-    <RequestContextProvider
-      platform={platform}
-      isUK
-      isAmp={platform === 'amp'}
-      origin="https://www.bbc.co.uk"
-      pageType={ARTICLE_PAGE}
-      id="c0000000000o"
-      service="news"
-      statsDestination="NEWS_PS_TEST"
-      statsPageIdentifier="news.articles.c0000000000o"
-    >
-      <ConsentBanner />
-      This container uses cookies to conditionally render. If you can not see
-      the banner above please clear your cookies or view in incognito mode.
-    </RequestContextProvider>
-  </ServiceContextProvider>
+  <ThemeProvider service="news">
+    <ServiceContextProvider service="news">
+      <RequestContextProvider
+        platform={platform}
+        isUK
+        isAmp={platform === 'amp'}
+        origin="https://www.bbc.co.uk"
+        pageType={ARTICLE_PAGE}
+        id="c0000000000o"
+        service="news"
+        statsDestination="NEWS_PS_TEST"
+        statsPageIdentifier="news.articles.c0000000000o"
+      >
+        <ConsentBanner />
+        This container uses cookies to conditionally render. If you can not see
+        the banner above please clear your cookies or view in incognito mode.
+      </RequestContextProvider>
+    </ServiceContextProvider>
+  </ThemeProvider>
 );
 
 export default {
