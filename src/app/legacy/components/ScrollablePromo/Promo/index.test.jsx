@@ -2,10 +2,13 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { PromoSingleBlock, oneLinkWithTimestamp } from '../helpers/fixtureData';
 import Promo from '.';
+import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 
 // eslint-disable-next-line react/prop-types
 const ScrollablePromo = ({ block }) => (
-  <Promo block={block} onClick={() => {}} />
+  <ServiceContextProvider service="pidgin">
+    <Promo block={block} onClick={() => {}} />
+  </ServiceContextProvider>
 );
 
 describe('ScrollablePromo', () => {
