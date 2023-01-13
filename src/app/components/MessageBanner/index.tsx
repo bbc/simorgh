@@ -24,9 +24,12 @@ const MessageBanner = ({ summaries, title }: MessageBanner) => {
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
   return (
-    // should section and div below be swapped?
-    <div css={styles.container}>
-      <section css={styles.card}>
+    <section
+      css={styles.container}
+      role="region"
+      aria-labelledby="message-banner"
+    >
+      <div css={styles.card}>
         {summaries.map(summary => {
           return (
             <>
@@ -68,8 +71,8 @@ const MessageBanner = ({ summaries, title }: MessageBanner) => {
             </>
           );
         })}
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 export default MessageBanner;
