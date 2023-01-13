@@ -15,6 +15,7 @@ export const amharicSingleItem = {
         },
       ],
       activePage: 1,
+      position: 0,
       pageCount: 1,
       curationId: 'urn:bbc:vivo:curation:bf45c519-cfee-4627-832f-41759cdeb30c',
       curationType: 'vivo-stream',
