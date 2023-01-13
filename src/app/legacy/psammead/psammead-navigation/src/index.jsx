@@ -8,6 +8,7 @@ import {
   C_GREY_10,
   C_GREY_3,
   C_POSTBOX,
+  C_BLACK,
 } from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING_HLF,
@@ -26,6 +27,7 @@ import { NAV_BAR_TOP_BOTTOM_SPACING } from './DropdownNavigation';
 
 const SPACING_AROUND_NAV_ITEMS = `${NAV_BAR_TOP_BOTTOM_SPACING}rem`; // 12px
 const CURRENT_ITEM_HOVER_BORDER = '0.3125rem'; // 5px
+const focusIndicatorThickness = '0.1875rem'; // 3px
 
 const NavWrapper = styled.div`
   position: relative;
@@ -68,6 +70,7 @@ const StyledLink = styled.a`
   text-decoration: none;
   display: inline-block;
   padding: ${SPACING_AROUND_NAV_ITEMS} 0.25rem;
+  outline: none;
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     padding: ${SPACING_AROUND_NAV_ITEMS} ${GEL_SPACING};
@@ -89,8 +92,15 @@ const StyledLink = styled.a`
     ${({ brandHighlightColour }) =>
       `border-bottom: ${GEL_SPACING_HLF} solid ${brandHighlightColour};`}
     top: 0;
+    border: ${focusIndicatorThickness} solid ${C_BLACK};
+  }
+
+  &:focus-visible::after {
+    ${ListItemBorder}
     ${({ brandHighlightColour }) =>
-      `border: ${GEL_SPACING_HLF} solid ${brandHighlightColour};`}
+      `border-bottom: ${GEL_SPACING_HLF} solid ${brandHighlightColour};`}
+    top: 0;
+    border: ${focusIndicatorThickness} solid ${C_BLACK};
   }
 `;
 
@@ -205,6 +215,7 @@ export const NavigationLi = ({
           brandHighlightColour={C_POSTBOX}
           // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
           aria-labelledby={`NavigationLinks-${link}`}
+          className="focusIndicatorRemove"
           {...props}
         >
           <CurrentLink
@@ -223,6 +234,7 @@ export const NavigationLi = ({
           service={service}
           brandForegroundColour={brandForegroundColour}
           brandHighlightColour={C_POSTBOX}
+          className="focusIndicatorRemove"
           {...props}
         >
           {link}
