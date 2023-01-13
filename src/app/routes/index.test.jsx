@@ -28,6 +28,7 @@ import indexPageJson from '#data/ukrainian/ukraine_in_russian';
 import storyPageRecommendationsData from '#data/mundo/recommendations/index.json';
 
 import { FRONT_PAGE, ERROR_PAGE } from '#app/routes/utils/pageTypes';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import routes from '.';
 import * as fetchPageData from './utils/fetchPageData';
 import {
@@ -46,6 +47,8 @@ jest.mock('../pages');
 const agent = { ca: 'ca', key: 'key' };
 const getAgent = jest.fn(() => agent);
 const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
+
+suppressPropWarnings(['dataAttribute.data-cookie-banner', 'undefined']);
 
 beforeEach(() => {
   jest.setTimeout(10000);
