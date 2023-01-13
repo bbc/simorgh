@@ -2,6 +2,9 @@
 
 exports[`LiveLabel should correctly render for RTL service 1`] = `
 .emotion-0 {
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
   color: #B80000;
   display: inline-block;
   margin-left: 0.5rem;

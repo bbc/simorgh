@@ -1,6 +1,5 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import LiveLabel from './index';
 
 describe('LiveLabel', () => {
@@ -21,6 +20,6 @@ describe('LiveLabel', () => {
 
   shouldMatchSnapshot(
     'should correctly render for RTL service',
-    <LiveLabel service={arabic} dir="rtl" ariaHidden offScreenText="Live" />,
+    <LiveLabel service="arabic" dir="rtl" ariaHidden offScreenText="Live" />,
   );
 });
