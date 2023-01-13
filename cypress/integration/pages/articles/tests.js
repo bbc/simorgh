@@ -206,9 +206,11 @@ export const testsThatFollowSmokeTestConfig = ({
         });
       });
 
-      const availableSocialMediaOnPage = [];
+      describe.only('Social Embeds', () => {
+        const availableSocialMediaOnPage = [];
+        const socialIsOnPage = social =>
+          availableSocialMediaOnPage.includes(social);
 
-      describe('Social Embeds', () => {
         before(() => {
           cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
             availableSocialMediaOnPage.push(
@@ -226,9 +228,6 @@ export const testsThatFollowSmokeTestConfig = ({
           'Twitter',
           'Facebook',
         ];
-
-        const socialIsOnPage = social =>
-          availableSocialMediaOnPage.includes(social);
 
         socialMediaProviders.forEach(socialMediaProviderName => {
           it(`${socialMediaProviderName} embed is rendered when it exists on page`, function () {
