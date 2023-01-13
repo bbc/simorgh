@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { useContext } from 'react';
-import { arrayOf, shape, string } from 'prop-types';
+import { arrayOf, shape, string, element } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { C_CLOUD_LIGHT, C_SHADOW } from '#psammead/psammead-styles/src/colours';
@@ -199,8 +199,10 @@ PodcastExternalLink.propTypes = {
   linkText: string.isRequired,
   linkUrl: string.isRequired,
   linkType: string.isRequired,
-  children: string.isRequired,
-  aria: string.isRequired,
+  children: element.isRequired,
+  aria: shape({
+    'aria-labelledby': string.isRequired,
+  }).isRequired,
 };
 
 export default PodcastExternalLinks;
