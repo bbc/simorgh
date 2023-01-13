@@ -39,9 +39,15 @@ const styles = {
       maxWidth: '184px',
       [mq.GROUP_3_ONLY]: {
         maxWidth: '224px',
+        bottom: 0,
+        right: 0,
+        position: 'absolute',
       },
       [mq.GROUP_4_MIN_WIDTH]: {
         maxWidth: '224px',
+        bottom: 0,
+        right: 0,
+        position: 'absolute',
       },
       img: { objectPosition: 'top' },
     }),
@@ -93,14 +99,16 @@ const styles = {
       [mq.GROUP_3_ONLY]: {
         display: 'flex',
         flexDirection: 'row-reverse',
-        justifyContent: 'space-between',
+        justifyContent: 'start',
         alignItems: 'flex-end',
+        position: 'relative',
       },
       [mq.GROUP_4_MIN_WIDTH]: {
         display: 'flex',
         flexDirection: 'row-reverse',
-        justifyContent: 'space-between',
+        justifyContent: 'start',
         alignItems: 'flex-end',
+        position: 'relative',
       },
     }),
 };
