@@ -44,13 +44,6 @@ export default () => {
       expect(htmlEl.getAttribute('dir')).toMatchSnapshot();
     });
 
-    it('FB admins', () => {
-      const metaTagContent = getMetaTagContent('meta[property="fb:admins"]');
-
-      expect(metaTagContent).toBeTruthy();
-      expect(metaTagContent).toMatchSnapshot();
-    });
-
     it('FB app ID', () => {
       const metaTagContent = getMetaTagContent('meta[property="fb:app_id"]');
 

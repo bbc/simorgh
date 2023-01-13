@@ -203,7 +203,7 @@ Object {
 
 exports[`AMP Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
 
-exports[`AMP Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. De external site no concern BBC. De way wey we de take go external link."`;
+exports[`AMP Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
 exports[`AMP Media Asset Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 
@@ -374,8 +374,6 @@ Object {
 exports[`AMP Media Asset Page SEO Canonical link 1`] = `"http://localhost:7080/pidgin/23248703"`;
 
 exports[`AMP Media Asset Page SEO Dir attribute 1`] = `"ltr"`;
-
-exports[`AMP Media Asset Page SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`AMP Media Asset Page SEO FB app ID 1`] = `"1609039196070050"`;
 

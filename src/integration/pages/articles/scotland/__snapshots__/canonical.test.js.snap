@@ -69,7 +69,7 @@ Object {
 
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/scotland"`;
 
-exports[`Canonical Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
+exports[`Canonical Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
 
 exports[`Canonical Articles Header I can see the branding 1`] = `"BBC Scotland"`;
 
@@ -162,8 +162,6 @@ Object {
 exports[`Canonical Articles SEO Canonical link 1`] = `"http://localhost:7080/scotland/articles/czwj5l0n210o"`;
 
 exports[`Canonical Articles SEO Dir attribute 1`] = `"ltr"`;
-
-exports[`Canonical Articles SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`Canonical Articles SEO FB app ID 1`] = `"1609039196070050"`;
 

@@ -6,6 +6,6 @@ describe('getDataAttribute', () => {
     const privacyDataAttribute = getDataAttribute('privacy')('accept');
 
     expect(cookieDataAttribute).toEqual({ 'data-cookie-banner': 'accept' });
-    expect(privacyDataAttribute).toBeNull();
+    expect(privacyDataAttribute).toEqual({ 'data-terms-banner': 'accept' });
   });
 });

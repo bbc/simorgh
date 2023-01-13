@@ -203,7 +203,7 @@ Object {
 
 exports[`AMP Most Read Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/vietnamese"`;
 
-exports[`AMP Most Read Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. BBC không chịu trách nhiệm nội dung các trang ngoài. Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài"`;
+exports[`AMP Most Read Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. BBC không chịu trách nhiệm nội dung các trang ngoài. Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài"`;
 
 exports[`AMP Most Read Page Header I can see the branding 1`] = `"BBC News, Tiếng Việt"`;
 
@@ -360,8 +360,6 @@ Object {
 exports[`AMP Most Read Page SEO Canonical link 1`] = `"http://localhost:7080/vietnamese/popular/read"`;
 
 exports[`AMP Most Read Page SEO Dir attribute 1`] = `"ltr"`;
-
-exports[`AMP Most Read Page SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`AMP Most Read Page SEO FB app ID 1`] = `"1609039196070050"`;
 

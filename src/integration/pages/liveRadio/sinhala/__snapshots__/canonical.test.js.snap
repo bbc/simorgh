@@ -62,7 +62,7 @@ Object {
 
 exports[`Canonical Sinhala Live Radio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/sinhala"`;
 
-exports[`Canonical Sinhala Live Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. බාහිර වෙබ් අඩවිවල අන්තර්ගතයට බීබීසී වගකියනු නොලැබේ. බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න."`;
+exports[`Canonical Sinhala Live Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. බාහිර වෙබ් අඩවිවල අන්තර්ගතයට බීබීසී වගකියනු නොලැබේ. බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න."`;
 
 exports[`Canonical Sinhala Live Radio Page Header I can see the branding 1`] = `"BBC News, සිංහල"`;
 
@@ -173,8 +173,6 @@ Object {
 exports[`Canonical Sinhala Live Radio Page SEO Canonical link 1`] = `"http://localhost:7080/sinhala/bbc_sinhala_radio/liveradio"`;
 
 exports[`Canonical Sinhala Live Radio Page SEO Dir attribute 1`] = `"ltr"`;
-
-exports[`Canonical Sinhala Live Radio Page SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`Canonical Sinhala Live Radio Page SEO FB app ID 1`] = `"1609039196070050"`;
 

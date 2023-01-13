@@ -203,7 +203,7 @@ Object {
 
 exports[`AMP Live Radio Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/gahuza"`;
 
-exports[`AMP Live Radio Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
+exports[`AMP Live Radio Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
 
 exports[`AMP Live Radio Header I can see the branding 1`] = `"BBC News, Gahuza"`;
 
@@ -328,8 +328,6 @@ Object {
 exports[`AMP Live Radio SEO Canonical link 1`] = `"http://localhost:7080/gahuza/bbc_gahuza_radio/liveradio"`;
 
 exports[`AMP Live Radio SEO Dir attribute 1`] = `"ltr"`;
-
-exports[`AMP Live Radio SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`AMP Live Radio SEO FB app ID 1`] = `"1609039196070050"`;
 

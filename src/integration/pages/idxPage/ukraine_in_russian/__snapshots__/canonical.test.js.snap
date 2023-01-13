@@ -62,7 +62,7 @@ Object {
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/ukrainian"`;
 
-exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. BBC не несе відповідальності за контент інших сайтів. Ознайомтеся з нашими правилами зовнішніх посилань."`;
+exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. BBC не несе відповідальності за контент інших сайтів. Ознайомтеся з нашими правилами зовнішніх посилань."`;
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer lang code should match text 1`] = `"uk"`;
 
@@ -188,8 +188,6 @@ exports[`Canonical ukrainian/ukraine_in_russian IDX page SEO Canonical link 1`] 
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page SEO Dir attribute 1`] = `"ltr"`;
 
-exports[`Canonical ukrainian/ukraine_in_russian IDX page SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`Canonical ukrainian/ukraine_in_russian IDX page SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page SEO Heading level 1 1`] = `"РУС"`;
@@ -285,7 +283,7 @@ exports[`Canonical ukrainian/ukraine_in_russian IDX page Story Promo Image shoul
   alt="Чоловік з келихом"
   class="bbc-1uwua2r"
   height="549"
-  sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+  sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/DE34/production/_111648865_1stimage.png"
   srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/DE34/production/_111648865_1stimage.png 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/DE34/production/_111648865_1stimage.png 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/DE34/production/_111648865_1stimage.png 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/DE34/production/_111648865_1stimage.png 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/DE34/production/_111648865_1stimage.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/DE34/production/_111648865_1stimage.png 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/DE34/production/_111648865_1stimage.png 660w"
   style="aspect-ratio:976 / 549"

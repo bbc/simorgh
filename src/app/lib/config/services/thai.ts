@@ -5,7 +5,6 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import thai from '../../../components/ThemeProvider/fontScripts/thai';
-import brandSVG from '../../chameleonLogos/thai';
 import '#psammead/moment-timezone-include/tz/Asia/Bangkok';
 import '#psammead/psammead-locales/moment/th';
 import withContext from '../../../contexts/utils/withContext';
@@ -256,7 +255,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'ข่าวเด่น',
       featuresAnalysisTitle: 'เรื่องน่าสนใจ',
     },
-    brandSVG,
     mostRead: {
       header: 'ได้รับความนิยมสูงสุด',
       lastUpdated: 'อัพเดทล่าสุดเมื่อเวลา',

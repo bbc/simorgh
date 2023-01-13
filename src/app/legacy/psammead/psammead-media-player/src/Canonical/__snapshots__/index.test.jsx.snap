@@ -16,9 +16,12 @@ exports[`Media Player: Canonical should render an iframe 1`] = `
     allow="autoplay"
     allowfullscreen=""
     class="emotion-0 emotion-1"
+    height="362.953125"
+    loading="lazy"
     scrolling="no"
     src="https://foo.bar/iframe"
     title="Media player"
+    width="645.25"
   />
   <noscript />
 </div>

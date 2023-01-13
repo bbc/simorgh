@@ -79,7 +79,6 @@ export default async ({
           service,
           path: pathname,
           radioService: getRadioService({ service, pathname }),
-          pageType: detailPageType.replace(/ /g, ''),
         })
       : await pageDataPromise;
 
@@ -112,8 +111,10 @@ export default async ({
       get(['content', 'blocks', 0, 'synopses', 'medium']) || shortSynopsis;
     const summary = isPodcast ? mediumSynopsis : shortSynopsis;
 
+    const versionId = get(['promo', 'media', 'versions', 0, 'versionId']);
+
     const externalLinks = isPodcast
-      ? await getPodcastExternalLinks(service, brandId, variant)
+      ? await getPodcastExternalLinks(service, brandId, variant, versionId)
       : [];
 
     return {

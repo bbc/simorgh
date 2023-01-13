@@ -853,10 +853,10 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
               <amp-img
                 alt="BBC News پښتو"
                 attribution=""
+                fallback=""
                 height="240"
                 layout="responsive"
                 src="https://ichef.bbci.co.uk/images/ic/128x128/p08b23c8.png"
-                srcset="https://ichef.bbci.co.uk/images/ic/128x128/p08b23c8.png 128w,https://ichef.bbci.co.uk/images/ic/240x240/p08b23c8.png 240w,https://ichef.bbci.co.uk/images/ic/480x480/p08b23c8.png 480w"
                 style="background-color: rgb(253, 253, 253);"
                 width="240"
               />
@@ -1838,9 +1838,12 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
               allow="autoplay"
               allowfullscreen=""
               class="emotion-43 emotion-44"
+              height="362.953125"
+              loading="lazy"
               scrolling="no"
               src="/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps?morph_env=live"
               title="اډیو پلیئر"
+              width="645.25"
             />
             <noscript />
           </div>
