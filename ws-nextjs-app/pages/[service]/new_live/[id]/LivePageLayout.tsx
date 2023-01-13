@@ -9,25 +9,22 @@ import LinkedDataContainer from '#app/legacy/containers/LinkedData';
 import Pagination from '#pages/TopicPage/Pagination';
 import Heading from '#app/components/Heading';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { Services, Variants } from '#models/types/global';
 
 import styles from './styles';
 
 type ComponentProps = {
+  bbcOrigin?: string;
   pageData: {
     pageCount: number;
     activePage: number;
   };
-  service: Services;
   showAdsBasedOnLocation: boolean;
-  variant?: Variants;
 };
 
 const LivePage = ({
+  bbcOrigin,
   pageData,
-  service,
   showAdsBasedOnLocation,
-  variant,
 }: ComponentProps) => {
   const { lang } = useContext(ServiceContext);
   const { pageCount, activePage } = pageData;
@@ -45,11 +42,16 @@ const LivePage = ({
       <main css={styles.wrapper}>
         <Heading level={1}>Test Next.JS Page</Heading>
         <pre css={styles.code}>
-          <ul>
-            <li>Service: {service}</li>
-            {variant && <li>Variant: {variant}</li>}
-            <li>Show Ads: {showAdsBasedOnLocation ? `✅` : `⛔️`}</li>
-          </ul>
+          <Heading level={4}>Headers</Heading>
+          {bbcOrigin && (
+            <p>
+              bbc-origin: <span>{bbcOrigin}</span>
+            </p>
+          )}
+          <p>
+            bbc-adverts:{' '}
+            <span>{showAdsBasedOnLocation ? 'true' : 'false'}</span>
+          </p>
         </pre>
         <pre css={styles.code}>{JSON.stringify(pageData, null, 2)}</pre>
         <Pagination
