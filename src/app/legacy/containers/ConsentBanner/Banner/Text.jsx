@@ -10,7 +10,12 @@ const BannerText = ({ uk, international }) => {
 
   const { first, linkText, linkUrl, last } = isUK ? uk : international;
 
-  const Link = linkUrl && linkText ? <a href={linkUrl}>{linkText}</a> : null;
+  const Link =
+    linkUrl && linkText ? (
+      <a href={linkUrl} className="focusIndicatorReducedWidth">
+        {linkText}
+      </a>
+    ) : null;
 
   return (
     <ConsentBannerText dir={dir} script={script}>
