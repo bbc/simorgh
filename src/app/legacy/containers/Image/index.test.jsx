@@ -77,6 +77,7 @@ describe('Image', () => {
     });
 
     describe('with no altTextBlock', () => {
+      suppressPropWarnings(['Missing', 'altText']);
       it('should not render the image', () => {
         render(<ImageContainer sizes="100vw" {...dataWithoutAltText} />);
 
