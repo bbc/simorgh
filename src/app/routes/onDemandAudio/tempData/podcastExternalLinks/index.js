@@ -46,13 +46,16 @@ export const getPodcastExternalLinks = async (
     const linkData = await podcastExternalLinks[service]();
     if (!linkData) return [];
     if (!brandPid) return [];
-    let downloadLink = [];
-    // Burmese podcast experiment
-    if (service === 'burmese' && brandPid === 'p02pc9lh')
-      downloadLink = getDownloadLink(versionId);
 
     const links = pathOr([], ['default', variant, brandPid], linkData);
-    return [...links, getRssLink(brandPid), downloadLink];
+    links.push(getRssLink(brandPid));
+
+    // Burmese podcast experiment
+    if (service === 'burmese' && brandPid === 'p02pc9lh') {
+      links.push(getDownloadLink(versionId));
+    }
+
+    return links;
   } catch (err) {
     logger.warn(PODCAST_SERVICE_MISSING, {
       service,
