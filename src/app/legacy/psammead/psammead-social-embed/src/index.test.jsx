@@ -1,6 +1,9 @@
 /* eslint-disable no-console */
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import {
+  shouldMatchSnapshot,
+  suppressPropWarnings,
+} from '#psammead/psammead-test-helpers/src';
 import {
   render,
   screen,
@@ -345,6 +348,8 @@ describe('CanonicalSocialEmbed', () => {
 });
 
 describe('AmpSocialEmbed', () => {
+  suppressPropWarnings(['id', 'undefined']);
+
   Object.values(fixtures).forEach(fixture => {
     const { source: provider, id, embed } = fixture;
     const caption =
