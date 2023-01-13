@@ -30,7 +30,7 @@ const RelatedContentSectionFixture = ({ fixtureData, service = 'mundo' }) => (
 describe('Optimo Related Content Promo', () => {
   it('should return null if no data is passed', () => {
     const { container } = render(
-      <RelatedContentSectionFixture fixtureData={{}} />,
+      <RelatedContentSectionFixture fixtureData={[{}]} />,
     );
     expect(container).toBeEmptyDOMElement();
   });
