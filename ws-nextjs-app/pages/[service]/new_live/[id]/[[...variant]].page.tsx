@@ -6,12 +6,12 @@ import bffFetch from '#app/routes/topic/getInitialData';
 import getAgent from '#server/utilities/getAgent';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
-import { Services, Variants } from '#models/types/global';
 import nodeLogger from '#lib/logger.node';
 import {
   ROUTING_INFORMATION,
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
 } from '#app/lib/logger.const';
+import { Services, Variants } from '#models/types/global';
 
 import LivePageLayout from './LivePageLayout';
 
@@ -80,7 +80,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
   logger.info(ROUTING_INFORMATION, {
     url: context.resolvedUrl,
     status: data.status,
-    pageType: 'LIVE',
+    pageType: LIVE_PAGE,
   });
 
   return {
