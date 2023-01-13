@@ -998,6 +998,17 @@ export const RelatedContentCustomLabel = [
                   ],
                 },
               },
+              {
+                model: {
+                  blocks: [
+                    {
+                      model: {
+                        timestamp: 1581940273000,
+                      },
+                    },
+                  ],
+                },
+              },
             ],
           },
         },
@@ -1082,6 +1093,17 @@ export const RelatedContentCustomLabel = [
                             },
                           },
                         ],
+                      },
+                    },
+                  ],
+                },
+              },
+              {
+                model: {
+                  blocks: [
+                    {
+                      model: {
+                        timestamp: 1581940273000,
                       },
                     },
                   ],
