@@ -18,6 +18,11 @@ import {
 } from '#psammead/psammead-styles/src/colours';
 import { shape, string, oneOfType } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
+import {
+  cpsAssetPagePromoPropTypes,
+  optimoPromoPropTypes,
+  mediaPromoPropTypes,
+} from '#models/propTypes/promo';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import Grid from '../../../components/Grid';
 import RecommendationsImage from '../RecommendationsPromoImage';
@@ -138,7 +143,12 @@ const RecommendationsPromo = ({ promo, eventTrackingData }) => {
 };
 
 RecommendationsPromo.propTypes = {
-  promo: oneOfType([shape(storyItem)]).isRequired,
+  promo: oneOfType([
+    shape(storyItem),
+    shape(cpsAssetPagePromoPropTypes),
+    shape(optimoPromoPropTypes),
+    shape(mediaPromoPropTypes),
+  ]).isRequired,
   eventTrackingData: shape({
     block: shape({
       componentName: string,
