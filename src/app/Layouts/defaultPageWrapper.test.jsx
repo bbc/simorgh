@@ -20,8 +20,13 @@ describe('defaultPageWrapper', () => {
   suppressPropWarnings(['status', 'undefined']);
   suppressPropWarnings(['dataAttribute.data-cookie-banner', 'undefined']);
 
-  const propsWithChildren = {
+  const propsWithChildrenAndPageData = {
     children: <h2>Child element</h2>,
+    pageData: {
+      metadata: {
+        type: 'test-page',
+      },
+    },
   };
 
   const defaultToggles = {
@@ -36,7 +41,7 @@ describe('defaultPageWrapper', () => {
         <ServiceContextProvider service="news">
           <RequestContext.Provider value={{ env: 'test' }}>
             <ToggleContext.Provider value={{ toggleState: defaultToggles }}>
-              <DefaultPageWrapper {...propsWithChildren} />,
+              <DefaultPageWrapper {...propsWithChildrenAndPageData} />,
             </ToggleContext.Provider>
           </RequestContext.Provider>
         </ServiceContextProvider>,
