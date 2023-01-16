@@ -78,12 +78,11 @@ const LinkContents = ({ item, isInline, id }) => {
 LinkContents.propTypes = {
   item: shape(pick(['cpsType', 'headlines', 'media'], storyItem)).isRequired,
   isInline: bool,
-  id: string,
+  id: string.isRequired,
 };
 
 LinkContents.defaultProps = {
   isInline: false,
-  id: null,
 };
 
 export default LinkContents;
