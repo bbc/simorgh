@@ -12,7 +12,7 @@ module.exports = {
   assetPrefix: process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN.includes(
     'localhost',
   )
-    ? ''
+    ? undefined
     : assetPrefix,
   poweredByHeader: false,
   generateEtags: false,
