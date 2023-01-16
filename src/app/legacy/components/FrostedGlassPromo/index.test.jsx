@@ -1,6 +1,9 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { shouldMatchSnapshot, suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
+import {
+  shouldMatchSnapshot,
+  suppressPropWarnings,
+} from '#psammead/psammead-test-helpers/src';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
 
