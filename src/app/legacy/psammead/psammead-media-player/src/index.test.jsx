@@ -1,8 +1,14 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import {
+  shouldMatchSnapshot,
+  suppressPropWarnings,
+} from '#psammead/psammead-test-helpers/src';
 import { CanonicalMediaPlayer, AmpMediaPlayer } from '.';
 
 describe('Media Player: AMP Entry', () => {
+  suppressPropWarnings(['service', 'Message', 'undefined']);
+  suppressPropWarnings(['service', 'AmpMediaPlayer', 'undefined']);
+
   shouldMatchSnapshot(
     'renders a landscape container with an amp-iframe and nested amp-img',
     <AmpMediaPlayer
