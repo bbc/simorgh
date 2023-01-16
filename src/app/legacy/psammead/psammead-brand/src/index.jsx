@@ -12,6 +12,7 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
+import { C_WHITE, C_BLACK } from '#psammead/psammead-styles/src/colours';
 
 const SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX = '63rem';
 const SCRIPT_LINK_OFFSET_BELOW_240PX = 52;
@@ -65,6 +66,18 @@ const Banner = styled.div`
     borderBottom && `border-bottom: ${TRANSPARENT_BORDER}`};
 `;
 
+// Focus visible indicator to show around all focusable elements, links, buttons etc, across the WS sites.
+const focusIndicatorThickness = '0.1875rem';
+
+const styledLinkOutline = `
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -${focusIndicatorThickness};
+  bottom: 0;
+  right: -${focusIndicatorThickness};
+  `;
+
 const StyledLink = styled.a`
   height: 100%;
   display: flex;
@@ -77,6 +90,25 @@ const StyledLink = styled.a`
     text-decoration: none;
     border-bottom: ${GEL_SPACING_HLF} solid ${props => props.logoColour};
     margin-bottom: -${GEL_SPACING_HLF};
+  }
+
+  // Custom focus indicator styling. Global focus indicator styling has been removed.
+  // Declarations ensure backwards compatibility.
+  &:focus:after {
+    ${styledLinkOutline}
+    border: ${focusIndicatorThickness} solid ${C_BLACK};
+    outline: ${GEL_SPACING_HLF} solid ${C_WHITE};
+  }
+
+  &:focus:not(:focus-visible)::after {
+    border: revert;
+    outline: revert;
+  }
+
+  &:focus-visible:after {
+    ${styledLinkOutline}
+    border: ${focusIndicatorThickness} solid ${C_BLACK};
+    outline: ${GEL_SPACING_HLF} solid ${C_WHITE};
   }
 `;
 
@@ -212,6 +244,7 @@ const Brand = forwardRef((props, ref) => {
             href={url}
             id={linkId}
             logoColour={logoColour}
+            className="focusIndicatorRemove"
             // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
             aria-labelledby={`BrandLink-${linkId}`}
           >

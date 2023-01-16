@@ -115,8 +115,8 @@ const focusIndicator = ({ palette }: Theme) => css`
   }
 
   a.focusIndicatorReducedWidth:focus:not(:focus-visible) {
-    outline: none;
-    box-shadow: none;
+    outline: revert;
+    box-shadow: revert;
     outline-offset: 0;
   }
 
