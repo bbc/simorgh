@@ -16,7 +16,7 @@ const Subhead = ({ children, link, a11yID }: PropsWithChildren<Props>) => {
 
   const Wrapper = link
     ? ({ children: innerChildren }: PropsWithChildren<Props>) => (
-        <a href={link}>
+        <a href={link} className="focusIndicatorDisplayBlock">
           <span>{innerChildren}</span>
           {dir === 'ltr' ? <RightChevron /> : <LeftChevron />}
         </a>

@@ -8,6 +8,7 @@ import {
   C_POSTBOX,
   C_GREY_10,
   C_GREY_3,
+  C_BLACK,
 } from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING_HLF,
@@ -188,7 +189,7 @@ const iconBorder = `
   right: 0;
   bottom: 0;
   top: 0;
-  border: ${GEL_SPACING_HLF} solid ${C_POSTBOX};
+  border: ${GEL_SPACING_HLF} solid ${C_BLACK};
 `;
 
 // The sideLength of the button should be
@@ -249,6 +250,7 @@ export const CanonicalMenuButton = ({
     aria-expanded={isOpen ? 'true' : 'false'}
     dir={dir}
     script={script}
+    className="focusIndicatorRemove"
   >
     {isOpen ? navigationIcons.cross : navigationIcons.hamburger}
     <VisuallyHiddenText>{announcedText}</VisuallyHiddenText>
@@ -298,6 +300,7 @@ export const AmpMenuButton = ({ announcedText, onToggle, dir, script }) => (
       on={`tap:${expandedHandler},${onToggle}`}
       dir={dir}
       script={script}
+      className="focusIndicatorRemove"
     >
       {cloneElement(navigationIcons.hamburger, {
         'data-amp-bind-hidden': 'menuState.expanded',
