@@ -1,5 +1,8 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import {
+  shouldMatchSnapshot,
+  suppressPropWarnings,
+} from '#psammead/psammead-test-helpers/src';
 import Image from '#psammead/psammead-image/src';
 import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
@@ -61,6 +64,8 @@ const BulletinComponent = ({
 };
 
 describe('Bulletin', () => {
+  suppressPropWarnings(['ariaId', 'undefined']);
+
   shouldMatchSnapshot(
     'should render audio correctly',
     <BulletinComponent
