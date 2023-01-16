@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { render } from '../../components/react-testing-library-with-providers';
 import TopicPage from './TopicPage';
 import {
@@ -36,6 +37,12 @@ const getOptionParams = ({
 });
 
 describe('Topic Page', () => {
+  suppressPropWarnings(['useLargeImages', 'undefined']);
+  suppressPropWarnings(['type', 'article']);
+  suppressPropWarnings(['children', 'string']);
+  suppressPropWarnings(['position', 'undefined']);
+  suppressPropWarnings(['description', 'MetadataContainer']);
+
   it('should not render an unordered list when there is only one promo', () => {
     const { queryByRole } = render(
       <TopicPage pageData={amharicSingleItem} />,
