@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, act } from '@testing-library/react';
 import DefaultPageWrapper from './defaultPageWrapper';
+import { suppressPropWarnings } from '../legacy/psammead/psammead-test-helpers/src';
 import { ServiceContextProvider } from '../contexts/ServiceContext';
 import { ToggleContext } from '../contexts/ToggleContext';
 import { RequestContext } from '../contexts/RequestContext';
@@ -16,6 +17,9 @@ jest.mock('../legacy/containers/ServiceWorker', () => () => (
 global.performance.getEntriesByName = jest.fn(() => []);
 
 describe('defaultPageWrapper', () => {
+  suppressPropWarnings(['status', 'undefined']);
+  suppressPropWarnings(['dataAttribute.data-cookie-banner', 'undefined']);
+
   const propsWithChildren = {
     children: <h2>Child element</h2>,
   };
