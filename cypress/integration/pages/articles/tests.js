@@ -23,7 +23,7 @@ const serviceHasInlineLink = service =>
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRun = ({ service, pageType }) => {
-  describe(`Running testsToAlwaysRun for ${service} ${pageType}`, () => {});
+  describe(`Running testsToAlwaysRun for ${service} ${pageType}`, () => { });
 };
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
@@ -49,7 +49,7 @@ export const testsThatFollowSmokeTestConfig = ({
         }
         const bffUrl = `https://web-cdn.${
           env === 'live' ? '' : `${env}.`
-        }api.bbci.co.uk/fd/simorgh-bff?pageType=article&id=${articleId}&service=${service}${appendVariant}`;
+          }api.bbci.co.uk/fd/simorgh-bff?pageType=article&id=${articleId}&service=${service}${appendVariant}`;
 
         cy.log(bffUrl);
         cy.request({
@@ -206,7 +206,7 @@ export const testsThatFollowSmokeTestConfig = ({
         });
       });
 
-      describe.only('Social Embeds', () => {
+      describe('Social Embeds', () => {
         const availableSocialMediaOnPage = [];
         const socialIsOnPage = social =>
           availableSocialMediaOnPage.includes(social);
@@ -262,5 +262,5 @@ export const testsThatFollowSmokeTestConfig = ({
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
 export const testsThatNeverRunDuringSmokeTesting = ({ service, pageType }) => {
-  describe(`No testsToNeverSmokeTest to run for ${service} ${pageType}`, () => {});
+  describe(`No testsToNeverSmokeTest to run for ${service} ${pageType}`, () => { });
 };
