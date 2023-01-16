@@ -9,6 +9,7 @@ import pidginFrontPageData from '#data/pidgin/frontpage/index-light';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import getInitialData from '#app/routes/home/getInitialData';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ThemeProvider from '../../components/ThemeProvider';
 import FrontPage from '.';
@@ -132,6 +133,8 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
 });
 
 describe('Front Page', () => {
+  suppressPropWarnings(['id', 'LinkContents', 'null']);
+
   afterEach(() => {
     fetchMock.restore();
   });
