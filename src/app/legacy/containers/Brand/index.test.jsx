@@ -14,7 +14,8 @@ const mockSkipLink = <div data-testid="skip-link">Skip Link</div>;
 const mockScriptLink = <div data-testid="script-link">Script Link</div>;
 
 describe(`BrandContainer`, () => {
-  suppressPropWarnings(['linkId', 'null']);
+  suppressPropWarnings(['linkId', 'StyledBrand', 'null']);
+  suppressPropWarnings(['linkId', 'LocalisedBrandName', 'null']);
 
   it('should render correctly', () => {
     const { container } = render(BrandContainerWithContext());

@@ -1,5 +1,8 @@
 import React, { useRef, useEffect } from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import {
+  shouldMatchSnapshot,
+  suppressPropWarnings,
+} from '#psammead/psammead-test-helpers/src';
 import { render } from '@testing-library/react';
 import { C_POSTBOX, C_WHITE } from '#psammead/psammead-styles/src/colours';
 import ScriptLink from '#psammead/psammead-script-link/src';
@@ -21,6 +24,9 @@ const svg = {
 };
 
 describe('Brand', () => {
+  suppressPropWarnings(['linkId', 'StyledBrand', 'null']);
+  suppressPropWarnings(['linkId', 'LocalisedBrandName', 'null']);
+
   shouldMatchSnapshot(
     'should render correctly with link provided',
     <Brand
