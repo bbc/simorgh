@@ -7,6 +7,7 @@ import {
   MEDIA_ASSET_PAGE,
   TOPIC_PAGE,
 } from '#app/routes/utils/pageTypes';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import userEvent from '@testing-library/user-event';
 import {
   render,
@@ -43,6 +44,8 @@ const HeaderContainerWithContext = ({
   });
 
 describe(`Header`, () => {
+  suppressPropWarnings(['dataAttribute.data-cookie-banner', 'undefined']);
+
   describe('Snapshots', () => {
     it('should render correctly for news article', () => {
       const { container } = HeaderContainerWithContext({
