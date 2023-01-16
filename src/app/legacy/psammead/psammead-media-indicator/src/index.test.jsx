@@ -1,10 +1,15 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import {
+  shouldMatchSnapshot,
+  suppressPropWarnings,
+} from '#psammead/psammead-test-helpers/src';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import MediaIndicator from './index';
 
 describe('MediaIndicator', () => {
+  suppressPropWarnings(['script', 'undefined']);
+
   shouldMatchSnapshot(
     'should render video by default',
     <MediaIndicator service="news" />,
