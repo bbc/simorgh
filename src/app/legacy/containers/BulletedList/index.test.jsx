@@ -3,7 +3,10 @@ import { render } from '@testing-library/react';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import {
+  shouldMatchSnapshot,
+  suppressPropWarnings,
+} from '#psammead/psammead-test-helpers/src';
 import BulletedListContainer from './index';
 import { listItemD, listItemE, orderedList } from './fixtures';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -24,6 +27,8 @@ const BulletsWithContext = ({ blocks, blockGroupIndex }) => (
 );
 
 describe('BulletedListContainer', () => {
+  suppressPropWarnings(['blocks', 'supplied']);
+
   shouldMatchSnapshot(
     'should render ltr correctly',
     <BulletsWithContext
