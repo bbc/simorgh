@@ -55,7 +55,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     id,
     service,
     variant,
-    // renderer_env: rendererEnv,
+    renderer_env: rendererEnv,
     page,
   } = context.query as PageDataParams;
 
@@ -74,7 +74,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     page,
     service,
     variant,
-    rendererEnv: 'live', // TODO: remove hardcoding
+    rendererEnv,
   });
 
   logger.info(ROUTING_INFORMATION, {
