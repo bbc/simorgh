@@ -1,10 +1,15 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import {
+  shouldMatchSnapshot,
+  suppressPropWarnings,
+} from '#psammead/psammead-test-helpers/src';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import Banner from './index.canonical';
 
 describe('Canonical Consent Banner Container', () => {
+  suppressPropWarnings(['dataAttribute.data-cookie-banner', 'undefined']);
+
   const privacy = ({ description, service }) =>
     shouldMatchSnapshot(
       description,
