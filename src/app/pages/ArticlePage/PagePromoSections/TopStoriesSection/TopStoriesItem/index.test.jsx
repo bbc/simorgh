@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { ServiceContextProvider } from '../../../../../contexts/ServiceContext';
 import TopStoriesItem from '.';
 import {
@@ -23,6 +24,8 @@ const TopStoriesItemFixture = ({ fixtureData, service = 'news' }) => (
 );
 
 describe('Optimo Top Stories Promo Item', () => {
+  suppressPropWarnings(['service', 'undefined']);
+
   it('should render Related Content when given appropriate data', () => {
     render(<TopStoriesItemFixture fixtureData={topStoriesItem} />);
 
