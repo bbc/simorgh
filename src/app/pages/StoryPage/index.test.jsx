@@ -43,6 +43,7 @@ import mundoPageData from '#data/mundo/cpsAssets/noticias-56669604';
 import mundoRecommendationsData from '#data/mundo/recommendations/index';
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
 import getAgent from '#server/utilities/getAgent/index';
+import { suppressPropWarnings } from '../../legacy/psammead/psammead-test-helpers/src';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ThemeProvider from '../../components/ThemeProvider';
 
@@ -254,6 +255,8 @@ jest.mock('#hooks/useOptimizelyVariation', () => jest.fn(() => null));
 const pageType = 'cpsAsset';
 
 describe('Story Page', () => {
+  suppressPropWarnings(['id', 'null']);
+
   const appEnv = process.env.SIMORGH_APP_ENV;
   beforeEach(() => {
     process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
