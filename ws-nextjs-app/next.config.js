@@ -1,15 +1,20 @@
 /* eslint-disable no-param-reassign */
+const dotenv = require('dotenv');
 const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezone-include/src');
+const { getClientEnvVars } = require('../src/clientEnvVars');
+
+const DOT_ENV_CONFIG = dotenv.config();
+const clientEnvVars = getClientEnvVars(DOT_ENV_CONFIG, { stringify: false });
 
 const assetPrefix =
-  process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
-  process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
+  clientEnvVars.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
+  clientEnvVars.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
 
 module.exports = {
   reactStrictMode: true,
   distDir: 'build',
   output: 'standalone',
-  assetPrefix: process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN.includes(
+  assetPrefix: clientEnvVars.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN.includes(
     'localhost',
   )
     ? undefined
@@ -19,6 +24,7 @@ module.exports = {
   experimental: {
     externalDir: true,
   },
+  env: clientEnvVars,
   compiler: {
     emotion: true,
   },
