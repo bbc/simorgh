@@ -1,4 +1,5 @@
 import React from 'react';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import {
   render,
   screen,
@@ -21,6 +22,8 @@ const Fixture = ({ useLargeImages = false }) => (
 );
 
 describe('Promo component - Image', () => {
+  suppressPropWarnings(['useLargeImages', 'undefined']);
+
   it('should render image using correct resolution and no large image on desktop', () => {
     render(<Fixture />);
     const imageEl = screen.getByAltText('Test image alt text');
