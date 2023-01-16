@@ -6,6 +6,7 @@ import Cookies from 'js-cookie';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { UserContextProvider } from '#contexts/UserContext';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import ConsentBanner from '.';
 
@@ -45,6 +46,8 @@ beforeEach(() => {
 });
 
 describe('Canonical Consent Banner', () => {
+  suppressPropWarnings('dataAttribute.data-cookie-banner', 'undefined');
+
   it('should render only the privacy banner when no cookies are set', () => {
     renderFixture();
 
