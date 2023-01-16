@@ -5,7 +5,7 @@ import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import * as viewTracking from '#hooks/useViewTracker';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { shouldMatchSnapshot, suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import RecommendationsPromoList from './index';
 
@@ -31,6 +31,8 @@ const Fixture = () => (
 beforeEach(jest.clearAllMocks);
 
 describe('RecommendationsPromoList', () => {
+  suppressPropWarnings(['optimizely', 'null']);
+
   shouldMatchSnapshot(
     'it renders a list of Story Promos wrapped in Grid components',
     <Fixture />,
