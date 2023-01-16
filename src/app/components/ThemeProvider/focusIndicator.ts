@@ -53,14 +53,14 @@ const focusIndicator = ({ palette }: Theme) => css`
     outline-offset: revert;
   }
 
-  // removes focus indicator styling. Stops default browser styling from displaying
-  a.focusIndicatorRemove:focus {
+  // removes focus indicator styling. Stops default browser styling from displaying. Removed a. as also applies to Navbar button
+  .focusIndicatorRemove:focus {
     outline: none;
     box-shadow: none;
     outline-offset: 0;
   }
 
-  a.focusIndicatorRemove:focus-visible {
+  .focusIndicatorRemove:focus-visible {
     outline: none;
     box-shadow: none;
     outline-offset: 0;
