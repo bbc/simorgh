@@ -8,7 +8,10 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import {
+  shouldMatchSnapshot,
+  suppressPropWarnings,
+} from '#psammead/psammead-test-helpers/src';
 import { service as russianServiceConfig } from '../../../lib/config/services/russian';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { InlinePodcastPromo, SecondaryColumnPodcastPromo } from '.';
@@ -140,6 +143,8 @@ describe('Inline', () => {
 });
 
 describe('SecondaryColumn', () => {
+  suppressPropWarnings(['children', 'array']);
+
   shouldMatchSnapshot('Should render correctly', <PromoWithContext />);
 
   it('should show when all props are available', () => {
