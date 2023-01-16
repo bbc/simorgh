@@ -17,6 +17,13 @@ const hexToRGB = (hex, alpha = 1) => {
 };
 
 const focusIndicatorThickness = '0.1875rem'; // 3px
+const menuButtonWidth = '2.75rem'; // need to update to be calculated
+
+const scrollableNavOutline = `
+  content: ' ';
+  position: absolute;
+  height: 100%;
+  width: 100%;`;
 
 const StyledScrollableNav = styled.div`
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
@@ -38,24 +45,20 @@ const StyledScrollableNav = styled.div`
   // Declarations ensure backwards compatibility.
   &:focus::after {
     outline: ${focusIndicatorThickness} solid ${C_BLACK};
-    content: ' ';
-    position: absolute;
-    height: 100%;
-    // for dropdown button.
-    left: 2.75rem;
-    width: 100%;
+    ${scrollableNavOutline};
+    ${({ dir }) => `
+      ${dir === 'ltr' ? 'left' : 'right'}: ${menuButtonWidth};
+    `}
   }
   &:focus:not(:focus-visible)::after {
     outline: revert;
   }
   &:focus-visible::after {
     outline: ${focusIndicatorThickness} solid ${C_BLACK};
-    content: ' ';
-    position: absolute;
-    height: 100%;
-    // for dropdown button.
-    left: 2.75rem;
-    width: 100%;
+    ${scrollableNavOutline};
+    ${({ dir }) => `
+      ${dir === 'ltr' ? 'left' : 'right'}: ${menuButtonWidth};
+    `}
   }
 
   &:after {
