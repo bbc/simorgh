@@ -17,7 +17,6 @@ const hexToRGB = (hex, alpha = 1) => {
 };
 
 const focusIndicatorThickness = '0.1875rem'; // 3px
-// const menuButtonWidth = '2.9rem'; // need to update to be calculated
 
 const scrollableNavOutline = `
   content: '';
@@ -50,9 +49,6 @@ const StyledScrollableNav = styled.div`
   &:focus::after {
     outline: ${focusIndicatorThickness} solid ${C_BLACK};
     ${scrollableNavOutline};
-    // ${({ dir }) => `
-    //   ${dir === 'ltr' ? 'left' : 'right'}: ${menuButtonWidth};
-    // `}
   }
   &:focus:not(:focus-visible)::after {
     outline: revert;
@@ -61,9 +57,6 @@ const StyledScrollableNav = styled.div`
   &:focus-visible::after {
     outline: ${focusIndicatorThickness} solid ${C_BLACK};
     ${scrollableNavOutline};
-    // ${({ dir }) => `
-    //   ${dir === 'ltr' ? 'left' : 'right'}: ${menuButtonWidth};
-    // `}
   }
 
   &:after {
