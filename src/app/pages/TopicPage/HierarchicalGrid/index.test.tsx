@@ -1,10 +1,15 @@
 import React from 'react';
+import { suppressPropWarnings } from '../../../legacy/psammead/psammead-test-helpers/src';
 import { render } from '../../../components/react-testing-library-with-providers';
 import fixture from './fixtures';
 import mediaFixture from './mediaFixtures';
 import HierarchicalGrid from '.';
 
 describe('Hierarchical Grid Curation', () => {
+  suppressPropWarnings(['useLargeImages', 'undefined']);
+  suppressPropWarnings(['type', 'article']);
+  suppressPropWarnings(['children', 'string']);
+
   const headingLevel = 2;
   it('renders twelve promos when twelve items are provided', async () => {
     render(<HierarchicalGrid headingLevel={headingLevel} promos={fixture} />);
