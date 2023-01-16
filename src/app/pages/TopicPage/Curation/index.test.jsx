@@ -2,6 +2,7 @@ import React from 'react';
 
 import fixture from '#data/pidgin/topics/c95y35941vrt.json';
 import mundoFixture from '#data/mundo/topics/c1en6xwmpkvt.json';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { render } from '../../../components/react-testing-library-with-providers';
 
 import Curation, { VISUAL_STYLE, VISUAL_PROMINANCE } from '.';
@@ -23,6 +24,11 @@ const components = {
 
 describe('Topic Curations', () => {
   it('should render the correct component', () => {
+    suppressPropWarnings(['position', 'undefined']);
+    suppressPropWarnings(['curationLength', 'undefined']);
+    suppressPropWarnings(['type', 'article']);
+    suppressPropWarnings(['children', 'string']);
+
     Object.entries(components).forEach(([curationType, prominances]) => {
       Object.entries(prominances).forEach(
         ([prominance, { promos, testId }]) => {
@@ -40,6 +46,9 @@ describe('Topic Curations', () => {
   });
 
   it('should render the standard grid if a style/prominance is not recognised', () => {
+    suppressPropWarnings(['visualStyle', 'something-unsupported']);
+    suppressPropWarnings(['visualProminance', 'what-is-this']);
+
     const { getByTestId } = render(
       <Curation
         visualStyle="something-unsupported"
