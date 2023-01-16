@@ -16,6 +16,12 @@ const StyledPlayButton = styled(PlayButton)`
         display: none;
       }
     `}
+  //custom focus indicator
+  &:focus-visible {
+    box-shadow: 0 0 0 3px black inset;
+    border: 3px solid white;
+    outline: 3px solid transparent;
+  }
 `;
 
 const StyledPlaceholder = styled.div`
@@ -67,6 +73,7 @@ const Placeholder = ({
         type={type}
         guidanceMessage={guidanceMessage}
         noJsClassName={noJsClassName}
+        className="focusIndicatorRemove"
       />
 
       <Image alt="" src={src} srcset={srcset} />

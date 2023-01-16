@@ -139,7 +139,25 @@ const focusIndicator = ({ palette }: Theme) => css`
   }
 
   a.focusIndicatorOutlineBlack:focus-visible {
-    outline: ${pixelsToRem(3)}rem solid ${palette.BLACK};
+    outline: ${pixelsToRem(3)}rem solid ${palette.WHITE};
+    box-shadow: none;
+    outline-offset: 0;
+  }
+
+  .focusIndicatorOutlineWhite:focus {
+    outline: ${pixelsToRem(3)}rem solid ${palette.WHITE};
+    box-shadow: none;
+    outline-offset: 0;
+  }
+
+  .focusIndicatorOutlineWhite:focus:not(:focus-visible) {
+    outline: revert;
+    box-shadow: none;
+    outline-offset: 0;
+  }
+
+  .focusIndicatorOutlineWhite:focus-visible {
+    outline: ${pixelsToRem(3)}rem solid ${palette.WHITE};
     box-shadow: none;
     outline-offset: 0;
   }
