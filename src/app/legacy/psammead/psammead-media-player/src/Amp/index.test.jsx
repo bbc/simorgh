@@ -1,10 +1,18 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import {
+  shouldMatchSnapshot,
+  suppressPropWarnings,
+} from '#psammead/psammead-test-helpers/src';
 import { render } from '@testing-library/react';
 import Amp from '.';
 import '@testing-library/jest-dom/extend-expect';
 
 describe('Media Player: Amp', () => {
+  suppressPropWarnings(['noJsMessage', 'AmpMediaPlayer', 'undefined']);
+  suppressPropWarnings(['service', 'AmpMediaPlayer', 'undefined']);
+  suppressPropWarnings(['service', 'Message', 'undefined']);
+  suppressPropWarnings(['message', 'Message', 'undefined']);
+
   shouldMatchSnapshot(
     'should render an amp-iframe with an amp-img nested inside',
     <Amp
