@@ -84,6 +84,8 @@ WrappedStoryPromo.defaultProps = {
 
 describe('StoryPromo Container', () => {
   suppressPropWarnings(['alsoItems', 'IndexAlsosContainer']);
+  suppressPropWarnings(['id', 'LinkContents', 'null']);
+
   Object.entries(fixtures).forEach(([name, data]) => {
     shouldMatchSnapshot(
       `should render ${name} correctly for canonical`,
