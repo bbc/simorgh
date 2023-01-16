@@ -5,6 +5,7 @@ import { shape, string, number, oneOf } from 'prop-types';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
 import { C_WHITE, C_EBON } from '#psammead/psammead-styles/src/colours';
+import { GEL_GROUP_4_ONLY } from '#psammead/gel-foundations/src/breakpoints';
 import { getMinion } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
@@ -17,7 +18,9 @@ export const TYPES = {
 };
 
 const Wrapper = styled.div`
-  padding: ${GEL_SPACING_HLF};
+  ${GEL_GROUP_4_ONLY} {
+    padding: ${GEL_SPACING_HLF};
+  }
   color: ${C_EBON};
   background-color: ${C_WHITE};
   ${({ service }) => getSansRegular(service)}
@@ -25,7 +28,6 @@ const Wrapper = styled.div`
 `;
 
 const StyledTime = styled.time`
-  padding: ${GEL_SPACING_HLF};
   position: relative;
   top: 0.09rem;
 `;

@@ -36,3 +36,5 @@ export const MEDIA_QUERY_TYPOGRAPHY = {
   SMART_PHONE_AND_LARGER: `@media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem)`, // > 320px
   LAPTOP_AND_LARGER: `@media (min-width: ${GEL_GROUP_CD_MIN_WIDTH}rem)`, // > 600px
 };
+
+export const GEL_GROUP_4_ONLY = `@media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX})`; // 1008px - 1279px
