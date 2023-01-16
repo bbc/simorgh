@@ -28,6 +28,7 @@ describe('Topic Curations', () => {
     suppressPropWarnings(['curationLength', 'undefined']);
     suppressPropWarnings(['type', 'article']);
     suppressPropWarnings(['children', 'string']);
+    suppressPropWarnings(['useLargeImages', 'undefined']);
 
     Object.entries(components).forEach(([curationType, prominances]) => {
       Object.entries(prominances).forEach(
