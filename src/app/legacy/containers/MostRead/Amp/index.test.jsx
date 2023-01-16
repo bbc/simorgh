@@ -4,6 +4,7 @@ import fetchMock from 'fetch-mock';
 import { render, act } from '@testing-library/react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import AmpMostRead from '.';
 
@@ -32,6 +33,8 @@ const MostReadAmpWithContext = ({
 );
 
 describe('AmpMostRead', () => {
+  suppressPropWarnings(['listIndex', 'string']);
+
   afterEach(() => {
     fetchMock.restore();
   });
