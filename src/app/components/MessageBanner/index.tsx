@@ -17,6 +17,7 @@ interface MessageBanner {
     imageAlt: string;
     description?: string;
     title: string;
+    id: string;
   }[];
   title: string;
 }
@@ -32,7 +33,7 @@ const MessageBanner = ({ summaries, title }: MessageBanner) => {
       <div css={styles.card}>
         {summaries.map(summary => {
           return (
-            <>
+            <React.Fragment key={summary.id}>
               <div css={styles.textWrap}>
                 <Heading level={2} size="paragon" css={styles.heading}>
                   {title}
@@ -43,11 +44,15 @@ const MessageBanner = ({ summaries, title }: MessageBanner) => {
               </div>
               <div css={styles.flex}>
                 {summary.imageUrl && (
-                  <div css={styles.image}>
+                  <div
+                    data-testid="image-test-id"
+                    css={isRtl ? styles.imageRtl : styles.imageLtr}
+                  >
                     <Image
-                      alt={summary.imageAlt}
+                      alt=""
                       src={summary.imageUrl.replace('{width}', 'raw')}
                       placeholder={false}
+                      aria-hidden="true"
                     >
                       {summary.imageUrl}
                     </Image>
@@ -56,7 +61,7 @@ const MessageBanner = ({ summaries, title }: MessageBanner) => {
                 <div css={styles.linkbackground}>
                   <div css={styles.linkAndChevron}>
                     <Text size="pica" fontVariant="sansBold">
-                      <a href={summary.link} css={styles.link}>
+                      <a href={summary.link} css={styles.link} tabIndex={0}>
                         {summary.title}
                       </a>
                       {isRtl ? (
@@ -68,7 +73,7 @@ const MessageBanner = ({ summaries, title }: MessageBanner) => {
                   </div>
                 </div>
               </div>
-            </>
+            </React.Fragment>
           );
         })}
       </div>
