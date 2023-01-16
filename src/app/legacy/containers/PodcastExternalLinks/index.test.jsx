@@ -4,7 +4,10 @@ import { render } from '@testing-library/react';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import {
+  shouldMatchSnapshot,
+  suppressPropWarnings,
+} from '#psammead/psammead-test-helpers/src';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import PodcastExternalLinks from '.';
 
@@ -45,6 +48,8 @@ const links = [
 ];
 
 describe('PodcastExternalLinks', () => {
+  suppressPropWarnings(['aria.aria-labelledby', 'undefined']);
+
   shouldMatchSnapshot(
     'Should render external links',
     <Component links={links} />,
