@@ -49,7 +49,7 @@ export const testsThatFollowSmokeTestConfig = ({
         }
         const bffUrl = `https://web-cdn.${
           env === 'live' ? '' : `${env}.`
-        }api.bbci.co.uk/fd/simorgh-bff?pageType=article&id=${articleId}&service=${service}${appendVariant}`;
+          }api.bbci.co.uk/fd/simorgh-bff?pageType=article&id=${articleId}&service=${service}${appendVariant}`;
 
         cy.log(bffUrl);
         cy.request({
@@ -212,65 +212,51 @@ export const testsThatFollowSmokeTestConfig = ({
           availableSocialMediaOnPage.includes(social);
 
         before(() => {
-          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-            availableSocialMediaOnPage.push(
-              ...getAllBlocksDataByType('social', body).map(
-                block => block.model.providerName,
-              ),
-            );
-          });
+          availableSocialMediaOnPage.push(
+            ...getAllBlocksDataByType('social', articlesData).map(
+              block => block.model.providerName,
+            ),
+          );
         });
 
-        const socialMediaProviders = [
-          'YouTube',
-          'Instagram',
-          'TikTok',
-          'Twitter',
-          'Facebook',
-        ];
-
-        socialMediaProviders.forEach(socialMediaProviderName => {
-          it(`${socialMediaProviderName} embed is rendered when it exists on page`, function () {
-            if (socialIsOnPage(socialMediaProviderName)) {
-              cy.request(`${Cypress.env('currentPath')}.json`).then(
-                ({ body }) => {
-                  const SocialEmbedsData = getAllSocialBlocksByProviderName(
-                    socialMediaProviderName,
-                    body,
-                  );
-                  const lowercaseSocialMediaProviderName =
-                    socialMediaProviderName.toLowerCase();
-                  SocialEmbedsData.forEach(content => {
-                    const socialMediaUrl = content.model.source;
-                    cy.get(
-                      `[data-e2e="${lowercaseSocialMediaProviderName}-embed-${socialMediaUrl}"]`,
-                    )
-                      .scrollIntoView()
-                      .within(() => {
-                        if (
-                          socialMediaProviderName === 'YouTube' ||
-                          socialMediaProviderName === 'TikTok'
-                        ) {
-                          cy.get(`[data-testid="consentBanner"]`).should(
-                            'exist',
-                          );
-                          cy.get(`iframe`).should('not.exist');
-                          cy.get(`[data-testid="banner-button"]`).click();
-                        }
-                        cy.get(`iframe`).should('exist');
-                        cy.get(
-                          `[href^="#end-of-${lowercaseSocialMediaProviderName}-content"]`,
-                        ).should('exist');
-                      });
-                  });
-                },
-              );
-            } else {
-              cy.log(`No ${socialMediaProviderName} embed on page`);
-              this.skip();
-            }
-          });
-        });
+        ['YouTube', 'Instagram', 'TikTok', 'Twitter', 'Facebook'].forEach(
+          socialMediaProviderName => {
+            it(`${socialMediaProviderName} embed is rendered when it exists on page`, function () {
+              if (socialIsOnPage(socialMediaProviderName)) {
+                const SocialEmbedsData = getAllSocialBlocksByProviderName(
+                  socialMediaProviderName,
+                  articlesData,
+                );
+                const lowercaseSocialMediaProviderName =
+                  socialMediaProviderName.toLowerCase();
+                SocialEmbedsData.forEach(content => {
+                  const socialMediaUrl = content.model.source;
+                  cy.get(
+                    `[data-e2e="${lowercaseSocialMediaProviderName}-embed-${socialMediaUrl}"]`,
+                  )
+                    .scrollIntoView()
+                    .within(() => {
+                      if (
+                        socialMediaProviderName === 'YouTube' ||
+                        socialMediaProviderName === 'TikTok'
+                      ) {
+                        cy.get(`[data-testid="consentBanner"]`).should('exist');
+                        cy.get(`iframe`).should('not.exist');
+                        cy.get(`[data-testid="banner-button"]`).click();
+                      }
+                      cy.get(`iframe`).should('exist');
+                      cy.get(
+                        `[href^="#end-of-${lowercaseSocialMediaProviderName}-content"]`,
+                      ).should('exist');
+                    });
+                });
+              } else {
+                cy.log(`No ${socialMediaProviderName} embed on page`);
+                this.skip();
+              }
+            });
+          },
+        );
       });
     });
   });
