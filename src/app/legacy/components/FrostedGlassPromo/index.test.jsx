@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { shouldMatchSnapshot, suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
 
@@ -36,6 +36,8 @@ const Component = ({ service = 'mundo', variant, ...rest }) => {
 };
 
 describe('Frosted Glass Promo', () => {
+  suppressPropWarnings(['image.height', 'undefined']);
+
   shouldMatchSnapshot(
     'when given props directly',
     <Component {...promoProps} />,
