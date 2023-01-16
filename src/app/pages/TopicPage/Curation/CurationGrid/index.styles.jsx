@@ -14,6 +14,12 @@ const styles = {
           display: 'inline-block',
           verticalAlign: 'top',
         },
+        svg: {
+          margin: `${spacings.FULL}rem`,
+        },
+        time: {
+          margin: `${spacings.FULL}rem ${spacings.FULL}rem ${spacings.FULL}rem 0`,
+        },
       },
       '.promo-text': {
         [mq.GROUP_2_MAX_WIDTH]: {
