@@ -77,7 +77,6 @@ describe('Get initial data for on demand radio', () => {
         linkUrl: 'https://podcasts.files.bbci.co.uk/p02pc9qc.rss',
         linkType: 'rss',
       },
-      [],
     ]);
   });
 
