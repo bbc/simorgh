@@ -43,6 +43,7 @@ import mundoPageData from '#data/mundo/cpsAssets/noticias-56669604';
 import mundoRecommendationsData from '#data/mundo/recommendations/index';
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
 import getAgent from '#server/utilities/getAgent/index';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ThemeProvider from '../../components/ThemeProvider';
 
@@ -306,6 +307,7 @@ describe('Story Page', () => {
   });
 
   it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
+    suppressPropWarnings(['id', 'LinkContents', 'null']);
     fetchMock.mock('http://localhost/some-cps-sty-path.json', igboPageData);
     fetchMock.mock('http://localhost/igbo/mostread.json', igboMostReadData);
     fetchMock.mock(
