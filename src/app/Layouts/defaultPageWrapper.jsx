@@ -38,10 +38,10 @@ const PageWrapper = ({ children, pageData, status }) => {
   const isDarkMode = pathOr(false, ['darkMode'], pageData);
   const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
   const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);
-  const isErrorPage = [404, 500].includes(status) || !pageData;
+  const isErrorPage = [404, 500].includes(status);
   const pageType = isErrorPage
     ? 'WS-ERROR-PAGE'
-    : path(['metadata', 'type'], pageData);
+    : pathOr('WS-UNKNOWN-PAGE', ['metadata', 'type'], pageData);
 
   const serviceFonts = fontFacesLazy(service);
   const fontJs =
