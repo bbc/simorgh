@@ -93,7 +93,6 @@ const renderRouter = props =>
 
 describe('routes', () => {
   suppressPropWarnings(['dataAttribute.data-cookie-banner', 'undefined']);
-  suppressPropWarnings(['id', 'LinkContents', 'null']);
 
   it('should have correct properties in each route', () => {
     routes.forEach((route, index) => {
@@ -262,6 +261,7 @@ describe('routes', () => {
   });
 
   it('should route to and render a front page', async () => {
+    suppressPropWarnings(['id', 'LinkContents', 'null']);
     const pathname = '/pidgin';
     fetchMock.mock(`http://localhost${pathname}.json`, frontPageJson);
 
