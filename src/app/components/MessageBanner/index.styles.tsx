@@ -83,8 +83,18 @@ const styles = {
       backgroundColor: palette.WHITE,
       margin: '0 1rem 1rem 1rem',
       width: '100%',
+      textDecoration: 'none',
       '&:hover': {
         backgroundColor: '#F6F6F6',
+      },
+      '&:focus': {
+        // marginTop: `${pixelsToRem(9)}rem`,
+        // marginBottom: `${pixelsToRem(9)}rem`,
+        // marginLeft: `${pixelsToRem(3)}rem`,
+        // marginRight: `${pixelsToRem(3)}rem`,
+        outline: `${pixelsToRem(3)}rem solid ${palette.WHITE}`,
+        boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.BLACK}`,
+        outlineOffset: `${pixelsToRem(3)}rem`,
       },
       [mq.GROUP_3_ONLY]: {
         width: 'auto',
@@ -104,15 +114,15 @@ const styles = {
       '&:hover, &:focus': {
         textDecoration: 'underline',
       },
-      '&:focus': {
-        marginTop: `${pixelsToRem(9)}rem`,
-        marginBottom: `${pixelsToRem(9)}rem`,
-        marginLeft: `${pixelsToRem(3)}rem`,
-        marginRight: `${pixelsToRem(3)}rem`,
-        outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
-        boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
-        outlineOffset: `${pixelsToRem(3)}rem`,
-      },
+      // '&:focus': {
+      //   marginTop: `${pixelsToRem(9)}rem`,
+      //   marginBottom: `${pixelsToRem(9)}rem`,
+      //   marginLeft: `${pixelsToRem(3)}rem`,
+      //   marginRight: `${pixelsToRem(3)}rem`,
+      //   outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
+      //   boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
+      //   outlineOffset: `${pixelsToRem(3)}rem`,
+      // },
       paddingRight: '0.5rem',
       paddingLeft: '0.5rem',
       verticalAlign: 'middle',

@@ -24,6 +24,10 @@ interface MessageBanner {
 const MessageBanner = ({ summaries, title }: MessageBanner) => {
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
+
+  const onClick = () => {
+    console.log('I have been clicked');
+  };
   return (
     <section
       css={styles.container}
@@ -58,20 +62,22 @@ const MessageBanner = ({ summaries, title }: MessageBanner) => {
                     </Image>
                   </div>
                 )}
-                <div css={styles.linkBackground}>
+                <a href={summary.link} css={styles.linkBackground}>
+                  {/* <div css={styles.linkBackground}> */}
                   <div css={styles.linkAndChevron}>
-                    <Text size="pica" fontVariant="sansBold">
-                      <a href={summary.link} css={styles.link} tabIndex={0}>
-                        {summary.title}
-                        {isRtl ? (
-                          <LeftChevron css={styles.chevron} />
-                        ) : (
-                          <RightChevron css={styles.chevron} />
-                        )}
-                      </a>
+                    <Text size="pica" fontVariant="sansBold" css={styles.link}>
+                      {/* <a href={summary.link} css={styles.link} tabIndex={0}> */}
+                      {summary.title}
+                      {isRtl ? (
+                        <LeftChevron css={styles.chevron} />
+                      ) : (
+                        <RightChevron css={styles.chevron} />
+                      )}
+                      {/* </a> */}
                     </Text>
                   </div>
-                </div>
+                  {/* </div> */}
+                </a>
               </div>
             </React.Fragment>
           );
