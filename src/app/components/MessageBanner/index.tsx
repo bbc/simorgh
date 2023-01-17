@@ -58,7 +58,7 @@ const MessageBanner = ({ summaries, title }: MessageBanner) => {
                     </Image>
                   </div>
                 )}
-                <div css={styles.linkbackground}>
+                <div css={styles.linkBackground}>
                   <div css={styles.linkAndChevron}>
                     <Text size="pica" fontVariant="sansBold">
                       <a href={summary.link} css={styles.link} tabIndex={0}>

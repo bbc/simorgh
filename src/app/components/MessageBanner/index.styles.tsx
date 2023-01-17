@@ -77,7 +77,7 @@ const styles = {
       },
       img: { objectPosition: 'top' },
     }),
-  linkbackground: ({ mq, palette }: Theme) =>
+  linkBackground: ({ mq, palette }: Theme) =>
     css({
       padding: '1rem',
       backgroundColor: palette.WHITE,
