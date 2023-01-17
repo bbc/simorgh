@@ -1,18 +1,25 @@
-import { useContext } from 'react';
+import { useContext, PropsWithChildren } from 'react';
 import nodeLogger from '../../../lib/logger.node';
 import { RECOMMENDATIONS_MISSING_DATA } from '../../../lib/logger.const';
 import { RequestContext } from '../../../contexts/RequestContext';
 
 const logger = nodeLogger(__filename);
 
-const checkRecommendations = recommendations => {
+type Props = {
+  recommendations: any[];
+};
+
+const checkRecommendations = (recommendations: Props['recommendations']) => {
   const isValidRecommendations = recommendations.every(
     recommendation => recommendation.headlines && recommendation.locators,
   );
   return isValidRecommendations;
 };
 
-function ErrorBoundary({ recommendations, children }) {
+function ErrorBoundary({
+  recommendations,
+  children,
+}: PropsWithChildren<Props>) {
   const { pathname } = useContext(RequestContext) as { pathname: string };
 
   const isValidRecommendations = checkRecommendations(recommendations);

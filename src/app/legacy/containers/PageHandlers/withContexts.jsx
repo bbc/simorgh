@@ -27,6 +27,7 @@ const WithContexts = Component => {
       timeOnServer,
       pageData,
       showAdsBasedOnLocation,
+      isNextJs,
     } = props;
 
     return (
@@ -48,6 +49,7 @@ const WithContexts = Component => {
             variant={variant}
             timeOnServer={timeOnServer}
             showAdsBasedOnLocation={showAdsBasedOnLocation}
+            isNextJs={isNextJs}
           >
             <EventTrackingContextProvider pageData={pageData}>
               <UserContextProvider>
@@ -75,6 +77,7 @@ const WithContexts = Component => {
     showAdsBasedOnLocation: bool,
     // eslint-disable-next-line react/forbid-prop-types
     toggles: object.isRequired,
+    isNextJs: bool,
   };
 
   WithContextsContainer.defaultProps = {
@@ -86,6 +89,7 @@ const WithContexts = Component => {
     variant: null,
     timeOnServer: null,
     showAdsBasedOnLocation: false,
+    isNextJs: false,
   };
 
   return WithContextsContainer;
