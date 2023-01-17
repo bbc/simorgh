@@ -96,13 +96,12 @@ const TopicPage = ({ pageData }) => {
               position,
               visualStyle,
             }) => (
-              <>
+              <React.Fragment key={curationId}>
                 {visualStyle === 'BANNER' && (
                   <MessageBanner title={curationTitle} summaries={summaries} />
                 )}
                 <Curation
                   headingLevel={curationTitle && 3}
-                  key={curationId}
                   visualStyle={VISUAL_STYLE.NONE}
                   visualProminance={visualProminence}
                   promos={summaries}
@@ -112,7 +111,7 @@ const TopicPage = ({ pageData }) => {
                   link={link}
                   curationLength={curations && curations.length}
                 />
-              </>
+              </React.Fragment>
             ),
           )}
           <Pagination
