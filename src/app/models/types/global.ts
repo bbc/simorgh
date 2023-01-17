@@ -40,6 +40,12 @@ export type UkrainianService = {
   variant: 'default' | 'ru-UA';
 };
 
+export type ServicesWithVariants =
+  | SerbianService
+  | ChineseService
+  | ZhongwenService
+  | UkrainianService;
+
 export type ServicesWithNoVariants = {
   service:
     | 'afaanoromoo'
@@ -65,6 +71,7 @@ export type ServicesWithNoVariants = {
     | 'naidheachdan'
     | 'nepali'
     | 'news'
+    | 'newsround'
     | 'pashto'
     | 'persian'
     | 'pidgin'
@@ -90,14 +97,8 @@ export type ServicesWithNoVariants = {
 
 export type Services =
   | ServicesWithNoVariants['service']
-  | SerbianService['service']
-  | ChineseService['service']
-  | UkrainianService['service']
-  | ZhongwenService['service'];
+  | ServicesWithVariants['service'];
 
 export type Variants =
   | ServicesWithNoVariants['variant']
-  | SerbianService['variant']
-  | ChineseService['variant']
-  | UkrainianService['variant']
-  | ZhongwenService['variant'];
+  | ServicesWithVariants['variant'];
