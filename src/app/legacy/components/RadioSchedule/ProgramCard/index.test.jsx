@@ -7,6 +7,8 @@ import { renderProgramCard, uniqueStates } from '../testHelpers/helper';
 
 describe('ProgramCard', () => {
   suppressPropWarnings(['program', 'ProgramCard']);
+  suppressPropWarnings(['id', 'ProgramCard', 'undefined']);
+
   uniqueStates.forEach(state => {
     shouldMatchSnapshot(
       `should render correctly for ${state}`,
