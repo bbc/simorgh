@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, act } from '@testing-library/react';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import DefaultPageWrapper from './defaultPageWrapper';
 import { ServiceContextProvider } from '../contexts/ServiceContext';
 import { ToggleContext } from '../contexts/ToggleContext';
@@ -18,6 +19,7 @@ global.performance.getEntriesByName = jest.fn(() => []);
 describe('defaultPageWrapper', () => {
   const propsWithChildren = {
     children: <h2>Child element</h2>,
+    status: 200,
   };
 
   const defaultToggles = {
@@ -25,6 +27,12 @@ describe('defaultPageWrapper', () => {
   };
 
   it('should render default page wrapper with children', async () => {
+    suppressPropWarnings([
+      'dataAttribute.data-cookie-banner',
+      'RejectButton',
+      'undefined',
+    ]);
+
     let container;
 
     await act(async () => {
