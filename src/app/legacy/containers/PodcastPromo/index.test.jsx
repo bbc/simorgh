@@ -43,6 +43,8 @@ const {
 } = russianServiceConfig.default.podcastPromo;
 
 describe('Inline', () => {
+  suppressPropWarnings(['children', 'object']);
+
   shouldMatchSnapshot('Should render correctly', <PromoWithContext inline />);
 
   it('should show when all props are available', () => {
@@ -143,8 +145,6 @@ describe('Inline', () => {
 });
 
 describe('SecondaryColumn', () => {
-  suppressPropWarnings(['children', 'array']);
-
   shouldMatchSnapshot('Should render correctly', <PromoWithContext />);
 
   it('should show when all props are available', () => {
