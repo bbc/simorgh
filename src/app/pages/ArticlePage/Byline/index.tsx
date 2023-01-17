@@ -15,7 +15,6 @@ type Props = {
   blocks: any;
 };
 
-// stuff
 const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
   const { translations, dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
