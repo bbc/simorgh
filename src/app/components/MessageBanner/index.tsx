@@ -25,9 +25,6 @@ const MessageBanner = ({ summaries, title }: MessageBanner) => {
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
 
-  const onClick = () => {
-    console.log('I have been clicked');
-  };
   return (
     <section
       css={styles.container}
