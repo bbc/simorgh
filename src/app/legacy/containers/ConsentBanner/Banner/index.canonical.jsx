@@ -25,7 +25,7 @@ const AcceptButton = ({ message, onClick, dataAttribute }) => (
   </button>
 );
 
-const RejectButton = ({ message, href, onClick, dataAttribute }) => (
+export const RejectButton = ({ message, href, onClick, dataAttribute }) => (
   <a href={href} onClick={onClick} {...dataAttribute}>
     {message}
   </a>

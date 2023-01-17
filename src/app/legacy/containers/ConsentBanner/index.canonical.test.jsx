@@ -1,6 +1,8 @@
+/* eslint-disable react/forbid-foreign-prop-types */
 /* eslint-disable global-require */
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
+import { shape, string } from 'prop-types';
 import Cookies from 'js-cookie';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -8,6 +10,8 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { UserContextProvider } from '#contexts/UserContext';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import ConsentBanner from '.';
+import { RejectButton } from './Banner/index.canonical';
+import { before } from 'mocha';
 
 const PRIVACY_COOKIE = 'ckns_privacy';
 const EXPLICIT_COOKIE = 'ckns_explicit';
@@ -45,15 +49,27 @@ beforeEach(() => {
 });
 
 describe('Canonical Consent Banner', () => {
-  it('should render only the privacy banner when no cookies are set', () => {
-    renderFixture();
+  const originalDataAttributePropType = RejectButton.propTypes.dataAttribute;
 
-    const privacyBannerHeadingEl = screen.queryByText(PRIVACY_BANNER_TEXT);
-    const cookieBannerHeadingEl = screen.queryByText(COOKIE_BANNER_TEXT);
-
-    expect(privacyBannerHeadingEl).toBeInTheDocument();
-    expect(cookieBannerHeadingEl).not.toBeInTheDocument();
+  beforeEach(() => {
+    RejectButton.propTypes.dataAttribute = shape({
+      'data-cookie-banner': string,
+    });
   });
+
+  afterEach(() => {
+    RejectButton.propTypes.dataAttribute = originalDataAttributePropType;
+  });
+
+    it('should render only the privacy banner when no cookies are set', () => {
+      renderFixture();
+
+      const privacyBannerHeadingEl = screen.queryByText(PRIVACY_BANNER_TEXT);
+      const cookieBannerHeadingEl = screen.queryByText(COOKIE_BANNER_TEXT);
+
+      expect(privacyBannerHeadingEl).toBeInTheDocument();
+      expect(cookieBannerHeadingEl).not.toBeInTheDocument();
+    });
 
   it('should render only the privacy banner when PRIVACY_COOKIE is 0', () => {
     Cookies.set(PRIVACY_COOKIE, '0');
