@@ -25,7 +25,7 @@ const VideoMediaIcon = styled(MediaIcon)`
 `;
 
 const AudioMediaIcon = styled(MediaIcon)`
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 `;
 
