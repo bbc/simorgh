@@ -6,7 +6,10 @@ import {
   STORY_PAGE,
   PHOTO_GALLERY_PAGE,
 } from '#app/routes/utils/pageTypes';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import {
+  shouldMatchSnapshot,
+  suppressPropWarnings,
+} from '#psammead/psammead-test-helpers/src';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import LinkContents from '.';
 
@@ -81,6 +84,8 @@ const shouldMatchSnapshotWithContext = (title, component) =>
   shouldMatchSnapshot(title, withServiceContext(component));
 
 describe('Story Promo Link Contents', () => {
+  suppressPropWarnings(['id', 'LinkContents', 'undefined']);
+
   it("should render a story's headline as bare text", () => {
     const { container } = renderWithContext(<LinkContents item={item} />);
 
