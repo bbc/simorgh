@@ -2,12 +2,12 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../utilities/pixelsToRem';
 
 const styles = {
-  container: ({ palette }: Theme) =>
+  container: () =>
     css({
       paddingTop: '2rem',
       paddingBottom: '2rem',
     }),
-  card: ({ palette, mq }: Theme) =>
+  card: ({ mq }: Theme) =>
     css({
       height: 'auto',
       background:
@@ -23,7 +23,7 @@ const styles = {
           'linear-gradient(33deg, rgba(121,9,22,1) 0%, rgba(2,0,36,1) 54%, rgba(121,9,22,1) 90%)',
       },
     }),
-  textWrap: ({ palette, mq }: Theme) =>
+  textWrap: ({ mq }: Theme) =>
     css({
       [mq.GROUP_3_ONLY]: {
         width: '66%',
@@ -97,7 +97,7 @@ const styles = {
         paddingBottom: '1rem',
       },
     }),
-  link: ({ palette, mq }: Theme) =>
+  link: ({ palette }: Theme) =>
     css({
       color: palette.BLACK,
       textDecoration: 'none',
@@ -117,20 +117,20 @@ const styles = {
       paddingLeft: '0.5rem',
       verticalAlign: 'middle',
     }),
-  chevron: ({ palette }: Theme) =>
+  chevron: () =>
     css({
       width: '1rem',
       height: '1rem',
       verticalAlign: 'middle',
     }),
-  linkAndChevron: ({ palette }: Theme) =>
+  linkAndChevron: () =>
     css({
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'center',
     }),
 
-  flex: ({ mq, palette }: Theme) =>
+  flex: ({ mq }: Theme) =>
     css({
       display: 'flex',
       flexDirection: 'column',
