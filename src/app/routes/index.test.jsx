@@ -262,6 +262,7 @@ describe('routes', () => {
 
   it('should route to and render a front page', async () => {
     suppressPropWarnings(['id', 'LinkContents', 'null']);
+
     const pathname = '/pidgin';
     fetchMock.mock(`http://localhost${pathname}.json`, frontPageJson);
 
@@ -466,8 +467,7 @@ describe('routes', () => {
     ).toBeInTheDocument();
   });
 
-  // skipping this test until FIX pages are fully featured with correct metadata and Chartbeat
-  it.skip('should route to and render a feature index page', async () => {
+  it('should route to and render a feature index page', async () => {
     const pathname = '/afrique/48465371';
     fetchMock.mock(`http://localhost${pathname}.json`, featureIndexPageJson);
 
