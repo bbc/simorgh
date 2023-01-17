@@ -11,7 +11,6 @@ import { UserContextProvider } from '#contexts/UserContext';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import ConsentBanner from '.';
 import { RejectButton } from './Banner/index.canonical';
-import { before } from 'mocha';
 
 const PRIVACY_COOKIE = 'ckns_privacy';
 const EXPLICIT_COOKIE = 'ckns_explicit';
@@ -61,15 +60,15 @@ describe('Canonical Consent Banner', () => {
     RejectButton.propTypes.dataAttribute = originalDataAttributePropType;
   });
 
-    it('should render only the privacy banner when no cookies are set', () => {
-      renderFixture();
+  it('should render only the privacy banner when no cookies are set', () => {
+    renderFixture();
 
-      const privacyBannerHeadingEl = screen.queryByText(PRIVACY_BANNER_TEXT);
-      const cookieBannerHeadingEl = screen.queryByText(COOKIE_BANNER_TEXT);
+    const privacyBannerHeadingEl = screen.queryByText(PRIVACY_BANNER_TEXT);
+    const cookieBannerHeadingEl = screen.queryByText(COOKIE_BANNER_TEXT);
 
-      expect(privacyBannerHeadingEl).toBeInTheDocument();
-      expect(cookieBannerHeadingEl).not.toBeInTheDocument();
-    });
+    expect(privacyBannerHeadingEl).toBeInTheDocument();
+    expect(cookieBannerHeadingEl).not.toBeInTheDocument();
+  });
 
   it('should render only the privacy banner when PRIVACY_COOKIE is 0', () => {
     Cookies.set(PRIVACY_COOKIE, '0');
