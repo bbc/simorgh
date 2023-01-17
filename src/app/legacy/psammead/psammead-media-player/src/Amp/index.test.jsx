@@ -9,6 +9,9 @@ import '@testing-library/jest-dom/extend-expect';
 
 describe('Media Player: Amp', () => {
   suppressPropWarnings(['noJsMessage', 'AmpMediaPlayer', 'undefined']);
+  suppressPropWarnings(['service', 'AmpMediaPlayer', 'undefined']);
+  suppressPropWarnings(['message', 'Message', 'undefined']);
+  suppressPropWarnings(['service', 'Message', 'undefined']);
 
   shouldMatchSnapshot(
     'should render an amp-iframe with an amp-img nested inside',
