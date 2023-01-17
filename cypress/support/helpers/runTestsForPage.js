@@ -43,9 +43,18 @@ const runTestsForPage = ({
     .filter(service => serviceHasPageType(service, pageType))
     .forEach(service => {
       const paths = getPaths(service, pageType);
+      const { variant } = config[service];
+
+      const defaultTestArgs = {
+        service,
+        pageType,
+        variant,
+      };
 
       paths.forEach(currentPath => {
         describe(`${pageType} - ${currentPath} - Canonical`, () => {
+          const testArgs = defaultTestArgs;
+
           before(() => {
             Cypress.env('currentPath', currentPath);
 
@@ -74,12 +83,6 @@ const runTestsForPage = ({
             }
             visitPage(currentPath, pageType);
           });
-
-          const testArgs = {
-            service,
-            pageType,
-            variant: config[service].variant,
-          };
 
           if (!ampOnlyServices.includes(service)) {
             // Enables overriding of the smoke test values in the config/settings.js file
@@ -111,18 +114,16 @@ const runTestsForPage = ({
 
         // Switch to AMP page URL (NB all our pages have AMP variants)
         describe(`${pageType} - ${currentPath} - AMP`, () => {
+          const testArgs = {
+            ...defaultTestArgs,
+            isAmp: true,
+          };
+
           before(() => {
             Cypress.env('currentPath', currentPath);
 
             visitPage(getAmpUrl(currentPath), pageType);
           });
-
-          const testArgs = {
-            service,
-            pageType,
-            variant: config[service].variant,
-            isAmp: true,
-          };
 
           // Enables overriding of the smoke test values in the config/settings.js file
           testsThatAlwaysRunForAllPages(testArgs);
