@@ -22,6 +22,7 @@ describe('MessageBanner', () => {
     expect(screen.getByText(summaries[0].description).nodeName).toBe('P');
   });
 
+  // not a paragraph
   it('should display link text correctly as an Anchor', () => {
     render(<MessageBanner summaries={summaries} title={kyrgyzBanner.title} />);
     expect(screen.getByText(summaries[0].title).nodeName).toBe('A');

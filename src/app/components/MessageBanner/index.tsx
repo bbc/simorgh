@@ -63,12 +63,12 @@ const MessageBanner = ({ summaries, title }: MessageBanner) => {
                     <Text size="pica" fontVariant="sansBold">
                       <a href={summary.link} css={styles.link} tabIndex={0}>
                         {summary.title}
+                        {isRtl ? (
+                          <LeftChevron css={styles.chevron} />
+                        ) : (
+                          <RightChevron css={styles.chevron} />
+                        )}
                       </a>
-                      {isRtl ? (
-                        <LeftChevron css={styles.chevron} />
-                      ) : (
-                        <RightChevron css={styles.chevron} />
-                      )}
                     </Text>
                   </div>
                 </div>

@@ -105,10 +105,10 @@ const styles = {
         textDecoration: 'underline',
       },
       '&:focus': {
-        paddingTop: `${pixelsToRem(6)}rem`,
-        paddingBottom: `${pixelsToRem(6)}rem`,
-        paddingLeft: `${pixelsToRem(9)}rem`,
-        paddingRight: `${pixelsToRem(40)}rem`,
+        marginTop: `${pixelsToRem(9)}rem`,
+        marginBottom: `${pixelsToRem(9)}rem`,
+        marginLeft: `${pixelsToRem(3)}rem`,
+        marginRight: `${pixelsToRem(3)}rem`,
         outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
         boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
         outlineOffset: `${pixelsToRem(3)}rem`,
@@ -119,8 +119,10 @@ const styles = {
     }),
   chevron: () =>
     css({
-      width: '1rem',
-      height: '1rem',
+      marginLeft: '0.5rem',
+      marginRight: '0.5rem',
+      width: '16px',
+      height: '16px',
       verticalAlign: 'middle',
     }),
   linkAndChevron: () =>
