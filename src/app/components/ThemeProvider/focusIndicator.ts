@@ -108,6 +108,7 @@ const focusIndicator = ({ palette }: Theme) => css`
     display: table-cell;
   }
 
+  // Overrides global styles with a thinner version of the focus indicator. E.g. for inline links.
   a.focusIndicatorReducedWidth:focus {
     outline: ${pixelsToRem(2)}rem solid ${palette.BLACK};
     box-shadow: 0 0 0 ${pixelsToRem(1)}rem ${palette.WHITE};
@@ -126,6 +127,7 @@ const focusIndicator = ({ palette }: Theme) => css`
     outline-offset: ${pixelsToRem(1)}rem;
   }
 
+  // Overrides global style with just a black outline. Used when a red border is already applied. E.g. Pagination.
   a.focusIndicatorOutlineBlack:focus {
     outline: ${pixelsToRem(3)}rem solid ${palette.BLACK};
     box-shadow: none;
@@ -139,25 +141,7 @@ const focusIndicator = ({ palette }: Theme) => css`
   }
 
   a.focusIndicatorOutlineBlack:focus-visible {
-    outline: ${pixelsToRem(3)}rem solid ${palette.WHITE};
-    box-shadow: none;
-    outline-offset: 0;
-  }
-
-  .focusIndicatorOutlineWhite:focus {
-    outline: ${pixelsToRem(3)}rem solid ${palette.WHITE};
-    box-shadow: none;
-    outline-offset: 0;
-  }
-
-  .focusIndicatorOutlineWhite:focus:not(:focus-visible) {
-    outline: revert;
-    box-shadow: none;
-    outline-offset: 0;
-  }
-
-  .focusIndicatorOutlineWhite:focus-visible {
-    outline: ${pixelsToRem(3)}rem solid ${palette.WHITE};
+    outline: ${pixelsToRem(3)}rem solid ${palette.BLACK};
     box-shadow: none;
     outline-offset: 0;
   }

@@ -106,7 +106,10 @@ const ErrorMain = ({
       </ul>
       <CustomParagraph script={script} service={service}>
         {callToActionFirst}
-        <InlineLink href={callToActionLinkUrl}>
+        <InlineLink
+          href={callToActionLinkUrl}
+          className="focusIndicatorReducedWidth"
+        >
           {callToActionLinkText}
         </InlineLink>
         {callToActionLast}
