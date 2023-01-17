@@ -8,7 +8,7 @@ import ThemeProvider from '../../../components/ThemeProvider';
 // eslint-disable-next-line react/prop-types
 const Component = ({ service, variant }) => {
   return (
-    <ThemeProvider service="news">
+    <ThemeProvider service={service}>
       <ServiceContextProvider service={service} variant={variant}>
         <Pager
           activePage={number('Active Page', 5, { min: 1, max: 100 })}

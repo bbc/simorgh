@@ -6,32 +6,35 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { indonesian, arabic } from './fixtures';
 import RecentAudioEpisodes from './index';
+import ThemeProvider from '../../../../components/ThemeProvider';
 
 /* eslint-disable react/prop-types */
 const Component = ({ masterBrand, brandId, pageType, episodes, service }) => (
-  <ServiceContextProvider service={service}>
-    <RequestContextProvider
-      service={service}
-      pageType="media"
-      pathname={`/${service}`}
-      isAmp={false}
-    >
-      <ToggleContextProvider
-        toggles={{
-          eventTracking: {
-            enabled: false,
-          },
-        }}
+  <ThemeProvider service={service}>
+    <ServiceContextProvider service={service}>
+      <RequestContextProvider
+        service={service}
+        pageType="media"
+        pathname={`/${service}`}
+        isAmp={false}
       >
-        <RecentAudioEpisodes
-          masterBrand={masterBrand}
-          episodes={episodes}
-          brandId={brandId}
-          pageType={pageType}
-        />
-      </ToggleContextProvider>
-    </RequestContextProvider>
-  </ServiceContextProvider>
+        <ToggleContextProvider
+          toggles={{
+            eventTracking: {
+              enabled: false,
+            },
+          }}
+        >
+          <RecentAudioEpisodes
+            masterBrand={masterBrand}
+            episodes={episodes}
+            brandId={brandId}
+            pageType={pageType}
+          />
+        </ToggleContextProvider>
+      </RequestContextProvider>
+    </ServiceContextProvider>
+  </ThemeProvider>
 );
 
 const fixtures = { indonesia: indonesian, arabic };
