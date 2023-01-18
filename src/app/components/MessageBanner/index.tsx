@@ -36,7 +36,12 @@ const MessageBanner = ({ summaries, title }: MessageBanner) => {
           return (
             <React.Fragment key={summary.id}>
               <div css={styles.textWrap}>
-                <Heading level={2} size="paragon" css={styles.heading}>
+                <Heading
+                  level={2}
+                  size="paragon"
+                  css={styles.heading}
+                  id="message-banner"
+                >
                   {title}
                 </Heading>
                 <Paragraph size="longPrimer" css={styles.paragraph}>
@@ -53,27 +58,22 @@ const MessageBanner = ({ summaries, title }: MessageBanner) => {
                       alt=""
                       src={summary.imageUrl.replace('{width}', 'raw')}
                       placeholder={false}
-                      aria-hidden="true"
                     >
                       {summary.imageUrl}
                     </Image>
                   </div>
                 )}
                 <a href={summary.link} css={styles.linkBackground}>
-                  {/* <div css={styles.linkBackground}> */}
                   <div css={styles.linkAndChevron}>
                     <Text size="pica" fontVariant="sansBold" css={styles.link}>
-                      {/* <a href={summary.link} css={styles.link} tabIndex={0}> */}
                       {summary.title}
                       {isRtl ? (
                         <LeftChevron css={styles.chevron} />
                       ) : (
                         <RightChevron css={styles.chevron} />
                       )}
-                      {/* </a> */}
                     </Text>
                   </div>
-                  {/* </div> */}
                 </a>
               </div>
             </React.Fragment>

@@ -26,7 +26,7 @@ const Component = ({ service, variant }: Props) => {
 };
 
 export default {
-  title: 'Topic/MessageBanner',
+  title: 'New Components/MessageBanner',
   Component,
   decorators: [withKnobs, withServicesKnob()],
 };

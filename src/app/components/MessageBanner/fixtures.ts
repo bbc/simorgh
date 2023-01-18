@@ -2,9 +2,9 @@ const kyrgyzBanner = {
   summaries: [
     {
       type: 'url',
-      title: 'Follow us - CTA | headline',
+      title: 'Follow us',
       firstPublished: '',
-      link: 'https://www.instagram.com/bbcnewskyrgyz/?hl=en',
+      link: 'https://www.bbc.com/kyrgyz',
       imageUrl:
         'https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/66b8/test/d1be6bc0-8114-11ed-bd83-8f15ba358e41.png',
       description:
