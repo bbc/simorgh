@@ -16,6 +16,10 @@ const styles = {
         },
         svg: {
           margin: `${spacings.FULL}rem`,
+          [mq.GROUP_4_ONLY]: {
+            width: `${spacings.TRIPLE}rem`,
+            height: `${spacings.TRIPLE}rem`,
+          },
         },
         time: {
           margin: `${spacings.FULL}rem ${spacings.FULL}rem ${spacings.FULL}rem 0`,
