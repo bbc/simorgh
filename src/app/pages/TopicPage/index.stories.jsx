@@ -9,7 +9,8 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
 
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
-import fixture from '#data/mundo/topics/c1en6xwmpkvt.json';
+import defaultTopic from '#data/mundo/topics/c1en6xwmpkvt.json';
+import topicWithMessageBanner from '#data/mundo/topics/cw90edn9kw4t.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import Page from './TopicPage';
 import ThemeProvider from '../../components/ThemeProvider';
@@ -17,7 +18,7 @@ import ThemeProvider from '../../components/ThemeProvider';
 const TopicPage = withPageWrapper(Page);
 
 // eslint-disable-next-line react/prop-types
-const Component = ({ service, variant }) => {
+const Component = ({ service, variant, fixture = defaultTopic }) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ToggleContextProvider
@@ -29,7 +30,7 @@ const Component = ({ service, variant }) => {
           <RequestContextProvider
             isAmp={false}
             pageType={TOPIC_PAGE}
-            service="mundo"
+            service={service}
             pathname=""
           >
             <UserContextProvider>
@@ -63,3 +64,7 @@ export default {
 };
 
 export const Example = Component;
+
+export const PageWithMessageBanner = props => (
+  <Component {...props} fixture={topicWithMessageBanner} />
+);
