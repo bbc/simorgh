@@ -27,6 +27,7 @@ import getAmpUrl from './getAmpUrl';
 // Pass arguments in from each page's index.js file
 const runTestsForPage = ({
   pageType,
+  urls,
   testsThatAlwaysRun,
   testsThatAlwaysRunForCanonicalOnly,
   testsThatAlwaysRunForAMPOnly,
@@ -39,11 +40,16 @@ const runTestsForPage = ({
 }) => {
   // For each Service and Page Type in the config file it visits the path and it writes a describe saying this.
 
+  if (urls) {
+    // eslint-disable-next-line no-console
+    console.log(`Urls provided for ${pageType} pageType`);
+  }
+
   Object.keys(config)
     .filter(service => serviceHasPageType(service, pageType))
     .forEach(service => {
-      const paths = getPaths(service, pageType);
       const { variant } = config[service];
+      const paths = getPaths(service, pageType);
 
       const defaultTestArgs = {
         service,

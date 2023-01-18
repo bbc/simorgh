@@ -15,8 +15,11 @@ import {
   testsThatNeverRunDuringSmokeTestingForCanonicalOnly,
 } from './testsForCanonicalOnly';
 
+import urls from './urls';
+
 const testsForPage = {
   pageType: 'articles',
+  urls,
   testsThatAlwaysRun,
   testsThatAlwaysRunForCanonicalOnly,
   testsThatAlwaysRunForAMPOnly,
