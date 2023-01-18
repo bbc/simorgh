@@ -3,19 +3,8 @@ const fs = require('fs');
 const path = require('path');
 const allServices = require('../../cypress/support/config/settings');
 
-const getUrl = (pageType, env) => {
-  let url;
-
-  if (
-    pageType &&
-    pageType.environments &&
-    pageType.environments[env] &&
-    pageType.environments[env].paths
-  ) {
-    [url] = pageType.environments[env].paths;
-  }
-
-  return url;
+const getUrls = (pageType, env) => {
+  return pageType?.environments?.[env]?.paths || [];
 };
 
 const pageTypeTitleMappings = {
@@ -52,15 +41,15 @@ const generateLinks = (service, env) => {
     .sort()
     .forEach(pageType => {
       if (!excludedPageTypes.includes(pageType)) {
-        const url = getUrl(serviceData.pageTypes[pageType], env);
+        const urls = getUrls(serviceData.pageTypes[pageType], env);
 
-        if (url) {
+        urls.forEach((url, index) =>
           output.push(
-            `[${env}: ${pageTypeTitleMappings[pageType] || pageType}](${
-              environmentDomainMappings[env]
-            }${url})`,
-          );
-        }
+            `[${env}: ${pageTypeTitleMappings[pageType] || pageType}${
+              index > 0 ? ` ${index + 1}` : ''
+            }](${environmentDomainMappings[env]}${url})`,
+          ),
+        );
       }
     });
 
@@ -78,8 +67,7 @@ stream.once('open', () => {
   );
 
   stream.write(
-    '| Service | Local | Test | Live |\n' +
-      '| :--: | :-- | :-- | :-- |\n',
+    '| Service | Local | Test | Live |\n' + '| :--: | :-- | :-- | :-- |\n',
   );
 
   const services = allServices('');
