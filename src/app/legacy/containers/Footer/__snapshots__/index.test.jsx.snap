@@ -114,6 +114,33 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   margin-bottom: -0.25rem;
 }
 
+.emotion-7:focus:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -0.1875rem;
+  bottom: 0;
+  right: -0.1875rem;
+  border: 0.1875rem solid #000000;
+  outline: 0.25rem solid #FFFFFF;
+}
+
+.emotion-7:focus:not(:focus-visible)::after {
+  border: revert;
+  outline: revert;
+}
+
+.emotion-7:focus-visible:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -0.1875rem;
+  bottom: 0;
+  right: -0.1875rem;
+  border: 0.1875rem solid #000000;
+  outline: 0.25rem solid #FFFFFF;
+}
+
 .emotion-9 {
   box-sizing: content-box;
   color: #FFFFFF;
@@ -290,7 +317,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   font-style: normal;
   color: #FFFFFF;
   display: block;
-  padding: 0.75rem 0 0.75rem;
+  margin: 0.75rem 0 0.75rem;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -313,7 +340,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   font-style: normal;
   color: #FFFFFF;
   display: inline;
-  padding: 0.75rem 0 0.75rem;
+  margin: 0.75rem 0 0.75rem;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -337,7 +364,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
       >
         <a
           aria-labelledby="BrandLink-footer"
-          class="emotion-7 emotion-8"
+          class="focusIndicatorRemove emotion-7 emotion-8"
           href="/news"
           id="footer"
         >

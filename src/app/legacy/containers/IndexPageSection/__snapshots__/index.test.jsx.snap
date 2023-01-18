@@ -993,7 +993,7 @@ HTMLCollection [
               >
                 <a
                   aria-labelledby="promo-1"
-                  class="emotion-34 emotion-35"
+                  class="focusIndicatorDisplayBlock emotion-34 emotion-35"
                   href="https://www.bbc.co.uk"
                 >
                   <span
@@ -1063,7 +1063,7 @@ HTMLCollection [
               >
                 <a
                   aria-labelledby="promo-top-stories-1"
-                  class="emotion-34 emotion-35"
+                  class="focusIndicatorDisplayBlock emotion-34 emotion-35"
                   href="https://www.bbc.co.uk"
                 >
                   <span
@@ -1133,7 +1133,7 @@ HTMLCollection [
               >
                 <a
                   aria-labelledby="promo-top-stories-2"
-                  class="emotion-34 emotion-35"
+                  class="focusIndicatorDisplayBlock emotion-34 emotion-35"
                   href="https://www.bbc.co.uk"
                 >
                   <span
@@ -1203,7 +1203,7 @@ HTMLCollection [
               >
                 <a
                   aria-labelledby="promo-top-stories-3"
-                  class="emotion-34 emotion-35"
+                  class="focusIndicatorDisplayBlock emotion-34 emotion-35"
                   href="https://www.bbc.co.uk"
                 >
                   <span
@@ -1273,7 +1273,7 @@ HTMLCollection [
               >
                 <a
                   aria-labelledby="promo-top-stories-4"
-                  class="emotion-34 emotion-35"
+                  class="focusIndicatorDisplayBlock emotion-34 emotion-35"
                   href="https://www.bbc.co.uk"
                 >
                   <span
@@ -2294,7 +2294,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
               >
                 <a
                   aria-labelledby="promo-1"
-                  class="emotion-34 emotion-35"
+                  class="focusIndicatorDisplayBlock emotion-34 emotion-35"
                   href="https://www.bbc.co.uk"
                 >
                   <span
@@ -2364,7 +2364,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
               >
                 <a
                   aria-labelledby="promo-top-stories-1"
-                  class="emotion-34 emotion-35"
+                  class="focusIndicatorDisplayBlock emotion-34 emotion-35"
                   href="https://www.bbc.co.uk"
                 >
                   <span
@@ -2434,7 +2434,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
               >
                 <a
                   aria-labelledby="promo-top-stories-2"
-                  class="emotion-34 emotion-35"
+                  class="focusIndicatorDisplayBlock emotion-34 emotion-35"
                   href="https://www.bbc.co.uk"
                 >
                   <span
@@ -2504,7 +2504,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
               >
                 <a
                   aria-labelledby="promo-top-stories-3"
-                  class="emotion-34 emotion-35"
+                  class="focusIndicatorDisplayBlock emotion-34 emotion-35"
                   href="https://www.bbc.co.uk"
                 >
                   <span
@@ -2574,7 +2574,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
               >
                 <a
                   aria-labelledby="promo-top-stories-4"
-                  class="emotion-34 emotion-35"
+                  class="focusIndicatorDisplayBlock emotion-34 emotion-35"
                   href="https://www.bbc.co.uk"
                 >
                   <span
@@ -3528,7 +3528,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
             >
               <a
                 aria-labelledby="promo-top-stories-1"
-                class="emotion-24 emotion-25"
+                class="focusIndicatorDisplayBlock emotion-24 emotion-25"
                 href="https://www.bbc.co.uk"
               >
                 <span
@@ -3627,7 +3627,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
             >
               <a
                 aria-labelledby="promo-1"
-                class="emotion-24 emotion-25"
+                class="focusIndicatorDisplayBlock emotion-24 emotion-25"
                 href="https://www.bbc.co.uk"
               >
                 <span
@@ -4123,7 +4123,7 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
           >
             <a
               aria-labelledby="promo-1"
-              class="emotion-28 emotion-29"
+              class="focusIndicatorDisplayBlock emotion-28 emotion-29"
               href="https://www.bbc.co.uk"
             >
               <span
@@ -5121,7 +5121,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
             >
               <a
                 aria-labelledby="promo-1"
-                class="emotion-32 emotion-33"
+                class="focusIndicatorDisplayBlock emotion-32 emotion-33"
                 href="https://www.bbc.co.uk"
               >
                 <span
@@ -5191,7 +5191,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
             >
               <a
                 aria-labelledby="promo-top-stories-1"
-                class="emotion-32 emotion-33"
+                class="focusIndicatorDisplayBlock emotion-32 emotion-33"
                 href="https://www.bbc.co.uk"
               >
                 <span
@@ -5261,7 +5261,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
             >
               <a
                 aria-labelledby="promo-top-stories-2"
-                class="emotion-32 emotion-33"
+                class="focusIndicatorDisplayBlock emotion-32 emotion-33"
                 href="https://www.bbc.co.uk"
               >
                 <span
@@ -5331,7 +5331,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
             >
               <a
                 aria-labelledby="promo-top-stories-3"
-                class="emotion-32 emotion-33"
+                class="focusIndicatorDisplayBlock emotion-32 emotion-33"
                 href="https://www.bbc.co.uk"
               >
                 <span
@@ -5401,7 +5401,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
             >
               <a
                 aria-labelledby="promo-top-stories-4"
-                class="emotion-32 emotion-33"
+                class="focusIndicatorDisplayBlock emotion-32 emotion-33"
                 href="https://www.bbc.co.uk"
               >
                 <span

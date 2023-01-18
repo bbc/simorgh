@@ -68,6 +68,12 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
   transition: background-color 300ms;
 }
 
+.emotion-7:focus-visible {
+  box-shadow: 0 0 0 3px black inset;
+  border: 3px solid white;
+  outline: 3px solid transparent;
+}
+
 .emotion-9 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -120,7 +126,7 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
       />
     </div>
     <button
-      class="emotion-6 emotion-7 emotion-8"
+      class="focusIndicatorRemove emotion-6 emotion-7 emotion-8"
     >
       <span
         class="emotion-9 emotion-10"
@@ -255,6 +261,12 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
   transition: background-color 300ms;
 }
 
+.emotion-9:focus-visible {
+  box-shadow: 0 0 0 3px black inset;
+  border: 3px solid white;
+  outline: 3px solid transparent;
+}
+
 .emotion-11 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -313,7 +325,7 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
       />
     </div>
     <button
-      class="emotion-8 emotion-9 emotion-10"
+      class="focusIndicatorRemove emotion-8 emotion-9 emotion-10"
     >
       <span
         class="emotion-11 emotion-12"
@@ -422,6 +434,12 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
   transition: background-color 300ms;
 }
 
+.emotion-7:focus-visible {
+  box-shadow: 0 0 0 3px black inset;
+  border: 3px solid white;
+  outline: 3px solid transparent;
+}
+
 .emotion-9 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -468,7 +486,7 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
       />
     </div>
     <button
-      class="emotion-6 emotion-7 emotion-8"
+      class="focusIndicatorRemove emotion-6 emotion-7 emotion-8"
     >
       <span
         class="emotion-9 emotion-10"
@@ -570,6 +588,12 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
   transition: background-color 300ms;
 }
 
+.emotion-7:focus-visible {
+  box-shadow: 0 0 0 3px black inset;
+  border: 3px solid white;
+  outline: 3px solid transparent;
+}
+
 .emotion-9 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -622,7 +646,7 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
       />
     </div>
     <button
-      class="emotion-6 emotion-7 emotion-8"
+      class="focusIndicatorRemove emotion-6 emotion-7 emotion-8"
     >
       <span
         class="emotion-9 emotion-10"
@@ -734,6 +758,12 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
   transition: background-color 300ms;
 }
 
+.emotion-7:focus-visible {
+  box-shadow: 0 0 0 3px black inset;
+  border: 3px solid white;
+  outline: 3px solid transparent;
+}
+
 .emotion-9 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -780,7 +810,7 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
       />
     </div>
     <button
-      class="emotion-6 emotion-7 emotion-8"
+      class="focusIndicatorRemove emotion-6 emotion-7 emotion-8"
     >
       <span
         class="emotion-9 emotion-10"
@@ -928,6 +958,12 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
   display: none;
 }
 
+.emotion-9:focus-visible {
+  box-shadow: 0 0 0 3px black inset;
+  border: 3px solid white;
+  outline: 3px solid transparent;
+}
+
 .emotion-11 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -986,7 +1022,7 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
       />
     </div>
     <button
-      class="emotion-8 emotion-9 emotion-10"
+      class="focusIndicatorRemove emotion-8 emotion-9 emotion-10"
     >
       <span
         class="emotion-11 emotion-12"

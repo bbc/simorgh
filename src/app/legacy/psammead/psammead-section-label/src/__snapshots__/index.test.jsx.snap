@@ -311,7 +311,7 @@ exports[`SectionLabel With bar With linking title should render correctly 1`] = 
       class="emotion-2 emotion-3"
     >
       <a
-        class="emotion-4 emotion-5"
+        class="focusIndicatorDisplayBlock emotion-4 emotion-5"
         href="/igbo/other-index"
       >
         <span
@@ -512,7 +512,7 @@ exports[`SectionLabel With bar With linking title should render correctly with a
       class="emotion-2 emotion-3"
     >
       <a
-        class="emotion-4 emotion-5"
+        class="focusIndicatorDisplayBlock emotion-4 emotion-5"
         href="/igbo/other-index"
       >
         <span
@@ -713,7 +713,7 @@ exports[`SectionLabel With bar With linking title should render correctly with e
       class="emotion-2 emotion-3"
     >
       <a
-        class="emotion-4 emotion-5"
+        class="focusIndicatorDisplayBlock emotion-4 emotion-5"
         href="/igbo/other-index"
       >
         <span
@@ -914,7 +914,7 @@ exports[`SectionLabel With bar With linking title should render correctly with e
       class="emotion-2 emotion-3"
     >
       <a
-        class="emotion-4 emotion-5"
+        class="focusIndicatorDisplayBlock emotion-4 emotion-5"
         href="/igbo/other-index"
       >
         <span
@@ -1925,7 +1925,7 @@ exports[`SectionLabel Without bar With linking title should render correctly 1`]
       class="emotion-2 emotion-3"
     >
       <a
-        class="emotion-4 emotion-5"
+        class="focusIndicatorDisplayBlock emotion-4 emotion-5"
         href="/igbo/other-index"
       >
         <span
@@ -2126,7 +2126,7 @@ exports[`SectionLabel Without bar With linking title should render correctly wit
       class="emotion-2 emotion-3"
     >
       <a
-        class="emotion-4 emotion-5"
+        class="focusIndicatorDisplayBlock emotion-4 emotion-5"
         href="/igbo/other-index"
       >
         <span
@@ -2327,7 +2327,7 @@ exports[`SectionLabel Without bar With linking title should render correctly wit
       class="emotion-2 emotion-3"
     >
       <a
-        class="emotion-4 emotion-5"
+        class="focusIndicatorDisplayBlock emotion-4 emotion-5"
         href="/igbo/other-index"
       >
         <span

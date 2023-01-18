@@ -437,7 +437,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
           >
             <a
               aria-labelledby="promo-rel-content-pidgin44508901-1"
-              class="emotion-21 emotion-22"
+              class="focusIndicatorDisplayBlock emotion-21 emotion-22"
               href="/pidgin/44508901"
             >
               <span
@@ -505,7 +505,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
           >
             <a
               aria-labelledby="promo-rel-content-pidgintori46975713-2"
-              class="emotion-21 emotion-22"
+              class="focusIndicatorDisplayBlock emotion-21 emotion-22"
               href="/pidgin/tori-46975713"
             >
               <span
@@ -570,7 +570,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
           >
             <a
               aria-labelledby="promo-rel-content-pidgintori42494678-3"
-              class="emotion-21 emotion-22"
+              class="focusIndicatorDisplayBlock emotion-21 emotion-22"
               href="/pidgin/tori-42494678"
             >
               <span
@@ -1016,7 +1016,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
           >
             <a
               aria-labelledby="promo-rel-content-pidgin44508901-1"
-              class="emotion-20 emotion-21"
+              class="focusIndicatorDisplayBlock emotion-20 emotion-21"
               href="/pidgin/44508901"
             >
               <span
@@ -1084,7 +1084,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
           >
             <a
               aria-labelledby="promo-rel-content-pidgintori46975713-2"
-              class="emotion-20 emotion-21"
+              class="focusIndicatorDisplayBlock emotion-20 emotion-21"
               href="/pidgin/tori-46975713"
             >
               <span
@@ -1149,7 +1149,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
           >
             <a
               aria-labelledby="promo-rel-content-pidgintori42494678-3"
-              class="emotion-20 emotion-21"
+              class="focusIndicatorDisplayBlock emotion-20 emotion-21"
               href="/pidgin/tori-42494678"
             >
               <span

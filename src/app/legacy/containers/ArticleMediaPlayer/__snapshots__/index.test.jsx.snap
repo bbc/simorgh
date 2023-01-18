@@ -383,6 +383,12 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   display: none;
 }
 
+.emotion-15:focus-visible {
+  box-shadow: 0 0 0 3px black inset;
+  border: 3px solid white;
+  outline: 3px solid transparent;
+}
+
 .emotion-17 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -452,7 +458,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
             />
           </div>
           <button
-            class="emotion-14 emotion-15 emotion-16"
+            class="focusIndicatorRemove emotion-14 emotion-15 emotion-16"
           >
             <span
               class="emotion-17 emotion-18"

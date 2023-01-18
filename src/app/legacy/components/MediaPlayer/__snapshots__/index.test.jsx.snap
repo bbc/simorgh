@@ -263,6 +263,12 @@ exports[`Media Player: Canonical Entry renders a landscape container with a plac
   transition: background-color 300ms;
 }
 
+.emotion-9:focus-visible {
+  box-shadow: 0 0 0 3px black inset;
+  border: 3px solid white;
+  outline: 3px solid transparent;
+}
+
 .emotion-11 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -319,7 +325,7 @@ exports[`Media Player: Canonical Entry renders a landscape container with a plac
         />
       </div>
       <button
-        class="emotion-8 emotion-9 emotion-10"
+        class="focusIndicatorRemove emotion-8 emotion-9 emotion-10"
       >
         <span
           class="emotion-11 emotion-12"
@@ -461,6 +467,12 @@ exports[`Media Player: Canonical Entry renders a placeholder image with guidance
   transition: background-color 300ms;
 }
 
+.emotion-11:focus-visible {
+  box-shadow: 0 0 0 3px black inset;
+  border: 3px solid white;
+  outline: 3px solid transparent;
+}
+
 .emotion-13 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -523,7 +535,7 @@ exports[`Media Player: Canonical Entry renders a placeholder image with guidance
         />
       </div>
       <button
-        class="emotion-10 emotion-11 emotion-12"
+        class="focusIndicatorRemove emotion-10 emotion-11 emotion-12"
       >
         <span
           class="emotion-13 emotion-14"
@@ -639,6 +651,12 @@ exports[`Media Player: Canonical Entry renders a portrait container with a place
   transition: background-color 300ms;
 }
 
+.emotion-9:focus-visible {
+  box-shadow: 0 0 0 3px black inset;
+  border: 3px solid white;
+  outline: 3px solid transparent;
+}
+
 .emotion-11 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -695,7 +713,7 @@ exports[`Media Player: Canonical Entry renders a portrait container with a place
         />
       </div>
       <button
-        class="emotion-8 emotion-9 emotion-10"
+        class="focusIndicatorRemove emotion-8 emotion-9 emotion-10"
       >
         <span
           class="emotion-11 emotion-12"
@@ -936,6 +954,12 @@ exports[`Media Player: Canonical Entry renders with no-js styles when noJsClassN
   display: none;
 }
 
+.emotion-11:focus-visible {
+  box-shadow: 0 0 0 3px black inset;
+  border: 3px solid white;
+  outline: 3px solid transparent;
+}
+
 .emotion-13 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -998,7 +1022,7 @@ exports[`Media Player: Canonical Entry renders with no-js styles when noJsClassN
         />
       </div>
       <button
-        class="emotion-10 emotion-11 emotion-12"
+        class="focusIndicatorRemove emotion-10 emotion-11 emotion-12"
       >
         <span
           class="emotion-13 emotion-14"

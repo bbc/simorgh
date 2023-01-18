@@ -796,7 +796,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
         >
           <a
             aria-labelledby="bulletin-radio2016rio_olympics_2016_urdu"
-            class="emotion-13 emotion-14"
+            class="focusIndicatorDisplayBlock emotion-13 emotion-14"
             href="http://www.bbc.com/urdu/indepth/rio_olympics_2016_urdu"
           >
             <span
@@ -928,7 +928,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
         >
           <a
             aria-labelledby="promo-urdubbc_urdu_tvtv_programmesw13xttn1limit4-video-1"
-            class="emotion-48 emotion-49"
+            class="focusIndicatorDisplayBlock emotion-48 emotion-49"
             href="/urdu/bbc_urdu_tv/tv_programmes/w13xttn1?limit=4"
           >
             <span
@@ -1603,7 +1603,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
         >
           <a
             aria-labelledby="promo-pidginsport44416820-text-1"
-            class="emotion-9 emotion-10"
+            class="focusIndicatorDisplayBlock emotion-9 emotion-10"
             href="/pidgin/sport-44416820"
           >
             <span
@@ -1740,7 +1740,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
         >
           <a
             aria-labelledby="promo-pidgin-audio-1"
-            class="emotion-9 emotion-10"
+            class="focusIndicatorDisplayBlock emotion-9 emotion-10"
             href="/pidgin"
           >
             <span
@@ -2473,7 +2473,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
         >
           <a
             aria-labelledby="bulletin-radio2016rio_olympics_2016_urdu"
-            class="emotion-13 emotion-14"
+            class="focusIndicatorDisplayBlock emotion-13 emotion-14"
             href="http://www.bbc.com/urdu/indepth/rio_olympics_2016_urdu"
           >
             <span
@@ -2605,7 +2605,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
         >
           <a
             aria-labelledby="promo-urdubbc_urdu_tvtv_programmesw13xttn1limit4-video-2"
-            class="emotion-48 emotion-49"
+            class="focusIndicatorDisplayBlock emotion-48 emotion-49"
             href="/urdu/bbc_urdu_tv/tv_programmes/w13xttn1?limit=4"
           >
             <span
@@ -2683,7 +2683,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
         >
           <a
             aria-labelledby="promo-urdupakistan48346840-text-3"
-            class="emotion-48 emotion-49"
+            class="focusIndicatorDisplayBlock emotion-48 emotion-49"
             href="/urdu/pakistan-48346840"
           >
             <span
@@ -2761,7 +2761,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
         >
           <a
             aria-labelledby="promo-urdusport48361817-text-4"
-            class="emotion-48 emotion-49"
+            class="focusIndicatorDisplayBlock emotion-48 emotion-49"
             href="/urdu/sport-48361817"
           >
             <span
@@ -3236,7 +3236,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
         >
           <a
             aria-labelledby="promo-pidginsport44416820-text-1"
-            class="emotion-17 emotion-18"
+            class="focusIndicatorDisplayBlock emotion-17 emotion-18"
             href="/pidgin/sport-44416820"
           >
             <span
@@ -3336,7 +3336,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
         >
           <a
             aria-labelledby="promo-pidgin-audio-2"
-            class="emotion-17 emotion-18"
+            class="focusIndicatorDisplayBlock emotion-17 emotion-18"
             href="/pidgin"
           >
             <span
@@ -3414,7 +3414,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
         >
           <a
             aria-labelledby="promo-pidginsport44439411-text-3"
-            class="emotion-17 emotion-18"
+            class="focusIndicatorDisplayBlock emotion-17 emotion-18"
             href="/pidgin/sport-44439411"
           >
             <span
@@ -3487,7 +3487,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
         >
           <a
             aria-labelledby="promo-pidginsport44425543-text-4"
-            class="emotion-17 emotion-18"
+            class="focusIndicatorDisplayBlock emotion-17 emotion-18"
             href="/pidgin/sport-44425543"
           >
             <span
@@ -4010,7 +4010,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  display: inline;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -4201,7 +4201,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
         >
           <a
             aria-labelledby="bulletin-radio2016rio_olympics_2016_urdu"
-            class="emotion-13 emotion-14"
+            class="focusIndicatorDisplayBlock emotion-13 emotion-14"
             href="http://www.bbc.com/urdu/indepth/rio_olympics_2016_urdu"
           >
             <span
@@ -4295,7 +4295,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
         >
           <a
             aria-labelledby="promo-urdubbc_urdu_tvtv_programmesw13xttn1limit4-video-2"
-            class="emotion-40 emotion-41"
+            class="focusIndicatorDisplayBlock emotion-40 emotion-41"
             href="/urdu/bbc_urdu_tv/tv_programmes/w13xttn1?limit=4"
           >
             <span
@@ -4331,7 +4331,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
         >
           <a
             aria-labelledby="promo-urdupakistan48346840-text-3"
-            class="emotion-40 emotion-41"
+            class="focusIndicatorDisplayBlock emotion-40 emotion-41"
             href="/urdu/pakistan-48346840"
           >
             <span
@@ -4367,7 +4367,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
         >
           <a
             aria-labelledby="promo-urdusport48361817-text-4"
-            class="emotion-40 emotion-41"
+            class="focusIndicatorDisplayBlock emotion-40 emotion-41"
             href="/urdu/sport-48361817"
           >
             <span
@@ -4564,7 +4564,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  display: inline;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -4786,7 +4786,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
         >
           <a
             aria-labelledby="promo-pidginsport44416820-text-1"
-            class="emotion-9 emotion-10"
+            class="focusIndicatorDisplayBlock emotion-9 emotion-10"
             href="/pidgin/sport-44416820"
           >
             <span
@@ -4848,7 +4848,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
         >
           <a
             aria-labelledby="promo-pidgin-audio-2"
-            class="emotion-9 emotion-10"
+            class="focusIndicatorDisplayBlock emotion-9 emotion-10"
             href="/pidgin"
           >
             <span
@@ -4884,7 +4884,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
         >
           <a
             aria-labelledby="promo-pidginsport44439411-text-3"
-            class="emotion-9 emotion-10"
+            class="focusIndicatorDisplayBlock emotion-9 emotion-10"
             href="/pidgin/sport-44439411"
           >
             <span
@@ -4920,7 +4920,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
         >
           <a
             aria-labelledby="promo-pidginsport44425543-text-4"
-            class="emotion-9 emotion-10"
+            class="focusIndicatorDisplayBlock emotion-9 emotion-10"
             href="/pidgin/sport-44425543"
           >
             <span
@@ -5346,7 +5346,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
         >
           <a
             aria-labelledby="bulletin-radio2016rio_olympics_2016_urdu"
-            class="emotion-13 emotion-14"
+            class="focusIndicatorDisplayBlock emotion-13 emotion-14"
             href="http://www.bbc.com/urdu/indepth/rio_olympics_2016_urdu"
           >
             <span
@@ -5773,7 +5773,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
         >
           <a
             aria-labelledby="promo-pidginsport44416820-text-1"
-            class="emotion-17 emotion-18"
+            class="focusIndicatorDisplayBlock emotion-17 emotion-18"
             href="/pidgin/sport-44416820"
           >
             <span

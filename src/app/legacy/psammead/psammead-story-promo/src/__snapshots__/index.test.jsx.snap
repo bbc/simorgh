@@ -1522,7 +1522,7 @@ exports[`StoryPromo - Top Story should render with multiple Index Alsos correctl
           >
             <a
               aria-labelledby="IndexAlsosLink-hausalabarai48916590"
-              class="emotion-22 emotion-23"
+              class="focusIndicatorDisplayInlineBlock emotion-22 emotion-23"
               href="/hausa/labarai-48916590"
             >
               <div
@@ -1568,7 +1568,7 @@ exports[`StoryPromo - Top Story should render with multiple Index Alsos correctl
             role="listitem"
           >
             <a
-              class="emotion-22 emotion-23"
+              class="focusIndicatorDisplayInlineBlock emotion-22 emotion-23"
               href="/hausa/labarai-42837051"
             >
               <span>
@@ -1934,7 +1934,7 @@ exports[`StoryPromo - Top Story should render with one Index Also correctly 1`] 
         >
           <a
             aria-labelledby="IndexAlsosLink-hausalabarai48916590"
-            class="emotion-20 emotion-21"
+            class="focusIndicatorDisplayInlineBlock emotion-20 emotion-21"
             href="/hausa/labarai-48916590"
           >
             <div

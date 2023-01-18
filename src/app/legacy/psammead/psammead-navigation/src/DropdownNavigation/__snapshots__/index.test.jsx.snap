@@ -26,7 +26,7 @@ exports[`AMP Menu Button should render correctly 1`] = `
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #000000;
 }
 
 @media (min-width: 37.5rem) {
@@ -81,7 +81,7 @@ exports[`AMP Menu Button should render correctly 1`] = `
   </amp-state>
   <button
     aria-expanded="false"
-    class="emotion-0 emotion-1"
+    class="focusIndicatorRemove emotion-0 emotion-1"
     data-amp-bind-aria-expanded="menuState.expanded ? \\"true\\" : \\"false\\""
     dir="ltr"
     on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),other-element.toggleVisibility"
@@ -150,7 +150,7 @@ exports[`AMP Menu Button should render rtl correctly 1`] = `
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #000000;
 }
 
 @media (min-width: 37.5rem) {
@@ -205,7 +205,7 @@ exports[`AMP Menu Button should render rtl correctly 1`] = `
   </amp-state>
   <button
     aria-expanded="false"
-    class="emotion-0 emotion-1"
+    class="focusIndicatorRemove emotion-0 emotion-1"
     data-amp-bind-aria-expanded="menuState.expanded ? \\"true\\" : \\"false\\""
     dir="rtl"
     on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),other-element.toggleVisibility"
@@ -274,7 +274,7 @@ exports[`Canonical Closed menu button should render correctly 1`] = `
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #000000;
 }
 
 @media (min-width: 37.5rem) {
@@ -320,7 +320,7 @@ exports[`Canonical Closed menu button should render correctly 1`] = `
 <div>
   <button
     aria-expanded="false"
-    class="emotion-0 emotion-1"
+    class="focusIndicatorRemove emotion-0 emotion-1"
     dir="ltr"
     type="button"
   >
@@ -371,7 +371,7 @@ exports[`Canonical Closed menu button should render rtl correctly 1`] = `
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #000000;
 }
 
 @media (min-width: 37.5rem) {
@@ -417,7 +417,7 @@ exports[`Canonical Closed menu button should render rtl correctly 1`] = `
 <div>
   <button
     aria-expanded="false"
-    class="emotion-0 emotion-1"
+    class="focusIndicatorRemove emotion-0 emotion-1"
     dir="rtl"
     type="button"
   >
@@ -468,7 +468,7 @@ exports[`Canonical Open menu button should render correctly 1`] = `
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #000000;
 }
 
 @media (min-width: 37.5rem) {
@@ -514,7 +514,7 @@ exports[`Canonical Open menu button should render correctly 1`] = `
 <div>
   <button
     aria-expanded="true"
-    class="emotion-0 emotion-1"
+    class="focusIndicatorRemove emotion-0 emotion-1"
     dir="ltr"
     type="button"
   >
@@ -566,7 +566,7 @@ exports[`Canonical Open menu button should render rtl correctly 1`] = `
   right: 0;
   bottom: 0;
   top: 0;
-  border: 0.25rem solid #B80000;
+  border: 0.25rem solid #000000;
 }
 
 @media (min-width: 37.5rem) {
@@ -612,7 +612,7 @@ exports[`Canonical Open menu button should render rtl correctly 1`] = `
 <div>
   <button
     aria-expanded="true"
-    class="emotion-0 emotion-1"
+    class="focusIndicatorRemove emotion-0 emotion-1"
     dir="rtl"
     type="button"
   >
