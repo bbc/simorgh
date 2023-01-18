@@ -11,16 +11,16 @@ const styles = {
     css({
       height: 'auto',
       background:
-        'radial-gradient(circle at 50% 1%, #cc2c00, maroon 36%,#380400 65%, #1e0505 86%)',
+        'radial-gradient(circle at 20% 90%, #A20219,#180109 60%, #500115 90%)',
       paddingLeft: '1rem',
       paddingRight: '1rem',
       [mq.GROUP_3_ONLY]: {
         background:
-          'radial-gradient(circle at 50% 1%, #cc2c00, maroon 36%,#380400 65%, #1e0505 86%)',
+          'linear-gradient(-120deg, #A20219 0%, #180109 54%, #180109 90%)',
       },
       [mq.GROUP_4_MIN_WIDTH]: {
         background:
-          'linear-gradient(33deg, rgba(121,9,22,1) 0%, rgba(2,0,36,1) 54%, rgba(121,9,22,1) 90%)',
+          'linear-gradient(-120deg, #A20219 0%, #180109 54%, #180109 90%)',
       },
     }),
   textWrap: ({ mq }: Theme) =>
