@@ -6,6 +6,7 @@ const styles = {
     css({
       paddingTop: '2rem',
       paddingBottom: '2rem',
+      border: '0.1875rem solid transparent',
     }),
   card: ({ mq }: Theme) =>
     css({
