@@ -11,7 +11,7 @@ const styles = {
     css({
       height: 'auto',
       background:
-        'radial-gradient(circle at 20% 90%, #A20219,#180109 60%, #500115 90%)',
+        'radial-gradient(circle at 20% 90%, #A20219, #180109 60%, #500115 90%)',
       paddingLeft: '1rem',
       paddingRight: '1rem',
       [mq.GROUP_3_ONLY]: {
