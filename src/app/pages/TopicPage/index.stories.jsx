@@ -65,6 +65,6 @@ export default {
 
 export const Example = Component;
 
-export const PageWithMessageBanner = props => (
+export const WithMessageBanner = props => (
   <Component {...props} fixture={topicWithMessageBanner} />
 );
