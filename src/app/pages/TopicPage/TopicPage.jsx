@@ -102,7 +102,7 @@ const TopicPage = ({ pageData }) => {
                 )}
                 <Curation
                   headingLevel={curationTitle && 3}
-                  visualStyle={VISUAL_STYLE.NONE}
+                  visualStyle={visualStyle}
                   visualProminance={visualProminence}
                   promos={summaries}
                   title={curationTitle}

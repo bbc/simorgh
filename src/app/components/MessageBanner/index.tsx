@@ -49,6 +49,18 @@ const MessageBanner = ({ summaries, title }: MessageBanner) => {
                 </Paragraph>
               </div>
               <div css={styles.flex}>
+                <a href={summary.link} css={styles.linkBackground}>
+                  <div css={styles.linkAndChevron}>
+                    <Text size="pica" fontVariant="sansBold" css={styles.link}>
+                      {summary.title}
+                      {isRtl ? (
+                        <LeftChevron css={styles.chevron} />
+                      ) : (
+                        <RightChevron css={styles.chevron} />
+                      )}
+                    </Text>
+                  </div>
+                </a>
                 {summary.imageUrl && (
                   <div
                     data-testid="image-test-id"
@@ -63,18 +75,6 @@ const MessageBanner = ({ summaries, title }: MessageBanner) => {
                     </Image>
                   </div>
                 )}
-                <a href={summary.link} css={styles.linkBackground}>
-                  <div css={styles.linkAndChevron}>
-                    <Text size="pica" fontVariant="sansBold" css={styles.link}>
-                      {summary.title}
-                      {isRtl ? (
-                        <LeftChevron css={styles.chevron} />
-                      ) : (
-                        <RightChevron css={styles.chevron} />
-                      )}
-                    </Text>
-                  </div>
-                </a>
               </div>
             </React.Fragment>
           );

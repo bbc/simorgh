@@ -85,7 +85,12 @@ const styles = {
       margin: '0 1rem 1rem 1rem',
       width: '100%',
       textDecoration: 'none',
-      '&:hover, &:focus, &:visited': {
+      '&:hover': {
+        backgroundColor: '#F6F6F6',
+        textDecoration: 'underline',
+        color: palette.BLACK,
+      },
+      '&:focus': {
         backgroundColor: '#F6F6F6',
         outline: `${pixelsToRem(3)}rem solid ${palette.WHITE}`,
         boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.BLACK}`,
@@ -138,7 +143,7 @@ const styles = {
   flex: ({ mq }: Theme) =>
     css({
       display: 'flex',
-      flexDirection: 'column',
+      flexDirection: 'column-reverse',
       alignItems: 'center',
       [mq.GROUP_3_ONLY]: {
         display: 'flex',
