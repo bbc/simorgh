@@ -51,7 +51,7 @@ const HealthFactors = ({ metadata }: { metadata?: HealthFactorsMetadata }) => {
   const actionIcon = metadata ? (
     hasIcon
   ) : (
-    <Activity css={[styles.icon, styles.warningIcon]} />
+    <Activity css={[styles.icon, styles.actionIcon]} />
   );
 
   return (

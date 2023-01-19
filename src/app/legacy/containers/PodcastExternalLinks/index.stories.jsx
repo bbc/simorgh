@@ -3,7 +3,7 @@ import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { withKnobs } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import PodcastExternalLinksComponent from '.';
+import PodcastExternalLinkComponent from '.';
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ service, variant }) => (
@@ -15,23 +15,32 @@ const Component = ({ service, variant }) => (
     }}
   >
     <ServiceContextProvider service={service} variant={variant}>
-      <PodcastExternalLinksComponent
+      <PodcastExternalLinkComponent
         links={[
           {
             linkUrl: 'https://bbc.com',
             linkText: 'Apple',
+            linkType: 'apple'
           },
           {
             linkUrl: 'https://bbc.com',
             linkText: 'Google',
+            linkType: 'google'
           },
           {
             linkUrl: 'https://bbc.com',
             linkText: 'Spotify',
+            linkType: 'spotify'
           },
           {
             linkUrl: 'https://bbc.com',
             linkText: 'RSS',
+            linkType: 'rss'
+          },
+          {
+            linkUrl: 'https://bbc.com',
+            linkText: 'Download',
+            linkType: 'download'
           },
         ]}
       />

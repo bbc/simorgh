@@ -31,6 +31,7 @@ const ExternalLinkTextLangs = {
   RSS: EN_GB_LANG,
   Yandex: EN_GB_LANG,
   Castbox: EN_GB_LANG,
+  Download: EN_GB_LANG,
 };
 
 const Wrapper = styled.aside`
@@ -39,7 +40,6 @@ const Wrapper = styled.aside`
   margin: 0;
   padding: 0;
   margin-bottom: ${GEL_SPACING};
-
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     margin-bottom: ${GEL_SPACING_DBL};
   }
@@ -69,7 +69,6 @@ const StyledList = styled.ul`
 
 const StyledListItem = styled.li`
   display: inline-block;
-
   &:not(:first-of-type) > a > span {
     ${({ dir }) =>
       dir === 'rtl'
@@ -83,6 +82,29 @@ const StyledListItem = styled.li`
   }
 `;
 
+const PodcastExternalLink = ({ linkUrl, children, aria }) => {
+  const { service, script, dir } = useContext(ServiceContext);
+  const eventTrackingData = {
+    componentName: 'third-party',
+    campaignID: 'player-episode-podcast',
+  };
+
+  const clickTrackerRef = useClickTrackerHandler(eventTrackingData);
+
+  return (
+    <Link
+      href={linkUrl}
+      service={service}
+      script={script}
+      dir={dir}
+      onClick={clickTrackerRef}
+      {...aria}
+    >
+      {children}
+    </Link>
+  );
+};
+
 const PodcastExternalLinks = ({ brandTitle, links }) => {
   const { translations, service, script, dir, lang } =
     useContext(ServiceContext);
@@ -94,7 +116,6 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
   };
 
   const viewTrackerRef = useViewTracker(eventTrackingData);
-  const clickTrackerRef = useClickTrackerHandler(eventTrackingData);
 
   if (!links.length) return null;
 
@@ -123,15 +144,12 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
       {hasMultipleLinks ? (
         <StyledList role="list">
           {links.map(({ linkText, linkUrl }) => (
-            <StyledListItem dir={dir} key={linkText}>
-              <Link
-                // line 126 and id={`externalLinkId-${linkText}`} in line 133 are a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-                aria-labelledby={`externalLinkId-${linkText}`}
-                href={linkUrl}
-                service={service}
-                script={script}
-                dir={dir}
-                onClick={clickTrackerRef}
+            <StyledListItem dir={dir} key={`${linkText}`}>
+              {/* line 147 and id={`externalLinkId-${linkText}`} in line 152 are a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652 */}
+              <PodcastExternalLink
+                linkText={linkText}
+                linkUrl={linkUrl}
+                aria={{ 'aria-labelledby': `externalLinkId-${linkText}` }}
               >
                 <span role="text" id={`externalLinkId-${linkText}`}>
                   <span lang={ExternalLinkTextLangs[linkText] || lang}>
@@ -139,19 +157,16 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
                   </span>
                   <VisuallyHiddenText>{`, ${brandTitle}${externalLinkText}`}</VisuallyHiddenText>
                 </span>
-              </Link>
+              </PodcastExternalLink>
             </StyledListItem>
           ))}
         </StyledList>
       ) : (
-        <Link
-          aria-label={`${firstLink.linkText}, ${brandTitle} ${externalLinkText}`}
-          href={firstLink.linkUrl}
-          key={firstLink.linkText}
-          service={service}
-          script={script}
-          dir={dir}
-          onClick={clickTrackerRef}
+        <PodcastExternalLink
+          linkUrl={firstLink.linkUrl}
+          aria={{
+            'aria-label': `${firstLink.linkText}, ${brandTitle} ${externalLinkText}`,
+          }}
         >
           <span>
             <span lang={ExternalLinkTextLangs[firstLink.linkText] || lang}>
@@ -159,7 +174,7 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
             </span>
             <VisuallyHiddenText>{`, ${brandTitle}`}</VisuallyHiddenText>
           </span>
-        </Link>
+        </PodcastExternalLink>
       )}
     </Wrapper>
   );
@@ -173,6 +188,13 @@ PodcastExternalLinks.propTypes = {
       linkUrl: string.isRequired,
     }),
   ).isRequired,
+};
+
+PodcastExternalLink.propTypes = {
+  linkText: string.isRequired,
+  linkUrl: string.isRequired,
+  children: string.isRequired,
+  aria: string.isRequired,
 };
 
 export default PodcastExternalLinks;

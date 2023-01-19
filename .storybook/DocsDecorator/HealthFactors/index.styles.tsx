@@ -42,6 +42,11 @@ const styles = {
       color: theme.palette.SHADOW,
     }),
 
+  actionIcon: (theme: Theme) =>
+    css({
+      color: theme.palette.SHADOW,
+    }),
+
   warningIcon: {
     color: '#C64F00',
   },

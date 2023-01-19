@@ -10,6 +10,7 @@ describe('getPodcastExternalLinks', () => {
       {
         linkText: 'RSS',
         linkUrl: 'https://podcasts.files.bbci.co.uk/p08mlgcb.rss',
+        linkType: 'rss',
       },
     ];
     expect(links).toEqual(expectedLinks);
@@ -26,11 +27,12 @@ describe('getPodcastExternalLinks', () => {
   });
 
   it('should return rss feed when brand is not found', async () => {
-    const otherLinks = await getPodcastExternalLinks('hausa', 'bar');
+    const otherLinks = await getPodcastExternalLinks('hausa', 'bar', 'default');
     expect(otherLinks).toEqual([
       {
         linkText: 'RSS',
         linkUrl: 'https://podcasts.files.bbci.co.uk/bar.rss',
+        linkType: 'rss',
       },
     ]);
   });
@@ -42,8 +44,21 @@ describe('getPodcastExternalLinks', () => {
       {
         linkText: 'RSS',
         linkUrl: 'https://podcasts.files.bbci.co.uk/p02pc9xp.rss',
+        linkType: 'rss',
       },
     ];
     expect(links).toEqual(expectedLinks);
+  });
+
+  it('should return the correct download link', async () => {
+    const links = await getPodcastExternalLinks(
+      'burmese',
+      'p02pc9lh',
+      undefined,
+      'p0967t2j',
+    );
+    expect(links[3].linkUrl).toEqual(
+      'https://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download-low/proto/https/vpid/p0967t2j.mp3',
+    );
   });
 });

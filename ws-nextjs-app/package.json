@@ -1,0 +1,20 @@
+{
+  "name": "simorgh-nextjs",
+  "version": "1.0.0",
+  "description": "Simorgh - Next.JS",
+  "scripts": {
+    "setupDevEnv": "cp ../envConfig/local.env .env",
+    "build:local": "cp ../envConfig/local.env .env && NODE_ENV=production && next build",
+    "build:test": "cp ../envConfig/test.env .env && NODE_ENV=production && next build",
+    "build:live": "cp ../envConfig/live.env .env && NODE_ENV=production && next build",
+    "build": "yarn build:local",
+    "dev": "yarn setupDevEnv && next dev -p 7081",
+    "start": "next start -p 7081 && NODE_ENV=production"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-rename-import": "2.3.0"
+  },
+  "dependencies": {
+    "next": "12.3.4"
+  }
+}

@@ -34,7 +34,8 @@ const Content = styled.div`
 
 const PageWrapper = ({ children, pageData, status }) => {
   const { service, variant } = useContext(ServiceContext);
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp, isNextJs } = useContext(RequestContext);
+
   const isDarkMode = pathOr(false, ['darkMode'], pageData);
   const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
   const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);
@@ -114,9 +115,10 @@ const PageWrapper = ({ children, pageData, status }) => {
         ]}
       />
       <ThemeProvider service={service} variant={variant}>
-        <ServiceWorkerContainer />
+        {!isNextJs && <ServiceWorkerContainer />}
         <ManifestContainer />
         <WebVitals pageType={pageType} />
+        <GlobalStyles />
         <Wrapper id="main-wrapper" darkMode={isDarkMode}>
           <HeaderContainer
             scriptSwitchId={scriptSwitchId}
@@ -125,7 +127,6 @@ const PageWrapper = ({ children, pageData, status }) => {
           <Content>{children}</Content>
           <FooterContainer />
         </Wrapper>
-        <GlobalStyles />
       </ThemeProvider>
     </>
   );

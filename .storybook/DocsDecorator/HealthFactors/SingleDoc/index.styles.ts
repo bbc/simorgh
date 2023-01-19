@@ -71,6 +71,8 @@ const styles = {
         textDecorationThickness: `${pixelsToRem(2)}rem`,
       },
       '&:focus': {
+        color: theme.palette.POSTBOX,
+        textDecorationThickness: `${pixelsToRem(2)}rem`,
         outline: `${pixelsToRem(3)}rem solid ${theme.palette.BLACK}`,
         boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${theme.palette.WHITE}`,
         outlineOffset: `${pixelsToRem(3)}rem`,
