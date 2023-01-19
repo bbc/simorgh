@@ -10,7 +10,8 @@ import { UserContextProvider } from '#contexts/UserContext';
 
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import defaultTopic from '#data/mundo/topics/c1en6xwmpkvt.json';
-import topicWithMessageBanner from '#data/mundo/topics/cw90edn9kw4t.json';
+import kyrgyzTopicWithMessageBanners from '#data/kyrgyz/topics/cvpv9djp9qqt.json';
+import mundoTopicWithMessageBannerVariations from '#data/mundo/topics/cw90edn9kw4t.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import Page from './TopicPage';
 import ThemeProvider from '../../components/ThemeProvider';
@@ -65,6 +66,10 @@ export default {
 
 export const Example = Component;
 
-export const WithMessageBanner = props => (
-  <Component {...props} fixture={topicWithMessageBanner} />
+export const MundoWithBannerVariations = props => (
+  <Component {...props} fixture={mundoTopicWithMessageBannerVariations} />
+);
+
+export const KyrgyzWithMessageBanners = props => (
+  <Component {...props} fixture={kyrgyzTopicWithMessageBanners} />
 );
