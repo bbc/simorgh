@@ -33,7 +33,7 @@ const buildIChefURL = ({
     'news',
     isPng ? 'png' : null,
     resolution,
-    originCode,
+    !locator.includes(originCode) ? originCode : null,
     locator,
   ]
     .filter(Boolean)
