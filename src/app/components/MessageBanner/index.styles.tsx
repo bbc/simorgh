@@ -85,14 +85,13 @@ const styles = {
       margin: '0 1rem 1rem 1rem',
       width: '100%',
       textDecoration: 'none',
-      '&:hover': {
+      '&:hover, &:focus, &:visited': {
         backgroundColor: '#F6F6F6',
-      },
-      '&:focus': {
         outline: `${pixelsToRem(3)}rem solid ${palette.WHITE}`,
         boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.BLACK}`,
         outlineOffset: `${pixelsToRem(3)}rem`,
         textDecoration: 'underline',
+        color: palette.BLACK,
       },
       [mq.GROUP_3_ONLY]: {
         width: 'auto',
@@ -111,10 +110,14 @@ const styles = {
       textDecoration: 'none',
       '&:hover, &:focus': {
         textDecoration: 'underline',
+        color: palette.BLACK,
       },
       paddingRight: '0.5rem',
       paddingLeft: '0.5rem',
       verticalAlign: 'middle',
+      '&:visited': {
+        color: palette.BLACK,
+      },
     }),
   chevron: () =>
     css({
