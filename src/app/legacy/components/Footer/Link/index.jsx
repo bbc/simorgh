@@ -24,7 +24,7 @@ const Link = ({ service, text, href, inline, lang }) => (
     lang={lang}
     inline={inline}
     href={href}
-    className="focusIndicatorReducedWidth"
+    className="focusIndicatorInvert"
   >
     {text}
   </StyledLink>
