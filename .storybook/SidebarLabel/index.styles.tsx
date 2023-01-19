@@ -30,7 +30,7 @@ const styles = {
   warningIcon: {
     width: `${pixelsToRem(12)}rem`,
     height: `${pixelsToRem(12)}rem`,
-    fill: '#3f3f42',
+    fill: '#c64f00',
   },
 };
 
