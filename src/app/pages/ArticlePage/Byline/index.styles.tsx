@@ -143,15 +143,14 @@ export default {
 
   authorLink: () =>
     css({
-      marginTop: '1.375rem',
-      marginBottom: `${pixelsToRem(4)}rem`,
+      paddingTop: '1.375rem',
+      paddingBottom: `${pixelsToRem(4)}rem`,
       paddingInlineEnd: '2.75rem',
     }),
 
   twitterLink: () =>
     css({
-      marginBottom: `${pixelsToRem(20)}rem`,
-      paddingBottom: `${pixelsToRem(2)}rem`,
-      marginTop: `${pixelsToRem(4)}rem`,
+      paddingBottom: `${pixelsToRem(22)}rem`,
+      paddingTop: `${pixelsToRem(4)}rem`,
     }),
 };
