@@ -92,6 +92,6 @@ export default [
   {
     service: 'zhongwen',
     variant: 'trad',
-    local: ['http://localhost:7080/zhongwen/articles/c3xd4x9prgyo/simp'],
+    local: ['http://localhost:7080/zhongwen/articles/c3xd4x9prgyo/trad'],
   },
 ];
