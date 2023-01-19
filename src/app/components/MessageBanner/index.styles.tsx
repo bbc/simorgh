@@ -135,6 +135,7 @@ const styles = {
       width: '16px',
       height: '16px',
       verticalAlign: 'middle',
+      fill: 'currentcolor',
     }),
   linkAndChevron: () =>
     css({
