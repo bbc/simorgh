@@ -99,6 +99,7 @@ const getTranslations = (
     linkTextElements.length > 0 && cookiesUrl && (
       <a
         href={cookiesUrl}
+        className="focusIndicatorReducedWidth"
         aria-label={`${linkTextElements[0]
           .replaceAll('[link]', '')
           .replaceAll('[/link]', '')
@@ -114,6 +115,7 @@ const getTranslations = (
     linkTextElements.length > 1 && privacyUrl && (
       <a
         href={privacyUrl}
+        className="focusIndicatorReducedWidth"
         aria-label={`${linkTextElements[1]
           .replaceAll('[link]', '')
           .replaceAll('[/link]', '')
