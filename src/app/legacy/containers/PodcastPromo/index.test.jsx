@@ -8,10 +8,7 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 
-import {
-  shouldMatchSnapshot,
-  suppressPropWarnings,
-} from '#psammead/psammead-test-helpers/src';
+import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { service as russianServiceConfig } from '../../../lib/config/services/russian';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { InlinePodcastPromo, SecondaryColumnPodcastPromo } from '.';
@@ -43,8 +40,6 @@ const {
 } = russianServiceConfig.default.podcastPromo;
 
 describe('Inline', () => {
-  suppressPropWarnings(['children', 'object']);
-
   shouldMatchSnapshot('Should render correctly', <PromoWithContext inline />);
 
   it('should show when all props are available', () => {
