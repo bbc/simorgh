@@ -80,9 +80,9 @@ export default [
   },
   {
     service: 'ukrainian',
-    live: ['https://www.bbc.com/ukrainian/articles/c8zv0eed9gko'],
-    test: ['https://www.test.bbc.com/ukrainian/articles/cp4l2mrejvdo'],
     local: ['http://localhost:7080/ukrainian/articles/cp4l2mrejvdo'],
+    test: ['https://www.test.bbc.com/ukrainian/articles/cp4l2mrejvdo'],
+    live: ['https://www.bbc.com/ukrainian/articles/c8zv0eed9gko'],
   },
   {
     service: 'zhongwen',
