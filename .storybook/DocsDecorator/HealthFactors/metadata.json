@@ -19,7 +19,7 @@
     }
   },
   "swarm": {
-    "done": false,
+    "done": true,
     "reference": {
       "url": "",
       "label": "Accessibility swarm results"

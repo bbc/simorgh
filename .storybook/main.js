@@ -16,6 +16,7 @@ module.exports = {
     '../src/app/components/**/*.stories.@(t|j)sx',
     '../src/app/pages/**/*.stories.@(t|j)sx',
     './DocsDecorator/**/*.stories.@(t|j)sx',
+    './SidebarLabel/**/*.stories.@(t|j)sx',
   ],
   addons: [
     '@storybook/addon-knobs',
@@ -65,6 +66,7 @@ module.exports = {
       '@emotion/core': toPath('node_modules/@emotion/react'),
       '@emotion/styled': toPath('node_modules/@emotion/styled'),
       'emotion-theming': toPath('node_modules/@emotion/react'),
+      '@storybook/api': toPath('__mocks__/api'),
     };
 
     return config;

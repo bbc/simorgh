@@ -8,6 +8,7 @@ import isChromatic from 'chromatic';
 import { forceVisible } from 'react-lazyload';
 import GlobalStyles from '../src/app/legacy/psammead/psammead-styles/src/global-styles';
 import DocsDecorator from './DocsDecorator';
+import { useStorybookApi } from '../__mocks__/api';
 
 const REITH_SERIF_REGULAR = {
   '@font-face': {
