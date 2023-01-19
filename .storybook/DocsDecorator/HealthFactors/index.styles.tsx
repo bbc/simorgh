@@ -42,10 +42,9 @@ const styles = {
       color: theme.palette.SHADOW,
     }),
 
-  warningIcon: (theme: Theme) =>
-    css({
-      color: theme.palette.SHADOW,
-    }),
+  warningIcon: {
+    color: '#C64F00',
+  },
 
   recommendIcon: { color: '#0A7B0A' },
 

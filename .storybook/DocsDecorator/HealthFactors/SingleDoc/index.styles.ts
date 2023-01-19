@@ -32,7 +32,10 @@ const styles = {
     css({ background: '#0A7B0A', color: `${theme.palette.WHITE}` }),
 
   negative: (theme: Theme) =>
-    css({ background: '#D60A3D', color: `${theme.palette.WHITE}` }),
+    css({
+      background: `${theme.palette.POSTBOX}`,
+      color: `${theme.palette.WHITE}`,
+    }),
 
   missing: (theme: Theme) =>
     css({
