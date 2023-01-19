@@ -96,8 +96,8 @@ const StyledLink = styled.a`
   // Declarations ensure backwards compatibility.
   &:focus:after {
     ${styledLinkOutline}
-    border: ${focusIndicatorThickness} solid ${C_BLACK};
-    outline: ${GEL_SPACING_HLF} solid ${C_WHITE};
+    border-top: ${GEL_SPACING_HLF} solid ${props => props.logoColour};
+    outline: ${GEL_SPACING_HLF} solid ${props => props.logoColour};
   }
 
   &:focus:not(:focus-visible)::after {
@@ -107,8 +107,8 @@ const StyledLink = styled.a`
 
   &:focus-visible:after {
     ${styledLinkOutline}
-    border: ${focusIndicatorThickness} solid ${C_BLACK};
-    outline: ${GEL_SPACING_HLF} solid ${C_WHITE};
+    border-top: ${GEL_SPACING_HLF} solid ${props => props.logoColour};
+    outline: ${GEL_SPACING_HLF} solid ${props => props.logoColour};
   }
 `;
 
