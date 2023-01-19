@@ -147,7 +147,6 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
             <StyledListItem dir={dir} key={`${linkText}`}>
               {/* line 147 and id={`externalLinkId-${linkText}`} in line 152 are a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652 */}
               <PodcastExternalLink
-                linkText={linkText}
                 linkUrl={linkUrl}
                 aria={{ 'aria-labelledby': `externalLinkId-${linkText}` }}
               >
@@ -191,11 +190,11 @@ PodcastExternalLinks.propTypes = {
 };
 
 PodcastExternalLink.propTypes = {
-  linkText: string.isRequired,
   linkUrl: string.isRequired,
   children: element.isRequired,
   aria: shape({
-    'aria-labelledby': string.isRequired,
+    'aria-label': string,
+    'aria-labelledby': string,
   }).isRequired,
 };
 
