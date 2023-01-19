@@ -29,7 +29,12 @@ const getTestablePaths = ({ urls, pageType }) => {
     console.log(`Urls provided for ${pageType} pageType`);
 
     return urls.map(({ service, variant = 'default', ...rest }) => {
-      const paths = rest[getAppEnv()] || [];
+      const pathsWithHost = rest[getAppEnv()] || [];
+
+      // Removes the host from the URL and just returns the path
+      const paths = pathsWithHost.map(
+        pathWithHost => new URL(pathWithHost).pathname,
+      );
 
       return {
         service,
