@@ -89,14 +89,14 @@ const styles = {
         backgroundColor: '#F6F6F6',
       },
       '&:focus': {
-        // marginTop: `${pixelsToRem(9)}rem`,
-        // marginBottom: `${pixelsToRem(9)}rem`,
-        // marginLeft: `${pixelsToRem(3)}rem`,
-        // marginRight: `${pixelsToRem(3)}rem`,
         outline: `${pixelsToRem(3)}rem solid ${palette.WHITE}`,
         boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.BLACK}`,
         outlineOffset: `${pixelsToRem(3)}rem`,
+        textDecoration: 'underline',
       },
+      // '&:visted': {
+      //   color: palette.BLACK,
+      // },
       [mq.GROUP_3_ONLY]: {
         width: 'auto',
         margin: '0 0 1.5rem 0',
@@ -115,15 +115,6 @@ const styles = {
       '&:hover, &:focus': {
         textDecoration: 'underline',
       },
-      // '&:focus': {
-      //   marginTop: `${pixelsToRem(9)}rem`,
-      //   marginBottom: `${pixelsToRem(9)}rem`,
-      //   marginLeft: `${pixelsToRem(3)}rem`,
-      //   marginRight: `${pixelsToRem(3)}rem`,
-      //   outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
-      //   boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
-      //   outlineOffset: `${pixelsToRem(3)}rem`,
-      // },
       paddingRight: '0.5rem',
       paddingLeft: '0.5rem',
       verticalAlign: 'middle',
