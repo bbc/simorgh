@@ -17,6 +17,7 @@
     "**/pages/testsForAllCanonicalPages.js",
     "**/pages/**/helper.js",
     "**/pages/**/helpers.js",
+    "**/pages/**/urls.js",
     "**/pages/**/getErrorPath.js",
     "**/123PlaygroundForTests/**",
     "**/specialFeatures/utilities/**",
