@@ -3,7 +3,7 @@ import hasPath from 'ramda/src/hasPath';
 import getOriginCode from '../../../../../lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '../../../../../lib/utilities/imageSrcHelpers/locator';
 
-const extractPromoData = ({ promo }) => {
+const extractPromoData = ({ promo }: { promo: any }) => {
   if (!promo) return null;
 
   if (hasPath(['indexImage'], promo)) {

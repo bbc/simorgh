@@ -1,6 +1,7 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 
-import React, { FC, HTMLAttributes } from 'react';
+import { FC, HTMLAttributes } from 'react';
 import { jsx } from '@emotion/react';
 
 import { FontVariant, GelFontSize } from '../../models/types/theming';

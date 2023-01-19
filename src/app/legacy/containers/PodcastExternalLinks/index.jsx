@@ -82,10 +82,10 @@ const StyledListItem = styled.li`
   }
 `;
 
-const PodcastExternalLink = ({ linkUrl, linkType, children, aria }) => {
+const PodcastExternalLink = ({ linkUrl, children, aria }) => {
   const { service, script, dir } = useContext(ServiceContext);
   const eventTrackingData = {
-    componentName: `third-party-${linkType}`,
+    componentName: 'third-party',
     campaignID: 'player-episode-podcast',
   };
 
@@ -143,13 +143,12 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
       </ThirdPartyLinksTitle>
       {hasMultipleLinks ? (
         <StyledList role="list">
-          {links.map(({ linkText, linkUrl, linkType }) => (
+          {links.map(({ linkText, linkUrl }) => (
             <StyledListItem dir={dir} key={`${linkText}`}>
+              {/* line 147 and id={`externalLinkId-${linkText}`} in line 152 are a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652 */}
               <PodcastExternalLink
                 linkText={linkText}
                 linkUrl={linkUrl}
-                linkType={linkType}
-                brandTitle={brandTitle}
                 aria={{ 'aria-labelledby': `externalLinkId-${linkText}` }}
               >
                 <span role="text" id={`externalLinkId-${linkText}`}>
@@ -164,10 +163,7 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
         </StyledList>
       ) : (
         <PodcastExternalLink
-          linkText={firstLink.linkText}
           linkUrl={firstLink.linkUrl}
-          linkType={firstLink.linkType}
-          brandTitle={brandTitle}
           aria={{
             'aria-label': `${firstLink.linkText}, ${brandTitle} ${externalLinkText}`,
           }}
@@ -190,7 +186,6 @@ PodcastExternalLinks.propTypes = {
     shape({
       linkText: string.isRequired,
       linkUrl: string.isRequired,
-      linkType: string.isRequired,
     }),
   ).isRequired,
 };
@@ -198,7 +193,6 @@ PodcastExternalLinks.propTypes = {
 PodcastExternalLink.propTypes = {
   linkText: string.isRequired,
   linkUrl: string.isRequired,
-  linkType: string.isRequired,
   children: element.isRequired,
   aria: shape({
     'aria-labelledby': string.isRequired,
