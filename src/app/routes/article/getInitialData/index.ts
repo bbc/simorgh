@@ -12,8 +12,7 @@ const logger = nodeLogger(__filename);
 
 const removeAmp = (path: string) => path.split('.')[0];
 const getOptimoId = (path: string) => path.match(/(c[a-zA-Z0-9]{10}o)/)?.[1];
-const getCpsId = (path: string) =>
-  `${path.split('/')[1]}/${path.split('/').pop()}`;
+const getCpsId = (path: string) => path;
 
 const getId = (pageType: string) =>
   pipe(getUrlPath, removeAmp, pageType === 'article' ? getOptimoId : getCpsId);
