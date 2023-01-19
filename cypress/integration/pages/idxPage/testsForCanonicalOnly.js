@@ -10,9 +10,4 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   describe(`No testsThatFollowSmokeTestConfigForCanonicalOnly for ${service} ${pageType}`, () => {});
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
-export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = ({
-  service,
-  pageType,
-}) => {
-  describe(`No testsToNeverSmokeTestForCanonicalOnly to run for ${service} ${pageType}`, () => {});
-};
+export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = () => {};
