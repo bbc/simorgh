@@ -94,9 +94,6 @@ const styles = {
         outlineOffset: `${pixelsToRem(3)}rem`,
         textDecoration: 'underline',
       },
-      // '&:visted': {
-      //   color: palette.BLACK,
-      // },
       [mq.GROUP_3_ONLY]: {
         width: 'auto',
         margin: '0 0 1.5rem 0',
