@@ -8,10 +8,33 @@ const styles = {
       color: palette.GREY_10,
       ...fontSizes.longPrimer,
     }),
-  item: css({
-    position: 'relative',
-    display: 'inline',
-  }),
+  item: ({ mq, spacings }: Theme) =>
+    css({
+      position: 'relative',
+      display: 'inline',
+      '.promo-image': {
+        '[class*="-ChildWrapper"] > [class*="-Wrapper"]': {
+          padding: `${spacings.FULL}rem`,
+          svg: {
+            margin: `0 ${spacings.FULL}rem 0 0`,
+          },
+          time: {
+            padding: '0',
+          },
+          [mq.GROUP_4_MIN_WIDTH]: {
+            padding: '0.75rem',
+            'svg[class*="-MediaIcon-VideoMediaIcon"]': {
+              width: `${spacings.TRIPLE}rem`,
+              height: `${spacings.TRIPLE}rem`,
+            },
+            'svg[class*="-MediaIcon-AudioMediaIcon"]': {
+              width: `${spacings.TRIPLE}rem`,
+              height: `${spacings.TRIPLE}rem`,
+            },
+          },
+        },
+      },
+    }),
   list: ({ mq, spacings }: Theme) =>
     css({
       padding: 0,

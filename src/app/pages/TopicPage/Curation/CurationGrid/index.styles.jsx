@@ -30,7 +30,7 @@ const styles = {
             },
             'svg[class*="-MediaIcon-AudioMediaIcon"]': {
               width: `${spacings.TRIPLE}rem`,
-              height: '1.3125rem',
+              height: `${spacings.TRIPLE}rem`,
             },
           },
         },
