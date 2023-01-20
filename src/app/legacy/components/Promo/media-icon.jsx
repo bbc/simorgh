@@ -3,9 +3,12 @@ import moment from 'moment-timezone';
 import styled from '@emotion/styled';
 import { shape, string, number, oneOf } from 'prop-types';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
-import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
+import {
+  GEL_SPACING,
+  GEL_SPACING_HLF_TRPL,
+} from '#psammead/gel-foundations/src/spacings';
+import { GEL_GROUP_4_MIN_WIDTH } from '#psammead/gel-foundations/src/breakpoints';
 import { C_WHITE, C_EBON } from '#psammead/psammead-styles/src/colours';
-import { GEL_GROUP_4_ONLY } from '#psammead/gel-foundations/src/breakpoints';
 import { getMinion } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
@@ -18,9 +21,10 @@ export const TYPES = {
 };
 
 const Wrapper = styled.div`
-  ${GEL_GROUP_4_ONLY} {
-    padding: ${GEL_SPACING_HLF};
+  ${GEL_GROUP_4_MIN_WIDTH} {
+    padding: ${GEL_SPACING_HLF_TRPL};
   }
+  padding: ${GEL_SPACING};
   color: ${C_EBON};
   background-color: ${C_WHITE};
   ${({ service }) => getSansRegular(service)}

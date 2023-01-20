@@ -15,14 +15,11 @@ const styles = {
           verticalAlign: 'top',
         },
         svg: {
-          margin: `${spacings.FULL}rem`,
-          [mq.GROUP_4_ONLY]: {
+          margin: `0 ${spacings.FULL}rem 0 0`,
+          [mq.GROUP_4_MIN_WIDTH]: {
             width: `${spacings.TRIPLE}rem`,
             height: `${spacings.TRIPLE}rem`,
           },
-        },
-        time: {
-          margin: `${spacings.FULL}rem ${spacings.FULL}rem ${spacings.FULL}rem 0`,
         },
       },
       '.promo-text': {

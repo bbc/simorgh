@@ -37,4 +37,4 @@ export const MEDIA_QUERY_TYPOGRAPHY = {
   LAPTOP_AND_LARGER: `@media (min-width: ${GEL_GROUP_CD_MIN_WIDTH}rem)`, // > 600px
 };
 
-export const GEL_GROUP_4_ONLY = `@media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX})`; // 1008px - 1279px
+export const GEL_GROUP_4_MIN_WIDTH = `@media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN})`; // 1008px
