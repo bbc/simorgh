@@ -14,11 +14,24 @@ const styles = {
           display: 'inline-block',
           verticalAlign: 'top',
         },
-        svg: {
-          margin: `0 ${spacings.FULL}rem 0 0`,
+        '[class*="-ChildWrapper"] > [class*="-Wrapper"]': {
+          padding: `${spacings.FULL}rem`,
+          svg: {
+            margin: `0 ${spacings.FULL}rem 0 0`,
+          },
+          time: {
+            padding: '0',
+          },
           [mq.GROUP_4_MIN_WIDTH]: {
-            width: `${spacings.TRIPLE}rem`,
-            height: `${spacings.TRIPLE}rem`,
+            padding: '0.75rem',
+            'svg[class*="-MediaIcon-VideoMediaIcon"]': {
+              width: `${spacings.TRIPLE}rem`,
+              height: `${spacings.TRIPLE}rem`,
+            },
+            'svg[class*="-MediaIcon-AudioMediaIcon"]': {
+              width: `${spacings.TRIPLE}rem`,
+              height: '1.3125rem',
+            },
           },
         },
       },
