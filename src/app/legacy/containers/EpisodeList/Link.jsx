@@ -61,7 +61,7 @@ const Link = ({ children, showMediaIndicator, dir, index, ...props }) => {
       showMediaIndicator={showMediaIndicator}
       // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
       aria-labelledby={`episodeLinkIndex-${index}`}
-      className="focusIndicatorDisplayBlock"
+      className="focusIndicatorDisplayBlock focusIndicatorInvert"
       {...props}
     >
       {showMediaIndicator && (

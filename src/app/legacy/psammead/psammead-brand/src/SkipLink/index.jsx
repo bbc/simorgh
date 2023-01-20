@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { oneOf } from 'prop-types';
+import { oneOf, string } from 'prop-types';
 import { C_WHITE } from '#psammead/psammead-styles/src/colours';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -50,8 +50,10 @@ const SkipLink = styled.a`
 
 SkipLink.propTypes = {
   dir: oneOf(['ltr', 'rtl']),
+  className: string,
 };
 
 SkipLink.defaultProps = { dir: 'ltr' };
+SkipLink.defaultProps = { className: 'focusIndicatorRemove' };
 
 export default SkipLink;

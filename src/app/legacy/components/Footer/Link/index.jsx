@@ -9,7 +9,7 @@ const StyledLink = styled.a`
   ${({ service }) => service && getSansBold(service)}
   color: ${C_WHITE};
   display: ${({ inline }) => (inline ? 'inline' : 'block')};
-  margin: ${GEL_SPACING_HLF_TRPL} 0 ${GEL_SPACING_HLF_TRPL};
+  padding: ${GEL_SPACING_HLF_TRPL} 0 ${GEL_SPACING_HLF_TRPL};
   text-decoration: none;
 
   &:hover,
@@ -19,7 +19,13 @@ const StyledLink = styled.a`
 `;
 
 const Link = ({ service, text, href, inline, lang }) => (
-  <StyledLink service={service} lang={lang} inline={inline} href={href}>
+  <StyledLink
+    service={service}
+    lang={lang}
+    inline={inline}
+    href={href}
+    className="focusIndicatorInvert"
+  >
     {text}
   </StyledLink>
 );

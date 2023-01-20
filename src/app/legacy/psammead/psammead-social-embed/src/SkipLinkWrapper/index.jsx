@@ -71,6 +71,7 @@ const SkipLinkWrapper = ({
       <SkipLink
         service={service}
         href={`#${detokenise(endTextId, dictionary)}`}
+        className="focusIndicatorRemove"
       >
         <span>{detokenise(text, dictionary)}</span>
       </SkipLink>
