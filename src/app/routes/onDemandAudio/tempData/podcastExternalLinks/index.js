@@ -47,12 +47,13 @@ export const getPodcastExternalLinks = async (
     if (!linkData) return [];
     if (!brandPid) return [];
     let downloadLink = [];
-    // Burmese podcast experiment
-    if (service === 'burmese' && brandPid === 'p02pc9lh')
-      downloadLink = getDownloadLink(versionId);
-
     const links = pathOr([], ['default', variant, brandPid], linkData);
-    return [...links, getRssLink(brandPid), downloadLink];
+    // Burmese podcast experiment
+    if (service === 'burmese' && brandPid === 'p02pc9lh') {
+      downloadLink = getDownloadLink(versionId);
+      return [...links, getRssLink(brandPid), downloadLink];
+    }
+    return [...links, getRssLink(brandPid)];
   } catch (err) {
     logger.warn(PODCAST_SERVICE_MISSING, {
       service,
