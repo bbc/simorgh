@@ -16,9 +16,10 @@ const styles = {
         '[class*="-ChildWrapper"] > [class*="-Wrapper"]': {
           padding: `${spacings.FULL}rem`,
           svg: {
-            margin: `0 ${spacings.FULL}rem 0 0`,
+            margin: 0,
           },
           time: {
+            marginLeft: `${spacings.FULL}rem`,
             padding: '0',
           },
           [mq.GROUP_4_MIN_WIDTH]: {
