@@ -124,7 +124,7 @@ describe('Articles - BFF Fetching', () => {
         }),
       );
 
-    const data = await getInitialData({
+    await getInitialData({
       path: '/kyrgyz/articles/c0000000000o',
       getAgent,
       service: 'kyrgyz',
