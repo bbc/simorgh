@@ -89,10 +89,17 @@ export default async ({
       engineVariant: '',
     });
 
-    const { json: wsojData = [] } = await fetchPageData({
-      path: wsojURL,
-      ...({ agent, optHeaders } as any),
-    });
+    let wsojData = [];
+    try {
+      const { json: wsojJson = []} = await fetchPageData({
+        path: wsojURL,
+        ...({ agent, optHeaders } as any),
+      });
+      wsojData = wsojJson;
+    } catch (error) {
+      logger.error("Recommendations JSON malformed", error);
+    }
+    
 
     if (!json?.data?.article) {
       throw handleError('Article data is malformed', 500);
