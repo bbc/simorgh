@@ -7,7 +7,6 @@ import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import ProgramCard from '../ProgramCard';
 import RadioSchedule from '../index';
-import ThemeProvider from '../../../../components/ThemeProvider';
 
 // Will remove and clean up in future PRs
 export const stateTypes = ['live', 'onDemand', 'onDemand', 'next'];
@@ -72,17 +71,15 @@ export const renderProgramCard = ({
   };
 
   return (
-    <ThemeProvider service="news">
-      <ServiceContextProvider
-        dir={dir}
-        service={service}
-        script={script}
-        locale="ar"
-        timezone={timezone}
-      >
-        <ProgramCard program={program} id={id} {...props} />
-      </ServiceContextProvider>
-    </ThemeProvider>
+    <ServiceContextProvider
+      dir={dir}
+      service={service}
+      script={script}
+      locale="ar"
+      timezone={timezone}
+    >
+      <ProgramCard program={program} id={id} {...props} />
+    </ServiceContextProvider>
   );
 };
 
@@ -103,23 +100,21 @@ export const renderRadioSchedule = ({
     dir === 'rtl' ? 'المدة الزمنية %duration%' : 'Duration %duration%';
 
   return (
-    <ThemeProvider service="news">
-      <ServiceContextProvider service={service} dir={dir} pageLang="ar">
-        <RadioSchedule
-          schedule={getSchedule(selectedService, withLongSummary)}
-          locale={locale}
-          timezone={timezone}
-          script={script}
-          service={service}
-          nextLabel={nextLabel}
-          liveLabel={liveLabel}
-          listenLabelTranslations={listenLabelTranslations}
-          durationLabel={durationLabel}
-          dir={dir}
-          linkComponent={linkComponent}
-          linkComponentAttr={linkComponentAttr}
-        />
-      </ServiceContextProvider>
-    </ThemeProvider>
+    <ServiceContextProvider service={service} dir={dir} pageLang="ar">
+      <RadioSchedule
+        schedule={getSchedule(selectedService, withLongSummary)}
+        locale={locale}
+        timezone={timezone}
+        script={script}
+        service={service}
+        nextLabel={nextLabel}
+        liveLabel={liveLabel}
+        listenLabelTranslations={listenLabelTranslations}
+        durationLabel={durationLabel}
+        dir={dir}
+        linkComponent={linkComponent}
+        linkComponentAttr={linkComponentAttr}
+      />
+    </ServiceContextProvider>
   );
 };

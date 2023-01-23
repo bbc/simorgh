@@ -130,8 +130,8 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   right: 0;
   top: 0;
   bottom: 0;
-  box-shadow: 0 0 0 0.1875rem white inset;
-  border: 0.1875rem solid black;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+  border: 0.1875rem solid #000000;
 }
 
 .emotion-15 {

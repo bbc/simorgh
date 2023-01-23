@@ -75,8 +75,8 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
   right: 0;
   top: 0;
   bottom: 0;
-  box-shadow: 0 0 0 0.1875rem white inset;
-  border: 0.1875rem solid black;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+  border: 0.1875rem solid #000000;
 }
 
 .emotion-9 {
@@ -273,8 +273,8 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
   right: 0;
   top: 0;
   bottom: 0;
-  box-shadow: 0 0 0 0.1875rem white inset;
-  border: 0.1875rem solid black;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+  border: 0.1875rem solid #000000;
 }
 
 .emotion-11 {
@@ -451,8 +451,8 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
   right: 0;
   top: 0;
   bottom: 0;
-  box-shadow: 0 0 0 0.1875rem white inset;
-  border: 0.1875rem solid black;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+  border: 0.1875rem solid #000000;
 }
 
 .emotion-9 {
@@ -610,8 +610,8 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
   right: 0;
   top: 0;
   bottom: 0;
-  box-shadow: 0 0 0 0.1875rem white inset;
-  border: 0.1875rem solid black;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+  border: 0.1875rem solid #000000;
 }
 
 .emotion-9 {
@@ -785,8 +785,8 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
   right: 0;
   top: 0;
   bottom: 0;
-  box-shadow: 0 0 0 0.1875rem white inset;
-  border: 0.1875rem solid black;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+  border: 0.1875rem solid #000000;
 }
 
 .emotion-9 {
@@ -990,8 +990,8 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
   right: 0;
   top: 0;
   bottom: 0;
-  box-shadow: 0 0 0 0.1875rem white inset;
-  border: 0.1875rem solid black;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+  border: 0.1875rem solid #000000;
 }
 
 .emotion-11 {
