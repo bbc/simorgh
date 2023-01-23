@@ -30,6 +30,7 @@ const MessageBanner = ({ summaries, title }: MessageBanner) => {
       css={styles.container}
       role="region"
       aria-labelledby="message-banner"
+      data-testid="message-banner-test-id"
     >
       <div css={styles.card}>
         {summaries.map(summary => {

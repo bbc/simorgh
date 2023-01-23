@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
+import kyrgyzTopicWithMessageBanners from '#data/kyrgyz/topics/cvpv9djp9qqt.json';
 import { render } from '../../components/react-testing-library-with-providers';
 import TopicPage from './TopicPage';
 import {
@@ -157,6 +158,24 @@ describe('Topic Page', () => {
       } else {
         expect(adElement).not.toBeInTheDocument();
       }
+    });
+  });
+
+  describe('Message Banner', () => {
+    it('should only render banner when visual style is banner', () => {
+      const { queryAllByTestId } = render(
+        <TopicPage pageData={kyrgyzTopicWithMessageBanners.data} />,
+        getOptionParams({ service: 'kyrgyz', lang: 'ky' }),
+      );
+      expect(queryAllByTestId('message-banner-test-id')).toHaveLength(2);
+    });
+
+    it('should not render banner when visual style is not banner', () => {
+      const { queryAllByTestId } = render(
+        <TopicPage pageData={amharicSingleItem} />,
+        getOptionParams({ service: 'amharic', lang: 'am' }),
+      );
+      expect(queryAllByTestId('message-banner-test-id')).toHaveLength(0);
     });
   });
 });

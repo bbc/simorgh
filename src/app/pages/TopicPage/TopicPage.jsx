@@ -9,6 +9,7 @@ import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstra
 import useToggle from '#hooks/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+import isLive from '#lib/utilities/isLive';
 import styles from './index.styles';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import TopicImage from './TopicImage';
@@ -87,17 +88,21 @@ const TopicPage = ({ pageData }) => {
             {description && <TopicDescription>{description}</TopicDescription>}
           </div>
           {curations.map(
-            ({
-              visualProminence,
-              summaries,
-              curationId,
-              title: curationTitle,
-              link,
-              position,
-              visualStyle,
-            }) => (
-              <React.Fragment key={curationId}>
-                {visualStyle === 'BANNER' && (
+            (
+              {
+                visualProminence,
+                summaries,
+                curationId,
+                title: curationTitle,
+                link,
+                position,
+                visualStyle,
+              },
+              index,
+            ) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <React.Fragment key={`${curationId} ${index}`}>
+                {visualStyle === 'BANNER' && !isLive() && (
                   <MessageBanner title={curationTitle} summaries={summaries} />
                 )}
                 <Curation
