@@ -13,7 +13,7 @@ import ThemeProvider from '../../../components/ThemeProvider';
 const Component = ({ isAmp = false, service, dir = 'ltr', data }) => (
   <div dir={dir}>
     {/* The above simulates dir being added at the page level */}
-    <ThemeProvider service="news">
+    <ThemeProvider service={service}>
       <ServiceContextProvider service={service}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.com"
