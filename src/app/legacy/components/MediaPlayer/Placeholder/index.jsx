@@ -6,6 +6,17 @@ import PlayButton from '#psammead/psammead-play-button/src';
 import { C_POSTBOX } from '#psammead/psammead-styles/src/colours';
 import Guidance from '../Guidance';
 
+const focusIndicatorThickness = '0.1875rem'; // 3px
+
+const placeholderOutline = `
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+`;
+
 const StyledPlayButton = styled(PlayButton)`
   position: absolute;
   bottom: 0;
@@ -16,11 +27,11 @@ const StyledPlayButton = styled(PlayButton)`
         display: none;
       }
     `}
-  //custom focus indicator
-  &:focus-visible {
-    box-shadow: 0 0 0 3px black inset;
-    border: 3px solid white;
-    outline: 3px solid transparent;
+
+  &:focus-visible::before {
+    ${placeholderOutline}
+    box-shadow: 0 0 0 ${focusIndicatorThickness} white inset;
+    border: ${focusIndicatorThickness} solid black;
   }
 `;
 
