@@ -7,6 +7,7 @@ import { getUrlPath } from '../../../lib/utilities/urlParser';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 import fetchPageData from '../../utils/fetchPageData';
 import { Services, Variants } from '../../../models/types/global';
+import getRecommendationsUrl from '#app/lib/utilities/getUrlHelpers/getRecommendationsUrl';
 
 const logger = nodeLogger(__filename);
 
@@ -86,6 +87,17 @@ export default async ({
       throw handleError('Article data is malformed', 500);
     }
 
+    let wsojURL = getRecommendationsUrl({
+      assetUri: pathname,
+      engine: 'unirecs_datalab',
+      engineVariant: '',
+    });
+
+    const { json: wsojData = [] } = await fetchPageData({
+      path: wsojURL,
+      ...({ agent, optHeaders } as any),
+    });
+
     const {
       data: { article, secondaryData },
     } = json;
@@ -95,6 +107,7 @@ export default async ({
       pageData: {
         ...article,
         secondaryColumn: secondaryData,
+        recommendations: wsojData,
       },
     };
   } catch ({ message, status }) {
