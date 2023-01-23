@@ -149,45 +149,24 @@ const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
                   })}`}
                 </span>
               </EpisodeList.DateTimeDuration>
-              {episode.episodeTitle && (
-                <InlineDiv>
-                  <span aria-hidden="true">
-                    <EpisodeList.DateTimeDuration
-                      hasBorder
-                      dir={dir}
-                      as={StyledTimestamp}
-                      timestamp={episode.timestamp}
-                      format="LL"
-                      dateTimeFormat="YYYY-MM-DD"
-                      padding={false}
-                      script={script}
-                      locale={datetimeLocale}
-                      service={service}
-                      timezone={timezone}
-                    />
-                  </span>
-                </InlineDiv>
-              )}
             </EpisodeList.Link>
-            <VisuallyHiddenText>
-              {episode.episodeTitle && (
-                <InlineDiv>
-                  <EpisodeList.DateTimeDuration
-                    hasBorder
-                    dir={dir}
-                    as={StyledTimestamp}
-                    timestamp={episode.timestamp}
-                    format="LL"
-                    dateTimeFormat="YYYY-MM-DD"
-                    padding={false}
-                    script={script}
-                    locale={datetimeLocale}
-                    service={service}
-                    timezone={timezone}
-                  />
-                </InlineDiv>
-              )}
-            </VisuallyHiddenText>
+            {episode.episodeTitle && (
+              <InlineDiv>
+                <EpisodeList.DateTimeDuration
+                  hasBorder
+                  dir={dir}
+                  as={StyledTimestamp}
+                  timestamp={episode.timestamp}
+                  format="LL"
+                  dateTimeFormat="YYYY-MM-DD"
+                  padding={false}
+                  script={script}
+                  locale={datetimeLocale}
+                  service={service}
+                  timezone={timezone}
+                />
+              </InlineDiv>
+            )}
           </EpisodeList.Episode>
         ))}
       </EpisodeList>
