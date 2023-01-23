@@ -75,9 +75,89 @@ exports[`Canonical Articles Header I can see the branding 1`] = `"BBC Scotland"`
 
 exports[`Canonical Articles Image Caption should match text 1`] = `"Image caption, This test image, copyright BBC, shows a map of France.  The image is in the first three blocks and has this caption."`;
 
-exports[`Canonical Articles Image should match snapshot 1`] = `null`;
+exports[`Canonical Articles Image should match snapshot 1`] = `
+<img
+  alt="Map of France showing Paris and Cognac"
+  class="e3vrtyk0 bbc-rb7xa0 e1mo64ex0"
+  height="351"
+  sizes="(min-width: 1008px) 760px, 100vw"
+  src="https://ichef.bbci.co.uk/news/640/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg"
+  srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg 624w"
+  width="624"
+/>
+`;
 
-exports[`Canonical Articles Main heading should match text 1`] = `"Internal server error"`;
+exports[`Canonical Articles Main heading should match text 1`] = `"This is the headline of this test article"`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
+Object {
+  "sizes": null,
+  "url": "http://localhost:7080/scotland/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 2`] = `
+Object {
+  "sizes": "72x72",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 3`] = `
+Object {
+  "sizes": "96x96",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 4`] = `
+Object {
+  "sizes": "128x128",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 5`] = `
+Object {
+  "sizes": "144x144",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 6`] = `
+Object {
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 7`] = `
+Object {
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 8`] = `
+Object {
+  "sizes": "192x192",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 9`] = `
+Object {
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 10`] = `
+Object {
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/icons/icon-512x512.png",
+}
+`;
 
 exports[`Canonical Articles SEO Canonical link 1`] = `"http://localhost:7080/scotland/articles/czwj5l0n210o"`;
 
@@ -85,9 +165,74 @@ exports[`Canonical Articles SEO Dir attribute 1`] = `"ltr"`;
 
 exports[`Canonical Articles SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`Canonical Articles SEO Heading level 1 1`] = `"Internal server error"`;
+exports[`Canonical Articles SEO Heading level 1 1`] = `"This is the headline of this test article"`;
 
-exports[`Canonical Articles SEO Lang attribute 1`] = `"en-GB"`;
+exports[`Canonical Articles SEO Lang attribute 1`] = `"en-gb"`;
+
+exports[`Canonical Articles SEO Linked data should match text 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@graph": Array [
+    Object {
+      "@type": "Article",
+      "author": Object {
+        "@type": "Organization",
+        "logo": Object {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png",
+          "width": 1024,
+        },
+        "name": "BBC",
+      },
+      "dateModified": "2019-09-13T12:36:29.124Z",
+      "datePublished": "2019-09-13T12:36:29.124Z",
+      "headline": "This is the SEO headline of this test article",
+      "image": Object {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png",
+        "width": 1024,
+      },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "en-GB",
+        "name": "English",
+      },
+      "mainEntityOfPage": Object {
+        "@id": "http://localhost:7080/scotland/articles/czwj5l0n210o",
+        "@type": "WebPage",
+        "name": "This is the SEO headline of this test article",
+      },
+      "publisher": Object {
+        "@type": "Organization",
+        "logo": Object {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png",
+          "width": 1024,
+        },
+        "name": "BBC",
+      },
+      "thumbnailUrl": "https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png",
+      "url": "http://localhost:7080/scotland/articles/czwj5l0n210o",
+    },
+  ],
+}
+`;
+
+exports[`Canonical Articles SEO Linked data should match text 2`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "description": "They may be tiny, but us humans could learn a thing or two from ants.",
+  "duration": "PT3M11S",
+  "embedURL": "https://www.test.bbc.com/ws/av-embeds/articles/czwj5l0n210o/p01k6msp/en-GB",
+  "name": "Five things ants can teach us about management",
+  "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg",
+  "uploadDate": "2018-10-22T14:35:32.000Z",
+}
+`;
 
 exports[`Canonical Articles SEO OG description 1`] = `"This is the SEO headline of this test article"`;
 
@@ -105,15 +250,15 @@ exports[`Canonical Articles SEO OG type 1`] = `"article"`;
 
 exports[`Canonical Articles SEO OG url 1`] = `"http://localhost:7080/scotland/articles/czwj5l0n210o"`;
 
-exports[`Canonical Articles SEO Page title 1`] = `"Internal server error - BBC Scotland"`;
+exports[`Canonical Articles SEO Page title 1`] = `"This is the SEO headline of this test article - BBC Scotland"`;
 
-exports[`Canonical Articles SEO Robots meta tag 1`] = `"noindex,nofollow"`;
+exports[`Canonical Articles SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Articles SEO Twitter card 1`] = `"summary_large_image"`;
 
 exports[`Canonical Articles SEO Twitter creator 1`] = `"@BBCScotland"`;
 
-exports[`Canonical Articles SEO Twitter description 1`] = `"Internal server error"`;
+exports[`Canonical Articles SEO Twitter description 1`] = `"This is the SEO headline of this test article"`;
 
 exports[`Canonical Articles SEO Twitter image alt 1`] = `"BBC Scotland"`;
 
@@ -121,4 +266,11 @@ exports[`Canonical Articles SEO Twitter image src 1`] = `"https://news.files.bbc
 
 exports[`Canonical Articles SEO Twitter site 1`] = `"@BBCScotland"`;
 
-exports[`Canonical Articles SEO Twitter title 1`] = `"Internal server error - BBC Scotland"`;
+exports[`Canonical Articles SEO Twitter title 1`] = `"This is the SEO headline of this test article - BBC Scotland"`;
+
+exports[`Canonical Articles Timestamp should match text and date 1`] = `
+Object {
+  "date": "2019-09-13",
+  "text": "13 September 2019",
+}
+`;

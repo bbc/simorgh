@@ -263,9 +263,91 @@ Object {
 
 exports[`AMP Articles Image Caption should match text 1`] = `"توضیح تصویر، نوشیدنی‌ها داغ در بسته‌های سربسته توزیع می‌شوند "`;
 
-exports[`AMP Articles Image should match snapshot 1`] = `null`;
+exports[`AMP Articles Image should match snapshot 1`] = `
+<amp-img
+  alt="قهوه"
+  attribution="Getty Images"
+  data-hero="true"
+  fallback=""
+  height="360"
+  layout="responsive"
+  src="https://ichef.bbci.co.uk/news/640/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg"
+  srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 624w, https://ichef.bbci.co.uk/news/640/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 640w"
+  width="640"
+/>
+`;
 
-exports[`AMP Articles Main heading should match text 1`] = `"خطا در سرور داخلی"`;
+exports[`AMP Articles Main heading should match text 1`] = `"پهپادی که برایتان قهوه می‌آورد"`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 1`] = `
+Object {
+  "sizes": null,
+  "url": "http://localhost:7080/persian/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 2`] = `
+Object {
+  "sizes": "72x72",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 3`] = `
+Object {
+  "sizes": "96x96",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 4`] = `
+Object {
+  "sizes": "128x128",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 5`] = `
+Object {
+  "sizes": "144x144",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 6`] = `
+Object {
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 7`] = `
+Object {
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 8`] = `
+Object {
+  "sizes": "192x192",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 9`] = `
+Object {
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 10`] = `
+Object {
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-512x512.png",
+}
+`;
 
 exports[`AMP Articles SEO Canonical link 1`] = `"http://localhost:7080/persian/articles/c4vlle3q337o"`;
 
@@ -273,9 +355,63 @@ exports[`AMP Articles SEO Dir attribute 1`] = `"rtl"`;
 
 exports[`AMP Articles SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`AMP Articles SEO Heading level 1 1`] = `"خطا در سرور داخلی"`;
+exports[`AMP Articles SEO Heading level 1 1`] = `"پهپادی که برایتان قهوه می‌آورد"`;
 
 exports[`AMP Articles SEO Lang attribute 1`] = `"fa"`;
+
+exports[`AMP Articles SEO Linked data should match text 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@graph": Array [
+    Object {
+      "@type": "Article",
+      "author": Object {
+        "@type": "NewsMediaOrganization",
+        "logo": Object {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+          "width": 1024,
+        },
+        "name": "BBC News فارسی",
+        "noBylinesPolicy": "https://www.bbc.com/persian/institutional-49283091#authorexpertise",
+      },
+      "dateModified": "2019-07-23T15:47:11.893Z",
+      "datePublished": "2019-05-28T13:42:44.996Z",
+      "headline": "پهپادی که برایتان قهوه می‌آورد",
+      "image": Object {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+        "width": 1024,
+      },
+      "inLanguage": Object {
+        "@type": "Language",
+        "alternateName": "fa",
+        "name": "Persian",
+      },
+      "mainEntityOfPage": Object {
+        "@id": "http://localhost:7080/persian/articles/c4vlle3q337o",
+        "@type": "WebPage",
+        "name": "پهپادی که برایتان قهوه می‌آورد",
+      },
+      "publisher": Object {
+        "@type": "NewsMediaOrganization",
+        "logo": Object {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+          "width": 1024,
+        },
+        "name": "BBC News فارسی",
+        "publishingPrinciples": "https://www.bbc.com/persian/institutional-49283091",
+      },
+      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+      "url": "http://localhost:7080/persian/articles/c4vlle3q337o",
+    },
+  ],
+}
+`;
 
 exports[`AMP Articles SEO OG description 1`] = `"پهپادی که برایتان قهوه می‌آورد"`;
 
@@ -293,15 +429,15 @@ exports[`AMP Articles SEO OG type 1`] = `"article"`;
 
 exports[`AMP Articles SEO OG url 1`] = `"http://localhost:7080/persian/articles/c4vlle3q337o"`;
 
-exports[`AMP Articles SEO Page title 1`] = `"خطا در سرور داخلی - BBC News فارسی"`;
+exports[`AMP Articles SEO Page title 1`] = `"پهپادی که برایتان قهوه می‌آورد - BBC News فارسی"`;
 
-exports[`AMP Articles SEO Robots meta tag 1`] = `"noindex,nofollow"`;
+exports[`AMP Articles SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP Articles SEO Twitter card 1`] = `"summary_large_image"`;
 
 exports[`AMP Articles SEO Twitter creator 1`] = `"@bbcpersian"`;
 
-exports[`AMP Articles SEO Twitter description 1`] = `"خطا در سرور داخلی"`;
+exports[`AMP Articles SEO Twitter description 1`] = `"پهپادی که برایتان قهوه می‌آورد"`;
 
 exports[`AMP Articles SEO Twitter image alt 1`] = `"BBC News فارسی"`;
 
@@ -309,4 +445,11 @@ exports[`AMP Articles SEO Twitter image src 1`] = `"https://news.files.bbci.co.u
 
 exports[`AMP Articles SEO Twitter site 1`] = `"@bbcpersian"`;
 
-exports[`AMP Articles SEO Twitter title 1`] = `"خطا در سرور داخلی - BBC News فارسی"`;
+exports[`AMP Articles SEO Twitter title 1`] = `"پهپادی که برایتان قهوه می‌آورد - BBC News فارسی"`;
+
+exports[`AMP Articles Timestamp should match text and date 1`] = `
+Object {
+  "date": "2019-05-28",
+  "text": "۷ خرداد ۱۳۹۸ - ۲۸ مه ۲۰۱۹",
+}
+`;
