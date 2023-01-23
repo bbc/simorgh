@@ -6,6 +6,7 @@ import {
 } from '../fontFaces';
 import tigrinyaFontVariants from '../fontVariants/tigrinya';
 import withThemeProvider from '../withThemeProvider';
+import brandSVG from '../chameleonLogos/tigrinya';
 
 const tigrinyaTheme = {
   palette: {
@@ -20,6 +21,7 @@ const tigrinyaTheme = {
     fontVariants: tigrinyaFontVariants,
     fontFaces: [NOTO_SANS_ETHIOPIC_BOLD, NOTO_SANS_ETHIOPIC_REGULAR],
   },
+  brandSVG,
 };
 
 export default withThemeProvider(tigrinyaTheme);

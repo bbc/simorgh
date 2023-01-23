@@ -266,9 +266,12 @@ exports[`MediaPlayer Does not Call the canonical placeholder when platform is ca
         allow="autoplay"
         allowfullscreen=""
         class="emotion-4 emotion-5"
+        height="362.953125"
+        loading="lazy"
         scrolling="no"
         src="/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB"
         title="Media player"
+        width="645.25"
       />
       <noscript />
     </div>
