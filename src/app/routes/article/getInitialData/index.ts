@@ -83,7 +83,7 @@ export default async ({
       ...(!isLocal && { agent, optHeaders }),
     });
 
-    let wsojURL = getRecommendationsUrl({
+    const wsojURL = getRecommendationsUrl({
       assetUri: pathname,
       engine: 'unirecs_datalab',
       engineVariant: '',
@@ -91,7 +91,7 @@ export default async ({
 
     const { json: wsojData = [] } = await fetchPageData({
       path: wsojURL,
-      ...(!isLocal && ({ agent, optHeaders } as any)),
+      ...({ agent, optHeaders } as any),
     });
 
     if (!json?.data?.article) {
