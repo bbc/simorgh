@@ -15,23 +15,19 @@ const styles = {
       '.promo-image': {
         '[class*="-ChildWrapper"] > [class*="-Wrapper"]': {
           padding: `${spacings.FULL}rem`,
+          [mq.GROUP_4_MIN_WIDTH]: {
+            padding: '0.75rem',
+          },
           svg: {
             margin: 0,
+            [mq.GROUP_4_MIN_WIDTH]: {
+              width: `${spacings.TRIPLE}rem`,
+              height: `${spacings.TRIPLE}rem`,
+            },
           },
           time: {
             marginLeft: `${spacings.FULL}rem`,
             padding: '0',
-          },
-          [mq.GROUP_4_MIN_WIDTH]: {
-            padding: '0.75rem',
-            'svg[class*="-MediaIcon-VideoMediaIcon"]': {
-              width: `${spacings.TRIPLE}rem`,
-              height: `${spacings.TRIPLE}rem`,
-            },
-            'svg[class*="-MediaIcon-AudioMediaIcon"]': {
-              width: `${spacings.TRIPLE}rem`,
-              height: `${spacings.TRIPLE}rem`,
-            },
           },
         },
       },
