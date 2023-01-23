@@ -2,6 +2,7 @@ import { Agent } from 'https';
 import * as fetchPageData from '../../utils/fetchPageData';
 import nodeLogger from '../../../../testHelpers/loggerMock';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
+import * as getRecommendationsUrl from '#app/lib/utilities/getUrlHelpers/getRecommendationsUrl';
 
 import getInitialData from '.';
 
@@ -110,6 +111,8 @@ describe('Articles - BFF Fetching', () => {
 
     const recommendData = [{ type: 'TEST_RECOMMEND_DATA' }];
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
+    const getRecommendationsSpy = jest.spyOn(getRecommendationsUrl, 'default');
+
     fetchDataSpy
       .mockReturnValueOnce(
         Promise.resolve({
@@ -124,6 +127,8 @@ describe('Articles - BFF Fetching', () => {
         }),
       );
 
+    getRecommendationsSpy.mockReturnValueOnce("/recommendations/kyrgyz/articles/c0000000000o?Engine=unirecs_datalab")
+
     await getInitialData({
       path: '/kyrgyz/articles/c0000000000o',
       getAgent,
@@ -131,7 +136,7 @@ describe('Articles - BFF Fetching', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenNthCalledWith(2, {
-      path: 'https://onward-journeys.api.bbci.co.uk/api/recommendations/kyrgyz/articles/c0000000000o?Engine=unirecs_datalab',
+      path: '/recommendations/kyrgyz/articles/c0000000000o?Engine=unirecs_datalab',
       agent,
       optHeaders: {
         'ctx-service-env': 'live',
