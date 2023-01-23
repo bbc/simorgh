@@ -11,6 +11,7 @@ import {
   articleDataPidgin,
   articleDataPidginWithAds,
   articleDataPidginWithByline,
+  sampleRecommendations,
 } from '#pages/ArticlePage/fixtureData';
 import newsMostReadData from '#data/news/mostRead';
 import persianMostReadData from '#data/persian/mostRead';
@@ -37,6 +38,14 @@ jest.mock('#containers/OptimizelyPageViewTracking', () => {
   return OptimizelyPageViewTracking;
 });
 
+const recommendationSettings = {
+  hasStoryRecommendations: true,
+  skipLink: {
+    text: 'Skip recommendations and continue reading',
+    endTextVisuallyHidden: 'End of recommendations',
+  },
+};
+
 const Context = ({
   service = 'pidgin',
   children,
@@ -54,6 +63,9 @@ const Context = ({
           ads: {
             enabled: adsToggledOn,
           },
+          cpsRecommendations: {
+            enabled: true,
+          },
         }}
       >
         <RequestContextProvider
@@ -66,7 +78,10 @@ const Context = ({
           statusCode={200}
           showAdsBasedOnLocation={showAdsBasedOnLocation}
         >
-          <ServiceContextProvider service={service}>
+          <ServiceContextProvider
+            service={service}
+            recommendations={recommendationSettings}
+          >
             {children}
           </ServiceContextProvider>
         </RequestContextProvider>
@@ -403,4 +418,19 @@ it('should show ads when enabled', async () => {
       expect(adElement).not.toBeInTheDocument();
     }
   });
+});
+
+it('should render WSOJ recommendations when passed', async () => {
+  const pageDataWithSecondaryColumn = {
+    ...articleDataNews,
+    recommendations: sampleRecommendations,
+  };
+  
+  const { getByText } = render(
+    <Context service="turkce">
+      <ArticlePage pageData={pageDataWithSecondaryColumn} />
+    </Context>,
+  );
+
+  expect(getByText('SAMPLE RECOMMENDATION 1 - HEADLINE')).toBeInTheDocument();
 });

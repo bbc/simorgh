@@ -105,6 +105,40 @@ describe('Articles - BFF Fetching', () => {
     });
   });
 
+  it('should request WSOJ data.', async () => {
+    process.env.SIMORGH_APP_ENV = 'live';
+
+    const recommendData = [{ type: 'TEST_RECOMMEND_DATA' }];
+    const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
+    fetchDataSpy
+      .mockReturnValueOnce(
+        Promise.resolve({
+          status: 200,
+          json: JSON.stringify(bffArticleJson),
+        }),
+      )
+      .mockReturnValueOnce(
+        Promise.resolve({
+          status: 200,
+          json: JSON.stringify(recommendData),
+        }),
+      );
+
+    const data = await getInitialData({
+      path: '/kyrgyz/articles/c0000000000o',
+      getAgent,
+      service: 'kyrgyz',
+    });
+
+    expect(fetchDataSpy).toHaveBeenNthCalledWith(2, {
+      path: 'https://onward-journeys.api.bbci.co.uk/api/recommendations/kyrgyz/articles/c0000000000o?Engine=unirecs_datalab',
+      agent,
+      optHeaders: {
+        'ctx-service-env': 'live',
+      },
+    });
+  });
+
   it('should request BFF data if "renderer_env=test" is supplied in the path, ignoring the app env', async () => {
     process.env.SIMORGH_APP_ENV = 'local';
 

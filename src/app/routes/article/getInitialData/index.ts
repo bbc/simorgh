@@ -83,10 +83,6 @@ export default async ({
       ...(!isLocal && { agent, optHeaders }),
     });
 
-    if (!json?.data?.article) {
-      throw handleError('Article data is malformed', 500);
-    }
-
     let wsojURL = getRecommendationsUrl({
       assetUri: pathname,
       engine: 'unirecs_datalab',
@@ -97,6 +93,10 @@ export default async ({
       path: wsojURL,
       ...({ agent, optHeaders } as any),
     });
+
+    if (!json?.data?.article) {
+      throw handleError('Article data is malformed', 500);
+    }
 
     const {
       data: { article, secondaryData },

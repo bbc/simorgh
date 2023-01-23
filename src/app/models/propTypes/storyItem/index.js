@@ -1,4 +1,4 @@
-import { shape, string, number } from 'prop-types';
+import { shape, string, number, object } from 'prop-types';
 
 export const storyItemImage = {
   path: string,
@@ -9,14 +9,15 @@ export const storyItemImage = {
 
 export const storyItem = {
   headlines: shape({
-    headline: string.isRequired,
+    promoHeadline: object.isRequired,
   }),
   locators: shape({
-    assetUri: string.isRequired,
+    optimoUrn: string.isRequired,
+    canonicalUrl: string.isRequired
   }),
-  summary: string,
+  summary: object,
   timestamp: number,
-  indexImage: shape(storyItemImage),
+  images: object,
 };
 
 export const linkPromo = {
