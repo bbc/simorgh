@@ -12,9 +12,25 @@ describe('MessageBanner', () => {
     expect(region).toBeInTheDocument();
   });
 
+  it('has correct aria-labelledby attribute', () => {
+    const { getByRole } = render(
+      <MessageBanner summaries={summaries} title={kyrgyzBanner.title} />,
+    );
+    const messageBannerEl = getByRole('region');
+    expect(messageBannerEl.getAttribute('aria-labelledby')).toBe(
+      'message-banner',
+    );
+  });
+
   it('should display the banner title correctly as an H2', () => {
     render(<MessageBanner summaries={summaries} title={kyrgyzBanner.title} />);
     expect(screen.getByText(kyrgyzBanner.title).nodeName).toBe('H2');
+  });
+
+  it('should have a heading with id of message-banner', () => {
+    render(<MessageBanner summaries={summaries} title={kyrgyzBanner.title} />);
+    const heading = screen.getByText(kyrgyzBanner.title);
+    expect(heading.getAttribute('id')).toBe('message-banner');
   });
 
   it('should display the banner subtext correctly as a Paragraph', () => {
@@ -24,17 +40,22 @@ describe('MessageBanner', () => {
 
   it('should display link text correctly as an Anchor', () => {
     render(<MessageBanner summaries={summaries} title={kyrgyzBanner.title} />);
-    expect(screen.getByRole('link').nodeName).toBe('A');
+    const ctaLink = screen.getByRole('link');
+    expect(ctaLink.getAttribute('href')).toEqual(summaries[0].link);
+    expect(ctaLink.textContent).toEqual(summaries[0].title);
   });
 
-  it('should have an empty imageAlt', () => {
+  it('should render an image with the correct image src', () => {
     render(<MessageBanner summaries={summaries} title={kyrgyzBanner.title} />);
     const image = screen.getByAltText('');
-    expect(image.getAttribute('alt')).toEqual('');
+    expect(image.getAttribute('src')).toEqual(
+      summaries[0].imageUrl.replace('{width}', 'raw'),
+    );
   });
 
-  it('should have visual style of BANNER', () => {
+  it('should have an image with an empty alt text', () => {
     render(<MessageBanner summaries={summaries} title={kyrgyzBanner.title} />);
-    expect(kyrgyzBanner.visualStyle).toBe('BANNER');
+    const image = screen.getByAltText('');
+    expect(image).toBeInTheDocument();
   });
 });
