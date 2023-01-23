@@ -159,89 +159,9 @@ Object {
 
 exports[`Canonical Articles Image Caption should match text 1`] = `"Image caption, Former embroider Pauline Clayton described the gift as \\"lovely\\""`;
 
-exports[`Canonical Articles Image should match snapshot 1`] = `
-<img
-  alt="Pauline Clayton"
-  class="e3vrtyk0 bbc-rb7xa0 e1mo64ex0"
-  height="360"
-  sizes="(min-width: 1008px) 760px, 100vw"
-  src="https://ichef.bbci.co.uk/news/640/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg"
-  srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 624w, https://ichef.bbci.co.uk/news/640/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 640w"
-  width="640"
-/>
-`;
+exports[`Canonical Articles Image should match snapshot 1`] = `null`;
 
-exports[`Canonical Articles Main heading should match text 1`] = `"Royal wedding flowers given to Hackney hospice"`;
-
-exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
-Object {
-  "sizes": null,
-  "url": "http://localhost:7080/news/images/icons/icon-192x192.png",
-}
-`;
-
-exports[`Canonical Articles SEO Apple Touch Icon should match attributes 2`] = `
-Object {
-  "sizes": "72x72",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-72x72.png",
-}
-`;
-
-exports[`Canonical Articles SEO Apple Touch Icon should match attributes 3`] = `
-Object {
-  "sizes": "96x96",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-96x96.png",
-}
-`;
-
-exports[`Canonical Articles SEO Apple Touch Icon should match attributes 4`] = `
-Object {
-  "sizes": "128x128",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-128x128.png",
-}
-`;
-
-exports[`Canonical Articles SEO Apple Touch Icon should match attributes 5`] = `
-Object {
-  "sizes": "144x144",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-144x144.png",
-}
-`;
-
-exports[`Canonical Articles SEO Apple Touch Icon should match attributes 6`] = `
-Object {
-  "sizes": "152x152",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-152x152.png",
-}
-`;
-
-exports[`Canonical Articles SEO Apple Touch Icon should match attributes 7`] = `
-Object {
-  "sizes": "180x180",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-180x180.png",
-}
-`;
-
-exports[`Canonical Articles SEO Apple Touch Icon should match attributes 8`] = `
-Object {
-  "sizes": "192x192",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-192x192.png",
-}
-`;
-
-exports[`Canonical Articles SEO Apple Touch Icon should match attributes 9`] = `
-Object {
-  "sizes": "384x384",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-384x384.png",
-}
-`;
-
-exports[`Canonical Articles SEO Apple Touch Icon should match attributes 10`] = `
-Object {
-  "sizes": "512x512",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-512x512.png",
-}
-`;
+exports[`Canonical Articles Main heading should match text 1`] = `"Internal server error"`;
 
 exports[`Canonical Articles SEO Canonical link 1`] = `"http://localhost:7080/news/articles/c0g992jmmkko"`;
 
@@ -249,84 +169,9 @@ exports[`Canonical Articles SEO Dir attribute 1`] = `"ltr"`;
 
 exports[`Canonical Articles SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`Canonical Articles SEO Heading level 1 1`] = `"Royal wedding flowers given to Hackney hospice"`;
+exports[`Canonical Articles SEO Heading level 1 1`] = `"Internal server error"`;
 
-exports[`Canonical Articles SEO Lang attribute 1`] = `"en-gb"`;
-
-exports[`Canonical Articles SEO Linked data should match text 1`] = `
-Object {
-  "@context": "http://schema.org",
-  "@graph": Array [
-    Object {
-      "@type": "Article",
-      "about": Array [
-        Object {
-          "@type": "Thing",
-          "name": "Wedding of Prince Harry and Meghan Markle",
-        },
-        Object {
-          "@type": "Person",
-          "name": "Duchess of Sussex",
-          "sameAs": Array [
-            "http://dbpedia.org/resource/Meghan_Markle",
-          ],
-        },
-        Object {
-          "@type": "Place",
-          "name": "Hackney",
-        },
-        Object {
-          "@type": "Place",
-          "name": "Windsor",
-        },
-      ],
-      "author": Object {
-        "@type": "NewsMediaOrganization",
-        "logo": Object {
-          "@type": "ImageObject",
-          "height": 576,
-          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
-          "width": 1024,
-        },
-        "name": "BBC News",
-        "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
-      },
-      "dateModified": "2019-05-28T13:38:19.412Z",
-      "datePublished": "2019-05-28T13:38:19.412Z",
-      "headline": "Royal wedding flowers given to Hackney hospice",
-      "image": Object {
-        "@type": "ImageObject",
-        "height": 576,
-        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
-        "width": 1024,
-      },
-      "inLanguage": Object {
-        "@type": "Language",
-        "alternateName": "en-GB",
-        "name": "English",
-      },
-      "mainEntityOfPage": Object {
-        "@id": "http://localhost:7080/news/articles/c0g992jmmkko",
-        "@type": "WebPage",
-        "name": "Royal wedding flowers given to Hackney hospice",
-      },
-      "publisher": Object {
-        "@type": "NewsMediaOrganization",
-        "logo": Object {
-          "@type": "ImageObject",
-          "height": 16,
-          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/publisher-nx16.png",
-          "width": 103,
-        },
-        "name": "BBC News",
-        "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
-      },
-      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
-      "url": "http://localhost:7080/news/articles/c0g992jmmkko",
-    },
-  ],
-}
-`;
+exports[`Canonical Articles SEO Lang attribute 1`] = `"en-GB"`;
 
 exports[`Canonical Articles SEO OG description 1`] = `"Royal wedding flowers given to Hackney hospice"`;
 
@@ -344,15 +189,15 @@ exports[`Canonical Articles SEO OG type 1`] = `"article"`;
 
 exports[`Canonical Articles SEO OG url 1`] = `"http://localhost:7080/news/articles/c0g992jmmkko"`;
 
-exports[`Canonical Articles SEO Page title 1`] = `"Royal wedding flowers given to Hackney hospice - BBC News"`;
+exports[`Canonical Articles SEO Page title 1`] = `"Internal server error - BBC News"`;
 
-exports[`Canonical Articles SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
+exports[`Canonical Articles SEO Robots meta tag 1`] = `"noindex,nofollow"`;
 
 exports[`Canonical Articles SEO Twitter card 1`] = `"summary_large_image"`;
 
 exports[`Canonical Articles SEO Twitter creator 1`] = `"@BBCNews"`;
 
-exports[`Canonical Articles SEO Twitter description 1`] = `"Royal wedding flowers given to Hackney hospice"`;
+exports[`Canonical Articles SEO Twitter description 1`] = `"Internal server error"`;
 
 exports[`Canonical Articles SEO Twitter image alt 1`] = `"BBC News"`;
 
@@ -360,11 +205,4 @@ exports[`Canonical Articles SEO Twitter image src 1`] = `"https://static.files.b
 
 exports[`Canonical Articles SEO Twitter site 1`] = `"@BBCNews"`;
 
-exports[`Canonical Articles SEO Twitter title 1`] = `"Royal wedding flowers given to Hackney hospice - BBC News"`;
-
-exports[`Canonical Articles Timestamp should match text and date 1`] = `
-Object {
-  "date": "2019-05-28",
-  "text": "28 May 2019",
-}
-`;
+exports[`Canonical Articles SEO Twitter title 1`] = `"Internal server error - BBC News"`;
