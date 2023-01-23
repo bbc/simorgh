@@ -84,22 +84,6 @@ exports[`BrandContainer should render correctly 1`] = `
   margin-bottom: -0.25rem;
 }
 
-.emotion-5:focus:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -0.1875rem;
-  bottom: 0;
-  right: -0.1875rem;
-  border: 0.1875rem solid #000000;
-  outline: 0.25rem solid #FFFFFF;
-}
-
-.emotion-5:focus:not(:focus-visible)::after {
-  border: revert;
-  outline: revert;
-}
-
 .emotion-5:focus-visible:after {
   content: '';
   position: absolute;
@@ -107,7 +91,7 @@ exports[`BrandContainer should render correctly 1`] = `
   left: -0.1875rem;
   bottom: 0;
   right: -0.1875rem;
-  border: 0.1875rem solid #000000;
+  border-top: 0.25rem solid #FFFFFF;
   outline: 0.25rem solid #FFFFFF;
 }
 

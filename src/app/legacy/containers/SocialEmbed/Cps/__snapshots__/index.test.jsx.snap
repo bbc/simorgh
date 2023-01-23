@@ -187,7 +187,7 @@ exports[`CpsSocialEmbedContainer AMP should render correctly 1`] = `
         class="emotion-4 emotion-5"
       >
         <a
-          class="emotion-6 emotion-7"
+          class="focusIndicatorRemove emotion-6 emotion-7"
           href="#end-of-twitter-content-2"
         >
           <span>
@@ -419,7 +419,7 @@ exports[`CpsSocialEmbedContainer Canonical should render and unmount correctly 1
       class="emotion-4 emotion-5"
     >
       <a
-        class="emotion-6 emotion-7"
+        class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-twitter-content-2"
       >
         <span>
@@ -700,7 +700,7 @@ exports[`CpsSocialEmbedContainer Canonical should render correctly without an em
         class="emotion-4 emotion-5"
       >
         <a
-          class="emotion-6 emotion-7"
+          class="focusIndicatorRemove emotion-6 emotion-7"
           href="#end-of-twitter-content-1"
         >
           <span>

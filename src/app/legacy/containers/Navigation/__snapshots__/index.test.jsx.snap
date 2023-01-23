@@ -198,18 +198,6 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
     outline: none;
   }
 
-  .emotion-65:focus-visible:focus::after {
-    outline: 0.1875rem solid #000000;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-
-  .emotion-65:focus-visible:focus:not(:focus-visible)::after {
-    outline: revert;
-  }
-
   .emotion-65:focus-visible:focus-visible::after {
     outline: 0.1875rem solid #000000;
     content: '';
@@ -1046,18 +1034,6 @@ exports[`Navigation Container should correctly render amp navigation on non-home
     outline: none;
   }
 
-  .emotion-61:focus-visible:focus::after {
-    outline: 0.1875rem solid #000000;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-
-  .emotion-61:focus-visible:focus:not(:focus-visible)::after {
-    outline: revert;
-  }
-
   .emotion-61:focus-visible:focus-visible::after {
     outline: 0.1875rem solid #000000;
     content: '';
@@ -1797,18 +1773,6 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
     outline: none;
   }
 
-  .emotion-61:focus-visible:focus::after {
-    outline: 0.1875rem solid #000000;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-
-  .emotion-61:focus-visible:focus:not(:focus-visible)::after {
-    outline: revert;
-  }
-
   .emotion-61:focus-visible:focus-visible::after {
     outline: 0.1875rem solid #000000;
     content: '';
@@ -2481,18 +2445,6 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
 
   .emotion-12:focus-visible {
     outline: none;
-  }
-
-  .emotion-12:focus-visible:focus::after {
-    outline: 0.1875rem solid #000000;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-
-  .emotion-12:focus-visible:focus:not(:focus-visible)::after {
-    outline: revert;
   }
 
   .emotion-12:focus-visible:focus-visible::after {
@@ -3310,18 +3262,6 @@ exports[`Navigation Container should correctly render canonical navigation on no
     outline: none;
   }
 
-  .emotion-12:focus-visible:focus::after {
-    outline: 0.1875rem solid #000000;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-
-  .emotion-12:focus-visible:focus:not(:focus-visible)::after {
-    outline: revert;
-  }
-
   .emotion-12:focus-visible:focus-visible::after {
     outline: 0.1875rem solid #000000;
     content: '';
@@ -4033,18 +3973,6 @@ exports[`Navigation Container should correctly render canonical navigation on no
 
   .emotion-12:focus-visible {
     outline: none;
-  }
-
-  .emotion-12:focus-visible:focus::after {
-    outline: 0.1875rem solid #000000;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-
-  .emotion-12:focus-visible:focus:not(:focus-visible)::after {
-    outline: revert;
   }
 
   .emotion-12:focus-visible:focus-visible::after {

@@ -92,18 +92,6 @@ const StyledLink = styled.a`
   }
 
   // Custom focus indicator styling. Global focus indicator styling has been removed.
-  // Declarations ensure backwards compatibility.
-  &:focus:after {
-    ${styledLinkOutline}
-    border-top: ${GEL_SPACING_HLF} solid ${props => props.logoColour};
-    outline: ${GEL_SPACING_HLF} solid ${props => props.logoColour};
-  }
-
-  &:focus:not(:focus-visible)::after {
-    border: revert;
-    outline: revert;
-  }
-
   &:focus-visible:after {
     ${styledLinkOutline}
     border-top: ${GEL_SPACING_HLF} solid ${props => props.logoColour};

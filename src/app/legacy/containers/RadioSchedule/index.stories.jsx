@@ -34,7 +34,7 @@ const radioServices = {
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ service }) => (
-  <ThemeProvider service="news">
+  <ThemeProvider service={service}>
     <BrowserRouter>
       <ToggleContextProvider>
         <RequestContextProvider

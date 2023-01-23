@@ -123,10 +123,15 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   display: none;
 }
 
-.emotion-13:focus-visible {
-  box-shadow: 0 0 0 3px black inset;
-  border: 3px solid white;
-  outline: 3px solid transparent;
+.emotion-13:focus-visible::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  box-shadow: 0 0 0 0.1875rem white inset;
+  border: 0.1875rem solid black;
 }
 
 .emotion-15 {

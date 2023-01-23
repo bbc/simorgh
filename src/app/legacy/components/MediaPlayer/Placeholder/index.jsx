@@ -3,8 +3,23 @@ import styled from '@emotion/styled';
 import { string, func, shape, oneOf } from 'prop-types';
 import Image from '#psammead/psammead-image/src';
 import PlayButton from '#psammead/psammead-play-button/src';
-import { C_POSTBOX } from '#psammead/psammead-styles/src/colours';
+import {
+  C_POSTBOX,
+  C_BLACK,
+  C_WHITE,
+} from '#psammead/psammead-styles/src/colours';
 import Guidance from '../Guidance';
+
+const focusIndicatorThickness = '0.1875rem'; // 3px
+
+const placeholderOutline = `
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+`;
 
 const StyledPlayButton = styled(PlayButton)`
   position: absolute;
@@ -16,11 +31,11 @@ const StyledPlayButton = styled(PlayButton)`
         display: none;
       }
     `}
-  //custom focus indicator
-  &:focus-visible {
-    box-shadow: 0 0 0 3px black inset;
-    border: 3px solid white;
-    outline: 3px solid transparent;
+
+  &:focus-visible::before {
+    ${placeholderOutline}
+    box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE} inset;
+    border: ${focusIndicatorThickness} solid ${C_BLACK};
   }
 `;
 

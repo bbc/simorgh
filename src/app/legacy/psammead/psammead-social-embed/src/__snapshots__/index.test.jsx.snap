@@ -127,7 +127,7 @@ exports[`AmpSocialEmbed should render a notice when the provider is unsupported 
     class="emotion-0 emotion-1"
   >
     <a
-      class="emotion-2 emotion-3"
+      class="focusIndicatorRemove emotion-2 emotion-3"
       href="#skip-unknown-content"
     >
       <span>
@@ -235,7 +235,7 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
     class="emotion-0 emotion-1"
   >
     <a
-      class="emotion-2 emotion-3"
+      class="focusIndicatorRemove emotion-2 emotion-3"
       href="#skip-facebook-content"
     >
       <span>
@@ -332,7 +332,7 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
     class="emotion-0 emotion-1"
   >
     <a
-      class="emotion-2 emotion-3"
+      class="focusIndicatorRemove emotion-2 emotion-3"
       href="#skip-instagram-content"
     >
       <span>
@@ -430,7 +430,7 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
     class="emotion-0 emotion-1"
   >
     <a
-      class="emotion-2 emotion-3"
+      class="focusIndicatorRemove emotion-2 emotion-3"
       href="#skip-twitter-content"
     >
       <span>
@@ -689,7 +689,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
     class="emotion-0 emotion-1"
   >
     <a
-      class="emotion-2 emotion-3"
+      class="focusIndicatorRemove emotion-2 emotion-3"
       href="#skip-youtube-content"
     >
       <span>
@@ -717,6 +717,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
           This article contains content provided by Google YouTube.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Google YouTube 
           <a
             aria-label="cookie policy, external"
+            class="focusIndicatorReducedWidth"
             href="https://policies.google.com/technologies/cookies"
           >
             cookie policy
@@ -724,6 +725,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
            and 
           <a
             aria-label="privacy policy, external"
+            class="focusIndicatorReducedWidth"
             href="https://policies.google.com/privacy"
           >
             privacy policy
@@ -858,7 +860,7 @@ exports[`CanonicalSocialEmbed Instagram should render correctly for Instagram 1`
   class="emotion-0 emotion-1"
 >
   <a
-    class="emotion-2 emotion-3"
+    class="focusIndicatorRemove emotion-2 emotion-3"
     href="#skip-instagram-content"
   >
     <span>
@@ -1139,7 +1141,7 @@ exports[`CanonicalSocialEmbed Twitter should render correctly for Twitter 1`] = 
   class="emotion-0 emotion-1"
 >
   <a
-    class="emotion-2 emotion-3"
+    class="focusIndicatorRemove emotion-2 emotion-3"
     href="#skip-twitter-content"
   >
     <span>
@@ -1311,7 +1313,7 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
   class="emotion-0 emotion-1"
 >
   <a
-    class="emotion-2 emotion-3"
+    class="focusIndicatorRemove emotion-2 emotion-3"
     href="#skip-youtube-content"
   >
     <span>
@@ -1479,7 +1481,7 @@ exports[`CanonicalSocialEmbed should render a notice when the provider is unsupp
     class="emotion-0 emotion-1"
   >
     <a
-      class="emotion-2 emotion-3"
+      class="focusIndicatorRemove emotion-2 emotion-3"
       href="#skip-unknown-content"
     >
       <span>
@@ -1642,7 +1644,7 @@ exports[`CanonicalSocialEmbed should render a notice when there is no oEmbed res
     class="emotion-0 emotion-1"
   >
     <a
-      class="emotion-2 emotion-3"
+      class="focusIndicatorRemove emotion-2 emotion-3"
       href="#skip-twitter-content"
     >
       <span>
