@@ -91,7 +91,7 @@ export default async ({
 
     const { json: wsojData = [] } = await fetchPageData({
       path: wsojURL,
-      ...({ agent, optHeaders } as any),
+      ...(!isLocal && ({ agent, optHeaders } as any)),
     });
 
     if (!json?.data?.article) {
