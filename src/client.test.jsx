@@ -1,12 +1,12 @@
 import React from 'react';
-import * as reactDom from 'react-dom';
+import * as reactDom from 'react-dom/client';
 import {
   resetWindowValue,
   setWindowValue,
 } from '#psammead/psammead-test-helpers/src';
 import '#testHelpers/loggerMock';
 
-jest.mock('react-dom');
+jest.mock('react-dom/client');
 
 jest.mock('react-router-dom');
 
@@ -47,27 +47,27 @@ describe('Client', () => {
     resetWindowValue('location', windowLocation);
   });
 
-  it('should hydrate client once routes are ready', async () => {
+  it('should hydrateRoot client once routes are ready', async () => {
     setWindowValue('location', { pathname });
 
     await new Promise(resolve => {
       jest.isolateModules(async () => {
         await import('./client');
 
-        expect(reactDom.hydrate).toHaveBeenCalled();
+        expect(reactDom.hydrateRoot).toHaveBeenCalled();
         resolve();
       });
     });
   });
 
-  it('should not hydrate client if no routes match', async () => {
+  it('should not hydrateRoot client if no routes match', async () => {
     setWindowValue('location', { pathname: unknownPathName });
 
     await new Promise(resolve => {
       jest.isolateModules(async () => {
         await import('./client');
 
-        expect(reactDom.hydrate).not.toHaveBeenCalled();
+        expect(reactDom.hydrateRoot).not.toHaveBeenCalled();
         resolve();
       });
     });
