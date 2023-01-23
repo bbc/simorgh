@@ -134,7 +134,7 @@ export const Headline = styled.h3`
   ${({ script, promoType }) => script && headlineTypography(script)[promoType]}
   ${({ promoHasImage }) =>
     !promoHasImage &&
-    `display: inline-block;`} /* Needed for aligning Media Indicator with Headline */
+    `display: inline;`} /* Needed for aligning Media Indicator with Headline */
 `;
 
 Headline.propTypes = {
