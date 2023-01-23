@@ -217,7 +217,7 @@
     "ora": "5.4.1",
     "prettier": "2.6.2",
     "prop-types": "15.8.1",
-    "react-test-renderer": "17.0.2",
+    "react-test-renderer": "18.2.0",
     "retry": "0.13.1",
     "start-server-nestjs-webpack-plugin": "2.2.5",
     "stream-browserify": "3.0.0",
