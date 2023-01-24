@@ -19,7 +19,7 @@ import ThemeProvider from '../../components/ThemeProvider';
 const TopicPage = withPageWrapper(Page);
 
 // eslint-disable-next-line react/prop-types
-const Component = ({ service, variant, fixture = defaultTopic }) => {
+const Component = ({ service, variant = 'default', fixture = defaultTopic }) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ToggleContextProvider
@@ -67,9 +67,9 @@ export default {
 export const Example = Component;
 
 export const MundoWithBannerVariations = props => (
-  <Component {...props} fixture={mundoTopicWithMessageBannerVariations} />
+  <Component service={'mundo'} {...props} fixture={mundoTopicWithMessageBannerVariations} />
 );
 
 export const KyrgyzWithMessageBanners = props => (
-  <Component {...props} fixture={kyrgyzTopicWithMessageBanners} />
+  <Component service={'kyrgyz'} {...props} fixture={kyrgyzTopicWithMessageBanners} />
 );
