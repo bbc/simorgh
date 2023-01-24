@@ -63,10 +63,7 @@ const MessageBanner = ({ summaries, title }: MessageBanner) => {
                   </div>
                 </a>
                 {summary.imageUrl && (
-                  <div
-                    data-testid="image-test-id"
-                    css={isRtl ? styles.imageRtl : styles.imageLtr}
-                  >
+                  <div css={isRtl ? styles.imageRtl : styles.imageLtr}>
                     <Image
                       alt=""
                       src={summary.imageUrl.replace('{width}', 'raw')}
