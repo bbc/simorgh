@@ -17,7 +17,7 @@ import TopicTitle from './TopicTitle';
 import TopicDescription from './TopicDescription';
 import Pagination from './Pagination';
 import MessageBanner from '../../components/MessageBanner';
-import Curation, { VISUAL_STYLE } from './Curation';
+import Curation from './Curation';
 
 const TopicPage = ({ pageData }) => {
   const { lang, translations } = useContext(ServiceContext);
