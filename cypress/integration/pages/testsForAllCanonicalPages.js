@@ -1,20 +1,8 @@
 import envConfig from '../../support/config/envs';
 import config from '../../support/config/services';
 
-// For testing important features that differ between services, e.g. Timestamps.
-// We recommend using inline conditional logic to limit tests to services which differ.
-export const testsThatAlwaysRunForAllCanonicalPages = ({
-  service,
-  pageType,
-}) => {
-  describe(`No testsToAlwaysRunForCanonicalPages to run for ${service} ${pageType}`, () => {});
-};
-
 // For testing features that may differ across services but share a common logic e.g. translated strings.
-export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
-  service,
-  pageType,
-}) => {
+export default ({ service, pageType }) => {
   if (pageType !== 'errorPage404') {
     describe(`Running testsForAllCanonicalPages for ${service} ${pageType}`, () => {
       if (Cypress.env('SMOKE')) {
@@ -50,12 +38,4 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
       });
     }
   });
-};
-
-// For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
-export const testsThatNeverRunDuringSmokeTestingForAllCanonicalPages = ({
-  service,
-  pageType,
-}) => {
-  describe(`No testsToNeverSmokeTestForCanonicalPages to run for ${service} ${pageType}`, () => {});
 };

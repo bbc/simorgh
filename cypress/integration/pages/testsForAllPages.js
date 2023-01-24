@@ -4,7 +4,7 @@
 import topicTagsTest from '../../support/helpers/topicTagsTest';
 import checkA11y from '../../support/helpers/checkA11y';
 
-export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
+export default ({ service, pageType }) => {
   describe(`testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {
     it('should have no detectable a11y violations on page load', () => {
       checkA11y();
@@ -23,20 +23,4 @@ export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
       }
     });
   });
-};
-
-// For testing features that may differ across services but share a common logic e.g. translated strings.
-export const testsThatFollowSmokeTestConfigforAllPages = ({
-  service,
-  pageType,
-}) => {
-  describe(`Running testsForAllPages for ${service} ${pageType}`, () => {});
-};
-
-// For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
-export const testsThatNeverRunDuringSmokeTestingForAllPageTypes = ({
-  service,
-  pageType,
-}) => {
-  describe(`Running testsToNeverSmokeTestForAllPageTypes for ${service} ${pageType}`, () => {});
 };
