@@ -52,20 +52,11 @@ const Document = ({
         {helmetLinkTags}
         {headScript}
         {isAmp ? (
-          <style
-            amp-custom=""
-            data-emotion-css={ids.join(' ')}
-            dangerouslySetInnerHTML={{
-              __html: css,
-            }}
-          />
+          <style amp-custom="" data-emotion-css={ids.join(' ')}>
+            {css}
+          </style>
         ) : (
-          <style
-            data-emotion-css={ids.join(' ')}
-            dangerouslySetInnerHTML={{
-              __html: css,
-            }}
-          />
+          <style data-emotion-css={ids.join(' ')}>{css}</style>
         )}
         {isAmp && (
           <>
