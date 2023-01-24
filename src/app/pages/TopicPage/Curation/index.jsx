@@ -8,6 +8,7 @@ import Subheading from './Subhead';
 
 export const VISUAL_STYLE = {
   NONE: 'NONE',
+  BANNER: 'BANNER',
 };
 
 export const VISUAL_PROMINANCE = {
@@ -24,7 +25,7 @@ const components = {
 };
 
 const Curation = ({
-  visualStyle = 'NONE',
+  visualStyle = VISUAL_STYLE.NONE,
   visualProminance,
   promos,
   title,
@@ -34,7 +35,7 @@ const Curation = ({
   position,
   curationLength,
 }) => {
-  if (visualStyle === 'BANNER') return null;
+  if (visualStyle === VISUAL_STYLE.BANNER) return null;
   if (!promos.length) return null;
   const Component = pathOr(
     CurationGrid,

@@ -17,7 +17,7 @@ import TopicTitle from './TopicTitle';
 import TopicDescription from './TopicDescription';
 import Pagination from './Pagination';
 import MessageBanner from '../../components/MessageBanner';
-import Curation from './Curation';
+import Curation, { VISUAL_STYLE } from './Curation';
 
 const TopicPage = ({ pageData }) => {
   const { lang, translations } = useContext(ServiceContext);
@@ -102,7 +102,7 @@ const TopicPage = ({ pageData }) => {
             ) => (
               // eslint-disable-next-line react/no-array-index-key
               <React.Fragment key={`${curationId} ${index}`}>
-                {visualStyle === 'BANNER' && !isLive() && (
+                {visualStyle === VISUAL_STYLE.BANNER && !isLive() && (
                   <MessageBanner title={curationTitle} summaries={summaries} />
                 )}
                 <Curation
