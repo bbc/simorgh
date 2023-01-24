@@ -3,7 +3,7 @@ import {
   StoryPromoLiBase,
   StoryPromoUl,
 } from '#psammead/psammead-story-promo-list/src';
-import { arrayOf, shape, number, string } from 'prop-types';
+import { arrayOf, shape, number, string, boolean } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
 import useViewTracker from '#hooks/useViewTracker';
 import { OptimizelyContext } from '@optimizely/react-sdk';
@@ -67,7 +67,7 @@ const RecommendationsPromoListItem = forwardRef(
   },
 );
 
-const RecommendationsPromoList = ({ promoItems, isArticle = false }) => {
+const RecommendationsPromoList = ({ promoItems, isArticle }) => {
   // 004_brasil_recommendations_experiment
   const { service } = useContext(ServiceContext);
   const { optimizely } = useContext(OptimizelyContext);
@@ -112,10 +112,16 @@ RecommendationsPromoListItem.propTypes = {
   index: number.isRequired,
   service: string.isRequired,
   optimizely: shape({}).isRequired,
+  isArticle: boolean,
 };
 
 RecommendationsPromoList.propTypes = {
   promoItems: arrayOf(shape(storyItem)).isRequired,
+  isArticle: boolean,
+};
+
+RecommendationsPromoList.defaultProps = {
+  isArticle: false,
 };
 
 export default RecommendationsPromoList;

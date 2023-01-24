@@ -17,7 +17,7 @@ import {
   C_GREY_10,
   C_GHOST,
 } from '#psammead/psammead-styles/src/colours';
-import { shape, string, oneOfType } from 'prop-types';
+import { shape, string, oneOfType, boolean } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import Grid from '../../../components/Grid';
@@ -101,11 +101,7 @@ const StyledHeadline = styled.div`
   align-items: center;
 `;
 
-const RecommendationsPromo = ({
-  promo,
-  eventTrackingData,
-  isArticle = false,
-}) => {
+const RecommendationsPromo = ({ promo, eventTrackingData, isArticle }) => {
   const { script, service } = useContext(ServiceContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
@@ -146,6 +142,7 @@ const RecommendationsPromo = ({
 
 RecommendationsPromo.propTypes = {
   promo: oneOfType([shape(storyItem)]).isRequired,
+  isArticle: boolean,
   eventTrackingData: shape({
     block: shape({
       componentName: string,
@@ -160,6 +157,7 @@ RecommendationsPromo.propTypes = {
 
 RecommendationsPromo.defaultProps = {
   eventTrackingData: null,
+  isArticle: false,
 };
 
 export default RecommendationsPromo;

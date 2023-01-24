@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape } from 'prop-types';
+import { arrayOf, shape, boolean } from 'prop-types';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -124,8 +124,10 @@ export default CpsRecommendations;
 
 CpsRecommendations.propTypes = {
   items: arrayOf(shape(storyItem)),
+  isArticle: boolean,
 };
 
 CpsRecommendations.defaultProps = {
   items: [],
+  isArticle: false,
 };
