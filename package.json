@@ -224,7 +224,7 @@
     "strip-ansi": "6.0.1",
     "stylelint": "13.13.1",
     "stylelint-config-recommended": "7.0.0",
-    "supertest": "6.2.4",
+    "supertest": "6.3.3",
     "terser-webpack-plugin": "5.3.3",
     "timemachine": "0.3.2",
     "ts-jest": "26.5.6",
