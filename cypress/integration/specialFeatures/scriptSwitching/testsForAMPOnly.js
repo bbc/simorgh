@@ -2,6 +2,4 @@
 // When you navigate from an AMP page to another - you always progress onto a canonical url
 // AMP cookies are saved in a different way to canonical - so there is no persistance of cookies between AMP & canonical
 
-export default ({ serviceName, pageType, path }) => {
-  describe(`No AMP tests for ${serviceName} - ${pageType} - ${path}`, () => {});
-};
+export default () => {};

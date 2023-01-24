@@ -9,7 +9,7 @@ export const testsThatAlwaysRunForAMPOnly = ({
   pageType,
   variant,
 }) => {
-  describe(`No testsToAlwaysRunForAMPOnly to run for ${service} ${pageType}`, () => {
+  describe(`testsToAlwaysRunForAMPOnly to run for ${service} ${pageType}`, () => {
     it('If there is a table in the json, display it on the page', () => {
       if (service === 'sport') {
         cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
@@ -178,9 +178,4 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({ service }) => {
 };
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
-export const testsThatNeverRunDuringSmokeTestingForAMPOnly = ({
-  service,
-  pageType,
-}) => {
-  describe(`No testsToNeverSmokeTestForAMPOnly to run for ${service} ${pageType}`, () => {});
-};
+export const testsThatNeverRunDuringSmokeTestingForAMPOnly = () => {};

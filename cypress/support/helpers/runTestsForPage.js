@@ -15,15 +15,15 @@ import getAmpUrl from './getAmpUrl';
 // Pass arguments in from each page's index.js file
 const runTestsForPage = ({
   pageType,
-  testsThatAlwaysRun,
-  testsThatAlwaysRunForCanonicalOnly,
-  testsThatAlwaysRunForAMPOnly,
-  testsThatFollowSmokeTestConfig,
-  testsThatFollowSmokeTestConfigForCanonicalOnly,
-  testsThatFollowSmokeTestConfigForAMPOnly,
-  testsThatNeverRunDuringSmokeTesting,
-  testsThatNeverRunDuringSmokeTestingForCanonicalOnly,
-  testsThatNeverRunDuringSmokeTestingForAMPOnly,
+  testsThatAlwaysRun = () => {},
+  testsThatAlwaysRunForCanonicalOnly = () => {},
+  testsThatAlwaysRunForAMPOnly = () => {},
+  testsThatFollowSmokeTestConfig = () => {},
+  testsThatFollowSmokeTestConfigForCanonicalOnly = () => {},
+  testsThatFollowSmokeTestConfigForAMPOnly = () => {},
+  testsThatNeverRunDuringSmokeTesting = () => {},
+  testsThatNeverRunDuringSmokeTestingForCanonicalOnly = () => {},
+  testsThatNeverRunDuringSmokeTestingForAMPOnly = () => {},
 }) => {
   // For each Service and Page Type in the config file it visits the path and it writes a describe saying this.
 

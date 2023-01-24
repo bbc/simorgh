@@ -1,9 +1,7 @@
 // Limiting to one service for now
 const serviceHasPublishedPromo = service => service === 'arabic';
 
-export const testsThatAlwaysRun = ({ service, pageType }) => {
-  describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
-};
+export const testsThatAlwaysRun = () => {};
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
@@ -61,6 +59,4 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
   });
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
-export const testsThatNeverRunDuringSmokeTesting = ({ service, pageType }) => {
-  describe(`No testsToNeverSmokeTest to run for ${service} ${pageType}`, () => {});
-};
+export const testsThatNeverRunDuringSmokeTesting = () => {};
