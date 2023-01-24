@@ -14,7 +14,7 @@ interface MessageBanner {
   summaries: {
     imageUrl?: string;
     link: string;
-    imageAlt: string;
+    imageAlt?: string;
     description?: string;
     title: string;
     id: string;
