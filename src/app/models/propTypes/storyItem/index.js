@@ -1,4 +1,4 @@
-import { shape, string, number, object, arrayOf } from 'prop-types';
+import { shape, string, number, arrayOf } from 'prop-types';
 
 export const storyItemImage = {
   path: string,
@@ -25,7 +25,7 @@ export const storyItem = {
     blocks: shape(block),
   },
   timestamp: number,
-  images:  shape({
+  images: shape({
     defaultPromoImage: {
       blocks: shape(block),
     },

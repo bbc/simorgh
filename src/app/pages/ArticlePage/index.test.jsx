@@ -425,7 +425,7 @@ it('should render WSOJ recommendations when passed', async () => {
     ...articleDataNews,
     recommendations: sampleRecommendations,
   };
-  
+
   const { getByText } = render(
     <Context service="turkce">
       <ArticlePage pageData={pageDataWithSecondaryColumn} />

@@ -1478,5 +1478,5 @@ export const sampleRecommendations = [
     },
     id: 'urn:bbc:ares::article:sample_1',
     type: 'optimo',
-  }
+  },
 ];

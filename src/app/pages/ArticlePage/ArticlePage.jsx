@@ -182,7 +182,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     links: props => <ScrollablePromo {...props} />,
     mpu: props =>
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
-    wsoj: props =>  <CpsRecommendations items={recommendationsData}/>,
+    wsoj: props => <CpsRecommendations {...props} items={recommendationsData} />,
   };
 
   const visuallyHiddenBlock = {
