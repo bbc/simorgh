@@ -1,9 +1,8 @@
 import { Agent } from 'https';
+import * as getRecommendationsUrl from '#app/lib/utilities/getUrlHelpers/getRecommendationsUrl';
 import * as fetchPageData from '../../utils/fetchPageData';
 import nodeLogger from '../../../../testHelpers/loggerMock';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
-import * as getRecommendationsUrl from '#app/lib/utilities/getUrlHelpers/getRecommendationsUrl';
-
 import getInitialData from '.';
 
 process.env.BFF_PATH = 'https://mock-bff-path';
@@ -127,7 +126,9 @@ describe('Articles - BFF Fetching', () => {
         }),
       );
 
-    getRecommendationsSpy.mockReturnValueOnce("/recommendations/kyrgyz/articles/c0000000000o?Engine=unirecs_datalab")
+    getRecommendationsSpy.mockReturnValueOnce(
+      '/recommendations/kyrgyz/articles/c0000000000o?Engine=unirecs_datalab',
+    );
 
     await getInitialData({
       path: '/kyrgyz/articles/c0000000000o',

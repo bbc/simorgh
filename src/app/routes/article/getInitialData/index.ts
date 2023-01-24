@@ -2,12 +2,12 @@
 import { Agent } from 'https';
 import pipe from 'ramda/src/pipe';
 import Url from 'url-parse';
+import getRecommendationsUrl from '#app/lib/utilities/getUrlHelpers/getRecommendationsUrl';
 import nodeLogger from '../../../lib/logger.node';
 import { getUrlPath } from '../../../lib/utilities/urlParser';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 import fetchPageData from '../../utils/fetchPageData';
 import { Services, Variants } from '../../../models/types/global';
-import getRecommendationsUrl from '#app/lib/utilities/getUrlHelpers/getRecommendationsUrl';
 
 const logger = nodeLogger(__filename);
 
@@ -91,15 +91,14 @@ export default async ({
 
     let wsojData = [];
     try {
-      const { json: wsojJson = []} = await fetchPageData({
+      const { json: wsojJson = [] } = await fetchPageData({
         path: wsojURL,
         ...({ agent, optHeaders } as any),
       });
       wsojData = wsojJson;
     } catch (error) {
-      logger.error("Recommendations JSON malformed", error);
+      logger.error('Recommendations JSON malformed', error);
     }
-    
 
     if (!json?.data?.article) {
       throw handleError('Article data is malformed', 500);
