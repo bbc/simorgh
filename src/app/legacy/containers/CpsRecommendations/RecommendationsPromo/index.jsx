@@ -15,6 +15,7 @@ import {
   C_METAL,
   C_GREY_2,
   C_GREY_10,
+  C_GHOST,
 } from '#psammead/psammead-styles/src/colours';
 import { shape, string, oneOfType } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
@@ -24,11 +25,11 @@ import RecommendationsImage from '../RecommendationsPromoImage';
 import useCombinedClickTrackerHandler from '../../StoryPromo/useCombinedClickTrackerHandler';
 import extractPromoData from './utility';
 
-const StyledPromoWrapper = styled.div`
+const makeStyledPromoWrapper = isArticle => styled.div`
   position: relative;
   padding: ${GEL_SPACING};
   margin-top: ${GEL_SPACING};
-  background-color: ${C_GREY_2};
+  background-color: ${isArticle ? C_GHOST : C_GREY_2};
 `;
 
 const ImageWrapper = styled.div`
@@ -100,11 +101,17 @@ const StyledHeadline = styled.div`
   align-items: center;
 `;
 
-const RecommendationsPromo = ({ promo, eventTrackingData }) => {
+const RecommendationsPromo = ({
+  promo,
+  eventTrackingData,
+  isArticle = false,
+}) => {
   const { script, service } = useContext(ServiceContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
   const { headline, url, indexImage } = extractPromoData({ promo });
+
+  const StyledPromoWrapper = makeStyledPromoWrapper(isArticle);
 
   return (
     <Grid

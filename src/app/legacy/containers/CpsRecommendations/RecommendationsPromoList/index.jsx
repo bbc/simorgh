@@ -25,7 +25,7 @@ const getEventTrackingDataWithOptimizely = ({ item, index, optimizely }) => {
 
 const RecommendationsPromoListItem = forwardRef(
   // 004_brasil_recommendations_experiment
-  ({ item, index, service, optimizely }, forwardedRef) => {
+  ({ item, index, service, optimizely, isArticle }, forwardedRef) => {
     const eventTrackingData =
       service === 'portuguese'
         ? getEventTrackingDataWithOptimizely({
@@ -60,13 +60,14 @@ const RecommendationsPromoListItem = forwardRef(
         <RecommendationsPromo
           promo={item}
           eventTrackingData={eventTrackingData}
+          isArticle={isArticle}
         />
       </Grid>
     );
   },
 );
 
-const RecommendationsPromoList = ({ promoItems }) => {
+const RecommendationsPromoList = ({ promoItems, isArticle = false }) => {
   // 004_brasil_recommendations_experiment
   const { service } = useContext(ServiceContext);
   const { optimizely } = useContext(OptimizelyContext);
@@ -99,6 +100,7 @@ const RecommendationsPromoList = ({ promoItems }) => {
           item={item}
           optimizely={optimizely}
           service={service}
+          isArticle={isArticle}
         />
       ))}
     </Grid>

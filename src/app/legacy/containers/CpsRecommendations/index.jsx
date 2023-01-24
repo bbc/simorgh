@@ -8,7 +8,7 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
-import { C_GHOST } from '#psammead/psammead-styles/src/colours';
+import { C_GHOST, C_GREY_2 } from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -25,8 +25,8 @@ import RecommendationsPromoList from './RecommendationsPromoList';
 import RecommendationsPromo from './RecommendationsPromo';
 import ErrorBoundary from './ErrorBoundary';
 
-const RecommendationsWrapper = styled.div`
-  background-color: ${C_GHOST};
+const makeRecommendationsWrapper = (isArticle = false) => styled.div`
+  background-color: ${isArticle ? C_GREY_2 : C_GHOST};
   margin: ${GEL_SPACING_TRPL} 0;
   padding: ${GEL_SPACING_DBL} ${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
@@ -47,7 +47,7 @@ const LabelComponent = styled(SectionLabel)`
   }
 `;
 
-const CpsRecommendations = ({ items }) => {
+const CpsRecommendations = ({ items, isArticle = false }) => {
   const { recommendations, translations, script, service, dir } =
     useContext(ServiceContext);
   const { enabled } = useToggle('cpsRecommendations');
@@ -57,6 +57,8 @@ const CpsRecommendations = ({ items }) => {
     role: 'region',
     'aria-labelledby': labelId,
   };
+
+  const RecommendationsWrapper = makeRecommendationsWrapper(isArticle);
 
   const { hasStoryRecommendations } = recommendations;
 
@@ -98,15 +100,18 @@ const CpsRecommendations = ({ items }) => {
                 mobileDivider={false}
                 overrideHeadingAs="strong"
                 bar={false}
-                backgroundColor={C_GHOST}
+                backgroundColor={isArticle ? C_GREY_2 : C_GHOST}
               >
                 {title}
               </LabelComponent>
             ) : null}
             {isSinglePromo ? (
-              <RecommendationsPromo promo={items[0]} />
+              <RecommendationsPromo promo={items[0]} isArticle={isArticle} />
             ) : (
-              <RecommendationsPromoList promoItems={items} />
+              <RecommendationsPromoList
+                promoItems={items}
+                isArticle={isArticle}
+              />
             )}
           </SkipLinkWrapper>
         </RecommendationsWrapper>
