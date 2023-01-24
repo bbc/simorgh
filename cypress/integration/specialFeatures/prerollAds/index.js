@@ -28,7 +28,10 @@ describe('Media Asset Pages - Preroll Ads', () => {
         });
       });
     } else {
-      it(`No MAPs without preroll ads configured for the ${environment} environment`, () => {});
+      cy.log(
+        `No MAPs without preroll ads configured for the ${environment} environment`,
+        () => {},
+      );
     }
   });
 
@@ -63,7 +66,10 @@ describe('Media Asset Pages - Preroll Ads', () => {
         }
       });
     } else {
-      it(`No MAPs with preroll ads configured for the ${environment} environment`, () => {});
+      cy.log(
+        `No MAPs with preroll ads configured for the ${environment} environment`,
+        () => {},
+      );
     }
   });
 });

@@ -142,7 +142,7 @@ export const testsThatFollowSmokeTestConfig = ({
         });
       }
     } else {
-      describe(`No ${pageType} found for ${service}`, () => {});
+      cy.log(`No ${pageType} found for ${service}`, () => {});
     }
   });
 
