@@ -24,7 +24,20 @@ const logger = nodeLogger(__filename);
 // 004_brasil_recommendations_experiment
 const getRecommendations = (service, assetUri) => {
   if (service !== 'portuguese') {
-    const UNIRECS_ALLOW_LIST = ['indonesia', 'mundo', 'turkce'];
+    const UNIRECS_ALLOW_LIST = [
+      'afrique',
+      'bengali',
+      'indonesia',
+      'korean',
+      'marathi',
+      'mundo',
+      'persian',
+      'pidgin',
+      'tamil',
+      'thai',
+      'turkce',
+      'Vietnamese',
+    ];
 
     return [
       {
