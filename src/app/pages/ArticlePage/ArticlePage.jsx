@@ -183,7 +183,11 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     mpu: props =>
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
     wsoj: props => (
-      <CpsRecommendations {...props} items={[recommendationsData[0]]} isArticle={ true }/>
+      <CpsRecommendations
+        {...props}
+        items={recommendationsData}
+        isArticle={true}
+      />
     ),
   };
 
