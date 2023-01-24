@@ -47,7 +47,7 @@ describe('Client', () => {
     resetWindowValue('location', windowLocation);
   });
 
-  it('should hydrateRoot client once routes are ready', async () => {
+  it('should hydrate client once routes are ready', async () => {
     setWindowValue('location', { pathname });
 
     await new Promise(resolve => {
@@ -60,7 +60,7 @@ describe('Client', () => {
     });
   });
 
-  it('should not hydrateRoot client if no routes match', async () => {
+  it('should not hydrate client if no routes match', async () => {
     setWindowValue('location', { pathname: unknownPathName });
 
     await new Promise(resolve => {
