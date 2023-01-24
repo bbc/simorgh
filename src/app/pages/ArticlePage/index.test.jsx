@@ -262,11 +262,11 @@ it('should render a rtl article (persian) with most read correctly', async () =>
     </Context>,
   );
 
-  await waitFor(() => container.querySelector('#Most-Read'));
+  await waitFor(() => {
+    const mostReadSection = container.querySelector('#Most-Read');
+    expect(mostReadSection).not.toBeNull();
+  });
 
-  const mostReadSection = container.querySelector('#Most-Read');
-
-  expect(mostReadSection).not.toBeNull();
   expect(container).toMatchSnapshot();
 });
 
@@ -279,11 +279,11 @@ it('should render a ltr article (pidgin) with most read correctly', async () => 
     </Context>,
   );
 
-  await waitFor(() => container.querySelector('#Most-Read'));
+  await waitFor(() => {
+    const mostReadSection = container.querySelector('#Most-Read');
+    expect(mostReadSection).not.toBeNull();
+  });
 
-  const mostReadSection = container.querySelector('#Most-Read');
-
-  expect(mostReadSection).not.toBeNull();
   expect(container).toMatchSnapshot();
 });
 
