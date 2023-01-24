@@ -91,8 +91,8 @@ const StyledLink = styled.a`
     margin-bottom: -${GEL_SPACING_HLF};
   }
 
-  // Custom focus indicator styling. Global focus indicator styling has been removed.
-  &:focus-visible:after {
+  // Custom focus indicator styling applied to pseudo-element. Global focus indicator styling has been removed.
+  &:focus-visible::after {
     ${styledLinkOutline}
     border-top: ${GEL_SPACING_HLF} solid ${props => props.logoColour};
     outline: ${GEL_SPACING_HLF} solid ${props => props.logoColour};
