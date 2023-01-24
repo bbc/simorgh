@@ -12,4 +12,4 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({ service }) => {
 };
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
-export const testsThatNeverRunDuringSmokeTestingForAMPOnly =  () => {};
+export const testsThatNeverRunDuringSmokeTestingForAMPOnly = () => {};
