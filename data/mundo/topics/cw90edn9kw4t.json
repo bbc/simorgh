@@ -116,11 +116,10 @@
         ],
         "activePage": 1,
         "pageCount": 1,
-        "link": "https://www.bbc.com/sinhala",
         "curationId": "urn:bbc:tipo:list:8893702b-01e7-40ad-9ffd-afc670906a07",
         "curationType": "tipo-curation",
         "position": 2,
-        "title": "Heading and link only (no image and no description)",
+        "title": "La resiliencia de los chilenos",
         "visualProminence": "NORMAL",
         "visualStyle": "BANNER"
       }
