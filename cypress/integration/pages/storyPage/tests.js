@@ -14,7 +14,7 @@ export const testsThatFollowSmokeTestConfig = ({
   pageType,
   isAmp,
 }) => {
-  describe(`testsThatFollowSmokeTestConfig to run for ${service} ${pageType}`, () => {
+  describe(`testsThatFollowSmokeTestConfig for ${service} ${pageType}`, () => {
     it('should render a description for the page', () => {
       cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
         const descriptionBlock = body.content.blocks.find(

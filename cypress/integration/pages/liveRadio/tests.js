@@ -6,7 +6,7 @@ export const testsThatAlwaysRun = () => {};
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
-  describe(`Tests for ${service} ${pageType}`, () => {
+  describe(`testsThatFollowSmokeTestConfig for ${service} ${pageType}`, () => {
     describe('Live Radio body', () => {
       it('should render a H1, which contains/displays a styled headline', () => {
         cy.request(getDataUrl(Cypress.env('currentPath'))).then(({ body }) => {

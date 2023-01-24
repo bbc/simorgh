@@ -30,7 +30,7 @@ export const testsThatFollowSmokeTestConfig = ({
   variant,
 }) => {
   let articlesData;
-  describe(`Running tests for ${service} ${pageType}`, () => {
+  describe(`testsThatFollowSmokeTestConfig for ${service} ${pageType}`, () => {
     before(() => {
       const env = Cypress.env('APP_ENV');
       if (env !== 'local') {

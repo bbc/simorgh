@@ -9,7 +9,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   service,
   pageType,
 }) =>
-  describe(`Canonical Tests for ${service} ${pageType}`, () => {
+  describe(`testsThatFollowSmokeTestConfigForCanonicalOnly for ${service} ${pageType}`, () => {
     const errorPath = getErrorPath(service, pageType);
 
     if (errorPath) {

@@ -4,7 +4,7 @@ import config from '../../support/config/services';
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export default ({ service, pageType }) => {
   if (pageType !== 'errorPage404') {
-    describe(`Running testsForAllCanonicalPages for ${service} ${pageType}`, () => {
+    describe(`testsForAllCanonicalPages for ${service} ${pageType}`, () => {
       if (Cypress.env('SMOKE')) {
         describe('ATI', () => {
           it('should have a noscript img tag with the ati url', () => {

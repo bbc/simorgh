@@ -5,7 +5,7 @@ import topicTagsTest from '../../support/helpers/topicTagsTest';
 import checkA11y from '../../support/helpers/checkA11y';
 
 export default ({ service, pageType }) => {
-  describe(`testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {
+  describe(`testsToAlwaysRunForAllPages for ${service} ${pageType}`, () => {
     it('should have no detectable a11y violations on page load', () => {
       checkA11y();
     });

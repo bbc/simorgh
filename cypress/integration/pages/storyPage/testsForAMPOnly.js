@@ -9,7 +9,7 @@ export const testsThatAlwaysRunForAMPOnly = ({
   pageType,
   variant,
 }) => {
-  describe(`testsToAlwaysRunForAMPOnly for ${service} ${pageType}`, () => {
+  describe(`testsThatAlwaysRunForAMPOnly for ${service} ${pageType}`, () => {
     it('If there is a table in the json, display it on the page', () => {
       if (service === 'sport') {
         cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {

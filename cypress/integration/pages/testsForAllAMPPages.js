@@ -2,7 +2,7 @@ import config from '../../support/config/services';
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export default ({ service, pageType }) => {
-  describe(`testsThatFollowSmokeTestConfigForAllAMPPages to run for ${service} ${pageType}`, () => {
+  describe(`testsThatFollowSmokeTestConfigForAllAMPPages for ${service} ${pageType}`, () => {
     describe('Header Tests', () => {
       const serviceName = config[service].name;
       // limit number of tests to 2 services for navigation toggling

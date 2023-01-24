@@ -9,7 +9,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   service,
   pageType,
 }) =>
-  describe(`Amp Tests for ${service} ${pageType}`, () => {
+  describe(`testsThatFollowSmokeTestConfigForAMPOnly for ${service} ${pageType}`, () => {
     it('should contain an amp-img', () => {
       cy.get('li')
         .should('be.visible')

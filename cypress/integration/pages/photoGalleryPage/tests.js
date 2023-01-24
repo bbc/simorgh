@@ -4,7 +4,7 @@ export const testsThatAlwaysRun = () => {};
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
-  describe(`testsThatFollowSmokeTestConfig to run for ${service} ${pageType}`, () => {
+  describe(`testsThatFollowSmokeTestConfig for ${service} ${pageType}`, () => {
     it('should render a description for the page', () => {
       cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
         const description = body.promo.summary;

@@ -9,7 +9,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   service,
   pageType,
 }) =>
-  describe(`Amp Tests for ${service} ${pageType}`, () => {
+  describe(`testsThatFollowSmokeTestConfigForAMPOnly for ${service} ${pageType}`, () => {
     const errorPath = getErrorPath(service, pageType);
 
     if (errorPath) {

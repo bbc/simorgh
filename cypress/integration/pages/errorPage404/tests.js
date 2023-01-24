@@ -13,7 +13,7 @@ export const testsThatFollowSmokeTestConfig = ({
   pageType,
   variant,
 }) =>
-  describe(`Tests for ${service} ${pageType}`, () => {
+  describe(`testsThatFollowSmokeTestConfig for ${service} ${pageType}`, () => {
     const errorPath = getErrorPath(service, pageType);
 
     if (errorPath) {

@@ -16,7 +16,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   pageType,
   variant,
 }) =>
-  describe(`Canonical Tests for ${service} ${pageType}`, () => {
+  describe(`testsThatFollowSmokeTestConfigForCanonicalOnly for ${service} ${pageType}`, () => {
     if (appToggles.chartbeatAnalytics.enabled) {
       describe('Chartbeat', () => {
         if (envConfig.chartbeatEnabled) {

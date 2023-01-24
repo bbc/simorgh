@@ -5,7 +5,7 @@ export const testsThatAlwaysRun = () => {};
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
-  describe(`Tests for ${service} ${pageType}`, () => {
+  describe(`testsThatFollowSmokeTestConfig for ${service} ${pageType}`, () => {
     describe('Frontpage body', () => {
       before(() => {
         cy.viewport(1008, 768);

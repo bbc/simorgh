@@ -19,7 +19,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   variant,
 }) => {
   let articlesData;
-  describe(`Running testsForAMPOnly for ${service} ${pageType}`, () => {
+  describe(`testsForAMPOnly for ${service} ${pageType}`, () => {
     before(() => {
       const env = Cypress.env('APP_ENV');
       if (env !== 'local') {
