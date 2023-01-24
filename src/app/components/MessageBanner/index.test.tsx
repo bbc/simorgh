@@ -4,6 +4,7 @@ import MessageBanner from '.';
 import kyrgyzBanner from './fixtures';
 
 const { summaries } = kyrgyzBanner;
+const [summary] = summaries;
 
 describe('MessageBanner', () => {
   it('should render a section with role region', () => {
@@ -35,21 +36,21 @@ describe('MessageBanner', () => {
 
   it('should display the banner subtext correctly as a Paragraph', () => {
     render(<MessageBanner summaries={summaries} title={kyrgyzBanner.title} />);
-    expect(screen.getByText(summaries[0].description).nodeName).toBe('P');
+    expect(screen.getByText(summary.description).nodeName).toBe('P');
   });
 
   it('should display link text correctly as an Anchor', () => {
     render(<MessageBanner summaries={summaries} title={kyrgyzBanner.title} />);
     const ctaLink = screen.getByRole('link');
-    expect(ctaLink.getAttribute('href')).toEqual(summaries[0].link);
-    expect(ctaLink.textContent).toEqual(summaries[0].title);
+    expect(ctaLink.getAttribute('href')).toEqual(summary.link);
+    expect(ctaLink.textContent).toEqual(summary.title);
   });
 
   it('should render an image with the correct image src', () => {
     render(<MessageBanner summaries={summaries} title={kyrgyzBanner.title} />);
     const image = screen.getByAltText('');
     expect(image.getAttribute('src')).toEqual(
-      summaries[0].imageUrl.replace('{width}', 'raw'),
+      summary.imageUrl.replace('{width}', 'raw'),
     );
   });
 
