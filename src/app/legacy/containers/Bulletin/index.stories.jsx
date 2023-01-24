@@ -49,7 +49,7 @@ const audioLiveFixture = liveBulletinFixture('RadioBulletin');
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ isAmp = false, service, item }) => (
-  <ThemeProvider service="news">
+  <ThemeProvider service={service}>
     <ServiceContextProvider service={service}>
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.co.uk"

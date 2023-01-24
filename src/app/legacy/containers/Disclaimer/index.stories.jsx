@@ -58,7 +58,7 @@ const Component = ({ service }) => {
     DISCLAIMER_FIXTURE,
   );
   return (
-    <ThemeProvider service="news">
+    <ThemeProvider service={service}>
       <ToggleContextProvider
         toggles={{
           disclaimer: {

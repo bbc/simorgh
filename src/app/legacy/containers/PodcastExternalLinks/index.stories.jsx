@@ -8,7 +8,7 @@ import ThemeProvider from '../../../components/ThemeProvider';
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ service, variant }) => (
-  <ThemeProvider service="news">
+  <ThemeProvider service={service}>
     <ToggleContextProvider
       toggles={{
         eventTracking: {

@@ -23,7 +23,7 @@ const BackGround = styled.div`
 `;
 // eslint-disable-next-line react/prop-types
 const ScrollablePromoComponent = ({ data, service, script, dir }) => (
-  <ThemeProvider service="news">
+  <ThemeProvider service={service}>
     <ToggleContextProvider>
       <BackGround>
         <ServiceContextProvider service={service} script={script} dir={dir}>

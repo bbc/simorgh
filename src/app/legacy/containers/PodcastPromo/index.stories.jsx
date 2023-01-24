@@ -32,7 +32,7 @@ const serviceContextMock = {
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ inline = false }) => (
-  <ThemeProvider service="news">
+  <ThemeProvider service={service}>
     <ToggleContextProvider
       toggles={{
         eventTracking: { enabled: true },

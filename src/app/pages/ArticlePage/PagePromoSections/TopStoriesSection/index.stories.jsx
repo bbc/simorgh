@@ -22,7 +22,7 @@ const BackGround = styled.div`
 
 // eslint-disable-next-line react/prop-types
 const RelatedContentComponent = ({ content, service, script }) => (
-  <ThemeProvider service="news">
+  <ThemeProvider service={service}>
     <ToggleContextProvider>
       <BackGround>
         <ServiceContextProvider service={service} script={script}>
