@@ -18,7 +18,6 @@
     "json5": "2.2.2",
     "loader-utils": "2.0.4",
     "prismjs": "1.28.0",
-    "react-is": "17.0.2",
     "trim": "1.0.1",
     "trim-newlines": "3.0.1",
     "winston@3.8.2": "patch:winston@npm:3.8.2#.yarn/patches/winston-npm-3.8.2-2035e9cac4.patch"
