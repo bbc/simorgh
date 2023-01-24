@@ -186,7 +186,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       <CpsRecommendations
         {...props}
         items={recommendationsData}
-        isArticle={true}
+        isArticle
       />
     ),
   };
