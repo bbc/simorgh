@@ -42,9 +42,15 @@ import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 // Transparent border is to show the top of the wrapper and button border in high-contrast mode
 const transparentBorderHeight = '0.0625rem';
 
-const hoverFocusStyles = `
-  &:focus,
+const hoverStyles = `
   &:hover {
+    color: ${C_EBON};
+    background-color: ${C_CONSENT_ACTION};
+  }
+`;
+
+const focusStyles = `
+  &:focus {
     color: ${C_EBON};
     background-color: ${C_CONSENT_ACTION};
   }
@@ -78,7 +84,7 @@ const CenterWrapper = styled.div`
     text-decoration: none;
     border-bottom: solid 0.0625rem ${C_PEBBLE};
 
-    ${hoverFocusStyles}
+    ${hoverStyles}
   }
 
   a:hover,
@@ -175,7 +181,8 @@ const ListItem = styled.li`
       text-decoration: underline;
     }
 
-    ${hoverFocusStyles}
+    ${hoverStyles}
+    ${focusStyles}
   }
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
