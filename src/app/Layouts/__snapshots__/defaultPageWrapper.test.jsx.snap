@@ -62,7 +62,6 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   border-bottom: solid 0.0625rem #AEAEB5;
 }
 
-.emotion-6 a:focus,
 .emotion-6 a:hover {
   color: #222222;
   background-color: #F6A21D;
@@ -229,8 +228,12 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   }
 }
 
-.emotion-14 button:focus,
 .emotion-14 button:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-14 button:focus {
   color: #222222;
   background-color: #F6A21D;
 }
@@ -330,7 +333,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   margin-bottom: -0.25rem;
 }
 
-.emotion-23:focus-visible:after {
+.emotion-23:focus-visible::after {
   content: '';
   position: absolute;
   top: 0;

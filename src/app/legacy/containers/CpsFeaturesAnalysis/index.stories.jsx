@@ -18,7 +18,7 @@ const Component = ({
 }) => (
   <div dir={dir}>
     {/* The above simulates dir being added at the page level */}
-    <ThemeProvider service="news">
+    <ThemeProvider service={service}>
       <ServiceContextProvider service={service}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.com"

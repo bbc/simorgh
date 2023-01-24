@@ -53,7 +53,7 @@ const Component = ({ items, service, dir }) => {
   };
   return (
     <div dir={dir}>
-      <ThemeProvider service="news">
+      <ThemeProvider service={service}>
         <ServiceContext.Provider value={serviceContextStub}>
           <RequestContextProvider
             isAmp={false}

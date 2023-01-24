@@ -47,7 +47,6 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   border-bottom: solid 0.0625rem #AEAEB5;
 }
 
-.emotion-4 a:focus,
 .emotion-4 a:hover {
   color: #222222;
   background-color: #F6A21D;
@@ -214,8 +213,12 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   }
 }
 
-.emotion-12 button:focus,
 .emotion-12 button:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-12 button:focus {
   color: #222222;
   background-color: #F6A21D;
 }
@@ -347,7 +350,6 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   border-bottom: solid 0.0625rem #AEAEB5;
 }
 
-.emotion-4 a:focus,
 .emotion-4 a:hover {
   color: #222222;
   background-color: #F6A21D;
@@ -514,8 +516,12 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   }
 }
 
-.emotion-12 button:focus,
 .emotion-12 button:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-12 button:focus {
   color: #222222;
   background-color: #F6A21D;
 }
@@ -647,7 +653,6 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   border-bottom: solid 0.0625rem #AEAEB5;
 }
 
-.emotion-4 a:focus,
 .emotion-4 a:hover {
   color: #222222;
   background-color: #F6A21D;
@@ -814,8 +819,12 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   }
 }
 
-.emotion-12 button:focus,
 .emotion-12 button:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-12 button:focus {
   color: #222222;
   background-color: #F6A21D;
 }
@@ -940,7 +949,6 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   border-bottom: solid 0.0625rem #AEAEB5;
 }
 
-.emotion-4 a:focus,
 .emotion-4 a:hover {
   color: #222222;
   background-color: #F6A21D;
@@ -1107,8 +1115,12 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   }
 }
 
-.emotion-12 button:focus,
 .emotion-12 button:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-12 button:focus {
   color: #222222;
   background-color: #F6A21D;
 }

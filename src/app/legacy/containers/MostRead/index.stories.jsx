@@ -15,7 +15,7 @@ const staticMostReadURL = (service, variant) =>
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ service, variant, columnLayout }) => (
-  <ThemeProvider service="news">
+  <ThemeProvider service={service}>
     <ToggleContextProvider>
       <RequestContextProvider
         bbcOrigin={`http://localhost/${service}/articles/c0000000000o`}

@@ -19,7 +19,7 @@ const arabicRelatedContentData = arabicData.relatedContent.groups[0].promos;
 const Component = ({ isAmp, service, dir, data }) => (
   <div dir={dir}>
     {/* The above simulates dir being added at the page level */}
-    <ThemeProvider service="news">
+    <ThemeProvider service={service}>
       <ServiceContextProvider service={service}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.com"

@@ -390,8 +390,8 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   right: 0;
   top: 0;
   bottom: 0;
-  box-shadow: 0 0 0 0.1875rem white inset;
-  border: 0.1875rem solid black;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+  border: 0.1875rem solid #000000;
 }
 
 .emotion-17 {

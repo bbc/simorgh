@@ -95,6 +95,7 @@ const StyledLink = styled.a`
     border: ${focusIndicatorThickness} solid ${C_BLACK};
   }
 
+  // Custom focus indicator styling applied to pseudo-element. Global focus indicator styling has been removed.
   &:focus-visible::after {
     ${ListItemBorder}
     ${({ brandHighlightColour }) =>

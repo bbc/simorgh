@@ -490,18 +490,18 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
                    Durasi 15:30
                 </span>
               </span>
+              <div
+                class="emotion-39 emotion-40"
+              >
+                <time
+                  class="emotion-38 emotion-42 emotion-43 emotion-44"
+                  datetime="2020-11-17"
+                >
+                  17 November 2020
+                </time>
+              </div>
             </span>
           </a>
-          <div
-            class="emotion-39 emotion-40"
-          >
-            <time
-              class="emotion-38 emotion-42 emotion-43 emotion-44"
-              datetime="2020-11-17"
-            >
-              17 November 2020
-            </time>
-          </div>
         </div>
       </li>
       <li
@@ -833,18 +833,18 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
                    Durasi 15:30
                 </span>
               </span>
+              <div
+                class="emotion-39 emotion-40"
+              >
+                <time
+                  class="emotion-38 emotion-42 emotion-43 emotion-44"
+                  datetime="2020-11-13"
+                >
+                  13 November 2020
+                </time>
+              </div>
             </span>
           </a>
-          <div
-            class="emotion-39 emotion-40"
-          >
-            <time
-              class="emotion-38 emotion-42 emotion-43 emotion-44"
-              datetime="2020-11-13"
-            >
-              13 November 2020
-            </time>
-          </div>
         </div>
       </li>
     </ul>

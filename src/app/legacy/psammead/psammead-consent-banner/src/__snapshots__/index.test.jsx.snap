@@ -39,7 +39,6 @@ exports[`ConsentBanner should correctly render for ltr service 1`] = `
   border-bottom: solid 0.0625rem #AEAEB5;
 }
 
-.emotion-2 a:focus,
 .emotion-2 a:hover {
   color: #222222;
   background-color: #F6A21D;
@@ -178,8 +177,12 @@ exports[`ConsentBanner should correctly render for ltr service 1`] = `
   }
 }
 
-.emotion-8 button:focus,
 .emotion-8 button:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-8 button:focus {
   color: #222222;
   background-color: #F6A21D;
 }
@@ -288,7 +291,6 @@ exports[`ConsentBanner should correctly render for rtl service 1`] = `
   border-bottom: solid 0.0625rem #AEAEB5;
 }
 
-.emotion-2 a:focus,
 .emotion-2 a:hover {
   color: #222222;
   background-color: #F6A21D;
@@ -427,8 +429,12 @@ exports[`ConsentBanner should correctly render for rtl service 1`] = `
   }
 }
 
-.emotion-8 button:focus,
 .emotion-8 button:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-8 button:focus {
   color: #222222;
   background-color: #F6A21D;
 }
@@ -537,7 +543,6 @@ exports[`ConsentBanner with hidden attribute on wrapper should correctly render 
   border-bottom: solid 0.0625rem #AEAEB5;
 }
 
-.emotion-2 a:focus,
 .emotion-2 a:hover {
   color: #222222;
   background-color: #F6A21D;
@@ -676,8 +681,12 @@ exports[`ConsentBanner with hidden attribute on wrapper should correctly render 
   }
 }
 
-.emotion-8 button:focus,
 .emotion-8 button:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-8 button:focus {
   color: #222222;
   background-color: #F6A21D;
 }

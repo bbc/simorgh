@@ -32,6 +32,7 @@ const StyledPlayButton = styled(PlayButton)`
       }
     `}
 
+  // Custom focus indicator styling applied to pseudo-element. Global focus indicator styling has been removed.
   &:focus-visible::before {
     ${placeholderOutline}
     box-shadow: 0 0 0 ${focusIndicatorThickness} ${C_WHITE} inset;

@@ -17,7 +17,7 @@ import {
 // eslint-disable-next-line react/prop-types
 const Wrappers = ({ service, variant, children }) => {
   return (
-    <ThemeProvider service="news">
+    <ThemeProvider service={service}>
       <ServiceContextProvider service={service} variant={variant}>
         <RequestContextProvider isAmp={false} service={service}>
           <ToggleContextProvider

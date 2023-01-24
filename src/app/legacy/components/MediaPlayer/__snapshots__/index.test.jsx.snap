@@ -270,8 +270,8 @@ exports[`Media Player: Canonical Entry renders a landscape container with a plac
   right: 0;
   top: 0;
   bottom: 0;
-  box-shadow: 0 0 0 0.1875rem white inset;
-  border: 0.1875rem solid black;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+  border: 0.1875rem solid #000000;
 }
 
 .emotion-11 {
@@ -479,8 +479,8 @@ exports[`Media Player: Canonical Entry renders a placeholder image with guidance
   right: 0;
   top: 0;
   bottom: 0;
-  box-shadow: 0 0 0 0.1875rem white inset;
-  border: 0.1875rem solid black;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+  border: 0.1875rem solid #000000;
 }
 
 .emotion-13 {
@@ -668,8 +668,8 @@ exports[`Media Player: Canonical Entry renders a portrait container with a place
   right: 0;
   top: 0;
   bottom: 0;
-  box-shadow: 0 0 0 0.1875rem white inset;
-  border: 0.1875rem solid black;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+  border: 0.1875rem solid #000000;
 }
 
 .emotion-11 {
@@ -976,8 +976,8 @@ exports[`Media Player: Canonical Entry renders with no-js styles when noJsClassN
   right: 0;
   top: 0;
   bottom: 0;
-  box-shadow: 0 0 0 0.1875rem white inset;
-  border: 0.1875rem solid black;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+  border: 0.1875rem solid #000000;
 }
 
 .emotion-13 {

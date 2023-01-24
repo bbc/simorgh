@@ -14,7 +14,7 @@ import ThemeProvider from '../../../components/ThemeProvider';
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ service, data, isAmp = false }) => (
-  <ThemeProvider service="news">
+  <ThemeProvider service={service}>
     <ServiceContextProvider service={service}>
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.com"

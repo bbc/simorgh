@@ -2,6 +2,7 @@ import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { renderRadioSchedule as Component } from './testHelpers/helper';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 export default {
   title: 'Components/Radio Schedule',
@@ -9,8 +10,14 @@ export default {
   decorators: [withKnobs, withServicesKnob()],
 };
 
-export const RadioSchedule = Component;
+export const RadioSchedule = () => (
+  <ThemeProvider service="news">
+    <Component />
+  </ThemeProvider>
+);
 
 export const ScheduleDifferentHeights = props => (
-  <Component {...props} withLongSummary />
+  <ThemeProvider service="news">
+    <Component {...props} withLongSummary />
+  </ThemeProvider>
 );
