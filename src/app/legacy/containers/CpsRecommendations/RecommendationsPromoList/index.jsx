@@ -124,4 +124,8 @@ RecommendationsPromoList.defaultProps = {
   isArticle: false,
 };
 
+RecommendationsPromoListItem.defaultProps = {
+  isArticle: false,
+};
+
 export default RecommendationsPromoList;
