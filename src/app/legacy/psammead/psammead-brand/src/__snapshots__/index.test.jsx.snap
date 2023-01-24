@@ -199,7 +199,7 @@ exports[`Brand should render correctly with link provided 1`] = `
   margin-bottom: -0.25rem;
 }
 
-.emotion-4:focus-visible:after {
+.emotion-4:focus-visible::after {
   content: '';
   position: absolute;
   top: 0;

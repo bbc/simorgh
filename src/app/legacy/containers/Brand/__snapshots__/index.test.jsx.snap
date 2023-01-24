@@ -84,7 +84,7 @@ exports[`BrandContainer should render correctly 1`] = `
   margin-bottom: -0.25rem;
 }
 
-.emotion-5:focus-visible:after {
+.emotion-5:focus-visible::after {
   content: '';
   position: absolute;
   top: 0;

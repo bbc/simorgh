@@ -114,7 +114,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   margin-bottom: -0.25rem;
 }
 
-.emotion-7:focus-visible:after {
+.emotion-7:focus-visible::after {
   content: '';
   position: absolute;
   top: 0;
