@@ -21,7 +21,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         });
       });
     } else {
-      cy.log(`No ${pageType} found for ${service}`, () => {});
+      cy.log(`No ${pageType} found for ${service}`);
     }
   });
 
