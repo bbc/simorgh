@@ -11,6 +11,7 @@ import {
   mundoMultipleCurations,
   amharicOnlyTitle,
 } from './fixtures';
+import { VISUAL_PROMINANCE, VISUAL_STYLE } from './Curation';
 
 jest.mock('../../components/ThemeProvider');
 jest.mock('../../legacy/containers/ChartbeatAnalytics', () => {
@@ -166,7 +167,8 @@ describe('Topic Page', () => {
       const messageBannerCuration =
         kyrgyzTopicWithMessageBanners.curations.find(
           ({ visualStyle, visualProminence }) =>
-            visualProminence === 'NORMAL' && visualStyle === 'BANNER',
+            visualProminence === VISUAL_PROMINANCE.NORMAL &&
+            visualStyle === VISUAL_STYLE.BANNER,
         );
 
       const { getByRole } = render(
@@ -182,18 +184,18 @@ describe('Topic Page', () => {
     });
 
     it('should not render when visual style is banner and visual prominence is high', () => {
-      /**
-       * Pseudocode: get the curation with visual style = banner and visual prominence = high from the kyrgyzTopicWithMessageBanners.data
-       * Render the Topic page with the kyrgyzTopicWithMessageBanners.data
-       * Ensure that a banner with the title of the high banner curation is NOT in the document
-       */
-
-      const { getByTestId } = render(
+      const { queryByRole } = render(
         <TopicPage pageData={kyrgyzTopicWithMessageBanners} />,
         getOptionParams({ service: 'kyrgyz', lang: 'ky' }),
       );
-      getByTestId('fix-me');
-      expect(false).toBe(true);
+      const highProminenceBanner = kyrgyzTopicWithMessageBanners.curations.find(
+        curation =>
+          curation.visualStyle === VISUAL_STYLE.BANNER &&
+          curation.visualProminence === VISUAL_PROMINANCE.HIGH,
+      );
+      expect(
+        queryByRole('region', { name: highProminenceBanner.title }),
+      ).not.toBeInTheDocument();
     });
 
     it('should not render when visual style is not banner', () => {
