@@ -162,15 +162,31 @@ describe('Topic Page', () => {
   });
 
   describe('Message Banner', () => {
-    it('should only render banner when visual style is banner', () => {
-      const { queryAllByTestId } = render(
+    it('should only render when visual style is banner and visual prominence is normal', () => {
+      const { getByTestId } = render(
         <TopicPage pageData={kyrgyzTopicWithMessageBanners.data} />,
         getOptionParams({ service: 'kyrgyz', lang: 'ky' }),
       );
-      expect(queryAllByTestId('message-banner-test-id')).toHaveLength(2);
+      const messageBanner = getByTestId('message-banner-test-id');
+      expect(messageBanner).toBeInTheDocument();
     });
 
-    it('should not render banner when visual style is not banner', () => {
+    it('should not render when visual style is banner and visual prominence is high', () => {
+      /**
+       * Pseudocode: get the curation with visual style = banner and visual prominence = high from the kyrgyzTopicWithMessageBanners.data
+       * Render the Topic page with the kyrgyzTopicWithMessageBanners.data
+       * Ensure that a banner with the title of the high banner curation is NOT in the document
+       */
+
+      const { getByTestId } = render(
+        <TopicPage pageData={kyrgyzTopicWithMessageBanners.data} />,
+        getOptionParams({ service: 'kyrgyz', lang: 'ky' }),
+      );
+      getByTestId('fix-me');
+      expect(false).toBe(true);
+    });
+
+    it('should not render when visual style is not banner', () => {
       const { queryAllByTestId } = render(
         <TopicPage pageData={amharicSingleItem} />,
         getOptionParams({ service: 'amharic', lang: 'am' }),
