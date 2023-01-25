@@ -187,11 +187,12 @@ describe('Topic Page', () => {
     });
 
     it('should not render when visual style is not banner', () => {
-      const { queryAllByTestId } = render(
+      const { queryByTestId } = render(
         <TopicPage pageData={amharicSingleItem} />,
         getOptionParams({ service: 'amharic', lang: 'am' }),
       );
-      expect(queryAllByTestId('message-banner-test-id')).toHaveLength(0);
+
+      expect(queryByTestId('message-banner-test-id')).not.toBeInTheDocument();
     });
   });
 });
