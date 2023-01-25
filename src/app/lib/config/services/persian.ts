@@ -324,6 +324,10 @@ export const service: DefaultServiceConfig = {
     },
     recommendations: {
       hasStoryRecommendations: false,
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
