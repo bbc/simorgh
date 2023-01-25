@@ -13,25 +13,20 @@ describe('MessageBanner', () => {
     expect(region).toBeInTheDocument();
   });
 
-  it('has correct aria-labelledby attribute', () => {
+  it('should have a heading with an id which matches the aria-labelledby attribute', () => {
     const { getByRole } = render(
       <MessageBanner summaries={summaries} title={kyrgyzBanner.title} />,
     );
+    const heading = screen.getByText(kyrgyzBanner.title);
     const messageBannerEl = getByRole('region');
     expect(messageBannerEl.getAttribute('aria-labelledby')).toBe(
-      'message-banner',
+      heading.getAttribute('id'),
     );
   });
 
   it('should display the banner title correctly as an H2', () => {
     render(<MessageBanner summaries={summaries} title={kyrgyzBanner.title} />);
     expect(screen.getByText(kyrgyzBanner.title).nodeName).toBe('H2');
-  });
-
-  it('should have a heading with id of message-banner', () => {
-    render(<MessageBanner summaries={summaries} title={kyrgyzBanner.title} />);
-    const heading = screen.getByText(kyrgyzBanner.title);
-    expect(heading.getAttribute('id')).toBe('message-banner');
   });
 
   it('should display the banner subtext correctly as a Paragraph', () => {
