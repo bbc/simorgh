@@ -27,19 +27,33 @@
                                   "text": "فرانس میں ڈائنوسار کی دو میٹر لمبی ران کی ہڈی برآمد",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "a6dd8008",
@@ -69,19 +83,37 @@
                                         "text": "ملنے والی ہڈی کی لمبائی دو میٹر، لگ بھگ 6.6 فٹ، ہے",
                                         "attributes": []
                                       },
-                                      "position": [2, 1, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 1]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 1, 1]
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 1]
+                    "position": [
+                      2,
+                      1
+                    ]
                   },
                   {
                     "id": "509ebf73",
@@ -106,19 +138,37 @@
                                         "text": "ڈائنو",
                                         "attributes": []
                                       },
-                                      "position": [2, 2, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 2, 1, 1]
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 2, 1]
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 2]
+                    "position": [
+                      2,
+                      2
+                    ]
                   },
                   {
                     "id": "cbc15e3a",
@@ -130,11 +180,16 @@
                       "originCode": "cpsprodpb",
                       "copyrightHolder": "BBC News"
                     },
-                    "position": [2, 3]
+                    "position": [
+                      2,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "54fad026",
@@ -143,7 +198,9 @@
                 "firstPublished": 1564571298550,
                 "lastPublished": 1564571298550
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
             {
               "id": "4f317af8",
@@ -163,11 +220,18 @@
                             "text": "فرانس میں سائنسدانوں کو کھدائی کے دوران ایک مقام سے بڑے سائز کی ڈائنوسار کی ران کی ہڈی ملی ہے۔",
                             "attributes": []
                           },
-                          "position": [4, 1, 1]
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 1]
+                    "position": [
+                      4,
+                      1
+                    ]
                   },
                   {
                     "id": "3c8263d9",
@@ -182,11 +246,18 @@
                             "text": "کھدائی کا یہ مقام جنوب مشرقی فرانس میں واقع ہے اور گذشتہ ایک دہائی سے یہاں سے جانوروں اور نباتات کی باقیات نکلنے کا سلسلہ جاری ہے۔",
                             "attributes": []
                           },
-                          "position": [4, 2, 1]
+                          "position": [
+                            4,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 2]
+                    "position": [
+                      4,
+                      2
+                    ]
                   },
                   {
                     "id": "fe1d51a3",
@@ -201,15 +272,24 @@
                             "text": "ملنے والی ہڈی کی لمبائی دو میٹر، لگ بھگ 6.6 فٹ، ہے۔ یہ خیال کیا جا رہا کہ یہ ہڈی اس نسل سے تعلق رکھنے والے ڈائنوسار کی ہے جو پودے کھاتے تھے۔ پودے کھانے والے ڈائنوسارز کی دم اور گردن دوسری نسل کے ڈائنوسارز سے لمبی ہوتی تھی۔",
                             "attributes": []
                           },
-                          "position": [4, 3, 1]
+                          "position": [
+                            4,
+                            3,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 3]
+                    "position": [
+                      4,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [4]
+              "position": [
+                4
+              ]
             },
             {
               "id": "b7428c40",
@@ -229,17 +309,33 @@
                             "text": "پودے کھانے والے ڈائنوسارز کے بارے میں کہا جاتا ہے کہ وہ روئے زمین پر پائے جانے والے سب جانورں سے زیادہ عظیم الجثہ تھے۔",
                             "attributes": []
                           },
-                          "position": [5, 1, 1]
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
             },
-            { "id": "827ff561", "type": "mpu", "model": {}, "position": [6] },
+            {
+              "id": "827ff561",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                6
+              ]
+            },
             {
               "id": "0651bb1c",
               "type": "text",
@@ -258,11 +354,18 @@
                             "text": "سائنسدانوں کا کہنا ہے کہ وہ اس ہڈی کے اتنی محفوظ حالت میں ہونے پر حیرت زدہ ہیں۔ پیرس میں واقع نیشنل ہسٹری میوزیم سے تعلق رکھنے والے رونان آلائن نے ایک مقامی اخبار کو بتایا کہ 'ہم  ہڈی کے جوڑوں، عضلات، رگوں اور زخموں کے نشانات تک کو دیکھ سکتے ہیں۔'",
                             "attributes": []
                           },
-                          "position": [7, 1, 1]
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 1]
+                    "position": [
+                      7,
+                      1
+                    ]
                   },
                   {
                     "id": "523f6dc3",
@@ -277,11 +380,18 @@
                             "text": "'بڑی ہڈیوں کے ساتھ ایسا شاذ و نادر ہی ہوتا ہے۔ کیونکہ بڑی ہڈیوں میں خود سے ٹوٹ جانے کی صلاحیت زیادہ ہوتی ہے۔' ",
                             "attributes": []
                           },
-                          "position": [7, 2, 1]
+                          "position": [
+                            7,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 2]
+                    "position": [
+                      7,
+                      2
+                    ]
                   },
                   {
                     "id": "fedb0ec5",
@@ -296,11 +406,18 @@
                             "text": "ڈائنو سار کتنا بڑا تھا؟",
                             "attributes": []
                           },
-                          "position": [7, 3, 1]
+                          "position": [
+                            7,
+                            3,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 3]
+                    "position": [
+                      7,
+                      3
+                    ]
                   },
                   {
                     "id": "c474cc66",
@@ -315,15 +432,24 @@
                             "text": "رونان آلائن نے روئٹرز نیوز ایجنسی کو بتایا کہ یہ ہڈی جس نسل کے ڈائنوسار کی خیال کی جا رہی ہے وہ 14 کروڑ سال پہلے روئے زمین پر گھومتے پھرتے تھے اور ان کا وزن لگ بھگ 40 سے 50 ٹن تک ہوتا تھا۔",
                             "attributes": []
                           },
-                          "position": [7, 4, 1]
+                          "position": [
+                            7,
+                            4,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 4]
+                    "position": [
+                      7,
+                      4
+                    ]
                   }
                 ]
               },
-              "position": [7]
+              "position": [
+                7
+              ]
             },
             {
               "id": "a366a548",
@@ -353,19 +479,37 @@
                                         "text": "ڈائنو",
                                         "attributes": []
                                       },
-                                      "position": [8, 1, 1, 1, 1]
+                                      "position": [
+                                        8,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [8, 1, 1, 1]
+                                "position": [
+                                  8,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [8, 1, 1]
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 1]
+                    "position": [
+                      8,
+                      1
+                    ]
                   },
                   {
                     "id": "b2c3d89e",
@@ -377,11 +521,16 @@
                       "originCode": "cpsprodpb",
                       "copyrightHolder": "AFP"
                     },
-                    "position": [8, 2]
+                    "position": [
+                      8,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [8]
+              "position": [
+                8
+              ]
             },
             {
               "id": "8f7cb138",
@@ -401,11 +550,18 @@
                             "text": "مقامی اخبار کے مطابق سنہ 2010 میں اسی نسل کے ڈائنوسار کی 2.2 میٹر لمبی ہڈی کھدائی کے اسی مقام سے دریافت ہوئی تھی۔ اس ہڈی کا وزن 500 کلو تھا۔",
                             "attributes": []
                           },
-                          "position": [9, 1, 1]
+                          "position": [
+                            9,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [9, 1]
+                    "position": [
+                      9,
+                      1
+                    ]
                   },
                   {
                     "id": "b4e7d497",
@@ -420,15 +576,24 @@
                             "text": " نئی ملنے والی ہڈی کے وزن کے بارے میں خیال ہے کہ یہ بھی تقریباً 500 کلو گرام تک ہو گا۔ ہڈی ابھی مکمل طور پر زمین سے نکالی نہیں جا سکی ہے اور اس کام میں ایک ہفتے کا وقت اور کرین کی مدد درکار ہو گی۔",
                             "attributes": []
                           },
-                          "position": [9, 2, 1]
+                          "position": [
+                            9,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [9, 2]
+                    "position": [
+                      9,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [9]
+              "position": [
+                9
+              ]
             },
             {
               "id": "57055471",
@@ -453,19 +618,33 @@
                                   "text": "کھدائی کے مقام سے اور کیا ملا؟",
                                   "attributes": []
                                 },
-                                "position": [10, 1, 1, 1]
+                                "position": [
+                                  10,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [10, 1, 1]
+                          "position": [
+                            10,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [10, 1]
+                    "position": [
+                      10,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [10]
+              "position": [
+                10
+              ]
             },
             {
               "id": "d55327c8",
@@ -485,15 +664,24 @@
                             "text": "فرانس میں کوگنیک نامی قصبے کے قریب کھدائی کے مقام پر 70 سائنسدان اس موسم گرما میں کام کر رہے ہیں۔",
                             "attributes": []
                           },
-                          "position": [11, 1, 1]
+                          "position": [
+                            11,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [11, 1]
+                    "position": [
+                      11,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [11]
+              "position": [
+                11
+              ]
             },
             {
               "id": "0cc16d1f",
@@ -523,19 +711,37 @@
                                         "text": "سنہ 2010 سے اب تک کھدائی کے اس مقام سے 40 اقسام کے جانوروں اور نباتات کی 7500 باقیات مل چکی ہیں",
                                         "attributes": []
                                       },
-                                      "position": [12, 1, 1, 1, 1]
+                                      "position": [
+                                        12,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [12, 1, 1, 1]
+                                "position": [
+                                  12,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [12, 1, 1]
+                          "position": [
+                            12,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [12, 1]
+                    "position": [
+                      12,
+                      1
+                    ]
                   },
                   {
                     "id": "713104b8",
@@ -560,19 +766,37 @@
                                         "text": "ڈائنو",
                                         "attributes": []
                                       },
-                                      "position": [12, 2, 1, 1, 1]
+                                      "position": [
+                                        12,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [12, 2, 1, 1]
+                                "position": [
+                                  12,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [12, 2, 1]
+                          "position": [
+                            12,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [12, 2]
+                    "position": [
+                      12,
+                      2
+                    ]
                   },
                   {
                     "id": "98b67033",
@@ -584,11 +808,16 @@
                       "originCode": "cpsprodpb",
                       "copyrightHolder": "BBC"
                     },
-                    "position": [12, 3]
+                    "position": [
+                      12,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [12]
+              "position": [
+                12
+              ]
             },
             {
               "id": "67d389a2",
@@ -608,11 +837,18 @@
                             "text": "سنہ 2010 سے اب تک کھدائی کے اس مقام سے 40 اقسام کے جانوروں اور نباتات کی 7500 باقیات مل چکی ہیں۔ اور اسی وجہ سے کھدائی کا یہ مقام یورپ بھر میں اہمیت اختیار کر چکا ہے۔ ",
                             "attributes": []
                           },
-                          "position": [13, 1, 1]
+                          "position": [
+                            13,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [13, 1]
+                    "position": [
+                      13,
+                      1
+                    ]
                   },
                   {
                     "id": "b9baf241",
@@ -627,15 +863,24 @@
                             "text": "فرانسیسی اخبار کے مطابق اس مقام سے ڈائنوسار کے دو مختلف نسلوں کی ہڈیاں برآمد ہو ئی ہیں۔",
                             "attributes": []
                           },
-                          "position": [13, 2, 1]
+                          "position": [
+                            13,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [13, 2]
+                    "position": [
+                      13,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [13]
+              "position": [
+                13
+              ]
             }
           ]
         }
@@ -643,16 +888,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c4qg7qq63y6o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c4qg7qq63y6o",
-          "canonicalUrl": "https://www.bbc.com/urdu/articles/c4qg7qq63y6o"
+          "optimoUrn": "urn:bbc:optimo:asset:c4qg7qq63y6o"
         },
         "type": "article",
         "createdBy": "Urdu",
         "language": "ur",
-        "lastUpdated": 1646742771560,
         "firstPublished": 1564571298550,
         "lastPublished": 1564571298550,
-        "timestamp": 1564571298550,
         "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c4qg7qq63y6o",
@@ -665,7 +907,6 @@
           "taggings": []
         },
         "tags": {},
-        "version": "v1.4.2",
         "blockTypes": [
           "headline",
           "text",
@@ -677,37 +918,15 @@
           "rawImage",
           "subheadline"
         ],
-        "readTime": 2,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c4qg7qq63y6o",
-          "canonicalUrl": "https://www.bbc.com/urdu/articles/c4qg7qq63y6o"
-        },
-        "timestamp": 1564571298550,
-        "suitableForSyndication": false,
-        "language": "ur",
+        "locators": {},
         "headlines": {
           "seoHeadline": "فرانس میں ڈائنوسار کی دو میٹر لمبی ران کی ہڈی برآمد"
         },
         "images": {},
-        "passport": {
-          "language": "ur",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Urdu",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c4qg7qq63y6o",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Urdu",
-          "uri": "/urdu",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {
@@ -758,7 +977,10 @@
             }
           },
           "isLive": true,
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "special",
           "liveStatus": "LIVE",
           "id": "urn:bbc:ares::asset:urdu/live/pakistan-63830814",
@@ -898,7 +1120,10 @@
             "originCode": "cpsprodpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:urdu/sport-63643382",
           "type": "cps"
         }
@@ -1102,7 +1327,10 @@
                       "thingLabel": "Feature",
                       "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
                       "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
                       ],
@@ -1145,7 +1373,9 @@
                         "tagging:TagConcept",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/2017370/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/2017370/"
+                      ],
                       "thingEnglishLabel": "Russia",
                       "type": "about"
                     },
@@ -1195,7 +1425,9 @@
                         "core:Thing",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Economy"],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Economy"
+                      ],
                       "thingEnglishLabel": "Economics",
                       "type": "about"
                     }
@@ -1424,7 +1656,10 @@
                       "thingLabel": "Explainer",
                       "thingUri": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
                       "thingId": "bb3ead7c-eb94-453b-b9de-34a59aba2fbf",
-                      "thingType": ["tagging:Format", "tagging:TagConcept"],
+                      "thingType": [
+                        "tagging:Format",
+                        "tagging:TagConcept"
+                      ],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer"
                       ],
@@ -1469,7 +1704,9 @@
                         "core:Theme",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Police"],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Police"
+                      ],
                       "thingEnglishLabel": "Policing",
                       "type": "about"
                     },
@@ -1502,7 +1739,9 @@
                         "core:Thing",
                         "core:Place"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/1168579/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1168579/"
+                      ],
                       "thingEnglishLabel": "Pakistan",
                       "type": "about"
                     }
@@ -1937,7 +2176,10 @@
                       "thingLabel": "Explainer",
                       "thingUri": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
                       "thingId": "bb3ead7c-eb94-453b-b9de-34a59aba2fbf",
-                      "thingType": ["tagging:Format", "tagging:TagConcept"],
+                      "thingType": [
+                        "tagging:Format",
+                        "tagging:TagConcept"
+                      ],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer"
                       ],
@@ -1964,7 +2206,9 @@
                         "tagging:TagConcept",
                         "core:Place"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/6251999/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/6251999/"
+                      ],
                       "thingEnglishLabel": "Canada",
                       "type": "about"
                     },
@@ -2247,7 +2491,9 @@
                         "core:Thing",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Economy"],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Economy"
+                      ],
                       "thingEnglishLabel": "Economics",
                       "type": "about"
                     },
@@ -2261,7 +2507,9 @@
                         "core:Thing",
                         "core:Place"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/1168579/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1168579/"
+                      ],
                       "thingEnglishLabel": "Pakistan",
                       "type": "about"
                     }
@@ -2457,7 +2705,10 @@
                       "thingLabel": "Explainer",
                       "thingUri": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
                       "thingId": "bb3ead7c-eb94-453b-b9de-34a59aba2fbf",
-                      "thingType": ["tagging:Format", "tagging:TagConcept"],
+                      "thingType": [
+                        "tagging:Format",
+                        "tagging:TagConcept"
+                      ],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer"
                       ],
@@ -2503,7 +2754,9 @@
                         "core:Thing",
                         "core:Theme"
                       ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Internet"],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Internet"
+                      ],
                       "thingEnglishLabel": "Internet",
                       "type": "about"
                     },
@@ -2517,7 +2770,9 @@
                         "core:Thing",
                         "core:Place"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/1168579/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1168579/"
+                      ],
                       "thingEnglishLabel": "Pakistan",
                       "type": "about"
                     }
@@ -2709,7 +2964,10 @@
                       "thingLabel": "Explainer",
                       "thingUri": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
                       "thingId": "bb3ead7c-eb94-453b-b9de-34a59aba2fbf",
-                      "thingType": ["tagging:Format", "tagging:TagConcept"],
+                      "thingType": [
+                        "tagging:Format",
+                        "tagging:TagConcept"
+                      ],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer"
                       ],
@@ -2730,7 +2988,9 @@
                         "core:Theme",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Islam"],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Islam"
+                      ],
                       "thingEnglishLabel": "Islam",
                       "type": "about"
                     },
@@ -2744,7 +3004,9 @@
                         "core:Thing",
                         "core:Place"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/1168579/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1168579/"
+                      ],
                       "thingEnglishLabel": "Pakistan",
                       "type": "about"
                     },
@@ -2862,7 +3124,10 @@
                       "thingLabel": "Feature",
                       "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
                       "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
                       ],
@@ -2900,7 +3165,9 @@
                         "core:Thing",
                         "core:Place"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/1168579/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1168579/"
+                      ],
                       "thingEnglishLabel": "Pakistan",
                       "type": "about"
                     },
@@ -2914,7 +3181,9 @@
                         "core:Theme",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Law"],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Law"
+                      ],
                       "thingEnglishLabel": "Law and order",
                       "type": "about"
                     },
@@ -2982,7 +3251,10 @@
                     "name": "Firouzeh Akbarian",
                     "function": "BBC World Service"
                   },
-                  { "name": "Sofia Bettiza", "function": "BBC World Service" }
+                  {
+                    "name": "Sofia Bettiza",
+                    "function": "BBC World Service"
+                  }
                 ]
               },
               "passport": {
@@ -3072,7 +3344,10 @@
                       "thingLabel": "Feature",
                       "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
                       "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
                       ],
@@ -3110,7 +3385,9 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/130758/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/130758/"
+                      ],
                       "thingEnglishLabel": "Iran",
                       "type": "about"
                     },
@@ -3413,7 +3690,10 @@
                       "thingLabel": "Feature",
                       "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
                       "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
                       ],
@@ -3458,7 +3738,9 @@
                         "core:Thing",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/1167528/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1167528/"
+                      ],
                       "thingEnglishLabel": "Quetta",
                       "type": "about"
                     },
@@ -3472,7 +3754,9 @@
                         "core:Thing",
                         "core:Place"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/1168579/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1168579/"
+                      ],
                       "thingEnglishLabel": "Pakistan",
                       "type": "about"
                     }
@@ -3672,7 +3956,10 @@
                       "thingLabel": "News report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -3726,7 +4013,9 @@
                         "core:Thing",
                         "core:Place"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/1168579/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1168579/"
+                      ],
                       "thingEnglishLabel": "Pakistan",
                       "type": "about"
                     },
@@ -3978,7 +4267,10 @@
                       "thingLabel": "News report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -4044,7 +4336,9 @@
                         "tagging:TagConcept",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/289688/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/289688/"
+                      ],
                       "thingEnglishLabel": "Qatar",
                       "type": "about"
                     },
@@ -4257,7 +4551,10 @@
                       "thingLabel": "News report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -4535,7 +4832,10 @@
                       "thingLabel": "News report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -4591,7 +4891,9 @@
                         "core:Place",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/1643084/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1643084/"
+                      ],
                       "thingEnglishLabel": "Indonesia",
                       "type": "about"
                     },
@@ -4605,7 +4907,9 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/2077456/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/2077456/"
+                      ],
                       "thingEnglishLabel": "Australia",
                       "type": "about"
                     },
@@ -4653,7 +4957,9 @@
                         "core:Theme",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Law"],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Law"
+                      ],
                       "thingEnglishLabel": "Law and order",
                       "type": "about"
                     },
@@ -4704,7 +5010,10 @@
                 "name": "  صوفیا سمتھ گیلر ",
                 "title": " بی بی سی فیوچر ",
                 "persons": [
-                  { "name": "ريفل ألدرسون", "function": "بي بي سي اسكتلندا" }
+                  {
+                    "name": "ريفل ألدرسون",
+                    "function": "بي بي سي اسكتلندا"
+                  }
                 ]
               },
               "passport": {
@@ -4795,7 +5104,10 @@
                       "thingLabel": "Explainer",
                       "thingUri": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
                       "thingId": "bb3ead7c-eb94-453b-b9de-34a59aba2fbf",
-                      "thingType": ["tagging:Format", "tagging:TagConcept"],
+                      "thingType": [
+                        "tagging:Format",
+                        "tagging:TagConcept"
+                      ],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer"
                       ],
@@ -5146,7 +5458,10 @@
                       "thingLabel": "Feature",
                       "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
                       "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
                       ],
@@ -5238,7 +5553,9 @@
                         "tagging:TagConcept",
                         "core:Theme"
                       ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Bollywood"],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Bollywood"
+                      ],
                       "thingEnglishLabel": "Bollywood",
                       "type": "about"
                     },
@@ -5495,7 +5812,10 @@
                       "thingLabel": "Feature",
                       "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
                       "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
                       ],
@@ -5522,7 +5842,9 @@
                         "core:Thing",
                         "core:Place"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/1168579/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1168579/"
+                      ],
                       "thingEnglishLabel": "Pakistan",
                       "type": "about"
                     },
@@ -5590,7 +5912,10 @@
                 "name": "  اماندہ روگری",
                 "title": " بی بی سی، فیملی فیچرز",
                 "persons": [
-                  { "name": "ريفل ألدرسون", "function": "بي بي سي اسكتلندا" }
+                  {
+                    "name": "ريفل ألدرسون",
+                    "function": "بي بي سي اسكتلندا"
+                  }
                 ]
               },
               "passport": {
@@ -5713,7 +6038,10 @@
                       "thingLabel": "Feature",
                       "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
                       "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
                       ],
@@ -5788,7 +6116,9 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/2635167/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/2635167/"
+                      ],
                       "thingEnglishLabel": "United Kingdom",
                       "type": "about"
                     },
@@ -5819,7 +6149,9 @@
                         "core:Thing",
                         "core:Place"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/2661886/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/2661886/"
+                      ],
                       "thingEnglishLabel": "Sweden",
                       "type": "about"
                     },
@@ -5851,7 +6183,9 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/6252001/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/6252001/"
+                      ],
                       "thingEnglishLabel": "United States",
                       "type": "about"
                     },
@@ -6099,7 +6433,10 @@
                       "thingLabel": "Explainer",
                       "thingUri": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
                       "thingId": "bb3ead7c-eb94-453b-b9de-34a59aba2fbf",
-                      "thingType": ["tagging:Format", "tagging:TagConcept"],
+                      "thingType": [
+                        "tagging:Format",
+                        "tagging:TagConcept"
+                      ],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer"
                       ],
@@ -6377,7 +6714,10 @@
                       "thingLabel": "Explainer",
                       "thingUri": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
                       "thingId": "bb3ead7c-eb94-453b-b9de-34a59aba2fbf",
-                      "thingType": ["tagging:Format", "tagging:TagConcept"],
+                      "thingType": [
+                        "tagging:Format",
+                        "tagging:TagConcept"
+                      ],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer"
                       ],

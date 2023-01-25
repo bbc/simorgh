@@ -27,19 +27,33 @@
                                   "text": "This is the headline of this test article",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "a722057e",
@@ -69,19 +83,37 @@
                                         "text": "This test image, copyright BBC, shows a map of France.  The image is in the first three blocks and has this caption.",
                                         "attributes": []
                                       },
-                                      "position": [2, 1, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 1]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 1, 1]
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 1]
+                    "position": [
+                      2,
+                      1
+                    ]
                   },
                   {
                     "id": "1659f08c",
@@ -106,19 +138,37 @@
                                         "text": "Map of France showing Paris and Cognac",
                                         "attributes": []
                                       },
-                                      "position": [2, 2, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 2, 1, 1]
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 2, 1]
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 2]
+                    "position": [
+                      2,
+                      2
+                    ]
                   },
                   {
                     "id": "2100dddd",
@@ -130,11 +180,16 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "BBC"
                     },
-                    "position": [2, 3]
+                    "position": [
+                      2,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "cae12eed",
@@ -143,7 +198,9 @@
                 "firstPublished": 1565868211077,
                 "lastPublished": 1565868211077
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
             {
               "id": "f57fb8ea",
@@ -163,7 +220,11 @@
                             "text": "This is a text block, which contains a url link to ",
                             "attributes": []
                           },
-                          "position": [4, 1, 1]
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
                         },
                         {
                           "id": "b087a37c",
@@ -178,27 +239,48 @@
                                   "text": "the BBC Weather homepage",
                                   "attributes": []
                                 },
-                                "position": [4, 1, 2, 1]
+                                "position": [
+                                  4,
+                                  1,
+                                  2,
+                                  1
+                                ]
                               }
                             ],
                             "locator": "https://www.bbc.co.uk/weather",
                             "isExternal": false
                           },
-                          "position": [4, 1, 2]
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
                         },
                         {
                           "id": "e4c0f022",
                           "type": "fragment",
-                          "model": { "text": ".", "attributes": [] },
-                          "position": [4, 1, 3]
+                          "model": {
+                            "text": ".",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            3
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 1]
+                    "position": [
+                      4,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [4]
+              "position": [
+                4
+              ]
             },
             {
               "id": "bc9939b1",
@@ -229,19 +311,37 @@
                                         "text": "This is a video block containing a video about ants",
                                         "attributes": []
                                       },
-                                      "position": [5, 1, 1, 1, 1]
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 1, 1, 1]
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 1, 1]
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   },
                   {
                     "id": "ca369ba4",
@@ -267,7 +367,9 @@
                             "versions": [
                               {
                                 "versionId": "p01k6msp",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 191,
                                 "durationISO8601": "PT3M11S",
                                 "warnings": {
@@ -281,10 +383,16 @@
                                 "availableFrom": 1540218932000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [5, 2, 1]
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "dfa073f6",
@@ -301,7 +409,12 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "BBC"
                                 },
-                                "position": [5, 2, 2, 1]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
                                 "id": "afa3db76",
@@ -327,32 +440,65 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    5, 2, 2, 2, 1, 1, 1
+                                                    5,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [5, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              5,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [5, 2, 2, 2, 1]
+                                      "position": [
+                                        5,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 2, 2, 2]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 2, 2]
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 2]
+                    "position": [
+                      5,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
             },
             {
               "id": "65b48da3",
@@ -377,19 +523,33 @@
                                   "text": "This is a subheadline block",
                                   "attributes": []
                                 },
-                                "position": [6, 1, 1, 1]
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [6, 1, 1]
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 1]
+                    "position": [
+                      6,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [6]
+              "position": [
+                6
+              ]
             },
             {
               "id": "f21a979f",
@@ -419,19 +579,37 @@
                                         "text": "Footballers after a match",
                                         "attributes": []
                                       },
-                                      "position": [7, 1, 1, 1, 1]
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [7, 1, 1, 1]
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [7, 1, 1]
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 1]
+                    "position": [
+                      7,
+                      1
+                    ]
                   },
                   {
                     "id": "177d9f4d",
@@ -443,11 +621,16 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "Getty Images"
                     },
-                    "position": [7, 2]
+                    "position": [
+                      7,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [7]
+              "position": [
+                7
+              ]
             },
             {
               "id": "5acc5f4d",
@@ -467,11 +650,18 @@
                             "text": "This test article has been created so that we can run automated end-to-end tests on our website.",
                             "attributes": []
                           },
-                          "position": [8, 1, 1]
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 1]
+                    "position": [
+                      8,
+                      1
+                    ]
                   },
                   {
                     "id": "b48c8e99",
@@ -492,39 +682,57 @@
                                   "text": "This is a link to the Welsh version of this test article",
                                   "attributes": []
                                 },
-                                "position": [8, 2, 1, 1]
+                                "position": [
+                                  8,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ],
                             "locator": "https://www.test.bbc.com/arabic/articles/c1er5mjnznzo",
                             "isExternal": false
                           },
-                          "position": [8, 2, 1]
+                          "position": [
+                            8,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 2]
+                    "position": [
+                      8,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [8]
+              "position": [
+                8
+              ]
             },
-            { "id": "0792b52e", "type": "mpu", "model": {}, "position": [9] }
+            {
+              "id": "0792b52e",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            }
           ]
         }
       },
       "metadata": {
         "id": "urn:bbc:ares::article:cn7k01xp8kxo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cn7k01xp8kxo",
-          "canonicalUrl": "https://www.bbc.com/news/articles/cn7k01xp8kxo"
+          "optimoUrn": "urn:bbc:optimo:asset:cn7k01xp8kxo"
         },
         "type": "article",
         "createdBy": "News",
         "language": "en-gb",
-        "lastUpdated": 1662111921595,
         "firstPublished": 1565868211077,
         "lastPublished": 1565868211077,
-        "timestamp": 1565868211077,
         "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cn7k01xp8kxo",
@@ -534,13 +742,9 @@
         "passport": {
           "language": "en-gb",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
-          "locator": "urn:bbc:optimo:asset:cn7k01xp8kxo",
-          "availability": "AVAILABLE",
-          "taggings": [],
-          "publishedState": "PUBLISHED"
+          "taggings": []
         },
         "tags": {},
-        "version": "v1.4.7",
         "blockTypes": [
           "headline",
           "text",
@@ -555,18 +759,11 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "consumableAsSFV": false,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cn7k01xp8kxo",
-          "canonicalUrl": "https://www.bbc.com/news/articles/cn7k01xp8kxo"
-        },
-        "timestamp": 1565868211077,
-        "suitableForSyndication": false,
-        "language": "en-gb",
+        "locators": {},
         "headlines": {
           "seoHeadline": "This is the SEO headline of this test article",
           "promoHeadline": {
@@ -696,25 +893,7 @@
             }
           ]
         },
-        "passport": {
-          "language": "en-gb",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
-          "locator": "urn:bbc:optimo:asset:cn7k01xp8kxo",
-          "availability": "AVAILABLE",
-          "taggings": [],
-          "publishedState": "PUBLISHED"
-        },
-        "id": "urn:bbc:ares::article:cn7k01xp8kxo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "News",
-          "uri": "/news",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {
@@ -736,7 +915,12 @@
           "byline": {
             "name": "By Sarah Collerton",
             "title": "BBC News",
-            "persons": [{ "name": "Sarah Collerton", "function": "BBC News" }]
+            "persons": [
+              {
+                "name": "Sarah Collerton",
+                "function": "BBC News"
+              }
+            ]
           },
           "cpsType": "STY",
           "indexImage": {
@@ -767,7 +951,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Angela Lansbury 1925 - 2022" },
+          "headlines": {
+            "headline": "Angela Lansbury 1925 - 2022"
+          },
           "locators": {
             "assetUri": "/news/23531477",
             "curieCpsUrn": "urn:bbc:cps:curie:asset:acab4bbb-ff5a-499b-8617-b8fa24d5e088",
@@ -974,7 +1160,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Lego Titanic sunk" },
+          "headlines": {
+            "headline": "Lego Titanic sunk"
+          },
           "locators": {
             "assetUri": "/news/business-23481281",
             "curieCpsUrn": "urn:bbc:cps:curie:asset:06cb5998-373d-41ea-b249-6aec87d3329b",
@@ -1094,7 +1282,12 @@
           "byline": {
             "name": "By Sian Prescott",
             "title": "BBC News",
-            "persons": [{ "name": "Sian Prescott", "function": "BBC News" }]
+            "persons": [
+              {
+                "name": "Sian Prescott",
+                "function": "BBC News"
+              }
+            ]
           },
           "cpsType": "STY",
           "indexImage": {
@@ -1154,7 +1347,10 @@
                 "name": "By Benjamen Walker",
                 "title": "BBC World Service",
                 "persons": [
-                  { "name": "Benjamen Walker", "function": "BBC World Service" }
+                  {
+                    "name": "Benjamen Walker",
+                    "function": "BBC World Service"
+                  }
                 ]
               },
               "indexImage": {
@@ -1374,7 +1570,10 @@
                 "name": "By Cindy Sui",
                 "title": "BBC News, Taipei",
                 "persons": [
-                  { "name": "Cindy Sui", "function": "BBC News, Taipei" }
+                  {
+                    "name": "Cindy Sui",
+                    "function": "BBC News, Taipei"
+                  }
                 ]
               },
               "indexImage": {
@@ -1736,7 +1935,10 @@
                       "thingLabel": "Design and Technology",
                       "thingUri": "http://www.bbc.co.uk/things/add89d72-af77-4490-b479-25fd45bb5e72#id",
                       "thingId": "add89d72-af77-4490-b479-25fd45bb5e72",
-                      "thingType": ["core:Thing", "tagging:TagConcept"],
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/education/subjects/zykw2hv#field-of-study"
                       ],
@@ -1829,7 +2031,12 @@
               "byline": {
                 "name": "By Will Grant",
                 "title": "BBC News, Mexico",
-                "persons": [{ "name": "Will Grant", "function": "BBC News" }]
+                "persons": [
+                  {
+                    "name": "Will Grant",
+                    "function": "BBC News"
+                  }
+                ]
               },
               "passport": {
                 "category": {
@@ -1889,7 +2096,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
