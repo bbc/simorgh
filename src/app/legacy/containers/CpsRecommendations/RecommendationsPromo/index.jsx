@@ -20,16 +20,18 @@ import {
 import { shape, string, oneOfType, boolean } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import Grid from '../../../components/Grid';
 import RecommendationsImage from '../RecommendationsPromoImage';
 import useCombinedClickTrackerHandler from '../../StoryPromo/useCombinedClickTrackerHandler';
 import extractPromoData from './utility';
 
-const makeStyledPromoWrapper = isArticle => styled.div`
+const StyledPromoWrapper = styled.div`
   position: relative;
   padding: ${GEL_SPACING};
   margin-top: ${GEL_SPACING};
-  background-color: ${isArticle ? C_GHOST : C_GREY_2};
+  background-color: ${props => (props.isArticlePage ? C_GHOST : C_GREY_2)};
 `;
 
 const ImageWrapper = styled.div`
@@ -101,13 +103,14 @@ const StyledHeadline = styled.div`
   align-items: center;
 `;
 
-const RecommendationsPromo = ({ promo, eventTrackingData, isArticle }) => {
+const RecommendationsPromo = ({ promo, eventTrackingData }) => {
   const { script, service } = useContext(ServiceContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
   const { headline, url, indexImage } = extractPromoData({ promo });
 
-  const StyledPromoWrapper = makeStyledPromoWrapper(isArticle);
+  const { pageType } = useContext(RequestContext);
+  const isArticlePage = pageType === ARTICLE_PAGE;
 
   return (
     <Grid
@@ -121,7 +124,7 @@ const RecommendationsPromo = ({ promo, eventTrackingData, isArticle }) => {
       }}
       enableGelGutters
     >
-      <StyledPromoWrapper data-e2e="story-promo-wrapper">
+      <StyledPromoWrapper data-e2e="story-promo-wrapper" isArticlePage>
         <ImageWrapper>
           <RecommendationsImage indexImage={indexImage} lazyLoad />
         </ImageWrapper>
@@ -142,7 +145,6 @@ const RecommendationsPromo = ({ promo, eventTrackingData, isArticle }) => {
 
 RecommendationsPromo.propTypes = {
   promo: oneOfType([shape(storyItem)]).isRequired,
-  isArticle: boolean,
   eventTrackingData: shape({
     block: shape({
       componentName: string,
@@ -157,7 +159,6 @@ RecommendationsPromo.propTypes = {
 
 RecommendationsPromo.defaultProps = {
   eventTrackingData: null,
-  isArticle: false,
 };
 
 export default RecommendationsPromo;

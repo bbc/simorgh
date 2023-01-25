@@ -25,7 +25,7 @@ const getEventTrackingDataWithOptimizely = ({ item, index, optimizely }) => {
 
 const RecommendationsPromoListItem = forwardRef(
   // 004_brasil_recommendations_experiment
-  ({ item, index, service, optimizely, isArticle }, forwardedRef) => {
+  ({ item, index, service, optimizely }, forwardedRef) => {
     const eventTrackingData =
       service === 'portuguese'
         ? getEventTrackingDataWithOptimizely({
@@ -60,14 +60,13 @@ const RecommendationsPromoListItem = forwardRef(
         <RecommendationsPromo
           promo={item}
           eventTrackingData={eventTrackingData}
-          isArticle={isArticle}
         />
       </Grid>
     );
   },
 );
 
-const RecommendationsPromoList = ({ promoItems, isArticle }) => {
+const RecommendationsPromoList = ({ promoItems }) => {
   // 004_brasil_recommendations_experiment
   const { service } = useContext(ServiceContext);
   const { optimizely } = useContext(OptimizelyContext);
@@ -100,7 +99,6 @@ const RecommendationsPromoList = ({ promoItems, isArticle }) => {
           item={item}
           optimizely={optimizely}
           service={service}
-          isArticle={isArticle}
         />
       ))}
     </Grid>
@@ -112,20 +110,10 @@ RecommendationsPromoListItem.propTypes = {
   index: number.isRequired,
   service: string.isRequired,
   optimizely: shape({}).isRequired,
-  isArticle: boolean,
 };
 
 RecommendationsPromoList.propTypes = {
   promoItems: arrayOf(shape(storyItem)).isRequired,
-  isArticle: boolean,
-};
-
-RecommendationsPromoList.defaultProps = {
-  isArticle: false,
-};
-
-RecommendationsPromoListItem.defaultProps = {
-  isArticle: false,
 };
 
 export default RecommendationsPromoList;

@@ -21,12 +21,14 @@ import { storyItem } from '#models/propTypes/storyItem';
 import useToggle from '#hooks/useToggle';
 import { GridItemMediumNoMargin } from '#components/Grid';
 import { ServiceContext } from '../../../contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import RecommendationsPromoList from './RecommendationsPromoList';
 import RecommendationsPromo from './RecommendationsPromo';
 import ErrorBoundary from './ErrorBoundary';
 
-const makeRecommendationsWrapper = (isArticle = false) => styled.div`
-  background-color: ${isArticle ? C_GREY_2 : C_GHOST};
+const RecommendationsWrapper = styled.div`
+  background-color: ${props => (props.isArticlePage ? C_GREY_2 : C_GHOST)};
   margin: ${GEL_SPACING_TRPL} 0;
   padding: ${GEL_SPACING_DBL} ${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
@@ -47,18 +49,18 @@ const LabelComponent = styled(SectionLabel)`
   }
 `;
 
-const CpsRecommendations = ({ items, isArticle = false }) => {
+const CpsRecommendations = ({ items }) => {
   const { recommendations, translations, script, service, dir } =
     useContext(ServiceContext);
+  const { pageType } = useContext(RequestContext);
   const { enabled } = useToggle('cpsRecommendations');
+  const isArticlePage = pageType === ARTICLE_PAGE;
   const labelId = 'recommendations-heading';
   const a11yAttributes = {
     as: 'section',
     role: 'region',
     'aria-labelledby': labelId,
   };
-
-  const RecommendationsWrapper = makeRecommendationsWrapper(isArticle);
 
   const { hasStoryRecommendations } = recommendations;
 
@@ -88,7 +90,11 @@ const CpsRecommendations = ({ items, isArticle = false }) => {
   return (
     <ErrorBoundary recommendations={items}>
       <GridItemMediumNoMargin>
-        <RecommendationsWrapper data-e2e={labelId} {...a11yAttributes}>
+        <RecommendationsWrapper
+          data-e2e={labelId}
+          {...a11yAttributes}
+          isArticlePage
+        >
           <SkipLinkWrapper service={service} {...skipLink}>
             {title ? (
               <LabelComponent
@@ -100,18 +106,15 @@ const CpsRecommendations = ({ items, isArticle = false }) => {
                 mobileDivider={false}
                 overrideHeadingAs="strong"
                 bar={false}
-                backgroundColor={isArticle ? C_GREY_2 : C_GHOST}
+                backgroundColor={isArticlePage ? C_GREY_2 : C_GHOST}
               >
                 {title}
               </LabelComponent>
             ) : null}
             {isSinglePromo ? (
-              <RecommendationsPromo promo={items[0]} isArticle={isArticle} />
+              <RecommendationsPromo promo={items[0]} />
             ) : (
-              <RecommendationsPromoList
-                promoItems={items}
-                isArticle={isArticle}
-              />
+              <RecommendationsPromoList promoItems={items} />
             )}
           </SkipLinkWrapper>
         </RecommendationsWrapper>
@@ -124,10 +127,8 @@ export default CpsRecommendations;
 
 CpsRecommendations.propTypes = {
   items: arrayOf(shape(storyItem)),
-  isArticle: boolean,
 };
 
 CpsRecommendations.defaultProps = {
   items: [],
-  isArticle: false,
 };
