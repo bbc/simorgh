@@ -163,11 +163,21 @@ describe('Topic Page', () => {
 
   describe('Message Banner', () => {
     it('should only render when visual style is banner and visual prominence is normal', () => {
-      const { getByTestId } = render(
+      const messageBannerCuration =
+        kyrgyzTopicWithMessageBanners.data.curations.find(
+          ({ visualStyle, visualProminence }) =>
+            visualProminence === 'NORMAL' && visualStyle === 'BANNER',
+        );
+
+      const { getByRole } = render(
         <TopicPage pageData={kyrgyzTopicWithMessageBanners.data} />,
         getOptionParams({ service: 'kyrgyz', lang: 'ky' }),
       );
-      const messageBanner = getByTestId('message-banner-test-id');
+
+      const messageBanner = getByRole('region', {
+        name: messageBannerCuration.title,
+      });
+
       expect(messageBanner).toBeInTheDocument();
     });
 
