@@ -20,6 +20,9 @@ export default {
   include: {
     enabled: true,
   },
+  messageBanner: {
+    enabled: false,
+  },
   mostRead: {
     enabled: true,
   },
