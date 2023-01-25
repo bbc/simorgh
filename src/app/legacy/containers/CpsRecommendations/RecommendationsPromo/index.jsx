@@ -123,7 +123,10 @@ const RecommendationsPromo = ({ promo, eventTrackingData }) => {
       }}
       enableGelGutters
     >
-      <StyledPromoWrapper data-e2e="story-promo-wrapper" isArticlePage = {pageType === ARTICLE_PAGE}>
+      <StyledPromoWrapper
+        data-e2e="story-promo-wrapper"
+        isArticlePage={pageType === ARTICLE_PAGE}
+      >
         <ImageWrapper>
           <RecommendationsImage indexImage={indexImage} lazyLoad />
         </ImageWrapper>
