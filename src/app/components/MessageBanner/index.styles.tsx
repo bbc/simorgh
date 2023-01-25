@@ -117,7 +117,7 @@ const styles = {
         textDecoration: 'underline',
         color: palette.BLACK,
       },
-      paddingRight: '0.5rem',
+      // paddingRight: '0.5rem',
       paddingLeft: '0.5rem',
       verticalAlign: 'middle',
       '&:visited': {
@@ -127,7 +127,7 @@ const styles = {
   chevron: () =>
     css({
       marginLeft: '0.5rem',
-      marginRight: '0.5rem',
+      // marginRight: '0.5rem',
       width: '16px',
       height: '16px',
       verticalAlign: 'middle',
