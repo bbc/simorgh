@@ -93,7 +93,7 @@ const CpsRecommendations = ({ items }) => {
         <RecommendationsWrapper
           data-e2e={labelId}
           {...a11yAttributes}
-          isArticlePage
+          isArticlePage={pageType === ARTICLE_PAGE}
         >
           <SkipLinkWrapper service={service} {...skipLink}>
             {title ? (
