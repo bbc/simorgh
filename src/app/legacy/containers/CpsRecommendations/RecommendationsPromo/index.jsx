@@ -20,8 +20,8 @@ import {
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { shape, string, oneOfType } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
+import { ServiceContext } from '../../../../contexts/ServiceContext';
 import Grid from '../../../components/Grid';
 import RecommendationsImage from '../RecommendationsPromoImage';
 import useCombinedClickTrackerHandler from '../../StoryPromo/useCombinedClickTrackerHandler';
@@ -110,7 +110,6 @@ const RecommendationsPromo = ({ promo, eventTrackingData }) => {
   const { headline, url, indexImage } = extractPromoData({ promo });
 
   const { pageType } = useContext(RequestContext);
-  const isArticlePage = pageType === ARTICLE_PAGE;
 
   return (
     <Grid
@@ -124,7 +123,7 @@ const RecommendationsPromo = ({ promo, eventTrackingData }) => {
       }}
       enableGelGutters
     >
-      <StyledPromoWrapper data-e2e="story-promo-wrapper" isArticlePage>
+      <StyledPromoWrapper data-e2e="story-promo-wrapper" isArticlePage = {pageType === ARTICLE_PAGE}>
         <ImageWrapper>
           <RecommendationsImage indexImage={indexImage} lazyLoad />
         </ImageWrapper>
