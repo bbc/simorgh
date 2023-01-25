@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
-import kyrgyzTopicWithMessageBanners from '#data/kyrgyz/topics/cvpv9djp9qqt.json';
+import { data as kyrgyzTopicWithMessageBanners } from '#data/kyrgyz/topics/cvpv9djp9qqt.json';
 import { render } from '../../components/react-testing-library-with-providers';
 import TopicPage from './TopicPage';
 import {
@@ -164,13 +164,13 @@ describe('Topic Page', () => {
   describe('Message Banner', () => {
     it('should only render when visual style is banner and visual prominence is normal', () => {
       const messageBannerCuration =
-        kyrgyzTopicWithMessageBanners.data.curations.find(
+        kyrgyzTopicWithMessageBanners.curations.find(
           ({ visualStyle, visualProminence }) =>
             visualProminence === 'NORMAL' && visualStyle === 'BANNER',
         );
 
       const { getByRole } = render(
-        <TopicPage pageData={kyrgyzTopicWithMessageBanners.data} />,
+        <TopicPage pageData={kyrgyzTopicWithMessageBanners} />,
         getOptionParams({ service: 'kyrgyz', lang: 'ky' }),
       );
 
@@ -189,7 +189,7 @@ describe('Topic Page', () => {
        */
 
       const { getByTestId } = render(
-        <TopicPage pageData={kyrgyzTopicWithMessageBanners.data} />,
+        <TopicPage pageData={kyrgyzTopicWithMessageBanners} />,
         getOptionParams({ service: 'kyrgyz', lang: 'ky' }),
       );
       getByTestId('fix-me');
