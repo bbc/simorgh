@@ -109,7 +109,7 @@ const styles = {
         paddingBottom: '1rem',
       },
     }),
-  link: ({ palette }: Theme) =>
+  linkLtr: ({ palette }: Theme) =>
     css({
       color: palette.BLACK,
       textDecoration: 'none',
@@ -117,17 +117,37 @@ const styles = {
         textDecoration: 'underline',
         color: palette.BLACK,
       },
-      // paddingRight: '0.5rem',
       paddingLeft: '0.5rem',
       verticalAlign: 'middle',
       '&:visited': {
         color: palette.BLACK,
       },
     }),
-  chevron: () =>
+  linkRtl: ({ palette }: Theme) =>
+    css({
+      color: palette.BLACK,
+      textDecoration: 'none',
+      '&:hover, &:focus': {
+        textDecoration: 'underline',
+        color: palette.BLACK,
+      },
+      paddingRight: '0.5rem',
+      verticalAlign: 'middle',
+      '&:visited': {
+        color: palette.BLACK,
+      },
+    }),
+  chevronLtr: () =>
     css({
       marginLeft: '0.5rem',
-      // marginRight: '0.5rem',
+      width: '16px',
+      height: '16px',
+      verticalAlign: 'middle',
+      fill: 'currentcolor',
+    }),
+  chevronRtl: () =>
+    css({
+      marginRight: '0.5rem',
       width: '16px',
       height: '16px',
       verticalAlign: 'middle',
