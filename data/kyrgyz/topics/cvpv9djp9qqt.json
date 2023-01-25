@@ -178,7 +178,7 @@
             "firstPublished": "",
             "link": "https://www.instagram.com/bbcnewskyrgyz/?hl=en",
             "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/66b8/test/d1be6bc0-8114-11ed-bd83-8f15ba358e41.png",
-            "description": "Follow all the updates as the transfer window opens",
+            "description": "Follow all the updates minute-by-minute as the transfer window opens in the world’s most popular league! Ronaldo, Tielemans and Bellingham gossip.",
             "imageAlt": "alt text",
             "id": "https%3A%2F%2Fwww.instagram.com%2Fbbcnewskyrgyz%2F%3Fhl%3Den"
           }
@@ -189,7 +189,7 @@
         "curationType": "tipo-curation",
         "position": 2,
         "title": "Get all the January transfer gossip",
-        "visualProminence": "NORMAL",
+        "visualProminence": "HIGH",
         "visualStyle": "BANNER"
       },
       {
@@ -304,7 +304,7 @@
             "firstPublished": "",
             "link": "https://www.instagram.com/bbcnewskyrgyz/?hl=en",
             "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/66b8/test/d1be6bc0-8114-11ed-bd83-8f15ba358e41.png",
-            "description": "Follow all the updates as the transfer window opens",
+            "description": "Follow all the updates minute-by-minute as the transfer window opens in the world’s most popular league! Ronaldo, Tielemans and Bellingham gossip.",
             "imageAlt": "alt text",
             "id": "https%3A%2F%2Fwww.instagram.com%2Fbbcnewskyrgyz%2F%3Fhl%3Den"
           }
@@ -315,7 +315,7 @@
         "curationType": "tipo-curation",
         "position": 5,
         "title": "Get all the Premier League January transfer news direct to your phone",
-        "visualProminence": "HIGH",
+        "visualProminence": "NORMAL",
         "visualStyle": "BANNER"
       }
     ],
