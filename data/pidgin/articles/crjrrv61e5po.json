@@ -386,16 +386,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:crjrrv61e5po",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:crjrrv61e5po",
-          "canonicalUrl": "https://www.bbc.com/pidgin/articles/crjrrv61e5po"
+          "optimoUrn": "urn:bbc:optimo:asset:crjrrv61e5po"
         },
         "type": "article",
         "createdBy": "Pidgin",
         "language": "pcm",
-        "lastUpdated": 1658920831305,
         "firstPublished": 1658757788461,
         "lastPublished": 1658920829524,
-        "timestamp": 1658920829524,
         "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:crjrrv61e5po",
@@ -405,16 +402,12 @@
         "passport": {
           "language": "pcm",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
-          "locator": "urn:bbc:optimo:asset:crjrrv61e5po",
-          "availability": "AVAILABLE",
           "taggings": [
             {
               "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
               "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
             }
           ],
-          "schemaVersion": "1.4.0",
-          "publishedState": "PUBLISHED",
           "predicates": {
             "infoClass": [
               {
@@ -425,7 +418,6 @@
           }
         },
         "tags": {},
-        "version": "v1.4.5",
         "blockTypes": [
           "headline",
           "text",
@@ -436,19 +428,11 @@
           "renditions",
           "aresOEmbed"
         ],
-        "suitableForSyndication": true,
-        "readTime": 1,
         "consumableAsSFV": false,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:crjrrv61e5po",
-          "canonicalUrl": "https://www.bbc.com/pidgin/articles/crjrrv61e5po"
-        },
-        "timestamp": 1658920829524,
-        "suitableForSyndication": true,
-        "language": "pcm",
+        "locators": {},
         "headlines": {
           "seoHeadline": "Social Test (Simorgh Instas)",
           "promoHeadline": {
@@ -505,39 +489,7 @@
             }
           ]
         },
-        "passport": {
-          "language": "pcm",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
-          "locator": "urn:bbc:optimo:asset:crjrrv61e5po",
-          "availability": "AVAILABLE",
-          "taggings": [
-            {
-              "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
-              "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
-            }
-          ],
-          "schemaVersion": "1.4.0",
-          "publishedState": "PUBLISHED",
-          "predicates": {
-            "infoClass": [
-              {
-                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
-                "type": "infoClass"
-              }
-            ]
-          }
-        },
-        "id": "urn:bbc:ares::article:crjrrv61e5po",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Pidgin",
-          "uri": "/pidgin",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {

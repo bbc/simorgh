@@ -27,19 +27,33 @@
                                   "text": "English with Persian Block",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "1394e0b5",
@@ -48,7 +62,9 @@
                 "firstPublished": 1562930939502,
                 "lastPublished": 1563358511643
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "db8845ae",
@@ -68,11 +84,18 @@
                             "text": "I am a text block written in English. Below this is a block with the language 'Farsi' containing text 'روباه چه میگوید'. ",
                             "attributes": []
                           },
-                          "position": [3, 1, 1]
+                          "position": [
+                            3,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 1]
+                    "position": [
+                      3,
+                      1
+                    ]
                   },
                   {
                     "id": "deba2583",
@@ -93,16 +116,28 @@
                                   "text": "روباه چه میگوید",
                                   "attributes": []
                                 },
-                                "position": [3, 2, 1, 1]
+                                "position": [
+                                  3,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ],
                             "language": "fa"
                           },
-                          "position": [3, 2, 1]
+                          "position": [
+                            3,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 2]
+                    "position": [
+                      3,
+                      2
+                    ]
                   },
                   {
                     "id": "8916e1c9",
@@ -117,11 +152,18 @@
                             "text": "Below is a link in language 'Farsi' with the title 'چیسربرگر'",
                             "attributes": []
                           },
-                          "position": [3, 3, 1]
+                          "position": [
+                            3,
+                            3,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 3]
+                    "position": [
+                      3,
+                      3
+                    ]
                   },
                   {
                     "id": "5f01d7e9",
@@ -148,28 +190,55 @@
                                         "text": "چیسربرگر",
                                         "attributes": []
                                       },
-                                      "position": [3, 4, 1, 1, 1]
+                                      "position": [
+                                        3,
+                                        4,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ],
                                   "locator": "https://google.com",
                                   "isExternal": true
                                 },
-                                "position": [3, 4, 1, 1]
+                                "position": [
+                                  3,
+                                  4,
+                                  1,
+                                  1
+                                ]
                               }
                             ],
                             "language": "fa"
                           },
-                          "position": [3, 4, 1]
+                          "position": [
+                            3,
+                            4,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 4]
+                    "position": [
+                      3,
+                      4
+                    ]
                   }
                 ]
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
-            { "id": "2d82acf8", "type": "mpu", "model": {}, "position": [4] },
+            {
+              "id": "2d82acf8",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                4
+              ]
+            },
             {
               "id": "fd60f3e8",
               "type": "text",
@@ -184,16 +253,28 @@
                         {
                           "id": "9920be5a",
                           "type": "fragment",
-                          "model": { "text": "🤷", "attributes": [] },
-                          "position": [5, 1, 1]
+                          "model": {
+                            "text": "🤷",
+                            "attributes": []
+                          },
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
             }
           ]
         }
@@ -201,16 +282,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cv7yn5n25rno",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cv7yn5n25rno",
-          "canonicalUrl": "https://www.bbc.com/news/articles/cv7yn5n25rno"
+          "optimoUrn": "urn:bbc:optimo:asset:cv7yn5n25rno"
         },
         "type": "article",
         "createdBy": "News",
         "language": "en-gb",
-        "lastUpdated": 1645661830408,
         "firstPublished": 1562930939502,
         "lastPublished": 1563358511643,
-        "timestamp": 1563358511643,
         "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cv7yn5n25rno",
@@ -223,7 +301,6 @@
           "taggings": []
         },
         "tags": {},
-        "version": "v1.4.0",
         "blockTypes": [
           "headline",
           "text",
@@ -232,35 +309,15 @@
           "inline",
           "urlLink"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cv7yn5n25rno",
-          "canonicalUrl": "https://www.bbc.com/news/articles/cv7yn5n25rno"
+        "locators": {},
+        "headlines": {
+          "seoHeadline": "testing links"
         },
-        "timestamp": 1563358511643,
-        "suitableForSyndication": false,
-        "language": "en-gb",
-        "headlines": { "seoHeadline": "testing links" },
         "images": {},
-        "passport": {
-          "language": "en-gb",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:cv7yn5n25rno",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "News",
-          "uri": "/news",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {
@@ -282,7 +339,12 @@
           "byline": {
             "name": "By Sarah Collerton",
             "title": "BBC News",
-            "persons": [{ "name": "Sarah Collerton", "function": "BBC News" }]
+            "persons": [
+              {
+                "name": "Sarah Collerton",
+                "function": "BBC News"
+              }
+            ]
           },
           "cpsType": "STY",
           "indexImage": {
@@ -313,7 +375,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Angela Lansbury 1925 - 2022" },
+          "headlines": {
+            "headline": "Angela Lansbury 1925 - 2022"
+          },
           "locators": {
             "assetUri": "/news/23531477",
             "curieCpsUrn": "urn:bbc:cps:curie:asset:acab4bbb-ff5a-499b-8617-b8fa24d5e088",
@@ -520,7 +584,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Lego Titanic sunk" },
+          "headlines": {
+            "headline": "Lego Titanic sunk"
+          },
           "locators": {
             "assetUri": "/news/business-23481281",
             "curieCpsUrn": "urn:bbc:cps:curie:asset:06cb5998-373d-41ea-b249-6aec87d3329b",
@@ -640,7 +706,12 @@
           "byline": {
             "name": "By Sian Prescott",
             "title": "BBC News",
-            "persons": [{ "name": "Sian Prescott", "function": "BBC News" }]
+            "persons": [
+              {
+                "name": "Sian Prescott",
+                "function": "BBC News"
+              }
+            ]
           },
           "cpsType": "STY",
           "indexImage": {
@@ -700,7 +771,10 @@
                 "name": "By Benjamen Walker",
                 "title": "BBC World Service",
                 "persons": [
-                  { "name": "Benjamen Walker", "function": "BBC World Service" }
+                  {
+                    "name": "Benjamen Walker",
+                    "function": "BBC World Service"
+                  }
                 ]
               },
               "indexImage": {
@@ -920,7 +994,10 @@
                 "name": "By Cindy Sui",
                 "title": "BBC News, Taipei",
                 "persons": [
-                  { "name": "Cindy Sui", "function": "BBC News, Taipei" }
+                  {
+                    "name": "Cindy Sui",
+                    "function": "BBC News, Taipei"
+                  }
                 ]
               },
               "indexImage": {
@@ -1282,7 +1359,10 @@
                       "thingLabel": "Design and Technology",
                       "thingUri": "http://www.bbc.co.uk/things/add89d72-af77-4490-b479-25fd45bb5e72#id",
                       "thingId": "add89d72-af77-4490-b479-25fd45bb5e72",
-                      "thingType": ["core:Thing", "tagging:TagConcept"],
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/education/subjects/zykw2hv#field-of-study"
                       ],
@@ -1375,7 +1455,12 @@
               "byline": {
                 "name": "By Will Grant",
                 "title": "BBC News, Mexico",
-                "persons": [{ "name": "Will Grant", "function": "BBC News" }]
+                "persons": [
+                  {
+                    "name": "Will Grant",
+                    "function": "BBC News"
+                  }
+                ]
               },
               "passport": {
                 "category": {
@@ -1435,7 +1520,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
