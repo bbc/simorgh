@@ -9,7 +9,6 @@ import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstra
 import useToggle from '#hooks/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
-import isLive from '#lib/utilities/isLive';
 import styles from './index.styles';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import TopicImage from './TopicImage';
@@ -57,8 +56,7 @@ const TopicPage = ({ pageData }) => {
   const shouldRenderMessageBanner = (visualStyle, visualProminence) => {
     return (
       visualStyle === VISUAL_STYLE.BANNER &&
-      visualProminence === VISUAL_PROMINANCE.NORMAL &&
-      !isLive()
+      visualProminence === VISUAL_PROMINANCE.NORMAL
     );
   };
 
