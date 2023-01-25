@@ -41,6 +41,17 @@ const getRecommendations = (service, assetUri) => {
 
   return [
     {
+      name: 'recommendations',
+      attachAgent: true,
+      path: getRecommendationsUrl({
+        assetUri,
+        engine: 'unirecs_datalab',
+      }),
+      assetUri,
+      api: 'recommendations',
+      apiContext: 'secondary_data',
+    },
+    {
       name: 'datalabContentRecommendations',
       attachAgent: true,
       engine: 'unirecs_datalab_content',
