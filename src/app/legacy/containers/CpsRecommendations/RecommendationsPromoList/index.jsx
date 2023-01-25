@@ -3,7 +3,7 @@ import {
   StoryPromoLiBase,
   StoryPromoUl,
 } from '#psammead/psammead-story-promo-list/src';
-import { arrayOf, shape, number, string, boolean } from 'prop-types';
+import { arrayOf, shape, number, string } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
 import useViewTracker from '#hooks/useViewTracker';
 import { OptimizelyContext } from '@optimizely/react-sdk';

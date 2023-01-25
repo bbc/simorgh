@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, boolean } from 'prop-types';
+import { arrayOf, shape } from 'prop-types';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -16,13 +16,13 @@ import {
 } from '#psammead/gel-foundations/src/spacings';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import SkipLinkWrapper from '#components/SkipLinkWrapper';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 import { storyItem } from '#models/propTypes/storyItem';
 import useToggle from '#hooks/useToggle';
 import { GridItemMediumNoMargin } from '#components/Grid';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import RecommendationsPromoList from './RecommendationsPromoList';
 import RecommendationsPromo from './RecommendationsPromo';
 import ErrorBoundary from './ErrorBoundary';

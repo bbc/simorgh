@@ -17,11 +17,11 @@ import {
   C_GREY_10,
   C_GHOST,
 } from '#psammead/psammead-styles/src/colours';
-import { shape, string, oneOfType, boolean } from 'prop-types';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { shape, string, oneOfType } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import Grid from '../../../components/Grid';
 import RecommendationsImage from '../RecommendationsPromoImage';
 import useCombinedClickTrackerHandler from '../../StoryPromo/useCombinedClickTrackerHandler';
