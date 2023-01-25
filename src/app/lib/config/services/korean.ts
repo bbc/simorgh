@@ -67,6 +67,7 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: '광고',
       },
+      recommendationTitle: 'Recommended articles',
       seeAll: '모든 기사 보기',
       home: '홈',
       currentPage: '현재 페이지',
@@ -279,6 +280,10 @@ export const service: DefaultServiceConfig = {
     },
     recommendations: {
       hasStoryRecommendations: false,
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

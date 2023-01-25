@@ -67,6 +67,7 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Tori we dem pay for',
       },
+      recommendationTitle: 'Recommended articles',
       seeAll: 'See everitin',
       home: 'Home',
       currentPage: 'Page where you dey',
@@ -273,6 +274,10 @@ export const service: DefaultServiceConfig = {
     },
     recommendations: {
       hasStoryRecommendations: false,
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     navigation: [
       {
