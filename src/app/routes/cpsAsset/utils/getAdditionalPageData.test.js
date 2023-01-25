@@ -128,12 +128,17 @@ describe('getAdditionalPageData', () => {
     describe('004_brasil_recommendations_experiment', () => {
       it('should get recommendations data from unirecs content and unirecs hybrid engine', async () => {
         const expectedOutput = {
+          recommendations: recommendationsJson,
           datalabContentRecommendations: recommendationsJson,
           datalabHybridRecommendations: recommendationsJson,
         };
 
         hasRecommendations.mockImplementationOnce(() => true);
 
+        fetchMock.mock(
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab',
+          recommendationsJson,
+        );
         fetchMock.mock(
           'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=content',
           recommendationsJson,
