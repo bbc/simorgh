@@ -27,19 +27,33 @@
                                   "text": "Islam en México: los indígenas chamulas que viven en Chiapas con tradiciones musulmanas",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "dfe135f4",
@@ -48,7 +62,9 @@
                 "firstPublished": 1562941654757,
                 "lastPublished": 1562941654757
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "b5eb9b5f",
@@ -68,11 +84,18 @@
                             "text": "El islam llegó en San Cristobal de las Casas en la década de los 90 de la mano de unos españoles que querían unirse a la lucha zapatista.",
                             "attributes": []
                           },
-                          "position": [3, 1, 1]
+                          "position": [
+                            3,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 1]
+                    "position": [
+                      3,
+                      1
+                    ]
                   },
                   {
                     "id": "22217fc8",
@@ -87,11 +110,18 @@
                             "text": "Su mensaje se asentó entre los chamulas y fue pasando entre las familias a lo largo de los años.",
                             "attributes": []
                           },
-                          "position": [3, 2, 1]
+                          "position": [
+                            3,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 2]
+                    "position": [
+                      3,
+                      2
+                    ]
                   },
                   {
                     "id": "30e1f18b",
@@ -106,11 +136,18 @@
                             "text": "Hoy hay al menos 300 personas que profesan su fe en Alá, ayunan durante el Ramadán y se niegan a beber alcohol.",
                             "attributes": []
                           },
-                          "position": [3, 3, 1]
+                          "position": [
+                            3,
+                            3,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 3]
+                    "position": [
+                      3,
+                      3
+                    ]
                   },
                   {
                     "id": "13a3c443",
@@ -125,33 +162,46 @@
                             "text": "Ana Gabriela Rojas, corresponsal de BBC Mundo, estuvo en esa comunidad para conocer su historia.",
                             "attributes": []
                           },
-                          "position": [3, 4, 1]
+                          "position": [
+                            3,
+                            4,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 4]
+                    "position": [
+                      3,
+                      4
+                    ]
                   }
                 ]
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
-            { "id": "46648217", "type": "mpu", "model": {}, "position": [4] }
+            {
+              "id": "46648217",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                4
+              ]
+            }
           ]
         }
       },
       "metadata": {
         "id": "urn:bbc:ares::article:c45965g63xno",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c45965g63xno",
-          "canonicalUrl": "https://www.bbc.com/mundo/articles/c45965g63xno"
+          "optimoUrn": "urn:bbc:optimo:asset:c45965g63xno"
         },
         "type": "article",
         "createdBy": "Mundo",
         "language": "es",
-        "lastUpdated": 1646736831810,
         "firstPublished": 1562941654757,
         "lastPublished": 1562941654757,
-        "timestamp": 1562941654757,
         "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c45965g63xno",
@@ -164,39 +214,21 @@
           "taggings": []
         },
         "tags": {},
-        "version": "v1.4.4",
-        "blockTypes": ["headline", "text", "paragraph", "fragment"],
-        "readTime": 1,
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment"
+        ],
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c45965g63xno",
-          "canonicalUrl": "https://www.bbc.com/mundo/articles/c45965g63xno"
-        },
-        "timestamp": 1562941654757,
-        "suitableForSyndication": false,
-        "language": "es",
+        "locators": {},
         "headlines": {
           "seoHeadline": "Islam en México: los indígenas chamulas que viven en Chiapas con tradiciones musulmanas"
         },
         "images": {},
-        "passport": {
-          "language": "es",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c45965g63xno",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Mundo",
-          "uri": "/mundo",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {
@@ -229,7 +261,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -284,7 +319,9 @@
             "subType": "clip",
             "format": "audio",
             "title": "CPS Audio clip",
-            "synopses": { "short": "Please do not edit this asset" },
+            "synopses": {
+              "short": "Please do not edit this asset"
+            },
             "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01hnn31.jpg",
             "embedding": true,
             "advertising": true,
@@ -292,11 +329,16 @@
             "versions": [
               {
                 "versionId": "p01hnn2d",
-                "types": ["Original"],
+                "types": [
+                  "Original"
+                ],
                 "duration": 16,
                 "durationISO8601": "PT16S",
                 "warnings": {},
-                "availableTerritories": { "uk": true, "nonUk": true },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
                 "availableFrom": 1526050744000
               }
             ],
@@ -315,7 +357,10 @@
             "copyrightHolder": "Alamy",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -353,7 +398,10 @@
             "name": "Aled Scourfield",
             "title": "BBC News, Wales",
             "persons": [
-              { "name": "Aled Scourfield", "function": "BBC News, Wales" }
+              {
+                "name": "Aled Scourfield",
+                "function": "BBC News, Wales"
+              }
             ]
           },
           "cpsType": "STY",
@@ -370,7 +418,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:mundo/internacional-23038380",
           "type": "cps"
         },
@@ -393,7 +444,10 @@
             "name": "Aled Scourfield",
             "title": "BBC News, Wales",
             "persons": [
-              { "name": "Aled Scourfield", "function": "BBC News, Wales" }
+              {
+                "name": "Aled Scourfield",
+                "function": "BBC News, Wales"
+              }
             ]
           },
           "cpsType": "STY",
@@ -409,7 +463,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:mundo/vert-cap-23038373",
           "type": "cps"
         }
@@ -552,7 +609,10 @@
                       "thingLabel": "News report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -573,7 +633,9 @@
                         "tagging:TagConcept",
                         "tagging:Genre"
                       ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Health"],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Health"
+                      ],
                       "thingEnglishLabel": "Health",
                       "type": "about"
                     }
@@ -855,7 +917,10 @@
                 "name": "Aled Scourfield",
                 "title": "BBC News, Wales",
                 "persons": [
-                  { "name": "Aled Scourfield", "function": "BBC News, Wales" }
+                  {
+                    "name": "Aled Scourfield",
+                    "function": "BBC News, Wales"
+                  }
                 ]
               },
               "passport": {
@@ -946,7 +1011,12 @@
               "byline": {
                 "name": "BBC Reporter",
                 "title": "Damascus",
-                "persons": [{ "name": "BBC Reporter", "function": "Damascus" }]
+                "persons": [
+                  {
+                    "name": "BBC Reporter",
+                    "function": "Damascus"
+                  }
+                ]
               },
               "indexImage": {
                 "id": "63487915",
@@ -1080,7 +1150,10 @@
                 "name": "Aled Scourfield",
                 "title": "BBC News, Wales",
                 "persons": [
-                  { "name": "Aled Scourfield", "function": "BBC News, Wales" }
+                  {
+                    "name": "Aled Scourfield",
+                    "function": "BBC News, Wales"
+                  }
                 ]
               },
               "passport": {
@@ -1128,7 +1201,10 @@
                 "name": "Stefania  Gozzer",
                 "title": "Reportera",
                 "persons": [
-                  { "name": "Stefania Gozzer", "function": "Reportera" }
+                  {
+                    "name": "Stefania Gozzer",
+                    "function": "Reportera"
+                  }
                 ]
               },
               "passport": {
@@ -1269,7 +1345,10 @@
                 "name": "Aled Scourfield",
                 "title": "BBC News, Wales",
                 "persons": [
-                  { "name": "Aled Scourfield", "function": "BBC News, Wales" }
+                  {
+                    "name": "Aled Scourfield",
+                    "function": "BBC News, Wales"
+                  }
                 ]
               },
               "passport": {
