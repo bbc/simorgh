@@ -1,4 +1,4 @@
-import { shape, string, number, arrayOf } from 'prop-types';
+import { shape, string, number, arrayOf, object } from 'prop-types';
 
 export const storyItemImage = {
   path: string,
@@ -7,29 +7,41 @@ export const storyItemImage = {
   width: number,
 };
 
-export const block = arrayOf({
+export const block = {
   type: string,
-});
+};
 
 export const storyItem = {
   headlines: shape({
-    promoHeadline: {
-      blocks: shape(block),
-    },
+    headline: string.isRequired,
+  }),
+  locators: shape({
+    assetUri: string.isRequired,
+  }),
+  summary: string,
+  timestamp: number,
+  indexImage: shape(storyItemImage),
+};
+
+export const optimoStoryItem = {
+  headlines: shape({
+    promoHeadline: shape({
+      blocks: arrayOf(shape(block)),
+    }),
   }),
   locators: shape({
     optimoUrn: string.isRequired,
     canonicalUrl: string.isRequired,
   }),
-  summary: {
-    blocks: shape(block),
-  },
-  timestamp: number,
-  images: shape({
-    defaultPromoImage: {
-      blocks: shape(block),
-    },
+  summary: shape({
+    blocks: arrayOf(shape(block)),
   }),
+  images: shape({
+    defaultPromoImage: shape({
+      blocks: arrayOf(shape(block)),
+    }),
+  }),
+  timestamp: number,
 };
 
 export const linkPromo = {

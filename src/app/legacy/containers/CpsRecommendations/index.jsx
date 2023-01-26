@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape } from 'prop-types';
+import { arrayOf, shape, oneOfType } from 'prop-types';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -16,7 +16,7 @@ import {
 } from '#psammead/gel-foundations/src/spacings';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import SkipLinkWrapper from '#components/SkipLinkWrapper';
-import { storyItem } from '#models/propTypes/storyItem';
+import { storyItem, optimoStoryItem } from '#models/propTypes/storyItem';
 import useToggle from '#hooks/useToggle';
 import { GridItemMediumNoMargin } from '#components/Grid';
 
@@ -126,7 +126,7 @@ const CpsRecommendations = ({ items }) => {
 export default CpsRecommendations;
 
 CpsRecommendations.propTypes = {
-  items: arrayOf(shape(storyItem)),
+  items: arrayOf(oneOfType([shape(storyItem), shape(optimoStoryItem)])),
 };
 
 CpsRecommendations.defaultProps = {

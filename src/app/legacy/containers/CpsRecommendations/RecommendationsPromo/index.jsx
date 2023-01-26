@@ -18,7 +18,7 @@ import {
   C_GHOST,
 } from '#psammead/psammead-styles/src/colours';
 import { shape, string, oneOfType } from 'prop-types';
-import { storyItem } from '#models/propTypes/storyItem';
+import { optimoStoryItem, storyItem } from '#models/propTypes/storyItem';
 
 import { ARTICLE_PAGE } from '../../../../routes/utils/pageTypes';
 import { RequestContext } from '../../../../contexts/RequestContext';
@@ -147,7 +147,7 @@ const RecommendationsPromo = ({ promo, eventTrackingData }) => {
 };
 
 RecommendationsPromo.propTypes = {
-  promo: oneOfType([shape(storyItem)]).isRequired,
+  promo: oneOfType([shape(storyItem), shape(optimoStoryItem)]).isRequired,
   eventTrackingData: shape({
     block: shape({
       componentName: string,
