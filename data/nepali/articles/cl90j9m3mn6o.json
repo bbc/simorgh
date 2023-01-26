@@ -655,16 +655,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cl90j9m3mn6o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cl90j9m3mn6o",
-          "canonicalUrl": "https://www.bbc.com/nepali/articles/cl90j9m3mn6o"
+          "optimoUrn": "urn:bbc:optimo:asset:cl90j9m3mn6o"
         },
         "type": "article",
         "createdBy": "Nepali",
         "language": "ne",
-        "lastUpdated": 1601025325828,
         "firstPublished": 1562942363761,
         "lastPublished": 1562942363761,
-        "timestamp": 1562942363761,
         "options": {},
         "analyticsLabels": {
           "producer": "Nepali",
@@ -673,12 +670,9 @@
         "passport": {
           "language": "ne",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
-          "locator": "urn:bbc:optimo:asset:cl90j9m3mn6o",
-          "availability": "AVAILABLE",
           "taggings": []
         },
         "tags": {},
-        "version": "v1.4.7",
         "blockTypes": [
           "headline",
           "text",
@@ -693,39 +687,15 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cl90j9m3mn6o",
-          "canonicalUrl": "https://www.bbc.com/nepali/articles/cl90j9m3mn6o"
-        },
-        "timestamp": 1562942363761,
-        "suitableForSyndication": false,
-        "language": "ne",
+        "locators": {},
         "headlines": {
           "seoHeadline": "नेपालकी प्रथम महिला प्रहरी चैतमाया डङ्‌गोलको सेवा अनुभव कस्तो"
         },
         "images": {},
-        "passport": {
-          "language": "ne",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
-          "locator": "urn:bbc:optimo:asset:cl90j9m3mn6o",
-          "availability": "AVAILABLE",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:cl90j9m3mn6o",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Nepali",
-          "uri": "/nepali",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {

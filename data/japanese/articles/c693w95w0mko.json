@@ -27,19 +27,33 @@
                                   "text": "【写真で見る】日本の古墳群も　今年新たに決まった世界遺産",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "f178e08c",
@@ -48,7 +62,9 @@
                 "firstPublished": 1562943050727,
                 "lastPublished": 1562943050727
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "0244d436",
@@ -66,13 +82,22 @@
                           "type": "fragment",
                           "model": {
                             "text": "ユネスコ（国連教育科学文化機関）は毎年、人類にとって「顕著な普遍的価値」を持つ場所を世界遺産として発表している。",
-                            "attributes": ["bold"]
+                            "attributes": [
+                              "bold"
+                            ]
                           },
-                          "position": [3, 1, 1]
+                          "position": [
+                            3,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 1]
+                    "position": [
+                      3,
+                      1
+                    ]
                   },
                   {
                     "id": "96ccdded",
@@ -87,11 +112,18 @@
                             "text": "10日までアゼルバイジャンの首都バクーで行われていた第43回世界遺産委員会では、新たに29カ所が世界遺産に登録された。",
                             "attributes": []
                           },
-                          "position": [3, 2, 1]
+                          "position": [
+                            3,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 2]
+                    "position": [
+                      3,
+                      2
+                    ]
                   },
                   {
                     "id": "26ccc194",
@@ -106,33 +138,46 @@
                             "text": "その中からいくつかの場所を写真で紹介する。",
                             "attributes": []
                           },
-                          "position": [3, 3, 1]
+                          "position": [
+                            3,
+                            3,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 3]
+                    "position": [
+                      3,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
-            { "id": "0f1e0887", "type": "mpu", "model": {}, "position": [4] }
+            {
+              "id": "0f1e0887",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                4
+              ]
+            }
           ]
         }
       },
       "metadata": {
         "id": "urn:bbc:ares::article:c693w95w0mko",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c693w95w0mko",
-          "canonicalUrl": "https://www.bbc.com/japanese/articles/c693w95w0mko"
+          "optimoUrn": "urn:bbc:optimo:asset:c693w95w0mko"
         },
         "type": "article",
         "createdBy": "Japanese",
         "language": "ja",
-        "lastUpdated": 1645628419029,
         "firstPublished": 1562943050727,
         "lastPublished": 1562943050727,
-        "timestamp": 1562943050727,
         "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c693w95w0mko",
@@ -145,39 +190,21 @@
           "taggings": []
         },
         "tags": {},
-        "version": "v1.4.0",
-        "blockTypes": ["headline", "text", "paragraph", "fragment"],
-        "readTime": 1,
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment"
+        ],
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c693w95w0mko",
-          "canonicalUrl": "https://www.bbc.com/japanese/articles/c693w95w0mko"
-        },
-        "timestamp": 1562943050727,
-        "suitableForSyndication": false,
-        "language": "ja",
+        "locators": {},
         "headlines": {
           "seoHeadline": "【写真で見る】日本の古墳群も　今年新たに決まった世界遺産"
         },
         "images": {},
-        "passport": {
-          "language": "ja",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Japanese",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c693w95w0mko",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Japanese",
-          "uri": "/japanese",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {
@@ -208,7 +235,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "ホーム",
@@ -221,7 +251,9 @@
       ],
       "features": [
         {
-          "headlines": { "headline": "ギリシャ金融支援、原則合意　巨額債務は" },
+          "headlines": {
+            "headline": "ギリシャ金融支援、原則合意　巨額債務は"
+          },
           "locators": {
             "assetUri": "/japanese/23002306",
             "cpsUrn": "urn:bbc:content:assetUri:japanese/23002306",
@@ -244,7 +276,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "世界",
@@ -271,7 +306,10 @@
             "name": "By Benjamen Walker",
             "title": "BBC World Service",
             "persons": [
-              { "name": "Benjamen Walker", "function": "BBC World Service" }
+              {
+                "name": "Benjamen Walker",
+                "function": "BBC World Service"
+              }
             ]
           },
           "cpsType": "STY",
@@ -298,7 +336,10 @@
             "copyrightHolder": "Getty Images",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Magazine",
@@ -316,7 +357,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "人民元、連日大幅切り下げ　アジア株下落" },
+          "headlines": {
+            "headline": "人民元、連日大幅切り下げ　アジア株下落"
+          },
           "locators": {
             "assetUri": "/japanese/23002307",
             "cpsUrn": "urn:bbc:content:assetUri:japanese/23002307",
@@ -339,7 +382,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "ホーム",
@@ -396,7 +442,10 @@
             "copyrightHolder": "Kristina Hill Photography",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Magazine",
@@ -429,7 +478,12 @@
           "byline": {
             "name": "By Ahmed Wali Mujeeb ",
             "title": "BBC News, Waziristan",
-            "persons": [{ "name": "Ahmed Wali Mujeeb", "function": "BBC News" }]
+            "persons": [
+              {
+                "name": "Ahmed Wali Mujeeb",
+                "function": "BBC News"
+              }
+            ]
           },
           "cpsType": "STY",
           "indexImage": {
@@ -455,7 +509,10 @@
             "copyrightHolder": "AFP",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Asia",
@@ -473,7 +530,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "It's time to reap benefits of 4G" },
+          "headlines": {
+            "headline": "It's time to reap benefits of 4G"
+          },
           "locators": {
             "assetUri": "/news/business-19210539",
             "cpsUrn": "urn:bbc:content:assetUri:news/business-19210539",
@@ -486,7 +545,10 @@
             "name": "Viewpoint by Olaf Swantee",
             "title": "Chief executive, Everything Everywhere",
             "persons": [
-              { "name": "لیز spokesmanدوست", "function": "ارتش عراق" }
+              {
+                "name": "لیز spokesmanدوست",
+                "function": "ارتش عراق"
+              }
             ]
           },
           "cpsType": "STY",
@@ -513,7 +575,10 @@
             "copyrightHolder": "Getty Images",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Economy",
@@ -790,7 +855,10 @@
                 "name": "By Benjamen Walker",
                 "title": "BBC World Service",
                 "persons": [
-                  { "name": "Benjamen Walker", "function": "BBC World Service" }
+                  {
+                    "name": "Benjamen Walker",
+                    "function": "BBC World Service"
+                  }
                 ]
               },
               "indexImage": {
@@ -868,7 +936,10 @@
                 "name": "Viewpoint by Olaf Swantee",
                 "title": "Chief executive, Everything Everywhere",
                 "persons": [
-                  { "name": "A spokesman", "function": "No to AV campaign" }
+                  {
+                    "name": "A spokesman",
+                    "function": "No to AV campaign"
+                  }
                 ]
               },
               "indexImage": {
@@ -1101,7 +1172,10 @@
                 "name": "By Ahmed Wali Mujeeb ",
                 "title": "BBC News, Waziristan",
                 "persons": [
-                  { "name": "Ahmed Wali Mujeeb", "function": "BBC News" }
+                  {
+                    "name": "Ahmed Wali Mujeeb",
+                    "function": "BBC News"
+                  }
                 ]
               },
               "indexImage": {
@@ -1202,7 +1276,10 @@
                 "name": "BBC",
                 "title": "「各社のニュース」班",
                 "persons": [
-                  { "name": "A spokesman", "function": "No to AV campaign" }
+                  {
+                    "name": "A spokesman",
+                    "function": "No to AV campaign"
+                  }
                 ]
               },
               "indexImage": {

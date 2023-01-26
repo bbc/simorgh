@@ -27,19 +27,33 @@
                                   "text": "Dunyoda misli koʻrilmagan tajriba: Oʻzbekiston Orol dengizi tubini oʻrmonga aylantirmoqda",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "dcc9b5aa",
@@ -48,7 +62,9 @@
                 "firstPublished": 1562942148973,
                 "lastPublished": 1562942148973
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "7971200d",
@@ -68,11 +84,18 @@
                             "text": "Orol dengizining qurishi insoniyat tarixidagi dunyoning eng yirik ekologik fojialaridan biri boʻldi. Sahroga aylangan dengiz tubidagi tuzlar, qum-chang va zaharli oʻgʻitlar insonlarhayoti va tabiatni xavf ostiga qoʻygan.",
                             "attributes": []
                           },
-                          "position": [3, 1, 1]
+                          "position": [
+                            3,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 1]
+                    "position": [
+                      3,
+                      1
+                    ]
                   },
                   {
                     "id": "f93f792b",
@@ -87,11 +110,18 @@
                             "text": "Ammo bugun Oʻzbekiston dunyoda misli koʻrilmagan tajribaga qoʻl urmoqda: dengiz oʻrnidagi sahroni oʻrmonga aylantirmoqchi.",
                             "attributes": []
                           },
-                          "position": [3, 2, 1]
+                          "position": [
+                            3,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 2]
+                    "position": [
+                      3,
+                      2
+                    ]
                   },
                   {
                     "id": "a0309867",
@@ -106,30 +136,46 @@
                             "text": "Bu Qoraqalpogʻistonda hayotni asrab qola oladimi?",
                             "attributes": []
                           },
-                          "position": [3, 3, 1]
+                          "position": [
+                            3,
+                            3,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 3]
+                    "position": [
+                      3,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
-            { "id": "5be22240", "type": "mpu", "model": {}, "position": [4] }
+            {
+              "id": "5be22240",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                4
+              ]
+            }
           ]
         }
       },
       "metadata": {
         "id": "urn:bbc:ares::article:cdy81y9ml65o",
-        "locators": { "optimoUrn": "urn:bbc:optimo:asset:cdy81y9ml65o" },
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:cdy81y9ml65o"
+        },
         "type": "article",
         "createdBy": "Uzbek",
         "language": "uz-latn",
-        "lastUpdated": 1669740129852,
         "firstPublished": 1562942148973,
         "lastPublished": 1562942148973,
-        "timestamp": 1562942148973,
         "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cdy81y9ml65o",
@@ -141,45 +187,32 @@
           "taggings": []
         },
         "tags": {},
-        "version": "v1.4.10",
-        "blockTypes": ["headline", "text", "paragraph", "fragment"],
-        "readTime": 1,
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment"
+        ],
         "consumableAsSFV": false,
         "allowAdvertising": true,
         "consumableOnRedButton": false,
         "consumableOnlyOnRedButton": false
       },
       "promo": {
-        "locators": { "optimoUrn": "urn:bbc:optimo:asset:cdy81y9ml65o" },
-        "timestamp": 1562942148973,
-        "suitableForSyndication": false,
-        "language": "uz-latn",
+        "locators": {},
         "headlines": {
           "seoHeadline": "Dunyoda misli koʻrilmagan tajriba: Oʻzbekiston Orol dengizi tubini oʻrmonga aylantirmoqda"
         },
         "images": {},
-        "passport": {
-          "language": "uz-latn",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Uzbek",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:cdy81y9ml65o",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Uzbek",
-          "uri": "/uzbek",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {
       "topStories": [
         {
-          "headlines": { "headline": "Thousands of Turkish police suspended" },
+          "headlines": {
+            "headline": "Thousands of Turkish police suspended"
+          },
           "locators": {
             "assetUri": "/uzbek/23061067",
             "cpsUrn": "urn:bbc:content:assetUri:uzbek/23061067",
@@ -214,7 +247,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -253,7 +289,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:uzbek/uzbekistan-23053075",
           "type": "cps"
         },
@@ -283,7 +322,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:uzbek/uzbekistan-23053076",
           "type": "cps"
         },
@@ -313,7 +355,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:uzbek/sport-23053300",
           "type": "cps"
         },
@@ -343,7 +388,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:uzbek/world-23053082",
           "type": "cps"
         },
@@ -373,7 +421,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:uzbek/uzbekistan-23053074",
           "type": "cps"
         }
