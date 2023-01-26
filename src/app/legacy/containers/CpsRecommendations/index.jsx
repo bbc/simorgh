@@ -16,12 +16,12 @@ import {
 } from '#psammead/gel-foundations/src/spacings';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import SkipLinkWrapper from '#components/SkipLinkWrapper';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE } from '../../../../app/routes/utils/pageTypes';
 
 import { storyItem } from '#models/propTypes/storyItem';
 import useToggle from '#hooks/useToggle';
 import { GridItemMediumNoMargin } from '#components/Grid';
-import { RequestContext } from '#contexts/RequestContext';
+import { RequestContext } from '../../../contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import RecommendationsPromoList from './RecommendationsPromoList';
 import RecommendationsPromo from './RecommendationsPromo';
