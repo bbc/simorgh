@@ -17,9 +17,10 @@ import {
   C_GREY_10,
   C_GHOST,
 } from '#psammead/psammead-styles/src/colours';
-import { ARTICLE_PAGE } from '../../../../../app/routes/utils/pageTypes';
 import { shape, string, oneOfType } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
+
+import { ARTICLE_PAGE } from '../../../../routes/utils/pageTypes';
 import { RequestContext } from '../../../../contexts/RequestContext';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import Grid from '../../../components/Grid';
