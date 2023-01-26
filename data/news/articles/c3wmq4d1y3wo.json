@@ -27,19 +27,33 @@
                                   "text": "New Mega AV test article ",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "cc953f24",
@@ -48,7 +62,9 @@
                 "firstPublished": 1559129664696,
                 "lastPublished": 1619512976817
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "dddf21a0",
@@ -73,19 +89,33 @@
                                   "text": "Video, Clip, International and UK, Guidance, Subtitles",
                                   "attributes": []
                                 },
-                                "position": [3, 1, 1, 1]
+                                "position": [
+                                  3,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [3, 1, 1]
+                          "position": [
+                            3,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 1]
+                    "position": [
+                      3,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
             {
               "id": "f8dd9981",
@@ -116,19 +146,37 @@
                                         "text": "Video, Clip, International and UK, Guidance, Subtitles",
                                         "attributes": []
                                       },
-                                      "position": [4, 1, 1, 1, 1]
+                                      "position": [
+                                        4,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [4, 1, 1, 1]
+                                "position": [
+                                  4,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [4, 1, 1]
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 1]
+                    "position": [
+                      4,
+                      1
+                    ]
                   },
                   {
                     "id": "70b7608d",
@@ -154,7 +202,9 @@
                             "versions": [
                               {
                                 "versionId": "p01k6msp",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 191,
                                 "durationISO8601": "PT3M11S",
                                 "warnings": {
@@ -168,10 +218,16 @@
                                 "availableFrom": 1540218932000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [4, 2, 1]
+                          "position": [
+                            4,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "532d6379",
@@ -188,7 +244,12 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "BBC"
                                 },
-                                "position": [4, 2, 2, 1]
+                                "position": [
+                                  4,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
                                 "id": "4e02ec83",
@@ -214,32 +275,65 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    4, 2, 2, 2, 1, 1, 1
+                                                    4,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [4, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              4,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [4, 2, 2, 2, 1]
+                                      "position": [
+                                        4,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [4, 2, 2, 2]
+                                "position": [
+                                  4,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [4, 2, 2]
+                          "position": [
+                            4,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 2]
+                    "position": [
+                      4,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [4]
+              "position": [
+                4
+              ]
             },
             {
               "id": "e82f190f",
@@ -264,19 +358,33 @@
                                   "text": "Clip, Video, UK-only, guidance, no subtitles, caption with rich formatting",
                                   "attributes": []
                                 },
-                                "position": [5, 1, 1, 1]
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 1, 1]
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
             },
             {
               "id": "3e68d165",
@@ -307,11 +415,22 @@
                                         "text": "Clip, Video, UK-only, guidance, no subtitles.",
                                         "attributes": []
                                       },
-                                      "position": [6, 1, 1, 1, 1]
+                                      "position": [
+                                        6,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [6, 1, 1, 1]
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               },
                               {
                                 "id": "8324cbd7",
@@ -326,25 +445,47 @@
                                         "text": "Multi-paragraph, rich ",
                                         "attributes": []
                                       },
-                                      "position": [6, 1, 1, 2, 1]
+                                      "position": [
+                                        6,
+                                        1,
+                                        1,
+                                        2,
+                                        1
+                                      ]
                                     },
                                     {
                                       "id": "07b86aba",
                                       "type": "fragment",
                                       "model": {
                                         "text": "formatting ",
-                                        "attributes": ["bold"]
+                                        "attributes": [
+                                          "bold"
+                                        ]
                                       },
-                                      "position": [6, 1, 1, 2, 2]
+                                      "position": [
+                                        6,
+                                        1,
+                                        1,
+                                        2,
+                                        2
+                                      ]
                                     },
                                     {
                                       "id": "2b3ee127",
                                       "type": "fragment",
                                       "model": {
                                         "text": "video ",
-                                        "attributes": ["italic"]
+                                        "attributes": [
+                                          "italic"
+                                        ]
                                       },
-                                      "position": [6, 1, 1, 2, 3]
+                                      "position": [
+                                        6,
+                                        1,
+                                        1,
+                                        2,
+                                        3
+                                      ]
                                     },
                                     {
                                       "id": "7a29b601",
@@ -353,7 +494,13 @@
                                         "text": "caption, with ",
                                         "attributes": []
                                       },
-                                      "position": [6, 1, 1, 2, 4]
+                                      "position": [
+                                        6,
+                                        1,
+                                        1,
+                                        2,
+                                        4
+                                      ]
                                     },
                                     {
                                       "id": "b18e99d1",
@@ -368,13 +515,26 @@
                                               "text": "links",
                                               "attributes": []
                                             },
-                                            "position": [6, 1, 1, 2, 5, 1]
+                                            "position": [
+                                              6,
+                                              1,
+                                              1,
+                                              2,
+                                              5,
+                                              1
+                                            ]
                                           }
                                         ],
                                         "locator": "https://www.bbc.co.uk/news",
                                         "isExternal": false
                                       },
-                                      "position": [6, 1, 1, 2, 5]
+                                      "position": [
+                                        6,
+                                        1,
+                                        1,
+                                        2,
+                                        5
+                                      ]
                                     },
                                     {
                                       "id": "4d333073",
@@ -383,7 +543,13 @@
                                         "text": " and with an inline block",
                                         "attributes": []
                                       },
-                                      "position": [6, 1, 1, 2, 6]
+                                      "position": [
+                                        6,
+                                        1,
+                                        1,
+                                        2,
+                                        6
+                                      ]
                                     },
                                     {
                                       "id": "0ddb4a36",
@@ -398,16 +564,34 @@
                                               "text": " چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟. ",
                                               "attributes": []
                                             },
-                                            "position": [6, 1, 1, 2, 7, 1]
+                                            "position": [
+                                              6,
+                                              1,
+                                              1,
+                                              2,
+                                              7,
+                                              1
+                                            ]
                                           }
                                         ],
                                         "language": "fa"
                                       },
-                                      "position": [6, 1, 1, 2, 7]
+                                      "position": [
+                                        6,
+                                        1,
+                                        1,
+                                        2,
+                                        7
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [6, 1, 1, 2]
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  2
+                                ]
                               },
                               {
                                 "id": "dd417fc9",
@@ -422,11 +606,22 @@
                                         "text": "Special characters in a caption need to be tested too.",
                                         "attributes": []
                                       },
-                                      "position": [6, 1, 1, 3, 1]
+                                      "position": [
+                                        6,
+                                        1,
+                                        1,
+                                        3,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [6, 1, 1, 3]
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  3
+                                ]
                               },
                               {
                                 "id": "d0bbabfd",
@@ -437,20 +632,41 @@
                                     {
                                       "id": "ce1f5bd9",
                                       "type": "fragment",
-                                      "model": { "text": "", "attributes": [] },
-                                      "position": [6, 1, 1, 4, 1]
+                                      "model": {
+                                        "text": "",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        6,
+                                        1,
+                                        1,
+                                        4,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [6, 1, 1, 4]
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  4
+                                ]
                               }
                             ]
                           },
-                          "position": [6, 1, 1]
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 1]
+                    "position": [
+                      6,
+                      1
+                    ]
                   },
                   {
                     "id": "b6ce8a70",
@@ -479,7 +695,9 @@
                             "versions": [
                               {
                                 "versionId": "p01kdbnv",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 162,
                                 "durationISO8601": "PT2M42S",
                                 "warnings": {
@@ -493,10 +711,16 @@
                                 "availableFrom": 1541761851000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [6, 2, 1]
+                          "position": [
+                            6,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "2636d4a7",
@@ -513,7 +737,12 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "BBC"
                                 },
-                                "position": [6, 2, 2, 1]
+                                "position": [
+                                  6,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
                                 "id": "fdacf48a",
@@ -539,32 +768,65 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    6, 2, 2, 2, 1, 1, 1
+                                                    6,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [6, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              6,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [6, 2, 2, 2, 1]
+                                      "position": [
+                                        6,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [6, 2, 2, 2]
+                                "position": [
+                                  6,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [6, 2, 2]
+                          "position": [
+                            6,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 2]
+                    "position": [
+                      6,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [6]
+              "position": [
+                6
+              ]
             },
             {
               "id": "dd2cce2c",
@@ -580,8 +842,17 @@
                         {
                           "id": "5bf05502",
                           "type": "fragment",
-                          "model": { "text": "Note:", "attributes": ["bold"] },
-                          "position": [7, 1, 1]
+                          "model": {
+                            "text": "Note:",
+                            "attributes": [
+                              "bold"
+                            ]
+                          },
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
                         },
                         {
                           "id": "e5492602",
@@ -590,15 +861,24 @@
                             "text": " subtitles are burnt on the video so are appearing, but there should be no subtitle control option.",
                             "attributes": []
                           },
-                          "position": [7, 1, 2]
+                          "position": [
+                            7,
+                            1,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 1]
+                    "position": [
+                      7,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [7]
+              "position": [
+                7
+              ]
             },
             {
               "id": "27ed1846",
@@ -623,19 +903,33 @@
                                   "text": "Video, Clip, International and UK, Guidance, no Subtitles",
                                   "attributes": []
                                 },
-                                "position": [8, 1, 1, 1]
+                                "position": [
+                                  8,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [8, 1, 1]
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 1]
+                    "position": [
+                      8,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [8]
+              "position": [
+                8
+              ]
             },
             {
               "id": "25615bfe",
@@ -666,19 +960,37 @@
                                         "text": "Video, Clip, International and UK, Guidance, no Subtitles",
                                         "attributes": []
                                       },
-                                      "position": [9, 1, 1, 1, 1]
+                                      "position": [
+                                        9,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [9, 1, 1, 1]
+                                "position": [
+                                  9,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [9, 1, 1]
+                          "position": [
+                            9,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [9, 1]
+                    "position": [
+                      9,
+                      1
+                    ]
                   },
                   {
                     "id": "e6db3d37",
@@ -707,7 +1019,9 @@
                             "versions": [
                               {
                                 "versionId": "p01kdbwt",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 162,
                                 "durationISO8601": "PT2M42S",
                                 "warnings": {
@@ -721,10 +1035,16 @@
                                 "availableFrom": 1541763741000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [9, 2, 1]
+                          "position": [
+                            9,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "5ac69618",
@@ -741,7 +1061,12 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "BBC"
                                 },
-                                "position": [9, 2, 2, 1]
+                                "position": [
+                                  9,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
                                 "id": "07d6a1c6",
@@ -767,32 +1092,65 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    9, 2, 2, 2, 1, 1, 1
+                                                    9,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [9, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              9,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [9, 2, 2, 2, 1]
+                                      "position": [
+                                        9,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [9, 2, 2, 2]
+                                "position": [
+                                  9,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [9, 2, 2]
+                          "position": [
+                            9,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [9, 2]
+                    "position": [
+                      9,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [9]
+              "position": [
+                9
+              ]
             },
             {
               "id": "a648a55d",
@@ -808,8 +1166,17 @@
                         {
                           "id": "ff1b39e6",
                           "type": "fragment",
-                          "model": { "text": "Note:", "attributes": ["bold"] },
-                          "position": [10, 1, 1]
+                          "model": {
+                            "text": "Note:",
+                            "attributes": [
+                              "bold"
+                            ]
+                          },
+                          "position": [
+                            10,
+                            1,
+                            1
+                          ]
                         },
                         {
                           "id": "e26e0a45",
@@ -818,15 +1185,24 @@
                             "text": " subtitles are burnt on the video so are appearing, but there should be no subtitle control option.",
                             "attributes": []
                           },
-                          "position": [10, 1, 2]
+                          "position": [
+                            10,
+                            1,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [10, 1]
+                    "position": [
+                      10,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [10]
+              "position": [
+                10
+              ]
             },
             {
               "id": "6672fe7e",
@@ -851,19 +1227,33 @@
                                   "text": "Video, Clip, International-only, no guidance, no subtitles",
                                   "attributes": []
                                 },
-                                "position": [11, 1, 1, 1]
+                                "position": [
+                                  11,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [11, 1, 1]
+                          "position": [
+                            11,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [11, 1]
+                    "position": [
+                      11,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [11]
+              "position": [
+                11
+              ]
             },
             {
               "id": "9ad2432c",
@@ -894,19 +1284,37 @@
                                         "text": "Video, Clip, International-only, no guidance, no subtitles",
                                         "attributes": []
                                       },
-                                      "position": [12, 1, 1, 1, 1]
+                                      "position": [
+                                        12,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [12, 1, 1, 1]
+                                "position": [
+                                  12,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [12, 1, 1]
+                          "position": [
+                            12,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [12, 1]
+                    "position": [
+                      12,
+                      1
+                    ]
                   },
                   {
                     "id": "092c5c97",
@@ -935,7 +1343,9 @@
                             "versions": [
                               {
                                 "versionId": "p01kdbq2",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 122,
                                 "durationISO8601": "PT2M2S",
                                 "warnings": {},
@@ -946,10 +1356,16 @@
                                 "availableFrom": 1541762499000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [12, 2, 1]
+                          "position": [
+                            12,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "b45a4d06",
@@ -966,7 +1382,12 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "BBC"
                                 },
-                                "position": [12, 2, 2, 1]
+                                "position": [
+                                  12,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
                                 "id": "91b920d0",
@@ -992,32 +1413,65 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    12, 2, 2, 2, 1, 1, 1
+                                                    12,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [12, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              12,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [12, 2, 2, 2, 1]
+                                      "position": [
+                                        12,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [12, 2, 2, 2]
+                                "position": [
+                                  12,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [12, 2, 2]
+                          "position": [
+                            12,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [12, 2]
+                    "position": [
+                      12,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [12]
+              "position": [
+                12
+              ]
             },
             {
               "id": "b5f2a24f",
@@ -1033,8 +1487,17 @@
                         {
                           "id": "696fb520",
                           "type": "fragment",
-                          "model": { "text": "Note:", "attributes": ["bold"] },
-                          "position": [13, 1, 1]
+                          "model": {
+                            "text": "Note:",
+                            "attributes": [
+                              "bold"
+                            ]
+                          },
+                          "position": [
+                            13,
+                            1,
+                            1
+                          ]
                         },
                         {
                           "id": "2a9ef9d9",
@@ -1043,15 +1506,24 @@
                             "text": " subtitles are burnt on the video so are appearing, but there should be no subtitle control option.",
                             "attributes": []
                           },
-                          "position": [13, 1, 2]
+                          "position": [
+                            13,
+                            1,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [13, 1]
+                    "position": [
+                      13,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [13]
+              "position": [
+                13
+              ]
             },
             {
               "id": "901334dc",
@@ -1076,19 +1548,33 @@
                                   "text": "Audio, Clip, UK+Intl, Guidance",
                                   "attributes": []
                                 },
-                                "position": [14, 1, 1, 1]
+                                "position": [
+                                  14,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [14, 1, 1]
+                          "position": [
+                            14,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [14, 1]
+                    "position": [
+                      14,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [14]
+              "position": [
+                14
+              ]
             },
             {
               "id": "7d580942",
@@ -1119,19 +1605,37 @@
                                         "text": "Audio, Clip, UK+Intl, Guidance",
                                         "attributes": []
                                       },
-                                      "position": [15, 1, 1, 1, 1]
+                                      "position": [
+                                        15,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [15, 1, 1, 1]
+                                "position": [
+                                  15,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [15, 1, 1]
+                          "position": [
+                            15,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [15, 1]
+                    "position": [
+                      15,
+                      1
+                    ]
                   },
                   {
                     "id": "b358d46f",
@@ -1157,7 +1661,9 @@
                             "versions": [
                               {
                                 "versionId": "p01m7d09",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 127,
                                 "durationISO8601": "PT2M7S",
                                 "warnings": {
@@ -1171,10 +1677,16 @@
                                 "availableFrom": 1555067395000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "radioProgramme"
                           },
-                          "position": [15, 2, 1]
+                          "position": [
+                            15,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "6656ddc3",
@@ -1191,7 +1703,12 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "Getty Images"
                                 },
-                                "position": [15, 2, 2, 1]
+                                "position": [
+                                  15,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
                                 "id": "fd9bd1b5",
@@ -1217,32 +1734,65 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    15, 2, 2, 2, 1, 1, 1
+                                                    15,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [15, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              15,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [15, 2, 2, 2, 1]
+                                      "position": [
+                                        15,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [15, 2, 2, 2]
+                                "position": [
+                                  15,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [15, 2, 2]
+                          "position": [
+                            15,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [15, 2]
+                    "position": [
+                      15,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [15]
+              "position": [
+                15
+              ]
             },
             {
               "id": "5c093c8d",
@@ -1267,19 +1817,33 @@
                                   "text": "Clip, Audio, UK-only, no guidance",
                                   "attributes": []
                                 },
-                                "position": [16, 1, 1, 1]
+                                "position": [
+                                  16,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [16, 1, 1]
+                          "position": [
+                            16,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [16, 1]
+                    "position": [
+                      16,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [16]
+              "position": [
+                16
+              ]
             },
             {
               "id": "59ddf3f6",
@@ -1310,19 +1874,37 @@
                                         "text": "Clip, Audio, UK-only, no guidance",
                                         "attributes": []
                                       },
-                                      "position": [17, 1, 1, 1, 1]
+                                      "position": [
+                                        17,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [17, 1, 1, 1]
+                                "position": [
+                                  17,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [17, 1, 1]
+                          "position": [
+                            17,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [17, 1]
+                    "position": [
+                      17,
+                      1
+                    ]
                   },
                   {
                     "id": "96f2d2c8",
@@ -1348,7 +1930,9 @@
                             "versions": [
                               {
                                 "versionId": "p01m7d3h",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 127,
                                 "durationISO8601": "PT2M7S",
                                 "warnings": {},
@@ -1359,10 +1943,16 @@
                                 "availableFrom": 1555067786000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "radioProgramme"
                           },
-                          "position": [17, 2, 1]
+                          "position": [
+                            17,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "76d32932",
@@ -1379,7 +1969,12 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "AP"
                                 },
-                                "position": [17, 2, 2, 1]
+                                "position": [
+                                  17,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
                                 "id": "2cfea099",
@@ -1405,32 +2000,65 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    17, 2, 2, 2, 1, 1, 1
+                                                    17,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [17, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              17,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [17, 2, 2, 2, 1]
+                                      "position": [
+                                        17,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [17, 2, 2, 2]
+                                "position": [
+                                  17,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [17, 2, 2]
+                          "position": [
+                            17,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [17, 2]
+                    "position": [
+                      17,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [17]
+              "position": [
+                17
+              ]
             },
             {
               "id": "de69ec3c",
@@ -1455,19 +2083,33 @@
                                   "text": "Clip, Audio, International-only, no guidance",
                                   "attributes": []
                                 },
-                                "position": [18, 1, 1, 1]
+                                "position": [
+                                  18,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [18, 1, 1]
+                          "position": [
+                            18,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [18, 1]
+                    "position": [
+                      18,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [18]
+              "position": [
+                18
+              ]
             },
             {
               "id": "16919900",
@@ -1498,19 +2140,37 @@
                                         "text": "Clip, Audio, International-only, no guidance",
                                         "attributes": []
                                       },
-                                      "position": [19, 1, 1, 1, 1]
+                                      "position": [
+                                        19,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [19, 1, 1, 1]
+                                "position": [
+                                  19,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [19, 1, 1]
+                          "position": [
+                            19,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [19, 1]
+                    "position": [
+                      19,
+                      1
+                    ]
                   },
                   {
                     "id": "c489b6ba",
@@ -1536,7 +2196,9 @@
                             "versions": [
                               {
                                 "versionId": "p01m7d4p",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 127,
                                 "durationISO8601": "PT2M7S",
                                 "warnings": {},
@@ -1547,10 +2209,16 @@
                                 "availableFrom": 1555068044000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "radioProgramme"
                           },
-                          "position": [19, 2, 1]
+                          "position": [
+                            19,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "3a6d6bfb",
@@ -1567,7 +2235,12 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "PA"
                                 },
-                                "position": [19, 2, 2, 1]
+                                "position": [
+                                  19,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
                                 "id": "3aff0706",
@@ -1593,32 +2266,65 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    19, 2, 2, 2, 1, 1, 1
+                                                    19,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [19, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              19,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [19, 2, 2, 2, 1]
+                                      "position": [
+                                        19,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [19, 2, 2, 2]
+                                "position": [
+                                  19,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [19, 2, 2]
+                          "position": [
+                            19,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [19, 2]
+                    "position": [
+                      19,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [19]
+              "position": [
+                19
+              ]
             },
             {
               "id": "6b1d5c12",
@@ -1643,19 +2349,33 @@
                                   "text": "Video, Clip, Portrait, UK+Intl, no guidance",
                                   "attributes": []
                                 },
-                                "position": [20, 1, 1, 1]
+                                "position": [
+                                  20,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [20, 1, 1]
+                          "position": [
+                            20,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [20, 1]
+                    "position": [
+                      20,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [20]
+              "position": [
+                20
+              ]
             },
             {
               "id": "dddee5dc",
@@ -1686,19 +2406,37 @@
                                         "text": "Video, Clip, Portrait, UK+Intl, no guidance",
                                         "attributes": []
                                       },
-                                      "position": [21, 1, 1, 1, 1]
+                                      "position": [
+                                        21,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [21, 1, 1, 1]
+                                "position": [
+                                  21,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [21, 1, 1]
+                          "position": [
+                            21,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [21, 1]
+                    "position": [
+                      21,
+                      1
+                    ]
                   },
                   {
                     "id": "bb4942b5",
@@ -1724,7 +2462,9 @@
                             "versions": [
                               {
                                 "versionId": "p01n40vq",
-                                "types": ["Portrait"],
+                                "types": [
+                                  "Portrait"
+                                ],
                                 "duration": 11,
                                 "durationISO8601": "PT11S",
                                 "warnings": {},
@@ -1735,10 +2475,16 @@
                                 "availableFrom": 1563017501000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [21, 2, 1]
+                          "position": [
+                            21,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "fb9fa839",
@@ -1755,7 +2501,12 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "BBC"
                                 },
-                                "position": [21, 2, 2, 1]
+                                "position": [
+                                  21,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
                                 "id": "0cfa7f8f",
@@ -1781,32 +2532,65 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    21, 2, 2, 2, 1, 1, 1
+                                                    21,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [21, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              21,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [21, 2, 2, 2, 1]
+                                      "position": [
+                                        21,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [21, 2, 2, 2]
+                                "position": [
+                                  21,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [21, 2, 2]
+                          "position": [
+                            21,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [21, 2]
+                    "position": [
+                      21,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [21]
+              "position": [
+                21
+              ]
             },
             {
               "id": "e5793c96",
@@ -1831,19 +2615,33 @@
                                   "text": "Audio, episode, UK only, guidance",
                                   "attributes": []
                                 },
-                                "position": [22, 1, 1, 1]
+                                "position": [
+                                  22,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [22, 1, 1]
+                          "position": [
+                            22,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [22, 1]
+                    "position": [
+                      22,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [22]
+              "position": [
+                22
+              ]
             },
             {
               "id": "0b2acc84",
@@ -1874,19 +2672,37 @@
                                         "text": "Audio, episode, UK only, warnings",
                                         "attributes": []
                                       },
-                                      "position": [23, 1, 1, 1, 1]
+                                      "position": [
+                                        23,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [23, 1, 1, 1]
+                                "position": [
+                                  23,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [23, 1, 1]
+                          "position": [
+                            23,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [23, 1]
+                    "position": [
+                      23,
+                      1
+                    ]
                   },
                   {
                     "id": "86d967ec",
@@ -1911,7 +2727,9 @@
                             "versions": [
                               {
                                 "versionId": "p01n6yb1",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 343,
                                 "durationISO8601": "PT5M43S",
                                 "warnings": {
@@ -1925,10 +2743,16 @@
                                 "availableFrom": 1563782700000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "radioProgramme"
                           },
-                          "position": [23, 2, 1]
+                          "position": [
+                            23,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "710411e6",
@@ -1942,19 +2766,33 @@
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01n6y7l.jpg",
                                   "originCode": "mpv"
                                 },
-                                "position": [23, 2, 2, 1]
+                                "position": [
+                                  23,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [23, 2, 2]
+                          "position": [
+                            23,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [23, 2]
+                    "position": [
+                      23,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [23]
+              "position": [
+                23
+              ]
             },
             {
               "id": "5073efcb",
@@ -1979,19 +2817,33 @@
                                   "text": "Video, Episode, UK only, subtitles, guidance",
                                   "attributes": []
                                 },
-                                "position": [24, 1, 1, 1]
+                                "position": [
+                                  24,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [24, 1, 1]
+                          "position": [
+                            24,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [24, 1]
+                    "position": [
+                      24,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [24]
+              "position": [
+                24
+              ]
             },
             {
               "id": "48df788e",
@@ -2022,19 +2874,37 @@
                                         "text": "Video, Episode, UK only, subtitles, guidance",
                                         "attributes": []
                                       },
-                                      "position": [25, 1, 1, 1, 1]
+                                      "position": [
+                                        25,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [25, 1, 1, 1]
+                                "position": [
+                                  25,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [25, 1, 1]
+                          "position": [
+                            25,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [25, 1]
+                    "position": [
+                      25,
+                      1
+                    ]
                   },
                   {
                     "id": "cc4438f7",
@@ -2059,7 +2929,9 @@
                             "versions": [
                               {
                                 "versionId": "p01n6ygf",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 1652,
                                 "durationISO8601": "PT27M32S",
                                 "warnings": {
@@ -2073,10 +2945,16 @@
                                 "availableFrom": 1563784020000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [25, 2, 1]
+                          "position": [
+                            25,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "f5708f18",
@@ -2090,19 +2968,33 @@
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01n6yfm.jpg",
                                   "originCode": "mpv"
                                 },
-                                "position": [25, 2, 2, 1]
+                                "position": [
+                                  25,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [25, 2, 2]
+                          "position": [
+                            25,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [25, 2]
+                    "position": [
+                      25,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [25]
+              "position": [
+                25
+              ]
             },
             {
               "id": "1651147f",
@@ -2127,19 +3019,33 @@
                                   "text": "Audio, Episode, worldwide, guidance",
                                   "attributes": []
                                 },
-                                "position": [26, 1, 1, 1]
+                                "position": [
+                                  26,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [26, 1, 1]
+                          "position": [
+                            26,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [26, 1]
+                    "position": [
+                      26,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [26]
+              "position": [
+                26
+              ]
             },
             {
               "id": "4f323ced",
@@ -2170,19 +3076,37 @@
                                         "text": "Audio, Episode, worldwide, guidance",
                                         "attributes": []
                                       },
-                                      "position": [27, 1, 1, 1, 1]
+                                      "position": [
+                                        27,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [27, 1, 1, 1]
+                                "position": [
+                                  27,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [27, 1, 1]
+                          "position": [
+                            27,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [27, 1]
+                    "position": [
+                      27,
+                      1
+                    ]
                   },
                   {
                     "id": "bb38a436",
@@ -2207,7 +3131,9 @@
                             "versions": [
                               {
                                 "versionId": "p01mbrx4",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 127,
                                 "durationISO8601": "PT2M7S",
                                 "warnings": {
@@ -2221,10 +3147,16 @@
                                 "availableFrom": 1556298963000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "radioProgramme"
                           },
-                          "position": [27, 2, 1]
+                          "position": [
+                            27,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "9838221a",
@@ -2238,19 +3170,33 @@
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01n2j2b.jpg",
                                   "originCode": "mpv"
                                 },
-                                "position": [27, 2, 2, 1]
+                                "position": [
+                                  27,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [27, 2, 2]
+                          "position": [
+                            27,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [27, 2]
+                    "position": [
+                      27,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [27]
+              "position": [
+                27
+              ]
             },
             {
               "id": "3f76c18b",
@@ -2275,19 +3221,33 @@
                                   "text": "Video, Clip, International + UK, no guidance, no subtitles, end date 28/08/2019 16:00",
                                   "attributes": []
                                 },
-                                "position": [28, 1, 1, 1]
+                                "position": [
+                                  28,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [28, 1, 1]
+                          "position": [
+                            28,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [28, 1]
+                    "position": [
+                      28,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [28]
+              "position": [
+                28
+              ]
             },
             {
               "id": "214ab985",
@@ -2318,19 +3278,37 @@
                                         "text": "Stars arrive at Venice film festival preview",
                                         "attributes": []
                                       },
-                                      "position": [29, 1, 1, 1, 1]
+                                      "position": [
+                                        29,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [29, 1, 1, 1]
+                                "position": [
+                                  29,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [29, 1, 1]
+                          "position": [
+                            29,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [29, 1]
+                    "position": [
+                      29,
+                      1
+                    ]
                   },
                   {
                     "id": "3acd4d15",
@@ -2356,7 +3334,9 @@
                             "versions": [
                               {
                                 "versionId": "p01nl60p",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 191,
                                 "durationISO8601": "PT3M11S",
                                 "warnings": {},
@@ -2368,10 +3348,16 @@
                                 "availableFrom": 1566918195000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [29, 2, 1]
+                          "position": [
+                            29,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "2465edfd",
@@ -2388,7 +3374,12 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "Reuters"
                                 },
-                                "position": [29, 2, 2, 1]
+                                "position": [
+                                  29,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
                                 "id": "790ecebe",
@@ -2414,32 +3405,65 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    29, 2, 2, 2, 1, 1, 1
+                                                    29,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [29, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              29,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [29, 2, 2, 2, 1]
+                                      "position": [
+                                        29,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [29, 2, 2, 2]
+                                "position": [
+                                  29,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [29, 2, 2]
+                          "position": [
+                            29,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [29, 2]
+                    "position": [
+                      29,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [29]
+              "position": [
+                29
+              ]
             },
             {
               "id": "44e1e2d3",
@@ -2464,19 +3488,33 @@
                                   "text": "Video, Clip, International + UK, no guidance, no subtitles, start date 20/12/19 08:00 ",
                                   "attributes": []
                                 },
-                                "position": [30, 1, 1, 1]
+                                "position": [
+                                  30,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [30, 1, 1]
+                          "position": [
+                            30,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [30, 1]
+                    "position": [
+                      30,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [30]
+              "position": [
+                30
+              ]
             },
             {
               "id": "5c7d0617",
@@ -2507,19 +3545,37 @@
                                         "text": "Cuba: An island without fish?",
                                         "attributes": []
                                       },
-                                      "position": [31, 1, 1, 1, 1]
+                                      "position": [
+                                        31,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [31, 1, 1, 1]
+                                "position": [
+                                  31,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [31, 1, 1]
+                          "position": [
+                            31,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [31, 1]
+                    "position": [
+                      31,
+                      1
+                    ]
                   },
                   {
                     "id": "90acf5e5",
@@ -2544,7 +3600,9 @@
                             "versions": [
                               {
                                 "versionId": "p01nl5yb",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 191,
                                 "durationISO8601": "PT3M11S",
                                 "warnings": {},
@@ -2556,10 +3614,16 @@
                                 "availableFrom": 1593586800000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [31, 2, 1]
+                          "position": [
+                            31,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "dc6bdcfd",
@@ -2573,19 +3637,33 @@
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01nl63k.jpg",
                                   "originCode": "mpv"
                                 },
-                                "position": [31, 2, 2, 1]
+                                "position": [
+                                  31,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [31, 2, 2]
+                          "position": [
+                            31,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [31, 2]
+                    "position": [
+                      31,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [31]
+              "position": [
+                31
+              ]
             },
             {
               "id": "fca52695",
@@ -2606,20 +3684,37 @@
                               {
                                 "id": "6a6a323a",
                                 "type": "fragment",
-                                "model": { "text": "Notes", "attributes": [] },
-                                "position": [32, 1, 1, 1]
+                                "model": {
+                                  "text": "Notes",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  32,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [32, 1, 1]
+                          "position": [
+                            32,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [32, 1]
+                    "position": [
+                      32,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [32]
+              "position": [
+                32
+              ]
             },
             {
               "id": "0fed19a4",
@@ -2639,17 +3734,33 @@
                             "text": "Video episodes can only be UK",
                             "attributes": []
                           },
-                          "position": [33, 1, 1]
+                          "position": [
+                            33,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [33, 1]
+                    "position": [
+                      33,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [33]
+              "position": [
+                33
+              ]
             },
-            { "id": "37676617", "type": "mpu", "model": {}, "position": [34] },
+            {
+              "id": "37676617",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                34
+              ]
+            },
             {
               "id": "e16729f3",
               "type": "text",
@@ -2668,11 +3779,18 @@
                             "text": "Episodes cannot be ex-UK only",
                             "attributes": []
                           },
-                          "position": [35, 1, 1]
+                          "position": [
+                            35,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [35, 1]
+                    "position": [
+                      35,
+                      1
+                    ]
                   },
                   {
                     "id": "6c0c4cb0",
@@ -2687,11 +3805,18 @@
                             "text": "Subtitles cannot be displayed for audio",
                             "attributes": []
                           },
-                          "position": [35, 2, 1]
+                          "position": [
+                            35,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [35, 2]
+                    "position": [
+                      35,
+                      2
+                    ]
                   },
                   {
                     "id": "926677cb",
@@ -2706,11 +3831,18 @@
                             "text": "Episodes cannot be portrait",
                             "attributes": []
                           },
-                          "position": [35, 3, 1]
+                          "position": [
+                            35,
+                            3,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [35, 3]
+                    "position": [
+                      35,
+                      3
+                    ]
                   },
                   {
                     "id": "b48ad99f",
@@ -2725,11 +3857,18 @@
                             "text": "Audio cannot be portrait",
                             "attributes": []
                           },
-                          "position": [35, 4, 1]
+                          "position": [
+                            35,
+                            4,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [35, 4]
+                    "position": [
+                      35,
+                      4
+                    ]
                   },
                   {
                     "id": "7acc5ed7",
@@ -2744,15 +3883,24 @@
                             "text": "Warnings will not display as they are not supported by MPV yet",
                             "attributes": []
                           },
-                          "position": [35, 5, 1]
+                          "position": [
+                            35,
+                            5,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [35, 5]
+                    "position": [
+                      35,
+                      5
+                    ]
                   }
                 ]
               },
-              "position": [35]
+              "position": [
+                35
+              ]
             }
           ]
         }
@@ -2760,16 +3908,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c3wmq4d1y3wo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c3wmq4d1y3wo",
-          "canonicalUrl": "https://www.bbc.com/news/articles/c3wmq4d1y3wo"
+          "optimoUrn": "urn:bbc:optimo:asset:c3wmq4d1y3wo"
         },
         "type": "article",
         "createdBy": "News",
         "language": "en-gb",
-        "lastUpdated": 1650984928734,
         "firstPublished": 1559129664696,
         "lastPublished": 1619512976817,
-        "timestamp": 1619512976817,
         "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c3wmq4d1y3wo",
@@ -2779,13 +3924,9 @@
         "passport": {
           "language": "en-gb",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
-          "locator": "urn:bbc:optimo:asset:c3wmq4d1y3wo",
-          "availability": "AVAILABLE",
-          "taggings": [],
-          "publishedState": "PUBLISHED"
+          "taggings": []
         },
         "tags": {},
-        "version": "v1.4.7",
         "blockTypes": [
           "headline",
           "text",
@@ -2799,17 +3940,10 @@
           "audio",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c3wmq4d1y3wo",
-          "canonicalUrl": "https://www.bbc.com/news/articles/c3wmq4d1y3wo"
-        },
-        "timestamp": 1619512976817,
-        "suitableForSyndication": false,
-        "language": "en-gb",
+        "locators": {},
         "headlines": {
           "seoHeadline": "New Mega AV test article",
           "promoHeadline": {
@@ -2853,7 +3987,10 @@
                       "blocks": [
                         {
                           "type": "fragment",
-                          "model": { "text": "", "attributes": [] }
+                          "model": {
+                            "text": "",
+                            "attributes": []
+                          }
                         }
                       ]
                     }
@@ -2863,25 +4000,7 @@
             }
           ]
         },
-        "passport": {
-          "language": "en-gb",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
-          "locator": "urn:bbc:optimo:asset:c3wmq4d1y3wo",
-          "availability": "AVAILABLE",
-          "taggings": [],
-          "publishedState": "PUBLISHED"
-        },
-        "id": "urn:bbc:ares::article:c3wmq4d1y3wo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "News",
-          "uri": "/news",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {
@@ -2903,7 +4022,12 @@
           "byline": {
             "name": "By Sarah Collerton",
             "title": "BBC News",
-            "persons": [{ "name": "Sarah Collerton", "function": "BBC News" }]
+            "persons": [
+              {
+                "name": "Sarah Collerton",
+                "function": "BBC News"
+              }
+            ]
           },
           "cpsType": "STY",
           "indexImage": {
@@ -2934,7 +4058,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Angela Lansbury 1925 - 2022" },
+          "headlines": {
+            "headline": "Angela Lansbury 1925 - 2022"
+          },
           "locators": {
             "assetUri": "/news/23531477",
             "curieCpsUrn": "urn:bbc:cps:curie:asset:acab4bbb-ff5a-499b-8617-b8fa24d5e088",
@@ -3141,7 +4267,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Lego Titanic sunk" },
+          "headlines": {
+            "headline": "Lego Titanic sunk"
+          },
           "locators": {
             "assetUri": "/news/business-23481281",
             "curieCpsUrn": "urn:bbc:cps:curie:asset:06cb5998-373d-41ea-b249-6aec87d3329b",
@@ -3261,7 +4389,12 @@
           "byline": {
             "name": "By Sian Prescott",
             "title": "BBC News",
-            "persons": [{ "name": "Sian Prescott", "function": "BBC News" }]
+            "persons": [
+              {
+                "name": "Sian Prescott",
+                "function": "BBC News"
+              }
+            ]
           },
           "cpsType": "STY",
           "indexImage": {
@@ -3321,7 +4454,10 @@
                 "name": "By Benjamen Walker",
                 "title": "BBC World Service",
                 "persons": [
-                  { "name": "Benjamen Walker", "function": "BBC World Service" }
+                  {
+                    "name": "Benjamen Walker",
+                    "function": "BBC World Service"
+                  }
                 ]
               },
               "indexImage": {
@@ -3541,7 +4677,10 @@
                 "name": "By Cindy Sui",
                 "title": "BBC News, Taipei",
                 "persons": [
-                  { "name": "Cindy Sui", "function": "BBC News, Taipei" }
+                  {
+                    "name": "Cindy Sui",
+                    "function": "BBC News, Taipei"
+                  }
                 ]
               },
               "indexImage": {
@@ -3903,7 +5042,10 @@
                       "thingLabel": "Design and Technology",
                       "thingUri": "http://www.bbc.co.uk/things/add89d72-af77-4490-b479-25fd45bb5e72#id",
                       "thingId": "add89d72-af77-4490-b479-25fd45bb5e72",
-                      "thingType": ["core:Thing", "tagging:TagConcept"],
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/education/subjects/zykw2hv#field-of-study"
                       ],
@@ -3996,7 +5138,12 @@
               "byline": {
                 "name": "By Will Grant",
                 "title": "BBC News, Mexico",
-                "persons": [{ "name": "Will Grant", "function": "BBC News" }]
+                "persons": [
+                  {
+                    "name": "Will Grant",
+                    "function": "BBC News"
+                  }
+                ]
               },
               "passport": {
                 "category": {
@@ -4056,7 +5203,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
