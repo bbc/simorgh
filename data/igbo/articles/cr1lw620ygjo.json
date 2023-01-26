@@ -27,19 +27,33 @@
                                   "text": "Nke a bụ isiokwu nke isiokwu ule a",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "2721e69b",
@@ -69,19 +83,37 @@
                                         "text": "Foto nnwale a, BBC nwebisiinka, na-egosi maapụ France. Ihe onyonyo a dị na ngalaba atọ nke mbụ nwere isi okwu a.",
                                         "attributes": []
                                       },
-                                      "position": [2, 1, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 1]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 1, 1]
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 1]
+                    "position": [
+                      2,
+                      1
+                    ]
                   },
                   {
                     "id": "51d940c4",
@@ -106,19 +138,37 @@
                                         "text": "Maapụ nke France na-egosi Paris na Cognac",
                                         "attributes": []
                                       },
-                                      "position": [2, 2, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 2, 1, 1]
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 2, 1]
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 2]
+                    "position": [
+                      2,
+                      2
+                    ]
                   },
                   {
                     "id": "f1f95afa",
@@ -130,11 +180,16 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "BBC"
                     },
-                    "position": [2, 3]
+                    "position": [
+                      2,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "7108d447",
@@ -143,7 +198,9 @@
                 "firstPublished": 1562936759286,
                 "lastPublished": 1569599205836
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
             {
               "id": "e0191615",
@@ -163,7 +220,11 @@
                             "text": "Nke a bụ ngọngọ ederede, nke nwere njikọ URL na ",
                             "attributes": []
                           },
-                          "position": [4, 1, 1]
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
                         },
                         {
                           "id": "9ae5eb21",
@@ -178,21 +239,35 @@
                                   "text": "ebe obibi BBC Weather.",
                                   "attributes": []
                                 },
-                                "position": [4, 1, 2, 1]
+                                "position": [
+                                  4,
+                                  1,
+                                  2,
+                                  1
+                                ]
                               }
                             ],
                             "locator": "https://www.bbc.com/weather",
                             "isExternal": false
                           },
-                          "position": [4, 1, 2]
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 1]
+                    "position": [
+                      4,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [4]
+              "position": [
+                4
+              ]
             },
             {
               "id": "2f9cdf76",
@@ -223,19 +298,37 @@
                                         "text": "Nke a bụ ngọngọ vidiyo nwere vidiyo gbasara ndanda",
                                         "attributes": []
                                       },
-                                      "position": [5, 1, 1, 1, 1]
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 1, 1, 1]
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 1, 1]
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   },
                   {
                     "id": "91973fb4",
@@ -261,7 +354,9 @@
                             "versions": [
                               {
                                 "versionId": "p01k6msp",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 191,
                                 "durationISO8601": "PT3M11S",
                                 "warnings": {
@@ -275,10 +370,16 @@
                                 "availableFrom": 1540218932000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [5, 2, 1]
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "197b39a4",
@@ -295,7 +396,12 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "BBC"
                                 },
-                                "position": [5, 2, 2, 1]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
                                 "id": "219a4f53",
@@ -321,32 +427,65 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    5, 2, 2, 2, 1, 1, 1
+                                                    5,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [5, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              5,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [5, 2, 2, 2, 1]
+                                      "position": [
+                                        5,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 2, 2, 2]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 2, 2]
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 2]
+                    "position": [
+                      5,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
             },
             {
               "id": "946a60b5",
@@ -371,19 +510,33 @@
                                   "text": "Nke a bụ ngọngọ nke isiokwu dị n'okpuru",
                                   "attributes": []
                                 },
-                                "position": [6, 1, 1, 1]
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [6, 1, 1]
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 1]
+                    "position": [
+                      6,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [6]
+              "position": [
+                6
+              ]
             },
             {
               "id": "7f845245",
@@ -413,19 +566,37 @@
                                         "text": "Ndị egwuregwu bọọlụ mechara otu egwuregwu\r",
                                         "attributes": []
                                       },
-                                      "position": [7, 1, 1, 1, 1]
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [7, 1, 1, 1]
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [7, 1, 1]
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 1]
+                    "position": [
+                      7,
+                      1
+                    ]
                   },
                   {
                     "id": "ac9b243f",
@@ -437,11 +608,16 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "Getty Images"
                     },
-                    "position": [7, 2]
+                    "position": [
+                      7,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [7]
+              "position": [
+                7
+              ]
             },
             {
               "id": "0924b4e6",
@@ -461,33 +637,46 @@
                             "text": "Edepụtara isiokwu ule a ka anyị wee nwee ike ịme ngwụsị ngwụsị akpaghị aka na weebụsaịtị anyị.",
                             "attributes": []
                           },
-                          "position": [8, 1, 1]
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 1]
+                    "position": [
+                      8,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [8]
+              "position": [
+                8
+              ]
             },
-            { "id": "9f70a78b", "type": "mpu", "model": {}, "position": [9] }
+            {
+              "id": "9f70a78b",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            }
           ]
         }
       },
       "metadata": {
         "id": "urn:bbc:ares::article:cr1lw620ygjo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cr1lw620ygjo",
-          "canonicalUrl": "https://www.bbc.com/igbo/articles/cr1lw620ygjo"
+          "optimoUrn": "urn:bbc:optimo:asset:cr1lw620ygjo"
         },
         "type": "article",
         "createdBy": "Igbo",
         "language": "ig",
-        "lastUpdated": 1662117083061,
         "firstPublished": 1562936759286,
         "lastPublished": 1569599205836,
-        "timestamp": 1569599205836,
         "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cr1lw620ygjo",
@@ -497,12 +686,9 @@
         "passport": {
           "language": "ig",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Igbo",
-          "locator": "urn:bbc:optimo:asset:cr1lw620ygjo",
-          "availability": "AVAILABLE",
           "taggings": []
         },
         "tags": {},
-        "version": "v1.4.4",
         "blockTypes": [
           "headline",
           "text",
@@ -517,46 +703,24 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "consumableAsSFV": false,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cr1lw620ygjo",
-          "canonicalUrl": "https://www.bbc.com/igbo/articles/cr1lw620ygjo"
-        },
-        "timestamp": 1569599205836,
-        "suitableForSyndication": false,
-        "language": "ig",
+        "locators": {},
         "headlines": {
           "seoHeadline": "Nke a bụ isiokwu SEO nke isiokwu nnwale a"
         },
         "images": {},
-        "passport": {
-          "language": "ig",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Igbo",
-          "locator": "urn:bbc:optimo:asset:cr1lw620ygjo",
-          "availability": "AVAILABLE",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:cr1lw620ygjo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Igbo",
-          "uri": "/igbo",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {
       "topStories": [
         {
-          "headlines": { "headline": "DSS: Wepụ aka enwe n'ofe na Benue" },
+          "headlines": {
+            "headline": "DSS: Wepụ aka enwe n'ofe na Benue"
+          },
           "locators": {
             "assetUri": "/igbo/23182501",
             "cpsUrn": "urn:bbc:content:assetUri:igbo/23182501",
@@ -592,7 +756,10 @@
             "copyrightHolder": "Reuters",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -605,7 +772,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Test m̀ịṅị̀ịọ́ụ̄ please ignore" },
+          "headlines": {
+            "headline": "Test m̀ịṅị̀ịọ́ụ̄ please ignore"
+          },
           "locators": {
             "assetUri": "/igbo/live/institutional-23162153",
             "cpsUrn": "urn:bbc:content:assetUri:igbo/live/institutional-23162153",
@@ -646,13 +815,18 @@
             }
           },
           "isLive": true,
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "id": "urn:bbc:ares::asset:igbo/live/institutional-23162153",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Akụkọ BBC Igbo na Nkeji" },
+          "headlines": {
+            "headline": "Akụkọ BBC Igbo na Nkeji"
+          },
           "locators": {
             "assetUri": "/igbo/23183171",
             "cpsUrn": "urn:bbc:content:assetUri:igbo/23183171",
@@ -668,7 +842,9 @@
             "subType": "clip",
             "format": "audio",
             "title": "Akụkọ BBC Igbo na Nkeji",
-            "synopses": { "short": "Akụkọ ihe na-eme n'ụwa niile" },
+            "synopses": {
+              "short": "Akụkọ ihe na-eme n'ụwa niile"
+            },
             "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01g1v11.jpg",
             "embedding": true,
             "advertising": true,
@@ -676,11 +852,16 @@
             "versions": [
               {
                 "versionId": "p01g1tyr",
-                "types": ["Original"],
+                "types": [
+                  "Original"
+                ],
                 "duration": 58,
                 "durationISO8601": "PT58S",
                 "warnings": {},
-                "availableTerritories": { "uk": true, "nonUk": true },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
                 "availableFrom": 1516641499000
               }
             ],
@@ -699,7 +880,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -713,7 +897,9 @@
       ],
       "features": [
         {
-          "headlines": { "headline": "Lee ihe Barcelona mere Real Betis" },
+          "headlines": {
+            "headline": "Lee ihe Barcelona mere Real Betis"
+          },
           "locators": {
             "assetUri": "/igbo/23182930",
             "cpsUrn": "urn:bbc:content:assetUri:igbo/23182930",
@@ -749,7 +935,10 @@
             "copyrightHolder": "AFP/Getty Images",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Ogbako",
@@ -786,7 +975,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Ogbako",
@@ -823,7 +1015,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Ogbako",
@@ -868,7 +1063,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Ogbako",
@@ -917,7 +1115,10 @@
             "copyrightHolder": "Getty Images",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Ogbako",
@@ -973,7 +1174,10 @@
             "copyrightHolder": "Getty Images",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Ogbako",
@@ -984,7 +1188,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "A gbabguola Don Wani" },
+          "headlines": {
+            "headline": "A gbabguola Don Wani"
+          },
           "locators": {
             "assetUri": "/igbo/23177465",
             "cpsUrn": "urn:bbc:content:assetUri:igbo/23177465",
@@ -1010,11 +1216,16 @@
             "versions": [
               {
                 "versionId": "p01ftg83",
-                "types": ["Original"],
+                "types": [
+                  "Original"
+                ],
                 "duration": 49,
                 "durationISO8601": "PT49S",
                 "warnings": {},
-                "availableTerritories": { "uk": true, "nonUk": true },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
                 "availableFrom": 1515332979000
               }
             ],
@@ -1045,7 +1256,10 @@
             "copyrightHolder": "Dan Omoni facebook",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Ogbako",
@@ -1082,7 +1296,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Ogbako",
@@ -1093,7 +1310,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Ọkụ Festac: Ajọ ọnwụnwa nke keresimesi" },
+          "headlines": {
+            "headline": "Ọkụ Festac: Ajọ ọnwụnwa nke keresimesi"
+          },
           "locators": {
             "assetUri": "/igbo/23174391",
             "cpsUrn": "urn:bbc:content:assetUri:igbo/23174391",
@@ -1129,7 +1348,10 @@
             "copyrightHolder": "BBC Pidgin Unit",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Ogbako",

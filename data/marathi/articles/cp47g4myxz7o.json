@@ -613,16 +613,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cp47g4myxz7o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cp47g4myxz7o",
-          "canonicalUrl": "https://www.bbc.com/marathi/articles/cp47g4myxz7o"
+          "optimoUrn": "urn:bbc:optimo:asset:cp47g4myxz7o"
         },
         "type": "article",
         "createdBy": "Marathi",
         "language": "mr",
-        "lastUpdated": 1598599637857,
         "firstPublished": 1562942287715,
         "lastPublished": 1562942287715,
-        "timestamp": 1562942287715,
         "options": {},
         "analyticsLabels": {
           "producer": "Marathi",
@@ -631,12 +628,9 @@
         "passport": {
           "language": "mr",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Marathi",
-          "locator": "urn:bbc:optimo:asset:cp47g4myxz7o",
-          "availability": "AVAILABLE",
           "taggings": []
         },
         "tags": {},
-        "version": "v1.4.3",
         "blockTypes": [
           "headline",
           "text",
@@ -651,39 +645,15 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cp47g4myxz7o",
-          "canonicalUrl": "https://www.bbc.com/marathi/articles/cp47g4myxz7o"
-        },
-        "timestamp": 1562942287715,
-        "suitableForSyndication": false,
-        "language": "mr",
+        "locators": {},
         "headlines": {
           "seoHeadline": "चांद्रमोहीम : कसं होतं अपोलो 11 मिशन?"
         },
         "images": {},
-        "passport": {
-          "language": "mr",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Marathi",
-          "locator": "urn:bbc:optimo:asset:cp47g4myxz7o",
-          "availability": "AVAILABLE",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:cp47g4myxz7o",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Marathi",
-          "uri": "/marathi",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {

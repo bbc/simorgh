@@ -17,6 +17,7 @@ import {
   PHOTO_GALLERY_PAGE,
   STORY_PAGE,
   TOPIC_PAGE,
+  LIVE_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 const ID_COOKIE = 'ckns_sylphid';
@@ -61,6 +62,8 @@ export const getType = (pageType, shorthand = false) => {
       return FEATURE_INDEX_PAGE;
     case TOPIC_PAGE:
       return 'Topics';
+    case LIVE_PAGE:
+      return 'Live';
     default:
       return null;
   }
@@ -135,6 +138,8 @@ export const getTitle = ({ pageType, pageData, brandName, title }) => {
     case MOST_WATCHED_PAGE:
       return `${title} - ${brandName}`;
     case TOPIC_PAGE:
+      return `${pageData?.title} - ${brandName}`;
+    case LIVE_PAGE:
       return `${pageData?.title} - ${brandName}`;
     default:
       return null;

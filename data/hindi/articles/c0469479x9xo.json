@@ -600,16 +600,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c0469479x9xo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c0469479x9xo",
-          "canonicalUrl": "https://www.bbc.com/hindi/articles/c0469479x9xo"
+          "optimoUrn": "urn:bbc:optimo:asset:c0469479x9xo"
         },
         "type": "article",
         "createdBy": "Hindi",
         "language": "hi",
-        "lastUpdated": 1598599631761,
         "firstPublished": 1562942209748,
         "lastPublished": 1562942209748,
-        "timestamp": 1562942209748,
         "options": {},
         "analyticsLabels": {
           "producer": "Hindi",
@@ -618,12 +615,9 @@
         "passport": {
           "language": "hi",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Hindi",
-          "locator": "urn:bbc:optimo:asset:c0469479x9xo",
-          "availability": "AVAILABLE",
           "taggings": []
         },
         "tags": {},
-        "version": "v1.4.4",
         "blockTypes": [
           "headline",
           "text",
@@ -638,39 +632,15 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c0469479x9xo",
-          "canonicalUrl": "https://www.bbc.com/hindi/articles/c0469479x9xo"
-        },
-        "timestamp": 1562942209748,
-        "suitableForSyndication": false,
-        "language": "hi",
+        "locators": {},
         "headlines": {
           "seoHeadline": "इंग्लैंड-न्यूज़ीलैंड के फ़ाइनल में पहुंचने पर पाकिस्तानी खुश क्यों हैं? #SOCIAL"
         },
         "images": {},
-        "passport": {
-          "language": "hi",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Hindi",
-          "locator": "urn:bbc:optimo:asset:c0469479x9xo",
-          "availability": "AVAILABLE",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c0469479x9xo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Hindi",
-          "uri": "/hindi",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {
