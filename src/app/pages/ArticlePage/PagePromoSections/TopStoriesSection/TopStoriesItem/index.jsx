@@ -15,7 +15,7 @@ import {
 
 const TopStoriesItem = forwardRef(
   ({ item, ariaLabelledBy, eventTrackingData }, viewRef) => {
-    const { script, translations } = useContext(ServiceContext);
+    const { script, translations, service } = useContext(ServiceContext);
 
     if (!item || isEmpty(item)) return null;
 
@@ -62,6 +62,7 @@ const TopStoriesItem = forwardRef(
               <Promo.Link>
                 {isLive ? (
                   <Promo.LiveLabel
+                    service={service}
                     liveText={liveLabel}
                     ariaHidden={liveLabelIsEnglish}
                     offScreenText={liveLabelIsEnglish ? 'Live' : null}
