@@ -6,7 +6,6 @@ const styles = {
     css({
       paddingTop: '2rem',
       paddingBottom: '2rem',
-      border: '0.1875rem solid transparent',
     }),
   card: ({ mq }: Theme) =>
     css({
@@ -15,6 +14,7 @@ const styles = {
         'radial-gradient(circle at 20% 90%, #A20219, #180109 60%, #500115 90%)',
       paddingLeft: '1rem',
       paddingRight: '1rem',
+      border: '0.1875rem solid transparent',
       [mq.GROUP_3_ONLY]: {
         background:
           'linear-gradient(-120deg, #A20219 0%, #180109 54%, #180109 90%)',
