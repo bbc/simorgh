@@ -111,6 +111,7 @@ const RecommendationsPromo = ({ promo, eventTrackingData }) => {
   const { headline, url, indexImage } = extractPromoData({ promo });
 
   const { pageType } = useContext(RequestContext);
+  const isArticle = pageType === ARTICLE_PAGE;
 
   return (
     <Grid
@@ -126,7 +127,7 @@ const RecommendationsPromo = ({ promo, eventTrackingData }) => {
     >
       <StyledPromoWrapper
         data-e2e="story-promo-wrapper"
-        isArticlePage={pageType === ARTICLE_PAGE}
+        isArticlePage={isArticle}
       >
         <ImageWrapper>
           <RecommendationsImage indexImage={indexImage} lazyLoad />
