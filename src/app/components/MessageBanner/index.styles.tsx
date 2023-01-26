@@ -140,16 +140,16 @@ const styles = {
   chevronLtr: () =>
     css({
       marginLeft: '0.5rem',
-      width: '16px',
-      height: '16px',
+      width: '1rem',
+      height: '1rem',
       verticalAlign: 'middle',
       fill: 'currentcolor',
     }),
   chevronRtl: () =>
     css({
       marginRight: '0.5rem',
-      width: '16px',
-      height: '16px',
+      width: '1rem',
+      height: '1rem',
       verticalAlign: 'middle',
       fill: 'currentcolor',
     }),
