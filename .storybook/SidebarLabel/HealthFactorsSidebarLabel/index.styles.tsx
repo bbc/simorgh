@@ -1,4 +1,4 @@
-import pixelsToRem from '../../src/app/utilities/pixelsToRem';
+import pixelsToRem from '../../../src/app/utilities/pixelsToRem';
 
 const styles = {
   iconWrapper: {
