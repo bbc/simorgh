@@ -46,6 +46,11 @@ const StyledParagraph = styled.p`
   color: ${C_WHITE};
   margin: 0;
   padding: ${GEL_SPACING_DBL} 0;
+
+  // removes padding which creates touch target from the final "inline" link so the Focus Indicator doesn't obscure other text.
+  a {
+    padding: 0;
+  }
 `;
 
 const StyledAmpCookieSettingsButton = styled(AmpCookieSettingsButton)`
