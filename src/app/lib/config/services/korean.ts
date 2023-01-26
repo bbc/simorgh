@@ -279,7 +279,7 @@ export const service: DefaultServiceConfig = {
       durationLabel: '방송 길이 %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      hasStoryRecommendations: true,
       skipLink: {
         text: 'Skip %title% and continue reading',
         endTextVisuallyHidden: 'End of %title%',

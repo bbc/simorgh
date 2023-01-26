@@ -280,7 +280,7 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'স্থিতিকাল %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      hasStoryRecommendations: true,
       skipLink: {
         text: 'Skip %title% and continue reading',
         endTextVisuallyHidden: 'End of %title%',
