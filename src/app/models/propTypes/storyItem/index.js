@@ -1,4 +1,4 @@
-import { shape, string, number, arrayOf, object } from 'prop-types';
+import { shape, string, number, arrayOf } from 'prop-types';
 
 export const storyItemImage = {
   path: string,
