@@ -109,11 +109,12 @@ RecommendationsPromoListItem.propTypes = {
   item: oneOfType([shape(storyItem), shape(optimoStoryItem)]).isRequired,
   index: number.isRequired,
   service: string.isRequired,
-  optimizely: shape({}),
+  optimizely: shape({}).isRequired,
 };
 
 RecommendationsPromoList.propTypes = {
-  promoItems: arrayOf(oneOfType([shape(storyItem), shape(optimoStoryItem)])).isRequired,
+  promoItems: arrayOf(oneOfType([shape(storyItem), shape(optimoStoryItem)]))
+    .isRequired,
 };
 
 export default RecommendationsPromoList;
