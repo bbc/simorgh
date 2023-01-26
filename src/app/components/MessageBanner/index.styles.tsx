@@ -14,10 +14,12 @@ const styles = {
         'radial-gradient(circle at 20% 90%, #A20219, #180109 60%, #500115 90%)',
       paddingLeft: '1rem',
       paddingRight: '1rem',
-      border: '0.1875rem solid transparent',
       [mq.GROUP_3_ONLY]: {
         background:
           'linear-gradient(-120deg, #A20219 0%, #180109 54%, #180109 90%)',
+      },
+      [mq.HIGH_CONTRAST]: {
+        border: '0.1875rem solid transparent',
       },
       [mq.GROUP_4_MIN_WIDTH]: {
         background:
@@ -100,16 +102,18 @@ const styles = {
       },
       [mq.GROUP_3_ONLY]: {
         width: 'auto',
+        maxWidth: 'calc(100% - 240px)',
         margin: '0 0 1.5rem 0',
         paddingBottom: '1rem',
       },
       [mq.GROUP_4_MIN_WIDTH]: {
         width: 'auto',
+        maxWidth: 'calc(100% - 240px)',
         margin: '0 0 1.5rem 0',
         paddingBottom: '1rem',
       },
     }),
-  linkLtr: ({ palette }: Theme) =>
+  link: ({ palette }: Theme) =>
     css({
       color: palette.BLACK,
       textDecoration: 'none',
@@ -117,37 +121,15 @@ const styles = {
         textDecoration: 'underline',
         color: palette.BLACK,
       },
-      paddingLeft: '0.5rem',
+      paddingInlineStart: '0.5rem',
       verticalAlign: 'middle',
       '&:visited': {
         color: palette.BLACK,
       },
     }),
-  linkRtl: ({ palette }: Theme) =>
+  chevron: () =>
     css({
-      color: palette.BLACK,
-      textDecoration: 'none',
-      '&:hover, &:focus': {
-        textDecoration: 'underline',
-        color: palette.BLACK,
-      },
-      paddingRight: '0.5rem',
-      verticalAlign: 'middle',
-      '&:visited': {
-        color: palette.BLACK,
-      },
-    }),
-  chevronLtr: () =>
-    css({
-      marginLeft: '0.5rem',
-      width: '1rem',
-      height: '1rem',
-      verticalAlign: 'middle',
-      fill: 'currentcolor',
-    }),
-  chevronRtl: () =>
-    css({
-      marginRight: '0.5rem',
+      marginInlineStart: '0.5rem',
       width: '1rem',
       height: '1rem',
       verticalAlign: 'middle',
@@ -159,7 +141,6 @@ const styles = {
       flexDirection: 'row',
       justifyContent: 'center',
     }),
-
   flex: ({ mq }: Theme) =>
     css({
       display: 'flex',

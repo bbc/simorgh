@@ -51,16 +51,12 @@ const MessageBanner = ({ summaries, title }: MessageBanner) => {
               <div css={styles.flex}>
                 <a href={summary.link} css={styles.linkBackground}>
                   <div css={styles.linkAndChevron}>
-                    <Text
-                      size="pica"
-                      fontVariant="sansBold"
-                      css={isRtl ? styles.linkRtl : styles.linkLtr}
-                    >
+                    <Text size="pica" fontVariant="sansBold" css={styles.link}>
                       {summary.title}
                       {isRtl ? (
-                        <LeftChevron css={styles.chevronRtl} />
+                        <LeftChevron css={styles.chevron} />
                       ) : (
-                        <RightChevron css={styles.chevronLtr} />
+                        <RightChevron css={styles.chevron} />
                       )}
                     </Text>
                   </div>
