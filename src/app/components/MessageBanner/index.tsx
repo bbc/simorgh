@@ -20,8 +20,9 @@ interface MessageBanner {
     id: string;
   }[];
   title: string;
+  position: number;
 }
-const MessageBanner = ({ summaries, title }: MessageBanner) => {
+const MessageBanner = ({ summaries, title, position = 0 }: MessageBanner) => {
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
 
@@ -29,7 +30,7 @@ const MessageBanner = ({ summaries, title }: MessageBanner) => {
     <section
       css={styles.container}
       role="region"
-      aria-labelledby="message-banner"
+      aria-labelledby={`message-banner-${position}`}
     >
       <div css={styles.card}>
         {summaries.map(summary => {
@@ -40,7 +41,7 @@ const MessageBanner = ({ summaries, title }: MessageBanner) => {
                   level={2}
                   size="paragon"
                   css={styles.heading}
-                  id="message-banner"
+                  id={`message-banner-${position}`}
                 >
                   {title}
                 </Heading>

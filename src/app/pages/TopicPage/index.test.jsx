@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import { data as kyrgyzTopicWithMessageBanners } from '#data/kyrgyz/topics/cvpv9djp9qqt.json';
+import { data as mundoBannerVariations } from '#data/mundo/topics/cw90edn9kw4t.json';
 import { render } from '../../components/react-testing-library-with-providers';
 import TopicPage from './TopicPage';
 import {
@@ -183,6 +184,19 @@ describe('Topic Page', () => {
       expect(messageBanner).toBeInTheDocument();
     });
 
+    it('should render multiple message banners with unique ids', () => {
+      render(
+        <TopicPage pageData={mundoBannerVariations} />,
+        getOptionParams({ service: 'mundo', lang: 'es' }),
+      );
+      expect(document.querySelectorAll("[id^='message-banner']")).toHaveLength(
+        3,
+      );
+      expect(document.querySelectorAll("[id='message-banner']")).toHaveLength(
+        0,
+      );
+    });
+
     it('should not render when visual style is banner and visual prominence is high', () => {
       const { queryByRole } = render(
         <TopicPage pageData={kyrgyzTopicWithMessageBanners} />,
@@ -204,7 +218,9 @@ describe('Topic Page', () => {
         getOptionParams({ service: 'amharic', lang: 'am' }),
       );
 
-      expect(document.getElementById('message-banner')).not.toBeInTheDocument();
+      expect(document.querySelectorAll("[id^='message-banner']")).toHaveLength(
+        0,
+      );
     });
   });
 });

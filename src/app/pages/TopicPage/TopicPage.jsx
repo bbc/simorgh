@@ -111,7 +111,11 @@ const TopicPage = ({ pageData }) => {
               // eslint-disable-next-line react/no-array-index-key
               <React.Fragment key={`${curationId} ${index}`}>
                 {shouldRenderMessageBanner(visualStyle, visualProminence) ? (
-                  <MessageBanner title={curationTitle} summaries={summaries} />
+                  <MessageBanner
+                    title={curationTitle}
+                    summaries={summaries}
+                    position={position}
+                  />
                 ) : (
                   <Curation
                     headingLevel={curationTitle && 3}
