@@ -65,7 +65,7 @@ const getTranslations = (
     ['socialEmbed', 'consentBanner', 'body'],
     translations,
   );
-  
+
   const buttonTranslations = pathOr(
     DEFAULT_TRANSLATIONS.button,
     ['socialEmbed', 'consentBanner', 'button'],

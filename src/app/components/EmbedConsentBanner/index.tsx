@@ -12,7 +12,7 @@ export type ConsentBannerProviders = Extract<
 export const CONSENT_BANNER_PROVIDERS: ConsentBannerProviders[] = [
   'youtube',
   'tiktok',
-  'twitter'
+  'twitter',
 ];
 
 export const getEventTrackingData = (provider: ConsentBannerProviders) => ({
