@@ -171,7 +171,17 @@ describe('Embed Consent Banner - Content', () => {
         },
       );
 
-      expect(viewTrackerSpy).toHaveBeenCalledTimes(3);
+      render(
+        <ConsentBanner
+          provider="twitter"
+          clickHandler={mockCanonicalClickHandler}
+        />,
+        {
+          service: 'mundo',
+        },
+      );
+
+      expect(viewTrackerSpy).toHaveBeenCalledTimes(4);
 
       expect(viewTrackerSpy).toHaveBeenCalledWith({
         componentName: 'social-consent-banner-youtube',
@@ -183,6 +193,10 @@ describe('Embed Consent Banner - Content', () => {
 
       expect(viewTrackerSpy).toHaveBeenCalledWith({
         componentName: 'social-consent-banner-tiktok',
+      });
+
+      expect(viewTrackerSpy).toHaveBeenCalledWith({
+        componentName: 'social-consent-banner-twitter',
       });
     });
 
