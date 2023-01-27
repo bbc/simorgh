@@ -22,7 +22,7 @@ interface MessageBanner {
   title: string;
   position: number;
 }
-const MessageBanner = ({ summaries, title, position = 0 }: MessageBanner) => {
+const MessageBanner = ({ summaries, title, position }: MessageBanner) => {
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
 
