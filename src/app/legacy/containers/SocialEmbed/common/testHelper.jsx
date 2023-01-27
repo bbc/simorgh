@@ -16,13 +16,13 @@ const withContexts =
   (Component, { isAmp, service = 'news', pageType = STORY_PAGE }) =>
   props =>
     (
-      <ThemeProvider service={service}>
-        <RequestContextProvider
-          isAmp={isAmp}
-          pageType={pageType}
-          service={service}
-          pathname="/pathname"
-        >
+      <RequestContextProvider
+        isAmp={isAmp}
+        pageType={pageType}
+        service={service}
+        pathname="/pathname"
+      >
+        <ThemeProvider service={service}>
           <ServiceContextProvider service={service}>
             <ToggleContextProvider
               toggles={{
@@ -32,8 +32,8 @@ const withContexts =
               <Component {...props} />
             </ToggleContextProvider>
           </ServiceContextProvider>
-        </RequestContextProvider>
-      </ThemeProvider>
+        </ThemeProvider>
+      </RequestContextProvider>
     );
 
 export default withContexts;
