@@ -219,7 +219,7 @@ export const testsThatFollowSmokeTestConfig = ({
         });
         ['YouTube', 'Instagram', 'TikTok', 'Twitter', 'Facebook'].forEach(
           socialMediaProviderName => {
-            it(`${socialMediaProviderName} embed is rendered when it exists on page`, () => {
+            it(`${socialMediaProviderName} embed is rendered when it exists on page`, function () {
               if (socialIsOnPage(socialMediaProviderName)) {
                 const SocialEmbedsData = getAllSocialBlocksByProviderName(
                   socialMediaProviderName,
