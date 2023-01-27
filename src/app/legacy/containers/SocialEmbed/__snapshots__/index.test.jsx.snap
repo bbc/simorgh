@@ -1656,130 +1656,26 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
 }
 
 .emotion-10 {
-  background-color: #FFFFFF;
-  padding: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  border: 0.0625rem solid #8A8C8E;
 }
 
-.emotion-11 {
-  color: #141414;
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 700;
+.emotion-10 .twitter-tweet {
+  margin-top: 0!important;
+  margin-bottom: 10rem!important;
 }
 
-@media (min-width: 20rem) {
-  .emotion-11 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-11 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
+.emotion-10 .twitter-tweet-rendered {
+  margin-bottom: 0!important;
 }
 
 .emotion-12 {
-  color: #141414;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  margin: 0;
-  margin: 1rem 0;
-}
-
-@media (min-width: 20rem) {
-  .emotion-12 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-12 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-.emotion-12 a {
-  color: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-bottom: 0.0625rem solid #141414;
-}
-
-.emotion-12 a:visited {
-  color: #545658;
-  border-bottom: 0.0625rem solid #545658;
-}
-
-.emotion-12 a:hover,
-.emotion-12 a:focus {
-  color: #B80000;
-  border-bottom: 0.125rem solid #B80000;
-}
-
-.emotion-13 {
-  color: #141414;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  background-color: #FFFFFF;
-  border: 0.0625rem solid #8A8C8E;
-  border-radius: 0;
-  padding: 0.5rem;
-  cursor: pointer;
-}
-
-@media (min-width: 20rem) {
-  .emotion-13 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-13 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-.emotion-13:hover,
-.emotion-13:focus {
-  background-color: #B80000;
-  color: #FFFFFF;
-  border: 0.0625rem solid #B80000;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-14 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -1790,18 +1686,18 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-14 {
+  .emotion-12 {
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-14 {
+  .emotion-12 {
     font-size: 0.8125rem;
   }
 }
 
-.emotion-14>span {
+.emotion-12>span {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -1812,7 +1708,7 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
   margin: 0;
 }
 
-.emotion-16 {
+.emotion-14 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -1846,46 +1742,34 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
         class="emotion-8 emotion-9"
       >
         <div
-          class="emotion-10"
-          data-testid="consentBanner"
-          id="consentBanner"
+          class="emotion-10 emotion-11"
         >
-          <strong
-            class="emotion-11"
-            data-testid="banner-heading"
+          <blockquote
+            class="twitter-tweet"
           >
-            Allow Twitter content?
-          </strong>
-          <p
-            class="emotion-12"
-            data-testid="banner-body"
-          >
-            This article contains content provided by Twitter.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Twitter 
-            <a
-              aria-label="cookie policy, external"
-              href="https://help.twitter.com/en/rules-and-policies/twitter-cookies"
+            <p
+              dir="ltr"
+              lang="en"
             >
-              cookie policy
-            </a>
-             and 
+              Greta Thunberg says meeting fellow climate campaigner Sir David Attenborough was "indescribable" 
+              <a
+                href="https://t.co/xz93WmAdfR"
+              >
+                https://t.co/xz93WmAdfR
+              </a>
+            </p>
+            — BBC News (UK) (@BBCNews) 
             <a
-              aria-label="privacy policy, external"
-              href="https://twitter.com/en/privacy"
+              href="https://twitter.com/BBCNews/status/1384138850478346243?ref_src=twsrc%5Etfw"
             >
-              privacy policy
+              April 19, 2021
             </a>
-             before accepting. To view this content choose 'accept and continue'.
-          </p>
-          <button
-            class="emotion-13"
-            data-testid="banner-button"
-            type="button"
-          >
-            Accept and continue
-          </button>
+          </blockquote>
+          
+
         </div>
         <figcaption
-          class="emotion-14 emotion-15"
+          class="emotion-12 emotion-13"
         >
           <span>
             Video caption, 
@@ -1894,7 +1778,7 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
         </figcaption>
       </figure>
       <p
-        class="emotion-16 emotion-17"
+        class="emotion-14 emotion-15"
         id="end-of-twitter-content-1"
         tabindex="-1"
       >

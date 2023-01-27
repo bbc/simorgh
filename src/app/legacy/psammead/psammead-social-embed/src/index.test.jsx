@@ -128,12 +128,23 @@ describe('CanonicalSocialEmbed', () => {
       />
     );
     it('should render correctly for Twitter', async () => {
-      const { container } = render(twitterSocialEmbed);
+      const { container, unmount } = render(twitterSocialEmbed);
 
       const button = screen.getByTestId('banner-button');
       fireEvent.click(button);
 
       expect(container.firstChild).toMatchSnapshot();
+      expect(
+        document.querySelector(
+          'head script[src="https://platform.twitter.com/widgets.js"]',
+        ),
+      ).toBeTruthy();
+      unmount();
+      expect(
+        document.querySelector(
+          'head script[src="https://platform.twitter.com/widgets.js"]',
+        ),
+      ).toBeFalsy();
     });
 
     it('should call twitter api to enrich tweets after initial render', async () => {
