@@ -471,36 +471,130 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
 }
 
 .emotion-10 {
-  position: relative;
-  overflow: hidden;
+  background-color: #FFFFFF;
+  padding: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  border: 0.0625rem solid #8A8C8E;
 }
 
-.emotion-10 .fb_iframe_widget {
-  position: unset;
+.emotion-11 {
+  color: #141414;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
 }
 
-.emotion-10 .fb_iframe_widget>span {
-  position: unset;
+@media (min-width: 20rem) {
+  .emotion-11 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
 }
 
-.emotion-10 iframe {
-  background-color: white;
-  left: 0;
-  top: 0;
-  height: 100%!important;
-  width: 100%!important;
-  position: absolute!important;
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
 }
 
 .emotion-12 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  margin: 1rem 0;
+}
+
+@media (min-width: 20rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-12 a {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.0625rem solid #141414;
+}
+
+.emotion-12 a:visited {
+  color: #545658;
+  border-bottom: 0.0625rem solid #545658;
+}
+
+.emotion-12 a:hover,
+.emotion-12 a:focus {
+  color: #B80000;
+  border-bottom: 0.125rem solid #B80000;
+}
+
+.emotion-13 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: #FFFFFF;
+  border: 0.0625rem solid #8A8C8E;
+  border-radius: 0;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 20rem) {
+  .emotion-13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-13:hover,
+.emotion-13:focus {
+  background-color: #B80000;
+  color: #FFFFFF;
+  border: 0.0625rem solid #B80000;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-14 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -511,18 +605,18 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
+  .emotion-14 {
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-14 {
     font-size: 0.8125rem;
   }
 }
 
-.emotion-12>span {
+.emotion-14>span {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -533,7 +627,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
   margin: 0;
 }
 
-.emotion-14 {
+.emotion-16 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -567,49 +661,46 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
         class="emotion-8 emotion-9"
       >
         <div
-          class="emotion-10 emotion-11"
+          class="emotion-10"
+          data-testid="consentBanner"
+          id="consentBanner"
         >
-          <div
-            id="fb-root"
-          />
-          
-
-          <script
-            async="1"
-            crossorigin="anonymous"
-            defer="1"
-            nonce="fPyyhrbz"
-            src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v13.0"
-          />
-          <div
-            class="fb-post"
-            data-href="https://www.facebook.com/RickAstley/posts/545713756920775"
-            data-width="552"
+          <strong
+            class="emotion-11"
+            data-testid="banner-heading"
           >
-            <blockquote
-              cite="https://graph.facebook.com/100044464658204/posts/545713756920775/"
-              class="fb-xfbml-parse-ignore"
+            Allow Facebook content?
+          </strong>
+          <p
+            class="emotion-12"
+            data-testid="banner-body"
+          >
+            This article contains content provided by Facebook.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Facebook 
+            <a
+              aria-label="cookie policy, external"
+              href="https://www.facebook.com/privacy/policies/cookies"
             >
-              <p>
-                Had a fantastic time at @thescriptofficial concert in LA this week, what a gig!! Have a great US tour guys! Don’t miss...
-              </p>
-              Posted by 
-              <a
-                href="https://www.facebook.com/RickAstley"
-              >
-                Rick Astley
-              </a>
-               on 
-              <a
-                href="https://graph.facebook.com/100044464658204/posts/545713756920775/"
-              >
-                Friday, April 1, 2022
-              </a>
-            </blockquote>
-          </div>
+              cookie policy
+            </a>
+             and 
+            <a
+              aria-label="privacy policy, external"
+              href="https://www.facebook.com/privacy/policy/"
+            >
+              privacy policy
+            </a>
+             before accepting. To view this content choose 'accept and continue'.
+          </p>
+          <button
+            class="emotion-13"
+            data-testid="banner-button"
+            type="button"
+          >
+            Accept and continue
+          </button>
         </div>
         <figcaption
-          class="emotion-12 emotion-13"
+          class="emotion-14 emotion-15"
         >
           <span>
             Video caption, 
@@ -618,7 +709,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
         </figcaption>
       </figure>
       <p
-        class="emotion-14 emotion-15"
+        class="emotion-16 emotion-17"
         id="end-of-facebook-content"
         tabindex="-1"
       >
@@ -798,36 +889,130 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Video block and
 }
 
 .emotion-10 {
-  position: relative;
-  overflow: hidden;
+  background-color: #FFFFFF;
+  padding: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  border: 0.0625rem solid #8A8C8E;
 }
 
-.emotion-10 .fb_iframe_widget {
-  position: unset;
+.emotion-11 {
+  color: #141414;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
 }
 
-.emotion-10 .fb_iframe_widget>span {
-  position: unset;
+@media (min-width: 20rem) {
+  .emotion-11 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
 }
 
-.emotion-10 iframe {
-  background-color: white;
-  left: 0;
-  top: 0;
-  height: 100%!important;
-  width: 100%!important;
-  position: absolute!important;
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
 }
 
 .emotion-12 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  margin: 1rem 0;
+}
+
+@media (min-width: 20rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-12 a {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.0625rem solid #141414;
+}
+
+.emotion-12 a:visited {
+  color: #545658;
+  border-bottom: 0.0625rem solid #545658;
+}
+
+.emotion-12 a:hover,
+.emotion-12 a:focus {
+  color: #B80000;
+  border-bottom: 0.125rem solid #B80000;
+}
+
+.emotion-13 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: #FFFFFF;
+  border: 0.0625rem solid #8A8C8E;
+  border-radius: 0;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 20rem) {
+  .emotion-13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-13:hover,
+.emotion-13:focus {
+  background-color: #B80000;
+  color: #FFFFFF;
+  border: 0.0625rem solid #B80000;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-14 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -838,18 +1023,18 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Video block and
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
+  .emotion-14 {
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-14 {
     font-size: 0.8125rem;
   }
 }
 
-.emotion-12>span {
+.emotion-14>span {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -860,7 +1045,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Video block and
   margin: 0;
 }
 
-.emotion-14 {
+.emotion-16 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -894,46 +1079,46 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Video block and
         class="emotion-8 emotion-9"
       >
         <div
-          class="emotion-10 emotion-11"
+          class="emotion-10"
+          data-testid="consentBanner"
+          id="consentBanner"
         >
-          <div
-            id="fb-root"
-          />
-          
-
-          <script
-            async="1"
-            crossorigin="anonymous"
-            defer="1"
-            nonce="8pqnGEmE"
-            src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v13.0"
-          />
-          <div
-            class="fb-video"
-            data-href="https://www.facebook.com/RickAstley/videos/1378590239249667/"
+          <strong
+            class="emotion-11"
+            data-testid="banner-heading"
           >
-            <blockquote
-              cite="https://www.facebook.com/RickAstley/videos/1378590239249667/"
-              class="fb-xfbml-parse-ignore"
+            Allow Facebook content?
+          </strong>
+          <p
+            class="emotion-12"
+            data-testid="banner-body"
+          >
+            This article contains content provided by Facebook.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Facebook 
+            <a
+              aria-label="cookie policy, external"
+              href="https://www.facebook.com/privacy/policies/cookies"
             >
-              <a
-                href="https://www.facebook.com/RickAstley/videos/1378590239249667/"
-              />
-              <p>
-                Saw another great gig in LA this week, I went to see Inhaler in the @belascola and they were fantastic! Have a great show in New York tomorrow guys! Rick x @inhalerdublin
-              </p>
-              Posted by 
-              <a
-                href="https://www.facebook.com/RickAstley"
-              >
-                Rick Astley
-              </a>
-               on Saturday, April 2, 2022
-            </blockquote>
-          </div>
+              cookie policy
+            </a>
+             and 
+            <a
+              aria-label="privacy policy, external"
+              href="https://www.facebook.com/privacy/policy/"
+            >
+              privacy policy
+            </a>
+             before accepting. To view this content choose 'accept and continue'.
+          </p>
+          <button
+            class="emotion-13"
+            data-testid="banner-button"
+            type="button"
+          >
+            Accept and continue
+          </button>
         </div>
         <figcaption
-          class="emotion-12 emotion-13"
+          class="emotion-14 emotion-15"
         >
           <span>
             Video caption, 
@@ -942,7 +1127,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Video block and
         </figcaption>
       </figure>
       <p
-        class="emotion-14 emotion-15"
+        class="emotion-16 emotion-17"
         id="end-of-facebook-content"
         tabindex="-1"
       >
@@ -2260,23 +2445,130 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
 }
 
 .emotion-10 {
+  background-color: #FFFFFF;
+  padding: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  border: 0.0625rem solid #8A8C8E;
 }
 
-.emotion-10 .instagram-media {
-  margin-top: 0!important;
-  margin-bottom: 0!important;
-  min-width: auto!important;
+.emotion-11 {
+  color: #141414;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) {
+  .emotion-11 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
 }
 
 .emotion-12 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  margin: 1rem 0;
+}
+
+@media (min-width: 20rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-12 a {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.0625rem solid #141414;
+}
+
+.emotion-12 a:visited {
+  color: #545658;
+  border-bottom: 0.0625rem solid #545658;
+}
+
+.emotion-12 a:hover,
+.emotion-12 a:focus {
+  color: #B80000;
+  border-bottom: 0.125rem solid #B80000;
+}
+
+.emotion-13 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: #FFFFFF;
+  border: 0.0625rem solid #8A8C8E;
+  border-radius: 0;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 20rem) {
+  .emotion-13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-13:hover,
+.emotion-13:focus {
+  background-color: #B80000;
+  color: #FFFFFF;
+  border: 0.0625rem solid #B80000;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-14 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -2287,18 +2579,18 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
+  .emotion-14 {
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-14 {
     font-size: 0.8125rem;
   }
 }
 
-.emotion-12>span {
+.emotion-14>span {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -2309,7 +2601,7 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
   margin: 0;
 }
 
-.emotion-14 {
+.emotion-16 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -2343,30 +2635,46 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
         class="emotion-8 emotion-9"
       >
         <div
-          class="emotion-10 emotion-11"
+          class="emotion-10"
+          data-testid="consentBanner"
+          id="consentBanner"
         >
-          <blockquote
-            class="instagram-media"
-            data-instgrm-captioned=""
-            data-instgrm-permalink="https://www.instagram.com/p/CgNAEjOK46_"
+          <strong
+            class="emotion-11"
+            data-testid="banner-heading"
           >
-            <p>
-              <a
-                href="https://www.instagram.com/p/CgNAEjOK46_"
-                style="color:#000"
-              >
-                © 2020 Instagram
-              </a>
-            </p>
-          </blockquote>
-           
-          <script
-            async=""
-            src="https://www.instagram.com/embed.js"
-          />
+            Allow Instagram content?
+          </strong>
+          <p
+            class="emotion-12"
+            data-testid="banner-body"
+          >
+            This article contains content provided by Instagram.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Instagram 
+            <a
+              aria-label="cookie policy, external"
+              href="https://privacycenter.instagram.com/policies/cookies/"
+            >
+              cookie policy
+            </a>
+             and 
+            <a
+              aria-label="privacy policy, external"
+              href="https://privacycenter.instagram.com/policy"
+            >
+              privacy policy
+            </a>
+             before accepting. To view this content choose 'accept and continue'.
+          </p>
+          <button
+            class="emotion-13"
+            data-testid="banner-button"
+            type="button"
+          >
+            Accept and continue
+          </button>
         </div>
         <figcaption
-          class="emotion-12 emotion-13"
+          class="emotion-14 emotion-15"
         >
           <span>
             Video caption, 
@@ -2375,7 +2683,7 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
         </figcaption>
       </figure>
       <p
-        class="emotion-14 emotion-15"
+        class="emotion-16 emotion-17"
         id="end-of-instagram-content-1"
         tabindex="-1"
       >
