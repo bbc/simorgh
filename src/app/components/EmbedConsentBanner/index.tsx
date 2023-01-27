@@ -6,12 +6,14 @@ import useClickTrackerHandler from '../../hooks/useClickTrackerHandler';
 
 export type ConsentBannerProviders = Extract<
   SocialEmbedProviders,
-  'youtube' | 'tiktok' | 'twitter'
+  'youtube' | 'tiktok' | 'twitter' | 'facebook' | 'instagram'
 >;
 
 export const CONSENT_BANNER_PROVIDERS: ConsentBannerProviders[] = [
   'youtube',
   'tiktok',
+  'facebook',
+  'instagram',
   'twitter',
 ];
 
