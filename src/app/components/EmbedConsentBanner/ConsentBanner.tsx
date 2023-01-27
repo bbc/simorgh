@@ -26,10 +26,12 @@ const BANNER_URLS: BannerUrls = {
   cookiesUrl: {
     youtube: 'https://policies.google.com/technologies/cookies',
     tiktok: 'https://www.tiktok.com/legal/cookie-policy',
+    twitter: 'https://help.twitter.com/rules-and-policies/twitter-cookies',
   },
   privacyUrl: {
     youtube: 'https://policies.google.com/privacy',
     tiktok: 'https://www.tiktok.com/legal/privacy-policy',
+    twitter: 'https://twitter.com/privacy',
   },
 };
 
@@ -43,6 +45,7 @@ const getProviderName = (provider: ConsentBannerProviders) => {
   return {
     youtube: 'Google YouTube',
     tiktok: 'TikTok',
+    twitter: 'Twitter',
   }[provider];
 };
 
@@ -62,7 +65,7 @@ const getTranslations = (
     ['socialEmbed', 'consentBanner', 'body'],
     translations,
   );
-
+  
   const buttonTranslations = pathOr(
     DEFAULT_TRANSLATIONS.button,
     ['socialEmbed', 'consentBanner', 'button'],
@@ -81,10 +84,8 @@ const getTranslations = (
     providerNameDelimiter,
     providerName,
   );
-
   const linkTextElements =
     bodyText?.match(/(\[link]|\[\/link])(.*?)(\[\/link]|\[link])/g) || [];
-
   if (!linkTextElements.length) {
     return {
       heading: headerText,
@@ -101,13 +102,13 @@ const getTranslations = (
       <a
         href={cookiesUrl}
         aria-label={`${linkTextElements[0]
-          .replaceAll('[link]', '')
+          ?.replaceAll('[link]', '')
           .replaceAll('[/link]', '')
           .trim()}${externalLinkText}`}
         key={cookiesUrl}
       >
         {linkTextElements[0]
-          .replaceAll('[link]', '')
+          ?.replaceAll('[link]', '')
           .replaceAll('[/link]', '')
           .trim()}
       </a>
