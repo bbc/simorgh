@@ -7,7 +7,6 @@ import { cpsTwitterBlock, cpsTwitterBlockNoEmbed } from '../common/fixtures';
 import CpsSocialEmbedContainer from '.';
 
 import withContexts from '../common/testHelper';
-import ThemeProvider from '../../../../components/ThemeProvider';
 
 const Component = props =>
   withContexts(CpsSocialEmbedContainer, {
@@ -24,33 +23,27 @@ export default {
 };
 
 export const CanonicalExample = props => (
-  <ThemeProvider service="news">
-    <Component
-      blocks={[cpsTwitterBlock]}
-      source="https://twitter.com/MileyCyrus/status/1237210910835392512"
-      {...props}
-    />
-  </ThemeProvider>
+  <Component
+    blocks={[cpsTwitterBlock]}
+    source="https://twitter.com/MileyCyrus/status/1237210910835392512"
+    {...props}
+  />
 );
 
 export const AmpExample = props => (
-  <ThemeProvider service="news">
-    <Component
-      isAmp
-      blocks={[cpsTwitterBlock]}
-      source="https://twitter.com/MileyCyrus/status/1237210910835392512"
-      {...props}
-    />
-  </ThemeProvider>
+  <Component
+    isAmp
+    blocks={[cpsTwitterBlock]}
+    source="https://twitter.com/MileyCyrus/status/1237210910835392512"
+    {...props}
+  />
 );
 AmpExample.decorators = [AmpDecorator];
 
 export const NoEmbed = props => (
-  <ThemeProvider service="news">
-    <Component
-      blocks={[cpsTwitterBlockNoEmbed]}
-      source="https://twitter.com/MileyCyrus/status/1237210910835392512"
-      {...props}
-    />
-  </ThemeProvider>
+  <Component
+    blocks={[cpsTwitterBlockNoEmbed]}
+    source="https://twitter.com/MileyCyrus/status/1237210910835392512"
+    {...props}
+  />
 );
