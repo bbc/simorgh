@@ -54,16 +54,23 @@ describe('CpsSocialEmbedContainer', () => {
       ).toBeFalsy();
     });
 
-    shouldMatchSnapshot(
-      'should render correctly without an embed block',
-      withContexts(CpsSocialEmbedContainer, {
-        isAmp: false,
-        isEnabled: true,
-      })({
-        blocks: [cpsTwitterBlockNoEmbed],
-        source: 'https://twitter.com/MileyCyrus/status/1237210910835392512',
-      }),
-    );
+    it('should render correctly without an embed block', async () => {
+      let noEmbedContainer;
+      let noEmbedUnmount;
+      await act(async () => {
+        ({ container: noEmbedContainer, unmount: noEmbedUnmount } = render(
+          withContexts(CpsSocialEmbedContainer, {
+            isAmp: false,
+            isEnabled: true,
+          })({
+            blocks: [cpsTwitterBlockNoEmbed],
+            source: 'https://twitter.com/MileyCyrus/status/1237210910835392512',
+          }),
+        ));
+      });
+      expect(noEmbedContainer.firstChild).toMatchSnapshot();
+      noEmbedUnmount();
+    });
   });
 
   describe('AMP', () => {
