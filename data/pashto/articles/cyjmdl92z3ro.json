@@ -677,16 +677,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cyjmdl92z3ro",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cyjmdl92z3ro",
-          "canonicalUrl": "https://www.bbc.com/pashto/articles/cyjmdl92z3ro"
+          "optimoUrn": "urn:bbc:optimo:asset:cyjmdl92z3ro"
         },
         "type": "article",
         "createdBy": "Pashto",
         "language": "ps",
-        "lastUpdated": 1662117002994,
         "firstPublished": 1570186271460,
         "lastPublished": 1570186271460,
-        "timestamp": 1570186271460,
         "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cyjmdl92z3ro",
@@ -696,12 +693,9 @@
         "passport": {
           "language": "ps",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Pashto",
-          "locator": "urn:bbc:optimo:asset:cyjmdl92z3ro",
-          "availability": "AVAILABLE",
           "taggings": []
         },
         "tags": {},
-        "version": "v1.4.4",
         "blockTypes": [
           "headline",
           "text",
@@ -716,40 +710,16 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "consumableAsSFV": false,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cyjmdl92z3ro",
-          "canonicalUrl": "https://www.bbc.com/pashto/articles/cyjmdl92z3ro"
-        },
-        "timestamp": 1570186271460,
-        "suitableForSyndication": false,
-        "language": "ps",
+        "locators": {},
         "headlines": {
           "seoHeadline": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري."
         },
         "images": {},
-        "passport": {
-          "language": "ps",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Pashto",
-          "locator": "urn:bbc:optimo:asset:cyjmdl92z3ro",
-          "availability": "AVAILABLE",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:cyjmdl92z3ro",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Pashto",
-          "uri": "/pashto",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {

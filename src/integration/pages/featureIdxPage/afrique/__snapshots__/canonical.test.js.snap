@@ -233,8 +233,6 @@ exports[`Canonical Feature Index page SEO Canonical link 1`] = `"http://localhos
 
 exports[`Canonical Feature Index page SEO Dir attribute 1`] = `"ltr"`;
 
-exports[`Canonical Feature Index page SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`Canonical Feature Index page SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`Canonical Feature Index page SEO Heading level 1 1`] = `"Tout savoir sur la CAN 2019"`;

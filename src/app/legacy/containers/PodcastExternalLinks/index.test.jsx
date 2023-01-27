@@ -119,7 +119,7 @@ describe('Event Tracking', () => {
     render(<Component links={links} />);
 
     expect(clickTrackerSpy).toHaveBeenCalledWith({
-      componentName: `third-party-${links[0].linkType}`,
+      componentName: 'third-party',
       campaignID: 'player-episode-podcast',
     });
   });

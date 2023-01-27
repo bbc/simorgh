@@ -616,16 +616,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cq0y4008d4vo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cq0y4008d4vo",
-          "canonicalUrl": "https://www.bbc.com/telugu/articles/cq0y4008d4vo"
+          "optimoUrn": "urn:bbc:optimo:asset:cq0y4008d4vo"
         },
         "type": "article",
         "createdBy": "Telugu",
         "language": "te",
-        "lastUpdated": 1598599653796,
         "firstPublished": 1562942618861,
         "lastPublished": 1562942618861,
-        "timestamp": 1562942618861,
         "options": {},
         "analyticsLabels": {
           "producer": "Telugu",
@@ -634,12 +631,9 @@
         "passport": {
           "language": "te",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Telugu",
-          "locator": "urn:bbc:optimo:asset:cq0y4008d4vo",
-          "availability": "AVAILABLE",
           "taggings": []
         },
         "tags": {},
-        "version": "v1.4.3",
         "blockTypes": [
           "headline",
           "text",
@@ -654,39 +648,15 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cq0y4008d4vo",
-          "canonicalUrl": "https://www.bbc.com/telugu/articles/cq0y4008d4vo"
-        },
-        "timestamp": 1562942618861,
-        "suitableForSyndication": false,
-        "language": "te",
+        "locators": {},
         "headlines": {
           "seoHeadline": "డక్‌వర్త్ లూయీస్: క్రికెట్ మ్యాచ్‌లో వర్షం పడితే ఫలితం తేల్చేది వీళ్లే... అసలు ఇది ఎలా పుట్టింది?"
         },
         "images": {},
-        "passport": {
-          "language": "te",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Telugu",
-          "locator": "urn:bbc:optimo:asset:cq0y4008d4vo",
-          "availability": "AVAILABLE",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:cq0y4008d4vo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Telugu",
-          "uri": "/telugu",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {

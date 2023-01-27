@@ -12,7 +12,6 @@ describe('getPodcastExternalLinks', () => {
         linkUrl: 'https://podcasts.files.bbci.co.uk/p08mlgcb.rss',
         linkType: 'rss',
       },
-      [],
     ];
     expect(links).toEqual(expectedLinks);
   });
@@ -35,7 +34,6 @@ describe('getPodcastExternalLinks', () => {
         linkUrl: 'https://podcasts.files.bbci.co.uk/bar.rss',
         linkType: 'rss',
       },
-      [],
     ]);
   });
 
@@ -48,7 +46,6 @@ describe('getPodcastExternalLinks', () => {
         linkUrl: 'https://podcasts.files.bbci.co.uk/p02pc9xp.rss',
         linkType: 'rss',
       },
-      [],
     ];
     expect(links).toEqual(expectedLinks);
   });
