@@ -69,7 +69,7 @@ export default {
 
 export const Example = Component;
 
-export const MundoWithMessageBanners = props => (
+export const MundoWithBannerVariations = props => (
   <Component service={'mundo'} {...props} fixture={mundoTopicWithMessageBannerVariations} />
 );
 
