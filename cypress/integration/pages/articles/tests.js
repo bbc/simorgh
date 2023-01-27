@@ -234,14 +234,9 @@ export const testsThatFollowSmokeTestConfig = ({
                   )
                     .scrollIntoView()
                     .within(() => {
-                      if (
-                        socialMediaProviderName === 'YouTube' ||
-                        socialMediaProviderName === 'TikTok'
-                      ) {
-                        cy.get(`[data-testid="consentBanner"]`).should('exist');
-                        cy.get(`iframe`).should('not.exist');
-                        cy.get(`[data-testid="banner-button"]`).click();
-                      }
+                      cy.get(`[data-testid="consentBanner"]`).should('exist');
+                      cy.get(`iframe`).should('not.exist');
+                      cy.get(`[data-testid="banner-button"]`).click();
                       cy.get(`iframe`).should('exist');
                       cy.get(
                         `[href^="#end-of-${lowercaseSocialMediaProviderName}-content"]`,
